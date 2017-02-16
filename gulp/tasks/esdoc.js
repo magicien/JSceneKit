@@ -1,5 +1,7 @@
+/*
 var gulp = require('gulp');
-var esdoc = require('gulp-esdoc');
+//var esdoc = require('gulp-esdoc');
+var esdoc = require('esdoc');
 var config = require('../config');
 
 gulp.task('esdoc', function() {
@@ -8,4 +10,4 @@ gulp.task('esdoc', function() {
 });
 
 gulp.task('doc', ['esdoc']);
-
+*/
