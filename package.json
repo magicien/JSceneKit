@@ -7,7 +7,7 @@
     "lint": "gulp lint",
     "build": "gulp build",
     "test": "gulp test",
-    "test-coverage": "nyc --include src/**/*.js npm test",
+    "test-coverage": "nyc --include src npm test",
     "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "repository": {
