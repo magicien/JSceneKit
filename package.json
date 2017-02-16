@@ -5,8 +5,10 @@
   "main": "main.js",
   "scripts": {
     "lint": "gulp lint",
+    "build": "gulp build",
     "test": "gulp test",
-    "build": "gulp build"
+    "test-coverage": "nyc --include src/**/*.js npm test",
+    "coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,13 @@
       "es2015"
     ]
   },
+  "config": {
+    "blanket": {
+      "pattern": [
+        "src"
+      ]
+    }
+  },
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-core": "^6.7.7",
@@ -48,6 +57,7 @@
     "gulp-webpack": "^1.5.0",
     "mocha": "^3.2.0",
     "mocha-sinon": "^1.1.5",
+    "nyc": "^10.1.2",
     "path": "^0.12.7",
     "require-dir": "^0.3.0",
     "sinon": "^1.17.3",

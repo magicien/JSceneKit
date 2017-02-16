@@ -7,9 +7,6 @@ const expect = chai.expect
  * UnitTest class
  */
 export default class UnitTest {
-  constructor() {
-  }
-
   static classFunctionsDefined(classObj, funcArray) {
     funcArray.forEach((func) => {
       describe(func + ' class function', () => {
@@ -41,7 +38,7 @@ export default class UnitTest {
   }
 
   static propertiesDefined(classObj, propertyArray) {
-    let instance = new classObj()
+    const instance = new classObj()
 
     propertyArray.forEach((prop) => {
       describe(prop + ' property', () => {

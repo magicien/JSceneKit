@@ -4,3 +4,5 @@ tmp
 *.swp
 node_modules
 build/
+coverage*
+.nyc_output

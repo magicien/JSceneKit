@@ -57,14 +57,19 @@ export default class SCNView {
 
   /**
    * 
+   * @access public
+   * @param {Object} sender - a
+   * @returns {void}
    */
-  stop(caller) {
+  stop(sender) {
+    // TODO: implement
   }
 
   /**
    * Pauses playback of the view’s scene.
    * @access public
    * @param {Object} sender - The object requesting the action (used when connecting a control in Interface Builder).  SceneKit ignores this parameter.
+   * @returns {void}
    * @desc This method has no effect if the scene is already paused.
    */
   pause(sender) {
@@ -74,6 +79,7 @@ export default class SCNView {
    * Resumes playback of the view’s scene.
    * @access public
    * @param {Object} sender - The object requesting the action (used when connecting a control in Interface Builder). SceneKit ignores this parameter.
+   * @returns {void}
    * @desc This method has no effect if the scene is not paused.
    */
   play(sender) {
@@ -81,6 +87,8 @@ export default class SCNView {
 
   /**
    * 
+   * @access public
+   * @returns {void}
    */
   snapshot() {
   }

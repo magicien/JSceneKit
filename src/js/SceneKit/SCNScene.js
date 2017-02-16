@@ -93,20 +93,24 @@ export default class SCNScene {
   /**
    * Creates a scene from the specified Model I/O asset.
    * @access public
-   * @param {MDLAsset} mdlAsset - A Model I/O asset object.
+   * @param {MDLAsset} asset - A Model I/O asset object.
    * @returns {SCNScene} - A new scene object.
    * 
    */
   static sceneWithMDLAsset(asset) {
+    // TODO: implement
   }
 
   static sceneWithURLOptionsError(url, options, error) {
+    // TODO: implement
   }
 
   static sceneNamedInDirectoryOptions(name, directory, options) {
+    // TODO: implement
   }
 
   static sceneNamed(name) {
+    // TODO: implement
   }
 
   static scene() {
@@ -114,33 +118,43 @@ export default class SCNScene {
   }
 
   valueForKeyPath(path) {
+    // TODO: implement
   }
 
   valueForKey(key) {
+    // TODO: implement
   }
 
   setValueForKey(value, key) {
+    // TODO: implement
   }
 
   setValueForKeyPath(value, keyPath) {
+    // TODO: implement
   }
 
   writeToURLOptionsDelegateProgressHandler(url, options, delegate, progressHandler) {
+    // TODO: implement
   }
 
   setAttributeForKey(attribute, key) {
+    // TODO: implement
   }
 
   attributeForKey(key) {
+    // TODO: implement
   }
 
   removeParticleSystem(particleSystem) {
+    // TODO: implement
   }
 
   removeAllParticleSystems() {
+    // TODO: implement
   }
 
   addParticleSystemWithTransform(particleSystem, transform) {
+    // TODO: implement
   }
 }
 
