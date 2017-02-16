@@ -12,6 +12,9 @@ export default class SCNView {
    * @constructor
    */
   constructor() {
+    /**
+     * @type {boolean}
+     */
     this.showsStatistics = false
 
     this.pointOfView = null
