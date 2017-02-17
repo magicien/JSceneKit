@@ -3,7 +3,6 @@ var babel = require('babel-core/register');
 
 var src = './src';
 var dest = './build';
-var docs = './docs';
 
 var relativeSrcPath = path.relative('.', src);
 
@@ -14,10 +13,6 @@ module.exports = {
     src: src + '/js/**',
     dest: dest + '/js',
     uglify: false
-  },
-
-  esdoc: {
-    destination: docs
   },
 
   eslint: {
