@@ -2,7 +2,7 @@
   "name": "jscenekit",
   "version": "0.1.0",
   "description": "Port of SceneKit framework to JavaScript",
-  "main": "main.js",
+  "main": "./index.js",
   "scripts": {
     "lint": "gulp lint",
     "build": "gulp build",
@@ -32,13 +32,6 @@
       "es2015"
     ]
   },
-  "config": {
-    "blanket": {
-      "pattern": [
-        "src"
-      ]
-    }
-  },
   "devDependencies": {
     "babel": "^6.5.2",
     "babel-core": "^6.7.7",
@@ -65,5 +58,9 @@
     "sinon": "^1.17.3",
     "sinon-chai": "^2.8.0",
     "webpack": "^2.2.1"
+  },
+  "dependencies": {
+    "babel-preset-es2015": "^6.22.0",
+    "babel-register": "^6.23.0"
   }
 }

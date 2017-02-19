@@ -12,8 +12,8 @@ export default class SCNScene {
    */
   constructor() {
     /**
+     * frameRate
      * @type {number}
-     * 
      */
     this.frameRate = 0
 
