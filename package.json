@@ -1,6 +1,6 @@
 {
   "name": "jscenekit",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Port of SceneKit framework to JavaScript",
   "main": "./index.js",
   "scripts": {
@@ -56,6 +56,7 @@
     "require-dir": "^0.3.0",
     "sinon": "^1.17.3",
     "sinon-chai": "^2.8.0",
+    "uglifyjs-webpack-plugin": "^0.1.5",
     "webpack": "^2.2.1",
     "webpack-stream": "^3.2.0"
   },

@@ -1,17 +1,18 @@
-var path = require('path');
-var babel = require('babel-core/register');
+const path = require('path');
+const babel = require('babel-core/register');
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
-var src = './src';
-var dest = './build';
+const src = './src';
+const dest = './';
 
-var relativeSrcPath = path.relative('.', src);
+const relativeSrcPath = path.relative('.', src);
 
 module.exports = {
   dest: dest,
 
   js: {
     src: src + '/js/**',
-    dest: dest + '/js',
+    dest: dest,
     uglify: false
   },
 
@@ -30,13 +31,16 @@ module.exports = {
   webpack: {
     entry: src + '/js/main.js',
     output: {
-      filename: 'jSceneKit.js',
+      filename: 'index.js',
       library: 'JSceneKit',
-      libraryTarget: 'var'
+      libraryTarget: 'commonjs2'
     },
     resolve: {
       extensions: ['', '.js']
     },
+    plugins: [
+      new UglifyJSPlugin()
+    ],
     module: {
       loaders: [
         {
