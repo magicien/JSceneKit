@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var gulpif = require('gulp-if');
 var uglify = require('gulp-uglify');
-var webpack = require('gulp-webpack');
+var webpack = require('webpack-stream');
 var config = require('../config');
 var exec = require('child_process').exec;
 
