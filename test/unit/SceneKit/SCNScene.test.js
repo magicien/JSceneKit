@@ -6,6 +6,7 @@ const expect = chai.expect
 
 describe('SCNScene class', () => {
 
+  /*
   UnitTest.classFunctionsDefined(SCNScene, [
     'sceneWithMDLAsset',
     'sceneWithURLOptionsError',
@@ -58,5 +59,6 @@ describe('SCNScene class', () => {
       expect(scene).to.be.an.instanceof(SCNScene)
     })
   })
+  */
 })
 

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">js/SceneKit/SCNTransaction.js | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="https://github.com/magicien/JSceneKit" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">CoreGraphics</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGMutablePath.js~CGMutablePath.html">CGMutablePath</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html">CGPath</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGPoint.js~CGPoint.html">CGPoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGRect.js~CGRect.html">CGRect</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGSize.js~CGSize.html">CGSize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGVector.js~CGVector.html">CGVector</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Foundation</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSValue.js~NSValue.html">NSValue</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">ObjectiveC</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/ObjectiveC/NSObject.js~NSObject.html">NSObject</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">QuartzCore</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAnimation.js~CAAnimation.html">CAAnimation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAMediaTimingFunction.js~CAMediaTimingFunction.html">CAMediaTimingFunction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CATransform3D.js~CATransform3D.html">CATransform3D</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAction.js~CAAction.html">CAAction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAnimationDelegate.js~CAAnimationDelegate.html">CAAnimationDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAMediaTiming.js~CAMediaTiming.html">CAMediaTiming</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">SceneKit</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAction.js~SCNAction.html">SCNAction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAnimationEvent.js~SCNAnimationEvent.html">SCNAnimationEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAudioPlayer.js~SCNAudioPlayer.html">SCNAudioPlayer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAudioSource.js~SCNAudioSource.html">SCNAudioSource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBillboardAxis.js~SCNBillboardAxis.html">SCNBillboardAxis</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBillboardConstraint.js~SCNBillboardConstraint.html">SCNBillboardConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBox.js~SCNBox.html">SCNBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCamera.js~SCNCamera.html">SCNCamera</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCapsule.js~SCNCapsule.html">SCNCapsule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCone.js~SCNCone.html">SCNCone</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNConstraint.js~SCNConstraint.html">SCNConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCylinder.js~SCNCylinder.html">SCNCylinder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNDebugOptions.js~SCNDebugOptions.html">SCNDebugOptions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNFloor.js~SCNFloor.html">SCNFloor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNGeometry.js~SCNGeometry.html">SCNGeometry</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNGeometryElement.js~SCNGeometryElement.html">SCNGeometryElement</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNGeometrySource.js~SCNGeometrySource.html">SCNGeometrySource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNHitTestResult.js~SCNHitTestResult.html">SCNHitTestResult</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNIKConstraint.js~SCNIKConstraint.html">SCNIKConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLayer.js~SCNLayer.html">SCNLayer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLevelOfDetail.js~SCNLevelOfDetail.html">SCNLevelOfDetail</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLight.js~SCNLight.html">SCNLight</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLookAtConstraint.js~SCNLookAtConstraint.html">SCNLookAtConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMaterial.js~SCNMaterial.html">SCNMaterial</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html">SCNMaterialProperty</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMatrix4.js~SCNMatrix4.html">SCNMatrix4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMorpher.js~SCNMorpher.html">SCNMorpher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html">SCNNode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNParticlePropertyController.js~SCNParticlePropertyController.html">SCNParticlePropertyController</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNParticleSystem.js~SCNParticleSystem.html">SCNParticleSystem</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsBallSocketJoint.js~SCNPhysicsBallSocketJoint.html">SCNPhysicsBallSocketJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsBehavior.js~SCNPhysicsBehavior.html">SCNPhysicsBehavior</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsBody.js~SCNPhysicsBody.html">SCNPhysicsBody</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsCollisionCategory.js~SCNPhysicsCollisionCategory.html">SCNPhysicsCollisionCategory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsContact.js~SCNPhysicsContact.html">SCNPhysicsContact</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsField.js~SCNPhysicsField.html">SCNPhysicsField</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsHingeJoint.js~SCNPhysicsHingeJoint.html">SCNPhysicsHingeJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsShape.js~SCNPhysicsShape.html">SCNPhysicsShape</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsSliderJoint.js~SCNPhysicsSliderJoint.html">SCNPhysicsSliderJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsVehicle.js~SCNPhysicsVehicle.html">SCNPhysicsVehicle</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsVehicleWheel.js~SCNPhysicsVehicleWheel.html">SCNPhysicsVehicleWheel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsWorld.js~SCNPhysicsWorld.html">SCNPhysicsWorld</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPlane.js~SCNPlane.html">SCNPlane</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNProgram.js~SCNProgram.html">SCNProgram</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPyramid.js~SCNPyramid.html">SCNPyramid</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNReferenceNode.js~SCNReferenceNode.html">SCNReferenceNode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNRenderer.js~SCNRenderer.html">SCNRenderer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNScene.js~SCNScene.html">SCNScene</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneSource.js~SCNSceneSource.html">SCNSceneSource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNShape.js~SCNShape.html">SCNShape</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSkinner.js~SCNSkinner.html">SCNSkinner</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSphere.js~SCNSphere.html">SCNSphere</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTechnique.js~SCNTechnique.html">SCNTechnique</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNText.js~SCNText.html">SCNText</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTorus.js~SCNTorus.html">SCNTorus</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTransaction.js~SCNTransaction.html">SCNTransaction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTransformConstraint.js~SCNTransformConstraint.html">SCNTransformConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTube.js~SCNTube.html">SCNTube</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNVector3.js~SCNVector3.html">SCNVector3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNVector4.js~SCNVector4.html">SCNVector4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNView.js~SCNView.html">SCNView</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNActionable.js~SCNActionable.html">SCNActionable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAnimatable.js~SCNAnimatable.html">SCNAnimatable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBoundingVolume.js~SCNBoundingVolume.html">SCNBoundingVolume</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBufferStream.js~SCNBufferStream.html">SCNBufferStream</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNNodeRendererDelegate.js~SCNNodeRendererDelegate.html">SCNNodeRendererDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsContactDelegate.js~SCNPhysicsContactDelegate.html">SCNPhysicsContactDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNProgramDelegate.js~SCNProgramDelegate.html">SCNProgramDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneExportDelegate.js~SCNSceneExportDelegate.html">SCNSceneExportDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneRenderer.js~SCNSceneRenderer.html">SCNSceneRenderer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneRendererDelegate.js~SCNSceneRendererDelegate.html">SCNSceneRendererDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNShadable.js~SCNShadable.html">SCNShadable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTechniqueSupport.js~SCNTechniqueSupport.html">SCNTechniqueSupport</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">js/SceneKit/SCNTransaction.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">&apos;use strict&apos;
+
+import NSObject from &apos;../ObjectiveC/NSObject&apos;
+import CAMediaTimingFunction from &apos;../QuartzCore/CAMediaTimingFunction&apos;
+
+let _animationDuration = 0
+let _animationTimingFunction = null
+let _disableActions = false
+let _completionBlock = null
+
+/**
+ * The SCNTransaction class defines SceneKit&#x2019;s mechanism for batching scene graph modifications into atomic updates. You use SCNTransaction class methods to control the animation that results from changing animatable properties in the scene graph and to combine sets of changes into nested transactions.
+ * @access public
+ * @extends {NSObject}
+ * @see https://developer.apple.com/reference/scenekit/scntransaction
+ */
+export default class SCNTransaction extends NSObject {
+
+  /**
+   * constructor
+   * @access public
+   * @returns {void}
+   */
+  init() {
+  }
+
+  // Creating and Committing Transactions
+
+  /**
+   * Begins a new transaction for the current thread.
+   * @access public
+   * @returns {void}
+   * @desc The new transaction is nested within the thread&#x2019;s current transaction, if there is one.The first time you modify the scene graph during a pass through the run loop, SceneKit automatically creates a transaction and makes it the current transaction. (SceneKit commits that transaction when the next iteration of the run loops begins.) If you call this method to create a custom transaction before modifying the scene graph, your custom transaction becomes the current transaction.
+   * @see https://developer.apple.com/reference/scenekit/scntransaction/1522820-begin
+   */
+  static begin() {
+  }
+
+  /**
+   * Commits all changes made during the current transaction.
+   * @access public
+   * @returns {void}
+   * @desc If there is no current transaction, this method has no effect.
+   * @see https://developer.apple.com/reference/scenekit/scntransaction/1523436-commit
+   */
+  static commit() {
+  }
+
+  /**
+   * Applies all changes from the current automatic transaction.
+   * @access public
+   * @returns {void}
+   * @desc SceneKit automatically calls this method at the end of each pass through the run loop, regardless of the run loop mode. If your app does not have a run loop, you must call this method explicitly.If the current transaction has any nested transactions that are still animating, SceneKit waits to commit the current transaction&#x2019;s changes until those transactions complete.NoteIf possible, avoid calling flush() explicitly. By allowing flush() to execute during the run loop, your app achieves better performance, atomic screen updates are preserved, and transactions and animations that work from transaction to transaction continue to function.
+   * @see https://developer.apple.com/reference/scenekit/scntransaction/1522860-flush
+   */
+  static flush() {
+  }
+
+  // Overriding Animation Duration and Timing
+  /**
+   * Returns the duration, in seconds, of all animations within the current transaction.
+   * @type {number}
+   * @desc The default duration is zero for transactions automatically created by SceneKit, and 0.25 for animations you create using the begin() method.
+   * @see https://developer.apple.com/reference/scenekit/scntransaction/1523888-animationduration
+   */
+  static get animationDuration() {
+    return _animationDuration
+  }
+  /**
+   * Returns the duration, in seconds, of all animations within the current transaction.
+   * @type {number}
+   * @desc The default duration is zero for transactions automatically created by SceneKit, and 0.25 for animations you create using the begin() method.
+   * @see https://developer.apple.com/reference/scenekit/scntransaction/1523888-animationduration
+   */
+  static set animationDuration(newValue) {
+    _animationDuration = newValue
+  }
+  /**
+   * Returns the timing function that SceneKit uses for all animations within this transaction group. 
+   * @type {?CAMediaTimingFunction}
+   * @desc Media timing functions, also known as animation curves, define the relationship between the elapsed time of an animation and its effect on a property. For example, the kCAMediaTimingFunctionEaseInEaseOut function creates an effect that begins slowly, speeds up, and then finishes slowly.
+   * @see https://developer.apple.com/reference/scenekit/scntransaction/1522614-animationtimingfunction
+   */
+  static get animationTimingFunction() {
+    return _animationTimingFunction
+  }
+  /**
+   * Returns the timing function that SceneKit uses for all animations within this transaction group. 
+   * @type {?CAMediaTimingFunction}
+   * @desc Media timing functions, also known as animation curves, define the relationship between the elapsed time of an animation and its effect on a property. For example, the kCAMediaTimingFunctionEaseInEaseOut function creates an effect that begins slowly, speeds up, and then finishes slowly.
+   * @see https://developer.apple.com/reference/scenekit/scntransaction/1522614-animationtimingfunction
+   */
+  static set animationTimingFunction(newValue) {
+    _animationTimingFunction = newValue
+  }
+
+  // Temporarily Disabling Property Animations
+  /**
+   * Returns a Boolean value indicating whether changes to animatable properties during the transaction are implicitly animated.
+   * @type {boolean}
+   * @desc By default (when this property is false), any changes to animatable properties of objects in the scene graph implicitly create animations. (These animations may not be visible unless you use the animationDuration property to set a nonzero duration for the transaction.) Set this property to true to disable implicit animation during the transaction.Disabling animation applies to all property changes in the current transaction and any nested transactions within it. However, you can use this property again within a nested transaction to enable implicit animation for that transaction.
+   * @see https://developer.apple.com/reference/scenekit/scntransaction/1524238-disableactions
+   */
+  static get disableActions() {
+    return _disableActions
+  }
+  /**
+   * Returns a Boolean value indicating whether changes to animatable properties during the transaction are implicitly animated.
+   * @type {boolean}
+   * @desc By default (when this property is false), any changes to animatable properties of objects in the scene graph implicitly create animations. (These animations may not be visible unless you use the animationDuration property to set a nonzero duration for the transaction.) Set this property to true to disable implicit animation during the transaction.Disabling animation applies to all property changes in the current transaction and any nested transactions within it. However, you can use this property again within a nested transaction to enable implicit animation for that transaction.
+   * @see https://developer.apple.com/reference/scenekit/scntransaction/1524238-disableactions
+   */
+  static set disableActions(newValue) {
+    _disableActions = newValue
+  }
+
+  // Getting and Setting Completion Block Objects
+  /**
+   * Returns the block previously associated with the current transaction.
+   * @type {?function(): void}
+   * @desc See setCompletionBlock(_:) for a description of the role of the completion block object.
+   * @see https://developer.apple.com/reference/scenekit/scntransaction/1523660-completionblock
+   */
+  static get completionBlock() {
+    return _completionBlock
+  }
+  /**
+   * Returns the block previously associated with the current transaction.
+   * @type {?function(): void}
+   * @desc See setCompletionBlock(_:) for a description of the role of the completion block object.
+   * @see https://developer.apple.com/reference/scenekit/scntransaction/1523660-completionblock
+   */
+  static set completionBlock(newValue) {
+    _completionBlock = newValue
+  }
+
+  // Managing Concurrency
+
+  /**
+   * Attempts to acquire a recursive spinlock to ensure the validity of values you retrieve during the transaction.
+   * @access public
+   * @returns {void}
+   * @desc SceneKit&#x2019;s data model is thread-safe in that it ensures that internal data structures will not be corrupted by concurrent attempts to modify their contents from multiple threads. However, this model does not guarantee the validity of values you read from scene graph objects after returning them.For example, consider the following operation:_node.position = SCNVector3Make(_node.position.x, _node.position.y + 10, _node.position.z);
+The intent of this line is to move a node by ten units. But if another thread modifies the node&#x2019;s position property concurrently, the new position value could be unexpected. If your app modifies the scene graph from multiple threads, use a transaction lock to ensure that your modifications take effect as intended.[SCNTransaction lock];
+_node.position = SCNVector3Make(_node.position.x, _node.position.y + 10, _node.position.z);
+[SCNTransaction unlock];
+If another thread currently holds a lock on the transaction, calling lock() has no effect._node.position = SCNVector3Make(_node.position.x, _node.position.y + 10, _node.position.z);
+[SCNTransaction lock];
+_node.position = SCNVector3Make(_node.position.x, _node.position.y + 10, _node.position.z);
+[SCNTransaction unlock];
+
+   * @see https://developer.apple.com/reference/scenekit/scntransaction/1523078-lock
+   */
+  static lock() {
+  }
+
+  /**
+   * Relinquishes a previously acquired transaction lock.
+   * @access public
+   * @returns {void}
+   * @desc See the lock() method for more details on transaction locking.
+   * @see https://developer.apple.com/reference/scenekit/scntransaction/1523166-unlock
+   */
+  static unlock() {
+  }
+
+  // Getting and Setting Transaction Properties
+
+  /**
+   * Associates an arbitrary object with the current transaction using the specified key.
+   * @access public
+   * @param {?Object} value - 
+   * @param {string} key - A unique string identifying the object for later retrieval.
+   * @returns {void}
+   * @desc Nested transactions have nested data scope. Setting a value for a key associates it with the current transaction (or innermost nested transaction) only, and reading the value for a key searches through nested transactions (starting from the innermost).
+   * @see https://developer.apple.com/reference/scenekit/scntransaction/1524124-setvalue
+   */
+  static setValueForKey(value, key) {
+  }
+
+  /**
+   * Returns the object previously associated with the current transaction using the specified key.
+   * @access public
+   * @param {string} key - The unique string identifying an object previously associated with the transaction.
+   * @returns {?Object} - 
+   * @desc Nested transactions have nested data scope. Setting a value for a key associates it with the current transaction (or innermost nested transaction) only, but reading the value for a key searches through nested transactions (starting from the innermost).
+   * @see https://developer.apple.com/reference/scenekit/scntransaction/1523919-value
+   */
+  static valueForKey(key) {
+    return null
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

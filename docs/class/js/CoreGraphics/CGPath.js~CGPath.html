@@ -1,0 +1,2115 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">CGPath | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="https://github.com/magicien/JSceneKit" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">CoreGraphics</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGMutablePath.js~CGMutablePath.html">CGMutablePath</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html">CGPath</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGPoint.js~CGPoint.html">CGPoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGRect.js~CGRect.html">CGRect</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGSize.js~CGSize.html">CGSize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGVector.js~CGVector.html">CGVector</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Foundation</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSValue.js~NSValue.html">NSValue</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">ObjectiveC</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/ObjectiveC/NSObject.js~NSObject.html">NSObject</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">QuartzCore</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAnimation.js~CAAnimation.html">CAAnimation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAMediaTimingFunction.js~CAMediaTimingFunction.html">CAMediaTimingFunction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CATransform3D.js~CATransform3D.html">CATransform3D</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAction.js~CAAction.html">CAAction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAnimationDelegate.js~CAAnimationDelegate.html">CAAnimationDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAMediaTiming.js~CAMediaTiming.html">CAMediaTiming</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">SceneKit</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAction.js~SCNAction.html">SCNAction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAnimationEvent.js~SCNAnimationEvent.html">SCNAnimationEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAudioPlayer.js~SCNAudioPlayer.html">SCNAudioPlayer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAudioSource.js~SCNAudioSource.html">SCNAudioSource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBillboardAxis.js~SCNBillboardAxis.html">SCNBillboardAxis</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBillboardConstraint.js~SCNBillboardConstraint.html">SCNBillboardConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBox.js~SCNBox.html">SCNBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCamera.js~SCNCamera.html">SCNCamera</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCapsule.js~SCNCapsule.html">SCNCapsule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCone.js~SCNCone.html">SCNCone</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNConstraint.js~SCNConstraint.html">SCNConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCylinder.js~SCNCylinder.html">SCNCylinder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNDebugOptions.js~SCNDebugOptions.html">SCNDebugOptions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNFloor.js~SCNFloor.html">SCNFloor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNGeometry.js~SCNGeometry.html">SCNGeometry</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNGeometryElement.js~SCNGeometryElement.html">SCNGeometryElement</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNGeometrySource.js~SCNGeometrySource.html">SCNGeometrySource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNHitTestResult.js~SCNHitTestResult.html">SCNHitTestResult</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNIKConstraint.js~SCNIKConstraint.html">SCNIKConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLayer.js~SCNLayer.html">SCNLayer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLevelOfDetail.js~SCNLevelOfDetail.html">SCNLevelOfDetail</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLight.js~SCNLight.html">SCNLight</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLookAtConstraint.js~SCNLookAtConstraint.html">SCNLookAtConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMaterial.js~SCNMaterial.html">SCNMaterial</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html">SCNMaterialProperty</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMatrix4.js~SCNMatrix4.html">SCNMatrix4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMorpher.js~SCNMorpher.html">SCNMorpher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html">SCNNode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNParticlePropertyController.js~SCNParticlePropertyController.html">SCNParticlePropertyController</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNParticleSystem.js~SCNParticleSystem.html">SCNParticleSystem</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsBallSocketJoint.js~SCNPhysicsBallSocketJoint.html">SCNPhysicsBallSocketJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsBehavior.js~SCNPhysicsBehavior.html">SCNPhysicsBehavior</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsBody.js~SCNPhysicsBody.html">SCNPhysicsBody</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsCollisionCategory.js~SCNPhysicsCollisionCategory.html">SCNPhysicsCollisionCategory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsContact.js~SCNPhysicsContact.html">SCNPhysicsContact</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsField.js~SCNPhysicsField.html">SCNPhysicsField</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsHingeJoint.js~SCNPhysicsHingeJoint.html">SCNPhysicsHingeJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsShape.js~SCNPhysicsShape.html">SCNPhysicsShape</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsSliderJoint.js~SCNPhysicsSliderJoint.html">SCNPhysicsSliderJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsVehicle.js~SCNPhysicsVehicle.html">SCNPhysicsVehicle</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsVehicleWheel.js~SCNPhysicsVehicleWheel.html">SCNPhysicsVehicleWheel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsWorld.js~SCNPhysicsWorld.html">SCNPhysicsWorld</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPlane.js~SCNPlane.html">SCNPlane</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNProgram.js~SCNProgram.html">SCNProgram</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPyramid.js~SCNPyramid.html">SCNPyramid</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNReferenceNode.js~SCNReferenceNode.html">SCNReferenceNode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNRenderer.js~SCNRenderer.html">SCNRenderer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNScene.js~SCNScene.html">SCNScene</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneSource.js~SCNSceneSource.html">SCNSceneSource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNShape.js~SCNShape.html">SCNShape</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSkinner.js~SCNSkinner.html">SCNSkinner</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSphere.js~SCNSphere.html">SCNSphere</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTechnique.js~SCNTechnique.html">SCNTechnique</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNText.js~SCNText.html">SCNText</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTorus.js~SCNTorus.html">SCNTorus</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTransaction.js~SCNTransaction.html">SCNTransaction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTransformConstraint.js~SCNTransformConstraint.html">SCNTransformConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTube.js~SCNTube.html">SCNTube</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNVector3.js~SCNVector3.html">SCNVector3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNVector4.js~SCNVector4.html">SCNVector4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNView.js~SCNView.html">SCNView</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNActionable.js~SCNActionable.html">SCNActionable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAnimatable.js~SCNAnimatable.html">SCNAnimatable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBoundingVolume.js~SCNBoundingVolume.html">SCNBoundingVolume</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBufferStream.js~SCNBufferStream.html">SCNBufferStream</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNNodeRendererDelegate.js~SCNNodeRendererDelegate.html">SCNNodeRendererDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsContactDelegate.js~SCNPhysicsContactDelegate.html">SCNPhysicsContactDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNProgramDelegate.js~SCNProgramDelegate.html">SCNProgramDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneExportDelegate.js~SCNSceneExportDelegate.html">SCNSceneExportDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneRenderer.js~SCNSceneRenderer.html">SCNSceneRenderer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneRendererDelegate.js~SCNSceneRendererDelegate.html">SCNSceneRendererDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNShadable.js~SCNShadable.html">SCNShadable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTechniqueSupport.js~SCNTechniqueSupport.html">SCNTechniqueSupport</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><div class="header-notice">
+  <div data-ice="importPath" class="import-path"><pre class="prettyprint"><code data-ice="importPathCode">import CGPath from &apos;<span><a href="file/js/CoreGraphics/CGPath.js.html#lineNumber18">jscenekit/js/CoreGraphics/CGPath.js</a></span>&apos;</code></pre></div>
+  <span data-ice="access">public</span>
+  <span data-ice="kind">class</span>
+  
+  
+  
+  <span data-ice="source">| <span><a href="file/js/CoreGraphics/CGPath.js.html#lineNumber18">source</a></span></span>
+</div>
+
+<div class="self-detail detail">
+  <h1 data-ice="name">CGPath</h1>
+
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+  
+  <div class="description" data-ice="description"><p>An immutable graphics path: a mathematical description of shapes or lines to be drawn in a graphics context.</p>
+</div>
+  
+
+  <div data-ice="see"><h4>See:</h4><ul><li><span><a href="https://developer.apple.com/reference/coregraphics/cgpath">https://developer.apple.com/reference/coregraphics/cgpath</a></span></li></ul></div>
+
+  
+
+  
+
+  
+</div>
+
+<div data-ice="staticMemberSummary"><h2>Static Member Summary</h2><table class="summary" data-ice="summary">
+  <thead><tr><td data-ice="title" colspan="3">Static Public Members</td></tr></thead>
+  <tbody>
+  
+  <tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      <span data-ice="static">static</span>
+      <span class="kind" data-ice="kind">get</span>
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html#static-get-typeID">typeID</a></span></span><span data-ice="signature">: <span>CFTypeID</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+
+<div data-ice="memberSummary"><h2>Member Summary</h2><table class="summary" data-ice="summary">
+  <thead><tr><td data-ice="title" colspan="3">Public Members</td></tr></thead>
+  <tbody>
+  
+  <tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      <span class="kind" data-ice="kind">get</span>
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html#instance-get-boundingBox">boundingBox</a></span></span><span data-ice="signature">: <span><a href="class/js/CoreGraphics/CGRect.js~CGRect.html">CGRect</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>The bounding box is the smallest rectangle completely enclosing all points in the path, including control points for B&#xE9;zier and quadratic curves.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      <span class="kind" data-ice="kind">get</span>
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html#instance-get-boundingBoxOfPath">boundingBoxOfPath</a></span></span><span data-ice="signature">: <span><a href="class/js/CoreGraphics/CGRect.js~CGRect.html">CGRect</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>The path bounding box is the smallest rectangle completely enclosing all points in the path but not including control points for B&#xE9;zier and quadratic curves.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      <span class="kind" data-ice="kind">get</span>
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html#instance-get-currentPoint">currentPoint</a></span></span><span data-ice="signature">: <span><a href="class/js/CoreGraphics/CGPoint.js~CGPoint.html">CGPoint</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>If the path is empty&#x2014;that is, if it has no elements&#x2014;this function returns CGPointZero (see CGGeometry).</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      <span class="kind" data-ice="kind">get</span>
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html#instance-get-isEmpty">isEmpty</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>An empty path contains no elements.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+<div data-ice="methodSummary"><h2>Method Summary</h2><table class="summary" data-ice="summary">
+  <thead><tr><td data-ice="title" colspan="3">Public Methods</td></tr></thead>
+  <tbody>
+  
+  <tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html#instance-method-apply">apply</a></span></span><span data-ice="signature">(info: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>, _function: <span>CGPathApplierFunction</span>): <span>void</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>For each element in the specified path, Core Graphics calls the applier function, which can examine (but not modify) the element.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html#instance-method-containsUsing">containsUsing</a></span></span><span data-ice="signature">(point: <span><a href="class/js/CoreGraphics/CGPoint.js~CGPoint.html">CGPoint</a></span>, rule: <span>CGPathFillRule</span>, transform: <span>CGAffineTransform</span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>A point is contained in a path if it would be inside the painted region when the path is filled.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html#instance-method-copy">copy</a></span></span><span data-ice="signature">(): <span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html">CGPath</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Creates an immutable copy of a graphics path.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html#instance-method-copyDashingWithPhase">copyDashingWithPhase</a></span></span><span data-ice="signature">(phase: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, lengths: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span><span>[]</span></span>, transform: <span>CGAffineTransform</span>): <span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html">CGPath</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>The new path is created so that filling the new path draws the same pixels as stroking the original path with the specified dash parameters.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html#instance-method-copyStrokingWithWidth">copyStrokingWithWidth</a></span></span><span data-ice="signature">(lineWidth: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, lineCap: <span>CGLineCap</span>, lineJoin: <span>CGLineJoin</span>, miterLimit: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, transform: <span>CGAffineTransform</span>): <span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html">CGPath</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>The new path is created so that filling the new path draws the same pixels as stroking the original path with the specified line style.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html#instance-method-copyUsing">copyUsing</a></span></span><span data-ice="signature">(transform: <span>UnsafePointer</span>&lt;<span>CGAffineTransform</span>&gt;): <span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html">CGPath</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Creates an immutable copy of a graphics path transformed by a transformation matrix.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html#instance-method-init">init</a></span></span><span data-ice="signature">(rect: <span><a href="class/js/CoreGraphics/CGRect.js~CGRect.html">CGRect</a></span>, transform: <span>UnsafePointer</span>&lt;<span>CGAffineTransform</span>&gt;): <span>void</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This is a convenience function that creates a path of an rectangle.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html#instance-method-initEllipseIn">initEllipseIn</a></span></span><span data-ice="signature">(rect: <span><a href="class/js/CoreGraphics/CGRect.js~CGRect.html">CGRect</a></span>, transform: <span>UnsafePointer</span>&lt;<span>CGAffineTransform</span>&gt;): <span>void</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This is a convenience function that creates a path of an ellipse.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html#instance-method-initRoundedRect">initRoundedRect</a></span></span><span data-ice="signature">(rect: <span><a href="class/js/CoreGraphics/CGRect.js~CGRect.html">CGRect</a></span>, cornerWidth: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, cornerHeight: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, transform: <span>UnsafePointer</span>&lt;<span>CGAffineTransform</span>&gt;): <span>void</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This is a convenience function that creates a path of an rounded rectangle.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html#instance-method-init__byDashing">init__byDashing</a></span></span><span data-ice="signature">(path: <span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html">CGPath</a></span>, transform: <span>UnsafePointer</span>&lt;<span>CGAffineTransform</span>&gt;, phase: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, lengths: <span>UnsafePointer</span>&lt;<span>CGFloat</span>&gt;, count: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>): <span>void</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>The new path is created so that filling the new path draws the same pixels as stroking the original path with the specified dash parameters.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html#instance-method-init__byStroking">init__byStroking</a></span></span><span data-ice="signature">(path: <span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html">CGPath</a></span>, transform: <span>UnsafePointer</span>&lt;<span>CGAffineTransform</span>&gt;, lineWidth: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, lineCap: <span>CGLineCap</span>, lineJoin: <span>CGLineJoin</span>, miterLimit: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>): <span>void</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>The new path is created so that filling the new path draws the same pixels as stroking the original path.If the line join style is set to kCGLineJoinMiter, Core Graphics uses the miter limit to determine whether the lines should be joined with a bevel instead of a miter.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html#instance-method-isRect">isRect</a></span></span><span data-ice="signature">(rect: <span>UnsafeMutablePointer</span>&lt;<span><a href="class/js/CoreGraphics/CGRect.js~CGRect.html">CGRect</a></span>&gt;): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Indicates whether or not a graphics path represents a rectangle.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html#instance-method-mutableCopy">mutableCopy</a></span></span><span data-ice="signature">(): <span><a href="class/js/CoreGraphics/CGMutablePath.js~CGMutablePath.html">CGMutablePath</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>You can modify a mutable graphics path by calling the various path geometry functions, such as addArc(<em>:x:y:radius:startAngle:endAngle:clockwise:), addLineTo(</em>:x:y:), and moveTo(_:x:y:).</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html#instance-method-mutableCopyUsing">mutableCopyUsing</a></span></span><span data-ice="signature">(transform: <span>UnsafePointer</span>&lt;<span>CGAffineTransform</span>&gt;): <span><a href="class/js/CoreGraphics/CGMutablePath.js~CGMutablePath.html">CGMutablePath</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Creates a mutable copy of a graphics path transformed by a transformation matrix.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
+
+
+
+<div data-ice="staticMemberDetails"><h2 data-ice="title">Static Public Members</h2>
+
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="static-get-typeID">
+    <span class="access" data-ice="access">public</span>
+    <span data-ice="static">static</span>
+    <span class="kind" data-ice="kind">get</span>
+    
+    
+    
+    <span data-ice="name">typeID</span><span data-ice="signature">: <span>CFTypeID</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/js/CoreGraphics/CGPath.js.html#lineNumber240">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="see"><h4>See:</h4><ul><li><span><a href="https://developer.apple.com/reference/coregraphics/cgpath/1411192-typeid">https://developer.apple.com/reference/coregraphics/cgpath/1411192-typeid</a></span></li></ul></div>
+  
+</div>
+</div>
+
+
+<div data-ice="memberDetails"><h2 data-ice="title">Public Members</h2>
+
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-get-boundingBox">
+    <span class="access" data-ice="access">public</span>
+    
+    <span class="kind" data-ice="kind">get</span>
+    
+    
+    
+    <span data-ice="name">boundingBox</span><span data-ice="signature">: <span><a href="class/js/CoreGraphics/CGRect.js~CGRect.html">CGRect</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/js/CoreGraphics/CGPath.js.html#lineNumber188">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>The bounding box is the smallest rectangle completely enclosing all points in the path, including control points for B&#xE9;zier and quadratic curves. </p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="see"><h4>See:</h4><ul><li><span><a href="https://developer.apple.com/reference/coregraphics/cgpath/1411165-boundingbox">https://developer.apple.com/reference/coregraphics/cgpath/1411165-boundingbox</a></span></li></ul></div>
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-get-boundingBoxOfPath">
+    <span class="access" data-ice="access">public</span>
+    
+    <span class="kind" data-ice="kind">get</span>
+    
+    
+    
+    <span data-ice="name">boundingBoxOfPath</span><span data-ice="signature">: <span><a href="class/js/CoreGraphics/CGRect.js~CGRect.html">CGRect</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/js/CoreGraphics/CGPath.js.html#lineNumber197">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>The path bounding box is the smallest rectangle completely enclosing all points in the path but not including control points for B&#xE9;zier and quadratic curves. </p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="see"><h4>See:</h4><ul><li><span><a href="https://developer.apple.com/reference/coregraphics/cgpath/1411200-boundingboxofpath">https://developer.apple.com/reference/coregraphics/cgpath/1411200-boundingboxofpath</a></span></li></ul></div>
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-get-currentPoint">
+    <span class="access" data-ice="access">public</span>
+    
+    <span class="kind" data-ice="kind">get</span>
+    
+    
+    
+    <span data-ice="name">currentPoint</span><span data-ice="signature">: <span><a href="class/js/CoreGraphics/CGPoint.js~CGPoint.html">CGPoint</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/js/CoreGraphics/CGPath.js.html#lineNumber206">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>If the path is empty&#x2014;that is, if it has no elements&#x2014;this function returns CGPointZero (see CGGeometry). To determine whether a path is empty, use isEmpty.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="see"><h4>See:</h4><ul><li><span><a href="https://developer.apple.com/reference/coregraphics/cgpath/1411132-currentpoint">https://developer.apple.com/reference/coregraphics/cgpath/1411132-currentpoint</a></span></li></ul></div>
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-get-isEmpty">
+    <span class="access" data-ice="access">public</span>
+    
+    <span class="kind" data-ice="kind">get</span>
+    
+    
+    
+    <span data-ice="name">isEmpty</span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/js/CoreGraphics/CGPath.js.html#lineNumber215">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>An empty path contains no elements.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="see"><h4>See:</h4><ul><li><span><a href="https://developer.apple.com/reference/coregraphics/cgpath/1411149-isempty">https://developer.apple.com/reference/coregraphics/cgpath/1411149-isempty</a></span></li></ul></div>
+  
+</div>
+</div>
+<div data-ice="methodDetails"><h2 data-ice="title">Public Methods</h2>
+
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-apply">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span data-ice="name">apply</span><span data-ice="signature">(info: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span>, _function: <span>CGPathApplierFunction</span>): <span>void</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/js/CoreGraphics/CGPath.js.html#lineNumber230">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>For each element in the specified path, Core Graphics calls the applier function, which can examine (but not modify) the element.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">info</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object">Object</a></span></td>
+      <td data-ice="appendix"><ul><li>nullable: true</li></ul></td>
+      <td data-ice="description"><p>A pointer to the user data that Core Graphics will pass to the function being applied, or NULL.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">_function</td>
+      <td data-ice="type"><span>CGPathApplierFunction</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"></td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type" data-ice="returnType"><span>void</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="see"><h4>See:</h4><ul><li><span><a href="https://developer.apple.com/reference/coregraphics/cgpath/1411203-apply">https://developer.apple.com/reference/coregraphics/cgpath/1411203-apply</a></span></li></ul></div>
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-containsUsing">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span data-ice="name">containsUsing</span><span data-ice="signature">(point: <span><a href="class/js/CoreGraphics/CGPoint.js~CGPoint.html">CGPoint</a></span>, rule: <span>CGPathFillRule</span>, transform: <span>CGAffineTransform</span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/js/CoreGraphics/CGPath.js.html#lineNumber168">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>A point is contained in a path if it would be inside the painted region when the path is filled.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">point</td>
+      <td data-ice="type"><span><a href="class/js/CoreGraphics/CGPoint.js~CGPoint.html">CGPoint</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The point to check.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">rule</td>
+      <td data-ice="type"><span>CGPathFillRule</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The rule for determining which areas to treat as the interior of the path. Defaults to the winding rule if not specified.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">transform</td>
+      <td data-ice="type"><span>CGAffineTransform</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>An affine transform to apply to the point before checking for containment in the path. Defaults to the identity transform if not specified.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="see"><h4>See:</h4><ul><li><span><a href="https://developer.apple.com/reference/coregraphics/cgpath/2427117-contains">https://developer.apple.com/reference/coregraphics/cgpath/2427117-contains</a></span></li></ul></div>
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-copy">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span data-ice="name">copy</span><span data-ice="signature">(): <span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html">CGPath</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/js/CoreGraphics/CGPath.js.html#lineNumber89">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Creates an immutable copy of a graphics path.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type" data-ice="returnType"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html">CGPath</a></span> (nullable: true)</td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="see"><h4>See:</h4><ul><li><span><a href="https://developer.apple.com/reference/coregraphics/cgpath/1411211-copy">https://developer.apple.com/reference/coregraphics/cgpath/1411211-copy</a></span></li></ul></div>
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-copyDashingWithPhase">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span data-ice="name">copyDashingWithPhase</span><span data-ice="signature">(phase: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, lengths: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span><span>[]</span></span>, transform: <span>CGAffineTransform</span>): <span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html">CGPath</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/js/CoreGraphics/CGPath.js.html#lineNumber114">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>The new path is created so that filling the new path draws the same pixels as stroking the original path with the specified dash parameters.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">phase</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>A value that specifies how far into the dash pattern the line starts, in units of the user space. For example, a value of 0 draws a line starting with the beginning of a dash pattern, and a value of 3 means the line is drawn with the dash pattern starting at three units from its beginning.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">lengths</td>
+      <td data-ice="type"><span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span><span>[]</span></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>An array of values that specify the lengths, in user space coordinates, of the painted and unpainted segments  of the dash pattern.For example, the array [2,3] sets a dash pattern that alternates between a 2-unit-long painted segment and a 3-unit-long unpainted segment. The array [1,3,4,2] sets the pattern to a 1-unit painted segment, a 3-unit unpainted segment, a 4-unit painted segment, and a 2-unit unpainted segment.Pass an empty array to clear the dash pattern so that all stroke drawing in the context uses solid lines.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">transform</td>
+      <td data-ice="type"><span>CGAffineTransform</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>An affine transform to apply to the path before dashing. Defaults to the identity transform if not specified.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type" data-ice="returnType"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html">CGPath</a></span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="see"><h4>See:</h4><ul><li><span><a href="https://developer.apple.com/reference/coregraphics/cgpath/2427137-copy">https://developer.apple.com/reference/coregraphics/cgpath/2427137-copy</a></span></li></ul></div>
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-copyStrokingWithWidth">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span data-ice="name">copyStrokingWithWidth</span><span data-ice="signature">(lineWidth: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, lineCap: <span>CGLineCap</span>, lineJoin: <span>CGLineJoin</span>, miterLimit: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, transform: <span>CGAffineTransform</span>): <span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html">CGPath</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/js/CoreGraphics/CGPath.js.html#lineNumber130">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>The new path is created so that filling the new path draws the same pixels as stroking the original path with the specified line style.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">lineWidth</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The line width to use, in user space units. The value must be greater than 0.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">lineCap</td>
+      <td data-ice="type"><span>CGLineCap</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The line cap style to render. (For equivalent CGContext drawing methods, the default style is butt.)</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">lineJoin</td>
+      <td data-ice="type"><span>CGLineJoin</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The line join style to render. (For equivalent CGContext drawing methods, the default style is miter.)</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">miterLimit</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>A value that limits how sharp individual corners in the path can be when using the miter line join style. When the ratio of a the length required for a mitered corner to the line width exceeds this value, that corner uses the bevel style instead.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">transform</td>
+      <td data-ice="type"><span>CGAffineTransform</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>An affine transform to apply to the path before dashing. Defaults to the identity transform if not specified.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type" data-ice="returnType"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html">CGPath</a></span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="see"><h4>See:</h4><ul><li><span><a href="https://developer.apple.com/reference/coregraphics/cgpath/2427133-copy">https://developer.apple.com/reference/coregraphics/cgpath/2427133-copy</a></span></li></ul></div>
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-copyUsing">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span data-ice="name">copyUsing</span><span data-ice="signature">(transform: <span>UnsafePointer</span>&lt;<span>CGAffineTransform</span>&gt;): <span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html">CGPath</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/js/CoreGraphics/CGPath.js.html#lineNumber100">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Creates an immutable copy of a graphics path transformed by a transformation matrix.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">transform</td>
+      <td data-ice="type"><span>UnsafePointer</span>&lt;<span>CGAffineTransform</span>&gt;</td>
+      <td data-ice="appendix"><ul><li>nullable: true</li></ul></td>
+      <td data-ice="description"><p>A pointer to an affine transformation matrix, or NULL if no transformation is needed. If specified, Core Graphics applies the transformation to all elements of the new path.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type" data-ice="returnType"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html">CGPath</a></span> (nullable: true)</td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="see"><h4>See:</h4><ul><li><span><a href="https://developer.apple.com/reference/coregraphics/cgpath/1411161-copy">https://developer.apple.com/reference/coregraphics/cgpath/1411161-copy</a></span></li></ul></div>
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-init">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span data-ice="name">init</span><span data-ice="signature">(rect: <span><a href="class/js/CoreGraphics/CGRect.js~CGRect.html">CGRect</a></span>, transform: <span>UnsafePointer</span>&lt;<span>CGAffineTransform</span>&gt;): <span>void</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/js/CoreGraphics/CGPath.js.html#lineNumber31">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>This is a convenience function that creates a path of an rectangle. Using this convenience function is more efficient than creating a mutable path and adding an rectangle to it.Calling this function is equivalent to using minX and related functions to find the corners of the rectangle, then using the moveTo(<em>:x:y:), addLineTo(</em>:x:y:), and closeSubpath() functions to draw the rectangle. </p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">rect</td>
+      <td data-ice="type"><span><a href="class/js/CoreGraphics/CGRect.js~CGRect.html">CGRect</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The rectangle to add.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">transform</td>
+      <td data-ice="type"><span>UnsafePointer</span>&lt;<span>CGAffineTransform</span>&gt;</td>
+      <td data-ice="appendix"><ul><li>nullable: true</li></ul></td>
+      <td data-ice="description"><p>A pointer to an affine transformation matrix, or NULL if no transformation is needed. If specified, Core Graphics applies the transformation to the rectangle before it is added to the path.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type" data-ice="returnType"><span>void</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="see"><h4>See:</h4><ul><li><span><a href="https://developer.apple.com/reference/coregraphics/cgpath/1411155-init">https://developer.apple.com/reference/coregraphics/cgpath/1411155-init</a></span></li></ul></div>
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-initEllipseIn">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span data-ice="name">initEllipseIn</span><span data-ice="signature">(rect: <span><a href="class/js/CoreGraphics/CGRect.js~CGRect.html">CGRect</a></span>, transform: <span>UnsafePointer</span>&lt;<span>CGAffineTransform</span>&gt;): <span>void</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/js/CoreGraphics/CGPath.js.html#lineNumber50">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>This is a convenience function that creates a path of an ellipse. Using this convenience function is more efficient than creating a mutable path and adding an ellipse to it.The ellipse is approximated by a sequence of B&#xE9;zier curves. Its center is the midpoint of the rectangle defined by the rect parameter. If the rectangle is square, then the ellipse is circular with a radius equal to one-half the width (or height) of the rectangle. If the rect parameter specifies a rectangular shape, then the major and minor axes of the ellipse are defined by the width and height of the rectangle. The ellipse forms a complete subpath of the path&#x2014;that is, the ellipse drawing starts with a move-to operation and ends with a close-subpath operation, with all moves oriented in the clockwise direction. If you supply an affine transform, then the constructed B&#xE9;zier curves that define the ellipse are transformed before they are added to the path.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">rect</td>
+      <td data-ice="type"><span><a href="class/js/CoreGraphics/CGRect.js~CGRect.html">CGRect</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The rectangle that bounds the ellipse.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">transform</td>
+      <td data-ice="type"><span>UnsafePointer</span>&lt;<span>CGAffineTransform</span>&gt;</td>
+      <td data-ice="appendix"><ul><li>nullable: true</li></ul></td>
+      <td data-ice="description"><p>A pointer to an affine transformation matrix, or NULL if no transformation is needed. If specified, Core Graphics applies the transformation to the ellipse before it is added to the path.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type" data-ice="returnType"><span>void</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="see"><h4>See:</h4><ul><li><span><a href="https://developer.apple.com/reference/coregraphics/cgpath/1411177-init">https://developer.apple.com/reference/coregraphics/cgpath/1411177-init</a></span></li></ul></div>
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-initRoundedRect">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span data-ice="name">initRoundedRect</span><span data-ice="signature">(rect: <span><a href="class/js/CoreGraphics/CGRect.js~CGRect.html">CGRect</a></span>, cornerWidth: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, cornerHeight: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, transform: <span>UnsafePointer</span>&lt;<span>CGAffineTransform</span>&gt;): <span>void</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/js/CoreGraphics/CGPath.js.html#lineNumber71">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>This is a convenience function that creates a path of an rounded rectangle. Using this convenience function is more efficient than creating a mutable path and adding an rectangle to it.Each corner of the rounded rectangle is one-quarter of an ellipse with axes equal to the cornerWidth and cornerHeight parameters. The rounded rectangle forms a complete subpath and is oriented in the clockwise direction.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">rect</td>
+      <td data-ice="type"><span><a href="class/js/CoreGraphics/CGRect.js~CGRect.html">CGRect</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The rectangle to add.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">cornerWidth</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The width of the rounded corner sections.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">cornerHeight</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The height of the rounded corner sections.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">transform</td>
+      <td data-ice="type"><span>UnsafePointer</span>&lt;<span>CGAffineTransform</span>&gt;</td>
+      <td data-ice="appendix"><ul><li>nullable: true</li></ul></td>
+      <td data-ice="description"><p>A pointer to an affine transformation matrix, or NULL if no transformation is needed. If specified, Core Graphics applies the transformation to the rectangle before it is added to the path.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type" data-ice="returnType"><span>void</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="see"><h4>See:</h4><ul><li><span><a href="https://developer.apple.com/reference/coregraphics/cgpath/1411218-init">https://developer.apple.com/reference/coregraphics/cgpath/1411218-init</a></span></li></ul></div>
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-init__byDashing">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span data-ice="name">init__byDashing</span><span data-ice="signature">(path: <span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html">CGPath</a></span>, transform: <span>UnsafePointer</span>&lt;<span>CGAffineTransform</span>&gt;, phase: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, lengths: <span>UnsafePointer</span>&lt;<span>CGFloat</span>&gt;, count: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>): <span>void</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/js/CoreGraphics/CGPath.js.html#lineNumber258">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>The new path is created so that filling the new path draws the same pixels as stroking the original path with the specified dash parameters.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">path</td>
+      <td data-ice="type"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html">CGPath</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The path to copy.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">transform</td>
+      <td data-ice="type"><span>UnsafePointer</span>&lt;<span>CGAffineTransform</span>&gt;</td>
+      <td data-ice="appendix"><ul><li>nullable: true</li></ul></td>
+      <td data-ice="description"><p>A pointer to an affine transformation matrix, or NULL if no transformation is needed. If specified, Core Graphics applies the transformation to elements of the converted path before adding them to the new path.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">phase</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>A value that specifies how far into the dash pattern the line starts, in units of the user space. For example, passing a value of 3 means the line is drawn with the dash pattern starting at three units from its beginning. Passing a value of 0 draws a line starting with the beginning of a dash pattern.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">lengths</td>
+      <td data-ice="type"><span>UnsafePointer</span>&lt;<span>CGFloat</span>&gt;</td>
+      <td data-ice="appendix"><ul><li>nullable: true</li></ul></td>
+      <td data-ice="description"><p>An array of values that specify the lengths of the painted segments and unpainted segments, respectively, of the dash pattern&#x2014;or NULL for no dash pattern.For example, passing an array with the values [2,3] sets a dash pattern that alternates between a 2-user-space-unit-long painted segment and a 3-user-space-unit-long unpainted segment. Passing the values [1,3,4,2] sets the pattern to a 1-unit painted segment, a 3-unit unpainted segment, a 4-unit painted segment, and a 2-unit unpainted segment.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">count</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>If the lengths parameter specifies an array, pass the number of elements in the array. Otherwise, pass 0.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type" data-ice="returnType"><span>void</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="see"><h4>See:</h4><ul><li><span><a href="https://developer.apple.com/reference/coregraphics/cgpath/1411134-init">https://developer.apple.com/reference/coregraphics/cgpath/1411134-init</a></span></li></ul></div>
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-init__byStroking">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span data-ice="name">init__byStroking</span><span data-ice="signature">(path: <span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html">CGPath</a></span>, transform: <span>UnsafePointer</span>&lt;<span>CGAffineTransform</span>&gt;, lineWidth: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, lineCap: <span>CGLineCap</span>, lineJoin: <span>CGLineJoin</span>, miterLimit: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>): <span>void</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/js/CoreGraphics/CGPath.js.html#lineNumber281">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>The new path is created so that filling the new path draws the same pixels as stroking the original path.If the line join style is set to kCGLineJoinMiter, Core Graphics uses the miter limit to determine whether the lines should be joined with a bevel instead of a miter. Core Graphics divides the length of the miter by the line width. If the result is greater than the miter limit, Core Graphics converts the style to a bevel. </p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">path</td>
+      <td data-ice="type"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html">CGPath</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The path to copy.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">transform</td>
+      <td data-ice="type"><span>UnsafePointer</span>&lt;<span>CGAffineTransform</span>&gt;</td>
+      <td data-ice="appendix"><ul><li>nullable: true</li></ul></td>
+      <td data-ice="description"><p>A pointer to an affine transformation matrix, or NULL if no transformation is needed. If specified, Core Graphics applies the transformation to elements of the converted path before adding them to the new path.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">lineWidth</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The line width to use, in user space units. The value must be greater than 0.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">lineCap</td>
+      <td data-ice="type"><span>CGLineCap</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>A line cap style constant&#x2014;butt (the default), round, or square.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">lineJoin</td>
+      <td data-ice="type"><span>CGLineJoin</span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>A line join value&#x2014;miter (the default), round, or bevel.</p>
+</td>
+    </tr>
+<tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">miterLimit</td>
+      <td data-ice="type"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span></td>
+      <td data-ice="appendix"></td>
+      <td data-ice="description"><p>The miter limit to use.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type" data-ice="returnType"><span>void</span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="see"><h4>See:</h4><ul><li><span><a href="https://developer.apple.com/reference/coregraphics/cgpath/1411128-init">https://developer.apple.com/reference/coregraphics/cgpath/1411128-init</a></span></li></ul></div>
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-isRect">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span data-ice="name">isRect</span><span data-ice="signature">(rect: <span>UnsafeMutablePointer</span>&lt;<span><a href="class/js/CoreGraphics/CGRect.js~CGRect.html">CGRect</a></span>&gt;): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/js/CoreGraphics/CGPath.js.html#lineNumber179">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Indicates whether or not a graphics path represents a rectangle.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">rect</td>
+      <td data-ice="type"><span>UnsafeMutablePointer</span>&lt;<span><a href="class/js/CoreGraphics/CGRect.js~CGRect.html">CGRect</a></span>&gt;</td>
+      <td data-ice="appendix"><ul><li>nullable: true</li></ul></td>
+      <td data-ice="description"><p>On input, a pointer to an uninitialized rectangle. If the specified path represents a rectangle, on return contains a copy of the rectangle.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="see"><h4>See:</h4><ul><li><span><a href="https://developer.apple.com/reference/coregraphics/cgpath/1411163-isrect">https://developer.apple.com/reference/coregraphics/cgpath/1411163-isrect</a></span></li></ul></div>
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-mutableCopy">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span data-ice="name">mutableCopy</span><span data-ice="signature">(): <span><a href="class/js/CoreGraphics/CGMutablePath.js~CGMutablePath.html">CGMutablePath</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/js/CoreGraphics/CGPath.js.html#lineNumber141">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>You can modify a mutable graphics path by calling the various path geometry functions, such as addArc(<em>:x:y:radius:startAngle:endAngle:clockwise:), addLineTo(</em>:x:y:), and moveTo(_:x:y:).</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type" data-ice="returnType"><span><a href="class/js/CoreGraphics/CGMutablePath.js~CGMutablePath.html">CGMutablePath</a></span> (nullable: true)</td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="see"><h4>See:</h4><ul><li><span><a href="https://developer.apple.com/reference/coregraphics/cgpath/1411196-mutablecopy">https://developer.apple.com/reference/coregraphics/cgpath/1411196-mutablecopy</a></span></li></ul></div>
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-method-mutableCopyUsing">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span data-ice="name">mutableCopyUsing</span><span data-ice="signature">(transform: <span>UnsafePointer</span>&lt;<span>CGAffineTransform</span>&gt;): <span><a href="class/js/CoreGraphics/CGMutablePath.js~CGMutablePath.html">CGMutablePath</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/js/CoreGraphics/CGPath.js.html#lineNumber152">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>Creates a mutable copy of a graphics path transformed by a transformation matrix.</p>
+</div>
+
+  
+
+  <div data-ice="properties"><div data-ice="properties">
+  <h4 data-ice="title">Params:</h4>
+  <table class="params">
+    <thead>
+    <tr><td>Name</td><td>Type</td><td>Attribute</td><td>Description</td></tr>
+    </thead>
+    <tbody>
+    
+    <tr data-ice="property" data-depth="0">
+      <td data-ice="name" data-depth="0">transform</td>
+      <td data-ice="type"><span>UnsafePointer</span>&lt;<span>CGAffineTransform</span>&gt;</td>
+      <td data-ice="appendix"><ul><li>nullable: true</li></ul></td>
+      <td data-ice="description"><p>A pointer to an affine transformation matrix, or NULL if no transformation is needed. If specified, Core Graphics applies the transformation to all elements of the new path.</p>
+</td>
+    </tr>
+</tbody>
+  </table>
+</div>
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type" data-ice="returnType"><span><a href="class/js/CoreGraphics/CGMutablePath.js~CGMutablePath.html">CGMutablePath</a></span> (nullable: true)</td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="see"><h4>See:</h4><ul><li><span><a href="https://developer.apple.com/reference/coregraphics/cgpath/1411150-mutablecopy">https://developer.apple.com/reference/coregraphics/cgpath/1411150-mutablecopy</a></span></li></ul></div>
+  
+</div>
+</div>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

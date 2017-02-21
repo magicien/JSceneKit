@@ -1,0 +1,3207 @@
+{
+  "type": "File",
+  "start": 0,
+  "end": 3628,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 86,
+      "column": 0
+    }
+  },
+  "program": {
+    "type": "Program",
+    "start": 0,
+    "end": 3628,
+    "loc": {
+      "start": {
+        "line": 1,
+        "column": 0
+      },
+      "end": {
+        "line": 86,
+        "column": 0
+      }
+    },
+    "sourceType": "module",
+    "body": [
+      {
+        "type": "ImportDeclaration",
+        "start": 14,
+        "end": 51,
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 0
+          },
+          "end": {
+            "line": 3,
+            "column": 37
+          }
+        },
+        "specifiers": [
+          {
+            "type": "ImportDefaultSpecifier",
+            "start": 21,
+            "end": 31,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 7
+              },
+              "end": {
+                "line": 3,
+                "column": 17
+              }
+            },
+            "local": {
+              "type": "Identifier",
+              "start": 21,
+              "end": 31,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 7
+                },
+                "end": {
+                  "line": 3,
+                  "column": 17
+                },
+                "identifierName": "SCNProgram"
+              },
+              "name": "SCNProgram"
+            }
+          }
+        ],
+        "source": {
+          "type": "StringLiteral",
+          "start": 37,
+          "end": 51,
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 23
+            },
+            "end": {
+              "line": 3,
+              "column": 37
+            }
+          },
+          "extra": {
+            "rawValue": "./SCNProgram",
+            "raw": "'./SCNProgram'"
+          },
+          "value": "./SCNProgram"
+        }
+      },
+      {
+        "type": "ImportDeclaration",
+        "start": 52,
+        "end": 91,
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 0
+          },
+          "end": {
+            "line": 4,
+            "column": 39
+          }
+        },
+        "specifiers": [
+          {
+            "type": "ImportDefaultSpecifier",
+            "start": 59,
+            "end": 70,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 7
+              },
+              "end": {
+                "line": 4,
+                "column": 18
+              }
+            },
+            "local": {
+              "type": "Identifier",
+              "start": 59,
+              "end": 70,
+              "loc": {
+                "start": {
+                  "line": 4,
+                  "column": 7
+                },
+                "end": {
+                  "line": 4,
+                  "column": 18
+                },
+                "identifierName": "SCNRenderer"
+              },
+              "name": "SCNRenderer"
+            }
+          }
+        ],
+        "source": {
+          "type": "StringLiteral",
+          "start": 76,
+          "end": 91,
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 24
+            },
+            "end": {
+              "line": 4,
+              "column": 39
+            }
+          },
+          "extra": {
+            "rawValue": "./SCNRenderer",
+            "raw": "'./SCNRenderer'"
+          },
+          "value": "./SCNRenderer",
+          "leadingComments": null,
+          "trailingComments": null
+        },
+        "trailingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * The interface for tracking errors that occur when compiling shader source code.\n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate\n ",
+            "start": 94,
+            "end": 272,
+            "loc": {
+              "start": {
+                "line": 7,
+                "column": 0
+              },
+              "end": {
+                "line": 11,
+                "column": 3
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "ExportDefaultDeclaration",
+        "start": 273,
+        "end": 3627,
+        "loc": {
+          "start": {
+            "line": 12,
+            "column": 0
+          },
+          "end": {
+            "line": 85,
+            "column": 1
+          }
+        },
+        "declaration": {
+          "type": "ClassDeclaration",
+          "start": 288,
+          "end": 3627,
+          "loc": {
+            "start": {
+              "line": 12,
+              "column": 15
+            },
+            "end": {
+              "line": 85,
+              "column": 1
+            }
+          },
+          "id": {
+            "type": "Identifier",
+            "start": 294,
+            "end": 312,
+            "loc": {
+              "start": {
+                "line": 12,
+                "column": 21
+              },
+              "end": {
+                "line": 12,
+                "column": 39
+              },
+              "identifierName": "SCNProgramDelegate"
+            },
+            "name": "SCNProgramDelegate",
+            "leadingComments": null
+          },
+          "superClass": null,
+          "body": {
+            "type": "ClassBody",
+            "start": 313,
+            "end": 3627,
+            "loc": {
+              "start": {
+                "line": 12,
+                "column": 40
+              },
+              "end": {
+                "line": 85,
+                "column": 1
+              }
+            },
+            "body": [
+              {
+                "type": "ClassMethod",
+                "start": 388,
+                "end": 400,
+                "loc": {
+                  "start": {
+                    "line": 19,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 20,
+                    "column": 3
+                  }
+                },
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 388,
+                  "end": 392,
+                  "loc": {
+                    "start": {
+                      "line": 19,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 19,
+                      "column": 6
+                    },
+                    "identifierName": "init"
+                  },
+                  "name": "init",
+                  "leadingComments": null
+                },
+                "static": false,
+                "kind": "method",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 395,
+                  "end": 400,
+                  "loc": {
+                    "start": {
+                      "line": 19,
+                      "column": 9
+                    },
+                    "end": {
+                      "line": 20,
+                      "column": 3
+                    }
+                  },
+                  "body": [],
+                  "directives": [],
+                  "leadingComments": null,
+                  "trailingComments": null
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
+                    "start": 318,
+                    "end": 385,
+                    "loc": {
+                      "start": {
+                        "line": 14,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 18,
+                        "column": 5
+                      }
+                    }
+                  }
+                ],
+                "trailingComments": [
+                  {
+                    "type": "CommentLine",
+                    "value": " Handling Shader Compilation Errors",
+                    "start": 404,
+                    "end": 441,
+                    "loc": {
+                      "start": {
+                        "line": 22,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 22,
+                        "column": 39
+                      }
+                    }
+                  },
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Tells the delegate that an error occurred when compiling GLSL source code.\n   * @access public\n   * @param {SCNProgram} program - The program that generated the compilation error.\n   * @param {Error} error - The compilation error that was raised.\n   * @returns {void}\n   * @desc Examine the error parameter for details of the compilation error provided by the GLSL compiler.\n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1523007-program\n   ",
+                    "start": 445,
+                    "end": 926,
+                    "loc": {
+                      "start": {
+                        "line": 24,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 32,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "ClassMethod",
+                "start": 929,
+                "end": 969,
+                "loc": {
+                  "start": {
+                    "line": 33,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 34,
+                    "column": 3
+                  }
+                },
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 929,
+                  "end": 947,
+                  "loc": {
+                    "start": {
+                      "line": 33,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 33,
+                      "column": 20
+                    },
+                    "identifierName": "programHandleError"
+                  },
+                  "name": "programHandleError",
+                  "leadingComments": null
+                },
+                "static": false,
+                "kind": "method",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "start": 948,
+                    "end": 955,
+                    "loc": {
+                      "start": {
+                        "line": 33,
+                        "column": 21
+                      },
+                      "end": {
+                        "line": 33,
+                        "column": 28
+                      },
+                      "identifierName": "program"
+                    },
+                    "name": "program"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 957,
+                    "end": 962,
+                    "loc": {
+                      "start": {
+                        "line": 33,
+                        "column": 30
+                      },
+                      "end": {
+                        "line": 33,
+                        "column": 35
+                      },
+                      "identifierName": "error"
+                    },
+                    "name": "error"
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 964,
+                  "end": 969,
+                  "loc": {
+                    "start": {
+                      "line": 33,
+                      "column": 37
+                    },
+                    "end": {
+                      "line": 34,
+                      "column": 3
+                    }
+                  },
+                  "body": [],
+                  "directives": [],
+                  "leadingComments": null,
+                  "trailingComments": null
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentLine",
+                    "value": " Handling Shader Compilation Errors",
+                    "start": 404,
+                    "end": 441,
+                    "loc": {
+                      "start": {
+                        "line": 22,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 22,
+                        "column": 39
+                      }
+                    }
+                  },
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Tells the delegate that an error occurred when compiling GLSL source code.\n   * @access public\n   * @param {SCNProgram} program - The program that generated the compilation error.\n   * @param {Error} error - The compilation error that was raised.\n   * @returns {void}\n   * @desc Examine the error parameter for details of the compilation error provided by the GLSL compiler.\n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1523007-program\n   ",
+                    "start": 445,
+                    "end": 926,
+                    "loc": {
+                      "start": {
+                        "line": 24,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 32,
+                        "column": 5
+                      }
+                    }
+                  }
+                ],
+                "trailingComments": [
+                  {
+                    "type": "CommentLine",
+                    "value": " Finding Fragment Opaqueness",
+                    "start": 973,
+                    "end": 1003,
+                    "loc": {
+                      "start": {
+                        "line": 36,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 36,
+                        "column": 32
+                      }
+                    }
+                  },
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Asks the delegate whether fragments rendered by a program are opaque.\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - \n   * @returns {boolean} - \n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1523068-programisopaque\n   ",
+                    "start": 1007,
+                    "end": 1291,
+                    "loc": {
+                      "start": {
+                        "line": 38,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 45,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "ClassMethod",
+                "start": 1294,
+                "end": 1341,
+                "loc": {
+                  "start": {
+                    "line": 46,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 48,
+                    "column": 3
+                  }
+                },
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 1294,
+                  "end": 1309,
+                  "loc": {
+                    "start": {
+                      "line": 46,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 46,
+                      "column": 17
+                    },
+                    "identifierName": "programIsOpaque"
+                  },
+                  "name": "programIsOpaque",
+                  "leadingComments": null
+                },
+                "static": false,
+                "kind": "method",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "start": 1310,
+                    "end": 1317,
+                    "loc": {
+                      "start": {
+                        "line": 46,
+                        "column": 18
+                      },
+                      "end": {
+                        "line": 46,
+                        "column": 25
+                      },
+                      "identifierName": "program"
+                    },
+                    "name": "program"
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 1319,
+                  "end": 1341,
+                  "loc": {
+                    "start": {
+                      "line": 46,
+                      "column": 27
+                    },
+                    "end": {
+                      "line": 48,
+                      "column": 3
+                    }
+                  },
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "start": 1325,
+                      "end": 1337,
+                      "loc": {
+                        "start": {
+                          "line": 47,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 47,
+                          "column": 16
+                        }
+                      },
+                      "argument": {
+                        "type": "BooleanLiteral",
+                        "start": 1332,
+                        "end": 1337,
+                        "loc": {
+                          "start": {
+                            "line": 47,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 47,
+                            "column": 16
+                          }
+                        },
+                        "value": false
+                      }
+                    }
+                  ],
+                  "directives": [],
+                  "trailingComments": null
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentLine",
+                    "value": " Finding Fragment Opaqueness",
+                    "start": 973,
+                    "end": 1003,
+                    "loc": {
+                      "start": {
+                        "line": 36,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 36,
+                        "column": 32
+                      }
+                    }
+                  },
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Asks the delegate whether fragments rendered by a program are opaque.\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - \n   * @returns {boolean} - \n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1523068-programisopaque\n   ",
+                    "start": 1007,
+                    "end": 1291,
+                    "loc": {
+                      "start": {
+                        "line": 38,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 45,
+                        "column": 5
+                      }
+                    }
+                  }
+                ],
+                "trailingComments": [
+                  {
+                    "type": "CommentLine",
+                    "value": " Binding and Unbinding Values",
+                    "start": 1345,
+                    "end": 1376,
+                    "loc": {
+                      "start": {
+                        "line": 50,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 50,
+                        "column": 33
+                      }
+                    }
+                  },
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Invoked on the delegate to let it bind program values and/or associated graphics resources (such as textures) for symbols.\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - The SCNProgram object to bind values for.\n   * @param {string} symbol - The name of the symbol to bind a value for.\n   * @param {number} location - The location of the symbol within the program object to be modified.\n   * @param {number} programID - The underlying OpenGL program object in which the binding is made.\n   * @param {SCNRenderer} renderer - The renderer that is currently rendering the scene.\n   * @returns {boolean} - \n   * @desc If you use the handleBinding(ofSymbol:handler:) method to associate a handler block with a SceneKit object for a symbol, SceneKit will not call the delegate’s program(_:bindValueForSymbol:atLocation:programID:renderer:) method for that symbol when rendering that object.\n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1524155-program\n   ",
+                    "start": 1380,
+                    "end": 2396,
+                    "loc": {
+                      "start": {
+                        "line": 52,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 64,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "ClassMethod",
+                "start": 2399,
+                "end": 2505,
+                "loc": {
+                  "start": {
+                    "line": 65,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 67,
+                    "column": 3
+                  }
+                },
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 2399,
+                  "end": 2434,
+                  "loc": {
+                    "start": {
+                      "line": 65,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 65,
+                      "column": 37
+                    },
+                    "identifierName": "programBindValueForSymbolAtLocation"
+                  },
+                  "name": "programBindValueForSymbolAtLocation",
+                  "leadingComments": null
+                },
+                "static": false,
+                "kind": "method",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "start": 2435,
+                    "end": 2442,
+                    "loc": {
+                      "start": {
+                        "line": 65,
+                        "column": 38
+                      },
+                      "end": {
+                        "line": 65,
+                        "column": 45
+                      },
+                      "identifierName": "program"
+                    },
+                    "name": "program"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 2444,
+                    "end": 2450,
+                    "loc": {
+                      "start": {
+                        "line": 65,
+                        "column": 47
+                      },
+                      "end": {
+                        "line": 65,
+                        "column": 53
+                      },
+                      "identifierName": "symbol"
+                    },
+                    "name": "symbol"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 2452,
+                    "end": 2460,
+                    "loc": {
+                      "start": {
+                        "line": 65,
+                        "column": 55
+                      },
+                      "end": {
+                        "line": 65,
+                        "column": 63
+                      },
+                      "identifierName": "location"
+                    },
+                    "name": "location"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 2462,
+                    "end": 2471,
+                    "loc": {
+                      "start": {
+                        "line": 65,
+                        "column": 65
+                      },
+                      "end": {
+                        "line": 65,
+                        "column": 74
+                      },
+                      "identifierName": "programID"
+                    },
+                    "name": "programID"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 2473,
+                    "end": 2481,
+                    "loc": {
+                      "start": {
+                        "line": 65,
+                        "column": 76
+                      },
+                      "end": {
+                        "line": 65,
+                        "column": 84
+                      },
+                      "identifierName": "renderer"
+                    },
+                    "name": "renderer"
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 2483,
+                  "end": 2505,
+                  "loc": {
+                    "start": {
+                      "line": 65,
+                      "column": 86
+                    },
+                    "end": {
+                      "line": 67,
+                      "column": 3
+                    }
+                  },
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "start": 2489,
+                      "end": 2501,
+                      "loc": {
+                        "start": {
+                          "line": 66,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 66,
+                          "column": 16
+                        }
+                      },
+                      "argument": {
+                        "type": "BooleanLiteral",
+                        "start": 2496,
+                        "end": 2501,
+                        "loc": {
+                          "start": {
+                            "line": 66,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 66,
+                            "column": 16
+                          }
+                        },
+                        "value": false
+                      }
+                    }
+                  ],
+                  "directives": [],
+                  "trailingComments": null
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentLine",
+                    "value": " Binding and Unbinding Values",
+                    "start": 1345,
+                    "end": 1376,
+                    "loc": {
+                      "start": {
+                        "line": 50,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 50,
+                        "column": 33
+                      }
+                    }
+                  },
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Invoked on the delegate to let it bind program values and/or associated graphics resources (such as textures) for symbols.\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - The SCNProgram object to bind values for.\n   * @param {string} symbol - The name of the symbol to bind a value for.\n   * @param {number} location - The location of the symbol within the program object to be modified.\n   * @param {number} programID - The underlying OpenGL program object in which the binding is made.\n   * @param {SCNRenderer} renderer - The renderer that is currently rendering the scene.\n   * @returns {boolean} - \n   * @desc If you use the handleBinding(ofSymbol:handler:) method to associate a handler block with a SceneKit object for a symbol, SceneKit will not call the delegate’s program(_:bindValueForSymbol:atLocation:programID:renderer:) method for that symbol when rendering that object.\n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1524155-program\n   ",
+                    "start": 1380,
+                    "end": 2396,
+                    "loc": {
+                      "start": {
+                        "line": 52,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 64,
+                        "column": 5
+                      }
+                    }
+                  }
+                ],
+                "trailingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Invoked on the delegate to let it unbind program values and/or also unbind associated graphic resources (such as textures).\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - The SCNProgram object to unbind values for.\n   * @param {string} symbol - The name of the symbol to unbind a value for.\n   * @param {number} location - The location of the symbol within the program object to be modified.\n   * @param {number} programID - The underlying OpenGL program object in which the unbinding is done.\n   * @param {SCNRenderer} renderer - The renderer that is currently rendering the scene.\n\n   * @returns {void}\n   * @desc If you use the handleUnbinding(ofSymbol:handler:) method to associate a handler block with a SceneKit object for a symbol, SceneKit will not call the delegate’s program(_:unbindValueForSymbol:atLocation:programID:renderer:) method for that symbol when rendering that object.\n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1523857-program\n   ",
+                    "start": 2509,
+                    "end": 3531,
+                    "loc": {
+                      "start": {
+                        "line": 69,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 82,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "ClassMethod",
+                "start": 3534,
+                "end": 3625,
+                "loc": {
+                  "start": {
+                    "line": 83,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 84,
+                    "column": 3
+                  }
+                },
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 3534,
+                  "end": 3571,
+                  "loc": {
+                    "start": {
+                      "line": 83,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 83,
+                      "column": 39
+                    },
+                    "identifierName": "programUnbindValueForSymbolAtLocation"
+                  },
+                  "name": "programUnbindValueForSymbolAtLocation",
+                  "leadingComments": null
+                },
+                "static": false,
+                "kind": "method",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "start": 3572,
+                    "end": 3579,
+                    "loc": {
+                      "start": {
+                        "line": 83,
+                        "column": 40
+                      },
+                      "end": {
+                        "line": 83,
+                        "column": 47
+                      },
+                      "identifierName": "program"
+                    },
+                    "name": "program"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 3581,
+                    "end": 3587,
+                    "loc": {
+                      "start": {
+                        "line": 83,
+                        "column": 49
+                      },
+                      "end": {
+                        "line": 83,
+                        "column": 55
+                      },
+                      "identifierName": "symbol"
+                    },
+                    "name": "symbol"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 3589,
+                    "end": 3597,
+                    "loc": {
+                      "start": {
+                        "line": 83,
+                        "column": 57
+                      },
+                      "end": {
+                        "line": 83,
+                        "column": 65
+                      },
+                      "identifierName": "location"
+                    },
+                    "name": "location"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 3599,
+                    "end": 3608,
+                    "loc": {
+                      "start": {
+                        "line": 83,
+                        "column": 67
+                      },
+                      "end": {
+                        "line": 83,
+                        "column": 76
+                      },
+                      "identifierName": "programID"
+                    },
+                    "name": "programID"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 3610,
+                    "end": 3618,
+                    "loc": {
+                      "start": {
+                        "line": 83,
+                        "column": 78
+                      },
+                      "end": {
+                        "line": 83,
+                        "column": 86
+                      },
+                      "identifierName": "renderer"
+                    },
+                    "name": "renderer"
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 3620,
+                  "end": 3625,
+                  "loc": {
+                    "start": {
+                      "line": 83,
+                      "column": 88
+                    },
+                    "end": {
+                      "line": 84,
+                      "column": 3
+                    }
+                  },
+                  "body": [],
+                  "directives": []
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Invoked on the delegate to let it unbind program values and/or also unbind associated graphic resources (such as textures).\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - The SCNProgram object to unbind values for.\n   * @param {string} symbol - The name of the symbol to unbind a value for.\n   * @param {number} location - The location of the symbol within the program object to be modified.\n   * @param {number} programID - The underlying OpenGL program object in which the unbinding is done.\n   * @param {SCNRenderer} renderer - The renderer that is currently rendering the scene.\n\n   * @returns {void}\n   * @desc If you use the handleUnbinding(ofSymbol:handler:) method to associate a handler block with a SceneKit object for a symbol, SceneKit will not call the delegate’s program(_:unbindValueForSymbol:atLocation:programID:renderer:) method for that symbol when rendering that object.\n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1523857-program\n   ",
+                    "start": 2509,
+                    "end": 3531,
+                    "loc": {
+                      "start": {
+                        "line": 69,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 82,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "leadingComments": [
+            {
+              "type": "CommentBlock",
+              "value": "*\n * The interface for tracking errors that occur when compiling shader source code.\n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate\n ",
+              "start": 94,
+              "end": 272,
+              "loc": {
+                "start": {
+                  "line": 7,
+                  "column": 0
+                },
+                "end": {
+                  "line": 11,
+                  "column": 3
+                }
+              }
+            }
+          ],
+          "trailingComments": []
+        },
+        "leadingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * The interface for tracking errors that occur when compiling shader source code.\n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate\n ",
+            "start": 94,
+            "end": 272,
+            "loc": {
+              "start": {
+                "line": 7,
+                "column": 0
+              },
+              "end": {
+                "line": 11,
+                "column": 3
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "directives": [
+      {
+        "type": "Directive",
+        "start": 0,
+        "end": 12,
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 12
+          }
+        },
+        "value": {
+          "type": "DirectiveLiteral",
+          "start": 0,
+          "end": 12,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 12
+            }
+          },
+          "value": "use strict",
+          "extra": {
+            "raw": "'use strict'",
+            "rawValue": "use strict"
+          }
+        }
+      }
+    ]
+  },
+  "comments": [
+    {
+      "type": "CommentBlock",
+      "value": "*\n * The interface for tracking errors that occur when compiling shader source code.\n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate\n ",
+      "start": 94,
+      "end": 272,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 0
+        },
+        "end": {
+          "line": 11,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
+      "start": 318,
+      "end": 385,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 2
+        },
+        "end": {
+          "line": 18,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " Handling Shader Compilation Errors",
+      "start": 404,
+      "end": 441,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 2
+        },
+        "end": {
+          "line": 22,
+          "column": 39
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Tells the delegate that an error occurred when compiling GLSL source code.\n   * @access public\n   * @param {SCNProgram} program - The program that generated the compilation error.\n   * @param {Error} error - The compilation error that was raised.\n   * @returns {void}\n   * @desc Examine the error parameter for details of the compilation error provided by the GLSL compiler.\n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1523007-program\n   ",
+      "start": 445,
+      "end": 926,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 2
+        },
+        "end": {
+          "line": 32,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " Finding Fragment Opaqueness",
+      "start": 973,
+      "end": 1003,
+      "loc": {
+        "start": {
+          "line": 36,
+          "column": 2
+        },
+        "end": {
+          "line": 36,
+          "column": 32
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Asks the delegate whether fragments rendered by a program are opaque.\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - \n   * @returns {boolean} - \n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1523068-programisopaque\n   ",
+      "start": 1007,
+      "end": 1291,
+      "loc": {
+        "start": {
+          "line": 38,
+          "column": 2
+        },
+        "end": {
+          "line": 45,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " Binding and Unbinding Values",
+      "start": 1345,
+      "end": 1376,
+      "loc": {
+        "start": {
+          "line": 50,
+          "column": 2
+        },
+        "end": {
+          "line": 50,
+          "column": 33
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Invoked on the delegate to let it bind program values and/or associated graphics resources (such as textures) for symbols.\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - The SCNProgram object to bind values for.\n   * @param {string} symbol - The name of the symbol to bind a value for.\n   * @param {number} location - The location of the symbol within the program object to be modified.\n   * @param {number} programID - The underlying OpenGL program object in which the binding is made.\n   * @param {SCNRenderer} renderer - The renderer that is currently rendering the scene.\n   * @returns {boolean} - \n   * @desc If you use the handleBinding(ofSymbol:handler:) method to associate a handler block with a SceneKit object for a symbol, SceneKit will not call the delegate’s program(_:bindValueForSymbol:atLocation:programID:renderer:) method for that symbol when rendering that object.\n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1524155-program\n   ",
+      "start": 1380,
+      "end": 2396,
+      "loc": {
+        "start": {
+          "line": 52,
+          "column": 2
+        },
+        "end": {
+          "line": 64,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Invoked on the delegate to let it unbind program values and/or also unbind associated graphic resources (such as textures).\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - The SCNProgram object to unbind values for.\n   * @param {string} symbol - The name of the symbol to unbind a value for.\n   * @param {number} location - The location of the symbol within the program object to be modified.\n   * @param {number} programID - The underlying OpenGL program object in which the unbinding is done.\n   * @param {SCNRenderer} renderer - The renderer that is currently rendering the scene.\n\n   * @returns {void}\n   * @desc If you use the handleUnbinding(ofSymbol:handler:) method to associate a handler block with a SceneKit object for a symbol, SceneKit will not call the delegate’s program(_:unbindValueForSymbol:atLocation:programID:renderer:) method for that symbol when rendering that object.\n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1523857-program\n   ",
+      "start": 2509,
+      "end": 3531,
+      "loc": {
+        "start": {
+          "line": 69,
+          "column": 2
+        },
+        "end": {
+          "line": 82,
+          "column": 5
+        }
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "use strict",
+      "start": 0,
+      "end": 12,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 12
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "import",
+        "keyword": "import",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "import",
+      "start": 14,
+      "end": 20,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "SCNProgram",
+      "start": 21,
+      "end": 31,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 7
+        },
+        "end": {
+          "line": 3,
+          "column": 17
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "from",
+      "start": 32,
+      "end": 36,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 18
+        },
+        "end": {
+          "line": 3,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "./SCNProgram",
+      "start": 37,
+      "end": 51,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 23
+        },
+        "end": {
+          "line": 3,
+          "column": 37
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "import",
+        "keyword": "import",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "import",
+      "start": 52,
+      "end": 58,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 0
+        },
+        "end": {
+          "line": 4,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "SCNRenderer",
+      "start": 59,
+      "end": 70,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 7
+        },
+        "end": {
+          "line": 4,
+          "column": 18
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "from",
+      "start": 71,
+      "end": 75,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 19
+        },
+        "end": {
+          "line": 4,
+          "column": 23
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "./SCNRenderer",
+      "start": 76,
+      "end": 91,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 24
+        },
+        "end": {
+          "line": 4,
+          "column": 39
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * The interface for tracking errors that occur when compiling shader source code.\n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate\n ",
+      "start": 94,
+      "end": 272,
+      "loc": {
+        "start": {
+          "line": 7,
+          "column": 0
+        },
+        "end": {
+          "line": 11,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "export",
+        "keyword": "export",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "export",
+      "start": 273,
+      "end": 279,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 0
+        },
+        "end": {
+          "line": 12,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "default",
+        "keyword": "default",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "default",
+      "start": 280,
+      "end": 287,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 7
+        },
+        "end": {
+          "line": 12,
+          "column": 14
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "class",
+        "keyword": "class",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "class",
+      "start": 288,
+      "end": 293,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 15
+        },
+        "end": {
+          "line": 12,
+          "column": 20
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "SCNProgramDelegate",
+      "start": 294,
+      "end": 312,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 21
+        },
+        "end": {
+          "line": 12,
+          "column": 39
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 313,
+      "end": 314,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 40
+        },
+        "end": {
+          "line": 12,
+          "column": 41
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
+      "start": 318,
+      "end": 385,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 2
+        },
+        "end": {
+          "line": 18,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "init",
+      "start": 388,
+      "end": 392,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 2
+        },
+        "end": {
+          "line": 19,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 392,
+      "end": 393,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 6
+        },
+        "end": {
+          "line": 19,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 393,
+      "end": 394,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 7
+        },
+        "end": {
+          "line": 19,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 395,
+      "end": 396,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 9
+        },
+        "end": {
+          "line": 19,
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 399,
+      "end": 400,
+      "loc": {
+        "start": {
+          "line": 20,
+          "column": 2
+        },
+        "end": {
+          "line": 20,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " Handling Shader Compilation Errors",
+      "start": 404,
+      "end": 441,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 2
+        },
+        "end": {
+          "line": 22,
+          "column": 39
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Tells the delegate that an error occurred when compiling GLSL source code.\n   * @access public\n   * @param {SCNProgram} program - The program that generated the compilation error.\n   * @param {Error} error - The compilation error that was raised.\n   * @returns {void}\n   * @desc Examine the error parameter for details of the compilation error provided by the GLSL compiler.\n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1523007-program\n   ",
+      "start": 445,
+      "end": 926,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 2
+        },
+        "end": {
+          "line": 32,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "programHandleError",
+      "start": 929,
+      "end": 947,
+      "loc": {
+        "start": {
+          "line": 33,
+          "column": 2
+        },
+        "end": {
+          "line": 33,
+          "column": 20
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 947,
+      "end": 948,
+      "loc": {
+        "start": {
+          "line": 33,
+          "column": 20
+        },
+        "end": {
+          "line": 33,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "program",
+      "start": 948,
+      "end": 955,
+      "loc": {
+        "start": {
+          "line": 33,
+          "column": 21
+        },
+        "end": {
+          "line": 33,
+          "column": 28
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 955,
+      "end": 956,
+      "loc": {
+        "start": {
+          "line": 33,
+          "column": 28
+        },
+        "end": {
+          "line": 33,
+          "column": 29
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "error",
+      "start": 957,
+      "end": 962,
+      "loc": {
+        "start": {
+          "line": 33,
+          "column": 30
+        },
+        "end": {
+          "line": 33,
+          "column": 35
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 962,
+      "end": 963,
+      "loc": {
+        "start": {
+          "line": 33,
+          "column": 35
+        },
+        "end": {
+          "line": 33,
+          "column": 36
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 964,
+      "end": 965,
+      "loc": {
+        "start": {
+          "line": 33,
+          "column": 37
+        },
+        "end": {
+          "line": 33,
+          "column": 38
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 968,
+      "end": 969,
+      "loc": {
+        "start": {
+          "line": 34,
+          "column": 2
+        },
+        "end": {
+          "line": 34,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " Finding Fragment Opaqueness",
+      "start": 973,
+      "end": 1003,
+      "loc": {
+        "start": {
+          "line": 36,
+          "column": 2
+        },
+        "end": {
+          "line": 36,
+          "column": 32
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Asks the delegate whether fragments rendered by a program are opaque.\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - \n   * @returns {boolean} - \n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1523068-programisopaque\n   ",
+      "start": 1007,
+      "end": 1291,
+      "loc": {
+        "start": {
+          "line": 38,
+          "column": 2
+        },
+        "end": {
+          "line": 45,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "programIsOpaque",
+      "start": 1294,
+      "end": 1309,
+      "loc": {
+        "start": {
+          "line": 46,
+          "column": 2
+        },
+        "end": {
+          "line": 46,
+          "column": 17
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1309,
+      "end": 1310,
+      "loc": {
+        "start": {
+          "line": 46,
+          "column": 17
+        },
+        "end": {
+          "line": 46,
+          "column": 18
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "program",
+      "start": 1310,
+      "end": 1317,
+      "loc": {
+        "start": {
+          "line": 46,
+          "column": 18
+        },
+        "end": {
+          "line": 46,
+          "column": 25
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1317,
+      "end": 1318,
+      "loc": {
+        "start": {
+          "line": 46,
+          "column": 25
+        },
+        "end": {
+          "line": 46,
+          "column": 26
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1319,
+      "end": 1320,
+      "loc": {
+        "start": {
+          "line": 46,
+          "column": 27
+        },
+        "end": {
+          "line": 46,
+          "column": 28
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "return",
+        "keyword": "return",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "return",
+      "start": 1325,
+      "end": 1331,
+      "loc": {
+        "start": {
+          "line": 47,
+          "column": 4
+        },
+        "end": {
+          "line": 47,
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "false",
+        "keyword": "false",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "false",
+      "start": 1332,
+      "end": 1337,
+      "loc": {
+        "start": {
+          "line": 47,
+          "column": 11
+        },
+        "end": {
+          "line": 47,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1340,
+      "end": 1341,
+      "loc": {
+        "start": {
+          "line": 48,
+          "column": 2
+        },
+        "end": {
+          "line": 48,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " Binding and Unbinding Values",
+      "start": 1345,
+      "end": 1376,
+      "loc": {
+        "start": {
+          "line": 50,
+          "column": 2
+        },
+        "end": {
+          "line": 50,
+          "column": 33
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Invoked on the delegate to let it bind program values and/or associated graphics resources (such as textures) for symbols.\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - The SCNProgram object to bind values for.\n   * @param {string} symbol - The name of the symbol to bind a value for.\n   * @param {number} location - The location of the symbol within the program object to be modified.\n   * @param {number} programID - The underlying OpenGL program object in which the binding is made.\n   * @param {SCNRenderer} renderer - The renderer that is currently rendering the scene.\n   * @returns {boolean} - \n   * @desc If you use the handleBinding(ofSymbol:handler:) method to associate a handler block with a SceneKit object for a symbol, SceneKit will not call the delegate’s program(_:bindValueForSymbol:atLocation:programID:renderer:) method for that symbol when rendering that object.\n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1524155-program\n   ",
+      "start": 1380,
+      "end": 2396,
+      "loc": {
+        "start": {
+          "line": 52,
+          "column": 2
+        },
+        "end": {
+          "line": 64,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "programBindValueForSymbolAtLocation",
+      "start": 2399,
+      "end": 2434,
+      "loc": {
+        "start": {
+          "line": 65,
+          "column": 2
+        },
+        "end": {
+          "line": 65,
+          "column": 37
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 2434,
+      "end": 2435,
+      "loc": {
+        "start": {
+          "line": 65,
+          "column": 37
+        },
+        "end": {
+          "line": 65,
+          "column": 38
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "program",
+      "start": 2435,
+      "end": 2442,
+      "loc": {
+        "start": {
+          "line": 65,
+          "column": 38
+        },
+        "end": {
+          "line": 65,
+          "column": 45
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 2442,
+      "end": 2443,
+      "loc": {
+        "start": {
+          "line": 65,
+          "column": 45
+        },
+        "end": {
+          "line": 65,
+          "column": 46
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "symbol",
+      "start": 2444,
+      "end": 2450,
+      "loc": {
+        "start": {
+          "line": 65,
+          "column": 47
+        },
+        "end": {
+          "line": 65,
+          "column": 53
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 2450,
+      "end": 2451,
+      "loc": {
+        "start": {
+          "line": 65,
+          "column": 53
+        },
+        "end": {
+          "line": 65,
+          "column": 54
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "location",
+      "start": 2452,
+      "end": 2460,
+      "loc": {
+        "start": {
+          "line": 65,
+          "column": 55
+        },
+        "end": {
+          "line": 65,
+          "column": 63
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 2460,
+      "end": 2461,
+      "loc": {
+        "start": {
+          "line": 65,
+          "column": 63
+        },
+        "end": {
+          "line": 65,
+          "column": 64
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "programID",
+      "start": 2462,
+      "end": 2471,
+      "loc": {
+        "start": {
+          "line": 65,
+          "column": 65
+        },
+        "end": {
+          "line": 65,
+          "column": 74
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 2471,
+      "end": 2472,
+      "loc": {
+        "start": {
+          "line": 65,
+          "column": 74
+        },
+        "end": {
+          "line": 65,
+          "column": 75
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "renderer",
+      "start": 2473,
+      "end": 2481,
+      "loc": {
+        "start": {
+          "line": 65,
+          "column": 76
+        },
+        "end": {
+          "line": 65,
+          "column": 84
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 2481,
+      "end": 2482,
+      "loc": {
+        "start": {
+          "line": 65,
+          "column": 84
+        },
+        "end": {
+          "line": 65,
+          "column": 85
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 2483,
+      "end": 2484,
+      "loc": {
+        "start": {
+          "line": 65,
+          "column": 86
+        },
+        "end": {
+          "line": 65,
+          "column": 87
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "return",
+        "keyword": "return",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "return",
+      "start": 2489,
+      "end": 2495,
+      "loc": {
+        "start": {
+          "line": 66,
+          "column": 4
+        },
+        "end": {
+          "line": 66,
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "false",
+        "keyword": "false",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "false",
+      "start": 2496,
+      "end": 2501,
+      "loc": {
+        "start": {
+          "line": 66,
+          "column": 11
+        },
+        "end": {
+          "line": 66,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 2504,
+      "end": 2505,
+      "loc": {
+        "start": {
+          "line": 67,
+          "column": 2
+        },
+        "end": {
+          "line": 67,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Invoked on the delegate to let it unbind program values and/or also unbind associated graphic resources (such as textures).\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - The SCNProgram object to unbind values for.\n   * @param {string} symbol - The name of the symbol to unbind a value for.\n   * @param {number} location - The location of the symbol within the program object to be modified.\n   * @param {number} programID - The underlying OpenGL program object in which the unbinding is done.\n   * @param {SCNRenderer} renderer - The renderer that is currently rendering the scene.\n\n   * @returns {void}\n   * @desc If you use the handleUnbinding(ofSymbol:handler:) method to associate a handler block with a SceneKit object for a symbol, SceneKit will not call the delegate’s program(_:unbindValueForSymbol:atLocation:programID:renderer:) method for that symbol when rendering that object.\n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1523857-program\n   ",
+      "start": 2509,
+      "end": 3531,
+      "loc": {
+        "start": {
+          "line": 69,
+          "column": 2
+        },
+        "end": {
+          "line": 82,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "programUnbindValueForSymbolAtLocation",
+      "start": 3534,
+      "end": 3571,
+      "loc": {
+        "start": {
+          "line": 83,
+          "column": 2
+        },
+        "end": {
+          "line": 83,
+          "column": 39
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3571,
+      "end": 3572,
+      "loc": {
+        "start": {
+          "line": 83,
+          "column": 39
+        },
+        "end": {
+          "line": 83,
+          "column": 40
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "program",
+      "start": 3572,
+      "end": 3579,
+      "loc": {
+        "start": {
+          "line": 83,
+          "column": 40
+        },
+        "end": {
+          "line": 83,
+          "column": 47
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 3579,
+      "end": 3580,
+      "loc": {
+        "start": {
+          "line": 83,
+          "column": 47
+        },
+        "end": {
+          "line": 83,
+          "column": 48
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "symbol",
+      "start": 3581,
+      "end": 3587,
+      "loc": {
+        "start": {
+          "line": 83,
+          "column": 49
+        },
+        "end": {
+          "line": 83,
+          "column": 55
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 3587,
+      "end": 3588,
+      "loc": {
+        "start": {
+          "line": 83,
+          "column": 55
+        },
+        "end": {
+          "line": 83,
+          "column": 56
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "location",
+      "start": 3589,
+      "end": 3597,
+      "loc": {
+        "start": {
+          "line": 83,
+          "column": 57
+        },
+        "end": {
+          "line": 83,
+          "column": 65
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 3597,
+      "end": 3598,
+      "loc": {
+        "start": {
+          "line": 83,
+          "column": 65
+        },
+        "end": {
+          "line": 83,
+          "column": 66
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "programID",
+      "start": 3599,
+      "end": 3608,
+      "loc": {
+        "start": {
+          "line": 83,
+          "column": 67
+        },
+        "end": {
+          "line": 83,
+          "column": 76
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 3608,
+      "end": 3609,
+      "loc": {
+        "start": {
+          "line": 83,
+          "column": 76
+        },
+        "end": {
+          "line": 83,
+          "column": 77
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "renderer",
+      "start": 3610,
+      "end": 3618,
+      "loc": {
+        "start": {
+          "line": 83,
+          "column": 78
+        },
+        "end": {
+          "line": 83,
+          "column": 86
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3618,
+      "end": 3619,
+      "loc": {
+        "start": {
+          "line": 83,
+          "column": 86
+        },
+        "end": {
+          "line": 83,
+          "column": 87
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3620,
+      "end": 3621,
+      "loc": {
+        "start": {
+          "line": 83,
+          "column": 88
+        },
+        "end": {
+          "line": 83,
+          "column": 89
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3624,
+      "end": 3625,
+      "loc": {
+        "start": {
+          "line": 84,
+          "column": 2
+        },
+        "end": {
+          "line": 84,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3626,
+      "end": 3627,
+      "loc": {
+        "start": {
+          "line": 85,
+          "column": 0
+        },
+        "end": {
+          "line": 85,
+          "column": 1
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "eof",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 3628,
+      "end": 3628,
+      "loc": {
+        "start": {
+          "line": 86,
+          "column": 0
+        },
+        "end": {
+          "line": 86,
+          "column": 0
+        }
+      }
+    }
+  ]
+}

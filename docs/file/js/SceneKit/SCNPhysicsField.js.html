@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">js/SceneKit/SCNPhysicsField.js | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="https://github.com/magicien/JSceneKit" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">CoreGraphics</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGMutablePath.js~CGMutablePath.html">CGMutablePath</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html">CGPath</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGPoint.js~CGPoint.html">CGPoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGRect.js~CGRect.html">CGRect</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGSize.js~CGSize.html">CGSize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGVector.js~CGVector.html">CGVector</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Foundation</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSValue.js~NSValue.html">NSValue</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">ObjectiveC</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/ObjectiveC/NSObject.js~NSObject.html">NSObject</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">QuartzCore</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAnimation.js~CAAnimation.html">CAAnimation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAMediaTimingFunction.js~CAMediaTimingFunction.html">CAMediaTimingFunction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CATransform3D.js~CATransform3D.html">CATransform3D</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAction.js~CAAction.html">CAAction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAnimationDelegate.js~CAAnimationDelegate.html">CAAnimationDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAMediaTiming.js~CAMediaTiming.html">CAMediaTiming</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">SceneKit</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAction.js~SCNAction.html">SCNAction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAnimationEvent.js~SCNAnimationEvent.html">SCNAnimationEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAudioPlayer.js~SCNAudioPlayer.html">SCNAudioPlayer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAudioSource.js~SCNAudioSource.html">SCNAudioSource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBillboardAxis.js~SCNBillboardAxis.html">SCNBillboardAxis</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBillboardConstraint.js~SCNBillboardConstraint.html">SCNBillboardConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBox.js~SCNBox.html">SCNBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCamera.js~SCNCamera.html">SCNCamera</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCapsule.js~SCNCapsule.html">SCNCapsule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCone.js~SCNCone.html">SCNCone</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNConstraint.js~SCNConstraint.html">SCNConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCylinder.js~SCNCylinder.html">SCNCylinder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNDebugOptions.js~SCNDebugOptions.html">SCNDebugOptions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNFloor.js~SCNFloor.html">SCNFloor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNGeometry.js~SCNGeometry.html">SCNGeometry</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNGeometryElement.js~SCNGeometryElement.html">SCNGeometryElement</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNGeometrySource.js~SCNGeometrySource.html">SCNGeometrySource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNHitTestResult.js~SCNHitTestResult.html">SCNHitTestResult</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNIKConstraint.js~SCNIKConstraint.html">SCNIKConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLayer.js~SCNLayer.html">SCNLayer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLevelOfDetail.js~SCNLevelOfDetail.html">SCNLevelOfDetail</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLight.js~SCNLight.html">SCNLight</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLookAtConstraint.js~SCNLookAtConstraint.html">SCNLookAtConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMaterial.js~SCNMaterial.html">SCNMaterial</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html">SCNMaterialProperty</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMatrix4.js~SCNMatrix4.html">SCNMatrix4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMorpher.js~SCNMorpher.html">SCNMorpher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html">SCNNode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNParticlePropertyController.js~SCNParticlePropertyController.html">SCNParticlePropertyController</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNParticleSystem.js~SCNParticleSystem.html">SCNParticleSystem</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsBallSocketJoint.js~SCNPhysicsBallSocketJoint.html">SCNPhysicsBallSocketJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsBehavior.js~SCNPhysicsBehavior.html">SCNPhysicsBehavior</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsBody.js~SCNPhysicsBody.html">SCNPhysicsBody</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsCollisionCategory.js~SCNPhysicsCollisionCategory.html">SCNPhysicsCollisionCategory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsContact.js~SCNPhysicsContact.html">SCNPhysicsContact</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsField.js~SCNPhysicsField.html">SCNPhysicsField</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsHingeJoint.js~SCNPhysicsHingeJoint.html">SCNPhysicsHingeJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsShape.js~SCNPhysicsShape.html">SCNPhysicsShape</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsSliderJoint.js~SCNPhysicsSliderJoint.html">SCNPhysicsSliderJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsVehicle.js~SCNPhysicsVehicle.html">SCNPhysicsVehicle</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsVehicleWheel.js~SCNPhysicsVehicleWheel.html">SCNPhysicsVehicleWheel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsWorld.js~SCNPhysicsWorld.html">SCNPhysicsWorld</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPlane.js~SCNPlane.html">SCNPlane</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNProgram.js~SCNProgram.html">SCNProgram</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPyramid.js~SCNPyramid.html">SCNPyramid</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNReferenceNode.js~SCNReferenceNode.html">SCNReferenceNode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNRenderer.js~SCNRenderer.html">SCNRenderer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNScene.js~SCNScene.html">SCNScene</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneSource.js~SCNSceneSource.html">SCNSceneSource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNShape.js~SCNShape.html">SCNShape</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSkinner.js~SCNSkinner.html">SCNSkinner</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSphere.js~SCNSphere.html">SCNSphere</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTechnique.js~SCNTechnique.html">SCNTechnique</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNText.js~SCNText.html">SCNText</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTorus.js~SCNTorus.html">SCNTorus</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTransaction.js~SCNTransaction.html">SCNTransaction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTransformConstraint.js~SCNTransformConstraint.html">SCNTransformConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTube.js~SCNTube.html">SCNTube</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNVector3.js~SCNVector3.html">SCNVector3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNVector4.js~SCNVector4.html">SCNVector4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNView.js~SCNView.html">SCNView</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNActionable.js~SCNActionable.html">SCNActionable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAnimatable.js~SCNAnimatable.html">SCNAnimatable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBoundingVolume.js~SCNBoundingVolume.html">SCNBoundingVolume</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBufferStream.js~SCNBufferStream.html">SCNBufferStream</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNNodeRendererDelegate.js~SCNNodeRendererDelegate.html">SCNNodeRendererDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsContactDelegate.js~SCNPhysicsContactDelegate.html">SCNPhysicsContactDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNProgramDelegate.js~SCNProgramDelegate.html">SCNProgramDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneExportDelegate.js~SCNSceneExportDelegate.html">SCNSceneExportDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneRenderer.js~SCNSceneRenderer.html">SCNSceneRenderer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneRendererDelegate.js~SCNSceneRendererDelegate.html">SCNSceneRendererDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNShadable.js~SCNShadable.html">SCNShadable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTechniqueSupport.js~SCNTechniqueSupport.html">SCNTechniqueSupport</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">js/SceneKit/SCNPhysicsField.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">&apos;use strict&apos;
+
+import NSObject from &apos;../ObjectiveC/NSObject&apos;
+import SCNFieldForceEvaluator from &apos;./SCNFieldForceEvaluator&apos;
+import SCNVector3 from &apos;./SCNVector3&apos;
+import SCNPhysicsFieldScope from &apos;./SCNPhysicsFieldScope&apos;
+
+
+/**
+ * An object that applies forces, such as gravitation, electromagnetism, and turbulence, to physics bodies within a certain area of effect. 
+ * @access public
+ * @extends {NSObject}
+ * @see https://developer.apple.com/reference/scenekit/scnphysicsfield
+ */
+export default class SCNPhysicsField extends NSObject {
+
+  /**
+   * constructor
+   * @access public
+   * @returns {void}
+   */
+  init() {
+
+    // Specifying a Field&#x2019;s Area of Effect
+
+    /**
+     * A location marking the end of the field&#x2019;s area of effect.
+     * @type {SCNVector3}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsfield/1388138-halfextent
+     */
+    this.halfExtent = null
+
+    /**
+     * The area affected by the field, either inside or outside its region.
+     * @type {SCNPhysicsFieldScope}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsfield/1388136-scope
+     */
+    this.scope = null
+
+    /**
+     * A Boolean value that determines whether the field&#x2019;s area of effect is shaped like a box or ellipsoid.
+     * @type {boolean}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsfield/1388158-usesellipsoidalextent
+     */
+    this.usesEllipsoidalExtent = false
+
+    /**
+     * The offset of the field&#x2019;s center within its area of effect.
+     * @type {SCNVector3}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsfield/1388154-offset
+     */
+    this.offset = null
+
+    /**
+     * The field&#x2019;s directional axis.
+     * @type {SCNVector3}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsfield/1388128-direction
+     */
+    this.direction = null
+
+
+    // Specifying a Field&#x2019;s Behavior
+
+    /**
+     * A multiplier for the force that the field applies to objects in its area of effect.
+     * @type {number}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsfield/1388132-strength
+     */
+    this.strength = 0
+
+    /**
+     * An exponent that determines how the field&#x2019;s strength diminishes with distance.
+     * @type {number}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsfield/1388146-falloffexponent
+     */
+    this.falloffExponent = 0
+
+    /**
+     * The minimum value for distance-based effects.
+     * @type {number}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsfield/1388148-minimumdistance
+     */
+    this.minimumDistance = 0
+
+    /**
+     * A Boolean value that determines whether the field&#x2019;s effect is enabled.
+     * @type {boolean}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsfield/1388117-isactive
+     */
+    this.isActive = false
+
+    /**
+     * A Boolean value that determines whether the field overrides other fields whose areas of effect it overlaps.
+     * @type {boolean}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsfield/1388126-isexclusive
+     */
+    this.isExclusive = false
+
+
+    // Choosing Physics Bodies to Be Affected by the Field
+
+    /**
+     * A mask that defines which categories this physics field belongs to.
+     * @type {number}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsfield/1388119-categorybitmask
+     */
+    this.categoryBitMask = 0
+
+  }
+
+  // Creating Physics Fields
+
+  /**
+   * Creates a field that slows any object in its area of effect with a force proportional to the object&#x2019;s velocity.
+   * @access public
+   * @returns {SCNPhysicsField} - 
+   * @desc Like the damping and angularDamping properties of a physics body, drag fields can simulate effects such as fluid friction or air resistance. Unlike those properties, drag fields can simulate different intensities of fluid friction in different areas of your scene. For example, you can use a drag field to represent underwater areas.The default falloffExponent value for a drag field is 0.0, indicating that the field&#x2019;s effect is constant throughout its area of effect.
+   * @see https://developer.apple.com/reference/scenekit/scnphysicsfield/1388164-drag
+   */
+  static drag() {
+    return null
+  }
+
+  /**
+   * Creates a field whose forces circulate around an axis.
+   * @access public
+   * @returns {SCNPhysicsField} - 
+   * @desc The force on an object in a vortex field is tangential to the line from the object&#x2019;s position to the field&#x2019;s axis and proportional to the object&#x2019;s mass. (The field&#x2019;s axis is a line that is parallel to its direction vector and that passes through its center. For details, see the offset property.) For example, when a vortex field&#x2019;s area of effect contains many objects, the resulting scene resembles a tornado: The objects simultaneously revolve around and fly away from the field&#x2019;s center.By default, a vortex circulates counterclockwise relative to its direction vector. To make it circulate clockwise, set the field&#x2019;s strength property to a negative value.The default falloffExponent value for a vortex field is 0.0, indicating that the field&#x2019;s effect is constant throughout its area of effect.
+   * @see https://developer.apple.com/reference/scenekit/scnphysicsfield/1388160-vortex
+   */
+  static vortex() {
+    return null
+  }
+
+  /**
+   * Creates a field that accelerates objects toward its center.
+   * @access public
+   * @returns {SCNPhysicsField} - 
+   * @desc Because the force of gravity on an object is proportional to the object&#x2019;s mass, this force accelerates all objects at the same distance from the field&#x2019;s center by the same amount. The field&#x2019;s strength property measures this acceleration in meters per second per second.By default, a radial gravity field attracts objects toward its center. To make it repel objects instead, set the field&#x2019;s strength property to a negative value.The default falloffExponent value for a radial gravity field is 2.0, indicating that the field&#x2019;s effect diminishes with the square of distance from its center.
+   * @see https://developer.apple.com/reference/scenekit/scnphysicsfield/1388115-radialgravity
+   */
+  static radialGravity() {
+    return null
+  }
+
+  /**
+   * Creates a field that accelerates objects in a specific direction.
+   * @access public
+   * @returns {SCNPhysicsField} - 
+   * @desc Because the force of gravity on an object is proportional to the object&#x2019;s mass, this force accelerates all objects in the field&#x2019;s area of affect by the same amount. The field&#x2019;s strength property measures this acceleration in meters per second per second.By default, a linear gravity field accelerates objects in along its direction vector. To make it accelerate objects in the opposite direction, set the field&#x2019;s strength property to a negative value.The default falloffExponent value for a linear gravity field is 0.0, indicating that the field&#x2019;s effect is constant throughout its area of effect.
+   * @see https://developer.apple.com/reference/scenekit/scnphysicsfield/1388130-lineargravity
+   */
+  static linearGravity() {
+    return null
+  }
+
+  /**
+   * Creates a field that applies random forces to objects in its area of effect.
+   * @access public
+   * @param {number} smoothness - The amount of randomness in the field. A value of 0.0 specifies maximum noise, and a value of 1.0 specifies no noise at all.
+   * @param {number} speed - The field&#x2019;s variation over time. Specify 0.0 for a static field.
+   * @returns {SCNPhysicsField} - 
+   * @desc Use this field type to simulate effects involving random motion, such as fireflies or gently falling snow.In calculating the direction and strength of the field&#x2019;s effect on an object, SceneKit uses a Perlin simplex noise function. This function produces a velocity field that varies over time.The default falloffExponent value for a noise field is 0.0, indicating that the field&#x2019;s effect is constant throughout its area of effect. This field type ignores the field&#x2019;s direction property.
+   * @see https://developer.apple.com/reference/scenekit/scnphysicsfield/1388150-noisefield
+   */
+  static noiseFieldAnimationSpeed(smoothness, speed) {
+    return null
+  }
+
+  /**
+   * Creates a field that applies random forces to objects in its area of effect, with magnitudes proportional to those objects&#x2019; velocities.
+   * @access public
+   * @param {number} smoothness - The amount of randomness in the field. A value of 0.0 specifies maximum noise, and a value of 1.0 specifies no noise at all.
+   * @param {number} speed - The field&#x2019;s variation over time. Specify 0.0 for a static field.
+   * @returns {SCNPhysicsField} - 
+   * @desc Like a noise field, a turbulence field applies forces in random directions to the objects that it affects. Unlike a noise field, a turbulence field applies a force whose magnitude is proportional to the speed of each affected object. For example, an object passing through a noise field shakes as it travels through the field, but an object passing through a turbulence field shakes more violently the faster it travels. The field&#x2019;s strength property scales the magnitude of the turbulence effect.The default falloffExponent value for a turbulence field is 0.0, indicating that the field&#x2019;s effect is constant throughout its area of effect.
+   * @see https://developer.apple.com/reference/scenekit/scnphysicsfield/1388162-turbulencefield
+   */
+  static turbulenceFieldAnimationSpeed(smoothness, speed) {
+    return null
+  }
+
+  /**
+   * Creates a field that pulls objects toward its center with a spring-like force.
+   * @access public
+   * @returns {SCNPhysicsField} - 
+   * @desc The force a spring field applies to objects in its area of effect is linearly proportional to the distance from the object to the center of the field. (That is, the field behaves according to Hooke&#x2019;s Law of real-world spring forces.) An object placed at the center of the field and moved away will oscillate around the center, with a period of oscillation that is proportional to the object&#x2019;s mass. The field&#x2019;s strength property scales the magnitude of the spring effect&#x2014;a larger strength simulates a stiffer spring.The default falloffExponent value for a spring field is 1.0, indicating that the field&#x2019;s effect diminishes linearly with distance from its center.
+   * @see https://developer.apple.com/reference/scenekit/scnphysicsfield/1388134-spring
+   */
+  static spring() {
+    return null
+  }
+
+  /**
+   * Creates a field that attracts or repels objects based on their electrical charge and on their distance from the field&#x2019;s center.
+   * @access public
+   * @returns {SCNPhysicsField} - 
+   * @desc Use this field type to make objects behave differently from one another when they enter a region, or to make an object&apos;s behavior different from its mass-based behavior. An electric field behaves according to the first part of the Lorentz force equation modeling real-world electromagnetic forces&#x2014;the field applies a force whose magnitude is proportional to electric charge and distance.By default, physics bodies and particle systems have no electric charge, so they are unaffected by electric and magnetic fields. Use the charge property of a physics body or the particleCharge property of a particle system to add charge-based behavior.When the field&#x2019;s strength value is positive (the default), it attracts bodies whose charge is negative and repels bodies whose charge is positive. To reverse this behavior, set the field&#x2019;s strength property to a negative value.The default falloffExponent value for an electric field is 2.0, indicating that the field&#x2019;s effect diminishes with the square of its distance from its center.
+   * @see https://developer.apple.com/reference/scenekit/scnphysicsfield/1388152-electric
+   */
+  static electric() {
+    return null
+  }
+
+  /**
+   * Creates a field that attracts or repels objects based on their electrical charge, velocity, and distance from the field&#x2019;s axis.
+   * @access public
+   * @returns {SCNPhysicsField} - 
+   * @desc Use this field type to make objects behave differently from one another when they enter a region, or to make an object&apos;s behavior different from its mass based behavior. A magnetic field behaves according to the second part of the Lorentz force equation modeling real-world electromagnetic forces&#x2014;the field applies a force determined by the cross product of an object&#x2019;s velocity vector and the magnetic field vector at the object&#x2019;s location, with magnitude proportional to the object&#x2019;s electric charge. By default, physics bodies and particle systems have no electric charge, so they are unaffected by electric and magnetic fields. Use the charge property of a physics body or the particleCharge property of a particle system to add charge-based behavior.When the field&#x2019;s strength value is positive (the default), the magnetic field vectors circulate counterclockwise relative to the field&#x2019;s direction vector. (That is, the magnetic field models a real-world magnetic field created by current in a wire oriented in the field&#x2019;s direction.) To make field vectors circulate clockwise, set the field&#x2019;s strength property to a negative value.NoteThis SCNPhysicsField option models the real-world physics effect of magnetic fields on moving, electrically charged bodies, not the behavior of permanent magnets or electromagnets. To make objects in your scene simply attract or repel one another, use a different field type. For example, a field created by the radialGravity() method attracts or repels all dynamic bodies near it according to its strength property, and a field created by the electric() method selectively attracts or repels bodies according to their electric charge.The default falloffExponent value for a magnetic field is 2.0, indicating that the field&#x2019;s effect diminishes with the square of distance from its center.
+   * @see https://developer.apple.com/reference/scenekit/scnphysicsfield/1388168-magnetic
+   */
+  static magnetic() {
+    return null
+  }
+
+  // Creating Custom Physics Fields
+
+  /**
+   * Creates a field that runs the specified block to determine the force a field applies to each object in its area of effect.
+   * @access public
+   * @param {SCNFieldForceEvaluator} block - A block that SceneKit runs for each object in the field&#x2019;s area of effect. See SCNFieldForceEvaluator. 
+   * @returns {SCNPhysicsField} - 
+   * @desc For custom physics fields, SceneKit ignores the direction, strength, falloffExponent, and minimumDistance properties. Instead, SceneKit calls your block to determine the direction and magnitude of force to apply to each physics body or particle in the field&#x2019;s area of effect.
+   * @see https://developer.apple.com/reference/scenekit/scnphysicsfield/1388140-customfield
+   */
+  static customFieldEvaluationBlock(block) {
+    return null
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

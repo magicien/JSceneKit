@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">js/SceneKit/SCNProgram.js | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="https://github.com/magicien/JSceneKit" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">CoreGraphics</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGMutablePath.js~CGMutablePath.html">CGMutablePath</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html">CGPath</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGPoint.js~CGPoint.html">CGPoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGRect.js~CGRect.html">CGRect</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGSize.js~CGSize.html">CGSize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGVector.js~CGVector.html">CGVector</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Foundation</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSValue.js~NSValue.html">NSValue</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">ObjectiveC</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/ObjectiveC/NSObject.js~NSObject.html">NSObject</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">QuartzCore</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAnimation.js~CAAnimation.html">CAAnimation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAMediaTimingFunction.js~CAMediaTimingFunction.html">CAMediaTimingFunction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CATransform3D.js~CATransform3D.html">CATransform3D</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAction.js~CAAction.html">CAAction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAnimationDelegate.js~CAAnimationDelegate.html">CAAnimationDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAMediaTiming.js~CAMediaTiming.html">CAMediaTiming</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">SceneKit</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAction.js~SCNAction.html">SCNAction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAnimationEvent.js~SCNAnimationEvent.html">SCNAnimationEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAudioPlayer.js~SCNAudioPlayer.html">SCNAudioPlayer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAudioSource.js~SCNAudioSource.html">SCNAudioSource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBillboardAxis.js~SCNBillboardAxis.html">SCNBillboardAxis</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBillboardConstraint.js~SCNBillboardConstraint.html">SCNBillboardConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBox.js~SCNBox.html">SCNBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCamera.js~SCNCamera.html">SCNCamera</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCapsule.js~SCNCapsule.html">SCNCapsule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCone.js~SCNCone.html">SCNCone</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNConstraint.js~SCNConstraint.html">SCNConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCylinder.js~SCNCylinder.html">SCNCylinder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNDebugOptions.js~SCNDebugOptions.html">SCNDebugOptions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNFloor.js~SCNFloor.html">SCNFloor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNGeometry.js~SCNGeometry.html">SCNGeometry</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNGeometryElement.js~SCNGeometryElement.html">SCNGeometryElement</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNGeometrySource.js~SCNGeometrySource.html">SCNGeometrySource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNHitTestResult.js~SCNHitTestResult.html">SCNHitTestResult</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNIKConstraint.js~SCNIKConstraint.html">SCNIKConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLayer.js~SCNLayer.html">SCNLayer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLevelOfDetail.js~SCNLevelOfDetail.html">SCNLevelOfDetail</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLight.js~SCNLight.html">SCNLight</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLookAtConstraint.js~SCNLookAtConstraint.html">SCNLookAtConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMaterial.js~SCNMaterial.html">SCNMaterial</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html">SCNMaterialProperty</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMatrix4.js~SCNMatrix4.html">SCNMatrix4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMorpher.js~SCNMorpher.html">SCNMorpher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html">SCNNode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNParticlePropertyController.js~SCNParticlePropertyController.html">SCNParticlePropertyController</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNParticleSystem.js~SCNParticleSystem.html">SCNParticleSystem</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsBallSocketJoint.js~SCNPhysicsBallSocketJoint.html">SCNPhysicsBallSocketJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsBehavior.js~SCNPhysicsBehavior.html">SCNPhysicsBehavior</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsBody.js~SCNPhysicsBody.html">SCNPhysicsBody</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsCollisionCategory.js~SCNPhysicsCollisionCategory.html">SCNPhysicsCollisionCategory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsContact.js~SCNPhysicsContact.html">SCNPhysicsContact</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsField.js~SCNPhysicsField.html">SCNPhysicsField</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsHingeJoint.js~SCNPhysicsHingeJoint.html">SCNPhysicsHingeJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsShape.js~SCNPhysicsShape.html">SCNPhysicsShape</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsSliderJoint.js~SCNPhysicsSliderJoint.html">SCNPhysicsSliderJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsVehicle.js~SCNPhysicsVehicle.html">SCNPhysicsVehicle</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsVehicleWheel.js~SCNPhysicsVehicleWheel.html">SCNPhysicsVehicleWheel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsWorld.js~SCNPhysicsWorld.html">SCNPhysicsWorld</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPlane.js~SCNPlane.html">SCNPlane</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNProgram.js~SCNProgram.html">SCNProgram</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPyramid.js~SCNPyramid.html">SCNPyramid</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNReferenceNode.js~SCNReferenceNode.html">SCNReferenceNode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNRenderer.js~SCNRenderer.html">SCNRenderer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNScene.js~SCNScene.html">SCNScene</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneSource.js~SCNSceneSource.html">SCNSceneSource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNShape.js~SCNShape.html">SCNShape</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSkinner.js~SCNSkinner.html">SCNSkinner</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSphere.js~SCNSphere.html">SCNSphere</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTechnique.js~SCNTechnique.html">SCNTechnique</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNText.js~SCNText.html">SCNText</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTorus.js~SCNTorus.html">SCNTorus</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTransaction.js~SCNTransaction.html">SCNTransaction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTransformConstraint.js~SCNTransformConstraint.html">SCNTransformConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTube.js~SCNTube.html">SCNTube</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNVector3.js~SCNVector3.html">SCNVector3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNVector4.js~SCNVector4.html">SCNVector4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNView.js~SCNView.html">SCNView</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNActionable.js~SCNActionable.html">SCNActionable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAnimatable.js~SCNAnimatable.html">SCNAnimatable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBoundingVolume.js~SCNBoundingVolume.html">SCNBoundingVolume</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBufferStream.js~SCNBufferStream.html">SCNBufferStream</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNNodeRendererDelegate.js~SCNNodeRendererDelegate.html">SCNNodeRendererDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsContactDelegate.js~SCNPhysicsContactDelegate.html">SCNPhysicsContactDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNProgramDelegate.js~SCNProgramDelegate.html">SCNProgramDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneExportDelegate.js~SCNSceneExportDelegate.html">SCNSceneExportDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneRenderer.js~SCNSceneRenderer.html">SCNSceneRenderer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneRendererDelegate.js~SCNSceneRendererDelegate.html">SCNSceneRendererDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNShadable.js~SCNShadable.html">SCNShadable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTechniqueSupport.js~SCNTechniqueSupport.html">SCNTechniqueSupport</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">js/SceneKit/SCNProgram.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">&apos;use strict&apos;
+
+import NSObject from &apos;../ObjectiveC/NSObject&apos;
+import SCNProgramDelegate from &apos;./SCNProgramDelegate&apos;
+import SCNBufferFrequency from &apos;./SCNBufferFrequency&apos;
+import SCNBufferBindingBlock from &apos;./SCNBufferBindingBlock&apos;
+
+
+/**
+ * A complete Metal or OpenGL shader program that replaces SceneKit&apos;s rendering of a geometry or material.
+ * @access public
+ * @extends {NSObject}
+ * @see https://developer.apple.com/reference/scenekit/scnprogram
+ */
+export default class SCNProgram extends NSObject {
+
+  /**
+   * constructor
+   * @access public
+   * @returns {void}
+   */
+  init() {
+
+    // Working with OpenGL Shader Source Code
+
+    /**
+     * GLSL source code for the program&#x2019;s vertex shader.
+     * @type {?string}
+     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522891-vertexshader
+     */
+    this.vertexShader = null
+
+    /**
+     * GLSL source code for the program&#x2019;s fragment shader.
+     * @type {?string}
+     * @see https://developer.apple.com/reference/scenekit/scnprogram/1523135-fragmentshader
+     */
+    this.fragmentShader = null
+
+    /**
+     * GLSL source code for the program&#x2019;s optional geometry shader.
+     * @type {?string}
+     * @see https://developer.apple.com/reference/scenekit/scnprogram/1524049-geometryshader
+     */
+    this.geometryShader = null
+
+    /**
+     * GLSL source code for the program&#x2019;s optional tessellation control shader.
+     * @type {?string}
+     * @see https://developer.apple.com/reference/scenekit/scnprogram/1523852-tessellationcontrolshader
+     */
+    this.tessellationControlShader = null
+
+    /**
+     * GLSL source code for the program&#x2019;s optional tessellation evaluation shader.
+     * @type {?string}
+     * @see https://developer.apple.com/reference/scenekit/scnprogram/1523760-tessellationevaluationshader
+     */
+    this.tessellationEvaluationShader = null
+
+
+    // Providing a Delegate Object
+
+    /**
+     * The delegate of the program object.
+     * @type {?SCNProgramDelegate}
+     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522611-delegate
+     */
+    this.delegate = null
+
+
+    // Managing Opacity
+
+    /**
+     * A Boolean value that indicates whether fragments rendered by the program are fully opaque.
+     * @type {boolean}
+     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522844-isopaque
+     */
+    this.isOpaque = false
+
+
+    // Working With Metal Shaders
+
+    /**
+     * The name of the vertex shader function to load from a Metal shader library.
+     * @type {?string}
+     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522799-vertexfunctionname
+     */
+    this.vertexFunctionName = null
+
+    /**
+     * The name of the fragment shader function to load from a Metal shader library.
+     * @type {?string}
+     * @see https://developer.apple.com/reference/scenekit/scnprogram/1524012-fragmentfunctionname
+     */
+    this.fragmentFunctionName = null
+
+    /**
+     * The Metal shader library containing shader functions to be used by this program.
+     * @type {?MTLLibrary}
+     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522934-library
+     */
+    this.library = null
+
+  }
+
+  // Mapping GLSL Symbols to SceneKit Semantics
+
+  /**
+   * Associates a SceneKit semantic identifier with the specified GLSL vertex attribute or uniform variable.
+   * @access public
+   * @param {?string} semantic - A SceneKit semantic identifier. See Geometry Semantic Identifiers and Rendering Transform Keys for possible values.
+   * @param {string} symbol - The name declared in the program&#x2019;s GLSL source code for the vertex attribute or uniform variable to be associated with the semantic.
+   * @param {?Map&lt;string, Object&gt;} [options = null] - A dictionary of options affecting the semantic. See Program Semantic Options for applicable keys and values.
+   * @returns {void}
+   * @desc Use this method to provide inputs managed by SceneKit to your GLSL program.To use vertex attributes provided by SCNGeometry objects, use the constants listed in Geometry Semantic Identifiers.To use the coordinate transformations defined by the scene&#x2019;s node hierarchy and point-of-view camera, use the constants listed in Rendering Transform Keys.
+   * @see https://developer.apple.com/reference/scenekit/scnprogram/1522730-setsemantic
+   */
+  setSemanticForSymbol(semantic, symbol, options = null) {
+  }
+
+  /**
+   * Returns the SceneKit semantic identifiers associated with the specified GLSL vertex attribute or uniform variable.
+   * @access public
+   * @param {string} symbol - The name declared in the program&#x2019;s GLSL source code for a vertex attribute or uniform variable semantic.
+   * @returns {?string} - 
+   * @see https://developer.apple.com/reference/scenekit/scnprogram/1523350-semantic
+   */
+  semanticForSymbol(symbol) {
+    return null
+  }
+
+  // Providing Input for Metal Shaders
+
+  /**
+   * Registers a block for SceneKit to call at render time for binding a Metal buffer to the shader program.
+   * @access public
+   * @param {string} name - The name identifying the buffer in Metal shader source code.
+   * @param {SCNBufferFrequency} frequency - An option specifying whether SceneKit calls the block only once per rendered frame or more frequently (for example, once for each object to be rendered).
+   * @param {SCNBufferBindingBlock} block - A block to be run when SceneKit prepares for rendering with the Metal shader.
+   * @returns {void}
+   * @desc Use this method to associate a block with a Metal shader program to handle setup of a buffer used in that shader. SceneKit calls your block before rendering any objects whose program property is set to this SCNProgram object. In the block, use the writeBytes(_:count:) method to provide data for the buffer.  
+
+   * @see https://developer.apple.com/reference/scenekit/scnprogram/1524047-handlebinding
+   */
+  handleBindingOfBufferNamedHandler(name, frequency, block) {
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

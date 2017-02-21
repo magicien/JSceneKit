@@ -10,6 +10,7 @@ import UnitTest from '../UnitTest'
 
 describe('SCNView class', () => {
 
+  /*
   UnitTest.classFunctionsDefined(SCNView, [
   ])
 
@@ -36,5 +37,6 @@ describe('SCNView class', () => {
     'backgroundColor',
     'scene'
   ])
+  */
 })
 

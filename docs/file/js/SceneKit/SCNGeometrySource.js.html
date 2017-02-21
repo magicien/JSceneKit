@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">js/SceneKit/SCNGeometrySource.js | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="https://github.com/magicien/JSceneKit" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">CoreGraphics</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGMutablePath.js~CGMutablePath.html">CGMutablePath</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html">CGPath</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGPoint.js~CGPoint.html">CGPoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGRect.js~CGRect.html">CGRect</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGSize.js~CGSize.html">CGSize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGVector.js~CGVector.html">CGVector</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Foundation</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSValue.js~NSValue.html">NSValue</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">ObjectiveC</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/ObjectiveC/NSObject.js~NSObject.html">NSObject</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">QuartzCore</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAnimation.js~CAAnimation.html">CAAnimation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAMediaTimingFunction.js~CAMediaTimingFunction.html">CAMediaTimingFunction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CATransform3D.js~CATransform3D.html">CATransform3D</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAction.js~CAAction.html">CAAction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAnimationDelegate.js~CAAnimationDelegate.html">CAAnimationDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAMediaTiming.js~CAMediaTiming.html">CAMediaTiming</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">SceneKit</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAction.js~SCNAction.html">SCNAction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAnimationEvent.js~SCNAnimationEvent.html">SCNAnimationEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAudioPlayer.js~SCNAudioPlayer.html">SCNAudioPlayer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAudioSource.js~SCNAudioSource.html">SCNAudioSource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBillboardAxis.js~SCNBillboardAxis.html">SCNBillboardAxis</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBillboardConstraint.js~SCNBillboardConstraint.html">SCNBillboardConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBox.js~SCNBox.html">SCNBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCamera.js~SCNCamera.html">SCNCamera</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCapsule.js~SCNCapsule.html">SCNCapsule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCone.js~SCNCone.html">SCNCone</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNConstraint.js~SCNConstraint.html">SCNConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCylinder.js~SCNCylinder.html">SCNCylinder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNDebugOptions.js~SCNDebugOptions.html">SCNDebugOptions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNFloor.js~SCNFloor.html">SCNFloor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNGeometry.js~SCNGeometry.html">SCNGeometry</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNGeometryElement.js~SCNGeometryElement.html">SCNGeometryElement</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNGeometrySource.js~SCNGeometrySource.html">SCNGeometrySource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNHitTestResult.js~SCNHitTestResult.html">SCNHitTestResult</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNIKConstraint.js~SCNIKConstraint.html">SCNIKConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLayer.js~SCNLayer.html">SCNLayer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLevelOfDetail.js~SCNLevelOfDetail.html">SCNLevelOfDetail</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLight.js~SCNLight.html">SCNLight</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLookAtConstraint.js~SCNLookAtConstraint.html">SCNLookAtConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMaterial.js~SCNMaterial.html">SCNMaterial</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html">SCNMaterialProperty</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMatrix4.js~SCNMatrix4.html">SCNMatrix4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMorpher.js~SCNMorpher.html">SCNMorpher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html">SCNNode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNParticlePropertyController.js~SCNParticlePropertyController.html">SCNParticlePropertyController</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNParticleSystem.js~SCNParticleSystem.html">SCNParticleSystem</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsBallSocketJoint.js~SCNPhysicsBallSocketJoint.html">SCNPhysicsBallSocketJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsBehavior.js~SCNPhysicsBehavior.html">SCNPhysicsBehavior</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsBody.js~SCNPhysicsBody.html">SCNPhysicsBody</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsCollisionCategory.js~SCNPhysicsCollisionCategory.html">SCNPhysicsCollisionCategory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsContact.js~SCNPhysicsContact.html">SCNPhysicsContact</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsField.js~SCNPhysicsField.html">SCNPhysicsField</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsHingeJoint.js~SCNPhysicsHingeJoint.html">SCNPhysicsHingeJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsShape.js~SCNPhysicsShape.html">SCNPhysicsShape</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsSliderJoint.js~SCNPhysicsSliderJoint.html">SCNPhysicsSliderJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsVehicle.js~SCNPhysicsVehicle.html">SCNPhysicsVehicle</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsVehicleWheel.js~SCNPhysicsVehicleWheel.html">SCNPhysicsVehicleWheel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsWorld.js~SCNPhysicsWorld.html">SCNPhysicsWorld</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPlane.js~SCNPlane.html">SCNPlane</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNProgram.js~SCNProgram.html">SCNProgram</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPyramid.js~SCNPyramid.html">SCNPyramid</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNReferenceNode.js~SCNReferenceNode.html">SCNReferenceNode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNRenderer.js~SCNRenderer.html">SCNRenderer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNScene.js~SCNScene.html">SCNScene</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneSource.js~SCNSceneSource.html">SCNSceneSource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNShape.js~SCNShape.html">SCNShape</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSkinner.js~SCNSkinner.html">SCNSkinner</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSphere.js~SCNSphere.html">SCNSphere</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTechnique.js~SCNTechnique.html">SCNTechnique</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNText.js~SCNText.html">SCNText</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTorus.js~SCNTorus.html">SCNTorus</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTransaction.js~SCNTransaction.html">SCNTransaction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTransformConstraint.js~SCNTransformConstraint.html">SCNTransformConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTube.js~SCNTube.html">SCNTube</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNVector3.js~SCNVector3.html">SCNVector3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNVector4.js~SCNVector4.html">SCNVector4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNView.js~SCNView.html">SCNView</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNActionable.js~SCNActionable.html">SCNActionable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAnimatable.js~SCNAnimatable.html">SCNAnimatable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBoundingVolume.js~SCNBoundingVolume.html">SCNBoundingVolume</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBufferStream.js~SCNBufferStream.html">SCNBufferStream</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNNodeRendererDelegate.js~SCNNodeRendererDelegate.html">SCNNodeRendererDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsContactDelegate.js~SCNPhysicsContactDelegate.html">SCNPhysicsContactDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNProgramDelegate.js~SCNProgramDelegate.html">SCNProgramDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneExportDelegate.js~SCNSceneExportDelegate.html">SCNSceneExportDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneRenderer.js~SCNSceneRenderer.html">SCNSceneRenderer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneRendererDelegate.js~SCNSceneRendererDelegate.html">SCNSceneRendererDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNShadable.js~SCNShadable.html">SCNShadable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTechniqueSupport.js~SCNTechniqueSupport.html">SCNTechniqueSupport</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">js/SceneKit/SCNGeometrySource.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">&apos;use strict&apos;
+
+import NSObject from &apos;../ObjectiveC/NSObject&apos;
+import SCNVector3 from &apos;./SCNVector3&apos;
+import CGPoint from &apos;../CoreGraphics/CGPoint&apos;
+
+const _Semantic = {
+  boneIndices: Symbol(),
+  boneWeights: Symbol(),
+  color: Symbol(),
+  edgeCrease: Symbol(),
+  normal: Symbol(),
+  tangent: Symbol(),
+  texcoord: Symbol(),
+  vertex: Symbol(),
+  vertexCrease: Symbol()
+}
+
+
+/**
+ * A container for vertex data forming part of the definition for a three-dimensional object, or geometry.
+ * @access public
+ * @extends {NSObject}
+ * @see https://developer.apple.com/reference/scenekit/scngeometrysource
+ */
+export default class SCNGeometrySource extends NSObject {
+
+  /**
+   * constructor
+   * @access public
+   * @returns {void}
+   */
+  init() {
+
+    // Inspecting a Geometry Source
+
+    this._data = null
+    this._semantic = null
+    this._vectorCount = 0
+    this._usesFloatComponents = false
+    this._componentsPerVector = 0
+    this._bytesPerComponent = 0
+    this._dataOffset = 0
+    this._dataStride = 0
+  }
+
+  // Creating Geometry Sources
+
+  /**
+   * Creates a geometry source from the specified data and options.
+   * @access public
+   * @param {Data} data - The data for the geometry source.
+   * @param {SCNGeometrySource.Semantic} semantic - The semantic value (or attribute) that the geometry source describes for each vertex. See Geometry Semantic Identifiers for available values.
+   * @param {number} vectorCount - The number of geometry source vectors.
+   * @param {boolean} floatComponents - A Boolean value that indicates whether vector components are floating-point values. Specify true for floating-point values, or false for integer values.
+   * @param {number} componentsPerVector - The number of scalar components in each vector.
+   * @param {number} bytesPerComponent - The size, in bytes, of each vector component.
+   * @param {number} offset - The offset, in bytes, from the beginning of the data to the first vector component to be used in the geometry source.
+   * @param {number} stride - The number of bytes from each vector to the next in the data.
+   * @returns {void}
+   * @desc A geometry source&#x2019;s data is an array of vectors, each of which represents a particular attribute (or semantic) of a vertex in the geometry. The other parameters determine how SceneKit interprets this data. For example, an array of vertex positions may have three 32-bit floating-point components per vector, but an array of texture coordinates may have two 8-bit integer coponents per vector. You can use the offset and stride parameters together to interleave data for multiple geometry sources in the same array, improving rendering performance. See SCNGeometrySource for details.To create a custom SCNGeometry object from the geometry source, use the init(sources:elements:) method.
+   * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1523320-init
+   */
+  initUsesFloatComponentsDataOffsetDataStride(data, semantic, vectorCount, floatComponents, componentsPerVector, bytesPerComponent, offset, stride) {
+  }
+
+  /**
+   * Creates a geometry source from an array of vertex positions. 
+   * @access public
+   * @param {SCNVector3[]} vertices - An array of three-component vectors, each of which represents a vertex position for the geometry source.
+   * @returns {void}
+   * @desc SceneKit converts this data to its own format to optimize rendering performance. To read the converted data, examine the properties of the created SCNGeometrySource object.To create a custom SCNGeometry object from the geometry source, use the init(sources:elements:) method.
+   * @see https://developer.apple.com/reference/scenekit/scngeometrysource/2034708-init
+   */
+  init(vertices) {
+  }
+
+  /**
+   * Creates a geometry source from an array of texture coordinate points.
+   * @access public
+   * @param {UnsafePointer&lt;CGPoint&gt;} texcoord - An array of points, each of which represents a texture coordinate pair for the geometry source.
+   * @param {number} count - The number of texture coordinate points.
+   * @returns {void}
+   * @desc SceneKit converts this data to its own format to optimize rendering performance. To read the converted data, examine the properties of the created SCNGeometrySource object.To create a custom SCNGeometry object from the geometry source, use the init(sources:elements:) method.
+   * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1522718-init
+   */
+  initTextureCoordinates(texcoord, count) {
+  }
+
+  // Inspecting a Geometry Source
+  /**
+   * The data for the geometry source.
+   * @type {Data}
+   * @desc A geometry source&#x2019;s data is an array of vectors, each of which represents a particular attribute (or semantic) of a vertex in the geometry. The other properties of the geometry source determine how SceneKit interprets this data. For example, an array of vertex positions may have three 32-bit floating-point components per vector, but an array of texture coordinates may have two 8-bit integer coponents per vector.
+   * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1522881-data
+   */
+  get data() {
+    return this._data
+  }
+  /**
+   * The semantic value (or attribute) the geometry source describes for each vertex.
+   * @type {SCNGeometrySource.Semantic}
+   * @desc A semantic describes an attribute for each vertex, such as position, color, surface normal vector, or texture coordinates.See Geometry Semantic Identifiers for available values.
+   * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1523071-semantic
+   */
+  get semantic() {
+    return this._semantic
+  }
+  /**
+   * The number of vectors in the data.
+   * @type {number}
+   * @desc 
+   * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1522648-vectorcount
+   */
+  get vectorCount() {
+    return this._vectorCount
+  }
+  /**
+   * A Boolean value that indicates whether vector components are floating-point values.
+   * @type {boolean}
+   * @desc If true, SceneKit interprets the geometry source&#x2019;s data as an array of vectors whose components are floating-point values. The type of floating-point value is determined by the SCNGeometrySource property: 4 bytes for float values or 8 bytes for double values. If false, SceneKit interprets the geometry source&#x2019;s data as an array of vectors whose components are integer values. The type of integer value is determined by the SCNGeometrySource property; for example, 2 bytes for unsigned short values or 4 bytes for unsigned int values.
+   * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1522920-usesfloatcomponents
+   */
+  get usesFloatComponents() {
+    return this._usesFloatComponents
+  }
+  /**
+   * The number of scalar components in each vector.
+   * @type {number}
+   * @desc 
+   * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1522832-componentspervector
+   */
+  get componentsPerVector() {
+    return this._componentsPerVector
+  }
+  /**
+   * The size, in bytes, of each vector component.
+   * @type {number}
+   * @desc 
+   * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1522633-bytespercomponent
+   */
+  get bytesPerComponent() {
+    return this._bytesPerComponent
+  }
+  /**
+   * The offset, in bytes, from the beginning of the data to the first vector component to be used in the geometry source.
+   * @type {number}
+   * @desc You can use the SCNGeometrySource and SCNGeometrySource parameters can together to interleave data for multiple geometry sources in the same array, improving rendering performance. See SCNGeometrySource for details.
+   * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1522834-dataoffset
+   */
+  get dataOffset() {
+    return this._dataOffset
+  }
+  /**
+   * The number of bytes from a vector to the next one in the data.
+   * @type {number}
+   * @desc You can use the SCNGeometrySource and SCNGeometrySource parameters can together to interleave data for multiple geometry sources in the same array, improving rendering performance. See SCNGeometrySource for details.
+   * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1524197-datastride
+   */
+  get dataStride() {
+    return this._dataStride
+  }
+
+  // Creating GPU-Mutable Geometry Sources
+
+  /**
+   * Creates a geometry source whose vertex data resides in the specified Metal buffer, allowing modification through a Metal compute shader.
+   * @access public
+   * @param {MTLBuffer} mtlBuffer - A Metal buffer containing per-vertex data for the geometry source.
+   * @param {MTLVertexFormat} vertexFormat - The type of per-vertex data in the buffer. A MTLVertexFormat value defines the number of components for each vector in the geometry source and the data type and size of each component.
+   * @param {SCNGeometrySource.Semantic} semantic - The semantic value (or attribute) that the geometry source describes for each vertex. See Geometry Semantic Identifiers for available values.
+   * @param {number} vertexCount - The number of vertices in the geometry source.
+   * @param {number} offset - The offset, in bytes, from the beginning of the data to the first vector component to be used in the geometry source.
+   * @param {number} stride - The number of bytes from each vector to the next in the data.
+   * @returns {void}
+   * @desc Use this method to create a geometry source whose underlying data can be modified at render time by a Metal compute shader running on the GPU. To create a MTLBuffer object for use with a geometry source, use the device property of the SceneKit view (or other renderer) responsible for drawing your scene.// Create and fill a buffer.
+id &lt;MTLDevice&gt; device = self.scnView.device;
+self.geometryBuffer = [device newBufferWithBytes:myData length:myLength options:myOptions];
+// Create a geometry source from the buffer.
+SCNGeometrySource *source = [SCNGeometrySource geometrySourceWithBuffer:buffer
+                             vertexFormat:myVertexFormat
+                                 semantic:SCNGeometrySourceSemanticVertex
+                              vertexCount:myVertexCount
+                               dataOffset:0
+                               dataStride:0];
+Then, to modify the buffer&#x2019;s contents at render time, implement a scene renderer delegate and schedule a compute command encoder during a render delegate method such as renderer(_:willRenderScene:atTime:).- (void)renderer:(id &lt;SCNSceneRenderer&gt;)aRenderer willRenderScene:(SCNScene *)scene atTime:(NSTimeInterval)time {
+     // Get a command buffer and compute encoder from the view (or other renderer).
+     id&lt;MTLCommandBuffer&gt; myCommandBuffer = [aRenderer.commandQueue commandBuffer];
+     id&lt;MTLComputeCommandEncoder&gt; myComputeEncoder = [myCommandBuffer computeCommandEncoder];
+ 
+     // Configure the compute command encoder.
+     // (Note pipeline state is preconfigured outside of the render loop.)
+     [myComputeEncoder setComputePipelineState:self.pipelineState];
+     [myComputeEncoder setBuffer:self.geometryBuffer offset:0 atIndex:0];
+ 
+     // Schedule the compute command and commit the command buffer.
+     [myComputeEncoder dispatchThreadgroups:myThreadgroupCount
+                      threadsPerThreadgroup:myThreadCount];
+     [myComputeEncoder endEncoding];
+     [myCommandBuffer commit];
+}
+NoteGeometry sources backed by a Metal buffer are available only with SceneKit views (or other renderers) whose renderingAPI property is metal. Metal commands that modify the buffer&#x2019;s contents must be enqueued from within one of the render loop methods defined in the SCNSceneRendererDelegate protocol. The result of attempting to modify a buffer at any other time is undefined.// Create and fill a buffer.
+id &lt;MTLDevice&gt; device = self.scnView.device;
+self.geometryBuffer = [device newBufferWithBytes:myData length:myLength options:myOptions];
+// Create a geometry source from the buffer.
+SCNGeometrySource *source = [SCNGeometrySource geometrySourceWithBuffer:buffer
+                             vertexFormat:myVertexFormat
+                                 semantic:SCNGeometrySourceSemanticVertex
+                              vertexCount:myVertexCount
+                               dataOffset:0
+                               dataStride:0];
+- (void)renderer:(id &lt;SCNSceneRenderer&gt;)aRenderer willRenderScene:(SCNScene *)scene atTime:(NSTimeInterval)time {
+     // Get a command buffer and compute encoder from the view (or other renderer).
+     id&lt;MTLCommandBuffer&gt; myCommandBuffer = [aRenderer.commandQueue commandBuffer];
+     id&lt;MTLComputeCommandEncoder&gt; myComputeEncoder = [myCommandBuffer computeCommandEncoder];
+ 
+     // Configure the compute command encoder.
+     // (Note pipeline state is preconfigured outside of the render loop.)
+     [myComputeEncoder setComputePipelineState:self.pipelineState];
+     [myComputeEncoder setBuffer:self.geometryBuffer offset:0 atIndex:0];
+ 
+     // Schedule the compute command and commit the command buffer.
+     [myComputeEncoder dispatchThreadgroups:myThreadgroupCount
+                      threadsPerThreadgroup:myThreadCount];
+     [myComputeEncoder endEncoding];
+     [myCommandBuffer commit];
+}
+
+   * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1522873-init
+   */
+  initBufferDataOffsetDataStride(mtlBuffer, vertexFormat, semantic, vertexCount, offset, stride) {
+  }
+
+  // Structures
+  /**
+   * @type {Object} Semantic
+   * @property {Symbol} boneIndices The semantic for bone index data, used for skeletal animation of skinned surfaces.
+   * @property {Symbol} boneWeights The semantic for bone weight data, used for skeletal animation of skinned surfaces.
+   * @property {Symbol} color The semantic for per-vertex color data.
+   * @property {Symbol} edgeCrease The semantic for edge crease data, used for subdividing surfaces.
+   * @property {Symbol} normal The semantic for surface normal data.
+   * @property {Symbol} tangent The semantic for surface tangent vector data.
+   * @property {Symbol} texcoord The semantic for texture coordinate data.
+   * @property {Symbol} vertex The semantic for vertex position data.
+   * @property {Symbol} vertexCrease The semantic for vertex crease data, used for subdividing surfaces.
+   * @see https://developer.apple.com/reference/scenekit/scngeometrysource.semantic
+   */
+  static get Semantic() {
+    return _Semantic
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

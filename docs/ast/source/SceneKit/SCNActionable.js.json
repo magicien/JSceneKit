@@ -1,0 +1,5030 @@
+{
+  "type": "File",
+  "start": 0,
+  "end": 5856,
+  "loc": {
+    "start": {
+      "line": 1,
+      "column": 0
+    },
+    "end": {
+      "line": 131,
+      "column": 0
+    }
+  },
+  "program": {
+    "type": "Program",
+    "start": 0,
+    "end": 5856,
+    "loc": {
+      "start": {
+        "line": 1,
+        "column": 0
+      },
+      "end": {
+        "line": 131,
+        "column": 0
+      }
+    },
+    "sourceType": "module",
+    "body": [
+      {
+        "type": "ImportDeclaration",
+        "start": 14,
+        "end": 49,
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 0
+          },
+          "end": {
+            "line": 3,
+            "column": 35
+          }
+        },
+        "specifiers": [
+          {
+            "type": "ImportDefaultSpecifier",
+            "start": 21,
+            "end": 30,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 7
+              },
+              "end": {
+                "line": 3,
+                "column": 16
+              }
+            },
+            "local": {
+              "type": "Identifier",
+              "start": 21,
+              "end": 30,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 7
+                },
+                "end": {
+                  "line": 3,
+                  "column": 16
+                },
+                "identifierName": "SCNAction"
+              },
+              "name": "SCNAction"
+            }
+          }
+        ],
+        "source": {
+          "type": "StringLiteral",
+          "start": 36,
+          "end": 49,
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 22
+            },
+            "end": {
+              "line": 3,
+              "column": 35
+            }
+          },
+          "extra": {
+            "rawValue": "./SCNAction",
+            "raw": "'./SCNAction'"
+          },
+          "value": "./SCNAction",
+          "leadingComments": null,
+          "trailingComments": null
+        },
+        "trailingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * Methods for running actions on nodes.\n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnactionable\n ",
+            "start": 52,
+            "end": 183,
+            "loc": {
+              "start": {
+                "line": 6,
+                "column": 0
+              },
+              "end": {
+                "line": 10,
+                "column": 3
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "ExportDefaultDeclaration",
+        "start": 184,
+        "end": 5855,
+        "loc": {
+          "start": {
+            "line": 11,
+            "column": 0
+          },
+          "end": {
+            "line": 130,
+            "column": 1
+          }
+        },
+        "declaration": {
+          "type": "ClassDeclaration",
+          "start": 199,
+          "end": 5855,
+          "loc": {
+            "start": {
+              "line": 11,
+              "column": 15
+            },
+            "end": {
+              "line": 130,
+              "column": 1
+            }
+          },
+          "id": {
+            "type": "Identifier",
+            "start": 205,
+            "end": 218,
+            "loc": {
+              "start": {
+                "line": 11,
+                "column": 21
+              },
+              "end": {
+                "line": 11,
+                "column": 34
+              },
+              "identifierName": "SCNActionable"
+            },
+            "name": "SCNActionable",
+            "leadingComments": null
+          },
+          "superClass": null,
+          "body": {
+            "type": "ClassBody",
+            "start": 219,
+            "end": 5855,
+            "loc": {
+              "start": {
+                "line": 11,
+                "column": 35
+              },
+              "end": {
+                "line": 130,
+                "column": 1
+              }
+            },
+            "body": [
+              {
+                "type": "ClassMethod",
+                "start": 294,
+                "end": 408,
+                "loc": {
+                  "start": {
+                    "line": 18,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 24,
+                    "column": 3
+                  }
+                },
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 294,
+                  "end": 298,
+                  "loc": {
+                    "start": {
+                      "line": 18,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 18,
+                      "column": 6
+                    },
+                    "identifierName": "init"
+                  },
+                  "name": "init",
+                  "leadingComments": null
+                },
+                "static": false,
+                "kind": "method",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 301,
+                  "end": 408,
+                  "loc": {
+                    "start": {
+                      "line": 18,
+                      "column": 9
+                    },
+                    "end": {
+                      "line": 24,
+                      "column": 3
+                    }
+                  },
+                  "body": [
+                    {
+                      "type": "ExpressionStatement",
+                      "start": 352,
+                      "end": 376,
+                      "loc": {
+                        "start": {
+                          "line": 22,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 22,
+                          "column": 28
+                        }
+                      },
+                      "expression": {
+                        "type": "AssignmentExpression",
+                        "start": 352,
+                        "end": 376,
+                        "loc": {
+                          "start": {
+                            "line": 22,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 22,
+                            "column": 28
+                          }
+                        },
+                        "operator": "=",
+                        "left": {
+                          "type": "MemberExpression",
+                          "start": 352,
+                          "end": 368,
+                          "loc": {
+                            "start": {
+                              "line": 22,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 22,
+                              "column": 20
+                            }
+                          },
+                          "object": {
+                            "type": "ThisExpression",
+                            "start": 352,
+                            "end": 356,
+                            "loc": {
+                              "start": {
+                                "line": 22,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 22,
+                                "column": 8
+                              }
+                            },
+                            "leadingComments": null
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "start": 357,
+                            "end": 368,
+                            "loc": {
+                              "start": {
+                                "line": 22,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 22,
+                                "column": 20
+                              },
+                              "identifierName": "_hasActions"
+                            },
+                            "name": "_hasActions"
+                          },
+                          "computed": false,
+                          "leadingComments": null
+                        },
+                        "right": {
+                          "type": "BooleanLiteral",
+                          "start": 371,
+                          "end": 376,
+                          "loc": {
+                            "start": {
+                              "line": 22,
+                              "column": 23
+                            },
+                            "end": {
+                              "line": 22,
+                              "column": 28
+                            }
+                          },
+                          "value": false
+                        },
+                        "leadingComments": null
+                      },
+                      "leadingComments": [
+                        {
+                          "type": "CommentLine",
+                          "value": " Inspecting a Node’s Running Actions",
+                          "start": 308,
+                          "end": 346,
+                          "loc": {
+                            "start": {
+                              "line": 20,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 20,
+                              "column": 42
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "start": 381,
+                      "end": 404,
+                      "loc": {
+                        "start": {
+                          "line": 23,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 23,
+                          "column": 27
+                        }
+                      },
+                      "expression": {
+                        "type": "AssignmentExpression",
+                        "start": 381,
+                        "end": 404,
+                        "loc": {
+                          "start": {
+                            "line": 23,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 23,
+                            "column": 27
+                          }
+                        },
+                        "operator": "=",
+                        "left": {
+                          "type": "MemberExpression",
+                          "start": 381,
+                          "end": 397,
+                          "loc": {
+                            "start": {
+                              "line": 23,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 23,
+                              "column": 20
+                            }
+                          },
+                          "object": {
+                            "type": "ThisExpression",
+                            "start": 381,
+                            "end": 385,
+                            "loc": {
+                              "start": {
+                                "line": 23,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 23,
+                                "column": 8
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "start": 386,
+                            "end": 397,
+                            "loc": {
+                              "start": {
+                                "line": 23,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 23,
+                                "column": 20
+                              },
+                              "identifierName": "_actionKeys"
+                            },
+                            "name": "_actionKeys"
+                          },
+                          "computed": false
+                        },
+                        "right": {
+                          "type": "NullLiteral",
+                          "start": 400,
+                          "end": 404,
+                          "loc": {
+                            "start": {
+                              "line": 23,
+                              "column": 23
+                            },
+                            "end": {
+                              "line": 23,
+                              "column": 27
+                            }
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "directives": [],
+                  "trailingComments": null
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
+                    "start": 224,
+                    "end": 291,
+                    "loc": {
+                      "start": {
+                        "line": 13,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 5
+                      }
+                    }
+                  }
+                ],
+                "trailingComments": [
+                  {
+                    "type": "CommentLine",
+                    "value": " Running Actions",
+                    "start": 412,
+                    "end": 430,
+                    "loc": {
+                      "start": {
+                        "line": 26,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 26,
+                        "column": 20
+                      }
+                    }
+                  },
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Required. Adds an action to the list of actions executed by the node.\n   * @access public\n   * @param {SCNAction} action - The action to be performed.\n   * @returns {void}\n   * @desc SceneKit begins running a newly added action when it prepares to render the next frame.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1523164-runaction\n   ",
+                    "start": 434,
+                    "end": 808,
+                    "loc": {
+                      "start": {
+                        "line": 28,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 35,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "ClassMethod",
+                "start": 811,
+                "end": 834,
+                "loc": {
+                  "start": {
+                    "line": 36,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 37,
+                    "column": 3
+                  }
+                },
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 811,
+                  "end": 820,
+                  "loc": {
+                    "start": {
+                      "line": 36,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 36,
+                      "column": 11
+                    },
+                    "identifierName": "runAction"
+                  },
+                  "name": "runAction",
+                  "leadingComments": null
+                },
+                "static": false,
+                "kind": "method",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "start": 821,
+                    "end": 827,
+                    "loc": {
+                      "start": {
+                        "line": 36,
+                        "column": 12
+                      },
+                      "end": {
+                        "line": 36,
+                        "column": 18
+                      },
+                      "identifierName": "action"
+                    },
+                    "name": "action"
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 829,
+                  "end": 834,
+                  "loc": {
+                    "start": {
+                      "line": 36,
+                      "column": 20
+                    },
+                    "end": {
+                      "line": 37,
+                      "column": 3
+                    }
+                  },
+                  "body": [],
+                  "directives": [],
+                  "leadingComments": null,
+                  "trailingComments": null
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentLine",
+                    "value": " Running Actions",
+                    "start": 412,
+                    "end": 430,
+                    "loc": {
+                      "start": {
+                        "line": 26,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 26,
+                        "column": 20
+                      }
+                    }
+                  },
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Required. Adds an action to the list of actions executed by the node.\n   * @access public\n   * @param {SCNAction} action - The action to be performed.\n   * @returns {void}\n   * @desc SceneKit begins running a newly added action when it prepares to render the next frame.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1523164-runaction\n   ",
+                    "start": 434,
+                    "end": 808,
+                    "loc": {
+                      "start": {
+                        "line": 28,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 35,
+                        "column": 5
+                      }
+                    }
+                  }
+                ],
+                "trailingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Required. Adds an action to the list of actions executed by the node. SceneKit calls the specified block when the action completes.\n   * @access public\n   * @param {SCNAction} action - The action to be performed.\n   * @param {?function(): void} [block = null] - A completion block that SceneKit calls when the action completes.\n   * @returns {void}\n   * @desc The new action is processed the next time SceneKit prepares to render a frame.SceneKit calls your block after the action’s duration is complete. For example, in a game you could use this method to show a Game Over message after performing a fade-out action on a node that displays a player character.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1524219-runaction\n   ",
+                    "start": 838,
+                    "end": 1602,
+                    "loc": {
+                      "start": {
+                        "line": 39,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 47,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "ClassMethod",
+                "start": 1605,
+                "end": 1659,
+                "loc": {
+                  "start": {
+                    "line": 48,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 49,
+                    "column": 3
+                  }
+                },
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 1605,
+                  "end": 1631,
+                  "loc": {
+                    "start": {
+                      "line": 48,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 48,
+                      "column": 28
+                    },
+                    "identifierName": "runActionCompletionHandler"
+                  },
+                  "name": "runActionCompletionHandler",
+                  "leadingComments": null
+                },
+                "static": false,
+                "kind": "method",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "start": 1632,
+                    "end": 1638,
+                    "loc": {
+                      "start": {
+                        "line": 48,
+                        "column": 29
+                      },
+                      "end": {
+                        "line": 48,
+                        "column": 35
+                      },
+                      "identifierName": "action"
+                    },
+                    "name": "action"
+                  },
+                  {
+                    "type": "AssignmentPattern",
+                    "start": 1640,
+                    "end": 1652,
+                    "loc": {
+                      "start": {
+                        "line": 48,
+                        "column": 37
+                      },
+                      "end": {
+                        "line": 48,
+                        "column": 49
+                      }
+                    },
+                    "left": {
+                      "type": "Identifier",
+                      "start": 1640,
+                      "end": 1645,
+                      "loc": {
+                        "start": {
+                          "line": 48,
+                          "column": 37
+                        },
+                        "end": {
+                          "line": 48,
+                          "column": 42
+                        },
+                        "identifierName": "block"
+                      },
+                      "name": "block"
+                    },
+                    "right": {
+                      "type": "NullLiteral",
+                      "start": 1648,
+                      "end": 1652,
+                      "loc": {
+                        "start": {
+                          "line": 48,
+                          "column": 45
+                        },
+                        "end": {
+                          "line": 48,
+                          "column": 49
+                        }
+                      }
+                    }
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 1654,
+                  "end": 1659,
+                  "loc": {
+                    "start": {
+                      "line": 48,
+                      "column": 51
+                    },
+                    "end": {
+                      "line": 49,
+                      "column": 3
+                    }
+                  },
+                  "body": [],
+                  "directives": [],
+                  "leadingComments": null,
+                  "trailingComments": null
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Required. Adds an action to the list of actions executed by the node. SceneKit calls the specified block when the action completes.\n   * @access public\n   * @param {SCNAction} action - The action to be performed.\n   * @param {?function(): void} [block = null] - A completion block that SceneKit calls when the action completes.\n   * @returns {void}\n   * @desc The new action is processed the next time SceneKit prepares to render a frame.SceneKit calls your block after the action’s duration is complete. For example, in a game you could use this method to show a Game Over message after performing a fade-out action on a node that displays a player character.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1524219-runaction\n   ",
+                    "start": 838,
+                    "end": 1602,
+                    "loc": {
+                      "start": {
+                        "line": 39,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 47,
+                        "column": 5
+                      }
+                    }
+                  }
+                ],
+                "trailingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Required. Adds an identifiable action to the list of actions executed by the node.\n   * @access public\n   * @param {SCNAction} action - The action to be performed.\n   * @param {?string} key - A unique key used to identify the action.\n   * @returns {void}\n   * @desc This method is identical to runAction(_:), but the action is stored and identified so that you can retrieve or cancel it later. If an action using the same key is already running, SceneKit removes it before adding the new action.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1524222-runaction\n   ",
+                    "start": 1663,
+                    "end": 2262,
+                    "loc": {
+                      "start": {
+                        "line": 51,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 59,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "ClassMethod",
+                "start": 2265,
+                "end": 2299,
+                "loc": {
+                  "start": {
+                    "line": 60,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 61,
+                    "column": 3
+                  }
+                },
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 2265,
+                  "end": 2280,
+                  "loc": {
+                    "start": {
+                      "line": 60,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 60,
+                      "column": 17
+                    },
+                    "identifierName": "runActionForKey"
+                  },
+                  "name": "runActionForKey",
+                  "leadingComments": null
+                },
+                "static": false,
+                "kind": "method",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "start": 2281,
+                    "end": 2287,
+                    "loc": {
+                      "start": {
+                        "line": 60,
+                        "column": 18
+                      },
+                      "end": {
+                        "line": 60,
+                        "column": 24
+                      },
+                      "identifierName": "action"
+                    },
+                    "name": "action"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 2289,
+                    "end": 2292,
+                    "loc": {
+                      "start": {
+                        "line": 60,
+                        "column": 26
+                      },
+                      "end": {
+                        "line": 60,
+                        "column": 29
+                      },
+                      "identifierName": "key"
+                    },
+                    "name": "key"
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 2294,
+                  "end": 2299,
+                  "loc": {
+                    "start": {
+                      "line": 60,
+                      "column": 31
+                    },
+                    "end": {
+                      "line": 61,
+                      "column": 3
+                    }
+                  },
+                  "body": [],
+                  "directives": [],
+                  "leadingComments": null,
+                  "trailingComments": null
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Required. Adds an identifiable action to the list of actions executed by the node.\n   * @access public\n   * @param {SCNAction} action - The action to be performed.\n   * @param {?string} key - A unique key used to identify the action.\n   * @returns {void}\n   * @desc This method is identical to runAction(_:), but the action is stored and identified so that you can retrieve or cancel it later. If an action using the same key is already running, SceneKit removes it before adding the new action.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1524222-runaction\n   ",
+                    "start": 1663,
+                    "end": 2262,
+                    "loc": {
+                      "start": {
+                        "line": 51,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 59,
+                        "column": 5
+                      }
+                    }
+                  }
+                ],
+                "trailingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Required. Adds an identifiable action to the list of actions executed by the node. SceneKit calls the specified block when the action completes.\n   * @access public\n   * @param {SCNAction} action - The action to be performed.\n   * @param {?string} key - A unique key used to identify the action.\n   * @param {?function(): void} [block = null] - A completion block called when the action completes.\n   * @returns {void}\n   * @desc This method is identical to runAction(_:completionHandler:), but the action is stored and identified so that you can retrieve or cancel it later. If an action using the same key is already running, SceneKit removes it before adding the new action.SceneKit calls your block after the action’s duration is complete. For example, you can use this method with a wait action to execute some code after a timed delay. If during the delay period you need to prevent the code from running, use the removeAction(forKey:) method to cancel it.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1522791-runaction\n   ",
+                    "start": 2303,
+                    "end": 3369,
+                    "loc": {
+                      "start": {
+                        "line": 63,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 72,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "ClassMethod",
+                "start": 3372,
+                "end": 3437,
+                "loc": {
+                  "start": {
+                    "line": 73,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 74,
+                    "column": 3
+                  }
+                },
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 3372,
+                  "end": 3404,
+                  "loc": {
+                    "start": {
+                      "line": 73,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 73,
+                      "column": 34
+                    },
+                    "identifierName": "runActionForKeyCompletionHandler"
+                  },
+                  "name": "runActionForKeyCompletionHandler",
+                  "leadingComments": null
+                },
+                "static": false,
+                "kind": "method",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "start": 3405,
+                    "end": 3411,
+                    "loc": {
+                      "start": {
+                        "line": 73,
+                        "column": 35
+                      },
+                      "end": {
+                        "line": 73,
+                        "column": 41
+                      },
+                      "identifierName": "action"
+                    },
+                    "name": "action"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 3413,
+                    "end": 3416,
+                    "loc": {
+                      "start": {
+                        "line": 73,
+                        "column": 43
+                      },
+                      "end": {
+                        "line": 73,
+                        "column": 46
+                      },
+                      "identifierName": "key"
+                    },
+                    "name": "key"
+                  },
+                  {
+                    "type": "AssignmentPattern",
+                    "start": 3418,
+                    "end": 3430,
+                    "loc": {
+                      "start": {
+                        "line": 73,
+                        "column": 48
+                      },
+                      "end": {
+                        "line": 73,
+                        "column": 60
+                      }
+                    },
+                    "left": {
+                      "type": "Identifier",
+                      "start": 3418,
+                      "end": 3423,
+                      "loc": {
+                        "start": {
+                          "line": 73,
+                          "column": 48
+                        },
+                        "end": {
+                          "line": 73,
+                          "column": 53
+                        },
+                        "identifierName": "block"
+                      },
+                      "name": "block"
+                    },
+                    "right": {
+                      "type": "NullLiteral",
+                      "start": 3426,
+                      "end": 3430,
+                      "loc": {
+                        "start": {
+                          "line": 73,
+                          "column": 56
+                        },
+                        "end": {
+                          "line": 73,
+                          "column": 60
+                        }
+                      }
+                    }
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 3432,
+                  "end": 3437,
+                  "loc": {
+                    "start": {
+                      "line": 73,
+                      "column": 62
+                    },
+                    "end": {
+                      "line": 74,
+                      "column": 3
+                    }
+                  },
+                  "body": [],
+                  "directives": [],
+                  "leadingComments": null,
+                  "trailingComments": null
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Required. Adds an identifiable action to the list of actions executed by the node. SceneKit calls the specified block when the action completes.\n   * @access public\n   * @param {SCNAction} action - The action to be performed.\n   * @param {?string} key - A unique key used to identify the action.\n   * @param {?function(): void} [block = null] - A completion block called when the action completes.\n   * @returns {void}\n   * @desc This method is identical to runAction(_:completionHandler:), but the action is stored and identified so that you can retrieve or cancel it later. If an action using the same key is already running, SceneKit removes it before adding the new action.SceneKit calls your block after the action’s duration is complete. For example, you can use this method with a wait action to execute some code after a timed delay. If during the delay period you need to prevent the code from running, use the removeAction(forKey:) method to cancel it.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1522791-runaction\n   ",
+                    "start": 2303,
+                    "end": 3369,
+                    "loc": {
+                      "start": {
+                        "line": 63,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 72,
+                        "column": 5
+                      }
+                    }
+                  }
+                ],
+                "trailingComments": [
+                  {
+                    "type": "CommentLine",
+                    "value": " Inspecting a Node’s Running Actions",
+                    "start": 3441,
+                    "end": 3479,
+                    "loc": {
+                      "start": {
+                        "line": 76,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 76,
+                        "column": 40
+                      }
+                    }
+                  },
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Required. Returns an action associated with a specific key.\n   * @access public\n   * @param {string} key - A string that uniquely identifies a action.\n   * @returns {?SCNAction} - \n   * @desc Use this method to retrieve actions you scheduled using the runAction(_:forKey:) or runAction(_:forKey:completionHandler:) method.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1523287-action\n   ",
+                    "start": 3483,
+                    "end": 3906,
+                    "loc": {
+                      "start": {
+                        "line": 78,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 85,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "ClassMethod",
+                "start": 3909,
+                "end": 3948,
+                "loc": {
+                  "start": {
+                    "line": 86,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 88,
+                    "column": 3
+                  }
+                },
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 3909,
+                  "end": 3921,
+                  "loc": {
+                    "start": {
+                      "line": 86,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 86,
+                      "column": 14
+                    },
+                    "identifierName": "actionForKey"
+                  },
+                  "name": "actionForKey",
+                  "leadingComments": null
+                },
+                "static": false,
+                "kind": "method",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "start": 3922,
+                    "end": 3925,
+                    "loc": {
+                      "start": {
+                        "line": 86,
+                        "column": 15
+                      },
+                      "end": {
+                        "line": 86,
+                        "column": 18
+                      },
+                      "identifierName": "key"
+                    },
+                    "name": "key"
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 3927,
+                  "end": 3948,
+                  "loc": {
+                    "start": {
+                      "line": 86,
+                      "column": 20
+                    },
+                    "end": {
+                      "line": 88,
+                      "column": 3
+                    }
+                  },
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "start": 3933,
+                      "end": 3944,
+                      "loc": {
+                        "start": {
+                          "line": 87,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 87,
+                          "column": 15
+                        }
+                      },
+                      "argument": {
+                        "type": "NullLiteral",
+                        "start": 3940,
+                        "end": 3944,
+                        "loc": {
+                          "start": {
+                            "line": 87,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 87,
+                            "column": 15
+                          }
+                        }
+                      }
+                    }
+                  ],
+                  "directives": [],
+                  "trailingComments": null
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentLine",
+                    "value": " Inspecting a Node’s Running Actions",
+                    "start": 3441,
+                    "end": 3479,
+                    "loc": {
+                      "start": {
+                        "line": 76,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 76,
+                        "column": 40
+                      }
+                    }
+                  },
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Required. Returns an action associated with a specific key.\n   * @access public\n   * @param {string} key - A string that uniquely identifies a action.\n   * @returns {?SCNAction} - \n   * @desc Use this method to retrieve actions you scheduled using the runAction(_:forKey:) or runAction(_:forKey:completionHandler:) method.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1523287-action\n   ",
+                    "start": 3483,
+                    "end": 3906,
+                    "loc": {
+                      "start": {
+                        "line": 78,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 85,
+                        "column": 5
+                      }
+                    }
+                  }
+                ],
+                "trailingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Required. A Boolean value that indicates whether the node is currently executing any actions.\n   * @type {boolean}\n   * @desc This value is true if the node has any executing actions; otherwise the value is false.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1523794-hasactions\n   ",
+                    "start": 3951,
+                    "end": 4269,
+                    "loc": {
+                      "start": {
+                        "line": 89,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 94,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "ClassMethod",
+                "start": 4272,
+                "end": 4322,
+                "loc": {
+                  "start": {
+                    "line": 95,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 97,
+                    "column": 3
+                  }
+                },
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 4276,
+                  "end": 4286,
+                  "loc": {
+                    "start": {
+                      "line": 95,
+                      "column": 6
+                    },
+                    "end": {
+                      "line": 95,
+                      "column": 16
+                    },
+                    "identifierName": "hasActions"
+                  },
+                  "name": "hasActions"
+                },
+                "static": false,
+                "kind": "get",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 4289,
+                  "end": 4322,
+                  "loc": {
+                    "start": {
+                      "line": 95,
+                      "column": 19
+                    },
+                    "end": {
+                      "line": 97,
+                      "column": 3
+                    }
+                  },
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "start": 4295,
+                      "end": 4318,
+                      "loc": {
+                        "start": {
+                          "line": 96,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 96,
+                          "column": 27
+                        }
+                      },
+                      "argument": {
+                        "type": "MemberExpression",
+                        "start": 4302,
+                        "end": 4318,
+                        "loc": {
+                          "start": {
+                            "line": 96,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 96,
+                            "column": 27
+                          }
+                        },
+                        "object": {
+                          "type": "ThisExpression",
+                          "start": 4302,
+                          "end": 4306,
+                          "loc": {
+                            "start": {
+                              "line": 96,
+                              "column": 11
+                            },
+                            "end": {
+                              "line": 96,
+                              "column": 15
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "start": 4307,
+                          "end": 4318,
+                          "loc": {
+                            "start": {
+                              "line": 96,
+                              "column": 16
+                            },
+                            "end": {
+                              "line": 96,
+                              "column": 27
+                            },
+                            "identifierName": "_hasActions"
+                          },
+                          "name": "_hasActions"
+                        },
+                        "computed": false
+                      }
+                    }
+                  ],
+                  "directives": [],
+                  "trailingComments": null
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Required. A Boolean value that indicates whether the node is currently executing any actions.\n   * @type {boolean}\n   * @desc This value is true if the node has any executing actions; otherwise the value is false.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1523794-hasactions\n   ",
+                    "start": 3951,
+                    "end": 4269,
+                    "loc": {
+                      "start": {
+                        "line": 89,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 94,
+                        "column": 5
+                      }
+                    }
+                  }
+                ],
+                "trailingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Required. The list of keys for which the node has attached actions.\n   * @type {string[]}\n   * @desc Use this property to list actions you scheduled using the runAction(_:forKey:) or runAction(_:forKey:completionHandler:) method.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1523036-actionkeys\n   ",
+                    "start": 4325,
+                    "end": 4659,
+                    "loc": {
+                      "start": {
+                        "line": 98,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 103,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "ClassMethod",
+                "start": 4662,
+                "end": 4712,
+                "loc": {
+                  "start": {
+                    "line": 104,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 106,
+                    "column": 3
+                  }
+                },
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 4666,
+                  "end": 4676,
+                  "loc": {
+                    "start": {
+                      "line": 104,
+                      "column": 6
+                    },
+                    "end": {
+                      "line": 104,
+                      "column": 16
+                    },
+                    "identifierName": "actionKeys"
+                  },
+                  "name": "actionKeys"
+                },
+                "static": false,
+                "kind": "get",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 4679,
+                  "end": 4712,
+                  "loc": {
+                    "start": {
+                      "line": 104,
+                      "column": 19
+                    },
+                    "end": {
+                      "line": 106,
+                      "column": 3
+                    }
+                  },
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "start": 4685,
+                      "end": 4708,
+                      "loc": {
+                        "start": {
+                          "line": 105,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 105,
+                          "column": 27
+                        }
+                      },
+                      "argument": {
+                        "type": "MemberExpression",
+                        "start": 4692,
+                        "end": 4708,
+                        "loc": {
+                          "start": {
+                            "line": 105,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 105,
+                            "column": 27
+                          }
+                        },
+                        "object": {
+                          "type": "ThisExpression",
+                          "start": 4692,
+                          "end": 4696,
+                          "loc": {
+                            "start": {
+                              "line": 105,
+                              "column": 11
+                            },
+                            "end": {
+                              "line": 105,
+                              "column": 15
+                            }
+                          }
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "start": 4697,
+                          "end": 4708,
+                          "loc": {
+                            "start": {
+                              "line": 105,
+                              "column": 16
+                            },
+                            "end": {
+                              "line": 105,
+                              "column": 27
+                            },
+                            "identifierName": "_actionKeys"
+                          },
+                          "name": "_actionKeys"
+                        },
+                        "computed": false
+                      }
+                    }
+                  ],
+                  "directives": [],
+                  "trailingComments": null
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Required. The list of keys for which the node has attached actions.\n   * @type {string[]}\n   * @desc Use this property to list actions you scheduled using the runAction(_:forKey:) or runAction(_:forKey:completionHandler:) method.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1523036-actionkeys\n   ",
+                    "start": 4325,
+                    "end": 4659,
+                    "loc": {
+                      "start": {
+                        "line": 98,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 103,
+                        "column": 5
+                      }
+                    }
+                  }
+                ],
+                "trailingComments": [
+                  {
+                    "type": "CommentLine",
+                    "value": " Canceling a Node’s Running Actions",
+                    "start": 4716,
+                    "end": 4753,
+                    "loc": {
+                      "start": {
+                        "line": 108,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 108,
+                        "column": 39
+                      }
+                    }
+                  },
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Required. Removes an action associated with a specific key.\n   * @access public\n   * @param {string} key - A string that uniquely identifies a action.\n   * @returns {void}\n   * @desc If the node is currently running an action that matches the key, SceneKit removes that action from the node, skipping any remaining animation it would perform but keeping any changes already made to the node.Use this method to cancel actions you scheduled using the runAction(_:forKey:) or runAction(_:forKey:completionHandler:) method.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1523617-removeaction\n   ",
+                    "start": 4757,
+                    "end": 5383,
+                    "loc": {
+                      "start": {
+                        "line": 110,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 117,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "ClassMethod",
+                "start": 5386,
+                "end": 5415,
+                "loc": {
+                  "start": {
+                    "line": 118,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 119,
+                    "column": 3
+                  }
+                },
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 5386,
+                  "end": 5404,
+                  "loc": {
+                    "start": {
+                      "line": 118,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 118,
+                      "column": 20
+                    },
+                    "identifierName": "removeActionForKey"
+                  },
+                  "name": "removeActionForKey",
+                  "leadingComments": null
+                },
+                "static": false,
+                "kind": "method",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "start": 5405,
+                    "end": 5408,
+                    "loc": {
+                      "start": {
+                        "line": 118,
+                        "column": 21
+                      },
+                      "end": {
+                        "line": 118,
+                        "column": 24
+                      },
+                      "identifierName": "key"
+                    },
+                    "name": "key"
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 5410,
+                  "end": 5415,
+                  "loc": {
+                    "start": {
+                      "line": 118,
+                      "column": 26
+                    },
+                    "end": {
+                      "line": 119,
+                      "column": 3
+                    }
+                  },
+                  "body": [],
+                  "directives": [],
+                  "leadingComments": null,
+                  "trailingComments": null
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentLine",
+                    "value": " Canceling a Node’s Running Actions",
+                    "start": 4716,
+                    "end": 4753,
+                    "loc": {
+                      "start": {
+                        "line": 108,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 108,
+                        "column": 39
+                      }
+                    }
+                  },
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Required. Removes an action associated with a specific key.\n   * @access public\n   * @param {string} key - A string that uniquely identifies a action.\n   * @returns {void}\n   * @desc If the node is currently running an action that matches the key, SceneKit removes that action from the node, skipping any remaining animation it would perform but keeping any changes already made to the node.Use this method to cancel actions you scheduled using the runAction(_:forKey:) or runAction(_:forKey:completionHandler:) method.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1523617-removeaction\n   ",
+                    "start": 4757,
+                    "end": 5383,
+                    "loc": {
+                      "start": {
+                        "line": 110,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 117,
+                        "column": 5
+                      }
+                    }
+                  }
+                ],
+                "trailingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Required. Ends and removes all actions from the node.\n   * @access public\n   * @returns {void}\n   * @desc When SceneKit removes an action from a node, it skips any remaining animation the action would perform. However, any changes the action has already made to the node’s state remain in effect.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1524181-removeallactions\n   ",
+                    "start": 5419,
+                    "end": 5826,
+                    "loc": {
+                      "start": {
+                        "line": 121,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 127,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "ClassMethod",
+                "start": 5829,
+                "end": 5853,
+                "loc": {
+                  "start": {
+                    "line": 128,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 129,
+                    "column": 3
+                  }
+                },
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 5829,
+                  "end": 5845,
+                  "loc": {
+                    "start": {
+                      "line": 128,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 128,
+                      "column": 18
+                    },
+                    "identifierName": "removeAllActions"
+                  },
+                  "name": "removeAllActions",
+                  "leadingComments": null
+                },
+                "static": false,
+                "kind": "method",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 5848,
+                  "end": 5853,
+                  "loc": {
+                    "start": {
+                      "line": 128,
+                      "column": 21
+                    },
+                    "end": {
+                      "line": 129,
+                      "column": 3
+                    }
+                  },
+                  "body": [],
+                  "directives": []
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Required. Ends and removes all actions from the node.\n   * @access public\n   * @returns {void}\n   * @desc When SceneKit removes an action from a node, it skips any remaining animation the action would perform. However, any changes the action has already made to the node’s state remain in effect.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1524181-removeallactions\n   ",
+                    "start": 5419,
+                    "end": 5826,
+                    "loc": {
+                      "start": {
+                        "line": 121,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 127,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          "leadingComments": [
+            {
+              "type": "CommentBlock",
+              "value": "*\n * Methods for running actions on nodes.\n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnactionable\n ",
+              "start": 52,
+              "end": 183,
+              "loc": {
+                "start": {
+                  "line": 6,
+                  "column": 0
+                },
+                "end": {
+                  "line": 10,
+                  "column": 3
+                }
+              }
+            }
+          ],
+          "trailingComments": []
+        },
+        "leadingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * Methods for running actions on nodes.\n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnactionable\n ",
+            "start": 52,
+            "end": 183,
+            "loc": {
+              "start": {
+                "line": 6,
+                "column": 0
+              },
+              "end": {
+                "line": 10,
+                "column": 3
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "directives": [
+      {
+        "type": "Directive",
+        "start": 0,
+        "end": 12,
+        "loc": {
+          "start": {
+            "line": 1,
+            "column": 0
+          },
+          "end": {
+            "line": 1,
+            "column": 12
+          }
+        },
+        "value": {
+          "type": "DirectiveLiteral",
+          "start": 0,
+          "end": 12,
+          "loc": {
+            "start": {
+              "line": 1,
+              "column": 0
+            },
+            "end": {
+              "line": 1,
+              "column": 12
+            }
+          },
+          "value": "use strict",
+          "extra": {
+            "raw": "'use strict'",
+            "rawValue": "use strict"
+          }
+        }
+      }
+    ]
+  },
+  "comments": [
+    {
+      "type": "CommentBlock",
+      "value": "*\n * Methods for running actions on nodes.\n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnactionable\n ",
+      "start": 52,
+      "end": 183,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 10,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
+      "start": 224,
+      "end": 291,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 2
+        },
+        "end": {
+          "line": 17,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " Inspecting a Node’s Running Actions",
+      "start": 308,
+      "end": 346,
+      "loc": {
+        "start": {
+          "line": 20,
+          "column": 4
+        },
+        "end": {
+          "line": 20,
+          "column": 42
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " Running Actions",
+      "start": 412,
+      "end": 430,
+      "loc": {
+        "start": {
+          "line": 26,
+          "column": 2
+        },
+        "end": {
+          "line": 26,
+          "column": 20
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Required. Adds an action to the list of actions executed by the node.\n   * @access public\n   * @param {SCNAction} action - The action to be performed.\n   * @returns {void}\n   * @desc SceneKit begins running a newly added action when it prepares to render the next frame.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1523164-runaction\n   ",
+      "start": 434,
+      "end": 808,
+      "loc": {
+        "start": {
+          "line": 28,
+          "column": 2
+        },
+        "end": {
+          "line": 35,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Required. Adds an action to the list of actions executed by the node. SceneKit calls the specified block when the action completes.\n   * @access public\n   * @param {SCNAction} action - The action to be performed.\n   * @param {?function(): void} [block = null] - A completion block that SceneKit calls when the action completes.\n   * @returns {void}\n   * @desc The new action is processed the next time SceneKit prepares to render a frame.SceneKit calls your block after the action’s duration is complete. For example, in a game you could use this method to show a Game Over message after performing a fade-out action on a node that displays a player character.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1524219-runaction\n   ",
+      "start": 838,
+      "end": 1602,
+      "loc": {
+        "start": {
+          "line": 39,
+          "column": 2
+        },
+        "end": {
+          "line": 47,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Required. Adds an identifiable action to the list of actions executed by the node.\n   * @access public\n   * @param {SCNAction} action - The action to be performed.\n   * @param {?string} key - A unique key used to identify the action.\n   * @returns {void}\n   * @desc This method is identical to runAction(_:), but the action is stored and identified so that you can retrieve or cancel it later. If an action using the same key is already running, SceneKit removes it before adding the new action.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1524222-runaction\n   ",
+      "start": 1663,
+      "end": 2262,
+      "loc": {
+        "start": {
+          "line": 51,
+          "column": 2
+        },
+        "end": {
+          "line": 59,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Required. Adds an identifiable action to the list of actions executed by the node. SceneKit calls the specified block when the action completes.\n   * @access public\n   * @param {SCNAction} action - The action to be performed.\n   * @param {?string} key - A unique key used to identify the action.\n   * @param {?function(): void} [block = null] - A completion block called when the action completes.\n   * @returns {void}\n   * @desc This method is identical to runAction(_:completionHandler:), but the action is stored and identified so that you can retrieve or cancel it later. If an action using the same key is already running, SceneKit removes it before adding the new action.SceneKit calls your block after the action’s duration is complete. For example, you can use this method with a wait action to execute some code after a timed delay. If during the delay period you need to prevent the code from running, use the removeAction(forKey:) method to cancel it.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1522791-runaction\n   ",
+      "start": 2303,
+      "end": 3369,
+      "loc": {
+        "start": {
+          "line": 63,
+          "column": 2
+        },
+        "end": {
+          "line": 72,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " Inspecting a Node’s Running Actions",
+      "start": 3441,
+      "end": 3479,
+      "loc": {
+        "start": {
+          "line": 76,
+          "column": 2
+        },
+        "end": {
+          "line": 76,
+          "column": 40
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Required. Returns an action associated with a specific key.\n   * @access public\n   * @param {string} key - A string that uniquely identifies a action.\n   * @returns {?SCNAction} - \n   * @desc Use this method to retrieve actions you scheduled using the runAction(_:forKey:) or runAction(_:forKey:completionHandler:) method.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1523287-action\n   ",
+      "start": 3483,
+      "end": 3906,
+      "loc": {
+        "start": {
+          "line": 78,
+          "column": 2
+        },
+        "end": {
+          "line": 85,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Required. A Boolean value that indicates whether the node is currently executing any actions.\n   * @type {boolean}\n   * @desc This value is true if the node has any executing actions; otherwise the value is false.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1523794-hasactions\n   ",
+      "start": 3951,
+      "end": 4269,
+      "loc": {
+        "start": {
+          "line": 89,
+          "column": 2
+        },
+        "end": {
+          "line": 94,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Required. The list of keys for which the node has attached actions.\n   * @type {string[]}\n   * @desc Use this property to list actions you scheduled using the runAction(_:forKey:) or runAction(_:forKey:completionHandler:) method.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1523036-actionkeys\n   ",
+      "start": 4325,
+      "end": 4659,
+      "loc": {
+        "start": {
+          "line": 98,
+          "column": 2
+        },
+        "end": {
+          "line": 103,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " Canceling a Node’s Running Actions",
+      "start": 4716,
+      "end": 4753,
+      "loc": {
+        "start": {
+          "line": 108,
+          "column": 2
+        },
+        "end": {
+          "line": 108,
+          "column": 39
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Required. Removes an action associated with a specific key.\n   * @access public\n   * @param {string} key - A string that uniquely identifies a action.\n   * @returns {void}\n   * @desc If the node is currently running an action that matches the key, SceneKit removes that action from the node, skipping any remaining animation it would perform but keeping any changes already made to the node.Use this method to cancel actions you scheduled using the runAction(_:forKey:) or runAction(_:forKey:completionHandler:) method.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1523617-removeaction\n   ",
+      "start": 4757,
+      "end": 5383,
+      "loc": {
+        "start": {
+          "line": 110,
+          "column": 2
+        },
+        "end": {
+          "line": 117,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Required. Ends and removes all actions from the node.\n   * @access public\n   * @returns {void}\n   * @desc When SceneKit removes an action from a node, it skips any remaining animation the action would perform. However, any changes the action has already made to the node’s state remain in effect.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1524181-removeallactions\n   ",
+      "start": 5419,
+      "end": 5826,
+      "loc": {
+        "start": {
+          "line": 121,
+          "column": 2
+        },
+        "end": {
+          "line": 127,
+          "column": 5
+        }
+      }
+    }
+  ],
+  "tokens": [
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "use strict",
+      "start": 0,
+      "end": 12,
+      "loc": {
+        "start": {
+          "line": 1,
+          "column": 0
+        },
+        "end": {
+          "line": 1,
+          "column": 12
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "import",
+        "keyword": "import",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "import",
+      "start": 14,
+      "end": 20,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "SCNAction",
+      "start": 21,
+      "end": 30,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 7
+        },
+        "end": {
+          "line": 3,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "from",
+      "start": 31,
+      "end": 35,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 17
+        },
+        "end": {
+          "line": 3,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "./SCNAction",
+      "start": 36,
+      "end": 49,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 22
+        },
+        "end": {
+          "line": 3,
+          "column": 35
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * Methods for running actions on nodes.\n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnactionable\n ",
+      "start": 52,
+      "end": 183,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 10,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "export",
+        "keyword": "export",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "export",
+      "start": 184,
+      "end": 190,
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 0
+        },
+        "end": {
+          "line": 11,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "default",
+        "keyword": "default",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "default",
+      "start": 191,
+      "end": 198,
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 7
+        },
+        "end": {
+          "line": 11,
+          "column": 14
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "class",
+        "keyword": "class",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "class",
+      "start": 199,
+      "end": 204,
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 15
+        },
+        "end": {
+          "line": 11,
+          "column": 20
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "SCNActionable",
+      "start": 205,
+      "end": 218,
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 21
+        },
+        "end": {
+          "line": 11,
+          "column": 34
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 219,
+      "end": 220,
+      "loc": {
+        "start": {
+          "line": 11,
+          "column": 35
+        },
+        "end": {
+          "line": 11,
+          "column": 36
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
+      "start": 224,
+      "end": 291,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 2
+        },
+        "end": {
+          "line": 17,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "init",
+      "start": 294,
+      "end": 298,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 2
+        },
+        "end": {
+          "line": 18,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 298,
+      "end": 299,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 6
+        },
+        "end": {
+          "line": 18,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 299,
+      "end": 300,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 7
+        },
+        "end": {
+          "line": 18,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 301,
+      "end": 302,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 9
+        },
+        "end": {
+          "line": 18,
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " Inspecting a Node’s Running Actions",
+      "start": 308,
+      "end": 346,
+      "loc": {
+        "start": {
+          "line": 20,
+          "column": 4
+        },
+        "end": {
+          "line": 20,
+          "column": 42
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "this",
+        "keyword": "this",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "this",
+      "start": 352,
+      "end": 356,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 4
+        },
+        "end": {
+          "line": 22,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ".",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 356,
+      "end": 357,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 8
+        },
+        "end": {
+          "line": 22,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "_hasActions",
+      "start": 357,
+      "end": 368,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 9
+        },
+        "end": {
+          "line": 22,
+          "column": 20
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 369,
+      "end": 370,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 21
+        },
+        "end": {
+          "line": 22,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "false",
+        "keyword": "false",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "false",
+      "start": 371,
+      "end": 376,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 23
+        },
+        "end": {
+          "line": 22,
+          "column": 28
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "this",
+        "keyword": "this",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "this",
+      "start": 381,
+      "end": 385,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 4
+        },
+        "end": {
+          "line": 23,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ".",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 385,
+      "end": 386,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 8
+        },
+        "end": {
+          "line": 23,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "_actionKeys",
+      "start": 386,
+      "end": 397,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 9
+        },
+        "end": {
+          "line": 23,
+          "column": 20
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 398,
+      "end": 399,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 21
+        },
+        "end": {
+          "line": 23,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "null",
+        "keyword": "null",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "null",
+      "start": 400,
+      "end": 404,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 23
+        },
+        "end": {
+          "line": 23,
+          "column": 27
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 407,
+      "end": 408,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 2
+        },
+        "end": {
+          "line": 24,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " Running Actions",
+      "start": 412,
+      "end": 430,
+      "loc": {
+        "start": {
+          "line": 26,
+          "column": 2
+        },
+        "end": {
+          "line": 26,
+          "column": 20
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Required. Adds an action to the list of actions executed by the node.\n   * @access public\n   * @param {SCNAction} action - The action to be performed.\n   * @returns {void}\n   * @desc SceneKit begins running a newly added action when it prepares to render the next frame.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1523164-runaction\n   ",
+      "start": 434,
+      "end": 808,
+      "loc": {
+        "start": {
+          "line": 28,
+          "column": 2
+        },
+        "end": {
+          "line": 35,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "runAction",
+      "start": 811,
+      "end": 820,
+      "loc": {
+        "start": {
+          "line": 36,
+          "column": 2
+        },
+        "end": {
+          "line": 36,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 820,
+      "end": 821,
+      "loc": {
+        "start": {
+          "line": 36,
+          "column": 11
+        },
+        "end": {
+          "line": 36,
+          "column": 12
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "action",
+      "start": 821,
+      "end": 827,
+      "loc": {
+        "start": {
+          "line": 36,
+          "column": 12
+        },
+        "end": {
+          "line": 36,
+          "column": 18
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 827,
+      "end": 828,
+      "loc": {
+        "start": {
+          "line": 36,
+          "column": 18
+        },
+        "end": {
+          "line": 36,
+          "column": 19
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 829,
+      "end": 830,
+      "loc": {
+        "start": {
+          "line": 36,
+          "column": 20
+        },
+        "end": {
+          "line": 36,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 833,
+      "end": 834,
+      "loc": {
+        "start": {
+          "line": 37,
+          "column": 2
+        },
+        "end": {
+          "line": 37,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Required. Adds an action to the list of actions executed by the node. SceneKit calls the specified block when the action completes.\n   * @access public\n   * @param {SCNAction} action - The action to be performed.\n   * @param {?function(): void} [block = null] - A completion block that SceneKit calls when the action completes.\n   * @returns {void}\n   * @desc The new action is processed the next time SceneKit prepares to render a frame.SceneKit calls your block after the action’s duration is complete. For example, in a game you could use this method to show a Game Over message after performing a fade-out action on a node that displays a player character.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1524219-runaction\n   ",
+      "start": 838,
+      "end": 1602,
+      "loc": {
+        "start": {
+          "line": 39,
+          "column": 2
+        },
+        "end": {
+          "line": 47,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "runActionCompletionHandler",
+      "start": 1605,
+      "end": 1631,
+      "loc": {
+        "start": {
+          "line": 48,
+          "column": 2
+        },
+        "end": {
+          "line": 48,
+          "column": 28
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1631,
+      "end": 1632,
+      "loc": {
+        "start": {
+          "line": 48,
+          "column": 28
+        },
+        "end": {
+          "line": 48,
+          "column": 29
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "action",
+      "start": 1632,
+      "end": 1638,
+      "loc": {
+        "start": {
+          "line": 48,
+          "column": 29
+        },
+        "end": {
+          "line": 48,
+          "column": 35
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1638,
+      "end": 1639,
+      "loc": {
+        "start": {
+          "line": 48,
+          "column": 35
+        },
+        "end": {
+          "line": 48,
+          "column": 36
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "block",
+      "start": 1640,
+      "end": 1645,
+      "loc": {
+        "start": {
+          "line": 48,
+          "column": 37
+        },
+        "end": {
+          "line": 48,
+          "column": 42
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 1646,
+      "end": 1647,
+      "loc": {
+        "start": {
+          "line": 48,
+          "column": 43
+        },
+        "end": {
+          "line": 48,
+          "column": 44
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "null",
+        "keyword": "null",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "null",
+      "start": 1648,
+      "end": 1652,
+      "loc": {
+        "start": {
+          "line": 48,
+          "column": 45
+        },
+        "end": {
+          "line": 48,
+          "column": 49
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1652,
+      "end": 1653,
+      "loc": {
+        "start": {
+          "line": 48,
+          "column": 49
+        },
+        "end": {
+          "line": 48,
+          "column": 50
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1654,
+      "end": 1655,
+      "loc": {
+        "start": {
+          "line": 48,
+          "column": 51
+        },
+        "end": {
+          "line": 48,
+          "column": 52
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1658,
+      "end": 1659,
+      "loc": {
+        "start": {
+          "line": 49,
+          "column": 2
+        },
+        "end": {
+          "line": 49,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Required. Adds an identifiable action to the list of actions executed by the node.\n   * @access public\n   * @param {SCNAction} action - The action to be performed.\n   * @param {?string} key - A unique key used to identify the action.\n   * @returns {void}\n   * @desc This method is identical to runAction(_:), but the action is stored and identified so that you can retrieve or cancel it later. If an action using the same key is already running, SceneKit removes it before adding the new action.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1524222-runaction\n   ",
+      "start": 1663,
+      "end": 2262,
+      "loc": {
+        "start": {
+          "line": 51,
+          "column": 2
+        },
+        "end": {
+          "line": 59,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "runActionForKey",
+      "start": 2265,
+      "end": 2280,
+      "loc": {
+        "start": {
+          "line": 60,
+          "column": 2
+        },
+        "end": {
+          "line": 60,
+          "column": 17
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 2280,
+      "end": 2281,
+      "loc": {
+        "start": {
+          "line": 60,
+          "column": 17
+        },
+        "end": {
+          "line": 60,
+          "column": 18
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "action",
+      "start": 2281,
+      "end": 2287,
+      "loc": {
+        "start": {
+          "line": 60,
+          "column": 18
+        },
+        "end": {
+          "line": 60,
+          "column": 24
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 2287,
+      "end": 2288,
+      "loc": {
+        "start": {
+          "line": 60,
+          "column": 24
+        },
+        "end": {
+          "line": 60,
+          "column": 25
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "key",
+      "start": 2289,
+      "end": 2292,
+      "loc": {
+        "start": {
+          "line": 60,
+          "column": 26
+        },
+        "end": {
+          "line": 60,
+          "column": 29
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 2292,
+      "end": 2293,
+      "loc": {
+        "start": {
+          "line": 60,
+          "column": 29
+        },
+        "end": {
+          "line": 60,
+          "column": 30
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 2294,
+      "end": 2295,
+      "loc": {
+        "start": {
+          "line": 60,
+          "column": 31
+        },
+        "end": {
+          "line": 60,
+          "column": 32
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 2298,
+      "end": 2299,
+      "loc": {
+        "start": {
+          "line": 61,
+          "column": 2
+        },
+        "end": {
+          "line": 61,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Required. Adds an identifiable action to the list of actions executed by the node. SceneKit calls the specified block when the action completes.\n   * @access public\n   * @param {SCNAction} action - The action to be performed.\n   * @param {?string} key - A unique key used to identify the action.\n   * @param {?function(): void} [block = null] - A completion block called when the action completes.\n   * @returns {void}\n   * @desc This method is identical to runAction(_:completionHandler:), but the action is stored and identified so that you can retrieve or cancel it later. If an action using the same key is already running, SceneKit removes it before adding the new action.SceneKit calls your block after the action’s duration is complete. For example, you can use this method with a wait action to execute some code after a timed delay. If during the delay period you need to prevent the code from running, use the removeAction(forKey:) method to cancel it.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1522791-runaction\n   ",
+      "start": 2303,
+      "end": 3369,
+      "loc": {
+        "start": {
+          "line": 63,
+          "column": 2
+        },
+        "end": {
+          "line": 72,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "runActionForKeyCompletionHandler",
+      "start": 3372,
+      "end": 3404,
+      "loc": {
+        "start": {
+          "line": 73,
+          "column": 2
+        },
+        "end": {
+          "line": 73,
+          "column": 34
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3404,
+      "end": 3405,
+      "loc": {
+        "start": {
+          "line": 73,
+          "column": 34
+        },
+        "end": {
+          "line": 73,
+          "column": 35
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "action",
+      "start": 3405,
+      "end": 3411,
+      "loc": {
+        "start": {
+          "line": 73,
+          "column": 35
+        },
+        "end": {
+          "line": 73,
+          "column": 41
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 3411,
+      "end": 3412,
+      "loc": {
+        "start": {
+          "line": 73,
+          "column": 41
+        },
+        "end": {
+          "line": 73,
+          "column": 42
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "key",
+      "start": 3413,
+      "end": 3416,
+      "loc": {
+        "start": {
+          "line": 73,
+          "column": 43
+        },
+        "end": {
+          "line": 73,
+          "column": 46
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 3416,
+      "end": 3417,
+      "loc": {
+        "start": {
+          "line": 73,
+          "column": 46
+        },
+        "end": {
+          "line": 73,
+          "column": 47
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "block",
+      "start": 3418,
+      "end": 3423,
+      "loc": {
+        "start": {
+          "line": 73,
+          "column": 48
+        },
+        "end": {
+          "line": 73,
+          "column": 53
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 3424,
+      "end": 3425,
+      "loc": {
+        "start": {
+          "line": 73,
+          "column": 54
+        },
+        "end": {
+          "line": 73,
+          "column": 55
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "null",
+        "keyword": "null",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "null",
+      "start": 3426,
+      "end": 3430,
+      "loc": {
+        "start": {
+          "line": 73,
+          "column": 56
+        },
+        "end": {
+          "line": 73,
+          "column": 60
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3430,
+      "end": 3431,
+      "loc": {
+        "start": {
+          "line": 73,
+          "column": 60
+        },
+        "end": {
+          "line": 73,
+          "column": 61
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3432,
+      "end": 3433,
+      "loc": {
+        "start": {
+          "line": 73,
+          "column": 62
+        },
+        "end": {
+          "line": 73,
+          "column": 63
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3436,
+      "end": 3437,
+      "loc": {
+        "start": {
+          "line": 74,
+          "column": 2
+        },
+        "end": {
+          "line": 74,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " Inspecting a Node’s Running Actions",
+      "start": 3441,
+      "end": 3479,
+      "loc": {
+        "start": {
+          "line": 76,
+          "column": 2
+        },
+        "end": {
+          "line": 76,
+          "column": 40
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Required. Returns an action associated with a specific key.\n   * @access public\n   * @param {string} key - A string that uniquely identifies a action.\n   * @returns {?SCNAction} - \n   * @desc Use this method to retrieve actions you scheduled using the runAction(_:forKey:) or runAction(_:forKey:completionHandler:) method.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1523287-action\n   ",
+      "start": 3483,
+      "end": 3906,
+      "loc": {
+        "start": {
+          "line": 78,
+          "column": 2
+        },
+        "end": {
+          "line": 85,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "actionForKey",
+      "start": 3909,
+      "end": 3921,
+      "loc": {
+        "start": {
+          "line": 86,
+          "column": 2
+        },
+        "end": {
+          "line": 86,
+          "column": 14
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3921,
+      "end": 3922,
+      "loc": {
+        "start": {
+          "line": 86,
+          "column": 14
+        },
+        "end": {
+          "line": 86,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "key",
+      "start": 3922,
+      "end": 3925,
+      "loc": {
+        "start": {
+          "line": 86,
+          "column": 15
+        },
+        "end": {
+          "line": 86,
+          "column": 18
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3925,
+      "end": 3926,
+      "loc": {
+        "start": {
+          "line": 86,
+          "column": 18
+        },
+        "end": {
+          "line": 86,
+          "column": 19
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3927,
+      "end": 3928,
+      "loc": {
+        "start": {
+          "line": 86,
+          "column": 20
+        },
+        "end": {
+          "line": 86,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "return",
+        "keyword": "return",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "return",
+      "start": 3933,
+      "end": 3939,
+      "loc": {
+        "start": {
+          "line": 87,
+          "column": 4
+        },
+        "end": {
+          "line": 87,
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "null",
+        "keyword": "null",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "null",
+      "start": 3940,
+      "end": 3944,
+      "loc": {
+        "start": {
+          "line": 87,
+          "column": 11
+        },
+        "end": {
+          "line": 87,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3947,
+      "end": 3948,
+      "loc": {
+        "start": {
+          "line": 88,
+          "column": 2
+        },
+        "end": {
+          "line": 88,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Required. A Boolean value that indicates whether the node is currently executing any actions.\n   * @type {boolean}\n   * @desc This value is true if the node has any executing actions; otherwise the value is false.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1523794-hasactions\n   ",
+      "start": 3951,
+      "end": 4269,
+      "loc": {
+        "start": {
+          "line": 89,
+          "column": 2
+        },
+        "end": {
+          "line": 94,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "get",
+      "start": 4272,
+      "end": 4275,
+      "loc": {
+        "start": {
+          "line": 95,
+          "column": 2
+        },
+        "end": {
+          "line": 95,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "hasActions",
+      "start": 4276,
+      "end": 4286,
+      "loc": {
+        "start": {
+          "line": 95,
+          "column": 6
+        },
+        "end": {
+          "line": 95,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 4286,
+      "end": 4287,
+      "loc": {
+        "start": {
+          "line": 95,
+          "column": 16
+        },
+        "end": {
+          "line": 95,
+          "column": 17
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 4287,
+      "end": 4288,
+      "loc": {
+        "start": {
+          "line": 95,
+          "column": 17
+        },
+        "end": {
+          "line": 95,
+          "column": 18
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 4289,
+      "end": 4290,
+      "loc": {
+        "start": {
+          "line": 95,
+          "column": 19
+        },
+        "end": {
+          "line": 95,
+          "column": 20
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "return",
+        "keyword": "return",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "return",
+      "start": 4295,
+      "end": 4301,
+      "loc": {
+        "start": {
+          "line": 96,
+          "column": 4
+        },
+        "end": {
+          "line": 96,
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "this",
+        "keyword": "this",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "this",
+      "start": 4302,
+      "end": 4306,
+      "loc": {
+        "start": {
+          "line": 96,
+          "column": 11
+        },
+        "end": {
+          "line": 96,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ".",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 4306,
+      "end": 4307,
+      "loc": {
+        "start": {
+          "line": 96,
+          "column": 15
+        },
+        "end": {
+          "line": 96,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "_hasActions",
+      "start": 4307,
+      "end": 4318,
+      "loc": {
+        "start": {
+          "line": 96,
+          "column": 16
+        },
+        "end": {
+          "line": 96,
+          "column": 27
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 4321,
+      "end": 4322,
+      "loc": {
+        "start": {
+          "line": 97,
+          "column": 2
+        },
+        "end": {
+          "line": 97,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Required. The list of keys for which the node has attached actions.\n   * @type {string[]}\n   * @desc Use this property to list actions you scheduled using the runAction(_:forKey:) or runAction(_:forKey:completionHandler:) method.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1523036-actionkeys\n   ",
+      "start": 4325,
+      "end": 4659,
+      "loc": {
+        "start": {
+          "line": 98,
+          "column": 2
+        },
+        "end": {
+          "line": 103,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "get",
+      "start": 4662,
+      "end": 4665,
+      "loc": {
+        "start": {
+          "line": 104,
+          "column": 2
+        },
+        "end": {
+          "line": 104,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "actionKeys",
+      "start": 4666,
+      "end": 4676,
+      "loc": {
+        "start": {
+          "line": 104,
+          "column": 6
+        },
+        "end": {
+          "line": 104,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 4676,
+      "end": 4677,
+      "loc": {
+        "start": {
+          "line": 104,
+          "column": 16
+        },
+        "end": {
+          "line": 104,
+          "column": 17
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 4677,
+      "end": 4678,
+      "loc": {
+        "start": {
+          "line": 104,
+          "column": 17
+        },
+        "end": {
+          "line": 104,
+          "column": 18
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 4679,
+      "end": 4680,
+      "loc": {
+        "start": {
+          "line": 104,
+          "column": 19
+        },
+        "end": {
+          "line": 104,
+          "column": 20
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "return",
+        "keyword": "return",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "return",
+      "start": 4685,
+      "end": 4691,
+      "loc": {
+        "start": {
+          "line": 105,
+          "column": 4
+        },
+        "end": {
+          "line": 105,
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "this",
+        "keyword": "this",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "this",
+      "start": 4692,
+      "end": 4696,
+      "loc": {
+        "start": {
+          "line": 105,
+          "column": 11
+        },
+        "end": {
+          "line": 105,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ".",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 4696,
+      "end": 4697,
+      "loc": {
+        "start": {
+          "line": 105,
+          "column": 15
+        },
+        "end": {
+          "line": 105,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "_actionKeys",
+      "start": 4697,
+      "end": 4708,
+      "loc": {
+        "start": {
+          "line": 105,
+          "column": 16
+        },
+        "end": {
+          "line": 105,
+          "column": 27
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 4711,
+      "end": 4712,
+      "loc": {
+        "start": {
+          "line": 106,
+          "column": 2
+        },
+        "end": {
+          "line": 106,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " Canceling a Node’s Running Actions",
+      "start": 4716,
+      "end": 4753,
+      "loc": {
+        "start": {
+          "line": 108,
+          "column": 2
+        },
+        "end": {
+          "line": 108,
+          "column": 39
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Required. Removes an action associated with a specific key.\n   * @access public\n   * @param {string} key - A string that uniquely identifies a action.\n   * @returns {void}\n   * @desc If the node is currently running an action that matches the key, SceneKit removes that action from the node, skipping any remaining animation it would perform but keeping any changes already made to the node.Use this method to cancel actions you scheduled using the runAction(_:forKey:) or runAction(_:forKey:completionHandler:) method.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1523617-removeaction\n   ",
+      "start": 4757,
+      "end": 5383,
+      "loc": {
+        "start": {
+          "line": 110,
+          "column": 2
+        },
+        "end": {
+          "line": 117,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "removeActionForKey",
+      "start": 5386,
+      "end": 5404,
+      "loc": {
+        "start": {
+          "line": 118,
+          "column": 2
+        },
+        "end": {
+          "line": 118,
+          "column": 20
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 5404,
+      "end": 5405,
+      "loc": {
+        "start": {
+          "line": 118,
+          "column": 20
+        },
+        "end": {
+          "line": 118,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "key",
+      "start": 5405,
+      "end": 5408,
+      "loc": {
+        "start": {
+          "line": 118,
+          "column": 21
+        },
+        "end": {
+          "line": 118,
+          "column": 24
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 5408,
+      "end": 5409,
+      "loc": {
+        "start": {
+          "line": 118,
+          "column": 24
+        },
+        "end": {
+          "line": 118,
+          "column": 25
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 5410,
+      "end": 5411,
+      "loc": {
+        "start": {
+          "line": 118,
+          "column": 26
+        },
+        "end": {
+          "line": 118,
+          "column": 27
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 5414,
+      "end": 5415,
+      "loc": {
+        "start": {
+          "line": 119,
+          "column": 2
+        },
+        "end": {
+          "line": 119,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Required. Ends and removes all actions from the node.\n   * @access public\n   * @returns {void}\n   * @desc When SceneKit removes an action from a node, it skips any remaining animation the action would perform. However, any changes the action has already made to the node’s state remain in effect.\n   * @see https://developer.apple.com/reference/scenekit/scnactionable/1524181-removeallactions\n   ",
+      "start": 5419,
+      "end": 5826,
+      "loc": {
+        "start": {
+          "line": 121,
+          "column": 2
+        },
+        "end": {
+          "line": 127,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "removeAllActions",
+      "start": 5829,
+      "end": 5845,
+      "loc": {
+        "start": {
+          "line": 128,
+          "column": 2
+        },
+        "end": {
+          "line": 128,
+          "column": 18
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 5845,
+      "end": 5846,
+      "loc": {
+        "start": {
+          "line": 128,
+          "column": 18
+        },
+        "end": {
+          "line": 128,
+          "column": 19
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 5846,
+      "end": 5847,
+      "loc": {
+        "start": {
+          "line": 128,
+          "column": 19
+        },
+        "end": {
+          "line": 128,
+          "column": 20
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 5848,
+      "end": 5849,
+      "loc": {
+        "start": {
+          "line": 128,
+          "column": 21
+        },
+        "end": {
+          "line": 128,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 5852,
+      "end": 5853,
+      "loc": {
+        "start": {
+          "line": 129,
+          "column": 2
+        },
+        "end": {
+          "line": 129,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 5854,
+      "end": 5855,
+      "loc": {
+        "start": {
+          "line": 130,
+          "column": 0
+        },
+        "end": {
+          "line": 130,
+          "column": 1
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "eof",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 5856,
+      "end": 5856,
+      "loc": {
+        "start": {
+          "line": 131,
+          "column": 0
+        },
+        "end": {
+          "line": 131,
+          "column": 0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">js/SceneKit/SCNPhysicsBody.js | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="https://github.com/magicien/JSceneKit" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">CoreGraphics</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGMutablePath.js~CGMutablePath.html">CGMutablePath</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html">CGPath</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGPoint.js~CGPoint.html">CGPoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGRect.js~CGRect.html">CGRect</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGSize.js~CGSize.html">CGSize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGVector.js~CGVector.html">CGVector</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Foundation</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSValue.js~NSValue.html">NSValue</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">ObjectiveC</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/ObjectiveC/NSObject.js~NSObject.html">NSObject</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">QuartzCore</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAnimation.js~CAAnimation.html">CAAnimation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAMediaTimingFunction.js~CAMediaTimingFunction.html">CAMediaTimingFunction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CATransform3D.js~CATransform3D.html">CATransform3D</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAction.js~CAAction.html">CAAction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAnimationDelegate.js~CAAnimationDelegate.html">CAAnimationDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAMediaTiming.js~CAMediaTiming.html">CAMediaTiming</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">SceneKit</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAction.js~SCNAction.html">SCNAction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAnimationEvent.js~SCNAnimationEvent.html">SCNAnimationEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAudioPlayer.js~SCNAudioPlayer.html">SCNAudioPlayer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAudioSource.js~SCNAudioSource.html">SCNAudioSource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBillboardAxis.js~SCNBillboardAxis.html">SCNBillboardAxis</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBillboardConstraint.js~SCNBillboardConstraint.html">SCNBillboardConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBox.js~SCNBox.html">SCNBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCamera.js~SCNCamera.html">SCNCamera</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCapsule.js~SCNCapsule.html">SCNCapsule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCone.js~SCNCone.html">SCNCone</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNConstraint.js~SCNConstraint.html">SCNConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCylinder.js~SCNCylinder.html">SCNCylinder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNDebugOptions.js~SCNDebugOptions.html">SCNDebugOptions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNFloor.js~SCNFloor.html">SCNFloor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNGeometry.js~SCNGeometry.html">SCNGeometry</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNGeometryElement.js~SCNGeometryElement.html">SCNGeometryElement</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNGeometrySource.js~SCNGeometrySource.html">SCNGeometrySource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNHitTestResult.js~SCNHitTestResult.html">SCNHitTestResult</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNIKConstraint.js~SCNIKConstraint.html">SCNIKConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLayer.js~SCNLayer.html">SCNLayer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLevelOfDetail.js~SCNLevelOfDetail.html">SCNLevelOfDetail</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLight.js~SCNLight.html">SCNLight</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLookAtConstraint.js~SCNLookAtConstraint.html">SCNLookAtConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMaterial.js~SCNMaterial.html">SCNMaterial</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html">SCNMaterialProperty</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMatrix4.js~SCNMatrix4.html">SCNMatrix4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMorpher.js~SCNMorpher.html">SCNMorpher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html">SCNNode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNParticlePropertyController.js~SCNParticlePropertyController.html">SCNParticlePropertyController</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNParticleSystem.js~SCNParticleSystem.html">SCNParticleSystem</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsBallSocketJoint.js~SCNPhysicsBallSocketJoint.html">SCNPhysicsBallSocketJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsBehavior.js~SCNPhysicsBehavior.html">SCNPhysicsBehavior</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsBody.js~SCNPhysicsBody.html">SCNPhysicsBody</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsCollisionCategory.js~SCNPhysicsCollisionCategory.html">SCNPhysicsCollisionCategory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsContact.js~SCNPhysicsContact.html">SCNPhysicsContact</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsField.js~SCNPhysicsField.html">SCNPhysicsField</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsHingeJoint.js~SCNPhysicsHingeJoint.html">SCNPhysicsHingeJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsShape.js~SCNPhysicsShape.html">SCNPhysicsShape</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsSliderJoint.js~SCNPhysicsSliderJoint.html">SCNPhysicsSliderJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsVehicle.js~SCNPhysicsVehicle.html">SCNPhysicsVehicle</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsVehicleWheel.js~SCNPhysicsVehicleWheel.html">SCNPhysicsVehicleWheel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsWorld.js~SCNPhysicsWorld.html">SCNPhysicsWorld</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPlane.js~SCNPlane.html">SCNPlane</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNProgram.js~SCNProgram.html">SCNProgram</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPyramid.js~SCNPyramid.html">SCNPyramid</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNReferenceNode.js~SCNReferenceNode.html">SCNReferenceNode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNRenderer.js~SCNRenderer.html">SCNRenderer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNScene.js~SCNScene.html">SCNScene</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneSource.js~SCNSceneSource.html">SCNSceneSource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNShape.js~SCNShape.html">SCNShape</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSkinner.js~SCNSkinner.html">SCNSkinner</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSphere.js~SCNSphere.html">SCNSphere</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTechnique.js~SCNTechnique.html">SCNTechnique</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNText.js~SCNText.html">SCNText</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTorus.js~SCNTorus.html">SCNTorus</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTransaction.js~SCNTransaction.html">SCNTransaction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTransformConstraint.js~SCNTransformConstraint.html">SCNTransformConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTube.js~SCNTube.html">SCNTube</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNVector3.js~SCNVector3.html">SCNVector3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNVector4.js~SCNVector4.html">SCNVector4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNView.js~SCNView.html">SCNView</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNActionable.js~SCNActionable.html">SCNActionable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAnimatable.js~SCNAnimatable.html">SCNAnimatable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBoundingVolume.js~SCNBoundingVolume.html">SCNBoundingVolume</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBufferStream.js~SCNBufferStream.html">SCNBufferStream</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNNodeRendererDelegate.js~SCNNodeRendererDelegate.html">SCNNodeRendererDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsContactDelegate.js~SCNPhysicsContactDelegate.html">SCNPhysicsContactDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNProgramDelegate.js~SCNProgramDelegate.html">SCNProgramDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneExportDelegate.js~SCNSceneExportDelegate.html">SCNSceneExportDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneRenderer.js~SCNSceneRenderer.html">SCNSceneRenderer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneRendererDelegate.js~SCNSceneRendererDelegate.html">SCNSceneRendererDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNShadable.js~SCNShadable.html">SCNShadable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTechniqueSupport.js~SCNTechniqueSupport.html">SCNTechniqueSupport</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">js/SceneKit/SCNPhysicsBody.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">&apos;use strict&apos;
+
+import NSObject from &apos;../ObjectiveC/NSObject&apos;
+import SCNPhysicsBodyType from &apos;./SCNPhysicsBodyType&apos;
+import SCNPhysicsShape from &apos;./SCNPhysicsShape&apos;
+import SCNVector3 from &apos;./SCNVector3&apos;
+import SCNVector4 from &apos;./SCNVector4&apos;
+
+
+/**
+ * A set of physics simulation attributes attached to a scene graph node. 
+ * @access public
+ * @extends {NSObject}
+ * @see https://developer.apple.com/reference/scenekit/scnphysicsbody
+ */
+export default class SCNPhysicsBody extends NSObject {
+
+  /**
+   * constructor
+   * @access public
+   * @returns {void}
+   */
+  init() {
+
+    // Defining How Forces Affect a Physics Body
+
+    /**
+     * An object that defines the solid volume of the physics body for use in collision detection.
+     * @type {?SCNPhysicsShape}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514789-physicsshape
+     */
+    this.physicsShape = null
+
+    /**
+     * A constant that determines how the physics body responds to forces and collisions.
+     * @type {SCNPhysicsBodyType}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514787-type
+     */
+    this.type = null
+
+    /**
+     * A multiplier affecting how SceneKit applies translations computed by the physics simulation to the node containing the physics body.
+     * @type {SCNVector3}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514753-velocityfactor
+     */
+    this.velocityFactor = null
+
+    /**
+     * A multiplier affecting how SceneKit applies rotations computed by the physics simulation to the node containing the physics body.
+     * @type {SCNVector3}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514748-angularvelocityfactor
+     */
+    this.angularVelocityFactor = null
+
+    /**
+     * A Boolean value that determines whether the constant gravity of a scene accelerates the body.
+     * @type {boolean}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514738-isaffectedbygravity
+     */
+    this.isAffectedByGravity = false
+
+
+    // Defining a Body&#x2019;s Physical Properties
+
+    /**
+     * The mass of the body, in kilograms.
+     * @type {number}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514755-mass
+     */
+    this.mass = 0
+
+    /**
+     * The electric charge of the body, in coulombs.
+     * @type {number}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514786-charge
+     */
+    this.charge = 0
+
+    /**
+     * The body&#x2019;s resistance to sliding motion.
+     * @type {number}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514794-friction
+     */
+    this.friction = 0
+
+    /**
+     * The body&#x2019;s resistance to rolling motion.
+     * @type {number}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514737-rollingfriction
+     */
+    this.rollingFriction = 0
+
+    /**
+     * A factor that determines how much kinetic energy the body loses or gains in collisions.
+     * @type {number}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514740-restitution
+     */
+    this.restitution = 0
+
+    /**
+     * A factor that reduces the body&#x2019;s linear velocity.
+     * @type {number}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514763-damping
+     */
+    this.damping = 0
+
+    /**
+     * A factor that reduces the body&#x2019;s angular velocity.
+     * @type {number}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514792-angulardamping
+     */
+    this.angularDamping = 0
+
+    /**
+     * The body&#x2019;s moment of inertia, expressed in the local coordinate system of the node that contains the body.
+     * @type {SCNVector3}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514777-momentofinertia
+     */
+    this.momentOfInertia = null
+
+    /**
+     * A Boolean value that determines whether SceneKit automatically calculates the body&#x2019;s moment of inertia or allows setting a custom value.
+     * @type {boolean}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514761-usesdefaultmomentofinertia
+     */
+    this.usesDefaultMomentOfInertia = false
+
+
+    // Working with Contacts and Collisions
+
+    /**
+     * A mask that defines which categories this physics body belongs to.
+     * @type {number}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514768-categorybitmask
+     */
+    this.categoryBitMask = 0
+
+    /**
+     * A mask that defines which categories of bodies cause intersection notifications with this physics body.
+     * @type {number}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514746-contacttestbitmask
+     */
+    this.contactTestBitMask = 0
+
+    /**
+     * A mask that defines which categories of physics bodies can collide with this physics body.
+     * @type {number}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514772-collisionbitmask
+     */
+    this.collisionBitMask = 0
+
+
+    // Managing a Body&#x2019;s Motion
+
+    /**
+     * A vector describing both the current speed (in meters per second) and direction of motion of the physics body.
+     * @type {SCNVector3}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514757-velocity
+     */
+    this.velocity = null
+
+    /**
+     * A vector describing both the current rotation axis and rotational speed (in radians per second) of the physics body.
+     * @type {SCNVector4}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514770-angularvelocity
+     */
+    this.angularVelocity = null
+
+    /**
+     * A Boolean value that specifies whether SceneKit can automatically mark the physics body at rest.
+     * @type {boolean}
+     * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514742-allowsresting
+     */
+    this.allowsResting = false
+
+    this._isResting = false
+  }
+
+  // Creating Physics Bodies
+
+  /**
+   * Creates a physics body with the specified type and shape.
+   * @access public
+   * @param {SCNPhysicsBodyType} type - A constant that determines how a body responds to forces and collisions. See SCNPhysicsBodyType.
+   * @param {?SCNPhysicsShape} shape - A physics shape defining the volume of the body for collision detection purposes.
+   * @returns {void}
+   * @desc For the body to participate in collision detection or respond to forces, you must attach it to the physicsBody property of an SCNNode object in a scene.If you pass nil for the shape parameter, SceneKit automatically creates a physics shape for the body when you attach it to a node, based on that node&#x2019;s geometry property. To create a physics shape that&#x2019;s based on the geometries of a node and its hierarchy of children, or to control the level of detail in a physics shape, create the physics shape manually using an SCNPhysicsShape class method.NoteFor nodes containing custom geometry, the physics shape SceneKit automatically creates is a rough approximation of the geometry. This approximation, or convex hull, provides a compromise between accuracy and performance in collision detection. For the best collision detection performance, create an SCNPhysicsShape instance based on a basic geometry class (SCNBox, SCNSphere, SCNPyramid, SCNCone, SCNCylinder, or SCNCapsule).
+   * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514797-init
+   */
+  init(type, shape) {
+  }
+
+  /**
+   * Creates a physics body that is unaffected by forces or collisions and that cannot move.
+   * @access public
+   * @returns {SCNPhysicsBody} - 
+   * @desc Use static bodies to construct fixtures in your scene that other bodies need to collide with but that do not themselves move, such as floors, walls, and terrain.For the body to participate in collision detection or respond to forces, you must attach it to the physicsBody property of an SCNNode object in a scene.SceneKit automatically creates a physics shape for the body when you attach it to a node, based on that node&#x2019;s geometry property. To create a physics shape that&#x2019;s based on the geometries of a node and its hierarchy of children, or to control the level of detail in a physics shape, create the physics shape manually using an SCNPhysicsShape class method.NoteFor nodes containing custom geometry, the physics shape SceneKit automatically creates is a rough approximation of the geometry. This approximation, or convex hull, provides a compromise between accuracy and performance in collision detection. For the best collision detection performance, create an SCNPhysicsShape instance based on a basic geometry class (SCNBox, SCNSphere, SCNPyramid, SCNCone, SCNCylinder, or SCNCapsule).
+   * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514791-static
+   */
+  static static() {
+    return null
+  }
+
+  /**
+   * Creates a physics body that can be affected by forces and collisions.
+   * @access public
+   * @returns {SCNPhysicsBody} - 
+   * @desc Use dynamic bodies for the elements of your scene that are moved by the physics simulation.For the body to participate in collision detection or respond to forces, you must attach it to the physicsBody property of an SCNNode object in a scene.SceneKit automatically creates a physics shape for the body when you attach it to a node, based on that node&#x2019;s geometry property. To create a physics shape that&#x2019;s based on the geometries of a node and its hierarchy of children, or to control the level of detail in a physics shape, create the physics shape manually using an SCNPhysicsShape class method.NoteFor nodes containing custom geometry, the physics shape SceneKit automatically creates is a rough approximation of the geometry. This approximation, or convex hull, provides a compromise between accuracy and performance in collision detection. For the best collision detection performance, create an SCNPhysicsShape instance based on a basic geometry class (SCNBox, SCNSphere, SCNPyramid, SCNCone, SCNCylinder, or SCNCapsule).
+   * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514766-dynamic
+   */
+  static dynamic() {
+    return null
+  }
+
+  /**
+   * Creates a physics body that is unaffected by forces or collisions but that can cause collisions affecting other bodies when moved.
+   * @access public
+   * @returns {SCNPhysicsBody} - 
+   * @desc Use kinematic bodies for scene elements that you want to control directly but whose movement manipulates other elements. For example, to allow the user to push objects around with a finger, you might create a kinematic body and attach it to an invisible node that you move follow touch events. (In macOS, use the same technique to allow the user to move objects with the mouse pointer.)For the body to participate in collision detection or respond to forces, you must attach it to the physicsBody property of an SCNNode object in a scene.SceneKit automatically creates a physics shape for the body when you attach it to a node, based on that node&#x2019;s geometry property. To create a physics shape that&#x2019;s based on the geometries of a node and its hierarchy of children, or to control the level of detail in a physics shape, create the physics shape manually using an SCNPhysicsShape class method.NoteFor nodes containing custom geometry, the physics shape SceneKit automatically creates is a rough approximation of the geometry. This approximation, or convex hull, provides a compromise between accuracy and performance in collision detection. For the best collision detection performance, create an SCNPhysicsShape instance based on a basic geometry class (SCNBox, SCNSphere, SCNPyramid, SCNCone, SCNCylinder, or SCNCapsule).
+   * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514776-kinematic
+   */
+  static kinematic() {
+    return null
+  }
+
+  // Applying Forces, Impulses, and Torques
+
+  /**
+   * Applies a force or impulse to the body at its center of mass.
+   * @access public
+   * @param {SCNVector3} direction - The direction and magnitude of the force (in newtons) or of the impulse (in newton-seconds).
+   * @param {boolean} impulse - true to apply an instantaneous change in momentum; false to apply a force that affects the body at the end of the simulation step.
+   * @returns {void}
+   * @desc Applying a force or impulse to a body imparts a linear acceleration proportional to its mass.The impulse parameter determines how this method contributes to the physics simulation:If you specify true, SceneKit treats the direction parameter as an impulse, measured in newton-seconds, and accelerates the physics body immediately. Use this option to simulate instantaneous effects such as launching a projectile.If you specify false, SceneKit treats the direction parameter as a force, measured in newtons. At the end of each simulation step (by default, a step occurs once for each frame in the rendering loop), SceneKit sums all forces applied to the physics body during that step and accelerates the body according to the net effect of those forces. Use this option when you want to simulate continuous forces on the body by calling applyForce(_:asImpulse:) on each simulation step.NoteThe impulse parameter effectively changes the unit of magnitude. A value that results in a certain acceleration when applied continuously on each frame of the simulation results in much less acceleration if applied only during a single frame.As with all physical quantities in SceneKit, you need not use realistic force measurements in your app&#x2014;the effects of the physics simulation depend on the relative differences between forces, not on their absolute values. You may use whatever values produce the behavior or gameplay you&#x2019;re looking for as long as you use them consistently.
+   * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514801-applyforce
+   */
+  applyForceAsImpulse(direction, impulse) {
+  }
+
+  /**
+   * Applies a force or impulse to the body at a specific point.
+   * @access public
+   * @param {SCNVector3} direction - The direction and magnitude of the force (in newtons) or of the impulse (in newton-seconds).
+   * @param {SCNVector3} position - The point on the body where the force or impulse should be applied, in the local coordinate system of the SCNNode object containing the physics body.
+   * @param {boolean} impulse - true to apply an instantaneous change in momentum; false to apply a force that affects the body at the end of the simulation step.
+   * @returns {void}
+   * @desc Applying a force or impulse to a body at a position other than its center of mass may impart both linear and angular acceleration, depending on how the body is situated in the physics world and the other forces acting upon it.The impulse parameter determines how this method contributes to the physics simulation:If you specify true, SceneKit treats the direction parameter as an impulse, measured in newton-seconds, and accelerates the physics body immediately. Use this option to simulate instantaneous effects such as launching a projectile.If you specify false, SceneKit treats the direction parameter as a force, measured in newtons. At the end of each simulation step (by default, a step occurs once for each frame in the rendering loop), SceneKit sums all forces applied to the physics body during that step and accelerates the body according to the net effect of those forces. Use this option when you want to simulate continuous forces on the body by calling applyForce(_:at:asImpulse:) on each simulation step.NoteThe impulse parameter effectively changes the unit of magnitude. A value that results in a certain acceleration when applied continuously on each frame of the simulation results in much less acceleration if applied only during a single frame.As with all physical quantities in SceneKit, you need not use realistic force measurements in your app&#x2014;the effects of the physics simulation depend on the relative differences between forces, not on their absolute values. You may use whatever values produce the behavior or gameplay you&#x2019;re looking for as long as you use them consistently.
+   * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514750-applyforce
+   */
+  applyForceAtAsImpulse(direction, position, impulse) {
+  }
+
+  /**
+   * Applies a net torque or a change in angular momentum to the body.
+   * @access public
+   * @param {SCNVector4} torque - The direction and magnitude of the torque (in newton-meters) or of the change of angular momentum (in newton-meter-seconds), relative to the world coordinate space of the scene. 
+   * @param {boolean} impulse - true to apply an instantaneous change in angular momentum; false to apply a torque that affects the body at the end of the simulation step.
+   * @returns {void}
+   * @desc Applying a torque to a body changes its angular velocity by an amount related to its mass and shape, rotating it without affecting its linear acceleration. Each component of the torque vector relates to rotation about the corresponding axis in the local coordinate system of the SCNNode object containing the physics body. For example, applying a torque of {0.0, 0.0, 1.0} causes a node to spin counterclockwise around the world-space z-axis.The impulse parameter determines how this method contributes to the physics simulation:If you specify true, SceneKit treats the direction parameter as an instantaneous change in angular momentum, measured in newton-meter-seconds.If you specify false, SceneKit treats the direction parameter as a torque, measured in newton-meters. At the end of each simulation step (by default, a step occurs once for each frame in the rendering loop), SceneKit sums all forces and torques applied to the physics body during that step and accelerates the body according to the net effect of those forces and torques. Use this option when you want to simulate gradual acceleration by calling applyTorque(_:asImpulse:) on each simulation step.NoteThe impulse parameter effectively changes the unit of magnitude. A value that results in a certain acceleration when applied continuously on each frame of the simulation results in much less acceleration if applied only during a single frame.As with all physical quantities in SceneKit, you need not use realistic force and torque measurements in your app&#x2014;the effects of the physics simulation depend on the relative differences between forces, not on their absolute values. You may use whatever values produce the behavior or gameplay you&#x2019;re looking for as long as you use them consistently.
+   * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514752-applytorque
+   */
+  applyTorqueAsImpulse(torque, impulse) {
+  }
+
+  /**
+   * Cancels all continuous forces and torques acting on the physics body during the current simulation step.
+   * @access public
+   * @returns {void}
+   * @desc When you pass false for the impulse parameter in the applyForce(_:asImpulse:), applyForce(_:at:asImpulse:), or applyTorque(_:asImpulse:) method, SceneKit waits until the end of the current simulation step before applying its effect. At that time, SceneKit sums all forces and torques applied during that simulation step and changes the velocity or angular velocity of the body according to the net effect of those forces and torques.Call clearAllForces() to cancel any forces and torques previously applied during the current simulation step.
+   * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514735-clearallforces
+   */
+  clearAllForces() {
+  }
+
+  // Managing a Body&#x2019;s Motion
+  /**
+   * A Boolean value that indicates whether the physics body is at rest.
+   * @type {boolean}
+   * @desc This property&#x2019;s default value is false, but SceneKit&#x2019;s physics simulation may automatically set it to true if the body is not moving and not affected by any forces. A resting body does not participate in the simulation until another body collides with it or you change its position or velocity or apply a force to it.
+   * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514795-isresting
+   */
+  get isResting() {
+    return this._isResting
+  }
+
+  // Synchronizing a Physics Body with its Node
+
+  /**
+   * Updates the position and orientation of a body in the physics simulation to match that of the node to which the body is attached.
+   * @access public
+   * @returns {void}
+   * @desc If you change the position or orientation of a node with an attached static or dynamic physics body, call this method afterward to ensure that the physics simulation incorporates the change. You need not call this method for kinematic bodies.Note that dynamic and physics bodies are designed to be moved only by the physics simulation or not at all. You may use this method to move them regardless of this restriction, but at a cost to performance.
+   * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514782-resettransform
+   */
+  resetTransform() {
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
