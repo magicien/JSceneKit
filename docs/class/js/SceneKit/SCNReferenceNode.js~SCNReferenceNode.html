@@ -41,6 +41,7 @@
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Foundation</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSValue.js~NSValue.html">NSValue</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">ObjectiveC</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/ObjectiveC/NSObject.js~NSObject.html">NSObject</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">QuartzCore</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAnimation.js~CAAnimation.html">CAAnimation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAnimationGroup.js~CAAnimationGroup.html">CAAnimationGroup</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAMediaTimingFunction.js~CAMediaTimingFunction.html">CAMediaTimingFunction</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CATransform3D.js~CATransform3D.html">CATransform3D</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAction.js~CAAction.html">CAAction</a></span></span></li>
@@ -8585,6 +8586,118 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
   <tr data-ice="target">
     <td>
       <span class="access" data-ice="access">public</span>
+      <span data-ice="static">static</span>
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#static-method-node">node</a></span></span><span data-ice="signature">(): <span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html">SCNNode</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Constructor for JSExport compatibility</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      <span data-ice="static">static</span>
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#static-method-nodeWithGeometry">nodeWithGeometry</a></span></span><span data-ice="signature">(geometry: <span><a href="class/js/SceneKit/SCNGeometry.js~SCNGeometry.html">SCNGeometry</a></span>): <span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html">SCNNode</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Constructor for JSExport compatibility</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      <span class="kind" data-ice="kind">get</span>
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-actionKeys">actionKeys</a></span></span><span data-ice="signature">: <span><span><a href="class/js/SceneKit/SCNText.js~SCNText.html#instance-member-string">string</a></span><span>[]</span></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Use this property to list actions you scheduled using the runAction(<em>:forKey:) or runAction(</em>:forKey:completionHandler:) method.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      <span class="kind" data-ice="kind">get</span>
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-animationKeys">animationKeys</a></span></span><span data-ice="signature">: <span><span><a href="class/js/SceneKit/SCNText.js~SCNText.html#instance-member-string">string</a></span><span>[]</span></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This array contains all keys for which animations are attached to the object, or is empty if there are no attached animations.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
       
       <span class="kind" data-ice="kind">get</span>
       
@@ -8623,13 +8736,70 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
         <p>
           
           
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-boundingSphere">boundingSphere</a></span></span><span data-ice="signature">: {center: <span><a href="class/js/SceneKit/SCNVector3.js~SCNVector3.html">SCNVector3</a></span>, radius: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>}</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Scene Kit defines a bounding sphere in the local coordinate space using a center point and a radius.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      <span class="kind" data-ice="kind">get</span>
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
           <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-childNodes">childNodes</a></span></span><span data-ice="signature">: <span><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html">SCNNode</a></span><span>[]</span></span></span>
         </p>
       </div>
       <div>
         
         
+        <div data-ice="description"><p>An array of the node&#x2019;s children in the scene graph hierarchy.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      <span class="kind" data-ice="kind">get</span>
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-hasActions">hasActions</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
+        </p>
+      </div>
+      <div>
         
+        
+        <div data-ice="description"><p>This value is true if the node has any executing actions; otherwise the value is false.</p>
+</div>
       </div>
     </td>
     <td>
@@ -8706,6 +8876,61 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
         <p>
           
           
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-position">position</a></span></span><span data-ice="signature">: <span><a href="class/js/SceneKit/SCNVector3.js~SCNVector3.html">SCNVector3</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>The translation applied to the node.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      <span class="kind" data-ice="kind">set</span>
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-position">position</a></span></span><span data-ice="signature">: <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      <span class="kind" data-ice="kind">get</span>
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
           <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-presentation">presentation</a></span></span><span data-ice="signature">: <span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html">SCNNode</a></span></span>
         </p>
       </div>
@@ -8734,6 +8959,61 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
         <p>
           
           
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-transform">transform</a></span></span><span data-ice="signature">: <span><a href="class/js/SceneKit/SCNMatrix4.js~SCNMatrix4.html">SCNMatrix4</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>The transformation applied to the node relative to its parent.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      <span class="kind" data-ice="kind">set</span>
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-transform">transform</a></span></span><span data-ice="signature">: <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      <span class="kind" data-ice="kind">get</span>
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
           <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-worldTransform">worldTransform</a></span></span><span data-ice="signature">: <span><a href="class/js/SceneKit/SCNMatrix4.js~SCNMatrix4.html">SCNMatrix4</a></span></span>
         </p>
       </div>
@@ -8741,6 +9021,34 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
         
         
         <div data-ice="description"><p>A world transform is the node&#x2019;s coordinate space transformation relative to the scene&#x2019;s coordinate space.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-member-boundingBox">boundingBox</a></span></span><span data-ice="signature">: {min: <span><a href="class/js/SceneKit/SCNVector3.js~SCNVector3.html">SCNVector3</a></span>, max: <span><a href="class/js/SceneKit/SCNVector3.js~SCNVector3.html">SCNVector3</a></span>}</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>The minimum and maximum corner points of the object&#x2019;s bounding box.</p>
 </div>
       </div>
     </td>
@@ -9266,34 +9574,6 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
         <p>
           
           
-          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-member-position">position</a></span></span><span data-ice="signature">: <span><a href="class/js/SceneKit/SCNVector3.js~SCNVector3.html">SCNVector3</a></span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        <div data-ice="description"><p>The translation applied to the node.</p>
-</div>
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
           <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-member-rendererDelegate">rendererDelegate</a></span></span><span data-ice="signature">: <span><a href="class/js/SceneKit/SCNNodeRendererDelegate.js~SCNNodeRendererDelegate.html">SCNNodeRendererDelegate</a></span></span>
         </p>
       </div>
@@ -9434,13 +9714,41 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
         <p>
           
           
-          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-member-transform">transform</a></span></span><span data-ice="signature">: <span><a href="class/js/SceneKit/SCNMatrix4.js~SCNMatrix4.html">SCNMatrix4</a></span></span>
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-actionForKey">actionForKey</a></span></span><span data-ice="signature">(key: <span><a href="class/js/SceneKit/SCNText.js~SCNText.html#instance-member-string">string</a></span>): <span><a href="class/js/SceneKit/SCNAction.js~SCNAction.html">SCNAction</a></span></span>
         </p>
       </div>
       <div>
         
         
-        <div data-ice="description"><p>The transformation applied to the node relative to its parent.</p>
+        <div data-ice="description"><p>Use this method to retrieve actions you scheduled using the runAction(<em>:forKey:) or runAction(</em>:forKey:completionHandler:) method.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-addAnimationForKey">addAnimationForKey</a></span></span><span data-ice="signature">(animation: <span><a href="class/js/QuartzCore/CAAnimation.js~CAAnimation.html">CAAnimation</a></span>, key: <span><a href="class/js/SceneKit/SCNText.js~SCNText.html#instance-member-string">string</a></span>): <span>void</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Newly added animations begin executing after the current run loop cycle ends.SceneKit does not define any requirements for the contents of the key parameter&#x2014;it need only be unique among the keys for other animations you add.</p>
 </div>
       </div>
     </td>
@@ -9546,6 +9854,34 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
         <p>
           
           
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-animationForKey">animationForKey</a></span></span><span data-ice="signature">(key: <span><a href="class/js/SceneKit/SCNText.js~SCNText.html#instance-member-string">string</a></span>): <span><a href="class/js/QuartzCore/CAAnimation.js~CAAnimation.html">CAAnimation</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Attempting to modify any properties of the returned object results in undefined behavior.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
           <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-childNodeWithName">childNodeWithName</a></span></span><span data-ice="signature">(name: <span><a href="class/js/SceneKit/SCNText.js~SCNText.html#instance-member-string">string</a></span>, recursively: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span>): <span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html">SCNNode</a></span></span>
         </p>
       </div>
@@ -9574,7 +9910,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
         <p>
           
           
-          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-childNodesPassingTest">childNodesPassingTest</a></span></span><span data-ice="signature">(predicate: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(arg1: <span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html">SCNNode</a></span>, arg2: <span>UnsafeMutablePointer</span>&lt;<span>ObjCBool</span>&gt;)</span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>): <span><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html">SCNNode</a></span><span>[]</span></span></span>
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-childNodesPassingTest">childNodesPassingTest</a></span></span><span data-ice="signature">(predicate: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(child: <span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html">SCNNode</a></span>, stop: <span>UnsafeMutablePointer</span>&lt;<span>ObjCBool</span>&gt;)</span>: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>): <span><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html">SCNNode</a></span><span>[]</span></span></span>
         </p>
       </div>
       <div>
@@ -9742,7 +10078,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
         <p>
           
           
-          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-enumerateChildNodes">enumerateChildNodes</a></span></span><span data-ice="signature">(block: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(arg1: <span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html">SCNNode</a></span>, arg2: <span>UnsafeMutablePointer</span>&lt;<span>ObjCBool</span>&gt;)</span>: <span>void</span></span>): <span>void</span></span>
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-enumerateChildNodes">enumerateChildNodes</a></span></span><span data-ice="signature">(block: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>(child: <span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html">SCNNode</a></span>, stop: <span>UnsafeMutablePointer</span>&lt;<span>ObjCBool</span>&gt;)</span>: <span>void</span></span>): <span>void</span></span>
         </p>
       </div>
       <div>
@@ -9854,13 +10190,13 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
         <p>
           
           
-          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-init">init</a></span></span><span data-ice="signature">(geometry: <span><a href="class/js/SceneKit/SCNGeometry.js~SCNGeometry.html">SCNGeometry</a></span>): <span>void</span></span>
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-insertChildNodeAt">insertChildNodeAt</a></span></span><span data-ice="signature">(child: <span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html">SCNNode</a></span>, index: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>): <span>void</span></span>
         </p>
       </div>
       <div>
         
         
-        <div data-ice="description"><p>Creates and returns a node object with the specified geometry attached.</p>
+        <div data-ice="description"><p>Adds a node to the node&#x2019;s array of children at a specified index.</p>
 </div>
       </div>
     </td>
@@ -9882,13 +10218,125 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
         <p>
           
           
-          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-insertChildNodeAt">insertChildNodeAt</a></span></span><span data-ice="signature">(child: <span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html">SCNNode</a></span>, index: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>): <span>void</span></span>
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-isAnimationPausedForKey">isAnimationPausedForKey</a></span></span><span data-ice="signature">(key: <span><a href="class/js/SceneKit/SCNText.js~SCNText.html#instance-member-string">string</a></span>): <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Boolean">boolean</a></span></span>
         </p>
       </div>
       <div>
         
         
-        <div data-ice="description"><p>Adds a node to the node&#x2019;s array of children at a specified index.</p>
+        <div data-ice="description"><p>Required.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-pauseAnimationForKey">pauseAnimationForKey</a></span></span><span data-ice="signature">(key: <span><a href="class/js/SceneKit/SCNText.js~SCNText.html#instance-member-string">string</a></span>): <span>void</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This method has no effect if no animation is attached to the object with the specified key.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-removeActionForKey">removeActionForKey</a></span></span><span data-ice="signature">(key: <span><a href="class/js/SceneKit/SCNText.js~SCNText.html#instance-member-string">string</a></span>): <span>void</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>If the node is currently running an action that matches the key, SceneKit removes that action from the node, skipping any remaining animation it would perform but keeping any changes already made to the node.Use this method to cancel actions you scheduled using the runAction(<em>:forKey:) or runAction(</em>:forKey:completionHandler:) method.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-removeAllActions">removeAllActions</a></span></span><span data-ice="signature">(): <span>void</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>When SceneKit removes an action from a node, it skips any remaining animation the action would perform.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-removeAllAnimations">removeAllAnimations</a></span></span><span data-ice="signature">(): <span>void</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Required.</p>
 </div>
       </div>
     </td>
@@ -9945,6 +10393,62 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
         
         
         <div data-ice="description"><p>Removes any particle systems directly attached to the node.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-removeAnimationForKey">removeAnimationForKey</a></span></span><span data-ice="signature">(key: <span><a href="class/js/SceneKit/SCNText.js~SCNText.html#instance-member-string">string</a></span>): <span>void</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Required.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-removeAnimationForKeyFadeOutDuration">removeAnimationForKeyFadeOutDuration</a></span></span><span data-ice="signature">(key: <span><a href="class/js/SceneKit/SCNText.js~SCNText.html#instance-member-string">string</a></span>, duration: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>): <span>void</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Use this method to create smooth transitions between the effects of multiple animations.</p>
 </div>
       </div>
     </td>
@@ -10057,6 +10561,174 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
         
         
         <div data-ice="description"><p>If both the child and child2 nodes are children of the node, calling this method swaps their positions in the array.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-resumeAnimationForKey">resumeAnimationForKey</a></span></span><span data-ice="signature">(key: <span><a href="class/js/SceneKit/SCNText.js~SCNText.html#instance-member-string">string</a></span>): <span>void</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This method has no effect if no animation is attached to the object with the specified key or if the specified animation is not currently paused.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-runAction">runAction</a></span></span><span data-ice="signature">(action: <span><a href="class/js/SceneKit/SCNAction.js~SCNAction.html">SCNAction</a></span>): <span>void</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>SceneKit begins running a newly added action when it prepares to render the next frame.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-runActionCompletionHandler">runActionCompletionHandler</a></span></span><span data-ice="signature">(action: <span><a href="class/js/SceneKit/SCNAction.js~SCNAction.html">SCNAction</a></span>, block: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>()</span>: <span>void</span></span>): <span>void</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>The new action is processed the next time SceneKit prepares to render a frame.SceneKit calls your block after the action&#x2019;s duration is complete.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-runActionForKey">runActionForKey</a></span></span><span data-ice="signature">(action: <span><a href="class/js/SceneKit/SCNAction.js~SCNAction.html">SCNAction</a></span>, key: <span><a href="class/js/SceneKit/SCNText.js~SCNText.html#instance-member-string">string</a></span>): <span>void</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This method is identical to runAction(_:), but the action is stored and identified so that you can retrieve or cancel it later.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-runActionForKeyCompletionHandler">runActionForKeyCompletionHandler</a></span></span><span data-ice="signature">(action: <span><a href="class/js/SceneKit/SCNAction.js~SCNAction.html">SCNAction</a></span>, key: <span><a href="class/js/SceneKit/SCNText.js~SCNText.html#instance-member-string">string</a></span>, block: <span><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function">function</a></span><span>()</span>: <span>void</span></span>): <span>void</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>This method is identical to runAction(_:completionHandler:), but the action is stored and identified so that you can retrieve or cancel it later.</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-setAnimationSpeedForKey">setAnimationSpeedForKey</a></span></span><span data-ice="signature">(speed: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></span>, key: <span><a href="class/js/SceneKit/SCNText.js~SCNText.html#instance-member-string">string</a></span>): <span>void</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>Required.</p>
 </div>
       </div>
     </td>

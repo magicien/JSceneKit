@@ -30,7 +30,8 @@ export default class SCNGeometrySource extends NSObject {
    * @access public
    * @returns {void}
    */
-  init() {
+  constructor() {
+    super()
 
     // Inspecting a Geometry Source
 
@@ -61,18 +62,31 @@ export default class SCNGeometrySource extends NSObject {
    * @desc A geometry source’s data is an array of vectors, each of which represents a particular attribute (or semantic) of a vertex in the geometry. The other parameters determine how SceneKit interprets this data. For example, an array of vertex positions may have three 32-bit floating-point components per vector, but an array of texture coordinates may have two 8-bit integer coponents per vector. You can use the offset and stride parameters together to interleave data for multiple geometry sources in the same array, improving rendering performance. See SCNGeometrySource for details.To create a custom SCNGeometry object from the geometry source, use the init(sources:elements:) method.
    * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1523320-init
    */
-  initUsesFloatComponentsDataOffsetDataStride(data, semantic, vectorCount, floatComponents, componentsPerVector, bytesPerComponent, offset, stride) {
+  //initUsesFloatComponentsDataOffsetDataStride(data, semantic, vectorCount, floatComponents, componentsPerVector, bytesPerComponent, offset, stride) {
+  static geometrySourceWithDataSemanticVectorCountFloatComponentsComponentsPerVectorBytesPerComponentDataOffsetDataStride(data, semantic, vectorCount, floatComponents, componentsPerVector, bytesPerComponent, dataOffset, dataStride) {
+    const ins = new SCNGeometrySource()
+    ins._data = data
+    ins._semantic = semantic
+    ins._vectorCount = vectorCount
+    ins._usesFloatComponents = floatComponents
+    ins._componentsPerVector = componentsPerVector
+    ins._bytesPerComponent = bytesPerComponent
+    ins._dataOffset = dataOffset
+    ins._dataStride = dataStride
+
+    return ins
   }
 
   /**
    * Creates a geometry source from an array of vertex positions. 
    * @access public
    * @param {SCNVector3[]} vertices - An array of three-component vectors, each of which represents a vertex position for the geometry source.
+   * @param {number} count - The number of vertices
    * @returns {void}
    * @desc SceneKit converts this data to its own format to optimize rendering performance. To read the converted data, examine the properties of the created SCNGeometrySource object.To create a custom SCNGeometry object from the geometry source, use the init(sources:elements:) method.
    * @see https://developer.apple.com/reference/scenekit/scngeometrysource/2034708-init
    */
-  init(vertices) {
+  static geometrySourceWithVerticesCount(vertices, count) {
   }
 
   /**
@@ -84,10 +98,23 @@ export default class SCNGeometrySource extends NSObject {
    * @desc SceneKit converts this data to its own format to optimize rendering performance. To read the converted data, examine the properties of the created SCNGeometrySource object.To create a custom SCNGeometry object from the geometry source, use the init(sources:elements:) method.
    * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1522718-init
    */
-  initTextureCoordinates(texcoord, count) {
+  static geometrySourceWithTextureCoordinatesCount(texcoord, count) {
+    
+  }
+
+  /**
+   * Creates a geometry source from an array of normal vertices.
+   * @access public
+   * @param {SCNVector3[]} normals - An array of vectors, which represents a normal vector for the geometry source.
+   * @param {number} count - The number of normals
+   * @returns {void}
+   */
+  static geometrySourceWithNormalsCount(normals, count) {
+    
   }
 
   // Inspecting a Geometry Source
+
   /**
    * The data for the geometry source.
    * @type {Data}
@@ -97,6 +124,7 @@ export default class SCNGeometrySource extends NSObject {
   get data() {
     return this._data
   }
+
   /**
    * The semantic value (or attribute) the geometry source describes for each vertex.
    * @type {SCNGeometrySource.Semantic}
@@ -106,6 +134,7 @@ export default class SCNGeometrySource extends NSObject {
   get semantic() {
     return this._semantic
   }
+
   /**
    * The number of vectors in the data.
    * @type {number}
@@ -115,6 +144,7 @@ export default class SCNGeometrySource extends NSObject {
   get vectorCount() {
     return this._vectorCount
   }
+
   /**
    * A Boolean value that indicates whether vector components are floating-point values.
    * @type {boolean}
@@ -124,6 +154,7 @@ export default class SCNGeometrySource extends NSObject {
   get usesFloatComponents() {
     return this._usesFloatComponents
   }
+
   /**
    * The number of scalar components in each vector.
    * @type {number}
@@ -133,6 +164,7 @@ export default class SCNGeometrySource extends NSObject {
   get componentsPerVector() {
     return this._componentsPerVector
   }
+
   /**
    * The size, in bytes, of each vector component.
    * @type {number}
@@ -142,6 +174,7 @@ export default class SCNGeometrySource extends NSObject {
   get bytesPerComponent() {
     return this._bytesPerComponent
   }
+
   /**
    * The offset, in bytes, from the beginning of the data to the first vector component to be used in the geometry source.
    * @type {number}
@@ -151,6 +184,7 @@ export default class SCNGeometrySource extends NSObject {
   get dataOffset() {
     return this._dataOffset
   }
+
   /**
    * The number of bytes from a vector to the next one in the data.
    * @type {number}
@@ -232,6 +266,7 @@ SCNGeometrySource *source = [SCNGeometrySource geometrySourceWithBuffer:buffer
   }
 
   // Structures
+
   /**
    * @type {Object} Semantic
    * @property {Symbol} boneIndices The semantic for bone index data, used for skeletal animation of skinned surfaces.

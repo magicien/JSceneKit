@@ -17,6 +17,7 @@ import SCNParticleEventBlock from './SCNParticleEventBlock'
 import SCNParticlePropertyController from './SCNParticlePropertyController'
 import SCNParticleModifierStage from './SCNParticleModifierStage'
 import SCNParticleModifierBlock from './SCNParticleModifierBlock'
+import SKColor from '../SpriteKit/SKColor'
 
 const _ParticleProperty = {
   angle: Symbol(),
@@ -228,7 +229,7 @@ export default class SCNParticleSystem extends NSObject {
 
     /**
      * The color of newly spawned particles. Animatable.
-     * @type {CGColor}
+     * @type {SKColor}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523248-particlecolor
      */
     this.particleColor = null

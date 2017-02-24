@@ -26,11 +26,20 @@ const _Attribute = {
 export default class SCNScene extends NSObject {
 
   /**
-   * constructor
+   * Loads a scene from the specified URL.
    * @access public
-   * @returns {void}
+   * @constructor
+   * @param {string} url - The URL to the scene file to load.
+   * @param {?Map<SCNSceneSource.LoadingOption, Object>} [options = null] - A dictionary of options affecting scene loading, or nil for default options. For available keys, see Scene Loading Options.
+   * @throws {Error}
+   * @desc This method provides a convenient way to load a complete scene from a file at an arbitrary URL. For more detailed options or to load only part of a file’s scene graph, use the SCNSceneSource class.Handling Errors in Swift:
+In Swift, this method returns a nonoptional result and is marked with the throws keyword to indicate that it throws an error in cases of failure.
+You call this method in a try expression and handle any errors in the catch clauses of a do statement, as described in Error Handling in The Swift Programming Language (Swift 3.1) and Error Handling in Using Swift with Cocoa and Objective-C (Swift 3.1).
+
+   * @see https://developer.apple.com/reference/scenekit/scnscene/1522660-init
    */
-  init() {
+  constructor(url, options = null) {
+    super()
 
     // Managing Animated Effects in a Scene
 
@@ -44,7 +53,7 @@ export default class SCNScene extends NSObject {
 
     // Accessing Scene Contents
 
-    this._rootNode = null
+    this._rootNode = new SCNNode()
     this._background = null
     this._lightingEnvironment = null
 

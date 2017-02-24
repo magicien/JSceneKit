@@ -14,6 +14,7 @@ import NSObject from './ObjectiveC/NSObject'
 import CAAction from './QuartzCore/CAAction'
 import CAAnimation from './QuartzCore/CAAnimation'
 import CAAnimationDelegate from './QuartzCore/CAAnimationDelegate'
+import CAAnimationGroup from './QuartzCore/CAAnimationGroup'
 import CAMediaTiming from './QuartzCore/CAMediaTiming'
 import CAMediaTimingFunction from './QuartzCore/CAMediaTimingFunction'
 import CATransform3D from './QuartzCore/CATransform3D'
@@ -129,6 +130,7 @@ import SCNVector3 from './SceneKit/SCNVector3'
 import SCNVector4 from './SceneKit/SCNVector4'
 import SCNView from './SceneKit/SCNView'
 import SCNWrapMode from './SceneKit/SCNWrapMode'
+import SKColor from './SpriteKit/SKColor'
 
 /*global exports*/
 exports.CGBlendMode = CGBlendMode
@@ -147,6 +149,7 @@ exports.NSObject = NSObject
 exports.CAAction = CAAction
 exports.CAAnimation = CAAnimation
 exports.CAAnimationDelegate = CAAnimationDelegate
+exports.CAAnimationGroup = CAAnimationGroup
 exports.CAMediaTiming = CAMediaTiming
 exports.CAMediaTimingFunction = CAMediaTimingFunction
 exports.CATransform3D = CATransform3D
@@ -262,3 +265,4 @@ exports.SCNVector3 = SCNVector3
 exports.SCNVector4 = SCNVector4
 exports.SCNView = SCNView
 exports.SCNWrapMode = SCNWrapMode
+exports.SKColor = SKColor

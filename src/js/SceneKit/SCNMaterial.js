@@ -7,6 +7,7 @@ import SCNMaterialProperty from './SCNMaterialProperty'
 import SCNTransparencyMode from './SCNTransparencyMode'
 import SCNCullMode from './SCNCullMode'
 import SCNBlendMode from './SCNBlendMode'
+import SKColor from '../SpriteKit/SKColor'
 
 const _LightingModel = {
   blinn: Symbol(),
@@ -27,27 +28,33 @@ const _LightingModel = {
  */
 export default class SCNMaterial extends NSObject {
 
+  // Creating a Material
+
   /**
-   * constructor
+   * Creates a material from the specified Model I/O material object.
    * @access public
-   * @returns {void}
+   * @constructor
+   * @param {MDLMaterial} mdlMaterial - A Model I/O material object.
+   * @desc The Model I/O framework provides universal support for import, export, description, and processing of several 3D asset file formats and related resources. (For details, see Model I/O.) The MDLMaterial class is a generic description of surface rendering to be used in rendering 3D object, supporting a superset of the attributes described by the SCNMaterial class. 
+   * @see https://developer.apple.com/reference/scenekit/scnmaterial/1419835-init
    */
-  init() {
+  constructor(mdlMaterial) {
+    super()
 
     // Configuring a Material’s Visual Properties
 
-    this._diffuse = null
-    this._ambient = null
-    this._specular = null
-    this._normal = null
-    this._reflective = null
-    this._emission = null
-    this._transparent = null
-    this._multiply = null
-    this._ambientOcclusion = null
-    this._selfIllumination = null
-    this._metalness = null
-    this._roughness = null
+    this._diffuse = new SCNMaterialProperty(SKColor.white)
+    this._ambient = new SCNMaterialProperty(new SKColor(0.485, 0.485, 0.485, 1.0))
+    this._specular = new SCNMaterialProperty(SKColor.black)
+    this._normal = new SCNMaterialProperty(SKColor.white)
+    this._reflective = new SCNMaterialProperty(SKColor.black)
+    this._emission = new SCNMaterialProperty(SKColor.black)
+    this._transparent = new SCNMaterialProperty(SKColor.white)
+    this._multiply = new SCNMaterialProperty(SKColor.white)
+    this._ambientOcclusion = new SCNMaterialProperty(SKColor.white)
+    this._selfIllumination = new SCNMaterialProperty(SKColor.black)
+    this._metalness = new SCNMaterialProperty(SKColor.black)
+    this._roughness = new SCNMaterialProperty(new SKColor(0.485, 0.485, 0.485, 1.0))
 
     // Customizing a Material
 
@@ -63,42 +70,42 @@ export default class SCNMaterial extends NSObject {
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnmaterial/1462533-shininess
      */
-    this.shininess = 0
+    this.shininess = 1.0
 
     /**
      * A factor affecting the material’s reflectivity. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnmaterial/1462587-fresnelexponent
      */
-    this.fresnelExponent = 0
+    this.fresnelExponent = 0.0
 
     /**
      * The uniform transparency of the material. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnmaterial/1462567-transparency
      */
-    this.transparency = 0
+    this.transparency = 1.0
 
     /**
      * The mode SceneKit uses to calculate transparency for the material.
      * @type {SCNTransparencyMode}
      * @see https://developer.apple.com/reference/scenekit/scnmaterial/1462549-transparencymode
      */
-    this.transparencyMode = null
+    this.transparencyMode = SCNTransparencyMode.aOne
 
     /**
      * The lighting formula that SceneKit uses to render the material.
      * @type {SCNMaterial.LightingModel}
      * @see https://developer.apple.com/reference/scenekit/scnmaterial/1462518-lightingmodel
      */
-    this.lightingModel = null
+    this.lightingModel = _LightingModel.blinn
 
     /**
      * A Boolean value that determines whether SceneKit performs lighting calculations per vertex or per pixel. Animatable.
      * @type {boolean}
      * @see https://developer.apple.com/reference/scenekit/scnmaterial/1462580-islitperpixel
      */
-    this.isLitPerPixel = false
+    this.isLitPerPixel = true
 
     /**
      * A Boolean value that determines whether SceneKit should render both front and back faces of a surface. Animatable.
@@ -112,52 +119,39 @@ export default class SCNMaterial extends NSObject {
      * @type {SCNCullMode}
      * @see https://developer.apple.com/reference/scenekit/scnmaterial/1462571-cullmode
      */
-    this.cullMode = null
+    this.cullMode = SCNCullMode.back
 
     /**
      * The mode that determines how pixel colors rendered using this material blend with other pixel colors in the rendering target.
      * @type {SCNBlendMode}
      * @see https://developer.apple.com/reference/scenekit/scnmaterial/1462585-blendmode
      */
-    this.blendMode = null
+    this.blendMode = SCNBlendMode.alpha
 
     /**
      * A Boolean value that determines whether the material responds identically to both ambient and diffuse lighting. Animatable.
      * @type {boolean}
      * @see https://developer.apple.com/reference/scenekit/scnmaterial/1462522-locksambientwithdiffuse
      */
-    this.locksAmbientWithDiffuse = false
+    this.locksAmbientWithDiffuse = true
 
     /**
      * A Boolean value that determines whether SceneKit produces depth information when rendering the material.
      * @type {boolean}
      * @see https://developer.apple.com/reference/scenekit/scnmaterial/1462545-writestodepthbuffer
      */
-    this.writesToDepthBuffer = false
+    this.writesToDepthBuffer = true
 
     /**
      * A Boolean value that determines whether SceneKit uses depth information when rendering the material.
      * @type {boolean}
      * @see https://developer.apple.com/reference/scenekit/scnmaterial/1462562-readsfromdepthbuffer
      */
-    this.readsFromDepthBuffer = false
-
-  }
-
-  // Creating a Material
-
-  /**
-   * Creates a material from the specified Model I/O material object.
-   * @access public
-   * @param {MDLMaterial} mdlMaterial - A Model I/O material object.
-   * @returns {void}
-   * @desc The Model I/O framework provides universal support for import, export, description, and processing of several 3D asset file formats and related resources. (For details, see Model I/O.) The MDLMaterial class is a generic description of surface rendering to be used in rendering 3D object, supporting a superset of the attributes described by the SCNMaterial class. 
-   * @see https://developer.apple.com/reference/scenekit/scnmaterial/1419835-init
-   */
-  init(mdlMaterial) {
+    this.readsFromDepthBuffer = true
   }
 
   // Configuring a Material’s Visual Properties
+
   /**
    * An object that manages the material’s diffuse response to lighting.
    * @type {SCNMaterialProperty}
@@ -167,6 +161,7 @@ export default class SCNMaterial extends NSObject {
   get diffuse() {
     return this._diffuse
   }
+
   /**
    * An object that manages the material’s response to ambient lighting.
    * @type {SCNMaterialProperty}
@@ -176,6 +171,7 @@ export default class SCNMaterial extends NSObject {
   get ambient() {
     return this._ambient
   }
+
   /**
    * An object that manages the material’s specular response to lighting.
    * @type {SCNMaterialProperty}
@@ -185,6 +181,7 @@ export default class SCNMaterial extends NSObject {
   get specular() {
     return this._specular
   }
+
   /**
    * An object that defines the nominal orientation of the surface at each point for use in lighting.
    * @type {SCNMaterialProperty}
@@ -194,6 +191,7 @@ export default class SCNMaterial extends NSObject {
   get normal() {
     return this._normal
   }
+
   /**
    * An object that defines the reflected color for each point on a surface.
    * @type {SCNMaterialProperty}
@@ -203,6 +201,7 @@ export default class SCNMaterial extends NSObject {
   get reflective() {
     return this._reflective
   }
+
   /**
    * An object that defines the color emitted by each point on a surface.
    * @type {SCNMaterialProperty}
@@ -212,6 +211,7 @@ export default class SCNMaterial extends NSObject {
   get emission() {
     return this._emission
   }
+
   /**
    * An object that determines the opacity of each point in a material.
    * @type {SCNMaterialProperty}
@@ -221,6 +221,7 @@ export default class SCNMaterial extends NSObject {
   get transparent() {
     return this._transparent
   }
+
   /**
    * An object that provides color values that are multiplied with pixels in a material after all other shading is complete.
    * @type {SCNMaterialProperty}
@@ -230,6 +231,7 @@ export default class SCNMaterial extends NSObject {
   get multiply() {
     return this._multiply
   }
+
   /**
    * An object that provides color values to be multiplied with the ambient light affecting the material.
    * @type {SCNMaterialProperty}
@@ -239,6 +241,7 @@ export default class SCNMaterial extends NSObject {
   get ambientOcclusion() {
     return this._ambientOcclusion
   }
+
   /**
    * An object that provides color values representing the global illumination of the surface.
    * @type {SCNMaterialProperty}
@@ -248,6 +251,7 @@ export default class SCNMaterial extends NSObject {
   get selfIllumination() {
     return this._selfIllumination
   }
+
   /**
    * An object that provides color values to determine how metallic the material’s surface appears.
    * @type {SCNMaterialProperty}
@@ -257,6 +261,7 @@ export default class SCNMaterial extends NSObject {
   get metalness() {
     return this._metalness
   }
+
   /**
    * An object that provides color values to determine the apparent smoothness of the surface.
    * @type {SCNMaterialProperty}
@@ -268,6 +273,7 @@ export default class SCNMaterial extends NSObject {
   }
 
   // Structures
+
   /**
    * @type {Object} LightingModel
    * @property {Symbol} blinn Shading that incorporates ambient, diffuse, and specular properties, where specular highlights are calculated using the Blinn-Phong  formula.

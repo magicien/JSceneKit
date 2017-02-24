@@ -1,7 +1,5 @@
 'use strict'
 
-
-
 /**
  * A representation of a three-component vector.
  * @access public
@@ -14,20 +12,17 @@ export default class SCNVector3 {
   /**
    * 
    * @access public
+   * @constructor
    * @param {number} x - 
    * @param {number} y - 
    * @param {number} z - 
    * @returns {void}
    * @see https://developer.apple.com/reference/scenekit/scnvector3/1522904-init
    */
-  init(x, y, z) {
-
+  constructor(x, y, z) {
     // Instance Properties
-
-    this._x = 0
-    this._y = 0
-    this._z = 0
+    this.x = x
+    this.y = y
+    this.z = z
   }
-
-  // Instance Properties
 }

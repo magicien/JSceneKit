@@ -1209,7 +1209,10 @@ You call this method in a try expression and handle any errors in the catch clau
    * @see https://developer.apple.com/reference/objectivec/nsobject/1412591-value
    */
   valueForKey(key) {
-    return null
+    if(typeof key !== 'string'){
+      throw 'error: valueForKey(key): key should be string'
+    }
+    return this[key]
   }
 
   /**
@@ -1221,7 +1224,16 @@ You call this method in a try expression and handle any errors in the catch clau
    * @see https://developer.apple.com/reference/objectivec/nsobject/1416468-value
    */
   valueForKeyPath(keyPath) {
-    return null
+    if(typeof keyPath !== 'string'){
+      throw 'error: valueForKeyPath(keyPath): keyPath should be string'
+    }
+    const paths = keyPath.split('.')
+    const key = paths.shift()
+    const value = this.valueForKey(key)
+    if(paths.length === 0 || value === undefined || value === null){
+      return value
+    }
+    return value.valueForKeyPath(paths.join('.'))
   }
 
   /**

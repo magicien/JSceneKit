@@ -16,12 +16,22 @@ import SCNFilterMode from './SCNFilterMode'
  */
 export default class SCNMaterialProperty extends NSObject {
 
+  // Creating a Material Property
+
   /**
-   * constructor
+   * Creates a new material property object with the specified contents.
    * @access public
-   * @returns {void}
+   * @param {Object} contents - The visual contents of the material property—a color, image, or source of animated content. For details, see the discussion of the  contents property.
+   * @returns {SCNMaterialProperty}
+   * @desc Newly created SCNMaterial objects contain SCNMaterialProperty instances for all of their visual properties. To change a material’s visual properties, you modify those instances rather than creating new material property objects.You create new SCNMaterialProperty instances to provide textures for use with custom GLSL shaders—for details, see SCNShadable.
+   * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395386-init
    */
-  init() {
+  constructor(contents) {
+    super()
+
+    //if(typeof contents !== 'object'){
+    //  throw 'SCNMaterialProperty(contents): contents must be Object type: ' + (typeof contents)
+    //}
 
     // Working with Material Property Contents
 
@@ -30,7 +40,7 @@ export default class SCNMaterialProperty extends NSObject {
      * @type {?Object}
      * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395372-contents
      */
-    this.contents = null
+    this.contents = contents
 
     /**
      * A number between 0.0 and 1.0 that modulates the effect of the material property. Animatable.
@@ -47,42 +57,42 @@ export default class SCNMaterialProperty extends NSObject {
      * @type {SCNMatrix4}
      * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395388-contentstransform
      */
-    this.contentsTransform = null
+    this.contentsTransform = new SCNMatrix4()
 
     /**
      * The wrapping behavior for the S texture coordinate.
      * @type {SCNWrapMode}
      * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395384-wraps
      */
-    this.wrapS = null
+    this.wrapS = SCNWrapMode.clamp
 
     /**
      * The wrapping behavior for the T texture coordinate.
      * @type {SCNWrapMode}
      * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395382-wrapt
      */
-    this.wrapT = null
+    this.wrapT = SCNWrapMode.clamp
 
     /**
      * Texture filtering for rendering the material property’s image contents at a size smaller than that of the original image.
      * @type {SCNFilterMode}
      * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395390-minificationfilter
      */
-    this.minificationFilter = null
+    this.minificationFilter = SCNFilterMode.linear
 
     /**
      * Texture filtering for rendering the material property’s image contents at a size larger than that of the original image.
      * @type {SCNFilterMode}
      * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395378-magnificationfilter
      */
-    this.magnificationFilter = null
+    this.magnificationFilter = SCNFilterMode.linear
 
     /**
      * Texture filtering for using mipmaps to render the material property’s image contents at a size smaller than that of the original image.
      * @type {SCNFilterMode}
      * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395398-mipfilter
      */
-    this.mipFilter = null
+    this.mipFilter = SCNFilterMode.nearest
 
     /**
      * The amount of anisotropic texture filtering to be used when rendering the material property’s image contents.
@@ -101,22 +111,10 @@ export default class SCNMaterialProperty extends NSObject {
     /**
      * A color used to fill in areas of a material’s surface not covered by the material property’s image contents.
      * @type {?Object}
+     * @deprecated
      * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395376-bordercolor
      */
     this.borderColor = null
-
-  }
-
-  // Creating a Material Property
-
-  /**
-   * Creates a new material property object with the specified contents.
-   * @access public
-   * @param {Object} contents - The visual contents of the material property—a color, image, or source of animated content. For details, see the discussion of the  contents property.
-   * @returns {void}
-   * @desc Newly created SCNMaterial objects contain SCNMaterialProperty instances for all of their visual properties. To change a material’s visual properties, you modify those instances rather than creating new material property objects.You create new SCNMaterialProperty instances to provide textures for use with custom GLSL shaders—for details, see SCNShadable.
-   * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395386-init
-   */
-  init(contents) {
   }
 }
+

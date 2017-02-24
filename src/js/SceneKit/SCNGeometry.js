@@ -20,13 +20,26 @@ import SCNMaterial from './SCNMaterial'
  * @see https://developer.apple.com/reference/scenekit/scngeometry
  */
 export default class SCNGeometry extends NSObject {
+  // Creating a Geometry Object
 
   /**
-   * constructor
+   * Creates a new geometry built from the specified geometry sources and elements.
    * @access public
-   * @returns {void}
+   * @constructor
+   * @param {SCNGeometrySource[]} sources - An array of SCNGeometrySource objects describing vertices in the geometry and their attributes.
+   * @param {?SCNGeometryElement[]} elements - An array of SCNGeometryElement objects describing how to connect the geometry’s vertices.
+   * @desc A geometry’s visible content comes from the combination of geometry sources, which contain data describing its vertices, with geometry elements, which contain data describing how the vertices connect to form a surface. Each SCNGeometrySource object describes an attribute of all vertices in the geometry (vertex position, surface normal vector, color, or texture mapping coordinates) identified by the source’s semantic property. To create a custom geometry you must provide at least one source, for the vertex semantic. Typically, you also provide sources for normals and texture coordinates for use in lighting and shading.Sources for the vertex, normal, and color semantics must be unique—if multiple objects in the sources array have the same semantic, SceneKit uses only the first. A geometry may have multiple sources for the texcoord semantic—the order of texture coordinate sources in the sources array determines the value to use for the mappingChannel property when attaching materials.Each SCNGeometryElement object describes how vertices from the geometry sources are combined into polygons to create the geometry’s shape. Creating a custom geometry requires at least one element. If the elements array contains multiple objects, their order determines the arrangement of the geometry’s materials—for details, see the discussion of the materials property.
+   * @see https://developer.apple.com/reference/scenekit/scngeometry/1522803-init
    */
-  init() {
+  constructor(sources = [], elements = []) {
+    super()
+
+    if(!Array.isArray(sources)){
+      throw 'SCNGeometry(sources, elements): sources must be Array'
+    }
+    if(!Array.isArray(elements)){
+      throw 'SCNGeometry(sources, elements): elements must be Array'
+    }
 
     // Managing Geometry Attributes
 
@@ -52,21 +65,13 @@ export default class SCNGeometry extends NSObject {
      * @type {SCNMaterial[]}
      * @see https://developer.apple.com/reference/scenekit/scngeometry/1523472-materials
      */
-    this.materials = null
+    this.materials = []
 
-    /**
-     * The first material attached to the geometry.
-     * @type {?SCNMaterial}
-     * @see https://developer.apple.com/reference/scenekit/scngeometry/1523485-firstmaterial
-     */
-    this.firstMaterial = null
-
-
+    
     // Managing Geometry Data
 
-    this._geometryElements = null
-    this._geometrySources = null
-    this._geometryElementCount = 0
+    this._geometryElements = elements
+    this._geometrySources = sources
 
     // Working with Subdivision Surfaces
 
@@ -110,6 +115,19 @@ export default class SCNGeometry extends NSObject {
   // Managing a Geometry’s Materials
 
   /**
+   * The first material attached to the geometry.
+   * @type {?SCNMaterial}
+   * @see https://developer.apple.com/reference/scenekit/scngeometry/1523485-firstmaterial
+   */
+  get firstMaterial() {
+    return this.materials[0]
+  }
+
+  set firstMaterial(newValue) {
+    this.materials[0] = newValue
+  }
+
+  /**
    * Returns the first material attached to the geometry with the specified name.
    * @access public
    * @param {string} name - The name of the material to be retrieved.
@@ -150,7 +168,7 @@ export default class SCNGeometry extends NSObject {
    * @returns {void}
    * @see https://developer.apple.com/reference/scenekit/scngeometry/1522714-replacematerial
    */
-  replaceMaterialAtWith(index, material) {
+  replaceMaterialAtIndexWith(index, material) {
   }
 
   // Managing Geometry Data
@@ -163,8 +181,8 @@ export default class SCNGeometry extends NSObject {
    * @desc Each SCNGeometryElement object describes how vertices from the geometry’s sources are combined into polygons to create the geometry’s shape. Visible geometries contain at least one element.
    * @see https://developer.apple.com/reference/scenekit/scngeometry/1523266-geometryelement
    */
-  geometryElementAt(elementIndex) {
-    return null
+  geometryElementAtIndex(elementIndex) {
+    return this._geometryElements[elementIndex]
   }
 
   /**
@@ -175,7 +193,7 @@ export default class SCNGeometry extends NSObject {
    * @desc Each SCNGeometrySource object describes an attribute of all vertices in the geometry (such as vertex position, surface normal vector, color, or texture mapping coordinates) identified by the source’s semantic property. A geometry always has at least one source, for the vertex semantic, typically has additional sources for use in lighting and shading, and may have other sources for skeletal animation or surface subdivision information.The vertex, normal, and color semantics each refer to at most one source. A geometry may have multiple sources for the texcoord semantic—in this case, indices in the returned array correspond to values for the mappingChannel property used when attaching textures to materials.
    * @see https://developer.apple.com/reference/scenekit/scngeometry/1522926-getgeometrysources
    */
-  getGeometrySourcesFor(semantic) {
+  getGeometrySourcesForSemantic(semantic) {
     return null
   }
   /**
@@ -185,8 +203,9 @@ export default class SCNGeometry extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scngeometry/1523046-geometryelements
    */
   get geometryElements() {
-    return this._geometryElements
+    return this._geometryElements.slice(0)
   }
+
   /**
    * An array of geometry sources that provide vertex data for the geometry.
    * @type {SCNGeometrySource[]}
@@ -194,8 +213,9 @@ export default class SCNGeometry extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scngeometry/1523662-geometrysources
    */
   get geometrySources() {
-    return this._geometrySources
+    return this._geometrySources.slice(0)
   }
+
   /**
    * The number of geometry elements in the geometry.
    * @type {number}
@@ -203,6 +223,22 @@ export default class SCNGeometry extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scngeometry/1523800-geometryelementcount
    */
   get geometryElementCount() {
-    return this._geometryElementCount
+    return this._geometryElements.length
   }
+
+  ///////////////////////
+  // SCNBoundingVolume //
+  ///////////////////////
+
+  // Working with Bounding Volumes
+  /**
+   * The center point and radius of the object’s bounding sphere.
+   * @type {{center: SCNVector3, radius: number}}
+   * @desc Scene Kit defines a bounding sphere in the local coordinate space using a center point and a radius. For example, if a node’s bounding sphere has the center point {3, 1, 4} and radius 2.0, all points in the vertex data of node’s geometry (and any geometry attached to its child nodes) lie within 2.0 units of the center point.The coordinates provided when reading this property are valid only if the object has a volume to be measured. For a geometry containing no vertex data or a node containing no geometry (and whose child nodes, if any, contain no geometry), the values center and radius are both zero.
+   * @see https://developer.apple.com/reference/scenekit/scnboundingvolume/2034707-boundingsphere
+   */
+  getBoundingSphere() {
+    return this._boundingSphere
+  }
+
 }

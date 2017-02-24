@@ -5,6 +5,7 @@ import SCNAnimatable from './SCNAnimatable'
 import SCNTechniqueSupport from './SCNTechniqueSupport'
 import SCNMaterialProperty from './SCNMaterialProperty'
 import CGSize from '../CoreGraphics/CGSize'
+import SKColor from '../SpriteKit/SKColor'
 import SCNShadowMode from './SCNShadowMode'
 
 const _LightType = {
@@ -32,7 +33,8 @@ export default class SCNLight extends NSObject {
    * @access public
    * @returns {void}
    */
-  init() {
+  constructor() {
+    super()
 
     // Modifying a Light’s Appearance
 
@@ -41,28 +43,28 @@ export default class SCNLight extends NSObject {
      * @type {SCNLight.LightType}
      * @see https://developer.apple.com/reference/scenekit/scnlight/1522919-type
      */
-    this.type = null
+    this.type = _LightType.omni
 
     /**
      * The color of the light. Animatable.
-     * @type {Object}
+     * @type {SKColor}
      * @see https://developer.apple.com/reference/scenekit/scnlight/1523627-color
      */
-    this.color = null
+    this.color = new SKColor(1, 1, 1, 1)
 
     /**
      * The color temperature, in degrees Kelvin, of the light source. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnlight/1640545-temperature
      */
-    this.temperature = 0
+    this.temperature = 6500.0
 
     /**
      * The luminous flux, in lumens, or total brightness of the light. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnlight/1640548-intensity
      */
-    this.intensity = 0
+    this.intensity = 1000.0
 
 
     // Managing Light Attributes
@@ -113,9 +115,9 @@ export default class SCNLight extends NSObject {
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnlight/1523382-spotouterangle
      */
-    this.spotOuterAngle = 0
+    this.spotOuterAngle = 45.0
 
-    this._gobo = null
+    this._gobo = new SCNMaterialProperty()
 
     // Managing Shadows Cast by the Light
 
@@ -131,21 +133,21 @@ export default class SCNLight extends NSObject {
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnlight/1523724-shadowradius
      */
-    this.shadowRadius = 0
+    this.shadowRadius = 3.0
 
     /**
      * The color of shadows cast by the light. Animatable.
-     * @type {Object}
+     * @type {SKColor}
      * @see https://developer.apple.com/reference/scenekit/scnlight/1522864-shadowcolor
      */
-    this.shadowColor = null
+    this.shadowColor = new SKColor(0, 0, 0, 1)
 
     /**
      * The size of the shadow map image that SceneKit renders when creating shadows.
      * @type {CGSize}
      * @see https://developer.apple.com/reference/scenekit/scnlight/1524127-shadowmapsize
      */
-    this.shadowMapSize = null
+    this.shadowMapSize = new CGSize(0, 0)
 
     /**
      * The number of samples from the shadow map that SceneKit uses to render each pixel.
@@ -166,28 +168,28 @@ export default class SCNLight extends NSObject {
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnlight/1522849-shadowbias
      */
-    this.shadowBias = 0
+    this.shadowBias = 1.0
 
     /**
      * The orthographic scale SceneKit uses when rendering the shadow map for a directional light.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnlight/1523951-orthographicscale
      */
-    this.orthographicScale = 0
+    this.orthographicScale = 1.0
 
     /**
      * The maximum distance between the light and a visible surface for casting shadows.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnlight/1522845-zfar
      */
-    this.zFar = 0
+    this.zFar = 100.0
 
     /**
      * The minimum distance between the light and a visible surface for casting shadows. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnlight/1522630-znear
      */
-    this.zNear = 0
+    this.zNear = 1.0
 
 
     // Choosing Nodes to be Illuminated by the Light
@@ -197,7 +199,7 @@ export default class SCNLight extends NSObject {
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnlight/1523669-categorybitmask
      */
-    this.categoryBitMask = 0
+    this.categoryBitMask = -1
 
 
     // Managing Photometric Lights
@@ -208,7 +210,6 @@ export default class SCNLight extends NSObject {
      * @see https://developer.apple.com/reference/scenekit/scnlight/1640546-iesprofileurl
      */
     this.iesProfileURL = null
-
   }
 
   // Creating a Light

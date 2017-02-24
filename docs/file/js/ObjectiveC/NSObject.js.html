@@ -41,6 +41,7 @@
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Foundation</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSValue.js~NSValue.html">NSValue</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">ObjectiveC</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/ObjectiveC/NSObject.js~NSObject.html">NSObject</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">QuartzCore</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAnimation.js~CAAnimation.html">CAAnimation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAnimationGroup.js~CAAnimationGroup.html">CAAnimationGroup</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAMediaTimingFunction.js~CAMediaTimingFunction.html">CAMediaTimingFunction</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CATransform3D.js~CATransform3D.html">CATransform3D</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAction.js~CAAction.html">CAAction</a></span></span></li>
@@ -1335,7 +1336,10 @@ You call this method in a try expression and handle any errors in the catch clau
    * @see https://developer.apple.com/reference/objectivec/nsobject/1412591-value
    */
   valueForKey(key) {
-    return null
+    if(typeof key !== &apos;string&apos;){
+      throw &apos;error: valueForKey(key): key should be string&apos;
+    }
+    return this[key]
   }
 
   /**
@@ -1347,7 +1351,16 @@ You call this method in a try expression and handle any errors in the catch clau
    * @see https://developer.apple.com/reference/objectivec/nsobject/1416468-value
    */
   valueForKeyPath(keyPath) {
-    return null
+    if(typeof keyPath !== &apos;string&apos;){
+      throw &apos;error: valueForKeyPath(keyPath): keyPath should be string&apos;
+    }
+    const paths = keyPath.split(&apos;.&apos;)
+    const key = paths.shift()
+    const value = this.valueForKey(key)
+    if(paths.length === 0 || value === undefined || value === null){
+      return value
+    }
+    return value.valueForKeyPath(paths.join(&apos;.&apos;))
   }
 
   /**

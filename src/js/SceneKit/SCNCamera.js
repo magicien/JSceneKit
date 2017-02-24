@@ -22,7 +22,8 @@ export default class SCNCamera extends NSObject {
    * @access public
    * @returns {void}
    */
-  init() {
+  constructor() {
+    super()
 
     // Managing Camera Attributes
 

@@ -41,6 +41,7 @@
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Foundation</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSValue.js~NSValue.html">NSValue</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">ObjectiveC</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/ObjectiveC/NSObject.js~NSObject.html">NSObject</a></span></span></li>
 <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">QuartzCore</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAnimation.js~CAAnimation.html">CAAnimation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAnimationGroup.js~CAAnimationGroup.html">CAAnimationGroup</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAMediaTimingFunction.js~CAMediaTimingFunction.html">CAMediaTimingFunction</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CATransform3D.js~CATransform3D.html">CATransform3D</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAction.js~CAAction.html">CAAction</a></span></span></li>
@@ -165,11 +166,11 @@ export default class SCNNode extends NSObject {
   /**
    * Creates and returns a node object with the specified geometry attached.
    * @access public
-   * @param {?SCNGeometry} geometry - The geometry to be attached.
-   * @returns {void}
+   * @constructor
+   * @param {?SCNGeometry} [geometry = null] - The geometry to be attached.
    * @see https://developer.apple.com/reference/scenekit/scnnode/1408020-init
    */
-  init(geometry) {
+  constructor(geometry = null) {
 
     // Managing Node Attributes
 
@@ -199,7 +200,7 @@ export default class SCNNode extends NSObject {
      * @type {?SCNGeometry}
      * @see https://developer.apple.com/reference/scenekit/scnnode/1407966-geometry
      */
-    this.geometry = null
+    this.geometry = geometry
 
     /**
      * The morpher object responsible for blending the node&#x2019;s geometry.
@@ -232,16 +233,38 @@ export default class SCNNode extends NSObject {
      */
     this.isPaused = false
 
+    /**
+     * A node object representing the state of the node as it currently appears onscreen.
+     * @type {SCNNode}
+     * @access private
+     * @see https://developer.apple.com/reference/scenekit/scnnode/1408030-presentation
+     */
     this._presentation = null
+
+    /**
+     * 
+     * @type {boolean}
+     * @access private
+     */
+    this._isPresentationInstance = false
+
 
     // Managing the Node&#x2019;s Transformation
 
     /**
      * The transformation applied to the node relative to its parent. Animatable.
      * @type {SCNMatrix4}
+     * @access private
      * @see https://developer.apple.com/reference/scenekit/scnnode/1407964-transform
      */
-    this.transform = null
+    this._transform = new SCNMatrix4()
+
+    /**
+     * 
+     * @type {boolean}
+     * @access private
+     */
+    this._transformUpToDate = false
 
     /**
      * The translation applied to the node. Animatable.
@@ -292,7 +315,7 @@ export default class SCNNode extends NSObject {
      */
     this.constraints = null
 
-    this._worldTransform = null
+    //this._worldTransform = null
 
     // Modifying the Node Visibility
 
@@ -334,8 +357,21 @@ export default class SCNNode extends NSObject {
 
     // Managing the Node Hierarchy
 
+    /**
+     * The node&#x2019;s parent in the scene graph hierarchy.
+     * @type {?SCNNode}
+     * @access private
+     * @see https://developer.apple.com/reference/scenekit/scnnode/1407968-parent
+     */
     this._parent = null
-    this._childNodes = null
+
+    /**
+     * An array of the node&#x2019;s children in the scene graph hierarchy.
+     * @type {SCNNode[]}
+     * @access private
+     * @see https://developer.apple.com/reference/scenekit/scnnode/1407984-childnodes
+     */
+    this._childNodes = []
 
     // Customizing Node Rendering
 
@@ -378,9 +414,63 @@ export default class SCNNode extends NSObject {
     // Working With Positional Audio
 
     this._audioPlayers = null
+
+    ///////////////////
+    // SCNActionable //
+    ///////////////////
+
+    // Inspecting a Node&#x2019;s Running Actions
+    this._hasActions = false
+    this._actionKeys = null
+
+
+    ///////////////////
+    // SCNAnimatable //
+    ///////////////////
+
+    // Managing Animations
+
+    this._animationKeys = null
+
+    ///////////////////////
+    // SCNBoundingVolume //
+    ///////////////////////
+
+    // Working with Bounding Volumes
+
+    /**
+     * The minimum and maximum corner points of the object&#x2019;s bounding box.
+     * @type {{min: SCNVector3, max: SCNVector3}}
+     * @see https://developer.apple.com/reference/scenekit/scnboundingvolume/2034705-boundingbox
+     */
+    this.boundingBox = null
+
+    this._boundingSphere = null
+  }
+
+  /**
+   * Constructor for JSExport compatibility
+   * @access public
+   * @constructor
+   * @returns {SCNNode}
+   */
+  static node() {
+    return new SCNNode()
+  }
+
+  /**
+   * Constructor for JSExport compatibility
+   * @access public
+   * @constructor
+   * @param {?SCNGeometry} [geometry] - The geometry to be attached.
+   * @returns {SCNNode}
+   */
+  static nodeWithGeometry(geometry) {
+    return new SCNNode(geometry)
   }
 
   // Working With Node Animation
+
   /**
    * A node object representing the state of the node as it currently appears onscreen.
    * @type {SCNNode}
@@ -392,6 +482,42 @@ export default class SCNNode extends NSObject {
   }
 
   // Managing the Node&#x2019;s Transformation
+
+  /**
+   * The transformation applied to the node relative to its parent. Animatable.
+   * @type {SCNMatrix4}
+   * @see https://developer.apple.com/reference/scenekit/scnnode/1407964-transform
+   */
+  get transform() {
+    return this._transform.copy()
+  }
+
+  set transform(newValue) {
+    this._transform = newValue
+
+
+  }
+
+  /**
+   * The translation applied to the node. Animatable.
+   * @type {SCNVector3}
+   * @see https://developer.apple.com/reference/scenekit/scnnode/1408026-position
+   */
+  get position() {
+    return new SCNVector3(this._transform.m41, this._transform.m42, this._transform.m43)
+  }
+
+  set position(newValue) {
+    if(typeof newValue.x !== &apos;number&apos;
+      || typeof newValue.y !== &apos;number&apos;
+      || typeof newValue.z !== &apos;number&apos;){
+      throw &apos;error: SCNNode.position must have x, y, z value&apos;
+    }
+    this._transform.m41 = newValue.x
+    this._transform.m42 = newValue.y
+    this._transform.m43 = newValue.z
+  }
+
   /**
    * The world transform applied to the node.
    * @type {SCNMatrix4}
@@ -399,7 +525,10 @@ export default class SCNNode extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnnode/1407970-worldtransform
    */
   get worldTransform() {
-    return this._worldTransform
+    if(this._parent === null){
+      return this.transform
+    }
+    return SCNMatrix4Mult(this._parent.worldTransform, this._transform)
   }
 
   // Managing the Node Hierarchy
@@ -413,6 +542,12 @@ export default class SCNNode extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnnode/1407974-addchildnode
    */
   addChildNode(child) {
+    if(this._childNodes.indexOf(child) &gt;= 0){
+      return
+    }
+    child.removeFromParentNode()
+    this._childNodes.push(child)
+    child._parent = this
   }
 
   /**
@@ -424,6 +559,12 @@ export default class SCNNode extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnnode/1407958-insertchildnode
    */
   insertChildNodeAt(child, index) {
+    if(this._childNodes.indexOf(child) &gt;= 0){
+      return
+    }
+    child.removeFromParentNode()
+    this._insertObjectInChildNodesAtIndex(child, index)
+    this._parent = this
   }
 
   /**
@@ -434,6 +575,15 @@ export default class SCNNode extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnnode/1407991-removefromparentnode
    */
   removeFromParentNode() {
+    const parentNode = this._parent
+    if(parentNode === null){
+      return
+    }
+    const index = parentNode._childNodes.indexOf(this)
+    if(index &lt; 0){
+      return
+    }
+    this._removeObjectFromChildNodesAtIndex(index)
   }
 
   /**
@@ -446,7 +596,46 @@ export default class SCNNode extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnnode/1408002-replacechildnode
    */
   replaceChildNodeWith(oldChild, newChild) {
+    const index = this._childNodes.indexOf(oldChild)
+    if(index &lt; 0){
+      return
+    }
+    this._removeObjectFromChildNodesAtIndex(index)
+    this._insertObjectInChildNodesAtIndex(newChild, index)
   }
+
+  /**
+   *
+   * @access private
+   * @param {number} index
+   * @returns {void}
+   */
+  _removeObjectFromChildNodesAtIndex(index) {
+    const arr = this._childNodes.splice(index, 1)
+    if(arr.length === 0){
+      return
+    }
+    const obj = arr[0]
+
+    obj._parent = null
+    obj._transformUpToDate = false
+  }
+
+  /**
+   *
+   * @access private
+   * @param {SCNNode} object
+   * @param {number} index
+   * @returns {void}
+   */
+  _insertObjectInChildNodesAtIndex(object, index) {
+    const length = this._childNodes.length
+    if(index &gt; length){
+      throw `SCNNode.childNodes out of index: ${index} &gt; ${length}`
+    }
+    this._childNodes.splice(index, 0, object)
+  }
+
   /**
    * The node&#x2019;s parent in the scene graph hierarchy.
    * @type {?SCNNode}
@@ -459,11 +648,10 @@ export default class SCNNode extends NSObject {
   /**
    * An array of the node&#x2019;s children in the scene graph hierarchy.
    * @type {SCNNode[]}
-   * @desc 
    * @see https://developer.apple.com/reference/scenekit/scnnode/1407984-childnodes
    */
   get childNodes() {
-    return this._childNodes
+    return this._childNodes.slice(0)
   }
 
   // Searching the Node Hierarchy
@@ -471,13 +659,14 @@ export default class SCNNode extends NSObject {
   /**
    * Returns all nodes in the node&#x2019;s child node subtree that satisfy the test applied by a block.
    * @access public
-   * @param {function(arg1: SCNNode, arg2: UnsafeMutablePointer&lt;ObjCBool&gt;): boolean} predicate - The block to apply to the node&#x2019;s child and descendant nodes.The block takes two parameters:childThe child node currently being searched.stopA reference to a Boolean value. Set *stop to true in the block to abort further processing of the child node subtree.The block returns a Boolean value indicating whether to include the child node in the search results array.
+   * @param {function(child: SCNNode, stop: UnsafeMutablePointer&lt;ObjCBool&gt;): boolean} predicate - The block to apply to the node&#x2019;s child and descendant nodes .The block takes two parameters:child The child node currently being searched. stop A reference to a Boolean value. Set *stop to true in the block to abort further processing of the child node subtree.The block returns a Boolean value indicating whether to include the child node in the search results array.
    * @returns {SCNNode[]} - 
    * @desc Use this method to search for nodes using a test you specify. For example, you can search for empty nodes using a block that returns YES for nodes whose light, camera, and geometry properties are all nil.SceneKit uses a recursive preorder traversal to search the child node subtree&#x2014;that is, the block searches a node before it searches each of the node&#x2019;s children, and it searches all children of a node before searching any of that node&#x2019;s sibling nodes.
    * @see https://developer.apple.com/reference/scenekit/scnnode/1407982-childnodes
    */
   childNodesPassingTest(predicate) {
-    return null
+    let result = []
+    return result
   }
 
   /**
@@ -490,13 +679,25 @@ export default class SCNNode extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnnode/1407951-childnode
    */
   childNodeWithName(name, recursively) {
+    for(let i=0; i&lt;this._childNodes.length; i++){
+      if(this._childNodes[i].name === name){
+        return this._childNodes[i]
+      }
+      if(recursively){
+        const result = this._childNodes[i].childNodeWithName(name, recursively)
+        if(result !== null){
+          return result
+        }
+      }
+    }
+
     return null
   }
 
   /**
    * Executes the specified block for each of the node&#x2019;s child and descendant nodes.
    * @access public
-   * @param {function(arg1: SCNNode, arg2: UnsafeMutablePointer&lt;ObjCBool&gt;): void} block - The block to apply to the node&#x2019;s child and descendant nodes.The block takes two parameters:childThe child node currently being evaluated.stopA reference to a Boolean value. Set *stop to true in the block to abort further processing of the child node subtree.
+   * @param {function(child: SCNNode, stop: UnsafeMutablePointer&lt;ObjCBool&gt;): void} block - The block to apply to the node&#x2019;s child and descendant nodes.The block takes two parameters:childThe child node currently being evaluated.stopA reference to a Boolean value. Set *stop to true in the block to abort further processing of the child node subtree.
    * @returns {void}
    * @desc SceneKit uses a recursive preorder traversal to process the child node subtree&#x2014;that is, the block runs for a node before it runs for each of the node&#x2019;s children, and it processes all children of a node before processing any of that node&#x2019;s sibling nodes.
    * @see https://developer.apple.com/reference/scenekit/scnnode/1408032-enumeratechildnodes
@@ -699,6 +900,251 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    */
   convertTransformTo(transform, node) {
     return null
+  }
+
+  ///////////////////
+  // SCNActionable //
+  ///////////////////
+
+  // Running Actions
+
+  /**
+   * Required. Adds an action to the list of actions executed by the node.
+   * @access public
+   * @param {SCNAction} action - The action to be performed.
+   * @returns {void}
+   * @desc SceneKit begins running a newly added action when it prepares to render the next frame.
+   * @see https://developer.apple.com/reference/scenekit/scnactionable/1523164-runaction
+   */
+  runAction(action) {
+  }
+
+  /**
+   * Required. Adds an action to the list of actions executed by the node. SceneKit calls the specified block when the action completes.
+   * @access public
+   * @param {SCNAction} action - The action to be performed.
+   * @param {?function(): void} [block = null] - A completion block that SceneKit calls when the action completes.
+   * @returns {void}
+   * @desc The new action is processed the next time SceneKit prepares to render a frame.SceneKit calls your block after the action&#x2019;s duration is complete. For example, in a game you could use this method to show a Game Over message after performing a fade-out action on a node that displays a player character.
+   * @see https://developer.apple.com/reference/scenekit/scnactionable/1524219-runaction
+   */
+  runActionCompletionHandler(action, block = null) {
+  }
+
+  /**
+   * Required. Adds an identifiable action to the list of actions executed by the node.
+   * @access public
+   * @param {SCNAction} action - The action to be performed.
+   * @param {?string} key - A unique key used to identify the action.
+   * @returns {void}
+   * @desc This method is identical to runAction(_:), but the action is stored and identified so that you can retrieve or cancel it later. If an action using the same key is already running, SceneKit removes it before adding the new action.
+   * @see https://developer.apple.com/reference/scenekit/scnactionable/1524222-runaction
+   */
+  runActionForKey(action, key) {
+  }
+
+  /**
+   * Required. Adds an identifiable action to the list of actions executed by the node. SceneKit calls the specified block when the action completes.
+   * @access public
+   * @param {SCNAction} action - The action to be performed.
+   * @param {?string} key - A unique key used to identify the action.
+   * @param {?function(): void} [block = null] - A completion block called when the action completes.
+   * @returns {void}
+   * @desc This method is identical to runAction(_:completionHandler:), but the action is stored and identified so that you can retrieve or cancel it later. If an action using the same key is already running, SceneKit removes it before adding the new action.SceneKit calls your block after the action&#x2019;s duration is complete. For example, you can use this method with a wait action to execute some code after a timed delay. If during the delay period you need to prevent the code from running, use the removeAction(forKey:) method to cancel it.
+   * @see https://developer.apple.com/reference/scenekit/scnactionable/1522791-runaction
+   */
+  runActionForKeyCompletionHandler(action, key, block = null) {
+  }
+
+  // Inspecting a Node&#x2019;s Running Actions
+
+  /**
+   * Required. Returns an action associated with a specific key.
+   * @access public
+   * @param {string} key - A string that uniquely identifies a action.
+   * @returns {?SCNAction} - 
+   * @desc Use this method to retrieve actions you scheduled using the runAction(_:forKey:) or runAction(_:forKey:completionHandler:) method.
+   * @see https://developer.apple.com/reference/scenekit/scnactionable/1523287-action
+   */
+  actionForKey(key) {
+    return null
+  }
+  /**
+   * Required. A Boolean value that indicates whether the node is currently executing any actions.
+   * @type {boolean}
+   * @desc This value is true if the node has any executing actions; otherwise the value is false.
+   * @see https://developer.apple.com/reference/scenekit/scnactionable/1523794-hasactions
+   */
+  get hasActions() {
+    return this._hasActions
+  }
+  /**
+   * Required. The list of keys for which the node has attached actions.
+   * @type {string[]}
+   * @desc Use this property to list actions you scheduled using the runAction(_:forKey:) or runAction(_:forKey:completionHandler:) method.
+   * @see https://developer.apple.com/reference/scenekit/scnactionable/1523036-actionkeys
+   */
+  get actionKeys() {
+    return this._actionKeys
+  }
+
+  // Canceling a Node&#x2019;s Running Actions
+
+  /**
+   * Required. Removes an action associated with a specific key.
+   * @access public
+   * @param {string} key - A string that uniquely identifies a action.
+   * @returns {void}
+   * @desc If the node is currently running an action that matches the key, SceneKit removes that action from the node, skipping any remaining animation it would perform but keeping any changes already made to the node.Use this method to cancel actions you scheduled using the runAction(_:forKey:) or runAction(_:forKey:completionHandler:) method.
+   * @see https://developer.apple.com/reference/scenekit/scnactionable/1523617-removeaction
+   */
+  removeActionForKey(key) {
+  }
+
+  /**
+   * Required. Ends and removes all actions from the node.
+   * @access public
+   * @returns {void}
+   * @desc When SceneKit removes an action from a node, it skips any remaining animation the action would perform. However, any changes the action has already made to the node&#x2019;s state remain in effect.
+   * @see https://developer.apple.com/reference/scenekit/scnactionable/1524181-removeallactions
+   */
+  removeAllActions() {
+  }
+
+  ///////////////////
+  // SCNAnimatable //
+  ///////////////////
+
+  // Managing Animations
+
+  /**
+   * Required. Adds an animation object for the specified key.
+   * @access public
+   * @param {CAAnimation} animation - The animation object to be added.
+   * @param {?string} key - An string identifying the animation for later retrieval. You may pass nil if you don&#x2019;t need to reference the animation later.
+   * @returns {void}
+   * @desc Newly added animations begin executing after the current run loop cycle ends.SceneKit does not define any requirements for the contents of the key parameter&#x2014;it need only be unique among the keys for other animations you add. If you add an animation with an existing key, this method overwrites the existing animation.
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523386-addanimation
+   */
+  addAnimationForKey(animation, key) {
+  }
+
+  /**
+   * Required. Returns the animation with the specified key.
+   * @access public
+   * @param {string} key - A string identifying a previously added animation.
+   * @returns {?CAAnimation} - 
+   * @desc Attempting to modify any properties of the returned object results in undefined behavior.
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1524020-animation
+   */
+  animationForKey(key) {
+    return null
+  }
+
+  /**
+   * Required. Removes all the animations currently attached to the object.
+   * @access public
+   * @returns {void}
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1522762-removeallanimations
+   */
+  removeAllAnimations() {
+  }
+
+  /**
+   * Required. Removes the animation attached to the object with the specified key.
+   * @access public
+   * @param {string} key - A string identifying an attached animation to remove.
+   * @returns {void}
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1522880-removeanimation
+   */
+  removeAnimationForKey(key) {
+  }
+
+  /**
+   * Required. Removes the animation attached to the object with the specified key, smoothly transitioning out of the animation&#x2019;s effect.
+   * @access public
+   * @param {string} key - A string identifying an attached animation to remove.
+   * @param {number} duration - The duration for transitioning out of the animation&#x2019;s effect before it is removed.
+   * @returns {void}
+   * @desc Use this method to create smooth transitions between the effects of multiple animations. For example, the geometry loaded from a scene file for a game character may have associated animations for player actions such as walking and jumping. When the player lands from a jump, you remove the jump animation so the character continues walking. If you use the removeAnimation(forKey:) method to remove the jump animation, SceneKit abruptly switches from the current frame of the jump animation to the current frame of the walk animation. If you use the removeAnimation(forKey:fadeOutDuration:) method instead, SceneKit plays both animations at once during that duration and interpolates vertex positions from one animation to the other, creating a smooth transition.
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1522841-removeanimation
+   */
+   
+  removeAnimationForKeyFadeOutDuration(key, duration) {
+  }
+
+  /**
+   * Required. An array containing the keys of all animations currently attached to the object.
+   * @type {string[]}
+   * @desc This array contains all keys for which animations are attached to the object, or is empty if there are no attached animations. The ordering of animation keys in the array is arbitrary.
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523610-animationkeys
+   */
+  get animationKeys() {
+    return this._animationKeys
+  }
+
+  // Pausing and Resuming Animations
+
+  /**
+   * Required. Pauses the animation attached to the object with the specified key.
+   * @access public
+   * @param {string} key - A string identifying an attached animation.
+   * @returns {void}
+   * @desc This method has no effect if no animation is attached to the object with the specified key.
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523592-pauseanimation
+   */
+  pauseAnimationForKey(key) {
+  }
+
+  /**
+   * Required. Resumes a previously paused animation attached to the object with the specified key.
+   * @access public
+   * @param {string} key - A string identifying an attached animation.
+   * @returns {void}
+   * @desc This method has no effect if no animation is attached to the object with the specified key or if the specified animation is not currently paused.
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523332-resumeanimation
+   */
+  resumeAnimationForKey(key) {
+  }
+
+  /**
+   * Required. Returns a Boolean value indicating whether the animation attached to the object with the specified key is paused.
+   * @access public
+   * @param {string} key - A string identifying an attached animation.
+   * @returns {boolean} - 
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523703-isanimationpaused
+   */
+  isAnimationPausedForKey(key) {
+    return false
+  }
+
+  // Instance Methods
+
+  /**
+   * Required. 
+   * @access public
+   * @param {number} speed - 
+   * @param {string} key - 
+   * @returns {void}
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1778343-setanimationspeed
+   */
+  setAnimationSpeedForKey(speed, key) {
+  }
+
+  ///////////////////////
+  // SCNBoundingVolume //
+  ///////////////////////
+
+  // Working with Bounding Volumes
+
+  /**
+   * The center point and radius of the object&#x2019;s bounding sphere.
+   * @type {{center: SCNVector3, radius: number}}
+   * @desc Scene Kit defines a bounding sphere in the local coordinate space using a center point and a radius. For example, if a node&#x2019;s bounding sphere has the center point {3, 1, 4} and radius 2.0, all points in the vertex data of node&#x2019;s geometry (and any geometry attached to its child nodes) lie within 2.0 units of the center point.The coordinates provided when reading this property are valid only if the object has a volume to be measured. For a geometry containing no vertex data or a node containing no geometry (and whose child nodes, if any, contain no geometry), the values center and radius are both zero.
+   * @see https://developer.apple.com/reference/scenekit/scnboundingvolume/2034707-boundingsphere
+   */
+  get boundingSphere() {
+    return this._boundingSphere
   }
 }
 </code></pre>
