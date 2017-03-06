@@ -1,17 +1,16 @@
 'use strict'
 
-import vector_float4 from '../undefined/vector_float4'
 import SCNVector4 from './SCNVector4'
 
 /**
  * 
  * @access public
  * @param {SCNVector4} v - 
- * @returns {vector_float4} - 
+ * @returns {number[]} - 
  * @see https://developer.apple.com/reference/scenekit/1523001-scnvector4tofloat4
  */
 const SCNVector4ToFloat4 = function(v) {
-  return null
+  return [v.x, v.y, v.z, v.w]
 }
 
 export default SCNVector4ToFloat4

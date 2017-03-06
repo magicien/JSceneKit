@@ -12,7 +12,7 @@ import SCNVector3 from './SCNVector3'
  * @see https://developer.apple.com/reference/scenekit/1409705-scnvector3make
  */
 const SCNVector3Make = function(x, y, z) {
-  return null
+  return new SCNVector3(x, y, z)
 }
 
 export default SCNVector3Make

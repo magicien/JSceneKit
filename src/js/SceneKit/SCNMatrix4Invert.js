@@ -10,7 +10,7 @@ import SCNMatrix4 from './SCNMatrix4'
  * @see https://developer.apple.com/reference/scenekit/1409682-scnmatrix4invert
  */
 const SCNMatrix4Invert = function(m) {
-  return null
+  return m.invert()
 }
 
 export default SCNMatrix4Invert

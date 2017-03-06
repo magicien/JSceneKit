@@ -1,6 +1,6 @@
 'use strict'
 
-import GLKVector4 from '../undefined/GLKVector4'
+//import GLKVector4 from '../undefined/GLKVector4'
 import SCNVector4 from './SCNVector4'
 
 /**

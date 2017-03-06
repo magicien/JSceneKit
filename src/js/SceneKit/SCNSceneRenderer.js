@@ -17,14 +17,12 @@ import SCNSceneRendererDelegate from './SCNSceneRendererDelegate'
  * @see https://developer.apple.com/reference/scenekit/scnscenerenderer
  */
 export default class SCNSceneRenderer {
-
   /**
    * constructor
    * @access public
    * @returns {void}
    */
-  init() {
-
+  constructor() {
     // Presenting a Scene
 
     /**
@@ -282,6 +280,7 @@ export default class SCNSceneRenderer {
   get currentRenderCommandEncoder() {
     return this._currentRenderCommandEncoder
   }
+
   /**
    * Required. The Metal device this renderer uses for rendering.
    * @type {?MTLDevice}
@@ -291,6 +290,7 @@ export default class SCNSceneRenderer {
   get device() {
     return this._device
   }
+
   /**
    * Required. The Metal command queue this renderer uses for rendering.
    * @type {?MTLCommandQueue}
@@ -300,6 +300,7 @@ export default class SCNSceneRenderer {
   get commandQueue() {
     return this._commandQueue
   }
+
   /**
    * Required. The Metal pixel format for the renderer’s color output.
    * @type {MTLPixelFormat}
@@ -309,6 +310,7 @@ export default class SCNSceneRenderer {
   get colorPixelFormat() {
     return this._colorPixelFormat
   }
+
   /**
    * Required. The Metal pixel format for the renderer’s depth buffer.
    * @type {MTLPixelFormat}
@@ -318,6 +320,7 @@ export default class SCNSceneRenderer {
   get depthPixelFormat() {
     return this._depthPixelFormat
   }
+
   /**
    * Required. The Metal pixel format for the renderer’s stencil buffer.
    * @type {MTLPixelFormat}
@@ -340,6 +343,7 @@ export default class SCNSceneRenderer {
   }
 
   // Working With Positional Audio
+
   /**
    * Required. The 3D audio mixing node SceneKit uses for positional audio effects.
    * @type {AVAudioEnvironmentNode}
@@ -349,6 +353,7 @@ export default class SCNSceneRenderer {
   get audioEnvironmentNode() {
     return this._audioEnvironmentNode
   }
+
   /**
    * Required. The audio engine SceneKit uses for playing scene sounds.
    * @type {AVAudioEngine}

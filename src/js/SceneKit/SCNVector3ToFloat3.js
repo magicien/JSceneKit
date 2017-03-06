@@ -10,7 +10,7 @@ import SCNVector3 from './SCNVector3'
  * @see https://developer.apple.com/reference/scenekit/1523448-scnvector3tofloat3
  */
 const SCNVector3ToFloat3 = function(v) {
-  return null
+  return [v.x, v.y, v.z]
 }
 
 export default SCNVector3ToFloat3

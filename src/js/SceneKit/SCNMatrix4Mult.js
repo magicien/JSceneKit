@@ -12,7 +12,7 @@ import SCNMatrix4 from './SCNMatrix4'
  * @see https://developer.apple.com/reference/scenekit/1409697-scnmatrix4mult
  */
 const SCNMatrix4Mult = function(a, b) {
-  return null
+  return a.mult(b)
 }
 
 export default SCNMatrix4Mult

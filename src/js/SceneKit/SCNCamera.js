@@ -42,14 +42,14 @@ export default class SCNCamera extends NSObject {
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scncamera/1436592-znear
      */
-    this.zNear = 0
+    this.zNear = 1.0
 
     /**
      * The camera’s far depth limit. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scncamera/1436596-zfar
      */
-    this.zFar = 0
+    this.zFar = 100.0
 
     /**
      * The camera’s field of view, in degrees, on the vertical axis. Animatable.
@@ -87,7 +87,7 @@ export default class SCNCamera extends NSObject {
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scncamera/1436612-orthographicscale
      */
-    this.orthographicScale = 0
+    this.orthographicScale = 1.0
 
 
     // Choosing Nodes to Be Visible to the Camera
@@ -97,7 +97,7 @@ export default class SCNCamera extends NSObject {
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scncamera/1436625-categorybitmask
      */
-    this.categoryBitMask = 0
+    this.categoryBitMask = -1
 
 
     // Adding Depth of Field and Blur Effects
@@ -107,35 +107,35 @@ export default class SCNCamera extends NSObject {
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scncamera/1436600-focaldistance
      */
-    this.focalDistance = 0
+    this.focalDistance = 10.0
 
     /**
      * The width of the distance range at which objects appear in sharp focus. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scncamera/1436604-focalsize
      */
-    this.focalSize = 0
+    this.focalSize = 0.0
 
     /**
      * The maximum amount of blurring, in pixels, applied to areas outside the camera’s depth of field. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scncamera/1436606-focalblurradius
      */
-    this.focalBlurRadius = 0
+    this.focalBlurRadius = 0.0
 
     /**
      * A factor that determines the transition between in-focus and out-of-focus areas. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scncamera/1436594-aperture
      */
-    this.aperture = 0
+    this.aperture = 0.125
 
     /**
      * A factor that determines the intensity of motion blur effects. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scncamera/1644099-motionblurintensity
      */
-    this.motionBlurIntensity = 0
+    this.motionBlurIntensity = 0.0
 
 
     // Adding High Dynamic Range Effects
@@ -159,28 +159,28 @@ export default class SCNCamera extends NSObject {
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scncamera/1644097-averagegray
      */
-    this.averageGray = 0
+    this.averageGray = 0.18
 
     /**
      * The luminance level to use as the upper end of a tone mapping curve.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scncamera/1644110-whitepoint
      */
-    this.whitePoint = 0
+    this.whitePoint = 1.0
 
     /**
      * The minimum exposure value to use in tone mapping.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scncamera/1644103-minimumexposure
      */
-    this.minimumExposure = 0
+    this.minimumExposure = -15.0
 
     /**
      * The minimum exposure value to use in tone mapping.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scncamera/1644120-maximumexposure
      */
-    this.maximumExposure = 0
+    this.maximumExposure = 15.0
 
 
     // Adding Automatic HDR Exposure Adaptation
@@ -197,14 +197,14 @@ export default class SCNCamera extends NSObject {
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scncamera/1644093-exposureadaptationbrighteningspe
      */
-    this.exposureAdaptationBrighteningSpeedFactor = 0
+    this.exposureAdaptationBrighteningSpeedFactor = 0.4
 
     /**
      * The relative duration of automatically animated exposure transitions from bright to dark areas.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scncamera/1644094-exposureadaptationdarkeningspeed
      */
-    this.exposureAdaptationDarkeningSpeedFactor = 0
+    this.exposureAdaptationDarkeningSpeedFactor = 0.6
 
 
     // Adjusting Rendered Colors
@@ -214,16 +214,16 @@ export default class SCNCamera extends NSObject {
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scncamera/1644112-contrast
      */
-    this.contrast = 0
+    this.contrast = 0.0
 
     /**
      * An adjustment factor to apply to the overall color saturation of the rendered scene.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scncamera/1644100-saturation
      */
-    this.saturation = 0
+    this.saturation = 1.0
 
-    this._colorGrading = null
+    this._colorGrading = new SCNMaterialProperty()
 
     // Adding Stylistic Visual Effects
 
@@ -232,49 +232,49 @@ export default class SCNCamera extends NSObject {
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scncamera/1644104-bloomintensity
      */
-    this.bloomIntensity = 0
+    this.bloomIntensity = 0.0
 
     /**
      * The brightness threshold at which to apply a bloom effect to highlights in the rendered scene. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scncamera/1644098-bloomthreshold
      */
-    this.bloomThreshold = 0
+    this.bloomThreshold = 0.5
 
     /**
      * The radius, in pixels, for the blurring portion of the bloom effect applied to highlights in the rendered scene. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scncamera/1644096-bloomblurradius
      */
-    this.bloomBlurRadius = 0
+    this.bloomBlurRadius = 4.0
 
     /**
      * The blend factor for fading the color fringing effect applied to the rendered scene.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scncamera/1644108-colorfringeintensity
      */
-    this.colorFringeIntensity = 0
+    this.colorFringeIntensity = 1.0
 
     /**
      * The magnitude of color fringing effect to apply to the rendered scene.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scncamera/1644113-colorfringestrength
      */
-    this.colorFringeStrength = 0
+    this.colorFringeStrength = 0.0
 
     /**
      * The magnitude of vignette (darkening around edges) effect to apply to the rendered scene.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scncamera/1644106-vignettingintensity
      */
-    this.vignettingIntensity = 0
+    this.vignettingIntensity = 1.0
 
     /**
      * The amount of the rendered scene to darken with a vignette effect.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scncamera/1644118-vignettingpower
      */
-    this.vignettingPower = 0
+    this.vignettingPower = 0.0
 
 
     // Instance Properties
@@ -310,5 +310,68 @@ export default class SCNCamera extends NSObject {
    */
   get colorGrading() {
     return this._colorGrading
+  }
+
+  /**
+   * @access private
+   * @param {CGRect} viewRect
+   * @returns {void}
+   */
+  _updateProjectionTransform(viewRect) {
+    const m = new SCNMatrix4()
+    const left = viewRect.minX
+    const right = viewRect.maxX
+    const top = viewRect.maxY
+    const bottom = viewRect.minY
+    const aspect = viewRect.size.width / viewRect.size.height
+
+    if(this.usesOrthographicProjection){
+      //this.orthographicScale
+      m.m11 = 2 / (right - left)
+      m.m12 = 0
+      m.m13 = 0
+      m.m14 = -(right + left) / (right - left)
+      m.m21 = 0
+      m.m22 = 2 / (top - bottom)
+      m.m23 = 0
+      m.m24 = -(top + bottom) / (top - bottom)
+      m.m31 = 0
+      m.m32 = 0
+      m.m33 = -2 / (this.zFar - this.zNear)
+      m.m34 = -(this.zFar + this.zNear) / (this.zFar - this.zNear)
+      m.m41 = 0
+      m.m42 = 0
+      m.m43 = 0
+      m.m44 = 1
+    }else{
+      // perspective
+      //this.yFov
+      //this.xFov
+      //this.automaticallyAdjustsZRange
+      let yfov =  60.0
+      if(this.yFov > 0){
+        yfov = this.yFov
+      }
+      // FIXME: use xFov
+
+      const cot = 1.0 / Math.tan(yfov * Math.PI / 360.0)
+      m.m11 = cot / aspect
+      m.m12 = 0
+      m.m13 = 0
+      m.m14 = 0
+      m.m21 = 0
+      m.m22 = cot
+      m.m23 = 0
+      m.m24 = 0
+      m.m31 = 0
+      m.m32 = 0
+      m.m33 = -(this.zFar + this.zNear) / (this.zFar - this.zNear)
+      m.m34 = -2 * this.zFar * this.zNear / (this.zFar - this.zNear)
+      m.m41 = 0
+      m.m42 = 0
+      m.m43 = -1
+      m.m44 = 0
+    }
+    this.projectionTransform = m
   }
 }

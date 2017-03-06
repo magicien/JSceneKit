@@ -26,31 +26,10 @@ const _Semantic = {
 export default class SCNGeometrySource extends NSObject {
 
   /**
-   * constructor
-   * @access public
-   * @returns {void}
-   */
-  constructor() {
-    super()
-
-    // Inspecting a Geometry Source
-
-    this._data = null
-    this._semantic = null
-    this._vectorCount = 0
-    this._usesFloatComponents = false
-    this._componentsPerVector = 0
-    this._bytesPerComponent = 0
-    this._dataOffset = 0
-    this._dataStride = 0
-  }
-
-  // Creating Geometry Sources
-
-  /**
    * Creates a geometry source from the specified data and options.
    * @access public
-   * @param {Data} data - The data for the geometry source.
+   * @constructor
+   * @param {number[]} data - The data for the geometry source.
    * @param {SCNGeometrySource.Semantic} semantic - The semantic value (or attribute) that the geometry source describes for each vertex. See Geometry Semantic Identifiers for available values.
    * @param {number} vectorCount - The number of geometry source vectors.
    * @param {boolean} floatComponents - A Boolean value that indicates whether vector components are floating-point values. Specify true for floating-point values, or false for integer values.
@@ -58,23 +37,90 @@ export default class SCNGeometrySource extends NSObject {
    * @param {number} bytesPerComponent - The size, in bytes, of each vector component.
    * @param {number} offset - The offset, in bytes, from the beginning of the data to the first vector component to be used in the geometry source.
    * @param {number} stride - The number of bytes from each vector to the next in the data.
-   * @returns {void}
    * @desc A geometry source’s data is an array of vectors, each of which represents a particular attribute (or semantic) of a vertex in the geometry. The other parameters determine how SceneKit interprets this data. For example, an array of vertex positions may have three 32-bit floating-point components per vector, but an array of texture coordinates may have two 8-bit integer coponents per vector. You can use the offset and stride parameters together to interleave data for multiple geometry sources in the same array, improving rendering performance. See SCNGeometrySource for details.To create a custom SCNGeometry object from the geometry source, use the init(sources:elements:) method.
    * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1523320-init
    */
-  //initUsesFloatComponentsDataOffsetDataStride(data, semantic, vectorCount, floatComponents, componentsPerVector, bytesPerComponent, offset, stride) {
-  static geometrySourceWithDataSemanticVectorCountFloatComponentsComponentsPerVectorBytesPerComponentDataOffsetDataStride(data, semantic, vectorCount, floatComponents, componentsPerVector, bytesPerComponent, dataOffset, dataStride) {
-    const ins = new SCNGeometrySource()
-    ins._data = data
-    ins._semantic = semantic
-    ins._vectorCount = vectorCount
-    ins._usesFloatComponents = floatComponents
-    ins._componentsPerVector = componentsPerVector
-    ins._bytesPerComponent = bytesPerComponent
-    ins._dataOffset = dataOffset
-    ins._dataStride = dataStride
+  constructor(data, semantic, vectorCount, floatComponents, componentsPerVector, bytesPerComponent, offset, stride) {
+    super()
 
-    return ins
+    // Inspecting a Geometry Source
+    this._data = data
+    this._semantic = semantic
+    this._vectorCount = vectorCount
+    this._usesFloatComponents = floatComponents
+    this._componentsPerVector = componentsPerVector
+    this._bytesPerComponent = bytesPerComponent
+    this._dataOffset = offset
+    this._dataStride = stride
+
+    /**
+     * @type {TypedArray}
+     * @access private
+     */
+    this._glData = null
+    if(floatComponents){
+      if(bytesPerComponent == 4){
+        this._glData = new Float32Array(data)
+      }else if(bytesPerComponent == 8){
+        this._glData = new Float64Array(data)
+      }
+    }else{
+      if(bytesPerComponent == 1){
+        this._glData = new Uint8Array(data)
+      }else if(bytesPerComponent == 2){
+        this._glData = new Uint16Array(data)
+      }else if(bytesPerComponent == 4){
+        this._glData = new Uint32Array(data)
+      }
+    }
+
+    if(this._glData === null){
+      throw new Error(`unknown buffer data type: float: ${floatComponents}, size: ${bytesPerComponent}`)
+    }
+
+    this._buffer = null
+  }
+
+  _createBuffer(context) {
+    const gl = context
+    this._buffer = gl.createBuffer()
+    gl.bindBuffer(gl.ARRAY_BUFFER, this._buffer)
+    // FIXME: dynamic data
+    gl.bufferData(gl.ARRAY_BUFFER, this._glData, gl.STATIC_DRAW)
+    return this._buffer
+  }
+
+
+  // Creating Geometry Sources
+
+  /**
+   * Creates a geometry source from the specified data and options.
+   * @access public
+   * @param {number[]} data - The data for the geometry source.
+   * @param {SCNGeometrySource.Semantic} semantic - The semantic value (or attribute) that the geometry source describes for each vertex. See Geometry Semantic Identifiers for available values.
+   * @param {number} vectorCount - The number of geometry source vectors.
+   * @param {boolean} floatComponents - A Boolean value that indicates whether vector components are floating-point values. Specify true for floating-point values, or false for integer values.
+   * @param {number} componentsPerVector - The number of scalar components in each vector.
+   * @param {number} bytesPerComponent - The size, in bytes, of each vector component.
+   * @param {number} offset - The offset, in bytes, from the beginning of the data to the first vector component to be used in the geometry source.
+   * @param {number} stride - The number of bytes from each vector to the next in the data.
+   * @returns {SCNGeometrySource}
+   * @desc A geometry source’s data is an array of vectors, each of which represents a particular attribute (or semantic) of a vertex in the geometry. The other parameters determine how SceneKit interprets this data. For example, an array of vertex positions may have three 32-bit floating-point components per vector, but an array of texture coordinates may have two 8-bit integer coponents per vector. You can use the offset and stride parameters together to interleave data for multiple geometry sources in the same array, improving rendering performance. See SCNGeometrySource for details.To create a custom SCNGeometry object from the geometry source, use the init(sources:elements:) method.
+   * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1523320-init
+   */
+  static geometrySourceWithDataSemanticVectorCountFloatComponentsComponentsPerVectorBytesPerComponentDataOffsetDataStride(data, semantic, vectorCount, floatComponents, componentsPerVector, bytesPerComponent, dataOffset, dataStride) {
+    const instance = new SCNGeometrySource(
+      data,
+      semantic,
+      vectorCount,
+      floatComponents,
+      componentsPerVector,
+      bytesPerComponent,
+      dataOffset,
+      dataStride
+    )
+
+    return instance
   }
 
   /**
@@ -82,24 +128,56 @@ export default class SCNGeometrySource extends NSObject {
    * @access public
    * @param {SCNVector3[]} vertices - An array of three-component vectors, each of which represents a vertex position for the geometry source.
    * @param {number} count - The number of vertices
-   * @returns {void}
+   * @returns {SCNGeometrySource}
    * @desc SceneKit converts this data to its own format to optimize rendering performance. To read the converted data, examine the properties of the created SCNGeometrySource object.To create a custom SCNGeometry object from the geometry source, use the init(sources:elements:) method.
    * @see https://developer.apple.com/reference/scenekit/scngeometrysource/2034708-init
    */
   static geometrySourceWithVerticesCount(vertices, count) {
+    const data = []
+    for(let i=0; i<count; i++){
+      data.push(vertices[i].x, vertices[i].y, vertices[i].z)
+    }
+
+    const instance = new SCNGeometrySource(
+      data, // data
+      SCNGeometrySource.Semantic.vertex, // semantic
+      count, // vectorCount
+      true, // floatComponents
+      3, // componentsPerVector
+      4, // bytesPerComponent
+      0, // offset
+      12 // stride
+    )
+    return instance
   }
 
   /**
    * Creates a geometry source from an array of texture coordinate points.
    * @access public
-   * @param {UnsafePointer<CGPoint>} texcoord - An array of points, each of which represents a texture coordinate pair for the geometry source.
+   * @param {CGPoint[]} texcoord - An array of points, each of which represents a texture coordinate pair for the geometry source.
    * @param {number} count - The number of texture coordinate points.
-   * @returns {void}
+   * @returns {SCNGeometrySource}
    * @desc SceneKit converts this data to its own format to optimize rendering performance. To read the converted data, examine the properties of the created SCNGeometrySource object.To create a custom SCNGeometry object from the geometry source, use the init(sources:elements:) method.
    * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1522718-init
    */
   static geometrySourceWithTextureCoordinatesCount(texcoord, count) {
-    
+    const data = []
+    for(let i=0; i<count; i++){
+      data.push(texcoord[i].x, texcoord[i].y)
+    }
+
+    const instance = new SCNGeometrySource(
+      data, // data
+      SCNGeometrySource.Semantic.texcoord, // semantic
+      count, // vectorCount
+      true, // floatComponents
+      2, // componentsPerVector
+      4, // bytesPerComponent
+      0, // offset
+      8 // stride
+    )
+    return instance
+
   }
 
   /**
@@ -107,10 +185,25 @@ export default class SCNGeometrySource extends NSObject {
    * @access public
    * @param {SCNVector3[]} normals - An array of vectors, which represents a normal vector for the geometry source.
    * @param {number} count - The number of normals
-   * @returns {void}
+   * @returns {SCNGeometrySource}
    */
   static geometrySourceWithNormalsCount(normals, count) {
-    
+    const data = []
+    for(let i=0; i<count; i++){
+      data.push(normals[i].x, normals[i].y, normals[i].z)
+    }
+
+    const instance = new SCNGeometrySource(
+      data, // data
+      SCNGeometrySource.Semantic.normal, // semantic
+      count, // vectorCount
+      true, // floatComponents
+      3, // componentsPerVector
+      4, // bytesPerComponent
+      0, // offset
+      12 // stride
+    )
+    return instance
   }
 
   // Inspecting a Geometry Source
@@ -122,7 +215,7 @@ export default class SCNGeometrySource extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1522881-data
    */
   get data() {
-    return this._data
+    return this._data.slice(0)
   }
 
   /**
@@ -206,7 +299,7 @@ export default class SCNGeometrySource extends NSObject {
    * @param {number} vertexCount - The number of vertices in the geometry source.
    * @param {number} offset - The offset, in bytes, from the beginning of the data to the first vector component to be used in the geometry source.
    * @param {number} stride - The number of bytes from each vector to the next in the data.
-   * @returns {void}
+   * @returns {SCNGeometrySource}
    * @desc Use this method to create a geometry source whose underlying data can be modified at render time by a Metal compute shader running on the GPU. To create a MTLBuffer object for use with a geometry source, use the device property of the SceneKit view (or other renderer) responsible for drawing your scene.// Create and fill a buffer.
 id <MTLDevice> device = self.scnView.device;
 self.geometryBuffer = [device newBufferWithBytes:myData length:myLength options:myOptions];
@@ -262,7 +355,7 @@ SCNGeometrySource *source = [SCNGeometrySource geometrySourceWithBuffer:buffer
 
    * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1522873-init
    */
-  initBufferDataOffsetDataStride(mtlBuffer, vertexFormat, semantic, vertexCount, offset, stride) {
+  static initBufferDataOffsetDataStride(mtlBuffer, vertexFormat, semantic, vertexCount, offset, stride) {
   }
 
   // Structures

@@ -5,6 +5,7 @@ import SCNAnimatable from './SCNAnimatable'
 import SCNMatrix4 from './SCNMatrix4'
 import SCNWrapMode from './SCNWrapMode'
 import SCNFilterMode from './SCNFilterMode'
+import SKColor from '../SpriteKit/SKColor'
 
 
 /**
@@ -115,6 +116,17 @@ export default class SCNMaterialProperty extends NSObject {
      * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395376-bordercolor
      */
     this.borderColor = null
+  }
+
+  /**
+   * @access public
+   * @returns {Float32Array}
+   */
+  float32Array() {
+    if(this.contents instanceof SKColor){
+      return this.contents.float32Array()
+    }
+    return new Float32Array()
   }
 }
 

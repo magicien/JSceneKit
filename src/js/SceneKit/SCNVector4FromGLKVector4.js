@@ -1,7 +1,7 @@
 'use strict'
 
 import SCNVector4 from './SCNVector4'
-import GLKVector4 from '../undefined/GLKVector4'
+//import GLKVector4 from '../undefined/GLKVector4'
 
 /**
  * Returns a four-element SceneKit vector structure corresponding to a GLKit vector structure.

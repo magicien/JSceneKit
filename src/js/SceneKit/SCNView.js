@@ -1,11 +1,14 @@
 'use strict'
 
-import SCNSceneRenderer from './SCNSceneRenderer'
+import SCNRenderer from './SCNRenderer'
 import SCNTechniqueSupport from './SCNTechniqueSupport'
 import CGRect from '../CoreGraphics/CGRect'
 import SCNScene from './SCNScene'
 import SCNRenderingAPI from './SCNRenderingAPI'
 import SCNAntialiasingMode from './SCNAntialiasingMode'
+import SCNNode from './SCNNode'
+import SCNCamera from './SCNCamera'
+import SCNMatrix4 from './SCNMatrix4'
 import SKColor from '../SpriteKit/SKColor'
 
 const _Option = {
@@ -35,6 +38,9 @@ export default class SCNView {
    * @see https://developer.apple.com/reference/scenekit/scnview/1524215-init
    */
   constructor(frame, options = null) {
+    if(frame === undefined){
+      frame = CGRect.rectWithXYWidthHeight(0, 0, 300, 300)
+    }
 
     // Specifying a Scene
 
@@ -98,6 +104,12 @@ export default class SCNView {
     //this.openGLContext = null
 
     /**
+     * @access private
+     * @type {WebGL2RenderingContext}
+     */
+    this._context = null
+
+    /**
      * The view’s OpenGL pixel format.
      * @type {?NSOpenGLPixelFormat}
      * @see https://developer.apple.com/reference/scenekit/scnview/1523612-pixelformat
@@ -108,93 +120,30 @@ export default class SCNView {
     // SCNSceneRenderer
     ////////////////////////////////////////////////
 
-    // Presenting a Scene
-
     /**
-     * Required. The scene to be displayed.
-     * @type {?SCNScene}
-     * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1523956-scene
+     * Required. The graphics technology SceneKit uses to render the scene.
+     * @access private
+     * @type {SCNRenderingAPI}
      */
-    //this.scene = null
-
-
-    // Managing Scene Display
-
-    /**
-     * Required. The node from which the scene’s contents are viewed for rendering.
-     * @type {?SCNNode}
-     * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1523982-pointofview
-     */
-    this.pointOfView = null
-
-    /**
-     * Required. A Boolean value that determines whether SceneKit automatically adds lights to a scene.
-     * @type {boolean}
-     * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1523812-autoenablesdefaultlighting
-     */
-    this.autoenablesDefaultLighting = false
-
-    /**
-     * Required. A Boolean value that determines whether SceneKit applies jittering to reduce aliasing artifacts.
-     * @type {boolean}
-     * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1524026-isjitteringenabled
-     */
-    this.isJitteringEnabled = false
-
-    /**
-     * Required. A Boolean value that determines whether SceneKit displays rendering performance statistics in an accessory view.
-     * @type {boolean}
-     * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1522763-showsstatistics
-     */
-    this.showsStatistics = false
-
-    /**
-     * Required. Options for drawing overlay content in a scene that can aid debugging.
-     * @type {SCNDebugOptions}
-     * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1523281-debugoptions
-     */
-    this.debugOptions = null
-
     this._renderingAPI = SCNRenderingAPI.webGL
 
-    // Managing Scene Animation Timing
-
-    /**
-     * Required. The current scene time.
-     * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1522680-scenetime
-     */
-    this.sceneTime = 0
-
-    this._isPlaying = false
-
-    /**
-     * Required. A Boolean value that determines whether SceneKit restarts the scene time after all animations in the scene have played.
-     * @type {boolean}
-     * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1522878-loops
-     */
-    this.loops = true
-
-
     // Participating in the Scene Rendering Process
+
+    /**
+     * Required. A delegate object that receives messages about SceneKit’s rendering process.
+     * @access private
+     * @type {?SCNSceneRendererDelegate}
+     */
     this._delegate = null
 
     // Customizing Scene Rendering with Metal
 
-    this._currentRenderCommandEncoder = null
+    //this._currentRenderCommandEncoder = null
     this._device = null // MTLIGAccelDevice
-    this._commandQueue = null // MTLIGAccessCommandQueue
-    this._colorPixelFormat = null // MTLPixelFormat
-    this._depthPixelFormat = null // MTLPixelFormat
-    this._stencilPixelFormat = null // MTLPixelFormat
-
-    // Customizing Scene Rendering with OpenGL
-
-    /**
-     * @access private
-     * @type {?WebGLRenderingContext}
-     */
-    this._context = null
+    //this._commandQueue = null // MTLIGAccessCommandQueue
+    //this._colorPixelFormat = null // MTLPixelFormat
+    //this._depthPixelFormat = null // MTLPixelFormat
+    //this._stencilPixelFormat = null // MTLPixelFormat
 
     // Rendering Sprite Kit Content over a Scene
 
@@ -203,7 +152,7 @@ export default class SCNView {
      * @type {?SKScene}
      * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1524051-overlayskscene
      */
-    this.overlaySKScene = null
+    //this.overlaySKScene = null
 
     // Working With Positional Audio
 
@@ -212,10 +161,10 @@ export default class SCNView {
      * @type {?SCNNode}
      * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1523747-audiolistener
      */
-    this.audioListener = null
+    //this.audioListener = null
 
-    this._audioEnvironmentNode = null
-    this._audioEngine = null
+    //this._audioEnvironmentNode = null
+    //this._audioEngine = null
 
     // Instance Properties
 
@@ -225,7 +174,7 @@ export default class SCNView {
      * @deprecated
      * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1522854-currenttime
      */
-    this.currentTime = 0
+    //this.currentTime = 0
 
 
     ////////////////////////////////////////////////
@@ -246,9 +195,17 @@ export default class SCNView {
 
     /**
      * @access private
+     * @type {CGRect}
+     */
+    this._frame = frame
+
+    /**
+     * @access private
      * @type {HTMLCanvasElement}
      */
     this._canvas = document.createElement('canvas')
+    this._canvas.width = frame.width
+    this._canvas.height = frame.height
 
     /**
      * @access private
@@ -284,7 +241,8 @@ export default class SCNView {
      * @access private
      * @type {SCNSceneRenderer}
      */
-    this._renderer = new SCNSceneRenderer()
+    this._renderer = new SCNRenderer()
+    this._renderer.scene = this._scene
 
     /**
      * @access private
@@ -311,7 +269,8 @@ export default class SCNView {
       failIfMajorPerformanceCaveat: false
     }
 
-    const contextNames = ['webgl', 'webkit-3d', 'moz-webgl', 'experimental-webgl']
+    //const contextNames = ['webgl2', 'webgl', 'webkit-3d', 'moz-webgl', 'experimental-webgl']
+    const contextNames = ['webgl2']
     for(let name of contextNames){
       try{
         this._context = this._canvas.getContext(name, opt)
@@ -323,8 +282,13 @@ export default class SCNView {
     if(!this._context){
       throw `can't create WebGL context`
     }
+    this._context.viewport(frame.x, frame.y, frame.width, frame.height)
 
     this._program = this._context.createProgram()
+
+    this._renderer._context = this._context
+    this._renderer.program = this._program
+    this._renderer._viewRect = frame
   }
 
   /**
@@ -342,7 +306,7 @@ export default class SCNView {
    * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1523401-isplaying
    */
   get isPlaying() {
-    this._isPlaying
+    this._renderer.isPlaying
   }
 
   /**
@@ -379,6 +343,7 @@ export default class SCNView {
   set scene(newValue) {
     // FIXME: it should not be changed while drawing
     this._scene = newValue
+    this._renderer.scene = this._scene
   }
 
 
@@ -473,6 +438,97 @@ export default class SCNView {
   }
 
   // Managing Scene Display
+
+  /**
+   * Required. The node from which the scene’s contents are viewed for rendering.
+   * @type {?SCNNode}
+   * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1523982-pointofview
+   */
+  get pointOfView() {
+    return this._renderer.pointOfView
+  }
+
+  set pointOfView(newValue) {
+    this._renderer.pointOfView = newValue
+  }
+
+  /**
+   * Required. A Boolean value that determines whether SceneKit automatically adds lights to a scene.
+   * @type {boolean}
+   * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1523812-autoenablesdefaultlighting
+   */
+  get autoenablesDefaultLighting() {
+    return this._renderer.autoenablesDefaultLighting
+  }
+
+  set autoenablesDefaultLighting(newValue) {
+    this._renderer.autoenablesDefaultLighting = newValue
+  }
+
+  /**
+   * Required. A Boolean value that determines whether SceneKit applies jittering to reduce aliasing artifacts.
+   * @type {boolean}
+   * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1524026-isjitteringenabled
+   */
+  get isJitteringEnabled() {
+    return this._renderer.isJitteringEnabled
+  }
+  
+  set isJitteringEnabled(newValue) {
+    this._renderer.isJitteringEnabled = newValue
+  }
+
+  /**
+   * Required. A Boolean value that determines whether SceneKit displays rendering performance statistics in an accessory view.
+   * @type {boolean}
+   * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1522763-showsstatistics
+   */
+  get showsStatistics() {
+    return this._renderer.showsStatistics
+  }
+
+  set showsStatistics(newValue) {
+    this._renderer.showsStatistics = newValue
+  }
+
+  /**
+   * Required. Options for drawing overlay content in a scene that can aid debugging.
+   * @type {SCNDebugOptions}
+   * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1523281-debugoptions
+   */
+  get debugOptions() {
+    return this._renderer.debugOptions
+  }
+
+  set debugOptions(newValue) {
+    this._renderer.debugOptions = newValue
+  }
+
+  /**
+   * Required. The current scene time.
+   * @type {number}
+   * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1522680-scenetime
+   */
+  get sceneTime() {
+    return this._renderer.sceneTime
+  }
+
+  set sceneTime(newValue) {
+    this._renderer.sceneTime = newValue
+  }
+
+  /**
+   * Required. A Boolean value that determines whether SceneKit restarts the scene time after all animations in the scene have played.
+   * @type {boolean}
+   * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1522878-loops
+   */
+  get loops() {
+    return this._renderer.loops
+  }
+
+  set loops(newValue) {
+    this._renderer.loops = newValue
+  }
 
   /**
    * Required. The graphics technology SceneKit uses to render the scene.
@@ -605,7 +661,7 @@ export default class SCNView {
    * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1522609-currentrendercommandencoder
    */
   get currentRenderCommandEncoder() {
-    return this._currentRenderCommandEncoder
+    return this._renderer.currentRenderCommandEncoder
   }
 
   /**
@@ -625,7 +681,7 @@ export default class SCNView {
    * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1523974-commandqueue
    */
   get commandQueue() {
-    return this._commandQueue
+    return this._renderer.commandQueue
   }
 
   /**
@@ -635,7 +691,7 @@ export default class SCNView {
    * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1523701-colorpixelformat
    */
   get colorPixelFormat() {
-    return this._colorPixelFormat
+    return this._renderer.colorPixelFormat
   }
 
   /**
@@ -645,7 +701,7 @@ export default class SCNView {
    * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1523780-depthpixelformat
    */
   get depthPixelFormat() {
-    return this._depthPixelFormat
+    return this._renderer.depthPixelFormat
   }
 
   /**
@@ -655,7 +711,7 @@ export default class SCNView {
    * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1523315-stencilpixelformat
    */
   get stencilPixelFormat() {
-    return this._stencilPixelFormat
+    return this._renderer._stencilPixelFormat
   }
 
   // Customizing Scene Rendering with OpenGL
@@ -667,10 +723,38 @@ export default class SCNView {
    * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1522840-context
    */
   get context() {
-    return this._context
+    return this._renderer.context
+  }
+
+  // Rendering Sprite Kit Content over a Scene
+
+  /**
+   * Required. A Sprite Kit scene to be rendered on top of the SceneKit content.
+   * @type {?SKScene}
+   * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1524051-overlayskscene
+   */
+  get overlaySKScene() {
+    return this._renderer.overlaySKScene
+  }
+
+  set overlaySKScene(newValue) {
+    this._renderer.overlaySKScene = newValue
   }
 
   // Working With Positional Audio
+
+  /**
+   * Required. The node representing the listener’s position in the scene for use with positional audio effects.
+   * @type {?SCNNode}
+   * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1523747-audiolistener
+   */
+  get audioListener() {
+    return this._renderer.audioListener
+  }
+
+  set audioListener(newValue) {
+    this._renderer.audioListener = newValue
+  }
 
   /**
    * Required. The 3D audio mixing node SceneKit uses for positional audio effects.
@@ -679,7 +763,7 @@ export default class SCNView {
    * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1523582-audioenvironmentnode
    */
   get audioEnvironmentNode() {
-    return this._audioEnvironmentNode
+    return this._renderer.audioEnvironmentNode
   }
 
   /**
@@ -689,7 +773,22 @@ export default class SCNView {
    * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1522686-audioengine
    */
   get audioEngine() {
-    return this._audioEngine
+    return this._renderer.audioEngine
+  }
+
+  // Instance Properties
+
+  /**
+   * Required. 
+   * @type {number}
+   * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1522854-currenttime
+   */
+  get currentTime() {
+    return this._renderer.currentTime
+  }
+
+  set currentTime(newValue) {
+    this._renderer.currentTime = newValue
   }
 
   ////////////////////////////////////////////////
@@ -707,6 +806,12 @@ export default class SCNView {
    * @returns {void}
    */
   _drawAtTimeWithContext(time, context) {
+    this._createPresentationNodes()
+
+    const program = this._program
+
+    this._updateTransform()
+
     if(this._delegate && this._delegate.rendererUpdateAtTime){
       this._delegate.rendererUpdateAtTime(this._renderer, time)
     }
@@ -738,16 +843,21 @@ export default class SCNView {
     ///////////////////////
     // renders the scene //
     ///////////////////////
-    this._context.clear(this._context.COLOR_BUFFER_BIT | this._context.DEPTH_BUFFER_BIT | this._context.STENCIL_BUFFER_BIT)
-
-    // TODO: set renderer parameters
-
-    this._renderer._renderAtTime(time)
-    this._context.flush()
-
+    this._renderer.render()
 
     if(this._delegate && this._delegate.rendererDidRenderSceneAtTime){
       this._delegate.rendererDidRenderSceneAtTime(this._renderer, time)
+    }
+  }
+
+  _createPresentationNodes() {
+    let arr = [this._scene.rootNode]
+    while(arr.length > 0){
+      const node = arr.shift()
+      const p = node.copy()
+      p._isPresentationInstance = true
+      node._presentation = p
+      arr.push(...node.childNodes)
     }
   }
 
@@ -762,10 +872,23 @@ export default class SCNView {
       this._currentSystemTime = (new Date()).getTime()
       this.currentTime = this._currentSystemTime
       this._drawAtTimeWithContext(this.currentTime, this._context)
+      //console.log('requestAnimationFrame: time: ' + this.currentTime)
 
       if(this._isPlaying){
         this.__requestAnimationFrame()
       }
+    })
+  }
+
+  _updateTransform(node, parentTransform) {
+    if(node === undefined){
+      this._updateTransform(this._scene.rootNode, new SCNMatrix4())
+      return
+    }
+
+    this._worldTransform = parentTransform.mult(node.transform)
+    node.childNodes.forEach((child) => {
+      this._updateTransform(child, this._worldTransform)
     })
   }
 }

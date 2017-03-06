@@ -18,9 +18,10 @@ export default class SCNSkinner extends NSObject {
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  init() {
+  constructor() {
+    super()
 
     // Working with a Skinned Geometry
 

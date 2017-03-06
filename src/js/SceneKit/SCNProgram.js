@@ -17,9 +17,10 @@ export default class SCNProgram extends NSObject {
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  init() {
+  constructor() {
+    super()
 
     // Working with OpenGL Shader Source Code
 
@@ -102,6 +103,11 @@ export default class SCNProgram extends NSObject {
      */
     this.library = null
 
+    /**
+     * @access private
+     * @type {WebGLProgram}
+     */
+    this._glProgram = null
   }
 
   // Mapping GLSL Symbols to SceneKit Semantics

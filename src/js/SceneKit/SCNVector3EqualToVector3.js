@@ -2,6 +2,8 @@
 
 import SCNVector3 from './SCNVector3'
 
+const _epsilon = 0.00001
+
 /**
  * Returns a Boolean value that indicates whether the corresponding components of two vectors are equal.
  * @access public
@@ -12,7 +14,9 @@ import SCNVector3 from './SCNVector3'
  * @see https://developer.apple.com/reference/scenekit/1409643-scnvector3equaltovector3
  */
 const SCNVector3EqualToVector3 = function(a, b) {
-  return false
+  return Math.abs(a.x - b.x) < _epsilon
+      && Math.abs(a.y - b.y) < _epsilon
+      && Math.abs(a.z - b.z) < _epsilon
 }
 
 export default SCNVector3EqualToVector3

@@ -133,6 +133,8 @@ export default class SCNNode extends NSObject {
      */
     this._transform = new SCNMatrix4()
 
+    this._worldTransform = new SCNMatrix4()
+
     /**
      * 
      * @type {boolean}
@@ -145,35 +147,35 @@ export default class SCNNode extends NSObject {
      * @type {SCNVector3}
      * @see https://developer.apple.com/reference/scenekit/scnnode/1408026-position
      */
-    this._position = new SCNVector3()
+    this._position = new SCNVector3(0, 0, 0)
 
     /**
      * The node’s orientation, expressed as a rotation angle about an axis. Animatable.
      * @type {SCNVector4}
      * @see https://developer.apple.com/reference/scenekit/scnnode/1408034-rotation
      */
-    this.rotation = null
+    this._rotation = new SCNVector4(1, 0, 0, 0)
 
     /**
      * The node’s orientation, expressed as pitch, yaw, and roll angles, each in radians. Animatable.
      * @type {SCNVector3}
      * @see https://developer.apple.com/reference/scenekit/scnnode/1407980-eulerangles
      */
-    this.eulerAngles = null
+    //this.eulerAngles = null
 
     /**
      * The node’s orientation, expressed as a quaternion. Animatable.
      * @type {SCNQuaternion}
      * @see https://developer.apple.com/reference/scenekit/scnnode/1408048-orientation
      */
-    this.orientation = null
+    //this.orientation = null
 
     /**
      * The scale factor applied to the node. Animatable.
      * @type {SCNVector3}
      * @see https://developer.apple.com/reference/scenekit/scnnode/1408050-scale
      */
-    this.scale = null
+    this._scale = new SCNVector3(1, 1, 1)
 
     /**
      * The pivot point for the node’s position, rotation, and scale. Animatable.
@@ -293,18 +295,26 @@ export default class SCNNode extends NSObject {
     // SCNActionable //
     ///////////////////
 
-    // Inspecting a Node’s Running Actions
+    // Inspecting a Node’s Running Action
     this._hasActions = false
-    this._actionKeys = null
+
+    /**
+     * @access private
+     * @type {Map}
+     */
+    this._actions = new Map()
 
 
     ///////////////////
     // SCNAnimatable //
     ///////////////////
 
-    // Managing Animations
+    /**
+     * @access private
+     * @type {Map}
+     */
+    this._animations = new Map()
 
-    this._animationKeys = null
 
     ///////////////////////
     // SCNBoundingVolume //
@@ -320,6 +330,7 @@ export default class SCNNode extends NSObject {
     this.boundingBox = null
 
     this._boundingSphere = null
+
   }
 
   /**
@@ -366,35 +377,17 @@ export default class SCNNode extends NSObject {
     // FIXME: it should return copy of _transform,
     //        but you should be able to change value with this statement:
     //          let node = new SCNNode()
-    //          node.transform.m41 = 123
-    //          console.log(node.transform.m41)   // '123'
+    //          node.transform.m14 = 123
+    //          console.log(node.transform.m14)   // '123'
+    if(!this._transformUpToDate){
+      this.updateTransform()
+    }
     return this._transform
   }
-
   set transform(newValue) {
     this._transform = newValue
-
-
-  }
-
-  /**
-   * The translation applied to the node. Animatable.
-   * @type {SCNVector3}
-   * @see https://developer.apple.com/reference/scenekit/scnnode/1408026-position
-   */
-  get position() {
-    return new SCNVector3(this._transform.m41, this._transform.m42, this._transform.m43)
-  }
-
-  set position(newValue) {
-    if(typeof newValue.x !== 'number'
-      || typeof newValue.y !== 'number'
-      || typeof newValue.z !== 'number'){
-      throw 'error: SCNNode.position must have x, y, z value'
-    }
-    this._transform.m41 = newValue.x
-    this._transform.m42 = newValue.y
-    this._transform.m43 = newValue.z
+    // TODO: update position, rotation, scale
+    this._transformUpToDate = true
   }
 
   /**
@@ -407,8 +400,81 @@ export default class SCNNode extends NSObject {
     if(this._parent === null){
       return this.transform
     }
-    //return SCNMatrix4Mult(this._parent.worldTransform, this._transform)
-    return null
+    return this._parent.worldTransform.mult(this.transform)
+  }
+
+  /**
+   * The translation applied to the node. Animatable.
+   * @type {SCNVector3}
+   * @see https://developer.apple.com/reference/scenekit/scnnode/1408026-position
+   */
+  get position() {
+    return this._position
+  }
+  set position(newValue) {
+    if(typeof newValue.x !== 'number'
+      || typeof newValue.y !== 'number'
+      || typeof newValue.z !== 'number'){
+      throw 'error: SCNNode.position must have x, y, z values'
+    }
+    this._position.x = newValue.x
+    this._position.y = newValue.y
+    this._position.z = newValue.z
+    this._transformUpToDate = false
+  }
+
+  get rotation() {
+    return this._rotation
+  }
+  set rotation(newValue) {
+    if(typeof newValue.x !== 'number'
+      || typeof newValue.y !== 'number'
+      || typeof newValue.z !== 'number'
+      || typeof newValue.w !== 'number'){
+      throw 'error: SCNNode.rotation must have x, y, z, w values'
+    }
+    this._rotation.x = newValue.x
+    this._rotation.y = newValue.y
+    this._rotation.z = newValue.z
+    this._rotation.w = newValue.w
+    this._transformUpToDate = false
+  }
+
+  get scale() {
+    return this._scale
+  }
+  set scale(newValue) {
+    if(typeof newValue.x !== 'number'
+      || typeof newValue.y !== 'number'
+      || typeof newValue.z !== 'number'){
+      throw 'error: SCNNode.scale must have x, y, z values'
+    }
+    this._scale.x = newValue.x
+    this._scale.y = newValue.y
+    this._scale.z = newValue.z
+    this._transformUpToDate = false
+  }
+
+  /**
+   * The node’s orientation, expressed as pitch, yaw, and roll angles, each in radians. Animatable.
+   * @type {SCNVector3}
+   * @see https://developer.apple.com/reference/scenekit/scnnode/1407980-eulerangles
+   */
+  get eulerAngles() {
+  }
+  set eulerAngles(newValue) {
+    this._transformUpToDate = false
+  }
+
+  /**
+   * The node’s orientation, expressed as a quaternion. Animatable.
+   * @type {SCNQuaternion}
+   * @see https://developer.apple.com/reference/scenekit/scnnode/1408048-orientation
+   */
+  get orientation() {
+  }
+  set orietation(newValue) {
+    this._transformUpToDate = false
   }
 
   // Managing the Node Hierarchy
@@ -714,7 +780,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @see https://developer.apple.com/reference/scenekit/scnnode/1408046-clone
    */
   clone() {
-    return null
+    return this.copy()
   }
 
   /**
@@ -859,8 +925,9 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @see https://developer.apple.com/reference/scenekit/scnactionable/1523287-action
    */
   actionForKey(key) {
-    return null
+    return this._actions.get(key)
   }
+
   /**
    * Required. A Boolean value that indicates whether the node is currently executing any actions.
    * @type {boolean}
@@ -870,6 +937,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
   get hasActions() {
     return this._hasActions
   }
+
   /**
    * Required. The list of keys for which the node has attached actions.
    * @type {string[]}
@@ -877,7 +945,11 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @see https://developer.apple.com/reference/scenekit/scnactionable/1523036-actionkeys
    */
   get actionKeys() {
-    return this._actionKeys
+    const keys = []
+    for(key of this._actions.keys()){
+      keys.push(key)
+    }
+    return keys
   }
 
   // Canceling a Node’s Running Actions
@@ -919,6 +991,10 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523386-addanimation
    */
   addAnimationForKey(animation, key) {
+    if(key === undefined || key === null){
+      key = new Symbol()
+    }
+    this._animations.set(key, animation)
   }
 
   /**
@@ -930,7 +1006,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @see https://developer.apple.com/reference/scenekit/scnanimatable/1524020-animation
    */
   animationForKey(key) {
-    return null
+    return this._animations.get(key)
   }
 
   /**
@@ -940,6 +1016,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @see https://developer.apple.com/reference/scenekit/scnanimatable/1522762-removeallanimations
    */
   removeAllAnimations() {
+    this._animations.clear()
   }
 
   /**
@@ -950,6 +1027,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @see https://developer.apple.com/reference/scenekit/scnanimatable/1522880-removeanimation
    */
   removeAnimationForKey(key) {
+    this._animations.delete(key)
   }
 
   /**
@@ -972,7 +1050,11 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523610-animationkeys
    */
   get animationKeys() {
-    return this._animationKeys
+    const keys = []
+    for(key of this._animations.keys()){
+      keys.push(key)
+    }
+    return keys
   }
 
   // Pausing and Resuming Animations
@@ -1038,4 +1120,57 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
   get boundingSphere() {
     return this._boundingSphere
   }
+
+  updateTransform() {
+    const m1 = SCNMatrix4.matrixWithTranslation(this._position)
+    const m2 = m1.rotation(this._rotation)
+    const m3 = m2.scale(this._scale)
+    this._transform = m3
+    this._transformUpToDate = true
+  }
+
+  /**
+   *
+   * @access public
+   * @returns {SCNNode}
+   */
+  copy() {
+    const node = new SCNNode()
+    node.name = this.name
+    node.light = this.light
+    node.camera = this.camera
+    node.geometry = this.geometry
+    node.morpher = this.morpher
+    node.skinner = this.skinner
+    node.categoryBitMask = this.categoryBitMask
+    node.constraints = this.constraints
+    node.isHidden = this.isHidden
+    node.opacity = this.opacity
+    node.renderingOrder = this.renderingOrder
+    node.castsShadow = this.castsShadow
+    node.movabilityHint = this.movabilityHint
+    node.filters = this.filters
+    node.rendererDelegate = this.rendererDelegate
+    node.physicsField = this.physicsField
+    node._particleSystems = this._particleSystems
+    node._audioPlayers = this._audioPlayers
+    node._hasActions = this._hasActions
+    node.boundingBox = this.boundingBox
+
+    return node
+  }
+
+  get viewTransform() {
+    return this.worldTransform.invert()
+  }
+
+  get viewProjectionTransform() {
+    if(this.camera === null){
+      return null
+    }
+    const proj = this.camera.projectionTransform
+    const view = this.viewTransform
+    return proj.mult(view)
+  }
 }
+

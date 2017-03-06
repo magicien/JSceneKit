@@ -11,34 +11,32 @@ import SCNGeometryPrimitiveType from './SCNGeometryPrimitiveType'
  * @see https://developer.apple.com/reference/scenekit/scngeometryelement
  */
 export default class SCNGeometryElement extends NSObject {
-
-  /**
-   * constructor
-   * @access public
-   * @returns {void}
-   */
-  init() {
-
-    // Inspecting a Geometry Element
-
-    this._primitiveType = null
-    this._primitiveCount = 0
-    this._data = null
-    this._bytesPerIndex = 0
-  }
-
   // Creating a Geometry Element
 
   /**
    * Creates a geometry element from the specified array of index values. 
    * @access public
+   * @constructor
    * @param {IndexType[]} indices - An array of index values, each of which identifies a vertex in a geometry source.
    * @param {SCNGeometryPrimitiveType} primitiveType - The drawing primitive that connects vertices when rendering the geometry element. For possible values, see SCNGeometryPrimitiveType.
-   * @returns {void}
    * @desc SceneKit connects the vertices in the order specified by the indices array, arranged according to the primitiveType parameter.This initializer is equivalent to the init(data:primitiveType:primitiveCount:bytesPerIndex:) initializer, but does not require an intermediary Data object; instead, it automatically infers the necessary allocation size and bytesPerIndex values based on the contents of the indices array. To create a custom SCNGeometry object from the geometry element, use the init(sources:elements:) initializer.
    * @see https://developer.apple.com/reference/scenekit/scngeometryelement/1523191-init
    */
-  init(indices, primitiveType) {
+  constructor(indices, primitiveType) {
+    super()
+
+    // Inspecting a Geometry Element
+
+    this._data = indices
+    this._primitiveType = primitiveType
+    this._primitiveCount = indices.count / 3 // FIXME: calculate from primitiveType
+    this._bytesPerIndex = 2
+
+    /**
+     * @type {TypedArray}
+     * @access private
+     */
+    this._glData = new Uint16Array(this._data)
   }
 
   /**
@@ -53,6 +51,7 @@ export default class SCNGeometryElement extends NSObject {
   }
 
   // Inspecting a Geometry Element
+
   /**
    * The drawing primitive that connects vertices when rendering the geometry element.
    * @type {SCNGeometryPrimitiveType}
@@ -62,6 +61,7 @@ export default class SCNGeometryElement extends NSObject {
   get primitiveType() {
     return this._primitiveType
   }
+
   /**
    * The number of primitives in the element.
    * @type {number}
@@ -71,6 +71,7 @@ export default class SCNGeometryElement extends NSObject {
   get primitiveCount() {
     return this._primitiveCount
   }
+
   /**
    * The data describing the geometry element.
    * @type {Data}
@@ -80,6 +81,7 @@ export default class SCNGeometryElement extends NSObject {
   get data() {
     return this._data
   }
+
   /**
    * The number of bytes that represent each index value in the element’s data.
    * @type {number}
@@ -88,5 +90,13 @@ export default class SCNGeometryElement extends NSObject {
    */
   get bytesPerIndex() {
     return this._bytesPerIndex
+  }
+
+  _createBuffer(context) {
+    const gl = context
+    this._buffer = gl.createBuffer()
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, this._buffer)
+    gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, this._glData, gl.STATIC_DRAW)
+    return this._buffer
   }
 }
