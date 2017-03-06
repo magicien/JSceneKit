@@ -21,9 +21,10 @@ export default class CAAnimation extends NSObject {
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  init() {
+  constructor() {
+    super()
 
     // Animation attributes
 
@@ -87,7 +88,6 @@ export default class CAAnimation extends NSObject {
      * @see https://developer.apple.com/reference/quartzcore/caanimation/1523940-animationevents
      */
     this.animationEvents = null
-
   }
 
   // Archiving properties

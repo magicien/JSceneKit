@@ -39,7 +39,7 @@ module.exports = {
       extensions: ['', '.js']
     },
     plugins: [
-      new UglifyJSPlugin()
+      //new UglifyJSPlugin()
     ],
     module: {
       loaders: [

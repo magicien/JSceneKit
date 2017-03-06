@@ -1,7 +1,5 @@
 'use strict'
 
-
-
 /**
  * A structure that contains width and height values.
  * @access public
@@ -14,28 +12,15 @@ export default class CGSize {
   /**
    * Creates a size with dimensions specified as floating-point values.    
    * @access public
+   * @constructor
    * @param {number} width - 
    * @param {number} height - 
-   * @returns {void}
    * @see https://developer.apple.com/reference/coregraphics/cgsize/1454915-init
    */
-  init(width, height) {
-
+  constructor(width, height) {
     // Geometric Properties
-
-    this._width = 0
-    this._height = 0
-
-    // Special Values
-
-    this._zero = null
-
-    // Alternate Representations
-
-    this._dictionaryRepresentation = null
-    this._debugDescription = ''
-    this._customMirror = null
-    this._customPlaygroundQuickLook = null
+    this.width = width
+    this.height = height
   }
 
   // Geometric Properties
@@ -47,8 +32,8 @@ export default class CGSize {
    * @desc 
    * @see https://developer.apple.com/reference/coregraphics/cgsize/1455512-zero
    */
-  get zero() {
-    return this._zero
+  static get zero() {
+    return new CGSize(0, 0)
   }
 
   // Transforming Sizes
@@ -73,24 +58,10 @@ export default class CGSize {
    * @returns {void}
    * @see https://developer.apple.com/reference/coregraphics/cgsize/2427155-init
    */
-  initDictionaryRepresentation(dict) {
-
-    // Geometric Properties
-
-    this._width = 0
-    this._height = 0
-
-    // Special Values
-
-    this._zero = null
-
-    // Alternate Representations
-
-    this._dictionaryRepresentation = null
-    this._debugDescription = ''
-    this._customMirror = null
-    this._customPlaygroundQuickLook = null
+  static sizeWithDictionaryRepresentation(dict) {
+    return new CGSize(dict.get('width'), dict.get('height'))
   }
+
   /**
    * Returns a dictionary representation of the specified size.
    * @type {Map}
@@ -98,8 +69,12 @@ export default class CGSize {
    * @see https://developer.apple.com/reference/coregraphics/cgsize/1455274-dictionaryrepresentation
    */
   get dictionaryRepresentation() {
-    return this._dictionaryRepresentation
+    const map = new Map()
+    map.set('width', this.width)
+    map.set('height', this.height)
+    return map
   }
+
   /**
    * A textual representation of the size's dimensions.  
    * @type {string}
@@ -107,8 +82,9 @@ export default class CGSize {
    * @see https://developer.apple.com/reference/coregraphics/cgsize/1645822-debugdescription
    */
   get debugDescription() {
-    return this._debugDescription
+    return `{width: ${this.width}, height: ${this.height}}`
   }
+
   /**
    * A representation of the size's structure and display style for use in debugging. 
    * @type {Mirror}
@@ -116,7 +92,7 @@ export default class CGSize {
    * @see https://developer.apple.com/reference/coregraphics/cgsize/1645828-custommirror
    */
   get customMirror() {
-    return this._customMirror
+    return null
   }
   /**
    * A representation of the size for use in Playgrounds. 
@@ -125,7 +101,7 @@ export default class CGSize {
    * @see https://developer.apple.com/reference/coregraphics/cgsize/1645830-customplaygroundquicklook
    */
   get customPlaygroundQuickLook() {
-    return this._customPlaygroundQuickLook
+    return null
   }
 
   // Comparing Sizes
@@ -138,6 +114,12 @@ export default class CGSize {
    * @see https://developer.apple.com/reference/coregraphics/cgsize/1455176-equalto
    */
   equalTo(size2) {
-    return false
+    const epsilon = 0.00001
+    return Math.abs(this.width - size2.width) < epsilon
+        && Math.abs(this.height - size2.height) < epsilon
+  }
+
+  copy() {
+    return new CGSize(this.width, this.height)
   }
 }

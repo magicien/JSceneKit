@@ -1,52 +1,37 @@
 'use strict'
 
-
-
 /**
  * A structure that contains a point in a two-dimensional coordinate system.
  * @access public
  * @see https://developer.apple.com/reference/coregraphics/cgpoint
  */
 export default class CGPoint {
-
   // Creating Point Values
 
   /**
    * Creates a point with coordinates specified as integer values.   
    * @access public
+   * @constructor
    * @param {number} x - 
    * @param {number} y - 
-   * @returns {void}
    * @see https://developer.apple.com/reference/coregraphics/cgpoint/1455965-init
    */
-  init(x, y) {
-
-    // Special Values
-
-    this._zero = null
-
+  constructor(x, y) {
     // Geometric Properties
-
-    this._x = 0
-    this._y = 0
-
-    // Alternate Representations
-
-    this._dictionaryRepresentation = null
-    this._debugDescription = ''
-    this._customMirror = null
-    this._customPlaygroundQuickLook = null
+    this.x = x
+    this.y = y
   }
 
   // Special Values
+
   /**
    * The point with location (0,0).
    * @type {CGPoint}
    * @desc 
    * @see https://developer.apple.com/reference/coregraphics/cgpoint/1454433-zero
    */
-  get zero() {
-    return this._zero
+  static get zero() {
+    return new CGPoint(0, 0)
   }
 
   // Geometric Properties
@@ -73,24 +58,10 @@ export default class CGPoint {
    * @returns {void}
    * @see https://developer.apple.com/reference/coregraphics/cgpoint/2427118-init
    */
-  initDictionaryRepresentation(dict) {
-
-    // Special Values
-
-    this._zero = null
-
-    // Geometric Properties
-
-    this._x = 0
-    this._y = 0
-
-    // Alternate Representations
-
-    this._dictionaryRepresentation = null
-    this._debugDescription = ''
-    this._customMirror = null
-    this._customPlaygroundQuickLook = null
+  static pointWithDictionaryRepresentation(dict) {
+    return new CGPoint(dict.get('x'), dict.get('y'))
   }
+
   /**
    * Returns a dictionary representation of the specified point.
    * @type {Map}
@@ -98,8 +69,12 @@ export default class CGPoint {
    * @see https://developer.apple.com/reference/coregraphics/cgpoint/1455382-dictionaryrepresentation
    */
   get dictionaryRepresentation() {
-    return this._dictionaryRepresentation
+    const map = new Map()
+    map.set('x', this.x)
+    map.set('y', this.y)
+    return map
   }
+
   /**
    * A textual representation of the point's coordinate values. 
    * @type {string}
@@ -107,8 +82,9 @@ export default class CGPoint {
    * @see https://developer.apple.com/reference/coregraphics/cgpoint/1645825-debugdescription
    */
   get debugDescription() {
-    return this._debugDescription
+    return `{x: ${this.x}, y: ${this.y}}`
   }
+
   /**
    * A representation of the point's structure and display style for use in debugging.
    * @type {Mirror}
@@ -116,8 +92,9 @@ export default class CGPoint {
    * @see https://developer.apple.com/reference/coregraphics/cgpoint/1645834-custommirror
    */
   get customMirror() {
-    return this._customMirror
+    return null
   }
+
   /**
    * A representation of the point for use in Playgrounds.
    * @type {PlaygroundQuickLook}
@@ -125,7 +102,7 @@ export default class CGPoint {
    * @see https://developer.apple.com/reference/coregraphics/cgpoint/1645835-customplaygroundquicklook
    */
   get customPlaygroundQuickLook() {
-    return this._customPlaygroundQuickLook
+    return null
   }
 
   // Comparing Points
@@ -138,6 +115,12 @@ export default class CGPoint {
    * @see https://developer.apple.com/reference/coregraphics/cgpoint/1456179-equalto
    */
   equalTo(point2) {
-    return false
+    const epsilon = 0.00001
+    return Math.abs(this.x - point2.x) < epsilon
+        && Math.abs(this.y - point2.y) < epsilon
+  }
+
+  copy() {
+    return new CGPoint(this.x, this.y)
   }
 }

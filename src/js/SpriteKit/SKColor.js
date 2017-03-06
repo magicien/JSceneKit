@@ -331,14 +331,22 @@ export default class SKColor extends NSObject {
   //}
 
   /**
-   * Returns the HTML color representation
+   * HTML color representation
    * @access public
-   * @returns {string}
+   * @type {string}
    */
   get htmlColor() {
     const r = Math.round(this.red * 255)
     const g = Math.round(this.green * 255)
     const b = Math.round(this.blue * 255)
     return `rgba(${r}, ${g}, ${b}, ${this.alpha})`
+  }
+
+  /**
+   * @access public
+   * @returns {Float32Array}
+   */
+  float32Array() {
+    return new Float32Array([this.red, this.green, this.blue, this.alpha])
   }
 }
