@@ -4,6 +4,8 @@ import SCNVector3 from './SCNVector3'
 import SCNVector4 from './SCNVector4'
 
 
+const _epsilon = 0.0000001
+
 /**
  * A representation of a 4 x 4 matrix.
  * @access public
@@ -582,7 +584,7 @@ export default class SCNMatrix4 {
    * @see https://developer.apple.com/reference/scenekit/1409665-scnmatrix4equaltomatrix4
    */
   equalTo(m) {
-    if(!m instanceof SCNMatrix4){
+    if(!(m instanceof SCNMatrix4)){
       return false
     }
 
@@ -611,12 +613,12 @@ export default class SCNMatrix4 {
    * @see https://developer.apple.com/reference/scenekit/1409715-scnmatrix4isidentity
    */
   isIdentity() {
-    return this.equalTo(_identity)
+    return this.equalTo(new SCNMatrix4())
   }
 
   /**
    * @access public
-   * @returns {Float32Array}
+   * @returns {Float32Array} -
    * @desc column-major layout for WebGL
    */
   float32Array() {
@@ -630,7 +632,7 @@ export default class SCNMatrix4 {
 
   /**
    * @access public
-   * @returns {Float32Array}
+   * @returns {Float32Array} -
    * @desc row-major layout for vector array
    */
   float32Array3x4f() {
@@ -641,7 +643,4 @@ export default class SCNMatrix4 {
     ])
   }
 }
-
-const _epsilon = 0.0000001
-const _identity = new SCNMatrix4()
 

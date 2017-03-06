@@ -14,7 +14,7 @@ const _epsilon = 0.00001
  * @see https://developer.apple.com/reference/scenekit/1409665-scnmatrix4equaltomatrix4
  */
 const SCNMatrix4EqualToMatrix4 = function(a, b) {
-  if(!a instanceof SCNMatrix4){
+  if(!(a instanceof SCNMatrix4)){
     return false
   }
   return a.equalTo(b)

@@ -454,11 +454,9 @@ export default class SCNRenderer extends NSObject {
       }
     })
     if(!hasAmbient){
-      throw new Error('!hasAmbient')
       gl.uniform4fv(gl.getUniformLocation(program, 'lightAmbient'), SKColor.black.float32Array())
     }
     if(!hasDiffuse){
-      throw new Error('hasDiffuse')
       gl.uniform4fv(gl.getUniformLocation(program, 'lightDiffuse'), SKColor.black.float32Array())
     }
 
@@ -1009,7 +1007,7 @@ export default class SCNRenderer extends NSObject {
     image.height = 1
 
     this.__dummyTexture = gl.createTexture()
-    gl.bindTexture(gl.TEXTURE_2D, __dummyTexture)
+    gl.bindTexture(gl.TEXTURE_2D, this.__dummyTexture)
     // texImage2D(target, level, internalformat, width, height, border, format, type, source)
     gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, image)
     gl.bindTexture(gl.TEXTURE_2D, null)

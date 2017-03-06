@@ -946,7 +946,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    */
   get actionKeys() {
     const keys = []
-    for(key of this._actions.keys()){
+    for(let key of this._actions.keys()){
       keys.push(key)
     }
     return keys
@@ -1051,7 +1051,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    */
   get animationKeys() {
     const keys = []
-    for(key of this._animations.keys()){
+    for(let key of this._animations.keys()){
       keys.push(key)
     }
     return keys
