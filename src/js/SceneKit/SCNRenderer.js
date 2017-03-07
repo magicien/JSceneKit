@@ -348,7 +348,7 @@ export default class SCNRenderer extends NSObject {
      * @access private
      * @type {WebGLTexture}
      */
-    let __dummyTexture = null
+    this.__dummyTexture = null
   }
 
   /**
@@ -425,17 +425,17 @@ export default class SCNRenderer extends NSObject {
     gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewTransform'), false, cameraNode.viewTransform.float32Array())
     gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewProjectionTransform'), false, cameraNode.viewProjectionTransform.float32Array())
 
-    console.log('cameraNode.position: ' + cameraNode.position.float32Array())
-    console.log('viewTransform: ' + cameraNode.viewTransform.float32Array())
-    console.log('projectionTransform: ' + cameraNode.camera.projectionTransform.float32Array())
-    console.log('viewProjectionTransform: ' + cameraNode.viewProjectionTransform.float32Array())
+    //console.log('cameraNode.position: ' + cameraNode.position.float32Array())
+    //console.log('viewTransform: ' + cameraNode.viewTransform.float32Array())
+    //console.log('projectionTransform: ' + cameraNode.camera.projectionTransform.float32Array())
+    //console.log('viewProjectionTransform: ' + cameraNode.viewProjectionTransform.float32Array())
     
     // light params
     const lights = this._createLightNodeArray()
     if(lights.length == 0){
       lights.push(this._defaultLightNode)
     }
-    console.log('lights.length: ' + lights.length)
+    //console.log('lights.length: ' + lights.length)
 
     // FIXME: use all lights
     let hasAmbient = false
@@ -443,12 +443,12 @@ export default class SCNRenderer extends NSObject {
     lights.forEach((lightNode) => {
       const light = lightNode.light
       if(light.type === SCNLight.LightType.ambient){
-        console.log('ambient: ' + light.color.float32Array())
+        //console.log('ambient: ' + light.color.float32Array())
         hasAmbient = true
         gl.uniform4fv(gl.getUniformLocation(program, 'lightAmbient'), light.color.float32Array())
       }
       if(light.type === SCNLight.LightType.directional){
-        console.log('directional: ' + light.color.float32Array())
+        //console.log('directional: ' + light.color.float32Array())
         hasDiffuse = true
         gl.uniform4fv(gl.getUniformLocation(program, 'lightDiffuse'), light.color.float32Array())
       }
@@ -469,18 +469,6 @@ export default class SCNRenderer extends NSObject {
     }
     renderingArray.forEach((node) => {
       this._renderNode(node)
-
-      const modelTransform = node.presentation.worldTransform
-      console.log(`modelTransform: ${modelTransform.float32Array()}`)
-
-      const mvp = cameraNode.viewProjectionTransform.mult(modelTransform)
-      const p1 = new SCNVector4(0, 0, 0, 1)
-      const s1 = p1.transform(mvp)
-      console.log(`(0, 0, 0) => (${s1.x}, ${s1.y}, ${s1.z}, ${s1.w})`)
-
-      const p2 = new SCNVector4(1, 1, 1, 1)
-      const s2 = p2.transform(mvp)
-      console.log(`(1, 1, 1) => (${s2.x}, ${s2.y}, ${s2.z}, ${s2.w})`)
     })
 
     gl.flush()
@@ -548,11 +536,11 @@ export default class SCNRenderer extends NSObject {
     // FIXME: check geometrySource semantic
     //gl.bindBuffer(gl.ARRAY_BUFFER, node.presentation.geometry.geometrySources[0]._glData)
 
-    console.log('nodeName: ' + node.name)
+    //console.log('nodeName: ' + node.name)
 
     // FIXME: use SCNSkinner
     gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.transform.float32Array3x4f())
-    console.log('skinningJoints: ' + node.presentation.transform.float32Array3x4f())
+    //console.log('skinningJoints: ' + node.presentation.transform.float32Array3x4f())
 
     // TODO: buffer dynamic vertex data
 
@@ -563,7 +551,7 @@ export default class SCNRenderer extends NSObject {
       throw new Error('geometryCount: 0')
     }
     for(let i=0; i<geometryCount; i++){
-      console.log(`geometry[${i}]`)
+      //console.log(`geometry[${i}]`)
       const vao = node.presentation.geometry._vertexArrayObjects[i]
       const element = node.presentation.geometry.geometryElements[i]
       const material = node.presentation.geometry.materials[i]
@@ -575,15 +563,31 @@ export default class SCNRenderer extends NSObject {
       gl.uniform4fv(gl.getUniformLocation(program, 'materialSpecular'), material.specular.float32Array())
       gl.uniform4fv(gl.getUniformLocation(program, 'materialEmission'), material.emission.float32Array())
 
-      // DEBUG
-      gl.uniform1i(gl.getUniformLocation(program, 'u_useDiffuseTexture'), 0)
-
-      // texture, toon, edge
-      //c.activeTexture(c.TEXTURE0)
-      //c.bindTexture(c.TEXTURE_2D, material.texture)
-      //c.texParameteri(c.TEXTURE_2D, c.TEXTURE_MAG_FILTER, c.LINEAR)
-      //c.texParameteri(c.TEXTURE_2D, c.TEXTURE_MIN_FILTER, c.LINEAR)
-      //c.texParameteri(c.TEXTURE_2D, c.TEXTURE_WRAP_S, c.REPEAT)
+      if(material.diffuse.contents instanceof Image){
+        console.error('texture converting...')
+        material.diffuse.contents = this._createTexture(material.diffuse.contents)
+      }
+      if(material.diffuse.contents instanceof WebGLTexture){
+        console.error('texture: YES')
+        gl.uniform1i(gl.getUniformLocation(program, 'u_useDiffuseTexture'), 1)
+        gl.activeTexture(gl.TEXTURE2)
+        gl.bindTexture(gl.TEXTURE_2D, material.diffuse.contents)
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR)
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR)
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.REPEAT)
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.REPEAT)
+      }else{
+        console.error('texture: NO')
+        gl.uniform1i(gl.getUniformLocation(program, 'u_useDiffuseTexture'), 0)
+        /*
+        gl.activeTexture(gl.TEXTURE2)
+        gl.bindTexture(gl.TEXTURE_2D, this._dummyTexture)
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR)
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR)
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.REPEAT)
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.REPEAT)
+        */
+      }
 
       gl.drawElements(gl.TRIANGLES, element._glData.length, gl.UNSIGNED_SHORT, 0)
     }
@@ -825,6 +829,11 @@ export default class SCNRenderer extends NSObject {
     return this._context
   }
 
+  _setContext(context) {
+    this._context = context
+    this._createDummyTexture()
+  }
+
   // Working With Positional Audio
 
   /**
@@ -901,41 +910,7 @@ export default class SCNRenderer extends NSObject {
     gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)
     gl.enable(gl.CULL_FACE)
     gl.cullFace(gl.BACK)
-
-    // set dummy textures
-    const texNames = [
-      gl.TEXTURE0,
-      gl.TEXTURE1,
-      gl.TEXTURE2,
-      gl.TEXTURE3,
-      gl.TEXTURE4,
-      gl.TEXTURE5,
-      gl.TEXTURE6,
-      gl.TEXTURE7
-    ]
-    const texSymbols = [
-      'u_emissionTexture',
-      'u_ambientTexture',
-      'u_diffuseTexture',
-      'u_specularTexture',
-      'u_reflectiveTexture',
-      'u_transparentTexture',
-      'u_multiplyTexture',
-      'u_normalTexture'
-    ]
-    for(let i=0; i<texNames.length; i++){
-      const texName = texNames[i]
-      const symbol = texSymbols[i]
-      gl.uniform1i(gl.getUniformLocation(p._glProgram, symbol), i)
-      gl.activeTexture(texName)
-      gl.bindTexture(gl.TEXTURE_2D, this._dummyTexture)
-
-      const err = gl.getError()
-      if(err){
-        throw new Error(`error: ${texName}: ${symbol}: ${err}`)
-      }
-    }
-
+    
     return this.__defaultProgram
   }
 
@@ -998,21 +973,90 @@ export default class SCNRenderer extends NSObject {
   }
 
   get _dummyTexture() {
-    if(this.__dummyTexture !== null){
+    //if(this.__dummyTexture !== null){
       return this.__dummyTexture
-    }
+    //}
+  }
+
+  _createDummyTexture() {
     const gl = this.context
     const image = new Image()
     image.width = 1
     image.height = 1
 
-    this.__dummyTexture = gl.createTexture()
-    gl.bindTexture(gl.TEXTURE_2D, this.__dummyTexture)
-    // texImage2D(target, level, internalformat, width, height, border, format, type, source)
-    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, image)
-    gl.bindTexture(gl.TEXTURE_2D, null)
+    const canvas = document.createElement('canvas')
+    canvas.width = 1
+    canvas.height = 1
+    const context = canvas.getContext('2d')
+    context.fillStyle = 'rgba(255, 255, 255, 1.0)'
+    context.fillRect(0, 0, 1, 1)
 
-    return this.__dummyTexture
+    this.__dummyTexture = gl.createTexture()
+
+    image.onload = () => {
+      gl.bindTexture(gl.TEXTURE_2D, this.__dummyTexture)
+      // texImage2D(target, level, internalformat, width, height, border, format, type, source)
+      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, image)
+      gl.bindTexture(gl.TEXTURE_2D, null)
+
+      this._setDummyTextureAsDefault()
+    }
+    console.log('canvas.toDataURL: ' + canvas.toDataURL())
+    image.src = canvas.toDataURL()
+  }
+
+  _setDummyTextureAsDefault() {
+    const gl = this.context
+    const p = this.__defaultProgram
+
+    const texNames = [
+      gl.TEXTURE0,
+      gl.TEXTURE1,
+      gl.TEXTURE2,
+      gl.TEXTURE3,
+      gl.TEXTURE4,
+      gl.TEXTURE5,
+      gl.TEXTURE6,
+      gl.TEXTURE7
+    ]
+    const texSymbols = [
+      'u_emissionTexture',
+      'u_ambientTexture',
+      'u_diffuseTexture',
+      'u_specularTexture',
+      'u_reflectiveTexture',
+      'u_transparentTexture',
+      'u_multiplyTexture',
+      'u_normalTexture'
+    ]
+    for(let i=0; i<texNames.length; i++){
+      const texName = texNames[i]
+      const symbol = texSymbols[i]
+      gl.uniform1i(gl.getUniformLocation(p._glProgram, symbol), i)
+      gl.activeTexture(texName)
+      gl.bindTexture(gl.TEXTURE_2D, this.__dummyTexture)
+
+      const err = gl.getError()
+      if(err){
+        throw new Error(`error: ${texName}: ${symbol}: ${err}`)
+      }
+    }
+  }
+
+  /**
+   * @access private
+   * @param {Image} image -
+   * @returns {WebGLTexture} -
+   */
+  _createTexture(image) {
+    const gl = this.context
+    const texture = gl.createTexture()
+
+    gl.bindTexture(gl.TEXTURE_2D, texture)
+      // texImage2D(target, level, internalformat, width, height, border, format, type, source)
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, image.width, image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, image)
+    gl.bindTexture(gl.TEXTURE_2D, null)
+    return texture
   }
 }
 

@@ -14757,7 +14757,7 @@ module.exports =
 	     * @access private
 	     * @type {WebGLTexture}
 	     */
-	    var __dummyTexture = null;
+	    _this.__dummyTexture = null;
 	    return _this;
 	  }
 
@@ -14845,17 +14845,17 @@ module.exports =
 	      gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewTransform'), false, cameraNode.viewTransform.float32Array());
 	      gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewProjectionTransform'), false, cameraNode.viewProjectionTransform.float32Array());
 
-	      console.log('cameraNode.position: ' + cameraNode.position.float32Array());
-	      console.log('viewTransform: ' + cameraNode.viewTransform.float32Array());
-	      console.log('projectionTransform: ' + cameraNode.camera.projectionTransform.float32Array());
-	      console.log('viewProjectionTransform: ' + cameraNode.viewProjectionTransform.float32Array());
+	      //console.log('cameraNode.position: ' + cameraNode.position.float32Array())
+	      //console.log('viewTransform: ' + cameraNode.viewTransform.float32Array())
+	      //console.log('projectionTransform: ' + cameraNode.camera.projectionTransform.float32Array())
+	      //console.log('viewProjectionTransform: ' + cameraNode.viewProjectionTransform.float32Array())
 
 	      // light params
 	      var lights = this._createLightNodeArray();
 	      if (lights.length == 0) {
 	        lights.push(this._defaultLightNode);
 	      }
-	      console.log('lights.length: ' + lights.length);
+	      //console.log('lights.length: ' + lights.length)
 
 	      // FIXME: use all lights
 	      var hasAmbient = false;
@@ -14863,12 +14863,12 @@ module.exports =
 	      lights.forEach(function (lightNode) {
 	        var light = lightNode.light;
 	        if (light.type === _SCNLight2.default.LightType.ambient) {
-	          console.log('ambient: ' + light.color.float32Array());
+	          //console.log('ambient: ' + light.color.float32Array())
 	          hasAmbient = true;
 	          gl.uniform4fv(gl.getUniformLocation(program, 'lightAmbient'), light.color.float32Array());
 	        }
 	        if (light.type === _SCNLight2.default.LightType.directional) {
-	          console.log('directional: ' + light.color.float32Array());
+	          //console.log('directional: ' + light.color.float32Array())
 	          hasDiffuse = true;
 	          gl.uniform4fv(gl.getUniformLocation(program, 'lightDiffuse'), light.color.float32Array());
 	        }
@@ -14889,18 +14889,6 @@ module.exports =
 	      }
 	      renderingArray.forEach(function (node) {
 	        _this2._renderNode(node);
-
-	        var modelTransform = node.presentation.worldTransform;
-	        console.log('modelTransform: ' + modelTransform.float32Array());
-
-	        var mvp = cameraNode.viewProjectionTransform.mult(modelTransform);
-	        var p1 = new _SCNVector4.default(0, 0, 0, 1);
-	        var s1 = p1.transform(mvp);
-	        console.log('(0, 0, 0) => (' + s1.x + ', ' + s1.y + ', ' + s1.z + ', ' + s1.w + ')');
-
-	        var p2 = new _SCNVector4.default(1, 1, 1, 1);
-	        var s2 = p2.transform(mvp);
-	        console.log('(1, 1, 1) => (' + s2.x + ', ' + s2.y + ', ' + s2.z + ', ' + s2.w + ')');
 	      });
 
 	      gl.flush();
@@ -14979,11 +14967,11 @@ module.exports =
 	      // FIXME: check geometrySource semantic
 	      //gl.bindBuffer(gl.ARRAY_BUFFER, node.presentation.geometry.geometrySources[0]._glData)
 
-	      console.log('nodeName: ' + node.name);
+	      //console.log('nodeName: ' + node.name)
 
 	      // FIXME: use SCNSkinner
 	      gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.transform.float32Array3x4f());
-	      console.log('skinningJoints: ' + node.presentation.transform.float32Array3x4f());
+	      //console.log('skinningJoints: ' + node.presentation.transform.float32Array3x4f())
 
 	      // TODO: buffer dynamic vertex data
 
@@ -14994,7 +14982,7 @@ module.exports =
 	        throw new Error('geometryCount: 0');
 	      }
 	      for (var i = 0; i < geometryCount; i++) {
-	        console.log('geometry[' + i + ']');
+	        //console.log(`geometry[${i}]`)
 	        var vao = node.presentation.geometry._vertexArrayObjects[i];
 	        var element = node.presentation.geometry.geometryElements[i];
 	        var material = node.presentation.geometry.materials[i];
@@ -15006,15 +14994,31 @@ module.exports =
 	        gl.uniform4fv(gl.getUniformLocation(program, 'materialSpecular'), material.specular.float32Array());
 	        gl.uniform4fv(gl.getUniformLocation(program, 'materialEmission'), material.emission.float32Array());
 
-	        // DEBUG
-	        gl.uniform1i(gl.getUniformLocation(program, 'u_useDiffuseTexture'), 0);
-
-	        // texture, toon, edge
-	        //c.activeTexture(c.TEXTURE0)
-	        //c.bindTexture(c.TEXTURE_2D, material.texture)
-	        //c.texParameteri(c.TEXTURE_2D, c.TEXTURE_MAG_FILTER, c.LINEAR)
-	        //c.texParameteri(c.TEXTURE_2D, c.TEXTURE_MIN_FILTER, c.LINEAR)
-	        //c.texParameteri(c.TEXTURE_2D, c.TEXTURE_WRAP_S, c.REPEAT)
+	        if (material.diffuse.contents instanceof Image) {
+	          console.error('texture converting...');
+	          material.diffuse.contents = this._createTexture(material.diffuse.contents);
+	        }
+	        if (material.diffuse.contents instanceof WebGLTexture) {
+	          console.error('texture: YES');
+	          gl.uniform1i(gl.getUniformLocation(program, 'u_useDiffuseTexture'), 1);
+	          gl.activeTexture(gl.TEXTURE2);
+	          gl.bindTexture(gl.TEXTURE_2D, material.diffuse.contents);
+	          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+	          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+	          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.REPEAT);
+	          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.REPEAT);
+	        } else {
+	          console.error('texture: NO');
+	          gl.uniform1i(gl.getUniformLocation(program, 'u_useDiffuseTexture'), 0);
+	          /*
+	          gl.activeTexture(gl.TEXTURE2)
+	          gl.bindTexture(gl.TEXTURE_2D, this._dummyTexture)
+	          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR)
+	          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR)
+	          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.REPEAT)
+	          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.REPEAT)
+	          */
+	        }
 
 	        gl.drawElements(gl.TRIANGLES, element._glData.length, gl.UNSIGNED_SHORT, 0);
 	      }
@@ -15226,6 +15230,22 @@ module.exports =
 	     */
 
 	  }, {
+	    key: '_setContext',
+	    value: function _setContext(context) {
+	      this._context = context;
+	      this._createDummyTexture();
+	    }
+
+	    // Working With Positional Audio
+
+	    /**
+	     * Required. The 3D audio mixing node SceneKit uses for positional audio effects.
+	     * @type {AVAudioEnvironmentNode}
+	     * @desc SceneKit uses this audio node to spatialize sounds from SCNAudioPlayer objects attached to nodes in the scene. You can use this object in conjunction with the audioEngine property to rearrange the audio graph to add other, non-spatialized audio sources or mix in audio processing effects.
+	     * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1523582-audioenvironmentnode
+	     */
+
+	  }, {
 	    key: '_initializeVAO',
 	    value: function _initializeVAO(node, program) {
 	      var gl = this.context;
@@ -15283,6 +15303,76 @@ module.exports =
 
 	        geometry._vertexArrayObjects.push(vao);
 	      }
+	    }
+	  }, {
+	    key: '_createDummyTexture',
+	    value: function _createDummyTexture() {
+	      var _this3 = this;
+
+	      var gl = this.context;
+	      var image = new Image();
+	      image.width = 1;
+	      image.height = 1;
+
+	      var canvas = document.createElement('canvas');
+	      canvas.width = 1;
+	      canvas.height = 1;
+	      var context = canvas.getContext('2d');
+	      context.fillStyle = 'rgba(255, 255, 255, 1.0)';
+	      context.fillRect(0, 0, 1, 1);
+
+	      this.__dummyTexture = gl.createTexture();
+
+	      image.onload = function () {
+	        gl.bindTexture(gl.TEXTURE_2D, _this3.__dummyTexture);
+	        // texImage2D(target, level, internalformat, width, height, border, format, type, source)
+	        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, image);
+	        gl.bindTexture(gl.TEXTURE_2D, null);
+
+	        _this3._setDummyTextureAsDefault();
+	      };
+	      console.log('canvas.toDataURL: ' + canvas.toDataURL());
+	      image.src = canvas.toDataURL();
+	    }
+	  }, {
+	    key: '_setDummyTextureAsDefault',
+	    value: function _setDummyTextureAsDefault() {
+	      var gl = this.context;
+	      var p = this.__defaultProgram;
+
+	      var texNames = [gl.TEXTURE0, gl.TEXTURE1, gl.TEXTURE2, gl.TEXTURE3, gl.TEXTURE4, gl.TEXTURE5, gl.TEXTURE6, gl.TEXTURE7];
+	      var texSymbols = ['u_emissionTexture', 'u_ambientTexture', 'u_diffuseTexture', 'u_specularTexture', 'u_reflectiveTexture', 'u_transparentTexture', 'u_multiplyTexture', 'u_normalTexture'];
+	      for (var i = 0; i < texNames.length; i++) {
+	        var texName = texNames[i];
+	        var symbol = texSymbols[i];
+	        gl.uniform1i(gl.getUniformLocation(p._glProgram, symbol), i);
+	        gl.activeTexture(texName);
+	        gl.bindTexture(gl.TEXTURE_2D, this.__dummyTexture);
+
+	        var err = gl.getError();
+	        if (err) {
+	          throw new Error('error: ' + texName + ': ' + symbol + ': ' + err);
+	        }
+	      }
+	    }
+
+	    /**
+	     * @access private
+	     * @param {Image} image -
+	     * @returns {WebGLTexture} -
+	     */
+
+	  }, {
+	    key: '_createTexture',
+	    value: function _createTexture(image) {
+	      var gl = this.context;
+	      var texture = gl.createTexture();
+
+	      gl.bindTexture(gl.TEXTURE_2D, texture);
+	      // texImage2D(target, level, internalformat, width, height, border, format, type, source)
+	      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, image.width, image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, image);
+	      gl.bindTexture(gl.TEXTURE_2D, null);
+	      return texture;
 	    }
 	  }, {
 	    key: 'nextFrameTime',
@@ -15379,16 +15469,6 @@ module.exports =
 	    get: function get() {
 	      return this._context;
 	    }
-
-	    // Working With Positional Audio
-
-	    /**
-	     * Required. The 3D audio mixing node SceneKit uses for positional audio effects.
-	     * @type {AVAudioEnvironmentNode}
-	     * @desc SceneKit uses this audio node to spatialize sounds from SCNAudioPlayer objects attached to nodes in the scene. You can use this object in conjunction with the audioEngine property to rearrange the audio graph to add other, non-spatialized audio sources or mix in audio processing effects.
-	     * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1523582-audioenvironmentnode
-	     */
-
 	  }, {
 	    key: 'audioEnvironmentNode',
 	    get: function get() {
@@ -15465,42 +15545,14 @@ module.exports =
 	      gl.enable(gl.CULL_FACE);
 	      gl.cullFace(gl.BACK);
 
-	      // set dummy textures
-	      var texNames = [gl.TEXTURE0, gl.TEXTURE1, gl.TEXTURE2, gl.TEXTURE3, gl.TEXTURE4, gl.TEXTURE5, gl.TEXTURE6, gl.TEXTURE7];
-	      var texSymbols = ['u_emissionTexture', 'u_ambientTexture', 'u_diffuseTexture', 'u_specularTexture', 'u_reflectiveTexture', 'u_transparentTexture', 'u_multiplyTexture', 'u_normalTexture'];
-	      for (var i = 0; i < texNames.length; i++) {
-	        var texName = texNames[i];
-	        var symbol = texSymbols[i];
-	        gl.uniform1i(gl.getUniformLocation(p._glProgram, symbol), i);
-	        gl.activeTexture(texName);
-	        gl.bindTexture(gl.TEXTURE_2D, this._dummyTexture);
-
-	        var err = gl.getError();
-	        if (err) {
-	          throw new Error('error: ' + texName + ': ' + symbol + ': ' + err);
-	        }
-	      }
-
 	      return this.__defaultProgram;
 	    }
 	  }, {
 	    key: '_dummyTexture',
 	    get: function get() {
-	      if (this.__dummyTexture !== null) {
-	        return this.__dummyTexture;
-	      }
-	      var gl = this.context;
-	      var image = new Image();
-	      image.width = 1;
-	      image.height = 1;
-
-	      this.__dummyTexture = gl.createTexture();
-	      gl.bindTexture(gl.TEXTURE_2D, this.__dummyTexture);
-	      // texImage2D(target, level, internalformat, width, height, border, format, type, source)
-	      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, image);
-	      gl.bindTexture(gl.TEXTURE_2D, null);
-
+	      //if(this.__dummyTexture !== null){
 	      return this.__dummyTexture;
+	      //}
 	    }
 	  }]);
 
@@ -16522,7 +16574,7 @@ module.exports =
 	      if (this.contents instanceof _SKColor2.default) {
 	        return this.contents.float32Array();
 	      }
-	      return new Float32Array();
+	      return new Float32Array([1, 1, 1, 1]);
 	    }
 	  }]);
 
@@ -28948,7 +29000,7 @@ module.exports =
 
 	    this._program = this._context.createProgram();
 
-	    this._renderer._context = this._context;
+	    this._renderer._setContext(this._context);
 	    this._renderer.program = this._program;
 	    this._renderer._viewRect = frame;
 	  }

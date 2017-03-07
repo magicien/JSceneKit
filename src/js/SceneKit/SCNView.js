@@ -286,7 +286,7 @@ export default class SCNView {
 
     this._program = this._context.createProgram()
 
-    this._renderer._context = this._context
+    this._renderer._setContext(this._context)
     this._renderer.program = this._program
     this._renderer._viewRect = frame
   }

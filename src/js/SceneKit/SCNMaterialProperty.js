@@ -126,7 +126,7 @@ export default class SCNMaterialProperty extends NSObject {
     if(this.contents instanceof SKColor){
       return this.contents.float32Array()
     }
-    return new Float32Array()
+    return new Float32Array([1, 1, 1, 1])
   }
 }
 
