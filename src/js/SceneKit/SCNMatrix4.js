@@ -618,6 +618,25 @@ export default class SCNMatrix4 {
 
   /**
    * @access public
+   * @returns {SCNVector3}
+   */
+  getScale() {
+    const sx = new SCNVector3(this.m11, this.m21, this.m31)
+    const sy = new SCNVector3(this.m12, this.m22, this.m32)
+    const sz = new SCNVector3(this.m13, this.m23, this.m33)
+    return new SCNVector3(sx.length(), sy.length(), sz.length())
+  }
+
+  /**
+   * @access public
+   * @returns {SCNVector3}
+   */
+  getTranslation() {
+    return new SCNVector3(this.m14, this.m24, this.m34)
+  }
+
+  /**
+   * @access public
    * @returns {Float32Array} -
    * @desc column-major layout for WebGL
    */

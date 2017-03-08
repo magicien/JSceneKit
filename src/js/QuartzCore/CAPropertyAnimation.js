@@ -1,6 +1,10 @@
 'use strict'
 
 import CAAnimation from './CAAnimation'
+import CGPoint from '../CoreGraphics/CGPoint'
+import CGSize from '../CoreGraphics/CGSize'
+import CGRect from '../CoreGraphics/CGRect'
+import SCNMatrix4 from '../SceneKit/SCNMatrix4'
 
 /**
  * An abstract subclass of CAAnimation for creating animations that manipulate the value of layer properties. 
@@ -53,5 +57,89 @@ export default class CAPropertyAnimation extends CAAnimation {
      * @see https://developer.apple.com/reference/quartzcore/capropertyanimation/1412447-valuefunction
      */
     this.valueFunction = null
+  }
+
+  /**
+   * @access public
+   * @returns {CAPropertyAnimation}
+   */
+  copy() {
+    const anim = super.copy()
+    anim.keyPath = this.keyPath
+    anim.isCumulative = this.isCumulative
+    anim.isAdditive = this.isAdditive
+    anim.valueFunction = this.valueFunction
+
+    return anim
+  }
+
+  _applyAnimation(obj, time) {
+    const activeTime = this._basetimeFromActivetime(time)
+    let t = activeTime
+    if(this.timingFunction !== null){
+      t = this.timingFunction(activeTime)
+    }
+    const value = this.valueFunction(t)
+    this._applyValue(obj, value)
+  }
+
+  _applyValue(obj, value) {
+    
+    if(obj instanceof SCNMatrix4){
+      switch(this.keyPath){
+        case 'rotation.x':
+          
+          break
+        case 'rotation.y':
+          break
+        case 'rotation.z':
+        case 'rotation':
+          break
+        case 'quaternion':
+          break
+        case 'scale.x':
+          break
+        case 'scale.y':
+          break
+        case 'scale.z':
+          break
+        case 'scale':
+          break
+        case 'translation.x':
+          break
+        case 'translation.y':
+          break
+        case 'translation.z':
+          break
+        case 'translation':
+          break
+        default:
+          break
+      }
+    
+    }else if(obj instanceof CGPoint){
+      switch(this.keyPath){
+        case 'x':
+        case 'y':
+        default:
+      }
+    }else if(obj instanceof CGSize){
+      switch(this.keyPath){
+        case 'width':
+        case 'height':
+        default:
+      }
+    }else if(obj instanceof CGRect){
+      switch(this.keyPath){
+        case 'origin':
+        case 'origin.x':
+        case 'origin.y':
+        case 'size':
+        case 'size.width':
+        case 'size.height':
+      }
+    }else{
+      obj.setValueForKeyPath(value, this.keyPath)
+    }
   }
 }

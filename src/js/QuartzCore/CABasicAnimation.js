@@ -41,4 +41,16 @@ export default class CABasicAnimation extends CAPropertyAnimation {
      */
     this.byValue = null
   }
+
+  /**
+   * @access public
+   * @returns {CABasicAnimation}
+   */
+  copy() {
+    const anim = super.copy()
+    anim.fromValue = this.fromValue
+    anim.toValue = this.toValue
+    anim.byValue = this.byValue
+    return anim
+  }
 }

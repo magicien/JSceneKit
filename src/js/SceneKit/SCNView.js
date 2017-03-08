@@ -819,6 +819,8 @@ export default class SCNView {
     ///////////////////////////////
     // runs actions & animations //
     ///////////////////////////////
+    this._runActions()
+    this._runAnimations()
 
     if(this._delegate && this._delegate.rendererDidApplyAnimationsAtTime){
       this._delegate.rendererDidApplyAnimationsAtTime(this._renderer, time)
@@ -890,6 +892,31 @@ export default class SCNView {
     node.childNodes.forEach((child) => {
       this._updateTransform(child, this._worldTransform)
     })
+  }
+
+  _runActions() {
+  }
+
+  _runAction() {
+  }
+
+  _runAnimations() {
+    this._runAnimation(this._scene.rootNode)
+  }
+
+  _runAnimation(node) {
+    let deleteKeys = []
+    const time = 
+    node._animations.forEach((key, animation) => {
+      animation._applyAnimation(node, time)
+      if(animation._isFinished && animation.isRemovedOnCompletion){
+        deleteKeys.push(key)
+      }
+    })
+    deleteKeys.forEach((key) => {
+      node._animations.delete(key)
+    })
+    node.childNodes.forEach((child) => this._runAnimation(child))
   }
 }
 

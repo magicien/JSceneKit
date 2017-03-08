@@ -6,4 +6,3 @@ node_modules
 build/
 coverage*
 .nyc_output
-class-dump.txt

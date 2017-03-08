@@ -1143,6 +1143,20 @@ Typically, however, you are encouraged to relinquish resources prior to finaliza
    * @see https://developer.apple.com/reference/objectivec/nsobject/1418139-setvalue
    */
   setValueForKeyPath(value, keyPath) {
+    if(typeof keyPath !== 'string'){
+      throw new Error('setValueForKeyPath: keyPath should be string')
+    }
+    const paths = keyPath.split('.')
+    const key = paths.shift()
+    if(paths.length === 0){
+      this.setValueForKey(value, key)
+      return
+    }
+    if(this[key] === undefined){
+      this.setValueForUndefinedKey(value, keyPath)
+      return
+    }
+    this[key].setValueForKeyPath(value, paths.join('.'))
   }
 
   /**
@@ -1155,6 +1169,7 @@ Typically, however, you are encouraged to relinquish resources prior to finaliza
    * @see https://developer.apple.com/reference/objectivec/nsobject/1413490-setvalue
    */
   setValueForUndefinedKey(value, key) {
+    throw new Error(`setValueForKey: undefined key: ${key}`)
   }
 
   /**
@@ -1212,6 +1227,9 @@ You call this method in a try expression and handle any errors in the catch clau
     if(typeof key !== 'string'){
       throw 'error: valueForKey(key): key should be string'
     }
+    if(this[key] === undefined){
+      return this.valueForUndefinedKey(key)
+    }
     return this[key]
   }
 
@@ -1225,12 +1243,12 @@ You call this method in a try expression and handle any errors in the catch clau
    */
   valueForKeyPath(keyPath) {
     if(typeof keyPath !== 'string'){
-      throw 'error: valueForKeyPath(keyPath): keyPath should be string'
+      throw new Error('valueForKeyPath(keyPath): keyPath should be string')
     }
     const paths = keyPath.split('.')
     const key = paths.shift()
     const value = this.valueForKey(key)
-    if(paths.length === 0 || value === undefined || value === null){
+    if(paths.length === 0){
       return value
     }
     return value.valueForKeyPath(paths.join('.'))
@@ -1245,7 +1263,7 @@ You call this method in a try expression and handle any errors in the catch clau
    * @see https://developer.apple.com/reference/objectivec/nsobject/1413457-value
    */
   valueForUndefinedKey(key) {
-    return null
+    throw new Error(`valueForKey: undefined key: ${key}`)
   }
 
   /**

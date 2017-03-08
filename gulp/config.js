@@ -20,8 +20,6 @@ module.exports = {
     src: [
       src + '/js/**',
       './test/**/*.js',
-      '!' + src + '/js/third_party/*.js',
-      '!' + src + '/js/etc/*.js'
     ],
     opts: {
       useEslintrc: true,

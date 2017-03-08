@@ -322,3 +322,9 @@ exports.SCNVector4ToGLKVector4 = SCNVector4ToGLKVector4
 exports.SCNView = SCNView
 exports.SCNWrapMode = SCNWrapMode
 exports.SKColor = SKColor
+
+// constants
+exports.kCAFillModeRemoved = 'removed'
+exports.kCAFillModeForwards = 'forwards'
+exports.kCAFillModeBackwards = 'backwards'
+exports.kCAFillModeBoth = 'both'

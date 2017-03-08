@@ -1,5 +1,6 @@
 'use strict'
 
+import * as Constants from '../constants'
 import NSObject from '../ObjectiveC/NSObject'
 import CAAction from './CAAction'
 import CAMediaTiming from './CAMediaTiming'
@@ -66,7 +67,7 @@ export default class CAAnimation extends NSObject {
     // Fading Between SceneKit Animations
 
     /**
-     * For animations attached to SceneKit objects, the duration for transitioning into the animation’s effect as it begins.
+     * For animations attached to SceneKit objects, the duration for transitioning into the animation’s effect as it beins.
      * @type {number}
      * @see https://developer.apple.com/reference/quartzcore/caanimation/1523370-fadeinduration
      */
@@ -88,6 +89,79 @@ export default class CAAnimation extends NSObject {
      * @see https://developer.apple.com/reference/quartzcore/caanimation/1523940-animationevents
      */
     this.animationEvents = null
+
+    ///////////////////
+    // CAMediaTiming //
+    ///////////////////
+
+    // Animation Start Time
+
+    /**
+     * Required. Specifies the begin time of the receiver in relation to its parent object, if applicable.
+     * @type {number}
+     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427654-begintime
+     */
+    this.beginTime = 0
+
+    /**
+     * Required. Specifies an additional time offset in active local time.
+     * @type {number}
+     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427650-timeoffset
+     */
+    this.timeOffset = 0
+
+
+    // Repeating Animations
+
+    /**
+     * Required. Determines the number of times the animation will repeat.
+     * @type {number}
+     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427666-repeatcount
+     */
+    this.repeatCount = 0
+
+    /**
+     * Required. Determines how many seconds the animation will repeat for.
+     * @type {number}
+     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427643-repeatduration
+     */
+    this.repeatDuration = 0
+
+
+    // Duration and Speed
+
+    /**
+     * Required. Specifies the basic duration of the animation, in seconds.
+     * @type {number}
+     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427652-duration
+     */
+    this.duration = 0
+
+    /**
+     * Required. Specifies how time is mapped to receiver’s time space from the parent time space. 
+     * @type {number}
+     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427647-speed
+     */
+    this.speed = 0
+
+
+    // Playback Modes
+
+    /**
+     * Required. Determines if the receiver plays in the reverse upon completion.
+     * @type {boolean}
+     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427645-autoreverses
+     */
+    this.autoreverses = false
+
+    /**
+     * Required. Determines if the receiver’s presentation is frozen or removed once its active duration has completed.
+     * @type {string}
+     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427656-fillmode
+     */
+    this.fillMode = Constants.kCAFillModeRemoved
+
+    this._isFinished = false
   }
 
   // Archiving properties
@@ -116,5 +190,126 @@ export default class CAAnimation extends NSObject {
    */
   static defaultValueForKey(key) {
     return null
+  }
+
+  /**
+   * @access public
+   * @returns {CAAnimation}
+   */
+  copy() {
+    const anim = new CAAnimation()   
+    anim.isRemovedOnCompletion = this.isRemovedOnCompletion
+    anim.timingFunction = this.timingFunction
+    anim.delegate = this.delegate
+    anim.usesSceneTimeBase = this.usesSceneTimeBase
+    anim.fadeInDuration = this.fadeInDuration
+    anim.fadeOutDuration = this.fadeOutDuration
+    anim.animationEvents = this.animationEvents
+    anim.beginTime = this.beginTime
+    anim.timeOffset = this.timeOffset
+    anim.repeatCount = this.repeatCount
+    anim.repeatDuration = this.repeatDuration
+    anim.duration = this.duration
+    anim.speed = this.speed
+    anim.autoreverses = this.autoreverses
+    anim.fillMode = this.fillMode
+
+    return anim
+  }
+
+  /**
+   * apply animation to the given node.
+   * @access private
+   * @param {Object} obj - target object to apply this animation.
+   * @param {number} time - active time
+   * @returns {void}
+   */
+  _applyAnimation(obj, time) {
+    const activeTime = this._basetimeFromActivetime(time)
+    let t = activeTime
+    if(this.timingFunction !== null){
+      t = this.timingFunction(activeTime)
+    }
+    this._handleEvents(obj, t)
+  }
+
+  _handleEvents(obj, time) {
+    if(this.animationEvents === null){
+      return
+    }
+    let prevTime = this._prevTime
+    if(prevTime === null){
+      prevTime = time - 0.0000001
+    }
+    this.animationEvents.forEach((event) => {
+      if(prevTime < event.time && event.time <= time){
+        if(event.block){
+          // FIXME: set playingBackward
+          // SCNAnimationEventBlock(animation, animatedObject, playingBackward)
+          event.block(this, obj, false)
+        }
+      }
+    })
+  }
+
+  /**
+   * convert active time to base time
+   * @access private
+   * @param {number} time - active time
+   * @returns {number} - animation base time for the current frame (0-1 or null).
+   */
+  _basetimeFromActivetime(time) {
+    let dt = time - this.beginTime
+    if(dt < 0){
+      if(this.fillMode === Constants.kCAFillModeBackwards ||
+         this.fillMode === Constants.kCAFillModeBoth){
+        dt = 0
+      }else{
+        return null
+      }
+    }
+    if(this.speed === 0){
+      return 0
+    }
+    let oneLoopDuration = this.duration / Math.abs(this.speed)
+    let duration = oneLoopDuration
+    if(duration === 0){
+      duration = 0.25
+    }
+
+    if(this.repeatDuration > 0){
+      duration = this.repeatDuration
+    }else{
+      if(this.repeatCount > 0){
+        duration *= this.repeatCount
+      }
+      if(this.autoreverses){
+        oneLoopDuration *= 2.0
+        duration *= 2.0
+      }
+    }
+
+    if(dt > duration){
+      // animation is over
+      this._isFinished = true
+      if(this.fillMode === Constants.kCAFillModeForwards ||
+         this.fillMode === Constants.kCAFillModeBoth){
+        dt = duration
+      }else{
+        return null
+      }
+    }
+
+    let t = ((dt + this.timeOffset) % oneLoopDuration) / oneLoopDuration
+    if(t < 0){
+      t = 1 + t
+    }
+    if(this.autoreverses){
+      if(t <= 0.5){
+        return t * 2.0
+      }
+      return (1 - t) * 2.0
+    }
+    return t
   }
 }
