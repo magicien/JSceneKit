@@ -97,6 +97,7 @@ export default class SCNGeometryElement extends NSObject {
     this._buffer = gl.createBuffer()
     gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, this._buffer)
     gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, this._glData, gl.STATIC_DRAW)
+
     return this._buffer
   }
 }

@@ -14,6 +14,7 @@ import SCNLight from './SCNLight'
 import SCNVector3 from './SCNVector3'
 import SCNVector4 from './SCNVector4'
 import SKColor from '../SpriteKit/SKColor'
+import SCNGeometrySource from './SCNGeometrySource'
 
 /**
  * @access private
@@ -65,18 +66,18 @@ const _defaultVertexShader =
           continue;
         }
         int idx = int(boneIndices[i]) * 3;
-        mat4 jointMatrix = mat4(skinningJoints[idx],
-                                skinningJoints[idx+1],
-                                skinningJoints[idx+2],
-                                vec4(0, 0, 0, 1));
+        mat4 jointMatrix = transpose(mat4(skinningJoints[idx],
+                                          skinningJoints[idx+1],
+                                          skinningJoints[idx+2],
+                                          vec4(0, 0, 0, 1)));
         pos += (jointMatrix * vec4(position, 1.0)).xyz * weight;
         nom += (mat3(jointMatrix) * normal) * weight;
       }
     }else{
-      mat4 jointMatrix = mat4(skinningJoints[0],
-                              skinningJoints[1],
-                              skinningJoints[2],
-                              vec4(0, 0, 0, 1));
+      mat4 jointMatrix = transpose(mat4(skinningJoints[0],
+                                        skinningJoints[1],
+                                        skinningJoints[2],
+                                        vec4(0, 0, 0, 1)));
       pos = (jointMatrix * vec4(position, 1.0)).xyz;
       nom = mat3(jointMatrix) * normal;
     }
@@ -538,14 +539,16 @@ export default class SCNRenderer extends NSObject {
 
     //console.log('nodeName: ' + node.name)
 
-    // FIXME: use SCNSkinner
-    gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.transform.float32Array3x4f())
-    //console.log('skinningJoints: ' + node.presentation.transform.float32Array3x4f())
+    if(node.presentation.skinner !== null){
+      gl.uniform1i(gl.getUniformLocation(program, 'useSkinner'), 1)
+      gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array())
+    }else{
+      gl.uniform1i(gl.getUniformLocation(program, 'useSkinner'), 0)
+      gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.transform.float32Array3x4f())
+    }
 
     // TODO: buffer dynamic vertex data
 
-    // scn_node
-    //c.uniform3fv(c.getUniformLocation(program, 'skinningJointMatrices', false, Float32Array(skinner....))
     const geometryCount = node.presentation.geometry.geometryElements.length
     if(geometryCount === 0){
       throw new Error('geometryCount: 0')
@@ -568,7 +571,7 @@ export default class SCNRenderer extends NSObject {
         material.diffuse.contents = this._createTexture(material.diffuse.contents)
       }
       if(material.diffuse.contents instanceof WebGLTexture){
-        console.error('texture: YES')
+        //console.error('texture: YES')
         gl.uniform1i(gl.getUniformLocation(program, 'u_useDiffuseTexture'), 1)
         gl.activeTexture(gl.TEXTURE2)
         gl.bindTexture(gl.TEXTURE_2D, material.diffuse.contents)
@@ -577,7 +580,7 @@ export default class SCNRenderer extends NSObject {
         gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.REPEAT)
         gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.REPEAT)
       }else{
-        console.error('texture: NO')
+        //console.error('texture: NO')
         gl.uniform1i(gl.getUniformLocation(program, 'u_useDiffuseTexture'), 0)
         /*
         gl.activeTexture(gl.TEXTURE2)
@@ -591,7 +594,6 @@ export default class SCNRenderer extends NSObject {
 
       gl.drawElements(gl.TRIANGLES, element._glData.length, gl.UNSIGNED_SHORT, 0)
     }
-
   }
 
   /**
@@ -918,23 +920,24 @@ export default class SCNRenderer extends NSObject {
     const gl = this.context
     const geometry = node.presentation.geometry
 
+    // prepare vertex array data
+    const vertexBuffer = geometry._createVertexBuffer(gl)
+    const positionLoc = gl.getAttribLocation(program, 'position')
+    const normalLoc = gl.getAttribLocation(program, 'normal')
+    const texcoordLoc = gl.getAttribLocation(program, 'texcoord')
+    const boneIndicesLoc = gl.getAttribLocation(program, 'boneIndices')
+    const boneWeightsLoc = gl.getAttribLocation(program, 'boneWeights')
+
     geometry._vertexArrayObjects = []
-    const geometryCount = node.presentation.geometry.geometryElements.length
-    for(let i=0; i<geometryCount; i++){
+    const elementCount = node.presentation.geometry.geometryElements.length
+    for(let i=0; i<elementCount; i++){
       const element = node.presentation.geometry.geometryElements[i]
       const material = node.presentation.geometry.materials[i]
       const vao = gl.createVertexArray()
       gl.bindVertexArray(vao)
 
       // initialize vertex buffer
-      const vertexBuffer = geometry.geometrySources[0]._createBuffer(gl)
       gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer)
-
-      const positionLoc = gl.getAttribLocation(program, 'position')
-      const normalLoc = gl.getAttribLocation(program, 'normal')
-      const texcoordLoc = gl.getAttribLocation(program, 'texcoord')
-      const boneIndicesLoc = gl.getAttribLocation(program, 'boneIndices')
-      const boneWeightsLoc = gl.getAttribLocation(program, 'boneWeights')
 
       gl.bindAttribLocation(program, positionLoc, 'position')
       gl.bindAttribLocation(program, normalLoc, 'normal')
@@ -942,25 +945,65 @@ export default class SCNRenderer extends NSObject {
       gl.bindAttribLocation(program, boneIndicesLoc, 'boneIndices')
       gl.bindAttribLocation(program, boneWeightsLoc, 'boneWeights')
 
-      gl.enableVertexAttribArray(positionLoc)
-      gl.enableVertexAttribArray(normalLoc)
-      gl.enableVertexAttribArray(texcoordLoc)
-      gl.enableVertexAttribArray(boneIndicesLoc)
-      gl.enableVertexAttribArray(boneWeightsLoc)
+      //gl.enableVertexAttribArray(positionLoc)
+      //gl.enableVertexAttribArray(normalLoc)
+      //gl.enableVertexAttribArray(texcoordLoc)
+      //gl.enableVertexAttribArray(boneIndicesLoc)
+      //gl.enableVertexAttribArray(boneWeightsLoc)
 
       // FIXME: use geometrySources param
       // vertexAttribPointer(ulong idx, long size, ulong type, bool norm, long stride, ulong offset)
       // position
-      gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, 16*4, 0*4)
-      // normal
-      gl.vertexAttribPointer(normalLoc, 3, gl.FLOAT, false, 16*4, 3*4)
-      // texcoord
-      gl.vertexAttribPointer(texcoordLoc, 2, gl.FLOAT, false, 16*4, 6*4)
-      // boneIndices
-      gl.vertexAttribPointer(boneIndicesLoc, 4, gl.FLOAT, false, 16*4, 8*4)
-      // boneWeights
-      gl.vertexAttribPointer(boneWeightsLoc, 4, gl.FLOAT, false, 16*4, 12*4)
+      const posSrc = geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
+      if(posSrc){
+        //console.log(`posSrc: ${positionLoc}, ${posSrc.componentsPerVector}, ${posSrc.dataStride}, ${posSrc.dataOffset}`)
+        gl.enableVertexAttribArray(positionLoc)
+        gl.vertexAttribPointer(positionLoc, posSrc.componentsPerVector, gl.FLOAT, false, posSrc.dataStride, posSrc.dataOffset)
+      }else{
+        gl.disableVertexAttribArray(positionLoc)
+      }
 
+      // normal
+      const nrmSrc = geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.normal)[0]
+      if(nrmSrc){
+        //console.log(`nrmSrc: ${normalLoc}, ${nrmSrc.componentsPerVector}, ${nrmSrc.dataStride}, ${nrmSrc.dataOffset}`)
+        gl.enableVertexAttribArray(normalLoc)
+        gl.vertexAttribPointer(normalLoc, nrmSrc.componentsPerVector, gl.FLOAT, false, nrmSrc.dataStride, nrmSrc.dataOffset)
+      }else{
+        gl.disableVertexAttribArray(normalLoc)
+      }
+
+      // texcoord
+      const texSrc = geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[0]
+      if(texSrc){
+        //console.log(`texSrc: ${texcoordLoc}, ${texSrc.componentsPerVector}, ${texSrc.dataStride}, ${texSrc.dataOffset}`)
+        gl.enableVertexAttribArray(texcoordLoc)
+        gl.vertexAttribPointer(texcoordLoc, texSrc.componentsPerVector, gl.FLOAT, false, texSrc.dataStride, texSrc.dataOffset)
+      }else{
+        gl.disableVertexAttribArray(texcoordLoc)
+      }
+
+      // boneIndices
+      const indSrc = geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneIndices)[0]
+      if(indSrc){
+        //console.log(`indSrc: ${boneIndicesLoc}, ${indSrc.componentsPerVector}, ${indSrc.dataStride}, ${indSrc.dataOffset}`)
+        gl.enableVertexAttribArray(boneIndicesLoc)
+        gl.vertexAttribPointer(boneIndicesLoc, indSrc.componentsPerVector, gl.FLOAT, false, indSrc.dataStride, indSrc.dataOffset)
+      }else{
+        gl.disableVertexAttribArray(boneIndicesLoc)
+      }
+
+      // boneWeights
+      const wgtSrc = geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneWeights)[0]
+      if(wgtSrc){
+        //console.log(`wgtSrc: ${boneWeightsLoc}, ${wgtSrc.componentsPerVector}, ${wgtSrc.dataStride}, ${wgtSrc.dataOffset}`)
+        gl.enableVertexAttribArray(boneWeightsLoc)
+        gl.vertexAttribPointer(boneWeightsLoc, wgtSrc.componentsPerVector, gl.FLOAT, false, wgtSrc.dataStride, wgtSrc.dataOffset)
+      }else{
+        gl.disableVertexAttribArray(boneWeightsLoc)
+      }
+
+      // FIXME: use setting
       gl.disable(gl.CULL_FACE)
 
       // initialize index buffer
@@ -998,10 +1041,9 @@ export default class SCNRenderer extends NSObject {
       // texImage2D(target, level, internalformat, width, height, border, format, type, source)
       gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, image)
       gl.bindTexture(gl.TEXTURE_2D, null)
-
       this._setDummyTextureAsDefault()
     }
-    console.log('canvas.toDataURL: ' + canvas.toDataURL())
+    //console.log('canvas.toDataURL: ' + canvas.toDataURL())
     image.src = canvas.toDataURL()
   }
 
@@ -1035,11 +1077,6 @@ export default class SCNRenderer extends NSObject {
       gl.uniform1i(gl.getUniformLocation(p._glProgram, symbol), i)
       gl.activeTexture(texName)
       gl.bindTexture(gl.TEXTURE_2D, this.__dummyTexture)
-
-      const err = gl.getError()
-      if(err){
-        throw new Error(`error: ${texName}: ${symbol}: ${err}`)
-      }
     }
   }
 

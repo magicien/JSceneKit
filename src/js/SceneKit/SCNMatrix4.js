@@ -661,5 +661,13 @@ export default class SCNMatrix4 {
       this.m31, this.m32, this.m33, this.m34
     ])
   }
+
+  floatArray3x4f() {
+    return [
+      this.m11, this.m12, this.m13, this.m14,
+      this.m21, this.m22, this.m23, this.m24,
+      this.m31, this.m32, this.m33, this.m34
+    ]
+  }
 }
 

@@ -142,7 +142,7 @@ export default class CAAnimation extends NSObject {
      * @type {number}
      * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427647-speed
      */
-    this.speed = 0
+    this.speed = 1
 
 
     // Playback Modes
@@ -162,6 +162,9 @@ export default class CAAnimation extends NSObject {
     this.fillMode = Constants.kCAFillModeRemoved
 
     this._isFinished = false
+
+    this._prevTime = null
+    this._animationStartTime = null
   }
 
   // Archiving properties
@@ -198,23 +201,26 @@ export default class CAAnimation extends NSObject {
    */
   copy() {
     const anim = new CAAnimation()   
-    anim.isRemovedOnCompletion = this.isRemovedOnCompletion
-    anim.timingFunction = this.timingFunction
-    anim.delegate = this.delegate
-    anim.usesSceneTimeBase = this.usesSceneTimeBase
-    anim.fadeInDuration = this.fadeInDuration
-    anim.fadeOutDuration = this.fadeOutDuration
-    anim.animationEvents = this.animationEvents
-    anim.beginTime = this.beginTime
-    anim.timeOffset = this.timeOffset
-    anim.repeatCount = this.repeatCount
-    anim.repeatDuration = this.repeatDuration
-    anim.duration = this.duration
-    anim.speed = this.speed
-    anim.autoreverses = this.autoreverses
-    anim.fillMode = this.fillMode
-
+    anim._copyValue(this)
     return anim
+  }
+
+  _copyValue(src) {
+    this.isRemovedOnCompletion = src.isRemovedOnCompletion
+    this.timingFunction = src.timingFunction
+    this.delegate = src.delegate
+    this.usesSceneTimeBase = src.usesSceneTimeBase
+    this.fadeInDuration = src.fadeInDuration
+    this.fadeOutDuration = src.fadeOutDuration
+    this.thisationEvents = src.thisationEvents
+    this.beginTime = src.beginTime
+    this.timeOffset = src.timeOffset
+    this.repeatCount = src.repeatCount
+    this.repeatDuration = src.repeatDuration
+    this.duration = src.duration
+    this.speed = src.speed
+    this.autoreverses = src.autoreverses
+    this.fillMode = src.fillMode
   }
 
   /**
@@ -225,10 +231,11 @@ export default class CAAnimation extends NSObject {
    * @returns {void}
    */
   _applyAnimation(obj, time) {
-    const activeTime = this._basetimeFromActivetime(time)
-    let t = activeTime
+    const activeTime = time - this._animationStartTime
+    const baseTime = this._basetimeFromActivetime(activeTime)
+    let t = baseTime
     if(this.timingFunction !== null){
-      t = this.timingFunction(activeTime)
+      t = this.timingFunction(baseTime)
     }
     this._handleEvents(obj, t)
   }

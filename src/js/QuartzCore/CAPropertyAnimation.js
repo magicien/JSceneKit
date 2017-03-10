@@ -64,13 +64,17 @@ export default class CAPropertyAnimation extends CAAnimation {
    * @returns {CAPropertyAnimation}
    */
   copy() {
-    const anim = super.copy()
-    anim.keyPath = this.keyPath
-    anim.isCumulative = this.isCumulative
-    anim.isAdditive = this.isAdditive
-    anim.valueFunction = this.valueFunction
-
+    const anim = new CAPropertyAnimation(this.keyPath)
+    anim._copyValue(this)
     return anim
+  }
+
+  _copyValue(src) {
+    super._copyValue(src)
+    this.keyPath = src.keyPath
+    this.isCumulative = src.isCumulative
+    this.isAdditive = src.isAdditive
+    this.valueFunction = src.valueFunction
   }
 
   _applyAnimation(obj, time) {
@@ -84,7 +88,9 @@ export default class CAPropertyAnimation extends CAAnimation {
   }
 
   _applyValue(obj, value) {
-    
+    //console.log('CAPropertyAnimation._applyValue: ' + obj + ', ' + value)
+    /*
+    const paths = this.keyPath.split('.')
     if(obj instanceof SCNMatrix4){
       switch(this.keyPath){
         case 'rotation.x':
@@ -138,8 +144,14 @@ export default class CAPropertyAnimation extends CAAnimation {
         case 'size.width':
         case 'size.height':
       }
-    }else{
+    }
+    */
+
+    if(obj._isPresentationInstance || obj._presentation === null){
       obj.setValueForKeyPath(value, this.keyPath)
+    }else{
+      //console.log('presentation.setValue')
+      obj._presentation.setValueForKeyPath(value, this.keyPath)
     }
   }
 }

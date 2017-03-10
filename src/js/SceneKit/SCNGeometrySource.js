@@ -58,19 +58,23 @@ export default class SCNGeometrySource extends NSObject {
      * @access private
      */
     this._glData = null
-    if(floatComponents){
-      if(bytesPerComponent == 4){
-        this._glData = new Float32Array(data)
-      }else if(bytesPerComponent == 8){
-        this._glData = new Float64Array(data)
-      }
+    if(this._hasTypedArrayData()){
+      this._glData = this._data
     }else{
-      if(bytesPerComponent == 1){
-        this._glData = new Uint8Array(data)
-      }else if(bytesPerComponent == 2){
-        this._glData = new Uint16Array(data)
-      }else if(bytesPerComponent == 4){
-        this._glData = new Uint32Array(data)
+      if(floatComponents){
+        if(bytesPerComponent === 4){
+          this._glData = new Float32Array(data)
+        }else if(bytesPerComponent === 8){
+          this._glData = new Float64Array(data)
+        }
+      }else{
+        if(bytesPerComponent === 1){
+          this._glData = new Uint8Array(data)
+        }else if(bytesPerComponent === 2){
+          this._glData = new Uint16Array(data)
+        }else if(bytesPerComponent === 4){
+          this._glData = new Uint32Array(data)
+        }
       }
     }
 
@@ -90,6 +94,28 @@ export default class SCNGeometrySource extends NSObject {
     return this._buffer
   }
 
+  /**
+   * @access pricate
+   * @returns {boolean}
+   */
+  _hasTypedArrayData() {
+    if(this._usesFloatComponents){
+      if(this._bytesPerComponent === 4){
+        return this._data instanceof Float32Array
+      }else if(this._bytesPerComponent === 8){
+        return this._data instanceof Float64Array
+      }
+    }else{
+      if(this._bytesPerComponent === 1){
+        return this._data instanceof Uint8Array
+      }else if(this._bytesPerComponent === 2){
+        return this._data instanceof Uint16Array
+      }else if(this._bytesPerComponent === 4){
+        return this._data instanceof Uint32Array
+      }
+    }
+    return false
+  }
 
   // Creating Geometry Sources
 
@@ -375,5 +401,22 @@ SCNGeometrySource *source = [SCNGeometrySource geometrySourceWithBuffer:buffer
    */
   static get Semantic() {
     return _Semantic
+  }
+
+  /**
+   * @access public
+   * @returns {number[]}
+   */
+  vectorAt(index) {
+    if(index < 0 || index >= this.vectorCount){
+      return null
+    }
+    const indexStride = this._dataStride / this._bytesPerComponent
+    let ind = index * indexStride + this._dataOffset / this._bytesPerComponent
+    const arr = []
+    for(let i=0; i<this._componentsPerVector; i++){
+      arr.push(this._data[ind + i])
+    }
+    return arr
   }
 }

@@ -811,6 +811,7 @@ export default class SCNView {
     const program = this._program
 
     this._updateTransform()
+    this._updatePresentationTransform()
 
     if(this._delegate && this._delegate.rendererUpdateAtTime){
       this._delegate.rendererUpdateAtTime(this._renderer, time)
@@ -821,6 +822,9 @@ export default class SCNView {
     ///////////////////////////////
     this._runActions()
     this._runAnimations()
+
+    this._updateTransform()
+    this._updatePresentationTransform()
 
     if(this._delegate && this._delegate.rendererDidApplyAnimationsAtTime){
       this._delegate.rendererDidApplyAnimationsAtTime(this._renderer, time)
@@ -871,7 +875,7 @@ export default class SCNView {
   __requestAnimationFrame() {
     // Reflect.apply(this._requestAnimationFrame, window, () => {
     this._requestAnimationFrame.call(window, () => {
-      this._currentSystemTime = (new Date()).getTime()
+      this._currentSystemTime = Date.now() * 0.001
       this.currentTime = this._currentSystemTime
       this._drawAtTimeWithContext(this.currentTime, this._context)
       //console.log('requestAnimationFrame: time: ' + this.currentTime)
@@ -888,9 +892,21 @@ export default class SCNView {
       return
     }
 
-    this._worldTransform = parentTransform.mult(node.transform)
+    //node._worldTransform = parentTransform.mult(node.transform)
+    node._worldTransform = node.transform.mult(parentTransform)
     node.childNodes.forEach((child) => {
-      this._updateTransform(child, this._worldTransform)
+      this._updateTransform(child, node._worldTransform)
+    })
+  }
+
+  _updatePresentationTransform(node, parentTransform) {
+    if(node === undefined){
+      this._updatePresentationTransform(this._scene.rootNode, new SCNMatrix4())
+      return
+    }
+    node.presentation._worldTransform = node.presentation.transform.mult(parentTransform)
+    node.childNodes.forEach((child) => {
+      this._updatePresentationTransform(child, node.presentation._worldTransform)
     })
   }
 
@@ -906,8 +922,8 @@ export default class SCNView {
 
   _runAnimation(node) {
     let deleteKeys = []
-    const time = 
-    node._animations.forEach((key, animation) => {
+    const time = this.currentTime
+    node._animations.forEach((animation, key) => {
       animation._applyAnimation(node, time)
       if(animation._isFinished && animation.isRemovedOnCompletion){
         deleteKeys.push(key)

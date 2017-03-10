@@ -400,7 +400,8 @@ export default class SCNNode extends NSObject {
     if(this._parent === null){
       return this.transform
     }
-    return this._parent.worldTransform.mult(this.transform)
+    //return this._parent.worldTransform.mult(this.transform)
+    return this.transform.mult(this._parent.worldTransform)
   }
 
   /**
@@ -996,7 +997,8 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     }
     const anim = animation.copy()
     // FIXME: use current frame time
-    //anim.beginTime = (new Date()) - 0
+    anim._animationStartTime = Date.now() * 0.001
+    anim._prevTime = anim._animationStartTime - 0.0000001
     this._animations.set(key, anim)
   }
 
@@ -1174,6 +1176,89 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     const proj = this.camera.projectionTransform
     const view = this.viewTransform
     return proj.mult(view)
+  }
+
+  setValueForKey(value, key) {
+    if(key === 'position'){
+      this.position = value
+    }else if(key === 'rotation'){
+      this.rotation = value
+    }else if(key === 'scale'){
+      this.scale = value
+    }else if(key === 'eulerAngles'){
+      this.eulerAngles = value
+    }else if(key === 'orientation'){
+      this.orientation = value
+    }else if(key === 'transform'){
+      this.transform = value
+    }else{
+      super.setValueForKey(value, key)
+    }
+  }
+
+  setValueForKeyPath(value, keyPath) {
+    const paths = keyPath.split('.')
+    if(paths[0] === 'transform'){
+      paths.shift()
+      const restPath = paths.join('.')
+      switch(restPath){
+        case 'rotation.x':
+          this._rotation.x = value
+          this._transformUpToDate = false
+          return
+        case 'rotation.y':
+          this._rotation.y = value
+          this._transformUpToDate = false
+          return
+        case 'rotation.z':
+          this._rotation.z = value
+          this._transformUpToDate = false
+          return
+        case 'rotation':
+          this._rotation.z = value
+          this._transformUpToDate = false
+          return
+        case 'quaternion':
+          // TODO: implement
+          return
+        case 'scale.x':
+          this._scale.x = value
+          this._transformUpToDate = false
+          return
+        case 'scale.y':
+          this._scale.y = value
+          this._transformUpToDate = false
+          return
+        case 'scale.z':
+          this._scale.z = value
+          this._transformUpToDate = false
+          return
+        case 'scale': {
+          const rate = value / this._scale.length()
+          this._scale.mul(rate)
+          this._transformUpToDate = false
+          return
+        }
+        case 'translation.x':
+          this._position.x = value
+          this._transformUpToDate = false
+          return
+        case 'translation.y':
+          this._position.y = value
+          this._transformUpToDate = false
+          return
+        case 'translation.z':
+          this._position.z = value
+          this._transformUpToDate = false
+          return
+        case 'translation':
+          this._position.x = value.x
+          this._position.y = value.y
+          this._transformUpToDate = false
+          return
+      }
+    }
+    super.setValueForKeyPath(value, keyPath)
   }
 }
 

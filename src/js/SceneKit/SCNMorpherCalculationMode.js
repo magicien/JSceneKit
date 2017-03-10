@@ -1,6 +1,5 @@
 'use strict'
 
-
 /**
  * The interpolation formulas for blending between target geometries.
  * @typedef {Object} SCNMorpherCalculationMode

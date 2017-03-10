@@ -324,6 +324,7 @@ exports.SCNWrapMode = SCNWrapMode
 exports.SKColor = SKColor
 
 // constants
+/*global exports*/
 exports.kCAFillModeRemoved = 'removed'
 exports.kCAFillModeForwards = 'forwards'
 exports.kCAFillModeBackwards = 'backwards'

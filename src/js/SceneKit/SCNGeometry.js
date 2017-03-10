@@ -149,20 +149,9 @@ export default class SCNGeometry extends NSObject {
      * @parameter {number} _boundingSphere.radius
      */
     this._boundingSphere = null
-  }
 
-  // Creating a Geometry Object
-
-  /**
-   * Creates a new geometry built from the specified geometry sources and elements.
-   * @access public
-   * @param {SCNGeometrySource[]} sources - An array of SCNGeometrySource objects describing vertices in the geometry and their attributes.
-   * @param {?SCNGeometryElement[]} elements - An array of SCNGeometryElement objects describing how to connect the geometry’s vertices.
-   * @returns {void}
-   * @desc A geometry’s visible content comes from the combination of geometry sources, which contain data describing its vertices, with geometry elements, which contain data describing how the vertices connect to form a surface. Each SCNGeometrySource object describes an attribute of all vertices in the geometry (vertex position, surface normal vector, color, or texture mapping coordinates) identified by the source’s semantic property. To create a custom geometry you must provide at least one source, for the vertex semantic. Typically, you also provide sources for normals and texture coordinates for use in lighting and shading.Sources for the vertex, normal, and color semantics must be unique—if multiple objects in the sources array have the same semantic, SceneKit uses only the first. A geometry may have multiple sources for the texcoord semantic—the order of texture coordinate sources in the sources array determines the value to use for the mappingChannel property when attaching materials.Each SCNGeometryElement object describes how vertices from the geometry sources are combined into polygons to create the geometry’s shape. Creating a custom geometry requires at least one element. If the elements array contains multiple objects, their order determines the arrangement of the geometry’s materials—for details, see the discussion of the materials property.
-   * @see https://developer.apple.com/reference/scenekit/scngeometry/1522803-init
-   */
-  init(sources, elements) {
+    this._vertexBuffer = null
+    this._indexBuffer = null
   }
 
   // Managing a Geometry’s Materials
@@ -247,8 +236,9 @@ export default class SCNGeometry extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scngeometry/1522926-getgeometrysources
    */
   getGeometrySourcesForSemantic(semantic) {
-    return null
+    return this._geometrySources.filter((source) => source.semantic === semantic)
   }
+
   /**
    * An array of geometry elements that describe the geometry’s shape.
    * @type {SCNGeometryElement[]}
@@ -400,6 +390,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    */
   removeAnimationForKeyFadeOutDuration(key, duration) {
   }
+
   /**
    * Required. An array containing the keys of all animations currently attached to the object.
    * @type {string[]}
@@ -458,4 +449,129 @@ This method is for OpenGL shader programs only. To bind custom variable data for
   setAnimationSpeedForKey(speed, key) {
   }
 
+  /**
+   * @access private
+   * @param {WebGLContext} gl -
+   * @param {boolean} update -
+   * @returns {WebGLBuffer} -
+   */
+  _createVertexBuffer(gl, update = false) {
+    if(this._vertexBuffer && !update){
+      return this._vertexBuffer
+    }
+
+    this._vertexBuffer = gl.createBuffer()
+    gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer)
+    let arr = []
+    const vertexSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
+    const normalSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.normal)[0]
+    const texcoordSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[0]
+    const indexSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneIndices)[0]
+    const weightSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneWeights)[0]
+    const vectorCount = vertexSource.vectorCount
+
+    if(vertexSource === undefined){
+      throw new Error(`vertexSource is undefined`)
+    }
+    if(normalSource !== undefined && normalSource.vectorCount !== vectorCount){
+      throw new Error(`normalSource.vectorCount !== vertexSource.vectorCount`)
+    }
+    if(texcoordSource !== undefined && texcoordSource.vectorCount !== vectorCount){
+      throw new Error(`texcoordSource.vectorCount !== vertexSource.vectorCount`)
+    }
+
+    const vertexArray = vertexSource ? vertexSource.data : null
+    const vertexComponents = vertexSource ? vertexSource.componentsPerVector : 0
+    const normalArray = normalSource ? normalSource.data : null
+    const normalComponents = normalSource ? normalSource.componentsPerVector : 0
+    const texcoordArray = texcoordSource ? texcoordSource.data : null
+    const texcoordComponents = texcoordSource ? texcoordSource.componentsPerVector : 0
+    //console.log(`vertexComponents: ${vertexComponents}`)
+    //console.log(`normalComponents: ${normalComponents}`)
+    //console.log(`texcoordComponents: ${texcoordComponents}`)
+
+    for(let i=0; i<vectorCount; i++){
+      if(vertexSource){
+        arr.push(...vertexSource.vectorAt(i))
+      }
+      if(normalSource){
+        arr.push(...normalSource.vectorAt(i))
+      }
+      if(texcoordSource){
+        arr.push(...texcoordSource.vectorAt(i))
+      }
+    }
+
+    // update geometry sources
+    // FIXME: Don't change geometry sources. Use other variables
+    const bytesPerComponent = 4
+    let offset = 0
+    const stride = (vertexComponents + normalComponents + texcoordComponents) * bytesPerComponent
+    vertexSource._bytesPerComponent = bytesPerComponent
+    vertexSource._dataOffset = offset
+    vertexSource._dataStride = stride
+    offset += vertexComponents * bytesPerComponent
+
+    if(normalSource){
+      normalSource._bytesPerComponent = bytesPerComponent
+      normalSource._dataOffset = offset
+      normalSource._dataStride = stride
+      offset += normalComponents * bytesPerComponent
+    }
+    if(texcoordSource){
+      texcoordSource._bytesPerComponent = bytesPerComponent
+      texcoordSource._dataOffset = offset
+      texcoordSource._dataStride = stride
+      offset += texcoordComponents * bytesPerComponent
+    }
+
+    offset *= vectorCount
+
+    const indexArray = indexSource ? indexSource.data : null
+    const indexComponents = indexSource ? indexSource.componentsPerVector : 0
+    const weightArray = weightSource ? weightSource.data : null
+    const weightComponents = weightSource ? weightSource.componentsPerVector : 0
+    const boneStride = (indexComponents + weightComponents) * bytesPerComponent
+
+    for(let i=0; i<vectorCount; i++){
+      if(indexSource){
+        arr.push(...indexSource.vectorAt(i))
+      }
+      if(weightSource){
+        arr.push(...weightSource.vectorAt(i))
+      }
+    }
+
+    if(indexSource){
+      indexSource._bytesPerComponent = bytesPerComponent
+      indexSource._dataOffset = offset
+      indexSource._dataStride = boneStride
+      offset += texcoordComponents * bytesPerComponent
+    }
+    if(weightSource){
+      weightSource._bytesPerComponent = bytesPerComponent
+      weightSource._dataOffset = offset
+      weightSource._dataStride = boneStride
+      offset += texcoordComponents * bytesPerComponent
+    }
+
+    const vertexData = new Float32Array(arr)
+    gl.bufferData(gl.ARRAY_BUFFER, vertexData, gl.DYNAMIC_DRAW)
+
+    return this._vertexBuffer
+  }
+
+  /**
+   * @access private
+   * @param {WebGLContext} gl -
+   * @param {boolean} update -
+   * @returns {WebGLBuffer} -
+   */
+  _createIndexBuffer(gl, update = false) {
+    if(this._indexBuffer && !update){
+      return this._indexBuffer
+    }
+    this._indexBuffer = this._geometryElements[0]._createBuffer(gl)
+    return this._indexBuffer
+  }
 }

@@ -18,9 +18,10 @@ export default class SCNMorpher extends NSObject {
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  init() {
+  constructor() {
+    super()
 
     // Specifying Morph Targets
 
@@ -29,8 +30,12 @@ export default class SCNMorpher extends NSObject {
      * @type {SCNGeometry[]}
      * @see https://developer.apple.com/reference/scenekit/scnmorpher/1523572-targets
      */
-    this.targets = null
+    this.targets = []
 
+    /**
+     * @type {number[]}
+     */
+    this._weights = []
 
     // Changing Interpolation Mode
 
@@ -39,8 +44,7 @@ export default class SCNMorpher extends NSObject {
      * @type {SCNMorpherCalculationMode}
      * @see https://developer.apple.com/reference/scenekit/scnmorpher/1523754-calculationmode
      */
-    this.calculationMode = null
-
+    this.calculationMode = SCNMorpherCalculationMode.normalized
   }
 
   // Blending between Morph Targets
@@ -54,7 +58,7 @@ export default class SCNMorpher extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnmorpher/1522940-weight
    */
   weightForTargetAt(targetIndex) {
-    return 0
+    return this._weights[targetIndex]
   }
 
   /**
@@ -67,5 +71,6 @@ export default class SCNMorpher extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnmorpher/1522886-setweight
    */
   setWeightForTargetAt(weight, targetIndex) {
+    this.weights[targetIndex] = weight
   }
 }
