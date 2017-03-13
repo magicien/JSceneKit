@@ -1,33 +1,562 @@
 {
   "type": "File",
   "start": 0,
-  "end": 14,
+  "end": 1410,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 3,
+      "line": 20,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 14,
+    "end": 1410,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 3,
+        "line": 20,
         "column": 0
       }
     },
     "sourceType": "module",
-    "body": [],
+    "body": [
+      {
+        "type": "ImportDeclaration",
+        "start": 14,
+        "end": 51,
+        "loc": {
+          "start": {
+            "line": 3,
+            "column": 0
+          },
+          "end": {
+            "line": 3,
+            "column": 37
+          }
+        },
+        "specifiers": [
+          {
+            "type": "ImportDefaultSpecifier",
+            "start": 21,
+            "end": 31,
+            "loc": {
+              "start": {
+                "line": 3,
+                "column": 7
+              },
+              "end": {
+                "line": 3,
+                "column": 17
+              }
+            },
+            "local": {
+              "type": "Identifier",
+              "start": 21,
+              "end": 31,
+              "loc": {
+                "start": {
+                  "line": 3,
+                  "column": 7
+                },
+                "end": {
+                  "line": 3,
+                  "column": 17
+                },
+                "identifierName": "SCNVector3"
+              },
+              "name": "SCNVector3"
+            }
+          }
+        ],
+        "source": {
+          "type": "StringLiteral",
+          "start": 37,
+          "end": 51,
+          "loc": {
+            "start": {
+              "line": 3,
+              "column": 23
+            },
+            "end": {
+              "line": 3,
+              "column": 37
+            }
+          },
+          "extra": {
+            "rawValue": "./SCNVector3",
+            "raw": "'./SCNVector3'"
+          },
+          "value": "./SCNVector3",
+          "leadingComments": null,
+          "trailingComments": null
+        },
+        "trailingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * The signature for a block that SceneKit calls to determine the effect of a custom field on an object.\n * @type {function(position: SCNVector3, velocity: SCNVector3, mass: number, charge: number, time: number): SCNVector3}\n * @param {SCNVector3} position - The position of the object affected by the field, in the local coordinate space of the node containing the field.\n * @param {SCNVector3} velocity - The velocity of the object affected by the field, relative to the local coordinate space of the node containing the field.\n * @param {number} mass - The mass of the object affected by the field. (See the mass property for physics bodies and the particleMass property for particle systems.) \n * @param {number} charge - The electrical charge of the object affected by the field. (See the charge property for physics bodies and the particleCharge property for particle systems.)\n * @param {number} time - The elapsed time, in seconds, since the last simulation step.\n * @returns {SCNVector3}\n * @desc Your block uses these parameters to compute and return an SCNVector3 force vector, which SceneKit then applies to the object affected by the field.\n * @see https://developer.apple.com/reference/scenekit/scnfieldforceevaluator\n ",
+            "start": 53,
+            "end": 1292,
+            "loc": {
+              "start": {
+                "line": 5,
+                "column": 0
+              },
+              "end": {
+                "line": 16,
+                "column": 3
+              }
+            }
+          }
+        ]
+      },
+      {
+        "type": "Identifier",
+        "start": 1293,
+        "end": 1370,
+        "loc": {
+          "start": {
+            "line": 17,
+            "column": 0
+          },
+          "end": {
+            "line": 17,
+            "column": 77
+          }
+        },
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 1299,
+            "end": 1370,
+            "loc": {
+              "start": {
+                "line": 17,
+                "column": 6
+              },
+              "end": {
+                "line": 17,
+                "column": 77
+              }
+            },
+            "id": {
+              "type": "Identifier",
+              "start": 1299,
+              "end": 1321,
+              "loc": {
+                "start": {
+                  "line": 17,
+                  "column": 6
+                },
+                "end": {
+                  "line": 17,
+                  "column": 28
+                },
+                "identifierName": "SCNFieldForceEvaluator"
+              },
+              "name": "SCNFieldForceEvaluator",
+              "leadingComments": null
+            },
+            "init": {
+              "type": "ArrowFunctionExpression",
+              "start": 1324,
+              "end": 1370,
+              "loc": {
+                "start": {
+                  "line": 17,
+                  "column": 31
+                },
+                "end": {
+                  "line": 17,
+                  "column": 77
+                }
+              },
+              "id": null,
+              "generator": false,
+              "expression": false,
+              "async": false,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "start": 1325,
+                  "end": 1333,
+                  "loc": {
+                    "start": {
+                      "line": 17,
+                      "column": 32
+                    },
+                    "end": {
+                      "line": 17,
+                      "column": 40
+                    },
+                    "identifierName": "position"
+                  },
+                  "name": "position"
+                },
+                {
+                  "type": "Identifier",
+                  "start": 1335,
+                  "end": 1343,
+                  "loc": {
+                    "start": {
+                      "line": 17,
+                      "column": 42
+                    },
+                    "end": {
+                      "line": 17,
+                      "column": 50
+                    },
+                    "identifierName": "velocity"
+                  },
+                  "name": "velocity"
+                },
+                {
+                  "type": "Identifier",
+                  "start": 1345,
+                  "end": 1349,
+                  "loc": {
+                    "start": {
+                      "line": 17,
+                      "column": 52
+                    },
+                    "end": {
+                      "line": 17,
+                      "column": 56
+                    },
+                    "identifierName": "mass"
+                  },
+                  "name": "mass"
+                },
+                {
+                  "type": "Identifier",
+                  "start": 1351,
+                  "end": 1357,
+                  "loc": {
+                    "start": {
+                      "line": 17,
+                      "column": 58
+                    },
+                    "end": {
+                      "line": 17,
+                      "column": 64
+                    },
+                    "identifierName": "charge"
+                  },
+                  "name": "charge"
+                },
+                {
+                  "type": "Identifier",
+                  "start": 1359,
+                  "end": 1363,
+                  "loc": {
+                    "start": {
+                      "line": 17,
+                      "column": 66
+                    },
+                    "end": {
+                      "line": 17,
+                      "column": 70
+                    },
+                    "identifierName": "time"
+                  },
+                  "name": "time"
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "start": 1368,
+                "end": 1370,
+                "loc": {
+                  "start": {
+                    "line": 17,
+                    "column": 75
+                  },
+                  "end": {
+                    "line": 17,
+                    "column": 77
+                  }
+                },
+                "body": [],
+                "directives": []
+              }
+            },
+            "leadingComments": null
+          }
+        ],
+        "kind": "const",
+        "leadingComments": [],
+        "name": "_",
+        "trailingComments": []
+      },
+      {
+        "type": "Identifier",
+        "start": 1372,
+        "end": 1409,
+        "loc": {
+          "start": {
+            "line": 19,
+            "column": 0
+          },
+          "end": {
+            "line": 19,
+            "column": 37
+          }
+        },
+        "declaration": {
+          "type": "Identifier",
+          "start": 1387,
+          "end": 1409,
+          "loc": {
+            "start": {
+              "line": 19,
+              "column": 15
+            },
+            "end": {
+              "line": 19,
+              "column": 37
+            },
+            "identifierName": "SCNFieldForceEvaluator"
+          },
+          "name": "SCNFieldForceEvaluator"
+        },
+        "name": "_",
+        "leadingComments": [],
+        "trailingComments": []
+      },
+      {
+        "type": "ExportDefaultDeclaration",
+        "start": 1372,
+        "end": 1409,
+        "loc": {
+          "start": {
+            "line": 19,
+            "column": 0
+          },
+          "end": {
+            "line": 19,
+            "column": 37
+          }
+        },
+        "declaration": {
+          "type": "VariableDeclaration",
+          "start": 1293,
+          "end": 1370,
+          "loc": {
+            "start": {
+              "line": 17,
+              "column": 0
+            },
+            "end": {
+              "line": 17,
+              "column": 77
+            }
+          },
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "start": 1299,
+              "end": 1370,
+              "loc": {
+                "start": {
+                  "line": 17,
+                  "column": 6
+                },
+                "end": {
+                  "line": 17,
+                  "column": 77
+                }
+              },
+              "id": {
+                "type": "Identifier",
+                "start": 1299,
+                "end": 1321,
+                "loc": {
+                  "start": {
+                    "line": 17,
+                    "column": 6
+                  },
+                  "end": {
+                    "line": 17,
+                    "column": 28
+                  },
+                  "identifierName": "SCNFieldForceEvaluator"
+                },
+                "name": "SCNFieldForceEvaluator",
+                "leadingComments": null
+              },
+              "init": {
+                "type": "ArrowFunctionExpression",
+                "start": 1324,
+                "end": 1370,
+                "loc": {
+                  "start": {
+                    "line": 17,
+                    "column": 31
+                  },
+                  "end": {
+                    "line": 17,
+                    "column": 77
+                  }
+                },
+                "id": {
+                  "type": "Identifier",
+                  "start": 1299,
+                  "end": 1321,
+                  "loc": {
+                    "start": {
+                      "line": 17,
+                      "column": 6
+                    },
+                    "end": {
+                      "line": 17,
+                      "column": 28
+                    },
+                    "identifierName": "SCNFieldForceEvaluator"
+                  },
+                  "name": "SCNFieldForceEvaluator",
+                  "leadingComments": null
+                },
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "start": 1325,
+                    "end": 1333,
+                    "loc": {
+                      "start": {
+                        "line": 17,
+                        "column": 32
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 40
+                      },
+                      "identifierName": "position"
+                    },
+                    "name": "position"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 1335,
+                    "end": 1343,
+                    "loc": {
+                      "start": {
+                        "line": 17,
+                        "column": 42
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 50
+                      },
+                      "identifierName": "velocity"
+                    },
+                    "name": "velocity"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 1345,
+                    "end": 1349,
+                    "loc": {
+                      "start": {
+                        "line": 17,
+                        "column": 52
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 56
+                      },
+                      "identifierName": "mass"
+                    },
+                    "name": "mass"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 1351,
+                    "end": 1357,
+                    "loc": {
+                      "start": {
+                        "line": 17,
+                        "column": 58
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 64
+                      },
+                      "identifierName": "charge"
+                    },
+                    "name": "charge"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 1359,
+                    "end": 1363,
+                    "loc": {
+                      "start": {
+                        "line": 17,
+                        "column": 66
+                      },
+                      "end": {
+                        "line": 17,
+                        "column": 70
+                      },
+                      "identifierName": "time"
+                    },
+                    "name": "time"
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 1368,
+                  "end": 1370,
+                  "loc": {
+                    "start": {
+                      "line": 17,
+                      "column": 75
+                    },
+                    "end": {
+                      "line": 17,
+                      "column": 77
+                    }
+                  },
+                  "body": [],
+                  "directives": []
+                }
+              },
+              "leadingComments": null
+            }
+          ],
+          "kind": "const",
+          "leadingComments": [
+            {
+              "type": "CommentBlock",
+              "value": "*\n * The signature for a block that SceneKit calls to determine the effect of a custom field on an object.\n * @type {function(position: SCNVector3, velocity: SCNVector3, mass: number, charge: number, time: number): SCNVector3}\n * @param {SCNVector3} position - The position of the object affected by the field, in the local coordinate space of the node containing the field.\n * @param {SCNVector3} velocity - The velocity of the object affected by the field, relative to the local coordinate space of the node containing the field.\n * @param {number} mass - The mass of the object affected by the field. (See the mass property for physics bodies and the particleMass property for particle systems.) \n * @param {number} charge - The electrical charge of the object affected by the field. (See the charge property for physics bodies and the particleCharge property for particle systems.)\n * @param {number} time - The elapsed time, in seconds, since the last simulation step.\n * @returns {SCNVector3}\n * @desc Your block uses these parameters to compute and return an SCNVector3 force vector, which SceneKit then applies to the object affected by the field.\n * @see https://developer.apple.com/reference/scenekit/scnfieldforceevaluator\n ",
+              "start": 53,
+              "end": 1292,
+              "loc": {
+                "start": {
+                  "line": 5,
+                  "column": 0
+                },
+                "end": {
+                  "line": 16,
+                  "column": 3
+                }
+              }
+            }
+          ],
+          "trailingComments": []
+        }
+      }
+    ],
     "directives": [
       {
         "type": "Directive",
@@ -66,7 +595,24 @@
       }
     ]
   },
-  "comments": [],
+  "comments": [
+    {
+      "type": "CommentBlock",
+      "value": "*\n * The signature for a block that SceneKit calls to determine the effect of a custom field on an object.\n * @type {function(position: SCNVector3, velocity: SCNVector3, mass: number, charge: number, time: number): SCNVector3}\n * @param {SCNVector3} position - The position of the object affected by the field, in the local coordinate space of the node containing the field.\n * @param {SCNVector3} velocity - The velocity of the object affected by the field, relative to the local coordinate space of the node containing the field.\n * @param {number} mass - The mass of the object affected by the field. (See the mass property for physics bodies and the particleMass property for particle systems.) \n * @param {number} charge - The electrical charge of the object affected by the field. (See the charge property for physics bodies and the particleCharge property for particle systems.)\n * @param {number} time - The elapsed time, in seconds, since the last simulation step.\n * @returns {SCNVector3}\n * @desc Your block uses these parameters to compute and return an SCNVector3 force vector, which SceneKit then applies to the object affected by the field.\n * @see https://developer.apple.com/reference/scenekit/scnfieldforceevaluator\n ",
+      "start": 53,
+      "end": 1292,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 16,
+          "column": 3
+        }
+      }
+    }
+  ],
   "tokens": [
     {
       "type": {
@@ -97,6 +643,652 @@
     },
     {
       "type": {
+        "label": "import",
+        "keyword": "import",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "import",
+      "start": 14,
+      "end": 20,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 0
+        },
+        "end": {
+          "line": 3,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "SCNVector3",
+      "start": 21,
+      "end": 31,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 7
+        },
+        "end": {
+          "line": 3,
+          "column": 17
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "from",
+      "start": 32,
+      "end": 36,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 18
+        },
+        "end": {
+          "line": 3,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "./SCNVector3",
+      "start": 37,
+      "end": 51,
+      "loc": {
+        "start": {
+          "line": 3,
+          "column": 23
+        },
+        "end": {
+          "line": 3,
+          "column": 37
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * The signature for a block that SceneKit calls to determine the effect of a custom field on an object.\n * @type {function(position: SCNVector3, velocity: SCNVector3, mass: number, charge: number, time: number): SCNVector3}\n * @param {SCNVector3} position - The position of the object affected by the field, in the local coordinate space of the node containing the field.\n * @param {SCNVector3} velocity - The velocity of the object affected by the field, relative to the local coordinate space of the node containing the field.\n * @param {number} mass - The mass of the object affected by the field. (See the mass property for physics bodies and the particleMass property for particle systems.) \n * @param {number} charge - The electrical charge of the object affected by the field. (See the charge property for physics bodies and the particleCharge property for particle systems.)\n * @param {number} time - The elapsed time, in seconds, since the last simulation step.\n * @returns {SCNVector3}\n * @desc Your block uses these parameters to compute and return an SCNVector3 force vector, which SceneKit then applies to the object affected by the field.\n * @see https://developer.apple.com/reference/scenekit/scnfieldforceevaluator\n ",
+      "start": 53,
+      "end": 1292,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 16,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "const",
+        "keyword": "const",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "const",
+      "start": 1293,
+      "end": 1298,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 0
+        },
+        "end": {
+          "line": 17,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "SCNFieldForceEvaluator",
+      "start": 1299,
+      "end": 1321,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 6
+        },
+        "end": {
+          "line": 17,
+          "column": 28
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 1322,
+      "end": 1323,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 29
+        },
+        "end": {
+          "line": 17,
+          "column": 30
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1324,
+      "end": 1325,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 31
+        },
+        "end": {
+          "line": 17,
+          "column": 32
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "position",
+      "start": 1325,
+      "end": 1333,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 32
+        },
+        "end": {
+          "line": 17,
+          "column": 40
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1333,
+      "end": 1334,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 40
+        },
+        "end": {
+          "line": 17,
+          "column": 41
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "velocity",
+      "start": 1335,
+      "end": 1343,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 42
+        },
+        "end": {
+          "line": 17,
+          "column": 50
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1343,
+      "end": 1344,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 50
+        },
+        "end": {
+          "line": 17,
+          "column": 51
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "mass",
+      "start": 1345,
+      "end": 1349,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 52
+        },
+        "end": {
+          "line": 17,
+          "column": 56
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1349,
+      "end": 1350,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 56
+        },
+        "end": {
+          "line": 17,
+          "column": 57
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "charge",
+      "start": 1351,
+      "end": 1357,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 58
+        },
+        "end": {
+          "line": 17,
+          "column": 64
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1357,
+      "end": 1358,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 64
+        },
+        "end": {
+          "line": 17,
+          "column": 65
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "time",
+      "start": 1359,
+      "end": 1363,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 66
+        },
+        "end": {
+          "line": 17,
+          "column": 70
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1363,
+      "end": 1364,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 70
+        },
+        "end": {
+          "line": 17,
+          "column": 71
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=>",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1365,
+      "end": 1367,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 72
+        },
+        "end": {
+          "line": 17,
+          "column": 74
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1368,
+      "end": 1369,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 75
+        },
+        "end": {
+          "line": 17,
+          "column": 76
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1369,
+      "end": 1370,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 76
+        },
+        "end": {
+          "line": 17,
+          "column": 77
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "export",
+        "keyword": "export",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "export",
+      "start": 1372,
+      "end": 1378,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 0
+        },
+        "end": {
+          "line": 19,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "default",
+        "keyword": "default",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "default",
+      "start": 1379,
+      "end": 1386,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 7
+        },
+        "end": {
+          "line": 19,
+          "column": 14
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "SCNFieldForceEvaluator",
+      "start": 1387,
+      "end": 1409,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 15
+        },
+        "end": {
+          "line": 19,
+          "column": 37
+        }
+      }
+    },
+    {
+      "type": {
         "label": "eof",
         "beforeExpr": false,
         "startsExpr": false,
@@ -108,15 +1300,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 14,
-      "end": 14,
+      "start": 1410,
+      "end": 1410,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 20,
           "column": 0
         },
         "end": {
-          "line": 3,
+          "line": 20,
           "column": 0
         }
       }

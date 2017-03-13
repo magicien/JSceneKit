@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 5904,
+  "end": 6014,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 149,
+      "line": 155,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 5904,
+    "end": 6014,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 149,
+        "line": 155,
         "column": 0
       }
     },
@@ -327,28 +327,28 @@
       {
         "type": "ExportDefaultDeclaration",
         "start": 452,
-        "end": 5903,
+        "end": 6013,
         "loc": {
           "start": {
             "line": 15,
             "column": 0
           },
           "end": {
-            "line": 148,
+            "line": 154,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
           "start": 467,
-          "end": 5903,
+          "end": 6013,
           "loc": {
             "start": {
               "line": 15,
               "column": 15
             },
             "end": {
-              "line": 148,
+              "line": 154,
               "column": 1
             }
           },
@@ -390,37 +390,37 @@
           "body": {
             "type": "ClassBody",
             "start": 501,
-            "end": 5903,
+            "end": 6013,
             "loc": {
               "start": {
                 "line": 15,
                 "column": 49
               },
               "end": {
-                "line": 148,
+                "line": 154,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 576,
-                "end": 3164,
+                "start": 573,
+                "end": 3274,
                 "loc": {
                   "start": {
                     "line": 22,
                     "column": 2
                   },
                   "end": {
-                    "line": 105,
+                    "line": 111,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 576,
-                  "end": 580,
+                  "start": 573,
+                  "end": 584,
                   "loc": {
                     "start": {
                       "line": 22,
@@ -428,15 +428,15 @@
                     },
                     "end": {
                       "line": 22,
-                      "column": 6
+                      "column": 13
                     },
-                    "identifierName": "init"
+                    "identifierName": "constructor"
                   },
-                  "name": "init",
+                  "name": "constructor",
                   "leadingComments": null
                 },
                 "static": false,
-                "kind": "method",
+                "kind": "constructor",
                 "id": null,
                 "generator": false,
                 "expression": false,
@@ -444,73 +444,154 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 583,
-                  "end": 3164,
+                  "start": 587,
+                  "end": 3274,
                   "loc": {
                     "start": {
                       "line": 22,
-                      "column": 9
+                      "column": 16
                     },
                     "end": {
-                      "line": 105,
+                      "line": 111,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 824,
-                      "end": 848,
+                      "start": 593,
+                      "end": 600,
                       "loc": {
                         "start": {
-                          "line": 31,
+                          "line": 23,
                           "column": 4
                         },
                         "end": {
-                          "line": 31,
+                          "line": 23,
+                          "column": 11
+                        }
+                      },
+                      "expression": {
+                        "type": "CallExpression",
+                        "start": 593,
+                        "end": 600,
+                        "loc": {
+                          "start": {
+                            "line": 23,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 23,
+                            "column": 11
+                          }
+                        },
+                        "callee": {
+                          "type": "Super",
+                          "start": 593,
+                          "end": 598,
+                          "loc": {
+                            "start": {
+                              "line": 23,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 23,
+                              "column": 9
+                            }
+                          }
+                        },
+                        "arguments": [],
+                        "trailingComments": null
+                      },
+                      "trailingComments": [
+                        {
+                          "type": "CommentLine",
+                          "value": " Working with OpenGL Shader Source Code",
+                          "start": 606,
+                          "end": 647,
+                          "loc": {
+                            "start": {
+                              "line": 25,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 25,
+                              "column": 45
+                            }
+                          }
+                        },
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * GLSL source code for the program’s vertex shader.\n     * @type {?string}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522891-vertexshader\n     ",
+                          "start": 653,
+                          "end": 835,
+                          "loc": {
+                            "start": {
+                              "line": 27,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 31,
+                              "column": 7
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "start": 840,
+                      "end": 864,
+                      "loc": {
+                        "start": {
+                          "line": 32,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 32,
                           "column": 28
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 824,
-                        "end": 848,
+                        "start": 840,
+                        "end": 864,
                         "loc": {
                           "start": {
-                            "line": 31,
+                            "line": 32,
                             "column": 4
                           },
                           "end": {
-                            "line": 31,
+                            "line": 32,
                             "column": 28
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 824,
-                          "end": 841,
+                          "start": 840,
+                          "end": 857,
                           "loc": {
                             "start": {
-                              "line": 31,
+                              "line": 32,
                               "column": 4
                             },
                             "end": {
-                              "line": 31,
+                              "line": 32,
                               "column": 21
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 824,
-                            "end": 828,
+                            "start": 840,
+                            "end": 844,
                             "loc": {
                               "start": {
-                                "line": 31,
+                                "line": 32,
                                 "column": 4
                               },
                               "end": {
-                                "line": 31,
+                                "line": 32,
                                 "column": 8
                               }
                             },
@@ -518,15 +599,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 829,
-                            "end": 841,
+                            "start": 845,
+                            "end": 857,
                             "loc": {
                               "start": {
-                                "line": 31,
+                                "line": 32,
                                 "column": 9
                               },
                               "end": {
-                                "line": 31,
+                                "line": 32,
                                 "column": 21
                               },
                               "identifierName": "vertexShader"
@@ -538,15 +619,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 844,
-                          "end": 848,
+                          "start": 860,
+                          "end": 864,
                           "loc": {
                             "start": {
-                              "line": 31,
+                              "line": 32,
                               "column": 24
                             },
                             "end": {
-                              "line": 31,
+                              "line": 32,
                               "column": 28
                             }
                           },
@@ -560,15 +641,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Working with OpenGL Shader Source Code",
-                          "start": 590,
-                          "end": 631,
+                          "start": 606,
+                          "end": 647,
                           "loc": {
                             "start": {
-                              "line": 24,
+                              "line": 25,
                               "column": 4
                             },
                             "end": {
-                              "line": 24,
+                              "line": 25,
                               "column": 45
                             }
                           }
@@ -576,15 +657,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * GLSL source code for the program’s vertex shader.\n     * @type {?string}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522891-vertexshader\n     ",
-                          "start": 637,
-                          "end": 819,
+                          "start": 653,
+                          "end": 835,
                           "loc": {
                             "start": {
-                              "line": 26,
+                              "line": 27,
                               "column": 4
                             },
                             "end": {
-                              "line": 30,
+                              "line": 31,
                               "column": 7
                             }
                           }
@@ -594,15 +675,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * GLSL source code for the program’s fragment shader.\n     * @type {?string}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1523135-fragmentshader\n     ",
-                          "start": 854,
-                          "end": 1040,
+                          "start": 870,
+                          "end": 1056,
                           "loc": {
                             "start": {
-                              "line": 33,
+                              "line": 34,
                               "column": 4
                             },
                             "end": {
-                              "line": 37,
+                              "line": 38,
                               "column": 7
                             }
                           }
@@ -611,58 +692,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1045,
-                      "end": 1071,
+                      "start": 1061,
+                      "end": 1087,
                       "loc": {
                         "start": {
-                          "line": 38,
+                          "line": 39,
                           "column": 4
                         },
                         "end": {
-                          "line": 38,
+                          "line": 39,
                           "column": 30
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1045,
-                        "end": 1071,
+                        "start": 1061,
+                        "end": 1087,
                         "loc": {
                           "start": {
-                            "line": 38,
+                            "line": 39,
                             "column": 4
                           },
                           "end": {
-                            "line": 38,
+                            "line": 39,
                             "column": 30
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1045,
-                          "end": 1064,
+                          "start": 1061,
+                          "end": 1080,
                           "loc": {
                             "start": {
-                              "line": 38,
+                              "line": 39,
                               "column": 4
                             },
                             "end": {
-                              "line": 38,
+                              "line": 39,
                               "column": 23
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1045,
-                            "end": 1049,
+                            "start": 1061,
+                            "end": 1065,
                             "loc": {
                               "start": {
-                                "line": 38,
+                                "line": 39,
                                 "column": 4
                               },
                               "end": {
-                                "line": 38,
+                                "line": 39,
                                 "column": 8
                               }
                             },
@@ -670,15 +751,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1050,
-                            "end": 1064,
+                            "start": 1066,
+                            "end": 1080,
                             "loc": {
                               "start": {
-                                "line": 38,
+                                "line": 39,
                                 "column": 9
                               },
                               "end": {
-                                "line": 38,
+                                "line": 39,
                                 "column": 23
                               },
                               "identifierName": "fragmentShader"
@@ -690,15 +771,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 1067,
-                          "end": 1071,
+                          "start": 1083,
+                          "end": 1087,
                           "loc": {
                             "start": {
-                              "line": 38,
+                              "line": 39,
                               "column": 26
                             },
                             "end": {
-                              "line": 38,
+                              "line": 39,
                               "column": 30
                             }
                           },
@@ -712,15 +793,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * GLSL source code for the program’s fragment shader.\n     * @type {?string}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1523135-fragmentshader\n     ",
-                          "start": 854,
-                          "end": 1040,
+                          "start": 870,
+                          "end": 1056,
                           "loc": {
                             "start": {
-                              "line": 33,
+                              "line": 34,
                               "column": 4
                             },
                             "end": {
-                              "line": 37,
+                              "line": 38,
                               "column": 7
                             }
                           }
@@ -730,15 +811,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * GLSL source code for the program’s optional geometry shader.\n     * @type {?string}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1524049-geometryshader\n     ",
-                          "start": 1077,
-                          "end": 1272,
+                          "start": 1093,
+                          "end": 1288,
                           "loc": {
                             "start": {
-                              "line": 40,
+                              "line": 41,
                               "column": 4
                             },
                             "end": {
-                              "line": 44,
+                              "line": 45,
                               "column": 7
                             }
                           }
@@ -747,58 +828,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1277,
-                      "end": 1303,
+                      "start": 1293,
+                      "end": 1319,
                       "loc": {
                         "start": {
-                          "line": 45,
+                          "line": 46,
                           "column": 4
                         },
                         "end": {
-                          "line": 45,
+                          "line": 46,
                           "column": 30
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1277,
-                        "end": 1303,
+                        "start": 1293,
+                        "end": 1319,
                         "loc": {
                           "start": {
-                            "line": 45,
+                            "line": 46,
                             "column": 4
                           },
                           "end": {
-                            "line": 45,
+                            "line": 46,
                             "column": 30
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1277,
-                          "end": 1296,
+                          "start": 1293,
+                          "end": 1312,
                           "loc": {
                             "start": {
-                              "line": 45,
+                              "line": 46,
                               "column": 4
                             },
                             "end": {
-                              "line": 45,
+                              "line": 46,
                               "column": 23
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1277,
-                            "end": 1281,
+                            "start": 1293,
+                            "end": 1297,
                             "loc": {
                               "start": {
-                                "line": 45,
+                                "line": 46,
                                 "column": 4
                               },
                               "end": {
-                                "line": 45,
+                                "line": 46,
                                 "column": 8
                               }
                             },
@@ -806,15 +887,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1282,
-                            "end": 1296,
+                            "start": 1298,
+                            "end": 1312,
                             "loc": {
                               "start": {
-                                "line": 45,
+                                "line": 46,
                                 "column": 9
                               },
                               "end": {
-                                "line": 45,
+                                "line": 46,
                                 "column": 23
                               },
                               "identifierName": "geometryShader"
@@ -826,15 +907,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 1299,
-                          "end": 1303,
+                          "start": 1315,
+                          "end": 1319,
                           "loc": {
                             "start": {
-                              "line": 45,
+                              "line": 46,
                               "column": 26
                             },
                             "end": {
-                              "line": 45,
+                              "line": 46,
                               "column": 30
                             }
                           },
@@ -848,15 +929,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * GLSL source code for the program’s optional geometry shader.\n     * @type {?string}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1524049-geometryshader\n     ",
-                          "start": 1077,
-                          "end": 1272,
+                          "start": 1093,
+                          "end": 1288,
                           "loc": {
                             "start": {
-                              "line": 40,
+                              "line": 41,
                               "column": 4
                             },
                             "end": {
-                              "line": 44,
+                              "line": 45,
                               "column": 7
                             }
                           }
@@ -866,15 +947,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * GLSL source code for the program’s optional tessellation control shader.\n     * @type {?string}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1523852-tessellationcontrolshader\n     ",
-                          "start": 1309,
-                          "end": 1527,
+                          "start": 1325,
+                          "end": 1543,
                           "loc": {
                             "start": {
-                              "line": 47,
+                              "line": 48,
                               "column": 4
                             },
                             "end": {
-                              "line": 51,
+                              "line": 52,
                               "column": 7
                             }
                           }
@@ -883,58 +964,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1532,
-                      "end": 1569,
+                      "start": 1548,
+                      "end": 1585,
                       "loc": {
                         "start": {
-                          "line": 52,
+                          "line": 53,
                           "column": 4
                         },
                         "end": {
-                          "line": 52,
+                          "line": 53,
                           "column": 41
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1532,
-                        "end": 1569,
+                        "start": 1548,
+                        "end": 1585,
                         "loc": {
                           "start": {
-                            "line": 52,
+                            "line": 53,
                             "column": 4
                           },
                           "end": {
-                            "line": 52,
+                            "line": 53,
                             "column": 41
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1532,
-                          "end": 1562,
+                          "start": 1548,
+                          "end": 1578,
                           "loc": {
                             "start": {
-                              "line": 52,
+                              "line": 53,
                               "column": 4
                             },
                             "end": {
-                              "line": 52,
+                              "line": 53,
                               "column": 34
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1532,
-                            "end": 1536,
+                            "start": 1548,
+                            "end": 1552,
                             "loc": {
                               "start": {
-                                "line": 52,
+                                "line": 53,
                                 "column": 4
                               },
                               "end": {
-                                "line": 52,
+                                "line": 53,
                                 "column": 8
                               }
                             },
@@ -942,15 +1023,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1537,
-                            "end": 1562,
+                            "start": 1553,
+                            "end": 1578,
                             "loc": {
                               "start": {
-                                "line": 52,
+                                "line": 53,
                                 "column": 9
                               },
                               "end": {
-                                "line": 52,
+                                "line": 53,
                                 "column": 34
                               },
                               "identifierName": "tessellationControlShader"
@@ -962,15 +1043,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 1565,
-                          "end": 1569,
+                          "start": 1581,
+                          "end": 1585,
                           "loc": {
                             "start": {
-                              "line": 52,
+                              "line": 53,
                               "column": 37
                             },
                             "end": {
-                              "line": 52,
+                              "line": 53,
                               "column": 41
                             }
                           },
@@ -984,15 +1065,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * GLSL source code for the program’s optional tessellation control shader.\n     * @type {?string}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1523852-tessellationcontrolshader\n     ",
-                          "start": 1309,
-                          "end": 1527,
+                          "start": 1325,
+                          "end": 1543,
                           "loc": {
                             "start": {
-                              "line": 47,
+                              "line": 48,
                               "column": 4
                             },
                             "end": {
-                              "line": 51,
+                              "line": 52,
                               "column": 7
                             }
                           }
@@ -1002,15 +1083,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * GLSL source code for the program’s optional tessellation evaluation shader.\n     * @type {?string}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1523760-tessellationevaluationshader\n     ",
-                          "start": 1575,
-                          "end": 1799,
+                          "start": 1591,
+                          "end": 1815,
                           "loc": {
                             "start": {
-                              "line": 54,
+                              "line": 55,
                               "column": 4
                             },
                             "end": {
-                              "line": 58,
+                              "line": 59,
                               "column": 7
                             }
                           }
@@ -1019,58 +1100,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1804,
-                      "end": 1844,
+                      "start": 1820,
+                      "end": 1860,
                       "loc": {
                         "start": {
-                          "line": 59,
+                          "line": 60,
                           "column": 4
                         },
                         "end": {
-                          "line": 59,
+                          "line": 60,
                           "column": 44
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1804,
-                        "end": 1844,
+                        "start": 1820,
+                        "end": 1860,
                         "loc": {
                           "start": {
-                            "line": 59,
+                            "line": 60,
                             "column": 4
                           },
                           "end": {
-                            "line": 59,
+                            "line": 60,
                             "column": 44
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1804,
-                          "end": 1837,
+                          "start": 1820,
+                          "end": 1853,
                           "loc": {
                             "start": {
-                              "line": 59,
+                              "line": 60,
                               "column": 4
                             },
                             "end": {
-                              "line": 59,
+                              "line": 60,
                               "column": 37
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1804,
-                            "end": 1808,
+                            "start": 1820,
+                            "end": 1824,
                             "loc": {
                               "start": {
-                                "line": 59,
+                                "line": 60,
                                 "column": 4
                               },
                               "end": {
-                                "line": 59,
+                                "line": 60,
                                 "column": 8
                               }
                             },
@@ -1078,15 +1159,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1809,
-                            "end": 1837,
+                            "start": 1825,
+                            "end": 1853,
                             "loc": {
                               "start": {
-                                "line": 59,
+                                "line": 60,
                                 "column": 9
                               },
                               "end": {
-                                "line": 59,
+                                "line": 60,
                                 "column": 37
                               },
                               "identifierName": "tessellationEvaluationShader"
@@ -1098,15 +1179,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 1840,
-                          "end": 1844,
+                          "start": 1856,
+                          "end": 1860,
                           "loc": {
                             "start": {
-                              "line": 59,
+                              "line": 60,
                               "column": 40
                             },
                             "end": {
-                              "line": 59,
+                              "line": 60,
                               "column": 44
                             }
                           },
@@ -1120,15 +1201,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * GLSL source code for the program’s optional tessellation evaluation shader.\n     * @type {?string}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1523760-tessellationevaluationshader\n     ",
-                          "start": 1575,
-                          "end": 1799,
+                          "start": 1591,
+                          "end": 1815,
                           "loc": {
                             "start": {
-                              "line": 54,
+                              "line": 55,
                               "column": 4
                             },
                             "end": {
-                              "line": 58,
+                              "line": 59,
                               "column": 7
                             }
                           }
@@ -1138,15 +1219,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Providing a Delegate Object",
-                          "start": 1851,
-                          "end": 1881,
+                          "start": 1867,
+                          "end": 1897,
                           "loc": {
                             "start": {
-                              "line": 62,
+                              "line": 63,
                               "column": 4
                             },
                             "end": {
-                              "line": 62,
+                              "line": 63,
                               "column": 34
                             }
                           }
@@ -1154,15 +1235,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The delegate of the program object.\n     * @type {?SCNProgramDelegate}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522611-delegate\n     ",
-                          "start": 1887,
-                          "end": 2063,
+                          "start": 1903,
+                          "end": 2079,
                           "loc": {
                             "start": {
-                              "line": 64,
+                              "line": 65,
                               "column": 4
                             },
                             "end": {
-                              "line": 68,
+                              "line": 69,
                               "column": 7
                             }
                           }
@@ -1171,58 +1252,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2068,
-                      "end": 2088,
+                      "start": 2084,
+                      "end": 2104,
                       "loc": {
                         "start": {
-                          "line": 69,
+                          "line": 70,
                           "column": 4
                         },
                         "end": {
-                          "line": 69,
+                          "line": 70,
                           "column": 24
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2068,
-                        "end": 2088,
+                        "start": 2084,
+                        "end": 2104,
                         "loc": {
                           "start": {
-                            "line": 69,
+                            "line": 70,
                             "column": 4
                           },
                           "end": {
-                            "line": 69,
+                            "line": 70,
                             "column": 24
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2068,
-                          "end": 2081,
+                          "start": 2084,
+                          "end": 2097,
                           "loc": {
                             "start": {
-                              "line": 69,
+                              "line": 70,
                               "column": 4
                             },
                             "end": {
-                              "line": 69,
+                              "line": 70,
                               "column": 17
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2068,
-                            "end": 2072,
+                            "start": 2084,
+                            "end": 2088,
                             "loc": {
                               "start": {
-                                "line": 69,
+                                "line": 70,
                                 "column": 4
                               },
                               "end": {
-                                "line": 69,
+                                "line": 70,
                                 "column": 8
                               }
                             },
@@ -1230,15 +1311,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2073,
-                            "end": 2081,
+                            "start": 2089,
+                            "end": 2097,
                             "loc": {
                               "start": {
-                                "line": 69,
+                                "line": 70,
                                 "column": 9
                               },
                               "end": {
-                                "line": 69,
+                                "line": 70,
                                 "column": 17
                               },
                               "identifierName": "delegate"
@@ -1250,15 +1331,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 2084,
-                          "end": 2088,
+                          "start": 2100,
+                          "end": 2104,
                           "loc": {
                             "start": {
-                              "line": 69,
+                              "line": 70,
                               "column": 20
                             },
                             "end": {
-                              "line": 69,
+                              "line": 70,
                               "column": 24
                             }
                           },
@@ -1272,15 +1353,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Providing a Delegate Object",
-                          "start": 1851,
-                          "end": 1881,
+                          "start": 1867,
+                          "end": 1897,
                           "loc": {
                             "start": {
-                              "line": 62,
+                              "line": 63,
                               "column": 4
                             },
                             "end": {
-                              "line": 62,
+                              "line": 63,
                               "column": 34
                             }
                           }
@@ -1288,15 +1369,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The delegate of the program object.\n     * @type {?SCNProgramDelegate}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522611-delegate\n     ",
-                          "start": 1887,
-                          "end": 2063,
+                          "start": 1903,
+                          "end": 2079,
                           "loc": {
                             "start": {
-                              "line": 64,
+                              "line": 65,
                               "column": 4
                             },
                             "end": {
-                              "line": 68,
+                              "line": 69,
                               "column": 7
                             }
                           }
@@ -1306,15 +1387,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Managing Opacity",
-                          "start": 2095,
-                          "end": 2114,
+                          "start": 2111,
+                          "end": 2130,
                           "loc": {
                             "start": {
-                              "line": 72,
+                              "line": 73,
                               "column": 4
                             },
                             "end": {
-                              "line": 72,
+                              "line": 73,
                               "column": 23
                             }
                           }
@@ -1322,15 +1403,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A Boolean value that indicates whether fragments rendered by the program are fully opaque.\n     * @type {boolean}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522844-isopaque\n     ",
-                          "start": 2120,
-                          "end": 2339,
+                          "start": 2136,
+                          "end": 2355,
                           "loc": {
                             "start": {
-                              "line": 74,
+                              "line": 75,
                               "column": 4
                             },
                             "end": {
-                              "line": 78,
+                              "line": 79,
                               "column": 7
                             }
                           }
@@ -1339,58 +1420,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2344,
-                      "end": 2365,
+                      "start": 2360,
+                      "end": 2381,
                       "loc": {
                         "start": {
-                          "line": 79,
+                          "line": 80,
                           "column": 4
                         },
                         "end": {
-                          "line": 79,
+                          "line": 80,
                           "column": 25
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2344,
-                        "end": 2365,
+                        "start": 2360,
+                        "end": 2381,
                         "loc": {
                           "start": {
-                            "line": 79,
+                            "line": 80,
                             "column": 4
                           },
                           "end": {
-                            "line": 79,
+                            "line": 80,
                             "column": 25
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2344,
-                          "end": 2357,
+                          "start": 2360,
+                          "end": 2373,
                           "loc": {
                             "start": {
-                              "line": 79,
+                              "line": 80,
                               "column": 4
                             },
                             "end": {
-                              "line": 79,
+                              "line": 80,
                               "column": 17
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2344,
-                            "end": 2348,
+                            "start": 2360,
+                            "end": 2364,
                             "loc": {
                               "start": {
-                                "line": 79,
+                                "line": 80,
                                 "column": 4
                               },
                               "end": {
-                                "line": 79,
+                                "line": 80,
                                 "column": 8
                               }
                             },
@@ -1398,15 +1479,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2349,
-                            "end": 2357,
+                            "start": 2365,
+                            "end": 2373,
                             "loc": {
                               "start": {
-                                "line": 79,
+                                "line": 80,
                                 "column": 9
                               },
                               "end": {
-                                "line": 79,
+                                "line": 80,
                                 "column": 17
                               },
                               "identifierName": "isOpaque"
@@ -1418,15 +1499,15 @@
                         },
                         "right": {
                           "type": "BooleanLiteral",
-                          "start": 2360,
-                          "end": 2365,
+                          "start": 2376,
+                          "end": 2381,
                           "loc": {
                             "start": {
-                              "line": 79,
+                              "line": 80,
                               "column": 20
                             },
                             "end": {
-                              "line": 79,
+                              "line": 80,
                               "column": 25
                             }
                           },
@@ -1441,15 +1522,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Managing Opacity",
-                          "start": 2095,
-                          "end": 2114,
+                          "start": 2111,
+                          "end": 2130,
                           "loc": {
                             "start": {
-                              "line": 72,
+                              "line": 73,
                               "column": 4
                             },
                             "end": {
-                              "line": 72,
+                              "line": 73,
                               "column": 23
                             }
                           }
@@ -1457,15 +1538,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A Boolean value that indicates whether fragments rendered by the program are fully opaque.\n     * @type {boolean}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522844-isopaque\n     ",
-                          "start": 2120,
-                          "end": 2339,
+                          "start": 2136,
+                          "end": 2355,
                           "loc": {
                             "start": {
-                              "line": 74,
+                              "line": 75,
                               "column": 4
                             },
                             "end": {
-                              "line": 78,
+                              "line": 79,
                               "column": 7
                             }
                           }
@@ -1475,15 +1556,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Working With Metal Shaders",
-                          "start": 2372,
-                          "end": 2401,
+                          "start": 2388,
+                          "end": 2417,
                           "loc": {
                             "start": {
-                              "line": 82,
+                              "line": 83,
                               "column": 4
                             },
                             "end": {
-                              "line": 82,
+                              "line": 83,
                               "column": 33
                             }
                           }
@@ -1491,15 +1572,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The name of the vertex shader function to load from a Metal shader library.\n     * @type {?string}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522799-vertexfunctionname\n     ",
-                          "start": 2407,
-                          "end": 2621,
+                          "start": 2423,
+                          "end": 2637,
                           "loc": {
                             "start": {
-                              "line": 84,
+                              "line": 85,
                               "column": 4
                             },
                             "end": {
-                              "line": 88,
+                              "line": 89,
                               "column": 7
                             }
                           }
@@ -1508,58 +1589,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2626,
-                      "end": 2656,
+                      "start": 2642,
+                      "end": 2672,
                       "loc": {
                         "start": {
-                          "line": 89,
+                          "line": 90,
                           "column": 4
                         },
                         "end": {
-                          "line": 89,
+                          "line": 90,
                           "column": 34
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2626,
-                        "end": 2656,
+                        "start": 2642,
+                        "end": 2672,
                         "loc": {
                           "start": {
-                            "line": 89,
+                            "line": 90,
                             "column": 4
                           },
                           "end": {
-                            "line": 89,
+                            "line": 90,
                             "column": 34
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2626,
-                          "end": 2649,
+                          "start": 2642,
+                          "end": 2665,
                           "loc": {
                             "start": {
-                              "line": 89,
+                              "line": 90,
                               "column": 4
                             },
                             "end": {
-                              "line": 89,
+                              "line": 90,
                               "column": 27
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2626,
-                            "end": 2630,
+                            "start": 2642,
+                            "end": 2646,
                             "loc": {
                               "start": {
-                                "line": 89,
+                                "line": 90,
                                 "column": 4
                               },
                               "end": {
-                                "line": 89,
+                                "line": 90,
                                 "column": 8
                               }
                             },
@@ -1567,15 +1648,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2631,
-                            "end": 2649,
+                            "start": 2647,
+                            "end": 2665,
                             "loc": {
                               "start": {
-                                "line": 89,
+                                "line": 90,
                                 "column": 9
                               },
                               "end": {
-                                "line": 89,
+                                "line": 90,
                                 "column": 27
                               },
                               "identifierName": "vertexFunctionName"
@@ -1587,15 +1668,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 2652,
-                          "end": 2656,
+                          "start": 2668,
+                          "end": 2672,
                           "loc": {
                             "start": {
-                              "line": 89,
+                              "line": 90,
                               "column": 30
                             },
                             "end": {
-                              "line": 89,
+                              "line": 90,
                               "column": 34
                             }
                           },
@@ -1609,15 +1690,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Working With Metal Shaders",
-                          "start": 2372,
-                          "end": 2401,
+                          "start": 2388,
+                          "end": 2417,
                           "loc": {
                             "start": {
-                              "line": 82,
+                              "line": 83,
                               "column": 4
                             },
                             "end": {
-                              "line": 82,
+                              "line": 83,
                               "column": 33
                             }
                           }
@@ -1625,15 +1706,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The name of the vertex shader function to load from a Metal shader library.\n     * @type {?string}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522799-vertexfunctionname\n     ",
-                          "start": 2407,
-                          "end": 2621,
+                          "start": 2423,
+                          "end": 2637,
                           "loc": {
                             "start": {
-                              "line": 84,
+                              "line": 85,
                               "column": 4
                             },
                             "end": {
-                              "line": 88,
+                              "line": 89,
                               "column": 7
                             }
                           }
@@ -1643,15 +1724,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The name of the fragment shader function to load from a Metal shader library.\n     * @type {?string}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1524012-fragmentfunctionname\n     ",
-                          "start": 2662,
-                          "end": 2880,
+                          "start": 2678,
+                          "end": 2896,
                           "loc": {
                             "start": {
-                              "line": 91,
+                              "line": 92,
                               "column": 4
                             },
                             "end": {
-                              "line": 95,
+                              "line": 96,
                               "column": 7
                             }
                           }
@@ -1660,58 +1741,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2885,
-                      "end": 2917,
+                      "start": 2901,
+                      "end": 2933,
                       "loc": {
                         "start": {
-                          "line": 96,
+                          "line": 97,
                           "column": 4
                         },
                         "end": {
-                          "line": 96,
+                          "line": 97,
                           "column": 36
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2885,
-                        "end": 2917,
+                        "start": 2901,
+                        "end": 2933,
                         "loc": {
                           "start": {
-                            "line": 96,
+                            "line": 97,
                             "column": 4
                           },
                           "end": {
-                            "line": 96,
+                            "line": 97,
                             "column": 36
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2885,
-                          "end": 2910,
+                          "start": 2901,
+                          "end": 2926,
                           "loc": {
                             "start": {
-                              "line": 96,
+                              "line": 97,
                               "column": 4
                             },
                             "end": {
-                              "line": 96,
+                              "line": 97,
                               "column": 29
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2885,
-                            "end": 2889,
+                            "start": 2901,
+                            "end": 2905,
                             "loc": {
                               "start": {
-                                "line": 96,
+                                "line": 97,
                                 "column": 4
                               },
                               "end": {
-                                "line": 96,
+                                "line": 97,
                                 "column": 8
                               }
                             },
@@ -1719,15 +1800,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2890,
-                            "end": 2910,
+                            "start": 2906,
+                            "end": 2926,
                             "loc": {
                               "start": {
-                                "line": 96,
+                                "line": 97,
                                 "column": 9
                               },
                               "end": {
-                                "line": 96,
+                                "line": 97,
                                 "column": 29
                               },
                               "identifierName": "fragmentFunctionName"
@@ -1739,15 +1820,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 2913,
-                          "end": 2917,
+                          "start": 2929,
+                          "end": 2933,
                           "loc": {
                             "start": {
-                              "line": 96,
+                              "line": 97,
                               "column": 32
                             },
                             "end": {
-                              "line": 96,
+                              "line": 97,
                               "column": 36
                             }
                           },
@@ -1761,15 +1842,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The name of the fragment shader function to load from a Metal shader library.\n     * @type {?string}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1524012-fragmentfunctionname\n     ",
-                          "start": 2662,
-                          "end": 2880,
+                          "start": 2678,
+                          "end": 2896,
                           "loc": {
                             "start": {
-                              "line": 91,
+                              "line": 92,
                               "column": 4
                             },
                             "end": {
-                              "line": 95,
+                              "line": 96,
                               "column": 7
                             }
                           }
@@ -1779,15 +1860,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The Metal shader library containing shader functions to be used by this program.\n     * @type {?MTLLibrary}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522934-library\n     ",
-                          "start": 2923,
-                          "end": 3135,
+                          "start": 2939,
+                          "end": 3151,
                           "loc": {
                             "start": {
-                              "line": 98,
+                              "line": 99,
                               "column": 4
                             },
                             "end": {
-                              "line": 102,
+                              "line": 103,
                               "column": 7
                             }
                           }
@@ -1796,58 +1877,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 3140,
-                      "end": 3159,
+                      "start": 3156,
+                      "end": 3175,
                       "loc": {
                         "start": {
-                          "line": 103,
+                          "line": 104,
                           "column": 4
                         },
                         "end": {
-                          "line": 103,
+                          "line": 104,
                           "column": 23
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 3140,
-                        "end": 3159,
+                        "start": 3156,
+                        "end": 3175,
                         "loc": {
                           "start": {
-                            "line": 103,
+                            "line": 104,
                             "column": 4
                           },
                           "end": {
-                            "line": 103,
+                            "line": 104,
                             "column": 23
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 3140,
-                          "end": 3152,
+                          "start": 3156,
+                          "end": 3168,
                           "loc": {
                             "start": {
-                              "line": 103,
+                              "line": 104,
                               "column": 4
                             },
                             "end": {
-                              "line": 103,
+                              "line": 104,
                               "column": 16
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 3140,
-                            "end": 3144,
+                            "start": 3156,
+                            "end": 3160,
                             "loc": {
                               "start": {
-                                "line": 103,
+                                "line": 104,
                                 "column": 4
                               },
                               "end": {
-                                "line": 103,
+                                "line": 104,
                                 "column": 8
                               }
                             },
@@ -1855,15 +1936,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 3145,
-                            "end": 3152,
+                            "start": 3161,
+                            "end": 3168,
                             "loc": {
                               "start": {
-                                "line": 103,
+                                "line": 104,
                                 "column": 9
                               },
                               "end": {
-                                "line": 103,
+                                "line": 104,
                                 "column": 16
                               },
                               "identifierName": "library"
@@ -1875,16 +1956,152 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 3155,
-                          "end": 3159,
+                          "start": 3171,
+                          "end": 3175,
                           "loc": {
                             "start": {
-                              "line": 103,
+                              "line": 104,
                               "column": 19
                             },
                             "end": {
-                              "line": 103,
+                              "line": 104,
                               "column": 23
+                            }
+                          },
+                          "leadingComments": null,
+                          "trailingComments": null
+                        },
+                        "leadingComments": null,
+                        "trailingComments": null
+                      },
+                      "leadingComments": [
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * The Metal shader library containing shader functions to be used by this program.\n     * @type {?MTLLibrary}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522934-library\n     ",
+                          "start": 2939,
+                          "end": 3151,
+                          "loc": {
+                            "start": {
+                              "line": 99,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 103,
+                              "column": 7
+                            }
+                          }
+                        }
+                      ],
+                      "trailingComments": [
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * @access private\n     * @type {WebGLProgram}\n     ",
+                          "start": 3181,
+                          "end": 3243,
+                          "loc": {
+                            "start": {
+                              "line": 106,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 109,
+                              "column": 7
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "start": 3248,
+                      "end": 3270,
+                      "loc": {
+                        "start": {
+                          "line": 110,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 110,
+                          "column": 26
+                        }
+                      },
+                      "expression": {
+                        "type": "AssignmentExpression",
+                        "start": 3248,
+                        "end": 3270,
+                        "loc": {
+                          "start": {
+                            "line": 110,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 110,
+                            "column": 26
+                          }
+                        },
+                        "operator": "=",
+                        "left": {
+                          "type": "MemberExpression",
+                          "start": 3248,
+                          "end": 3263,
+                          "loc": {
+                            "start": {
+                              "line": 110,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 110,
+                              "column": 19
+                            }
+                          },
+                          "object": {
+                            "type": "ThisExpression",
+                            "start": 3248,
+                            "end": 3252,
+                            "loc": {
+                              "start": {
+                                "line": 110,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 110,
+                                "column": 8
+                              }
+                            },
+                            "leadingComments": null
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "start": 3253,
+                            "end": 3263,
+                            "loc": {
+                              "start": {
+                                "line": 110,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 110,
+                                "column": 19
+                              },
+                              "identifierName": "_glProgram"
+                            },
+                            "name": "_glProgram"
+                          },
+                          "computed": false,
+                          "leadingComments": null
+                        },
+                        "right": {
+                          "type": "NullLiteral",
+                          "start": 3266,
+                          "end": 3270,
+                          "loc": {
+                            "start": {
+                              "line": 110,
+                              "column": 22
+                            },
+                            "end": {
+                              "line": 110,
+                              "column": 26
                             }
                           }
                         },
@@ -1893,16 +2110,16 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The Metal shader library containing shader functions to be used by this program.\n     * @type {?MTLLibrary}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522934-library\n     ",
-                          "start": 2923,
-                          "end": 3135,
+                          "value": "*\n     * @access private\n     * @type {WebGLProgram}\n     ",
+                          "start": 3181,
+                          "end": 3243,
                           "loc": {
                             "start": {
-                              "line": 98,
+                              "line": 106,
                               "column": 4
                             },
                             "end": {
-                              "line": 102,
+                              "line": 109,
                               "column": 7
                             }
                           }
@@ -1916,9 +2133,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
+                    "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
                     "start": 506,
-                    "end": 573,
+                    "end": 570,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -1935,15 +2152,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Mapping GLSL Symbols to SceneKit Semantics",
-                    "start": 3168,
-                    "end": 3213,
+                    "start": 3278,
+                    "end": 3323,
                     "loc": {
                       "start": {
-                        "line": 107,
+                        "line": 113,
                         "column": 2
                       },
                       "end": {
-                        "line": 107,
+                        "line": 113,
                         "column": 47
                       }
                     }
@@ -1951,15 +2168,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Associates a SceneKit semantic identifier with the specified GLSL vertex attribute or uniform variable.\n   * @access public\n   * @param {?string} semantic - A SceneKit semantic identifier. See Geometry Semantic Identifiers and Rendering Transform Keys for possible values.\n   * @param {string} symbol - The name declared in the program’s GLSL source code for the vertex attribute or uniform variable to be associated with the semantic.\n   * @param {?Map<string, Object>} [options = null] - A dictionary of options affecting the semantic. See Program Semantic Options for applicable keys and values.\n   * @returns {void}\n   * @desc Use this method to provide inputs managed by SceneKit to your GLSL program.To use vertex attributes provided by SCNGeometry objects, use the constants listed in Geometry Semantic Identifiers.To use the coordinate transformations defined by the scene’s node hierarchy and point-of-view camera, use the constants listed in Rendering Transform Keys.\n   * @see https://developer.apple.com/reference/scenekit/scnprogram/1522730-setsemantic\n   ",
-                    "start": 3217,
-                    "end": 4297,
+                    "start": 3327,
+                    "end": 4407,
                     "loc": {
                       "start": {
-                        "line": 109,
+                        "line": 115,
                         "column": 2
                       },
                       "end": {
-                        "line": 118,
+                        "line": 124,
                         "column": 5
                       }
                     }
@@ -1968,30 +2185,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 4300,
-                "end": 4360,
+                "start": 4410,
+                "end": 4470,
                 "loc": {
                   "start": {
-                    "line": 119,
+                    "line": 125,
                     "column": 2
                   },
                   "end": {
-                    "line": 120,
+                    "line": 126,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 4300,
-                  "end": 4320,
+                  "start": 4410,
+                  "end": 4430,
                   "loc": {
                     "start": {
-                      "line": 119,
+                      "line": 125,
                       "column": 2
                     },
                     "end": {
-                      "line": 119,
+                      "line": 125,
                       "column": 22
                     },
                     "identifierName": "setSemanticForSymbol"
@@ -2008,15 +2225,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 4321,
-                    "end": 4329,
+                    "start": 4431,
+                    "end": 4439,
                     "loc": {
                       "start": {
-                        "line": 119,
+                        "line": 125,
                         "column": 23
                       },
                       "end": {
-                        "line": 119,
+                        "line": 125,
                         "column": 31
                       },
                       "identifierName": "semantic"
@@ -2025,15 +2242,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 4331,
-                    "end": 4337,
+                    "start": 4441,
+                    "end": 4447,
                     "loc": {
                       "start": {
-                        "line": 119,
+                        "line": 125,
                         "column": 33
                       },
                       "end": {
-                        "line": 119,
+                        "line": 125,
                         "column": 39
                       },
                       "identifierName": "symbol"
@@ -2042,29 +2259,29 @@
                   },
                   {
                     "type": "AssignmentPattern",
-                    "start": 4339,
-                    "end": 4353,
+                    "start": 4449,
+                    "end": 4463,
                     "loc": {
                       "start": {
-                        "line": 119,
+                        "line": 125,
                         "column": 41
                       },
                       "end": {
-                        "line": 119,
+                        "line": 125,
                         "column": 55
                       }
                     },
                     "left": {
                       "type": "Identifier",
-                      "start": 4339,
-                      "end": 4346,
+                      "start": 4449,
+                      "end": 4456,
                       "loc": {
                         "start": {
-                          "line": 119,
+                          "line": 125,
                           "column": 41
                         },
                         "end": {
-                          "line": 119,
+                          "line": 125,
                           "column": 48
                         },
                         "identifierName": "options"
@@ -2073,15 +2290,15 @@
                     },
                     "right": {
                       "type": "NullLiteral",
-                      "start": 4349,
-                      "end": 4353,
+                      "start": 4459,
+                      "end": 4463,
                       "loc": {
                         "start": {
-                          "line": 119,
+                          "line": 125,
                           "column": 51
                         },
                         "end": {
-                          "line": 119,
+                          "line": 125,
                           "column": 55
                         }
                       }
@@ -2090,15 +2307,15 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 4355,
-                  "end": 4360,
+                  "start": 4465,
+                  "end": 4470,
                   "loc": {
                     "start": {
-                      "line": 119,
+                      "line": 125,
                       "column": 57
                     },
                     "end": {
-                      "line": 120,
+                      "line": 126,
                       "column": 3
                     }
                   },
@@ -2111,15 +2328,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Mapping GLSL Symbols to SceneKit Semantics",
-                    "start": 3168,
-                    "end": 3213,
+                    "start": 3278,
+                    "end": 3323,
                     "loc": {
                       "start": {
-                        "line": 107,
+                        "line": 113,
                         "column": 2
                       },
                       "end": {
-                        "line": 107,
+                        "line": 113,
                         "column": 47
                       }
                     }
@@ -2127,15 +2344,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Associates a SceneKit semantic identifier with the specified GLSL vertex attribute or uniform variable.\n   * @access public\n   * @param {?string} semantic - A SceneKit semantic identifier. See Geometry Semantic Identifiers and Rendering Transform Keys for possible values.\n   * @param {string} symbol - The name declared in the program’s GLSL source code for the vertex attribute or uniform variable to be associated with the semantic.\n   * @param {?Map<string, Object>} [options = null] - A dictionary of options affecting the semantic. See Program Semantic Options for applicable keys and values.\n   * @returns {void}\n   * @desc Use this method to provide inputs managed by SceneKit to your GLSL program.To use vertex attributes provided by SCNGeometry objects, use the constants listed in Geometry Semantic Identifiers.To use the coordinate transformations defined by the scene’s node hierarchy and point-of-view camera, use the constants listed in Rendering Transform Keys.\n   * @see https://developer.apple.com/reference/scenekit/scnprogram/1522730-setsemantic\n   ",
-                    "start": 3217,
-                    "end": 4297,
+                    "start": 3327,
+                    "end": 4407,
                     "loc": {
                       "start": {
-                        "line": 109,
+                        "line": 115,
                         "column": 2
                       },
                       "end": {
-                        "line": 118,
+                        "line": 124,
                         "column": 5
                       }
                     }
@@ -2145,15 +2362,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Returns the SceneKit semantic identifiers associated with the specified GLSL vertex attribute or uniform variable.\n   * @access public\n   * @param {string} symbol - The name declared in the program’s GLSL source code for a vertex attribute or uniform variable semantic.\n   * @returns {?string} - \n   * @see https://developer.apple.com/reference/scenekit/scnprogram/1523350-semantic\n   ",
-                    "start": 4364,
-                    "end": 4760,
+                    "start": 4474,
+                    "end": 4870,
                     "loc": {
                       "start": {
-                        "line": 122,
+                        "line": 128,
                         "column": 2
                       },
                       "end": {
-                        "line": 128,
+                        "line": 134,
                         "column": 5
                       }
                     }
@@ -2162,30 +2379,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 4763,
-                "end": 4810,
+                "start": 4873,
+                "end": 4920,
                 "loc": {
                   "start": {
-                    "line": 129,
+                    "line": 135,
                     "column": 2
                   },
                   "end": {
-                    "line": 131,
+                    "line": 137,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 4763,
-                  "end": 4780,
+                  "start": 4873,
+                  "end": 4890,
                   "loc": {
                     "start": {
-                      "line": 129,
+                      "line": 135,
                       "column": 2
                     },
                     "end": {
-                      "line": 129,
+                      "line": 135,
                       "column": 19
                     },
                     "identifierName": "semanticForSymbol"
@@ -2202,15 +2419,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 4781,
-                    "end": 4787,
+                    "start": 4891,
+                    "end": 4897,
                     "loc": {
                       "start": {
-                        "line": 129,
+                        "line": 135,
                         "column": 20
                       },
                       "end": {
-                        "line": 129,
+                        "line": 135,
                         "column": 26
                       },
                       "identifierName": "symbol"
@@ -2220,44 +2437,44 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 4789,
-                  "end": 4810,
+                  "start": 4899,
+                  "end": 4920,
                   "loc": {
                     "start": {
-                      "line": 129,
+                      "line": 135,
                       "column": 28
                     },
                     "end": {
-                      "line": 131,
+                      "line": 137,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 4795,
-                      "end": 4806,
+                      "start": 4905,
+                      "end": 4916,
                       "loc": {
                         "start": {
-                          "line": 130,
+                          "line": 136,
                           "column": 4
                         },
                         "end": {
-                          "line": 130,
+                          "line": 136,
                           "column": 15
                         }
                       },
                       "argument": {
                         "type": "NullLiteral",
-                        "start": 4802,
-                        "end": 4806,
+                        "start": 4912,
+                        "end": 4916,
                         "loc": {
                           "start": {
-                            "line": 130,
+                            "line": 136,
                             "column": 11
                           },
                           "end": {
-                            "line": 130,
+                            "line": 136,
                             "column": 15
                           }
                         }
@@ -2271,15 +2488,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Returns the SceneKit semantic identifiers associated with the specified GLSL vertex attribute or uniform variable.\n   * @access public\n   * @param {string} symbol - The name declared in the program’s GLSL source code for a vertex attribute or uniform variable semantic.\n   * @returns {?string} - \n   * @see https://developer.apple.com/reference/scenekit/scnprogram/1523350-semantic\n   ",
-                    "start": 4364,
-                    "end": 4760,
+                    "start": 4474,
+                    "end": 4870,
                     "loc": {
                       "start": {
-                        "line": 122,
+                        "line": 128,
                         "column": 2
                       },
                       "end": {
-                        "line": 128,
+                        "line": 134,
                         "column": 5
                       }
                     }
@@ -2289,15 +2506,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Providing Input for Metal Shaders",
-                    "start": 4814,
-                    "end": 4850,
+                    "start": 4924,
+                    "end": 4960,
                     "loc": {
                       "start": {
-                        "line": 133,
+                        "line": 139,
                         "column": 2
                       },
                       "end": {
-                        "line": 133,
+                        "line": 139,
                         "column": 38
                       }
                     }
@@ -2305,15 +2522,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Registers a block for SceneKit to call at render time for binding a Metal buffer to the shader program.\n   * @access public\n   * @param {string} name - The name identifying the buffer in Metal shader source code.\n   * @param {SCNBufferFrequency} frequency - An option specifying whether SceneKit calls the block only once per rendered frame or more frequently (for example, once for each object to be rendered).\n   * @param {SCNBufferBindingBlock} block - A block to be run when SceneKit prepares for rendering with the Metal shader.\n   * @returns {void}\n   * @desc Use this method to associate a block with a Metal shader program to handle setup of a buffer used in that shader. SceneKit calls your block before rendering any objects whose program property is set to this SCNProgram object. In the block, use the writeBytes(_:count:) method to provide data for the buffer.  \n\n   * @see https://developer.apple.com/reference/scenekit/scnprogram/1524047-handlebinding\n   ",
-                    "start": 4854,
-                    "end": 5835,
+                    "start": 4964,
+                    "end": 5945,
                     "loc": {
                       "start": {
-                        "line": 135,
+                        "line": 141,
                         "column": 2
                       },
                       "end": {
-                        "line": 145,
+                        "line": 151,
                         "column": 5
                       }
                     }
@@ -2322,30 +2539,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 5838,
-                "end": 5901,
+                "start": 5948,
+                "end": 6011,
                 "loc": {
                   "start": {
-                    "line": 146,
+                    "line": 152,
                     "column": 2
                   },
                   "end": {
-                    "line": 147,
+                    "line": 153,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 5838,
-                  "end": 5871,
+                  "start": 5948,
+                  "end": 5981,
                   "loc": {
                     "start": {
-                      "line": 146,
+                      "line": 152,
                       "column": 2
                     },
                     "end": {
-                      "line": 146,
+                      "line": 152,
                       "column": 35
                     },
                     "identifierName": "handleBindingOfBufferNamedHandler"
@@ -2362,15 +2579,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 5872,
-                    "end": 5876,
+                    "start": 5982,
+                    "end": 5986,
                     "loc": {
                       "start": {
-                        "line": 146,
+                        "line": 152,
                         "column": 36
                       },
                       "end": {
-                        "line": 146,
+                        "line": 152,
                         "column": 40
                       },
                       "identifierName": "name"
@@ -2379,15 +2596,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 5878,
-                    "end": 5887,
+                    "start": 5988,
+                    "end": 5997,
                     "loc": {
                       "start": {
-                        "line": 146,
+                        "line": 152,
                         "column": 42
                       },
                       "end": {
-                        "line": 146,
+                        "line": 152,
                         "column": 51
                       },
                       "identifierName": "frequency"
@@ -2396,15 +2613,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 5889,
-                    "end": 5894,
+                    "start": 5999,
+                    "end": 6004,
                     "loc": {
                       "start": {
-                        "line": 146,
+                        "line": 152,
                         "column": 53
                       },
                       "end": {
-                        "line": 146,
+                        "line": 152,
                         "column": 58
                       },
                       "identifierName": "block"
@@ -2414,15 +2631,15 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 5896,
-                  "end": 5901,
+                  "start": 6006,
+                  "end": 6011,
                   "loc": {
                     "start": {
-                      "line": 146,
+                      "line": 152,
                       "column": 60
                     },
                     "end": {
-                      "line": 147,
+                      "line": 153,
                       "column": 3
                     }
                   },
@@ -2433,15 +2650,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Providing Input for Metal Shaders",
-                    "start": 4814,
-                    "end": 4850,
+                    "start": 4924,
+                    "end": 4960,
                     "loc": {
                       "start": {
-                        "line": 133,
+                        "line": 139,
                         "column": 2
                       },
                       "end": {
-                        "line": 133,
+                        "line": 139,
                         "column": 38
                       }
                     }
@@ -2449,15 +2666,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Registers a block for SceneKit to call at render time for binding a Metal buffer to the shader program.\n   * @access public\n   * @param {string} name - The name identifying the buffer in Metal shader source code.\n   * @param {SCNBufferFrequency} frequency - An option specifying whether SceneKit calls the block only once per rendered frame or more frequently (for example, once for each object to be rendered).\n   * @param {SCNBufferBindingBlock} block - A block to be run when SceneKit prepares for rendering with the Metal shader.\n   * @returns {void}\n   * @desc Use this method to associate a block with a Metal shader program to handle setup of a buffer used in that shader. SceneKit calls your block before rendering any objects whose program property is set to this SCNProgram object. In the block, use the writeBytes(_:count:) method to provide data for the buffer.  \n\n   * @see https://developer.apple.com/reference/scenekit/scnprogram/1524047-handlebinding\n   ",
-                    "start": 4854,
-                    "end": 5835,
+                    "start": 4964,
+                    "end": 5945,
                     "loc": {
                       "start": {
-                        "line": 135,
+                        "line": 141,
                         "column": 2
                       },
                       "end": {
-                        "line": 145,
+                        "line": 151,
                         "column": 5
                       }
                     }
@@ -2563,9 +2780,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
+      "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
       "start": 506,
-      "end": 573,
+      "end": 570,
       "loc": {
         "start": {
           "line": 17,
@@ -2580,15 +2797,15 @@
     {
       "type": "CommentLine",
       "value": " Working with OpenGL Shader Source Code",
-      "start": 590,
-      "end": 631,
+      "start": 606,
+      "end": 647,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 25,
           "column": 4
         },
         "end": {
-          "line": 24,
+          "line": 25,
           "column": 45
         }
       }
@@ -2596,15 +2813,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * GLSL source code for the program’s vertex shader.\n     * @type {?string}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522891-vertexshader\n     ",
-      "start": 637,
-      "end": 819,
+      "start": 653,
+      "end": 835,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 27,
           "column": 4
         },
         "end": {
-          "line": 30,
+          "line": 31,
           "column": 7
         }
       }
@@ -2612,15 +2829,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * GLSL source code for the program’s fragment shader.\n     * @type {?string}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1523135-fragmentshader\n     ",
-      "start": 854,
-      "end": 1040,
+      "start": 870,
+      "end": 1056,
       "loc": {
         "start": {
-          "line": 33,
+          "line": 34,
           "column": 4
         },
         "end": {
-          "line": 37,
+          "line": 38,
           "column": 7
         }
       }
@@ -2628,15 +2845,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * GLSL source code for the program’s optional geometry shader.\n     * @type {?string}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1524049-geometryshader\n     ",
-      "start": 1077,
-      "end": 1272,
+      "start": 1093,
+      "end": 1288,
       "loc": {
         "start": {
-          "line": 40,
+          "line": 41,
           "column": 4
         },
         "end": {
-          "line": 44,
+          "line": 45,
           "column": 7
         }
       }
@@ -2644,15 +2861,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * GLSL source code for the program’s optional tessellation control shader.\n     * @type {?string}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1523852-tessellationcontrolshader\n     ",
-      "start": 1309,
-      "end": 1527,
+      "start": 1325,
+      "end": 1543,
       "loc": {
         "start": {
-          "line": 47,
+          "line": 48,
           "column": 4
         },
         "end": {
-          "line": 51,
+          "line": 52,
           "column": 7
         }
       }
@@ -2660,15 +2877,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * GLSL source code for the program’s optional tessellation evaluation shader.\n     * @type {?string}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1523760-tessellationevaluationshader\n     ",
-      "start": 1575,
-      "end": 1799,
+      "start": 1591,
+      "end": 1815,
       "loc": {
         "start": {
-          "line": 54,
+          "line": 55,
           "column": 4
         },
         "end": {
-          "line": 58,
+          "line": 59,
           "column": 7
         }
       }
@@ -2676,15 +2893,15 @@
     {
       "type": "CommentLine",
       "value": " Providing a Delegate Object",
-      "start": 1851,
-      "end": 1881,
+      "start": 1867,
+      "end": 1897,
       "loc": {
         "start": {
-          "line": 62,
+          "line": 63,
           "column": 4
         },
         "end": {
-          "line": 62,
+          "line": 63,
           "column": 34
         }
       }
@@ -2692,15 +2909,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The delegate of the program object.\n     * @type {?SCNProgramDelegate}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522611-delegate\n     ",
-      "start": 1887,
-      "end": 2063,
+      "start": 1903,
+      "end": 2079,
       "loc": {
         "start": {
-          "line": 64,
+          "line": 65,
           "column": 4
         },
         "end": {
-          "line": 68,
+          "line": 69,
           "column": 7
         }
       }
@@ -2708,15 +2925,15 @@
     {
       "type": "CommentLine",
       "value": " Managing Opacity",
-      "start": 2095,
-      "end": 2114,
+      "start": 2111,
+      "end": 2130,
       "loc": {
         "start": {
-          "line": 72,
+          "line": 73,
           "column": 4
         },
         "end": {
-          "line": 72,
+          "line": 73,
           "column": 23
         }
       }
@@ -2724,15 +2941,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A Boolean value that indicates whether fragments rendered by the program are fully opaque.\n     * @type {boolean}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522844-isopaque\n     ",
-      "start": 2120,
-      "end": 2339,
+      "start": 2136,
+      "end": 2355,
       "loc": {
         "start": {
-          "line": 74,
+          "line": 75,
           "column": 4
         },
         "end": {
-          "line": 78,
+          "line": 79,
           "column": 7
         }
       }
@@ -2740,15 +2957,15 @@
     {
       "type": "CommentLine",
       "value": " Working With Metal Shaders",
-      "start": 2372,
-      "end": 2401,
+      "start": 2388,
+      "end": 2417,
       "loc": {
         "start": {
-          "line": 82,
+          "line": 83,
           "column": 4
         },
         "end": {
-          "line": 82,
+          "line": 83,
           "column": 33
         }
       }
@@ -2756,15 +2973,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The name of the vertex shader function to load from a Metal shader library.\n     * @type {?string}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522799-vertexfunctionname\n     ",
-      "start": 2407,
-      "end": 2621,
+      "start": 2423,
+      "end": 2637,
       "loc": {
         "start": {
-          "line": 84,
+          "line": 85,
           "column": 4
         },
         "end": {
-          "line": 88,
+          "line": 89,
           "column": 7
         }
       }
@@ -2772,15 +2989,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The name of the fragment shader function to load from a Metal shader library.\n     * @type {?string}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1524012-fragmentfunctionname\n     ",
-      "start": 2662,
-      "end": 2880,
+      "start": 2678,
+      "end": 2896,
       "loc": {
         "start": {
-          "line": 91,
+          "line": 92,
           "column": 4
         },
         "end": {
-          "line": 95,
+          "line": 96,
           "column": 7
         }
       }
@@ -2788,15 +3005,31 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The Metal shader library containing shader functions to be used by this program.\n     * @type {?MTLLibrary}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522934-library\n     ",
-      "start": 2923,
-      "end": 3135,
+      "start": 2939,
+      "end": 3151,
       "loc": {
         "start": {
-          "line": 98,
+          "line": 99,
           "column": 4
         },
         "end": {
-          "line": 102,
+          "line": 103,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n     * @access private\n     * @type {WebGLProgram}\n     ",
+      "start": 3181,
+      "end": 3243,
+      "loc": {
+        "start": {
+          "line": 106,
+          "column": 4
+        },
+        "end": {
+          "line": 109,
           "column": 7
         }
       }
@@ -2804,15 +3037,15 @@
     {
       "type": "CommentLine",
       "value": " Mapping GLSL Symbols to SceneKit Semantics",
-      "start": 3168,
-      "end": 3213,
+      "start": 3278,
+      "end": 3323,
       "loc": {
         "start": {
-          "line": 107,
+          "line": 113,
           "column": 2
         },
         "end": {
-          "line": 107,
+          "line": 113,
           "column": 47
         }
       }
@@ -2820,15 +3053,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Associates a SceneKit semantic identifier with the specified GLSL vertex attribute or uniform variable.\n   * @access public\n   * @param {?string} semantic - A SceneKit semantic identifier. See Geometry Semantic Identifiers and Rendering Transform Keys for possible values.\n   * @param {string} symbol - The name declared in the program’s GLSL source code for the vertex attribute or uniform variable to be associated with the semantic.\n   * @param {?Map<string, Object>} [options = null] - A dictionary of options affecting the semantic. See Program Semantic Options for applicable keys and values.\n   * @returns {void}\n   * @desc Use this method to provide inputs managed by SceneKit to your GLSL program.To use vertex attributes provided by SCNGeometry objects, use the constants listed in Geometry Semantic Identifiers.To use the coordinate transformations defined by the scene’s node hierarchy and point-of-view camera, use the constants listed in Rendering Transform Keys.\n   * @see https://developer.apple.com/reference/scenekit/scnprogram/1522730-setsemantic\n   ",
-      "start": 3217,
-      "end": 4297,
+      "start": 3327,
+      "end": 4407,
       "loc": {
         "start": {
-          "line": 109,
+          "line": 115,
           "column": 2
         },
         "end": {
-          "line": 118,
+          "line": 124,
           "column": 5
         }
       }
@@ -2836,15 +3069,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Returns the SceneKit semantic identifiers associated with the specified GLSL vertex attribute or uniform variable.\n   * @access public\n   * @param {string} symbol - The name declared in the program’s GLSL source code for a vertex attribute or uniform variable semantic.\n   * @returns {?string} - \n   * @see https://developer.apple.com/reference/scenekit/scnprogram/1523350-semantic\n   ",
-      "start": 4364,
-      "end": 4760,
+      "start": 4474,
+      "end": 4870,
       "loc": {
         "start": {
-          "line": 122,
+          "line": 128,
           "column": 2
         },
         "end": {
-          "line": 128,
+          "line": 134,
           "column": 5
         }
       }
@@ -2852,15 +3085,15 @@
     {
       "type": "CommentLine",
       "value": " Providing Input for Metal Shaders",
-      "start": 4814,
-      "end": 4850,
+      "start": 4924,
+      "end": 4960,
       "loc": {
         "start": {
-          "line": 133,
+          "line": 139,
           "column": 2
         },
         "end": {
-          "line": 133,
+          "line": 139,
           "column": 38
         }
       }
@@ -2868,15 +3101,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Registers a block for SceneKit to call at render time for binding a Metal buffer to the shader program.\n   * @access public\n   * @param {string} name - The name identifying the buffer in Metal shader source code.\n   * @param {SCNBufferFrequency} frequency - An option specifying whether SceneKit calls the block only once per rendered frame or more frequently (for example, once for each object to be rendered).\n   * @param {SCNBufferBindingBlock} block - A block to be run when SceneKit prepares for rendering with the Metal shader.\n   * @returns {void}\n   * @desc Use this method to associate a block with a Metal shader program to handle setup of a buffer used in that shader. SceneKit calls your block before rendering any objects whose program property is set to this SCNProgram object. In the block, use the writeBytes(_:count:) method to provide data for the buffer.  \n\n   * @see https://developer.apple.com/reference/scenekit/scnprogram/1524047-handlebinding\n   ",
-      "start": 4854,
-      "end": 5835,
+      "start": 4964,
+      "end": 5945,
       "loc": {
         "start": {
-          "line": 135,
+          "line": 141,
           "column": 2
         },
         "end": {
-          "line": 145,
+          "line": 151,
           "column": 5
         }
       }
@@ -3545,9 +3778,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
+      "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
       "start": 506,
-      "end": 573,
+      "end": 570,
       "loc": {
         "start": {
           "line": 17,
@@ -3571,9 +3804,9 @@
         "postfix": false,
         "binop": null
       },
-      "value": "init",
-      "start": 576,
-      "end": 580,
+      "value": "constructor",
+      "start": 573,
+      "end": 584,
       "loc": {
         "start": {
           "line": 22,
@@ -3581,7 +3814,7 @@
         },
         "end": {
           "line": 22,
-          "column": 6
+          "column": 13
         }
       }
     },
@@ -3597,16 +3830,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 580,
-      "end": 581,
+      "start": 584,
+      "end": 585,
       "loc": {
         "start": {
           "line": 22,
-          "column": 6
+          "column": 13
         },
         "end": {
           "line": 22,
-          "column": 7
+          "column": 14
         }
       }
     },
@@ -3622,16 +3855,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 581,
-      "end": 582,
+      "start": 585,
+      "end": 586,
       "loc": {
         "start": {
           "line": 22,
-          "column": 7
+          "column": 14
         },
         "end": {
           "line": 22,
-          "column": 8
+          "column": 15
         }
       }
     },
@@ -3647,31 +3880,109 @@
         "postfix": false,
         "binop": null
       },
-      "start": 583,
-      "end": 584,
+      "start": 587,
+      "end": 588,
       "loc": {
         "start": {
           "line": 22,
-          "column": 9
+          "column": 16
         },
         "end": {
           "line": 22,
+          "column": 17
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "super",
+        "keyword": "super",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "super",
+      "start": 593,
+      "end": 598,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 4
+        },
+        "end": {
+          "line": 23,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 598,
+      "end": 599,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 9
+        },
+        "end": {
+          "line": 23,
           "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 599,
+      "end": 600,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 10
+        },
+        "end": {
+          "line": 23,
+          "column": 11
         }
       }
     },
     {
       "type": "CommentLine",
       "value": " Working with OpenGL Shader Source Code",
-      "start": 590,
-      "end": 631,
+      "start": 606,
+      "end": 647,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 25,
           "column": 4
         },
         "end": {
-          "line": 24,
+          "line": 25,
           "column": 45
         }
       }
@@ -3679,15 +3990,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * GLSL source code for the program’s vertex shader.\n     * @type {?string}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522891-vertexshader\n     ",
-      "start": 637,
-      "end": 819,
+      "start": 653,
+      "end": 835,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 27,
           "column": 4
         },
         "end": {
-          "line": 30,
+          "line": 31,
           "column": 7
         }
       }
@@ -3707,15 +4018,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 824,
-      "end": 828,
+      "start": 840,
+      "end": 844,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 32,
           "column": 4
         },
         "end": {
-          "line": 31,
+          "line": 32,
           "column": 8
         }
       }
@@ -3733,15 +4044,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 828,
-      "end": 829,
+      "start": 844,
+      "end": 845,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 32,
           "column": 8
         },
         "end": {
-          "line": 31,
+          "line": 32,
           "column": 9
         }
       }
@@ -3759,15 +4070,15 @@
         "binop": null
       },
       "value": "vertexShader",
-      "start": 829,
-      "end": 841,
+      "start": 845,
+      "end": 857,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 32,
           "column": 9
         },
         "end": {
-          "line": 31,
+          "line": 32,
           "column": 21
         }
       }
@@ -3786,15 +4097,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 842,
-      "end": 843,
+      "start": 858,
+      "end": 859,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 32,
           "column": 22
         },
         "end": {
-          "line": 31,
+          "line": 32,
           "column": 23
         }
       }
@@ -3814,15 +4125,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 844,
-      "end": 848,
+      "start": 860,
+      "end": 864,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 32,
           "column": 24
         },
         "end": {
-          "line": 31,
+          "line": 32,
           "column": 28
         }
       }
@@ -3830,15 +4141,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * GLSL source code for the program’s fragment shader.\n     * @type {?string}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1523135-fragmentshader\n     ",
-      "start": 854,
-      "end": 1040,
+      "start": 870,
+      "end": 1056,
       "loc": {
         "start": {
-          "line": 33,
+          "line": 34,
           "column": 4
         },
         "end": {
-          "line": 37,
+          "line": 38,
           "column": 7
         }
       }
@@ -3858,15 +4169,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1045,
-      "end": 1049,
+      "start": 1061,
+      "end": 1065,
       "loc": {
         "start": {
-          "line": 38,
+          "line": 39,
           "column": 4
         },
         "end": {
-          "line": 38,
+          "line": 39,
           "column": 8
         }
       }
@@ -3884,15 +4195,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1049,
-      "end": 1050,
+      "start": 1065,
+      "end": 1066,
       "loc": {
         "start": {
-          "line": 38,
+          "line": 39,
           "column": 8
         },
         "end": {
-          "line": 38,
+          "line": 39,
           "column": 9
         }
       }
@@ -3910,15 +4221,15 @@
         "binop": null
       },
       "value": "fragmentShader",
-      "start": 1050,
-      "end": 1064,
+      "start": 1066,
+      "end": 1080,
       "loc": {
         "start": {
-          "line": 38,
+          "line": 39,
           "column": 9
         },
         "end": {
-          "line": 38,
+          "line": 39,
           "column": 23
         }
       }
@@ -3937,15 +4248,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1065,
-      "end": 1066,
+      "start": 1081,
+      "end": 1082,
       "loc": {
         "start": {
-          "line": 38,
+          "line": 39,
           "column": 24
         },
         "end": {
-          "line": 38,
+          "line": 39,
           "column": 25
         }
       }
@@ -3965,15 +4276,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 1067,
-      "end": 1071,
+      "start": 1083,
+      "end": 1087,
       "loc": {
         "start": {
-          "line": 38,
+          "line": 39,
           "column": 26
         },
         "end": {
-          "line": 38,
+          "line": 39,
           "column": 30
         }
       }
@@ -3981,15 +4292,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * GLSL source code for the program’s optional geometry shader.\n     * @type {?string}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1524049-geometryshader\n     ",
-      "start": 1077,
-      "end": 1272,
+      "start": 1093,
+      "end": 1288,
       "loc": {
         "start": {
-          "line": 40,
+          "line": 41,
           "column": 4
         },
         "end": {
-          "line": 44,
+          "line": 45,
           "column": 7
         }
       }
@@ -4009,15 +4320,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1277,
-      "end": 1281,
+      "start": 1293,
+      "end": 1297,
       "loc": {
         "start": {
-          "line": 45,
+          "line": 46,
           "column": 4
         },
         "end": {
-          "line": 45,
+          "line": 46,
           "column": 8
         }
       }
@@ -4035,15 +4346,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1281,
-      "end": 1282,
+      "start": 1297,
+      "end": 1298,
       "loc": {
         "start": {
-          "line": 45,
+          "line": 46,
           "column": 8
         },
         "end": {
-          "line": 45,
+          "line": 46,
           "column": 9
         }
       }
@@ -4061,15 +4372,15 @@
         "binop": null
       },
       "value": "geometryShader",
-      "start": 1282,
-      "end": 1296,
+      "start": 1298,
+      "end": 1312,
       "loc": {
         "start": {
-          "line": 45,
+          "line": 46,
           "column": 9
         },
         "end": {
-          "line": 45,
+          "line": 46,
           "column": 23
         }
       }
@@ -4088,15 +4399,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1297,
-      "end": 1298,
+      "start": 1313,
+      "end": 1314,
       "loc": {
         "start": {
-          "line": 45,
+          "line": 46,
           "column": 24
         },
         "end": {
-          "line": 45,
+          "line": 46,
           "column": 25
         }
       }
@@ -4116,15 +4427,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 1299,
-      "end": 1303,
+      "start": 1315,
+      "end": 1319,
       "loc": {
         "start": {
-          "line": 45,
+          "line": 46,
           "column": 26
         },
         "end": {
-          "line": 45,
+          "line": 46,
           "column": 30
         }
       }
@@ -4132,15 +4443,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * GLSL source code for the program’s optional tessellation control shader.\n     * @type {?string}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1523852-tessellationcontrolshader\n     ",
-      "start": 1309,
-      "end": 1527,
+      "start": 1325,
+      "end": 1543,
       "loc": {
         "start": {
-          "line": 47,
+          "line": 48,
           "column": 4
         },
         "end": {
-          "line": 51,
+          "line": 52,
           "column": 7
         }
       }
@@ -4160,15 +4471,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1532,
-      "end": 1536,
+      "start": 1548,
+      "end": 1552,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 53,
           "column": 4
         },
         "end": {
-          "line": 52,
+          "line": 53,
           "column": 8
         }
       }
@@ -4186,15 +4497,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1536,
-      "end": 1537,
+      "start": 1552,
+      "end": 1553,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 53,
           "column": 8
         },
         "end": {
-          "line": 52,
+          "line": 53,
           "column": 9
         }
       }
@@ -4212,15 +4523,15 @@
         "binop": null
       },
       "value": "tessellationControlShader",
-      "start": 1537,
-      "end": 1562,
+      "start": 1553,
+      "end": 1578,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 53,
           "column": 9
         },
         "end": {
-          "line": 52,
+          "line": 53,
           "column": 34
         }
       }
@@ -4239,15 +4550,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1563,
-      "end": 1564,
+      "start": 1579,
+      "end": 1580,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 53,
           "column": 35
         },
         "end": {
-          "line": 52,
+          "line": 53,
           "column": 36
         }
       }
@@ -4267,15 +4578,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 1565,
-      "end": 1569,
+      "start": 1581,
+      "end": 1585,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 53,
           "column": 37
         },
         "end": {
-          "line": 52,
+          "line": 53,
           "column": 41
         }
       }
@@ -4283,15 +4594,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * GLSL source code for the program’s optional tessellation evaluation shader.\n     * @type {?string}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1523760-tessellationevaluationshader\n     ",
-      "start": 1575,
-      "end": 1799,
+      "start": 1591,
+      "end": 1815,
       "loc": {
         "start": {
-          "line": 54,
+          "line": 55,
           "column": 4
         },
         "end": {
-          "line": 58,
+          "line": 59,
           "column": 7
         }
       }
@@ -4311,15 +4622,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1804,
-      "end": 1808,
+      "start": 1820,
+      "end": 1824,
       "loc": {
         "start": {
-          "line": 59,
+          "line": 60,
           "column": 4
         },
         "end": {
-          "line": 59,
+          "line": 60,
           "column": 8
         }
       }
@@ -4337,15 +4648,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1808,
-      "end": 1809,
+      "start": 1824,
+      "end": 1825,
       "loc": {
         "start": {
-          "line": 59,
+          "line": 60,
           "column": 8
         },
         "end": {
-          "line": 59,
+          "line": 60,
           "column": 9
         }
       }
@@ -4363,15 +4674,15 @@
         "binop": null
       },
       "value": "tessellationEvaluationShader",
-      "start": 1809,
-      "end": 1837,
+      "start": 1825,
+      "end": 1853,
       "loc": {
         "start": {
-          "line": 59,
+          "line": 60,
           "column": 9
         },
         "end": {
-          "line": 59,
+          "line": 60,
           "column": 37
         }
       }
@@ -4390,15 +4701,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1838,
-      "end": 1839,
+      "start": 1854,
+      "end": 1855,
       "loc": {
         "start": {
-          "line": 59,
+          "line": 60,
           "column": 38
         },
         "end": {
-          "line": 59,
+          "line": 60,
           "column": 39
         }
       }
@@ -4418,15 +4729,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 1840,
-      "end": 1844,
+      "start": 1856,
+      "end": 1860,
       "loc": {
         "start": {
-          "line": 59,
+          "line": 60,
           "column": 40
         },
         "end": {
-          "line": 59,
+          "line": 60,
           "column": 44
         }
       }
@@ -4434,15 +4745,15 @@
     {
       "type": "CommentLine",
       "value": " Providing a Delegate Object",
-      "start": 1851,
-      "end": 1881,
+      "start": 1867,
+      "end": 1897,
       "loc": {
         "start": {
-          "line": 62,
+          "line": 63,
           "column": 4
         },
         "end": {
-          "line": 62,
+          "line": 63,
           "column": 34
         }
       }
@@ -4450,15 +4761,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The delegate of the program object.\n     * @type {?SCNProgramDelegate}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522611-delegate\n     ",
-      "start": 1887,
-      "end": 2063,
+      "start": 1903,
+      "end": 2079,
       "loc": {
         "start": {
-          "line": 64,
+          "line": 65,
           "column": 4
         },
         "end": {
-          "line": 68,
+          "line": 69,
           "column": 7
         }
       }
@@ -4478,15 +4789,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2068,
-      "end": 2072,
+      "start": 2084,
+      "end": 2088,
       "loc": {
         "start": {
-          "line": 69,
+          "line": 70,
           "column": 4
         },
         "end": {
-          "line": 69,
+          "line": 70,
           "column": 8
         }
       }
@@ -4504,15 +4815,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2072,
-      "end": 2073,
+      "start": 2088,
+      "end": 2089,
       "loc": {
         "start": {
-          "line": 69,
+          "line": 70,
           "column": 8
         },
         "end": {
-          "line": 69,
+          "line": 70,
           "column": 9
         }
       }
@@ -4530,15 +4841,15 @@
         "binop": null
       },
       "value": "delegate",
-      "start": 2073,
-      "end": 2081,
+      "start": 2089,
+      "end": 2097,
       "loc": {
         "start": {
-          "line": 69,
+          "line": 70,
           "column": 9
         },
         "end": {
-          "line": 69,
+          "line": 70,
           "column": 17
         }
       }
@@ -4557,15 +4868,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2082,
-      "end": 2083,
+      "start": 2098,
+      "end": 2099,
       "loc": {
         "start": {
-          "line": 69,
+          "line": 70,
           "column": 18
         },
         "end": {
-          "line": 69,
+          "line": 70,
           "column": 19
         }
       }
@@ -4585,15 +4896,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2084,
-      "end": 2088,
+      "start": 2100,
+      "end": 2104,
       "loc": {
         "start": {
-          "line": 69,
+          "line": 70,
           "column": 20
         },
         "end": {
-          "line": 69,
+          "line": 70,
           "column": 24
         }
       }
@@ -4601,15 +4912,15 @@
     {
       "type": "CommentLine",
       "value": " Managing Opacity",
-      "start": 2095,
-      "end": 2114,
+      "start": 2111,
+      "end": 2130,
       "loc": {
         "start": {
-          "line": 72,
+          "line": 73,
           "column": 4
         },
         "end": {
-          "line": 72,
+          "line": 73,
           "column": 23
         }
       }
@@ -4617,15 +4928,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A Boolean value that indicates whether fragments rendered by the program are fully opaque.\n     * @type {boolean}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522844-isopaque\n     ",
-      "start": 2120,
-      "end": 2339,
+      "start": 2136,
+      "end": 2355,
       "loc": {
         "start": {
-          "line": 74,
+          "line": 75,
           "column": 4
         },
         "end": {
-          "line": 78,
+          "line": 79,
           "column": 7
         }
       }
@@ -4645,15 +4956,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2344,
-      "end": 2348,
+      "start": 2360,
+      "end": 2364,
       "loc": {
         "start": {
-          "line": 79,
+          "line": 80,
           "column": 4
         },
         "end": {
-          "line": 79,
+          "line": 80,
           "column": 8
         }
       }
@@ -4671,15 +4982,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2348,
-      "end": 2349,
+      "start": 2364,
+      "end": 2365,
       "loc": {
         "start": {
-          "line": 79,
+          "line": 80,
           "column": 8
         },
         "end": {
-          "line": 79,
+          "line": 80,
           "column": 9
         }
       }
@@ -4697,15 +5008,15 @@
         "binop": null
       },
       "value": "isOpaque",
-      "start": 2349,
-      "end": 2357,
+      "start": 2365,
+      "end": 2373,
       "loc": {
         "start": {
-          "line": 79,
+          "line": 80,
           "column": 9
         },
         "end": {
-          "line": 79,
+          "line": 80,
           "column": 17
         }
       }
@@ -4724,15 +5035,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2358,
-      "end": 2359,
+      "start": 2374,
+      "end": 2375,
       "loc": {
         "start": {
-          "line": 79,
+          "line": 80,
           "column": 18
         },
         "end": {
-          "line": 79,
+          "line": 80,
           "column": 19
         }
       }
@@ -4752,15 +5063,15 @@
         "updateContext": null
       },
       "value": "false",
-      "start": 2360,
-      "end": 2365,
+      "start": 2376,
+      "end": 2381,
       "loc": {
         "start": {
-          "line": 79,
+          "line": 80,
           "column": 20
         },
         "end": {
-          "line": 79,
+          "line": 80,
           "column": 25
         }
       }
@@ -4768,15 +5079,15 @@
     {
       "type": "CommentLine",
       "value": " Working With Metal Shaders",
-      "start": 2372,
-      "end": 2401,
+      "start": 2388,
+      "end": 2417,
       "loc": {
         "start": {
-          "line": 82,
+          "line": 83,
           "column": 4
         },
         "end": {
-          "line": 82,
+          "line": 83,
           "column": 33
         }
       }
@@ -4784,15 +5095,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The name of the vertex shader function to load from a Metal shader library.\n     * @type {?string}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522799-vertexfunctionname\n     ",
-      "start": 2407,
-      "end": 2621,
+      "start": 2423,
+      "end": 2637,
       "loc": {
         "start": {
-          "line": 84,
+          "line": 85,
           "column": 4
         },
         "end": {
-          "line": 88,
+          "line": 89,
           "column": 7
         }
       }
@@ -4812,15 +5123,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2626,
-      "end": 2630,
+      "start": 2642,
+      "end": 2646,
       "loc": {
         "start": {
-          "line": 89,
+          "line": 90,
           "column": 4
         },
         "end": {
-          "line": 89,
+          "line": 90,
           "column": 8
         }
       }
@@ -4838,15 +5149,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2630,
-      "end": 2631,
+      "start": 2646,
+      "end": 2647,
       "loc": {
         "start": {
-          "line": 89,
+          "line": 90,
           "column": 8
         },
         "end": {
-          "line": 89,
+          "line": 90,
           "column": 9
         }
       }
@@ -4864,15 +5175,15 @@
         "binop": null
       },
       "value": "vertexFunctionName",
-      "start": 2631,
-      "end": 2649,
+      "start": 2647,
+      "end": 2665,
       "loc": {
         "start": {
-          "line": 89,
+          "line": 90,
           "column": 9
         },
         "end": {
-          "line": 89,
+          "line": 90,
           "column": 27
         }
       }
@@ -4891,15 +5202,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2650,
-      "end": 2651,
+      "start": 2666,
+      "end": 2667,
       "loc": {
         "start": {
-          "line": 89,
+          "line": 90,
           "column": 28
         },
         "end": {
-          "line": 89,
+          "line": 90,
           "column": 29
         }
       }
@@ -4919,15 +5230,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2652,
-      "end": 2656,
+      "start": 2668,
+      "end": 2672,
       "loc": {
         "start": {
-          "line": 89,
+          "line": 90,
           "column": 30
         },
         "end": {
-          "line": 89,
+          "line": 90,
           "column": 34
         }
       }
@@ -4935,15 +5246,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The name of the fragment shader function to load from a Metal shader library.\n     * @type {?string}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1524012-fragmentfunctionname\n     ",
-      "start": 2662,
-      "end": 2880,
+      "start": 2678,
+      "end": 2896,
       "loc": {
         "start": {
-          "line": 91,
+          "line": 92,
           "column": 4
         },
         "end": {
-          "line": 95,
+          "line": 96,
           "column": 7
         }
       }
@@ -4963,15 +5274,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2885,
-      "end": 2889,
+      "start": 2901,
+      "end": 2905,
       "loc": {
         "start": {
-          "line": 96,
+          "line": 97,
           "column": 4
         },
         "end": {
-          "line": 96,
+          "line": 97,
           "column": 8
         }
       }
@@ -4989,15 +5300,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2889,
-      "end": 2890,
+      "start": 2905,
+      "end": 2906,
       "loc": {
         "start": {
-          "line": 96,
+          "line": 97,
           "column": 8
         },
         "end": {
-          "line": 96,
+          "line": 97,
           "column": 9
         }
       }
@@ -5015,15 +5326,15 @@
         "binop": null
       },
       "value": "fragmentFunctionName",
-      "start": 2890,
-      "end": 2910,
+      "start": 2906,
+      "end": 2926,
       "loc": {
         "start": {
-          "line": 96,
+          "line": 97,
           "column": 9
         },
         "end": {
-          "line": 96,
+          "line": 97,
           "column": 29
         }
       }
@@ -5042,15 +5353,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2911,
-      "end": 2912,
+      "start": 2927,
+      "end": 2928,
       "loc": {
         "start": {
-          "line": 96,
+          "line": 97,
           "column": 30
         },
         "end": {
-          "line": 96,
+          "line": 97,
           "column": 31
         }
       }
@@ -5070,15 +5381,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2913,
-      "end": 2917,
+      "start": 2929,
+      "end": 2933,
       "loc": {
         "start": {
-          "line": 96,
+          "line": 97,
           "column": 32
         },
         "end": {
-          "line": 96,
+          "line": 97,
           "column": 36
         }
       }
@@ -5086,15 +5397,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The Metal shader library containing shader functions to be used by this program.\n     * @type {?MTLLibrary}\n     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522934-library\n     ",
-      "start": 2923,
-      "end": 3135,
+      "start": 2939,
+      "end": 3151,
       "loc": {
         "start": {
-          "line": 98,
+          "line": 99,
           "column": 4
         },
         "end": {
-          "line": 102,
+          "line": 103,
           "column": 7
         }
       }
@@ -5114,15 +5425,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3140,
-      "end": 3144,
+      "start": 3156,
+      "end": 3160,
       "loc": {
         "start": {
-          "line": 103,
+          "line": 104,
           "column": 4
         },
         "end": {
-          "line": 103,
+          "line": 104,
           "column": 8
         }
       }
@@ -5140,15 +5451,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3144,
-      "end": 3145,
+      "start": 3160,
+      "end": 3161,
       "loc": {
         "start": {
-          "line": 103,
+          "line": 104,
           "column": 8
         },
         "end": {
-          "line": 103,
+          "line": 104,
           "column": 9
         }
       }
@@ -5166,15 +5477,15 @@
         "binop": null
       },
       "value": "library",
-      "start": 3145,
-      "end": 3152,
+      "start": 3161,
+      "end": 3168,
       "loc": {
         "start": {
-          "line": 103,
+          "line": 104,
           "column": 9
         },
         "end": {
-          "line": 103,
+          "line": 104,
           "column": 16
         }
       }
@@ -5193,15 +5504,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 3153,
-      "end": 3154,
+      "start": 3169,
+      "end": 3170,
       "loc": {
         "start": {
-          "line": 103,
+          "line": 104,
           "column": 17
         },
         "end": {
-          "line": 103,
+          "line": 104,
           "column": 18
         }
       }
@@ -5221,16 +5532,167 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 3155,
-      "end": 3159,
+      "start": 3171,
+      "end": 3175,
       "loc": {
         "start": {
-          "line": 103,
+          "line": 104,
           "column": 19
         },
         "end": {
-          "line": 103,
+          "line": 104,
           "column": 23
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n     * @access private\n     * @type {WebGLProgram}\n     ",
+      "start": 3181,
+      "end": 3243,
+      "loc": {
+        "start": {
+          "line": 106,
+          "column": 4
+        },
+        "end": {
+          "line": 109,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "this",
+        "keyword": "this",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "this",
+      "start": 3248,
+      "end": 3252,
+      "loc": {
+        "start": {
+          "line": 110,
+          "column": 4
+        },
+        "end": {
+          "line": 110,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ".",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 3252,
+      "end": 3253,
+      "loc": {
+        "start": {
+          "line": 110,
+          "column": 8
+        },
+        "end": {
+          "line": 110,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "_glProgram",
+      "start": 3253,
+      "end": 3263,
+      "loc": {
+        "start": {
+          "line": 110,
+          "column": 9
+        },
+        "end": {
+          "line": 110,
+          "column": 19
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 3264,
+      "end": 3265,
+      "loc": {
+        "start": {
+          "line": 110,
+          "column": 20
+        },
+        "end": {
+          "line": 110,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "null",
+        "keyword": "null",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "null",
+      "start": 3266,
+      "end": 3270,
+      "loc": {
+        "start": {
+          "line": 110,
+          "column": 22
+        },
+        "end": {
+          "line": 110,
+          "column": 26
         }
       }
     },
@@ -5246,15 +5708,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3163,
-      "end": 3164,
+      "start": 3273,
+      "end": 3274,
       "loc": {
         "start": {
-          "line": 105,
+          "line": 111,
           "column": 2
         },
         "end": {
-          "line": 105,
+          "line": 111,
           "column": 3
         }
       }
@@ -5262,15 +5724,15 @@
     {
       "type": "CommentLine",
       "value": " Mapping GLSL Symbols to SceneKit Semantics",
-      "start": 3168,
-      "end": 3213,
+      "start": 3278,
+      "end": 3323,
       "loc": {
         "start": {
-          "line": 107,
+          "line": 113,
           "column": 2
         },
         "end": {
-          "line": 107,
+          "line": 113,
           "column": 47
         }
       }
@@ -5278,15 +5740,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Associates a SceneKit semantic identifier with the specified GLSL vertex attribute or uniform variable.\n   * @access public\n   * @param {?string} semantic - A SceneKit semantic identifier. See Geometry Semantic Identifiers and Rendering Transform Keys for possible values.\n   * @param {string} symbol - The name declared in the program’s GLSL source code for the vertex attribute or uniform variable to be associated with the semantic.\n   * @param {?Map<string, Object>} [options = null] - A dictionary of options affecting the semantic. See Program Semantic Options for applicable keys and values.\n   * @returns {void}\n   * @desc Use this method to provide inputs managed by SceneKit to your GLSL program.To use vertex attributes provided by SCNGeometry objects, use the constants listed in Geometry Semantic Identifiers.To use the coordinate transformations defined by the scene’s node hierarchy and point-of-view camera, use the constants listed in Rendering Transform Keys.\n   * @see https://developer.apple.com/reference/scenekit/scnprogram/1522730-setsemantic\n   ",
-      "start": 3217,
-      "end": 4297,
+      "start": 3327,
+      "end": 4407,
       "loc": {
         "start": {
-          "line": 109,
+          "line": 115,
           "column": 2
         },
         "end": {
-          "line": 118,
+          "line": 124,
           "column": 5
         }
       }
@@ -5304,15 +5766,15 @@
         "binop": null
       },
       "value": "setSemanticForSymbol",
-      "start": 4300,
-      "end": 4320,
+      "start": 4410,
+      "end": 4430,
       "loc": {
         "start": {
-          "line": 119,
+          "line": 125,
           "column": 2
         },
         "end": {
-          "line": 119,
+          "line": 125,
           "column": 22
         }
       }
@@ -5329,15 +5791,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4320,
-      "end": 4321,
+      "start": 4430,
+      "end": 4431,
       "loc": {
         "start": {
-          "line": 119,
+          "line": 125,
           "column": 22
         },
         "end": {
-          "line": 119,
+          "line": 125,
           "column": 23
         }
       }
@@ -5355,15 +5817,15 @@
         "binop": null
       },
       "value": "semantic",
-      "start": 4321,
-      "end": 4329,
+      "start": 4431,
+      "end": 4439,
       "loc": {
         "start": {
-          "line": 119,
+          "line": 125,
           "column": 23
         },
         "end": {
-          "line": 119,
+          "line": 125,
           "column": 31
         }
       }
@@ -5381,15 +5843,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4329,
-      "end": 4330,
+      "start": 4439,
+      "end": 4440,
       "loc": {
         "start": {
-          "line": 119,
+          "line": 125,
           "column": 31
         },
         "end": {
-          "line": 119,
+          "line": 125,
           "column": 32
         }
       }
@@ -5407,15 +5869,15 @@
         "binop": null
       },
       "value": "symbol",
-      "start": 4331,
-      "end": 4337,
+      "start": 4441,
+      "end": 4447,
       "loc": {
         "start": {
-          "line": 119,
+          "line": 125,
           "column": 33
         },
         "end": {
-          "line": 119,
+          "line": 125,
           "column": 39
         }
       }
@@ -5433,15 +5895,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4337,
-      "end": 4338,
+      "start": 4447,
+      "end": 4448,
       "loc": {
         "start": {
-          "line": 119,
+          "line": 125,
           "column": 39
         },
         "end": {
-          "line": 119,
+          "line": 125,
           "column": 40
         }
       }
@@ -5459,15 +5921,15 @@
         "binop": null
       },
       "value": "options",
-      "start": 4339,
-      "end": 4346,
+      "start": 4449,
+      "end": 4456,
       "loc": {
         "start": {
-          "line": 119,
+          "line": 125,
           "column": 41
         },
         "end": {
-          "line": 119,
+          "line": 125,
           "column": 48
         }
       }
@@ -5486,15 +5948,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 4347,
-      "end": 4348,
+      "start": 4457,
+      "end": 4458,
       "loc": {
         "start": {
-          "line": 119,
+          "line": 125,
           "column": 49
         },
         "end": {
-          "line": 119,
+          "line": 125,
           "column": 50
         }
       }
@@ -5514,15 +5976,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 4349,
-      "end": 4353,
+      "start": 4459,
+      "end": 4463,
       "loc": {
         "start": {
-          "line": 119,
+          "line": 125,
           "column": 51
         },
         "end": {
-          "line": 119,
+          "line": 125,
           "column": 55
         }
       }
@@ -5539,15 +6001,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4353,
-      "end": 4354,
+      "start": 4463,
+      "end": 4464,
       "loc": {
         "start": {
-          "line": 119,
+          "line": 125,
           "column": 55
         },
         "end": {
-          "line": 119,
+          "line": 125,
           "column": 56
         }
       }
@@ -5564,15 +6026,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4355,
-      "end": 4356,
+      "start": 4465,
+      "end": 4466,
       "loc": {
         "start": {
-          "line": 119,
+          "line": 125,
           "column": 57
         },
         "end": {
-          "line": 119,
+          "line": 125,
           "column": 58
         }
       }
@@ -5589,15 +6051,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4359,
-      "end": 4360,
+      "start": 4469,
+      "end": 4470,
       "loc": {
         "start": {
-          "line": 120,
+          "line": 126,
           "column": 2
         },
         "end": {
-          "line": 120,
+          "line": 126,
           "column": 3
         }
       }
@@ -5605,15 +6067,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Returns the SceneKit semantic identifiers associated with the specified GLSL vertex attribute or uniform variable.\n   * @access public\n   * @param {string} symbol - The name declared in the program’s GLSL source code for a vertex attribute or uniform variable semantic.\n   * @returns {?string} - \n   * @see https://developer.apple.com/reference/scenekit/scnprogram/1523350-semantic\n   ",
-      "start": 4364,
-      "end": 4760,
+      "start": 4474,
+      "end": 4870,
       "loc": {
         "start": {
-          "line": 122,
+          "line": 128,
           "column": 2
         },
         "end": {
-          "line": 128,
+          "line": 134,
           "column": 5
         }
       }
@@ -5631,15 +6093,15 @@
         "binop": null
       },
       "value": "semanticForSymbol",
-      "start": 4763,
-      "end": 4780,
+      "start": 4873,
+      "end": 4890,
       "loc": {
         "start": {
-          "line": 129,
+          "line": 135,
           "column": 2
         },
         "end": {
-          "line": 129,
+          "line": 135,
           "column": 19
         }
       }
@@ -5656,15 +6118,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4780,
-      "end": 4781,
+      "start": 4890,
+      "end": 4891,
       "loc": {
         "start": {
-          "line": 129,
+          "line": 135,
           "column": 19
         },
         "end": {
-          "line": 129,
+          "line": 135,
           "column": 20
         }
       }
@@ -5682,15 +6144,15 @@
         "binop": null
       },
       "value": "symbol",
-      "start": 4781,
-      "end": 4787,
+      "start": 4891,
+      "end": 4897,
       "loc": {
         "start": {
-          "line": 129,
+          "line": 135,
           "column": 20
         },
         "end": {
-          "line": 129,
+          "line": 135,
           "column": 26
         }
       }
@@ -5707,15 +6169,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4787,
-      "end": 4788,
+      "start": 4897,
+      "end": 4898,
       "loc": {
         "start": {
-          "line": 129,
+          "line": 135,
           "column": 26
         },
         "end": {
-          "line": 129,
+          "line": 135,
           "column": 27
         }
       }
@@ -5732,15 +6194,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4789,
-      "end": 4790,
+      "start": 4899,
+      "end": 4900,
       "loc": {
         "start": {
-          "line": 129,
+          "line": 135,
           "column": 28
         },
         "end": {
-          "line": 129,
+          "line": 135,
           "column": 29
         }
       }
@@ -5760,15 +6222,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 4795,
-      "end": 4801,
+      "start": 4905,
+      "end": 4911,
       "loc": {
         "start": {
-          "line": 130,
+          "line": 136,
           "column": 4
         },
         "end": {
-          "line": 130,
+          "line": 136,
           "column": 10
         }
       }
@@ -5788,15 +6250,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 4802,
-      "end": 4806,
+      "start": 4912,
+      "end": 4916,
       "loc": {
         "start": {
-          "line": 130,
+          "line": 136,
           "column": 11
         },
         "end": {
-          "line": 130,
+          "line": 136,
           "column": 15
         }
       }
@@ -5813,15 +6275,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4809,
-      "end": 4810,
+      "start": 4919,
+      "end": 4920,
       "loc": {
         "start": {
-          "line": 131,
+          "line": 137,
           "column": 2
         },
         "end": {
-          "line": 131,
+          "line": 137,
           "column": 3
         }
       }
@@ -5829,15 +6291,15 @@
     {
       "type": "CommentLine",
       "value": " Providing Input for Metal Shaders",
-      "start": 4814,
-      "end": 4850,
+      "start": 4924,
+      "end": 4960,
       "loc": {
         "start": {
-          "line": 133,
+          "line": 139,
           "column": 2
         },
         "end": {
-          "line": 133,
+          "line": 139,
           "column": 38
         }
       }
@@ -5845,15 +6307,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Registers a block for SceneKit to call at render time for binding a Metal buffer to the shader program.\n   * @access public\n   * @param {string} name - The name identifying the buffer in Metal shader source code.\n   * @param {SCNBufferFrequency} frequency - An option specifying whether SceneKit calls the block only once per rendered frame or more frequently (for example, once for each object to be rendered).\n   * @param {SCNBufferBindingBlock} block - A block to be run when SceneKit prepares for rendering with the Metal shader.\n   * @returns {void}\n   * @desc Use this method to associate a block with a Metal shader program to handle setup of a buffer used in that shader. SceneKit calls your block before rendering any objects whose program property is set to this SCNProgram object. In the block, use the writeBytes(_:count:) method to provide data for the buffer.  \n\n   * @see https://developer.apple.com/reference/scenekit/scnprogram/1524047-handlebinding\n   ",
-      "start": 4854,
-      "end": 5835,
+      "start": 4964,
+      "end": 5945,
       "loc": {
         "start": {
-          "line": 135,
+          "line": 141,
           "column": 2
         },
         "end": {
-          "line": 145,
+          "line": 151,
           "column": 5
         }
       }
@@ -5871,15 +6333,15 @@
         "binop": null
       },
       "value": "handleBindingOfBufferNamedHandler",
-      "start": 5838,
-      "end": 5871,
+      "start": 5948,
+      "end": 5981,
       "loc": {
         "start": {
-          "line": 146,
+          "line": 152,
           "column": 2
         },
         "end": {
-          "line": 146,
+          "line": 152,
           "column": 35
         }
       }
@@ -5896,15 +6358,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5871,
-      "end": 5872,
+      "start": 5981,
+      "end": 5982,
       "loc": {
         "start": {
-          "line": 146,
+          "line": 152,
           "column": 35
         },
         "end": {
-          "line": 146,
+          "line": 152,
           "column": 36
         }
       }
@@ -5922,15 +6384,15 @@
         "binop": null
       },
       "value": "name",
-      "start": 5872,
-      "end": 5876,
+      "start": 5982,
+      "end": 5986,
       "loc": {
         "start": {
-          "line": 146,
+          "line": 152,
           "column": 36
         },
         "end": {
-          "line": 146,
+          "line": 152,
           "column": 40
         }
       }
@@ -5948,15 +6410,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 5876,
-      "end": 5877,
+      "start": 5986,
+      "end": 5987,
       "loc": {
         "start": {
-          "line": 146,
+          "line": 152,
           "column": 40
         },
         "end": {
-          "line": 146,
+          "line": 152,
           "column": 41
         }
       }
@@ -5974,15 +6436,15 @@
         "binop": null
       },
       "value": "frequency",
-      "start": 5878,
-      "end": 5887,
+      "start": 5988,
+      "end": 5997,
       "loc": {
         "start": {
-          "line": 146,
+          "line": 152,
           "column": 42
         },
         "end": {
-          "line": 146,
+          "line": 152,
           "column": 51
         }
       }
@@ -6000,15 +6462,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 5887,
-      "end": 5888,
+      "start": 5997,
+      "end": 5998,
       "loc": {
         "start": {
-          "line": 146,
+          "line": 152,
           "column": 51
         },
         "end": {
-          "line": 146,
+          "line": 152,
           "column": 52
         }
       }
@@ -6026,15 +6488,15 @@
         "binop": null
       },
       "value": "block",
-      "start": 5889,
-      "end": 5894,
+      "start": 5999,
+      "end": 6004,
       "loc": {
         "start": {
-          "line": 146,
+          "line": 152,
           "column": 53
         },
         "end": {
-          "line": 146,
+          "line": 152,
           "column": 58
         }
       }
@@ -6051,15 +6513,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5894,
-      "end": 5895,
+      "start": 6004,
+      "end": 6005,
       "loc": {
         "start": {
-          "line": 146,
+          "line": 152,
           "column": 58
         },
         "end": {
-          "line": 146,
+          "line": 152,
           "column": 59
         }
       }
@@ -6076,15 +6538,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5896,
-      "end": 5897,
+      "start": 6006,
+      "end": 6007,
       "loc": {
         "start": {
-          "line": 146,
+          "line": 152,
           "column": 60
         },
         "end": {
-          "line": 146,
+          "line": 152,
           "column": 61
         }
       }
@@ -6101,15 +6563,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5900,
-      "end": 5901,
+      "start": 6010,
+      "end": 6011,
       "loc": {
         "start": {
-          "line": 147,
+          "line": 153,
           "column": 2
         },
         "end": {
-          "line": 147,
+          "line": 153,
           "column": 3
         }
       }
@@ -6126,15 +6588,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5902,
-      "end": 5903,
+      "start": 6012,
+      "end": 6013,
       "loc": {
         "start": {
-          "line": 148,
+          "line": 154,
           "column": 0
         },
         "end": {
-          "line": 148,
+          "line": 154,
           "column": 1
         }
       }
@@ -6152,15 +6614,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 5904,
-      "end": 5904,
+      "start": 6014,
+      "end": 6014,
       "loc": {
         "start": {
-          "line": 149,
+          "line": 155,
           "column": 0
         },
         "end": {
-          "line": 149,
+          "line": 155,
           "column": 0
         }
       }

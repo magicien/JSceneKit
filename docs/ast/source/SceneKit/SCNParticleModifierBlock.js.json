@@ -1,33 +1,473 @@
 {
   "type": "File",
   "start": 0,
-  "end": 14,
+  "end": 3371,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 3,
+      "line": 37,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 14,
+    "end": 3371,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 3,
+        "line": 37,
         "column": 0
       }
     },
     "sourceType": "module",
-    "body": [],
+    "body": [
+      {
+        "type": "Identifier",
+        "start": 3249,
+        "end": 3329,
+        "loc": {
+          "start": {
+            "line": 34,
+            "column": 0
+          },
+          "end": {
+            "line": 34,
+            "column": 80
+          }
+        },
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 3255,
+            "end": 3329,
+            "loc": {
+              "start": {
+                "line": 34,
+                "column": 6
+              },
+              "end": {
+                "line": 34,
+                "column": 80
+              }
+            },
+            "id": {
+              "type": "Identifier",
+              "start": 3255,
+              "end": 3279,
+              "loc": {
+                "start": {
+                  "line": 34,
+                  "column": 6
+                },
+                "end": {
+                  "line": 34,
+                  "column": 30
+                },
+                "identifierName": "SCNParticleModifierBlock"
+              },
+              "name": "SCNParticleModifierBlock",
+              "leadingComments": null
+            },
+            "init": {
+              "type": "ArrowFunctionExpression",
+              "start": 3282,
+              "end": 3329,
+              "loc": {
+                "start": {
+                  "line": 34,
+                  "column": 33
+                },
+                "end": {
+                  "line": 34,
+                  "column": 80
+                }
+              },
+              "id": null,
+              "generator": false,
+              "expression": false,
+              "async": false,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "start": 3283,
+                  "end": 3287,
+                  "loc": {
+                    "start": {
+                      "line": 34,
+                      "column": 34
+                    },
+                    "end": {
+                      "line": 34,
+                      "column": 38
+                    },
+                    "identifierName": "data"
+                  },
+                  "name": "data"
+                },
+                {
+                  "type": "Identifier",
+                  "start": 3289,
+                  "end": 3299,
+                  "loc": {
+                    "start": {
+                      "line": 34,
+                      "column": 40
+                    },
+                    "end": {
+                      "line": 34,
+                      "column": 50
+                    },
+                    "identifierName": "dataStride"
+                  },
+                  "name": "dataStride"
+                },
+                {
+                  "type": "Identifier",
+                  "start": 3301,
+                  "end": 3306,
+                  "loc": {
+                    "start": {
+                      "line": 34,
+                      "column": 52
+                    },
+                    "end": {
+                      "line": 34,
+                      "column": 57
+                    },
+                    "identifierName": "start"
+                  },
+                  "name": "start"
+                },
+                {
+                  "type": "Identifier",
+                  "start": 3308,
+                  "end": 3311,
+                  "loc": {
+                    "start": {
+                      "line": 34,
+                      "column": 59
+                    },
+                    "end": {
+                      "line": 34,
+                      "column": 62
+                    },
+                    "identifierName": "end"
+                  },
+                  "name": "end"
+                },
+                {
+                  "type": "Identifier",
+                  "start": 3313,
+                  "end": 3322,
+                  "loc": {
+                    "start": {
+                      "line": 34,
+                      "column": 64
+                    },
+                    "end": {
+                      "line": 34,
+                      "column": 73
+                    },
+                    "identifierName": "deltaTime"
+                  },
+                  "name": "deltaTime"
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "start": 3327,
+                "end": 3329,
+                "loc": {
+                  "start": {
+                    "line": 34,
+                    "column": 78
+                  },
+                  "end": {
+                    "line": 34,
+                    "column": 80
+                  }
+                },
+                "body": [],
+                "directives": []
+              }
+            },
+            "leadingComments": null
+          }
+        ],
+        "kind": "const",
+        "leadingComments": [],
+        "name": "_",
+        "trailingComments": []
+      },
+      {
+        "type": "Identifier",
+        "start": 3331,
+        "end": 3370,
+        "loc": {
+          "start": {
+            "line": 36,
+            "column": 0
+          },
+          "end": {
+            "line": 36,
+            "column": 39
+          }
+        },
+        "declaration": {
+          "type": "Identifier",
+          "start": 3346,
+          "end": 3370,
+          "loc": {
+            "start": {
+              "line": 36,
+              "column": 15
+            },
+            "end": {
+              "line": 36,
+              "column": 39
+            },
+            "identifierName": "SCNParticleModifierBlock"
+          },
+          "name": "SCNParticleModifierBlock"
+        },
+        "name": "_",
+        "leadingComments": [],
+        "trailingComments": []
+      },
+      {
+        "type": "ExportDefaultDeclaration",
+        "start": 3331,
+        "end": 3370,
+        "loc": {
+          "start": {
+            "line": 36,
+            "column": 0
+          },
+          "end": {
+            "line": 36,
+            "column": 39
+          }
+        },
+        "declaration": {
+          "type": "VariableDeclaration",
+          "start": 3249,
+          "end": 3329,
+          "loc": {
+            "start": {
+              "line": 34,
+              "column": 0
+            },
+            "end": {
+              "line": 34,
+              "column": 80
+            }
+          },
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "start": 3255,
+              "end": 3329,
+              "loc": {
+                "start": {
+                  "line": 34,
+                  "column": 6
+                },
+                "end": {
+                  "line": 34,
+                  "column": 80
+                }
+              },
+              "id": {
+                "type": "Identifier",
+                "start": 3255,
+                "end": 3279,
+                "loc": {
+                  "start": {
+                    "line": 34,
+                    "column": 6
+                  },
+                  "end": {
+                    "line": 34,
+                    "column": 30
+                  },
+                  "identifierName": "SCNParticleModifierBlock"
+                },
+                "name": "SCNParticleModifierBlock",
+                "leadingComments": null
+              },
+              "init": {
+                "type": "ArrowFunctionExpression",
+                "start": 3282,
+                "end": 3329,
+                "loc": {
+                  "start": {
+                    "line": 34,
+                    "column": 33
+                  },
+                  "end": {
+                    "line": 34,
+                    "column": 80
+                  }
+                },
+                "id": {
+                  "type": "Identifier",
+                  "start": 3255,
+                  "end": 3279,
+                  "loc": {
+                    "start": {
+                      "line": 34,
+                      "column": 6
+                    },
+                    "end": {
+                      "line": 34,
+                      "column": 30
+                    },
+                    "identifierName": "SCNParticleModifierBlock"
+                  },
+                  "name": "SCNParticleModifierBlock",
+                  "leadingComments": null
+                },
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "start": 3283,
+                    "end": 3287,
+                    "loc": {
+                      "start": {
+                        "line": 34,
+                        "column": 34
+                      },
+                      "end": {
+                        "line": 34,
+                        "column": 38
+                      },
+                      "identifierName": "data"
+                    },
+                    "name": "data"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 3289,
+                    "end": 3299,
+                    "loc": {
+                      "start": {
+                        "line": 34,
+                        "column": 40
+                      },
+                      "end": {
+                        "line": 34,
+                        "column": 50
+                      },
+                      "identifierName": "dataStride"
+                    },
+                    "name": "dataStride"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 3301,
+                    "end": 3306,
+                    "loc": {
+                      "start": {
+                        "line": 34,
+                        "column": 52
+                      },
+                      "end": {
+                        "line": 34,
+                        "column": 57
+                      },
+                      "identifierName": "start"
+                    },
+                    "name": "start"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 3308,
+                    "end": 3311,
+                    "loc": {
+                      "start": {
+                        "line": 34,
+                        "column": 59
+                      },
+                      "end": {
+                        "line": 34,
+                        "column": 62
+                      },
+                      "identifierName": "end"
+                    },
+                    "name": "end"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 3313,
+                    "end": 3322,
+                    "loc": {
+                      "start": {
+                        "line": 34,
+                        "column": 64
+                      },
+                      "end": {
+                        "line": 34,
+                        "column": 73
+                      },
+                      "identifierName": "deltaTime"
+                    },
+                    "name": "deltaTime"
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 3327,
+                  "end": 3329,
+                  "loc": {
+                    "start": {
+                      "line": 34,
+                      "column": 78
+                    },
+                    "end": {
+                      "line": 34,
+                      "column": 80
+                    }
+                  },
+                  "body": [],
+                  "directives": []
+                }
+              },
+              "leadingComments": null
+            }
+          ],
+          "kind": "const",
+          "leadingComments": [
+            {
+              "type": "CommentBlock",
+              "value": "*\n * The signature for blocks called by SceneKit to modify particle properties on each frame of simulation, used by the addModifier(forProperties:at:modifier:) method.\n * @type {function(data: UnsafeMutablePointer<UnsafeMutableRawPointer>, dataStride: UnsafeMutablePointer<Int>, start: number, end: number, deltaTime: number): void}\n * @param {UnsafeMutablePointer<UnsafeMutableRawPointer>} data - An array of floating-point values containing stripes of property data for the system’s particles. The width and format of each data stripe depend on the properties you specify when calling the addModifier(forProperties:at:modifier:) method.\n * @param {UnsafeMutablePointer<Int>} dataStride - An array identifying the offset, in bytes, of each property’s value in the data stripe for each particle. The order of offsets in this array corresponds to the order of the properties array you specify when calling the addModifier(forProperties:at:modifier:) method.\n * @param {number} start - The index of the first particle’s data stripe in the data array.\n * @param {number} end - The index of the last particle’s data stripe in the data array.\n * @param {number} deltaTime - The elapsed time, in seconds, since the last frame of simulation.\n * @returns {void}\n * @desc Use this block to change properties of individual particles on each frame of simulation.ImportantRunning your own code to update particle properties every frame can have a severe impact on rendering performance. If the behavior over time that you want for your particle system can be described more declaratively, use the propertyControllers property and SCNParticlePropertyController class instead. If you need to change particle properties only at certain times (rather than continuously), add a handler block for an event using the handle(_:forProperties:handler:) method.The following example illustrates setting up a modifier block that alters particle’s position and velocity:[system addModifierForProperties:@[SCNParticlePropertyPosition,\n                                   SCNParticlePropertyVelocity]\n                         atStage:SCNParticleModifierStagePostDynamics\n                       withBlock:^(void **data, size_t *dataStride, NSInteger start, NSInteger end, float deltaTime) {\n                           // For each particle to be processed,\n                           // calculate pointers in the data to each property's value:\n                           for (NSInteger i = start; i < end; ++i) {\n                               // SCNParticlePropertyPosition (float3)\n                               float *pos = (float *)((char *)data[0] + dataStride[0] * i);\n                               // pos[0..2] are the xyz components of the particle's position.\n \n                               // SCNParticlePropertyVelocity (float3)\n                               float *vel = (float *)((char *)data[1] + dataStride[1] * i);\n                               // vel[0..2] are the xyz components of the particle's position.\n \n                               // Now, compute a new position and velocity (not shown).\n                           }\n                       }];\n\n * @see https://developer.apple.com/reference/scenekit/scnparticlemodifierblock\n ",
+              "start": 15,
+              "end": 3248,
+              "loc": {
+                "start": {
+                  "line": 4,
+                  "column": 0
+                },
+                "end": {
+                  "line": 33,
+                  "column": 3
+                }
+              }
+            }
+          ],
+          "trailingComments": []
+        }
+      }
+    ],
     "directives": [
       {
         "type": "Directive",
@@ -61,12 +501,48 @@
           "extra": {
             "raw": "'use strict'",
             "rawValue": "use strict"
+          },
+          "trailingComments": null
+        },
+        "trailingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * The signature for blocks called by SceneKit to modify particle properties on each frame of simulation, used by the addModifier(forProperties:at:modifier:) method.\n * @type {function(data: UnsafeMutablePointer<UnsafeMutableRawPointer>, dataStride: UnsafeMutablePointer<Int>, start: number, end: number, deltaTime: number): void}\n * @param {UnsafeMutablePointer<UnsafeMutableRawPointer>} data - An array of floating-point values containing stripes of property data for the system’s particles. The width and format of each data stripe depend on the properties you specify when calling the addModifier(forProperties:at:modifier:) method.\n * @param {UnsafeMutablePointer<Int>} dataStride - An array identifying the offset, in bytes, of each property’s value in the data stripe for each particle. The order of offsets in this array corresponds to the order of the properties array you specify when calling the addModifier(forProperties:at:modifier:) method.\n * @param {number} start - The index of the first particle’s data stripe in the data array.\n * @param {number} end - The index of the last particle’s data stripe in the data array.\n * @param {number} deltaTime - The elapsed time, in seconds, since the last frame of simulation.\n * @returns {void}\n * @desc Use this block to change properties of individual particles on each frame of simulation.ImportantRunning your own code to update particle properties every frame can have a severe impact on rendering performance. If the behavior over time that you want for your particle system can be described more declaratively, use the propertyControllers property and SCNParticlePropertyController class instead. If you need to change particle properties only at certain times (rather than continuously), add a handler block for an event using the handle(_:forProperties:handler:) method.The following example illustrates setting up a modifier block that alters particle’s position and velocity:[system addModifierForProperties:@[SCNParticlePropertyPosition,\n                                   SCNParticlePropertyVelocity]\n                         atStage:SCNParticleModifierStagePostDynamics\n                       withBlock:^(void **data, size_t *dataStride, NSInteger start, NSInteger end, float deltaTime) {\n                           // For each particle to be processed,\n                           // calculate pointers in the data to each property's value:\n                           for (NSInteger i = start; i < end; ++i) {\n                               // SCNParticlePropertyPosition (float3)\n                               float *pos = (float *)((char *)data[0] + dataStride[0] * i);\n                               // pos[0..2] are the xyz components of the particle's position.\n \n                               // SCNParticlePropertyVelocity (float3)\n                               float *vel = (float *)((char *)data[1] + dataStride[1] * i);\n                               // vel[0..2] are the xyz components of the particle's position.\n \n                               // Now, compute a new position and velocity (not shown).\n                           }\n                       }];\n\n * @see https://developer.apple.com/reference/scenekit/scnparticlemodifierblock\n ",
+            "start": 15,
+            "end": 3248,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 0
+              },
+              "end": {
+                "line": 33,
+                "column": 3
+              }
+            }
           }
-        }
+        ]
       }
     ]
   },
-  "comments": [],
+  "comments": [
+    {
+      "type": "CommentBlock",
+      "value": "*\n * The signature for blocks called by SceneKit to modify particle properties on each frame of simulation, used by the addModifier(forProperties:at:modifier:) method.\n * @type {function(data: UnsafeMutablePointer<UnsafeMutableRawPointer>, dataStride: UnsafeMutablePointer<Int>, start: number, end: number, deltaTime: number): void}\n * @param {UnsafeMutablePointer<UnsafeMutableRawPointer>} data - An array of floating-point values containing stripes of property data for the system’s particles. The width and format of each data stripe depend on the properties you specify when calling the addModifier(forProperties:at:modifier:) method.\n * @param {UnsafeMutablePointer<Int>} dataStride - An array identifying the offset, in bytes, of each property’s value in the data stripe for each particle. The order of offsets in this array corresponds to the order of the properties array you specify when calling the addModifier(forProperties:at:modifier:) method.\n * @param {number} start - The index of the first particle’s data stripe in the data array.\n * @param {number} end - The index of the last particle’s data stripe in the data array.\n * @param {number} deltaTime - The elapsed time, in seconds, since the last frame of simulation.\n * @returns {void}\n * @desc Use this block to change properties of individual particles on each frame of simulation.ImportantRunning your own code to update particle properties every frame can have a severe impact on rendering performance. If the behavior over time that you want for your particle system can be described more declaratively, use the propertyControllers property and SCNParticlePropertyController class instead. If you need to change particle properties only at certain times (rather than continuously), add a handler block for an event using the handle(_:forProperties:handler:) method.The following example illustrates setting up a modifier block that alters particle’s position and velocity:[system addModifierForProperties:@[SCNParticlePropertyPosition,\n                                   SCNParticlePropertyVelocity]\n                         atStage:SCNParticleModifierStagePostDynamics\n                       withBlock:^(void **data, size_t *dataStride, NSInteger start, NSInteger end, float deltaTime) {\n                           // For each particle to be processed,\n                           // calculate pointers in the data to each property's value:\n                           for (NSInteger i = start; i < end; ++i) {\n                               // SCNParticlePropertyPosition (float3)\n                               float *pos = (float *)((char *)data[0] + dataStride[0] * i);\n                               // pos[0..2] are the xyz components of the particle's position.\n \n                               // SCNParticlePropertyVelocity (float3)\n                               float *vel = (float *)((char *)data[1] + dataStride[1] * i);\n                               // vel[0..2] are the xyz components of the particle's position.\n \n                               // Now, compute a new position and velocity (not shown).\n                           }\n                       }];\n\n * @see https://developer.apple.com/reference/scenekit/scnparticlemodifierblock\n ",
+      "start": 15,
+      "end": 3248,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 0
+        },
+        "end": {
+          "line": 33,
+          "column": 3
+        }
+      }
+    }
+  ],
   "tokens": [
     {
       "type": {
@@ -96,6 +572,545 @@
       }
     },
     {
+      "type": "CommentBlock",
+      "value": "*\n * The signature for blocks called by SceneKit to modify particle properties on each frame of simulation, used by the addModifier(forProperties:at:modifier:) method.\n * @type {function(data: UnsafeMutablePointer<UnsafeMutableRawPointer>, dataStride: UnsafeMutablePointer<Int>, start: number, end: number, deltaTime: number): void}\n * @param {UnsafeMutablePointer<UnsafeMutableRawPointer>} data - An array of floating-point values containing stripes of property data for the system’s particles. The width and format of each data stripe depend on the properties you specify when calling the addModifier(forProperties:at:modifier:) method.\n * @param {UnsafeMutablePointer<Int>} dataStride - An array identifying the offset, in bytes, of each property’s value in the data stripe for each particle. The order of offsets in this array corresponds to the order of the properties array you specify when calling the addModifier(forProperties:at:modifier:) method.\n * @param {number} start - The index of the first particle’s data stripe in the data array.\n * @param {number} end - The index of the last particle’s data stripe in the data array.\n * @param {number} deltaTime - The elapsed time, in seconds, since the last frame of simulation.\n * @returns {void}\n * @desc Use this block to change properties of individual particles on each frame of simulation.ImportantRunning your own code to update particle properties every frame can have a severe impact on rendering performance. If the behavior over time that you want for your particle system can be described more declaratively, use the propertyControllers property and SCNParticlePropertyController class instead. If you need to change particle properties only at certain times (rather than continuously), add a handler block for an event using the handle(_:forProperties:handler:) method.The following example illustrates setting up a modifier block that alters particle’s position and velocity:[system addModifierForProperties:@[SCNParticlePropertyPosition,\n                                   SCNParticlePropertyVelocity]\n                         atStage:SCNParticleModifierStagePostDynamics\n                       withBlock:^(void **data, size_t *dataStride, NSInteger start, NSInteger end, float deltaTime) {\n                           // For each particle to be processed,\n                           // calculate pointers in the data to each property's value:\n                           for (NSInteger i = start; i < end; ++i) {\n                               // SCNParticlePropertyPosition (float3)\n                               float *pos = (float *)((char *)data[0] + dataStride[0] * i);\n                               // pos[0..2] are the xyz components of the particle's position.\n \n                               // SCNParticlePropertyVelocity (float3)\n                               float *vel = (float *)((char *)data[1] + dataStride[1] * i);\n                               // vel[0..2] are the xyz components of the particle's position.\n \n                               // Now, compute a new position and velocity (not shown).\n                           }\n                       }];\n\n * @see https://developer.apple.com/reference/scenekit/scnparticlemodifierblock\n ",
+      "start": 15,
+      "end": 3248,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 0
+        },
+        "end": {
+          "line": 33,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "const",
+        "keyword": "const",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "const",
+      "start": 3249,
+      "end": 3254,
+      "loc": {
+        "start": {
+          "line": 34,
+          "column": 0
+        },
+        "end": {
+          "line": 34,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "SCNParticleModifierBlock",
+      "start": 3255,
+      "end": 3279,
+      "loc": {
+        "start": {
+          "line": 34,
+          "column": 6
+        },
+        "end": {
+          "line": 34,
+          "column": 30
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 3280,
+      "end": 3281,
+      "loc": {
+        "start": {
+          "line": 34,
+          "column": 31
+        },
+        "end": {
+          "line": 34,
+          "column": 32
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3282,
+      "end": 3283,
+      "loc": {
+        "start": {
+          "line": 34,
+          "column": 33
+        },
+        "end": {
+          "line": 34,
+          "column": 34
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "data",
+      "start": 3283,
+      "end": 3287,
+      "loc": {
+        "start": {
+          "line": 34,
+          "column": 34
+        },
+        "end": {
+          "line": 34,
+          "column": 38
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 3287,
+      "end": 3288,
+      "loc": {
+        "start": {
+          "line": 34,
+          "column": 38
+        },
+        "end": {
+          "line": 34,
+          "column": 39
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "dataStride",
+      "start": 3289,
+      "end": 3299,
+      "loc": {
+        "start": {
+          "line": 34,
+          "column": 40
+        },
+        "end": {
+          "line": 34,
+          "column": 50
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 3299,
+      "end": 3300,
+      "loc": {
+        "start": {
+          "line": 34,
+          "column": 50
+        },
+        "end": {
+          "line": 34,
+          "column": 51
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "start",
+      "start": 3301,
+      "end": 3306,
+      "loc": {
+        "start": {
+          "line": 34,
+          "column": 52
+        },
+        "end": {
+          "line": 34,
+          "column": 57
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 3306,
+      "end": 3307,
+      "loc": {
+        "start": {
+          "line": 34,
+          "column": 57
+        },
+        "end": {
+          "line": 34,
+          "column": 58
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "end",
+      "start": 3308,
+      "end": 3311,
+      "loc": {
+        "start": {
+          "line": 34,
+          "column": 59
+        },
+        "end": {
+          "line": 34,
+          "column": 62
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 3311,
+      "end": 3312,
+      "loc": {
+        "start": {
+          "line": 34,
+          "column": 62
+        },
+        "end": {
+          "line": 34,
+          "column": 63
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "deltaTime",
+      "start": 3313,
+      "end": 3322,
+      "loc": {
+        "start": {
+          "line": 34,
+          "column": 64
+        },
+        "end": {
+          "line": 34,
+          "column": 73
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3322,
+      "end": 3323,
+      "loc": {
+        "start": {
+          "line": 34,
+          "column": 73
+        },
+        "end": {
+          "line": 34,
+          "column": 74
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=>",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 3324,
+      "end": 3326,
+      "loc": {
+        "start": {
+          "line": 34,
+          "column": 75
+        },
+        "end": {
+          "line": 34,
+          "column": 77
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3327,
+      "end": 3328,
+      "loc": {
+        "start": {
+          "line": 34,
+          "column": 78
+        },
+        "end": {
+          "line": 34,
+          "column": 79
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3328,
+      "end": 3329,
+      "loc": {
+        "start": {
+          "line": 34,
+          "column": 79
+        },
+        "end": {
+          "line": 34,
+          "column": 80
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "export",
+        "keyword": "export",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "export",
+      "start": 3331,
+      "end": 3337,
+      "loc": {
+        "start": {
+          "line": 36,
+          "column": 0
+        },
+        "end": {
+          "line": 36,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "default",
+        "keyword": "default",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "default",
+      "start": 3338,
+      "end": 3345,
+      "loc": {
+        "start": {
+          "line": 36,
+          "column": 7
+        },
+        "end": {
+          "line": 36,
+          "column": 14
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "SCNParticleModifierBlock",
+      "start": 3346,
+      "end": 3370,
+      "loc": {
+        "start": {
+          "line": 36,
+          "column": 15
+        },
+        "end": {
+          "line": 36,
+          "column": 39
+        }
+      }
+    },
+    {
       "type": {
         "label": "eof",
         "beforeExpr": false,
@@ -108,15 +1123,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 14,
-      "end": 14,
+      "start": 3371,
+      "end": 3371,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 37,
           "column": 0
         },
         "end": {
-          "line": 3,
+          "line": 37,
           "column": 0
         }
       }

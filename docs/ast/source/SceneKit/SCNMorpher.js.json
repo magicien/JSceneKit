@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 2747,
+  "end": 2919,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 72,
+      "line": 77,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 2747,
+    "end": 2919,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 72,
+        "line": 77,
         "column": 0
       }
     },
@@ -327,28 +327,28 @@
       {
         "type": "ExportDefaultDeclaration",
         "start": 471,
-        "end": 2746,
+        "end": 2918,
         "loc": {
           "start": {
             "line": 16,
             "column": 0
           },
           "end": {
-            "line": 71,
+            "line": 76,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
           "start": 486,
-          "end": 2746,
+          "end": 2918,
           "loc": {
             "start": {
               "line": 16,
               "column": 15
             },
             "end": {
-              "line": 71,
+              "line": 76,
               "column": 1
             }
           },
@@ -390,37 +390,37 @@
           "body": {
             "type": "ClassBody",
             "start": 520,
-            "end": 2746,
+            "end": 2918,
             "loc": {
               "start": {
                 "line": 16,
                 "column": 49
               },
               "end": {
-                "line": 71,
+                "line": 76,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 595,
-                "end": 1147,
+                "start": 592,
+                "end": 1255,
                 "loc": {
                   "start": {
                     "line": 23,
                     "column": 2
                   },
                   "end": {
-                    "line": 44,
+                    "line": 48,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 595,
-                  "end": 599,
+                  "start": 592,
+                  "end": 603,
                   "loc": {
                     "start": {
                       "line": 23,
@@ -428,15 +428,15 @@
                     },
                     "end": {
                       "line": 23,
-                      "column": 6
+                      "column": 13
                     },
-                    "identifierName": "init"
+                    "identifierName": "constructor"
                   },
-                  "name": "init",
+                  "name": "constructor",
                   "leadingComments": null
                 },
                 "static": false,
-                "kind": "method",
+                "kind": "constructor",
                 "id": null,
                 "generator": false,
                 "expression": false,
@@ -444,73 +444,154 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 602,
-                  "end": 1147,
+                  "start": 606,
+                  "end": 1255,
                   "loc": {
                     "start": {
                       "line": 23,
-                      "column": 9
+                      "column": 16
                     },
                     "end": {
-                      "line": 44,
+                      "line": 48,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 829,
-                      "end": 848,
+                      "start": 612,
+                      "end": 619,
                       "loc": {
                         "start": {
-                          "line": 32,
+                          "line": 24,
                           "column": 4
                         },
                         "end": {
-                          "line": 32,
-                          "column": 23
+                          "line": 24,
+                          "column": 11
+                        }
+                      },
+                      "expression": {
+                        "type": "CallExpression",
+                        "start": 612,
+                        "end": 619,
+                        "loc": {
+                          "start": {
+                            "line": 24,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 24,
+                            "column": 11
+                          }
+                        },
+                        "callee": {
+                          "type": "Super",
+                          "start": 612,
+                          "end": 617,
+                          "loc": {
+                            "start": {
+                              "line": 24,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 24,
+                              "column": 9
+                            }
+                          }
+                        },
+                        "arguments": [],
+                        "trailingComments": null
+                      },
+                      "trailingComments": [
+                        {
+                          "type": "CommentLine",
+                          "value": " Specifying Morph Targets",
+                          "start": 625,
+                          "end": 652,
+                          "loc": {
+                            "start": {
+                              "line": 26,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 26,
+                              "column": 31
+                            }
+                          }
+                        },
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * The array of target geometries to morph between.\n     * @type {SCNGeometry[]}\n     * @see https://developer.apple.com/reference/scenekit/scnmorpher/1523572-targets\n     ",
+                          "start": 658,
+                          "end": 840,
+                          "loc": {
+                            "start": {
+                              "line": 28,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 32,
+                              "column": 7
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "start": 845,
+                      "end": 862,
+                      "loc": {
+                        "start": {
+                          "line": 33,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 33,
+                          "column": 21
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 829,
-                        "end": 848,
+                        "start": 845,
+                        "end": 862,
                         "loc": {
                           "start": {
-                            "line": 32,
+                            "line": 33,
                             "column": 4
                           },
                           "end": {
-                            "line": 32,
-                            "column": 23
+                            "line": 33,
+                            "column": 21
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 829,
-                          "end": 841,
+                          "start": 845,
+                          "end": 857,
                           "loc": {
                             "start": {
-                              "line": 32,
+                              "line": 33,
                               "column": 4
                             },
                             "end": {
-                              "line": 32,
+                              "line": 33,
                               "column": 16
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 829,
-                            "end": 833,
+                            "start": 845,
+                            "end": 849,
                             "loc": {
                               "start": {
-                                "line": 32,
+                                "line": 33,
                                 "column": 4
                               },
                               "end": {
-                                "line": 32,
+                                "line": 33,
                                 "column": 8
                               }
                             },
@@ -518,15 +599,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 834,
-                            "end": 841,
+                            "start": 850,
+                            "end": 857,
                             "loc": {
                               "start": {
-                                "line": 32,
+                                "line": 33,
                                 "column": 9
                               },
                               "end": {
-                                "line": 32,
+                                "line": 33,
                                 "column": 16
                               },
                               "identifierName": "targets"
@@ -537,19 +618,20 @@
                           "leadingComments": null
                         },
                         "right": {
-                          "type": "NullLiteral",
-                          "start": 844,
-                          "end": 848,
+                          "type": "ArrayExpression",
+                          "start": 860,
+                          "end": 862,
                           "loc": {
                             "start": {
-                              "line": 32,
+                              "line": 33,
                               "column": 19
                             },
                             "end": {
-                              "line": 32,
-                              "column": 23
+                              "line": 33,
+                              "column": 21
                             }
                           },
+                          "elements": [],
                           "leadingComments": null,
                           "trailingComments": null
                         },
@@ -560,15 +642,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Specifying Morph Targets",
-                          "start": 609,
-                          "end": 636,
+                          "start": 625,
+                          "end": 652,
                           "loc": {
                             "start": {
-                              "line": 25,
+                              "line": 26,
                               "column": 4
                             },
                             "end": {
-                              "line": 25,
+                              "line": 26,
                               "column": 31
                             }
                           }
@@ -576,15 +658,152 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The array of target geometries to morph between.\n     * @type {SCNGeometry[]}\n     * @see https://developer.apple.com/reference/scenekit/scnmorpher/1523572-targets\n     ",
-                          "start": 642,
-                          "end": 824,
+                          "start": 658,
+                          "end": 840,
                           "loc": {
                             "start": {
-                              "line": 27,
+                              "line": 28,
                               "column": 4
                             },
                             "end": {
-                              "line": 31,
+                              "line": 32,
+                              "column": 7
+                            }
+                          }
+                        }
+                      ],
+                      "trailingComments": [
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * @type {number[]}\n     ",
+                          "start": 868,
+                          "end": 903,
+                          "loc": {
+                            "start": {
+                              "line": 35,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 37,
+                              "column": 7
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "start": 908,
+                      "end": 926,
+                      "loc": {
+                        "start": {
+                          "line": 38,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 38,
+                          "column": 22
+                        }
+                      },
+                      "expression": {
+                        "type": "AssignmentExpression",
+                        "start": 908,
+                        "end": 926,
+                        "loc": {
+                          "start": {
+                            "line": 38,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 38,
+                            "column": 22
+                          }
+                        },
+                        "operator": "=",
+                        "left": {
+                          "type": "MemberExpression",
+                          "start": 908,
+                          "end": 921,
+                          "loc": {
+                            "start": {
+                              "line": 38,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 38,
+                              "column": 17
+                            }
+                          },
+                          "object": {
+                            "type": "ThisExpression",
+                            "start": 908,
+                            "end": 912,
+                            "loc": {
+                              "start": {
+                                "line": 38,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 38,
+                                "column": 8
+                              }
+                            },
+                            "leadingComments": null
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "start": 913,
+                            "end": 921,
+                            "loc": {
+                              "start": {
+                                "line": 38,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 38,
+                                "column": 17
+                              },
+                              "identifierName": "_weights"
+                            },
+                            "name": "_weights"
+                          },
+                          "computed": false,
+                          "leadingComments": null
+                        },
+                        "right": {
+                          "type": "ArrayExpression",
+                          "start": 924,
+                          "end": 926,
+                          "loc": {
+                            "start": {
+                              "line": 38,
+                              "column": 20
+                            },
+                            "end": {
+                              "line": 38,
+                              "column": 22
+                            }
+                          },
+                          "elements": [],
+                          "leadingComments": null,
+                          "trailingComments": null
+                        },
+                        "leadingComments": null,
+                        "trailingComments": null
+                      },
+                      "leadingComments": [
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * @type {number[]}\n     ",
+                          "start": 868,
+                          "end": 903,
+                          "loc": {
+                            "start": {
+                              "line": 35,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 37,
                               "column": 7
                             }
                           }
@@ -594,15 +813,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Changing Interpolation Mode",
-                          "start": 855,
-                          "end": 885,
+                          "start": 932,
+                          "end": 962,
                           "loc": {
                             "start": {
-                              "line": 35,
+                              "line": 40,
                               "column": 4
                             },
                             "end": {
-                              "line": 35,
+                              "line": 40,
                               "column": 34
                             }
                           }
@@ -610,15 +829,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The interpolation formula for blending between target geometries.\n     * @type {SCNMorpherCalculationMode}\n     * @see https://developer.apple.com/reference/scenekit/scnmorpher/1523754-calculationmode\n     ",
-                          "start": 891,
-                          "end": 1110,
+                          "start": 968,
+                          "end": 1187,
                           "loc": {
                             "start": {
-                              "line": 37,
+                              "line": 42,
                               "column": 4
                             },
                             "end": {
-                              "line": 41,
+                              "line": 46,
                               "column": 7
                             }
                           }
@@ -627,58 +846,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1115,
-                      "end": 1142,
+                      "start": 1192,
+                      "end": 1251,
                       "loc": {
                         "start": {
-                          "line": 42,
+                          "line": 47,
                           "column": 4
                         },
                         "end": {
-                          "line": 42,
-                          "column": 31
+                          "line": 47,
+                          "column": 63
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1115,
-                        "end": 1142,
+                        "start": 1192,
+                        "end": 1251,
                         "loc": {
                           "start": {
-                            "line": 42,
+                            "line": 47,
                             "column": 4
                           },
                           "end": {
-                            "line": 42,
-                            "column": 31
+                            "line": 47,
+                            "column": 63
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1115,
-                          "end": 1135,
+                          "start": 1192,
+                          "end": 1212,
                           "loc": {
                             "start": {
-                              "line": 42,
+                              "line": 47,
                               "column": 4
                             },
                             "end": {
-                              "line": 42,
+                              "line": 47,
                               "column": 24
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1115,
-                            "end": 1119,
+                            "start": 1192,
+                            "end": 1196,
                             "loc": {
                               "start": {
-                                "line": 42,
+                                "line": 47,
                                 "column": 4
                               },
                               "end": {
-                                "line": 42,
+                                "line": 47,
                                 "column": 8
                               }
                             },
@@ -686,15 +905,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1120,
-                            "end": 1135,
+                            "start": 1197,
+                            "end": 1212,
                             "loc": {
                               "start": {
-                                "line": 42,
+                                "line": 47,
                                 "column": 9
                               },
                               "end": {
-                                "line": 42,
+                                "line": 47,
                                 "column": 24
                               },
                               "identifierName": "calculationMode"
@@ -705,19 +924,54 @@
                           "leadingComments": null
                         },
                         "right": {
-                          "type": "NullLiteral",
-                          "start": 1138,
-                          "end": 1142,
+                          "type": "MemberExpression",
+                          "start": 1215,
+                          "end": 1251,
                           "loc": {
                             "start": {
-                              "line": 42,
+                              "line": 47,
                               "column": 27
                             },
                             "end": {
-                              "line": 42,
-                              "column": 31
+                              "line": 47,
+                              "column": 63
                             }
-                          }
+                          },
+                          "object": {
+                            "type": "Identifier",
+                            "start": 1215,
+                            "end": 1240,
+                            "loc": {
+                              "start": {
+                                "line": 47,
+                                "column": 27
+                              },
+                              "end": {
+                                "line": 47,
+                                "column": 52
+                              },
+                              "identifierName": "SCNMorpherCalculationMode"
+                            },
+                            "name": "SCNMorpherCalculationMode"
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "start": 1241,
+                            "end": 1251,
+                            "loc": {
+                              "start": {
+                                "line": 47,
+                                "column": 53
+                              },
+                              "end": {
+                                "line": 47,
+                                "column": 63
+                              },
+                              "identifierName": "normalized"
+                            },
+                            "name": "normalized"
+                          },
+                          "computed": false
                         },
                         "leadingComments": null
                       },
@@ -725,15 +979,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Changing Interpolation Mode",
-                          "start": 855,
-                          "end": 885,
+                          "start": 932,
+                          "end": 962,
                           "loc": {
                             "start": {
-                              "line": 35,
+                              "line": 40,
                               "column": 4
                             },
                             "end": {
-                              "line": 35,
+                              "line": 40,
                               "column": 34
                             }
                           }
@@ -741,15 +995,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The interpolation formula for blending between target geometries.\n     * @type {SCNMorpherCalculationMode}\n     * @see https://developer.apple.com/reference/scenekit/scnmorpher/1523754-calculationmode\n     ",
-                          "start": 891,
-                          "end": 1110,
+                          "start": 968,
+                          "end": 1187,
                           "loc": {
                             "start": {
-                              "line": 37,
+                              "line": 42,
                               "column": 4
                             },
                             "end": {
-                              "line": 41,
+                              "line": 46,
                               "column": 7
                             }
                           }
@@ -763,9 +1017,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
+                    "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
                     "start": 525,
-                    "end": 592,
+                    "end": 589,
                     "loc": {
                       "start": {
                         "line": 18,
@@ -782,15 +1036,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Blending between Morph Targets",
-                    "start": 1151,
-                    "end": 1184,
+                    "start": 1259,
+                    "end": 1292,
                     "loc": {
                       "start": {
-                        "line": 46,
+                        "line": 50,
                         "column": 2
                       },
                       "end": {
-                        "line": 46,
+                        "line": 50,
                         "column": 35
                       }
                     }
@@ -798,15 +1052,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Returns the weight value for the specified target index.\n   * @access public\n   * @param {number} targetIndex - The index of a geometry in the morpher’s targets array.\n   * @returns {number} - \n   * @desc Target geometries and their weights determine the current form of the surface produced by the morpher. For example, if a morpher has one target whose weight is 0.5, the form of the resulting surface will be halfway between those of the base geometry and the target geometry.\n   * @see https://developer.apple.com/reference/scenekit/scnmorpher/1522940-weight\n   ",
-                    "start": 1188,
-                    "end": 1765,
+                    "start": 1296,
+                    "end": 1873,
                     "loc": {
                       "start": {
-                        "line": 48,
+                        "line": 52,
                         "column": 2
                       },
                       "end": {
-                        "line": 55,
+                        "line": 59,
                         "column": 5
                       }
                     }
@@ -815,30 +1069,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 1768,
-                "end": 1817,
+                "start": 1876,
+                "end": 1950,
                 "loc": {
                   "start": {
-                    "line": 56,
+                    "line": 60,
                     "column": 2
                   },
                   "end": {
-                    "line": 58,
+                    "line": 62,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1768,
-                  "end": 1785,
+                  "start": 1876,
+                  "end": 1893,
                   "loc": {
                     "start": {
-                      "line": 56,
+                      "line": 60,
                       "column": 2
                     },
                     "end": {
-                      "line": 56,
+                      "line": 60,
                       "column": 19
                     },
                     "identifierName": "weightForTargetAt"
@@ -855,15 +1109,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 1786,
-                    "end": 1797,
+                    "start": 1894,
+                    "end": 1905,
                     "loc": {
                       "start": {
-                        "line": 56,
+                        "line": 60,
                         "column": 20
                       },
                       "end": {
-                        "line": 56,
+                        "line": 60,
                         "column": 31
                       },
                       "identifierName": "targetIndex"
@@ -873,52 +1127,113 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1799,
-                  "end": 1817,
+                  "start": 1907,
+                  "end": 1950,
                   "loc": {
                     "start": {
-                      "line": 56,
+                      "line": 60,
                       "column": 33
                     },
                     "end": {
-                      "line": 58,
+                      "line": 62,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 1805,
-                      "end": 1813,
+                      "start": 1913,
+                      "end": 1946,
                       "loc": {
                         "start": {
-                          "line": 57,
+                          "line": 61,
                           "column": 4
                         },
                         "end": {
-                          "line": 57,
-                          "column": 12
+                          "line": 61,
+                          "column": 37
                         }
                       },
                       "argument": {
-                        "type": "NumericLiteral",
-                        "start": 1812,
-                        "end": 1813,
+                        "type": "MemberExpression",
+                        "start": 1920,
+                        "end": 1946,
                         "loc": {
                           "start": {
-                            "line": 57,
+                            "line": 61,
                             "column": 11
                           },
                           "end": {
-                            "line": 57,
-                            "column": 12
+                            "line": 61,
+                            "column": 37
                           }
                         },
-                        "extra": {
-                          "rawValue": 0,
-                          "raw": "0"
+                        "object": {
+                          "type": "MemberExpression",
+                          "start": 1920,
+                          "end": 1933,
+                          "loc": {
+                            "start": {
+                              "line": 61,
+                              "column": 11
+                            },
+                            "end": {
+                              "line": 61,
+                              "column": 24
+                            }
+                          },
+                          "object": {
+                            "type": "ThisExpression",
+                            "start": 1920,
+                            "end": 1924,
+                            "loc": {
+                              "start": {
+                                "line": 61,
+                                "column": 11
+                              },
+                              "end": {
+                                "line": 61,
+                                "column": 15
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "start": 1925,
+                            "end": 1933,
+                            "loc": {
+                              "start": {
+                                "line": 61,
+                                "column": 16
+                              },
+                              "end": {
+                                "line": 61,
+                                "column": 24
+                              },
+                              "identifierName": "_weights"
+                            },
+                            "name": "_weights"
+                          },
+                          "computed": false
                         },
-                        "value": 0
+                        "property": {
+                          "type": "Identifier",
+                          "start": 1934,
+                          "end": 1945,
+                          "loc": {
+                            "start": {
+                              "line": 61,
+                              "column": 25
+                            },
+                            "end": {
+                              "line": 61,
+                              "column": 36
+                            },
+                            "identifierName": "targetIndex"
+                          },
+                          "name": "targetIndex"
+                        },
+                        "computed": true
                       }
                     }
                   ],
@@ -929,15 +1244,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Blending between Morph Targets",
-                    "start": 1151,
-                    "end": 1184,
+                    "start": 1259,
+                    "end": 1292,
                     "loc": {
                       "start": {
-                        "line": 46,
+                        "line": 50,
                         "column": 2
                       },
                       "end": {
-                        "line": 46,
+                        "line": 50,
                         "column": 35
                       }
                     }
@@ -945,15 +1260,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Returns the weight value for the specified target index.\n   * @access public\n   * @param {number} targetIndex - The index of a geometry in the morpher’s targets array.\n   * @returns {number} - \n   * @desc Target geometries and their weights determine the current form of the surface produced by the morpher. For example, if a morpher has one target whose weight is 0.5, the form of the resulting surface will be halfway between those of the base geometry and the target geometry.\n   * @see https://developer.apple.com/reference/scenekit/scnmorpher/1522940-weight\n   ",
-                    "start": 1188,
-                    "end": 1765,
+                    "start": 1296,
+                    "end": 1873,
                     "loc": {
                       "start": {
-                        "line": 48,
+                        "line": 52,
                         "column": 2
                       },
                       "end": {
-                        "line": 55,
+                        "line": 59,
                         "column": 5
                       }
                     }
@@ -963,15 +1278,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Specifies a weight value at a specified target index.\n   * @access public\n   * @param {number} weight - A number specifying the contribution of the target geometry to the blended surface, generally between 0.0 and 1.0.\n   * @param {number} targetIndex - The index of a geometry in the morpher’s targets array.\n   * @returns {void}\n   * @desc Target geometries and their weights determine the current form of the surface produced by the morpher. For example, if a morpher has one target whose weight is 0.5, the form of the resulting surface will be halfway between those of the base geometry and the target geometry.You can also animate weights implicitly or explicitly using the keypath weights[index], where index corresponds to the targetIndex parameter of this method.\n   * @see https://developer.apple.com/reference/scenekit/scnmorpher/1522886-setweight\n   ",
-                    "start": 1821,
-                    "end": 2694,
+                    "start": 1954,
+                    "end": 2827,
                     "loc": {
                       "start": {
-                        "line": 60,
+                        "line": 64,
                         "column": 2
                       },
                       "end": {
-                        "line": 68,
+                        "line": 72,
                         "column": 5
                       }
                     }
@@ -980,30 +1295,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 2697,
-                "end": 2744,
+                "start": 2830,
+                "end": 2916,
                 "loc": {
                   "start": {
-                    "line": 69,
+                    "line": 73,
                     "column": 2
                   },
                   "end": {
-                    "line": 70,
+                    "line": 75,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 2697,
-                  "end": 2717,
+                  "start": 2830,
+                  "end": 2850,
                   "loc": {
                     "start": {
-                      "line": 69,
+                      "line": 73,
                       "column": 2
                     },
                     "end": {
-                      "line": 69,
+                      "line": 73,
                       "column": 22
                     },
                     "identifierName": "setWeightForTargetAt"
@@ -1020,15 +1335,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 2718,
-                    "end": 2724,
+                    "start": 2851,
+                    "end": 2857,
                     "loc": {
                       "start": {
-                        "line": 69,
+                        "line": 73,
                         "column": 23
                       },
                       "end": {
-                        "line": 69,
+                        "line": 73,
                         "column": 29
                       },
                       "identifierName": "weight"
@@ -1037,15 +1352,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 2726,
-                    "end": 2737,
+                    "start": 2859,
+                    "end": 2870,
                     "loc": {
                       "start": {
-                        "line": 69,
+                        "line": 73,
                         "column": 31
                       },
                       "end": {
-                        "line": 69,
+                        "line": 73,
                         "column": 42
                       },
                       "identifierName": "targetIndex"
@@ -1055,34 +1370,164 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 2739,
-                  "end": 2744,
+                  "start": 2872,
+                  "end": 2916,
                   "loc": {
                     "start": {
-                      "line": 69,
+                      "line": 73,
                       "column": 44
                     },
                     "end": {
-                      "line": 70,
+                      "line": 75,
                       "column": 3
                     }
                   },
-                  "body": [],
+                  "body": [
+                    {
+                      "type": "ExpressionStatement",
+                      "start": 2878,
+                      "end": 2912,
+                      "loc": {
+                        "start": {
+                          "line": 74,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 74,
+                          "column": 38
+                        }
+                      },
+                      "expression": {
+                        "type": "AssignmentExpression",
+                        "start": 2878,
+                        "end": 2912,
+                        "loc": {
+                          "start": {
+                            "line": 74,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 74,
+                            "column": 38
+                          }
+                        },
+                        "operator": "=",
+                        "left": {
+                          "type": "MemberExpression",
+                          "start": 2878,
+                          "end": 2903,
+                          "loc": {
+                            "start": {
+                              "line": 74,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 74,
+                              "column": 29
+                            }
+                          },
+                          "object": {
+                            "type": "MemberExpression",
+                            "start": 2878,
+                            "end": 2890,
+                            "loc": {
+                              "start": {
+                                "line": 74,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 74,
+                                "column": 16
+                              }
+                            },
+                            "object": {
+                              "type": "ThisExpression",
+                              "start": 2878,
+                              "end": 2882,
+                              "loc": {
+                                "start": {
+                                  "line": 74,
+                                  "column": 4
+                                },
+                                "end": {
+                                  "line": 74,
+                                  "column": 8
+                                }
+                              }
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "start": 2883,
+                              "end": 2890,
+                              "loc": {
+                                "start": {
+                                  "line": 74,
+                                  "column": 9
+                                },
+                                "end": {
+                                  "line": 74,
+                                  "column": 16
+                                },
+                                "identifierName": "weights"
+                              },
+                              "name": "weights"
+                            },
+                            "computed": false
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "start": 2891,
+                            "end": 2902,
+                            "loc": {
+                              "start": {
+                                "line": 74,
+                                "column": 17
+                              },
+                              "end": {
+                                "line": 74,
+                                "column": 28
+                              },
+                              "identifierName": "targetIndex"
+                            },
+                            "name": "targetIndex"
+                          },
+                          "computed": true
+                        },
+                        "right": {
+                          "type": "Identifier",
+                          "start": 2906,
+                          "end": 2912,
+                          "loc": {
+                            "start": {
+                              "line": 74,
+                              "column": 32
+                            },
+                            "end": {
+                              "line": 74,
+                              "column": 38
+                            },
+                            "identifierName": "weight"
+                          },
+                          "name": "weight"
+                        }
+                      }
+                    }
+                  ],
                   "directives": []
                 },
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Specifies a weight value at a specified target index.\n   * @access public\n   * @param {number} weight - A number specifying the contribution of the target geometry to the blended surface, generally between 0.0 and 1.0.\n   * @param {number} targetIndex - The index of a geometry in the morpher’s targets array.\n   * @returns {void}\n   * @desc Target geometries and their weights determine the current form of the surface produced by the morpher. For example, if a morpher has one target whose weight is 0.5, the form of the resulting surface will be halfway between those of the base geometry and the target geometry.You can also animate weights implicitly or explicitly using the keypath weights[index], where index corresponds to the targetIndex parameter of this method.\n   * @see https://developer.apple.com/reference/scenekit/scnmorpher/1522886-setweight\n   ",
-                    "start": 1821,
-                    "end": 2694,
+                    "start": 1954,
+                    "end": 2827,
                     "loc": {
                       "start": {
-                        "line": 60,
+                        "line": 64,
                         "column": 2
                       },
                       "end": {
-                        "line": 68,
+                        "line": 72,
                         "column": 5
                       }
                     }
@@ -1188,9 +1633,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
+      "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
       "start": 525,
-      "end": 592,
+      "end": 589,
       "loc": {
         "start": {
           "line": 18,
@@ -1205,15 +1650,15 @@
     {
       "type": "CommentLine",
       "value": " Specifying Morph Targets",
-      "start": 609,
-      "end": 636,
+      "start": 625,
+      "end": 652,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 26,
           "column": 4
         },
         "end": {
-          "line": 25,
+          "line": 26,
           "column": 31
         }
       }
@@ -1221,15 +1666,31 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The array of target geometries to morph between.\n     * @type {SCNGeometry[]}\n     * @see https://developer.apple.com/reference/scenekit/scnmorpher/1523572-targets\n     ",
-      "start": 642,
-      "end": 824,
+      "start": 658,
+      "end": 840,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 28,
           "column": 4
         },
         "end": {
-          "line": 31,
+          "line": 32,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n     * @type {number[]}\n     ",
+      "start": 868,
+      "end": 903,
+      "loc": {
+        "start": {
+          "line": 35,
+          "column": 4
+        },
+        "end": {
+          "line": 37,
           "column": 7
         }
       }
@@ -1237,15 +1698,15 @@
     {
       "type": "CommentLine",
       "value": " Changing Interpolation Mode",
-      "start": 855,
-      "end": 885,
+      "start": 932,
+      "end": 962,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 40,
           "column": 4
         },
         "end": {
-          "line": 35,
+          "line": 40,
           "column": 34
         }
       }
@@ -1253,15 +1714,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The interpolation formula for blending between target geometries.\n     * @type {SCNMorpherCalculationMode}\n     * @see https://developer.apple.com/reference/scenekit/scnmorpher/1523754-calculationmode\n     ",
-      "start": 891,
-      "end": 1110,
+      "start": 968,
+      "end": 1187,
       "loc": {
         "start": {
-          "line": 37,
+          "line": 42,
           "column": 4
         },
         "end": {
-          "line": 41,
+          "line": 46,
           "column": 7
         }
       }
@@ -1269,15 +1730,15 @@
     {
       "type": "CommentLine",
       "value": " Blending between Morph Targets",
-      "start": 1151,
-      "end": 1184,
+      "start": 1259,
+      "end": 1292,
       "loc": {
         "start": {
-          "line": 46,
+          "line": 50,
           "column": 2
         },
         "end": {
-          "line": 46,
+          "line": 50,
           "column": 35
         }
       }
@@ -1285,15 +1746,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Returns the weight value for the specified target index.\n   * @access public\n   * @param {number} targetIndex - The index of a geometry in the morpher’s targets array.\n   * @returns {number} - \n   * @desc Target geometries and their weights determine the current form of the surface produced by the morpher. For example, if a morpher has one target whose weight is 0.5, the form of the resulting surface will be halfway between those of the base geometry and the target geometry.\n   * @see https://developer.apple.com/reference/scenekit/scnmorpher/1522940-weight\n   ",
-      "start": 1188,
-      "end": 1765,
+      "start": 1296,
+      "end": 1873,
       "loc": {
         "start": {
-          "line": 48,
+          "line": 52,
           "column": 2
         },
         "end": {
-          "line": 55,
+          "line": 59,
           "column": 5
         }
       }
@@ -1301,15 +1762,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Specifies a weight value at a specified target index.\n   * @access public\n   * @param {number} weight - A number specifying the contribution of the target geometry to the blended surface, generally between 0.0 and 1.0.\n   * @param {number} targetIndex - The index of a geometry in the morpher’s targets array.\n   * @returns {void}\n   * @desc Target geometries and their weights determine the current form of the surface produced by the morpher. For example, if a morpher has one target whose weight is 0.5, the form of the resulting surface will be halfway between those of the base geometry and the target geometry.You can also animate weights implicitly or explicitly using the keypath weights[index], where index corresponds to the targetIndex parameter of this method.\n   * @see https://developer.apple.com/reference/scenekit/scnmorpher/1522886-setweight\n   ",
-      "start": 1821,
-      "end": 2694,
+      "start": 1954,
+      "end": 2827,
       "loc": {
         "start": {
-          "line": 60,
+          "line": 64,
           "column": 2
         },
         "end": {
-          "line": 68,
+          "line": 72,
           "column": 5
         }
       }
@@ -1978,9 +2439,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
+      "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
       "start": 525,
-      "end": 592,
+      "end": 589,
       "loc": {
         "start": {
           "line": 18,
@@ -2004,9 +2465,9 @@
         "postfix": false,
         "binop": null
       },
-      "value": "init",
-      "start": 595,
-      "end": 599,
+      "value": "constructor",
+      "start": 592,
+      "end": 603,
       "loc": {
         "start": {
           "line": 23,
@@ -2014,7 +2475,7 @@
         },
         "end": {
           "line": 23,
-          "column": 6
+          "column": 13
         }
       }
     },
@@ -2030,16 +2491,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 599,
-      "end": 600,
+      "start": 603,
+      "end": 604,
       "loc": {
         "start": {
           "line": 23,
-          "column": 6
+          "column": 13
         },
         "end": {
           "line": 23,
-          "column": 7
+          "column": 14
         }
       }
     },
@@ -2055,16 +2516,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 600,
-      "end": 601,
+      "start": 604,
+      "end": 605,
       "loc": {
         "start": {
           "line": 23,
-          "column": 7
+          "column": 14
         },
         "end": {
           "line": 23,
-          "column": 8
+          "column": 15
         }
       }
     },
@@ -2080,31 +2541,109 @@
         "postfix": false,
         "binop": null
       },
-      "start": 602,
-      "end": 603,
+      "start": 606,
+      "end": 607,
       "loc": {
         "start": {
           "line": 23,
-          "column": 9
+          "column": 16
         },
         "end": {
           "line": 23,
+          "column": 17
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "super",
+        "keyword": "super",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "super",
+      "start": 612,
+      "end": 617,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 4
+        },
+        "end": {
+          "line": 24,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 617,
+      "end": 618,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 9
+        },
+        "end": {
+          "line": 24,
           "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 618,
+      "end": 619,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 10
+        },
+        "end": {
+          "line": 24,
+          "column": 11
         }
       }
     },
     {
       "type": "CommentLine",
       "value": " Specifying Morph Targets",
-      "start": 609,
-      "end": 636,
+      "start": 625,
+      "end": 652,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 26,
           "column": 4
         },
         "end": {
-          "line": 25,
+          "line": 26,
           "column": 31
         }
       }
@@ -2112,15 +2651,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The array of target geometries to morph between.\n     * @type {SCNGeometry[]}\n     * @see https://developer.apple.com/reference/scenekit/scnmorpher/1523572-targets\n     ",
-      "start": 642,
-      "end": 824,
+      "start": 658,
+      "end": 840,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 28,
           "column": 4
         },
         "end": {
-          "line": 31,
+          "line": 32,
           "column": 7
         }
       }
@@ -2140,15 +2679,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 829,
-      "end": 833,
+      "start": 845,
+      "end": 849,
       "loc": {
         "start": {
-          "line": 32,
+          "line": 33,
           "column": 4
         },
         "end": {
-          "line": 32,
+          "line": 33,
           "column": 8
         }
       }
@@ -2166,15 +2705,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 833,
-      "end": 834,
+      "start": 849,
+      "end": 850,
       "loc": {
         "start": {
-          "line": 32,
+          "line": 33,
           "column": 8
         },
         "end": {
-          "line": 32,
+          "line": 33,
           "column": 9
         }
       }
@@ -2192,15 +2731,15 @@
         "binop": null
       },
       "value": "targets",
-      "start": 834,
-      "end": 841,
+      "start": 850,
+      "end": 857,
       "loc": {
         "start": {
-          "line": 32,
+          "line": 33,
           "column": 9
         },
         "end": {
-          "line": 32,
+          "line": 33,
           "column": 16
         }
       }
@@ -2219,24 +2758,23 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 842,
-      "end": 843,
+      "start": 858,
+      "end": 859,
       "loc": {
         "start": {
-          "line": 32,
+          "line": 33,
           "column": 17
         },
         "end": {
-          "line": 32,
+          "line": 33,
           "column": 18
         }
       }
     },
     {
       "type": {
-        "label": "null",
-        "keyword": "null",
-        "beforeExpr": false,
+        "label": "[",
+        "beforeExpr": true,
         "startsExpr": true,
         "rightAssociative": false,
         "isLoop": false,
@@ -2246,48 +2784,57 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "null",
-      "start": 844,
-      "end": 848,
+      "start": 860,
+      "end": 861,
       "loc": {
         "start": {
-          "line": 32,
+          "line": 33,
           "column": 19
         },
         "end": {
-          "line": 32,
-          "column": 23
+          "line": 33,
+          "column": 20
         }
       }
     },
     {
-      "type": "CommentLine",
-      "value": " Changing Interpolation Mode",
-      "start": 855,
-      "end": 885,
+      "type": {
+        "label": "]",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 861,
+      "end": 862,
       "loc": {
         "start": {
-          "line": 35,
-          "column": 4
+          "line": 33,
+          "column": 20
         },
         "end": {
-          "line": 35,
-          "column": 34
+          "line": 33,
+          "column": 21
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The interpolation formula for blending between target geometries.\n     * @type {SCNMorpherCalculationMode}\n     * @see https://developer.apple.com/reference/scenekit/scnmorpher/1523754-calculationmode\n     ",
-      "start": 891,
-      "end": 1110,
+      "value": "*\n     * @type {number[]}\n     ",
+      "start": 868,
+      "end": 903,
       "loc": {
         "start": {
-          "line": 37,
+          "line": 35,
           "column": 4
         },
         "end": {
-          "line": 41,
+          "line": 37,
           "column": 7
         }
       }
@@ -2307,15 +2854,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1115,
-      "end": 1119,
+      "start": 908,
+      "end": 912,
       "loc": {
         "start": {
-          "line": 42,
+          "line": 38,
           "column": 4
         },
         "end": {
-          "line": 42,
+          "line": 38,
           "column": 8
         }
       }
@@ -2333,15 +2880,206 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1119,
-      "end": 1120,
+      "start": 912,
+      "end": 913,
       "loc": {
         "start": {
-          "line": 42,
+          "line": 38,
           "column": 8
         },
         "end": {
+          "line": 38,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "_weights",
+      "start": 913,
+      "end": 921,
+      "loc": {
+        "start": {
+          "line": 38,
+          "column": 9
+        },
+        "end": {
+          "line": 38,
+          "column": 17
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 922,
+      "end": 923,
+      "loc": {
+        "start": {
+          "line": 38,
+          "column": 18
+        },
+        "end": {
+          "line": 38,
+          "column": 19
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "[",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 924,
+      "end": 925,
+      "loc": {
+        "start": {
+          "line": 38,
+          "column": 20
+        },
+        "end": {
+          "line": 38,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "]",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 925,
+      "end": 926,
+      "loc": {
+        "start": {
+          "line": 38,
+          "column": 21
+        },
+        "end": {
+          "line": 38,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " Changing Interpolation Mode",
+      "start": 932,
+      "end": 962,
+      "loc": {
+        "start": {
+          "line": 40,
+          "column": 4
+        },
+        "end": {
+          "line": 40,
+          "column": 34
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n     * The interpolation formula for blending between target geometries.\n     * @type {SCNMorpherCalculationMode}\n     * @see https://developer.apple.com/reference/scenekit/scnmorpher/1523754-calculationmode\n     ",
+      "start": 968,
+      "end": 1187,
+      "loc": {
+        "start": {
           "line": 42,
+          "column": 4
+        },
+        "end": {
+          "line": 46,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "this",
+        "keyword": "this",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "this",
+      "start": 1192,
+      "end": 1196,
+      "loc": {
+        "start": {
+          "line": 47,
+          "column": 4
+        },
+        "end": {
+          "line": 47,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ".",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1196,
+      "end": 1197,
+      "loc": {
+        "start": {
+          "line": 47,
+          "column": 8
+        },
+        "end": {
+          "line": 47,
           "column": 9
         }
       }
@@ -2359,15 +3097,15 @@
         "binop": null
       },
       "value": "calculationMode",
-      "start": 1120,
-      "end": 1135,
+      "start": 1197,
+      "end": 1212,
       "loc": {
         "start": {
-          "line": 42,
+          "line": 47,
           "column": 9
         },
         "end": {
-          "line": 42,
+          "line": 47,
           "column": 24
         }
       }
@@ -2386,25 +3124,50 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1136,
-      "end": 1137,
+      "start": 1213,
+      "end": 1214,
       "loc": {
         "start": {
-          "line": 42,
+          "line": 47,
           "column": 25
         },
         "end": {
-          "line": 42,
+          "line": 47,
           "column": 26
         }
       }
     },
     {
       "type": {
-        "label": "null",
-        "keyword": "null",
+        "label": "name",
         "beforeExpr": false,
         "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "SCNMorpherCalculationMode",
+      "start": 1215,
+      "end": 1240,
+      "loc": {
+        "start": {
+          "line": 47,
+          "column": 27
+        },
+        "end": {
+          "line": 47,
+          "column": 52
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ".",
+        "beforeExpr": false,
+        "startsExpr": false,
         "rightAssociative": false,
         "isLoop": false,
         "isAssign": false,
@@ -2413,17 +3176,42 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "null",
-      "start": 1138,
-      "end": 1142,
+      "start": 1240,
+      "end": 1241,
       "loc": {
         "start": {
-          "line": 42,
-          "column": 27
+          "line": 47,
+          "column": 52
         },
         "end": {
-          "line": 42,
-          "column": 31
+          "line": 47,
+          "column": 53
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "normalized",
+      "start": 1241,
+      "end": 1251,
+      "loc": {
+        "start": {
+          "line": 47,
+          "column": 53
+        },
+        "end": {
+          "line": 47,
+          "column": 63
         }
       }
     },
@@ -2439,15 +3227,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1146,
-      "end": 1147,
+      "start": 1254,
+      "end": 1255,
       "loc": {
         "start": {
-          "line": 44,
+          "line": 48,
           "column": 2
         },
         "end": {
-          "line": 44,
+          "line": 48,
           "column": 3
         }
       }
@@ -2455,15 +3243,15 @@
     {
       "type": "CommentLine",
       "value": " Blending between Morph Targets",
-      "start": 1151,
-      "end": 1184,
+      "start": 1259,
+      "end": 1292,
       "loc": {
         "start": {
-          "line": 46,
+          "line": 50,
           "column": 2
         },
         "end": {
-          "line": 46,
+          "line": 50,
           "column": 35
         }
       }
@@ -2471,15 +3259,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Returns the weight value for the specified target index.\n   * @access public\n   * @param {number} targetIndex - The index of a geometry in the morpher’s targets array.\n   * @returns {number} - \n   * @desc Target geometries and their weights determine the current form of the surface produced by the morpher. For example, if a morpher has one target whose weight is 0.5, the form of the resulting surface will be halfway between those of the base geometry and the target geometry.\n   * @see https://developer.apple.com/reference/scenekit/scnmorpher/1522940-weight\n   ",
-      "start": 1188,
-      "end": 1765,
+      "start": 1296,
+      "end": 1873,
       "loc": {
         "start": {
-          "line": 48,
+          "line": 52,
           "column": 2
         },
         "end": {
-          "line": 55,
+          "line": 59,
           "column": 5
         }
       }
@@ -2497,15 +3285,15 @@
         "binop": null
       },
       "value": "weightForTargetAt",
-      "start": 1768,
-      "end": 1785,
+      "start": 1876,
+      "end": 1893,
       "loc": {
         "start": {
-          "line": 56,
+          "line": 60,
           "column": 2
         },
         "end": {
-          "line": 56,
+          "line": 60,
           "column": 19
         }
       }
@@ -2522,15 +3310,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1785,
-      "end": 1786,
+      "start": 1893,
+      "end": 1894,
       "loc": {
         "start": {
-          "line": 56,
+          "line": 60,
           "column": 19
         },
         "end": {
-          "line": 56,
+          "line": 60,
           "column": 20
         }
       }
@@ -2548,15 +3336,15 @@
         "binop": null
       },
       "value": "targetIndex",
-      "start": 1786,
-      "end": 1797,
+      "start": 1894,
+      "end": 1905,
       "loc": {
         "start": {
-          "line": 56,
+          "line": 60,
           "column": 20
         },
         "end": {
-          "line": 56,
+          "line": 60,
           "column": 31
         }
       }
@@ -2573,15 +3361,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1797,
-      "end": 1798,
+      "start": 1905,
+      "end": 1906,
       "loc": {
         "start": {
-          "line": 56,
+          "line": 60,
           "column": 31
         },
         "end": {
-          "line": 56,
+          "line": 60,
           "column": 32
         }
       }
@@ -2598,15 +3386,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1799,
-      "end": 1800,
+      "start": 1907,
+      "end": 1908,
       "loc": {
         "start": {
-          "line": 56,
+          "line": 60,
           "column": 33
         },
         "end": {
-          "line": 56,
+          "line": 60,
           "column": 34
         }
       }
@@ -2626,22 +3414,23 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 1805,
-      "end": 1811,
+      "start": 1913,
+      "end": 1919,
       "loc": {
         "start": {
-          "line": 57,
+          "line": 61,
           "column": 4
         },
         "end": {
-          "line": 57,
+          "line": 61,
           "column": 10
         }
       }
     },
     {
       "type": {
-        "label": "num",
+        "label": "this",
+        "keyword": "this",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -2652,17 +3441,147 @@
         "binop": null,
         "updateContext": null
       },
-      "value": 0,
-      "start": 1812,
-      "end": 1813,
+      "value": "this",
+      "start": 1920,
+      "end": 1924,
       "loc": {
         "start": {
-          "line": 57,
+          "line": 61,
           "column": 11
         },
         "end": {
-          "line": 57,
-          "column": 12
+          "line": 61,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ".",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1924,
+      "end": 1925,
+      "loc": {
+        "start": {
+          "line": 61,
+          "column": 15
+        },
+        "end": {
+          "line": 61,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "_weights",
+      "start": 1925,
+      "end": 1933,
+      "loc": {
+        "start": {
+          "line": 61,
+          "column": 16
+        },
+        "end": {
+          "line": 61,
+          "column": 24
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "[",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1933,
+      "end": 1934,
+      "loc": {
+        "start": {
+          "line": 61,
+          "column": 24
+        },
+        "end": {
+          "line": 61,
+          "column": 25
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "targetIndex",
+      "start": 1934,
+      "end": 1945,
+      "loc": {
+        "start": {
+          "line": 61,
+          "column": 25
+        },
+        "end": {
+          "line": 61,
+          "column": 36
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "]",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1945,
+      "end": 1946,
+      "loc": {
+        "start": {
+          "line": 61,
+          "column": 36
+        },
+        "end": {
+          "line": 61,
+          "column": 37
         }
       }
     },
@@ -2678,15 +3597,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1816,
-      "end": 1817,
+      "start": 1949,
+      "end": 1950,
       "loc": {
         "start": {
-          "line": 58,
+          "line": 62,
           "column": 2
         },
         "end": {
-          "line": 58,
+          "line": 62,
           "column": 3
         }
       }
@@ -2694,15 +3613,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Specifies a weight value at a specified target index.\n   * @access public\n   * @param {number} weight - A number specifying the contribution of the target geometry to the blended surface, generally between 0.0 and 1.0.\n   * @param {number} targetIndex - The index of a geometry in the morpher’s targets array.\n   * @returns {void}\n   * @desc Target geometries and their weights determine the current form of the surface produced by the morpher. For example, if a morpher has one target whose weight is 0.5, the form of the resulting surface will be halfway between those of the base geometry and the target geometry.You can also animate weights implicitly or explicitly using the keypath weights[index], where index corresponds to the targetIndex parameter of this method.\n   * @see https://developer.apple.com/reference/scenekit/scnmorpher/1522886-setweight\n   ",
-      "start": 1821,
-      "end": 2694,
+      "start": 1954,
+      "end": 2827,
       "loc": {
         "start": {
-          "line": 60,
+          "line": 64,
           "column": 2
         },
         "end": {
-          "line": 68,
+          "line": 72,
           "column": 5
         }
       }
@@ -2720,15 +3639,15 @@
         "binop": null
       },
       "value": "setWeightForTargetAt",
-      "start": 2697,
-      "end": 2717,
+      "start": 2830,
+      "end": 2850,
       "loc": {
         "start": {
-          "line": 69,
+          "line": 73,
           "column": 2
         },
         "end": {
-          "line": 69,
+          "line": 73,
           "column": 22
         }
       }
@@ -2745,15 +3664,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2717,
-      "end": 2718,
+      "start": 2850,
+      "end": 2851,
       "loc": {
         "start": {
-          "line": 69,
+          "line": 73,
           "column": 22
         },
         "end": {
-          "line": 69,
+          "line": 73,
           "column": 23
         }
       }
@@ -2771,15 +3690,15 @@
         "binop": null
       },
       "value": "weight",
-      "start": 2718,
-      "end": 2724,
+      "start": 2851,
+      "end": 2857,
       "loc": {
         "start": {
-          "line": 69,
+          "line": 73,
           "column": 23
         },
         "end": {
-          "line": 69,
+          "line": 73,
           "column": 29
         }
       }
@@ -2797,15 +3716,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2724,
-      "end": 2725,
+      "start": 2857,
+      "end": 2858,
       "loc": {
         "start": {
-          "line": 69,
+          "line": 73,
           "column": 29
         },
         "end": {
-          "line": 69,
+          "line": 73,
           "column": 30
         }
       }
@@ -2823,15 +3742,15 @@
         "binop": null
       },
       "value": "targetIndex",
-      "start": 2726,
-      "end": 2737,
+      "start": 2859,
+      "end": 2870,
       "loc": {
         "start": {
-          "line": 69,
+          "line": 73,
           "column": 31
         },
         "end": {
-          "line": 69,
+          "line": 73,
           "column": 42
         }
       }
@@ -2848,15 +3767,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2737,
-      "end": 2738,
+      "start": 2870,
+      "end": 2871,
       "loc": {
         "start": {
-          "line": 69,
+          "line": 73,
           "column": 42
         },
         "end": {
-          "line": 69,
+          "line": 73,
           "column": 43
         }
       }
@@ -2873,16 +3792,227 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2739,
-      "end": 2740,
+      "start": 2872,
+      "end": 2873,
       "loc": {
         "start": {
-          "line": 69,
+          "line": 73,
           "column": 44
         },
         "end": {
-          "line": 69,
+          "line": 73,
           "column": 45
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "this",
+        "keyword": "this",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "this",
+      "start": 2878,
+      "end": 2882,
+      "loc": {
+        "start": {
+          "line": 74,
+          "column": 4
+        },
+        "end": {
+          "line": 74,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ".",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 2882,
+      "end": 2883,
+      "loc": {
+        "start": {
+          "line": 74,
+          "column": 8
+        },
+        "end": {
+          "line": 74,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "weights",
+      "start": 2883,
+      "end": 2890,
+      "loc": {
+        "start": {
+          "line": 74,
+          "column": 9
+        },
+        "end": {
+          "line": 74,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "[",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 2890,
+      "end": 2891,
+      "loc": {
+        "start": {
+          "line": 74,
+          "column": 16
+        },
+        "end": {
+          "line": 74,
+          "column": 17
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "targetIndex",
+      "start": 2891,
+      "end": 2902,
+      "loc": {
+        "start": {
+          "line": 74,
+          "column": 17
+        },
+        "end": {
+          "line": 74,
+          "column": 28
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "]",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 2902,
+      "end": 2903,
+      "loc": {
+        "start": {
+          "line": 74,
+          "column": 28
+        },
+        "end": {
+          "line": 74,
+          "column": 29
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 2904,
+      "end": 2905,
+      "loc": {
+        "start": {
+          "line": 74,
+          "column": 30
+        },
+        "end": {
+          "line": 74,
+          "column": 31
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "weight",
+      "start": 2906,
+      "end": 2912,
+      "loc": {
+        "start": {
+          "line": 74,
+          "column": 32
+        },
+        "end": {
+          "line": 74,
+          "column": 38
         }
       }
     },
@@ -2898,15 +4028,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2743,
-      "end": 2744,
+      "start": 2915,
+      "end": 2916,
       "loc": {
         "start": {
-          "line": 70,
+          "line": 75,
           "column": 2
         },
         "end": {
-          "line": 70,
+          "line": 75,
           "column": 3
         }
       }
@@ -2923,15 +4053,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2745,
-      "end": 2746,
+      "start": 2917,
+      "end": 2918,
       "loc": {
         "start": {
-          "line": 71,
+          "line": 76,
           "column": 0
         },
         "end": {
-          "line": 71,
+          "line": 76,
           "column": 1
         }
       }
@@ -2949,15 +4079,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2747,
-      "end": 2747,
+      "start": 2919,
+      "end": 2919,
       "loc": {
         "start": {
-          "line": 72,
+          "line": 77,
           "column": 0
         },
         "end": {
-          "line": 72,
+          "line": 77,
           "column": 0
         }
       }

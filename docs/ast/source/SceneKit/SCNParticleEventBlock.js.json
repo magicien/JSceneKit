@@ -1,33 +1,439 @@
 {
   "type": "File",
   "start": 0,
-  "end": 14,
+  "end": 3306,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 3,
+      "line": 41,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 14,
+    "end": 3306,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 3,
+        "line": 41,
         "column": 0
       }
     },
     "sourceType": "module",
-    "body": [],
+    "body": [
+      {
+        "type": "Identifier",
+        "start": 3197,
+        "end": 3267,
+        "loc": {
+          "start": {
+            "line": 38,
+            "column": 0
+          },
+          "end": {
+            "line": 38,
+            "column": 70
+          }
+        },
+        "declarations": [
+          {
+            "type": "VariableDeclarator",
+            "start": 3203,
+            "end": 3267,
+            "loc": {
+              "start": {
+                "line": 38,
+                "column": 6
+              },
+              "end": {
+                "line": 38,
+                "column": 70
+              }
+            },
+            "id": {
+              "type": "Identifier",
+              "start": 3203,
+              "end": 3224,
+              "loc": {
+                "start": {
+                  "line": 38,
+                  "column": 6
+                },
+                "end": {
+                  "line": 38,
+                  "column": 27
+                },
+                "identifierName": "SCNParticleEventBlock"
+              },
+              "name": "SCNParticleEventBlock",
+              "leadingComments": null
+            },
+            "init": {
+              "type": "ArrowFunctionExpression",
+              "start": 3227,
+              "end": 3267,
+              "loc": {
+                "start": {
+                  "line": 38,
+                  "column": 30
+                },
+                "end": {
+                  "line": 38,
+                  "column": 70
+                }
+              },
+              "id": null,
+              "generator": false,
+              "expression": false,
+              "async": false,
+              "params": [
+                {
+                  "type": "Identifier",
+                  "start": 3228,
+                  "end": 3232,
+                  "loc": {
+                    "start": {
+                      "line": 38,
+                      "column": 31
+                    },
+                    "end": {
+                      "line": 38,
+                      "column": 35
+                    },
+                    "identifierName": "data"
+                  },
+                  "name": "data"
+                },
+                {
+                  "type": "Identifier",
+                  "start": 3234,
+                  "end": 3244,
+                  "loc": {
+                    "start": {
+                      "line": 38,
+                      "column": 37
+                    },
+                    "end": {
+                      "line": 38,
+                      "column": 47
+                    },
+                    "identifierName": "dataStride"
+                  },
+                  "name": "dataStride"
+                },
+                {
+                  "type": "Identifier",
+                  "start": 3246,
+                  "end": 3253,
+                  "loc": {
+                    "start": {
+                      "line": 38,
+                      "column": 49
+                    },
+                    "end": {
+                      "line": 38,
+                      "column": 56
+                    },
+                    "identifierName": "indices"
+                  },
+                  "name": "indices"
+                },
+                {
+                  "type": "Identifier",
+                  "start": 3255,
+                  "end": 3260,
+                  "loc": {
+                    "start": {
+                      "line": 38,
+                      "column": 58
+                    },
+                    "end": {
+                      "line": 38,
+                      "column": 63
+                    },
+                    "identifierName": "count"
+                  },
+                  "name": "count"
+                }
+              ],
+              "body": {
+                "type": "BlockStatement",
+                "start": 3265,
+                "end": 3267,
+                "loc": {
+                  "start": {
+                    "line": 38,
+                    "column": 68
+                  },
+                  "end": {
+                    "line": 38,
+                    "column": 70
+                  }
+                },
+                "body": [],
+                "directives": []
+              }
+            },
+            "leadingComments": null
+          }
+        ],
+        "kind": "const",
+        "leadingComments": [],
+        "name": "_",
+        "trailingComments": []
+      },
+      {
+        "type": "Identifier",
+        "start": 3269,
+        "end": 3305,
+        "loc": {
+          "start": {
+            "line": 40,
+            "column": 0
+          },
+          "end": {
+            "line": 40,
+            "column": 36
+          }
+        },
+        "declaration": {
+          "type": "Identifier",
+          "start": 3284,
+          "end": 3305,
+          "loc": {
+            "start": {
+              "line": 40,
+              "column": 15
+            },
+            "end": {
+              "line": 40,
+              "column": 36
+            },
+            "identifierName": "SCNParticleEventBlock"
+          },
+          "name": "SCNParticleEventBlock"
+        },
+        "name": "_",
+        "leadingComments": [],
+        "trailingComments": []
+      },
+      {
+        "type": "ExportDefaultDeclaration",
+        "start": 3269,
+        "end": 3305,
+        "loc": {
+          "start": {
+            "line": 40,
+            "column": 0
+          },
+          "end": {
+            "line": 40,
+            "column": 36
+          }
+        },
+        "declaration": {
+          "type": "VariableDeclaration",
+          "start": 3197,
+          "end": 3267,
+          "loc": {
+            "start": {
+              "line": 38,
+              "column": 0
+            },
+            "end": {
+              "line": 38,
+              "column": 70
+            }
+          },
+          "declarations": [
+            {
+              "type": "VariableDeclarator",
+              "start": 3203,
+              "end": 3267,
+              "loc": {
+                "start": {
+                  "line": 38,
+                  "column": 6
+                },
+                "end": {
+                  "line": 38,
+                  "column": 70
+                }
+              },
+              "id": {
+                "type": "Identifier",
+                "start": 3203,
+                "end": 3224,
+                "loc": {
+                  "start": {
+                    "line": 38,
+                    "column": 6
+                  },
+                  "end": {
+                    "line": 38,
+                    "column": 27
+                  },
+                  "identifierName": "SCNParticleEventBlock"
+                },
+                "name": "SCNParticleEventBlock",
+                "leadingComments": null
+              },
+              "init": {
+                "type": "ArrowFunctionExpression",
+                "start": 3227,
+                "end": 3267,
+                "loc": {
+                  "start": {
+                    "line": 38,
+                    "column": 30
+                  },
+                  "end": {
+                    "line": 38,
+                    "column": 70
+                  }
+                },
+                "id": {
+                  "type": "Identifier",
+                  "start": 3203,
+                  "end": 3224,
+                  "loc": {
+                    "start": {
+                      "line": 38,
+                      "column": 6
+                    },
+                    "end": {
+                      "line": 38,
+                      "column": 27
+                    },
+                    "identifierName": "SCNParticleEventBlock"
+                  },
+                  "name": "SCNParticleEventBlock",
+                  "leadingComments": null
+                },
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "start": 3228,
+                    "end": 3232,
+                    "loc": {
+                      "start": {
+                        "line": 38,
+                        "column": 31
+                      },
+                      "end": {
+                        "line": 38,
+                        "column": 35
+                      },
+                      "identifierName": "data"
+                    },
+                    "name": "data"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 3234,
+                    "end": 3244,
+                    "loc": {
+                      "start": {
+                        "line": 38,
+                        "column": 37
+                      },
+                      "end": {
+                        "line": 38,
+                        "column": 47
+                      },
+                      "identifierName": "dataStride"
+                    },
+                    "name": "dataStride"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 3246,
+                    "end": 3253,
+                    "loc": {
+                      "start": {
+                        "line": 38,
+                        "column": 49
+                      },
+                      "end": {
+                        "line": 38,
+                        "column": 56
+                      },
+                      "identifierName": "indices"
+                    },
+                    "name": "indices"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 3255,
+                    "end": 3260,
+                    "loc": {
+                      "start": {
+                        "line": 38,
+                        "column": 58
+                      },
+                      "end": {
+                        "line": 38,
+                        "column": 63
+                      },
+                      "identifierName": "count"
+                    },
+                    "name": "count"
+                  }
+                ],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 3265,
+                  "end": 3267,
+                  "loc": {
+                    "start": {
+                      "line": 38,
+                      "column": 68
+                    },
+                    "end": {
+                      "line": 38,
+                      "column": 70
+                    }
+                  },
+                  "body": [],
+                  "directives": []
+                }
+              },
+              "leadingComments": null
+            }
+          ],
+          "kind": "const",
+          "leadingComments": [
+            {
+              "type": "CommentBlock",
+              "value": "*\n * The signature for blocks called by SceneKit in response to significant events during particle simulation, used by the handle(_:forProperties:handler:) method.\n * @type {function(data: UnsafeMutablePointer<UnsafeMutableRawPointer>, dataStride: UnsafeMutablePointer<Int>, indices: ?UnsafeMutablePointer<UInt32>, count: number): void}\n * @param {UnsafeMutablePointer<UnsafeMutableRawPointer>} data - An array of floating-point values containing stripes of property data for the system’s particles. The width and format of each data stripe depend on the properties you specify when calling the handle(_:forProperties:handler:) method.\n * @param {UnsafeMutablePointer<Int>} dataStride - An array identifying the offset, in bytes, of each property’s value in the data stripe for each particle. The order of offsets in this array corresponds to the order of the properties array you specify when calling the handle(_:forProperties:handler:) method.\n * @param {?UnsafeMutablePointer<UInt32>} indices - An array in which each element is an index that identifies (in the data array) the data stripe for each particle affected by the event that caused SceneKit to call the handler block.When SceneKit calls your handler block for the birth event, you need not use this parameter—at that time, the affected particles are indexed from 0 to the count parameter’s value.\n * @param {number} count - The number of particles affected by the current event.\n * @returns {void}\n * @desc Use this block to change properties of individual particles when they are spawned, when they collide with scene geometry, or when they die (that is, reach the end of their life spans and are removed from the scene). The following example illustrates setting up a handler block for particle collision events:[system handleEvent:SCNParticleEventCollision\n      forProperties:@[SCNParticlePropertyAngle,\n                      SCNParticlePropertyRotationAxis,\n                      SCNParticlePropertyContactNormal]\n          withBlock:^(void **data, size_t *dataStride, uint32_t *indices, NSInteger count) {\n              // For each particle affected by the collision event,\n              // calculate pointers in the data to each property's value.\n              for (NSInteger i = 0; i < count; ++i) {\n                  // SCNParticlePropertyAngle (float)\n                  float *angle = (float *)((char *)data[0] + dataStride[0] * indices[i]);\n                  // angle[0] is the particle's rotation angle in radians.\n \n                  // SCNParticlePropertyRotationAxis (float3)\n                  float *axis = (float *)((char *)data[1] + dataStride[1] * indices[i]);\n                  // axis[0..2] are the xyz components of the particle's rotation axis.\n \n                  // SCNParticlePropertyContactNormal (float3)\n                  float *norm = (float *)((char *)data[2] + dataStride[2] * indices[i]);\n                  // norm[0..2] are the xyz components of the contact normal vector.\n \n                  // Now, use the norm vector to rotate the particle's axis/angle (not shown).\n              }\n          }];\n\n * @see https://developer.apple.com/reference/scenekit/scnparticleeventblock\n ",
+              "start": 15,
+              "end": 3196,
+              "loc": {
+                "start": {
+                  "line": 4,
+                  "column": 0
+                },
+                "end": {
+                  "line": 37,
+                  "column": 3
+                }
+              }
+            }
+          ],
+          "trailingComments": []
+        }
+      }
+    ],
     "directives": [
       {
         "type": "Directive",
@@ -61,12 +467,48 @@
           "extra": {
             "raw": "'use strict'",
             "rawValue": "use strict"
+          },
+          "trailingComments": null
+        },
+        "trailingComments": [
+          {
+            "type": "CommentBlock",
+            "value": "*\n * The signature for blocks called by SceneKit in response to significant events during particle simulation, used by the handle(_:forProperties:handler:) method.\n * @type {function(data: UnsafeMutablePointer<UnsafeMutableRawPointer>, dataStride: UnsafeMutablePointer<Int>, indices: ?UnsafeMutablePointer<UInt32>, count: number): void}\n * @param {UnsafeMutablePointer<UnsafeMutableRawPointer>} data - An array of floating-point values containing stripes of property data for the system’s particles. The width and format of each data stripe depend on the properties you specify when calling the handle(_:forProperties:handler:) method.\n * @param {UnsafeMutablePointer<Int>} dataStride - An array identifying the offset, in bytes, of each property’s value in the data stripe for each particle. The order of offsets in this array corresponds to the order of the properties array you specify when calling the handle(_:forProperties:handler:) method.\n * @param {?UnsafeMutablePointer<UInt32>} indices - An array in which each element is an index that identifies (in the data array) the data stripe for each particle affected by the event that caused SceneKit to call the handler block.When SceneKit calls your handler block for the birth event, you need not use this parameter—at that time, the affected particles are indexed from 0 to the count parameter’s value.\n * @param {number} count - The number of particles affected by the current event.\n * @returns {void}\n * @desc Use this block to change properties of individual particles when they are spawned, when they collide with scene geometry, or when they die (that is, reach the end of their life spans and are removed from the scene). The following example illustrates setting up a handler block for particle collision events:[system handleEvent:SCNParticleEventCollision\n      forProperties:@[SCNParticlePropertyAngle,\n                      SCNParticlePropertyRotationAxis,\n                      SCNParticlePropertyContactNormal]\n          withBlock:^(void **data, size_t *dataStride, uint32_t *indices, NSInteger count) {\n              // For each particle affected by the collision event,\n              // calculate pointers in the data to each property's value.\n              for (NSInteger i = 0; i < count; ++i) {\n                  // SCNParticlePropertyAngle (float)\n                  float *angle = (float *)((char *)data[0] + dataStride[0] * indices[i]);\n                  // angle[0] is the particle's rotation angle in radians.\n \n                  // SCNParticlePropertyRotationAxis (float3)\n                  float *axis = (float *)((char *)data[1] + dataStride[1] * indices[i]);\n                  // axis[0..2] are the xyz components of the particle's rotation axis.\n \n                  // SCNParticlePropertyContactNormal (float3)\n                  float *norm = (float *)((char *)data[2] + dataStride[2] * indices[i]);\n                  // norm[0..2] are the xyz components of the contact normal vector.\n \n                  // Now, use the norm vector to rotate the particle's axis/angle (not shown).\n              }\n          }];\n\n * @see https://developer.apple.com/reference/scenekit/scnparticleeventblock\n ",
+            "start": 15,
+            "end": 3196,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 0
+              },
+              "end": {
+                "line": 37,
+                "column": 3
+              }
+            }
           }
-        }
+        ]
       }
     ]
   },
-  "comments": [],
+  "comments": [
+    {
+      "type": "CommentBlock",
+      "value": "*\n * The signature for blocks called by SceneKit in response to significant events during particle simulation, used by the handle(_:forProperties:handler:) method.\n * @type {function(data: UnsafeMutablePointer<UnsafeMutableRawPointer>, dataStride: UnsafeMutablePointer<Int>, indices: ?UnsafeMutablePointer<UInt32>, count: number): void}\n * @param {UnsafeMutablePointer<UnsafeMutableRawPointer>} data - An array of floating-point values containing stripes of property data for the system’s particles. The width and format of each data stripe depend on the properties you specify when calling the handle(_:forProperties:handler:) method.\n * @param {UnsafeMutablePointer<Int>} dataStride - An array identifying the offset, in bytes, of each property’s value in the data stripe for each particle. The order of offsets in this array corresponds to the order of the properties array you specify when calling the handle(_:forProperties:handler:) method.\n * @param {?UnsafeMutablePointer<UInt32>} indices - An array in which each element is an index that identifies (in the data array) the data stripe for each particle affected by the event that caused SceneKit to call the handler block.When SceneKit calls your handler block for the birth event, you need not use this parameter—at that time, the affected particles are indexed from 0 to the count parameter’s value.\n * @param {number} count - The number of particles affected by the current event.\n * @returns {void}\n * @desc Use this block to change properties of individual particles when they are spawned, when they collide with scene geometry, or when they die (that is, reach the end of their life spans and are removed from the scene). The following example illustrates setting up a handler block for particle collision events:[system handleEvent:SCNParticleEventCollision\n      forProperties:@[SCNParticlePropertyAngle,\n                      SCNParticlePropertyRotationAxis,\n                      SCNParticlePropertyContactNormal]\n          withBlock:^(void **data, size_t *dataStride, uint32_t *indices, NSInteger count) {\n              // For each particle affected by the collision event,\n              // calculate pointers in the data to each property's value.\n              for (NSInteger i = 0; i < count; ++i) {\n                  // SCNParticlePropertyAngle (float)\n                  float *angle = (float *)((char *)data[0] + dataStride[0] * indices[i]);\n                  // angle[0] is the particle's rotation angle in radians.\n \n                  // SCNParticlePropertyRotationAxis (float3)\n                  float *axis = (float *)((char *)data[1] + dataStride[1] * indices[i]);\n                  // axis[0..2] are the xyz components of the particle's rotation axis.\n \n                  // SCNParticlePropertyContactNormal (float3)\n                  float *norm = (float *)((char *)data[2] + dataStride[2] * indices[i]);\n                  // norm[0..2] are the xyz components of the contact normal vector.\n \n                  // Now, use the norm vector to rotate the particle's axis/angle (not shown).\n              }\n          }];\n\n * @see https://developer.apple.com/reference/scenekit/scnparticleeventblock\n ",
+      "start": 15,
+      "end": 3196,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 0
+        },
+        "end": {
+          "line": 37,
+          "column": 3
+        }
+      }
+    }
+  ],
   "tokens": [
     {
       "type": {
@@ -96,6 +538,493 @@
       }
     },
     {
+      "type": "CommentBlock",
+      "value": "*\n * The signature for blocks called by SceneKit in response to significant events during particle simulation, used by the handle(_:forProperties:handler:) method.\n * @type {function(data: UnsafeMutablePointer<UnsafeMutableRawPointer>, dataStride: UnsafeMutablePointer<Int>, indices: ?UnsafeMutablePointer<UInt32>, count: number): void}\n * @param {UnsafeMutablePointer<UnsafeMutableRawPointer>} data - An array of floating-point values containing stripes of property data for the system’s particles. The width and format of each data stripe depend on the properties you specify when calling the handle(_:forProperties:handler:) method.\n * @param {UnsafeMutablePointer<Int>} dataStride - An array identifying the offset, in bytes, of each property’s value in the data stripe for each particle. The order of offsets in this array corresponds to the order of the properties array you specify when calling the handle(_:forProperties:handler:) method.\n * @param {?UnsafeMutablePointer<UInt32>} indices - An array in which each element is an index that identifies (in the data array) the data stripe for each particle affected by the event that caused SceneKit to call the handler block.When SceneKit calls your handler block for the birth event, you need not use this parameter—at that time, the affected particles are indexed from 0 to the count parameter’s value.\n * @param {number} count - The number of particles affected by the current event.\n * @returns {void}\n * @desc Use this block to change properties of individual particles when they are spawned, when they collide with scene geometry, or when they die (that is, reach the end of their life spans and are removed from the scene). The following example illustrates setting up a handler block for particle collision events:[system handleEvent:SCNParticleEventCollision\n      forProperties:@[SCNParticlePropertyAngle,\n                      SCNParticlePropertyRotationAxis,\n                      SCNParticlePropertyContactNormal]\n          withBlock:^(void **data, size_t *dataStride, uint32_t *indices, NSInteger count) {\n              // For each particle affected by the collision event,\n              // calculate pointers in the data to each property's value.\n              for (NSInteger i = 0; i < count; ++i) {\n                  // SCNParticlePropertyAngle (float)\n                  float *angle = (float *)((char *)data[0] + dataStride[0] * indices[i]);\n                  // angle[0] is the particle's rotation angle in radians.\n \n                  // SCNParticlePropertyRotationAxis (float3)\n                  float *axis = (float *)((char *)data[1] + dataStride[1] * indices[i]);\n                  // axis[0..2] are the xyz components of the particle's rotation axis.\n \n                  // SCNParticlePropertyContactNormal (float3)\n                  float *norm = (float *)((char *)data[2] + dataStride[2] * indices[i]);\n                  // norm[0..2] are the xyz components of the contact normal vector.\n \n                  // Now, use the norm vector to rotate the particle's axis/angle (not shown).\n              }\n          }];\n\n * @see https://developer.apple.com/reference/scenekit/scnparticleeventblock\n ",
+      "start": 15,
+      "end": 3196,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 0
+        },
+        "end": {
+          "line": 37,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "const",
+        "keyword": "const",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "const",
+      "start": 3197,
+      "end": 3202,
+      "loc": {
+        "start": {
+          "line": 38,
+          "column": 0
+        },
+        "end": {
+          "line": 38,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "SCNParticleEventBlock",
+      "start": 3203,
+      "end": 3224,
+      "loc": {
+        "start": {
+          "line": 38,
+          "column": 6
+        },
+        "end": {
+          "line": 38,
+          "column": 27
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 3225,
+      "end": 3226,
+      "loc": {
+        "start": {
+          "line": 38,
+          "column": 28
+        },
+        "end": {
+          "line": 38,
+          "column": 29
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3227,
+      "end": 3228,
+      "loc": {
+        "start": {
+          "line": 38,
+          "column": 30
+        },
+        "end": {
+          "line": 38,
+          "column": 31
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "data",
+      "start": 3228,
+      "end": 3232,
+      "loc": {
+        "start": {
+          "line": 38,
+          "column": 31
+        },
+        "end": {
+          "line": 38,
+          "column": 35
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 3232,
+      "end": 3233,
+      "loc": {
+        "start": {
+          "line": 38,
+          "column": 35
+        },
+        "end": {
+          "line": 38,
+          "column": 36
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "dataStride",
+      "start": 3234,
+      "end": 3244,
+      "loc": {
+        "start": {
+          "line": 38,
+          "column": 37
+        },
+        "end": {
+          "line": 38,
+          "column": 47
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 3244,
+      "end": 3245,
+      "loc": {
+        "start": {
+          "line": 38,
+          "column": 47
+        },
+        "end": {
+          "line": 38,
+          "column": 48
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "indices",
+      "start": 3246,
+      "end": 3253,
+      "loc": {
+        "start": {
+          "line": 38,
+          "column": 49
+        },
+        "end": {
+          "line": 38,
+          "column": 56
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 3253,
+      "end": 3254,
+      "loc": {
+        "start": {
+          "line": 38,
+          "column": 56
+        },
+        "end": {
+          "line": 38,
+          "column": 57
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "count",
+      "start": 3255,
+      "end": 3260,
+      "loc": {
+        "start": {
+          "line": 38,
+          "column": 58
+        },
+        "end": {
+          "line": 38,
+          "column": 63
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3260,
+      "end": 3261,
+      "loc": {
+        "start": {
+          "line": 38,
+          "column": 63
+        },
+        "end": {
+          "line": 38,
+          "column": 64
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=>",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 3262,
+      "end": 3264,
+      "loc": {
+        "start": {
+          "line": 38,
+          "column": 65
+        },
+        "end": {
+          "line": 38,
+          "column": 67
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3265,
+      "end": 3266,
+      "loc": {
+        "start": {
+          "line": 38,
+          "column": 68
+        },
+        "end": {
+          "line": 38,
+          "column": 69
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3266,
+      "end": 3267,
+      "loc": {
+        "start": {
+          "line": 38,
+          "column": 69
+        },
+        "end": {
+          "line": 38,
+          "column": 70
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "export",
+        "keyword": "export",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "export",
+      "start": 3269,
+      "end": 3275,
+      "loc": {
+        "start": {
+          "line": 40,
+          "column": 0
+        },
+        "end": {
+          "line": 40,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "default",
+        "keyword": "default",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "default",
+      "start": 3276,
+      "end": 3283,
+      "loc": {
+        "start": {
+          "line": 40,
+          "column": 7
+        },
+        "end": {
+          "line": 40,
+          "column": 14
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "SCNParticleEventBlock",
+      "start": 3284,
+      "end": 3305,
+      "loc": {
+        "start": {
+          "line": 40,
+          "column": 15
+        },
+        "end": {
+          "line": 40,
+          "column": 36
+        }
+      }
+    },
+    {
       "type": {
         "label": "eof",
         "beforeExpr": false,
@@ -108,15 +1037,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 14,
-      "end": 14,
+      "start": 3306,
+      "end": 3306,
       "loc": {
         "start": {
-          "line": 3,
+          "line": 41,
           "column": 0
         },
         "end": {
-          "line": 3,
+          "line": 41,
           "column": 0
         }
       }

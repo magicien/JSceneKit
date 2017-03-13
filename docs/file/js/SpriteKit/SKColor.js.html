@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">js/SpriteKit/SKColor.js | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="https://github.com/magicien/JSceneKit" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">CoreGraphics</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGMutablePath.js~CGMutablePath.html">CGMutablePath</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html">CGPath</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGPoint.js~CGPoint.html">CGPoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGRect.js~CGRect.html">CGRect</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGSize.js~CGSize.html">CGSize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGVector.js~CGVector.html">CGVector</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-CGPathApplierFunction">CGPathApplierFunction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-CGBlendMode">CGBlendMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-CGLineCap">CGLineCap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-CGLineJoin">CGLineJoin</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-CGPathFillRule">CGPathFillRule</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Foundation</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSValue.js~NSValue.html">NSValue</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">ObjectiveC</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/ObjectiveC/NSObject.js~NSObject.html">NSObject</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">QuartzCore</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAnimation.js~CAAnimation.html">CAAnimation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAnimationGroup.js~CAAnimationGroup.html">CAAnimationGroup</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CABasicAnimation.js~CABasicAnimation.html">CABasicAnimation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAMediaTimingFunction.js~CAMediaTimingFunction.html">CAMediaTimingFunction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAPropertyAnimation.js~CAPropertyAnimation.html">CAPropertyAnimation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CATransform3D.js~CATransform3D.html">CATransform3D</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAction.js~CAAction.html">CAAction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAnimationDelegate.js~CAAnimationDelegate.html">CAAnimationDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAMediaTiming.js~CAMediaTiming.html">CAMediaTiming</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">SceneKit</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAction.js~SCNAction.html">SCNAction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAnimationEvent.js~SCNAnimationEvent.html">SCNAnimationEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAudioPlayer.js~SCNAudioPlayer.html">SCNAudioPlayer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAudioSource.js~SCNAudioSource.html">SCNAudioSource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBillboardAxis.js~SCNBillboardAxis.html">SCNBillboardAxis</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBillboardConstraint.js~SCNBillboardConstraint.html">SCNBillboardConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBox.js~SCNBox.html">SCNBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCamera.js~SCNCamera.html">SCNCamera</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCapsule.js~SCNCapsule.html">SCNCapsule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCone.js~SCNCone.html">SCNCone</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNConstraint.js~SCNConstraint.html">SCNConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCylinder.js~SCNCylinder.html">SCNCylinder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNDebugOptions.js~SCNDebugOptions.html">SCNDebugOptions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNFloor.js~SCNFloor.html">SCNFloor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNGeometry.js~SCNGeometry.html">SCNGeometry</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNGeometryElement.js~SCNGeometryElement.html">SCNGeometryElement</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNGeometrySource.js~SCNGeometrySource.html">SCNGeometrySource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNHitTestResult.js~SCNHitTestResult.html">SCNHitTestResult</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNIKConstraint.js~SCNIKConstraint.html">SCNIKConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLayer.js~SCNLayer.html">SCNLayer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLevelOfDetail.js~SCNLevelOfDetail.html">SCNLevelOfDetail</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLight.js~SCNLight.html">SCNLight</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLookAtConstraint.js~SCNLookAtConstraint.html">SCNLookAtConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMaterial.js~SCNMaterial.html">SCNMaterial</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html">SCNMaterialProperty</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMatrix4.js~SCNMatrix4.html">SCNMatrix4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMorpher.js~SCNMorpher.html">SCNMorpher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html">SCNNode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNParticlePropertyController.js~SCNParticlePropertyController.html">SCNParticlePropertyController</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNParticleSystem.js~SCNParticleSystem.html">SCNParticleSystem</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsBallSocketJoint.js~SCNPhysicsBallSocketJoint.html">SCNPhysicsBallSocketJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsBehavior.js~SCNPhysicsBehavior.html">SCNPhysicsBehavior</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsBody.js~SCNPhysicsBody.html">SCNPhysicsBody</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsCollisionCategory.js~SCNPhysicsCollisionCategory.html">SCNPhysicsCollisionCategory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsContact.js~SCNPhysicsContact.html">SCNPhysicsContact</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsField.js~SCNPhysicsField.html">SCNPhysicsField</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsHingeJoint.js~SCNPhysicsHingeJoint.html">SCNPhysicsHingeJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsShape.js~SCNPhysicsShape.html">SCNPhysicsShape</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsSliderJoint.js~SCNPhysicsSliderJoint.html">SCNPhysicsSliderJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsVehicle.js~SCNPhysicsVehicle.html">SCNPhysicsVehicle</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsVehicleWheel.js~SCNPhysicsVehicleWheel.html">SCNPhysicsVehicleWheel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsWorld.js~SCNPhysicsWorld.html">SCNPhysicsWorld</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPlane.js~SCNPlane.html">SCNPlane</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNProgram.js~SCNProgram.html">SCNProgram</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPyramid.js~SCNPyramid.html">SCNPyramid</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNReferenceNode.js~SCNReferenceNode.html">SCNReferenceNode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNRenderer.js~SCNRenderer.html">SCNRenderer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNScene.js~SCNScene.html">SCNScene</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneSource.js~SCNSceneSource.html">SCNSceneSource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNShape.js~SCNShape.html">SCNShape</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSkinner.js~SCNSkinner.html">SCNSkinner</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSphere.js~SCNSphere.html">SCNSphere</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTechnique.js~SCNTechnique.html">SCNTechnique</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNText.js~SCNText.html">SCNText</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTorus.js~SCNTorus.html">SCNTorus</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTransaction.js~SCNTransaction.html">SCNTransaction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTransformConstraint.js~SCNTransformConstraint.html">SCNTransformConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTube.js~SCNTube.html">SCNTube</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNVector3.js~SCNVector3.html">SCNVector3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNVector4.js~SCNVector4.html">SCNVector4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNView.js~SCNView.html">SCNView</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNActionable.js~SCNActionable.html">SCNActionable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAnimatable.js~SCNAnimatable.html">SCNAnimatable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBoundingVolume.js~SCNBoundingVolume.html">SCNBoundingVolume</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBufferStream.js~SCNBufferStream.html">SCNBufferStream</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNNodeRendererDelegate.js~SCNNodeRendererDelegate.html">SCNNodeRendererDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsContactDelegate.js~SCNPhysicsContactDelegate.html">SCNPhysicsContactDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNProgramDelegate.js~SCNProgramDelegate.html">SCNProgramDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneExportDelegate.js~SCNSceneExportDelegate.html">SCNSceneExportDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneRenderer.js~SCNSceneRenderer.html">SCNSceneRenderer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneRendererDelegate.js~SCNSceneRendererDelegate.html">SCNSceneRendererDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNShadable.js~SCNShadable.html">SCNShadable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTechniqueSupport.js~SCNTechniqueSupport.html">SCNTechniqueSupport</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNActionTimingFunction">SCNActionTimingFunction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNAnimationEventBlock">SCNAnimationEventBlock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNBindingBlock">SCNBindingBlock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNBufferBindingBlock">SCNBufferBindingBlock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNFieldForceEvaluator">SCNFieldForceEvaluator</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4EqualToMatrix4">SCNMatrix4EqualToMatrix4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4FromGLKMatrix4">SCNMatrix4FromGLKMatrix4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4FromMat4">SCNMatrix4FromMat4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4Invert">SCNMatrix4Invert</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4IsIdentity">SCNMatrix4IsIdentity</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4MakeRotation">SCNMatrix4MakeRotation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4MakeScale">SCNMatrix4MakeScale</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4MakeTranslation">SCNMatrix4MakeTranslation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4Mult">SCNMatrix4Mult</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4Rotate">SCNMatrix4Rotate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4Scale">SCNMatrix4Scale</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4ToGLKMatrix4">SCNMatrix4ToGLKMatrix4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4ToMat4">SCNMatrix4ToMat4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4Translate">SCNMatrix4Translate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNParticleEventBlock">SCNParticleEventBlock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNParticleModifierBlock">SCNParticleModifierBlock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNSceneExportProgressHandler">SCNSceneExportProgressHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNSceneSourceStatusHandler">SCNSceneSourceStatusHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector3EqualToVector3">SCNVector3EqualToVector3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector3FromFloat3">SCNVector3FromFloat3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector3FromGLKVector3">SCNVector3FromGLKVector3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector3Make">SCNVector3Make</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector3ToFloat3">SCNVector3ToFloat3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector3ToGLKVector3">SCNVector3ToGLKVector3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector4EqualToVector4">SCNVector4EqualToVector4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector4FromFloat4">SCNVector4FromFloat4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector4FromGLKVector4">SCNVector4FromGLKVector4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector4Make">SCNVector4Make</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector4ToFloat4">SCNVector4ToFloat4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector4ToGLKVector4">SCNVector4ToGLKVector4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SCNQuaternion">SCNQuaternion</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNActionTimingMode">SCNActionTimingMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNAntialiasingMode">SCNAntialiasingMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNBlendMode">SCNBlendMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNBufferFrequency">SCNBufferFrequency</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNChamferMode">SCNChamferMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNCullMode">SCNCullMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNFilterMode">SCNFilterMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNGeometryPrimitiveType">SCNGeometryPrimitiveType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNHitTestOption">SCNHitTestOption</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNMorpherCalculationMode">SCNMorpherCalculationMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNMovabilityHint">SCNMovabilityHint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNParticleBirthDirection">SCNParticleBirthDirection</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNParticleBirthLocation">SCNParticleBirthLocation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNParticleBlendMode">SCNParticleBlendMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNParticleEvent">SCNParticleEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNParticleImageSequenceAnimationMode">SCNParticleImageSequenceAnimationMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNParticleInputMode">SCNParticleInputMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNParticleModifierStage">SCNParticleModifierStage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNParticleOrientationMode">SCNParticleOrientationMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNParticleSortingMode">SCNParticleSortingMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNPhysicsBodyType">SCNPhysicsBodyType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNPhysicsFieldScope">SCNPhysicsFieldScope</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNReferenceLoadingPolicy">SCNReferenceLoadingPolicy</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNRenderingAPI">SCNRenderingAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNSceneSourceStatus">SCNSceneSourceStatus</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNShaderModifierEntryPoint">SCNShaderModifierEntryPoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNShadowMode">SCNShadowMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNTransparencyMode">SCNTransparencyMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNWrapMode">SCNWrapMode</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">SpriteKit</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SpriteKit/SKColor.js~SKColor.html">SKColor</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">js/SpriteKit/SKColor.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">&apos;use strict&apos;
+
+import NSObject from &apos;../ObjectiveC/NSObject&apos;
+
+/**
+ * An object that stores color data and sometimes opacity (that is, alpha value). 
+ * @access public
+ * @extends {NSObject}
+ * @see https://developer.apple.com/reference/uikit/uicolor
+ */
+export default class SKColor extends NSObject {
+
+  // Initializers
+
+  /**
+   * 
+   * @access public
+   * @constructor
+   * @param {number} red - 
+   * @param {number} green - 
+   * @param {number} blue - 
+   * @param {number} alpha - 
+   * @see https://developer.apple.com/reference/uikit/uicolor/1625015-init
+   */
+  constructor(red, green, blue, alpha) {
+    super()
+
+    /**
+     * @type {number}
+     */
+    this.red = red
+
+    /**
+     * @type {number}
+     */
+    this.green = green
+
+    /**
+     * @type {number}
+     */
+    this.blue = blue
+
+    /**
+     * @type {number}
+     */
+    this.alpha = alpha
+  }
+
+  // Creating a Color Object with a Predefined Color
+
+  /**
+   * A color object in the sRGB color space whose grayscale value is 0.0 and whose alpha value is 1.0.
+   * @type {SKColor}
+   * @desc 
+   * @see https://developer.apple.com/reference/uikit/uicolor/1621929-black
+   */
+  static get black() {
+    return new SKColor(0.0, 0.0, 0.0, 1.0)
+  }
+
+  /**
+   * A color object whose RGB values are 0.0, 0.0, and 1.0 and whose alpha value is 1.0.
+   * @type {SKColor}
+   * @desc 
+   * @see https://developer.apple.com/reference/uikit/uicolor/1621947-blue
+   */
+  static get blue() {
+    return new SKColor(0.0, 0.0, 1.0, 1.0)
+  }
+
+  /**
+   * A color object whose RGB values are 0.6, 0.4, and 0.2 and whose alpha value is 1.0.
+   * @type {SKColor}
+   * @desc 
+   * @see https://developer.apple.com/reference/uikit/uicolor/1621950-brown
+   */
+  static get brown() {
+    return new SKColor(0.6, 0.4, 0.2, 1.0)
+  }
+
+  /**
+   * A color object whose grayscale and alpha values are both 0.0.
+   * @type {SKColor}
+   * @desc 
+   * @see https://developer.apple.com/reference/uikit/uicolor/1621945-clear
+   */
+  static get clear() {
+    return new SKColor(0.0, 0.0, 0.0, 0.0)
+  }
+
+  /**
+   * A color object whose RGB values are 0.0, 1.0, and 1.0 and whose alpha value is 1.0.
+   * @type {SKColor}
+   * @desc 
+   * @see https://developer.apple.com/reference/uikit/uicolor/1621942-cyan
+   */
+  static get cyan() {
+    return new SKColor(0.0, 1.0, 1.0, 1.0)
+  }
+
+  /**
+   * A color object whose grayscale value is 1/3 and whose alpha value is 1.0.
+   * @type {SKColor}
+   * @desc 
+   * @see https://developer.apple.com/reference/uikit/uicolor/1621952-darkgray
+   */
+  static get darkGray() {
+    const third = 1.0 / 3.0
+    return new SKColor(third, third, third, 1.0)
+  }
+
+  /**
+   * A color object whose grayscale value is 0.5 and whose alpha value is 1.0.
+   * @type {SKColor}
+   * @desc 
+   * @see https://developer.apple.com/reference/uikit/uicolor/1621941-gray
+   */
+  static get gray() {
+    return new SKColor(0.5, 0.5, 0.5, 1.0)
+  }
+
+  /**
+   * A color object whose RGB values are 0.0, 1.0, and 0.0 and whose alpha value is 1.0.
+   * @type {SKColor}
+   * @desc 
+   * @see https://developer.apple.com/reference/uikit/uicolor/1621946-green
+   */
+  static get green() {
+    return new SKColor(0.0, 1.0, 0.0, 1.0)
+  }
+
+  /**
+   * A color object whose grayscale value is 2/3 and whose alpha value is 1.0.
+   * @type {SKColor}
+   * @desc 
+   * @see https://developer.apple.com/reference/uikit/uicolor/1621932-lightgray
+   */
+  static get lightGray() {
+    const twoThirds = 2.0 / 3.0
+    return new SKColor(twoThirds, twoThirds, twoThirds, 1.0)
+  }
+
+  /**
+   * A color object whose RGB values are 1.0, 0.0, and 1.0 and whose alpha value is 1.0.
+   * @type {SKColor}
+   * @desc 
+   * @see https://developer.apple.com/reference/uikit/uicolor/1621934-magenta
+   */
+  static get magenta() {
+    return new SKColor(1.0, 0.0, 1.0, 1.0)
+  }
+
+  /**
+   * A color object whose RGB values are 1.0, 0.5, and 0.0 and whose alpha value is 1.0.
+   * @type {SKColor}
+   * @desc 
+   * @see https://developer.apple.com/reference/uikit/uicolor/1621956-orange
+   */
+  static get orange() {
+    return new SKColor(1.0, 0.5, 0.0, 1.0)
+  }
+
+  /**
+   * A color object whose RGB values are 0.5, 0.0, and 0.5 and whose alpha value is 1.0.
+   * @type {SKColor}
+   * @desc 
+   * @see https://developer.apple.com/reference/uikit/uicolor/1621923-purple
+   */
+  static get purple() {
+    return new SKColor(0.5, 0.0, 0.5, 1.0)
+  }
+  
+  /**
+   * A color object whose RGB values are 1.0, 0.0, and 0.0 and whose alpha value is 1.0.
+   * @type {SKColor}
+   * @desc 
+   * @see https://developer.apple.com/reference/uikit/uicolor/1621924-red
+   */
+  static get red() {
+    return new SKColor(1.0, 0.0, 0.0, 1.0)
+  }
+
+  /**
+   * A color object whose grayscale value is 1.0 and whose alpha value is 1.0.
+   * @type {SKColor}
+   * @desc 
+   * @see https://developer.apple.com/reference/uikit/uicolor/1621920-white
+   */
+  static get white() {
+    return new SKColor(1.0, 0.0, 0.0, 1.0)
+  }
+
+  /**
+   * A color object whose RGB values are 1.0, 1.0, and 0.0 and whose alpha value is 1.0.
+   * @type {SKColor}
+   * @desc 
+   * @see https://developer.apple.com/reference/uikit/uicolor/1621953-yellow
+   */
+  static get yellow() {
+    return new SKColor(1.0, 1.0, 0.0, 1.0)
+  }
+
+  // Creating a Custom UIColor Object in a Specific Color Space
+
+  /**
+   * Initializes and returns a color object using the specified opacity and grayscale values. 
+   * @access public
+   * @param {number} white - The grayscale value of the color object. On applications linked for iOS 10 or later, the color is specified in an extended color space, and the input value  is never clamped. On earlier versions of iOS, white values below 0.0 are interpreted as 0.0, and values above 1.0 are interpreted as 1.0.
+   * @param {number} alpha - The opacity value of the color object, specified as a value from 0.0 to 1.0. Alpha values below 0.0 are interpreted as 0.0, and values above 1.0 are interpreted as 1.0
+   * @returns {void}
+   * @desc On applications linked on iOS 10 or later, the input parameters are not clamped. On earlier versions of iOS, values below 0.0 are interpreted as 0.0, and values above 1.0 are interpreted as 1.0.
+   * @see https://developer.apple.com/reference/uikit/uicolor/1621944-init
+   */
+  //init(white, alpha) {
+  //}
+
+  // Creating a UIColor Object from another Representation of Color
+
+  /**
+   * Creates and returns a color object that has the same color space and component values as the receiver, but has the specified alpha component. 
+   * @access public
+   * @param {number} alpha - The opacity value of the new color object, specified as a value from 0.0 to 1.0. Alpha values below 0.0 are interpreted as 0.0, and values above 1.0 are interpreted as 1.0
+   * @returns {SKColor} - 
+   * @desc A subclass with explicit opacity components should override this method to return a color with the specified alpha.
+   * @see https://developer.apple.com/reference/uikit/uicolor/1621922-withalphacomponent
+   */
+  withAlphaComponent(alpha) {
+    return new SKColor(this.red, this.green, this.blue, alpha)
+  }
+
+  // Creating a UIColor Object that Draws Using a Pattern
+
+  /**
+   * Initializes and returns a color object using the specified Quartz color reference. 
+   * @access public
+   * @param {Image} image - The image to use when creating the pattern color. 
+   * @returns {void}
+   * @desc You can use pattern colors to set the fill or stroke color just as you would a solid color. During drawing, the image in the pattern color is tiled as necessary to cover the given area. By default, the phase of the returned color is 0, which causes the top-left corner of the image to be aligned with the drawing origin. To change the phase, make the color the current color and then use the setPatternPhase(_:) function to change the phase.
+   * @see https://developer.apple.com/reference/uikit/uicolor/1621933-init
+   */
+  initPatternImage(image) {
+  }
+
+  // Setting the Graphics Context&#x2019;s Drawing Color
+
+  /**
+   * Sets the color of subsequent stroke and fill operations to the color that the receiver represents. 
+   * @access public
+   * @returns {void}
+   * @desc If you subclass UIColor, you must implement this method in your subclass. Your custom implementation should modify both the stroke and fill color in the current graphics context by setting them both to the color represented by the receiver.
+   * @see https://developer.apple.com/reference/uikit/uicolor/1621928-set
+   */
+  set() {
+  }
+
+  /**
+   * Sets the color of subsequent fill operations to the color that the receiver represents.
+   * @access public
+   * @returns {void}
+   * @desc If you subclass UIColor, you must implement this method in your subclass. Your custom implementation should modify the fill color in the current graphics context by setting it to the color represented by the receiver.
+   * @see https://developer.apple.com/reference/uikit/uicolor/1621926-setfill
+   */
+  setFill() {
+  }
+
+  /**
+   * Sets the color of subsequent stroke operations to the color that the receiver represents.
+   * @access public
+   * @returns {void}
+   * @desc If you subclass UIColor, you must implement this method in your subclass. Your custom implementation should modify the stroke color in the current graphics context by setting it to the color represented by the receiver.
+   * @see https://developer.apple.com/reference/uikit/uicolor/1621948-setstroke
+   */
+  setStroke() {
+  }
+
+  // Retrieving Color Information
+
+  /**
+   * Returns the components that make up the color in the HSB color space.
+   * @access public
+   * @returns {Object} 
+   * @property {number} color.hue - On return, the hue component of the color object. On applications linked for iOS 10 or later, the hue component is specified in an extended range color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
+   * @property {number} color.saturation - On return, the saturation component of the color object. On applications linked for iOS 10 or later, the saturation component is specified in an extended range color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
+   * @property {number} color.brightness - On return, the brightness component of the color object. On applications linked for iOS 10 or later, the brightness component is specified in an extended range color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
+   * @property {number} color.alpha - On return, the opacity component of the color object, specified as a value between 0.0 and 1.0.
+   * @desc If the color is in a compatible color space, the color is converted into the HSB color space and its components are returned to your application. If the color is not in a compatible color space, the parameters are unchanged.
+   * @see https://developer.apple.com/reference/uikit/uicolor/1621949-gethue
+   */
+  getHSBA() {
+    const color = {
+      hue: 0,
+      saturation: 0,
+      brightness: 0,
+      alpha: 0
+    }
+    return color
+  }
+
+  /**
+   * Returns the components that make up the color in the RGB color space.
+   * @access public
+   * @returns {Object}
+   * @property {number} color.red - On return, the red component of the color object. On applications linked for iOS 10 or later, the red component is specified in an extended range sRGB color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
+   * @property {number} color.green - On return, the green component of the color object. On applications linked for iOS 10 or later, the green component is specified in an extended range sRGB color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
+   * @property {number} color.blue - On return, the blue component of the color object. On applications linked for iOS 10 or later, the blue component is specified in an extended range sRGB color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
+   * @property {number} color.alpha - On return, the opacity component of the color object, specified as a value between 0.0 and 1.0.
+   * @desc If the color is in a compatible color space, the color is converted into RGB format and its components are returned to your application. If the color is not in a compatible color space, the parameters are unchanged.
+   * @see https://developer.apple.com/reference/uikit/uicolor/1621919-getred
+   */
+  getRGBA(red, green, blue, alpha) {
+    const color = {
+      red: this.red,
+      green: this.green,
+      blue: this.blue,
+      alpha: this.alpha
+    }
+    return color
+  }
+
+  /**
+   * Returns the grayscale components of the color.
+   * @access public
+   * @param {?UnsafeMutablePointer&lt;CGFloat&gt;} white - On return, the grayscale component of the color object. On applications linked for iOS 10 or later, the grayscale component is specified in an extended range gray color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
+   * @param {?UnsafeMutablePointer&lt;CGFloat&gt;} alpha - On return, the opacity component of the color object, specified as a value between 0.0 and 1.0.
+   * @returns {boolean} - 
+   * @desc If the color is in a compatible color space, the color is converted into grayscale format and returned to your application. If the color is not in a compatible color space, the parameters are unchanged.
+   * @see https://developer.apple.com/reference/uikit/uicolor/1621927-getwhite
+   */
+  //getWhite(white, alpha) {
+  //  return false
+  //}
+
+  /**
+   * HTML color representation
+   * @access public
+   * @type {string}
+   */
+  get htmlColor() {
+    const r = Math.round(this.red * 255)
+    const g = Math.round(this.green * 255)
+    const b = Math.round(this.blue * 255)
+    return `rgba(${r}, ${g}, ${b}, ${this.alpha})`
+  }
+
+  /**
+   * @access public
+   * @returns {Float32Array}
+   */
+  float32Array() {
+    return new Float32Array([this.red, this.green, this.blue, this.alpha])
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

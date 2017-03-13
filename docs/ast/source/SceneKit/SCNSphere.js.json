@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 1654,
+  "end": 1586,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 62,
+      "line": 52,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 1654,
+    "end": 1586,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 62,
+        "line": 52,
         "column": 0
       }
     },
@@ -120,28 +120,28 @@
       {
         "type": "ExportDefaultDeclaration",
         "start": 214,
-        "end": 1653,
+        "end": 1585,
         "loc": {
           "start": {
             "line": 12,
             "column": 0
           },
           "end": {
-            "line": 61,
+            "line": 51,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
           "start": 229,
-          "end": 1653,
+          "end": 1585,
           "loc": {
             "start": {
               "line": 12,
               "column": 15
             },
             "end": {
-              "line": 61,
+              "line": 51,
               "column": 1
             }
           },
@@ -183,127 +183,226 @@
           "body": {
             "type": "ClassBody",
             "start": 265,
-            "end": 1653,
+            "end": 1585,
             "loc": {
               "start": {
                 "line": 12,
                 "column": 51
               },
               "end": {
-                "line": 61,
+                "line": 51,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 340,
-                "end": 1137,
+                "start": 758,
+                "end": 1583,
                 "loc": {
                   "start": {
-                    "line": 19,
+                    "line": 23,
                     "column": 2
                   },
                   "end": {
-                    "line": 47,
+                    "line": 50,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 340,
-                  "end": 344,
+                  "start": 758,
+                  "end": 769,
                   "loc": {
                     "start": {
-                      "line": 19,
+                      "line": 23,
                       "column": 2
                     },
                     "end": {
-                      "line": 19,
-                      "column": 6
+                      "line": 23,
+                      "column": 13
                     },
-                    "identifierName": "init"
+                    "identifierName": "constructor"
                   },
-                  "name": "init",
+                  "name": "constructor",
                   "leadingComments": null
                 },
                 "static": false,
-                "kind": "method",
+                "kind": "constructor",
                 "id": null,
                 "generator": false,
                 "expression": false,
                 "async": false,
-                "params": [],
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "start": 770,
+                    "end": 776,
+                    "loc": {
+                      "start": {
+                        "line": 23,
+                        "column": 14
+                      },
+                      "end": {
+                        "line": 23,
+                        "column": 20
+                      },
+                      "identifierName": "radius"
+                    },
+                    "name": "radius"
+                  }
+                ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 347,
-                  "end": 1137,
+                  "start": 778,
+                  "end": 1583,
                   "loc": {
                     "start": {
-                      "line": 19,
-                      "column": 9
+                      "line": 23,
+                      "column": 22
                     },
                     "end": {
-                      "line": 47,
+                      "line": 50,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 561,
-                      "end": 576,
+                      "start": 784,
+                      "end": 791,
                       "loc": {
                         "start": {
-                          "line": 28,
+                          "line": 24,
                           "column": 4
                         },
                         "end": {
-                          "line": 28,
-                          "column": 19
+                          "line": 24,
+                          "column": 11
                         }
                       },
                       "expression": {
-                        "type": "AssignmentExpression",
-                        "start": 561,
-                        "end": 576,
+                        "type": "CallExpression",
+                        "start": 784,
+                        "end": 791,
                         "loc": {
                           "start": {
-                            "line": 28,
+                            "line": 24,
                             "column": 4
                           },
                           "end": {
-                            "line": 28,
-                            "column": 19
+                            "line": 24,
+                            "column": 11
                           }
                         },
-                        "operator": "=",
-                        "left": {
-                          "type": "MemberExpression",
-                          "start": 561,
-                          "end": 572,
+                        "callee": {
+                          "type": "Super",
+                          "start": 784,
+                          "end": 789,
+                          "loc": {
+                            "start": {
+                              "line": 24,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 24,
+                              "column": 9
+                            }
+                          }
+                        },
+                        "arguments": [],
+                        "trailingComments": null
+                      },
+                      "trailingComments": [
+                        {
+                          "type": "CommentLine",
+                          "value": " Adjusting a Sphere’s Dimensions",
+                          "start": 797,
+                          "end": 831,
+                          "loc": {
+                            "start": {
+                              "line": 26,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 26,
+                              "column": 38
+                            }
+                          }
+                        },
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * The radius of the sphere. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523787-radius\n     ",
+                          "start": 837,
+                          "end": 999,
                           "loc": {
                             "start": {
                               "line": 28,
                               "column": 4
                             },
                             "end": {
-                              "line": 28,
+                              "line": 32,
+                              "column": 7
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "start": 1004,
+                      "end": 1024,
+                      "loc": {
+                        "start": {
+                          "line": 33,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 33,
+                          "column": 24
+                        }
+                      },
+                      "expression": {
+                        "type": "AssignmentExpression",
+                        "start": 1004,
+                        "end": 1024,
+                        "loc": {
+                          "start": {
+                            "line": 33,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 33,
+                            "column": 24
+                          }
+                        },
+                        "operator": "=",
+                        "left": {
+                          "type": "MemberExpression",
+                          "start": 1004,
+                          "end": 1015,
+                          "loc": {
+                            "start": {
+                              "line": 33,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 33,
                               "column": 15
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 561,
-                            "end": 565,
+                            "start": 1004,
+                            "end": 1008,
                             "loc": {
                               "start": {
-                                "line": 28,
+                                "line": 33,
                                 "column": 4
                               },
                               "end": {
-                                "line": 28,
+                                "line": 33,
                                 "column": 8
                               }
                             },
@@ -311,15 +410,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 566,
-                            "end": 572,
+                            "start": 1009,
+                            "end": 1015,
                             "loc": {
                               "start": {
-                                "line": 28,
+                                "line": 33,
                                 "column": 9
                               },
                               "end": {
-                                "line": 28,
+                                "line": 33,
                                 "column": 15
                               },
                               "identifierName": "radius"
@@ -330,24 +429,21 @@
                           "leadingComments": null
                         },
                         "right": {
-                          "type": "NumericLiteral",
-                          "start": 575,
-                          "end": 576,
+                          "type": "Identifier",
+                          "start": 1018,
+                          "end": 1024,
                           "loc": {
                             "start": {
-                              "line": 28,
+                              "line": 33,
                               "column": 18
                             },
                             "end": {
-                              "line": 28,
-                              "column": 19
-                            }
+                              "line": 33,
+                              "column": 24
+                            },
+                            "identifierName": "radius"
                           },
-                          "extra": {
-                            "rawValue": 0,
-                            "raw": "0"
-                          },
-                          "value": 0,
+                          "name": "radius",
                           "leadingComments": null,
                           "trailingComments": null
                         },
@@ -358,15 +454,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Adjusting a Sphere’s Dimensions",
-                          "start": 354,
-                          "end": 388,
+                          "start": 797,
+                          "end": 831,
                           "loc": {
                             "start": {
-                              "line": 21,
+                              "line": 26,
                               "column": 4
                             },
                             "end": {
-                              "line": 21,
+                              "line": 26,
                               "column": 38
                             }
                           }
@@ -374,15 +470,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The radius of the sphere. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523787-radius\n     ",
-                          "start": 394,
-                          "end": 556,
+                          "start": 837,
+                          "end": 999,
                           "loc": {
                             "start": {
-                              "line": 23,
+                              "line": 28,
                               "column": 4
                             },
                             "end": {
-                              "line": 27,
+                              "line": 32,
                               "column": 7
                             }
                           }
@@ -392,15 +488,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Adjusting Geometric Detail",
-                          "start": 583,
-                          "end": 612,
+                          "start": 1030,
+                          "end": 1059,
                           "loc": {
                             "start": {
-                              "line": 31,
+                              "line": 35,
                               "column": 4
                             },
                             "end": {
-                              "line": 31,
+                              "line": 35,
                               "column": 33
                             }
                           }
@@ -408,15 +504,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A Boolean value specifying whether SceneKit uses a geodesic polygon mesh to render the sphere.\n     * @type {boolean}\n     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523268-isgeodesic\n     ",
-                          "start": 618,
-                          "end": 842,
+                          "start": 1065,
+                          "end": 1289,
                           "loc": {
                             "start": {
-                              "line": 33,
+                              "line": 37,
                               "column": 4
                             },
                             "end": {
-                              "line": 37,
+                              "line": 41,
                               "column": 7
                             }
                           }
@@ -425,58 +521,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 847,
-                      "end": 870,
+                      "start": 1294,
+                      "end": 1317,
                       "loc": {
                         "start": {
-                          "line": 38,
+                          "line": 42,
                           "column": 4
                         },
                         "end": {
-                          "line": 38,
+                          "line": 42,
                           "column": 27
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 847,
-                        "end": 870,
+                        "start": 1294,
+                        "end": 1317,
                         "loc": {
                           "start": {
-                            "line": 38,
+                            "line": 42,
                             "column": 4
                           },
                           "end": {
-                            "line": 38,
+                            "line": 42,
                             "column": 27
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 847,
-                          "end": 862,
+                          "start": 1294,
+                          "end": 1309,
                           "loc": {
                             "start": {
-                              "line": 38,
+                              "line": 42,
                               "column": 4
                             },
                             "end": {
-                              "line": 38,
+                              "line": 42,
                               "column": 19
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 847,
-                            "end": 851,
+                            "start": 1294,
+                            "end": 1298,
                             "loc": {
                               "start": {
-                                "line": 38,
+                                "line": 42,
                                 "column": 4
                               },
                               "end": {
-                                "line": 38,
+                                "line": 42,
                                 "column": 8
                               }
                             },
@@ -484,15 +580,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 852,
-                            "end": 862,
+                            "start": 1299,
+                            "end": 1309,
                             "loc": {
                               "start": {
-                                "line": 38,
+                                "line": 42,
                                 "column": 9
                               },
                               "end": {
-                                "line": 38,
+                                "line": 42,
                                 "column": 19
                               },
                               "identifierName": "isGeodesic"
@@ -504,15 +600,15 @@
                         },
                         "right": {
                           "type": "BooleanLiteral",
-                          "start": 865,
-                          "end": 870,
+                          "start": 1312,
+                          "end": 1317,
                           "loc": {
                             "start": {
-                              "line": 38,
+                              "line": 42,
                               "column": 22
                             },
                             "end": {
-                              "line": 38,
+                              "line": 42,
                               "column": 27
                             }
                           },
@@ -527,15 +623,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Adjusting Geometric Detail",
-                          "start": 583,
-                          "end": 612,
+                          "start": 1030,
+                          "end": 1059,
                           "loc": {
                             "start": {
-                              "line": 31,
+                              "line": 35,
                               "column": 4
                             },
                             "end": {
-                              "line": 31,
+                              "line": 35,
                               "column": 33
                             }
                           }
@@ -543,15 +639,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A Boolean value specifying whether SceneKit uses a geodesic polygon mesh to render the sphere.\n     * @type {boolean}\n     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523268-isgeodesic\n     ",
-                          "start": 618,
-                          "end": 842,
+                          "start": 1065,
+                          "end": 1289,
                           "loc": {
                             "start": {
-                              "line": 33,
+                              "line": 37,
                               "column": 4
                             },
                             "end": {
-                              "line": 37,
+                              "line": 41,
                               "column": 7
                             }
                           }
@@ -561,15 +657,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A number determining the detail of the polygon mesh SceneKit uses to render the sphere. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523912-segmentcount\n     ",
-                          "start": 876,
-                          "end": 1106,
+                          "start": 1323,
+                          "end": 1553,
                           "loc": {
                             "start": {
-                              "line": 40,
+                              "line": 44,
                               "column": 4
                             },
                             "end": {
-                              "line": 44,
+                              "line": 48,
                               "column": 7
                             }
                           }
@@ -578,58 +674,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1111,
-                      "end": 1132,
+                      "start": 1558,
+                      "end": 1579,
                       "loc": {
                         "start": {
-                          "line": 45,
+                          "line": 49,
                           "column": 4
                         },
                         "end": {
-                          "line": 45,
+                          "line": 49,
                           "column": 25
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1111,
-                        "end": 1132,
+                        "start": 1558,
+                        "end": 1579,
                         "loc": {
                           "start": {
-                            "line": 45,
+                            "line": 49,
                             "column": 4
                           },
                           "end": {
-                            "line": 45,
+                            "line": 49,
                             "column": 25
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1111,
-                          "end": 1128,
+                          "start": 1558,
+                          "end": 1575,
                           "loc": {
                             "start": {
-                              "line": 45,
+                              "line": 49,
                               "column": 4
                             },
                             "end": {
-                              "line": 45,
+                              "line": 49,
                               "column": 21
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1111,
-                            "end": 1115,
+                            "start": 1558,
+                            "end": 1562,
                             "loc": {
                               "start": {
-                                "line": 45,
+                                "line": 49,
                                 "column": 4
                               },
                               "end": {
-                                "line": 45,
+                                "line": 49,
                                 "column": 8
                               }
                             },
@@ -637,15 +733,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1116,
-                            "end": 1128,
+                            "start": 1563,
+                            "end": 1575,
                             "loc": {
                               "start": {
-                                "line": 45,
+                                "line": 49,
                                 "column": 9
                               },
                               "end": {
-                                "line": 45,
+                                "line": 49,
                                 "column": 21
                               },
                               "identifierName": "segmentCount"
@@ -657,15 +753,15 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 1131,
-                          "end": 1132,
+                          "start": 1578,
+                          "end": 1579,
                           "loc": {
                             "start": {
-                              "line": 45,
+                              "line": 49,
                               "column": 24
                             },
                             "end": {
-                              "line": 45,
+                              "line": 49,
                               "column": 25
                             }
                           },
@@ -681,15 +777,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A number determining the detail of the polygon mesh SceneKit uses to render the sphere. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523912-segmentcount\n     ",
-                          "start": 876,
-                          "end": 1106,
+                          "start": 1323,
+                          "end": 1553,
                           "loc": {
                             "start": {
-                              "line": 40,
+                              "line": 44,
                               "column": 4
                             },
                             "end": {
-                              "line": 44,
+                              "line": 48,
                               "column": 7
                             }
                           }
@@ -697,166 +793,37 @@
                       ]
                     }
                   ],
-                  "directives": [],
-                  "trailingComments": null
-                },
-                "leadingComments": [
-                  {
-                    "type": "CommentBlock",
-                    "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-                    "start": 270,
-                    "end": 337,
-                    "loc": {
-                      "start": {
-                        "line": 14,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 18,
-                        "column": 5
-                      }
-                    }
-                  }
-                ],
-                "trailingComments": [
-                  {
-                    "type": "CommentLine",
-                    "value": " Creating a Sphere",
-                    "start": 1141,
-                    "end": 1161,
-                    "loc": {
-                      "start": {
-                        "line": 49,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 49,
-                        "column": 22
-                      }
-                    }
-                  },
-                  {
-                    "type": "CommentBlock",
-                    "value": "*\n   * Creates a sphere geometry with the specified radius.\n   * @access public\n   * @param {number} radius - The radius of the sphere in its local coordinate space.\n   * @returns {void}\n   * @desc The sphere is centered in its local coordinate system. For example, if you create a sphere whose radius is 5.0, it extends from -5.0 to 5.0 along each of the the x, y, and z-axes.\n   * @see https://developer.apple.com/reference/scenekit/scnsphere/1522601-init\n   ",
-                    "start": 1165,
-                    "end": 1630,
-                    "loc": {
-                      "start": {
-                        "line": 51,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 58,
-                        "column": 5
-                      }
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "ClassMethod",
-                "start": 1633,
-                "end": 1651,
-                "loc": {
-                  "start": {
-                    "line": 59,
-                    "column": 2
-                  },
-                  "end": {
-                    "line": 60,
-                    "column": 3
-                  }
-                },
-                "computed": false,
-                "key": {
-                  "type": "Identifier",
-                  "start": 1633,
-                  "end": 1637,
-                  "loc": {
-                    "start": {
-                      "line": 59,
-                      "column": 2
-                    },
-                    "end": {
-                      "line": 59,
-                      "column": 6
-                    },
-                    "identifierName": "init"
-                  },
-                  "name": "init",
-                  "leadingComments": null
-                },
-                "static": false,
-                "kind": "method",
-                "id": null,
-                "generator": false,
-                "expression": false,
-                "async": false,
-                "params": [
-                  {
-                    "type": "Identifier",
-                    "start": 1638,
-                    "end": 1644,
-                    "loc": {
-                      "start": {
-                        "line": 59,
-                        "column": 7
-                      },
-                      "end": {
-                        "line": 59,
-                        "column": 13
-                      },
-                      "identifierName": "radius"
-                    },
-                    "name": "radius"
-                  }
-                ],
-                "body": {
-                  "type": "BlockStatement",
-                  "start": 1646,
-                  "end": 1651,
-                  "loc": {
-                    "start": {
-                      "line": 59,
-                      "column": 15
-                    },
-                    "end": {
-                      "line": 60,
-                      "column": 3
-                    }
-                  },
-                  "body": [],
                   "directives": []
                 },
                 "leadingComments": [
                   {
                     "type": "CommentLine",
                     "value": " Creating a Sphere",
-                    "start": 1141,
-                    "end": 1161,
+                    "start": 269,
+                    "end": 289,
                     "loc": {
                       "start": {
-                        "line": 49,
+                        "line": 13,
                         "column": 2
                       },
                       "end": {
-                        "line": 49,
+                        "line": 13,
                         "column": 22
                       }
                     }
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Creates a sphere geometry with the specified radius.\n   * @access public\n   * @param {number} radius - The radius of the sphere in its local coordinate space.\n   * @returns {void}\n   * @desc The sphere is centered in its local coordinate system. For example, if you create a sphere whose radius is 5.0, it extends from -5.0 to 5.0 along each of the the x, y, and z-axes.\n   * @see https://developer.apple.com/reference/scenekit/scnsphere/1522601-init\n   ",
-                    "start": 1165,
-                    "end": 1630,
+                    "value": "*\n   * Creates a sphere geometry with the specified radius.\n   * @access public\n   * @constructor\n   * @param {number} radius - The radius of the sphere in its local coordinate space.\n   * @desc The sphere is centered in its local coordinate system. For example, if you create a sphere whose radius is 5.0, it extends from -5.0 to 5.0 along each of the the x, y, and z-axes.\n   * @see https://developer.apple.com/reference/scenekit/scnsphere/1522601-init\n   ",
+                    "start": 293,
+                    "end": 755,
                     "loc": {
                       "start": {
-                        "line": 51,
+                        "line": 15,
                         "column": 2
                       },
                       "end": {
-                        "line": 58,
+                        "line": 22,
                         "column": 5
                       }
                     }
@@ -961,17 +928,33 @@
       }
     },
     {
-      "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 270,
-      "end": 337,
+      "type": "CommentLine",
+      "value": " Creating a Sphere",
+      "start": 269,
+      "end": 289,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 2
         },
         "end": {
-          "line": 18,
+          "line": 13,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Creates a sphere geometry with the specified radius.\n   * @access public\n   * @constructor\n   * @param {number} radius - The radius of the sphere in its local coordinate space.\n   * @desc The sphere is centered in its local coordinate system. For example, if you create a sphere whose radius is 5.0, it extends from -5.0 to 5.0 along each of the the x, y, and z-axes.\n   * @see https://developer.apple.com/reference/scenekit/scnsphere/1522601-init\n   ",
+      "start": 293,
+      "end": 755,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 2
+        },
+        "end": {
+          "line": 22,
           "column": 5
         }
       }
@@ -979,15 +962,15 @@
     {
       "type": "CommentLine",
       "value": " Adjusting a Sphere’s Dimensions",
-      "start": 354,
-      "end": 388,
+      "start": 797,
+      "end": 831,
       "loc": {
         "start": {
-          "line": 21,
+          "line": 26,
           "column": 4
         },
         "end": {
-          "line": 21,
+          "line": 26,
           "column": 38
         }
       }
@@ -995,15 +978,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The radius of the sphere. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523787-radius\n     ",
-      "start": 394,
-      "end": 556,
+      "start": 837,
+      "end": 999,
       "loc": {
         "start": {
-          "line": 23,
+          "line": 28,
           "column": 4
         },
         "end": {
-          "line": 27,
+          "line": 32,
           "column": 7
         }
       }
@@ -1011,15 +994,15 @@
     {
       "type": "CommentLine",
       "value": " Adjusting Geometric Detail",
-      "start": 583,
-      "end": 612,
+      "start": 1030,
+      "end": 1059,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 35,
           "column": 4
         },
         "end": {
-          "line": 31,
+          "line": 35,
           "column": 33
         }
       }
@@ -1027,15 +1010,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A Boolean value specifying whether SceneKit uses a geodesic polygon mesh to render the sphere.\n     * @type {boolean}\n     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523268-isgeodesic\n     ",
-      "start": 618,
-      "end": 842,
+      "start": 1065,
+      "end": 1289,
       "loc": {
         "start": {
-          "line": 33,
+          "line": 37,
           "column": 4
         },
         "end": {
-          "line": 37,
+          "line": 41,
           "column": 7
         }
       }
@@ -1043,48 +1026,16 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A number determining the detail of the polygon mesh SceneKit uses to render the sphere. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523912-segmentcount\n     ",
-      "start": 876,
-      "end": 1106,
+      "start": 1323,
+      "end": 1553,
       "loc": {
         "start": {
-          "line": 40,
+          "line": 44,
           "column": 4
         },
         "end": {
-          "line": 44,
+          "line": 48,
           "column": 7
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": " Creating a Sphere",
-      "start": 1141,
-      "end": 1161,
-      "loc": {
-        "start": {
-          "line": 49,
-          "column": 2
-        },
-        "end": {
-          "line": 49,
-          "column": 22
-        }
-      }
-    },
-    {
-      "type": "CommentBlock",
-      "value": "*\n   * Creates a sphere geometry with the specified radius.\n   * @access public\n   * @param {number} radius - The radius of the sphere in its local coordinate space.\n   * @returns {void}\n   * @desc The sphere is centered in its local coordinate system. For example, if you create a sphere whose radius is 5.0, it extends from -5.0 to 5.0 along each of the the x, y, and z-axes.\n   * @see https://developer.apple.com/reference/scenekit/scnsphere/1522601-init\n   ",
-      "start": 1165,
-      "end": 1630,
-      "loc": {
-        "start": {
-          "line": 51,
-          "column": 2
-        },
-        "end": {
-          "line": 58,
-          "column": 5
         }
       }
     }
@@ -1430,17 +1381,33 @@
       }
     },
     {
-      "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 270,
-      "end": 337,
+      "type": "CommentLine",
+      "value": " Creating a Sphere",
+      "start": 269,
+      "end": 289,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 2
         },
         "end": {
-          "line": 18,
+          "line": 13,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Creates a sphere geometry with the specified radius.\n   * @access public\n   * @constructor\n   * @param {number} radius - The radius of the sphere in its local coordinate space.\n   * @desc The sphere is centered in its local coordinate system. For example, if you create a sphere whose radius is 5.0, it extends from -5.0 to 5.0 along each of the the x, y, and z-axes.\n   * @see https://developer.apple.com/reference/scenekit/scnsphere/1522601-init\n   ",
+      "start": 293,
+      "end": 755,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 2
+        },
+        "end": {
+          "line": 22,
           "column": 5
         }
       }
@@ -1457,17 +1424,17 @@
         "postfix": false,
         "binop": null
       },
-      "value": "init",
-      "start": 340,
-      "end": 344,
+      "value": "constructor",
+      "start": 758,
+      "end": 769,
       "loc": {
         "start": {
-          "line": 19,
+          "line": 23,
           "column": 2
         },
         "end": {
-          "line": 19,
-          "column": 6
+          "line": 23,
+          "column": 13
         }
       }
     },
@@ -1483,16 +1450,42 @@
         "postfix": false,
         "binop": null
       },
-      "start": 344,
-      "end": 345,
+      "start": 769,
+      "end": 770,
       "loc": {
         "start": {
-          "line": 19,
-          "column": 6
+          "line": 23,
+          "column": 13
         },
         "end": {
-          "line": 19,
-          "column": 7
+          "line": 23,
+          "column": 14
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "radius",
+      "start": 770,
+      "end": 776,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 14
+        },
+        "end": {
+          "line": 23,
+          "column": 20
         }
       }
     },
@@ -1508,16 +1501,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 345,
-      "end": 346,
+      "start": 776,
+      "end": 777,
       "loc": {
         "start": {
-          "line": 19,
-          "column": 7
+          "line": 23,
+          "column": 20
         },
         "end": {
-          "line": 19,
-          "column": 8
+          "line": 23,
+          "column": 21
         }
       }
     },
@@ -1533,31 +1526,109 @@
         "postfix": false,
         "binop": null
       },
-      "start": 347,
-      "end": 348,
+      "start": 778,
+      "end": 779,
       "loc": {
         "start": {
-          "line": 19,
+          "line": 23,
+          "column": 22
+        },
+        "end": {
+          "line": 23,
+          "column": 23
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "super",
+        "keyword": "super",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "super",
+      "start": 784,
+      "end": 789,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 4
+        },
+        "end": {
+          "line": 24,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 789,
+      "end": 790,
+      "loc": {
+        "start": {
+          "line": 24,
           "column": 9
         },
         "end": {
-          "line": 19,
+          "line": 24,
           "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 790,
+      "end": 791,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 10
+        },
+        "end": {
+          "line": 24,
+          "column": 11
         }
       }
     },
     {
       "type": "CommentLine",
       "value": " Adjusting a Sphere’s Dimensions",
-      "start": 354,
-      "end": 388,
+      "start": 797,
+      "end": 831,
       "loc": {
         "start": {
-          "line": 21,
+          "line": 26,
           "column": 4
         },
         "end": {
-          "line": 21,
+          "line": 26,
           "column": 38
         }
       }
@@ -1565,15 +1636,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The radius of the sphere. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523787-radius\n     ",
-      "start": 394,
-      "end": 556,
+      "start": 837,
+      "end": 999,
       "loc": {
         "start": {
-          "line": 23,
+          "line": 28,
           "column": 4
         },
         "end": {
-          "line": 27,
+          "line": 32,
           "column": 7
         }
       }
@@ -1593,15 +1664,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 561,
-      "end": 565,
+      "start": 1004,
+      "end": 1008,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 33,
           "column": 4
         },
         "end": {
-          "line": 28,
+          "line": 33,
           "column": 8
         }
       }
@@ -1619,15 +1690,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 565,
-      "end": 566,
+      "start": 1008,
+      "end": 1009,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 33,
           "column": 8
         },
         "end": {
-          "line": 28,
+          "line": 33,
           "column": 9
         }
       }
@@ -1645,15 +1716,15 @@
         "binop": null
       },
       "value": "radius",
-      "start": 566,
-      "end": 572,
+      "start": 1009,
+      "end": 1015,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 33,
           "column": 9
         },
         "end": {
-          "line": 28,
+          "line": 33,
           "column": 15
         }
       }
@@ -1672,22 +1743,22 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 573,
-      "end": 574,
+      "start": 1016,
+      "end": 1017,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 33,
           "column": 16
         },
         "end": {
-          "line": 28,
+          "line": 33,
           "column": 17
         }
       }
     },
     {
       "type": {
-        "label": "num",
+        "label": "name",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -1695,35 +1766,34 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null,
-        "updateContext": null
+        "binop": null
       },
-      "value": 0,
-      "start": 575,
-      "end": 576,
+      "value": "radius",
+      "start": 1018,
+      "end": 1024,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 33,
           "column": 18
         },
         "end": {
-          "line": 28,
-          "column": 19
+          "line": 33,
+          "column": 24
         }
       }
     },
     {
       "type": "CommentLine",
       "value": " Adjusting Geometric Detail",
-      "start": 583,
-      "end": 612,
+      "start": 1030,
+      "end": 1059,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 35,
           "column": 4
         },
         "end": {
-          "line": 31,
+          "line": 35,
           "column": 33
         }
       }
@@ -1731,15 +1801,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A Boolean value specifying whether SceneKit uses a geodesic polygon mesh to render the sphere.\n     * @type {boolean}\n     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523268-isgeodesic\n     ",
-      "start": 618,
-      "end": 842,
+      "start": 1065,
+      "end": 1289,
       "loc": {
         "start": {
-          "line": 33,
+          "line": 37,
           "column": 4
         },
         "end": {
-          "line": 37,
+          "line": 41,
           "column": 7
         }
       }
@@ -1759,15 +1829,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 847,
-      "end": 851,
+      "start": 1294,
+      "end": 1298,
       "loc": {
         "start": {
-          "line": 38,
+          "line": 42,
           "column": 4
         },
         "end": {
-          "line": 38,
+          "line": 42,
           "column": 8
         }
       }
@@ -1785,15 +1855,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 851,
-      "end": 852,
+      "start": 1298,
+      "end": 1299,
       "loc": {
         "start": {
-          "line": 38,
+          "line": 42,
           "column": 8
         },
         "end": {
-          "line": 38,
+          "line": 42,
           "column": 9
         }
       }
@@ -1811,15 +1881,15 @@
         "binop": null
       },
       "value": "isGeodesic",
-      "start": 852,
-      "end": 862,
+      "start": 1299,
+      "end": 1309,
       "loc": {
         "start": {
-          "line": 38,
+          "line": 42,
           "column": 9
         },
         "end": {
-          "line": 38,
+          "line": 42,
           "column": 19
         }
       }
@@ -1838,15 +1908,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 863,
-      "end": 864,
+      "start": 1310,
+      "end": 1311,
       "loc": {
         "start": {
-          "line": 38,
+          "line": 42,
           "column": 20
         },
         "end": {
-          "line": 38,
+          "line": 42,
           "column": 21
         }
       }
@@ -1866,15 +1936,15 @@
         "updateContext": null
       },
       "value": "false",
-      "start": 865,
-      "end": 870,
+      "start": 1312,
+      "end": 1317,
       "loc": {
         "start": {
-          "line": 38,
+          "line": 42,
           "column": 22
         },
         "end": {
-          "line": 38,
+          "line": 42,
           "column": 27
         }
       }
@@ -1882,15 +1952,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A number determining the detail of the polygon mesh SceneKit uses to render the sphere. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523912-segmentcount\n     ",
-      "start": 876,
-      "end": 1106,
+      "start": 1323,
+      "end": 1553,
       "loc": {
         "start": {
-          "line": 40,
+          "line": 44,
           "column": 4
         },
         "end": {
-          "line": 44,
+          "line": 48,
           "column": 7
         }
       }
@@ -1910,15 +1980,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1111,
-      "end": 1115,
+      "start": 1558,
+      "end": 1562,
       "loc": {
         "start": {
-          "line": 45,
+          "line": 49,
           "column": 4
         },
         "end": {
-          "line": 45,
+          "line": 49,
           "column": 8
         }
       }
@@ -1936,15 +2006,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1115,
-      "end": 1116,
+      "start": 1562,
+      "end": 1563,
       "loc": {
         "start": {
-          "line": 45,
+          "line": 49,
           "column": 8
         },
         "end": {
-          "line": 45,
+          "line": 49,
           "column": 9
         }
       }
@@ -1962,15 +2032,15 @@
         "binop": null
       },
       "value": "segmentCount",
-      "start": 1116,
-      "end": 1128,
+      "start": 1563,
+      "end": 1575,
       "loc": {
         "start": {
-          "line": 45,
+          "line": 49,
           "column": 9
         },
         "end": {
-          "line": 45,
+          "line": 49,
           "column": 21
         }
       }
@@ -1989,15 +2059,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1129,
-      "end": 1130,
+      "start": 1576,
+      "end": 1577,
       "loc": {
         "start": {
-          "line": 45,
+          "line": 49,
           "column": 22
         },
         "end": {
-          "line": 45,
+          "line": 49,
           "column": 23
         }
       }
@@ -2016,15 +2086,15 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 1131,
-      "end": 1132,
+      "start": 1578,
+      "end": 1579,
       "loc": {
         "start": {
-          "line": 45,
+          "line": 49,
           "column": 24
         },
         "end": {
-          "line": 45,
+          "line": 49,
           "column": 25
         }
       }
@@ -2041,224 +2111,40 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1136,
-      "end": 1137,
+      "start": 1582,
+      "end": 1583,
       "loc": {
         "start": {
-          "line": 47,
+          "line": 50,
           "column": 2
         },
         "end": {
-          "line": 47,
+          "line": 50,
           "column": 3
         }
       }
     },
     {
-      "type": "CommentLine",
-      "value": " Creating a Sphere",
-      "start": 1141,
-      "end": 1161,
-      "loc": {
-        "start": {
-          "line": 49,
-          "column": 2
-        },
-        "end": {
-          "line": 49,
-          "column": 22
-        }
-      }
-    },
-    {
-      "type": "CommentBlock",
-      "value": "*\n   * Creates a sphere geometry with the specified radius.\n   * @access public\n   * @param {number} radius - The radius of the sphere in its local coordinate space.\n   * @returns {void}\n   * @desc The sphere is centered in its local coordinate system. For example, if you create a sphere whose radius is 5.0, it extends from -5.0 to 5.0 along each of the the x, y, and z-axes.\n   * @see https://developer.apple.com/reference/scenekit/scnsphere/1522601-init\n   ",
-      "start": 1165,
-      "end": 1630,
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1584,
+      "end": 1585,
       "loc": {
         "start": {
           "line": 51,
-          "column": 2
-        },
-        "end": {
-          "line": 58,
-          "column": 5
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "init",
-      "start": 1633,
-      "end": 1637,
-      "loc": {
-        "start": {
-          "line": 59,
-          "column": 2
-        },
-        "end": {
-          "line": 59,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 1637,
-      "end": 1638,
-      "loc": {
-        "start": {
-          "line": 59,
-          "column": 6
-        },
-        "end": {
-          "line": 59,
-          "column": 7
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "radius",
-      "start": 1638,
-      "end": 1644,
-      "loc": {
-        "start": {
-          "line": 59,
-          "column": 7
-        },
-        "end": {
-          "line": 59,
-          "column": 13
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 1644,
-      "end": 1645,
-      "loc": {
-        "start": {
-          "line": 59,
-          "column": 13
-        },
-        "end": {
-          "line": 59,
-          "column": 14
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "{",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 1646,
-      "end": 1647,
-      "loc": {
-        "start": {
-          "line": 59,
-          "column": 15
-        },
-        "end": {
-          "line": 59,
-          "column": 16
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "}",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 1650,
-      "end": 1651,
-      "loc": {
-        "start": {
-          "line": 60,
-          "column": 2
-        },
-        "end": {
-          "line": 60,
-          "column": 3
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "}",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 1652,
-      "end": 1653,
-      "loc": {
-        "start": {
-          "line": 61,
           "column": 0
         },
         "end": {
-          "line": 61,
+          "line": 51,
           "column": 1
         }
       }
@@ -2276,15 +2162,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1654,
-      "end": 1654,
+      "start": 1586,
+      "end": 1586,
       "loc": {
         "start": {
-          "line": 62,
+          "line": 52,
           "column": 0
         },
         "end": {
-          "line": 62,
+          "line": 52,
           "column": 0
         }
       }

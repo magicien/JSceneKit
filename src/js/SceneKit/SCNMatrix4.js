@@ -501,6 +501,7 @@ export default class SCNMatrix4 {
    * @param {number} x -
    * @param {number} y -
    * @param {number} z -
+   * @param {number} w -
    * @returns {SCNMatrix4}
    */
   static matrixWithRotation(x, y, z, w) {
@@ -578,7 +579,7 @@ export default class SCNMatrix4 {
   /**
    * Returns a Boolean value that indicates whether the corresponding elements of two matrices are equal.
    * @access public
-   * @param {SCNMatrix4} -
+   * @param {SCNMatrix4} m -
    * @returns {boolean} -
    * @desc This function performs a numeric (not bitwise) comparison of each pair of elements.
    * @see https://developer.apple.com/reference/scenekit/1409665-scnmatrix4equaltomatrix4
