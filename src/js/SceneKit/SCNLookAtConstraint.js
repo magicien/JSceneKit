@@ -11,13 +11,18 @@ import SCNNode from './SCNNode'
  * @see https://developer.apple.com/reference/scenekit/scnlookatconstraint
  */
 export default class SCNLookAtConstraint extends SCNConstraint {
+  // Creating a Look-At Constraint
 
   /**
-   * constructor
+   * Creates a look-at constraint for a specified target node.
    * @access public
-   * @returns {void}
+   * @construtor
+   * @param {?SCNNode} target - The node that constrained nodes will be reoriented to point toward.
+   * @desc To attach constraints to an SCNNode object, use its constraints property.
+   * @see https://developer.apple.com/reference/scenekit/scnlookatconstraint/1468683-init
    */
-  init() {
+  constructor(target) {
+    super()
 
     // Modifying a Constraint
 
@@ -34,19 +39,5 @@ export default class SCNLookAtConstraint extends SCNConstraint {
      * @see https://developer.apple.com/reference/scenekit/scnlookatconstraint/1468677-target
      */
     this.target = null
-
-  }
-
-  // Creating a Look-At Constraint
-
-  /**
-   * Creates a look-at constraint for a specified target node.
-   * @access public
-   * @param {?SCNNode} target - The node that constrained nodes will be reoriented to point toward.
-   * @returns {void}
-   * @desc To attach constraints to an SCNNode object, use its constraints property.
-   * @see https://developer.apple.com/reference/scenekit/scnlookatconstraint/1468683-init
-   */
-  init(target) {
   }
 }

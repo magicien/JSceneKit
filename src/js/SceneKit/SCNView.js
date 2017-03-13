@@ -265,13 +265,13 @@ export default class SCNView {
       antialias: true,
       premultipliedAlpha: true,
       preserveDrawingBuffer: false,
-      preferLowPowerToHighPerformance: !!preferLowPowerDevice,
+      preferLowPowerToHighPerformance: Boolean(preferLowPowerDevice),
       failIfMajorPerformanceCaveat: false
     }
 
     //const contextNames = ['webgl2', 'webgl', 'webkit-3d', 'moz-webgl', 'experimental-webgl']
     const contextNames = ['webgl2']
-    for(let name of contextNames){
+    for(const name of contextNames){
       try{
         this._context = this._canvas.getContext(name, opt)
       }catch(e){ /* just ignore and try the next name */ }
@@ -280,7 +280,7 @@ export default class SCNView {
       }
     }
     if(!this._context){
-      throw `can't create WebGL context`
+      throw new Error('can\'t create WebGL context')
     }
     this._context.viewport(frame.x, frame.y, frame.width, frame.height)
 
@@ -295,6 +295,7 @@ export default class SCNView {
    *
    * @access public
    * @param {HTMLElement} element - parent element to append this view
+   * @returns {void}
    */
   appendTo(element) {
     element.appendChild(this._canvas)
@@ -306,7 +307,7 @@ export default class SCNView {
    * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1523401-isplaying
    */
   get isPlaying() {
-    this._renderer.isPlaying
+    return this._renderer.isPlaying
   }
 
   /**
@@ -857,7 +858,7 @@ export default class SCNView {
   }
 
   _createPresentationNodes() {
-    let arr = [this._scene.rootNode]
+    const arr = [this._scene.rootNode]
     while(arr.length > 0){
       const node = arr.shift()
       const p = node.copy()
@@ -887,7 +888,7 @@ export default class SCNView {
   }
 
   _updateTransform(node, parentTransform) {
-    if(node === undefined){
+    if(typeof node === 'undefined'){
       this._updateTransform(this._scene.rootNode, new SCNMatrix4())
       return
     }
@@ -900,7 +901,7 @@ export default class SCNView {
   }
 
   _updatePresentationTransform(node, parentTransform) {
-    if(node === undefined){
+    if(typeof node === 'undefined'){
       this._updatePresentationTransform(this._scene.rootNode, new SCNMatrix4())
       return
     }
@@ -921,7 +922,7 @@ export default class SCNView {
   }
 
   _runAnimation(node) {
-    let deleteKeys = []
+    const deleteKeys = []
     const time = this.currentTime
     node._animations.forEach((animation, key) => {
       animation._applyAnimation(node, time)

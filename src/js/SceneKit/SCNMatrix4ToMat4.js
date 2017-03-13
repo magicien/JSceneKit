@@ -3,8 +3,8 @@
 import SCNMatrix4 from './SCNMatrix4'
 
 /**
- * 
  * @access public
+ * @type {function}
  * @param {SCNMatrix4} m - 
  * @returns {number[][]} - 
  * @see https://developer.apple.com/reference/scenekit/1523928-scnmatrix4tomat4

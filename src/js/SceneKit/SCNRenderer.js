@@ -433,7 +433,7 @@ export default class SCNRenderer extends NSObject {
     
     // light params
     const lights = this._createLightNodeArray()
-    if(lights.length == 0){
+    if(lights.length === 0){
       lights.push(this._defaultLightNode)
     }
     //console.log('lights.length: ' + lights.length)
@@ -478,7 +478,7 @@ export default class SCNRenderer extends NSObject {
   /**
    *
    * @access private
-   * @returns {SCNNode[]}
+   * @returns {SCNNode[]} -
    */
   _createRenderingNodeArray() {
     const arr = [this.scene.rootNode]
@@ -498,7 +498,7 @@ export default class SCNRenderer extends NSObject {
   /**
    *
    * @access private
-   * @returns {SCNNode[]}
+   * @returns {SCNNode[]} -
    */
   _createLightNodeArray() {
     const arr = [this.scene.rootNode]
@@ -1016,9 +1016,7 @@ export default class SCNRenderer extends NSObject {
   }
 
   get _dummyTexture() {
-    //if(this.__dummyTexture !== null){
-      return this.__dummyTexture
-    //}
+    return this.__dummyTexture
   }
 
   _createDummyTexture() {

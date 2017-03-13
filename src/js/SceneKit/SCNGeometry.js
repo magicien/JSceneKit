@@ -35,10 +35,10 @@ export default class SCNGeometry extends NSObject {
     super()
 
     if(!Array.isArray(sources)){
-      throw 'SCNGeometry(sources, elements): sources must be Array'
+      throw new Error('SCNGeometry(sources, elements): sources must be Array')
     }
     if(!Array.isArray(elements)){
-      throw 'SCNGeometry(sources, elements): elements must be Array'
+      throw new Error('SCNGeometry(sources, elements): elements must be Array')
     }
 
     // Managing Geometry Attributes
@@ -462,7 +462,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
 
     this._vertexBuffer = gl.createBuffer()
     gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer)
-    let arr = []
+    const arr = []
     const vertexSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
     const normalSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.normal)[0]
     const texcoordSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[0]
@@ -471,13 +471,13 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     const vectorCount = vertexSource.vectorCount
 
     if(vertexSource === undefined){
-      throw new Error(`vertexSource is undefined`)
+      throw new Error('vertexSource is undefined')
     }
     if(normalSource !== undefined && normalSource.vectorCount !== vectorCount){
-      throw new Error(`normalSource.vectorCount !== vertexSource.vectorCount`)
+      throw new Error('normalSource.vectorCount !== vertexSource.vectorCount')
     }
     if(texcoordSource !== undefined && texcoordSource.vectorCount !== vectorCount){
-      throw new Error(`texcoordSource.vectorCount !== vertexSource.vectorCount`)
+      throw new Error('texcoordSource.vectorCount !== vertexSource.vectorCount')
     }
 
     const vertexArray = vertexSource ? vertexSource.data : null

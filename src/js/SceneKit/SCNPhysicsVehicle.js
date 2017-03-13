@@ -12,13 +12,19 @@ import SCNPhysicsVehicleWheel from './SCNPhysicsVehicleWheel'
  * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle
  */
 export default class SCNPhysicsVehicle extends SCNPhysicsBehavior {
+  // Creating a Vehicle
 
   /**
-   * constructor
+   * Creates a vehicle behavior.
    * @access public
-   * @returns {void}
+   * @constructor
+   * @param {SCNPhysicsBody} chassisBody - A physics body to serve as the vehicle’s chassis.
+   * @param {SCNPhysicsVehicleWheel[]} wheels - An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels. A vehicle must have at least one wheel.
+   * @desc Each object in the wheels array associates a node with the wheel to serve as its visual representation and defines properties for the wheel’s physical characteristics. Each wheel object must reference a unique node, which should be a child of the node containing the physics body used for the vehicle’s chassis. Typically, you load a node hierarchy representing the vehicle and all of its wheels from a scene file and then designate which nodes serve as the body and wheels.For a behavior to take effect, you must add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object.
+   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387943-init
    */
-  init() {
+  constructor(chassisBody, wheels) {
+    super()
 
     // Working with a Vehicle’s Physical Characteristics
 
@@ -30,21 +36,8 @@ export default class SCNPhysicsVehicle extends SCNPhysicsBehavior {
     this._speedInKilometersPerHour = 0
   }
 
-  // Creating a Vehicle
-
-  /**
-   * Creates a vehicle behavior.
-   * @access public
-   * @param {SCNPhysicsBody} chassisBody - A physics body to serve as the vehicle’s chassis.
-   * @param {SCNPhysicsVehicleWheel[]} wheels - An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels. A vehicle must have at least one wheel.
-   * @returns {void}
-   * @desc Each object in the wheels array associates a node with the wheel to serve as its visual representation and defines properties for the wheel’s physical characteristics. Each wheel object must reference a unique node, which should be a child of the node containing the physics body used for the vehicle’s chassis. Typically, you load a node hierarchy representing the vehicle and all of its wheels from a scene file and then designate which nodes serve as the body and wheels.For a behavior to take effect, you must add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object.
-   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387943-init
-   */
-  init(chassisBody, wheels) {
-  }
-
   // Working with a Vehicle’s Physical Characteristics
+
   /**
    * The physics body representing the vehicle’s chassis.
    * @type {SCNPhysicsBody}
@@ -54,6 +47,7 @@ export default class SCNPhysicsVehicle extends SCNPhysicsBehavior {
   get chassisBody() {
     return this._chassisBody
   }
+
   /**
    * An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels.
    * @type {SCNPhysicsVehicleWheel[]}
@@ -105,6 +99,7 @@ SCNPhysicsVehicle *vehicle = [SCNPhysicsVehicle vehicleWithChassisBody:car wheel
    */
   setSteeringAngleForWheelAt(value, index) {
   }
+
   /**
    * The vehicle’s ground speed, in kilometers per hour.
    * @type {number}

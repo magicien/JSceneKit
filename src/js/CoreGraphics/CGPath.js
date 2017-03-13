@@ -8,7 +8,7 @@ import CGPoint from './CGPoint'
 import CGPathFillRule from './CGPathFillRule'
 import CGPathApplierFunction from './CGPathApplierFunction'
 
-let _typeID = null
+const _typeID = null
 
 /**
  * An immutable graphics path: a mathematical description of shapes or lines to be drawn in a graphics context.

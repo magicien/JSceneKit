@@ -3,8 +3,6 @@
 import CGPoint from '../CoreGraphics/CGPoint'
 import CGRect from '../CoreGraphics/CGRect'
 
-let _accessInstanceVariablesDirectly = false
-
 /**
  * The root class of most Objective-C class hierarchies, from which subclasses inherit a basic interface to the runtime system and the ability to behave as Objective-C objects.
  * @access public
@@ -895,7 +893,7 @@ Typically, however, you are encouraged to relinquish resources prior to finaliza
    * @see https://developer.apple.com/reference/objectivec/nsobject/1415307-accessinstancevariablesdirectly
    */
   static get accessInstanceVariablesDirectly() {
-    return _accessInstanceVariablesDirectly
+    return true
   }
   /**
    * 
@@ -1227,7 +1225,7 @@ You call this method in a try expression and handle any errors in the catch clau
     if(typeof key !== 'string'){
       throw 'error: valueForKey(key): key should be string'
     }
-    if(this[key] === undefined){
+    if(typeof this[key] === 'undefined'){
       return this.valueForUndefinedKey(key)
     }
     return this[key]

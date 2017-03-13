@@ -10,13 +10,19 @@ import SCNGeometry from './SCNGeometry'
  * @see https://developer.apple.com/reference/scenekit/scnplane
  */
 export default class SCNPlane extends SCNGeometry {
+  // Creating a Plane
 
   /**
-   * constructor
+   * Creates a plane geometry with the specified width and height.
    * @access public
-   * @returns {void}
+   * @constructor
+   * @param {number} width - The width of the plane along the x-axis of its local coordinate space.
+   * @param {number} height - The height of the plane along the y-axis of its local coordinate space.
+   * @desc The plane is centered in its local coordinate system. For example, if you create a plane whose width and height are both 10.0, it extends from -5.0 to 5.0 along both the x- and y-axes, and the z-coordinate of all points in the plane is zero.
+   * @see https://developer.apple.com/reference/scenekit/scnplane/1523631-init
    */
-  init() {
+  constructor(width, height) {
+    super()
 
     // Adjusting a Plane’s Dimensions
 
@@ -68,19 +74,5 @@ export default class SCNPlane extends SCNGeometry {
      */
     this.cornerSegmentCount = 0
 
-  }
-
-  // Creating a Plane
-
-  /**
-   * Creates a plane geometry with the specified width and height.
-   * @access public
-   * @param {number} width - The width of the plane along the x-axis of its local coordinate space.
-   * @param {number} height - The height of the plane along the y-axis of its local coordinate space.
-   * @returns {void}
-   * @desc The plane is centered in its local coordinate system. For example, if you create a plane whose width and height are both 10.0, it extends from -5.0 to 5.0 along both the x- and y-axes, and the z-coordinate of all points in the plane is zero.
-   * @see https://developer.apple.com/reference/scenekit/scnplane/1523631-init
-   */
-  init(width, height) {
   }
 }

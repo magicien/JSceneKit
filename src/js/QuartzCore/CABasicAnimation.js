@@ -19,6 +19,7 @@ export default class CABasicAnimation extends CAPropertyAnimation {
   /**
    * constructor
    * @access public
+   * @param {?string} path -
    * @constructor
    */
   constructor(path) {
@@ -50,7 +51,7 @@ export default class CABasicAnimation extends CAPropertyAnimation {
 
   /**
    * @access public
-   * @returns {CABasicAnimation}
+   * @returns {CABasicAnimation} -
    */
   copy() {
     const anim = new CABasicAnimation(this.keyPath)
@@ -70,7 +71,7 @@ export default class CABasicAnimation extends CAPropertyAnimation {
     const activeTime = this._basetimeFromActivetime(time)
     let t = activeTime
     if(this.timingFunction !== null){
-      t = this.timingFunction(activeTime)
+      t = this.timingFunction._getValueAtTime(activeTime)
     }
     if(t < 0){
       t = 0

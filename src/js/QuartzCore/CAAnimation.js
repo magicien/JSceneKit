@@ -197,7 +197,7 @@ export default class CAAnimation extends NSObject {
 
   /**
    * @access public
-   * @returns {CAAnimation}
+   * @returns {CAAnimation} -
    */
   copy() {
     const anim = new CAAnimation()   
@@ -235,7 +235,7 @@ export default class CAAnimation extends NSObject {
     const baseTime = this._basetimeFromActivetime(activeTime)
     let t = baseTime
     if(this.timingFunction !== null){
-      t = this.timingFunction(baseTime)
+      t = this.timingFunction._getValueAtTime(baseTime)
     }
     this._handleEvents(obj, t)
   }

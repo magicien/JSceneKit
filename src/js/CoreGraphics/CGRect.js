@@ -354,7 +354,7 @@ export default class CGRect {
    */
   get debugDescription() {
     if(this.size === null){
-      return `{null}`
+      return '{null}'
     }
     const origin = this.origin ? this.origin.debugDescription() : '{null}'
     const size = this.size ? this.size.debugDescription() : '{null}'
@@ -412,7 +412,7 @@ export default class CGRect {
    * @param {number} y -
    * @param {number} width -
    * @param {number} height -
-   * @returns {CGRect}
+   * @returns {CGRect} -
    */
   static rectWithXYWidthHeight(x, y, width, height) {
     const point = new CGPoint(x, y)

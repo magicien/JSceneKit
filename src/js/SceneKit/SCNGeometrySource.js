@@ -95,7 +95,7 @@ export default class SCNGeometrySource extends NSObject {
   }
 
   /**
-   * @access pricate
+   * @access private
    * @returns {boolean}
    */
   _hasTypedArrayData() {
@@ -130,7 +130,7 @@ export default class SCNGeometrySource extends NSObject {
    * @param {number} bytesPerComponent - The size, in bytes, of each vector component.
    * @param {number} dataOffset - The offset, in bytes, from the beginning of the data to the first vector component to be used in the geometry source.
    * @param {number} dataStride - The number of bytes from each vector to the next in the data.
-   * @returns {SCNGeometrySource}
+   * @returns {SCNGeometrySource} -
    * @desc A geometry source’s data is an array of vectors, each of which represents a particular attribute (or semantic) of a vertex in the geometry. The other parameters determine how SceneKit interprets this data. For example, an array of vertex positions may have three 32-bit floating-point components per vector, but an array of texture coordinates may have two 8-bit integer coponents per vector. You can use the offset and stride parameters together to interleave data for multiple geometry sources in the same array, improving rendering performance. See SCNGeometrySource for details.To create a custom SCNGeometry object from the geometry source, use the init(sources:elements:) method.
    * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1523320-init
    */
@@ -154,7 +154,7 @@ export default class SCNGeometrySource extends NSObject {
    * @access public
    * @param {SCNVector3[]} vertices - An array of three-component vectors, each of which represents a vertex position for the geometry source.
    * @param {number} count - The number of vertices
-   * @returns {SCNGeometrySource}
+   * @returns {SCNGeometrySource} -
    * @desc SceneKit converts this data to its own format to optimize rendering performance. To read the converted data, examine the properties of the created SCNGeometrySource object.To create a custom SCNGeometry object from the geometry source, use the init(sources:elements:) method.
    * @see https://developer.apple.com/reference/scenekit/scngeometrysource/2034708-init
    */
@@ -182,7 +182,7 @@ export default class SCNGeometrySource extends NSObject {
    * @access public
    * @param {CGPoint[]} texcoord - An array of points, each of which represents a texture coordinate pair for the geometry source.
    * @param {number} count - The number of texture coordinate points.
-   * @returns {SCNGeometrySource}
+   * @returns {SCNGeometrySource} -
    * @desc SceneKit converts this data to its own format to optimize rendering performance. To read the converted data, examine the properties of the created SCNGeometrySource object.To create a custom SCNGeometry object from the geometry source, use the init(sources:elements:) method.
    * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1522718-init
    */
@@ -211,7 +211,7 @@ export default class SCNGeometrySource extends NSObject {
    * @access public
    * @param {SCNVector3[]} normals - An array of vectors, which represents a normal vector for the geometry source.
    * @param {number} count - The number of normals
-   * @returns {SCNGeometrySource}
+   * @returns {SCNGeometrySource} -
    */
   static geometrySourceWithNormalsCount(normals, count) {
     const data = []
@@ -325,7 +325,7 @@ export default class SCNGeometrySource extends NSObject {
    * @param {number} vertexCount - The number of vertices in the geometry source.
    * @param {number} offset - The offset, in bytes, from the beginning of the data to the first vector component to be used in the geometry source.
    * @param {number} stride - The number of bytes from each vector to the next in the data.
-   * @returns {SCNGeometrySource}
+   * @returns {SCNGeometrySource} -
    * @desc Use this method to create a geometry source whose underlying data can be modified at render time by a Metal compute shader running on the GPU. To create a MTLBuffer object for use with a geometry source, use the device property of the SceneKit view (or other renderer) responsible for drawing your scene.// Create and fill a buffer.
 id <MTLDevice> device = self.scnView.device;
 self.geometryBuffer = [device newBufferWithBytes:myData length:myLength options:myOptions];
@@ -405,14 +405,15 @@ SCNGeometrySource *source = [SCNGeometrySource geometrySourceWithBuffer:buffer
 
   /**
    * @access public
-   * @returns {number[]}
+   * @param {number} index -
+   * @returns {number[]} -
    */
   vectorAt(index) {
     if(index < 0 || index >= this.vectorCount){
       return null
     }
     const indexStride = this._dataStride / this._bytesPerComponent
-    let ind = index * indexStride + this._dataOffset / this._bytesPerComponent
+    const ind = index * indexStride + this._dataOffset / this._bytesPerComponent
     const arr = []
     for(let i=0; i<this._componentsPerVector; i++){
       arr.push(this._data[ind + i])

@@ -61,7 +61,7 @@ export default class CAPropertyAnimation extends CAAnimation {
 
   /**
    * @access public
-   * @returns {CAPropertyAnimation}
+   * @returns {CAPropertyAnimation} -
    */
   copy() {
     const anim = new CAPropertyAnimation(this.keyPath)
@@ -81,7 +81,7 @@ export default class CAPropertyAnimation extends CAAnimation {
     const activeTime = this._basetimeFromActivetime(time)
     let t = activeTime
     if(this.timingFunction !== null){
-      t = this.timingFunction(activeTime)
+      t = this.timingFunction._getValueAtTime(activeTime)
     }
     const value = this.valueFunction(t)
     this._applyValue(obj, value)

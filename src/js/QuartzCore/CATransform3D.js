@@ -1,7 +1,5 @@
 'use strict'
 
-
-
 /**
  * Defines the standard transform matrix used throughout Core Animation.
  * @access public
@@ -18,7 +16,7 @@ export default class CATransform3D {
    * @returns {void}
    * @see https://developer.apple.com/reference/quartzcore/catransform3d/1523734-init
    */
-  init(m) {
+  constructor(m) {
 
     // Instance Properties
 

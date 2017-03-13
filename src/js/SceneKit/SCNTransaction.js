@@ -19,9 +19,10 @@ export default class SCNTransaction extends NSObject {
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  init() {
+  constructor() {
+    super()
   }
 
   // Creating and Committing Transactions
@@ -57,6 +58,7 @@ export default class SCNTransaction extends NSObject {
   }
 
   // Overriding Animation Duration and Timing
+
   /**
    * Returns the duration, in seconds, of all animations within the current transaction.
    * @type {number}
@@ -66,6 +68,7 @@ export default class SCNTransaction extends NSObject {
   static get animationDuration() {
     return _animationDuration
   }
+  
   /**
    * Returns the duration, in seconds, of all animations within the current transaction.
    * @type {number}
@@ -75,6 +78,7 @@ export default class SCNTransaction extends NSObject {
   static set animationDuration(newValue) {
     _animationDuration = newValue
   }
+
   /**
    * Returns the timing function that SceneKit uses for all animations within this transaction group. 
    * @type {?CAMediaTimingFunction}
@@ -84,6 +88,7 @@ export default class SCNTransaction extends NSObject {
   static get animationTimingFunction() {
     return _animationTimingFunction
   }
+
   /**
    * Returns the timing function that SceneKit uses for all animations within this transaction group. 
    * @type {?CAMediaTimingFunction}
@@ -95,6 +100,7 @@ export default class SCNTransaction extends NSObject {
   }
 
   // Temporarily Disabling Property Animations
+
   /**
    * Returns a Boolean value indicating whether changes to animatable properties during the transaction are implicitly animated.
    * @type {boolean}
@@ -104,6 +110,7 @@ export default class SCNTransaction extends NSObject {
   static get disableActions() {
     return _disableActions
   }
+
   /**
    * Returns a Boolean value indicating whether changes to animatable properties during the transaction are implicitly animated.
    * @type {boolean}
@@ -115,6 +122,7 @@ export default class SCNTransaction extends NSObject {
   }
 
   // Getting and Setting Completion Block Objects
+
   /**
    * Returns the block previously associated with the current transaction.
    * @type {?function(): void}
@@ -124,6 +132,7 @@ export default class SCNTransaction extends NSObject {
   static get completionBlock() {
     return _completionBlock
   }
+
   /**
    * Returns the block previously associated with the current transaction.
    * @type {?function(): void}

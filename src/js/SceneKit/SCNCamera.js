@@ -314,7 +314,7 @@ export default class SCNCamera extends NSObject {
 
   /**
    * @access private
-   * @param {CGRect} viewRect
+   * @param {CGRect} viewRect -
    * @returns {void}
    */
   _updateProjectionTransform(viewRect) {

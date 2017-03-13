@@ -12,13 +12,23 @@ import SCNVector3 from './SCNVector3'
  * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint
  */
 export default class SCNPhysicsSliderJoint extends SCNPhysicsBehavior {
+  // Creating a Slider Joint
 
   /**
-   * constructor
+   * Creates a slider joint connecting two physics bodies.
    * @access public
-   * @returns {void}
+   * @constructor
+   * @param {SCNPhysicsBody} bodyA - The first physics body to be connected by the joint.
+   * @param {SCNVector3} axisA - The axis along which the first body can slide, relative to the node containing it.
+   * @param {SCNVector3} anchorA - The point at which the joint connects, relative to the node containing the first body.
+   * @param {SCNPhysicsBody} bodyB - The second physics body to be connected by the joint.
+   * @param {SCNVector3} axisB - The axis along which the second body can slide, relative to the node containing it.
+   * @param {SCNVector3} anchorB - The point at which the joint connects, relative to the node containing the second body.
+   * @desc This method defines the location where the bodies are pinned together. To define their sliding or rotation motion relative to that point, use the properties listed in Limiting the Motion of a Slider Joint.For a behavior to take effect, add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object. The physics bodies constrained by the joint must be attached to nodes in the scene.
+   * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387922-init
    */
-  init() {
+  constructor(bodyA, axisA, anchorA, bodyB, axisB, anchorB) {
+    super()
 
     // Managing the Characteristics of a Slider Joint
 
@@ -116,25 +126,8 @@ export default class SCNPhysicsSliderJoint extends SCNPhysicsBehavior {
 
   }
 
-  // Creating a Slider Joint
-
-  /**
-   * Creates a slider joint connecting two physics bodies.
-   * @access public
-   * @param {SCNPhysicsBody} bodyA - The first physics body to be connected by the joint.
-   * @param {SCNVector3} axisA - The axis along which the first body can slide, relative to the node containing it.
-   * @param {SCNVector3} anchorA - The point at which the joint connects, relative to the node containing the first body.
-   * @param {SCNPhysicsBody} bodyB - The second physics body to be connected by the joint.
-   * @param {SCNVector3} axisB - The axis along which the second body can slide, relative to the node containing it.
-   * @param {SCNVector3} anchorB - The point at which the joint connects, relative to the node containing the second body.
-   * @returns {void}
-   * @desc This method defines the location where the bodies are pinned together. To define their sliding or rotation motion relative to that point, use the properties listed in Limiting the Motion of a Slider Joint.For a behavior to take effect, add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object. The physics bodies constrained by the joint must be attached to nodes in the scene.
-   * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387922-init
-   */
-  init(bodyA, axisA, anchorA, bodyB, axisB, anchorB) {
-  }
-
   // Managing the Characteristics of a Slider Joint
+
   /**
    * The first physics body connected by the joint.
    * @type {SCNPhysicsBody}
@@ -144,6 +137,7 @@ export default class SCNPhysicsSliderJoint extends SCNPhysicsBehavior {
   get bodyA() {
     return this._bodyA
   }
+
   /**
    * The second physics body connected by the joint.
    * @type {?SCNPhysicsBody}

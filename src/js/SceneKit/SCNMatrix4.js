@@ -18,8 +18,8 @@ export default class SCNMatrix4 {
   /**
    * 
    * @access public
+   * @construtor
    * @param {number[][]} [m = null] - 
-   * @returns {void}
    * @see https://developer.apple.com/reference/quartzcore/catransform3d/1524036-init
    */
   constructor(m = null) {
@@ -153,7 +153,7 @@ export default class SCNMatrix4 {
 
   /**
    * @access public
-   * @returns {SCNVector4}
+   * @returns {SCNVector4} -
    */
   quaternion() {
     const r = new SCNVector4()
@@ -166,7 +166,7 @@ export default class SCNMatrix4 {
 
   /**
    * @access public
-   * @returns {SCNMatrix4}
+   * @returns {SCNMatrix4} -
    */
   invert() {
     const mat = new SCNMatrix4()
@@ -429,7 +429,7 @@ export default class SCNMatrix4 {
 
   /**
    * @access public
-   * @returns {SCNMatrix4}
+   * @returns {SCNMatrix4} -
    */
   transpose() {
     const r = new SCNMatrix4()
@@ -457,7 +457,7 @@ export default class SCNMatrix4 {
    * @param {number} x -
    * @param {number} y -
    * @param {number} z -
-   * @returns {SCNMatrix4}
+   * @returns {SCNMatrix4} -
    */
   scale(x, y, z) {
     const m = SCNMatrix4.matrixWithScale(x, y, z)
@@ -466,7 +466,7 @@ export default class SCNMatrix4 {
 
   /**
    * @access public
-   * @returns {SCNMatrix4}
+   * @returns {SCNMatrix4} -
    */
   static matrixWithScale(x, y, z) {
     if(x instanceof SCNVector3){
@@ -489,7 +489,7 @@ export default class SCNMatrix4 {
    * @param {number} y -
    * @param {number} z -
    * @param {number} w -
-   * @returns {SCNMatrix4}
+   * @returns {SCNMatrix4} -
    */
   rotation(x, y, z, w) {
     const m = SCNMatrix4.matrixWithRotation(x, y, z, w)
@@ -502,7 +502,7 @@ export default class SCNMatrix4 {
    * @param {number} y -
    * @param {number} z -
    * @param {number} w -
-   * @returns {SCNMatrix4}
+   * @returns {SCNMatrix4} -
    */
   static matrixWithRotation(x, y, z, w) {
     if(x instanceof SCNVector4){
@@ -547,7 +547,7 @@ export default class SCNMatrix4 {
    * @param {number} x -
    * @param {number} y -
    * @param {number} z -
-   * @returns {SCNMatrix4}
+   * @returns {SCNMatrix4} -
    */
   translation(x, y, z) {
     const m = SCNMatrix4.matrixWithTranslation(x, y, z)
@@ -559,7 +559,7 @@ export default class SCNMatrix4 {
    * @param {number} x -
    * @param {number} y -
    * @param {number} z -
-   * @returns {SCNMatrix4}
+   * @returns {SCNMatrix4} -
    */
   static matrixWithTranslation(x, y, z) {
     if(x instanceof SCNVector3){
@@ -619,7 +619,7 @@ export default class SCNMatrix4 {
 
   /**
    * @access public
-   * @returns {SCNVector3}
+   * @returns {SCNVector3} -
    */
   getScale() {
     const sx = new SCNVector3(this.m11, this.m21, this.m31)
@@ -630,7 +630,7 @@ export default class SCNMatrix4 {
 
   /**
    * @access public
-   * @returns {SCNVector3}
+   * @returns {SCNVector3} -
    */
   getTranslation() {
     return new SCNVector3(this.m14, this.m24, this.m34)

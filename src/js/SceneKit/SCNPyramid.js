@@ -10,13 +10,20 @@ import SCNGeometry from './SCNGeometry'
  * @see https://developer.apple.com/reference/scenekit/scnpyramid
  */
 export default class SCNPyramid extends SCNGeometry {
+  // Creating a Pyramid
 
   /**
-   * constructor
+   * Creates a pyramid geometry with the specified width, height, and length.
    * @access public
-   * @returns {void}
+   * @constructor
+   * @param {number} width - The width of the pyramid along the x-axis of its local coordinate space.
+   * @param {number} height - The height of the pyramid along the y-axis of its local coordinate space.
+   * @param {number} length - The length of the pyramid along the z-axis of its local coordinate space.
+   * @desc The pyramid’s base is centered in its local coordinate system. For example, if you create a pyramid whose width, height and length are all 10.0, its apex is at the point {0, 10.0, 0}, and its base lies in the plane whose y-coordinate is 0.0, extending from -5.0 to 5.0 along both the x- and z-axes.
+   * @see https://developer.apple.com/reference/scenekit/scnpyramid/1523254-init
    */
-  init() {
+  constructor(width, height, length) {
+    super()
 
     // Adjusting a Pyramid’s Dimensions
 
@@ -65,20 +72,5 @@ export default class SCNPyramid extends SCNGeometry {
      */
     this.lengthSegmentCount = 0
 
-  }
-
-  // Creating a Pyramid
-
-  /**
-   * Creates a pyramid geometry with the specified width, height, and length.
-   * @access public
-   * @param {number} width - The width of the pyramid along the x-axis of its local coordinate space.
-   * @param {number} height - The height of the pyramid along the y-axis of its local coordinate space.
-   * @param {number} length - The length of the pyramid along the z-axis of its local coordinate space.
-   * @returns {void}
-   * @desc The pyramid’s base is centered in its local coordinate system. For example, if you create a pyramid whose width, height and length are all 10.0, its apex is at the point {0, 10.0, 0}, and its base lies in the plane whose y-coordinate is 0.0, extending from -5.0 to 5.0 along both the x- and z-axes.
-   * @see https://developer.apple.com/reference/scenekit/scnpyramid/1523254-init
-   */
-  init(width, height, length) {
   }
 }

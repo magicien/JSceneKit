@@ -254,6 +254,7 @@ You call this method in a try expression and handle any errors in the catch clau
    */
   removeAllParticleSystems() {
   }
+
   /**
    * The particle systems attached to the scene.
    * @type {?SCNParticleSystem[]}
@@ -265,6 +266,7 @@ You call this method in a try expression and handle any errors in the catch clau
   }
 
   // Structures
+
   /**
    * @type {Object} Attribute
    * @property {Symbol} endTime A floating-point value (in an NSNumber object) for the end time of the scene.

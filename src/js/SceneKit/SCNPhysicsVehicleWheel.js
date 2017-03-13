@@ -12,13 +12,18 @@ import SCNVector3 from './SCNVector3'
  * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel
  */
 export default class SCNPhysicsVehicleWheel extends NSObject {
+  // Creating a Wheel
 
   /**
-   * constructor
+   * Creates a wheel object.
    * @access public
-   * @returns {void}
+   * @constructor
+   * @param {SCNNode} node - The node whose contents provide the wheel’s visual representation.
+   * @desc The node representing a wheel must be a child of the node whose physics body serves as the chassis of the SCNPhysicsVehicle behavior the wheel is attached to. Each wheel object must reference a unique node. To use the wheel, add it to the vehicle behavior using the addWheel: method.SceneKit uses the node’s bounding box to determine the wheel’s initial size, and it uses the node’s position to determine the where the wheel connects to the vehicle’s chassis. You can change attributes using the radius and connectionPosition properties.
+   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387989-init
    */
-  init() {
+  constructor(node) {
+    super()
 
     // Managing a Wheel’s Connection to a Vehicle
 
@@ -114,20 +119,8 @@ export default class SCNPhysicsVehicleWheel extends NSObject {
     this._node = null
   }
 
-  // Creating a Wheel
-
-  /**
-   * Creates a wheel object.
-   * @access public
-   * @param {SCNNode} node - The node whose contents provide the wheel’s visual representation.
-   * @returns {void}
-   * @desc The node representing a wheel must be a child of the node whose physics body serves as the chassis of the SCNPhysicsVehicle behavior the wheel is attached to. Each wheel object must reference a unique node. To use the wheel, add it to the vehicle behavior using the addWheel: method.SceneKit uses the node’s bounding box to determine the wheel’s initial size, and it uses the node’s position to determine the where the wheel connects to the vehicle’s chassis. You can change attributes using the radius and connectionPosition properties.
-   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387989-init
-   */
-  init(node) {
-  }
-
   // Inspecting the Wheel Node
+
   /**
    * The node providing the wheel’s visual representation.
    * @type {SCNNode}

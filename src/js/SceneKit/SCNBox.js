@@ -95,8 +95,8 @@ export default class SCNBox extends SCNGeometry {
   }
 
   _createGeometry() {
-    let sourceData = []
-    let indexData = []
+    const sourceData = []
+    const indexData = []
 
     const left = -this.width * 0.5
     const right = this.width * 0.5

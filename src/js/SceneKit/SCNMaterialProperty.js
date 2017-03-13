@@ -22,8 +22,8 @@ export default class SCNMaterialProperty extends NSObject {
   /**
    * Creates a new material property object with the specified contents.
    * @access public
+   * @constructor
    * @param {Object} contents - The visual contents of the material property—a color, image, or source of animated content. For details, see the discussion of the  contents property.
-   * @returns {SCNMaterialProperty}
    * @desc Newly created SCNMaterial objects contain SCNMaterialProperty instances for all of their visual properties. To change a material’s visual properties, you modify those instances rather than creating new material property objects.You create new SCNMaterialProperty instances to provide textures for use with custom GLSL shaders—for details, see SCNShadable.
    * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395386-init
    */
@@ -120,7 +120,7 @@ export default class SCNMaterialProperty extends NSObject {
 
   /**
    * @access public
-   * @returns {Float32Array}
+   * @returns {Float32Array} -
    */
   float32Array() {
     if(this.contents instanceof SKColor){

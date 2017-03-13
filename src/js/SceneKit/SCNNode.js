@@ -336,8 +336,7 @@ export default class SCNNode extends NSObject {
   /**
    * Constructor for JSExport compatibility
    * @access public
-   * @constructor
-   * @returns {SCNNode}
+   * @returns {SCNNode} -
    */
   static node() {
     return new SCNNode()
@@ -346,9 +345,8 @@ export default class SCNNode extends NSObject {
   /**
    * Constructor for JSExport compatibility
    * @access public
-   * @constructor
    * @param {?SCNGeometry} [geometry] - The geometry to be attached.
-   * @returns {SCNNode}
+   * @returns {SCNNode} -
    */
   static nodeWithGeometry(geometry) {
     return new SCNNode(geometry)
@@ -416,7 +414,7 @@ export default class SCNNode extends NSObject {
     if(typeof newValue.x !== 'number'
       || typeof newValue.y !== 'number'
       || typeof newValue.z !== 'number'){
-      throw 'error: SCNNode.position must have x, y, z values'
+      throw new Error('error: SCNNode.position must have x, y, z values')
     }
     this._position.x = newValue.x
     this._position.y = newValue.y
@@ -432,7 +430,7 @@ export default class SCNNode extends NSObject {
       || typeof newValue.y !== 'number'
       || typeof newValue.z !== 'number'
       || typeof newValue.w !== 'number'){
-      throw 'error: SCNNode.rotation must have x, y, z, w values'
+      throw new Error('error: SCNNode.rotation must have x, y, z, w values')
     }
     this._rotation.x = newValue.x
     this._rotation.y = newValue.y
@@ -448,7 +446,7 @@ export default class SCNNode extends NSObject {
     if(typeof newValue.x !== 'number'
       || typeof newValue.y !== 'number'
       || typeof newValue.z !== 'number'){
-      throw 'error: SCNNode.scale must have x, y, z values'
+      throw new Error('error: SCNNode.scale must have x, y, z values')
     }
     this._scale.x = newValue.x
     this._scale.y = newValue.y
@@ -554,7 +552,7 @@ export default class SCNNode extends NSObject {
   /**
    *
    * @access private
-   * @param {number} index
+   * @param {number} index -
    * @returns {void}
    */
   _removeObjectFromChildNodesAtIndex(index) {
@@ -571,14 +569,14 @@ export default class SCNNode extends NSObject {
   /**
    *
    * @access private
-   * @param {SCNNode} object
-   * @param {number} index
+   * @param {SCNNode} object -
+   * @param {number} index -
    * @returns {void}
    */
   _insertObjectInChildNodesAtIndex(object, index) {
     const length = this._childNodes.length
     if(index > length){
-      throw `SCNNode.childNodes out of index: ${index} > ${length}`
+      throw new Error(`SCNNode.childNodes out of index: ${index} > ${length}`)
     }
     this._childNodes.splice(index, 0, object)
   }
@@ -709,6 +707,7 @@ export default class SCNNode extends NSObject {
   }
   /**
    * The particle systems attached to the node.
+   * @access public
    * @type {?SCNParticleSystem[]}
    * @desc An array of SCNParticleSystem objects directly attached to the node. This array does not include particle systems attached to the node’s child nodes.For details on particle systems, see SCNParticleSystem.
    * @see https://developer.apple.com/reference/scenekit/scnnode/1522705-particlesystems
@@ -947,7 +946,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    */
   get actionKeys() {
     const keys = []
-    for(let key of this._actions.keys()){
+    for(const key of this._actions.keys()){
       keys.push(key)
     }
     return keys
@@ -1056,7 +1055,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    */
   get animationKeys() {
     const keys = []
-    for(let key of this._animations.keys()){
+    for(const key of this._animations.keys()){
       keys.push(key)
     }
     return keys
@@ -1137,7 +1136,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
   /**
    *
    * @access public
-   * @returns {SCNNode}
+   * @returns {SCNNode} -
    */
   copy() {
     const node = new SCNNode()

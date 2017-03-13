@@ -278,7 +278,7 @@ export default class SKColor extends NSObject {
   /**
    * Returns the components that make up the color in the HSB color space.
    * @access public
-   * @returns {Object} 
+   * @returns {Object} -
    * @property {number} color.hue - On return, the hue component of the color object. On applications linked for iOS 10 or later, the hue component is specified in an extended range color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
    * @property {number} color.saturation - On return, the saturation component of the color object. On applications linked for iOS 10 or later, the saturation component is specified in an extended range color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
    * @property {number} color.brightness - On return, the brightness component of the color object. On applications linked for iOS 10 or later, the brightness component is specified in an extended range color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
@@ -299,7 +299,11 @@ export default class SKColor extends NSObject {
   /**
    * Returns the components that make up the color in the RGB color space.
    * @access public
-   * @returns {Object}
+   * @param {number} red -
+   * @param {number} green -
+   * @param {number} blue -
+   * @param {number} alpha -
+   * @returns {Object} -
    * @property {number} color.red - On return, the red component of the color object. On applications linked for iOS 10 or later, the red component is specified in an extended range sRGB color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
    * @property {number} color.green - On return, the green component of the color object. On applications linked for iOS 10 or later, the green component is specified in an extended range sRGB color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
    * @property {number} color.blue - On return, the blue component of the color object. On applications linked for iOS 10 or later, the blue component is specified in an extended range sRGB color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
@@ -344,7 +348,7 @@ export default class SKColor extends NSObject {
 
   /**
    * @access public
-   * @returns {Float32Array}
+   * @returns {Float32Array} -
    */
   float32Array() {
     return new Float32Array([this.red, this.green, this.blue, this.alpha])

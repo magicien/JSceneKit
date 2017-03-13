@@ -863,6 +863,12 @@ module.exports =
 	exports.kCAFillModeBackwards = 'backwards';
 	exports.kCAFillModeBoth = 'both';
 
+	exports.kCAMediaTimingFunctionLinear = 'linear';
+	exports.kCAMediaTimingFunctionEaseIn = 'easeIn';
+	exports.kCAMediaTimingFunctionEaseOut = 'easeOut';
+	exports.kCAMediaTimingFunctionEaseInEaseOut = 'easeInEaseOut';
+	exports.kCAMediaTimingFunctionDefault = 'default';
+
 /***/ },
 /* 1 */
 /***/ function(module, exports) {
@@ -1732,7 +1738,7 @@ module.exports =
 	     * @param {number} y -
 	     * @param {number} width -
 	     * @param {number} height -
-	     * @returns {CGRect}
+	     * @returns {CGRect} -
 	     */
 
 	  }, {
@@ -4434,14 +4440,11 @@ module.exports =
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	var _accessInstanceVariablesDirectly = false;
-
 	/**
 	 * The root class of most Objective-C class hierarchies, from which subclasses inherit a basic interface to the runtime system and the ability to behave as Objective-C objects.
 	 * @access public
 	 * @see https://developer.apple.com/reference/objectivec/nsobject
 	 */
-
 	var NSObject = function () {
 	  function NSObject() {
 	    _classCallCheck(this, NSObject);
@@ -5435,7 +5438,7 @@ module.exports =
 	      if (typeof key !== 'string') {
 	        throw 'error: valueForKey(key): key should be string';
 	      }
-	      if (this[key] === undefined) {
+	      if (typeof this[key] === 'undefined') {
 	        return this.valueForUndefinedKey(key);
 	      }
 	      return this[key];
@@ -8678,7 +8681,7 @@ module.exports =
 	  }, {
 	    key: 'accessInstanceVariablesDirectly',
 	    get: function get() {
-	      return _accessInstanceVariablesDirectly;
+	      return true;
 	    }
 	  }]);
 
@@ -8703,56 +8706,44 @@ module.exports =
 	  value: true
 	});
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	var CATransform3D = function () {
-	  function CATransform3D() {
-	    _classCallCheck(this, CATransform3D);
-	  }
+	var CATransform3D =
 
-	  _createClass(CATransform3D, [{
-	    key: 'init',
+	// Initializers
 
+	/**
+	 * 
+	 * @access public
+	 * @param {number[][]} m - 
+	 * @returns {void}
+	 * @see https://developer.apple.com/reference/quartzcore/catransform3d/1523734-init
+	 */
+	function CATransform3D(m) {
+	  _classCallCheck(this, CATransform3D);
 
-	    // Initializers
+	  // Instance Properties
 
-	    /**
-	     * 
-	     * @access public
-	     * @param {number[][]} m - 
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/quartzcore/catransform3d/1523734-init
-	     */
-	    value: function init(m) {
+	  this._m11 = 0;
+	  this._m12 = 0;
+	  this._m13 = 0;
+	  this._m14 = 0;
+	  this._m21 = 0;
+	  this._m22 = 0;
+	  this._m23 = 0;
+	  this._m24 = 0;
+	  this._m31 = 0;
+	  this._m32 = 0;
+	  this._m33 = 0;
+	  this._m34 = 0;
+	  this._m41 = 0;
+	  this._m42 = 0;
+	  this._m43 = 0;
+	  this._m44 = 0;
+	}
 
-	      // Instance Properties
-
-	      this._m11 = 0;
-	      this._m12 = 0;
-	      this._m13 = 0;
-	      this._m14 = 0;
-	      this._m21 = 0;
-	      this._m22 = 0;
-	      this._m23 = 0;
-	      this._m24 = 0;
-	      this._m31 = 0;
-	      this._m32 = 0;
-	      this._m33 = 0;
-	      this._m34 = 0;
-	      this._m41 = 0;
-	      this._m42 = 0;
-	      this._m43 = 0;
-	      this._m44 = 0;
-	    }
-
-	    // Instance Properties
-
-	  }]);
-
-	  return CATransform3D;
-	}();
+	// Instance Properties
+	;
 
 	exports.default = CATransform3D;
 
@@ -9345,8 +9336,8 @@ module.exports =
 	  /**
 	   * 
 	   * @access public
+	   * @construtor
 	   * @param {number[][]} [m = null] - 
-	   * @returns {void}
 	   * @see https://developer.apple.com/reference/quartzcore/catransform3d/1524036-init
 	   */
 	  function SCNMatrix4() {
@@ -9491,7 +9482,7 @@ module.exports =
 
 	    /**
 	     * @access public
-	     * @returns {SCNVector4}
+	     * @returns {SCNVector4} -
 	     */
 
 	  }, {
@@ -9507,7 +9498,7 @@ module.exports =
 
 	    /**
 	     * @access public
-	     * @returns {SCNMatrix4}
+	     * @returns {SCNMatrix4} -
 	     */
 
 	  }, {
@@ -9773,7 +9764,7 @@ module.exports =
 
 	    /**
 	     * @access public
-	     * @returns {SCNMatrix4}
+	     * @returns {SCNMatrix4} -
 	     */
 
 	  }, {
@@ -9804,7 +9795,7 @@ module.exports =
 	     * @param {number} x -
 	     * @param {number} y -
 	     * @param {number} z -
-	     * @returns {SCNMatrix4}
+	     * @returns {SCNMatrix4} -
 	     */
 
 	  }, {
@@ -9816,7 +9807,7 @@ module.exports =
 
 	    /**
 	     * @access public
-	     * @returns {SCNMatrix4}
+	     * @returns {SCNMatrix4} -
 	     */
 
 	  }, {
@@ -9829,7 +9820,7 @@ module.exports =
 	     * @param {number} y -
 	     * @param {number} z -
 	     * @param {number} w -
-	     * @returns {SCNMatrix4}
+	     * @returns {SCNMatrix4} -
 	     */
 	    value: function rotation(x, y, z, w) {
 	      var m = SCNMatrix4.matrixWithRotation(x, y, z, w);
@@ -9841,7 +9832,8 @@ module.exports =
 	     * @param {number} x -
 	     * @param {number} y -
 	     * @param {number} z -
-	     * @returns {SCNMatrix4}
+	     * @param {number} w -
+	     * @returns {SCNMatrix4} -
 	     */
 
 	  }, {
@@ -9853,7 +9845,7 @@ module.exports =
 	     * @param {number} x -
 	     * @param {number} y -
 	     * @param {number} z -
-	     * @returns {SCNMatrix4}
+	     * @returns {SCNMatrix4} -
 	     */
 	    value: function translation(x, y, z) {
 	      var m = SCNMatrix4.matrixWithTranslation(x, y, z);
@@ -9865,7 +9857,7 @@ module.exports =
 	     * @param {number} x -
 	     * @param {number} y -
 	     * @param {number} z -
-	     * @returns {SCNMatrix4}
+	     * @returns {SCNMatrix4} -
 	     */
 
 	  }, {
@@ -9875,7 +9867,7 @@ module.exports =
 	    /**
 	     * Returns a Boolean value that indicates whether the corresponding elements of two matrices are equal.
 	     * @access public
-	     * @param {SCNMatrix4} -
+	     * @param {SCNMatrix4} m -
 	     * @returns {boolean} -
 	     * @desc This function performs a numeric (not bitwise) comparison of each pair of elements.
 	     * @see https://developer.apple.com/reference/scenekit/1409665-scnmatrix4equaltomatrix4
@@ -9903,7 +9895,7 @@ module.exports =
 
 	    /**
 	     * @access public
-	     * @returns {SCNVector3}
+	     * @returns {SCNVector3} -
 	     */
 
 	  }, {
@@ -9917,7 +9909,7 @@ module.exports =
 
 	    /**
 	     * @access public
-	     * @returns {SCNVector3}
+	     * @returns {SCNVector3} -
 	     */
 
 	  }, {
@@ -10330,7 +10322,7 @@ module.exports =
 
 	    /**
 	     * @access public
-	     * @returns {CAAnimation}
+	     * @returns {CAAnimation} -
 	     */
 	    value: function copy() {
 	      var anim = new CAAnimation();
@@ -10372,7 +10364,7 @@ module.exports =
 	      var baseTime = this._basetimeFromActivetime(activeTime);
 	      var t = baseTime;
 	      if (this.timingFunction !== null) {
-	        t = this.timingFunction(baseTime);
+	        t = this.timingFunction._getValueAtTime(baseTime);
 	      }
 	      this._handleEvents(obj, t);
 	    }
@@ -10483,6 +10475,12 @@ module.exports =
 	exports.kCAFillModeForwards = 'forwards';
 	exports.kCAFillModeBackwards = 'backwards';
 	exports.kCAFillModeBoth = 'both';
+
+	exports.kCAMediaTimingFunctionLinear = 'linear';
+	exports.kCAMediaTimingFunctionEaseIn = 'easeIn';
+	exports.kCAMediaTimingFunctionEaseOut = 'easeOut';
+	exports.kCAMediaTimingFunctionEaseInEaseOut = 'easeInEaseOut';
+	exports.kCAMediaTimingFunctionDefault = 'default';
 
 /***/ },
 /* 21 */
@@ -10607,6 +10605,12 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
+	var _constants = __webpack_require__(20);
+
+	var Constants = _interopRequireWildcard(_constants);
+
+	function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -10624,42 +10628,43 @@ module.exports =
 	var CAMediaTimingFunction = function (_NSObject) {
 	  _inherits(CAMediaTimingFunction, _NSObject);
 
-	  function CAMediaTimingFunction() {
+	  // Creating Timing Functions
+
+	  /**
+	   * Returns an initialized timing function modeled as a cubic Bézier curve using the specified control points.
+	   * @access public
+	   * @constructor
+	   * @param {number} c1x - A floating point number representing the x position of the c1 control point.
+	   * @param {number} c1y - A floating point number representing the y position of the c1 control point.
+	   * @param {number} c2x - A floating point number representing the x position of the c2 control point.
+	   * @param {number} c2y - A floating point number representing the y position of the c2 control point.
+	   * @desc The end points of the Bézier curve are automatically set to (0.0,0.0) and (1.0,1.0). The control points defining the Bézier curve are: [(0.0,0.0), (c1x,c1y), (c2x,c2y), (1.0,1.0)].
+	   * @see https://developer.apple.com/reference/quartzcore/camediatimingfunction/1522235-init
+	   */
+	  function CAMediaTimingFunction(c1x, c1y, c2x, c2y) {
 	    _classCallCheck(this, CAMediaTimingFunction);
 
-	    return _possibleConstructorReturn(this, (CAMediaTimingFunction.__proto__ || Object.getPrototypeOf(CAMediaTimingFunction)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (CAMediaTimingFunction.__proto__ || Object.getPrototypeOf(CAMediaTimingFunction)).call(this));
+
+	    _this._c1x = c1x;
+	    _this._c1y = c1y;
+	    _this._c2x = c2x;
+	    _this._c2y = c2y;
+	    return _this;
 	  }
 
+	  /**
+	   * Creates and returns a new instance of CAMediaTimingFunction configured with the predefined timing function specified by name.
+	   * @access public
+	   * @param {string} name - The timing function to use as specified in Predefined Timing Functions. 
+	   * @returns {CAMediaTimingFunction} -
+	   * @see https://developer.apple.com/reference/quartzcore/camediatimingfunction/1521979-init
+	   */
+
+
 	  _createClass(CAMediaTimingFunction, [{
-	    key: 'init',
+	    key: 'getControlPointAtValues',
 
-
-	    // Creating Timing Functions
-
-	    /**
-	     * Creates and returns a new instance of CAMediaTimingFunction configured with the predefined timing function specified by name.
-	     * @access public
-	     * @param {string} name - The timing function to use as specified in Predefined Timing Functions. 
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/quartzcore/camediatimingfunction/1521979-init
-	     */
-	    value: function init(name) {}
-
-	    /**
-	     * Returns an initialized timing function modeled as a cubic Bézier curve using the specified control points.
-	     * @access public
-	     * @param {number} c1x - A floating point number representing the x position of the c1 control point.
-	     * @param {number} c1y - A floating point number representing the y position of the c1 control point.
-	     * @param {number} c2x - A floating point number representing the x position of the c2 control point.
-	     * @param {number} c2y - A floating point number representing the y position of the c2 control point.
-	     * @returns {void}
-	     * @desc The end points of the Bézier curve are automatically set to (0.0,0.0) and (1.0,1.0). The control points defining the Bézier curve are: [(0.0,0.0), (c1x,c1y), (c2x,c2y), (1.0,1.0)].
-	     * @see https://developer.apple.com/reference/quartzcore/camediatimingfunction/1522235-init
-	     */
-
-	  }, {
-	    key: 'initControlPoints',
-	    value: function initControlPoints(c1x, c1y, c2x, c2y) {}
 
 	    // Accessing the Control Points
 
@@ -10672,10 +10677,65 @@ module.exports =
 	     * @desc The value of index must be between 0 and 3.
 	     * @see https://developer.apple.com/reference/quartzcore/camediatimingfunction/1522057-getcontrolpoint
 	     */
+	    value: function getControlPointAtValues(idx, ptr) {}
+	  }, {
+	    key: '_getValueAtTime',
+	    value: function _getValueAtTime(time) {
+	      var t0 = 0;
+	      var t1 = 1;
+	      var t = 0.5;
+	      var r = 0;
+
+	      for (var i = 0; i < 8; i++) {
+	        r = 1 - t;
+	        var tval = 3 * t * r * (this._c1x * r + this._c2x * t) + t * t * t;
+	        if (time > tval) {
+	          t0 = t;
+	        } else {
+	          t1 = t;
+	        }
+	        t = (t0 + t1) * 0.5;
+	      }
+	      r = 1 - t;
+	      var val = 3 * t * r * (this._c1y * r + this._c2y * t) + t * t * t;
+
+	      return val;
+	    }
+	  }], [{
+	    key: 'functionWithName',
+	    value: function functionWithName(name) {
+	      switch (name) {
+	        case Constants.kCAMediaTimingFunctionLinear:
+	          return new CAMediaTimingFunction(0.0, 0.0, 1.0, 1.0);
+	        case Constants.kCAMediaTimingFunctionEaseIn:
+	          return new CAMediaTimingFunction(0.42, 0.0, 1.0, 1.0);
+	        case Constants.kCAMediaTimingFunctionEaseOut:
+	          return new CAMediaTimingFunction(0.0, 0.0, 0.58, 1.0);
+	        case Constants.kCAMediaTimingFunctionEaseInEaseOut:
+	          return new CAMediaTimingFunction(0.42, 0.0, 0.58, 1.0);
+	        case Constants.kCAMediaTimingFunctionDefault:
+	          return new CAMediaTimingFunction(0.25, 0.1, 0.25, 1.0);
+	      }
+	      throw new Error('CAMediaTimingFunction: unknown name: ' + name);
+	    }
+
+	    /**
+	     * Returns an initialized timing function modeled as a cubic Bézier curve using the specified control points.
+	     * @access public
+	     * @param {number} c1x - A floating point number representing the x position of the c1 control point.
+	     * @param {number} c1y - A floating point number representing the y position of the c1 control point.
+	     * @param {number} c2x - A floating point number representing the x position of the c2 control point.
+	     * @param {number} c2y - A floating point number representing the y position of the c2 control point.
+	     * @returns {CAMediaTimingFunction}
+	     * @desc The end points of the Bézier curve are automatically set to (0.0,0.0) and (1.0,1.0). The control points defining the Bézier curve are: [(0.0,0.0), (c1x,c1y), (c2x,c2y), (1.0,1.0)].
+	     * @see https://developer.apple.com/reference/quartzcore/camediatimingfunction/1522235-init
+	     */
 
 	  }, {
-	    key: 'getControlPointAtValues',
-	    value: function getControlPointAtValues(idx, ptr) {}
+	    key: 'functionWithControlPoints',
+	    value: function functionWithControlPoints(c1x, c1y, c2x, c2y) {
+	      return new CAMediaTimingFunction(c1x, c1y, c2x, c2y);
+	    }
 	  }]);
 
 	  return CAMediaTimingFunction;
@@ -10982,6 +11042,7 @@ module.exports =
 	  /**
 	   * constructor
 	   * @access public
+	   * @param {?string} path -
 	   * @constructor
 	   */
 	  function CABasicAnimation(path) {
@@ -11016,7 +11077,7 @@ module.exports =
 
 	  /**
 	   * @access public
-	   * @returns {CABasicAnimation}
+	   * @returns {CABasicAnimation} -
 	   */
 
 
@@ -11042,7 +11103,7 @@ module.exports =
 	      var activeTime = this._basetimeFromActivetime(time);
 	      var t = activeTime;
 	      if (this.timingFunction !== null) {
-	        t = this.timingFunction(activeTime);
+	        t = this.timingFunction._getValueAtTime(activeTime);
 	      }
 	      if (t < 0) {
 	        t = 0;
@@ -11206,7 +11267,7 @@ module.exports =
 
 	  /**
 	   * @access public
-	   * @returns {CAPropertyAnimation}
+	   * @returns {CAPropertyAnimation} -
 	   */
 
 
@@ -11232,7 +11293,7 @@ module.exports =
 	      var activeTime = this._basetimeFromActivetime(time);
 	      var t = activeTime;
 	      if (this.timingFunction !== null) {
-	        t = this.timingFunction(activeTime);
+	        t = this.timingFunction._getValueAtTime(activeTime);
 	      }
 	      var value = this.valueFunction(t);
 	      this._applyValue(obj, value);
@@ -12499,8 +12560,7 @@ module.exports =
 	  /**
 	   * Constructor for JSExport compatibility
 	   * @access public
-	   * @constructor
-	   * @returns {SCNNode}
+	   * @returns {SCNNode} -
 	   */
 
 
@@ -12593,7 +12653,7 @@ module.exports =
 	    /**
 	     *
 	     * @access private
-	     * @param {number} index
+	     * @param {number} index -
 	     * @returns {void}
 	     */
 
@@ -12613,8 +12673,8 @@ module.exports =
 	    /**
 	     *
 	     * @access private
-	     * @param {SCNNode} object
-	     * @param {number} index
+	     * @param {SCNNode} object -
+	     * @param {number} index -
 	     * @returns {void}
 	     */
 
@@ -12623,7 +12683,7 @@ module.exports =
 	    value: function _insertObjectInChildNodesAtIndex(object, index) {
 	      var length = this._childNodes.length;
 	      if (index > length) {
-	        throw 'SCNNode.childNodes out of index: ' + index + ' > ' + length;
+	        throw new Error('SCNNode.childNodes out of index: ' + index + ' > ' + length);
 	      }
 	      this._childNodes.splice(index, 0, object);
 	    }
@@ -12765,6 +12825,7 @@ module.exports =
 	    value: function removeAllParticleSystems() {}
 	    /**
 	     * The particle systems attached to the node.
+	     * @access public
 	     * @type {?SCNParticleSystem[]}
 	     * @desc An array of SCNParticleSystem objects directly attached to the node. This array does not include particle systems attached to the node’s child nodes.For details on particle systems, see SCNParticleSystem.
 	     * @see https://developer.apple.com/reference/scenekit/scnnode/1522705-particlesystems
@@ -13235,7 +13296,7 @@ module.exports =
 	    /**
 	     *
 	     * @access public
-	     * @returns {SCNNode}
+	     * @returns {SCNNode} -
 	     */
 
 	  }, {
@@ -13424,7 +13485,7 @@ module.exports =
 	    },
 	    set: function set(newValue) {
 	      if (typeof newValue.x !== 'number' || typeof newValue.y !== 'number' || typeof newValue.z !== 'number') {
-	        throw 'error: SCNNode.position must have x, y, z values';
+	        throw new Error('error: SCNNode.position must have x, y, z values');
 	      }
 	      this._position.x = newValue.x;
 	      this._position.y = newValue.y;
@@ -13438,7 +13499,7 @@ module.exports =
 	    },
 	    set: function set(newValue) {
 	      if (typeof newValue.x !== 'number' || typeof newValue.y !== 'number' || typeof newValue.z !== 'number' || typeof newValue.w !== 'number') {
-	        throw 'error: SCNNode.rotation must have x, y, z, w values';
+	        throw new Error('error: SCNNode.rotation must have x, y, z, w values');
 	      }
 	      this._rotation.x = newValue.x;
 	      this._rotation.y = newValue.y;
@@ -13453,7 +13514,7 @@ module.exports =
 	    },
 	    set: function set(newValue) {
 	      if (typeof newValue.x !== 'number' || typeof newValue.y !== 'number' || typeof newValue.z !== 'number') {
-	        throw 'error: SCNNode.scale must have x, y, z values';
+	        throw new Error('error: SCNNode.scale must have x, y, z values');
 	      }
 	      this._scale.x = newValue.x;
 	      this._scale.y = newValue.y;
@@ -13618,9 +13679,8 @@ module.exports =
 	    /**
 	     * Constructor for JSExport compatibility
 	     * @access public
-	     * @constructor
 	     * @param {?SCNGeometry} [geometry] - The geometry to be attached.
-	     * @returns {SCNNode}
+	     * @returns {SCNNode} -
 	     */
 
 	  }, {
@@ -14166,10 +14226,10 @@ module.exports =
 	    var _this = _possibleConstructorReturn(this, (SCNGeometry.__proto__ || Object.getPrototypeOf(SCNGeometry)).call(this));
 
 	    if (!Array.isArray(sources)) {
-	      throw 'SCNGeometry(sources, elements): sources must be Array';
+	      throw new Error('SCNGeometry(sources, elements): sources must be Array');
 	    }
 	    if (!Array.isArray(elements)) {
-	      throw 'SCNGeometry(sources, elements): elements must be Array';
+	      throw new Error('SCNGeometry(sources, elements): elements must be Array');
 	    }
 
 	    // Managing Geometry Attributes
@@ -15623,7 +15683,7 @@ module.exports =
 
 	      // light params
 	      var lights = this._createLightNodeArray();
-	      if (lights.length == 0) {
+	      if (lights.length === 0) {
 	        lights.push(this._defaultLightNode);
 	      }
 	      //console.log('lights.length: ' + lights.length)
@@ -15668,7 +15728,7 @@ module.exports =
 	    /**
 	     *
 	     * @access private
-	     * @returns {SCNNode[]}
+	     * @returns {SCNNode[]} -
 	     */
 
 	  }, {
@@ -15693,7 +15753,7 @@ module.exports =
 	    /**
 	     *
 	     * @access private
-	     * @returns {SCNNode[]}
+	     * @returns {SCNNode[]} -
 	     */
 
 	  }, {
@@ -16358,9 +16418,7 @@ module.exports =
 	  }, {
 	    key: '_dummyTexture',
 	    get: function get() {
-	      //if(this.__dummyTexture !== null){
 	      return this.__dummyTexture;
-	      //}
 	    }
 	  }]);
 
@@ -17144,6 +17202,7 @@ module.exports =
 	  }, {
 	    key: 'removeAllParticleSystems',
 	    value: function removeAllParticleSystems() {}
+
 	    /**
 	     * The particle systems attached to the scene.
 	     * @type {?SCNParticleSystem[]}
@@ -17192,6 +17251,7 @@ module.exports =
 	    }
 
 	    // Structures
+
 	    /**
 	     * @type {Object} Attribute
 	     * @property {Symbol} endTime A floating-point value (in an NSNumber object) for the end time of the scene.
@@ -17272,8 +17332,8 @@ module.exports =
 	  /**
 	   * Creates a new material property object with the specified contents.
 	   * @access public
+	   * @constructor
 	   * @param {Object} contents - The visual contents of the material property—a color, image, or source of animated content. For details, see the discussion of the  contents property.
-	   * @returns {SCNMaterialProperty}
 	   * @desc Newly created SCNMaterial objects contain SCNMaterialProperty instances for all of their visual properties. To change a material’s visual properties, you modify those instances rather than creating new material property objects.You create new SCNMaterialProperty instances to provide textures for use with custom GLSL shaders—for details, see SCNShadable.
 	   * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395386-init
 	   */
@@ -17372,7 +17432,7 @@ module.exports =
 
 	  /**
 	   * @access public
-	   * @returns {Float32Array}
+	   * @returns {Float32Array} -
 	   */
 
 
@@ -17617,7 +17677,7 @@ module.exports =
 	    /**
 	     * Returns the components that make up the color in the HSB color space.
 	     * @access public
-	     * @returns {Object} 
+	     * @returns {Object} -
 	     * @property {number} color.hue - On return, the hue component of the color object. On applications linked for iOS 10 or later, the hue component is specified in an extended range color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
 	     * @property {number} color.saturation - On return, the saturation component of the color object. On applications linked for iOS 10 or later, the saturation component is specified in an extended range color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
 	     * @property {number} color.brightness - On return, the brightness component of the color object. On applications linked for iOS 10 or later, the brightness component is specified in an extended range color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
@@ -17641,7 +17701,11 @@ module.exports =
 	    /**
 	     * Returns the components that make up the color in the RGB color space.
 	     * @access public
-	     * @returns {Object}
+	     * @param {number} red -
+	     * @param {number} green -
+	     * @param {number} blue -
+	     * @param {number} alpha -
+	     * @returns {Object} -
 	     * @property {number} color.red - On return, the red component of the color object. On applications linked for iOS 10 or later, the red component is specified in an extended range sRGB color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
 	     * @property {number} color.green - On return, the green component of the color object. On applications linked for iOS 10 or later, the green component is specified in an extended range sRGB color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
 	     * @property {number} color.blue - On return, the blue component of the color object. On applications linked for iOS 10 or later, the blue component is specified in an extended range sRGB color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
@@ -17687,7 +17751,7 @@ module.exports =
 
 	    /**
 	     * @access public
-	     * @returns {Float32Array}
+	     * @returns {Float32Array} -
 	     */
 	    value: function float32Array() {
 	      return new Float32Array([this.red, this.green, this.blue, this.alpha]);
@@ -20385,8 +20449,6 @@ module.exports =
 	  value: true
 	});
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 	var _NSObject2 = __webpack_require__(13);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
@@ -20420,98 +20482,81 @@ module.exports =
 	var SCNParticlePropertyController = function (_NSObject) {
 	  _inherits(SCNParticlePropertyController, _NSObject);
 
-	  function SCNParticlePropertyController() {
+	  // Creating a Property Controller
+
+	  /**
+	   * Creates a particle property controller with the specified Core Animation animation.
+	   * @access public
+	   * @constructor
+	   * @param {CAAnimation} animation - A Core Animation object specifying the behavior of the property animation. Must not be nil.You can use different CAAnimation subclasses to animate effects in different ways. For example, a CABasicAnimation instance transitions a property from one value to another, and a CAKeyframeAnimation instance transitions a property through a series of values. You use properties of the animation object to define its timing curve, repeat mode, and other options.SceneKit ignores the keyPath, duration, and repeatCount properties of this animation object.
+	   * @desc To set up a particle property animation:Create a CAAnimation object defining how a property of each particle in the system changes over time.Create a particle property controller using the init(animation:) method.Attach the property controller to a particle system using the propertyControllers dictionary, choosing a key listed in Particle Property Keys to identify the particle property it animates.For example, the following code sets up a controller to animate particle sizes:// 1. Create and configure an animation object.
+	  CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
+	  animation.values = @[ @0.1, @1.0, @3.0, @0.5 ];
+	  // 2. Create a property controller from the animation object.
+	  SCNParticlePropertyController *controller =
+	    [SCNParticlePropertyController controllerWithAnimation:animation];
+	  // 3. Assign the controller to a particle system, associating it with a particle property.
+	  particleSystem.propertyControllers = @{ SCNParticlePropertySize: controller };
+	  // 1. Create and configure an animation object.
+	  CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
+	  animation.values = @[ @0.1, @1.0, @3.0, @0.5 ];
+	  // 2. Create a property controller from the animation object.
+	  SCNParticlePropertyController *controller =
+	    [SCNParticlePropertyController controllerWithAnimation:animation];
+	  // 3. Assign the controller to a particle system, associating it with a particle property.
+	  particleSystem.propertyControllers = @{ SCNParticlePropertySize: controller };
+	    * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1523579-init
+	   */
+	  function SCNParticlePropertyController(animation) {
 	    _classCallCheck(this, SCNParticlePropertyController);
 
-	    return _possibleConstructorReturn(this, (SCNParticlePropertyController.__proto__ || Object.getPrototypeOf(SCNParticlePropertyController)).apply(this, arguments));
+	    // Managing the Controller’s Animation
+
+	    /**
+	     * The Core Animation object defining the behavior of the property animation.
+	     * @type {CAAnimation}
+	     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1523707-animation
+	     */
+	    var _this = _possibleConstructorReturn(this, (SCNParticlePropertyController.__proto__ || Object.getPrototypeOf(SCNParticlePropertyController)).call(this));
+
+	    _this.animation = null;
+
+	    /**
+	     * The mode that determines input values for the property controller’s animation.
+	     * @type {SCNParticleInputMode}
+	     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1522852-inputmode
+	     */
+	    _this.inputMode = null;
+
+	    /**
+	     * An offset to add to the input value of the controller’s animation.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1523994-inputbias
+	     */
+	    _this.inputBias = 0;
+
+	    /**
+	     * A factor for multiplying the input value of the controller’s animation. 
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1522903-inputscale
+	     */
+	    _this.inputScale = 0;
+
+	    /**
+	     * A node whose distance to each particle provides input values for the controller’s animation.
+	     * @type {?SCNNode}
+	     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1522895-inputorigin
+	     */
+	    _this.inputOrigin = null;
+
+	    /**
+	     * A particle property that provides input values for this property controller’s animation.
+	     * @type {?SCNParticleSystem.ParticleProperty}
+	     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1522973-inputproperty
+	     */
+	    _this.inputProperty = null;
+	    return _this;
 	  }
-
-	  _createClass(SCNParticlePropertyController, [{
-	    key: 'init',
-
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @returns {void}
-	     */
-	    value: function init() {
-
-	      // Managing the Controller’s Animation
-
-	      /**
-	       * The Core Animation object defining the behavior of the property animation.
-	       * @type {CAAnimation}
-	       * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1523707-animation
-	       */
-	      this.animation = null;
-
-	      /**
-	       * The mode that determines input values for the property controller’s animation.
-	       * @type {SCNParticleInputMode}
-	       * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1522852-inputmode
-	       */
-	      this.inputMode = null;
-
-	      /**
-	       * An offset to add to the input value of the controller’s animation.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1523994-inputbias
-	       */
-	      this.inputBias = 0;
-
-	      /**
-	       * A factor for multiplying the input value of the controller’s animation. 
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1522903-inputscale
-	       */
-	      this.inputScale = 0;
-
-	      /**
-	       * A node whose distance to each particle provides input values for the controller’s animation.
-	       * @type {?SCNNode}
-	       * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1522895-inputorigin
-	       */
-	      this.inputOrigin = null;
-
-	      /**
-	       * A particle property that provides input values for this property controller’s animation.
-	       * @type {?SCNParticleSystem.ParticleProperty}
-	       * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1522973-inputproperty
-	       */
-	      this.inputProperty = null;
-	    }
-
-	    // Creating a Property Controller
-
-	    /**
-	     * Creates a particle property controller with the specified Core Animation animation.
-	     * @access public
-	     * @param {CAAnimation} animation - A Core Animation object specifying the behavior of the property animation. Must not be nil.You can use different CAAnimation subclasses to animate effects in different ways. For example, a CABasicAnimation instance transitions a property from one value to another, and a CAKeyframeAnimation instance transitions a property through a series of values. You use properties of the animation object to define its timing curve, repeat mode, and other options.SceneKit ignores the keyPath, duration, and repeatCount properties of this animation object.
-	     * @returns {void}
-	     * @desc To set up a particle property animation:Create a CAAnimation object defining how a property of each particle in the system changes over time.Create a particle property controller using the init(animation:) method.Attach the property controller to a particle system using the propertyControllers dictionary, choosing a key listed in Particle Property Keys to identify the particle property it animates.For example, the following code sets up a controller to animate particle sizes:// 1. Create and configure an animation object.
-	    CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
-	    animation.values = @[ @0.1, @1.0, @3.0, @0.5 ];
-	    // 2. Create a property controller from the animation object.
-	    SCNParticlePropertyController *controller =
-	      [SCNParticlePropertyController controllerWithAnimation:animation];
-	    // 3. Assign the controller to a particle system, associating it with a particle property.
-	    particleSystem.propertyControllers = @{ SCNParticlePropertySize: controller };
-	    // 1. Create and configure an animation object.
-	    CAKeyframeAnimation *animation = [CAKeyframeAnimation animation];
-	    animation.values = @[ @0.1, @1.0, @3.0, @0.5 ];
-	    // 2. Create a property controller from the animation object.
-	    SCNParticlePropertyController *controller =
-	      [SCNParticlePropertyController controllerWithAnimation:animation];
-	    // 3. Assign the controller to a particle system, associating it with a particle property.
-	    particleSystem.propertyControllers = @{ SCNParticlePropertySize: controller };
-	      * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1523579-init
-	     */
-
-	  }, {
-	    key: 'init',
-	    value: function init(animation) {}
-	  }]);
 
 	  return SCNParticlePropertyController;
 	}(_NSObject3.default);
@@ -21553,7 +21598,7 @@ module.exports =
 
 	    /**
 	     * @access private
-	     * @param {CGRect} viewRect
+	     * @param {CGRect} viewRect -
 	     * @returns {void}
 	     */
 	    value: function _updateProjectionTransform(viewRect) {
@@ -22118,7 +22163,7 @@ module.exports =
 	    }
 
 	    /**
-	     * @access pricate
+	     * @access private
 	     * @returns {boolean}
 	     */
 
@@ -22154,9 +22199,9 @@ module.exports =
 	     * @param {boolean} floatComponents - A Boolean value that indicates whether vector components are floating-point values. Specify true for floating-point values, or false for integer values.
 	     * @param {number} componentsPerVector - The number of scalar components in each vector.
 	     * @param {number} bytesPerComponent - The size, in bytes, of each vector component.
-	     * @param {number} offset - The offset, in bytes, from the beginning of the data to the first vector component to be used in the geometry source.
-	     * @param {number} stride - The number of bytes from each vector to the next in the data.
-	     * @returns {SCNGeometrySource}
+	     * @param {number} dataOffset - The offset, in bytes, from the beginning of the data to the first vector component to be used in the geometry source.
+	     * @param {number} dataStride - The number of bytes from each vector to the next in the data.
+	     * @returns {SCNGeometrySource} -
 	     * @desc A geometry source’s data is an array of vectors, each of which represents a particular attribute (or semantic) of a vertex in the geometry. The other parameters determine how SceneKit interprets this data. For example, an array of vertex positions may have three 32-bit floating-point components per vector, but an array of texture coordinates may have two 8-bit integer coponents per vector. You can use the offset and stride parameters together to interleave data for multiple geometry sources in the same array, improving rendering performance. See SCNGeometrySource for details.To create a custom SCNGeometry object from the geometry source, use the init(sources:elements:) method.
 	     * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1523320-init
 	     */
@@ -22167,7 +22212,8 @@ module.exports =
 
 	    /**
 	     * @access public
-	     * @returns {number[]}
+	     * @param {number} index -
+	     * @returns {number[]} -
 	     */
 	    value: function vectorAt(index) {
 	      if (index < 0 || index >= this.vectorCount) {
@@ -22299,7 +22345,7 @@ module.exports =
 	     * @param {number} vertexCount - The number of vertices in the geometry source.
 	     * @param {number} offset - The offset, in bytes, from the beginning of the data to the first vector component to be used in the geometry source.
 	     * @param {number} stride - The number of bytes from each vector to the next in the data.
-	     * @returns {SCNGeometrySource}
+	     * @returns {SCNGeometrySource} -
 	     * @desc Use this method to create a geometry source whose underlying data can be modified at render time by a Metal compute shader running on the GPU. To create a MTLBuffer object for use with a geometry source, use the device property of the SceneKit view (or other renderer) responsible for drawing your scene.// Create and fill a buffer.
 	    id <MTLDevice> device = self.scnView.device;
 	    self.geometryBuffer = [device newBufferWithBytes:myData length:myLength options:myOptions];
@@ -22364,7 +22410,7 @@ module.exports =
 	     * @access public
 	     * @param {SCNVector3[]} vertices - An array of three-component vectors, each of which represents a vertex position for the geometry source.
 	     * @param {number} count - The number of vertices
-	     * @returns {SCNGeometrySource}
+	     * @returns {SCNGeometrySource} -
 	     * @desc SceneKit converts this data to its own format to optimize rendering performance. To read the converted data, examine the properties of the created SCNGeometrySource object.To create a custom SCNGeometry object from the geometry source, use the init(sources:elements:) method.
 	     * @see https://developer.apple.com/reference/scenekit/scngeometrysource/2034708-init
 	     */
@@ -22394,7 +22440,7 @@ module.exports =
 	     * @access public
 	     * @param {CGPoint[]} texcoord - An array of points, each of which represents a texture coordinate pair for the geometry source.
 	     * @param {number} count - The number of texture coordinate points.
-	     * @returns {SCNGeometrySource}
+	     * @returns {SCNGeometrySource} -
 	     * @desc SceneKit converts this data to its own format to optimize rendering performance. To read the converted data, examine the properties of the created SCNGeometrySource object.To create a custom SCNGeometry object from the geometry source, use the init(sources:elements:) method.
 	     * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1522718-init
 	     */
@@ -22424,7 +22470,7 @@ module.exports =
 	     * @access public
 	     * @param {SCNVector3[]} normals - An array of vectors, which represents a normal vector for the geometry source.
 	     * @param {number} count - The number of normals
-	     * @returns {SCNGeometrySource}
+	     * @returns {SCNGeometrySource} -
 	     */
 
 	  }, {
@@ -24480,7 +24526,7 @@ module.exports =
 	 * @param {number} mass - The mass of the object affected by the field. (See the mass property for physics bodies and the particleMass property for particle systems.) 
 	 * @param {number} charge - The electrical charge of the object affected by the field. (See the charge property for physics bodies and the particleCharge property for particle systems.)
 	 * @param {number} time - The elapsed time, in seconds, since the last simulation step.
-	 * @returns {SCNVector3}
+	 * @returns {SCNVector3} -
 	 * @desc Your block uses these parameters to compute and return an SCNVector3 force vector, which SceneKit then applies to the object affected by the field.
 	 * @see https://developer.apple.com/reference/scenekit/scnfieldforceevaluator
 	 */
@@ -24698,7 +24744,7 @@ module.exports =
 	 * The signature for a block that manages animation timing, used by the timingFunction property.
 	 * @type {function(time: number): number}
 	 * @param {number} time - A fraction of the action’s The input value for the timing function, as determined by the timingMode property and the action’s current progress.
-	 * @returns {number}
+	 * @returns {number} -
 	 * @desc Your block must return a floating-point value between 0.0 and 1.0, where 0.0 represents the starting state of the action’s animation and 1.0 represents the end state.
 	 * @see https://developer.apple.com/reference/scenekit/scnactiontimingfunction
 	 */
@@ -25962,8 +26008,6 @@ module.exports =
 	  value: true
 	});
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 	var _SCNConstraint2 = __webpack_require__(96);
 
 	var _SCNConstraint3 = _interopRequireDefault(_SCNConstraint2);
@@ -25989,55 +26033,38 @@ module.exports =
 	var SCNLookAtConstraint = function (_SCNConstraint) {
 	  _inherits(SCNLookAtConstraint, _SCNConstraint);
 
-	  function SCNLookAtConstraint() {
+	  // Creating a Look-At Constraint
+
+	  /**
+	   * Creates a look-at constraint for a specified target node.
+	   * @access public
+	   * @construtor
+	   * @param {?SCNNode} target - The node that constrained nodes will be reoriented to point toward.
+	   * @desc To attach constraints to an SCNNode object, use its constraints property.
+	   * @see https://developer.apple.com/reference/scenekit/scnlookatconstraint/1468683-init
+	   */
+	  function SCNLookAtConstraint(target) {
 	    _classCallCheck(this, SCNLookAtConstraint);
 
-	    return _possibleConstructorReturn(this, (SCNLookAtConstraint.__proto__ || Object.getPrototypeOf(SCNLookAtConstraint)).apply(this, arguments));
+	    // Modifying a Constraint
+
+	    /**
+	     * A Boolean value that specifies whether constrained nodes are allowed to rotate.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/reference/scenekit/scnlookatconstraint/1468675-isgimballockenabled
+	     */
+	    var _this = _possibleConstructorReturn(this, (SCNLookAtConstraint.__proto__ || Object.getPrototypeOf(SCNLookAtConstraint)).call(this));
+
+	    _this.isGimbalLockEnabled = false;
+
+	    /**
+	     * The node toward which constrained nodes will point after being reoriented.
+	     * @type {?SCNNode}
+	     * @see https://developer.apple.com/reference/scenekit/scnlookatconstraint/1468677-target
+	     */
+	    _this.target = null;
+	    return _this;
 	  }
-
-	  _createClass(SCNLookAtConstraint, [{
-	    key: 'init',
-
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @returns {void}
-	     */
-	    value: function init() {
-
-	      // Modifying a Constraint
-
-	      /**
-	       * A Boolean value that specifies whether constrained nodes are allowed to rotate.
-	       * @type {boolean}
-	       * @see https://developer.apple.com/reference/scenekit/scnlookatconstraint/1468675-isgimballockenabled
-	       */
-	      this.isGimbalLockEnabled = false;
-
-	      /**
-	       * The node toward which constrained nodes will point after being reoriented.
-	       * @type {?SCNNode}
-	       * @see https://developer.apple.com/reference/scenekit/scnlookatconstraint/1468677-target
-	       */
-	      this.target = null;
-	    }
-
-	    // Creating a Look-At Constraint
-
-	    /**
-	     * Creates a look-at constraint for a specified target node.
-	     * @access public
-	     * @param {?SCNNode} target - The node that constrained nodes will be reoriented to point toward.
-	     * @returns {void}
-	     * @desc To attach constraints to an SCNNode object, use its constraints property.
-	     * @see https://developer.apple.com/reference/scenekit/scnlookatconstraint/1468683-init
-	     */
-
-	  }, {
-	    key: 'init',
-	    value: function init(target) {}
-	  }]);
 
 	  return SCNLookAtConstraint;
 	}(_SCNConstraint3.default);
@@ -26060,8 +26087,6 @@ module.exports =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var _epsilon = 0.00001;
-
 	/**
 	 * Returns a Boolean value that indicates whether the corresponding elements of two matrices are equal.
 	 * @access public
@@ -26076,25 +26101,6 @@ module.exports =
 	    return false;
 	  }
 	  return a.equalTo(b);
-
-	  /*
-	  return Math.abs(a.m11 - b.m11) < _epsilon
-	      && Math.abs(a.m12 - b.m12) < _epsilon
-	      && Math.abs(a.m13 - b.m13) < _epsilon
-	      && Math.abs(a.m14 - b.m14) < _epsilon
-	      && Math.abs(a.m21 - b.m21) < _epsilon
-	      && Math.abs(a.m22 - b.m22) < _epsilon
-	      && Math.abs(a.m23 - b.m23) < _epsilon
-	      && Math.abs(a.m24 - b.m24) < _epsilon
-	      && Math.abs(a.m31 - b.m31) < _epsilon
-	      && Math.abs(a.m32 - b.m32) < _epsilon
-	      && Math.abs(a.m33 - b.m33) < _epsilon
-	      && Math.abs(a.m34 - b.m34) < _epsilon
-	      && Math.abs(a.m41 - b.m41) < _epsilon
-	      && Math.abs(a.m42 - b.m42) < _epsilon
-	      && Math.abs(a.m43 - b.m43) < _epsilon
-	      && Math.abs(a.m44 - b.m44) < _epsilon
-	      */
 	};
 
 	exports.default = SCNMatrix4EqualToMatrix4;
@@ -26490,8 +26496,8 @@ module.exports =
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	/**
-	 * 
 	 * @access public
+	 * @type {function}
 	 * @param {SCNMatrix4} m - 
 	 * @returns {number[][]} - 
 	 * @see https://developer.apple.com/reference/scenekit/1523928-scnmatrix4tomat4
@@ -26576,74 +26582,61 @@ module.exports =
 	var SCNPhysicsBallSocketJoint = function (_SCNPhysicsBehavior) {
 	  _inherits(SCNPhysicsBallSocketJoint, _SCNPhysicsBehavior);
 
-	  function SCNPhysicsBallSocketJoint() {
+	  // Creating a Ball and Socket Joint
+
+	  /**
+	   * Creates a ball and socket joint connecting two physics bodies.
+	   * @access public
+	   * @constructor
+	   * @param {SCNPhysicsBody} bodyA - The first physics body to be connected by the joint.
+	   * @param {SCNVector3} anchorA - The point at which the joint connects, relative to the node containing the first body.
+	   * @param {SCNPhysicsBody} bodyB - The second physics body to be connected by the joint.
+	   * @param {SCNVector3} anchorB - The point at which the joint connects, relative to the node containing the second body.
+	   * @desc For a behavior to take effect, add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object. The physics bodies constrained by the joint must be attached to nodes in the scene.
+	   * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint/1387926-init
+	   */
+	  function SCNPhysicsBallSocketJoint(bodyA, anchorA, bodyB, anchorB) {
 	    _classCallCheck(this, SCNPhysicsBallSocketJoint);
 
-	    return _possibleConstructorReturn(this, (SCNPhysicsBallSocketJoint.__proto__ || Object.getPrototypeOf(SCNPhysicsBallSocketJoint)).apply(this, arguments));
+	    // Managing the Characteristics of a Ball and Socket Joint
+
+	    /**
+	     * The point at which the joint connects, relative to the node containing the first body.
+	     * @type {SCNVector3}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint/1387956-anchora
+	     */
+	    var _this = _possibleConstructorReturn(this, (SCNPhysicsBallSocketJoint.__proto__ || Object.getPrototypeOf(SCNPhysicsBallSocketJoint)).call(this));
+
+	    _this.anchorA = null;
+
+	    /**
+	     * The point at which the joint connects, relative to the node containing the second body.
+	     * @type {SCNVector3}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint/1387965-anchorb
+	     */
+	    _this.anchorB = null;
+
+	    _this._bodyA = null;
+	    _this._bodyB = null;
+	    return _this;
 	  }
 
+	  // Managing the Characteristics of a Ball and Socket Joint
+
+	  /**
+	   * The first physics body connected by the joint.
+	   * @type {SCNPhysicsBody}
+	   * @desc 
+	   * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint/1387981-bodya
+	   */
+
+
 	  _createClass(SCNPhysicsBallSocketJoint, [{
-	    key: 'init',
-
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @returns {void}
-	     */
-	    value: function init() {
-
-	      // Managing the Characteristics of a Ball and Socket Joint
-
-	      /**
-	       * The point at which the joint connects, relative to the node containing the first body.
-	       * @type {SCNVector3}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint/1387956-anchora
-	       */
-	      this.anchorA = null;
-
-	      /**
-	       * The point at which the joint connects, relative to the node containing the second body.
-	       * @type {SCNVector3}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint/1387965-anchorb
-	       */
-	      this.anchorB = null;
-
-	      this._bodyA = null;
-	      this._bodyB = null;
-	    }
-
-	    // Creating a Ball and Socket Joint
-
-	    /**
-	     * Creates a ball and socket joint connecting two physics bodies.
-	     * @access public
-	     * @param {SCNPhysicsBody} bodyA - The first physics body to be connected by the joint.
-	     * @param {SCNVector3} anchorA - The point at which the joint connects, relative to the node containing the first body.
-	     * @param {SCNPhysicsBody} bodyB - The second physics body to be connected by the joint.
-	     * @param {SCNVector3} anchorB - The point at which the joint connects, relative to the node containing the second body.
-	     * @returns {void}
-	     * @desc For a behavior to take effect, add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object. The physics bodies constrained by the joint must be attached to nodes in the scene.
-	     * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint/1387926-init
-	     */
-
-	  }, {
-	    key: 'init',
-	    value: function init(bodyA, anchorA, bodyB, anchorB) {}
-
-	    // Managing the Characteristics of a Ball and Socket Joint
-	    /**
-	     * The first physics body connected by the joint.
-	     * @type {SCNPhysicsBody}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint/1387981-bodya
-	     */
-
-	  }, {
 	    key: 'bodyA',
 	    get: function get() {
 	      return this._bodyA;
 	    }
+
 	    /**
 	     * The second physics body connected by the joint.
 	     * @type {?SCNPhysicsBody}
@@ -26795,90 +26788,77 @@ module.exports =
 	var SCNPhysicsHingeJoint = function (_SCNPhysicsBehavior) {
 	  _inherits(SCNPhysicsHingeJoint, _SCNPhysicsBehavior);
 
-	  function SCNPhysicsHingeJoint() {
+	  // Creating a Hinge Joint
+
+	  /**
+	   * Creates a hinge joint connecting two physics bodies.
+	   * @access public
+	   * @constructor
+	   * @param {SCNPhysicsBody} bodyA - The first physics body to be connected by the joint.
+	   * @param {SCNVector3} axisA - The axis that the hinge pivots around, relative to the node containing the first body.
+	   * @param {SCNVector3} anchorA - The point at which the hinge connects, relative to the node containing the first body.
+	   * @param {SCNPhysicsBody} bodyB - The second physics body to be connected by the joint.
+	   * @param {SCNVector3} axisB - The axis that the hinge pivots around, relative to the node containing the second body.
+	   * @param {SCNVector3} anchorB - The point at which the hinge connects, relative to the node containing the second body.
+	   * @desc For a behavior to take effect, add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object. The physics bodies constrained by the joint must be attached to nodes in the scene.
+	   * @see https://developer.apple.com/reference/scenekit/scnphysicshingejoint/1387898-init
+	   */
+	  function SCNPhysicsHingeJoint(bodyA, axisA, anchorA, bodyB, axisB, anchorB) {
 	    _classCallCheck(this, SCNPhysicsHingeJoint);
 
-	    return _possibleConstructorReturn(this, (SCNPhysicsHingeJoint.__proto__ || Object.getPrototypeOf(SCNPhysicsHingeJoint)).apply(this, arguments));
+	    // Managing the Characteristics of a Hinge Joint
+
+	    /**
+	     * The axis that the hinge pivots around, relative to the node containing the first body.
+	     * @type {SCNVector3}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicshingejoint/1387888-axisa
+	     */
+	    var _this = _possibleConstructorReturn(this, (SCNPhysicsHingeJoint.__proto__ || Object.getPrototypeOf(SCNPhysicsHingeJoint)).call(this));
+
+	    _this.axisA = null;
+
+	    /**
+	     * The point at which the hinge connects, relative to the node containing the first body.
+	     * @type {SCNVector3}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicshingejoint/1387936-anchora
+	     */
+	    _this.anchorA = null;
+
+	    /**
+	     * The axis that the hinge pivots around, relative to the node containing the second body.
+	     * @type {SCNVector3}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicshingejoint/1387914-axisb
+	     */
+	    _this.axisB = null;
+
+	    /**
+	     * The point at which the hinge connects, relative to the node containing the second body.
+	     * @type {SCNVector3}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicshingejoint/1387979-anchorb
+	     */
+	    _this.anchorB = null;
+
+	    _this._bodyA = null;
+	    _this._bodyB = null;
+	    return _this;
 	  }
 
+	  // Managing the Characteristics of a Hinge Joint
+
+	  /**
+	   * The first physics body connected by the joint.
+	   * @type {SCNPhysicsBody}
+	   * @desc 
+	   * @see https://developer.apple.com/reference/scenekit/scnphysicshingejoint/1387973-bodya
+	   */
+
+
 	  _createClass(SCNPhysicsHingeJoint, [{
-	    key: 'init',
-
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @returns {void}
-	     */
-	    value: function init() {
-
-	      // Managing the Characteristics of a Hinge Joint
-
-	      /**
-	       * The axis that the hinge pivots around, relative to the node containing the first body.
-	       * @type {SCNVector3}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicshingejoint/1387888-axisa
-	       */
-	      this.axisA = null;
-
-	      /**
-	       * The point at which the hinge connects, relative to the node containing the first body.
-	       * @type {SCNVector3}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicshingejoint/1387936-anchora
-	       */
-	      this.anchorA = null;
-
-	      /**
-	       * The axis that the hinge pivots around, relative to the node containing the second body.
-	       * @type {SCNVector3}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicshingejoint/1387914-axisb
-	       */
-	      this.axisB = null;
-
-	      /**
-	       * The point at which the hinge connects, relative to the node containing the second body.
-	       * @type {SCNVector3}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicshingejoint/1387979-anchorb
-	       */
-	      this.anchorB = null;
-
-	      this._bodyA = null;
-	      this._bodyB = null;
-	    }
-
-	    // Creating a Hinge Joint
-
-	    /**
-	     * Creates a hinge joint connecting two physics bodies.
-	     * @access public
-	     * @param {SCNPhysicsBody} bodyA - The first physics body to be connected by the joint.
-	     * @param {SCNVector3} axisA - The axis that the hinge pivots around, relative to the node containing the first body.
-	     * @param {SCNVector3} anchorA - The point at which the hinge connects, relative to the node containing the first body.
-	     * @param {SCNPhysicsBody} bodyB - The second physics body to be connected by the joint.
-	     * @param {SCNVector3} axisB - The axis that the hinge pivots around, relative to the node containing the second body.
-	     * @param {SCNVector3} anchorB - The point at which the hinge connects, relative to the node containing the second body.
-	     * @returns {void}
-	     * @desc For a behavior to take effect, add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object. The physics bodies constrained by the joint must be attached to nodes in the scene.
-	     * @see https://developer.apple.com/reference/scenekit/scnphysicshingejoint/1387898-init
-	     */
-
-	  }, {
-	    key: 'init',
-	    value: function init(bodyA, axisA, anchorA, bodyB, axisB, anchorB) {}
-
-	    // Managing the Characteristics of a Hinge Joint
-	    /**
-	     * The first physics body connected by the joint.
-	     * @type {SCNPhysicsBody}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/scenekit/scnphysicshingejoint/1387973-bodya
-	     */
-
-	  }, {
 	    key: 'bodyA',
 	    get: function get() {
 	      return this._bodyA;
 	    }
+
 	    /**
 	     * The second physics body connected by the joint.
 	     * @type {?SCNPhysicsBody}
@@ -26939,150 +26919,138 @@ module.exports =
 	var SCNPhysicsSliderJoint = function (_SCNPhysicsBehavior) {
 	  _inherits(SCNPhysicsSliderJoint, _SCNPhysicsBehavior);
 
-	  function SCNPhysicsSliderJoint() {
+	  // Creating a Slider Joint
+
+	  /**
+	   * Creates a slider joint connecting two physics bodies.
+	   * @access public
+	   * @constructor
+	   * @param {SCNPhysicsBody} bodyA - The first physics body to be connected by the joint.
+	   * @param {SCNVector3} axisA - The axis along which the first body can slide, relative to the node containing it.
+	   * @param {SCNVector3} anchorA - The point at which the joint connects, relative to the node containing the first body.
+	   * @param {SCNPhysicsBody} bodyB - The second physics body to be connected by the joint.
+	   * @param {SCNVector3} axisB - The axis along which the second body can slide, relative to the node containing it.
+	   * @param {SCNVector3} anchorB - The point at which the joint connects, relative to the node containing the second body.
+	   * @desc This method defines the location where the bodies are pinned together. To define their sliding or rotation motion relative to that point, use the properties listed in Limiting the Motion of a Slider Joint.For a behavior to take effect, add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object. The physics bodies constrained by the joint must be attached to nodes in the scene.
+	   * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387922-init
+	   */
+	  function SCNPhysicsSliderJoint(bodyA, axisA, anchorA, bodyB, axisB, anchorB) {
 	    _classCallCheck(this, SCNPhysicsSliderJoint);
 
-	    return _possibleConstructorReturn(this, (SCNPhysicsSliderJoint.__proto__ || Object.getPrototypeOf(SCNPhysicsSliderJoint)).apply(this, arguments));
+	    // Managing the Characteristics of a Slider Joint
+
+	    /**
+	     * The axis along which the first body can slide, relative to the node containing it.
+	     * @type {SCNVector3}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387900-axisa
+	     */
+	    var _this = _possibleConstructorReturn(this, (SCNPhysicsSliderJoint.__proto__ || Object.getPrototypeOf(SCNPhysicsSliderJoint)).call(this));
+
+	    _this.axisA = null;
+
+	    /**
+	     * The point at which the joint connects, relative to the node containing the first body.
+	     * @type {SCNVector3}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387958-anchora
+	     */
+	    _this.anchorA = null;
+
+	    /**
+	     * The axis along which the second body can slide, relative to the node containing it.
+	     * @type {SCNVector3}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387948-axisb
+	     */
+	    _this.axisB = null;
+
+	    /**
+	     * The point at which the joint connects, relative to the node containing the second body.
+	     * @type {SCNVector3}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387916-anchorb
+	     */
+	    _this.anchorB = null;
+
+	    _this._bodyA = null;
+	    _this._bodyB = null;
+
+	    // Limiting the Motion of a Slider Joint
+
+	    /**
+	     * The minimum distance between the anchor points of the two bodies, relative to their initial positions.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387920-minimumlinearlimit
+	     */
+	    _this.minimumLinearLimit = 0;
+
+	    /**
+	     * The maximum distance between the anchor points of the two bodies, relative to their initial positions.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387890-maximumlinearlimit
+	     */
+	    _this.maximumLinearLimit = 0;
+
+	    /**
+	     * The minimum rotation angle between the two bodies, measured in radians relative to their initial orientations.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387967-minimumangularlimit
+	     */
+	    _this.minimumAngularLimit = 0;
+
+	    /**
+	     * The maximum rotation angle between the two bodies, measured in radians relative to their initial orientations.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387924-maximumangularlimit
+	     */
+	    _this.maximumAngularLimit = 0;
+
+	    // Applying Forces and Torques
+
+	    /**
+	     * The velocity at which the joint’s connected bodies should slide.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387938-motortargetlinearvelocity
+	     */
+	    _this.motorTargetLinearVelocity = 0;
+
+	    /**
+	     * The maximum linear force that the joint can apply to its connected bodies, in newtons.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387954-motormaximumforce
+	     */
+	    _this.motorMaximumForce = 0;
+
+	    /**
+	     * The angular velocity at which the joint’s connected bodies should rotate around it.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387908-motortargetangularvelocity
+	     */
+	    _this.motorTargetAngularVelocity = 0;
+
+	    /**
+	     * The maximum torque that the joint can apply to its connected bodies, in newton-meters.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387961-motormaximumtorque
+	     */
+	    _this.motorMaximumTorque = 0;
+
+	    return _this;
 	  }
 
+	  // Managing the Characteristics of a Slider Joint
+
+	  /**
+	   * The first physics body connected by the joint.
+	   * @type {SCNPhysicsBody}
+	   * @desc 
+	   * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387987-bodya
+	   */
+
+
 	  _createClass(SCNPhysicsSliderJoint, [{
-	    key: 'init',
-
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @returns {void}
-	     */
-	    value: function init() {
-
-	      // Managing the Characteristics of a Slider Joint
-
-	      /**
-	       * The axis along which the first body can slide, relative to the node containing it.
-	       * @type {SCNVector3}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387900-axisa
-	       */
-	      this.axisA = null;
-
-	      /**
-	       * The point at which the joint connects, relative to the node containing the first body.
-	       * @type {SCNVector3}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387958-anchora
-	       */
-	      this.anchorA = null;
-
-	      /**
-	       * The axis along which the second body can slide, relative to the node containing it.
-	       * @type {SCNVector3}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387948-axisb
-	       */
-	      this.axisB = null;
-
-	      /**
-	       * The point at which the joint connects, relative to the node containing the second body.
-	       * @type {SCNVector3}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387916-anchorb
-	       */
-	      this.anchorB = null;
-
-	      this._bodyA = null;
-	      this._bodyB = null;
-
-	      // Limiting the Motion of a Slider Joint
-
-	      /**
-	       * The minimum distance between the anchor points of the two bodies, relative to their initial positions.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387920-minimumlinearlimit
-	       */
-	      this.minimumLinearLimit = 0;
-
-	      /**
-	       * The maximum distance between the anchor points of the two bodies, relative to their initial positions.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387890-maximumlinearlimit
-	       */
-	      this.maximumLinearLimit = 0;
-
-	      /**
-	       * The minimum rotation angle between the two bodies, measured in radians relative to their initial orientations.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387967-minimumangularlimit
-	       */
-	      this.minimumAngularLimit = 0;
-
-	      /**
-	       * The maximum rotation angle between the two bodies, measured in radians relative to their initial orientations.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387924-maximumangularlimit
-	       */
-	      this.maximumAngularLimit = 0;
-
-	      // Applying Forces and Torques
-
-	      /**
-	       * The velocity at which the joint’s connected bodies should slide.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387938-motortargetlinearvelocity
-	       */
-	      this.motorTargetLinearVelocity = 0;
-
-	      /**
-	       * The maximum linear force that the joint can apply to its connected bodies, in newtons.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387954-motormaximumforce
-	       */
-	      this.motorMaximumForce = 0;
-
-	      /**
-	       * The angular velocity at which the joint’s connected bodies should rotate around it.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387908-motortargetangularvelocity
-	       */
-	      this.motorTargetAngularVelocity = 0;
-
-	      /**
-	       * The maximum torque that the joint can apply to its connected bodies, in newton-meters.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387961-motormaximumtorque
-	       */
-	      this.motorMaximumTorque = 0;
-	    }
-
-	    // Creating a Slider Joint
-
-	    /**
-	     * Creates a slider joint connecting two physics bodies.
-	     * @access public
-	     * @param {SCNPhysicsBody} bodyA - The first physics body to be connected by the joint.
-	     * @param {SCNVector3} axisA - The axis along which the first body can slide, relative to the node containing it.
-	     * @param {SCNVector3} anchorA - The point at which the joint connects, relative to the node containing the first body.
-	     * @param {SCNPhysicsBody} bodyB - The second physics body to be connected by the joint.
-	     * @param {SCNVector3} axisB - The axis along which the second body can slide, relative to the node containing it.
-	     * @param {SCNVector3} anchorB - The point at which the joint connects, relative to the node containing the second body.
-	     * @returns {void}
-	     * @desc This method defines the location where the bodies are pinned together. To define their sliding or rotation motion relative to that point, use the properties listed in Limiting the Motion of a Slider Joint.For a behavior to take effect, add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object. The physics bodies constrained by the joint must be attached to nodes in the scene.
-	     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387922-init
-	     */
-
-	  }, {
-	    key: 'init',
-	    value: function init(bodyA, axisA, anchorA, bodyB, axisB, anchorB) {}
-
-	    // Managing the Characteristics of a Slider Joint
-	    /**
-	     * The first physics body connected by the joint.
-	     * @type {SCNPhysicsBody}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387987-bodya
-	     */
-
-	  }, {
 	    key: 'bodyA',
 	    get: function get() {
 	      return this._bodyA;
 	    }
+
 	    /**
 	     * The second physics body connected by the joint.
 	     * @type {?SCNPhysicsBody}
@@ -27143,58 +27111,44 @@ module.exports =
 	var SCNPhysicsVehicle = function (_SCNPhysicsBehavior) {
 	  _inherits(SCNPhysicsVehicle, _SCNPhysicsBehavior);
 
-	  function SCNPhysicsVehicle() {
+	  // Creating a Vehicle
+
+	  /**
+	   * Creates a vehicle behavior.
+	   * @access public
+	   * @constructor
+	   * @param {SCNPhysicsBody} chassisBody - A physics body to serve as the vehicle’s chassis.
+	   * @param {SCNPhysicsVehicleWheel[]} wheels - An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels. A vehicle must have at least one wheel.
+	   * @desc Each object in the wheels array associates a node with the wheel to serve as its visual representation and defines properties for the wheel’s physical characteristics. Each wheel object must reference a unique node, which should be a child of the node containing the physics body used for the vehicle’s chassis. Typically, you load a node hierarchy representing the vehicle and all of its wheels from a scene file and then designate which nodes serve as the body and wheels.For a behavior to take effect, you must add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object.
+	   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387943-init
+	   */
+	  function SCNPhysicsVehicle(chassisBody, wheels) {
 	    _classCallCheck(this, SCNPhysicsVehicle);
 
-	    return _possibleConstructorReturn(this, (SCNPhysicsVehicle.__proto__ || Object.getPrototypeOf(SCNPhysicsVehicle)).apply(this, arguments));
+	    // Working with a Vehicle’s Physical Characteristics
+
+	    var _this = _possibleConstructorReturn(this, (SCNPhysicsVehicle.__proto__ || Object.getPrototypeOf(SCNPhysicsVehicle)).call(this));
+
+	    _this._chassisBody = null;
+	    _this._wheels = null;
+
+	    // Driving a Vehicle
+
+	    _this._speedInKilometersPerHour = 0;
+	    return _this;
 	  }
 
+	  // Working with a Vehicle’s Physical Characteristics
+
+	  /**
+	   * The physics body representing the vehicle’s chassis.
+	   * @type {SCNPhysicsBody}
+	   * @desc The vehicle’s chassis must be a dynamic body.
+	   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387985-chassisbody
+	   */
+
+
 	  _createClass(SCNPhysicsVehicle, [{
-	    key: 'init',
-
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @returns {void}
-	     */
-	    value: function init() {
-
-	      // Working with a Vehicle’s Physical Characteristics
-
-	      this._chassisBody = null;
-	      this._wheels = null;
-
-	      // Driving a Vehicle
-
-	      this._speedInKilometersPerHour = 0;
-	    }
-
-	    // Creating a Vehicle
-
-	    /**
-	     * Creates a vehicle behavior.
-	     * @access public
-	     * @param {SCNPhysicsBody} chassisBody - A physics body to serve as the vehicle’s chassis.
-	     * @param {SCNPhysicsVehicleWheel[]} wheels - An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels. A vehicle must have at least one wheel.
-	     * @returns {void}
-	     * @desc Each object in the wheels array associates a node with the wheel to serve as its visual representation and defines properties for the wheel’s physical characteristics. Each wheel object must reference a unique node, which should be a child of the node containing the physics body used for the vehicle’s chassis. Typically, you load a node hierarchy representing the vehicle and all of its wheels from a scene file and then designate which nodes serve as the body and wheels.For a behavior to take effect, you must add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object.
-	     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387943-init
-	     */
-
-	  }, {
-	    key: 'init',
-	    value: function init(chassisBody, wheels) {}
-
-	    // Working with a Vehicle’s Physical Characteristics
-	    /**
-	     * The physics body representing the vehicle’s chassis.
-	     * @type {SCNPhysicsBody}
-	     * @desc The vehicle’s chassis must be a dynamic body.
-	     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387985-chassisbody
-	     */
-
-	  }, {
 	    key: 'applyEngineForceForWheelAt',
 
 
@@ -27238,6 +27192,7 @@ module.exports =
 	  }, {
 	    key: 'setSteeringAngleForWheelAt',
 	    value: function setSteeringAngleForWheelAt(value, index) {}
+
 	    /**
 	     * The vehicle’s ground speed, in kilometers per hour.
 	     * @type {number}
@@ -27250,6 +27205,7 @@ module.exports =
 	    get: function get() {
 	      return this._chassisBody;
 	    }
+
 	    /**
 	     * An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels.
 	     * @type {SCNPhysicsVehicleWheel[]}
@@ -27318,137 +27274,123 @@ module.exports =
 	var SCNPhysicsVehicleWheel = function (_NSObject) {
 	  _inherits(SCNPhysicsVehicleWheel, _NSObject);
 
-	  function SCNPhysicsVehicleWheel() {
+	  // Creating a Wheel
+
+	  /**
+	   * Creates a wheel object.
+	   * @access public
+	   * @constructor
+	   * @param {SCNNode} node - The node whose contents provide the wheel’s visual representation.
+	   * @desc The node representing a wheel must be a child of the node whose physics body serves as the chassis of the SCNPhysicsVehicle behavior the wheel is attached to. Each wheel object must reference a unique node. To use the wheel, add it to the vehicle behavior using the addWheel: method.SceneKit uses the node’s bounding box to determine the wheel’s initial size, and it uses the node’s position to determine the where the wheel connects to the vehicle’s chassis. You can change attributes using the radius and connectionPosition properties.
+	   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387989-init
+	   */
+	  function SCNPhysicsVehicleWheel(node) {
 	    _classCallCheck(this, SCNPhysicsVehicleWheel);
 
-	    return _possibleConstructorReturn(this, (SCNPhysicsVehicleWheel.__proto__ || Object.getPrototypeOf(SCNPhysicsVehicleWheel)).apply(this, arguments));
-	  }
-
-	  _createClass(SCNPhysicsVehicleWheel, [{
-	    key: 'init',
-
+	    // Managing a Wheel’s Connection to a Vehicle
 
 	    /**
-	     * constructor
-	     * @access public
-	     * @returns {void}
+	     * The position of the wheel’s connection to the vehicle’s chassis.
+	     * @type {SCNVector3}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387959-connectionposition
 	     */
-	    value: function init() {
+	    var _this = _possibleConstructorReturn(this, (SCNPhysicsVehicleWheel.__proto__ || Object.getPrototypeOf(SCNPhysicsVehicleWheel)).call(this));
 
-	      // Managing a Wheel’s Connection to a Vehicle
-
-	      /**
-	       * The position of the wheel’s connection to the vehicle’s chassis.
-	       * @type {SCNVector3}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387959-connectionposition
-	       */
-	      this.connectionPosition = null;
-
-	      /**
-	       * The direction of the axis that the wheel spins around to move the vehicle.
-	       * @type {SCNVector3}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387969-axle
-	       */
-	      this.axle = null;
-
-	      /**
-	       * The direction of the axis that the wheel pivots around to steer the vehicle.
-	       * @type {SCNVector3}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387882-steeringaxis
-	       */
-	      this.steeringAxis = null;
-
-	      // Simulating Wheel Size
-
-	      /**
-	       * The radius of the wheel.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387991-radius
-	       */
-	      this.radius = 0;
-
-	      // Simulating Traction
-
-	      /**
-	       * The traction between the wheel and any surface in contact with it.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387904-frictionslip
-	       */
-	      this.frictionSlip = 0;
-
-	      // Simulating Suspension
-
-	      /**
-	       * The spring coefficient of the suspension between the vehicle and the wheel.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387983-suspensionstiffness
-	       */
-	      this.suspensionStiffness = 0;
-
-	      /**
-	       * The coefficient that limits the speed of the suspension returning to its rest length when compressed.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387971-suspensioncompression
-	       */
-	      this.suspensionCompression = 0;
-
-	      /**
-	       * The damping ratio that limits oscillation in the vehicle’s suspension.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387886-suspensiondamping
-	       */
-	      this.suspensionDamping = 0;
-
-	      /**
-	       * The maximum distance that the wheel is allowed to move up or down relative to its connection point, in centimeters.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387928-maximumsuspensiontravel
-	       */
-	      this.maximumSuspensionTravel = 0;
-
-	      /**
-	       * The maximum force of the suspension between the vehicle and the wheel, in newtons.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387934-maximumsuspensionforce
-	       */
-	      this.maximumSuspensionForce = 0;
-
-	      /**
-	       * The resting length of the suspension, in meters.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387880-suspensionrestlength
-	       */
-	      this.suspensionRestLength = 0;
-
-	      // Inspecting the Wheel Node
-
-	      this._node = null;
-	    }
-
-	    // Creating a Wheel
+	    _this.connectionPosition = null;
 
 	    /**
-	     * Creates a wheel object.
-	     * @access public
-	     * @param {SCNNode} node - The node whose contents provide the wheel’s visual representation.
-	     * @returns {void}
-	     * @desc The node representing a wheel must be a child of the node whose physics body serves as the chassis of the SCNPhysicsVehicle behavior the wheel is attached to. Each wheel object must reference a unique node. To use the wheel, add it to the vehicle behavior using the addWheel: method.SceneKit uses the node’s bounding box to determine the wheel’s initial size, and it uses the node’s position to determine the where the wheel connects to the vehicle’s chassis. You can change attributes using the radius and connectionPosition properties.
-	     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387989-init
+	     * The direction of the axis that the wheel spins around to move the vehicle.
+	     * @type {SCNVector3}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387969-axle
 	     */
+	    _this.axle = null;
 
-	  }, {
-	    key: 'init',
-	    value: function init(node) {}
+	    /**
+	     * The direction of the axis that the wheel pivots around to steer the vehicle.
+	     * @type {SCNVector3}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387882-steeringaxis
+	     */
+	    _this.steeringAxis = null;
+
+	    // Simulating Wheel Size
+
+	    /**
+	     * The radius of the wheel.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387991-radius
+	     */
+	    _this.radius = 0;
+
+	    // Simulating Traction
+
+	    /**
+	     * The traction between the wheel and any surface in contact with it.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387904-frictionslip
+	     */
+	    _this.frictionSlip = 0;
+
+	    // Simulating Suspension
+
+	    /**
+	     * The spring coefficient of the suspension between the vehicle and the wheel.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387983-suspensionstiffness
+	     */
+	    _this.suspensionStiffness = 0;
+
+	    /**
+	     * The coefficient that limits the speed of the suspension returning to its rest length when compressed.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387971-suspensioncompression
+	     */
+	    _this.suspensionCompression = 0;
+
+	    /**
+	     * The damping ratio that limits oscillation in the vehicle’s suspension.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387886-suspensiondamping
+	     */
+	    _this.suspensionDamping = 0;
+
+	    /**
+	     * The maximum distance that the wheel is allowed to move up or down relative to its connection point, in centimeters.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387928-maximumsuspensiontravel
+	     */
+	    _this.maximumSuspensionTravel = 0;
+
+	    /**
+	     * The maximum force of the suspension between the vehicle and the wheel, in newtons.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387934-maximumsuspensionforce
+	     */
+	    _this.maximumSuspensionForce = 0;
+
+	    /**
+	     * The resting length of the suspension, in meters.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387880-suspensionrestlength
+	     */
+	    _this.suspensionRestLength = 0;
 
 	    // Inspecting the Wheel Node
-	    /**
-	     * The node providing the wheel’s visual representation.
-	     * @type {SCNNode}
-	     * @desc SceneKit automatically rotates and repositions this node in response to the physics simulation.
-	     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387892-node
-	     */
 
-	  }, {
+	    _this._node = null;
+	    return _this;
+	  }
+
+	  // Inspecting the Wheel Node
+
+	  /**
+	   * The node providing the wheel’s visual representation.
+	   * @type {SCNNode}
+	   * @desc SceneKit automatically rotates and repositions this node in response to the physics simulation.
+	   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387892-node
+	   */
+
+
+	  _createClass(SCNPhysicsVehicleWheel, [{
 	    key: 'node',
 	    get: function get() {
 	      return this._node;
@@ -27469,8 +27411,6 @@ module.exports =
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _SCNGeometry2 = __webpack_require__(36);
 
@@ -27493,88 +27433,72 @@ module.exports =
 	var SCNPlane = function (_SCNGeometry) {
 	  _inherits(SCNPlane, _SCNGeometry);
 
-	  function SCNPlane() {
+	  // Creating a Plane
+
+	  /**
+	   * Creates a plane geometry with the specified width and height.
+	   * @access public
+	   * @constructor
+	   * @param {number} width - The width of the plane along the x-axis of its local coordinate space.
+	   * @param {number} height - The height of the plane along the y-axis of its local coordinate space.
+	   * @desc The plane is centered in its local coordinate system. For example, if you create a plane whose width and height are both 10.0, it extends from -5.0 to 5.0 along both the x- and y-axes, and the z-coordinate of all points in the plane is zero.
+	   * @see https://developer.apple.com/reference/scenekit/scnplane/1523631-init
+	   */
+	  function SCNPlane(width, height) {
 	    _classCallCheck(this, SCNPlane);
 
-	    return _possibleConstructorReturn(this, (SCNPlane.__proto__ || Object.getPrototypeOf(SCNPlane)).apply(this, arguments));
+	    // Adjusting a Plane’s Dimensions
+
+	    /**
+	     * The extent of the plane along its horizontal axis. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnplane/1523782-width
+	     */
+	    var _this = _possibleConstructorReturn(this, (SCNPlane.__proto__ || Object.getPrototypeOf(SCNPlane)).call(this));
+
+	    _this.width = 0;
+
+	    /**
+	     * The extent of the plane along its vertical axis. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnplane/1522837-height
+	     */
+	    _this.height = 0;
+
+	    // Adjusting Geometric Detail
+
+	    /**
+	     * The number of subdivisions in the plane’s surface along its horizontal axis. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnplane/1523991-widthsegmentcount
+	     */
+	    _this.widthSegmentCount = 0;
+
+	    /**
+	     * The number of subdivisions in the plane’s surface along its vertical axis. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnplane/1522889-heightsegmentcount
+	     */
+	    _this.heightSegmentCount = 0;
+
+	    // Adding Rounded Corners
+
+	    /**
+	     * The radius of curvature for the plane’s corners. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnplane/1523005-cornerradius
+	     */
+	    _this.cornerRadius = 0;
+
+	    /**
+	     * The number of line segments used to create each rounded corner of the plane. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnplane/1524234-cornersegmentcount
+	     */
+	    _this.cornerSegmentCount = 0;
+
+	    return _this;
 	  }
-
-	  _createClass(SCNPlane, [{
-	    key: 'init',
-
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @returns {void}
-	     */
-	    value: function init() {
-
-	      // Adjusting a Plane’s Dimensions
-
-	      /**
-	       * The extent of the plane along its horizontal axis. Animatable.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnplane/1523782-width
-	       */
-	      this.width = 0;
-
-	      /**
-	       * The extent of the plane along its vertical axis. Animatable.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnplane/1522837-height
-	       */
-	      this.height = 0;
-
-	      // Adjusting Geometric Detail
-
-	      /**
-	       * The number of subdivisions in the plane’s surface along its horizontal axis. Animatable.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnplane/1523991-widthsegmentcount
-	       */
-	      this.widthSegmentCount = 0;
-
-	      /**
-	       * The number of subdivisions in the plane’s surface along its vertical axis. Animatable.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnplane/1522889-heightsegmentcount
-	       */
-	      this.heightSegmentCount = 0;
-
-	      // Adding Rounded Corners
-
-	      /**
-	       * The radius of curvature for the plane’s corners. Animatable.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnplane/1523005-cornerradius
-	       */
-	      this.cornerRadius = 0;
-
-	      /**
-	       * The number of line segments used to create each rounded corner of the plane. Animatable.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnplane/1524234-cornersegmentcount
-	       */
-	      this.cornerSegmentCount = 0;
-	    }
-
-	    // Creating a Plane
-
-	    /**
-	     * Creates a plane geometry with the specified width and height.
-	     * @access public
-	     * @param {number} width - The width of the plane along the x-axis of its local coordinate space.
-	     * @param {number} height - The height of the plane along the y-axis of its local coordinate space.
-	     * @returns {void}
-	     * @desc The plane is centered in its local coordinate system. For example, if you create a plane whose width and height are both 10.0, it extends from -5.0 to 5.0 along both the x- and y-axes, and the z-coordinate of all points in the plane is zero.
-	     * @see https://developer.apple.com/reference/scenekit/scnplane/1523631-init
-	     */
-
-	  }, {
-	    key: 'init',
-	    value: function init(width, height) {}
-	  }]);
 
 	  return SCNPlane;
 	}(_SCNGeometry3.default);
@@ -27590,8 +27514,6 @@ module.exports =
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _SCNGeometry2 = __webpack_require__(36);
 
@@ -27614,87 +27536,71 @@ module.exports =
 	var SCNPyramid = function (_SCNGeometry) {
 	  _inherits(SCNPyramid, _SCNGeometry);
 
-	  function SCNPyramid() {
+	  // Creating a Pyramid
+
+	  /**
+	   * Creates a pyramid geometry with the specified width, height, and length.
+	   * @access public
+	   * @constructor
+	   * @param {number} width - The width of the pyramid along the x-axis of its local coordinate space.
+	   * @param {number} height - The height of the pyramid along the y-axis of its local coordinate space.
+	   * @param {number} length - The length of the pyramid along the z-axis of its local coordinate space.
+	   * @desc The pyramid’s base is centered in its local coordinate system. For example, if you create a pyramid whose width, height and length are all 10.0, its apex is at the point {0, 10.0, 0}, and its base lies in the plane whose y-coordinate is 0.0, extending from -5.0 to 5.0 along both the x- and z-axes.
+	   * @see https://developer.apple.com/reference/scenekit/scnpyramid/1523254-init
+	   */
+	  function SCNPyramid(width, height, length) {
 	    _classCallCheck(this, SCNPyramid);
 
-	    return _possibleConstructorReturn(this, (SCNPyramid.__proto__ || Object.getPrototypeOf(SCNPyramid)).apply(this, arguments));
+	    // Adjusting a Pyramid’s Dimensions
+
+	    /**
+	     * The extent of the pyramid along its x-axis. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnpyramid/1522613-width
+	     */
+	    var _this = _possibleConstructorReturn(this, (SCNPyramid.__proto__ || Object.getPrototypeOf(SCNPyramid)).call(this));
+
+	    _this.width = 0;
+
+	    /**
+	     * The extent of the pyramid along its y-axis. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnpyramid/1522805-height
+	     */
+	    _this.height = 0;
+
+	    /**
+	     * The extent of the pyramid along its z-axis. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnpyramid/1524203-length
+	     */
+	    _this.length = 0;
+
+	    // Adjusting Geometric Detail
+
+	    /**
+	     * The number of subdivisions in each face of the pyramid along its x-axis. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnpyramid/1523083-widthsegmentcount
+	     */
+	    _this.widthSegmentCount = 0;
+
+	    /**
+	     * The number of subdivisions in each face of the pyramid along its y-axis. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnpyramid/1524059-heightsegmentcount
+	     */
+	    _this.heightSegmentCount = 0;
+
+	    /**
+	     * The number of subdivisions in each face of the pyramid along its z-axis. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnpyramid/1524227-lengthsegmentcount
+	     */
+	    _this.lengthSegmentCount = 0;
+
+	    return _this;
 	  }
-
-	  _createClass(SCNPyramid, [{
-	    key: 'init',
-
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @returns {void}
-	     */
-	    value: function init() {
-
-	      // Adjusting a Pyramid’s Dimensions
-
-	      /**
-	       * The extent of the pyramid along its x-axis. Animatable.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnpyramid/1522613-width
-	       */
-	      this.width = 0;
-
-	      /**
-	       * The extent of the pyramid along its y-axis. Animatable.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnpyramid/1522805-height
-	       */
-	      this.height = 0;
-
-	      /**
-	       * The extent of the pyramid along its z-axis. Animatable.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnpyramid/1524203-length
-	       */
-	      this.length = 0;
-
-	      // Adjusting Geometric Detail
-
-	      /**
-	       * The number of subdivisions in each face of the pyramid along its x-axis. Animatable.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnpyramid/1523083-widthsegmentcount
-	       */
-	      this.widthSegmentCount = 0;
-
-	      /**
-	       * The number of subdivisions in each face of the pyramid along its y-axis. Animatable.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnpyramid/1524059-heightsegmentcount
-	       */
-	      this.heightSegmentCount = 0;
-
-	      /**
-	       * The number of subdivisions in each face of the pyramid along its z-axis. Animatable.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnpyramid/1524227-lengthsegmentcount
-	       */
-	      this.lengthSegmentCount = 0;
-	    }
-
-	    // Creating a Pyramid
-
-	    /**
-	     * Creates a pyramid geometry with the specified width, height, and length.
-	     * @access public
-	     * @param {number} width - The width of the pyramid along the x-axis of its local coordinate space.
-	     * @param {number} height - The height of the pyramid along the y-axis of its local coordinate space.
-	     * @param {number} length - The length of the pyramid along the z-axis of its local coordinate space.
-	     * @returns {void}
-	     * @desc The pyramid’s base is centered in its local coordinate system. For example, if you create a pyramid whose width, height and length are all 10.0, its apex is at the point {0, 10.0, 0}, and its base lies in the plane whose y-coordinate is 0.0, extending from -5.0 to 5.0 along both the x- and z-axes.
-	     * @see https://developer.apple.com/reference/scenekit/scnpyramid/1523254-init
-	     */
-
-	  }, {
-	    key: 'init',
-	    value: function init(width, height, length) {}
-	  }]);
 
 	  return SCNPyramid;
 	}(_SCNGeometry3.default);
@@ -28217,8 +28123,6 @@ module.exports =
 	  value: true
 	});
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 	var _SCNGeometry2 = __webpack_require__(36);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
@@ -28244,79 +28148,62 @@ module.exports =
 	var SCNShape = function (_SCNGeometry) {
 	  _inherits(SCNShape, _SCNGeometry);
 
-	  function SCNShape() {
+	  // Creating a Shape
+
+	  /**
+	   * Creates a shape geometry with the specified path and extrusion depth.
+	   * @access public
+	   * @constructor
+	   * @param {?UIBezierPath} path - The two-dimensional path forming the basis of the shape.
+	   * @param {number} extrusionDepth - The thickness of the extruded shape along the z-axis.
+	   * @desc SceneKit determines the filled area of the path using the even-odd winding rule (see Winding Rules in Cocoa Drawing Guide) and extrudes this area to create a three-dimensional geometry. The result of extruding a self-intersecting path is undefined.The extruded shape is centered at the zero point of its z-axis. For example, an extrusion depth of 1.0 creates a shape that extends from -0.5 to 0.5 along the z-axis. An extrusion depth of zero creates a flat, one-sided shape.The path’s flatness (see flatness in NSBezierPath) determines the level of detail SceneKit uses in building a three-dimensional shape from the path. A larger flatness value results in fewer polygons to render, increasing performance, and a smaller flatness value increases the smoothness of curves at a cost to performance.
+	   * @see https://developer.apple.com/reference/scenekit/scnshape/1523432-init
+	   */
+	  function SCNShape(path, extrusionDepth) {
 	    _classCallCheck(this, SCNShape);
 
-	    return _possibleConstructorReturn(this, (SCNShape.__proto__ || Object.getPrototypeOf(SCNShape)).apply(this, arguments));
+	    // Modifying a Shape
+
+	    /**
+	     * The thickness of the extruded shape along the z-axis. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnshape/1523365-extrusiondepth
+	     */
+	    var _this = _possibleConstructorReturn(this, (SCNShape.__proto__ || Object.getPrototypeOf(SCNShape)).call(this));
+
+	    _this.extrusionDepth = 0;
+
+	    /**
+	     * The two-dimensional path forming the basis of the shape.
+	     * @type {?UIBezierPath}
+	     * @see https://developer.apple.com/reference/scenekit/scnshape/1523434-path
+	     */
+	    _this.path = null;
+
+	    // Chamfering a Shape
+
+	    /**
+	     * A constant specifying which ends of the extruded shape’s profile are chamfered.
+	     * @type {SCNChamferMode}
+	     * @see https://developer.apple.com/reference/scenekit/scnshape/1523989-chamfermode
+	     */
+	    _this.chamferMode = null;
+
+	    /**
+	     * A path that determines the cross-sectional contour of each chamfered edge.
+	     * @type {?UIBezierPath}
+	     * @see https://developer.apple.com/reference/scenekit/scnshape/1522865-chamferprofile
+	     */
+	    _this.chamferProfile = null;
+
+	    /**
+	     * The width or depth of each chamfered edge. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnshape/1524145-chamferradius
+	     */
+	    _this.chamferRadius = 0;
+	    return _this;
 	  }
-
-	  _createClass(SCNShape, [{
-	    key: 'init',
-
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @returns {void}
-	     */
-	    value: function init() {
-
-	      // Modifying a Shape
-
-	      /**
-	       * The thickness of the extruded shape along the z-axis. Animatable.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnshape/1523365-extrusiondepth
-	       */
-	      this.extrusionDepth = 0;
-
-	      /**
-	       * The two-dimensional path forming the basis of the shape.
-	       * @type {?UIBezierPath}
-	       * @see https://developer.apple.com/reference/scenekit/scnshape/1523434-path
-	       */
-	      this.path = null;
-
-	      // Chamfering a Shape
-
-	      /**
-	       * A constant specifying which ends of the extruded shape’s profile are chamfered.
-	       * @type {SCNChamferMode}
-	       * @see https://developer.apple.com/reference/scenekit/scnshape/1523989-chamfermode
-	       */
-	      this.chamferMode = null;
-
-	      /**
-	       * A path that determines the cross-sectional contour of each chamfered edge.
-	       * @type {?UIBezierPath}
-	       * @see https://developer.apple.com/reference/scenekit/scnshape/1522865-chamferprofile
-	       */
-	      this.chamferProfile = null;
-
-	      /**
-	       * The width or depth of each chamfered edge. Animatable.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnshape/1524145-chamferradius
-	       */
-	      this.chamferRadius = 0;
-	    }
-
-	    // Creating a Shape
-
-	    /**
-	     * Creates a shape geometry with the specified path and extrusion depth.
-	     * @access public
-	     * @param {?UIBezierPath} path - The two-dimensional path forming the basis of the shape.
-	     * @param {number} extrusionDepth - The thickness of the extruded shape along the z-axis.
-	     * @returns {void}
-	     * @desc SceneKit determines the filled area of the path using the even-odd winding rule (see Winding Rules in Cocoa Drawing Guide) and extrudes this area to create a three-dimensional geometry. The result of extruding a self-intersecting path is undefined.The extruded shape is centered at the zero point of its z-axis. For example, an extrusion depth of 1.0 creates a shape that extends from -0.5 to 0.5 along the z-axis. An extrusion depth of zero creates a flat, one-sided shape.The path’s flatness (see flatness in NSBezierPath) determines the level of detail SceneKit uses in building a three-dimensional shape from the path. A larger flatness value results in fewer polygons to render, increasing performance, and a smaller flatness value increases the smoothness of curves at a cost to performance.
-	     * @see https://developer.apple.com/reference/scenekit/scnshape/1523432-init
-	     */
-
-	  }, {
-	    key: 'init',
-	    value: function init(path, extrusionDepth) {}
-	  }]);
 
 	  return SCNShape;
 	}(_SCNGeometry3.default);
@@ -28722,34 +28609,29 @@ module.exports =
 	var SCNTransaction = function (_NSObject) {
 	  _inherits(SCNTransaction, _NSObject);
 
+	  /**
+	   * constructor
+	   * @access public
+	   * @constructor
+	   */
 	  function SCNTransaction() {
 	    _classCallCheck(this, SCNTransaction);
 
-	    return _possibleConstructorReturn(this, (SCNTransaction.__proto__ || Object.getPrototypeOf(SCNTransaction)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (SCNTransaction.__proto__ || Object.getPrototypeOf(SCNTransaction)).call(this));
 	  }
 
-	  _createClass(SCNTransaction, [{
-	    key: 'init',
+	  // Creating and Committing Transactions
+
+	  /**
+	   * Begins a new transaction for the current thread.
+	   * @access public
+	   * @returns {void}
+	   * @desc The new transaction is nested within the thread’s current transaction, if there is one.The first time you modify the scene graph during a pass through the run loop, SceneKit automatically creates a transaction and makes it the current transaction. (SceneKit commits that transaction when the next iteration of the run loops begins.) If you call this method to create a custom transaction before modifying the scene graph, your custom transaction becomes the current transaction.
+	   * @see https://developer.apple.com/reference/scenekit/scntransaction/1522820-begin
+	   */
 
 
-	    /**
-	     * constructor
-	     * @access public
-	     * @returns {void}
-	     */
-	    value: function init() {}
-
-	    // Creating and Committing Transactions
-
-	    /**
-	     * Begins a new transaction for the current thread.
-	     * @access public
-	     * @returns {void}
-	     * @desc The new transaction is nested within the thread’s current transaction, if there is one.The first time you modify the scene graph during a pass through the run loop, SceneKit automatically creates a transaction and makes it the current transaction. (SceneKit commits that transaction when the next iteration of the run loops begins.) If you call this method to create a custom transaction before modifying the scene graph, your custom transaction becomes the current transaction.
-	     * @see https://developer.apple.com/reference/scenekit/scntransaction/1522820-begin
-	     */
-
-	  }], [{
+	  _createClass(SCNTransaction, null, [{
 	    key: 'begin',
 	    value: function begin() {}
 
@@ -28778,6 +28660,7 @@ module.exports =
 	    value: function flush() {}
 
 	    // Overriding Animation Duration and Timing
+
 	    /**
 	     * Returns the duration, in seconds, of all animations within the current transaction.
 	     * @type {number}
@@ -28854,6 +28737,7 @@ module.exports =
 	    get: function get() {
 	      return _animationDuration;
 	    }
+
 	    /**
 	     * Returns the duration, in seconds, of all animations within the current transaction.
 	     * @type {number}
@@ -28864,6 +28748,7 @@ module.exports =
 	    set: function set(newValue) {
 	      _animationDuration = newValue;
 	    }
+
 	    /**
 	     * Returns the timing function that SceneKit uses for all animations within this transaction group. 
 	     * @type {?CAMediaTimingFunction}
@@ -28876,6 +28761,7 @@ module.exports =
 	    get: function get() {
 	      return _animationTimingFunction;
 	    }
+
 	    /**
 	     * Returns the timing function that SceneKit uses for all animations within this transaction group. 
 	     * @type {?CAMediaTimingFunction}
@@ -28888,6 +28774,7 @@ module.exports =
 	    }
 
 	    // Temporarily Disabling Property Animations
+
 	    /**
 	     * Returns a Boolean value indicating whether changes to animatable properties during the transaction are implicitly animated.
 	     * @type {boolean}
@@ -28900,6 +28787,7 @@ module.exports =
 	    get: function get() {
 	      return _disableActions;
 	    }
+
 	    /**
 	     * Returns a Boolean value indicating whether changes to animatable properties during the transaction are implicitly animated.
 	     * @type {boolean}
@@ -28912,6 +28800,7 @@ module.exports =
 	    }
 
 	    // Getting and Setting Completion Block Objects
+
 	    /**
 	     * Returns the block previously associated with the current transaction.
 	     * @type {?function(): void}
@@ -28924,6 +28813,7 @@ module.exports =
 	    get: function get() {
 	      return _completionBlock;
 	    }
+
 	    /**
 	     * Returns the block previously associated with the current transaction.
 	     * @type {?function(): void}
@@ -29792,7 +29682,7 @@ module.exports =
 	      antialias: true,
 	      premultipliedAlpha: true,
 	      preserveDrawingBuffer: false,
-	      preferLowPowerToHighPerformance: !!preferLowPowerDevice,
+	      preferLowPowerToHighPerformance: Boolean(preferLowPowerDevice),
 	      failIfMajorPerformanceCaveat: false
 	    };
 
@@ -29829,7 +29719,7 @@ module.exports =
 	    }
 
 	    if (!this._context) {
-	      throw 'can\'t create WebGL context';
+	      throw new Error('can\'t create WebGL context');
 	    }
 	    this._context.viewport(frame.x, frame.y, frame.width, frame.height);
 
@@ -29844,6 +29734,7 @@ module.exports =
 	   *
 	   * @access public
 	   * @param {HTMLElement} element - parent element to append this view
+	   * @returns {void}
 	   */
 
 
@@ -30213,7 +30104,7 @@ module.exports =
 	    value: function _updateTransform(node, parentTransform) {
 	      var _this2 = this;
 
-	      if (node === undefined) {
+	      if (typeof node === 'undefined') {
 	        this._updateTransform(this._scene.rootNode, new _SCNMatrix2.default());
 	        return;
 	      }
@@ -30229,7 +30120,7 @@ module.exports =
 	    value: function _updatePresentationTransform(node, parentTransform) {
 	      var _this3 = this;
 
-	      if (node === undefined) {
+	      if (typeof node === 'undefined') {
 	        this._updatePresentationTransform(this._scene.rootNode, new _SCNMatrix2.default());
 	        return;
 	      }
@@ -30272,7 +30163,7 @@ module.exports =
 	  }, {
 	    key: 'isPlaying',
 	    get: function get() {
-	      this._renderer.isPlaying;
+	      return this._renderer.isPlaying;
 	    }
 
 	    /**
