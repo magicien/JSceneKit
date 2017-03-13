@@ -14634,9 +14634,6 @@ module.exports =
 	      var normalComponents = normalSource ? normalSource.componentsPerVector : 0;
 	      var texcoordArray = texcoordSource ? texcoordSource.data : null;
 	      var texcoordComponents = texcoordSource ? texcoordSource.componentsPerVector : 0;
-	      //console.log(`vertexComponents: ${vertexComponents}`)
-	      //console.log(`normalComponents: ${normalComponents}`)
-	      //console.log(`texcoordComponents: ${texcoordComponents}`)
 
 	      for (var i = 0; i < vectorCount; i++) {
 	        if (vertexSource) {
@@ -23844,16 +23841,17 @@ module.exports =
 	    // data length consistency check
 	    var _this = _possibleConstructorReturn(this, (SCNSkinner.__proto__ || Object.getPrototypeOf(SCNSkinner)).call(this));
 
-	    var len = bones.length;
-	    if (boneInverseBindTransforms.length !== len) {
-	      throw new Error('SCNSkinner: bones.length (' + len + ') !== boneInverseBIndTransforms.length (' + boneInverseBindTransforms.length + ')');
+	    var boneLen = bones.length;
+	    //const vectorLen = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex).vectorCount
+	    if (boneInverseBindTransforms.length !== boneLen) {
+	      throw new Error('SCNSkinner: bones.length (' + boneLen + ') !== boneInverseBindTransforms.length (' + boneInverseBindTransforms.length + ')');
 	    }
-	    if (boneWeights.vectorCount !== len) {
-	      throw new Error('SCNSkinner: bones.length (' + len + ') !== boneWeights.vectorCount (' + boneWeights.vectorCount + ')');
-	    }
-	    if (boneIndices.vectorCount !== len) {
-	      throw new Error('SCNSkinner: bones.length (' + len + ') !== boneIndices.vectorCount (' + boneIndices.vectorCount + ')');
-	    }
+	    //if(boneWeights.vectorCount !== vectorLen){
+	    //  throw new Error(`SCNSkinner: vertices.length (${vectorLen}) !== boneWeights.vectorCount (${boneWeights.vectorCount})`)
+	    //}
+	    //if(boneIndices.vectorCount !== vectorLen){
+	    //  throw new Error(`SCNSkinner: vertices.length (${vectorLen}) !== boneIndices.vectorCount (${boneIndices.vectorCount})`)
+	    //}
 
 	    // Working with a Skinned Geometry
 
@@ -25319,8 +25317,6 @@ module.exports =
 	  value: true
 	});
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 	var _SCNGeometry2 = __webpack_require__(36);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
@@ -25342,79 +25338,62 @@ module.exports =
 	var SCNCapsule = function (_SCNGeometry) {
 	  _inherits(SCNCapsule, _SCNGeometry);
 
-	  function SCNCapsule() {
+	  // Creating a Capsule
+
+	  /**
+	   * Creates a capsule geometry with the specified radius and height.
+	   * @access public
+	   * @constructor
+	   * @param {number} capRadius - The radius both of the capsule’s cylindrical body and of its hemispherical ends.
+	   * @param {number} height - The height of the capsule along the y-axis of its local coordinate space.
+	   * @desc The capsule is centered in its local coordinate system. For example, if you create a capsule whose cap radius is 5.0 and height is 20.0, it extends from -10.0 to 10.0 in the y-axis, and the circular cross section at the center of its body extends from -5.0 to 5.0 along the x- and z-axes.
+	   * @see https://developer.apple.com/reference/scenekit/scncapsule/1523790-init
+	   */
+	  function SCNCapsule(capRadius, height) {
 	    _classCallCheck(this, SCNCapsule);
 
-	    return _possibleConstructorReturn(this, (SCNCapsule.__proto__ || Object.getPrototypeOf(SCNCapsule)).apply(this, arguments));
+	    // Adjusting a Capsule’s Dimensions
+
+	    /**
+	     * The radius both of the capsule’s circular center cross section and of its hemispherical ends. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scncapsule/1523926-capradius
+	     */
+	    var _this = _possibleConstructorReturn(this, (SCNCapsule.__proto__ || Object.getPrototypeOf(SCNCapsule)).call(this));
+
+	    _this.capRadius = capRadius;
+
+	    /**
+	     * The extent of the capsule along its y-axis. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scncapsule/1522789-height
+	     */
+	    _this.height = height;
+
+	    // Adjusting Geometric Detail
+
+	    /**
+	     * The number of subdivisions around the lateral circumference of the capsule. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scncapsule/1522735-radialsegmentcount
+	     */
+	    _this.radialSegmentCount = 0;
+
+	    /**
+	     * The number of subdivisions in the height of each hemispherical end of the capsule. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scncapsule/1523561-capsegmentcount
+	     */
+	    _this.capSegmentCount = 0;
+
+	    /**
+	     * The number of subdivisions in the sides of the capsule along its y-axis. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scncapsule/1523697-heightsegmentcount
+	     */
+	    _this.heightSegmentCount = 0;
+	    return _this;
 	  }
-
-	  _createClass(SCNCapsule, [{
-	    key: 'init',
-
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @returns {void}
-	     */
-	    value: function init() {
-
-	      // Adjusting a Capsule’s Dimensions
-
-	      /**
-	       * The radius both of the capsule’s circular center cross section and of its hemispherical ends. Animatable.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scncapsule/1523926-capradius
-	       */
-	      this.capRadius = 0;
-
-	      /**
-	       * The extent of the capsule along its y-axis. Animatable.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scncapsule/1522789-height
-	       */
-	      this.height = 0;
-
-	      // Adjusting Geometric Detail
-
-	      /**
-	       * The number of subdivisions around the lateral circumference of the capsule. Animatable.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scncapsule/1522735-radialsegmentcount
-	       */
-	      this.radialSegmentCount = 0;
-
-	      /**
-	       * The number of subdivisions in the height of each hemispherical end of the capsule. Animatable.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scncapsule/1523561-capsegmentcount
-	       */
-	      this.capSegmentCount = 0;
-
-	      /**
-	       * The number of subdivisions in the sides of the capsule along its y-axis. Animatable.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scncapsule/1523697-heightsegmentcount
-	       */
-	      this.heightSegmentCount = 0;
-	    }
-
-	    // Creating a Capsule
-
-	    /**
-	     * Creates a capsule geometry with the specified radius and height.
-	     * @access public
-	     * @param {number} capRadius - The radius both of the capsule’s cylindrical body and of its hemispherical ends.
-	     * @param {number} height - The height of the capsule along the y-axis of its local coordinate space.
-	     * @returns {void}
-	     * @desc The capsule is centered in its local coordinate system. For example, if you create a capsule whose cap radius is 5.0 and height is 20.0, it extends from -10.0 to 10.0 in the y-axis, and the circular cross section at the center of its body extends from -5.0 to 5.0 along the x- and z-axes.
-	     * @see https://developer.apple.com/reference/scenekit/scncapsule/1523790-init
-	     */
-
-	  }, {
-	    key: 'init',
-	    value: function init(capRadius, height) {}
-	  }]);
 
 	  return SCNCapsule;
 	}(_SCNGeometry3.default);
@@ -27964,36 +27943,34 @@ module.exports =
 	var SCNSceneSource = function (_NSObject) {
 	  _inherits(SCNSceneSource, _NSObject);
 
-	  function SCNSceneSource() {
+	  // Creating a Scene Source
+
+	  /**
+	   * Initializes a scene source for reading the scene graph contained in an NSData object.
+	   * @access public
+	   * @constructor
+	   * @param {Blob} data - A data object containing a scene file in a format recognized by SceneKit.
+	   * @param {?Map<SCNSceneSource.LoadingOption, Object>} [options = null] - A dictionary containing options that affect scene loading. See Scene Loading Options for available keys and values. Pass nil to use default options.
+	   * @desc The data parameter of this method should contain the same data as directly read from a scene file (such as by using the NSData method dataWithContentsOfURL:). Use this method when you have the contents of a scene file but not the file itself—for example, if your app downloads scene files from the network.
+	   * @see https://developer.apple.com/reference/scenekit/scnscenesource/1523500-init
+	   */
+	  function SCNSceneSource(data) {
+	    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
 	    _classCallCheck(this, SCNSceneSource);
 
-	    return _possibleConstructorReturn(this, (SCNSceneSource.__proto__ || Object.getPrototypeOf(SCNSceneSource)).apply(this, arguments));
+	    // Getting Information about the Scene
+
+	    var _this = _possibleConstructorReturn(this, (SCNSceneSource.__proto__ || Object.getPrototypeOf(SCNSceneSource)).call(this));
+
+	    _this._url = null;
+	    _this._data = data;
+	    return _this;
 	  }
 
 	  _createClass(SCNSceneSource, [{
-	    key: 'init',
+	    key: 'scene',
 
-
-	    // Creating a Scene Source
-
-	    /**
-	     * Initializes a scene source for reading the scene graph from a specified file.
-	     * @access public
-	     * @param {string} url - The URL identifying the scene.
-	     * @param {?Map<SCNSceneSource.LoadingOption, Object>} [options = null] - A dictionary containing options that affect scene loading. See Scene Loading Options for available keys and values. Pass nil to use default options.
-	     * @returns {void}
-	     * @desc If you have the contents of a scene file but not the file itself (for example, if your app downloads scene files from the network), use the init(data:options:) method instead.
-	     * @see https://developer.apple.com/reference/scenekit/scnscenesource/1522629-init
-	     */
-	    value: function init(url) {
-	      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-
-
-	      // Getting Information about the Scene
-
-	      this._url = null;
-	      this._data = null;
-	    }
 
 	    // Loading a Complete Scene
 
@@ -28006,9 +27983,6 @@ module.exports =
 	     * @desc Use this method if you need to monitor progress while loading a scene from the scene source. For simpler scene loading, use the scene(options:) method or the SCNScene method init(url:options:).A scene source can contain objects that are not part of its scene graph. To obtain these objects, you must load them individually with the the entryWithIdentifier:withClass: or entries(passingTest:) method. For example, a scene file containing a game character could include several animations for the character geometry (such as running, jumping, and standing idle). Because you typically do not apply multiple animations at once, the scene file contains these animations without their being attached to the character geometry.
 	     * @see https://developer.apple.com/reference/scenekit/scnscenesource/1522887-scene
 	     */
-
-	  }, {
-	    key: 'scene',
 	    value: function scene() {
 	      var options = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
 	      var statusHandler = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
@@ -28133,6 +28107,14 @@ module.exports =
 	      return this._data;
 	    }
 	  }], [{
+	    key: 'sceneSourceWithDataOptions',
+	    value: function sceneSourceWithDataOptions(data, options) {
+	      return new SCNSceneSource(data, options);
+	    }
+	  }, {
+	    key: 'sceneSourceWithURLOptions',
+	    value: function sceneSourceWithURLOptions(url, options) {}
+	  }, {
 	    key: 'AnimationImportPolicy',
 	    get: function get() {
 	      return _AnimationImportPolicy;
@@ -28351,8 +28333,6 @@ module.exports =
 	  value: true
 	});
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 	var _SCNGeometry2 = __webpack_require__(36);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
@@ -28374,64 +28354,47 @@ module.exports =
 	var SCNSphere = function (_SCNGeometry) {
 	  _inherits(SCNSphere, _SCNGeometry);
 
-	  function SCNSphere() {
+	  // Creating a Sphere
+
+	  /**
+	   * Creates a sphere geometry with the specified radius.
+	   * @access public
+	   * @constructor
+	   * @param {number} radius - The radius of the sphere in its local coordinate space.
+	   * @desc The sphere is centered in its local coordinate system. For example, if you create a sphere whose radius is 5.0, it extends from -5.0 to 5.0 along each of the the x, y, and z-axes.
+	   * @see https://developer.apple.com/reference/scenekit/scnsphere/1522601-init
+	   */
+	  function SCNSphere(radius) {
 	    _classCallCheck(this, SCNSphere);
 
-	    return _possibleConstructorReturn(this, (SCNSphere.__proto__ || Object.getPrototypeOf(SCNSphere)).apply(this, arguments));
+	    // Adjusting a Sphere’s Dimensions
+
+	    /**
+	     * The radius of the sphere. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523787-radius
+	     */
+	    var _this = _possibleConstructorReturn(this, (SCNSphere.__proto__ || Object.getPrototypeOf(SCNSphere)).call(this));
+
+	    _this.radius = radius;
+
+	    // Adjusting Geometric Detail
+
+	    /**
+	     * A Boolean value specifying whether SceneKit uses a geodesic polygon mesh to render the sphere.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523268-isgeodesic
+	     */
+	    _this.isGeodesic = false;
+
+	    /**
+	     * A number determining the detail of the polygon mesh SceneKit uses to render the sphere. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523912-segmentcount
+	     */
+	    _this.segmentCount = 0;
+	    return _this;
 	  }
-
-	  _createClass(SCNSphere, [{
-	    key: 'init',
-
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @returns {void}
-	     */
-	    value: function init() {
-
-	      // Adjusting a Sphere’s Dimensions
-
-	      /**
-	       * The radius of the sphere. Animatable.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnsphere/1523787-radius
-	       */
-	      this.radius = 0;
-
-	      // Adjusting Geometric Detail
-
-	      /**
-	       * A Boolean value specifying whether SceneKit uses a geodesic polygon mesh to render the sphere.
-	       * @type {boolean}
-	       * @see https://developer.apple.com/reference/scenekit/scnsphere/1523268-isgeodesic
-	       */
-	      this.isGeodesic = false;
-
-	      /**
-	       * A number determining the detail of the polygon mesh SceneKit uses to render the sphere. Animatable.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnsphere/1523912-segmentcount
-	       */
-	      this.segmentCount = 0;
-	    }
-
-	    // Creating a Sphere
-
-	    /**
-	     * Creates a sphere geometry with the specified radius.
-	     * @access public
-	     * @param {number} radius - The radius of the sphere in its local coordinate space.
-	     * @returns {void}
-	     * @desc The sphere is centered in its local coordinate system. For example, if you create a sphere whose radius is 5.0, it extends from -5.0 to 5.0 along each of the the x, y, and z-axes.
-	     * @see https://developer.apple.com/reference/scenekit/scnsphere/1522601-init
-	     */
-
-	  }, {
-	    key: 'init',
-	    value: function init(radius) {}
-	  }]);
 
 	  return SCNSphere;
 	}(_SCNGeometry3.default);

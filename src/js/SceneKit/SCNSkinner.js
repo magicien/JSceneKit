@@ -33,16 +33,17 @@ export default class SCNSkinner extends NSObject {
     super()
 
     // data length consistency check
-    const len = bones.length
-    if(boneInverseBindTransforms.length !== len){
-      throw new Error(`SCNSkinner: bones.length (${len}) !== boneInverseBIndTransforms.length (${boneInverseBindTransforms.length})`)
+    const boneLen = bones.length
+    //const vectorLen = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex).vectorCount
+    if(boneInverseBindTransforms.length !== boneLen){
+      throw new Error(`SCNSkinner: bones.length (${boneLen}) !== boneInverseBindTransforms.length (${boneInverseBindTransforms.length})`)
     }
-    if(boneWeights.vectorCount !== len){
-      throw new Error(`SCNSkinner: bones.length (${len}) !== boneWeights.vectorCount (${boneWeights.vectorCount})`)
-    }
-    if(boneIndices.vectorCount !== len){
-      throw new Error(`SCNSkinner: bones.length (${len}) !== boneIndices.vectorCount (${boneIndices.vectorCount})`)
-    }
+    //if(boneWeights.vectorCount !== vectorLen){
+    //  throw new Error(`SCNSkinner: vertices.length (${vectorLen}) !== boneWeights.vectorCount (${boneWeights.vectorCount})`)
+    //}
+    //if(boneIndices.vectorCount !== vectorLen){
+    //  throw new Error(`SCNSkinner: vertices.length (${vectorLen}) !== boneIndices.vectorCount (${boneIndices.vectorCount})`)
+    //}
 
     // Working with a Skinned Geometry
 

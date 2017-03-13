@@ -37,20 +37,29 @@ export default class SCNSceneSource extends NSObject {
   // Creating a Scene Source
 
   /**
-   * Initializes a scene source for reading the scene graph from a specified file.
+   * Initializes a scene source for reading the scene graph contained in an NSData object.
    * @access public
-   * @param {string} url - The URL identifying the scene.
+   * @constructor
+   * @param {Blob} data - A data object containing a scene file in a format recognized by SceneKit.
    * @param {?Map<SCNSceneSource.LoadingOption, Object>} [options = null] - A dictionary containing options that affect scene loading. See Scene Loading Options for available keys and values. Pass nil to use default options.
-   * @returns {void}
-   * @desc If you have the contents of a scene file but not the file itself (for example, if your app downloads scene files from the network), use the init(data:options:) method instead.
-   * @see https://developer.apple.com/reference/scenekit/scnscenesource/1522629-init
+   * @desc The data parameter of this method should contain the same data as directly read from a scene file (such as by using the NSData method dataWithContentsOfURL:). Use this method when you have the contents of a scene file but not the file itself—for example, if your app downloads scene files from the network.
+   * @see https://developer.apple.com/reference/scenekit/scnscenesource/1523500-init
    */
-  init(url, options = null) {
+  constructor(data, options = null) {
+    super()
 
     // Getting Information about the Scene
 
     this._url = null
-    this._data = null
+    this._data = data
+  }
+
+  static sceneSourceWithDataOptions(data, options) {
+    return new SCNSceneSource(data, options)
+  }
+
+  static sceneSourceWithURLOptions(url, options) {
+    
   }
 
   // Loading a Complete Scene

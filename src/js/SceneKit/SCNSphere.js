@@ -10,13 +10,18 @@ import SCNGeometry from './SCNGeometry'
  * @see https://developer.apple.com/reference/scenekit/scnsphere
  */
 export default class SCNSphere extends SCNGeometry {
+  // Creating a Sphere
 
   /**
-   * constructor
+   * Creates a sphere geometry with the specified radius.
    * @access public
-   * @returns {void}
+   * @constructor
+   * @param {number} radius - The radius of the sphere in its local coordinate space.
+   * @desc The sphere is centered in its local coordinate system. For example, if you create a sphere whose radius is 5.0, it extends from -5.0 to 5.0 along each of the the x, y, and z-axes.
+   * @see https://developer.apple.com/reference/scenekit/scnsphere/1522601-init
    */
-  init() {
+  constructor(radius) {
+    super()
 
     // Adjusting a Sphere’s Dimensions
 
@@ -25,8 +30,7 @@ export default class SCNSphere extends SCNGeometry {
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnsphere/1523787-radius
      */
-    this.radius = 0
-
+    this.radius = radius
 
     // Adjusting Geometric Detail
 
@@ -43,19 +47,5 @@ export default class SCNSphere extends SCNGeometry {
      * @see https://developer.apple.com/reference/scenekit/scnsphere/1523912-segmentcount
      */
     this.segmentCount = 0
-
-  }
-
-  // Creating a Sphere
-
-  /**
-   * Creates a sphere geometry with the specified radius.
-   * @access public
-   * @param {number} radius - The radius of the sphere in its local coordinate space.
-   * @returns {void}
-   * @desc The sphere is centered in its local coordinate system. For example, if you create a sphere whose radius is 5.0, it extends from -5.0 to 5.0 along each of the the x, y, and z-axes.
-   * @see https://developer.apple.com/reference/scenekit/scnsphere/1522601-init
-   */
-  init(radius) {
   }
 }

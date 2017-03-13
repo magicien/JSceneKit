@@ -486,9 +486,6 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     const normalComponents = normalSource ? normalSource.componentsPerVector : 0
     const texcoordArray = texcoordSource ? texcoordSource.data : null
     const texcoordComponents = texcoordSource ? texcoordSource.componentsPerVector : 0
-    //console.log(`vertexComponents: ${vertexComponents}`)
-    //console.log(`normalComponents: ${normalComponents}`)
-    //console.log(`texcoordComponents: ${texcoordComponents}`)
 
     for(let i=0; i<vectorCount; i++){
       if(vertexSource){
