@@ -54,7 +54,7 @@ export default class SCNVector3 {
     r.x = this.x - v.x
     r.y = this.y - v.y
     r.z = this.z - v.z
-    return v
+    return r
   }
 
   /**

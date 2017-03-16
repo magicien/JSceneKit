@@ -28,7 +28,7 @@ export default class SCNGeometry extends NSObject {
    * @constructor
    * @param {SCNGeometrySource[]} sources - An array of SCNGeometrySource objects describing vertices in the geometry and their attributes.
    * @param {?SCNGeometryElement[]} elements - An array of SCNGeometryElement objects describing how to connect the geometry’s vertices.
-   * @desc A geometry’s visible content comes from the combination of geometry sources, which contain data describing its vertices, with geometry elements, which contain data describing how the vertices connect to form a surface. Each SCNGeometrySource object describes an attribute of all vertices in the geometry (vertex position, surface normal vector, color, or texture mapping coordinates) identified by the source’s semantic property. To create a custom geometry you must provide at least one source, for the vertex semantic. Typically, you also provide sources for normals and texture coordinates for use in lighting and shading.Sources for the vertex, normal, and color semantics must be unique—if multiple objects in the sources array have the same semantic, SceneKit uses only the first. A geometry may have multiple sources for the texcoord semantic—the order of texture coordinate sources in the sources array determines the value to use for the mappingChannel property when attaching materials.Each SCNGeometryElement object describes how vertices from the geometry sources are combined into polygons to create the geometry’s shape. Creating a custom geometry requires at least one element. If the elements array contains multiple objects, their order determines the arrangement of the geometry’s materials—for details, see the discussion of the materials property.
+   * @desc A geometry's visible content comes from the combination of geometry sources, which contain data describing its vertices, with geometry elements, which contain data describing how the vertices connect to form a surface. Each SCNGeometrySource object describes an attribute of all vertices in the geometry (vertex position, surface normal vector, color, or texture mapping coordinates) identified by the source's semantic property. To create a custom geometry you must provide at least one source, for the vertex semantic. Typically, you also provide sources for normals and texture coordinates for use in lighting and shading.Sources for the vertex, normal, and color semantics must be unique-if multiple objects in the sources array have the same semantic, SceneKit uses only the first. A geometry may have multiple sources for the texcoord semantic-the order of texture coordinate sources in the sources array determines the value to use for the mappingChannel property when attaching materials.Each SCNGeometryElement object describes how vertices from the geometry sources are combined into polygons to create the geometry's shape. Creating a custom geometry requires at least one element. If the elements array contains multiple objects, their order determines the arrangement of the geometry's materials-for details, see the discussion of the materials property.
    * @see https://developer.apple.com/reference/scenekit/scngeometry/1522803-init
    */
   constructor(sources = [], elements = []) {
@@ -278,11 +278,13 @@ export default class SCNGeometry extends NSObject {
   ///////////////////////
 
   // Working with Bounding Volumes
+
   /**
    * The center point and radius of the object’s bounding sphere.
    * @type {Object}
-   * @parameter {SCNVector3} _boundingSphere.center
-   * @parameter {number} _boundingSphere.radius
+   * @parameter {SCNVector3} _boundingSphere.center -
+   * @parameter {number} _boundingSphere.radius -
+   * @returns {Object} -
    * @desc Scene Kit defines a bounding sphere in the local coordinate space using a center point and a radius. For example, if a node’s bounding sphere has the center point {3, 1, 4} and radius 2.0, all points in the vertex data of node’s geometry (and any geometry attached to its child nodes) lie within 2.0 units of the center point.The coordinates provided when reading this property are valid only if the object has a volume to be measured. For a geometry containing no vertex data or a node containing no geometry (and whose child nodes, if any, contain no geometry), the values center and radius are both zero.
    * @see https://developer.apple.com/reference/scenekit/scnboundingvolume/2034707-boundingsphere
    */
@@ -522,6 +524,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
       offset += texcoordComponents * bytesPerComponent
     }
 
+    console.log(`offset: ${offset}, vectorCount: ${vectorCount}`)
     offset *= vectorCount
 
     const indexArray = indexSource ? indexSource.data : null
@@ -543,14 +546,20 @@ This method is for OpenGL shader programs only. To bind custom variable data for
       indexSource._bytesPerComponent = bytesPerComponent
       indexSource._dataOffset = offset
       indexSource._dataStride = boneStride
-      offset += texcoordComponents * bytesPerComponent
+      offset += indexComponents * bytesPerComponent
     }
     if(weightSource){
       weightSource._bytesPerComponent = bytesPerComponent
       weightSource._dataOffset = offset
       weightSource._dataStride = boneStride
-      offset += texcoordComponents * bytesPerComponent
+      offset += weightComponents * bytesPerComponent
     }
+
+    console.log(`arr.length: ${arr.length}`)
+    console.log(`arr[72288-72291]: ${arr[72288]}, ${arr[72289]}, ${arr[72290]}, ${arr[72291]}`)
+    console.log(`arr[72292-72295]: ${arr[72292]}, ${arr[72293]}, ${arr[72294]}, ${arr[72295]}`)
+    console.log(`arr[72296-72299]: ${arr[72296]}, ${arr[72297]}, ${arr[72298]}, ${arr[72299]}`)
+    console.log(`arr[72300-72303]: ${arr[72300]}, ${arr[72301]}, ${arr[72302]}, ${arr[72303]}`)
 
     const vertexData = new Float32Array(arr)
     gl.bufferData(gl.ARRAY_BUFFER, vertexData, gl.DYNAMIC_DRAW)

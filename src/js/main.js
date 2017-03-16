@@ -16,6 +16,7 @@ import CAAnimation from './QuartzCore/CAAnimation'
 import CAAnimationDelegate from './QuartzCore/CAAnimationDelegate'
 import CAAnimationGroup from './QuartzCore/CAAnimationGroup'
 import CABasicAnimation from './QuartzCore/CABasicAnimation'
+import CAKeyframeAnimation from './QuartzCore/CAKeyframeAnimation'
 import CAMediaTiming from './QuartzCore/CAMediaTiming'
 import CAMediaTimingFunction from './QuartzCore/CAMediaTimingFunction'
 import CAPropertyAnimation from './QuartzCore/CAPropertyAnimation'
@@ -179,6 +180,7 @@ exports.CAAnimation = CAAnimation
 exports.CAAnimationDelegate = CAAnimationDelegate
 exports.CAAnimationGroup = CAAnimationGroup
 exports.CABasicAnimation = CABasicAnimation
+exports.CAKeyframeAnimation = CAKeyframeAnimation
 exports.CAMediaTiming = CAMediaTiming
 exports.CAMediaTimingFunction = CAMediaTimingFunction
 exports.CAPropertyAnimation = CAPropertyAnimation
@@ -325,14 +327,27 @@ exports.SKColor = SKColor
 
 // constants
 /*global exports*/
+
+// 
 exports.kCAFillModeRemoved = 'removed'
 exports.kCAFillModeForwards = 'forwards'
 exports.kCAFillModeBackwards = 'backwards'
 exports.kCAFillModeBoth = 'both'
 
+// 
 exports.kCAMediaTimingFunctionLinear = 'linear'
 exports.kCAMediaTimingFunctionEaseIn = 'easeIn'
 exports.kCAMediaTimingFunctionEaseOut = 'easeOut'
 exports.kCAMediaTimingFunctionEaseInEaseOut = 'easeInEaseOut'
 exports.kCAMediaTimingFunctionDefault = 'default'
 
+// Value calculation modes
+exports.kCAAnimationLinear = 'linear'
+exports.kCAAnimationDiscrete = 'discrete'
+exports.kCAAnimationPaced = 'paced'
+exports.kCAAnimationCubic = 'cubic'
+exports.kCAAnimationCubicPaced = 'cubicPaced'
+
+// Rotation Mode Values
+exports.kCAAnimationRotateAuto = 'auto'
+exports.kCAAnimationRotateAutoReverse = 'autoReverse'

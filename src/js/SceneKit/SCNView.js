@@ -847,6 +847,8 @@ export default class SCNView {
       this._delegate.rendererWillRenderSceneAtTime(this._renderer, this._scene, time)
     }
 
+    this._updateMorph()
+
     ///////////////////////
     // renders the scene //
     ///////////////////////
@@ -863,6 +865,7 @@ export default class SCNView {
       const node = arr.shift()
       const p = node.copy()
       p._isPresentationInstance = true
+      console.log(`_createPresentationNode: pos: ${p.position}`)
       node._presentation = p
       arr.push(...node.childNodes)
     }
@@ -893,8 +896,7 @@ export default class SCNView {
       return
     }
 
-    //node._worldTransform = parentTransform.mult(node.transform)
-    node._worldTransform = node.transform.mult(parentTransform)
+    node._worldTransform = parentTransform.mult(node.transform)
     node.childNodes.forEach((child) => {
       this._updateTransform(child, node._worldTransform)
     })
@@ -905,9 +907,33 @@ export default class SCNView {
       this._updatePresentationTransform(this._scene.rootNode, new SCNMatrix4())
       return
     }
-    node.presentation._worldTransform = node.presentation.transform.mult(parentTransform)
+    const old = node.presentation._worldTransform
+    node.presentation._worldTransform = parentTransform.mult(node.presentation.transform)
+    if(!old.equalTo(node.presentation._worldTransform)){
+      const t1 = old.getTranslation()
+      const t2 = node.presentation._worldTransform.getTranslation()
+      console.log(`update: ${t1.x}, ${t1.y}, ${t1.z} => ${t2.x}, ${t2.y}, ${t2.z}`)
+
+      const pt = parentTransform.getTranslation()
+      const t = node.presentation.transform.getTranslation()
+      console.log(`parent: ${pt.x}, ${pt.y}, ${pt.z}, node: ${t.x}, ${t.y}, ${t.z}`)
+    }
+
     node.childNodes.forEach((child) => {
       this._updatePresentationTransform(child, node.presentation._worldTransform)
+    })
+  }
+
+  _updateMorph(node) {
+    if(typeof node === 'undefined'){
+      this._updateMorph(this._scene.rootNode)
+      return
+    }
+    if(node.morpher !== null){
+      // TODO: implement
+    }
+    node.childNodes.forEach((child) => {
+      this._updateMorph(child)
     })
   }
 

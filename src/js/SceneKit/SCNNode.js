@@ -460,8 +460,10 @@ export default class SCNNode extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnnode/1407980-eulerangles
    */
   get eulerAngles() {
+    // TODO: implement
   }
   set eulerAngles(newValue) {
+    // TODO: implement
     this._transformUpToDate = false
   }
 
@@ -471,8 +473,53 @@ export default class SCNNode extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnnode/1408048-orientation
    */
   get orientation() {
+    const quat = new SCNVector4()
+    const rot = this._rotation
+
+    if(rot.x === 0 && rot.y === 0 && rot.z === 0){
+      quat.x = 0
+      quat.y = 0
+      quat.z = 0
+      quat.w = 1.0
+    }else{
+      const r = 1.0 / Math.sqrt(rot.x * rot.x + rot.y * rot.y + rot.z * rot.z)
+      const cosW = Math.cos(rot.w)
+      const sinW = Math.sin(rot.w)
+      quat.x = rot.x * sinW
+      quat.y = rot.y * sinW
+      quat.z = rot.z * sinW
+      quat.w = cosW
+    }
+    return quat
   }
-  set orietation(newValue) {
+  set orientation(newValue) {
+    const rot = new SCNVector4()
+
+    if(newValue.x === 0 && newValue.y === 0 && newValue.z === 0){
+      rot.x = 0
+      rot.y = 0
+      rot.z = 0
+      rot.w = 0
+    }else{
+      rot.x = newValue.x
+      rot.y = newValue.y
+      rot.z = newValue.z
+      let quatW = newValue.w
+      if(quatW > 1){
+        quatW = 1.0
+      }else if(quatW < -1){
+        quatW = -1.0
+      }
+      const w = Math.acos(quatW)
+
+      if(isNaN(w)){
+        rot.w = 0
+      }else{
+        rot.w = w
+      }
+    }
+        
+    this._rotation = rot
     this._transformUpToDate = false
   }
 
@@ -705,11 +752,12 @@ export default class SCNNode extends NSObject {
    */
   removeAllParticleSystems() {
   }
+
   /**
    * The particle systems attached to the node.
    * @access public
    * @type {?SCNParticleSystem[]}
-   * @desc An array of SCNParticleSystem objects directly attached to the node. This array does not include particle systems attached to the node’s child nodes.For details on particle systems, see SCNParticleSystem.
+   * @desc An array of SCNParticleSystem objects directly attached to the node. This array does not include particle systems attached to the node's child nodes. For details on particle systems, see SCNParticleSystem.
    * @see https://developer.apple.com/reference/scenekit/scnnode/1522705-particlesystems
    */
   get particleSystems() {
@@ -991,7 +1039,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523386-addanimation
    */
   addAnimationForKey(animation, key) {
-    if(key === undefined || key === null){
+    if(typeof key === 'undefined' || key === null){
       key = new Symbol()
     }
     const anim = animation.copy()
@@ -1161,6 +1209,11 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     node._hasActions = this._hasActions
     node.boundingBox = this.boundingBox
 
+    node._position = new SCNVector3(this._position.x, this._position.y, this._position.z)
+    node._rotation = new SCNVector4(this._rotation.x, this._rotation.y, this._rotation.z, this._rotation.w)
+    node._scale = new SCNVector3(this._scale.x, this._scale.y, this._scale.z)
+    node._transformUpToDate = false
+
     return node
   }
 
@@ -1218,7 +1271,8 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
           this._transformUpToDate = false
           return
         case 'quaternion':
-          // TODO: implement
+          this.quaternion = value
+          this._transformUpToDate = false
           return
         case 'scale.x':
           this._scale.x = value
@@ -1255,6 +1309,8 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
           this._position.y = value.y
           this._transformUpToDate = false
           return
+        default:
+          // do nothing
       }
     }
     super.setValueForKeyPath(value, keyPath)

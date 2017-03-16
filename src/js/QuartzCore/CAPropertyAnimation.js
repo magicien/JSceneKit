@@ -83,7 +83,10 @@ export default class CAPropertyAnimation extends CAAnimation {
     if(this.timingFunction !== null){
       t = this.timingFunction._getValueAtTime(activeTime)
     }
-    const value = this.valueFunction(t)
+    let value = t
+    if(this.valueFunction !== null){
+      value = this.valueFunction._getValueAtTime(t)
+    }
     this._applyValue(obj, value)
   }
 
@@ -150,7 +153,6 @@ export default class CAPropertyAnimation extends CAAnimation {
     if(obj._isPresentationInstance || obj._presentation === null){
       obj.setValueForKeyPath(value, this.keyPath)
     }else{
-      //console.log('presentation.setValue')
       obj._presentation.setValueForKeyPath(value, this.keyPath)
     }
   }

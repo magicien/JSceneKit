@@ -466,20 +466,26 @@ export default class SCNMatrix4 {
 
   /**
    * @access public
+   * @param {number} x -
+   * @param {number} y -
+   * @param {number} z -
    * @returns {SCNMatrix4} -
    */
   static matrixWithScale(x, y, z) {
+    let _x = x
+    let _y = y
+    let _z = z
     if(x instanceof SCNVector3){
       const v = x
-      x = v.x
-      y = v.y
-      z = v.z
+      _x = v.x
+      _y = v.y
+      _z = v.z
     }
 
     const m = new SCNMatrix4()
-    m.m11 = x
-    m.m22 = y
-    m.m33 = z
+    m.m11 = _x
+    m.m22 = _y
+    m.m33 = _z
     return m
   }
 
@@ -562,17 +568,20 @@ export default class SCNMatrix4 {
    * @returns {SCNMatrix4} -
    */
   static matrixWithTranslation(x, y, z) {
+    let _x = x
+    let _y = y
+    let _z = z
     if(x instanceof SCNVector3){
       const v = x
-      x = v.x
-      y = v.y
-      z = v.z
+      _x = v.x
+      _y = v.y
+      _z = v.z
     }
 
     const m = new SCNMatrix4()
-    m.m14 = x
-    m.m24 = y
-    m.m34 = z
+    m.m14 = _x
+    m.m24 = _y
+    m.m34 = _z
     return m
   }
 

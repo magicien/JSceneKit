@@ -96,7 +96,7 @@ export default class SCNGeometrySource extends NSObject {
 
   /**
    * @access private
-   * @returns {boolean}
+   * @returns {boolean} -
    */
   _hasTypedArrayData() {
     if(this._usesFloatComponents){

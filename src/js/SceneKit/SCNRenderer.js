@@ -44,7 +44,8 @@ const _defaultVertexShader =
 
   //uniform mat3x4[255] skinningJoints;
   uniform vec4[765] skinningJoints;
-  uniform bool useSkinner;
+  //uniform bool useSkinner;
+  uniform int numSkinningJoints;
 
   in vec3 position;
   in vec3 normal;
@@ -59,10 +60,10 @@ const _defaultVertexShader =
   void main() {
     vec3 pos = vec3(0, 0, 0);
     vec3 nom = vec3(0, 0, 0);
-    if(useSkinner){
-      for(int i=0; i<4; i++){
+    if(numSkinningJoints > 0){
+      for(int i=0; i<numSkinningJoints; i++){
         float weight = boneWeights[i];
-        if(weight <= 0.0){
+        if(int(boneIndices[i]) < 0){
           continue;
         }
         int idx = int(boneIndices[i]) * 3;
@@ -465,9 +466,9 @@ export default class SCNRenderer extends NSObject {
     gl.uniform3fv(gl.getUniformLocation(program, 'lightDirection'), lightDirection)
 
     const renderingArray = this._createRenderingNodeArray()
-    if(renderingArray.length === 0){
-      throw new Error('renderingArray.length: 0')
-    }
+    //if(renderingArray.length === 0){
+    //  throw new Error('renderingArray.length: 0')
+    //}
     renderingArray.forEach((node) => {
       this._renderNode(node)
     })
@@ -532,19 +533,17 @@ export default class SCNRenderer extends NSObject {
       this._initializeVAO(node, program)
     }
 
+    // TODO: use geometry setting
     gl.disable(gl.CULL_FACE)
-
-    // FIXME: check geometrySource semantic
-    //gl.bindBuffer(gl.ARRAY_BUFFER, node.presentation.geometry.geometrySources[0]._glData)
 
     //console.log('nodeName: ' + node.name)
 
     if(node.presentation.skinner !== null){
-      gl.uniform1i(gl.getUniformLocation(program, 'useSkinner'), 1)
+      gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
       gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array())
     }else{
-      gl.uniform1i(gl.getUniformLocation(program, 'useSkinner'), 0)
-      gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.transform.float32Array3x4f())
+      gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0)
+      gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f())
     }
 
     // TODO: buffer dynamic vertex data
@@ -554,7 +553,6 @@ export default class SCNRenderer extends NSObject {
       throw new Error('geometryCount: 0')
     }
     for(let i=0; i<geometryCount; i++){
-      //console.log(`geometry[${i}]`)
       const vao = node.presentation.geometry._vertexArrayObjects[i]
       const element = node.presentation.geometry.geometryElements[i]
       const material = node.presentation.geometry.materials[i]
@@ -566,12 +564,12 @@ export default class SCNRenderer extends NSObject {
       gl.uniform4fv(gl.getUniformLocation(program, 'materialSpecular'), material.specular.float32Array())
       gl.uniform4fv(gl.getUniformLocation(program, 'materialEmission'), material.emission.float32Array())
 
+      //console.log(`materialDiffuse: ${material.diffuse.float32Array()}`)
+
       if(material.diffuse.contents instanceof Image){
-        console.error('texture converting...')
         material.diffuse.contents = this._createTexture(material.diffuse.contents)
       }
       if(material.diffuse.contents instanceof WebGLTexture){
-        //console.error('texture: YES')
         gl.uniform1i(gl.getUniformLocation(program, 'u_useDiffuseTexture'), 1)
         gl.activeTexture(gl.TEXTURE2)
         gl.bindTexture(gl.TEXTURE_2D, material.diffuse.contents)
@@ -580,16 +578,7 @@ export default class SCNRenderer extends NSObject {
         gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.REPEAT)
         gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.REPEAT)
       }else{
-        //console.error('texture: NO')
         gl.uniform1i(gl.getUniformLocation(program, 'u_useDiffuseTexture'), 0)
-        /*
-        gl.activeTexture(gl.TEXTURE2)
-        gl.bindTexture(gl.TEXTURE_2D, this._dummyTexture)
-        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR)
-        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR)
-        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.REPEAT)
-        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.REPEAT)
-        */
       }
 
       gl.drawElements(gl.TRIANGLES, element._glData.length, gl.UNSIGNED_SHORT, 0)
@@ -944,15 +933,9 @@ export default class SCNRenderer extends NSObject {
       gl.bindAttribLocation(program, texcoordLoc, 'texcoord')
       gl.bindAttribLocation(program, boneIndicesLoc, 'boneIndices')
       gl.bindAttribLocation(program, boneWeightsLoc, 'boneWeights')
-
-      //gl.enableVertexAttribArray(positionLoc)
-      //gl.enableVertexAttribArray(normalLoc)
-      //gl.enableVertexAttribArray(texcoordLoc)
-      //gl.enableVertexAttribArray(boneIndicesLoc)
-      //gl.enableVertexAttribArray(boneWeightsLoc)
-
-      // FIXME: use geometrySources param
+      
       // vertexAttribPointer(ulong idx, long size, ulong type, bool norm, long stride, ulong offset)
+
       // position
       const posSrc = geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
       if(posSrc){
@@ -1087,8 +1070,9 @@ export default class SCNRenderer extends NSObject {
     const gl = this.context
     const texture = gl.createTexture()
 
+    console.log(`_createTexture: size: ${image.width}, ${image.height}`)
+
     gl.bindTexture(gl.TEXTURE_2D, texture)
-      // texImage2D(target, level, internalformat, width, height, border, format, type, source)
     gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, image.width, image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, image)
     gl.bindTexture(gl.TEXTURE_2D, null)
     return texture

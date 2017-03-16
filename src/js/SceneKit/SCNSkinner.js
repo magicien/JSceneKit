@@ -44,6 +44,9 @@ export default class SCNSkinner extends NSObject {
     //if(boneIndices.vectorCount !== vectorLen){
     //  throw new Error(`SCNSkinner: vertices.length (${vectorLen}) !== boneIndices.vectorCount (${boneIndices.vectorCount})`)
     //}
+    if(boneWeights.componentsPerVector !== boneIndices.componentsPerVector){
+      throw new Error(`SCNSkinner: boneWeights.componentsPerVector (${boneWeights.componentsPerVector}) !== boneIndices.componentsPerVector (${boneWeights.componentsPerVector})`)
+    }
 
     // Working with a Skinned Geometry
 
@@ -143,6 +146,14 @@ export default class SCNSkinner extends NSObject {
   }
 
   /**
+   * @access public
+   * @returns {number}
+   */
+  get numSkinningJoints() {
+    return this._boneWeights.componentsPerVector
+  }
+
+  /**
    * returns Float32Array of 3x4 matrices
    * @access public
    * @returns {Float32Array}
@@ -152,13 +163,34 @@ export default class SCNSkinner extends NSObject {
     const len = this._bones.length
     for(let i=0; i<len; i++){
       const bone = this._bones[i]
-      let mat = this._boneInverseBindTransforms[i]
-      if(bone._parent !== null){
-        mat = mat.mult(bone._parent.presentation._worldTransform)
+      let mat = this._boneInverseBindTransforms[i].mult(bone._presentation._worldTransform)
+      //mat = bone.presentation.transform.mult(mat)
+      //if(bone._parent !== null){
+      //  mat = mat.mult(bone._parent.presentation._worldTransform)
+      //  //mat = bone._parent.presentation._worldTransform.mult(mat)
+      //}
+      //mat = bone.presentation.transform.mult(mat)
+      //mat = mat.mult(bone.presentation.transform)
+      arr.push(...mat.floatArray3x4f())
+      // DEBUG
+      //const m = new SCNMatrix4()
+      //arr.push(...m.floatArray3x4f())
+
+      if(!mat.isIdentity()){
+        console.error(`mat ${i} is not identity`)
+        console.warn(`inverse: ${this._boneInverseBindTransforms[i].floatArray3x4f()}`)
+        console.warn(`presentation.worldTransform: ${bone.presentation._worldTransform.floatArray3x4f()}`)
+        console.warn(`parent.presentation.world: ${bone._parent.presentation._worldTransform.floatArray3x4f()}`)
+        console.warn(`presentation.transform: ${bone.presentation.transform.floatArray3x4f()}`)
+        console.warn(`worldTransform: ${bone._worldTransform.floatArray3x4f()}`)
+        console.warn(`transfrom: ${bone.transform.floatArray3x4f()}`)
+        console.warn(`presentation.position.y: ${bone.presentation.position.y}`)
+        console.warn(`position.y: ${bone.position.y}`)
+        console.warn(`mat: ${mat.floatArray3x4f()}`)
+        throw new Error('hoge')
       }
-      mat = bone.presentation.transform.mult(mat)
-      arr.push(...mat.floatArray3x4f)
     }
+
     return new Float32Array(arr)
   }
 }

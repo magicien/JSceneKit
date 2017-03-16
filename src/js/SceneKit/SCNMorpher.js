@@ -71,6 +71,23 @@ export default class SCNMorpher extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnmorpher/1522886-setweight
    */
   setWeightForTargetAt(weight, targetIndex) {
-    this.weights[targetIndex] = weight
+    this._weights[targetIndex] = weight
+  }
+
+  setValueForKeyPath(value, keyPath) {
+    const paths = keyPath.split('.')
+    const key = paths.shift()
+    const restPath = paths.join('.')
+
+    if(key === 'weights'){
+      if(paths.length > 0){
+        const targetIndex = this.targets.findIndex((target) => target.name === restPath)
+        if(targetIndex >= 0){
+          this._weights[targetIndex] = value
+        }
+      }
+    }else{
+      super.setValueForKeyPath(value, keyPath)
+    }
   }
 }

@@ -53,8 +53,9 @@ export default class CAMediaTimingFunction extends NSObject {
         return new CAMediaTimingFunction(0.42, 0.0, 0.58, 1.0)
       case Constants.kCAMediaTimingFunctionDefault:
         return new CAMediaTimingFunction(0.25, 0.1, 0.25, 1.0)
+      default:
+        throw new Error(`CAMediaTimingFunction: unknown name: ${name}`)
     }
-    throw new Error(`CAMediaTimingFunction: unknown name: ${name}`)
   }
 
   /**
@@ -64,7 +65,7 @@ export default class CAMediaTimingFunction extends NSObject {
    * @param {number} c1y - A floating point number representing the y position of the c1 control point.
    * @param {number} c2x - A floating point number representing the x position of the c2 control point.
    * @param {number} c2y - A floating point number representing the y position of the c2 control point.
-   * @returns {CAMediaTimingFunction}
+   * @returns {CAMediaTimingFunction} -
    * @desc The end points of the Bézier curve are automatically set to (0.0,0.0) and (1.0,1.0). The control points defining the Bézier curve are: [(0.0,0.0), (c1x,c1y), (c2x,c2y), (1.0,1.0)].
    * @see https://developer.apple.com/reference/quartzcore/camediatimingfunction/1522235-init
    */

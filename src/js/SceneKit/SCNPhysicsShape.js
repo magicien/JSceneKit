@@ -64,6 +64,7 @@ export default class SCNPhysicsShape extends NSObject {
   get sourceObject() {
     return this._sourceObject
   }
+
   /**
    * The options dictionary that was used to create the shape.
    * @type {?Map<SCNPhysicsShape.Option, Object>}
@@ -73,10 +74,11 @@ export default class SCNPhysicsShape extends NSObject {
   get options() {
     return this._options
   }
+
   /**
    * The array of transforms that was used to create a compound shape.
    * @type {?NSValue[]}
-   * @desc You provide this array of NSValue objects, each containing an SCNMatrix4 value, in the init(shapes:transforms:) method to create a compound shape. Use this array along with the sourceObject property to recover the information that was used to create the shape. If the shape was created with the init(geometry:options:) or init(node:options:) method, this property’s value is nil.
+   * @desc You provide this array of NSValue objects, each containing an SCNMatrix4 value, in the init(shapes:transforms:) method to create a compound shape. Use this array along with the sourceObject property to recover the information that was used to create the shape. If the shape was created with the init(geometry:options:) or init(node:options:) method, this property's value is nil.
    * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508898-transforms
    */
   get transforms() {
