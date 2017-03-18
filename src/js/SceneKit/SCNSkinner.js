@@ -5,6 +5,7 @@ import SCNGeometry from './SCNGeometry'
 import SCNNode from './SCNNode'
 import SCNGeometrySource from './SCNGeometrySource'
 import SCNMatrix4 from './SCNMatrix4'
+import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
 
 
 /**
@@ -62,7 +63,7 @@ export default class SCNSkinner extends NSObject {
      * @type {SCNMatrix4}
      * @see https://developer.apple.com/reference/scenekit/scnskinner/1523160-basegeometrybindtransform
      */
-    this.baseGeometryBindTransform = new SCNMatrix4()
+    this.baseGeometryBindTransform = SCNMatrix4MakeTranslation(0, 0, 0)
 
 
     // Working with an Animation Skeleton
@@ -147,7 +148,7 @@ export default class SCNSkinner extends NSObject {
 
   /**
    * @access public
-   * @returns {number}
+   * @returns {number} -
    */
   get numSkinningJoints() {
     return this._boneWeights.componentsPerVector
@@ -156,14 +157,17 @@ export default class SCNSkinner extends NSObject {
   /**
    * returns Float32Array of 3x4 matrices
    * @access public
-   * @returns {Float32Array}
+   * @returns {Float32Array} -
    */
   float32Array() {
     const arr = []
     const len = this._bones.length
     for(let i=0; i<len; i++){
       const bone = this._bones[i]
-      let mat = this._boneInverseBindTransforms[i].mult(bone._presentation._worldTransform)
+      // TODO: implement appropriate matrix multiplication.
+      //       it doesn't consider the rotation of initial pose so far.
+      const mat = this._boneInverseBindTransforms[i].mult(bone._presentation._worldTransform)
+      //const mat = bone._presentation._worldTransform.mult(this._boneInverseBindTransforms[i])
       //mat = bone.presentation.transform.mult(mat)
       //if(bone._parent !== null){
       //  mat = mat.mult(bone._parent.presentation._worldTransform)
@@ -172,12 +176,17 @@ export default class SCNSkinner extends NSObject {
       //mat = bone.presentation.transform.mult(mat)
       //mat = mat.mult(bone.presentation.transform)
       arr.push(...mat.floatArray3x4f())
-      // DEBUG
-      //const m = new SCNMatrix4()
-      //arr.push(...m.floatArray3x4f())
 
+
+      if(i===21){
+        const p = bone._presentation
+        //console.log(`skinner bone ${i} ${p.name} (${p.position.x}, ${p.position.y}, ${p.position.z}`)
+        //console.log(`mat ${mat.floatArray3x4f()}`)
+      }
+
+
+      /*
       if(!mat.isIdentity()){
-        console.error(`mat ${i} is not identity`)
         console.warn(`inverse: ${this._boneInverseBindTransforms[i].floatArray3x4f()}`)
         console.warn(`presentation.worldTransform: ${bone.presentation._worldTransform.floatArray3x4f()}`)
         console.warn(`parent.presentation.world: ${bone._parent.presentation._worldTransform.floatArray3x4f()}`)
@@ -187,9 +196,24 @@ export default class SCNSkinner extends NSObject {
         console.warn(`presentation.position.y: ${bone.presentation.position.y}`)
         console.warn(`position.y: ${bone.position.y}`)
         console.warn(`mat: ${mat.floatArray3x4f()}`)
-        throw new Error('hoge')
+        throw new Error(`mat ${i} ${bone.name} is not identity`)
       }
+      */
     }
+
+    // DEBUG
+    /*
+    console.log('boneInverseBindTransforms')
+    for(let i=0; i<4; i++){
+      const mat = this._boneInverseBindTransforms[i]
+      console.log(mat.floatArray3x4f())
+    }
+    console.log('bone._presentation._worldTransform')
+    for(let i=0; i<4; i++){
+      const mat = this._bones[i]._presentation._worldTransform
+      console.log(mat.floatArray3x4f())
+    }
+    */
 
     return new Float32Array(arr)
   }

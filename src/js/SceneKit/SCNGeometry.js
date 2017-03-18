@@ -524,7 +524,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
       offset += texcoordComponents * bytesPerComponent
     }
 
-    console.log(`offset: ${offset}, vectorCount: ${vectorCount}`)
+    //console.log(`offset: ${offset}, vectorCount: ${vectorCount}`)
     offset *= vectorCount
 
     const indexArray = indexSource ? indexSource.data : null
@@ -555,11 +555,11 @@ This method is for OpenGL shader programs only. To bind custom variable data for
       offset += weightComponents * bytesPerComponent
     }
 
-    console.log(`arr.length: ${arr.length}`)
-    console.log(`arr[72288-72291]: ${arr[72288]}, ${arr[72289]}, ${arr[72290]}, ${arr[72291]}`)
-    console.log(`arr[72292-72295]: ${arr[72292]}, ${arr[72293]}, ${arr[72294]}, ${arr[72295]}`)
-    console.log(`arr[72296-72299]: ${arr[72296]}, ${arr[72297]}, ${arr[72298]}, ${arr[72299]}`)
-    console.log(`arr[72300-72303]: ${arr[72300]}, ${arr[72301]}, ${arr[72302]}, ${arr[72303]}`)
+    //console.log(`arr.length: ${arr.length}`)
+    //console.log(`arr[72288-72291]: ${arr[72288]}, ${arr[72289]}, ${arr[72290]}, ${arr[72291]}`)
+    //console.log(`arr[72292-72295]: ${arr[72292]}, ${arr[72293]}, ${arr[72294]}, ${arr[72295]}`)
+    //console.log(`arr[72296-72299]: ${arr[72296]}, ${arr[72297]}, ${arr[72298]}, ${arr[72299]}`)
+    //console.log(`arr[72300-72303]: ${arr[72300]}, ${arr[72301]}, ${arr[72302]}, ${arr[72303]}`)
 
     const vertexData = new Float32Array(arr)
     gl.bufferData(gl.ARRAY_BUFFER, vertexData, gl.DYNAMIC_DRAW)

@@ -537,6 +537,10 @@ export default class SCNRenderer extends NSObject {
     gl.disable(gl.CULL_FACE)
 
     //console.log('nodeName: ' + node.name)
+    if(node.presentation.skinner){
+      //console.log('numSkinningJoints: ' + node.presentation.skinner.numSkinningJoints)
+      //console.log('skinningJoints: ' + node.presentation.skinner.float32Array())
+    }
 
     if(node.presentation.skinner !== null){
       gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
@@ -1070,7 +1074,7 @@ export default class SCNRenderer extends NSObject {
     const gl = this.context
     const texture = gl.createTexture()
 
-    console.log(`_createTexture: size: ${image.width}, ${image.height}`)
+    //console.log(`_createTexture: size: ${image.width}, ${image.height}`)
 
     gl.bindTexture(gl.TEXTURE_2D, texture)
     gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, image.width, image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, image)

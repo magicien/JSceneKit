@@ -3,6 +3,7 @@
 import NSObject from '../ObjectiveC/NSObject'
 import SCNAnimatable from './SCNAnimatable'
 import SCNMatrix4 from './SCNMatrix4'
+import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
 import SCNWrapMode from './SCNWrapMode'
 import SCNFilterMode from './SCNFilterMode'
 import SKColor from '../SpriteKit/SKColor'
@@ -58,7 +59,7 @@ export default class SCNMaterialProperty extends NSObject {
      * @type {SCNMatrix4}
      * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395388-contentstransform
      */
-    this.contentsTransform = new SCNMatrix4()
+    this.contentsTransform = SCNMatrix4MakeTranslation(0, 0, 0)
 
     /**
      * The wrapping behavior for the S texture coordinate.

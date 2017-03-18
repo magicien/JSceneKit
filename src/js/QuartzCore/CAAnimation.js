@@ -200,19 +200,38 @@ export default class CAAnimation extends NSObject {
    * @returns {CAAnimation} -
    */
   copy() {
-    const anim = new CAAnimation()   
-    anim._copyValue(this)
+    console.log('CAAnimation.copy')
+    const anim = super.copy()
+
+    anim.isRemovedOnCompletion = this.isRemovedOnCompletion
+    anim.timingFunction = this.timingFunction
+    anim.delegate = this.delegate
+    anim.usesSceneTimeBase = this.usesSceneTimeBase
+    anim.fadeInDuration = this.fadeInDuration
+    anim.fadeOutDuration = this.fadeOutDuration
+    anim.animationEvents = this.animationEvents
+    anim.beginTime = this.beginTime
+    anim.timeOffset = this.timeOffset
+    anim.repeatCount = this.repeatCount
+    anim.repeatDuration = this.repeatDuration
+    anim.duration = this.duration
+    anim.speed = this.speed
+    anim.autoreverses = this.autoreverses
+    anim.fillMode = this.fillMode
+
     return anim
   }
 
+  /*
   _copyValue(src) {
+    console.log('CAAnimation._copyValue')
     this.isRemovedOnCompletion = src.isRemovedOnCompletion
     this.timingFunction = src.timingFunction
     this.delegate = src.delegate
     this.usesSceneTimeBase = src.usesSceneTimeBase
     this.fadeInDuration = src.fadeInDuration
     this.fadeOutDuration = src.fadeOutDuration
-    this.thisationEvents = src.thisationEvents
+    this.animationEvents = src.animationEvents
     this.beginTime = src.beginTime
     this.timeOffset = src.timeOffset
     this.repeatCount = src.repeatCount
@@ -222,6 +241,7 @@ export default class CAAnimation extends NSObject {
     this.autoreverses = src.autoreverses
     this.fillMode = src.fillMode
   }
+  */
 
   /**
    * apply animation to the given node.
@@ -231,8 +251,7 @@ export default class CAAnimation extends NSObject {
    * @returns {void}
    */
   _applyAnimation(obj, time) {
-    const activeTime = time - this._animationStartTime
-    const baseTime = this._basetimeFromActivetime(activeTime)
+    const baseTime = this._basetimeFromTime(time)
     let t = baseTime
     if(this.timingFunction !== null){
       t = this.timingFunction._getValueAtTime(baseTime)
@@ -257,6 +276,17 @@ export default class CAAnimation extends NSObject {
         }
       }
     })
+  }
+
+  /**
+   * convert parent time to base time
+   * @access private
+   * @param {number} time - parent time
+   * @returns {number} - animation base time for the current frame (0-1 or null).
+   */
+  _basetimeFromTime(time) {
+    const activeTime = time - this._animationStartTime
+    return this._basetimeFromActivetime(activeTime)
   }
 
   /**
@@ -307,7 +337,10 @@ export default class CAAnimation extends NSObject {
       }
     }
 
-    let t = ((dt + this.timeOffset) % oneLoopDuration) / oneLoopDuration
+    let t = (dt + this.timeOffset) / oneLoopDuration
+    if(Math.abs(t) > 1){
+      t = t - Math.floor(t)
+    }
     if(t < 0){
       t = 1 + t
     }

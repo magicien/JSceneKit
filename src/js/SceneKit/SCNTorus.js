@@ -10,13 +10,19 @@ import SCNGeometry from './SCNGeometry'
  * @see https://developer.apple.com/reference/scenekit/scntorus
  */
 export default class SCNTorus extends SCNGeometry {
+  // Creating a Torus
 
   /**
-   * constructor
+   * Creates a torus geometry with the specified ring radius and pipe radius.
    * @access public
-   * @returns {void}
+   * @constructor
+   * @param {number} ringRadius - The major radius of the torus, defining its circular ring in the x- and z-axis dimensions of its local coordinate space.
+   * @param {number} pipeRadius - The minor radius of the torus, defining the pipe that encircles the ring.
+   * @desc The torus is centered in its local coordinate system. For example, if you create a torus whose ring radius is 5.0 and pipe radius is 1.0, it extends from -6.0 to 6.0 (with a hole through the center from -4.0 to 4.0) in the x- and z-axes and from -1.0 to 1.0 in the y-axis.
+   * @see https://developer.apple.com/reference/scenekit/scntorus/1523833-init
    */
-  init() {
+  constructor(ringRadius, pipeRadius) {
+    super()
 
     // Adjusting a Torus’ Dimensions
 
@@ -50,20 +56,5 @@ export default class SCNTorus extends SCNGeometry {
      * @see https://developer.apple.com/reference/scenekit/scntorus/1522807-pipesegmentcount
      */
     this.pipeSegmentCount = 0
-
-  }
-
-  // Creating a Torus
-
-  /**
-   * Creates a torus geometry with the specified ring radius and pipe radius.
-   * @access public
-   * @param {number} ringRadius - The major radius of the torus, defining its circular ring in the x- and z-axis dimensions of its local coordinate space.
-   * @param {number} pipeRadius - The minor radius of the torus, defining the pipe that encircles the ring.
-   * @returns {void}
-   * @desc The torus is centered in its local coordinate system. For example, if you create a torus whose ring radius is 5.0 and pipe radius is 1.0, it extends from -6.0 to 6.0 (with a hole through the center from -4.0 to 4.0) in the x- and z-axes and from -1.0 to 1.0 in the y-axis.
-   * @see https://developer.apple.com/reference/scenekit/scntorus/1523833-init
-   */
-  init(ringRadius, pipeRadius) {
   }
 }

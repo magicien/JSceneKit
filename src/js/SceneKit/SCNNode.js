@@ -1,5 +1,6 @@
 'use strict'
 
+import CAAnimationGroup from '../QuartzCore/CAAnimationGroup'
 import NSObject from '../ObjectiveC/NSObject'
 import SCNActionable from './SCNActionable'
 import SCNAnimatable from './SCNAnimatable'
@@ -329,7 +330,7 @@ export default class SCNNode extends NSObject {
      */
     this.boundingBox = null
 
-    this._boundingSphere = null
+    //this._boundingSphere = null
 
   }
 
@@ -460,10 +461,60 @@ export default class SCNNode extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnnode/1407980-eulerangles
    */
   get eulerAngles() {
-    // TODO: implement
+    const rot = this._rotation
+    const euler = new SCNVector3()
+    const sinW = Math.sin(rot.w)
+    const cosWR = 1.0 - Math.cos(rot.w)
+    const len2 = rot.x * rot.x + rot.y * rot.y + rot.z * rot.z
+    if(len2 === 0){
+      return euler
+    }
+    const r = 1.0 / Math.sqrt(len2)
+    const x = rot.x * r
+    const y = rot.y * r
+    const z = rot.z * r
+    const s = y * sinW - x * z * cosWR
+
+    if(s > 0.998){
+      // TODO: check SceneKit implementation
+      euler.x = 0
+      euler.y = -Math.PI * 0.5
+      euler.z = -2.0 * Math.atan2(z * Math.sin(rot.w * 0.5), Math.cos(rot.w * 0.5))
+    }else if(s < -0.998){
+      // TODO: check SceneKit implementation
+      euler.x = 0
+      euler.y = Math.PI * 0.5
+      euler.z = 2.0 * Math.atan2(z * Math.sin(rot.w * 0.5), Math.cos(rot.w * 0.5))
+    }else{
+      euler.x = Math.atan2(x * sinW + y * z * cosWR, 1 - (y * y + x * x) * cosWR)
+      euler.y = Math.asin(s)
+      euler.z = Math.atan2(z * sinW + x * y * cosWR, 1 - (z * z + y * y) * cosWR)
+    }
+
+    return euler
   }
   set eulerAngles(newValue) {
-    // TODO: implement
+    const halfX = newValue.x * 0.5
+    const halfY = newValue.y * 0.5
+    const halfZ = newValue.z * 0.5
+    const cosX = Math.cos(halfX)
+    const sinX = Math.sin(halfX)
+    const cosY = Math.cos(halfY)
+    const sinY = Math.sin(halfY)
+    const cosZ = Math.cos(halfZ)
+    const sinZ = Math.sin(halfZ)
+
+    const q = new SCNVector4()
+    const x = sinX * cosY * cosZ - cosX * sinY * sinZ
+    const y = cosX * sinY * cosZ + sinX * cosY * sinZ
+    const z = cosX * cosY * sinZ - sinX * sinY * cosZ
+    const r = 1.0 / Math.sqrt(x * x + y * y + z * z)
+    q.x = x * r
+    q.y = y * r
+    q.z = z * r
+    q.w = 2 * Math.acos(cosX * cosY * cosZ + sinX * sinY * sinZ)
+
+    this._rotation = q
     this._transformUpToDate = false
   }
 
@@ -473,6 +524,7 @@ export default class SCNNode extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnnode/1408048-orientation
    */
   get orientation() {
+    /*
     const quat = new SCNVector4()
     const rot = this._rotation
 
@@ -491,8 +543,12 @@ export default class SCNNode extends NSObject {
       quat.w = cosW
     }
     return quat
+    */
+    //console.log(`SCNNode get orientation: ${this._rotation.rotationToQuat()}`)
+    return this._rotation.rotationToQuat()
   }
   set orientation(newValue) {
+    /*
     const rot = new SCNVector4()
 
     if(newValue.x === 0 && newValue.y === 0 && newValue.z === 0){
@@ -520,6 +576,13 @@ export default class SCNNode extends NSObject {
     }
         
     this._rotation = rot
+    */
+    if(!(newValue instanceof SCNVector4)){
+      throw new Error(`orientation must be SCNVector4`)
+    }
+
+    this._rotation = newValue.quatToRotation()
+    //console.log(`SCNNode set orientation: ${this._rotation.float32Array()}`)
     this._transformUpToDate = false
   }
 
@@ -676,7 +739,7 @@ export default class SCNNode extends NSObject {
         return this._childNodes[i]
       }
       if(recursively){
-        const result = this._childNodes[i].childNodeWithName(name, recursively)
+        const result = this._childNodes[i].childNodeWithNameRecursively(name, recursively)
         if(result !== null){
           return result
         }
@@ -828,7 +891,14 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @see https://developer.apple.com/reference/scenekit/scnnode/1408046-clone
    */
   clone() {
-    return this.copy()
+    //console.log('SCNNode.clone() ' + this.name)
+    const node = this.copy()
+    
+    this._childNodes.forEach((child) => {
+      node.addChildNode(child.clone())
+    })
+
+    return node
   }
 
   /**
@@ -1039,15 +1109,36 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523386-addanimation
    */
   addAnimationForKey(animation, key) {
+    console.log('addAnimationForKey: ' + key)
     if(typeof key === 'undefined' || key === null){
-      key = new Symbol()
+      key = Symbol()
     }
     const anim = animation.copy()
     // FIXME: use current frame time
     anim._animationStartTime = Date.now() * 0.001
     anim._prevTime = anim._animationStartTime - 0.0000001
+    //const now = Date.now() * 0.001
+    //this._setAnimationStartTime(anim, now)
     this._animations.set(key, anim)
   }
+
+  /**
+   * @access private
+   * @param {CAAnimation} animatino -
+   * @param {number} time -
+   * @returns {void}
+   */
+  /*
+  _setAnimationStartTime(animation, time) {
+    animation._animationStartTime = time
+    animation._prevTime = time - 0.0000001
+    if(animation instanceof CAAnimationGroup){
+      animation.animations.forEach((anim) => {
+        this._setAnimationStartTime(anim, time)
+      })
+    }
+  }
+  */
 
   /**
    * Required. Returns the animation with the specified key.
@@ -1170,13 +1261,17 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @see https://developer.apple.com/reference/scenekit/scnboundingvolume/2034707-boundingsphere
    */
   get boundingSphere() {
-    return this._boundingSphere
+    // TODO: calculate bounding sphere
+    return {center: new SCNVector3(), radius: 0}
   }
 
   updateTransform() {
-    const m1 = SCNMatrix4.matrixWithTranslation(this._position)
+    //const m1 = SCNMatrix4.matrixWithTranslation(this._position)
+    //const m2 = m1.rotation(this._rotation)
+    //const m3 = m2.scale(this._scale)
+    const m1 = SCNMatrix4.matrixWithScale(this._scale)
     const m2 = m1.rotation(this._rotation)
-    const m3 = m2.scale(this._scale)
+    const m3 = m2.translation(this._position)
     this._transform = m3
     this._transformUpToDate = true
   }
@@ -1195,25 +1290,32 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     node.morpher = this.morpher
     node.skinner = this.skinner
     node.categoryBitMask = this.categoryBitMask
-    node.constraints = this.constraints
+    node.isPaused = this.isPaused
+    node._presentation = this._presentation ? this._presentation.copy() : null
+    node._isPresentationInstance = this._presentationInstance
+    node.constraints = this.constraints ? this.constraints.slice() : null
     node.isHidden = this.isHidden
     node.opacity = this.opacity
     node.renderingOrder = this.renderingOrder
     node.castsShadow = this.castsShadow
     node.movabilityHint = this.movabilityHint
-    node.filters = this.filters
+    node.filters = this.filters ? this.filters.slice() : null
     node.rendererDelegate = this.rendererDelegate
+    node.physicsBody = this.physicsBody
     node.physicsField = this.physicsField
-    node._particleSystems = this._particleSystems
+    node._particleSystems = this._particleSystems ? this._particleSystems.slice() : null
     node._audioPlayers = this._audioPlayers
     node._hasActions = this._hasActions
+    node._actions = new Map(this._actions)
+    node._animations = new Map(this._animations)
     node.boundingBox = this.boundingBox
+    //node._boundingSphere = this._boundingSphere
 
     node._position = new SCNVector3(this._position.x, this._position.y, this._position.z)
     node._rotation = new SCNVector4(this._rotation.x, this._rotation.y, this._rotation.z, this._rotation.w)
     node._scale = new SCNVector3(this._scale.x, this._scale.y, this._scale.z)
     node._transformUpToDate = false
-
+    
     return node
   }
 
@@ -1227,7 +1329,8 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     }
     const proj = this.camera.projectionTransform
     const view = this.viewTransform
-    return proj.mult(view)
+    //return proj.mult(view)
+    return view.mult(proj)
   }
 
   setValueForKey(value, key) {
@@ -1249,65 +1352,68 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
   }
 
   setValueForKeyPath(value, keyPath) {
+    // FIXME: check flags to decide to use a presentation node
+    const target = this._presentation ? this._presentation : this
+
     const paths = keyPath.split('.')
     if(paths[0] === 'transform'){
       paths.shift()
       const restPath = paths.join('.')
       switch(restPath){
         case 'rotation.x':
-          this._rotation.x = value
-          this._transformUpToDate = false
+          target._rotation.x = value
+          target._transformUpToDate = false
           return
         case 'rotation.y':
-          this._rotation.y = value
-          this._transformUpToDate = false
+          target._rotation.y = value
+          target._transformUpToDate = false
           return
         case 'rotation.z':
-          this._rotation.z = value
-          this._transformUpToDate = false
+          target._rotation.z = value
+          target._transformUpToDate = false
           return
         case 'rotation':
-          this._rotation.z = value
-          this._transformUpToDate = false
+          target._rotation.z = value
+          target._transformUpToDate = false
           return
         case 'quaternion':
-          this.quaternion = value
-          this._transformUpToDate = false
+          target.orientation = value
+          target._transformUpToDate = false
           return
         case 'scale.x':
-          this._scale.x = value
-          this._transformUpToDate = false
+          target._scale.x = value
+          target._transformUpToDate = false
           return
         case 'scale.y':
-          this._scale.y = value
-          this._transformUpToDate = false
+          target._scale.y = value
+          target._transformUpToDate = false
           return
         case 'scale.z':
-          this._scale.z = value
-          this._transformUpToDate = false
+          target._scale.z = value
+          target._transformUpToDate = false
           return
         case 'scale': {
-          const rate = value / this._scale.length()
-          this._scale.mul(rate)
-          this._transformUpToDate = false
+          const rate = value / target._scale.length()
+          target._scale.mul(rate)
+          target._transformUpToDate = false
           return
         }
         case 'translation.x':
-          this._position.x = value
-          this._transformUpToDate = false
+          target._position.x = value
+          target._transformUpToDate = false
           return
         case 'translation.y':
-          this._position.y = value
-          this._transformUpToDate = false
+          target._position.y = value
+          target._transformUpToDate = false
           return
         case 'translation.z':
-          this._position.z = value
-          this._transformUpToDate = false
+          target._position.z = value
+          target._transformUpToDate = false
           return
         case 'translation':
-          this._position.x = value.x
-          this._position.y = value.y
-          this._transformUpToDate = false
+          target._position.x = value.x
+          target._position.y = value.y
+          target._transformUpToDate = false
           return
         default:
           // do nothing

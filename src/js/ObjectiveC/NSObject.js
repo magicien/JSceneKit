@@ -47,7 +47,7 @@ Because initialize() is called in a blocking manner, it’s important to limit m
   /**
    * Implemented by subclasses to initialize a new object (the receiver) immediately after memory for it has been allocated.
    * @access public
-   * @returns {void}
+   * @constructor
    * @desc An init() message is coupled with an alloc (or allocWithZone:) message in the same line of code:SomeClass *object = [[SomeClass alloc] init];
 An object isn’t ready to be used until it has been initialized.The init() method defined in the NSObject class does no initialization; it simply returns self. In terms of nullability, callers can assume that the NSObject implemetation of init() does not return nil.In a custom implementation of this method, you must invoke super’s Initialization then initialize and return the new object. If the new object can’t be initialized, the method should return nil. For example, a hypothetical BuiltInCamera class might return nil from its init method if run on a device that has no camera.- (instancetype)init {
     self = [super init];
@@ -67,7 +67,7 @@ In some cases, a custom implementation of the init() method might return a subst
 
    * @see https://developer.apple.com/reference/objectivec/nsobject/1418641-init
    */
-  init() {
+  constructor() {
 
     // Discardable Content Proxy Support
 
@@ -245,7 +245,9 @@ In some cases, a custom implementation of the init() method might return a subst
    * @see https://developer.apple.com/reference/objectivec/nsobject/1418807-copy
    */
   copy() {
-    return null
+    const obj = new this.constructor()
+    // TODO: copy variables
+    return obj
   }
 
   /**
@@ -1141,6 +1143,7 @@ Typically, however, you are encouraged to relinquish resources prior to finaliza
    * @see https://developer.apple.com/reference/objectivec/nsobject/1418139-setvalue
    */
   setValueForKeyPath(value, keyPath) {
+    //console.log('NSObject.setValueForKeyPath: ' + keyPath)
     if(typeof keyPath !== 'string'){
       throw new Error('setValueForKeyPath: keyPath should be string')
     }
@@ -1150,11 +1153,9 @@ Typically, however, you are encouraged to relinquish resources prior to finaliza
       this.setValueForKey(value, key)
       return
     }
-    if(typeof this[key] === 'undefined'){
-      this.setValueForUndefinedKey(value, keyPath)
-      return
-    }
-    this[key].setValueForKeyPath(value, paths.join('.'))
+    const target = this.valueForKey(key)
+    //console.log(`NSObject.setValueForKeyPath: ${keyPath}: key ${key} target ${target}`)
+    target.setValueForKeyPath(value, paths.join('.'))
   }
 
   /**
@@ -1226,6 +1227,7 @@ You call this method in a try expression and handle any errors in the catch clau
       throw new Error('error: valueForKey(key): key should be string')
     }
     if(typeof this[key] === 'undefined'){
+      //console.log('valueForUndefinedKey func: ' + this.valueForUndefinedKey)
       return this.valueForUndefinedKey(key)
     }
     return this[key]

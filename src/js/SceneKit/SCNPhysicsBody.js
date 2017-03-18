@@ -14,13 +14,19 @@ import SCNVector4 from './SCNVector4'
  * @see https://developer.apple.com/reference/scenekit/scnphysicsbody
  */
 export default class SCNPhysicsBody extends NSObject {
+  // Creating Physics Bodies
 
   /**
-   * constructor
+   * Creates a physics body with the specified type and shape.
    * @access public
-   * @returns {void}
+   * @constructor
+   * @param {SCNPhysicsBodyType} type - A constant that determines how a body responds to forces and collisions. See SCNPhysicsBodyType.
+   * @param {?SCNPhysicsShape} shape - A physics shape defining the volume of the body for collision detection purposes.
+   * @desc For the body to participate in collision detection or respond to forces, you must attach it to the physicsBody property of an SCNNode object in a scene.If you pass nil for the shape parameter, SceneKit automatically creates a physics shape for the body when you attach it to a node, based on that node’s geometry property. To create a physics shape that’s based on the geometries of a node and its hierarchy of children, or to control the level of detail in a physics shape, create the physics shape manually using an SCNPhysicsShape class method.NoteFor nodes containing custom geometry, the physics shape SceneKit automatically creates is a rough approximation of the geometry. This approximation, or convex hull, provides a compromise between accuracy and performance in collision detection. For the best collision detection performance, create an SCNPhysicsShape instance based on a basic geometry class (SCNBox, SCNSphere, SCNPyramid, SCNCone, SCNCylinder, or SCNCapsule).
+   * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514797-init
    */
-  init() {
+  constructor(type, shape) {
+    super()
 
     // Defining How Forces Affect a Physics Body
 
@@ -29,14 +35,14 @@ export default class SCNPhysicsBody extends NSObject {
      * @type {?SCNPhysicsShape}
      * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514789-physicsshape
      */
-    this.physicsShape = null
+    this.physicsShape = shape
 
     /**
      * A constant that determines how the physics body responds to forces and collisions.
      * @type {SCNPhysicsBodyType}
      * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514787-type
      */
-    this.type = null
+    this.type = type
 
     /**
      * A multiplier affecting how SceneKit applies translations computed by the physics simulation to the node containing the physics body.
@@ -174,20 +180,6 @@ export default class SCNPhysicsBody extends NSObject {
     this.allowsResting = false
 
     this._isResting = false
-  }
-
-  // Creating Physics Bodies
-
-  /**
-   * Creates a physics body with the specified type and shape.
-   * @access public
-   * @param {SCNPhysicsBodyType} type - A constant that determines how a body responds to forces and collisions. See SCNPhysicsBodyType.
-   * @param {?SCNPhysicsShape} shape - A physics shape defining the volume of the body for collision detection purposes.
-   * @returns {void}
-   * @desc For the body to participate in collision detection or respond to forces, you must attach it to the physicsBody property of an SCNNode object in a scene.If you pass nil for the shape parameter, SceneKit automatically creates a physics shape for the body when you attach it to a node, based on that node’s geometry property. To create a physics shape that’s based on the geometries of a node and its hierarchy of children, or to control the level of detail in a physics shape, create the physics shape manually using an SCNPhysicsShape class method.NoteFor nodes containing custom geometry, the physics shape SceneKit automatically creates is a rough approximation of the geometry. This approximation, or convex hull, provides a compromise between accuracy and performance in collision detection. For the best collision detection performance, create an SCNPhysicsShape instance based on a basic geometry class (SCNBox, SCNSphere, SCNPyramid, SCNCone, SCNCylinder, or SCNCapsule).
-   * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514797-init
-   */
-  init(type, shape) {
   }
 
   /**

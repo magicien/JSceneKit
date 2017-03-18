@@ -9,6 +9,7 @@ import SCNAntialiasingMode from './SCNAntialiasingMode'
 import SCNNode from './SCNNode'
 import SCNCamera from './SCNCamera'
 import SCNMatrix4 from './SCNMatrix4'
+import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
 import SKColor from '../SpriteKit/SKColor'
 
 const _Option = {
@@ -865,7 +866,7 @@ export default class SCNView {
       const node = arr.shift()
       const p = node.copy()
       p._isPresentationInstance = true
-      console.log(`_createPresentationNode: pos: ${p.position}`)
+      //console.log(`_createPresentationNode: pos: ${p.position}`)
       node._presentation = p
       arr.push(...node.childNodes)
     }
@@ -892,11 +893,12 @@ export default class SCNView {
 
   _updateTransform(node, parentTransform) {
     if(typeof node === 'undefined'){
-      this._updateTransform(this._scene.rootNode, new SCNMatrix4())
+      this._updateTransform(this._scene.rootNode, SCNMatrix4MakeTranslation(0, 0, 0))
       return
     }
 
-    node._worldTransform = parentTransform.mult(node.transform)
+    //node._worldTransform = parentTransform.mult(node.transform)
+    node._worldTransform = node.transform.mult(parentTransform)
     node.childNodes.forEach((child) => {
       this._updateTransform(child, node._worldTransform)
     })
@@ -904,22 +906,31 @@ export default class SCNView {
 
   _updatePresentationTransform(node, parentTransform) {
     if(typeof node === 'undefined'){
-      this._updatePresentationTransform(this._scene.rootNode, new SCNMatrix4())
+      this._updatePresentationTransform(this._scene.rootNode, SCNMatrix4MakeTranslation(0, 0, 0))
       return
     }
     const old = node.presentation._worldTransform
-    node.presentation._worldTransform = parentTransform.mult(node.presentation.transform)
+    //node.presentation._worldTransform = parentTransform.mult(node.presentation.transform)
+    node.presentation._worldTransform = node.presentation.transform.mult(parentTransform)
+
+    // DEBUG
+    //const tl = node.presentation._worldTransform.getTranslation().float32Array()
+    //console.log(`node ${node.name} translation ${tl} position ${node.presentation.position.float32Array()}`)
+
+    // DEBUG
     if(!old.equalTo(node.presentation._worldTransform)){
       const t1 = old.getTranslation()
       const t2 = node.presentation._worldTransform.getTranslation()
-      console.log(`update: ${t1.x}, ${t1.y}, ${t1.z} => ${t2.x}, ${t2.y}, ${t2.z}`)
+      //console.log(`update: ${t1.x}, ${t1.y}, ${t1.z} => ${t2.x}, ${t2.y}, ${t2.z}`)
 
       const pt = parentTransform.getTranslation()
       const t = node.presentation.transform.getTranslation()
-      console.log(`parent: ${pt.x}, ${pt.y}, ${pt.z}, node: ${t.x}, ${t.y}, ${t.z}`)
+      //console.log(`parent: ${pt.x}, ${pt.y}, ${pt.z}, node: ${t.x}, ${t.y}, ${t.z}`)
     }
 
+    //console.log(`${node.name} ${node.presentation.transform.float32Array()}`)
     node.childNodes.forEach((child) => {
+      //console.log(`${node.name} -> ${child.name}, ${node.presentation._worldTransform}`)
       this._updatePresentationTransform(child, node.presentation._worldTransform)
     })
   }
@@ -944,13 +955,16 @@ export default class SCNView {
   }
 
   _runAnimations() {
+    //console.log('_runAnimations')
     this._runAnimation(this._scene.rootNode)
   }
 
   _runAnimation(node) {
     const deleteKeys = []
     const time = this.currentTime
+    //console.log(`time: ${time}`)
     node._animations.forEach((animation, key) => {
+      //console.log(`node: ${node.name}, animation: ${key} ${animation}`)
       animation._applyAnimation(node, time)
       if(animation._isFinished && animation.isRemovedOnCompletion){
         deleteKeys.push(key)

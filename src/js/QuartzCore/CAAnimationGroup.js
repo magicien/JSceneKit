@@ -28,4 +28,45 @@ export default class CAAnimationGroup extends CAAnimation {
      */
     this.animations = []
   }
+
+  /**
+   * apply animation to the given node.
+   * @access private
+   * @param {Object} obj - target object to apply this animation.
+   * @param {number} time - active time
+   * @returns {void}
+   */
+  _applyAnimation(obj, time) {
+    const baseTime = this._basetimeFromTime(time)
+    let t = baseTime
+    if(this.timingFunction !== null){
+      t = this.timingFunction._getValueAtTime(baseTime)
+    }
+
+    this.animations.forEach((animation) => {
+      animation._applyAnimation(obj, t)
+    })
+  }
+
+ /**
+   * @access public
+   * @returns {CAAnimationGroup} -
+   */
+  copy() {
+    console.log('CAAnimationGroup.copy')
+    const anim = super.copy()
+
+    anim.animations = this.animations.slice()
+
+    return anim
+  }
+
+  /*
+  _copyValue(src) {
+    console.log('CAAnimationGroup._copyValue')
+    //super._copyValue(src)
+    this.animations = src.animations.slice()
+  }
+  */
+
 }

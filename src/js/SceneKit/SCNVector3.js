@@ -19,7 +19,7 @@ export default class SCNVector3 {
    * @returns {void}
    * @see https://developer.apple.com/reference/scenekit/scnvector3/1522904-init
    */
-  constructor(x, y, z) {
+  constructor(x = 0, y = 0, z = 0) {
     // Instance Properties
     /** @type {number} */
     this.x = x

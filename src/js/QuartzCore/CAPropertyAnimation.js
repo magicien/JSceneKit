@@ -5,6 +5,9 @@ import CGPoint from '../CoreGraphics/CGPoint'
 import CGSize from '../CoreGraphics/CGSize'
 import CGRect from '../CoreGraphics/CGRect'
 import SCNMatrix4 from '../SceneKit/SCNMatrix4'
+import SCNQuaternion from '../SceneKit/SCNQuaternion'
+import SCNVector4 from '../SceneKit/SCNVector4'
+import SCNVector3 from '../SceneKit/SCNVector3'
 
 /**
  * An abstract subclass of CAAnimation for creating animations that manipulate the value of layer properties. 
@@ -64,29 +67,37 @@ export default class CAPropertyAnimation extends CAAnimation {
    * @returns {CAPropertyAnimation} -
    */
   copy() {
-    const anim = new CAPropertyAnimation(this.keyPath)
-    anim._copyValue(this)
+    const anim = super.copy()
+    //anim._copyValue(this)
+    anim.keyPath = this.keyPath
+    anim.isCumulative = this.isCumulative
+    anim.isAdditive = this.isAdditive
+    anim.valueFunction = this.valueFunction
+
     return anim
   }
 
+  /*
   _copyValue(src) {
-    super._copyValue(src)
+    console.log('CAPropertyAnimation._copyValue: ' + src.keyPath)
     this.keyPath = src.keyPath
     this.isCumulative = src.isCumulative
     this.isAdditive = src.isAdditive
     this.valueFunction = src.valueFunction
   }
+  */
 
   _applyAnimation(obj, time) {
-    const activeTime = this._basetimeFromActivetime(time)
-    let t = activeTime
+    const baseTime = this._basetimeFromTime(time)
+    let t = baseTime
     if(this.timingFunction !== null){
-      t = this.timingFunction._getValueAtTime(activeTime)
+      t = this.timingFunction._getValueAtTime(baseTime)
     }
     let value = t
     if(this.valueFunction !== null){
       value = this.valueFunction._getValueAtTime(t)
     }
+    console.log(`CAPropertyAnimation: obj: ${obj.name}, time: ${time}, keyPath: ${this.keyPath}, value: ${value}`)
     this._applyValue(obj, value)
   }
 
@@ -150,10 +161,41 @@ export default class CAPropertyAnimation extends CAAnimation {
     }
     */
 
+    /*
     if(obj._isPresentationInstance || obj._presentation === null){
+      console.log('obj._isPresentationInstance')
+      console.log('func: ' + obj.setValueForKeyPath)
       obj.setValueForKeyPath(value, this.keyPath)
     }else{
+      console.log('obj._presentation')
+      console.log('setValueForKeyPath: ' + obj._presentation.setValueForKeyPath)
       obj._presentation.setValueForKeyPath(value, this.keyPath)
+    }
+    */
+    obj.setValueForKeyPath(value, this.keyPath)
+  }
+
+  _lerp(from, to, t) {
+    //if(from instanceof SCNQuaternion){
+    //  return from.slerp(to, t)
+    //}else 
+    if(from instanceof SCNVector4){
+      return from.lerp(to, t)
+    }else if(from instanceof SCNVector3){
+      return from.lerp(to, t)
+    }else if(from instanceof CGSize){
+      // TODO: implement
+    }else if(from instanceof CGPoint){
+      // TODO: implement
+    }else if(from instanceof CGRect){
+      // TODO: implement
+    }
+    return from + (to - from) * t
+  }
+
+  _slerp(from, to, t) {
+    if(!(from instanceof SCNVector4)){
+      throw new Error('CABasicAnimation._slerp: object is not SCNVector4')
     }
   }
 }

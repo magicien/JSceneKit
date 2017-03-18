@@ -26,7 +26,7 @@ export default class SCNMatrix4 {
     // Instance Properties
 
     /** @type {number} */
-    this.m11 = 1
+    this.m11 = 0
     /** @type {number} */
     this.m12 = 0
     /** @type {number} */
@@ -36,7 +36,7 @@ export default class SCNMatrix4 {
     /** @type {number} */
     this.m21 = 0
     /** @type {number} */
-    this.m22 = 1
+    this.m22 = 0
     /** @type {number} */
     this.m23 = 0
     /** @type {number} */
@@ -46,7 +46,7 @@ export default class SCNMatrix4 {
     /** @type {number} */
     this.m32 = 0
     /** @type {number} */
-    this.m33 = 1
+    this.m33 = 0
     /** @type {number} */
     this.m34 = 0
     /** @type {number} */
@@ -56,7 +56,7 @@ export default class SCNMatrix4 {
     /** @type {number} */
     this.m43 = 0
     /** @type {number} */
-    this.m44 = 1
+    this.m44 = 0
 
     if(m instanceof SCNMatrix4){
       this.m11 = m.m11
@@ -75,6 +75,23 @@ export default class SCNMatrix4 {
       this.m42 = m.m42
       this.m43 = m.m43
       this.m44 = m.m44
+    }else if(arguments.length >= 16){
+      this.m11 = arguments[0]
+      this.m12 = arguments[1]
+      this.m13 = arguments[2]
+      this.m14 = arguments[3]
+      this.m21 = arguments[4]
+      this.m22 = arguments[5]
+      this.m23 = arguments[6]
+      this.m24 = arguments[7]
+      this.m31 = arguments[8]
+      this.m32 = arguments[9]
+      this.m33 = arguments[10]
+      this.m34 = arguments[11]
+      this.m41 = arguments[12]
+      this.m42 = arguments[13]
+      this.m43 = arguments[14]
+      this.m44 = arguments[15]
     }else if(m !== null){
       // TODO: type check
       this.m11 = m[0][0]
@@ -169,7 +186,7 @@ export default class SCNMatrix4 {
    * @returns {SCNMatrix4} -
    */
   invert() {
-    const mat = new SCNMatrix4()
+    const mat = SCNMatrix4._identity()
     const tmp = new SCNMatrix4(this)
 
     let buf = 0
@@ -482,7 +499,8 @@ export default class SCNMatrix4 {
       _z = v.z
     }
 
-    const m = new SCNMatrix4()
+    //const m = new SCNMatrix4()
+    const m = SCNMatrix4._identity()
     m.m11 = _x
     m.m22 = _y
     m.m33 = _z
@@ -522,22 +540,23 @@ export default class SCNMatrix4 {
     const c = Math.cos(w)
     const s = Math.sin(w)
     const v = (new SCNVector3(x, y, z)).normalize()
-    const m = new SCNMatrix4()
+    //const m = new SCNMatrix4()
+    const m = SCNMatrix4._identity()
 
     const nx = v.x
     const ny = v.y
     const nz = v.z
 
     m.m11 = nx * nx * (1.0-c) + c
-    m.m12 = nx * ny * (1.0-c) - nz * s
-    m.m13 = nx * nz * (1.0-c) + ny * s
+    m.m12 = ny * nx * (1.0-c) + nz * s
+    m.m13 = nz * nx * (1.0-c) - ny * s
     m.m14 = 0.0
-    m.m21 = ny * nx * (1.0-c) + nz * s
+    m.m21 = nx * ny * (1.0-c) - nz * s
     m.m22 = ny * ny * (1.0-c) + c
-    m.m23 = ny * nz * (1.0-c) - nx * s
+    m.m23 = nz * ny * (1.0-c) + nx * s
     m.m24 = 0.0
-    m.m31 = nz * nx * (1.0-c) - ny * s
-    m.m32 = nz * ny * (1.0-c) + nx * s
+    m.m31 = nx * nz * (1.0-c) + ny * s
+    m.m32 = ny * nz * (1.0-c) - nx * s
     m.m33 = nz * nz * (1.0-c) + c
     m.m34 = 0.0
     m.m41 = 0.0
@@ -578,10 +597,11 @@ export default class SCNMatrix4 {
       _z = v.z
     }
 
-    const m = new SCNMatrix4()
-    m.m14 = _x
-    m.m24 = _y
-    m.m34 = _z
+    //const m = new SCNMatrix4()
+    const m = SCNMatrix4._identity()
+    m.m41 = _x
+    m.m42 = _y
+    m.m43 = _z
     return m
   }
 
@@ -623,7 +643,7 @@ export default class SCNMatrix4 {
    * @see https://developer.apple.com/reference/scenekit/1409715-scnmatrix4isidentity
    */
   isIdentity() {
-    return this.equalTo(new SCNMatrix4())
+    return this.equalTo(SCNMatrix4._identity())
   }
 
   /**
@@ -648,36 +668,47 @@ export default class SCNMatrix4 {
   /**
    * @access public
    * @returns {Float32Array} -
-   * @desc column-major layout for WebGL
    */
   float32Array() {
+    /*
     return new Float32Array([
       this.m11, this.m21, this.m31, this.m41,
       this.m12, this.m22, this.m32, this.m42,
       this.m13, this.m23, this.m33, this.m43,
       this.m14, this.m24, this.m34, this.m44
     ])
+    */
+    return new Float32Array([
+      this.m11, this.m12, this.m13, this.m14,
+      this.m21, this.m22, this.m23, this.m24,
+      this.m31, this.m32, this.m33, this.m34,
+      this.m41, this.m42, this.m43, this.m44
+    ])
+
   }
 
   /**
    * @access public
    * @returns {Float32Array} -
-   * @desc row-major layout for vector array
    */
   float32Array3x4f() {
     return new Float32Array([
-      this.m11, this.m12, this.m13, this.m14,
-      this.m21, this.m22, this.m23, this.m24,
-      this.m31, this.m32, this.m33, this.m34
+      this.m11, this.m21, this.m31, this.m41,
+      this.m12, this.m22, this.m32, this.m42,
+      this.m13, this.m23, this.m33, this.m43
     ])
   }
 
   floatArray3x4f() {
     return [
-      this.m11, this.m12, this.m13, this.m14,
-      this.m21, this.m22, this.m23, this.m24,
-      this.m31, this.m32, this.m33, this.m34
+      this.m11, this.m21, this.m31, this.m41,
+      this.m12, this.m22, this.m32, this.m42,
+      this.m13, this.m23, this.m33, this.m43
     ]
+  }
+
+  static _identity() {
+    return new SCNMatrix4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
   }
 }
 

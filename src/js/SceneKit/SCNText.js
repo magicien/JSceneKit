@@ -12,13 +12,19 @@ import CGSize from '../CoreGraphics/CGSize'
  * @see https://developer.apple.com/reference/scenekit/scntext
  */
 export default class SCNText extends SCNGeometry {
+  // Creating a Text Geometry
 
   /**
-   * constructor
+   * Creates a text geometry from a specified string, extruded with a specified depth.
    * @access public
-   * @returns {void}
+   * @constructor
+   * @param {?Object} string - An NSString or NSAttributedString object containing text from which to create the geometry.
+   * @param {number} extrusionDepth - The extent of the text geometry in the Z dimension of its local coordinate space. Specify a depth of 0.0 to create 2D text confined to a plane.
+   * @desc In the local coordinate system of the text geometry, the origin corresponds to the lower left corner of the text’s layout rectangle, with the text extending in the x- and y-axis dimensions. (SceneKit computes a layout rectangle automatically, or you can specify one using the containerFrame property.) The geometry is centered along its z-axis. For example, if its extrusionDepth property is 1.0, the geometry extends from -0.5 to 0.5 along the z-axis. An extrusion depth of zero creates a flat, one-sided shape—the geometry is confined to the plane whose z-coordinate is 0.0, and viewable only from its front unless its material’s isDoubleSided property is true.
+   * @see https://developer.apple.com/reference/scenekit/scntext/1522734-init
    */
-  init() {
+  constructor(string, extrusionDepth) {
+    super()
 
     // Managing the Geometry’s Text Content
 
@@ -98,24 +104,10 @@ export default class SCNText extends SCNGeometry {
      * @see https://developer.apple.com/reference/scenekit/scntext/1523334-chamferprofile
      */
     this.chamferProfile = null
-
-  }
-
-  // Creating a Text Geometry
-
-  /**
-   * Creates a text geometry from a specified string, extruded with a specified depth.
-   * @access public
-   * @param {?Object} string - An NSString or NSAttributedString object containing text from which to create the geometry.
-   * @param {number} extrusionDepth - The extent of the text geometry in the Z dimension of its local coordinate space. Specify a depth of 0.0 to create 2D text confined to a plane.
-   * @returns {void}
-   * @desc In the local coordinate system of the text geometry, the origin corresponds to the lower left corner of the text’s layout rectangle, with the text extending in the x- and y-axis dimensions. (SceneKit computes a layout rectangle automatically, or you can specify one using the containerFrame property.) The geometry is centered along its z-axis. For example, if its extrusionDepth property is 1.0, the geometry extends from -0.5 to 0.5 along the z-axis. An extrusion depth of zero creates a flat, one-sided shape—the geometry is confined to the plane whose z-coordinate is 0.0, and viewable only from its front unless its material’s isDoubleSided property is true.
-   * @see https://developer.apple.com/reference/scenekit/scntext/1522734-init
-   */
-  init(string, extrusionDepth) {
   }
 
   // Managing Text Layout
+
   /**
    * The two-dimensional extent of the text after layout.
    * @type {CGSize}

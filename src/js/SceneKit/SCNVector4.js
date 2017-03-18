@@ -20,7 +20,7 @@ export default class SCNVector4 {
    * @param {number} w - 
    * @see https://developer.apple.com/reference/scenekit/scnvector4/1523931-init
    */
-  constructor(x, y, z, w) {
+  constructor(x = 0, y = 0, z = 0, w = 0) {
     // Instance Properties
     /** @type {number} */
     this.x = x
@@ -250,6 +250,65 @@ export default class SCNVector4 {
     r.m43 = 0.0
     r.m44 = 1.0
     return r
+  }
+
+  /**
+   * @access public
+   * @returns {SCNVector4} -
+   */
+  rotationToQuat() {
+    const quat = new SCNVector4()
+    if(this.x === 0 && this.y === 0 && this.z === 0){
+      quat.x = 0
+      quat.y = 0
+      quat.z = 0
+      quat.w = 1.0
+    }else{
+      const r = 1.0 / Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z)
+      const cosW = Math.cos(this.w * 0.5)
+      const sinW = Math.sin(this.w * 0.5) * r
+      quat.x = this.x * sinW
+      quat.y = this.y * sinW
+      quat.z = this.z * sinW
+      quat.w = cosW
+    }
+
+    return quat
+  }
+
+  /**
+   * @access public
+   * @returns {SCNVector4} -
+   */
+  quatToRotation() {
+    const rot = new SCNVector4()
+    if(this.x === 0 && this.y === 0 && this.z === 0){
+      rot.x = 0
+      rot.y = 0
+      rot.z = 0
+      if(Math.abs(this.w) > 1){
+        // actually, if this.w < -1, rotation will be NaN...
+        rot.w = 0
+      }else{
+        // I don't know why it needs to be double but I make it the same as SceneKit
+        rot.w = Math.acos(this.w) * 2.0
+      }
+    }else{
+      const quat = this.normalize()
+      const r = 1.0 / Math.sqrt(quat.x * quat.x + quat.y * quat.y + quat.z * quat.z)
+      rot.x = quat.x * r
+      rot.y = quat.y * r
+      rot.z = quat.z * r
+
+      const w = Math.acos(quat.w)
+      if(isNaN(w)){
+        rot.w = 0
+      }else{
+        // I don't know why it needs to be double but I make it the same as SceneKit
+        rot.w = w * 2.0
+      }
+    }
+    return rot
   }
 
   /**

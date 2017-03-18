@@ -13,7 +13,6 @@ const _identity = new SCNMatrix4()
  * @see https://developer.apple.com/reference/scenekit/1409715-scnmatrix4isidentity
  */
 const SCNMatrix4IsIdentity = function(m) {
-  //return SCNMatrix4EqualToMatrix4(m, _identity)
   return m.isIdentity()
 }
 
