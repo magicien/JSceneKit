@@ -472,13 +472,13 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     const weightSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneWeights)[0]
     const vectorCount = vertexSource.vectorCount
 
-    if(vertexSource === undefined){
+    if(typeof vertexSource === 'undefined'){
       throw new Error('vertexSource is undefined')
     }
-    if(normalSource !== undefined && normalSource.vectorCount !== vectorCount){
+    if(typeof normalSource !== 'undefined' && normalSource.vectorCount !== vectorCount){
       throw new Error('normalSource.vectorCount !== vertexSource.vectorCount')
     }
-    if(texcoordSource !== undefined && texcoordSource.vectorCount !== vectorCount){
+    if(typeof texcoordSource !== 'undefined' && texcoordSource.vectorCount !== vectorCount){
       throw new Error('texcoordSource.vectorCount !== vertexSource.vectorCount')
     }
 

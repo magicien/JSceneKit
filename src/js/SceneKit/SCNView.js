@@ -832,6 +832,9 @@ export default class SCNView {
       this._delegate.rendererDidApplyAnimationsAtTime(this._renderer, time)
     }
 
+    this._updateTransform()
+    this._updatePresentationTransform()
+
     ///////////////////////
     // simulates physics //
     ///////////////////////

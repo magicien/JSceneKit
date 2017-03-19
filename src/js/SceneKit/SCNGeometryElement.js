@@ -29,7 +29,7 @@ export default class SCNGeometryElement extends NSObject {
 
     this._data = indices
     this._primitiveType = primitiveType
-    this._primitiveCount = indices.count / 3 // FIXME: calculate from primitiveType
+    this._primitiveCount = indices.length / 3 // FIXME: calculate from primitiveType
     this._bytesPerIndex = 2
 
     /**
