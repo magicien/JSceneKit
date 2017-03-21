@@ -126,7 +126,7 @@ export default class SCNGeometry extends NSObject {
 
     // Managing Animations
 
-    this._animationKeys = null
+    //this._animationKeys = null
 
     ///////////////////////
     // SCNBoundingVolume //
@@ -400,7 +400,8 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523610-animationkeys
    */
   get animationKeys() {
-    return this._animationKeys
+    // TODO: implement
+    return []
   }
 
   // Pausing and Resuming Animations
@@ -458,11 +459,12 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    * @returns {WebGLBuffer} -
    */
   _createVertexBuffer(gl, update = false) {
-    if(this._vertexBuffer && !update){
+    if(this._vertexBuffer === null){
+      this._vertexBuffer = gl.createBuffer()
+    }else if(!update){
       return this._vertexBuffer
     }
 
-    this._vertexBuffer = gl.createBuffer()
     gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer)
     const arr = []
     const vertexSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
@@ -527,6 +529,19 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     //console.log(`offset: ${offset}, vectorCount: ${vectorCount}`)
     offset *= vectorCount
 
+    // FIXME: check if each source needs to update
+    if(update){
+      const vertexSubData = new Float32Array(arr)
+      //console.log(`vertexSubData.length: ${vertexSubData.length}`)
+      //console.log(`                  x4: ${vertexSubData.length * 4}`)
+      //console.log(`offset(length): ${offset}`)
+      //console.log(`vertexBuffer.length: ${this._vertexBuffer.length}`)
+      // void gl.bufferSubData(target, dstByteOffset, ArrayBufferView srcData, srcOffset, length)
+      //gl.bufferSubData(gl.ARRAY_BUFFER, 0, vertexSubData, 0, offset)
+      //gl.bufferSubData(gl.ARRAY_BUFFER, 0, vertexSubData, 0)
+      return this._vertexBuffer
+    }
+
     const indexArray = indexSource ? indexSource.data : null
     const indexComponents = indexSource ? indexSource.componentsPerVector : 0
     const weightArray = weightSource ? weightSource.data : null
@@ -579,5 +594,36 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     }
     this._indexBuffer = this._geometryElements[0]._createBuffer(gl)
     return this._indexBuffer
+  }
+
+  /**
+   * @access private
+   * @param {WebGLContext} gl -
+   * @returns {void}
+   */
+  _updateVertexBuffer(gl) {
+    this._createVertexBuffer(gl, true)
+  }
+
+  copy() {
+    const geometry = new SCNGeometry()
+    geometry.name = this.name
+    geometry.levelsOfDetail = this.levelsOfDetail
+    geometry.materials = this.materials
+    geometry._geometryElements = this._geometryElements.slice(0)
+    geometry._geometrySources = this._geometrySources.slice(0)
+    geometry._vertexArrayObjects = this._vertexArrayObjects ? this._vertexArrayObjects.slice(0) : null
+    geometry.subdivisonLevel = this.subdivisionLevel
+    geometry.edgeCreasesElement = this.edgeCreasesElement
+    geometry.edgeCreasesSource = this.edgeCreasesSource
+    geometry.program = this.program
+    geometry.shaderModifiers = this.shaderModifiers
+    //geometry._animationKeys = this._animationKeys
+    geometry.boundingBox = this.boundingBox
+    //geometry._boundingSphere = this._boundingSphere
+    geometry._vertexBuffer = this._vertexBuffer
+    geometry._indexBuffer = this._indexBuffer
+
+    return geometry
   }
 }

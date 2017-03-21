@@ -813,7 +813,6 @@ export default class SCNView {
     const program = this._program
 
     this._updateTransform()
-    this._updatePresentationTransform()
 
     if(this._delegate && this._delegate.rendererUpdateAtTime){
       this._delegate.rendererUpdateAtTime(this._renderer, time)
@@ -826,14 +825,12 @@ export default class SCNView {
     this._runAnimations()
 
     this._updateTransform()
-    this._updatePresentationTransform()
 
     if(this._delegate && this._delegate.rendererDidApplyAnimationsAtTime){
       this._delegate.rendererDidApplyAnimationsAtTime(this._renderer, time)
     }
 
     this._updateTransform()
-    this._updatePresentationTransform()
 
     ///////////////////////
     // simulates physics //
@@ -851,7 +848,7 @@ export default class SCNView {
       this._delegate.rendererWillRenderSceneAtTime(this._renderer, this._scene, time)
     }
 
-    this._updateMorph()
+    //this._updateMorph()
 
     ///////////////////////
     // renders the scene //
@@ -867,10 +864,27 @@ export default class SCNView {
     const arr = [this._scene.rootNode]
     while(arr.length > 0){
       const node = arr.shift()
-      const p = node.copy()
-      p._isPresentationInstance = true
-      //console.log(`_createPresentationNode: pos: ${p.position}`)
-      node._presentation = p
+      let p = node._presentation
+      if(p === null){
+        p = node.copy()
+        p._isPresentationInstance = true
+        if(node.geometry !== null){
+          p.geometry = node.geometry.copy()
+          // FIXME: don't access private properties
+          p.geometry._geometryElements = []
+          node.geometry._geometryElements.forEach((element) => {
+            p.geometry._geometryElements.push(element.copy())
+          })
+          node.geometry._geometrySources.forEach((source) => {
+            p.geometry._geometrySources.push(source.copy())
+          })
+        }
+        node._presentation = p
+      }
+      p._position = node._position
+      p._rotation = node._rotation
+      p._scale = node._scale
+
       arr.push(...node.childNodes)
     }
   }
@@ -895,47 +909,7 @@ export default class SCNView {
   }
 
   _updateTransform(node, parentTransform) {
-    if(typeof node === 'undefined'){
-      this._updateTransform(this._scene.rootNode, SCNMatrix4MakeTranslation(0, 0, 0))
-      return
-    }
-
-    //node._worldTransform = parentTransform.mult(node.transform)
-    node._worldTransform = node.transform.mult(parentTransform)
-    node.childNodes.forEach((child) => {
-      this._updateTransform(child, node._worldTransform)
-    })
-  }
-
-  _updatePresentationTransform(node, parentTransform) {
-    if(typeof node === 'undefined'){
-      this._updatePresentationTransform(this._scene.rootNode, SCNMatrix4MakeTranslation(0, 0, 0))
-      return
-    }
-    const old = node.presentation._worldTransform
-    //node.presentation._worldTransform = parentTransform.mult(node.presentation.transform)
-    node.presentation._worldTransform = node.presentation.transform.mult(parentTransform)
-
-    // DEBUG
-    //const tl = node.presentation._worldTransform.getTranslation().float32Array()
-    //console.log(`node ${node.name} translation ${tl} position ${node.presentation.position.float32Array()}`)
-
-    // DEBUG
-    if(!old.equalTo(node.presentation._worldTransform)){
-      const t1 = old.getTranslation()
-      const t2 = node.presentation._worldTransform.getTranslation()
-      //console.log(`update: ${t1.x}, ${t1.y}, ${t1.z} => ${t2.x}, ${t2.y}, ${t2.z}`)
-
-      const pt = parentTransform.getTranslation()
-      const t = node.presentation.transform.getTranslation()
-      //console.log(`parent: ${pt.x}, ${pt.y}, ${pt.z}, node: ${t.x}, ${t.y}, ${t.z}`)
-    }
-
-    //console.log(`${node.name} ${node.presentation.transform.float32Array()}`)
-    node.childNodes.forEach((child) => {
-      //console.log(`${node.name} -> ${child.name}, ${node.presentation._worldTransform}`)
-      this._updatePresentationTransform(child, node.presentation._worldTransform)
-    })
+    this._scene.rootNode._updateWorldTransform()
   }
 
   _updateMorph(node) {
@@ -944,7 +918,7 @@ export default class SCNView {
       return
     }
     if(node.morpher !== null){
-      // TODO: implement
+      node.morpher._morph(node)
     }
     node.childNodes.forEach((child) => {
       this._updateMorph(child)

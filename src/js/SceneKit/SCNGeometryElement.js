@@ -100,4 +100,12 @@ export default class SCNGeometryElement extends NSObject {
 
     return this._buffer
   }
+
+  copy() {
+    const element = new SCNGeometryElement(
+      this._data.slice(0),
+      this._primitiveType
+    )
+    return element
+  }
 }

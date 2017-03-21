@@ -531,6 +531,9 @@ export default class SCNRenderer extends NSObject {
 
     if(geometry._vertexArrayObjects === null){
       this._initializeVAO(node, program)
+    }else if(node.morpher !== null){
+      //console.log(`node.morpher: ${node.morpher}`)
+      this._updateVAO(node)
     }
 
     // TODO: use geometry setting
@@ -915,6 +918,7 @@ export default class SCNRenderer extends NSObject {
 
     // prepare vertex array data
     const vertexBuffer = geometry._createVertexBuffer(gl)
+    // TODO: retain attribute locations
     const positionLoc = gl.getAttribLocation(program, 'position')
     const normalLoc = gl.getAttribLocation(program, 'normal')
     const texcoordLoc = gl.getAttribLocation(program, 'texcoord')
@@ -1002,6 +1006,17 @@ export default class SCNRenderer extends NSObject {
     }
   }
 
+  _updateVAO(node) {
+    const gl = this.context
+    const geometry = node.presentation.geometry
+    //const vertexBuffer = geometry._createVertexBuffer(gl)
+    //const vao = gl.createVertexArray()
+    //gl.bindVertexArray(vao)
+    //gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer)
+
+    geometry._updateVertexBuffer(gl)
+  }
+
   get _dummyTexture() {
     return this.__dummyTexture
   }
@@ -1034,7 +1049,7 @@ export default class SCNRenderer extends NSObject {
 
   _setDummyTextureAsDefault() {
     const gl = this.context
-    const p = this.__defaultProgram
+    const p = this._defaultProgram
 
     const texNames = [
       gl.TEXTURE0,

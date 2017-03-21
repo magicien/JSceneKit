@@ -11,6 +11,7 @@ import SCNCamera from './SCNCamera'
 import SCNMorpher from './SCNMorpher'
 import SCNSkinner from './SCNSkinner'
 import SCNMatrix4 from './SCNMatrix4'
+import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
 import SCNVector3 from './SCNVector3'
 import SCNVector4 from './SCNVector4'
 import SCNQuaternion from './SCNQuaternion'
@@ -362,6 +363,10 @@ export default class SCNNode extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnnode/1408030-presentation
    */
   get presentation() {
+    if(this._presentation === null){
+      return null
+    }
+
     return this._presentation
   }
 
@@ -373,13 +378,13 @@ export default class SCNNode extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnnode/1407964-transform
    */
   get transform() {
-    // FIXME: it should return copy of _transform,
+    // FIXME: it should return the copy of _transform,
     //        but you should be able to change value with this statement:
     //          let node = new SCNNode()
     //          node.transform.m14 = 123
     //          console.log(node.transform.m14)   // '123'
     if(!this._transformUpToDate){
-      this.updateTransform()
+      this._updateTransform()
     }
     return this._transform
   }
@@ -396,12 +401,60 @@ export default class SCNNode extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnnode/1407970-worldtransform
    */
   get worldTransform() {
+    /*
     if(this._parent === null){
+      if(this._isPresentationInstance){
+        return this._worldTransform
+      }
       return this.transform
     }
-    //return this._parent.worldTransform.mult(this.transform)
     return this.transform.mult(this._parent.worldTransform)
+    */
+    return this._worldTransform
   }
+
+  _updateWorldTransform() {
+    let p = null
+    if(this._parent === null){
+      p = SCNMatrix4MakeTranslation(0, 0, 0)
+    }else{
+      p = this._parent._worldTransform
+    }
+    this._worldTransform = this.transform.mult(p)
+
+    if(this._presentation){
+      let pp = null
+      if(this._parent === null){
+        pp = SCNMatrix4MakeTranslation(0, 0, 0)
+      }else if(this._parent._presentation === null){
+        pp = this._parent._worldTransform
+      }else{
+        pp = this._parent._presentation._worldTransform
+      }
+      this._presentation._updateTransform()
+      this._presentation._worldTransform = this._presentation.transform.mult(pp)
+    }
+
+    this._childNodes.forEach((child) => {
+      child._updateWorldTransform()
+    })
+  }
+
+  /*
+  _updatePresentationTransform() {
+    let p = null
+    if(this._parent === null){
+      p = SCNMatrix4MakeTranslation(0, 0, 0)
+    }else{
+      p = this._parent._presentation._worldTransform
+    }
+    
+    this._presentation._worldTransform = this._presentation.transform.mult(parentTransform)
+    this._childNodes.forEach((child) => {
+      child._updatePrsentationTransform(this._presentation._worldTransform)
+    })
+  }
+  */
 
   /**
    * The translation applied to the node. Animatable.
@@ -421,6 +474,7 @@ export default class SCNNode extends NSObject {
     this._position.y = newValue.y
     this._position.z = newValue.z
     this._transformUpToDate = false
+    this._updateWorldTransform()
   }
 
   get rotation() {
@@ -438,6 +492,7 @@ export default class SCNNode extends NSObject {
     this._rotation.z = newValue.z
     this._rotation.w = newValue.w
     this._transformUpToDate = false
+    this._updateWorldTransform()
   }
 
   get scale() {
@@ -453,6 +508,7 @@ export default class SCNNode extends NSObject {
     this._scale.y = newValue.y
     this._scale.z = newValue.z
     this._transformUpToDate = false
+    this._updateWorldTransform()
   }
 
   /**
@@ -1265,10 +1321,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     return {center: new SCNVector3(), radius: 0}
   }
 
-  updateTransform() {
-    //const m1 = SCNMatrix4.matrixWithTranslation(this._position)
-    //const m2 = m1.rotation(this._rotation)
-    //const m3 = m2.scale(this._scale)
+  _updateTransform() {
     const m1 = SCNMatrix4.matrixWithScale(this._scale)
     const m2 = m1.rotation(this._rotation)
     const m3 = m2.translation(this._position)
@@ -1292,7 +1345,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     node.categoryBitMask = this.categoryBitMask
     node.isPaused = this.isPaused
     node._presentation = this._presentation ? this._presentation.copy() : null
-    node._isPresentationInstance = this._presentationInstance
+    node._isPresentationInstance = this._isPresentationInstance
     node.constraints = this.constraints ? this.constraints.slice() : null
     node.isHidden = this.isHidden
     node.opacity = this.opacity

@@ -12702,6 +12702,10 @@ module.exports =
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
+	var _SCNMatrix4MakeTranslation = __webpack_require__(45);
+
+	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
+
 	var _SCNVector = __webpack_require__(15);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
@@ -13071,6 +13075,57 @@ module.exports =
 
 
 	  _createClass(SCNNode, [{
+	    key: '_updateWorldTransform',
+	    value: function _updateWorldTransform() {
+	      var p = null;
+	      if (this._parent === null) {
+	        p = (0, _SCNMatrix4MakeTranslation2.default)(0, 0, 0);
+	      } else {
+	        p = this._parent._worldTransform;
+	      }
+	      this._worldTransform = this.transform.mult(p);
+
+	      if (this._presentation) {
+	        var pp = null;
+	        if (this._parent === null) {
+	          pp = (0, _SCNMatrix4MakeTranslation2.default)(0, 0, 0);
+	        } else if (this._parent._presentation === null) {
+	          pp = this._parent._worldTransform;
+	        } else {
+	          pp = this._parent._presentation._worldTransform;
+	        }
+	        this._presentation._updateTransform();
+	        this._presentation._worldTransform = this._presentation.transform.mult(pp);
+	      }
+
+	      this._childNodes.forEach(function (child) {
+	        child._updateWorldTransform();
+	      });
+	    }
+
+	    /*
+	    _updatePresentationTransform() {
+	      let p = null
+	      if(this._parent === null){
+	        p = SCNMatrix4MakeTranslation(0, 0, 0)
+	      }else{
+	        p = this._parent._presentation._worldTransform
+	      }
+	      
+	      this._presentation._worldTransform = this._presentation.transform.mult(parentTransform)
+	      this._childNodes.forEach((child) => {
+	        child._updatePrsentationTransform(this._presentation._worldTransform)
+	      })
+	    }
+	    */
+
+	    /**
+	     * The translation applied to the node. Animatable.
+	     * @type {SCNVector3}
+	     * @see https://developer.apple.com/reference/scenekit/scnnode/1408026-position
+	     */
+
+	  }, {
 	    key: 'addChildNode',
 
 
@@ -13819,11 +13874,8 @@ module.exports =
 	     */
 
 	  }, {
-	    key: 'updateTransform',
-	    value: function updateTransform() {
-	      //const m1 = SCNMatrix4.matrixWithTranslation(this._position)
-	      //const m2 = m1.rotation(this._rotation)
-	      //const m3 = m2.scale(this._scale)
+	    key: '_updateTransform',
+	    value: function _updateTransform() {
 	      var m1 = _SCNMatrix2.default.matrixWithScale(this._scale);
 	      var m2 = m1.rotation(this._rotation);
 	      var m3 = m2.translation(this._position);
@@ -13850,7 +13902,7 @@ module.exports =
 	      node.categoryBitMask = this.categoryBitMask;
 	      node.isPaused = this.isPaused;
 	      node._presentation = this._presentation ? this._presentation.copy() : null;
-	      node._isPresentationInstance = this._presentationInstance;
+	      node._isPresentationInstance = this._isPresentationInstance;
 	      node.constraints = this.constraints ? this.constraints.slice() : null;
 	      node.isHidden = this.isHidden;
 	      node.opacity = this.opacity;
@@ -13981,6 +14033,10 @@ module.exports =
 	     * @see https://developer.apple.com/reference/scenekit/scnnode/1408030-presentation
 	     */
 	    get: function get() {
+	      if (this._presentation === null) {
+	        return null;
+	      }
+
 	      return this._presentation;
 	    }
 
@@ -13995,13 +14051,13 @@ module.exports =
 	  }, {
 	    key: 'transform',
 	    get: function get() {
-	      // FIXME: it should return copy of _transform,
+	      // FIXME: it should return the copy of _transform,
 	      //        but you should be able to change value with this statement:
 	      //          let node = new SCNNode()
 	      //          node.transform.m14 = 123
 	      //          console.log(node.transform.m14)   // '123'
 	      if (!this._transformUpToDate) {
-	        this.updateTransform();
+	        this._updateTransform();
 	      }
 	      return this._transform;
 	    },
@@ -14021,19 +14077,17 @@ module.exports =
 	  }, {
 	    key: 'worldTransform',
 	    get: function get() {
-	      if (this._parent === null) {
-	        return this.transform;
+	      /*
+	      if(this._parent === null){
+	        if(this._isPresentationInstance){
+	          return this._worldTransform
+	        }
+	        return this.transform
 	      }
-	      //return this._parent.worldTransform.mult(this.transform)
-	      return this.transform.mult(this._parent.worldTransform);
+	      return this.transform.mult(this._parent.worldTransform)
+	      */
+	      return this._worldTransform;
 	    }
-
-	    /**
-	     * The translation applied to the node. Animatable.
-	     * @type {SCNVector3}
-	     * @see https://developer.apple.com/reference/scenekit/scnnode/1408026-position
-	     */
-
 	  }, {
 	    key: 'position',
 	    get: function get() {
@@ -14047,6 +14101,7 @@ module.exports =
 	      this._position.y = newValue.y;
 	      this._position.z = newValue.z;
 	      this._transformUpToDate = false;
+	      this._updateWorldTransform();
 	    }
 	  }, {
 	    key: 'rotation',
@@ -14062,6 +14117,7 @@ module.exports =
 	      this._rotation.z = newValue.z;
 	      this._rotation.w = newValue.w;
 	      this._transformUpToDate = false;
+	      this._updateWorldTransform();
 	    }
 	  }, {
 	    key: 'scale',
@@ -14076,6 +14132,7 @@ module.exports =
 	      this._scale.y = newValue.y;
 	      this._scale.z = newValue.z;
 	      this._transformUpToDate = false;
+	      this._updateWorldTransform();
 	    }
 
 	    /**
@@ -14978,7 +15035,7 @@ module.exports =
 
 	    // Managing Animations
 
-	    _this._animationKeys = null;
+	    //this._animationKeys = null
 
 	    ///////////////////////
 	    // SCNBoundingVolume //
@@ -15330,11 +15387,12 @@ module.exports =
 	    value: function _createVertexBuffer(gl) {
 	      var update = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
 
-	      if (this._vertexBuffer && !update) {
+	      if (this._vertexBuffer === null) {
+	        this._vertexBuffer = gl.createBuffer();
+	      } else if (!update) {
 	        return this._vertexBuffer;
 	      }
 
-	      this._vertexBuffer = gl.createBuffer();
 	      gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer);
 	      var arr = [];
 	      var vertexSource = this.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
@@ -15344,13 +15402,13 @@ module.exports =
 	      var weightSource = this.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.boneWeights)[0];
 	      var vectorCount = vertexSource.vectorCount;
 
-	      if (vertexSource === undefined) {
+	      if (typeof vertexSource === 'undefined') {
 	        throw new Error('vertexSource is undefined');
 	      }
-	      if (normalSource !== undefined && normalSource.vectorCount !== vectorCount) {
+	      if (typeof normalSource !== 'undefined' && normalSource.vectorCount !== vectorCount) {
 	        throw new Error('normalSource.vectorCount !== vertexSource.vectorCount');
 	      }
-	      if (texcoordSource !== undefined && texcoordSource.vectorCount !== vectorCount) {
+	      if (typeof texcoordSource !== 'undefined' && texcoordSource.vectorCount !== vectorCount) {
 	        throw new Error('texcoordSource.vectorCount !== vertexSource.vectorCount');
 	      }
 
@@ -15398,6 +15456,19 @@ module.exports =
 
 	      //console.log(`offset: ${offset}, vectorCount: ${vectorCount}`)
 	      offset *= vectorCount;
+
+	      // FIXME: check if each source needs to update
+	      if (update) {
+	        var vertexSubData = new Float32Array(arr);
+	        //console.log(`vertexSubData.length: ${vertexSubData.length}`)
+	        //console.log(`                  x4: ${vertexSubData.length * 4}`)
+	        //console.log(`offset(length): ${offset}`)
+	        //console.log(`vertexBuffer.length: ${this._vertexBuffer.length}`)
+	        // void gl.bufferSubData(target, dstByteOffset, ArrayBufferView srcData, srcOffset, length)
+	        //gl.bufferSubData(gl.ARRAY_BUFFER, 0, vertexSubData, 0, offset)
+	        //gl.bufferSubData(gl.ARRAY_BUFFER, 0, vertexSubData, 0)
+	        return this._vertexBuffer;
+	      }
 
 	      var indexArray = indexSource ? indexSource.data : null;
 	      var indexComponents = indexSource ? indexSource.componentsPerVector : 0;
@@ -15457,6 +15528,41 @@ module.exports =
 	      this._indexBuffer = this._geometryElements[0]._createBuffer(gl);
 	      return this._indexBuffer;
 	    }
+
+	    /**
+	     * @access private
+	     * @param {WebGLContext} gl -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_updateVertexBuffer',
+	    value: function _updateVertexBuffer(gl) {
+	      this._createVertexBuffer(gl, true);
+	    }
+	  }, {
+	    key: 'copy',
+	    value: function copy() {
+	      var geometry = new SCNGeometry();
+	      geometry.name = this.name;
+	      geometry.levelsOfDetail = this.levelsOfDetail;
+	      geometry.materials = this.materials;
+	      geometry._geometryElements = this._geometryElements.slice(0);
+	      geometry._geometrySources = this._geometrySources.slice(0);
+	      geometry._vertexArrayObjects = this._vertexArrayObjects ? this._vertexArrayObjects.slice(0) : null;
+	      geometry.subdivisonLevel = this.subdivisionLevel;
+	      geometry.edgeCreasesElement = this.edgeCreasesElement;
+	      geometry.edgeCreasesSource = this.edgeCreasesSource;
+	      geometry.program = this.program;
+	      geometry.shaderModifiers = this.shaderModifiers;
+	      //geometry._animationKeys = this._animationKeys
+	      geometry.boundingBox = this.boundingBox;
+	      //geometry._boundingSphere = this._boundingSphere
+	      geometry._vertexBuffer = this._vertexBuffer;
+	      geometry._indexBuffer = this._indexBuffer;
+
+	      return geometry;
+	    }
 	  }, {
 	    key: 'firstMaterial',
 	    get: function get() {
@@ -15504,7 +15610,8 @@ module.exports =
 	  }, {
 	    key: 'animationKeys',
 	    get: function get() {
-	      return this._animationKeys;
+	      // TODO: implement
+	      return [];
 	    }
 	  }]);
 
@@ -16464,6 +16571,9 @@ module.exports =
 
 	      if (geometry._vertexArrayObjects === null) {
 	        this._initializeVAO(node, program);
+	      } else if (node.morpher !== null) {
+	        //console.log(`node.morpher: ${node.morpher}`)
+	        this._updateVAO(node);
 	      }
 
 	      // TODO: use geometry setting
@@ -16751,6 +16861,7 @@ module.exports =
 
 	      // prepare vertex array data
 	      var vertexBuffer = geometry._createVertexBuffer(gl);
+	      // TODO: retain attribute locations
 	      var positionLoc = gl.getAttribLocation(program, 'position');
 	      var normalLoc = gl.getAttribLocation(program, 'normal');
 	      var texcoordLoc = gl.getAttribLocation(program, 'texcoord');
@@ -16838,6 +16949,18 @@ module.exports =
 	      }
 	    }
 	  }, {
+	    key: '_updateVAO',
+	    value: function _updateVAO(node) {
+	      var gl = this.context;
+	      var geometry = node.presentation.geometry;
+	      //const vertexBuffer = geometry._createVertexBuffer(gl)
+	      //const vao = gl.createVertexArray()
+	      //gl.bindVertexArray(vao)
+	      //gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer)
+
+	      geometry._updateVertexBuffer(gl);
+	    }
+	  }, {
 	    key: '_createDummyTexture',
 	    value: function _createDummyTexture() {
 	      var _this3 = this;
@@ -16870,7 +16993,7 @@ module.exports =
 	    key: '_setDummyTextureAsDefault',
 	    value: function _setDummyTextureAsDefault() {
 	      var gl = this.context;
-	      var p = this.__defaultProgram;
+	      var p = this._defaultProgram;
 
 	      var texNames = [gl.TEXTURE0, gl.TEXTURE1, gl.TEXTURE2, gl.TEXTURE3, gl.TEXTURE4, gl.TEXTURE5, gl.TEXTURE6, gl.TEXTURE7];
 	      var texSymbols = ['u_emissionTexture', 'u_ambientTexture', 'u_diffuseTexture', 'u_specularTexture', 'u_reflectiveTexture', 'u_transparentTexture', 'u_multiplyTexture', 'u_normalTexture'];
@@ -22910,6 +23033,12 @@ module.exports =
 	      return arr;
 	    }
 	  }, {
+	    key: 'copy',
+	    value: function copy() {
+	      var source = new SCNGeometrySource(this._data.slice(0), this._semantic, this._vectorCount, this._usesFloatComponents, this._componentsPerVector, this._bytesPerComponent, this._dataOffset, this._dataStride);
+	      return source;
+	    }
+	  }, {
 	    key: 'data',
 
 
@@ -23416,7 +23545,7 @@ module.exports =
 
 	    _this._data = indices;
 	    _this._primitiveType = primitiveType;
-	    _this._primitiveCount = indices.count / 3; // FIXME: calculate from primitiveType
+	    _this._primitiveCount = indices.length / 3; // FIXME: calculate from primitiveType
 	    _this._bytesPerIndex = 2;
 
 	    /**
@@ -23459,6 +23588,12 @@ module.exports =
 	      gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, this._glData, gl.STATIC_DRAW);
 
 	      return this._buffer;
+	    }
+	  }, {
+	    key: 'copy',
+	    value: function copy() {
+	      var element = new SCNGeometryElement(this._data.slice(0), this._primitiveType);
+	      return element;
 	    }
 	  }, {
 	    key: 'primitiveType',
@@ -24488,6 +24623,95 @@ module.exports =
 	      } else {
 	        _get(SCNMorpher.prototype.__proto__ || Object.getPrototypeOf(SCNMorpher.prototype), 'setValueForKeyPath', this).call(this, value, keyPath);
 	      }
+	    }
+
+	    /**
+	     * @access private
+	     * @param {SCNNode} node -
+	     */
+
+	  }, {
+	    key: '_morph',
+	    value: function _morph(node) {
+	      var _this2 = this;
+
+	      console.log('SCNMorpher._morph ' + node.name);
+	      var p = node.presentation;
+	      if (node.geometry === null || p === null || p.geometry === null) {
+	        // data is not ready
+	        return;
+	      }
+	      var pg = p.geometry;
+	      var totalWeightForSemantic = new Map();
+	      //const newData = new Map()
+
+	      // reset presentation geometry
+	      node.geometry.geometrySources.forEach(function (source) {
+	        // FIXME: copy more than 1 source.
+	        var pSource = pg.getGeometrySourcesForSemantic(source.semantic)[0];
+	        pSource._data = Array(source._data.length).fill(0);
+	        //newData.set(source.semantic, Array(source._data.length).fill(0))
+	        totalWeightForSemantic.set(source.semantic, 0.0);
+	      });
+
+	      // should I morph elements?
+	      //node.geometry.geometryElements().forEach((element) => {
+	      //})
+
+	      var targetCount = this.targets.length;
+
+	      var _loop = function _loop(i) {
+	        var target = _this2.targets[i];
+	        var weight = _this2._weights[i];
+	        if (weight === 0 || typeof weight === 'undefined') {
+	          return 'continue';
+	        }
+	        console.log('morph ' + target.name + ' weight ' + weight);
+	        target.geometrySources.forEach(function (source) {
+	          var pSource = pg.getGeometrySourcesForSemantic(source.semantic)[0];
+	          //const pSource = newData.get(source.semantic)
+	          if (typeof pSource === 'undefined') {
+	            return;
+	          }
+	          totalWeightForSemantic.set(source.semantic, totalWeightForSemantic.get(source.semantic) + weight);
+
+	          var dataLen = source._data.length;
+	          for (var j = 0; j < dataLen; j++) {
+	            pSource._data[j] += source._data[j] * weight;
+	            //pSource[j] += source._data[j] * weight
+	          }
+	        });
+	      };
+
+	      for (var i = 0; i < targetCount; i++) {
+	        var _ret = _loop(i);
+
+	        if (_ret === 'continue') continue;
+	      }
+
+	      node.geometry.geometrySources.forEach(function (source) {
+	        // FIXME: copy more than 1 source.
+	        var pSource = pg.getGeometrySourcesForSemantic(source.semantic)[0];
+	        //const pSource = newData.get(source.semantic)
+	        var dataLen = source._data.length;
+	        if (_this2.calculationMode === _SCNMorpherCalculationMode2.default.normalized) {
+	          var _weight = 1.0 - totalWeightForSemantic.get(source.semantic);
+	          for (var i = 0; i < dataLen; i++) {
+	            pSource._data[i] += source._data[i] * _weight;
+	            //pSource[i] += source._data[i] * weight
+	          }
+	        } else {
+	          // calculationMode: additive
+	          for (var _i = 0; _i < dataLen; _i++) {
+	            pSource._data[_i] += source._data[_i];
+	            //pSource[i] += source._data[i]
+	          }
+	        }
+	      });
+
+	      // TODO: needs to update normal vector?
+
+	      console.log('_morph done');
 	    }
 	  }]);
 
@@ -30703,7 +30927,6 @@ module.exports =
 	      var program = this._program;
 
 	      this._updateTransform();
-	      this._updatePresentationTransform();
 
 	      if (this._delegate && this._delegate.rendererUpdateAtTime) {
 	        this._delegate.rendererUpdateAtTime(this._renderer, time);
@@ -30716,11 +30939,12 @@ module.exports =
 	      this._runAnimations();
 
 	      this._updateTransform();
-	      this._updatePresentationTransform();
 
 	      if (this._delegate && this._delegate.rendererDidApplyAnimationsAtTime) {
 	        this._delegate.rendererDidApplyAnimationsAtTime(this._renderer, time);
 	      }
+
+	      this._updateTransform();
 
 	      ///////////////////////
 	      // simulates physics //
@@ -30738,7 +30962,7 @@ module.exports =
 	        this._delegate.rendererWillRenderSceneAtTime(this._renderer, this._scene, time);
 	      }
 
-	      this._updateMorph();
+	      //this._updateMorph()
 
 	      ///////////////////////
 	      // renders the scene //
@@ -30753,13 +30977,35 @@ module.exports =
 	    key: '_createPresentationNodes',
 	    value: function _createPresentationNodes() {
 	      var arr = [this._scene.rootNode];
-	      while (arr.length > 0) {
+
+	      var _loop = function _loop() {
 	        var node = arr.shift();
-	        var p = node.copy();
-	        p._isPresentationInstance = true;
-	        //console.log(`_createPresentationNode: pos: ${p.position}`)
-	        node._presentation = p;
+	        var p = node._presentation;
+	        if (p === null) {
+	          p = node.copy();
+	          p._isPresentationInstance = true;
+	          if (node.geometry !== null) {
+	            p.geometry = node.geometry.copy();
+	            // FIXME: don't access private properties
+	            p.geometry._geometryElements = [];
+	            node.geometry._geometryElements.forEach(function (element) {
+	              p.geometry._geometryElements.push(element.copy());
+	            });
+	            node.geometry._geometrySources.forEach(function (source) {
+	              p.geometry._geometrySources.push(source.copy());
+	            });
+	          }
+	          node._presentation = p;
+	        }
+	        p._position = node._position;
+	        p._rotation = node._rotation;
+	        p._scale = node._scale;
+
 	        arr.push.apply(arr, _toConsumableArray(node.childNodes));
+	      };
+
+	      while (arr.length > 0) {
+	        _loop();
 	      }
 	    }
 
@@ -30789,67 +31035,22 @@ module.exports =
 	  }, {
 	    key: '_updateTransform',
 	    value: function _updateTransform(node, parentTransform) {
-	      var _this2 = this;
-
-	      if (typeof node === 'undefined') {
-	        this._updateTransform(this._scene.rootNode, (0, _SCNMatrix4MakeTranslation2.default)(0, 0, 0));
-	        return;
-	      }
-
-	      //node._worldTransform = parentTransform.mult(node.transform)
-	      node._worldTransform = node.transform.mult(parentTransform);
-	      node.childNodes.forEach(function (child) {
-	        _this2._updateTransform(child, node._worldTransform);
-	      });
-	    }
-	  }, {
-	    key: '_updatePresentationTransform',
-	    value: function _updatePresentationTransform(node, parentTransform) {
-	      var _this3 = this;
-
-	      if (typeof node === 'undefined') {
-	        this._updatePresentationTransform(this._scene.rootNode, (0, _SCNMatrix4MakeTranslation2.default)(0, 0, 0));
-	        return;
-	      }
-	      var old = node.presentation._worldTransform;
-	      //node.presentation._worldTransform = parentTransform.mult(node.presentation.transform)
-	      node.presentation._worldTransform = node.presentation.transform.mult(parentTransform);
-
-	      // DEBUG
-	      //const tl = node.presentation._worldTransform.getTranslation().float32Array()
-	      //console.log(`node ${node.name} translation ${tl} position ${node.presentation.position.float32Array()}`)
-
-	      // DEBUG
-	      if (!old.equalTo(node.presentation._worldTransform)) {
-	        var t1 = old.getTranslation();
-	        var t2 = node.presentation._worldTransform.getTranslation();
-	        //console.log(`update: ${t1.x}, ${t1.y}, ${t1.z} => ${t2.x}, ${t2.y}, ${t2.z}`)
-
-	        var pt = parentTransform.getTranslation();
-	        var t = node.presentation.transform.getTranslation();
-	        //console.log(`parent: ${pt.x}, ${pt.y}, ${pt.z}, node: ${t.x}, ${t.y}, ${t.z}`)
-	      }
-
-	      //console.log(`${node.name} ${node.presentation.transform.float32Array()}`)
-	      node.childNodes.forEach(function (child) {
-	        //console.log(`${node.name} -> ${child.name}, ${node.presentation._worldTransform}`)
-	        _this3._updatePresentationTransform(child, node.presentation._worldTransform);
-	      });
+	      this._scene.rootNode._updateWorldTransform();
 	    }
 	  }, {
 	    key: '_updateMorph',
 	    value: function _updateMorph(node) {
-	      var _this4 = this;
+	      var _this2 = this;
 
 	      if (typeof node === 'undefined') {
 	        this._updateMorph(this._scene.rootNode);
 	        return;
 	      }
 	      if (node.morpher !== null) {
-	        // TODO: implement
+	        node.morpher._morph(node);
 	      }
 	      node.childNodes.forEach(function (child) {
-	        _this4._updateMorph(child);
+	        _this2._updateMorph(child);
 	      });
 	    }
 	  }, {
@@ -30867,7 +31068,7 @@ module.exports =
 	  }, {
 	    key: '_runAnimation',
 	    value: function _runAnimation(node) {
-	      var _this5 = this;
+	      var _this3 = this;
 
 	      var deleteKeys = [];
 	      var time = this.currentTime;
@@ -30883,7 +31084,7 @@ module.exports =
 	        node._animations.delete(key);
 	      });
 	      node.childNodes.forEach(function (child) {
-	        return _this5._runAnimation(child);
+	        return _this3._runAnimation(child);
 	      });
 	    }
 	  }, {

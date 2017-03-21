@@ -420,4 +420,18 @@ SCNGeometrySource *source = [SCNGeometrySource geometrySourceWithBuffer:buffer
     }
     return arr
   }
+
+  copy() {
+    const source = new SCNGeometrySource(
+      this._data.slice(0),
+      this._semantic,
+      this._vectorCount,
+      this._usesFloatComponents,
+      this._componentsPerVector,
+      this._bytesPerComponent,
+      this._dataOffset,
+      this._dataStride
+    )
+    return source
+  }
 }
