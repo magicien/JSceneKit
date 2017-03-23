@@ -12,9 +12,9 @@ export default class CAMediaTiming {
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  init() {
+  constructor() {
 
     // Animation Start Time
 

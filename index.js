@@ -10508,16 +10508,22 @@ module.exports =
 	     * @access private
 	     * @param {Object} obj - target object to apply this animation.
 	     * @param {number} time - active time
+	     * @param {boolean} [needTimeConversion = true] -
 	     * @returns {void}
 	     */
 
 	  }, {
 	    key: '_applyAnimation',
 	    value: function _applyAnimation(obj, time) {
-	      var baseTime = this._basetimeFromTime(time);
-	      var t = baseTime;
-	      if (this.timingFunction !== null) {
-	        t = this.timingFunction._getValueAtTime(baseTime);
+	      var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+
+	      var t = time;
+	      if (needTimeConversion) {
+	        var baseTime = this._basetimeFromTime(time);
+	        t = baseTime;
+	        if (this.timingFunction !== null) {
+	          t = this.timingFunction._getValueAtTime(baseTime);
+	        }
 	      }
 	      this._handleEvents(obj, t);
 	    }
@@ -10682,94 +10688,82 @@ module.exports =
 	  value: true
 	});
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	var CAMediaTiming = function () {
-	  function CAMediaTiming() {
-	    _classCallCheck(this, CAMediaTiming);
-	  }
+	var CAMediaTiming =
 
-	  _createClass(CAMediaTiming, [{
-	    key: 'init',
+	/**
+	 * constructor
+	 * @access public
+	 * @constructor
+	 */
+	function CAMediaTiming() {
+	  _classCallCheck(this, CAMediaTiming);
 
+	  // Animation Start Time
 
-	    /**
-	     * constructor
-	     * @access public
-	     * @returns {void}
-	     */
-	    value: function init() {
+	  /**
+	   * Required. Specifies the begin time of the receiver in relation to its parent object, if applicable.
+	   * @type {number}
+	   * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427654-begintime
+	   */
+	  this.beginTime = 0;
 
-	      // Animation Start Time
+	  /**
+	   * Required. Specifies an additional time offset in active local time.
+	   * @type {number}
+	   * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427650-timeoffset
+	   */
+	  this.timeOffset = 0;
 
-	      /**
-	       * Required. Specifies the begin time of the receiver in relation to its parent object, if applicable.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427654-begintime
-	       */
-	      this.beginTime = 0;
+	  // Repeating Animations
 
-	      /**
-	       * Required. Specifies an additional time offset in active local time.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427650-timeoffset
-	       */
-	      this.timeOffset = 0;
+	  /**
+	   * Required. Determines the number of times the animation will repeat.
+	   * @type {number}
+	   * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427666-repeatcount
+	   */
+	  this.repeatCount = 0;
 
-	      // Repeating Animations
+	  /**
+	   * Required. Determines how many seconds the animation will repeat for.
+	   * @type {number}
+	   * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427643-repeatduration
+	   */
+	  this.repeatDuration = 0;
 
-	      /**
-	       * Required. Determines the number of times the animation will repeat.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427666-repeatcount
-	       */
-	      this.repeatCount = 0;
+	  // Duration and Speed
 
-	      /**
-	       * Required. Determines how many seconds the animation will repeat for.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427643-repeatduration
-	       */
-	      this.repeatDuration = 0;
+	  /**
+	   * Required. Specifies the basic duration of the animation, in seconds.
+	   * @type {number}
+	   * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427652-duration
+	   */
+	  this.duration = 0;
 
-	      // Duration and Speed
+	  /**
+	   * Required. Specifies how time is mapped to receiver’s time space from the parent time space. 
+	   * @type {number}
+	   * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427647-speed
+	   */
+	  this.speed = 0;
 
-	      /**
-	       * Required. Specifies the basic duration of the animation, in seconds.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427652-duration
-	       */
-	      this.duration = 0;
+	  // Playback Modes
 
-	      /**
-	       * Required. Specifies how time is mapped to receiver’s time space from the parent time space. 
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427647-speed
-	       */
-	      this.speed = 0;
+	  /**
+	   * Required. Determines if the receiver plays in the reverse upon completion.
+	   * @type {boolean}
+	   * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427645-autoreverses
+	   */
+	  this.autoreverses = false;
 
-	      // Playback Modes
-
-	      /**
-	       * Required. Determines if the receiver plays in the reverse upon completion.
-	       * @type {boolean}
-	       * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427645-autoreverses
-	       */
-	      this.autoreverses = false;
-
-	      /**
-	       * Required. Determines if the receiver’s presentation is frozen or removed once its active duration has completed.
-	       * @type {string}
-	       * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427656-fillmode
-	       */
-	      this.fillMode = '';
-	    }
-	  }]);
-
-	  return CAMediaTiming;
-	}();
+	  /**
+	   * Required. Determines if the receiver’s presentation is frozen or removed once its active duration has completed.
+	   * @type {string}
+	   * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427656-fillmode
+	   */
+	  this.fillMode = '';
+	};
 
 	exports.default = CAMediaTiming;
 
@@ -11169,6 +11163,7 @@ module.exports =
 	   * @access private
 	   * @param {Object} obj - target object to apply this animation.
 	   * @param {number} time - active time
+	   * @param {boolean} [needTimeConversion = true] -
 	   * @returns {void}
 	   */
 
@@ -11176,14 +11171,20 @@ module.exports =
 	  _createClass(CAAnimationGroup, [{
 	    key: '_applyAnimation',
 	    value: function _applyAnimation(obj, time) {
-	      var baseTime = this._basetimeFromTime(time);
-	      var t = baseTime;
-	      if (this.timingFunction !== null) {
-	        t = this.timingFunction._getValueAtTime(baseTime);
+	      var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+
+	      var t = time;
+	      if (needTimeConversion) {
+	        var baseTime = this._basetimeFromTime(time);
+	        t = baseTime;
+	        if (this.timingFunction !== null) {
+	          t = this.timingFunction._getValueAtTime(baseTime);
+	        }
+	        //console.log(`time ${time} activeTime ${time - this._animationStartTime} baseTime ${baseTime}`)
 	      }
 
 	      this.animations.forEach(function (animation) {
-	        animation._applyAnimation(obj, t);
+	        animation._applyAnimation(obj, t, false);
 	      });
 	    }
 
@@ -11316,21 +11317,35 @@ module.exports =
 	    }
 	    */
 
+	    /**
+	     * apply animation to the given node.
+	     * @access private
+	     * @param {Object} obj - target object to apply this animation.
+	     * @param {number} time - active time
+	     * @param {boolean} [needTimeConversion = true] -
+	     * @returns {void}
+	     */
+
 	  }, {
 	    key: '_applyAnimation',
 	    value: function _applyAnimation(obj, time) {
-	      var baseTime = this._basetimeFromTime(time);
-	      var t = baseTime;
-	      if (this.timingFunction !== null) {
-	        t = this.timingFunction._getValueAtTime(baseTime);
+	      var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+
+	      var t = time;
+	      if (needTimeConversion) {
+	        var baseTime = this._basetimeFromTime(time);
+	        t = baseTime;
+	        if (this.timingFunction !== null) {
+	          t = this.timingFunction._getValueAtTime(baseTime);
+	        }
+	        if (t < 0) {
+	          t = 0;
+	        }
+	        if (t > 1) {
+	          t = 1;
+	        }
+	        //console.log('t = ' + t)
 	      }
-	      if (t < 0) {
-	        t = 0;
-	      }
-	      if (t > 1) {
-	        t = 1;
-	      }
-	      //console.log('t = ' + t)
 
 	      var value = 0;
 	      var currentValue = obj.valueForKeyPath(this.keyPath);
@@ -11500,14 +11515,29 @@ module.exports =
 	    }
 	    */
 
+	    /**
+	     * apply animation to the given node.
+	     * @access private
+	     * @param {Object} obj - target object to apply this animation.
+	     * @param {number} time - active time
+	     * @param {boolean} [needTimeConversion = true] -
+	     * @returns {void}
+	     */
+
 	  }, {
 	    key: '_applyAnimation',
 	    value: function _applyAnimation(obj, time) {
-	      var baseTime = this._basetimeFromTime(time);
-	      var t = baseTime;
-	      if (this.timingFunction !== null) {
-	        t = this.timingFunction._getValueAtTime(baseTime);
+	      var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+
+	      var t = time;
+	      if (needTimeConversion) {
+	        var baseTime = this._basetimeFromTime(time);
+	        t = baseTime;
+	        if (this.timingFunction !== null) {
+	          t = this.timingFunction._getValueAtTime(baseTime);
+	        }
 	      }
+
 	      var value = t;
 	      if (this.valueFunction !== null) {
 	        value = this.valueFunction._getValueAtTime(t);
@@ -11813,13 +11843,26 @@ module.exports =
 
 	      return anim;
 	    }
+
+	    /**
+	     * apply animation to the given node.
+	     * @access private
+	     * @param {Object} obj - target object to apply this animation.
+	     * @param {number} time - active time
+	     * @param {boolean} [needTimeConversion = true] -
+	     * @returns {void}
+	     */
+
 	  }, {
 	    key: '_applyAnimation',
 	    value: function _applyAnimation(obj, time) {
-	      var baseTime = this._basetimeFromTime(time);
-	      //console.log(`CAKeyframeAnimation._applyAnimation: ${obj.name} ${this.keyPath}, time: ${time}, baseTime: ${baseTime}`)
-	      //console.log(`speed: ${this.speed}, duration: ${this.duration}, repeatCount: ${this.repeatCount}: dt: ${time - this.beginTime}`)
-	      var t = baseTime;
+	      var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+
+	      var t = time;
+	      if (needTimeConversion) {
+	        var baseTime = this._basetimeFromTime(time);
+	        t = baseTime;
+	      }
 
 	      var index = this._indexCache;
 	      var key0 = 0;
@@ -11831,9 +11874,9 @@ module.exports =
 
 	      var len = this.keyTimes.length;
 	      if (index >= len) {
+	        console.log('CAKeyframeAnimation index >= len  ' + index + ' >= ' + len);
 	        index = len - 1;
 	      }
-	      //console.log(`keyTimes.length: ${this.keyTimes.length}`)
 
 	      // search keyTime linearly
 	      if (this.keyTimes[index] < t) {
@@ -11866,7 +11909,7 @@ module.exports =
 	      var value = val0;
 	      if (time0 !== time1) {
 	        var dt = (t - time0) / (time1 - time0);
-	        var r = this.timingFunctions[key0]._getValueAtTime(t);
+	        var r = this.timingFunctions[key0]._getValueAtTime(dt);
 
 	        switch (this.calculationMode) {
 	          case Constants.kCAAnimationLinear:

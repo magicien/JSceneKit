@@ -87,12 +87,24 @@ export default class CAPropertyAnimation extends CAAnimation {
   }
   */
 
-  _applyAnimation(obj, time) {
-    const baseTime = this._basetimeFromTime(time)
-    let t = baseTime
-    if(this.timingFunction !== null){
-      t = this.timingFunction._getValueAtTime(baseTime)
+  /**
+   * apply animation to the given node.
+   * @access private
+   * @param {Object} obj - target object to apply this animation.
+   * @param {number} time - active time
+   * @param {boolean} [needTimeConversion = true] -
+   * @returns {void}
+   */
+  _applyAnimation(obj, time, needTimeConversion = true) {
+    let t = time
+    if(needTimeConversion){
+      const baseTime = this._basetimeFromTime(time)
+      t = baseTime
+      if(this.timingFunction !== null){
+        t = this.timingFunction._getValueAtTime(baseTime)
+      }
     }
+
     let value = t
     if(this.valueFunction !== null){
       value = this.valueFunction._getValueAtTime(t)

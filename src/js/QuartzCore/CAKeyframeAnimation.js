@@ -125,11 +125,20 @@ export default class CAKeyframeAnimation extends CAPropertyAnimation {
     return anim
   }
 
-  _applyAnimation(obj, time) {
-    const baseTime = this._basetimeFromTime(time)
-    //console.log(`CAKeyframeAnimation._applyAnimation: ${obj.name} ${this.keyPath}, time: ${time}, baseTime: ${baseTime}`)
-    //console.log(`speed: ${this.speed}, duration: ${this.duration}, repeatCount: ${this.repeatCount}: dt: ${time - this.beginTime}`)
-    let t = baseTime
+  /**
+   * apply animation to the given node.
+   * @access private
+   * @param {Object} obj - target object to apply this animation.
+   * @param {number} time - active time
+   * @param {boolean} [needTimeConversion = true] -
+   * @returns {void}
+   */
+  _applyAnimation(obj, time, needTimeConversion = true) {
+    let t = time
+    if(needTimeConversion){
+      const baseTime = this._basetimeFromTime(time)
+      t = baseTime
+    }
 
     let index = this._indexCache
     let key0 = 0
@@ -141,9 +150,9 @@ export default class CAKeyframeAnimation extends CAPropertyAnimation {
 
     const len = this.keyTimes.length
     if(index >= len){
+      console.log(`CAKeyframeAnimation index >= len  ${index} >= ${len}`)
       index = len - 1
     }
-    //console.log(`keyTimes.length: ${this.keyTimes.length}`)
 
     // search keyTime linearly
     if(this.keyTimes[index] < t){
@@ -178,7 +187,7 @@ export default class CAKeyframeAnimation extends CAPropertyAnimation {
     let value = val0
     if(time0 !== time1){
       const dt = (t - time0) / (time1 - time0)
-      const r = this.timingFunctions[key0]._getValueAtTime(t)
+      const r = this.timingFunctions[key0]._getValueAtTime(dt)
 
       switch(this.calculationMode){
         case Constants.kCAAnimationLinear:

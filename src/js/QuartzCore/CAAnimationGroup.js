@@ -34,17 +34,22 @@ export default class CAAnimationGroup extends CAAnimation {
    * @access private
    * @param {Object} obj - target object to apply this animation.
    * @param {number} time - active time
+   * @param {boolean} [needTimeConversion = true] -
    * @returns {void}
    */
-  _applyAnimation(obj, time) {
-    const baseTime = this._basetimeFromTime(time)
-    let t = baseTime
-    if(this.timingFunction !== null){
-      t = this.timingFunction._getValueAtTime(baseTime)
+  _applyAnimation(obj, time, needTimeConversion = true) {
+    let t = time
+    if(needTimeConversion){
+      const baseTime = this._basetimeFromTime(time)
+      t = baseTime
+      if(this.timingFunction !== null){
+        t = this.timingFunction._getValueAtTime(baseTime)
+      }
+      //console.log(`time ${time} activeTime ${time - this._animationStartTime} baseTime ${baseTime}`)
     }
 
     this.animations.forEach((animation) => {
-      animation._applyAnimation(obj, t)
+      animation._applyAnimation(obj, t, false)
     })
   }
 

@@ -248,13 +248,17 @@ export default class CAAnimation extends NSObject {
    * @access private
    * @param {Object} obj - target object to apply this animation.
    * @param {number} time - active time
+   * @param {boolean} [needTimeConversion = true] -
    * @returns {void}
    */
-  _applyAnimation(obj, time) {
-    const baseTime = this._basetimeFromTime(time)
-    let t = baseTime
-    if(this.timingFunction !== null){
-      t = this.timingFunction._getValueAtTime(baseTime)
+  _applyAnimation(obj, time, needTimeConversion = true) {
+    let t = time
+    if(needTimeConversion){
+      const baseTime = this._basetimeFromTime(time)
+      t = baseTime
+      if(this.timingFunction !== null){
+        t = this.timingFunction._getValueAtTime(baseTime)
+      }
     }
     this._handleEvents(obj, t)
   }
