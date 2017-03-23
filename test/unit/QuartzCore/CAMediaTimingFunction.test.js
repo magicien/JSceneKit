@@ -1,7 +1,7 @@
 'use strict'
 
 import CAMediaTimingFunction from '../../../src/js/QuartzCore/CAMediaTimingFunction'
-import * as Constants from '../constants'
+import * as Constants from '../../../src/js/constants'
 import chai from '../../../node_modules/chai/chai'
 import UnitTest from '../UnitTest'
 

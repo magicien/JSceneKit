@@ -22958,6 +22958,10 @@ module.exports =
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
+	var _SCNVector3 = __webpack_require__(16);
+
+	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
+
 	var _CGPoint = __webpack_require__(5);
 
 	var _CGPoint2 = _interopRequireDefault(_CGPoint);
@@ -23148,7 +23152,7 @@ module.exports =
 	      var data = v;
 	      if (v instanceof _SCNVector2.default) {
 	        data = [v.x, v.y, v.z];
-	      } else if (v instanceof SCNVector4) {
+	      } else if (v instanceof _SCNVector4.default) {
 	        data = [v.x, v.y, v.z, v.w];
 	      }
 	      if (data.length !== this._componentsPerVector) {
@@ -24772,7 +24776,7 @@ module.exports =
 	        return;
 	      }
 
-	      _get(SCNMorpher.prototype.__proto__ || Object.getPrototypeOf(SCNMorpher.prototype), 'setValueForKeyPath', this).call(this, value, keyPath);
+	      _get(SCNMorpher.prototype.__proto__ || Object.getPrototypeOf(SCNMorpher.prototype), 'setValueForKey', this).call(this, value, key);
 	    }
 
 	    /*
@@ -24856,12 +24860,9 @@ module.exports =
 	          var dstStride = pSource._dataStride / pSource._bytesPerComponent;
 	          var componentCount = source._componentsPerVector;
 	          var vectorCount = source._vectorCount;
-	          for (var _i2 = 0; _i2 < vectorCount; _i2++) {
-	            for (var j = 0; j < componentCount; j++) {
-	              pSource._data[dstIndex + j] += source._data[srcIndex + j] * weight;
-	              if (source._data[srcIndex + j] * weight > 0) {
-	                //console.log(`dstIndex ${dstIndex} srcIndex ${srcIndex} ${source._data[srcIndex+j]} ${pSource._data[dstIndex+j]}`)
-	              }
+	          for (var j = 0; j < vectorCount; j++) {
+	            for (var k = 0; k < componentCount; k++) {
+	              pSource._data[dstIndex + k] += source._data[srcIndex + k] * weight;
 	            }
 	            srcIndex += srcStride;
 	            dstIndex += dstStride;

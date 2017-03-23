@@ -2,6 +2,7 @@
 
 import NSObject from '../ObjectiveC/NSObject'
 import SCNVector3 from './SCNVector3'
+import SCNVector4 from './SCNVector4'
 import CGPoint from '../CoreGraphics/CGPoint'
 
 const _Semantic = {

@@ -89,7 +89,7 @@ export default class SCNMorpher extends NSObject {
       return
     }
 
-    super.setValueForKeyPath(value, keyPath)
+    super.setValueForKey(value, key)
   }
 
   /*
@@ -168,12 +168,9 @@ export default class SCNMorpher extends NSObject {
         const dstStride = pSource._dataStride / pSource._bytesPerComponent
         const componentCount = source._componentsPerVector
         const vectorCount = source._vectorCount
-        for(let i=0; i<vectorCount; i++){
-          for(let j=0; j<componentCount; j++){
-            pSource._data[dstIndex + j] += source._data[srcIndex + j] * weight
-            if(source._data[srcIndex+j] * weight > 0){
-              //console.log(`dstIndex ${dstIndex} srcIndex ${srcIndex} ${source._data[srcIndex+j]} ${pSource._data[dstIndex+j]}`)
-            }
+        for(let j=0; j<vectorCount; j++){
+          for(let k=0; k<componentCount; k++){
+            pSource._data[dstIndex + k] += source._data[srcIndex + k] * weight
           }
           srcIndex += srcStride
           dstIndex += dstStride
