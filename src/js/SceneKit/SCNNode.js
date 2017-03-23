@@ -1165,7 +1165,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523386-addanimation
    */
   addAnimationForKey(animation, key) {
-    console.log('addAnimationForKey: ' + key)
+    //console.log('addAnimationForKey: ' + key)
     if(typeof key === 'undefined' || key === null){
       key = Symbol()
     }
@@ -1409,9 +1409,10 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     const target = this._presentation ? this._presentation : this
 
     const paths = keyPath.split('.')
-    if(paths[0] === 'transform'){
-      paths.shift()
-      const restPath = paths.join('.')
+    const key = paths.shift()
+    const restPath = paths.join('.')
+    //console.log(`SCNNode setValueForKeyPath ${this.name} ${key} ${restPath}`)
+    if(key === 'transform'){
       switch(restPath){
         case 'rotation.x':
           target._rotation.x = value
@@ -1471,7 +1472,15 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
         default:
           // do nothing
       }
+    }else if(key === 'morpher'){
+      if(target.morpher === null){
+        throw new Error('target morpher === null')
+      }
+      target.morpher.setValueForKeyPath(value, restPath)
+      return
     }
+    // TODO: add other properties
+
     super.setValueForKeyPath(value, keyPath)
   }
 }

@@ -848,11 +848,11 @@ export default class SCNView {
       this._delegate.rendererWillRenderSceneAtTime(this._renderer, this._scene, time)
     }
 
-    //this._updateMorph()
-
     ///////////////////////
     // renders the scene //
     ///////////////////////
+    this._renderer.prepareBuffer()
+    this._updateMorph()
     this._renderer.render()
 
     if(this._delegate && this._delegate.rendererDidRenderSceneAtTime){
@@ -875,6 +875,7 @@ export default class SCNView {
           node.geometry._geometryElements.forEach((element) => {
             p.geometry._geometryElements.push(element.copy())
           })
+          p.geometry._geometrySources = []
           node.geometry._geometrySources.forEach((source) => {
             p.geometry._geometrySources.push(source.copy())
           })
@@ -885,6 +886,7 @@ export default class SCNView {
       p._rotation = node._rotation
       p._scale = node._scale
 
+      
       arr.push(...node.childNodes)
     }
   }

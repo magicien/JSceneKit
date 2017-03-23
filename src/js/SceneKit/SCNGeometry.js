@@ -455,10 +455,11 @@ This method is for OpenGL shader programs only. To bind custom variable data for
   /**
    * @access private
    * @param {WebGLContext} gl -
+   * @param {SCNGeometry} geometry - 
    * @param {boolean} update -
    * @returns {WebGLBuffer} -
    */
-  _createVertexBuffer(gl, update = false) {
+  _createVertexBuffer(gl, baseGeometry, update = false) {
     if(this._vertexBuffer === null){
       this._vertexBuffer = gl.createBuffer()
     }else if(!update){
@@ -467,12 +468,18 @@ This method is for OpenGL shader programs only. To bind custom variable data for
 
     gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer)
     const arr = []
-    const vertexSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
-    const normalSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.normal)[0]
-    const texcoordSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[0]
-    const indexSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneIndices)[0]
-    const weightSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneWeights)[0]
+    const vertexSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
+    const normalSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.normal)[0]
+    const texcoordSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[0]
+    const indexSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneIndices)[0]
+    const weightSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneWeights)[0]
     const vectorCount = vertexSource.vectorCount
+
+    const pVertexSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
+    const pNormalSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.normal)[0]
+    const pTexcoordSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[0]
+    const pIndexSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneIndices)[0]
+    const pWeightSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneWeights)[0]
 
     if(typeof vertexSource === 'undefined'){
       throw new Error('vertexSource is undefined')
@@ -503,26 +510,30 @@ This method is for OpenGL shader programs only. To bind custom variable data for
       }
     }
 
+    //console.log(`vertex(0): ${vertexSource.vectorAt(0)}`)
+    //console.log(`normal(0): ${normalSource.vectorAt(0)}`)
+    //console.log(`texcoord(0): ${texcoordSource.vectorAt(0)}`)
+
     // update geometry sources
     // FIXME: Don't change geometry sources. Use other variables
     const bytesPerComponent = 4
     let offset = 0
     const stride = (vertexComponents + normalComponents + texcoordComponents) * bytesPerComponent
-    vertexSource._bytesPerComponent = bytesPerComponent
-    vertexSource._dataOffset = offset
-    vertexSource._dataStride = stride
+    pVertexSource._bytesPerComponent = bytesPerComponent
+    pVertexSource._dataOffset = offset
+    pVertexSource._dataStride = stride
     offset += vertexComponents * bytesPerComponent
 
-    if(normalSource){
-      normalSource._bytesPerComponent = bytesPerComponent
-      normalSource._dataOffset = offset
-      normalSource._dataStride = stride
+    if(pNormalSource){
+      pNormalSource._bytesPerComponent = bytesPerComponent
+      pNormalSource._dataOffset = offset
+      pNormalSource._dataStride = stride
       offset += normalComponents * bytesPerComponent
     }
-    if(texcoordSource){
-      texcoordSource._bytesPerComponent = bytesPerComponent
-      texcoordSource._dataOffset = offset
-      texcoordSource._dataStride = stride
+    if(pTexcoordSource){
+      pTexcoordSource._bytesPerComponent = bytesPerComponent
+      pTexcoordSource._dataOffset = offset
+      pTexcoordSource._dataStride = stride
       offset += texcoordComponents * bytesPerComponent
     }
 
@@ -530,17 +541,16 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     offset *= vectorCount
 
     // FIXME: check if each source needs to update
-    if(update){
-      const vertexSubData = new Float32Array(arr)
-      //console.log(`vertexSubData.length: ${vertexSubData.length}`)
-      //console.log(`                  x4: ${vertexSubData.length * 4}`)
-      //console.log(`offset(length): ${offset}`)
-      //console.log(`vertexBuffer.length: ${this._vertexBuffer.length}`)
+    //if(update){
+    //  const vertexSubData = new Float32Array(arr)
       // void gl.bufferSubData(target, dstByteOffset, ArrayBufferView srcData, srcOffset, length)
-      //gl.bufferSubData(gl.ARRAY_BUFFER, 0, vertexSubData, 0, offset)
-      //gl.bufferSubData(gl.ARRAY_BUFFER, 0, vertexSubData, 0)
-      return this._vertexBuffer
-    }
+      //gl.bufferSubData(gl.ARRAY_BUFFER, 0, vertexSubData, 0, arr.length)
+      //gl.bufferSubData(gl.ARRAY_BUFFER, 0, this._hoge, 0, arr.length)
+      //for(let i=0; i<arr.length; i++){
+      //  console.log(`morph ${this._hoge[i]} => ${arr[i]}`)
+      //}
+    //  return this._vertexBuffer
+    //}
 
     const indexArray = indexSource ? indexSource.data : null
     const indexComponents = indexSource ? indexSource.componentsPerVector : 0
@@ -557,27 +567,36 @@ This method is for OpenGL shader programs only. To bind custom variable data for
       }
     }
 
-    if(indexSource){
-      indexSource._bytesPerComponent = bytesPerComponent
-      indexSource._dataOffset = offset
-      indexSource._dataStride = boneStride
+    if(pIndexSource){
+      pIndexSource._bytesPerComponent = bytesPerComponent
+      pIndexSource._dataOffset = offset
+      pIndexSource._dataStride = boneStride
       offset += indexComponents * bytesPerComponent
     }
-    if(weightSource){
-      weightSource._bytesPerComponent = bytesPerComponent
-      weightSource._dataOffset = offset
-      weightSource._dataStride = boneStride
+    if(pWeightSource){
+      pWeightSource._bytesPerComponent = bytesPerComponent
+      pWeightSource._dataOffset = offset
+      pWeightSource._dataStride = boneStride
       offset += weightComponents * bytesPerComponent
     }
 
-    //console.log(`arr.length: ${arr.length}`)
-    //console.log(`arr[72288-72291]: ${arr[72288]}, ${arr[72289]}, ${arr[72290]}, ${arr[72291]}`)
-    //console.log(`arr[72292-72295]: ${arr[72292]}, ${arr[72293]}, ${arr[72294]}, ${arr[72295]}`)
-    //console.log(`arr[72296-72299]: ${arr[72296]}, ${arr[72297]}, ${arr[72298]}, ${arr[72299]}`)
-    //console.log(`arr[72300-72303]: ${arr[72300]}, ${arr[72301]}, ${arr[72302]}, ${arr[72303]}`)
-
     const vertexData = new Float32Array(arr)
     gl.bufferData(gl.ARRAY_BUFFER, vertexData, gl.DYNAMIC_DRAW)
+
+    // set new data
+    pVertexSource._data = arr
+    if(pNormalSource){
+      pNormalSource._data = arr
+    }
+    if(pTexcoordSource){
+      pTexcoordSource._data = arr
+    }
+    if(pIndexSource){
+      pIndexSource._data = arr
+    }
+    if(pWeightSource){
+      pWeightSource._data = arr
+    }
 
     return this._vertexBuffer
   }
@@ -599,10 +618,15 @@ This method is for OpenGL shader programs only. To bind custom variable data for
   /**
    * @access private
    * @param {WebGLContext} gl -
+   * @param {SCNGeometry} baseGeometry - 
    * @returns {void}
    */
-  _updateVertexBuffer(gl) {
-    this._createVertexBuffer(gl, true)
+  _updateVertexBuffer(gl, baseGeometry) {
+    //this._createVertexBuffer(gl, baseGeometry, true)
+    const pVertexSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
+    const vertexData = new Float32Array(pVertexSource._data)
+    gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer)
+    gl.bufferData(gl.ARRAY_BUFFER, vertexData, gl.DYNAMIC_DRAW)
   }
 
   copy() {

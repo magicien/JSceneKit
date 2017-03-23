@@ -5,6 +5,7 @@ import SCNAnimatable from './SCNAnimatable'
 import SCNGeometry from './SCNGeometry'
 import SCNMorpherCalculationMode from './SCNMorpherCalculationMode'
 
+const _weightsPattern = new RegExp(/^weights\[(\d+)\]$/)
 
 /**
  * An object that manages smooth transitions between a node's base geometry and one or more target geometries.
@@ -74,29 +75,55 @@ export default class SCNMorpher extends NSObject {
     this._weights[targetIndex] = weight
   }
 
+  setValueForKey(value, key) {
+    //console.log(`SCNMorpher.setValueForKey: ${key}: ${value}`)
+    const weightsMatch = key.match(_weightsPattern)
+    if(weightsMatch !== null){
+      if(weightsMatch.length > 1){
+        const index = weightsMatch[1]
+        if(typeof this._weights[index] !== 'undefined'){
+          //console.log(`_weights[ ${index} ] = ${value}`)
+          this._weights[index] = value
+        }
+      }
+      return
+    }
+
+    super.setValueForKeyPath(value, keyPath)
+  }
+
+  /*
   setValueForKeyPath(value, keyPath) {
+    console.log(`SCNMorpher.setValueForKeyPath: ${keyPath}: ${value}`)
     const paths = keyPath.split('.')
     const key = paths.shift()
     const restPath = paths.join('.')
 
-    if(key === 'weights'){
-      if(paths.length > 0){
-        const targetIndex = this.targets.findIndex((target) => target.name === restPath)
-        if(targetIndex >= 0){
-          this._weights[targetIndex] = value
+    const weightsMatch = key.match(_weightsPattern)
+    if(weightsMatch !== null){
+      if(weightsMatch.length > 1){
+        //const targetIndex = this.targets.findIndex((target) => target.name === restPath)
+        //if(targetIndex >= 0){
+        //  this._weights[targetIndex] = value
+        //}
+        const index = weightsMatch[1]
+        if(typeof this._weights[index] !== 'undefined'){
+          console.log(`_weights[ ${index} ] = ${value}`)
+          this._weights[index] = value
         }
       }
     }else{
       super.setValueForKeyPath(value, keyPath)
     }
   }
+  */
 
   /**
    * @access private
    * @param {SCNNode} node -
    */
   _morph(node) {
-    console.log(`SCNMorpher._morph ${node.name}`)
+    //console.log(`SCNMorpher._morph ${node.name}`)
     const p = node.presentation
     if(node.geometry === null || p === null || p.geometry === null){
       // data is not ready
@@ -104,13 +131,12 @@ export default class SCNMorpher extends NSObject {
     }
     const pg = p.geometry
     const totalWeightForSemantic = new Map()
-    //const newData = new Map()
 
     // reset presentation geometry
     node.geometry.geometrySources.forEach((source) => {
       // FIXME: copy more than 1 source.
       const pSource = pg.getGeometrySourcesForSemantic(source.semantic)[0]
-      pSource._data = Array(source._data.length).fill(0)
+      pSource.fill(0)
       //newData.set(source.semantic, Array(source._data.length).fill(0))
       totalWeightForSemantic.set(source.semantic, 0.0)
     })
@@ -120,51 +146,79 @@ export default class SCNMorpher extends NSObject {
     //})
 
     const targetCount = this.targets.length
+    //console.log(`targetCount: ${targetCount}`)
     for(let i=0; i<targetCount; i++){
       const target = this.targets[i]
       const weight = this._weights[i]
       if(weight === 0 || typeof weight === 'undefined'){
         continue
       }
-      console.log(`morph ${target.name} weight ${weight}`)
+      //console.log(`morph ${target.name} weight ${weight}`)
       target.geometrySources.forEach((source) => {
         const pSource = pg.getGeometrySourcesForSemantic(source.semantic)[0]
-        //const pSource = newData.get(source.semantic)
         if(typeof pSource === 'undefined'){
           return
         }
         totalWeightForSemantic.set(source.semantic, totalWeightForSemantic.get(source.semantic) + weight)
 
-        const dataLen = source._data.length
-        for(let j=0; j<dataLen; j++){
-          pSource._data[j] += source._data[j] * weight
-          //pSource[j] += source._data[j] * weight
+        // FIXME: don't access private properties
+        let srcIndex = source._dataOffset / source._bytesPerComponent
+        const srcStride = source._dataStride / source._bytesPerComponent
+        let dstIndex = pSource._dataOffset / pSource._bytesPerComponent
+        const dstStride = pSource._dataStride / pSource._bytesPerComponent
+        const componentCount = source._componentsPerVector
+        const vectorCount = source._vectorCount
+        for(let i=0; i<vectorCount; i++){
+          for(let j=0; j<componentCount; j++){
+            pSource._data[dstIndex + j] += source._data[srcIndex + j] * weight
+            if(source._data[srcIndex+j] * weight > 0){
+              //console.log(`dstIndex ${dstIndex} srcIndex ${srcIndex} ${source._data[srcIndex+j]} ${pSource._data[dstIndex+j]}`)
+            }
+          }
+          srcIndex += srcStride
+          dstIndex += dstStride
         }
       })
     }
 
+    //console.log(`node.geometry.geometrySources.length: ${node.geometry.geometrySources.length}`)
     node.geometry.geometrySources.forEach((source) => {
+      //console.log(`add baseGeometry`)
       // FIXME: copy more than 1 source.
       const pSource = pg.getGeometrySourcesForSemantic(source.semantic)[0]
-      //const pSource = newData.get(source.semantic)
-      const dataLen = source._data.length
+      let srcIndex = source._dataOffset / source._bytesPerComponent
+      const srcStride = source._dataStride / source._bytesPerComponent
+      let dstIndex = pSource._dataOffset / pSource._bytesPerComponent
+      const dstStride = pSource._dataStride / pSource._bytesPerComponent
+      const componentCount = source._componentsPerVector
+      const vectorCount = source._vectorCount
+
       if(this.calculationMode === SCNMorpherCalculationMode.normalized){
         const weight = 1.0 - totalWeightForSemantic.get(source.semantic) 
-        for(let i=0; i<dataLen; i++){
-          pSource._data[i] += source._data[i] * weight
-          //pSource[i] += source._data[i] * weight
+        // FIXME: don't access private properties
+        for(let i=0; i<vectorCount; i++){
+          for(let j=0; j<componentCount; j++){
+            pSource._data[dstIndex + j] += source._data[srcIndex + j] * weight
+          }
+          srcIndex += srcStride
+          dstIndex += dstStride
         }
       }else{
+        //console.log(`additive: vector: ${vectorCount}, component: ${componentCount}`)
         // calculationMode: additive
-        for(let i=0; i<dataLen; i++){
-          pSource._data[i] += source._data[i]
-          //pSource[i] += source._data[i]
+        // FIXME: don't access private properties
+        for(let i=0; i<vectorCount; i++){
+          for(let j=0; j<componentCount; j++){
+            pSource._data[dstIndex + j] += source._data[srcIndex + j]
+          }
+          srcIndex += srcStride
+          dstIndex += dstStride
         }
       }
     })
 
     // TODO: needs to update normal vector?
 
-    console.log(`_morph done`)
+    //console.log(`_morph done`)
   }
 }

@@ -410,7 +410,7 @@ SCNGeometrySource *source = [SCNGeometrySource geometrySourceWithBuffer:buffer
    */
   vectorAt(index) {
     if(index < 0 || index >= this.vectorCount){
-      return null
+      throw new Error(`index out of range: ${index} (0 - ${this.vectorCount - 1})`)
     }
     const indexStride = this._dataStride / this._bytesPerComponent
     const ind = index * indexStride + this._dataOffset / this._bytesPerComponent
@@ -419,6 +419,50 @@ SCNGeometrySource *source = [SCNGeometrySource geometrySourceWithBuffer:buffer
       arr.push(this._data[ind + i])
     }
     return arr
+  }
+
+  /**
+   * @access public
+   * @param {number[]|SCNVector3|SCNVector4} v -
+   * @param {number} index -
+   * @returns {void}
+   */
+  setVectorAt(v, index) {
+    if(index < 0 || index >= this.vectorCount){
+      throw new Error(`index out of range: ${index} (0 - ${this.vectorCount - 1})`)
+    }
+    let data = v
+    if(v instanceof SCNVector3){
+      data = [v.x, v.y, v.z]
+    }else if(v instanceof SCNVector4){
+      data = [v.x, v.y, v.z, v.w]
+    }
+    if(data.length !== this._componentsPerVector){
+      throw new Error(`vector size inconsistent: ${data.length} != ${this._componentsPerVector}`)
+    }
+
+    const indexStride = this._dataStride / this._bytesPerComponent
+    const ind = index * indexStride + this._dataOffset / this._bytesPerComponent
+    for(let i=0; i<this._componentsPerVector; i++){
+      this._data[ind + i] = v[i]
+    }
+  }
+
+  /**
+   * 
+   * @access public
+   * @param {number} value -
+   * @returns {void}
+   */
+  fill(value) {
+    let index = this._dataOffset / this._bytesPerComponent
+    const stride = this._dataStride / this._bytesPerComponent
+    for(let i=0; i<this._vectorCount; i++){
+      for(let j=0; j<this._componentsPerVector; j++){
+        this._data[index + j] = value
+      }
+      index += stride
+    }
   }
 
   copy() {

@@ -13708,7 +13708,7 @@ module.exports =
 	  }, {
 	    key: 'addAnimationForKey',
 	    value: function addAnimationForKey(animation, key) {
-	      console.log('addAnimationForKey: ' + key);
+	      //console.log('addAnimationForKey: ' + key)
 	      if (typeof key === 'undefined' || key === null) {
 	        key = Symbol();
 	      }
@@ -13954,9 +13954,10 @@ module.exports =
 	      var target = this._presentation ? this._presentation : this;
 
 	      var paths = keyPath.split('.');
-	      if (paths[0] === 'transform') {
-	        paths.shift();
-	        var restPath = paths.join('.');
+	      var key = paths.shift();
+	      var restPath = paths.join('.');
+	      //console.log(`SCNNode setValueForKeyPath ${this.name} ${key} ${restPath}`)
+	      if (key === 'transform') {
 	        switch (restPath) {
 	          case 'rotation.x':
 	            target._rotation.x = value;
@@ -14017,7 +14018,15 @@ module.exports =
 	          default:
 	          // do nothing
 	        }
+	      } else if (key === 'morpher') {
+	        if (target.morpher === null) {
+	          throw new Error('target morpher === null');
+	        }
+	        target.morpher.setValueForKeyPath(value, restPath);
+	        return;
 	      }
+	      // TODO: add other properties
+
 	      _get(SCNNode.prototype.__proto__ || Object.getPrototypeOf(SCNNode.prototype), 'setValueForKeyPath', this).call(this, value, keyPath);
 	    }
 	  }, {
@@ -15378,14 +15387,15 @@ module.exports =
 	    /**
 	     * @access private
 	     * @param {WebGLContext} gl -
+	     * @param {SCNGeometry} geometry - 
 	     * @param {boolean} update -
 	     * @returns {WebGLBuffer} -
 	     */
 
 	  }, {
 	    key: '_createVertexBuffer',
-	    value: function _createVertexBuffer(gl) {
-	      var update = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+	    value: function _createVertexBuffer(gl, baseGeometry) {
+	      var update = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
 
 	      if (this._vertexBuffer === null) {
 	        this._vertexBuffer = gl.createBuffer();
@@ -15395,12 +15405,18 @@ module.exports =
 
 	      gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer);
 	      var arr = [];
-	      var vertexSource = this.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
-	      var normalSource = this.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.normal)[0];
-	      var texcoordSource = this.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.texcoord)[0];
-	      var indexSource = this.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.boneIndices)[0];
-	      var weightSource = this.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.boneWeights)[0];
+	      var vertexSource = baseGeometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
+	      var normalSource = baseGeometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.normal)[0];
+	      var texcoordSource = baseGeometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.texcoord)[0];
+	      var indexSource = baseGeometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.boneIndices)[0];
+	      var weightSource = baseGeometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.boneWeights)[0];
 	      var vectorCount = vertexSource.vectorCount;
+
+	      var pVertexSource = this.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
+	      var pNormalSource = this.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.normal)[0];
+	      var pTexcoordSource = this.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.texcoord)[0];
+	      var pIndexSource = this.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.boneIndices)[0];
+	      var pWeightSource = this.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.boneWeights)[0];
 
 	      if (typeof vertexSource === 'undefined') {
 	        throw new Error('vertexSource is undefined');
@@ -15431,26 +15447,30 @@ module.exports =
 	        }
 	      }
 
+	      //console.log(`vertex(0): ${vertexSource.vectorAt(0)}`)
+	      //console.log(`normal(0): ${normalSource.vectorAt(0)}`)
+	      //console.log(`texcoord(0): ${texcoordSource.vectorAt(0)}`)
+
 	      // update geometry sources
 	      // FIXME: Don't change geometry sources. Use other variables
 	      var bytesPerComponent = 4;
 	      var offset = 0;
 	      var stride = (vertexComponents + normalComponents + texcoordComponents) * bytesPerComponent;
-	      vertexSource._bytesPerComponent = bytesPerComponent;
-	      vertexSource._dataOffset = offset;
-	      vertexSource._dataStride = stride;
+	      pVertexSource._bytesPerComponent = bytesPerComponent;
+	      pVertexSource._dataOffset = offset;
+	      pVertexSource._dataStride = stride;
 	      offset += vertexComponents * bytesPerComponent;
 
-	      if (normalSource) {
-	        normalSource._bytesPerComponent = bytesPerComponent;
-	        normalSource._dataOffset = offset;
-	        normalSource._dataStride = stride;
+	      if (pNormalSource) {
+	        pNormalSource._bytesPerComponent = bytesPerComponent;
+	        pNormalSource._dataOffset = offset;
+	        pNormalSource._dataStride = stride;
 	        offset += normalComponents * bytesPerComponent;
 	      }
-	      if (texcoordSource) {
-	        texcoordSource._bytesPerComponent = bytesPerComponent;
-	        texcoordSource._dataOffset = offset;
-	        texcoordSource._dataStride = stride;
+	      if (pTexcoordSource) {
+	        pTexcoordSource._bytesPerComponent = bytesPerComponent;
+	        pTexcoordSource._dataOffset = offset;
+	        pTexcoordSource._dataStride = stride;
 	        offset += texcoordComponents * bytesPerComponent;
 	      }
 
@@ -15458,17 +15478,16 @@ module.exports =
 	      offset *= vectorCount;
 
 	      // FIXME: check if each source needs to update
-	      if (update) {
-	        var vertexSubData = new Float32Array(arr);
-	        //console.log(`vertexSubData.length: ${vertexSubData.length}`)
-	        //console.log(`                  x4: ${vertexSubData.length * 4}`)
-	        //console.log(`offset(length): ${offset}`)
-	        //console.log(`vertexBuffer.length: ${this._vertexBuffer.length}`)
-	        // void gl.bufferSubData(target, dstByteOffset, ArrayBufferView srcData, srcOffset, length)
-	        //gl.bufferSubData(gl.ARRAY_BUFFER, 0, vertexSubData, 0, offset)
-	        //gl.bufferSubData(gl.ARRAY_BUFFER, 0, vertexSubData, 0)
-	        return this._vertexBuffer;
-	      }
+	      //if(update){
+	      //  const vertexSubData = new Float32Array(arr)
+	      // void gl.bufferSubData(target, dstByteOffset, ArrayBufferView srcData, srcOffset, length)
+	      //gl.bufferSubData(gl.ARRAY_BUFFER, 0, vertexSubData, 0, arr.length)
+	      //gl.bufferSubData(gl.ARRAY_BUFFER, 0, this._hoge, 0, arr.length)
+	      //for(let i=0; i<arr.length; i++){
+	      //  console.log(`morph ${this._hoge[i]} => ${arr[i]}`)
+	      //}
+	      //  return this._vertexBuffer
+	      //}
 
 	      var indexArray = indexSource ? indexSource.data : null;
 	      var indexComponents = indexSource ? indexSource.componentsPerVector : 0;
@@ -15485,27 +15504,36 @@ module.exports =
 	        }
 	      }
 
-	      if (indexSource) {
-	        indexSource._bytesPerComponent = bytesPerComponent;
-	        indexSource._dataOffset = offset;
-	        indexSource._dataStride = boneStride;
+	      if (pIndexSource) {
+	        pIndexSource._bytesPerComponent = bytesPerComponent;
+	        pIndexSource._dataOffset = offset;
+	        pIndexSource._dataStride = boneStride;
 	        offset += indexComponents * bytesPerComponent;
 	      }
-	      if (weightSource) {
-	        weightSource._bytesPerComponent = bytesPerComponent;
-	        weightSource._dataOffset = offset;
-	        weightSource._dataStride = boneStride;
+	      if (pWeightSource) {
+	        pWeightSource._bytesPerComponent = bytesPerComponent;
+	        pWeightSource._dataOffset = offset;
+	        pWeightSource._dataStride = boneStride;
 	        offset += weightComponents * bytesPerComponent;
 	      }
 
-	      //console.log(`arr.length: ${arr.length}`)
-	      //console.log(`arr[72288-72291]: ${arr[72288]}, ${arr[72289]}, ${arr[72290]}, ${arr[72291]}`)
-	      //console.log(`arr[72292-72295]: ${arr[72292]}, ${arr[72293]}, ${arr[72294]}, ${arr[72295]}`)
-	      //console.log(`arr[72296-72299]: ${arr[72296]}, ${arr[72297]}, ${arr[72298]}, ${arr[72299]}`)
-	      //console.log(`arr[72300-72303]: ${arr[72300]}, ${arr[72301]}, ${arr[72302]}, ${arr[72303]}`)
-
 	      var vertexData = new Float32Array(arr);
 	      gl.bufferData(gl.ARRAY_BUFFER, vertexData, gl.DYNAMIC_DRAW);
+
+	      // set new data
+	      pVertexSource._data = arr;
+	      if (pNormalSource) {
+	        pNormalSource._data = arr;
+	      }
+	      if (pTexcoordSource) {
+	        pTexcoordSource._data = arr;
+	      }
+	      if (pIndexSource) {
+	        pIndexSource._data = arr;
+	      }
+	      if (pWeightSource) {
+	        pWeightSource._data = arr;
+	      }
 
 	      return this._vertexBuffer;
 	    }
@@ -15532,13 +15560,18 @@ module.exports =
 	    /**
 	     * @access private
 	     * @param {WebGLContext} gl -
+	     * @param {SCNGeometry} baseGeometry - 
 	     * @returns {void}
 	     */
 
 	  }, {
 	    key: '_updateVertexBuffer',
-	    value: function _updateVertexBuffer(gl) {
-	      this._createVertexBuffer(gl, true);
+	    value: function _updateVertexBuffer(gl, baseGeometry) {
+	      //this._createVertexBuffer(gl, baseGeometry, true)
+	      var pVertexSource = this.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
+	      var vertexData = new Float32Array(pVertexSource._data);
+	      gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer);
+	      gl.bufferData(gl.ARRAY_BUFFER, vertexData, gl.DYNAMIC_DRAW);
 	    }
 	  }, {
 	    key: 'copy',
@@ -16550,6 +16583,32 @@ module.exports =
 	      }
 	      return targetNodes;
 	    }
+	  }, {
+	    key: 'prepareBuffer',
+	    value: function prepareBuffer() {
+	      var _this3 = this;
+
+	      // FIXME: reuse renderingArray
+	      var renderingArray = this._createRenderingNodeArray();
+	      renderingArray.forEach(function (node) {
+	        _this3._prepareBufferForNode(node);
+	      });
+	    }
+	  }, {
+	    key: '_prepareBufferForNode',
+	    value: function _prepareBufferForNode(node) {
+	      var gl = this.context;
+	      var geometry = node.presentation.geometry;
+	      var program = this._defaultProgram._glProgram;
+	      if (geometry.program !== null) {
+	        program = geometry.program._glProgram;
+	      }
+	      gl.useProgram(program);
+
+	      if (geometry._vertexArrayObjects === null) {
+	        this._initializeVAO(node, program);
+	      }
+	    }
 
 	    /**
 	     *
@@ -16569,21 +16628,18 @@ module.exports =
 	      }
 	      gl.useProgram(program);
 
-	      if (geometry._vertexArrayObjects === null) {
-	        this._initializeVAO(node, program);
-	      } else if (node.morpher !== null) {
-	        //console.log(`node.morpher: ${node.morpher}`)
+	      //if(geometry._vertexArrayObjects === null){
+	      //  this._initializeVAO(node, program)
+	      //}else if(node.morpher !== null){
+	      //  //console.log(`node.morpher: ${node.morpher}`)
+	      //  this._updateVAO(node)
+	      //}
+	      if (node.morpher !== null) {
 	        this._updateVAO(node);
 	      }
 
 	      // TODO: use geometry setting
 	      gl.disable(gl.CULL_FACE);
-
-	      //console.log('nodeName: ' + node.name)
-	      if (node.presentation.skinner) {
-	        //console.log('numSkinningJoints: ' + node.presentation.skinner.numSkinningJoints)
-	        //console.log('skinningJoints: ' + node.presentation.skinner.float32Array())
-	      }
 
 	      if (node.presentation.skinner !== null) {
 	        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints);
@@ -16858,9 +16914,10 @@ module.exports =
 	    value: function _initializeVAO(node, program) {
 	      var gl = this.context;
 	      var geometry = node.presentation.geometry;
+	      var baseGeometry = node.geometry;
 
 	      // prepare vertex array data
-	      var vertexBuffer = geometry._createVertexBuffer(gl);
+	      var vertexBuffer = geometry._createVertexBuffer(gl, baseGeometry);
 	      // TODO: retain attribute locations
 	      var positionLoc = gl.getAttribLocation(program, 'position');
 	      var normalLoc = gl.getAttribLocation(program, 'normal');
@@ -16953,17 +17010,16 @@ module.exports =
 	    value: function _updateVAO(node) {
 	      var gl = this.context;
 	      var geometry = node.presentation.geometry;
-	      //const vertexBuffer = geometry._createVertexBuffer(gl)
-	      //const vao = gl.createVertexArray()
+	      var baseGeometry = node.geometry;
 	      //gl.bindVertexArray(vao)
 	      //gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer)
 
-	      geometry._updateVertexBuffer(gl);
+	      geometry._updateVertexBuffer(gl, baseGeometry);
 	    }
 	  }, {
 	    key: '_createDummyTexture',
 	    value: function _createDummyTexture() {
-	      var _this3 = this;
+	      var _this4 = this;
 
 	      var gl = this.context;
 	      var image = new Image();
@@ -16980,11 +17036,11 @@ module.exports =
 	      this.__dummyTexture = gl.createTexture();
 
 	      image.onload = function () {
-	        gl.bindTexture(gl.TEXTURE_2D, _this3.__dummyTexture);
+	        gl.bindTexture(gl.TEXTURE_2D, _this4.__dummyTexture);
 	        // texImage2D(target, level, internalformat, width, height, border, format, type, source)
 	        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, image);
 	        gl.bindTexture(gl.TEXTURE_2D, null);
-	        _this3._setDummyTextureAsDefault();
+	        _this4._setDummyTextureAsDefault();
 	      };
 	      //console.log('canvas.toDataURL: ' + canvas.toDataURL())
 	      image.src = canvas.toDataURL();
@@ -23022,7 +23078,7 @@ module.exports =
 	     */
 	    value: function vectorAt(index) {
 	      if (index < 0 || index >= this.vectorCount) {
-	        return null;
+	        throw new Error('index out of range: ' + index + ' (0 - ' + (this.vectorCount - 1) + ')');
 	      }
 	      var indexStride = this._dataStride / this._bytesPerComponent;
 	      var ind = index * indexStride + this._dataOffset / this._bytesPerComponent;
@@ -23031,6 +23087,56 @@ module.exports =
 	        arr.push(this._data[ind + i]);
 	      }
 	      return arr;
+	    }
+
+	    /**
+	     * @access public
+	     * @param {number[]|SCNVector3|SCNVector4} v -
+	     * @param {number} index -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: 'setVectorAt',
+	    value: function setVectorAt(v, index) {
+	      if (index < 0 || index >= this.vectorCount) {
+	        throw new Error('index out of range: ' + index + ' (0 - ' + (this.vectorCount - 1) + ')');
+	      }
+	      var data = v;
+	      if (v instanceof _SCNVector2.default) {
+	        data = [v.x, v.y, v.z];
+	      } else if (v instanceof SCNVector4) {
+	        data = [v.x, v.y, v.z, v.w];
+	      }
+	      if (data.length !== this._componentsPerVector) {
+	        throw new Error('vector size inconsistent: ' + data.length + ' != ' + this._componentsPerVector);
+	      }
+
+	      var indexStride = this._dataStride / this._bytesPerComponent;
+	      var ind = index * indexStride + this._dataOffset / this._bytesPerComponent;
+	      for (var i = 0; i < this._componentsPerVector; i++) {
+	        this._data[ind + i] = v[i];
+	      }
+	    }
+
+	    /**
+	     * 
+	     * @access public
+	     * @param {number} value -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: 'fill',
+	    value: function fill(value) {
+	      var index = this._dataOffset / this._bytesPerComponent;
+	      var stride = this._dataStride / this._bytesPerComponent;
+	      for (var i = 0; i < this._vectorCount; i++) {
+	        for (var j = 0; j < this._componentsPerVector; j++) {
+	          this._data[index + j] = value;
+	        }
+	        index += stride;
+	      }
 	    }
 	  }, {
 	    key: 'copy',
@@ -24526,6 +24632,8 @@ module.exports =
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+	var _weightsPattern = new RegExp(/^weights\[(\d+)\]$/);
+
 	/**
 	 * An object that manages smooth transitions between a node's base geometry and one or more target geometries.
 	 * @access public
@@ -24533,6 +24641,7 @@ module.exports =
 	 * @implements {SCNAnimatable}
 	 * @see https://developer.apple.com/reference/scenekit/scnmorpher
 	 */
+
 	var SCNMorpher = function (_NSObject) {
 	  _inherits(SCNMorpher, _NSObject);
 
@@ -24605,25 +24714,48 @@ module.exports =
 	      this._weights[targetIndex] = weight;
 	    }
 	  }, {
-	    key: 'setValueForKeyPath',
-	    value: function setValueForKeyPath(value, keyPath) {
-	      var paths = keyPath.split('.');
-	      var key = paths.shift();
-	      var restPath = paths.join('.');
-
-	      if (key === 'weights') {
-	        if (paths.length > 0) {
-	          var targetIndex = this.targets.findIndex(function (target) {
-	            return target.name === restPath;
-	          });
-	          if (targetIndex >= 0) {
-	            this._weights[targetIndex] = value;
+	    key: 'setValueForKey',
+	    value: function setValueForKey(value, key) {
+	      //console.log(`SCNMorpher.setValueForKey: ${key}: ${value}`)
+	      var weightsMatch = key.match(_weightsPattern);
+	      if (weightsMatch !== null) {
+	        if (weightsMatch.length > 1) {
+	          var index = weightsMatch[1];
+	          if (typeof this._weights[index] !== 'undefined') {
+	            //console.log(`_weights[ ${index} ] = ${value}`)
+	            this._weights[index] = value;
 	          }
 	        }
-	      } else {
-	        _get(SCNMorpher.prototype.__proto__ || Object.getPrototypeOf(SCNMorpher.prototype), 'setValueForKeyPath', this).call(this, value, keyPath);
+	        return;
+	      }
+
+	      _get(SCNMorpher.prototype.__proto__ || Object.getPrototypeOf(SCNMorpher.prototype), 'setValueForKeyPath', this).call(this, value, keyPath);
+	    }
+
+	    /*
+	    setValueForKeyPath(value, keyPath) {
+	      console.log(`SCNMorpher.setValueForKeyPath: ${keyPath}: ${value}`)
+	      const paths = keyPath.split('.')
+	      const key = paths.shift()
+	      const restPath = paths.join('.')
+	       const weightsMatch = key.match(_weightsPattern)
+	      if(weightsMatch !== null){
+	        if(weightsMatch.length > 1){
+	          //const targetIndex = this.targets.findIndex((target) => target.name === restPath)
+	          //if(targetIndex >= 0){
+	          //  this._weights[targetIndex] = value
+	          //}
+	          const index = weightsMatch[1]
+	          if(typeof this._weights[index] !== 'undefined'){
+	            console.log(`_weights[ ${index} ] = ${value}`)
+	            this._weights[index] = value
+	          }
+	        }
+	      }else{
+	        super.setValueForKeyPath(value, keyPath)
 	      }
 	    }
+	    */
 
 	    /**
 	     * @access private
@@ -24635,7 +24767,7 @@ module.exports =
 	    value: function _morph(node) {
 	      var _this2 = this;
 
-	      console.log('SCNMorpher._morph ' + node.name);
+	      //console.log(`SCNMorpher._morph ${node.name}`)
 	      var p = node.presentation;
 	      if (node.geometry === null || p === null || p.geometry === null) {
 	        // data is not ready
@@ -24643,13 +24775,12 @@ module.exports =
 	      }
 	      var pg = p.geometry;
 	      var totalWeightForSemantic = new Map();
-	      //const newData = new Map()
 
 	      // reset presentation geometry
 	      node.geometry.geometrySources.forEach(function (source) {
 	        // FIXME: copy more than 1 source.
 	        var pSource = pg.getGeometrySourcesForSemantic(source.semantic)[0];
-	        pSource._data = Array(source._data.length).fill(0);
+	        pSource.fill(0);
 	        //newData.set(source.semantic, Array(source._data.length).fill(0))
 	        totalWeightForSemantic.set(source.semantic, 0.0);
 	      });
@@ -24659,6 +24790,7 @@ module.exports =
 	      //})
 
 	      var targetCount = this.targets.length;
+	      //console.log(`targetCount: ${targetCount}`)
 
 	      var _loop = function _loop(i) {
 	        var target = _this2.targets[i];
@@ -24666,19 +24798,30 @@ module.exports =
 	        if (weight === 0 || typeof weight === 'undefined') {
 	          return 'continue';
 	        }
-	        console.log('morph ' + target.name + ' weight ' + weight);
+	        //console.log(`morph ${target.name} weight ${weight}`)
 	        target.geometrySources.forEach(function (source) {
 	          var pSource = pg.getGeometrySourcesForSemantic(source.semantic)[0];
-	          //const pSource = newData.get(source.semantic)
 	          if (typeof pSource === 'undefined') {
 	            return;
 	          }
 	          totalWeightForSemantic.set(source.semantic, totalWeightForSemantic.get(source.semantic) + weight);
 
-	          var dataLen = source._data.length;
-	          for (var j = 0; j < dataLen; j++) {
-	            pSource._data[j] += source._data[j] * weight;
-	            //pSource[j] += source._data[j] * weight
+	          // FIXME: don't access private properties
+	          var srcIndex = source._dataOffset / source._bytesPerComponent;
+	          var srcStride = source._dataStride / source._bytesPerComponent;
+	          var dstIndex = pSource._dataOffset / pSource._bytesPerComponent;
+	          var dstStride = pSource._dataStride / pSource._bytesPerComponent;
+	          var componentCount = source._componentsPerVector;
+	          var vectorCount = source._vectorCount;
+	          for (var _i2 = 0; _i2 < vectorCount; _i2++) {
+	            for (var j = 0; j < componentCount; j++) {
+	              pSource._data[dstIndex + j] += source._data[srcIndex + j] * weight;
+	              if (source._data[srcIndex + j] * weight > 0) {
+	                //console.log(`dstIndex ${dstIndex} srcIndex ${srcIndex} ${source._data[srcIndex+j]} ${pSource._data[dstIndex+j]}`)
+	              }
+	            }
+	            srcIndex += srcStride;
+	            dstIndex += dstStride;
 	          }
 	        });
 	      };
@@ -24689,29 +24832,45 @@ module.exports =
 	        if (_ret === 'continue') continue;
 	      }
 
+	      //console.log(`node.geometry.geometrySources.length: ${node.geometry.geometrySources.length}`)
 	      node.geometry.geometrySources.forEach(function (source) {
+	        //console.log(`add baseGeometry`)
 	        // FIXME: copy more than 1 source.
 	        var pSource = pg.getGeometrySourcesForSemantic(source.semantic)[0];
-	        //const pSource = newData.get(source.semantic)
-	        var dataLen = source._data.length;
+	        var srcIndex = source._dataOffset / source._bytesPerComponent;
+	        var srcStride = source._dataStride / source._bytesPerComponent;
+	        var dstIndex = pSource._dataOffset / pSource._bytesPerComponent;
+	        var dstStride = pSource._dataStride / pSource._bytesPerComponent;
+	        var componentCount = source._componentsPerVector;
+	        var vectorCount = source._vectorCount;
+
 	        if (_this2.calculationMode === _SCNMorpherCalculationMode2.default.normalized) {
 	          var _weight = 1.0 - totalWeightForSemantic.get(source.semantic);
-	          for (var i = 0; i < dataLen; i++) {
-	            pSource._data[i] += source._data[i] * _weight;
-	            //pSource[i] += source._data[i] * weight
+	          // FIXME: don't access private properties
+	          for (var i = 0; i < vectorCount; i++) {
+	            for (var j = 0; j < componentCount; j++) {
+	              pSource._data[dstIndex + j] += source._data[srcIndex + j] * _weight;
+	            }
+	            srcIndex += srcStride;
+	            dstIndex += dstStride;
 	          }
 	        } else {
+	          //console.log(`additive: vector: ${vectorCount}, component: ${componentCount}`)
 	          // calculationMode: additive
-	          for (var _i = 0; _i < dataLen; _i++) {
-	            pSource._data[_i] += source._data[_i];
-	            //pSource[i] += source._data[i]
+	          // FIXME: don't access private properties
+	          for (var _i = 0; _i < vectorCount; _i++) {
+	            for (var _j = 0; _j < componentCount; _j++) {
+	              pSource._data[dstIndex + _j] += source._data[srcIndex + _j];
+	            }
+	            srcIndex += srcStride;
+	            dstIndex += dstStride;
 	          }
 	        }
 	      });
 
 	      // TODO: needs to update normal vector?
 
-	      console.log('_morph done');
+	      //console.log(`_morph done`)
 	    }
 	  }]);
 
@@ -30962,11 +31121,11 @@ module.exports =
 	        this._delegate.rendererWillRenderSceneAtTime(this._renderer, this._scene, time);
 	      }
 
-	      //this._updateMorph()
-
 	      ///////////////////////
 	      // renders the scene //
 	      ///////////////////////
+	      this._renderer.prepareBuffer();
+	      this._updateMorph();
 	      this._renderer.render();
 
 	      if (this._delegate && this._delegate.rendererDidRenderSceneAtTime) {
@@ -30991,6 +31150,7 @@ module.exports =
 	            node.geometry._geometryElements.forEach(function (element) {
 	              p.geometry._geometryElements.push(element.copy());
 	            });
+	            p.geometry._geometrySources = [];
 	            node.geometry._geometrySources.forEach(function (source) {
 	              p.geometry._geometrySources.push(source.copy());
 	            });

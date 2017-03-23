@@ -514,6 +514,28 @@ export default class SCNRenderer extends NSObject {
     return targetNodes
   }
 
+  prepareBuffer() {
+    // FIXME: reuse renderingArray
+    const renderingArray = this._createRenderingNodeArray()
+    renderingArray.forEach((node) => {
+      this._prepareBufferForNode(node)
+    })
+  }
+
+  _prepareBufferForNode(node) {
+    const gl = this.context
+    const geometry = node.presentation.geometry
+    let program = this._defaultProgram._glProgram
+    if(geometry.program !== null){
+      program = geometry.program._glProgram
+    }
+    gl.useProgram(program)
+
+    if(geometry._vertexArrayObjects === null){
+      this._initializeVAO(node, program)
+    }
+  }
+
   /**
    *
    * @access private
@@ -529,21 +551,18 @@ export default class SCNRenderer extends NSObject {
     }
     gl.useProgram(program)
 
-    if(geometry._vertexArrayObjects === null){
-      this._initializeVAO(node, program)
-    }else if(node.morpher !== null){
-      //console.log(`node.morpher: ${node.morpher}`)
+    //if(geometry._vertexArrayObjects === null){
+    //  this._initializeVAO(node, program)
+    //}else if(node.morpher !== null){
+    //  //console.log(`node.morpher: ${node.morpher}`)
+    //  this._updateVAO(node)
+    //}
+    if(node.morpher !== null){
       this._updateVAO(node)
     }
 
     // TODO: use geometry setting
     gl.disable(gl.CULL_FACE)
-
-    //console.log('nodeName: ' + node.name)
-    if(node.presentation.skinner){
-      //console.log('numSkinningJoints: ' + node.presentation.skinner.numSkinningJoints)
-      //console.log('skinningJoints: ' + node.presentation.skinner.float32Array())
-    }
 
     if(node.presentation.skinner !== null){
       gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
@@ -915,9 +934,10 @@ export default class SCNRenderer extends NSObject {
   _initializeVAO(node, program) {
     const gl = this.context
     const geometry = node.presentation.geometry
+    const baseGeometry = node.geometry
 
     // prepare vertex array data
-    const vertexBuffer = geometry._createVertexBuffer(gl)
+    const vertexBuffer = geometry._createVertexBuffer(gl, baseGeometry)
     // TODO: retain attribute locations
     const positionLoc = gl.getAttribLocation(program, 'position')
     const normalLoc = gl.getAttribLocation(program, 'normal')
@@ -1009,12 +1029,11 @@ export default class SCNRenderer extends NSObject {
   _updateVAO(node) {
     const gl = this.context
     const geometry = node.presentation.geometry
-    //const vertexBuffer = geometry._createVertexBuffer(gl)
-    //const vao = gl.createVertexArray()
+    const baseGeometry = node.geometry
     //gl.bindVertexArray(vao)
     //gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer)
 
-    geometry._updateVertexBuffer(gl)
+    geometry._updateVertexBuffer(gl, baseGeometry)
   }
 
   get _dummyTexture() {
