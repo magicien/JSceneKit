@@ -1,1 +1,2 @@
+/*global require*/
 require('./registerBabel')
