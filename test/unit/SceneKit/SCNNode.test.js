@@ -67,6 +67,40 @@ describe('SCNNode class', () => {
   })
   */
 
+  /** @test {SCNNode#addChildNode} */
+  describe('addChildNode', () => {
+    it('should work', () => {
+    })
+  })
+
+  /** @test {SCNNode#insertChildNodeAt} */
+  describe('insertChildNodeAt', () => {
+  })
+
+  /** @test {SCNNode#removeFromParentNode} */
+  describe('removeFromParentNode', () => {
+    it('should work', () => {
+      const parentNode = new SCNNode()
+      const childNode1 = new SCNNode()
+      const childNode2 = new SCNNode()
+      const childNode3 = new SCNNode()
+
+      parentNode.addChildNode(childNode1)
+      parentNode.addChildNode(childNode2)
+      parentNode.addChildNode(childNode3)
+
+      expect(childNode2._parent).to.equal(parentNode)
+      expect(parentNode._childNodes.length).to.equal(3)
+      expect(parentNode._childNodes.indexOf(childNode2)).not.to.equal(-1)
+
+      childNode2.removeFromParentNode()
+
+      expect(childNode2._parent).to.be.null
+      expect(parentNode._childNodes.length).to.equal(2)
+      expect(parentNode._childNodes.indexOf(childNode2)).to.equal(-1)
+    })
+  })
+
   /** @test {SCNNode#transform} */
   describe('transform', () => {
     it('should be instanceof SCNMatrix4', () => {

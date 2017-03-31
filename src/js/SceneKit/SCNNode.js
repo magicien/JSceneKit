@@ -694,7 +694,7 @@ export default class SCNNode extends NSObject {
     if(index < 0){
       return
     }
-    this._removeObjectFromChildNodesAtIndex(index)
+    parentNode._removeObjectFromChildNodesAtIndex(index)
   }
 
   /**
@@ -947,7 +947,6 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @see https://developer.apple.com/reference/scenekit/scnnode/1408046-clone
    */
   clone() {
-    //console.log('SCNNode.clone() ' + this.name)
     const node = this.copy()
     
     this._childNodes.forEach((child) => {

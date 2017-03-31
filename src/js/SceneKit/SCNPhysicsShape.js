@@ -25,36 +25,28 @@ const _ShapeType = {
  * @see https://developer.apple.com/reference/scenekit/scnphysicsshape
  */
 export default class SCNPhysicsShape extends NSObject {
-
-  /**
-   * constructor
-   * @access public
-   * @returns {void}
-   */
-  init() {
-
-    // Getting Information About a Shape
-
-    this._sourceObject = null
-    this._options = null
-    this._transforms = null
-  }
-
   // Creating Physics Shapes
 
   /**
    * Creates a physics shape based on a geometry object.
    * @access public
+   * @constructor
    * @param {SCNGeometry} geometry - A geometry object.
    * @param {?Map<SCNPhysicsShape.Option, Object>} [options = null] - A dictionary of options affecting the level of detail of the physics shape, or nil to use default options. For applicable keys and their possible values, see Shape Creation Options Keys.
-   * @returns {void}
    * @desc If you create a physics shape using one of the basic geometry classes (SCNBox, SCNSphere, SCNPyramid, SCNCone, SCNCylinder, or SCNCapsule), SceneKit uses an idealized form of that geometry for the physics shape instead of using the geometry’s vertex data to simulate collisions. For example, if you create a physics shape from an SCNSphere object, SceneKit simulates collisions for any object that passes within the sphere’s radius. Because the idealized forms of simple geometries are computationally much simpler than the vertex data needed for displaying them, using basic geometries for physics shapes (or compound shapes created from basic geometries with the init(shapes:transforms:) method) often provides the best balance between simulation accuracy and performance. To use the newly created physics shape, create a physics body with the the init(type:shape:) method, or assign the shape to the physicsShape property of an existing body.
    * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508897-init
    */
-  init(geometry, options = null) {
+  constructor(geometry, options = null) {
+    super()
+
+    // Getting Information About a Shape
+    this._sourceObject = null
+    this._options = null
+    this._transforms = null
   }
 
   // Getting Information About a Shape
+
   /**
    * The object that was used to create the shape.
    * @type {Object}
@@ -86,6 +78,7 @@ export default class SCNPhysicsShape extends NSObject {
   }
 
   // Structures
+
   /**
    * @type {Object} Option
    * @property {Symbol} collisionMargin 
@@ -97,6 +90,7 @@ export default class SCNPhysicsShape extends NSObject {
   static get Option() {
     return _Option
   }
+
   /**
    * @type {Object} ShapeType
    * @property {Symbol} boundingBox The physics shape is the smallest box containing the geometry.

@@ -10099,7 +10099,6 @@ module.exports =
 	      var c = Math.cos(w);
 	      var s = Math.sin(w);
 	      var v = new _SCNVector2.default(x, y, z).normalize();
-	      //const m = new SCNMatrix4()
 	      var m = SCNMatrix4._identity();
 
 	      var nx = v.x;
@@ -13230,7 +13229,7 @@ module.exports =
 	      if (index < 0) {
 	        return;
 	      }
-	      this._removeObjectFromChildNodesAtIndex(index);
+	      parentNode._removeObjectFromChildNodesAtIndex(index);
 	    }
 
 	    /**
@@ -13507,7 +13506,6 @@ module.exports =
 	      * @see https://developer.apple.com/reference/scenekit/scnnode/1408046-clone
 	     */
 	    value: function clone() {
-	      //console.log('SCNNode.clone() ' + this.name)
 	      var node = this.copy();
 
 	      this._childNodes.forEach(function (child) {
@@ -20047,57 +20045,42 @@ module.exports =
 	var SCNPhysicsShape = function (_NSObject) {
 	  _inherits(SCNPhysicsShape, _NSObject);
 
-	  function SCNPhysicsShape() {
+	  // Creating Physics Shapes
+
+	  /**
+	   * Creates a physics shape based on a geometry object.
+	   * @access public
+	   * @constructor
+	   * @param {SCNGeometry} geometry - A geometry object.
+	   * @param {?Map<SCNPhysicsShape.Option, Object>} [options = null] - A dictionary of options affecting the level of detail of the physics shape, or nil to use default options. For applicable keys and their possible values, see Shape Creation Options Keys.
+	   * @desc If you create a physics shape using one of the basic geometry classes (SCNBox, SCNSphere, SCNPyramid, SCNCone, SCNCylinder, or SCNCapsule), SceneKit uses an idealized form of that geometry for the physics shape instead of using the geometry’s vertex data to simulate collisions. For example, if you create a physics shape from an SCNSphere object, SceneKit simulates collisions for any object that passes within the sphere’s radius. Because the idealized forms of simple geometries are computationally much simpler than the vertex data needed for displaying them, using basic geometries for physics shapes (or compound shapes created from basic geometries with the init(shapes:transforms:) method) often provides the best balance between simulation accuracy and performance. To use the newly created physics shape, create a physics body with the the init(type:shape:) method, or assign the shape to the physicsShape property of an existing body.
+	   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508897-init
+	   */
+	  function SCNPhysicsShape(geometry) {
+	    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
 	    _classCallCheck(this, SCNPhysicsShape);
 
-	    return _possibleConstructorReturn(this, (SCNPhysicsShape.__proto__ || Object.getPrototypeOf(SCNPhysicsShape)).apply(this, arguments));
+	    // Getting Information About a Shape
+	    var _this = _possibleConstructorReturn(this, (SCNPhysicsShape.__proto__ || Object.getPrototypeOf(SCNPhysicsShape)).call(this));
+
+	    _this._sourceObject = null;
+	    _this._options = null;
+	    _this._transforms = null;
+	    return _this;
 	  }
 
+	  // Getting Information About a Shape
+
+	  /**
+	   * The object that was used to create the shape.
+	   * @type {Object}
+	   * @desc This property, along with the transforms and options properties, provides the information that was used to create the shape. You can use this information, for example, to draw editing or debugging UI in your scene.If the shape was created with the init(geometry:options:) method, the source object is an SCNGeometry object, and the options property contains the options affecting the shape’s construction from that geometry.If the shape was created with the init(node:options:) method, the source object is an SCNNode object, and the options property contains the options affecting the shape’s construction from that node.If the shape was created with the init(shapes:transforms:) method, the source object is an array of SCNPhysicsShape objects and the transforms property describes how those shapes combine to form a compound shape.
+	   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508888-sourceobject
+	   */
+
+
 	  _createClass(SCNPhysicsShape, [{
-	    key: 'init',
-
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @returns {void}
-	     */
-	    value: function init() {
-
-	      // Getting Information About a Shape
-
-	      this._sourceObject = null;
-	      this._options = null;
-	      this._transforms = null;
-	    }
-
-	    // Creating Physics Shapes
-
-	    /**
-	     * Creates a physics shape based on a geometry object.
-	     * @access public
-	     * @param {SCNGeometry} geometry - A geometry object.
-	     * @param {?Map<SCNPhysicsShape.Option, Object>} [options = null] - A dictionary of options affecting the level of detail of the physics shape, or nil to use default options. For applicable keys and their possible values, see Shape Creation Options Keys.
-	     * @returns {void}
-	     * @desc If you create a physics shape using one of the basic geometry classes (SCNBox, SCNSphere, SCNPyramid, SCNCone, SCNCylinder, or SCNCapsule), SceneKit uses an idealized form of that geometry for the physics shape instead of using the geometry’s vertex data to simulate collisions. For example, if you create a physics shape from an SCNSphere object, SceneKit simulates collisions for any object that passes within the sphere’s radius. Because the idealized forms of simple geometries are computationally much simpler than the vertex data needed for displaying them, using basic geometries for physics shapes (or compound shapes created from basic geometries with the init(shapes:transforms:) method) often provides the best balance between simulation accuracy and performance. To use the newly created physics shape, create a physics body with the the init(type:shape:) method, or assign the shape to the physicsShape property of an existing body.
-	     * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508897-init
-	     */
-
-	  }, {
-	    key: 'init',
-	    value: function init(geometry) {
-	      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-	    }
-
-	    // Getting Information About a Shape
-	    /**
-	     * The object that was used to create the shape.
-	     * @type {Object}
-	     * @desc This property, along with the transforms and options properties, provides the information that was used to create the shape. You can use this information, for example, to draw editing or debugging UI in your scene.If the shape was created with the init(geometry:options:) method, the source object is an SCNGeometry object, and the options property contains the options affecting the shape’s construction from that geometry.If the shape was created with the init(node:options:) method, the source object is an SCNNode object, and the options property contains the options affecting the shape’s construction from that node.If the shape was created with the init(shapes:transforms:) method, the source object is an array of SCNPhysicsShape objects and the transforms property describes how those shapes combine to form a compound shape.
-	     * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508888-sourceobject
-	     */
-
-	  }, {
 	    key: 'sourceObject',
 	    get: function get() {
 	      return this._sourceObject;
@@ -20130,6 +20113,7 @@ module.exports =
 	    }
 
 	    // Structures
+
 	    /**
 	     * @type {Object} Option
 	     * @property {Symbol} collisionMargin 
@@ -20144,6 +20128,7 @@ module.exports =
 	    get: function get() {
 	      return _Option;
 	    }
+
 	    /**
 	     * @type {Object} ShapeType
 	     * @property {Symbol} boundingBox The physics shape is the smallest box containing the geometry.
@@ -27552,7 +27537,7 @@ module.exports =
 	 * @see https://developer.apple.com/reference/scenekit/1409659-scnmatrix4rotate
 	 */
 	var SCNMatrix4Rotate = function SCNMatrix4Rotate(m, angle, x, y, z) {
-	  return null;
+	  return m.rotation(x, y, z, angle);
 	};
 
 	exports.default = SCNMatrix4Rotate;

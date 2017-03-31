@@ -15,7 +15,7 @@ import SCNMatrix4 from './SCNMatrix4'
  * @see https://developer.apple.com/reference/scenekit/1409659-scnmatrix4rotate
  */
 const SCNMatrix4Rotate = function(m, angle, x, y, z) {
-  return null
+  return m.rotation(x, y, z, angle)
 }
 
 export default SCNMatrix4Rotate

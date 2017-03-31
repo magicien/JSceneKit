@@ -540,7 +540,6 @@ export default class SCNMatrix4 {
     const c = Math.cos(w)
     const s = Math.sin(w)
     const v = (new SCNVector3(x, y, z)).normalize()
-    //const m = new SCNMatrix4()
     const m = SCNMatrix4._identity()
 
     const nx = v.x
