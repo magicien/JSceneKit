@@ -140,6 +140,8 @@ const _defaultFragmentShader =
     if(u_useDiffuseTexture){
       vec4 color = texture(u_diffuseTexture, v_texcoord);
       outColor = color * v_color;
+      //outColor = vec4(0, 1, 0, 1);
+      //outColor = color;
     }else{
       outColor = v_color;
     }
@@ -462,6 +464,7 @@ export default class SCNRenderer extends NSObject {
       gl.uniform4fv(gl.getUniformLocation(program, 'lightDiffuse'), SKColor.black.float32Array())
     }
 
+    // FIXME: use uniform var
     const lightDirection = new Float32Array([0, -0.9, -0.1])
     gl.uniform3fv(gl.getUniformLocation(program, 'lightDirection'), lightDirection)
 
@@ -599,6 +602,7 @@ export default class SCNRenderer extends NSObject {
         gl.uniform1i(gl.getUniformLocation(program, 'u_useDiffuseTexture'), 1)
         gl.activeTexture(gl.TEXTURE2)
         gl.bindTexture(gl.TEXTURE_2D, material.diffuse.contents)
+        // FIXME: use material params
         gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR)
         gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR)
         gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.REPEAT)

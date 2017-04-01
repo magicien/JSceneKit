@@ -506,6 +506,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
         arr.push(...normalSource.vectorAt(i))
       }
       if(texcoordSource){
+        //console.log(`tex ${i} ${texcoordSource.vectorAt(i)}`)
         arr.push(...texcoordSource.vectorAt(i))
       }
     }

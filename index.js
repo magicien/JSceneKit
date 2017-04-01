@@ -15484,6 +15484,7 @@ module.exports =
 	          arr.push.apply(arr, _toConsumableArray(normalSource.vectorAt(i)));
 	        }
 	        if (texcoordSource) {
+	          //console.log(`tex ${i} ${texcoordSource.vectorAt(i)}`)
 	          arr.push.apply(arr, _toConsumableArray(texcoordSource.vectorAt(i)));
 	        }
 	      }
@@ -16231,7 +16232,7 @@ module.exports =
 	 * @access private
 	 * @type {string}
 	 */
-	var _defaultFragmentShader = '#version 300 es\n  precision mediump float;\n\n  uniform sampler2D u_emissionTexture;\n  uniform bool u_useEmissionTexture;\n  uniform sampler2D u_ambientTexture;\n  uniform bool u_useAmbientTexture;\n  uniform sampler2D u_diffuseTexture;\n  uniform bool u_useDiffuseTexture;\n  uniform sampler2D u_specularTexture;\n  uniform bool u_useSpecularTexture;\n  uniform sampler2D u_reflectiveTexture;\n  uniform bool u_useReflectiveTexture;\n  uniform sampler2D u_transparentTexture;\n  uniform bool u_useTransparentTexture;\n  uniform sampler2D u_multiplyTexture;\n  uniform bool u_useMultiplyTexture;\n  uniform sampler2D u_normalTexture;\n  uniform bool u_useNormalTexture;\n\n  in vec2 v_texcoord;\n  in vec4 v_color;\n  //in vec3 v_eye;\n\n  out vec4 outColor;\n\n  void main() {\n    if(u_useDiffuseTexture){\n      vec4 color = texture(u_diffuseTexture, v_texcoord);\n      outColor = color * v_color;\n    }else{\n      outColor = v_color;\n    }\n  }\n';
+	var _defaultFragmentShader = '#version 300 es\n  precision mediump float;\n\n  uniform sampler2D u_emissionTexture;\n  uniform bool u_useEmissionTexture;\n  uniform sampler2D u_ambientTexture;\n  uniform bool u_useAmbientTexture;\n  uniform sampler2D u_diffuseTexture;\n  uniform bool u_useDiffuseTexture;\n  uniform sampler2D u_specularTexture;\n  uniform bool u_useSpecularTexture;\n  uniform sampler2D u_reflectiveTexture;\n  uniform bool u_useReflectiveTexture;\n  uniform sampler2D u_transparentTexture;\n  uniform bool u_useTransparentTexture;\n  uniform sampler2D u_multiplyTexture;\n  uniform bool u_useMultiplyTexture;\n  uniform sampler2D u_normalTexture;\n  uniform bool u_useNormalTexture;\n\n  in vec2 v_texcoord;\n  in vec4 v_color;\n  //in vec3 v_eye;\n\n  out vec4 outColor;\n\n  void main() {\n    if(u_useDiffuseTexture){\n      vec4 color = texture(u_diffuseTexture, v_texcoord);\n      outColor = color * v_color;\n      //outColor = vec4(0, 1, 0, 1);\n      //outColor = color;\n    }else{\n      outColor = v_color;\n    }\n  }\n';
 
 	/**
 	 * A renderer for displaying SceneKit scene in an an existing Metal workflow or OpenGL context. 
@@ -16565,6 +16566,7 @@ module.exports =
 	        gl.uniform4fv(gl.getUniformLocation(program, 'lightDiffuse'), _SKColor2.default.black.float32Array());
 	      }
 
+	      // FIXME: use uniform var
 	      var lightDirection = new Float32Array([0, -0.9, -0.1]);
 	      gl.uniform3fv(gl.getUniformLocation(program, 'lightDirection'), lightDirection);
 
@@ -16717,6 +16719,7 @@ module.exports =
 	          gl.uniform1i(gl.getUniformLocation(program, 'u_useDiffuseTexture'), 1);
 	          gl.activeTexture(gl.TEXTURE2);
 	          gl.bindTexture(gl.TEXTURE_2D, material.diffuse.contents);
+	          // FIXME: use material params
 	          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
 	          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
 	          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.REPEAT);
