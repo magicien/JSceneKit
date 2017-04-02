@@ -160,6 +160,7 @@ import SCNVector4ToGLKVector4 from './SceneKit/SCNVector4ToGLKVector4'
 import SCNView from './SceneKit/SCNView'
 import SCNWrapMode from './SceneKit/SCNWrapMode'
 import SKColor from './SpriteKit/SKColor'
+import HTMLCanvasElement from './util/HTMLCanvasElement'
 
 /*global exports*/
 exports.CGBlendMode = CGBlendMode
@@ -324,6 +325,7 @@ exports.SCNVector4ToGLKVector4 = SCNVector4ToGLKVector4
 exports.SCNView = SCNView
 exports.SCNWrapMode = SCNWrapMode
 exports.SKColor = SKColor
+exports.HTMLCanvasElement = HTMLCanvasElement
 
 // constants
 /*global exports*/

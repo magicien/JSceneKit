@@ -1,5 +1,6 @@
 'use strict'
 
+//import _HTMLCanvasElement from '../util/HTMLCanvasElement'
 import SCNRenderer from './SCNRenderer'
 import SCNTechniqueSupport from './SCNTechniqueSupport'
 import CGRect from '../CoreGraphics/CGRect'
@@ -25,6 +26,8 @@ const _Option = {
  * @implements {SCNTechniqueSupport}
  * @see https://developer.apple.com/reference/scenekit/scnview
  */
+// TODO: use extension of HTMLElement when it's supported.
+//export default class SCNView extends _HTMLCanvasElement {
 export default class SCNView {
 
   // Initializing a SceneKit View
@@ -39,6 +42,8 @@ export default class SCNView {
    * @see https://developer.apple.com/reference/scenekit/scnview/1524215-init
    */
   constructor(frame, options = null) {
+    //super()
+
     if(frame === undefined){
       frame = CGRect.rectWithXYWidthHeight(0, 0, 300, 300)
     }
@@ -204,6 +209,9 @@ export default class SCNView {
      * @access private
      * @type {HTMLCanvasElement}
      */
+    // TODO: use extension of HTMLElement when it's supported.
+    //this.width = frame.width
+    //this.height = frame.height
     this._canvas = document.createElement('canvas')
     this._canvas.width = frame.width
     this._canvas.height = frame.height
@@ -274,6 +282,8 @@ export default class SCNView {
     const contextNames = ['webgl2']
     for(const name of contextNames){
       try{
+        // TODO: use extension of HTMLElement when it's supported.
+        //this._context = this.getContext(name, opt)
         this._context = this._canvas.getContext(name, opt)
       }catch(e){ /* just ignore and try the next name */ }
       if(this._context){
@@ -292,6 +302,15 @@ export default class SCNView {
     this._renderer._viewRect = frame
   }
 
+  connectedCallback() {
+  }
+
+  disconnectedCallback() {
+  }
+
+  attributeChangedCallback() {
+  }
+
   /**
    *
    * @access public
@@ -299,6 +318,8 @@ export default class SCNView {
    * @returns {void}
    */
   appendTo(element) {
+    // TODO: use extension of HTMLElement when it's supported.
+    //element.appendChild(this)
     element.appendChild(this._canvas)
   }
 
@@ -956,7 +977,7 @@ export default class SCNView {
   }
 }
 
-//if (customElements) {
+// TODO: use extension of HTMLElement when it's supported.
+//if(customElements){
 //  customElements.define('scn-view', SCNView)
 //}
-

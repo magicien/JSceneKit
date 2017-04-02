@@ -203,15 +203,15 @@ module.exports =
 
 	var _SCNBox2 = _interopRequireDefault(_SCNBox);
 
-	var _SCNBufferBindingBlock = __webpack_require__(85);
+	var _SCNBufferBindingBlock = __webpack_require__(86);
 
 	var _SCNBufferBindingBlock2 = _interopRequireDefault(_SCNBufferBindingBlock);
 
-	var _SCNBufferFrequency = __webpack_require__(84);
+	var _SCNBufferFrequency = __webpack_require__(85);
 
 	var _SCNBufferFrequency2 = _interopRequireDefault(_SCNBufferFrequency);
 
-	var _SCNBufferStream = __webpack_require__(86);
+	var _SCNBufferStream = __webpack_require__(87);
 
 	var _SCNBufferStream2 = _interopRequireDefault(_SCNBufferStream);
 
@@ -263,15 +263,15 @@ module.exports =
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
-	var _SCNGeometryElement = __webpack_require__(88);
+	var _SCNGeometryElement = __webpack_require__(89);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(89);
+	var _SCNGeometryPrimitiveType = __webpack_require__(83);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNGeometrySource = __webpack_require__(83);
+	var _SCNGeometrySource = __webpack_require__(84);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
@@ -575,7 +575,7 @@ module.exports =
 
 	var _SCNShadable2 = _interopRequireDefault(_SCNShadable);
 
-	var _SCNShaderModifierEntryPoint = __webpack_require__(87);
+	var _SCNShaderModifierEntryPoint = __webpack_require__(88);
 
 	var _SCNShaderModifierEntryPoint2 = _interopRequireDefault(_SCNShaderModifierEntryPoint);
 
@@ -694,6 +694,10 @@ module.exports =
 	var _SKColor = __webpack_require__(48);
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
+
+	var _HTMLCanvasElement = __webpack_require__(164);
+
+	var _HTMLCanvasElement2 = _interopRequireDefault(_HTMLCanvasElement);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -860,6 +864,7 @@ module.exports =
 	exports.SCNView = _SCNView2.default;
 	exports.SCNWrapMode = _SCNWrapMode2.default;
 	exports.SKColor = _SKColor2.default;
+	exports.HTMLCanvasElement = _HTMLCanvasElement2.default;
 
 	// constants
 	/*global exports*/
@@ -14939,11 +14944,11 @@ module.exports =
 
 	var _SCNShadable2 = _interopRequireDefault(_SCNShadable);
 
-	var _SCNGeometrySource = __webpack_require__(83);
+	var _SCNGeometrySource = __webpack_require__(84);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNGeometryElement = __webpack_require__(88);
+	var _SCNGeometryElement = __webpack_require__(89);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
@@ -15711,7 +15716,7 @@ module.exports =
 
 	var _SCNProgram2 = _interopRequireDefault(_SCNProgram);
 
-	var _SCNShaderModifierEntryPoint = __webpack_require__(87);
+	var _SCNShaderModifierEntryPoint = __webpack_require__(88);
 
 	var _SCNShaderModifierEntryPoint2 = _interopRequireDefault(_SCNShaderModifierEntryPoint);
 
@@ -15832,11 +15837,11 @@ module.exports =
 
 	var _SCNProgramDelegate2 = _interopRequireDefault(_SCNProgramDelegate);
 
-	var _SCNBufferFrequency = __webpack_require__(84);
+	var _SCNBufferFrequency = __webpack_require__(85);
 
 	var _SCNBufferFrequency2 = _interopRequireDefault(_SCNBufferFrequency);
 
-	var _SCNBufferBindingBlock = __webpack_require__(85);
+	var _SCNBufferBindingBlock = __webpack_require__(86);
 
 	var _SCNBufferBindingBlock2 = _interopRequireDefault(_SCNBufferBindingBlock);
 
@@ -16202,7 +16207,11 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SCNGeometrySource = __webpack_require__(83);
+	var _SCNGeometryPrimitiveType = __webpack_require__(83);
+
+	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
+
+	var _SCNGeometrySource = __webpack_require__(84);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
@@ -16728,7 +16737,36 @@ module.exports =
 	          gl.uniform1i(gl.getUniformLocation(program, 'u_useDiffuseTexture'), 0);
 	        }
 
-	        gl.drawElements(gl.TRIANGLES, element._glData.length, gl.UNSIGNED_SHORT, 0);
+	        switch (element.primitiveType) {
+	          case _SCNGeometryPrimitiveType2.default.triangles:
+	            {
+	              var size = null;
+	              switch (element.bytesPerIndex) {
+	                case 1:
+	                  size = gl.UNSIGNED_BYTE;
+	                  break;
+	                case 2:
+	                  size = gl.UNSIGNED_SHORT;
+	                  break;
+	                case 4:
+	                  size = gl.UNSIGNED_INT;
+	                  break;
+	                default:
+	                  throw new Error('unsupported index size: ' + element._bytesPerIndex);
+	              }
+
+	              gl.drawElements(gl.TRIANGLES, element._glData.length, size, 0);
+	              break;
+	            }
+	          case _SCNGeometryPrimitiveType2.default.triangleStrip:
+	            break;
+	          case _SCNGeometryPrimitiveType2.default.line:
+	            break;
+	          case _SCNGeometryPrimitiveType2.default.point:
+	            break;
+	          case _SCNGeometryPrimitiveType2.default.polygon:
+	            break;
+	        }
 	      }
 	    }
 
@@ -22928,6 +22966,36 @@ module.exports =
 
 /***/ },
 /* 83 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * The drawing primitive that connects vertices when rendering a geometry element, used by the primitiveType property to specify how SceneKit interprets the geometry element’s data.
+	 * @typedef {Object} SCNGeometryPrimitiveType
+	 * @property {Symbol} triangles - The geometry element’s data is a sequence of triangles, with each triangle described by three new vertices.
+	 * @property {Symbol} triangleStrip - The geometry element’s data is a sequence of triangles, with each triangle described by one new vertex and two vertices from the previous triangle. 
+	 * @property {Symbol} line - The geometry element’s data is a sequence of line segments, with each line segment described by two new vertices. 
+	 * @property {Symbol} point - The geometry element’s data is a sequence of unconnected points.
+	 * @property {Symbol} polygon - 
+	 * @see https://developer.apple.com/reference/scenekit/scngeometryprimitivetype
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var SCNGeometryPrimitiveType = {
+	  triangles: Symbol(),
+	  triangleStrip: Symbol(),
+	  line: Symbol(),
+	  point: Symbol(),
+	  polygon: Symbol()
+	};
+
+	exports.default = SCNGeometryPrimitiveType;
+
+/***/ },
+/* 84 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23477,7 +23545,7 @@ module.exports =
 	exports.default = SCNGeometrySource;
 
 /***/ },
-/* 84 */
+/* 85 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -23503,7 +23571,7 @@ module.exports =
 	exports.default = SCNBufferFrequency;
 
 /***/ },
-/* 85 */
+/* 86 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23512,7 +23580,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNBufferStream = __webpack_require__(86);
+	var _SCNBufferStream = __webpack_require__(87);
 
 	var _SCNBufferStream2 = _interopRequireDefault(_SCNBufferStream);
 
@@ -23545,7 +23613,7 @@ module.exports =
 	exports.default = SCNBufferBindingBlock;
 
 /***/ },
-/* 86 */
+/* 87 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -23602,7 +23670,7 @@ module.exports =
 	exports.default = SCNBufferStream;
 
 /***/ },
-/* 87 */
+/* 88 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -23630,7 +23698,7 @@ module.exports =
 	exports.default = SCNShaderModifierEntryPoint;
 
 /***/ },
-/* 88 */
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23645,7 +23713,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(89);
+	var _SCNGeometryPrimitiveType = __webpack_require__(83);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
@@ -23678,6 +23746,9 @@ module.exports =
 	   * @see https://developer.apple.com/reference/scenekit/scngeometryelement/1523191-init
 	   */
 	  function SCNGeometryElement(indices, primitiveType) {
+	    var primitiveCount = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+	    var bytesPerIndex = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 2;
+
 	    _classCallCheck(this, SCNGeometryElement);
 
 	    // Inspecting a Geometry Element
@@ -23686,14 +23757,28 @@ module.exports =
 
 	    _this._data = indices;
 	    _this._primitiveType = primitiveType;
-	    _this._primitiveCount = indices.length / 3; // FIXME: calculate from primitiveType
-	    _this._bytesPerIndex = 2;
+	    if (primitiveCount !== null) {
+	      _this._primitiveCount = primitiveCount;
+	    } else {
+	      _this._primitiveCount = indices.length / 3; // FIXME: calculate from primitiveType
+	    }
+	    _this._bytesPerIndex = bytesPerIndex;
 
 	    /**
 	     * @type {TypedArray}
 	     * @access private
 	     */
-	    _this._glData = new Uint16Array(_this._data);
+	    _this._glData = null;
+	    console.log('SCNGeometryElement: bytesPerIndex: ' + bytesPerIndex);
+	    if (bytesPerIndex === 1) {
+	      _this._glData = new Uint8Array(_this._data);
+	    } else if (bytesPerIndex === 2) {
+	      _this._glData = new Uint16Array(_this._data);
+	    } else if (bytesPerIndex === 4) {
+	      _this._glData = new Uint32Array(_this._data);
+	    } else {
+	      throw new Error('unknown data size: ' + bytesPerIndex);
+	    }
 	    return _this;
 	  }
 
@@ -23733,7 +23818,7 @@ module.exports =
 	  }, {
 	    key: 'copy',
 	    value: function copy() {
-	      var element = new SCNGeometryElement(this._data.slice(0), this._primitiveType);
+	      var element = new SCNGeometryElement(this._data.slice(0), this._primitiveType, this._primitiveCount, this._bytesPerIndex);
 	      return element;
 	    }
 	  }, {
@@ -23786,36 +23871,6 @@ module.exports =
 	}(_NSObject3.default);
 
 	exports.default = SCNGeometryElement;
-
-/***/ },
-/* 89 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	/**
-	 * The drawing primitive that connects vertices when rendering a geometry element, used by the primitiveType property to specify how SceneKit interprets the geometry element’s data.
-	 * @typedef {Object} SCNGeometryPrimitiveType
-	 * @property {Symbol} triangles - The geometry element’s data is a sequence of triangles, with each triangle described by three new vertices.
-	 * @property {Symbol} triangleStrip - The geometry element’s data is a sequence of triangles, with each triangle described by one new vertex and two vertices from the previous triangle. 
-	 * @property {Symbol} line - The geometry element’s data is a sequence of line segments, with each line segment described by two new vertices. 
-	 * @property {Symbol} point - The geometry element’s data is a sequence of unconnected points.
-	 * @property {Symbol} polygon - 
-	 * @see https://developer.apple.com/reference/scenekit/scngeometryprimitivetype
-	 */
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var SCNGeometryPrimitiveType = {
-	  triangles: Symbol(),
-	  triangleStrip: Symbol(),
-	  line: Symbol(),
-	  point: Symbol(),
-	  polygon: Symbol()
-	};
-
-	exports.default = SCNGeometryPrimitiveType;
 
 /***/ },
 /* 90 */
@@ -24959,7 +25014,7 @@ module.exports =
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNGeometrySource = __webpack_require__(83);
+	var _SCNGeometrySource = __webpack_require__(84);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
@@ -26125,15 +26180,15 @@ module.exports =
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
-	var _SCNGeometrySource = __webpack_require__(83);
+	var _SCNGeometrySource = __webpack_require__(84);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNGeometryElement = __webpack_require__(88);
+	var _SCNGeometryElement = __webpack_require__(89);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(89);
+	var _SCNGeometryPrimitiveType = __webpack_require__(83);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
@@ -30472,6 +30527,8 @@ module.exports =
 
 	'use strict';
 
+	//import _HTMLCanvasElement from '../util/HTMLCanvasElement'
+
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
@@ -30541,6 +30598,8 @@ module.exports =
 	 * @implements {SCNTechniqueSupport}
 	 * @see https://developer.apple.com/reference/scenekit/scnview
 	 */
+	// TODO: use extension of HTMLElement when it's supported.
+	//export default class SCNView extends _HTMLCanvasElement {
 
 	var SCNView = function () {
 
@@ -30559,6 +30618,8 @@ module.exports =
 	    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
 
 	    _classCallCheck(this, SCNView);
+
+	    //super()
 
 	    if (frame === undefined) {
 	      frame = _CGRect2.default.rectWithXYWidthHeight(0, 0, 300, 300);
@@ -30722,6 +30783,9 @@ module.exports =
 	     * @access private
 	     * @type {HTMLCanvasElement}
 	     */
+	    // TODO: use extension of HTMLElement when it's supported.
+	    //this.width = frame.width
+	    //this.height = frame.height
 	    this._canvas = document.createElement('canvas');
 	    this._canvas.width = frame.width;
 	    this._canvas.height = frame.height;
@@ -30796,6 +30860,8 @@ module.exports =
 	        var name = _step.value;
 
 	        try {
+	          // TODO: use extension of HTMLElement when it's supported.
+	          //this._context = this.getContext(name, opt)
 	          this._context = this._canvas.getContext(name, opt);
 	        } catch (e) {/* just ignore and try the next name */}
 	        if (this._context) {
@@ -30829,17 +30895,28 @@ module.exports =
 	    this._renderer._viewRect = frame;
 	  }
 
-	  /**
-	   *
-	   * @access public
-	   * @param {HTMLElement} element - parent element to append this view
-	   * @returns {void}
-	   */
-
-
 	  _createClass(SCNView, [{
+	    key: 'connectedCallback',
+	    value: function connectedCallback() {}
+	  }, {
+	    key: 'disconnectedCallback',
+	    value: function disconnectedCallback() {}
+	  }, {
+	    key: 'attributeChangedCallback',
+	    value: function attributeChangedCallback() {}
+
+	    /**
+	     *
+	     * @access public
+	     * @param {HTMLElement} element - parent element to append this view
+	     * @returns {void}
+	     */
+
+	  }, {
 	    key: 'appendTo',
 	    value: function appendTo(element) {
+	      // TODO: use extension of HTMLElement when it's supported.
+	      //element.appendChild(this)
 	      element.appendChild(this._canvas);
 	    }
 
@@ -31634,12 +31711,50 @@ module.exports =
 	  return SCNView;
 	}();
 
-	//if (customElements) {
+	// TODO: use extension of HTMLElement when it's supported.
+	//if(customElements){
 	//  customElements.define('scn-view', SCNView)
 	//}
 
 
 	exports.default = SCNView;
+
+/***/ },
+/* 164 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/*global HTMLCanvasElement*/
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var _HTMLCanvasElement = HTMLCanvasElement;
+	if (!HTMLCanvasElement) {
+	  var _HTMLCanvasElement2 = function () {
+	    function _HTMLCanvasElement2() {
+	      _classCallCheck(this, _HTMLCanvasElement2);
+	    }
+
+	    _createClass(_HTMLCanvasElement2, [{
+	      key: 'getContext',
+	      value: function getContext(name, opt) {
+	        throw new Error('getContext is not implemented');
+	      }
+	    }]);
+
+	    return _HTMLCanvasElement2;
+	  }();
+
+	  _HTMLCanvasElement = _HTMLCanvasElement2;
+	}
+	exports.default = _HTMLCanvasElement;
 
 /***/ }
 /******/ ]);

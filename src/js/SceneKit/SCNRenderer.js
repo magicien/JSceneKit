@@ -14,6 +14,7 @@ import SCNLight from './SCNLight'
 import SCNVector3 from './SCNVector3'
 import SCNVector4 from './SCNVector4'
 import SKColor from '../SpriteKit/SKColor'
+import SCNGeometryPrimitiveType from './SCNGeometryPrimitiveType'
 import SCNGeometrySource from './SCNGeometrySource'
 
 /**
@@ -611,7 +612,35 @@ export default class SCNRenderer extends NSObject {
         gl.uniform1i(gl.getUniformLocation(program, 'u_useDiffuseTexture'), 0)
       }
 
-      gl.drawElements(gl.TRIANGLES, element._glData.length, gl.UNSIGNED_SHORT, 0)
+      switch(element.primitiveType){
+        case SCNGeometryPrimitiveType.triangles: {
+          let size = null
+            switch(element.bytesPerIndex){
+              case 1:
+                size = gl.UNSIGNED_BYTE
+                break
+              case 2:
+                size = gl.UNSIGNED_SHORT
+                break
+              case 4:
+                size = gl.UNSIGNED_INT
+                break
+              default:
+                throw new Error(`unsupported index size: ${element._bytesPerIndex}`)
+            }
+
+            gl.drawElements(gl.TRIANGLES, element._glData.length, size, 0)
+            break
+          }
+        case SCNGeometryPrimitiveType.triangleStrip:
+          break
+        case SCNGeometryPrimitiveType.line:
+          break
+        case SCNGeometryPrimitiveType.point:
+          break
+        case SCNGeometryPrimitiveType.polygon:
+          break
+      }
     }
   }
 

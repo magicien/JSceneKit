@@ -22,21 +22,35 @@ export default class SCNGeometryElement extends NSObject {
    * @desc SceneKit connects the vertices in the order specified by the indices array, arranged according to the primitiveType parameter.This initializer is equivalent to the init(data:primitiveType:primitiveCount:bytesPerIndex:) initializer, but does not require an intermediary Data object; instead, it automatically infers the necessary allocation size and bytesPerIndex values based on the contents of the indices array. To create a custom SCNGeometry object from the geometry element, use the init(sources:elements:) initializer.
    * @see https://developer.apple.com/reference/scenekit/scngeometryelement/1523191-init
    */
-  constructor(indices, primitiveType) {
+  constructor(indices, primitiveType, primitiveCount = null, bytesPerIndex = 2) {
     super()
 
     // Inspecting a Geometry Element
 
     this._data = indices
     this._primitiveType = primitiveType
-    this._primitiveCount = indices.length / 3 // FIXME: calculate from primitiveType
-    this._bytesPerIndex = 2
+    if(primitiveCount !== null){
+      this._primitiveCount = primitiveCount
+    }else{
+      this._primitiveCount = indices.length / 3 // FIXME: calculate from primitiveType
+    }
+    this._bytesPerIndex = bytesPerIndex
 
     /**
      * @type {TypedArray}
      * @access private
      */
-    this._glData = new Uint16Array(this._data)
+    this._glData = null
+    console.log(`SCNGeometryElement: bytesPerIndex: ${bytesPerIndex}`)
+    if(bytesPerIndex === 1){
+      this._glData = new Uint8Array(this._data)
+    }else if(bytesPerIndex === 2){
+      this._glData = new Uint16Array(this._data)
+    }else if(bytesPerIndex === 4){
+      this._glData = new Uint32Array(this._data)
+    }else{
+      throw new Error(`unknown data size: ${bytesPerIndex}`)
+    }
   }
 
   /**
@@ -104,7 +118,9 @@ export default class SCNGeometryElement extends NSObject {
   copy() {
     const element = new SCNGeometryElement(
       this._data.slice(0),
-      this._primitiveType
+      this._primitiveType,
+      this._primitiveCount,
+      this._bytesPerIndex
     )
     return element
   }
