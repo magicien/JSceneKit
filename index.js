@@ -31735,8 +31735,10 @@ module.exports =
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
-	var _HTMLCanvasElement = HTMLCanvasElement;
-	if (!HTMLCanvasElement) {
+	var _HTMLCanvasElement = null;
+	if (typeof HTMLCanvasElement !== 'undefined') {
+	  _HTMLCanvasElement = HTMLCanvasElement;
+	} else {
 	  var _HTMLCanvasElement2 = function () {
 	    function _HTMLCanvasElement2() {
 	      _classCallCheck(this, _HTMLCanvasElement2);
