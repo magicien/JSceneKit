@@ -6,3 +6,13 @@
 
 # JSceneKit
 Port of SceneKit framework to JavaScript
+
+### Install
+
+```
+npm install jscenekit --save
+```
+
+### Documentation
+
+https://magicien.github.io/JSceneKit/
