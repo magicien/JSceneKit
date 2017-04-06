@@ -20,9 +20,10 @@ module.exports = {
     src: [
       src + '/js/**',
       './test/**/*.js',
+      '!' + src + '/js/third_party/*.js'
     ],
     opts: {
-      useEslintrc: true,
+      useEslintrc: true
     }
   },
 
@@ -50,6 +51,12 @@ module.exports = {
           }
         }
       ]
+    },
+    node: {
+      Buffer: false
+    },
+    externals: {
+      fs: 'fs'
     }
   },
 
