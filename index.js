@@ -10040,25 +10040,32 @@ module.exports =
 	        return arr;
 	      } else if (type1 === 0xC0) {
 	        // Set
-	        // TODO: implement
-	        throw new Error('parser for Set is not implemented yet.');
+	        var _count4 = this._getDataSize(type2);
+	        var setIndex = [];
+	        for (var _i = 0; _i < _count4; _i++) {
+	          setIndex.push(reader.readInteger(this._offsetSize, false));
+	        }
+	        var _arr = setIndex.map(function (index) {
+	          return _this2._parseObjAtIndex(index);
+	        });
+	        return new Set(_arr);
 	      } else if (type1 === 0xD0) {
 	        // Dictionary
 	        console.log('   type: dictionary');
-	        var _count4 = this._getDataSize(type2);
+	        var _count5 = this._getDataSize(type2);
 	        var keyIndex = [];
 	        var valueIndex = [];
-	        for (var _i = 0; _i < _count4; _i++) {
+	        for (var _i2 = 0; _i2 < _count5; _i2++) {
 	          keyIndex.push(reader.readInteger(this._offsetSize, false));
 	        }
-	        for (var _i2 = 0; _i2 < _count4; _i2++) {
+	        for (var _i3 = 0; _i3 < _count5; _i3++) {
 	          valueIndex.push(reader.readInteger(this._offsetSize, false));
 	        }
 	        var result = {};
-	        for (var _i3 = 0; _i3 < _count4; _i3++) {
-	          var key = this._parseObjAtIndex(keyIndex[_i3]);
+	        for (var _i4 = 0; _i4 < _count5; _i4++) {
+	          var key = this._parseObjAtIndex(keyIndex[_i4]);
 	          console.log('key: ' + key);
-	          var val = this._parseObjAtIndex(valueIndex[_i3]);
+	          var val = this._parseObjAtIndex(valueIndex[_i4]);
 	          console.log('val: ' + val);
 	          result[key] = val;
 	        }

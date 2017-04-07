@@ -308,8 +308,13 @@ export default class NSKeyedUnarchiver extends NSCoder {
       return arr
     }else if(type1 === 0xC0){
       // Set
-      // TODO: implement
-      throw new Error('parser for Set is not implemented yet.')
+      const count = this._getDataSize(type2)
+      const setIndex = []
+      for(let i=0; i<count; i++){
+        setIndex.push(reader.readInteger(this._offsetSize, false))
+      }
+      const arr = setIndex.map((index) => this._parseObjAtIndex(index))
+      return new Set(arr)
     }else if(type1 === 0xD0){
       // Dictionary
       console.log('   type: dictionary')
