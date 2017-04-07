@@ -14,9 +14,9 @@ import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
 import SKColor from '../SpriteKit/SKColor'
 
 const _Option = {
-  preferLowPowerDevice: Symbol(),
-  preferredDevice: Symbol(),
-  preferredRenderingAPI: Symbol()
+  preferLowPowerDevice: 'SCNPreferLowPowerDeviceKey',
+  preferredDevice: 'SCNPreferredDeviceKey',
+  preferredRenderingAPI: 'SCNPreferredRenderingAPIKey'
 }
 
 /**
@@ -431,9 +431,9 @@ export default class SCNView {
   // Structures
   /**
    * @type {Object} Option
-   * @property {Symbol} preferLowPowerDevice An option for whether to select low-power-usage devices for Metal rendering.
-   * @property {Symbol} preferredDevice The device to use for Metal rendering.
-   * @property {Symbol} preferredRenderingAPI The rendering API to use for rendering the view (for example, Metal or OpenGL).
+   * @property {string} preferLowPowerDevice An option for whether to select low-power-usage devices for Metal rendering.
+   * @property {string} preferredDevice The device to use for Metal rendering.
+   * @property {string} preferredRenderingAPI The rendering API to use for rendering the view (for example, Metal or OpenGL).
    * @see https://developer.apple.com/reference/scenekit/scnview.option
    */
   static get Option() {
@@ -903,9 +903,10 @@ export default class SCNView {
         }
         node._presentation = p
       }
-      p._position = node._position
-      p._rotation = node._rotation
-      p._scale = node._scale
+      node._copyTransformToPresentation()
+      //p._position = node._position
+      //p._rotation = node._rotation
+      //p._scale = node._scale
 
       
       arr.push(...node.childNodes)

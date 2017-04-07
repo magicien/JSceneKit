@@ -5,24 +5,24 @@ import SCNScene from './SCNScene'
 import SCNSceneSourceStatusHandler from './SCNSceneSourceStatusHandler'
 
 const _AnimationImportPolicy = {
-  doNotPlay: Symbol(),
-  play: Symbol(),
-  playRepeatedly: Symbol(),
-  playUsingSceneTimeBase: Symbol()
+  doNotPlay: 'keepSeparate',
+  play: 'playOnce',
+  playRepeatedly: 'playRepeatedly',
+  playUsingSceneTimeBase: 'playUsingSceneTime'
 }
 
 const _LoadingOption = {
-  animationImportPolicy: Symbol(),
-  assetDirectoryURLs: Symbol(),
-  checkConsistency: Symbol(),
-  convertToYUp: Symbol(),
-  convertUnitsToMeters: Symbol(),
-  createNormalsIfAbsent: Symbol(),
-  flattenScene: Symbol(),
-  overrideAssetURLs: Symbol(),
-  preserveOriginalTopology: Symbol(),
-  strictConformance: Symbol(),
-  useSafeMode: Symbol()
+  animationImportPolicy: 'kSceneSourceAnimationLoadingMode',
+  assetDirectoryURLs: 'kSceneSourceAssetDirectoryURLs',
+  checkConsistency: 'kSceneSourceCheckConsistency',
+  convertToYUp: 'kSceneSourceConvertToYUpIfNeeded',
+  convertUnitsToMeters: 'kSceneSourceConvertToUnit',
+  createNormalsIfAbsent: 'kSceneSourceCreateNormalsIfAbsent',
+  flattenScene: 'kSceneSourceFlattenScene',
+  overrideAssetURLs: 'kSceneSourceOverrideAssetURLs',
+  preserveOriginalTopology: 'kSceneSourcePreserveOriginalTopology',
+  strictConformance: 'kSceneSourceStrictConformanceKey',
+  useSafeMode: 'kSceneSourceUseSafeMode' 
 }
 
 
@@ -170,10 +170,10 @@ NSArray *geometryNodes = [sceneSource entriesPassingTest:^BOOL(id entry, NSStrin
   // Structures
   /**
    * @type {Object} AnimationImportPolicy
-   * @property {Symbol} doNotPlay Animations are not loaded from the scene file.
-   * @property {Symbol} play Animations loaded from the scene file are immediately added to the scene and played once.
-   * @property {Symbol} playRepeatedly Animations loaded from the scene file are immediately added to the scene and played repeatedly.
-   * @property {Symbol} playUsingSceneTimeBase Animations loaded from the scene file are immediately added to the scene and played according to the scene’s sceneTime property.
+   * @property {string} doNotPlay Animations are not loaded from the scene file.
+   * @property {string} play Animations loaded from the scene file are immediately added to the scene and played once.
+   * @property {string} playRepeatedly Animations loaded from the scene file are immediately added to the scene and played repeatedly.
+   * @property {string} playUsingSceneTimeBase Animations loaded from the scene file are immediately added to the scene and played according to the scene’s sceneTime property.
    * @see https://developer.apple.com/reference/scenekit/scnscenesource.animationimportpolicy
    */
   static get AnimationImportPolicy() {
@@ -181,17 +181,17 @@ NSArray *geometryNodes = [sceneSource entriesPassingTest:^BOOL(id entry, NSStrin
   }
   /**
    * @type {Object} LoadingOption
-   * @property {Symbol} animationImportPolicy An option for controlling the playback of animations in a scene file.
-   * @property {Symbol} assetDirectoryURLs Locations to use for resolving relative URLs to external resources.
-   * @property {Symbol} checkConsistency An option to validate scene files while loading.
-   * @property {Symbol} convertToYUp An option for whether to transform assets loaded from the scene file for use in a coordinate system where the y-axis points up.
-   * @property {Symbol} convertUnitsToMeters An option for whether to automatically scale the scene’s contents.
-   * @property {Symbol} createNormalsIfAbsent An option for automatically generating surface normals if they are absent when loading geometry.
-   * @property {Symbol} flattenScene An option for automatically merging portions of a scene graph during loading.
-   * @property {Symbol} overrideAssetURLs An option to attempt loading external resources using their URLs as specified in a scene file.
-   * @property {Symbol} preserveOriginalTopology 
-   * @property {Symbol} strictConformance An option to interpret scene files exactly as specified by the scene file format.
-   * @property {Symbol} useSafeMode An option to limit filesystem and network access for external resources referenced by a scene file.
+   * @property {string} animationImportPolicy An option for controlling the playback of animations in a scene file.
+   * @property {string} assetDirectoryURLs Locations to use for resolving relative URLs to external resources.
+   * @property {string} checkConsistency An option to validate scene files while loading.
+   * @property {string} convertToYUp An option for whether to transform assets loaded from the scene file for use in a coordinate system where the y-axis points up.
+   * @property {string} convertUnitsToMeters An option for whether to automatically scale the scene’s contents.
+   * @property {string} createNormalsIfAbsent An option for automatically generating surface normals if they are absent when loading geometry.
+   * @property {string} flattenScene An option for automatically merging portions of a scene graph during loading.
+   * @property {string} overrideAssetURLs An option to attempt loading external resources using their URLs as specified in a scene file.
+   * @property {string} preserveOriginalTopology 
+   * @property {string} strictConformance An option to interpret scene files exactly as specified by the scene file format.
+   * @property {string} useSafeMode An option to limit filesystem and network access for external resources referenced by a scene file.
    * @see https://developer.apple.com/reference/scenekit/scnscenesource.loadingoption
    */
   static get LoadingOption() {

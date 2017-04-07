@@ -32,6 +32,20 @@ export default class SCNVector4 {
     this.w = w
   }
 
+  /**
+   * @access private
+   * @param {Buffer} data -
+   * @returns {SCNVector3}
+   */
+  static _initWithData(data) {
+    const instance = new SCNVector4()
+    instance.x = data.readFloatLE(0)
+    instance.y = data.readFloatLE(4)
+    instance.z = data.readFloatLE(8)
+    instance.w = data.readFloatLE(12)
+    return instance
+  }
+
   // extensions
 
   /**

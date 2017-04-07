@@ -10,10 +10,10 @@ import SCNParticleSystem from './SCNParticleSystem'
 import SCNMatrix4 from './SCNMatrix4'
 
 const _Attribute = {
-  endTime: Symbol(),
-  frameRate: Symbol(),
-  startTime: Symbol(),
-  upAxis: Symbol()
+  endTime: 'kSceneEndTimeAttributeKey',
+  frameRate: 'kSceneFrameRateAttributeKey',
+  startTime: 'kSceneStartTimeAttributeKey',
+  upAxis: 'kSceneUpAxisAttributeKey'
 }
 
 
@@ -24,6 +24,22 @@ const _Attribute = {
  * @see https://developer.apple.com/reference/scenekit/scnscene
  */
 export default class SCNScene extends NSObject {
+  static get _propTypes() {
+    return {
+      paused: ['boolean', 'isPaused'],
+      rootNode: ['SCNNode', '_rootNode'],
+      upAxis: ['SCNVector3', null],
+      fogStartDistance: 'double',
+      fogDensityExponent: 'double',
+      physicsWorld: ['SCNPhysicsWorld', '_physicsWorld'],
+      background: ['SCNMaterialProperty', '_background'],
+      endTime: ['double', null],
+      frameRate: ['double', null],
+      fogEndDistance: 'double',
+      startTime: ['double', null],
+      fogColor: 'plist'
+    }
+  }
 
   /**
    * Loads a scene from the specified URL.
@@ -97,6 +113,41 @@ You call this method in a try expression and handle any errors in the catch clau
     this._particleSystems = null
   }
 
+  /**
+   * @access public
+   * @param {NSCoder} coder -
+   * @returns {SCNScene}
+   */
+   /*
+  static initWithCoder(coder) {
+    const instance = new SCNScene()
+    instance._setValueWithCoder(coder)
+    return instance
+  }
+  */
+
+  /**
+   * @access private
+   * @param {NSCoder} coder -
+   */
+   /*
+  _setValueWithCoder(coder) {
+    this.isPaused = coder.decodeBoolForKey('paused')
+    this._rootNode = coder.decodeObjectForKey('rootNode')
+    const upAxis = coder.decodeBytesForKeyReturnedLength('upAxis', null)
+    this.fogStartDistance = coder.decodeFloatForKey('fogStartDistance')
+    this.fogDensityExponent = coder.decodeFloatForKey('fogDensityExponent')
+    this._physicsWorld = coder.decodeObjectForKey('physicsWorld')
+    this._background = coder.decodeObjectForKey('background')
+    // TODO: check if Integer is a proper type
+    const endTime = coder.decodeIntegerForKey('endTime')
+    const frameRate = coder.decodeIntegerForKey('frameRate')
+    this.fogEndDistance = coder.decodeFloatForKey('fogEndDistance')
+    const startTime = coder.decodeIntegerForKey('startTime')
+    this.fogColor = coder.decodeObjectForKey('fogColor') // NSMutableData...
+  }
+  */
+
   // Creating or Loading a Scene
 
   /**
@@ -107,7 +158,7 @@ You call this method in a try expression and handle any errors in the catch clau
    * @desc This method provides a convenient way to load a complete scene from a file in the app’s main bundle. Calling this method is equivalent to using the Bundle class to locate the scene file and passing the resulting URL to the init(url:options:) method, specifying no options and no error handling.For more detailed options or to load only part of a file’s scene graph, use the SCNSceneSource class.
    * @see https://developer.apple.com/reference/scenekit/scnscene/1523355-init
    */
-  initNamed(name) {
+  static sceneNamed(name) {
   }
 
   /**
@@ -120,7 +171,7 @@ You call this method in a try expression and handle any errors in the catch clau
    * @desc This method provides a convenient way to load a complete scene from a file in the app’s main bundle. Calling this method is equivalent to using the Bundle class to locate the scene file and passing the resulting URL to the init(url:options:) method.For more detailed options or to load only part of a file’s scene graph, use the SCNSceneSource class.
    * @see https://developer.apple.com/reference/scenekit/scnscene/1522851-init
    */
-  initNamedInDirectory(name, directory, options = null) {
+  static sceneNamedInDirectory(name, directory, options = null) {
   }
 
   /**
@@ -136,7 +187,8 @@ You call this method in a try expression and handle any errors in the catch clau
 
    * @see https://developer.apple.com/reference/scenekit/scnscene/1522660-init
    */
-  init(url, options = null) {
+  static scene(url, options = null) {
+    return new SCNScene(url, options)
   }
 
   // Accessing Scene Contents
@@ -269,13 +321,14 @@ You call this method in a try expression and handle any errors in the catch clau
 
   /**
    * @type {Object} Attribute
-   * @property {Symbol} endTime A floating-point value (in an NSNumber object) for the end time of the scene.
-   * @property {Symbol} frameRate A floating-point value (in an NSNumber object) for the frame rate of the scene.
-   * @property {Symbol} startTime A floating-point value (in an NSNumber object) for the start time of the scene.
-   * @property {Symbol} upAxis An SCNVector3 structure (in an NSValue object) specifying the orientation of the scene.
+   * @property {string} endTime A floating-point value (in an NSNumber object) for the end time of the scene.
+   * @property {string} frameRate A floating-point value (in an NSNumber object) for the frame rate of the scene.
+   * @property {string} startTime A floating-point value (in an NSNumber object) for the start time of the scene.
+   * @property {string} upAxis An SCNVector3 structure (in an NSValue object) specifying the orientation of the scene.
    * @see https://developer.apple.com/reference/scenekit/scnscene.attribute
    */
   static get Attribute() {
     return _Attribute
   }
+
 }

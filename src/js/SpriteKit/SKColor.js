@@ -1,6 +1,7 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
+import NSColorSpaceModel from '../AppKit/NSColorSpaceModel'
 
 /**
  * An object that stores color data and sometimes opacity (that is, alpha value). 
@@ -9,6 +10,48 @@ import NSObject from '../ObjectiveC/NSObject'
  * @see https://developer.apple.com/reference/uikit/uicolor
  */
 export default class SKColor extends NSObject {
+  static get _propTypes() {
+    return {
+      $constructor: (propNames, propValues) => {
+        if(typeof propValues.NSColorSpace !== 'undefined'){
+          // initialize for NSColor
+          const buf = propValues.NSRGB
+          const ascii = buf.toString('ascii')
+          const values = ascii.split(' ')
+          const space = propValues.NSColorSpace - 1
+          switch(space){
+            case NSColorSpaceModel.gray:
+              break
+            case NSColorSpaceModel.RGB: {
+              const r = parseFloat(values[0])
+              const g = parseFloat(values[1])
+              const b = parseFloat(values[2])
+              const a = 1.0
+              console.log(`NSColor -> SKColor: r:${r} g:${g} b:${b} a:${a}`)
+              return new SKColor(r, g, b, a)
+            }
+            case NSColorSpaceModel.CMYK:
+              break
+            case NSColorSpaceModel.LAB:
+              break
+            case NSColorSpaceModel.deviceN:
+              break
+            case NSColorSpaceModel.indexed:
+              break
+            case NSColorSpaceModel.patterned:
+              break
+          }
+          throw new Error(`unknown color space: ${propValues.NSColorSpace}`)
+        }else{
+          // TODO: implement
+          return new SKColor()
+        }
+      },
+      // for NSColor
+      NSRGB: ['bytes', null],
+      NSColorSpace: ['integer', null],
+    }
+  }
 
   // Initializers
 
@@ -287,6 +330,7 @@ export default class SKColor extends NSObject {
    * @see https://developer.apple.com/reference/uikit/uicolor/1621949-gethue
    */
   getHSBA() {
+    // TODO: implement
     const color = {
       hue: 0,
       saturation: 0,

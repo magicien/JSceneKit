@@ -2,7 +2,7 @@
 
 import NSObject from '../ObjectiveC/NSObject'
 import SCNGeometryPrimitiveType from './SCNGeometryPrimitiveType'
-
+import _Buffer from '../util/_Buffer'
 
 /**
  * A container for index data describing how vertices connect to define a three-dimensional object, or geometry.
@@ -11,13 +11,30 @@ import SCNGeometryPrimitiveType from './SCNGeometryPrimitiveType'
  * @see https://developer.apple.com/reference/scenekit/scngeometryelement
  */
 export default class SCNGeometryElement extends NSObject {
+  static get _propTypes() {
+    return {
+      $constructor: (propNames, propValues) => {
+        return new SCNGeometryElement(
+          propValues.elementData, 
+          propValues.primitiveType, 
+          propValues.primitiveCount, 
+          propValues.bytesPerIndex
+        )
+      },
+      primitiveType: ['integer', null],
+      primitiveCount: ['integer', null],
+      elementData: ['NSMutableData', null],
+      bytesPerIndex: ['integer', null]
+    }
+  }
+
   // Creating a Geometry Element
 
   /**
    * Creates a geometry element from the specified array of index values. 
    * @access public
    * @constructor
-   * @param {IndexType[]} indices - An array of index values, each of which identifies a vertex in a geometry source.
+   * @param {number[]|Buffer} indices - An array of index values, each of which identifies a vertex in a geometry source.
    * @param {SCNGeometryPrimitiveType} primitiveType - The drawing primitive that connects vertices when rendering the geometry element. For possible values, see SCNGeometryPrimitiveType.
    * @desc SceneKit connects the vertices in the order specified by the indices array, arranged according to the primitiveType parameter.This initializer is equivalent to the init(data:primitiveType:primitiveCount:bytesPerIndex:) initializer, but does not require an intermediary Data object; instead, it automatically infers the necessary allocation size and bytesPerIndex values based on the contents of the indices array. To create a custom SCNGeometry object from the geometry element, use the init(sources:elements:) initializer.
    * @see https://developer.apple.com/reference/scenekit/scngeometryelement/1523191-init
@@ -28,11 +45,38 @@ export default class SCNGeometryElement extends NSObject {
     // Inspecting a Geometry Element
 
     this._data = indices
+    if(indices instanceof _Buffer){
+      const _data = []
+      const count = indices.length / bytesPerIndex
+      let _offset = 0
+      for(let i=0; i<count; i++){
+        _data.push(indices.readUIntLE(_offset, bytesPerIndex))
+        _offset += bytesPerIndex
+      }
+      this._data = _data
+    }
+
     this._primitiveType = primitiveType
     if(primitiveCount !== null){
       this._primitiveCount = primitiveCount
     }else{
-      this._primitiveCount = indices.length / 3 // FIXME: calculate from primitiveType
+      switch(primitiveType){
+        case SCNGeometryPrimitiveType.triangles:
+          this._primitiveCount = this._data.length / 3
+          break
+        case SCNGeometryPrimitiveType.triangleStrip:
+          this._primitiveCount = this._data.length - 2
+          break
+        case SCNGeometryPrimitiveType.line:
+          this._primitiveCount = this._data.length / 2
+          break
+        case SCNGeometryPrimitiveType.point:
+          this._primitiveCount = this._data.length
+          break
+        case SCNGeometryPrimitiveType.polygon:
+          this._primitiveCount = this._data.length / 2
+          break
+      }
     }
     this._bytesPerIndex = bytesPerIndex
 

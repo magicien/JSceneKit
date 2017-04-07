@@ -9,12 +9,12 @@ import SKColor from '../SpriteKit/SKColor'
 import SCNShadowMode from './SCNShadowMode'
 
 const _LightType = {
-  IES: Symbol(),
-  ambient: Symbol(),
-  directional: Symbol(),
-  omni: Symbol(),
-  probe: Symbol(),
-  spot: Symbol()
+  IES: 'ies',
+  ambient: 'ambient',
+  directional: 'directional',
+  omni: 'omni',
+  probe: 'probe',
+  spot: 'spot'
 }
 
 
@@ -267,12 +267,12 @@ export default class SCNLight extends NSObject {
   // Structures
   /**
    * @type {Object} LightType
-   * @property {Symbol} IES A light source whose shape, direction, and intensity of illumination is determined by a photometric profile.
-   * @property {Symbol} ambient A light that illuminates all objects in the scene from all directions.
-   * @property {Symbol} directional A light source with a uniform direction and constant intensity.
-   * @property {Symbol} omni An omnidirectional light, also known as a point light. 
-   * @property {Symbol} probe A sample of the environment around a point in a scene to be used in environment-based lighting.
-   * @property {Symbol} spot A light source that illuminates a cone-shaped area.
+   * @property {string} IES A light source whose shape, direction, and intensity of illumination is determined by a photometric profile.
+   * @property {string} ambient A light that illuminates all objects in the scene from all directions.
+   * @property {string} directional A light source with a uniform direction and constant intensity.
+   * @property {string} omni An omnidirectional light, also known as a point light. 
+   * @property {string} probe A sample of the environment around a point in a scene to be used in environment-based lighting.
+   * @property {string} spot A light source that illuminates a cone-shaped area.
    * @see https://developer.apple.com/reference/scenekit/scnlight.lighttype
    */
   static get LightType() {

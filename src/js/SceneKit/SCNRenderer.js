@@ -612,35 +612,43 @@ export default class SCNRenderer extends NSObject {
         gl.uniform1i(gl.getUniformLocation(program, 'u_useDiffuseTexture'), 0)
       }
 
+      let shape = null
       switch(element.primitiveType){
-        case SCNGeometryPrimitiveType.triangles: {
-          let size = null
-            switch(element.bytesPerIndex){
-              case 1:
-                size = gl.UNSIGNED_BYTE
-                break
-              case 2:
-                size = gl.UNSIGNED_SHORT
-                break
-              case 4:
-                size = gl.UNSIGNED_INT
-                break
-              default:
-                throw new Error(`unsupported index size: ${element._bytesPerIndex}`)
-            }
-
-            gl.drawElements(gl.TRIANGLES, element._glData.length, size, 0)
-            break
-          }
+        case SCNGeometryPrimitiveType.triangles:
+          shape = gl.TRIANGLES
+          break
         case SCNGeometryPrimitiveType.triangleStrip:
+          shape = gl.TRIANGLE_STRIP
           break
         case SCNGeometryPrimitiveType.line:
+          shape = gl.LINES
           break
         case SCNGeometryPrimitiveType.point:
+          shape = gl.POINTS
           break
         case SCNGeometryPrimitiveType.polygon:
+          shape = gl.TRIANGLE_FAN
           break
+        default:
+          throw new Error(`unsupported primitiveType: ${element.primitiveType}`)
       }
+
+      let size = null
+      switch(element.bytesPerIndex){
+        case 1:
+          size = gl.UNSIGNED_BYTE
+          break
+        case 2:
+          size = gl.UNSIGNED_SHORT
+          break
+        case 4:
+          size = gl.UNSIGNED_INT
+          break
+        default:
+          throw new Error(`unsupported index size: ${element.bytesPerIndex}`)
+      }
+
+      gl.drawElements(shape, element._glData.length, size, 0)
     }
   }
 

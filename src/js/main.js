@@ -1,3 +1,5 @@
+import NSColor from './AppKit/NSColor'
+import NSColorSpaceModel from './AppKit/NSColorSpaceModel'
 import CGBlendMode from './CoreGraphics/CGBlendMode'
 import CGLineCap from './CoreGraphics/CGLineCap'
 import CGLineJoin from './CoreGraphics/CGLineJoin'
@@ -9,6 +11,15 @@ import CGPoint from './CoreGraphics/CGPoint'
 import CGRect from './CoreGraphics/CGRect'
 import CGSize from './CoreGraphics/CGSize'
 import CGVector from './CoreGraphics/CGVector'
+import NSArray from './Foundation/NSArray'
+import NSCoder from './Foundation/NSCoder'
+import NSData from './Foundation/NSData'
+import NSDictionary from './Foundation/NSDictionary'
+import NSKeyedArchiver from './Foundation/NSKeyedArchiver'
+import NSKeyedUnarchiver from './Foundation/NSKeyedUnarchiver'
+import NSMutableArray from './Foundation/NSMutableArray'
+import NSMutableData from './Foundation/NSMutableData'
+import NSMutableDictionary from './Foundation/NSMutableDictionary'
 import NSValue from './Foundation/NSValue'
 import NSObject from './ObjectiveC/NSObject'
 import CAAction from './QuartzCore/CAAction'
@@ -160,9 +171,190 @@ import SCNVector4ToGLKVector4 from './SceneKit/SCNVector4ToGLKVector4'
 import SCNView from './SceneKit/SCNView'
 import SCNWrapMode from './SceneKit/SCNWrapMode'
 import SKColor from './SpriteKit/SKColor'
-import HTMLCanvasElement from './util/HTMLCanvasElement'
+import _BinaryReader from './util/_BinaryReader'
+import _Buffer from './util/_Buffer'
+import _ClassList from './util/_ClassList'
+import _File from './util/_File'
+import _FileReader from './util/_FileReader'
+import _HTMLCanvasElement from './util/_HTMLCanvasElement'
+
+_ClassList.registerClass(NSColor)
+_ClassList.registerClass(NSColorSpaceModel)
+_ClassList.registerClass(CGBlendMode)
+_ClassList.registerClass(CGLineCap)
+_ClassList.registerClass(CGLineJoin)
+_ClassList.registerClass(CGMutablePath)
+_ClassList.registerClass(CGPath)
+_ClassList.registerClass(CGPathApplierFunction)
+_ClassList.registerClass(CGPathFillRule)
+_ClassList.registerClass(CGPoint)
+_ClassList.registerClass(CGRect)
+_ClassList.registerClass(CGSize)
+_ClassList.registerClass(CGVector)
+_ClassList.registerClass(NSArray)
+_ClassList.registerClass(NSCoder)
+_ClassList.registerClass(NSData)
+_ClassList.registerClass(NSDictionary)
+_ClassList.registerClass(NSKeyedArchiver)
+_ClassList.registerClass(NSKeyedUnarchiver)
+_ClassList.registerClass(NSMutableArray)
+_ClassList.registerClass(NSMutableData)
+_ClassList.registerClass(NSMutableDictionary)
+_ClassList.registerClass(NSValue)
+_ClassList.registerClass(NSObject)
+_ClassList.registerClass(CAAction)
+_ClassList.registerClass(CAAnimation)
+_ClassList.registerClass(CAAnimationDelegate)
+_ClassList.registerClass(CAAnimationGroup)
+_ClassList.registerClass(CABasicAnimation)
+_ClassList.registerClass(CAKeyframeAnimation)
+_ClassList.registerClass(CAMediaTiming)
+_ClassList.registerClass(CAMediaTimingFunction)
+_ClassList.registerClass(CAPropertyAnimation)
+_ClassList.registerClass(CATransform3D)
+_ClassList.registerClass(SCNAction)
+_ClassList.registerClass(SCNActionable)
+_ClassList.registerClass(SCNActionTimingFunction)
+_ClassList.registerClass(SCNActionTimingMode)
+_ClassList.registerClass(SCNAnimatable)
+_ClassList.registerClass(SCNAnimationEvent)
+_ClassList.registerClass(SCNAnimationEventBlock)
+_ClassList.registerClass(SCNAntialiasingMode)
+_ClassList.registerClass(SCNAudioPlayer)
+_ClassList.registerClass(SCNAudioSource)
+_ClassList.registerClass(SCNBillboardAxis)
+_ClassList.registerClass(SCNBillboardConstraint)
+_ClassList.registerClass(SCNBindingBlock)
+_ClassList.registerClass(SCNBlendMode)
+_ClassList.registerClass(SCNBoundingVolume)
+_ClassList.registerClass(SCNBox)
+_ClassList.registerClass(SCNBufferBindingBlock)
+_ClassList.registerClass(SCNBufferFrequency)
+_ClassList.registerClass(SCNBufferStream)
+_ClassList.registerClass(SCNCamera)
+_ClassList.registerClass(SCNCapsule)
+_ClassList.registerClass(SCNChamferMode)
+_ClassList.registerClass(SCNCone)
+_ClassList.registerClass(SCNConstraint)
+_ClassList.registerClass(SCNCullMode)
+_ClassList.registerClass(SCNCylinder)
+_ClassList.registerClass(SCNDebugOptions)
+_ClassList.registerClass(SCNFieldForceEvaluator)
+_ClassList.registerClass(SCNFilterMode)
+_ClassList.registerClass(SCNFloor)
+_ClassList.registerClass(SCNGeometry)
+_ClassList.registerClass(SCNGeometryElement)
+_ClassList.registerClass(SCNGeometryPrimitiveType)
+_ClassList.registerClass(SCNGeometrySource)
+_ClassList.registerClass(SCNHitTestOption)
+_ClassList.registerClass(SCNHitTestResult)
+_ClassList.registerClass(SCNIKConstraint)
+_ClassList.registerClass(SCNLayer)
+_ClassList.registerClass(SCNLevelOfDetail)
+_ClassList.registerClass(SCNLight)
+_ClassList.registerClass(SCNLookAtConstraint)
+_ClassList.registerClass(SCNMaterial)
+_ClassList.registerClass(SCNMaterialProperty)
+_ClassList.registerClass(SCNMatrix4)
+_ClassList.registerClass(SCNMatrix4EqualToMatrix4)
+_ClassList.registerClass(SCNMatrix4FromGLKMatrix4)
+_ClassList.registerClass(SCNMatrix4FromMat4)
+_ClassList.registerClass(SCNMatrix4Invert)
+_ClassList.registerClass(SCNMatrix4IsIdentity)
+_ClassList.registerClass(SCNMatrix4MakeRotation)
+_ClassList.registerClass(SCNMatrix4MakeScale)
+_ClassList.registerClass(SCNMatrix4MakeTranslation)
+_ClassList.registerClass(SCNMatrix4Mult)
+_ClassList.registerClass(SCNMatrix4Rotate)
+_ClassList.registerClass(SCNMatrix4Scale)
+_ClassList.registerClass(SCNMatrix4ToGLKMatrix4)
+_ClassList.registerClass(SCNMatrix4ToMat4)
+_ClassList.registerClass(SCNMatrix4Translate)
+_ClassList.registerClass(SCNMorpher)
+_ClassList.registerClass(SCNMorpherCalculationMode)
+_ClassList.registerClass(SCNMovabilityHint)
+_ClassList.registerClass(SCNNode)
+_ClassList.registerClass(SCNNodeRendererDelegate)
+_ClassList.registerClass(SCNParticleBirthDirection)
+_ClassList.registerClass(SCNParticleBirthLocation)
+_ClassList.registerClass(SCNParticleBlendMode)
+_ClassList.registerClass(SCNParticleEvent)
+_ClassList.registerClass(SCNParticleEventBlock)
+_ClassList.registerClass(SCNParticleImageSequenceAnimationMode)
+_ClassList.registerClass(SCNParticleInputMode)
+_ClassList.registerClass(SCNParticleModifierBlock)
+_ClassList.registerClass(SCNParticleModifierStage)
+_ClassList.registerClass(SCNParticleOrientationMode)
+_ClassList.registerClass(SCNParticlePropertyController)
+_ClassList.registerClass(SCNParticleSortingMode)
+_ClassList.registerClass(SCNParticleSystem)
+_ClassList.registerClass(SCNPhysicsBallSocketJoint)
+_ClassList.registerClass(SCNPhysicsBehavior)
+_ClassList.registerClass(SCNPhysicsBody)
+_ClassList.registerClass(SCNPhysicsBodyType)
+_ClassList.registerClass(SCNPhysicsCollisionCategory)
+_ClassList.registerClass(SCNPhysicsContact)
+_ClassList.registerClass(SCNPhysicsContactDelegate)
+_ClassList.registerClass(SCNPhysicsField)
+_ClassList.registerClass(SCNPhysicsFieldScope)
+_ClassList.registerClass(SCNPhysicsHingeJoint)
+_ClassList.registerClass(SCNPhysicsShape)
+_ClassList.registerClass(SCNPhysicsSliderJoint)
+_ClassList.registerClass(SCNPhysicsVehicle)
+_ClassList.registerClass(SCNPhysicsVehicleWheel)
+_ClassList.registerClass(SCNPhysicsWorld)
+_ClassList.registerClass(SCNPlane)
+_ClassList.registerClass(SCNProgram)
+_ClassList.registerClass(SCNProgramDelegate)
+_ClassList.registerClass(SCNPyramid)
+_ClassList.registerClass(SCNQuaternion)
+_ClassList.registerClass(SCNReferenceLoadingPolicy)
+_ClassList.registerClass(SCNReferenceNode)
+_ClassList.registerClass(SCNRenderer)
+_ClassList.registerClass(SCNRenderingAPI)
+_ClassList.registerClass(SCNScene)
+_ClassList.registerClass(SCNSceneExportDelegate)
+_ClassList.registerClass(SCNSceneExportProgressHandler)
+_ClassList.registerClass(SCNSceneRenderer)
+_ClassList.registerClass(SCNSceneRendererDelegate)
+_ClassList.registerClass(SCNSceneSource)
+_ClassList.registerClass(SCNSceneSourceStatus)
+_ClassList.registerClass(SCNSceneSourceStatusHandler)
+_ClassList.registerClass(SCNShadable)
+_ClassList.registerClass(SCNShaderModifierEntryPoint)
+_ClassList.registerClass(SCNShadowMode)
+_ClassList.registerClass(SCNShape)
+_ClassList.registerClass(SCNSkinner)
+_ClassList.registerClass(SCNSphere)
+_ClassList.registerClass(SCNTechnique)
+_ClassList.registerClass(SCNTechniqueSupport)
+_ClassList.registerClass(SCNText)
+_ClassList.registerClass(SCNTorus)
+_ClassList.registerClass(SCNTransaction)
+_ClassList.registerClass(SCNTransformConstraint)
+_ClassList.registerClass(SCNTransparencyMode)
+_ClassList.registerClass(SCNTube)
+_ClassList.registerClass(SCNVector3)
+_ClassList.registerClass(SCNVector3EqualToVector3)
+_ClassList.registerClass(SCNVector3FromFloat3)
+_ClassList.registerClass(SCNVector3FromGLKVector3)
+_ClassList.registerClass(SCNVector3Make)
+_ClassList.registerClass(SCNVector3ToFloat3)
+_ClassList.registerClass(SCNVector3ToGLKVector3)
+_ClassList.registerClass(SCNVector4)
+_ClassList.registerClass(SCNVector4EqualToVector4)
+_ClassList.registerClass(SCNVector4FromFloat4)
+_ClassList.registerClass(SCNVector4FromGLKVector4)
+_ClassList.registerClass(SCNVector4Make)
+_ClassList.registerClass(SCNVector4ToFloat4)
+_ClassList.registerClass(SCNVector4ToGLKVector4)
+_ClassList.registerClass(SCNView)
+_ClassList.registerClass(SCNWrapMode)
+_ClassList.registerClass(SKColor)
 
 /*global exports*/
+exports.NSColor = NSColor
+exports.NSColorSpaceModel = NSColorSpaceModel
 exports.CGBlendMode = CGBlendMode
 exports.CGLineCap = CGLineCap
 exports.CGLineJoin = CGLineJoin
@@ -174,6 +366,15 @@ exports.CGPoint = CGPoint
 exports.CGRect = CGRect
 exports.CGSize = CGSize
 exports.CGVector = CGVector
+exports.NSArray = NSArray
+exports.NSCoder = NSCoder
+exports.NSData = NSData
+exports.NSDictionary = NSDictionary
+exports.NSKeyedArchiver = NSKeyedArchiver
+exports.NSKeyedUnarchiver = NSKeyedUnarchiver
+exports.NSMutableArray = NSMutableArray
+exports.NSMutableData = NSMutableData
+exports.NSMutableDictionary = NSMutableDictionary
 exports.NSValue = NSValue
 exports.NSObject = NSObject
 exports.CAAction = CAAction
@@ -325,7 +526,12 @@ exports.SCNVector4ToGLKVector4 = SCNVector4ToGLKVector4
 exports.SCNView = SCNView
 exports.SCNWrapMode = SCNWrapMode
 exports.SKColor = SKColor
-exports.HTMLCanvasElement = HTMLCanvasElement
+exports._BinaryReader = _BinaryReader
+exports._Buffer = _Buffer
+exports._ClassList = _ClassList
+exports._File = _File
+exports._FileReader = _FileReader
+exports._HTMLCanvasElement = _HTMLCanvasElement
 
 // constants
 /*global exports*/

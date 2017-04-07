@@ -20,6 +20,28 @@ import SCNMaterial from './SCNMaterial'
  * @see https://developer.apple.com/reference/scenekit/scngeometry
  */
 export default class SCNGeometry extends NSObject {
+  static get _propTypes() {
+    const addSources = (obj, sources, key, coder) => { 
+      console.log(`addSources source.length: ${sources.length}, key: ${key}`)
+      obj._geometrySources.push(...sources) 
+    }
+    return {
+      name: 'string',
+      // levelsOfDetail
+      materials: 'NSArray',
+      subdivisionLevel: 'integer',
+      // edgeCreasesSource
+      // program
+      // shaderModifiers
+      elements: ['NSArray', '_geometryElements'],
+      kGeometrySourceSemanticVertex: ['NSArray', addSources],
+      kGeometrySourceSemanticNormal: ['NSArray', addSources],
+      kGeometrySourceSemanticTexcoord: ['NSArray', addSources],
+      kGeometrySourceSemanticColor: ['NSArray', addSources],
+      entityID: ['string', null]
+    }
+  }
+
   // Creating a Geometry Object
 
   /**

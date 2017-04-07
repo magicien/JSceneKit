@@ -2,6 +2,8 @@
 
 import CGPoint from '../CoreGraphics/CGPoint'
 import CGRect from '../CoreGraphics/CGRect'
+import _Buffer from '../util/_Buffer'
+import _ClassList from '../util/_ClassList'
 
 /**
  * The root class of most Objective-C class hierarchies, from which subclasses inherit a basic interface to the runtime system and the ability to behave as Objective-C objects.
@@ -9,6 +11,9 @@ import CGRect from '../CoreGraphics/CGRect'
  * @see https://developer.apple.com/reference/objectivec/nsobject
  */
 export default class NSObject {
+  static get _propTypes() {
+    return {}
+  }
 
   // Initializing a Class
 
@@ -96,7 +101,6 @@ In some cases, a custom implementation of the init() method might return a subst
     this.scriptingProperties = null
 
     this._classCode = 0
-    this._className = ''
 
     // Instance Properties
 
@@ -778,6 +782,7 @@ returns the string employees.employee inverseForRelationshipKey:@"department"];
   get classCode() {
     return this._classCode
   }
+
   /**
    * A string containing the name of the class.
    * @type {string}
@@ -785,7 +790,17 @@ returns the string employees.employee inverseForRelationshipKey:@"department"];
    * @see https://developer.apple.com/reference/objectivec/nsobject/1411337-classname
    */
   get className() {
-    return this._className
+    return this.constructor.name
+  }
+
+  /**
+   * A string containing the name of the class.
+   * @type {string}
+   * @desc 
+   * @see https://developer.apple.com/reference/objectivec/nsobject/1411337-classname
+   */
+  static get className() {
+    return this.prototype.constructor.name
   }
 
   // Deprecated Methods
@@ -3549,5 +3564,184 @@ validateToolbarItem(_:) is called very frequently, so it must be efficient.If th
    */
   static webScriptNameFor(selector) {
     return null
+  }
+
+  static get supportsSecureCoding() {
+    return true
+  }
+
+  static initWithCoder(coder) {
+    console.log('initWithCoder: ' + this.className)
+    const propTypes = this._propTypes
+
+    // DEBUG: check if all property names are registered
+    for(const key of Object.keys(coder._refObj)){
+      if(key.charAt(0) !== '$' && typeof propTypes[key] === 'undefined'){
+        throw new Error(`${this.className}: property ${key} not registered`)
+      }
+    }
+
+    const props = this._loadProperties(coder)
+    const propNames = props.names
+    const propValues = props.values
+    
+    let instance = null
+    if(typeof propTypes.$constructor === 'function'){
+      instance = propTypes.$constructor(propNames, propValues, coder)
+    }else{
+      instance = new this()
+    }
+
+    this._setProperties(instance, propNames, propValues, coder)
+    
+    return instance
+  }
+
+  /**
+   * @access private
+   * @param {NSCoder} coder -
+   * @returns {Object} -
+   */
+  static _loadProperties(coder) {
+    const propTypes = this._propTypes
+    const propNames = {}
+    const propValues = {}
+
+    for(const key of Object.keys(propTypes)){
+      console.log(`key: ${key}`)
+      if(!coder.containsValueForKey(key)){
+        console.log(`!coder.containsValueForKey ${key}`)
+        continue
+      }
+      const def = propTypes[key]
+      let type = ''
+      let propName = key
+      if(typeof def === 'string'){
+        type = def
+      }else if(Array.isArray(def)){
+        type = def[0]
+        if(def.length >= 2){
+          propName = def[1]
+        }
+      }
+
+      console.log(`type: ${type}, propName: ${propName}`)
+      let value = null
+      switch(type){
+        case 'boolean':
+          value = coder.decodeBoolForKey(key)
+          break
+        case 'bytes':
+          value = coder.decodeBytesForKeyReturnedLength(key, null)
+          break
+        case 'double':
+          value = coder.decodeDoubleForKey(key)
+          break
+        case 'float':
+          value = coder.decodeFloatForKey(key)
+          break
+        case 'integer':
+          value = coder.decodeCIntForKey(key)
+          break
+        case 'int32':
+          value = coder.decodeInt32ForKey(key)
+          break
+        case 'int64':
+          value = coder.decodeInt64ForKey(key)
+          break
+        case 'point':
+          value = coder.decodePointForKey(key)
+          break
+        case 'rect':
+          value = coder.decodeRectForKey(key)
+          break
+        case 'size':
+          value = coder.decodeSizeForKey(key)
+          break
+        case 'plist':
+          value = coder.decodePropertyListForKey(key)
+          break
+        case 'string':
+          value = coder.decodeObjectForKey(key)
+          if(typeof value !== 'string'){
+            throw new Error(`${key}: value is not String type`)
+          }
+          break
+        default: {
+          const classObj = _ClassList.get(type)
+          if(typeof classObj === 'undefined'){
+            throw new Error(`unknown class name: ${type}`)
+          }
+          if(coder._refObj[key] instanceof _Buffer){
+            value = coder.decodeObjectOfTypeForKey(classObj, key)
+            if(!(value instanceof classObj)){
+              throw new Error(`${key}: value is not an instance of ${type}`)
+            }
+          }else{
+            value = coder.decodeObjectForKey(key)
+            if(value instanceof Promise){
+              // wait for loading
+            }else if(!(value instanceof classObj)){
+              const exception = [
+                'NSData', 'NSMutableData', // => Buffer
+                'NSArray', 'NSMutableArray', // => Array
+                'NSDictionary', 'NSMutableDictionary', // => Object
+                'NSColor' // => SKColor
+              ]
+              if(exception.indexOf(classObj.className) < 0){
+                throw new Error(`${key}: value is not an instance of ${type}`)
+              }
+            }
+          }
+        }
+      }
+      if(Array.isArray(value)){
+        console.log(`value: Array[${value.length}]`)
+      }else if(typeof value === 'symbol'){
+        console.log('value: Symbol()')
+      }else{
+        console.log(`value: ${value}`)
+      }
+      
+      propValues[key] = value
+      propNames[key] = propName
+    }
+
+    return { names: propNames, values: propValues }
+  }
+
+  /**
+   * @access private
+   * @param {Object} instance -
+   * @param {string[]} propNames -
+   * @param {Object[]} propValues -
+   * @param {NSCoder} coder -
+   * @returns {void}
+   */
+  static _setProperties(instance, propNames, propValues, coder) {
+    for(const key of Object.keys(propValues)){
+      this._setProperty(instance, propNames[key], propValues[key], key, coder)
+    }
+  }
+
+  /**
+   * @access private
+   * @param {Object} instance -
+   * @param {string[]} propName -
+   * @param {Object[]} propValue -
+   * @param {string} key -
+   * @param {NSCoder} coder -
+   * @returns {void}
+   */
+  static _setProperty(instance, propName, propValue, key, coder) {
+    if(propValue instanceof Promise){
+      propValue.then((loadedValue) => {
+        this._setProperty(instance, propName, loadedValue, key, coder)
+      })
+    }else if(typeof propName === 'function'){
+      propName(instance, propValue, key, coder)
+    }else if(propName !== null){
+      instance[propName] = propValue
+    }
   }
 }

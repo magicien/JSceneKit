@@ -11,15 +11,15 @@ import SCNPhysicsShape from './SCNPhysicsShape'
 import SCNMatrix4 from './SCNMatrix4'
 
 const _TestOption = {
-  backfaceCulling: Symbol(),
-  collisionBitMask: Symbol(),
-  searchMode: Symbol()
+  backfaceCulling: 'backfaceCulling',
+  collisionBitMask: 'collisionBitMask',
+  searchMode: 'results'
 }
 
 const _TestSearchMode = {
-  all: Symbol(),
-  any: Symbol(),
-  closest: Symbol()
+  all: 'all',
+  any: 'any',
+  closest: 'closest'
 }
 
 
@@ -30,13 +30,25 @@ const _TestSearchMode = {
  * @see https://developer.apple.com/reference/scenekit/scnphysicsworld
  */
 export default class SCNPhysicsWorld extends NSObject {
+  static get _propTypes() {
+    return {
+      gravity: 'SCNVector3',
+      speed: 'double',
+      timeStep: 'double',
+      scale: ['double', '_scale'],
+      // _allBehaviors
+      // contactDelegate
+      scene: ['SCNScene', null],
+    }
+  }
 
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  init() {
+  constructor() {
+    super()
 
     // Managing the Physics Simulation
 
@@ -61,6 +73,11 @@ export default class SCNPhysicsWorld extends NSObject {
      */
     this.timeStep = 0
 
+    /**
+     * @access private
+     * @type {number}
+     */
+    this._scale = 1.0
 
     // Registering Physics Behaviors
 
@@ -76,6 +93,33 @@ export default class SCNPhysicsWorld extends NSObject {
     this.contactDelegate = null
 
   }
+
+  /**
+   * @access public
+   * @param {NSCoder} coder -
+   * @returns {SCNPhysicsWorld}
+   */
+   /*
+  static initWithCoder(coder) {
+    const instance = new SCNPhysicsWorld()
+    instance._setValueWithCoder(coder)
+    return instance
+  }
+  */
+
+  /**
+   * @access private
+   * @param {NSCoder} coder -
+   */
+   /*
+  _setValueWithCoder(coder) {
+    this.timeStep = coder.decodeIntegerForKey('timeStep')
+    this.scale = coder.decodeFloatForKey('scale')
+    this.speed = coder.decodeFloatForKey('speed')
+    const gravity = coder.decodeBytesForKeyReturnedLength('gravity', null)
+    this.gravity = new SCNVector3(gravity)
+  }
+  */
 
   // Managing the Physics Simulation
 
@@ -243,9 +287,9 @@ if (contacts.count == 0) {
   // Structures
   /**
    * @type {Object} TestOption
-   * @property {Symbol} backfaceCulling The key for choosing whether to ignore back-facing polygons in physics shapes when searching for contacts.
-   * @property {Symbol} collisionBitMask The key for selecting which categories of physics bodies that SceneKit should test for contacts.
-   * @property {Symbol} searchMode The key for selecting the number and order of contacts to be tested.
+   * @property {string} backfaceCulling The key for choosing whether to ignore back-facing polygons in physics shapes when searching for contacts.
+   * @property {string} collisionBitMask The key for selecting which categories of physics bodies that SceneKit should test for contacts.
+   * @property {string} searchMode The key for selecting the number and order of contacts to be tested.
    * @see https://developer.apple.com/reference/scenekit/scnphysicsworld.testoption
    */
   static get TestOption() {
@@ -253,9 +297,9 @@ if (contacts.count == 0) {
   }
   /**
    * @type {Object} TestSearchMode
-   * @property {Symbol} all Searches should return all contacts matching the search parameters.
-   * @property {Symbol} any Searches should return only the first contact found regardless of its position relative to the search parameters.
-   * @property {Symbol} closest Searches should return only the closest contact to the beginning of the search.
+   * @property {string} all Searches should return all contacts matching the search parameters.
+   * @property {string} any Searches should return only the first contact found regardless of its position relative to the search parameters.
+   * @property {string} closest Searches should return only the closest contact to the beginning of the search.
    * @see https://developer.apple.com/reference/scenekit/scnphysicsworld.testsearchmode
    */
   static get TestSearchMode() {

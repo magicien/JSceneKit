@@ -4,17 +4,18 @@ import NSObject from '../ObjectiveC/NSObject'
 import SCNVector3 from './SCNVector3'
 import SCNVector4 from './SCNVector4'
 import CGPoint from '../CoreGraphics/CGPoint'
+import _Buffer from '../util/_Buffer'
 
 const _Semantic = {
-  boneIndices: Symbol(),
-  boneWeights: Symbol(),
-  color: Symbol(),
-  edgeCrease: Symbol(),
-  normal: Symbol(),
-  tangent: Symbol(),
-  texcoord: Symbol(),
-  vertex: Symbol(),
-  vertexCrease: Symbol()
+  boneIndices: 'kGeometrySourceSemanticBoneIndices',
+  boneWeights: 'kGeometrySourceSemanticBoneWeights',
+  color: 'kGeometrySourceSemanticColor',
+  edgeCrease: 'kGeometrySourceSemanticEdgeCrease',
+  normal: 'kGeometrySourceSemanticNormal',
+  tangent: 'kGeometrySourceSemanticTangent',
+  texcoord: 'kGeometrySourceSemanticTexcoord',
+  vertex: 'kGeometrySourceSemanticVertex',
+  vertexCrease: 'kGeometrySourceSemanticVertexCrease'
 }
 
 
@@ -25,12 +26,37 @@ const _Semantic = {
  * @see https://developer.apple.com/reference/scenekit/scngeometrysource
  */
 export default class SCNGeometrySource extends NSObject {
+  static get _propTypes() {
+    return {
+      $constructor: (propNames, propValues) => {
+        return new SCNGeometrySource(
+          propValues.data,
+          propValues.semantic,
+          propValues.vectorCount,
+          propValues.floatComponents,
+          propValues.componentsPerVector,
+          propValues.bytesPerComponent,
+          propValues.dataOffset,
+          propValues.dataStride
+        )
+      },
+      data: ['NSMutableData', null],
+      semantic: ['string', null],
+      vectorCount: ['integer', null],
+      floatComponents: ['boolean', null],
+      componentsPerVector: ['integer', null],
+      bytesPerComponent: ['integer', null],
+      dataOffset: ['integer', null],
+      dataStride: ['integer', null],
+      mkSemantic: ['boolean', null] // ?
+    }
+  }
 
   /**
    * Creates a geometry source from the specified data and options.
    * @access public
    * @constructor
-   * @param {number[]} data - The data for the geometry source.
+   * @param {number[]|Buffer} data - The data for the geometry source.
    * @param {SCNGeometrySource.Semantic} semantic - The semantic value (or attribute) that the geometry source describes for each vertex. See Geometry Semantic Identifiers for available values.
    * @param {number} vectorCount - The number of geometry source vectors.
    * @param {boolean} floatComponents - A Boolean value that indicates whether vector components are floating-point values. Specify true for floating-point values, or false for integer values.
@@ -54,6 +80,33 @@ export default class SCNGeometrySource extends NSObject {
     this._dataOffset = offset
     this._dataStride = stride
 
+    if(data instanceof _Buffer){
+      let loadFunc = null
+      if(floatComponents){
+        switch(bytesPerComponent){
+          case 4:
+            loadFunc = (_offset) => { return data.readFloatLE(_offset) }
+            break
+          case 8:
+            loadFunc = (_offset) => { return data.readDoubleLE(_offset) }
+            break
+          default:
+            throw new Error(`unknown float data size: ${bytesPerComponent}`)
+        }
+      }else{
+        loadFunc = (_offset) => { return data.readIntLE(_offset, bytesPerComponent) }
+      }
+
+      const _data = []
+      const count = data.length / bytesPerComponent
+      let _offset = 0
+      for(let i=0; i<count; i++){
+        _data.push(loadFunc(_offset))
+        _offset += bytesPerComponent
+      }
+      this._data = _data
+    }
+
     /**
      * @type {TypedArray}
      * @access private
@@ -64,17 +117,17 @@ export default class SCNGeometrySource extends NSObject {
     }else{
       if(floatComponents){
         if(bytesPerComponent === 4){
-          this._glData = new Float32Array(data)
+          this._glData = new Float32Array(this._data)
         }else if(bytesPerComponent === 8){
-          this._glData = new Float64Array(data)
+          this._glData = new Float64Array(this._data)
         }
       }else{
         if(bytesPerComponent === 1){
-          this._glData = new Uint8Array(data)
+          this._glData = new Uint8Array(this._data)
         }else if(bytesPerComponent === 2){
-          this._glData = new Uint16Array(data)
+          this._glData = new Uint16Array(this._data)
         }else if(bytesPerComponent === 4){
-          this._glData = new Uint32Array(data)
+          this._glData = new Uint32Array(this._data)
         }
       }
     }
@@ -389,15 +442,15 @@ SCNGeometrySource *source = [SCNGeometrySource geometrySourceWithBuffer:buffer
 
   /**
    * @type {Object} Semantic
-   * @property {Symbol} boneIndices The semantic for bone index data, used for skeletal animation of skinned surfaces.
-   * @property {Symbol} boneWeights The semantic for bone weight data, used for skeletal animation of skinned surfaces.
-   * @property {Symbol} color The semantic for per-vertex color data.
-   * @property {Symbol} edgeCrease The semantic for edge crease data, used for subdividing surfaces.
-   * @property {Symbol} normal The semantic for surface normal data.
-   * @property {Symbol} tangent The semantic for surface tangent vector data.
-   * @property {Symbol} texcoord The semantic for texture coordinate data.
-   * @property {Symbol} vertex The semantic for vertex position data.
-   * @property {Symbol} vertexCrease The semantic for vertex crease data, used for subdividing surfaces.
+   * @property {string} boneIndices The semantic for bone index data, used for skeletal animation of skinned surfaces.
+   * @property {string} boneWeights The semantic for bone weight data, used for skeletal animation of skinned surfaces.
+   * @property {string} color The semantic for per-vertex color data.
+   * @property {string} edgeCrease The semantic for edge crease data, used for subdividing surfaces.
+   * @property {string} normal The semantic for surface normal data.
+   * @property {string} tangent The semantic for surface tangent vector data.
+   * @property {string} texcoord The semantic for texture coordinate data.
+   * @property {string} vertex The semantic for vertex position data.
+   * @property {string} vertexCrease The semantic for vertex crease data, used for subdividing surfaces.
    * @see https://developer.apple.com/reference/scenekit/scngeometrysource.semantic
    */
   static get Semantic() {

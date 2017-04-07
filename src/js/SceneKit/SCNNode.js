@@ -35,6 +35,25 @@ import SCNHitTestResult from './SCNHitTestResult'
  * @see https://developer.apple.com/reference/scenekit/scnnode
  */
 export default class SCNNode extends NSObject {
+  static get _propTypes() {
+    return {
+      paused: ['boolean', 'isPaused'],
+      scale: ['SCNVector3', '_scale'],
+      rotation: ['SCNVector4', '_rotation'],
+      position: ['SCNVector3', '_position'],
+      clientAttributes: ['NSMutableDictionary', null],
+      castsShadow: 'boolean',
+      opacity: 'float',
+      categoryBitMask: 'integer',
+      hidden: ['boolean', 'isHidden'],
+      childNodes: ['NSArray', '_childNodes'],
+      renderingOrder: 'integer',
+      nodeID: ['string', null],
+      entityID: ['string', null],
+      name: 'string',
+      geometry: 'SCNGeometry'
+    }
+  }
 
   // Creating a Node
 
@@ -334,6 +353,46 @@ export default class SCNNode extends NSObject {
     //this._boundingSphere = null
 
   }
+
+  /**
+   * @access public
+   * @param {NSCoder} coder -
+   * @returns {SCNNode}
+   */
+   /*
+  static initWithCoder(coder) {
+    const instance = new SCNNode()
+    instance._setValueWithCoder(coder)
+    return instance
+  }
+  */
+
+  /**
+   * @access private
+   * @param {NSCoder} coder -
+   */
+   /*
+  _setValueWithCoder(coder) {
+    this.isPaused = coder.decodeBoolForKey('paused')
+    const scale = coder.decodeBytesForKeyReturnedLength('scale', null)
+    this._scale = new SCNVector3(scale)
+    const rotation = coder.decodeBytesForKeyReturnedLength('rotation', null)
+    this._rotation = new SCNVector3(rotation)
+    const position = coder.decodeBytesForKeyReturnedLength('position', null)
+    this._position = new SCNVector3(position)
+    const clientAttributes = coder.decodeObjectForKey('clientAttributes')
+    this.castsShadow = coder.deocdeBoolForKey('castsShadow')
+    this.opacity = coder.decodeFloatForKey('opacity')
+    this.categoryBitMask = coder.decodeIntegerForKey('categoryBitMask')
+    this.isHidden = coder.decodeBoolForKey('isHidden')
+    this.childNodes = coder.decodeObjectForKey('childNodes')
+    this.renderingOrder = coder.decodeIntegerForKey('renderingOrder')
+    // nodeID object
+    // entityID object
+    // name object
+    // geometry
+  }
+  */
 
   /**
    * Constructor for JSExport compatibility
@@ -1172,9 +1231,8 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     // FIXME: use current frame time
     anim._animationStartTime = Date.now() * 0.001
     anim._prevTime = anim._animationStartTime - 0.0000001
-    //const now = Date.now() * 0.001
-    //this._setAnimationStartTime(anim, now)
     this._animations.set(key, anim)
+    this._copyTransformToPresentationRecursive()
   }
 
   /**
@@ -1226,6 +1284,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    */
   removeAnimationForKey(key) {
     this._animations.delete(key)
+    this._copyTransformToPresentationRecursive()
   }
 
   /**
@@ -1369,6 +1428,25 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     node._transformUpToDate = false
     
     return node
+  }
+
+  _copyTransformToPresentation() {
+    if(this._presentation === null){
+      return
+    }
+    const p = this._presentation
+    p._position = this._position
+    p._rotation = this._rotation
+    p._scale = this._scale
+  }
+
+  _copyTransformToPresentationRecursive() {
+    const nodes = [this]
+    while(nodes.length > 0){
+      const node = nodes.shift()
+      node._copyTransformToPresentation()
+      nodes.push(...node._childNodes)
+    }
   }
 
   get viewTransform() {

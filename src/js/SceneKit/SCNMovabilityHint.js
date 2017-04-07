@@ -4,13 +4,13 @@
 /**
  * Values that inform SceneKit’s rendering for movement-related effects, used by the movabilityHint property.
  * @typedef {Object} SCNMovabilityHint
- * @property {Symbol} fixed - The node is not expected to move over time.
- * @property {Symbol} movable - The node is expected to move over time.
+ * @property {number} fixed - The node is not expected to move over time.
+ * @property {number} movable - The node is expected to move over time.
  * @see https://developer.apple.com/reference/scenekit/scnmovabilityhint
  */
 const SCNMovabilityHint = {
-  fixed: Symbol(),
-  movable: Symbol()
+  fixed: 0,
+  movable: 1
 }
 
 export default SCNMovabilityHint

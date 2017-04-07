@@ -5,16 +5,16 @@ import SCNGeometry from './SCNGeometry'
 import SCNNode from './SCNNode'
 
 const _Option = {
-  collisionMargin: Symbol(),
-  keepAsCompound: Symbol(),
-  scale: Symbol(),
-  type: Symbol()
+  collisionMargin: 'SCNPhysicsShapeCollisionMarginKey',
+  keepAsCompound: 'SCNPhysicsShapeKeepAsCompoundKey',
+  scale: 'SCNPhysicsShapeScaleKey',
+  type: 'SCNPhysicsShapeTypeKey'
 }
 
 const _ShapeType = {
-  boundingBox: Symbol(),
-  concavePolyhedron: Symbol(),
-  convexHull: Symbol()
+  boundingBox: 'boundingBox',
+  concavePolyhedron: 'concaveMesh',
+  convexHull: 'convexHull'
 }
 
 
@@ -81,10 +81,10 @@ export default class SCNPhysicsShape extends NSObject {
 
   /**
    * @type {Object} Option
-   * @property {Symbol} collisionMargin 
-   * @property {Symbol} keepAsCompound An option for selecting whether to create a group of independent shapes or combine them into a single shape.
-   * @property {Symbol} scale An option for selecting the scale factor of the shape relative to the local coordinate space of the node containing it.
-   * @property {Symbol} type An option for selecting the level of detail at which to create shapes from geometry.
+   * @property {string} collisionMargin 
+   * @property {string} keepAsCompound An option for selecting whether to create a group of independent shapes or combine them into a single shape.
+   * @property {string} scale An option for selecting the scale factor of the shape relative to the local coordinate space of the node containing it.
+   * @property {string} type An option for selecting the level of detail at which to create shapes from geometry.
    * @see https://developer.apple.com/reference/scenekit/scnphysicsshape.option
    */
   static get Option() {
@@ -93,9 +93,9 @@ export default class SCNPhysicsShape extends NSObject {
 
   /**
    * @type {Object} ShapeType
-   * @property {Symbol} boundingBox The physics shape is the smallest box containing the geometry.
-   * @property {Symbol} concavePolyhedron The physics shape is a concave polyhedron closely following the surface of the geometry.
-   * @property {Symbol} convexHull The physics shape is a convex polyhedron roughly enclosing the geometry.
+   * @property {string} boundingBox The physics shape is the smallest box containing the geometry.
+   * @property {string} concavePolyhedron The physics shape is a concave polyhedron closely following the surface of the geometry.
+   * @property {string} convexHull The physics shape is a convex polyhedron roughly enclosing the geometry.
    * @see https://developer.apple.com/reference/scenekit/scnphysicsshape.shapetype
    */
   static get ShapeType() {

@@ -47,661 +47,901 @@ module.exports =
 
 	'use strict';
 
-	var _CGBlendMode = __webpack_require__(1);
+	var _NSColor = __webpack_require__(1);
+
+	var _NSColor2 = _interopRequireDefault(_NSColor);
+
+	var _NSColorSpaceModel = __webpack_require__(9);
+
+	var _NSColorSpaceModel2 = _interopRequireDefault(_NSColorSpaceModel);
+
+	var _CGBlendMode = __webpack_require__(10);
 
 	var _CGBlendMode2 = _interopRequireDefault(_CGBlendMode);
 
-	var _CGLineCap = __webpack_require__(2);
+	var _CGLineCap = __webpack_require__(11);
 
 	var _CGLineCap2 = _interopRequireDefault(_CGLineCap);
 
-	var _CGLineJoin = __webpack_require__(3);
+	var _CGLineJoin = __webpack_require__(12);
 
 	var _CGLineJoin2 = _interopRequireDefault(_CGLineJoin);
 
-	var _CGMutablePath = __webpack_require__(4);
+	var _CGMutablePath = __webpack_require__(13);
 
 	var _CGMutablePath2 = _interopRequireDefault(_CGMutablePath);
 
-	var _CGPath = __webpack_require__(8);
+	var _CGPath = __webpack_require__(14);
 
 	var _CGPath2 = _interopRequireDefault(_CGPath);
 
-	var _CGPathApplierFunction = __webpack_require__(10);
+	var _CGPathApplierFunction = __webpack_require__(16);
 
 	var _CGPathApplierFunction2 = _interopRequireDefault(_CGPathApplierFunction);
 
-	var _CGPathFillRule = __webpack_require__(9);
+	var _CGPathFillRule = __webpack_require__(15);
 
 	var _CGPathFillRule2 = _interopRequireDefault(_CGPathFillRule);
 
-	var _CGPoint = __webpack_require__(5);
+	var _CGPoint = __webpack_require__(3);
 
 	var _CGPoint2 = _interopRequireDefault(_CGPoint);
 
-	var _CGRect = __webpack_require__(6);
+	var _CGRect = __webpack_require__(4);
 
 	var _CGRect2 = _interopRequireDefault(_CGRect);
 
-	var _CGSize = __webpack_require__(7);
+	var _CGSize = __webpack_require__(5);
 
 	var _CGSize2 = _interopRequireDefault(_CGSize);
 
-	var _CGVector = __webpack_require__(11);
+	var _CGVector = __webpack_require__(17);
 
 	var _CGVector2 = _interopRequireDefault(_CGVector);
 
-	var _NSValue = __webpack_require__(12);
+	var _NSArray = __webpack_require__(18);
+
+	var _NSArray2 = _interopRequireDefault(_NSArray);
+
+	var _NSCoder = __webpack_require__(19);
+
+	var _NSCoder2 = _interopRequireDefault(_NSCoder);
+
+	var _NSData = __webpack_require__(20);
+
+	var _NSData2 = _interopRequireDefault(_NSData);
+
+	var _NSDictionary = __webpack_require__(21);
+
+	var _NSDictionary2 = _interopRequireDefault(_NSDictionary);
+
+	var _NSKeyedArchiver = __webpack_require__(22);
+
+	var _NSKeyedArchiver2 = _interopRequireDefault(_NSKeyedArchiver);
+
+	var _NSKeyedUnarchiver = __webpack_require__(23);
+
+	var _NSKeyedUnarchiver2 = _interopRequireDefault(_NSKeyedUnarchiver);
+
+	var _NSMutableArray = __webpack_require__(30);
+
+	var _NSMutableArray2 = _interopRequireDefault(_NSMutableArray);
+
+	var _NSMutableData = __webpack_require__(31);
+
+	var _NSMutableData2 = _interopRequireDefault(_NSMutableData);
+
+	var _NSMutableDictionary = __webpack_require__(32);
+
+	var _NSMutableDictionary2 = _interopRequireDefault(_NSMutableDictionary);
+
+	var _NSValue = __webpack_require__(33);
 
 	var _NSValue2 = _interopRequireDefault(_NSValue);
 
-	var _NSObject = __webpack_require__(13);
+	var _NSObject = __webpack_require__(2);
 
 	var _NSObject2 = _interopRequireDefault(_NSObject);
 
-	var _CAAction = __webpack_require__(18);
+	var _CAAction = __webpack_require__(38);
 
 	var _CAAction2 = _interopRequireDefault(_CAAction);
 
-	var _CAAnimation = __webpack_require__(19);
+	var _CAAnimation = __webpack_require__(39);
 
 	var _CAAnimation2 = _interopRequireDefault(_CAAnimation);
 
-	var _CAAnimationDelegate = __webpack_require__(23);
+	var _CAAnimationDelegate = __webpack_require__(43);
 
 	var _CAAnimationDelegate2 = _interopRequireDefault(_CAAnimationDelegate);
 
-	var _CAAnimationGroup = __webpack_require__(26);
+	var _CAAnimationGroup = __webpack_require__(46);
 
 	var _CAAnimationGroup2 = _interopRequireDefault(_CAAnimationGroup);
 
-	var _CABasicAnimation = __webpack_require__(27);
+	var _CABasicAnimation = __webpack_require__(47);
 
 	var _CABasicAnimation2 = _interopRequireDefault(_CABasicAnimation);
 
-	var _CAKeyframeAnimation = __webpack_require__(30);
+	var _CAKeyframeAnimation = __webpack_require__(50);
 
 	var _CAKeyframeAnimation2 = _interopRequireDefault(_CAKeyframeAnimation);
 
-	var _CAMediaTiming = __webpack_require__(21);
+	var _CAMediaTiming = __webpack_require__(41);
 
 	var _CAMediaTiming2 = _interopRequireDefault(_CAMediaTiming);
 
-	var _CAMediaTimingFunction = __webpack_require__(22);
+	var _CAMediaTimingFunction = __webpack_require__(42);
 
 	var _CAMediaTimingFunction2 = _interopRequireDefault(_CAMediaTimingFunction);
 
-	var _CAPropertyAnimation = __webpack_require__(28);
+	var _CAPropertyAnimation = __webpack_require__(48);
 
 	var _CAPropertyAnimation2 = _interopRequireDefault(_CAPropertyAnimation);
 
-	var _CATransform3D = __webpack_require__(14);
+	var _CATransform3D = __webpack_require__(34);
 
 	var _CATransform3D2 = _interopRequireDefault(_CATransform3D);
 
-	var _SCNAction = __webpack_require__(31);
+	var _SCNAction = __webpack_require__(51);
 
 	var _SCNAction2 = _interopRequireDefault(_SCNAction);
 
-	var _SCNActionable = __webpack_require__(34);
+	var _SCNActionable = __webpack_require__(54);
 
 	var _SCNActionable2 = _interopRequireDefault(_SCNActionable);
 
-	var _SCNActionTimingFunction = __webpack_require__(106);
+	var _SCNActionTimingFunction = __webpack_require__(125);
 
 	var _SCNActionTimingFunction2 = _interopRequireDefault(_SCNActionTimingFunction);
 
-	var _SCNActionTimingMode = __webpack_require__(105);
+	var _SCNActionTimingMode = __webpack_require__(124);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
-	var _SCNAnimatable = __webpack_require__(35);
+	var _SCNAnimatable = __webpack_require__(55);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNAnimationEvent = __webpack_require__(24);
+	var _SCNAnimationEvent = __webpack_require__(44);
 
 	var _SCNAnimationEvent2 = _interopRequireDefault(_SCNAnimationEvent);
 
-	var _SCNAnimationEventBlock = __webpack_require__(25);
+	var _SCNAnimationEventBlock = __webpack_require__(45);
 
 	var _SCNAnimationEventBlock2 = _interopRequireDefault(_SCNAnimationEventBlock);
 
-	var _SCNAntialiasingMode = __webpack_require__(79);
+	var _SCNAntialiasingMode = __webpack_require__(98);
 
 	var _SCNAntialiasingMode2 = _interopRequireDefault(_SCNAntialiasingMode);
 
-	var _SCNAudioPlayer = __webpack_require__(104);
+	var _SCNAudioPlayer = __webpack_require__(123);
 
 	var _SCNAudioPlayer2 = _interopRequireDefault(_SCNAudioPlayer);
 
-	var _SCNAudioSource = __webpack_require__(32);
+	var _SCNAudioSource = __webpack_require__(52);
 
 	var _SCNAudioSource2 = _interopRequireDefault(_SCNAudioSource);
 
-	var _SCNBillboardAxis = __webpack_require__(107);
+	var _SCNBillboardAxis = __webpack_require__(126);
 
 	var _SCNBillboardAxis2 = _interopRequireDefault(_SCNBillboardAxis);
 
-	var _SCNBillboardConstraint = __webpack_require__(108);
+	var _SCNBillboardConstraint = __webpack_require__(127);
 
 	var _SCNBillboardConstraint2 = _interopRequireDefault(_SCNBillboardConstraint);
 
-	var _SCNBindingBlock = __webpack_require__(78);
+	var _SCNBindingBlock = __webpack_require__(97);
 
 	var _SCNBindingBlock2 = _interopRequireDefault(_SCNBindingBlock);
 
-	var _SCNBlendMode = __webpack_require__(94);
+	var _SCNBlendMode = __webpack_require__(113);
 
 	var _SCNBlendMode2 = _interopRequireDefault(_SCNBlendMode);
 
-	var _SCNBoundingVolume = __webpack_require__(36);
+	var _SCNBoundingVolume = __webpack_require__(56);
 
 	var _SCNBoundingVolume2 = _interopRequireDefault(_SCNBoundingVolume);
 
-	var _SCNBox = __webpack_require__(109);
+	var _SCNBox = __webpack_require__(128);
 
 	var _SCNBox2 = _interopRequireDefault(_SCNBox);
 
-	var _SCNBufferBindingBlock = __webpack_require__(86);
+	var _SCNBufferBindingBlock = __webpack_require__(105);
 
 	var _SCNBufferBindingBlock2 = _interopRequireDefault(_SCNBufferBindingBlock);
 
-	var _SCNBufferFrequency = __webpack_require__(85);
+	var _SCNBufferFrequency = __webpack_require__(104);
 
 	var _SCNBufferFrequency2 = _interopRequireDefault(_SCNBufferFrequency);
 
-	var _SCNBufferStream = __webpack_require__(87);
+	var _SCNBufferStream = __webpack_require__(106);
 
 	var _SCNBufferStream2 = _interopRequireDefault(_SCNBufferStream);
 
-	var _SCNCamera = __webpack_require__(80);
+	var _SCNCamera = __webpack_require__(99);
 
 	var _SCNCamera2 = _interopRequireDefault(_SCNCamera);
 
-	var _SCNCapsule = __webpack_require__(110);
+	var _SCNCapsule = __webpack_require__(129);
 
 	var _SCNCapsule2 = _interopRequireDefault(_SCNCapsule);
 
-	var _SCNChamferMode = __webpack_require__(111);
+	var _SCNChamferMode = __webpack_require__(130);
 
 	var _SCNChamferMode2 = _interopRequireDefault(_SCNChamferMode);
 
-	var _SCNCone = __webpack_require__(112);
+	var _SCNCone = __webpack_require__(131);
 
 	var _SCNCone2 = _interopRequireDefault(_SCNCone);
 
-	var _SCNConstraint = __webpack_require__(98);
+	var _SCNConstraint = __webpack_require__(117);
 
 	var _SCNConstraint2 = _interopRequireDefault(_SCNConstraint);
 
-	var _SCNCullMode = __webpack_require__(93);
+	var _SCNCullMode = __webpack_require__(112);
 
 	var _SCNCullMode2 = _interopRequireDefault(_SCNCullMode);
 
-	var _SCNCylinder = __webpack_require__(113);
+	var _SCNCylinder = __webpack_require__(132);
 
 	var _SCNCylinder2 = _interopRequireDefault(_SCNCylinder);
 
-	var _SCNDebugOptions = __webpack_require__(72);
+	var _SCNDebugOptions = __webpack_require__(91);
 
 	var _SCNDebugOptions2 = _interopRequireDefault(_SCNDebugOptions);
 
-	var _SCNFieldForceEvaluator = __webpack_require__(102);
+	var _SCNFieldForceEvaluator = __webpack_require__(121);
 
 	var _SCNFieldForceEvaluator2 = _interopRequireDefault(_SCNFieldForceEvaluator);
 
-	var _SCNFilterMode = __webpack_require__(47);
+	var _SCNFilterMode = __webpack_require__(67);
 
 	var _SCNFilterMode2 = _interopRequireDefault(_SCNFilterMode);
 
-	var _SCNFloor = __webpack_require__(114);
+	var _SCNFloor = __webpack_require__(133);
 
 	var _SCNFloor2 = _interopRequireDefault(_SCNFloor);
 
-	var _SCNGeometry = __webpack_require__(37);
+	var _SCNGeometry = __webpack_require__(57);
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
-	var _SCNGeometryElement = __webpack_require__(89);
+	var _SCNGeometryElement = __webpack_require__(108);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(83);
+	var _SCNGeometryPrimitiveType = __webpack_require__(102);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNGeometrySource = __webpack_require__(84);
+	var _SCNGeometrySource = __webpack_require__(103);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNHitTestOption = __webpack_require__(74);
+	var _SCNHitTestOption = __webpack_require__(93);
 
 	var _SCNHitTestOption2 = _interopRequireDefault(_SCNHitTestOption);
 
-	var _SCNHitTestResult = __webpack_require__(58);
+	var _SCNHitTestResult = __webpack_require__(77);
 
 	var _SCNHitTestResult2 = _interopRequireDefault(_SCNHitTestResult);
 
-	var _SCNIKConstraint = __webpack_require__(115);
+	var _SCNIKConstraint = __webpack_require__(134);
 
 	var _SCNIKConstraint2 = _interopRequireDefault(_SCNIKConstraint);
 
-	var _SCNLayer = __webpack_require__(116);
+	var _SCNLayer = __webpack_require__(135);
 
 	var _SCNLayer2 = _interopRequireDefault(_SCNLayer);
 
-	var _SCNLevelOfDetail = __webpack_require__(90);
+	var _SCNLevelOfDetail = __webpack_require__(109);
 
 	var _SCNLevelOfDetail2 = _interopRequireDefault(_SCNLevelOfDetail);
 
-	var _SCNLight = __webpack_require__(81);
+	var _SCNLight = __webpack_require__(100);
 
 	var _SCNLight2 = _interopRequireDefault(_SCNLight);
 
-	var _SCNLookAtConstraint = __webpack_require__(117);
+	var _SCNLookAtConstraint = __webpack_require__(136);
 
 	var _SCNLookAtConstraint2 = _interopRequireDefault(_SCNLookAtConstraint);
 
-	var _SCNMaterial = __webpack_require__(91);
+	var _SCNMaterial = __webpack_require__(110);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
-	var _SCNMaterialProperty = __webpack_require__(44);
+	var _SCNMaterialProperty = __webpack_require__(64);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
-	var _SCNMatrix = __webpack_require__(17);
+	var _SCNMatrix = __webpack_require__(37);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNMatrix4EqualToMatrix = __webpack_require__(118);
+	var _SCNMatrix4EqualToMatrix = __webpack_require__(137);
 
 	var _SCNMatrix4EqualToMatrix2 = _interopRequireDefault(_SCNMatrix4EqualToMatrix);
 
-	var _SCNMatrix4FromGLKMatrix = __webpack_require__(119);
+	var _SCNMatrix4FromGLKMatrix = __webpack_require__(138);
 
 	var _SCNMatrix4FromGLKMatrix2 = _interopRequireDefault(_SCNMatrix4FromGLKMatrix);
 
-	var _SCNMatrix4FromMat = __webpack_require__(120);
+	var _SCNMatrix4FromMat = __webpack_require__(139);
 
 	var _SCNMatrix4FromMat2 = _interopRequireDefault(_SCNMatrix4FromMat);
 
-	var _SCNMatrix4Invert = __webpack_require__(121);
+	var _SCNMatrix4Invert = __webpack_require__(140);
 
 	var _SCNMatrix4Invert2 = _interopRequireDefault(_SCNMatrix4Invert);
 
-	var _SCNMatrix4IsIdentity = __webpack_require__(122);
+	var _SCNMatrix4IsIdentity = __webpack_require__(141);
 
 	var _SCNMatrix4IsIdentity2 = _interopRequireDefault(_SCNMatrix4IsIdentity);
 
-	var _SCNMatrix4MakeRotation = __webpack_require__(123);
+	var _SCNMatrix4MakeRotation = __webpack_require__(142);
 
 	var _SCNMatrix4MakeRotation2 = _interopRequireDefault(_SCNMatrix4MakeRotation);
 
-	var _SCNMatrix4MakeScale = __webpack_require__(124);
+	var _SCNMatrix4MakeScale = __webpack_require__(143);
 
 	var _SCNMatrix4MakeScale2 = _interopRequireDefault(_SCNMatrix4MakeScale);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(45);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(65);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
-	var _SCNMatrix4Mult = __webpack_require__(125);
+	var _SCNMatrix4Mult = __webpack_require__(144);
 
 	var _SCNMatrix4Mult2 = _interopRequireDefault(_SCNMatrix4Mult);
 
-	var _SCNMatrix4Rotate = __webpack_require__(126);
+	var _SCNMatrix4Rotate = __webpack_require__(145);
 
 	var _SCNMatrix4Rotate2 = _interopRequireDefault(_SCNMatrix4Rotate);
 
-	var _SCNMatrix4Scale = __webpack_require__(127);
+	var _SCNMatrix4Scale = __webpack_require__(146);
 
 	var _SCNMatrix4Scale2 = _interopRequireDefault(_SCNMatrix4Scale);
 
-	var _SCNMatrix4ToGLKMatrix = __webpack_require__(128);
+	var _SCNMatrix4ToGLKMatrix = __webpack_require__(147);
 
 	var _SCNMatrix4ToGLKMatrix2 = _interopRequireDefault(_SCNMatrix4ToGLKMatrix);
 
-	var _SCNMatrix4ToMat = __webpack_require__(129);
+	var _SCNMatrix4ToMat = __webpack_require__(148);
 
 	var _SCNMatrix4ToMat2 = _interopRequireDefault(_SCNMatrix4ToMat);
 
-	var _SCNMatrix4Translate = __webpack_require__(130);
+	var _SCNMatrix4Translate = __webpack_require__(149);
 
 	var _SCNMatrix4Translate2 = _interopRequireDefault(_SCNMatrix4Translate);
 
-	var _SCNMorpher = __webpack_require__(95);
+	var _SCNMorpher = __webpack_require__(114);
 
 	var _SCNMorpher2 = _interopRequireDefault(_SCNMorpher);
 
-	var _SCNMorpherCalculationMode = __webpack_require__(96);
+	var _SCNMorpherCalculationMode = __webpack_require__(115);
 
 	var _SCNMorpherCalculationMode2 = _interopRequireDefault(_SCNMorpherCalculationMode);
 
-	var _SCNMovabilityHint = __webpack_require__(99);
+	var _SCNMovabilityHint = __webpack_require__(118);
 
 	var _SCNMovabilityHint2 = _interopRequireDefault(_SCNMovabilityHint);
 
-	var _SCNNode = __webpack_require__(33);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNNodeRendererDelegate = __webpack_require__(100);
+	var _SCNNodeRendererDelegate = __webpack_require__(119);
 
 	var _SCNNodeRendererDelegate2 = _interopRequireDefault(_SCNNodeRendererDelegate);
 
-	var _SCNParticleBirthDirection = __webpack_require__(61);
+	var _SCNParticleBirthDirection = __webpack_require__(80);
 
 	var _SCNParticleBirthDirection2 = _interopRequireDefault(_SCNParticleBirthDirection);
 
-	var _SCNParticleBirthLocation = __webpack_require__(60);
+	var _SCNParticleBirthLocation = __webpack_require__(79);
 
 	var _SCNParticleBirthLocation2 = _interopRequireDefault(_SCNParticleBirthLocation);
 
-	var _SCNParticleBlendMode = __webpack_require__(63);
+	var _SCNParticleBlendMode = __webpack_require__(82);
 
 	var _SCNParticleBlendMode2 = _interopRequireDefault(_SCNParticleBlendMode);
 
-	var _SCNParticleEvent = __webpack_require__(66);
+	var _SCNParticleEvent = __webpack_require__(85);
 
 	var _SCNParticleEvent2 = _interopRequireDefault(_SCNParticleEvent);
 
-	var _SCNParticleEventBlock = __webpack_require__(67);
+	var _SCNParticleEventBlock = __webpack_require__(86);
 
 	var _SCNParticleEventBlock2 = _interopRequireDefault(_SCNParticleEventBlock);
 
-	var _SCNParticleImageSequenceAnimationMode = __webpack_require__(62);
+	var _SCNParticleImageSequenceAnimationMode = __webpack_require__(81);
 
 	var _SCNParticleImageSequenceAnimationMode2 = _interopRequireDefault(_SCNParticleImageSequenceAnimationMode);
 
-	var _SCNParticleInputMode = __webpack_require__(69);
+	var _SCNParticleInputMode = __webpack_require__(88);
 
 	var _SCNParticleInputMode2 = _interopRequireDefault(_SCNParticleInputMode);
 
-	var _SCNParticleModifierBlock = __webpack_require__(71);
+	var _SCNParticleModifierBlock = __webpack_require__(90);
 
 	var _SCNParticleModifierBlock2 = _interopRequireDefault(_SCNParticleModifierBlock);
 
-	var _SCNParticleModifierStage = __webpack_require__(70);
+	var _SCNParticleModifierStage = __webpack_require__(89);
 
 	var _SCNParticleModifierStage2 = _interopRequireDefault(_SCNParticleModifierStage);
 
-	var _SCNParticleOrientationMode = __webpack_require__(64);
+	var _SCNParticleOrientationMode = __webpack_require__(83);
 
 	var _SCNParticleOrientationMode2 = _interopRequireDefault(_SCNParticleOrientationMode);
 
-	var _SCNParticlePropertyController = __webpack_require__(68);
+	var _SCNParticlePropertyController = __webpack_require__(87);
 
 	var _SCNParticlePropertyController2 = _interopRequireDefault(_SCNParticlePropertyController);
 
-	var _SCNParticleSortingMode = __webpack_require__(65);
+	var _SCNParticleSortingMode = __webpack_require__(84);
 
 	var _SCNParticleSortingMode2 = _interopRequireDefault(_SCNParticleSortingMode);
 
-	var _SCNParticleSystem = __webpack_require__(59);
+	var _SCNParticleSystem = __webpack_require__(78);
 
 	var _SCNParticleSystem2 = _interopRequireDefault(_SCNParticleSystem);
 
-	var _SCNPhysicsBallSocketJoint = __webpack_require__(131);
+	var _SCNPhysicsBallSocketJoint = __webpack_require__(150);
 
 	var _SCNPhysicsBallSocketJoint2 = _interopRequireDefault(_SCNPhysicsBallSocketJoint);
 
-	var _SCNPhysicsBehavior = __webpack_require__(52);
+	var _SCNPhysicsBehavior = __webpack_require__(71);
 
 	var _SCNPhysicsBehavior2 = _interopRequireDefault(_SCNPhysicsBehavior);
 
-	var _SCNPhysicsBody = __webpack_require__(55);
+	var _SCNPhysicsBody = __webpack_require__(74);
 
 	var _SCNPhysicsBody2 = _interopRequireDefault(_SCNPhysicsBody);
 
-	var _SCNPhysicsBodyType = __webpack_require__(56);
+	var _SCNPhysicsBodyType = __webpack_require__(75);
 
 	var _SCNPhysicsBodyType2 = _interopRequireDefault(_SCNPhysicsBodyType);
 
-	var _SCNPhysicsCollisionCategory = __webpack_require__(132);
+	var _SCNPhysicsCollisionCategory = __webpack_require__(151);
 
 	var _SCNPhysicsCollisionCategory2 = _interopRequireDefault(_SCNPhysicsCollisionCategory);
 
-	var _SCNPhysicsContact = __webpack_require__(54);
+	var _SCNPhysicsContact = __webpack_require__(73);
 
 	var _SCNPhysicsContact2 = _interopRequireDefault(_SCNPhysicsContact);
 
-	var _SCNPhysicsContactDelegate = __webpack_require__(53);
+	var _SCNPhysicsContactDelegate = __webpack_require__(72);
 
 	var _SCNPhysicsContactDelegate2 = _interopRequireDefault(_SCNPhysicsContactDelegate);
 
-	var _SCNPhysicsField = __webpack_require__(101);
+	var _SCNPhysicsField = __webpack_require__(120);
 
 	var _SCNPhysicsField2 = _interopRequireDefault(_SCNPhysicsField);
 
-	var _SCNPhysicsFieldScope = __webpack_require__(103);
+	var _SCNPhysicsFieldScope = __webpack_require__(122);
 
 	var _SCNPhysicsFieldScope2 = _interopRequireDefault(_SCNPhysicsFieldScope);
 
-	var _SCNPhysicsHingeJoint = __webpack_require__(133);
+	var _SCNPhysicsHingeJoint = __webpack_require__(152);
 
 	var _SCNPhysicsHingeJoint2 = _interopRequireDefault(_SCNPhysicsHingeJoint);
 
-	var _SCNPhysicsShape = __webpack_require__(57);
+	var _SCNPhysicsShape = __webpack_require__(76);
 
 	var _SCNPhysicsShape2 = _interopRequireDefault(_SCNPhysicsShape);
 
-	var _SCNPhysicsSliderJoint = __webpack_require__(134);
+	var _SCNPhysicsSliderJoint = __webpack_require__(153);
 
 	var _SCNPhysicsSliderJoint2 = _interopRequireDefault(_SCNPhysicsSliderJoint);
 
-	var _SCNPhysicsVehicle = __webpack_require__(135);
+	var _SCNPhysicsVehicle = __webpack_require__(154);
 
 	var _SCNPhysicsVehicle2 = _interopRequireDefault(_SCNPhysicsVehicle);
 
-	var _SCNPhysicsVehicleWheel = __webpack_require__(136);
+	var _SCNPhysicsVehicleWheel = __webpack_require__(155);
 
 	var _SCNPhysicsVehicleWheel2 = _interopRequireDefault(_SCNPhysicsVehicleWheel);
 
-	var _SCNPhysicsWorld = __webpack_require__(51);
+	var _SCNPhysicsWorld = __webpack_require__(70);
 
 	var _SCNPhysicsWorld2 = _interopRequireDefault(_SCNPhysicsWorld);
 
-	var _SCNPlane = __webpack_require__(137);
+	var _SCNPlane = __webpack_require__(156);
 
 	var _SCNPlane2 = _interopRequireDefault(_SCNPlane);
 
-	var _SCNProgram = __webpack_require__(39);
+	var _SCNProgram = __webpack_require__(59);
 
 	var _SCNProgram2 = _interopRequireDefault(_SCNProgram);
 
-	var _SCNProgramDelegate = __webpack_require__(40);
+	var _SCNProgramDelegate = __webpack_require__(60);
 
 	var _SCNProgramDelegate2 = _interopRequireDefault(_SCNProgramDelegate);
 
-	var _SCNPyramid = __webpack_require__(138);
+	var _SCNPyramid = __webpack_require__(157);
 
 	var _SCNPyramid2 = _interopRequireDefault(_SCNPyramid);
 
-	var _SCNQuaternion = __webpack_require__(29);
+	var _SCNQuaternion = __webpack_require__(49);
 
 	var _SCNQuaternion2 = _interopRequireDefault(_SCNQuaternion);
 
-	var _SCNReferenceLoadingPolicy = __webpack_require__(139);
+	var _SCNReferenceLoadingPolicy = __webpack_require__(158);
 
 	var _SCNReferenceLoadingPolicy2 = _interopRequireDefault(_SCNReferenceLoadingPolicy);
 
-	var _SCNReferenceNode = __webpack_require__(140);
+	var _SCNReferenceNode = __webpack_require__(159);
 
 	var _SCNReferenceNode2 = _interopRequireDefault(_SCNReferenceNode);
 
-	var _SCNRenderer = __webpack_require__(41);
+	var _SCNRenderer = __webpack_require__(61);
 
 	var _SCNRenderer2 = _interopRequireDefault(_SCNRenderer);
 
-	var _SCNRenderingAPI = __webpack_require__(73);
+	var _SCNRenderingAPI = __webpack_require__(92);
 
 	var _SCNRenderingAPI2 = _interopRequireDefault(_SCNRenderingAPI);
 
-	var _SCNScene = __webpack_require__(43);
+	var _SCNScene = __webpack_require__(63);
 
 	var _SCNScene2 = _interopRequireDefault(_SCNScene);
 
-	var _SCNSceneExportDelegate = __webpack_require__(49);
+	var _SCNSceneExportDelegate = __webpack_require__(68);
 
 	var _SCNSceneExportDelegate2 = _interopRequireDefault(_SCNSceneExportDelegate);
 
-	var _SCNSceneExportProgressHandler = __webpack_require__(50);
+	var _SCNSceneExportProgressHandler = __webpack_require__(69);
 
 	var _SCNSceneExportProgressHandler2 = _interopRequireDefault(_SCNSceneExportProgressHandler);
 
-	var _SCNSceneRenderer = __webpack_require__(42);
+	var _SCNSceneRenderer = __webpack_require__(62);
 
 	var _SCNSceneRenderer2 = _interopRequireDefault(_SCNSceneRenderer);
 
-	var _SCNSceneRendererDelegate = __webpack_require__(75);
+	var _SCNSceneRendererDelegate = __webpack_require__(94);
 
 	var _SCNSceneRendererDelegate2 = _interopRequireDefault(_SCNSceneRendererDelegate);
 
-	var _SCNSceneSource = __webpack_require__(141);
+	var _SCNSceneSource = __webpack_require__(160);
 
 	var _SCNSceneSource2 = _interopRequireDefault(_SCNSceneSource);
 
-	var _SCNSceneSourceStatus = __webpack_require__(143);
+	var _SCNSceneSourceStatus = __webpack_require__(162);
 
 	var _SCNSceneSourceStatus2 = _interopRequireDefault(_SCNSceneSourceStatus);
 
-	var _SCNSceneSourceStatusHandler = __webpack_require__(142);
+	var _SCNSceneSourceStatusHandler = __webpack_require__(161);
 
 	var _SCNSceneSourceStatusHandler2 = _interopRequireDefault(_SCNSceneSourceStatusHandler);
 
-	var _SCNShadable = __webpack_require__(38);
+	var _SCNShadable = __webpack_require__(58);
 
 	var _SCNShadable2 = _interopRequireDefault(_SCNShadable);
 
-	var _SCNShaderModifierEntryPoint = __webpack_require__(88);
+	var _SCNShaderModifierEntryPoint = __webpack_require__(107);
 
 	var _SCNShaderModifierEntryPoint2 = _interopRequireDefault(_SCNShaderModifierEntryPoint);
 
-	var _SCNShadowMode = __webpack_require__(82);
+	var _SCNShadowMode = __webpack_require__(101);
 
 	var _SCNShadowMode2 = _interopRequireDefault(_SCNShadowMode);
 
-	var _SCNShape = __webpack_require__(144);
+	var _SCNShape = __webpack_require__(163);
 
 	var _SCNShape2 = _interopRequireDefault(_SCNShape);
 
-	var _SCNSkinner = __webpack_require__(97);
+	var _SCNSkinner = __webpack_require__(116);
 
 	var _SCNSkinner2 = _interopRequireDefault(_SCNSkinner);
 
-	var _SCNSphere = __webpack_require__(145);
+	var _SCNSphere = __webpack_require__(164);
 
 	var _SCNSphere2 = _interopRequireDefault(_SCNSphere);
 
-	var _SCNTechnique = __webpack_require__(77);
+	var _SCNTechnique = __webpack_require__(96);
 
 	var _SCNTechnique2 = _interopRequireDefault(_SCNTechnique);
 
-	var _SCNTechniqueSupport = __webpack_require__(76);
+	var _SCNTechniqueSupport = __webpack_require__(95);
 
 	var _SCNTechniqueSupport2 = _interopRequireDefault(_SCNTechniqueSupport);
 
-	var _SCNText = __webpack_require__(146);
+	var _SCNText = __webpack_require__(165);
 
 	var _SCNText2 = _interopRequireDefault(_SCNText);
 
-	var _SCNTorus = __webpack_require__(147);
+	var _SCNTorus = __webpack_require__(166);
 
 	var _SCNTorus2 = _interopRequireDefault(_SCNTorus);
 
-	var _SCNTransaction = __webpack_require__(148);
+	var _SCNTransaction = __webpack_require__(167);
 
 	var _SCNTransaction2 = _interopRequireDefault(_SCNTransaction);
 
-	var _SCNTransformConstraint = __webpack_require__(149);
+	var _SCNTransformConstraint = __webpack_require__(168);
 
 	var _SCNTransformConstraint2 = _interopRequireDefault(_SCNTransformConstraint);
 
-	var _SCNTransparencyMode = __webpack_require__(92);
+	var _SCNTransparencyMode = __webpack_require__(111);
 
 	var _SCNTransparencyMode2 = _interopRequireDefault(_SCNTransparencyMode);
 
-	var _SCNTube = __webpack_require__(150);
+	var _SCNTube = __webpack_require__(169);
 
 	var _SCNTube2 = _interopRequireDefault(_SCNTube);
 
-	var _SCNVector = __webpack_require__(15);
+	var _SCNVector = __webpack_require__(35);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3EqualToVector = __webpack_require__(151);
+	var _SCNVector3EqualToVector = __webpack_require__(170);
 
 	var _SCNVector3EqualToVector2 = _interopRequireDefault(_SCNVector3EqualToVector);
 
-	var _SCNVector3FromFloat = __webpack_require__(152);
+	var _SCNVector3FromFloat = __webpack_require__(171);
 
 	var _SCNVector3FromFloat2 = _interopRequireDefault(_SCNVector3FromFloat);
 
-	var _SCNVector3FromGLKVector = __webpack_require__(153);
+	var _SCNVector3FromGLKVector = __webpack_require__(172);
 
 	var _SCNVector3FromGLKVector2 = _interopRequireDefault(_SCNVector3FromGLKVector);
 
-	var _SCNVector3Make = __webpack_require__(154);
+	var _SCNVector3Make = __webpack_require__(173);
 
 	var _SCNVector3Make2 = _interopRequireDefault(_SCNVector3Make);
 
-	var _SCNVector3ToFloat = __webpack_require__(155);
+	var _SCNVector3ToFloat = __webpack_require__(174);
 
 	var _SCNVector3ToFloat2 = _interopRequireDefault(_SCNVector3ToFloat);
 
-	var _SCNVector3ToGLKVector = __webpack_require__(156);
+	var _SCNVector3ToGLKVector = __webpack_require__(175);
 
 	var _SCNVector3ToGLKVector2 = _interopRequireDefault(_SCNVector3ToGLKVector);
 
-	var _SCNVector3 = __webpack_require__(16);
+	var _SCNVector3 = __webpack_require__(36);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
-	var _SCNVector4EqualToVector = __webpack_require__(157);
+	var _SCNVector4EqualToVector = __webpack_require__(176);
 
 	var _SCNVector4EqualToVector2 = _interopRequireDefault(_SCNVector4EqualToVector);
 
-	var _SCNVector4FromFloat = __webpack_require__(158);
+	var _SCNVector4FromFloat = __webpack_require__(177);
 
 	var _SCNVector4FromFloat2 = _interopRequireDefault(_SCNVector4FromFloat);
 
-	var _SCNVector4FromGLKVector = __webpack_require__(159);
+	var _SCNVector4FromGLKVector = __webpack_require__(178);
 
 	var _SCNVector4FromGLKVector2 = _interopRequireDefault(_SCNVector4FromGLKVector);
 
-	var _SCNVector4Make = __webpack_require__(160);
+	var _SCNVector4Make = __webpack_require__(179);
 
 	var _SCNVector4Make2 = _interopRequireDefault(_SCNVector4Make);
 
-	var _SCNVector4ToFloat = __webpack_require__(161);
+	var _SCNVector4ToFloat = __webpack_require__(180);
 
 	var _SCNVector4ToFloat2 = _interopRequireDefault(_SCNVector4ToFloat);
 
-	var _SCNVector4ToGLKVector = __webpack_require__(162);
+	var _SCNVector4ToGLKVector = __webpack_require__(181);
 
 	var _SCNVector4ToGLKVector2 = _interopRequireDefault(_SCNVector4ToGLKVector);
 
-	var _SCNView = __webpack_require__(163);
+	var _SCNView = __webpack_require__(182);
 
 	var _SCNView2 = _interopRequireDefault(_SCNView);
 
-	var _SCNWrapMode = __webpack_require__(46);
+	var _SCNWrapMode = __webpack_require__(66);
 
 	var _SCNWrapMode2 = _interopRequireDefault(_SCNWrapMode);
 
-	var _SKColor = __webpack_require__(48);
+	var _SKColor = __webpack_require__(8);
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _HTMLCanvasElement = __webpack_require__(164);
+	var _BinaryReader2 = __webpack_require__(28);
 
-	var _HTMLCanvasElement2 = _interopRequireDefault(_HTMLCanvasElement);
+	var _BinaryReader3 = _interopRequireDefault(_BinaryReader2);
+
+	var _Buffer2 = __webpack_require__(6);
+
+	var _Buffer3 = _interopRequireDefault(_Buffer2);
+
+	var _ClassList2 = __webpack_require__(7);
+
+	var _ClassList3 = _interopRequireDefault(_ClassList2);
+
+	var _File2 = __webpack_require__(24);
+
+	var _File3 = _interopRequireDefault(_File2);
+
+	var _FileReader2 = __webpack_require__(25);
+
+	var _FileReader3 = _interopRequireDefault(_FileReader2);
+
+	var _HTMLCanvasElement2 = __webpack_require__(183);
+
+	var _HTMLCanvasElement3 = _interopRequireDefault(_HTMLCanvasElement2);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	_ClassList3.default.registerClass(_NSColor2.default);
+	_ClassList3.default.registerClass(_NSColorSpaceModel2.default);
+	_ClassList3.default.registerClass(_CGBlendMode2.default);
+	_ClassList3.default.registerClass(_CGLineCap2.default);
+	_ClassList3.default.registerClass(_CGLineJoin2.default);
+	_ClassList3.default.registerClass(_CGMutablePath2.default);
+	_ClassList3.default.registerClass(_CGPath2.default);
+	_ClassList3.default.registerClass(_CGPathApplierFunction2.default);
+	_ClassList3.default.registerClass(_CGPathFillRule2.default);
+	_ClassList3.default.registerClass(_CGPoint2.default);
+	_ClassList3.default.registerClass(_CGRect2.default);
+	_ClassList3.default.registerClass(_CGSize2.default);
+	_ClassList3.default.registerClass(_CGVector2.default);
+	_ClassList3.default.registerClass(_NSArray2.default);
+	_ClassList3.default.registerClass(_NSCoder2.default);
+	_ClassList3.default.registerClass(_NSData2.default);
+	_ClassList3.default.registerClass(_NSDictionary2.default);
+	_ClassList3.default.registerClass(_NSKeyedArchiver2.default);
+	_ClassList3.default.registerClass(_NSKeyedUnarchiver2.default);
+	_ClassList3.default.registerClass(_NSMutableArray2.default);
+	_ClassList3.default.registerClass(_NSMutableData2.default);
+	_ClassList3.default.registerClass(_NSMutableDictionary2.default);
+	_ClassList3.default.registerClass(_NSValue2.default);
+	_ClassList3.default.registerClass(_NSObject2.default);
+	_ClassList3.default.registerClass(_CAAction2.default);
+	_ClassList3.default.registerClass(_CAAnimation2.default);
+	_ClassList3.default.registerClass(_CAAnimationDelegate2.default);
+	_ClassList3.default.registerClass(_CAAnimationGroup2.default);
+	_ClassList3.default.registerClass(_CABasicAnimation2.default);
+	_ClassList3.default.registerClass(_CAKeyframeAnimation2.default);
+	_ClassList3.default.registerClass(_CAMediaTiming2.default);
+	_ClassList3.default.registerClass(_CAMediaTimingFunction2.default);
+	_ClassList3.default.registerClass(_CAPropertyAnimation2.default);
+	_ClassList3.default.registerClass(_CATransform3D2.default);
+	_ClassList3.default.registerClass(_SCNAction2.default);
+	_ClassList3.default.registerClass(_SCNActionable2.default);
+	_ClassList3.default.registerClass(_SCNActionTimingFunction2.default);
+	_ClassList3.default.registerClass(_SCNActionTimingMode2.default);
+	_ClassList3.default.registerClass(_SCNAnimatable2.default);
+	_ClassList3.default.registerClass(_SCNAnimationEvent2.default);
+	_ClassList3.default.registerClass(_SCNAnimationEventBlock2.default);
+	_ClassList3.default.registerClass(_SCNAntialiasingMode2.default);
+	_ClassList3.default.registerClass(_SCNAudioPlayer2.default);
+	_ClassList3.default.registerClass(_SCNAudioSource2.default);
+	_ClassList3.default.registerClass(_SCNBillboardAxis2.default);
+	_ClassList3.default.registerClass(_SCNBillboardConstraint2.default);
+	_ClassList3.default.registerClass(_SCNBindingBlock2.default);
+	_ClassList3.default.registerClass(_SCNBlendMode2.default);
+	_ClassList3.default.registerClass(_SCNBoundingVolume2.default);
+	_ClassList3.default.registerClass(_SCNBox2.default);
+	_ClassList3.default.registerClass(_SCNBufferBindingBlock2.default);
+	_ClassList3.default.registerClass(_SCNBufferFrequency2.default);
+	_ClassList3.default.registerClass(_SCNBufferStream2.default);
+	_ClassList3.default.registerClass(_SCNCamera2.default);
+	_ClassList3.default.registerClass(_SCNCapsule2.default);
+	_ClassList3.default.registerClass(_SCNChamferMode2.default);
+	_ClassList3.default.registerClass(_SCNCone2.default);
+	_ClassList3.default.registerClass(_SCNConstraint2.default);
+	_ClassList3.default.registerClass(_SCNCullMode2.default);
+	_ClassList3.default.registerClass(_SCNCylinder2.default);
+	_ClassList3.default.registerClass(_SCNDebugOptions2.default);
+	_ClassList3.default.registerClass(_SCNFieldForceEvaluator2.default);
+	_ClassList3.default.registerClass(_SCNFilterMode2.default);
+	_ClassList3.default.registerClass(_SCNFloor2.default);
+	_ClassList3.default.registerClass(_SCNGeometry2.default);
+	_ClassList3.default.registerClass(_SCNGeometryElement2.default);
+	_ClassList3.default.registerClass(_SCNGeometryPrimitiveType2.default);
+	_ClassList3.default.registerClass(_SCNGeometrySource2.default);
+	_ClassList3.default.registerClass(_SCNHitTestOption2.default);
+	_ClassList3.default.registerClass(_SCNHitTestResult2.default);
+	_ClassList3.default.registerClass(_SCNIKConstraint2.default);
+	_ClassList3.default.registerClass(_SCNLayer2.default);
+	_ClassList3.default.registerClass(_SCNLevelOfDetail2.default);
+	_ClassList3.default.registerClass(_SCNLight2.default);
+	_ClassList3.default.registerClass(_SCNLookAtConstraint2.default);
+	_ClassList3.default.registerClass(_SCNMaterial2.default);
+	_ClassList3.default.registerClass(_SCNMaterialProperty2.default);
+	_ClassList3.default.registerClass(_SCNMatrix2.default);
+	_ClassList3.default.registerClass(_SCNMatrix4EqualToMatrix2.default);
+	_ClassList3.default.registerClass(_SCNMatrix4FromGLKMatrix2.default);
+	_ClassList3.default.registerClass(_SCNMatrix4FromMat2.default);
+	_ClassList3.default.registerClass(_SCNMatrix4Invert2.default);
+	_ClassList3.default.registerClass(_SCNMatrix4IsIdentity2.default);
+	_ClassList3.default.registerClass(_SCNMatrix4MakeRotation2.default);
+	_ClassList3.default.registerClass(_SCNMatrix4MakeScale2.default);
+	_ClassList3.default.registerClass(_SCNMatrix4MakeTranslation2.default);
+	_ClassList3.default.registerClass(_SCNMatrix4Mult2.default);
+	_ClassList3.default.registerClass(_SCNMatrix4Rotate2.default);
+	_ClassList3.default.registerClass(_SCNMatrix4Scale2.default);
+	_ClassList3.default.registerClass(_SCNMatrix4ToGLKMatrix2.default);
+	_ClassList3.default.registerClass(_SCNMatrix4ToMat2.default);
+	_ClassList3.default.registerClass(_SCNMatrix4Translate2.default);
+	_ClassList3.default.registerClass(_SCNMorpher2.default);
+	_ClassList3.default.registerClass(_SCNMorpherCalculationMode2.default);
+	_ClassList3.default.registerClass(_SCNMovabilityHint2.default);
+	_ClassList3.default.registerClass(_SCNNode2.default);
+	_ClassList3.default.registerClass(_SCNNodeRendererDelegate2.default);
+	_ClassList3.default.registerClass(_SCNParticleBirthDirection2.default);
+	_ClassList3.default.registerClass(_SCNParticleBirthLocation2.default);
+	_ClassList3.default.registerClass(_SCNParticleBlendMode2.default);
+	_ClassList3.default.registerClass(_SCNParticleEvent2.default);
+	_ClassList3.default.registerClass(_SCNParticleEventBlock2.default);
+	_ClassList3.default.registerClass(_SCNParticleImageSequenceAnimationMode2.default);
+	_ClassList3.default.registerClass(_SCNParticleInputMode2.default);
+	_ClassList3.default.registerClass(_SCNParticleModifierBlock2.default);
+	_ClassList3.default.registerClass(_SCNParticleModifierStage2.default);
+	_ClassList3.default.registerClass(_SCNParticleOrientationMode2.default);
+	_ClassList3.default.registerClass(_SCNParticlePropertyController2.default);
+	_ClassList3.default.registerClass(_SCNParticleSortingMode2.default);
+	_ClassList3.default.registerClass(_SCNParticleSystem2.default);
+	_ClassList3.default.registerClass(_SCNPhysicsBallSocketJoint2.default);
+	_ClassList3.default.registerClass(_SCNPhysicsBehavior2.default);
+	_ClassList3.default.registerClass(_SCNPhysicsBody2.default);
+	_ClassList3.default.registerClass(_SCNPhysicsBodyType2.default);
+	_ClassList3.default.registerClass(_SCNPhysicsCollisionCategory2.default);
+	_ClassList3.default.registerClass(_SCNPhysicsContact2.default);
+	_ClassList3.default.registerClass(_SCNPhysicsContactDelegate2.default);
+	_ClassList3.default.registerClass(_SCNPhysicsField2.default);
+	_ClassList3.default.registerClass(_SCNPhysicsFieldScope2.default);
+	_ClassList3.default.registerClass(_SCNPhysicsHingeJoint2.default);
+	_ClassList3.default.registerClass(_SCNPhysicsShape2.default);
+	_ClassList3.default.registerClass(_SCNPhysicsSliderJoint2.default);
+	_ClassList3.default.registerClass(_SCNPhysicsVehicle2.default);
+	_ClassList3.default.registerClass(_SCNPhysicsVehicleWheel2.default);
+	_ClassList3.default.registerClass(_SCNPhysicsWorld2.default);
+	_ClassList3.default.registerClass(_SCNPlane2.default);
+	_ClassList3.default.registerClass(_SCNProgram2.default);
+	_ClassList3.default.registerClass(_SCNProgramDelegate2.default);
+	_ClassList3.default.registerClass(_SCNPyramid2.default);
+	_ClassList3.default.registerClass(_SCNQuaternion2.default);
+	_ClassList3.default.registerClass(_SCNReferenceLoadingPolicy2.default);
+	_ClassList3.default.registerClass(_SCNReferenceNode2.default);
+	_ClassList3.default.registerClass(_SCNRenderer2.default);
+	_ClassList3.default.registerClass(_SCNRenderingAPI2.default);
+	_ClassList3.default.registerClass(_SCNScene2.default);
+	_ClassList3.default.registerClass(_SCNSceneExportDelegate2.default);
+	_ClassList3.default.registerClass(_SCNSceneExportProgressHandler2.default);
+	_ClassList3.default.registerClass(_SCNSceneRenderer2.default);
+	_ClassList3.default.registerClass(_SCNSceneRendererDelegate2.default);
+	_ClassList3.default.registerClass(_SCNSceneSource2.default);
+	_ClassList3.default.registerClass(_SCNSceneSourceStatus2.default);
+	_ClassList3.default.registerClass(_SCNSceneSourceStatusHandler2.default);
+	_ClassList3.default.registerClass(_SCNShadable2.default);
+	_ClassList3.default.registerClass(_SCNShaderModifierEntryPoint2.default);
+	_ClassList3.default.registerClass(_SCNShadowMode2.default);
+	_ClassList3.default.registerClass(_SCNShape2.default);
+	_ClassList3.default.registerClass(_SCNSkinner2.default);
+	_ClassList3.default.registerClass(_SCNSphere2.default);
+	_ClassList3.default.registerClass(_SCNTechnique2.default);
+	_ClassList3.default.registerClass(_SCNTechniqueSupport2.default);
+	_ClassList3.default.registerClass(_SCNText2.default);
+	_ClassList3.default.registerClass(_SCNTorus2.default);
+	_ClassList3.default.registerClass(_SCNTransaction2.default);
+	_ClassList3.default.registerClass(_SCNTransformConstraint2.default);
+	_ClassList3.default.registerClass(_SCNTransparencyMode2.default);
+	_ClassList3.default.registerClass(_SCNTube2.default);
+	_ClassList3.default.registerClass(_SCNVector2.default);
+	_ClassList3.default.registerClass(_SCNVector3EqualToVector2.default);
+	_ClassList3.default.registerClass(_SCNVector3FromFloat2.default);
+	_ClassList3.default.registerClass(_SCNVector3FromGLKVector2.default);
+	_ClassList3.default.registerClass(_SCNVector3Make2.default);
+	_ClassList3.default.registerClass(_SCNVector3ToFloat2.default);
+	_ClassList3.default.registerClass(_SCNVector3ToGLKVector2.default);
+	_ClassList3.default.registerClass(_SCNVector4.default);
+	_ClassList3.default.registerClass(_SCNVector4EqualToVector2.default);
+	_ClassList3.default.registerClass(_SCNVector4FromFloat2.default);
+	_ClassList3.default.registerClass(_SCNVector4FromGLKVector2.default);
+	_ClassList3.default.registerClass(_SCNVector4Make2.default);
+	_ClassList3.default.registerClass(_SCNVector4ToFloat2.default);
+	_ClassList3.default.registerClass(_SCNVector4ToGLKVector2.default);
+	_ClassList3.default.registerClass(_SCNView2.default);
+	_ClassList3.default.registerClass(_SCNWrapMode2.default);
+	_ClassList3.default.registerClass(_SKColor2.default);
+
 	/*global exports*/
+	exports.NSColor = _NSColor2.default;
+	exports.NSColorSpaceModel = _NSColorSpaceModel2.default;
 	exports.CGBlendMode = _CGBlendMode2.default;
 	exports.CGLineCap = _CGLineCap2.default;
 	exports.CGLineJoin = _CGLineJoin2.default;
@@ -713,6 +953,15 @@ module.exports =
 	exports.CGRect = _CGRect2.default;
 	exports.CGSize = _CGSize2.default;
 	exports.CGVector = _CGVector2.default;
+	exports.NSArray = _NSArray2.default;
+	exports.NSCoder = _NSCoder2.default;
+	exports.NSData = _NSData2.default;
+	exports.NSDictionary = _NSDictionary2.default;
+	exports.NSKeyedArchiver = _NSKeyedArchiver2.default;
+	exports.NSKeyedUnarchiver = _NSKeyedUnarchiver2.default;
+	exports.NSMutableArray = _NSMutableArray2.default;
+	exports.NSMutableData = _NSMutableData2.default;
+	exports.NSMutableDictionary = _NSMutableDictionary2.default;
 	exports.NSValue = _NSValue2.default;
 	exports.NSObject = _NSObject2.default;
 	exports.CAAction = _CAAction2.default;
@@ -864,7 +1113,12 @@ module.exports =
 	exports.SCNView = _SCNView2.default;
 	exports.SCNWrapMode = _SCNWrapMode2.default;
 	exports.SKColor = _SKColor2.default;
-	exports.HTMLCanvasElement = _HTMLCanvasElement2.default;
+	exports._BinaryReader = _BinaryReader3.default;
+	exports._Buffer = _Buffer3.default;
+	exports._ClassList = _ClassList3.default;
+	exports._File = _File3.default;
+	exports._FileReader = _FileReader3.default;
+	exports._HTMLCanvasElement = _HTMLCanvasElement3.default;
 
 	// constants
 	/*global exports*/
@@ -895,134 +1149,6 @@ module.exports =
 
 /***/ },
 /* 1 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	/**
-	 * Compositing operations for images.
-	 * @typedef {Object} CGBlendMode
-	 * @property {Symbol} normal - Paints the source image samples over the background image samples.
-	 * @property {Symbol} multiply - Multiplies the source image samples with the background image samples. This results in colors that are at least as dark as either of the two contributing sample colors.
-	 * @property {Symbol} screen - Multiplies  the inverse of the source image samples with the inverse of the background image samples. This results in colors that are at least as light as either of the two contributing sample colors.
-	 * @property {Symbol} overlay - 
-	 * @property {Symbol} darken - 
-	 * @property {Symbol} lighten - 
-	 * @property {Symbol} colorDodge - Brightens the background image samples to reflect the source image samples. Source image sample values that specify black do not produce a change.
-	 * @property {Symbol} colorBurn - Darkens the background image samples to reflect the source image samples. Source image sample values that specify white do not produce a change.
-	 * @property {Symbol} softLight - 
-	 * @property {Symbol} hardLight - 
-	 * @property {Symbol} difference - 
-	 * @property {Symbol} exclusion - Produces an effect similar to that produced by difference, but with lower contrast. Source image sample values that are black don’t produce a change; white inverts the background color values.
-	 * @property {Symbol} hue - Uses the luminance and saturation values of the background with the hue of the source image.
-	 * @property {Symbol} saturation - Uses the luminance and hue values of the background with the saturation of the source image. Areas of the background that have no saturation (that is, pure gray areas) don’t produce a change.
-	 * @property {Symbol} color - Uses the luminance values of the background with the hue and saturation values of the source image. This mode preserves the gray levels in the image. You can use this mode to color monochrome images or to tint color images.
-	 * @property {Symbol} luminosity - Uses the hue and saturation of the background with the luminance of the source image. This mode creates an effect that is inverse to the effect created by color.
-	 * @property {Symbol} clear - R = 0
-	 * @property {Symbol} copy - R = S
-	 * @property {Symbol} sourceIn - R = S*Da
-	 * @property {Symbol} sourceOut - R = S*(1 - Da)
-	 * @property {Symbol} sourceAtop - R = S*Da + D*(1 - Sa)
-	 * @property {Symbol} destinationOver - R = S*(1 - Da) + D
-	 * @property {Symbol} destinationIn - R = D*Sa
-	 * @property {Symbol} destinationOut - R = D*(1 - Sa)
-	 * @property {Symbol} destinationAtop - R = S*(1 - Da) + D*Sa
-	 * @property {Symbol} xor - R = S*(1 - Da) + D*(1 - Sa). This XOR mode is only nominally related to the classical bitmap XOR operation, which is not supported by Core Graphics
-	 * @property {Symbol} plusDarker - R = MAX(0, 1 - ((1 - D) + (1 - S)))
-	 * @property {Symbol} plusLighter - R = MIN(1, S + D)
-	 * @see https://developer.apple.com/reference/coregraphics/cgblendmode
-	 */
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var CGBlendMode = {
-	  normal: Symbol(),
-	  multiply: Symbol(),
-	  screen: Symbol(),
-	  overlay: Symbol(),
-	  darken: Symbol(),
-	  lighten: Symbol(),
-	  colorDodge: Symbol(),
-	  colorBurn: Symbol(),
-	  softLight: Symbol(),
-	  hardLight: Symbol(),
-	  difference: Symbol(),
-	  exclusion: Symbol(),
-	  hue: Symbol(),
-	  saturation: Symbol(),
-	  color: Symbol(),
-	  luminosity: Symbol(),
-	  clear: Symbol(),
-	  copy: Symbol(),
-	  sourceIn: Symbol(),
-	  sourceOut: Symbol(),
-	  sourceAtop: Symbol(),
-	  destinationOver: Symbol(),
-	  destinationIn: Symbol(),
-	  destinationOut: Symbol(),
-	  destinationAtop: Symbol(),
-	  xor: Symbol(),
-	  plusDarker: Symbol(),
-	  plusLighter: Symbol()
-	};
-
-	exports.default = CGBlendMode;
-
-/***/ },
-/* 2 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	/**
-	 * Styles for rendering the endpoint of a stroked line.
-	 * @typedef {Object} CGLineCap
-	 * @property {Symbol} butt - A line with a squared-off end. Core Graphics draws the line to extend only to the exact endpoint of the path. This is the default.
-	 * @property {Symbol} round - A line with a rounded end. Core Graphics draws the line to extend beyond the endpoint of the path. The line ends with a semicircular arc with a radius of 1/2 the line’s width, centered on the endpoint.
-	 * @property {Symbol} square - A line with a squared-off end. Core Graphics extends the line beyond the endpoint of the path for a distance equal to half the line width.
-	 * @see https://developer.apple.com/reference/coregraphics/cglinecap
-	 */
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var CGLineCap = {
-	  butt: Symbol(),
-	  round: Symbol(),
-	  square: Symbol()
-	};
-
-	exports.default = CGLineCap;
-
-/***/ },
-/* 3 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	/**
-	 * Junction types for stroked lines.
-	 * @typedef {Object} CGLineJoin
-	 * @property {Symbol} miter - 
-	 * @property {Symbol} round - A join with a rounded end. Core Graphics draws the line to extend beyond the endpoint of the path. The line ends with a semicircular arc with a radius of 1/2 the line’s width, centered on the endpoint.
-	 * @property {Symbol} bevel - A join with a squared-off end. Core Graphics draws the line to extend beyond the endpoint of the path, for a distance of 1/2 the line’s width.
-	 * @see https://developer.apple.com/reference/coregraphics/cglinejoin
-	 */
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var CGLineJoin = {
-	  miter: Symbol(),
-	  round: Symbol(),
-	  bevel: Symbol()
-	};
-
-	exports.default = CGLineJoin;
-
-/***/ },
-/* 4 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -1033,1703 +1159,13 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _CGPoint = __webpack_require__(5);
-
-	var _CGPoint2 = _interopRequireDefault(_CGPoint);
-
-	var _CGRect = __webpack_require__(6);
-
-	var _CGRect2 = _interopRequireDefault(_CGRect);
-
-	var _CGPath = __webpack_require__(8);
-
-	var _CGPath2 = _interopRequireDefault(_CGPath);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	/**
-	 * A mutable graphics path: a mathematical description of shapes or lines to be drawn in a graphics context.
-	 * @access public
-	 * @see https://developer.apple.com/reference/coregraphics/cgmutablepath
-	 */
-	var CGMutablePath = function () {
-	  function CGMutablePath() {
-	    _classCallCheck(this, CGMutablePath);
-	  }
-
-	  _createClass(CGMutablePath, [{
-	    key: 'init',
-
-
-	    // Creating Graphics Paths
-
-	    /**
-	     * Creates a mutable graphics path.
-	     * @access public
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/1411209-init
-	     */
-	    value: function init() {}
-
-	    // Copying a Graphics Path
-
-	    /**
-	     * Creates a mutable copy of an existing graphics path.
-	     * @access public
-	     * @returns {?CGMutablePath} - 
-	     * @desc You can modify a mutable graphics path by calling the various path geometry functions, such as addArc(_:x:y:radius:startAngle:endAngle:clockwise:), addLineTo(_:x:y:), and moveTo(_:x:y:).
-	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411196-mutablecopy
-	     */
-
-	  }, {
-	    key: 'mutableCopy',
-	    value: function mutableCopy() {
-	      return null;
-	    }
-
-	    /**
-	     * Creates a mutable copy of a graphics path transformed by a transformation matrix.
-	     * @access public
-	     * @param {?UnsafePointer<CGAffineTransform>} transform - A pointer to an affine transformation matrix, or NULL if no transformation is needed. If specified, Core Graphics applies the transformation to all elements of the new path.
-	     * @returns {?CGMutablePath} - 
-	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411150-mutablecopy
-	     */
-
-	  }, {
-	    key: 'mutableCopyUsing',
-	    value: function mutableCopyUsing(transform) {
-	      return null;
-	    }
-
-	    // Constructing a Graphics Path
-
-	    /**
-	     * Begins a new subpath at the specified point.  
-	     * @access public
-	     * @param {CGPoint} point - The point, in user space coordinates, at which to start a new subpath.
-	     * @param {CGAffineTransform} transform - An affine transform to apply to the point before adding to the path. Defaults to the identity transform if not specified.
-	     * @returns {void}
-	     * @desc The specified point becomes the start point of a new subpath. The current point is set to this start point.
-	     * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427143-move
-	     */
-
-	  }, {
-	    key: 'moveTo',
-	    value: function moveTo(point, transform) {}
-
-	    /**
-	     * Appends a straight line segment from the current point to the specified point. 
-	     * @access public
-	     * @param {CGPoint} point - The location, in user space coordinates, for the end of the new line segment.
-	     * @param {CGAffineTransform} transform - An affine transform to apply to the point before adding to the path. Defaults to the identity transform if not specified.
-	     * @returns {void}
-	     * @desc After adding the line segment, the current point is set to the endpoint of the line segment.
-	     * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427121-addline
-	     */
-
-	  }, {
-	    key: 'addLineTo',
-	    value: function addLineTo(point, transform) {}
-
-	    /**
-	     * Adds a sequence of connected straight-line segments to the path. 
-	     * @access public
-	     * @param {CGPoint[]} points - An array of values that specify the start and end points of the line segments to draw. Each point in the array specifies a position in user space. The first point in the array specifies the initial starting point.
-	     * @param {CGAffineTransform} transform - An affine transform to apply to the points before adding to the path. Defaults to the identity transform if not specified.
-	     * @returns {void}
-	     * @desc Calling this convenience method is equivalent to calling the move(to:transform:) method with the first value in the points array, then calling the addLine(to:transform:) method for each subsequent point until the array is exhausted. After calling this method, the path's current point is the last point in the array.
-	     * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427154-addlines
-	     */
-
-	  }, {
-	    key: 'addLinesBetween',
-	    value: function addLinesBetween(points, transform) {}
-
-	    /**
-	     * Adds a rectangular subpath to the path. 
-	     * @access public
-	     * @param {CGRect} rect - A rectangle, specified in user space coordinates.
-	     * @param {CGAffineTransform} transform - An affine transform to apply to the rectangle before adding to the path. Defaults to the identity transform if not specified.
-	     * @returns {void}
-	     * @desc This is a convenience function that adds a rectangle to a path, starting by moving to the bottom left corner and then adding lines counter-clockwise to create a rectangle, closing the subpath.
-	     * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427119-addrect
-	     */
-
-	  }, {
-	    key: 'addRect',
-	    value: function addRect(rect, transform) {}
-
-	    /**
-	     * Adds a set of rectangular subpaths to the path. 
-	     * @access public
-	     * @param {CGRect[]} rects - An array of rectangles, specified in user space coordinates.
-	     * @param {CGAffineTransform} transform - An affine transform to apply to the rectangles before adding to the path. Defaults to the identity transform if not specified.
-	     * @returns {void}
-	     * @desc Calling this convenience method is equivalent to repeatedly calling the addRect(_:transform:) method for each rectangle in the array.
-	     * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427131-addrects
-	     */
-
-	  }, {
-	    key: 'addRects',
-	    value: function addRects(rects, transform) {}
-
-	    /**
-	     * Adds an ellipse that fits inside the specified rectangle. 
-	     * @access public
-	     * @param {CGRect} rect - A rectangle that defines the area for the ellipse to fit in.
-	     * @param {CGAffineTransform} transform - An affine transform to apply to the ellipse before adding to the path. Defaults to the identity transform if not specified.
-	     * @returns {void}
-	     * @desc The ellipse is approximated by a sequence of Bézier curves. Its center is the midpoint of the rectangle defined by the rect parameter. If the rectangle is square, then the ellipse is circular with a radius equal to one-half the width (or height) of the rectangle. If the rect parameter specifies a rectangular shape, then the major and minor axes of the ellipse are defined by the width and height of the rectangle.The ellipse forms a complete subpath of the path—that is, the ellipse drawing starts with a move-to operation and ends with a close-subpath operation, with all moves oriented in the clockwise direction.
-	     * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427120-addellipse
-	     */
-
-	  }, {
-	    key: 'addEllipseIn',
-	    value: function addEllipseIn(rect, transform) {}
-
-	    /**
-	     *  Adds a subpath to the path, in the shape of a rectangle with rounded corners.
-	     * @access public
-	     * @param {CGRect} rect - The rectangle to add, specified in user space coordinates.
-	     * @param {number} cornerWidth - The horizontal size, in user space coordinates, for rounded corner sections.
-	     * @param {number} cornerHeight - The vertical size, in user space coordinates, for rounded corner sections.
-	     * @param {CGAffineTransform} transform - An affine transform to apply to the rectangle before adding to the path. Defaults to the identity transform if not specified.
-	     * @returns {void}
-	     * @desc This convenience method is equivalent to a move operation to start the subpath followed by a series of arc and line operations that construct the rounded rectangle. Each corner of the rounded rectangle is one-quarter of an ellipse with axes equal to the cornerWidth and cornerHeight parameters. The rounded rectangle forms a closed subpath oriented in the clockwise direction.
-	     * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427144-addroundedrect
-	     */
-
-	  }, {
-	    key: 'addRoundedRectIn',
-	    value: function addRoundedRectIn(rect, cornerWidth, cornerHeight, transform) {}
-
-	    /**
-	     * Adds an arc of a circle to the path, specified with a radius and angles. 
-	     * @access public
-	     * @param {CGPoint} center - The center of the arc, in user space coordinates.
-	     * @param {number} radius - The radius of the arc, in user space coordinates.
-	     * @param {number} startAngle - The angle to the starting point of the arc, measured in radians from the positive x-axis.
-	     * @param {number} endAngle - The angle to the end point of the arc, measured in radians from the positive x-axis.
-	     * @param {boolean} clockwise - true to make a clockwise arc; false to make a counterclockwise arc.
-	     * @param {CGAffineTransform} transform - An affine transform to apply to the arc before adding to the path. Defaults to the identity transform if not specified.
-	     * @returns {void}
-	     * @desc This method calculates starting and ending points using the radius and angles you specify, uses a sequence of cubic Bézier curves to approximate a segment of a circle between those points, and then appends those curves to the path.The clockwise parameter determines the direction in which the arc is created; the actual direction of the final path is dependent on the transform parameter and the current transform of a context where the path is drawn. In a flipped coordinate system (the default for UIView drawing methods in iOS), specifying a clockwise arc results in a counterclockwise arc after the transformation is applied.If the path already contains a subpath, this method adds a line connecting the current point to the starting point of the arc. If the current path is empty, his method creates a new subpath whose starting point is the starting point of the arc. The ending point of the arc becomes the new current point of the path.
-	     * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427140-addarc
-	     */
-
-	  }, {
-	    key: 'addArc',
-	    value: function addArc(center, radius, startAngle, endAngle, clockwise, transform) {}
-
-	    /**
-	     * Adds an arc of a circle to the path, specified with a radius and a difference in angle.  
-	     * @access public
-	     * @param {CGPoint} center - The center of the arc, in user space coordinates.
-	     * @param {number} radius - The radius of the arc, in user space coordinates.
-	     * @param {number} startAngle - The angle to the starting point of the arc, measured in radians from the positive x-axis.
-	     * @param {number} delta - The difference, measured in radians, between the starting angle and ending angle of the arc. A positive value creates a counter-clockwise arc (in user space coordinates), and vice versa.
-	     * @param {CGAffineTransform} transform - An affine transform to apply to the arc before adding to the path. Defaults to the identity transform if not specified.
-	     * @returns {void}
-	     * @desc This method calculates starting and ending points using the radius and angles you specify, uses a sequence of cubic Bézier curves to approximate a segment of a circle between those points, and then appends those curves to the path.The delta parameter determines both the length of the arc the direction in which the arc is created; the actual direction of the final path is dependent on the transform parameter and the current transform of a context where the path is drawn. In a flipped coordinate system (the default for UIView drawing methods in iOS), specifying a clockwise arc results in a counterclockwise arc after the transformation is applied.If the path already contains a subpath, this method adds a line connecting the current point to the starting point of the arc. If the current path is empty, his method creates a new subpath whose starting point is the starting point of the arc. The ending point of the arc becomes the new current point of the path.
-	     * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427147-addrelativearc
-	     */
-
-	  }, {
-	    key: 'addRelativeArc',
-	    value: function addRelativeArc(center, radius, startAngle, delta, transform) {}
-
-	    /**
-	     * Adds a cubic Bézier curve to the path, with the specified end point and control points. 
-	     * @access public
-	     * @param {CGPoint} end - The point, in user space coordinates, at which to end the curve.
-	     * @param {CGPoint} control1 - The first control point of the curve, in user space coordinates.
-	     * @param {CGPoint} control2 - The second control point of the curve, in user space coordinates.
-	     * @param {CGAffineTransform} transform - An affine transform to apply to the curve before adding to the path. Defaults to the identity transform if not specified.
-	     * @returns {void}
-	     * @desc This method constructs a curve starting from the path's current point and ending at the specified end point, with curvature defined by the two control points. After this method appends that curve to the current path, the end point of the curve becomes the path's current point.
-	     * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427158-addcurve
-	     */
-
-	  }, {
-	    key: 'addCurveTo',
-	    value: function addCurveTo(end, control1, control2, transform) {}
-
-	    /**
-	     * Adds a quadratic Bézier curve to the path, with the specified end point and control point. 
-	     * @access public
-	     * @param {CGPoint} end - The point, in user space coordinates, at which to end the curve.
-	     * @param {CGPoint} control - The control point of the curve, in user space coordinates.
-	     * @param {CGAffineTransform} transform - An affine transform to apply to the curve before adding to the path. Defaults to the identity transform if not specified.
-	     * @returns {void}
-	     * @desc This method constructs a curve starting from the path's current point and ending at the specified end point, with curvature defined by the control point. After this method appends that curve to the current path, the end point of the curve becomes the path's current point.
-	     * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427128-addquadcurve
-	     */
-
-	  }, {
-	    key: 'addQuadCurveTo',
-	    value: function addQuadCurveTo(end, control, transform) {}
-
-	    /**
-	     * Appends another path object to the path. 
-	     * @access public
-	     * @param {CGPath} path - The path to add.
-	     * @param {CGAffineTransform} transform - An affine transform to apply to the path parameter before adding to this path. Defaults to the identity transform if not specified.
-	     * @returns {void}
-	     * @desc If the path parameter is a non-empty empty path, its path elements are appended in order to this path. Afterward, the start point and current point of this path are those of the last subpath in the path parameter.
-	     * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427150-addpath
-	     */
-
-	  }, {
-	    key: 'addPath',
-	    value: function addPath(path, transform) {}
-
-	    /**
-	     * Closes and completes a subpath in a mutable graphics path.
-	     * @access public
-	     * @returns {void}
-	     * @desc Appends a line from the current point to the starting point of the current subpath and ends the subpath. After closing the subpath, your application can begin a new subpath without first calling moveTo(_:x:y:). In this case, a new subpath is implicitly created with a starting and current point equal to the previous subpath’s starting point.
-	     * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/1411188-closesubpath
-	     */
-
-	  }, {
-	    key: 'closeSubpath',
-	    value: function closeSubpath() {}
-	  }]);
-
-	  return CGMutablePath;
-	}();
-
-	exports.default = CGMutablePath;
-
-/***/ },
-/* 5 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	/**
-	 * A structure that contains a point in a two-dimensional coordinate system.
-	 * @access public
-	 * @see https://developer.apple.com/reference/coregraphics/cgpoint
-	 */
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	var CGPoint = function () {
-	  // Creating Point Values
-
-	  /**
-	   * Creates a point with coordinates specified as integer values.   
-	   * @access public
-	   * @constructor
-	   * @param {number} x - 
-	   * @param {number} y - 
-	   * @see https://developer.apple.com/reference/coregraphics/cgpoint/1455965-init
-	   */
-	  function CGPoint(x, y) {
-	    _classCallCheck(this, CGPoint);
-
-	    // Geometric Properties
-	    this.x = x;
-	    this.y = y;
-	  }
-
-	  // Special Values
-
-	  /**
-	   * The point with location (0,0).
-	   * @type {CGPoint}
-	   * @desc 
-	   * @see https://developer.apple.com/reference/coregraphics/cgpoint/1454433-zero
-	   */
-
-
-	  _createClass(CGPoint, [{
-	    key: 'applying',
-
-
-	    // Geometric Properties
-
-	    // Transforming Points
-
-	    /**
-	     * Returns the point resulting from an affine transformation of an existing point.
-	     * @access public
-	     * @param {CGAffineTransform} t - The affine transform to apply. 
-	     * @returns {CGPoint} - 
-	     * @see https://developer.apple.com/reference/coregraphics/cgpoint/1454251-applying
-	     */
-	    value: function applying(t) {
-	      return null;
-	    }
-
-	    // Alternate Representations
-
-	    /**
-	     * Creates a point from a canonical dictionary representation.
-	     * @access public
-	     * @param {Map} dict - A dictionary containing x and y values for the point to create, in the format used by the dictionaryRepresentation property.
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/coregraphics/cgpoint/2427118-init
-	     */
-
-	  }, {
-	    key: 'equalTo',
-
-
-	    // Comparing Points
-
-	    /**
-	     * Returns whether two points are equal. 
-	     * @access public
-	     * @param {CGPoint} point2 - 
-	     * @returns {boolean} - 
-	     * @see https://developer.apple.com/reference/coregraphics/cgpoint/1456179-equalto
-	     */
-	    value: function equalTo(point2) {
-	      var epsilon = 0.00001;
-	      return Math.abs(this.x - point2.x) < epsilon && Math.abs(this.y - point2.y) < epsilon;
-	    }
-	  }, {
-	    key: 'copy',
-	    value: function copy() {
-	      return new CGPoint(this.x, this.y);
-	    }
-	  }, {
-	    key: 'dictionaryRepresentation',
-
-
-	    /**
-	     * Returns a dictionary representation of the specified point.
-	     * @type {Map}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/coregraphics/cgpoint/1455382-dictionaryrepresentation
-	     */
-	    get: function get() {
-	      var map = new Map();
-	      map.set('x', this.x);
-	      map.set('y', this.y);
-	      return map;
-	    }
-
-	    /**
-	     * A textual representation of the point's coordinate values. 
-	     * @type {string}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/coregraphics/cgpoint/1645825-debugdescription
-	     */
-
-	  }, {
-	    key: 'debugDescription',
-	    get: function get() {
-	      return '{x: ' + this.x + ', y: ' + this.y + '}';
-	    }
-
-	    /**
-	     * A representation of the point's structure and display style for use in debugging.
-	     * @type {Mirror}
-	     * @desc Mirrors are used by playgrounds and the debugger.
-	     * @see https://developer.apple.com/reference/coregraphics/cgpoint/1645834-custommirror
-	     */
-
-	  }, {
-	    key: 'customMirror',
-	    get: function get() {
-	      return null;
-	    }
-
-	    /**
-	     * A representation of the point for use in Playgrounds.
-	     * @type {PlaygroundQuickLook}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/coregraphics/cgpoint/1645835-customplaygroundquicklook
-	     */
-
-	  }, {
-	    key: 'customPlaygroundQuickLook',
-	    get: function get() {
-	      return null;
-	    }
-	  }], [{
-	    key: 'pointWithDictionaryRepresentation',
-	    value: function pointWithDictionaryRepresentation(dict) {
-	      return new CGPoint(dict.get('x'), dict.get('y'));
-	    }
-	  }, {
-	    key: 'zero',
-	    get: function get() {
-	      return new CGPoint(0, 0);
-	    }
-	  }]);
-
-	  return CGPoint;
-	}();
-
-	exports.default = CGPoint;
-
-/***/ },
-/* 6 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _CGPoint = __webpack_require__(5);
-
-	var _CGPoint2 = _interopRequireDefault(_CGPoint);
-
-	var _CGSize = __webpack_require__(7);
-
-	var _CGSize2 = _interopRequireDefault(_CGSize);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	/**
-	 * A structure that contains the location and dimensions of a rectangle.
-	 * @access public
-	 * @see https://developer.apple.com/reference/coregraphics/cgrect
-	 */
-	var CGRect = function () {
-	  // Creating Rectangle Values
-
-	  /**
-	   * Creates a rectangle with the specified origin and size.
-	   * @access public
-	   * @constructor
-	   * @param {CGPoint} origin - 
-	   * @param {CGSize} size - 
-	   * @see https://developer.apple.com/reference/coregraphics/cgrect/1454856-init
-	   */
-	  function CGRect(origin, size) {
-	    _classCallCheck(this, CGRect);
-
-	    // Basic Geometric Properties
-	    this.origin = origin.copy();
-	    this.size = size.copy();
-
-	    // Calculated Geometric Properties
-	    /*
-	    this._height = size.height
-	    this._width = size.width
-	    this._minX = 0
-	    this._midX = 0
-	    this._maxX = 0
-	    this._minY = 0
-	    this._midY = 0
-	    this._maxY = 0
-	     // Creating Derived Rectangles
-	     this._standardized = null
-	    this._integral = null
-	     // Checking Characteristics
-	     this._isEmpty = false
-	    this._isInfinite = false
-	    this._isNull = false
-	     // Alternate Representations
-	     this._dictionaryRepresentation = null
-	    this._debugDescription = ''
-	    this._customMirror = null
-	    this._customPlaygroundQuickLook = null
-	    */
-	  }
-
-	  // Special Values
-
-	  /**
-	   * The rectangle whose origin and size are both zero.
-	   * @type {CGRect}
-	   * @desc The zero rectangle is equivalent to one created by calling CGRect(x: 0, y: 0, width: 0, height: 0).
-	   * @see https://developer.apple.com/reference/coregraphics/cgrect/1455437-zero
-	   */
-
-
-	  _createClass(CGRect, [{
-	    key: 'applying',
-
-
-	    // Creating Derived Rectangles
-
-	    /**
-	     * Applies an affine transform to a rectangle.
-	     * @access public
-	     * @param {CGAffineTransform} t - The affine transform to apply to the rect parameter.
-	     * @returns {CGRect} - 
-	     * @desc Because affine transforms do not preserve rectangles in general, this function returns the smallest rectangle that contains the transformed corner points of the rect parameter. If the affine transform t consists solely of scaling and translation operations, then the returned rectangle coincides with the rectangle constructed from the four transformed corners.
-	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1455875-applying
-	     */
-	    value: function applying(t) {
-	      return null;
-	    }
-
-	    /**
-	     * Returns a rectangle that is smaller or larger than the source rectangle, with the same center point.
-	     * @access public
-	     * @param {number} dx - The x-coordinate value to use for adjusting the source rectangle. To create an inset rectangle, specify a positive value. To create a larger, encompassing rectangle, specify a negative value.
-	     * @param {number} dy - The y-coordinate value to use for adjusting the source rectangle. To create an inset rectangle, specify a positive value. To create a larger, encompassing rectangle, specify a negative value.
-	     * @returns {CGRect} - 
-	     * @desc The rectangle is standardized and then the inset parameters are applied. If the resulting rectangle would have a negative height or width, a null rectangle is returned.
-	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1454218-insetby
-	     */
-
-	  }, {
-	    key: 'insetBy',
-	    value: function insetBy(dx, dy) {
-	      var newX = this.minX + dx;
-	      var newY = this.minY + dy;
-	      var newWidth = this.size.width - dx * 2;
-	      var newHeight = this.size.height - dy * 2;
-	      return new CGRect(new _CGPoint2.default(newX, newY), new _CGSize2.default(newWidth, newHeight));
-	    }
-
-	    /**
-	     * Returns a rectangle with an origin that is offset from that of the source rectangle.
-	     * @access public
-	     * @param {number} dx - The offset value for the x-coordinate.
-	     * @param {number} dy - The offset value for the  y-coordinate.
-	     * @returns {CGRect} - 
-	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1454841-offsetby
-	     */
-
-	  }, {
-	    key: 'offsetBy',
-	    value: function offsetBy(dx, dy) {
-	      return new CGRect(new _CGPoint2.default(this.origin.x + dx, this.origin.y + dy), this.size);
-	    }
-
-	    /**
-	     * Returns the smallest rectangle that contains the two source rectangles.
-	     * @access public
-	     * @param {CGRect} r2 - Another rectangle to be combined with this rectangle.
-	     * @returns {CGRect} - 
-	     * @desc Both rectangles are standardized prior to calculating the union. If either of the rectangles is a null rectangle, a copy of the other rectangle is returned (resulting in a null rectangle if both rectangles are null). Otherwise a rectangle that completely contains the source rectangles is returned.
-	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1455837-union
-	     */
-
-	  }, {
-	    key: 'union',
-	    value: function union(r2) {
-	      return null;
-	    }
-
-	    /**
-	     * Returns the intersection of two rectangles.
-	     * @access public
-	     * @param {CGRect} r2 - Another rectangle to intersect with this rectangle.
-	     * @returns {CGRect} - 
-	     * @desc Both rectangles are standardized prior to calculating the intersection.
-	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1455346-intersection
-	     */
-
-	  }, {
-	    key: 'intersection',
-	    value: function intersection(r2) {
-	      return null;
-	    }
-
-	    /**
-	     * Creates two rectangles by dividing the original rectangle. 
-	     * @access public
-	     * @param {number} atDistance - A distance from the rectangle side specified in the fromEdge parameter, defining the line along which to divide the rectangle.
-	     * @param {CGRectEdge} fromEdge - The side of the rectangle from which to measure the atDistance parameter, defining the line along which to divide the rectangle.
-	     * @returns {{slice: CGRect, remainder: CGRect}} - 
-	     * @desc Together the fromEdge and atDistance parameters define a line (parallel to the specified edge of the rectangle and at the specified distance from that edge) that divides the rectangle into two component rectangles.
-	     * @see https://developer.apple.com/reference/coregraphics/cgrect/2299988-divided
-	     */
-
-	  }, {
-	    key: 'dividedFrom',
-	    value: function dividedFrom(atDistance, fromEdge) {
-	      return null;
-	    }
-	    /**
-	     * Returns a rectangle with a positive width and height.
-	     * @type {CGRect}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1456432-standardized
-	     */
-
-	  }, {
-	    key: 'intersects',
-
-
-	    // Checking Characteristics
-
-	    /**
-	     * Returns whether two rectangles intersect.
-	     * @access public
-	     * @param {CGRect} rect2 - The rectangle to test for intersection with this rectangle.
-	     * @returns {boolean} - 
-	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1454747-intersects
-	     */
-	    value: function intersects(rect2) {
-	      return false;
-	    }
-
-	    /**
-	     * Returns whether a rectangle contains a specified point.
-	     * @access public
-	     * @param {CGPoint} point - The point to examine. 
-	     * @returns {boolean} - 
-	     * @desc A point is considered inside the rectangle if its coordinates lie inside the rectangle or on the minimum X or minimum Y edge.
-	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1456316-contains
-	     */
-
-	  }, {
-	    key: 'contains',
-	    value: function contains(point) {
-	      return point.x >= this.minX && point.x <= this.maxX && point.y >= this.minY && point.y <= this.maxY;
-	    }
-
-	    /**
-	     * Returns whether a rectangle has zero width or height, or is a null rectangle.
-	     * @type {boolean}
-	     * @desc An empty rectangle is either a null rectangle or a valid rectangle with zero height or width.
-	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1454917-isempty
-	     */
-
-	  }, {
-	    key: 'initDictionaryRepresentation',
-
-
-	    // Alternate Representations
-
-	    /**
-	     * Creates a rectangle from a canonical dictionary representation. 
-	     * @access public
-	     * @param {Map} dict - A dictionary containing x, y, width, and height values for the rectangle to create, in the format used by the dictionaryRepresentation property.
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/coregraphics/cgrect/2427139-init
-	     */
-	    value: function initDictionaryRepresentation(dict) {
-	      // Basic Geometric Properties
-	      this.origin = dict.get('origin');
-	      this.size = dict.get('size');
-	    }
-
-	    /**
-	     * Returns a dictionary representation of the provided rectangle.
-	     * @type {Map}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1455760-dictionaryrepresentation
-	     */
-
-	  }, {
-	    key: 'equalTo',
-
-
-	    // Comparing Rectangles
-
-	    /**
-	     * Returns whether two rectangles are equal in size and position.
-	     * @access public
-	     * @param {CGRect} rect2 - The rectangle to compare this rectangle with.
-	     * @returns {boolean} - 
-	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1456516-equalto
-	     */
-	    value: function equalTo(rect2) {
-	      if (this.origin === null || rect2.origin === null) {
-	        return false;
-	      }
-	      if (this.size === null || rect2.size === null) {
-	        return false;
-	      }
-
-	      return this.origin.equalTo(rect2.origin) && this.size.equalTo(rect2.size);
-	    }
-	  }, {
-	    key: 'copy',
-	    value: function copy() {
-	      return new CGRect(this.origin, this.size);
-	    }
-
-	    /**
-	     * @access public
-	     * @param {number} x -
-	     * @param {number} y -
-	     * @param {number} width -
-	     * @param {number} height -
-	     * @returns {CGRect} -
-	     */
-
-	  }, {
-	    key: 'height',
-
-
-	    // Basic Geometric Properties
-
-	    // Calculated Geometric Properties
-	    /**
-	     * Returns the height of a rectangle.
-	     * @type {number}
-	     * @desc Regardless of whether the height is stored in the CGRect data structure as a positive or negative number, this function returns the height as if the rectangle were standardized. That is, the result is never a negative number.
-	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1455645-height
-	     */
-	    get: function get() {
-	      return this.size.height;
-	    }
-	    /**
-	     * Returns the width of a rectangle.
-	     * @type {number}
-	     * @desc Regardless of whether the width is stored in the CGRect data structure as a positive or negative number, this function returns the width as if the rectangle were standardized.  That is, the result is never a negative number.
-	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1454758-width
-	     */
-
-	  }, {
-	    key: 'width',
-	    get: function get() {
-	      return this.size.width;
-	    }
-
-	    /**
-	     * Returns the smallest value for the x-coordinate of the rectangle.
-	     * @type {number}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1455948-minx
-	     */
-
-	  }, {
-	    key: 'minX',
-	    get: function get() {
-	      if (this.size.width < 0) {
-	        return this.origin.x + this.size.width;
-	      }
-	      return this.origin.x;
-	    }
-
-	    /**
-	     * Returns the x- coordinate that establishes the center of a rectangle.
-	     * @type {number}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1456175-midx
-	     */
-
-	  }, {
-	    key: 'midX',
-	    get: function get() {
-	      return this.origin.x + this.size.width * 0.5;
-	    }
-
-	    /**
-	     * Returns the largest value of the x-coordinate for the rectangle.
-	     * @type {number}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1454334-maxx
-	     */
-
-	  }, {
-	    key: 'maxX',
-	    get: function get() {
-	      if (this.size.width > 0) {
-	        return this.origin.x + this.size.width;
-	      }
-	      return this.origin.x;
-	    }
-
-	    /**
-	     * Returns the smallest value for the y-coordinate of the rectangle.
-	     * @type {number}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1454832-miny
-	     */
-
-	  }, {
-	    key: 'minY',
-	    get: function get() {
-	      if (this.size.height < 0) {
-	        return this.origin.y + this.size.height;
-	      }
-	      return this.origin.y;
-	    }
-
-	    /**
-	     * Returns the y-coordinate that establishes the center of the rectangle.
-	     * @type {number}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1456550-midy
-	     */
-
-	  }, {
-	    key: 'midY',
-	    get: function get() {
-	      return this.origin.y + this.size.height * 0.5;
-	    }
-
-	    /**
-	     * Returns the largest value for the y-coordinate of the rectangle.
-	     * @type {number}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1454060-maxy
-	     */
-
-	  }, {
-	    key: 'maxY',
-	    get: function get() {
-	      if (this.size.height > 0) {
-	        return this.origin.y + this.size.height;
-	      }
-	      return this.origin.y;
-	    }
-	  }, {
-	    key: 'standardized',
-	    get: function get() {
-	      return this._standardized;
-	    }
-	    /**
-	     * Returns the smallest rectangle that results from converting the source rectangle values to integers.
-	     * @type {CGRect}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1456348-integral
-	     */
-
-	  }, {
-	    key: 'integral',
-	    get: function get() {
-	      return this._integral;
-	    }
-	  }, {
-	    key: 'isEmpty',
-	    get: function get() {
-	      return this.isNull || this.size.height === 0 || this.size.width === 0;
-	    }
-
-	    /**
-	     * Returns whether a rectangle is infinite.
-	     * @type {boolean}
-	     * @desc An infinite rectangle is one that has no defined bounds. Infinite rectangles can be created as output from a tiling filter. For example, the Core Image framework perspective tile filter creates an image whose extent is described by an infinite rectangle.
-	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1455008-isinfinite
-	     */
-
-	  }, {
-	    key: 'isInfinite',
-	    get: function get() {
-	      return this.size.width === Infinity && this.size.height === Infinity;
-	    }
-
-	    /**
-	     * Returns whether the rectangle is equal to the null rectangle.
-	     * @type {boolean}
-	     * @desc A null rectangle is the equivalent of an empty set. For example, the result of intersecting two disjoint rectangles is a null rectangle. A null rectangle cannot be drawn and interacts with other rectangles in special ways.
-	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1455471-isnull
-	     */
-
-	  }, {
-	    key: 'isNull',
-	    get: function get() {
-	      return this.size === null;
-	    }
-	  }, {
-	    key: 'dictionaryRepresentation',
-	    get: function get() {
-	      var map = new Map();
-	      map.set('origin', this.origin);
-	      map.set('size', this.size);
-	      return map;
-	    }
-
-	    /**
-	     * 
-	     * @type {string}
-	     * @desc A textual representation of the rectangle's origin and size values. 
-	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1645823-debugdescription
-	     */
-
-	  }, {
-	    key: 'debugDescription',
-	    get: function get() {
-	      if (this.size === null) {
-	        return '{null}';
-	      }
-	      var origin = this.origin ? this.origin.debugDescription() : '{null}';
-	      var size = this.size ? this.size.debugDescription() : '{null}';
-
-	      return '{origin:' + origin + ', size:' + size + '}';
-	    }
-
-	    /**
-	     * A representation of the rectangle's structure and display style for use in debugging. 
-	     * @type {Mirror}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1645833-custommirror
-	     */
-
-	  }, {
-	    key: 'customMirror',
-	    get: function get() {
-	      return null;
-	    }
-
-	    /**
-	     * A representation of the rectangle for use in Playgrounds. 
-	     * @type {PlaygroundQuickLook}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1645827-customplaygroundquicklook
-	     */
-
-	  }, {
-	    key: 'customPlaygroundQuickLook',
-	    get: function get() {
-	      return null;
-	    }
-	  }], [{
-	    key: 'rectWithXYWidthHeight',
-	    value: function rectWithXYWidthHeight(x, y, width, height) {
-	      var point = new _CGPoint2.default(x, y);
-	      var size = new _CGSize2.default(width, height);
-	      return new CGRect(point, size);
-	    }
-	  }, {
-	    key: 'zero',
-	    get: function get() {
-	      return new CGRect(new _CGPoint2.default(0, 0), new _CGSize2.default(0, 0));
-	    }
-	  }]);
-
-	  return CGRect;
-	}();
-
-	exports.default = CGRect;
-
-/***/ },
-/* 7 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	/**
-	 * A structure that contains width and height values.
-	 * @access public
-	 * @see https://developer.apple.com/reference/coregraphics/cgsize
-	 */
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	var CGSize = function () {
-
-	  // Initializers
-
-	  /**
-	   * Creates a size with dimensions specified as floating-point values.    
-	   * @access public
-	   * @constructor
-	   * @param {number} width - 
-	   * @param {number} height - 
-	   * @see https://developer.apple.com/reference/coregraphics/cgsize/1454915-init
-	   */
-	  function CGSize(width, height) {
-	    _classCallCheck(this, CGSize);
-
-	    // Geometric Properties
-	    this.width = width;
-	    this.height = height;
-	  }
-
-	  // Geometric Properties
-
-	  // Special Values
-	  /**
-	   * The size whose width and height are both zero.
-	   * @type {CGSize}
-	   * @desc 
-	   * @see https://developer.apple.com/reference/coregraphics/cgsize/1455512-zero
-	   */
-
-
-	  _createClass(CGSize, [{
-	    key: 'applying',
-
-
-	    // Transforming Sizes
-
-	    /**
-	     * Returns the height and width resulting from a transformation of an existing height and width.
-	     * @access public
-	     * @param {CGAffineTransform} t - The affine transform to apply. 
-	     * @returns {CGSize} - 
-	     * @see https://developer.apple.com/reference/coregraphics/cgsize/1454806-applying
-	     */
-	    value: function applying(t) {
-	      return null;
-	    }
-
-	    // Alternate Representations
-
-	    /**
-	     * Creates a size from a canonical dictionary representation. 
-	     * @access public
-	     * @param {Map} dict - A dictionary containing width and height values for the size to create, in the format used by the dictionaryRepresentation property.
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/coregraphics/cgsize/2427155-init
-	     */
-
-	  }, {
-	    key: 'equalTo',
-
-
-	    // Comparing Sizes
-
-	    /**
-	     * Returns whether two sizes are equal. 
-	     * @access public
-	     * @param {CGSize} size2 - 
-	     * @returns {boolean} - 
-	     * @see https://developer.apple.com/reference/coregraphics/cgsize/1455176-equalto
-	     */
-	    value: function equalTo(size2) {
-	      var epsilon = 0.00001;
-	      return Math.abs(this.width - size2.width) < epsilon && Math.abs(this.height - size2.height) < epsilon;
-	    }
-	  }, {
-	    key: 'copy',
-	    value: function copy() {
-	      return new CGSize(this.width, this.height);
-	    }
-	  }, {
-	    key: 'dictionaryRepresentation',
-
-
-	    /**
-	     * Returns a dictionary representation of the specified size.
-	     * @type {Map}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/coregraphics/cgsize/1455274-dictionaryrepresentation
-	     */
-	    get: function get() {
-	      var map = new Map();
-	      map.set('width', this.width);
-	      map.set('height', this.height);
-	      return map;
-	    }
-
-	    /**
-	     * A textual representation of the size's dimensions.  
-	     * @type {string}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/coregraphics/cgsize/1645822-debugdescription
-	     */
-
-	  }, {
-	    key: 'debugDescription',
-	    get: function get() {
-	      return '{width: ' + this.width + ', height: ' + this.height + '}';
-	    }
-
-	    /**
-	     * A representation of the size's structure and display style for use in debugging. 
-	     * @type {Mirror}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/coregraphics/cgsize/1645828-custommirror
-	     */
-
-	  }, {
-	    key: 'customMirror',
-	    get: function get() {
-	      return null;
-	    }
-	    /**
-	     * A representation of the size for use in Playgrounds. 
-	     * @type {PlaygroundQuickLook}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/coregraphics/cgsize/1645830-customplaygroundquicklook
-	     */
-
-	  }, {
-	    key: 'customPlaygroundQuickLook',
-	    get: function get() {
-	      return null;
-	    }
-	  }], [{
-	    key: 'sizeWithDictionaryRepresentation',
-	    value: function sizeWithDictionaryRepresentation(dict) {
-	      return new CGSize(dict.get('width'), dict.get('height'));
-	    }
-	  }, {
-	    key: 'zero',
-	    get: function get() {
-	      return new CGSize(0, 0);
-	    }
-	  }]);
-
-	  return CGSize;
-	}();
-
-	exports.default = CGSize;
-
-/***/ },
-/* 8 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _CGRect = __webpack_require__(6);
-
-	var _CGRect2 = _interopRequireDefault(_CGRect);
-
-	var _CGLineCap = __webpack_require__(2);
-
-	var _CGLineCap2 = _interopRequireDefault(_CGLineCap);
-
-	var _CGLineJoin = __webpack_require__(3);
-
-	var _CGLineJoin2 = _interopRequireDefault(_CGLineJoin);
-
-	var _CGMutablePath = __webpack_require__(4);
-
-	var _CGMutablePath2 = _interopRequireDefault(_CGMutablePath);
-
-	var _CGPoint = __webpack_require__(5);
-
-	var _CGPoint2 = _interopRequireDefault(_CGPoint);
-
-	var _CGPathFillRule = __webpack_require__(9);
-
-	var _CGPathFillRule2 = _interopRequireDefault(_CGPathFillRule);
-
-	var _CGPathApplierFunction = __webpack_require__(10);
-
-	var _CGPathApplierFunction2 = _interopRequireDefault(_CGPathApplierFunction);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	var _typeID = null;
-
-	/**
-	 * An immutable graphics path: a mathematical description of shapes or lines to be drawn in a graphics context.
-	 * @access public
-	 * @see https://developer.apple.com/reference/coregraphics/cgpath
-	 */
-
-	var CGPath = function () {
-	  function CGPath() {
-	    _classCallCheck(this, CGPath);
-	  }
-
-	  _createClass(CGPath, [{
-	    key: 'init',
-
-
-	    // Creating Graphics Paths
-
-	    /**
-	     * Create an immutable path of a rectangle.
-	     * @access public
-	     * @param {CGRect} rect - The rectangle to add.
-	     * @param {?UnsafePointer<CGAffineTransform>} transform - A pointer to an affine transformation matrix, or NULL if no transformation is needed. If specified, Core Graphics applies the transformation to the rectangle before it is added to the path.
-	     * @returns {void}
-	     * @desc This is a convenience function that creates a path of an rectangle. Using this convenience function is more efficient than creating a mutable path and adding an rectangle to it.Calling this function is equivalent to using minX and related functions to find the corners of the rectangle, then using the moveTo(_:x:y:), addLineTo(_:x:y:), and closeSubpath() functions to draw the rectangle. 
-	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411155-init
-	     */
-	    value: function init(rect, transform) {
-
-	      // Examining a Graphics Path
-
-	      this._boundingBox = null;
-	      this._boundingBoxOfPath = null;
-	      this._currentPoint = null;
-	      this._isEmpty = false;
-	    }
-
-	    /**
-	     * Create an immutable path of an ellipse.
-	     * @access public
-	     * @param {CGRect} rect - The rectangle that bounds the ellipse.
-	     * @param {?UnsafePointer<CGAffineTransform>} transform - A pointer to an affine transformation matrix, or NULL if no transformation is needed. If specified, Core Graphics applies the transformation to the ellipse before it is added to the path.
-	     * @returns {void}
-	     * @desc This is a convenience function that creates a path of an ellipse. Using this convenience function is more efficient than creating a mutable path and adding an ellipse to it.The ellipse is approximated by a sequence of Bézier curves. Its center is the midpoint of the rectangle defined by the rect parameter. If the rectangle is square, then the ellipse is circular with a radius equal to one-half the width (or height) of the rectangle. If the rect parameter specifies a rectangular shape, then the major and minor axes of the ellipse are defined by the width and height of the rectangle. The ellipse forms a complete subpath of the path—that is, the ellipse drawing starts with a move-to operation and ends with a close-subpath operation, with all moves oriented in the clockwise direction. If you supply an affine transform, then the constructed Bézier curves that define the ellipse are transformed before they are added to the path.
-	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411177-init
-	     */
-
-	  }, {
-	    key: 'initEllipseIn',
-	    value: function initEllipseIn(rect, transform) {
-
-	      // Examining a Graphics Path
-
-	      this._boundingBox = null;
-	      this._boundingBoxOfPath = null;
-	      this._currentPoint = null;
-	      this._isEmpty = false;
-	    }
-
-	    /**
-	     * Create an immutable path of a rounded rectangle.
-	     * @access public
-	     * @param {CGRect} rect - The rectangle to add.
-	     * @param {number} cornerWidth - The width of the rounded corner sections.
-	     * @param {number} cornerHeight - The height of the rounded corner sections.
-	     * @param {?UnsafePointer<CGAffineTransform>} transform - A pointer to an affine transformation matrix, or NULL if no transformation is needed. If specified, Core Graphics applies the transformation to the rectangle before it is added to the path.
-	     * @returns {void}
-	     * @desc This is a convenience function that creates a path of an rounded rectangle. Using this convenience function is more efficient than creating a mutable path and adding an rectangle to it.Each corner of the rounded rectangle is one-quarter of an ellipse with axes equal to the cornerWidth and cornerHeight parameters. The rounded rectangle forms a complete subpath and is oriented in the clockwise direction.
-	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411218-init
-	     */
-
-	  }, {
-	    key: 'initRoundedRect',
-	    value: function initRoundedRect(rect, cornerWidth, cornerHeight, transform) {
-
-	      // Examining a Graphics Path
-
-	      this._boundingBox = null;
-	      this._boundingBoxOfPath = null;
-	      this._currentPoint = null;
-	      this._isEmpty = false;
-	    }
-
-	    // Copying a Graphics Path
-
-	    /**
-	     * Creates an immutable copy of a graphics path.
-	     * @access public
-	     * @returns {?CGPath} - 
-	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411211-copy
-	     */
-
-	  }, {
-	    key: 'copy',
-	    value: function copy() {
-	      return null;
-	    }
-
-	    /**
-	     * Creates an immutable copy of a graphics path transformed by a transformation matrix.
-	     * @access public
-	     * @param {?UnsafePointer<CGAffineTransform>} transform - A pointer to an affine transformation matrix, or NULL if no transformation is needed. If specified, Core Graphics applies the transformation to all elements of the new path.
-	     * @returns {?CGPath} - 
-	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411161-copy
-	     */
-
-	  }, {
-	    key: 'copyUsing',
-	    value: function copyUsing(transform) {
-	      return null;
-	    }
-
-	    /**
-	     * Returns a new path equivalent to the results of drawing the path with a dashed stroke.
-	     * @access public
-	     * @param {number} phase - A value that specifies how far into the dash pattern the line starts, in units of the user space. For example, a value of 0 draws a line starting with the beginning of a dash pattern, and a value of 3 means the line is drawn with the dash pattern starting at three units from its beginning. 
-	     * @param {number[]} lengths - An array of values that specify the lengths, in user space coordinates, of the painted and unpainted segments  of the dash pattern.For example, the array [2,3] sets a dash pattern that alternates between a 2-unit-long painted segment and a 3-unit-long unpainted segment. The array [1,3,4,2] sets the pattern to a 1-unit painted segment, a 3-unit unpainted segment, a 4-unit painted segment, and a 2-unit unpainted segment.Pass an empty array to clear the dash pattern so that all stroke drawing in the context uses solid lines.
-	     * @param {CGAffineTransform} transform - An affine transform to apply to the path before dashing. Defaults to the identity transform if not specified.
-	     * @returns {CGPath} - 
-	     * @desc The new path is created so that filling the new path draws the same pixels as stroking the original path with the specified dash parameters.
-	     * @see https://developer.apple.com/reference/coregraphics/cgpath/2427137-copy
-	     */
-
-	  }, {
-	    key: 'copyDashingWithPhase',
-	    value: function copyDashingWithPhase(phase, lengths, transform) {
-	      return null;
-	    }
-
-	    /**
-	     * Returns a new path equivalent to the results of drawing the path with a solid stroke. 
-	     * @access public
-	     * @param {number} lineWidth - The line width to use, in user space units. The value must be greater than 0.
-	     * @param {CGLineCap} lineCap - The line cap style to render. (For equivalent CGContext drawing methods, the default style is butt.) 
-	     * @param {CGLineJoin} lineJoin - The line join style to render. (For equivalent CGContext drawing methods, the default style is miter.) 
-	     * @param {number} miterLimit - A value that limits how sharp individual corners in the path can be when using the miter line join style. When the ratio of a the length required for a mitered corner to the line width exceeds this value, that corner uses the bevel style instead.
-	     * @param {CGAffineTransform} transform - An affine transform to apply to the path before dashing. Defaults to the identity transform if not specified.
-	     * @returns {CGPath} - 
-	     * @desc The new path is created so that filling the new path draws the same pixels as stroking the original path with the specified line style.
-	     * @see https://developer.apple.com/reference/coregraphics/cgpath/2427133-copy
-	     */
-
-	  }, {
-	    key: 'copyStrokingWithWidth',
-	    value: function copyStrokingWithWidth(lineWidth, lineCap, lineJoin, miterLimit, transform) {
-	      return null;
-	    }
-
-	    /**
-	     * Creates a mutable copy of an existing graphics path.
-	     * @access public
-	     * @returns {?CGMutablePath} - 
-	     * @desc You can modify a mutable graphics path by calling the various path geometry functions, such as addArc(_:x:y:radius:startAngle:endAngle:clockwise:), addLineTo(_:x:y:), and moveTo(_:x:y:).
-	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411196-mutablecopy
-	     */
-
-	  }, {
-	    key: 'mutableCopy',
-	    value: function mutableCopy() {
-	      return null;
-	    }
-
-	    /**
-	     * Creates a mutable copy of a graphics path transformed by a transformation matrix.
-	     * @access public
-	     * @param {?UnsafePointer<CGAffineTransform>} transform - A pointer to an affine transformation matrix, or NULL if no transformation is needed. If specified, Core Graphics applies the transformation to all elements of the new path.
-	     * @returns {?CGMutablePath} - 
-	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411150-mutablecopy
-	     */
-
-	  }, {
-	    key: 'mutableCopyUsing',
-	    value: function mutableCopyUsing(transform) {
-	      return null;
-	    }
-
-	    // Examining a Graphics Path
-
-	    /**
-	     * Returns whether the specified point is interior to the path.
-	     * @access public
-	     * @param {CGPoint} point - The point to check.
-	     * @param {CGPathFillRule} rule - The rule for determining which areas to treat as the interior of the path. Defaults to the winding rule if not specified.
-	     * @param {CGAffineTransform} transform - An affine transform to apply to the point before checking for containment in the path. Defaults to the identity transform if not specified.
-	     * @returns {boolean} - 
-	     * @desc A point is contained in a path if it would be inside the painted region when the path is filled.
-	     * @see https://developer.apple.com/reference/coregraphics/cgpath/2427117-contains
-	     */
-
-	  }, {
-	    key: 'containsUsing',
-	    value: function containsUsing(point, rule, transform) {
-	      return false;
-	    }
-
-	    /**
-	     * Indicates whether or not a graphics path represents a rectangle.
-	     * @access public
-	     * @param {?UnsafeMutablePointer<CGRect>} rect - On input, a pointer to an uninitialized rectangle. If the specified path represents a rectangle, on return contains a copy of the rectangle. 
-	     * @returns {boolean} - 
-	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411163-isrect
-	     */
-
-	  }, {
-	    key: 'isRect',
-	    value: function isRect(rect) {
-	      return false;
-	    }
-	    /**
-	     * Returns the bounding box containing all points in a graphics path.
-	     * @type {CGRect}
-	     * @desc The bounding box is the smallest rectangle completely enclosing all points in the path, including control points for Bézier and quadratic curves. 
-	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411165-boundingbox
-	     */
-
-	  }, {
-	    key: 'apply',
-
-
-	    // Applying a Function to the Elements of a Path
-
-	    /**
-	     * For each element in a graphics path, calls a custom applier function.
-	     * @access public
-	     * @param {?Object} info - A pointer to the user data that Core Graphics will pass to the function being applied, or NULL.
-	     * @param {CGPathApplierFunction} _function - 
-	     * @returns {void}
-	     * @desc For each element in the specified path, Core Graphics calls the applier function, which can examine (but not modify) the element.
-	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411203-apply
-	     */
-	    value: function apply(info, _function) {}
-
-	    // Working with Core Foundation Types
-	    /**
-	     * Returns the Core Foundation type identifier for Core Graphics graphics paths.
-	     * @type {CFTypeID}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411192-typeid
-	     */
-
-	  }, {
-	    key: 'init__byDashing',
-
-
-	    // Initializers
-
-	    /**
-	     * Creates a dashed copy of another path.
-	     * @access public
-	     * @param {CGPath} path - The path to copy.
-	     * @param {?UnsafePointer<CGAffineTransform>} transform - A pointer to an affine transformation matrix, or NULL if no transformation is needed. If specified, Core Graphics applies the transformation to elements of the converted path before adding them to the new path.
-	     * @param {number} phase - A value that specifies how far into the dash pattern the line starts, in units of the user space. For example, passing a value of 3 means the line is drawn with the dash pattern starting at three units from its beginning. Passing a value of 0 draws a line starting with the beginning of a dash pattern.
-	     * @param {?UnsafePointer<CGFloat>} lengths - An array of values that specify the lengths of the painted segments and unpainted segments, respectively, of the dash pattern—or NULL for no dash pattern.For example, passing an array with the values [2,3] sets a dash pattern that alternates between a 2-user-space-unit-long painted segment and a 3-user-space-unit-long unpainted segment. Passing the values [1,3,4,2] sets the pattern to a 1-unit painted segment, a 3-unit unpainted segment, a 4-unit painted segment, and a 2-unit unpainted segment.
-	     * @param {number} count - If the lengths parameter specifies an array, pass the number of elements in the array. Otherwise, pass 0.
-	     * @returns {void}
-	     * @desc The new path is created so that filling the new path draws the same pixels as stroking the original path with the specified dash parameters.
-	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411134-init
-	     */
-	    value: function init__byDashing(path, transform, phase, lengths, count) {
-
-	      // Examining a Graphics Path
-
-	      this._boundingBox = null;
-	      this._boundingBoxOfPath = null;
-	      this._currentPoint = null;
-	      this._isEmpty = false;
-	    }
-
-	    /**
-	     * Creates a stroked copy of another path.
-	     * @access public
-	     * @param {CGPath} path - The path to copy.
-	     * @param {?UnsafePointer<CGAffineTransform>} transform - A pointer to an affine transformation matrix, or NULL if no transformation is needed. If specified, Core Graphics applies the transformation to elements of the converted path before adding them to the new path.
-	     * @param {number} lineWidth - The line width to use, in user space units. The value must be greater than 0.
-	     * @param {CGLineCap} lineCap - A line cap style constant—butt (the default), round, or square. 
-	     * @param {CGLineJoin} lineJoin - A line join value—miter (the default), round, or bevel. 
-	     * @param {number} miterLimit - The miter limit to use.
-	     * @returns {void}
-	     * @desc The new path is created so that filling the new path draws the same pixels as stroking the original path.If the line join style is set to kCGLineJoinMiter, Core Graphics uses the miter limit to determine whether the lines should be joined with a bevel instead of a miter. Core Graphics divides the length of the miter by the line width. If the result is greater than the miter limit, Core Graphics converts the style to a bevel. 
-	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411128-init
-	     */
-
-	  }, {
-	    key: 'init__byStroking',
-	    value: function init__byStroking(path, transform, lineWidth, lineCap, lineJoin, miterLimit) {
-
-	      // Examining a Graphics Path
-
-	      this._boundingBox = null;
-	      this._boundingBoxOfPath = null;
-	      this._currentPoint = null;
-	      this._isEmpty = false;
-	    }
-	  }, {
-	    key: 'boundingBox',
-	    get: function get() {
-	      return this._boundingBox;
-	    }
-	    /**
-	     * Returns the bounding box of a graphics path.
-	     * @type {CGRect}
-	     * @desc The path bounding box is the smallest rectangle completely enclosing all points in the path but not including control points for Bézier and quadratic curves. 
-	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411200-boundingboxofpath
-	     */
-
-	  }, {
-	    key: 'boundingBoxOfPath',
-	    get: function get() {
-	      return this._boundingBoxOfPath;
-	    }
-	    /**
-	     * Returns the current point in a graphics path.
-	     * @type {CGPoint}
-	     * @desc If the path is empty—that is, if it has no elements—this function returns CGPointZero (see CGGeometry). To determine whether a path is empty, use isEmpty.
-	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411132-currentpoint
-	     */
-
-	  }, {
-	    key: 'currentPoint',
-	    get: function get() {
-	      return this._currentPoint;
-	    }
-	    /**
-	     * Indicates whether or not a graphics path is empty.
-	     * @type {boolean}
-	     * @desc An empty path contains no elements.
-	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411149-isempty
-	     */
-
-	  }, {
-	    key: 'isEmpty',
-	    get: function get() {
-	      return this._isEmpty;
-	    }
-	  }], [{
-	    key: 'typeID',
-	    get: function get() {
-	      return _typeID;
-	    }
-	  }]);
-
-	  return CGPath;
-	}();
-
-	exports.default = CGPath;
-
-/***/ },
-/* 9 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	/**
-	 * Rules for determining which regions are interior to a path, used by the fillPath(using:) and clip(using:) methods.
-	 * @typedef {Object} CGPathFillRule
-	 * @property {Symbol} evenOdd - A rule that considers a region to be interior to a path based on the number of times it is enclosed by path elements.
-	 * @property {Symbol} winding - A rule that considers a region to be interior to a path if the winding number for that region is nonzero.
-	 * @see https://developer.apple.com/reference/coregraphics/cgpathfillrule
-	 */
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var CGPathFillRule = {
-	  evenOdd: Symbol(),
-	  winding: Symbol()
-	};
-
-	exports.default = CGPathFillRule;
-
-/***/ },
-/* 10 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	/**
-	 * Defines a callback function that can view an element in a graphics path.
-	 * @type {function(): void}
-	 * @returns {void}
-	 * @see https://developer.apple.com/reference/coregraphics/cgpathapplierfunction
-	 */
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var CGPathApplierFunction = function CGPathApplierFunction() {};
-
-	exports.default = CGPathApplierFunction;
-
-/***/ },
-/* 11 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	/**
-	 * A structure that contains a two-dimensional vector.
-	 * @access public
-	 * @see https://developer.apple.com/reference/coregraphics/cgvector
-	 */
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	var CGVector = function () {
-	  function CGVector() {
-	    _classCallCheck(this, CGVector);
-	  }
-
-	  _createClass(CGVector, [{
-	    key: 'init',
-
-
-	    // Initializers
-
-	    /**
-	     * Creates a vector with components specified as integer values.
-	     * @access public
-	     * @param {number} dx - 
-	     * @param {number} dy - 
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/coregraphics/cgvector/1456249-init
-	     */
-	    value: function init(dx, dy) {
-
-	      // Special Values
-
-	      this._zero = null;
-
-	      // Geometric Properties
-
-	      this._dx = 0;
-	      this._dy = 0;
-	    }
-
-	    // Special Values
-	    /**
-	     * The vector whose components are both zero.
-	     * @type {CGVector}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/coregraphics/cgvector/1454067-zero
-	     */
-
-	  }, {
-	    key: 'zero',
-	    get: function get() {
-	      return this._zero;
-	    }
-
-	    // Geometric Properties
-
-	  }]);
-
-	  return CGVector;
-	}();
-
-	exports.default = CGVector;
-
-/***/ },
-/* 12 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _CGPoint = __webpack_require__(5);
+	var _SKColor = __webpack_require__(8);
 
-	var _CGPoint2 = _interopRequireDefault(_CGPoint);
-
-	var _CGVector = __webpack_require__(11);
-
-	var _CGVector2 = _interopRequireDefault(_CGVector);
-
-	var _CGSize = __webpack_require__(7);
-
-	var _CGSize2 = _interopRequireDefault(_CGSize);
-
-	var _CGRect = __webpack_require__(6);
-
-	var _CGRect2 = _interopRequireDefault(_CGRect);
-
-	var _CATransform3D = __webpack_require__(14);
-
-	var _CATransform3D2 = _interopRequireDefault(_CATransform3D);
-
-	var _SCNVector = __webpack_require__(15);
-
-	var _SCNVector2 = _interopRequireDefault(_SCNVector);
-
-	var _SCNVector3 = __webpack_require__(16);
-
-	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
-
-	var _SCNMatrix = __webpack_require__(17);
-
-	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
+	var _SKColor2 = _interopRequireDefault(_SKColor);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -2740,1708 +1176,39 @@ module.exports =
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	/**
-	 * An NSValue object is a simple container for a single C or Objective-C data item. It can hold any of the scalar types such as int, float, and char, as well as pointers, structures, and object id references. Use this class to work with such data types in collections (such as NSArray and NSSet), Key-value coding, and other APIs that require Objective-C objects. NSValue objects are always immutable.
+	 * dummy class for NSKeyedArchiver/Unarchiver
 	 * @access public
 	 * @extends {NSObject}
-	 * @see https://developer.apple.com/reference/foundation/nsvalue
 	 */
-	var NSValue = function (_NSObject) {
-	  _inherits(NSValue, _NSObject);
+	var NSColor = function (_NSObject) {
+	  _inherits(NSColor, _NSObject);
 
-	  function NSValue() {
-	    _classCallCheck(this, NSValue);
+	  function NSColor() {
+	    _classCallCheck(this, NSColor);
 
-	    return _possibleConstructorReturn(this, (NSValue.__proto__ || Object.getPrototypeOf(NSValue)).apply(this, arguments));
+	    return _possibleConstructorReturn(this, (NSColor.__proto__ || Object.getPrototypeOf(NSColor)).apply(this, arguments));
 	  }
 
-	  _createClass(NSValue, [{
-	    key: 'initBytesObjCType',
-
-
-	    // Working with Raw Values
+	  _createClass(NSColor, null, [{
+	    key: 'initWithCoder',
 
 	    /**
-	     * Initializes a value object to contain the specified value, interpreted with the specified Objective-C type.
 	     * @access public
-	     * @param {UnsafeRawPointer} value - A pointer to data to be stored in the new value object.
-	     * @param {UnsafePointer<Int8>} type - The Objective-C type of value, as provided by the @encode() compiler directive. Do not hard-code this parameter as a C string. 
-	     * @returns {void}
-	     * @desc See Number and Value Programming Topics for other considerations in creating a value object.This is the designated initializer for the NSValue class.
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1411621-init
+	     * @param {NSCoder} coder -
+	     * @returns {_Buffer} -
 	     */
-	    value: function initBytesObjCType(value, type) {
-
-	      // Working with Raw Values
-
-	      this._objCType = null;
-
-	      // Working with Pointer and Object Values
-
-	      this._pointerValue = null;
-	      this._nonretainedObjectValue = null;
-
-	      // Working with Range Values
-
-	      this._rangeValue = null;
-
-	      // Working with Foundation Geometry Values
-
-	      this._pointValue = null;
-	      this._sizeValue = null;
-	      this._rectValue = null;
-
-	      // Working with CoreGraphics Geometry Values
-
-	      this._cgPointValue = null;
-	      this._cgVectorValue = null;
-	      this._cgSizeValue = null;
-	      this._cgRectValue = null;
-	      this._cgAffineTransformValue = null;
-
-	      // Working with UIKit Geometry Values
-
-	      this._uiEdgeInsetsValue = null;
-	      this._uiOffsetValue = null;
-
-	      // Working with CoreAnimation Transform Values
-
-	      this._caTransform3DValue = null;
-
-	      // Working with Media Time Values
-
-	      this._timeValue = null;
-	      this._timeRangeValue = null;
-	      this._timeMappingValue = null;
-
-	      // Working with Geographic Coordinate Values
-
-	      this._mkCoordinateValue = null;
-	      this._mkCoordinateSpanValue = null;
-
-	      // Working with SceneKit Vector and Matrix Values
-
-	      this._scnVector3Value = null;
-	      this._scnVector4Value = null;
-	      this._scnMatrix4Value = null;
-
-	      // Instance Properties
-
-	      this._edgeInsetsValue = null;
-	    }
-
-	    /**
-	     * Creates a value object containing the specified value, interpreted with the specified Objective-C type.
-	     * @access public
-	     * @param {UnsafeRawPointer} value - A pointer to data to be stored in the new value object.
-	     * @param {UnsafePointer<Int8>} type - The Objective-C type of value, as provided by the @encode() compiler directive. Do not hard-code this parameter as a C string. 
-	     * @returns {void}
-	     * @desc This method has the same effect as valueWithBytes:objCType: and may be deprecated in a future release. You should use valueWithBytes:objCType: instead.
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1417400-init
-	     */
-
-	  }, {
-	    key: 'initWithObjCType',
-	    value: function initWithObjCType(value, type) {
-
-	      // Working with Raw Values
-
-	      this._objCType = null;
-
-	      // Working with Pointer and Object Values
-
-	      this._pointerValue = null;
-	      this._nonretainedObjectValue = null;
-
-	      // Working with Range Values
-
-	      this._rangeValue = null;
-
-	      // Working with Foundation Geometry Values
-
-	      this._pointValue = null;
-	      this._sizeValue = null;
-	      this._rectValue = null;
-
-	      // Working with CoreGraphics Geometry Values
-
-	      this._cgPointValue = null;
-	      this._cgVectorValue = null;
-	      this._cgSizeValue = null;
-	      this._cgRectValue = null;
-	      this._cgAffineTransformValue = null;
-
-	      // Working with UIKit Geometry Values
-
-	      this._uiEdgeInsetsValue = null;
-	      this._uiOffsetValue = null;
-
-	      // Working with CoreAnimation Transform Values
-
-	      this._caTransform3DValue = null;
-
-	      // Working with Media Time Values
-
-	      this._timeValue = null;
-	      this._timeRangeValue = null;
-	      this._timeMappingValue = null;
-
-	      // Working with Geographic Coordinate Values
-
-	      this._mkCoordinateValue = null;
-	      this._mkCoordinateSpanValue = null;
-
-	      // Working with SceneKit Vector and Matrix Values
-
-	      this._scnVector3Value = null;
-	      this._scnVector4Value = null;
-	      this._scnMatrix4Value = null;
-
-	      // Instance Properties
-
-	      this._edgeInsetsValue = null;
-	    }
-
-	    /**
-	     * Copies the value into the specified buffer.
-	     * @access public
-	     * @param {Object} value - 
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1415141-getvalue
-	     */
-
-	  }, {
-	    key: 'getValue',
-	    value: function getValue(value) {}
-	    /**
-	     * A C string containing the Objective-C type of the data contained in the value object.
-	     * @type {UnsafePointer<Int8>}
-	     * @desc This property provides the same string produced by the @encode() compiler directive.
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1412365-objctype
-	     */
-
-	  }, {
-	    key: 'init',
-
-
-	    // Working with Pointer and Object Values
-
-	    /**
-	     * Creates a value object containing the specified pointer.
-	     * @access public
-	     * @param {?UnsafeRawPointer} pointer - 
-	     * @returns {void}
-	     * @desc This method is equivalent to invoking init(_:withObjCType:) in this manner:NSValue *theValue = [NSValue value:&aPointer withObjCType:@encode(void *)];
-	    This method does not copy the contents of aPointer, so you must not to free the memory at the pointer destination while the NSValue object exists. NSData objects may be more suited for arbitrary pointers than NSValue objects.NSValue *theValue = [NSValue value:&aPointer withObjCType:@encode(void *)];
-	      * @see https://developer.apple.com/reference/foundation/nsvalue/1415975-init
-	     */
-	    value: function init(pointer) {
-
-	      // Working with Raw Values
-
-	      this._objCType = null;
-
-	      // Working with Pointer and Object Values
-
-	      this._pointerValue = null;
-	      this._nonretainedObjectValue = null;
-
-	      // Working with Range Values
-
-	      this._rangeValue = null;
-
-	      // Working with Foundation Geometry Values
-
-	      this._pointValue = null;
-	      this._sizeValue = null;
-	      this._rectValue = null;
-
-	      // Working with CoreGraphics Geometry Values
-
-	      this._cgPointValue = null;
-	      this._cgVectorValue = null;
-	      this._cgSizeValue = null;
-	      this._cgRectValue = null;
-	      this._cgAffineTransformValue = null;
-
-	      // Working with UIKit Geometry Values
-
-	      this._uiEdgeInsetsValue = null;
-	      this._uiOffsetValue = null;
-
-	      // Working with CoreAnimation Transform Values
-
-	      this._caTransform3DValue = null;
-
-	      // Working with Media Time Values
-
-	      this._timeValue = null;
-	      this._timeRangeValue = null;
-	      this._timeMappingValue = null;
-
-	      // Working with Geographic Coordinate Values
-
-	      this._mkCoordinateValue = null;
-	      this._mkCoordinateSpanValue = null;
-
-	      // Working with SceneKit Vector and Matrix Values
-
-	      this._scnVector3Value = null;
-	      this._scnVector4Value = null;
-	      this._scnMatrix4Value = null;
-
-	      // Instance Properties
-
-	      this._edgeInsetsValue = null;
-	    }
-
-	    /**
-	     * Creates a value object containing the specified object.
-	     * @access public
-	     * @param {?Object} anObject - The value for the new object.
-	     * @returns {void}
-	     * @desc  This method is equivalent to invoking init(_:withObjCType:) in this manner:NSValue *theValue = [NSValue value:&anObject withObjCType:@encode(void *)];
-	    This method is useful if you want to add an object to a Collection but don’t want the collection to create a strong reference to it.NSValue *theValue = [NSValue value:&anObject withObjCType:@encode(void *)];
-	      * @see https://developer.apple.com/reference/foundation/nsvalue/1408098-init
-	     */
-
-	  }, {
-	    key: 'initNonretainedObject',
-	    value: function initNonretainedObject(anObject) {
-
-	      // Working with Raw Values
-
-	      this._objCType = null;
-
-	      // Working with Pointer and Object Values
-
-	      this._pointerValue = null;
-	      this._nonretainedObjectValue = null;
-
-	      // Working with Range Values
-
-	      this._rangeValue = null;
-
-	      // Working with Foundation Geometry Values
-
-	      this._pointValue = null;
-	      this._sizeValue = null;
-	      this._rectValue = null;
-
-	      // Working with CoreGraphics Geometry Values
-
-	      this._cgPointValue = null;
-	      this._cgVectorValue = null;
-	      this._cgSizeValue = null;
-	      this._cgRectValue = null;
-	      this._cgAffineTransformValue = null;
-
-	      // Working with UIKit Geometry Values
-
-	      this._uiEdgeInsetsValue = null;
-	      this._uiOffsetValue = null;
-
-	      // Working with CoreAnimation Transform Values
-
-	      this._caTransform3DValue = null;
-
-	      // Working with Media Time Values
-
-	      this._timeValue = null;
-	      this._timeRangeValue = null;
-	      this._timeMappingValue = null;
-
-	      // Working with Geographic Coordinate Values
-
-	      this._mkCoordinateValue = null;
-	      this._mkCoordinateSpanValue = null;
-
-	      // Working with SceneKit Vector and Matrix Values
-
-	      this._scnVector3Value = null;
-	      this._scnVector4Value = null;
-	      this._scnMatrix4Value = null;
-
-	      // Instance Properties
-
-	      this._edgeInsetsValue = null;
-	    }
-	    /**
-	     * Returns the value as an untyped pointer.
-	     * @type {?Object}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1410668-pointervalue
-	     */
-
-	  }, {
-	    key: 'initCgPoint',
-
-
-	    // Working with CoreGraphics Geometry Values
-
-	    /**
-	     * Creates a new value object containing the specified CoreGraphics point structure.
-	     * @access public
-	     * @param {CGPoint} point - The value for the new object.
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1624531-init
-	     */
-	    value: function initCgPoint(point) {
-
-	      // Working with Raw Values
-
-	      this._objCType = null;
-
-	      // Working with Pointer and Object Values
-
-	      this._pointerValue = null;
-	      this._nonretainedObjectValue = null;
-
-	      // Working with Range Values
-
-	      this._rangeValue = null;
-
-	      // Working with Foundation Geometry Values
-
-	      this._pointValue = null;
-	      this._sizeValue = null;
-	      this._rectValue = null;
-
-	      // Working with CoreGraphics Geometry Values
-
-	      this._cgPointValue = null;
-	      this._cgVectorValue = null;
-	      this._cgSizeValue = null;
-	      this._cgRectValue = null;
-	      this._cgAffineTransformValue = null;
-
-	      // Working with UIKit Geometry Values
-
-	      this._uiEdgeInsetsValue = null;
-	      this._uiOffsetValue = null;
-
-	      // Working with CoreAnimation Transform Values
-
-	      this._caTransform3DValue = null;
-
-	      // Working with Media Time Values
-
-	      this._timeValue = null;
-	      this._timeRangeValue = null;
-	      this._timeMappingValue = null;
-
-	      // Working with Geographic Coordinate Values
-
-	      this._mkCoordinateValue = null;
-	      this._mkCoordinateSpanValue = null;
-
-	      // Working with SceneKit Vector and Matrix Values
-
-	      this._scnVector3Value = null;
-	      this._scnVector4Value = null;
-	      this._scnMatrix4Value = null;
-
-	      // Instance Properties
-
-	      this._edgeInsetsValue = null;
-	    }
-
-	    /**
-	     * Creates a new value object containing the specified CoreGraphics vector structure.
-	     * @access public
-	     * @param {CGVector} vector - The value for the new object.
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1624493-init
-	     */
-
-	  }, {
-	    key: 'initCgVector',
-	    value: function initCgVector(vector) {
-
-	      // Working with Raw Values
-
-	      this._objCType = null;
-
-	      // Working with Pointer and Object Values
-
-	      this._pointerValue = null;
-	      this._nonretainedObjectValue = null;
-
-	      // Working with Range Values
-
-	      this._rangeValue = null;
-
-	      // Working with Foundation Geometry Values
-
-	      this._pointValue = null;
-	      this._sizeValue = null;
-	      this._rectValue = null;
-
-	      // Working with CoreGraphics Geometry Values
-
-	      this._cgPointValue = null;
-	      this._cgVectorValue = null;
-	      this._cgSizeValue = null;
-	      this._cgRectValue = null;
-	      this._cgAffineTransformValue = null;
-
-	      // Working with UIKit Geometry Values
-
-	      this._uiEdgeInsetsValue = null;
-	      this._uiOffsetValue = null;
-
-	      // Working with CoreAnimation Transform Values
-
-	      this._caTransform3DValue = null;
-
-	      // Working with Media Time Values
-
-	      this._timeValue = null;
-	      this._timeRangeValue = null;
-	      this._timeMappingValue = null;
-
-	      // Working with Geographic Coordinate Values
-
-	      this._mkCoordinateValue = null;
-	      this._mkCoordinateSpanValue = null;
-
-	      // Working with SceneKit Vector and Matrix Values
-
-	      this._scnVector3Value = null;
-	      this._scnVector4Value = null;
-	      this._scnMatrix4Value = null;
-
-	      // Instance Properties
-
-	      this._edgeInsetsValue = null;
-	    }
-
-	    /**
-	     * Creates a new value object containing the specified CoreGraphics size structure.
-	     * @access public
-	     * @param {CGSize} size - The value for the new object.
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1624511-init
-	     */
-
-	  }, {
-	    key: 'initCgSize',
-	    value: function initCgSize(size) {
-
-	      // Working with Raw Values
-
-	      this._objCType = null;
-
-	      // Working with Pointer and Object Values
-
-	      this._pointerValue = null;
-	      this._nonretainedObjectValue = null;
-
-	      // Working with Range Values
-
-	      this._rangeValue = null;
-
-	      // Working with Foundation Geometry Values
-
-	      this._pointValue = null;
-	      this._sizeValue = null;
-	      this._rectValue = null;
-
-	      // Working with CoreGraphics Geometry Values
-
-	      this._cgPointValue = null;
-	      this._cgVectorValue = null;
-	      this._cgSizeValue = null;
-	      this._cgRectValue = null;
-	      this._cgAffineTransformValue = null;
-
-	      // Working with UIKit Geometry Values
-
-	      this._uiEdgeInsetsValue = null;
-	      this._uiOffsetValue = null;
-
-	      // Working with CoreAnimation Transform Values
-
-	      this._caTransform3DValue = null;
-
-	      // Working with Media Time Values
-
-	      this._timeValue = null;
-	      this._timeRangeValue = null;
-	      this._timeMappingValue = null;
-
-	      // Working with Geographic Coordinate Values
-
-	      this._mkCoordinateValue = null;
-	      this._mkCoordinateSpanValue = null;
-
-	      // Working with SceneKit Vector and Matrix Values
-
-	      this._scnVector3Value = null;
-	      this._scnVector4Value = null;
-	      this._scnMatrix4Value = null;
-
-	      // Instance Properties
-
-	      this._edgeInsetsValue = null;
-	    }
-
-	    /**
-	     * Creates a new value object containing the specified CoreGraphics rectangle structure.
-	     * @access public
-	     * @param {CGRect} rect - The value for the new object.
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1624529-init
-	     */
-
-	  }, {
-	    key: 'initCgRect',
-	    value: function initCgRect(rect) {
-
-	      // Working with Raw Values
-
-	      this._objCType = null;
-
-	      // Working with Pointer and Object Values
-
-	      this._pointerValue = null;
-	      this._nonretainedObjectValue = null;
-
-	      // Working with Range Values
-
-	      this._rangeValue = null;
-
-	      // Working with Foundation Geometry Values
-
-	      this._pointValue = null;
-	      this._sizeValue = null;
-	      this._rectValue = null;
-
-	      // Working with CoreGraphics Geometry Values
-
-	      this._cgPointValue = null;
-	      this._cgVectorValue = null;
-	      this._cgSizeValue = null;
-	      this._cgRectValue = null;
-	      this._cgAffineTransformValue = null;
-
-	      // Working with UIKit Geometry Values
-
-	      this._uiEdgeInsetsValue = null;
-	      this._uiOffsetValue = null;
-
-	      // Working with CoreAnimation Transform Values
-
-	      this._caTransform3DValue = null;
-
-	      // Working with Media Time Values
-
-	      this._timeValue = null;
-	      this._timeRangeValue = null;
-	      this._timeMappingValue = null;
-
-	      // Working with Geographic Coordinate Values
-
-	      this._mkCoordinateValue = null;
-	      this._mkCoordinateSpanValue = null;
-
-	      // Working with SceneKit Vector and Matrix Values
-
-	      this._scnVector3Value = null;
-	      this._scnVector4Value = null;
-	      this._scnMatrix4Value = null;
-
-	      // Instance Properties
-
-	      this._edgeInsetsValue = null;
-	    }
-
-	    /**
-	     * Creates a new value object containing the specified CoreGraphics affine transform structure.
-	     * @access public
-	     * @param {CGAffineTransform} transform - The value for the new object.
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1624503-init
-	     */
-
-	  }, {
-	    key: 'initCgAffineTransform',
-	    value: function initCgAffineTransform(transform) {
-
-	      // Working with Raw Values
-
-	      this._objCType = null;
-
-	      // Working with Pointer and Object Values
-
-	      this._pointerValue = null;
-	      this._nonretainedObjectValue = null;
-
-	      // Working with Range Values
-
-	      this._rangeValue = null;
-
-	      // Working with Foundation Geometry Values
-
-	      this._pointValue = null;
-	      this._sizeValue = null;
-	      this._rectValue = null;
-
-	      // Working with CoreGraphics Geometry Values
-
-	      this._cgPointValue = null;
-	      this._cgVectorValue = null;
-	      this._cgSizeValue = null;
-	      this._cgRectValue = null;
-	      this._cgAffineTransformValue = null;
-
-	      // Working with UIKit Geometry Values
-
-	      this._uiEdgeInsetsValue = null;
-	      this._uiOffsetValue = null;
-
-	      // Working with CoreAnimation Transform Values
-
-	      this._caTransform3DValue = null;
-
-	      // Working with Media Time Values
-
-	      this._timeValue = null;
-	      this._timeRangeValue = null;
-	      this._timeMappingValue = null;
-
-	      // Working with Geographic Coordinate Values
-
-	      this._mkCoordinateValue = null;
-	      this._mkCoordinateSpanValue = null;
-
-	      // Working with SceneKit Vector and Matrix Values
-
-	      this._scnVector3Value = null;
-	      this._scnVector4Value = null;
-	      this._scnMatrix4Value = null;
-
-	      // Instance Properties
-
-	      this._edgeInsetsValue = null;
-	    }
-	    /**
-	     * Returns the CoreGraphics point structure representation of the value.
-	     * @type {CGPoint}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1624534-cgpointvalue
-	     */
-
-	  }, {
-	    key: 'initUiEdgeInsets',
-
-
-	    // Working with UIKit Geometry Values
-
-	    /**
-	     * Creates a new value object containing the specified UIKit edge insets structure.
-	     * @access public
-	     * @param {UIEdgeInsets} insets - The value for the new object.
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1624485-init
-	     */
-	    value: function initUiEdgeInsets(insets) {
-
-	      // Working with Raw Values
-
-	      this._objCType = null;
-
-	      // Working with Pointer and Object Values
-
-	      this._pointerValue = null;
-	      this._nonretainedObjectValue = null;
-
-	      // Working with Range Values
-
-	      this._rangeValue = null;
-
-	      // Working with Foundation Geometry Values
-
-	      this._pointValue = null;
-	      this._sizeValue = null;
-	      this._rectValue = null;
-
-	      // Working with CoreGraphics Geometry Values
-
-	      this._cgPointValue = null;
-	      this._cgVectorValue = null;
-	      this._cgSizeValue = null;
-	      this._cgRectValue = null;
-	      this._cgAffineTransformValue = null;
-
-	      // Working with UIKit Geometry Values
-
-	      this._uiEdgeInsetsValue = null;
-	      this._uiOffsetValue = null;
-
-	      // Working with CoreAnimation Transform Values
-
-	      this._caTransform3DValue = null;
-
-	      // Working with Media Time Values
-
-	      this._timeValue = null;
-	      this._timeRangeValue = null;
-	      this._timeMappingValue = null;
-
-	      // Working with Geographic Coordinate Values
-
-	      this._mkCoordinateValue = null;
-	      this._mkCoordinateSpanValue = null;
-
-	      // Working with SceneKit Vector and Matrix Values
-
-	      this._scnVector3Value = null;
-	      this._scnVector4Value = null;
-	      this._scnMatrix4Value = null;
-
-	      // Instance Properties
-
-	      this._edgeInsetsValue = null;
-	    }
-
-	    /**
-	     * Creates a new value object containing the specified UIKit offset structure.
-	     * @access public
-	     * @param {UIOffset} insets - The value for the new object.
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1624530-init
-	     */
-
-	  }, {
-	    key: 'initUiOffset',
-	    value: function initUiOffset(insets) {
-
-	      // Working with Raw Values
-
-	      this._objCType = null;
-
-	      // Working with Pointer and Object Values
-
-	      this._pointerValue = null;
-	      this._nonretainedObjectValue = null;
-
-	      // Working with Range Values
-
-	      this._rangeValue = null;
-
-	      // Working with Foundation Geometry Values
-
-	      this._pointValue = null;
-	      this._sizeValue = null;
-	      this._rectValue = null;
-
-	      // Working with CoreGraphics Geometry Values
-
-	      this._cgPointValue = null;
-	      this._cgVectorValue = null;
-	      this._cgSizeValue = null;
-	      this._cgRectValue = null;
-	      this._cgAffineTransformValue = null;
-
-	      // Working with UIKit Geometry Values
-
-	      this._uiEdgeInsetsValue = null;
-	      this._uiOffsetValue = null;
-
-	      // Working with CoreAnimation Transform Values
-
-	      this._caTransform3DValue = null;
-
-	      // Working with Media Time Values
-
-	      this._timeValue = null;
-	      this._timeRangeValue = null;
-	      this._timeMappingValue = null;
-
-	      // Working with Geographic Coordinate Values
-
-	      this._mkCoordinateValue = null;
-	      this._mkCoordinateSpanValue = null;
-
-	      // Working with SceneKit Vector and Matrix Values
-
-	      this._scnVector3Value = null;
-	      this._scnVector4Value = null;
-	      this._scnMatrix4Value = null;
-
-	      // Instance Properties
-
-	      this._edgeInsetsValue = null;
-	    }
-	    /**
-	     * Returns the UIKit edge insets structure representation of the value.
-	     * @type {UIEdgeInsets}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1624517-uiedgeinsetsvalue
-	     */
-
-	  }, {
-	    key: 'initCaTransform3D',
-
-
-	    // Working with CoreAnimation Transform Values
-
-	    /**
-	     * Creates a new value object containing the specified CoreAnimation transform structure.
-	     * @access public
-	     * @param {CATransform3D} t - 
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1436556-init
-	     */
-	    value: function initCaTransform3D(t) {
-
-	      // Working with Raw Values
-
-	      this._objCType = null;
-
-	      // Working with Pointer and Object Values
-
-	      this._pointerValue = null;
-	      this._nonretainedObjectValue = null;
-
-	      // Working with Range Values
-
-	      this._rangeValue = null;
-
-	      // Working with Foundation Geometry Values
-
-	      this._pointValue = null;
-	      this._sizeValue = null;
-	      this._rectValue = null;
-
-	      // Working with CoreGraphics Geometry Values
-
-	      this._cgPointValue = null;
-	      this._cgVectorValue = null;
-	      this._cgSizeValue = null;
-	      this._cgRectValue = null;
-	      this._cgAffineTransformValue = null;
-
-	      // Working with UIKit Geometry Values
-
-	      this._uiEdgeInsetsValue = null;
-	      this._uiOffsetValue = null;
-
-	      // Working with CoreAnimation Transform Values
-
-	      this._caTransform3DValue = null;
-
-	      // Working with Media Time Values
-
-	      this._timeValue = null;
-	      this._timeRangeValue = null;
-	      this._timeMappingValue = null;
-
-	      // Working with Geographic Coordinate Values
-
-	      this._mkCoordinateValue = null;
-	      this._mkCoordinateSpanValue = null;
-
-	      // Working with SceneKit Vector and Matrix Values
-
-	      this._scnVector3Value = null;
-	      this._scnVector4Value = null;
-	      this._scnMatrix4Value = null;
-
-	      // Instance Properties
-
-	      this._edgeInsetsValue = null;
-	    }
-	    /**
-	     * The CoreAnimation transform structure representation of the value.
-	     * @type {CATransform3D}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1436572-catransform3dvalue
-	     */
-
-	  }, {
-	    key: 'initMkCoordinate',
-
-
-	    // Working with Geographic Coordinate Values
-
-	    /**
-	     * Creates a new value object containing the specified CoreLocation geographic coordinate structure.
-	     * @access public
-	     * @param {CLLocationCoordinate2D} coordinate - The value for the new object.
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1452193-init
-	     */
-	    value: function initMkCoordinate(coordinate) {
-
-	      // Working with Raw Values
-
-	      this._objCType = null;
-
-	      // Working with Pointer and Object Values
-
-	      this._pointerValue = null;
-	      this._nonretainedObjectValue = null;
-
-	      // Working with Range Values
-
-	      this._rangeValue = null;
-
-	      // Working with Foundation Geometry Values
-
-	      this._pointValue = null;
-	      this._sizeValue = null;
-	      this._rectValue = null;
-
-	      // Working with CoreGraphics Geometry Values
-
-	      this._cgPointValue = null;
-	      this._cgVectorValue = null;
-	      this._cgSizeValue = null;
-	      this._cgRectValue = null;
-	      this._cgAffineTransformValue = null;
-
-	      // Working with UIKit Geometry Values
-
-	      this._uiEdgeInsetsValue = null;
-	      this._uiOffsetValue = null;
-
-	      // Working with CoreAnimation Transform Values
-
-	      this._caTransform3DValue = null;
-
-	      // Working with Media Time Values
-
-	      this._timeValue = null;
-	      this._timeRangeValue = null;
-	      this._timeMappingValue = null;
-
-	      // Working with Geographic Coordinate Values
-
-	      this._mkCoordinateValue = null;
-	      this._mkCoordinateSpanValue = null;
-
-	      // Working with SceneKit Vector and Matrix Values
-
-	      this._scnVector3Value = null;
-	      this._scnVector4Value = null;
-	      this._scnMatrix4Value = null;
-
-	      // Instance Properties
-
-	      this._edgeInsetsValue = null;
-	    }
-
-	    /**
-	     * Creates a new value object containing the specified MapKit coordinate span structure.
-	     * @access public
-	     * @param {MKCoordinateSpan} span - The value for the new object.
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1452333-init
-	     */
-
-	  }, {
-	    key: 'initMkCoordinateSpan',
-	    value: function initMkCoordinateSpan(span) {
-
-	      // Working with Raw Values
-
-	      this._objCType = null;
-
-	      // Working with Pointer and Object Values
-
-	      this._pointerValue = null;
-	      this._nonretainedObjectValue = null;
-
-	      // Working with Range Values
-
-	      this._rangeValue = null;
-
-	      // Working with Foundation Geometry Values
-
-	      this._pointValue = null;
-	      this._sizeValue = null;
-	      this._rectValue = null;
-
-	      // Working with CoreGraphics Geometry Values
-
-	      this._cgPointValue = null;
-	      this._cgVectorValue = null;
-	      this._cgSizeValue = null;
-	      this._cgRectValue = null;
-	      this._cgAffineTransformValue = null;
-
-	      // Working with UIKit Geometry Values
-
-	      this._uiEdgeInsetsValue = null;
-	      this._uiOffsetValue = null;
-
-	      // Working with CoreAnimation Transform Values
-
-	      this._caTransform3DValue = null;
-
-	      // Working with Media Time Values
-
-	      this._timeValue = null;
-	      this._timeRangeValue = null;
-	      this._timeMappingValue = null;
-
-	      // Working with Geographic Coordinate Values
-
-	      this._mkCoordinateValue = null;
-	      this._mkCoordinateSpanValue = null;
-
-	      // Working with SceneKit Vector and Matrix Values
-
-	      this._scnVector3Value = null;
-	      this._scnVector4Value = null;
-	      this._scnMatrix4Value = null;
-
-	      // Instance Properties
-
-	      this._edgeInsetsValue = null;
-	    }
-	    /**
-	     * The CoreLocation geographic coordinate structure representation of the value.
-	     * @type {CLLocationCoordinate2D}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1452495-mkcoordinatevalue
-	     */
-
-	  }, {
-	    key: 'initScnVector3',
-
-
-	    // Working with SceneKit Vector and Matrix Values
-
-	    /**
-	     * Creates a value object that contains the specified three-element SceneKit vector.
-	     * @access public
-	     * @param {SCNVector3} v - 
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1409671-init
-	     */
-	    value: function initScnVector3(v) {
-
-	      // Working with Raw Values
-
-	      this._objCType = null;
-
-	      // Working with Pointer and Object Values
-
-	      this._pointerValue = null;
-	      this._nonretainedObjectValue = null;
-
-	      // Working with Range Values
-
-	      this._rangeValue = null;
-
-	      // Working with Foundation Geometry Values
-
-	      this._pointValue = null;
-	      this._sizeValue = null;
-	      this._rectValue = null;
-
-	      // Working with CoreGraphics Geometry Values
-
-	      this._cgPointValue = null;
-	      this._cgVectorValue = null;
-	      this._cgSizeValue = null;
-	      this._cgRectValue = null;
-	      this._cgAffineTransformValue = null;
-
-	      // Working with UIKit Geometry Values
-
-	      this._uiEdgeInsetsValue = null;
-	      this._uiOffsetValue = null;
-
-	      // Working with CoreAnimation Transform Values
-
-	      this._caTransform3DValue = null;
-
-	      // Working with Media Time Values
-
-	      this._timeValue = null;
-	      this._timeRangeValue = null;
-	      this._timeMappingValue = null;
-
-	      // Working with Geographic Coordinate Values
-
-	      this._mkCoordinateValue = null;
-	      this._mkCoordinateSpanValue = null;
-
-	      // Working with SceneKit Vector and Matrix Values
-
-	      this._scnVector3Value = null;
-	      this._scnVector4Value = null;
-	      this._scnMatrix4Value = null;
-
-	      // Instance Properties
-
-	      this._edgeInsetsValue = null;
-	    }
-
-	    /**
-	     * Creates a value object that contains the specified four-element SceneKit vector.
-	     * @access public
-	     * @param {SCNVector4} v - 
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1409688-init
-	     */
-
-	  }, {
-	    key: 'initScnVector4',
-	    value: function initScnVector4(v) {
-
-	      // Working with Raw Values
-
-	      this._objCType = null;
-
-	      // Working with Pointer and Object Values
-
-	      this._pointerValue = null;
-	      this._nonretainedObjectValue = null;
-
-	      // Working with Range Values
-
-	      this._rangeValue = null;
-
-	      // Working with Foundation Geometry Values
-
-	      this._pointValue = null;
-	      this._sizeValue = null;
-	      this._rectValue = null;
-
-	      // Working with CoreGraphics Geometry Values
-
-	      this._cgPointValue = null;
-	      this._cgVectorValue = null;
-	      this._cgSizeValue = null;
-	      this._cgRectValue = null;
-	      this._cgAffineTransformValue = null;
-
-	      // Working with UIKit Geometry Values
-
-	      this._uiEdgeInsetsValue = null;
-	      this._uiOffsetValue = null;
-
-	      // Working with CoreAnimation Transform Values
-
-	      this._caTransform3DValue = null;
-
-	      // Working with Media Time Values
-
-	      this._timeValue = null;
-	      this._timeRangeValue = null;
-	      this._timeMappingValue = null;
-
-	      // Working with Geographic Coordinate Values
-
-	      this._mkCoordinateValue = null;
-	      this._mkCoordinateSpanValue = null;
-
-	      // Working with SceneKit Vector and Matrix Values
-
-	      this._scnVector3Value = null;
-	      this._scnVector4Value = null;
-	      this._scnMatrix4Value = null;
-
-	      // Instance Properties
-
-	      this._edgeInsetsValue = null;
-	    }
-
-	    /**
-	     * Creates a value object that contains the specified SceneKit 4 x 4 matrix.
-	     * @access public
-	     * @param {SCNMatrix4} v - The value for the new object.
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1409680-init
-	     */
-
-	  }, {
-	    key: 'initScnMatrix4',
-	    value: function initScnMatrix4(v) {
-
-	      // Working with Raw Values
-
-	      this._objCType = null;
-
-	      // Working with Pointer and Object Values
-
-	      this._pointerValue = null;
-	      this._nonretainedObjectValue = null;
-
-	      // Working with Range Values
-
-	      this._rangeValue = null;
-
-	      // Working with Foundation Geometry Values
-
-	      this._pointValue = null;
-	      this._sizeValue = null;
-	      this._rectValue = null;
-
-	      // Working with CoreGraphics Geometry Values
-
-	      this._cgPointValue = null;
-	      this._cgVectorValue = null;
-	      this._cgSizeValue = null;
-	      this._cgRectValue = null;
-	      this._cgAffineTransformValue = null;
-
-	      // Working with UIKit Geometry Values
-
-	      this._uiEdgeInsetsValue = null;
-	      this._uiOffsetValue = null;
-
-	      // Working with CoreAnimation Transform Values
-
-	      this._caTransform3DValue = null;
-
-	      // Working with Media Time Values
-
-	      this._timeValue = null;
-	      this._timeRangeValue = null;
-	      this._timeMappingValue = null;
-
-	      // Working with Geographic Coordinate Values
-
-	      this._mkCoordinateValue = null;
-	      this._mkCoordinateSpanValue = null;
-
-	      // Working with SceneKit Vector and Matrix Values
-
-	      this._scnVector3Value = null;
-	      this._scnVector4Value = null;
-	      this._scnMatrix4Value = null;
-
-	      // Instance Properties
-
-	      this._edgeInsetsValue = null;
-	    }
-	    /**
-	     * The three-element Scene Kit vector representation of the value.
-	     * @type {SCNVector3}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1409669-scnvector3value
-	     */
-
-	  }, {
-	    key: 'isEqualTo',
-
-
-	    // Comparing Value Objects
-
-	    /**
-	     * Returns a Boolean value that indicates whether the value object and another value object are equal.
-	     * @access public
-	     * @param {NSValue} value - 
-	     * @returns {boolean} - 
-	     * @desc The NSValue class compares the type and contents of each value object to determine equality.
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1409038-isequal
-	     */
-	    value: function isEqualTo(value) {
-	      return false;
-	    }
-
-	    // Initializers
-
-	    /**
-	     * 
-	     * @access public
-	     * @param {NSCoder} aDecoder - 
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1417896-init
-	     */
-
-	  }, {
-	    key: 'initCoder',
-	    value: function initCoder(aDecoder) {
-
-	      // Working with Raw Values
-
-	      this._objCType = null;
-
-	      // Working with Pointer and Object Values
-
-	      this._pointerValue = null;
-	      this._nonretainedObjectValue = null;
-
-	      // Working with Range Values
-
-	      this._rangeValue = null;
-
-	      // Working with Foundation Geometry Values
-
-	      this._pointValue = null;
-	      this._sizeValue = null;
-	      this._rectValue = null;
-
-	      // Working with CoreGraphics Geometry Values
-
-	      this._cgPointValue = null;
-	      this._cgVectorValue = null;
-	      this._cgSizeValue = null;
-	      this._cgRectValue = null;
-	      this._cgAffineTransformValue = null;
-
-	      // Working with UIKit Geometry Values
-
-	      this._uiEdgeInsetsValue = null;
-	      this._uiOffsetValue = null;
-
-	      // Working with CoreAnimation Transform Values
-
-	      this._caTransform3DValue = null;
-
-	      // Working with Media Time Values
-
-	      this._timeValue = null;
-	      this._timeRangeValue = null;
-	      this._timeMappingValue = null;
-
-	      // Working with Geographic Coordinate Values
-
-	      this._mkCoordinateValue = null;
-	      this._mkCoordinateSpanValue = null;
-
-	      // Working with SceneKit Vector and Matrix Values
-
-	      this._scnVector3Value = null;
-	      this._scnVector4Value = null;
-	      this._scnMatrix4Value = null;
-
-	      // Instance Properties
-
-	      this._edgeInsetsValue = null;
-	    }
-
-	    /**
-	     * 
-	     * @access public
-	     * @param {EdgeInsets} insets - 
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1391181-init
-	     */
-
-	  }, {
-	    key: 'initEdgeInsets',
-	    value: function initEdgeInsets(insets) {
-
-	      // Working with Raw Values
-
-	      this._objCType = null;
-
-	      // Working with Pointer and Object Values
-
-	      this._pointerValue = null;
-	      this._nonretainedObjectValue = null;
-
-	      // Working with Range Values
-
-	      this._rangeValue = null;
-
-	      // Working with Foundation Geometry Values
-
-	      this._pointValue = null;
-	      this._sizeValue = null;
-	      this._rectValue = null;
-
-	      // Working with CoreGraphics Geometry Values
-
-	      this._cgPointValue = null;
-	      this._cgVectorValue = null;
-	      this._cgSizeValue = null;
-	      this._cgRectValue = null;
-	      this._cgAffineTransformValue = null;
-
-	      // Working with UIKit Geometry Values
-
-	      this._uiEdgeInsetsValue = null;
-	      this._uiOffsetValue = null;
-
-	      // Working with CoreAnimation Transform Values
-
-	      this._caTransform3DValue = null;
-
-	      // Working with Media Time Values
-
-	      this._timeValue = null;
-	      this._timeRangeValue = null;
-	      this._timeMappingValue = null;
-
-	      // Working with Geographic Coordinate Values
-
-	      this._mkCoordinateValue = null;
-	      this._mkCoordinateSpanValue = null;
-
-	      // Working with SceneKit Vector and Matrix Values
-
-	      this._scnVector3Value = null;
-	      this._scnVector4Value = null;
-	      this._scnMatrix4Value = null;
-
-	      // Instance Properties
-
-	      this._edgeInsetsValue = null;
-	    }
-
-	    // Instance Properties
-	    /**
-	     * 
-	     * @type {EdgeInsets}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1391123-edgeinsetsvalue
-	     */
-
-	  }, {
-	    key: 'objCType',
-	    get: function get() {
-	      return this._objCType;
-	    }
-	  }, {
-	    key: 'pointerValue',
-	    get: function get() {
-	      return this._pointerValue;
-	    }
-	    /**
-	     * The value as a non-retained pointer to an object.
-	     * @type {?Object}
-	     * @desc If the value was not created to hold a pointer-sized data item, the result is undefined.
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1412287-nonretainedobjectvalue
-	     */
-
-	  }, {
-	    key: 'nonretainedObjectValue',
-	    get: function get() {
-	      return this._nonretainedObjectValue;
-	    }
-
-	    // Working with Range Values
-	    /**
-	     * The Foundation range structure representation of the value.
-	     * @type {NSRange}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1413902-rangevalue
-	     */
-
-	  }, {
-	    key: 'rangeValue',
-	    get: function get() {
-	      return this._rangeValue;
-	    }
-
-	    // Working with Foundation Geometry Values
-	    /**
-	     * The Foundation point structure representation of the value.
-	     * @type {CGPoint}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1391255-pointvalue
-	     */
-
-	  }, {
-	    key: 'pointValue',
-	    get: function get() {
-	      return this._pointValue;
-	    }
-	    /**
-	     * The Foundation size structure representation of the value.
-	     * @type {CGSize}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1391301-sizevalue
-	     */
-
-	  }, {
-	    key: 'sizeValue',
-	    get: function get() {
-	      return this._sizeValue;
-	    }
-	    /**
-	     * The Foundation rectangle structure representation of the value.
-	     * @type {CGRect}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1391171-rectvalue
-	     */
-
-	  }, {
-	    key: 'rectValue',
-	    get: function get() {
-	      return this._rectValue;
-	    }
-	  }, {
-	    key: 'cgPointValue',
-	    get: function get() {
-	      return this._cgPointValue;
-	    }
-	    /**
-	     * Returns the CoreGraphics vector structure representation of the value.
-	     * @type {CGVector}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1624486-cgvectorvalue
-	     */
-
-	  }, {
-	    key: 'cgVectorValue',
-	    get: function get() {
-	      return this._cgVectorValue;
-	    }
-	    /**
-	     * Returns the CoreGraphics size structure representation of the value.
-	     * @type {CGSize}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1624489-cgsizevalue
-	     */
-
-	  }, {
-	    key: 'cgSizeValue',
-	    get: function get() {
-	      return this._cgSizeValue;
-	    }
-	    /**
-	     * Returns the CoreGraphics rectangle structure representation of the value.
-	     * @type {CGRect}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1624506-cgrectvalue
-	     */
-
-	  }, {
-	    key: 'cgRectValue',
-	    get: function get() {
-	      return this._cgRectValue;
-	    }
-	    /**
-	     * Returns the CoreGraphics affine transform representation of the value.
-	     * @type {CGAffineTransform}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1624512-cgaffinetransformvalue
-	     */
-
-	  }, {
-	    key: 'cgAffineTransformValue',
-	    get: function get() {
-	      return this._cgAffineTransformValue;
-	    }
-	  }, {
-	    key: 'uiEdgeInsetsValue',
-	    get: function get() {
-	      return this._uiEdgeInsetsValue;
-	    }
-	    /**
-	     * Returns the UIKit offset structure representation of the value.
-	     * @type {UIOffset}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1624526-uioffsetvalue
-	     */
-
-	  }, {
-	    key: 'uiOffsetValue',
-	    get: function get() {
-	      return this._uiOffsetValue;
-	    }
-	  }, {
-	    key: 'caTransform3DValue',
-	    get: function get() {
-	      return this._caTransform3DValue;
-	    }
-
-	    // Working with Media Time Values
-	    /**
-	     * The CoreMedia time structure representation of the value.
-	     * @type {CMTime}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1388151-timevalue
-	     */
-
-	  }, {
-	    key: 'timeValue',
-	    get: function get() {
-	      return this._timeValue;
-	    }
-	    /**
-	     * The CoreMedia time range structure representation of the value.
-	     * @type {CMTimeRange}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1385930-timerangevalue
-	     */
-
-	  }, {
-	    key: 'timeRangeValue',
-	    get: function get() {
-	      return this._timeRangeValue;
-	    }
-	    /**
-	     * The CoreMedia time mapping structure representation of the value.
-	     * @type {CMTimeMapping}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1387277-timemappingvalue
-	     */
-
-	  }, {
-	    key: 'timeMappingValue',
-	    get: function get() {
-	      return this._timeMappingValue;
-	    }
-	  }, {
-	    key: 'mkCoordinateValue',
-	    get: function get() {
-	      return this._mkCoordinateValue;
-	    }
-	    /**
-	     * The MapKit coordinate span structure representation of the value.
-	     * @type {MKCoordinateSpan}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1452516-mkcoordinatespanvalue
-	     */
-
-	  }, {
-	    key: 'mkCoordinateSpanValue',
-	    get: function get() {
-	      return this._mkCoordinateSpanValue;
-	    }
-	  }, {
-	    key: 'scnVector3Value',
-	    get: function get() {
-	      return this._scnVector3Value;
-	    }
-	    /**
-	     * The four-element Scene Kit vector representation of the value.
-	     * @type {SCNVector4}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1409725-scnvector4value
-	     */
-
-	  }, {
-	    key: 'scnVector4Value',
-	    get: function get() {
-	      return this._scnVector4Value;
-	    }
-	    /**
-	     * The Scene Kit 4 x 4 matrix representation of the value.
-	     * @type {SCNMatrix4}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/foundation/nsvalue/1409684-scnmatrix4value
-	     */
-
-	  }, {
-	    key: 'scnMatrix4Value',
-	    get: function get() {
-	      return this._scnMatrix4Value;
-	    }
-	  }, {
-	    key: 'edgeInsetsValue',
-	    get: function get() {
-	      return this._edgeInsetsValue;
+	    value: function initWithCoder(coder) {
+	      return _SKColor2.default.initWithCoder(coder);
 	    }
 	  }]);
 
-	  return NSValue;
+	  return NSColor;
 	}(_NSObject3.default);
 
-	exports.default = NSValue;
+	exports.default = NSColor;
 
 /***/ },
-/* 13 */
+/* 2 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -4450,15 +1217,25 @@ module.exports =
 	  value: true
 	});
 
+	var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; };
+
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _CGPoint = __webpack_require__(5);
+	var _CGPoint = __webpack_require__(3);
 
 	var _CGPoint2 = _interopRequireDefault(_CGPoint);
 
-	var _CGRect = __webpack_require__(6);
+	var _CGRect = __webpack_require__(4);
 
 	var _CGRect2 = _interopRequireDefault(_CGRect);
+
+	var _Buffer2 = __webpack_require__(6);
+
+	var _Buffer3 = _interopRequireDefault(_Buffer2);
+
+	var _ClassList2 = __webpack_require__(7);
+
+	var _ClassList3 = _interopRequireDefault(_ClassList2);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4531,6 +1308,11 @@ module.exports =
 	      * @see https://developer.apple.com/reference/objectivec/nsobject/1418641-init
 	     */
 
+	  }, {
+	    key: '_propTypes',
+	    get: function get() {
+	      return {};
+	    }
 	  }]);
 
 	  function NSObject() {
@@ -4563,7 +1345,6 @@ module.exports =
 	    this.scriptingProperties = null;
 
 	    this._classCode = 0;
-	    this._className = '';
 
 	    // Instance Properties
 
@@ -8254,6 +5035,7 @@ module.exports =
 	    get: function get() {
 	      return this._classCode;
 	    }
+
 	    /**
 	     * A string containing the name of the class.
 	     * @type {string}
@@ -8264,8 +5046,16 @@ module.exports =
 	  }, {
 	    key: 'className',
 	    get: function get() {
-	      return this._className;
+	      return this.constructor.name;
 	    }
+
+	    /**
+	     * A string containing the name of the class.
+	     * @type {string}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/objectivec/nsobject/1411337-classname
+	     */
+
 	  }, {
 	    key: 'hashValue',
 	    get: function get() {
@@ -8703,7 +5493,267 @@ module.exports =
 	      return null;
 	    }
 	  }, {
+	    key: 'initWithCoder',
+	    value: function initWithCoder(coder) {
+	      console.log('initWithCoder: ' + this.className);
+	      var propTypes = this._propTypes;
+
+	      // DEBUG: check if all property names are registered
+	      var _iteratorNormalCompletion = true;
+	      var _didIteratorError = false;
+	      var _iteratorError = undefined;
+
+	      try {
+	        for (var _iterator = Object.keys(coder._refObj)[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+	          var key = _step.value;
+
+	          if (key.charAt(0) !== '$' && typeof propTypes[key] === 'undefined') {
+	            throw new Error(this.className + ': property ' + key + ' not registered');
+	          }
+	        }
+	      } catch (err) {
+	        _didIteratorError = true;
+	        _iteratorError = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion && _iterator.return) {
+	            _iterator.return();
+	          }
+	        } finally {
+	          if (_didIteratorError) {
+	            throw _iteratorError;
+	          }
+	        }
+	      }
+
+	      var props = this._loadProperties(coder);
+	      var propNames = props.names;
+	      var propValues = props.values;
+
+	      var instance = null;
+	      if (typeof propTypes.$constructor === 'function') {
+	        instance = propTypes.$constructor(propNames, propValues, coder);
+	      } else {
+	        instance = new this();
+	      }
+
+	      this._setProperties(instance, propNames, propValues, coder);
+
+	      return instance;
+	    }
+
+	    /**
+	     * @access private
+	     * @param {NSCoder} coder -
+	     * @returns {Object} -
+	     */
+
+	  }, {
+	    key: '_loadProperties',
+	    value: function _loadProperties(coder) {
+	      var propTypes = this._propTypes;
+	      var propNames = {};
+	      var propValues = {};
+
+	      var _iteratorNormalCompletion2 = true;
+	      var _didIteratorError2 = false;
+	      var _iteratorError2 = undefined;
+
+	      try {
+	        for (var _iterator2 = Object.keys(propTypes)[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+	          var key = _step2.value;
+
+	          console.log('key: ' + key);
+	          if (!coder.containsValueForKey(key)) {
+	            console.log('!coder.containsValueForKey ' + key);
+	            continue;
+	          }
+	          var def = propTypes[key];
+	          var type = '';
+	          var propName = key;
+	          if (typeof def === 'string') {
+	            type = def;
+	          } else if (Array.isArray(def)) {
+	            type = def[0];
+	            if (def.length >= 2) {
+	              propName = def[1];
+	            }
+	          }
+
+	          console.log('type: ' + type + ', propName: ' + propName);
+	          var value = null;
+	          switch (type) {
+	            case 'boolean':
+	              value = coder.decodeBoolForKey(key);
+	              break;
+	            case 'bytes':
+	              value = coder.decodeBytesForKeyReturnedLength(key, null);
+	              break;
+	            case 'double':
+	              value = coder.decodeDoubleForKey(key);
+	              break;
+	            case 'float':
+	              value = coder.decodeFloatForKey(key);
+	              break;
+	            case 'integer':
+	              value = coder.decodeCIntForKey(key);
+	              break;
+	            case 'int32':
+	              value = coder.decodeInt32ForKey(key);
+	              break;
+	            case 'int64':
+	              value = coder.decodeInt64ForKey(key);
+	              break;
+	            case 'point':
+	              value = coder.decodePointForKey(key);
+	              break;
+	            case 'rect':
+	              value = coder.decodeRectForKey(key);
+	              break;
+	            case 'size':
+	              value = coder.decodeSizeForKey(key);
+	              break;
+	            case 'plist':
+	              value = coder.decodePropertyListForKey(key);
+	              break;
+	            case 'string':
+	              value = coder.decodeObjectForKey(key);
+	              if (typeof value !== 'string') {
+	                throw new Error(key + ': value is not String type');
+	              }
+	              break;
+	            default:
+	              {
+	                var classObj = _ClassList3.default.get(type);
+	                if (typeof classObj === 'undefined') {
+	                  throw new Error('unknown class name: ' + type);
+	                }
+	                if (coder._refObj[key] instanceof _Buffer3.default) {
+	                  value = coder.decodeObjectOfTypeForKey(classObj, key);
+	                  if (!(value instanceof classObj)) {
+	                    throw new Error(key + ': value is not an instance of ' + type);
+	                  }
+	                } else {
+	                  value = coder.decodeObjectForKey(key);
+	                  if (value instanceof Promise) {
+	                    // wait for loading
+	                  } else if (!(value instanceof classObj)) {
+	                    var exception = ['NSData', 'NSMutableData', // => Buffer
+	                    'NSArray', 'NSMutableArray', // => Array
+	                    'NSDictionary', 'NSMutableDictionary', // => Object
+	                    'NSColor' // => SKColor
+	                    ];
+	                    if (exception.indexOf(classObj.className) < 0) {
+	                      throw new Error(key + ': value is not an instance of ' + type);
+	                    }
+	                  }
+	                }
+	              }
+	          }
+	          if (Array.isArray(value)) {
+	            console.log('value: Array[' + value.length + ']');
+	          } else if ((typeof value === 'undefined' ? 'undefined' : _typeof(value)) === 'symbol') {
+	            console.log('value: Symbol()');
+	          } else {
+	            console.log('value: ' + value);
+	          }
+
+	          propValues[key] = value;
+	          propNames[key] = propName;
+	        }
+	      } catch (err) {
+	        _didIteratorError2 = true;
+	        _iteratorError2 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion2 && _iterator2.return) {
+	            _iterator2.return();
+	          }
+	        } finally {
+	          if (_didIteratorError2) {
+	            throw _iteratorError2;
+	          }
+	        }
+	      }
+
+	      return { names: propNames, values: propValues };
+	    }
+
+	    /**
+	     * @access private
+	     * @param {Object} instance -
+	     * @param {string[]} propNames -
+	     * @param {Object[]} propValues -
+	     * @param {NSCoder} coder -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_setProperties',
+	    value: function _setProperties(instance, propNames, propValues, coder) {
+	      var _iteratorNormalCompletion3 = true;
+	      var _didIteratorError3 = false;
+	      var _iteratorError3 = undefined;
+
+	      try {
+	        for (var _iterator3 = Object.keys(propValues)[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+	          var key = _step3.value;
+
+	          this._setProperty(instance, propNames[key], propValues[key], key, coder);
+	        }
+	      } catch (err) {
+	        _didIteratorError3 = true;
+	        _iteratorError3 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion3 && _iterator3.return) {
+	            _iterator3.return();
+	          }
+	        } finally {
+	          if (_didIteratorError3) {
+	            throw _iteratorError3;
+	          }
+	        }
+	      }
+	    }
+
+	    /**
+	     * @access private
+	     * @param {Object} instance -
+	     * @param {string[]} propName -
+	     * @param {Object[]} propValue -
+	     * @param {string} key -
+	     * @param {NSCoder} coder -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_setProperty',
+	    value: function _setProperty(instance, propName, propValue, key, coder) {
+	      var _this = this;
+
+	      if (propValue instanceof Promise) {
+	        propValue.then(function (loadedValue) {
+	          _this._setProperty(instance, propName, loadedValue, key, coder);
+	        });
+	      } else if (typeof propName === 'function') {
+	        propName(instance, propValue, key, coder);
+	      } else if (propName !== null) {
+	        instance[propName] = propValue;
+	      }
+	    }
+	  }, {
+	    key: 'className',
+	    get: function get() {
+	      return this.prototype.constructor.name;
+	    }
+	  }, {
 	    key: 'accessInstanceVariablesDirectly',
+	    get: function get() {
+	      return true;
+	    }
+	  }, {
+	    key: 'supportsSecureCoding',
 	    get: function get() {
 	      return true;
 	    }
@@ -8715,7 +5765,7760 @@ module.exports =
 	exports.default = NSObject;
 
 /***/ },
+/* 3 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * A structure that contains a point in a two-dimensional coordinate system.
+	 * @access public
+	 * @see https://developer.apple.com/reference/coregraphics/cgpoint
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var CGPoint = function () {
+	  // Creating Point Values
+
+	  /**
+	   * Creates a point with coordinates specified as integer values.   
+	   * @access public
+	   * @constructor
+	   * @param {number} x - 
+	   * @param {number} y - 
+	   * @see https://developer.apple.com/reference/coregraphics/cgpoint/1455965-init
+	   */
+	  function CGPoint(x, y) {
+	    _classCallCheck(this, CGPoint);
+
+	    // Geometric Properties
+	    this.x = x;
+	    this.y = y;
+	  }
+
+	  // Special Values
+
+	  /**
+	   * The point with location (0,0).
+	   * @type {CGPoint}
+	   * @desc 
+	   * @see https://developer.apple.com/reference/coregraphics/cgpoint/1454433-zero
+	   */
+
+
+	  _createClass(CGPoint, [{
+	    key: 'applying',
+
+
+	    // Geometric Properties
+
+	    // Transforming Points
+
+	    /**
+	     * Returns the point resulting from an affine transformation of an existing point.
+	     * @access public
+	     * @param {CGAffineTransform} t - The affine transform to apply. 
+	     * @returns {CGPoint} - 
+	     * @see https://developer.apple.com/reference/coregraphics/cgpoint/1454251-applying
+	     */
+	    value: function applying(t) {
+	      return null;
+	    }
+
+	    // Alternate Representations
+
+	    /**
+	     * Creates a point from a canonical dictionary representation.
+	     * @access public
+	     * @param {Map} dict - A dictionary containing x and y values for the point to create, in the format used by the dictionaryRepresentation property.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/coregraphics/cgpoint/2427118-init
+	     */
+
+	  }, {
+	    key: 'equalTo',
+
+
+	    // Comparing Points
+
+	    /**
+	     * Returns whether two points are equal. 
+	     * @access public
+	     * @param {CGPoint} point2 - 
+	     * @returns {boolean} - 
+	     * @see https://developer.apple.com/reference/coregraphics/cgpoint/1456179-equalto
+	     */
+	    value: function equalTo(point2) {
+	      var epsilon = 0.00001;
+	      return Math.abs(this.x - point2.x) < epsilon && Math.abs(this.y - point2.y) < epsilon;
+	    }
+	  }, {
+	    key: 'copy',
+	    value: function copy() {
+	      return new CGPoint(this.x, this.y);
+	    }
+	  }, {
+	    key: 'dictionaryRepresentation',
+
+
+	    /**
+	     * Returns a dictionary representation of the specified point.
+	     * @type {Map}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/coregraphics/cgpoint/1455382-dictionaryrepresentation
+	     */
+	    get: function get() {
+	      var map = new Map();
+	      map.set('x', this.x);
+	      map.set('y', this.y);
+	      return map;
+	    }
+
+	    /**
+	     * A textual representation of the point's coordinate values. 
+	     * @type {string}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/coregraphics/cgpoint/1645825-debugdescription
+	     */
+
+	  }, {
+	    key: 'debugDescription',
+	    get: function get() {
+	      return '{x: ' + this.x + ', y: ' + this.y + '}';
+	    }
+
+	    /**
+	     * A representation of the point's structure and display style for use in debugging.
+	     * @type {Mirror}
+	     * @desc Mirrors are used by playgrounds and the debugger.
+	     * @see https://developer.apple.com/reference/coregraphics/cgpoint/1645834-custommirror
+	     */
+
+	  }, {
+	    key: 'customMirror',
+	    get: function get() {
+	      return null;
+	    }
+
+	    /**
+	     * A representation of the point for use in Playgrounds.
+	     * @type {PlaygroundQuickLook}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/coregraphics/cgpoint/1645835-customplaygroundquicklook
+	     */
+
+	  }, {
+	    key: 'customPlaygroundQuickLook',
+	    get: function get() {
+	      return null;
+	    }
+	  }], [{
+	    key: 'pointWithDictionaryRepresentation',
+	    value: function pointWithDictionaryRepresentation(dict) {
+	      return new CGPoint(dict.get('x'), dict.get('y'));
+	    }
+	  }, {
+	    key: 'zero',
+	    get: function get() {
+	      return new CGPoint(0, 0);
+	    }
+	  }]);
+
+	  return CGPoint;
+	}();
+
+	exports.default = CGPoint;
+
+/***/ },
+/* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _CGPoint = __webpack_require__(3);
+
+	var _CGPoint2 = _interopRequireDefault(_CGPoint);
+
+	var _CGSize = __webpack_require__(5);
+
+	var _CGSize2 = _interopRequireDefault(_CGSize);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	/**
+	 * A structure that contains the location and dimensions of a rectangle.
+	 * @access public
+	 * @see https://developer.apple.com/reference/coregraphics/cgrect
+	 */
+	var CGRect = function () {
+	  // Creating Rectangle Values
+
+	  /**
+	   * Creates a rectangle with the specified origin and size.
+	   * @access public
+	   * @constructor
+	   * @param {CGPoint} origin - 
+	   * @param {CGSize} size - 
+	   * @see https://developer.apple.com/reference/coregraphics/cgrect/1454856-init
+	   */
+	  function CGRect(origin, size) {
+	    _classCallCheck(this, CGRect);
+
+	    // Basic Geometric Properties
+	    this.origin = origin.copy();
+	    this.size = size.copy();
+
+	    // Calculated Geometric Properties
+	    /*
+	    this._height = size.height
+	    this._width = size.width
+	    this._minX = 0
+	    this._midX = 0
+	    this._maxX = 0
+	    this._minY = 0
+	    this._midY = 0
+	    this._maxY = 0
+	     // Creating Derived Rectangles
+	     this._standardized = null
+	    this._integral = null
+	     // Checking Characteristics
+	     this._isEmpty = false
+	    this._isInfinite = false
+	    this._isNull = false
+	     // Alternate Representations
+	     this._dictionaryRepresentation = null
+	    this._debugDescription = ''
+	    this._customMirror = null
+	    this._customPlaygroundQuickLook = null
+	    */
+	  }
+
+	  // Special Values
+
+	  /**
+	   * The rectangle whose origin and size are both zero.
+	   * @type {CGRect}
+	   * @desc The zero rectangle is equivalent to one created by calling CGRect(x: 0, y: 0, width: 0, height: 0).
+	   * @see https://developer.apple.com/reference/coregraphics/cgrect/1455437-zero
+	   */
+
+
+	  _createClass(CGRect, [{
+	    key: 'applying',
+
+
+	    // Creating Derived Rectangles
+
+	    /**
+	     * Applies an affine transform to a rectangle.
+	     * @access public
+	     * @param {CGAffineTransform} t - The affine transform to apply to the rect parameter.
+	     * @returns {CGRect} - 
+	     * @desc Because affine transforms do not preserve rectangles in general, this function returns the smallest rectangle that contains the transformed corner points of the rect parameter. If the affine transform t consists solely of scaling and translation operations, then the returned rectangle coincides with the rectangle constructed from the four transformed corners.
+	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1455875-applying
+	     */
+	    value: function applying(t) {
+	      return null;
+	    }
+
+	    /**
+	     * Returns a rectangle that is smaller or larger than the source rectangle, with the same center point.
+	     * @access public
+	     * @param {number} dx - The x-coordinate value to use for adjusting the source rectangle. To create an inset rectangle, specify a positive value. To create a larger, encompassing rectangle, specify a negative value.
+	     * @param {number} dy - The y-coordinate value to use for adjusting the source rectangle. To create an inset rectangle, specify a positive value. To create a larger, encompassing rectangle, specify a negative value.
+	     * @returns {CGRect} - 
+	     * @desc The rectangle is standardized and then the inset parameters are applied. If the resulting rectangle would have a negative height or width, a null rectangle is returned.
+	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1454218-insetby
+	     */
+
+	  }, {
+	    key: 'insetBy',
+	    value: function insetBy(dx, dy) {
+	      var newX = this.minX + dx;
+	      var newY = this.minY + dy;
+	      var newWidth = this.size.width - dx * 2;
+	      var newHeight = this.size.height - dy * 2;
+	      return new CGRect(new _CGPoint2.default(newX, newY), new _CGSize2.default(newWidth, newHeight));
+	    }
+
+	    /**
+	     * Returns a rectangle with an origin that is offset from that of the source rectangle.
+	     * @access public
+	     * @param {number} dx - The offset value for the x-coordinate.
+	     * @param {number} dy - The offset value for the  y-coordinate.
+	     * @returns {CGRect} - 
+	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1454841-offsetby
+	     */
+
+	  }, {
+	    key: 'offsetBy',
+	    value: function offsetBy(dx, dy) {
+	      return new CGRect(new _CGPoint2.default(this.origin.x + dx, this.origin.y + dy), this.size);
+	    }
+
+	    /**
+	     * Returns the smallest rectangle that contains the two source rectangles.
+	     * @access public
+	     * @param {CGRect} r2 - Another rectangle to be combined with this rectangle.
+	     * @returns {CGRect} - 
+	     * @desc Both rectangles are standardized prior to calculating the union. If either of the rectangles is a null rectangle, a copy of the other rectangle is returned (resulting in a null rectangle if both rectangles are null). Otherwise a rectangle that completely contains the source rectangles is returned.
+	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1455837-union
+	     */
+
+	  }, {
+	    key: 'union',
+	    value: function union(r2) {
+	      return null;
+	    }
+
+	    /**
+	     * Returns the intersection of two rectangles.
+	     * @access public
+	     * @param {CGRect} r2 - Another rectangle to intersect with this rectangle.
+	     * @returns {CGRect} - 
+	     * @desc Both rectangles are standardized prior to calculating the intersection.
+	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1455346-intersection
+	     */
+
+	  }, {
+	    key: 'intersection',
+	    value: function intersection(r2) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates two rectangles by dividing the original rectangle. 
+	     * @access public
+	     * @param {number} atDistance - A distance from the rectangle side specified in the fromEdge parameter, defining the line along which to divide the rectangle.
+	     * @param {CGRectEdge} fromEdge - The side of the rectangle from which to measure the atDistance parameter, defining the line along which to divide the rectangle.
+	     * @returns {{slice: CGRect, remainder: CGRect}} - 
+	     * @desc Together the fromEdge and atDistance parameters define a line (parallel to the specified edge of the rectangle and at the specified distance from that edge) that divides the rectangle into two component rectangles.
+	     * @see https://developer.apple.com/reference/coregraphics/cgrect/2299988-divided
+	     */
+
+	  }, {
+	    key: 'dividedFrom',
+	    value: function dividedFrom(atDistance, fromEdge) {
+	      return null;
+	    }
+	    /**
+	     * Returns a rectangle with a positive width and height.
+	     * @type {CGRect}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1456432-standardized
+	     */
+
+	  }, {
+	    key: 'intersects',
+
+
+	    // Checking Characteristics
+
+	    /**
+	     * Returns whether two rectangles intersect.
+	     * @access public
+	     * @param {CGRect} rect2 - The rectangle to test for intersection with this rectangle.
+	     * @returns {boolean} - 
+	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1454747-intersects
+	     */
+	    value: function intersects(rect2) {
+	      return false;
+	    }
+
+	    /**
+	     * Returns whether a rectangle contains a specified point.
+	     * @access public
+	     * @param {CGPoint} point - The point to examine. 
+	     * @returns {boolean} - 
+	     * @desc A point is considered inside the rectangle if its coordinates lie inside the rectangle or on the minimum X or minimum Y edge.
+	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1456316-contains
+	     */
+
+	  }, {
+	    key: 'contains',
+	    value: function contains(point) {
+	      return point.x >= this.minX && point.x <= this.maxX && point.y >= this.minY && point.y <= this.maxY;
+	    }
+
+	    /**
+	     * Returns whether a rectangle has zero width or height, or is a null rectangle.
+	     * @type {boolean}
+	     * @desc An empty rectangle is either a null rectangle or a valid rectangle with zero height or width.
+	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1454917-isempty
+	     */
+
+	  }, {
+	    key: 'initDictionaryRepresentation',
+
+
+	    // Alternate Representations
+
+	    /**
+	     * Creates a rectangle from a canonical dictionary representation. 
+	     * @access public
+	     * @param {Map} dict - A dictionary containing x, y, width, and height values for the rectangle to create, in the format used by the dictionaryRepresentation property.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/coregraphics/cgrect/2427139-init
+	     */
+	    value: function initDictionaryRepresentation(dict) {
+	      // Basic Geometric Properties
+	      this.origin = dict.get('origin');
+	      this.size = dict.get('size');
+	    }
+
+	    /**
+	     * Returns a dictionary representation of the provided rectangle.
+	     * @type {Map}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1455760-dictionaryrepresentation
+	     */
+
+	  }, {
+	    key: 'equalTo',
+
+
+	    // Comparing Rectangles
+
+	    /**
+	     * Returns whether two rectangles are equal in size and position.
+	     * @access public
+	     * @param {CGRect} rect2 - The rectangle to compare this rectangle with.
+	     * @returns {boolean} - 
+	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1456516-equalto
+	     */
+	    value: function equalTo(rect2) {
+	      if (this.origin === null || rect2.origin === null) {
+	        return false;
+	      }
+	      if (this.size === null || rect2.size === null) {
+	        return false;
+	      }
+
+	      return this.origin.equalTo(rect2.origin) && this.size.equalTo(rect2.size);
+	    }
+	  }, {
+	    key: 'copy',
+	    value: function copy() {
+	      return new CGRect(this.origin, this.size);
+	    }
+
+	    /**
+	     * @access public
+	     * @param {number} x -
+	     * @param {number} y -
+	     * @param {number} width -
+	     * @param {number} height -
+	     * @returns {CGRect} -
+	     */
+
+	  }, {
+	    key: 'height',
+
+
+	    // Basic Geometric Properties
+
+	    // Calculated Geometric Properties
+	    /**
+	     * Returns the height of a rectangle.
+	     * @type {number}
+	     * @desc Regardless of whether the height is stored in the CGRect data structure as a positive or negative number, this function returns the height as if the rectangle were standardized. That is, the result is never a negative number.
+	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1455645-height
+	     */
+	    get: function get() {
+	      return this.size.height;
+	    }
+	    /**
+	     * Returns the width of a rectangle.
+	     * @type {number}
+	     * @desc Regardless of whether the width is stored in the CGRect data structure as a positive or negative number, this function returns the width as if the rectangle were standardized.  That is, the result is never a negative number.
+	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1454758-width
+	     */
+
+	  }, {
+	    key: 'width',
+	    get: function get() {
+	      return this.size.width;
+	    }
+
+	    /**
+	     * Returns the smallest value for the x-coordinate of the rectangle.
+	     * @type {number}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1455948-minx
+	     */
+
+	  }, {
+	    key: 'minX',
+	    get: function get() {
+	      if (this.size.width < 0) {
+	        return this.origin.x + this.size.width;
+	      }
+	      return this.origin.x;
+	    }
+
+	    /**
+	     * Returns the x- coordinate that establishes the center of a rectangle.
+	     * @type {number}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1456175-midx
+	     */
+
+	  }, {
+	    key: 'midX',
+	    get: function get() {
+	      return this.origin.x + this.size.width * 0.5;
+	    }
+
+	    /**
+	     * Returns the largest value of the x-coordinate for the rectangle.
+	     * @type {number}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1454334-maxx
+	     */
+
+	  }, {
+	    key: 'maxX',
+	    get: function get() {
+	      if (this.size.width > 0) {
+	        return this.origin.x + this.size.width;
+	      }
+	      return this.origin.x;
+	    }
+
+	    /**
+	     * Returns the smallest value for the y-coordinate of the rectangle.
+	     * @type {number}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1454832-miny
+	     */
+
+	  }, {
+	    key: 'minY',
+	    get: function get() {
+	      if (this.size.height < 0) {
+	        return this.origin.y + this.size.height;
+	      }
+	      return this.origin.y;
+	    }
+
+	    /**
+	     * Returns the y-coordinate that establishes the center of the rectangle.
+	     * @type {number}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1456550-midy
+	     */
+
+	  }, {
+	    key: 'midY',
+	    get: function get() {
+	      return this.origin.y + this.size.height * 0.5;
+	    }
+
+	    /**
+	     * Returns the largest value for the y-coordinate of the rectangle.
+	     * @type {number}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1454060-maxy
+	     */
+
+	  }, {
+	    key: 'maxY',
+	    get: function get() {
+	      if (this.size.height > 0) {
+	        return this.origin.y + this.size.height;
+	      }
+	      return this.origin.y;
+	    }
+	  }, {
+	    key: 'standardized',
+	    get: function get() {
+	      return this._standardized;
+	    }
+	    /**
+	     * Returns the smallest rectangle that results from converting the source rectangle values to integers.
+	     * @type {CGRect}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1456348-integral
+	     */
+
+	  }, {
+	    key: 'integral',
+	    get: function get() {
+	      return this._integral;
+	    }
+	  }, {
+	    key: 'isEmpty',
+	    get: function get() {
+	      return this.isNull || this.size.height === 0 || this.size.width === 0;
+	    }
+
+	    /**
+	     * Returns whether a rectangle is infinite.
+	     * @type {boolean}
+	     * @desc An infinite rectangle is one that has no defined bounds. Infinite rectangles can be created as output from a tiling filter. For example, the Core Image framework perspective tile filter creates an image whose extent is described by an infinite rectangle.
+	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1455008-isinfinite
+	     */
+
+	  }, {
+	    key: 'isInfinite',
+	    get: function get() {
+	      return this.size.width === Infinity && this.size.height === Infinity;
+	    }
+
+	    /**
+	     * Returns whether the rectangle is equal to the null rectangle.
+	     * @type {boolean}
+	     * @desc A null rectangle is the equivalent of an empty set. For example, the result of intersecting two disjoint rectangles is a null rectangle. A null rectangle cannot be drawn and interacts with other rectangles in special ways.
+	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1455471-isnull
+	     */
+
+	  }, {
+	    key: 'isNull',
+	    get: function get() {
+	      return this.size === null;
+	    }
+	  }, {
+	    key: 'dictionaryRepresentation',
+	    get: function get() {
+	      var map = new Map();
+	      map.set('origin', this.origin);
+	      map.set('size', this.size);
+	      return map;
+	    }
+
+	    /**
+	     * 
+	     * @type {string}
+	     * @desc A textual representation of the rectangle's origin and size values. 
+	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1645823-debugdescription
+	     */
+
+	  }, {
+	    key: 'debugDescription',
+	    get: function get() {
+	      if (this.size === null) {
+	        return '{null}';
+	      }
+	      var origin = this.origin ? this.origin.debugDescription() : '{null}';
+	      var size = this.size ? this.size.debugDescription() : '{null}';
+
+	      return '{origin:' + origin + ', size:' + size + '}';
+	    }
+
+	    /**
+	     * A representation of the rectangle's structure and display style for use in debugging. 
+	     * @type {Mirror}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1645833-custommirror
+	     */
+
+	  }, {
+	    key: 'customMirror',
+	    get: function get() {
+	      return null;
+	    }
+
+	    /**
+	     * A representation of the rectangle for use in Playgrounds. 
+	     * @type {PlaygroundQuickLook}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1645827-customplaygroundquicklook
+	     */
+
+	  }, {
+	    key: 'customPlaygroundQuickLook',
+	    get: function get() {
+	      return null;
+	    }
+	  }], [{
+	    key: 'rectWithXYWidthHeight',
+	    value: function rectWithXYWidthHeight(x, y, width, height) {
+	      var point = new _CGPoint2.default(x, y);
+	      var size = new _CGSize2.default(width, height);
+	      return new CGRect(point, size);
+	    }
+	  }, {
+	    key: 'zero',
+	    get: function get() {
+	      return new CGRect(new _CGPoint2.default(0, 0), new _CGSize2.default(0, 0));
+	    }
+	  }]);
+
+	  return CGRect;
+	}();
+
+	exports.default = CGRect;
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * A structure that contains width and height values.
+	 * @access public
+	 * @see https://developer.apple.com/reference/coregraphics/cgsize
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var CGSize = function () {
+
+	  // Initializers
+
+	  /**
+	   * Creates a size with dimensions specified as floating-point values.    
+	   * @access public
+	   * @constructor
+	   * @param {number} width - 
+	   * @param {number} height - 
+	   * @see https://developer.apple.com/reference/coregraphics/cgsize/1454915-init
+	   */
+	  function CGSize(width, height) {
+	    _classCallCheck(this, CGSize);
+
+	    // Geometric Properties
+	    this.width = width;
+	    this.height = height;
+	  }
+
+	  // Geometric Properties
+
+	  // Special Values
+	  /**
+	   * The size whose width and height are both zero.
+	   * @type {CGSize}
+	   * @desc 
+	   * @see https://developer.apple.com/reference/coregraphics/cgsize/1455512-zero
+	   */
+
+
+	  _createClass(CGSize, [{
+	    key: 'applying',
+
+
+	    // Transforming Sizes
+
+	    /**
+	     * Returns the height and width resulting from a transformation of an existing height and width.
+	     * @access public
+	     * @param {CGAffineTransform} t - The affine transform to apply. 
+	     * @returns {CGSize} - 
+	     * @see https://developer.apple.com/reference/coregraphics/cgsize/1454806-applying
+	     */
+	    value: function applying(t) {
+	      return null;
+	    }
+
+	    // Alternate Representations
+
+	    /**
+	     * Creates a size from a canonical dictionary representation. 
+	     * @access public
+	     * @param {Map} dict - A dictionary containing width and height values for the size to create, in the format used by the dictionaryRepresentation property.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/coregraphics/cgsize/2427155-init
+	     */
+
+	  }, {
+	    key: 'equalTo',
+
+
+	    // Comparing Sizes
+
+	    /**
+	     * Returns whether two sizes are equal. 
+	     * @access public
+	     * @param {CGSize} size2 - 
+	     * @returns {boolean} - 
+	     * @see https://developer.apple.com/reference/coregraphics/cgsize/1455176-equalto
+	     */
+	    value: function equalTo(size2) {
+	      var epsilon = 0.00001;
+	      return Math.abs(this.width - size2.width) < epsilon && Math.abs(this.height - size2.height) < epsilon;
+	    }
+	  }, {
+	    key: 'copy',
+	    value: function copy() {
+	      return new CGSize(this.width, this.height);
+	    }
+	  }, {
+	    key: 'dictionaryRepresentation',
+
+
+	    /**
+	     * Returns a dictionary representation of the specified size.
+	     * @type {Map}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/coregraphics/cgsize/1455274-dictionaryrepresentation
+	     */
+	    get: function get() {
+	      var map = new Map();
+	      map.set('width', this.width);
+	      map.set('height', this.height);
+	      return map;
+	    }
+
+	    /**
+	     * A textual representation of the size's dimensions.  
+	     * @type {string}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/coregraphics/cgsize/1645822-debugdescription
+	     */
+
+	  }, {
+	    key: 'debugDescription',
+	    get: function get() {
+	      return '{width: ' + this.width + ', height: ' + this.height + '}';
+	    }
+
+	    /**
+	     * A representation of the size's structure and display style for use in debugging. 
+	     * @type {Mirror}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/coregraphics/cgsize/1645828-custommirror
+	     */
+
+	  }, {
+	    key: 'customMirror',
+	    get: function get() {
+	      return null;
+	    }
+	    /**
+	     * A representation of the size for use in Playgrounds. 
+	     * @type {PlaygroundQuickLook}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/coregraphics/cgsize/1645830-customplaygroundquicklook
+	     */
+
+	  }, {
+	    key: 'customPlaygroundQuickLook',
+	    get: function get() {
+	      return null;
+	    }
+	  }], [{
+	    key: 'sizeWithDictionaryRepresentation',
+	    value: function sizeWithDictionaryRepresentation(dict) {
+	      return new CGSize(dict.get('width'), dict.get('height'));
+	    }
+	  }, {
+	    key: 'zero',
+	    get: function get() {
+	      return new CGSize(0, 0);
+	    }
+	  }]);
+
+	  return CGSize;
+	}();
+
+	exports.default = CGSize;
+
+/***/ },
+/* 6 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var _supportedEncoding = ['ascii', 'utf8', 'utf16le', 'ucs2', 'base64', 'latin1', 'binary', 'hex'];
+
+	/*global Buffer*/
+	var _Buffer = null;
+	if (typeof Buffer !== 'undefined') {
+	  _Buffer = Buffer;
+	} else {
+	  var _Buffer2 = function () {
+	    function _Buffer2() {
+	      _classCallCheck(this, _Buffer2);
+
+	      this._data = null;
+	    }
+
+	    _createClass(_Buffer2, [{
+	      key: 'readIntBE',
+	      value: function readIntBE(offset, byteLength) {
+	        var noAssert = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+	      }
+	    }, {
+	      key: 'readIntLE',
+	      value: function readIntLE(offset, byteLength) {
+	        var noAssert = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+	      }
+	    }, {
+	      key: 'readInt8',
+	      value: function readInt8(offset) {
+	        var noAssert = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+	        return this.readIntBE(offset, 1, noAssert);
+	      }
+	    }, {
+	      key: 'readInt16BE',
+	      value: function readInt16BE(offset) {
+	        var noAssert = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+	        return this.readIntBE(offset, 2, noAssert);
+	      }
+	    }, {
+	      key: 'readInt16LE',
+	      value: function readInt16LE(offset) {
+	        var noAssert = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+	        return this.readIntLE(offset, 2, noAssert);
+	      }
+	    }, {
+	      key: 'readInt32BE',
+	      value: function readInt32BE(offset) {
+	        var noAssert = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+	        return this.readIntBE(offset, 4, noAssert);
+	      }
+	    }, {
+	      key: 'readInt32LE',
+	      value: function readInt32LE(offset) {
+	        var noAssert = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+	        return this.readIntLE(offset, 4, noAssert);
+	      }
+	    }, {
+	      key: 'readUIntBE',
+	      value: function readUIntBE(offset, byteLength) {
+	        var noAssert = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+	      }
+	    }, {
+	      key: 'readUIntLE',
+	      value: function readUIntLE(offset, byteLength) {
+	        var noAssert = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+	      }
+	    }, {
+	      key: 'readUInt8',
+	      value: function readUInt8(offset) {
+	        var noAssert = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+	        return this.readUIntBE(offset, 1, noAssert);
+	      }
+	    }, {
+	      key: 'readUInt16BE',
+	      value: function readUInt16BE(offset) {
+	        var noAssert = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+	        return this.readUIntBE(offset, 2, noAssert);
+	      }
+	    }, {
+	      key: 'readUInt16LE',
+	      value: function readUInt16LE(offset) {
+	        var noAssert = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+	        return this.readUIntLE(offset, 2, noAssert);
+	      }
+	    }, {
+	      key: 'readUInt32BE',
+	      value: function readUInt32BE(offset) {
+	        var noAssert = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+	        return this.readUIntBE(offset, 4, noAssert);
+	      }
+	    }, {
+	      key: 'readUInt32LE',
+	      value: function readUInt32LE(offset) {
+	        var noAssert = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+	        return this.readUIntLE(offset, 4, noAssert);
+	      }
+	    }, {
+	      key: 'readFloatBE',
+	      value: function readFloatBE(offset) {
+	        var noAssert = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+	      }
+	    }, {
+	      key: 'readFloatLE',
+	      value: function readFloatLE(offset) {
+	        var noAssert = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+	      }
+	    }, {
+	      key: 'readDoubleBE',
+	      value: function readDoubleBE(offset) {
+	        var noAssert = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+	      }
+	    }, {
+	      key: 'readDoubleLE',
+	      value: function readDoubleLE(offset) {
+	        var noAssert = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+	      }
+	    }, {
+	      key: 'slice',
+	      value: function slice(start, end) {
+	        return new _Buffer2(this._data.buffer.slice(start, end));
+	      }
+	    }, {
+	      key: 'toString',
+	      value: function toString(encoding, start, end) {
+	        if (!_Buffer2.isEncoding(encoding)) {
+	          throw new Error('unsupported encoding: ' + encoding);
+	        }
+	      }
+	    }, {
+	      key: 'length',
+	      get: function get() {
+	        return this._data.byteLength;
+	      }
+	    }], [{
+	      key: 'from',
+	      value: function from(array) {
+	        var byteOffset = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 0;
+	        var length = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+
+	        var buf = new _Buffer2();
+	        if (Array.isArray(array)) {
+	          var ab = new ArrayBuffer(array);
+	          buf._data = new DataView(ab.buffer, byteOffset, length);
+	        } else if (array instanceof ArrayBuffer) {
+	          buf._data = new DataView(array, byteOffset, length);
+	        } else if (array.buffer instanceof ArrayBuffer) {
+	          buf._data = new DataView(array.buffer, byteOffset, length);
+	        }
+
+	        if (buf._data === null) {
+	          throw new Error('Buffer.from: unsupported data type: ' + array);
+	        }
+	      }
+	    }, {
+	      key: 'isEncoding',
+	      value: function isEncoding(encoding) {
+	        return _supportedEncoding.indexOf(encoding) >= 0;
+	      }
+	    }]);
+
+	    return _Buffer2;
+	  }();
+
+	  _Buffer = _Buffer2;
+	}
+
+	exports.default = _Buffer;
+
+/***/ },
+/* 7 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var _ClassList = new Map();
+
+	_ClassList.registerClass = function (classObj) {
+	  var className = classObj.className;
+	  var structInitializer = classObj._initWithData;
+	  if (typeof className === 'undefined') {
+	    if (typeof structInitializer === 'undefined') {
+	      // doesn't seem to be an instance of NSObject
+	      return;
+	    }
+	    className = classObj.prototype.constructor.name;
+	  }
+	  _ClassList.set(className, classObj);
+	};
+
+	exports.default = _ClassList;
+
+/***/ },
+/* 8 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
+	var _NSColorSpaceModel = __webpack_require__(9);
+
+	var _NSColorSpaceModel2 = _interopRequireDefault(_NSColorSpaceModel);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	/**
+	 * An object that stores color data and sometimes opacity (that is, alpha value). 
+	 * @access public
+	 * @extends {NSObject}
+	 * @see https://developer.apple.com/reference/uikit/uicolor
+	 */
+	var SKColor = function (_NSObject) {
+	  _inherits(SKColor, _NSObject);
+
+	  _createClass(SKColor, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      return {
+	        $constructor: function $constructor(propNames, propValues) {
+	          if (typeof propValues.NSColorSpace !== 'undefined') {
+	            // initialize for NSColor
+	            var buf = propValues.NSRGB;
+	            var ascii = buf.toString('ascii');
+	            var values = ascii.split(' ');
+	            var space = propValues.NSColorSpace - 1;
+	            switch (space) {
+	              case _NSColorSpaceModel2.default.gray:
+	                break;
+	              case _NSColorSpaceModel2.default.RGB:
+	                {
+	                  var r = parseFloat(values[0]);
+	                  var g = parseFloat(values[1]);
+	                  var b = parseFloat(values[2]);
+	                  var a = 1.0;
+	                  console.log('NSColor -> SKColor: r:' + r + ' g:' + g + ' b:' + b + ' a:' + a);
+	                  return new SKColor(r, g, b, a);
+	                }
+	              case _NSColorSpaceModel2.default.CMYK:
+	                break;
+	              case _NSColorSpaceModel2.default.LAB:
+	                break;
+	              case _NSColorSpaceModel2.default.deviceN:
+	                break;
+	              case _NSColorSpaceModel2.default.indexed:
+	                break;
+	              case _NSColorSpaceModel2.default.patterned:
+	                break;
+	            }
+	            throw new Error('unknown color space: ' + propValues.NSColorSpace);
+	          } else {
+	            // TODO: implement
+	            return new SKColor();
+	          }
+	        },
+	        // for NSColor
+	        NSRGB: ['bytes', null],
+	        NSColorSpace: ['integer', null]
+	      };
+	    }
+
+	    // Initializers
+
+	    /**
+	     * 
+	     * @access public
+	     * @constructor
+	     * @param {number} red - 
+	     * @param {number} green - 
+	     * @param {number} blue - 
+	     * @param {number} alpha - 
+	     * @see https://developer.apple.com/reference/uikit/uicolor/1625015-init
+	     */
+
+	  }]);
+
+	  function SKColor(red, green, blue, alpha) {
+	    _classCallCheck(this, SKColor);
+
+	    /**
+	     * @type {number}
+	     */
+	    var _this = _possibleConstructorReturn(this, (SKColor.__proto__ || Object.getPrototypeOf(SKColor)).call(this));
+
+	    _this.red = red;
+
+	    /**
+	     * @type {number}
+	     */
+	    _this.green = green;
+
+	    /**
+	     * @type {number}
+	     */
+	    _this.blue = blue;
+
+	    /**
+	     * @type {number}
+	     */
+	    _this.alpha = alpha;
+	    return _this;
+	  }
+
+	  // Creating a Color Object with a Predefined Color
+
+	  /**
+	   * A color object in the sRGB color space whose grayscale value is 0.0 and whose alpha value is 1.0.
+	   * @type {SKColor}
+	   * @desc 
+	   * @see https://developer.apple.com/reference/uikit/uicolor/1621929-black
+	   */
+
+
+	  _createClass(SKColor, [{
+	    key: 'withAlphaComponent',
+
+
+	    // Creating a Custom UIColor Object in a Specific Color Space
+
+	    /**
+	     * Initializes and returns a color object using the specified opacity and grayscale values. 
+	     * @access public
+	     * @param {number} white - The grayscale value of the color object. On applications linked for iOS 10 or later, the color is specified in an extended color space, and the input value  is never clamped. On earlier versions of iOS, white values below 0.0 are interpreted as 0.0, and values above 1.0 are interpreted as 1.0.
+	     * @param {number} alpha - The opacity value of the color object, specified as a value from 0.0 to 1.0. Alpha values below 0.0 are interpreted as 0.0, and values above 1.0 are interpreted as 1.0
+	     * @returns {void}
+	     * @desc On applications linked on iOS 10 or later, the input parameters are not clamped. On earlier versions of iOS, values below 0.0 are interpreted as 0.0, and values above 1.0 are interpreted as 1.0.
+	     * @see https://developer.apple.com/reference/uikit/uicolor/1621944-init
+	     */
+	    //init(white, alpha) {
+	    //}
+
+	    // Creating a UIColor Object from another Representation of Color
+
+	    /**
+	     * Creates and returns a color object that has the same color space and component values as the receiver, but has the specified alpha component. 
+	     * @access public
+	     * @param {number} alpha - The opacity value of the new color object, specified as a value from 0.0 to 1.0. Alpha values below 0.0 are interpreted as 0.0, and values above 1.0 are interpreted as 1.0
+	     * @returns {SKColor} - 
+	     * @desc A subclass with explicit opacity components should override this method to return a color with the specified alpha.
+	     * @see https://developer.apple.com/reference/uikit/uicolor/1621922-withalphacomponent
+	     */
+	    value: function withAlphaComponent(alpha) {
+	      return new SKColor(this.red, this.green, this.blue, alpha);
+	    }
+
+	    // Creating a UIColor Object that Draws Using a Pattern
+
+	    /**
+	     * Initializes and returns a color object using the specified Quartz color reference. 
+	     * @access public
+	     * @param {Image} image - The image to use when creating the pattern color. 
+	     * @returns {void}
+	     * @desc You can use pattern colors to set the fill or stroke color just as you would a solid color. During drawing, the image in the pattern color is tiled as necessary to cover the given area. By default, the phase of the returned color is 0, which causes the top-left corner of the image to be aligned with the drawing origin. To change the phase, make the color the current color and then use the setPatternPhase(_:) function to change the phase.
+	     * @see https://developer.apple.com/reference/uikit/uicolor/1621933-init
+	     */
+
+	  }, {
+	    key: 'initPatternImage',
+	    value: function initPatternImage(image) {}
+
+	    // Setting the Graphics Context’s Drawing Color
+
+	    /**
+	     * Sets the color of subsequent stroke and fill operations to the color that the receiver represents. 
+	     * @access public
+	     * @returns {void}
+	     * @desc If you subclass UIColor, you must implement this method in your subclass. Your custom implementation should modify both the stroke and fill color in the current graphics context by setting them both to the color represented by the receiver.
+	     * @see https://developer.apple.com/reference/uikit/uicolor/1621928-set
+	     */
+
+	  }, {
+	    key: 'set',
+	    value: function set() {}
+
+	    /**
+	     * Sets the color of subsequent fill operations to the color that the receiver represents.
+	     * @access public
+	     * @returns {void}
+	     * @desc If you subclass UIColor, you must implement this method in your subclass. Your custom implementation should modify the fill color in the current graphics context by setting it to the color represented by the receiver.
+	     * @see https://developer.apple.com/reference/uikit/uicolor/1621926-setfill
+	     */
+
+	  }, {
+	    key: 'setFill',
+	    value: function setFill() {}
+
+	    /**
+	     * Sets the color of subsequent stroke operations to the color that the receiver represents.
+	     * @access public
+	     * @returns {void}
+	     * @desc If you subclass UIColor, you must implement this method in your subclass. Your custom implementation should modify the stroke color in the current graphics context by setting it to the color represented by the receiver.
+	     * @see https://developer.apple.com/reference/uikit/uicolor/1621948-setstroke
+	     */
+
+	  }, {
+	    key: 'setStroke',
+	    value: function setStroke() {}
+
+	    // Retrieving Color Information
+
+	    /**
+	     * Returns the components that make up the color in the HSB color space.
+	     * @access public
+	     * @returns {Object} -
+	     * @property {number} color.hue - On return, the hue component of the color object. On applications linked for iOS 10 or later, the hue component is specified in an extended range color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
+	     * @property {number} color.saturation - On return, the saturation component of the color object. On applications linked for iOS 10 or later, the saturation component is specified in an extended range color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
+	     * @property {number} color.brightness - On return, the brightness component of the color object. On applications linked for iOS 10 or later, the brightness component is specified in an extended range color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
+	     * @property {number} color.alpha - On return, the opacity component of the color object, specified as a value between 0.0 and 1.0.
+	     * @desc If the color is in a compatible color space, the color is converted into the HSB color space and its components are returned to your application. If the color is not in a compatible color space, the parameters are unchanged.
+	     * @see https://developer.apple.com/reference/uikit/uicolor/1621949-gethue
+	     */
+
+	  }, {
+	    key: 'getHSBA',
+	    value: function getHSBA() {
+	      // TODO: implement
+	      var color = {
+	        hue: 0,
+	        saturation: 0,
+	        brightness: 0,
+	        alpha: 0
+	      };
+	      return color;
+	    }
+
+	    /**
+	     * Returns the components that make up the color in the RGB color space.
+	     * @access public
+	     * @param {number} red -
+	     * @param {number} green -
+	     * @param {number} blue -
+	     * @param {number} alpha -
+	     * @returns {Object} -
+	     * @property {number} color.red - On return, the red component of the color object. On applications linked for iOS 10 or later, the red component is specified in an extended range sRGB color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
+	     * @property {number} color.green - On return, the green component of the color object. On applications linked for iOS 10 or later, the green component is specified in an extended range sRGB color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
+	     * @property {number} color.blue - On return, the blue component of the color object. On applications linked for iOS 10 or later, the blue component is specified in an extended range sRGB color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
+	     * @property {number} color.alpha - On return, the opacity component of the color object, specified as a value between 0.0 and 1.0.
+	     * @desc If the color is in a compatible color space, the color is converted into RGB format and its components are returned to your application. If the color is not in a compatible color space, the parameters are unchanged.
+	     * @see https://developer.apple.com/reference/uikit/uicolor/1621919-getred
+	     */
+
+	  }, {
+	    key: 'getRGBA',
+	    value: function getRGBA(red, green, blue, alpha) {
+	      var color = {
+	        red: this.red,
+	        green: this.green,
+	        blue: this.blue,
+	        alpha: this.alpha
+	      };
+	      return color;
+	    }
+
+	    /**
+	     * Returns the grayscale components of the color.
+	     * @access public
+	     * @param {?UnsafeMutablePointer<CGFloat>} white - On return, the grayscale component of the color object. On applications linked for iOS 10 or later, the grayscale component is specified in an extended range gray color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
+	     * @param {?UnsafeMutablePointer<CGFloat>} alpha - On return, the opacity component of the color object, specified as a value between 0.0 and 1.0.
+	     * @returns {boolean} - 
+	     * @desc If the color is in a compatible color space, the color is converted into grayscale format and returned to your application. If the color is not in a compatible color space, the parameters are unchanged.
+	     * @see https://developer.apple.com/reference/uikit/uicolor/1621927-getwhite
+	     */
+	    //getWhite(white, alpha) {
+	    //  return false
+	    //}
+
+	    /**
+	     * HTML color representation
+	     * @access public
+	     * @type {string}
+	     */
+
+	  }, {
+	    key: 'float32Array',
+
+
+	    /**
+	     * @access public
+	     * @returns {Float32Array} -
+	     */
+	    value: function float32Array() {
+	      return new Float32Array([this.red, this.green, this.blue, this.alpha]);
+	    }
+	  }, {
+	    key: 'htmlColor',
+	    get: function get() {
+	      var r = Math.round(this.red * 255);
+	      var g = Math.round(this.green * 255);
+	      var b = Math.round(this.blue * 255);
+	      return 'rgba(' + r + ', ' + g + ', ' + b + ', ' + this.alpha + ')';
+	    }
+	  }], [{
+	    key: 'black',
+	    get: function get() {
+	      return new SKColor(0.0, 0.0, 0.0, 1.0);
+	    }
+
+	    /**
+	     * A color object whose RGB values are 0.0, 0.0, and 1.0 and whose alpha value is 1.0.
+	     * @type {SKColor}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/uikit/uicolor/1621947-blue
+	     */
+
+	  }, {
+	    key: 'blue',
+	    get: function get() {
+	      return new SKColor(0.0, 0.0, 1.0, 1.0);
+	    }
+
+	    /**
+	     * A color object whose RGB values are 0.6, 0.4, and 0.2 and whose alpha value is 1.0.
+	     * @type {SKColor}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/uikit/uicolor/1621950-brown
+	     */
+
+	  }, {
+	    key: 'brown',
+	    get: function get() {
+	      return new SKColor(0.6, 0.4, 0.2, 1.0);
+	    }
+
+	    /**
+	     * A color object whose grayscale and alpha values are both 0.0.
+	     * @type {SKColor}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/uikit/uicolor/1621945-clear
+	     */
+
+	  }, {
+	    key: 'clear',
+	    get: function get() {
+	      return new SKColor(0.0, 0.0, 0.0, 0.0);
+	    }
+
+	    /**
+	     * A color object whose RGB values are 0.0, 1.0, and 1.0 and whose alpha value is 1.0.
+	     * @type {SKColor}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/uikit/uicolor/1621942-cyan
+	     */
+
+	  }, {
+	    key: 'cyan',
+	    get: function get() {
+	      return new SKColor(0.0, 1.0, 1.0, 1.0);
+	    }
+
+	    /**
+	     * A color object whose grayscale value is 1/3 and whose alpha value is 1.0.
+	     * @type {SKColor}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/uikit/uicolor/1621952-darkgray
+	     */
+
+	  }, {
+	    key: 'darkGray',
+	    get: function get() {
+	      var third = 1.0 / 3.0;
+	      return new SKColor(third, third, third, 1.0);
+	    }
+
+	    /**
+	     * A color object whose grayscale value is 0.5 and whose alpha value is 1.0.
+	     * @type {SKColor}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/uikit/uicolor/1621941-gray
+	     */
+
+	  }, {
+	    key: 'gray',
+	    get: function get() {
+	      return new SKColor(0.5, 0.5, 0.5, 1.0);
+	    }
+
+	    /**
+	     * A color object whose RGB values are 0.0, 1.0, and 0.0 and whose alpha value is 1.0.
+	     * @type {SKColor}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/uikit/uicolor/1621946-green
+	     */
+
+	  }, {
+	    key: 'green',
+	    get: function get() {
+	      return new SKColor(0.0, 1.0, 0.0, 1.0);
+	    }
+
+	    /**
+	     * A color object whose grayscale value is 2/3 and whose alpha value is 1.0.
+	     * @type {SKColor}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/uikit/uicolor/1621932-lightgray
+	     */
+
+	  }, {
+	    key: 'lightGray',
+	    get: function get() {
+	      var twoThirds = 2.0 / 3.0;
+	      return new SKColor(twoThirds, twoThirds, twoThirds, 1.0);
+	    }
+
+	    /**
+	     * A color object whose RGB values are 1.0, 0.0, and 1.0 and whose alpha value is 1.0.
+	     * @type {SKColor}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/uikit/uicolor/1621934-magenta
+	     */
+
+	  }, {
+	    key: 'magenta',
+	    get: function get() {
+	      return new SKColor(1.0, 0.0, 1.0, 1.0);
+	    }
+
+	    /**
+	     * A color object whose RGB values are 1.0, 0.5, and 0.0 and whose alpha value is 1.0.
+	     * @type {SKColor}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/uikit/uicolor/1621956-orange
+	     */
+
+	  }, {
+	    key: 'orange',
+	    get: function get() {
+	      return new SKColor(1.0, 0.5, 0.0, 1.0);
+	    }
+
+	    /**
+	     * A color object whose RGB values are 0.5, 0.0, and 0.5 and whose alpha value is 1.0.
+	     * @type {SKColor}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/uikit/uicolor/1621923-purple
+	     */
+
+	  }, {
+	    key: 'purple',
+	    get: function get() {
+	      return new SKColor(0.5, 0.0, 0.5, 1.0);
+	    }
+
+	    /**
+	     * A color object whose RGB values are 1.0, 0.0, and 0.0 and whose alpha value is 1.0.
+	     * @type {SKColor}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/uikit/uicolor/1621924-red
+	     */
+
+	  }, {
+	    key: 'red',
+	    get: function get() {
+	      return new SKColor(1.0, 0.0, 0.0, 1.0);
+	    }
+
+	    /**
+	     * A color object whose grayscale value is 1.0 and whose alpha value is 1.0.
+	     * @type {SKColor}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/uikit/uicolor/1621920-white
+	     */
+
+	  }, {
+	    key: 'white',
+	    get: function get() {
+	      return new SKColor(1.0, 0.0, 0.0, 1.0);
+	    }
+
+	    /**
+	     * A color object whose RGB values are 1.0, 1.0, and 0.0 and whose alpha value is 1.0.
+	     * @type {SKColor}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/uikit/uicolor/1621953-yellow
+	     */
+
+	  }, {
+	    key: 'yellow',
+	    get: function get() {
+	      return new SKColor(1.0, 1.0, 0.0, 1.0);
+	    }
+	  }]);
+
+	  return SKColor;
+	}(_NSObject3.default);
+
+	exports.default = SKColor;
+
+/***/ },
+/* 9 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * The type of the color-space mode constants listed in Color Space Models.
+	 * @typedef {Object} NSColorSpaceModel
+	 * @property {number} CMYK - 
+	 * @property {number} LAB - 
+	 * @property {number} RGB - 
+	 * @property {number} deviceN - 
+	 * @property {number} gray - 
+	 * @property {number} indexed - 
+	 * @property {number} patterned - 
+	 * @property {number} unknown - 
+	 * @see https://developer.apple.com/reference/appkit/nscolorspacemodel
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var NSColorSpaceModel = {
+	  gray: 0,
+	  RGB: 1,
+	  CMYK: 2,
+	  LAB: 3,
+	  deviceN: 4,
+	  indexed: 5,
+	  patterned: 6,
+	  unknown: -1
+	};
+
+	exports.default = NSColorSpaceModel;
+
+/***/ },
+/* 10 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * Compositing operations for images.
+	 * @typedef {Object} CGBlendMode
+	 * @property {number} normal - Paints the source image samples over the background image samples.
+	 * @property {number} multiply - Multiplies the source image samples with the background image samples. This results in colors that are at least as dark as either of the two contributing sample colors.
+	 * @property {number} screen - Multiplies  the inverse of the source image samples with the inverse of the background image samples. This results in colors that are at least as light as either of the two contributing sample colors.
+	 * @property {number} overlay - 
+	 * @property {number} darken - 
+	 * @property {number} lighten - 
+	 * @property {number} colorDodge - Brightens the background image samples to reflect the source image samples. Source image sample values that specify black do not produce a change.
+	 * @property {number} colorBurn - Darkens the background image samples to reflect the source image samples. Source image sample values that specify white do not produce a change.
+	 * @property {number} softLight - 
+	 * @property {number} hardLight - 
+	 * @property {number} difference - 
+	 * @property {number} exclusion - Produces an effect similar to that produced by difference, but with lower contrast. Source image sample values that are black don’t produce a change; white inverts the background color values.
+	 * @property {number} hue - Uses the luminance and saturation values of the background with the hue of the source image.
+	 * @property {number} saturation - Uses the luminance and hue values of the background with the saturation of the source image. Areas of the background that have no saturation (that is, pure gray areas) don’t produce a change.
+	 * @property {number} color - Uses the luminance values of the background with the hue and saturation values of the source image. This mode preserves the gray levels in the image. You can use this mode to color monochrome images or to tint color images.
+	 * @property {number} luminosity - Uses the hue and saturation of the background with the luminance of the source image. This mode creates an effect that is inverse to the effect created by color.
+	 * @property {number} clear - R = 0
+	 * @property {number} copy - R = S
+	 * @property {number} sourceIn - R = S*Da
+	 * @property {number} sourceOut - R = S*(1 - Da)
+	 * @property {number} sourceAtop - R = S*Da + D*(1 - Sa)
+	 * @property {number} destinationOver - R = S*(1 - Da) + D
+	 * @property {number} destinationIn - R = D*Sa
+	 * @property {number} destinationOut - R = D*(1 - Sa)
+	 * @property {number} destinationAtop - R = S*(1 - Da) + D*Sa
+	 * @property {number} xor - R = S*(1 - Da) + D*(1 - Sa). This XOR mode is only nominally related to the classical bitmap XOR operation, which is not supported by Core Graphics
+	 * @property {number} plusDarker - R = MAX(0, 1 - ((1 - D) + (1 - S)))
+	 * @property {number} plusLighter - R = MIN(1, S + D)
+	 * @see https://developer.apple.com/reference/coregraphics/cgblendmode
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var CGBlendMode = {
+	  normal: 0,
+	  multiply: 1,
+	  screen: 2,
+	  overlay: 3,
+	  darken: 4,
+	  lighten: 5,
+	  colorDodge: 6,
+	  colorBurn: 7,
+	  softLight: 8,
+	  hardLight: 9,
+	  difference: 10,
+	  exclusion: 11,
+	  hue: 12,
+	  saturation: 13,
+	  color: 14,
+	  luminosity: 15,
+	  clear: 16,
+	  copy: 17,
+	  sourceIn: 18,
+	  sourceOut: 19,
+	  sourceAtop: 20,
+	  destinationOver: 21,
+	  destinationIn: 22,
+	  destinationOut: 23,
+	  destinationAtop: 24,
+	  xor: 25,
+	  plusDarker: 26,
+	  plusLighter: 27
+	};
+
+	exports.default = CGBlendMode;
+
+/***/ },
+/* 11 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * Styles for rendering the endpoint of a stroked line.
+	 * @typedef {Object} CGLineCap
+	 * @property {number} butt - A line with a squared-off end. Core Graphics draws the line to extend only to the exact endpoint of the path. This is the default.
+	 * @property {number} round - A line with a rounded end. Core Graphics draws the line to extend beyond the endpoint of the path. The line ends with a semicircular arc with a radius of 1/2 the line’s width, centered on the endpoint.
+	 * @property {number} square - A line with a squared-off end. Core Graphics extends the line beyond the endpoint of the path for a distance equal to half the line width.
+	 * @see https://developer.apple.com/reference/coregraphics/cglinecap
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var CGLineCap = {
+	  butt: 0,
+	  round: 1,
+	  square: 2
+	};
+
+	exports.default = CGLineCap;
+
+/***/ },
+/* 12 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * Junction types for stroked lines.
+	 * @typedef {Object} CGLineJoin
+	 * @property {number} miter - 
+	 * @property {number} round - A join with a rounded end. Core Graphics draws the line to extend beyond the endpoint of the path. The line ends with a semicircular arc with a radius of 1/2 the line’s width, centered on the endpoint.
+	 * @property {number} bevel - A join with a squared-off end. Core Graphics draws the line to extend beyond the endpoint of the path, for a distance of 1/2 the line’s width.
+	 * @see https://developer.apple.com/reference/coregraphics/cglinejoin
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var CGLineJoin = {
+	  miter: 0,
+	  round: 1,
+	  bevel: 2
+	};
+
+	exports.default = CGLineJoin;
+
+/***/ },
+/* 13 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _CGPoint = __webpack_require__(3);
+
+	var _CGPoint2 = _interopRequireDefault(_CGPoint);
+
+	var _CGRect = __webpack_require__(4);
+
+	var _CGRect2 = _interopRequireDefault(_CGRect);
+
+	var _CGPath = __webpack_require__(14);
+
+	var _CGPath2 = _interopRequireDefault(_CGPath);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	/**
+	 * A mutable graphics path: a mathematical description of shapes or lines to be drawn in a graphics context.
+	 * @access public
+	 * @see https://developer.apple.com/reference/coregraphics/cgmutablepath
+	 */
+	var CGMutablePath = function () {
+	  function CGMutablePath() {
+	    _classCallCheck(this, CGMutablePath);
+	  }
+
+	  _createClass(CGMutablePath, [{
+	    key: 'init',
+
+
+	    // Creating Graphics Paths
+
+	    /**
+	     * Creates a mutable graphics path.
+	     * @access public
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/1411209-init
+	     */
+	    value: function init() {}
+
+	    // Copying a Graphics Path
+
+	    /**
+	     * Creates a mutable copy of an existing graphics path.
+	     * @access public
+	     * @returns {?CGMutablePath} - 
+	     * @desc You can modify a mutable graphics path by calling the various path geometry functions, such as addArc(_:x:y:radius:startAngle:endAngle:clockwise:), addLineTo(_:x:y:), and moveTo(_:x:y:).
+	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411196-mutablecopy
+	     */
+
+	  }, {
+	    key: 'mutableCopy',
+	    value: function mutableCopy() {
+	      return null;
+	    }
+
+	    /**
+	     * Creates a mutable copy of a graphics path transformed by a transformation matrix.
+	     * @access public
+	     * @param {?UnsafePointer<CGAffineTransform>} transform - A pointer to an affine transformation matrix, or NULL if no transformation is needed. If specified, Core Graphics applies the transformation to all elements of the new path.
+	     * @returns {?CGMutablePath} - 
+	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411150-mutablecopy
+	     */
+
+	  }, {
+	    key: 'mutableCopyUsing',
+	    value: function mutableCopyUsing(transform) {
+	      return null;
+	    }
+
+	    // Constructing a Graphics Path
+
+	    /**
+	     * Begins a new subpath at the specified point.  
+	     * @access public
+	     * @param {CGPoint} point - The point, in user space coordinates, at which to start a new subpath.
+	     * @param {CGAffineTransform} transform - An affine transform to apply to the point before adding to the path. Defaults to the identity transform if not specified.
+	     * @returns {void}
+	     * @desc The specified point becomes the start point of a new subpath. The current point is set to this start point.
+	     * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427143-move
+	     */
+
+	  }, {
+	    key: 'moveTo',
+	    value: function moveTo(point, transform) {}
+
+	    /**
+	     * Appends a straight line segment from the current point to the specified point. 
+	     * @access public
+	     * @param {CGPoint} point - The location, in user space coordinates, for the end of the new line segment.
+	     * @param {CGAffineTransform} transform - An affine transform to apply to the point before adding to the path. Defaults to the identity transform if not specified.
+	     * @returns {void}
+	     * @desc After adding the line segment, the current point is set to the endpoint of the line segment.
+	     * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427121-addline
+	     */
+
+	  }, {
+	    key: 'addLineTo',
+	    value: function addLineTo(point, transform) {}
+
+	    /**
+	     * Adds a sequence of connected straight-line segments to the path. 
+	     * @access public
+	     * @param {CGPoint[]} points - An array of values that specify the start and end points of the line segments to draw. Each point in the array specifies a position in user space. The first point in the array specifies the initial starting point.
+	     * @param {CGAffineTransform} transform - An affine transform to apply to the points before adding to the path. Defaults to the identity transform if not specified.
+	     * @returns {void}
+	     * @desc Calling this convenience method is equivalent to calling the move(to:transform:) method with the first value in the points array, then calling the addLine(to:transform:) method for each subsequent point until the array is exhausted. After calling this method, the path's current point is the last point in the array.
+	     * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427154-addlines
+	     */
+
+	  }, {
+	    key: 'addLinesBetween',
+	    value: function addLinesBetween(points, transform) {}
+
+	    /**
+	     * Adds a rectangular subpath to the path. 
+	     * @access public
+	     * @param {CGRect} rect - A rectangle, specified in user space coordinates.
+	     * @param {CGAffineTransform} transform - An affine transform to apply to the rectangle before adding to the path. Defaults to the identity transform if not specified.
+	     * @returns {void}
+	     * @desc This is a convenience function that adds a rectangle to a path, starting by moving to the bottom left corner and then adding lines counter-clockwise to create a rectangle, closing the subpath.
+	     * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427119-addrect
+	     */
+
+	  }, {
+	    key: 'addRect',
+	    value: function addRect(rect, transform) {}
+
+	    /**
+	     * Adds a set of rectangular subpaths to the path. 
+	     * @access public
+	     * @param {CGRect[]} rects - An array of rectangles, specified in user space coordinates.
+	     * @param {CGAffineTransform} transform - An affine transform to apply to the rectangles before adding to the path. Defaults to the identity transform if not specified.
+	     * @returns {void}
+	     * @desc Calling this convenience method is equivalent to repeatedly calling the addRect(_:transform:) method for each rectangle in the array.
+	     * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427131-addrects
+	     */
+
+	  }, {
+	    key: 'addRects',
+	    value: function addRects(rects, transform) {}
+
+	    /**
+	     * Adds an ellipse that fits inside the specified rectangle. 
+	     * @access public
+	     * @param {CGRect} rect - A rectangle that defines the area for the ellipse to fit in.
+	     * @param {CGAffineTransform} transform - An affine transform to apply to the ellipse before adding to the path. Defaults to the identity transform if not specified.
+	     * @returns {void}
+	     * @desc The ellipse is approximated by a sequence of Bézier curves. Its center is the midpoint of the rectangle defined by the rect parameter. If the rectangle is square, then the ellipse is circular with a radius equal to one-half the width (or height) of the rectangle. If the rect parameter specifies a rectangular shape, then the major and minor axes of the ellipse are defined by the width and height of the rectangle.The ellipse forms a complete subpath of the path—that is, the ellipse drawing starts with a move-to operation and ends with a close-subpath operation, with all moves oriented in the clockwise direction.
+	     * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427120-addellipse
+	     */
+
+	  }, {
+	    key: 'addEllipseIn',
+	    value: function addEllipseIn(rect, transform) {}
+
+	    /**
+	     *  Adds a subpath to the path, in the shape of a rectangle with rounded corners.
+	     * @access public
+	     * @param {CGRect} rect - The rectangle to add, specified in user space coordinates.
+	     * @param {number} cornerWidth - The horizontal size, in user space coordinates, for rounded corner sections.
+	     * @param {number} cornerHeight - The vertical size, in user space coordinates, for rounded corner sections.
+	     * @param {CGAffineTransform} transform - An affine transform to apply to the rectangle before adding to the path. Defaults to the identity transform if not specified.
+	     * @returns {void}
+	     * @desc This convenience method is equivalent to a move operation to start the subpath followed by a series of arc and line operations that construct the rounded rectangle. Each corner of the rounded rectangle is one-quarter of an ellipse with axes equal to the cornerWidth and cornerHeight parameters. The rounded rectangle forms a closed subpath oriented in the clockwise direction.
+	     * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427144-addroundedrect
+	     */
+
+	  }, {
+	    key: 'addRoundedRectIn',
+	    value: function addRoundedRectIn(rect, cornerWidth, cornerHeight, transform) {}
+
+	    /**
+	     * Adds an arc of a circle to the path, specified with a radius and angles. 
+	     * @access public
+	     * @param {CGPoint} center - The center of the arc, in user space coordinates.
+	     * @param {number} radius - The radius of the arc, in user space coordinates.
+	     * @param {number} startAngle - The angle to the starting point of the arc, measured in radians from the positive x-axis.
+	     * @param {number} endAngle - The angle to the end point of the arc, measured in radians from the positive x-axis.
+	     * @param {boolean} clockwise - true to make a clockwise arc; false to make a counterclockwise arc.
+	     * @param {CGAffineTransform} transform - An affine transform to apply to the arc before adding to the path. Defaults to the identity transform if not specified.
+	     * @returns {void}
+	     * @desc This method calculates starting and ending points using the radius and angles you specify, uses a sequence of cubic Bézier curves to approximate a segment of a circle between those points, and then appends those curves to the path.The clockwise parameter determines the direction in which the arc is created; the actual direction of the final path is dependent on the transform parameter and the current transform of a context where the path is drawn. In a flipped coordinate system (the default for UIView drawing methods in iOS), specifying a clockwise arc results in a counterclockwise arc after the transformation is applied.If the path already contains a subpath, this method adds a line connecting the current point to the starting point of the arc. If the current path is empty, his method creates a new subpath whose starting point is the starting point of the arc. The ending point of the arc becomes the new current point of the path.
+	     * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427140-addarc
+	     */
+
+	  }, {
+	    key: 'addArc',
+	    value: function addArc(center, radius, startAngle, endAngle, clockwise, transform) {}
+
+	    /**
+	     * Adds an arc of a circle to the path, specified with a radius and a difference in angle.  
+	     * @access public
+	     * @param {CGPoint} center - The center of the arc, in user space coordinates.
+	     * @param {number} radius - The radius of the arc, in user space coordinates.
+	     * @param {number} startAngle - The angle to the starting point of the arc, measured in radians from the positive x-axis.
+	     * @param {number} delta - The difference, measured in radians, between the starting angle and ending angle of the arc. A positive value creates a counter-clockwise arc (in user space coordinates), and vice versa.
+	     * @param {CGAffineTransform} transform - An affine transform to apply to the arc before adding to the path. Defaults to the identity transform if not specified.
+	     * @returns {void}
+	     * @desc This method calculates starting and ending points using the radius and angles you specify, uses a sequence of cubic Bézier curves to approximate a segment of a circle between those points, and then appends those curves to the path.The delta parameter determines both the length of the arc the direction in which the arc is created; the actual direction of the final path is dependent on the transform parameter and the current transform of a context where the path is drawn. In a flipped coordinate system (the default for UIView drawing methods in iOS), specifying a clockwise arc results in a counterclockwise arc after the transformation is applied.If the path already contains a subpath, this method adds a line connecting the current point to the starting point of the arc. If the current path is empty, his method creates a new subpath whose starting point is the starting point of the arc. The ending point of the arc becomes the new current point of the path.
+	     * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427147-addrelativearc
+	     */
+
+	  }, {
+	    key: 'addRelativeArc',
+	    value: function addRelativeArc(center, radius, startAngle, delta, transform) {}
+
+	    /**
+	     * Adds a cubic Bézier curve to the path, with the specified end point and control points. 
+	     * @access public
+	     * @param {CGPoint} end - The point, in user space coordinates, at which to end the curve.
+	     * @param {CGPoint} control1 - The first control point of the curve, in user space coordinates.
+	     * @param {CGPoint} control2 - The second control point of the curve, in user space coordinates.
+	     * @param {CGAffineTransform} transform - An affine transform to apply to the curve before adding to the path. Defaults to the identity transform if not specified.
+	     * @returns {void}
+	     * @desc This method constructs a curve starting from the path's current point and ending at the specified end point, with curvature defined by the two control points. After this method appends that curve to the current path, the end point of the curve becomes the path's current point.
+	     * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427158-addcurve
+	     */
+
+	  }, {
+	    key: 'addCurveTo',
+	    value: function addCurveTo(end, control1, control2, transform) {}
+
+	    /**
+	     * Adds a quadratic Bézier curve to the path, with the specified end point and control point. 
+	     * @access public
+	     * @param {CGPoint} end - The point, in user space coordinates, at which to end the curve.
+	     * @param {CGPoint} control - The control point of the curve, in user space coordinates.
+	     * @param {CGAffineTransform} transform - An affine transform to apply to the curve before adding to the path. Defaults to the identity transform if not specified.
+	     * @returns {void}
+	     * @desc This method constructs a curve starting from the path's current point and ending at the specified end point, with curvature defined by the control point. After this method appends that curve to the current path, the end point of the curve becomes the path's current point.
+	     * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427128-addquadcurve
+	     */
+
+	  }, {
+	    key: 'addQuadCurveTo',
+	    value: function addQuadCurveTo(end, control, transform) {}
+
+	    /**
+	     * Appends another path object to the path. 
+	     * @access public
+	     * @param {CGPath} path - The path to add.
+	     * @param {CGAffineTransform} transform - An affine transform to apply to the path parameter before adding to this path. Defaults to the identity transform if not specified.
+	     * @returns {void}
+	     * @desc If the path parameter is a non-empty empty path, its path elements are appended in order to this path. Afterward, the start point and current point of this path are those of the last subpath in the path parameter.
+	     * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427150-addpath
+	     */
+
+	  }, {
+	    key: 'addPath',
+	    value: function addPath(path, transform) {}
+
+	    /**
+	     * Closes and completes a subpath in a mutable graphics path.
+	     * @access public
+	     * @returns {void}
+	     * @desc Appends a line from the current point to the starting point of the current subpath and ends the subpath. After closing the subpath, your application can begin a new subpath without first calling moveTo(_:x:y:). In this case, a new subpath is implicitly created with a starting and current point equal to the previous subpath’s starting point.
+	     * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/1411188-closesubpath
+	     */
+
+	  }, {
+	    key: 'closeSubpath',
+	    value: function closeSubpath() {}
+	  }]);
+
+	  return CGMutablePath;
+	}();
+
+	exports.default = CGMutablePath;
+
+/***/ },
 /* 14 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _CGRect = __webpack_require__(4);
+
+	var _CGRect2 = _interopRequireDefault(_CGRect);
+
+	var _CGLineCap = __webpack_require__(11);
+
+	var _CGLineCap2 = _interopRequireDefault(_CGLineCap);
+
+	var _CGLineJoin = __webpack_require__(12);
+
+	var _CGLineJoin2 = _interopRequireDefault(_CGLineJoin);
+
+	var _CGMutablePath = __webpack_require__(13);
+
+	var _CGMutablePath2 = _interopRequireDefault(_CGMutablePath);
+
+	var _CGPoint = __webpack_require__(3);
+
+	var _CGPoint2 = _interopRequireDefault(_CGPoint);
+
+	var _CGPathFillRule = __webpack_require__(15);
+
+	var _CGPathFillRule2 = _interopRequireDefault(_CGPathFillRule);
+
+	var _CGPathApplierFunction = __webpack_require__(16);
+
+	var _CGPathApplierFunction2 = _interopRequireDefault(_CGPathApplierFunction);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var _typeID = null;
+
+	/**
+	 * An immutable graphics path: a mathematical description of shapes or lines to be drawn in a graphics context.
+	 * @access public
+	 * @see https://developer.apple.com/reference/coregraphics/cgpath
+	 */
+
+	var CGPath = function () {
+	  function CGPath() {
+	    _classCallCheck(this, CGPath);
+	  }
+
+	  _createClass(CGPath, [{
+	    key: 'init',
+
+
+	    // Creating Graphics Paths
+
+	    /**
+	     * Create an immutable path of a rectangle.
+	     * @access public
+	     * @param {CGRect} rect - The rectangle to add.
+	     * @param {?UnsafePointer<CGAffineTransform>} transform - A pointer to an affine transformation matrix, or NULL if no transformation is needed. If specified, Core Graphics applies the transformation to the rectangle before it is added to the path.
+	     * @returns {void}
+	     * @desc This is a convenience function that creates a path of an rectangle. Using this convenience function is more efficient than creating a mutable path and adding an rectangle to it.Calling this function is equivalent to using minX and related functions to find the corners of the rectangle, then using the moveTo(_:x:y:), addLineTo(_:x:y:), and closeSubpath() functions to draw the rectangle. 
+	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411155-init
+	     */
+	    value: function init(rect, transform) {
+
+	      // Examining a Graphics Path
+
+	      this._boundingBox = null;
+	      this._boundingBoxOfPath = null;
+	      this._currentPoint = null;
+	      this._isEmpty = false;
+	    }
+
+	    /**
+	     * Create an immutable path of an ellipse.
+	     * @access public
+	     * @param {CGRect} rect - The rectangle that bounds the ellipse.
+	     * @param {?UnsafePointer<CGAffineTransform>} transform - A pointer to an affine transformation matrix, or NULL if no transformation is needed. If specified, Core Graphics applies the transformation to the ellipse before it is added to the path.
+	     * @returns {void}
+	     * @desc This is a convenience function that creates a path of an ellipse. Using this convenience function is more efficient than creating a mutable path and adding an ellipse to it.The ellipse is approximated by a sequence of Bézier curves. Its center is the midpoint of the rectangle defined by the rect parameter. If the rectangle is square, then the ellipse is circular with a radius equal to one-half the width (or height) of the rectangle. If the rect parameter specifies a rectangular shape, then the major and minor axes of the ellipse are defined by the width and height of the rectangle. The ellipse forms a complete subpath of the path—that is, the ellipse drawing starts with a move-to operation and ends with a close-subpath operation, with all moves oriented in the clockwise direction. If you supply an affine transform, then the constructed Bézier curves that define the ellipse are transformed before they are added to the path.
+	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411177-init
+	     */
+
+	  }, {
+	    key: 'initEllipseIn',
+	    value: function initEllipseIn(rect, transform) {
+
+	      // Examining a Graphics Path
+
+	      this._boundingBox = null;
+	      this._boundingBoxOfPath = null;
+	      this._currentPoint = null;
+	      this._isEmpty = false;
+	    }
+
+	    /**
+	     * Create an immutable path of a rounded rectangle.
+	     * @access public
+	     * @param {CGRect} rect - The rectangle to add.
+	     * @param {number} cornerWidth - The width of the rounded corner sections.
+	     * @param {number} cornerHeight - The height of the rounded corner sections.
+	     * @param {?UnsafePointer<CGAffineTransform>} transform - A pointer to an affine transformation matrix, or NULL if no transformation is needed. If specified, Core Graphics applies the transformation to the rectangle before it is added to the path.
+	     * @returns {void}
+	     * @desc This is a convenience function that creates a path of an rounded rectangle. Using this convenience function is more efficient than creating a mutable path and adding an rectangle to it.Each corner of the rounded rectangle is one-quarter of an ellipse with axes equal to the cornerWidth and cornerHeight parameters. The rounded rectangle forms a complete subpath and is oriented in the clockwise direction.
+	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411218-init
+	     */
+
+	  }, {
+	    key: 'initRoundedRect',
+	    value: function initRoundedRect(rect, cornerWidth, cornerHeight, transform) {
+
+	      // Examining a Graphics Path
+
+	      this._boundingBox = null;
+	      this._boundingBoxOfPath = null;
+	      this._currentPoint = null;
+	      this._isEmpty = false;
+	    }
+
+	    // Copying a Graphics Path
+
+	    /**
+	     * Creates an immutable copy of a graphics path.
+	     * @access public
+	     * @returns {?CGPath} - 
+	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411211-copy
+	     */
+
+	  }, {
+	    key: 'copy',
+	    value: function copy() {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an immutable copy of a graphics path transformed by a transformation matrix.
+	     * @access public
+	     * @param {?UnsafePointer<CGAffineTransform>} transform - A pointer to an affine transformation matrix, or NULL if no transformation is needed. If specified, Core Graphics applies the transformation to all elements of the new path.
+	     * @returns {?CGPath} - 
+	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411161-copy
+	     */
+
+	  }, {
+	    key: 'copyUsing',
+	    value: function copyUsing(transform) {
+	      return null;
+	    }
+
+	    /**
+	     * Returns a new path equivalent to the results of drawing the path with a dashed stroke.
+	     * @access public
+	     * @param {number} phase - A value that specifies how far into the dash pattern the line starts, in units of the user space. For example, a value of 0 draws a line starting with the beginning of a dash pattern, and a value of 3 means the line is drawn with the dash pattern starting at three units from its beginning. 
+	     * @param {number[]} lengths - An array of values that specify the lengths, in user space coordinates, of the painted and unpainted segments  of the dash pattern.For example, the array [2,3] sets a dash pattern that alternates between a 2-unit-long painted segment and a 3-unit-long unpainted segment. The array [1,3,4,2] sets the pattern to a 1-unit painted segment, a 3-unit unpainted segment, a 4-unit painted segment, and a 2-unit unpainted segment.Pass an empty array to clear the dash pattern so that all stroke drawing in the context uses solid lines.
+	     * @param {CGAffineTransform} transform - An affine transform to apply to the path before dashing. Defaults to the identity transform if not specified.
+	     * @returns {CGPath} - 
+	     * @desc The new path is created so that filling the new path draws the same pixels as stroking the original path with the specified dash parameters.
+	     * @see https://developer.apple.com/reference/coregraphics/cgpath/2427137-copy
+	     */
+
+	  }, {
+	    key: 'copyDashingWithPhase',
+	    value: function copyDashingWithPhase(phase, lengths, transform) {
+	      return null;
+	    }
+
+	    /**
+	     * Returns a new path equivalent to the results of drawing the path with a solid stroke. 
+	     * @access public
+	     * @param {number} lineWidth - The line width to use, in user space units. The value must be greater than 0.
+	     * @param {CGLineCap} lineCap - The line cap style to render. (For equivalent CGContext drawing methods, the default style is butt.) 
+	     * @param {CGLineJoin} lineJoin - The line join style to render. (For equivalent CGContext drawing methods, the default style is miter.) 
+	     * @param {number} miterLimit - A value that limits how sharp individual corners in the path can be when using the miter line join style. When the ratio of a the length required for a mitered corner to the line width exceeds this value, that corner uses the bevel style instead.
+	     * @param {CGAffineTransform} transform - An affine transform to apply to the path before dashing. Defaults to the identity transform if not specified.
+	     * @returns {CGPath} - 
+	     * @desc The new path is created so that filling the new path draws the same pixels as stroking the original path with the specified line style.
+	     * @see https://developer.apple.com/reference/coregraphics/cgpath/2427133-copy
+	     */
+
+	  }, {
+	    key: 'copyStrokingWithWidth',
+	    value: function copyStrokingWithWidth(lineWidth, lineCap, lineJoin, miterLimit, transform) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates a mutable copy of an existing graphics path.
+	     * @access public
+	     * @returns {?CGMutablePath} - 
+	     * @desc You can modify a mutable graphics path by calling the various path geometry functions, such as addArc(_:x:y:radius:startAngle:endAngle:clockwise:), addLineTo(_:x:y:), and moveTo(_:x:y:).
+	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411196-mutablecopy
+	     */
+
+	  }, {
+	    key: 'mutableCopy',
+	    value: function mutableCopy() {
+	      return null;
+	    }
+
+	    /**
+	     * Creates a mutable copy of a graphics path transformed by a transformation matrix.
+	     * @access public
+	     * @param {?UnsafePointer<CGAffineTransform>} transform - A pointer to an affine transformation matrix, or NULL if no transformation is needed. If specified, Core Graphics applies the transformation to all elements of the new path.
+	     * @returns {?CGMutablePath} - 
+	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411150-mutablecopy
+	     */
+
+	  }, {
+	    key: 'mutableCopyUsing',
+	    value: function mutableCopyUsing(transform) {
+	      return null;
+	    }
+
+	    // Examining a Graphics Path
+
+	    /**
+	     * Returns whether the specified point is interior to the path.
+	     * @access public
+	     * @param {CGPoint} point - The point to check.
+	     * @param {CGPathFillRule} rule - The rule for determining which areas to treat as the interior of the path. Defaults to the winding rule if not specified.
+	     * @param {CGAffineTransform} transform - An affine transform to apply to the point before checking for containment in the path. Defaults to the identity transform if not specified.
+	     * @returns {boolean} - 
+	     * @desc A point is contained in a path if it would be inside the painted region when the path is filled.
+	     * @see https://developer.apple.com/reference/coregraphics/cgpath/2427117-contains
+	     */
+
+	  }, {
+	    key: 'containsUsing',
+	    value: function containsUsing(point, rule, transform) {
+	      return false;
+	    }
+
+	    /**
+	     * Indicates whether or not a graphics path represents a rectangle.
+	     * @access public
+	     * @param {?UnsafeMutablePointer<CGRect>} rect - On input, a pointer to an uninitialized rectangle. If the specified path represents a rectangle, on return contains a copy of the rectangle. 
+	     * @returns {boolean} - 
+	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411163-isrect
+	     */
+
+	  }, {
+	    key: 'isRect',
+	    value: function isRect(rect) {
+	      return false;
+	    }
+	    /**
+	     * Returns the bounding box containing all points in a graphics path.
+	     * @type {CGRect}
+	     * @desc The bounding box is the smallest rectangle completely enclosing all points in the path, including control points for Bézier and quadratic curves. 
+	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411165-boundingbox
+	     */
+
+	  }, {
+	    key: 'apply',
+
+
+	    // Applying a Function to the Elements of a Path
+
+	    /**
+	     * For each element in a graphics path, calls a custom applier function.
+	     * @access public
+	     * @param {?Object} info - A pointer to the user data that Core Graphics will pass to the function being applied, or NULL.
+	     * @param {CGPathApplierFunction} _function - 
+	     * @returns {void}
+	     * @desc For each element in the specified path, Core Graphics calls the applier function, which can examine (but not modify) the element.
+	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411203-apply
+	     */
+	    value: function apply(info, _function) {}
+
+	    // Working with Core Foundation Types
+	    /**
+	     * Returns the Core Foundation type identifier for Core Graphics graphics paths.
+	     * @type {CFTypeID}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411192-typeid
+	     */
+
+	  }, {
+	    key: 'init__byDashing',
+
+
+	    // Initializers
+
+	    /**
+	     * Creates a dashed copy of another path.
+	     * @access public
+	     * @param {CGPath} path - The path to copy.
+	     * @param {?UnsafePointer<CGAffineTransform>} transform - A pointer to an affine transformation matrix, or NULL if no transformation is needed. If specified, Core Graphics applies the transformation to elements of the converted path before adding them to the new path.
+	     * @param {number} phase - A value that specifies how far into the dash pattern the line starts, in units of the user space. For example, passing a value of 3 means the line is drawn with the dash pattern starting at three units from its beginning. Passing a value of 0 draws a line starting with the beginning of a dash pattern.
+	     * @param {?UnsafePointer<CGFloat>} lengths - An array of values that specify the lengths of the painted segments and unpainted segments, respectively, of the dash pattern—or NULL for no dash pattern.For example, passing an array with the values [2,3] sets a dash pattern that alternates between a 2-user-space-unit-long painted segment and a 3-user-space-unit-long unpainted segment. Passing the values [1,3,4,2] sets the pattern to a 1-unit painted segment, a 3-unit unpainted segment, a 4-unit painted segment, and a 2-unit unpainted segment.
+	     * @param {number} count - If the lengths parameter specifies an array, pass the number of elements in the array. Otherwise, pass 0.
+	     * @returns {void}
+	     * @desc The new path is created so that filling the new path draws the same pixels as stroking the original path with the specified dash parameters.
+	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411134-init
+	     */
+	    value: function init__byDashing(path, transform, phase, lengths, count) {
+
+	      // Examining a Graphics Path
+
+	      this._boundingBox = null;
+	      this._boundingBoxOfPath = null;
+	      this._currentPoint = null;
+	      this._isEmpty = false;
+	    }
+
+	    /**
+	     * Creates a stroked copy of another path.
+	     * @access public
+	     * @param {CGPath} path - The path to copy.
+	     * @param {?UnsafePointer<CGAffineTransform>} transform - A pointer to an affine transformation matrix, or NULL if no transformation is needed. If specified, Core Graphics applies the transformation to elements of the converted path before adding them to the new path.
+	     * @param {number} lineWidth - The line width to use, in user space units. The value must be greater than 0.
+	     * @param {CGLineCap} lineCap - A line cap style constant—butt (the default), round, or square. 
+	     * @param {CGLineJoin} lineJoin - A line join value—miter (the default), round, or bevel. 
+	     * @param {number} miterLimit - The miter limit to use.
+	     * @returns {void}
+	     * @desc The new path is created so that filling the new path draws the same pixels as stroking the original path.If the line join style is set to kCGLineJoinMiter, Core Graphics uses the miter limit to determine whether the lines should be joined with a bevel instead of a miter. Core Graphics divides the length of the miter by the line width. If the result is greater than the miter limit, Core Graphics converts the style to a bevel. 
+	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411128-init
+	     */
+
+	  }, {
+	    key: 'init__byStroking',
+	    value: function init__byStroking(path, transform, lineWidth, lineCap, lineJoin, miterLimit) {
+
+	      // Examining a Graphics Path
+
+	      this._boundingBox = null;
+	      this._boundingBoxOfPath = null;
+	      this._currentPoint = null;
+	      this._isEmpty = false;
+	    }
+	  }, {
+	    key: 'boundingBox',
+	    get: function get() {
+	      return this._boundingBox;
+	    }
+	    /**
+	     * Returns the bounding box of a graphics path.
+	     * @type {CGRect}
+	     * @desc The path bounding box is the smallest rectangle completely enclosing all points in the path but not including control points for Bézier and quadratic curves. 
+	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411200-boundingboxofpath
+	     */
+
+	  }, {
+	    key: 'boundingBoxOfPath',
+	    get: function get() {
+	      return this._boundingBoxOfPath;
+	    }
+	    /**
+	     * Returns the current point in a graphics path.
+	     * @type {CGPoint}
+	     * @desc If the path is empty—that is, if it has no elements—this function returns CGPointZero (see CGGeometry). To determine whether a path is empty, use isEmpty.
+	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411132-currentpoint
+	     */
+
+	  }, {
+	    key: 'currentPoint',
+	    get: function get() {
+	      return this._currentPoint;
+	    }
+	    /**
+	     * Indicates whether or not a graphics path is empty.
+	     * @type {boolean}
+	     * @desc An empty path contains no elements.
+	     * @see https://developer.apple.com/reference/coregraphics/cgpath/1411149-isempty
+	     */
+
+	  }, {
+	    key: 'isEmpty',
+	    get: function get() {
+	      return this._isEmpty;
+	    }
+	  }], [{
+	    key: 'typeID',
+	    get: function get() {
+	      return _typeID;
+	    }
+	  }]);
+
+	  return CGPath;
+	}();
+
+	exports.default = CGPath;
+
+/***/ },
+/* 15 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * Rules for determining which regions are interior to a path, used by the fillPath(using:) and clip(using:) methods.
+	 * @typedef {Object} CGPathFillRule
+	 * @property {number} evenOdd - A rule that considers a region to be interior to a path based on the number of times it is enclosed by path elements.
+	 * @property {number} winding - A rule that considers a region to be interior to a path if the winding number for that region is nonzero.
+	 * @see https://developer.apple.com/reference/coregraphics/cgpathfillrule
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var CGPathFillRule = {
+	  evenOdd: 1,
+	  winding: 0
+	};
+
+	exports.default = CGPathFillRule;
+
+/***/ },
+/* 16 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * Defines a callback function that can view an element in a graphics path.
+	 * @type {function(): void}
+	 * @returns {void}
+	 * @see https://developer.apple.com/reference/coregraphics/cgpathapplierfunction
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var CGPathApplierFunction = function CGPathApplierFunction() {};
+
+	exports.default = CGPathApplierFunction;
+
+/***/ },
+/* 17 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * A structure that contains a two-dimensional vector.
+	 * @access public
+	 * @see https://developer.apple.com/reference/coregraphics/cgvector
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var CGVector = function () {
+	  function CGVector() {
+	    _classCallCheck(this, CGVector);
+	  }
+
+	  _createClass(CGVector, [{
+	    key: 'init',
+
+
+	    // Initializers
+
+	    /**
+	     * Creates a vector with components specified as integer values.
+	     * @access public
+	     * @param {number} dx - 
+	     * @param {number} dy - 
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/coregraphics/cgvector/1456249-init
+	     */
+	    value: function init(dx, dy) {
+
+	      // Special Values
+
+	      this._zero = null;
+
+	      // Geometric Properties
+
+	      this._dx = 0;
+	      this._dy = 0;
+	    }
+
+	    // Special Values
+	    /**
+	     * The vector whose components are both zero.
+	     * @type {CGVector}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/coregraphics/cgvector/1454067-zero
+	     */
+
+	  }, {
+	    key: 'zero',
+	    get: function get() {
+	      return this._zero;
+	    }
+
+	    // Geometric Properties
+
+	  }]);
+
+	  return CGVector;
+	}();
+
+	exports.default = CGVector;
+
+/***/ },
+/* 18 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	/**
+	 * dummy class for NSKeyedArchiver/Unarchiver
+	 * @access public
+	 * @extends {NSObject}
+	 */
+	var NSArray = function (_NSObject) {
+	  _inherits(NSArray, _NSObject);
+
+	  function NSArray() {
+	    _classCallCheck(this, NSArray);
+
+	    return _possibleConstructorReturn(this, (NSArray.__proto__ || Object.getPrototypeOf(NSArray)).apply(this, arguments));
+	  }
+
+	  _createClass(NSArray, null, [{
+	    key: 'initWithCoder',
+
+	    /**
+	     * @access public
+	     * @param {NSCoder} coder -
+	     * @returns {Object[]} -
+	     */
+	    value: function initWithCoder(coder) {
+	      var arr = [];
+	      var objects = coder._refObj['NS.objects'];
+	      if (!Array.isArray(objects)) {
+	        throw new Error('NS.objects must be Array');
+	      }
+
+	      var objCoder = coder.copy();
+	      objCoder._refObj = objects;
+
+	      for (var i = 0; i < objects.length; i++) {
+	        var obj = objCoder.decodeObjectForKey(i);
+	        arr.push(obj);
+	      }
+
+	      return arr;
+	    }
+	  }]);
+
+	  return NSArray;
+	}(_NSObject3.default);
+
+	exports.default = NSArray;
+
+/***/ },
+/* 19 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
+	var _CGPoint = __webpack_require__(3);
+
+	var _CGPoint2 = _interopRequireDefault(_CGPoint);
+
+	var _CGRect = __webpack_require__(4);
+
+	var _CGRect2 = _interopRequireDefault(_CGRect);
+
+	var _CGSize = __webpack_require__(5);
+
+	var _CGSize2 = _interopRequireDefault(_CGSize);
+
+	var _CGVector = __webpack_require__(17);
+
+	var _CGVector2 = _interopRequireDefault(_CGVector);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _DecodingFailurePolicy = {
+	  raiseException: Symbol('raiseException'),
+	  setErrorAndReturn: Symbol('setErrorAndReturn')
+	};
+
+	/**
+	 * The NSCoder abstract class declares the interface used by concrete subclasses to transfer objects and other values between memory and some other format. This capability provides the basis for archiving (where objects and data items are stored on disk) and distribution (where objects and data items are copied between different processes or threads). The concrete subclasses provided by Foundation for these purposes are NSArchiver, NSUnarchiver, NSKeyedArchiver, NSKeyedUnarchiver, and NSPortCoder. Concrete subclasses of NSCoder are referred to in general as coder classes, and instances of these classes as coder objects (or simply coders). A coder object that can only encode values is referred to as an encoder object, and one that can only decode values as a decoder object.
+	 * @access public
+	 * @extends {NSObject}
+	 * @see https://developer.apple.com/reference/foundation/nscoder
+	 */
+
+	var NSCoder = function (_NSObject) {
+	  _inherits(NSCoder, _NSObject);
+
+	  /**
+	   * constructor
+	   * @access public
+	   * @constructor
+	   */
+	  function NSCoder() {
+	    _classCallCheck(this, NSCoder);
+
+	    // Inspecting a Coder
+
+	    var _this = _possibleConstructorReturn(this, (NSCoder.__proto__ || Object.getPrototypeOf(NSCoder)).call(this));
+
+	    _this._allowsKeyedCoding = false;
+
+	    // Secure Coding
+
+	    _this._requiresSecureCoding = false;
+	    _this._allowedClasses = null;
+
+	    // Getting Version Information
+
+	    _this._systemVersion = 0;
+
+	    // Instance Properties
+
+	    _this._decodingFailurePolicy = null;
+	    _this._error = null;
+	    return _this;
+	  }
+
+	  _createClass(NSCoder, [{
+	    key: 'containsValueForKey',
+
+
+	    // Inspecting a Coder
+
+	    /**
+	     * Returns a Boolean value that indicates whether an encoded value is available for a string.
+	     * @access public
+	     * @param {string} key - 
+	     * @returns {boolean} - 
+	     * @desc Subclasses must override this method if they perform keyed coding. The string is passed as key.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1416125-containsvalue
+	     */
+	    value: function containsValueForKey(key) {
+	      return false;
+	    }
+	    /**
+	     * A Boolean value that indicates whether the receiver supports keyed coding of objects.
+	     * @type {boolean}
+	     * @desc false by default. Concrete subclasses that support keyed coding, such as NSKeyedArchiver, need to override this property to return true.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1417541-allowskeyedcoding
+	     */
+
+	  }, {
+	    key: 'encodeArrayOfObjCTypeAt',
+
+
+	    // Encoding General Data
+
+	    /**
+	     * Encodes an array of count items, whose Objective-C type is given by itemType.
+	     * @access public
+	     * @param {UnsafePointer<Int8>} type - 
+	     * @param {number} count - 
+	     * @param {UnsafeRawPointer} array - 
+	     * @returns {void}
+	     * @desc The values are encoded from the buffer beginning at address. itemType must contain exactly one type code. NSCoder’s implementation invokes encodeValue(ofObjCType:at:) to encode the entire array of items. Subclasses that implement the encodeValue(ofObjCType:at:) method do not need to override this method.This method must be matched by a subsequent decodeArray(ofObjCType:count:at:) message.For information on creating an Objective-C type code suitable for itemType, see Type Encodings.Special ConsiderationsYou should not use this method to encode C arrays of Objective-C objects. See decodeArray(ofObjCType:count:at:) for more details.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1417865-encodearray
+	     */
+	    value: function encodeArrayOfObjCTypeAt(type, count, array) {}
+
+	    /**
+	     * Encodes the object objv and associates it with the string key.
+	     * @access public
+	     * @param {?Object} objv - 
+	     * @param {string} key - 
+	     * @returns {void}
+	     * @desc Subclasses must override this method to identify multiple encodings of objv and encode a reference to objv instead. For example, NSKeyedArchiver detects duplicate objects and encodes a reference to the original object rather than encode the same object twice.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1411568-encode
+	     */
+
+	  }, {
+	    key: 'encodeForKey',
+	    value: function encodeForKey(objv, key) {}
+
+	    /**
+	     * Can be overridden by subclasses to encode object so that a copy, rather than a proxy, is created upon decoding.
+	     * @access public
+	     * @param {?Object} anObject - 
+	     * @returns {void}
+	     * @desc NSCoder’s implementation simply invokes encode(_:).This method must be matched by a corresponding decodeObject() message.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1418225-encodebycopyobject
+	     */
+
+	  }, {
+	    key: 'encodeBycopyObject',
+	    value: function encodeBycopyObject(anObject) {}
+
+	    /**
+	     * Can be overridden by subclasses to encode object so that a proxy, rather than a copy, is created upon decoding.
+	     * @access public
+	     * @param {?Object} anObject - 
+	     * @returns {void}
+	     * @desc NSCoder’s implementation simply invokes encode(_:).This method must be matched by a corresponding decodeObject() message.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1416279-encodebyrefobject
+	     */
+
+	  }, {
+	    key: 'encodeByrefObject',
+	    value: function encodeByrefObject(anObject) {}
+
+	    /**
+	     * Encodes a buffer of data whose types are unspecified.
+	     * @access public
+	     * @param {?UnsafeRawPointer} byteaddr - 
+	     * @param {number} length - 
+	     * @returns {void}
+	     * @desc The buffer to be encoded begins at address, and its length in bytes is given by numBytes.This method must be matched by a corresponding decodeBytes(withReturnedLength:) message.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1411664-encodebytes
+	     */
+
+	  }, {
+	    key: 'encodeBytes',
+	    value: function encodeBytes(byteaddr, length) {}
+
+	    /**
+	     * Encodes a buffer of data, bytesp, whose length is specified by lenv, and associates it with the string key.
+	     * @access public
+	     * @param {?UnsafePointer<UInt8>} bytesp - 
+	     * @param {number} lenv - 
+	     * @param {string} key - 
+	     * @returns {void}
+	     * @desc Subclasses must override this method if they perform keyed coding.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1413078-encodebytes
+	     */
+
+	  }, {
+	    key: 'encodeBytesLengthForKey',
+	    value: function encodeBytesLengthForKey(bytesp, lenv, key) {}
+
+	    /**
+	     * Can be overridden by subclasses to conditionally encode object, preserving common references to that object.
+	     * @access public
+	     * @param {?Object} object - 
+	     * @returns {void}
+	     * @desc In the overriding method, object should be encoded only if it’s unconditionally encoded elsewhere (with any other encode...Object: method).This method must be matched by a subsequent decodeObject() message. Upon decoding, if object was never encoded unconditionally, decodeObject returns nil in place of object. However, if object was encoded unconditionally, all references to object must be resolved.NSCoder’s implementation simply invokes encode(_:). 
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1415196-encodeconditionalobject
+	     */
+
+	  }, {
+	    key: 'encodeConditionalObject',
+	    value: function encodeConditionalObject(object) {}
+
+	    /**
+	     * Conditionally encodes a reference to objv and associates it with the string key only if objv has been unconditionally encoded with encode(_:forKey:).
+	     * @access public
+	     * @param {?Object} objv - 
+	     * @param {string} key - 
+	     * @returns {void}
+	     * @desc Subclasses must override this method if they support keyed coding.The encoded object is decoded with the decodeObject(forKey:) method. If objv was never encoded unconditionally, decodeObject(forKey:) returns nil in place of objv.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1413918-encodeconditionalobject
+	     */
+
+	  }, {
+	    key: 'encodeConditionalObjectForKey',
+	    value: function encodeConditionalObjectForKey(objv, key) {}
+
+	    /**
+	     * Encodes size.
+	     * @access public
+	     * @param {CGSize} size - 
+	     * @returns {void}
+	     * @desc NSCoder’s implementation invokes encodeValue(ofObjCType:at:) to encode size.This method must be matched by a subsequent decodeSize() message.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1391291-encode
+	     */
+
+	  }, {
+	    key: 'encode',
+	    value: function encode(size) {}
+
+	    /**
+	     * Encodes intv and associates it with the string key.
+	     * @access public
+	     * @param {number} intv - 
+	     * @param {string} key - 
+	     * @returns {void}
+	     * @desc Subclasses must override this method if they perform keyed coding.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1413906-encodecint
+	     */
+
+	  }, {
+	    key: 'encodeCIntForKey',
+	    value: function encodeCIntForKey(intv, key) {}
+
+	    /**
+	     * Encodes the property list aPropertyList.
+	     * @access public
+	     * @param {Object} aPropertyList - 
+	     * @returns {void}
+	     * @desc NSCoder’s implementation invokes encodeValue(ofObjCType:at:) to encode aPropertyList.This method must be matched by a subsequent decodePropertyList() message.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1410643-encodepropertylist
+	     */
+
+	  }, {
+	    key: 'encodePropertyList',
+	    value: function encodePropertyList(aPropertyList) {}
+
+	    /**
+	     * Can be overridden by subclasses to encode an interconnected group of Objective-C objects, starting with rootObject.
+	     * @access public
+	     * @param {Object} rootObject - 
+	     * @returns {void}
+	     * @desc NSCoder’s implementation simply invokes encode(_:).This method must be matched by a subsequent decodeObject() message.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1409439-encoderootobject
+	     */
+
+	  }, {
+	    key: 'encodeRootObject',
+	    value: function encodeRootObject(rootObject) {}
+
+	    /**
+	     * Must be overridden by subclasses to encode a single value residing at address, whose Objective-C type is given by valueType.
+	     * @access public
+	     * @param {UnsafePointer<Int8>} type - 
+	     * @param {UnsafeRawPointer} addr - 
+	     * @returns {void}
+	     * @desc  valueType must contain exactly one type code.This method must be matched by a subsequent decodeValue(ofObjCType:at:) message.For information on creating an Objective-C type code suitable for valueType, see Type Encodings.Special ConsiderationsYou should not use this method to encode of Objective-C objects. See decodeArray(ofObjCType:count:at:) for more details.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1414648-encodevalue
+	     */
+
+	  }, {
+	    key: 'encodeValueOfObjCTypeAt',
+	    value: function encodeValueOfObjCTypeAt(type, addr) {}
+
+	    // Decoding General Data
+
+	    /**
+	     * Decodes an array of count items, whose Objective-C type is given by itemType.
+	     * @access public
+	     * @param {UnsafePointer<Int8>} itemType - 
+	     * @param {number} count - 
+	     * @param {Object} array - 
+	     * @returns {void}
+	     * @desc The items are decoded into the buffer beginning at address, which must be large enough to contain them all. itemType must contain exactly one type code. NSCoder’s implementation invokes decodeValue(ofObjCType:at:) to decode the entire array of items.This method matches an encodeArray(ofObjCType:count:at:) message used during encoding.For information on creating an Objective-C type code suitable for itemType, see Type Encodings.Special ConsiderationsYou should not use this method to decode C arrays of Objective-C objects. For historical reasons, returned objects will have an additional ownership reference which you can only relinquish using CFRelease.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1408354-decodearray
+	     */
+
+	  }, {
+	    key: 'decodeArrayOfObjCTypeAt',
+	    value: function decodeArrayOfObjCTypeAt(itemType, count, array) {}
+
+	    /**
+	     * Decodes and returns a boolean value that was previously encoded with encode(_:forKey:) and associated with the string key.
+	     * @access public
+	     * @param {string} key - 
+	     * @returns {boolean} - 
+	     * @desc Subclasses must override this method if they perform keyed coding.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1409293-decodebool
+	     */
+
+	  }, {
+	    key: 'decodeBoolForKey',
+	    value: function decodeBoolForKey(key) {
+	      return false;
+	    }
+
+	    /**
+	     * Decodes a buffer of data that was previously encoded with encodeBytes(_:length:forKey:) and associated with the string key.
+	     * @access public
+	     * @param {string} key - 
+	     * @param {?UnsafeMutablePointer<Int>} lengthp - 
+	     * @returns {?UnsafePointer<UInt8>} - 
+	     * @desc  The buffer’s length is returned by reference in lengthp. The returned bytes are immutable. Subclasses must override this method if they perform keyed coding.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1411987-decodebytes
+	     */
+
+	  }, {
+	    key: 'decodeBytesForKeyReturnedLength',
+	    value: function decodeBytesForKeyReturnedLength(key, lengthp) {
+	      return null;
+	    }
+
+	    /**
+	     * Decodes a buffer of data whose types are unspecified.
+	     * @access public
+	     * @param {UnsafeMutablePointer<Int>} lengthp - 
+	     * @returns {?Object} - 
+	     * @desc NSCoder’s implementation invokes decodeValue(ofObjCType:at:) to decode the data as a series of bytes, which this method then places into a buffer and returns. The buffer’s length is returned by reference in numBytes. If you need the bytes beyond the scope of the current @autoreleasepool block, you must copy them.This method matches an encodeBytes(_:length:) message used during encoding.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1415441-decodebytes
+	     */
+
+	  }, {
+	    key: 'decodeBytesWithReturnedLength',
+	    value: function decodeBytesWithReturnedLength(lengthp) {
+	      return null;
+	    }
+
+	    /**
+	     * Decodes and returns an NSData object that was previously encoded with encode(_:). Subclasses must override this method.
+	     * @access public
+	     * @returns {?Data} - 
+	     * @desc The implementation of your overriding method must match the implementation of your encode(_:) method. For example, a typical encode(_:) method encodes the number of bytes of data followed by the bytes themselves. Your override of this method must read the number of bytes, create an NSData object of the appropriate size, and decode the bytes into the new NSData object. 
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1409876-decodedata
+	     */
+
+	  }, {
+	    key: 'decodeData',
+	    value: function decodeData() {
+	      return null;
+	    }
+
+	    /**
+	     * Decodes and returns a double value that was previously encoded with either encode(_:forKey:) or encode(_:forKey:) and associated with the string key.
+	     * @access public
+	     * @param {string} key - 
+	     * @returns {number} - 
+	     * @desc Subclasses must override this method if they perform keyed coding.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1409374-decodedouble
+	     */
+
+	  }, {
+	    key: 'decodeDoubleForKey',
+	    value: function decodeDoubleForKey(key) {
+	      return 0;
+	    }
+
+	    /**
+	     * Decodes and returns a float value that was previously encoded with encode(_:forKey:) or encode(_:forKey:) and associated with the string key.
+	     * @access public
+	     * @param {string} key - 
+	     * @returns {number} - 
+	     * @desc If the value was encoded as a double, the extra precision is lost. If the encoded real value does not fit into a float, the method raises an NSRangeException. Subclasses must override this method if they perform keyed coding.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1408104-decodefloat
+	     */
+
+	  }, {
+	    key: 'decodeFloatForKey',
+	    value: function decodeFloatForKey(key) {
+	      return 0;
+	    }
+
+	    /**
+	     * Decodes and returns an int value that was previously encoded with encodeCInt(_:forKey:), encode(_:forKey:), encode(_:forKey:), or encode(_:forKey:) and associated with the string key.
+	     * @access public
+	     * @param {string} key - 
+	     * @returns {number} - 
+	     * @desc If the encoded integer does not fit into the default integer size, the method raises an NSRangeException. Subclasses must override this method if they perform keyed coding.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1411168-decodecint
+	     */
+
+	  }, {
+	    key: 'decodeCIntForKey',
+	    value: function decodeCIntForKey(key) {
+	      return 0;
+	    }
+
+	    /**
+	     * Decodes and returns an NSInteger value that was previously encoded with encodeCInt(_:forKey:), encode(_:forKey:), encode(_:forKey:), or encode(_:forKey:) and associated with the string key.
+	     * @access public
+	     * @param {string} key - 
+	     * @returns {number} - 
+	     * @desc If the encoded integer does not fit into the NSInteger size, the method raises an NSRangeException. Subclasses must override this method if they perform keyed coding.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1409246-decodeinteger
+	     */
+
+	  }, {
+	    key: 'decodeIntegerForKey',
+	    value: function decodeIntegerForKey(key) {
+	      return 0;
+	    }
+
+	    /**
+	     * Decodes and returns a 32-bit integer value that was previously encoded with encodeCInt(_:forKey:), encode(_:forKey:), encode(_:forKey:), or encode(_:forKey:) and associated with the string key.
+	     * @access public
+	     * @param {string} key - 
+	     * @returns {number} - 
+	     * @desc If the encoded integer does not fit into a 32-bit integer, the method raises an NSRangeException. Subclasses must override this method if they perform keyed coding.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1408918-decodeint32
+	     */
+
+	  }, {
+	    key: 'decodeInt32ForKey',
+	    value: function decodeInt32ForKey(key) {
+	      return 0;
+	    }
+
+	    /**
+	     * Decodes and returns a 64-bit integer value that was previously encoded with encodeCInt(_:forKey:), encode(_:forKey:), encode(_:forKey:), or encode(_:forKey:) and associated with the string key.
+	     * @access public
+	     * @param {string} key - 
+	     * @returns {Int64} - 
+	     * @desc Subclasses must override this method if they perform keyed coding.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1407878-decodeint64
+	     */
+
+	  }, {
+	    key: 'decodeInt64ForKey',
+	    value: function decodeInt64ForKey(key) {
+	      return null;
+	    }
+
+	    /**
+	     * Decodes an Objective-C object that was previously encoded with any of the encode...Object: methods.
+	     * @access public
+	     * @returns {?Object} - 
+	     * @desc NSCoder’s implementation invokes decodeValue(ofObjCType:at:) to decode the object data.Subclasses may need to override this method if they override any of the corresponding encode...Object: methods. For example, if an object was encoded conditionally using the encodeConditionalObject(_:) method, this method needs to check whether the object had actually been encoded.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1414478-decodeobject
+	     */
+
+	  }, {
+	    key: 'decodeObject',
+	    value: function decodeObject() {
+	      return null;
+	    }
+
+	    /**
+	     * Decodes and returns an Objective-C object that was previously encoded with encode(_:forKey:) or encodeConditionalObject(_:forKey:) and associated with the string key.
+	     * @access public
+	     * @param {string} key - 
+	     * @returns {?Object} - 
+	     * @desc Subclasses must override this method if they perform keyed coding.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1418185-decodeobject
+	     */
+
+	  }, {
+	    key: 'decodeObjectForKey',
+	    value: function decodeObjectForKey(key) {
+	      return null;
+	    }
+
+	    /**
+	     * Decodes and returns an NSPoint structure that was previously encoded with encode(_:).
+	     * @access public
+	     * @returns {CGPoint} - 
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1391189-decodepoint
+	     */
+
+	  }, {
+	    key: 'decodePoint',
+	    value: function decodePoint() {
+	      return null;
+	    }
+
+	    /**
+	     * Decodes and returns an NSPoint structure that was previously encoded with encode(_:forKey:).
+	     * @access public
+	     * @param {string} key - 
+	     * @returns {CGPoint} - 
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1391214-decodepoint
+	     */
+
+	  }, {
+	    key: 'decodePointForKey',
+	    value: function decodePointForKey(key) {
+	      return null;
+	    }
+
+	    /**
+	     * Decodes a property list that was previously encoded with encodePropertyList(_:).
+	     * @access public
+	     * @returns {?Object} - 
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1411916-decodepropertylist
+	     */
+
+	  }, {
+	    key: 'decodePropertyList',
+	    value: function decodePropertyList() {
+	      return null;
+	    }
+
+	    /**
+	     * Decodes and returns an NSRect structure that was previously encoded with encode(_:).
+	     * @access public
+	     * @returns {CGRect} - 
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1391269-decoderect
+	     */
+
+	  }, {
+	    key: 'decodeRect',
+	    value: function decodeRect() {
+	      return null;
+	    }
+
+	    /**
+	     * Decodes and returns an NSRect structure that was previously encoded with encode(_:forKey:).
+	     * @access public
+	     * @param {string} key - 
+	     * @returns {CGRect} - 
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1391116-decoderect
+	     */
+
+	  }, {
+	    key: 'decodeRectForKey',
+	    value: function decodeRectForKey(key) {
+	      return null;
+	    }
+
+	    /**
+	     * Decodes and returns an NSSize structure that was previously encoded with encode(_:).
+	     * @access public
+	     * @returns {CGSize} - 
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1391144-decodesize
+	     */
+
+	  }, {
+	    key: 'decodeSize',
+	    value: function decodeSize() {
+	      return null;
+	    }
+
+	    /**
+	     * Decodes and returns an NSSize structure that was previously encoded with encode(_:forKey:).
+	     * @access public
+	     * @param {string} key - 
+	     * @returns {CGSize} - 
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1391253-decodesize
+	     */
+
+	  }, {
+	    key: 'decodeSizeForKey',
+	    value: function decodeSizeForKey(key) {
+	      return null;
+	    }
+
+	    /**
+	     * Decodes a single value, whose Objective-C type is given by valueType.
+	     * @access public
+	     * @param {UnsafePointer<Int8>} type - 
+	     * @param {Object} data - 
+	     * @returns {void}
+	     * @desc  valueType must contain exactly one type code, and the buffer specified by data must be large enough to hold the value corresponding to that type code. For information on creating an Objective-C type code suitable for valueType, see Type Encodings.Subclasses must override this method and provide an implementation to decode the value. In your overriding implementation, decode the value into the buffer beginning at data.This method matches an encodeValue(ofObjCType:at:) message used during encoding.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1417159-decodevalue
+	     */
+
+	  }, {
+	    key: 'decodeValueOfObjCTypeAt',
+	    value: function decodeValueOfObjCTypeAt(type, data) {}
+
+	    /**
+	     * Returns a decoded property list for the specified key.
+	     * @access public
+	     * @param {string} key - The coder key.
+	     * @returns {?Object} - 
+	     * @desc This method calls decodeObjectOfClasses:forKey: with a set allowing only property list types.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1416284-decodepropertylist
+	     */
+
+	  }, {
+	    key: 'decodePropertyListForKey',
+	    value: function decodePropertyListForKey(key) {
+	      return null;
+	    }
+
+	    // Decoding Geometry-Based Data
+
+	    /**
+	     * Decodes and returns the CGPoint structure associated with the specified key in the receiver’s archive. 
+	     * @access public
+	     * @param {string} key - The key that identifies the point.
+	     * @returns {CGPoint} - 
+	     * @desc Use this method to decode a point that was previously encoded using the encode(_:forKey:) method.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1624523-decodecgpoint
+	     */
+
+	  }, {
+	    key: 'decodeCGPointForKey',
+	    value: function decodeCGPointForKey(key) {
+	      return null;
+	    }
+
+	    /**
+	     * Decodes and returns the CGRect structure associated with the specified key in the receiver’s archive. 
+	     * @access public
+	     * @param {string} key - The key that identifies the rectangle.
+	     * @returns {CGRect} - 
+	     * @desc Use this method to decode a rectangle that was previously encoded using the encode(_:forKey:) method.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1624522-decodecgrect
+	     */
+
+	  }, {
+	    key: 'decodeCGRectForKey',
+	    value: function decodeCGRectForKey(key) {
+	      return null;
+	    }
+
+	    /**
+	     * Decodes and returns the CGSize structure associated with the specified key in the receiver’s archive. 
+	     * @access public
+	     * @param {string} key - The key that identifies the size information.
+	     * @returns {CGSize} - 
+	     * @desc Use this method to decode size information that was previously encoded using the encode(_:forKey:) method.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1624519-decodecgsize
+	     */
+
+	  }, {
+	    key: 'decodeCGSizeForKey',
+	    value: function decodeCGSizeForKey(key) {
+	      return null;
+	    }
+
+	    /**
+	     * Decodes and returns the CGAffineTransform structure associated with the specified key in the receiver’s archive. 
+	     * @access public
+	     * @param {string} key - The key that identifies the affine transform.
+	     * @returns {CGAffineTransform} - 
+	     * @desc Use this method to decode size information that was previously encoded using the encode(_:forKey:) method.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1624478-decodecgaffinetransform
+	     */
+
+	  }, {
+	    key: 'decodeCGAffineTransformForKey',
+	    value: function decodeCGAffineTransformForKey(key) {
+	      return null;
+	    }
+
+	    /**
+	     * Decodes and returns the UIEdgeInsets structure associated with the specified key in the receiver’s archive. 
+	     * @access public
+	     * @param {string} key - The key that identifies the edge insets.
+	     * @returns {UIEdgeInsets} - 
+	     * @desc Use this method to decode size information that was previously encoded using the encode(_:forKey:) method.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1624492-decodeuiedgeinsets
+	     */
+
+	  }, {
+	    key: 'decodeUIEdgeInsetsForKey',
+	    value: function decodeUIEdgeInsetsForKey(key) {
+	      return null;
+	    }
+
+	    /**
+	     * Decodes and returns the UIOffset structure associated with the specified key in the receiver’s archive. 
+	     * @access public
+	     * @param {string} key - The key that identifies the offset.
+	     * @returns {UIOffset} - 
+	     * @desc Use this method to decode offset information that was previously encoded using the encode(_:forKey:) method.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1624507-decodeuioffset
+	     */
+
+	  }, {
+	    key: 'decodeUIOffsetForKey',
+	    value: function decodeUIOffsetForKey(key) {
+	      return null;
+	    }
+
+	    /**
+	     * Decodes and returns the CGVector data associated with the specified key in the coder’s archive.
+	     * @access public
+	     * @param {string} key - The key that identifies the vector.
+	     * @returns {CGVector} - 
+	     * @desc Use this method to decode vector information that was previously encoded using the encode(_:forKey:) method.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1624488-decodecgvector
+	     */
+
+	  }, {
+	    key: 'decodeCGVectorForKey',
+	    value: function decodeCGVectorForKey(key) {
+	      return null;
+	    }
+
+	    // Decoding Core Media Time Structures
+
+	    /**
+	     * Returns the CMTime structure associated with a given key.
+	     * @access public
+	     * @param {string} key - The key for a CMTime structure encoded in the receiver.
+	     * @returns {CMTime} - 
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1389544-decodetime
+	     */
+
+	  }, {
+	    key: 'decodeTimeForKey',
+	    value: function decodeTimeForKey(key) {
+	      return null;
+	    }
+
+	    /**
+	     * Returns the CMTimeRange structure associated with a given key.
+	     * @access public
+	     * @param {string} key - The key for a CMTimeRange structure encoded in the receiver.
+	     * @returns {CMTimeRange} - 
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1385718-decodetimerange
+	     */
+
+	  }, {
+	    key: 'decodeTimeRangeForKey',
+	    value: function decodeTimeRangeForKey(key) {
+	      return null;
+	    }
+
+	    /**
+	     * Returns the CMTimeMapping structure associated with a given key.
+	     * @access public
+	     * @param {string} key - The key for a CMTimeMapping structure encoded in the receiver.
+	     * @returns {CMTimeMapping} - 
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1389860-decodetimemapping
+	     */
+
+	  }, {
+	    key: 'decodeTimeMappingForKey',
+	    value: function decodeTimeMappingForKey(key) {
+	      return null;
+	    }
+
+	    // Secure Coding
+	    /**
+	     * Boolean value that indicates whether the coder requires secure coding.
+	     * @type {boolean}
+	     * @desc true if this coder requires secure coding; false otherwise.Secure coders check a set of allowed classes before decoding objects, and all objects must implement the NSSecureCoding protocol.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1409845-requiressecurecoding
+	     */
+
+	  }, {
+	    key: 'versionForClassName',
+
+
+	    // Getting Version Information
+
+	    /**
+	     * This method is present for historical reasons and is not used with keyed archivers.
+	     * @access public
+	     * @param {string} className - 
+	     * @returns {number} - 
+	     * @desc The version number does apply not to NSKeyedArchiver/NSKeyedUnarchiver.  A keyed archiver does not encode class version numbers.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1417703-version
+	     */
+	    value: function versionForClassName(className) {
+	      return 0;
+	    }
+	    /**
+	     * The system version in effect for the archive.
+	     * @type {number}
+	     * @desc During encoding, the current version. During decoding, the version that was in effect when the data was encoded.Subclasses that implement decoding must override this property to return the system version of the data being decoded.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1413205-systemversion
+	     */
+
+	  }, {
+	    key: 'decodeObjectOfClassForKey',
+
+
+	    // Instance Methods
+
+	    /**
+	     * 
+	     * @access public
+	     * @param {DecodedObjectType.Type} cls - 
+	     * @param {string} key - 
+	     * @returns {NSCoding} - 
+	     * @see https://developer.apple.com/reference/foundation/nscoder/2292924-decodeobject
+	     */
+	    value: function decodeObjectOfClassForKey(cls, key) {
+	      return null;
+	    }
+
+	    /**
+	     * 
+	     * @access public
+	     * @returns {void}
+	     * @throws {Error}
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1407699-decodetoplevelobject
+	     */
+
+	  }, {
+	    key: 'decodeTopLevelObject',
+	    value: function decodeTopLevelObject() {}
+
+	    /**
+	     * 
+	     * @access public
+	     * @param {string} key - 
+	     * @returns {void}
+	     * @throws {Error}
+	     * @see https://developer.apple.com/reference/foundation/nscoder/2293311-decodetoplevelobject
+	     */
+
+	  }, {
+	    key: 'decodeTopLevelObjectForKey',
+	    value: function decodeTopLevelObjectForKey(key) {}
+
+	    /**
+	     * 
+	     * @access public
+	     * @param {?Object[]} classes - 
+	     * @param {string} key - 
+	     * @returns {void}
+	     * @throws {Error}
+	     * @see https://developer.apple.com/reference/foundation/nscoder/2293221-decodetoplevelobject
+	     */
+
+	  }, {
+	    key: 'decodeTopLevelObjectOfForKey',
+	    value: function decodeTopLevelObjectOfForKey(classes, key) {}
+
+	    /**
+	     * 
+	     * @access public
+	     * @param {Error} error - 
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1411455-failwitherror
+	     */
+
+	  }, {
+	    key: 'failWithError',
+	    value: function failWithError(error) {}
+	  }, {
+	    key: 'allowsKeyedCoding',
+	    get: function get() {
+	      return this._allowsKeyedCoding;
+	    }
+	  }, {
+	    key: 'requiresSecureCoding',
+	    get: function get() {
+	      return this._requiresSecureCoding;
+	    }
+	    /**
+	     * The set of coded classes allowed for secure coding.
+	     * @type {?Set<AnyHashable>}
+	     * @desc Secure coders check this set of allowed classes before decoding objects, and all objects must implement the NSSecureCoding protocol.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1412486-allowedclasses
+	     */
+
+	  }, {
+	    key: 'allowedClasses',
+	    get: function get() {
+	      return this._allowedClasses;
+	    }
+	  }, {
+	    key: 'systemVersion',
+	    get: function get() {
+	      return this._systemVersion;
+	    }
+
+	    // Instance Properties
+	    /**
+	     * 
+	     * @type {NSCoder.DecodingFailurePolicy}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1642984-decodingfailurepolicy
+	     */
+
+	  }, {
+	    key: 'decodingFailurePolicy',
+	    get: function get() {
+	      return this._decodingFailurePolicy;
+	    }
+
+	    /**
+	     * 
+	     * @type {?Error}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1643263-error
+	     */
+
+	  }, {
+	    key: 'error',
+	    get: function get() {
+	      return this._error;
+	    }
+	  }], [{
+	    key: 'DecodingFailurePolicy',
+	    get: function get() {
+	      return _DecodingFailurePolicy;
+	    }
+	  }]);
+
+	  return NSCoder;
+	}(_NSObject3.default);
+
+	exports.default = NSCoder;
+
+/***/ },
+/* 20 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	/**
+	 * dummy class for NSKeyedArchiver/Unarchiver
+	 * @access public
+	 * @extends {NSObject}
+	 */
+	var NSData = function (_NSObject) {
+	  _inherits(NSData, _NSObject);
+
+	  function NSData() {
+	    _classCallCheck(this, NSData);
+
+	    return _possibleConstructorReturn(this, (NSData.__proto__ || Object.getPrototypeOf(NSData)).apply(this, arguments));
+	  }
+
+	  _createClass(NSData, null, [{
+	    key: 'initWithCoder',
+
+	    /**
+	     * @access public
+	     * @param {NSCoder} coder -
+	     * @returns {_Buffer} -
+	     */
+	    value: function initWithCoder(coder) {
+	      return coder.decodeBytesForKeyReturnedLength('NS.data', null);
+	    }
+	  }]);
+
+	  return NSData;
+	}(_NSObject3.default);
+
+	exports.default = NSData;
+
+/***/ },
+/* 21 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	/**
+	 * dummy class for NSKeyedArchiver/Unarchiver
+	 * @access public
+	 * @extends {NSObject}
+	 */
+	var NSDictionary = function (_NSObject) {
+	  _inherits(NSDictionary, _NSObject);
+
+	  function NSDictionary() {
+	    _classCallCheck(this, NSDictionary);
+
+	    return _possibleConstructorReturn(this, (NSDictionary.__proto__ || Object.getPrototypeOf(NSDictionary)).apply(this, arguments));
+	  }
+
+	  _createClass(NSDictionary, null, [{
+	    key: 'initWithCoder',
+
+	    /**
+	     * @access public
+	     * @param {NSCoder} coder -
+	     * @returns {Object} -
+	     */
+	    value: function initWithCoder(coder) {
+	      var dict = {};
+	      var keys = coder._refObj['NS.keys'];
+	      var objects = coder._refObj['NS.objects'];
+	      if (!Array.isArray(keys)) {
+	        throw new Error('NS.keys must be Array');
+	      }
+	      if (!Array.isArray(objects)) {
+	        throw new Error('NS.objects must be Array');
+	      }
+	      if (keys.length !== objects.length) {
+	        throw new Error('NS.keys.length !== NS.objects.length');
+	      }
+
+	      var keyCoder = coder.copy();
+	      keyCoder._refObj = keys;
+
+	      var objCoder = coder.copy();
+	      objCoder._refObj = objects;
+
+	      for (var i = 0; i < keys.length; i++) {
+	        var key = keyCoder.decodeObjectForKey(i);
+	        var obj = objCoder.decodeObjectForKey(i);
+	        dict[key] = obj;
+	      }
+
+	      return dict;
+	    }
+	  }]);
+
+	  return NSDictionary;
+	}(_NSObject3.default);
+
+	exports.default = NSDictionary;
+
+/***/ },
+/* 22 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSCoder2 = __webpack_require__(19);
+
+	var _NSCoder3 = _interopRequireDefault(_NSCoder2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	//import NSMutableData from './NSMutableData'
+	//import NSKeyedArchiverDelegate from '../undefined/NSKeyedArchiverDelegate'
+
+
+	/**
+	 * NSKeyedArchiver, a concrete subclass of NSCoder, provides a way to encode objects (and scalar values) into an architecture-independent format that can be stored in a file. When you archive a set of objects, the class information and instance variables for each object are written to the archive. NSKeyedArchiver’s companion class, NSKeyedUnarchiver, decodes the data in an archive and creates a set of objects equivalent to the original set.
+	 * @access public
+	 * @extends {NSCoder}
+	 * @see https://developer.apple.com/reference/foundation/nskeyedarchiver
+	 */
+	var NSKeyedArchiver = function (_NSCoder) {
+	  _inherits(NSKeyedArchiver, _NSCoder);
+
+	  // Initializers
+
+	  /**
+	   * 
+	   * @access public
+	   * @constructor
+	   * @see https://developer.apple.com/reference/foundation/nskeyedarchiver/1642790-init
+	   */
+	  function NSKeyedArchiver() {
+	    _classCallCheck(this, NSKeyedArchiver);
+
+	    // Archiving Data
+
+	    /**
+	     * The format in which the receiver encodes its data.
+	     * @type {PropertyListSerialization.PropertyListFormat}
+	     * @see https://developer.apple.com/reference/foundation/nskeyedarchiver/1417520-outputformat
+	     */
+	    var _this = _possibleConstructorReturn(this, (NSKeyedArchiver.__proto__ || Object.getPrototypeOf(NSKeyedArchiver)).call(this));
+
+	    _this.outputFormat = null;
+
+	    /**
+	     * Indicates whether the receiver requires all archived classes to conform to NSSecureCoding.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/reference/foundation/nskeyedarchiver/1417084-requiressecurecoding
+	     */
+	    _this.requiresSecureCoding = false;
+
+	    // Managing the Delegate
+
+	    /**
+	     * The archiver’s delegate.
+	     * @type {?NSKeyedArchiverDelegate}
+	     * @see https://developer.apple.com/reference/foundation/nskeyedarchiver/1412809-delegate
+	     */
+	    _this.delegate = null;
+
+	    // Instance Properties
+
+	    _this._encodedData = null;
+	    return _this;
+	  }
+
+	  // Initializing an NSKeyedArchiver Object
+
+	  /**
+	   * Returns the receiver, initialized for encoding an archive into a given a mutable-data object.
+	   * @access public
+	   * @param {NSMutableData} data - The mutable-data object into which the archive is written.
+	   * @returns {NSKeyedArchiver}
+	   * @desc When you finish encoding data, you must invoke finishEncoding() at which point data is filled. The format of the receiver is NSPropertyListBinaryFormat_v1_0.
+	   * @see https://developer.apple.com/reference/foundation/nskeyedarchiver/1409579-init
+	   */
+	  //initForWritingWith(data) {
+
+
+	  _createClass(NSKeyedArchiver, [{
+	    key: 'finishEncoding',
+
+
+	    /**
+	     * Instructs the receiver to construct the final data stream.
+	     * @access public
+	     * @returns {void}
+	     * @desc No more values can be encoded after this method is called. You must call this method when finished.
+	     * @see https://developer.apple.com/reference/foundation/nskeyedarchiver/1413904-finishencoding
+	     */
+	    value: function finishEncoding() {}
+
+	    // Encoding Data and Objects
+
+	    /**
+	     * Encodes a given float value and associates it with a given key.
+	     * @access public
+	     * @param {number} realv - The value to encode.
+	     * @param {string} key - The key with which to associate realv. This value must not be nil.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/foundation/nskeyedarchiver/1416972-encode
+	     */
+
+	  }, {
+	    key: 'encodeForKey',
+	    value: function encodeForKey(realv, key) {}
+
+	    /**
+	     * Encodes a given number of bytes from a given C array of bytes and associates them with the a given key.
+	     * @access public
+	     * @param {?UnsafePointer<UInt8>} bytesp - A C array of bytes to encode.
+	     * @param {number} lenv - The number of bytes from bytesp to encode.
+	     * @param {string} key - The key with which to associate the encoded value. This value must not be nil.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/foundation/nskeyedarchiver/1417696-encodebytes
+	     */
+
+	  }, {
+	    key: 'encodeBytesLengthForKey',
+	    value: function encodeBytesLengthForKey(bytesp, lenv, key) {}
+
+	    /**
+	     * Encodes a reference to a given object and associates it with a given key only if it has been unconditionally encoded elsewhere in the archive with encode(_:forKey:).
+	     * @access public
+	     * @param {?Object} objv - The object to encode. 
+	     * @param {string} key - The key with which to associate the encoded value. This value must not be nil.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/foundation/nskeyedarchiver/1413677-encodeconditionalobject
+	     */
+
+	  }, {
+	    key: 'encodeConditionalObjectForKey',
+	    value: function encodeConditionalObjectForKey(objv, key) {}
+
+	    // Managing Classes and Class Names
+
+	    /**
+	     * Adds a class translation mapping to the receiver whereby instances of of a given class are encoded with a given class name instead of their real class names.
+	     * @access public
+	     * @param {?string} codedName - 
+	     * @param {Object} cls - The class for which to set up a translation mapping.
+	     * @returns {void}
+	     * @desc When encoding, the receiver’s translation map overrides any translation that may also be present in the class’s map.
+	     * @see https://developer.apple.com/reference/foundation/nskeyedarchiver/1414746-setclassname
+	     */
+
+	  }, {
+	    key: 'encodedData',
+
+
+	    // Instance Properties
+	    /**
+	     * Returns the encoded data for the archiver.
+	     * @type {Data}
+	     * @desc If encoding has not yet finished, invoking this property calls finishEncoding() and returns the data. If you initialized the keyed archiver with a specific mutable data instance, then that data is returned by the property after finishEncoding() is called.
+	     * @see https://developer.apple.com/reference/foundation/nskeyedarchiver/1643042-encodeddata
+	     */
+	    get: function get() {
+	      return this._encodedData;
+	    }
+	  }], [{
+	    key: 'archiverForWritingWithData',
+	    value: function archiverForWritingWithData(data) {
+	      var instance = new NSKeyedArchiver();
+
+	      // TODO: implement
+
+	      return instance;
+	    }
+
+	    // Archiving Data
+
+	    /**
+	     * Returns an NSData object containing the encoded form of the object graph whose root object is given.
+	     * @access public
+	     * @param {Object} rootObject - 
+	     * @returns {Data} - 
+	     * @see https://developer.apple.com/reference/foundation/nskeyedarchiver/1413189-archiveddata
+	     */
+
+	  }, {
+	    key: 'archivedDataWithRootObject',
+	    value: function archivedDataWithRootObject(rootObject) {
+	      return null;
+	    }
+
+	    /**
+	     * Archives an object graph rooted at a given object by encoding it into a data object then atomically writes the resulting data object to a file at a given path, and returns a Boolean value that indicates whether the operation was successful.
+	     * @access public
+	     * @param {Object} rootObject - 
+	     * @param {string} path - The path of the file in which to write the archive.
+	     * @returns {boolean} - 
+	     * @desc The format of the archive is NSPropertyListBinaryFormat_v1_0.
+	     * @see https://developer.apple.com/reference/foundation/nskeyedarchiver/1410621-archiverootobject
+	     */
+
+	  }, {
+	    key: 'archiveRootObjectToFile',
+	    value: function archiveRootObjectToFile(rootObject, path) {
+	      return false;
+	    }
+	  }, {
+	    key: 'setClassNameFor',
+	    value: function setClassNameFor(codedName, cls) {}
+
+	    /**
+	     * Returns the class name with which the receiver encodes instances of a given class.
+	     * @access public
+	     * @param {Object} cls - The class for which to determine the translation mapping.
+	     * @returns {?string} - 
+	     * @see https://developer.apple.com/reference/foundation/nskeyedarchiver/1407245-classname
+	     */
+
+	  }, {
+	    key: 'classNameFor',
+	    value: function classNameFor(cls) {
+	      return null;
+	    }
+	  }]);
+
+	  return NSKeyedArchiver;
+	}(_NSCoder3.default);
+
+	exports.default = NSKeyedArchiver;
+
+/***/ },
+/* 23 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSCoder2 = __webpack_require__(19);
+
+	var _NSCoder3 = _interopRequireDefault(_NSCoder2);
+
+	var _NSData = __webpack_require__(20);
+
+	var _NSData2 = _interopRequireDefault(_NSData);
+
+	var _File2 = __webpack_require__(24);
+
+	var _File3 = _interopRequireDefault(_File2);
+
+	var _FileReader2 = __webpack_require__(25);
+
+	var _FileReader3 = _interopRequireDefault(_FileReader2);
+
+	var _BinaryReader2 = __webpack_require__(28);
+
+	var _BinaryReader3 = _interopRequireDefault(_BinaryReader2);
+
+	var _Buffer2 = __webpack_require__(6);
+
+	var _Buffer3 = _interopRequireDefault(_Buffer2);
+
+	var _ClassList2 = __webpack_require__(7);
+
+	var _ClassList3 = _interopRequireDefault(_ClassList2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var _classForKey = new Map();
+	var _loadingSymbol = Symbol('loading');
+
+	var _UID = function () {
+	  function _UID(unarchiver, value) {
+	    _classCallCheck(this, _UID);
+
+	    this._unarchiver = unarchiver;
+	    this._value = value;
+	  }
+
+	  _createClass(_UID, [{
+	    key: 'value',
+	    get: function get() {
+	      return this._value;
+	    }
+	  }, {
+	    key: 'obj',
+	    get: function get() {
+	      return this._unarchiver._parsedObj.$objects[this._value];
+	    }
+	  }]);
+
+	  return _UID;
+	}();
+
+	/**
+	 * NSKeyedUnarchiver, a concrete subclass of NSCoder, defines methods for decoding a set of named objects (and scalar values) from a keyed archive. Such archives are produced by instances of the NSKeyedArchiver class.
+	 * @access public
+	 * @extends {NSCoder}
+	 * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver
+	 */
+
+
+	var NSKeyedUnarchiver = function (_NSCoder) {
+	  _inherits(NSKeyedUnarchiver, _NSCoder);
+
+	  // Initializing a Keyed Unarchiver
+
+	  /**
+	   * Initializes the receiver for decoding an archive previously encoded by NSKeyedArchiver.
+	   * @access public
+	   * @constructor
+	   * @param {Data} data - An archive previously encoded by NSKeyedArchiver.
+	   * @desc When you finish decoding data, you should invoke finishDecoding(). This method throws an exception if data is not a valid archive.
+	   * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1410862-init
+	   */
+	  function NSKeyedUnarchiver() {
+	    var data = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+
+	    _classCallCheck(this, NSKeyedUnarchiver);
+
+	    // Unarchiving Data
+
+	    /**
+	     * Indicates whether the receiver requires all unarchived classes to conform to NSSecureCoding.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1410824-requiressecurecoding
+	     */
+	    var _this = _possibleConstructorReturn(this, (NSKeyedUnarchiver.__proto__ || Object.getPrototypeOf(NSKeyedUnarchiver)).call(this));
+
+	    _this._requiresSecureCoding = false;
+
+	    // Managing the Delegate
+
+	    /**
+	     * The receiver’s delegate.
+	     * @type {?NSKeyedUnarchiverDelegate}
+	     * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1415688-delegate
+	     */
+	    _this.delegate = null;
+
+	    // Instance Properties
+
+	    /**
+	     * 
+	     * @type {NSCoder.DecodingFailurePolicy}
+	     * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1643164-decodingfailurepolicy
+	     */
+	    _this._decodingFailurePolicy = null;
+
+	    /**
+	     * @access private
+	     * @type {?_BinaryReader}
+	     */
+	    _this._reader = null;
+
+	    /**
+	     * @access private
+	     * @type {number}
+	     */
+	    _this._offsetSize = 0;
+
+	    /**
+	     * @access private
+	     * @type {number}
+	     */
+	    _this._objCount = 0;
+
+	    /**
+	     * @access private
+	     * @type {Object[]}
+	     */
+	    _this._offsetArray = [];
+
+	    /**
+	     * @access private
+	     * @type {Object}
+	     */
+	    _this._parsedObj = {};
+
+	    /**
+	     * @access private
+	     * @type {Object[]}
+	     */
+	    _this._dataObj = [];
+
+	    _this._resolveFunctions = [];
+
+	    /**
+	     * @access private
+	     * @type {string}
+	     */
+	    _this._filePath = null;
+
+	    /**
+	     * @access private
+	     * @type {?Object}
+	     */
+	    _this._refObj = null;
+
+	    /**
+	     * @access private
+	     * @type {boolean}
+	     */
+	    _this._decodingFinished = false;
+
+	    if (data !== null) {
+	      _this._reader = new _BinaryReader3.default(data, true, 'utf8');
+	      _this._checkHeader();
+	      _this._parsedObj = _this._parseBPlist();
+	    }
+	    return _this;
+	  }
+
+	  _createClass(NSKeyedUnarchiver, [{
+	    key: 'copy',
+	    value: function copy() {
+	      var coder = new NSKeyedUnarchiver();
+	      coder._requiresSecureCoding = this._requiresSecureCoding;
+	      coder.delegate = this.delegate;
+	      coder._decodingFailurePolicy = this._decodingFailurePolicy;
+	      coder._reader = this._reader;
+	      coder._offsetSize = this._offsetSize;
+	      coder._objCount = this._objCount;
+	      coder._offsetArray = this._offsetArray;
+	      coder._parsedObj = this._parsedObj;
+	      coder._dataObj = this._dataObj;
+	      coder._resolveFunctions = this._resolveFunctions;
+	      coder._filePath = this._filePath;
+	      coder._refObj = this._refObj;
+	      coder._decodingFinished = this._decodingFinished;
+	      return coder;
+	    }
+
+	    // Unarchiving Data
+
+	    /**
+	     * Decodes and returns the object graph previously encoded by NSKeyedArchiver and stored in a given NSData object.
+	     * @access public
+	     * @param {Buffer} data - An object graph previously encoded by NSKeyedArchiver.
+	     * @returns {?Object} - 
+	     * @desc This method raises an invalidArchiveOperationException if data is not a valid archive.
+	     * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1413894-unarchiveobject
+	     */
+
+	  }, {
+	    key: '_checkHeader',
+	    value: function _checkHeader() {
+	      this._reader.seek(0);
+	      var header = this._reader.readString(8);
+	      if (header !== 'bplist00') {
+	        throw new Error('unsupported file format: ' + header);
+	      }
+	    }
+	  }, {
+	    key: '_parseBPlist',
+	    value: function _parseBPlist() {
+	      var reader = this._reader;
+
+	      // read basic info
+	      reader.seek(-26);
+	      var dataLen = reader.length;
+	      var intSize = reader.readUnsignedByte();
+	      this._offsetSize = reader.readUnsignedByte();
+	      this._objCount = reader.readUnsignedLongLong();
+	      var topIndex = reader.readUnsignedLongLong();
+	      var tablePos = reader.readUnsignedLongLong();
+
+	      console.log('dataLen: ' + dataLen);
+	      console.log('intSize: ' + intSize);
+	      console.log('offsetSize: ' + this._offsetSize);
+	      console.log('objCount: ' + this._objCount);
+	      console.log('topIndex: ' + topIndex);
+	      console.log('tablePos: ' + tablePos);
+
+	      this._offsetArray = [];
+	      var pos = tablePos;
+	      reader.seek(pos);
+	      var objCount = this._objCount;
+	      for (var i = 0; i < objCount; i++) {
+	        var offset = reader.readInteger(intSize);
+	        this._offsetArray.push(offset);
+	      }
+
+	      return this._parseObjAtIndex(topIndex);
+	    }
+	  }, {
+	    key: '_parseObjAtIndex',
+	    value: function _parseObjAtIndex(index) {
+	      return this._parseObj(this._offsetArray[index]);
+	    }
+	  }, {
+	    key: '_parseObj',
+	    value: function _parseObj() {
+	      var _this2 = this;
+
+	      var offset = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+	      var signed = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+
+	      var reader = this._reader;
+	      if (offset !== null) {
+	        reader.seek(offset);
+	      }
+	      var type = reader.readUnsignedByte();
+	      var type1 = type & 0xF0;
+	      var type2 = type & 0x0F;
+	      //console.log(`parseObj: type: ${type1} ${type2}`)
+	      if (type1 === 0x00) {
+	        // null, boolean
+	        if (type2 === 0) {
+	          console.log('   type: null');
+	          return null;
+	        } else if (type2 === 8) {
+	          console.log('   type: boolean');
+	          return false;
+	        } else if (type2 === 9) {
+	          console.log('   type: boolean');
+	          return true;
+	        }
+	      } else if (type1 === 0x10) {
+	        // Int
+	        var len = Math.pow(2, type2);
+	        console.log('   type: integer ' + len);
+	        return reader.readInteger(len, signed);
+	      } else if (type1 === 0x20) {
+	        // Float
+	        var _len = Math.pow(2, type2);
+	        if (_len === 4) {
+	          console.log('   type: float');
+	          return reader.readFloat();
+	        } else if (_len === 8) {
+	          console.log('   type: double');
+	          return reader.readDouble();
+	        }
+	        throw new Error('unsupported float size: ' + _len);
+	      } else if (type1 === 0x30) {
+	        // Date
+	        console.log('   type: Date');
+	      } else if (type1 === 0x40) {
+	        // Data
+	        var count = this._getDataSize(type2);
+	        console.log('   type: Data: length: ' + count);
+	        return reader.readData(count);
+	      } else if (type1 === 0x50) {
+	        // ASCII
+	        var _count = this._getDataSize(type2);
+	        console.log('   type: ascii ' + _count);
+	        return reader.readString(_count, 'ascii');
+	      } else if (type1 === 0x60) {
+	        // UTF-16
+	        var _count2 = this._getDataSize(type2);
+	        console.log('   type: UTF-16 ' + _count2);
+	        return reader.readString(_count2, 'utf16be'); // Big Endian might not be supported...
+	      } else if (type1 === 0x80) {
+	        // UID
+	        var uid = reader.readInteger(type2 + 1, false);
+	        console.log('   type: UID: ' + uid);
+	        return new _UID(this, uid);
+	      } else if (type1 === 0xA0) {
+	        // Array
+	        var _count3 = this._getDataSize(type2);
+	        console.log('   type: array: ' + _count3);
+	        var arrIndex = [];
+	        for (var i = 0; i < _count3; i++) {
+	          arrIndex.push(reader.readInteger(this._offsetSize, false));
+	        }
+	        var arr = arrIndex.map(function (index) {
+	          return _this2._parseObjAtIndex(index);
+	        });
+	        console.log('***arr.length: ' + arr.length);
+	        return arr;
+	      } else if (type1 === 0xC0) {
+	        // Set
+	        // TODO: implement
+	        throw new Error('parser for Set is not implemented yet.');
+	      } else if (type1 === 0xD0) {
+	        // Dictionary
+	        console.log('   type: dictionary');
+	        var _count4 = this._getDataSize(type2);
+	        var keyIndex = [];
+	        var valueIndex = [];
+	        for (var _i = 0; _i < _count4; _i++) {
+	          keyIndex.push(reader.readInteger(this._offsetSize, false));
+	        }
+	        for (var _i2 = 0; _i2 < _count4; _i2++) {
+	          valueIndex.push(reader.readInteger(this._offsetSize, false));
+	        }
+	        var result = {};
+	        for (var _i3 = 0; _i3 < _count4; _i3++) {
+	          var key = this._parseObjAtIndex(keyIndex[_i3]);
+	          console.log('key: ' + key);
+	          var val = this._parseObjAtIndex(valueIndex[_i3]);
+	          console.log('val: ' + val);
+	          result[key] = val;
+	        }
+	        return result;
+	      }
+
+	      throw new Error('unknown data type: ' + type);
+	    }
+	  }, {
+	    key: '_getDataSize',
+	    value: function _getDataSize(type2) {
+	      var count = 0;
+	      if (type2 !== 0x0F) {
+	        count = type2;
+	      } else {
+	        count = this._parseObj(null, false);
+	        if (typeof count !== 'number') {
+	          throw new Error('data size must be int type');
+	        }
+	      }
+	      return count;
+	    }
+	  }, {
+	    key: '_parseClassAt',
+	    value: function _parseClassAt(index) {
+	      var _this3 = this;
+
+	      var obj = this._parsedObj.$objects[index];
+	      if (this._dataObj[index] === _loadingSymbol) {
+	        // it seems to be a reference loop; return Promise
+	        return new Promise(function (resolve, reject) {
+	          if (typeof _this3._resolveFunctions[index] === 'undefined') {
+	            _this3._resolveFunctions[index] = [];
+	          }
+	          _this3._resolveFunctions[index].push(resolve);
+	        });
+	      } else if (typeof this._dataObj[index] !== 'undefined') {
+	        return this._dataObj[index];
+	      }
+	      this._dataObj[index] = _loadingSymbol;
+	      var data = this._parseClass(obj);
+	      this._dataObj[index] = data;
+	      if (Array.isArray(this._resolveFunctions[index])) {
+	        this._resolveFunctions[index].forEach(function (resolve) {
+	          resolve(data);
+	        });
+	        delete this._resolveFunctions[index];
+	      }
+	      return data;
+	    }
+	  }, {
+	    key: '_parseClass',
+	    value: function _parseClass(obj) {
+	      var className = obj.$class.obj.$classname;
+	      console.log('parseClass ' + className);
+	      var classObj = NSKeyedUnarchiver.classForClassName(className);
+	      if (classObj) {
+	        var unarchiver = this.copy();
+	        unarchiver._refObj = obj;
+	        return classObj.initWithCoder(unarchiver);
+	      }
+	      return null;
+	    }
+
+	    /**
+	     * @access private
+	     * @param {Object} obj -
+	     * @param {Object} classObj -
+	     * @returns {Object} -
+	     */
+
+	  }, {
+	    key: '_parseStruct',
+	    value: function _parseStruct(obj, classObj) {
+	      if (typeof classObj._initWithData !== 'function') {
+	        throw new Error(classObj.prototype.constructor.name + ' class doesn\'t have _initWithData function');
+	      }
+	      return classObj._initWithData(obj);
+	    }
+
+	    /**
+	     * Decodes and returns the object graph previously encoded by NSKeyedArchiver written to the file at a given path.
+	     * @access public
+	     * @param {string} path - A path to a file that contains an object graph previously encoded by NSKeyedArchiver.
+	     * @returns {Promise} - 
+	     * @desc This method raises an invalidArgumentException if the file at path does not contain a valid archive.
+	     * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1417153-unarchiveobject
+	     */
+
+	  }, {
+	    key: 'containsValueForKey',
+
+
+	    // Decoding Data
+
+	    /**
+	     * Returns a Boolean value that indicates whether the archive contains a value for a given key within the current decoding scope.
+	     * @access public
+	     * @param {string} key - A key in the archive within the current decoding scope. key must not be nil.
+	     * @returns {boolean} - 
+	     * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1413564-containsvalue
+	     */
+	    value: function containsValueForKey(key) {
+	      return typeof this._refObj[key] !== 'undefined';
+	    }
+
+	    /**
+	     * Decodes a Boolean value associated with a given key.
+	     * @access public
+	     * @param {string} key - A key in the archive within the current decoding scope. key must not be nil.
+	     * @returns {boolean} - 
+	     * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1413260-decodebool
+	     */
+
+	  }, {
+	    key: 'decodeBoolForKey',
+	    value: function decodeBoolForKey(key) {
+	      if (this._decodingFinished) {
+	        throw new Error('can\'t decode \'' + key + '\' after finishDecoding() is called');
+	      }
+	      return !!this._refObj[key];
+	    }
+
+	    /**
+	     * Decodes a stream of bytes associated with a given key.
+	     * @access public
+	     * @param {string} key - A key in the archive within the current decoding scope. key must not be nil.
+	     * @param {?UnsafeMutablePointer<Int>} lengthp - Upon return, contains the number of bytes returned.
+	     * @returns {?UnsafePointer<UInt8>} - 
+	     * @desc The returned value is a pointer to a temporary buffer owned by the receiver. The buffer goes away with the unarchiver, not the containing autorelease pool block. You must copy the bytes into your own buffer if you need the data to persist beyond the life of the receiver.
+	     * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1418091-decodebytes
+	     */
+
+	  }, {
+	    key: 'decodeBytesForKeyReturnedLength',
+	    value: function decodeBytesForKeyReturnedLength(key, lengthp) {
+	      if (this._decodingFinished) {
+	        throw new Error('can\'t decode \'' + key + '\' after finishDecoding() is called');
+	      }
+	      return this._refObj[key];
+	    }
+
+	    /**
+	     * Decodes a double-precision floating-point value associated with a given key.
+	     * @access public
+	     * @param {string} key - A key in the archive within the current decoding scope. key must not be nil.
+	     * @returns {number} - 
+	     * @desc If the archived value was encoded as single-precision, the type is coerced. 
+	     * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1414963-decodedouble
+	     */
+
+	  }, {
+	    key: 'decodeDoubleForKey',
+	    value: function decodeDoubleForKey(key) {
+	      if (this._decodingFinished) {
+	        throw new Error('can\'t decode \'' + key + '\' after finishDecoding() is called');
+	      }
+	      return this._refObj[key];
+	    }
+
+	    /**
+	     * Decodes a single-precision floating-point value associated with a given key.
+	     * @access public
+	     * @param {string} key - A key in the archive within the current decoding scope. key must not be nil.
+	     * @returns {number} - 
+	     * @desc If the archived value was encoded as double precision, the type is coerced, loosing precision. If the archived value is too large for single precision, the method raises an NSRangeException. 
+	     * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1412252-decodefloat
+	     */
+
+	  }, {
+	    key: 'decodeFloatForKey',
+	    value: function decodeFloatForKey(key) {
+	      if (this._decodingFinished) {
+	        throw new Error('can\'t decode \'' + key + '\' after finishDecoding() is called');
+	      }
+	      return this._refObj[key];
+	    }
+
+	    /**
+	     * Decodes and returns an int value that was previously encoded with encodeCInt(_:forKey:), encode(_:forKey:), encode(_:forKey:), or encode(_:forKey:) and associated with the string key.
+	     * @access public
+	     * @param {string} key - 
+	     * @returns {number} - 
+	     * @desc If the encoded integer does not fit into the default integer size, the method raises an NSRangeException. Subclasses must override this method if they perform keyed coding.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1411168-decodecint
+	     */
+
+	  }, {
+	    key: 'decodeCIntForKey',
+	    value: function decodeCIntForKey(key) {
+	      if (this._decodingFinished) {
+	        throw new Error('can\'t decode \'' + key + '\' after finishDecoding() is called');
+	      }
+	      return this._refObj[key];
+	    }
+
+	    /**
+	     * Decodes a 32-bit integer value associated with a given key.
+	     * @access public
+	     * @param {string} key - A key in the archive within the current decoding scope. key must not be nil.
+	     * @returns {number} - 
+	     * @desc If the archived value was encoded with a different size but is still an integer, the type is coerced. If the archived value is too large to fit into a 32-bit integer, the method raises an NSRangeException. 
+	     * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1416327-decodeint32
+	     */
+
+	  }, {
+	    key: 'decodeInt32ForKey',
+	    value: function decodeInt32ForKey(key) {
+	      if (this._decodingFinished) {
+	        throw new Error('can\'t decode \'' + key + '\' after finishDecoding() is called');
+	      }
+	      return this._refObj[key];
+	    }
+
+	    /**
+	     * Decodes a 64-bit integer value associated with a given key.
+	     * @access public
+	     * @param {string} key - A key in the archive within the current decoding scope. key must not be nil.
+	     * @returns {Int64} - 
+	     * @desc If the archived value was encoded with a different size but is still an integer, the type is coerced. 
+	     * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1413288-decodeint64
+	     */
+
+	  }, {
+	    key: 'decodeInt64ForKey',
+	    value: function decodeInt64ForKey(key) {
+	      if (this._decodingFinished) {
+	        throw new Error('can\'t decode \'' + key + '\' after finishDecoding() is called');
+	      }
+	      return this._refObj[key];
+	    }
+
+	    /**
+	     * Decodes and returns an object associated with a given key.
+	     * @access public
+	     * @param {string} key - A key in the archive within the current decoding scope. key must not be nil.
+	     * @returns {?Object} - 
+	     * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1409082-decodeobject
+	     */
+
+	  }, {
+	    key: 'decodeObjectForKey',
+	    value: function decodeObjectForKey(key) {
+	      if (this._decodingFinished) {
+	        throw new Error('can\'t decode \'' + key + '\' after finishDecoding() is called');
+	      }
+	      var parsedObj = this._refObj[key];
+	      if (typeof parsedObj === 'string') {
+	        return parsedObj;
+	      } else if (parsedObj instanceof _UID) {
+	        var obj = parsedObj.obj;
+	        if (typeof obj.$class !== 'undefined') {
+	          return this._parseClassAt(parsedObj.value);
+	        }
+	        return obj;
+	      }
+	      throw new Error('unknown data type for key ' + key + ': ' + parsedObj);
+	    }
+
+	    /**
+	     * Returns a decoded property list for the specified key.
+	     * @access public
+	     * @param {string} key - The coder key.
+	     * @returns {?Object} - 
+	     * @desc This method calls decodeObjectOfClasses:forKey: with a set allowing only property list types.
+	     * @see https://developer.apple.com/reference/foundation/nscoder/1416284-decodepropertylist
+	     */
+
+	  }, {
+	    key: 'decodePropertyListForKey',
+	    value: function decodePropertyListForKey(key) {
+	      if (this._decodingFinished) {
+	        throw new Error('can\'t decode \'' + key + '\' after finishDecoding() is called');
+	      }
+	      var parsedObj = this.decodeObjectForKey(key);
+	      console.log(key + ': ' + parsedObj.constructor.name);
+	      if (!(parsedObj instanceof _Buffer3.default)) {
+	        throw new Error('propertylist of key ' + key + ' is not _Buffer data');
+	      }
+	      console.log('***header: ' + parsedObj.toString('ascii', 0, 8));
+	      console.log('length: ' + parsedObj.length);
+	      for (var i = 0; i < 8; i++) {
+	        console.log(i + ': ' + parsedObj.readUIntBE(i, 1));
+	      }
+	      return NSKeyedUnarchiver.unarchiveObjectWithData(parsedObj, this._filePath);
+	    }
+	  }, {
+	    key: 'decodeObjectOfTypeForKey',
+	    value: function decodeObjectOfTypeForKey(type, key) {
+	      if (this._decodingFinished) {
+	        throw new Error('can\'t decode \'' + key + '\' after finishDecoding() is called');
+	      }
+	      var parsedObj = this._refObj[key];
+	      if (!(parsedObj instanceof _Buffer3.default)) {
+	        throw new Error('value is not _Buffer data for key: ' + key);
+	      }
+	      return this._parseStruct(parsedObj, type);
+	    }
+	  }, {
+	    key: 'finishDecoding',
+
+
+	    /**
+	     * Tells the receiver that you are finished decoding objects.
+	     * @access public
+	     * @returns {void}
+	     * @desc Invoking this method allows the receiver to notify its delegate and to perform any final operations on the archive. Once this method is invoked, the receiver cannot decode any further values.
+	     * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1418233-finishdecoding
+	     */
+	    value: function finishDecoding() {
+	      this._decodingFinished = true;
+	    }
+
+	    // Managing Class Names
+
+	    /**
+	     * Adds a class translation mapping to the receiver whereby objects encoded with a given class name are decoded as instances of a given class instead.
+	     * @access public
+	     * @param {?Object} cls - The class with which to replace instances of the class named codedName.
+	     * @param {string} codedName - 
+	     * @returns {void}
+	     * @desc When decoding, the receiver’s translation map overrides any translation that may also be present in the class’s map (see setClass(_:forClassName:)).
+	     * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1414659-setclass
+	     */
+
+	  }, {
+	    key: '_fileName',
+	    get: function get() {
+	      if (this._filePath === null) {
+	        return null;
+	      }
+	      var paths = this._filePath.split('/');
+	      var fileName = paths.pop();
+	      return fileName;
+	    }
+	  }, {
+	    key: '_directoryPath',
+	    get: function get() {
+	      if (this._filePath === null) {
+	        return null;
+	      }
+	      var paths = this._filePath.split('/');
+	      var fileName = paths.pop();
+	      var directoryPath = paths.join('/') + '/';
+	      return directoryPath;
+	    }
+	  }], [{
+	    key: 'unarchiveObjectWithData',
+	    value: function unarchiveObjectWithData(data) {
+	      var path = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
+	      var unarchiver = new NSKeyedUnarchiver(data);
+	      unarchiver._filePath = path;
+	      var topObjIndex = unarchiver._parsedObj.$top.root.value;
+	      return unarchiver._parseClassAt(topObjIndex);
+	    }
+	  }, {
+	    key: '_getBufferOfFile',
+	    value: function _getBufferOfFile(path) {
+	      // TODO: use 'await' to return Buffer instead of Promise
+	      var promise = new Promise(function (resolve, reject) {
+	        var file = new _File3.default([], path);
+	        var reader = new _FileReader3.default();
+	        reader.onloadend = function () {
+	          var data = reader.result;
+	          resolve(data);
+	        };
+	        reader.onerror = function () {
+	          reject(reader.error);
+	        };
+	        reader.readAsBinaryString(file);
+	      });
+	      return promise;
+	    }
+	  }, {
+	    key: 'unarchiveObjectWithFile',
+	    value: function unarchiveObjectWithFile(path) {
+	      var promise = NSKeyedUnarchiver._getBufferOfFile(path).then(function (data) {
+	        return NSKeyedUnarchiver.unarchiveObjectWithData(data, path);
+	      });
+
+	      return promise;
+	    }
+	  }, {
+	    key: 'setClassForClassName',
+	    value: function setClassForClassName(cls, codedName) {
+	      _classForKey.set(codedName, cls);
+	    }
+
+	    /**
+	     * Returns the class from which the receiver instantiates an encoded object with a given class name.
+	     * @access public
+	     * @param {string} codedName - 
+	     * @returns {?Object} - 
+	     * @desc The class’s separate translation map is not searched.
+	     * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1412476-class
+	     */
+
+	  }, {
+	    key: 'classForClassName',
+	    value: function classForClassName(codedName) {
+	      var classObj = _classForKey.get(codedName);
+	      if (classObj) {
+	        return classObj;
+	      }
+	      return _ClassList3.default.get(codedName);
+	    }
+
+	    // Type Methods
+
+	    /**
+	     * 
+	     * @access public
+	     * @param {NSData} data - 
+	     * @returns {void}
+	     * @throws {Error}
+	     * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1413622-unarchivetoplevelobjectwithdata
+	     */
+
+	  }, {
+	    key: 'unarchiveTopLevelObjectWithData',
+	    value: function unarchiveTopLevelObjectWithData(data) {
+	      var path = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
+	      // what's different from unarchiveObjectWithData???
+	      return NSKeyedUnarchiver.unarchiveObjectWithData(data, path);
+	    }
+	  }]);
+
+	  return NSKeyedUnarchiver;
+	}(_NSCoder3.default);
+
+	exports.default = NSKeyedUnarchiver;
+
+/***/ },
+/* 24 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/*global File*/
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var _File = null;
+	if (typeof File !== 'undefined') {
+	  _File = File;
+	} else {
+	  var _File2 = function () {
+	    /**
+	     * @access public
+	     * @constructor
+	     * @param {array} fileBits -
+	     * @param {string} fileName -
+	     * @param {Object} options -
+	     */
+	    function _File2(fileBits, fileName, options) {
+	      _classCallCheck(this, _File2);
+
+	      this._lastModified = null;
+	      this._lastModifiedDate = null;
+	      this._name = fileName;
+	      this._size = null;
+	      this._webkitRelativePath = null;
+	      this._type = null;
+	    }
+
+	    _createClass(_File2, [{
+	      key: 'lastModified',
+	      get: function get() {
+	        return this._lastModified;
+	      }
+	    }, {
+	      key: 'lastModifiedDate',
+	      get: function get() {
+	        return this._lastModifiedDate;
+	      }
+	    }, {
+	      key: 'name',
+	      get: function get() {
+	        return this._name;
+	      }
+	    }, {
+	      key: 'size',
+	      get: function get() {
+	        return this._size;
+	      }
+	    }, {
+	      key: 'webkitRelativePath',
+	      get: function get() {
+	        return this._webkitRelativePath;
+	      }
+	    }, {
+	      key: 'type',
+	      get: function get() {
+	        return this._type;
+	      }
+	    }]);
+
+	    return _File2;
+	  }();
+
+	  _File = _File2;
+	}
+
+	exports.default = _File;
+
+/***/ },
+/* 25 */
+/***/ function(module, exports, __webpack_require__) {
+
+	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _File2 = __webpack_require__(24);
+
+	var _File3 = _interopRequireDefault(_File2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	/*global FileReader, require*/
+	var _FileReader = null;
+	if (typeof FileReader !== 'undefined') {
+	  _FileReader = FileReader;
+	}
+	if (typeof process !== 'undefined') {
+	  var fs = __webpack_require__(27);
+	  var EMPTY = 0;
+	  var LOADING = 1;
+	  var DONE = 2;
+
+	  var _FileReader2 = function () {
+	    /**
+	     * @access public
+	     * @constructor
+	     */
+	    function _FileReader2() {
+	      _classCallCheck(this, _FileReader2);
+
+	      this.onabort = null;
+	      this.onerror = null;
+	      this.onload = null;
+	      this.onloadstart = null;
+
+	      /**
+	       * @type {function}
+	       */
+	      this.onloadend = null;
+
+	      this.onprogress = null;
+
+	      this._error = null;
+	      this._readyState = EMPTY;
+	      this._result = null;
+	    }
+
+	    _createClass(_FileReader2, [{
+	      key: 'abort',
+	      value: function abort() {}
+
+	      /**
+	       * @access public
+	       * @param {Blob|File} blob -
+	       * @returns {void}
+	       */
+
+	    }, {
+	      key: 'readAsArrayBuffer',
+	      value: function readAsArrayBuffer(blob) {
+	        this._read(blob, 'ArrayBuffer');
+	      }
+
+	      /**
+	       * @access public
+	       * @param {Blob|File} blob -
+	       * @returns {void}
+	       */
+
+	    }, {
+	      key: 'readAsBinaryString',
+	      value: function readAsBinaryString(blob) {
+	        this._read(blob, 'BinaryString');
+	      }
+
+	      /**
+	       * @access public
+	       * @param {Blob|File} blob -
+	       * @param {string} [encoding = 'utf8'] -
+	       * @returns {void}
+	       */
+
+	    }, {
+	      key: 'readAsText',
+	      value: function readAsText(blob) {
+	        var encoding = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 'utf8';
+
+	        this._read(blob, 'Text', encoding);
+	      }
+
+	      /**
+	       * @access public
+	       * @param {Blob|File} blob -
+	       * @returns {void}
+	       */
+
+	    }, {
+	      key: 'readAsDataURL',
+	      value: function readAsDataURL(blob) {
+	        this._read(blob, 'DataURL');
+	      }
+	    }, {
+	      key: '_read',
+	      value: function _read(blob, type) {
+	        var _this = this;
+
+	        var encoding = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+
+	        if (this._readyState === LOADING) {
+	          throw new Error('InvalidStateError');
+	        }
+	        this._readyState = LOADING;
+
+	        if (blob instanceof _File3.default) {
+	          fs.readFile(blob.name, encoding, function (err, data) {
+	            if (err) {
+	              _this._error = err;
+	              if (_this.onerror !== null) {
+	                _this.onerror();
+	              }
+	            }
+
+	            _this._readyState = DONE;
+
+	            switch (type) {
+	              case 'ArrayBuffer':
+	                _this._result = data;
+	                break;
+	              case 'BinaryString':
+	                _this._result = data;
+	                break;
+	              case 'Text':
+	                _this._result = data;
+	                break;
+	              case 'DataURL':
+	                _this._result = data;
+	                break;
+	              default:
+	                throw new Error('unknown return type');
+	            }
+
+	            if (_this._readyState !== LOADING) {
+	              if (_this.onloadend !== null) {
+	                _this.onloadend();
+	              }
+	            }
+	          });
+	        }
+	      }
+	    }, {
+	      key: 'error',
+	      get: function get() {
+	        return this._error;
+	      }
+	    }, {
+	      key: 'readyState',
+	      get: function get() {
+	        return this._readyState;
+	      }
+
+	      /**
+	       * @type {Blob|string}
+	       */
+
+	    }, {
+	      key: 'result',
+	      get: function get() {
+	        return this._result;
+	      }
+	    }]);
+
+	    return _FileReader2;
+	  }();
+
+	  _FileReader = _FileReader2;
+	}
+
+	exports.default = _FileReader;
+	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(26)))
+
+/***/ },
+/* 26 */
+/***/ function(module, exports) {
+
+	// shim for using process in browser
+	var process = module.exports = {};
+
+	// cached from whatever global is present so that test runners that stub it
+	// don't break things.  But we need to wrap it in a try catch in case it is
+	// wrapped in strict mode code which doesn't define any globals.  It's inside a
+	// function because try/catches deoptimize in certain engines.
+
+	var cachedSetTimeout;
+	var cachedClearTimeout;
+
+	function defaultSetTimout() {
+	    throw new Error('setTimeout has not been defined');
+	}
+	function defaultClearTimeout () {
+	    throw new Error('clearTimeout has not been defined');
+	}
+	(function () {
+	    try {
+	        if (typeof setTimeout === 'function') {
+	            cachedSetTimeout = setTimeout;
+	        } else {
+	            cachedSetTimeout = defaultSetTimout;
+	        }
+	    } catch (e) {
+	        cachedSetTimeout = defaultSetTimout;
+	    }
+	    try {
+	        if (typeof clearTimeout === 'function') {
+	            cachedClearTimeout = clearTimeout;
+	        } else {
+	            cachedClearTimeout = defaultClearTimeout;
+	        }
+	    } catch (e) {
+	        cachedClearTimeout = defaultClearTimeout;
+	    }
+	} ())
+	function runTimeout(fun) {
+	    if (cachedSetTimeout === setTimeout) {
+	        //normal enviroments in sane situations
+	        return setTimeout(fun, 0);
+	    }
+	    // if setTimeout wasn't available but was latter defined
+	    if ((cachedSetTimeout === defaultSetTimout || !cachedSetTimeout) && setTimeout) {
+	        cachedSetTimeout = setTimeout;
+	        return setTimeout(fun, 0);
+	    }
+	    try {
+	        // when when somebody has screwed with setTimeout but no I.E. maddness
+	        return cachedSetTimeout(fun, 0);
+	    } catch(e){
+	        try {
+	            // When we are in I.E. but the script has been evaled so I.E. doesn't trust the global object when called normally
+	            return cachedSetTimeout.call(null, fun, 0);
+	        } catch(e){
+	            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error
+	            return cachedSetTimeout.call(this, fun, 0);
+	        }
+	    }
+
+
+	}
+	function runClearTimeout(marker) {
+	    if (cachedClearTimeout === clearTimeout) {
+	        //normal enviroments in sane situations
+	        return clearTimeout(marker);
+	    }
+	    // if clearTimeout wasn't available but was latter defined
+	    if ((cachedClearTimeout === defaultClearTimeout || !cachedClearTimeout) && clearTimeout) {
+	        cachedClearTimeout = clearTimeout;
+	        return clearTimeout(marker);
+	    }
+	    try {
+	        // when when somebody has screwed with setTimeout but no I.E. maddness
+	        return cachedClearTimeout(marker);
+	    } catch (e){
+	        try {
+	            // When we are in I.E. but the script has been evaled so I.E. doesn't  trust the global object when called normally
+	            return cachedClearTimeout.call(null, marker);
+	        } catch (e){
+	            // same as above but when it's a version of I.E. that must have the global object for 'this', hopfully our context correct otherwise it will throw a global error.
+	            // Some versions of I.E. have different rules for clearTimeout vs setTimeout
+	            return cachedClearTimeout.call(this, marker);
+	        }
+	    }
+
+
+
+	}
+	var queue = [];
+	var draining = false;
+	var currentQueue;
+	var queueIndex = -1;
+
+	function cleanUpNextTick() {
+	    if (!draining || !currentQueue) {
+	        return;
+	    }
+	    draining = false;
+	    if (currentQueue.length) {
+	        queue = currentQueue.concat(queue);
+	    } else {
+	        queueIndex = -1;
+	    }
+	    if (queue.length) {
+	        drainQueue();
+	    }
+	}
+
+	function drainQueue() {
+	    if (draining) {
+	        return;
+	    }
+	    var timeout = runTimeout(cleanUpNextTick);
+	    draining = true;
+
+	    var len = queue.length;
+	    while(len) {
+	        currentQueue = queue;
+	        queue = [];
+	        while (++queueIndex < len) {
+	            if (currentQueue) {
+	                currentQueue[queueIndex].run();
+	            }
+	        }
+	        queueIndex = -1;
+	        len = queue.length;
+	    }
+	    currentQueue = null;
+	    draining = false;
+	    runClearTimeout(timeout);
+	}
+
+	process.nextTick = function (fun) {
+	    var args = new Array(arguments.length - 1);
+	    if (arguments.length > 1) {
+	        for (var i = 1; i < arguments.length; i++) {
+	            args[i - 1] = arguments[i];
+	        }
+	    }
+	    queue.push(new Item(fun, args));
+	    if (queue.length === 1 && !draining) {
+	        runTimeout(drainQueue);
+	    }
+	};
+
+	// v8 likes predictible objects
+	function Item(fun, array) {
+	    this.fun = fun;
+	    this.array = array;
+	}
+	Item.prototype.run = function () {
+	    this.fun.apply(null, this.array);
+	};
+	process.title = 'browser';
+	process.browser = true;
+	process.env = {};
+	process.argv = [];
+	process.version = ''; // empty string to avoid regexp issues
+	process.versions = {};
+
+	function noop() {}
+
+	process.on = noop;
+	process.addListener = noop;
+	process.once = noop;
+	process.off = noop;
+	process.removeListener = noop;
+	process.removeAllListeners = noop;
+	process.emit = noop;
+
+	process.binding = function (name) {
+	    throw new Error('process.binding is not supported');
+	};
+
+	process.cwd = function () { return '/' };
+	process.chdir = function (dir) {
+	    throw new Error('process.chdir is not supported');
+	};
+	process.umask = function() { return 0; };
+
+
+/***/ },
+/* 27 */
+/***/ function(module, exports) {
+
+	module.exports = require("fs");
+
+/***/ },
+/* 28 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _Buffer2 = __webpack_require__(6);
+
+	var _Buffer3 = _interopRequireDefault(_Buffer2);
+
+	var _ecl = __webpack_require__(29);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	/**
+	 * BinaryReader class
+	 * @access public
+	 */
+	var _BinaryReader = function () {
+	  /**
+	   * constructor
+	   * @param {Buffer|ArrayBuffer} data - 
+	   * @param {boolean} bigEndian -
+	   * @param {string} encoding -
+	   * @constructor
+	   */
+	  function _BinaryReader(data) {
+	    var bigEndian = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+	    var encoding = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';
+
+	    _classCallCheck(this, _BinaryReader);
+
+	    /**
+	     * @access private
+	     * @type {number}
+	     */
+	    this._pos = 0;
+
+	    /**
+	     * @access private
+	     * @type {boolean}
+	     */
+	    this._eof = true;
+
+	    /**
+	     *
+	     * @access public
+	     * @type {Buffer}
+	     */
+	    this.buffer = null;
+
+	    if (data instanceof _Buffer3.default) {
+	      this.buffer = data;
+	    } else {
+	      this.buffer = _Buffer3.default.from(data);
+	    }
+
+	    /**
+	     *
+	     * @access public
+	     * @type {boolean}
+	     */
+	    this.bigEndian = bigEndian;
+
+	    /**
+	     *
+	     * @access public
+	     * @type {string}
+	     */
+	    this.encoding = encoding;
+	  }
+
+	  /**
+	   * @access public
+	   * @param {number} length - length of data to skip
+	   * @param {boolean} noAssert -
+	   * @returns {void}
+	   */
+
+
+	  _createClass(_BinaryReader, [{
+	    key: 'skip',
+	    value: function skip(length) {
+	      var noAssert = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+	      this._pos += length;
+	      if (!noAssert) {
+	        this._check();
+	      }
+	    }
+
+	    /**
+	     * @access public
+	     * @param {number} pos -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: 'seek',
+	    value: function seek(pos) {
+	      if (pos < 0) {
+	        this._pos = this.buffer.length + pos;
+	      } else {
+	        this._pos = pos;
+	      }
+
+	      if (this._pos < 0) {
+	        this._pos = 0;
+	      } else if (this._pos > this.buffer.length) {
+	        this._pos = this.buffer.length;
+	      }
+	    }
+
+	    /**
+	     *
+	     * @access public
+	     * @param {number} length - length of data to read
+	     * @param {?string} [encoding = null] -
+	     * @returns {string} -
+	     */
+
+	  }, {
+	    key: 'readString',
+	    value: function readString(length) {
+	      var encoding = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
+	      var start = this._pos;
+	      this._pos += length;
+	      var _encoding = encoding || this.encoding || 'sjis';
+	      if (_Buffer3.default.isEncoding(_encoding)) {
+	        return this.buffer.toString(_encoding, start, this._pos);
+	      }
+
+	      var data = this.buffer.toString('binary', start, this._pos);
+	      return this._convert(data, _encoding);
+	    }
+
+	    /**
+	     *
+	     * @access public
+	     * @param {number} length - 
+	     * @param {boolean} signed -
+	     * @returns {number} -
+	     */
+
+	  }, {
+	    key: 'readInteger',
+	    value: function readInteger(length, signed) {
+	      var start = this._pos;
+	      this._pos += length;
+
+	      // big endian
+	      if (this.bigEndian) {
+	        if (signed) {
+	          return this.buffer.readIntBE(start, length);
+	        }
+	        return this.buffer.readUIntBE(start, length);
+	      }
+
+	      // little endian
+	      if (signed) {
+	        return this.buffer.readIntLE(start, length);
+	      }
+	      return this.buffer.readUIntLE(start, length);
+	    }
+
+	    /**
+	     *
+	     * @access public
+	     * @returns {number} -
+	     */
+
+	  }, {
+	    key: 'readUnsignedByte',
+	    value: function readUnsignedByte() {
+	      return this.readInteger(1, false);
+	    }
+
+	    /**
+	     *
+	     * @access public
+	     * @returns {number} -
+	     */
+
+	  }, {
+	    key: 'readUnsignedShort',
+	    value: function readUnsignedShort() {
+	      return this.readInteger(2, false);
+	    }
+
+	    /**
+	     *
+	     * @access public
+	     * @returns {number} -
+	     */
+
+	  }, {
+	    key: 'readUnsignedInt',
+	    value: function readUnsignedInt() {
+	      return this.readInteger(4, false);
+	    }
+
+	    /**
+	     *
+	     * @access public
+	     * @returns {number} -
+	     */
+
+	  }, {
+	    key: 'readUnsignedLongLong',
+	    value: function readUnsignedLongLong() {
+	      return this.readInteger(8, false);
+	    }
+
+	    /**
+	     *
+	     * @access public
+	     * @returns {number} -
+	     */
+
+	  }, {
+	    key: 'readByte',
+	    value: function readByte() {
+	      return this.readInteger(1, true);
+	    }
+
+	    /**
+	     *
+	     * @access public
+	     * @returns {number} -
+	     */
+
+	  }, {
+	    key: 'readShort',
+	    value: function readShort() {
+	      return this.readInteger(2, true);
+	    }
+
+	    /**
+	     *
+	     * @access public
+	     * @returns {number} -
+	     */
+
+	  }, {
+	    key: 'readInt',
+	    value: function readInt() {
+	      return this.readInteger(4, true);
+	    }
+
+	    /**
+	     *
+	     * @access public
+	     * @returns {number} -
+	     */
+
+	  }, {
+	    key: 'readLongLong',
+	    value: function readLongLong() {
+	      return this.readInteger(8, true);
+	    }
+
+	    /**
+	     *
+	     * @access public
+	     * @returns {number} -
+	     */
+
+	  }, {
+	    key: 'readFloat',
+	    value: function readFloat() {
+	      var start = this._pos;
+	      this._pos += 4;
+	      if (this.bigEndian) {
+	        return this.buffer.readFloatBE(start);
+	      }
+
+	      return this.buffer.readFloatLE(start);
+	    }
+
+	    /**
+	     *
+	     * @access public
+	     * @returns {number} -
+	     */
+
+	  }, {
+	    key: 'readDouble',
+	    value: function readDouble() {
+	      var start = this._pos;
+	      this._pos += 8;
+	      if (this.bigEndian) {
+	        return this.buffer.readDoubleBE(start);
+	      }
+
+	      return this.buffer.readDoubleLE(start);
+	    }
+
+	    /**
+	     *
+	     * @access public
+	     * @param {number} length -
+	     * @returns {Buffer} -
+	     */
+
+	  }, {
+	    key: 'readData',
+	    value: function readData(length) {
+	      var start = this._pos;
+	      this._pos += length;
+	      return this.buffer.slice(start, this._pos);
+	    }
+
+	    /**
+	     *
+	     * @access private
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_check',
+	    value: function _check() {
+	      if (this._pos >= this.buffer.length) {
+	        throw new Error('_BinaryReader: buffer out of range (' + this._pos + ' >= ' + this.buffer.length + ')');
+	      }
+	    }
+
+	    /**
+	     *
+	     * @access private
+	     * @param {number[]} data - length of data to convert
+	     * @param {?string} [encoding = null] -
+	     * @returns {string} -
+	     */
+
+	  }, {
+	    key: '_convert',
+	    value: function _convert(data, encoding) {
+	      var length = data.length;
+	      var escapeString = '';
+	      for (var i = 0; i < length; i++) {
+	        var charCode = data.charCodeAt(i);
+	        if (charCode === 0) {
+	          break;
+	        } else if (charCode < 16) {
+	          escapeString += '%0' + charCode.toString(16);
+	        } else {
+	          escapeString += '%' + charCode.toString(16);
+	        }
+	      }
+
+	      if (encoding === 'sjis') {
+	        return (0, _ecl.UnescapeSJIS)(escapeString);
+	      } else if (encoding === 'euc-jp') {
+	        return (0, _ecl.UnescapeEUCJP)(escapeString);
+	      } else if (encoding === 'jis-7') {
+	        return (0, _ecl.UnescapeJIS7)(escapeString);
+	      } else if (encoding === 'jis-8') {
+	        return (0, _ecl.UnescapeJIS8)(escapeString);
+	      } else if (encoding === 'unicode') {
+	        return (0, _ecl.UnescapeUnicode)(escapeString);
+	      } else if (encoding === 'utf7') {
+	        return (0, _ecl.UnescapeUTF7)(escapeString);
+	      } else if (encoding === 'utf-8') {
+	        return (0, _ecl.UnescapeUTF8)(escapeString);
+	      } else if (encoding === 'utf-16') {
+	        return (0, _ecl.UnescapeUTF16LE)(escapeString);
+	      }
+
+	      throw new Error('unsupported encoding: ' + encoding);
+	    }
+	  }, {
+	    key: 'getAvailableDataLength',
+	    value: function getAvailableDataLength() {
+	      return this.buffer.length - this._pos;
+	    }
+	  }, {
+	    key: 'length',
+	    get: function get() {
+	      return this.buffer.length;
+	    }
+	  }]);
+
+	  return _BinaryReader;
+	}();
+
+	exports.default = _BinaryReader;
+
+/***/ },
+/* 29 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+	//
+	// Escape Codec Library: ecl.js (Ver.041208)
+	//
+	// Copyright (C) http://nurucom-archives.hp.infoseek.co.jp/digital/
+	//
+
+	var EscapeSJIS = function EscapeSJIS(str) {
+		return str.replace(/[^*+.-9A-Z_a-z-]/g, function (s) {
+			var c = s.charCodeAt(0),
+			    m;
+			return c < 128 ? (c < 16 ? "%0" : "%") + c.toString(16).toUpperCase() : 65376 < c && c < 65440 ? "%" + (c - 65216).toString(16).toUpperCase() : (c = JCT11280.indexOf(s)) < 0 ? "%81E" : "%" + ((m = ((c < 8272 ? c : c = JCT11280.lastIndexOf(s)) - (c %= 188)) / 188) < 31 ? m + 129 : m + 193).toString(16).toUpperCase() + (64 < (c += c < 63 ? 64 : 65) && c < 91 || 95 == c || 96 < c && c < 123 ? String.fromCharCode(c) : "%" + c.toString(16).toUpperCase());
+		});
+	};
+
+	var UnescapeSJIS = function UnescapeSJIS(str) {
+		return str.replace(/%(8[1-9A-F]|[9E][0-9A-F]|F[0-9A-C])(%[4-689A-F][0-9A-F]|%7[0-9A-E]|[@-~])|%([0-7][0-9A-F]|A[1-9A-F]|[B-D][0-9A-F])/ig, function (s) {
+			var c = parseInt(s.substring(1, 3), 16),
+			    l = s.length;
+			return 3 == l ? String.fromCharCode(c < 160 ? c : c + 65216) : JCT11280.charAt((c < 160 ? c - 129 : c - 193) * 188 + (4 == l ? s.charCodeAt(3) - 64 : (c = parseInt(s.substring(4), 16)) < 127 ? c - 64 : c - 65));
+		});
+	};
+
+	var EscapeEUCJP = function EscapeEUCJP(str) {
+		return str.replace(/[^*+.-9A-Z_a-z-]/g, function (s) {
+			var c = s.charCodeAt(0);
+			return (c < 128 ? (c < 16 ? "%0" : "%") + c.toString(16) : 65376 < c && c < 65440 ? "%8E%" + (c - 65216).toString(16) : (c = JCT8836.indexOf(s)) < 0 ? "%A1%A6" : "%" + ((c - (c %= 94)) / 94 + 161).toString(16) + "%" + (c + 161).toString(16)).toUpperCase();
+		});
+	};
+
+	var UnescapeEUCJP = function UnescapeEUCJP(str) {
+		return str.replace(/(%A[1-9A-F]|%[B-E][0-9A-F]|%F[0-9A-E]){2}|%8E%(A[1-9A-F]|[B-D][0-9A-F])|%[0-7][0-9A-F]/ig, function (s) {
+			var c = parseInt(s.substring(1), 16);
+			return c < 161 ? String.fromCharCode(c < 128 ? c : parseInt(s.substring(4), 16) + 65216) : JCT8836.charAt((c - 161) * 94 + parseInt(s.substring(4), 16) - 161);
+		});
+	};
+
+	var EscapeJIS7 = function EscapeJIS7(str) {
+		var u = String.fromCharCode,
+		    ri = u(92, 120, 48, 48, 45, 92, 120, 55, 70),
+		    rj = u(65377, 45, 65439, 93, 43),
+		    H = function H(c) {
+			return 41 < c && c < 58 && 44 != c || 64 < c && c < 91 || 95 == c || 96 < c && c < 123 ? u(c) : "%" + c.toString(16).toUpperCase();
+		},
+		    I = function I(s) {
+			var c = s.charCodeAt(0);
+			return (c < 16 ? "%0" : "%") + c.toString(16).toUpperCase();
+		},
+		    rI = new RegExp();rI.compile("[^*+.-9A-Z_a-z-]", "g");
+		return ("g" + str + "g").replace(RegExp("[" + ri + "]+", "g"), function (s) {
+			return "%1B%28B" + s.replace(rI, I);
+		}).replace(RegExp("[" + rj, "g"), function (s) {
+			var c,
+			    i = 0,
+			    t = "%1B%28I";while (c = s.charCodeAt(i++)) {
+				t += H(c - 65344);
+			}return t;
+		}).replace(RegExp("[^" + ri + rj, "g"), function (s) {
+			var a,
+			    c,
+			    i = 0,
+			    t = "%1B%24B";while (a = s.charAt(i++)) {
+				t += (c = JCT8836.indexOf(a)) < 0 ? "%21%26" : H((c - (c %= 94)) / 94 + 33) + H(c + 33);
+			}return t;
+		}).slice(8, -1);
+	};
+
+	var UnescapeJIS7 = function UnescapeJIS7(str) {
+		var i = 0,
+		    p,
+		    q,
+		    s = "",
+		    u = String.fromCharCode,
+		    P = ("%28B" + str.replace(/%49/g, "I").replace(/%1B%24%4[02]|%1B%24@/ig, "%1B%24B")).split(/%1B/i),
+		    I = function I(s) {
+			return u(parseInt(s.substring(1), 16));
+		},
+		    J = function J(s) {
+			return u((3 == s.length ? parseInt(s.substring(1), 16) : s.charCodeAt(0)) + 65344);
+		},
+		    K = function K(s) {
+			var l = s.length;
+			return JCT8836.charAt(4 < l ? (parseInt(s.substring(1), 16) - 33) * 94 + parseInt(s.substring(4), 16) - 33 : 2 < l ? (37 == (l = s.charCodeAt(0)) ? (parseInt(s.substring(1, 3), 16) - 33) * 94 + s.charCodeAt(3) : (l - 33) * 94 + parseInt(s.substring(2), 16)) - 33 : (s.charCodeAt(0) - 33) * 94 + s.charCodeAt(1) - 33);
+		},
+		    rI = new RegExp(),
+		    rJ = new RegExp(),
+		    rK = new RegExp();
+		rI.compile("%[0-7][0-9A-F]", "ig");rJ.compile("(%2[1-9A-F]|%[3-5][0-9A-F])|[!-_]", "ig");
+		rK.compile("(%2[1-9A-F]|%[3-6][0-9A-F]|%7[0-9A-E]){2}|(%2[1-9A-F]|%[3-6][0-9A-F]|%7[0-9A-E])[!-~]|[!-~](%2[1-9A-F]|%[3-6][0-9A-F]|%7[0-9A-E])|[!-~]{2}", "ig");
+		while (p = P[i++]) {
+			s += "%24B" == (q = p.substring(0, 4)) ? p.substring(4).replace(rK, K) : "%28I" == q ? p.substring(4).replace(rJ, J) : p.replace(rI, I).substring(2);
+		}return s;
+	};
+
+	var EscapeJIS8 = function EscapeJIS8(str) {
+		var u = String.fromCharCode,
+		    r = u(92, 120, 48, 48, 45, 92, 120, 55, 70, 65377, 45, 65439, 93, 43),
+		    H = function H(c) {
+			return 41 < c && c < 58 && 44 != c || 64 < c && c < 91 || 95 == c || 96 < c && c < 123 ? u(c) : "%" + c.toString(16).toUpperCase();
+		},
+		    I = function I(s) {
+			var c = s.charCodeAt(0);
+			return (c < 16 ? "%0" : "%") + (c < 128 ? c : c - 65216).toString(16).toUpperCase();
+		},
+		    rI = new RegExp();rI.compile("[^*+.-9A-Z_a-z-]", "g");
+		return ("g" + str + "g").replace(RegExp("[" + r, "g"), function (s) {
+			return "%1B%28B" + s.replace(rI, I);
+		}).replace(RegExp("[^" + r, "g"), function (s) {
+			var a,
+			    c,
+			    i = 0,
+			    t = "%1B%24B";while (a = s.charAt(i++)) {
+				t += (c = JCT8836.indexOf(a)) < 0 ? "%21%26" : H((c - (c %= 94)) / 94 + 33) + H(c + 33);
+			}return t;
+		}).slice(8, -1);
+	};
+
+	var UnescapeJIS8 = function UnescapeJIS8(str) {
+		var i = 0,
+		    p,
+		    s = "",
+		    P = ("%28B" + str.replace(/%1B%24%4[02]|%1B%24@/ig, "%1B%24B")).split(/%1B/i),
+		    I = function I(s) {
+			var c = parseInt(s.substring(1), 16);
+			return String.fromCharCode(c < 128 ? c : c + 65216);
+		},
+		    K = function K(s) {
+			var l = s.length;
+			return JCT8836.charAt(4 < l ? (parseInt(s.substring(1), 16) - 33) * 94 + parseInt(s.substring(4), 16) - 33 : 2 < l ? (37 == (l = s.charCodeAt(0)) ? (parseInt(s.substring(1, 3), 16) - 33) * 94 + s.charCodeAt(3) : (l - 33) * 94 + parseInt(s.substring(2), 16)) - 33 : (s.charCodeAt(0) - 33) * 94 + s.charCodeAt(1) - 33);
+		},
+		    rI = new RegExp(),
+		    rK = new RegExp();
+		rI.compile("%([0-7][0-9A-F]|A[1-9A-F]|[B-D][0-9A-F])", "ig");
+		rK.compile("(%2[1-9A-F]|%[3-6][0-9A-F]|%7[0-9A-E]){2}|(%2[1-9A-F]|%[3-6][0-9A-F]|%7[0-9A-E])[!-~]|[!-~](%2[1-9A-F]|%[3-6][0-9A-F]|%7[0-9A-E])|[!-~]{2}", "ig");
+		while (p = P[i++]) {
+			s += "%24B" == p.substring(0, 4) ? p.substring(4).replace(rK, K) : p.replace(rI, I).substring(2);
+		}return s;
+	};
+
+	var EscapeUnicode = function EscapeUnicode(str) {
+		return str.replace(/[^*+.-9A-Z_a-z-]/g, function (s) {
+			var c = s.charCodeAt(0);
+			return (c < 16 ? "%0" : c < 256 ? "%" : c < 4096 ? "%u0" : "%u") + c.toString(16).toUpperCase();
+		});
+	};
+
+	var UnescapeUnicode = function UnescapeUnicode(str) {
+		return str.replace(/%u[0-9A-F]{4}|%[0-9A-F]{2}/ig, function (s) {
+			return String.fromCharCode("0x" + s.substring(s.length / 3));
+		});
+	};
+
+	var EscapeUTF7 = function EscapeUTF7(str) {
+		var B = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".split(""),
+		    E = function E(s) {
+			var c = s.charCodeAt(0);
+			return B[c >> 10] + B[c >> 4 & 63] + B[(c & 15) << 2 | (c = s.charCodeAt(1)) >> 14] + (0 <= c ? B[c >> 8 & 63] + B[c >> 2 & 63] + B[(c & 3) << 4 | (c = s.charCodeAt(2)) >> 12] + (0 <= c ? B[c >> 6 & 63] + B[c & 63] : "") : "");
+		},
+		    re = new RegExp();re.compile("[^+]{1,3}", "g");
+		return (str + "g").replace(/[^*+.-9A-Z_a-z-]+[*+.-9A-Z_a-z-]|[+]/g, function (s) {
+			if ("+" == s) return "+-";
+			var l = s.length - 1,
+			    w = s.charAt(l);
+			return "+" + s.substring(0, l).replace(re, E) + ("+" == w ? "-+-" : "*" == w || "." == w || "_" == w ? w : "-" + w);
+		}).slice(0, -1);
+	};
+
+	var UnescapeUTF7 = function UnescapeUTF7(str) {
+		var i = 0,
+		    B = {};
+		while (i < 64) {
+			B["ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/".charAt(i)] = i++;
+		}return str.replace(RegExp("[+][+/-9A-Za-z]*-?", "g"), function (s) {
+			if ("+-" == s) return "+";
+			var b = B[s.charAt(1)],
+			    c,
+			    i = 1,
+			    t = "";
+			while (0 <= b) {
+				if ((c = i & 7) < 6) c = c < 3 ? b << 10 | B[s.charAt(++i)] << 4 | (b = B[s.charAt(++i)]) >> 2 : (b & 3) << 14 | B[s.charAt(++i)] << 8 | B[s.charAt(++i)] << 2 | (b = B[s.charAt(++i)]) >> 4;else {
+					c = (b & 15) << 12 | B[s.charAt(++i)] << 6 | B[s.charAt(++i)];b = B[s.charAt(++i)];
+				}
+				if (c) t += String.fromCharCode(c);
+			}
+			return t;
+		});
+	};
+
+	var EscapeUTF8 = function EscapeUTF8(str) {
+		return str.replace(/[^*+.-9A-Z_a-z-]/g, function (s) {
+			var c = s.charCodeAt(0);
+			return (c < 16 ? "%0" + c.toString(16) : c < 128 ? "%" + c.toString(16) : c < 2048 ? "%" + (c >> 6 | 192).toString(16) + "%" + (c & 63 | 128).toString(16) : "%" + (c >> 12 | 224).toString(16) + "%" + (c >> 6 & 63 | 128).toString(16) + "%" + (c & 63 | 128).toString(16)).toUpperCase();
+		});
+	};
+
+	var UnescapeUTF8 = function UnescapeUTF8(str) {
+		return str.replace(/%(E(0%[AB]|[1-CEF]%[89AB]|D%[89])[0-9A-F]|C[2-9A-F]|D[0-9A-F])%[89AB][0-9A-F]|%[0-7][0-9A-F]/ig, function (s) {
+			var c = parseInt(s.substring(1), 16);
+			return String.fromCharCode(c < 128 ? c : c < 224 ? (c & 31) << 6 | parseInt(s.substring(4), 16) & 63 : ((c & 15) << 6 | parseInt(s.substring(4), 16) & 63) << 6 | parseInt(s.substring(7), 16) & 63);
+		});
+	};
+
+	var EscapeUTF16LE = function EscapeUTF16LE(str) {
+		var H = function H(c) {
+			return 41 < c && c < 58 && 44 != c || 64 < c && c < 91 || 95 == c || 96 < c && c < 123 ? String.fromCharCode(c) : (c < 16 ? "%0" : "%") + c.toString(16).toUpperCase();
+		};
+		return str.replace(/[^ ]| /g, function (s) {
+			var c = s.charCodeAt(0);return H(c & 255) + H(c >> 8);
+		});
+	};
+
+	var UnescapeUTF16LE = function UnescapeUTF16LE(str) {
+		var u = String.fromCharCode,
+		    b = u(92, 120, 48, 48, 45, 92, 120, 70, 70);
+		return str.replace(/^%FF%FE/i, "").replace(RegExp("%[0-9A-F]{2}%[0-9A-F]{2}|%[0-9A-F]{2}[" + b + "]|[" + b + "]%[0-9A-F]{2}|[" + b + "]{2}", "ig"), function (s) {
+			var l = s.length;
+			return u(4 < l ? "0x" + s.substring(4, 6) + s.substring(1, 3) : 2 < l ? 37 == (l = s.charCodeAt(0)) ? parseInt(s.substring(1, 3), 16) | s.charCodeAt(3) << 8 : l | parseInt(s.substring(2), 16) << 8 : s.charCodeAt(0) | s.charCodeAt(1) << 8);
+		});
+	};
+
+	var GetEscapeCodeType = function GetEscapeCodeType(str) {
+		if (/%u[0-9A-F]{4}/i.test(str)) return "Unicode";
+		if (/%([0-9A-DF][0-9A-F]%[8A]0%|E0%80|[0-7][0-9A-F]|C[01])%[8A]0|%00|%[7F]F/i.test(str)) return "UTF16LE";
+		if (/%E[0-9A-F]%[8A]0%[8A]0|%[CD][0-9A-F]%[8A]0/i.test(str)) return "UTF8";
+		if (/%F[DE]/i.test(str)) return (/%8[0-9A-D]|%9[0-9A-F]|%A0/i.test(str) ? "UTF16LE" : "EUCJP"
+		);
+		if (/%1B/i.test(str)) return (/%[A-D][0-9A-F]/i.test(str) ? "JIS8" : "JIS7"
+		);
+		var S = str.substring(0, 6143).replace(/%[0-9A-F]{2}|[^ ]| /ig, function (s) {
+			return s.length < 3 ? "40" : s.substring(1);
+		}),
+		    c,
+		    C,
+		    i = 0,
+		    T;
+		while (0 <= (c = parseInt(S.substring(i, i += 2), 16)) && i < 4092) {
+			if (128 <= c) {
+				if ((C = parseInt(S.substring(i, i + 2), 16)) < 128) i += 2;else if (194 <= c && c < 240 && C < 192) {
+					if (c < 224) {
+						T = "UTF8";i += 2;continue;
+					}
+					if (2 == parseInt(S.charAt(i + 2), 16) >> 2) {
+						T = "UTF8";i += 4;continue;
+					}
+				}
+				if (142 == c && 161 <= C && C < 224) {
+					if (!T) T = "EUCJP";if ("EUCJP" == T) continue;
+				}
+				if (c < 161) return "SJIS";
+				if (c < 224 && !T) {
+					if ((164 == c && C < 244 || 165 == c && C < 247) && 161 <= C) i += 2;else T = 224 <= C ? "EUCJP" : "SJIS";
+				} else T = "EUCJP";
+			}
+		}return T ? T : "EUCJP";
+	};
+
+	var JCT11280 = Function('var a="zKV33~jZ4zN=~ji36XazM93y!{~k2y!o~k0ZlW6zN?3Wz3W?{EKzK[33[`y|;-~j^YOTz$!~kNy|L1$353~jV3zKk3~k-4P4zK_2+~jY4y!xYHR~jlz$_~jk4z$e3X5He<0y!wy|X3[:~l|VU[F3VZ056Hy!nz/m1XD61+1XY1E1=1y|bzKiz!H034zKj~mEz#c5ZA3-3X$1~mBz$$3~lyz#,4YN5~mEz#{ZKZ3V%7Y}!J3X-YEX_J(3~mAz =V;kE0/y|F3y!}~m>z/U~mI~j_2+~mA~jp2;~m@~k32;~m>V}2u~mEX#2x~mBy+x2242(~mBy,;2242(~may->2&XkG2;~mIy-_2&NXd2;~mGz,{4<6:.:B*B:XC4>6:.>B*BBXSA+A:X]E&E<~r#z+625z s2+zN=`HXI@YMXIAXZYUM8X4K/:Q!Z&33 3YWX[~mB`{zKt4z (zV/z 3zRw2%Wd39]S11z$PAXH5Xb;ZQWU1ZgWP%3~o@{Dgl#gd}T){Uo{y5_d{e@}C(} WU9|cB{w}bzvV|)[} H|zT}d||0~{]Q|(l{|x{iv{dw}(5}[Z|kuZ }cq{{y|ij}.I{idbof%cu^d}Rj^y|-M{ESYGYfYsZslS`?ZdYO__gLYRZ&fvb4oKfhSf^d<Yeasc1f&a=hnYG{QY{D`Bsa|u,}Dl|_Q{C%xK|Aq}C>|c#ryW=}eY{L+`)][YF_Ub^h4}[X|?r|u_ex}TL@YR]j{SrXgo*|Gv|rK}B#mu{R1}hs|dP{C7|^Qt3|@P{YVV |8&}#D}ef{e/{Rl|>Hni}R1{Z#{D[}CQlQ||E}[s{SG_+i8eplY[=[|ec[$YXn#`hcm}YR|{Ci(_[ql|?8p3]-}^t{wy}4la&pc|3e{Rp{LqiJ],] `kc(]@chYnrM`O^,ZLYhZB]ywyfGY~aex!_Qww{a!|)*lHrM{N+n&YYj~Z b c#e_[hZSon|rOt`}hBXa^i{lh|<0||r{KJ{kni)|x,|0auY{D!^Sce{w;|@S|cA}Xn{C1h${E]Z-XgZ*XPbp]^_qbH^e[`YM|a||+=]!Lc}]vdBc=j-YSZD]YmyYLYKZ9Z>Xcczc2{Yh}9Fc#Z.l{}(D{G{{mRhC|L3b#|xK[Bepj#ut`H[,{E9Yr}1b{[e]{ZFk7[ZYbZ0XL]}Ye[(`d}c!|*y`Dg=b;gR]Hm=hJho}R-[n}9;{N![7k_{UbmN]rf#pTe[x8}!Qcs_rs[m`|>N}^V})7{^r|/E}),}HH{OYe2{Skx)e<_.cj.cjoMhc^d}0uYZd!^J_@g,[[[?{i@][|3S}Yl3|!1|eZ|5IYw|1D}e7|Cv{OHbnx-`wvb[6[4} =g+k:{C:}ed{S]|2M]-}WZ|/q{LF|dYu^}Gs^c{Z=}h>|/i|{W]:|ip{N:|zt|S<{DH[p_tvD{N<[8Axo{X4a.^o^X>Yfa59`#ZBYgY~_t^9`jZHZn`>G[oajZ;X,i)Z.^~YJe ZiZF^{][[#Zt^|]Fjx]&_5dddW]P0C[-]}]d|y {C_jUql] |OpaA[Z{lp|rz}:Mu#]_Yf6{Ep?f5`$[6^D][^u[$[6^.Z8]]ePc2U/=]K^_+^M{q*|9tYuZ,s(dS{i=|bNbB{uG}0jZOa:[-]dYtu3]:]<{DJ_SZIqr_`l=Yt`gkTnXb3d@kiq0a`Z{|!B|}e}Ww{Sp,^Z|0>_Z}36|]A|-t}lt{R6pi|v8hPu#{C>YOZHYmg/Z4nicK[}hF_Bg|YRZ7c|crkzYZY}_iXcZ.|)U|L5{R~qi^Uga@Y[xb}&qdbd6h5|Btw[}c<{Ds53[Y7]?Z<|e0{L[ZK]mXKZ#Z2^tavf0`PE[OSOaP`4gi`qjdYMgys/?[nc,}EEb,eL]g[n{E_b/vcvgb.{kcwi`~v%|0:|iK{Jh_vf5lb}KL|(oi=LrzhhY_^@`zgf[~g)[J_0fk_V{T)}I_{D&_/d9W/|MU[)f$xW}?$xr4<{Lb{y4}&u{XJ|cm{Iu{jQ}CMkD{CX|7A}G~{kt)nB|d5|<-}WJ}@||d@|Iy}Ts|iL|/^|no|0;}L6{Pm]7}$zf:|r2}?C_k{R(}-w|`G{Gy[g]bVje=_0|PT{^Y^yjtT[[[l!Ye_`ZN]@[n_)j3nEgMa]YtYpZy].d-Y_cjb~Y~[nc~sCi3|zg}B0}do{O^{|$`_|D{}U&|0+{J3|8*]iayx{a{xJ_9|,c{Ee]QXlYb]$[%YMc*]w[aafe]aVYi[fZEii[xq2YQZHg]Y~h#|Y:thre^@^|_F^CbTbG_1^qf7{L-`VFx Zr|@EZ;gkZ@slgko`[e}T:{Cu^pddZ_`yav^Ea+[#ZBbSbO`elQfLui}.F|txYcbQ`XehcGe~fc^RlV{D_0ZAej[l&jShxG[ipB_=u:eU}3e8[=j|{D(}dO{Do[BYUZ0/]AYE]ALYhZcYlYP/^-^{Yt_1_-;YT`P4BZG=IOZ&]H[e]YYd[9^F[1YdZxZ?Z{Z<]Ba2[5Yb[0Z4l?]d_;_)a?YGEYiYv`_XmZs4ZjY^Zb]6gqGaX^9Y}dXZr[g|]Y}K aFZp^k^F]M`^{O1Ys]ZCgCv4|E>}8eb7}l`{L5[Z_faQ|c2}Fj}hw^#|Ng|B||w2|Sh{v+[G}aB|MY}A{|8o}X~{E8paZ:]i^Njq]new)`-Z>haounWhN}c#{DfZ|fK]KqGZ=:u|fqoqcv}2ssm}.r{]{nIfV{JW)[K|,Z{Uxc|]l_KdCb%]cfobya3`p}G^|LZiSC]U|(X|kBlVg[kNo({O:g:|-N|qT}9?{MBiL}Sq{`P|3a|u.{Uaq:{_o|^S}jX{Fob0`;|#y_@[V[K|cw[<_ }KU|0F}d3|et{Q7{LuZttsmf^kYZ`Af`}$x}U`|Ww}d]| >}K,r&|XI|*e{C/a-bmr1fId4[;b>tQ_:]hk{b-pMge]gfpo.|(w[jgV{EC1Z,YhaY^q,_G[c_g[J0YX]`[h^hYK^_Yib,` {i6vf@YM^hdOKZZn(jgZ>bzSDc^Z%[[o9[2=/YHZ(_/Gu_`*|8z{DUZxYt^vuvZjhi^lc&gUd4|<UiA`z]$b/Z?l}YI^jaHxe|;F}l${sQ}5g}hA|e4}?o{ih}Uz{C)jPe4]H^J[Eg[|AMZMlc}:,{iz}#*|gc{Iq|/:|zK{l&}#u|myd{{M&v~nV};L|(g|I]ogddb0xsd7^V})$uQ{HzazsgxtsO^l}F>ZB]r|{7{j@cU^{{CbiYoHlng]f+nQ[bkTn/}<-d9q {KXadZYo+n|l[|lc}V2{[a{S4Zam~Za^`{HH{xx_SvF|ak=c^[v^7_rYT`ld@]:_ub%[$[m](Shu}G2{E.ZU_L_R{tz`vj(f?^}hswz}GdZ}{S:h`aD|?W|`dgG|if{a8|J1{N,}-Ao3{H#{mfsP|[ bzn+}_Q{MT{u4kHcj_q`eZj[8o0jy{p7}C|[}l){MuYY{|Ff!Ykn3{rT|m,^R|,R}$~Ykgx{P!]>iXh6[l[/}Jgcg{JYZ.^qYfYIZl[gZ#Xj[Pc7YyZD^+Yt;4;`e8YyZVbQ7YzZxXja.7SYl[s]2^/Ha$[6ZGYrb%XiYdf2]H]kZkZ*ZQ[ZYS^HZXcCc%Z|[(bVZ]]:OJQ_DZCg<[,]%Zaa [g{C00HY[c%[ChyZ,Z_`PbXa+eh`^&jPi0a[ggvhlekL]w{Yp^v}[e{~;k%a&k^|nR_z_Qng}[E}*Wq:{k^{FJZpXRhmh3^p>de^=_7`|ZbaAZtdhZ?n4ZL]u`9ZNc3g%[6b=e.ZVfC[ZZ^^^hD{E(9c(kyZ=bb|Sq{k`|vmr>izlH[u|e`}49}Y%}FT{[z{Rk}Bz{TCc/lMiAqkf(m$hDc;qooi[}^o:c^|Qm}a_{mrZ(pA`,}<2sY| adf_%|}`}Y5U;}/4|D>|$X{jw{C<|F.hK|*A{MRZ8Zsm?imZm_?brYWZrYx`yVZc3a@f?aK^ojEd {bN}/3ZH]/$YZhm^&j 9|(S|b]mF}UI{q&aM]LcrZ5^.|[j`T_V_Gak}9J[ ZCZD|^h{N9{~&[6Zd{}B}2O|cv]K}3s}Uy|l,fihW{EG`j_QOp~Z$F^zexS`dcISfhZBXP|.vn|_HYQ|)9|cr]<`&Z6]m_(ZhPcSg>`Z]5`~1`0Xcb4k1{O!bz|CN_T{LR|a/gFcD|j<{Z._[f)mPc:1`WtIaT1cgYkZOaVZOYFrEe[}T$}Ch}mk{K-^@]fH{Hdi`c*Z&|Kt{if[C{Q;{xYB`dYIX:ZB[}]*[{{p9|4GYRh2ao{DS|V+[zd$`F[ZXKadb*A] Ys]Maif~a/Z2bmclb8{Jro_rz|x9cHojbZ{GzZx_)]:{wAayeDlx}<=`g{H1{l#}9i|)=|lP{Qq}.({La|!Y{i2EZfp=c*}Cc{EDvVB|;g}2t{W4av^Bn=]ri,|y?|3+}T*ckZ*{Ffr5e%|sB{lx^0]eZb]9[SgAjS_D|uHZx]dive[c.YPkcq/}db{EQh&hQ|eg}G!ljil|BO]X{Qr_GkGl~YiYWu=c3eb}29v3|D|}4i||.{Mv})V{SP1{FX}CZW6{cm|vO{pS|e#}A~|1i}81|Mw}es|5[}3w{C`h9aL]o{}p[G`>i%a1Z@`Ln2bD[$_h`}ZOjhdTrH{[j_:k~kv[Sdu]CtL}41{I |[[{]Zp$]XjxjHt_eThoa#h>sSt8|gK|TVi[Y{t=}Bs|b7Zpr%{gt|Yo{CS[/{iteva|cf^hgn}($_c^wmb^Wm+|55jrbF|{9^ q6{C&c+ZKdJkq_xOYqZYSYXYl`8]-cxZAq/b%b*_Vsa[/Ybjac/OaGZ4fza|a)gY{P?| I|Y |,pi1n7}9bm9ad|=d{aV|2@[(}B`d&|Uz}B}{`q|/H|!JkM{FU|CB|.{}Az}#P|lk}K{|2rk7{^8^?`/|k>|Ka{Sq}Gz}io{DxZh[yK_#}9<{TRdgc]`~Z>JYmYJ]|`!ZKZ]gUcx|^E[rZCd`f9oQ[NcD_$ZlZ;Zr}mX|=!|$6ZPZYtIo%fj}CpcN|B,{VDw~gb}@hZg`Q{LcmA[(bo`<|@$|o1|Ss}9Z_}tC|G`{F/|9nd}i=}V-{L8aaeST]daRbujh^xlpq8|}zs4bj[S`J|]?G{P#{rD{]I`OlH{Hm]VYuSYUbRc*6[j`8]pZ[bt_/^Jc*[<Z?YE|Xb|?_Z^Vcas]h{t9|Uwd)_(=0^6Zb{Nc} E[qZAeX[a]P^|_J>e8`W^j_Y}R{{Jp__]Ee#e:iWb9q_wKbujrbR}CY`,{mJ}gz{Q^{t~N|? gSga`V_||:#mi}3t|/I`X{N*|ct|2g{km}gi|{={jC}F;|E}{ZZjYf*frmu}8Tdroi{T[|+~}HG{cJ}DM{Lp{Ctd&}$hi3|FZ| m}Kr|38}^c|m_|Tr{Qv|36}?Up>|;S{DV{k_as}BK{P}}9p|t`jR{sAm4{D=b4pWa[}Xi{EjwEkI}3S|E?u=X0{jf} S|NM|JC{qo^3cm]-|JUx/{Cj{s>{Crt[UXuv|D~|j|d{YXZR}Aq}0r}(_{pJfi_z}0b|-vi)Z mFe,{f4|q`b{}^Z{HM{rbeHZ|^x_o|XM|L%|uFXm}@C_{{Hhp%a7|0p[Xp+^K}9U{bP}: tT}B|}+$|b2|[^|~h{FAby[`{}xgygrt~h1[li`c4vz|,7p~b(|mviN}^pg[{N/|g3|^0c,gE|f%|7N{q[|tc|TKA{LU}I@|AZp(}G-sz{F |qZ{}F|f-}RGn6{Z]_5})B}UJ{FFb2]4ZI@v=k,]t_Dg5Bj]Z-]L]vrpdvdGlk|gF}G]|IW}Y0[G| /bo|Te^,_B}#n^^{QHYI[?hxg{[`]D^IYRYTb&kJ[cri[g_9]Ud~^_]<p@_e_XdNm-^/|5)|h_{J;{kacVopf!q;asqd}n)|.m|bf{QW|U)}b+{tL|w``N|to{t ZO|T]jF}CB|0Q{e5Zw|k |We}5:{HO{tPwf_uajjBfX}-V_C_{{r~gg|Ude;s+}KNXH}! `K}eW{Upwbk%ogaW}9EYN}YY|&v|SL{C3[5s.]Y]I]u{M6{pYZ`^,`ZbCYR[1mNg>rsk0Ym[jrE]RYiZTr*YJ{Ge|%-lf|y(`=[t}E6{k!|3)}Zk} ][G{E~cF{u3U.rJ|a9p#o#ZE|?|{sYc#vv{E=|LC}cu{N8`/`3`9rt[4|He{cq|iSYxY`}V |(Q|t4{C?]k_Vlvk)BZ^r<{CL}#h}R+[<|i=}X|{KAo]|W<`K{NW|Zx}#;|fe{IMr<|K~tJ_x}AyLZ?{GvbLnRgN}X&{H7|x~}Jm{]-| GpNu0}.ok>|c4{PYisrDZ|fwh9|hfo@{H~XSbO]Odv]%`N]b1Y]]|eIZ}_-ZA]aj,>eFn+j[aQ_+]h[J_m_g]%_wf.`%k1e#Z?{CvYu_B^|gk`Xfh^M3`afGZ-Z|[m{L}|k3cp[it ^>YUi~d>{T*}YJ{Q5{Jxa$hg|%4`}|LAgvb }G}{P=|<;Ux{_skR{cV|-*|s-{Mp|XP|$G|_J}c6cM{_=_D|*9^$ec{V;|4S{qO|w_|.7}d0|/D}e}|0G{Dq]Kdp{}dfDi>}B%{Gd|nl}lf{C-{y}|ANZr}#={T~|-(}c&{pI|ft{lsVP}){|@u}!W|bcmB{d?|iW|:dxj{PSkO|Hl]Li:}VYk@|2={fnWt{M3`cZ6|)}|Xj}BYa?vo{e4|L7|B7{L7|1W|lvYO}W8nJ|$Vih|{T{d*_1|:-n2dblk``fT{Ky|-%}m!|Xy|-a{Pz}[l{kFjz|iH}9N{WE{x,|jz}R {P|{D)c=nX|Kq|si}Ge{sh|[X{RF{t`|jsr*fYf,rK|/9}$}}Nf{y!1|<Std}4Wez{W${Fd_/^O[ooqaw_z[L`Nbv[;l7V[ii3_PeM}.h^viqYjZ*j1}+3{bt{DR[;UG}3Og,rS{JO{qw{d<_zbAh<R[1_r`iZTbv^^a}c{iEgQZ<exZFg.^Rb+`Uj{a+{z<[~r!]`[[|rZYR|?F|qppp]L|-d|}K}YZUM|=Y|ktm*}F]{D;g{uI|7kg^}%?Z%ca{N[_<q4xC]i|PqZC]n}.bDrnh0Wq{tr|OMn6tM|!6|T`{O`|>!]ji+]_bTeU}Tq|ds}n|{Gm{z,f)}&s{DPYJ`%{CGd5v4tvb*hUh~bf]z`jajiFqAii]bfy^U{Or|m+{I)cS|.9k:e3`^|xN}@Dnlis`B|Qo{`W|>||kA}Y}{ERYuYx`%[exd`]|OyiHtb}HofUYbFo![5|+]gD{NIZR|Go}.T{rh^4]S|C9_}xO^i`vfQ}C)bK{TL}cQ|79iu}9a];sj{P.o!f[Y]pM``Jda^Wc9ZarteBZClxtM{LW}l9|a.mU}KX}4@{I+f1}37|8u}9c|v${xGlz}jP{Dd1}e:}31}%3X$|22i<v+r@~mf{sN{C67G97855F4YL5}8f{DT|xy{sO{DXB334@55J1)4.G9A#JDYtXTYM4, YQD9;XbXm9SX]IB^4UN=Xn<5(;(F3YW@XkH-X_VM[DYM:5XP!T&Y`6|,^{IS-*D.H>:LXjYQ0I3XhAF:9:(==.F*3F1189K/7163D,:@|e2{LS36D4hq{Lw/84443@4.933:0307::6D7}&l{Mx657;89;,K5678H&93D(H<&<>0B90X^I;}Ag1{P%3A+>><975}[S{PZE453?4|T2{Q+5187;>447:81{C=hL6{Me^:=7ii{R=.=F<81;48?|h8}Uh{SE|,VxL{ST,7?9Y_5Xk3A#:$%YSYdXeKXOD8+TXh7(@>(YdXYHXl9J6X_5IXaL0N?3YK7Xh!1?XgYz9YEXhXaYPXhC3X`-YLY_XfVf[EGXZ5L8BXL9YHX]SYTXjLXdJ: YcXbQXg1PX]Yx4|Jr{Ys4.8YU+XIY`0N,<H%-H;:0@,74/:8546I=9177154870UC]d<C3HXl7ALYzXFXWP<<?E!88E5@03YYXJ?YJ@6YxX-YdXhYG|9o{`iXjY_>YVXe>AYFX[/(I@0841?):-B=14337:8=|14{c&93788|di{cW-0>0<097/A;N{FqYpugAFT%X/Yo3Yn,#=XlCYHYNX[Xk3YN:YRT4?)-YH%A5XlYF3C1=NWyY}>:74-C673<69545v {iT85YED=64=.F4..9878/D4378?48B3:7:7/1VX[f4{D,{l<5E75{dAbRB-8-@+;DBF/$ZfW8S<4YhXA.(5@*11YV8./S95C/0R-A4AXQYI7?68167B95HA1*<M3?1/@;/=54XbYP36}lc{qzSS38:19?,/39193574/66878Yw1X-87E6=;964X`T734:>86>1/=0;(I-1::7ALYGXhF+Xk[@W%TYbX7)KXdYEXi,H-XhYMRXfYK?XgXj.9HX_SX]YL1XmYJ>Y}WwIXiI-3-GXcYyXUYJ$X`Vs[7;XnYEZ;XF! 3;%8;PXX(N3Y[)Xi1YE&/ :;74YQ6X`33C;-(>Xm0(TYF/!YGXg8 9L5P01YPXO-5%C|qd{{/K/E6,=0144:361:955;6443@?B7*7:F89&F35YaX-CYf,XiFYRXE_e{}sF 0*7XRYPYfXa5YXXY8Xf8Y~XmA[9VjYj*#YMXIYOXk,HHX40YxYMXU8OXe;YFXLYuPXP?EB[QV0CXfY{:9XV[FWE0D6X^YVP*$4%OXiYQ(|xp|%c3{}V`1>Y`XH00:8/M6XhQ1:;3414|TE|&o@1*=81G8<3}6<|(f6>>>5-5:8;093B^3U*+*^*UT30XgYU&7*O1953)5@E78--F7YF*B&0:%P68W9Zn5974J9::3}Vk|-,C)=)1AJ4+<3YGXfY[XQXmT1M-XcYTYZXCYZXEYXXMYN,17>XIG*SaS|/eYJXbI?XdNZ+WRYP<F:R PXf;0Xg`$|1GX9YdXjLYxWX!ZIXGYaXNYm6X9YMX?9EXmZ&XZ#XQ>YeXRXfAY[4 ;0X!Zz0XdN$XhYL XIY^XGNXUYS/1YFXhYk.TXn4DXjB{jg|4DEX]:XcZMW=A.+QYL<LKXc[vV$+&PX*Z3XMYIXUQ:ZvW< YSXFZ,XBYeXMM)?Xa XiZ4/EXcP3%}&-|6~:1(-+YT$@XIYRBC<}&,|7aJ6}bp|8)K1|Xg|8C}[T|8Q.89;-964I38361<=/;883651467<7:>?1:.}le|:Z=39;1Y^)?:J=?XfLXbXi=Q0YVYOXaXiLXmJXO5?.SFXiCYW}-;|=u&D-X`N0X^,YzYRXO(QX_YW9`I|>hZ:N&X)DQXP@YH#XmNXi$YWX^=!G6YbYdX>XjY|XlX^XdYkX>YnXUXPYF)FXT[EVTMYmYJXmYSXmNXi#GXmT3X8HOX[ZiXN]IU2>8YdX1YbX<YfWuZ8XSXcZU%0;1XnXkZ_WTG,XZYX5YSX Yp 05G?XcYW(IXg6K/XlYP4XnI @XnO1W4Zp-9C@%QDYX+OYeX9>--YSXkD.YR%Q/Yo YUX].Xi<HYEZ2WdCE6YMXa7F)=,D>-@9/8@5=?7164;35387?N<618=6>7D+C50<6B03J0{Hj|N9$D,9I-,.KB3}m |NzE0::/81YqXjMXl7YG; [.W=Z0X4XQY]:MXiR,XgM?9$9>:?E;YE77VS[Y564760391?14941:0=:8B:;/1DXjFA-564=0B3XlH1+D85:0Q!B#:-6&N/:9<-R3/7Xn<*3J4.H:+334B.=>30H.;3833/76464665755:/83H6633:=;.>5645}&E|Y)?1/YG-,93&N3AE@5 <L1-G/8A0D858/30>8<549=@B8] V0[uVQYlXeD(P#ID&7T&7;Xi0;7T-$YE)E=1:E1GR):--0YI7=E<}n9|aT6783A>D7&4YG7=391W;Zx<5+>F#J39}o/|cc;6=A050EQXg8A1-}D-|d^5548083563695D?-.YOXd37I$@LYLWeYlX<Yd+YR A$;3-4YQ-9XmA0!9/XLY_YT(=5XdDI>YJ5XP1ZAW{9>X_6R(XhYO65&J%DA)C-!B:97#A9;@?F;&;(9=11/=657/H,<8}bz|j^5446>.L+&Y^8Xb6?(CYOXb*YF(8X`FYR(XPYVXmPQ%&DD(XmZXW??YOXZXfCYJ79,O)XnYF7K0!QXmXi4IYFRXS,6<%-:YO(+:-3Q!1E1:W,Zo}Am|n~;3580534*?3Zc4=9334361693:30C<6/717:<1/;>59&:4}6!|rS36=1?75<8}[B|s809983579I.A.>84758=108564741H*9E{L{|u%YQ<%6XfH.YUXe4YL@,>N}Tv|ve*G0X)Z;/)3@A74(4P&A1X:YVH97;,754*A66:1 D739E3553545558E4?-?K17/770843XAYf838A7K%N!YW4.$T19Z`WJ*0XdYJXTYOXNZ 1XaN1A+I&Xi.Xk3Z3GB&5%WhZ1+5#Y[X<4YMXhQYoQXVXbYQ8XSYUX4YXBXWDMG0WxZA[8V+Z8X;D],Va$%YeX?FXfX[XeYf<X:Z[WsYz8X_Y]%XmQ(!7BXIZFX]&YE3F$(1XgYgYE& +[+W!<YMYFXc;+PXCYI9YrWxGXY9DY[!GXiI7::)OC;*$.>N*HA@{C|}&k=:<TB83X`3YL+G4XiK]i}(fYK<=5$.FYE%4*5*H*6XkCYL=*6Xi6!Yi1KXR4YHXbC8Xj,B9ZbWx/XbYON#5B}Ue}+QKXnF1&YV5XmYQ0!*3IXBYb71?1B75XmF;0B976;H/RXU:YZX;BG-NXj;XjI>A#D3B636N;,*%<D:0;YRXY973H5)-4FXOYf0:0;/7759774;7;:/855:543L43<?6=E,.A4:C=L)%4YV!1(YE/4YF+ F3%;S;&JC:%/?YEXJ4GXf/YS-EXEYW,9;E}X$}547EXiK=51-?71C%?57;5>463553Zg90;6447?<>4:9.7538XgN{|!}9K/E&3-:D+YE1)YE/3;37/:05}n<}:UX8Yj4Yt864@JYK..G=.(A Q3%6K>3(P3#AYE$-6H/456*C=.XHY[#S.<780191;057C)=6HXj?955B:K1 E>-B/9,;5.!L?:0>/.@//:;7833YZ56<4:YE=/:7Z_WGC%3I6>XkC*&NA16X=Yz2$X:Y^&J48<99k8}CyB-61<18K946YO4{|N}E)YIB9K0L>4=46<1K0+R;6-=1883:478;4,S+3YJX`GJXh.Yp+Xm6MXcYpX(>7Yo,/:X=Z;Xi0YTYHXjYmXiXj;*;I-8S6N#XgY}.3XfYGO3C/$XjL$*NYX,1 6;YH&<XkK9C#I74.>}Hd`A748X[T450[n75<4439:18A107>|ET}Rf<1;14876/Yb983E<5.YNXd4149>,S=/4E/<306443G/06}0&}UkYSXFYF=44=-5095=88;63844,9E6644{PL}WA8:>)7+>763>>0/B3A545CCnT}Xm|dv}Xq1L/YNXk/H8;;.R63351YY747@15YE4J8;46;.38.>4A369.=-83,;Ye3?:3@YE.4-+N353;/;@(X[YYD>@/05-I*@.:551741Yf5>6A443<3535;.58/86=D4753442$635D1>0359NQ @73:3:>><Xn?;43C14 ?Y|X611YG1&<+,4<*,YLXl<1/AIXjF*N89A4Z576K1XbJ5YF.ZOWN.YGXO/YQ01:4G38Xl1;KI0YFXB=R<7;D/,/4>;$I,YGXm94@O35Yz66695385.>:6A#5}W7n^4336:4157597434433<3|XA}m`>=D>:4A.337370?-6Q96{`E|4A}C`|Qs{Mk|J+~r>|o,wHv>Vw}!c{H!|Gb|*Ca5}J||,U{t+{CN[!M65YXOY_*B,Y[Z9XaX[QYJYLXPYuZ%XcZ8LY[SYPYKZM<LMYG9OYqSQYM~[e{UJXmQYyZM_)>YjN1~[f3{aXFY|Yk:48YdH^NZ0|T){jVFYTZNFY^YTYN~[h{nPYMYn3I]`EYUYsYIZEYJ7Yw)YnXPQYH+Z.ZAZY]^Z1Y`YSZFZyGYHXLYG 8Yd#4~[i|+)YH9D?Y^F~Y7|-eYxZ^WHYdYfZQ~[j|3>~[k|3oYmYqY^XYYO=Z*4[]Z/OYLXhZ1YLZIXgYIHYEYK,<Y`YEXIGZI[3YOYcB4SZ!YHZ*&Y{Xi3~[l|JSY`Zz?Z,~[m|O=Yi>??XnYWXmYS617YVYIHZ(Z4[~L4/=~[n|Yu{P)|];YOHHZ}~[o33|a>~[r|aE]DH~[s|e$Zz~[t|kZFY~XhYXZB[`Y}~[u|{SZ&OYkYQYuZ2Zf8D~[v}% ~[w3},Q[X]+YGYeYPIS~[y}4aZ!YN^!6PZ*~[z}?E~[{3}CnZ=~[}}EdDZz/9A3(3S<,YR8.D=*XgYPYcXN3Z5 4)~[~}JW=$Yu.XX~] }KDX`PXdZ4XfYpTJLY[F5]X~[2Yp}U+DZJ::<446[m@~]#3}]1~]%}^LZwZQ5Z`/OT<Yh^ -~]&}jx[ ~m<z!%2+~ly4VY-~o>}p62yz!%2+Xf2+~ly4VY-zQ`z (=] 2z~o2",C={" ":0,"!":1},c=34,i=2,p,s="",u=String.fromCharCode,t=u(12539);while(++c<127)C[u(c)]=c^39&&c^92?i++:0;i=0;while(0<=(c=C[a.charAt(i++)]))if(16==c)if((c=C[a.charAt(i++)])<87){if(86==c)c=1879;while(c--)s+=u(++p)}else s+=s.substr(8272,360);else if(c<86)s+=u(p+=c<51?c-16:(c-55)*92+C[a.charAt(i++)]);else if((c=((c-86)*92+C[a.charAt(i++)])*92+C[a.charAt(i++)])<49152)s+=u(p=c<40960?c:c|57344);else{c&=511;while(c--)s+=t;p=12539}return s')();
+
+	var JCT8836 = JCT11280.substring(0, 8836);
+
+	exports.EscapeSJIS = EscapeSJIS;
+	exports.UnescapeSJIS = UnescapeSJIS;
+	exports.EscapeEUCJP = EscapeEUCJP;
+	exports.UnescapeEUCJP = UnescapeEUCJP;
+	exports.EscapeJIS7 = EscapeJIS7;
+	exports.UnescapeJIS7 = UnescapeJIS7;
+	exports.EscapeJIS8 = EscapeJIS8;
+	exports.UnescapeJIS8 = UnescapeJIS8;
+	exports.EscapeUnicode = EscapeUnicode;
+	exports.UnescapeUnicode = UnescapeUnicode;
+	exports.EscapeUTF7 = EscapeUTF7;
+	exports.UnescapeUTF7 = UnescapeUTF7;
+	exports.EscapeUTF8 = EscapeUTF8;
+	exports.UnescapeUTF8 = UnescapeUTF8;
+	exports.EscapeUTF16LE = EscapeUTF16LE;
+	exports.UnescapeUTF16LE = UnescapeUTF16LE;
+	exports.GetEscapeCodeType = GetEscapeCodeType;
+	exports.JCT11280 = JCT11280;
+	exports.JCT8836 = JCT8836;
+
+/***/ },
+/* 30 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _NSArray2 = __webpack_require__(18);
+
+	var _NSArray3 = _interopRequireDefault(_NSArray2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	/**
+	 * dummy class for NSKeyedArchiver/Unarchiver
+	 * @access public
+	 * @extends {NSArray}
+	 */
+	var NSMutableArray = function (_NSArray) {
+	  _inherits(NSMutableArray, _NSArray);
+
+	  function NSMutableArray() {
+	    _classCallCheck(this, NSMutableArray);
+
+	    return _possibleConstructorReturn(this, (NSMutableArray.__proto__ || Object.getPrototypeOf(NSMutableArray)).apply(this, arguments));
+	  }
+
+	  return NSMutableArray;
+	}(_NSArray3.default);
+
+	exports.default = NSMutableArray;
+
+/***/ },
+/* 31 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _NSData2 = __webpack_require__(20);
+
+	var _NSData3 = _interopRequireDefault(_NSData2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	/**
+	 * dummy class for NSKeyedArchiver/Unarchiver
+	 * @access public
+	 * @extends {NSData}
+	 */
+	var NSMutableData = function (_NSData) {
+	  _inherits(NSMutableData, _NSData);
+
+	  function NSMutableData() {
+	    _classCallCheck(this, NSMutableData);
+
+	    return _possibleConstructorReturn(this, (NSMutableData.__proto__ || Object.getPrototypeOf(NSMutableData)).apply(this, arguments));
+	  }
+
+	  return NSMutableData;
+	}(_NSData3.default);
+
+	exports.default = NSMutableData;
+
+/***/ },
+/* 32 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _NSDictionary2 = __webpack_require__(21);
+
+	var _NSDictionary3 = _interopRequireDefault(_NSDictionary2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	/**
+	 * dummy class for NSKeyedArchiver/Unarchiver
+	 * @access public
+	 * @extends {NSDictionary}
+	 */
+	var NSMutableDictionary = function (_NSDictionary) {
+	  _inherits(NSMutableDictionary, _NSDictionary);
+
+	  function NSMutableDictionary() {
+	    _classCallCheck(this, NSMutableDictionary);
+
+	    return _possibleConstructorReturn(this, (NSMutableDictionary.__proto__ || Object.getPrototypeOf(NSMutableDictionary)).apply(this, arguments));
+	  }
+
+	  return NSMutableDictionary;
+	}(_NSDictionary3.default);
+
+	exports.default = NSMutableDictionary;
+
+/***/ },
+/* 33 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
+	var _CGPoint = __webpack_require__(3);
+
+	var _CGPoint2 = _interopRequireDefault(_CGPoint);
+
+	var _CGVector = __webpack_require__(17);
+
+	var _CGVector2 = _interopRequireDefault(_CGVector);
+
+	var _CGSize = __webpack_require__(5);
+
+	var _CGSize2 = _interopRequireDefault(_CGSize);
+
+	var _CGRect = __webpack_require__(4);
+
+	var _CGRect2 = _interopRequireDefault(_CGRect);
+
+	var _CATransform3D = __webpack_require__(34);
+
+	var _CATransform3D2 = _interopRequireDefault(_CATransform3D);
+
+	var _SCNVector = __webpack_require__(35);
+
+	var _SCNVector2 = _interopRequireDefault(_SCNVector);
+
+	var _SCNVector3 = __webpack_require__(36);
+
+	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
+
+	var _SCNMatrix = __webpack_require__(37);
+
+	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	/**
+	 * An NSValue object is a simple container for a single C or Objective-C data item. It can hold any of the scalar types such as int, float, and char, as well as pointers, structures, and object id references. Use this class to work with such data types in collections (such as NSArray and NSSet), Key-value coding, and other APIs that require Objective-C objects. NSValue objects are always immutable.
+	 * @access public
+	 * @extends {NSObject}
+	 * @see https://developer.apple.com/reference/foundation/nsvalue
+	 */
+	var NSValue = function (_NSObject) {
+	  _inherits(NSValue, _NSObject);
+
+	  function NSValue() {
+	    _classCallCheck(this, NSValue);
+
+	    return _possibleConstructorReturn(this, (NSValue.__proto__ || Object.getPrototypeOf(NSValue)).apply(this, arguments));
+	  }
+
+	  _createClass(NSValue, [{
+	    key: 'initBytesObjCType',
+
+
+	    // Working with Raw Values
+
+	    /**
+	     * Initializes a value object to contain the specified value, interpreted with the specified Objective-C type.
+	     * @access public
+	     * @param {UnsafeRawPointer} value - A pointer to data to be stored in the new value object.
+	     * @param {UnsafePointer<Int8>} type - The Objective-C type of value, as provided by the @encode() compiler directive. Do not hard-code this parameter as a C string. 
+	     * @returns {void}
+	     * @desc See Number and Value Programming Topics for other considerations in creating a value object.This is the designated initializer for the NSValue class.
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1411621-init
+	     */
+	    value: function initBytesObjCType(value, type) {
+
+	      // Working with Raw Values
+
+	      this._objCType = null;
+
+	      // Working with Pointer and Object Values
+
+	      this._pointerValue = null;
+	      this._nonretainedObjectValue = null;
+
+	      // Working with Range Values
+
+	      this._rangeValue = null;
+
+	      // Working with Foundation Geometry Values
+
+	      this._pointValue = null;
+	      this._sizeValue = null;
+	      this._rectValue = null;
+
+	      // Working with CoreGraphics Geometry Values
+
+	      this._cgPointValue = null;
+	      this._cgVectorValue = null;
+	      this._cgSizeValue = null;
+	      this._cgRectValue = null;
+	      this._cgAffineTransformValue = null;
+
+	      // Working with UIKit Geometry Values
+
+	      this._uiEdgeInsetsValue = null;
+	      this._uiOffsetValue = null;
+
+	      // Working with CoreAnimation Transform Values
+
+	      this._caTransform3DValue = null;
+
+	      // Working with Media Time Values
+
+	      this._timeValue = null;
+	      this._timeRangeValue = null;
+	      this._timeMappingValue = null;
+
+	      // Working with Geographic Coordinate Values
+
+	      this._mkCoordinateValue = null;
+	      this._mkCoordinateSpanValue = null;
+
+	      // Working with SceneKit Vector and Matrix Values
+
+	      this._scnVector3Value = null;
+	      this._scnVector4Value = null;
+	      this._scnMatrix4Value = null;
+
+	      // Instance Properties
+
+	      this._edgeInsetsValue = null;
+	    }
+
+	    /**
+	     * Creates a value object containing the specified value, interpreted with the specified Objective-C type.
+	     * @access public
+	     * @param {UnsafeRawPointer} value - A pointer to data to be stored in the new value object.
+	     * @param {UnsafePointer<Int8>} type - The Objective-C type of value, as provided by the @encode() compiler directive. Do not hard-code this parameter as a C string. 
+	     * @returns {void}
+	     * @desc This method has the same effect as valueWithBytes:objCType: and may be deprecated in a future release. You should use valueWithBytes:objCType: instead.
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1417400-init
+	     */
+
+	  }, {
+	    key: 'initWithObjCType',
+	    value: function initWithObjCType(value, type) {
+
+	      // Working with Raw Values
+
+	      this._objCType = null;
+
+	      // Working with Pointer and Object Values
+
+	      this._pointerValue = null;
+	      this._nonretainedObjectValue = null;
+
+	      // Working with Range Values
+
+	      this._rangeValue = null;
+
+	      // Working with Foundation Geometry Values
+
+	      this._pointValue = null;
+	      this._sizeValue = null;
+	      this._rectValue = null;
+
+	      // Working with CoreGraphics Geometry Values
+
+	      this._cgPointValue = null;
+	      this._cgVectorValue = null;
+	      this._cgSizeValue = null;
+	      this._cgRectValue = null;
+	      this._cgAffineTransformValue = null;
+
+	      // Working with UIKit Geometry Values
+
+	      this._uiEdgeInsetsValue = null;
+	      this._uiOffsetValue = null;
+
+	      // Working with CoreAnimation Transform Values
+
+	      this._caTransform3DValue = null;
+
+	      // Working with Media Time Values
+
+	      this._timeValue = null;
+	      this._timeRangeValue = null;
+	      this._timeMappingValue = null;
+
+	      // Working with Geographic Coordinate Values
+
+	      this._mkCoordinateValue = null;
+	      this._mkCoordinateSpanValue = null;
+
+	      // Working with SceneKit Vector and Matrix Values
+
+	      this._scnVector3Value = null;
+	      this._scnVector4Value = null;
+	      this._scnMatrix4Value = null;
+
+	      // Instance Properties
+
+	      this._edgeInsetsValue = null;
+	    }
+
+	    /**
+	     * Copies the value into the specified buffer.
+	     * @access public
+	     * @param {Object} value - 
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1415141-getvalue
+	     */
+
+	  }, {
+	    key: 'getValue',
+	    value: function getValue(value) {}
+	    /**
+	     * A C string containing the Objective-C type of the data contained in the value object.
+	     * @type {UnsafePointer<Int8>}
+	     * @desc This property provides the same string produced by the @encode() compiler directive.
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1412365-objctype
+	     */
+
+	  }, {
+	    key: 'init',
+
+
+	    // Working with Pointer and Object Values
+
+	    /**
+	     * Creates a value object containing the specified pointer.
+	     * @access public
+	     * @param {?UnsafeRawPointer} pointer - 
+	     * @returns {void}
+	     * @desc This method is equivalent to invoking init(_:withObjCType:) in this manner:NSValue *theValue = [NSValue value:&aPointer withObjCType:@encode(void *)];
+	    This method does not copy the contents of aPointer, so you must not to free the memory at the pointer destination while the NSValue object exists. NSData objects may be more suited for arbitrary pointers than NSValue objects.NSValue *theValue = [NSValue value:&aPointer withObjCType:@encode(void *)];
+	      * @see https://developer.apple.com/reference/foundation/nsvalue/1415975-init
+	     */
+	    value: function init(pointer) {
+
+	      // Working with Raw Values
+
+	      this._objCType = null;
+
+	      // Working with Pointer and Object Values
+
+	      this._pointerValue = null;
+	      this._nonretainedObjectValue = null;
+
+	      // Working with Range Values
+
+	      this._rangeValue = null;
+
+	      // Working with Foundation Geometry Values
+
+	      this._pointValue = null;
+	      this._sizeValue = null;
+	      this._rectValue = null;
+
+	      // Working with CoreGraphics Geometry Values
+
+	      this._cgPointValue = null;
+	      this._cgVectorValue = null;
+	      this._cgSizeValue = null;
+	      this._cgRectValue = null;
+	      this._cgAffineTransformValue = null;
+
+	      // Working with UIKit Geometry Values
+
+	      this._uiEdgeInsetsValue = null;
+	      this._uiOffsetValue = null;
+
+	      // Working with CoreAnimation Transform Values
+
+	      this._caTransform3DValue = null;
+
+	      // Working with Media Time Values
+
+	      this._timeValue = null;
+	      this._timeRangeValue = null;
+	      this._timeMappingValue = null;
+
+	      // Working with Geographic Coordinate Values
+
+	      this._mkCoordinateValue = null;
+	      this._mkCoordinateSpanValue = null;
+
+	      // Working with SceneKit Vector and Matrix Values
+
+	      this._scnVector3Value = null;
+	      this._scnVector4Value = null;
+	      this._scnMatrix4Value = null;
+
+	      // Instance Properties
+
+	      this._edgeInsetsValue = null;
+	    }
+
+	    /**
+	     * Creates a value object containing the specified object.
+	     * @access public
+	     * @param {?Object} anObject - The value for the new object.
+	     * @returns {void}
+	     * @desc  This method is equivalent to invoking init(_:withObjCType:) in this manner:NSValue *theValue = [NSValue value:&anObject withObjCType:@encode(void *)];
+	    This method is useful if you want to add an object to a Collection but don’t want the collection to create a strong reference to it.NSValue *theValue = [NSValue value:&anObject withObjCType:@encode(void *)];
+	      * @see https://developer.apple.com/reference/foundation/nsvalue/1408098-init
+	     */
+
+	  }, {
+	    key: 'initNonretainedObject',
+	    value: function initNonretainedObject(anObject) {
+
+	      // Working with Raw Values
+
+	      this._objCType = null;
+
+	      // Working with Pointer and Object Values
+
+	      this._pointerValue = null;
+	      this._nonretainedObjectValue = null;
+
+	      // Working with Range Values
+
+	      this._rangeValue = null;
+
+	      // Working with Foundation Geometry Values
+
+	      this._pointValue = null;
+	      this._sizeValue = null;
+	      this._rectValue = null;
+
+	      // Working with CoreGraphics Geometry Values
+
+	      this._cgPointValue = null;
+	      this._cgVectorValue = null;
+	      this._cgSizeValue = null;
+	      this._cgRectValue = null;
+	      this._cgAffineTransformValue = null;
+
+	      // Working with UIKit Geometry Values
+
+	      this._uiEdgeInsetsValue = null;
+	      this._uiOffsetValue = null;
+
+	      // Working with CoreAnimation Transform Values
+
+	      this._caTransform3DValue = null;
+
+	      // Working with Media Time Values
+
+	      this._timeValue = null;
+	      this._timeRangeValue = null;
+	      this._timeMappingValue = null;
+
+	      // Working with Geographic Coordinate Values
+
+	      this._mkCoordinateValue = null;
+	      this._mkCoordinateSpanValue = null;
+
+	      // Working with SceneKit Vector and Matrix Values
+
+	      this._scnVector3Value = null;
+	      this._scnVector4Value = null;
+	      this._scnMatrix4Value = null;
+
+	      // Instance Properties
+
+	      this._edgeInsetsValue = null;
+	    }
+	    /**
+	     * Returns the value as an untyped pointer.
+	     * @type {?Object}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1410668-pointervalue
+	     */
+
+	  }, {
+	    key: 'initCgPoint',
+
+
+	    // Working with CoreGraphics Geometry Values
+
+	    /**
+	     * Creates a new value object containing the specified CoreGraphics point structure.
+	     * @access public
+	     * @param {CGPoint} point - The value for the new object.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1624531-init
+	     */
+	    value: function initCgPoint(point) {
+
+	      // Working with Raw Values
+
+	      this._objCType = null;
+
+	      // Working with Pointer and Object Values
+
+	      this._pointerValue = null;
+	      this._nonretainedObjectValue = null;
+
+	      // Working with Range Values
+
+	      this._rangeValue = null;
+
+	      // Working with Foundation Geometry Values
+
+	      this._pointValue = null;
+	      this._sizeValue = null;
+	      this._rectValue = null;
+
+	      // Working with CoreGraphics Geometry Values
+
+	      this._cgPointValue = null;
+	      this._cgVectorValue = null;
+	      this._cgSizeValue = null;
+	      this._cgRectValue = null;
+	      this._cgAffineTransformValue = null;
+
+	      // Working with UIKit Geometry Values
+
+	      this._uiEdgeInsetsValue = null;
+	      this._uiOffsetValue = null;
+
+	      // Working with CoreAnimation Transform Values
+
+	      this._caTransform3DValue = null;
+
+	      // Working with Media Time Values
+
+	      this._timeValue = null;
+	      this._timeRangeValue = null;
+	      this._timeMappingValue = null;
+
+	      // Working with Geographic Coordinate Values
+
+	      this._mkCoordinateValue = null;
+	      this._mkCoordinateSpanValue = null;
+
+	      // Working with SceneKit Vector and Matrix Values
+
+	      this._scnVector3Value = null;
+	      this._scnVector4Value = null;
+	      this._scnMatrix4Value = null;
+
+	      // Instance Properties
+
+	      this._edgeInsetsValue = null;
+	    }
+
+	    /**
+	     * Creates a new value object containing the specified CoreGraphics vector structure.
+	     * @access public
+	     * @param {CGVector} vector - The value for the new object.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1624493-init
+	     */
+
+	  }, {
+	    key: 'initCgVector',
+	    value: function initCgVector(vector) {
+
+	      // Working with Raw Values
+
+	      this._objCType = null;
+
+	      // Working with Pointer and Object Values
+
+	      this._pointerValue = null;
+	      this._nonretainedObjectValue = null;
+
+	      // Working with Range Values
+
+	      this._rangeValue = null;
+
+	      // Working with Foundation Geometry Values
+
+	      this._pointValue = null;
+	      this._sizeValue = null;
+	      this._rectValue = null;
+
+	      // Working with CoreGraphics Geometry Values
+
+	      this._cgPointValue = null;
+	      this._cgVectorValue = null;
+	      this._cgSizeValue = null;
+	      this._cgRectValue = null;
+	      this._cgAffineTransformValue = null;
+
+	      // Working with UIKit Geometry Values
+
+	      this._uiEdgeInsetsValue = null;
+	      this._uiOffsetValue = null;
+
+	      // Working with CoreAnimation Transform Values
+
+	      this._caTransform3DValue = null;
+
+	      // Working with Media Time Values
+
+	      this._timeValue = null;
+	      this._timeRangeValue = null;
+	      this._timeMappingValue = null;
+
+	      // Working with Geographic Coordinate Values
+
+	      this._mkCoordinateValue = null;
+	      this._mkCoordinateSpanValue = null;
+
+	      // Working with SceneKit Vector and Matrix Values
+
+	      this._scnVector3Value = null;
+	      this._scnVector4Value = null;
+	      this._scnMatrix4Value = null;
+
+	      // Instance Properties
+
+	      this._edgeInsetsValue = null;
+	    }
+
+	    /**
+	     * Creates a new value object containing the specified CoreGraphics size structure.
+	     * @access public
+	     * @param {CGSize} size - The value for the new object.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1624511-init
+	     */
+
+	  }, {
+	    key: 'initCgSize',
+	    value: function initCgSize(size) {
+
+	      // Working with Raw Values
+
+	      this._objCType = null;
+
+	      // Working with Pointer and Object Values
+
+	      this._pointerValue = null;
+	      this._nonretainedObjectValue = null;
+
+	      // Working with Range Values
+
+	      this._rangeValue = null;
+
+	      // Working with Foundation Geometry Values
+
+	      this._pointValue = null;
+	      this._sizeValue = null;
+	      this._rectValue = null;
+
+	      // Working with CoreGraphics Geometry Values
+
+	      this._cgPointValue = null;
+	      this._cgVectorValue = null;
+	      this._cgSizeValue = null;
+	      this._cgRectValue = null;
+	      this._cgAffineTransformValue = null;
+
+	      // Working with UIKit Geometry Values
+
+	      this._uiEdgeInsetsValue = null;
+	      this._uiOffsetValue = null;
+
+	      // Working with CoreAnimation Transform Values
+
+	      this._caTransform3DValue = null;
+
+	      // Working with Media Time Values
+
+	      this._timeValue = null;
+	      this._timeRangeValue = null;
+	      this._timeMappingValue = null;
+
+	      // Working with Geographic Coordinate Values
+
+	      this._mkCoordinateValue = null;
+	      this._mkCoordinateSpanValue = null;
+
+	      // Working with SceneKit Vector and Matrix Values
+
+	      this._scnVector3Value = null;
+	      this._scnVector4Value = null;
+	      this._scnMatrix4Value = null;
+
+	      // Instance Properties
+
+	      this._edgeInsetsValue = null;
+	    }
+
+	    /**
+	     * Creates a new value object containing the specified CoreGraphics rectangle structure.
+	     * @access public
+	     * @param {CGRect} rect - The value for the new object.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1624529-init
+	     */
+
+	  }, {
+	    key: 'initCgRect',
+	    value: function initCgRect(rect) {
+
+	      // Working with Raw Values
+
+	      this._objCType = null;
+
+	      // Working with Pointer and Object Values
+
+	      this._pointerValue = null;
+	      this._nonretainedObjectValue = null;
+
+	      // Working with Range Values
+
+	      this._rangeValue = null;
+
+	      // Working with Foundation Geometry Values
+
+	      this._pointValue = null;
+	      this._sizeValue = null;
+	      this._rectValue = null;
+
+	      // Working with CoreGraphics Geometry Values
+
+	      this._cgPointValue = null;
+	      this._cgVectorValue = null;
+	      this._cgSizeValue = null;
+	      this._cgRectValue = null;
+	      this._cgAffineTransformValue = null;
+
+	      // Working with UIKit Geometry Values
+
+	      this._uiEdgeInsetsValue = null;
+	      this._uiOffsetValue = null;
+
+	      // Working with CoreAnimation Transform Values
+
+	      this._caTransform3DValue = null;
+
+	      // Working with Media Time Values
+
+	      this._timeValue = null;
+	      this._timeRangeValue = null;
+	      this._timeMappingValue = null;
+
+	      // Working with Geographic Coordinate Values
+
+	      this._mkCoordinateValue = null;
+	      this._mkCoordinateSpanValue = null;
+
+	      // Working with SceneKit Vector and Matrix Values
+
+	      this._scnVector3Value = null;
+	      this._scnVector4Value = null;
+	      this._scnMatrix4Value = null;
+
+	      // Instance Properties
+
+	      this._edgeInsetsValue = null;
+	    }
+
+	    /**
+	     * Creates a new value object containing the specified CoreGraphics affine transform structure.
+	     * @access public
+	     * @param {CGAffineTransform} transform - The value for the new object.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1624503-init
+	     */
+
+	  }, {
+	    key: 'initCgAffineTransform',
+	    value: function initCgAffineTransform(transform) {
+
+	      // Working with Raw Values
+
+	      this._objCType = null;
+
+	      // Working with Pointer and Object Values
+
+	      this._pointerValue = null;
+	      this._nonretainedObjectValue = null;
+
+	      // Working with Range Values
+
+	      this._rangeValue = null;
+
+	      // Working with Foundation Geometry Values
+
+	      this._pointValue = null;
+	      this._sizeValue = null;
+	      this._rectValue = null;
+
+	      // Working with CoreGraphics Geometry Values
+
+	      this._cgPointValue = null;
+	      this._cgVectorValue = null;
+	      this._cgSizeValue = null;
+	      this._cgRectValue = null;
+	      this._cgAffineTransformValue = null;
+
+	      // Working with UIKit Geometry Values
+
+	      this._uiEdgeInsetsValue = null;
+	      this._uiOffsetValue = null;
+
+	      // Working with CoreAnimation Transform Values
+
+	      this._caTransform3DValue = null;
+
+	      // Working with Media Time Values
+
+	      this._timeValue = null;
+	      this._timeRangeValue = null;
+	      this._timeMappingValue = null;
+
+	      // Working with Geographic Coordinate Values
+
+	      this._mkCoordinateValue = null;
+	      this._mkCoordinateSpanValue = null;
+
+	      // Working with SceneKit Vector and Matrix Values
+
+	      this._scnVector3Value = null;
+	      this._scnVector4Value = null;
+	      this._scnMatrix4Value = null;
+
+	      // Instance Properties
+
+	      this._edgeInsetsValue = null;
+	    }
+	    /**
+	     * Returns the CoreGraphics point structure representation of the value.
+	     * @type {CGPoint}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1624534-cgpointvalue
+	     */
+
+	  }, {
+	    key: 'initUiEdgeInsets',
+
+
+	    // Working with UIKit Geometry Values
+
+	    /**
+	     * Creates a new value object containing the specified UIKit edge insets structure.
+	     * @access public
+	     * @param {UIEdgeInsets} insets - The value for the new object.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1624485-init
+	     */
+	    value: function initUiEdgeInsets(insets) {
+
+	      // Working with Raw Values
+
+	      this._objCType = null;
+
+	      // Working with Pointer and Object Values
+
+	      this._pointerValue = null;
+	      this._nonretainedObjectValue = null;
+
+	      // Working with Range Values
+
+	      this._rangeValue = null;
+
+	      // Working with Foundation Geometry Values
+
+	      this._pointValue = null;
+	      this._sizeValue = null;
+	      this._rectValue = null;
+
+	      // Working with CoreGraphics Geometry Values
+
+	      this._cgPointValue = null;
+	      this._cgVectorValue = null;
+	      this._cgSizeValue = null;
+	      this._cgRectValue = null;
+	      this._cgAffineTransformValue = null;
+
+	      // Working with UIKit Geometry Values
+
+	      this._uiEdgeInsetsValue = null;
+	      this._uiOffsetValue = null;
+
+	      // Working with CoreAnimation Transform Values
+
+	      this._caTransform3DValue = null;
+
+	      // Working with Media Time Values
+
+	      this._timeValue = null;
+	      this._timeRangeValue = null;
+	      this._timeMappingValue = null;
+
+	      // Working with Geographic Coordinate Values
+
+	      this._mkCoordinateValue = null;
+	      this._mkCoordinateSpanValue = null;
+
+	      // Working with SceneKit Vector and Matrix Values
+
+	      this._scnVector3Value = null;
+	      this._scnVector4Value = null;
+	      this._scnMatrix4Value = null;
+
+	      // Instance Properties
+
+	      this._edgeInsetsValue = null;
+	    }
+
+	    /**
+	     * Creates a new value object containing the specified UIKit offset structure.
+	     * @access public
+	     * @param {UIOffset} insets - The value for the new object.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1624530-init
+	     */
+
+	  }, {
+	    key: 'initUiOffset',
+	    value: function initUiOffset(insets) {
+
+	      // Working with Raw Values
+
+	      this._objCType = null;
+
+	      // Working with Pointer and Object Values
+
+	      this._pointerValue = null;
+	      this._nonretainedObjectValue = null;
+
+	      // Working with Range Values
+
+	      this._rangeValue = null;
+
+	      // Working with Foundation Geometry Values
+
+	      this._pointValue = null;
+	      this._sizeValue = null;
+	      this._rectValue = null;
+
+	      // Working with CoreGraphics Geometry Values
+
+	      this._cgPointValue = null;
+	      this._cgVectorValue = null;
+	      this._cgSizeValue = null;
+	      this._cgRectValue = null;
+	      this._cgAffineTransformValue = null;
+
+	      // Working with UIKit Geometry Values
+
+	      this._uiEdgeInsetsValue = null;
+	      this._uiOffsetValue = null;
+
+	      // Working with CoreAnimation Transform Values
+
+	      this._caTransform3DValue = null;
+
+	      // Working with Media Time Values
+
+	      this._timeValue = null;
+	      this._timeRangeValue = null;
+	      this._timeMappingValue = null;
+
+	      // Working with Geographic Coordinate Values
+
+	      this._mkCoordinateValue = null;
+	      this._mkCoordinateSpanValue = null;
+
+	      // Working with SceneKit Vector and Matrix Values
+
+	      this._scnVector3Value = null;
+	      this._scnVector4Value = null;
+	      this._scnMatrix4Value = null;
+
+	      // Instance Properties
+
+	      this._edgeInsetsValue = null;
+	    }
+	    /**
+	     * Returns the UIKit edge insets structure representation of the value.
+	     * @type {UIEdgeInsets}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1624517-uiedgeinsetsvalue
+	     */
+
+	  }, {
+	    key: 'initCaTransform3D',
+
+
+	    // Working with CoreAnimation Transform Values
+
+	    /**
+	     * Creates a new value object containing the specified CoreAnimation transform structure.
+	     * @access public
+	     * @param {CATransform3D} t - 
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1436556-init
+	     */
+	    value: function initCaTransform3D(t) {
+
+	      // Working with Raw Values
+
+	      this._objCType = null;
+
+	      // Working with Pointer and Object Values
+
+	      this._pointerValue = null;
+	      this._nonretainedObjectValue = null;
+
+	      // Working with Range Values
+
+	      this._rangeValue = null;
+
+	      // Working with Foundation Geometry Values
+
+	      this._pointValue = null;
+	      this._sizeValue = null;
+	      this._rectValue = null;
+
+	      // Working with CoreGraphics Geometry Values
+
+	      this._cgPointValue = null;
+	      this._cgVectorValue = null;
+	      this._cgSizeValue = null;
+	      this._cgRectValue = null;
+	      this._cgAffineTransformValue = null;
+
+	      // Working with UIKit Geometry Values
+
+	      this._uiEdgeInsetsValue = null;
+	      this._uiOffsetValue = null;
+
+	      // Working with CoreAnimation Transform Values
+
+	      this._caTransform3DValue = null;
+
+	      // Working with Media Time Values
+
+	      this._timeValue = null;
+	      this._timeRangeValue = null;
+	      this._timeMappingValue = null;
+
+	      // Working with Geographic Coordinate Values
+
+	      this._mkCoordinateValue = null;
+	      this._mkCoordinateSpanValue = null;
+
+	      // Working with SceneKit Vector and Matrix Values
+
+	      this._scnVector3Value = null;
+	      this._scnVector4Value = null;
+	      this._scnMatrix4Value = null;
+
+	      // Instance Properties
+
+	      this._edgeInsetsValue = null;
+	    }
+	    /**
+	     * The CoreAnimation transform structure representation of the value.
+	     * @type {CATransform3D}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1436572-catransform3dvalue
+	     */
+
+	  }, {
+	    key: 'initMkCoordinate',
+
+
+	    // Working with Geographic Coordinate Values
+
+	    /**
+	     * Creates a new value object containing the specified CoreLocation geographic coordinate structure.
+	     * @access public
+	     * @param {CLLocationCoordinate2D} coordinate - The value for the new object.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1452193-init
+	     */
+	    value: function initMkCoordinate(coordinate) {
+
+	      // Working with Raw Values
+
+	      this._objCType = null;
+
+	      // Working with Pointer and Object Values
+
+	      this._pointerValue = null;
+	      this._nonretainedObjectValue = null;
+
+	      // Working with Range Values
+
+	      this._rangeValue = null;
+
+	      // Working with Foundation Geometry Values
+
+	      this._pointValue = null;
+	      this._sizeValue = null;
+	      this._rectValue = null;
+
+	      // Working with CoreGraphics Geometry Values
+
+	      this._cgPointValue = null;
+	      this._cgVectorValue = null;
+	      this._cgSizeValue = null;
+	      this._cgRectValue = null;
+	      this._cgAffineTransformValue = null;
+
+	      // Working with UIKit Geometry Values
+
+	      this._uiEdgeInsetsValue = null;
+	      this._uiOffsetValue = null;
+
+	      // Working with CoreAnimation Transform Values
+
+	      this._caTransform3DValue = null;
+
+	      // Working with Media Time Values
+
+	      this._timeValue = null;
+	      this._timeRangeValue = null;
+	      this._timeMappingValue = null;
+
+	      // Working with Geographic Coordinate Values
+
+	      this._mkCoordinateValue = null;
+	      this._mkCoordinateSpanValue = null;
+
+	      // Working with SceneKit Vector and Matrix Values
+
+	      this._scnVector3Value = null;
+	      this._scnVector4Value = null;
+	      this._scnMatrix4Value = null;
+
+	      // Instance Properties
+
+	      this._edgeInsetsValue = null;
+	    }
+
+	    /**
+	     * Creates a new value object containing the specified MapKit coordinate span structure.
+	     * @access public
+	     * @param {MKCoordinateSpan} span - The value for the new object.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1452333-init
+	     */
+
+	  }, {
+	    key: 'initMkCoordinateSpan',
+	    value: function initMkCoordinateSpan(span) {
+
+	      // Working with Raw Values
+
+	      this._objCType = null;
+
+	      // Working with Pointer and Object Values
+
+	      this._pointerValue = null;
+	      this._nonretainedObjectValue = null;
+
+	      // Working with Range Values
+
+	      this._rangeValue = null;
+
+	      // Working with Foundation Geometry Values
+
+	      this._pointValue = null;
+	      this._sizeValue = null;
+	      this._rectValue = null;
+
+	      // Working with CoreGraphics Geometry Values
+
+	      this._cgPointValue = null;
+	      this._cgVectorValue = null;
+	      this._cgSizeValue = null;
+	      this._cgRectValue = null;
+	      this._cgAffineTransformValue = null;
+
+	      // Working with UIKit Geometry Values
+
+	      this._uiEdgeInsetsValue = null;
+	      this._uiOffsetValue = null;
+
+	      // Working with CoreAnimation Transform Values
+
+	      this._caTransform3DValue = null;
+
+	      // Working with Media Time Values
+
+	      this._timeValue = null;
+	      this._timeRangeValue = null;
+	      this._timeMappingValue = null;
+
+	      // Working with Geographic Coordinate Values
+
+	      this._mkCoordinateValue = null;
+	      this._mkCoordinateSpanValue = null;
+
+	      // Working with SceneKit Vector and Matrix Values
+
+	      this._scnVector3Value = null;
+	      this._scnVector4Value = null;
+	      this._scnMatrix4Value = null;
+
+	      // Instance Properties
+
+	      this._edgeInsetsValue = null;
+	    }
+	    /**
+	     * The CoreLocation geographic coordinate structure representation of the value.
+	     * @type {CLLocationCoordinate2D}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1452495-mkcoordinatevalue
+	     */
+
+	  }, {
+	    key: 'initScnVector3',
+
+
+	    // Working with SceneKit Vector and Matrix Values
+
+	    /**
+	     * Creates a value object that contains the specified three-element SceneKit vector.
+	     * @access public
+	     * @param {SCNVector3} v - 
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1409671-init
+	     */
+	    value: function initScnVector3(v) {
+
+	      // Working with Raw Values
+
+	      this._objCType = null;
+
+	      // Working with Pointer and Object Values
+
+	      this._pointerValue = null;
+	      this._nonretainedObjectValue = null;
+
+	      // Working with Range Values
+
+	      this._rangeValue = null;
+
+	      // Working with Foundation Geometry Values
+
+	      this._pointValue = null;
+	      this._sizeValue = null;
+	      this._rectValue = null;
+
+	      // Working with CoreGraphics Geometry Values
+
+	      this._cgPointValue = null;
+	      this._cgVectorValue = null;
+	      this._cgSizeValue = null;
+	      this._cgRectValue = null;
+	      this._cgAffineTransformValue = null;
+
+	      // Working with UIKit Geometry Values
+
+	      this._uiEdgeInsetsValue = null;
+	      this._uiOffsetValue = null;
+
+	      // Working with CoreAnimation Transform Values
+
+	      this._caTransform3DValue = null;
+
+	      // Working with Media Time Values
+
+	      this._timeValue = null;
+	      this._timeRangeValue = null;
+	      this._timeMappingValue = null;
+
+	      // Working with Geographic Coordinate Values
+
+	      this._mkCoordinateValue = null;
+	      this._mkCoordinateSpanValue = null;
+
+	      // Working with SceneKit Vector and Matrix Values
+
+	      this._scnVector3Value = null;
+	      this._scnVector4Value = null;
+	      this._scnMatrix4Value = null;
+
+	      // Instance Properties
+
+	      this._edgeInsetsValue = null;
+	    }
+
+	    /**
+	     * Creates a value object that contains the specified four-element SceneKit vector.
+	     * @access public
+	     * @param {SCNVector4} v - 
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1409688-init
+	     */
+
+	  }, {
+	    key: 'initScnVector4',
+	    value: function initScnVector4(v) {
+
+	      // Working with Raw Values
+
+	      this._objCType = null;
+
+	      // Working with Pointer and Object Values
+
+	      this._pointerValue = null;
+	      this._nonretainedObjectValue = null;
+
+	      // Working with Range Values
+
+	      this._rangeValue = null;
+
+	      // Working with Foundation Geometry Values
+
+	      this._pointValue = null;
+	      this._sizeValue = null;
+	      this._rectValue = null;
+
+	      // Working with CoreGraphics Geometry Values
+
+	      this._cgPointValue = null;
+	      this._cgVectorValue = null;
+	      this._cgSizeValue = null;
+	      this._cgRectValue = null;
+	      this._cgAffineTransformValue = null;
+
+	      // Working with UIKit Geometry Values
+
+	      this._uiEdgeInsetsValue = null;
+	      this._uiOffsetValue = null;
+
+	      // Working with CoreAnimation Transform Values
+
+	      this._caTransform3DValue = null;
+
+	      // Working with Media Time Values
+
+	      this._timeValue = null;
+	      this._timeRangeValue = null;
+	      this._timeMappingValue = null;
+
+	      // Working with Geographic Coordinate Values
+
+	      this._mkCoordinateValue = null;
+	      this._mkCoordinateSpanValue = null;
+
+	      // Working with SceneKit Vector and Matrix Values
+
+	      this._scnVector3Value = null;
+	      this._scnVector4Value = null;
+	      this._scnMatrix4Value = null;
+
+	      // Instance Properties
+
+	      this._edgeInsetsValue = null;
+	    }
+
+	    /**
+	     * Creates a value object that contains the specified SceneKit 4 x 4 matrix.
+	     * @access public
+	     * @param {SCNMatrix4} v - The value for the new object.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1409680-init
+	     */
+
+	  }, {
+	    key: 'initScnMatrix4',
+	    value: function initScnMatrix4(v) {
+
+	      // Working with Raw Values
+
+	      this._objCType = null;
+
+	      // Working with Pointer and Object Values
+
+	      this._pointerValue = null;
+	      this._nonretainedObjectValue = null;
+
+	      // Working with Range Values
+
+	      this._rangeValue = null;
+
+	      // Working with Foundation Geometry Values
+
+	      this._pointValue = null;
+	      this._sizeValue = null;
+	      this._rectValue = null;
+
+	      // Working with CoreGraphics Geometry Values
+
+	      this._cgPointValue = null;
+	      this._cgVectorValue = null;
+	      this._cgSizeValue = null;
+	      this._cgRectValue = null;
+	      this._cgAffineTransformValue = null;
+
+	      // Working with UIKit Geometry Values
+
+	      this._uiEdgeInsetsValue = null;
+	      this._uiOffsetValue = null;
+
+	      // Working with CoreAnimation Transform Values
+
+	      this._caTransform3DValue = null;
+
+	      // Working with Media Time Values
+
+	      this._timeValue = null;
+	      this._timeRangeValue = null;
+	      this._timeMappingValue = null;
+
+	      // Working with Geographic Coordinate Values
+
+	      this._mkCoordinateValue = null;
+	      this._mkCoordinateSpanValue = null;
+
+	      // Working with SceneKit Vector and Matrix Values
+
+	      this._scnVector3Value = null;
+	      this._scnVector4Value = null;
+	      this._scnMatrix4Value = null;
+
+	      // Instance Properties
+
+	      this._edgeInsetsValue = null;
+	    }
+	    /**
+	     * The three-element Scene Kit vector representation of the value.
+	     * @type {SCNVector3}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1409669-scnvector3value
+	     */
+
+	  }, {
+	    key: 'isEqualTo',
+
+
+	    // Comparing Value Objects
+
+	    /**
+	     * Returns a Boolean value that indicates whether the value object and another value object are equal.
+	     * @access public
+	     * @param {NSValue} value - 
+	     * @returns {boolean} - 
+	     * @desc The NSValue class compares the type and contents of each value object to determine equality.
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1409038-isequal
+	     */
+	    value: function isEqualTo(value) {
+	      return false;
+	    }
+
+	    // Initializers
+
+	    /**
+	     * 
+	     * @access public
+	     * @param {NSCoder} aDecoder - 
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1417896-init
+	     */
+
+	  }, {
+	    key: 'initCoder',
+	    value: function initCoder(aDecoder) {
+
+	      // Working with Raw Values
+
+	      this._objCType = null;
+
+	      // Working with Pointer and Object Values
+
+	      this._pointerValue = null;
+	      this._nonretainedObjectValue = null;
+
+	      // Working with Range Values
+
+	      this._rangeValue = null;
+
+	      // Working with Foundation Geometry Values
+
+	      this._pointValue = null;
+	      this._sizeValue = null;
+	      this._rectValue = null;
+
+	      // Working with CoreGraphics Geometry Values
+
+	      this._cgPointValue = null;
+	      this._cgVectorValue = null;
+	      this._cgSizeValue = null;
+	      this._cgRectValue = null;
+	      this._cgAffineTransformValue = null;
+
+	      // Working with UIKit Geometry Values
+
+	      this._uiEdgeInsetsValue = null;
+	      this._uiOffsetValue = null;
+
+	      // Working with CoreAnimation Transform Values
+
+	      this._caTransform3DValue = null;
+
+	      // Working with Media Time Values
+
+	      this._timeValue = null;
+	      this._timeRangeValue = null;
+	      this._timeMappingValue = null;
+
+	      // Working with Geographic Coordinate Values
+
+	      this._mkCoordinateValue = null;
+	      this._mkCoordinateSpanValue = null;
+
+	      // Working with SceneKit Vector and Matrix Values
+
+	      this._scnVector3Value = null;
+	      this._scnVector4Value = null;
+	      this._scnMatrix4Value = null;
+
+	      // Instance Properties
+
+	      this._edgeInsetsValue = null;
+	    }
+
+	    /**
+	     * 
+	     * @access public
+	     * @param {EdgeInsets} insets - 
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1391181-init
+	     */
+
+	  }, {
+	    key: 'initEdgeInsets',
+	    value: function initEdgeInsets(insets) {
+
+	      // Working with Raw Values
+
+	      this._objCType = null;
+
+	      // Working with Pointer and Object Values
+
+	      this._pointerValue = null;
+	      this._nonretainedObjectValue = null;
+
+	      // Working with Range Values
+
+	      this._rangeValue = null;
+
+	      // Working with Foundation Geometry Values
+
+	      this._pointValue = null;
+	      this._sizeValue = null;
+	      this._rectValue = null;
+
+	      // Working with CoreGraphics Geometry Values
+
+	      this._cgPointValue = null;
+	      this._cgVectorValue = null;
+	      this._cgSizeValue = null;
+	      this._cgRectValue = null;
+	      this._cgAffineTransformValue = null;
+
+	      // Working with UIKit Geometry Values
+
+	      this._uiEdgeInsetsValue = null;
+	      this._uiOffsetValue = null;
+
+	      // Working with CoreAnimation Transform Values
+
+	      this._caTransform3DValue = null;
+
+	      // Working with Media Time Values
+
+	      this._timeValue = null;
+	      this._timeRangeValue = null;
+	      this._timeMappingValue = null;
+
+	      // Working with Geographic Coordinate Values
+
+	      this._mkCoordinateValue = null;
+	      this._mkCoordinateSpanValue = null;
+
+	      // Working with SceneKit Vector and Matrix Values
+
+	      this._scnVector3Value = null;
+	      this._scnVector4Value = null;
+	      this._scnMatrix4Value = null;
+
+	      // Instance Properties
+
+	      this._edgeInsetsValue = null;
+	    }
+
+	    // Instance Properties
+	    /**
+	     * 
+	     * @type {EdgeInsets}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1391123-edgeinsetsvalue
+	     */
+
+	  }, {
+	    key: 'objCType',
+	    get: function get() {
+	      return this._objCType;
+	    }
+	  }, {
+	    key: 'pointerValue',
+	    get: function get() {
+	      return this._pointerValue;
+	    }
+	    /**
+	     * The value as a non-retained pointer to an object.
+	     * @type {?Object}
+	     * @desc If the value was not created to hold a pointer-sized data item, the result is undefined.
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1412287-nonretainedobjectvalue
+	     */
+
+	  }, {
+	    key: 'nonretainedObjectValue',
+	    get: function get() {
+	      return this._nonretainedObjectValue;
+	    }
+
+	    // Working with Range Values
+	    /**
+	     * The Foundation range structure representation of the value.
+	     * @type {NSRange}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1413902-rangevalue
+	     */
+
+	  }, {
+	    key: 'rangeValue',
+	    get: function get() {
+	      return this._rangeValue;
+	    }
+
+	    // Working with Foundation Geometry Values
+	    /**
+	     * The Foundation point structure representation of the value.
+	     * @type {CGPoint}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1391255-pointvalue
+	     */
+
+	  }, {
+	    key: 'pointValue',
+	    get: function get() {
+	      return this._pointValue;
+	    }
+	    /**
+	     * The Foundation size structure representation of the value.
+	     * @type {CGSize}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1391301-sizevalue
+	     */
+
+	  }, {
+	    key: 'sizeValue',
+	    get: function get() {
+	      return this._sizeValue;
+	    }
+	    /**
+	     * The Foundation rectangle structure representation of the value.
+	     * @type {CGRect}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1391171-rectvalue
+	     */
+
+	  }, {
+	    key: 'rectValue',
+	    get: function get() {
+	      return this._rectValue;
+	    }
+	  }, {
+	    key: 'cgPointValue',
+	    get: function get() {
+	      return this._cgPointValue;
+	    }
+	    /**
+	     * Returns the CoreGraphics vector structure representation of the value.
+	     * @type {CGVector}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1624486-cgvectorvalue
+	     */
+
+	  }, {
+	    key: 'cgVectorValue',
+	    get: function get() {
+	      return this._cgVectorValue;
+	    }
+	    /**
+	     * Returns the CoreGraphics size structure representation of the value.
+	     * @type {CGSize}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1624489-cgsizevalue
+	     */
+
+	  }, {
+	    key: 'cgSizeValue',
+	    get: function get() {
+	      return this._cgSizeValue;
+	    }
+	    /**
+	     * Returns the CoreGraphics rectangle structure representation of the value.
+	     * @type {CGRect}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1624506-cgrectvalue
+	     */
+
+	  }, {
+	    key: 'cgRectValue',
+	    get: function get() {
+	      return this._cgRectValue;
+	    }
+	    /**
+	     * Returns the CoreGraphics affine transform representation of the value.
+	     * @type {CGAffineTransform}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1624512-cgaffinetransformvalue
+	     */
+
+	  }, {
+	    key: 'cgAffineTransformValue',
+	    get: function get() {
+	      return this._cgAffineTransformValue;
+	    }
+	  }, {
+	    key: 'uiEdgeInsetsValue',
+	    get: function get() {
+	      return this._uiEdgeInsetsValue;
+	    }
+	    /**
+	     * Returns the UIKit offset structure representation of the value.
+	     * @type {UIOffset}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1624526-uioffsetvalue
+	     */
+
+	  }, {
+	    key: 'uiOffsetValue',
+	    get: function get() {
+	      return this._uiOffsetValue;
+	    }
+	  }, {
+	    key: 'caTransform3DValue',
+	    get: function get() {
+	      return this._caTransform3DValue;
+	    }
+
+	    // Working with Media Time Values
+	    /**
+	     * The CoreMedia time structure representation of the value.
+	     * @type {CMTime}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1388151-timevalue
+	     */
+
+	  }, {
+	    key: 'timeValue',
+	    get: function get() {
+	      return this._timeValue;
+	    }
+	    /**
+	     * The CoreMedia time range structure representation of the value.
+	     * @type {CMTimeRange}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1385930-timerangevalue
+	     */
+
+	  }, {
+	    key: 'timeRangeValue',
+	    get: function get() {
+	      return this._timeRangeValue;
+	    }
+	    /**
+	     * The CoreMedia time mapping structure representation of the value.
+	     * @type {CMTimeMapping}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1387277-timemappingvalue
+	     */
+
+	  }, {
+	    key: 'timeMappingValue',
+	    get: function get() {
+	      return this._timeMappingValue;
+	    }
+	  }, {
+	    key: 'mkCoordinateValue',
+	    get: function get() {
+	      return this._mkCoordinateValue;
+	    }
+	    /**
+	     * The MapKit coordinate span structure representation of the value.
+	     * @type {MKCoordinateSpan}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1452516-mkcoordinatespanvalue
+	     */
+
+	  }, {
+	    key: 'mkCoordinateSpanValue',
+	    get: function get() {
+	      return this._mkCoordinateSpanValue;
+	    }
+	  }, {
+	    key: 'scnVector3Value',
+	    get: function get() {
+	      return this._scnVector3Value;
+	    }
+	    /**
+	     * The four-element Scene Kit vector representation of the value.
+	     * @type {SCNVector4}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1409725-scnvector4value
+	     */
+
+	  }, {
+	    key: 'scnVector4Value',
+	    get: function get() {
+	      return this._scnVector4Value;
+	    }
+	    /**
+	     * The Scene Kit 4 x 4 matrix representation of the value.
+	     * @type {SCNMatrix4}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/foundation/nsvalue/1409684-scnmatrix4value
+	     */
+
+	  }, {
+	    key: 'scnMatrix4Value',
+	    get: function get() {
+	      return this._scnMatrix4Value;
+	    }
+	  }, {
+	    key: 'edgeInsetsValue',
+	    get: function get() {
+	      return this._edgeInsetsValue;
+	    }
+	  }]);
+
+	  return NSValue;
+	}(_NSObject3.default);
+
+	exports.default = NSValue;
+
+/***/ },
+/* 34 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -8772,7 +13575,7 @@ module.exports =
 	exports.default = CATransform3D;
 
 /***/ },
-/* 15 */
+/* 35 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -8821,17 +13624,24 @@ module.exports =
 	    this.z = z;
 	  }
 
-	  // extensions
-
 	  /**
-	   * @access public
-	   * @param {SCNVector3} v -
-	   * @returns {SCNVector3} -
+	   * @access private
+	   * @param {Buffer} data -
+	   * @returns {SCNVector3}
 	   */
 
 
 	  _createClass(SCNVector3, [{
 	    key: 'add',
+
+
+	    // extensions
+
+	    /**
+	     * @access public
+	     * @param {SCNVector3} v -
+	     * @returns {SCNVector3} -
+	     */
 	    value: function add(v) {
 	      var r = new SCNVector3();
 	      r.x = this.x + v.x;
@@ -8991,6 +13801,15 @@ module.exports =
 	    value: function float32Array() {
 	      return new Float32Array([this.x, this.y, this.z]);
 	    }
+	  }], [{
+	    key: '_initWithData',
+	    value: function _initWithData(data) {
+	      var instance = new SCNVector3();
+	      instance.x = data.readFloatLE(0);
+	      instance.y = data.readFloatLE(4);
+	      instance.z = data.readFloatLE(8);
+	      return instance;
+	    }
 	  }]);
 
 	  return SCNVector3;
@@ -8999,7 +13818,7 @@ module.exports =
 	exports.default = SCNVector3;
 
 /***/ },
-/* 16 */
+/* 36 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9010,7 +13829,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNMatrix = __webpack_require__(17);
+	var _SCNMatrix = __webpack_require__(37);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -9055,17 +13874,24 @@ module.exports =
 	    this.w = w;
 	  }
 
-	  // extensions
-
 	  /**
-	   * @access public
-	   * @param {SCNVector4} v -
-	   * @returns {SCNVector4} -
+	   * @access private
+	   * @param {Buffer} data -
+	   * @returns {SCNVector3}
 	   */
 
 
 	  _createClass(SCNVector4, [{
 	    key: 'add',
+
+
+	    // extensions
+
+	    /**
+	     * @access public
+	     * @param {SCNVector4} v -
+	     * @returns {SCNVector4} -
+	     */
 	    value: function add(v) {
 	      var r = new SCNVector4();
 	      r.x = this.x + v.x;
@@ -9388,6 +14214,16 @@ module.exports =
 	    value: function float32Array() {
 	      return new Float32Array([this.x, this.y, this.z, this.w]);
 	    }
+	  }], [{
+	    key: '_initWithData',
+	    value: function _initWithData(data) {
+	      var instance = new SCNVector4();
+	      instance.x = data.readFloatLE(0);
+	      instance.y = data.readFloatLE(4);
+	      instance.z = data.readFloatLE(8);
+	      instance.w = data.readFloatLE(12);
+	      return instance;
+	    }
 	  }]);
 
 	  return SCNVector4;
@@ -9396,7 +14232,7 @@ module.exports =
 	exports.default = SCNVector4;
 
 /***/ },
-/* 17 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -9407,11 +14243,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNVector = __webpack_require__(15);
+	var _SCNVector = __webpack_require__(35);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3 = __webpack_require__(16);
+	var _SCNVector3 = __webpack_require__(36);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
@@ -10162,7 +14998,7 @@ module.exports =
 	exports.default = SCNMatrix4;
 
 /***/ },
-/* 18 */
+/* 38 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -10220,7 +15056,7 @@ module.exports =
 	exports.default = CAAction;
 
 /***/ },
-/* 19 */
+/* 39 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10233,31 +15069,31 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _constants = __webpack_require__(20);
+	var _constants = __webpack_require__(40);
 
 	var Constants = _interopRequireWildcard(_constants);
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _CAAction = __webpack_require__(18);
+	var _CAAction = __webpack_require__(38);
 
 	var _CAAction2 = _interopRequireDefault(_CAAction);
 
-	var _CAMediaTiming = __webpack_require__(21);
+	var _CAMediaTiming = __webpack_require__(41);
 
 	var _CAMediaTiming2 = _interopRequireDefault(_CAMediaTiming);
 
-	var _CAMediaTimingFunction = __webpack_require__(22);
+	var _CAMediaTimingFunction = __webpack_require__(42);
 
 	var _CAMediaTimingFunction2 = _interopRequireDefault(_CAMediaTimingFunction);
 
-	var _CAAnimationDelegate = __webpack_require__(23);
+	var _CAAnimationDelegate = __webpack_require__(43);
 
 	var _CAAnimationDelegate2 = _interopRequireDefault(_CAAnimationDelegate);
 
-	var _SCNAnimationEvent = __webpack_require__(24);
+	var _SCNAnimationEvent = __webpack_require__(44);
 
 	var _SCNAnimationEvent2 = _interopRequireDefault(_SCNAnimationEvent);
 
@@ -10645,7 +15481,7 @@ module.exports =
 	exports.default = CAAnimation;
 
 /***/ },
-/* 20 */
+/* 40 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -10677,7 +15513,7 @@ module.exports =
 	exports.kCAAnimationRotateAutoReverse = 'autoReverse';
 
 /***/ },
-/* 21 */
+/* 41 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -10772,7 +15608,7 @@ module.exports =
 	exports.default = CAMediaTiming;
 
 /***/ },
-/* 22 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10783,11 +15619,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _constants = __webpack_require__(20);
+	var _constants = __webpack_require__(40);
 
 	var Constants = _interopRequireWildcard(_constants);
 
@@ -10927,7 +15763,7 @@ module.exports =
 	exports.default = CAMediaTimingFunction;
 
 /***/ },
-/* 23 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -10938,7 +15774,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _CAAnimation = __webpack_require__(19);
+	var _CAAnimation = __webpack_require__(39);
 
 	var _CAAnimation2 = _interopRequireDefault(_CAAnimation);
 
@@ -11002,7 +15838,7 @@ module.exports =
 	exports.default = CAAnimationDelegate;
 
 /***/ },
-/* 24 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11013,11 +15849,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimationEventBlock = __webpack_require__(25);
+	var _SCNAnimationEventBlock = __webpack_require__(45);
 
 	var _SCNAnimationEventBlock2 = _interopRequireDefault(_SCNAnimationEventBlock);
 
@@ -11078,7 +15914,7 @@ module.exports =
 	exports.default = SCNAnimationEvent;
 
 /***/ },
-/* 25 */
+/* 45 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11087,7 +15923,7 @@ module.exports =
 	  value: true
 	});
 
-	var _CAAnimation = __webpack_require__(19);
+	var _CAAnimation = __webpack_require__(39);
 
 	var _CAAnimation2 = _interopRequireDefault(_CAAnimation);
 
@@ -11107,7 +15943,7 @@ module.exports =
 	exports.default = SCNAnimationEventBlock;
 
 /***/ },
-/* 26 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11120,7 +15956,7 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _CAAnimation2 = __webpack_require__(19);
+	var _CAAnimation2 = __webpack_require__(39);
 
 	var _CAAnimation3 = _interopRequireDefault(_CAAnimation2);
 
@@ -11224,7 +16060,7 @@ module.exports =
 	exports.default = CAAnimationGroup;
 
 /***/ },
-/* 27 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11237,7 +16073,7 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _CAPropertyAnimation2 = __webpack_require__(28);
+	var _CAPropertyAnimation2 = __webpack_require__(48);
 
 	var _CAPropertyAnimation3 = _interopRequireDefault(_CAPropertyAnimation2);
 
@@ -11380,7 +16216,7 @@ module.exports =
 	exports.default = CABasicAnimation;
 
 /***/ },
-/* 28 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11393,35 +16229,35 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _CAAnimation2 = __webpack_require__(19);
+	var _CAAnimation2 = __webpack_require__(39);
 
 	var _CAAnimation3 = _interopRequireDefault(_CAAnimation2);
 
-	var _CGPoint = __webpack_require__(5);
+	var _CGPoint = __webpack_require__(3);
 
 	var _CGPoint2 = _interopRequireDefault(_CGPoint);
 
-	var _CGSize = __webpack_require__(7);
+	var _CGSize = __webpack_require__(5);
 
 	var _CGSize2 = _interopRequireDefault(_CGSize);
 
-	var _CGRect = __webpack_require__(6);
+	var _CGRect = __webpack_require__(4);
 
 	var _CGRect2 = _interopRequireDefault(_CGRect);
 
-	var _SCNMatrix = __webpack_require__(17);
+	var _SCNMatrix = __webpack_require__(37);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNQuaternion = __webpack_require__(29);
+	var _SCNQuaternion = __webpack_require__(49);
 
 	var _SCNQuaternion2 = _interopRequireDefault(_SCNQuaternion);
 
-	var _SCNVector = __webpack_require__(16);
+	var _SCNVector = __webpack_require__(36);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3 = __webpack_require__(15);
+	var _SCNVector3 = __webpack_require__(35);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
@@ -11658,7 +16494,7 @@ module.exports =
 	exports.default = CAPropertyAnimation;
 
 /***/ },
-/* 29 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11667,7 +16503,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(16);
+	var _SCNVector = __webpack_require__(36);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -11684,7 +16520,7 @@ module.exports =
 	exports.default = SCNQuaternion;
 
 /***/ },
-/* 30 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11697,19 +16533,19 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _CAPropertyAnimation2 = __webpack_require__(28);
+	var _CAPropertyAnimation2 = __webpack_require__(48);
 
 	var _CAPropertyAnimation3 = _interopRequireDefault(_CAPropertyAnimation2);
 
-	var _CGPath = __webpack_require__(8);
+	var _CGPath = __webpack_require__(14);
 
 	var _CGPath2 = _interopRequireDefault(_CGPath);
 
-	var _CAMediaTimingFunction = __webpack_require__(22);
+	var _CAMediaTimingFunction = __webpack_require__(42);
 
 	var _CAMediaTimingFunction2 = _interopRequireDefault(_CAMediaTimingFunction);
 
-	var _constants = __webpack_require__(20);
+	var _constants = __webpack_require__(40);
 
 	var Constants = _interopRequireWildcard(_constants);
 
@@ -11950,7 +16786,7 @@ module.exports =
 	exports.default = CAKeyframeAnimation;
 
 /***/ },
-/* 31 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -11961,31 +16797,31 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNVector = __webpack_require__(15);
+	var _SCNVector = __webpack_require__(35);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3 = __webpack_require__(16);
+	var _SCNVector3 = __webpack_require__(36);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
-	var _SCNAudioSource = __webpack_require__(32);
+	var _SCNAudioSource = __webpack_require__(52);
 
 	var _SCNAudioSource2 = _interopRequireDefault(_SCNAudioSource);
 
-	var _SCNNode = __webpack_require__(33);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNActionTimingMode = __webpack_require__(105);
+	var _SCNActionTimingMode = __webpack_require__(124);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
-	var _SCNActionTimingFunction = __webpack_require__(106);
+	var _SCNActionTimingFunction = __webpack_require__(125);
 
 	var _SCNActionTimingFunction2 = _interopRequireDefault(_SCNActionTimingFunction);
 
@@ -12545,7 +17381,7 @@ module.exports =
 	exports.default = SCNAction;
 
 /***/ },
-/* 32 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12556,7 +17392,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
@@ -12692,7 +17528,7 @@ module.exports =
 	exports.default = SCNAudioSource;
 
 /***/ },
-/* 33 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12701,103 +17537,105 @@ module.exports =
 	  value: true
 	});
 
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _CAAnimationGroup = __webpack_require__(26);
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _CAAnimationGroup = __webpack_require__(46);
 
 	var _CAAnimationGroup2 = _interopRequireDefault(_CAAnimationGroup);
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNActionable = __webpack_require__(34);
+	var _SCNActionable = __webpack_require__(54);
 
 	var _SCNActionable2 = _interopRequireDefault(_SCNActionable);
 
-	var _SCNAnimatable = __webpack_require__(35);
+	var _SCNAnimatable = __webpack_require__(55);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNBoundingVolume = __webpack_require__(36);
+	var _SCNBoundingVolume = __webpack_require__(56);
 
 	var _SCNBoundingVolume2 = _interopRequireDefault(_SCNBoundingVolume);
 
-	var _SCNGeometry = __webpack_require__(37);
+	var _SCNGeometry = __webpack_require__(57);
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
-	var _SCNLight = __webpack_require__(81);
+	var _SCNLight = __webpack_require__(100);
 
 	var _SCNLight2 = _interopRequireDefault(_SCNLight);
 
-	var _SCNCamera = __webpack_require__(80);
+	var _SCNCamera = __webpack_require__(99);
 
 	var _SCNCamera2 = _interopRequireDefault(_SCNCamera);
 
-	var _SCNMorpher = __webpack_require__(95);
+	var _SCNMorpher = __webpack_require__(114);
 
 	var _SCNMorpher2 = _interopRequireDefault(_SCNMorpher);
 
-	var _SCNSkinner = __webpack_require__(97);
+	var _SCNSkinner = __webpack_require__(116);
 
 	var _SCNSkinner2 = _interopRequireDefault(_SCNSkinner);
 
-	var _SCNMatrix = __webpack_require__(17);
+	var _SCNMatrix = __webpack_require__(37);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(45);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(65);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
-	var _SCNVector = __webpack_require__(15);
+	var _SCNVector = __webpack_require__(35);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3 = __webpack_require__(16);
+	var _SCNVector3 = __webpack_require__(36);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
-	var _SCNQuaternion = __webpack_require__(29);
+	var _SCNQuaternion = __webpack_require__(49);
 
 	var _SCNQuaternion2 = _interopRequireDefault(_SCNQuaternion);
 
-	var _SCNConstraint = __webpack_require__(98);
+	var _SCNConstraint = __webpack_require__(117);
 
 	var _SCNConstraint2 = _interopRequireDefault(_SCNConstraint);
 
-	var _SCNMovabilityHint = __webpack_require__(99);
+	var _SCNMovabilityHint = __webpack_require__(118);
 
 	var _SCNMovabilityHint2 = _interopRequireDefault(_SCNMovabilityHint);
 
-	var _SCNNodeRendererDelegate = __webpack_require__(100);
+	var _SCNNodeRendererDelegate = __webpack_require__(119);
 
 	var _SCNNodeRendererDelegate2 = _interopRequireDefault(_SCNNodeRendererDelegate);
 
-	var _SCNPhysicsBody = __webpack_require__(55);
+	var _SCNPhysicsBody = __webpack_require__(74);
 
 	var _SCNPhysicsBody2 = _interopRequireDefault(_SCNPhysicsBody);
 
-	var _SCNPhysicsField = __webpack_require__(101);
+	var _SCNPhysicsField = __webpack_require__(120);
 
 	var _SCNPhysicsField2 = _interopRequireDefault(_SCNPhysicsField);
 
-	var _SCNParticleSystem = __webpack_require__(59);
+	var _SCNParticleSystem = __webpack_require__(78);
 
 	var _SCNParticleSystem2 = _interopRequireDefault(_SCNParticleSystem);
 
-	var _SCNAudioPlayer = __webpack_require__(104);
+	var _SCNAudioPlayer = __webpack_require__(123);
 
 	var _SCNAudioPlayer2 = _interopRequireDefault(_SCNAudioPlayer);
 
-	var _SCNHitTestResult = __webpack_require__(58);
+	var _SCNHitTestResult = __webpack_require__(77);
 
 	var _SCNHitTestResult2 = _interopRequireDefault(_SCNHitTestResult);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -12817,15 +17655,40 @@ module.exports =
 	var SCNNode = function (_NSObject) {
 	  _inherits(SCNNode, _NSObject);
 
-	  // Creating a Node
+	  _createClass(SCNNode, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      return {
+	        paused: ['boolean', 'isPaused'],
+	        scale: ['SCNVector3', '_scale'],
+	        rotation: ['SCNVector4', '_rotation'],
+	        position: ['SCNVector3', '_position'],
+	        clientAttributes: ['NSMutableDictionary', null],
+	        castsShadow: 'boolean',
+	        opacity: 'float',
+	        categoryBitMask: 'integer',
+	        hidden: ['boolean', 'isHidden'],
+	        childNodes: ['NSArray', '_childNodes'],
+	        renderingOrder: 'integer',
+	        nodeID: ['string', null],
+	        entityID: ['string', null],
+	        name: 'string',
+	        geometry: 'SCNGeometry'
+	      };
+	    }
 
-	  /**
-	   * Creates and returns a node object with the specified geometry attached.
-	   * @access public
-	   * @constructor
-	   * @param {?SCNGeometry} [geometry = null] - The geometry to be attached.
-	   * @see https://developer.apple.com/reference/scenekit/scnnode/1408020-init
-	   */
+	    // Creating a Node
+
+	    /**
+	     * Creates and returns a node object with the specified geometry attached.
+	     * @access public
+	     * @constructor
+	     * @param {?SCNGeometry} [geometry = null] - The geometry to be attached.
+	     * @see https://developer.apple.com/reference/scenekit/scnnode/1408020-init
+	     */
+
+	  }]);
+
 	  function SCNNode() {
 	    var geometry = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
 
@@ -13113,6 +17976,46 @@ module.exports =
 
 	    return _this;
 	  }
+
+	  /**
+	   * @access public
+	   * @param {NSCoder} coder -
+	   * @returns {SCNNode}
+	   */
+	  /*
+	  static initWithCoder(coder) {
+	   const instance = new SCNNode()
+	   instance._setValueWithCoder(coder)
+	   return instance
+	  }
+	  */
+
+	  /**
+	   * @access private
+	   * @param {NSCoder} coder -
+	   */
+	  /*
+	  _setValueWithCoder(coder) {
+	   this.isPaused = coder.decodeBoolForKey('paused')
+	   const scale = coder.decodeBytesForKeyReturnedLength('scale', null)
+	   this._scale = new SCNVector3(scale)
+	   const rotation = coder.decodeBytesForKeyReturnedLength('rotation', null)
+	   this._rotation = new SCNVector3(rotation)
+	   const position = coder.decodeBytesForKeyReturnedLength('position', null)
+	   this._position = new SCNVector3(position)
+	   const clientAttributes = coder.decodeObjectForKey('clientAttributes')
+	   this.castsShadow = coder.deocdeBoolForKey('castsShadow')
+	   this.opacity = coder.decodeFloatForKey('opacity')
+	   this.categoryBitMask = coder.decodeIntegerForKey('categoryBitMask')
+	   this.isHidden = coder.decodeBoolForKey('isHidden')
+	   this.childNodes = coder.decodeObjectForKey('childNodes')
+	   this.renderingOrder = coder.decodeIntegerForKey('renderingOrder')
+	   // nodeID object
+	   // entityID object
+	   // name object
+	   // geometry
+	  }
+	  */
 
 	  /**
 	   * Constructor for JSExport compatibility
@@ -13762,9 +18665,8 @@ module.exports =
 	      // FIXME: use current frame time
 	      anim._animationStartTime = Date.now() * 0.001;
 	      anim._prevTime = anim._animationStartTime - 0.0000001;
-	      //const now = Date.now() * 0.001
-	      //this._setAnimationStartTime(anim, now)
 	      this._animations.set(key, anim);
+	      this._copyTransformToPresentationRecursive();
 	    }
 
 	    /**
@@ -13825,6 +18727,7 @@ module.exports =
 	    key: 'removeAnimationForKey',
 	    value: function removeAnimationForKey(key) {
 	      this._animations.delete(key);
+	      this._copyTransformToPresentationRecursive();
 	    }
 
 	    /**
@@ -13973,6 +18876,27 @@ module.exports =
 	      node._transformUpToDate = false;
 
 	      return node;
+	    }
+	  }, {
+	    key: '_copyTransformToPresentation',
+	    value: function _copyTransformToPresentation() {
+	      if (this._presentation === null) {
+	        return;
+	      }
+	      var p = this._presentation;
+	      p._position = this._position;
+	      p._rotation = this._rotation;
+	      p._scale = this._scale;
+	    }
+	  }, {
+	    key: '_copyTransformToPresentationRecursive',
+	    value: function _copyTransformToPresentationRecursive() {
+	      var nodes = [this];
+	      while (nodes.length > 0) {
+	        var node = nodes.shift();
+	        node._copyTransformToPresentation();
+	        nodes.push.apply(nodes, _toConsumableArray(node._childNodes));
+	      }
 	    }
 	  }, {
 	    key: 'setValueForKey',
@@ -14472,7 +19396,7 @@ module.exports =
 	exports.default = SCNNode;
 
 /***/ },
-/* 34 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14483,7 +19407,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction = __webpack_require__(31);
+	var _SCNAction = __webpack_require__(51);
 
 	var _SCNAction2 = _interopRequireDefault(_SCNAction);
 
@@ -14655,7 +19579,7 @@ module.exports =
 	exports.default = SCNActionable;
 
 /***/ },
-/* 35 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14666,7 +19590,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _CAAnimation = __webpack_require__(19);
+	var _CAAnimation = __webpack_require__(39);
 
 	var _CAAnimation2 = _interopRequireDefault(_CAAnimation);
 
@@ -14844,7 +19768,7 @@ module.exports =
 	exports.default = SCNAnimatable;
 
 /***/ },
-/* 36 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14855,7 +19779,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNVector = __webpack_require__(15);
+	var _SCNVector = __webpack_require__(35);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -14917,7 +19841,7 @@ module.exports =
 	exports.default = SCNBoundingVolume;
 
 /***/ },
-/* 37 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14928,35 +19852,35 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimatable = __webpack_require__(35);
+	var _SCNAnimatable = __webpack_require__(55);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNBoundingVolume = __webpack_require__(36);
+	var _SCNBoundingVolume = __webpack_require__(56);
 
 	var _SCNBoundingVolume2 = _interopRequireDefault(_SCNBoundingVolume);
 
-	var _SCNShadable = __webpack_require__(38);
+	var _SCNShadable = __webpack_require__(58);
 
 	var _SCNShadable2 = _interopRequireDefault(_SCNShadable);
 
-	var _SCNGeometrySource = __webpack_require__(84);
+	var _SCNGeometrySource = __webpack_require__(103);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNGeometryElement = __webpack_require__(89);
+	var _SCNGeometryElement = __webpack_require__(108);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNLevelOfDetail = __webpack_require__(90);
+	var _SCNLevelOfDetail = __webpack_require__(109);
 
 	var _SCNLevelOfDetail2 = _interopRequireDefault(_SCNLevelOfDetail);
 
-	var _SCNMaterial = __webpack_require__(91);
+	var _SCNMaterial = __webpack_require__(110);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
@@ -14982,17 +19906,46 @@ module.exports =
 	var SCNGeometry = function (_NSObject) {
 	  _inherits(SCNGeometry, _NSObject);
 
-	  // Creating a Geometry Object
+	  _createClass(SCNGeometry, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      var addSources = function addSources(obj, sources, key, coder) {
+	        var _obj$_geometrySources;
 
-	  /**
-	   * Creates a new geometry built from the specified geometry sources and elements.
-	   * @access public
-	   * @constructor
-	   * @param {SCNGeometrySource[]} sources - An array of SCNGeometrySource objects describing vertices in the geometry and their attributes.
-	   * @param {?SCNGeometryElement[]} elements - An array of SCNGeometryElement objects describing how to connect the geometry’s vertices.
-	   * @desc A geometry's visible content comes from the combination of geometry sources, which contain data describing its vertices, with geometry elements, which contain data describing how the vertices connect to form a surface. Each SCNGeometrySource object describes an attribute of all vertices in the geometry (vertex position, surface normal vector, color, or texture mapping coordinates) identified by the source's semantic property. To create a custom geometry you must provide at least one source, for the vertex semantic. Typically, you also provide sources for normals and texture coordinates for use in lighting and shading.Sources for the vertex, normal, and color semantics must be unique-if multiple objects in the sources array have the same semantic, SceneKit uses only the first. A geometry may have multiple sources for the texcoord semantic-the order of texture coordinate sources in the sources array determines the value to use for the mappingChannel property when attaching materials.Each SCNGeometryElement object describes how vertices from the geometry sources are combined into polygons to create the geometry's shape. Creating a custom geometry requires at least one element. If the elements array contains multiple objects, their order determines the arrangement of the geometry's materials-for details, see the discussion of the materials property.
-	   * @see https://developer.apple.com/reference/scenekit/scngeometry/1522803-init
-	   */
+	        console.log('addSources source.length: ' + sources.length + ', key: ' + key);
+	        (_obj$_geometrySources = obj._geometrySources).push.apply(_obj$_geometrySources, _toConsumableArray(sources));
+	      };
+	      return {
+	        name: 'string',
+	        // levelsOfDetail
+	        materials: 'NSArray',
+	        subdivisionLevel: 'integer',
+	        // edgeCreasesSource
+	        // program
+	        // shaderModifiers
+	        elements: ['NSArray', '_geometryElements'],
+	        kGeometrySourceSemanticVertex: ['NSArray', addSources],
+	        kGeometrySourceSemanticNormal: ['NSArray', addSources],
+	        kGeometrySourceSemanticTexcoord: ['NSArray', addSources],
+	        kGeometrySourceSemanticColor: ['NSArray', addSources],
+	        entityID: ['string', null]
+	      };
+	    }
+
+	    // Creating a Geometry Object
+
+	    /**
+	     * Creates a new geometry built from the specified geometry sources and elements.
+	     * @access public
+	     * @constructor
+	     * @param {SCNGeometrySource[]} sources - An array of SCNGeometrySource objects describing vertices in the geometry and their attributes.
+	     * @param {?SCNGeometryElement[]} elements - An array of SCNGeometryElement objects describing how to connect the geometry’s vertices.
+	     * @desc A geometry's visible content comes from the combination of geometry sources, which contain data describing its vertices, with geometry elements, which contain data describing how the vertices connect to form a surface. Each SCNGeometrySource object describes an attribute of all vertices in the geometry (vertex position, surface normal vector, color, or texture mapping coordinates) identified by the source's semantic property. To create a custom geometry you must provide at least one source, for the vertex semantic. Typically, you also provide sources for normals and texture coordinates for use in lighting and shading.Sources for the vertex, normal, and color semantics must be unique-if multiple objects in the sources array have the same semantic, SceneKit uses only the first. A geometry may have multiple sources for the texcoord semantic-the order of texture coordinate sources in the sources array determines the value to use for the mappingChannel property when attaching materials.Each SCNGeometryElement object describes how vertices from the geometry sources are combined into polygons to create the geometry's shape. Creating a custom geometry requires at least one element. If the elements array contains multiple objects, their order determines the arrangement of the geometry's materials-for details, see the discussion of the materials property.
+	     * @see https://developer.apple.com/reference/scenekit/scngeometry/1522803-init
+	     */
+
+	  }]);
+
 	  function SCNGeometry() {
 	    var sources = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : [];
 	    var elements = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : [];
@@ -15701,7 +20654,7 @@ module.exports =
 	exports.default = SCNGeometry;
 
 /***/ },
-/* 38 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15712,15 +20665,15 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNProgram = __webpack_require__(39);
+	var _SCNProgram = __webpack_require__(59);
 
 	var _SCNProgram2 = _interopRequireDefault(_SCNProgram);
 
-	var _SCNShaderModifierEntryPoint = __webpack_require__(88);
+	var _SCNShaderModifierEntryPoint = __webpack_require__(107);
 
 	var _SCNShaderModifierEntryPoint2 = _interopRequireDefault(_SCNShaderModifierEntryPoint);
 
-	var _SCNBindingBlock = __webpack_require__(78);
+	var _SCNBindingBlock = __webpack_require__(97);
 
 	var _SCNBindingBlock2 = _interopRequireDefault(_SCNBindingBlock);
 
@@ -15818,7 +20771,7 @@ module.exports =
 	exports.default = SCNShadable;
 
 /***/ },
-/* 39 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15829,19 +20782,19 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNProgramDelegate = __webpack_require__(40);
+	var _SCNProgramDelegate = __webpack_require__(60);
 
 	var _SCNProgramDelegate2 = _interopRequireDefault(_SCNProgramDelegate);
 
-	var _SCNBufferFrequency = __webpack_require__(85);
+	var _SCNBufferFrequency = __webpack_require__(104);
 
 	var _SCNBufferFrequency2 = _interopRequireDefault(_SCNBufferFrequency);
 
-	var _SCNBufferBindingBlock = __webpack_require__(86);
+	var _SCNBufferBindingBlock = __webpack_require__(105);
 
 	var _SCNBufferBindingBlock2 = _interopRequireDefault(_SCNBufferBindingBlock);
 
@@ -16016,7 +20969,7 @@ module.exports =
 	exports.default = SCNProgram;
 
 /***/ },
-/* 40 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16027,11 +20980,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNProgram = __webpack_require__(39);
+	var _SCNProgram = __webpack_require__(59);
 
 	var _SCNProgram2 = _interopRequireDefault(_SCNProgram);
 
-	var _SCNRenderer = __webpack_require__(41);
+	var _SCNRenderer = __webpack_require__(61);
 
 	var _SCNRenderer2 = _interopRequireDefault(_SCNRenderer);
 
@@ -16140,7 +21093,7 @@ module.exports =
 	exports.default = SCNProgramDelegate;
 
 /***/ },
-/* 41 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16151,67 +21104,67 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNSceneRenderer = __webpack_require__(42);
+	var _SCNSceneRenderer = __webpack_require__(62);
 
 	var _SCNSceneRenderer2 = _interopRequireDefault(_SCNSceneRenderer);
 
-	var _SCNTechniqueSupport = __webpack_require__(76);
+	var _SCNTechniqueSupport = __webpack_require__(95);
 
 	var _SCNTechniqueSupport2 = _interopRequireDefault(_SCNTechniqueSupport);
 
-	var _SCNScene = __webpack_require__(43);
+	var _SCNScene = __webpack_require__(63);
 
 	var _SCNScene2 = _interopRequireDefault(_SCNScene);
 
-	var _CGRect = __webpack_require__(6);
+	var _CGRect = __webpack_require__(4);
 
 	var _CGRect2 = _interopRequireDefault(_CGRect);
 
-	var _CGSize = __webpack_require__(7);
+	var _CGSize = __webpack_require__(5);
 
 	var _CGSize2 = _interopRequireDefault(_CGSize);
 
-	var _SCNAntialiasingMode = __webpack_require__(79);
+	var _SCNAntialiasingMode = __webpack_require__(98);
 
 	var _SCNAntialiasingMode2 = _interopRequireDefault(_SCNAntialiasingMode);
 
-	var _SCNNode = __webpack_require__(33);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNProgram = __webpack_require__(39);
+	var _SCNProgram = __webpack_require__(59);
 
 	var _SCNProgram2 = _interopRequireDefault(_SCNProgram);
 
-	var _SCNCamera = __webpack_require__(80);
+	var _SCNCamera = __webpack_require__(99);
 
 	var _SCNCamera2 = _interopRequireDefault(_SCNCamera);
 
-	var _SCNLight = __webpack_require__(81);
+	var _SCNLight = __webpack_require__(100);
 
 	var _SCNLight2 = _interopRequireDefault(_SCNLight);
 
-	var _SCNVector = __webpack_require__(15);
+	var _SCNVector = __webpack_require__(35);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3 = __webpack_require__(16);
+	var _SCNVector3 = __webpack_require__(36);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
-	var _SKColor = __webpack_require__(48);
+	var _SKColor = __webpack_require__(8);
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(83);
+	var _SCNGeometryPrimitiveType = __webpack_require__(102);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNGeometrySource = __webpack_require__(84);
+	var _SCNGeometrySource = __webpack_require__(103);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
@@ -16737,36 +21690,43 @@ module.exports =
 	          gl.uniform1i(gl.getUniformLocation(program, 'u_useDiffuseTexture'), 0);
 	        }
 
+	        var shape = null;
 	        switch (element.primitiveType) {
 	          case _SCNGeometryPrimitiveType2.default.triangles:
-	            {
-	              var size = null;
-	              switch (element.bytesPerIndex) {
-	                case 1:
-	                  size = gl.UNSIGNED_BYTE;
-	                  break;
-	                case 2:
-	                  size = gl.UNSIGNED_SHORT;
-	                  break;
-	                case 4:
-	                  size = gl.UNSIGNED_INT;
-	                  break;
-	                default:
-	                  throw new Error('unsupported index size: ' + element._bytesPerIndex);
-	              }
-
-	              gl.drawElements(gl.TRIANGLES, element._glData.length, size, 0);
-	              break;
-	            }
+	            shape = gl.TRIANGLES;
+	            break;
 	          case _SCNGeometryPrimitiveType2.default.triangleStrip:
+	            shape = gl.TRIANGLE_STRIP;
 	            break;
 	          case _SCNGeometryPrimitiveType2.default.line:
+	            shape = gl.LINES;
 	            break;
 	          case _SCNGeometryPrimitiveType2.default.point:
+	            shape = gl.POINTS;
 	            break;
 	          case _SCNGeometryPrimitiveType2.default.polygon:
+	            shape = gl.TRIANGLE_FAN;
 	            break;
+	          default:
+	            throw new Error('unsupported primitiveType: ' + element.primitiveType);
 	        }
+
+	        var size = null;
+	        switch (element.bytesPerIndex) {
+	          case 1:
+	            size = gl.UNSIGNED_BYTE;
+	            break;
+	          case 2:
+	            size = gl.UNSIGNED_SHORT;
+	            break;
+	          case 4:
+	            size = gl.UNSIGNED_INT;
+	            break;
+	          default:
+	            throw new Error('unsupported index size: ' + element.bytesPerIndex);
+	        }
+
+	        gl.drawElements(shape, element._glData.length, size, 0);
 	      }
 	    }
 
@@ -17349,7 +22309,7 @@ module.exports =
 	exports.default = SCNRenderer;
 
 /***/ },
-/* 42 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17360,39 +22320,39 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNScene = __webpack_require__(43);
+	var _SCNScene = __webpack_require__(63);
 
 	var _SCNScene2 = _interopRequireDefault(_SCNScene);
 
-	var _SCNNode = __webpack_require__(33);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNDebugOptions = __webpack_require__(72);
+	var _SCNDebugOptions = __webpack_require__(91);
 
 	var _SCNDebugOptions2 = _interopRequireDefault(_SCNDebugOptions);
 
-	var _SCNRenderingAPI = __webpack_require__(73);
+	var _SCNRenderingAPI = __webpack_require__(92);
 
 	var _SCNRenderingAPI2 = _interopRequireDefault(_SCNRenderingAPI);
 
-	var _SCNHitTestResult = __webpack_require__(58);
+	var _SCNHitTestResult = __webpack_require__(77);
 
 	var _SCNHitTestResult2 = _interopRequireDefault(_SCNHitTestResult);
 
-	var _CGPoint = __webpack_require__(5);
+	var _CGPoint = __webpack_require__(3);
 
 	var _CGPoint2 = _interopRequireDefault(_CGPoint);
 
-	var _SCNHitTestOption = __webpack_require__(74);
+	var _SCNHitTestOption = __webpack_require__(93);
 
 	var _SCNHitTestOption2 = _interopRequireDefault(_SCNHitTestOption);
 
-	var _SCNVector = __webpack_require__(15);
+	var _SCNVector = __webpack_require__(35);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNSceneRendererDelegate = __webpack_require__(75);
+	var _SCNSceneRendererDelegate = __webpack_require__(94);
 
 	var _SCNSceneRendererDelegate2 = _interopRequireDefault(_SCNSceneRendererDelegate);
 
@@ -17818,7 +22778,7 @@ module.exports =
 	exports.default = SCNSceneRenderer;
 
 /***/ },
-/* 43 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17829,35 +22789,35 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNNode = __webpack_require__(33);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNMaterialProperty = __webpack_require__(44);
+	var _SCNMaterialProperty = __webpack_require__(64);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
-	var _SCNSceneExportDelegate = __webpack_require__(49);
+	var _SCNSceneExportDelegate = __webpack_require__(68);
 
 	var _SCNSceneExportDelegate2 = _interopRequireDefault(_SCNSceneExportDelegate);
 
-	var _SCNSceneExportProgressHandler = __webpack_require__(50);
+	var _SCNSceneExportProgressHandler = __webpack_require__(69);
 
 	var _SCNSceneExportProgressHandler2 = _interopRequireDefault(_SCNSceneExportProgressHandler);
 
-	var _SCNPhysicsWorld = __webpack_require__(51);
+	var _SCNPhysicsWorld = __webpack_require__(70);
 
 	var _SCNPhysicsWorld2 = _interopRequireDefault(_SCNPhysicsWorld);
 
-	var _SCNParticleSystem = __webpack_require__(59);
+	var _SCNParticleSystem = __webpack_require__(78);
 
 	var _SCNParticleSystem2 = _interopRequireDefault(_SCNParticleSystem);
 
-	var _SCNMatrix = __webpack_require__(17);
+	var _SCNMatrix = __webpack_require__(37);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -17870,10 +22830,10 @@ module.exports =
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var _Attribute = {
-	  endTime: Symbol(),
-	  frameRate: Symbol(),
-	  startTime: Symbol(),
-	  upAxis: Symbol()
+	  endTime: 'kSceneEndTimeAttributeKey',
+	  frameRate: 'kSceneFrameRateAttributeKey',
+	  startTime: 'kSceneStartTimeAttributeKey',
+	  upAxis: 'kSceneUpAxisAttributeKey'
 	};
 
 	/**
@@ -17886,18 +22846,40 @@ module.exports =
 	var SCNScene = function (_NSObject) {
 	  _inherits(SCNScene, _NSObject);
 
-	  /**
-	   * Loads a scene from the specified URL.
-	   * @access public
-	   * @constructor
-	   * @param {string} url - The URL to the scene file to load.
-	   * @param {?Map<SCNSceneSource.LoadingOption, Object>} [options = null] - A dictionary of options affecting scene loading, or nil for default options. For available keys, see Scene Loading Options.
-	   * @throws {Error}
-	   * @desc This method provides a convenient way to load a complete scene from a file at an arbitrary URL. For more detailed options or to load only part of a file’s scene graph, use the SCNSceneSource class.Handling Errors in Swift:
-	  In Swift, this method returns a nonoptional result and is marked with the throws keyword to indicate that it throws an error in cases of failure.
-	  You call this method in a try expression and handle any errors in the catch clauses of a do statement, as described in Error Handling in The Swift Programming Language (Swift 3.1) and Error Handling in Using Swift with Cocoa and Objective-C (Swift 3.1).
-	    * @see https://developer.apple.com/reference/scenekit/scnscene/1522660-init
-	   */
+	  _createClass(SCNScene, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      return {
+	        paused: ['boolean', 'isPaused'],
+	        rootNode: ['SCNNode', '_rootNode'],
+	        upAxis: ['SCNVector3', null],
+	        fogStartDistance: 'double',
+	        fogDensityExponent: 'double',
+	        physicsWorld: ['SCNPhysicsWorld', '_physicsWorld'],
+	        background: ['SCNMaterialProperty', '_background'],
+	        endTime: ['double', null],
+	        frameRate: ['double', null],
+	        fogEndDistance: 'double',
+	        startTime: ['double', null],
+	        fogColor: 'plist'
+	      };
+	    }
+
+	    /**
+	     * Loads a scene from the specified URL.
+	     * @access public
+	     * @constructor
+	     * @param {string} url - The URL to the scene file to load.
+	     * @param {?Map<SCNSceneSource.LoadingOption, Object>} [options = null] - A dictionary of options affecting scene loading, or nil for default options. For available keys, see Scene Loading Options.
+	     * @throws {Error}
+	     * @desc This method provides a convenient way to load a complete scene from a file at an arbitrary URL. For more detailed options or to load only part of a file’s scene graph, use the SCNSceneSource class.Handling Errors in Swift:
+	    In Swift, this method returns a nonoptional result and is marked with the throws keyword to indicate that it throws an error in cases of failure.
+	    You call this method in a try expression and handle any errors in the catch clauses of a do statement, as described in Error Handling in The Swift Programming Language (Swift 3.1) and Error Handling in Using Swift with Cocoa and Objective-C (Swift 3.1).
+	      * @see https://developer.apple.com/reference/scenekit/scnscene/1522660-init
+	     */
+
+	  }]);
+
 	  function SCNScene(url) {
 	    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
 
@@ -17960,6 +22942,41 @@ module.exports =
 	    return _this;
 	  }
 
+	  /**
+	   * @access public
+	   * @param {NSCoder} coder -
+	   * @returns {SCNScene}
+	   */
+	  /*
+	  static initWithCoder(coder) {
+	   const instance = new SCNScene()
+	   instance._setValueWithCoder(coder)
+	   return instance
+	  }
+	  */
+
+	  /**
+	   * @access private
+	   * @param {NSCoder} coder -
+	   */
+	  /*
+	  _setValueWithCoder(coder) {
+	   this.isPaused = coder.decodeBoolForKey('paused')
+	   this._rootNode = coder.decodeObjectForKey('rootNode')
+	   const upAxis = coder.decodeBytesForKeyReturnedLength('upAxis', null)
+	   this.fogStartDistance = coder.decodeFloatForKey('fogStartDistance')
+	   this.fogDensityExponent = coder.decodeFloatForKey('fogDensityExponent')
+	   this._physicsWorld = coder.decodeObjectForKey('physicsWorld')
+	   this._background = coder.decodeObjectForKey('background')
+	   // TODO: check if Integer is a proper type
+	   const endTime = coder.decodeIntegerForKey('endTime')
+	   const frameRate = coder.decodeIntegerForKey('frameRate')
+	   this.fogEndDistance = coder.decodeFloatForKey('fogEndDistance')
+	   const startTime = coder.decodeIntegerForKey('startTime')
+	   this.fogColor = coder.decodeObjectForKey('fogColor') // NSMutableData...
+	  }
+	  */
+
 	  // Creating or Loading a Scene
 
 	  /**
@@ -17973,54 +22990,6 @@ module.exports =
 
 
 	  _createClass(SCNScene, [{
-	    key: 'initNamed',
-	    value: function initNamed(name) {}
-
-	    /**
-	     * Loads a scene from a file with the specified name in a specific subdirectory of the app’s main bundle.
-	     * @access public
-	     * @param {string} name - The name of a scene file in the app bundle.
-	     * @param {?string} directory - The path to the subdirectory of the bundle’s resources directory containing the scene file.
-	     * @param {?Map<SCNSceneSource.LoadingOption, Object>} [options = null] - A dictionary of options affecting scene loading, or nil for default options. For available keys, see Scene Loading Options.
-	     * @returns {void}
-	     * @desc This method provides a convenient way to load a complete scene from a file in the app’s main bundle. Calling this method is equivalent to using the Bundle class to locate the scene file and passing the resulting URL to the init(url:options:) method.For more detailed options or to load only part of a file’s scene graph, use the SCNSceneSource class.
-	     * @see https://developer.apple.com/reference/scenekit/scnscene/1522851-init
-	     */
-
-	  }, {
-	    key: 'initNamedInDirectory',
-	    value: function initNamedInDirectory(name, directory) {
-	      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
-	    }
-
-	    /**
-	     * Loads a scene from the specified URL.
-	     * @access public
-	     * @param {string} url - The URL to the scene file to load.
-	     * @param {?Map<SCNSceneSource.LoadingOption, Object>} [options = null] - A dictionary of options affecting scene loading, or nil for default options. For available keys, see Scene Loading Options.
-	     * @returns {void}
-	     * @throws {Error}
-	     * @desc This method provides a convenient way to load a complete scene from a file at an arbitrary URL. For more detailed options or to load only part of a file’s scene graph, use the SCNSceneSource class.Handling Errors in Swift:
-	    In Swift, this method returns a nonoptional result and is marked with the throws keyword to indicate that it throws an error in cases of failure.
-	    You call this method in a try expression and handle any errors in the catch clauses of a do statement, as described in Error Handling in The Swift Programming Language (Swift 3.1) and Error Handling in Using Swift with Cocoa and Objective-C (Swift 3.1).
-	      * @see https://developer.apple.com/reference/scenekit/scnscene/1522660-init
-	     */
-
-	  }, {
-	    key: 'init',
-	    value: function init(url) {
-	      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
-	    }
-
-	    // Accessing Scene Contents
-	    /**
-	     * The root node of the scene graph.
-	     * @type {SCNNode}
-	     * @desc All scene content—nodes, geometries and their materials, lights, cameras, and related objects—is organized in a node hierarchy with a single common root node.Some scene files created using external tools may describe node hierarchies containing multiple root nodes. When SceneKit imports such files, their separate root nodes will be made children of a new, unique root node.Each child node’s coordinate system is defined relative to the transformation of its parent node. You should not modify the transform property of the root node.
-	     * @see https://developer.apple.com/reference/scenekit/scnscene/1524029-rootnode
-	     */
-
-	  }, {
 	    key: 'attributeForKey',
 
 
@@ -18133,6 +23102,15 @@ module.exports =
 
 	  }, {
 	    key: 'rootNode',
+
+
+	    // Accessing Scene Contents
+	    /**
+	     * The root node of the scene graph.
+	     * @type {SCNNode}
+	     * @desc All scene content—nodes, geometries and their materials, lights, cameras, and related objects—is organized in a node hierarchy with a single common root node.Some scene files created using external tools may describe node hierarchies containing multiple root nodes. When SceneKit imports such files, their separate root nodes will be made children of a new, unique root node.Each child node’s coordinate system is defined relative to the transformation of its parent node. You should not modify the transform property of the root node.
+	     * @see https://developer.apple.com/reference/scenekit/scnscene/1524029-rootnode
+	     */
 	    get: function get() {
 	      return this._rootNode;
 	    }
@@ -18175,14 +23153,55 @@ module.exports =
 
 	    /**
 	     * @type {Object} Attribute
-	     * @property {Symbol} endTime A floating-point value (in an NSNumber object) for the end time of the scene.
-	     * @property {Symbol} frameRate A floating-point value (in an NSNumber object) for the frame rate of the scene.
-	     * @property {Symbol} startTime A floating-point value (in an NSNumber object) for the start time of the scene.
-	     * @property {Symbol} upAxis An SCNVector3 structure (in an NSValue object) specifying the orientation of the scene.
+	     * @property {string} endTime A floating-point value (in an NSNumber object) for the end time of the scene.
+	     * @property {string} frameRate A floating-point value (in an NSNumber object) for the frame rate of the scene.
+	     * @property {string} startTime A floating-point value (in an NSNumber object) for the start time of the scene.
+	     * @property {string} upAxis An SCNVector3 structure (in an NSValue object) specifying the orientation of the scene.
 	     * @see https://developer.apple.com/reference/scenekit/scnscene.attribute
 	     */
 
 	  }], [{
+	    key: 'sceneNamed',
+	    value: function sceneNamed(name) {}
+
+	    /**
+	     * Loads a scene from a file with the specified name in a specific subdirectory of the app’s main bundle.
+	     * @access public
+	     * @param {string} name - The name of a scene file in the app bundle.
+	     * @param {?string} directory - The path to the subdirectory of the bundle’s resources directory containing the scene file.
+	     * @param {?Map<SCNSceneSource.LoadingOption, Object>} [options = null] - A dictionary of options affecting scene loading, or nil for default options. For available keys, see Scene Loading Options.
+	     * @returns {void}
+	     * @desc This method provides a convenient way to load a complete scene from a file in the app’s main bundle. Calling this method is equivalent to using the Bundle class to locate the scene file and passing the resulting URL to the init(url:options:) method.For more detailed options or to load only part of a file’s scene graph, use the SCNSceneSource class.
+	     * @see https://developer.apple.com/reference/scenekit/scnscene/1522851-init
+	     */
+
+	  }, {
+	    key: 'sceneNamedInDirectory',
+	    value: function sceneNamedInDirectory(name, directory) {
+	      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+	    }
+
+	    /**
+	     * Loads a scene from the specified URL.
+	     * @access public
+	     * @param {string} url - The URL to the scene file to load.
+	     * @param {?Map<SCNSceneSource.LoadingOption, Object>} [options = null] - A dictionary of options affecting scene loading, or nil for default options. For available keys, see Scene Loading Options.
+	     * @returns {void}
+	     * @throws {Error}
+	     * @desc This method provides a convenient way to load a complete scene from a file at an arbitrary URL. For more detailed options or to load only part of a file’s scene graph, use the SCNSceneSource class.Handling Errors in Swift:
+	    In Swift, this method returns a nonoptional result and is marked with the throws keyword to indicate that it throws an error in cases of failure.
+	    You call this method in a try expression and handle any errors in the catch clauses of a do statement, as described in Error Handling in The Swift Programming Language (Swift 3.1) and Error Handling in Using Swift with Cocoa and Objective-C (Swift 3.1).
+	      * @see https://developer.apple.com/reference/scenekit/scnscene/1522660-init
+	     */
+
+	  }, {
+	    key: 'scene',
+	    value: function scene(url) {
+	      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
+	      return new SCNScene(url, options);
+	    }
+	  }, {
 	    key: 'Attribute',
 	    get: function get() {
 	      return _Attribute;
@@ -18195,7 +23214,7 @@ module.exports =
 	exports.default = SCNScene;
 
 /***/ },
-/* 44 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18206,31 +23225,31 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimatable = __webpack_require__(35);
+	var _SCNAnimatable = __webpack_require__(55);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNMatrix = __webpack_require__(17);
+	var _SCNMatrix = __webpack_require__(37);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(45);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(65);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
-	var _SCNWrapMode = __webpack_require__(46);
+	var _SCNWrapMode = __webpack_require__(66);
 
 	var _SCNWrapMode2 = _interopRequireDefault(_SCNWrapMode);
 
-	var _SCNFilterMode = __webpack_require__(47);
+	var _SCNFilterMode = __webpack_require__(67);
 
 	var _SCNFilterMode2 = _interopRequireDefault(_SCNFilterMode);
 
-	var _SKColor = __webpack_require__(48);
+	var _SKColor = __webpack_require__(8);
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
@@ -18252,16 +23271,51 @@ module.exports =
 	var SCNMaterialProperty = function (_NSObject) {
 	  _inherits(SCNMaterialProperty, _NSObject);
 
-	  // Creating a Material Property
+	  _createClass(SCNMaterialProperty, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      return {
+	        color: ['NSColor', 'contents'],
+	        image: ['NSMutableDictionary', function (obj, dict, key, coder) {
+	          var path = coder._directoryPath + dict.path;
+	          console.log('image.path: ' + path);
+	          var image = new Image();
+	          image.onload = function () {
+	            obj.contents = image;
+	          };
+	          // FIXME: needs directoryPath
+	          image.src = path;
+	        }],
+	        intensity: 'float',
+	        // contentsTransform
+	        wrapS: 'integer',
+	        wrapT: 'integer',
+	        minificationFilter: 'integer',
+	        magnificationFilter: 'integer',
+	        mipFilter: 'integer',
+	        maxAnisotropy: 'float',
+	        mappingChannel: 'integer',
+	        borderColor: 'plist',
 
-	  /**
-	   * Creates a new material property object with the specified contents.
-	   * @access public
-	   * @constructor
-	   * @param {Object} contents - The visual contents of the material property—a color, image, or source of animated content. For details, see the discussion of the  contents property.
-	   * @desc Newly created SCNMaterial objects contain SCNMaterialProperty instances for all of their visual properties. To change a material’s visual properties, you modify those instances rather than creating new material property objects.You create new SCNMaterialProperty instances to provide textures for use with custom GLSL shaders—for details, see SCNShadable.
-	   * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395386-init
-	   */
+	        propertyType: ['integer', null],
+	        parent: ['SCNMaterial', null],
+	        isCommonProfileProperty: ['boolean', null]
+	      };
+	    }
+
+	    // Creating a Material Property
+
+	    /**
+	     * Creates a new material property object with the specified contents.
+	     * @access public
+	     * @constructor
+	     * @param {Object} contents - The visual contents of the material property—a color, image, or source of animated content. For details, see the discussion of the  contents property.
+	     * @desc Newly created SCNMaterial objects contain SCNMaterialProperty instances for all of their visual properties. To change a material’s visual properties, you modify those instances rather than creating new material property objects.You create new SCNMaterialProperty instances to provide textures for use with custom GLSL shaders—for details, see SCNShadable.
+	     * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395386-init
+	     */
+
+	  }]);
+
 	  function SCNMaterialProperty(contents) {
 	    _classCallCheck(this, SCNMaterialProperty);
 
@@ -18357,6 +23411,39 @@ module.exports =
 
 	  /**
 	   * @access public
+	   * @param {NSCoder} coder -
+	   * @returns {SCNMaterialProperty}
+	   */
+	  /*
+	  static initWithCoder(coder) {
+	   const instance = new SCNMaterialProperty()
+	   instance._setValueWithCoder(coder)
+	   return instance
+	  }
+	  */
+
+	  /**
+	   * @access private
+	   * @param {NSCoder} coder -
+	   */
+	  /*
+	  _setValueWithCoder(coder) {
+	   this.minificationFilter = coder.decodeIntegerForKey('minificationFilter')
+	   const propertyType = coder.decodeIntegerForKey('propertyType')
+	   this.wrapT = coder.decodeIntegerForKey('wrapT')
+	   //const _parent = coder.decodeObjectForKey('parent')
+	   const isCommonProfileProperty = coder.decodeBoolForKey('isCommonProfileProperty')
+	   this.magnificationFilter = coder.decodeIntegerForKey('magnificationFilter')
+	   this.mipFilter = coder.decodeIntegerForKey('mipFilter')
+	   this.mappingChannel = coder.decodeIntegerForKey('mappingChannel')
+	   this.wrapS = coder.decodeIntegerForKey('wrapS')
+	   this.maxAnisotropy = coder.decodeFloatForKey('maxAnisotropy')
+	   this.intensity = coder.decodeFloatForKey('intensity')
+	  }
+	  */
+
+	  /**
+	   * @access public
 	   * @returns {Float32Array} -
 	   */
 
@@ -18377,7 +23464,7 @@ module.exports =
 	exports.default = SCNMaterialProperty;
 
 /***/ },
-/* 45 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18386,7 +23473,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(17);
+	var _SCNMatrix = __webpack_require__(37);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -18408,7 +23495,7 @@ module.exports =
 	exports.default = SCNMatrix4MakeTranslation;
 
 /***/ },
-/* 46 */
+/* 66 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -18416,10 +23503,10 @@ module.exports =
 	/**
 	 * Modes to apply to texture wrapping, used by the wrapT and wrapS properties.
 	 * @typedef {Object} SCNWrapMode
-	 * @property {Symbol} clamp - Texture coordinates are clamped to the range from 0.0 to 1.0, inclusive.
-	 * @property {Symbol} repeat - Texture sampling uses only the fractional part of texture coordinates, passing through the range from 0.0 to (but not including) 1.0.
-	 * @property {Symbol} clampToBorder - Texture sampling uses texture colors for coordinates in the range from 0.0 to 1.0 (inclusive) and the material property’s borderColor value otherwise.
-	 * @property {Symbol} mirror - Texture sampling of texture coordinates outside range from 0.0 to 1.0 should behave as if the range reverses before repeating.
+	 * @property {number} clamp - Texture coordinates are clamped to the range from 0.0 to 1.0, inclusive.
+	 * @property {number} repeat - Texture sampling uses only the fractional part of texture coordinates, passing through the range from 0.0 to (but not including) 1.0.
+	 * @property {number} clampToBorder - Texture sampling uses texture colors for coordinates in the range from 0.0 to 1.0 (inclusive) and the material property’s borderColor value otherwise.
+	 * @property {number} mirror - Texture sampling of texture coordinates outside range from 0.0 to 1.0 should behave as if the range reverses before repeating.
 	 * @see https://developer.apple.com/reference/scenekit/scnwrapmode
 	 */
 
@@ -18427,16 +23514,16 @@ module.exports =
 	  value: true
 	});
 	var SCNWrapMode = {
-	  clamp: Symbol(),
-	  repeat: Symbol(),
-	  clampToBorder: Symbol(),
-	  mirror: Symbol()
+	  clamp: 1,
+	  repeat: 2,
+	  clampToBorder: 3,
+	  mirror: 4
 	};
 
 	exports.default = SCNWrapMode;
 
 /***/ },
-/* 47 */
+/* 67 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -18444,9 +23531,9 @@ module.exports =
 	/**
 	 * Texture filtering modes, used by the the minificationFilter, magnificationFilter, and mipFilter properties.
 	 * @typedef {Object} SCNFilterMode
-	 * @property {Symbol} none - No texture filtering is applied.
-	 * @property {Symbol} nearest - Texture filtering returns the color from only one texel, whose location is nearest to the coordinates being sampled.
-	 * @property {Symbol} linear - Texture filtering sample texels from the neighborhood of the coordinates being sampled and linearly interpolates their colors.
+	 * @property {number} none - No texture filtering is applied.
+	 * @property {number} nearest - Texture filtering returns the color from only one texel, whose location is nearest to the coordinates being sampled.
+	 * @property {number} linear - Texture filtering sample texels from the neighborhood of the coordinates being sampled and linearly interpolates their colors.
 	 * @see https://developer.apple.com/reference/scenekit/scnfiltermode
 	 */
 
@@ -18454,470 +23541,15 @@ module.exports =
 	  value: true
 	});
 	var SCNFilterMode = {
-	  none: Symbol(),
-	  nearest: Symbol(),
-	  linear: Symbol()
+	  none: 0,
+	  nearest: 1,
+	  linear: 2
 	};
 
 	exports.default = SCNFilterMode;
 
 /***/ },
-/* 48 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _NSObject2 = __webpack_require__(13);
-
-	var _NSObject3 = _interopRequireDefault(_NSObject2);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	/**
-	 * An object that stores color data and sometimes opacity (that is, alpha value). 
-	 * @access public
-	 * @extends {NSObject}
-	 * @see https://developer.apple.com/reference/uikit/uicolor
-	 */
-	var SKColor = function (_NSObject) {
-	  _inherits(SKColor, _NSObject);
-
-	  // Initializers
-
-	  /**
-	   * 
-	   * @access public
-	   * @constructor
-	   * @param {number} red - 
-	   * @param {number} green - 
-	   * @param {number} blue - 
-	   * @param {number} alpha - 
-	   * @see https://developer.apple.com/reference/uikit/uicolor/1625015-init
-	   */
-	  function SKColor(red, green, blue, alpha) {
-	    _classCallCheck(this, SKColor);
-
-	    /**
-	     * @type {number}
-	     */
-	    var _this = _possibleConstructorReturn(this, (SKColor.__proto__ || Object.getPrototypeOf(SKColor)).call(this));
-
-	    _this.red = red;
-
-	    /**
-	     * @type {number}
-	     */
-	    _this.green = green;
-
-	    /**
-	     * @type {number}
-	     */
-	    _this.blue = blue;
-
-	    /**
-	     * @type {number}
-	     */
-	    _this.alpha = alpha;
-	    return _this;
-	  }
-
-	  // Creating a Color Object with a Predefined Color
-
-	  /**
-	   * A color object in the sRGB color space whose grayscale value is 0.0 and whose alpha value is 1.0.
-	   * @type {SKColor}
-	   * @desc 
-	   * @see https://developer.apple.com/reference/uikit/uicolor/1621929-black
-	   */
-
-
-	  _createClass(SKColor, [{
-	    key: 'withAlphaComponent',
-
-
-	    // Creating a Custom UIColor Object in a Specific Color Space
-
-	    /**
-	     * Initializes and returns a color object using the specified opacity and grayscale values. 
-	     * @access public
-	     * @param {number} white - The grayscale value of the color object. On applications linked for iOS 10 or later, the color is specified in an extended color space, and the input value  is never clamped. On earlier versions of iOS, white values below 0.0 are interpreted as 0.0, and values above 1.0 are interpreted as 1.0.
-	     * @param {number} alpha - The opacity value of the color object, specified as a value from 0.0 to 1.0. Alpha values below 0.0 are interpreted as 0.0, and values above 1.0 are interpreted as 1.0
-	     * @returns {void}
-	     * @desc On applications linked on iOS 10 or later, the input parameters are not clamped. On earlier versions of iOS, values below 0.0 are interpreted as 0.0, and values above 1.0 are interpreted as 1.0.
-	     * @see https://developer.apple.com/reference/uikit/uicolor/1621944-init
-	     */
-	    //init(white, alpha) {
-	    //}
-
-	    // Creating a UIColor Object from another Representation of Color
-
-	    /**
-	     * Creates and returns a color object that has the same color space and component values as the receiver, but has the specified alpha component. 
-	     * @access public
-	     * @param {number} alpha - The opacity value of the new color object, specified as a value from 0.0 to 1.0. Alpha values below 0.0 are interpreted as 0.0, and values above 1.0 are interpreted as 1.0
-	     * @returns {SKColor} - 
-	     * @desc A subclass with explicit opacity components should override this method to return a color with the specified alpha.
-	     * @see https://developer.apple.com/reference/uikit/uicolor/1621922-withalphacomponent
-	     */
-	    value: function withAlphaComponent(alpha) {
-	      return new SKColor(this.red, this.green, this.blue, alpha);
-	    }
-
-	    // Creating a UIColor Object that Draws Using a Pattern
-
-	    /**
-	     * Initializes and returns a color object using the specified Quartz color reference. 
-	     * @access public
-	     * @param {Image} image - The image to use when creating the pattern color. 
-	     * @returns {void}
-	     * @desc You can use pattern colors to set the fill or stroke color just as you would a solid color. During drawing, the image in the pattern color is tiled as necessary to cover the given area. By default, the phase of the returned color is 0, which causes the top-left corner of the image to be aligned with the drawing origin. To change the phase, make the color the current color and then use the setPatternPhase(_:) function to change the phase.
-	     * @see https://developer.apple.com/reference/uikit/uicolor/1621933-init
-	     */
-
-	  }, {
-	    key: 'initPatternImage',
-	    value: function initPatternImage(image) {}
-
-	    // Setting the Graphics Context’s Drawing Color
-
-	    /**
-	     * Sets the color of subsequent stroke and fill operations to the color that the receiver represents. 
-	     * @access public
-	     * @returns {void}
-	     * @desc If you subclass UIColor, you must implement this method in your subclass. Your custom implementation should modify both the stroke and fill color in the current graphics context by setting them both to the color represented by the receiver.
-	     * @see https://developer.apple.com/reference/uikit/uicolor/1621928-set
-	     */
-
-	  }, {
-	    key: 'set',
-	    value: function set() {}
-
-	    /**
-	     * Sets the color of subsequent fill operations to the color that the receiver represents.
-	     * @access public
-	     * @returns {void}
-	     * @desc If you subclass UIColor, you must implement this method in your subclass. Your custom implementation should modify the fill color in the current graphics context by setting it to the color represented by the receiver.
-	     * @see https://developer.apple.com/reference/uikit/uicolor/1621926-setfill
-	     */
-
-	  }, {
-	    key: 'setFill',
-	    value: function setFill() {}
-
-	    /**
-	     * Sets the color of subsequent stroke operations to the color that the receiver represents.
-	     * @access public
-	     * @returns {void}
-	     * @desc If you subclass UIColor, you must implement this method in your subclass. Your custom implementation should modify the stroke color in the current graphics context by setting it to the color represented by the receiver.
-	     * @see https://developer.apple.com/reference/uikit/uicolor/1621948-setstroke
-	     */
-
-	  }, {
-	    key: 'setStroke',
-	    value: function setStroke() {}
-
-	    // Retrieving Color Information
-
-	    /**
-	     * Returns the components that make up the color in the HSB color space.
-	     * @access public
-	     * @returns {Object} -
-	     * @property {number} color.hue - On return, the hue component of the color object. On applications linked for iOS 10 or later, the hue component is specified in an extended range color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
-	     * @property {number} color.saturation - On return, the saturation component of the color object. On applications linked for iOS 10 or later, the saturation component is specified in an extended range color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
-	     * @property {number} color.brightness - On return, the brightness component of the color object. On applications linked for iOS 10 or later, the brightness component is specified in an extended range color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
-	     * @property {number} color.alpha - On return, the opacity component of the color object, specified as a value between 0.0 and 1.0.
-	     * @desc If the color is in a compatible color space, the color is converted into the HSB color space and its components are returned to your application. If the color is not in a compatible color space, the parameters are unchanged.
-	     * @see https://developer.apple.com/reference/uikit/uicolor/1621949-gethue
-	     */
-
-	  }, {
-	    key: 'getHSBA',
-	    value: function getHSBA() {
-	      var color = {
-	        hue: 0,
-	        saturation: 0,
-	        brightness: 0,
-	        alpha: 0
-	      };
-	      return color;
-	    }
-
-	    /**
-	     * Returns the components that make up the color in the RGB color space.
-	     * @access public
-	     * @param {number} red -
-	     * @param {number} green -
-	     * @param {number} blue -
-	     * @param {number} alpha -
-	     * @returns {Object} -
-	     * @property {number} color.red - On return, the red component of the color object. On applications linked for iOS 10 or later, the red component is specified in an extended range sRGB color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
-	     * @property {number} color.green - On return, the green component of the color object. On applications linked for iOS 10 or later, the green component is specified in an extended range sRGB color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
-	     * @property {number} color.blue - On return, the blue component of the color object. On applications linked for iOS 10 or later, the blue component is specified in an extended range sRGB color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
-	     * @property {number} color.alpha - On return, the opacity component of the color object, specified as a value between 0.0 and 1.0.
-	     * @desc If the color is in a compatible color space, the color is converted into RGB format and its components are returned to your application. If the color is not in a compatible color space, the parameters are unchanged.
-	     * @see https://developer.apple.com/reference/uikit/uicolor/1621919-getred
-	     */
-
-	  }, {
-	    key: 'getRGBA',
-	    value: function getRGBA(red, green, blue, alpha) {
-	      var color = {
-	        red: this.red,
-	        green: this.green,
-	        blue: this.blue,
-	        alpha: this.alpha
-	      };
-	      return color;
-	    }
-
-	    /**
-	     * Returns the grayscale components of the color.
-	     * @access public
-	     * @param {?UnsafeMutablePointer<CGFloat>} white - On return, the grayscale component of the color object. On applications linked for iOS 10 or later, the grayscale component is specified in an extended range gray color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
-	     * @param {?UnsafeMutablePointer<CGFloat>} alpha - On return, the opacity component of the color object, specified as a value between 0.0 and 1.0.
-	     * @returns {boolean} - 
-	     * @desc If the color is in a compatible color space, the color is converted into grayscale format and returned to your application. If the color is not in a compatible color space, the parameters are unchanged.
-	     * @see https://developer.apple.com/reference/uikit/uicolor/1621927-getwhite
-	     */
-	    //getWhite(white, alpha) {
-	    //  return false
-	    //}
-
-	    /**
-	     * HTML color representation
-	     * @access public
-	     * @type {string}
-	     */
-
-	  }, {
-	    key: 'float32Array',
-
-
-	    /**
-	     * @access public
-	     * @returns {Float32Array} -
-	     */
-	    value: function float32Array() {
-	      return new Float32Array([this.red, this.green, this.blue, this.alpha]);
-	    }
-	  }, {
-	    key: 'htmlColor',
-	    get: function get() {
-	      var r = Math.round(this.red * 255);
-	      var g = Math.round(this.green * 255);
-	      var b = Math.round(this.blue * 255);
-	      return 'rgba(' + r + ', ' + g + ', ' + b + ', ' + this.alpha + ')';
-	    }
-	  }], [{
-	    key: 'black',
-	    get: function get() {
-	      return new SKColor(0.0, 0.0, 0.0, 1.0);
-	    }
-
-	    /**
-	     * A color object whose RGB values are 0.0, 0.0, and 1.0 and whose alpha value is 1.0.
-	     * @type {SKColor}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/uikit/uicolor/1621947-blue
-	     */
-
-	  }, {
-	    key: 'blue',
-	    get: function get() {
-	      return new SKColor(0.0, 0.0, 1.0, 1.0);
-	    }
-
-	    /**
-	     * A color object whose RGB values are 0.6, 0.4, and 0.2 and whose alpha value is 1.0.
-	     * @type {SKColor}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/uikit/uicolor/1621950-brown
-	     */
-
-	  }, {
-	    key: 'brown',
-	    get: function get() {
-	      return new SKColor(0.6, 0.4, 0.2, 1.0);
-	    }
-
-	    /**
-	     * A color object whose grayscale and alpha values are both 0.0.
-	     * @type {SKColor}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/uikit/uicolor/1621945-clear
-	     */
-
-	  }, {
-	    key: 'clear',
-	    get: function get() {
-	      return new SKColor(0.0, 0.0, 0.0, 0.0);
-	    }
-
-	    /**
-	     * A color object whose RGB values are 0.0, 1.0, and 1.0 and whose alpha value is 1.0.
-	     * @type {SKColor}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/uikit/uicolor/1621942-cyan
-	     */
-
-	  }, {
-	    key: 'cyan',
-	    get: function get() {
-	      return new SKColor(0.0, 1.0, 1.0, 1.0);
-	    }
-
-	    /**
-	     * A color object whose grayscale value is 1/3 and whose alpha value is 1.0.
-	     * @type {SKColor}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/uikit/uicolor/1621952-darkgray
-	     */
-
-	  }, {
-	    key: 'darkGray',
-	    get: function get() {
-	      var third = 1.0 / 3.0;
-	      return new SKColor(third, third, third, 1.0);
-	    }
-
-	    /**
-	     * A color object whose grayscale value is 0.5 and whose alpha value is 1.0.
-	     * @type {SKColor}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/uikit/uicolor/1621941-gray
-	     */
-
-	  }, {
-	    key: 'gray',
-	    get: function get() {
-	      return new SKColor(0.5, 0.5, 0.5, 1.0);
-	    }
-
-	    /**
-	     * A color object whose RGB values are 0.0, 1.0, and 0.0 and whose alpha value is 1.0.
-	     * @type {SKColor}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/uikit/uicolor/1621946-green
-	     */
-
-	  }, {
-	    key: 'green',
-	    get: function get() {
-	      return new SKColor(0.0, 1.0, 0.0, 1.0);
-	    }
-
-	    /**
-	     * A color object whose grayscale value is 2/3 and whose alpha value is 1.0.
-	     * @type {SKColor}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/uikit/uicolor/1621932-lightgray
-	     */
-
-	  }, {
-	    key: 'lightGray',
-	    get: function get() {
-	      var twoThirds = 2.0 / 3.0;
-	      return new SKColor(twoThirds, twoThirds, twoThirds, 1.0);
-	    }
-
-	    /**
-	     * A color object whose RGB values are 1.0, 0.0, and 1.0 and whose alpha value is 1.0.
-	     * @type {SKColor}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/uikit/uicolor/1621934-magenta
-	     */
-
-	  }, {
-	    key: 'magenta',
-	    get: function get() {
-	      return new SKColor(1.0, 0.0, 1.0, 1.0);
-	    }
-
-	    /**
-	     * A color object whose RGB values are 1.0, 0.5, and 0.0 and whose alpha value is 1.0.
-	     * @type {SKColor}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/uikit/uicolor/1621956-orange
-	     */
-
-	  }, {
-	    key: 'orange',
-	    get: function get() {
-	      return new SKColor(1.0, 0.5, 0.0, 1.0);
-	    }
-
-	    /**
-	     * A color object whose RGB values are 0.5, 0.0, and 0.5 and whose alpha value is 1.0.
-	     * @type {SKColor}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/uikit/uicolor/1621923-purple
-	     */
-
-	  }, {
-	    key: 'purple',
-	    get: function get() {
-	      return new SKColor(0.5, 0.0, 0.5, 1.0);
-	    }
-
-	    /**
-	     * A color object whose RGB values are 1.0, 0.0, and 0.0 and whose alpha value is 1.0.
-	     * @type {SKColor}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/uikit/uicolor/1621924-red
-	     */
-
-	  }, {
-	    key: 'red',
-	    get: function get() {
-	      return new SKColor(1.0, 0.0, 0.0, 1.0);
-	    }
-
-	    /**
-	     * A color object whose grayscale value is 1.0 and whose alpha value is 1.0.
-	     * @type {SKColor}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/uikit/uicolor/1621920-white
-	     */
-
-	  }, {
-	    key: 'white',
-	    get: function get() {
-	      return new SKColor(1.0, 0.0, 0.0, 1.0);
-	    }
-
-	    /**
-	     * A color object whose RGB values are 1.0, 1.0, and 0.0 and whose alpha value is 1.0.
-	     * @type {SKColor}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/uikit/uicolor/1621953-yellow
-	     */
-
-	  }, {
-	    key: 'yellow',
-	    get: function get() {
-	      return new SKColor(1.0, 1.0, 0.0, 1.0);
-	    }
-	  }]);
-
-	  return SKColor;
-	}(_NSObject3.default);
-
-	exports.default = SKColor;
-
-/***/ },
-/* 49 */
+/* 68 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -18978,7 +23610,7 @@ module.exports =
 	exports.default = SCNSceneExportDelegate;
 
 /***/ },
-/* 50 */
+/* 69 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -19002,7 +23634,7 @@ module.exports =
 	exports.default = SCNSceneExportProgressHandler;
 
 /***/ },
-/* 51 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19013,39 +23645,39 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNVector = __webpack_require__(15);
+	var _SCNVector = __webpack_require__(35);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNPhysicsBehavior = __webpack_require__(52);
+	var _SCNPhysicsBehavior = __webpack_require__(71);
 
 	var _SCNPhysicsBehavior2 = _interopRequireDefault(_SCNPhysicsBehavior);
 
-	var _SCNPhysicsContactDelegate = __webpack_require__(53);
+	var _SCNPhysicsContactDelegate = __webpack_require__(72);
 
 	var _SCNPhysicsContactDelegate2 = _interopRequireDefault(_SCNPhysicsContactDelegate);
 
-	var _SCNPhysicsContact = __webpack_require__(54);
+	var _SCNPhysicsContact = __webpack_require__(73);
 
 	var _SCNPhysicsContact2 = _interopRequireDefault(_SCNPhysicsContact);
 
-	var _SCNPhysicsBody = __webpack_require__(55);
+	var _SCNPhysicsBody = __webpack_require__(74);
 
 	var _SCNPhysicsBody2 = _interopRequireDefault(_SCNPhysicsBody);
 
-	var _SCNHitTestResult = __webpack_require__(58);
+	var _SCNHitTestResult = __webpack_require__(77);
 
 	var _SCNHitTestResult2 = _interopRequireDefault(_SCNHitTestResult);
 
-	var _SCNPhysicsShape = __webpack_require__(57);
+	var _SCNPhysicsShape = __webpack_require__(76);
 
 	var _SCNPhysicsShape2 = _interopRequireDefault(_SCNPhysicsShape);
 
-	var _SCNMatrix = __webpack_require__(17);
+	var _SCNMatrix = __webpack_require__(37);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -19058,15 +23690,15 @@ module.exports =
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var _TestOption = {
-	  backfaceCulling: Symbol(),
-	  collisionBitMask: Symbol(),
-	  searchMode: Symbol()
+	  backfaceCulling: 'backfaceCulling',
+	  collisionBitMask: 'collisionBitMask',
+	  searchMode: 'results'
 	};
 
 	var _TestSearchMode = {
-	  all: Symbol(),
-	  any: Symbol(),
-	  closest: Symbol()
+	  all: 'all',
+	  any: 'any',
+	  closest: 'closest'
 	};
 
 	/**
@@ -19079,71 +23711,117 @@ module.exports =
 	var SCNPhysicsWorld = function (_NSObject) {
 	  _inherits(SCNPhysicsWorld, _NSObject);
 
-	  function SCNPhysicsWorld() {
-	    _classCallCheck(this, SCNPhysicsWorld);
-
-	    return _possibleConstructorReturn(this, (SCNPhysicsWorld.__proto__ || Object.getPrototypeOf(SCNPhysicsWorld)).apply(this, arguments));
-	  }
-
-	  _createClass(SCNPhysicsWorld, [{
-	    key: 'init',
-
+	  _createClass(SCNPhysicsWorld, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      return {
+	        gravity: 'SCNVector3',
+	        speed: 'double',
+	        timeStep: 'double',
+	        scale: ['double', '_scale'],
+	        // _allBehaviors
+	        // contactDelegate
+	        scene: ['SCNScene', null]
+	      };
+	    }
 
 	    /**
 	     * constructor
 	     * @access public
-	     * @returns {void}
+	     * @constructor
 	     */
-	    value: function init() {
 
-	      // Managing the Physics Simulation
+	  }]);
 
-	      /**
-	       * A vector that specifies the gravitational acceleration applied to physics bodies in the physics world.
-	       * @type {SCNVector3}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicsworld/1512855-gravity
-	       */
-	      this.gravity = null;
-
-	      /**
-	       * The rate at which the simulation executes.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicsworld/1512851-speed
-	       */
-	      this.speed = 0;
-
-	      /**
-	       * The time interval between updates to the physics simulation.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicsworld/1512881-timestep
-	       */
-	      this.timeStep = 0;
-
-	      // Registering Physics Behaviors
-
-	      this._allBehaviors = null;
-
-	      // Detecting Contacts Between Physics Bodies
-
-	      /**
-	       * A delegate that is called when two physics bodies come in contact with each other.
-	       * @type {?SCNPhysicsContactDelegate}
-	       * @see https://developer.apple.com/reference/scenekit/scnphysicsworld/1512843-contactdelegate
-	       */
-	      this.contactDelegate = null;
-	    }
+	  function SCNPhysicsWorld() {
+	    _classCallCheck(this, SCNPhysicsWorld);
 
 	    // Managing the Physics Simulation
 
 	    /**
-	     * Forces the physics engine to reevaluate possible collisions between physics bodies.
-	     * @access public
-	     * @returns {void}
-	     * @desc By default, SceneKit checks for collisions between physics bodies only once per simulation step. If you directly change the positions of any physics bodies outside of a SCNPhysicsContactDelegate method, call the updateCollisionPairs() method before using any of the methods listed in Searching for Physics Bodies Detecting Contacts Between Physics Bodies.
-	     * @see https://developer.apple.com/reference/scenekit/scnphysicsworld/1512877-updatecollisionpairs
+	     * A vector that specifies the gravitational acceleration applied to physics bodies in the physics world.
+	     * @type {SCNVector3}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicsworld/1512855-gravity
 	     */
+	    var _this = _possibleConstructorReturn(this, (SCNPhysicsWorld.__proto__ || Object.getPrototypeOf(SCNPhysicsWorld)).call(this));
 
-	  }, {
+	    _this.gravity = null;
+
+	    /**
+	     * The rate at which the simulation executes.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicsworld/1512851-speed
+	     */
+	    _this.speed = 0;
+
+	    /**
+	     * The time interval between updates to the physics simulation.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicsworld/1512881-timestep
+	     */
+	    _this.timeStep = 0;
+
+	    /**
+	     * @access private
+	     * @type {number}
+	     */
+	    _this._scale = 1.0;
+
+	    // Registering Physics Behaviors
+
+	    _this._allBehaviors = null;
+
+	    // Detecting Contacts Between Physics Bodies
+
+	    /**
+	     * A delegate that is called when two physics bodies come in contact with each other.
+	     * @type {?SCNPhysicsContactDelegate}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicsworld/1512843-contactdelegate
+	     */
+	    _this.contactDelegate = null;
+
+	    return _this;
+	  }
+
+	  /**
+	   * @access public
+	   * @param {NSCoder} coder -
+	   * @returns {SCNPhysicsWorld}
+	   */
+	  /*
+	  static initWithCoder(coder) {
+	   const instance = new SCNPhysicsWorld()
+	   instance._setValueWithCoder(coder)
+	   return instance
+	  }
+	  */
+
+	  /**
+	   * @access private
+	   * @param {NSCoder} coder -
+	   */
+	  /*
+	  _setValueWithCoder(coder) {
+	   this.timeStep = coder.decodeIntegerForKey('timeStep')
+	   this.scale = coder.decodeFloatForKey('scale')
+	   this.speed = coder.decodeFloatForKey('speed')
+	   const gravity = coder.decodeBytesForKeyReturnedLength('gravity', null)
+	   this.gravity = new SCNVector3(gravity)
+	  }
+	  */
+
+	  // Managing the Physics Simulation
+
+	  /**
+	   * Forces the physics engine to reevaluate possible collisions between physics bodies.
+	   * @access public
+	   * @returns {void}
+	   * @desc By default, SceneKit checks for collisions between physics bodies only once per simulation step. If you directly change the positions of any physics bodies outside of a SCNPhysicsContactDelegate method, call the updateCollisionPairs() method before using any of the methods listed in Searching for Physics Bodies Detecting Contacts Between Physics Bodies.
+	   * @see https://developer.apple.com/reference/scenekit/scnphysicsworld/1512877-updatecollisionpairs
+	   */
+
+
+	  _createClass(SCNPhysicsWorld, [{
 	    key: 'updateCollisionPairs',
 	    value: function updateCollisionPairs() {}
 
@@ -19321,9 +23999,9 @@ module.exports =
 	    // Structures
 	    /**
 	     * @type {Object} TestOption
-	     * @property {Symbol} backfaceCulling The key for choosing whether to ignore back-facing polygons in physics shapes when searching for contacts.
-	     * @property {Symbol} collisionBitMask The key for selecting which categories of physics bodies that SceneKit should test for contacts.
-	     * @property {Symbol} searchMode The key for selecting the number and order of contacts to be tested.
+	     * @property {string} backfaceCulling The key for choosing whether to ignore back-facing polygons in physics shapes when searching for contacts.
+	     * @property {string} collisionBitMask The key for selecting which categories of physics bodies that SceneKit should test for contacts.
+	     * @property {string} searchMode The key for selecting the number and order of contacts to be tested.
 	     * @see https://developer.apple.com/reference/scenekit/scnphysicsworld.testoption
 	     */
 
@@ -19339,9 +24017,9 @@ module.exports =
 	    }
 	    /**
 	     * @type {Object} TestSearchMode
-	     * @property {Symbol} all Searches should return all contacts matching the search parameters.
-	     * @property {Symbol} any Searches should return only the first contact found regardless of its position relative to the search parameters.
-	     * @property {Symbol} closest Searches should return only the closest contact to the beginning of the search.
+	     * @property {string} all Searches should return all contacts matching the search parameters.
+	     * @property {string} any Searches should return only the first contact found regardless of its position relative to the search parameters.
+	     * @property {string} closest Searches should return only the closest contact to the beginning of the search.
 	     * @see https://developer.apple.com/reference/scenekit/scnphysicsworld.testsearchmode
 	     */
 
@@ -19358,7 +24036,7 @@ module.exports =
 	exports.default = SCNPhysicsWorld;
 
 /***/ },
-/* 52 */
+/* 71 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19369,7 +24047,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
@@ -19414,7 +24092,7 @@ module.exports =
 	exports.default = SCNPhysicsBehavior;
 
 /***/ },
-/* 53 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19425,11 +24103,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNPhysicsWorld = __webpack_require__(51);
+	var _SCNPhysicsWorld = __webpack_require__(70);
 
 	var _SCNPhysicsWorld2 = _interopRequireDefault(_SCNPhysicsWorld);
 
-	var _SCNPhysicsContact = __webpack_require__(54);
+	var _SCNPhysicsContact = __webpack_require__(73);
 
 	var _SCNPhysicsContact2 = _interopRequireDefault(_SCNPhysicsContact);
 
@@ -19507,7 +24185,7 @@ module.exports =
 	exports.default = SCNPhysicsContactDelegate;
 
 /***/ },
-/* 54 */
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19518,15 +24196,15 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNNode = __webpack_require__(33);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNVector = __webpack_require__(15);
+	var _SCNVector = __webpack_require__(35);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -19655,7 +24333,7 @@ module.exports =
 	exports.default = SCNPhysicsContact;
 
 /***/ },
-/* 55 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19666,23 +24344,23 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNPhysicsBodyType = __webpack_require__(56);
+	var _SCNPhysicsBodyType = __webpack_require__(75);
 
 	var _SCNPhysicsBodyType2 = _interopRequireDefault(_SCNPhysicsBodyType);
 
-	var _SCNPhysicsShape = __webpack_require__(57);
+	var _SCNPhysicsShape = __webpack_require__(76);
 
 	var _SCNPhysicsShape2 = _interopRequireDefault(_SCNPhysicsShape);
 
-	var _SCNVector = __webpack_require__(15);
+	var _SCNVector = __webpack_require__(35);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3 = __webpack_require__(16);
+	var _SCNVector3 = __webpack_require__(36);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
@@ -20006,7 +24684,7 @@ module.exports =
 	exports.default = SCNPhysicsBody;
 
 /***/ },
-/* 56 */
+/* 75 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -20014,9 +24692,9 @@ module.exports =
 	/**
 	 * Constants that determine how a physics body interacts with forces and other bodies, used by the type property and when creating a physics body.
 	 * @typedef {Object} SCNPhysicsBodyType
-	 * @property {Symbol} static - A physics body that is unaffected by forces or collisions and cannot move.
-	 * @property {Symbol} dynamic - A physics body that can be affected by forces and collisions.
-	 * @property {Symbol} kinematic - A physics body that is unaffected by forces or collisions but that can cause collisions affecting other bodies when moved.
+	 * @property {number} static - A physics body that is unaffected by forces or collisions and cannot move.
+	 * @property {number} dynamic - A physics body that can be affected by forces and collisions.
+	 * @property {number} kinematic - A physics body that is unaffected by forces or collisions but that can cause collisions affecting other bodies when moved.
 	 * @see https://developer.apple.com/reference/scenekit/scnphysicsbodytype
 	 */
 
@@ -20024,15 +24702,15 @@ module.exports =
 	  value: true
 	});
 	var SCNPhysicsBodyType = {
-	  static: Symbol(),
-	  dynamic: Symbol(),
-	  kinematic: Symbol()
+	  static: 0,
+	  dynamic: 1,
+	  kinematic: 2
 	};
 
 	exports.default = SCNPhysicsBodyType;
 
 /***/ },
-/* 57 */
+/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20043,15 +24721,15 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNGeometry = __webpack_require__(37);
+	var _SCNGeometry = __webpack_require__(57);
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
-	var _SCNNode = __webpack_require__(33);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
@@ -20064,16 +24742,16 @@ module.exports =
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var _Option = {
-	  collisionMargin: Symbol(),
-	  keepAsCompound: Symbol(),
-	  scale: Symbol(),
-	  type: Symbol()
+	  collisionMargin: 'SCNPhysicsShapeCollisionMarginKey',
+	  keepAsCompound: 'SCNPhysicsShapeKeepAsCompoundKey',
+	  scale: 'SCNPhysicsShapeScaleKey',
+	  type: 'SCNPhysicsShapeTypeKey'
 	};
 
 	var _ShapeType = {
-	  boundingBox: Symbol(),
-	  concavePolyhedron: Symbol(),
-	  convexHull: Symbol()
+	  boundingBox: 'boundingBox',
+	  concavePolyhedron: 'concaveMesh',
+	  convexHull: 'convexHull'
 	};
 
 	/**
@@ -20157,10 +24835,10 @@ module.exports =
 
 	    /**
 	     * @type {Object} Option
-	     * @property {Symbol} collisionMargin 
-	     * @property {Symbol} keepAsCompound An option for selecting whether to create a group of independent shapes or combine them into a single shape.
-	     * @property {Symbol} scale An option for selecting the scale factor of the shape relative to the local coordinate space of the node containing it.
-	     * @property {Symbol} type An option for selecting the level of detail at which to create shapes from geometry.
+	     * @property {string} collisionMargin 
+	     * @property {string} keepAsCompound An option for selecting whether to create a group of independent shapes or combine them into a single shape.
+	     * @property {string} scale An option for selecting the scale factor of the shape relative to the local coordinate space of the node containing it.
+	     * @property {string} type An option for selecting the level of detail at which to create shapes from geometry.
 	     * @see https://developer.apple.com/reference/scenekit/scnphysicsshape.option
 	     */
 
@@ -20172,9 +24850,9 @@ module.exports =
 
 	    /**
 	     * @type {Object} ShapeType
-	     * @property {Symbol} boundingBox The physics shape is the smallest box containing the geometry.
-	     * @property {Symbol} concavePolyhedron The physics shape is a concave polyhedron closely following the surface of the geometry.
-	     * @property {Symbol} convexHull The physics shape is a convex polyhedron roughly enclosing the geometry.
+	     * @property {string} boundingBox The physics shape is the smallest box containing the geometry.
+	     * @property {string} concavePolyhedron The physics shape is a concave polyhedron closely following the surface of the geometry.
+	     * @property {string} convexHull The physics shape is a convex polyhedron roughly enclosing the geometry.
 	     * @see https://developer.apple.com/reference/scenekit/scnphysicsshape.shapetype
 	     */
 
@@ -20191,7 +24869,7 @@ module.exports =
 	exports.default = SCNPhysicsShape;
 
 /***/ },
-/* 58 */
+/* 77 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20202,23 +24880,23 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNNode = __webpack_require__(33);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNVector = __webpack_require__(15);
+	var _SCNVector = __webpack_require__(35);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNMatrix = __webpack_require__(17);
+	var _SCNMatrix = __webpack_require__(37);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _CGPoint = __webpack_require__(5);
+	var _CGPoint = __webpack_require__(3);
 
 	var _CGPoint2 = _interopRequireDefault(_CGPoint);
 
@@ -20406,7 +25084,7 @@ module.exports =
 	exports.default = SCNHitTestResult;
 
 /***/ },
-/* 59 */
+/* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20417,75 +25095,75 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimatable = __webpack_require__(35);
+	var _SCNAnimatable = __webpack_require__(55);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNGeometry = __webpack_require__(37);
+	var _SCNGeometry = __webpack_require__(57);
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
-	var _SCNParticleBirthLocation = __webpack_require__(60);
+	var _SCNParticleBirthLocation = __webpack_require__(79);
 
 	var _SCNParticleBirthLocation2 = _interopRequireDefault(_SCNParticleBirthLocation);
 
-	var _SCNParticleBirthDirection = __webpack_require__(61);
+	var _SCNParticleBirthDirection = __webpack_require__(80);
 
 	var _SCNParticleBirthDirection2 = _interopRequireDefault(_SCNParticleBirthDirection);
 
-	var _SCNVector = __webpack_require__(15);
+	var _SCNVector = __webpack_require__(35);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3 = __webpack_require__(16);
+	var _SCNVector3 = __webpack_require__(36);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
-	var _SCNParticleImageSequenceAnimationMode = __webpack_require__(62);
+	var _SCNParticleImageSequenceAnimationMode = __webpack_require__(81);
 
 	var _SCNParticleImageSequenceAnimationMode2 = _interopRequireDefault(_SCNParticleImageSequenceAnimationMode);
 
-	var _SCNNode = __webpack_require__(33);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNParticleBlendMode = __webpack_require__(63);
+	var _SCNParticleBlendMode = __webpack_require__(82);
 
 	var _SCNParticleBlendMode2 = _interopRequireDefault(_SCNParticleBlendMode);
 
-	var _SCNParticleOrientationMode = __webpack_require__(64);
+	var _SCNParticleOrientationMode = __webpack_require__(83);
 
 	var _SCNParticleOrientationMode2 = _interopRequireDefault(_SCNParticleOrientationMode);
 
-	var _SCNParticleSortingMode = __webpack_require__(65);
+	var _SCNParticleSortingMode = __webpack_require__(84);
 
 	var _SCNParticleSortingMode2 = _interopRequireDefault(_SCNParticleSortingMode);
 
-	var _SCNParticleEvent = __webpack_require__(66);
+	var _SCNParticleEvent = __webpack_require__(85);
 
 	var _SCNParticleEvent2 = _interopRequireDefault(_SCNParticleEvent);
 
-	var _SCNParticleEventBlock = __webpack_require__(67);
+	var _SCNParticleEventBlock = __webpack_require__(86);
 
 	var _SCNParticleEventBlock2 = _interopRequireDefault(_SCNParticleEventBlock);
 
-	var _SCNParticlePropertyController = __webpack_require__(68);
+	var _SCNParticlePropertyController = __webpack_require__(87);
 
 	var _SCNParticlePropertyController2 = _interopRequireDefault(_SCNParticlePropertyController);
 
-	var _SCNParticleModifierStage = __webpack_require__(70);
+	var _SCNParticleModifierStage = __webpack_require__(89);
 
 	var _SCNParticleModifierStage2 = _interopRequireDefault(_SCNParticleModifierStage);
 
-	var _SCNParticleModifierBlock = __webpack_require__(71);
+	var _SCNParticleModifierBlock = __webpack_require__(90);
 
 	var _SCNParticleModifierBlock2 = _interopRequireDefault(_SCNParticleModifierBlock);
 
-	var _SKColor = __webpack_require__(48);
+	var _SKColor = __webpack_require__(8);
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
@@ -20498,22 +25176,22 @@ module.exports =
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var _ParticleProperty = {
-	  angle: Symbol(),
-	  angularVelocity: Symbol(),
-	  bounce: Symbol(),
-	  charge: Symbol(),
-	  color: Symbol(),
-	  contactNormal: Symbol(),
-	  contactPoint: Symbol(),
-	  frame: Symbol(),
-	  frameRate: Symbol(),
-	  friction: Symbol(),
-	  life: Symbol(),
-	  opacity: Symbol(),
-	  position: Symbol(),
-	  rotationAxis: Symbol(),
-	  size: Symbol(),
-	  velocity: Symbol()
+	  angle: 'Angle',
+	  angularVelocity: 'AngularVelocity',
+	  bounce: 'Bounce',
+	  charge: 'Charge',
+	  color: 'Color',
+	  contactNormal: 'ContactNormal',
+	  contactPoint: 'ContactPoint',
+	  frame: 'Frame',
+	  frameRate: 'FrameRate',
+	  friction: 'Friction',
+	  life: 'Life',
+	  opacity: 'Opacity',
+	  position: 'Position',
+	  rotationAxis: 'RotationAxis',
+	  size: 'Size',
+	  velocity: 'Velocity'
 	};
 
 	/**
@@ -21096,22 +25774,22 @@ module.exports =
 	    // Structures
 	    /**
 	     * @type {Object} ParticleProperty
-	     * @property {Symbol} angle The rotation angle, in radians, of the particle about its axis.
-	     * @property {Symbol} angularVelocity The particle’s angular velocity (or rate of spin), in radians per second.
-	     * @property {Symbol} bounce The particle’s restitution coefficient.
-	     * @property {Symbol} charge The particle’s electric charge, in coulombs.
-	     * @property {Symbol} color The particle’s tint color, as a vector of red, green, blue, and alpha component values.
-	     * @property {Symbol} contactNormal The normal vector, in scene coordinate space, of a collision between a particle and a geometry in the scene.
-	     * @property {Symbol} contactPoint The location, in scene coordinate space, of a collision between a particle and a geometry in the scene.
-	     * @property {Symbol} frame The current frame index of the particle’s image animation.
-	     * @property {Symbol} frameRate The rate, in frames per second, of the particle’s image animation.
-	     * @property {Symbol} friction The particle’s friction coefficient.
-	     * @property {Symbol} life The remaining time in the particle’s life span, in seconds.
-	     * @property {Symbol} opacity The particle’s opacity (or alpha value).
-	     * @property {Symbol} position The particle’s position vector in scene coordinate space.
-	     * @property {Symbol} rotationAxis The particle’s axis of rotation, expressed as a vector in the particle’s local coordinate space.
-	     * @property {Symbol} size The width and height of the rendered particle image, in units of scene coordinate space.
-	     * @property {Symbol} velocity The particle’s velocity vector in units (of scene coordinate space) per second.
+	     * @property {string} angle The rotation angle, in radians, of the particle about its axis.
+	     * @property {string} angularVelocity The particle’s angular velocity (or rate of spin), in radians per second.
+	     * @property {string} bounce The particle’s restitution coefficient.
+	     * @property {string} charge The particle’s electric charge, in coulombs.
+	     * @property {string} color The particle’s tint color, as a vector of red, green, blue, and alpha component values.
+	     * @property {string} contactNormal The normal vector, in scene coordinate space, of a collision between a particle and a geometry in the scene.
+	     * @property {string} contactPoint The location, in scene coordinate space, of a collision between a particle and a geometry in the scene.
+	     * @property {string} frame The current frame index of the particle’s image animation.
+	     * @property {string} frameRate The rate, in frames per second, of the particle’s image animation.
+	     * @property {string} friction The particle’s friction coefficient.
+	     * @property {string} life The remaining time in the particle’s life span, in seconds.
+	     * @property {string} opacity The particle’s opacity (or alpha value).
+	     * @property {string} position The particle’s position vector in scene coordinate space.
+	     * @property {string} rotationAxis The particle’s axis of rotation, expressed as a vector in the particle’s local coordinate space.
+	     * @property {string} size The width and height of the rendered particle image, in units of scene coordinate space.
+	     * @property {string} velocity The particle’s velocity vector in units (of scene coordinate space) per second.
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem.particleproperty
 	     */
 
@@ -21128,7 +25806,7 @@ module.exports =
 	exports.default = SCNParticleSystem;
 
 /***/ },
-/* 60 */
+/* 79 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21136,9 +25814,9 @@ module.exports =
 	/**
 	 * Options for the initial location of each emitted particle, used by the birthLocation property.
 	 * @typedef {Object} SCNParticleBirthLocation
-	 * @property {Symbol} surface - New particles can be created at any location on the surface of the emitter shape.
-	 * @property {Symbol} volume - New particles can be created at any location within the volume of the emitter shape.
-	 * @property {Symbol} vertex - New particles can be created at only at the locations of the vertices in the emitter shape.
+	 * @property {number} surface - New particles can be created at any location on the surface of the emitter shape.
+	 * @property {number} volume - New particles can be created at any location within the volume of the emitter shape.
+	 * @property {number} vertex - New particles can be created at only at the locations of the vertices in the emitter shape.
 	 * @see https://developer.apple.com/reference/scenekit/scnparticlebirthlocation
 	 */
 
@@ -21146,15 +25824,15 @@ module.exports =
 	  value: true
 	});
 	var SCNParticleBirthLocation = {
-	  surface: Symbol(),
-	  volume: Symbol(),
-	  vertex: Symbol()
+	  surface: 0,
+	  volume: 1,
+	  vertex: 2
 	};
 
 	exports.default = SCNParticleBirthLocation;
 
 /***/ },
-/* 61 */
+/* 80 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21162,9 +25840,9 @@ module.exports =
 	/**
 	 * Options for the initial direction of each emitted particle, used by the birthDirection property.
 	 * @typedef {Object} SCNParticleBirthDirection
-	 * @property {Symbol} constant - The emitting direction is the same for all particles.
-	 * @property {Symbol} surfaceNormal - The emitting direction for each particle is along the surface normal vector at the point where the particle is emitted.
-	 * @property {Symbol} random - SceneKit randomizes the emitting direction for each particle.
+	 * @property {number} constant - The emitting direction is the same for all particles.
+	 * @property {number} surfaceNormal - The emitting direction for each particle is along the surface normal vector at the point where the particle is emitted.
+	 * @property {number} random - SceneKit randomizes the emitting direction for each particle.
 	 * @see https://developer.apple.com/reference/scenekit/scnparticlebirthdirection
 	 */
 
@@ -21172,15 +25850,15 @@ module.exports =
 	  value: true
 	});
 	var SCNParticleBirthDirection = {
-	  constant: Symbol(),
-	  surfaceNormal: Symbol(),
-	  random: Symbol()
+	  constant: 0,
+	  surfaceNormal: 1,
+	  random: 2
 	};
 
 	exports.default = SCNParticleBirthDirection;
 
 /***/ },
-/* 62 */
+/* 81 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21188,9 +25866,9 @@ module.exports =
 	/**
 	 * Options for animating each particle with a sequence of images, used by the imageSequenceAnimationMode property.
 	 * @typedef {Object} SCNParticleImageSequenceAnimationMode
-	 * @property {Symbol} repeat - The animation loops after displaying all of its images.
-	 * @property {Symbol} clamp - The animation stops after displaying all of its images.
-	 * @property {Symbol} autoReverse - After the animation displays all of its images, it plays again in reverse order.
+	 * @property {number} repeat - The animation loops after displaying all of its images.
+	 * @property {number} clamp - The animation stops after displaying all of its images.
+	 * @property {number} autoReverse - After the animation displays all of its images, it plays again in reverse order.
 	 * @see https://developer.apple.com/reference/scenekit/scnparticleimagesequenceanimationmode
 	 */
 
@@ -21198,15 +25876,15 @@ module.exports =
 	  value: true
 	});
 	var SCNParticleImageSequenceAnimationMode = {
-	  repeat: Symbol(),
-	  clamp: Symbol(),
-	  autoReverse: Symbol()
+	  repeat: 0,
+	  clamp: 1,
+	  autoReverse: 2
 	};
 
 	exports.default = SCNParticleImageSequenceAnimationMode;
 
 /***/ },
-/* 63 */
+/* 82 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21214,12 +25892,12 @@ module.exports =
 	/**
 	 * Options for combining source and destination pixel colors when compositing particles during rendering, used by the blendMode property.
 	 * @typedef {Object} SCNParticleBlendMode
-	 * @property {Symbol} additive - The source and destination colors are added together.
-	 * @property {Symbol} subtract - The source color is subtracted from the destination color.
-	 * @property {Symbol} multiply - The source color is multiplied by the destination color.
-	 * @property {Symbol} screen - The source color is added to the destination color times the inverted source color.
-	 * @property {Symbol} alpha - The source and destination colors are blended by multiplying the source alpha value.
-	 * @property {Symbol} replace - The source color replaces the destination color.
+	 * @property {number} additive - The source and destination colors are added together.
+	 * @property {number} subtract - The source color is subtracted from the destination color.
+	 * @property {number} multiply - The source color is multiplied by the destination color.
+	 * @property {number} screen - The source color is added to the destination color times the inverted source color.
+	 * @property {number} alpha - The source and destination colors are blended by multiplying the source alpha value.
+	 * @property {number} replace - The source color replaces the destination color.
 	 * @see https://developer.apple.com/reference/scenekit/scnparticleblendmode
 	 */
 
@@ -21227,18 +25905,18 @@ module.exports =
 	  value: true
 	});
 	var SCNParticleBlendMode = {
-	  additive: Symbol(),
-	  subtract: Symbol(),
-	  multiply: Symbol(),
-	  screen: Symbol(),
-	  alpha: Symbol(),
-	  replace: Symbol()
+	  additive: 0,
+	  subtract: 1,
+	  multiply: 2,
+	  screen: 3,
+	  alpha: 4,
+	  replace: 5
 	};
 
 	exports.default = SCNParticleBlendMode;
 
 /***/ },
-/* 64 */
+/* 83 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21246,10 +25924,10 @@ module.exports =
 	/**
 	 * Options for restricting the orientation of particles, used by the orientationMode property.
 	 * @typedef {Object} SCNParticleOrientationMode
-	 * @property {Symbol} billboardScreenAligned - Each particle’s orientation is always fixed with respect to the point of view camera.
-	 * @property {Symbol} billboardViewAligned - Each particle always faces the point of view camera (but may rotate about an axis parallel to the view direction).
-	 * @property {Symbol} free - Particle orientations are not restricted; they may rotate freely in all axes.
-	 * @property {Symbol} billboardYAligned - The y-axis direction of each particle is always fixed with respect to the point of view camera.
+	 * @property {number} billboardScreenAligned - Each particle’s orientation is always fixed with respect to the point of view camera.
+	 * @property {number} billboardViewAligned - Each particle always faces the point of view camera (but may rotate about an axis parallel to the view direction).
+	 * @property {number} free - Particle orientations are not restricted; they may rotate freely in all axes.
+	 * @property {number} billboardYAligned - The y-axis direction of each particle is always fixed with respect to the point of view camera.
 	 * @see https://developer.apple.com/reference/scenekit/scnparticleorientationmode
 	 */
 
@@ -21257,16 +25935,16 @@ module.exports =
 	  value: true
 	});
 	var SCNParticleOrientationMode = {
-	  billboardScreenAligned: Symbol(),
-	  billboardViewAligned: Symbol(),
-	  free: Symbol(),
-	  billboardYAligned: Symbol()
+	  billboardScreenAligned: 0,
+	  billboardViewAligned: 1,
+	  free: 2,
+	  billboardYAligned: 3
 	};
 
 	exports.default = SCNParticleOrientationMode;
 
 /***/ },
-/* 65 */
+/* 84 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21274,11 +25952,11 @@ module.exports =
 	/**
 	 * Options for the rendering order of particles, used by the sortingMode property.
 	 * @typedef {Object} SCNParticleSortingMode
-	 * @property {Symbol} none - Particles are not sorted; they may be rendered in any order.
-	 * @property {Symbol} projectedDepth - Particles farther from the point of view (as measured using projected depth) are rendered before closer particles.
-	 * @property {Symbol} distance - Particles farther from the point of view (as measured using distance from the camera in scene space) are rendered before closer particles.
-	 * @property {Symbol} oldestFirst - Particles emitted earlier are rendered before particles emitted more recently.
-	 * @property {Symbol} youngestFirst - Particles emitted more recently are rendered before particles emitted earlier.
+	 * @property {number} none - Particles are not sorted; they may be rendered in any order.
+	 * @property {number} projectedDepth - Particles farther from the point of view (as measured using projected depth) are rendered before closer particles.
+	 * @property {number} distance - Particles farther from the point of view (as measured using distance from the camera in scene space) are rendered before closer particles.
+	 * @property {number} oldestFirst - Particles emitted earlier are rendered before particles emitted more recently.
+	 * @property {number} youngestFirst - Particles emitted more recently are rendered before particles emitted earlier.
 	 * @see https://developer.apple.com/reference/scenekit/scnparticlesortingmode
 	 */
 
@@ -21286,17 +25964,17 @@ module.exports =
 	  value: true
 	});
 	var SCNParticleSortingMode = {
-	  none: Symbol(),
-	  projectedDepth: Symbol(),
-	  distance: Symbol(),
-	  oldestFirst: Symbol(),
-	  youngestFirst: Symbol()
+	  none: 0,
+	  projectedDepth: 1,
+	  distance: 2,
+	  oldestFirst: 3,
+	  youngestFirst: 4
 	};
 
 	exports.default = SCNParticleSortingMode;
 
 /***/ },
-/* 66 */
+/* 85 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21304,9 +25982,9 @@ module.exports =
 	/**
 	 * Significant events in the life spans of simulate particles, used by the handle(_:forProperties:handler:) method.
 	 * @typedef {Object} SCNParticleEvent
-	 * @property {Symbol} birth - Occurs when new particles spawn.
-	 * @property {Symbol} death - Occurs when particles reach the end of their life span.
-	 * @property {Symbol} collision - Occurs when particles collide with scene geometry.
+	 * @property {number} birth - Occurs when new particles spawn.
+	 * @property {number} death - Occurs when particles reach the end of their life span.
+	 * @property {number} collision - Occurs when particles collide with scene geometry.
 	 * @see https://developer.apple.com/reference/scenekit/scnparticleevent
 	 */
 
@@ -21314,15 +25992,15 @@ module.exports =
 	  value: true
 	});
 	var SCNParticleEvent = {
-	  birth: Symbol(),
-	  death: Symbol(),
-	  collision: Symbol()
+	  birth: 0,
+	  death: 1,
+	  collision: 2
 	};
 
 	exports.default = SCNParticleEvent;
 
 /***/ },
-/* 67 */
+/* 86 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21370,7 +26048,7 @@ module.exports =
 	exports.default = SCNParticleEventBlock;
 
 /***/ },
-/* 68 */
+/* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21379,19 +26057,19 @@ module.exports =
 	  value: true
 	});
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _CAAnimation = __webpack_require__(19);
+	var _CAAnimation = __webpack_require__(39);
 
 	var _CAAnimation2 = _interopRequireDefault(_CAAnimation);
 
-	var _SCNParticleInputMode = __webpack_require__(69);
+	var _SCNParticleInputMode = __webpack_require__(88);
 
 	var _SCNParticleInputMode2 = _interopRequireDefault(_SCNParticleInputMode);
 
-	var _SCNNode = __webpack_require__(33);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
@@ -21494,7 +26172,7 @@ module.exports =
 	exports.default = SCNParticlePropertyController;
 
 /***/ },
-/* 69 */
+/* 88 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21502,9 +26180,9 @@ module.exports =
 	/**
 	 * Options for the input value of the property controller’s animation, used by the inputMode property.
 	 * @typedef {Object} SCNParticleInputMode
-	 * @property {Symbol} overLife - The controller’s effect on a particle property is a function of the time since the particle’s birth.
-	 * @property {Symbol} overDistance - The controller’s effect on a particle property is a function of the particle’s distance from the position of a specified node.
-	 * @property {Symbol} overOtherProperty - The controller’s effect on a particle property is a function of another of the particle’s properties.
+	 * @property {number} overLife - The controller’s effect on a particle property is a function of the time since the particle’s birth.
+	 * @property {number} overDistance - The controller’s effect on a particle property is a function of the particle’s distance from the position of a specified node.
+	 * @property {number} overOtherProperty - The controller’s effect on a particle property is a function of another of the particle’s properties.
 	 * @see https://developer.apple.com/reference/scenekit/scnparticleinputmode
 	 */
 
@@ -21512,15 +26190,15 @@ module.exports =
 	  value: true
 	});
 	var SCNParticleInputMode = {
-	  overLife: Symbol(),
-	  overDistance: Symbol(),
-	  overOtherProperty: Symbol()
+	  overLife: 0,
+	  overDistance: 1,
+	  overOtherProperty: 2
 	};
 
 	exports.default = SCNParticleInputMode;
 
 /***/ },
-/* 70 */
+/* 89 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21528,10 +26206,10 @@ module.exports =
 	/**
 	 * Stages of SceneKit’s particle simulation process into which you can insert modifier blocks, used by the addModifier(forProperties:at:modifier:) method.
 	 * @typedef {Object} SCNParticleModifierStage
-	 * @property {Symbol} preDynamics - The stage before SceneKit simulates the motion of particles.
-	 * @property {Symbol} postDynamics - The stage after SceneKit simulates the motion of particles.
-	 * @property {Symbol} preCollision - The stage before SceneKit simulates the results of collisions between particles and scene geometry.
-	 * @property {Symbol} postCollision - The stage after SceneKit simulates the results of collisions between particles and scene geometry.
+	 * @property {number} preDynamics - The stage before SceneKit simulates the motion of particles.
+	 * @property {number} postDynamics - The stage after SceneKit simulates the motion of particles.
+	 * @property {number} preCollision - The stage before SceneKit simulates the results of collisions between particles and scene geometry.
+	 * @property {number} postCollision - The stage after SceneKit simulates the results of collisions between particles and scene geometry.
 	 * @see https://developer.apple.com/reference/scenekit/scnparticlemodifierstage
 	 */
 
@@ -21539,16 +26217,16 @@ module.exports =
 	  value: true
 	});
 	var SCNParticleModifierStage = {
-	  preDynamics: Symbol(),
-	  postDynamics: Symbol(),
-	  preCollision: Symbol(),
-	  postCollision: Symbol()
+	  preDynamics: 0,
+	  postDynamics: 1,
+	  preCollision: 2,
+	  postCollision: 3
 	};
 
 	exports.default = SCNParticleModifierStage;
 
 /***/ },
-/* 71 */
+/* 90 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21592,7 +26270,7 @@ module.exports =
 	exports.default = SCNParticleModifierBlock;
 
 /***/ },
-/* 72 */
+/* 91 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21722,7 +26400,7 @@ module.exports =
 	exports.default = SCNDebugOptions;
 
 /***/ },
-/* 73 */
+/* 92 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21730,11 +26408,12 @@ module.exports =
 	/**
 	 * Options for choosing the graphics technology for an SCNView object (or other SceneKit renderer) to use for drawing its contents. Used by the renderingAPI property and the preferredRenderingAPI option when initializing an SCNView object.
 	 * @typedef {Object} SCNRenderingAPI
-	 * @property {Symbol} metal - Use the Metal framework for SceneKit rendering.
-	 * @property {Symbol} openGLES2 - Use the OpenGL ES 2.0 API for SceneKit rendering in iOS.
-	 * @property {Symbol} openGLLegacy - Use the Legacy OpenGL API for SceneKit rendering in macOS.
-	 * @property {Symbol} openGLCore32 - Use the OpenGL 3.2 Core Profile API for SceneKit rendering in macOS.
-	 * @property {Symbol} openGLCore41 - Use the OpenGL 4.1 Core Profile API for SceneKit rendering in macOS.
+	 * @property {number} metal - Use the Metal framework for SceneKit rendering.
+	 * @property {number} openGLES2 - Use the OpenGL ES 2.0 API for SceneKit rendering in iOS.
+	 * @property {number} openGLLegacy - Use the Legacy OpenGL API for SceneKit rendering in macOS.
+	 * @property {number} openGLCore32 - Use the OpenGL 3.2 Core Profile API for SceneKit rendering in macOS.
+	 * @property {number} openGLCore41 - Use the OpenGL 4.1 Core Profile API for SceneKit rendering in macOS.
+	 * @property {number} webGL - Use the OpenGL 4.1 Core Profile API for SceneKit rendering in macOS.
 	 * @see https://developer.apple.com/reference/scenekit/scnrenderingapi
 	 */
 
@@ -21742,18 +26421,18 @@ module.exports =
 	  value: true
 	});
 	var SCNRenderingAPI = {
-	  metal: Symbol(),
-	  openGLES2: Symbol(),
-	  openGLLegacy: Symbol(),
-	  openGLCore32: Symbol(),
-	  openGLCore41: Symbol(),
-	  webGL: Symbol()
+	  metal: 0,
+	  openGLLegacy: 1,
+	  openGLCore32: 2,
+	  openGLCore41: 3,
+	  openGLES2: 999,
+	  webGL: 998
 	};
 
 	exports.default = SCNRenderingAPI;
 
 /***/ },
-/* 74 */
+/* 93 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -21761,15 +26440,15 @@ module.exports =
 	/**
 	 * 
 	 * @typedef {Object} SCNHitTestOption
-	 * @property {Symbol} backFaceCulling - An option to ignore faces not oriented toward the camera.
-	 * @property {Symbol} boundingBoxOnly - An option to search for objects by bounding box only.
-	 * @property {Symbol} categoryBitMask - 
-	 * @property {Symbol} clipToZRange - An option to search for objects only within the depth range of the current point of view.
-	 * @property {Symbol} firstFoundOnly - An option to return only the first object found.
-	 * @property {Symbol} ignoreChildNodes - An option to ignore child nodes when searching.
-	 * @property {Symbol} ignoreHiddenNodes - An option to ignore hidden nodes when searching.
-	 * @property {Symbol} rootNode - The root of the node hierarchy to be searched.
-	 * @property {Symbol} sortResults - An option to sort the results of a hit-test.
+	 * @property {string} backFaceCulling - An option to ignore faces not oriented toward the camera.
+	 * @property {string} boundingBoxOnly - An option to search for objects by bounding box only.
+	 * @property {string} categoryBitMask - 
+	 * @property {string} clipToZRange - An option to search for objects only within the depth range of the current point of view.
+	 * @property {string} firstFoundOnly - An option to return only the first object found.
+	 * @property {string} ignoreChildNodes - An option to ignore child nodes when searching.
+	 * @property {string} ignoreHiddenNodes - An option to ignore hidden nodes when searching.
+	 * @property {string} rootNode - The root of the node hierarchy to be searched.
+	 * @property {string} sortResults - An option to sort the results of a hit-test.
 	 * @see https://developer.apple.com/reference/scenekit/scnhittestoption
 	 */
 
@@ -21777,21 +26456,21 @@ module.exports =
 	  value: true
 	});
 	var SCNHitTestOption = {
-	  backFaceCulling: Symbol(),
-	  boundingBoxOnly: Symbol(),
-	  categoryBitMask: Symbol(),
-	  clipToZRange: Symbol(),
-	  firstFoundOnly: Symbol(),
-	  ignoreChildNodes: Symbol(),
-	  ignoreHiddenNodes: Symbol(),
-	  rootNode: Symbol(),
-	  sortResults: Symbol()
+	  backFaceCulling: 'kHitTestBackFaceCulling',
+	  boundingBoxOnly: 'kHitTestBoundingBoxOnly',
+	  categoryBitMask: 'kHitTestCategoryBitMask',
+	  clipToZRange: 'kHitTestClipToZRange',
+	  firstFoundOnly: 'kHitTestFirstFoundOnly',
+	  ignoreChildNodes: 'kHitTestIgnoreChildNodes',
+	  ignoreHiddenNodes: 'kHitTestSkipHiddenNode',
+	  rootNode: 'kHitTestRootNode',
+	  sortResults: 'kHitTestSortResults'
 	};
 
 	exports.default = SCNHitTestOption;
 
 /***/ },
-/* 75 */
+/* 94 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21802,11 +26481,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNSceneRenderer = __webpack_require__(42);
+	var _SCNSceneRenderer = __webpack_require__(62);
 
 	var _SCNSceneRenderer2 = _interopRequireDefault(_SCNSceneRenderer);
 
-	var _SCNScene = __webpack_require__(43);
+	var _SCNScene = __webpack_require__(63);
 
 	var _SCNScene2 = _interopRequireDefault(_SCNScene);
 
@@ -21919,7 +26598,7 @@ module.exports =
 	exports.default = SCNSceneRendererDelegate;
 
 /***/ },
-/* 76 */
+/* 95 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21930,7 +26609,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNTechnique = __webpack_require__(77);
+	var _SCNTechnique = __webpack_require__(96);
 
 	var _SCNTechnique2 = _interopRequireDefault(_SCNTechnique);
 
@@ -21976,7 +26655,7 @@ module.exports =
 	exports.default = SCNTechniqueSupport;
 
 /***/ },
-/* 77 */
+/* 96 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21987,15 +26666,15 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimatable = __webpack_require__(35);
+	var _SCNAnimatable = __webpack_require__(55);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNBindingBlock = __webpack_require__(78);
+	var _SCNBindingBlock = __webpack_require__(97);
 
 	var _SCNBindingBlock2 = _interopRequireDefault(_SCNBindingBlock);
 
@@ -22117,7 +26796,7 @@ module.exports =
 	exports.default = SCNTechnique;
 
 /***/ },
-/* 78 */
+/* 97 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22126,11 +26805,11 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNNode = __webpack_require__(33);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNRenderer = __webpack_require__(41);
+	var _SCNRenderer = __webpack_require__(61);
 
 	var _SCNRenderer2 = _interopRequireDefault(_SCNRenderer);
 
@@ -22152,7 +26831,7 @@ module.exports =
 	exports.default = SCNBindingBlock;
 
 /***/ },
-/* 79 */
+/* 98 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -22160,11 +26839,11 @@ module.exports =
 	/**
 	 * Modes for antialiased rendering of the view’s scene, used by the SCNView property.
 	 * @typedef {Object} SCNAntialiasingMode
-	 * @property {Symbol} none - Disables antialiased rendering.
-	 * @property {Symbol} multisampling2X - Enables multisample antialiasing, with two samples per screen pixel.
-	 * @property {Symbol} multisampling4X - Enables multisample antialiasing, with four samples per screen pixel.
-	 * @property {Symbol} multisampling8X - Enables multisample antialiasing, with eight samples per screen pixel.
-	 * @property {Symbol} multisampling16X - Enables multisample antialiasing, with sixteen samples per screen pixel.
+	 * @property {number} none - Disables antialiased rendering.
+	 * @property {number} multisampling2X - Enables multisample antialiasing, with two samples per screen pixel.
+	 * @property {number} multisampling4X - Enables multisample antialiasing, with four samples per screen pixel.
+	 * @property {number} multisampling8X - Enables multisample antialiasing, with eight samples per screen pixel.
+	 * @property {number} multisampling16X - Enables multisample antialiasing, with sixteen samples per screen pixel.
 	 * @see https://developer.apple.com/reference/scenekit/scnantialiasingmode
 	 */
 
@@ -22172,17 +26851,17 @@ module.exports =
 	  value: true
 	});
 	var SCNAntialiasingMode = {
-	  none: Symbol(),
-	  multisampling2X: Symbol(),
-	  multisampling4X: Symbol(),
-	  multisampling8X: Symbol(),
-	  multisampling16X: Symbol()
+	  none: 0,
+	  multisampling2X: 1,
+	  multisampling4X: 2,
+	  multisampling8X: 3,
+	  multisampling16X: 4
 	};
 
 	exports.default = SCNAntialiasingMode;
 
 /***/ },
-/* 80 */
+/* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22193,23 +26872,23 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimatable = __webpack_require__(35);
+	var _SCNAnimatable = __webpack_require__(55);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNTechniqueSupport = __webpack_require__(76);
+	var _SCNTechniqueSupport = __webpack_require__(95);
 
 	var _SCNTechniqueSupport2 = _interopRequireDefault(_SCNTechniqueSupport);
 
-	var _SCNMaterialProperty = __webpack_require__(44);
+	var _SCNMaterialProperty = __webpack_require__(64);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
-	var _SCNMatrix = __webpack_require__(17);
+	var _SCNMatrix = __webpack_require__(37);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -22601,7 +27280,7 @@ module.exports =
 	exports.default = SCNCamera;
 
 /***/ },
-/* 81 */
+/* 100 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22612,31 +27291,31 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimatable = __webpack_require__(35);
+	var _SCNAnimatable = __webpack_require__(55);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNTechniqueSupport = __webpack_require__(76);
+	var _SCNTechniqueSupport = __webpack_require__(95);
 
 	var _SCNTechniqueSupport2 = _interopRequireDefault(_SCNTechniqueSupport);
 
-	var _SCNMaterialProperty = __webpack_require__(44);
+	var _SCNMaterialProperty = __webpack_require__(64);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
-	var _CGSize = __webpack_require__(7);
+	var _CGSize = __webpack_require__(5);
 
 	var _CGSize2 = _interopRequireDefault(_CGSize);
 
-	var _SKColor = __webpack_require__(48);
+	var _SKColor = __webpack_require__(8);
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SCNShadowMode = __webpack_require__(82);
+	var _SCNShadowMode = __webpack_require__(101);
 
 	var _SCNShadowMode2 = _interopRequireDefault(_SCNShadowMode);
 
@@ -22649,12 +27328,12 @@ module.exports =
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var _LightType = {
-	  IES: Symbol(),
-	  ambient: Symbol(),
-	  directional: Symbol(),
-	  omni: Symbol(),
-	  probe: Symbol(),
-	  spot: Symbol()
+	  IES: 'ies',
+	  ambient: 'ambient',
+	  directional: 'directional',
+	  omni: 'omni',
+	  probe: 'probe',
+	  spot: 'spot'
 	};
 
 	/**
@@ -22917,12 +27596,12 @@ module.exports =
 	    // Structures
 	    /**
 	     * @type {Object} LightType
-	     * @property {Symbol} IES A light source whose shape, direction, and intensity of illumination is determined by a photometric profile.
-	     * @property {Symbol} ambient A light that illuminates all objects in the scene from all directions.
-	     * @property {Symbol} directional A light source with a uniform direction and constant intensity.
-	     * @property {Symbol} omni An omnidirectional light, also known as a point light. 
-	     * @property {Symbol} probe A sample of the environment around a point in a scene to be used in environment-based lighting.
-	     * @property {Symbol} spot A light source that illuminates a cone-shaped area.
+	     * @property {string} IES A light source whose shape, direction, and intensity of illumination is determined by a photometric profile.
+	     * @property {string} ambient A light that illuminates all objects in the scene from all directions.
+	     * @property {string} directional A light source with a uniform direction and constant intensity.
+	     * @property {string} omni An omnidirectional light, also known as a point light. 
+	     * @property {string} probe A sample of the environment around a point in a scene to be used in environment-based lighting.
+	     * @property {string} spot A light source that illuminates a cone-shaped area.
 	     * @see https://developer.apple.com/reference/scenekit/scnlight.lighttype
 	     */
 
@@ -22939,7 +27618,7 @@ module.exports =
 	exports.default = SCNLight;
 
 /***/ },
-/* 82 */
+/* 101 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -22947,9 +27626,9 @@ module.exports =
 	/**
 	 * Options for SceneKit’s rendering of shadows cast by a light, used by the shadowMode property.
 	 * @typedef {Object} SCNShadowMode
-	 * @property {Symbol} forward - SceneKit renders shadows during lighting computations.
-	 * @property {Symbol} deferred - SceneKit renders shadows in a postprocessing pass.
-	 * @property {Symbol} modulated - SceneKit renders shadows by projecting the light’s gobo image. The light does not illuminate the scene.
+	 * @property {number} forward - SceneKit renders shadows during lighting computations.
+	 * @property {number} deferred - SceneKit renders shadows in a postprocessing pass.
+	 * @property {number} modulated - SceneKit renders shadows by projecting the light’s gobo image. The light does not illuminate the scene.
 	 * @see https://developer.apple.com/reference/scenekit/scnshadowmode
 	 */
 
@@ -22957,15 +27636,15 @@ module.exports =
 	  value: true
 	});
 	var SCNShadowMode = {
-	  forward: Symbol(),
-	  deferred: Symbol(),
-	  modulated: Symbol()
+	  forward: 0,
+	  deferred: 1,
+	  modulated: 2
 	};
 
 	exports.default = SCNShadowMode;
 
 /***/ },
-/* 83 */
+/* 102 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -22973,11 +27652,11 @@ module.exports =
 	/**
 	 * The drawing primitive that connects vertices when rendering a geometry element, used by the primitiveType property to specify how SceneKit interprets the geometry element’s data.
 	 * @typedef {Object} SCNGeometryPrimitiveType
-	 * @property {Symbol} triangles - The geometry element’s data is a sequence of triangles, with each triangle described by three new vertices.
-	 * @property {Symbol} triangleStrip - The geometry element’s data is a sequence of triangles, with each triangle described by one new vertex and two vertices from the previous triangle. 
-	 * @property {Symbol} line - The geometry element’s data is a sequence of line segments, with each line segment described by two new vertices. 
-	 * @property {Symbol} point - The geometry element’s data is a sequence of unconnected points.
-	 * @property {Symbol} polygon - 
+	 * @property {number} triangles - The geometry element’s data is a sequence of triangles, with each triangle described by three new vertices.
+	 * @property {number} triangleStrip - The geometry element’s data is a sequence of triangles, with each triangle described by one new vertex and two vertices from the previous triangle. 
+	 * @property {number} line - The geometry element’s data is a sequence of line segments, with each line segment described by two new vertices. 
+	 * @property {number} point - The geometry element’s data is a sequence of unconnected points.
+	 * @property {number} polygon - 
 	 * @see https://developer.apple.com/reference/scenekit/scngeometryprimitivetype
 	 */
 
@@ -22985,17 +27664,17 @@ module.exports =
 	  value: true
 	});
 	var SCNGeometryPrimitiveType = {
-	  triangles: Symbol(),
-	  triangleStrip: Symbol(),
-	  line: Symbol(),
-	  point: Symbol(),
-	  polygon: Symbol()
+	  triangles: 0,
+	  triangleStrip: 1,
+	  line: 2,
+	  point: 3,
+	  polygon: 4
 	};
 
 	exports.default = SCNGeometryPrimitiveType;
 
 /***/ },
-/* 84 */
+/* 103 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23006,21 +27685,25 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNVector = __webpack_require__(15);
+	var _SCNVector = __webpack_require__(35);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3 = __webpack_require__(16);
+	var _SCNVector3 = __webpack_require__(36);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
-	var _CGPoint = __webpack_require__(5);
+	var _CGPoint = __webpack_require__(3);
 
 	var _CGPoint2 = _interopRequireDefault(_CGPoint);
+
+	var _Buffer2 = __webpack_require__(6);
+
+	var _Buffer3 = _interopRequireDefault(_Buffer2);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23031,15 +27714,15 @@ module.exports =
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var _Semantic = {
-	  boneIndices: Symbol(),
-	  boneWeights: Symbol(),
-	  color: Symbol(),
-	  edgeCrease: Symbol(),
-	  normal: Symbol(),
-	  tangent: Symbol(),
-	  texcoord: Symbol(),
-	  vertex: Symbol(),
-	  vertexCrease: Symbol()
+	  boneIndices: 'kGeometrySourceSemanticBoneIndices',
+	  boneWeights: 'kGeometrySourceSemanticBoneWeights',
+	  color: 'kGeometrySourceSemanticColor',
+	  edgeCrease: 'kGeometrySourceSemanticEdgeCrease',
+	  normal: 'kGeometrySourceSemanticNormal',
+	  tangent: 'kGeometrySourceSemanticTangent',
+	  texcoord: 'kGeometrySourceSemanticTexcoord',
+	  vertex: 'kGeometrySourceSemanticVertex',
+	  vertexCrease: 'kGeometrySourceSemanticVertexCrease'
 	};
 
 	/**
@@ -23052,21 +27735,43 @@ module.exports =
 	var SCNGeometrySource = function (_NSObject) {
 	  _inherits(SCNGeometrySource, _NSObject);
 
-	  /**
-	   * Creates a geometry source from the specified data and options.
-	   * @access public
-	   * @constructor
-	   * @param {number[]} data - The data for the geometry source.
-	   * @param {SCNGeometrySource.Semantic} semantic - The semantic value (or attribute) that the geometry source describes for each vertex. See Geometry Semantic Identifiers for available values.
-	   * @param {number} vectorCount - The number of geometry source vectors.
-	   * @param {boolean} floatComponents - A Boolean value that indicates whether vector components are floating-point values. Specify true for floating-point values, or false for integer values.
-	   * @param {number} componentsPerVector - The number of scalar components in each vector.
-	   * @param {number} bytesPerComponent - The size, in bytes, of each vector component.
-	   * @param {number} offset - The offset, in bytes, from the beginning of the data to the first vector component to be used in the geometry source.
-	   * @param {number} stride - The number of bytes from each vector to the next in the data.
-	   * @desc A geometry source’s data is an array of vectors, each of which represents a particular attribute (or semantic) of a vertex in the geometry. The other parameters determine how SceneKit interprets this data. For example, an array of vertex positions may have three 32-bit floating-point components per vector, but an array of texture coordinates may have two 8-bit integer coponents per vector. You can use the offset and stride parameters together to interleave data for multiple geometry sources in the same array, improving rendering performance. See SCNGeometrySource for details.To create a custom SCNGeometry object from the geometry source, use the init(sources:elements:) method.
-	   * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1523320-init
-	   */
+	  _createClass(SCNGeometrySource, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      return {
+	        $constructor: function $constructor(propNames, propValues) {
+	          return new SCNGeometrySource(propValues.data, propValues.semantic, propValues.vectorCount, propValues.floatComponents, propValues.componentsPerVector, propValues.bytesPerComponent, propValues.dataOffset, propValues.dataStride);
+	        },
+	        data: ['NSMutableData', null],
+	        semantic: ['string', null],
+	        vectorCount: ['integer', null],
+	        floatComponents: ['boolean', null],
+	        componentsPerVector: ['integer', null],
+	        bytesPerComponent: ['integer', null],
+	        dataOffset: ['integer', null],
+	        dataStride: ['integer', null],
+	        mkSemantic: ['boolean', null] // ?
+	      };
+	    }
+
+	    /**
+	     * Creates a geometry source from the specified data and options.
+	     * @access public
+	     * @constructor
+	     * @param {number[]|Buffer} data - The data for the geometry source.
+	     * @param {SCNGeometrySource.Semantic} semantic - The semantic value (or attribute) that the geometry source describes for each vertex. See Geometry Semantic Identifiers for available values.
+	     * @param {number} vectorCount - The number of geometry source vectors.
+	     * @param {boolean} floatComponents - A Boolean value that indicates whether vector components are floating-point values. Specify true for floating-point values, or false for integer values.
+	     * @param {number} componentsPerVector - The number of scalar components in each vector.
+	     * @param {number} bytesPerComponent - The size, in bytes, of each vector component.
+	     * @param {number} offset - The offset, in bytes, from the beginning of the data to the first vector component to be used in the geometry source.
+	     * @param {number} stride - The number of bytes from each vector to the next in the data.
+	     * @desc A geometry source’s data is an array of vectors, each of which represents a particular attribute (or semantic) of a vertex in the geometry. The other parameters determine how SceneKit interprets this data. For example, an array of vertex positions may have three 32-bit floating-point components per vector, but an array of texture coordinates may have two 8-bit integer coponents per vector. You can use the offset and stride parameters together to interleave data for multiple geometry sources in the same array, improving rendering performance. See SCNGeometrySource for details.To create a custom SCNGeometry object from the geometry source, use the init(sources:elements:) method.
+	     * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1523320-init
+	     */
+
+	  }]);
+
 	  function SCNGeometrySource(data, semantic, vectorCount, floatComponents, componentsPerVector, bytesPerComponent, offset, stride) {
 	    _classCallCheck(this, SCNGeometrySource);
 
@@ -23082,6 +27787,39 @@ module.exports =
 	    _this._dataOffset = offset;
 	    _this._dataStride = stride;
 
+	    if (data instanceof _Buffer3.default) {
+	      var loadFunc = null;
+	      if (floatComponents) {
+	        switch (bytesPerComponent) {
+	          case 4:
+	            loadFunc = function loadFunc(_offset) {
+	              return data.readFloatLE(_offset);
+	            };
+	            break;
+	          case 8:
+	            loadFunc = function loadFunc(_offset) {
+	              return data.readDoubleLE(_offset);
+	            };
+	            break;
+	          default:
+	            throw new Error('unknown float data size: ' + bytesPerComponent);
+	        }
+	      } else {
+	        loadFunc = function loadFunc(_offset) {
+	          return data.readIntLE(_offset, bytesPerComponent);
+	        };
+	      }
+
+	      var _data = [];
+	      var count = data.length / bytesPerComponent;
+	      var _offset = 0;
+	      for (var i = 0; i < count; i++) {
+	        _data.push(loadFunc(_offset));
+	        _offset += bytesPerComponent;
+	      }
+	      _this._data = _data;
+	    }
+
 	    /**
 	     * @type {TypedArray}
 	     * @access private
@@ -23092,17 +27830,17 @@ module.exports =
 	    } else {
 	      if (floatComponents) {
 	        if (bytesPerComponent === 4) {
-	          _this._glData = new Float32Array(data);
+	          _this._glData = new Float32Array(_this._data);
 	        } else if (bytesPerComponent === 8) {
-	          _this._glData = new Float64Array(data);
+	          _this._glData = new Float64Array(_this._data);
 	        }
 	      } else {
 	        if (bytesPerComponent === 1) {
-	          _this._glData = new Uint8Array(data);
+	          _this._glData = new Uint8Array(_this._data);
 	        } else if (bytesPerComponent === 2) {
-	          _this._glData = new Uint16Array(data);
+	          _this._glData = new Uint16Array(_this._data);
 	        } else if (bytesPerComponent === 4) {
-	          _this._glData = new Uint32Array(data);
+	          _this._glData = new Uint32Array(_this._data);
 	        }
 	      }
 	    }
@@ -23520,15 +28258,15 @@ module.exports =
 
 	    /**
 	     * @type {Object} Semantic
-	     * @property {Symbol} boneIndices The semantic for bone index data, used for skeletal animation of skinned surfaces.
-	     * @property {Symbol} boneWeights The semantic for bone weight data, used for skeletal animation of skinned surfaces.
-	     * @property {Symbol} color The semantic for per-vertex color data.
-	     * @property {Symbol} edgeCrease The semantic for edge crease data, used for subdividing surfaces.
-	     * @property {Symbol} normal The semantic for surface normal data.
-	     * @property {Symbol} tangent The semantic for surface tangent vector data.
-	     * @property {Symbol} texcoord The semantic for texture coordinate data.
-	     * @property {Symbol} vertex The semantic for vertex position data.
-	     * @property {Symbol} vertexCrease The semantic for vertex crease data, used for subdividing surfaces.
+	     * @property {string} boneIndices The semantic for bone index data, used for skeletal animation of skinned surfaces.
+	     * @property {string} boneWeights The semantic for bone weight data, used for skeletal animation of skinned surfaces.
+	     * @property {string} color The semantic for per-vertex color data.
+	     * @property {string} edgeCrease The semantic for edge crease data, used for subdividing surfaces.
+	     * @property {string} normal The semantic for surface normal data.
+	     * @property {string} tangent The semantic for surface tangent vector data.
+	     * @property {string} texcoord The semantic for texture coordinate data.
+	     * @property {string} vertex The semantic for vertex position data.
+	     * @property {string} vertexCrease The semantic for vertex crease data, used for subdividing surfaces.
 	     * @see https://developer.apple.com/reference/scenekit/scngeometrysource.semantic
 	     */
 
@@ -23545,7 +28283,7 @@ module.exports =
 	exports.default = SCNGeometrySource;
 
 /***/ },
-/* 85 */
+/* 104 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -23553,9 +28291,9 @@ module.exports =
 	/**
 	 * Options for how often SceneKit should execute the binding handler you provide with the handleBinding(ofBufferNamed:frequency:handler:) method.
 	 * @typedef {Object} SCNBufferFrequency
-	 * @property {Symbol} perFrame - Execute the binding handler once for each frame to be rendered using the shader.
-	 * @property {Symbol} perNode - Execute the binding handler once for each frame, for each node to be rendered using the shader.
-	 * @property {Symbol} perShadable - Execute the binding handler once for each frame, for each node, for each material or geometry to be rendered using the shader.
+	 * @property {number} perFrame - Execute the binding handler once for each frame to be rendered using the shader.
+	 * @property {number} perNode - Execute the binding handler once for each frame, for each node to be rendered using the shader.
+	 * @property {number} perShadable - Execute the binding handler once for each frame, for each node, for each material or geometry to be rendered using the shader.
 	 * @see https://developer.apple.com/reference/scenekit/scnbufferfrequency
 	 */
 
@@ -23563,15 +28301,15 @@ module.exports =
 	  value: true
 	});
 	var SCNBufferFrequency = {
-	  perFrame: Symbol(),
-	  perNode: Symbol(),
-	  perShadable: Symbol()
+	  perFrame: 0,
+	  perNode: 1,
+	  perShadable: 2
 	};
 
 	exports.default = SCNBufferFrequency;
 
 /***/ },
-/* 86 */
+/* 105 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23580,19 +28318,19 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNBufferStream = __webpack_require__(87);
+	var _SCNBufferStream = __webpack_require__(106);
 
 	var _SCNBufferStream2 = _interopRequireDefault(_SCNBufferStream);
 
-	var _SCNNode = __webpack_require__(33);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNShadable = __webpack_require__(38);
+	var _SCNShadable = __webpack_require__(58);
 
 	var _SCNShadable2 = _interopRequireDefault(_SCNShadable);
 
-	var _SCNRenderer = __webpack_require__(41);
+	var _SCNRenderer = __webpack_require__(61);
 
 	var _SCNRenderer2 = _interopRequireDefault(_SCNRenderer);
 
@@ -23613,7 +28351,7 @@ module.exports =
 	exports.default = SCNBufferBindingBlock;
 
 /***/ },
-/* 87 */
+/* 106 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -23670,7 +28408,7 @@ module.exports =
 	exports.default = SCNBufferStream;
 
 /***/ },
-/* 88 */
+/* 107 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -23678,10 +28416,10 @@ module.exports =
 	/**
 	 * 
 	 * @typedef {Object} SCNShaderModifierEntryPoint
-	 * @property {Symbol} fragment - Use this entry point to change the color of a fragment after all other shading has been performed.
-	 * @property {Symbol} geometry - Use this entry point to deform a geometry’s surface or alter its vertex attributes.
-	 * @property {Symbol} lightingModel - Use this entry point to provide a custom lighting equation.
-	 * @property {Symbol} surface - Use this entry point to modify the surface properties of a material before lighting is computed.
+	 * @property {string} fragment - Use this entry point to change the color of a fragment after all other shading has been performed.
+	 * @property {string} geometry - Use this entry point to deform a geometry’s surface or alter its vertex attributes.
+	 * @property {string} lightingModel - Use this entry point to provide a custom lighting equation.
+	 * @property {string} surface - Use this entry point to modify the surface properties of a material before lighting is computed.
 	 * @see https://developer.apple.com/reference/scenekit/scnshadermodifierentrypoint
 	 */
 
@@ -23689,16 +28427,16 @@ module.exports =
 	  value: true
 	});
 	var SCNShaderModifierEntryPoint = {
-	  fragment: Symbol(),
-	  geometry: Symbol(),
-	  lightingModel: Symbol(),
-	  surface: Symbol()
+	  fragment: 'SCNShaderModifierEntryPointFragment',
+	  geometry: 'SCNShaderModifierEntryPointGeometry',
+	  lightingModel: 'SCNShaderModifierEntryPointLightingModel',
+	  surface: 'SCNShaderModifierEntryPointSurface'
 	};
 
 	exports.default = SCNShaderModifierEntryPoint;
 
 /***/ },
-/* 89 */
+/* 108 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23709,13 +28447,17 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(83);
+	var _SCNGeometryPrimitiveType = __webpack_require__(102);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
+
+	var _Buffer2 = __webpack_require__(6);
+
+	var _Buffer3 = _interopRequireDefault(_Buffer2);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -23734,17 +28476,34 @@ module.exports =
 	var SCNGeometryElement = function (_NSObject) {
 	  _inherits(SCNGeometryElement, _NSObject);
 
-	  // Creating a Geometry Element
+	  _createClass(SCNGeometryElement, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      return {
+	        $constructor: function $constructor(propNames, propValues) {
+	          return new SCNGeometryElement(propValues.elementData, propValues.primitiveType, propValues.primitiveCount, propValues.bytesPerIndex);
+	        },
+	        primitiveType: ['integer', null],
+	        primitiveCount: ['integer', null],
+	        elementData: ['NSMutableData', null],
+	        bytesPerIndex: ['integer', null]
+	      };
+	    }
 
-	  /**
-	   * Creates a geometry element from the specified array of index values. 
-	   * @access public
-	   * @constructor
-	   * @param {IndexType[]} indices - An array of index values, each of which identifies a vertex in a geometry source.
-	   * @param {SCNGeometryPrimitiveType} primitiveType - The drawing primitive that connects vertices when rendering the geometry element. For possible values, see SCNGeometryPrimitiveType.
-	   * @desc SceneKit connects the vertices in the order specified by the indices array, arranged according to the primitiveType parameter.This initializer is equivalent to the init(data:primitiveType:primitiveCount:bytesPerIndex:) initializer, but does not require an intermediary Data object; instead, it automatically infers the necessary allocation size and bytesPerIndex values based on the contents of the indices array. To create a custom SCNGeometry object from the geometry element, use the init(sources:elements:) initializer.
-	   * @see https://developer.apple.com/reference/scenekit/scngeometryelement/1523191-init
-	   */
+	    // Creating a Geometry Element
+
+	    /**
+	     * Creates a geometry element from the specified array of index values. 
+	     * @access public
+	     * @constructor
+	     * @param {number[]|Buffer} indices - An array of index values, each of which identifies a vertex in a geometry source.
+	     * @param {SCNGeometryPrimitiveType} primitiveType - The drawing primitive that connects vertices when rendering the geometry element. For possible values, see SCNGeometryPrimitiveType.
+	     * @desc SceneKit connects the vertices in the order specified by the indices array, arranged according to the primitiveType parameter.This initializer is equivalent to the init(data:primitiveType:primitiveCount:bytesPerIndex:) initializer, but does not require an intermediary Data object; instead, it automatically infers the necessary allocation size and bytesPerIndex values based on the contents of the indices array. To create a custom SCNGeometry object from the geometry element, use the init(sources:elements:) initializer.
+	     * @see https://developer.apple.com/reference/scenekit/scngeometryelement/1523191-init
+	     */
+
+	  }]);
+
 	  function SCNGeometryElement(indices, primitiveType) {
 	    var primitiveCount = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
 	    var bytesPerIndex = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : 2;
@@ -23756,11 +28515,38 @@ module.exports =
 	    var _this = _possibleConstructorReturn(this, (SCNGeometryElement.__proto__ || Object.getPrototypeOf(SCNGeometryElement)).call(this));
 
 	    _this._data = indices;
+	    if (indices instanceof _Buffer3.default) {
+	      var _data = [];
+	      var count = indices.length / bytesPerIndex;
+	      var _offset = 0;
+	      for (var i = 0; i < count; i++) {
+	        _data.push(indices.readUIntLE(_offset, bytesPerIndex));
+	        _offset += bytesPerIndex;
+	      }
+	      _this._data = _data;
+	    }
+
 	    _this._primitiveType = primitiveType;
 	    if (primitiveCount !== null) {
 	      _this._primitiveCount = primitiveCount;
 	    } else {
-	      _this._primitiveCount = indices.length / 3; // FIXME: calculate from primitiveType
+	      switch (primitiveType) {
+	        case _SCNGeometryPrimitiveType2.default.triangles:
+	          _this._primitiveCount = _this._data.length / 3;
+	          break;
+	        case _SCNGeometryPrimitiveType2.default.triangleStrip:
+	          _this._primitiveCount = _this._data.length - 2;
+	          break;
+	        case _SCNGeometryPrimitiveType2.default.line:
+	          _this._primitiveCount = _this._data.length / 2;
+	          break;
+	        case _SCNGeometryPrimitiveType2.default.point:
+	          _this._primitiveCount = _this._data.length;
+	          break;
+	        case _SCNGeometryPrimitiveType2.default.polygon:
+	          _this._primitiveCount = _this._data.length / 2;
+	          break;
+	      }
 	    }
 	    _this._bytesPerIndex = bytesPerIndex;
 
@@ -23873,7 +28659,7 @@ module.exports =
 	exports.default = SCNGeometryElement;
 
 /***/ },
-/* 90 */
+/* 109 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23884,11 +28670,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNGeometry = __webpack_require__(37);
+	var _SCNGeometry = __webpack_require__(57);
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
@@ -24008,7 +28794,7 @@ module.exports =
 	exports.default = SCNLevelOfDetail;
 
 /***/ },
-/* 91 */
+/* 110 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24019,35 +28805,35 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimatable = __webpack_require__(35);
+	var _SCNAnimatable = __webpack_require__(55);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNShadable = __webpack_require__(38);
+	var _SCNShadable = __webpack_require__(58);
 
 	var _SCNShadable2 = _interopRequireDefault(_SCNShadable);
 
-	var _SCNMaterialProperty = __webpack_require__(44);
+	var _SCNMaterialProperty = __webpack_require__(64);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
-	var _SCNTransparencyMode = __webpack_require__(92);
+	var _SCNTransparencyMode = __webpack_require__(111);
 
 	var _SCNTransparencyMode2 = _interopRequireDefault(_SCNTransparencyMode);
 
-	var _SCNCullMode = __webpack_require__(93);
+	var _SCNCullMode = __webpack_require__(112);
 
 	var _SCNCullMode2 = _interopRequireDefault(_SCNCullMode);
 
-	var _SCNBlendMode = __webpack_require__(94);
+	var _SCNBlendMode = __webpack_require__(113);
 
 	var _SCNBlendMode2 = _interopRequireDefault(_SCNBlendMode);
 
-	var _SKColor = __webpack_require__(48);
+	var _SKColor = __webpack_require__(8);
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
@@ -24060,11 +28846,11 @@ module.exports =
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var _LightingModel = {
-	  blinn: Symbol(),
-	  constant: Symbol(),
-	  lambert: Symbol(),
-	  phong: Symbol(),
-	  physicallyBased: Symbol()
+	  blinn: 'SCNLightingModelBlinn',
+	  constant: 'SCNLightingModelConstant',
+	  lambert: 'SCNLightingModelLambert',
+	  phong: 'SCNLightingModelPhong',
+	  physicallyBased: 'SCNLightingModelPhysicallyBased'
 	};
 
 	/**
@@ -24079,16 +28865,56 @@ module.exports =
 	var SCNMaterial = function (_NSObject) {
 	  _inherits(SCNMaterial, _NSObject);
 
-	  // Creating a Material
+	  _createClass(SCNMaterial, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      return {
+	        diffuse: ['SCNMaterialProperty', '_diffuse'],
+	        ambient: ['SCNMaterialProperty', '_ambient'],
+	        specular: ['SCNMaterialProperty', '_specular'],
+	        normal: ['SCNMaterialProperty', '_normal'],
+	        reflective: ['SCNMaterialProperty', '_reflective'],
+	        emission: ['SCNMaterialProperty', '_emission'],
+	        transparent: ['SCNMaterialProperty', '_transparent'],
+	        multiply: ['SCNMaterialProperty', '_multiply'],
+	        ambientOcclusion: ['SCNMaterialProperty', '_ambientOcclusion'],
+	        selfIllumination: ['SCNMaterialProperty', '_selfIllumination'],
+	        //metalness: ['SCNMaterialProperty', '_metalness'],
+	        //roughness: ['SCNMaterialProperty', '_roughness'],
+	        name: 'string',
+	        shininess: 'float',
+	        fresnelExponent: 'float',
+	        transparency: 'integer',
+	        transparencyMode: 'integer',
+	        lightingModelName: ['string', 'lightingModel'],
+	        litPerPixel: ['boolean', 'isLitPerPixel'],
+	        doubleSided: ['boolean', 'isDoubleSided'],
+	        cullMode: 'integer',
+	        blendMode: 'integer',
+	        locksAmbientWithDiffuse: 'boolean',
+	        writesToDepthBuffer: 'boolean',
+	        readsFromDepthBuffer: 'boolean',
 
-	  /**
-	   * Creates a material from the specified Model I/O material object.
-	   * @access public
-	   * @constructor
-	   * @param {MDLMaterial} mdlMaterial - A Model I/O material object.
-	   * @desc The Model I/O framework provides universal support for import, export, description, and processing of several 3D asset file formats and related resources. (For details, see Model I/O.) The MDLMaterial class is a generic description of surface rendering to be used in rendering 3D object, supporting a superset of the attributes described by the SCNMaterial class. 
-	   * @see https://developer.apple.com/reference/scenekit/scnmaterial/1419835-init
-	   */
+	        avoidsOverLighting: ['boolean', null],
+	        fillMode: ['integer', null],
+	        entityID: ['string', null],
+	        indexOfRefraction: ['integer', null]
+	      };
+	    }
+
+	    // Creating a Material
+
+	    /**
+	     * Creates a material from the specified Model I/O material object.
+	     * @access public
+	     * @constructor
+	     * @param {MDLMaterial} mdlMaterial - A Model I/O material object.
+	     * @desc The Model I/O framework provides universal support for import, export, description, and processing of several 3D asset file formats and related resources. (For details, see Model I/O.) The MDLMaterial class is a generic description of surface rendering to be used in rendering 3D object, supporting a superset of the attributes described by the SCNMaterial class. 
+	     * @see https://developer.apple.com/reference/scenekit/scnmaterial/1419835-init
+	     */
+
+	  }]);
+
 	  function SCNMaterial(mdlMaterial) {
 	    _classCallCheck(this, SCNMaterial);
 
@@ -24579,11 +29405,11 @@ module.exports =
 
 	    /**
 	     * @type {Object} LightingModel
-	     * @property {Symbol} blinn Shading that incorporates ambient, diffuse, and specular properties, where specular highlights are calculated using the Blinn-Phong  formula.
-	     * @property {Symbol} constant Uniform shading that incorporates ambient lighting only.
-	     * @property {Symbol} lambert Shading that incorporates ambient and diffuse properties only.
-	     * @property {Symbol} phong Shading that incorporates ambient, diffuse, and specular properties, where specular highlights are calculated using the Phong  formula.
-	     * @property {Symbol} physicallyBased Shading based on a realistic abstraction of physical lights and materials.
+	     * @property {string} blinn Shading that incorporates ambient, diffuse, and specular properties, where specular highlights are calculated using the Blinn-Phong  formula.
+	     * @property {string} constant Uniform shading that incorporates ambient lighting only.
+	     * @property {string} lambert Shading that incorporates ambient and diffuse properties only.
+	     * @property {string} phong Shading that incorporates ambient, diffuse, and specular properties, where specular highlights are calculated using the Phong  formula.
+	     * @property {string} physicallyBased Shading based on a realistic abstraction of physical lights and materials.
 	     * @see https://developer.apple.com/reference/scenekit/scnmaterial.lightingmodel
 	     */
 
@@ -24605,7 +29431,7 @@ module.exports =
 	exports.default = SCNMaterial;
 
 /***/ },
-/* 92 */
+/* 111 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -24613,8 +29439,8 @@ module.exports =
 	/**
 	 * The modes SceneKit uses to calculate the opacity of pixels rendered with a material, used by the transparencyMode property.
 	 * @typedef {Object} SCNTransparencyMode
-	 * @property {Symbol} aOne - SceneKit derives transparency information from the alpha channel of colors. The value 1.0 is opaque.
-	 * @property {Symbol} rgbZero - SceneKit derives transparency information from the luminance of colors. The value 0.0 is opaque.
+	 * @property {number} aOne - SceneKit derives transparency information from the alpha channel of colors. The value 1.0 is opaque.
+	 * @property {number} rgbZero - SceneKit derives transparency information from the luminance of colors. The value 0.0 is opaque.
 	 * @see https://developer.apple.com/reference/scenekit/scntransparencymode
 	 */
 
@@ -24622,14 +29448,14 @@ module.exports =
 	  value: true
 	});
 	var SCNTransparencyMode = {
-	  aOne: Symbol(),
-	  rgbZero: Symbol()
+	  aOne: 0,
+	  rgbZero: 1
 	};
 
 	exports.default = SCNTransparencyMode;
 
 /***/ },
-/* 93 */
+/* 112 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -24637,8 +29463,8 @@ module.exports =
 	/**
 	 * The modes SceneKit uses to determine which polygons to render in a surface, used by the cullMode property.
 	 * @typedef {Object} SCNCullMode
-	 * @property {Symbol} back - 
-	 * @property {Symbol} front - 
+	 * @property {number} back - 
+	 * @property {number} front - 
 	 * @see https://developer.apple.com/reference/scenekit/scncullmode
 	 */
 
@@ -24646,14 +29472,14 @@ module.exports =
 	  value: true
 	});
 	var SCNCullMode = {
-	  back: Symbol(),
-	  front: Symbol()
+	  back: 0,
+	  front: 1
 	};
 
 	exports.default = SCNCullMode;
 
 /***/ },
-/* 94 */
+/* 113 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -24661,12 +29487,12 @@ module.exports =
 	/**
 	 * Modes that describe how SceneKit blends source colors rendered using a material with destination colors already in a rendering target, used by the blendMode property.
 	 * @typedef {Object} SCNBlendMode
-	 * @property {Symbol} alpha - Blend by multiplying source and destination color values by their corresponding alpha values.
-	 * @property {Symbol} add - Blend by adding the source color to the destination color.
-	 * @property {Symbol} subtract - Blend by subtracting the source color from the destination color.
-	 * @property {Symbol} multiply - Blend by multiplying the source color with the background color.
-	 * @property {Symbol} screen - Blend by multiplying the inverse of the source color with the inverse of the destination color.
-	 * @property {Symbol} replace - Blend by replacing the destination color with the source color, ignoring alpha.
+	 * @property {number} alpha - Blend by multiplying source and destination color values by their corresponding alpha values.
+	 * @property {number} add - Blend by adding the source color to the destination color.
+	 * @property {number} subtract - Blend by subtracting the source color from the destination color.
+	 * @property {number} multiply - Blend by multiplying the source color with the background color.
+	 * @property {number} screen - Blend by multiplying the inverse of the source color with the inverse of the destination color.
+	 * @property {number} replace - Blend by replacing the destination color with the source color, ignoring alpha.
 	 * @see https://developer.apple.com/reference/scenekit/scnblendmode
 	 */
 
@@ -24674,18 +29500,18 @@ module.exports =
 	  value: true
 	});
 	var SCNBlendMode = {
-	  alpha: Symbol(),
-	  add: Symbol(),
-	  subtract: Symbol(),
-	  multiply: Symbol(),
-	  screen: Symbol(),
-	  replace: Symbol()
+	  alpha: 0,
+	  add: 1,
+	  subtract: 2,
+	  multiply: 3,
+	  screen: 4,
+	  replace: 5
 	};
 
 	exports.default = SCNBlendMode;
 
 /***/ },
-/* 95 */
+/* 114 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24698,19 +29524,19 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimatable = __webpack_require__(35);
+	var _SCNAnimatable = __webpack_require__(55);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNGeometry = __webpack_require__(37);
+	var _SCNGeometry = __webpack_require__(57);
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
-	var _SCNMorpherCalculationMode = __webpack_require__(96);
+	var _SCNMorpherCalculationMode = __webpack_require__(115);
 
 	var _SCNMorpherCalculationMode2 = _interopRequireDefault(_SCNMorpherCalculationMode);
 
@@ -24967,7 +29793,7 @@ module.exports =
 	exports.default = SCNMorpher;
 
 /***/ },
-/* 96 */
+/* 115 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -24975,8 +29801,8 @@ module.exports =
 	/**
 	 * The interpolation formulas for blending between target geometries.
 	 * @typedef {Object} SCNMorpherCalculationMode
-	 * @property {Symbol} normalized - Target weights must be in the range between 0.0 and 1.0, and the contribution of the base geometry to the morphed surface is related to the sum of target weights. This is the default mode.
-	 * @property {Symbol} additive - Target weights may take on any value, and weighted contributions for each target are added to the base geometry,
+	 * @property {number} normalized - Target weights must be in the range between 0.0 and 1.0, and the contribution of the base geometry to the morphed surface is related to the sum of target weights. This is the default mode.
+	 * @property {number} additive - Target weights may take on any value, and weighted contributions for each target are added to the base geometry,
 	 * @see https://developer.apple.com/reference/scenekit/scnmorphercalculationmode
 	 */
 
@@ -24984,14 +29810,14 @@ module.exports =
 	  value: true
 	});
 	var SCNMorpherCalculationMode = {
-	  normalized: Symbol(),
-	  additive: Symbol()
+	  normalized: 0,
+	  additive: 1
 	};
 
 	exports.default = SCNMorpherCalculationMode;
 
 /***/ },
-/* 97 */
+/* 116 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25002,27 +29828,27 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNGeometry = __webpack_require__(37);
+	var _SCNGeometry = __webpack_require__(57);
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
-	var _SCNNode = __webpack_require__(33);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNGeometrySource = __webpack_require__(84);
+	var _SCNGeometrySource = __webpack_require__(103);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNMatrix = __webpack_require__(17);
+	var _SCNMatrix = __webpack_require__(37);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(45);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(65);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
@@ -25273,7 +30099,7 @@ module.exports =
 	exports.default = SCNSkinner;
 
 /***/ },
-/* 98 */
+/* 117 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25284,11 +30110,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimatable = __webpack_require__(35);
+	var _SCNAnimatable = __webpack_require__(55);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
@@ -25344,7 +30170,7 @@ module.exports =
 	exports.default = SCNConstraint;
 
 /***/ },
-/* 99 */
+/* 118 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -25352,8 +30178,8 @@ module.exports =
 	/**
 	 * Values that inform SceneKit’s rendering for movement-related effects, used by the movabilityHint property.
 	 * @typedef {Object} SCNMovabilityHint
-	 * @property {Symbol} fixed - The node is not expected to move over time.
-	 * @property {Symbol} movable - The node is expected to move over time.
+	 * @property {number} fixed - The node is not expected to move over time.
+	 * @property {number} movable - The node is expected to move over time.
 	 * @see https://developer.apple.com/reference/scenekit/scnmovabilityhint
 	 */
 
@@ -25361,14 +30187,14 @@ module.exports =
 	  value: true
 	});
 	var SCNMovabilityHint = {
-	  fixed: Symbol(),
-	  movable: Symbol()
+	  fixed: 0,
+	  movable: 1
 	};
 
 	exports.default = SCNMovabilityHint;
 
 /***/ },
-/* 100 */
+/* 119 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25379,11 +30205,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNNode = __webpack_require__(33);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNRenderer = __webpack_require__(41);
+	var _SCNRenderer = __webpack_require__(61);
 
 	var _SCNRenderer2 = _interopRequireDefault(_SCNRenderer);
 
@@ -25436,7 +30262,7 @@ module.exports =
 	exports.default = SCNNodeRendererDelegate;
 
 /***/ },
-/* 101 */
+/* 120 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25447,19 +30273,19 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNFieldForceEvaluator = __webpack_require__(102);
+	var _SCNFieldForceEvaluator = __webpack_require__(121);
 
 	var _SCNFieldForceEvaluator2 = _interopRequireDefault(_SCNFieldForceEvaluator);
 
-	var _SCNVector = __webpack_require__(15);
+	var _SCNVector = __webpack_require__(35);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNPhysicsFieldScope = __webpack_require__(103);
+	var _SCNPhysicsFieldScope = __webpack_require__(122);
 
 	var _SCNPhysicsFieldScope2 = _interopRequireDefault(_SCNPhysicsFieldScope);
 
@@ -25737,7 +30563,7 @@ module.exports =
 	exports.default = SCNPhysicsField;
 
 /***/ },
-/* 102 */
+/* 121 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25746,7 +30572,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(15);
+	var _SCNVector = __webpack_require__(35);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -25769,7 +30595,7 @@ module.exports =
 	exports.default = SCNFieldForceEvaluator;
 
 /***/ },
-/* 103 */
+/* 122 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -25777,8 +30603,8 @@ module.exports =
 	/**
 	 * Options for defining the region of space affected by a physics field, used by the scope property.
 	 * @typedef {Object} SCNPhysicsFieldScope
-	 * @property {Symbol} insideExtent - The field’s effect applies only to objects within the region of space defined by its position and extent.
-	 * @property {Symbol} outsideExtent - The field’s effect applies only to objects outside the region of space defined by its position and extent.
+	 * @property {number} insideExtent - The field’s effect applies only to objects within the region of space defined by its position and extent.
+	 * @property {number} outsideExtent - The field’s effect applies only to objects outside the region of space defined by its position and extent.
 	 * @see https://developer.apple.com/reference/scenekit/scnphysicsfieldscope
 	 */
 
@@ -25786,14 +30612,14 @@ module.exports =
 	  value: true
 	});
 	var SCNPhysicsFieldScope = {
-	  insideExtent: Symbol(),
-	  outsideExtent: Symbol()
+	  insideExtent: 0,
+	  outsideExtent: 1
 	};
 
 	exports.default = SCNPhysicsFieldScope;
 
 /***/ },
-/* 104 */
+/* 123 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25804,11 +30630,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAudioSource = __webpack_require__(32);
+	var _SCNAudioSource = __webpack_require__(52);
 
 	var _SCNAudioSource2 = _interopRequireDefault(_SCNAudioSource);
 
@@ -25941,7 +30767,7 @@ module.exports =
 	exports.default = SCNAudioPlayer;
 
 /***/ },
-/* 105 */
+/* 124 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -25949,10 +30775,10 @@ module.exports =
 	/**
 	 * Constants affecting the animation curve of an action, used by the timingMode property.
 	 * @typedef {Object} SCNActionTimingMode
-	 * @property {Symbol} linear - Linear pacing. The animation progresses evenly throughout its duration.
-	 * @property {Symbol} easeIn - Ease-in pacing. The animation begins slowly, and then speeds up as it progresses.
-	 * @property {Symbol} easeOut - Ease-out pacing. The animation begins quickly, and then slows as it completes.
-	 * @property {Symbol} easeInEaseOut - Ease-in ease-out pacing. The animation begins slowly, accelerates through the middle of its duration, and then slows again before completing.
+	 * @property {number} linear - Linear pacing. The animation progresses evenly throughout its duration.
+	 * @property {number} easeIn - Ease-in pacing. The animation begins slowly, and then speeds up as it progresses.
+	 * @property {number} easeOut - Ease-out pacing. The animation begins quickly, and then slows as it completes.
+	 * @property {number} easeInEaseOut - Ease-in ease-out pacing. The animation begins slowly, accelerates through the middle of its duration, and then slows again before completing.
 	 * @see https://developer.apple.com/reference/scenekit/scnactiontimingmode
 	 */
 
@@ -25960,16 +30786,16 @@ module.exports =
 	  value: true
 	});
 	var SCNActionTimingMode = {
-	  linear: Symbol(),
-	  easeIn: Symbol(),
-	  easeOut: Symbol(),
-	  easeInEaseOut: Symbol()
+	  linear: 0,
+	  easeIn: 1,
+	  easeOut: 2,
+	  easeInEaseOut: 3
 	};
 
 	exports.default = SCNActionTimingMode;
 
 /***/ },
-/* 106 */
+/* 125 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -25991,7 +30817,7 @@ module.exports =
 	exports.default = SCNActionTimingFunction;
 
 /***/ },
-/* 107 */
+/* 126 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -26095,7 +30921,7 @@ module.exports =
 	exports.default = SCNBillboardAxis;
 
 /***/ },
-/* 108 */
+/* 127 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26106,11 +30932,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNConstraint2 = __webpack_require__(98);
+	var _SCNConstraint2 = __webpack_require__(117);
 
 	var _SCNConstraint3 = _interopRequireDefault(_SCNConstraint2);
 
-	var _SCNBillboardAxis = __webpack_require__(107);
+	var _SCNBillboardAxis = __webpack_require__(126);
 
 	var _SCNBillboardAxis2 = _interopRequireDefault(_SCNBillboardAxis);
 
@@ -26165,7 +30991,7 @@ module.exports =
 	exports.default = SCNBillboardConstraint;
 
 /***/ },
-/* 109 */
+/* 128 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26176,19 +31002,19 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(37);
+	var _SCNGeometry2 = __webpack_require__(57);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
-	var _SCNGeometrySource = __webpack_require__(84);
+	var _SCNGeometrySource = __webpack_require__(103);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNGeometryElement = __webpack_require__(89);
+	var _SCNGeometryElement = __webpack_require__(108);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(83);
+	var _SCNGeometryPrimitiveType = __webpack_require__(102);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
@@ -26588,7 +31414,7 @@ module.exports =
 	exports.default = SCNBox;
 
 /***/ },
-/* 110 */
+/* 129 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26597,7 +31423,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNGeometry2 = __webpack_require__(37);
+	var _SCNGeometry2 = __webpack_require__(57);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -26681,7 +31507,7 @@ module.exports =
 	exports.default = SCNCapsule;
 
 /***/ },
-/* 111 */
+/* 130 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -26689,9 +31515,9 @@ module.exports =
 	/**
 	 * Options for which edges of an extruded shape are chamfered, used by the chamferMode property.
 	 * @typedef {Object} SCNChamferMode
-	 * @property {Symbol} both - Apply a chamfer to both front and back edges of the extruded shape.
-	 * @property {Symbol} front - Apply a chamfer to only the front edge of the extruded shape.
-	 * @property {Symbol} back - Apply a chamfer to only the back edge of the extruded shape.
+	 * @property {number} both - Apply a chamfer to both front and back edges of the extruded shape.
+	 * @property {number} front - Apply a chamfer to only the front edge of the extruded shape.
+	 * @property {number} back - Apply a chamfer to only the back edge of the extruded shape.
 	 * @see https://developer.apple.com/reference/scenekit/scnchamfermode
 	 */
 
@@ -26699,15 +31525,15 @@ module.exports =
 	  value: true
 	});
 	var SCNChamferMode = {
-	  both: Symbol(),
-	  front: Symbol(),
-	  back: Symbol()
+	  both: 0,
+	  front: 1,
+	  back: 2
 	};
 
 	exports.default = SCNChamferMode;
 
 /***/ },
-/* 112 */
+/* 131 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26718,7 +31544,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(37);
+	var _SCNGeometry2 = __webpack_require__(57);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -26820,7 +31646,7 @@ module.exports =
 	exports.default = SCNCone;
 
 /***/ },
-/* 113 */
+/* 132 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26829,7 +31655,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNGeometry2 = __webpack_require__(37);
+	var _SCNGeometry2 = __webpack_require__(57);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -26906,7 +31732,7 @@ module.exports =
 	exports.default = SCNCylinder;
 
 /***/ },
-/* 114 */
+/* 133 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26917,7 +31743,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(37);
+	var _SCNGeometry2 = __webpack_require__(57);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -27016,7 +31842,7 @@ module.exports =
 	exports.default = SCNFloor;
 
 /***/ },
-/* 115 */
+/* 134 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27027,15 +31853,15 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNConstraint2 = __webpack_require__(98);
+	var _SCNConstraint2 = __webpack_require__(117);
 
 	var _SCNConstraint3 = _interopRequireDefault(_SCNConstraint2);
 
-	var _SCNNode = __webpack_require__(33);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNVector = __webpack_require__(15);
+	var _SCNVector = __webpack_require__(35);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -27157,7 +31983,7 @@ module.exports =
 	exports.default = SCNIKConstraint;
 
 /***/ },
-/* 116 */
+/* 135 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27168,7 +31994,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNScene = __webpack_require__(43);
+	var _SCNScene = __webpack_require__(63);
 
 	var _SCNScene2 = _interopRequireDefault(_SCNScene);
 
@@ -27214,7 +32040,7 @@ module.exports =
 	exports.default = SCNLayer;
 
 /***/ },
-/* 117 */
+/* 136 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27223,11 +32049,11 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNConstraint2 = __webpack_require__(98);
+	var _SCNConstraint2 = __webpack_require__(117);
 
 	var _SCNConstraint3 = _interopRequireDefault(_SCNConstraint2);
 
-	var _SCNNode = __webpack_require__(33);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
@@ -27287,7 +32113,7 @@ module.exports =
 	exports.default = SCNLookAtConstraint;
 
 /***/ },
-/* 118 */
+/* 137 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27296,7 +32122,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(17);
+	var _SCNMatrix = __webpack_require__(37);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -27321,7 +32147,7 @@ module.exports =
 	exports.default = SCNMatrix4EqualToMatrix4;
 
 /***/ },
-/* 119 */
+/* 138 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27330,7 +32156,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(17);
+	var _SCNMatrix = __webpack_require__(37);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -27352,7 +32178,7 @@ module.exports =
 	exports.default = SCNMatrix4FromGLKMatrix4;
 
 /***/ },
-/* 120 */
+/* 139 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27361,7 +32187,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(17);
+	var _SCNMatrix = __webpack_require__(37);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -27381,7 +32207,7 @@ module.exports =
 	exports.default = SCNMatrix4FromMat4;
 
 /***/ },
-/* 121 */
+/* 140 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27390,7 +32216,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(17);
+	var _SCNMatrix = __webpack_require__(37);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -27410,7 +32236,7 @@ module.exports =
 	exports.default = SCNMatrix4Invert;
 
 /***/ },
-/* 122 */
+/* 141 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27419,7 +32245,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(17);
+	var _SCNMatrix = __webpack_require__(37);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -27443,7 +32269,7 @@ module.exports =
 	exports.default = SCNMatrix4IsIdentity;
 
 /***/ },
-/* 123 */
+/* 142 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27452,11 +32278,11 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(17);
+	var _SCNMatrix = __webpack_require__(37);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNVector = __webpack_require__(15);
+	var _SCNVector = __webpack_require__(35);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -27505,7 +32331,7 @@ module.exports =
 	exports.default = SCNMatrix4MakeRotation;
 
 /***/ },
-/* 124 */
+/* 143 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27514,7 +32340,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(17);
+	var _SCNMatrix = __webpack_require__(37);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -27536,7 +32362,7 @@ module.exports =
 	exports.default = SCNMatrix4MakeScale;
 
 /***/ },
-/* 125 */
+/* 144 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27545,7 +32371,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(17);
+	var _SCNMatrix = __webpack_require__(37);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -27567,7 +32393,7 @@ module.exports =
 	exports.default = SCNMatrix4Mult;
 
 /***/ },
-/* 126 */
+/* 145 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27576,7 +32402,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(17);
+	var _SCNMatrix = __webpack_require__(37);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -27601,7 +32427,7 @@ module.exports =
 	exports.default = SCNMatrix4Rotate;
 
 /***/ },
-/* 127 */
+/* 146 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27610,7 +32436,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(17);
+	var _SCNMatrix = __webpack_require__(37);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -27634,7 +32460,7 @@ module.exports =
 	exports.default = SCNMatrix4Scale;
 
 /***/ },
-/* 128 */
+/* 147 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27645,7 +32471,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(17);
+	var _SCNMatrix = __webpack_require__(37);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -27663,7 +32489,7 @@ module.exports =
 	};exports.default = SCNMatrix4ToGLKMatrix4;
 
 /***/ },
-/* 129 */
+/* 148 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27672,7 +32498,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(17);
+	var _SCNMatrix = __webpack_require__(37);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -27692,7 +32518,7 @@ module.exports =
 	exports.default = SCNMatrix4ToMat4;
 
 /***/ },
-/* 130 */
+/* 149 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27701,7 +32527,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(17);
+	var _SCNMatrix = __webpack_require__(37);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -27725,7 +32551,7 @@ module.exports =
 	exports.default = SCNMatrix4Translate;
 
 /***/ },
-/* 131 */
+/* 150 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27736,15 +32562,15 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNPhysicsBehavior2 = __webpack_require__(52);
+	var _SCNPhysicsBehavior2 = __webpack_require__(71);
 
 	var _SCNPhysicsBehavior3 = _interopRequireDefault(_SCNPhysicsBehavior2);
 
-	var _SCNPhysicsBody = __webpack_require__(55);
+	var _SCNPhysicsBody = __webpack_require__(74);
 
 	var _SCNPhysicsBody2 = _interopRequireDefault(_SCNPhysicsBody);
 
-	var _SCNVector = __webpack_require__(15);
+	var _SCNVector = __webpack_require__(35);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -27840,7 +32666,7 @@ module.exports =
 	exports.default = SCNPhysicsBallSocketJoint;
 
 /***/ },
-/* 132 */
+/* 151 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -27931,7 +32757,7 @@ module.exports =
 	exports.default = SCNPhysicsCollisionCategory;
 
 /***/ },
-/* 133 */
+/* 152 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27942,15 +32768,15 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNPhysicsBehavior2 = __webpack_require__(52);
+	var _SCNPhysicsBehavior2 = __webpack_require__(71);
 
 	var _SCNPhysicsBehavior3 = _interopRequireDefault(_SCNPhysicsBehavior2);
 
-	var _SCNPhysicsBody = __webpack_require__(55);
+	var _SCNPhysicsBody = __webpack_require__(74);
 
 	var _SCNPhysicsBody2 = _interopRequireDefault(_SCNPhysicsBody);
 
-	var _SCNVector = __webpack_require__(15);
+	var _SCNVector = __webpack_require__(35);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -28062,7 +32888,7 @@ module.exports =
 	exports.default = SCNPhysicsHingeJoint;
 
 /***/ },
-/* 134 */
+/* 153 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28073,15 +32899,15 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNPhysicsBehavior2 = __webpack_require__(52);
+	var _SCNPhysicsBehavior2 = __webpack_require__(71);
 
 	var _SCNPhysicsBehavior3 = _interopRequireDefault(_SCNPhysicsBehavior2);
 
-	var _SCNPhysicsBody = __webpack_require__(55);
+	var _SCNPhysicsBody = __webpack_require__(74);
 
 	var _SCNPhysicsBody2 = _interopRequireDefault(_SCNPhysicsBody);
 
-	var _SCNVector = __webpack_require__(15);
+	var _SCNVector = __webpack_require__(35);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -28254,7 +33080,7 @@ module.exports =
 	exports.default = SCNPhysicsSliderJoint;
 
 /***/ },
-/* 135 */
+/* 154 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28265,15 +33091,15 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNPhysicsBehavior2 = __webpack_require__(52);
+	var _SCNPhysicsBehavior2 = __webpack_require__(71);
 
 	var _SCNPhysicsBehavior3 = _interopRequireDefault(_SCNPhysicsBehavior2);
 
-	var _SCNPhysicsBody = __webpack_require__(55);
+	var _SCNPhysicsBody = __webpack_require__(74);
 
 	var _SCNPhysicsBody2 = _interopRequireDefault(_SCNPhysicsBody);
 
-	var _SCNPhysicsVehicleWheel = __webpack_require__(136);
+	var _SCNPhysicsVehicleWheel = __webpack_require__(155);
 
 	var _SCNPhysicsVehicleWheel2 = _interopRequireDefault(_SCNPhysicsVehicleWheel);
 
@@ -28417,7 +33243,7 @@ module.exports =
 	exports.default = SCNPhysicsVehicle;
 
 /***/ },
-/* 136 */
+/* 155 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28428,15 +33254,15 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNNode = __webpack_require__(33);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNVector = __webpack_require__(15);
+	var _SCNVector = __webpack_require__(35);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -28586,7 +33412,7 @@ module.exports =
 	exports.default = SCNPhysicsVehicleWheel;
 
 /***/ },
-/* 137 */
+/* 156 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28595,7 +33421,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNGeometry2 = __webpack_require__(37);
+	var _SCNGeometry2 = __webpack_require__(57);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -28689,7 +33515,7 @@ module.exports =
 	exports.default = SCNPlane;
 
 /***/ },
-/* 138 */
+/* 157 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28698,7 +33524,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNGeometry2 = __webpack_require__(37);
+	var _SCNGeometry2 = __webpack_require__(57);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -28791,7 +33617,7 @@ module.exports =
 	exports.default = SCNPyramid;
 
 /***/ },
-/* 139 */
+/* 158 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -28799,8 +33625,8 @@ module.exports =
 	/**
 	 * Options for when to load the reference node’s content, used by the loadingPolicy property.
 	 * @typedef {Object} SCNReferenceLoadingPolicy
-	 * @property {Symbol} immediate - Load the node’s external content immediately when the reference node is unarchived.
-	 * @property {Symbol} onDemand - Load the node’s external comment only when the load() method is called.
+	 * @property {number} immediate - Load the node’s external content immediately when the reference node is unarchived.
+	 * @property {number} onDemand - Load the node’s external comment only when the load() method is called.
 	 * @see https://developer.apple.com/reference/scenekit/scnreferenceloadingpolicy
 	 */
 
@@ -28808,14 +33634,14 @@ module.exports =
 	  value: true
 	});
 	var SCNReferenceLoadingPolicy = {
-	  immediate: Symbol(),
-	  onDemand: Symbol()
+	  immediate: 0,
+	  onDemand: 1
 	};
 
 	exports.default = SCNReferenceLoadingPolicy;
 
 /***/ },
-/* 140 */
+/* 159 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28826,11 +33652,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNNode2 = __webpack_require__(33);
+	var _SCNNode2 = __webpack_require__(53);
 
 	var _SCNNode3 = _interopRequireDefault(_SCNNode2);
 
-	var _SCNReferenceLoadingPolicy = __webpack_require__(139);
+	var _SCNReferenceLoadingPolicy = __webpack_require__(158);
 
 	var _SCNReferenceLoadingPolicy2 = _interopRequireDefault(_SCNReferenceLoadingPolicy);
 
@@ -28970,7 +33796,7 @@ module.exports =
 	exports.default = SCNReferenceNode;
 
 /***/ },
-/* 141 */
+/* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28981,15 +33807,15 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNScene = __webpack_require__(43);
+	var _SCNScene = __webpack_require__(63);
 
 	var _SCNScene2 = _interopRequireDefault(_SCNScene);
 
-	var _SCNSceneSourceStatusHandler = __webpack_require__(142);
+	var _SCNSceneSourceStatusHandler = __webpack_require__(161);
 
 	var _SCNSceneSourceStatusHandler2 = _interopRequireDefault(_SCNSceneSourceStatusHandler);
 
@@ -29002,24 +33828,24 @@ module.exports =
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	var _AnimationImportPolicy = {
-	  doNotPlay: Symbol(),
-	  play: Symbol(),
-	  playRepeatedly: Symbol(),
-	  playUsingSceneTimeBase: Symbol()
+	  doNotPlay: 'keepSeparate',
+	  play: 'playOnce',
+	  playRepeatedly: 'playRepeatedly',
+	  playUsingSceneTimeBase: 'playUsingSceneTime'
 	};
 
 	var _LoadingOption = {
-	  animationImportPolicy: Symbol(),
-	  assetDirectoryURLs: Symbol(),
-	  checkConsistency: Symbol(),
-	  convertToYUp: Symbol(),
-	  convertUnitsToMeters: Symbol(),
-	  createNormalsIfAbsent: Symbol(),
-	  flattenScene: Symbol(),
-	  overrideAssetURLs: Symbol(),
-	  preserveOriginalTopology: Symbol(),
-	  strictConformance: Symbol(),
-	  useSafeMode: Symbol()
+	  animationImportPolicy: 'kSceneSourceAnimationLoadingMode',
+	  assetDirectoryURLs: 'kSceneSourceAssetDirectoryURLs',
+	  checkConsistency: 'kSceneSourceCheckConsistency',
+	  convertToYUp: 'kSceneSourceConvertToYUpIfNeeded',
+	  convertUnitsToMeters: 'kSceneSourceConvertToUnit',
+	  createNormalsIfAbsent: 'kSceneSourceCreateNormalsIfAbsent',
+	  flattenScene: 'kSceneSourceFlattenScene',
+	  overrideAssetURLs: 'kSceneSourceOverrideAssetURLs',
+	  preserveOriginalTopology: 'kSceneSourcePreserveOriginalTopology',
+	  strictConformance: 'kSceneSourceStrictConformanceKey',
+	  useSafeMode: 'kSceneSourceUseSafeMode'
 	};
 
 	/**
@@ -29171,10 +33997,10 @@ module.exports =
 	    // Structures
 	    /**
 	     * @type {Object} AnimationImportPolicy
-	     * @property {Symbol} doNotPlay Animations are not loaded from the scene file.
-	     * @property {Symbol} play Animations loaded from the scene file are immediately added to the scene and played once.
-	     * @property {Symbol} playRepeatedly Animations loaded from the scene file are immediately added to the scene and played repeatedly.
-	     * @property {Symbol} playUsingSceneTimeBase Animations loaded from the scene file are immediately added to the scene and played according to the scene’s sceneTime property.
+	     * @property {string} doNotPlay Animations are not loaded from the scene file.
+	     * @property {string} play Animations loaded from the scene file are immediately added to the scene and played once.
+	     * @property {string} playRepeatedly Animations loaded from the scene file are immediately added to the scene and played repeatedly.
+	     * @property {string} playUsingSceneTimeBase Animations loaded from the scene file are immediately added to the scene and played according to the scene’s sceneTime property.
 	     * @see https://developer.apple.com/reference/scenekit/scnscenesource.animationimportpolicy
 	     */
 
@@ -29210,17 +34036,17 @@ module.exports =
 	    }
 	    /**
 	     * @type {Object} LoadingOption
-	     * @property {Symbol} animationImportPolicy An option for controlling the playback of animations in a scene file.
-	     * @property {Symbol} assetDirectoryURLs Locations to use for resolving relative URLs to external resources.
-	     * @property {Symbol} checkConsistency An option to validate scene files while loading.
-	     * @property {Symbol} convertToYUp An option for whether to transform assets loaded from the scene file for use in a coordinate system where the y-axis points up.
-	     * @property {Symbol} convertUnitsToMeters An option for whether to automatically scale the scene’s contents.
-	     * @property {Symbol} createNormalsIfAbsent An option for automatically generating surface normals if they are absent when loading geometry.
-	     * @property {Symbol} flattenScene An option for automatically merging portions of a scene graph during loading.
-	     * @property {Symbol} overrideAssetURLs An option to attempt loading external resources using their URLs as specified in a scene file.
-	     * @property {Symbol} preserveOriginalTopology 
-	     * @property {Symbol} strictConformance An option to interpret scene files exactly as specified by the scene file format.
-	     * @property {Symbol} useSafeMode An option to limit filesystem and network access for external resources referenced by a scene file.
+	     * @property {string} animationImportPolicy An option for controlling the playback of animations in a scene file.
+	     * @property {string} assetDirectoryURLs Locations to use for resolving relative URLs to external resources.
+	     * @property {string} checkConsistency An option to validate scene files while loading.
+	     * @property {string} convertToYUp An option for whether to transform assets loaded from the scene file for use in a coordinate system where the y-axis points up.
+	     * @property {string} convertUnitsToMeters An option for whether to automatically scale the scene’s contents.
+	     * @property {string} createNormalsIfAbsent An option for automatically generating surface normals if they are absent when loading geometry.
+	     * @property {string} flattenScene An option for automatically merging portions of a scene graph during loading.
+	     * @property {string} overrideAssetURLs An option to attempt loading external resources using their URLs as specified in a scene file.
+	     * @property {string} preserveOriginalTopology 
+	     * @property {string} strictConformance An option to interpret scene files exactly as specified by the scene file format.
+	     * @property {string} useSafeMode An option to limit filesystem and network access for external resources referenced by a scene file.
 	     * @see https://developer.apple.com/reference/scenekit/scnscenesource.loadingoption
 	     */
 
@@ -29237,7 +34063,7 @@ module.exports =
 	exports.default = SCNSceneSource;
 
 /***/ },
-/* 142 */
+/* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29246,7 +34072,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNSceneSourceStatus = __webpack_require__(143);
+	var _SCNSceneSourceStatus = __webpack_require__(162);
 
 	var _SCNSceneSourceStatus2 = _interopRequireDefault(_SCNSceneSourceStatus);
 
@@ -29267,7 +34093,7 @@ module.exports =
 	exports.default = SCNSceneSourceStatusHandler;
 
 /***/ },
-/* 143 */
+/* 162 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -29275,11 +34101,11 @@ module.exports =
 	/**
 	 * Constants identifying phases of SceneKit’s scene loading process, used in a SCNSceneSourceStatusHandler block.
 	 * @typedef {Object} SCNSceneSourceStatus
-	 * @property {Symbol} error - An error occurred when SceneKit attempted to load the scene.
-	 * @property {Symbol} parsing - SceneKit has begun deserializing the source file.
-	 * @property {Symbol} validating - SceneKit has begun validating the scene file’s format.
-	 * @property {Symbol} processing - SceneKit has begun generating scene graph objects from the scene file’s contents.
-	 * @property {Symbol} complete - SceneKit has successfully finished loading the scene file’s contents.
+	 * @property {number} error - An error occurred when SceneKit attempted to load the scene.
+	 * @property {number} parsing - SceneKit has begun deserializing the source file.
+	 * @property {number} validating - SceneKit has begun validating the scene file’s format.
+	 * @property {number} processing - SceneKit has begun generating scene graph objects from the scene file’s contents.
+	 * @property {number} complete - SceneKit has successfully finished loading the scene file’s contents.
 	 * @see https://developer.apple.com/reference/scenekit/scnscenesourcestatus
 	 */
 
@@ -29287,17 +34113,17 @@ module.exports =
 	  value: true
 	});
 	var SCNSceneSourceStatus = {
-	  error: Symbol(),
-	  parsing: Symbol(),
-	  validating: Symbol(),
-	  processing: Symbol(),
-	  complete: Symbol()
+	  error: -1,
+	  parsing: 4,
+	  validating: 8,
+	  processing: 12,
+	  complete: 16
 	};
 
 	exports.default = SCNSceneSourceStatus;
 
 /***/ },
-/* 144 */
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29306,11 +34132,11 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNGeometry2 = __webpack_require__(37);
+	var _SCNGeometry2 = __webpack_require__(57);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
-	var _SCNChamferMode = __webpack_require__(111);
+	var _SCNChamferMode = __webpack_require__(130);
 
 	var _SCNChamferMode2 = _interopRequireDefault(_SCNChamferMode);
 
@@ -29394,7 +34220,7 @@ module.exports =
 	exports.default = SCNShape;
 
 /***/ },
-/* 145 */
+/* 164 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29403,7 +34229,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNGeometry2 = __webpack_require__(37);
+	var _SCNGeometry2 = __webpack_require__(57);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -29472,7 +34298,7 @@ module.exports =
 	exports.default = SCNSphere;
 
 /***/ },
-/* 146 */
+/* 165 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29483,15 +34309,15 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(37);
+	var _SCNGeometry2 = __webpack_require__(57);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
-	var _CGRect = __webpack_require__(6);
+	var _CGRect = __webpack_require__(4);
 
 	var _CGRect2 = _interopRequireDefault(_CGRect);
 
-	var _CGSize = __webpack_require__(7);
+	var _CGSize = __webpack_require__(5);
 
 	var _CGSize2 = _interopRequireDefault(_CGSize);
 
@@ -29631,7 +34457,7 @@ module.exports =
 	exports.default = SCNText;
 
 /***/ },
-/* 147 */
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29640,7 +34466,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNGeometry2 = __webpack_require__(37);
+	var _SCNGeometry2 = __webpack_require__(57);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -29717,7 +34543,7 @@ module.exports =
 	exports.default = SCNTorus;
 
 /***/ },
-/* 148 */
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29728,11 +34554,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(13);
+	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _CAMediaTimingFunction = __webpack_require__(22);
+	var _CAMediaTimingFunction = __webpack_require__(42);
 
 	var _CAMediaTimingFunction2 = _interopRequireDefault(_CAMediaTimingFunction);
 
@@ -29982,7 +34808,7 @@ module.exports =
 	exports.default = SCNTransaction;
 
 /***/ },
-/* 149 */
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29993,15 +34819,15 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNConstraint2 = __webpack_require__(98);
+	var _SCNConstraint2 = __webpack_require__(117);
 
 	var _SCNConstraint3 = _interopRequireDefault(_SCNConstraint2);
 
-	var _SCNNode = __webpack_require__(33);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNMatrix = __webpack_require__(17);
+	var _SCNMatrix = __webpack_require__(37);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -30062,7 +34888,7 @@ module.exports =
 	exports.default = SCNTransformConstraint;
 
 /***/ },
-/* 150 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30071,7 +34897,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNGeometry2 = __webpack_require__(37);
+	var _SCNGeometry2 = __webpack_require__(57);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -30157,7 +34983,7 @@ module.exports =
 	exports.default = SCNTube;
 
 /***/ },
-/* 151 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30166,7 +34992,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(15);
+	var _SCNVector = __webpack_require__(35);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -30190,7 +35016,7 @@ module.exports =
 	exports.default = SCNVector3EqualToVector3;
 
 /***/ },
-/* 152 */
+/* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30199,7 +35025,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(15);
+	var _SCNVector = __webpack_require__(35);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -30219,7 +35045,7 @@ module.exports =
 	exports.default = SCNVector3FromFloat3;
 
 /***/ },
-/* 153 */
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30228,7 +35054,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(15);
+	var _SCNVector = __webpack_require__(35);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -30250,7 +35076,7 @@ module.exports =
 	exports.default = SCNVector3FromGLKVector3;
 
 /***/ },
-/* 154 */
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30259,7 +35085,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(15);
+	var _SCNVector = __webpack_require__(35);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -30281,7 +35107,7 @@ module.exports =
 	exports.default = SCNVector3Make;
 
 /***/ },
-/* 155 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30290,7 +35116,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(15);
+	var _SCNVector = __webpack_require__(35);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -30310,7 +35136,7 @@ module.exports =
 	exports.default = SCNVector3ToFloat3;
 
 /***/ },
-/* 156 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30321,7 +35147,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(15);
+	var _SCNVector = __webpack_require__(35);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -30339,7 +35165,7 @@ module.exports =
 	};exports.default = SCNVector3ToGLKVector3;
 
 /***/ },
-/* 157 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30348,7 +35174,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(16);
+	var _SCNVector = __webpack_require__(36);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -30372,7 +35198,7 @@ module.exports =
 	exports.default = SCNVector4EqualToVector4;
 
 /***/ },
-/* 158 */
+/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30381,7 +35207,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(16);
+	var _SCNVector = __webpack_require__(36);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -30401,7 +35227,7 @@ module.exports =
 	exports.default = SCNVector4FromFloat4;
 
 /***/ },
-/* 159 */
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30410,7 +35236,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(16);
+	var _SCNVector = __webpack_require__(36);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -30432,7 +35258,7 @@ module.exports =
 	exports.default = SCNVector4FromGLKVector4;
 
 /***/ },
-/* 160 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30441,7 +35267,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(16);
+	var _SCNVector = __webpack_require__(36);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -30464,7 +35290,7 @@ module.exports =
 	exports.default = SCNVector4Make;
 
 /***/ },
-/* 161 */
+/* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30473,7 +35299,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(16);
+	var _SCNVector = __webpack_require__(36);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -30493,7 +35319,7 @@ module.exports =
 	exports.default = SCNVector4ToFloat4;
 
 /***/ },
-/* 162 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30504,7 +35330,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(16);
+	var _SCNVector = __webpack_require__(36);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -30522,7 +35348,7 @@ module.exports =
 	};exports.default = SCNVector4ToGLKVector4;
 
 /***/ },
-/* 163 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30535,47 +35361,47 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNRenderer = __webpack_require__(41);
+	var _SCNRenderer = __webpack_require__(61);
 
 	var _SCNRenderer2 = _interopRequireDefault(_SCNRenderer);
 
-	var _SCNTechniqueSupport = __webpack_require__(76);
+	var _SCNTechniqueSupport = __webpack_require__(95);
 
 	var _SCNTechniqueSupport2 = _interopRequireDefault(_SCNTechniqueSupport);
 
-	var _CGRect = __webpack_require__(6);
+	var _CGRect = __webpack_require__(4);
 
 	var _CGRect2 = _interopRequireDefault(_CGRect);
 
-	var _SCNScene = __webpack_require__(43);
+	var _SCNScene = __webpack_require__(63);
 
 	var _SCNScene2 = _interopRequireDefault(_SCNScene);
 
-	var _SCNRenderingAPI = __webpack_require__(73);
+	var _SCNRenderingAPI = __webpack_require__(92);
 
 	var _SCNRenderingAPI2 = _interopRequireDefault(_SCNRenderingAPI);
 
-	var _SCNAntialiasingMode = __webpack_require__(79);
+	var _SCNAntialiasingMode = __webpack_require__(98);
 
 	var _SCNAntialiasingMode2 = _interopRequireDefault(_SCNAntialiasingMode);
 
-	var _SCNNode = __webpack_require__(33);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNCamera = __webpack_require__(80);
+	var _SCNCamera = __webpack_require__(99);
 
 	var _SCNCamera2 = _interopRequireDefault(_SCNCamera);
 
-	var _SCNMatrix = __webpack_require__(17);
+	var _SCNMatrix = __webpack_require__(37);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(45);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(65);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
-	var _SKColor = __webpack_require__(48);
+	var _SKColor = __webpack_require__(8);
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
@@ -30586,9 +35412,9 @@ module.exports =
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	var _Option = {
-	  preferLowPowerDevice: Symbol(),
-	  preferredDevice: Symbol(),
-	  preferredRenderingAPI: Symbol()
+	  preferLowPowerDevice: 'SCNPreferLowPowerDeviceKey',
+	  preferredDevice: 'SCNPreferredDeviceKey',
+	  preferredRenderingAPI: 'SCNPreferredRenderingAPIKey'
 	};
 
 	/**
@@ -31000,9 +35826,9 @@ module.exports =
 	    // Structures
 	    /**
 	     * @type {Object} Option
-	     * @property {Symbol} preferLowPowerDevice An option for whether to select low-power-usage devices for Metal rendering.
-	     * @property {Symbol} preferredDevice The device to use for Metal rendering.
-	     * @property {Symbol} preferredRenderingAPI The rendering API to use for rendering the view (for example, Metal or OpenGL).
+	     * @property {string} preferLowPowerDevice An option for whether to select low-power-usage devices for Metal rendering.
+	     * @property {string} preferredDevice The device to use for Metal rendering.
+	     * @property {string} preferredRenderingAPI The rendering API to use for rendering the view (for example, Metal or OpenGL).
 	     * @see https://developer.apple.com/reference/scenekit/scnview.option
 	     */
 
@@ -31266,9 +36092,11 @@ module.exports =
 	          }
 	          node._presentation = p;
 	        }
-	        p._position = node._position;
-	        p._rotation = node._rotation;
-	        p._scale = node._scale;
+	        node._copyTransformToPresentation();
+	        //p._position = node._position
+	        //p._rotation = node._rotation
+	        //p._scale = node._scale
+
 
 	        arr.push.apply(arr, _toConsumableArray(node.childNodes));
 	      };
@@ -31720,7 +36548,7 @@ module.exports =
 	exports.default = SCNView;
 
 /***/ },
-/* 164 */
+/* 183 */
 /***/ function(module, exports) {
 
 	'use strict';

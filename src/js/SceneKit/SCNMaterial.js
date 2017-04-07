@@ -10,11 +10,11 @@ import SCNBlendMode from './SCNBlendMode'
 import SKColor from '../SpriteKit/SKColor'
 
 const _LightingModel = {
-  blinn: Symbol(),
-  constant: Symbol(),
-  lambert: Symbol(),
-  phong: Symbol(),
-  physicallyBased: Symbol()
+  blinn: 'SCNLightingModelBlinn',
+  constant: 'SCNLightingModelConstant',
+  lambert: 'SCNLightingModelLambert',
+  phong: 'SCNLightingModelPhong',
+  physicallyBased: 'SCNLightingModelPhysicallyBased'
 }
 
 
@@ -27,6 +27,40 @@ const _LightingModel = {
  * @see https://developer.apple.com/reference/scenekit/scnmaterial
  */
 export default class SCNMaterial extends NSObject {
+  static get _propTypes() {
+    return {
+      diffuse: ['SCNMaterialProperty', '_diffuse'],
+      ambient: ['SCNMaterialProperty', '_ambient'],
+      specular: ['SCNMaterialProperty', '_specular'],
+      normal: ['SCNMaterialProperty', '_normal'],
+      reflective: ['SCNMaterialProperty', '_reflective'],
+      emission: ['SCNMaterialProperty', '_emission'],
+      transparent: ['SCNMaterialProperty', '_transparent'],
+      multiply: ['SCNMaterialProperty', '_multiply'],
+      ambientOcclusion: ['SCNMaterialProperty', '_ambientOcclusion'],
+      selfIllumination: ['SCNMaterialProperty', '_selfIllumination'],
+      //metalness: ['SCNMaterialProperty', '_metalness'],
+      //roughness: ['SCNMaterialProperty', '_roughness'],
+      name: 'string',
+      shininess: 'float',
+      fresnelExponent: 'float',
+      transparency: 'integer',
+      transparencyMode: 'integer',
+      lightingModelName: ['string', 'lightingModel'],
+      litPerPixel: ['boolean', 'isLitPerPixel'],
+      doubleSided: ['boolean', 'isDoubleSided'],
+      cullMode: 'integer',
+      blendMode: 'integer',
+      locksAmbientWithDiffuse: 'boolean',
+      writesToDepthBuffer: 'boolean',
+      readsFromDepthBuffer: 'boolean',
+
+      avoidsOverLighting: ['boolean', null],
+      fillMode: ['integer', null],
+      entityID: ['string', null],
+      indexOfRefraction: ['integer', null]
+    }
+  }
 
   // Creating a Material
 
@@ -305,11 +339,11 @@ export default class SCNMaterial extends NSObject {
 
   /**
    * @type {Object} LightingModel
-   * @property {Symbol} blinn Shading that incorporates ambient, diffuse, and specular properties, where specular highlights are calculated using the Blinn-Phong  formula.
-   * @property {Symbol} constant Uniform shading that incorporates ambient lighting only.
-   * @property {Symbol} lambert Shading that incorporates ambient and diffuse properties only.
-   * @property {Symbol} phong Shading that incorporates ambient, diffuse, and specular properties, where specular highlights are calculated using the Phong  formula.
-   * @property {Symbol} physicallyBased Shading based on a realistic abstraction of physical lights and materials.
+   * @property {string} blinn Shading that incorporates ambient, diffuse, and specular properties, where specular highlights are calculated using the Blinn-Phong  formula.
+   * @property {string} constant Uniform shading that incorporates ambient lighting only.
+   * @property {string} lambert Shading that incorporates ambient and diffuse properties only.
+   * @property {string} phong Shading that incorporates ambient, diffuse, and specular properties, where specular highlights are calculated using the Phong  formula.
+   * @property {string} physicallyBased Shading based on a realistic abstraction of physical lights and materials.
    * @see https://developer.apple.com/reference/scenekit/scnmaterial.lightingmodel
    */
   static get LightingModel() {

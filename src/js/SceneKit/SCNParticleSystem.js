@@ -20,22 +20,22 @@ import SCNParticleModifierBlock from './SCNParticleModifierBlock'
 import SKColor from '../SpriteKit/SKColor'
 
 const _ParticleProperty = {
-  angle: Symbol(),
-  angularVelocity: Symbol(),
-  bounce: Symbol(),
-  charge: Symbol(),
-  color: Symbol(),
-  contactNormal: Symbol(),
-  contactPoint: Symbol(),
-  frame: Symbol(),
-  frameRate: Symbol(),
-  friction: Symbol(),
-  life: Symbol(),
-  opacity: Symbol(),
-  position: Symbol(),
-  rotationAxis: Symbol(),
-  size: Symbol(),
-  velocity: Symbol()
+  angle: 'Angle',
+  angularVelocity: 'AngularVelocity',
+  bounce: 'Bounce',
+  charge: 'Charge',
+  color: 'Color',
+  contactNormal: 'ContactNormal',
+  contactPoint: 'ContactPoint',
+  frame: 'Frame',
+  frameRate: 'FrameRate',
+  friction: 'Friction',
+  life: 'Life',
+  opacity: 'Opacity',
+  position: 'Position',
+  rotationAxis: 'RotationAxis',
+  size: 'Size',
+  velocity: 'Velocity'
 }
 
 
@@ -606,22 +606,22 @@ export default class SCNParticleSystem extends NSObject {
   // Structures
   /**
    * @type {Object} ParticleProperty
-   * @property {Symbol} angle The rotation angle, in radians, of the particle about its axis.
-   * @property {Symbol} angularVelocity The particle’s angular velocity (or rate of spin), in radians per second.
-   * @property {Symbol} bounce The particle’s restitution coefficient.
-   * @property {Symbol} charge The particle’s electric charge, in coulombs.
-   * @property {Symbol} color The particle’s tint color, as a vector of red, green, blue, and alpha component values.
-   * @property {Symbol} contactNormal The normal vector, in scene coordinate space, of a collision between a particle and a geometry in the scene.
-   * @property {Symbol} contactPoint The location, in scene coordinate space, of a collision between a particle and a geometry in the scene.
-   * @property {Symbol} frame The current frame index of the particle’s image animation.
-   * @property {Symbol} frameRate The rate, in frames per second, of the particle’s image animation.
-   * @property {Symbol} friction The particle’s friction coefficient.
-   * @property {Symbol} life The remaining time in the particle’s life span, in seconds.
-   * @property {Symbol} opacity The particle’s opacity (or alpha value).
-   * @property {Symbol} position The particle’s position vector in scene coordinate space.
-   * @property {Symbol} rotationAxis The particle’s axis of rotation, expressed as a vector in the particle’s local coordinate space.
-   * @property {Symbol} size The width and height of the rendered particle image, in units of scene coordinate space.
-   * @property {Symbol} velocity The particle’s velocity vector in units (of scene coordinate space) per second.
+   * @property {string} angle The rotation angle, in radians, of the particle about its axis.
+   * @property {string} angularVelocity The particle’s angular velocity (or rate of spin), in radians per second.
+   * @property {string} bounce The particle’s restitution coefficient.
+   * @property {string} charge The particle’s electric charge, in coulombs.
+   * @property {string} color The particle’s tint color, as a vector of red, green, blue, and alpha component values.
+   * @property {string} contactNormal The normal vector, in scene coordinate space, of a collision between a particle and a geometry in the scene.
+   * @property {string} contactPoint The location, in scene coordinate space, of a collision between a particle and a geometry in the scene.
+   * @property {string} frame The current frame index of the particle’s image animation.
+   * @property {string} frameRate The rate, in frames per second, of the particle’s image animation.
+   * @property {string} friction The particle’s friction coefficient.
+   * @property {string} life The remaining time in the particle’s life span, in seconds.
+   * @property {string} opacity The particle’s opacity (or alpha value).
+   * @property {string} position The particle’s position vector in scene coordinate space.
+   * @property {string} rotationAxis The particle’s axis of rotation, expressed as a vector in the particle’s local coordinate space.
+   * @property {string} size The width and height of the rendered particle image, in units of scene coordinate space.
+   * @property {string} velocity The particle’s velocity vector in units (of scene coordinate space) per second.
    * @see https://developer.apple.com/reference/scenekit/scnparticlesystem.particleproperty
    */
   static get ParticleProperty() {

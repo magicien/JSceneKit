@@ -17,6 +17,35 @@ import SKColor from '../SpriteKit/SKColor'
  * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty
  */
 export default class SCNMaterialProperty extends NSObject {
+  static get _propTypes() {
+    return {
+      color: ['NSColor', 'contents'],
+      image: ['NSMutableDictionary', (obj, dict, key, coder) => {
+        const path = coder._directoryPath + dict.path
+        console.log(`image.path: ${path}`)
+        const image = new Image()
+        image.onload = () => {
+          obj.contents = image
+        }
+        // FIXME: needs directoryPath
+        image.src = path
+      }],
+      intensity: 'float',
+      // contentsTransform
+      wrapS: 'integer',
+      wrapT: 'integer',
+      minificationFilter: 'integer',
+      magnificationFilter: 'integer',
+      mipFilter: 'integer',
+      maxAnisotropy: 'float',
+      mappingChannel: 'integer',
+      borderColor: 'plist',
+
+      propertyType: ['integer', null],
+      parent: ['SCNMaterial', null],
+      isCommonProfileProperty: ['boolean', null]
+    }
+  }
 
   // Creating a Material Property
 
@@ -119,6 +148,39 @@ export default class SCNMaterialProperty extends NSObject {
     this.borderColor = null
   }
 
+  /**
+   * @access public
+   * @param {NSCoder} coder -
+   * @returns {SCNMaterialProperty}
+   */
+   /*
+  static initWithCoder(coder) {
+    const instance = new SCNMaterialProperty()
+    instance._setValueWithCoder(coder)
+    return instance
+  }
+  */
+
+  /**
+   * @access private
+   * @param {NSCoder} coder -
+   */
+   /*
+  _setValueWithCoder(coder) {
+    this.minificationFilter = coder.decodeIntegerForKey('minificationFilter')
+    const propertyType = coder.decodeIntegerForKey('propertyType')
+    this.wrapT = coder.decodeIntegerForKey('wrapT')
+    //const _parent = coder.decodeObjectForKey('parent')
+    const isCommonProfileProperty = coder.decodeBoolForKey('isCommonProfileProperty')
+    this.magnificationFilter = coder.decodeIntegerForKey('magnificationFilter')
+    this.mipFilter = coder.decodeIntegerForKey('mipFilter')
+    this.mappingChannel = coder.decodeIntegerForKey('mappingChannel')
+    this.wrapS = coder.decodeIntegerForKey('wrapS')
+    this.maxAnisotropy = coder.decodeFloatForKey('maxAnisotropy')
+    this.intensity = coder.decodeFloatForKey('intensity')
+  }
+  */
+ 
   /**
    * @access public
    * @returns {Float32Array} -
