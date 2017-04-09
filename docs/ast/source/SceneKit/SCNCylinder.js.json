@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 2190,
+  "end": 2127,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 70,
+      "line": 61,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 2190,
+    "end": 2127,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 70,
+        "line": 61,
         "column": 0
       }
     },
@@ -120,28 +120,28 @@
       {
         "type": "ExportDefaultDeclaration",
         "start": 214,
-        "end": 2189,
+        "end": 2126,
         "loc": {
           "start": {
             "line": 12,
             "column": 0
           },
           "end": {
-            "line": 69,
+            "line": 60,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
           "start": 229,
-          "end": 2189,
+          "end": 2126,
           "loc": {
             "start": {
               "line": 12,
               "column": 15
             },
             "end": {
-              "line": 69,
+              "line": 60,
               "column": 1
             }
           },
@@ -183,127 +183,243 @@
           "body": {
             "type": "ClassBody",
             "start": 267,
-            "end": 2189,
+            "end": 2126,
             "loc": {
               "start": {
                 "line": 12,
                 "column": 53
               },
               "end": {
-                "line": 69,
+                "line": 60,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 342,
-                "end": 1378,
+                "start": 1046,
+                "end": 2124,
                 "loc": {
                   "start": {
-                    "line": 19,
+                    "line": 24,
                     "column": 2
                   },
                   "end": {
-                    "line": 54,
+                    "line": 59,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 342,
-                  "end": 346,
+                  "start": 1046,
+                  "end": 1057,
                   "loc": {
                     "start": {
-                      "line": 19,
+                      "line": 24,
                       "column": 2
                     },
                     "end": {
-                      "line": 19,
-                      "column": 6
+                      "line": 24,
+                      "column": 13
                     },
-                    "identifierName": "init"
+                    "identifierName": "constructor"
                   },
-                  "name": "init",
+                  "name": "constructor",
                   "leadingComments": null
                 },
                 "static": false,
-                "kind": "method",
+                "kind": "constructor",
                 "id": null,
                 "generator": false,
                 "expression": false,
                 "async": false,
-                "params": [],
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "start": 1058,
+                    "end": 1064,
+                    "loc": {
+                      "start": {
+                        "line": 24,
+                        "column": 14
+                      },
+                      "end": {
+                        "line": 24,
+                        "column": 20
+                      },
+                      "identifierName": "radius"
+                    },
+                    "name": "radius"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 1066,
+                    "end": 1072,
+                    "loc": {
+                      "start": {
+                        "line": 24,
+                        "column": 22
+                      },
+                      "end": {
+                        "line": 24,
+                        "column": 28
+                      },
+                      "identifierName": "height"
+                    },
+                    "name": "height"
+                  }
+                ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 349,
-                  "end": 1378,
+                  "start": 1074,
+                  "end": 2124,
                   "loc": {
                     "start": {
-                      "line": 19,
-                      "column": 9
+                      "line": 24,
+                      "column": 30
                     },
                     "end": {
-                      "line": 54,
+                      "line": 59,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 594,
-                      "end": 609,
+                      "start": 1080,
+                      "end": 1087,
                       "loc": {
                         "start": {
-                          "line": 28,
+                          "line": 25,
                           "column": 4
                         },
                         "end": {
-                          "line": 28,
-                          "column": 19
+                          "line": 25,
+                          "column": 11
+                        }
+                      },
+                      "expression": {
+                        "type": "CallExpression",
+                        "start": 1080,
+                        "end": 1087,
+                        "loc": {
+                          "start": {
+                            "line": 25,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 25,
+                            "column": 11
+                          }
+                        },
+                        "callee": {
+                          "type": "Super",
+                          "start": 1080,
+                          "end": 1085,
+                          "loc": {
+                            "start": {
+                              "line": 25,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 25,
+                              "column": 9
+                            }
+                          }
+                        },
+                        "arguments": [],
+                        "trailingComments": null
+                      },
+                      "trailingComments": [
+                        {
+                          "type": "CommentLine",
+                          "value": " Adjusting a Cylinder’s Dimensions",
+                          "start": 1093,
+                          "end": 1129,
+                          "loc": {
+                            "start": {
+                              "line": 27,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 27,
+                              "column": 40
+                            }
+                          }
+                        },
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * The radius of the cylinder’s circular cross section. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncylinder/1522674-radius\n     ",
+                          "start": 1135,
+                          "end": 1326,
+                          "loc": {
+                            "start": {
+                              "line": 29,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 33,
+                              "column": 7
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "start": 1331,
+                      "end": 1351,
+                      "loc": {
+                        "start": {
+                          "line": 34,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 34,
+                          "column": 24
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 594,
-                        "end": 609,
+                        "start": 1331,
+                        "end": 1351,
                         "loc": {
                           "start": {
-                            "line": 28,
+                            "line": 34,
                             "column": 4
                           },
                           "end": {
-                            "line": 28,
-                            "column": 19
+                            "line": 34,
+                            "column": 24
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 594,
-                          "end": 605,
+                          "start": 1331,
+                          "end": 1342,
                           "loc": {
                             "start": {
-                              "line": 28,
+                              "line": 34,
                               "column": 4
                             },
                             "end": {
-                              "line": 28,
+                              "line": 34,
                               "column": 15
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 594,
-                            "end": 598,
+                            "start": 1331,
+                            "end": 1335,
                             "loc": {
                               "start": {
-                                "line": 28,
+                                "line": 34,
                                 "column": 4
                               },
                               "end": {
-                                "line": 28,
+                                "line": 34,
                                 "column": 8
                               }
                             },
@@ -311,15 +427,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 599,
-                            "end": 605,
+                            "start": 1336,
+                            "end": 1342,
                             "loc": {
                               "start": {
-                                "line": 28,
+                                "line": 34,
                                 "column": 9
                               },
                               "end": {
-                                "line": 28,
+                                "line": 34,
                                 "column": 15
                               },
                               "identifierName": "radius"
@@ -330,24 +446,21 @@
                           "leadingComments": null
                         },
                         "right": {
-                          "type": "NumericLiteral",
-                          "start": 608,
-                          "end": 609,
+                          "type": "Identifier",
+                          "start": 1345,
+                          "end": 1351,
                           "loc": {
                             "start": {
-                              "line": 28,
+                              "line": 34,
                               "column": 18
                             },
                             "end": {
-                              "line": 28,
-                              "column": 19
-                            }
+                              "line": 34,
+                              "column": 24
+                            },
+                            "identifierName": "radius"
                           },
-                          "extra": {
-                            "rawValue": 0,
-                            "raw": "0"
-                          },
-                          "value": 0,
+                          "name": "radius",
                           "leadingComments": null,
                           "trailingComments": null
                         },
@@ -358,15 +471,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Adjusting a Cylinder’s Dimensions",
-                          "start": 356,
-                          "end": 392,
+                          "start": 1093,
+                          "end": 1129,
                           "loc": {
                             "start": {
-                              "line": 21,
+                              "line": 27,
                               "column": 4
                             },
                             "end": {
-                              "line": 21,
+                              "line": 27,
                               "column": 40
                             }
                           }
@@ -374,15 +487,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The radius of the cylinder’s circular cross section. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncylinder/1522674-radius\n     ",
-                          "start": 398,
-                          "end": 589,
+                          "start": 1135,
+                          "end": 1326,
                           "loc": {
                             "start": {
-                              "line": 23,
+                              "line": 29,
                               "column": 4
                             },
                             "end": {
-                              "line": 27,
+                              "line": 33,
                               "column": 7
                             }
                           }
@@ -392,15 +505,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The extent of the cylinder along its y-axis. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncylinder/1523678-height\n     ",
-                          "start": 615,
-                          "end": 798,
+                          "start": 1357,
+                          "end": 1540,
                           "loc": {
                             "start": {
-                              "line": 30,
+                              "line": 36,
                               "column": 4
                             },
                             "end": {
-                              "line": 34,
+                              "line": 40,
                               "column": 7
                             }
                           }
@@ -409,58 +522,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 803,
-                      "end": 818,
+                      "start": 1545,
+                      "end": 1565,
                       "loc": {
                         "start": {
-                          "line": 35,
+                          "line": 41,
                           "column": 4
                         },
                         "end": {
-                          "line": 35,
-                          "column": 19
+                          "line": 41,
+                          "column": 24
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 803,
-                        "end": 818,
+                        "start": 1545,
+                        "end": 1565,
                         "loc": {
                           "start": {
-                            "line": 35,
+                            "line": 41,
                             "column": 4
                           },
                           "end": {
-                            "line": 35,
-                            "column": 19
+                            "line": 41,
+                            "column": 24
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 803,
-                          "end": 814,
+                          "start": 1545,
+                          "end": 1556,
                           "loc": {
                             "start": {
-                              "line": 35,
+                              "line": 41,
                               "column": 4
                             },
                             "end": {
-                              "line": 35,
+                              "line": 41,
                               "column": 15
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 803,
-                            "end": 807,
+                            "start": 1545,
+                            "end": 1549,
                             "loc": {
                               "start": {
-                                "line": 35,
+                                "line": 41,
                                 "column": 4
                               },
                               "end": {
-                                "line": 35,
+                                "line": 41,
                                 "column": 8
                               }
                             },
@@ -468,15 +581,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 808,
-                            "end": 814,
+                            "start": 1550,
+                            "end": 1556,
                             "loc": {
                               "start": {
-                                "line": 35,
+                                "line": 41,
                                 "column": 9
                               },
                               "end": {
-                                "line": 35,
+                                "line": 41,
                                 "column": 15
                               },
                               "identifierName": "height"
@@ -487,24 +600,21 @@
                           "leadingComments": null
                         },
                         "right": {
-                          "type": "NumericLiteral",
-                          "start": 817,
-                          "end": 818,
+                          "type": "Identifier",
+                          "start": 1559,
+                          "end": 1565,
                           "loc": {
                             "start": {
-                              "line": 35,
+                              "line": 41,
                               "column": 18
                             },
                             "end": {
-                              "line": 35,
-                              "column": 19
-                            }
+                              "line": 41,
+                              "column": 24
+                            },
+                            "identifierName": "height"
                           },
-                          "extra": {
-                            "rawValue": 0,
-                            "raw": "0"
-                          },
-                          "value": 0,
+                          "name": "height",
                           "leadingComments": null,
                           "trailingComments": null
                         },
@@ -515,15 +625,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The extent of the cylinder along its y-axis. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncylinder/1523678-height\n     ",
-                          "start": 615,
-                          "end": 798,
+                          "start": 1357,
+                          "end": 1540,
                           "loc": {
                             "start": {
-                              "line": 30,
+                              "line": 36,
                               "column": 4
                             },
                             "end": {
-                              "line": 34,
+                              "line": 40,
                               "column": 7
                             }
                           }
@@ -533,15 +643,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Adjusting Geometric Detail",
-                          "start": 825,
-                          "end": 854,
+                          "start": 1572,
+                          "end": 1601,
                           "loc": {
                             "start": {
-                              "line": 38,
+                              "line": 44,
                               "column": 4
                             },
                             "end": {
-                              "line": 38,
+                              "line": 44,
                               "column": 33
                             }
                           }
@@ -549,15 +659,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The number of subdivisions around the circumference of the cylinder. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncylinder/1524002-radialsegmentcount\n     ",
-                          "start": 860,
-                          "end": 1079,
+                          "start": 1607,
+                          "end": 1826,
                           "loc": {
                             "start": {
-                              "line": 40,
+                              "line": 46,
                               "column": 4
                             },
                             "end": {
-                              "line": 44,
+                              "line": 50,
                               "column": 7
                             }
                           }
@@ -566,58 +676,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1084,
-                      "end": 1111,
+                      "start": 1831,
+                      "end": 1858,
                       "loc": {
                         "start": {
-                          "line": 45,
+                          "line": 51,
                           "column": 4
                         },
                         "end": {
-                          "line": 45,
+                          "line": 51,
                           "column": 31
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1084,
-                        "end": 1111,
+                        "start": 1831,
+                        "end": 1858,
                         "loc": {
                           "start": {
-                            "line": 45,
+                            "line": 51,
                             "column": 4
                           },
                           "end": {
-                            "line": 45,
+                            "line": 51,
                             "column": 31
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1084,
-                          "end": 1107,
+                          "start": 1831,
+                          "end": 1854,
                           "loc": {
                             "start": {
-                              "line": 45,
+                              "line": 51,
                               "column": 4
                             },
                             "end": {
-                              "line": 45,
+                              "line": 51,
                               "column": 27
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1084,
-                            "end": 1088,
+                            "start": 1831,
+                            "end": 1835,
                             "loc": {
                               "start": {
-                                "line": 45,
+                                "line": 51,
                                 "column": 4
                               },
                               "end": {
-                                "line": 45,
+                                "line": 51,
                                 "column": 8
                               }
                             },
@@ -625,15 +735,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1089,
-                            "end": 1107,
+                            "start": 1836,
+                            "end": 1854,
                             "loc": {
                               "start": {
-                                "line": 45,
+                                "line": 51,
                                 "column": 9
                               },
                               "end": {
-                                "line": 45,
+                                "line": 51,
                                 "column": 27
                               },
                               "identifierName": "radialSegmentCount"
@@ -645,15 +755,15 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 1110,
-                          "end": 1111,
+                          "start": 1857,
+                          "end": 1858,
                           "loc": {
                             "start": {
-                              "line": 45,
+                              "line": 51,
                               "column": 30
                             },
                             "end": {
-                              "line": 45,
+                              "line": 51,
                               "column": 31
                             }
                           },
@@ -672,15 +782,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Adjusting Geometric Detail",
-                          "start": 825,
-                          "end": 854,
+                          "start": 1572,
+                          "end": 1601,
                           "loc": {
                             "start": {
-                              "line": 38,
+                              "line": 44,
                               "column": 4
                             },
                             "end": {
-                              "line": 38,
+                              "line": 44,
                               "column": 33
                             }
                           }
@@ -688,15 +798,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The number of subdivisions around the circumference of the cylinder. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncylinder/1524002-radialsegmentcount\n     ",
-                          "start": 860,
-                          "end": 1079,
+                          "start": 1607,
+                          "end": 1826,
                           "loc": {
                             "start": {
-                              "line": 40,
+                              "line": 46,
                               "column": 4
                             },
                             "end": {
-                              "line": 44,
+                              "line": 50,
                               "column": 7
                             }
                           }
@@ -706,15 +816,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The number of subdivisions in the sides of the cylinder along its y-axis. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncylinder/1523330-heightsegmentcount\n     ",
-                          "start": 1117,
-                          "end": 1341,
+                          "start": 1864,
+                          "end": 2088,
                           "loc": {
                             "start": {
-                              "line": 47,
+                              "line": 53,
                               "column": 4
                             },
                             "end": {
-                              "line": 51,
+                              "line": 57,
                               "column": 7
                             }
                           }
@@ -723,58 +833,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1346,
-                      "end": 1373,
+                      "start": 2093,
+                      "end": 2120,
                       "loc": {
                         "start": {
-                          "line": 52,
+                          "line": 58,
                           "column": 4
                         },
                         "end": {
-                          "line": 52,
+                          "line": 58,
                           "column": 31
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1346,
-                        "end": 1373,
+                        "start": 2093,
+                        "end": 2120,
                         "loc": {
                           "start": {
-                            "line": 52,
+                            "line": 58,
                             "column": 4
                           },
                           "end": {
-                            "line": 52,
+                            "line": 58,
                             "column": 31
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1346,
-                          "end": 1369,
+                          "start": 2093,
+                          "end": 2116,
                           "loc": {
                             "start": {
-                              "line": 52,
+                              "line": 58,
                               "column": 4
                             },
                             "end": {
-                              "line": 52,
+                              "line": 58,
                               "column": 27
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1346,
-                            "end": 1350,
+                            "start": 2093,
+                            "end": 2097,
                             "loc": {
                               "start": {
-                                "line": 52,
+                                "line": 58,
                                 "column": 4
                               },
                               "end": {
-                                "line": 52,
+                                "line": 58,
                                 "column": 8
                               }
                             },
@@ -782,15 +892,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1351,
-                            "end": 1369,
+                            "start": 2098,
+                            "end": 2116,
                             "loc": {
                               "start": {
-                                "line": 52,
+                                "line": 58,
                                 "column": 9
                               },
                               "end": {
-                                "line": 52,
+                                "line": 58,
                                 "column": 27
                               },
                               "identifierName": "heightSegmentCount"
@@ -802,15 +912,15 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 1372,
-                          "end": 1373,
+                          "start": 2119,
+                          "end": 2120,
                           "loc": {
                             "start": {
-                              "line": 52,
+                              "line": 58,
                               "column": 30
                             },
                             "end": {
-                              "line": 52,
+                              "line": 58,
                               "column": 31
                             }
                           },
@@ -826,15 +936,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The number of subdivisions in the sides of the cylinder along its y-axis. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncylinder/1523330-heightsegmentcount\n     ",
-                          "start": 1117,
-                          "end": 1341,
+                          "start": 1864,
+                          "end": 2088,
                           "loc": {
                             "start": {
-                              "line": 47,
+                              "line": 53,
                               "column": 4
                             },
                             "end": {
-                              "line": 51,
+                              "line": 57,
                               "column": 7
                             }
                           }
@@ -842,183 +952,37 @@
                       ]
                     }
                   ],
-                  "directives": [],
-                  "trailingComments": null
-                },
-                "leadingComments": [
-                  {
-                    "type": "CommentBlock",
-                    "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-                    "start": 272,
-                    "end": 339,
-                    "loc": {
-                      "start": {
-                        "line": 14,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 18,
-                        "column": 5
-                      }
-                    }
-                  }
-                ],
-                "trailingComments": [
-                  {
-                    "type": "CommentLine",
-                    "value": " Creating a Cylinder",
-                    "start": 1382,
-                    "end": 1404,
-                    "loc": {
-                      "start": {
-                        "line": 56,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 56,
-                        "column": 24
-                      }
-                    }
-                  },
-                  {
-                    "type": "CommentBlock",
-                    "value": "*\n   * Creates a cylinder geometry with the specified radius and height.\n   * @access public\n   * @param {number} radius - The radius of the cylinder’s circular cross section in the x- and z-axis dimensions of its local coordinate space.\n   * @param {number} height - The height of the cylinder along the y-axis of its local coordinate space.\n   * @returns {void}\n   * @desc The cylinder is centered in its local coordinate system. For example, if you create a cylinder whose radius is 5.0 and height is 10.0, its circular cross section extends from -5.0 to 5.0 along the x- and z-axes, and the y-coordinates of its base and top are -5.0 and 5.0, respectively.\n   * @see https://developer.apple.com/reference/scenekit/scncylinder/1523685-init\n   ",
-                    "start": 1408,
-                    "end": 2158,
-                    "loc": {
-                      "start": {
-                        "line": 58,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 66,
-                        "column": 5
-                      }
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "ClassMethod",
-                "start": 2161,
-                "end": 2187,
-                "loc": {
-                  "start": {
-                    "line": 67,
-                    "column": 2
-                  },
-                  "end": {
-                    "line": 68,
-                    "column": 3
-                  }
-                },
-                "computed": false,
-                "key": {
-                  "type": "Identifier",
-                  "start": 2161,
-                  "end": 2165,
-                  "loc": {
-                    "start": {
-                      "line": 67,
-                      "column": 2
-                    },
-                    "end": {
-                      "line": 67,
-                      "column": 6
-                    },
-                    "identifierName": "init"
-                  },
-                  "name": "init",
-                  "leadingComments": null
-                },
-                "static": false,
-                "kind": "method",
-                "id": null,
-                "generator": false,
-                "expression": false,
-                "async": false,
-                "params": [
-                  {
-                    "type": "Identifier",
-                    "start": 2166,
-                    "end": 2172,
-                    "loc": {
-                      "start": {
-                        "line": 67,
-                        "column": 7
-                      },
-                      "end": {
-                        "line": 67,
-                        "column": 13
-                      },
-                      "identifierName": "radius"
-                    },
-                    "name": "radius"
-                  },
-                  {
-                    "type": "Identifier",
-                    "start": 2174,
-                    "end": 2180,
-                    "loc": {
-                      "start": {
-                        "line": 67,
-                        "column": 15
-                      },
-                      "end": {
-                        "line": 67,
-                        "column": 21
-                      },
-                      "identifierName": "height"
-                    },
-                    "name": "height"
-                  }
-                ],
-                "body": {
-                  "type": "BlockStatement",
-                  "start": 2182,
-                  "end": 2187,
-                  "loc": {
-                    "start": {
-                      "line": 67,
-                      "column": 23
-                    },
-                    "end": {
-                      "line": 68,
-                      "column": 3
-                    }
-                  },
-                  "body": [],
                   "directives": []
                 },
                 "leadingComments": [
                   {
                     "type": "CommentLine",
                     "value": " Creating a Cylinder",
-                    "start": 1382,
-                    "end": 1404,
+                    "start": 270,
+                    "end": 292,
                     "loc": {
                       "start": {
-                        "line": 56,
-                        "column": 2
+                        "line": 13,
+                        "column": 1
                       },
                       "end": {
-                        "line": 56,
-                        "column": 24
+                        "line": 13,
+                        "column": 23
                       }
                     }
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Creates a cylinder geometry with the specified radius and height.\n   * @access public\n   * @param {number} radius - The radius of the cylinder’s circular cross section in the x- and z-axis dimensions of its local coordinate space.\n   * @param {number} height - The height of the cylinder along the y-axis of its local coordinate space.\n   * @returns {void}\n   * @desc The cylinder is centered in its local coordinate system. For example, if you create a cylinder whose radius is 5.0 and height is 10.0, its circular cross section extends from -5.0 to 5.0 along the x- and z-axes, and the y-coordinates of its base and top are -5.0 and 5.0, respectively.\n   * @see https://developer.apple.com/reference/scenekit/scncylinder/1523685-init\n   ",
-                    "start": 1408,
-                    "end": 2158,
+                    "value": "*\n   * Creates a cylinder geometry with the specified radius and height.\n   * @access public\n   * @constructor\n   * @param {number} radius - The radius of the cylinder’s circular cross section in the x- and z-axis dimensions of its local coordinate space.\n   * @param {number} height - The height of the cylinder along the y-axis of its local coordinate space.\n   * @desc The cylinder is centered in its local coordinate system. For example, if you create a cylinder whose radius is 5.0 and height is 10.0, its circular cross section extends from -5.0 to 5.0 along the x- and z-axes, and the y-coordinates of its base and top are -5.0 and 5.0, respectively.\n   * @see https://developer.apple.com/reference/scenekit/scncylinder/1523685-init\n   ",
+                    "start": 296,
+                    "end": 1043,
                     "loc": {
                       "start": {
-                        "line": 58,
+                        "line": 15,
                         "column": 2
                       },
                       "end": {
-                        "line": 66,
+                        "line": 23,
                         "column": 5
                       }
                     }
@@ -1123,17 +1087,33 @@
       }
     },
     {
-      "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 272,
-      "end": 339,
+      "type": "CommentLine",
+      "value": " Creating a Cylinder",
+      "start": 270,
+      "end": 292,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
+          "column": 1
+        },
+        "end": {
+          "line": 13,
+          "column": 23
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Creates a cylinder geometry with the specified radius and height.\n   * @access public\n   * @constructor\n   * @param {number} radius - The radius of the cylinder’s circular cross section in the x- and z-axis dimensions of its local coordinate space.\n   * @param {number} height - The height of the cylinder along the y-axis of its local coordinate space.\n   * @desc The cylinder is centered in its local coordinate system. For example, if you create a cylinder whose radius is 5.0 and height is 10.0, its circular cross section extends from -5.0 to 5.0 along the x- and z-axes, and the y-coordinates of its base and top are -5.0 and 5.0, respectively.\n   * @see https://developer.apple.com/reference/scenekit/scncylinder/1523685-init\n   ",
+      "start": 296,
+      "end": 1043,
+      "loc": {
+        "start": {
+          "line": 15,
           "column": 2
         },
         "end": {
-          "line": 18,
+          "line": 23,
           "column": 5
         }
       }
@@ -1141,15 +1121,15 @@
     {
       "type": "CommentLine",
       "value": " Adjusting a Cylinder’s Dimensions",
-      "start": 356,
-      "end": 392,
+      "start": 1093,
+      "end": 1129,
       "loc": {
         "start": {
-          "line": 21,
+          "line": 27,
           "column": 4
         },
         "end": {
-          "line": 21,
+          "line": 27,
           "column": 40
         }
       }
@@ -1157,15 +1137,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The radius of the cylinder’s circular cross section. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncylinder/1522674-radius\n     ",
-      "start": 398,
-      "end": 589,
+      "start": 1135,
+      "end": 1326,
       "loc": {
         "start": {
-          "line": 23,
+          "line": 29,
           "column": 4
         },
         "end": {
-          "line": 27,
+          "line": 33,
           "column": 7
         }
       }
@@ -1173,15 +1153,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The extent of the cylinder along its y-axis. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncylinder/1523678-height\n     ",
-      "start": 615,
-      "end": 798,
+      "start": 1357,
+      "end": 1540,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 36,
           "column": 4
         },
         "end": {
-          "line": 34,
+          "line": 40,
           "column": 7
         }
       }
@@ -1189,15 +1169,15 @@
     {
       "type": "CommentLine",
       "value": " Adjusting Geometric Detail",
-      "start": 825,
-      "end": 854,
+      "start": 1572,
+      "end": 1601,
       "loc": {
         "start": {
-          "line": 38,
+          "line": 44,
           "column": 4
         },
         "end": {
-          "line": 38,
+          "line": 44,
           "column": 33
         }
       }
@@ -1205,15 +1185,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The number of subdivisions around the circumference of the cylinder. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncylinder/1524002-radialsegmentcount\n     ",
-      "start": 860,
-      "end": 1079,
+      "start": 1607,
+      "end": 1826,
       "loc": {
         "start": {
-          "line": 40,
+          "line": 46,
           "column": 4
         },
         "end": {
-          "line": 44,
+          "line": 50,
           "column": 7
         }
       }
@@ -1221,48 +1201,16 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The number of subdivisions in the sides of the cylinder along its y-axis. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncylinder/1523330-heightsegmentcount\n     ",
-      "start": 1117,
-      "end": 1341,
+      "start": 1864,
+      "end": 2088,
       "loc": {
         "start": {
-          "line": 47,
+          "line": 53,
           "column": 4
         },
         "end": {
-          "line": 51,
+          "line": 57,
           "column": 7
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": " Creating a Cylinder",
-      "start": 1382,
-      "end": 1404,
-      "loc": {
-        "start": {
-          "line": 56,
-          "column": 2
-        },
-        "end": {
-          "line": 56,
-          "column": 24
-        }
-      }
-    },
-    {
-      "type": "CommentBlock",
-      "value": "*\n   * Creates a cylinder geometry with the specified radius and height.\n   * @access public\n   * @param {number} radius - The radius of the cylinder’s circular cross section in the x- and z-axis dimensions of its local coordinate space.\n   * @param {number} height - The height of the cylinder along the y-axis of its local coordinate space.\n   * @returns {void}\n   * @desc The cylinder is centered in its local coordinate system. For example, if you create a cylinder whose radius is 5.0 and height is 10.0, its circular cross section extends from -5.0 to 5.0 along the x- and z-axes, and the y-coordinates of its base and top are -5.0 and 5.0, respectively.\n   * @see https://developer.apple.com/reference/scenekit/scncylinder/1523685-init\n   ",
-      "start": 1408,
-      "end": 2158,
-      "loc": {
-        "start": {
-          "line": 58,
-          "column": 2
-        },
-        "end": {
-          "line": 66,
-          "column": 5
         }
       }
     }
@@ -1608,17 +1556,33 @@
       }
     },
     {
-      "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 272,
-      "end": 339,
+      "type": "CommentLine",
+      "value": " Creating a Cylinder",
+      "start": 270,
+      "end": 292,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
+          "column": 1
+        },
+        "end": {
+          "line": 13,
+          "column": 23
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Creates a cylinder geometry with the specified radius and height.\n   * @access public\n   * @constructor\n   * @param {number} radius - The radius of the cylinder’s circular cross section in the x- and z-axis dimensions of its local coordinate space.\n   * @param {number} height - The height of the cylinder along the y-axis of its local coordinate space.\n   * @desc The cylinder is centered in its local coordinate system. For example, if you create a cylinder whose radius is 5.0 and height is 10.0, its circular cross section extends from -5.0 to 5.0 along the x- and z-axes, and the y-coordinates of its base and top are -5.0 and 5.0, respectively.\n   * @see https://developer.apple.com/reference/scenekit/scncylinder/1523685-init\n   ",
+      "start": 296,
+      "end": 1043,
+      "loc": {
+        "start": {
+          "line": 15,
           "column": 2
         },
         "end": {
-          "line": 18,
+          "line": 23,
           "column": 5
         }
       }
@@ -1635,17 +1599,17 @@
         "postfix": false,
         "binop": null
       },
-      "value": "init",
-      "start": 342,
-      "end": 346,
+      "value": "constructor",
+      "start": 1046,
+      "end": 1057,
       "loc": {
         "start": {
-          "line": 19,
+          "line": 24,
           "column": 2
         },
         "end": {
-          "line": 19,
-          "column": 6
+          "line": 24,
+          "column": 13
         }
       }
     },
@@ -1661,16 +1625,94 @@
         "postfix": false,
         "binop": null
       },
-      "start": 346,
-      "end": 347,
+      "start": 1057,
+      "end": 1058,
       "loc": {
         "start": {
-          "line": 19,
-          "column": 6
+          "line": 24,
+          "column": 13
         },
         "end": {
-          "line": 19,
-          "column": 7
+          "line": 24,
+          "column": 14
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "radius",
+      "start": 1058,
+      "end": 1064,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 14
+        },
+        "end": {
+          "line": 24,
+          "column": 20
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1064,
+      "end": 1065,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 20
+        },
+        "end": {
+          "line": 24,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "height",
+      "start": 1066,
+      "end": 1072,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 22
+        },
+        "end": {
+          "line": 24,
+          "column": 28
         }
       }
     },
@@ -1686,16 +1728,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 347,
-      "end": 348,
+      "start": 1072,
+      "end": 1073,
       "loc": {
         "start": {
-          "line": 19,
-          "column": 7
+          "line": 24,
+          "column": 28
         },
         "end": {
-          "line": 19,
-          "column": 8
+          "line": 24,
+          "column": 29
         }
       }
     },
@@ -1711,31 +1753,109 @@
         "postfix": false,
         "binop": null
       },
-      "start": 349,
-      "end": 350,
+      "start": 1074,
+      "end": 1075,
       "loc": {
         "start": {
-          "line": 19,
+          "line": 24,
+          "column": 30
+        },
+        "end": {
+          "line": 24,
+          "column": 31
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "super",
+        "keyword": "super",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "super",
+      "start": 1080,
+      "end": 1085,
+      "loc": {
+        "start": {
+          "line": 25,
+          "column": 4
+        },
+        "end": {
+          "line": 25,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1085,
+      "end": 1086,
+      "loc": {
+        "start": {
+          "line": 25,
           "column": 9
         },
         "end": {
-          "line": 19,
+          "line": 25,
           "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1086,
+      "end": 1087,
+      "loc": {
+        "start": {
+          "line": 25,
+          "column": 10
+        },
+        "end": {
+          "line": 25,
+          "column": 11
         }
       }
     },
     {
       "type": "CommentLine",
       "value": " Adjusting a Cylinder’s Dimensions",
-      "start": 356,
-      "end": 392,
+      "start": 1093,
+      "end": 1129,
       "loc": {
         "start": {
-          "line": 21,
+          "line": 27,
           "column": 4
         },
         "end": {
-          "line": 21,
+          "line": 27,
           "column": 40
         }
       }
@@ -1743,15 +1863,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The radius of the cylinder’s circular cross section. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncylinder/1522674-radius\n     ",
-      "start": 398,
-      "end": 589,
+      "start": 1135,
+      "end": 1326,
       "loc": {
         "start": {
-          "line": 23,
+          "line": 29,
           "column": 4
         },
         "end": {
-          "line": 27,
+          "line": 33,
           "column": 7
         }
       }
@@ -1771,15 +1891,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 594,
-      "end": 598,
+      "start": 1331,
+      "end": 1335,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 34,
           "column": 4
         },
         "end": {
-          "line": 28,
+          "line": 34,
           "column": 8
         }
       }
@@ -1797,15 +1917,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 598,
-      "end": 599,
+      "start": 1335,
+      "end": 1336,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 34,
           "column": 8
         },
         "end": {
-          "line": 28,
+          "line": 34,
           "column": 9
         }
       }
@@ -1823,15 +1943,15 @@
         "binop": null
       },
       "value": "radius",
-      "start": 599,
-      "end": 605,
+      "start": 1336,
+      "end": 1342,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 34,
           "column": 9
         },
         "end": {
-          "line": 28,
+          "line": 34,
           "column": 15
         }
       }
@@ -1850,22 +1970,22 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 606,
-      "end": 607,
+      "start": 1343,
+      "end": 1344,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 34,
           "column": 16
         },
         "end": {
-          "line": 28,
+          "line": 34,
           "column": 17
         }
       }
     },
     {
       "type": {
-        "label": "num",
+        "label": "name",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -1873,35 +1993,34 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null,
-        "updateContext": null
+        "binop": null
       },
-      "value": 0,
-      "start": 608,
-      "end": 609,
+      "value": "radius",
+      "start": 1345,
+      "end": 1351,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 34,
           "column": 18
         },
         "end": {
-          "line": 28,
-          "column": 19
+          "line": 34,
+          "column": 24
         }
       }
     },
     {
       "type": "CommentBlock",
       "value": "*\n     * The extent of the cylinder along its y-axis. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncylinder/1523678-height\n     ",
-      "start": 615,
-      "end": 798,
+      "start": 1357,
+      "end": 1540,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 36,
           "column": 4
         },
         "end": {
-          "line": 34,
+          "line": 40,
           "column": 7
         }
       }
@@ -1921,15 +2040,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 803,
-      "end": 807,
+      "start": 1545,
+      "end": 1549,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 41,
           "column": 4
         },
         "end": {
-          "line": 35,
+          "line": 41,
           "column": 8
         }
       }
@@ -1947,15 +2066,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 807,
-      "end": 808,
+      "start": 1549,
+      "end": 1550,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 41,
           "column": 8
         },
         "end": {
-          "line": 35,
+          "line": 41,
           "column": 9
         }
       }
@@ -1973,15 +2092,15 @@
         "binop": null
       },
       "value": "height",
-      "start": 808,
-      "end": 814,
+      "start": 1550,
+      "end": 1556,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 41,
           "column": 9
         },
         "end": {
-          "line": 35,
+          "line": 41,
           "column": 15
         }
       }
@@ -2000,22 +2119,22 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 815,
-      "end": 816,
+      "start": 1557,
+      "end": 1558,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 41,
           "column": 16
         },
         "end": {
-          "line": 35,
+          "line": 41,
           "column": 17
         }
       }
     },
     {
       "type": {
-        "label": "num",
+        "label": "name",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -2023,35 +2142,34 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null,
-        "updateContext": null
+        "binop": null
       },
-      "value": 0,
-      "start": 817,
-      "end": 818,
+      "value": "height",
+      "start": 1559,
+      "end": 1565,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 41,
           "column": 18
         },
         "end": {
-          "line": 35,
-          "column": 19
+          "line": 41,
+          "column": 24
         }
       }
     },
     {
       "type": "CommentLine",
       "value": " Adjusting Geometric Detail",
-      "start": 825,
-      "end": 854,
+      "start": 1572,
+      "end": 1601,
       "loc": {
         "start": {
-          "line": 38,
+          "line": 44,
           "column": 4
         },
         "end": {
-          "line": 38,
+          "line": 44,
           "column": 33
         }
       }
@@ -2059,15 +2177,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The number of subdivisions around the circumference of the cylinder. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncylinder/1524002-radialsegmentcount\n     ",
-      "start": 860,
-      "end": 1079,
+      "start": 1607,
+      "end": 1826,
       "loc": {
         "start": {
-          "line": 40,
+          "line": 46,
           "column": 4
         },
         "end": {
-          "line": 44,
+          "line": 50,
           "column": 7
         }
       }
@@ -2087,15 +2205,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1084,
-      "end": 1088,
+      "start": 1831,
+      "end": 1835,
       "loc": {
         "start": {
-          "line": 45,
+          "line": 51,
           "column": 4
         },
         "end": {
-          "line": 45,
+          "line": 51,
           "column": 8
         }
       }
@@ -2113,15 +2231,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1088,
-      "end": 1089,
+      "start": 1835,
+      "end": 1836,
       "loc": {
         "start": {
-          "line": 45,
+          "line": 51,
           "column": 8
         },
         "end": {
-          "line": 45,
+          "line": 51,
           "column": 9
         }
       }
@@ -2139,15 +2257,15 @@
         "binop": null
       },
       "value": "radialSegmentCount",
-      "start": 1089,
-      "end": 1107,
+      "start": 1836,
+      "end": 1854,
       "loc": {
         "start": {
-          "line": 45,
+          "line": 51,
           "column": 9
         },
         "end": {
-          "line": 45,
+          "line": 51,
           "column": 27
         }
       }
@@ -2166,15 +2284,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1108,
-      "end": 1109,
+      "start": 1855,
+      "end": 1856,
       "loc": {
         "start": {
-          "line": 45,
+          "line": 51,
           "column": 28
         },
         "end": {
-          "line": 45,
+          "line": 51,
           "column": 29
         }
       }
@@ -2193,15 +2311,15 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 1110,
-      "end": 1111,
+      "start": 1857,
+      "end": 1858,
       "loc": {
         "start": {
-          "line": 45,
+          "line": 51,
           "column": 30
         },
         "end": {
-          "line": 45,
+          "line": 51,
           "column": 31
         }
       }
@@ -2209,15 +2327,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The number of subdivisions in the sides of the cylinder along its y-axis. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncylinder/1523330-heightsegmentcount\n     ",
-      "start": 1117,
-      "end": 1341,
+      "start": 1864,
+      "end": 2088,
       "loc": {
         "start": {
-          "line": 47,
+          "line": 53,
           "column": 4
         },
         "end": {
-          "line": 51,
+          "line": 57,
           "column": 7
         }
       }
@@ -2237,15 +2355,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1346,
-      "end": 1350,
+      "start": 2093,
+      "end": 2097,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 58,
           "column": 4
         },
         "end": {
-          "line": 52,
+          "line": 58,
           "column": 8
         }
       }
@@ -2263,15 +2381,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1350,
-      "end": 1351,
+      "start": 2097,
+      "end": 2098,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 58,
           "column": 8
         },
         "end": {
-          "line": 52,
+          "line": 58,
           "column": 9
         }
       }
@@ -2289,15 +2407,15 @@
         "binop": null
       },
       "value": "heightSegmentCount",
-      "start": 1351,
-      "end": 1369,
+      "start": 2098,
+      "end": 2116,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 58,
           "column": 9
         },
         "end": {
-          "line": 52,
+          "line": 58,
           "column": 27
         }
       }
@@ -2316,15 +2434,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1370,
-      "end": 1371,
+      "start": 2117,
+      "end": 2118,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 58,
           "column": 28
         },
         "end": {
-          "line": 52,
+          "line": 58,
           "column": 29
         }
       }
@@ -2343,15 +2461,15 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 1372,
-      "end": 1373,
+      "start": 2119,
+      "end": 2120,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 58,
           "column": 30
         },
         "end": {
-          "line": 52,
+          "line": 58,
           "column": 31
         }
       }
@@ -2368,251 +2486,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1377,
-      "end": 1378,
+      "start": 2123,
+      "end": 2124,
       "loc": {
         "start": {
-          "line": 54,
+          "line": 59,
           "column": 2
         },
         "end": {
-          "line": 54,
-          "column": 3
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": " Creating a Cylinder",
-      "start": 1382,
-      "end": 1404,
-      "loc": {
-        "start": {
-          "line": 56,
-          "column": 2
-        },
-        "end": {
-          "line": 56,
-          "column": 24
-        }
-      }
-    },
-    {
-      "type": "CommentBlock",
-      "value": "*\n   * Creates a cylinder geometry with the specified radius and height.\n   * @access public\n   * @param {number} radius - The radius of the cylinder’s circular cross section in the x- and z-axis dimensions of its local coordinate space.\n   * @param {number} height - The height of the cylinder along the y-axis of its local coordinate space.\n   * @returns {void}\n   * @desc The cylinder is centered in its local coordinate system. For example, if you create a cylinder whose radius is 5.0 and height is 10.0, its circular cross section extends from -5.0 to 5.0 along the x- and z-axes, and the y-coordinates of its base and top are -5.0 and 5.0, respectively.\n   * @see https://developer.apple.com/reference/scenekit/scncylinder/1523685-init\n   ",
-      "start": 1408,
-      "end": 2158,
-      "loc": {
-        "start": {
-          "line": 58,
-          "column": 2
-        },
-        "end": {
-          "line": 66,
-          "column": 5
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "init",
-      "start": 2161,
-      "end": 2165,
-      "loc": {
-        "start": {
-          "line": 67,
-          "column": 2
-        },
-        "end": {
-          "line": 67,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 2165,
-      "end": 2166,
-      "loc": {
-        "start": {
-          "line": 67,
-          "column": 6
-        },
-        "end": {
-          "line": 67,
-          "column": 7
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "radius",
-      "start": 2166,
-      "end": 2172,
-      "loc": {
-        "start": {
-          "line": 67,
-          "column": 7
-        },
-        "end": {
-          "line": 67,
-          "column": 13
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 2172,
-      "end": 2173,
-      "loc": {
-        "start": {
-          "line": 67,
-          "column": 13
-        },
-        "end": {
-          "line": 67,
-          "column": 14
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "height",
-      "start": 2174,
-      "end": 2180,
-      "loc": {
-        "start": {
-          "line": 67,
-          "column": 15
-        },
-        "end": {
-          "line": 67,
-          "column": 21
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 2180,
-      "end": 2181,
-      "loc": {
-        "start": {
-          "line": 67,
-          "column": 21
-        },
-        "end": {
-          "line": 67,
-          "column": 22
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "{",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 2182,
-      "end": 2183,
-      "loc": {
-        "start": {
-          "line": 67,
-          "column": 23
-        },
-        "end": {
-          "line": 67,
-          "column": 24
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "}",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 2186,
-      "end": 2187,
-      "loc": {
-        "start": {
-          "line": 68,
-          "column": 2
-        },
-        "end": {
-          "line": 68,
+          "line": 59,
           "column": 3
         }
       }
@@ -2629,15 +2511,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2188,
-      "end": 2189,
+      "start": 2125,
+      "end": 2126,
       "loc": {
         "start": {
-          "line": 69,
+          "line": 60,
           "column": 0
         },
         "end": {
-          "line": 69,
+          "line": 60,
           "column": 1
         }
       }
@@ -2655,15 +2537,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2190,
-      "end": 2190,
+      "start": 2127,
+      "end": 2127,
       "loc": {
         "start": {
-          "line": 70,
+          "line": 61,
           "column": 0
         },
         "end": {
-          "line": 70,
+          "line": 61,
           "column": 0
         }
       }

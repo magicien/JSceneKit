@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 693,
+  "end": 694,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 15,
+      "line": 14,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 693,
+    "end": 694,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 15,
+        "line": 14,
         "column": 0
       }
     },
@@ -30,44 +30,44 @@
     "body": [
       {
         "type": "Identifier",
-        "start": 608,
-        "end": 652,
+        "start": 609,
+        "end": 653,
         "loc": {
           "start": {
-            "line": 12,
+            "line": 11,
             "column": 0
           },
           "end": {
-            "line": 12,
+            "line": 11,
             "column": 44
           }
         },
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 614,
-            "end": 652,
+            "start": 615,
+            "end": 653,
             "loc": {
               "start": {
-                "line": 12,
+                "line": 11,
                 "column": 6
               },
               "end": {
-                "line": 12,
+                "line": 11,
                 "column": 44
               }
             },
             "id": {
               "type": "Identifier",
-              "start": 614,
-              "end": 637,
+              "start": 615,
+              "end": 638,
               "loc": {
                 "start": {
-                  "line": 12,
+                  "line": 11,
                   "column": 6
                 },
                 "end": {
-                  "line": 12,
+                  "line": 11,
                   "column": 29
                 },
                 "identifierName": "SCNActionTimingFunction"
@@ -77,15 +77,15 @@
             },
             "init": {
               "type": "ArrowFunctionExpression",
-              "start": 640,
-              "end": 652,
+              "start": 641,
+              "end": 653,
               "loc": {
                 "start": {
-                  "line": 12,
+                  "line": 11,
                   "column": 32
                 },
                 "end": {
-                  "line": 12,
+                  "line": 11,
                   "column": 44
                 }
               },
@@ -96,15 +96,15 @@
               "params": [
                 {
                   "type": "Identifier",
-                  "start": 641,
-                  "end": 645,
+                  "start": 642,
+                  "end": 646,
                   "loc": {
                     "start": {
-                      "line": 12,
+                      "line": 11,
                       "column": 33
                     },
                     "end": {
-                      "line": 12,
+                      "line": 11,
                       "column": 37
                     },
                     "identifierName": "time"
@@ -114,15 +114,15 @@
               ],
               "body": {
                 "type": "BlockStatement",
-                "start": 650,
-                "end": 652,
+                "start": 651,
+                "end": 653,
                 "loc": {
                   "start": {
-                    "line": 12,
+                    "line": 11,
                     "column": 42
                   },
                   "end": {
-                    "line": 12,
+                    "line": 11,
                     "column": 44
                   }
                 },
@@ -140,29 +140,29 @@
       },
       {
         "type": "Identifier",
-        "start": 654,
-        "end": 692,
+        "start": 655,
+        "end": 693,
         "loc": {
           "start": {
-            "line": 14,
+            "line": 13,
             "column": 0
           },
           "end": {
-            "line": 14,
+            "line": 13,
             "column": 38
           }
         },
         "declaration": {
           "type": "Identifier",
-          "start": 669,
-          "end": 692,
+          "start": 670,
+          "end": 693,
           "loc": {
             "start": {
-              "line": 14,
+              "line": 13,
               "column": 15
             },
             "end": {
-              "line": 14,
+              "line": 13,
               "column": 38
             },
             "identifierName": "SCNActionTimingFunction"
@@ -175,58 +175,58 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 654,
-        "end": 692,
+        "start": 655,
+        "end": 693,
         "loc": {
           "start": {
-            "line": 14,
+            "line": 13,
             "column": 0
           },
           "end": {
-            "line": 14,
+            "line": 13,
             "column": 38
           }
         },
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 608,
-          "end": 652,
+          "start": 609,
+          "end": 653,
           "loc": {
             "start": {
-              "line": 12,
+              "line": 11,
               "column": 0
             },
             "end": {
-              "line": 12,
+              "line": 11,
               "column": 44
             }
           },
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 614,
-              "end": 652,
+              "start": 615,
+              "end": 653,
               "loc": {
                 "start": {
-                  "line": 12,
+                  "line": 11,
                   "column": 6
                 },
                 "end": {
-                  "line": 12,
+                  "line": 11,
                   "column": 44
                 }
               },
               "id": {
                 "type": "Identifier",
-                "start": 614,
-                "end": 637,
+                "start": 615,
+                "end": 638,
                 "loc": {
                   "start": {
-                    "line": 12,
+                    "line": 11,
                     "column": 6
                   },
                   "end": {
-                    "line": 12,
+                    "line": 11,
                     "column": 29
                   },
                   "identifierName": "SCNActionTimingFunction"
@@ -236,29 +236,29 @@
               },
               "init": {
                 "type": "ArrowFunctionExpression",
-                "start": 640,
-                "end": 652,
+                "start": 641,
+                "end": 653,
                 "loc": {
                   "start": {
-                    "line": 12,
+                    "line": 11,
                     "column": 32
                   },
                   "end": {
-                    "line": 12,
+                    "line": 11,
                     "column": 44
                   }
                 },
                 "id": {
                   "type": "Identifier",
-                  "start": 614,
-                  "end": 637,
+                  "start": 615,
+                  "end": 638,
                   "loc": {
                     "start": {
-                      "line": 12,
+                      "line": 11,
                       "column": 6
                     },
                     "end": {
-                      "line": 12,
+                      "line": 11,
                       "column": 29
                     },
                     "identifierName": "SCNActionTimingFunction"
@@ -272,15 +272,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 641,
-                    "end": 645,
+                    "start": 642,
+                    "end": 646,
                     "loc": {
                       "start": {
-                        "line": 12,
+                        "line": 11,
                         "column": 33
                       },
                       "end": {
-                        "line": 12,
+                        "line": 11,
                         "column": 37
                       },
                       "identifierName": "time"
@@ -290,15 +290,15 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 650,
-                  "end": 652,
+                  "start": 651,
+                  "end": 653,
                   "loc": {
                     "start": {
-                      "line": 12,
+                      "line": 11,
                       "column": 42
                     },
                     "end": {
-                      "line": 12,
+                      "line": 11,
                       "column": 44
                     }
                   },
@@ -313,16 +313,16 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * The signature for a block that manages animation timing, used by the timingFunction property.\n * @type {function(time: number): number}\n * @param {number} time - A fraction of the action’s The input value for the timing function, as determined by the timingMode property and the action’s current progress.\n * @returns {number}\n * @desc Your block must return a floating-point value between 0.0 and 1.0, where 0.0 represents the starting state of the action’s animation and 1.0 represents the end state.\n * @see https://developer.apple.com/reference/scenekit/scnactiontimingfunction\n ",
-              "start": 15,
-              "end": 607,
+              "value": "*\n * The signature for a block that manages animation timing, used by the timingFunction property.\n * @type {function(time: number): number}\n * @param {number} time - A fraction of the action’s The input value for the timing function, as determined by the timingMode property and the action’s current progress.\n * @returns {number} -\n * @desc Your block must return a floating-point value between 0.0 and 1.0, where 0.0 represents the starting state of the action’s animation and 1.0 represents the end state.\n * @see https://developer.apple.com/reference/scenekit/scnactiontimingfunction\n ",
+              "start": 14,
+              "end": 608,
               "loc": {
                 "start": {
-                  "line": 4,
+                  "line": 3,
                   "column": 0
                 },
                 "end": {
-                  "line": 11,
+                  "line": 10,
                   "column": 3
                 }
               }
@@ -371,16 +371,16 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * The signature for a block that manages animation timing, used by the timingFunction property.\n * @type {function(time: number): number}\n * @param {number} time - A fraction of the action’s The input value for the timing function, as determined by the timingMode property and the action’s current progress.\n * @returns {number}\n * @desc Your block must return a floating-point value between 0.0 and 1.0, where 0.0 represents the starting state of the action’s animation and 1.0 represents the end state.\n * @see https://developer.apple.com/reference/scenekit/scnactiontimingfunction\n ",
-            "start": 15,
-            "end": 607,
+            "value": "*\n * The signature for a block that manages animation timing, used by the timingFunction property.\n * @type {function(time: number): number}\n * @param {number} time - A fraction of the action’s The input value for the timing function, as determined by the timingMode property and the action’s current progress.\n * @returns {number} -\n * @desc Your block must return a floating-point value between 0.0 and 1.0, where 0.0 represents the starting state of the action’s animation and 1.0 represents the end state.\n * @see https://developer.apple.com/reference/scenekit/scnactiontimingfunction\n ",
+            "start": 14,
+            "end": 608,
             "loc": {
               "start": {
-                "line": 4,
+                "line": 3,
                 "column": 0
               },
               "end": {
-                "line": 11,
+                "line": 10,
                 "column": 3
               }
             }
@@ -392,16 +392,16 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * The signature for a block that manages animation timing, used by the timingFunction property.\n * @type {function(time: number): number}\n * @param {number} time - A fraction of the action’s The input value for the timing function, as determined by the timingMode property and the action’s current progress.\n * @returns {number}\n * @desc Your block must return a floating-point value between 0.0 and 1.0, where 0.0 represents the starting state of the action’s animation and 1.0 represents the end state.\n * @see https://developer.apple.com/reference/scenekit/scnactiontimingfunction\n ",
-      "start": 15,
-      "end": 607,
+      "value": "*\n * The signature for a block that manages animation timing, used by the timingFunction property.\n * @type {function(time: number): number}\n * @param {number} time - A fraction of the action’s The input value for the timing function, as determined by the timingMode property and the action’s current progress.\n * @returns {number} -\n * @desc Your block must return a floating-point value between 0.0 and 1.0, where 0.0 represents the starting state of the action’s animation and 1.0 represents the end state.\n * @see https://developer.apple.com/reference/scenekit/scnactiontimingfunction\n ",
+      "start": 14,
+      "end": 608,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 3,
           "column": 0
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 3
         }
       }
@@ -437,16 +437,16 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * The signature for a block that manages animation timing, used by the timingFunction property.\n * @type {function(time: number): number}\n * @param {number} time - A fraction of the action’s The input value for the timing function, as determined by the timingMode property and the action’s current progress.\n * @returns {number}\n * @desc Your block must return a floating-point value between 0.0 and 1.0, where 0.0 represents the starting state of the action’s animation and 1.0 represents the end state.\n * @see https://developer.apple.com/reference/scenekit/scnactiontimingfunction\n ",
-      "start": 15,
-      "end": 607,
+      "value": "*\n * The signature for a block that manages animation timing, used by the timingFunction property.\n * @type {function(time: number): number}\n * @param {number} time - A fraction of the action’s The input value for the timing function, as determined by the timingMode property and the action’s current progress.\n * @returns {number} -\n * @desc Your block must return a floating-point value between 0.0 and 1.0, where 0.0 represents the starting state of the action’s animation and 1.0 represents the end state.\n * @see https://developer.apple.com/reference/scenekit/scnactiontimingfunction\n ",
+      "start": 14,
+      "end": 608,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 3,
           "column": 0
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 3
         }
       }
@@ -466,15 +466,15 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 608,
-      "end": 613,
+      "start": 609,
+      "end": 614,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 0
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 5
         }
       }
@@ -492,15 +492,15 @@
         "binop": null
       },
       "value": "SCNActionTimingFunction",
-      "start": 614,
-      "end": 637,
+      "start": 615,
+      "end": 638,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 6
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 29
         }
       }
@@ -519,15 +519,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 638,
-      "end": 639,
+      "start": 639,
+      "end": 640,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 30
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 31
         }
       }
@@ -544,15 +544,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 640,
-      "end": 641,
+      "start": 641,
+      "end": 642,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 32
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 33
         }
       }
@@ -570,15 +570,15 @@
         "binop": null
       },
       "value": "time",
-      "start": 641,
-      "end": 645,
+      "start": 642,
+      "end": 646,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 33
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 37
         }
       }
@@ -595,15 +595,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 645,
-      "end": 646,
+      "start": 646,
+      "end": 647,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 37
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 38
         }
       }
@@ -621,15 +621,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 647,
-      "end": 649,
+      "start": 648,
+      "end": 650,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 39
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 41
         }
       }
@@ -646,15 +646,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 650,
-      "end": 651,
+      "start": 651,
+      "end": 652,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 42
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 43
         }
       }
@@ -671,15 +671,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 651,
-      "end": 652,
+      "start": 652,
+      "end": 653,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 43
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 44
         }
       }
@@ -699,15 +699,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 654,
-      "end": 660,
+      "start": 655,
+      "end": 661,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 0
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 6
         }
       }
@@ -727,15 +727,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 661,
-      "end": 668,
+      "start": 662,
+      "end": 669,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 7
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 14
         }
       }
@@ -753,15 +753,15 @@
         "binop": null
       },
       "value": "SCNActionTimingFunction",
-      "start": 669,
-      "end": 692,
+      "start": 670,
+      "end": 693,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 15
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 38
         }
       }
@@ -779,15 +779,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 693,
-      "end": 693,
+      "start": 694,
+      "end": 694,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 14,
           "column": 0
         },
         "end": {
-          "line": 15,
+          "line": 14,
           "column": 0
         }
       }

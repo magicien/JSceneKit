@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 654,
+  "end": 633,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 654,
+    "end": 633,
     "loc": {
       "start": {
         "line": 1,
@@ -31,7 +31,7 @@
       {
         "type": "Identifier",
         "start": 533,
-        "end": 623,
+        "end": 602,
         "loc": {
           "start": {
             "line": 12,
@@ -46,7 +46,7 @@
           {
             "type": "VariableDeclarator",
             "start": 539,
-            "end": 623,
+            "end": 602,
             "loc": {
               "start": {
                 "line": 12,
@@ -78,7 +78,7 @@
             "init": {
               "type": "ObjectExpression",
               "start": 555,
-              "end": 623,
+              "end": 602,
               "loc": {
                 "start": {
                   "line": 12,
@@ -93,7 +93,7 @@
                 {
                   "type": "ObjectProperty",
                   "start": 559,
-                  "end": 576,
+                  "end": 569,
                   "loc": {
                     "start": {
                       "line": 13,
@@ -101,7 +101,7 @@
                     },
                     "end": {
                       "line": 13,
-                      "column": 19
+                      "column": 12
                     }
                   },
                   "method": false,
@@ -125,9 +125,9 @@
                     "name": "forward"
                   },
                   "value": {
-                    "type": "CallExpression",
+                    "type": "NumericLiteral",
                     "start": 568,
-                    "end": 576,
+                    "end": 569,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -135,33 +135,20 @@
                       },
                       "end": {
                         "line": 13,
-                        "column": 19
+                        "column": 12
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 568,
-                      "end": 574,
-                      "loc": {
-                        "start": {
-                          "line": 13,
-                          "column": 11
-                        },
-                        "end": {
-                          "line": 13,
-                          "column": 17
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 0,
+                      "raw": "0"
                     },
-                    "arguments": []
+                    "value": 0
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 580,
-                  "end": 598,
+                  "start": 573,
+                  "end": 584,
                   "loc": {
                     "start": {
                       "line": 14,
@@ -169,7 +156,7 @@
                     },
                     "end": {
                       "line": 14,
-                      "column": 20
+                      "column": 13
                     }
                   },
                   "method": false,
@@ -177,8 +164,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 580,
-                    "end": 588,
+                    "start": 573,
+                    "end": 581,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -193,9 +180,9 @@
                     "name": "deferred"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 590,
-                    "end": 598,
+                    "type": "NumericLiteral",
+                    "start": 583,
+                    "end": 584,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -203,33 +190,20 @@
                       },
                       "end": {
                         "line": 14,
-                        "column": 20
+                        "column": 13
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 590,
-                      "end": 596,
-                      "loc": {
-                        "start": {
-                          "line": 14,
-                          "column": 12
-                        },
-                        "end": {
-                          "line": 14,
-                          "column": 18
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 1,
+                      "raw": "1"
                     },
-                    "arguments": []
+                    "value": 1
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 602,
-                  "end": 621,
+                  "start": 588,
+                  "end": 600,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -237,7 +211,7 @@
                     },
                     "end": {
                       "line": 15,
-                      "column": 21
+                      "column": 14
                     }
                   },
                   "method": false,
@@ -245,8 +219,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 602,
-                    "end": 611,
+                    "start": 588,
+                    "end": 597,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -261,9 +235,9 @@
                     "name": "modulated"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 613,
-                    "end": 621,
+                    "type": "NumericLiteral",
+                    "start": 599,
+                    "end": 600,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -271,27 +245,14 @@
                       },
                       "end": {
                         "line": 15,
-                        "column": 21
+                        "column": 14
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 613,
-                      "end": 619,
-                      "loc": {
-                        "start": {
-                          "line": 15,
-                          "column": 13
-                        },
-                        "end": {
-                          "line": 15,
-                          "column": 19
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 2,
+                      "raw": "2"
                     },
-                    "arguments": []
+                    "value": 2
                   }
                 }
               ]
@@ -306,8 +267,8 @@
       },
       {
         "type": "Identifier",
-        "start": 625,
-        "end": 653,
+        "start": 604,
+        "end": 632,
         "loc": {
           "start": {
             "line": 18,
@@ -320,8 +281,8 @@
         },
         "declaration": {
           "type": "Identifier",
-          "start": 640,
-          "end": 653,
+          "start": 619,
+          "end": 632,
           "loc": {
             "start": {
               "line": 18,
@@ -341,8 +302,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 625,
-        "end": 653,
+        "start": 604,
+        "end": 632,
         "loc": {
           "start": {
             "line": 18,
@@ -356,7 +317,7 @@
         "declaration": {
           "type": "VariableDeclaration",
           "start": 533,
-          "end": 623,
+          "end": 602,
           "loc": {
             "start": {
               "line": 12,
@@ -371,7 +332,7 @@
             {
               "type": "VariableDeclarator",
               "start": 539,
-              "end": 623,
+              "end": 602,
               "loc": {
                 "start": {
                   "line": 12,
@@ -403,7 +364,7 @@
               "init": {
                 "type": "ObjectExpression",
                 "start": 555,
-                "end": 623,
+                "end": 602,
                 "loc": {
                   "start": {
                     "line": 12,
@@ -418,7 +379,7 @@
                   {
                     "type": "ObjectProperty",
                     "start": 559,
-                    "end": 576,
+                    "end": 569,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -426,7 +387,7 @@
                       },
                       "end": {
                         "line": 13,
-                        "column": 19
+                        "column": 12
                       }
                     },
                     "method": false,
@@ -450,9 +411,9 @@
                       "name": "forward"
                     },
                     "value": {
-                      "type": "CallExpression",
+                      "type": "NumericLiteral",
                       "start": 568,
-                      "end": 576,
+                      "end": 569,
                       "loc": {
                         "start": {
                           "line": 13,
@@ -460,33 +421,20 @@
                         },
                         "end": {
                           "line": 13,
-                          "column": 19
+                          "column": 12
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 568,
-                        "end": 574,
-                        "loc": {
-                          "start": {
-                            "line": 13,
-                            "column": 11
-                          },
-                          "end": {
-                            "line": 13,
-                            "column": 17
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 0,
+                        "raw": "0"
                       },
-                      "arguments": []
+                      "value": 0
                     }
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 580,
-                    "end": 598,
+                    "start": 573,
+                    "end": 584,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -494,7 +442,7 @@
                       },
                       "end": {
                         "line": 14,
-                        "column": 20
+                        "column": 13
                       }
                     },
                     "method": false,
@@ -502,8 +450,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 580,
-                      "end": 588,
+                      "start": 573,
+                      "end": 581,
                       "loc": {
                         "start": {
                           "line": 14,
@@ -518,9 +466,9 @@
                       "name": "deferred"
                     },
                     "value": {
-                      "type": "CallExpression",
-                      "start": 590,
-                      "end": 598,
+                      "type": "NumericLiteral",
+                      "start": 583,
+                      "end": 584,
                       "loc": {
                         "start": {
                           "line": 14,
@@ -528,33 +476,20 @@
                         },
                         "end": {
                           "line": 14,
-                          "column": 20
+                          "column": 13
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 590,
-                        "end": 596,
-                        "loc": {
-                          "start": {
-                            "line": 14,
-                            "column": 12
-                          },
-                          "end": {
-                            "line": 14,
-                            "column": 18
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 1,
+                        "raw": "1"
                       },
-                      "arguments": []
+                      "value": 1
                     }
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 602,
-                    "end": 621,
+                    "start": 588,
+                    "end": 600,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -562,7 +497,7 @@
                       },
                       "end": {
                         "line": 15,
-                        "column": 21
+                        "column": 14
                       }
                     },
                     "method": false,
@@ -570,8 +505,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 602,
-                      "end": 611,
+                      "start": 588,
+                      "end": 597,
                       "loc": {
                         "start": {
                           "line": 15,
@@ -586,9 +521,9 @@
                       "name": "modulated"
                     },
                     "value": {
-                      "type": "CallExpression",
-                      "start": 613,
-                      "end": 621,
+                      "type": "NumericLiteral",
+                      "start": 599,
+                      "end": 600,
                       "loc": {
                         "start": {
                           "line": 15,
@@ -596,27 +531,14 @@
                         },
                         "end": {
                           "line": 15,
-                          "column": 21
+                          "column": 14
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 613,
-                        "end": 619,
-                        "loc": {
-                          "start": {
-                            "line": 15,
-                            "column": 13
-                          },
-                          "end": {
-                            "line": 15,
-                            "column": 19
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 2,
+                        "raw": "2"
                       },
-                      "arguments": []
+                      "value": 2
                     }
                   }
                 ]
@@ -628,7 +550,7 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * Options for SceneKit’s rendering of shadows cast by a light, used by the shadowMode property.\n * @typedef {Object} SCNShadowMode\n * @property {Symbol} forward - SceneKit renders shadows during lighting computations.\n * @property {Symbol} deferred - SceneKit renders shadows in a postprocessing pass.\n * @property {Symbol} modulated - SceneKit renders shadows by projecting the light’s gobo image. The light does not illuminate the scene.\n * @see https://developer.apple.com/reference/scenekit/scnshadowmode\n ",
+              "value": "*\n * Options for SceneKit’s rendering of shadows cast by a light, used by the shadowMode property.\n * @typedef {Object} SCNShadowMode\n * @property {number} forward - SceneKit renders shadows during lighting computations.\n * @property {number} deferred - SceneKit renders shadows in a postprocessing pass.\n * @property {number} modulated - SceneKit renders shadows by projecting the light’s gobo image. The light does not illuminate the scene.\n * @see https://developer.apple.com/reference/scenekit/scnshadowmode\n ",
               "start": 15,
               "end": 532,
               "loc": {
@@ -686,7 +608,7 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Options for SceneKit’s rendering of shadows cast by a light, used by the shadowMode property.\n * @typedef {Object} SCNShadowMode\n * @property {Symbol} forward - SceneKit renders shadows during lighting computations.\n * @property {Symbol} deferred - SceneKit renders shadows in a postprocessing pass.\n * @property {Symbol} modulated - SceneKit renders shadows by projecting the light’s gobo image. The light does not illuminate the scene.\n * @see https://developer.apple.com/reference/scenekit/scnshadowmode\n ",
+            "value": "*\n * Options for SceneKit’s rendering of shadows cast by a light, used by the shadowMode property.\n * @typedef {Object} SCNShadowMode\n * @property {number} forward - SceneKit renders shadows during lighting computations.\n * @property {number} deferred - SceneKit renders shadows in a postprocessing pass.\n * @property {number} modulated - SceneKit renders shadows by projecting the light’s gobo image. The light does not illuminate the scene.\n * @see https://developer.apple.com/reference/scenekit/scnshadowmode\n ",
             "start": 15,
             "end": 532,
             "loc": {
@@ -707,7 +629,7 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * Options for SceneKit’s rendering of shadows cast by a light, used by the shadowMode property.\n * @typedef {Object} SCNShadowMode\n * @property {Symbol} forward - SceneKit renders shadows during lighting computations.\n * @property {Symbol} deferred - SceneKit renders shadows in a postprocessing pass.\n * @property {Symbol} modulated - SceneKit renders shadows by projecting the light’s gobo image. The light does not illuminate the scene.\n * @see https://developer.apple.com/reference/scenekit/scnshadowmode\n ",
+      "value": "*\n * Options for SceneKit’s rendering of shadows cast by a light, used by the shadowMode property.\n * @typedef {Object} SCNShadowMode\n * @property {number} forward - SceneKit renders shadows during lighting computations.\n * @property {number} deferred - SceneKit renders shadows in a postprocessing pass.\n * @property {number} modulated - SceneKit renders shadows by projecting the light’s gobo image. The light does not illuminate the scene.\n * @see https://developer.apple.com/reference/scenekit/scnshadowmode\n ",
       "start": 15,
       "end": 532,
       "loc": {
@@ -752,7 +674,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Options for SceneKit’s rendering of shadows cast by a light, used by the shadowMode property.\n * @typedef {Object} SCNShadowMode\n * @property {Symbol} forward - SceneKit renders shadows during lighting computations.\n * @property {Symbol} deferred - SceneKit renders shadows in a postprocessing pass.\n * @property {Symbol} modulated - SceneKit renders shadows by projecting the light’s gobo image. The light does not illuminate the scene.\n * @see https://developer.apple.com/reference/scenekit/scnshadowmode\n ",
+      "value": "*\n * Options for SceneKit’s rendering of shadows cast by a light, used by the shadowMode property.\n * @typedef {Object} SCNShadowMode\n * @property {number} forward - SceneKit renders shadows during lighting computations.\n * @property {number} deferred - SceneKit renders shadows in a postprocessing pass.\n * @property {number} modulated - SceneKit renders shadows by projecting the light’s gobo image. The light does not illuminate the scene.\n * @see https://developer.apple.com/reference/scenekit/scnshadowmode\n ",
       "start": 15,
       "end": 532,
       "loc": {
@@ -926,7 +848,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -934,11 +856,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
+      "value": 0,
       "start": 568,
-      "end": 574,
+      "end": 569,
       "loc": {
         "start": {
           "line": 13,
@@ -946,57 +869,7 @@
         },
         "end": {
           "line": 13,
-          "column": 17
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 574,
-      "end": 575,
-      "loc": {
-        "start": {
-          "line": 13,
-          "column": 17
-        },
-        "end": {
-          "line": 13,
-          "column": 18
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 575,
-      "end": 576,
-      "loc": {
-        "start": {
-          "line": 13,
-          "column": 18
-        },
-        "end": {
-          "line": 13,
-          "column": 19
+          "column": 12
         }
       }
     },
@@ -1013,16 +886,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 576,
-      "end": 577,
+      "start": 569,
+      "end": 570,
       "loc": {
         "start": {
           "line": 13,
-          "column": 19
+          "column": 12
         },
         "end": {
           "line": 13,
-          "column": 20
+          "column": 13
         }
       }
     },
@@ -1039,8 +912,8 @@
         "binop": null
       },
       "value": "deferred",
-      "start": 580,
-      "end": 588,
+      "start": 573,
+      "end": 581,
       "loc": {
         "start": {
           "line": 14,
@@ -1065,8 +938,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 588,
-      "end": 589,
+      "start": 581,
+      "end": 582,
       "loc": {
         "start": {
           "line": 14,
@@ -1080,7 +953,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -1088,11 +961,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
-      "start": 590,
-      "end": 596,
+      "value": 1,
+      "start": 583,
+      "end": 584,
       "loc": {
         "start": {
           "line": 14,
@@ -1100,57 +974,7 @@
         },
         "end": {
           "line": 14,
-          "column": 18
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 596,
-      "end": 597,
-      "loc": {
-        "start": {
-          "line": 14,
-          "column": 18
-        },
-        "end": {
-          "line": 14,
-          "column": 19
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 597,
-      "end": 598,
-      "loc": {
-        "start": {
-          "line": 14,
-          "column": 19
-        },
-        "end": {
-          "line": 14,
-          "column": 20
+          "column": 13
         }
       }
     },
@@ -1167,16 +991,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 598,
-      "end": 599,
+      "start": 584,
+      "end": 585,
       "loc": {
         "start": {
           "line": 14,
-          "column": 20
+          "column": 13
         },
         "end": {
           "line": 14,
-          "column": 21
+          "column": 14
         }
       }
     },
@@ -1193,8 +1017,8 @@
         "binop": null
       },
       "value": "modulated",
-      "start": 602,
-      "end": 611,
+      "start": 588,
+      "end": 597,
       "loc": {
         "start": {
           "line": 15,
@@ -1219,8 +1043,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 611,
-      "end": 612,
+      "start": 597,
+      "end": 598,
       "loc": {
         "start": {
           "line": 15,
@@ -1234,7 +1058,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -1242,11 +1066,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
-      "start": 613,
-      "end": 619,
+      "value": 2,
+      "start": 599,
+      "end": 600,
       "loc": {
         "start": {
           "line": 15,
@@ -1254,57 +1079,7 @@
         },
         "end": {
           "line": 15,
-          "column": 19
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 619,
-      "end": 620,
-      "loc": {
-        "start": {
-          "line": 15,
-          "column": 19
-        },
-        "end": {
-          "line": 15,
-          "column": 20
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 620,
-      "end": 621,
-      "loc": {
-        "start": {
-          "line": 15,
-          "column": 20
-        },
-        "end": {
-          "line": 15,
-          "column": 21
+          "column": 14
         }
       }
     },
@@ -1320,8 +1095,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 622,
-      "end": 623,
+      "start": 601,
+      "end": 602,
       "loc": {
         "start": {
           "line": 16,
@@ -1348,8 +1123,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 625,
-      "end": 631,
+      "start": 604,
+      "end": 610,
       "loc": {
         "start": {
           "line": 18,
@@ -1376,8 +1151,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 632,
-      "end": 639,
+      "start": 611,
+      "end": 618,
       "loc": {
         "start": {
           "line": 18,
@@ -1402,8 +1177,8 @@
         "binop": null
       },
       "value": "SCNShadowMode",
-      "start": 640,
-      "end": 653,
+      "start": 619,
+      "end": 632,
       "loc": {
         "start": {
           "line": 18,
@@ -1428,8 +1203,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 654,
-      "end": 654,
+      "start": 633,
+      "end": 633,
       "loc": {
         "start": {
           "line": 19,

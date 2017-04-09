@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 770,
+  "end": 749,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 770,
+    "end": 749,
     "loc": {
       "start": {
         "line": 1,
@@ -31,7 +31,7 @@
       {
         "type": "Identifier",
         "start": 641,
-        "end": 734,
+        "end": 713,
         "loc": {
           "start": {
             "line": 12,
@@ -46,7 +46,7 @@
           {
             "type": "VariableDeclarator",
             "start": 647,
-            "end": 734,
+            "end": 713,
             "loc": {
               "start": {
                 "line": 12,
@@ -78,7 +78,7 @@
             "init": {
               "type": "ObjectExpression",
               "start": 668,
-              "end": 734,
+              "end": 713,
               "loc": {
                 "start": {
                   "line": 12,
@@ -93,7 +93,7 @@
                 {
                   "type": "ObjectProperty",
                   "start": 672,
-                  "end": 688,
+                  "end": 681,
                   "loc": {
                     "start": {
                       "line": 13,
@@ -101,7 +101,7 @@
                     },
                     "end": {
                       "line": 13,
-                      "column": 18
+                      "column": 11
                     }
                   },
                   "method": false,
@@ -125,9 +125,9 @@
                     "name": "static"
                   },
                   "value": {
-                    "type": "CallExpression",
+                    "type": "NumericLiteral",
                     "start": 680,
-                    "end": 688,
+                    "end": 681,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -135,33 +135,20 @@
                       },
                       "end": {
                         "line": 13,
-                        "column": 18
+                        "column": 11
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 680,
-                      "end": 686,
-                      "loc": {
-                        "start": {
-                          "line": 13,
-                          "column": 10
-                        },
-                        "end": {
-                          "line": 13,
-                          "column": 16
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 0,
+                      "raw": "0"
                     },
-                    "arguments": []
+                    "value": 0
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 692,
-                  "end": 709,
+                  "start": 685,
+                  "end": 695,
                   "loc": {
                     "start": {
                       "line": 14,
@@ -169,7 +156,7 @@
                     },
                     "end": {
                       "line": 14,
-                      "column": 19
+                      "column": 12
                     }
                   },
                   "method": false,
@@ -177,8 +164,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 692,
-                    "end": 699,
+                    "start": 685,
+                    "end": 692,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -193,9 +180,9 @@
                     "name": "dynamic"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 701,
-                    "end": 709,
+                    "type": "NumericLiteral",
+                    "start": 694,
+                    "end": 695,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -203,33 +190,20 @@
                       },
                       "end": {
                         "line": 14,
-                        "column": 19
+                        "column": 12
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 701,
-                      "end": 707,
-                      "loc": {
-                        "start": {
-                          "line": 14,
-                          "column": 11
-                        },
-                        "end": {
-                          "line": 14,
-                          "column": 17
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 1,
+                      "raw": "1"
                     },
-                    "arguments": []
+                    "value": 1
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 713,
-                  "end": 732,
+                  "start": 699,
+                  "end": 711,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -237,7 +211,7 @@
                     },
                     "end": {
                       "line": 15,
-                      "column": 21
+                      "column": 14
                     }
                   },
                   "method": false,
@@ -245,8 +219,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 713,
-                    "end": 722,
+                    "start": 699,
+                    "end": 708,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -261,9 +235,9 @@
                     "name": "kinematic"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 724,
-                    "end": 732,
+                    "type": "NumericLiteral",
+                    "start": 710,
+                    "end": 711,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -271,27 +245,14 @@
                       },
                       "end": {
                         "line": 15,
-                        "column": 21
+                        "column": 14
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 724,
-                      "end": 730,
-                      "loc": {
-                        "start": {
-                          "line": 15,
-                          "column": 13
-                        },
-                        "end": {
-                          "line": 15,
-                          "column": 19
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 2,
+                      "raw": "2"
                     },
-                    "arguments": []
+                    "value": 2
                   }
                 }
               ]
@@ -306,8 +267,8 @@
       },
       {
         "type": "Identifier",
-        "start": 736,
-        "end": 769,
+        "start": 715,
+        "end": 748,
         "loc": {
           "start": {
             "line": 18,
@@ -320,8 +281,8 @@
         },
         "declaration": {
           "type": "Identifier",
-          "start": 751,
-          "end": 769,
+          "start": 730,
+          "end": 748,
           "loc": {
             "start": {
               "line": 18,
@@ -341,8 +302,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 736,
-        "end": 769,
+        "start": 715,
+        "end": 748,
         "loc": {
           "start": {
             "line": 18,
@@ -356,7 +317,7 @@
         "declaration": {
           "type": "VariableDeclaration",
           "start": 641,
-          "end": 734,
+          "end": 713,
           "loc": {
             "start": {
               "line": 12,
@@ -371,7 +332,7 @@
             {
               "type": "VariableDeclarator",
               "start": 647,
-              "end": 734,
+              "end": 713,
               "loc": {
                 "start": {
                   "line": 12,
@@ -403,7 +364,7 @@
               "init": {
                 "type": "ObjectExpression",
                 "start": 668,
-                "end": 734,
+                "end": 713,
                 "loc": {
                   "start": {
                     "line": 12,
@@ -418,7 +379,7 @@
                   {
                     "type": "ObjectProperty",
                     "start": 672,
-                    "end": 688,
+                    "end": 681,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -426,7 +387,7 @@
                       },
                       "end": {
                         "line": 13,
-                        "column": 18
+                        "column": 11
                       }
                     },
                     "method": false,
@@ -450,9 +411,9 @@
                       "name": "static"
                     },
                     "value": {
-                      "type": "CallExpression",
+                      "type": "NumericLiteral",
                       "start": 680,
-                      "end": 688,
+                      "end": 681,
                       "loc": {
                         "start": {
                           "line": 13,
@@ -460,33 +421,20 @@
                         },
                         "end": {
                           "line": 13,
-                          "column": 18
+                          "column": 11
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 680,
-                        "end": 686,
-                        "loc": {
-                          "start": {
-                            "line": 13,
-                            "column": 10
-                          },
-                          "end": {
-                            "line": 13,
-                            "column": 16
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 0,
+                        "raw": "0"
                       },
-                      "arguments": []
+                      "value": 0
                     }
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 692,
-                    "end": 709,
+                    "start": 685,
+                    "end": 695,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -494,7 +442,7 @@
                       },
                       "end": {
                         "line": 14,
-                        "column": 19
+                        "column": 12
                       }
                     },
                     "method": false,
@@ -502,8 +450,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 692,
-                      "end": 699,
+                      "start": 685,
+                      "end": 692,
                       "loc": {
                         "start": {
                           "line": 14,
@@ -518,9 +466,9 @@
                       "name": "dynamic"
                     },
                     "value": {
-                      "type": "CallExpression",
-                      "start": 701,
-                      "end": 709,
+                      "type": "NumericLiteral",
+                      "start": 694,
+                      "end": 695,
                       "loc": {
                         "start": {
                           "line": 14,
@@ -528,33 +476,20 @@
                         },
                         "end": {
                           "line": 14,
-                          "column": 19
+                          "column": 12
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 701,
-                        "end": 707,
-                        "loc": {
-                          "start": {
-                            "line": 14,
-                            "column": 11
-                          },
-                          "end": {
-                            "line": 14,
-                            "column": 17
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 1,
+                        "raw": "1"
                       },
-                      "arguments": []
+                      "value": 1
                     }
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 713,
-                    "end": 732,
+                    "start": 699,
+                    "end": 711,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -562,7 +497,7 @@
                       },
                       "end": {
                         "line": 15,
-                        "column": 21
+                        "column": 14
                       }
                     },
                     "method": false,
@@ -570,8 +505,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 713,
-                      "end": 722,
+                      "start": 699,
+                      "end": 708,
                       "loc": {
                         "start": {
                           "line": 15,
@@ -586,9 +521,9 @@
                       "name": "kinematic"
                     },
                     "value": {
-                      "type": "CallExpression",
-                      "start": 724,
-                      "end": 732,
+                      "type": "NumericLiteral",
+                      "start": 710,
+                      "end": 711,
                       "loc": {
                         "start": {
                           "line": 15,
@@ -596,27 +531,14 @@
                         },
                         "end": {
                           "line": 15,
-                          "column": 21
+                          "column": 14
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 724,
-                        "end": 730,
-                        "loc": {
-                          "start": {
-                            "line": 15,
-                            "column": 13
-                          },
-                          "end": {
-                            "line": 15,
-                            "column": 19
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 2,
+                        "raw": "2"
                       },
-                      "arguments": []
+                      "value": 2
                     }
                   }
                 ]
@@ -628,7 +550,7 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * Constants that determine how a physics body interacts with forces and other bodies, used by the type property and when creating a physics body.\n * @typedef {Object} SCNPhysicsBodyType\n * @property {Symbol} static - A physics body that is unaffected by forces or collisions and cannot move.\n * @property {Symbol} dynamic - A physics body that can be affected by forces and collisions.\n * @property {Symbol} kinematic - A physics body that is unaffected by forces or collisions but that can cause collisions affecting other bodies when moved.\n * @see https://developer.apple.com/reference/scenekit/scnphysicsbodytype\n ",
+              "value": "*\n * Constants that determine how a physics body interacts with forces and other bodies, used by the type property and when creating a physics body.\n * @typedef {Object} SCNPhysicsBodyType\n * @property {number} static - A physics body that is unaffected by forces or collisions and cannot move.\n * @property {number} dynamic - A physics body that can be affected by forces and collisions.\n * @property {number} kinematic - A physics body that is unaffected by forces or collisions but that can cause collisions affecting other bodies when moved.\n * @see https://developer.apple.com/reference/scenekit/scnphysicsbodytype\n ",
               "start": 15,
               "end": 640,
               "loc": {
@@ -686,7 +608,7 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Constants that determine how a physics body interacts with forces and other bodies, used by the type property and when creating a physics body.\n * @typedef {Object} SCNPhysicsBodyType\n * @property {Symbol} static - A physics body that is unaffected by forces or collisions and cannot move.\n * @property {Symbol} dynamic - A physics body that can be affected by forces and collisions.\n * @property {Symbol} kinematic - A physics body that is unaffected by forces or collisions but that can cause collisions affecting other bodies when moved.\n * @see https://developer.apple.com/reference/scenekit/scnphysicsbodytype\n ",
+            "value": "*\n * Constants that determine how a physics body interacts with forces and other bodies, used by the type property and when creating a physics body.\n * @typedef {Object} SCNPhysicsBodyType\n * @property {number} static - A physics body that is unaffected by forces or collisions and cannot move.\n * @property {number} dynamic - A physics body that can be affected by forces and collisions.\n * @property {number} kinematic - A physics body that is unaffected by forces or collisions but that can cause collisions affecting other bodies when moved.\n * @see https://developer.apple.com/reference/scenekit/scnphysicsbodytype\n ",
             "start": 15,
             "end": 640,
             "loc": {
@@ -707,7 +629,7 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * Constants that determine how a physics body interacts with forces and other bodies, used by the type property and when creating a physics body.\n * @typedef {Object} SCNPhysicsBodyType\n * @property {Symbol} static - A physics body that is unaffected by forces or collisions and cannot move.\n * @property {Symbol} dynamic - A physics body that can be affected by forces and collisions.\n * @property {Symbol} kinematic - A physics body that is unaffected by forces or collisions but that can cause collisions affecting other bodies when moved.\n * @see https://developer.apple.com/reference/scenekit/scnphysicsbodytype\n ",
+      "value": "*\n * Constants that determine how a physics body interacts with forces and other bodies, used by the type property and when creating a physics body.\n * @typedef {Object} SCNPhysicsBodyType\n * @property {number} static - A physics body that is unaffected by forces or collisions and cannot move.\n * @property {number} dynamic - A physics body that can be affected by forces and collisions.\n * @property {number} kinematic - A physics body that is unaffected by forces or collisions but that can cause collisions affecting other bodies when moved.\n * @see https://developer.apple.com/reference/scenekit/scnphysicsbodytype\n ",
       "start": 15,
       "end": 640,
       "loc": {
@@ -752,7 +674,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Constants that determine how a physics body interacts with forces and other bodies, used by the type property and when creating a physics body.\n * @typedef {Object} SCNPhysicsBodyType\n * @property {Symbol} static - A physics body that is unaffected by forces or collisions and cannot move.\n * @property {Symbol} dynamic - A physics body that can be affected by forces and collisions.\n * @property {Symbol} kinematic - A physics body that is unaffected by forces or collisions but that can cause collisions affecting other bodies when moved.\n * @see https://developer.apple.com/reference/scenekit/scnphysicsbodytype\n ",
+      "value": "*\n * Constants that determine how a physics body interacts with forces and other bodies, used by the type property and when creating a physics body.\n * @typedef {Object} SCNPhysicsBodyType\n * @property {number} static - A physics body that is unaffected by forces or collisions and cannot move.\n * @property {number} dynamic - A physics body that can be affected by forces and collisions.\n * @property {number} kinematic - A physics body that is unaffected by forces or collisions but that can cause collisions affecting other bodies when moved.\n * @see https://developer.apple.com/reference/scenekit/scnphysicsbodytype\n ",
       "start": 15,
       "end": 640,
       "loc": {
@@ -926,7 +848,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -934,11 +856,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
+      "value": 0,
       "start": 680,
-      "end": 686,
+      "end": 681,
       "loc": {
         "start": {
           "line": 13,
@@ -946,57 +869,7 @@
         },
         "end": {
           "line": 13,
-          "column": 16
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 686,
-      "end": 687,
-      "loc": {
-        "start": {
-          "line": 13,
-          "column": 16
-        },
-        "end": {
-          "line": 13,
-          "column": 17
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 687,
-      "end": 688,
-      "loc": {
-        "start": {
-          "line": 13,
-          "column": 17
-        },
-        "end": {
-          "line": 13,
-          "column": 18
+          "column": 11
         }
       }
     },
@@ -1013,221 +886,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 688,
-      "end": 689,
+      "start": 681,
+      "end": 682,
       "loc": {
         "start": {
           "line": 13,
-          "column": 18
+          "column": 11
         },
         "end": {
           "line": 13,
-          "column": 19
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "dynamic",
-      "start": 692,
-      "end": 699,
-      "loc": {
-        "start": {
-          "line": 14,
-          "column": 2
-        },
-        "end": {
-          "line": 14,
-          "column": 9
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ":",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 699,
-      "end": 700,
-      "loc": {
-        "start": {
-          "line": 14,
-          "column": 9
-        },
-        "end": {
-          "line": 14,
-          "column": 10
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "Symbol",
-      "start": 701,
-      "end": 707,
-      "loc": {
-        "start": {
-          "line": 14,
-          "column": 11
-        },
-        "end": {
-          "line": 14,
-          "column": 17
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 707,
-      "end": 708,
-      "loc": {
-        "start": {
-          "line": 14,
-          "column": 17
-        },
-        "end": {
-          "line": 14,
-          "column": 18
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 708,
-      "end": 709,
-      "loc": {
-        "start": {
-          "line": 14,
-          "column": 18
-        },
-        "end": {
-          "line": 14,
-          "column": 19
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 709,
-      "end": 710,
-      "loc": {
-        "start": {
-          "line": 14,
-          "column": 19
-        },
-        "end": {
-          "line": 14,
-          "column": 20
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "kinematic",
-      "start": 713,
-      "end": 722,
-      "loc": {
-        "start": {
-          "line": 15,
-          "column": 2
-        },
-        "end": {
-          "line": 15,
-          "column": 11
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ":",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 722,
-      "end": 723,
-      "loc": {
-        "start": {
-          "line": 15,
-          "column": 11
-        },
-        "end": {
-          "line": 15,
           "column": 12
         }
       }
@@ -1244,24 +911,103 @@
         "postfix": false,
         "binop": null
       },
-      "value": "Symbol",
-      "start": 724,
-      "end": 730,
+      "value": "dynamic",
+      "start": 685,
+      "end": 692,
       "loc": {
         "start": {
-          "line": 15,
-          "column": 13
+          "line": 14,
+          "column": 2
         },
         "end": {
-          "line": 15,
-          "column": 19
+          "line": 14,
+          "column": 9
         }
       }
     },
     {
       "type": {
-        "label": "(",
+        "label": ":",
         "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 692,
+      "end": 693,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 9
+        },
+        "end": {
+          "line": 14,
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "num",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": 1,
+      "start": 694,
+      "end": 695,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 11
+        },
+        "end": {
+          "line": 14,
+          "column": 12
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 695,
+      "end": 696,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 12
+        },
+        "end": {
+          "line": 14,
+          "column": 13
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
         "isLoop": false,
@@ -1270,41 +1016,70 @@
         "postfix": false,
         "binop": null
       },
-      "start": 730,
-      "end": 731,
+      "value": "kinematic",
+      "start": 699,
+      "end": 708,
       "loc": {
         "start": {
           "line": 15,
-          "column": 19
+          "column": 2
         },
         "end": {
           "line": 15,
-          "column": 20
+          "column": 11
         }
       }
     },
     {
       "type": {
-        "label": ")",
-        "beforeExpr": false,
+        "label": ":",
+        "beforeExpr": true,
         "startsExpr": false,
         "rightAssociative": false,
         "isLoop": false,
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "start": 731,
-      "end": 732,
+      "start": 708,
+      "end": 709,
       "loc": {
         "start": {
           "line": 15,
-          "column": 20
+          "column": 11
         },
         "end": {
           "line": 15,
-          "column": 21
+          "column": 12
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "num",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": 2,
+      "start": 710,
+      "end": 711,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 13
+        },
+        "end": {
+          "line": 15,
+          "column": 14
         }
       }
     },
@@ -1320,8 +1095,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 733,
-      "end": 734,
+      "start": 712,
+      "end": 713,
       "loc": {
         "start": {
           "line": 16,
@@ -1348,8 +1123,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 736,
-      "end": 742,
+      "start": 715,
+      "end": 721,
       "loc": {
         "start": {
           "line": 18,
@@ -1376,8 +1151,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 743,
-      "end": 750,
+      "start": 722,
+      "end": 729,
       "loc": {
         "start": {
           "line": 18,
@@ -1402,8 +1177,8 @@
         "binop": null
       },
       "value": "SCNPhysicsBodyType",
-      "start": 751,
-      "end": 769,
+      "start": 730,
+      "end": 748,
       "loc": {
         "start": {
           "line": 18,
@@ -1428,8 +1203,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 770,
-      "end": 770,
+      "start": 749,
+      "end": 749,
       "loc": {
         "start": {
           "line": 19,

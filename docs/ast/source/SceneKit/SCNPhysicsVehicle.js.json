@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 6679,
+  "end": 6611,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 118,
+      "line": 113,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 6679,
+    "end": 6611,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 118,
+        "line": 113,
         "column": 0
       }
     },
@@ -258,28 +258,28 @@
       {
         "type": "ExportDefaultDeclaration",
         "start": 421,
-        "end": 6678,
+        "end": 6610,
         "loc": {
           "start": {
             "line": 14,
             "column": 0
           },
           "end": {
-            "line": 117,
+            "line": 112,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
           "start": 436,
-          "end": 6678,
+          "end": 6610,
           "loc": {
             "start": {
               "line": 14,
               "column": 15
             },
             "end": {
-              "line": 117,
+              "line": 112,
               "column": 1
             }
           },
@@ -321,127 +321,227 @@
           "body": {
             "type": "ClassBody",
             "start": 487,
-            "end": 6678,
+            "end": 6610,
             "loc": {
               "start": {
                 "line": 14,
                 "column": 66
               },
               "end": {
-                "line": 117,
+                "line": 112,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 562,
-                "end": 752,
+                "start": 1582,
+                "end": 1810,
                 "loc": {
                   "start": {
-                    "line": 21,
+                    "line": 26,
                     "column": 2
                   },
                   "end": {
-                    "line": 31,
+                    "line": 37,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 562,
-                  "end": 566,
+                  "start": 1582,
+                  "end": 1593,
                   "loc": {
                     "start": {
-                      "line": 21,
+                      "line": 26,
                       "column": 2
                     },
                     "end": {
-                      "line": 21,
-                      "column": 6
+                      "line": 26,
+                      "column": 13
                     },
-                    "identifierName": "init"
+                    "identifierName": "constructor"
                   },
-                  "name": "init",
+                  "name": "constructor",
                   "leadingComments": null
                 },
                 "static": false,
-                "kind": "method",
+                "kind": "constructor",
                 "id": null,
                 "generator": false,
                 "expression": false,
                 "async": false,
-                "params": [],
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "start": 1594,
+                    "end": 1605,
+                    "loc": {
+                      "start": {
+                        "line": 26,
+                        "column": 14
+                      },
+                      "end": {
+                        "line": 26,
+                        "column": 25
+                      },
+                      "identifierName": "chassisBody"
+                    },
+                    "name": "chassisBody"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 1607,
+                    "end": 1613,
+                    "loc": {
+                      "start": {
+                        "line": 26,
+                        "column": 27
+                      },
+                      "end": {
+                        "line": 26,
+                        "column": 33
+                      },
+                      "identifierName": "wheels"
+                    },
+                    "name": "wheels"
+                  }
+                ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 569,
-                  "end": 752,
+                  "start": 1615,
+                  "end": 1810,
                   "loc": {
                     "start": {
-                      "line": 21,
-                      "column": 9
+                      "line": 26,
+                      "column": 35
                     },
                     "end": {
-                      "line": 31,
+                      "line": 37,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 634,
-                      "end": 658,
+                      "start": 1621,
+                      "end": 1628,
                       "loc": {
                         "start": {
-                          "line": 25,
+                          "line": 27,
                           "column": 4
                         },
                         "end": {
-                          "line": 25,
+                          "line": 27,
+                          "column": 11
+                        }
+                      },
+                      "expression": {
+                        "type": "CallExpression",
+                        "start": 1621,
+                        "end": 1628,
+                        "loc": {
+                          "start": {
+                            "line": 27,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 27,
+                            "column": 11
+                          }
+                        },
+                        "callee": {
+                          "type": "Super",
+                          "start": 1621,
+                          "end": 1626,
+                          "loc": {
+                            "start": {
+                              "line": 27,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 27,
+                              "column": 9
+                            }
+                          }
+                        },
+                        "arguments": [],
+                        "trailingComments": null
+                      },
+                      "trailingComments": [
+                        {
+                          "type": "CommentLine",
+                          "value": " Working with a Vehicle’s Physical Characteristics",
+                          "start": 1634,
+                          "end": 1686,
+                          "loc": {
+                            "start": {
+                              "line": 29,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 29,
+                              "column": 56
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "start": 1692,
+                      "end": 1716,
+                      "loc": {
+                        "start": {
+                          "line": 31,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 31,
                           "column": 28
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 634,
-                        "end": 658,
+                        "start": 1692,
+                        "end": 1716,
                         "loc": {
                           "start": {
-                            "line": 25,
+                            "line": 31,
                             "column": 4
                           },
                           "end": {
-                            "line": 25,
+                            "line": 31,
                             "column": 28
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 634,
-                          "end": 651,
+                          "start": 1692,
+                          "end": 1709,
                           "loc": {
                             "start": {
-                              "line": 25,
+                              "line": 31,
                               "column": 4
                             },
                             "end": {
-                              "line": 25,
+                              "line": 31,
                               "column": 21
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 634,
-                            "end": 638,
+                            "start": 1692,
+                            "end": 1696,
                             "loc": {
                               "start": {
-                                "line": 25,
+                                "line": 31,
                                 "column": 4
                               },
                               "end": {
-                                "line": 25,
+                                "line": 31,
                                 "column": 8
                               }
                             },
@@ -449,15 +549,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 639,
-                            "end": 651,
+                            "start": 1697,
+                            "end": 1709,
                             "loc": {
                               "start": {
-                                "line": 25,
+                                "line": 31,
                                 "column": 9
                               },
                               "end": {
-                                "line": 25,
+                                "line": 31,
                                 "column": 21
                               },
                               "identifierName": "_chassisBody"
@@ -469,15 +569,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 654,
-                          "end": 658,
+                          "start": 1712,
+                          "end": 1716,
                           "loc": {
                             "start": {
-                              "line": 25,
+                              "line": 31,
                               "column": 24
                             },
                             "end": {
-                              "line": 25,
+                              "line": 31,
                               "column": 28
                             }
                           }
@@ -488,15 +588,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Working with a Vehicle’s Physical Characteristics",
-                          "start": 576,
-                          "end": 628,
+                          "start": 1634,
+                          "end": 1686,
                           "loc": {
                             "start": {
-                              "line": 23,
+                              "line": 29,
                               "column": 4
                             },
                             "end": {
-                              "line": 23,
+                              "line": 29,
                               "column": 56
                             }
                           }
@@ -505,73 +605,73 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 663,
-                      "end": 682,
+                      "start": 1721,
+                      "end": 1740,
                       "loc": {
                         "start": {
-                          "line": 26,
+                          "line": 32,
                           "column": 4
                         },
                         "end": {
-                          "line": 26,
+                          "line": 32,
                           "column": 23
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 663,
-                        "end": 682,
+                        "start": 1721,
+                        "end": 1740,
                         "loc": {
                           "start": {
-                            "line": 26,
+                            "line": 32,
                             "column": 4
                           },
                           "end": {
-                            "line": 26,
+                            "line": 32,
                             "column": 23
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 663,
-                          "end": 675,
+                          "start": 1721,
+                          "end": 1733,
                           "loc": {
                             "start": {
-                              "line": 26,
+                              "line": 32,
                               "column": 4
                             },
                             "end": {
-                              "line": 26,
+                              "line": 32,
                               "column": 16
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 663,
-                            "end": 667,
+                            "start": 1721,
+                            "end": 1725,
                             "loc": {
                               "start": {
-                                "line": 26,
+                                "line": 32,
                                 "column": 4
                               },
                               "end": {
-                                "line": 26,
+                                "line": 32,
                                 "column": 8
                               }
                             }
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 668,
-                            "end": 675,
+                            "start": 1726,
+                            "end": 1733,
                             "loc": {
                               "start": {
-                                "line": 26,
+                                "line": 32,
                                 "column": 9
                               },
                               "end": {
-                                "line": 26,
+                                "line": 32,
                                 "column": 16
                               },
                               "identifierName": "_wheels"
@@ -582,15 +682,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 678,
-                          "end": 682,
+                          "start": 1736,
+                          "end": 1740,
                           "loc": {
                             "start": {
-                              "line": 26,
+                              "line": 32,
                               "column": 19
                             },
                             "end": {
-                              "line": 26,
+                              "line": 32,
                               "column": 23
                             }
                           },
@@ -603,15 +703,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Driving a Vehicle",
-                          "start": 688,
-                          "end": 708,
+                          "start": 1746,
+                          "end": 1766,
                           "loc": {
                             "start": {
-                              "line": 28,
+                              "line": 34,
                               "column": 4
                             },
                             "end": {
-                              "line": 28,
+                              "line": 34,
                               "column": 24
                             }
                           }
@@ -620,58 +720,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 714,
-                      "end": 748,
+                      "start": 1772,
+                      "end": 1806,
                       "loc": {
                         "start": {
-                          "line": 30,
+                          "line": 36,
                           "column": 4
                         },
                         "end": {
-                          "line": 30,
+                          "line": 36,
                           "column": 38
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 714,
-                        "end": 748,
+                        "start": 1772,
+                        "end": 1806,
                         "loc": {
                           "start": {
-                            "line": 30,
+                            "line": 36,
                             "column": 4
                           },
                           "end": {
-                            "line": 30,
+                            "line": 36,
                             "column": 38
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 714,
-                          "end": 744,
+                          "start": 1772,
+                          "end": 1802,
                           "loc": {
                             "start": {
-                              "line": 30,
+                              "line": 36,
                               "column": 4
                             },
                             "end": {
-                              "line": 30,
+                              "line": 36,
                               "column": 34
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 714,
-                            "end": 718,
+                            "start": 1772,
+                            "end": 1776,
                             "loc": {
                               "start": {
-                                "line": 30,
+                                "line": 36,
                                 "column": 4
                               },
                               "end": {
-                                "line": 30,
+                                "line": 36,
                                 "column": 8
                               }
                             },
@@ -679,15 +779,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 719,
-                            "end": 744,
+                            "start": 1777,
+                            "end": 1802,
                             "loc": {
                               "start": {
-                                "line": 30,
+                                "line": 36,
                                 "column": 9
                               },
                               "end": {
-                                "line": 30,
+                                "line": 36,
                                 "column": 34
                               },
                               "identifierName": "_speedInKilometersPerHour"
@@ -699,15 +799,15 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 747,
-                          "end": 748,
+                          "start": 1805,
+                          "end": 1806,
                           "loc": {
                             "start": {
-                              "line": 30,
+                              "line": 36,
                               "column": 37
                             },
                             "end": {
-                              "line": 30,
+                              "line": 36,
                               "column": 38
                             }
                           },
@@ -723,15 +823,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Driving a Vehicle",
-                          "start": 688,
-                          "end": 708,
+                          "start": 1746,
+                          "end": 1766,
                           "loc": {
                             "start": {
-                              "line": 28,
+                              "line": 34,
                               "column": 4
                             },
                             "end": {
-                              "line": 28,
+                              "line": 34,
                               "column": 24
                             }
                           }
@@ -744,180 +844,33 @@
                 },
                 "leadingComments": [
                   {
-                    "type": "CommentBlock",
-                    "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-                    "start": 492,
-                    "end": 559,
-                    "loc": {
-                      "start": {
-                        "line": 16,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 20,
-                        "column": 5
-                      }
-                    }
-                  }
-                ],
-                "trailingComments": [
-                  {
                     "type": "CommentLine",
                     "value": " Creating a Vehicle",
-                    "start": 756,
-                    "end": 777,
+                    "start": 491,
+                    "end": 512,
                     "loc": {
                       "start": {
-                        "line": 33,
+                        "line": 15,
                         "column": 2
                       },
                       "end": {
-                        "line": 33,
+                        "line": 15,
                         "column": 23
                       }
                     }
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Creates a vehicle behavior.\n   * @access public\n   * @param {SCNPhysicsBody} chassisBody - A physics body to serve as the vehicle’s chassis.\n   * @param {SCNPhysicsVehicleWheel[]} wheels - An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels. A vehicle must have at least one wheel.\n   * @returns {void}\n   * @desc Each object in the wheels array associates a node with the wheel to serve as its visual representation and defines properties for the wheel’s physical characteristics. Each wheel object must reference a unique node, which should be a child of the node containing the physics body used for the vehicle’s chassis. Typically, you load a node hierarchy representing the vehicle and all of its wheels from a scene file and then designate which nodes serve as the body and wheels.For a behavior to take effect, you must add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387943-init\n   ",
-                    "start": 781,
-                    "end": 1847,
+                    "value": "*\n   * Creates a vehicle behavior.\n   * @access public\n   * @constructor\n   * @param {SCNPhysicsBody} chassisBody - A physics body to serve as the vehicle’s chassis.\n   * @param {SCNPhysicsVehicleWheel[]} wheels - An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels. A vehicle must have at least one wheel.\n   * @desc Each object in the wheels array associates a node with the wheel to serve as its visual representation and defines properties for the wheel’s physical characteristics. Each wheel object must reference a unique node, which should be a child of the node containing the physics body used for the vehicle’s chassis. Typically, you load a node hierarchy representing the vehicle and all of its wheels from a scene file and then designate which nodes serve as the body and wheels.For a behavior to take effect, you must add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387943-init\n   ",
+                    "start": 516,
+                    "end": 1579,
                     "loc": {
                       "start": {
-                        "line": 35,
+                        "line": 17,
                         "column": 2
                       },
                       "end": {
-                        "line": 43,
-                        "column": 5
-                      }
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "ClassMethod",
-                "start": 1850,
-                "end": 1881,
-                "loc": {
-                  "start": {
-                    "line": 44,
-                    "column": 2
-                  },
-                  "end": {
-                    "line": 45,
-                    "column": 3
-                  }
-                },
-                "computed": false,
-                "key": {
-                  "type": "Identifier",
-                  "start": 1850,
-                  "end": 1854,
-                  "loc": {
-                    "start": {
-                      "line": 44,
-                      "column": 2
-                    },
-                    "end": {
-                      "line": 44,
-                      "column": 6
-                    },
-                    "identifierName": "init"
-                  },
-                  "name": "init",
-                  "leadingComments": null
-                },
-                "static": false,
-                "kind": "method",
-                "id": null,
-                "generator": false,
-                "expression": false,
-                "async": false,
-                "params": [
-                  {
-                    "type": "Identifier",
-                    "start": 1855,
-                    "end": 1866,
-                    "loc": {
-                      "start": {
-                        "line": 44,
-                        "column": 7
-                      },
-                      "end": {
-                        "line": 44,
-                        "column": 18
-                      },
-                      "identifierName": "chassisBody"
-                    },
-                    "name": "chassisBody"
-                  },
-                  {
-                    "type": "Identifier",
-                    "start": 1868,
-                    "end": 1874,
-                    "loc": {
-                      "start": {
-                        "line": 44,
-                        "column": 20
-                      },
-                      "end": {
-                        "line": 44,
-                        "column": 26
-                      },
-                      "identifierName": "wheels"
-                    },
-                    "name": "wheels"
-                  }
-                ],
-                "body": {
-                  "type": "BlockStatement",
-                  "start": 1876,
-                  "end": 1881,
-                  "loc": {
-                    "start": {
-                      "line": 44,
-                      "column": 28
-                    },
-                    "end": {
-                      "line": 45,
-                      "column": 3
-                    }
-                  },
-                  "body": [],
-                  "directives": [],
-                  "leadingComments": null,
-                  "trailingComments": null
-                },
-                "leadingComments": [
-                  {
-                    "type": "CommentLine",
-                    "value": " Creating a Vehicle",
-                    "start": 756,
-                    "end": 777,
-                    "loc": {
-                      "start": {
-                        "line": 33,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 33,
-                        "column": 23
-                      }
-                    }
-                  },
-                  {
-                    "type": "CommentBlock",
-                    "value": "*\n   * Creates a vehicle behavior.\n   * @access public\n   * @param {SCNPhysicsBody} chassisBody - A physics body to serve as the vehicle’s chassis.\n   * @param {SCNPhysicsVehicleWheel[]} wheels - An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels. A vehicle must have at least one wheel.\n   * @returns {void}\n   * @desc Each object in the wheels array associates a node with the wheel to serve as its visual representation and defines properties for the wheel’s physical characteristics. Each wheel object must reference a unique node, which should be a child of the node containing the physics body used for the vehicle’s chassis. Typically, you load a node hierarchy representing the vehicle and all of its wheels from a scene file and then designate which nodes serve as the body and wheels.For a behavior to take effect, you must add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387943-init\n   ",
-                    "start": 781,
-                    "end": 1847,
-                    "loc": {
-                      "start": {
-                        "line": 35,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 43,
+                        "line": 25,
                         "column": 5
                       }
                     }
@@ -927,15 +880,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Working with a Vehicle’s Physical Characteristics",
-                    "start": 1885,
-                    "end": 1937,
+                    "start": 1814,
+                    "end": 1866,
                     "loc": {
                       "start": {
-                        "line": 47,
+                        "line": 39,
                         "column": 2
                       },
                       "end": {
-                        "line": 47,
+                        "line": 39,
                         "column": 54
                       }
                     }
@@ -943,15 +896,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The physics body representing the vehicle’s chassis.\n   * @type {SCNPhysicsBody}\n   * @desc The vehicle’s chassis must be a dynamic body.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387985-chassisbody\n   ",
-                    "start": 1940,
-                    "end": 2187,
+                    "start": 1870,
+                    "end": 2117,
                     "loc": {
                       "start": {
-                        "line": 48,
+                        "line": 41,
                         "column": 2
                       },
                       "end": {
-                        "line": 53,
+                        "line": 46,
                         "column": 5
                       }
                     }
@@ -960,30 +913,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 2190,
-                "end": 2242,
+                "start": 2120,
+                "end": 2172,
                 "loc": {
                   "start": {
-                    "line": 54,
+                    "line": 47,
                     "column": 2
                   },
                   "end": {
-                    "line": 56,
+                    "line": 49,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 2194,
-                  "end": 2205,
+                  "start": 2124,
+                  "end": 2135,
                   "loc": {
                     "start": {
-                      "line": 54,
+                      "line": 47,
                       "column": 6
                     },
                     "end": {
-                      "line": 54,
+                      "line": 47,
                       "column": 17
                     },
                     "identifierName": "chassisBody"
@@ -999,73 +952,73 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 2208,
-                  "end": 2242,
+                  "start": 2138,
+                  "end": 2172,
                   "loc": {
                     "start": {
-                      "line": 54,
+                      "line": 47,
                       "column": 20
                     },
                     "end": {
-                      "line": 56,
+                      "line": 49,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 2214,
-                      "end": 2238,
+                      "start": 2144,
+                      "end": 2168,
                       "loc": {
                         "start": {
-                          "line": 55,
+                          "line": 48,
                           "column": 4
                         },
                         "end": {
-                          "line": 55,
+                          "line": 48,
                           "column": 28
                         }
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 2221,
-                        "end": 2238,
+                        "start": 2151,
+                        "end": 2168,
                         "loc": {
                           "start": {
-                            "line": 55,
+                            "line": 48,
                             "column": 11
                           },
                           "end": {
-                            "line": 55,
+                            "line": 48,
                             "column": 28
                           }
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 2221,
-                          "end": 2225,
+                          "start": 2151,
+                          "end": 2155,
                           "loc": {
                             "start": {
-                              "line": 55,
+                              "line": 48,
                               "column": 11
                             },
                             "end": {
-                              "line": 55,
+                              "line": 48,
                               "column": 15
                             }
                           }
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 2226,
-                          "end": 2238,
+                          "start": 2156,
+                          "end": 2168,
                           "loc": {
                             "start": {
-                              "line": 55,
+                              "line": 48,
                               "column": 16
                             },
                             "end": {
-                              "line": 55,
+                              "line": 48,
                               "column": 28
                             },
                             "identifierName": "_chassisBody"
@@ -1083,15 +1036,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Working with a Vehicle’s Physical Characteristics",
-                    "start": 1885,
-                    "end": 1937,
+                    "start": 1814,
+                    "end": 1866,
                     "loc": {
                       "start": {
-                        "line": 47,
+                        "line": 39,
                         "column": 2
                       },
                       "end": {
-                        "line": 47,
+                        "line": 39,
                         "column": 54
                       }
                     }
@@ -1099,15 +1052,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The physics body representing the vehicle’s chassis.\n   * @type {SCNPhysicsBody}\n   * @desc The vehicle’s chassis must be a dynamic body.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387985-chassisbody\n   ",
-                    "start": 1940,
-                    "end": 2187,
+                    "start": 1870,
+                    "end": 2117,
                     "loc": {
                       "start": {
-                        "line": 48,
+                        "line": 41,
                         "column": 2
                       },
                       "end": {
-                        "line": 53,
+                        "line": 46,
                         "column": 5
                       }
                     }
@@ -1117,15 +1070,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels.\n   * @type {SCNPhysicsVehicleWheel[]}\n   * @desc You can dynamically change the suspension and traction properties of a wheel connected to the vehicle by using the corresponding SCNPhysicsVehicleWheel object or by using Key-value coding with a keypath of the form wheels[index].propertyName. For example, the following code changes the size of the first wheel attached to the vehicle, simulating a failed tire:SCNPhysicsVehicle *vehicle = [SCNPhysicsVehicle vehicleWithChassisBody:car wheels:wheels];\n[vehicle setValue:@0.1 forKeyPath:@\"wheels[0].radius\"];\nSCNPhysicsVehicle *vehicle = [SCNPhysicsVehicle vehicleWithChassisBody:car wheels:wheels];\n[vehicle setValue:@0.1 forKeyPath:@\"wheels[0].radius\"];\n\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387906-wheels\n   ",
-                    "start": 2245,
-                    "end": 3132,
+                    "start": 2176,
+                    "end": 3063,
                     "loc": {
                       "start": {
-                        "line": 57,
+                        "line": 51,
                         "column": 2
                       },
                       "end": {
-                        "line": 66,
+                        "line": 60,
                         "column": 5
                       }
                     }
@@ -1134,30 +1087,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 3135,
-                "end": 3177,
+                "start": 3066,
+                "end": 3108,
                 "loc": {
                   "start": {
-                    "line": 67,
+                    "line": 61,
                     "column": 2
                   },
                   "end": {
-                    "line": 69,
+                    "line": 63,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 3139,
-                  "end": 3145,
+                  "start": 3070,
+                  "end": 3076,
                   "loc": {
                     "start": {
-                      "line": 67,
+                      "line": 61,
                       "column": 6
                     },
                     "end": {
-                      "line": 67,
+                      "line": 61,
                       "column": 12
                     },
                     "identifierName": "wheels"
@@ -1173,73 +1126,73 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 3148,
-                  "end": 3177,
+                  "start": 3079,
+                  "end": 3108,
                   "loc": {
                     "start": {
-                      "line": 67,
+                      "line": 61,
                       "column": 15
                     },
                     "end": {
-                      "line": 69,
+                      "line": 63,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 3154,
-                      "end": 3173,
+                      "start": 3085,
+                      "end": 3104,
                       "loc": {
                         "start": {
-                          "line": 68,
+                          "line": 62,
                           "column": 4
                         },
                         "end": {
-                          "line": 68,
+                          "line": 62,
                           "column": 23
                         }
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 3161,
-                        "end": 3173,
+                        "start": 3092,
+                        "end": 3104,
                         "loc": {
                           "start": {
-                            "line": 68,
+                            "line": 62,
                             "column": 11
                           },
                           "end": {
-                            "line": 68,
+                            "line": 62,
                             "column": 23
                           }
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 3161,
-                          "end": 3165,
+                          "start": 3092,
+                          "end": 3096,
                           "loc": {
                             "start": {
-                              "line": 68,
+                              "line": 62,
                               "column": 11
                             },
                             "end": {
-                              "line": 68,
+                              "line": 62,
                               "column": 15
                             }
                           }
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 3166,
-                          "end": 3173,
+                          "start": 3097,
+                          "end": 3104,
                           "loc": {
                             "start": {
-                              "line": 68,
+                              "line": 62,
                               "column": 16
                             },
                             "end": {
-                              "line": 68,
+                              "line": 62,
                               "column": 23
                             },
                             "identifierName": "_wheels"
@@ -1257,15 +1210,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels.\n   * @type {SCNPhysicsVehicleWheel[]}\n   * @desc You can dynamically change the suspension and traction properties of a wheel connected to the vehicle by using the corresponding SCNPhysicsVehicleWheel object or by using Key-value coding with a keypath of the form wheels[index].propertyName. For example, the following code changes the size of the first wheel attached to the vehicle, simulating a failed tire:SCNPhysicsVehicle *vehicle = [SCNPhysicsVehicle vehicleWithChassisBody:car wheels:wheels];\n[vehicle setValue:@0.1 forKeyPath:@\"wheels[0].radius\"];\nSCNPhysicsVehicle *vehicle = [SCNPhysicsVehicle vehicleWithChassisBody:car wheels:wheels];\n[vehicle setValue:@0.1 forKeyPath:@\"wheels[0].radius\"];\n\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387906-wheels\n   ",
-                    "start": 2245,
-                    "end": 3132,
+                    "start": 2176,
+                    "end": 3063,
                     "loc": {
                       "start": {
-                        "line": 57,
+                        "line": 51,
                         "column": 2
                       },
                       "end": {
-                        "line": 66,
+                        "line": 60,
                         "column": 5
                       }
                     }
@@ -1275,15 +1228,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Driving a Vehicle",
-                    "start": 3181,
-                    "end": 3201,
+                    "start": 3112,
+                    "end": 3132,
                     "loc": {
                       "start": {
-                        "line": 71,
+                        "line": 65,
                         "column": 2
                       },
                       "end": {
-                        "line": 71,
+                        "line": 65,
                         "column": 22
                       }
                     }
@@ -1291,15 +1244,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Applies a force between the specified wheel and the ground under the vehicle.\n   * @access public\n   * @param {number} value - The magnitude of the force, in newtons.\n   * @param {number} index - The index of the wheel applying the force.\n   * @returns {void}\n   * @desc Applying a positive force turns the wheel in a direction that would move the vehicle forward; applying a negative force moves the vehicle in reverse.As with all physical quantities in SceneKit, you need not use realistic force measurements in your app—the effects of the physics simulation depend on the relative differences between forces, not on their absolute values. You may use whatever values produce the behavior or gameplay you’re looking for as long as you use them consistently.Calling this method applies a force for one step (or frame) of the physics simulation. To continuously accelerate a vehicle, call this method again on subequent simulation steps (for example, from your scene renderer delegate’s renderer(_:updateAtTime:) method) until the vehicle reaches your desired speed.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387963-applyengineforce\n   ",
-                    "start": 3205,
-                    "end": 4386,
+                    "start": 3136,
+                    "end": 4317,
                     "loc": {
                       "start": {
-                        "line": 73,
+                        "line": 67,
                         "column": 2
                       },
                       "end": {
-                        "line": 81,
+                        "line": 75,
                         "column": 5
                       }
                     }
@@ -1308,30 +1261,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 4389,
-                "end": 4435,
+                "start": 4320,
+                "end": 4366,
                 "loc": {
                   "start": {
-                    "line": 82,
+                    "line": 76,
                     "column": 2
                   },
                   "end": {
-                    "line": 83,
+                    "line": 77,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 4389,
-                  "end": 4415,
+                  "start": 4320,
+                  "end": 4346,
                   "loc": {
                     "start": {
-                      "line": 82,
+                      "line": 76,
                       "column": 2
                     },
                     "end": {
-                      "line": 82,
+                      "line": 76,
                       "column": 28
                     },
                     "identifierName": "applyEngineForceForWheelAt"
@@ -1348,15 +1301,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 4416,
-                    "end": 4421,
+                    "start": 4347,
+                    "end": 4352,
                     "loc": {
                       "start": {
-                        "line": 82,
+                        "line": 76,
                         "column": 29
                       },
                       "end": {
-                        "line": 82,
+                        "line": 76,
                         "column": 34
                       },
                       "identifierName": "value"
@@ -1365,15 +1318,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 4423,
-                    "end": 4428,
+                    "start": 4354,
+                    "end": 4359,
                     "loc": {
                       "start": {
-                        "line": 82,
+                        "line": 76,
                         "column": 36
                       },
                       "end": {
-                        "line": 82,
+                        "line": 76,
                         "column": 41
                       },
                       "identifierName": "index"
@@ -1383,15 +1336,15 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 4430,
-                  "end": 4435,
+                  "start": 4361,
+                  "end": 4366,
                   "loc": {
                     "start": {
-                      "line": 82,
+                      "line": 76,
                       "column": 43
                     },
                     "end": {
-                      "line": 83,
+                      "line": 77,
                       "column": 3
                     }
                   },
@@ -1404,15 +1357,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Driving a Vehicle",
-                    "start": 3181,
-                    "end": 3201,
+                    "start": 3112,
+                    "end": 3132,
                     "loc": {
                       "start": {
-                        "line": 71,
+                        "line": 65,
                         "column": 2
                       },
                       "end": {
-                        "line": 71,
+                        "line": 65,
                         "column": 22
                       }
                     }
@@ -1420,15 +1373,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Applies a force between the specified wheel and the ground under the vehicle.\n   * @access public\n   * @param {number} value - The magnitude of the force, in newtons.\n   * @param {number} index - The index of the wheel applying the force.\n   * @returns {void}\n   * @desc Applying a positive force turns the wheel in a direction that would move the vehicle forward; applying a negative force moves the vehicle in reverse.As with all physical quantities in SceneKit, you need not use realistic force measurements in your app—the effects of the physics simulation depend on the relative differences between forces, not on their absolute values. You may use whatever values produce the behavior or gameplay you’re looking for as long as you use them consistently.Calling this method applies a force for one step (or frame) of the physics simulation. To continuously accelerate a vehicle, call this method again on subequent simulation steps (for example, from your scene renderer delegate’s renderer(_:updateAtTime:) method) until the vehicle reaches your desired speed.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387963-applyengineforce\n   ",
-                    "start": 3205,
-                    "end": 4386,
+                    "start": 3136,
+                    "end": 4317,
                     "loc": {
                       "start": {
-                        "line": 73,
+                        "line": 67,
                         "column": 2
                       },
                       "end": {
-                        "line": 81,
+                        "line": 75,
                         "column": 5
                       }
                     }
@@ -1438,15 +1391,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Applies a force between the specified wheel and the ground under the vehicle.\n   * @access public\n   * @param {number} value - The magnitude of the torque, in newton-meters.\n   * @param {number} index - The index of the wheel applying the force.\n   * @returns {void}\n   * @desc Applying a braking force causes the wheel to slow down regardless of the direction it’s currently spinning in.As with all physical quantities in SceneKit, you need not use realistic force measurements in your app—the effects of the physics simulation depend on the relative differences between forces, not on their absolute values. You may use whatever values produce the behavior or gameplay you’re looking for as long as you use them consistently.Calling this method applies a braking force for one step (or frame) of the physics simulation. To continuously decelerate a vehicle, call this method again on subequent simulation steps (for example, from your scene renderer delegate’s renderer(_:updateAtTime:) method) until the vehicle stops or reaches your desired speed.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387894-applybrakingforce\n   ",
-                    "start": 4439,
-                    "end": 5606,
+                    "start": 4370,
+                    "end": 5537,
                     "loc": {
                       "start": {
-                        "line": 85,
+                        "line": 79,
                         "column": 2
                       },
                       "end": {
-                        "line": 93,
+                        "line": 87,
                         "column": 5
                       }
                     }
@@ -1455,30 +1408,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 5609,
-                "end": 5656,
+                "start": 5540,
+                "end": 5587,
                 "loc": {
                   "start": {
-                    "line": 94,
+                    "line": 88,
                     "column": 2
                   },
                   "end": {
-                    "line": 95,
+                    "line": 89,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 5609,
-                  "end": 5636,
+                  "start": 5540,
+                  "end": 5567,
                   "loc": {
                     "start": {
-                      "line": 94,
+                      "line": 88,
                       "column": 2
                     },
                     "end": {
-                      "line": 94,
+                      "line": 88,
                       "column": 29
                     },
                     "identifierName": "applyBrakingForceForWheelAt"
@@ -1495,15 +1448,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 5637,
-                    "end": 5642,
+                    "start": 5568,
+                    "end": 5573,
                     "loc": {
                       "start": {
-                        "line": 94,
+                        "line": 88,
                         "column": 30
                       },
                       "end": {
-                        "line": 94,
+                        "line": 88,
                         "column": 35
                       },
                       "identifierName": "value"
@@ -1512,15 +1465,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 5644,
-                    "end": 5649,
+                    "start": 5575,
+                    "end": 5580,
                     "loc": {
                       "start": {
-                        "line": 94,
+                        "line": 88,
                         "column": 37
                       },
                       "end": {
-                        "line": 94,
+                        "line": 88,
                         "column": 42
                       },
                       "identifierName": "index"
@@ -1530,15 +1483,15 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 5651,
-                  "end": 5656,
+                  "start": 5582,
+                  "end": 5587,
                   "loc": {
                     "start": {
-                      "line": 94,
+                      "line": 88,
                       "column": 44
                     },
                     "end": {
-                      "line": 95,
+                      "line": 89,
                       "column": 3
                     }
                   },
@@ -1551,15 +1504,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Applies a force between the specified wheel and the ground under the vehicle.\n   * @access public\n   * @param {number} value - The magnitude of the torque, in newton-meters.\n   * @param {number} index - The index of the wheel applying the force.\n   * @returns {void}\n   * @desc Applying a braking force causes the wheel to slow down regardless of the direction it’s currently spinning in.As with all physical quantities in SceneKit, you need not use realistic force measurements in your app—the effects of the physics simulation depend on the relative differences between forces, not on their absolute values. You may use whatever values produce the behavior or gameplay you’re looking for as long as you use them consistently.Calling this method applies a braking force for one step (or frame) of the physics simulation. To continuously decelerate a vehicle, call this method again on subequent simulation steps (for example, from your scene renderer delegate’s renderer(_:updateAtTime:) method) until the vehicle stops or reaches your desired speed.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387894-applybrakingforce\n   ",
-                    "start": 4439,
-                    "end": 5606,
+                    "start": 4370,
+                    "end": 5537,
                     "loc": {
                       "start": {
-                        "line": 85,
+                        "line": 79,
                         "column": 2
                       },
                       "end": {
-                        "line": 93,
+                        "line": 87,
                         "column": 5
                       }
                     }
@@ -1569,15 +1522,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Pivots the specified wheel around its steering axis.\n   * @access public\n   * @param {number} value - The angle to set the wheel at relative to its steering axis, in radians.\n   * @param {number} index - The index, in the vehicle’s wheels array, of the wheel to be pivoted.\n   * @returns {void}\n   * @desc Steering angles are relative to the wheel’s steeringAxis vector. With the default steering axis of {0.0, -1.0, 0.0}, a steering angle of 0.0 represents neutral steering, positive values steer the vehicle to the right, and negative values steer to the left.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387952-setsteeringangle\n   ",
-                    "start": 5660,
-                    "end": 6337,
+                    "start": 5591,
+                    "end": 6268,
                     "loc": {
                       "start": {
-                        "line": 97,
+                        "line": 91,
                         "column": 2
                       },
                       "end": {
-                        "line": 105,
+                        "line": 99,
                         "column": 5
                       }
                     }
@@ -1586,30 +1539,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 6340,
-                "end": 6386,
+                "start": 6271,
+                "end": 6317,
                 "loc": {
                   "start": {
-                    "line": 106,
+                    "line": 100,
                     "column": 2
                   },
                   "end": {
-                    "line": 107,
+                    "line": 101,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 6340,
-                  "end": 6366,
+                  "start": 6271,
+                  "end": 6297,
                   "loc": {
                     "start": {
-                      "line": 106,
+                      "line": 100,
                       "column": 2
                     },
                     "end": {
-                      "line": 106,
+                      "line": 100,
                       "column": 28
                     },
                     "identifierName": "setSteeringAngleForWheelAt"
@@ -1626,15 +1579,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 6367,
-                    "end": 6372,
+                    "start": 6298,
+                    "end": 6303,
                     "loc": {
                       "start": {
-                        "line": 106,
+                        "line": 100,
                         "column": 29
                       },
                       "end": {
-                        "line": 106,
+                        "line": 100,
                         "column": 34
                       },
                       "identifierName": "value"
@@ -1643,15 +1596,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 6374,
-                    "end": 6379,
+                    "start": 6305,
+                    "end": 6310,
                     "loc": {
                       "start": {
-                        "line": 106,
+                        "line": 100,
                         "column": 36
                       },
                       "end": {
-                        "line": 106,
+                        "line": 100,
                         "column": 41
                       },
                       "identifierName": "index"
@@ -1661,15 +1614,15 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 6381,
-                  "end": 6386,
+                  "start": 6312,
+                  "end": 6317,
                   "loc": {
                     "start": {
-                      "line": 106,
+                      "line": 100,
                       "column": 43
                     },
                     "end": {
-                      "line": 107,
+                      "line": 101,
                       "column": 3
                     }
                   },
@@ -1682,15 +1635,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Pivots the specified wheel around its steering axis.\n   * @access public\n   * @param {number} value - The angle to set the wheel at relative to its steering axis, in radians.\n   * @param {number} index - The index, in the vehicle’s wheels array, of the wheel to be pivoted.\n   * @returns {void}\n   * @desc Steering angles are relative to the wheel’s steeringAxis vector. With the default steering axis of {0.0, -1.0, 0.0}, a steering angle of 0.0 represents neutral steering, positive values steer the vehicle to the right, and negative values steer to the left.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387952-setsteeringangle\n   ",
-                    "start": 5660,
-                    "end": 6337,
+                    "start": 5591,
+                    "end": 6268,
                     "loc": {
                       "start": {
-                        "line": 97,
+                        "line": 91,
                         "column": 2
                       },
                       "end": {
-                        "line": 105,
+                        "line": 99,
                         "column": 5
                       }
                     }
@@ -1700,15 +1653,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The vehicle’s ground speed, in kilometers per hour.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387910-speedinkilometersperhour\n   ",
-                    "start": 6389,
-                    "end": 6595,
+                    "start": 6321,
+                    "end": 6527,
                     "loc": {
                       "start": {
-                        "line": 108,
+                        "line": 103,
                         "column": 2
                       },
                       "end": {
-                        "line": 113,
+                        "line": 108,
                         "column": 5
                       }
                     }
@@ -1717,30 +1670,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 6598,
-                "end": 6676,
+                "start": 6530,
+                "end": 6608,
                 "loc": {
                   "start": {
-                    "line": 114,
+                    "line": 109,
                     "column": 2
                   },
                   "end": {
-                    "line": 116,
+                    "line": 111,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 6602,
-                  "end": 6626,
+                  "start": 6534,
+                  "end": 6558,
                   "loc": {
                     "start": {
-                      "line": 114,
+                      "line": 109,
                       "column": 6
                     },
                     "end": {
-                      "line": 114,
+                      "line": 109,
                       "column": 30
                     },
                     "identifierName": "speedInKilometersPerHour"
@@ -1756,73 +1709,73 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 6629,
-                  "end": 6676,
+                  "start": 6561,
+                  "end": 6608,
                   "loc": {
                     "start": {
-                      "line": 114,
+                      "line": 109,
                       "column": 33
                     },
                     "end": {
-                      "line": 116,
+                      "line": 111,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 6635,
-                      "end": 6672,
+                      "start": 6567,
+                      "end": 6604,
                       "loc": {
                         "start": {
-                          "line": 115,
+                          "line": 110,
                           "column": 4
                         },
                         "end": {
-                          "line": 115,
+                          "line": 110,
                           "column": 41
                         }
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 6642,
-                        "end": 6672,
+                        "start": 6574,
+                        "end": 6604,
                         "loc": {
                           "start": {
-                            "line": 115,
+                            "line": 110,
                             "column": 11
                           },
                           "end": {
-                            "line": 115,
+                            "line": 110,
                             "column": 41
                           }
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 6642,
-                          "end": 6646,
+                          "start": 6574,
+                          "end": 6578,
                           "loc": {
                             "start": {
-                              "line": 115,
+                              "line": 110,
                               "column": 11
                             },
                             "end": {
-                              "line": 115,
+                              "line": 110,
                               "column": 15
                             }
                           }
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 6647,
-                          "end": 6672,
+                          "start": 6579,
+                          "end": 6604,
                           "loc": {
                             "start": {
-                              "line": 115,
+                              "line": 110,
                               "column": 16
                             },
                             "end": {
-                              "line": 115,
+                              "line": 110,
                               "column": 41
                             },
                             "identifierName": "_speedInKilometersPerHour"
@@ -1839,15 +1792,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The vehicle’s ground speed, in kilometers per hour.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387910-speedinkilometersperhour\n   ",
-                    "start": 6389,
-                    "end": 6595,
+                    "start": 6321,
+                    "end": 6527,
                     "loc": {
                       "start": {
-                        "line": 108,
+                        "line": 103,
                         "column": 2
                       },
                       "end": {
-                        "line": 113,
+                        "line": 108,
                         "column": 5
                       }
                     }
@@ -1952,17 +1905,33 @@
       }
     },
     {
-      "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 492,
-      "end": 559,
+      "type": "CommentLine",
+      "value": " Creating a Vehicle",
+      "start": 491,
+      "end": 512,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 15,
           "column": 2
         },
         "end": {
-          "line": 20,
+          "line": 15,
+          "column": 23
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Creates a vehicle behavior.\n   * @access public\n   * @constructor\n   * @param {SCNPhysicsBody} chassisBody - A physics body to serve as the vehicle’s chassis.\n   * @param {SCNPhysicsVehicleWheel[]} wheels - An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels. A vehicle must have at least one wheel.\n   * @desc Each object in the wheels array associates a node with the wheel to serve as its visual representation and defines properties for the wheel’s physical characteristics. Each wheel object must reference a unique node, which should be a child of the node containing the physics body used for the vehicle’s chassis. Typically, you load a node hierarchy representing the vehicle and all of its wheels from a scene file and then designate which nodes serve as the body and wheels.For a behavior to take effect, you must add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387943-init\n   ",
+      "start": 516,
+      "end": 1579,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 2
+        },
+        "end": {
+          "line": 25,
           "column": 5
         }
       }
@@ -1970,15 +1939,15 @@
     {
       "type": "CommentLine",
       "value": " Working with a Vehicle’s Physical Characteristics",
-      "start": 576,
-      "end": 628,
+      "start": 1634,
+      "end": 1686,
       "loc": {
         "start": {
-          "line": 23,
+          "line": 29,
           "column": 4
         },
         "end": {
-          "line": 23,
+          "line": 29,
           "column": 56
         }
       }
@@ -1986,63 +1955,31 @@
     {
       "type": "CommentLine",
       "value": " Driving a Vehicle",
-      "start": 688,
-      "end": 708,
+      "start": 1746,
+      "end": 1766,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 34,
           "column": 4
         },
         "end": {
-          "line": 28,
+          "line": 34,
           "column": 24
         }
       }
     },
     {
       "type": "CommentLine",
-      "value": " Creating a Vehicle",
-      "start": 756,
-      "end": 777,
-      "loc": {
-        "start": {
-          "line": 33,
-          "column": 2
-        },
-        "end": {
-          "line": 33,
-          "column": 23
-        }
-      }
-    },
-    {
-      "type": "CommentBlock",
-      "value": "*\n   * Creates a vehicle behavior.\n   * @access public\n   * @param {SCNPhysicsBody} chassisBody - A physics body to serve as the vehicle’s chassis.\n   * @param {SCNPhysicsVehicleWheel[]} wheels - An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels. A vehicle must have at least one wheel.\n   * @returns {void}\n   * @desc Each object in the wheels array associates a node with the wheel to serve as its visual representation and defines properties for the wheel’s physical characteristics. Each wheel object must reference a unique node, which should be a child of the node containing the physics body used for the vehicle’s chassis. Typically, you load a node hierarchy representing the vehicle and all of its wheels from a scene file and then designate which nodes serve as the body and wheels.For a behavior to take effect, you must add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387943-init\n   ",
-      "start": 781,
-      "end": 1847,
-      "loc": {
-        "start": {
-          "line": 35,
-          "column": 2
-        },
-        "end": {
-          "line": 43,
-          "column": 5
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
       "value": " Working with a Vehicle’s Physical Characteristics",
-      "start": 1885,
-      "end": 1937,
+      "start": 1814,
+      "end": 1866,
       "loc": {
         "start": {
-          "line": 47,
+          "line": 39,
           "column": 2
         },
         "end": {
-          "line": 47,
+          "line": 39,
           "column": 54
         }
       }
@@ -2050,15 +1987,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The physics body representing the vehicle’s chassis.\n   * @type {SCNPhysicsBody}\n   * @desc The vehicle’s chassis must be a dynamic body.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387985-chassisbody\n   ",
-      "start": 1940,
-      "end": 2187,
+      "start": 1870,
+      "end": 2117,
       "loc": {
         "start": {
-          "line": 48,
+          "line": 41,
           "column": 2
         },
         "end": {
-          "line": 53,
+          "line": 46,
           "column": 5
         }
       }
@@ -2066,15 +2003,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels.\n   * @type {SCNPhysicsVehicleWheel[]}\n   * @desc You can dynamically change the suspension and traction properties of a wheel connected to the vehicle by using the corresponding SCNPhysicsVehicleWheel object or by using Key-value coding with a keypath of the form wheels[index].propertyName. For example, the following code changes the size of the first wheel attached to the vehicle, simulating a failed tire:SCNPhysicsVehicle *vehicle = [SCNPhysicsVehicle vehicleWithChassisBody:car wheels:wheels];\n[vehicle setValue:@0.1 forKeyPath:@\"wheels[0].radius\"];\nSCNPhysicsVehicle *vehicle = [SCNPhysicsVehicle vehicleWithChassisBody:car wheels:wheels];\n[vehicle setValue:@0.1 forKeyPath:@\"wheels[0].radius\"];\n\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387906-wheels\n   ",
-      "start": 2245,
-      "end": 3132,
+      "start": 2176,
+      "end": 3063,
       "loc": {
         "start": {
-          "line": 57,
+          "line": 51,
           "column": 2
         },
         "end": {
-          "line": 66,
+          "line": 60,
           "column": 5
         }
       }
@@ -2082,15 +2019,15 @@
     {
       "type": "CommentLine",
       "value": " Driving a Vehicle",
-      "start": 3181,
-      "end": 3201,
+      "start": 3112,
+      "end": 3132,
       "loc": {
         "start": {
-          "line": 71,
+          "line": 65,
           "column": 2
         },
         "end": {
-          "line": 71,
+          "line": 65,
           "column": 22
         }
       }
@@ -2098,15 +2035,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Applies a force between the specified wheel and the ground under the vehicle.\n   * @access public\n   * @param {number} value - The magnitude of the force, in newtons.\n   * @param {number} index - The index of the wheel applying the force.\n   * @returns {void}\n   * @desc Applying a positive force turns the wheel in a direction that would move the vehicle forward; applying a negative force moves the vehicle in reverse.As with all physical quantities in SceneKit, you need not use realistic force measurements in your app—the effects of the physics simulation depend on the relative differences between forces, not on their absolute values. You may use whatever values produce the behavior or gameplay you’re looking for as long as you use them consistently.Calling this method applies a force for one step (or frame) of the physics simulation. To continuously accelerate a vehicle, call this method again on subequent simulation steps (for example, from your scene renderer delegate’s renderer(_:updateAtTime:) method) until the vehicle reaches your desired speed.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387963-applyengineforce\n   ",
-      "start": 3205,
-      "end": 4386,
+      "start": 3136,
+      "end": 4317,
       "loc": {
         "start": {
-          "line": 73,
+          "line": 67,
           "column": 2
         },
         "end": {
-          "line": 81,
+          "line": 75,
           "column": 5
         }
       }
@@ -2114,15 +2051,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Applies a force between the specified wheel and the ground under the vehicle.\n   * @access public\n   * @param {number} value - The magnitude of the torque, in newton-meters.\n   * @param {number} index - The index of the wheel applying the force.\n   * @returns {void}\n   * @desc Applying a braking force causes the wheel to slow down regardless of the direction it’s currently spinning in.As with all physical quantities in SceneKit, you need not use realistic force measurements in your app—the effects of the physics simulation depend on the relative differences between forces, not on their absolute values. You may use whatever values produce the behavior or gameplay you’re looking for as long as you use them consistently.Calling this method applies a braking force for one step (or frame) of the physics simulation. To continuously decelerate a vehicle, call this method again on subequent simulation steps (for example, from your scene renderer delegate’s renderer(_:updateAtTime:) method) until the vehicle stops or reaches your desired speed.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387894-applybrakingforce\n   ",
-      "start": 4439,
-      "end": 5606,
+      "start": 4370,
+      "end": 5537,
       "loc": {
         "start": {
-          "line": 85,
+          "line": 79,
           "column": 2
         },
         "end": {
-          "line": 93,
+          "line": 87,
           "column": 5
         }
       }
@@ -2130,15 +2067,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Pivots the specified wheel around its steering axis.\n   * @access public\n   * @param {number} value - The angle to set the wheel at relative to its steering axis, in radians.\n   * @param {number} index - The index, in the vehicle’s wheels array, of the wheel to be pivoted.\n   * @returns {void}\n   * @desc Steering angles are relative to the wheel’s steeringAxis vector. With the default steering axis of {0.0, -1.0, 0.0}, a steering angle of 0.0 represents neutral steering, positive values steer the vehicle to the right, and negative values steer to the left.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387952-setsteeringangle\n   ",
-      "start": 5660,
-      "end": 6337,
+      "start": 5591,
+      "end": 6268,
       "loc": {
         "start": {
-          "line": 97,
+          "line": 91,
           "column": 2
         },
         "end": {
-          "line": 105,
+          "line": 99,
           "column": 5
         }
       }
@@ -2146,15 +2083,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The vehicle’s ground speed, in kilometers per hour.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387910-speedinkilometersperhour\n   ",
-      "start": 6389,
-      "end": 6595,
+      "start": 6321,
+      "end": 6527,
       "loc": {
         "start": {
-          "line": 108,
+          "line": 103,
           "column": 2
         },
         "end": {
-          "line": 113,
+          "line": 108,
           "column": 5
         }
       }
@@ -2715,17 +2652,33 @@
       }
     },
     {
-      "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 492,
-      "end": 559,
+      "type": "CommentLine",
+      "value": " Creating a Vehicle",
+      "start": 491,
+      "end": 512,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 15,
           "column": 2
         },
         "end": {
-          "line": 20,
+          "line": 15,
+          "column": 23
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Creates a vehicle behavior.\n   * @access public\n   * @constructor\n   * @param {SCNPhysicsBody} chassisBody - A physics body to serve as the vehicle’s chassis.\n   * @param {SCNPhysicsVehicleWheel[]} wheels - An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels. A vehicle must have at least one wheel.\n   * @desc Each object in the wheels array associates a node with the wheel to serve as its visual representation and defines properties for the wheel’s physical characteristics. Each wheel object must reference a unique node, which should be a child of the node containing the physics body used for the vehicle’s chassis. Typically, you load a node hierarchy representing the vehicle and all of its wheels from a scene file and then designate which nodes serve as the body and wheels.For a behavior to take effect, you must add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387943-init\n   ",
+      "start": 516,
+      "end": 1579,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 2
+        },
+        "end": {
+          "line": 25,
           "column": 5
         }
       }
@@ -2742,17 +2695,17 @@
         "postfix": false,
         "binop": null
       },
-      "value": "init",
-      "start": 562,
-      "end": 566,
+      "value": "constructor",
+      "start": 1582,
+      "end": 1593,
       "loc": {
         "start": {
-          "line": 21,
+          "line": 26,
           "column": 2
         },
         "end": {
-          "line": 21,
-          "column": 6
+          "line": 26,
+          "column": 13
         }
       }
     },
@@ -2768,16 +2721,94 @@
         "postfix": false,
         "binop": null
       },
-      "start": 566,
-      "end": 567,
+      "start": 1593,
+      "end": 1594,
       "loc": {
         "start": {
-          "line": 21,
-          "column": 6
+          "line": 26,
+          "column": 13
         },
         "end": {
-          "line": 21,
-          "column": 7
+          "line": 26,
+          "column": 14
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "chassisBody",
+      "start": 1594,
+      "end": 1605,
+      "loc": {
+        "start": {
+          "line": 26,
+          "column": 14
+        },
+        "end": {
+          "line": 26,
+          "column": 25
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1605,
+      "end": 1606,
+      "loc": {
+        "start": {
+          "line": 26,
+          "column": 25
+        },
+        "end": {
+          "line": 26,
+          "column": 26
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "wheels",
+      "start": 1607,
+      "end": 1613,
+      "loc": {
+        "start": {
+          "line": 26,
+          "column": 27
+        },
+        "end": {
+          "line": 26,
+          "column": 33
         }
       }
     },
@@ -2793,16 +2824,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 567,
-      "end": 568,
+      "start": 1613,
+      "end": 1614,
       "loc": {
         "start": {
-          "line": 21,
-          "column": 7
+          "line": 26,
+          "column": 33
         },
         "end": {
-          "line": 21,
-          "column": 8
+          "line": 26,
+          "column": 34
         }
       }
     },
@@ -2818,31 +2849,109 @@
         "postfix": false,
         "binop": null
       },
-      "start": 569,
-      "end": 570,
+      "start": 1615,
+      "end": 1616,
       "loc": {
         "start": {
-          "line": 21,
+          "line": 26,
+          "column": 35
+        },
+        "end": {
+          "line": 26,
+          "column": 36
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "super",
+        "keyword": "super",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "super",
+      "start": 1621,
+      "end": 1626,
+      "loc": {
+        "start": {
+          "line": 27,
+          "column": 4
+        },
+        "end": {
+          "line": 27,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1626,
+      "end": 1627,
+      "loc": {
+        "start": {
+          "line": 27,
           "column": 9
         },
         "end": {
-          "line": 21,
+          "line": 27,
           "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1627,
+      "end": 1628,
+      "loc": {
+        "start": {
+          "line": 27,
+          "column": 10
+        },
+        "end": {
+          "line": 27,
+          "column": 11
         }
       }
     },
     {
       "type": "CommentLine",
       "value": " Working with a Vehicle’s Physical Characteristics",
-      "start": 576,
-      "end": 628,
+      "start": 1634,
+      "end": 1686,
       "loc": {
         "start": {
-          "line": 23,
+          "line": 29,
           "column": 4
         },
         "end": {
-          "line": 23,
+          "line": 29,
           "column": 56
         }
       }
@@ -2862,15 +2971,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 634,
-      "end": 638,
+      "start": 1692,
+      "end": 1696,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 31,
           "column": 4
         },
         "end": {
-          "line": 25,
+          "line": 31,
           "column": 8
         }
       }
@@ -2888,15 +2997,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 638,
-      "end": 639,
+      "start": 1696,
+      "end": 1697,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 31,
           "column": 8
         },
         "end": {
-          "line": 25,
+          "line": 31,
           "column": 9
         }
       }
@@ -2914,15 +3023,15 @@
         "binop": null
       },
       "value": "_chassisBody",
-      "start": 639,
-      "end": 651,
+      "start": 1697,
+      "end": 1709,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 31,
           "column": 9
         },
         "end": {
-          "line": 25,
+          "line": 31,
           "column": 21
         }
       }
@@ -2941,15 +3050,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 652,
-      "end": 653,
+      "start": 1710,
+      "end": 1711,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 31,
           "column": 22
         },
         "end": {
-          "line": 25,
+          "line": 31,
           "column": 23
         }
       }
@@ -2969,15 +3078,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 654,
-      "end": 658,
+      "start": 1712,
+      "end": 1716,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 31,
           "column": 24
         },
         "end": {
-          "line": 25,
+          "line": 31,
           "column": 28
         }
       }
@@ -2997,15 +3106,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 663,
-      "end": 667,
+      "start": 1721,
+      "end": 1725,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 32,
           "column": 4
         },
         "end": {
-          "line": 26,
+          "line": 32,
           "column": 8
         }
       }
@@ -3023,15 +3132,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 667,
-      "end": 668,
+      "start": 1725,
+      "end": 1726,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 32,
           "column": 8
         },
         "end": {
-          "line": 26,
+          "line": 32,
           "column": 9
         }
       }
@@ -3049,15 +3158,15 @@
         "binop": null
       },
       "value": "_wheels",
-      "start": 668,
-      "end": 675,
+      "start": 1726,
+      "end": 1733,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 32,
           "column": 9
         },
         "end": {
-          "line": 26,
+          "line": 32,
           "column": 16
         }
       }
@@ -3076,15 +3185,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 676,
-      "end": 677,
+      "start": 1734,
+      "end": 1735,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 32,
           "column": 17
         },
         "end": {
-          "line": 26,
+          "line": 32,
           "column": 18
         }
       }
@@ -3104,15 +3213,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 678,
-      "end": 682,
+      "start": 1736,
+      "end": 1740,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 32,
           "column": 19
         },
         "end": {
-          "line": 26,
+          "line": 32,
           "column": 23
         }
       }
@@ -3120,15 +3229,15 @@
     {
       "type": "CommentLine",
       "value": " Driving a Vehicle",
-      "start": 688,
-      "end": 708,
+      "start": 1746,
+      "end": 1766,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 34,
           "column": 4
         },
         "end": {
-          "line": 28,
+          "line": 34,
           "column": 24
         }
       }
@@ -3148,15 +3257,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 714,
-      "end": 718,
+      "start": 1772,
+      "end": 1776,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 36,
           "column": 4
         },
         "end": {
-          "line": 30,
+          "line": 36,
           "column": 8
         }
       }
@@ -3174,15 +3283,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 718,
-      "end": 719,
+      "start": 1776,
+      "end": 1777,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 36,
           "column": 8
         },
         "end": {
-          "line": 30,
+          "line": 36,
           "column": 9
         }
       }
@@ -3200,15 +3309,15 @@
         "binop": null
       },
       "value": "_speedInKilometersPerHour",
-      "start": 719,
-      "end": 744,
+      "start": 1777,
+      "end": 1802,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 36,
           "column": 9
         },
         "end": {
-          "line": 30,
+          "line": 36,
           "column": 34
         }
       }
@@ -3227,15 +3336,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 745,
-      "end": 746,
+      "start": 1803,
+      "end": 1804,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 36,
           "column": 35
         },
         "end": {
-          "line": 30,
+          "line": 36,
           "column": 36
         }
       }
@@ -3254,15 +3363,15 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 747,
-      "end": 748,
+      "start": 1805,
+      "end": 1806,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 36,
           "column": 37
         },
         "end": {
-          "line": 30,
+          "line": 36,
           "column": 38
         }
       }
@@ -3279,251 +3388,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 751,
-      "end": 752,
+      "start": 1809,
+      "end": 1810,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 37,
           "column": 2
         },
         "end": {
-          "line": 31,
-          "column": 3
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": " Creating a Vehicle",
-      "start": 756,
-      "end": 777,
-      "loc": {
-        "start": {
-          "line": 33,
-          "column": 2
-        },
-        "end": {
-          "line": 33,
-          "column": 23
-        }
-      }
-    },
-    {
-      "type": "CommentBlock",
-      "value": "*\n   * Creates a vehicle behavior.\n   * @access public\n   * @param {SCNPhysicsBody} chassisBody - A physics body to serve as the vehicle’s chassis.\n   * @param {SCNPhysicsVehicleWheel[]} wheels - An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels. A vehicle must have at least one wheel.\n   * @returns {void}\n   * @desc Each object in the wheels array associates a node with the wheel to serve as its visual representation and defines properties for the wheel’s physical characteristics. Each wheel object must reference a unique node, which should be a child of the node containing the physics body used for the vehicle’s chassis. Typically, you load a node hierarchy representing the vehicle and all of its wheels from a scene file and then designate which nodes serve as the body and wheels.For a behavior to take effect, you must add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387943-init\n   ",
-      "start": 781,
-      "end": 1847,
-      "loc": {
-        "start": {
-          "line": 35,
-          "column": 2
-        },
-        "end": {
-          "line": 43,
-          "column": 5
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "init",
-      "start": 1850,
-      "end": 1854,
-      "loc": {
-        "start": {
-          "line": 44,
-          "column": 2
-        },
-        "end": {
-          "line": 44,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 1854,
-      "end": 1855,
-      "loc": {
-        "start": {
-          "line": 44,
-          "column": 6
-        },
-        "end": {
-          "line": 44,
-          "column": 7
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "chassisBody",
-      "start": 1855,
-      "end": 1866,
-      "loc": {
-        "start": {
-          "line": 44,
-          "column": 7
-        },
-        "end": {
-          "line": 44,
-          "column": 18
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 1866,
-      "end": 1867,
-      "loc": {
-        "start": {
-          "line": 44,
-          "column": 18
-        },
-        "end": {
-          "line": 44,
-          "column": 19
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "wheels",
-      "start": 1868,
-      "end": 1874,
-      "loc": {
-        "start": {
-          "line": 44,
-          "column": 20
-        },
-        "end": {
-          "line": 44,
-          "column": 26
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 1874,
-      "end": 1875,
-      "loc": {
-        "start": {
-          "line": 44,
-          "column": 26
-        },
-        "end": {
-          "line": 44,
-          "column": 27
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "{",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 1876,
-      "end": 1877,
-      "loc": {
-        "start": {
-          "line": 44,
-          "column": 28
-        },
-        "end": {
-          "line": 44,
-          "column": 29
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "}",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 1880,
-      "end": 1881,
-      "loc": {
-        "start": {
-          "line": 45,
-          "column": 2
-        },
-        "end": {
-          "line": 45,
+          "line": 37,
           "column": 3
         }
       }
@@ -3531,15 +3404,15 @@
     {
       "type": "CommentLine",
       "value": " Working with a Vehicle’s Physical Characteristics",
-      "start": 1885,
-      "end": 1937,
+      "start": 1814,
+      "end": 1866,
       "loc": {
         "start": {
-          "line": 47,
+          "line": 39,
           "column": 2
         },
         "end": {
-          "line": 47,
+          "line": 39,
           "column": 54
         }
       }
@@ -3547,15 +3420,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The physics body representing the vehicle’s chassis.\n   * @type {SCNPhysicsBody}\n   * @desc The vehicle’s chassis must be a dynamic body.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387985-chassisbody\n   ",
-      "start": 1940,
-      "end": 2187,
+      "start": 1870,
+      "end": 2117,
       "loc": {
         "start": {
-          "line": 48,
+          "line": 41,
           "column": 2
         },
         "end": {
-          "line": 53,
+          "line": 46,
           "column": 5
         }
       }
@@ -3573,15 +3446,15 @@
         "binop": null
       },
       "value": "get",
-      "start": 2190,
-      "end": 2193,
+      "start": 2120,
+      "end": 2123,
       "loc": {
         "start": {
-          "line": 54,
+          "line": 47,
           "column": 2
         },
         "end": {
-          "line": 54,
+          "line": 47,
           "column": 5
         }
       }
@@ -3599,15 +3472,15 @@
         "binop": null
       },
       "value": "chassisBody",
-      "start": 2194,
-      "end": 2205,
+      "start": 2124,
+      "end": 2135,
       "loc": {
         "start": {
-          "line": 54,
+          "line": 47,
           "column": 6
         },
         "end": {
-          "line": 54,
+          "line": 47,
           "column": 17
         }
       }
@@ -3624,15 +3497,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2205,
-      "end": 2206,
+      "start": 2135,
+      "end": 2136,
       "loc": {
         "start": {
-          "line": 54,
+          "line": 47,
           "column": 17
         },
         "end": {
-          "line": 54,
+          "line": 47,
           "column": 18
         }
       }
@@ -3649,15 +3522,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2206,
-      "end": 2207,
+      "start": 2136,
+      "end": 2137,
       "loc": {
         "start": {
-          "line": 54,
+          "line": 47,
           "column": 18
         },
         "end": {
-          "line": 54,
+          "line": 47,
           "column": 19
         }
       }
@@ -3674,15 +3547,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2208,
-      "end": 2209,
+      "start": 2138,
+      "end": 2139,
       "loc": {
         "start": {
-          "line": 54,
+          "line": 47,
           "column": 20
         },
         "end": {
-          "line": 54,
+          "line": 47,
           "column": 21
         }
       }
@@ -3702,15 +3575,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 2214,
-      "end": 2220,
+      "start": 2144,
+      "end": 2150,
       "loc": {
         "start": {
-          "line": 55,
+          "line": 48,
           "column": 4
         },
         "end": {
-          "line": 55,
+          "line": 48,
           "column": 10
         }
       }
@@ -3730,15 +3603,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2221,
-      "end": 2225,
+      "start": 2151,
+      "end": 2155,
       "loc": {
         "start": {
-          "line": 55,
+          "line": 48,
           "column": 11
         },
         "end": {
-          "line": 55,
+          "line": 48,
           "column": 15
         }
       }
@@ -3756,15 +3629,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2225,
-      "end": 2226,
+      "start": 2155,
+      "end": 2156,
       "loc": {
         "start": {
-          "line": 55,
+          "line": 48,
           "column": 15
         },
         "end": {
-          "line": 55,
+          "line": 48,
           "column": 16
         }
       }
@@ -3782,15 +3655,15 @@
         "binop": null
       },
       "value": "_chassisBody",
-      "start": 2226,
-      "end": 2238,
+      "start": 2156,
+      "end": 2168,
       "loc": {
         "start": {
-          "line": 55,
+          "line": 48,
           "column": 16
         },
         "end": {
-          "line": 55,
+          "line": 48,
           "column": 28
         }
       }
@@ -3807,15 +3680,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2241,
-      "end": 2242,
+      "start": 2171,
+      "end": 2172,
       "loc": {
         "start": {
-          "line": 56,
+          "line": 49,
           "column": 2
         },
         "end": {
-          "line": 56,
+          "line": 49,
           "column": 3
         }
       }
@@ -3823,15 +3696,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels.\n   * @type {SCNPhysicsVehicleWheel[]}\n   * @desc You can dynamically change the suspension and traction properties of a wheel connected to the vehicle by using the corresponding SCNPhysicsVehicleWheel object or by using Key-value coding with a keypath of the form wheels[index].propertyName. For example, the following code changes the size of the first wheel attached to the vehicle, simulating a failed tire:SCNPhysicsVehicle *vehicle = [SCNPhysicsVehicle vehicleWithChassisBody:car wheels:wheels];\n[vehicle setValue:@0.1 forKeyPath:@\"wheels[0].radius\"];\nSCNPhysicsVehicle *vehicle = [SCNPhysicsVehicle vehicleWithChassisBody:car wheels:wheels];\n[vehicle setValue:@0.1 forKeyPath:@\"wheels[0].radius\"];\n\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387906-wheels\n   ",
-      "start": 2245,
-      "end": 3132,
+      "start": 2176,
+      "end": 3063,
       "loc": {
         "start": {
-          "line": 57,
+          "line": 51,
           "column": 2
         },
         "end": {
-          "line": 66,
+          "line": 60,
           "column": 5
         }
       }
@@ -3849,15 +3722,15 @@
         "binop": null
       },
       "value": "get",
-      "start": 3135,
-      "end": 3138,
+      "start": 3066,
+      "end": 3069,
       "loc": {
         "start": {
-          "line": 67,
+          "line": 61,
           "column": 2
         },
         "end": {
-          "line": 67,
+          "line": 61,
           "column": 5
         }
       }
@@ -3875,15 +3748,15 @@
         "binop": null
       },
       "value": "wheels",
-      "start": 3139,
-      "end": 3145,
+      "start": 3070,
+      "end": 3076,
       "loc": {
         "start": {
-          "line": 67,
+          "line": 61,
           "column": 6
         },
         "end": {
-          "line": 67,
+          "line": 61,
           "column": 12
         }
       }
@@ -3900,15 +3773,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3145,
-      "end": 3146,
+      "start": 3076,
+      "end": 3077,
       "loc": {
         "start": {
-          "line": 67,
+          "line": 61,
           "column": 12
         },
         "end": {
-          "line": 67,
+          "line": 61,
           "column": 13
         }
       }
@@ -3925,15 +3798,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3146,
-      "end": 3147,
+      "start": 3077,
+      "end": 3078,
       "loc": {
         "start": {
-          "line": 67,
+          "line": 61,
           "column": 13
         },
         "end": {
-          "line": 67,
+          "line": 61,
           "column": 14
         }
       }
@@ -3950,15 +3823,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3148,
-      "end": 3149,
+      "start": 3079,
+      "end": 3080,
       "loc": {
         "start": {
-          "line": 67,
+          "line": 61,
           "column": 15
         },
         "end": {
-          "line": 67,
+          "line": 61,
           "column": 16
         }
       }
@@ -3978,15 +3851,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 3154,
-      "end": 3160,
+      "start": 3085,
+      "end": 3091,
       "loc": {
         "start": {
-          "line": 68,
+          "line": 62,
           "column": 4
         },
         "end": {
-          "line": 68,
+          "line": 62,
           "column": 10
         }
       }
@@ -4006,15 +3879,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3161,
-      "end": 3165,
+      "start": 3092,
+      "end": 3096,
       "loc": {
         "start": {
-          "line": 68,
+          "line": 62,
           "column": 11
         },
         "end": {
-          "line": 68,
+          "line": 62,
           "column": 15
         }
       }
@@ -4032,15 +3905,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3165,
-      "end": 3166,
+      "start": 3096,
+      "end": 3097,
       "loc": {
         "start": {
-          "line": 68,
+          "line": 62,
           "column": 15
         },
         "end": {
-          "line": 68,
+          "line": 62,
           "column": 16
         }
       }
@@ -4058,15 +3931,15 @@
         "binop": null
       },
       "value": "_wheels",
-      "start": 3166,
-      "end": 3173,
+      "start": 3097,
+      "end": 3104,
       "loc": {
         "start": {
-          "line": 68,
+          "line": 62,
           "column": 16
         },
         "end": {
-          "line": 68,
+          "line": 62,
           "column": 23
         }
       }
@@ -4083,15 +3956,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3176,
-      "end": 3177,
+      "start": 3107,
+      "end": 3108,
       "loc": {
         "start": {
-          "line": 69,
+          "line": 63,
           "column": 2
         },
         "end": {
-          "line": 69,
+          "line": 63,
           "column": 3
         }
       }
@@ -4099,15 +3972,15 @@
     {
       "type": "CommentLine",
       "value": " Driving a Vehicle",
-      "start": 3181,
-      "end": 3201,
+      "start": 3112,
+      "end": 3132,
       "loc": {
         "start": {
-          "line": 71,
+          "line": 65,
           "column": 2
         },
         "end": {
-          "line": 71,
+          "line": 65,
           "column": 22
         }
       }
@@ -4115,15 +3988,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Applies a force between the specified wheel and the ground under the vehicle.\n   * @access public\n   * @param {number} value - The magnitude of the force, in newtons.\n   * @param {number} index - The index of the wheel applying the force.\n   * @returns {void}\n   * @desc Applying a positive force turns the wheel in a direction that would move the vehicle forward; applying a negative force moves the vehicle in reverse.As with all physical quantities in SceneKit, you need not use realistic force measurements in your app—the effects of the physics simulation depend on the relative differences between forces, not on their absolute values. You may use whatever values produce the behavior or gameplay you’re looking for as long as you use them consistently.Calling this method applies a force for one step (or frame) of the physics simulation. To continuously accelerate a vehicle, call this method again on subequent simulation steps (for example, from your scene renderer delegate’s renderer(_:updateAtTime:) method) until the vehicle reaches your desired speed.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387963-applyengineforce\n   ",
-      "start": 3205,
-      "end": 4386,
+      "start": 3136,
+      "end": 4317,
       "loc": {
         "start": {
-          "line": 73,
+          "line": 67,
           "column": 2
         },
         "end": {
-          "line": 81,
+          "line": 75,
           "column": 5
         }
       }
@@ -4141,15 +4014,15 @@
         "binop": null
       },
       "value": "applyEngineForceForWheelAt",
-      "start": 4389,
-      "end": 4415,
+      "start": 4320,
+      "end": 4346,
       "loc": {
         "start": {
-          "line": 82,
+          "line": 76,
           "column": 2
         },
         "end": {
-          "line": 82,
+          "line": 76,
           "column": 28
         }
       }
@@ -4166,15 +4039,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4415,
-      "end": 4416,
+      "start": 4346,
+      "end": 4347,
       "loc": {
         "start": {
-          "line": 82,
+          "line": 76,
           "column": 28
         },
         "end": {
-          "line": 82,
+          "line": 76,
           "column": 29
         }
       }
@@ -4192,15 +4065,15 @@
         "binop": null
       },
       "value": "value",
-      "start": 4416,
-      "end": 4421,
+      "start": 4347,
+      "end": 4352,
       "loc": {
         "start": {
-          "line": 82,
+          "line": 76,
           "column": 29
         },
         "end": {
-          "line": 82,
+          "line": 76,
           "column": 34
         }
       }
@@ -4218,15 +4091,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4421,
-      "end": 4422,
+      "start": 4352,
+      "end": 4353,
       "loc": {
         "start": {
-          "line": 82,
+          "line": 76,
           "column": 34
         },
         "end": {
-          "line": 82,
+          "line": 76,
           "column": 35
         }
       }
@@ -4244,15 +4117,15 @@
         "binop": null
       },
       "value": "index",
-      "start": 4423,
-      "end": 4428,
+      "start": 4354,
+      "end": 4359,
       "loc": {
         "start": {
-          "line": 82,
+          "line": 76,
           "column": 36
         },
         "end": {
-          "line": 82,
+          "line": 76,
           "column": 41
         }
       }
@@ -4269,15 +4142,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4428,
-      "end": 4429,
+      "start": 4359,
+      "end": 4360,
       "loc": {
         "start": {
-          "line": 82,
+          "line": 76,
           "column": 41
         },
         "end": {
-          "line": 82,
+          "line": 76,
           "column": 42
         }
       }
@@ -4294,15 +4167,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4430,
-      "end": 4431,
+      "start": 4361,
+      "end": 4362,
       "loc": {
         "start": {
-          "line": 82,
+          "line": 76,
           "column": 43
         },
         "end": {
-          "line": 82,
+          "line": 76,
           "column": 44
         }
       }
@@ -4319,15 +4192,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4434,
-      "end": 4435,
+      "start": 4365,
+      "end": 4366,
       "loc": {
         "start": {
-          "line": 83,
+          "line": 77,
           "column": 2
         },
         "end": {
-          "line": 83,
+          "line": 77,
           "column": 3
         }
       }
@@ -4335,15 +4208,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Applies a force between the specified wheel and the ground under the vehicle.\n   * @access public\n   * @param {number} value - The magnitude of the torque, in newton-meters.\n   * @param {number} index - The index of the wheel applying the force.\n   * @returns {void}\n   * @desc Applying a braking force causes the wheel to slow down regardless of the direction it’s currently spinning in.As with all physical quantities in SceneKit, you need not use realistic force measurements in your app—the effects of the physics simulation depend on the relative differences between forces, not on their absolute values. You may use whatever values produce the behavior or gameplay you’re looking for as long as you use them consistently.Calling this method applies a braking force for one step (or frame) of the physics simulation. To continuously decelerate a vehicle, call this method again on subequent simulation steps (for example, from your scene renderer delegate’s renderer(_:updateAtTime:) method) until the vehicle stops or reaches your desired speed.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387894-applybrakingforce\n   ",
-      "start": 4439,
-      "end": 5606,
+      "start": 4370,
+      "end": 5537,
       "loc": {
         "start": {
-          "line": 85,
+          "line": 79,
           "column": 2
         },
         "end": {
-          "line": 93,
+          "line": 87,
           "column": 5
         }
       }
@@ -4361,15 +4234,15 @@
         "binop": null
       },
       "value": "applyBrakingForceForWheelAt",
-      "start": 5609,
-      "end": 5636,
+      "start": 5540,
+      "end": 5567,
       "loc": {
         "start": {
-          "line": 94,
+          "line": 88,
           "column": 2
         },
         "end": {
-          "line": 94,
+          "line": 88,
           "column": 29
         }
       }
@@ -4386,15 +4259,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5636,
-      "end": 5637,
+      "start": 5567,
+      "end": 5568,
       "loc": {
         "start": {
-          "line": 94,
+          "line": 88,
           "column": 29
         },
         "end": {
-          "line": 94,
+          "line": 88,
           "column": 30
         }
       }
@@ -4412,15 +4285,15 @@
         "binop": null
       },
       "value": "value",
-      "start": 5637,
-      "end": 5642,
+      "start": 5568,
+      "end": 5573,
       "loc": {
         "start": {
-          "line": 94,
+          "line": 88,
           "column": 30
         },
         "end": {
-          "line": 94,
+          "line": 88,
           "column": 35
         }
       }
@@ -4438,15 +4311,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 5642,
-      "end": 5643,
+      "start": 5573,
+      "end": 5574,
       "loc": {
         "start": {
-          "line": 94,
+          "line": 88,
           "column": 35
         },
         "end": {
-          "line": 94,
+          "line": 88,
           "column": 36
         }
       }
@@ -4464,15 +4337,15 @@
         "binop": null
       },
       "value": "index",
-      "start": 5644,
-      "end": 5649,
+      "start": 5575,
+      "end": 5580,
       "loc": {
         "start": {
-          "line": 94,
+          "line": 88,
           "column": 37
         },
         "end": {
-          "line": 94,
+          "line": 88,
           "column": 42
         }
       }
@@ -4489,15 +4362,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5649,
-      "end": 5650,
+      "start": 5580,
+      "end": 5581,
       "loc": {
         "start": {
-          "line": 94,
+          "line": 88,
           "column": 42
         },
         "end": {
-          "line": 94,
+          "line": 88,
           "column": 43
         }
       }
@@ -4514,15 +4387,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5651,
-      "end": 5652,
+      "start": 5582,
+      "end": 5583,
       "loc": {
         "start": {
-          "line": 94,
+          "line": 88,
           "column": 44
         },
         "end": {
-          "line": 94,
+          "line": 88,
           "column": 45
         }
       }
@@ -4539,15 +4412,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5655,
-      "end": 5656,
+      "start": 5586,
+      "end": 5587,
       "loc": {
         "start": {
-          "line": 95,
+          "line": 89,
           "column": 2
         },
         "end": {
-          "line": 95,
+          "line": 89,
           "column": 3
         }
       }
@@ -4555,15 +4428,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Pivots the specified wheel around its steering axis.\n   * @access public\n   * @param {number} value - The angle to set the wheel at relative to its steering axis, in radians.\n   * @param {number} index - The index, in the vehicle’s wheels array, of the wheel to be pivoted.\n   * @returns {void}\n   * @desc Steering angles are relative to the wheel’s steeringAxis vector. With the default steering axis of {0.0, -1.0, 0.0}, a steering angle of 0.0 represents neutral steering, positive values steer the vehicle to the right, and negative values steer to the left.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387952-setsteeringangle\n   ",
-      "start": 5660,
-      "end": 6337,
+      "start": 5591,
+      "end": 6268,
       "loc": {
         "start": {
-          "line": 97,
+          "line": 91,
           "column": 2
         },
         "end": {
-          "line": 105,
+          "line": 99,
           "column": 5
         }
       }
@@ -4581,15 +4454,15 @@
         "binop": null
       },
       "value": "setSteeringAngleForWheelAt",
-      "start": 6340,
-      "end": 6366,
+      "start": 6271,
+      "end": 6297,
       "loc": {
         "start": {
-          "line": 106,
+          "line": 100,
           "column": 2
         },
         "end": {
-          "line": 106,
+          "line": 100,
           "column": 28
         }
       }
@@ -4606,15 +4479,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6366,
-      "end": 6367,
+      "start": 6297,
+      "end": 6298,
       "loc": {
         "start": {
-          "line": 106,
+          "line": 100,
           "column": 28
         },
         "end": {
-          "line": 106,
+          "line": 100,
           "column": 29
         }
       }
@@ -4632,15 +4505,15 @@
         "binop": null
       },
       "value": "value",
-      "start": 6367,
-      "end": 6372,
+      "start": 6298,
+      "end": 6303,
       "loc": {
         "start": {
-          "line": 106,
+          "line": 100,
           "column": 29
         },
         "end": {
-          "line": 106,
+          "line": 100,
           "column": 34
         }
       }
@@ -4658,15 +4531,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 6372,
-      "end": 6373,
+      "start": 6303,
+      "end": 6304,
       "loc": {
         "start": {
-          "line": 106,
+          "line": 100,
           "column": 34
         },
         "end": {
-          "line": 106,
+          "line": 100,
           "column": 35
         }
       }
@@ -4684,15 +4557,15 @@
         "binop": null
       },
       "value": "index",
-      "start": 6374,
-      "end": 6379,
+      "start": 6305,
+      "end": 6310,
       "loc": {
         "start": {
-          "line": 106,
+          "line": 100,
           "column": 36
         },
         "end": {
-          "line": 106,
+          "line": 100,
           "column": 41
         }
       }
@@ -4709,15 +4582,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6379,
-      "end": 6380,
+      "start": 6310,
+      "end": 6311,
       "loc": {
         "start": {
-          "line": 106,
+          "line": 100,
           "column": 41
         },
         "end": {
-          "line": 106,
+          "line": 100,
           "column": 42
         }
       }
@@ -4734,15 +4607,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6381,
-      "end": 6382,
+      "start": 6312,
+      "end": 6313,
       "loc": {
         "start": {
-          "line": 106,
+          "line": 100,
           "column": 43
         },
         "end": {
-          "line": 106,
+          "line": 100,
           "column": 44
         }
       }
@@ -4759,15 +4632,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6385,
-      "end": 6386,
+      "start": 6316,
+      "end": 6317,
       "loc": {
         "start": {
-          "line": 107,
+          "line": 101,
           "column": 2
         },
         "end": {
-          "line": 107,
+          "line": 101,
           "column": 3
         }
       }
@@ -4775,15 +4648,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The vehicle’s ground speed, in kilometers per hour.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387910-speedinkilometersperhour\n   ",
-      "start": 6389,
-      "end": 6595,
+      "start": 6321,
+      "end": 6527,
       "loc": {
         "start": {
-          "line": 108,
+          "line": 103,
           "column": 2
         },
         "end": {
-          "line": 113,
+          "line": 108,
           "column": 5
         }
       }
@@ -4801,15 +4674,15 @@
         "binop": null
       },
       "value": "get",
-      "start": 6598,
-      "end": 6601,
+      "start": 6530,
+      "end": 6533,
       "loc": {
         "start": {
-          "line": 114,
+          "line": 109,
           "column": 2
         },
         "end": {
-          "line": 114,
+          "line": 109,
           "column": 5
         }
       }
@@ -4827,15 +4700,15 @@
         "binop": null
       },
       "value": "speedInKilometersPerHour",
-      "start": 6602,
-      "end": 6626,
+      "start": 6534,
+      "end": 6558,
       "loc": {
         "start": {
-          "line": 114,
+          "line": 109,
           "column": 6
         },
         "end": {
-          "line": 114,
+          "line": 109,
           "column": 30
         }
       }
@@ -4852,15 +4725,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6626,
-      "end": 6627,
+      "start": 6558,
+      "end": 6559,
       "loc": {
         "start": {
-          "line": 114,
+          "line": 109,
           "column": 30
         },
         "end": {
-          "line": 114,
+          "line": 109,
           "column": 31
         }
       }
@@ -4877,15 +4750,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6627,
-      "end": 6628,
+      "start": 6559,
+      "end": 6560,
       "loc": {
         "start": {
-          "line": 114,
+          "line": 109,
           "column": 31
         },
         "end": {
-          "line": 114,
+          "line": 109,
           "column": 32
         }
       }
@@ -4902,15 +4775,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6629,
-      "end": 6630,
+      "start": 6561,
+      "end": 6562,
       "loc": {
         "start": {
-          "line": 114,
+          "line": 109,
           "column": 33
         },
         "end": {
-          "line": 114,
+          "line": 109,
           "column": 34
         }
       }
@@ -4930,15 +4803,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 6635,
-      "end": 6641,
+      "start": 6567,
+      "end": 6573,
       "loc": {
         "start": {
-          "line": 115,
+          "line": 110,
           "column": 4
         },
         "end": {
-          "line": 115,
+          "line": 110,
           "column": 10
         }
       }
@@ -4958,15 +4831,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 6642,
-      "end": 6646,
+      "start": 6574,
+      "end": 6578,
       "loc": {
         "start": {
-          "line": 115,
+          "line": 110,
           "column": 11
         },
         "end": {
-          "line": 115,
+          "line": 110,
           "column": 15
         }
       }
@@ -4984,15 +4857,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 6646,
-      "end": 6647,
+      "start": 6578,
+      "end": 6579,
       "loc": {
         "start": {
-          "line": 115,
+          "line": 110,
           "column": 15
         },
         "end": {
-          "line": 115,
+          "line": 110,
           "column": 16
         }
       }
@@ -5010,15 +4883,15 @@
         "binop": null
       },
       "value": "_speedInKilometersPerHour",
-      "start": 6647,
-      "end": 6672,
+      "start": 6579,
+      "end": 6604,
       "loc": {
         "start": {
-          "line": 115,
+          "line": 110,
           "column": 16
         },
         "end": {
-          "line": 115,
+          "line": 110,
           "column": 41
         }
       }
@@ -5035,15 +4908,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6675,
-      "end": 6676,
+      "start": 6607,
+      "end": 6608,
       "loc": {
         "start": {
-          "line": 116,
+          "line": 111,
           "column": 2
         },
         "end": {
-          "line": 116,
+          "line": 111,
           "column": 3
         }
       }
@@ -5060,15 +4933,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6677,
-      "end": 6678,
+      "start": 6609,
+      "end": 6610,
       "loc": {
         "start": {
-          "line": 117,
+          "line": 112,
           "column": 0
         },
         "end": {
-          "line": 117,
+          "line": 112,
           "column": 1
         }
       }
@@ -5086,15 +4959,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 6679,
-      "end": 6679,
+      "start": 6611,
+      "end": 6611,
       "loc": {
         "start": {
-          "line": 118,
+          "line": 113,
           "column": 0
         },
         "end": {
-          "line": 118,
+          "line": 113,
           "column": 0
         }
       }

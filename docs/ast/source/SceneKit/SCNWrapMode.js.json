@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 954,
+  "end": 926,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 954,
+    "end": 926,
     "loc": {
       "start": {
         "line": 1,
@@ -31,7 +31,7 @@
       {
         "type": "Identifier",
         "start": 817,
-        "end": 925,
+        "end": 897,
         "loc": {
           "start": {
             "line": 13,
@@ -46,7 +46,7 @@
           {
             "type": "VariableDeclarator",
             "start": 823,
-            "end": 925,
+            "end": 897,
             "loc": {
               "start": {
                 "line": 13,
@@ -78,7 +78,7 @@
             "init": {
               "type": "ObjectExpression",
               "start": 837,
-              "end": 925,
+              "end": 897,
               "loc": {
                 "start": {
                   "line": 13,
@@ -93,7 +93,7 @@
                 {
                   "type": "ObjectProperty",
                   "start": 841,
-                  "end": 856,
+                  "end": 849,
                   "loc": {
                     "start": {
                       "line": 14,
@@ -101,7 +101,7 @@
                     },
                     "end": {
                       "line": 14,
-                      "column": 17
+                      "column": 10
                     }
                   },
                   "method": false,
@@ -125,9 +125,9 @@
                     "name": "clamp"
                   },
                   "value": {
-                    "type": "CallExpression",
+                    "type": "NumericLiteral",
                     "start": 848,
-                    "end": 856,
+                    "end": 849,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -135,33 +135,20 @@
                       },
                       "end": {
                         "line": 14,
-                        "column": 17
+                        "column": 10
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 848,
-                      "end": 854,
-                      "loc": {
-                        "start": {
-                          "line": 14,
-                          "column": 9
-                        },
-                        "end": {
-                          "line": 14,
-                          "column": 15
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 1,
+                      "raw": "1"
                     },
-                    "arguments": []
+                    "value": 1
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 860,
-                  "end": 876,
+                  "start": 853,
+                  "end": 862,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -169,7 +156,7 @@
                     },
                     "end": {
                       "line": 15,
-                      "column": 18
+                      "column": 11
                     }
                   },
                   "method": false,
@@ -177,8 +164,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 860,
-                    "end": 866,
+                    "start": 853,
+                    "end": 859,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -193,9 +180,9 @@
                     "name": "repeat"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 868,
-                    "end": 876,
+                    "type": "NumericLiteral",
+                    "start": 861,
+                    "end": 862,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -203,33 +190,20 @@
                       },
                       "end": {
                         "line": 15,
-                        "column": 18
+                        "column": 11
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 868,
-                      "end": 874,
-                      "loc": {
-                        "start": {
-                          "line": 15,
-                          "column": 10
-                        },
-                        "end": {
-                          "line": 15,
-                          "column": 16
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 2,
+                      "raw": "2"
                     },
-                    "arguments": []
+                    "value": 2
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 880,
-                  "end": 903,
+                  "start": 866,
+                  "end": 882,
                   "loc": {
                     "start": {
                       "line": 16,
@@ -237,7 +211,7 @@
                     },
                     "end": {
                       "line": 16,
-                      "column": 25
+                      "column": 18
                     }
                   },
                   "method": false,
@@ -245,8 +219,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 880,
-                    "end": 893,
+                    "start": 866,
+                    "end": 879,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -261,9 +235,9 @@
                     "name": "clampToBorder"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 895,
-                    "end": 903,
+                    "type": "NumericLiteral",
+                    "start": 881,
+                    "end": 882,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -271,33 +245,20 @@
                       },
                       "end": {
                         "line": 16,
-                        "column": 25
+                        "column": 18
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 895,
-                      "end": 901,
-                      "loc": {
-                        "start": {
-                          "line": 16,
-                          "column": 17
-                        },
-                        "end": {
-                          "line": 16,
-                          "column": 23
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 3,
+                      "raw": "3"
                     },
-                    "arguments": []
+                    "value": 3
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 907,
-                  "end": 923,
+                  "start": 886,
+                  "end": 895,
                   "loc": {
                     "start": {
                       "line": 17,
@@ -305,7 +266,7 @@
                     },
                     "end": {
                       "line": 17,
-                      "column": 18
+                      "column": 11
                     }
                   },
                   "method": false,
@@ -313,8 +274,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 907,
-                    "end": 913,
+                    "start": 886,
+                    "end": 892,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -329,9 +290,9 @@
                     "name": "mirror"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 915,
-                    "end": 923,
+                    "type": "NumericLiteral",
+                    "start": 894,
+                    "end": 895,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -339,27 +300,14 @@
                       },
                       "end": {
                         "line": 17,
-                        "column": 18
+                        "column": 11
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 915,
-                      "end": 921,
-                      "loc": {
-                        "start": {
-                          "line": 17,
-                          "column": 10
-                        },
-                        "end": {
-                          "line": 17,
-                          "column": 16
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 4,
+                      "raw": "4"
                     },
-                    "arguments": []
+                    "value": 4
                   }
                 }
               ]
@@ -374,8 +322,8 @@
       },
       {
         "type": "Identifier",
-        "start": 927,
-        "end": 953,
+        "start": 899,
+        "end": 925,
         "loc": {
           "start": {
             "line": 20,
@@ -388,8 +336,8 @@
         },
         "declaration": {
           "type": "Identifier",
-          "start": 942,
-          "end": 953,
+          "start": 914,
+          "end": 925,
           "loc": {
             "start": {
               "line": 20,
@@ -409,8 +357,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 927,
-        "end": 953,
+        "start": 899,
+        "end": 925,
         "loc": {
           "start": {
             "line": 20,
@@ -424,7 +372,7 @@
         "declaration": {
           "type": "VariableDeclaration",
           "start": 817,
-          "end": 925,
+          "end": 897,
           "loc": {
             "start": {
               "line": 13,
@@ -439,7 +387,7 @@
             {
               "type": "VariableDeclarator",
               "start": 823,
-              "end": 925,
+              "end": 897,
               "loc": {
                 "start": {
                   "line": 13,
@@ -471,7 +419,7 @@
               "init": {
                 "type": "ObjectExpression",
                 "start": 837,
-                "end": 925,
+                "end": 897,
                 "loc": {
                   "start": {
                     "line": 13,
@@ -486,7 +434,7 @@
                   {
                     "type": "ObjectProperty",
                     "start": 841,
-                    "end": 856,
+                    "end": 849,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -494,7 +442,7 @@
                       },
                       "end": {
                         "line": 14,
-                        "column": 17
+                        "column": 10
                       }
                     },
                     "method": false,
@@ -518,9 +466,9 @@
                       "name": "clamp"
                     },
                     "value": {
-                      "type": "CallExpression",
+                      "type": "NumericLiteral",
                       "start": 848,
-                      "end": 856,
+                      "end": 849,
                       "loc": {
                         "start": {
                           "line": 14,
@@ -528,33 +476,20 @@
                         },
                         "end": {
                           "line": 14,
-                          "column": 17
+                          "column": 10
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 848,
-                        "end": 854,
-                        "loc": {
-                          "start": {
-                            "line": 14,
-                            "column": 9
-                          },
-                          "end": {
-                            "line": 14,
-                            "column": 15
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 1,
+                        "raw": "1"
                       },
-                      "arguments": []
+                      "value": 1
                     }
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 860,
-                    "end": 876,
+                    "start": 853,
+                    "end": 862,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -562,7 +497,7 @@
                       },
                       "end": {
                         "line": 15,
-                        "column": 18
+                        "column": 11
                       }
                     },
                     "method": false,
@@ -570,8 +505,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 860,
-                      "end": 866,
+                      "start": 853,
+                      "end": 859,
                       "loc": {
                         "start": {
                           "line": 15,
@@ -586,9 +521,9 @@
                       "name": "repeat"
                     },
                     "value": {
-                      "type": "CallExpression",
-                      "start": 868,
-                      "end": 876,
+                      "type": "NumericLiteral",
+                      "start": 861,
+                      "end": 862,
                       "loc": {
                         "start": {
                           "line": 15,
@@ -596,33 +531,20 @@
                         },
                         "end": {
                           "line": 15,
-                          "column": 18
+                          "column": 11
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 868,
-                        "end": 874,
-                        "loc": {
-                          "start": {
-                            "line": 15,
-                            "column": 10
-                          },
-                          "end": {
-                            "line": 15,
-                            "column": 16
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 2,
+                        "raw": "2"
                       },
-                      "arguments": []
+                      "value": 2
                     }
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 880,
-                    "end": 903,
+                    "start": 866,
+                    "end": 882,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -630,7 +552,7 @@
                       },
                       "end": {
                         "line": 16,
-                        "column": 25
+                        "column": 18
                       }
                     },
                     "method": false,
@@ -638,8 +560,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 880,
-                      "end": 893,
+                      "start": 866,
+                      "end": 879,
                       "loc": {
                         "start": {
                           "line": 16,
@@ -654,9 +576,9 @@
                       "name": "clampToBorder"
                     },
                     "value": {
-                      "type": "CallExpression",
-                      "start": 895,
-                      "end": 903,
+                      "type": "NumericLiteral",
+                      "start": 881,
+                      "end": 882,
                       "loc": {
                         "start": {
                           "line": 16,
@@ -664,33 +586,20 @@
                         },
                         "end": {
                           "line": 16,
-                          "column": 25
+                          "column": 18
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 895,
-                        "end": 901,
-                        "loc": {
-                          "start": {
-                            "line": 16,
-                            "column": 17
-                          },
-                          "end": {
-                            "line": 16,
-                            "column": 23
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 3,
+                        "raw": "3"
                       },
-                      "arguments": []
+                      "value": 3
                     }
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 907,
-                    "end": 923,
+                    "start": 886,
+                    "end": 895,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -698,7 +607,7 @@
                       },
                       "end": {
                         "line": 17,
-                        "column": 18
+                        "column": 11
                       }
                     },
                     "method": false,
@@ -706,8 +615,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 907,
-                      "end": 913,
+                      "start": 886,
+                      "end": 892,
                       "loc": {
                         "start": {
                           "line": 17,
@@ -722,9 +631,9 @@
                       "name": "mirror"
                     },
                     "value": {
-                      "type": "CallExpression",
-                      "start": 915,
-                      "end": 923,
+                      "type": "NumericLiteral",
+                      "start": 894,
+                      "end": 895,
                       "loc": {
                         "start": {
                           "line": 17,
@@ -732,27 +641,14 @@
                         },
                         "end": {
                           "line": 17,
-                          "column": 18
+                          "column": 11
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 915,
-                        "end": 921,
-                        "loc": {
-                          "start": {
-                            "line": 17,
-                            "column": 10
-                          },
-                          "end": {
-                            "line": 17,
-                            "column": 16
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 4,
+                        "raw": "4"
                       },
-                      "arguments": []
+                      "value": 4
                     }
                   }
                 ]
@@ -764,7 +660,7 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * Modes to apply to texture wrapping, used by the wrapT and wrapS properties.\n * @typedef {Object} SCNWrapMode\n * @property {Symbol} clamp - Texture coordinates are clamped to the range from 0.0 to 1.0, inclusive.\n * @property {Symbol} repeat - Texture sampling uses only the fractional part of texture coordinates, passing through the range from 0.0 to (but not including) 1.0.\n * @property {Symbol} clampToBorder - Texture sampling uses texture colors for coordinates in the range from 0.0 to 1.0 (inclusive) and the material property’s borderColor value otherwise.\n * @property {Symbol} mirror - Texture sampling of texture coordinates outside range from 0.0 to 1.0 should behave as if the range reverses before repeating.\n * @see https://developer.apple.com/reference/scenekit/scnwrapmode\n ",
+              "value": "*\n * Modes to apply to texture wrapping, used by the wrapT and wrapS properties.\n * @typedef {Object} SCNWrapMode\n * @property {number} clamp - Texture coordinates are clamped to the range from 0.0 to 1.0, inclusive.\n * @property {number} repeat - Texture sampling uses only the fractional part of texture coordinates, passing through the range from 0.0 to (but not including) 1.0.\n * @property {number} clampToBorder - Texture sampling uses texture colors for coordinates in the range from 0.0 to 1.0 (inclusive) and the material property’s borderColor value otherwise.\n * @property {number} mirror - Texture sampling of texture coordinates outside range from 0.0 to 1.0 should behave as if the range reverses before repeating.\n * @see https://developer.apple.com/reference/scenekit/scnwrapmode\n ",
               "start": 15,
               "end": 816,
               "loc": {
@@ -822,7 +718,7 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Modes to apply to texture wrapping, used by the wrapT and wrapS properties.\n * @typedef {Object} SCNWrapMode\n * @property {Symbol} clamp - Texture coordinates are clamped to the range from 0.0 to 1.0, inclusive.\n * @property {Symbol} repeat - Texture sampling uses only the fractional part of texture coordinates, passing through the range from 0.0 to (but not including) 1.0.\n * @property {Symbol} clampToBorder - Texture sampling uses texture colors for coordinates in the range from 0.0 to 1.0 (inclusive) and the material property’s borderColor value otherwise.\n * @property {Symbol} mirror - Texture sampling of texture coordinates outside range from 0.0 to 1.0 should behave as if the range reverses before repeating.\n * @see https://developer.apple.com/reference/scenekit/scnwrapmode\n ",
+            "value": "*\n * Modes to apply to texture wrapping, used by the wrapT and wrapS properties.\n * @typedef {Object} SCNWrapMode\n * @property {number} clamp - Texture coordinates are clamped to the range from 0.0 to 1.0, inclusive.\n * @property {number} repeat - Texture sampling uses only the fractional part of texture coordinates, passing through the range from 0.0 to (but not including) 1.0.\n * @property {number} clampToBorder - Texture sampling uses texture colors for coordinates in the range from 0.0 to 1.0 (inclusive) and the material property’s borderColor value otherwise.\n * @property {number} mirror - Texture sampling of texture coordinates outside range from 0.0 to 1.0 should behave as if the range reverses before repeating.\n * @see https://developer.apple.com/reference/scenekit/scnwrapmode\n ",
             "start": 15,
             "end": 816,
             "loc": {
@@ -843,7 +739,7 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * Modes to apply to texture wrapping, used by the wrapT and wrapS properties.\n * @typedef {Object} SCNWrapMode\n * @property {Symbol} clamp - Texture coordinates are clamped to the range from 0.0 to 1.0, inclusive.\n * @property {Symbol} repeat - Texture sampling uses only the fractional part of texture coordinates, passing through the range from 0.0 to (but not including) 1.0.\n * @property {Symbol} clampToBorder - Texture sampling uses texture colors for coordinates in the range from 0.0 to 1.0 (inclusive) and the material property’s borderColor value otherwise.\n * @property {Symbol} mirror - Texture sampling of texture coordinates outside range from 0.0 to 1.0 should behave as if the range reverses before repeating.\n * @see https://developer.apple.com/reference/scenekit/scnwrapmode\n ",
+      "value": "*\n * Modes to apply to texture wrapping, used by the wrapT and wrapS properties.\n * @typedef {Object} SCNWrapMode\n * @property {number} clamp - Texture coordinates are clamped to the range from 0.0 to 1.0, inclusive.\n * @property {number} repeat - Texture sampling uses only the fractional part of texture coordinates, passing through the range from 0.0 to (but not including) 1.0.\n * @property {number} clampToBorder - Texture sampling uses texture colors for coordinates in the range from 0.0 to 1.0 (inclusive) and the material property’s borderColor value otherwise.\n * @property {number} mirror - Texture sampling of texture coordinates outside range from 0.0 to 1.0 should behave as if the range reverses before repeating.\n * @see https://developer.apple.com/reference/scenekit/scnwrapmode\n ",
       "start": 15,
       "end": 816,
       "loc": {
@@ -888,7 +784,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Modes to apply to texture wrapping, used by the wrapT and wrapS properties.\n * @typedef {Object} SCNWrapMode\n * @property {Symbol} clamp - Texture coordinates are clamped to the range from 0.0 to 1.0, inclusive.\n * @property {Symbol} repeat - Texture sampling uses only the fractional part of texture coordinates, passing through the range from 0.0 to (but not including) 1.0.\n * @property {Symbol} clampToBorder - Texture sampling uses texture colors for coordinates in the range from 0.0 to 1.0 (inclusive) and the material property’s borderColor value otherwise.\n * @property {Symbol} mirror - Texture sampling of texture coordinates outside range from 0.0 to 1.0 should behave as if the range reverses before repeating.\n * @see https://developer.apple.com/reference/scenekit/scnwrapmode\n ",
+      "value": "*\n * Modes to apply to texture wrapping, used by the wrapT and wrapS properties.\n * @typedef {Object} SCNWrapMode\n * @property {number} clamp - Texture coordinates are clamped to the range from 0.0 to 1.0, inclusive.\n * @property {number} repeat - Texture sampling uses only the fractional part of texture coordinates, passing through the range from 0.0 to (but not including) 1.0.\n * @property {number} clampToBorder - Texture sampling uses texture colors for coordinates in the range from 0.0 to 1.0 (inclusive) and the material property’s borderColor value otherwise.\n * @property {number} mirror - Texture sampling of texture coordinates outside range from 0.0 to 1.0 should behave as if the range reverses before repeating.\n * @see https://developer.apple.com/reference/scenekit/scnwrapmode\n ",
       "start": 15,
       "end": 816,
       "loc": {
@@ -1062,7 +958,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -1070,11 +966,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
+      "value": 1,
       "start": 848,
-      "end": 854,
+      "end": 849,
       "loc": {
         "start": {
           "line": 14,
@@ -1082,57 +979,7 @@
         },
         "end": {
           "line": 14,
-          "column": 15
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 854,
-      "end": 855,
-      "loc": {
-        "start": {
-          "line": 14,
-          "column": 15
-        },
-        "end": {
-          "line": 14,
-          "column": 16
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 855,
-      "end": 856,
-      "loc": {
-        "start": {
-          "line": 14,
-          "column": 16
-        },
-        "end": {
-          "line": 14,
-          "column": 17
+          "column": 10
         }
       }
     },
@@ -1149,16 +996,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 856,
-      "end": 857,
+      "start": 849,
+      "end": 850,
       "loc": {
         "start": {
           "line": 14,
-          "column": 17
+          "column": 10
         },
         "end": {
           "line": 14,
-          "column": 18
+          "column": 11
         }
       }
     },
@@ -1175,8 +1022,8 @@
         "binop": null
       },
       "value": "repeat",
-      "start": 860,
-      "end": 866,
+      "start": 853,
+      "end": 859,
       "loc": {
         "start": {
           "line": 15,
@@ -1201,8 +1048,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 866,
-      "end": 867,
+      "start": 859,
+      "end": 860,
       "loc": {
         "start": {
           "line": 15,
@@ -1216,7 +1063,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -1224,11 +1071,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
-      "start": 868,
-      "end": 874,
+      "value": 2,
+      "start": 861,
+      "end": 862,
       "loc": {
         "start": {
           "line": 15,
@@ -1236,57 +1084,7 @@
         },
         "end": {
           "line": 15,
-          "column": 16
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 874,
-      "end": 875,
-      "loc": {
-        "start": {
-          "line": 15,
-          "column": 16
-        },
-        "end": {
-          "line": 15,
-          "column": 17
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 875,
-      "end": 876,
-      "loc": {
-        "start": {
-          "line": 15,
-          "column": 17
-        },
-        "end": {
-          "line": 15,
-          "column": 18
+          "column": 11
         }
       }
     },
@@ -1303,16 +1101,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 876,
-      "end": 877,
+      "start": 862,
+      "end": 863,
       "loc": {
         "start": {
           "line": 15,
-          "column": 18
+          "column": 11
         },
         "end": {
           "line": 15,
-          "column": 19
+          "column": 12
         }
       }
     },
@@ -1329,8 +1127,8 @@
         "binop": null
       },
       "value": "clampToBorder",
-      "start": 880,
-      "end": 893,
+      "start": 866,
+      "end": 879,
       "loc": {
         "start": {
           "line": 16,
@@ -1355,8 +1153,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 893,
-      "end": 894,
+      "start": 879,
+      "end": 880,
       "loc": {
         "start": {
           "line": 16,
@@ -1370,7 +1168,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -1378,11 +1176,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
-      "start": 895,
-      "end": 901,
+      "value": 3,
+      "start": 881,
+      "end": 882,
       "loc": {
         "start": {
           "line": 16,
@@ -1390,57 +1189,7 @@
         },
         "end": {
           "line": 16,
-          "column": 23
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 901,
-      "end": 902,
-      "loc": {
-        "start": {
-          "line": 16,
-          "column": 23
-        },
-        "end": {
-          "line": 16,
-          "column": 24
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 902,
-      "end": 903,
-      "loc": {
-        "start": {
-          "line": 16,
-          "column": 24
-        },
-        "end": {
-          "line": 16,
-          "column": 25
+          "column": 18
         }
       }
     },
@@ -1457,16 +1206,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 903,
-      "end": 904,
+      "start": 882,
+      "end": 883,
       "loc": {
         "start": {
           "line": 16,
-          "column": 25
+          "column": 18
         },
         "end": {
           "line": 16,
-          "column": 26
+          "column": 19
         }
       }
     },
@@ -1483,8 +1232,8 @@
         "binop": null
       },
       "value": "mirror",
-      "start": 907,
-      "end": 913,
+      "start": 886,
+      "end": 892,
       "loc": {
         "start": {
           "line": 17,
@@ -1509,8 +1258,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 913,
-      "end": 914,
+      "start": 892,
+      "end": 893,
       "loc": {
         "start": {
           "line": 17,
@@ -1524,7 +1273,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -1532,11 +1281,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
-      "start": 915,
-      "end": 921,
+      "value": 4,
+      "start": 894,
+      "end": 895,
       "loc": {
         "start": {
           "line": 17,
@@ -1544,57 +1294,7 @@
         },
         "end": {
           "line": 17,
-          "column": 16
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 921,
-      "end": 922,
-      "loc": {
-        "start": {
-          "line": 17,
-          "column": 16
-        },
-        "end": {
-          "line": 17,
-          "column": 17
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 922,
-      "end": 923,
-      "loc": {
-        "start": {
-          "line": 17,
-          "column": 17
-        },
-        "end": {
-          "line": 17,
-          "column": 18
+          "column": 11
         }
       }
     },
@@ -1610,8 +1310,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 924,
-      "end": 925,
+      "start": 896,
+      "end": 897,
       "loc": {
         "start": {
           "line": 18,
@@ -1638,8 +1338,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 927,
-      "end": 933,
+      "start": 899,
+      "end": 905,
       "loc": {
         "start": {
           "line": 20,
@@ -1666,8 +1366,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 934,
-      "end": 941,
+      "start": 906,
+      "end": 913,
       "loc": {
         "start": {
           "line": 20,
@@ -1692,8 +1392,8 @@
         "binop": null
       },
       "value": "SCNWrapMode",
-      "start": 942,
-      "end": 953,
+      "start": 914,
+      "end": 925,
       "loc": {
         "start": {
           "line": 20,
@@ -1718,8 +1418,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 954,
-      "end": 954,
+      "start": 926,
+      "end": 926,
       "loc": {
         "start": {
           "line": 21,

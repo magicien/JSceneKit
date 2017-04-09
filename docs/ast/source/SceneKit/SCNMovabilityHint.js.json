@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 494,
+  "end": 480,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 494,
+    "end": 480,
     "loc": {
       "start": {
         "line": 1,
@@ -31,7 +31,7 @@
       {
         "type": "Identifier",
         "start": 391,
-        "end": 459,
+        "end": 445,
         "loc": {
           "start": {
             "line": 11,
@@ -46,7 +46,7 @@
           {
             "type": "VariableDeclarator",
             "start": 397,
-            "end": 459,
+            "end": 445,
             "loc": {
               "start": {
                 "line": 11,
@@ -78,7 +78,7 @@
             "init": {
               "type": "ObjectExpression",
               "start": 417,
-              "end": 459,
+              "end": 445,
               "loc": {
                 "start": {
                   "line": 11,
@@ -93,7 +93,7 @@
                 {
                   "type": "ObjectProperty",
                   "start": 421,
-                  "end": 436,
+                  "end": 429,
                   "loc": {
                     "start": {
                       "line": 12,
@@ -101,7 +101,7 @@
                     },
                     "end": {
                       "line": 12,
-                      "column": 17
+                      "column": 10
                     }
                   },
                   "method": false,
@@ -125,9 +125,9 @@
                     "name": "fixed"
                   },
                   "value": {
-                    "type": "CallExpression",
+                    "type": "NumericLiteral",
                     "start": 428,
-                    "end": 436,
+                    "end": 429,
                     "loc": {
                       "start": {
                         "line": 12,
@@ -135,33 +135,20 @@
                       },
                       "end": {
                         "line": 12,
-                        "column": 17
+                        "column": 10
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 428,
-                      "end": 434,
-                      "loc": {
-                        "start": {
-                          "line": 12,
-                          "column": 9
-                        },
-                        "end": {
-                          "line": 12,
-                          "column": 15
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 0,
+                      "raw": "0"
                     },
-                    "arguments": []
+                    "value": 0
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 440,
-                  "end": 457,
+                  "start": 433,
+                  "end": 443,
                   "loc": {
                     "start": {
                       "line": 13,
@@ -169,7 +156,7 @@
                     },
                     "end": {
                       "line": 13,
-                      "column": 19
+                      "column": 12
                     }
                   },
                   "method": false,
@@ -177,8 +164,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 440,
-                    "end": 447,
+                    "start": 433,
+                    "end": 440,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -193,9 +180,9 @@
                     "name": "movable"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 449,
-                    "end": 457,
+                    "type": "NumericLiteral",
+                    "start": 442,
+                    "end": 443,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -203,27 +190,14 @@
                       },
                       "end": {
                         "line": 13,
-                        "column": 19
+                        "column": 12
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 449,
-                      "end": 455,
-                      "loc": {
-                        "start": {
-                          "line": 13,
-                          "column": 11
-                        },
-                        "end": {
-                          "line": 13,
-                          "column": 17
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 1,
+                      "raw": "1"
                     },
-                    "arguments": []
+                    "value": 1
                   }
                 }
               ]
@@ -238,8 +212,8 @@
       },
       {
         "type": "Identifier",
-        "start": 461,
-        "end": 493,
+        "start": 447,
+        "end": 479,
         "loc": {
           "start": {
             "line": 16,
@@ -252,8 +226,8 @@
         },
         "declaration": {
           "type": "Identifier",
-          "start": 476,
-          "end": 493,
+          "start": 462,
+          "end": 479,
           "loc": {
             "start": {
               "line": 16,
@@ -273,8 +247,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 461,
-        "end": 493,
+        "start": 447,
+        "end": 479,
         "loc": {
           "start": {
             "line": 16,
@@ -288,7 +262,7 @@
         "declaration": {
           "type": "VariableDeclaration",
           "start": 391,
-          "end": 459,
+          "end": 445,
           "loc": {
             "start": {
               "line": 11,
@@ -303,7 +277,7 @@
             {
               "type": "VariableDeclarator",
               "start": 397,
-              "end": 459,
+              "end": 445,
               "loc": {
                 "start": {
                   "line": 11,
@@ -335,7 +309,7 @@
               "init": {
                 "type": "ObjectExpression",
                 "start": 417,
-                "end": 459,
+                "end": 445,
                 "loc": {
                   "start": {
                     "line": 11,
@@ -350,7 +324,7 @@
                   {
                     "type": "ObjectProperty",
                     "start": 421,
-                    "end": 436,
+                    "end": 429,
                     "loc": {
                       "start": {
                         "line": 12,
@@ -358,7 +332,7 @@
                       },
                       "end": {
                         "line": 12,
-                        "column": 17
+                        "column": 10
                       }
                     },
                     "method": false,
@@ -382,9 +356,9 @@
                       "name": "fixed"
                     },
                     "value": {
-                      "type": "CallExpression",
+                      "type": "NumericLiteral",
                       "start": 428,
-                      "end": 436,
+                      "end": 429,
                       "loc": {
                         "start": {
                           "line": 12,
@@ -392,33 +366,20 @@
                         },
                         "end": {
                           "line": 12,
-                          "column": 17
+                          "column": 10
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 428,
-                        "end": 434,
-                        "loc": {
-                          "start": {
-                            "line": 12,
-                            "column": 9
-                          },
-                          "end": {
-                            "line": 12,
-                            "column": 15
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 0,
+                        "raw": "0"
                       },
-                      "arguments": []
+                      "value": 0
                     }
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 440,
-                    "end": 457,
+                    "start": 433,
+                    "end": 443,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -426,7 +387,7 @@
                       },
                       "end": {
                         "line": 13,
-                        "column": 19
+                        "column": 12
                       }
                     },
                     "method": false,
@@ -434,8 +395,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 440,
-                      "end": 447,
+                      "start": 433,
+                      "end": 440,
                       "loc": {
                         "start": {
                           "line": 13,
@@ -450,9 +411,9 @@
                       "name": "movable"
                     },
                     "value": {
-                      "type": "CallExpression",
-                      "start": 449,
-                      "end": 457,
+                      "type": "NumericLiteral",
+                      "start": 442,
+                      "end": 443,
                       "loc": {
                         "start": {
                           "line": 13,
@@ -460,27 +421,14 @@
                         },
                         "end": {
                           "line": 13,
-                          "column": 19
+                          "column": 12
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 449,
-                        "end": 455,
-                        "loc": {
-                          "start": {
-                            "line": 13,
-                            "column": 11
-                          },
-                          "end": {
-                            "line": 13,
-                            "column": 17
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 1,
+                        "raw": "1"
                       },
-                      "arguments": []
+                      "value": 1
                     }
                   }
                 ]
@@ -492,7 +440,7 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * Values that inform SceneKit’s rendering for movement-related effects, used by the movabilityHint property.\n * @typedef {Object} SCNMovabilityHint\n * @property {Symbol} fixed - The node is not expected to move over time.\n * @property {Symbol} movable - The node is expected to move over time.\n * @see https://developer.apple.com/reference/scenekit/scnmovabilityhint\n ",
+              "value": "*\n * Values that inform SceneKit’s rendering for movement-related effects, used by the movabilityHint property.\n * @typedef {Object} SCNMovabilityHint\n * @property {number} fixed - The node is not expected to move over time.\n * @property {number} movable - The node is expected to move over time.\n * @see https://developer.apple.com/reference/scenekit/scnmovabilityhint\n ",
               "start": 15,
               "end": 390,
               "loc": {
@@ -550,7 +498,7 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Values that inform SceneKit’s rendering for movement-related effects, used by the movabilityHint property.\n * @typedef {Object} SCNMovabilityHint\n * @property {Symbol} fixed - The node is not expected to move over time.\n * @property {Symbol} movable - The node is expected to move over time.\n * @see https://developer.apple.com/reference/scenekit/scnmovabilityhint\n ",
+            "value": "*\n * Values that inform SceneKit’s rendering for movement-related effects, used by the movabilityHint property.\n * @typedef {Object} SCNMovabilityHint\n * @property {number} fixed - The node is not expected to move over time.\n * @property {number} movable - The node is expected to move over time.\n * @see https://developer.apple.com/reference/scenekit/scnmovabilityhint\n ",
             "start": 15,
             "end": 390,
             "loc": {
@@ -571,7 +519,7 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * Values that inform SceneKit’s rendering for movement-related effects, used by the movabilityHint property.\n * @typedef {Object} SCNMovabilityHint\n * @property {Symbol} fixed - The node is not expected to move over time.\n * @property {Symbol} movable - The node is expected to move over time.\n * @see https://developer.apple.com/reference/scenekit/scnmovabilityhint\n ",
+      "value": "*\n * Values that inform SceneKit’s rendering for movement-related effects, used by the movabilityHint property.\n * @typedef {Object} SCNMovabilityHint\n * @property {number} fixed - The node is not expected to move over time.\n * @property {number} movable - The node is expected to move over time.\n * @see https://developer.apple.com/reference/scenekit/scnmovabilityhint\n ",
       "start": 15,
       "end": 390,
       "loc": {
@@ -616,7 +564,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Values that inform SceneKit’s rendering for movement-related effects, used by the movabilityHint property.\n * @typedef {Object} SCNMovabilityHint\n * @property {Symbol} fixed - The node is not expected to move over time.\n * @property {Symbol} movable - The node is expected to move over time.\n * @see https://developer.apple.com/reference/scenekit/scnmovabilityhint\n ",
+      "value": "*\n * Values that inform SceneKit’s rendering for movement-related effects, used by the movabilityHint property.\n * @typedef {Object} SCNMovabilityHint\n * @property {number} fixed - The node is not expected to move over time.\n * @property {number} movable - The node is expected to move over time.\n * @see https://developer.apple.com/reference/scenekit/scnmovabilityhint\n ",
       "start": 15,
       "end": 390,
       "loc": {
@@ -790,7 +738,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -798,11 +746,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
+      "value": 0,
       "start": 428,
-      "end": 434,
+      "end": 429,
       "loc": {
         "start": {
           "line": 12,
@@ -810,57 +759,7 @@
         },
         "end": {
           "line": 12,
-          "column": 15
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 434,
-      "end": 435,
-      "loc": {
-        "start": {
-          "line": 12,
-          "column": 15
-        },
-        "end": {
-          "line": 12,
-          "column": 16
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 435,
-      "end": 436,
-      "loc": {
-        "start": {
-          "line": 12,
-          "column": 16
-        },
-        "end": {
-          "line": 12,
-          "column": 17
+          "column": 10
         }
       }
     },
@@ -877,16 +776,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 436,
-      "end": 437,
+      "start": 429,
+      "end": 430,
       "loc": {
         "start": {
           "line": 12,
-          "column": 17
+          "column": 10
         },
         "end": {
           "line": 12,
-          "column": 18
+          "column": 11
         }
       }
     },
@@ -903,8 +802,8 @@
         "binop": null
       },
       "value": "movable",
-      "start": 440,
-      "end": 447,
+      "start": 433,
+      "end": 440,
       "loc": {
         "start": {
           "line": 13,
@@ -929,8 +828,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 447,
-      "end": 448,
+      "start": 440,
+      "end": 441,
       "loc": {
         "start": {
           "line": 13,
@@ -944,7 +843,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -952,11 +851,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
-      "start": 449,
-      "end": 455,
+      "value": 1,
+      "start": 442,
+      "end": 443,
       "loc": {
         "start": {
           "line": 13,
@@ -964,57 +864,7 @@
         },
         "end": {
           "line": 13,
-          "column": 17
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 455,
-      "end": 456,
-      "loc": {
-        "start": {
-          "line": 13,
-          "column": 17
-        },
-        "end": {
-          "line": 13,
-          "column": 18
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 456,
-      "end": 457,
-      "loc": {
-        "start": {
-          "line": 13,
-          "column": 18
-        },
-        "end": {
-          "line": 13,
-          "column": 19
+          "column": 12
         }
       }
     },
@@ -1030,8 +880,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 458,
-      "end": 459,
+      "start": 444,
+      "end": 445,
       "loc": {
         "start": {
           "line": 14,
@@ -1058,8 +908,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 461,
-      "end": 467,
+      "start": 447,
+      "end": 453,
       "loc": {
         "start": {
           "line": 16,
@@ -1086,8 +936,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 468,
-      "end": 475,
+      "start": 454,
+      "end": 461,
       "loc": {
         "start": {
           "line": 16,
@@ -1112,8 +962,8 @@
         "binop": null
       },
       "value": "SCNMovabilityHint",
-      "start": 476,
-      "end": 493,
+      "start": 462,
+      "end": 479,
       "loc": {
         "start": {
           "line": 16,
@@ -1138,8 +988,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 494,
-      "end": 494,
+      "start": 480,
+      "end": 480,
       "loc": {
         "start": {
           "line": 17,

@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 652,
+  "end": 638,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 652,
+    "end": 638,
     "loc": {
       "start": {
         "line": 1,
@@ -31,7 +31,7 @@
       {
         "type": "Identifier",
         "start": 530,
-        "end": 614,
+        "end": 600,
         "loc": {
           "start": {
             "line": 11,
@@ -46,7 +46,7 @@
           {
             "type": "VariableDeclarator",
             "start": 536,
-            "end": 614,
+            "end": 600,
             "loc": {
               "start": {
                 "line": 11,
@@ -78,7 +78,7 @@
             "init": {
               "type": "ObjectExpression",
               "start": 559,
-              "end": 614,
+              "end": 600,
               "loc": {
                 "start": {
                   "line": 11,
@@ -93,7 +93,7 @@
                 {
                   "type": "ObjectProperty",
                   "start": 563,
-                  "end": 585,
+                  "end": 578,
                   "loc": {
                     "start": {
                       "line": 12,
@@ -101,7 +101,7 @@
                     },
                     "end": {
                       "line": 12,
-                      "column": 24
+                      "column": 17
                     }
                   },
                   "method": false,
@@ -125,9 +125,9 @@
                     "name": "insideExtent"
                   },
                   "value": {
-                    "type": "CallExpression",
+                    "type": "NumericLiteral",
                     "start": 577,
-                    "end": 585,
+                    "end": 578,
                     "loc": {
                       "start": {
                         "line": 12,
@@ -135,33 +135,20 @@
                       },
                       "end": {
                         "line": 12,
-                        "column": 24
+                        "column": 17
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 577,
-                      "end": 583,
-                      "loc": {
-                        "start": {
-                          "line": 12,
-                          "column": 16
-                        },
-                        "end": {
-                          "line": 12,
-                          "column": 22
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 0,
+                      "raw": "0"
                     },
-                    "arguments": []
+                    "value": 0
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 589,
-                  "end": 612,
+                  "start": 582,
+                  "end": 598,
                   "loc": {
                     "start": {
                       "line": 13,
@@ -169,7 +156,7 @@
                     },
                     "end": {
                       "line": 13,
-                      "column": 25
+                      "column": 18
                     }
                   },
                   "method": false,
@@ -177,8 +164,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 589,
-                    "end": 602,
+                    "start": 582,
+                    "end": 595,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -193,9 +180,9 @@
                     "name": "outsideExtent"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 604,
-                    "end": 612,
+                    "type": "NumericLiteral",
+                    "start": 597,
+                    "end": 598,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -203,27 +190,14 @@
                       },
                       "end": {
                         "line": 13,
-                        "column": 25
+                        "column": 18
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 604,
-                      "end": 610,
-                      "loc": {
-                        "start": {
-                          "line": 13,
-                          "column": 17
-                        },
-                        "end": {
-                          "line": 13,
-                          "column": 23
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 1,
+                      "raw": "1"
                     },
-                    "arguments": []
+                    "value": 1
                   }
                 }
               ]
@@ -238,8 +212,8 @@
       },
       {
         "type": "Identifier",
-        "start": 616,
-        "end": 651,
+        "start": 602,
+        "end": 637,
         "loc": {
           "start": {
             "line": 16,
@@ -252,8 +226,8 @@
         },
         "declaration": {
           "type": "Identifier",
-          "start": 631,
-          "end": 651,
+          "start": 617,
+          "end": 637,
           "loc": {
             "start": {
               "line": 16,
@@ -273,8 +247,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 616,
-        "end": 651,
+        "start": 602,
+        "end": 637,
         "loc": {
           "start": {
             "line": 16,
@@ -288,7 +262,7 @@
         "declaration": {
           "type": "VariableDeclaration",
           "start": 530,
-          "end": 614,
+          "end": 600,
           "loc": {
             "start": {
               "line": 11,
@@ -303,7 +277,7 @@
             {
               "type": "VariableDeclarator",
               "start": 536,
-              "end": 614,
+              "end": 600,
               "loc": {
                 "start": {
                   "line": 11,
@@ -335,7 +309,7 @@
               "init": {
                 "type": "ObjectExpression",
                 "start": 559,
-                "end": 614,
+                "end": 600,
                 "loc": {
                   "start": {
                     "line": 11,
@@ -350,7 +324,7 @@
                   {
                     "type": "ObjectProperty",
                     "start": 563,
-                    "end": 585,
+                    "end": 578,
                     "loc": {
                       "start": {
                         "line": 12,
@@ -358,7 +332,7 @@
                       },
                       "end": {
                         "line": 12,
-                        "column": 24
+                        "column": 17
                       }
                     },
                     "method": false,
@@ -382,9 +356,9 @@
                       "name": "insideExtent"
                     },
                     "value": {
-                      "type": "CallExpression",
+                      "type": "NumericLiteral",
                       "start": 577,
-                      "end": 585,
+                      "end": 578,
                       "loc": {
                         "start": {
                           "line": 12,
@@ -392,33 +366,20 @@
                         },
                         "end": {
                           "line": 12,
-                          "column": 24
+                          "column": 17
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 577,
-                        "end": 583,
-                        "loc": {
-                          "start": {
-                            "line": 12,
-                            "column": 16
-                          },
-                          "end": {
-                            "line": 12,
-                            "column": 22
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 0,
+                        "raw": "0"
                       },
-                      "arguments": []
+                      "value": 0
                     }
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 589,
-                    "end": 612,
+                    "start": 582,
+                    "end": 598,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -426,7 +387,7 @@
                       },
                       "end": {
                         "line": 13,
-                        "column": 25
+                        "column": 18
                       }
                     },
                     "method": false,
@@ -434,8 +395,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 589,
-                      "end": 602,
+                      "start": 582,
+                      "end": 595,
                       "loc": {
                         "start": {
                           "line": 13,
@@ -450,9 +411,9 @@
                       "name": "outsideExtent"
                     },
                     "value": {
-                      "type": "CallExpression",
-                      "start": 604,
-                      "end": 612,
+                      "type": "NumericLiteral",
+                      "start": 597,
+                      "end": 598,
                       "loc": {
                         "start": {
                           "line": 13,
@@ -460,27 +421,14 @@
                         },
                         "end": {
                           "line": 13,
-                          "column": 25
+                          "column": 18
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 604,
-                        "end": 610,
-                        "loc": {
-                          "start": {
-                            "line": 13,
-                            "column": 17
-                          },
-                          "end": {
-                            "line": 13,
-                            "column": 23
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 1,
+                        "raw": "1"
                       },
-                      "arguments": []
+                      "value": 1
                     }
                   }
                 ]
@@ -492,7 +440,7 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * Options for defining the region of space affected by a physics field, used by the scope property.\n * @typedef {Object} SCNPhysicsFieldScope\n * @property {Symbol} insideExtent - The field’s effect applies only to objects within the region of space defined by its position and extent.\n * @property {Symbol} outsideExtent - The field’s effect applies only to objects outside the region of space defined by its position and extent.\n * @see https://developer.apple.com/reference/scenekit/scnphysicsfieldscope\n ",
+              "value": "*\n * Options for defining the region of space affected by a physics field, used by the scope property.\n * @typedef {Object} SCNPhysicsFieldScope\n * @property {number} insideExtent - The field’s effect applies only to objects within the region of space defined by its position and extent.\n * @property {number} outsideExtent - The field’s effect applies only to objects outside the region of space defined by its position and extent.\n * @see https://developer.apple.com/reference/scenekit/scnphysicsfieldscope\n ",
               "start": 15,
               "end": 529,
               "loc": {
@@ -550,7 +498,7 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Options for defining the region of space affected by a physics field, used by the scope property.\n * @typedef {Object} SCNPhysicsFieldScope\n * @property {Symbol} insideExtent - The field’s effect applies only to objects within the region of space defined by its position and extent.\n * @property {Symbol} outsideExtent - The field’s effect applies only to objects outside the region of space defined by its position and extent.\n * @see https://developer.apple.com/reference/scenekit/scnphysicsfieldscope\n ",
+            "value": "*\n * Options for defining the region of space affected by a physics field, used by the scope property.\n * @typedef {Object} SCNPhysicsFieldScope\n * @property {number} insideExtent - The field’s effect applies only to objects within the region of space defined by its position and extent.\n * @property {number} outsideExtent - The field’s effect applies only to objects outside the region of space defined by its position and extent.\n * @see https://developer.apple.com/reference/scenekit/scnphysicsfieldscope\n ",
             "start": 15,
             "end": 529,
             "loc": {
@@ -571,7 +519,7 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * Options for defining the region of space affected by a physics field, used by the scope property.\n * @typedef {Object} SCNPhysicsFieldScope\n * @property {Symbol} insideExtent - The field’s effect applies only to objects within the region of space defined by its position and extent.\n * @property {Symbol} outsideExtent - The field’s effect applies only to objects outside the region of space defined by its position and extent.\n * @see https://developer.apple.com/reference/scenekit/scnphysicsfieldscope\n ",
+      "value": "*\n * Options for defining the region of space affected by a physics field, used by the scope property.\n * @typedef {Object} SCNPhysicsFieldScope\n * @property {number} insideExtent - The field’s effect applies only to objects within the region of space defined by its position and extent.\n * @property {number} outsideExtent - The field’s effect applies only to objects outside the region of space defined by its position and extent.\n * @see https://developer.apple.com/reference/scenekit/scnphysicsfieldscope\n ",
       "start": 15,
       "end": 529,
       "loc": {
@@ -616,7 +564,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Options for defining the region of space affected by a physics field, used by the scope property.\n * @typedef {Object} SCNPhysicsFieldScope\n * @property {Symbol} insideExtent - The field’s effect applies only to objects within the region of space defined by its position and extent.\n * @property {Symbol} outsideExtent - The field’s effect applies only to objects outside the region of space defined by its position and extent.\n * @see https://developer.apple.com/reference/scenekit/scnphysicsfieldscope\n ",
+      "value": "*\n * Options for defining the region of space affected by a physics field, used by the scope property.\n * @typedef {Object} SCNPhysicsFieldScope\n * @property {number} insideExtent - The field’s effect applies only to objects within the region of space defined by its position and extent.\n * @property {number} outsideExtent - The field’s effect applies only to objects outside the region of space defined by its position and extent.\n * @see https://developer.apple.com/reference/scenekit/scnphysicsfieldscope\n ",
       "start": 15,
       "end": 529,
       "loc": {
@@ -790,7 +738,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -798,11 +746,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
+      "value": 0,
       "start": 577,
-      "end": 583,
+      "end": 578,
       "loc": {
         "start": {
           "line": 12,
@@ -810,57 +759,7 @@
         },
         "end": {
           "line": 12,
-          "column": 22
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 583,
-      "end": 584,
-      "loc": {
-        "start": {
-          "line": 12,
-          "column": 22
-        },
-        "end": {
-          "line": 12,
-          "column": 23
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 584,
-      "end": 585,
-      "loc": {
-        "start": {
-          "line": 12,
-          "column": 23
-        },
-        "end": {
-          "line": 12,
-          "column": 24
+          "column": 17
         }
       }
     },
@@ -877,16 +776,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 585,
-      "end": 586,
+      "start": 578,
+      "end": 579,
       "loc": {
         "start": {
           "line": 12,
-          "column": 24
+          "column": 17
         },
         "end": {
           "line": 12,
-          "column": 25
+          "column": 18
         }
       }
     },
@@ -903,8 +802,8 @@
         "binop": null
       },
       "value": "outsideExtent",
-      "start": 589,
-      "end": 602,
+      "start": 582,
+      "end": 595,
       "loc": {
         "start": {
           "line": 13,
@@ -929,8 +828,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 602,
-      "end": 603,
+      "start": 595,
+      "end": 596,
       "loc": {
         "start": {
           "line": 13,
@@ -944,7 +843,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -952,11 +851,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
-      "start": 604,
-      "end": 610,
+      "value": 1,
+      "start": 597,
+      "end": 598,
       "loc": {
         "start": {
           "line": 13,
@@ -964,57 +864,7 @@
         },
         "end": {
           "line": 13,
-          "column": 23
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 610,
-      "end": 611,
-      "loc": {
-        "start": {
-          "line": 13,
-          "column": 23
-        },
-        "end": {
-          "line": 13,
-          "column": 24
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 611,
-      "end": 612,
-      "loc": {
-        "start": {
-          "line": 13,
-          "column": 24
-        },
-        "end": {
-          "line": 13,
-          "column": 25
+          "column": 18
         }
       }
     },
@@ -1030,8 +880,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 613,
-      "end": 614,
+      "start": 599,
+      "end": 600,
       "loc": {
         "start": {
           "line": 14,
@@ -1058,8 +908,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 616,
-      "end": 622,
+      "start": 602,
+      "end": 608,
       "loc": {
         "start": {
           "line": 16,
@@ -1086,8 +936,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 623,
-      "end": 630,
+      "start": 609,
+      "end": 616,
       "loc": {
         "start": {
           "line": 16,
@@ -1112,8 +962,8 @@
         "binop": null
       },
       "value": "SCNPhysicsFieldScope",
-      "start": 631,
-      "end": 651,
+      "start": 617,
+      "end": 637,
       "loc": {
         "start": {
           "line": 16,
@@ -1138,8 +988,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 652,
-      "end": 652,
+      "start": 638,
+      "end": 638,
       "loc": {
         "start": {
           "line": 17,

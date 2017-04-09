@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 953,
+  "end": 925,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 953,
+    "end": 925,
     "loc": {
       "start": {
         "line": 1,
@@ -31,7 +31,7 @@
       {
         "type": "Identifier",
         "start": 772,
-        "end": 911,
+        "end": 883,
         "loc": {
           "start": {
             "line": 13,
@@ -46,7 +46,7 @@
           {
             "type": "VariableDeclarator",
             "start": 778,
-            "end": 911,
+            "end": 883,
             "loc": {
               "start": {
                 "line": 13,
@@ -78,7 +78,7 @@
             "init": {
               "type": "ObjectExpression",
               "start": 805,
-              "end": 911,
+              "end": 883,
               "loc": {
                 "start": {
                   "line": 13,
@@ -93,7 +93,7 @@
                 {
                   "type": "ObjectProperty",
                   "start": 809,
-                  "end": 830,
+                  "end": 823,
                   "loc": {
                     "start": {
                       "line": 14,
@@ -101,7 +101,7 @@
                     },
                     "end": {
                       "line": 14,
-                      "column": 23
+                      "column": 16
                     }
                   },
                   "method": false,
@@ -125,9 +125,9 @@
                     "name": "preDynamics"
                   },
                   "value": {
-                    "type": "CallExpression",
+                    "type": "NumericLiteral",
                     "start": 822,
-                    "end": 830,
+                    "end": 823,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -135,33 +135,20 @@
                       },
                       "end": {
                         "line": 14,
-                        "column": 23
+                        "column": 16
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 822,
-                      "end": 828,
-                      "loc": {
-                        "start": {
-                          "line": 14,
-                          "column": 15
-                        },
-                        "end": {
-                          "line": 14,
-                          "column": 21
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 0,
+                      "raw": "0"
                     },
-                    "arguments": []
+                    "value": 0
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 834,
-                  "end": 856,
+                  "start": 827,
+                  "end": 842,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -169,7 +156,7 @@
                     },
                     "end": {
                       "line": 15,
-                      "column": 24
+                      "column": 17
                     }
                   },
                   "method": false,
@@ -177,8 +164,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 834,
-                    "end": 846,
+                    "start": 827,
+                    "end": 839,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -193,9 +180,9 @@
                     "name": "postDynamics"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 848,
-                    "end": 856,
+                    "type": "NumericLiteral",
+                    "start": 841,
+                    "end": 842,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -203,33 +190,20 @@
                       },
                       "end": {
                         "line": 15,
-                        "column": 24
+                        "column": 17
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 848,
-                      "end": 854,
-                      "loc": {
-                        "start": {
-                          "line": 15,
-                          "column": 16
-                        },
-                        "end": {
-                          "line": 15,
-                          "column": 22
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 1,
+                      "raw": "1"
                     },
-                    "arguments": []
+                    "value": 1
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 860,
-                  "end": 882,
+                  "start": 846,
+                  "end": 861,
                   "loc": {
                     "start": {
                       "line": 16,
@@ -237,7 +211,7 @@
                     },
                     "end": {
                       "line": 16,
-                      "column": 24
+                      "column": 17
                     }
                   },
                   "method": false,
@@ -245,8 +219,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 860,
-                    "end": 872,
+                    "start": 846,
+                    "end": 858,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -261,9 +235,9 @@
                     "name": "preCollision"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 874,
-                    "end": 882,
+                    "type": "NumericLiteral",
+                    "start": 860,
+                    "end": 861,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -271,33 +245,20 @@
                       },
                       "end": {
                         "line": 16,
-                        "column": 24
+                        "column": 17
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 874,
-                      "end": 880,
-                      "loc": {
-                        "start": {
-                          "line": 16,
-                          "column": 16
-                        },
-                        "end": {
-                          "line": 16,
-                          "column": 22
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 2,
+                      "raw": "2"
                     },
-                    "arguments": []
+                    "value": 2
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 886,
-                  "end": 909,
+                  "start": 865,
+                  "end": 881,
                   "loc": {
                     "start": {
                       "line": 17,
@@ -305,7 +266,7 @@
                     },
                     "end": {
                       "line": 17,
-                      "column": 25
+                      "column": 18
                     }
                   },
                   "method": false,
@@ -313,8 +274,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 886,
-                    "end": 899,
+                    "start": 865,
+                    "end": 878,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -329,9 +290,9 @@
                     "name": "postCollision"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 901,
-                    "end": 909,
+                    "type": "NumericLiteral",
+                    "start": 880,
+                    "end": 881,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -339,27 +300,14 @@
                       },
                       "end": {
                         "line": 17,
-                        "column": 25
+                        "column": 18
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 901,
-                      "end": 907,
-                      "loc": {
-                        "start": {
-                          "line": 17,
-                          "column": 17
-                        },
-                        "end": {
-                          "line": 17,
-                          "column": 23
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 3,
+                      "raw": "3"
                     },
-                    "arguments": []
+                    "value": 3
                   }
                 }
               ]
@@ -374,8 +322,8 @@
       },
       {
         "type": "Identifier",
-        "start": 913,
-        "end": 952,
+        "start": 885,
+        "end": 924,
         "loc": {
           "start": {
             "line": 20,
@@ -388,8 +336,8 @@
         },
         "declaration": {
           "type": "Identifier",
-          "start": 928,
-          "end": 952,
+          "start": 900,
+          "end": 924,
           "loc": {
             "start": {
               "line": 20,
@@ -409,8 +357,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 913,
-        "end": 952,
+        "start": 885,
+        "end": 924,
         "loc": {
           "start": {
             "line": 20,
@@ -424,7 +372,7 @@
         "declaration": {
           "type": "VariableDeclaration",
           "start": 772,
-          "end": 911,
+          "end": 883,
           "loc": {
             "start": {
               "line": 13,
@@ -439,7 +387,7 @@
             {
               "type": "VariableDeclarator",
               "start": 778,
-              "end": 911,
+              "end": 883,
               "loc": {
                 "start": {
                   "line": 13,
@@ -471,7 +419,7 @@
               "init": {
                 "type": "ObjectExpression",
                 "start": 805,
-                "end": 911,
+                "end": 883,
                 "loc": {
                   "start": {
                     "line": 13,
@@ -486,7 +434,7 @@
                   {
                     "type": "ObjectProperty",
                     "start": 809,
-                    "end": 830,
+                    "end": 823,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -494,7 +442,7 @@
                       },
                       "end": {
                         "line": 14,
-                        "column": 23
+                        "column": 16
                       }
                     },
                     "method": false,
@@ -518,9 +466,9 @@
                       "name": "preDynamics"
                     },
                     "value": {
-                      "type": "CallExpression",
+                      "type": "NumericLiteral",
                       "start": 822,
-                      "end": 830,
+                      "end": 823,
                       "loc": {
                         "start": {
                           "line": 14,
@@ -528,33 +476,20 @@
                         },
                         "end": {
                           "line": 14,
-                          "column": 23
+                          "column": 16
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 822,
-                        "end": 828,
-                        "loc": {
-                          "start": {
-                            "line": 14,
-                            "column": 15
-                          },
-                          "end": {
-                            "line": 14,
-                            "column": 21
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 0,
+                        "raw": "0"
                       },
-                      "arguments": []
+                      "value": 0
                     }
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 834,
-                    "end": 856,
+                    "start": 827,
+                    "end": 842,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -562,7 +497,7 @@
                       },
                       "end": {
                         "line": 15,
-                        "column": 24
+                        "column": 17
                       }
                     },
                     "method": false,
@@ -570,8 +505,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 834,
-                      "end": 846,
+                      "start": 827,
+                      "end": 839,
                       "loc": {
                         "start": {
                           "line": 15,
@@ -586,9 +521,9 @@
                       "name": "postDynamics"
                     },
                     "value": {
-                      "type": "CallExpression",
-                      "start": 848,
-                      "end": 856,
+                      "type": "NumericLiteral",
+                      "start": 841,
+                      "end": 842,
                       "loc": {
                         "start": {
                           "line": 15,
@@ -596,33 +531,20 @@
                         },
                         "end": {
                           "line": 15,
-                          "column": 24
+                          "column": 17
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 848,
-                        "end": 854,
-                        "loc": {
-                          "start": {
-                            "line": 15,
-                            "column": 16
-                          },
-                          "end": {
-                            "line": 15,
-                            "column": 22
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 1,
+                        "raw": "1"
                       },
-                      "arguments": []
+                      "value": 1
                     }
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 860,
-                    "end": 882,
+                    "start": 846,
+                    "end": 861,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -630,7 +552,7 @@
                       },
                       "end": {
                         "line": 16,
-                        "column": 24
+                        "column": 17
                       }
                     },
                     "method": false,
@@ -638,8 +560,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 860,
-                      "end": 872,
+                      "start": 846,
+                      "end": 858,
                       "loc": {
                         "start": {
                           "line": 16,
@@ -654,9 +576,9 @@
                       "name": "preCollision"
                     },
                     "value": {
-                      "type": "CallExpression",
-                      "start": 874,
-                      "end": 882,
+                      "type": "NumericLiteral",
+                      "start": 860,
+                      "end": 861,
                       "loc": {
                         "start": {
                           "line": 16,
@@ -664,33 +586,20 @@
                         },
                         "end": {
                           "line": 16,
-                          "column": 24
+                          "column": 17
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 874,
-                        "end": 880,
-                        "loc": {
-                          "start": {
-                            "line": 16,
-                            "column": 16
-                          },
-                          "end": {
-                            "line": 16,
-                            "column": 22
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 2,
+                        "raw": "2"
                       },
-                      "arguments": []
+                      "value": 2
                     }
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 886,
-                    "end": 909,
+                    "start": 865,
+                    "end": 881,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -698,7 +607,7 @@
                       },
                       "end": {
                         "line": 17,
-                        "column": 25
+                        "column": 18
                       }
                     },
                     "method": false,
@@ -706,8 +615,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 886,
-                      "end": 899,
+                      "start": 865,
+                      "end": 878,
                       "loc": {
                         "start": {
                           "line": 17,
@@ -722,9 +631,9 @@
                       "name": "postCollision"
                     },
                     "value": {
-                      "type": "CallExpression",
-                      "start": 901,
-                      "end": 909,
+                      "type": "NumericLiteral",
+                      "start": 880,
+                      "end": 881,
                       "loc": {
                         "start": {
                           "line": 17,
@@ -732,27 +641,14 @@
                         },
                         "end": {
                           "line": 17,
-                          "column": 25
+                          "column": 18
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 901,
-                        "end": 907,
-                        "loc": {
-                          "start": {
-                            "line": 17,
-                            "column": 17
-                          },
-                          "end": {
-                            "line": 17,
-                            "column": 23
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 3,
+                        "raw": "3"
                       },
-                      "arguments": []
+                      "value": 3
                     }
                   }
                 ]
@@ -764,7 +660,7 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * Stages of SceneKit’s particle simulation process into which you can insert modifier blocks, used by the addModifier(forProperties:at:modifier:) method.\n * @typedef {Object} SCNParticleModifierStage\n * @property {Symbol} preDynamics - The stage before SceneKit simulates the motion of particles.\n * @property {Symbol} postDynamics - The stage after SceneKit simulates the motion of particles.\n * @property {Symbol} preCollision - The stage before SceneKit simulates the results of collisions between particles and scene geometry.\n * @property {Symbol} postCollision - The stage after SceneKit simulates the results of collisions between particles and scene geometry.\n * @see https://developer.apple.com/reference/scenekit/scnparticlemodifierstage\n ",
+              "value": "*\n * Stages of SceneKit’s particle simulation process into which you can insert modifier blocks, used by the addModifier(forProperties:at:modifier:) method.\n * @typedef {Object} SCNParticleModifierStage\n * @property {number} preDynamics - The stage before SceneKit simulates the motion of particles.\n * @property {number} postDynamics - The stage after SceneKit simulates the motion of particles.\n * @property {number} preCollision - The stage before SceneKit simulates the results of collisions between particles and scene geometry.\n * @property {number} postCollision - The stage after SceneKit simulates the results of collisions between particles and scene geometry.\n * @see https://developer.apple.com/reference/scenekit/scnparticlemodifierstage\n ",
               "start": 15,
               "end": 771,
               "loc": {
@@ -822,7 +718,7 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Stages of SceneKit’s particle simulation process into which you can insert modifier blocks, used by the addModifier(forProperties:at:modifier:) method.\n * @typedef {Object} SCNParticleModifierStage\n * @property {Symbol} preDynamics - The stage before SceneKit simulates the motion of particles.\n * @property {Symbol} postDynamics - The stage after SceneKit simulates the motion of particles.\n * @property {Symbol} preCollision - The stage before SceneKit simulates the results of collisions between particles and scene geometry.\n * @property {Symbol} postCollision - The stage after SceneKit simulates the results of collisions between particles and scene geometry.\n * @see https://developer.apple.com/reference/scenekit/scnparticlemodifierstage\n ",
+            "value": "*\n * Stages of SceneKit’s particle simulation process into which you can insert modifier blocks, used by the addModifier(forProperties:at:modifier:) method.\n * @typedef {Object} SCNParticleModifierStage\n * @property {number} preDynamics - The stage before SceneKit simulates the motion of particles.\n * @property {number} postDynamics - The stage after SceneKit simulates the motion of particles.\n * @property {number} preCollision - The stage before SceneKit simulates the results of collisions between particles and scene geometry.\n * @property {number} postCollision - The stage after SceneKit simulates the results of collisions between particles and scene geometry.\n * @see https://developer.apple.com/reference/scenekit/scnparticlemodifierstage\n ",
             "start": 15,
             "end": 771,
             "loc": {
@@ -843,7 +739,7 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * Stages of SceneKit’s particle simulation process into which you can insert modifier blocks, used by the addModifier(forProperties:at:modifier:) method.\n * @typedef {Object} SCNParticleModifierStage\n * @property {Symbol} preDynamics - The stage before SceneKit simulates the motion of particles.\n * @property {Symbol} postDynamics - The stage after SceneKit simulates the motion of particles.\n * @property {Symbol} preCollision - The stage before SceneKit simulates the results of collisions between particles and scene geometry.\n * @property {Symbol} postCollision - The stage after SceneKit simulates the results of collisions between particles and scene geometry.\n * @see https://developer.apple.com/reference/scenekit/scnparticlemodifierstage\n ",
+      "value": "*\n * Stages of SceneKit’s particle simulation process into which you can insert modifier blocks, used by the addModifier(forProperties:at:modifier:) method.\n * @typedef {Object} SCNParticleModifierStage\n * @property {number} preDynamics - The stage before SceneKit simulates the motion of particles.\n * @property {number} postDynamics - The stage after SceneKit simulates the motion of particles.\n * @property {number} preCollision - The stage before SceneKit simulates the results of collisions between particles and scene geometry.\n * @property {number} postCollision - The stage after SceneKit simulates the results of collisions between particles and scene geometry.\n * @see https://developer.apple.com/reference/scenekit/scnparticlemodifierstage\n ",
       "start": 15,
       "end": 771,
       "loc": {
@@ -888,7 +784,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Stages of SceneKit’s particle simulation process into which you can insert modifier blocks, used by the addModifier(forProperties:at:modifier:) method.\n * @typedef {Object} SCNParticleModifierStage\n * @property {Symbol} preDynamics - The stage before SceneKit simulates the motion of particles.\n * @property {Symbol} postDynamics - The stage after SceneKit simulates the motion of particles.\n * @property {Symbol} preCollision - The stage before SceneKit simulates the results of collisions between particles and scene geometry.\n * @property {Symbol} postCollision - The stage after SceneKit simulates the results of collisions between particles and scene geometry.\n * @see https://developer.apple.com/reference/scenekit/scnparticlemodifierstage\n ",
+      "value": "*\n * Stages of SceneKit’s particle simulation process into which you can insert modifier blocks, used by the addModifier(forProperties:at:modifier:) method.\n * @typedef {Object} SCNParticleModifierStage\n * @property {number} preDynamics - The stage before SceneKit simulates the motion of particles.\n * @property {number} postDynamics - The stage after SceneKit simulates the motion of particles.\n * @property {number} preCollision - The stage before SceneKit simulates the results of collisions between particles and scene geometry.\n * @property {number} postCollision - The stage after SceneKit simulates the results of collisions between particles and scene geometry.\n * @see https://developer.apple.com/reference/scenekit/scnparticlemodifierstage\n ",
       "start": 15,
       "end": 771,
       "loc": {
@@ -1062,7 +958,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -1070,11 +966,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
+      "value": 0,
       "start": 822,
-      "end": 828,
+      "end": 823,
       "loc": {
         "start": {
           "line": 14,
@@ -1082,57 +979,7 @@
         },
         "end": {
           "line": 14,
-          "column": 21
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 828,
-      "end": 829,
-      "loc": {
-        "start": {
-          "line": 14,
-          "column": 21
-        },
-        "end": {
-          "line": 14,
-          "column": 22
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 829,
-      "end": 830,
-      "loc": {
-        "start": {
-          "line": 14,
-          "column": 22
-        },
-        "end": {
-          "line": 14,
-          "column": 23
+          "column": 16
         }
       }
     },
@@ -1149,16 +996,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 830,
-      "end": 831,
+      "start": 823,
+      "end": 824,
       "loc": {
         "start": {
           "line": 14,
-          "column": 23
+          "column": 16
         },
         "end": {
           "line": 14,
-          "column": 24
+          "column": 17
         }
       }
     },
@@ -1175,8 +1022,8 @@
         "binop": null
       },
       "value": "postDynamics",
-      "start": 834,
-      "end": 846,
+      "start": 827,
+      "end": 839,
       "loc": {
         "start": {
           "line": 15,
@@ -1201,8 +1048,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 846,
-      "end": 847,
+      "start": 839,
+      "end": 840,
       "loc": {
         "start": {
           "line": 15,
@@ -1216,7 +1063,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -1224,11 +1071,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
-      "start": 848,
-      "end": 854,
+      "value": 1,
+      "start": 841,
+      "end": 842,
       "loc": {
         "start": {
           "line": 15,
@@ -1236,57 +1084,7 @@
         },
         "end": {
           "line": 15,
-          "column": 22
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 854,
-      "end": 855,
-      "loc": {
-        "start": {
-          "line": 15,
-          "column": 22
-        },
-        "end": {
-          "line": 15,
-          "column": 23
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 855,
-      "end": 856,
-      "loc": {
-        "start": {
-          "line": 15,
-          "column": 23
-        },
-        "end": {
-          "line": 15,
-          "column": 24
+          "column": 17
         }
       }
     },
@@ -1303,16 +1101,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 856,
-      "end": 857,
+      "start": 842,
+      "end": 843,
       "loc": {
         "start": {
           "line": 15,
-          "column": 24
+          "column": 17
         },
         "end": {
           "line": 15,
-          "column": 25
+          "column": 18
         }
       }
     },
@@ -1329,8 +1127,8 @@
         "binop": null
       },
       "value": "preCollision",
-      "start": 860,
-      "end": 872,
+      "start": 846,
+      "end": 858,
       "loc": {
         "start": {
           "line": 16,
@@ -1355,8 +1153,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 872,
-      "end": 873,
+      "start": 858,
+      "end": 859,
       "loc": {
         "start": {
           "line": 16,
@@ -1370,7 +1168,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -1378,11 +1176,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
-      "start": 874,
-      "end": 880,
+      "value": 2,
+      "start": 860,
+      "end": 861,
       "loc": {
         "start": {
           "line": 16,
@@ -1390,57 +1189,7 @@
         },
         "end": {
           "line": 16,
-          "column": 22
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 880,
-      "end": 881,
-      "loc": {
-        "start": {
-          "line": 16,
-          "column": 22
-        },
-        "end": {
-          "line": 16,
-          "column": 23
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 881,
-      "end": 882,
-      "loc": {
-        "start": {
-          "line": 16,
-          "column": 23
-        },
-        "end": {
-          "line": 16,
-          "column": 24
+          "column": 17
         }
       }
     },
@@ -1457,16 +1206,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 882,
-      "end": 883,
+      "start": 861,
+      "end": 862,
       "loc": {
         "start": {
           "line": 16,
-          "column": 24
+          "column": 17
         },
         "end": {
           "line": 16,
-          "column": 25
+          "column": 18
         }
       }
     },
@@ -1483,8 +1232,8 @@
         "binop": null
       },
       "value": "postCollision",
-      "start": 886,
-      "end": 899,
+      "start": 865,
+      "end": 878,
       "loc": {
         "start": {
           "line": 17,
@@ -1509,8 +1258,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 899,
-      "end": 900,
+      "start": 878,
+      "end": 879,
       "loc": {
         "start": {
           "line": 17,
@@ -1524,7 +1273,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -1532,11 +1281,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
-      "start": 901,
-      "end": 907,
+      "value": 3,
+      "start": 880,
+      "end": 881,
       "loc": {
         "start": {
           "line": 17,
@@ -1544,57 +1294,7 @@
         },
         "end": {
           "line": 17,
-          "column": 23
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 907,
-      "end": 908,
-      "loc": {
-        "start": {
-          "line": 17,
-          "column": 23
-        },
-        "end": {
-          "line": 17,
-          "column": 24
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 908,
-      "end": 909,
-      "loc": {
-        "start": {
-          "line": 17,
-          "column": 24
-        },
-        "end": {
-          "line": 17,
-          "column": 25
+          "column": 18
         }
       }
     },
@@ -1610,8 +1310,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 910,
-      "end": 911,
+      "start": 882,
+      "end": 883,
       "loc": {
         "start": {
           "line": 18,
@@ -1638,8 +1338,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 913,
-      "end": 919,
+      "start": 885,
+      "end": 891,
       "loc": {
         "start": {
           "line": 20,
@@ -1666,8 +1366,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 920,
-      "end": 927,
+      "start": 892,
+      "end": 899,
       "loc": {
         "start": {
           "line": 20,
@@ -1692,8 +1392,8 @@
         "binop": null
       },
       "value": "SCNParticleModifierStage",
-      "start": 928,
-      "end": 952,
+      "start": 900,
+      "end": 924,
       "loc": {
         "start": {
           "line": 20,
@@ -1718,8 +1418,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 953,
-      "end": 953,
+      "start": 925,
+      "end": 925,
       "loc": {
         "start": {
           "line": 21,

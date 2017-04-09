@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 1046,
+  "end": 1107,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 24,
+      "line": 25,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 1046,
+    "end": 1107,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 24,
+        "line": 25,
         "column": 0
       }
     },
@@ -30,44 +30,44 @@
     "body": [
       {
         "type": "Identifier",
-        "start": 848,
-        "end": 1013,
+        "start": 947,
+        "end": 1074,
         "loc": {
           "start": {
-            "line": 14,
+            "line": 15,
             "column": 0
           },
           "end": {
-            "line": 21,
+            "line": 22,
             "column": 1
           }
         },
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 854,
-            "end": 1013,
+            "start": 953,
+            "end": 1074,
             "loc": {
               "start": {
-                "line": 14,
+                "line": 15,
                 "column": 6
               },
               "end": {
-                "line": 21,
+                "line": 22,
                 "column": 1
               }
             },
             "id": {
               "type": "Identifier",
-              "start": 854,
-              "end": 869,
+              "start": 953,
+              "end": 968,
               "loc": {
                 "start": {
-                  "line": 14,
+                  "line": 15,
                   "column": 6
                 },
                 "end": {
-                  "line": 14,
+                  "line": 15,
                   "column": 21
                 },
                 "identifierName": "SCNRenderingAPI"
@@ -77,30 +77,85 @@
             },
             "init": {
               "type": "ObjectExpression",
-              "start": 872,
-              "end": 1013,
+              "start": 971,
+              "end": 1074,
               "loc": {
                 "start": {
-                  "line": 14,
+                  "line": 15,
                   "column": 24
                 },
                 "end": {
-                  "line": 21,
+                  "line": 22,
                   "column": 1
                 }
               },
               "properties": [
                 {
                   "type": "ObjectProperty",
-                  "start": 876,
-                  "end": 891,
+                  "start": 975,
+                  "end": 983,
                   "loc": {
                     "start": {
-                      "line": 15,
+                      "line": 16,
                       "column": 2
                     },
                     "end": {
-                      "line": 15,
+                      "line": 16,
+                      "column": 10
+                    }
+                  },
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "key": {
+                    "type": "Identifier",
+                    "start": 975,
+                    "end": 980,
+                    "loc": {
+                      "start": {
+                        "line": 16,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 16,
+                        "column": 7
+                      },
+                      "identifierName": "metal"
+                    },
+                    "name": "metal"
+                  },
+                  "value": {
+                    "type": "NumericLiteral",
+                    "start": 982,
+                    "end": 983,
+                    "loc": {
+                      "start": {
+                        "line": 16,
+                        "column": 9
+                      },
+                      "end": {
+                        "line": 16,
+                        "column": 10
+                      }
+                    },
+                    "extra": {
+                      "rawValue": 0,
+                      "raw": "0"
+                    },
+                    "value": 0
+                  }
+                },
+                {
+                  "type": "ObjectProperty",
+                  "start": 987,
+                  "end": 1002,
+                  "loc": {
+                    "start": {
+                      "line": 17,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 17,
                       "column": 17
                     }
                   },
@@ -109,144 +164,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 876,
-                    "end": 881,
-                    "loc": {
-                      "start": {
-                        "line": 15,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 15,
-                        "column": 7
-                      },
-                      "identifierName": "metal"
-                    },
-                    "name": "metal"
-                  },
-                  "value": {
-                    "type": "CallExpression",
-                    "start": 883,
-                    "end": 891,
-                    "loc": {
-                      "start": {
-                        "line": 15,
-                        "column": 9
-                      },
-                      "end": {
-                        "line": 15,
-                        "column": 17
-                      }
-                    },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 883,
-                      "end": 889,
-                      "loc": {
-                        "start": {
-                          "line": 15,
-                          "column": 9
-                        },
-                        "end": {
-                          "line": 15,
-                          "column": 15
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
-                    },
-                    "arguments": []
-                  }
-                },
-                {
-                  "type": "ObjectProperty",
-                  "start": 895,
-                  "end": 914,
-                  "loc": {
-                    "start": {
-                      "line": 16,
-                      "column": 2
-                    },
-                    "end": {
-                      "line": 16,
-                      "column": 21
-                    }
-                  },
-                  "method": false,
-                  "shorthand": false,
-                  "computed": false,
-                  "key": {
-                    "type": "Identifier",
-                    "start": 895,
-                    "end": 904,
-                    "loc": {
-                      "start": {
-                        "line": 16,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 16,
-                        "column": 11
-                      },
-                      "identifierName": "openGLES2"
-                    },
-                    "name": "openGLES2"
-                  },
-                  "value": {
-                    "type": "CallExpression",
-                    "start": 906,
-                    "end": 914,
-                    "loc": {
-                      "start": {
-                        "line": 16,
-                        "column": 13
-                      },
-                      "end": {
-                        "line": 16,
-                        "column": 21
-                      }
-                    },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 906,
-                      "end": 912,
-                      "loc": {
-                        "start": {
-                          "line": 16,
-                          "column": 13
-                        },
-                        "end": {
-                          "line": 16,
-                          "column": 19
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
-                    },
-                    "arguments": []
-                  }
-                },
-                {
-                  "type": "ObjectProperty",
-                  "start": 918,
-                  "end": 940,
-                  "loc": {
-                    "start": {
-                      "line": 17,
-                      "column": 2
-                    },
-                    "end": {
-                      "line": 17,
-                      "column": 24
-                    }
-                  },
-                  "method": false,
-                  "shorthand": false,
-                  "computed": false,
-                  "key": {
-                    "type": "Identifier",
-                    "start": 918,
-                    "end": 930,
+                    "start": 987,
+                    "end": 999,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -261,9 +180,9 @@
                     "name": "openGLLegacy"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 932,
-                    "end": 940,
+                    "type": "NumericLiteral",
+                    "start": 1001,
+                    "end": 1002,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -271,33 +190,20 @@
                       },
                       "end": {
                         "line": 17,
-                        "column": 24
+                        "column": 17
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 932,
-                      "end": 938,
-                      "loc": {
-                        "start": {
-                          "line": 17,
-                          "column": 16
-                        },
-                        "end": {
-                          "line": 17,
-                          "column": 22
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 1,
+                      "raw": "1"
                     },
-                    "arguments": []
+                    "value": 1
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 944,
-                  "end": 966,
+                  "start": 1006,
+                  "end": 1021,
                   "loc": {
                     "start": {
                       "line": 18,
@@ -305,7 +211,7 @@
                     },
                     "end": {
                       "line": 18,
-                      "column": 24
+                      "column": 17
                     }
                   },
                   "method": false,
@@ -313,8 +219,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 944,
-                    "end": 956,
+                    "start": 1006,
+                    "end": 1018,
                     "loc": {
                       "start": {
                         "line": 18,
@@ -329,9 +235,9 @@
                     "name": "openGLCore32"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 958,
-                    "end": 966,
+                    "type": "NumericLiteral",
+                    "start": 1020,
+                    "end": 1021,
                     "loc": {
                       "start": {
                         "line": 18,
@@ -339,33 +245,20 @@
                       },
                       "end": {
                         "line": 18,
-                        "column": 24
+                        "column": 17
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 958,
-                      "end": 964,
-                      "loc": {
-                        "start": {
-                          "line": 18,
-                          "column": 16
-                        },
-                        "end": {
-                          "line": 18,
-                          "column": 22
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 2,
+                      "raw": "2"
                     },
-                    "arguments": []
+                    "value": 2
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 970,
-                  "end": 992,
+                  "start": 1025,
+                  "end": 1040,
                   "loc": {
                     "start": {
                       "line": 19,
@@ -373,7 +266,7 @@
                     },
                     "end": {
                       "line": 19,
-                      "column": 24
+                      "column": 17
                     }
                   },
                   "method": false,
@@ -381,8 +274,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 970,
-                    "end": 982,
+                    "start": 1025,
+                    "end": 1037,
                     "loc": {
                       "start": {
                         "line": 19,
@@ -397,9 +290,9 @@
                     "name": "openGLCore41"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 984,
-                    "end": 992,
+                    "type": "NumericLiteral",
+                    "start": 1039,
+                    "end": 1040,
                     "loc": {
                       "start": {
                         "line": 19,
@@ -407,33 +300,20 @@
                       },
                       "end": {
                         "line": 19,
-                        "column": 24
+                        "column": 17
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 984,
-                      "end": 990,
-                      "loc": {
-                        "start": {
-                          "line": 19,
-                          "column": 16
-                        },
-                        "end": {
-                          "line": 19,
-                          "column": 22
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 3,
+                      "raw": "3"
                     },
-                    "arguments": []
+                    "value": 3
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 996,
-                  "end": 1011,
+                  "start": 1044,
+                  "end": 1058,
                   "loc": {
                     "start": {
                       "line": 20,
@@ -441,7 +321,7 @@
                     },
                     "end": {
                       "line": 20,
-                      "column": 17
+                      "column": 16
                     }
                   },
                   "method": false,
@@ -449,8 +329,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 996,
-                    "end": 1001,
+                    "start": 1044,
+                    "end": 1053,
                     "loc": {
                       "start": {
                         "line": 20,
@@ -458,6 +338,61 @@
                       },
                       "end": {
                         "line": 20,
+                        "column": 11
+                      },
+                      "identifierName": "openGLES2"
+                    },
+                    "name": "openGLES2"
+                  },
+                  "value": {
+                    "type": "NumericLiteral",
+                    "start": 1055,
+                    "end": 1058,
+                    "loc": {
+                      "start": {
+                        "line": 20,
+                        "column": 13
+                      },
+                      "end": {
+                        "line": 20,
+                        "column": 16
+                      }
+                    },
+                    "extra": {
+                      "rawValue": 999,
+                      "raw": "999"
+                    },
+                    "value": 999
+                  }
+                },
+                {
+                  "type": "ObjectProperty",
+                  "start": 1062,
+                  "end": 1072,
+                  "loc": {
+                    "start": {
+                      "line": 21,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 21,
+                      "column": 12
+                    }
+                  },
+                  "method": false,
+                  "shorthand": false,
+                  "computed": false,
+                  "key": {
+                    "type": "Identifier",
+                    "start": 1062,
+                    "end": 1067,
+                    "loc": {
+                      "start": {
+                        "line": 21,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 21,
                         "column": 7
                       },
                       "identifierName": "webGL"
@@ -465,37 +400,24 @@
                     "name": "webGL"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 1003,
-                    "end": 1011,
+                    "type": "NumericLiteral",
+                    "start": 1069,
+                    "end": 1072,
                     "loc": {
                       "start": {
-                        "line": 20,
+                        "line": 21,
                         "column": 9
                       },
                       "end": {
-                        "line": 20,
-                        "column": 17
+                        "line": 21,
+                        "column": 12
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 1003,
-                      "end": 1009,
-                      "loc": {
-                        "start": {
-                          "line": 20,
-                          "column": 9
-                        },
-                        "end": {
-                          "line": 20,
-                          "column": 15
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 998,
+                      "raw": "998"
                     },
-                    "arguments": []
+                    "value": 998
                   }
                 }
               ]
@@ -510,29 +432,29 @@
       },
       {
         "type": "Identifier",
-        "start": 1015,
-        "end": 1045,
+        "start": 1076,
+        "end": 1106,
         "loc": {
           "start": {
-            "line": 23,
+            "line": 24,
             "column": 0
           },
           "end": {
-            "line": 23,
+            "line": 24,
             "column": 30
           }
         },
         "declaration": {
           "type": "Identifier",
-          "start": 1030,
-          "end": 1045,
+          "start": 1091,
+          "end": 1106,
           "loc": {
             "start": {
-              "line": 23,
+              "line": 24,
               "column": 15
             },
             "end": {
-              "line": 23,
+              "line": 24,
               "column": 30
             },
             "identifierName": "SCNRenderingAPI"
@@ -545,58 +467,58 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 1015,
-        "end": 1045,
+        "start": 1076,
+        "end": 1106,
         "loc": {
           "start": {
-            "line": 23,
+            "line": 24,
             "column": 0
           },
           "end": {
-            "line": 23,
+            "line": 24,
             "column": 30
           }
         },
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 848,
-          "end": 1013,
+          "start": 947,
+          "end": 1074,
           "loc": {
             "start": {
-              "line": 14,
+              "line": 15,
               "column": 0
             },
             "end": {
-              "line": 21,
+              "line": 22,
               "column": 1
             }
           },
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 854,
-              "end": 1013,
+              "start": 953,
+              "end": 1074,
               "loc": {
                 "start": {
-                  "line": 14,
+                  "line": 15,
                   "column": 6
                 },
                 "end": {
-                  "line": 21,
+                  "line": 22,
                   "column": 1
                 }
               },
               "id": {
                 "type": "Identifier",
-                "start": 854,
-                "end": 869,
+                "start": 953,
+                "end": 968,
                 "loc": {
                   "start": {
-                    "line": 14,
+                    "line": 15,
                     "column": 6
                   },
                   "end": {
-                    "line": 14,
+                    "line": 15,
                     "column": 21
                   },
                   "identifierName": "SCNRenderingAPI"
@@ -606,30 +528,85 @@
               },
               "init": {
                 "type": "ObjectExpression",
-                "start": 872,
-                "end": 1013,
+                "start": 971,
+                "end": 1074,
                 "loc": {
                   "start": {
-                    "line": 14,
+                    "line": 15,
                     "column": 24
                   },
                   "end": {
-                    "line": 21,
+                    "line": 22,
                     "column": 1
                   }
                 },
                 "properties": [
                   {
                     "type": "ObjectProperty",
-                    "start": 876,
-                    "end": 891,
+                    "start": 975,
+                    "end": 983,
                     "loc": {
                       "start": {
-                        "line": 15,
+                        "line": 16,
                         "column": 2
                       },
                       "end": {
-                        "line": 15,
+                        "line": 16,
+                        "column": 10
+                      }
+                    },
+                    "method": false,
+                    "shorthand": false,
+                    "computed": false,
+                    "key": {
+                      "type": "Identifier",
+                      "start": 975,
+                      "end": 980,
+                      "loc": {
+                        "start": {
+                          "line": 16,
+                          "column": 2
+                        },
+                        "end": {
+                          "line": 16,
+                          "column": 7
+                        },
+                        "identifierName": "metal"
+                      },
+                      "name": "metal"
+                    },
+                    "value": {
+                      "type": "NumericLiteral",
+                      "start": 982,
+                      "end": 983,
+                      "loc": {
+                        "start": {
+                          "line": 16,
+                          "column": 9
+                        },
+                        "end": {
+                          "line": 16,
+                          "column": 10
+                        }
+                      },
+                      "extra": {
+                        "rawValue": 0,
+                        "raw": "0"
+                      },
+                      "value": 0
+                    }
+                  },
+                  {
+                    "type": "ObjectProperty",
+                    "start": 987,
+                    "end": 1002,
+                    "loc": {
+                      "start": {
+                        "line": 17,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 17,
                         "column": 17
                       }
                     },
@@ -638,144 +615,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 876,
-                      "end": 881,
-                      "loc": {
-                        "start": {
-                          "line": 15,
-                          "column": 2
-                        },
-                        "end": {
-                          "line": 15,
-                          "column": 7
-                        },
-                        "identifierName": "metal"
-                      },
-                      "name": "metal"
-                    },
-                    "value": {
-                      "type": "CallExpression",
-                      "start": 883,
-                      "end": 891,
-                      "loc": {
-                        "start": {
-                          "line": 15,
-                          "column": 9
-                        },
-                        "end": {
-                          "line": 15,
-                          "column": 17
-                        }
-                      },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 883,
-                        "end": 889,
-                        "loc": {
-                          "start": {
-                            "line": 15,
-                            "column": 9
-                          },
-                          "end": {
-                            "line": 15,
-                            "column": 15
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
-                      },
-                      "arguments": []
-                    }
-                  },
-                  {
-                    "type": "ObjectProperty",
-                    "start": 895,
-                    "end": 914,
-                    "loc": {
-                      "start": {
-                        "line": 16,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 16,
-                        "column": 21
-                      }
-                    },
-                    "method": false,
-                    "shorthand": false,
-                    "computed": false,
-                    "key": {
-                      "type": "Identifier",
-                      "start": 895,
-                      "end": 904,
-                      "loc": {
-                        "start": {
-                          "line": 16,
-                          "column": 2
-                        },
-                        "end": {
-                          "line": 16,
-                          "column": 11
-                        },
-                        "identifierName": "openGLES2"
-                      },
-                      "name": "openGLES2"
-                    },
-                    "value": {
-                      "type": "CallExpression",
-                      "start": 906,
-                      "end": 914,
-                      "loc": {
-                        "start": {
-                          "line": 16,
-                          "column": 13
-                        },
-                        "end": {
-                          "line": 16,
-                          "column": 21
-                        }
-                      },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 906,
-                        "end": 912,
-                        "loc": {
-                          "start": {
-                            "line": 16,
-                            "column": 13
-                          },
-                          "end": {
-                            "line": 16,
-                            "column": 19
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
-                      },
-                      "arguments": []
-                    }
-                  },
-                  {
-                    "type": "ObjectProperty",
-                    "start": 918,
-                    "end": 940,
-                    "loc": {
-                      "start": {
-                        "line": 17,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 17,
-                        "column": 24
-                      }
-                    },
-                    "method": false,
-                    "shorthand": false,
-                    "computed": false,
-                    "key": {
-                      "type": "Identifier",
-                      "start": 918,
-                      "end": 930,
+                      "start": 987,
+                      "end": 999,
                       "loc": {
                         "start": {
                           "line": 17,
@@ -790,9 +631,9 @@
                       "name": "openGLLegacy"
                     },
                     "value": {
-                      "type": "CallExpression",
-                      "start": 932,
-                      "end": 940,
+                      "type": "NumericLiteral",
+                      "start": 1001,
+                      "end": 1002,
                       "loc": {
                         "start": {
                           "line": 17,
@@ -800,33 +641,20 @@
                         },
                         "end": {
                           "line": 17,
-                          "column": 24
+                          "column": 17
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 932,
-                        "end": 938,
-                        "loc": {
-                          "start": {
-                            "line": 17,
-                            "column": 16
-                          },
-                          "end": {
-                            "line": 17,
-                            "column": 22
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 1,
+                        "raw": "1"
                       },
-                      "arguments": []
+                      "value": 1
                     }
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 944,
-                    "end": 966,
+                    "start": 1006,
+                    "end": 1021,
                     "loc": {
                       "start": {
                         "line": 18,
@@ -834,7 +662,7 @@
                       },
                       "end": {
                         "line": 18,
-                        "column": 24
+                        "column": 17
                       }
                     },
                     "method": false,
@@ -842,8 +670,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 944,
-                      "end": 956,
+                      "start": 1006,
+                      "end": 1018,
                       "loc": {
                         "start": {
                           "line": 18,
@@ -858,9 +686,9 @@
                       "name": "openGLCore32"
                     },
                     "value": {
-                      "type": "CallExpression",
-                      "start": 958,
-                      "end": 966,
+                      "type": "NumericLiteral",
+                      "start": 1020,
+                      "end": 1021,
                       "loc": {
                         "start": {
                           "line": 18,
@@ -868,33 +696,20 @@
                         },
                         "end": {
                           "line": 18,
-                          "column": 24
+                          "column": 17
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 958,
-                        "end": 964,
-                        "loc": {
-                          "start": {
-                            "line": 18,
-                            "column": 16
-                          },
-                          "end": {
-                            "line": 18,
-                            "column": 22
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 2,
+                        "raw": "2"
                       },
-                      "arguments": []
+                      "value": 2
                     }
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 970,
-                    "end": 992,
+                    "start": 1025,
+                    "end": 1040,
                     "loc": {
                       "start": {
                         "line": 19,
@@ -902,7 +717,7 @@
                       },
                       "end": {
                         "line": 19,
-                        "column": 24
+                        "column": 17
                       }
                     },
                     "method": false,
@@ -910,8 +725,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 970,
-                      "end": 982,
+                      "start": 1025,
+                      "end": 1037,
                       "loc": {
                         "start": {
                           "line": 19,
@@ -926,9 +741,9 @@
                       "name": "openGLCore41"
                     },
                     "value": {
-                      "type": "CallExpression",
-                      "start": 984,
-                      "end": 992,
+                      "type": "NumericLiteral",
+                      "start": 1039,
+                      "end": 1040,
                       "loc": {
                         "start": {
                           "line": 19,
@@ -936,33 +751,20 @@
                         },
                         "end": {
                           "line": 19,
-                          "column": 24
+                          "column": 17
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 984,
-                        "end": 990,
-                        "loc": {
-                          "start": {
-                            "line": 19,
-                            "column": 16
-                          },
-                          "end": {
-                            "line": 19,
-                            "column": 22
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 3,
+                        "raw": "3"
                       },
-                      "arguments": []
+                      "value": 3
                     }
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 996,
-                    "end": 1011,
+                    "start": 1044,
+                    "end": 1058,
                     "loc": {
                       "start": {
                         "line": 20,
@@ -970,7 +772,7 @@
                       },
                       "end": {
                         "line": 20,
-                        "column": 17
+                        "column": 16
                       }
                     },
                     "method": false,
@@ -978,8 +780,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 996,
-                      "end": 1001,
+                      "start": 1044,
+                      "end": 1053,
                       "loc": {
                         "start": {
                           "line": 20,
@@ -987,6 +789,61 @@
                         },
                         "end": {
                           "line": 20,
+                          "column": 11
+                        },
+                        "identifierName": "openGLES2"
+                      },
+                      "name": "openGLES2"
+                    },
+                    "value": {
+                      "type": "NumericLiteral",
+                      "start": 1055,
+                      "end": 1058,
+                      "loc": {
+                        "start": {
+                          "line": 20,
+                          "column": 13
+                        },
+                        "end": {
+                          "line": 20,
+                          "column": 16
+                        }
+                      },
+                      "extra": {
+                        "rawValue": 999,
+                        "raw": "999"
+                      },
+                      "value": 999
+                    }
+                  },
+                  {
+                    "type": "ObjectProperty",
+                    "start": 1062,
+                    "end": 1072,
+                    "loc": {
+                      "start": {
+                        "line": 21,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 21,
+                        "column": 12
+                      }
+                    },
+                    "method": false,
+                    "shorthand": false,
+                    "computed": false,
+                    "key": {
+                      "type": "Identifier",
+                      "start": 1062,
+                      "end": 1067,
+                      "loc": {
+                        "start": {
+                          "line": 21,
+                          "column": 2
+                        },
+                        "end": {
+                          "line": 21,
                           "column": 7
                         },
                         "identifierName": "webGL"
@@ -994,37 +851,24 @@
                       "name": "webGL"
                     },
                     "value": {
-                      "type": "CallExpression",
-                      "start": 1003,
-                      "end": 1011,
+                      "type": "NumericLiteral",
+                      "start": 1069,
+                      "end": 1072,
                       "loc": {
                         "start": {
-                          "line": 20,
+                          "line": 21,
                           "column": 9
                         },
                         "end": {
-                          "line": 20,
-                          "column": 17
+                          "line": 21,
+                          "column": 12
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 1003,
-                        "end": 1009,
-                        "loc": {
-                          "start": {
-                            "line": 20,
-                            "column": 9
-                          },
-                          "end": {
-                            "line": 20,
-                            "column": 15
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 998,
+                        "raw": "998"
                       },
-                      "arguments": []
+                      "value": 998
                     }
                   }
                 ]
@@ -1036,16 +880,16 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * Options for choosing the graphics technology for an SCNView object (or other SceneKit renderer) to use for drawing its contents. Used by the renderingAPI property and the preferredRenderingAPI option when initializing an SCNView object.\n * @typedef {Object} SCNRenderingAPI\n * @property {Symbol} metal - Use the Metal framework for SceneKit rendering.\n * @property {Symbol} openGLES2 - Use the OpenGL ES 2.0 API for SceneKit rendering in iOS.\n * @property {Symbol} openGLLegacy - Use the Legacy OpenGL API for SceneKit rendering in macOS.\n * @property {Symbol} openGLCore32 - Use the OpenGL 3.2 Core Profile API for SceneKit rendering in macOS.\n * @property {Symbol} openGLCore41 - Use the OpenGL 4.1 Core Profile API for SceneKit rendering in macOS.\n * @see https://developer.apple.com/reference/scenekit/scnrenderingapi\n ",
+              "value": "*\n * Options for choosing the graphics technology for an SCNView object (or other SceneKit renderer) to use for drawing its contents. Used by the renderingAPI property and the preferredRenderingAPI option when initializing an SCNView object.\n * @typedef {Object} SCNRenderingAPI\n * @property {number} metal - Use the Metal framework for SceneKit rendering.\n * @property {number} openGLES2 - Use the OpenGL ES 2.0 API for SceneKit rendering in iOS.\n * @property {number} openGLLegacy - Use the Legacy OpenGL API for SceneKit rendering in macOS.\n * @property {number} openGLCore32 - Use the OpenGL 3.2 Core Profile API for SceneKit rendering in macOS.\n * @property {number} openGLCore41 - Use the OpenGL 4.1 Core Profile API for SceneKit rendering in macOS.\n * @property {number} webGL - Use the OpenGL 4.1 Core Profile API for SceneKit rendering in macOS.\n * @see https://developer.apple.com/reference/scenekit/scnrenderingapi\n ",
               "start": 15,
-              "end": 847,
+              "end": 946,
               "loc": {
                 "start": {
                   "line": 4,
                   "column": 0
                 },
                 "end": {
-                  "line": 13,
+                  "line": 14,
                   "column": 3
                 }
               }
@@ -1094,16 +938,16 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Options for choosing the graphics technology for an SCNView object (or other SceneKit renderer) to use for drawing its contents. Used by the renderingAPI property and the preferredRenderingAPI option when initializing an SCNView object.\n * @typedef {Object} SCNRenderingAPI\n * @property {Symbol} metal - Use the Metal framework for SceneKit rendering.\n * @property {Symbol} openGLES2 - Use the OpenGL ES 2.0 API for SceneKit rendering in iOS.\n * @property {Symbol} openGLLegacy - Use the Legacy OpenGL API for SceneKit rendering in macOS.\n * @property {Symbol} openGLCore32 - Use the OpenGL 3.2 Core Profile API for SceneKit rendering in macOS.\n * @property {Symbol} openGLCore41 - Use the OpenGL 4.1 Core Profile API for SceneKit rendering in macOS.\n * @see https://developer.apple.com/reference/scenekit/scnrenderingapi\n ",
+            "value": "*\n * Options for choosing the graphics technology for an SCNView object (or other SceneKit renderer) to use for drawing its contents. Used by the renderingAPI property and the preferredRenderingAPI option when initializing an SCNView object.\n * @typedef {Object} SCNRenderingAPI\n * @property {number} metal - Use the Metal framework for SceneKit rendering.\n * @property {number} openGLES2 - Use the OpenGL ES 2.0 API for SceneKit rendering in iOS.\n * @property {number} openGLLegacy - Use the Legacy OpenGL API for SceneKit rendering in macOS.\n * @property {number} openGLCore32 - Use the OpenGL 3.2 Core Profile API for SceneKit rendering in macOS.\n * @property {number} openGLCore41 - Use the OpenGL 4.1 Core Profile API for SceneKit rendering in macOS.\n * @property {number} webGL - Use the OpenGL 4.1 Core Profile API for SceneKit rendering in macOS.\n * @see https://developer.apple.com/reference/scenekit/scnrenderingapi\n ",
             "start": 15,
-            "end": 847,
+            "end": 946,
             "loc": {
               "start": {
                 "line": 4,
                 "column": 0
               },
               "end": {
-                "line": 13,
+                "line": 14,
                 "column": 3
               }
             }
@@ -1115,16 +959,16 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * Options for choosing the graphics technology for an SCNView object (or other SceneKit renderer) to use for drawing its contents. Used by the renderingAPI property and the preferredRenderingAPI option when initializing an SCNView object.\n * @typedef {Object} SCNRenderingAPI\n * @property {Symbol} metal - Use the Metal framework for SceneKit rendering.\n * @property {Symbol} openGLES2 - Use the OpenGL ES 2.0 API for SceneKit rendering in iOS.\n * @property {Symbol} openGLLegacy - Use the Legacy OpenGL API for SceneKit rendering in macOS.\n * @property {Symbol} openGLCore32 - Use the OpenGL 3.2 Core Profile API for SceneKit rendering in macOS.\n * @property {Symbol} openGLCore41 - Use the OpenGL 4.1 Core Profile API for SceneKit rendering in macOS.\n * @see https://developer.apple.com/reference/scenekit/scnrenderingapi\n ",
+      "value": "*\n * Options for choosing the graphics technology for an SCNView object (or other SceneKit renderer) to use for drawing its contents. Used by the renderingAPI property and the preferredRenderingAPI option when initializing an SCNView object.\n * @typedef {Object} SCNRenderingAPI\n * @property {number} metal - Use the Metal framework for SceneKit rendering.\n * @property {number} openGLES2 - Use the OpenGL ES 2.0 API for SceneKit rendering in iOS.\n * @property {number} openGLLegacy - Use the Legacy OpenGL API for SceneKit rendering in macOS.\n * @property {number} openGLCore32 - Use the OpenGL 3.2 Core Profile API for SceneKit rendering in macOS.\n * @property {number} openGLCore41 - Use the OpenGL 4.1 Core Profile API for SceneKit rendering in macOS.\n * @property {number} webGL - Use the OpenGL 4.1 Core Profile API for SceneKit rendering in macOS.\n * @see https://developer.apple.com/reference/scenekit/scnrenderingapi\n ",
       "start": 15,
-      "end": 847,
+      "end": 946,
       "loc": {
         "start": {
           "line": 4,
           "column": 0
         },
         "end": {
-          "line": 13,
+          "line": 14,
           "column": 3
         }
       }
@@ -1160,16 +1004,16 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Options for choosing the graphics technology for an SCNView object (or other SceneKit renderer) to use for drawing its contents. Used by the renderingAPI property and the preferredRenderingAPI option when initializing an SCNView object.\n * @typedef {Object} SCNRenderingAPI\n * @property {Symbol} metal - Use the Metal framework for SceneKit rendering.\n * @property {Symbol} openGLES2 - Use the OpenGL ES 2.0 API for SceneKit rendering in iOS.\n * @property {Symbol} openGLLegacy - Use the Legacy OpenGL API for SceneKit rendering in macOS.\n * @property {Symbol} openGLCore32 - Use the OpenGL 3.2 Core Profile API for SceneKit rendering in macOS.\n * @property {Symbol} openGLCore41 - Use the OpenGL 4.1 Core Profile API for SceneKit rendering in macOS.\n * @see https://developer.apple.com/reference/scenekit/scnrenderingapi\n ",
+      "value": "*\n * Options for choosing the graphics technology for an SCNView object (or other SceneKit renderer) to use for drawing its contents. Used by the renderingAPI property and the preferredRenderingAPI option when initializing an SCNView object.\n * @typedef {Object} SCNRenderingAPI\n * @property {number} metal - Use the Metal framework for SceneKit rendering.\n * @property {number} openGLES2 - Use the OpenGL ES 2.0 API for SceneKit rendering in iOS.\n * @property {number} openGLLegacy - Use the Legacy OpenGL API for SceneKit rendering in macOS.\n * @property {number} openGLCore32 - Use the OpenGL 3.2 Core Profile API for SceneKit rendering in macOS.\n * @property {number} openGLCore41 - Use the OpenGL 4.1 Core Profile API for SceneKit rendering in macOS.\n * @property {number} webGL - Use the OpenGL 4.1 Core Profile API for SceneKit rendering in macOS.\n * @see https://developer.apple.com/reference/scenekit/scnrenderingapi\n ",
       "start": 15,
-      "end": 847,
+      "end": 946,
       "loc": {
         "start": {
           "line": 4,
           "column": 0
         },
         "end": {
-          "line": 13,
+          "line": 14,
           "column": 3
         }
       }
@@ -1189,15 +1033,15 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 848,
-      "end": 853,
+      "start": 947,
+      "end": 952,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 15,
           "column": 0
         },
         "end": {
-          "line": 14,
+          "line": 15,
           "column": 5
         }
       }
@@ -1215,15 +1059,15 @@
         "binop": null
       },
       "value": "SCNRenderingAPI",
-      "start": 854,
-      "end": 869,
+      "start": 953,
+      "end": 968,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 15,
           "column": 6
         },
         "end": {
-          "line": 14,
+          "line": 15,
           "column": 21
         }
       }
@@ -1242,15 +1086,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 870,
-      "end": 871,
+      "start": 969,
+      "end": 970,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 15,
           "column": 22
         },
         "end": {
-          "line": 14,
+          "line": 15,
           "column": 23
         }
       }
@@ -1267,15 +1111,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 872,
-      "end": 873,
+      "start": 971,
+      "end": 972,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 15,
           "column": 24
         },
         "end": {
-          "line": 14,
+          "line": 15,
           "column": 25
         }
       }
@@ -1293,15 +1137,15 @@
         "binop": null
       },
       "value": "metal",
-      "start": 876,
-      "end": 881,
+      "start": 975,
+      "end": 980,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 16,
           "column": 2
         },
         "end": {
-          "line": 15,
+          "line": 16,
           "column": 7
         }
       }
@@ -1319,16 +1163,69 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 881,
-      "end": 882,
+      "start": 980,
+      "end": 981,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 16,
           "column": 7
         },
         "end": {
-          "line": 15,
+          "line": 16,
           "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "num",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": 0,
+      "start": 982,
+      "end": 983,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 9
+        },
+        "end": {
+          "line": 16,
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 983,
+      "end": 984,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 10
+        },
+        "end": {
+          "line": 16,
+          "column": 11
         }
       }
     },
@@ -1344,66 +1241,69 @@
         "postfix": false,
         "binop": null
       },
-      "value": "Symbol",
-      "start": 883,
-      "end": 889,
+      "value": "openGLLegacy",
+      "start": 987,
+      "end": 999,
       "loc": {
         "start": {
-          "line": 15,
-          "column": 9
+          "line": 17,
+          "column": 2
         },
         "end": {
-          "line": 15,
-          "column": 15
+          "line": 17,
+          "column": 14
         }
       }
     },
     {
       "type": {
-        "label": "(",
+        "label": ":",
         "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 889,
-      "end": 890,
-      "loc": {
-        "start": {
-          "line": 15,
-          "column": 15
-        },
-        "end": {
-          "line": 15,
-          "column": 16
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
         "startsExpr": false,
         "rightAssociative": false,
         "isLoop": false,
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "start": 890,
-      "end": 891,
+      "start": 999,
+      "end": 1000,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 17,
+          "column": 14
+        },
+        "end": {
+          "line": 17,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "num",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": 1,
+      "start": 1001,
+      "end": 1002,
+      "loc": {
+        "start": {
+          "line": 17,
           "column": 16
         },
         "end": {
-          "line": 15,
+          "line": 17,
           "column": 17
         }
       }
@@ -1421,15 +1321,225 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 891,
-      "end": 892,
+      "start": 1002,
+      "end": 1003,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 17,
           "column": 17
         },
         "end": {
-          "line": 15,
+          "line": 17,
+          "column": 18
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "openGLCore32",
+      "start": 1006,
+      "end": 1018,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 2
+        },
+        "end": {
+          "line": 18,
+          "column": 14
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1018,
+      "end": 1019,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 14
+        },
+        "end": {
+          "line": 18,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "num",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": 2,
+      "start": 1020,
+      "end": 1021,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 16
+        },
+        "end": {
+          "line": 18,
+          "column": 17
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1021,
+      "end": 1022,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 17
+        },
+        "end": {
+          "line": 18,
+          "column": 18
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "openGLCore41",
+      "start": 1025,
+      "end": 1037,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 2
+        },
+        "end": {
+          "line": 19,
+          "column": 14
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1037,
+      "end": 1038,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 14
+        },
+        "end": {
+          "line": 19,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "num",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": 3,
+      "start": 1039,
+      "end": 1040,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 16
+        },
+        "end": {
+          "line": 19,
+          "column": 17
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1040,
+      "end": 1041,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 17
+        },
+        "end": {
+          "line": 19,
           "column": 18
         }
       }
@@ -1447,15 +1557,15 @@
         "binop": null
       },
       "value": "openGLES2",
-      "start": 895,
-      "end": 904,
+      "start": 1044,
+      "end": 1053,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 20,
           "column": 2
         },
         "end": {
-          "line": 16,
+          "line": 20,
           "column": 11
         }
       }
@@ -1473,22 +1583,22 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 904,
-      "end": 905,
+      "start": 1053,
+      "end": 1054,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 20,
           "column": 11
         },
         "end": {
-          "line": 16,
+          "line": 20,
           "column": 12
         }
       }
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -1496,69 +1606,20 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
-      "start": 906,
-      "end": 912,
+      "value": 999,
+      "start": 1055,
+      "end": 1058,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 20,
           "column": 13
         },
         "end": {
-          "line": 16,
-          "column": 19
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 912,
-      "end": 913,
-      "loc": {
-        "start": {
-          "line": 16,
-          "column": 19
-        },
-        "end": {
-          "line": 16,
-          "column": 20
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 913,
-      "end": 914,
-      "loc": {
-        "start": {
-          "line": 16,
-          "column": 20
-        },
-        "end": {
-          "line": 16,
-          "column": 21
+          "line": 20,
+          "column": 16
         }
       }
     },
@@ -1575,478 +1636,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 914,
-      "end": 915,
+      "start": 1058,
+      "end": 1059,
       "loc": {
         "start": {
-          "line": 16,
-          "column": 21
-        },
-        "end": {
-          "line": 16,
-          "column": 22
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "openGLLegacy",
-      "start": 918,
-      "end": 930,
-      "loc": {
-        "start": {
-          "line": 17,
-          "column": 2
-        },
-        "end": {
-          "line": 17,
-          "column": 14
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ":",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 930,
-      "end": 931,
-      "loc": {
-        "start": {
-          "line": 17,
-          "column": 14
-        },
-        "end": {
-          "line": 17,
-          "column": 15
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "Symbol",
-      "start": 932,
-      "end": 938,
-      "loc": {
-        "start": {
-          "line": 17,
+          "line": 20,
           "column": 16
         },
         "end": {
-          "line": 17,
-          "column": 22
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 938,
-      "end": 939,
-      "loc": {
-        "start": {
-          "line": 17,
-          "column": 22
-        },
-        "end": {
-          "line": 17,
-          "column": 23
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 939,
-      "end": 940,
-      "loc": {
-        "start": {
-          "line": 17,
-          "column": 23
-        },
-        "end": {
-          "line": 17,
-          "column": 24
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 940,
-      "end": 941,
-      "loc": {
-        "start": {
-          "line": 17,
-          "column": 24
-        },
-        "end": {
-          "line": 17,
-          "column": 25
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "openGLCore32",
-      "start": 944,
-      "end": 956,
-      "loc": {
-        "start": {
-          "line": 18,
-          "column": 2
-        },
-        "end": {
-          "line": 18,
-          "column": 14
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ":",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 956,
-      "end": 957,
-      "loc": {
-        "start": {
-          "line": 18,
-          "column": 14
-        },
-        "end": {
-          "line": 18,
-          "column": 15
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "Symbol",
-      "start": 958,
-      "end": 964,
-      "loc": {
-        "start": {
-          "line": 18,
-          "column": 16
-        },
-        "end": {
-          "line": 18,
-          "column": 22
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 964,
-      "end": 965,
-      "loc": {
-        "start": {
-          "line": 18,
-          "column": 22
-        },
-        "end": {
-          "line": 18,
-          "column": 23
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 965,
-      "end": 966,
-      "loc": {
-        "start": {
-          "line": 18,
-          "column": 23
-        },
-        "end": {
-          "line": 18,
-          "column": 24
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 966,
-      "end": 967,
-      "loc": {
-        "start": {
-          "line": 18,
-          "column": 24
-        },
-        "end": {
-          "line": 18,
-          "column": 25
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "openGLCore41",
-      "start": 970,
-      "end": 982,
-      "loc": {
-        "start": {
-          "line": 19,
-          "column": 2
-        },
-        "end": {
-          "line": 19,
-          "column": 14
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ":",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 982,
-      "end": 983,
-      "loc": {
-        "start": {
-          "line": 19,
-          "column": 14
-        },
-        "end": {
-          "line": 19,
-          "column": 15
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "Symbol",
-      "start": 984,
-      "end": 990,
-      "loc": {
-        "start": {
-          "line": 19,
-          "column": 16
-        },
-        "end": {
-          "line": 19,
-          "column": 22
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 990,
-      "end": 991,
-      "loc": {
-        "start": {
-          "line": 19,
-          "column": 22
-        },
-        "end": {
-          "line": 19,
-          "column": 23
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 991,
-      "end": 992,
-      "loc": {
-        "start": {
-          "line": 19,
-          "column": 23
-        },
-        "end": {
-          "line": 19,
-          "column": 24
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 992,
-      "end": 993,
-      "loc": {
-        "start": {
-          "line": 19,
-          "column": 24
-        },
-        "end": {
-          "line": 19,
-          "column": 25
+          "line": 20,
+          "column": 17
         }
       }
     },
@@ -2063,15 +1662,15 @@
         "binop": null
       },
       "value": "webGL",
-      "start": 996,
-      "end": 1001,
+      "start": 1062,
+      "end": 1067,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 21,
           "column": 2
         },
         "end": {
-          "line": 20,
+          "line": 21,
           "column": 7
         }
       }
@@ -2089,22 +1688,22 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1001,
-      "end": 1002,
+      "start": 1067,
+      "end": 1068,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 21,
           "column": 7
         },
         "end": {
-          "line": 20,
+          "line": 21,
           "column": 8
         }
       }
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -2112,69 +1711,20 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
-      "start": 1003,
-      "end": 1009,
+      "value": 998,
+      "start": 1069,
+      "end": 1072,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 21,
           "column": 9
         },
         "end": {
-          "line": 20,
-          "column": 15
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 1009,
-      "end": 1010,
-      "loc": {
-        "start": {
-          "line": 20,
-          "column": 15
-        },
-        "end": {
-          "line": 20,
-          "column": 16
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 1010,
-      "end": 1011,
-      "loc": {
-        "start": {
-          "line": 20,
-          "column": 16
-        },
-        "end": {
-          "line": 20,
-          "column": 17
+          "line": 21,
+          "column": 12
         }
       }
     },
@@ -2190,15 +1740,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1012,
-      "end": 1013,
+      "start": 1073,
+      "end": 1074,
       "loc": {
         "start": {
-          "line": 21,
+          "line": 22,
           "column": 0
         },
         "end": {
-          "line": 21,
+          "line": 22,
           "column": 1
         }
       }
@@ -2218,15 +1768,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 1015,
-      "end": 1021,
+      "start": 1076,
+      "end": 1082,
       "loc": {
         "start": {
-          "line": 23,
+          "line": 24,
           "column": 0
         },
         "end": {
-          "line": 23,
+          "line": 24,
           "column": 6
         }
       }
@@ -2246,15 +1796,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 1022,
-      "end": 1029,
+      "start": 1083,
+      "end": 1090,
       "loc": {
         "start": {
-          "line": 23,
+          "line": 24,
           "column": 7
         },
         "end": {
-          "line": 23,
+          "line": 24,
           "column": 14
         }
       }
@@ -2272,15 +1822,15 @@
         "binop": null
       },
       "value": "SCNRenderingAPI",
-      "start": 1030,
-      "end": 1045,
+      "start": 1091,
+      "end": 1106,
       "loc": {
         "start": {
-          "line": 23,
+          "line": 24,
           "column": 15
         },
         "end": {
-          "line": 23,
+          "line": 24,
           "column": 30
         }
       }
@@ -2298,15 +1848,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1046,
-      "end": 1046,
+      "start": 1107,
+      "end": 1107,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 25,
           "column": 0
         },
         "end": {
-          "line": 24,
+          "line": 25,
           "column": 0
         }
       }

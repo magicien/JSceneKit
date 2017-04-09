@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 2206,
+  "end": 2134,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 70,
+      "line": 61,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 2206,
+    "end": 2134,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 70,
+        "line": 61,
         "column": 0
       }
     },
@@ -120,28 +120,28 @@
       {
         "type": "ExportDefaultDeclaration",
         "start": 209,
-        "end": 2205,
+        "end": 2133,
         "loc": {
           "start": {
             "line": 12,
             "column": 0
           },
           "end": {
-            "line": 69,
+            "line": 60,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
           "start": 224,
-          "end": 2205,
+          "end": 2133,
           "loc": {
             "start": {
               "line": 12,
               "column": 15
             },
             "end": {
-              "line": 69,
+              "line": 60,
               "column": 1
             }
           },
@@ -183,127 +183,243 @@
           "body": {
             "type": "ClassBody",
             "start": 259,
-            "end": 2205,
+            "end": 2133,
             "loc": {
               "start": {
                 "line": 12,
                 "column": 50
               },
               "end": {
-                "line": 69,
+                "line": 60,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 334,
-                "end": 1385,
+                "start": 1040,
+                "end": 2131,
                 "loc": {
                   "start": {
-                    "line": 19,
+                    "line": 24,
                     "column": 2
                   },
                   "end": {
-                    "line": 54,
+                    "line": 59,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 334,
-                  "end": 338,
+                  "start": 1040,
+                  "end": 1051,
                   "loc": {
                     "start": {
-                      "line": 19,
+                      "line": 24,
                       "column": 2
                     },
                     "end": {
-                      "line": 19,
-                      "column": 6
+                      "line": 24,
+                      "column": 13
                     },
-                    "identifierName": "init"
+                    "identifierName": "constructor"
                   },
-                  "name": "init",
+                  "name": "constructor",
                   "leadingComments": null
                 },
                 "static": false,
-                "kind": "method",
+                "kind": "constructor",
                 "id": null,
                 "generator": false,
                 "expression": false,
                 "async": false,
-                "params": [],
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "start": 1052,
+                    "end": 1062,
+                    "loc": {
+                      "start": {
+                        "line": 24,
+                        "column": 14
+                      },
+                      "end": {
+                        "line": 24,
+                        "column": 24
+                      },
+                      "identifierName": "ringRadius"
+                    },
+                    "name": "ringRadius"
+                  },
+                  {
+                    "type": "Identifier",
+                    "start": 1064,
+                    "end": 1074,
+                    "loc": {
+                      "start": {
+                        "line": 24,
+                        "column": 26
+                      },
+                      "end": {
+                        "line": 24,
+                        "column": 36
+                      },
+                      "identifierName": "pipeRadius"
+                    },
+                    "name": "pipeRadius"
+                  }
+                ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 341,
-                  "end": 1385,
+                  "start": 1076,
+                  "end": 2131,
                   "loc": {
                     "start": {
-                      "line": 19,
-                      "column": 9
+                      "line": 24,
+                      "column": 38
                     },
                     "end": {
-                      "line": 54,
+                      "line": 59,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 612,
-                      "end": 631,
+                      "start": 1082,
+                      "end": 1089,
                       "loc": {
                         "start": {
-                          "line": 28,
+                          "line": 25,
                           "column": 4
                         },
                         "end": {
-                          "line": 28,
+                          "line": 25,
+                          "column": 11
+                        }
+                      },
+                      "expression": {
+                        "type": "CallExpression",
+                        "start": 1082,
+                        "end": 1089,
+                        "loc": {
+                          "start": {
+                            "line": 25,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 25,
+                            "column": 11
+                          }
+                        },
+                        "callee": {
+                          "type": "Super",
+                          "start": 1082,
+                          "end": 1087,
+                          "loc": {
+                            "start": {
+                              "line": 25,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 25,
+                              "column": 9
+                            }
+                          }
+                        },
+                        "arguments": [],
+                        "trailingComments": null
+                      },
+                      "trailingComments": [
+                        {
+                          "type": "CommentLine",
+                          "value": " Adjusting a Torus’ Dimensions",
+                          "start": 1095,
+                          "end": 1127,
+                          "loc": {
+                            "start": {
+                              "line": 27,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 27,
+                              "column": 36
+                            }
+                          }
+                        },
+                        {
+                          "type": "CommentBlock",
+                          "value": "*\n     * The major radius of the torus, defining a circle in the x- and z-axis dimensions. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scntorus/1522906-ringradius\n     ",
+                          "start": 1133,
+                          "end": 1354,
+                          "loc": {
+                            "start": {
+                              "line": 29,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 33,
+                              "column": 7
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "start": 1359,
+                      "end": 1378,
+                      "loc": {
+                        "start": {
+                          "line": 34,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 34,
                           "column": 23
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 612,
-                        "end": 631,
+                        "start": 1359,
+                        "end": 1378,
                         "loc": {
                           "start": {
-                            "line": 28,
+                            "line": 34,
                             "column": 4
                           },
                           "end": {
-                            "line": 28,
+                            "line": 34,
                             "column": 23
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 612,
-                          "end": 627,
+                          "start": 1359,
+                          "end": 1374,
                           "loc": {
                             "start": {
-                              "line": 28,
+                              "line": 34,
                               "column": 4
                             },
                             "end": {
-                              "line": 28,
+                              "line": 34,
                               "column": 19
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 612,
-                            "end": 616,
+                            "start": 1359,
+                            "end": 1363,
                             "loc": {
                               "start": {
-                                "line": 28,
+                                "line": 34,
                                 "column": 4
                               },
                               "end": {
-                                "line": 28,
+                                "line": 34,
                                 "column": 8
                               }
                             },
@@ -311,15 +427,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 617,
-                            "end": 627,
+                            "start": 1364,
+                            "end": 1374,
                             "loc": {
                               "start": {
-                                "line": 28,
+                                "line": 34,
                                 "column": 9
                               },
                               "end": {
-                                "line": 28,
+                                "line": 34,
                                 "column": 19
                               },
                               "identifierName": "ringRadius"
@@ -331,15 +447,15 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 630,
-                          "end": 631,
+                          "start": 1377,
+                          "end": 1378,
                           "loc": {
                             "start": {
-                              "line": 28,
+                              "line": 34,
                               "column": 22
                             },
                             "end": {
-                              "line": 28,
+                              "line": 34,
                               "column": 23
                             }
                           },
@@ -358,15 +474,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Adjusting a Torus’ Dimensions",
-                          "start": 348,
-                          "end": 380,
+                          "start": 1095,
+                          "end": 1127,
                           "loc": {
                             "start": {
-                              "line": 21,
+                              "line": 27,
                               "column": 4
                             },
                             "end": {
-                              "line": 21,
+                              "line": 27,
                               "column": 36
                             }
                           }
@@ -374,15 +490,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The major radius of the torus, defining a circle in the x- and z-axis dimensions. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scntorus/1522906-ringradius\n     ",
-                          "start": 386,
-                          "end": 607,
+                          "start": 1133,
+                          "end": 1354,
                           "loc": {
                             "start": {
-                              "line": 23,
+                              "line": 29,
                               "column": 4
                             },
                             "end": {
-                              "line": 27,
+                              "line": 33,
                               "column": 7
                             }
                           }
@@ -392,15 +508,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The minor radius of the torus, defining the pipe that encircles the torus ring. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scntorus/1522623-piperadius\n     ",
-                          "start": 637,
-                          "end": 856,
+                          "start": 1384,
+                          "end": 1603,
                           "loc": {
                             "start": {
-                              "line": 30,
+                              "line": 36,
                               "column": 4
                             },
                             "end": {
-                              "line": 34,
+                              "line": 40,
                               "column": 7
                             }
                           }
@@ -409,58 +525,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 861,
-                      "end": 880,
+                      "start": 1608,
+                      "end": 1627,
                       "loc": {
                         "start": {
-                          "line": 35,
+                          "line": 41,
                           "column": 4
                         },
                         "end": {
-                          "line": 35,
+                          "line": 41,
                           "column": 23
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 861,
-                        "end": 880,
+                        "start": 1608,
+                        "end": 1627,
                         "loc": {
                           "start": {
-                            "line": 35,
+                            "line": 41,
                             "column": 4
                           },
                           "end": {
-                            "line": 35,
+                            "line": 41,
                             "column": 23
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 861,
-                          "end": 876,
+                          "start": 1608,
+                          "end": 1623,
                           "loc": {
                             "start": {
-                              "line": 35,
+                              "line": 41,
                               "column": 4
                             },
                             "end": {
-                              "line": 35,
+                              "line": 41,
                               "column": 19
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 861,
-                            "end": 865,
+                            "start": 1608,
+                            "end": 1612,
                             "loc": {
                               "start": {
-                                "line": 35,
+                                "line": 41,
                                 "column": 4
                               },
                               "end": {
-                                "line": 35,
+                                "line": 41,
                                 "column": 8
                               }
                             },
@@ -468,15 +584,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 866,
-                            "end": 876,
+                            "start": 1613,
+                            "end": 1623,
                             "loc": {
                               "start": {
-                                "line": 35,
+                                "line": 41,
                                 "column": 9
                               },
                               "end": {
-                                "line": 35,
+                                "line": 41,
                                 "column": 19
                               },
                               "identifierName": "pipeRadius"
@@ -488,15 +604,15 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 879,
-                          "end": 880,
+                          "start": 1626,
+                          "end": 1627,
                           "loc": {
                             "start": {
-                              "line": 35,
+                              "line": 41,
                               "column": 22
                             },
                             "end": {
-                              "line": 35,
+                              "line": 41,
                               "column": 23
                             }
                           },
@@ -515,15 +631,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The minor radius of the torus, defining the pipe that encircles the torus ring. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scntorus/1522623-piperadius\n     ",
-                          "start": 637,
-                          "end": 856,
+                          "start": 1384,
+                          "end": 1603,
                           "loc": {
                             "start": {
-                              "line": 30,
+                              "line": 36,
                               "column": 4
                             },
                             "end": {
-                              "line": 34,
+                              "line": 40,
                               "column": 7
                             }
                           }
@@ -533,15 +649,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Configuring Torus Properties",
-                          "start": 887,
-                          "end": 918,
+                          "start": 1634,
+                          "end": 1665,
                           "loc": {
                             "start": {
-                              "line": 38,
+                              "line": 44,
                               "column": 4
                             },
                             "end": {
-                              "line": 38,
+                              "line": 44,
                               "column": 35
                             }
                           }
@@ -549,15 +665,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The number of subdivisions around the torus ring. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scntorus/1523598-ringsegmentcount\n     ",
-                          "start": 924,
-                          "end": 1119,
+                          "start": 1671,
+                          "end": 1866,
                           "loc": {
                             "start": {
-                              "line": 40,
+                              "line": 46,
                               "column": 4
                             },
                             "end": {
-                              "line": 44,
+                              "line": 50,
                               "column": 7
                             }
                           }
@@ -566,58 +682,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1124,
-                      "end": 1149,
+                      "start": 1871,
+                      "end": 1896,
                       "loc": {
                         "start": {
-                          "line": 45,
+                          "line": 51,
                           "column": 4
                         },
                         "end": {
-                          "line": 45,
+                          "line": 51,
                           "column": 29
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1124,
-                        "end": 1149,
+                        "start": 1871,
+                        "end": 1896,
                         "loc": {
                           "start": {
-                            "line": 45,
+                            "line": 51,
                             "column": 4
                           },
                           "end": {
-                            "line": 45,
+                            "line": 51,
                             "column": 29
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1124,
-                          "end": 1145,
+                          "start": 1871,
+                          "end": 1892,
                           "loc": {
                             "start": {
-                              "line": 45,
+                              "line": 51,
                               "column": 4
                             },
                             "end": {
-                              "line": 45,
+                              "line": 51,
                               "column": 25
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1124,
-                            "end": 1128,
+                            "start": 1871,
+                            "end": 1875,
                             "loc": {
                               "start": {
-                                "line": 45,
+                                "line": 51,
                                 "column": 4
                               },
                               "end": {
-                                "line": 45,
+                                "line": 51,
                                 "column": 8
                               }
                             },
@@ -625,15 +741,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1129,
-                            "end": 1145,
+                            "start": 1876,
+                            "end": 1892,
                             "loc": {
                               "start": {
-                                "line": 45,
+                                "line": 51,
                                 "column": 9
                               },
                               "end": {
-                                "line": 45,
+                                "line": 51,
                                 "column": 25
                               },
                               "identifierName": "ringSegmentCount"
@@ -645,15 +761,15 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 1148,
-                          "end": 1149,
+                          "start": 1895,
+                          "end": 1896,
                           "loc": {
                             "start": {
-                              "line": 45,
+                              "line": 51,
                               "column": 28
                             },
                             "end": {
-                              "line": 45,
+                              "line": 51,
                               "column": 29
                             }
                           },
@@ -672,15 +788,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Configuring Torus Properties",
-                          "start": 887,
-                          "end": 918,
+                          "start": 1634,
+                          "end": 1665,
                           "loc": {
                             "start": {
-                              "line": 38,
+                              "line": 44,
                               "column": 4
                             },
                             "end": {
-                              "line": 38,
+                              "line": 44,
                               "column": 35
                             }
                           }
@@ -688,15 +804,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The number of subdivisions around the torus ring. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scntorus/1523598-ringsegmentcount\n     ",
-                          "start": 924,
-                          "end": 1119,
+                          "start": 1671,
+                          "end": 1866,
                           "loc": {
                             "start": {
-                              "line": 40,
+                              "line": 46,
                               "column": 4
                             },
                             "end": {
-                              "line": 44,
+                              "line": 50,
                               "column": 7
                             }
                           }
@@ -706,15 +822,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The number of subdivisions around the torus pipe. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scntorus/1522807-pipesegmentcount\n     ",
-                          "start": 1155,
-                          "end": 1350,
+                          "start": 1902,
+                          "end": 2097,
                           "loc": {
                             "start": {
-                              "line": 47,
+                              "line": 53,
                               "column": 4
                             },
                             "end": {
-                              "line": 51,
+                              "line": 57,
                               "column": 7
                             }
                           }
@@ -723,58 +839,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1355,
-                      "end": 1380,
+                      "start": 2102,
+                      "end": 2127,
                       "loc": {
                         "start": {
-                          "line": 52,
+                          "line": 58,
                           "column": 4
                         },
                         "end": {
-                          "line": 52,
+                          "line": 58,
                           "column": 29
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1355,
-                        "end": 1380,
+                        "start": 2102,
+                        "end": 2127,
                         "loc": {
                           "start": {
-                            "line": 52,
+                            "line": 58,
                             "column": 4
                           },
                           "end": {
-                            "line": 52,
+                            "line": 58,
                             "column": 29
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1355,
-                          "end": 1376,
+                          "start": 2102,
+                          "end": 2123,
                           "loc": {
                             "start": {
-                              "line": 52,
+                              "line": 58,
                               "column": 4
                             },
                             "end": {
-                              "line": 52,
+                              "line": 58,
                               "column": 25
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1355,
-                            "end": 1359,
+                            "start": 2102,
+                            "end": 2106,
                             "loc": {
                               "start": {
-                                "line": 52,
+                                "line": 58,
                                 "column": 4
                               },
                               "end": {
-                                "line": 52,
+                                "line": 58,
                                 "column": 8
                               }
                             },
@@ -782,15 +898,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1360,
-                            "end": 1376,
+                            "start": 2107,
+                            "end": 2123,
                             "loc": {
                               "start": {
-                                "line": 52,
+                                "line": 58,
                                 "column": 9
                               },
                               "end": {
-                                "line": 52,
+                                "line": 58,
                                 "column": 25
                               },
                               "identifierName": "pipeSegmentCount"
@@ -802,15 +918,15 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 1379,
-                          "end": 1380,
+                          "start": 2126,
+                          "end": 2127,
                           "loc": {
                             "start": {
-                              "line": 52,
+                              "line": 58,
                               "column": 28
                             },
                             "end": {
-                              "line": 52,
+                              "line": 58,
                               "column": 29
                             }
                           },
@@ -826,15 +942,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The number of subdivisions around the torus pipe. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scntorus/1522807-pipesegmentcount\n     ",
-                          "start": 1155,
-                          "end": 1350,
+                          "start": 1902,
+                          "end": 2097,
                           "loc": {
                             "start": {
-                              "line": 47,
+                              "line": 53,
                               "column": 4
                             },
                             "end": {
-                              "line": 51,
+                              "line": 57,
                               "column": 7
                             }
                           }
@@ -842,183 +958,37 @@
                       ]
                     }
                   ],
-                  "directives": [],
-                  "trailingComments": null
-                },
-                "leadingComments": [
-                  {
-                    "type": "CommentBlock",
-                    "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-                    "start": 264,
-                    "end": 331,
-                    "loc": {
-                      "start": {
-                        "line": 14,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 18,
-                        "column": 5
-                      }
-                    }
-                  }
-                ],
-                "trailingComments": [
-                  {
-                    "type": "CommentLine",
-                    "value": " Creating a Torus",
-                    "start": 1389,
-                    "end": 1408,
-                    "loc": {
-                      "start": {
-                        "line": 56,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 56,
-                        "column": 21
-                      }
-                    }
-                  },
-                  {
-                    "type": "CommentBlock",
-                    "value": "*\n   * Creates a torus geometry with the specified ring radius and pipe radius.\n   * @access public\n   * @param {number} ringRadius - The major radius of the torus, defining its circular ring in the x- and z-axis dimensions of its local coordinate space.\n   * @param {number} pipeRadius - The minor radius of the torus, defining the pipe that encircles the ring.\n   * @returns {void}\n   * @desc The torus is centered in its local coordinate system. For example, if you create a torus whose ring radius is 5.0 and pipe radius is 1.0, it extends from -6.0 to 6.0 (with a hole through the center from -4.0 to 4.0) in the x- and z-axes and from -1.0 to 1.0 in the y-axis.\n   * @see https://developer.apple.com/reference/scenekit/scntorus/1523833-init\n   ",
-                    "start": 1412,
-                    "end": 2166,
-                    "loc": {
-                      "start": {
-                        "line": 58,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 66,
-                        "column": 5
-                      }
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "ClassMethod",
-                "start": 2169,
-                "end": 2203,
-                "loc": {
-                  "start": {
-                    "line": 67,
-                    "column": 2
-                  },
-                  "end": {
-                    "line": 68,
-                    "column": 3
-                  }
-                },
-                "computed": false,
-                "key": {
-                  "type": "Identifier",
-                  "start": 2169,
-                  "end": 2173,
-                  "loc": {
-                    "start": {
-                      "line": 67,
-                      "column": 2
-                    },
-                    "end": {
-                      "line": 67,
-                      "column": 6
-                    },
-                    "identifierName": "init"
-                  },
-                  "name": "init",
-                  "leadingComments": null
-                },
-                "static": false,
-                "kind": "method",
-                "id": null,
-                "generator": false,
-                "expression": false,
-                "async": false,
-                "params": [
-                  {
-                    "type": "Identifier",
-                    "start": 2174,
-                    "end": 2184,
-                    "loc": {
-                      "start": {
-                        "line": 67,
-                        "column": 7
-                      },
-                      "end": {
-                        "line": 67,
-                        "column": 17
-                      },
-                      "identifierName": "ringRadius"
-                    },
-                    "name": "ringRadius"
-                  },
-                  {
-                    "type": "Identifier",
-                    "start": 2186,
-                    "end": 2196,
-                    "loc": {
-                      "start": {
-                        "line": 67,
-                        "column": 19
-                      },
-                      "end": {
-                        "line": 67,
-                        "column": 29
-                      },
-                      "identifierName": "pipeRadius"
-                    },
-                    "name": "pipeRadius"
-                  }
-                ],
-                "body": {
-                  "type": "BlockStatement",
-                  "start": 2198,
-                  "end": 2203,
-                  "loc": {
-                    "start": {
-                      "line": 67,
-                      "column": 31
-                    },
-                    "end": {
-                      "line": 68,
-                      "column": 3
-                    }
-                  },
-                  "body": [],
                   "directives": []
                 },
                 "leadingComments": [
                   {
                     "type": "CommentLine",
                     "value": " Creating a Torus",
-                    "start": 1389,
-                    "end": 1408,
+                    "start": 263,
+                    "end": 282,
                     "loc": {
                       "start": {
-                        "line": 56,
+                        "line": 13,
                         "column": 2
                       },
                       "end": {
-                        "line": 56,
+                        "line": 13,
                         "column": 21
                       }
                     }
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Creates a torus geometry with the specified ring radius and pipe radius.\n   * @access public\n   * @param {number} ringRadius - The major radius of the torus, defining its circular ring in the x- and z-axis dimensions of its local coordinate space.\n   * @param {number} pipeRadius - The minor radius of the torus, defining the pipe that encircles the ring.\n   * @returns {void}\n   * @desc The torus is centered in its local coordinate system. For example, if you create a torus whose ring radius is 5.0 and pipe radius is 1.0, it extends from -6.0 to 6.0 (with a hole through the center from -4.0 to 4.0) in the x- and z-axes and from -1.0 to 1.0 in the y-axis.\n   * @see https://developer.apple.com/reference/scenekit/scntorus/1523833-init\n   ",
-                    "start": 1412,
-                    "end": 2166,
+                    "value": "*\n   * Creates a torus geometry with the specified ring radius and pipe radius.\n   * @access public\n   * @constructor\n   * @param {number} ringRadius - The major radius of the torus, defining its circular ring in the x- and z-axis dimensions of its local coordinate space.\n   * @param {number} pipeRadius - The minor radius of the torus, defining the pipe that encircles the ring.\n   * @desc The torus is centered in its local coordinate system. For example, if you create a torus whose ring radius is 5.0 and pipe radius is 1.0, it extends from -6.0 to 6.0 (with a hole through the center from -4.0 to 4.0) in the x- and z-axes and from -1.0 to 1.0 in the y-axis.\n   * @see https://developer.apple.com/reference/scenekit/scntorus/1523833-init\n   ",
+                    "start": 286,
+                    "end": 1037,
                     "loc": {
                       "start": {
-                        "line": 58,
+                        "line": 15,
                         "column": 2
                       },
                       "end": {
-                        "line": 66,
+                        "line": 23,
                         "column": 5
                       }
                     }
@@ -1123,17 +1093,33 @@
       }
     },
     {
-      "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 264,
-      "end": 331,
+      "type": "CommentLine",
+      "value": " Creating a Torus",
+      "start": 263,
+      "end": 282,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 2
         },
         "end": {
-          "line": 18,
+          "line": 13,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Creates a torus geometry with the specified ring radius and pipe radius.\n   * @access public\n   * @constructor\n   * @param {number} ringRadius - The major radius of the torus, defining its circular ring in the x- and z-axis dimensions of its local coordinate space.\n   * @param {number} pipeRadius - The minor radius of the torus, defining the pipe that encircles the ring.\n   * @desc The torus is centered in its local coordinate system. For example, if you create a torus whose ring radius is 5.0 and pipe radius is 1.0, it extends from -6.0 to 6.0 (with a hole through the center from -4.0 to 4.0) in the x- and z-axes and from -1.0 to 1.0 in the y-axis.\n   * @see https://developer.apple.com/reference/scenekit/scntorus/1523833-init\n   ",
+      "start": 286,
+      "end": 1037,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 2
+        },
+        "end": {
+          "line": 23,
           "column": 5
         }
       }
@@ -1141,15 +1127,15 @@
     {
       "type": "CommentLine",
       "value": " Adjusting a Torus’ Dimensions",
-      "start": 348,
-      "end": 380,
+      "start": 1095,
+      "end": 1127,
       "loc": {
         "start": {
-          "line": 21,
+          "line": 27,
           "column": 4
         },
         "end": {
-          "line": 21,
+          "line": 27,
           "column": 36
         }
       }
@@ -1157,15 +1143,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The major radius of the torus, defining a circle in the x- and z-axis dimensions. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scntorus/1522906-ringradius\n     ",
-      "start": 386,
-      "end": 607,
+      "start": 1133,
+      "end": 1354,
       "loc": {
         "start": {
-          "line": 23,
+          "line": 29,
           "column": 4
         },
         "end": {
-          "line": 27,
+          "line": 33,
           "column": 7
         }
       }
@@ -1173,15 +1159,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The minor radius of the torus, defining the pipe that encircles the torus ring. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scntorus/1522623-piperadius\n     ",
-      "start": 637,
-      "end": 856,
+      "start": 1384,
+      "end": 1603,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 36,
           "column": 4
         },
         "end": {
-          "line": 34,
+          "line": 40,
           "column": 7
         }
       }
@@ -1189,15 +1175,15 @@
     {
       "type": "CommentLine",
       "value": " Configuring Torus Properties",
-      "start": 887,
-      "end": 918,
+      "start": 1634,
+      "end": 1665,
       "loc": {
         "start": {
-          "line": 38,
+          "line": 44,
           "column": 4
         },
         "end": {
-          "line": 38,
+          "line": 44,
           "column": 35
         }
       }
@@ -1205,15 +1191,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The number of subdivisions around the torus ring. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scntorus/1523598-ringsegmentcount\n     ",
-      "start": 924,
-      "end": 1119,
+      "start": 1671,
+      "end": 1866,
       "loc": {
         "start": {
-          "line": 40,
+          "line": 46,
           "column": 4
         },
         "end": {
-          "line": 44,
+          "line": 50,
           "column": 7
         }
       }
@@ -1221,48 +1207,16 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The number of subdivisions around the torus pipe. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scntorus/1522807-pipesegmentcount\n     ",
-      "start": 1155,
-      "end": 1350,
+      "start": 1902,
+      "end": 2097,
       "loc": {
         "start": {
-          "line": 47,
+          "line": 53,
           "column": 4
         },
         "end": {
-          "line": 51,
+          "line": 57,
           "column": 7
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": " Creating a Torus",
-      "start": 1389,
-      "end": 1408,
-      "loc": {
-        "start": {
-          "line": 56,
-          "column": 2
-        },
-        "end": {
-          "line": 56,
-          "column": 21
-        }
-      }
-    },
-    {
-      "type": "CommentBlock",
-      "value": "*\n   * Creates a torus geometry with the specified ring radius and pipe radius.\n   * @access public\n   * @param {number} ringRadius - The major radius of the torus, defining its circular ring in the x- and z-axis dimensions of its local coordinate space.\n   * @param {number} pipeRadius - The minor radius of the torus, defining the pipe that encircles the ring.\n   * @returns {void}\n   * @desc The torus is centered in its local coordinate system. For example, if you create a torus whose ring radius is 5.0 and pipe radius is 1.0, it extends from -6.0 to 6.0 (with a hole through the center from -4.0 to 4.0) in the x- and z-axes and from -1.0 to 1.0 in the y-axis.\n   * @see https://developer.apple.com/reference/scenekit/scntorus/1523833-init\n   ",
-      "start": 1412,
-      "end": 2166,
-      "loc": {
-        "start": {
-          "line": 58,
-          "column": 2
-        },
-        "end": {
-          "line": 66,
-          "column": 5
         }
       }
     }
@@ -1608,17 +1562,33 @@
       }
     },
     {
-      "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 264,
-      "end": 331,
+      "type": "CommentLine",
+      "value": " Creating a Torus",
+      "start": 263,
+      "end": 282,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 2
         },
         "end": {
-          "line": 18,
+          "line": 13,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Creates a torus geometry with the specified ring radius and pipe radius.\n   * @access public\n   * @constructor\n   * @param {number} ringRadius - The major radius of the torus, defining its circular ring in the x- and z-axis dimensions of its local coordinate space.\n   * @param {number} pipeRadius - The minor radius of the torus, defining the pipe that encircles the ring.\n   * @desc The torus is centered in its local coordinate system. For example, if you create a torus whose ring radius is 5.0 and pipe radius is 1.0, it extends from -6.0 to 6.0 (with a hole through the center from -4.0 to 4.0) in the x- and z-axes and from -1.0 to 1.0 in the y-axis.\n   * @see https://developer.apple.com/reference/scenekit/scntorus/1523833-init\n   ",
+      "start": 286,
+      "end": 1037,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 2
+        },
+        "end": {
+          "line": 23,
           "column": 5
         }
       }
@@ -1635,17 +1605,17 @@
         "postfix": false,
         "binop": null
       },
-      "value": "init",
-      "start": 334,
-      "end": 338,
+      "value": "constructor",
+      "start": 1040,
+      "end": 1051,
       "loc": {
         "start": {
-          "line": 19,
+          "line": 24,
           "column": 2
         },
         "end": {
-          "line": 19,
-          "column": 6
+          "line": 24,
+          "column": 13
         }
       }
     },
@@ -1661,16 +1631,94 @@
         "postfix": false,
         "binop": null
       },
-      "start": 338,
-      "end": 339,
+      "start": 1051,
+      "end": 1052,
       "loc": {
         "start": {
-          "line": 19,
-          "column": 6
+          "line": 24,
+          "column": 13
         },
         "end": {
-          "line": 19,
-          "column": 7
+          "line": 24,
+          "column": 14
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "ringRadius",
+      "start": 1052,
+      "end": 1062,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 14
+        },
+        "end": {
+          "line": 24,
+          "column": 24
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1062,
+      "end": 1063,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 24
+        },
+        "end": {
+          "line": 24,
+          "column": 25
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "pipeRadius",
+      "start": 1064,
+      "end": 1074,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 26
+        },
+        "end": {
+          "line": 24,
+          "column": 36
         }
       }
     },
@@ -1686,16 +1734,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 339,
-      "end": 340,
+      "start": 1074,
+      "end": 1075,
       "loc": {
         "start": {
-          "line": 19,
-          "column": 7
+          "line": 24,
+          "column": 36
         },
         "end": {
-          "line": 19,
-          "column": 8
+          "line": 24,
+          "column": 37
         }
       }
     },
@@ -1711,31 +1759,109 @@
         "postfix": false,
         "binop": null
       },
-      "start": 341,
-      "end": 342,
+      "start": 1076,
+      "end": 1077,
       "loc": {
         "start": {
-          "line": 19,
+          "line": 24,
+          "column": 38
+        },
+        "end": {
+          "line": 24,
+          "column": 39
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "super",
+        "keyword": "super",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "super",
+      "start": 1082,
+      "end": 1087,
+      "loc": {
+        "start": {
+          "line": 25,
+          "column": 4
+        },
+        "end": {
+          "line": 25,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1087,
+      "end": 1088,
+      "loc": {
+        "start": {
+          "line": 25,
           "column": 9
         },
         "end": {
-          "line": 19,
+          "line": 25,
           "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 1088,
+      "end": 1089,
+      "loc": {
+        "start": {
+          "line": 25,
+          "column": 10
+        },
+        "end": {
+          "line": 25,
+          "column": 11
         }
       }
     },
     {
       "type": "CommentLine",
       "value": " Adjusting a Torus’ Dimensions",
-      "start": 348,
-      "end": 380,
+      "start": 1095,
+      "end": 1127,
       "loc": {
         "start": {
-          "line": 21,
+          "line": 27,
           "column": 4
         },
         "end": {
-          "line": 21,
+          "line": 27,
           "column": 36
         }
       }
@@ -1743,15 +1869,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The major radius of the torus, defining a circle in the x- and z-axis dimensions. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scntorus/1522906-ringradius\n     ",
-      "start": 386,
-      "end": 607,
+      "start": 1133,
+      "end": 1354,
       "loc": {
         "start": {
-          "line": 23,
+          "line": 29,
           "column": 4
         },
         "end": {
-          "line": 27,
+          "line": 33,
           "column": 7
         }
       }
@@ -1771,15 +1897,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 612,
-      "end": 616,
+      "start": 1359,
+      "end": 1363,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 34,
           "column": 4
         },
         "end": {
-          "line": 28,
+          "line": 34,
           "column": 8
         }
       }
@@ -1797,15 +1923,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 616,
-      "end": 617,
+      "start": 1363,
+      "end": 1364,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 34,
           "column": 8
         },
         "end": {
-          "line": 28,
+          "line": 34,
           "column": 9
         }
       }
@@ -1823,15 +1949,15 @@
         "binop": null
       },
       "value": "ringRadius",
-      "start": 617,
-      "end": 627,
+      "start": 1364,
+      "end": 1374,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 34,
           "column": 9
         },
         "end": {
-          "line": 28,
+          "line": 34,
           "column": 19
         }
       }
@@ -1850,15 +1976,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 628,
-      "end": 629,
+      "start": 1375,
+      "end": 1376,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 34,
           "column": 20
         },
         "end": {
-          "line": 28,
+          "line": 34,
           "column": 21
         }
       }
@@ -1877,15 +2003,15 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 630,
-      "end": 631,
+      "start": 1377,
+      "end": 1378,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 34,
           "column": 22
         },
         "end": {
-          "line": 28,
+          "line": 34,
           "column": 23
         }
       }
@@ -1893,15 +2019,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The minor radius of the torus, defining the pipe that encircles the torus ring. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scntorus/1522623-piperadius\n     ",
-      "start": 637,
-      "end": 856,
+      "start": 1384,
+      "end": 1603,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 36,
           "column": 4
         },
         "end": {
-          "line": 34,
+          "line": 40,
           "column": 7
         }
       }
@@ -1921,15 +2047,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 861,
-      "end": 865,
+      "start": 1608,
+      "end": 1612,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 41,
           "column": 4
         },
         "end": {
-          "line": 35,
+          "line": 41,
           "column": 8
         }
       }
@@ -1947,15 +2073,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 865,
-      "end": 866,
+      "start": 1612,
+      "end": 1613,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 41,
           "column": 8
         },
         "end": {
-          "line": 35,
+          "line": 41,
           "column": 9
         }
       }
@@ -1973,15 +2099,15 @@
         "binop": null
       },
       "value": "pipeRadius",
-      "start": 866,
-      "end": 876,
+      "start": 1613,
+      "end": 1623,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 41,
           "column": 9
         },
         "end": {
-          "line": 35,
+          "line": 41,
           "column": 19
         }
       }
@@ -2000,15 +2126,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 877,
-      "end": 878,
+      "start": 1624,
+      "end": 1625,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 41,
           "column": 20
         },
         "end": {
-          "line": 35,
+          "line": 41,
           "column": 21
         }
       }
@@ -2027,15 +2153,15 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 879,
-      "end": 880,
+      "start": 1626,
+      "end": 1627,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 41,
           "column": 22
         },
         "end": {
-          "line": 35,
+          "line": 41,
           "column": 23
         }
       }
@@ -2043,15 +2169,15 @@
     {
       "type": "CommentLine",
       "value": " Configuring Torus Properties",
-      "start": 887,
-      "end": 918,
+      "start": 1634,
+      "end": 1665,
       "loc": {
         "start": {
-          "line": 38,
+          "line": 44,
           "column": 4
         },
         "end": {
-          "line": 38,
+          "line": 44,
           "column": 35
         }
       }
@@ -2059,15 +2185,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The number of subdivisions around the torus ring. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scntorus/1523598-ringsegmentcount\n     ",
-      "start": 924,
-      "end": 1119,
+      "start": 1671,
+      "end": 1866,
       "loc": {
         "start": {
-          "line": 40,
+          "line": 46,
           "column": 4
         },
         "end": {
-          "line": 44,
+          "line": 50,
           "column": 7
         }
       }
@@ -2087,15 +2213,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1124,
-      "end": 1128,
+      "start": 1871,
+      "end": 1875,
       "loc": {
         "start": {
-          "line": 45,
+          "line": 51,
           "column": 4
         },
         "end": {
-          "line": 45,
+          "line": 51,
           "column": 8
         }
       }
@@ -2113,15 +2239,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1128,
-      "end": 1129,
+      "start": 1875,
+      "end": 1876,
       "loc": {
         "start": {
-          "line": 45,
+          "line": 51,
           "column": 8
         },
         "end": {
-          "line": 45,
+          "line": 51,
           "column": 9
         }
       }
@@ -2139,15 +2265,15 @@
         "binop": null
       },
       "value": "ringSegmentCount",
-      "start": 1129,
-      "end": 1145,
+      "start": 1876,
+      "end": 1892,
       "loc": {
         "start": {
-          "line": 45,
+          "line": 51,
           "column": 9
         },
         "end": {
-          "line": 45,
+          "line": 51,
           "column": 25
         }
       }
@@ -2166,15 +2292,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1146,
-      "end": 1147,
+      "start": 1893,
+      "end": 1894,
       "loc": {
         "start": {
-          "line": 45,
+          "line": 51,
           "column": 26
         },
         "end": {
-          "line": 45,
+          "line": 51,
           "column": 27
         }
       }
@@ -2193,15 +2319,15 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 1148,
-      "end": 1149,
+      "start": 1895,
+      "end": 1896,
       "loc": {
         "start": {
-          "line": 45,
+          "line": 51,
           "column": 28
         },
         "end": {
-          "line": 45,
+          "line": 51,
           "column": 29
         }
       }
@@ -2209,15 +2335,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The number of subdivisions around the torus pipe. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scntorus/1522807-pipesegmentcount\n     ",
-      "start": 1155,
-      "end": 1350,
+      "start": 1902,
+      "end": 2097,
       "loc": {
         "start": {
-          "line": 47,
+          "line": 53,
           "column": 4
         },
         "end": {
-          "line": 51,
+          "line": 57,
           "column": 7
         }
       }
@@ -2237,15 +2363,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1355,
-      "end": 1359,
+      "start": 2102,
+      "end": 2106,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 58,
           "column": 4
         },
         "end": {
-          "line": 52,
+          "line": 58,
           "column": 8
         }
       }
@@ -2263,15 +2389,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1359,
-      "end": 1360,
+      "start": 2106,
+      "end": 2107,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 58,
           "column": 8
         },
         "end": {
-          "line": 52,
+          "line": 58,
           "column": 9
         }
       }
@@ -2289,15 +2415,15 @@
         "binop": null
       },
       "value": "pipeSegmentCount",
-      "start": 1360,
-      "end": 1376,
+      "start": 2107,
+      "end": 2123,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 58,
           "column": 9
         },
         "end": {
-          "line": 52,
+          "line": 58,
           "column": 25
         }
       }
@@ -2316,15 +2442,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1377,
-      "end": 1378,
+      "start": 2124,
+      "end": 2125,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 58,
           "column": 26
         },
         "end": {
-          "line": 52,
+          "line": 58,
           "column": 27
         }
       }
@@ -2343,252 +2469,16 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 1379,
-      "end": 1380,
-      "loc": {
-        "start": {
-          "line": 52,
-          "column": 28
-        },
-        "end": {
-          "line": 52,
-          "column": 29
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "}",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 1384,
-      "end": 1385,
-      "loc": {
-        "start": {
-          "line": 54,
-          "column": 2
-        },
-        "end": {
-          "line": 54,
-          "column": 3
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": " Creating a Torus",
-      "start": 1389,
-      "end": 1408,
-      "loc": {
-        "start": {
-          "line": 56,
-          "column": 2
-        },
-        "end": {
-          "line": 56,
-          "column": 21
-        }
-      }
-    },
-    {
-      "type": "CommentBlock",
-      "value": "*\n   * Creates a torus geometry with the specified ring radius and pipe radius.\n   * @access public\n   * @param {number} ringRadius - The major radius of the torus, defining its circular ring in the x- and z-axis dimensions of its local coordinate space.\n   * @param {number} pipeRadius - The minor radius of the torus, defining the pipe that encircles the ring.\n   * @returns {void}\n   * @desc The torus is centered in its local coordinate system. For example, if you create a torus whose ring radius is 5.0 and pipe radius is 1.0, it extends from -6.0 to 6.0 (with a hole through the center from -4.0 to 4.0) in the x- and z-axes and from -1.0 to 1.0 in the y-axis.\n   * @see https://developer.apple.com/reference/scenekit/scntorus/1523833-init\n   ",
-      "start": 1412,
-      "end": 2166,
+      "start": 2126,
+      "end": 2127,
       "loc": {
         "start": {
           "line": 58,
-          "column": 2
+          "column": 28
         },
         "end": {
-          "line": 66,
-          "column": 5
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "init",
-      "start": 2169,
-      "end": 2173,
-      "loc": {
-        "start": {
-          "line": 67,
-          "column": 2
-        },
-        "end": {
-          "line": 67,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 2173,
-      "end": 2174,
-      "loc": {
-        "start": {
-          "line": 67,
-          "column": 6
-        },
-        "end": {
-          "line": 67,
-          "column": 7
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "ringRadius",
-      "start": 2174,
-      "end": 2184,
-      "loc": {
-        "start": {
-          "line": 67,
-          "column": 7
-        },
-        "end": {
-          "line": 67,
-          "column": 17
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 2184,
-      "end": 2185,
-      "loc": {
-        "start": {
-          "line": 67,
-          "column": 17
-        },
-        "end": {
-          "line": 67,
-          "column": 18
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "pipeRadius",
-      "start": 2186,
-      "end": 2196,
-      "loc": {
-        "start": {
-          "line": 67,
-          "column": 19
-        },
-        "end": {
-          "line": 67,
+          "line": 58,
           "column": 29
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 2196,
-      "end": 2197,
-      "loc": {
-        "start": {
-          "line": 67,
-          "column": 29
-        },
-        "end": {
-          "line": 67,
-          "column": 30
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "{",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 2198,
-      "end": 2199,
-      "loc": {
-        "start": {
-          "line": 67,
-          "column": 31
-        },
-        "end": {
-          "line": 67,
-          "column": 32
         }
       }
     },
@@ -2604,15 +2494,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2202,
-      "end": 2203,
+      "start": 2130,
+      "end": 2131,
       "loc": {
         "start": {
-          "line": 68,
+          "line": 59,
           "column": 2
         },
         "end": {
-          "line": 68,
+          "line": 59,
           "column": 3
         }
       }
@@ -2629,15 +2519,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2204,
-      "end": 2205,
+      "start": 2132,
+      "end": 2133,
       "loc": {
         "start": {
-          "line": 69,
+          "line": 60,
           "column": 0
         },
         "end": {
-          "line": 69,
+          "line": 60,
           "column": 1
         }
       }
@@ -2655,15 +2545,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2206,
-      "end": 2206,
+      "start": 2134,
+      "end": 2134,
       "loc": {
         "start": {
-          "line": 70,
+          "line": 61,
           "column": 0
         },
         "end": {
-          "line": 70,
+          "line": 61,
           "column": 0
         }
       }

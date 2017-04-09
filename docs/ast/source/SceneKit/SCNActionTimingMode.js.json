@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 891,
+  "end": 863,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 891,
+    "end": 863,
     "loc": {
       "start": {
         "line": 1,
@@ -31,7 +31,7 @@
       {
         "type": "Identifier",
         "start": 736,
-        "end": 854,
+        "end": 826,
         "loc": {
           "start": {
             "line": 13,
@@ -46,7 +46,7 @@
           {
             "type": "VariableDeclarator",
             "start": 742,
-            "end": 854,
+            "end": 826,
             "loc": {
               "start": {
                 "line": 13,
@@ -78,7 +78,7 @@
             "init": {
               "type": "ObjectExpression",
               "start": 764,
-              "end": 854,
+              "end": 826,
               "loc": {
                 "start": {
                   "line": 13,
@@ -93,7 +93,7 @@
                 {
                   "type": "ObjectProperty",
                   "start": 768,
-                  "end": 784,
+                  "end": 777,
                   "loc": {
                     "start": {
                       "line": 14,
@@ -101,7 +101,7 @@
                     },
                     "end": {
                       "line": 14,
-                      "column": 18
+                      "column": 11
                     }
                   },
                   "method": false,
@@ -125,9 +125,9 @@
                     "name": "linear"
                   },
                   "value": {
-                    "type": "CallExpression",
+                    "type": "NumericLiteral",
                     "start": 776,
-                    "end": 784,
+                    "end": 777,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -135,33 +135,20 @@
                       },
                       "end": {
                         "line": 14,
-                        "column": 18
+                        "column": 11
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 776,
-                      "end": 782,
-                      "loc": {
-                        "start": {
-                          "line": 14,
-                          "column": 10
-                        },
-                        "end": {
-                          "line": 14,
-                          "column": 16
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 0,
+                      "raw": "0"
                     },
-                    "arguments": []
+                    "value": 0
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 788,
-                  "end": 804,
+                  "start": 781,
+                  "end": 790,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -169,7 +156,7 @@
                     },
                     "end": {
                       "line": 15,
-                      "column": 18
+                      "column": 11
                     }
                   },
                   "method": false,
@@ -177,8 +164,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 788,
-                    "end": 794,
+                    "start": 781,
+                    "end": 787,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -193,9 +180,9 @@
                     "name": "easeIn"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 796,
-                    "end": 804,
+                    "type": "NumericLiteral",
+                    "start": 789,
+                    "end": 790,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -203,33 +190,20 @@
                       },
                       "end": {
                         "line": 15,
-                        "column": 18
+                        "column": 11
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 796,
-                      "end": 802,
-                      "loc": {
-                        "start": {
-                          "line": 15,
-                          "column": 10
-                        },
-                        "end": {
-                          "line": 15,
-                          "column": 16
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 1,
+                      "raw": "1"
                     },
-                    "arguments": []
+                    "value": 1
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 808,
-                  "end": 825,
+                  "start": 794,
+                  "end": 804,
                   "loc": {
                     "start": {
                       "line": 16,
@@ -237,7 +211,7 @@
                     },
                     "end": {
                       "line": 16,
-                      "column": 19
+                      "column": 12
                     }
                   },
                   "method": false,
@@ -245,8 +219,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 808,
-                    "end": 815,
+                    "start": 794,
+                    "end": 801,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -261,9 +235,9 @@
                     "name": "easeOut"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 817,
-                    "end": 825,
+                    "type": "NumericLiteral",
+                    "start": 803,
+                    "end": 804,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -271,33 +245,20 @@
                       },
                       "end": {
                         "line": 16,
-                        "column": 19
+                        "column": 12
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 817,
-                      "end": 823,
-                      "loc": {
-                        "start": {
-                          "line": 16,
-                          "column": 11
-                        },
-                        "end": {
-                          "line": 16,
-                          "column": 17
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 2,
+                      "raw": "2"
                     },
-                    "arguments": []
+                    "value": 2
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 829,
-                  "end": 852,
+                  "start": 808,
+                  "end": 824,
                   "loc": {
                     "start": {
                       "line": 17,
@@ -305,7 +266,7 @@
                     },
                     "end": {
                       "line": 17,
-                      "column": 25
+                      "column": 18
                     }
                   },
                   "method": false,
@@ -313,8 +274,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 829,
-                    "end": 842,
+                    "start": 808,
+                    "end": 821,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -329,9 +290,9 @@
                     "name": "easeInEaseOut"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 844,
-                    "end": 852,
+                    "type": "NumericLiteral",
+                    "start": 823,
+                    "end": 824,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -339,27 +300,14 @@
                       },
                       "end": {
                         "line": 17,
-                        "column": 25
+                        "column": 18
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 844,
-                      "end": 850,
-                      "loc": {
-                        "start": {
-                          "line": 17,
-                          "column": 17
-                        },
-                        "end": {
-                          "line": 17,
-                          "column": 23
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 3,
+                      "raw": "3"
                     },
-                    "arguments": []
+                    "value": 3
                   }
                 }
               ]
@@ -374,8 +322,8 @@
       },
       {
         "type": "Identifier",
-        "start": 856,
-        "end": 890,
+        "start": 828,
+        "end": 862,
         "loc": {
           "start": {
             "line": 20,
@@ -388,8 +336,8 @@
         },
         "declaration": {
           "type": "Identifier",
-          "start": 871,
-          "end": 890,
+          "start": 843,
+          "end": 862,
           "loc": {
             "start": {
               "line": 20,
@@ -409,8 +357,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 856,
-        "end": 890,
+        "start": 828,
+        "end": 862,
         "loc": {
           "start": {
             "line": 20,
@@ -424,7 +372,7 @@
         "declaration": {
           "type": "VariableDeclaration",
           "start": 736,
-          "end": 854,
+          "end": 826,
           "loc": {
             "start": {
               "line": 13,
@@ -439,7 +387,7 @@
             {
               "type": "VariableDeclarator",
               "start": 742,
-              "end": 854,
+              "end": 826,
               "loc": {
                 "start": {
                   "line": 13,
@@ -471,7 +419,7 @@
               "init": {
                 "type": "ObjectExpression",
                 "start": 764,
-                "end": 854,
+                "end": 826,
                 "loc": {
                   "start": {
                     "line": 13,
@@ -486,7 +434,7 @@
                   {
                     "type": "ObjectProperty",
                     "start": 768,
-                    "end": 784,
+                    "end": 777,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -494,7 +442,7 @@
                       },
                       "end": {
                         "line": 14,
-                        "column": 18
+                        "column": 11
                       }
                     },
                     "method": false,
@@ -518,9 +466,9 @@
                       "name": "linear"
                     },
                     "value": {
-                      "type": "CallExpression",
+                      "type": "NumericLiteral",
                       "start": 776,
-                      "end": 784,
+                      "end": 777,
                       "loc": {
                         "start": {
                           "line": 14,
@@ -528,33 +476,20 @@
                         },
                         "end": {
                           "line": 14,
-                          "column": 18
+                          "column": 11
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 776,
-                        "end": 782,
-                        "loc": {
-                          "start": {
-                            "line": 14,
-                            "column": 10
-                          },
-                          "end": {
-                            "line": 14,
-                            "column": 16
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 0,
+                        "raw": "0"
                       },
-                      "arguments": []
+                      "value": 0
                     }
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 788,
-                    "end": 804,
+                    "start": 781,
+                    "end": 790,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -562,7 +497,7 @@
                       },
                       "end": {
                         "line": 15,
-                        "column": 18
+                        "column": 11
                       }
                     },
                     "method": false,
@@ -570,8 +505,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 788,
-                      "end": 794,
+                      "start": 781,
+                      "end": 787,
                       "loc": {
                         "start": {
                           "line": 15,
@@ -586,9 +521,9 @@
                       "name": "easeIn"
                     },
                     "value": {
-                      "type": "CallExpression",
-                      "start": 796,
-                      "end": 804,
+                      "type": "NumericLiteral",
+                      "start": 789,
+                      "end": 790,
                       "loc": {
                         "start": {
                           "line": 15,
@@ -596,33 +531,20 @@
                         },
                         "end": {
                           "line": 15,
-                          "column": 18
+                          "column": 11
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 796,
-                        "end": 802,
-                        "loc": {
-                          "start": {
-                            "line": 15,
-                            "column": 10
-                          },
-                          "end": {
-                            "line": 15,
-                            "column": 16
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 1,
+                        "raw": "1"
                       },
-                      "arguments": []
+                      "value": 1
                     }
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 808,
-                    "end": 825,
+                    "start": 794,
+                    "end": 804,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -630,7 +552,7 @@
                       },
                       "end": {
                         "line": 16,
-                        "column": 19
+                        "column": 12
                       }
                     },
                     "method": false,
@@ -638,8 +560,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 808,
-                      "end": 815,
+                      "start": 794,
+                      "end": 801,
                       "loc": {
                         "start": {
                           "line": 16,
@@ -654,9 +576,9 @@
                       "name": "easeOut"
                     },
                     "value": {
-                      "type": "CallExpression",
-                      "start": 817,
-                      "end": 825,
+                      "type": "NumericLiteral",
+                      "start": 803,
+                      "end": 804,
                       "loc": {
                         "start": {
                           "line": 16,
@@ -664,33 +586,20 @@
                         },
                         "end": {
                           "line": 16,
-                          "column": 19
+                          "column": 12
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 817,
-                        "end": 823,
-                        "loc": {
-                          "start": {
-                            "line": 16,
-                            "column": 11
-                          },
-                          "end": {
-                            "line": 16,
-                            "column": 17
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 2,
+                        "raw": "2"
                       },
-                      "arguments": []
+                      "value": 2
                     }
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 829,
-                    "end": 852,
+                    "start": 808,
+                    "end": 824,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -698,7 +607,7 @@
                       },
                       "end": {
                         "line": 17,
-                        "column": 25
+                        "column": 18
                       }
                     },
                     "method": false,
@@ -706,8 +615,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 829,
-                      "end": 842,
+                      "start": 808,
+                      "end": 821,
                       "loc": {
                         "start": {
                           "line": 17,
@@ -722,9 +631,9 @@
                       "name": "easeInEaseOut"
                     },
                     "value": {
-                      "type": "CallExpression",
-                      "start": 844,
-                      "end": 852,
+                      "type": "NumericLiteral",
+                      "start": 823,
+                      "end": 824,
                       "loc": {
                         "start": {
                           "line": 17,
@@ -732,27 +641,14 @@
                         },
                         "end": {
                           "line": 17,
-                          "column": 25
+                          "column": 18
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 844,
-                        "end": 850,
-                        "loc": {
-                          "start": {
-                            "line": 17,
-                            "column": 17
-                          },
-                          "end": {
-                            "line": 17,
-                            "column": 23
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 3,
+                        "raw": "3"
                       },
-                      "arguments": []
+                      "value": 3
                     }
                   }
                 ]
@@ -764,7 +660,7 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * Constants affecting the animation curve of an action, used by the timingMode property.\n * @typedef {Object} SCNActionTimingMode\n * @property {Symbol} linear - Linear pacing. The animation progresses evenly throughout its duration.\n * @property {Symbol} easeIn - Ease-in pacing. The animation begins slowly, and then speeds up as it progresses.\n * @property {Symbol} easeOut - Ease-out pacing. The animation begins quickly, and then slows as it completes.\n * @property {Symbol} easeInEaseOut - Ease-in ease-out pacing. The animation begins slowly, accelerates through the middle of its duration, and then slows again before completing.\n * @see https://developer.apple.com/reference/scenekit/scnactiontimingmode\n ",
+              "value": "*\n * Constants affecting the animation curve of an action, used by the timingMode property.\n * @typedef {Object} SCNActionTimingMode\n * @property {number} linear - Linear pacing. The animation progresses evenly throughout its duration.\n * @property {number} easeIn - Ease-in pacing. The animation begins slowly, and then speeds up as it progresses.\n * @property {number} easeOut - Ease-out pacing. The animation begins quickly, and then slows as it completes.\n * @property {number} easeInEaseOut - Ease-in ease-out pacing. The animation begins slowly, accelerates through the middle of its duration, and then slows again before completing.\n * @see https://developer.apple.com/reference/scenekit/scnactiontimingmode\n ",
               "start": 15,
               "end": 735,
               "loc": {
@@ -822,7 +718,7 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Constants affecting the animation curve of an action, used by the timingMode property.\n * @typedef {Object} SCNActionTimingMode\n * @property {Symbol} linear - Linear pacing. The animation progresses evenly throughout its duration.\n * @property {Symbol} easeIn - Ease-in pacing. The animation begins slowly, and then speeds up as it progresses.\n * @property {Symbol} easeOut - Ease-out pacing. The animation begins quickly, and then slows as it completes.\n * @property {Symbol} easeInEaseOut - Ease-in ease-out pacing. The animation begins slowly, accelerates through the middle of its duration, and then slows again before completing.\n * @see https://developer.apple.com/reference/scenekit/scnactiontimingmode\n ",
+            "value": "*\n * Constants affecting the animation curve of an action, used by the timingMode property.\n * @typedef {Object} SCNActionTimingMode\n * @property {number} linear - Linear pacing. The animation progresses evenly throughout its duration.\n * @property {number} easeIn - Ease-in pacing. The animation begins slowly, and then speeds up as it progresses.\n * @property {number} easeOut - Ease-out pacing. The animation begins quickly, and then slows as it completes.\n * @property {number} easeInEaseOut - Ease-in ease-out pacing. The animation begins slowly, accelerates through the middle of its duration, and then slows again before completing.\n * @see https://developer.apple.com/reference/scenekit/scnactiontimingmode\n ",
             "start": 15,
             "end": 735,
             "loc": {
@@ -843,7 +739,7 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * Constants affecting the animation curve of an action, used by the timingMode property.\n * @typedef {Object} SCNActionTimingMode\n * @property {Symbol} linear - Linear pacing. The animation progresses evenly throughout its duration.\n * @property {Symbol} easeIn - Ease-in pacing. The animation begins slowly, and then speeds up as it progresses.\n * @property {Symbol} easeOut - Ease-out pacing. The animation begins quickly, and then slows as it completes.\n * @property {Symbol} easeInEaseOut - Ease-in ease-out pacing. The animation begins slowly, accelerates through the middle of its duration, and then slows again before completing.\n * @see https://developer.apple.com/reference/scenekit/scnactiontimingmode\n ",
+      "value": "*\n * Constants affecting the animation curve of an action, used by the timingMode property.\n * @typedef {Object} SCNActionTimingMode\n * @property {number} linear - Linear pacing. The animation progresses evenly throughout its duration.\n * @property {number} easeIn - Ease-in pacing. The animation begins slowly, and then speeds up as it progresses.\n * @property {number} easeOut - Ease-out pacing. The animation begins quickly, and then slows as it completes.\n * @property {number} easeInEaseOut - Ease-in ease-out pacing. The animation begins slowly, accelerates through the middle of its duration, and then slows again before completing.\n * @see https://developer.apple.com/reference/scenekit/scnactiontimingmode\n ",
       "start": 15,
       "end": 735,
       "loc": {
@@ -888,7 +784,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Constants affecting the animation curve of an action, used by the timingMode property.\n * @typedef {Object} SCNActionTimingMode\n * @property {Symbol} linear - Linear pacing. The animation progresses evenly throughout its duration.\n * @property {Symbol} easeIn - Ease-in pacing. The animation begins slowly, and then speeds up as it progresses.\n * @property {Symbol} easeOut - Ease-out pacing. The animation begins quickly, and then slows as it completes.\n * @property {Symbol} easeInEaseOut - Ease-in ease-out pacing. The animation begins slowly, accelerates through the middle of its duration, and then slows again before completing.\n * @see https://developer.apple.com/reference/scenekit/scnactiontimingmode\n ",
+      "value": "*\n * Constants affecting the animation curve of an action, used by the timingMode property.\n * @typedef {Object} SCNActionTimingMode\n * @property {number} linear - Linear pacing. The animation progresses evenly throughout its duration.\n * @property {number} easeIn - Ease-in pacing. The animation begins slowly, and then speeds up as it progresses.\n * @property {number} easeOut - Ease-out pacing. The animation begins quickly, and then slows as it completes.\n * @property {number} easeInEaseOut - Ease-in ease-out pacing. The animation begins slowly, accelerates through the middle of its duration, and then slows again before completing.\n * @see https://developer.apple.com/reference/scenekit/scnactiontimingmode\n ",
       "start": 15,
       "end": 735,
       "loc": {
@@ -1062,7 +958,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -1070,11 +966,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
+      "value": 0,
       "start": 776,
-      "end": 782,
+      "end": 777,
       "loc": {
         "start": {
           "line": 14,
@@ -1082,57 +979,7 @@
         },
         "end": {
           "line": 14,
-          "column": 16
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 782,
-      "end": 783,
-      "loc": {
-        "start": {
-          "line": 14,
-          "column": 16
-        },
-        "end": {
-          "line": 14,
-          "column": 17
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 783,
-      "end": 784,
-      "loc": {
-        "start": {
-          "line": 14,
-          "column": 17
-        },
-        "end": {
-          "line": 14,
-          "column": 18
+          "column": 11
         }
       }
     },
@@ -1149,16 +996,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 784,
-      "end": 785,
+      "start": 777,
+      "end": 778,
       "loc": {
         "start": {
           "line": 14,
-          "column": 18
+          "column": 11
         },
         "end": {
           "line": 14,
-          "column": 19
+          "column": 12
         }
       }
     },
@@ -1175,8 +1022,8 @@
         "binop": null
       },
       "value": "easeIn",
-      "start": 788,
-      "end": 794,
+      "start": 781,
+      "end": 787,
       "loc": {
         "start": {
           "line": 15,
@@ -1201,8 +1048,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 794,
-      "end": 795,
+      "start": 787,
+      "end": 788,
       "loc": {
         "start": {
           "line": 15,
@@ -1211,6 +1058,59 @@
         "end": {
           "line": 15,
           "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "num",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": 1,
+      "start": 789,
+      "end": 790,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 10
+        },
+        "end": {
+          "line": 15,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 790,
+      "end": 791,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 11
+        },
+        "end": {
+          "line": 15,
+          "column": 12
         }
       }
     },
@@ -1226,67 +1126,70 @@
         "postfix": false,
         "binop": null
       },
-      "value": "Symbol",
-      "start": 796,
-      "end": 802,
+      "value": "easeOut",
+      "start": 794,
+      "end": 801,
       "loc": {
         "start": {
-          "line": 15,
-          "column": 10
+          "line": 16,
+          "column": 2
         },
         "end": {
-          "line": 15,
-          "column": 16
+          "line": 16,
+          "column": 9
         }
       }
     },
     {
       "type": {
-        "label": "(",
+        "label": ":",
         "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 802,
-      "end": 803,
-      "loc": {
-        "start": {
-          "line": 15,
-          "column": 16
-        },
-        "end": {
-          "line": 15,
-          "column": 17
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
         "startsExpr": false,
         "rightAssociative": false,
         "isLoop": false,
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
+      "start": 801,
+      "end": 802,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 9
+        },
+        "end": {
+          "line": 16,
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "num",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": 2,
       "start": 803,
       "end": 804,
       "loc": {
         "start": {
-          "line": 15,
-          "column": 17
+          "line": 16,
+          "column": 11
         },
         "end": {
-          "line": 15,
-          "column": 18
+          "line": 16,
+          "column": 12
         }
       }
     },
@@ -1307,166 +1210,12 @@
       "end": 805,
       "loc": {
         "start": {
-          "line": 15,
-          "column": 18
-        },
-        "end": {
-          "line": 15,
-          "column": 19
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "easeOut",
-      "start": 808,
-      "end": 815,
-      "loc": {
-        "start": {
           "line": 16,
-          "column": 2
+          "column": 12
         },
         "end": {
           "line": 16,
-          "column": 9
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ":",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 815,
-      "end": 816,
-      "loc": {
-        "start": {
-          "line": 16,
-          "column": 9
-        },
-        "end": {
-          "line": 16,
-          "column": 10
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "Symbol",
-      "start": 817,
-      "end": 823,
-      "loc": {
-        "start": {
-          "line": 16,
-          "column": 11
-        },
-        "end": {
-          "line": 16,
-          "column": 17
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 823,
-      "end": 824,
-      "loc": {
-        "start": {
-          "line": 16,
-          "column": 17
-        },
-        "end": {
-          "line": 16,
-          "column": 18
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 824,
-      "end": 825,
-      "loc": {
-        "start": {
-          "line": 16,
-          "column": 18
-        },
-        "end": {
-          "line": 16,
-          "column": 19
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 825,
-      "end": 826,
-      "loc": {
-        "start": {
-          "line": 16,
-          "column": 19
-        },
-        "end": {
-          "line": 16,
-          "column": 20
+          "column": 13
         }
       }
     },
@@ -1483,8 +1232,8 @@
         "binop": null
       },
       "value": "easeInEaseOut",
-      "start": 829,
-      "end": 842,
+      "start": 808,
+      "end": 821,
       "loc": {
         "start": {
           "line": 17,
@@ -1509,8 +1258,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 842,
-      "end": 843,
+      "start": 821,
+      "end": 822,
       "loc": {
         "start": {
           "line": 17,
@@ -1524,7 +1273,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -1532,11 +1281,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
-      "start": 844,
-      "end": 850,
+      "value": 3,
+      "start": 823,
+      "end": 824,
       "loc": {
         "start": {
           "line": 17,
@@ -1544,57 +1294,7 @@
         },
         "end": {
           "line": 17,
-          "column": 23
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 850,
-      "end": 851,
-      "loc": {
-        "start": {
-          "line": 17,
-          "column": 23
-        },
-        "end": {
-          "line": 17,
-          "column": 24
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 851,
-      "end": 852,
-      "loc": {
-        "start": {
-          "line": 17,
-          "column": 24
-        },
-        "end": {
-          "line": 17,
-          "column": 25
+          "column": 18
         }
       }
     },
@@ -1610,8 +1310,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 853,
-      "end": 854,
+      "start": 825,
+      "end": 826,
       "loc": {
         "start": {
           "line": 18,
@@ -1638,8 +1338,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 856,
-      "end": 862,
+      "start": 828,
+      "end": 834,
       "loc": {
         "start": {
           "line": 20,
@@ -1666,8 +1366,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 863,
-      "end": 870,
+      "start": 835,
+      "end": 842,
       "loc": {
         "start": {
           "line": 20,
@@ -1692,8 +1392,8 @@
         "binop": null
       },
       "value": "SCNActionTimingMode",
-      "start": 871,
-      "end": 890,
+      "start": 843,
+      "end": 862,
       "loc": {
         "start": {
           "line": 20,
@@ -1718,8 +1418,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 891,
-      "end": 891,
+      "start": 863,
+      "end": 863,
       "loc": {
         "start": {
           "line": 21,

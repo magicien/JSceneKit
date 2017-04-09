@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 5874,
+  "end": 5907,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 109,
+      "line": 105,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 5874,
+    "end": 5907,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 109,
+        "line": 105,
         "column": 0
       }
     },
@@ -238,7 +238,7 @@
       {
         "type": "VariableDeclaration",
         "start": 133,
-        "end": 245,
+        "end": 331,
         "loc": {
           "start": {
             "line": 7,
@@ -253,7 +253,7 @@
           {
             "type": "VariableDeclarator",
             "start": 139,
-            "end": 245,
+            "end": 331,
             "loc": {
               "start": {
                 "line": 7,
@@ -284,7 +284,7 @@
             "init": {
               "type": "ObjectExpression",
               "start": 149,
-              "end": 245,
+              "end": 331,
               "loc": {
                 "start": {
                   "line": 7,
@@ -299,7 +299,7 @@
                 {
                   "type": "ObjectProperty",
                   "start": 153,
-                  "end": 178,
+                  "end": 205,
                   "loc": {
                     "start": {
                       "line": 8,
@@ -307,7 +307,7 @@
                     },
                     "end": {
                       "line": 8,
-                      "column": 27
+                      "column": 54
                     }
                   },
                   "method": false,
@@ -331,9 +331,9 @@
                     "name": "collisionMargin"
                   },
                   "value": {
-                    "type": "CallExpression",
+                    "type": "StringLiteral",
                     "start": 170,
-                    "end": 178,
+                    "end": 205,
                     "loc": {
                       "start": {
                         "line": 8,
@@ -341,33 +341,20 @@
                       },
                       "end": {
                         "line": 8,
-                        "column": 27
+                        "column": 54
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 170,
-                      "end": 176,
-                      "loc": {
-                        "start": {
-                          "line": 8,
-                          "column": 19
-                        },
-                        "end": {
-                          "line": 8,
-                          "column": 25
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": "SCNPhysicsShapeCollisionMarginKey",
+                      "raw": "'SCNPhysicsShapeCollisionMarginKey'"
                     },
-                    "arguments": []
+                    "value": "SCNPhysicsShapeCollisionMarginKey"
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 182,
-                  "end": 206,
+                  "start": 209,
+                  "end": 259,
                   "loc": {
                     "start": {
                       "line": 9,
@@ -375,7 +362,7 @@
                     },
                     "end": {
                       "line": 9,
-                      "column": 26
+                      "column": 52
                     }
                   },
                   "method": false,
@@ -383,8 +370,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 182,
-                    "end": 196,
+                    "start": 209,
+                    "end": 223,
                     "loc": {
                       "start": {
                         "line": 9,
@@ -399,9 +386,9 @@
                     "name": "keepAsCompound"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 198,
-                    "end": 206,
+                    "type": "StringLiteral",
+                    "start": 225,
+                    "end": 259,
                     "loc": {
                       "start": {
                         "line": 9,
@@ -409,33 +396,20 @@
                       },
                       "end": {
                         "line": 9,
-                        "column": 26
+                        "column": 52
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 198,
-                      "end": 204,
-                      "loc": {
-                        "start": {
-                          "line": 9,
-                          "column": 18
-                        },
-                        "end": {
-                          "line": 9,
-                          "column": 24
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": "SCNPhysicsShapeKeepAsCompoundKey",
+                      "raw": "'SCNPhysicsShapeKeepAsCompoundKey'"
                     },
-                    "arguments": []
+                    "value": "SCNPhysicsShapeKeepAsCompoundKey"
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 210,
-                  "end": 225,
+                  "start": 263,
+                  "end": 295,
                   "loc": {
                     "start": {
                       "line": 10,
@@ -443,7 +417,7 @@
                     },
                     "end": {
                       "line": 10,
-                      "column": 17
+                      "column": 34
                     }
                   },
                   "method": false,
@@ -451,8 +425,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 210,
-                    "end": 215,
+                    "start": 263,
+                    "end": 268,
                     "loc": {
                       "start": {
                         "line": 10,
@@ -467,9 +441,9 @@
                     "name": "scale"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 217,
-                    "end": 225,
+                    "type": "StringLiteral",
+                    "start": 270,
+                    "end": 295,
                     "loc": {
                       "start": {
                         "line": 10,
@@ -477,33 +451,20 @@
                       },
                       "end": {
                         "line": 10,
-                        "column": 17
+                        "column": 34
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 217,
-                      "end": 223,
-                      "loc": {
-                        "start": {
-                          "line": 10,
-                          "column": 9
-                        },
-                        "end": {
-                          "line": 10,
-                          "column": 15
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": "SCNPhysicsShapeScaleKey",
+                      "raw": "'SCNPhysicsShapeScaleKey'"
                     },
-                    "arguments": []
+                    "value": "SCNPhysicsShapeScaleKey"
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 229,
-                  "end": 243,
+                  "start": 299,
+                  "end": 329,
                   "loc": {
                     "start": {
                       "line": 11,
@@ -511,7 +472,7 @@
                     },
                     "end": {
                       "line": 11,
-                      "column": 16
+                      "column": 32
                     }
                   },
                   "method": false,
@@ -519,8 +480,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 229,
-                    "end": 233,
+                    "start": 299,
+                    "end": 303,
                     "loc": {
                       "start": {
                         "line": 11,
@@ -535,9 +496,9 @@
                     "name": "type"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 235,
-                    "end": 243,
+                    "type": "StringLiteral",
+                    "start": 305,
+                    "end": 329,
                     "loc": {
                       "start": {
                         "line": 11,
@@ -545,27 +506,14 @@
                       },
                       "end": {
                         "line": 11,
-                        "column": 16
+                        "column": 32
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 235,
-                      "end": 241,
-                      "loc": {
-                        "start": {
-                          "line": 11,
-                          "column": 8
-                        },
-                        "end": {
-                          "line": 11,
-                          "column": 14
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": "SCNPhysicsShapeTypeKey",
+                      "raw": "'SCNPhysicsShapeTypeKey'"
                     },
-                    "arguments": []
+                    "value": "SCNPhysicsShapeTypeKey"
                   }
                 }
               ]
@@ -576,8 +524,8 @@
       },
       {
         "type": "VariableDeclaration",
-        "start": 247,
-        "end": 348,
+        "start": 333,
+        "end": 448,
         "loc": {
           "start": {
             "line": 14,
@@ -591,8 +539,8 @@
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 253,
-            "end": 348,
+            "start": 339,
+            "end": 448,
             "loc": {
               "start": {
                 "line": 14,
@@ -605,8 +553,8 @@
             },
             "id": {
               "type": "Identifier",
-              "start": 253,
-              "end": 263,
+              "start": 339,
+              "end": 349,
               "loc": {
                 "start": {
                   "line": 14,
@@ -622,8 +570,8 @@
             },
             "init": {
               "type": "ObjectExpression",
-              "start": 266,
-              "end": 348,
+              "start": 352,
+              "end": 448,
               "loc": {
                 "start": {
                   "line": 14,
@@ -637,8 +585,8 @@
               "properties": [
                 {
                   "type": "ObjectProperty",
-                  "start": 270,
-                  "end": 291,
+                  "start": 356,
+                  "end": 382,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -646,7 +594,7 @@
                     },
                     "end": {
                       "line": 15,
-                      "column": 23
+                      "column": 28
                     }
                   },
                   "method": false,
@@ -654,8 +602,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 270,
-                    "end": 281,
+                    "start": 356,
+                    "end": 367,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -670,9 +618,9 @@
                     "name": "boundingBox"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 283,
-                    "end": 291,
+                    "type": "StringLiteral",
+                    "start": 369,
+                    "end": 382,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -680,33 +628,20 @@
                       },
                       "end": {
                         "line": 15,
-                        "column": 23
+                        "column": 28
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 283,
-                      "end": 289,
-                      "loc": {
-                        "start": {
-                          "line": 15,
-                          "column": 15
-                        },
-                        "end": {
-                          "line": 15,
-                          "column": 21
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": "boundingBox",
+                      "raw": "'boundingBox'"
                     },
-                    "arguments": []
+                    "value": "boundingBox"
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 295,
-                  "end": 322,
+                  "start": 386,
+                  "end": 418,
                   "loc": {
                     "start": {
                       "line": 16,
@@ -714,7 +649,7 @@
                     },
                     "end": {
                       "line": 16,
-                      "column": 29
+                      "column": 34
                     }
                   },
                   "method": false,
@@ -722,8 +657,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 295,
-                    "end": 312,
+                    "start": 386,
+                    "end": 403,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -738,9 +673,9 @@
                     "name": "concavePolyhedron"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 314,
-                    "end": 322,
+                    "type": "StringLiteral",
+                    "start": 405,
+                    "end": 418,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -748,33 +683,20 @@
                       },
                       "end": {
                         "line": 16,
-                        "column": 29
+                        "column": 34
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 314,
-                      "end": 320,
-                      "loc": {
-                        "start": {
-                          "line": 16,
-                          "column": 21
-                        },
-                        "end": {
-                          "line": 16,
-                          "column": 27
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": "concaveMesh",
+                      "raw": "'concaveMesh'"
                     },
-                    "arguments": []
+                    "value": "concaveMesh"
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 326,
-                  "end": 346,
+                  "start": 422,
+                  "end": 446,
                   "loc": {
                     "start": {
                       "line": 17,
@@ -782,7 +704,7 @@
                     },
                     "end": {
                       "line": 17,
-                      "column": 22
+                      "column": 26
                     }
                   },
                   "method": false,
@@ -790,8 +712,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 326,
-                    "end": 336,
+                    "start": 422,
+                    "end": 432,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -806,9 +728,9 @@
                     "name": "convexHull"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 338,
-                    "end": 346,
+                    "type": "StringLiteral",
+                    "start": 434,
+                    "end": 446,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -816,27 +738,14 @@
                       },
                       "end": {
                         "line": 17,
-                        "column": 22
+                        "column": 26
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 338,
-                      "end": 344,
-                      "loc": {
-                        "start": {
-                          "line": 17,
-                          "column": 14
-                        },
-                        "end": {
-                          "line": 17,
-                          "column": 20
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": "convexHull",
+                      "raw": "'convexHull'"
                     },
-                    "arguments": []
+                    "value": "convexHull"
                   }
                 }
               ],
@@ -850,8 +759,8 @@
           {
             "type": "CommentBlock",
             "value": "*\n * An abstraction of a physics body’s solid volume for use in tuning or optimizing collision detection.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnphysicsshape\n ",
-            "start": 351,
-            "end": 574,
+            "start": 451,
+            "end": 674,
             "loc": {
               "start": {
                 "line": 21,
@@ -867,36 +776,36 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 575,
-        "end": 5873,
+        "start": 675,
+        "end": 5906,
         "loc": {
           "start": {
             "line": 27,
             "column": 0
           },
           "end": {
-            "line": 108,
+            "line": 104,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 590,
-          "end": 5873,
+          "start": 690,
+          "end": 5906,
           "loc": {
             "start": {
               "line": 27,
               "column": 15
             },
             "end": {
-              "line": 108,
+              "line": 104,
               "column": 1
             }
           },
           "id": {
             "type": "Identifier",
-            "start": 596,
-            "end": 611,
+            "start": 696,
+            "end": 711,
             "loc": {
               "start": {
                 "line": 27,
@@ -913,8 +822,8 @@
           },
           "superClass": {
             "type": "Identifier",
-            "start": 620,
-            "end": 628,
+            "start": 720,
+            "end": 728,
             "loc": {
               "start": {
                 "line": 27,
@@ -930,128 +839,258 @@
           },
           "body": {
             "type": "ClassBody",
-            "start": 629,
-            "end": 5873,
+            "start": 729,
+            "end": 5906,
             "loc": {
               "start": {
                 "line": 27,
                 "column": 54
               },
               "end": {
-                "line": 108,
+                "line": 104,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 704,
-                "end": 842,
+                "start": 2226,
+                "end": 2406,
                 "loc": {
                   "start": {
-                    "line": 34,
+                    "line": 39,
                     "column": 2
                   },
                   "end": {
-                    "line": 41,
+                    "line": 46,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 704,
-                  "end": 708,
+                  "start": 2226,
+                  "end": 2237,
                   "loc": {
                     "start": {
-                      "line": 34,
+                      "line": 39,
                       "column": 2
                     },
                     "end": {
-                      "line": 34,
-                      "column": 6
+                      "line": 39,
+                      "column": 13
                     },
-                    "identifierName": "init"
+                    "identifierName": "constructor"
                   },
-                  "name": "init",
+                  "name": "constructor",
                   "leadingComments": null
                 },
                 "static": false,
-                "kind": "method",
+                "kind": "constructor",
                 "id": null,
                 "generator": false,
                 "expression": false,
                 "async": false,
-                "params": [],
+                "params": [
+                  {
+                    "type": "Identifier",
+                    "start": 2238,
+                    "end": 2246,
+                    "loc": {
+                      "start": {
+                        "line": 39,
+                        "column": 14
+                      },
+                      "end": {
+                        "line": 39,
+                        "column": 22
+                      },
+                      "identifierName": "geometry"
+                    },
+                    "name": "geometry"
+                  },
+                  {
+                    "type": "AssignmentPattern",
+                    "start": 2248,
+                    "end": 2262,
+                    "loc": {
+                      "start": {
+                        "line": 39,
+                        "column": 24
+                      },
+                      "end": {
+                        "line": 39,
+                        "column": 38
+                      }
+                    },
+                    "left": {
+                      "type": "Identifier",
+                      "start": 2248,
+                      "end": 2255,
+                      "loc": {
+                        "start": {
+                          "line": 39,
+                          "column": 24
+                        },
+                        "end": {
+                          "line": 39,
+                          "column": 31
+                        },
+                        "identifierName": "options"
+                      },
+                      "name": "options"
+                    },
+                    "right": {
+                      "type": "NullLiteral",
+                      "start": 2258,
+                      "end": 2262,
+                      "loc": {
+                        "start": {
+                          "line": 39,
+                          "column": 34
+                        },
+                        "end": {
+                          "line": 39,
+                          "column": 38
+                        }
+                      }
+                    }
+                  }
+                ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 711,
-                  "end": 842,
+                  "start": 2264,
+                  "end": 2406,
                   "loc": {
                     "start": {
-                      "line": 34,
-                      "column": 9
+                      "line": 39,
+                      "column": 40
                     },
                     "end": {
-                      "line": 41,
+                      "line": 46,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 760,
-                      "end": 785,
+                      "start": 2270,
+                      "end": 2277,
                       "loc": {
                         "start": {
-                          "line": 38,
+                          "line": 40,
                           "column": 4
                         },
                         "end": {
-                          "line": 38,
+                          "line": 40,
+                          "column": 11
+                        }
+                      },
+                      "expression": {
+                        "type": "CallExpression",
+                        "start": 2270,
+                        "end": 2277,
+                        "loc": {
+                          "start": {
+                            "line": 40,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 40,
+                            "column": 11
+                          }
+                        },
+                        "callee": {
+                          "type": "Super",
+                          "start": 2270,
+                          "end": 2275,
+                          "loc": {
+                            "start": {
+                              "line": 40,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 40,
+                              "column": 9
+                            }
+                          }
+                        },
+                        "arguments": [],
+                        "trailingComments": null
+                      },
+                      "trailingComments": [
+                        {
+                          "type": "CommentLine",
+                          "value": " Getting Information About a Shape",
+                          "start": 2283,
+                          "end": 2319,
+                          "loc": {
+                            "start": {
+                              "line": 42,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 42,
+                              "column": 40
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "start": 2324,
+                      "end": 2349,
+                      "loc": {
+                        "start": {
+                          "line": 43,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 43,
                           "column": 29
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 760,
-                        "end": 785,
+                        "start": 2324,
+                        "end": 2349,
                         "loc": {
                           "start": {
-                            "line": 38,
+                            "line": 43,
                             "column": 4
                           },
                           "end": {
-                            "line": 38,
+                            "line": 43,
                             "column": 29
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 760,
-                          "end": 778,
+                          "start": 2324,
+                          "end": 2342,
                           "loc": {
                             "start": {
-                              "line": 38,
+                              "line": 43,
                               "column": 4
                             },
                             "end": {
-                              "line": 38,
+                              "line": 43,
                               "column": 22
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 760,
-                            "end": 764,
+                            "start": 2324,
+                            "end": 2328,
                             "loc": {
                               "start": {
-                                "line": 38,
+                                "line": 43,
                                 "column": 4
                               },
                               "end": {
-                                "line": 38,
+                                "line": 43,
                                 "column": 8
                               }
                             },
@@ -1059,15 +1098,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 765,
-                            "end": 778,
+                            "start": 2329,
+                            "end": 2342,
                             "loc": {
                               "start": {
-                                "line": 38,
+                                "line": 43,
                                 "column": 9
                               },
                               "end": {
-                                "line": 38,
+                                "line": 43,
                                 "column": 22
                               },
                               "identifierName": "_sourceObject"
@@ -1079,15 +1118,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 781,
-                          "end": 785,
+                          "start": 2345,
+                          "end": 2349,
                           "loc": {
                             "start": {
-                              "line": 38,
+                              "line": 43,
                               "column": 25
                             },
                             "end": {
-                              "line": 38,
+                              "line": 43,
                               "column": 29
                             }
                           }
@@ -1098,15 +1137,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Getting Information About a Shape",
-                          "start": 718,
-                          "end": 754,
+                          "start": 2283,
+                          "end": 2319,
                           "loc": {
                             "start": {
-                              "line": 36,
+                              "line": 42,
                               "column": 4
                             },
                             "end": {
-                              "line": 36,
+                              "line": 42,
                               "column": 40
                             }
                           }
@@ -1115,73 +1154,73 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 790,
-                      "end": 810,
+                      "start": 2354,
+                      "end": 2374,
                       "loc": {
                         "start": {
-                          "line": 39,
+                          "line": 44,
                           "column": 4
                         },
                         "end": {
-                          "line": 39,
+                          "line": 44,
                           "column": 24
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 790,
-                        "end": 810,
+                        "start": 2354,
+                        "end": 2374,
                         "loc": {
                           "start": {
-                            "line": 39,
+                            "line": 44,
                             "column": 4
                           },
                           "end": {
-                            "line": 39,
+                            "line": 44,
                             "column": 24
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 790,
-                          "end": 803,
+                          "start": 2354,
+                          "end": 2367,
                           "loc": {
                             "start": {
-                              "line": 39,
+                              "line": 44,
                               "column": 4
                             },
                             "end": {
-                              "line": 39,
+                              "line": 44,
                               "column": 17
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 790,
-                            "end": 794,
+                            "start": 2354,
+                            "end": 2358,
                             "loc": {
                               "start": {
-                                "line": 39,
+                                "line": 44,
                                 "column": 4
                               },
                               "end": {
-                                "line": 39,
+                                "line": 44,
                                 "column": 8
                               }
                             }
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 795,
-                            "end": 803,
+                            "start": 2359,
+                            "end": 2367,
                             "loc": {
                               "start": {
-                                "line": 39,
+                                "line": 44,
                                 "column": 9
                               },
                               "end": {
-                                "line": 39,
+                                "line": 44,
                                 "column": 17
                               },
                               "identifierName": "_options"
@@ -1192,15 +1231,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 806,
-                          "end": 810,
+                          "start": 2370,
+                          "end": 2374,
                           "loc": {
                             "start": {
-                              "line": 39,
+                              "line": 44,
                               "column": 20
                             },
                             "end": {
-                              "line": 39,
+                              "line": 44,
                               "column": 24
                             }
                           }
@@ -1209,73 +1248,73 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 815,
-                      "end": 838,
+                      "start": 2379,
+                      "end": 2402,
                       "loc": {
                         "start": {
-                          "line": 40,
+                          "line": 45,
                           "column": 4
                         },
                         "end": {
-                          "line": 40,
+                          "line": 45,
                           "column": 27
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 815,
-                        "end": 838,
+                        "start": 2379,
+                        "end": 2402,
                         "loc": {
                           "start": {
-                            "line": 40,
+                            "line": 45,
                             "column": 4
                           },
                           "end": {
-                            "line": 40,
+                            "line": 45,
                             "column": 27
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 815,
-                          "end": 831,
+                          "start": 2379,
+                          "end": 2395,
                           "loc": {
                             "start": {
-                              "line": 40,
+                              "line": 45,
                               "column": 4
                             },
                             "end": {
-                              "line": 40,
+                              "line": 45,
                               "column": 20
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 815,
-                            "end": 819,
+                            "start": 2379,
+                            "end": 2383,
                             "loc": {
                               "start": {
-                                "line": 40,
+                                "line": 45,
                                 "column": 4
                               },
                               "end": {
-                                "line": 40,
+                                "line": 45,
                                 "column": 8
                               }
                             }
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 820,
-                            "end": 831,
+                            "start": 2384,
+                            "end": 2395,
                             "loc": {
                               "start": {
-                                "line": 40,
+                                "line": 45,
                                 "column": 9
                               },
                               "end": {
-                                "line": 40,
+                                "line": 45,
                                 "column": 20
                               },
                               "identifierName": "_transforms"
@@ -1286,15 +1325,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 834,
-                          "end": 838,
+                          "start": 2398,
+                          "end": 2402,
                           "loc": {
                             "start": {
-                              "line": 40,
+                              "line": 45,
                               "column": 23
                             },
                             "end": {
-                              "line": 40,
+                              "line": 45,
                               "column": 27
                             }
                           }
@@ -1307,210 +1346,33 @@
                 },
                 "leadingComments": [
                   {
-                    "type": "CommentBlock",
-                    "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-                    "start": 634,
-                    "end": 701,
-                    "loc": {
-                      "start": {
-                        "line": 29,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 33,
-                        "column": 5
-                      }
-                    }
-                  }
-                ],
-                "trailingComments": [
-                  {
                     "type": "CommentLine",
                     "value": " Creating Physics Shapes",
-                    "start": 846,
-                    "end": 872,
+                    "start": 733,
+                    "end": 759,
                     "loc": {
                       "start": {
-                        "line": 43,
+                        "line": 28,
                         "column": 2
                       },
                       "end": {
-                        "line": 43,
+                        "line": 28,
                         "column": 28
                       }
                     }
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Creates a physics shape based on a geometry object.\n   * @access public\n   * @param {SCNGeometry} geometry - A geometry object.\n   * @param {?Map<SCNPhysicsShape.Option, Object>} [options = null] - A dictionary of options affecting the level of detail of the physics shape, or nil to use default options. For applicable keys and their possible values, see Shape Creation Options Keys.\n   * @returns {void}\n   * @desc If you create a physics shape using one of the basic geometry classes (SCNBox, SCNSphere, SCNPyramid, SCNCone, SCNCylinder, or SCNCapsule), SceneKit uses an idealized form of that geometry for the physics shape instead of using the geometry’s vertex data to simulate collisions. For example, if you create a physics shape from an SCNSphere object, SceneKit simulates collisions for any object that passes within the sphere’s radius. Because the idealized forms of simple geometries are computationally much simpler than the vertex data needed for displaying them, using basic geometries for physics shapes (or compound shapes created from basic geometries with the init(shapes:transforms:) method) often provides the best balance between simulation accuracy and performance. To use the newly created physics shape, create a physics body with the the init(type:shape:) method, or assign the shape to the physicsShape property of an existing body.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508897-init\n   ",
-                    "start": 876,
-                    "end": 2339,
+                    "value": "*\n   * Creates a physics shape based on a geometry object.\n   * @access public\n   * @constructor\n   * @param {SCNGeometry} geometry - A geometry object.\n   * @param {?Map<SCNPhysicsShape.Option, Object>} [options = null] - A dictionary of options affecting the level of detail of the physics shape, or nil to use default options. For applicable keys and their possible values, see Shape Creation Options Keys.\n   * @desc If you create a physics shape using one of the basic geometry classes (SCNBox, SCNSphere, SCNPyramid, SCNCone, SCNCylinder, or SCNCapsule), SceneKit uses an idealized form of that geometry for the physics shape instead of using the geometry’s vertex data to simulate collisions. For example, if you create a physics shape from an SCNSphere object, SceneKit simulates collisions for any object that passes within the sphere’s radius. Because the idealized forms of simple geometries are computationally much simpler than the vertex data needed for displaying them, using basic geometries for physics shapes (or compound shapes created from basic geometries with the init(shapes:transforms:) method) often provides the best balance between simulation accuracy and performance. To use the newly created physics shape, create a physics body with the the init(type:shape:) method, or assign the shape to the physicsShape property of an existing body.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508897-init\n   ",
+                    "start": 763,
+                    "end": 2223,
                     "loc": {
                       "start": {
-                        "line": 45,
+                        "line": 30,
                         "column": 2
                       },
                       "end": {
-                        "line": 53,
-                        "column": 5
-                      }
-                    }
-                  }
-                ]
-              },
-              {
-                "type": "ClassMethod",
-                "start": 2342,
-                "end": 2378,
-                "loc": {
-                  "start": {
-                    "line": 54,
-                    "column": 2
-                  },
-                  "end": {
-                    "line": 55,
-                    "column": 3
-                  }
-                },
-                "computed": false,
-                "key": {
-                  "type": "Identifier",
-                  "start": 2342,
-                  "end": 2346,
-                  "loc": {
-                    "start": {
-                      "line": 54,
-                      "column": 2
-                    },
-                    "end": {
-                      "line": 54,
-                      "column": 6
-                    },
-                    "identifierName": "init"
-                  },
-                  "name": "init",
-                  "leadingComments": null
-                },
-                "static": false,
-                "kind": "method",
-                "id": null,
-                "generator": false,
-                "expression": false,
-                "async": false,
-                "params": [
-                  {
-                    "type": "Identifier",
-                    "start": 2347,
-                    "end": 2355,
-                    "loc": {
-                      "start": {
-                        "line": 54,
-                        "column": 7
-                      },
-                      "end": {
-                        "line": 54,
-                        "column": 15
-                      },
-                      "identifierName": "geometry"
-                    },
-                    "name": "geometry"
-                  },
-                  {
-                    "type": "AssignmentPattern",
-                    "start": 2357,
-                    "end": 2371,
-                    "loc": {
-                      "start": {
-                        "line": 54,
-                        "column": 17
-                      },
-                      "end": {
-                        "line": 54,
-                        "column": 31
-                      }
-                    },
-                    "left": {
-                      "type": "Identifier",
-                      "start": 2357,
-                      "end": 2364,
-                      "loc": {
-                        "start": {
-                          "line": 54,
-                          "column": 17
-                        },
-                        "end": {
-                          "line": 54,
-                          "column": 24
-                        },
-                        "identifierName": "options"
-                      },
-                      "name": "options"
-                    },
-                    "right": {
-                      "type": "NullLiteral",
-                      "start": 2367,
-                      "end": 2371,
-                      "loc": {
-                        "start": {
-                          "line": 54,
-                          "column": 27
-                        },
-                        "end": {
-                          "line": 54,
-                          "column": 31
-                        }
-                      }
-                    }
-                  }
-                ],
-                "body": {
-                  "type": "BlockStatement",
-                  "start": 2373,
-                  "end": 2378,
-                  "loc": {
-                    "start": {
-                      "line": 54,
-                      "column": 33
-                    },
-                    "end": {
-                      "line": 55,
-                      "column": 3
-                    }
-                  },
-                  "body": [],
-                  "directives": [],
-                  "leadingComments": null,
-                  "trailingComments": null
-                },
-                "leadingComments": [
-                  {
-                    "type": "CommentLine",
-                    "value": " Creating Physics Shapes",
-                    "start": 846,
-                    "end": 872,
-                    "loc": {
-                      "start": {
-                        "line": 43,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 43,
-                        "column": 28
-                      }
-                    }
-                  },
-                  {
-                    "type": "CommentBlock",
-                    "value": "*\n   * Creates a physics shape based on a geometry object.\n   * @access public\n   * @param {SCNGeometry} geometry - A geometry object.\n   * @param {?Map<SCNPhysicsShape.Option, Object>} [options = null] - A dictionary of options affecting the level of detail of the physics shape, or nil to use default options. For applicable keys and their possible values, see Shape Creation Options Keys.\n   * @returns {void}\n   * @desc If you create a physics shape using one of the basic geometry classes (SCNBox, SCNSphere, SCNPyramid, SCNCone, SCNCylinder, or SCNCapsule), SceneKit uses an idealized form of that geometry for the physics shape instead of using the geometry’s vertex data to simulate collisions. For example, if you create a physics shape from an SCNSphere object, SceneKit simulates collisions for any object that passes within the sphere’s radius. Because the idealized forms of simple geometries are computationally much simpler than the vertex data needed for displaying them, using basic geometries for physics shapes (or compound shapes created from basic geometries with the init(shapes:transforms:) method) often provides the best balance between simulation accuracy and performance. To use the newly created physics shape, create a physics body with the the init(type:shape:) method, or assign the shape to the physicsShape property of an existing body.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508897-init\n   ",
-                    "start": 876,
-                    "end": 2339,
-                    "loc": {
-                      "start": {
-                        "line": 45,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 53,
+                        "line": 38,
                         "column": 5
                       }
                     }
@@ -1520,15 +1382,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Getting Information About a Shape",
-                    "start": 2382,
-                    "end": 2418,
+                    "start": 2410,
+                    "end": 2446,
                     "loc": {
                       "start": {
-                        "line": 57,
+                        "line": 48,
                         "column": 2
                       },
                       "end": {
-                        "line": 57,
+                        "line": 48,
                         "column": 38
                       }
                     }
@@ -1536,15 +1398,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The object that was used to create the shape.\n   * @type {Object}\n   * @desc This property, along with the transforms and options properties, provides the information that was used to create the shape. You can use this information, for example, to draw editing or debugging UI in your scene.If the shape was created with the init(geometry:options:) method, the source object is an SCNGeometry object, and the options property contains the options affecting the shape’s construction from that geometry.If the shape was created with the init(node:options:) method, the source object is an SCNNode object, and the options property contains the options affecting the shape’s construction from that node.If the shape was created with the init(shapes:transforms:) method, the source object is an array of SCNPhysicsShape objects and the transforms property describes how those shapes combine to form a compound shape.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508888-sourceobject\n   ",
-                    "start": 2421,
-                    "end": 3441,
+                    "start": 2450,
+                    "end": 3470,
                     "loc": {
                       "start": {
-                        "line": 58,
+                        "line": 50,
                         "column": 2
                       },
                       "end": {
-                        "line": 63,
+                        "line": 55,
                         "column": 5
                       }
                     }
@@ -1553,30 +1415,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 3444,
-                "end": 3498,
+                "start": 3473,
+                "end": 3527,
                 "loc": {
                   "start": {
-                    "line": 64,
+                    "line": 56,
                     "column": 2
                   },
                   "end": {
-                    "line": 66,
+                    "line": 58,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 3448,
-                  "end": 3460,
+                  "start": 3477,
+                  "end": 3489,
                   "loc": {
                     "start": {
-                      "line": 64,
+                      "line": 56,
                       "column": 6
                     },
                     "end": {
-                      "line": 64,
+                      "line": 56,
                       "column": 18
                     },
                     "identifierName": "sourceObject"
@@ -1592,73 +1454,73 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 3463,
-                  "end": 3498,
+                  "start": 3492,
+                  "end": 3527,
                   "loc": {
                     "start": {
-                      "line": 64,
+                      "line": 56,
                       "column": 21
                     },
                     "end": {
-                      "line": 66,
+                      "line": 58,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 3469,
-                      "end": 3494,
+                      "start": 3498,
+                      "end": 3523,
                       "loc": {
                         "start": {
-                          "line": 65,
+                          "line": 57,
                           "column": 4
                         },
                         "end": {
-                          "line": 65,
+                          "line": 57,
                           "column": 29
                         }
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 3476,
-                        "end": 3494,
+                        "start": 3505,
+                        "end": 3523,
                         "loc": {
                           "start": {
-                            "line": 65,
+                            "line": 57,
                             "column": 11
                           },
                           "end": {
-                            "line": 65,
+                            "line": 57,
                             "column": 29
                           }
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 3476,
-                          "end": 3480,
+                          "start": 3505,
+                          "end": 3509,
                           "loc": {
                             "start": {
-                              "line": 65,
+                              "line": 57,
                               "column": 11
                             },
                             "end": {
-                              "line": 65,
+                              "line": 57,
                               "column": 15
                             }
                           }
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 3481,
-                          "end": 3494,
+                          "start": 3510,
+                          "end": 3523,
                           "loc": {
                             "start": {
-                              "line": 65,
+                              "line": 57,
                               "column": 16
                             },
                             "end": {
-                              "line": 65,
+                              "line": 57,
                               "column": 29
                             },
                             "identifierName": "_sourceObject"
@@ -1676,15 +1538,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Getting Information About a Shape",
-                    "start": 2382,
-                    "end": 2418,
+                    "start": 2410,
+                    "end": 2446,
                     "loc": {
                       "start": {
-                        "line": 57,
+                        "line": 48,
                         "column": 2
                       },
                       "end": {
-                        "line": 57,
+                        "line": 48,
                         "column": 38
                       }
                     }
@@ -1692,15 +1554,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The object that was used to create the shape.\n   * @type {Object}\n   * @desc This property, along with the transforms and options properties, provides the information that was used to create the shape. You can use this information, for example, to draw editing or debugging UI in your scene.If the shape was created with the init(geometry:options:) method, the source object is an SCNGeometry object, and the options property contains the options affecting the shape’s construction from that geometry.If the shape was created with the init(node:options:) method, the source object is an SCNNode object, and the options property contains the options affecting the shape’s construction from that node.If the shape was created with the init(shapes:transforms:) method, the source object is an array of SCNPhysicsShape objects and the transforms property describes how those shapes combine to form a compound shape.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508888-sourceobject\n   ",
-                    "start": 2421,
-                    "end": 3441,
+                    "start": 2450,
+                    "end": 3470,
                     "loc": {
                       "start": {
-                        "line": 58,
+                        "line": 50,
                         "column": 2
                       },
                       "end": {
-                        "line": 63,
+                        "line": 55,
                         "column": 5
                       }
                     }
@@ -1710,15 +1572,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The options dictionary that was used to create the shape.\n   * @type {?Map<SCNPhysicsShape.Option, Object>}\n   * @desc You provide this dictionary in the init(geometry:options:) or init(node:options:) method. Use this dictionary along with the sourceObject property to recover the information that was used to create the shape. If the shape was created with the init(shapes:transforms:) method, this property’s value is nil.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508904-options\n   ",
-                    "start": 3501,
-                    "end": 4029,
+                    "start": 3531,
+                    "end": 4059,
                     "loc": {
                       "start": {
-                        "line": 67,
+                        "line": 60,
                         "column": 2
                       },
                       "end": {
-                        "line": 72,
+                        "line": 65,
                         "column": 5
                       }
                     }
@@ -1727,30 +1589,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 4032,
-                "end": 4076,
+                "start": 4062,
+                "end": 4106,
                 "loc": {
                   "start": {
-                    "line": 73,
+                    "line": 66,
                     "column": 2
                   },
                   "end": {
-                    "line": 75,
+                    "line": 68,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 4036,
-                  "end": 4043,
+                  "start": 4066,
+                  "end": 4073,
                   "loc": {
                     "start": {
-                      "line": 73,
+                      "line": 66,
                       "column": 6
                     },
                     "end": {
-                      "line": 73,
+                      "line": 66,
                       "column": 13
                     },
                     "identifierName": "options"
@@ -1766,73 +1628,73 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 4046,
-                  "end": 4076,
+                  "start": 4076,
+                  "end": 4106,
                   "loc": {
                     "start": {
-                      "line": 73,
+                      "line": 66,
                       "column": 16
                     },
                     "end": {
-                      "line": 75,
+                      "line": 68,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 4052,
-                      "end": 4072,
+                      "start": 4082,
+                      "end": 4102,
                       "loc": {
                         "start": {
-                          "line": 74,
+                          "line": 67,
                           "column": 4
                         },
                         "end": {
-                          "line": 74,
+                          "line": 67,
                           "column": 24
                         }
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 4059,
-                        "end": 4072,
+                        "start": 4089,
+                        "end": 4102,
                         "loc": {
                           "start": {
-                            "line": 74,
+                            "line": 67,
                             "column": 11
                           },
                           "end": {
-                            "line": 74,
+                            "line": 67,
                             "column": 24
                           }
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 4059,
-                          "end": 4063,
+                          "start": 4089,
+                          "end": 4093,
                           "loc": {
                             "start": {
-                              "line": 74,
+                              "line": 67,
                               "column": 11
                             },
                             "end": {
-                              "line": 74,
+                              "line": 67,
                               "column": 15
                             }
                           }
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 4064,
-                          "end": 4072,
+                          "start": 4094,
+                          "end": 4102,
                           "loc": {
                             "start": {
-                              "line": 74,
+                              "line": 67,
                               "column": 16
                             },
                             "end": {
-                              "line": 74,
+                              "line": 67,
                               "column": 24
                             },
                             "identifierName": "_options"
@@ -1850,15 +1712,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The options dictionary that was used to create the shape.\n   * @type {?Map<SCNPhysicsShape.Option, Object>}\n   * @desc You provide this dictionary in the init(geometry:options:) or init(node:options:) method. Use this dictionary along with the sourceObject property to recover the information that was used to create the shape. If the shape was created with the init(shapes:transforms:) method, this property’s value is nil.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508904-options\n   ",
-                    "start": 3501,
-                    "end": 4029,
+                    "start": 3531,
+                    "end": 4059,
                     "loc": {
                       "start": {
-                        "line": 67,
+                        "line": 60,
                         "column": 2
                       },
                       "end": {
-                        "line": 72,
+                        "line": 65,
                         "column": 5
                       }
                     }
@@ -1867,16 +1729,16 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The array of transforms that was used to create a compound shape.\n   * @type {?NSValue[]}\n   * @desc You provide this array of NSValue objects, each containing an SCNMatrix4 value, in the init(shapes:transforms:) method to create a compound shape. Use this array along with the sourceObject property to recover the information that was used to create the shape. If the shape was created with the init(geometry:options:) or init(node:options:) method, this property’s value is nil.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508898-transforms\n   ",
-                    "start": 4079,
-                    "end": 4666,
+                    "value": "*\n   * The array of transforms that was used to create a compound shape.\n   * @type {?NSValue[]}\n   * @desc You provide this array of NSValue objects, each containing an SCNMatrix4 value, in the init(shapes:transforms:) method to create a compound shape. Use this array along with the sourceObject property to recover the information that was used to create the shape. If the shape was created with the init(geometry:options:) or init(node:options:) method, this property's value is nil.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508898-transforms\n   ",
+                    "start": 4110,
+                    "end": 4697,
                     "loc": {
                       "start": {
-                        "line": 76,
+                        "line": 70,
                         "column": 2
                       },
                       "end": {
-                        "line": 81,
+                        "line": 75,
                         "column": 5
                       }
                     }
@@ -1885,30 +1747,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 4669,
-                "end": 4719,
+                "start": 4700,
+                "end": 4750,
                 "loc": {
                   "start": {
-                    "line": 82,
+                    "line": 76,
                     "column": 2
                   },
                   "end": {
-                    "line": 84,
+                    "line": 78,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 4673,
-                  "end": 4683,
+                  "start": 4704,
+                  "end": 4714,
                   "loc": {
                     "start": {
-                      "line": 82,
+                      "line": 76,
                       "column": 6
                     },
                     "end": {
-                      "line": 82,
+                      "line": 76,
                       "column": 16
                     },
                     "identifierName": "transforms"
@@ -1924,73 +1786,73 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 4686,
-                  "end": 4719,
+                  "start": 4717,
+                  "end": 4750,
                   "loc": {
                     "start": {
-                      "line": 82,
+                      "line": 76,
                       "column": 19
                     },
                     "end": {
-                      "line": 84,
+                      "line": 78,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 4692,
-                      "end": 4715,
+                      "start": 4723,
+                      "end": 4746,
                       "loc": {
                         "start": {
-                          "line": 83,
+                          "line": 77,
                           "column": 4
                         },
                         "end": {
-                          "line": 83,
+                          "line": 77,
                           "column": 27
                         }
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 4699,
-                        "end": 4715,
+                        "start": 4730,
+                        "end": 4746,
                         "loc": {
                           "start": {
-                            "line": 83,
+                            "line": 77,
                             "column": 11
                           },
                           "end": {
-                            "line": 83,
+                            "line": 77,
                             "column": 27
                           }
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 4699,
-                          "end": 4703,
+                          "start": 4730,
+                          "end": 4734,
                           "loc": {
                             "start": {
-                              "line": 83,
+                              "line": 77,
                               "column": 11
                             },
                             "end": {
-                              "line": 83,
+                              "line": 77,
                               "column": 15
                             }
                           }
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 4704,
-                          "end": 4715,
+                          "start": 4735,
+                          "end": 4746,
                           "loc": {
                             "start": {
-                              "line": 83,
+                              "line": 77,
                               "column": 16
                             },
                             "end": {
-                              "line": 83,
+                              "line": 77,
                               "column": 27
                             },
                             "identifierName": "_transforms"
@@ -2007,16 +1869,16 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The array of transforms that was used to create a compound shape.\n   * @type {?NSValue[]}\n   * @desc You provide this array of NSValue objects, each containing an SCNMatrix4 value, in the init(shapes:transforms:) method to create a compound shape. Use this array along with the sourceObject property to recover the information that was used to create the shape. If the shape was created with the init(geometry:options:) or init(node:options:) method, this property’s value is nil.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508898-transforms\n   ",
-                    "start": 4079,
-                    "end": 4666,
+                    "value": "*\n   * The array of transforms that was used to create a compound shape.\n   * @type {?NSValue[]}\n   * @desc You provide this array of NSValue objects, each containing an SCNMatrix4 value, in the init(shapes:transforms:) method to create a compound shape. Use this array along with the sourceObject property to recover the information that was used to create the shape. If the shape was created with the init(geometry:options:) or init(node:options:) method, this property's value is nil.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508898-transforms\n   ",
+                    "start": 4110,
+                    "end": 4697,
                     "loc": {
                       "start": {
-                        "line": 76,
+                        "line": 70,
                         "column": 2
                       },
                       "end": {
-                        "line": 81,
+                        "line": 75,
                         "column": 5
                       }
                     }
@@ -2026,31 +1888,31 @@
                   {
                     "type": "CommentLine",
                     "value": " Structures",
-                    "start": 4723,
-                    "end": 4736,
+                    "start": 4754,
+                    "end": 4767,
                     "loc": {
                       "start": {
-                        "line": 86,
+                        "line": 80,
                         "column": 2
                       },
                       "end": {
-                        "line": 86,
+                        "line": 80,
                         "column": 15
                       }
                     }
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * @type {Object} Option\n   * @property {Symbol} collisionMargin \n   * @property {Symbol} keepAsCompound An option for selecting whether to create a group of independent shapes or combine them into a single shape.\n   * @property {Symbol} scale An option for selecting the scale factor of the shape relative to the local coordinate space of the node containing it.\n   * @property {Symbol} type An option for selecting the level of detail at which to create shapes from geometry.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape.option\n   ",
-                    "start": 4739,
-                    "end": 5308,
+                    "value": "*\n   * @type {Object} Option\n   * @property {string} collisionMargin \n   * @property {string} keepAsCompound An option for selecting whether to create a group of independent shapes or combine them into a single shape.\n   * @property {string} scale An option for selecting the scale factor of the shape relative to the local coordinate space of the node containing it.\n   * @property {string} type An option for selecting the level of detail at which to create shapes from geometry.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape.option\n   ",
+                    "start": 4771,
+                    "end": 5340,
                     "loc": {
                       "start": {
-                        "line": 87,
+                        "line": 82,
                         "column": 2
                       },
                       "end": {
-                        "line": 94,
+                        "line": 89,
                         "column": 5
                       }
                     }
@@ -2059,30 +1921,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 5311,
-                "end": 5355,
+                "start": 5343,
+                "end": 5387,
                 "loc": {
                   "start": {
-                    "line": 95,
+                    "line": 90,
                     "column": 2
                   },
                   "end": {
-                    "line": 97,
+                    "line": 92,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 5322,
-                  "end": 5328,
+                  "start": 5354,
+                  "end": 5360,
                   "loc": {
                     "start": {
-                      "line": 95,
+                      "line": 90,
                       "column": 13
                     },
                     "end": {
-                      "line": 95,
+                      "line": 90,
                       "column": 19
                     },
                     "identifierName": "Option"
@@ -2098,44 +1960,44 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 5331,
-                  "end": 5355,
+                  "start": 5363,
+                  "end": 5387,
                   "loc": {
                     "start": {
-                      "line": 95,
+                      "line": 90,
                       "column": 22
                     },
                     "end": {
-                      "line": 97,
+                      "line": 92,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 5337,
-                      "end": 5351,
+                      "start": 5369,
+                      "end": 5383,
                       "loc": {
                         "start": {
-                          "line": 96,
+                          "line": 91,
                           "column": 4
                         },
                         "end": {
-                          "line": 96,
+                          "line": 91,
                           "column": 18
                         }
                       },
                       "argument": {
                         "type": "Identifier",
-                        "start": 5344,
-                        "end": 5351,
+                        "start": 5376,
+                        "end": 5383,
                         "loc": {
                           "start": {
-                            "line": 96,
+                            "line": 91,
                             "column": 11
                           },
                           "end": {
-                            "line": 96,
+                            "line": 91,
                             "column": 18
                           },
                           "identifierName": "_Option"
@@ -2151,31 +2013,31 @@
                   {
                     "type": "CommentLine",
                     "value": " Structures",
-                    "start": 4723,
-                    "end": 4736,
+                    "start": 4754,
+                    "end": 4767,
                     "loc": {
                       "start": {
-                        "line": 86,
+                        "line": 80,
                         "column": 2
                       },
                       "end": {
-                        "line": 86,
+                        "line": 80,
                         "column": 15
                       }
                     }
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * @type {Object} Option\n   * @property {Symbol} collisionMargin \n   * @property {Symbol} keepAsCompound An option for selecting whether to create a group of independent shapes or combine them into a single shape.\n   * @property {Symbol} scale An option for selecting the scale factor of the shape relative to the local coordinate space of the node containing it.\n   * @property {Symbol} type An option for selecting the level of detail at which to create shapes from geometry.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape.option\n   ",
-                    "start": 4739,
-                    "end": 5308,
+                    "value": "*\n   * @type {Object} Option\n   * @property {string} collisionMargin \n   * @property {string} keepAsCompound An option for selecting whether to create a group of independent shapes or combine them into a single shape.\n   * @property {string} scale An option for selecting the scale factor of the shape relative to the local coordinate space of the node containing it.\n   * @property {string} type An option for selecting the level of detail at which to create shapes from geometry.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape.option\n   ",
+                    "start": 4771,
+                    "end": 5340,
                     "loc": {
                       "start": {
-                        "line": 87,
+                        "line": 82,
                         "column": 2
                       },
                       "end": {
-                        "line": 94,
+                        "line": 89,
                         "column": 5
                       }
                     }
@@ -2184,16 +2046,16 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * @type {Object} ShapeType\n   * @property {Symbol} boundingBox The physics shape is the smallest box containing the geometry.\n   * @property {Symbol} concavePolyhedron The physics shape is a concave polyhedron closely following the surface of the geometry.\n   * @property {Symbol} convexHull The physics shape is a convex polyhedron roughly enclosing the geometry.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape.shapetype\n   ",
-                    "start": 5358,
-                    "end": 5818,
+                    "value": "*\n   * @type {Object} ShapeType\n   * @property {string} boundingBox The physics shape is the smallest box containing the geometry.\n   * @property {string} concavePolyhedron The physics shape is a concave polyhedron closely following the surface of the geometry.\n   * @property {string} convexHull The physics shape is a convex polyhedron roughly enclosing the geometry.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape.shapetype\n   ",
+                    "start": 5391,
+                    "end": 5851,
                     "loc": {
                       "start": {
-                        "line": 98,
+                        "line": 94,
                         "column": 2
                       },
                       "end": {
-                        "line": 104,
+                        "line": 100,
                         "column": 5
                       }
                     }
@@ -2202,30 +2064,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 5821,
-                "end": 5871,
+                "start": 5854,
+                "end": 5904,
                 "loc": {
                   "start": {
-                    "line": 105,
+                    "line": 101,
                     "column": 2
                   },
                   "end": {
-                    "line": 107,
+                    "line": 103,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 5832,
-                  "end": 5841,
+                  "start": 5865,
+                  "end": 5874,
                   "loc": {
                     "start": {
-                      "line": 105,
+                      "line": 101,
                       "column": 13
                     },
                     "end": {
-                      "line": 105,
+                      "line": 101,
                       "column": 22
                     },
                     "identifierName": "ShapeType"
@@ -2241,44 +2103,44 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 5844,
-                  "end": 5871,
+                  "start": 5877,
+                  "end": 5904,
                   "loc": {
                     "start": {
-                      "line": 105,
+                      "line": 101,
                       "column": 25
                     },
                     "end": {
-                      "line": 107,
+                      "line": 103,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 5850,
-                      "end": 5867,
+                      "start": 5883,
+                      "end": 5900,
                       "loc": {
                         "start": {
-                          "line": 106,
+                          "line": 102,
                           "column": 4
                         },
                         "end": {
-                          "line": 106,
+                          "line": 102,
                           "column": 21
                         }
                       },
                       "argument": {
                         "type": "Identifier",
-                        "start": 5857,
-                        "end": 5867,
+                        "start": 5890,
+                        "end": 5900,
                         "loc": {
                           "start": {
-                            "line": 106,
+                            "line": 102,
                             "column": 11
                           },
                           "end": {
-                            "line": 106,
+                            "line": 102,
                             "column": 21
                           },
                           "identifierName": "_ShapeType"
@@ -2292,16 +2154,16 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * @type {Object} ShapeType\n   * @property {Symbol} boundingBox The physics shape is the smallest box containing the geometry.\n   * @property {Symbol} concavePolyhedron The physics shape is a concave polyhedron closely following the surface of the geometry.\n   * @property {Symbol} convexHull The physics shape is a convex polyhedron roughly enclosing the geometry.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape.shapetype\n   ",
-                    "start": 5358,
-                    "end": 5818,
+                    "value": "*\n   * @type {Object} ShapeType\n   * @property {string} boundingBox The physics shape is the smallest box containing the geometry.\n   * @property {string} concavePolyhedron The physics shape is a concave polyhedron closely following the surface of the geometry.\n   * @property {string} convexHull The physics shape is a convex polyhedron roughly enclosing the geometry.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape.shapetype\n   ",
+                    "start": 5391,
+                    "end": 5851,
                     "loc": {
                       "start": {
-                        "line": 98,
+                        "line": 94,
                         "column": 2
                       },
                       "end": {
-                        "line": 104,
+                        "line": 100,
                         "column": 5
                       }
                     }
@@ -2314,8 +2176,8 @@
             {
               "type": "CommentBlock",
               "value": "*\n * An abstraction of a physics body’s solid volume for use in tuning or optimizing collision detection.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnphysicsshape\n ",
-              "start": 351,
-              "end": 574,
+              "start": 451,
+              "end": 674,
               "loc": {
                 "start": {
                   "line": 21,
@@ -2334,8 +2196,8 @@
           {
             "type": "CommentBlock",
             "value": "*\n * An abstraction of a physics body’s solid volume for use in tuning or optimizing collision detection.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnphysicsshape\n ",
-            "start": 351,
-            "end": 574,
+            "start": 451,
+            "end": 674,
             "loc": {
               "start": {
                 "line": 21,
@@ -2392,8 +2254,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n * An abstraction of a physics body’s solid volume for use in tuning or optimizing collision detection.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnphysicsshape\n ",
-      "start": 351,
-      "end": 574,
+      "start": 451,
+      "end": 674,
       "loc": {
         "start": {
           "line": 21,
@@ -2406,65 +2268,33 @@
       }
     },
     {
-      "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 634,
-      "end": 701,
-      "loc": {
-        "start": {
-          "line": 29,
-          "column": 2
-        },
-        "end": {
-          "line": 33,
-          "column": 5
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": " Getting Information About a Shape",
-      "start": 718,
-      "end": 754,
-      "loc": {
-        "start": {
-          "line": 36,
-          "column": 4
-        },
-        "end": {
-          "line": 36,
-          "column": 40
-        }
-      }
-    },
-    {
       "type": "CommentLine",
       "value": " Creating Physics Shapes",
-      "start": 846,
-      "end": 872,
+      "start": 733,
+      "end": 759,
       "loc": {
         "start": {
-          "line": 43,
+          "line": 28,
           "column": 2
         },
         "end": {
-          "line": 43,
+          "line": 28,
           "column": 28
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Creates a physics shape based on a geometry object.\n   * @access public\n   * @param {SCNGeometry} geometry - A geometry object.\n   * @param {?Map<SCNPhysicsShape.Option, Object>} [options = null] - A dictionary of options affecting the level of detail of the physics shape, or nil to use default options. For applicable keys and their possible values, see Shape Creation Options Keys.\n   * @returns {void}\n   * @desc If you create a physics shape using one of the basic geometry classes (SCNBox, SCNSphere, SCNPyramid, SCNCone, SCNCylinder, or SCNCapsule), SceneKit uses an idealized form of that geometry for the physics shape instead of using the geometry’s vertex data to simulate collisions. For example, if you create a physics shape from an SCNSphere object, SceneKit simulates collisions for any object that passes within the sphere’s radius. Because the idealized forms of simple geometries are computationally much simpler than the vertex data needed for displaying them, using basic geometries for physics shapes (or compound shapes created from basic geometries with the init(shapes:transforms:) method) often provides the best balance between simulation accuracy and performance. To use the newly created physics shape, create a physics body with the the init(type:shape:) method, or assign the shape to the physicsShape property of an existing body.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508897-init\n   ",
-      "start": 876,
-      "end": 2339,
+      "value": "*\n   * Creates a physics shape based on a geometry object.\n   * @access public\n   * @constructor\n   * @param {SCNGeometry} geometry - A geometry object.\n   * @param {?Map<SCNPhysicsShape.Option, Object>} [options = null] - A dictionary of options affecting the level of detail of the physics shape, or nil to use default options. For applicable keys and their possible values, see Shape Creation Options Keys.\n   * @desc If you create a physics shape using one of the basic geometry classes (SCNBox, SCNSphere, SCNPyramid, SCNCone, SCNCylinder, or SCNCapsule), SceneKit uses an idealized form of that geometry for the physics shape instead of using the geometry’s vertex data to simulate collisions. For example, if you create a physics shape from an SCNSphere object, SceneKit simulates collisions for any object that passes within the sphere’s radius. Because the idealized forms of simple geometries are computationally much simpler than the vertex data needed for displaying them, using basic geometries for physics shapes (or compound shapes created from basic geometries with the init(shapes:transforms:) method) often provides the best balance between simulation accuracy and performance. To use the newly created physics shape, create a physics body with the the init(type:shape:) method, or assign the shape to the physicsShape property of an existing body.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508897-init\n   ",
+      "start": 763,
+      "end": 2223,
       "loc": {
         "start": {
-          "line": 45,
+          "line": 30,
           "column": 2
         },
         "end": {
-          "line": 53,
+          "line": 38,
           "column": 5
         }
       }
@@ -2472,15 +2302,31 @@
     {
       "type": "CommentLine",
       "value": " Getting Information About a Shape",
-      "start": 2382,
-      "end": 2418,
+      "start": 2283,
+      "end": 2319,
       "loc": {
         "start": {
-          "line": 57,
+          "line": 42,
+          "column": 4
+        },
+        "end": {
+          "line": 42,
+          "column": 40
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " Getting Information About a Shape",
+      "start": 2410,
+      "end": 2446,
+      "loc": {
+        "start": {
+          "line": 48,
           "column": 2
         },
         "end": {
-          "line": 57,
+          "line": 48,
           "column": 38
         }
       }
@@ -2488,15 +2334,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The object that was used to create the shape.\n   * @type {Object}\n   * @desc This property, along with the transforms and options properties, provides the information that was used to create the shape. You can use this information, for example, to draw editing or debugging UI in your scene.If the shape was created with the init(geometry:options:) method, the source object is an SCNGeometry object, and the options property contains the options affecting the shape’s construction from that geometry.If the shape was created with the init(node:options:) method, the source object is an SCNNode object, and the options property contains the options affecting the shape’s construction from that node.If the shape was created with the init(shapes:transforms:) method, the source object is an array of SCNPhysicsShape objects and the transforms property describes how those shapes combine to form a compound shape.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508888-sourceobject\n   ",
-      "start": 2421,
-      "end": 3441,
+      "start": 2450,
+      "end": 3470,
       "loc": {
         "start": {
-          "line": 58,
+          "line": 50,
           "column": 2
         },
         "end": {
-          "line": 63,
+          "line": 55,
           "column": 5
         }
       }
@@ -2504,31 +2350,31 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The options dictionary that was used to create the shape.\n   * @type {?Map<SCNPhysicsShape.Option, Object>}\n   * @desc You provide this dictionary in the init(geometry:options:) or init(node:options:) method. Use this dictionary along with the sourceObject property to recover the information that was used to create the shape. If the shape was created with the init(shapes:transforms:) method, this property’s value is nil.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508904-options\n   ",
-      "start": 3501,
-      "end": 4029,
+      "start": 3531,
+      "end": 4059,
       "loc": {
         "start": {
-          "line": 67,
+          "line": 60,
           "column": 2
         },
         "end": {
-          "line": 72,
+          "line": 65,
           "column": 5
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The array of transforms that was used to create a compound shape.\n   * @type {?NSValue[]}\n   * @desc You provide this array of NSValue objects, each containing an SCNMatrix4 value, in the init(shapes:transforms:) method to create a compound shape. Use this array along with the sourceObject property to recover the information that was used to create the shape. If the shape was created with the init(geometry:options:) or init(node:options:) method, this property’s value is nil.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508898-transforms\n   ",
-      "start": 4079,
-      "end": 4666,
+      "value": "*\n   * The array of transforms that was used to create a compound shape.\n   * @type {?NSValue[]}\n   * @desc You provide this array of NSValue objects, each containing an SCNMatrix4 value, in the init(shapes:transforms:) method to create a compound shape. Use this array along with the sourceObject property to recover the information that was used to create the shape. If the shape was created with the init(geometry:options:) or init(node:options:) method, this property's value is nil.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508898-transforms\n   ",
+      "start": 4110,
+      "end": 4697,
       "loc": {
         "start": {
-          "line": 76,
+          "line": 70,
           "column": 2
         },
         "end": {
-          "line": 81,
+          "line": 75,
           "column": 5
         }
       }
@@ -2536,47 +2382,47 @@
     {
       "type": "CommentLine",
       "value": " Structures",
-      "start": 4723,
-      "end": 4736,
+      "start": 4754,
+      "end": 4767,
       "loc": {
         "start": {
-          "line": 86,
+          "line": 80,
           "column": 2
         },
         "end": {
-          "line": 86,
+          "line": 80,
           "column": 15
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * @type {Object} Option\n   * @property {Symbol} collisionMargin \n   * @property {Symbol} keepAsCompound An option for selecting whether to create a group of independent shapes or combine them into a single shape.\n   * @property {Symbol} scale An option for selecting the scale factor of the shape relative to the local coordinate space of the node containing it.\n   * @property {Symbol} type An option for selecting the level of detail at which to create shapes from geometry.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape.option\n   ",
-      "start": 4739,
-      "end": 5308,
+      "value": "*\n   * @type {Object} Option\n   * @property {string} collisionMargin \n   * @property {string} keepAsCompound An option for selecting whether to create a group of independent shapes or combine them into a single shape.\n   * @property {string} scale An option for selecting the scale factor of the shape relative to the local coordinate space of the node containing it.\n   * @property {string} type An option for selecting the level of detail at which to create shapes from geometry.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape.option\n   ",
+      "start": 4771,
+      "end": 5340,
       "loc": {
         "start": {
-          "line": 87,
+          "line": 82,
           "column": 2
         },
         "end": {
-          "line": 94,
+          "line": 89,
           "column": 5
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * @type {Object} ShapeType\n   * @property {Symbol} boundingBox The physics shape is the smallest box containing the geometry.\n   * @property {Symbol} concavePolyhedron The physics shape is a concave polyhedron closely following the surface of the geometry.\n   * @property {Symbol} convexHull The physics shape is a convex polyhedron roughly enclosing the geometry.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape.shapetype\n   ",
-      "start": 5358,
-      "end": 5818,
+      "value": "*\n   * @type {Object} ShapeType\n   * @property {string} boundingBox The physics shape is the smallest box containing the geometry.\n   * @property {string} concavePolyhedron The physics shape is a concave polyhedron closely following the surface of the geometry.\n   * @property {string} convexHull The physics shape is a convex polyhedron roughly enclosing the geometry.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape.shapetype\n   ",
+      "start": 5391,
+      "end": 5851,
       "loc": {
         "start": {
-          "line": 98,
+          "line": 94,
           "column": 2
         },
         "end": {
-          "line": 104,
+          "line": 100,
           "column": 5
         }
       }
@@ -3091,7 +2937,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "string",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -3099,11 +2945,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
+      "value": "SCNPhysicsShapeCollisionMarginKey",
       "start": 170,
-      "end": 176,
+      "end": 205,
       "loc": {
         "start": {
           "line": 8,
@@ -3111,57 +2958,7 @@
         },
         "end": {
           "line": 8,
-          "column": 25
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 176,
-      "end": 177,
-      "loc": {
-        "start": {
-          "line": 8,
-          "column": 25
-        },
-        "end": {
-          "line": 8,
-          "column": 26
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 177,
-      "end": 178,
-      "loc": {
-        "start": {
-          "line": 8,
-          "column": 26
-        },
-        "end": {
-          "line": 8,
-          "column": 27
+          "column": 54
         }
       }
     },
@@ -3178,16 +2975,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 178,
-      "end": 179,
+      "start": 205,
+      "end": 206,
       "loc": {
         "start": {
           "line": 8,
-          "column": 27
+          "column": 54
         },
         "end": {
           "line": 8,
-          "column": 28
+          "column": 55
         }
       }
     },
@@ -3204,8 +3001,8 @@
         "binop": null
       },
       "value": "keepAsCompound",
-      "start": 182,
-      "end": 196,
+      "start": 209,
+      "end": 223,
       "loc": {
         "start": {
           "line": 9,
@@ -3230,8 +3027,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 196,
-      "end": 197,
+      "start": 223,
+      "end": 224,
       "loc": {
         "start": {
           "line": 9,
@@ -3245,7 +3042,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "string",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -3253,11 +3050,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
-      "start": 198,
-      "end": 204,
+      "value": "SCNPhysicsShapeKeepAsCompoundKey",
+      "start": 225,
+      "end": 259,
       "loc": {
         "start": {
           "line": 9,
@@ -3265,57 +3063,7 @@
         },
         "end": {
           "line": 9,
-          "column": 24
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 204,
-      "end": 205,
-      "loc": {
-        "start": {
-          "line": 9,
-          "column": 24
-        },
-        "end": {
-          "line": 9,
-          "column": 25
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 205,
-      "end": 206,
-      "loc": {
-        "start": {
-          "line": 9,
-          "column": 25
-        },
-        "end": {
-          "line": 9,
-          "column": 26
+          "column": 52
         }
       }
     },
@@ -3332,16 +3080,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 206,
-      "end": 207,
+      "start": 259,
+      "end": 260,
       "loc": {
         "start": {
           "line": 9,
-          "column": 26
+          "column": 52
         },
         "end": {
           "line": 9,
-          "column": 27
+          "column": 53
         }
       }
     },
@@ -3358,8 +3106,8 @@
         "binop": null
       },
       "value": "scale",
-      "start": 210,
-      "end": 215,
+      "start": 263,
+      "end": 268,
       "loc": {
         "start": {
           "line": 10,
@@ -3384,8 +3132,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 215,
-      "end": 216,
+      "start": 268,
+      "end": 269,
       "loc": {
         "start": {
           "line": 10,
@@ -3399,7 +3147,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "string",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -3407,11 +3155,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
-      "start": 217,
-      "end": 223,
+      "value": "SCNPhysicsShapeScaleKey",
+      "start": 270,
+      "end": 295,
       "loc": {
         "start": {
           "line": 10,
@@ -3419,57 +3168,7 @@
         },
         "end": {
           "line": 10,
-          "column": 15
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 223,
-      "end": 224,
-      "loc": {
-        "start": {
-          "line": 10,
-          "column": 15
-        },
-        "end": {
-          "line": 10,
-          "column": 16
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 224,
-      "end": 225,
-      "loc": {
-        "start": {
-          "line": 10,
-          "column": 16
-        },
-        "end": {
-          "line": 10,
-          "column": 17
+          "column": 34
         }
       }
     },
@@ -3486,16 +3185,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 225,
-      "end": 226,
+      "start": 295,
+      "end": 296,
       "loc": {
         "start": {
           "line": 10,
-          "column": 17
+          "column": 34
         },
         "end": {
           "line": 10,
-          "column": 18
+          "column": 35
         }
       }
     },
@@ -3512,8 +3211,8 @@
         "binop": null
       },
       "value": "type",
-      "start": 229,
-      "end": 233,
+      "start": 299,
+      "end": 303,
       "loc": {
         "start": {
           "line": 11,
@@ -3538,8 +3237,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 233,
-      "end": 234,
+      "start": 303,
+      "end": 304,
       "loc": {
         "start": {
           "line": 11,
@@ -3553,7 +3252,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "string",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -3561,11 +3260,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
-      "start": 235,
-      "end": 241,
+      "value": "SCNPhysicsShapeTypeKey",
+      "start": 305,
+      "end": 329,
       "loc": {
         "start": {
           "line": 11,
@@ -3573,57 +3273,7 @@
         },
         "end": {
           "line": 11,
-          "column": 14
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 241,
-      "end": 242,
-      "loc": {
-        "start": {
-          "line": 11,
-          "column": 14
-        },
-        "end": {
-          "line": 11,
-          "column": 15
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 242,
-      "end": 243,
-      "loc": {
-        "start": {
-          "line": 11,
-          "column": 15
-        },
-        "end": {
-          "line": 11,
-          "column": 16
+          "column": 32
         }
       }
     },
@@ -3639,8 +3289,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 244,
-      "end": 245,
+      "start": 330,
+      "end": 331,
       "loc": {
         "start": {
           "line": 12,
@@ -3667,8 +3317,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 247,
-      "end": 252,
+      "start": 333,
+      "end": 338,
       "loc": {
         "start": {
           "line": 14,
@@ -3693,8 +3343,8 @@
         "binop": null
       },
       "value": "_ShapeType",
-      "start": 253,
-      "end": 263,
+      "start": 339,
+      "end": 349,
       "loc": {
         "start": {
           "line": 14,
@@ -3720,8 +3370,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 264,
-      "end": 265,
+      "start": 350,
+      "end": 351,
       "loc": {
         "start": {
           "line": 14,
@@ -3745,8 +3395,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 266,
-      "end": 267,
+      "start": 352,
+      "end": 353,
       "loc": {
         "start": {
           "line": 14,
@@ -3771,8 +3421,8 @@
         "binop": null
       },
       "value": "boundingBox",
-      "start": 270,
-      "end": 281,
+      "start": 356,
+      "end": 367,
       "loc": {
         "start": {
           "line": 15,
@@ -3797,8 +3447,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 281,
-      "end": 282,
+      "start": 367,
+      "end": 368,
       "loc": {
         "start": {
           "line": 15,
@@ -3812,7 +3462,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "string",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -3820,11 +3470,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
-      "start": 283,
-      "end": 289,
+      "value": "boundingBox",
+      "start": 369,
+      "end": 382,
       "loc": {
         "start": {
           "line": 15,
@@ -3832,57 +3483,7 @@
         },
         "end": {
           "line": 15,
-          "column": 21
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 289,
-      "end": 290,
-      "loc": {
-        "start": {
-          "line": 15,
-          "column": 21
-        },
-        "end": {
-          "line": 15,
-          "column": 22
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 290,
-      "end": 291,
-      "loc": {
-        "start": {
-          "line": 15,
-          "column": 22
-        },
-        "end": {
-          "line": 15,
-          "column": 23
+          "column": 28
         }
       }
     },
@@ -3899,16 +3500,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 291,
-      "end": 292,
+      "start": 382,
+      "end": 383,
       "loc": {
         "start": {
           "line": 15,
-          "column": 23
+          "column": 28
         },
         "end": {
           "line": 15,
-          "column": 24
+          "column": 29
         }
       }
     },
@@ -3925,8 +3526,8 @@
         "binop": null
       },
       "value": "concavePolyhedron",
-      "start": 295,
-      "end": 312,
+      "start": 386,
+      "end": 403,
       "loc": {
         "start": {
           "line": 16,
@@ -3951,8 +3552,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 312,
-      "end": 313,
+      "start": 403,
+      "end": 404,
       "loc": {
         "start": {
           "line": 16,
@@ -3966,7 +3567,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "string",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -3974,11 +3575,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
-      "start": 314,
-      "end": 320,
+      "value": "concaveMesh",
+      "start": 405,
+      "end": 418,
       "loc": {
         "start": {
           "line": 16,
@@ -3986,57 +3588,7 @@
         },
         "end": {
           "line": 16,
-          "column": 27
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 320,
-      "end": 321,
-      "loc": {
-        "start": {
-          "line": 16,
-          "column": 27
-        },
-        "end": {
-          "line": 16,
-          "column": 28
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 321,
-      "end": 322,
-      "loc": {
-        "start": {
-          "line": 16,
-          "column": 28
-        },
-        "end": {
-          "line": 16,
-          "column": 29
+          "column": 34
         }
       }
     },
@@ -4053,16 +3605,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 322,
-      "end": 323,
+      "start": 418,
+      "end": 419,
       "loc": {
         "start": {
           "line": 16,
-          "column": 29
+          "column": 34
         },
         "end": {
           "line": 16,
-          "column": 30
+          "column": 35
         }
       }
     },
@@ -4079,8 +3631,8 @@
         "binop": null
       },
       "value": "convexHull",
-      "start": 326,
-      "end": 336,
+      "start": 422,
+      "end": 432,
       "loc": {
         "start": {
           "line": 17,
@@ -4105,8 +3657,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 336,
-      "end": 337,
+      "start": 432,
+      "end": 433,
       "loc": {
         "start": {
           "line": 17,
@@ -4120,7 +3672,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "string",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -4128,11 +3680,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
-      "start": 338,
-      "end": 344,
+      "value": "convexHull",
+      "start": 434,
+      "end": 446,
       "loc": {
         "start": {
           "line": 17,
@@ -4140,57 +3693,7 @@
         },
         "end": {
           "line": 17,
-          "column": 20
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 344,
-      "end": 345,
-      "loc": {
-        "start": {
-          "line": 17,
-          "column": 20
-        },
-        "end": {
-          "line": 17,
-          "column": 21
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 345,
-      "end": 346,
-      "loc": {
-        "start": {
-          "line": 17,
-          "column": 21
-        },
-        "end": {
-          "line": 17,
-          "column": 22
+          "column": 26
         }
       }
     },
@@ -4206,8 +3709,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 347,
-      "end": 348,
+      "start": 447,
+      "end": 448,
       "loc": {
         "start": {
           "line": 18,
@@ -4222,8 +3725,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n * An abstraction of a physics body’s solid volume for use in tuning or optimizing collision detection.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnphysicsshape\n ",
-      "start": 351,
-      "end": 574,
+      "start": 451,
+      "end": 674,
       "loc": {
         "start": {
           "line": 21,
@@ -4250,8 +3753,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 575,
-      "end": 581,
+      "start": 675,
+      "end": 681,
       "loc": {
         "start": {
           "line": 27,
@@ -4278,8 +3781,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 582,
-      "end": 589,
+      "start": 682,
+      "end": 689,
       "loc": {
         "start": {
           "line": 27,
@@ -4306,8 +3809,8 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 590,
-      "end": 595,
+      "start": 690,
+      "end": 695,
       "loc": {
         "start": {
           "line": 27,
@@ -4332,8 +3835,8 @@
         "binop": null
       },
       "value": "SCNPhysicsShape",
-      "start": 596,
-      "end": 611,
+      "start": 696,
+      "end": 711,
       "loc": {
         "start": {
           "line": 27,
@@ -4360,8 +3863,8 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 612,
-      "end": 619,
+      "start": 712,
+      "end": 719,
       "loc": {
         "start": {
           "line": 27,
@@ -4386,8 +3889,8 @@
         "binop": null
       },
       "value": "NSObject",
-      "start": 620,
-      "end": 628,
+      "start": 720,
+      "end": 728,
       "loc": {
         "start": {
           "line": 27,
@@ -4411,8 +3914,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 629,
-      "end": 630,
+      "start": 729,
+      "end": 730,
       "loc": {
         "start": {
           "line": 27,
@@ -4425,17 +3928,33 @@
       }
     },
     {
-      "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 634,
-      "end": 701,
+      "type": "CommentLine",
+      "value": " Creating Physics Shapes",
+      "start": 733,
+      "end": 759,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 28,
           "column": 2
         },
         "end": {
-          "line": 33,
+          "line": 28,
+          "column": 28
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * Creates a physics shape based on a geometry object.\n   * @access public\n   * @constructor\n   * @param {SCNGeometry} geometry - A geometry object.\n   * @param {?Map<SCNPhysicsShape.Option, Object>} [options = null] - A dictionary of options affecting the level of detail of the physics shape, or nil to use default options. For applicable keys and their possible values, see Shape Creation Options Keys.\n   * @desc If you create a physics shape using one of the basic geometry classes (SCNBox, SCNSphere, SCNPyramid, SCNCone, SCNCylinder, or SCNCapsule), SceneKit uses an idealized form of that geometry for the physics shape instead of using the geometry’s vertex data to simulate collisions. For example, if you create a physics shape from an SCNSphere object, SceneKit simulates collisions for any object that passes within the sphere’s radius. Because the idealized forms of simple geometries are computationally much simpler than the vertex data needed for displaying them, using basic geometries for physics shapes (or compound shapes created from basic geometries with the init(shapes:transforms:) method) often provides the best balance between simulation accuracy and performance. To use the newly created physics shape, create a physics body with the the init(type:shape:) method, or assign the shape to the physicsShape property of an existing body.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508897-init\n   ",
+      "start": 763,
+      "end": 2223,
+      "loc": {
+        "start": {
+          "line": 30,
+          "column": 2
+        },
+        "end": {
+          "line": 38,
           "column": 5
         }
       }
@@ -4452,17 +3971,17 @@
         "postfix": false,
         "binop": null
       },
-      "value": "init",
-      "start": 704,
-      "end": 708,
+      "value": "constructor",
+      "start": 2226,
+      "end": 2237,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 39,
           "column": 2
         },
         "end": {
-          "line": 34,
-          "column": 6
+          "line": 39,
+          "column": 13
         }
       }
     },
@@ -4478,16 +3997,149 @@
         "postfix": false,
         "binop": null
       },
-      "start": 708,
-      "end": 709,
+      "start": 2237,
+      "end": 2238,
       "loc": {
         "start": {
-          "line": 34,
-          "column": 6
+          "line": 39,
+          "column": 13
         },
         "end": {
-          "line": 34,
-          "column": 7
+          "line": 39,
+          "column": 14
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "geometry",
+      "start": 2238,
+      "end": 2246,
+      "loc": {
+        "start": {
+          "line": 39,
+          "column": 14
+        },
+        "end": {
+          "line": 39,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 2246,
+      "end": 2247,
+      "loc": {
+        "start": {
+          "line": 39,
+          "column": 22
+        },
+        "end": {
+          "line": 39,
+          "column": 23
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "options",
+      "start": 2248,
+      "end": 2255,
+      "loc": {
+        "start": {
+          "line": 39,
+          "column": 24
+        },
+        "end": {
+          "line": 39,
+          "column": 31
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 2256,
+      "end": 2257,
+      "loc": {
+        "start": {
+          "line": 39,
+          "column": 32
+        },
+        "end": {
+          "line": 39,
+          "column": 33
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "null",
+        "keyword": "null",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "null",
+      "start": 2258,
+      "end": 2262,
+      "loc": {
+        "start": {
+          "line": 39,
+          "column": 34
+        },
+        "end": {
+          "line": 39,
+          "column": 38
         }
       }
     },
@@ -4503,16 +4155,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 709,
-      "end": 710,
+      "start": 2262,
+      "end": 2263,
       "loc": {
         "start": {
-          "line": 34,
-          "column": 7
+          "line": 39,
+          "column": 38
         },
         "end": {
-          "line": 34,
-          "column": 8
+          "line": 39,
+          "column": 39
         }
       }
     },
@@ -4528,31 +4180,109 @@
         "postfix": false,
         "binop": null
       },
-      "start": 711,
-      "end": 712,
+      "start": 2264,
+      "end": 2265,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 39,
+          "column": 40
+        },
+        "end": {
+          "line": 39,
+          "column": 41
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "super",
+        "keyword": "super",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "super",
+      "start": 2270,
+      "end": 2275,
+      "loc": {
+        "start": {
+          "line": 40,
+          "column": 4
+        },
+        "end": {
+          "line": 40,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 2275,
+      "end": 2276,
+      "loc": {
+        "start": {
+          "line": 40,
           "column": 9
         },
         "end": {
-          "line": 34,
+          "line": 40,
           "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 2276,
+      "end": 2277,
+      "loc": {
+        "start": {
+          "line": 40,
+          "column": 10
+        },
+        "end": {
+          "line": 40,
+          "column": 11
         }
       }
     },
     {
       "type": "CommentLine",
       "value": " Getting Information About a Shape",
-      "start": 718,
-      "end": 754,
+      "start": 2283,
+      "end": 2319,
       "loc": {
         "start": {
-          "line": 36,
+          "line": 42,
           "column": 4
         },
         "end": {
-          "line": 36,
+          "line": 42,
           "column": 40
         }
       }
@@ -4572,15 +4302,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 760,
-      "end": 764,
+      "start": 2324,
+      "end": 2328,
       "loc": {
         "start": {
-          "line": 38,
+          "line": 43,
           "column": 4
         },
         "end": {
-          "line": 38,
+          "line": 43,
           "column": 8
         }
       }
@@ -4598,15 +4328,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 764,
-      "end": 765,
+      "start": 2328,
+      "end": 2329,
       "loc": {
         "start": {
-          "line": 38,
+          "line": 43,
           "column": 8
         },
         "end": {
-          "line": 38,
+          "line": 43,
           "column": 9
         }
       }
@@ -4624,15 +4354,15 @@
         "binop": null
       },
       "value": "_sourceObject",
-      "start": 765,
-      "end": 778,
+      "start": 2329,
+      "end": 2342,
       "loc": {
         "start": {
-          "line": 38,
+          "line": 43,
           "column": 9
         },
         "end": {
-          "line": 38,
+          "line": 43,
           "column": 22
         }
       }
@@ -4651,15 +4381,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 779,
-      "end": 780,
+      "start": 2343,
+      "end": 2344,
       "loc": {
         "start": {
-          "line": 38,
+          "line": 43,
           "column": 23
         },
         "end": {
-          "line": 38,
+          "line": 43,
           "column": 24
         }
       }
@@ -4679,15 +4409,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 781,
-      "end": 785,
+      "start": 2345,
+      "end": 2349,
       "loc": {
         "start": {
-          "line": 38,
+          "line": 43,
           "column": 25
         },
         "end": {
-          "line": 38,
+          "line": 43,
           "column": 29
         }
       }
@@ -4707,15 +4437,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 790,
-      "end": 794,
+      "start": 2354,
+      "end": 2358,
       "loc": {
         "start": {
-          "line": 39,
+          "line": 44,
           "column": 4
         },
         "end": {
-          "line": 39,
+          "line": 44,
           "column": 8
         }
       }
@@ -4733,15 +4463,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 794,
-      "end": 795,
+      "start": 2358,
+      "end": 2359,
       "loc": {
         "start": {
-          "line": 39,
+          "line": 44,
           "column": 8
         },
         "end": {
-          "line": 39,
+          "line": 44,
           "column": 9
         }
       }
@@ -4759,15 +4489,15 @@
         "binop": null
       },
       "value": "_options",
-      "start": 795,
-      "end": 803,
+      "start": 2359,
+      "end": 2367,
       "loc": {
         "start": {
-          "line": 39,
+          "line": 44,
           "column": 9
         },
         "end": {
-          "line": 39,
+          "line": 44,
           "column": 17
         }
       }
@@ -4786,15 +4516,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 804,
-      "end": 805,
+      "start": 2368,
+      "end": 2369,
       "loc": {
         "start": {
-          "line": 39,
+          "line": 44,
           "column": 18
         },
         "end": {
-          "line": 39,
+          "line": 44,
           "column": 19
         }
       }
@@ -4814,15 +4544,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 806,
-      "end": 810,
+      "start": 2370,
+      "end": 2374,
       "loc": {
         "start": {
-          "line": 39,
+          "line": 44,
           "column": 20
         },
         "end": {
-          "line": 39,
+          "line": 44,
           "column": 24
         }
       }
@@ -4842,15 +4572,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 815,
-      "end": 819,
+      "start": 2379,
+      "end": 2383,
       "loc": {
         "start": {
-          "line": 40,
+          "line": 45,
           "column": 4
         },
         "end": {
-          "line": 40,
+          "line": 45,
           "column": 8
         }
       }
@@ -4868,15 +4598,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 819,
-      "end": 820,
+      "start": 2383,
+      "end": 2384,
       "loc": {
         "start": {
-          "line": 40,
+          "line": 45,
           "column": 8
         },
         "end": {
-          "line": 40,
+          "line": 45,
           "column": 9
         }
       }
@@ -4894,15 +4624,15 @@
         "binop": null
       },
       "value": "_transforms",
-      "start": 820,
-      "end": 831,
+      "start": 2384,
+      "end": 2395,
       "loc": {
         "start": {
-          "line": 40,
+          "line": 45,
           "column": 9
         },
         "end": {
-          "line": 40,
+          "line": 45,
           "column": 20
         }
       }
@@ -4921,15 +4651,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 832,
-      "end": 833,
+      "start": 2396,
+      "end": 2397,
       "loc": {
         "start": {
-          "line": 40,
+          "line": 45,
           "column": 21
         },
         "end": {
-          "line": 40,
+          "line": 45,
           "column": 22
         }
       }
@@ -4949,307 +4679,16 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 834,
-      "end": 838,
-      "loc": {
-        "start": {
-          "line": 40,
-          "column": 23
-        },
-        "end": {
-          "line": 40,
-          "column": 27
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "}",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 841,
-      "end": 842,
-      "loc": {
-        "start": {
-          "line": 41,
-          "column": 2
-        },
-        "end": {
-          "line": 41,
-          "column": 3
-        }
-      }
-    },
-    {
-      "type": "CommentLine",
-      "value": " Creating Physics Shapes",
-      "start": 846,
-      "end": 872,
-      "loc": {
-        "start": {
-          "line": 43,
-          "column": 2
-        },
-        "end": {
-          "line": 43,
-          "column": 28
-        }
-      }
-    },
-    {
-      "type": "CommentBlock",
-      "value": "*\n   * Creates a physics shape based on a geometry object.\n   * @access public\n   * @param {SCNGeometry} geometry - A geometry object.\n   * @param {?Map<SCNPhysicsShape.Option, Object>} [options = null] - A dictionary of options affecting the level of detail of the physics shape, or nil to use default options. For applicable keys and their possible values, see Shape Creation Options Keys.\n   * @returns {void}\n   * @desc If you create a physics shape using one of the basic geometry classes (SCNBox, SCNSphere, SCNPyramid, SCNCone, SCNCylinder, or SCNCapsule), SceneKit uses an idealized form of that geometry for the physics shape instead of using the geometry’s vertex data to simulate collisions. For example, if you create a physics shape from an SCNSphere object, SceneKit simulates collisions for any object that passes within the sphere’s radius. Because the idealized forms of simple geometries are computationally much simpler than the vertex data needed for displaying them, using basic geometries for physics shapes (or compound shapes created from basic geometries with the init(shapes:transforms:) method) often provides the best balance between simulation accuracy and performance. To use the newly created physics shape, create a physics body with the the init(type:shape:) method, or assign the shape to the physicsShape property of an existing body.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508897-init\n   ",
-      "start": 876,
-      "end": 2339,
+      "start": 2398,
+      "end": 2402,
       "loc": {
         "start": {
           "line": 45,
-          "column": 2
+          "column": 23
         },
         "end": {
-          "line": 53,
-          "column": 5
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "init",
-      "start": 2342,
-      "end": 2346,
-      "loc": {
-        "start": {
-          "line": 54,
-          "column": 2
-        },
-        "end": {
-          "line": 54,
-          "column": 6
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 2346,
-      "end": 2347,
-      "loc": {
-        "start": {
-          "line": 54,
-          "column": 6
-        },
-        "end": {
-          "line": 54,
-          "column": 7
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "geometry",
-      "start": 2347,
-      "end": 2355,
-      "loc": {
-        "start": {
-          "line": 54,
-          "column": 7
-        },
-        "end": {
-          "line": 54,
-          "column": 15
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 2355,
-      "end": 2356,
-      "loc": {
-        "start": {
-          "line": 54,
-          "column": 15
-        },
-        "end": {
-          "line": 54,
-          "column": 16
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "options",
-      "start": 2357,
-      "end": 2364,
-      "loc": {
-        "start": {
-          "line": 54,
-          "column": 17
-        },
-        "end": {
-          "line": 54,
-          "column": 24
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "=",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": true,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "=",
-      "start": 2365,
-      "end": 2366,
-      "loc": {
-        "start": {
-          "line": 54,
-          "column": 25
-        },
-        "end": {
-          "line": 54,
-          "column": 26
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "null",
-        "keyword": "null",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "value": "null",
-      "start": 2367,
-      "end": 2371,
-      "loc": {
-        "start": {
-          "line": 54,
+          "line": 45,
           "column": 27
-        },
-        "end": {
-          "line": 54,
-          "column": 31
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 2371,
-      "end": 2372,
-      "loc": {
-        "start": {
-          "line": 54,
-          "column": 31
-        },
-        "end": {
-          "line": 54,
-          "column": 32
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "{",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 2373,
-      "end": 2374,
-      "loc": {
-        "start": {
-          "line": 54,
-          "column": 33
-        },
-        "end": {
-          "line": 54,
-          "column": 34
         }
       }
     },
@@ -5265,15 +4704,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2377,
-      "end": 2378,
+      "start": 2405,
+      "end": 2406,
       "loc": {
         "start": {
-          "line": 55,
+          "line": 46,
           "column": 2
         },
         "end": {
-          "line": 55,
+          "line": 46,
           "column": 3
         }
       }
@@ -5281,15 +4720,15 @@
     {
       "type": "CommentLine",
       "value": " Getting Information About a Shape",
-      "start": 2382,
-      "end": 2418,
+      "start": 2410,
+      "end": 2446,
       "loc": {
         "start": {
-          "line": 57,
+          "line": 48,
           "column": 2
         },
         "end": {
-          "line": 57,
+          "line": 48,
           "column": 38
         }
       }
@@ -5297,15 +4736,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The object that was used to create the shape.\n   * @type {Object}\n   * @desc This property, along with the transforms and options properties, provides the information that was used to create the shape. You can use this information, for example, to draw editing or debugging UI in your scene.If the shape was created with the init(geometry:options:) method, the source object is an SCNGeometry object, and the options property contains the options affecting the shape’s construction from that geometry.If the shape was created with the init(node:options:) method, the source object is an SCNNode object, and the options property contains the options affecting the shape’s construction from that node.If the shape was created with the init(shapes:transforms:) method, the source object is an array of SCNPhysicsShape objects and the transforms property describes how those shapes combine to form a compound shape.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508888-sourceobject\n   ",
-      "start": 2421,
-      "end": 3441,
+      "start": 2450,
+      "end": 3470,
       "loc": {
         "start": {
-          "line": 58,
+          "line": 50,
           "column": 2
         },
         "end": {
-          "line": 63,
+          "line": 55,
           "column": 5
         }
       }
@@ -5323,15 +4762,15 @@
         "binop": null
       },
       "value": "get",
-      "start": 3444,
-      "end": 3447,
+      "start": 3473,
+      "end": 3476,
       "loc": {
         "start": {
-          "line": 64,
+          "line": 56,
           "column": 2
         },
         "end": {
-          "line": 64,
+          "line": 56,
           "column": 5
         }
       }
@@ -5349,15 +4788,15 @@
         "binop": null
       },
       "value": "sourceObject",
-      "start": 3448,
-      "end": 3460,
+      "start": 3477,
+      "end": 3489,
       "loc": {
         "start": {
-          "line": 64,
+          "line": 56,
           "column": 6
         },
         "end": {
-          "line": 64,
+          "line": 56,
           "column": 18
         }
       }
@@ -5374,15 +4813,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3460,
-      "end": 3461,
+      "start": 3489,
+      "end": 3490,
       "loc": {
         "start": {
-          "line": 64,
+          "line": 56,
           "column": 18
         },
         "end": {
-          "line": 64,
+          "line": 56,
           "column": 19
         }
       }
@@ -5399,15 +4838,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3461,
-      "end": 3462,
+      "start": 3490,
+      "end": 3491,
       "loc": {
         "start": {
-          "line": 64,
+          "line": 56,
           "column": 19
         },
         "end": {
-          "line": 64,
+          "line": 56,
           "column": 20
         }
       }
@@ -5424,15 +4863,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3463,
-      "end": 3464,
+      "start": 3492,
+      "end": 3493,
       "loc": {
         "start": {
-          "line": 64,
+          "line": 56,
           "column": 21
         },
         "end": {
-          "line": 64,
+          "line": 56,
           "column": 22
         }
       }
@@ -5452,15 +4891,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 3469,
-      "end": 3475,
+      "start": 3498,
+      "end": 3504,
       "loc": {
         "start": {
-          "line": 65,
+          "line": 57,
           "column": 4
         },
         "end": {
-          "line": 65,
+          "line": 57,
           "column": 10
         }
       }
@@ -5480,15 +4919,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3476,
-      "end": 3480,
+      "start": 3505,
+      "end": 3509,
       "loc": {
         "start": {
-          "line": 65,
+          "line": 57,
           "column": 11
         },
         "end": {
-          "line": 65,
+          "line": 57,
           "column": 15
         }
       }
@@ -5506,15 +4945,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3480,
-      "end": 3481,
+      "start": 3509,
+      "end": 3510,
       "loc": {
         "start": {
-          "line": 65,
+          "line": 57,
           "column": 15
         },
         "end": {
-          "line": 65,
+          "line": 57,
           "column": 16
         }
       }
@@ -5532,15 +4971,15 @@
         "binop": null
       },
       "value": "_sourceObject",
-      "start": 3481,
-      "end": 3494,
+      "start": 3510,
+      "end": 3523,
       "loc": {
         "start": {
-          "line": 65,
+          "line": 57,
           "column": 16
         },
         "end": {
-          "line": 65,
+          "line": 57,
           "column": 29
         }
       }
@@ -5557,15 +4996,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3497,
-      "end": 3498,
+      "start": 3526,
+      "end": 3527,
       "loc": {
         "start": {
-          "line": 66,
+          "line": 58,
           "column": 2
         },
         "end": {
-          "line": 66,
+          "line": 58,
           "column": 3
         }
       }
@@ -5573,15 +5012,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The options dictionary that was used to create the shape.\n   * @type {?Map<SCNPhysicsShape.Option, Object>}\n   * @desc You provide this dictionary in the init(geometry:options:) or init(node:options:) method. Use this dictionary along with the sourceObject property to recover the information that was used to create the shape. If the shape was created with the init(shapes:transforms:) method, this property’s value is nil.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508904-options\n   ",
-      "start": 3501,
-      "end": 4029,
+      "start": 3531,
+      "end": 4059,
       "loc": {
         "start": {
-          "line": 67,
+          "line": 60,
           "column": 2
         },
         "end": {
-          "line": 72,
+          "line": 65,
           "column": 5
         }
       }
@@ -5599,15 +5038,15 @@
         "binop": null
       },
       "value": "get",
-      "start": 4032,
-      "end": 4035,
+      "start": 4062,
+      "end": 4065,
       "loc": {
         "start": {
-          "line": 73,
+          "line": 66,
           "column": 2
         },
         "end": {
-          "line": 73,
+          "line": 66,
           "column": 5
         }
       }
@@ -5625,15 +5064,15 @@
         "binop": null
       },
       "value": "options",
-      "start": 4036,
-      "end": 4043,
+      "start": 4066,
+      "end": 4073,
       "loc": {
         "start": {
-          "line": 73,
+          "line": 66,
           "column": 6
         },
         "end": {
-          "line": 73,
+          "line": 66,
           "column": 13
         }
       }
@@ -5650,15 +5089,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4043,
-      "end": 4044,
+      "start": 4073,
+      "end": 4074,
       "loc": {
         "start": {
-          "line": 73,
+          "line": 66,
           "column": 13
         },
         "end": {
-          "line": 73,
+          "line": 66,
           "column": 14
         }
       }
@@ -5675,15 +5114,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4044,
-      "end": 4045,
+      "start": 4074,
+      "end": 4075,
       "loc": {
         "start": {
-          "line": 73,
+          "line": 66,
           "column": 14
         },
         "end": {
-          "line": 73,
+          "line": 66,
           "column": 15
         }
       }
@@ -5700,15 +5139,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4046,
-      "end": 4047,
+      "start": 4076,
+      "end": 4077,
       "loc": {
         "start": {
-          "line": 73,
+          "line": 66,
           "column": 16
         },
         "end": {
-          "line": 73,
+          "line": 66,
           "column": 17
         }
       }
@@ -5728,15 +5167,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 4052,
-      "end": 4058,
+      "start": 4082,
+      "end": 4088,
       "loc": {
         "start": {
-          "line": 74,
+          "line": 67,
           "column": 4
         },
         "end": {
-          "line": 74,
+          "line": 67,
           "column": 10
         }
       }
@@ -5756,15 +5195,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 4059,
-      "end": 4063,
+      "start": 4089,
+      "end": 4093,
       "loc": {
         "start": {
-          "line": 74,
+          "line": 67,
           "column": 11
         },
         "end": {
-          "line": 74,
+          "line": 67,
           "column": 15
         }
       }
@@ -5782,15 +5221,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4063,
-      "end": 4064,
+      "start": 4093,
+      "end": 4094,
       "loc": {
         "start": {
-          "line": 74,
+          "line": 67,
           "column": 15
         },
         "end": {
-          "line": 74,
+          "line": 67,
           "column": 16
         }
       }
@@ -5808,15 +5247,15 @@
         "binop": null
       },
       "value": "_options",
-      "start": 4064,
-      "end": 4072,
+      "start": 4094,
+      "end": 4102,
       "loc": {
         "start": {
-          "line": 74,
+          "line": 67,
           "column": 16
         },
         "end": {
-          "line": 74,
+          "line": 67,
           "column": 24
         }
       }
@@ -5833,31 +5272,31 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4075,
-      "end": 4076,
+      "start": 4105,
+      "end": 4106,
       "loc": {
         "start": {
-          "line": 75,
+          "line": 68,
           "column": 2
         },
         "end": {
-          "line": 75,
+          "line": 68,
           "column": 3
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The array of transforms that was used to create a compound shape.\n   * @type {?NSValue[]}\n   * @desc You provide this array of NSValue objects, each containing an SCNMatrix4 value, in the init(shapes:transforms:) method to create a compound shape. Use this array along with the sourceObject property to recover the information that was used to create the shape. If the shape was created with the init(geometry:options:) or init(node:options:) method, this property’s value is nil.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508898-transforms\n   ",
-      "start": 4079,
-      "end": 4666,
+      "value": "*\n   * The array of transforms that was used to create a compound shape.\n   * @type {?NSValue[]}\n   * @desc You provide this array of NSValue objects, each containing an SCNMatrix4 value, in the init(shapes:transforms:) method to create a compound shape. Use this array along with the sourceObject property to recover the information that was used to create the shape. If the shape was created with the init(geometry:options:) or init(node:options:) method, this property's value is nil.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape/1508898-transforms\n   ",
+      "start": 4110,
+      "end": 4697,
       "loc": {
         "start": {
-          "line": 76,
+          "line": 70,
           "column": 2
         },
         "end": {
-          "line": 81,
+          "line": 75,
           "column": 5
         }
       }
@@ -5875,15 +5314,15 @@
         "binop": null
       },
       "value": "get",
-      "start": 4669,
-      "end": 4672,
+      "start": 4700,
+      "end": 4703,
       "loc": {
         "start": {
-          "line": 82,
+          "line": 76,
           "column": 2
         },
         "end": {
-          "line": 82,
+          "line": 76,
           "column": 5
         }
       }
@@ -5901,15 +5340,15 @@
         "binop": null
       },
       "value": "transforms",
-      "start": 4673,
-      "end": 4683,
+      "start": 4704,
+      "end": 4714,
       "loc": {
         "start": {
-          "line": 82,
+          "line": 76,
           "column": 6
         },
         "end": {
-          "line": 82,
+          "line": 76,
           "column": 16
         }
       }
@@ -5926,15 +5365,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4683,
-      "end": 4684,
+      "start": 4714,
+      "end": 4715,
       "loc": {
         "start": {
-          "line": 82,
+          "line": 76,
           "column": 16
         },
         "end": {
-          "line": 82,
+          "line": 76,
           "column": 17
         }
       }
@@ -5951,15 +5390,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4684,
-      "end": 4685,
+      "start": 4715,
+      "end": 4716,
       "loc": {
         "start": {
-          "line": 82,
+          "line": 76,
           "column": 17
         },
         "end": {
-          "line": 82,
+          "line": 76,
           "column": 18
         }
       }
@@ -5976,15 +5415,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4686,
-      "end": 4687,
+      "start": 4717,
+      "end": 4718,
       "loc": {
         "start": {
-          "line": 82,
+          "line": 76,
           "column": 19
         },
         "end": {
-          "line": 82,
+          "line": 76,
           "column": 20
         }
       }
@@ -6004,15 +5443,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 4692,
-      "end": 4698,
+      "start": 4723,
+      "end": 4729,
       "loc": {
         "start": {
-          "line": 83,
+          "line": 77,
           "column": 4
         },
         "end": {
-          "line": 83,
+          "line": 77,
           "column": 10
         }
       }
@@ -6032,15 +5471,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 4699,
-      "end": 4703,
+      "start": 4730,
+      "end": 4734,
       "loc": {
         "start": {
-          "line": 83,
+          "line": 77,
           "column": 11
         },
         "end": {
-          "line": 83,
+          "line": 77,
           "column": 15
         }
       }
@@ -6058,15 +5497,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4703,
-      "end": 4704,
+      "start": 4734,
+      "end": 4735,
       "loc": {
         "start": {
-          "line": 83,
+          "line": 77,
           "column": 15
         },
         "end": {
-          "line": 83,
+          "line": 77,
           "column": 16
         }
       }
@@ -6084,15 +5523,15 @@
         "binop": null
       },
       "value": "_transforms",
-      "start": 4704,
-      "end": 4715,
+      "start": 4735,
+      "end": 4746,
       "loc": {
         "start": {
-          "line": 83,
+          "line": 77,
           "column": 16
         },
         "end": {
-          "line": 83,
+          "line": 77,
           "column": 27
         }
       }
@@ -6109,15 +5548,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4718,
-      "end": 4719,
+      "start": 4749,
+      "end": 4750,
       "loc": {
         "start": {
-          "line": 84,
+          "line": 78,
           "column": 2
         },
         "end": {
-          "line": 84,
+          "line": 78,
           "column": 3
         }
       }
@@ -6125,31 +5564,31 @@
     {
       "type": "CommentLine",
       "value": " Structures",
-      "start": 4723,
-      "end": 4736,
+      "start": 4754,
+      "end": 4767,
       "loc": {
         "start": {
-          "line": 86,
+          "line": 80,
           "column": 2
         },
         "end": {
-          "line": 86,
+          "line": 80,
           "column": 15
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * @type {Object} Option\n   * @property {Symbol} collisionMargin \n   * @property {Symbol} keepAsCompound An option for selecting whether to create a group of independent shapes or combine them into a single shape.\n   * @property {Symbol} scale An option for selecting the scale factor of the shape relative to the local coordinate space of the node containing it.\n   * @property {Symbol} type An option for selecting the level of detail at which to create shapes from geometry.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape.option\n   ",
-      "start": 4739,
-      "end": 5308,
+      "value": "*\n   * @type {Object} Option\n   * @property {string} collisionMargin \n   * @property {string} keepAsCompound An option for selecting whether to create a group of independent shapes or combine them into a single shape.\n   * @property {string} scale An option for selecting the scale factor of the shape relative to the local coordinate space of the node containing it.\n   * @property {string} type An option for selecting the level of detail at which to create shapes from geometry.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape.option\n   ",
+      "start": 4771,
+      "end": 5340,
       "loc": {
         "start": {
-          "line": 87,
+          "line": 82,
           "column": 2
         },
         "end": {
-          "line": 94,
+          "line": 89,
           "column": 5
         }
       }
@@ -6167,15 +5606,15 @@
         "binop": null
       },
       "value": "static",
-      "start": 5311,
-      "end": 5317,
+      "start": 5343,
+      "end": 5349,
       "loc": {
         "start": {
-          "line": 95,
+          "line": 90,
           "column": 2
         },
         "end": {
-          "line": 95,
+          "line": 90,
           "column": 8
         }
       }
@@ -6193,15 +5632,15 @@
         "binop": null
       },
       "value": "get",
-      "start": 5318,
-      "end": 5321,
+      "start": 5350,
+      "end": 5353,
       "loc": {
         "start": {
-          "line": 95,
+          "line": 90,
           "column": 9
         },
         "end": {
-          "line": 95,
+          "line": 90,
           "column": 12
         }
       }
@@ -6219,15 +5658,15 @@
         "binop": null
       },
       "value": "Option",
-      "start": 5322,
-      "end": 5328,
+      "start": 5354,
+      "end": 5360,
       "loc": {
         "start": {
-          "line": 95,
+          "line": 90,
           "column": 13
         },
         "end": {
-          "line": 95,
+          "line": 90,
           "column": 19
         }
       }
@@ -6244,15 +5683,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5328,
-      "end": 5329,
+      "start": 5360,
+      "end": 5361,
       "loc": {
         "start": {
-          "line": 95,
+          "line": 90,
           "column": 19
         },
         "end": {
-          "line": 95,
+          "line": 90,
           "column": 20
         }
       }
@@ -6269,15 +5708,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5329,
-      "end": 5330,
+      "start": 5361,
+      "end": 5362,
       "loc": {
         "start": {
-          "line": 95,
+          "line": 90,
           "column": 20
         },
         "end": {
-          "line": 95,
+          "line": 90,
           "column": 21
         }
       }
@@ -6294,15 +5733,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5331,
-      "end": 5332,
+      "start": 5363,
+      "end": 5364,
       "loc": {
         "start": {
-          "line": 95,
+          "line": 90,
           "column": 22
         },
         "end": {
-          "line": 95,
+          "line": 90,
           "column": 23
         }
       }
@@ -6322,15 +5761,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 5337,
-      "end": 5343,
+      "start": 5369,
+      "end": 5375,
       "loc": {
         "start": {
-          "line": 96,
+          "line": 91,
           "column": 4
         },
         "end": {
-          "line": 96,
+          "line": 91,
           "column": 10
         }
       }
@@ -6348,15 +5787,15 @@
         "binop": null
       },
       "value": "_Option",
-      "start": 5344,
-      "end": 5351,
+      "start": 5376,
+      "end": 5383,
       "loc": {
         "start": {
-          "line": 96,
+          "line": 91,
           "column": 11
         },
         "end": {
-          "line": 96,
+          "line": 91,
           "column": 18
         }
       }
@@ -6373,31 +5812,31 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5354,
-      "end": 5355,
+      "start": 5386,
+      "end": 5387,
       "loc": {
         "start": {
-          "line": 97,
+          "line": 92,
           "column": 2
         },
         "end": {
-          "line": 97,
+          "line": 92,
           "column": 3
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * @type {Object} ShapeType\n   * @property {Symbol} boundingBox The physics shape is the smallest box containing the geometry.\n   * @property {Symbol} concavePolyhedron The physics shape is a concave polyhedron closely following the surface of the geometry.\n   * @property {Symbol} convexHull The physics shape is a convex polyhedron roughly enclosing the geometry.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape.shapetype\n   ",
-      "start": 5358,
-      "end": 5818,
+      "value": "*\n   * @type {Object} ShapeType\n   * @property {string} boundingBox The physics shape is the smallest box containing the geometry.\n   * @property {string} concavePolyhedron The physics shape is a concave polyhedron closely following the surface of the geometry.\n   * @property {string} convexHull The physics shape is a convex polyhedron roughly enclosing the geometry.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape.shapetype\n   ",
+      "start": 5391,
+      "end": 5851,
       "loc": {
         "start": {
-          "line": 98,
+          "line": 94,
           "column": 2
         },
         "end": {
-          "line": 104,
+          "line": 100,
           "column": 5
         }
       }
@@ -6415,15 +5854,15 @@
         "binop": null
       },
       "value": "static",
-      "start": 5821,
-      "end": 5827,
+      "start": 5854,
+      "end": 5860,
       "loc": {
         "start": {
-          "line": 105,
+          "line": 101,
           "column": 2
         },
         "end": {
-          "line": 105,
+          "line": 101,
           "column": 8
         }
       }
@@ -6441,15 +5880,15 @@
         "binop": null
       },
       "value": "get",
-      "start": 5828,
-      "end": 5831,
+      "start": 5861,
+      "end": 5864,
       "loc": {
         "start": {
-          "line": 105,
+          "line": 101,
           "column": 9
         },
         "end": {
-          "line": 105,
+          "line": 101,
           "column": 12
         }
       }
@@ -6467,15 +5906,15 @@
         "binop": null
       },
       "value": "ShapeType",
-      "start": 5832,
-      "end": 5841,
+      "start": 5865,
+      "end": 5874,
       "loc": {
         "start": {
-          "line": 105,
+          "line": 101,
           "column": 13
         },
         "end": {
-          "line": 105,
+          "line": 101,
           "column": 22
         }
       }
@@ -6492,15 +5931,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5841,
-      "end": 5842,
+      "start": 5874,
+      "end": 5875,
       "loc": {
         "start": {
-          "line": 105,
+          "line": 101,
           "column": 22
         },
         "end": {
-          "line": 105,
+          "line": 101,
           "column": 23
         }
       }
@@ -6517,15 +5956,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5842,
-      "end": 5843,
+      "start": 5875,
+      "end": 5876,
       "loc": {
         "start": {
-          "line": 105,
+          "line": 101,
           "column": 23
         },
         "end": {
-          "line": 105,
+          "line": 101,
           "column": 24
         }
       }
@@ -6542,15 +5981,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5844,
-      "end": 5845,
+      "start": 5877,
+      "end": 5878,
       "loc": {
         "start": {
-          "line": 105,
+          "line": 101,
           "column": 25
         },
         "end": {
-          "line": 105,
+          "line": 101,
           "column": 26
         }
       }
@@ -6570,15 +6009,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 5850,
-      "end": 5856,
+      "start": 5883,
+      "end": 5889,
       "loc": {
         "start": {
-          "line": 106,
+          "line": 102,
           "column": 4
         },
         "end": {
-          "line": 106,
+          "line": 102,
           "column": 10
         }
       }
@@ -6596,15 +6035,15 @@
         "binop": null
       },
       "value": "_ShapeType",
-      "start": 5857,
-      "end": 5867,
+      "start": 5890,
+      "end": 5900,
       "loc": {
         "start": {
-          "line": 106,
+          "line": 102,
           "column": 11
         },
         "end": {
-          "line": 106,
+          "line": 102,
           "column": 21
         }
       }
@@ -6621,15 +6060,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5870,
-      "end": 5871,
+      "start": 5903,
+      "end": 5904,
       "loc": {
         "start": {
-          "line": 107,
+          "line": 103,
           "column": 2
         },
         "end": {
-          "line": 107,
+          "line": 103,
           "column": 3
         }
       }
@@ -6646,15 +6085,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5872,
-      "end": 5873,
+      "start": 5905,
+      "end": 5906,
       "loc": {
         "start": {
-          "line": 108,
+          "line": 104,
           "column": 0
         },
         "end": {
-          "line": 108,
+          "line": 104,
           "column": 1
         }
       }
@@ -6672,15 +6111,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 5874,
-      "end": 5874,
+      "start": 5907,
+      "end": 5907,
       "loc": {
         "start": {
-          "line": 109,
+          "line": 105,
           "column": 0
         },
         "end": {
-          "line": 109,
+          "line": 105,
           "column": 0
         }
       }

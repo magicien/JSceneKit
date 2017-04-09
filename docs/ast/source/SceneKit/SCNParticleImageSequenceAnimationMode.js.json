@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 747,
+  "end": 726,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 747,
+    "end": 726,
     "loc": {
       "start": {
         "line": 1,
@@ -31,7 +31,7 @@
       {
         "type": "Identifier",
         "start": 580,
-        "end": 692,
+        "end": 671,
         "loc": {
           "start": {
             "line": 12,
@@ -46,7 +46,7 @@
           {
             "type": "VariableDeclarator",
             "start": 586,
-            "end": 692,
+            "end": 671,
             "loc": {
               "start": {
                 "line": 12,
@@ -78,7 +78,7 @@
             "init": {
               "type": "ObjectExpression",
               "start": 626,
-              "end": 692,
+              "end": 671,
               "loc": {
                 "start": {
                   "line": 12,
@@ -93,7 +93,7 @@
                 {
                   "type": "ObjectProperty",
                   "start": 630,
-                  "end": 646,
+                  "end": 639,
                   "loc": {
                     "start": {
                       "line": 13,
@@ -101,7 +101,7 @@
                     },
                     "end": {
                       "line": 13,
-                      "column": 18
+                      "column": 11
                     }
                   },
                   "method": false,
@@ -125,9 +125,9 @@
                     "name": "repeat"
                   },
                   "value": {
-                    "type": "CallExpression",
+                    "type": "NumericLiteral",
                     "start": 638,
-                    "end": 646,
+                    "end": 639,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -135,33 +135,20 @@
                       },
                       "end": {
                         "line": 13,
-                        "column": 18
+                        "column": 11
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 638,
-                      "end": 644,
-                      "loc": {
-                        "start": {
-                          "line": 13,
-                          "column": 10
-                        },
-                        "end": {
-                          "line": 13,
-                          "column": 16
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 0,
+                      "raw": "0"
                     },
-                    "arguments": []
+                    "value": 0
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 650,
-                  "end": 665,
+                  "start": 643,
+                  "end": 651,
                   "loc": {
                     "start": {
                       "line": 14,
@@ -169,7 +156,7 @@
                     },
                     "end": {
                       "line": 14,
-                      "column": 17
+                      "column": 10
                     }
                   },
                   "method": false,
@@ -177,8 +164,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 650,
-                    "end": 655,
+                    "start": 643,
+                    "end": 648,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -193,9 +180,9 @@
                     "name": "clamp"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 657,
-                    "end": 665,
+                    "type": "NumericLiteral",
+                    "start": 650,
+                    "end": 651,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -203,33 +190,20 @@
                       },
                       "end": {
                         "line": 14,
-                        "column": 17
+                        "column": 10
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 657,
-                      "end": 663,
-                      "loc": {
-                        "start": {
-                          "line": 14,
-                          "column": 9
-                        },
-                        "end": {
-                          "line": 14,
-                          "column": 15
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 1,
+                      "raw": "1"
                     },
-                    "arguments": []
+                    "value": 1
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 669,
-                  "end": 690,
+                  "start": 655,
+                  "end": 669,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -237,7 +211,7 @@
                     },
                     "end": {
                       "line": 15,
-                      "column": 23
+                      "column": 16
                     }
                   },
                   "method": false,
@@ -245,8 +219,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 669,
-                    "end": 680,
+                    "start": 655,
+                    "end": 666,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -261,9 +235,9 @@
                     "name": "autoReverse"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 682,
-                    "end": 690,
+                    "type": "NumericLiteral",
+                    "start": 668,
+                    "end": 669,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -271,27 +245,14 @@
                       },
                       "end": {
                         "line": 15,
-                        "column": 23
+                        "column": 16
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 682,
-                      "end": 688,
-                      "loc": {
-                        "start": {
-                          "line": 15,
-                          "column": 15
-                        },
-                        "end": {
-                          "line": 15,
-                          "column": 21
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 2,
+                      "raw": "2"
                     },
-                    "arguments": []
+                    "value": 2
                   }
                 }
               ]
@@ -306,8 +267,8 @@
       },
       {
         "type": "Identifier",
-        "start": 694,
-        "end": 746,
+        "start": 673,
+        "end": 725,
         "loc": {
           "start": {
             "line": 18,
@@ -320,8 +281,8 @@
         },
         "declaration": {
           "type": "Identifier",
-          "start": 709,
-          "end": 746,
+          "start": 688,
+          "end": 725,
           "loc": {
             "start": {
               "line": 18,
@@ -341,8 +302,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 694,
-        "end": 746,
+        "start": 673,
+        "end": 725,
         "loc": {
           "start": {
             "line": 18,
@@ -356,7 +317,7 @@
         "declaration": {
           "type": "VariableDeclaration",
           "start": 580,
-          "end": 692,
+          "end": 671,
           "loc": {
             "start": {
               "line": 12,
@@ -371,7 +332,7 @@
             {
               "type": "VariableDeclarator",
               "start": 586,
-              "end": 692,
+              "end": 671,
               "loc": {
                 "start": {
                   "line": 12,
@@ -403,7 +364,7 @@
               "init": {
                 "type": "ObjectExpression",
                 "start": 626,
-                "end": 692,
+                "end": 671,
                 "loc": {
                   "start": {
                     "line": 12,
@@ -418,7 +379,7 @@
                   {
                     "type": "ObjectProperty",
                     "start": 630,
-                    "end": 646,
+                    "end": 639,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -426,7 +387,7 @@
                       },
                       "end": {
                         "line": 13,
-                        "column": 18
+                        "column": 11
                       }
                     },
                     "method": false,
@@ -450,9 +411,9 @@
                       "name": "repeat"
                     },
                     "value": {
-                      "type": "CallExpression",
+                      "type": "NumericLiteral",
                       "start": 638,
-                      "end": 646,
+                      "end": 639,
                       "loc": {
                         "start": {
                           "line": 13,
@@ -460,33 +421,20 @@
                         },
                         "end": {
                           "line": 13,
-                          "column": 18
+                          "column": 11
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 638,
-                        "end": 644,
-                        "loc": {
-                          "start": {
-                            "line": 13,
-                            "column": 10
-                          },
-                          "end": {
-                            "line": 13,
-                            "column": 16
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 0,
+                        "raw": "0"
                       },
-                      "arguments": []
+                      "value": 0
                     }
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 650,
-                    "end": 665,
+                    "start": 643,
+                    "end": 651,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -494,7 +442,7 @@
                       },
                       "end": {
                         "line": 14,
-                        "column": 17
+                        "column": 10
                       }
                     },
                     "method": false,
@@ -502,8 +450,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 650,
-                      "end": 655,
+                      "start": 643,
+                      "end": 648,
                       "loc": {
                         "start": {
                           "line": 14,
@@ -518,9 +466,9 @@
                       "name": "clamp"
                     },
                     "value": {
-                      "type": "CallExpression",
-                      "start": 657,
-                      "end": 665,
+                      "type": "NumericLiteral",
+                      "start": 650,
+                      "end": 651,
                       "loc": {
                         "start": {
                           "line": 14,
@@ -528,33 +476,20 @@
                         },
                         "end": {
                           "line": 14,
-                          "column": 17
+                          "column": 10
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 657,
-                        "end": 663,
-                        "loc": {
-                          "start": {
-                            "line": 14,
-                            "column": 9
-                          },
-                          "end": {
-                            "line": 14,
-                            "column": 15
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 1,
+                        "raw": "1"
                       },
-                      "arguments": []
+                      "value": 1
                     }
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 669,
-                    "end": 690,
+                    "start": 655,
+                    "end": 669,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -562,7 +497,7 @@
                       },
                       "end": {
                         "line": 15,
-                        "column": 23
+                        "column": 16
                       }
                     },
                     "method": false,
@@ -570,8 +505,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 669,
-                      "end": 680,
+                      "start": 655,
+                      "end": 666,
                       "loc": {
                         "start": {
                           "line": 15,
@@ -586,9 +521,9 @@
                       "name": "autoReverse"
                     },
                     "value": {
-                      "type": "CallExpression",
-                      "start": 682,
-                      "end": 690,
+                      "type": "NumericLiteral",
+                      "start": 668,
+                      "end": 669,
                       "loc": {
                         "start": {
                           "line": 15,
@@ -596,27 +531,14 @@
                         },
                         "end": {
                           "line": 15,
-                          "column": 23
+                          "column": 16
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 682,
-                        "end": 688,
-                        "loc": {
-                          "start": {
-                            "line": 15,
-                            "column": 15
-                          },
-                          "end": {
-                            "line": 15,
-                            "column": 21
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 2,
+                        "raw": "2"
                       },
-                      "arguments": []
+                      "value": 2
                     }
                   }
                 ]
@@ -628,7 +550,7 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * Options for animating each particle with a sequence of images, used by the imageSequenceAnimationMode property.\n * @typedef {Object} SCNParticleImageSequenceAnimationMode\n * @property {Symbol} repeat - The animation loops after displaying all of its images.\n * @property {Symbol} clamp - The animation stops after displaying all of its images.\n * @property {Symbol} autoReverse - After the animation displays all of its images, it plays again in reverse order.\n * @see https://developer.apple.com/reference/scenekit/scnparticleimagesequenceanimationmode\n ",
+              "value": "*\n * Options for animating each particle with a sequence of images, used by the imageSequenceAnimationMode property.\n * @typedef {Object} SCNParticleImageSequenceAnimationMode\n * @property {number} repeat - The animation loops after displaying all of its images.\n * @property {number} clamp - The animation stops after displaying all of its images.\n * @property {number} autoReverse - After the animation displays all of its images, it plays again in reverse order.\n * @see https://developer.apple.com/reference/scenekit/scnparticleimagesequenceanimationmode\n ",
               "start": 15,
               "end": 579,
               "loc": {
@@ -686,7 +608,7 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Options for animating each particle with a sequence of images, used by the imageSequenceAnimationMode property.\n * @typedef {Object} SCNParticleImageSequenceAnimationMode\n * @property {Symbol} repeat - The animation loops after displaying all of its images.\n * @property {Symbol} clamp - The animation stops after displaying all of its images.\n * @property {Symbol} autoReverse - After the animation displays all of its images, it plays again in reverse order.\n * @see https://developer.apple.com/reference/scenekit/scnparticleimagesequenceanimationmode\n ",
+            "value": "*\n * Options for animating each particle with a sequence of images, used by the imageSequenceAnimationMode property.\n * @typedef {Object} SCNParticleImageSequenceAnimationMode\n * @property {number} repeat - The animation loops after displaying all of its images.\n * @property {number} clamp - The animation stops after displaying all of its images.\n * @property {number} autoReverse - After the animation displays all of its images, it plays again in reverse order.\n * @see https://developer.apple.com/reference/scenekit/scnparticleimagesequenceanimationmode\n ",
             "start": 15,
             "end": 579,
             "loc": {
@@ -707,7 +629,7 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * Options for animating each particle with a sequence of images, used by the imageSequenceAnimationMode property.\n * @typedef {Object} SCNParticleImageSequenceAnimationMode\n * @property {Symbol} repeat - The animation loops after displaying all of its images.\n * @property {Symbol} clamp - The animation stops after displaying all of its images.\n * @property {Symbol} autoReverse - After the animation displays all of its images, it plays again in reverse order.\n * @see https://developer.apple.com/reference/scenekit/scnparticleimagesequenceanimationmode\n ",
+      "value": "*\n * Options for animating each particle with a sequence of images, used by the imageSequenceAnimationMode property.\n * @typedef {Object} SCNParticleImageSequenceAnimationMode\n * @property {number} repeat - The animation loops after displaying all of its images.\n * @property {number} clamp - The animation stops after displaying all of its images.\n * @property {number} autoReverse - After the animation displays all of its images, it plays again in reverse order.\n * @see https://developer.apple.com/reference/scenekit/scnparticleimagesequenceanimationmode\n ",
       "start": 15,
       "end": 579,
       "loc": {
@@ -752,7 +674,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Options for animating each particle with a sequence of images, used by the imageSequenceAnimationMode property.\n * @typedef {Object} SCNParticleImageSequenceAnimationMode\n * @property {Symbol} repeat - The animation loops after displaying all of its images.\n * @property {Symbol} clamp - The animation stops after displaying all of its images.\n * @property {Symbol} autoReverse - After the animation displays all of its images, it plays again in reverse order.\n * @see https://developer.apple.com/reference/scenekit/scnparticleimagesequenceanimationmode\n ",
+      "value": "*\n * Options for animating each particle with a sequence of images, used by the imageSequenceAnimationMode property.\n * @typedef {Object} SCNParticleImageSequenceAnimationMode\n * @property {number} repeat - The animation loops after displaying all of its images.\n * @property {number} clamp - The animation stops after displaying all of its images.\n * @property {number} autoReverse - After the animation displays all of its images, it plays again in reverse order.\n * @see https://developer.apple.com/reference/scenekit/scnparticleimagesequenceanimationmode\n ",
       "start": 15,
       "end": 579,
       "loc": {
@@ -926,7 +848,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -934,11 +856,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
+      "value": 0,
       "start": 638,
-      "end": 644,
+      "end": 639,
       "loc": {
         "start": {
           "line": 13,
@@ -946,57 +869,7 @@
         },
         "end": {
           "line": 13,
-          "column": 16
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 644,
-      "end": 645,
-      "loc": {
-        "start": {
-          "line": 13,
-          "column": 16
-        },
-        "end": {
-          "line": 13,
-          "column": 17
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 645,
-      "end": 646,
-      "loc": {
-        "start": {
-          "line": 13,
-          "column": 17
-        },
-        "end": {
-          "line": 13,
-          "column": 18
+          "column": 11
         }
       }
     },
@@ -1013,16 +886,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 646,
-      "end": 647,
+      "start": 639,
+      "end": 640,
       "loc": {
         "start": {
           "line": 13,
-          "column": 18
+          "column": 11
         },
         "end": {
           "line": 13,
-          "column": 19
+          "column": 12
         }
       }
     },
@@ -1039,8 +912,8 @@
         "binop": null
       },
       "value": "clamp",
-      "start": 650,
-      "end": 655,
+      "start": 643,
+      "end": 648,
       "loc": {
         "start": {
           "line": 14,
@@ -1065,8 +938,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 655,
-      "end": 656,
+      "start": 648,
+      "end": 649,
       "loc": {
         "start": {
           "line": 14,
@@ -1080,7 +953,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -1088,11 +961,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
-      "start": 657,
-      "end": 663,
+      "value": 1,
+      "start": 650,
+      "end": 651,
       "loc": {
         "start": {
           "line": 14,
@@ -1100,57 +974,7 @@
         },
         "end": {
           "line": 14,
-          "column": 15
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 663,
-      "end": 664,
-      "loc": {
-        "start": {
-          "line": 14,
-          "column": 15
-        },
-        "end": {
-          "line": 14,
-          "column": 16
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 664,
-      "end": 665,
-      "loc": {
-        "start": {
-          "line": 14,
-          "column": 16
-        },
-        "end": {
-          "line": 14,
-          "column": 17
+          "column": 10
         }
       }
     },
@@ -1167,16 +991,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 665,
-      "end": 666,
+      "start": 651,
+      "end": 652,
       "loc": {
         "start": {
           "line": 14,
-          "column": 17
+          "column": 10
         },
         "end": {
           "line": 14,
-          "column": 18
+          "column": 11
         }
       }
     },
@@ -1193,8 +1017,8 @@
         "binop": null
       },
       "value": "autoReverse",
-      "start": 669,
-      "end": 680,
+      "start": 655,
+      "end": 666,
       "loc": {
         "start": {
           "line": 15,
@@ -1219,8 +1043,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 680,
-      "end": 681,
+      "start": 666,
+      "end": 667,
       "loc": {
         "start": {
           "line": 15,
@@ -1234,7 +1058,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -1242,11 +1066,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
-      "start": 682,
-      "end": 688,
+      "value": 2,
+      "start": 668,
+      "end": 669,
       "loc": {
         "start": {
           "line": 15,
@@ -1254,57 +1079,7 @@
         },
         "end": {
           "line": 15,
-          "column": 21
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 688,
-      "end": 689,
-      "loc": {
-        "start": {
-          "line": 15,
-          "column": 21
-        },
-        "end": {
-          "line": 15,
-          "column": 22
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 689,
-      "end": 690,
-      "loc": {
-        "start": {
-          "line": 15,
-          "column": 22
-        },
-        "end": {
-          "line": 15,
-          "column": 23
+          "column": 16
         }
       }
     },
@@ -1320,8 +1095,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 691,
-      "end": 692,
+      "start": 670,
+      "end": 671,
       "loc": {
         "start": {
           "line": 16,
@@ -1348,8 +1123,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 694,
-      "end": 700,
+      "start": 673,
+      "end": 679,
       "loc": {
         "start": {
           "line": 18,
@@ -1376,8 +1151,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 701,
-      "end": 708,
+      "start": 680,
+      "end": 687,
       "loc": {
         "start": {
           "line": 18,
@@ -1402,8 +1177,8 @@
         "binop": null
       },
       "value": "SCNParticleImageSequenceAnimationMode",
-      "start": 709,
-      "end": 746,
+      "start": 688,
+      "end": 725,
       "loc": {
         "start": {
           "line": 18,
@@ -1428,8 +1203,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 747,
-      "end": 747,
+      "start": 726,
+      "end": 726,
       "loc": {
         "start": {
           "line": 19,

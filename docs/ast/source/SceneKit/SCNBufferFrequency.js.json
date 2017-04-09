@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 821,
+  "end": 800,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 821,
+    "end": 800,
     "loc": {
       "start": {
         "line": 1,
@@ -31,7 +31,7 @@
       {
         "type": "Identifier",
         "start": 688,
-        "end": 785,
+        "end": 764,
         "loc": {
           "start": {
             "line": 12,
@@ -46,7 +46,7 @@
           {
             "type": "VariableDeclarator",
             "start": 694,
-            "end": 785,
+            "end": 764,
             "loc": {
               "start": {
                 "line": 12,
@@ -78,7 +78,7 @@
             "init": {
               "type": "ObjectExpression",
               "start": 715,
-              "end": 785,
+              "end": 764,
               "loc": {
                 "start": {
                   "line": 12,
@@ -93,7 +93,7 @@
                 {
                   "type": "ObjectProperty",
                   "start": 719,
-                  "end": 737,
+                  "end": 730,
                   "loc": {
                     "start": {
                       "line": 13,
@@ -101,7 +101,7 @@
                     },
                     "end": {
                       "line": 13,
-                      "column": 20
+                      "column": 13
                     }
                   },
                   "method": false,
@@ -125,9 +125,9 @@
                     "name": "perFrame"
                   },
                   "value": {
-                    "type": "CallExpression",
+                    "type": "NumericLiteral",
                     "start": 729,
-                    "end": 737,
+                    "end": 730,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -135,33 +135,20 @@
                       },
                       "end": {
                         "line": 13,
-                        "column": 20
+                        "column": 13
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 729,
-                      "end": 735,
-                      "loc": {
-                        "start": {
-                          "line": 13,
-                          "column": 12
-                        },
-                        "end": {
-                          "line": 13,
-                          "column": 18
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 0,
+                      "raw": "0"
                     },
-                    "arguments": []
+                    "value": 0
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 741,
-                  "end": 758,
+                  "start": 734,
+                  "end": 744,
                   "loc": {
                     "start": {
                       "line": 14,
@@ -169,7 +156,7 @@
                     },
                     "end": {
                       "line": 14,
-                      "column": 19
+                      "column": 12
                     }
                   },
                   "method": false,
@@ -177,8 +164,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 741,
-                    "end": 748,
+                    "start": 734,
+                    "end": 741,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -193,9 +180,9 @@
                     "name": "perNode"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 750,
-                    "end": 758,
+                    "type": "NumericLiteral",
+                    "start": 743,
+                    "end": 744,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -203,33 +190,20 @@
                       },
                       "end": {
                         "line": 14,
-                        "column": 19
+                        "column": 12
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 750,
-                      "end": 756,
-                      "loc": {
-                        "start": {
-                          "line": 14,
-                          "column": 11
-                        },
-                        "end": {
-                          "line": 14,
-                          "column": 17
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 1,
+                      "raw": "1"
                     },
-                    "arguments": []
+                    "value": 1
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 762,
-                  "end": 783,
+                  "start": 748,
+                  "end": 762,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -237,7 +211,7 @@
                     },
                     "end": {
                       "line": 15,
-                      "column": 23
+                      "column": 16
                     }
                   },
                   "method": false,
@@ -245,8 +219,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 762,
-                    "end": 773,
+                    "start": 748,
+                    "end": 759,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -261,9 +235,9 @@
                     "name": "perShadable"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 775,
-                    "end": 783,
+                    "type": "NumericLiteral",
+                    "start": 761,
+                    "end": 762,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -271,27 +245,14 @@
                       },
                       "end": {
                         "line": 15,
-                        "column": 23
+                        "column": 16
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 775,
-                      "end": 781,
-                      "loc": {
-                        "start": {
-                          "line": 15,
-                          "column": 15
-                        },
-                        "end": {
-                          "line": 15,
-                          "column": 21
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 2,
+                      "raw": "2"
                     },
-                    "arguments": []
+                    "value": 2
                   }
                 }
               ]
@@ -306,8 +267,8 @@
       },
       {
         "type": "Identifier",
-        "start": 787,
-        "end": 820,
+        "start": 766,
+        "end": 799,
         "loc": {
           "start": {
             "line": 18,
@@ -320,8 +281,8 @@
         },
         "declaration": {
           "type": "Identifier",
-          "start": 802,
-          "end": 820,
+          "start": 781,
+          "end": 799,
           "loc": {
             "start": {
               "line": 18,
@@ -341,8 +302,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 787,
-        "end": 820,
+        "start": 766,
+        "end": 799,
         "loc": {
           "start": {
             "line": 18,
@@ -356,7 +317,7 @@
         "declaration": {
           "type": "VariableDeclaration",
           "start": 688,
-          "end": 785,
+          "end": 764,
           "loc": {
             "start": {
               "line": 12,
@@ -371,7 +332,7 @@
             {
               "type": "VariableDeclarator",
               "start": 694,
-              "end": 785,
+              "end": 764,
               "loc": {
                 "start": {
                   "line": 12,
@@ -403,7 +364,7 @@
               "init": {
                 "type": "ObjectExpression",
                 "start": 715,
-                "end": 785,
+                "end": 764,
                 "loc": {
                   "start": {
                     "line": 12,
@@ -418,7 +379,7 @@
                   {
                     "type": "ObjectProperty",
                     "start": 719,
-                    "end": 737,
+                    "end": 730,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -426,7 +387,7 @@
                       },
                       "end": {
                         "line": 13,
-                        "column": 20
+                        "column": 13
                       }
                     },
                     "method": false,
@@ -450,9 +411,9 @@
                       "name": "perFrame"
                     },
                     "value": {
-                      "type": "CallExpression",
+                      "type": "NumericLiteral",
                       "start": 729,
-                      "end": 737,
+                      "end": 730,
                       "loc": {
                         "start": {
                           "line": 13,
@@ -460,33 +421,20 @@
                         },
                         "end": {
                           "line": 13,
-                          "column": 20
+                          "column": 13
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 729,
-                        "end": 735,
-                        "loc": {
-                          "start": {
-                            "line": 13,
-                            "column": 12
-                          },
-                          "end": {
-                            "line": 13,
-                            "column": 18
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 0,
+                        "raw": "0"
                       },
-                      "arguments": []
+                      "value": 0
                     }
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 741,
-                    "end": 758,
+                    "start": 734,
+                    "end": 744,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -494,7 +442,7 @@
                       },
                       "end": {
                         "line": 14,
-                        "column": 19
+                        "column": 12
                       }
                     },
                     "method": false,
@@ -502,8 +450,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 741,
-                      "end": 748,
+                      "start": 734,
+                      "end": 741,
                       "loc": {
                         "start": {
                           "line": 14,
@@ -518,9 +466,9 @@
                       "name": "perNode"
                     },
                     "value": {
-                      "type": "CallExpression",
-                      "start": 750,
-                      "end": 758,
+                      "type": "NumericLiteral",
+                      "start": 743,
+                      "end": 744,
                       "loc": {
                         "start": {
                           "line": 14,
@@ -528,33 +476,20 @@
                         },
                         "end": {
                           "line": 14,
-                          "column": 19
+                          "column": 12
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 750,
-                        "end": 756,
-                        "loc": {
-                          "start": {
-                            "line": 14,
-                            "column": 11
-                          },
-                          "end": {
-                            "line": 14,
-                            "column": 17
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 1,
+                        "raw": "1"
                       },
-                      "arguments": []
+                      "value": 1
                     }
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 762,
-                    "end": 783,
+                    "start": 748,
+                    "end": 762,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -562,7 +497,7 @@
                       },
                       "end": {
                         "line": 15,
-                        "column": 23
+                        "column": 16
                       }
                     },
                     "method": false,
@@ -570,8 +505,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 762,
-                      "end": 773,
+                      "start": 748,
+                      "end": 759,
                       "loc": {
                         "start": {
                           "line": 15,
@@ -586,9 +521,9 @@
                       "name": "perShadable"
                     },
                     "value": {
-                      "type": "CallExpression",
-                      "start": 775,
-                      "end": 783,
+                      "type": "NumericLiteral",
+                      "start": 761,
+                      "end": 762,
                       "loc": {
                         "start": {
                           "line": 15,
@@ -596,27 +531,14 @@
                         },
                         "end": {
                           "line": 15,
-                          "column": 23
+                          "column": 16
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 775,
-                        "end": 781,
-                        "loc": {
-                          "start": {
-                            "line": 15,
-                            "column": 15
-                          },
-                          "end": {
-                            "line": 15,
-                            "column": 21
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 2,
+                        "raw": "2"
                       },
-                      "arguments": []
+                      "value": 2
                     }
                   }
                 ]
@@ -628,7 +550,7 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * Options for how often SceneKit should execute the binding handler you provide with the handleBinding(ofBufferNamed:frequency:handler:) method.\n * @typedef {Object} SCNBufferFrequency\n * @property {Symbol} perFrame - Execute the binding handler once for each frame to be rendered using the shader.\n * @property {Symbol} perNode - Execute the binding handler once for each frame, for each node to be rendered using the shader.\n * @property {Symbol} perShadable - Execute the binding handler once for each frame, for each node, for each material or geometry to be rendered using the shader.\n * @see https://developer.apple.com/reference/scenekit/scnbufferfrequency\n ",
+              "value": "*\n * Options for how often SceneKit should execute the binding handler you provide with the handleBinding(ofBufferNamed:frequency:handler:) method.\n * @typedef {Object} SCNBufferFrequency\n * @property {number} perFrame - Execute the binding handler once for each frame to be rendered using the shader.\n * @property {number} perNode - Execute the binding handler once for each frame, for each node to be rendered using the shader.\n * @property {number} perShadable - Execute the binding handler once for each frame, for each node, for each material or geometry to be rendered using the shader.\n * @see https://developer.apple.com/reference/scenekit/scnbufferfrequency\n ",
               "start": 15,
               "end": 687,
               "loc": {
@@ -686,7 +608,7 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Options for how often SceneKit should execute the binding handler you provide with the handleBinding(ofBufferNamed:frequency:handler:) method.\n * @typedef {Object} SCNBufferFrequency\n * @property {Symbol} perFrame - Execute the binding handler once for each frame to be rendered using the shader.\n * @property {Symbol} perNode - Execute the binding handler once for each frame, for each node to be rendered using the shader.\n * @property {Symbol} perShadable - Execute the binding handler once for each frame, for each node, for each material or geometry to be rendered using the shader.\n * @see https://developer.apple.com/reference/scenekit/scnbufferfrequency\n ",
+            "value": "*\n * Options for how often SceneKit should execute the binding handler you provide with the handleBinding(ofBufferNamed:frequency:handler:) method.\n * @typedef {Object} SCNBufferFrequency\n * @property {number} perFrame - Execute the binding handler once for each frame to be rendered using the shader.\n * @property {number} perNode - Execute the binding handler once for each frame, for each node to be rendered using the shader.\n * @property {number} perShadable - Execute the binding handler once for each frame, for each node, for each material or geometry to be rendered using the shader.\n * @see https://developer.apple.com/reference/scenekit/scnbufferfrequency\n ",
             "start": 15,
             "end": 687,
             "loc": {
@@ -707,7 +629,7 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * Options for how often SceneKit should execute the binding handler you provide with the handleBinding(ofBufferNamed:frequency:handler:) method.\n * @typedef {Object} SCNBufferFrequency\n * @property {Symbol} perFrame - Execute the binding handler once for each frame to be rendered using the shader.\n * @property {Symbol} perNode - Execute the binding handler once for each frame, for each node to be rendered using the shader.\n * @property {Symbol} perShadable - Execute the binding handler once for each frame, for each node, for each material or geometry to be rendered using the shader.\n * @see https://developer.apple.com/reference/scenekit/scnbufferfrequency\n ",
+      "value": "*\n * Options for how often SceneKit should execute the binding handler you provide with the handleBinding(ofBufferNamed:frequency:handler:) method.\n * @typedef {Object} SCNBufferFrequency\n * @property {number} perFrame - Execute the binding handler once for each frame to be rendered using the shader.\n * @property {number} perNode - Execute the binding handler once for each frame, for each node to be rendered using the shader.\n * @property {number} perShadable - Execute the binding handler once for each frame, for each node, for each material or geometry to be rendered using the shader.\n * @see https://developer.apple.com/reference/scenekit/scnbufferfrequency\n ",
       "start": 15,
       "end": 687,
       "loc": {
@@ -752,7 +674,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Options for how often SceneKit should execute the binding handler you provide with the handleBinding(ofBufferNamed:frequency:handler:) method.\n * @typedef {Object} SCNBufferFrequency\n * @property {Symbol} perFrame - Execute the binding handler once for each frame to be rendered using the shader.\n * @property {Symbol} perNode - Execute the binding handler once for each frame, for each node to be rendered using the shader.\n * @property {Symbol} perShadable - Execute the binding handler once for each frame, for each node, for each material or geometry to be rendered using the shader.\n * @see https://developer.apple.com/reference/scenekit/scnbufferfrequency\n ",
+      "value": "*\n * Options for how often SceneKit should execute the binding handler you provide with the handleBinding(ofBufferNamed:frequency:handler:) method.\n * @typedef {Object} SCNBufferFrequency\n * @property {number} perFrame - Execute the binding handler once for each frame to be rendered using the shader.\n * @property {number} perNode - Execute the binding handler once for each frame, for each node to be rendered using the shader.\n * @property {number} perShadable - Execute the binding handler once for each frame, for each node, for each material or geometry to be rendered using the shader.\n * @see https://developer.apple.com/reference/scenekit/scnbufferfrequency\n ",
       "start": 15,
       "end": 687,
       "loc": {
@@ -926,7 +848,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -934,11 +856,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
+      "value": 0,
       "start": 729,
-      "end": 735,
+      "end": 730,
       "loc": {
         "start": {
           "line": 13,
@@ -946,57 +869,7 @@
         },
         "end": {
           "line": 13,
-          "column": 18
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 735,
-      "end": 736,
-      "loc": {
-        "start": {
-          "line": 13,
-          "column": 18
-        },
-        "end": {
-          "line": 13,
-          "column": 19
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 736,
-      "end": 737,
-      "loc": {
-        "start": {
-          "line": 13,
-          "column": 19
-        },
-        "end": {
-          "line": 13,
-          "column": 20
+          "column": 13
         }
       }
     },
@@ -1013,221 +886,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 737,
-      "end": 738,
+      "start": 730,
+      "end": 731,
       "loc": {
         "start": {
           "line": 13,
-          "column": 20
+          "column": 13
         },
         "end": {
           "line": 13,
-          "column": 21
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "perNode",
-      "start": 741,
-      "end": 748,
-      "loc": {
-        "start": {
-          "line": 14,
-          "column": 2
-        },
-        "end": {
-          "line": 14,
-          "column": 9
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ":",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 748,
-      "end": 749,
-      "loc": {
-        "start": {
-          "line": 14,
-          "column": 9
-        },
-        "end": {
-          "line": 14,
-          "column": 10
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "Symbol",
-      "start": 750,
-      "end": 756,
-      "loc": {
-        "start": {
-          "line": 14,
-          "column": 11
-        },
-        "end": {
-          "line": 14,
-          "column": 17
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 756,
-      "end": 757,
-      "loc": {
-        "start": {
-          "line": 14,
-          "column": 17
-        },
-        "end": {
-          "line": 14,
-          "column": 18
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 757,
-      "end": 758,
-      "loc": {
-        "start": {
-          "line": 14,
-          "column": 18
-        },
-        "end": {
-          "line": 14,
-          "column": 19
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 758,
-      "end": 759,
-      "loc": {
-        "start": {
-          "line": 14,
-          "column": 19
-        },
-        "end": {
-          "line": 14,
-          "column": 20
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "perShadable",
-      "start": 762,
-      "end": 773,
-      "loc": {
-        "start": {
-          "line": 15,
-          "column": 2
-        },
-        "end": {
-          "line": 15,
-          "column": 13
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ":",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 773,
-      "end": 774,
-      "loc": {
-        "start": {
-          "line": 15,
-          "column": 13
-        },
-        "end": {
-          "line": 15,
           "column": 14
         }
       }
@@ -1244,24 +911,103 @@
         "postfix": false,
         "binop": null
       },
-      "value": "Symbol",
-      "start": 775,
-      "end": 781,
+      "value": "perNode",
+      "start": 734,
+      "end": 741,
       "loc": {
         "start": {
-          "line": 15,
-          "column": 15
+          "line": 14,
+          "column": 2
         },
         "end": {
-          "line": 15,
-          "column": 21
+          "line": 14,
+          "column": 9
         }
       }
     },
     {
       "type": {
-        "label": "(",
+        "label": ":",
         "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 741,
+      "end": 742,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 9
+        },
+        "end": {
+          "line": 14,
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "num",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": 1,
+      "start": 743,
+      "end": 744,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 11
+        },
+        "end": {
+          "line": 14,
+          "column": 12
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 744,
+      "end": 745,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 12
+        },
+        "end": {
+          "line": 14,
+          "column": 13
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
         "isLoop": false,
@@ -1270,41 +1016,70 @@
         "postfix": false,
         "binop": null
       },
-      "start": 781,
-      "end": 782,
+      "value": "perShadable",
+      "start": 748,
+      "end": 759,
       "loc": {
         "start": {
           "line": 15,
-          "column": 21
+          "column": 2
         },
         "end": {
           "line": 15,
-          "column": 22
+          "column": 13
         }
       }
     },
     {
       "type": {
-        "label": ")",
-        "beforeExpr": false,
+        "label": ":",
+        "beforeExpr": true,
         "startsExpr": false,
         "rightAssociative": false,
         "isLoop": false,
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "start": 782,
-      "end": 783,
+      "start": 759,
+      "end": 760,
       "loc": {
         "start": {
           "line": 15,
-          "column": 22
+          "column": 13
         },
         "end": {
           "line": 15,
-          "column": 23
+          "column": 14
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "num",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": 2,
+      "start": 761,
+      "end": 762,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 15
+        },
+        "end": {
+          "line": 15,
+          "column": 16
         }
       }
     },
@@ -1320,8 +1095,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 784,
-      "end": 785,
+      "start": 763,
+      "end": 764,
       "loc": {
         "start": {
           "line": 16,
@@ -1348,8 +1123,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 787,
-      "end": 793,
+      "start": 766,
+      "end": 772,
       "loc": {
         "start": {
           "line": 18,
@@ -1376,8 +1151,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 794,
-      "end": 801,
+      "start": 773,
+      "end": 780,
       "loc": {
         "start": {
           "line": 18,
@@ -1402,8 +1177,8 @@
         "binop": null
       },
       "value": "SCNBufferFrequency",
-      "start": 802,
-      "end": 820,
+      "start": 781,
+      "end": 799,
       "loc": {
         "start": {
           "line": 18,
@@ -1428,8 +1203,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 821,
-      "end": 821,
+      "start": 800,
+      "end": 800,
       "loc": {
         "start": {
           "line": 19,

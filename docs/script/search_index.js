@@ -1,5 +1,23 @@
 window.esdocSearchIndex = [
   [
+    "jscenekit/js/util/_ajaxrequest.js~ajaxrequest",
+    "class/js/util/_AjaxRequest.js~AjaxRequest.html",
+    "<span>AjaxRequest</span> <span class=\"search-result-import-path\">jscenekit/js/util/_AjaxRequest.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/third_party/binaryparser.js~binaryparser",
+    "function/index.html#static-function-BinaryParser",
+    "<span>BinaryParser</span> <span class=\"search-result-import-path\">jscenekit/js/third_party/BinaryParser.js</span>",
+    "function"
+  ],
+  [
+    "jscenekit/js/util/_binaryrequest.js~binaryrequest",
+    "class/js/util/_BinaryRequest.js~BinaryRequest.html",
+    "<span>BinaryRequest</span> <span class=\"search-result-import-path\">jscenekit/js/util/_BinaryRequest.js</span>",
+    "class"
+  ],
+  [
     "jscenekit/js/quartzcore/caaction.js~caaction",
     "class/js/QuartzCore/CAAction.js~CAAction.html",
     "<span>CAAction</span> <span class=\"search-result-import-path\">jscenekit/js/QuartzCore/CAAction.js</span>",
@@ -27,6 +45,12 @@ window.esdocSearchIndex = [
     "jscenekit/js/quartzcore/cabasicanimation.js~cabasicanimation",
     "class/js/QuartzCore/CABasicAnimation.js~CABasicAnimation.html",
     "<span>CABasicAnimation</span> <span class=\"search-result-import-path\">jscenekit/js/QuartzCore/CABasicAnimation.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/quartzcore/cakeyframeanimation.js~cakeyframeanimation",
+    "class/js/QuartzCore/CAKeyframeAnimation.js~CAKeyframeAnimation.html",
+    "<span>CAKeyframeAnimation</span> <span class=\"search-result-import-path\">jscenekit/js/QuartzCore/CAKeyframeAnimation.js</span>",
     "class"
   ],
   [
@@ -93,6 +117,144 @@ window.esdocSearchIndex = [
     "jscenekit/js/coregraphics/cgvector.js~cgvector",
     "class/js/CoreGraphics/CGVector.js~CGVector.html",
     "<span>CGVector</span> <span class=\"search-result-import-path\">jscenekit/js/CoreGraphics/CGVector.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/third_party/ecl.js~escapeeucjp",
+    "function/index.html#static-function-EscapeEUCJP",
+    "<span>EscapeEUCJP</span> <span class=\"search-result-import-path\">jscenekit/js/third_party/ecl.js</span>",
+    "function"
+  ],
+  [
+    "jscenekit/js/third_party/ecl.js~escapejis7",
+    "function/index.html#static-function-EscapeJIS7",
+    "<span>EscapeJIS7</span> <span class=\"search-result-import-path\">jscenekit/js/third_party/ecl.js</span>",
+    "function"
+  ],
+  [
+    "jscenekit/js/third_party/ecl.js~escapejis8",
+    "function/index.html#static-function-EscapeJIS8",
+    "<span>EscapeJIS8</span> <span class=\"search-result-import-path\">jscenekit/js/third_party/ecl.js</span>",
+    "function"
+  ],
+  [
+    "jscenekit/js/third_party/ecl.js~escapesjis",
+    "function/index.html#static-function-EscapeSJIS",
+    "<span>EscapeSJIS</span> <span class=\"search-result-import-path\">jscenekit/js/third_party/ecl.js</span>",
+    "function"
+  ],
+  [
+    "jscenekit/js/third_party/ecl.js~escapeutf16le",
+    "function/index.html#static-function-EscapeUTF16LE",
+    "<span>EscapeUTF16LE</span> <span class=\"search-result-import-path\">jscenekit/js/third_party/ecl.js</span>",
+    "function"
+  ],
+  [
+    "jscenekit/js/third_party/ecl.js~escapeutf7",
+    "function/index.html#static-function-EscapeUTF7",
+    "<span>EscapeUTF7</span> <span class=\"search-result-import-path\">jscenekit/js/third_party/ecl.js</span>",
+    "function"
+  ],
+  [
+    "jscenekit/js/third_party/ecl.js~escapeutf8",
+    "function/index.html#static-function-EscapeUTF8",
+    "<span>EscapeUTF8</span> <span class=\"search-result-import-path\">jscenekit/js/third_party/ecl.js</span>",
+    "function"
+  ],
+  [
+    "jscenekit/js/third_party/ecl.js~escapeunicode",
+    "function/index.html#static-function-EscapeUnicode",
+    "<span>EscapeUnicode</span> <span class=\"search-result-import-path\">jscenekit/js/third_party/ecl.js</span>",
+    "function"
+  ],
+  [
+    "jscenekit/js/util/_file.js~file",
+    "class/js/util/_File.js~File.html",
+    "<span>File</span> <span class=\"search-result-import-path\">jscenekit/js/util/_File.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/util/_filereader.js~filereader",
+    "class/js/util/_FileReader.js~FileReader.html",
+    "<span>FileReader</span> <span class=\"search-result-import-path\">jscenekit/js/util/_FileReader.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/third_party/ecl.js~getescapecodetype",
+    "function/index.html#static-function-GetEscapeCodeType",
+    "<span>GetEscapeCodeType</span> <span class=\"search-result-import-path\">jscenekit/js/third_party/ecl.js</span>",
+    "function"
+  ],
+  [
+    "jscenekit/js/third_party/ecl.js~jct11280",
+    "variable/index.html#static-variable-JCT11280",
+    "<span>JCT11280</span> <span class=\"search-result-import-path\">jscenekit/js/third_party/ecl.js</span>",
+    "variable"
+  ],
+  [
+    "jscenekit/js/third_party/ecl.js~jct8836",
+    "variable/index.html#static-variable-JCT8836",
+    "<span>JCT8836</span> <span class=\"search-result-import-path\">jscenekit/js/third_party/ecl.js</span>",
+    "variable"
+  ],
+  [
+    "jscenekit/js/foundation/nsarray.js~nsarray",
+    "class/js/Foundation/NSArray.js~NSArray.html",
+    "<span>NSArray</span> <span class=\"search-result-import-path\">jscenekit/js/Foundation/NSArray.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/foundation/nscoder.js~nscoder",
+    "class/js/Foundation/NSCoder.js~NSCoder.html",
+    "<span>NSCoder</span> <span class=\"search-result-import-path\">jscenekit/js/Foundation/NSCoder.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/appkit/nscolor.js~nscolor",
+    "class/js/AppKit/NSColor.js~NSColor.html",
+    "<span>NSColor</span> <span class=\"search-result-import-path\">jscenekit/js/AppKit/NSColor.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/foundation/nsdata.js~nsdata",
+    "class/js/Foundation/NSData.js~NSData.html",
+    "<span>NSData</span> <span class=\"search-result-import-path\">jscenekit/js/Foundation/NSData.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/foundation/nsdictionary.js~nsdictionary",
+    "class/js/Foundation/NSDictionary.js~NSDictionary.html",
+    "<span>NSDictionary</span> <span class=\"search-result-import-path\">jscenekit/js/Foundation/NSDictionary.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/foundation/nskeyedarchiver.js~nskeyedarchiver",
+    "class/js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver.html",
+    "<span>NSKeyedArchiver</span> <span class=\"search-result-import-path\">jscenekit/js/Foundation/NSKeyedArchiver.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/foundation/nskeyedunarchiver.js~nskeyedunarchiver",
+    "class/js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver.html",
+    "<span>NSKeyedUnarchiver</span> <span class=\"search-result-import-path\">jscenekit/js/Foundation/NSKeyedUnarchiver.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/foundation/nsmutablearray.js~nsmutablearray",
+    "class/js/Foundation/NSMutableArray.js~NSMutableArray.html",
+    "<span>NSMutableArray</span> <span class=\"search-result-import-path\">jscenekit/js/Foundation/NSMutableArray.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/foundation/nsmutabledata.js~nsmutabledata",
+    "class/js/Foundation/NSMutableData.js~NSMutableData.html",
+    "<span>NSMutableData</span> <span class=\"search-result-import-path\">jscenekit/js/Foundation/NSMutableData.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/foundation/nsmutabledictionary.js~nsmutabledictionary",
+    "class/js/Foundation/NSMutableDictionary.js~NSMutableDictionary.html",
+    "<span>NSMutableDictionary</span> <span class=\"search-result-import-path\">jscenekit/js/Foundation/NSMutableDictionary.js</span>",
     "class"
   ],
   [
@@ -768,6 +930,60 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
+    "jscenekit/js/third_party/ecl.js~unescapeeucjp",
+    "function/index.html#static-function-UnescapeEUCJP",
+    "<span>UnescapeEUCJP</span> <span class=\"search-result-import-path\">jscenekit/js/third_party/ecl.js</span>",
+    "function"
+  ],
+  [
+    "jscenekit/js/third_party/ecl.js~unescapejis7",
+    "function/index.html#static-function-UnescapeJIS7",
+    "<span>UnescapeJIS7</span> <span class=\"search-result-import-path\">jscenekit/js/third_party/ecl.js</span>",
+    "function"
+  ],
+  [
+    "jscenekit/js/third_party/ecl.js~unescapejis8",
+    "function/index.html#static-function-UnescapeJIS8",
+    "<span>UnescapeJIS8</span> <span class=\"search-result-import-path\">jscenekit/js/third_party/ecl.js</span>",
+    "function"
+  ],
+  [
+    "jscenekit/js/third_party/ecl.js~unescapesjis",
+    "function/index.html#static-function-UnescapeSJIS",
+    "<span>UnescapeSJIS</span> <span class=\"search-result-import-path\">jscenekit/js/third_party/ecl.js</span>",
+    "function"
+  ],
+  [
+    "jscenekit/js/third_party/ecl.js~unescapeutf16le",
+    "function/index.html#static-function-UnescapeUTF16LE",
+    "<span>UnescapeUTF16LE</span> <span class=\"search-result-import-path\">jscenekit/js/third_party/ecl.js</span>",
+    "function"
+  ],
+  [
+    "jscenekit/js/third_party/ecl.js~unescapeutf7",
+    "function/index.html#static-function-UnescapeUTF7",
+    "<span>UnescapeUTF7</span> <span class=\"search-result-import-path\">jscenekit/js/third_party/ecl.js</span>",
+    "function"
+  ],
+  [
+    "jscenekit/js/third_party/ecl.js~unescapeutf8",
+    "function/index.html#static-function-UnescapeUTF8",
+    "<span>UnescapeUTF8</span> <span class=\"search-result-import-path\">jscenekit/js/third_party/ecl.js</span>",
+    "function"
+  ],
+  [
+    "jscenekit/js/third_party/ecl.js~unescapeunicode",
+    "function/index.html#static-function-UnescapeUnicode",
+    "<span>UnescapeUnicode</span> <span class=\"search-result-import-path\">jscenekit/js/third_party/ecl.js</span>",
+    "function"
+  ],
+  [
+    "jscenekit/js/util/_binaryreader.js~_binaryreader",
+    "class/js/util/_BinaryReader.js~_BinaryReader.html",
+    "<span>_BinaryReader</span> <span class=\"search-result-import-path\">jscenekit/js/util/_BinaryReader.js</span>",
+    "class"
+  ],
+  [
     "builtinexternal/ecmascriptexternal.js~array",
     "https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array",
     "BuiltinExternal/ECMAScriptExternal.js~Array",
@@ -1096,6 +1312,30 @@ window.esdocSearchIndex = [
     "https://developer.mozilla.org/en/docs/Web/API/XMLHttpRequest",
     "BuiltinExternal/WebAPIExternal.js~XMLHttpRequest",
     "external"
+  ],
+  [
+    "js/appkit/nscolor.js",
+    "file/js/AppKit/NSColor.js.html",
+    "js/AppKit/NSColor.js",
+    "file"
+  ],
+  [
+    "js/appkit/nscolor.js~nscolor.initwithcoder",
+    "class/js/AppKit/NSColor.js~NSColor.html#static-method-initWithCoder",
+    "js/AppKit/NSColor.js~NSColor.initWithCoder",
+    "method"
+  ],
+  [
+    "js/appkit/nscolorspacemodel.js",
+    "file/js/AppKit/NSColorSpaceModel.js.html",
+    "js/AppKit/NSColorSpaceModel.js",
+    "file"
+  ],
+  [
+    "js/appkit/nscolorspacemodel.js~nscolorspacemodel",
+    "typedef/index.html#static-typedef-NSColorSpaceModel",
+    "js/AppKit/NSColorSpaceModel.js~NSColorSpaceModel",
+    "typedef"
   ],
   [
     "js/coregraphics/cgblendmode.js",
@@ -1750,6 +1990,642 @@ window.esdocSearchIndex = [
     "class/js/CoreGraphics/CGVector.js~CGVector.html#instance-get-zero",
     "js/CoreGraphics/CGVector.js~CGVector#zero",
     "member"
+  ],
+  [
+    "js/foundation/nsarray.js",
+    "file/js/Foundation/NSArray.js.html",
+    "js/Foundation/NSArray.js",
+    "file"
+  ],
+  [
+    "js/foundation/nsarray.js~nsarray.initwithcoder",
+    "class/js/Foundation/NSArray.js~NSArray.html#static-method-initWithCoder",
+    "js/Foundation/NSArray.js~NSArray.initWithCoder",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js",
+    "file/js/Foundation/NSCoder.js.html",
+    "js/Foundation/NSCoder.js",
+    "file"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#allowedclasses",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-get-allowedClasses",
+    "js/Foundation/NSCoder.js~NSCoder#allowedClasses",
+    "member"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#allowskeyedcoding",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-get-allowsKeyedCoding",
+    "js/Foundation/NSCoder.js~NSCoder#allowsKeyedCoding",
+    "member"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#constructor",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-constructor-constructor",
+    "js/Foundation/NSCoder.js~NSCoder#constructor",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#containsvalueforkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-containsValueForKey",
+    "js/Foundation/NSCoder.js~NSCoder#containsValueForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodearrayofobjctypeat",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeArrayOfObjCTypeAt",
+    "js/Foundation/NSCoder.js~NSCoder#decodeArrayOfObjCTypeAt",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodeboolforkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeBoolForKey",
+    "js/Foundation/NSCoder.js~NSCoder#decodeBoolForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodebytesforkeyreturnedlength",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeBytesForKeyReturnedLength",
+    "js/Foundation/NSCoder.js~NSCoder#decodeBytesForKeyReturnedLength",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodebyteswithreturnedlength",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeBytesWithReturnedLength",
+    "js/Foundation/NSCoder.js~NSCoder#decodeBytesWithReturnedLength",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodecgaffinetransformforkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeCGAffineTransformForKey",
+    "js/Foundation/NSCoder.js~NSCoder#decodeCGAffineTransformForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodecgpointforkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeCGPointForKey",
+    "js/Foundation/NSCoder.js~NSCoder#decodeCGPointForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodecgrectforkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeCGRectForKey",
+    "js/Foundation/NSCoder.js~NSCoder#decodeCGRectForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodecgsizeforkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeCGSizeForKey",
+    "js/Foundation/NSCoder.js~NSCoder#decodeCGSizeForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodecgvectorforkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeCGVectorForKey",
+    "js/Foundation/NSCoder.js~NSCoder#decodeCGVectorForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodecintforkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeCIntForKey",
+    "js/Foundation/NSCoder.js~NSCoder#decodeCIntForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodedata",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeData",
+    "js/Foundation/NSCoder.js~NSCoder#decodeData",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodedoubleforkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeDoubleForKey",
+    "js/Foundation/NSCoder.js~NSCoder#decodeDoubleForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodefloatforkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeFloatForKey",
+    "js/Foundation/NSCoder.js~NSCoder#decodeFloatForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodeint32forkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeInt32ForKey",
+    "js/Foundation/NSCoder.js~NSCoder#decodeInt32ForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodeint64forkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeInt64ForKey",
+    "js/Foundation/NSCoder.js~NSCoder#decodeInt64ForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodeintegerforkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeIntegerForKey",
+    "js/Foundation/NSCoder.js~NSCoder#decodeIntegerForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodeobject",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeObject",
+    "js/Foundation/NSCoder.js~NSCoder#decodeObject",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodeobjectforkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeObjectForKey",
+    "js/Foundation/NSCoder.js~NSCoder#decodeObjectForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodeobjectofclassforkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeObjectOfClassForKey",
+    "js/Foundation/NSCoder.js~NSCoder#decodeObjectOfClassForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodepoint",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodePoint",
+    "js/Foundation/NSCoder.js~NSCoder#decodePoint",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodepointforkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodePointForKey",
+    "js/Foundation/NSCoder.js~NSCoder#decodePointForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodepropertylist",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodePropertyList",
+    "js/Foundation/NSCoder.js~NSCoder#decodePropertyList",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodepropertylistforkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodePropertyListForKey",
+    "js/Foundation/NSCoder.js~NSCoder#decodePropertyListForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decoderect",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeRect",
+    "js/Foundation/NSCoder.js~NSCoder#decodeRect",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decoderectforkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeRectForKey",
+    "js/Foundation/NSCoder.js~NSCoder#decodeRectForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodesize",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeSize",
+    "js/Foundation/NSCoder.js~NSCoder#decodeSize",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodesizeforkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeSizeForKey",
+    "js/Foundation/NSCoder.js~NSCoder#decodeSizeForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodetimeforkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeTimeForKey",
+    "js/Foundation/NSCoder.js~NSCoder#decodeTimeForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodetimemappingforkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeTimeMappingForKey",
+    "js/Foundation/NSCoder.js~NSCoder#decodeTimeMappingForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodetimerangeforkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeTimeRangeForKey",
+    "js/Foundation/NSCoder.js~NSCoder#decodeTimeRangeForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodetoplevelobject",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeTopLevelObject",
+    "js/Foundation/NSCoder.js~NSCoder#decodeTopLevelObject",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodetoplevelobjectforkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeTopLevelObjectForKey",
+    "js/Foundation/NSCoder.js~NSCoder#decodeTopLevelObjectForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodetoplevelobjectofforkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeTopLevelObjectOfForKey",
+    "js/Foundation/NSCoder.js~NSCoder#decodeTopLevelObjectOfForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodeuiedgeinsetsforkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeUIEdgeInsetsForKey",
+    "js/Foundation/NSCoder.js~NSCoder#decodeUIEdgeInsetsForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodeuioffsetforkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeUIOffsetForKey",
+    "js/Foundation/NSCoder.js~NSCoder#decodeUIOffsetForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodevalueofobjctypeat",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-decodeValueOfObjCTypeAt",
+    "js/Foundation/NSCoder.js~NSCoder#decodeValueOfObjCTypeAt",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#decodingfailurepolicy",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-get-decodingFailurePolicy",
+    "js/Foundation/NSCoder.js~NSCoder#decodingFailurePolicy",
+    "member"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#encode",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-encode",
+    "js/Foundation/NSCoder.js~NSCoder#encode",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#encodearrayofobjctypeat",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-encodeArrayOfObjCTypeAt",
+    "js/Foundation/NSCoder.js~NSCoder#encodeArrayOfObjCTypeAt",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#encodebycopyobject",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-encodeBycopyObject",
+    "js/Foundation/NSCoder.js~NSCoder#encodeBycopyObject",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#encodebyrefobject",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-encodeByrefObject",
+    "js/Foundation/NSCoder.js~NSCoder#encodeByrefObject",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#encodebytes",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-encodeBytes",
+    "js/Foundation/NSCoder.js~NSCoder#encodeBytes",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#encodebyteslengthforkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-encodeBytesLengthForKey",
+    "js/Foundation/NSCoder.js~NSCoder#encodeBytesLengthForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#encodecintforkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-encodeCIntForKey",
+    "js/Foundation/NSCoder.js~NSCoder#encodeCIntForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#encodeconditionalobject",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-encodeConditionalObject",
+    "js/Foundation/NSCoder.js~NSCoder#encodeConditionalObject",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#encodeconditionalobjectforkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-encodeConditionalObjectForKey",
+    "js/Foundation/NSCoder.js~NSCoder#encodeConditionalObjectForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#encodeforkey",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-encodeForKey",
+    "js/Foundation/NSCoder.js~NSCoder#encodeForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#encodepropertylist",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-encodePropertyList",
+    "js/Foundation/NSCoder.js~NSCoder#encodePropertyList",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#encoderootobject",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-encodeRootObject",
+    "js/Foundation/NSCoder.js~NSCoder#encodeRootObject",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#encodevalueofobjctypeat",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-encodeValueOfObjCTypeAt",
+    "js/Foundation/NSCoder.js~NSCoder#encodeValueOfObjCTypeAt",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#error",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-get-error",
+    "js/Foundation/NSCoder.js~NSCoder#error",
+    "member"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#failwitherror",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-failWithError",
+    "js/Foundation/NSCoder.js~NSCoder#failWithError",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#requiressecurecoding",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-get-requiresSecureCoding",
+    "js/Foundation/NSCoder.js~NSCoder#requiresSecureCoding",
+    "member"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#systemversion",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-get-systemVersion",
+    "js/Foundation/NSCoder.js~NSCoder#systemVersion",
+    "member"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder#versionforclassname",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#instance-method-versionForClassName",
+    "js/Foundation/NSCoder.js~NSCoder#versionForClassName",
+    "method"
+  ],
+  [
+    "js/foundation/nscoder.js~nscoder.decodingfailurepolicy",
+    "class/js/Foundation/NSCoder.js~NSCoder.html#static-get-DecodingFailurePolicy",
+    "js/Foundation/NSCoder.js~NSCoder.DecodingFailurePolicy",
+    "member"
+  ],
+  [
+    "js/foundation/nsdata.js",
+    "file/js/Foundation/NSData.js.html",
+    "js/Foundation/NSData.js",
+    "file"
+  ],
+  [
+    "js/foundation/nsdata.js~nsdata.initwithcoder",
+    "class/js/Foundation/NSData.js~NSData.html#static-method-initWithCoder",
+    "js/Foundation/NSData.js~NSData.initWithCoder",
+    "method"
+  ],
+  [
+    "js/foundation/nsdictionary.js",
+    "file/js/Foundation/NSDictionary.js.html",
+    "js/Foundation/NSDictionary.js",
+    "file"
+  ],
+  [
+    "js/foundation/nsdictionary.js~nsdictionary.initwithcoder",
+    "class/js/Foundation/NSDictionary.js~NSDictionary.html#static-method-initWithCoder",
+    "js/Foundation/NSDictionary.js~NSDictionary.initWithCoder",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedarchiver.js",
+    "file/js/Foundation/NSKeyedArchiver.js.html",
+    "js/Foundation/NSKeyedArchiver.js",
+    "file"
+  ],
+  [
+    "js/foundation/nskeyedarchiver.js~nskeyedarchiver#constructor",
+    "class/js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver.html#instance-constructor-constructor",
+    "js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver#constructor",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedarchiver.js~nskeyedarchiver#delegate",
+    "class/js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver.html#instance-member-delegate",
+    "js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver#delegate",
+    "member"
+  ],
+  [
+    "js/foundation/nskeyedarchiver.js~nskeyedarchiver#encodebyteslengthforkey",
+    "class/js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver.html#instance-method-encodeBytesLengthForKey",
+    "js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver#encodeBytesLengthForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedarchiver.js~nskeyedarchiver#encodeconditionalobjectforkey",
+    "class/js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver.html#instance-method-encodeConditionalObjectForKey",
+    "js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver#encodeConditionalObjectForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedarchiver.js~nskeyedarchiver#encodeforkey",
+    "class/js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver.html#instance-method-encodeForKey",
+    "js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver#encodeForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedarchiver.js~nskeyedarchiver#encodeddata",
+    "class/js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver.html#instance-get-encodedData",
+    "js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver#encodedData",
+    "member"
+  ],
+  [
+    "js/foundation/nskeyedarchiver.js~nskeyedarchiver#finishencoding",
+    "class/js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver.html#instance-method-finishEncoding",
+    "js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver#finishEncoding",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedarchiver.js~nskeyedarchiver#outputformat",
+    "class/js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver.html#instance-member-outputFormat",
+    "js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver#outputFormat",
+    "member"
+  ],
+  [
+    "js/foundation/nskeyedarchiver.js~nskeyedarchiver#requiressecurecoding",
+    "class/js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver.html#instance-member-requiresSecureCoding",
+    "js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver#requiresSecureCoding",
+    "member"
+  ],
+  [
+    "js/foundation/nskeyedarchiver.js~nskeyedarchiver.archiverootobjecttofile",
+    "class/js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver.html#static-method-archiveRootObjectToFile",
+    "js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver.archiveRootObjectToFile",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedarchiver.js~nskeyedarchiver.archiveddatawithrootobject",
+    "class/js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver.html#static-method-archivedDataWithRootObject",
+    "js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver.archivedDataWithRootObject",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedarchiver.js~nskeyedarchiver.archiverforwritingwithdata",
+    "class/js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver.html#static-method-archiverForWritingWithData",
+    "js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver.archiverForWritingWithData",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedarchiver.js~nskeyedarchiver.classnamefor",
+    "class/js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver.html#static-method-classNameFor",
+    "js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver.classNameFor",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedarchiver.js~nskeyedarchiver.setclassnamefor",
+    "class/js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver.html#static-method-setClassNameFor",
+    "js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver.setClassNameFor",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedunarchiver.js",
+    "file/js/Foundation/NSKeyedUnarchiver.js.html",
+    "js/Foundation/NSKeyedUnarchiver.js",
+    "file"
+  ],
+  [
+    "js/foundation/nskeyedunarchiver.js~nskeyedunarchiver#constructor",
+    "class/js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver.html#instance-constructor-constructor",
+    "js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver#constructor",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedunarchiver.js~nskeyedunarchiver#containsvalueforkey",
+    "class/js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver.html#instance-method-containsValueForKey",
+    "js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver#containsValueForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedunarchiver.js~nskeyedunarchiver#copy",
+    "class/js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver.html#instance-method-copy",
+    "js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver#copy",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedunarchiver.js~nskeyedunarchiver#decodeboolforkey",
+    "class/js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver.html#instance-method-decodeBoolForKey",
+    "js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver#decodeBoolForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedunarchiver.js~nskeyedunarchiver#decodebytesforkeyreturnedlength",
+    "class/js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver.html#instance-method-decodeBytesForKeyReturnedLength",
+    "js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver#decodeBytesForKeyReturnedLength",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedunarchiver.js~nskeyedunarchiver#decodecintforkey",
+    "class/js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver.html#instance-method-decodeCIntForKey",
+    "js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver#decodeCIntForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedunarchiver.js~nskeyedunarchiver#decodedoubleforkey",
+    "class/js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver.html#instance-method-decodeDoubleForKey",
+    "js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver#decodeDoubleForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedunarchiver.js~nskeyedunarchiver#decodefloatforkey",
+    "class/js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver.html#instance-method-decodeFloatForKey",
+    "js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver#decodeFloatForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedunarchiver.js~nskeyedunarchiver#decodeint32forkey",
+    "class/js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver.html#instance-method-decodeInt32ForKey",
+    "js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver#decodeInt32ForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedunarchiver.js~nskeyedunarchiver#decodeint64forkey",
+    "class/js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver.html#instance-method-decodeInt64ForKey",
+    "js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver#decodeInt64ForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedunarchiver.js~nskeyedunarchiver#decodeobjectforkey",
+    "class/js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver.html#instance-method-decodeObjectForKey",
+    "js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver#decodeObjectForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedunarchiver.js~nskeyedunarchiver#decodeobjectoftypeforkey",
+    "class/js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver.html#instance-method-decodeObjectOfTypeForKey",
+    "js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver#decodeObjectOfTypeForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedunarchiver.js~nskeyedunarchiver#decodepropertylistforkey",
+    "class/js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver.html#instance-method-decodePropertyListForKey",
+    "js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver#decodePropertyListForKey",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedunarchiver.js~nskeyedunarchiver#delegate",
+    "class/js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver.html#instance-member-delegate",
+    "js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver#delegate",
+    "member"
+  ],
+  [
+    "js/foundation/nskeyedunarchiver.js~nskeyedunarchiver#finishdecoding",
+    "class/js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver.html#instance-method-finishDecoding",
+    "js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver#finishDecoding",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedunarchiver.js~nskeyedunarchiver.classforclassname",
+    "class/js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver.html#static-method-classForClassName",
+    "js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver.classForClassName",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedunarchiver.js~nskeyedunarchiver.setclassforclassname",
+    "class/js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver.html#static-method-setClassForClassName",
+    "js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver.setClassForClassName",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedunarchiver.js~nskeyedunarchiver.unarchiveobjectwithdata",
+    "class/js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver.html#static-method-unarchiveObjectWithData",
+    "js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver.unarchiveObjectWithData",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedunarchiver.js~nskeyedunarchiver.unarchiveobjectwithfile",
+    "class/js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver.html#static-method-unarchiveObjectWithFile",
+    "js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver.unarchiveObjectWithFile",
+    "method"
+  ],
+  [
+    "js/foundation/nskeyedunarchiver.js~nskeyedunarchiver.unarchivetoplevelobjectwithdata",
+    "class/js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver.html#static-method-unarchiveTopLevelObjectWithData",
+    "js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver.unarchiveTopLevelObjectWithData",
+    "method"
+  ],
+  [
+    "js/foundation/nsmutablearray.js",
+    "file/js/Foundation/NSMutableArray.js.html",
+    "js/Foundation/NSMutableArray.js",
+    "file"
+  ],
+  [
+    "js/foundation/nsmutabledata.js",
+    "file/js/Foundation/NSMutableData.js.html",
+    "js/Foundation/NSMutableData.js",
+    "file"
+  ],
+  [
+    "js/foundation/nsmutabledictionary.js",
+    "file/js/Foundation/NSMutableDictionary.js.html",
+    "js/Foundation/NSMutableDictionary.js",
+    "file"
   ],
   [
     "js/foundation/nsvalue.js",
@@ -2544,6 +3420,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "js/objectivec/nsobject.js~nsobject#constructor",
+    "class/js/ObjectiveC/NSObject.js~NSObject.html#instance-constructor-constructor",
+    "js/ObjectiveC/NSObject.js~NSObject#constructor",
+    "method"
+  ],
+  [
     "js/objectivec/nsobject.js~nsobject#controltextdidbeginediting",
     "class/js/ObjectiveC/NSObject.js~NSObject.html#instance-method-controlTextDidBeginEditing",
     "js/ObjectiveC/NSObject.js~NSObject#controlTextDidBeginEditing",
@@ -2913,12 +3795,6 @@ window.esdocSearchIndex = [
     "js/objectivec/nsobject.js~nsobject#infoforbinding",
     "class/js/ObjectiveC/NSObject.js~NSObject.html#instance-method-infoForBinding",
     "js/ObjectiveC/NSObject.js~NSObject#infoForBinding",
-    "method"
-  ],
-  [
-    "js/objectivec/nsobject.js~nsobject#init",
-    "class/js/ObjectiveC/NSObject.js~NSObject.html#instance-method-init",
-    "js/ObjectiveC/NSObject.js~NSObject#init",
     "method"
   ],
   [
@@ -3660,6 +4536,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "js/objectivec/nsobject.js~nsobject.classname",
+    "class/js/ObjectiveC/NSObject.js~NSObject.html#static-get-className",
+    "js/ObjectiveC/NSObject.js~NSObject.className",
+    "member"
+  ],
+  [
     "js/objectivec/nsobject.js~nsobject.conformsto",
     "class/js/ObjectiveC/NSObject.js~NSObject.html#static-method-conformsTo",
     "js/ObjectiveC/NSObject.js~NSObject.conformsTo",
@@ -3693,6 +4575,12 @@ window.esdocSearchIndex = [
     "js/objectivec/nsobject.js~nsobject.hash",
     "class/js/ObjectiveC/NSObject.js~NSObject.html#static-method-hash",
     "js/ObjectiveC/NSObject.js~NSObject.hash",
+    "method"
+  ],
+  [
+    "js/objectivec/nsobject.js~nsobject.initwithcoder",
+    "class/js/ObjectiveC/NSObject.js~NSObject.html#static-method-initWithCoder",
+    "js/ObjectiveC/NSObject.js~NSObject.initWithCoder",
     "method"
   ],
   [
@@ -3772,6 +4660,12 @@ window.esdocSearchIndex = [
     "class/js/ObjectiveC/NSObject.js~NSObject.html#static-method-superclass",
     "js/ObjectiveC/NSObject.js~NSObject.superclass",
     "method"
+  ],
+  [
+    "js/objectivec/nsobject.js~nsobject.supportssecurecoding",
+    "class/js/ObjectiveC/NSObject.js~NSObject.html#static-get-supportsSecureCoding",
+    "js/ObjectiveC/NSObject.js~NSObject.supportsSecureCoding",
+    "member"
   ],
   [
     "js/objectivec/nsobject.js~nsobject.version",
@@ -3906,12 +4800,6 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
-    "js/quartzcore/caanimation.js~caanimation#thisationevents",
-    "class/js/QuartzCore/CAAnimation.js~CAAnimation.html#instance-member-thisationEvents",
-    "js/QuartzCore/CAAnimation.js~CAAnimation#thisationEvents",
-    "member"
-  ],
-  [
     "js/quartzcore/caanimation.js~caanimation#timeoffset",
     "class/js/QuartzCore/CAAnimation.js~CAAnimation.html#instance-member-timeOffset",
     "js/QuartzCore/CAAnimation.js~CAAnimation#timeOffset",
@@ -3978,6 +4866,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "js/quartzcore/caanimationgroup.js~caanimationgroup#copy",
+    "class/js/QuartzCore/CAAnimationGroup.js~CAAnimationGroup.html#instance-method-copy",
+    "js/QuartzCore/CAAnimationGroup.js~CAAnimationGroup#copy",
+    "method"
+  ],
+  [
     "js/quartzcore/cabasicanimation.js",
     "file/js/QuartzCore/CABasicAnimation.js.html",
     "js/QuartzCore/CABasicAnimation.js",
@@ -4014,6 +4908,78 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "js/quartzcore/cakeyframeanimation.js",
+    "file/js/QuartzCore/CAKeyframeAnimation.js.html",
+    "js/QuartzCore/CAKeyframeAnimation.js",
+    "file"
+  ],
+  [
+    "js/quartzcore/cakeyframeanimation.js~cakeyframeanimation#biasvalues",
+    "class/js/QuartzCore/CAKeyframeAnimation.js~CAKeyframeAnimation.html#instance-member-biasValues",
+    "js/QuartzCore/CAKeyframeAnimation.js~CAKeyframeAnimation#biasValues",
+    "member"
+  ],
+  [
+    "js/quartzcore/cakeyframeanimation.js~cakeyframeanimation#calculationmode",
+    "class/js/QuartzCore/CAKeyframeAnimation.js~CAKeyframeAnimation.html#instance-member-calculationMode",
+    "js/QuartzCore/CAKeyframeAnimation.js~CAKeyframeAnimation#calculationMode",
+    "member"
+  ],
+  [
+    "js/quartzcore/cakeyframeanimation.js~cakeyframeanimation#constructor",
+    "class/js/QuartzCore/CAKeyframeAnimation.js~CAKeyframeAnimation.html#instance-constructor-constructor",
+    "js/QuartzCore/CAKeyframeAnimation.js~CAKeyframeAnimation#constructor",
+    "method"
+  ],
+  [
+    "js/quartzcore/cakeyframeanimation.js~cakeyframeanimation#continuityvalues",
+    "class/js/QuartzCore/CAKeyframeAnimation.js~CAKeyframeAnimation.html#instance-member-continuityValues",
+    "js/QuartzCore/CAKeyframeAnimation.js~CAKeyframeAnimation#continuityValues",
+    "member"
+  ],
+  [
+    "js/quartzcore/cakeyframeanimation.js~cakeyframeanimation#copy",
+    "class/js/QuartzCore/CAKeyframeAnimation.js~CAKeyframeAnimation.html#instance-method-copy",
+    "js/QuartzCore/CAKeyframeAnimation.js~CAKeyframeAnimation#copy",
+    "method"
+  ],
+  [
+    "js/quartzcore/cakeyframeanimation.js~cakeyframeanimation#keytimes",
+    "class/js/QuartzCore/CAKeyframeAnimation.js~CAKeyframeAnimation.html#instance-member-keyTimes",
+    "js/QuartzCore/CAKeyframeAnimation.js~CAKeyframeAnimation#keyTimes",
+    "member"
+  ],
+  [
+    "js/quartzcore/cakeyframeanimation.js~cakeyframeanimation#path",
+    "class/js/QuartzCore/CAKeyframeAnimation.js~CAKeyframeAnimation.html#instance-member-path",
+    "js/QuartzCore/CAKeyframeAnimation.js~CAKeyframeAnimation#path",
+    "member"
+  ],
+  [
+    "js/quartzcore/cakeyframeanimation.js~cakeyframeanimation#rotationmode",
+    "class/js/QuartzCore/CAKeyframeAnimation.js~CAKeyframeAnimation.html#instance-member-rotationMode",
+    "js/QuartzCore/CAKeyframeAnimation.js~CAKeyframeAnimation#rotationMode",
+    "member"
+  ],
+  [
+    "js/quartzcore/cakeyframeanimation.js~cakeyframeanimation#tensionvalues",
+    "class/js/QuartzCore/CAKeyframeAnimation.js~CAKeyframeAnimation.html#instance-member-tensionValues",
+    "js/QuartzCore/CAKeyframeAnimation.js~CAKeyframeAnimation#tensionValues",
+    "member"
+  ],
+  [
+    "js/quartzcore/cakeyframeanimation.js~cakeyframeanimation#timingfunctions",
+    "class/js/QuartzCore/CAKeyframeAnimation.js~CAKeyframeAnimation.html#instance-member-timingFunctions",
+    "js/QuartzCore/CAKeyframeAnimation.js~CAKeyframeAnimation#timingFunctions",
+    "member"
+  ],
+  [
+    "js/quartzcore/cakeyframeanimation.js~cakeyframeanimation#values",
+    "class/js/QuartzCore/CAKeyframeAnimation.js~CAKeyframeAnimation.html#instance-member-values",
+    "js/QuartzCore/CAKeyframeAnimation.js~CAKeyframeAnimation#values",
+    "member"
+  ],
+  [
     "js/quartzcore/camediatiming.js",
     "file/js/QuartzCore/CAMediaTiming.js.html",
     "js/QuartzCore/CAMediaTiming.js",
@@ -4032,6 +4998,12 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "js/quartzcore/camediatiming.js~camediatiming#constructor",
+    "class/js/QuartzCore/CAMediaTiming.js~CAMediaTiming.html#instance-constructor-constructor",
+    "js/QuartzCore/CAMediaTiming.js~CAMediaTiming#constructor",
+    "method"
+  ],
+  [
     "js/quartzcore/camediatiming.js~camediatiming#duration",
     "class/js/QuartzCore/CAMediaTiming.js~CAMediaTiming.html#instance-member-duration",
     "js/QuartzCore/CAMediaTiming.js~CAMediaTiming#duration",
@@ -4042,12 +5014,6 @@ window.esdocSearchIndex = [
     "class/js/QuartzCore/CAMediaTiming.js~CAMediaTiming.html#instance-member-fillMode",
     "js/QuartzCore/CAMediaTiming.js~CAMediaTiming#fillMode",
     "member"
-  ],
-  [
-    "js/quartzcore/camediatiming.js~camediatiming#init",
-    "class/js/QuartzCore/CAMediaTiming.js~CAMediaTiming.html#instance-method-init",
-    "js/QuartzCore/CAMediaTiming.js~CAMediaTiming#init",
-    "method"
   ],
   [
     "js/quartzcore/camediatiming.js~camediatiming#repeatcount",
@@ -4080,21 +5046,27 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "js/quartzcore/camediatimingfunction.js~camediatimingfunction#constructor",
+    "class/js/QuartzCore/CAMediaTimingFunction.js~CAMediaTimingFunction.html#instance-constructor-constructor",
+    "js/QuartzCore/CAMediaTimingFunction.js~CAMediaTimingFunction#constructor",
+    "method"
+  ],
+  [
     "js/quartzcore/camediatimingfunction.js~camediatimingfunction#getcontrolpointatvalues",
     "class/js/QuartzCore/CAMediaTimingFunction.js~CAMediaTimingFunction.html#instance-method-getControlPointAtValues",
     "js/QuartzCore/CAMediaTimingFunction.js~CAMediaTimingFunction#getControlPointAtValues",
     "method"
   ],
   [
-    "js/quartzcore/camediatimingfunction.js~camediatimingfunction#init",
-    "class/js/QuartzCore/CAMediaTimingFunction.js~CAMediaTimingFunction.html#instance-method-init",
-    "js/QuartzCore/CAMediaTimingFunction.js~CAMediaTimingFunction#init",
+    "js/quartzcore/camediatimingfunction.js~camediatimingfunction.functionwithcontrolpoints",
+    "class/js/QuartzCore/CAMediaTimingFunction.js~CAMediaTimingFunction.html#static-method-functionWithControlPoints",
+    "js/QuartzCore/CAMediaTimingFunction.js~CAMediaTimingFunction.functionWithControlPoints",
     "method"
   ],
   [
-    "js/quartzcore/camediatimingfunction.js~camediatimingfunction#initcontrolpoints",
-    "class/js/QuartzCore/CAMediaTimingFunction.js~CAMediaTimingFunction.html#instance-method-initControlPoints",
-    "js/QuartzCore/CAMediaTimingFunction.js~CAMediaTimingFunction#initControlPoints",
+    "js/quartzcore/camediatimingfunction.js~camediatimingfunction.functionwithname",
+    "class/js/QuartzCore/CAMediaTimingFunction.js~CAMediaTimingFunction.html#static-method-functionWithName",
+    "js/QuartzCore/CAMediaTimingFunction.js~CAMediaTimingFunction.functionWithName",
     "method"
   ],
   [
@@ -4146,9 +5118,9 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "js/quartzcore/catransform3d.js~catransform3d#init",
-    "class/js/QuartzCore/CATransform3D.js~CATransform3D.html#instance-method-init",
-    "js/QuartzCore/CATransform3D.js~CATransform3D#init",
+    "js/quartzcore/catransform3d.js~catransform3d#constructor",
+    "class/js/QuartzCore/CATransform3D.js~CATransform3D.html#instance-constructor-constructor",
+    "js/QuartzCore/CATransform3D.js~CATransform3D#constructor",
     "method"
   ],
   [
@@ -5208,6 +6180,12 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "js/scenekit/scncylinder.js~scncylinder#constructor",
+    "class/js/SceneKit/SCNCylinder.js~SCNCylinder.html#instance-constructor-constructor",
+    "js/SceneKit/SCNCylinder.js~SCNCylinder#constructor",
+    "method"
+  ],
+  [
     "js/scenekit/scncylinder.js~scncylinder#height",
     "class/js/SceneKit/SCNCylinder.js~SCNCylinder.html#instance-member-height",
     "js/SceneKit/SCNCylinder.js~SCNCylinder#height",
@@ -5218,18 +6196,6 @@ window.esdocSearchIndex = [
     "class/js/SceneKit/SCNCylinder.js~SCNCylinder.html#instance-member-heightSegmentCount",
     "js/SceneKit/SCNCylinder.js~SCNCylinder#heightSegmentCount",
     "member"
-  ],
-  [
-    "js/scenekit/scncylinder.js~scncylinder#init",
-    "class/js/SceneKit/SCNCylinder.js~SCNCylinder.html#instance-method-init",
-    "js/SceneKit/SCNCylinder.js~SCNCylinder#init",
-    "method"
-  ],
-  [
-    "js/scenekit/scncylinder.js~scncylinder#init",
-    "class/js/SceneKit/SCNCylinder.js~SCNCylinder.html#instance-method-init",
-    "js/SceneKit/SCNCylinder.js~SCNCylinder#init",
-    "method"
   ],
   [
     "js/scenekit/scncylinder.js~scncylinder#radialsegmentcount",
@@ -5397,6 +6363,12 @@ window.esdocSearchIndex = [
     "js/scenekit/scngeometry.js~scngeometry#constructor",
     "class/js/SceneKit/SCNGeometry.js~SCNGeometry.html#instance-constructor-constructor",
     "js/SceneKit/SCNGeometry.js~SCNGeometry#constructor",
+    "method"
+  ],
+  [
+    "js/scenekit/scngeometry.js~scngeometry#copy",
+    "class/js/SceneKit/SCNGeometry.js~SCNGeometry.html#instance-method-copy",
+    "js/SceneKit/SCNGeometry.js~SCNGeometry#copy",
     "method"
   ],
   [
@@ -5598,6 +6570,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "js/scenekit/scngeometryelement.js~scngeometryelement#copy",
+    "class/js/SceneKit/SCNGeometryElement.js~SCNGeometryElement.html#instance-method-copy",
+    "js/SceneKit/SCNGeometryElement.js~SCNGeometryElement#copy",
+    "method"
+  ],
+  [
     "js/scenekit/scngeometryelement.js~scngeometryelement#data",
     "class/js/SceneKit/SCNGeometryElement.js~SCNGeometryElement.html#instance-get-data",
     "js/SceneKit/SCNGeometryElement.js~SCNGeometryElement#data",
@@ -5658,6 +6636,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "js/scenekit/scngeometrysource.js~scngeometrysource#copy",
+    "class/js/SceneKit/SCNGeometrySource.js~SCNGeometrySource.html#instance-method-copy",
+    "js/SceneKit/SCNGeometrySource.js~SCNGeometrySource#copy",
+    "method"
+  ],
+  [
     "js/scenekit/scngeometrysource.js~scngeometrysource#data",
     "class/js/SceneKit/SCNGeometrySource.js~SCNGeometrySource.html#instance-get-data",
     "js/SceneKit/SCNGeometrySource.js~SCNGeometrySource#data",
@@ -5676,10 +6660,22 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "js/scenekit/scngeometrysource.js~scngeometrysource#fill",
+    "class/js/SceneKit/SCNGeometrySource.js~SCNGeometrySource.html#instance-method-fill",
+    "js/SceneKit/SCNGeometrySource.js~SCNGeometrySource#fill",
+    "method"
+  ],
+  [
     "js/scenekit/scngeometrysource.js~scngeometrysource#semantic",
     "class/js/SceneKit/SCNGeometrySource.js~SCNGeometrySource.html#instance-get-semantic",
     "js/SceneKit/SCNGeometrySource.js~SCNGeometrySource#semantic",
     "member"
+  ],
+  [
+    "js/scenekit/scngeometrysource.js~scngeometrysource#setvectorat",
+    "class/js/SceneKit/SCNGeometrySource.js~SCNGeometrySource.html#instance-method-setVectorAt",
+    "js/SceneKit/SCNGeometrySource.js~SCNGeometrySource#setVectorAt",
+    "method"
   ],
   [
     "js/scenekit/scngeometrysource.js~scngeometrysource#usesfloatcomponents",
@@ -6102,15 +7098,9 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "js/scenekit/scnlookatconstraint.js~scnlookatconstraint#init",
-    "class/js/SceneKit/SCNLookAtConstraint.js~SCNLookAtConstraint.html#instance-method-init",
-    "js/SceneKit/SCNLookAtConstraint.js~SCNLookAtConstraint#init",
-    "method"
-  ],
-  [
-    "js/scenekit/scnlookatconstraint.js~scnlookatconstraint#init",
-    "class/js/SceneKit/SCNLookAtConstraint.js~SCNLookAtConstraint.html#instance-method-init",
-    "js/SceneKit/SCNLookAtConstraint.js~SCNLookAtConstraint#init",
+    "js/scenekit/scnlookatconstraint.js~scnlookatconstraint#constructor",
+    "class/js/SceneKit/SCNLookAtConstraint.js~SCNLookAtConstraint.html#instance-constructor-constructor",
+    "js/SceneKit/SCNLookAtConstraint.js~SCNLookAtConstraint#constructor",
     "method"
   ],
   [
@@ -6780,6 +7770,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "js/scenekit/scnmorpher.js~scnmorpher#setvalueforkey",
+    "class/js/SceneKit/SCNMorpher.js~SCNMorpher.html#instance-method-setValueForKey",
+    "js/SceneKit/SCNMorpher.js~SCNMorpher#setValueForKey",
+    "method"
+  ],
+  [
     "js/scenekit/scnmorpher.js~scnmorpher#setweightfortargetat",
     "class/js/SceneKit/SCNMorpher.js~SCNMorpher.html#instance-method-setWeightForTargetAt",
     "js/SceneKit/SCNMorpher.js~SCNMorpher#setWeightForTargetAt",
@@ -7093,14 +8089,14 @@ window.esdocSearchIndex = [
   ],
   [
     "js/scenekit/scnnode.js~scnnode#orientation",
-    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-orientation",
+    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-orientation",
     "js/SceneKit/SCNNode.js~SCNNode#orientation",
     "member"
   ],
   [
-    "js/scenekit/scnnode.js~scnnode#orietation",
-    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-orietation",
-    "js/SceneKit/SCNNode.js~SCNNode#orietation",
+    "js/scenekit/scnnode.js~scnnode#orientation",
+    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-orientation",
+    "js/SceneKit/SCNNode.js~SCNNode#orientation",
     "member"
   ],
   [
@@ -7141,13 +8137,13 @@ window.esdocSearchIndex = [
   ],
   [
     "js/scenekit/scnnode.js~scnnode#position",
-    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-position",
+    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-position",
     "js/SceneKit/SCNNode.js~SCNNode#position",
     "member"
   ],
   [
     "js/scenekit/scnnode.js~scnnode#position",
-    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-position",
+    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-position",
     "js/SceneKit/SCNNode.js~SCNNode#position",
     "member"
   ],
@@ -7243,13 +8239,13 @@ window.esdocSearchIndex = [
   ],
   [
     "js/scenekit/scnnode.js~scnnode#rotation",
-    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-rotation",
+    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-rotation",
     "js/SceneKit/SCNNode.js~SCNNode#rotation",
     "member"
   ],
   [
     "js/scenekit/scnnode.js~scnnode#rotation",
-    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-rotation",
+    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-rotation",
     "js/SceneKit/SCNNode.js~SCNNode#rotation",
     "member"
   ],
@@ -7279,13 +8275,13 @@ window.esdocSearchIndex = [
   ],
   [
     "js/scenekit/scnnode.js~scnnode#scale",
-    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-scale",
+    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-scale",
     "js/SceneKit/SCNNode.js~SCNNode#scale",
     "member"
   ],
   [
     "js/scenekit/scnnode.js~scnnode#scale",
-    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-scale",
+    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-scale",
     "js/SceneKit/SCNNode.js~SCNNode#scale",
     "member"
   ],
@@ -7315,21 +8311,15 @@ window.esdocSearchIndex = [
   ],
   [
     "js/scenekit/scnnode.js~scnnode#transform",
-    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-transform",
-    "js/SceneKit/SCNNode.js~SCNNode#transform",
-    "member"
-  ],
-  [
-    "js/scenekit/scnnode.js~scnnode#transform",
     "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-transform",
     "js/SceneKit/SCNNode.js~SCNNode#transform",
     "member"
   ],
   [
-    "js/scenekit/scnnode.js~scnnode#updatetransform",
-    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-updateTransform",
-    "js/SceneKit/SCNNode.js~SCNNode#updateTransform",
-    "method"
+    "js/scenekit/scnnode.js~scnnode#transform",
+    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-transform",
+    "js/SceneKit/SCNNode.js~SCNNode#transform",
+    "member"
   ],
   [
     "js/scenekit/scnnode.js~scnnode#viewprojectiontransform",
@@ -7500,15 +8490,9 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
-    "js/scenekit/scnparticlepropertycontroller.js~scnparticlepropertycontroller#init",
-    "class/js/SceneKit/SCNParticlePropertyController.js~SCNParticlePropertyController.html#instance-method-init",
-    "js/SceneKit/SCNParticlePropertyController.js~SCNParticlePropertyController#init",
-    "method"
-  ],
-  [
-    "js/scenekit/scnparticlepropertycontroller.js~scnparticlepropertycontroller#init",
-    "class/js/SceneKit/SCNParticlePropertyController.js~SCNParticlePropertyController.html#instance-method-init",
-    "js/SceneKit/SCNParticlePropertyController.js~SCNParticlePropertyController#init",
+    "js/scenekit/scnparticlepropertycontroller.js~scnparticlepropertycontroller#constructor",
+    "class/js/SceneKit/SCNParticlePropertyController.js~SCNParticlePropertyController.html#instance-constructor-constructor",
+    "js/SceneKit/SCNParticlePropertyController.js~SCNParticlePropertyController#constructor",
     "method"
   ],
   [
@@ -7998,15 +8982,9 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
-    "js/scenekit/scnphysicsballsocketjoint.js~scnphysicsballsocketjoint#init",
-    "class/js/SceneKit/SCNPhysicsBallSocketJoint.js~SCNPhysicsBallSocketJoint.html#instance-method-init",
-    "js/SceneKit/SCNPhysicsBallSocketJoint.js~SCNPhysicsBallSocketJoint#init",
-    "method"
-  ],
-  [
-    "js/scenekit/scnphysicsballsocketjoint.js~scnphysicsballsocketjoint#init",
-    "class/js/SceneKit/SCNPhysicsBallSocketJoint.js~SCNPhysicsBallSocketJoint.html#instance-method-init",
-    "js/SceneKit/SCNPhysicsBallSocketJoint.js~SCNPhysicsBallSocketJoint#init",
+    "js/scenekit/scnphysicsballsocketjoint.js~scnphysicsballsocketjoint#constructor",
+    "class/js/SceneKit/SCNPhysicsBallSocketJoint.js~SCNPhysicsBallSocketJoint.html#instance-constructor-constructor",
+    "js/SceneKit/SCNPhysicsBallSocketJoint.js~SCNPhysicsBallSocketJoint#constructor",
     "method"
   ],
   [
@@ -8094,6 +9072,12 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "js/scenekit/scnphysicsbody.js~scnphysicsbody#constructor",
+    "class/js/SceneKit/SCNPhysicsBody.js~SCNPhysicsBody.html#instance-constructor-constructor",
+    "js/SceneKit/SCNPhysicsBody.js~SCNPhysicsBody#constructor",
+    "method"
+  ],
+  [
     "js/scenekit/scnphysicsbody.js~scnphysicsbody#contacttestbitmask",
     "class/js/SceneKit/SCNPhysicsBody.js~SCNPhysicsBody.html#instance-member-contactTestBitMask",
     "js/SceneKit/SCNPhysicsBody.js~SCNPhysicsBody#contactTestBitMask",
@@ -8110,18 +9094,6 @@ window.esdocSearchIndex = [
     "class/js/SceneKit/SCNPhysicsBody.js~SCNPhysicsBody.html#instance-member-friction",
     "js/SceneKit/SCNPhysicsBody.js~SCNPhysicsBody#friction",
     "member"
-  ],
-  [
-    "js/scenekit/scnphysicsbody.js~scnphysicsbody#init",
-    "class/js/SceneKit/SCNPhysicsBody.js~SCNPhysicsBody.html#instance-method-init",
-    "js/SceneKit/SCNPhysicsBody.js~SCNPhysicsBody#init",
-    "method"
-  ],
-  [
-    "js/scenekit/scnphysicsbody.js~scnphysicsbody#init",
-    "class/js/SceneKit/SCNPhysicsBody.js~SCNPhysicsBody.html#instance-method-init",
-    "js/SceneKit/SCNPhysicsBody.js~SCNPhysicsBody#init",
-    "method"
   ],
   [
     "js/scenekit/scnphysicsbody.js~scnphysicsbody#isaffectedbygravity",
@@ -8526,15 +9498,9 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
-    "js/scenekit/scnphysicshingejoint.js~scnphysicshingejoint#init",
-    "class/js/SceneKit/SCNPhysicsHingeJoint.js~SCNPhysicsHingeJoint.html#instance-method-init",
-    "js/SceneKit/SCNPhysicsHingeJoint.js~SCNPhysicsHingeJoint#init",
-    "method"
-  ],
-  [
-    "js/scenekit/scnphysicshingejoint.js~scnphysicshingejoint#init",
-    "class/js/SceneKit/SCNPhysicsHingeJoint.js~SCNPhysicsHingeJoint.html#instance-method-init",
-    "js/SceneKit/SCNPhysicsHingeJoint.js~SCNPhysicsHingeJoint#init",
+    "js/scenekit/scnphysicshingejoint.js~scnphysicshingejoint#constructor",
+    "class/js/SceneKit/SCNPhysicsHingeJoint.js~SCNPhysicsHingeJoint.html#instance-constructor-constructor",
+    "js/SceneKit/SCNPhysicsHingeJoint.js~SCNPhysicsHingeJoint#constructor",
     "method"
   ],
   [
@@ -8544,15 +9510,9 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "js/scenekit/scnphysicsshape.js~scnphysicsshape#init",
-    "class/js/SceneKit/SCNPhysicsShape.js~SCNPhysicsShape.html#instance-method-init",
-    "js/SceneKit/SCNPhysicsShape.js~SCNPhysicsShape#init",
-    "method"
-  ],
-  [
-    "js/scenekit/scnphysicsshape.js~scnphysicsshape#init",
-    "class/js/SceneKit/SCNPhysicsShape.js~SCNPhysicsShape.html#instance-method-init",
-    "js/SceneKit/SCNPhysicsShape.js~SCNPhysicsShape#init",
+    "js/scenekit/scnphysicsshape.js~scnphysicsshape#constructor",
+    "class/js/SceneKit/SCNPhysicsShape.js~SCNPhysicsShape.html#instance-constructor-constructor",
+    "js/SceneKit/SCNPhysicsShape.js~SCNPhysicsShape#constructor",
     "method"
   ],
   [
@@ -8628,15 +9588,9 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
-    "js/scenekit/scnphysicssliderjoint.js~scnphysicssliderjoint#init",
-    "class/js/SceneKit/SCNPhysicsSliderJoint.js~SCNPhysicsSliderJoint.html#instance-method-init",
-    "js/SceneKit/SCNPhysicsSliderJoint.js~SCNPhysicsSliderJoint#init",
-    "method"
-  ],
-  [
-    "js/scenekit/scnphysicssliderjoint.js~scnphysicssliderjoint#init",
-    "class/js/SceneKit/SCNPhysicsSliderJoint.js~SCNPhysicsSliderJoint.html#instance-method-init",
-    "js/SceneKit/SCNPhysicsSliderJoint.js~SCNPhysicsSliderJoint#init",
+    "js/scenekit/scnphysicssliderjoint.js~scnphysicssliderjoint#constructor",
+    "class/js/SceneKit/SCNPhysicsSliderJoint.js~SCNPhysicsSliderJoint.html#instance-constructor-constructor",
+    "js/SceneKit/SCNPhysicsSliderJoint.js~SCNPhysicsSliderJoint#constructor",
     "method"
   ],
   [
@@ -8712,15 +9666,9 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
-    "js/scenekit/scnphysicsvehicle.js~scnphysicsvehicle#init",
-    "class/js/SceneKit/SCNPhysicsVehicle.js~SCNPhysicsVehicle.html#instance-method-init",
-    "js/SceneKit/SCNPhysicsVehicle.js~SCNPhysicsVehicle#init",
-    "method"
-  ],
-  [
-    "js/scenekit/scnphysicsvehicle.js~scnphysicsvehicle#init",
-    "class/js/SceneKit/SCNPhysicsVehicle.js~SCNPhysicsVehicle.html#instance-method-init",
-    "js/SceneKit/SCNPhysicsVehicle.js~SCNPhysicsVehicle#init",
+    "js/scenekit/scnphysicsvehicle.js~scnphysicsvehicle#constructor",
+    "class/js/SceneKit/SCNPhysicsVehicle.js~SCNPhysicsVehicle.html#instance-constructor-constructor",
+    "js/SceneKit/SCNPhysicsVehicle.js~SCNPhysicsVehicle#constructor",
     "method"
   ],
   [
@@ -8760,22 +9708,16 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "js/scenekit/scnphysicsvehiclewheel.js~scnphysicsvehiclewheel#constructor",
+    "class/js/SceneKit/SCNPhysicsVehicleWheel.js~SCNPhysicsVehicleWheel.html#instance-constructor-constructor",
+    "js/SceneKit/SCNPhysicsVehicleWheel.js~SCNPhysicsVehicleWheel#constructor",
+    "method"
+  ],
+  [
     "js/scenekit/scnphysicsvehiclewheel.js~scnphysicsvehiclewheel#frictionslip",
     "class/js/SceneKit/SCNPhysicsVehicleWheel.js~SCNPhysicsVehicleWheel.html#instance-member-frictionSlip",
     "js/SceneKit/SCNPhysicsVehicleWheel.js~SCNPhysicsVehicleWheel#frictionSlip",
     "member"
-  ],
-  [
-    "js/scenekit/scnphysicsvehiclewheel.js~scnphysicsvehiclewheel#init",
-    "class/js/SceneKit/SCNPhysicsVehicleWheel.js~SCNPhysicsVehicleWheel.html#instance-method-init",
-    "js/SceneKit/SCNPhysicsVehicleWheel.js~SCNPhysicsVehicleWheel#init",
-    "method"
-  ],
-  [
-    "js/scenekit/scnphysicsvehiclewheel.js~scnphysicsvehiclewheel#init",
-    "class/js/SceneKit/SCNPhysicsVehicleWheel.js~SCNPhysicsVehicleWheel.html#instance-method-init",
-    "js/SceneKit/SCNPhysicsVehicleWheel.js~SCNPhysicsVehicleWheel#init",
-    "method"
   ],
   [
     "js/scenekit/scnphysicsvehiclewheel.js~scnphysicsvehiclewheel#maximumsuspensionforce",
@@ -8850,6 +9792,12 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "js/scenekit/scnphysicsworld.js~scnphysicsworld#constructor",
+    "class/js/SceneKit/SCNPhysicsWorld.js~SCNPhysicsWorld.html#instance-constructor-constructor",
+    "js/SceneKit/SCNPhysicsWorld.js~SCNPhysicsWorld#constructor",
+    "method"
+  ],
+  [
     "js/scenekit/scnphysicsworld.js~scnphysicsworld#contactdelegate",
     "class/js/SceneKit/SCNPhysicsWorld.js~SCNPhysicsWorld.html#instance-member-contactDelegate",
     "js/SceneKit/SCNPhysicsWorld.js~SCNPhysicsWorld#contactDelegate",
@@ -8878,12 +9826,6 @@ window.esdocSearchIndex = [
     "class/js/SceneKit/SCNPhysicsWorld.js~SCNPhysicsWorld.html#instance-member-gravity",
     "js/SceneKit/SCNPhysicsWorld.js~SCNPhysicsWorld#gravity",
     "member"
-  ],
-  [
-    "js/scenekit/scnphysicsworld.js~scnphysicsworld#init",
-    "class/js/SceneKit/SCNPhysicsWorld.js~SCNPhysicsWorld.html#instance-method-init",
-    "js/SceneKit/SCNPhysicsWorld.js~SCNPhysicsWorld#init",
-    "method"
   ],
   [
     "js/scenekit/scnphysicsworld.js~scnphysicsworld#raytestwithsegmentfromto",
@@ -8940,6 +9882,12 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "js/scenekit/scnplane.js~scnplane#constructor",
+    "class/js/SceneKit/SCNPlane.js~SCNPlane.html#instance-constructor-constructor",
+    "js/SceneKit/SCNPlane.js~SCNPlane#constructor",
+    "method"
+  ],
+  [
     "js/scenekit/scnplane.js~scnplane#cornerradius",
     "class/js/SceneKit/SCNPlane.js~SCNPlane.html#instance-member-cornerRadius",
     "js/SceneKit/SCNPlane.js~SCNPlane#cornerRadius",
@@ -8962,18 +9910,6 @@ window.esdocSearchIndex = [
     "class/js/SceneKit/SCNPlane.js~SCNPlane.html#instance-member-heightSegmentCount",
     "js/SceneKit/SCNPlane.js~SCNPlane#heightSegmentCount",
     "member"
-  ],
-  [
-    "js/scenekit/scnplane.js~scnplane#init",
-    "class/js/SceneKit/SCNPlane.js~SCNPlane.html#instance-method-init",
-    "js/SceneKit/SCNPlane.js~SCNPlane#init",
-    "method"
-  ],
-  [
-    "js/scenekit/scnplane.js~scnplane#init",
-    "class/js/SceneKit/SCNPlane.js~SCNPlane.html#instance-method-init",
-    "js/SceneKit/SCNPlane.js~SCNPlane#init",
-    "method"
   ],
   [
     "js/scenekit/scnplane.js~scnplane#width",
@@ -9120,6 +10056,12 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "js/scenekit/scnpyramid.js~scnpyramid#constructor",
+    "class/js/SceneKit/SCNPyramid.js~SCNPyramid.html#instance-constructor-constructor",
+    "js/SceneKit/SCNPyramid.js~SCNPyramid#constructor",
+    "method"
+  ],
+  [
     "js/scenekit/scnpyramid.js~scnpyramid#height",
     "class/js/SceneKit/SCNPyramid.js~SCNPyramid.html#instance-member-height",
     "js/SceneKit/SCNPyramid.js~SCNPyramid#height",
@@ -9130,18 +10072,6 @@ window.esdocSearchIndex = [
     "class/js/SceneKit/SCNPyramid.js~SCNPyramid.html#instance-member-heightSegmentCount",
     "js/SceneKit/SCNPyramid.js~SCNPyramid#heightSegmentCount",
     "member"
-  ],
-  [
-    "js/scenekit/scnpyramid.js~scnpyramid#init",
-    "class/js/SceneKit/SCNPyramid.js~SCNPyramid.html#instance-method-init",
-    "js/SceneKit/SCNPyramid.js~SCNPyramid#init",
-    "method"
-  ],
-  [
-    "js/scenekit/scnpyramid.js~scnpyramid#init",
-    "class/js/SceneKit/SCNPyramid.js~SCNPyramid.html#instance-method-init",
-    "js/SceneKit/SCNPyramid.js~SCNPyramid#init",
-    "method"
   ],
   [
     "js/scenekit/scnpyramid.js~scnpyramid#length",
@@ -9372,6 +10302,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "js/scenekit/scnrenderer.js~scnrenderer#preparebuffer",
+    "class/js/SceneKit/SCNRenderer.js~SCNRenderer.html#instance-method-prepareBuffer",
+    "js/SceneKit/SCNRenderer.js~SCNRenderer#prepareBuffer",
+    "method"
+  ],
+  [
     "js/scenekit/scnrenderer.js~scnrenderer#prepareshouldabortblock",
     "class/js/SceneKit/SCNRenderer.js~SCNRenderer.html#instance-method-prepareShouldAbortBlock",
     "js/SceneKit/SCNRenderer.js~SCNRenderer#prepareShouldAbortBlock",
@@ -9522,24 +10458,6 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
-    "js/scenekit/scnscene.js~scnscene#init",
-    "class/js/SceneKit/SCNScene.js~SCNScene.html#instance-method-init",
-    "js/SceneKit/SCNScene.js~SCNScene#init",
-    "method"
-  ],
-  [
-    "js/scenekit/scnscene.js~scnscene#initnamed",
-    "class/js/SceneKit/SCNScene.js~SCNScene.html#instance-method-initNamed",
-    "js/SceneKit/SCNScene.js~SCNScene#initNamed",
-    "method"
-  ],
-  [
-    "js/scenekit/scnscene.js~scnscene#initnamedindirectory",
-    "class/js/SceneKit/SCNScene.js~SCNScene.html#instance-method-initNamedInDirectory",
-    "js/SceneKit/SCNScene.js~SCNScene#initNamedInDirectory",
-    "method"
-  ],
-  [
     "js/scenekit/scnscene.js~scnscene#ispaused",
     "class/js/SceneKit/SCNScene.js~SCNScene.html#instance-member-isPaused",
     "js/SceneKit/SCNScene.js~SCNScene#isPaused",
@@ -9598,6 +10516,24 @@ window.esdocSearchIndex = [
     "class/js/SceneKit/SCNScene.js~SCNScene.html#static-get-Attribute",
     "js/SceneKit/SCNScene.js~SCNScene.Attribute",
     "member"
+  ],
+  [
+    "js/scenekit/scnscene.js~scnscene.scene",
+    "class/js/SceneKit/SCNScene.js~SCNScene.html#static-method-scene",
+    "js/SceneKit/SCNScene.js~SCNScene.scene",
+    "method"
+  ],
+  [
+    "js/scenekit/scnscene.js~scnscene.scenenamed",
+    "class/js/SceneKit/SCNScene.js~SCNScene.html#static-method-sceneNamed",
+    "js/SceneKit/SCNScene.js~SCNScene.sceneNamed",
+    "method"
+  ],
+  [
+    "js/scenekit/scnscene.js~scnscene.scenenamedindirectory",
+    "class/js/SceneKit/SCNScene.js~SCNScene.html#static-method-sceneNamedInDirectory",
+    "js/SceneKit/SCNScene.js~SCNScene.sceneNamedInDirectory",
+    "method"
   ],
   [
     "js/scenekit/scnsceneexportdelegate.js",
@@ -10044,22 +10980,16 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "js/scenekit/scnshape.js~scnshape#constructor",
+    "class/js/SceneKit/SCNShape.js~SCNShape.html#instance-constructor-constructor",
+    "js/SceneKit/SCNShape.js~SCNShape#constructor",
+    "method"
+  ],
+  [
     "js/scenekit/scnshape.js~scnshape#extrusiondepth",
     "class/js/SceneKit/SCNShape.js~SCNShape.html#instance-member-extrusionDepth",
     "js/SceneKit/SCNShape.js~SCNShape#extrusionDepth",
     "member"
-  ],
-  [
-    "js/scenekit/scnshape.js~scnshape#init",
-    "class/js/SceneKit/SCNShape.js~SCNShape.html#instance-method-init",
-    "js/SceneKit/SCNShape.js~SCNShape#init",
-    "method"
-  ],
-  [
-    "js/scenekit/scnshape.js~scnshape#init",
-    "class/js/SceneKit/SCNShape.js~SCNShape.html#instance-method-init",
-    "js/SceneKit/SCNShape.js~SCNShape#init",
-    "method"
   ],
   [
     "js/scenekit/scnshape.js~scnshape#path",
@@ -10120,6 +11050,12 @@ window.esdocSearchIndex = [
     "class/js/SceneKit/SCNSkinner.js~SCNSkinner.html#instance-method-float32Array",
     "js/SceneKit/SCNSkinner.js~SCNSkinner#float32Array",
     "method"
+  ],
+  [
+    "js/scenekit/scnskinner.js~scnskinner#numskinningjoints",
+    "class/js/SceneKit/SCNSkinner.js~SCNSkinner.html#instance-get-numSkinningJoints",
+    "js/SceneKit/SCNSkinner.js~SCNSkinner#numSkinningJoints",
+    "member"
   ],
   [
     "js/scenekit/scnskinner.js~scnskinner#skeleton",
@@ -10236,6 +11172,12 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "js/scenekit/scntext.js~scntext#constructor",
+    "class/js/SceneKit/SCNText.js~SCNText.html#instance-constructor-constructor",
+    "js/SceneKit/SCNText.js~SCNText#constructor",
+    "method"
+  ],
+  [
     "js/scenekit/scntext.js~scntext#containerframe",
     "class/js/SceneKit/SCNText.js~SCNText.html#instance-member-containerFrame",
     "js/SceneKit/SCNText.js~SCNText#containerFrame",
@@ -10258,18 +11200,6 @@ window.esdocSearchIndex = [
     "class/js/SceneKit/SCNText.js~SCNText.html#instance-member-font",
     "js/SceneKit/SCNText.js~SCNText#font",
     "member"
-  ],
-  [
-    "js/scenekit/scntext.js~scntext#init",
-    "class/js/SceneKit/SCNText.js~SCNText.html#instance-method-init",
-    "js/SceneKit/SCNText.js~SCNText#init",
-    "method"
-  ],
-  [
-    "js/scenekit/scntext.js~scntext#init",
-    "class/js/SceneKit/SCNText.js~SCNText.html#instance-method-init",
-    "js/SceneKit/SCNText.js~SCNText#init",
-    "method"
   ],
   [
     "js/scenekit/scntext.js~scntext#iswrapped",
@@ -10302,15 +11232,9 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "js/scenekit/scntorus.js~scntorus#init",
-    "class/js/SceneKit/SCNTorus.js~SCNTorus.html#instance-method-init",
-    "js/SceneKit/SCNTorus.js~SCNTorus#init",
-    "method"
-  ],
-  [
-    "js/scenekit/scntorus.js~scntorus#init",
-    "class/js/SceneKit/SCNTorus.js~SCNTorus.html#instance-method-init",
-    "js/SceneKit/SCNTorus.js~SCNTorus#init",
+    "js/scenekit/scntorus.js~scntorus#constructor",
+    "class/js/SceneKit/SCNTorus.js~SCNTorus.html#instance-constructor-constructor",
+    "js/SceneKit/SCNTorus.js~SCNTorus#constructor",
     "method"
   ],
   [
@@ -10344,16 +11268,10 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "js/scenekit/scntransaction.js~scntransaction#init",
-    "class/js/SceneKit/SCNTransaction.js~SCNTransaction.html#instance-method-init",
-    "js/SceneKit/SCNTransaction.js~SCNTransaction#init",
+    "js/scenekit/scntransaction.js~scntransaction#constructor",
+    "class/js/SceneKit/SCNTransaction.js~SCNTransaction.html#instance-constructor-constructor",
+    "js/SceneKit/SCNTransaction.js~SCNTransaction#constructor",
     "method"
-  ],
-  [
-    "js/scenekit/scntransaction.js~scntransaction.animationduration",
-    "class/js/SceneKit/SCNTransaction.js~SCNTransaction.html#static-set-animationDuration",
-    "js/SceneKit/SCNTransaction.js~SCNTransaction.animationDuration",
-    "member"
   ],
   [
     "js/scenekit/scntransaction.js~scntransaction.animationduration",
@@ -10362,14 +11280,20 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
-    "js/scenekit/scntransaction.js~scntransaction.animationtimingfunction",
-    "class/js/SceneKit/SCNTransaction.js~SCNTransaction.html#static-set-animationTimingFunction",
-    "js/SceneKit/SCNTransaction.js~SCNTransaction.animationTimingFunction",
+    "js/scenekit/scntransaction.js~scntransaction.animationduration",
+    "class/js/SceneKit/SCNTransaction.js~SCNTransaction.html#static-set-animationDuration",
+    "js/SceneKit/SCNTransaction.js~SCNTransaction.animationDuration",
     "member"
   ],
   [
     "js/scenekit/scntransaction.js~scntransaction.animationtimingfunction",
     "class/js/SceneKit/SCNTransaction.js~SCNTransaction.html#static-get-animationTimingFunction",
+    "js/SceneKit/SCNTransaction.js~SCNTransaction.animationTimingFunction",
+    "member"
+  ],
+  [
+    "js/scenekit/scntransaction.js~scntransaction.animationtimingfunction",
+    "class/js/SceneKit/SCNTransaction.js~SCNTransaction.html#static-set-animationTimingFunction",
     "js/SceneKit/SCNTransaction.js~SCNTransaction.animationTimingFunction",
     "member"
   ],
@@ -10399,13 +11323,13 @@ window.esdocSearchIndex = [
   ],
   [
     "js/scenekit/scntransaction.js~scntransaction.disableactions",
-    "class/js/SceneKit/SCNTransaction.js~SCNTransaction.html#static-set-disableActions",
+    "class/js/SceneKit/SCNTransaction.js~SCNTransaction.html#static-get-disableActions",
     "js/SceneKit/SCNTransaction.js~SCNTransaction.disableActions",
     "member"
   ],
   [
     "js/scenekit/scntransaction.js~scntransaction.disableactions",
-    "class/js/SceneKit/SCNTransaction.js~SCNTransaction.html#static-get-disableActions",
+    "class/js/SceneKit/SCNTransaction.js~SCNTransaction.html#static-set-disableActions",
     "js/SceneKit/SCNTransaction.js~SCNTransaction.disableActions",
     "member"
   ],
@@ -10716,9 +11640,21 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "js/scenekit/scnvector4.js~scnvector4#quattorotation",
+    "class/js/SceneKit/SCNVector4.js~SCNVector4.html#instance-method-quatToRotation",
+    "js/SceneKit/SCNVector4.js~SCNVector4#quatToRotation",
+    "method"
+  ],
+  [
     "js/scenekit/scnvector4.js~scnvector4#rotmatrix",
     "class/js/SceneKit/SCNVector4.js~SCNVector4.html#instance-method-rotMatrix",
     "js/SceneKit/SCNVector4.js~SCNVector4#rotMatrix",
+    "method"
+  ],
+  [
+    "js/scenekit/scnvector4.js~scnvector4#rotationtoquat",
+    "class/js/SceneKit/SCNVector4.js~SCNVector4.html#instance-method-rotationToQuat",
+    "js/SceneKit/SCNVector4.js~SCNVector4#rotationToQuat",
     "method"
   ],
   [
@@ -10824,6 +11760,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "js/scenekit/scnview.js~scnview#attributechangedcallback",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-method-attributeChangedCallback",
+    "js/SceneKit/SCNView.js~SCNView#attributeChangedCallback",
+    "method"
+  ],
+  [
     "js/scenekit/scnview.js~scnview#audioengine",
     "class/js/SceneKit/SCNView.js~SCNView.html#instance-get-audioEngine",
     "js/SceneKit/SCNView.js~SCNView#audioEngine",
@@ -10837,25 +11779,25 @@ window.esdocSearchIndex = [
   ],
   [
     "js/scenekit/scnview.js~scnview#audiolistener",
-    "class/js/SceneKit/SCNView.js~SCNView.html#instance-get-audioListener",
-    "js/SceneKit/SCNView.js~SCNView#audioListener",
-    "member"
-  ],
-  [
-    "js/scenekit/scnview.js~scnview#audiolistener",
     "class/js/SceneKit/SCNView.js~SCNView.html#instance-set-audioListener",
     "js/SceneKit/SCNView.js~SCNView#audioListener",
     "member"
   ],
   [
-    "js/scenekit/scnview.js~scnview#autoenablesdefaultlighting",
-    "class/js/SceneKit/SCNView.js~SCNView.html#instance-set-autoenablesDefaultLighting",
-    "js/SceneKit/SCNView.js~SCNView#autoenablesDefaultLighting",
+    "js/scenekit/scnview.js~scnview#audiolistener",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-get-audioListener",
+    "js/SceneKit/SCNView.js~SCNView#audioListener",
     "member"
   ],
   [
     "js/scenekit/scnview.js~scnview#autoenablesdefaultlighting",
     "class/js/SceneKit/SCNView.js~SCNView.html#instance-get-autoenablesDefaultLighting",
+    "js/SceneKit/SCNView.js~SCNView#autoenablesDefaultLighting",
+    "member"
+  ],
+  [
+    "js/scenekit/scnview.js~scnview#autoenablesdefaultlighting",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-set-autoenablesDefaultLighting",
     "js/SceneKit/SCNView.js~SCNView#autoenablesDefaultLighting",
     "member"
   ],
@@ -10878,6 +11820,12 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "js/scenekit/scnview.js~scnview#connectedcallback",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-method-connectedCallback",
+    "js/SceneKit/SCNView.js~SCNView#connectedCallback",
+    "method"
+  ],
+  [
     "js/scenekit/scnview.js~scnview#constructor",
     "class/js/SceneKit/SCNView.js~SCNView.html#instance-constructor-constructor",
     "js/SceneKit/SCNView.js~SCNView#constructor",
@@ -10897,13 +11845,13 @@ window.esdocSearchIndex = [
   ],
   [
     "js/scenekit/scnview.js~scnview#currenttime",
-    "class/js/SceneKit/SCNView.js~SCNView.html#instance-get-currentTime",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-set-currentTime",
     "js/SceneKit/SCNView.js~SCNView#currentTime",
     "member"
   ],
   [
     "js/scenekit/scnview.js~scnview#currenttime",
-    "class/js/SceneKit/SCNView.js~SCNView.html#instance-set-currentTime",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-get-currentTime",
     "js/SceneKit/SCNView.js~SCNView#currentTime",
     "member"
   ],
@@ -10942,6 +11890,12 @@ window.esdocSearchIndex = [
     "class/js/SceneKit/SCNView.js~SCNView.html#instance-get-device",
     "js/SceneKit/SCNView.js~SCNView#device",
     "member"
+  ],
+  [
+    "js/scenekit/scnview.js~scnview#disconnectedcallback",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-method-disconnectedCallback",
+    "js/SceneKit/SCNView.js~SCNView#disconnectedCallback",
+    "method"
   ],
   [
     "js/scenekit/scnview.js~scnview#hittest",
@@ -10999,13 +11953,13 @@ window.esdocSearchIndex = [
   ],
   [
     "js/scenekit/scnview.js~scnview#overlayskscene",
-    "class/js/SceneKit/SCNView.js~SCNView.html#instance-set-overlaySKScene",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-get-overlaySKScene",
     "js/SceneKit/SCNView.js~SCNView#overlaySKScene",
     "member"
   ],
   [
     "js/scenekit/scnview.js~scnview#overlayskscene",
-    "class/js/SceneKit/SCNView.js~SCNView.html#instance-get-overlaySKScene",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-set-overlaySKScene",
     "js/SceneKit/SCNView.js~SCNView#overlaySKScene",
     "member"
   ],
@@ -11077,13 +12031,13 @@ window.esdocSearchIndex = [
   ],
   [
     "js/scenekit/scnview.js~scnview#scenetime",
-    "class/js/SceneKit/SCNView.js~SCNView.html#instance-set-sceneTime",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-get-sceneTime",
     "js/SceneKit/SCNView.js~SCNView#sceneTime",
     "member"
   ],
   [
     "js/scenekit/scnview.js~scnview#scenetime",
-    "class/js/SceneKit/SCNView.js~SCNView.html#instance-get-sceneTime",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-set-sceneTime",
     "js/SceneKit/SCNView.js~SCNView#sceneTime",
     "member"
   ],
@@ -11095,13 +12049,13 @@ window.esdocSearchIndex = [
   ],
   [
     "js/scenekit/scnview.js~scnview#showsstatistics",
-    "class/js/SceneKit/SCNView.js~SCNView.html#instance-get-showsStatistics",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-set-showsStatistics",
     "js/SceneKit/SCNView.js~SCNView#showsStatistics",
     "member"
   ],
   [
     "js/scenekit/scnview.js~scnview#showsstatistics",
-    "class/js/SceneKit/SCNView.js~SCNView.html#instance-set-showsStatistics",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-get-showsStatistics",
     "js/SceneKit/SCNView.js~SCNView#showsStatistics",
     "member"
   ],
@@ -11349,6 +12303,390 @@ window.esdocSearchIndex = [
     "js/main.js",
     "file/js/main.js.html",
     "js/main.js",
+    "file"
+  ],
+  [
+    "js/third_party/binaryparser.js",
+    "file/js/third_party/BinaryParser.js.html",
+    "js/third_party/BinaryParser.js",
+    "file"
+  ],
+  [
+    "js/third_party/ecl.js",
+    "file/js/third_party/ecl.js.html",
+    "js/third_party/ecl.js",
+    "file"
+  ],
+  [
+    "js/util/_ajaxrequest.js",
+    "file/js/util/_AjaxRequest.js.html",
+    "js/util/_AjaxRequest.js",
+    "file"
+  ],
+  [
+    "js/util/_ajaxrequest.js~ajaxrequest#constructor",
+    "class/js/util/_AjaxRequest.js~AjaxRequest.html#instance-constructor-constructor",
+    "js/util/_AjaxRequest.js~AjaxRequest#constructor",
+    "method"
+  ],
+  [
+    "js/util/_ajaxrequest.js~ajaxrequest#defaultoptions",
+    "class/js/util/_AjaxRequest.js~AjaxRequest.html#instance-member-defaultOptions",
+    "js/util/_AjaxRequest.js~AjaxRequest#defaultOptions",
+    "member"
+  ],
+  [
+    "js/util/_ajaxrequest.js~ajaxrequest#get",
+    "class/js/util/_AjaxRequest.js~AjaxRequest.html#instance-method-get",
+    "js/util/_AjaxRequest.js~AjaxRequest#get",
+    "method"
+  ],
+  [
+    "js/util/_ajaxrequest.js~ajaxrequest#jsonp",
+    "class/js/util/_AjaxRequest.js~AjaxRequest.html#instance-method-jsonp",
+    "js/util/_AjaxRequest.js~AjaxRequest#jsonp",
+    "method"
+  ],
+  [
+    "js/util/_ajaxrequest.js~ajaxrequest#jsonpcallbackprefix",
+    "class/js/util/_AjaxRequest.js~AjaxRequest.html#instance-member-jsonpCallbackPrefix",
+    "js/util/_AjaxRequest.js~AjaxRequest#jsonpCallbackPrefix",
+    "member"
+  ],
+  [
+    "js/util/_ajaxrequest.js~ajaxrequest#jsonpscripts",
+    "class/js/util/_AjaxRequest.js~AjaxRequest.html#instance-member-jsonpScripts",
+    "js/util/_AjaxRequest.js~AjaxRequest#jsonpScripts",
+    "member"
+  ],
+  [
+    "js/util/_ajaxrequest.js~ajaxrequest#post",
+    "class/js/util/_AjaxRequest.js~AjaxRequest.html#instance-method-post",
+    "js/util/_AjaxRequest.js~AjaxRequest#post",
+    "method"
+  ],
+  [
+    "js/util/_ajaxrequest.js~ajaxrequest#request",
+    "class/js/util/_AjaxRequest.js~AjaxRequest.html#instance-method-request",
+    "js/util/_AjaxRequest.js~AjaxRequest#request",
+    "method"
+  ],
+  [
+    "js/util/_binaryreader.js",
+    "file/js/util/_BinaryReader.js.html",
+    "js/util/_BinaryReader.js",
+    "file"
+  ],
+  [
+    "js/util/_binaryreader.js~_binaryreader#bigendian",
+    "class/js/util/_BinaryReader.js~_BinaryReader.html#instance-member-bigEndian",
+    "js/util/_BinaryReader.js~_BinaryReader#bigEndian",
+    "member"
+  ],
+  [
+    "js/util/_binaryreader.js~_binaryreader#buffer",
+    "class/js/util/_BinaryReader.js~_BinaryReader.html#instance-member-buffer",
+    "js/util/_BinaryReader.js~_BinaryReader#buffer",
+    "member"
+  ],
+  [
+    "js/util/_binaryreader.js~_binaryreader#constructor",
+    "class/js/util/_BinaryReader.js~_BinaryReader.html#instance-constructor-constructor",
+    "js/util/_BinaryReader.js~_BinaryReader#constructor",
+    "method"
+  ],
+  [
+    "js/util/_binaryreader.js~_binaryreader#encoding",
+    "class/js/util/_BinaryReader.js~_BinaryReader.html#instance-member-encoding",
+    "js/util/_BinaryReader.js~_BinaryReader#encoding",
+    "member"
+  ],
+  [
+    "js/util/_binaryreader.js~_binaryreader#getavailabledatalength",
+    "class/js/util/_BinaryReader.js~_BinaryReader.html#instance-method-getAvailableDataLength",
+    "js/util/_BinaryReader.js~_BinaryReader#getAvailableDataLength",
+    "method"
+  ],
+  [
+    "js/util/_binaryreader.js~_binaryreader#length",
+    "class/js/util/_BinaryReader.js~_BinaryReader.html#instance-get-length",
+    "js/util/_BinaryReader.js~_BinaryReader#length",
+    "member"
+  ],
+  [
+    "js/util/_binaryreader.js~_binaryreader#readbyte",
+    "class/js/util/_BinaryReader.js~_BinaryReader.html#instance-method-readByte",
+    "js/util/_BinaryReader.js~_BinaryReader#readByte",
+    "method"
+  ],
+  [
+    "js/util/_binaryreader.js~_binaryreader#readdata",
+    "class/js/util/_BinaryReader.js~_BinaryReader.html#instance-method-readData",
+    "js/util/_BinaryReader.js~_BinaryReader#readData",
+    "method"
+  ],
+  [
+    "js/util/_binaryreader.js~_binaryreader#readdouble",
+    "class/js/util/_BinaryReader.js~_BinaryReader.html#instance-method-readDouble",
+    "js/util/_BinaryReader.js~_BinaryReader#readDouble",
+    "method"
+  ],
+  [
+    "js/util/_binaryreader.js~_binaryreader#readfloat",
+    "class/js/util/_BinaryReader.js~_BinaryReader.html#instance-method-readFloat",
+    "js/util/_BinaryReader.js~_BinaryReader#readFloat",
+    "method"
+  ],
+  [
+    "js/util/_binaryreader.js~_binaryreader#readint",
+    "class/js/util/_BinaryReader.js~_BinaryReader.html#instance-method-readInt",
+    "js/util/_BinaryReader.js~_BinaryReader#readInt",
+    "method"
+  ],
+  [
+    "js/util/_binaryreader.js~_binaryreader#readinteger",
+    "class/js/util/_BinaryReader.js~_BinaryReader.html#instance-method-readInteger",
+    "js/util/_BinaryReader.js~_BinaryReader#readInteger",
+    "method"
+  ],
+  [
+    "js/util/_binaryreader.js~_binaryreader#readlonglong",
+    "class/js/util/_BinaryReader.js~_BinaryReader.html#instance-method-readLongLong",
+    "js/util/_BinaryReader.js~_BinaryReader#readLongLong",
+    "method"
+  ],
+  [
+    "js/util/_binaryreader.js~_binaryreader#readshort",
+    "class/js/util/_BinaryReader.js~_BinaryReader.html#instance-method-readShort",
+    "js/util/_BinaryReader.js~_BinaryReader#readShort",
+    "method"
+  ],
+  [
+    "js/util/_binaryreader.js~_binaryreader#readstring",
+    "class/js/util/_BinaryReader.js~_BinaryReader.html#instance-method-readString",
+    "js/util/_BinaryReader.js~_BinaryReader#readString",
+    "method"
+  ],
+  [
+    "js/util/_binaryreader.js~_binaryreader#readunsignedbyte",
+    "class/js/util/_BinaryReader.js~_BinaryReader.html#instance-method-readUnsignedByte",
+    "js/util/_BinaryReader.js~_BinaryReader#readUnsignedByte",
+    "method"
+  ],
+  [
+    "js/util/_binaryreader.js~_binaryreader#readunsignedint",
+    "class/js/util/_BinaryReader.js~_BinaryReader.html#instance-method-readUnsignedInt",
+    "js/util/_BinaryReader.js~_BinaryReader#readUnsignedInt",
+    "method"
+  ],
+  [
+    "js/util/_binaryreader.js~_binaryreader#readunsignedlonglong",
+    "class/js/util/_BinaryReader.js~_BinaryReader.html#instance-method-readUnsignedLongLong",
+    "js/util/_BinaryReader.js~_BinaryReader#readUnsignedLongLong",
+    "method"
+  ],
+  [
+    "js/util/_binaryreader.js~_binaryreader#readunsignedshort",
+    "class/js/util/_BinaryReader.js~_BinaryReader.html#instance-method-readUnsignedShort",
+    "js/util/_BinaryReader.js~_BinaryReader#readUnsignedShort",
+    "method"
+  ],
+  [
+    "js/util/_binaryreader.js~_binaryreader#seek",
+    "class/js/util/_BinaryReader.js~_BinaryReader.html#instance-method-seek",
+    "js/util/_BinaryReader.js~_BinaryReader#seek",
+    "method"
+  ],
+  [
+    "js/util/_binaryreader.js~_binaryreader#skip",
+    "class/js/util/_BinaryReader.js~_BinaryReader.html#instance-method-skip",
+    "js/util/_BinaryReader.js~_BinaryReader#skip",
+    "method"
+  ],
+  [
+    "js/util/_binaryrequest.js",
+    "file/js/util/_BinaryRequest.js.html",
+    "js/util/_BinaryRequest.js",
+    "file"
+  ],
+  [
+    "js/util/_binaryrequest.js~binaryrequest#constructor",
+    "class/js/util/_BinaryRequest.js~BinaryRequest.html#instance-constructor-constructor",
+    "js/util/_BinaryRequest.js~BinaryRequest#constructor",
+    "method"
+  ],
+  [
+    "js/util/_buffer.js",
+    "file/js/util/_Buffer.js.html",
+    "js/util/_Buffer.js",
+    "file"
+  ],
+  [
+    "js/util/_classlist.js",
+    "file/js/util/_ClassList.js.html",
+    "js/util/_ClassList.js",
+    "file"
+  ],
+  [
+    "js/util/_file.js",
+    "file/js/util/_File.js.html",
+    "js/util/_File.js",
+    "file"
+  ],
+  [
+    "js/util/_file.js~file#constructor",
+    "class/js/util/_File.js~File.html#instance-constructor-constructor",
+    "js/util/_File.js~File#constructor",
+    "method"
+  ],
+  [
+    "js/util/_file.js~file#lastmodified",
+    "class/js/util/_File.js~File.html#instance-get-lastModified",
+    "js/util/_File.js~File#lastModified",
+    "member"
+  ],
+  [
+    "js/util/_file.js~file#lastmodifieddate",
+    "class/js/util/_File.js~File.html#instance-get-lastModifiedDate",
+    "js/util/_File.js~File#lastModifiedDate",
+    "member"
+  ],
+  [
+    "js/util/_file.js~file#name",
+    "class/js/util/_File.js~File.html#instance-get-name",
+    "js/util/_File.js~File#name",
+    "member"
+  ],
+  [
+    "js/util/_file.js~file#size",
+    "class/js/util/_File.js~File.html#instance-get-size",
+    "js/util/_File.js~File#size",
+    "member"
+  ],
+  [
+    "js/util/_file.js~file#type",
+    "class/js/util/_File.js~File.html#instance-get-type",
+    "js/util/_File.js~File#type",
+    "member"
+  ],
+  [
+    "js/util/_file.js~file#webkitrelativepath",
+    "class/js/util/_File.js~File.html#instance-get-webkitRelativePath",
+    "js/util/_File.js~File#webkitRelativePath",
+    "member"
+  ],
+  [
+    "js/util/_file.web.js",
+    "file/js/util/_File.web.js.html",
+    "js/util/_File.web.js",
+    "file"
+  ],
+  [
+    "js/util/_filereader.js",
+    "file/js/util/_FileReader.js.html",
+    "js/util/_FileReader.js",
+    "file"
+  ],
+  [
+    "js/util/_filereader.js~filereader#abort",
+    "class/js/util/_FileReader.js~FileReader.html#instance-method-abort",
+    "js/util/_FileReader.js~FileReader#abort",
+    "method"
+  ],
+  [
+    "js/util/_filereader.js~filereader#constructor",
+    "class/js/util/_FileReader.js~FileReader.html#instance-constructor-constructor",
+    "js/util/_FileReader.js~FileReader#constructor",
+    "method"
+  ],
+  [
+    "js/util/_filereader.js~filereader#error",
+    "class/js/util/_FileReader.js~FileReader.html#instance-get-error",
+    "js/util/_FileReader.js~FileReader#error",
+    "member"
+  ],
+  [
+    "js/util/_filereader.js~filereader#onabort",
+    "class/js/util/_FileReader.js~FileReader.html#instance-member-onabort",
+    "js/util/_FileReader.js~FileReader#onabort",
+    "member"
+  ],
+  [
+    "js/util/_filereader.js~filereader#onerror",
+    "class/js/util/_FileReader.js~FileReader.html#instance-member-onerror",
+    "js/util/_FileReader.js~FileReader#onerror",
+    "member"
+  ],
+  [
+    "js/util/_filereader.js~filereader#onload",
+    "class/js/util/_FileReader.js~FileReader.html#instance-member-onload",
+    "js/util/_FileReader.js~FileReader#onload",
+    "member"
+  ],
+  [
+    "js/util/_filereader.js~filereader#onloadend",
+    "class/js/util/_FileReader.js~FileReader.html#instance-member-onloadend",
+    "js/util/_FileReader.js~FileReader#onloadend",
+    "member"
+  ],
+  [
+    "js/util/_filereader.js~filereader#onloadstart",
+    "class/js/util/_FileReader.js~FileReader.html#instance-member-onloadstart",
+    "js/util/_FileReader.js~FileReader#onloadstart",
+    "member"
+  ],
+  [
+    "js/util/_filereader.js~filereader#onprogress",
+    "class/js/util/_FileReader.js~FileReader.html#instance-member-onprogress",
+    "js/util/_FileReader.js~FileReader#onprogress",
+    "member"
+  ],
+  [
+    "js/util/_filereader.js~filereader#readasarraybuffer",
+    "class/js/util/_FileReader.js~FileReader.html#instance-method-readAsArrayBuffer",
+    "js/util/_FileReader.js~FileReader#readAsArrayBuffer",
+    "method"
+  ],
+  [
+    "js/util/_filereader.js~filereader#readasbinarystring",
+    "class/js/util/_FileReader.js~FileReader.html#instance-method-readAsBinaryString",
+    "js/util/_FileReader.js~FileReader#readAsBinaryString",
+    "method"
+  ],
+  [
+    "js/util/_filereader.js~filereader#readasdataurl",
+    "class/js/util/_FileReader.js~FileReader.html#instance-method-readAsDataURL",
+    "js/util/_FileReader.js~FileReader#readAsDataURL",
+    "method"
+  ],
+  [
+    "js/util/_filereader.js~filereader#readastext",
+    "class/js/util/_FileReader.js~FileReader.html#instance-method-readAsText",
+    "js/util/_FileReader.js~FileReader#readAsText",
+    "method"
+  ],
+  [
+    "js/util/_filereader.js~filereader#readystate",
+    "class/js/util/_FileReader.js~FileReader.html#instance-get-readyState",
+    "js/util/_FileReader.js~FileReader#readyState",
+    "member"
+  ],
+  [
+    "js/util/_filereader.js~filereader#result",
+    "class/js/util/_FileReader.js~FileReader.html#instance-get-result",
+    "js/util/_FileReader.js~FileReader#result",
+    "member"
+  ],
+  [
+    "js/util/_filereader.web.js",
+    "file/js/util/_FileReader.web.js.html",
+    "js/util/_FileReader.web.js",
+    "file"
+  ],
+  [
+    "js/util/_htmlcanvaselement.js",
+    "file/js/util/_HTMLCanvasElement.js.html",
+    "js/util/_HTMLCanvasElement.js",
     "file"
   ]
 ]

@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 1117,
+  "end": 1082,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 1117,
+    "end": 1082,
     "loc": {
       "start": {
         "line": 1,
@@ -31,7 +31,7 @@
       {
         "type": "Identifier",
         "start": 932,
-        "end": 1075,
+        "end": 1040,
         "loc": {
           "start": {
             "line": 14,
@@ -46,7 +46,7 @@
           {
             "type": "VariableDeclarator",
             "start": 938,
-            "end": 1075,
+            "end": 1040,
             "loc": {
               "start": {
                 "line": 14,
@@ -78,7 +78,7 @@
             "init": {
               "type": "ObjectExpression",
               "start": 965,
-              "end": 1075,
+              "end": 1040,
               "loc": {
                 "start": {
                   "line": 14,
@@ -93,7 +93,7 @@
                 {
                   "type": "ObjectProperty",
                   "start": 969,
-                  "end": 988,
+                  "end": 981,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -101,7 +101,7 @@
                     },
                     "end": {
                       "line": 15,
-                      "column": 21
+                      "column": 14
                     }
                   },
                   "method": false,
@@ -125,9 +125,9 @@
                     "name": "triangles"
                   },
                   "value": {
-                    "type": "CallExpression",
+                    "type": "NumericLiteral",
                     "start": 980,
-                    "end": 988,
+                    "end": 981,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -135,33 +135,20 @@
                       },
                       "end": {
                         "line": 15,
-                        "column": 21
+                        "column": 14
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 980,
-                      "end": 986,
-                      "loc": {
-                        "start": {
-                          "line": 15,
-                          "column": 13
-                        },
-                        "end": {
-                          "line": 15,
-                          "column": 19
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 0,
+                      "raw": "0"
                     },
-                    "arguments": []
+                    "value": 0
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 992,
-                  "end": 1015,
+                  "start": 985,
+                  "end": 1001,
                   "loc": {
                     "start": {
                       "line": 16,
@@ -169,7 +156,7 @@
                     },
                     "end": {
                       "line": 16,
-                      "column": 25
+                      "column": 18
                     }
                   },
                   "method": false,
@@ -177,8 +164,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 992,
-                    "end": 1005,
+                    "start": 985,
+                    "end": 998,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -193,9 +180,9 @@
                     "name": "triangleStrip"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 1007,
-                    "end": 1015,
+                    "type": "NumericLiteral",
+                    "start": 1000,
+                    "end": 1001,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -203,33 +190,20 @@
                       },
                       "end": {
                         "line": 16,
-                        "column": 25
+                        "column": 18
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 1007,
-                      "end": 1013,
-                      "loc": {
-                        "start": {
-                          "line": 16,
-                          "column": 17
-                        },
-                        "end": {
-                          "line": 16,
-                          "column": 23
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 1,
+                      "raw": "1"
                     },
-                    "arguments": []
+                    "value": 1
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 1019,
-                  "end": 1033,
+                  "start": 1005,
+                  "end": 1012,
                   "loc": {
                     "start": {
                       "line": 17,
@@ -237,7 +211,7 @@
                     },
                     "end": {
                       "line": 17,
-                      "column": 16
+                      "column": 9
                     }
                   },
                   "method": false,
@@ -245,8 +219,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 1019,
-                    "end": 1023,
+                    "start": 1005,
+                    "end": 1009,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -261,9 +235,9 @@
                     "name": "line"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 1025,
-                    "end": 1033,
+                    "type": "NumericLiteral",
+                    "start": 1011,
+                    "end": 1012,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -271,33 +245,20 @@
                       },
                       "end": {
                         "line": 17,
-                        "column": 16
+                        "column": 9
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 1025,
-                      "end": 1031,
-                      "loc": {
-                        "start": {
-                          "line": 17,
-                          "column": 8
-                        },
-                        "end": {
-                          "line": 17,
-                          "column": 14
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 2,
+                      "raw": "2"
                     },
-                    "arguments": []
+                    "value": 2
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 1037,
-                  "end": 1052,
+                  "start": 1016,
+                  "end": 1024,
                   "loc": {
                     "start": {
                       "line": 18,
@@ -305,7 +266,7 @@
                     },
                     "end": {
                       "line": 18,
-                      "column": 17
+                      "column": 10
                     }
                   },
                   "method": false,
@@ -313,8 +274,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 1037,
-                    "end": 1042,
+                    "start": 1016,
+                    "end": 1021,
                     "loc": {
                       "start": {
                         "line": 18,
@@ -329,9 +290,9 @@
                     "name": "point"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 1044,
-                    "end": 1052,
+                    "type": "NumericLiteral",
+                    "start": 1023,
+                    "end": 1024,
                     "loc": {
                       "start": {
                         "line": 18,
@@ -339,33 +300,20 @@
                       },
                       "end": {
                         "line": 18,
-                        "column": 17
+                        "column": 10
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 1044,
-                      "end": 1050,
-                      "loc": {
-                        "start": {
-                          "line": 18,
-                          "column": 9
-                        },
-                        "end": {
-                          "line": 18,
-                          "column": 15
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 3,
+                      "raw": "3"
                     },
-                    "arguments": []
+                    "value": 3
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 1056,
-                  "end": 1073,
+                  "start": 1028,
+                  "end": 1038,
                   "loc": {
                     "start": {
                       "line": 19,
@@ -373,7 +321,7 @@
                     },
                     "end": {
                       "line": 19,
-                      "column": 19
+                      "column": 12
                     }
                   },
                   "method": false,
@@ -381,8 +329,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 1056,
-                    "end": 1063,
+                    "start": 1028,
+                    "end": 1035,
                     "loc": {
                       "start": {
                         "line": 19,
@@ -397,9 +345,9 @@
                     "name": "polygon"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 1065,
-                    "end": 1073,
+                    "type": "NumericLiteral",
+                    "start": 1037,
+                    "end": 1038,
                     "loc": {
                       "start": {
                         "line": 19,
@@ -407,27 +355,14 @@
                       },
                       "end": {
                         "line": 19,
-                        "column": 19
+                        "column": 12
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 1065,
-                      "end": 1071,
-                      "loc": {
-                        "start": {
-                          "line": 19,
-                          "column": 11
-                        },
-                        "end": {
-                          "line": 19,
-                          "column": 17
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 4,
+                      "raw": "4"
                     },
-                    "arguments": []
+                    "value": 4
                   }
                 }
               ]
@@ -442,8 +377,8 @@
       },
       {
         "type": "Identifier",
-        "start": 1077,
-        "end": 1116,
+        "start": 1042,
+        "end": 1081,
         "loc": {
           "start": {
             "line": 22,
@@ -456,8 +391,8 @@
         },
         "declaration": {
           "type": "Identifier",
-          "start": 1092,
-          "end": 1116,
+          "start": 1057,
+          "end": 1081,
           "loc": {
             "start": {
               "line": 22,
@@ -477,8 +412,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 1077,
-        "end": 1116,
+        "start": 1042,
+        "end": 1081,
         "loc": {
           "start": {
             "line": 22,
@@ -492,7 +427,7 @@
         "declaration": {
           "type": "VariableDeclaration",
           "start": 932,
-          "end": 1075,
+          "end": 1040,
           "loc": {
             "start": {
               "line": 14,
@@ -507,7 +442,7 @@
             {
               "type": "VariableDeclarator",
               "start": 938,
-              "end": 1075,
+              "end": 1040,
               "loc": {
                 "start": {
                   "line": 14,
@@ -539,7 +474,7 @@
               "init": {
                 "type": "ObjectExpression",
                 "start": 965,
-                "end": 1075,
+                "end": 1040,
                 "loc": {
                   "start": {
                     "line": 14,
@@ -554,7 +489,7 @@
                   {
                     "type": "ObjectProperty",
                     "start": 969,
-                    "end": 988,
+                    "end": 981,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -562,7 +497,7 @@
                       },
                       "end": {
                         "line": 15,
-                        "column": 21
+                        "column": 14
                       }
                     },
                     "method": false,
@@ -586,9 +521,9 @@
                       "name": "triangles"
                     },
                     "value": {
-                      "type": "CallExpression",
+                      "type": "NumericLiteral",
                       "start": 980,
-                      "end": 988,
+                      "end": 981,
                       "loc": {
                         "start": {
                           "line": 15,
@@ -596,33 +531,20 @@
                         },
                         "end": {
                           "line": 15,
-                          "column": 21
+                          "column": 14
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 980,
-                        "end": 986,
-                        "loc": {
-                          "start": {
-                            "line": 15,
-                            "column": 13
-                          },
-                          "end": {
-                            "line": 15,
-                            "column": 19
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 0,
+                        "raw": "0"
                       },
-                      "arguments": []
+                      "value": 0
                     }
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 992,
-                    "end": 1015,
+                    "start": 985,
+                    "end": 1001,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -630,7 +552,7 @@
                       },
                       "end": {
                         "line": 16,
-                        "column": 25
+                        "column": 18
                       }
                     },
                     "method": false,
@@ -638,8 +560,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 992,
-                      "end": 1005,
+                      "start": 985,
+                      "end": 998,
                       "loc": {
                         "start": {
                           "line": 16,
@@ -654,9 +576,9 @@
                       "name": "triangleStrip"
                     },
                     "value": {
-                      "type": "CallExpression",
-                      "start": 1007,
-                      "end": 1015,
+                      "type": "NumericLiteral",
+                      "start": 1000,
+                      "end": 1001,
                       "loc": {
                         "start": {
                           "line": 16,
@@ -664,33 +586,20 @@
                         },
                         "end": {
                           "line": 16,
-                          "column": 25
+                          "column": 18
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 1007,
-                        "end": 1013,
-                        "loc": {
-                          "start": {
-                            "line": 16,
-                            "column": 17
-                          },
-                          "end": {
-                            "line": 16,
-                            "column": 23
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 1,
+                        "raw": "1"
                       },
-                      "arguments": []
+                      "value": 1
                     }
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 1019,
-                    "end": 1033,
+                    "start": 1005,
+                    "end": 1012,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -698,7 +607,7 @@
                       },
                       "end": {
                         "line": 17,
-                        "column": 16
+                        "column": 9
                       }
                     },
                     "method": false,
@@ -706,8 +615,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 1019,
-                      "end": 1023,
+                      "start": 1005,
+                      "end": 1009,
                       "loc": {
                         "start": {
                           "line": 17,
@@ -722,9 +631,9 @@
                       "name": "line"
                     },
                     "value": {
-                      "type": "CallExpression",
-                      "start": 1025,
-                      "end": 1033,
+                      "type": "NumericLiteral",
+                      "start": 1011,
+                      "end": 1012,
                       "loc": {
                         "start": {
                           "line": 17,
@@ -732,33 +641,20 @@
                         },
                         "end": {
                           "line": 17,
-                          "column": 16
+                          "column": 9
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 1025,
-                        "end": 1031,
-                        "loc": {
-                          "start": {
-                            "line": 17,
-                            "column": 8
-                          },
-                          "end": {
-                            "line": 17,
-                            "column": 14
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 2,
+                        "raw": "2"
                       },
-                      "arguments": []
+                      "value": 2
                     }
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 1037,
-                    "end": 1052,
+                    "start": 1016,
+                    "end": 1024,
                     "loc": {
                       "start": {
                         "line": 18,
@@ -766,7 +662,7 @@
                       },
                       "end": {
                         "line": 18,
-                        "column": 17
+                        "column": 10
                       }
                     },
                     "method": false,
@@ -774,8 +670,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 1037,
-                      "end": 1042,
+                      "start": 1016,
+                      "end": 1021,
                       "loc": {
                         "start": {
                           "line": 18,
@@ -790,9 +686,9 @@
                       "name": "point"
                     },
                     "value": {
-                      "type": "CallExpression",
-                      "start": 1044,
-                      "end": 1052,
+                      "type": "NumericLiteral",
+                      "start": 1023,
+                      "end": 1024,
                       "loc": {
                         "start": {
                           "line": 18,
@@ -800,33 +696,20 @@
                         },
                         "end": {
                           "line": 18,
-                          "column": 17
+                          "column": 10
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 1044,
-                        "end": 1050,
-                        "loc": {
-                          "start": {
-                            "line": 18,
-                            "column": 9
-                          },
-                          "end": {
-                            "line": 18,
-                            "column": 15
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 3,
+                        "raw": "3"
                       },
-                      "arguments": []
+                      "value": 3
                     }
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 1056,
-                    "end": 1073,
+                    "start": 1028,
+                    "end": 1038,
                     "loc": {
                       "start": {
                         "line": 19,
@@ -834,7 +717,7 @@
                       },
                       "end": {
                         "line": 19,
-                        "column": 19
+                        "column": 12
                       }
                     },
                     "method": false,
@@ -842,8 +725,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 1056,
-                      "end": 1063,
+                      "start": 1028,
+                      "end": 1035,
                       "loc": {
                         "start": {
                           "line": 19,
@@ -858,9 +741,9 @@
                       "name": "polygon"
                     },
                     "value": {
-                      "type": "CallExpression",
-                      "start": 1065,
-                      "end": 1073,
+                      "type": "NumericLiteral",
+                      "start": 1037,
+                      "end": 1038,
                       "loc": {
                         "start": {
                           "line": 19,
@@ -868,27 +751,14 @@
                         },
                         "end": {
                           "line": 19,
-                          "column": 19
+                          "column": 12
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 1065,
-                        "end": 1071,
-                        "loc": {
-                          "start": {
-                            "line": 19,
-                            "column": 11
-                          },
-                          "end": {
-                            "line": 19,
-                            "column": 17
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 4,
+                        "raw": "4"
                       },
-                      "arguments": []
+                      "value": 4
                     }
                   }
                 ]
@@ -900,7 +770,7 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * The drawing primitive that connects vertices when rendering a geometry element, used by the primitiveType property to specify how SceneKit interprets the geometry element’s data.\n * @typedef {Object} SCNGeometryPrimitiveType\n * @property {Symbol} triangles - The geometry element’s data is a sequence of triangles, with each triangle described by three new vertices.\n * @property {Symbol} triangleStrip - The geometry element’s data is a sequence of triangles, with each triangle described by one new vertex and two vertices from the previous triangle. \n * @property {Symbol} line - The geometry element’s data is a sequence of line segments, with each line segment described by two new vertices. \n * @property {Symbol} point - The geometry element’s data is a sequence of unconnected points.\n * @property {Symbol} polygon - \n * @see https://developer.apple.com/reference/scenekit/scngeometryprimitivetype\n ",
+              "value": "*\n * The drawing primitive that connects vertices when rendering a geometry element, used by the primitiveType property to specify how SceneKit interprets the geometry element’s data.\n * @typedef {Object} SCNGeometryPrimitiveType\n * @property {number} triangles - The geometry element’s data is a sequence of triangles, with each triangle described by three new vertices.\n * @property {number} triangleStrip - The geometry element’s data is a sequence of triangles, with each triangle described by one new vertex and two vertices from the previous triangle. \n * @property {number} line - The geometry element’s data is a sequence of line segments, with each line segment described by two new vertices. \n * @property {number} point - The geometry element’s data is a sequence of unconnected points.\n * @property {number} polygon - \n * @see https://developer.apple.com/reference/scenekit/scngeometryprimitivetype\n ",
               "start": 15,
               "end": 931,
               "loc": {
@@ -958,7 +828,7 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * The drawing primitive that connects vertices when rendering a geometry element, used by the primitiveType property to specify how SceneKit interprets the geometry element’s data.\n * @typedef {Object} SCNGeometryPrimitiveType\n * @property {Symbol} triangles - The geometry element’s data is a sequence of triangles, with each triangle described by three new vertices.\n * @property {Symbol} triangleStrip - The geometry element’s data is a sequence of triangles, with each triangle described by one new vertex and two vertices from the previous triangle. \n * @property {Symbol} line - The geometry element’s data is a sequence of line segments, with each line segment described by two new vertices. \n * @property {Symbol} point - The geometry element’s data is a sequence of unconnected points.\n * @property {Symbol} polygon - \n * @see https://developer.apple.com/reference/scenekit/scngeometryprimitivetype\n ",
+            "value": "*\n * The drawing primitive that connects vertices when rendering a geometry element, used by the primitiveType property to specify how SceneKit interprets the geometry element’s data.\n * @typedef {Object} SCNGeometryPrimitiveType\n * @property {number} triangles - The geometry element’s data is a sequence of triangles, with each triangle described by three new vertices.\n * @property {number} triangleStrip - The geometry element’s data is a sequence of triangles, with each triangle described by one new vertex and two vertices from the previous triangle. \n * @property {number} line - The geometry element’s data is a sequence of line segments, with each line segment described by two new vertices. \n * @property {number} point - The geometry element’s data is a sequence of unconnected points.\n * @property {number} polygon - \n * @see https://developer.apple.com/reference/scenekit/scngeometryprimitivetype\n ",
             "start": 15,
             "end": 931,
             "loc": {
@@ -979,7 +849,7 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * The drawing primitive that connects vertices when rendering a geometry element, used by the primitiveType property to specify how SceneKit interprets the geometry element’s data.\n * @typedef {Object} SCNGeometryPrimitiveType\n * @property {Symbol} triangles - The geometry element’s data is a sequence of triangles, with each triangle described by three new vertices.\n * @property {Symbol} triangleStrip - The geometry element’s data is a sequence of triangles, with each triangle described by one new vertex and two vertices from the previous triangle. \n * @property {Symbol} line - The geometry element’s data is a sequence of line segments, with each line segment described by two new vertices. \n * @property {Symbol} point - The geometry element’s data is a sequence of unconnected points.\n * @property {Symbol} polygon - \n * @see https://developer.apple.com/reference/scenekit/scngeometryprimitivetype\n ",
+      "value": "*\n * The drawing primitive that connects vertices when rendering a geometry element, used by the primitiveType property to specify how SceneKit interprets the geometry element’s data.\n * @typedef {Object} SCNGeometryPrimitiveType\n * @property {number} triangles - The geometry element’s data is a sequence of triangles, with each triangle described by three new vertices.\n * @property {number} triangleStrip - The geometry element’s data is a sequence of triangles, with each triangle described by one new vertex and two vertices from the previous triangle. \n * @property {number} line - The geometry element’s data is a sequence of line segments, with each line segment described by two new vertices. \n * @property {number} point - The geometry element’s data is a sequence of unconnected points.\n * @property {number} polygon - \n * @see https://developer.apple.com/reference/scenekit/scngeometryprimitivetype\n ",
       "start": 15,
       "end": 931,
       "loc": {
@@ -1024,7 +894,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * The drawing primitive that connects vertices when rendering a geometry element, used by the primitiveType property to specify how SceneKit interprets the geometry element’s data.\n * @typedef {Object} SCNGeometryPrimitiveType\n * @property {Symbol} triangles - The geometry element’s data is a sequence of triangles, with each triangle described by three new vertices.\n * @property {Symbol} triangleStrip - The geometry element’s data is a sequence of triangles, with each triangle described by one new vertex and two vertices from the previous triangle. \n * @property {Symbol} line - The geometry element’s data is a sequence of line segments, with each line segment described by two new vertices. \n * @property {Symbol} point - The geometry element’s data is a sequence of unconnected points.\n * @property {Symbol} polygon - \n * @see https://developer.apple.com/reference/scenekit/scngeometryprimitivetype\n ",
+      "value": "*\n * The drawing primitive that connects vertices when rendering a geometry element, used by the primitiveType property to specify how SceneKit interprets the geometry element’s data.\n * @typedef {Object} SCNGeometryPrimitiveType\n * @property {number} triangles - The geometry element’s data is a sequence of triangles, with each triangle described by three new vertices.\n * @property {number} triangleStrip - The geometry element’s data is a sequence of triangles, with each triangle described by one new vertex and two vertices from the previous triangle. \n * @property {number} line - The geometry element’s data is a sequence of line segments, with each line segment described by two new vertices. \n * @property {number} point - The geometry element’s data is a sequence of unconnected points.\n * @property {number} polygon - \n * @see https://developer.apple.com/reference/scenekit/scngeometryprimitivetype\n ",
       "start": 15,
       "end": 931,
       "loc": {
@@ -1198,7 +1068,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -1206,11 +1076,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
+      "value": 0,
       "start": 980,
-      "end": 986,
+      "end": 981,
       "loc": {
         "start": {
           "line": 15,
@@ -1218,57 +1089,7 @@
         },
         "end": {
           "line": 15,
-          "column": 19
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 986,
-      "end": 987,
-      "loc": {
-        "start": {
-          "line": 15,
-          "column": 19
-        },
-        "end": {
-          "line": 15,
-          "column": 20
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 987,
-      "end": 988,
-      "loc": {
-        "start": {
-          "line": 15,
-          "column": 20
-        },
-        "end": {
-          "line": 15,
-          "column": 21
+          "column": 14
         }
       }
     },
@@ -1285,16 +1106,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 988,
-      "end": 989,
+      "start": 981,
+      "end": 982,
       "loc": {
         "start": {
           "line": 15,
-          "column": 21
+          "column": 14
         },
         "end": {
           "line": 15,
-          "column": 22
+          "column": 15
         }
       }
     },
@@ -1311,8 +1132,8 @@
         "binop": null
       },
       "value": "triangleStrip",
-      "start": 992,
-      "end": 1005,
+      "start": 985,
+      "end": 998,
       "loc": {
         "start": {
           "line": 16,
@@ -1337,8 +1158,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1005,
-      "end": 1006,
+      "start": 998,
+      "end": 999,
       "loc": {
         "start": {
           "line": 16,
@@ -1352,7 +1173,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -1360,11 +1181,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
-      "start": 1007,
-      "end": 1013,
+      "value": 1,
+      "start": 1000,
+      "end": 1001,
       "loc": {
         "start": {
           "line": 16,
@@ -1372,57 +1194,7 @@
         },
         "end": {
           "line": 16,
-          "column": 23
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 1013,
-      "end": 1014,
-      "loc": {
-        "start": {
-          "line": 16,
-          "column": 23
-        },
-        "end": {
-          "line": 16,
-          "column": 24
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 1014,
-      "end": 1015,
-      "loc": {
-        "start": {
-          "line": 16,
-          "column": 24
-        },
-        "end": {
-          "line": 16,
-          "column": 25
+          "column": 18
         }
       }
     },
@@ -1439,16 +1211,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1015,
-      "end": 1016,
+      "start": 1001,
+      "end": 1002,
       "loc": {
         "start": {
           "line": 16,
-          "column": 25
+          "column": 18
         },
         "end": {
           "line": 16,
-          "column": 26
+          "column": 19
         }
       }
     },
@@ -1465,8 +1237,8 @@
         "binop": null
       },
       "value": "line",
-      "start": 1019,
-      "end": 1023,
+      "start": 1005,
+      "end": 1009,
       "loc": {
         "start": {
           "line": 17,
@@ -1491,8 +1263,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1023,
-      "end": 1024,
+      "start": 1009,
+      "end": 1010,
       "loc": {
         "start": {
           "line": 17,
@@ -1506,7 +1278,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -1514,11 +1286,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
-      "start": 1025,
-      "end": 1031,
+      "value": 2,
+      "start": 1011,
+      "end": 1012,
       "loc": {
         "start": {
           "line": 17,
@@ -1526,57 +1299,7 @@
         },
         "end": {
           "line": 17,
-          "column": 14
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 1031,
-      "end": 1032,
-      "loc": {
-        "start": {
-          "line": 17,
-          "column": 14
-        },
-        "end": {
-          "line": 17,
-          "column": 15
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 1032,
-      "end": 1033,
-      "loc": {
-        "start": {
-          "line": 17,
-          "column": 15
-        },
-        "end": {
-          "line": 17,
-          "column": 16
+          "column": 9
         }
       }
     },
@@ -1593,221 +1316,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1033,
-      "end": 1034,
+      "start": 1012,
+      "end": 1013,
       "loc": {
         "start": {
           "line": 17,
-          "column": 16
+          "column": 9
         },
         "end": {
           "line": 17,
-          "column": 17
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "point",
-      "start": 1037,
-      "end": 1042,
-      "loc": {
-        "start": {
-          "line": 18,
-          "column": 2
-        },
-        "end": {
-          "line": 18,
-          "column": 7
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ":",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 1042,
-      "end": 1043,
-      "loc": {
-        "start": {
-          "line": 18,
-          "column": 7
-        },
-        "end": {
-          "line": 18,
-          "column": 8
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "Symbol",
-      "start": 1044,
-      "end": 1050,
-      "loc": {
-        "start": {
-          "line": 18,
-          "column": 9
-        },
-        "end": {
-          "line": 18,
-          "column": 15
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 1050,
-      "end": 1051,
-      "loc": {
-        "start": {
-          "line": 18,
-          "column": 15
-        },
-        "end": {
-          "line": 18,
-          "column": 16
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 1051,
-      "end": 1052,
-      "loc": {
-        "start": {
-          "line": 18,
-          "column": 16
-        },
-        "end": {
-          "line": 18,
-          "column": 17
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ",",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 1052,
-      "end": 1053,
-      "loc": {
-        "start": {
-          "line": 18,
-          "column": 17
-        },
-        "end": {
-          "line": 18,
-          "column": 18
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "name",
-        "beforeExpr": false,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "value": "polygon",
-      "start": 1056,
-      "end": 1063,
-      "loc": {
-        "start": {
-          "line": 19,
-          "column": 2
-        },
-        "end": {
-          "line": 19,
-          "column": 9
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ":",
-        "beforeExpr": true,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null,
-        "updateContext": null
-      },
-      "start": 1063,
-      "end": 1064,
-      "loc": {
-        "start": {
-          "line": 19,
-          "column": 9
-        },
-        "end": {
-          "line": 19,
           "column": 10
         }
       }
@@ -1824,24 +1341,103 @@
         "postfix": false,
         "binop": null
       },
-      "value": "Symbol",
-      "start": 1065,
-      "end": 1071,
+      "value": "point",
+      "start": 1016,
+      "end": 1021,
       "loc": {
         "start": {
-          "line": 19,
-          "column": 11
+          "line": 18,
+          "column": 2
         },
         "end": {
-          "line": 19,
-          "column": 17
+          "line": 18,
+          "column": 7
         }
       }
     },
     {
       "type": {
-        "label": "(",
+        "label": ":",
         "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1021,
+      "end": 1022,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 7
+        },
+        "end": {
+          "line": 18,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "num",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": 3,
+      "start": 1023,
+      "end": 1024,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 9
+        },
+        "end": {
+          "line": 18,
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 1024,
+      "end": 1025,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 10
+        },
+        "end": {
+          "line": 18,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
         "isLoop": false,
@@ -1850,41 +1446,70 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1071,
-      "end": 1072,
+      "value": "polygon",
+      "start": 1028,
+      "end": 1035,
       "loc": {
         "start": {
           "line": 19,
-          "column": 17
+          "column": 2
         },
         "end": {
           "line": 19,
-          "column": 18
+          "column": 9
         }
       }
     },
     {
       "type": {
-        "label": ")",
-        "beforeExpr": false,
+        "label": ":",
+        "beforeExpr": true,
         "startsExpr": false,
         "rightAssociative": false,
         "isLoop": false,
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "start": 1072,
-      "end": 1073,
+      "start": 1035,
+      "end": 1036,
       "loc": {
         "start": {
           "line": 19,
-          "column": 18
+          "column": 9
         },
         "end": {
           "line": 19,
-          "column": 19
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "num",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": 4,
+      "start": 1037,
+      "end": 1038,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 11
+        },
+        "end": {
+          "line": 19,
+          "column": 12
         }
       }
     },
@@ -1900,8 +1525,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1074,
-      "end": 1075,
+      "start": 1039,
+      "end": 1040,
       "loc": {
         "start": {
           "line": 20,
@@ -1928,8 +1553,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 1077,
-      "end": 1083,
+      "start": 1042,
+      "end": 1048,
       "loc": {
         "start": {
           "line": 22,
@@ -1956,8 +1581,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 1084,
-      "end": 1091,
+      "start": 1049,
+      "end": 1056,
       "loc": {
         "start": {
           "line": 22,
@@ -1982,8 +1607,8 @@
         "binop": null
       },
       "value": "SCNGeometryPrimitiveType",
-      "start": 1092,
-      "end": 1116,
+      "start": 1057,
+      "end": 1081,
       "loc": {
         "start": {
           "line": 22,
@@ -2008,8 +1633,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1117,
-      "end": 1117,
+      "start": 1082,
+      "end": 1082,
       "loc": {
         "start": {
           "line": 23,

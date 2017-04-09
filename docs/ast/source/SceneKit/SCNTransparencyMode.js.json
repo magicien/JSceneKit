@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 631,
+  "end": 617,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 631,
+    "end": 617,
     "loc": {
       "start": {
         "line": 1,
@@ -31,7 +31,7 @@
       {
         "type": "Identifier",
         "start": 525,
-        "end": 594,
+        "end": 580,
         "loc": {
           "start": {
             "line": 11,
@@ -46,7 +46,7 @@
           {
             "type": "VariableDeclarator",
             "start": 531,
-            "end": 594,
+            "end": 580,
             "loc": {
               "start": {
                 "line": 11,
@@ -78,7 +78,7 @@
             "init": {
               "type": "ObjectExpression",
               "start": 553,
-              "end": 594,
+              "end": 580,
               "loc": {
                 "start": {
                   "line": 11,
@@ -93,7 +93,7 @@
                 {
                   "type": "ObjectProperty",
                   "start": 557,
-                  "end": 571,
+                  "end": 564,
                   "loc": {
                     "start": {
                       "line": 12,
@@ -101,7 +101,7 @@
                     },
                     "end": {
                       "line": 12,
-                      "column": 16
+                      "column": 9
                     }
                   },
                   "method": false,
@@ -125,9 +125,9 @@
                     "name": "aOne"
                   },
                   "value": {
-                    "type": "CallExpression",
+                    "type": "NumericLiteral",
                     "start": 563,
-                    "end": 571,
+                    "end": 564,
                     "loc": {
                       "start": {
                         "line": 12,
@@ -135,33 +135,20 @@
                       },
                       "end": {
                         "line": 12,
-                        "column": 16
+                        "column": 9
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 563,
-                      "end": 569,
-                      "loc": {
-                        "start": {
-                          "line": 12,
-                          "column": 8
-                        },
-                        "end": {
-                          "line": 12,
-                          "column": 14
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 0,
+                      "raw": "0"
                     },
-                    "arguments": []
+                    "value": 0
                   }
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 575,
-                  "end": 592,
+                  "start": 568,
+                  "end": 578,
                   "loc": {
                     "start": {
                       "line": 13,
@@ -169,7 +156,7 @@
                     },
                     "end": {
                       "line": 13,
-                      "column": 19
+                      "column": 12
                     }
                   },
                   "method": false,
@@ -177,8 +164,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 575,
-                    "end": 582,
+                    "start": 568,
+                    "end": 575,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -193,9 +180,9 @@
                     "name": "rgbZero"
                   },
                   "value": {
-                    "type": "CallExpression",
-                    "start": 584,
-                    "end": 592,
+                    "type": "NumericLiteral",
+                    "start": 577,
+                    "end": 578,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -203,27 +190,14 @@
                       },
                       "end": {
                         "line": 13,
-                        "column": 19
+                        "column": 12
                       }
                     },
-                    "callee": {
-                      "type": "Identifier",
-                      "start": 584,
-                      "end": 590,
-                      "loc": {
-                        "start": {
-                          "line": 13,
-                          "column": 11
-                        },
-                        "end": {
-                          "line": 13,
-                          "column": 17
-                        },
-                        "identifierName": "Symbol"
-                      },
-                      "name": "Symbol"
+                    "extra": {
+                      "rawValue": 1,
+                      "raw": "1"
                     },
-                    "arguments": []
+                    "value": 1
                   }
                 }
               ]
@@ -238,8 +212,8 @@
       },
       {
         "type": "Identifier",
-        "start": 596,
-        "end": 630,
+        "start": 582,
+        "end": 616,
         "loc": {
           "start": {
             "line": 16,
@@ -252,8 +226,8 @@
         },
         "declaration": {
           "type": "Identifier",
-          "start": 611,
-          "end": 630,
+          "start": 597,
+          "end": 616,
           "loc": {
             "start": {
               "line": 16,
@@ -273,8 +247,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 596,
-        "end": 630,
+        "start": 582,
+        "end": 616,
         "loc": {
           "start": {
             "line": 16,
@@ -288,7 +262,7 @@
         "declaration": {
           "type": "VariableDeclaration",
           "start": 525,
-          "end": 594,
+          "end": 580,
           "loc": {
             "start": {
               "line": 11,
@@ -303,7 +277,7 @@
             {
               "type": "VariableDeclarator",
               "start": 531,
-              "end": 594,
+              "end": 580,
               "loc": {
                 "start": {
                   "line": 11,
@@ -335,7 +309,7 @@
               "init": {
                 "type": "ObjectExpression",
                 "start": 553,
-                "end": 594,
+                "end": 580,
                 "loc": {
                   "start": {
                     "line": 11,
@@ -350,7 +324,7 @@
                   {
                     "type": "ObjectProperty",
                     "start": 557,
-                    "end": 571,
+                    "end": 564,
                     "loc": {
                       "start": {
                         "line": 12,
@@ -358,7 +332,7 @@
                       },
                       "end": {
                         "line": 12,
-                        "column": 16
+                        "column": 9
                       }
                     },
                     "method": false,
@@ -382,9 +356,9 @@
                       "name": "aOne"
                     },
                     "value": {
-                      "type": "CallExpression",
+                      "type": "NumericLiteral",
                       "start": 563,
-                      "end": 571,
+                      "end": 564,
                       "loc": {
                         "start": {
                           "line": 12,
@@ -392,33 +366,20 @@
                         },
                         "end": {
                           "line": 12,
-                          "column": 16
+                          "column": 9
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 563,
-                        "end": 569,
-                        "loc": {
-                          "start": {
-                            "line": 12,
-                            "column": 8
-                          },
-                          "end": {
-                            "line": 12,
-                            "column": 14
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 0,
+                        "raw": "0"
                       },
-                      "arguments": []
+                      "value": 0
                     }
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 575,
-                    "end": 592,
+                    "start": 568,
+                    "end": 578,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -426,7 +387,7 @@
                       },
                       "end": {
                         "line": 13,
-                        "column": 19
+                        "column": 12
                       }
                     },
                     "method": false,
@@ -434,8 +395,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 575,
-                      "end": 582,
+                      "start": 568,
+                      "end": 575,
                       "loc": {
                         "start": {
                           "line": 13,
@@ -450,9 +411,9 @@
                       "name": "rgbZero"
                     },
                     "value": {
-                      "type": "CallExpression",
-                      "start": 584,
-                      "end": 592,
+                      "type": "NumericLiteral",
+                      "start": 577,
+                      "end": 578,
                       "loc": {
                         "start": {
                           "line": 13,
@@ -460,27 +421,14 @@
                         },
                         "end": {
                           "line": 13,
-                          "column": 19
+                          "column": 12
                         }
                       },
-                      "callee": {
-                        "type": "Identifier",
-                        "start": 584,
-                        "end": 590,
-                        "loc": {
-                          "start": {
-                            "line": 13,
-                            "column": 11
-                          },
-                          "end": {
-                            "line": 13,
-                            "column": 17
-                          },
-                          "identifierName": "Symbol"
-                        },
-                        "name": "Symbol"
+                      "extra": {
+                        "rawValue": 1,
+                        "raw": "1"
                       },
-                      "arguments": []
+                      "value": 1
                     }
                   }
                 ]
@@ -492,7 +440,7 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * The modes SceneKit uses to calculate the opacity of pixels rendered with a material, used by the transparencyMode property.\n * @typedef {Object} SCNTransparencyMode\n * @property {Symbol} aOne - SceneKit derives transparency information from the alpha channel of colors. The value 1.0 is opaque.\n * @property {Symbol} rgbZero - SceneKit derives transparency information from the luminance of colors. The value 0.0 is opaque.\n * @see https://developer.apple.com/reference/scenekit/scntransparencymode\n ",
+              "value": "*\n * The modes SceneKit uses to calculate the opacity of pixels rendered with a material, used by the transparencyMode property.\n * @typedef {Object} SCNTransparencyMode\n * @property {number} aOne - SceneKit derives transparency information from the alpha channel of colors. The value 1.0 is opaque.\n * @property {number} rgbZero - SceneKit derives transparency information from the luminance of colors. The value 0.0 is opaque.\n * @see https://developer.apple.com/reference/scenekit/scntransparencymode\n ",
               "start": 15,
               "end": 524,
               "loc": {
@@ -550,7 +498,7 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * The modes SceneKit uses to calculate the opacity of pixels rendered with a material, used by the transparencyMode property.\n * @typedef {Object} SCNTransparencyMode\n * @property {Symbol} aOne - SceneKit derives transparency information from the alpha channel of colors. The value 1.0 is opaque.\n * @property {Symbol} rgbZero - SceneKit derives transparency information from the luminance of colors. The value 0.0 is opaque.\n * @see https://developer.apple.com/reference/scenekit/scntransparencymode\n ",
+            "value": "*\n * The modes SceneKit uses to calculate the opacity of pixels rendered with a material, used by the transparencyMode property.\n * @typedef {Object} SCNTransparencyMode\n * @property {number} aOne - SceneKit derives transparency information from the alpha channel of colors. The value 1.0 is opaque.\n * @property {number} rgbZero - SceneKit derives transparency information from the luminance of colors. The value 0.0 is opaque.\n * @see https://developer.apple.com/reference/scenekit/scntransparencymode\n ",
             "start": 15,
             "end": 524,
             "loc": {
@@ -571,7 +519,7 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * The modes SceneKit uses to calculate the opacity of pixels rendered with a material, used by the transparencyMode property.\n * @typedef {Object} SCNTransparencyMode\n * @property {Symbol} aOne - SceneKit derives transparency information from the alpha channel of colors. The value 1.0 is opaque.\n * @property {Symbol} rgbZero - SceneKit derives transparency information from the luminance of colors. The value 0.0 is opaque.\n * @see https://developer.apple.com/reference/scenekit/scntransparencymode\n ",
+      "value": "*\n * The modes SceneKit uses to calculate the opacity of pixels rendered with a material, used by the transparencyMode property.\n * @typedef {Object} SCNTransparencyMode\n * @property {number} aOne - SceneKit derives transparency information from the alpha channel of colors. The value 1.0 is opaque.\n * @property {number} rgbZero - SceneKit derives transparency information from the luminance of colors. The value 0.0 is opaque.\n * @see https://developer.apple.com/reference/scenekit/scntransparencymode\n ",
       "start": 15,
       "end": 524,
       "loc": {
@@ -616,7 +564,7 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * The modes SceneKit uses to calculate the opacity of pixels rendered with a material, used by the transparencyMode property.\n * @typedef {Object} SCNTransparencyMode\n * @property {Symbol} aOne - SceneKit derives transparency information from the alpha channel of colors. The value 1.0 is opaque.\n * @property {Symbol} rgbZero - SceneKit derives transparency information from the luminance of colors. The value 0.0 is opaque.\n * @see https://developer.apple.com/reference/scenekit/scntransparencymode\n ",
+      "value": "*\n * The modes SceneKit uses to calculate the opacity of pixels rendered with a material, used by the transparencyMode property.\n * @typedef {Object} SCNTransparencyMode\n * @property {number} aOne - SceneKit derives transparency information from the alpha channel of colors. The value 1.0 is opaque.\n * @property {number} rgbZero - SceneKit derives transparency information from the luminance of colors. The value 0.0 is opaque.\n * @see https://developer.apple.com/reference/scenekit/scntransparencymode\n ",
       "start": 15,
       "end": 524,
       "loc": {
@@ -790,7 +738,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -798,11 +746,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
+      "value": 0,
       "start": 563,
-      "end": 569,
+      "end": 564,
       "loc": {
         "start": {
           "line": 12,
@@ -810,57 +759,7 @@
         },
         "end": {
           "line": 12,
-          "column": 14
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 569,
-      "end": 570,
-      "loc": {
-        "start": {
-          "line": 12,
-          "column": 14
-        },
-        "end": {
-          "line": 12,
-          "column": 15
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 570,
-      "end": 571,
-      "loc": {
-        "start": {
-          "line": 12,
-          "column": 15
-        },
-        "end": {
-          "line": 12,
-          "column": 16
+          "column": 9
         }
       }
     },
@@ -877,16 +776,16 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 571,
-      "end": 572,
+      "start": 564,
+      "end": 565,
       "loc": {
         "start": {
           "line": 12,
-          "column": 16
+          "column": 9
         },
         "end": {
           "line": 12,
-          "column": 17
+          "column": 10
         }
       }
     },
@@ -903,8 +802,8 @@
         "binop": null
       },
       "value": "rgbZero",
-      "start": 575,
-      "end": 582,
+      "start": 568,
+      "end": 575,
       "loc": {
         "start": {
           "line": 13,
@@ -929,8 +828,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 582,
-      "end": 583,
+      "start": 575,
+      "end": 576,
       "loc": {
         "start": {
           "line": 13,
@@ -944,7 +843,7 @@
     },
     {
       "type": {
-        "label": "name",
+        "label": "num",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -952,11 +851,12 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null
+        "binop": null,
+        "updateContext": null
       },
-      "value": "Symbol",
-      "start": 584,
-      "end": 590,
+      "value": 1,
+      "start": 577,
+      "end": 578,
       "loc": {
         "start": {
           "line": 13,
@@ -964,57 +864,7 @@
         },
         "end": {
           "line": 13,
-          "column": 17
-        }
-      }
-    },
-    {
-      "type": {
-        "label": "(",
-        "beforeExpr": true,
-        "startsExpr": true,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 590,
-      "end": 591,
-      "loc": {
-        "start": {
-          "line": 13,
-          "column": 17
-        },
-        "end": {
-          "line": 13,
-          "column": 18
-        }
-      }
-    },
-    {
-      "type": {
-        "label": ")",
-        "beforeExpr": false,
-        "startsExpr": false,
-        "rightAssociative": false,
-        "isLoop": false,
-        "isAssign": false,
-        "prefix": false,
-        "postfix": false,
-        "binop": null
-      },
-      "start": 591,
-      "end": 592,
-      "loc": {
-        "start": {
-          "line": 13,
-          "column": 18
-        },
-        "end": {
-          "line": 13,
-          "column": 19
+          "column": 12
         }
       }
     },
@@ -1030,8 +880,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 593,
-      "end": 594,
+      "start": 579,
+      "end": 580,
       "loc": {
         "start": {
           "line": 14,
@@ -1058,8 +908,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 596,
-      "end": 602,
+      "start": 582,
+      "end": 588,
       "loc": {
         "start": {
           "line": 16,
@@ -1086,8 +936,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 603,
-      "end": 610,
+      "start": 589,
+      "end": 596,
       "loc": {
         "start": {
           "line": 16,
@@ -1112,8 +962,8 @@
         "binop": null
       },
       "value": "SCNTransparencyMode",
-      "start": 611,
-      "end": 630,
+      "start": 597,
+      "end": 616,
       "loc": {
         "start": {
           "line": 16,
@@ -1138,8 +988,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 631,
-      "end": 631,
+      "start": 617,
+      "end": 617,
       "loc": {
         "start": {
           "line": 17,

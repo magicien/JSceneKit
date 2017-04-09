@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">js/Foundation/NSCoder.js | API Document</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  
+  
+  <script src="script/manual.js"></script>
+</head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <a data-ice="repoURL" href="https://github.com/magicien/JSceneKit" class="repo-url-github">Repository</a>
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">AppKit</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/AppKit/NSColor.js~NSColor.html">NSColor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-NSColorSpaceModel">NSColorSpaceModel</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">CoreGraphics</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGMutablePath.js~CGMutablePath.html">CGMutablePath</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGPath.js~CGPath.html">CGPath</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGPoint.js~CGPoint.html">CGPoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGRect.js~CGRect.html">CGRect</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGSize.js~CGSize.html">CGSize</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/CoreGraphics/CGVector.js~CGVector.html">CGVector</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-CGPathApplierFunction">CGPathApplierFunction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-CGBlendMode">CGBlendMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-CGLineCap">CGLineCap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-CGLineJoin">CGLineJoin</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-CGPathFillRule">CGPathFillRule</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">Foundation</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSArray.js~NSArray.html">NSArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSCoder.js~NSCoder.html">NSCoder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSData.js~NSData.html">NSData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSDictionary.js~NSDictionary.html">NSDictionary</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSKeyedArchiver.js~NSKeyedArchiver.html">NSKeyedArchiver</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSKeyedUnarchiver.js~NSKeyedUnarchiver.html">NSKeyedUnarchiver</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSMutableArray.js~NSMutableArray.html">NSMutableArray</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSMutableData.js~NSMutableData.html">NSMutableData</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSMutableDictionary.js~NSMutableDictionary.html">NSMutableDictionary</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/Foundation/NSValue.js~NSValue.html">NSValue</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">ObjectiveC</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/ObjectiveC/NSObject.js~NSObject.html">NSObject</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">QuartzCore</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAnimation.js~CAAnimation.html">CAAnimation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAnimationGroup.js~CAAnimationGroup.html">CAAnimationGroup</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CABasicAnimation.js~CABasicAnimation.html">CABasicAnimation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAKeyframeAnimation.js~CAKeyframeAnimation.html">CAKeyframeAnimation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAMediaTimingFunction.js~CAMediaTimingFunction.html">CAMediaTimingFunction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAPropertyAnimation.js~CAPropertyAnimation.html">CAPropertyAnimation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/QuartzCore/CATransform3D.js~CATransform3D.html">CATransform3D</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAction.js~CAAction.html">CAAction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAAnimationDelegate.js~CAAnimationDelegate.html">CAAnimationDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/QuartzCore/CAMediaTiming.js~CAMediaTiming.html">CAMediaTiming</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">SceneKit</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAction.js~SCNAction.html">SCNAction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAnimationEvent.js~SCNAnimationEvent.html">SCNAnimationEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAudioPlayer.js~SCNAudioPlayer.html">SCNAudioPlayer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAudioSource.js~SCNAudioSource.html">SCNAudioSource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBillboardAxis.js~SCNBillboardAxis.html">SCNBillboardAxis</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBillboardConstraint.js~SCNBillboardConstraint.html">SCNBillboardConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBox.js~SCNBox.html">SCNBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCamera.js~SCNCamera.html">SCNCamera</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCapsule.js~SCNCapsule.html">SCNCapsule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCone.js~SCNCone.html">SCNCone</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNConstraint.js~SCNConstraint.html">SCNConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNCylinder.js~SCNCylinder.html">SCNCylinder</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNDebugOptions.js~SCNDebugOptions.html">SCNDebugOptions</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNFloor.js~SCNFloor.html">SCNFloor</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNGeometry.js~SCNGeometry.html">SCNGeometry</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNGeometryElement.js~SCNGeometryElement.html">SCNGeometryElement</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNGeometrySource.js~SCNGeometrySource.html">SCNGeometrySource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNHitTestResult.js~SCNHitTestResult.html">SCNHitTestResult</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNIKConstraint.js~SCNIKConstraint.html">SCNIKConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLayer.js~SCNLayer.html">SCNLayer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLevelOfDetail.js~SCNLevelOfDetail.html">SCNLevelOfDetail</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLight.js~SCNLight.html">SCNLight</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNLookAtConstraint.js~SCNLookAtConstraint.html">SCNLookAtConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMaterial.js~SCNMaterial.html">SCNMaterial</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html">SCNMaterialProperty</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMatrix4.js~SCNMatrix4.html">SCNMatrix4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNMorpher.js~SCNMorpher.html">SCNMorpher</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html">SCNNode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNParticlePropertyController.js~SCNParticlePropertyController.html">SCNParticlePropertyController</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNParticleSystem.js~SCNParticleSystem.html">SCNParticleSystem</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsBallSocketJoint.js~SCNPhysicsBallSocketJoint.html">SCNPhysicsBallSocketJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsBehavior.js~SCNPhysicsBehavior.html">SCNPhysicsBehavior</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsBody.js~SCNPhysicsBody.html">SCNPhysicsBody</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsCollisionCategory.js~SCNPhysicsCollisionCategory.html">SCNPhysicsCollisionCategory</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsContact.js~SCNPhysicsContact.html">SCNPhysicsContact</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsField.js~SCNPhysicsField.html">SCNPhysicsField</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsHingeJoint.js~SCNPhysicsHingeJoint.html">SCNPhysicsHingeJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsShape.js~SCNPhysicsShape.html">SCNPhysicsShape</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsSliderJoint.js~SCNPhysicsSliderJoint.html">SCNPhysicsSliderJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsVehicle.js~SCNPhysicsVehicle.html">SCNPhysicsVehicle</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsVehicleWheel.js~SCNPhysicsVehicleWheel.html">SCNPhysicsVehicleWheel</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsWorld.js~SCNPhysicsWorld.html">SCNPhysicsWorld</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPlane.js~SCNPlane.html">SCNPlane</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNProgram.js~SCNProgram.html">SCNProgram</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPyramid.js~SCNPyramid.html">SCNPyramid</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNReferenceNode.js~SCNReferenceNode.html">SCNReferenceNode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNRenderer.js~SCNRenderer.html">SCNRenderer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNScene.js~SCNScene.html">SCNScene</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneSource.js~SCNSceneSource.html">SCNSceneSource</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNShape.js~SCNShape.html">SCNShape</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSkinner.js~SCNSkinner.html">SCNSkinner</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSphere.js~SCNSphere.html">SCNSphere</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTechnique.js~SCNTechnique.html">SCNTechnique</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNText.js~SCNText.html">SCNText</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTorus.js~SCNTorus.html">SCNTorus</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTransaction.js~SCNTransaction.html">SCNTransaction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTransformConstraint.js~SCNTransformConstraint.html">SCNTransformConstraint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTube.js~SCNTube.html">SCNTube</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNVector3.js~SCNVector3.html">SCNVector3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNVector4.js~SCNVector4.html">SCNVector4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNView.js~SCNView.html">SCNView</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNActionable.js~SCNActionable.html">SCNActionable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNAnimatable.js~SCNAnimatable.html">SCNAnimatable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBoundingVolume.js~SCNBoundingVolume.html">SCNBoundingVolume</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNBufferStream.js~SCNBufferStream.html">SCNBufferStream</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNNodeRendererDelegate.js~SCNNodeRendererDelegate.html">SCNNodeRendererDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsContactDelegate.js~SCNPhysicsContactDelegate.html">SCNPhysicsContactDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNProgramDelegate.js~SCNProgramDelegate.html">SCNProgramDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneExportDelegate.js~SCNSceneExportDelegate.html">SCNSceneExportDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneRenderer.js~SCNSceneRenderer.html">SCNSceneRenderer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNSceneRendererDelegate.js~SCNSceneRendererDelegate.html">SCNSceneRendererDelegate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNShadable.js~SCNShadable.html">SCNShadable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-interface">I</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNTechniqueSupport.js~SCNTechniqueSupport.html">SCNTechniqueSupport</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNActionTimingFunction">SCNActionTimingFunction</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNAnimationEventBlock">SCNAnimationEventBlock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNBindingBlock">SCNBindingBlock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNBufferBindingBlock">SCNBufferBindingBlock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNFieldForceEvaluator">SCNFieldForceEvaluator</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4EqualToMatrix4">SCNMatrix4EqualToMatrix4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4FromGLKMatrix4">SCNMatrix4FromGLKMatrix4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4FromMat4">SCNMatrix4FromMat4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4Invert">SCNMatrix4Invert</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4IsIdentity">SCNMatrix4IsIdentity</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4MakeRotation">SCNMatrix4MakeRotation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4MakeScale">SCNMatrix4MakeScale</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4MakeTranslation">SCNMatrix4MakeTranslation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4Mult">SCNMatrix4Mult</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4Rotate">SCNMatrix4Rotate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4Scale">SCNMatrix4Scale</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4ToGLKMatrix4">SCNMatrix4ToGLKMatrix4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4ToMat4">SCNMatrix4ToMat4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNMatrix4Translate">SCNMatrix4Translate</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNParticleEventBlock">SCNParticleEventBlock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNParticleModifierBlock">SCNParticleModifierBlock</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNSceneExportProgressHandler">SCNSceneExportProgressHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNSceneSourceStatusHandler">SCNSceneSourceStatusHandler</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector3EqualToVector3">SCNVector3EqualToVector3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector3FromFloat3">SCNVector3FromFloat3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector3FromGLKVector3">SCNVector3FromGLKVector3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector3Make">SCNVector3Make</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector3ToFloat3">SCNVector3ToFloat3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector3ToGLKVector3">SCNVector3ToGLKVector3</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector4EqualToVector4">SCNVector4EqualToVector4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector4FromFloat4">SCNVector4FromFloat4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector4FromGLKVector4">SCNVector4FromGLKVector4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector4Make">SCNVector4Make</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector4ToFloat4">SCNVector4ToFloat4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-SCNVector4ToGLKVector4">SCNVector4ToGLKVector4</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-SCNQuaternion">SCNQuaternion</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNActionTimingMode">SCNActionTimingMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNAntialiasingMode">SCNAntialiasingMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNBlendMode">SCNBlendMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNBufferFrequency">SCNBufferFrequency</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNChamferMode">SCNChamferMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNCullMode">SCNCullMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNFilterMode">SCNFilterMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNGeometryPrimitiveType">SCNGeometryPrimitiveType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNHitTestOption">SCNHitTestOption</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNMorpherCalculationMode">SCNMorpherCalculationMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNMovabilityHint">SCNMovabilityHint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNParticleBirthDirection">SCNParticleBirthDirection</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNParticleBirthLocation">SCNParticleBirthLocation</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNParticleBlendMode">SCNParticleBlendMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNParticleEvent">SCNParticleEvent</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNParticleImageSequenceAnimationMode">SCNParticleImageSequenceAnimationMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNParticleInputMode">SCNParticleInputMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNParticleModifierStage">SCNParticleModifierStage</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNParticleOrientationMode">SCNParticleOrientationMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNParticleSortingMode">SCNParticleSortingMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNPhysicsBodyType">SCNPhysicsBodyType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNPhysicsFieldScope">SCNPhysicsFieldScope</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNReferenceLoadingPolicy">SCNReferenceLoadingPolicy</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNRenderingAPI">SCNRenderingAPI</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNSceneSourceStatus">SCNSceneSourceStatus</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNShaderModifierEntryPoint">SCNShaderModifierEntryPoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNShadowMode">SCNShadowMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNTransparencyMode">SCNTransparencyMode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-typedef">T</span><span data-ice="name"><span><a href="typedef/index.html#static-typedef-SCNWrapMode">SCNWrapMode</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">SpriteKit</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SpriteKit/SKColor.js~SKColor.html">SKColor</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">third_party</div><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-BinaryParser">BinaryParser</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-EscapeEUCJP">EscapeEUCJP</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-EscapeJIS7">EscapeJIS7</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-EscapeJIS8">EscapeJIS8</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-EscapeSJIS">EscapeSJIS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-EscapeUTF16LE">EscapeUTF16LE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-EscapeUTF7">EscapeUTF7</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-EscapeUTF8">EscapeUTF8</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-EscapeUnicode">EscapeUnicode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-GetEscapeCodeType">GetEscapeCodeType</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-UnescapeEUCJP">UnescapeEUCJP</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-UnescapeJIS7">UnescapeJIS7</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-UnescapeJIS8">UnescapeJIS8</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-UnescapeSJIS">UnescapeSJIS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-UnescapeUTF16LE">UnescapeUTF16LE</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-UnescapeUTF7">UnescapeUTF7</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-UnescapeUTF8">UnescapeUTF8</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-function">F</span><span data-ice="name"><span><a href="function/index.html#static-function-UnescapeUnicode">UnescapeUnicode</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-JCT11280">JCT11280</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-variable">V</span><span data-ice="name"><span><a href="variable/index.html#static-variable-JCT8836">JCT8836</a></span></span></li>
+<li data-ice="doc"><div data-ice="dirPath" class="nav-dir-path">util</div><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/util/_AjaxRequest.js~AjaxRequest.html">AjaxRequest</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/util/_BinaryReader.js~_BinaryReader.html">_BinaryReader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/util/_BinaryRequest.js~BinaryRequest.html">BinaryRequest</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/util/_File.js~File.html">File</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/util/_FileReader.js~FileReader.html">FileReader</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">js/Foundation/NSCoder.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">&apos;use strict&apos;
+
+import NSObject from &apos;../ObjectiveC/NSObject&apos;
+import CGPoint from &apos;../CoreGraphics/CGPoint&apos;
+import CGRect from &apos;../CoreGraphics/CGRect&apos;
+import CGSize from &apos;../CoreGraphics/CGSize&apos;
+import CGVector from &apos;../CoreGraphics/CGVector&apos;
+
+const _DecodingFailurePolicy = {
+  raiseException: Symbol(&apos;raiseException&apos;),
+  setErrorAndReturn: Symbol(&apos;setErrorAndReturn&apos;)
+}
+
+/**
+ * The NSCoder abstract class declares the interface used by concrete subclasses to transfer objects and other values between memory and some other format. This capability provides the basis for archiving (where objects and data items are stored on disk) and distribution (where objects and data items are copied between different processes or threads). The concrete subclasses provided by Foundation for these purposes are NSArchiver, NSUnarchiver, NSKeyedArchiver, NSKeyedUnarchiver, and NSPortCoder. Concrete subclasses of NSCoder are referred to in general as coder classes, and instances of these classes as coder objects (or simply coders). A coder object that can only encode values is referred to as an encoder object, and one that can only decode values as a decoder object.
+ * @access public
+ * @extends {NSObject}
+ * @see https://developer.apple.com/reference/foundation/nscoder
+ */
+export default class NSCoder extends NSObject {
+
+  /**
+   * constructor
+   * @access public
+   * @constructor
+   */
+  constructor() {
+    super()
+
+    // Inspecting a Coder
+
+    this._allowsKeyedCoding = false
+
+    // Secure Coding
+
+    this._requiresSecureCoding = false
+    this._allowedClasses = null
+
+    // Getting Version Information
+
+    this._systemVersion = 0
+
+    // Instance Properties
+
+    this._decodingFailurePolicy = null
+    this._error = null
+  }
+
+  static get DecodingFailurePolicy() {
+    return _DecodingFailurePolicy
+  }
+
+  // Inspecting a Coder
+
+  /**
+   * Returns a Boolean value that indicates whether an encoded value is available for a string.
+   * @access public
+   * @param {string} key - 
+   * @returns {boolean} - 
+   * @desc Subclasses must override this method if they perform keyed coding. The string is passed as key.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1416125-containsvalue
+   */
+  containsValueForKey(key) {
+    return false
+  }
+  /**
+   * A Boolean value that indicates whether the receiver supports keyed coding of objects.
+   * @type {boolean}
+   * @desc false by default. Concrete subclasses that support keyed coding, such as NSKeyedArchiver, need to override this property to return true.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1417541-allowskeyedcoding
+   */
+  get allowsKeyedCoding() {
+    return this._allowsKeyedCoding
+  }
+
+  // Encoding General Data
+
+  /**
+   * Encodes an array of count items, whose Objective-C type is given by itemType.
+   * @access public
+   * @param {UnsafePointer&lt;Int8&gt;} type - 
+   * @param {number} count - 
+   * @param {UnsafeRawPointer} array - 
+   * @returns {void}
+   * @desc The values are encoded from the buffer beginning at address. itemType must contain exactly one type code. NSCoder&#x2019;s implementation invokes encodeValue(ofObjCType:at:) to encode the entire array of items. Subclasses that implement the encodeValue(ofObjCType:at:) method do not need to override this method.This method must be matched by a subsequent decodeArray(ofObjCType:count:at:) message.For information on creating an Objective-C type code suitable for itemType, see Type Encodings.Special ConsiderationsYou should not use this method to encode C arrays of Objective-C objects. See decodeArray(ofObjCType:count:at:) for more details.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1417865-encodearray
+   */
+  encodeArrayOfObjCTypeAt(type, count, array) {
+  }
+
+  /**
+   * Encodes the object objv and associates it with the string key.
+   * @access public
+   * @param {?Object} objv - 
+   * @param {string} key - 
+   * @returns {void}
+   * @desc Subclasses must override this method to identify multiple encodings of objv and encode a reference to objv instead. For example, NSKeyedArchiver detects duplicate objects and encodes a reference to the original object rather than encode the same object twice.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1411568-encode
+   */
+  encodeForKey(objv, key) {
+  }
+
+  /**
+   * Can be overridden by subclasses to encode object so that a copy, rather than a proxy, is created upon decoding.
+   * @access public
+   * @param {?Object} anObject - 
+   * @returns {void}
+   * @desc NSCoder&#x2019;s implementation simply invokes encode(_:).This method must be matched by a corresponding decodeObject() message.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1418225-encodebycopyobject
+   */
+  encodeBycopyObject(anObject) {
+  }
+
+  /**
+   * Can be overridden by subclasses to encode object so that a proxy, rather than a copy, is created upon decoding.
+   * @access public
+   * @param {?Object} anObject - 
+   * @returns {void}
+   * @desc NSCoder&#x2019;s implementation simply invokes encode(_:).This method must be matched by a corresponding decodeObject() message.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1416279-encodebyrefobject
+   */
+  encodeByrefObject(anObject) {
+  }
+
+  /**
+   * Encodes a buffer of data whose types are unspecified.
+   * @access public
+   * @param {?UnsafeRawPointer} byteaddr - 
+   * @param {number} length - 
+   * @returns {void}
+   * @desc The buffer to be encoded begins at address, and its length in bytes is given by numBytes.This method must be matched by a corresponding decodeBytes(withReturnedLength:) message.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1411664-encodebytes
+   */
+  encodeBytes(byteaddr, length) {
+  }
+
+  /**
+   * Encodes a buffer of data, bytesp, whose length is specified by lenv, and associates it with the string key.
+   * @access public
+   * @param {?UnsafePointer&lt;UInt8&gt;} bytesp - 
+   * @param {number} lenv - 
+   * @param {string} key - 
+   * @returns {void}
+   * @desc Subclasses must override this method if they perform keyed coding.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1413078-encodebytes
+   */
+  encodeBytesLengthForKey(bytesp, lenv, key) {
+  }
+
+  /**
+   * Can be overridden by subclasses to conditionally encode object, preserving common references to that object.
+   * @access public
+   * @param {?Object} object - 
+   * @returns {void}
+   * @desc In the overriding method, object should be encoded only if it&#x2019;s unconditionally encoded elsewhere (with any other encode...Object: method).This method must be matched by a subsequent decodeObject() message. Upon decoding, if object was never encoded unconditionally, decodeObject returns nil in place of object. However, if object was encoded unconditionally, all references to object must be resolved.NSCoder&#x2019;s implementation simply invokes encode(_:). 
+   * @see https://developer.apple.com/reference/foundation/nscoder/1415196-encodeconditionalobject
+   */
+  encodeConditionalObject(object) {
+  }
+
+  /**
+   * Conditionally encodes a reference to objv and associates it with the string key only if objv has been unconditionally encoded with encode(_:forKey:).
+   * @access public
+   * @param {?Object} objv - 
+   * @param {string} key - 
+   * @returns {void}
+   * @desc Subclasses must override this method if they support keyed coding.The encoded object is decoded with the decodeObject(forKey:) method. If objv was never encoded unconditionally, decodeObject(forKey:) returns nil in place of objv.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1413918-encodeconditionalobject
+   */
+  encodeConditionalObjectForKey(objv, key) {
+  }
+
+  /**
+   * Encodes size.
+   * @access public
+   * @param {CGSize} size - 
+   * @returns {void}
+   * @desc NSCoder&#x2019;s implementation invokes encodeValue(ofObjCType:at:) to encode size.This method must be matched by a subsequent decodeSize() message.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1391291-encode
+   */
+  encode(size) {
+  }
+
+  /**
+   * Encodes intv and associates it with the string key.
+   * @access public
+   * @param {number} intv - 
+   * @param {string} key - 
+   * @returns {void}
+   * @desc Subclasses must override this method if they perform keyed coding.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1413906-encodecint
+   */
+  encodeCIntForKey(intv, key) {
+  }
+
+  /**
+   * Encodes the property list aPropertyList.
+   * @access public
+   * @param {Object} aPropertyList - 
+   * @returns {void}
+   * @desc NSCoder&#x2019;s implementation invokes encodeValue(ofObjCType:at:) to encode aPropertyList.This method must be matched by a subsequent decodePropertyList() message.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1410643-encodepropertylist
+   */
+  encodePropertyList(aPropertyList) {
+  }
+
+  /**
+   * Can be overridden by subclasses to encode an interconnected group of Objective-C objects, starting with rootObject.
+   * @access public
+   * @param {Object} rootObject - 
+   * @returns {void}
+   * @desc NSCoder&#x2019;s implementation simply invokes encode(_:).This method must be matched by a subsequent decodeObject() message.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1409439-encoderootobject
+   */
+  encodeRootObject(rootObject) {
+  }
+
+  /**
+   * Must be overridden by subclasses to encode a single value residing at address, whose Objective-C type is given by valueType.
+   * @access public
+   * @param {UnsafePointer&lt;Int8&gt;} type - 
+   * @param {UnsafeRawPointer} addr - 
+   * @returns {void}
+   * @desc  valueType must contain exactly one type code.This method must be matched by a subsequent decodeValue(ofObjCType:at:) message.For information on creating an Objective-C type code suitable for valueType, see Type Encodings.Special ConsiderationsYou should not use this method to encode of Objective-C objects. See decodeArray(ofObjCType:count:at:) for more details.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1414648-encodevalue
+   */
+  encodeValueOfObjCTypeAt(type, addr) {
+  }
+
+  // Decoding General Data
+
+  /**
+   * Decodes an array of count items, whose Objective-C type is given by itemType.
+   * @access public
+   * @param {UnsafePointer&lt;Int8&gt;} itemType - 
+   * @param {number} count - 
+   * @param {Object} array - 
+   * @returns {void}
+   * @desc The items are decoded into the buffer beginning at address, which must be large enough to contain them all. itemType must contain exactly one type code. NSCoder&#x2019;s implementation invokes decodeValue(ofObjCType:at:) to decode the entire array of items.This method matches an encodeArray(ofObjCType:count:at:) message used during encoding.For information on creating an Objective-C type code suitable for itemType, see Type Encodings.Special ConsiderationsYou should not use this method to decode C arrays of Objective-C objects. For historical reasons, returned objects will have an additional ownership reference which you can only relinquish using CFRelease.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1408354-decodearray
+   */
+  decodeArrayOfObjCTypeAt(itemType, count, array) {
+  }
+
+  /**
+   * Decodes and returns a boolean value that was previously encoded with encode(_:forKey:) and associated with the string key.
+   * @access public
+   * @param {string} key - 
+   * @returns {boolean} - 
+   * @desc Subclasses must override this method if they perform keyed coding.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1409293-decodebool
+   */
+  decodeBoolForKey(key) {
+    return false
+  }
+
+  /**
+   * Decodes a buffer of data that was previously encoded with encodeBytes(_:length:forKey:) and associated with the string key.
+   * @access public
+   * @param {string} key - 
+   * @param {?UnsafeMutablePointer&lt;Int&gt;} lengthp - 
+   * @returns {?UnsafePointer&lt;UInt8&gt;} - 
+   * @desc  The buffer&#x2019;s length is returned by reference in lengthp. The returned bytes are immutable. Subclasses must override this method if they perform keyed coding.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1411987-decodebytes
+   */
+  decodeBytesForKeyReturnedLength(key, lengthp) {
+    return null
+  }
+
+  /**
+   * Decodes a buffer of data whose types are unspecified.
+   * @access public
+   * @param {UnsafeMutablePointer&lt;Int&gt;} lengthp - 
+   * @returns {?Object} - 
+   * @desc NSCoder&#x2019;s implementation invokes decodeValue(ofObjCType:at:) to decode the data as a series of bytes, which this method then places into a buffer and returns. The buffer&#x2019;s length is returned by reference in numBytes. If you need the bytes beyond the scope of the current @autoreleasepool block, you must copy them.This method matches an encodeBytes(_:length:) message used during encoding.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1415441-decodebytes
+   */
+  decodeBytesWithReturnedLength(lengthp) {
+    return null
+  }
+
+  /**
+   * Decodes and returns an NSData object that was previously encoded with encode(_:). Subclasses must override this method.
+   * @access public
+   * @returns {?Data} - 
+   * @desc The implementation of your overriding method must match the implementation of your encode(_:) method. For example, a typical encode(_:) method encodes the number of bytes of data followed by the bytes themselves. Your override of this method must read the number of bytes, create an NSData object of the appropriate size, and decode the bytes into the new NSData object. 
+   * @see https://developer.apple.com/reference/foundation/nscoder/1409876-decodedata
+   */
+  decodeData() {
+    return null
+  }
+
+  /**
+   * Decodes and returns a double value that was previously encoded with either encode(_:forKey:) or encode(_:forKey:) and associated with the string key.
+   * @access public
+   * @param {string} key - 
+   * @returns {number} - 
+   * @desc Subclasses must override this method if they perform keyed coding.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1409374-decodedouble
+   */
+  decodeDoubleForKey(key) {
+    return 0
+  }
+
+  /**
+   * Decodes and returns a float value that was previously encoded with encode(_:forKey:) or encode(_:forKey:) and associated with the string key.
+   * @access public
+   * @param {string} key - 
+   * @returns {number} - 
+   * @desc If the value was encoded as a double, the extra precision is lost. If the encoded real value does not fit into a float, the method raises an NSRangeException. Subclasses must override this method if they perform keyed coding.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1408104-decodefloat
+   */
+  decodeFloatForKey(key) {
+    return 0
+  }
+
+  /**
+   * Decodes and returns an int value that was previously encoded with encodeCInt(_:forKey:), encode(_:forKey:), encode(_:forKey:), or encode(_:forKey:) and associated with the string key.
+   * @access public
+   * @param {string} key - 
+   * @returns {number} - 
+   * @desc If the encoded integer does not fit into the default integer size, the method raises an NSRangeException. Subclasses must override this method if they perform keyed coding.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1411168-decodecint
+   */
+  decodeCIntForKey(key) {
+    return 0
+  }
+
+  /**
+   * Decodes and returns an NSInteger value that was previously encoded with encodeCInt(_:forKey:), encode(_:forKey:), encode(_:forKey:), or encode(_:forKey:) and associated with the string key.
+   * @access public
+   * @param {string} key - 
+   * @returns {number} - 
+   * @desc If the encoded integer does not fit into the NSInteger size, the method raises an NSRangeException. Subclasses must override this method if they perform keyed coding.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1409246-decodeinteger
+   */
+  decodeIntegerForKey(key) {
+    return 0
+  }
+
+  /**
+   * Decodes and returns a 32-bit integer value that was previously encoded with encodeCInt(_:forKey:), encode(_:forKey:), encode(_:forKey:), or encode(_:forKey:) and associated with the string key.
+   * @access public
+   * @param {string} key - 
+   * @returns {number} - 
+   * @desc If the encoded integer does not fit into a 32-bit integer, the method raises an NSRangeException. Subclasses must override this method if they perform keyed coding.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1408918-decodeint32
+   */
+  decodeInt32ForKey(key) {
+    return 0
+  }
+
+  /**
+   * Decodes and returns a 64-bit integer value that was previously encoded with encodeCInt(_:forKey:), encode(_:forKey:), encode(_:forKey:), or encode(_:forKey:) and associated with the string key.
+   * @access public
+   * @param {string} key - 
+   * @returns {Int64} - 
+   * @desc Subclasses must override this method if they perform keyed coding.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1407878-decodeint64
+   */
+  decodeInt64ForKey(key) {
+    return null
+  }
+
+  /**
+   * Decodes an Objective-C object that was previously encoded with any of the encode...Object: methods.
+   * @access public
+   * @returns {?Object} - 
+   * @desc NSCoder&#x2019;s implementation invokes decodeValue(ofObjCType:at:) to decode the object data.Subclasses may need to override this method if they override any of the corresponding encode...Object: methods. For example, if an object was encoded conditionally using the encodeConditionalObject(_:) method, this method needs to check whether the object had actually been encoded.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1414478-decodeobject
+   */
+  decodeObject() {
+    return null
+  }
+
+  /**
+   * Decodes and returns an Objective-C object that was previously encoded with encode(_:forKey:) or encodeConditionalObject(_:forKey:) and associated with the string key.
+   * @access public
+   * @param {string} key - 
+   * @returns {?Object} - 
+   * @desc Subclasses must override this method if they perform keyed coding.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1418185-decodeobject
+   */
+  decodeObjectForKey(key) {
+    return null
+  }
+
+  /**
+   * Decodes and returns an NSPoint structure that was previously encoded with encode(_:).
+   * @access public
+   * @returns {CGPoint} - 
+   * @see https://developer.apple.com/reference/foundation/nscoder/1391189-decodepoint
+   */
+  decodePoint() {
+    return null
+  }
+
+  /**
+   * Decodes and returns an NSPoint structure that was previously encoded with encode(_:forKey:).
+   * @access public
+   * @param {string} key - 
+   * @returns {CGPoint} - 
+   * @see https://developer.apple.com/reference/foundation/nscoder/1391214-decodepoint
+   */
+  decodePointForKey(key) {
+    return null
+  }
+
+  /**
+   * Decodes a property list that was previously encoded with encodePropertyList(_:).
+   * @access public
+   * @returns {?Object} - 
+   * @see https://developer.apple.com/reference/foundation/nscoder/1411916-decodepropertylist
+   */
+  decodePropertyList() {
+    return null
+  }
+
+  /**
+   * Decodes and returns an NSRect structure that was previously encoded with encode(_:).
+   * @access public
+   * @returns {CGRect} - 
+   * @see https://developer.apple.com/reference/foundation/nscoder/1391269-decoderect
+   */
+  decodeRect() {
+    return null
+  }
+
+  /**
+   * Decodes and returns an NSRect structure that was previously encoded with encode(_:forKey:).
+   * @access public
+   * @param {string} key - 
+   * @returns {CGRect} - 
+   * @see https://developer.apple.com/reference/foundation/nscoder/1391116-decoderect
+   */
+  decodeRectForKey(key) {
+    return null
+  }
+
+  /**
+   * Decodes and returns an NSSize structure that was previously encoded with encode(_:).
+   * @access public
+   * @returns {CGSize} - 
+   * @see https://developer.apple.com/reference/foundation/nscoder/1391144-decodesize
+   */
+  decodeSize() {
+    return null
+  }
+
+  /**
+   * Decodes and returns an NSSize structure that was previously encoded with encode(_:forKey:).
+   * @access public
+   * @param {string} key - 
+   * @returns {CGSize} - 
+   * @see https://developer.apple.com/reference/foundation/nscoder/1391253-decodesize
+   */
+  decodeSizeForKey(key) {
+    return null
+  }
+
+  /**
+   * Decodes a single value, whose Objective-C type is given by valueType.
+   * @access public
+   * @param {UnsafePointer&lt;Int8&gt;} type - 
+   * @param {Object} data - 
+   * @returns {void}
+   * @desc  valueType must contain exactly one type code, and the buffer specified by data must be large enough to hold the value corresponding to that type code. For information on creating an Objective-C type code suitable for valueType, see Type Encodings.Subclasses must override this method and provide an implementation to decode the value. In your overriding implementation, decode the value into the buffer beginning at data.This method matches an encodeValue(ofObjCType:at:) message used during encoding.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1417159-decodevalue
+   */
+  decodeValueOfObjCTypeAt(type, data) {
+  }
+
+  /**
+   * Returns a decoded property list for the specified key.
+   * @access public
+   * @param {string} key - The coder key.
+   * @returns {?Object} - 
+   * @desc This method calls decodeObjectOfClasses:forKey: with a set allowing only property list types.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1416284-decodepropertylist
+   */
+  decodePropertyListForKey(key) {
+    return null
+  }
+
+  // Decoding Geometry-Based Data
+
+  /**
+   * Decodes and returns the CGPoint structure associated with the specified key in the receiver&#x2019;s archive. 
+   * @access public
+   * @param {string} key - The key that identifies the point.
+   * @returns {CGPoint} - 
+   * @desc Use this method to decode a point that was previously encoded using the encode(_:forKey:) method.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1624523-decodecgpoint
+   */
+  decodeCGPointForKey(key) {
+    return null
+  }
+
+  /**
+   * Decodes and returns the CGRect structure associated with the specified key in the receiver&#x2019;s archive. 
+   * @access public
+   * @param {string} key - The key that identifies the rectangle.
+   * @returns {CGRect} - 
+   * @desc Use this method to decode a rectangle that was previously encoded using the encode(_:forKey:) method.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1624522-decodecgrect
+   */
+  decodeCGRectForKey(key) {
+    return null
+  }
+
+  /**
+   * Decodes and returns the CGSize structure associated with the specified key in the receiver&#x2019;s archive. 
+   * @access public
+   * @param {string} key - The key that identifies the size information.
+   * @returns {CGSize} - 
+   * @desc Use this method to decode size information that was previously encoded using the encode(_:forKey:) method.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1624519-decodecgsize
+   */
+  decodeCGSizeForKey(key) {
+    return null
+  }
+
+  /**
+   * Decodes and returns the CGAffineTransform structure associated with the specified key in the receiver&#x2019;s archive. 
+   * @access public
+   * @param {string} key - The key that identifies the affine transform.
+   * @returns {CGAffineTransform} - 
+   * @desc Use this method to decode size information that was previously encoded using the encode(_:forKey:) method.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1624478-decodecgaffinetransform
+   */
+  decodeCGAffineTransformForKey(key) {
+    return null
+  }
+
+  /**
+   * Decodes and returns the UIEdgeInsets structure associated with the specified key in the receiver&#x2019;s archive. 
+   * @access public
+   * @param {string} key - The key that identifies the edge insets.
+   * @returns {UIEdgeInsets} - 
+   * @desc Use this method to decode size information that was previously encoded using the encode(_:forKey:) method.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1624492-decodeuiedgeinsets
+   */
+  decodeUIEdgeInsetsForKey(key) {
+    return null
+  }
+
+  /**
+   * Decodes and returns the UIOffset structure associated with the specified key in the receiver&#x2019;s archive. 
+   * @access public
+   * @param {string} key - The key that identifies the offset.
+   * @returns {UIOffset} - 
+   * @desc Use this method to decode offset information that was previously encoded using the encode(_:forKey:) method.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1624507-decodeuioffset
+   */
+  decodeUIOffsetForKey(key) {
+    return null
+  }
+
+  /**
+   * Decodes and returns the CGVector data associated with the specified key in the coder&#x2019;s archive.
+   * @access public
+   * @param {string} key - The key that identifies the vector.
+   * @returns {CGVector} - 
+   * @desc Use this method to decode vector information that was previously encoded using the encode(_:forKey:) method.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1624488-decodecgvector
+   */
+  decodeCGVectorForKey(key) {
+    return null
+  }
+
+  // Decoding Core Media Time Structures
+
+  /**
+   * Returns the CMTime structure associated with a given key.
+   * @access public
+   * @param {string} key - The key for a CMTime structure encoded in the receiver.
+   * @returns {CMTime} - 
+   * @see https://developer.apple.com/reference/foundation/nscoder/1389544-decodetime
+   */
+  decodeTimeForKey(key) {
+    return null
+  }
+
+  /**
+   * Returns the CMTimeRange structure associated with a given key.
+   * @access public
+   * @param {string} key - The key for a CMTimeRange structure encoded in the receiver.
+   * @returns {CMTimeRange} - 
+   * @see https://developer.apple.com/reference/foundation/nscoder/1385718-decodetimerange
+   */
+  decodeTimeRangeForKey(key) {
+    return null
+  }
+
+  /**
+   * Returns the CMTimeMapping structure associated with a given key.
+   * @access public
+   * @param {string} key - The key for a CMTimeMapping structure encoded in the receiver.
+   * @returns {CMTimeMapping} - 
+   * @see https://developer.apple.com/reference/foundation/nscoder/1389860-decodetimemapping
+   */
+  decodeTimeMappingForKey(key) {
+    return null
+  }
+
+  // Secure Coding
+  /**
+   * Boolean value that indicates whether the coder requires secure coding.
+   * @type {boolean}
+   * @desc true if this coder requires secure coding; false otherwise.Secure coders check a set of allowed classes before decoding objects, and all objects must implement the NSSecureCoding protocol.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1409845-requiressecurecoding
+   */
+  get requiresSecureCoding() {
+    return this._requiresSecureCoding
+  }
+  /**
+   * The set of coded classes allowed for secure coding.
+   * @type {?Set&lt;AnyHashable&gt;}
+   * @desc Secure coders check this set of allowed classes before decoding objects, and all objects must implement the NSSecureCoding protocol.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1412486-allowedclasses
+   */
+  get allowedClasses() {
+    return this._allowedClasses
+  }
+
+  // Getting Version Information
+
+  /**
+   * This method is present for historical reasons and is not used with keyed archivers.
+   * @access public
+   * @param {string} className - 
+   * @returns {number} - 
+   * @desc The version number does apply not to NSKeyedArchiver/NSKeyedUnarchiver.  A keyed archiver does not encode class version numbers.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1417703-version
+   */
+  versionForClassName(className) {
+    return 0
+  }
+  /**
+   * The system version in effect for the archive.
+   * @type {number}
+   * @desc During encoding, the current version. During decoding, the version that was in effect when the data was encoded.Subclasses that implement decoding must override this property to return the system version of the data being decoded.
+   * @see https://developer.apple.com/reference/foundation/nscoder/1413205-systemversion
+   */
+  get systemVersion() {
+    return this._systemVersion
+  }
+
+  // Instance Properties
+  /**
+   * 
+   * @type {NSCoder.DecodingFailurePolicy}
+   * @desc 
+   * @see https://developer.apple.com/reference/foundation/nscoder/1642984-decodingfailurepolicy
+   */
+  get decodingFailurePolicy() {
+    return this._decodingFailurePolicy
+  }
+
+  /**
+   * 
+   * @type {?Error}
+   * @desc 
+   * @see https://developer.apple.com/reference/foundation/nscoder/1643263-error
+   */
+  get error() {
+    return this._error
+  }
+
+  // Instance Methods
+
+  /**
+   * 
+   * @access public
+   * @param {DecodedObjectType.Type} cls - 
+   * @param {string} key - 
+   * @returns {NSCoding} - 
+   * @see https://developer.apple.com/reference/foundation/nscoder/2292924-decodeobject
+   */
+  decodeObjectOfClassForKey(cls, key) {
+    return null
+  }
+
+  /**
+   * 
+   * @access public
+   * @returns {void}
+   * @throws {Error}
+   * @see https://developer.apple.com/reference/foundation/nscoder/1407699-decodetoplevelobject
+   */
+  decodeTopLevelObject() {
+  }
+
+  /**
+   * 
+   * @access public
+   * @param {string} key - 
+   * @returns {void}
+   * @throws {Error}
+   * @see https://developer.apple.com/reference/foundation/nscoder/2293311-decodetoplevelobject
+   */
+  decodeTopLevelObjectForKey(key) {
+  }
+
+  /**
+   * 
+   * @access public
+   * @param {?Object[]} classes - 
+   * @param {string} key - 
+   * @returns {void}
+   * @throws {Error}
+   * @see https://developer.apple.com/reference/foundation/nscoder/2293221-decodetoplevelobject
+   */
+  decodeTopLevelObjectOfForKey(classes, key) {
+  }
+
+  /**
+   * 
+   * @access public
+   * @param {Error} error - 
+   * @returns {void}
+   * @see https://developer.apple.com/reference/foundation/nscoder/1411455-failwitherror
+   */
+  failWithError(error) {
+  }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(0.5.2)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
