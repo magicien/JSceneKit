@@ -5,8 +5,9 @@ import NSData from './NSData'
 import _File from '../util/_File'
 import _FileReader from '../util/_FileReader'
 import _BinaryReader from '../util/_BinaryReader'
-import _Buffer from '../util/_Buffer'
 import _ClassList from '../util/_ClassList'
+
+/*global Buffer*/
 
 const _classForKey = new Map()
 const _loadingSymbol = Symbol('loading')
@@ -188,7 +189,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
     const promise = new Promise((resolve, reject) => {
       const file = new _File([], path)
       const reader = new _FileReader()
-      reader.onloadend = () => {
+      reader.onload = () => {
         const data = reader.result
         resolve(data)
       }
@@ -577,8 +578,8 @@ export default class NSKeyedUnarchiver extends NSCoder {
     }
     const parsedObj = this.decodeObjectForKey(key)
     console.log(`${key}: ${parsedObj.constructor.name}`)
-    if(!(parsedObj instanceof _Buffer)){
-      throw new Error(`propertylist of key ${key} is not _Buffer data`)
+    if(!(parsedObj instanceof Buffer)){
+      throw new Error(`propertylist of key ${key} is not Buffer data`)
     }
     console.log(`***header: ${parsedObj.toString('ascii', 0, 8)}`)
     console.log(`length: ${parsedObj.length}`)
@@ -593,8 +594,8 @@ export default class NSKeyedUnarchiver extends NSCoder {
       throw new Error(`can't decode '${key}' after finishDecoding() is called`)
     }
     const parsedObj = this._refObj[key]
-    if(!(parsedObj instanceof _Buffer)){
-      throw new Error(`value is not _Buffer data for key: ${key}`)
+    if(!(parsedObj instanceof Buffer)){
+      throw new Error(`value is not Buffer data for key: ${key}`)
     }
     return this._parseStruct(parsedObj, type)
   }

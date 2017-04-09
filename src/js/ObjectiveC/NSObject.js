@@ -2,8 +2,9 @@
 
 import CGPoint from '../CoreGraphics/CGPoint'
 import CGRect from '../CoreGraphics/CGRect'
-import _Buffer from '../util/_Buffer'
 import _ClassList from '../util/_ClassList'
+
+/*global Buffer*/
 
 /**
  * The root class of most Objective-C class hierarchies, from which subclasses inherit a basic interface to the runtime system and the ability to behave as Objective-C objects.
@@ -3672,7 +3673,7 @@ validateToolbarItem(_:) is called very frequently, so it must be efficient.If th
           if(typeof classObj === 'undefined'){
             throw new Error(`unknown class name: ${type}`)
           }
-          if(coder._refObj[key] instanceof _Buffer){
+          if(coder._refObj[key] instanceof Buffer){
             value = coder.decodeObjectOfTypeForKey(classObj, key)
             if(!(value instanceof classObj)){
               throw new Error(`${key}: value is not an instance of ${type}`)

@@ -421,7 +421,9 @@ export default class SCNRenderer extends NSObject {
     // set camera node
     const cameraNode = this.pointOfView || this._defaultCameraNode
     if(cameraNode !== this.pointOfView){
-      console.error('pointOfView is null')
+      // TODO: search a camera node from the scene tree.
+      //       if there's no camera in the tree, use the default camera.
+      console.warn('pointOfView is null')
     }
     const camera = cameraNode.camera
     camera._updateProjectionTransform(this._viewRect)
@@ -1083,9 +1085,9 @@ export default class SCNRenderer extends NSObject {
 
   _createDummyTexture() {
     const gl = this.context
-    const image = new Image()
-    image.width = 1
-    image.height = 1
+    //const image = new Image()
+    //image.width = 1
+    //image.height = 1
 
     const canvas = document.createElement('canvas')
     canvas.width = 1
@@ -1096,15 +1098,12 @@ export default class SCNRenderer extends NSObject {
 
     this.__dummyTexture = gl.createTexture()
 
-    image.onload = () => {
-      gl.bindTexture(gl.TEXTURE_2D, this.__dummyTexture)
-      // texImage2D(target, level, internalformat, width, height, border, format, type, source)
-      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, image)
-      gl.bindTexture(gl.TEXTURE_2D, null)
-      this._setDummyTextureAsDefault()
-    }
-    //console.log('canvas.toDataURL: ' + canvas.toDataURL())
-    image.src = canvas.toDataURL()
+    gl.bindTexture(gl.TEXTURE_2D, this.__dummyTexture)
+    // texImage2D(target, level, internalformat, width, height, border, format, type, source)
+    // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas)
+    gl.bindTexture(gl.TEXTURE_2D, null)
+    this._setDummyTextureAsDefault()
   }
 
   _setDummyTextureAsDefault() {
@@ -1149,13 +1148,18 @@ export default class SCNRenderer extends NSObject {
     const gl = this.context
     const texture = gl.createTexture()
 
-    //console.log(`_createTexture: size: ${image.width}, ${image.height}`)
+    const canvas = document.createElement('canvas')
+    canvas.width = image.naturalWidth
+    canvas.height = image.naturalHeight
+    console.warn(`image size: ${image.naturalWidth} ${image.naturalHeight}`)
+    canvas.getContext('2d').drawImage(image, 0, 0)
 
     gl.bindTexture(gl.TEXTURE_2D, texture)
-    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, image.width, image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, image)
+    // texImage2D(target, level, internalformat, width, height, border, format, type, source)
+    // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, image.width, image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas)
     gl.bindTexture(gl.TEXTURE_2D, null)
     return texture
   }
 }
-
 

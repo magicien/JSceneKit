@@ -5,9 +5,13 @@ import SCNNode from './SCNNode'
 import SCNMaterialProperty from './SCNMaterialProperty'
 import SCNSceneExportDelegate from './SCNSceneExportDelegate'
 import SCNSceneExportProgressHandler from './SCNSceneExportProgressHandler'
+import SCNSceneSource from './SCNSceneSource'
 import SCNPhysicsWorld from './SCNPhysicsWorld'
 import SCNParticleSystem from './SCNParticleSystem'
 import SCNMatrix4 from './SCNMatrix4'
+import _BinaryRequest from '../util/_BinaryRequest'
+import _File from '../util/_File'
+import _FileReader from '../util/_FileReader'
 
 const _Attribute = {
   endTime: 'kSceneEndTimeAttributeKey',
@@ -47,6 +51,8 @@ export default class SCNScene extends NSObject {
    * @constructor
    * @param {string} url - The URL to the scene file to load.
    * @param {?Map<SCNSceneSource.LoadingOption, Object>} [options = null] - A dictionary of options affecting scene loading, or nil for default options. For available keys, see Scene Loading Options.
+   * @param {function} onload -
+   * @param {function} onerror -
    * @throws {Error}
    * @desc This method provides a convenient way to load a complete scene from a file at an arbitrary URL. For more detailed options or to load only part of a file’s scene graph, use the SCNSceneSource class.Handling Errors in Swift:
 In Swift, this method returns a nonoptional result and is marked with the throws keyword to indicate that it throws an error in cases of failure.
@@ -54,7 +60,7 @@ You call this method in a try expression and handle any errors in the catch clau
 
    * @see https://developer.apple.com/reference/scenekit/scnscene/1522660-init
    */
-  constructor(url, options = null) {
+  constructor(url, options = null, onload = null, onerror = null) {
     super()
 
     // Managing Animated Effects in a Scene
@@ -111,42 +117,73 @@ You call this method in a try expression and handle any errors in the catch clau
     // Working with Particle Systems in the Scene
 
     this._particleSystems = null
+
+    if(typeof url !== 'undefined'){
+      this._loadSceneWithURL(url, options)
+      .then((scene) => {
+        this._copyValue(scene)
+        if(onload){
+          onload(this)
+        }
+      })
+      .catch((error) => {
+        if(onerror){
+          onerror(error)
+        }
+      })
+    }
   }
 
-  /**
-   * @access public
-   * @param {NSCoder} coder -
-   * @returns {SCNScene}
-   */
-   /*
-  static initWithCoder(coder) {
-    const instance = new SCNScene()
-    instance._setValueWithCoder(coder)
-    return instance
+  _copyValue(src) {
+    this.isPaused = src.isPaused
+    this._rootNode = src._rootNode
+    this._background = src._background
+    this._lightingEnvironment = src._lightingEnvironment
+    this.fogStartDistance = src.fogStartDistance
+    this.fogEndDistance = src.fogEndDistance
+    this.fogDensityExponent = src.fogDensityExponent
+    this.fogColor = src.fogColor
+    this._physicsWorld = src._physicsWorld
+    this._particleSystems = src._particleSystems
   }
-  */
 
-  /**
-   * @access private
-   * @param {NSCoder} coder -
-   */
-   /*
-  _setValueWithCoder(coder) {
-    this.isPaused = coder.decodeBoolForKey('paused')
-    this._rootNode = coder.decodeObjectForKey('rootNode')
-    const upAxis = coder.decodeBytesForKeyReturnedLength('upAxis', null)
-    this.fogStartDistance = coder.decodeFloatForKey('fogStartDistance')
-    this.fogDensityExponent = coder.decodeFloatForKey('fogDensityExponent')
-    this._physicsWorld = coder.decodeObjectForKey('physicsWorld')
-    this._background = coder.decodeObjectForKey('background')
-    // TODO: check if Integer is a proper type
-    const endTime = coder.decodeIntegerForKey('endTime')
-    const frameRate = coder.decodeIntegerForKey('frameRate')
-    this.fogEndDistance = coder.decodeFloatForKey('fogEndDistance')
-    const startTime = coder.decodeIntegerForKey('startTime')
-    this.fogColor = coder.decodeObjectForKey('fogColor') // NSMutableData...
+  _loadSceneWithURL(url, options) {
+    let _options = options
+    if(_options === null){
+      _options = new Map()
+    }
+    if(typeof _options.get(SCNSceneSource.LoadingOption.assetDirectoryURLs) === 'undefined'){
+      const paths = url.split('/')
+      const name = paths.pop()
+      const directory = paths.join('/')
+
+      _options.set(SCNSceneSource.LoadingOption.assetDirectoryURLs, directory)
+    }
+
+    if(url instanceof _File){
+      return Promise((resolve, reject) => {
+        const reader = new _FileReader()
+        reader.onloadend = () => {
+          const scene = this._loadSceneWithData(reader.result, _options)
+          resolve(scene)
+        }
+        reader.onerror = () => {
+          reject(reader.error)
+        }
+        reader.readAsBinaryString(url)
+      })
+    }else{
+      return _BinaryRequest.get(url)
+        .then((data) => {
+          return this._loadSceneWithData(data, _options)
+        })
+    }
   }
-  */
+
+  _loadSceneWithData(data, options) {
+    const source = new SCNSceneSource(data, options)
+    return source.scene()
+  }
 
   // Creating or Loading a Scene
 
@@ -159,6 +196,7 @@ You call this method in a try expression and handle any errors in the catch clau
    * @see https://developer.apple.com/reference/scenekit/scnscene/1523355-init
    */
   static sceneNamed(name) {
+    
   }
 
   /**
@@ -179,7 +217,7 @@ You call this method in a try expression and handle any errors in the catch clau
    * @access public
    * @param {string} url - The URL to the scene file to load.
    * @param {?Map<SCNSceneSource.LoadingOption, Object>} [options = null] - A dictionary of options affecting scene loading, or nil for default options. For available keys, see Scene Loading Options.
-   * @returns {void}
+   * @returns {SCNScene} -
    * @throws {Error}
    * @desc This method provides a convenient way to load a complete scene from a file at an arbitrary URL. For more detailed options or to load only part of a file’s scene graph, use the SCNSceneSource class.Handling Errors in Swift:
 In Swift, this method returns a nonoptional result and is marked with the throws keyword to indicate that it throws an error in cases of failure.

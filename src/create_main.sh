@@ -18,6 +18,7 @@ for FILE in ${FILES}; do
 
   if [ "${CLASS}" != "main" \
       -a "${CLASS}" != "constants" \
+      -a "${CLASS##*.}" != "web" \
       -a "${CATEGORY}" != "third_party" ]; then
     echo "import ${CLASS} from '.${FILE_PATH}'" >> ${MAIN_JS}
   fi
@@ -33,6 +34,7 @@ for FILE in ${FILES}; do
 
   if [ "${CLASS}" != "main" \
       -a "${CLASS}" != "constants" \
+      -a "${CLASS##*.}" != "web" \
       -a "${CATEGORY}" != "third_party" \
       -a "${CATEGORY}" != "util" ]; then
     echo "_ClassList.registerClass(${CLASS})" >> ${MAIN_JS}
@@ -51,6 +53,7 @@ for FILE in ${FILES}; do
 
   if [ "${CLASS}" != "main" \
     -a "${CLASS}" != "constants" \
+    -a "${CLASS##*.}" != "web" \
     -a "${CATEGORY}" != "third_party" ]; then
     echo "exports.${CLASS} = ${CLASS}" >> ${MAIN_JS}
   fi

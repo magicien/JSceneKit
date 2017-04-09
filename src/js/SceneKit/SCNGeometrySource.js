@@ -4,7 +4,7 @@ import NSObject from '../ObjectiveC/NSObject'
 import SCNVector3 from './SCNVector3'
 import SCNVector4 from './SCNVector4'
 import CGPoint from '../CoreGraphics/CGPoint'
-import _Buffer from '../util/_Buffer'
+/*global Buffer*/
 
 const _Semantic = {
   boneIndices: 'kGeometrySourceSemanticBoneIndices',
@@ -80,7 +80,7 @@ export default class SCNGeometrySource extends NSObject {
     this._dataOffset = offset
     this._dataStride = stride
 
-    if(data instanceof _Buffer){
+    if(data instanceof Buffer){
       let loadFunc = null
       if(floatComponents){
         switch(bytesPerComponent){

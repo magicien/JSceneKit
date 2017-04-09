@@ -171,7 +171,9 @@ import SCNVector4ToGLKVector4 from './SceneKit/SCNVector4ToGLKVector4'
 import SCNView from './SceneKit/SCNView'
 import SCNWrapMode from './SceneKit/SCNWrapMode'
 import SKColor from './SpriteKit/SKColor'
+import _AjaxRequest from './util/_AjaxRequest'
 import _BinaryReader from './util/_BinaryReader'
+import _BinaryRequest from './util/_BinaryRequest'
 import _Buffer from './util/_Buffer'
 import _ClassList from './util/_ClassList'
 import _File from './util/_File'
@@ -526,7 +528,9 @@ exports.SCNVector4ToGLKVector4 = SCNVector4ToGLKVector4
 exports.SCNView = SCNView
 exports.SCNWrapMode = SCNWrapMode
 exports.SKColor = SKColor
+exports._AjaxRequest = _AjaxRequest
 exports._BinaryReader = _BinaryReader
+exports._BinaryRequest = _BinaryRequest
 exports._Buffer = _Buffer
 exports._ClassList = _ClassList
 exports._File = _File

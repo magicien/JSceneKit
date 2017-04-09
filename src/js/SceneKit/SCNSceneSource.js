@@ -1,8 +1,11 @@
 'use strict'
 
+import NSKeyedUnarchiver from '../Foundation/NSKeyedUnarchiver'
 import NSObject from '../ObjectiveC/NSObject'
 import SCNScene from './SCNScene'
 import SCNSceneSourceStatusHandler from './SCNSceneSourceStatusHandler'
+import _BinaryRequest from '../util/_BinaryRequest'
+import _File from '../util/_File'
 
 const _AnimationImportPolicy = {
   doNotPlay: 'keepSeparate',
@@ -51,15 +54,44 @@ export default class SCNSceneSource extends NSObject {
     // Getting Information about the Scene
 
     this._url = null
+    this._options = options
     this._data = data
   }
 
+  /**
+   * @access public
+   * @param {Blob} data -
+   * @param {?Map<SCNSceneSource.LoadingOption, Object>} [options = null] -
+   * @returns {SCNSceneSource} -
+   */
   static sceneSourceWithDataOptions(data, options) {
     return new SCNSceneSource(data, options)
   }
 
-  static sceneSourceWithURLOptions(url, options) {
-    
+  /**
+   * @access public
+   * @param {string|File} url -
+   * @param {?Map<SCNSceneSource.LoadingOption, Object>} [options = null] -
+   * @returns {Promise} -
+   */
+  static sceneSourceWithURLOptions(url, options = null) {
+    let _options = options
+    if(_options === null){
+      _options = new Map()
+    }
+    if(typeof _options.get(_LoadingOption.assetDirectoryURLs) === 'undefined'){
+      const paths = url.split('/')
+      const name = paths.pop()
+      const directory = paths.join('/')
+
+      _options.set(_LoadingOption.assetDirectoryURLs, directory)
+    }
+
+    const promise = _BinaryRequest.get(url)
+      .then((data) => {
+        return new SCNSceneSource(data, _options)
+      })
+    return promise
   }
 
   // Loading a Complete Scene
@@ -74,7 +106,27 @@ export default class SCNSceneSource extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnscenesource/1522887-scene
    */
   scene(options = null, statusHandler = null) {
-    return null
+    let _options = options
+    if(!_options){
+      if(this._options){
+        _options = this._options
+      }
+    }
+
+    let url = this._url
+    const assetDirectoryURLs = _options.get(_LoadingOption.assetDirectoryURLs)
+    if(assetDirectoryURLs){
+      let dir = assetDirectoryURLs
+      if(Array.isArray(dir)){
+        dir = dir[0]
+      }
+      url = dir + '/'
+      if(this._url){
+        url += this._url.split('/').pop()
+      }
+    }
+      
+    return NSKeyedUnarchiver.unarchiveObjectWithData(this._data, url)
   }
 
   // Loading and Inspecting Scene Elements
@@ -179,6 +231,7 @@ NSArray *geometryNodes = [sceneSource entriesPassingTest:^BOOL(id entry, NSStrin
   static get AnimationImportPolicy() {
     return _AnimationImportPolicy
   }
+
   /**
    * @type {Object} LoadingOption
    * @property {string} animationImportPolicy An option for controlling the playback of animations in a scene file.

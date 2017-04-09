@@ -2,7 +2,12 @@
   "name": "jscenekit",
   "version": "0.1.8",
   "description": "Port of SceneKit framework to JavaScript",
-  "main": "./index.js",
+  "main": "./index.node.js",
+  "browser": {
+    "./index.node.js": "./index.web.js",
+    "./src/js/util/_File.js": "./src/js/util/_File.web.js",
+    "./src/js/util/_FileReader.js": "./src/js/util/_FileReader.web.js"
+  },
   "scripts": {
     "lint": "gulp lint",
     "build": "gulp build",
@@ -37,6 +42,7 @@
     "babel-core": "^6.24.0",
     "babel-eslint": "^7.2.1",
     "babel-loader": "^6.4.1",
+    "babel-plugin-static-fs": "^1.1.0",
     "babel-preset-es2015": "^6.24.0",
     "chai": "^3.5.0",
     "esdoc": "^0.5.2",

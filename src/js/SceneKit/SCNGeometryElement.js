@@ -2,7 +2,7 @@
 
 import NSObject from '../ObjectiveC/NSObject'
 import SCNGeometryPrimitiveType from './SCNGeometryPrimitiveType'
-import _Buffer from '../util/_Buffer'
+/*global Buffer*/
 
 /**
  * A container for index data describing how vertices connect to define a three-dimensional object, or geometry.
@@ -45,7 +45,7 @@ export default class SCNGeometryElement extends NSObject {
     // Inspecting a Geometry Element
 
     this._data = indices
-    if(indices instanceof _Buffer){
+    if(indices instanceof Buffer){
       const _data = []
       const count = indices.length / bytesPerIndex
       let _offset = 0

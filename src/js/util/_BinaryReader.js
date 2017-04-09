@@ -1,8 +1,9 @@
 'use strict'
 
-import _Buffer from './_Buffer'
+//import _Buffer from './_Buffer'
 import {UnescapeSJIS, UnescapeEUCJP, UnescapeJIS7, UnescapeJIS8, 
         UnescapeUnicode, UnescapeUTF7, UnescapeUTF8, UnescapeUTF16LE} from '../third_party/ecl'
+/*global Buffer*/
 
 /**
  * BinaryReader class
@@ -36,10 +37,12 @@ export default class _BinaryReader {
      */
     this.buffer = null
 
-    if(data instanceof _Buffer){
+    if(data instanceof Buffer){
       this.buffer = data
+    }else if(typeof data === 'string'){
+      this.buffer = Buffer.from(data, 'binary')
     }else{
-      this.buffer = _Buffer.from(data)
+      this.buffer = Buffer.from(data)
     }
 
     /**
@@ -100,7 +103,8 @@ export default class _BinaryReader {
     const start = this._pos
     this._pos += length
     const _encoding = encoding || this.encoding || 'sjis'
-    if(_Buffer.isEncoding(_encoding)){
+    //if(_Buffer.isEncoding(_encoding)){
+    if(Buffer.isEncoding(_encoding)){
       return this.buffer.toString(_encoding, start, this._pos)
     }
 
