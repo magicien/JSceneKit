@@ -1,6 +1,7 @@
 'use strict'
 
 //import _HTMLCanvasElement from '../util/HTMLCanvasElement'
+import CGPoint from '../CoreGraphics/CGPoint'
 import SCNRenderer from './SCNRenderer'
 import SCNTechniqueSupport from './SCNTechniqueSupport'
 import CGRect from '../CoreGraphics/CGRect'
@@ -11,6 +12,7 @@ import SCNNode from './SCNNode'
 import SCNCamera from './SCNCamera'
 import SCNMatrix4 from './SCNMatrix4'
 import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
+import SCNVector4 from './SCNVector4'
 import SKColor from '../SpriteKit/SKColor'
 
 const _Option = {
@@ -66,7 +68,7 @@ export default class SCNView {
      * @type {SKColor}
      * @see https://developer.apple.com/reference/scenekit/scnview/1523088-backgroundcolor
      */
-    this.backgroundColor = SKColor.white
+    this._backgroundColor = SKColor.white
 
     /**
      * A Boolean value that determines whether the user can manipulate the current point of view that is used to render the scene. 
@@ -294,12 +296,81 @@ export default class SCNView {
       throw new Error('can\'t create WebGL context')
     }
     this._context.viewport(frame.x, frame.y, frame.width, frame.height)
+    this._context.clearColor(
+      this.backgroundColor.r,
+      this.backgroundColor.g,
+      this.backgroundColor.b,
+      this.backgroundColor.a
+    )
 
     this._program = this._context.createProgram()
 
     this._renderer._setContext(this._context)
     this._renderer.program = this._program
     this._renderer._viewRect = frame
+
+    this._mouseIsDown = false
+    this._mouseDownX = 0
+    this._mouseDownY = 0
+
+    // add event listeners
+    this._canvas.addEventListener('mousedown', (e) => {
+      const ev = this._createEvent(e)
+      this._mouseIsDown = true
+      this._mouseDownX = e.clientX
+      this._mouseDownY = e.clientY
+      this.mouseDownWith(ev)
+    })
+    this._canvas.addEventListener('mousemove', (e) => {
+      const ev = this._createEvent(e)
+      this.mouseMovedWith(ev)
+      if(this._mouseIsDown){
+        if(this.allowsCameraControl){
+          const mx = e.clientX
+          const my = e.clientY
+          const dx = mx - this._mouseDownX
+          const dy = my - this._mouseDownY
+          const d = Math.sqrt(dx * dx + dy * dy) * 0.01
+          if(d > 0){
+            const r = d * 0.5
+            const sinr = Math.sin(r) / d
+            const q = new SCNVector4(dy * sinr, dx * sinr, 0, Math.cos(r))
+            this._renderer._setDefaultCameraOrientation(q)
+          }
+          this._renderer._switchToDefaultCamera()
+        }
+        this.mouseDraggedWith(ev)
+      }
+    })
+    //this._canvas.addEventListener('mouseup', (e) => {
+    document.addEventListener('mouseup', (e) => {
+      if(this._mouseIsDown){
+        this._mouseIsDown = false
+        const ev = this._createEvent(e)
+        this.mouseUpWith(ev)
+      }
+    })
+    this._canvas.addEventListener('mouseover', (e) => {
+      const ev = this._createEvent(e)
+      this.mouseEnteredWith(ev)
+    })
+    this._canvas.addEventListener('mouseout', (e) => {
+      const ev = this._createEvent(e)
+      this.mouseExitedWith(ev)
+    })
+    this._canvas.addEventListener('mousewheel', (e) => {
+      const ev = this._createEvent(e)
+      this.scrollWheelWith(ev)
+    })
+    this._canvas.addEventListener('keydown', (e) => {
+      const ev = this._createEvent(e)
+      this.keyDownWith(ev)
+    })
+    this._canvas.addEventListener('keyup', (e) => {
+      const ev = this._createEvent(e)
+      this.keyUpWith(ev)
+    })
+      
   }
 
   connectedCallback() {
@@ -321,6 +392,14 @@ export default class SCNView {
     // TODO: use extension of HTMLElement when it's supported.
     //element.appendChild(this)
     element.appendChild(this._canvas)
+  }
+
+  get backgroundColor() {
+    return this._backgroundColor
+  }
+  set backgroundColor(newValue) {
+    this._backgroundColor = newValue
+    this._context.clearColor(newValue.r, newValue.g, newValue.b, newValue.a)
   }
 
   /**
@@ -623,7 +702,9 @@ export default class SCNView {
    * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1522929-hittest
    */
   hitTest(point, options = null) {
-    return null
+    // TODO: implement
+    console.log(`hitTest at: ${point.x}, ${point.y}`)
+    return []
   }
 
   /**
@@ -975,6 +1056,92 @@ export default class SCNView {
       node._animations.delete(key)
     })
     node.childNodes.forEach((child) => this._runAnimation(child))
+  }
+
+  // NSView
+
+  /**
+   * @access private
+   * @param {Event} e -
+   * @returns {NSEvent} -
+   */
+  _createEvent(e) {
+    // TODO: implement
+    e.locationInWindow = new CGPoint(e.clientX, e.clientY)
+    return e
+  }
+
+  /**
+   * @access public
+   * @param {NSEvent} theEvent -
+   * @returns {void}
+   */
+  mouseDownWith(theEvent) {
+  }
+
+  mouseDraggedWith(theEvent) {
+    
+  }
+
+  mouseUpWith(theEvent) {
+  }
+
+  mouseMovedWith(theEvent) {
+  }
+
+  mouseEnteredWith(theEvent) {
+  }
+
+  mouseExitedWith(theEvent) {
+  }
+
+  rightMouseDraggedWith(theEvent) {
+  }
+
+  rightMouseUpWith(theEvent) {
+  }
+
+  otherMouseDownWith(theEvent) {
+  }
+
+  otherMouseDraggedWith(theEvent) {
+  }
+
+  otherMouseUpWith(theEvent) {
+  }
+
+  scrollWheelWith(theEvent) {
+  }
+
+  keyDownWith(theEvent) {
+  }
+
+  keyUpWith(theEvent) {
+  }
+
+  flagsChangedWith(theEvent) {
+  }
+
+  tablePointWith(theEvent) {
+  }
+
+  tableProximityWith(theEvent) {
+  }
+
+  convertFrom(point, view) {
+    let sx = 0
+    let sy = 0
+    if(view){
+      // FIXME: add accessor functions to get the element position
+      sx = view._frame.origin.x
+      sy = view._frame.origin.y
+    }
+    // FIXME: add accessor functions to get the element position
+    const rect = this._canvas.getBoundingClientRect()
+    const dx = rect.left
+    const dy = rect.top
+
+    return new CGPoint(point.x + sx - dx, point.y + sy - dy)
   }
 }
 

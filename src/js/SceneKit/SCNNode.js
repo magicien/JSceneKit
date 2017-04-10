@@ -46,7 +46,11 @@ export default class SCNNode extends NSObject {
       opacity: 'float',
       categoryBitMask: 'integer',
       hidden: ['boolean', 'isHidden'],
-      childNodes: ['NSArray', '_childNodes'],
+      childNodes: ['NSArray', (obj, childNodes) => {
+        childNodes.forEach((child) => {
+          obj.addChildNode(child)
+        })
+      }],
       renderingOrder: 'integer',
       nodeID: ['string', null],
       entityID: ['string', null],
@@ -701,6 +705,40 @@ export default class SCNNode extends NSObject {
     this._transformUpToDate = false
   }
 
+  /**
+   * @access private
+   * @returns {SCNVector4} -
+   */
+  get _worldOrientation() {
+    if(this._parent === null){
+      return this.orientation
+    }
+    return this._parent._worldOrientation.cross(this.orientation)
+  }
+
+  /**
+   * @access private
+   * @returns {SCNVector4} -
+   */
+  get _worldRotation() {
+    return this._worldOrientation.quatToRotation()
+  }
+
+  /**
+   * @access private
+   * @returns {SCNVector3} -
+   */
+  get _worldTranslation() {
+    return this.worldTransform.getTranslation()
+  }
+
+  /**
+   * @access private
+   * @returns {SCNVector3} -
+   */
+  get _worldScale() {
+  }
+
   // Managing the Node Hierarchy
 
   /**
@@ -1231,6 +1269,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     // FIXME: use current frame time
     anim._animationStartTime = Date.now() * 0.001
     anim._prevTime = anim._animationStartTime - 0.0000001
+
     this._animations.set(key, anim)
     this._copyTransformToPresentationRecursive()
   }
@@ -1464,18 +1503,21 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
   }
 
   setValueForKey(value, key) {
+    // FIXME: check flags to decide to use a presentation node
+    const target = this._presentation ? this._presentation : this
+
     if(key === 'position'){
-      this.position = value
+      target.position = value
     }else if(key === 'rotation'){
-      this.rotation = value
+      target.rotation = value
     }else if(key === 'scale'){
-      this.scale = value
+      target.scale = value
     }else if(key === 'eulerAngles'){
-      this.eulerAngles = value
+      target.eulerAngles = value
     }else if(key === 'orientation'){
-      this.orientation = value
+      target.orientation = value
     }else if(key === 'transform'){
-      this.transform = value
+      target.transform = value
     }else{
       super.setValueForKey(value, key)
     }

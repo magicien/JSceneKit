@@ -41,6 +41,8 @@ export default class CABasicAnimation extends CAPropertyAnimation {
      * @see https://developer.apple.com/reference/quartzcore/cabasicanimation/1412445-byvalue
      */
     this.byValue = null
+
+    this._baseValue = null
   }
 
   /**
@@ -88,11 +90,16 @@ export default class CABasicAnimation extends CAPropertyAnimation {
       if(t > 1){
         t = 1
       }
-      //console.log('t = ' + t)
     }
 
     let value = 0
-    const currentValue = obj.valueForKeyPath(this.keyPath)
+    if(this._baseValue === null){
+      this._baseValue = obj.valueForKeyPath(this.keyPath)
+      if(typeof this._baseValue !== 'number'){
+        this._baseValue = this._baseValue._copy()
+      }
+    }
+
     if(this.fromValue !== null && this.toValue !== null){
       value = this._lerp(this.fromValue, this.toValue, t)
     }else if(this.fromValue !== null && this.byValue !== null){
@@ -100,15 +107,16 @@ export default class CABasicAnimation extends CAPropertyAnimation {
     }else if(this.byValue !== null && this.toValue !== null){
       value = this._lerp(this.toValue - this.byValue, this.toValue, t)
     }else if(this.fromValue !== null){
-      value = this._lerp(this.fromValue, currentValue, t)
+      value = this._lerp(this.fromValue, this._baseValue, t)
     }else if(this.toValue !== null){
-      value = this._lerp(currentValue, this.toValue, t)
+      value = this._lerp(this._baseValue, this.toValue, t)
     }else if(this.byValue !== null){
-      value = this._lerp(currentValue, currentValue + this.byValue, t)
+      value = this._lerp(this._baseValue, this._baseValue + this.byValue, t)
     }else{
       // TODO: retain prevValue
       //value = this._lerp(prevValue, currentValue, t)
     }
+
     //console.log(`CABasicAnimation._applyAnimation: keyPath: ${this.keyPath}, time: ${time}, baseTime: ${baseTime}, t: ${t}, value: ${value}`)
     this._applyValue(obj, value)
   }

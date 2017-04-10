@@ -15042,8 +15042,10 @@ module.exports =
 
 
 	  _createClass(SCNVector3, [{
-	    key: 'add',
-
+	    key: '_copy',
+	    value: function _copy() {
+	      return new SCNVector3(this.x, this.y, this.z);
+	    }
 
 	    // extensions
 
@@ -15052,6 +15054,9 @@ module.exports =
 	     * @param {SCNVector3} v -
 	     * @returns {SCNVector3} -
 	     */
+
+	  }, {
+	    key: 'add',
 	    value: function add(v) {
 	      var r = new SCNVector3();
 	      r.x = this.x + v.x;
@@ -15292,8 +15297,10 @@ module.exports =
 
 
 	  _createClass(SCNVector4, [{
-	    key: 'add',
-
+	    key: '_copy',
+	    value: function _copy() {
+	      return new SCNVector4(this.x, this.y, this.z, this.w);
+	    }
 
 	    // extensions
 
@@ -15302,6 +15309,9 @@ module.exports =
 	     * @param {SCNVector4} v -
 	     * @returns {SCNVector4} -
 	     */
+
+	  }, {
+	    key: 'add',
 	    value: function add(v) {
 	      var r = new SCNVector4();
 	      r.x = this.x + v.x;
@@ -15779,16 +15789,21 @@ module.exports =
 	    }
 	  }
 
-	  // extensions
-
-	  /**
-	   * @access public
-	   * @param {SCNMatrix4} m -
-	   * @returns {SCNMatrix4} - 
-	   */
-
-
 	  _createClass(SCNMatrix4, [{
+	    key: '_copy',
+	    value: function _copy() {
+	      return new SCNMatrix4(this);
+	    }
+
+	    // extensions
+
+	    /**
+	     * @access public
+	     * @param {SCNMatrix4} m -
+	     * @returns {SCNMatrix4} - 
+	     */
+
+	  }, {
 	    key: 'mult',
 	    value: function mult(m) {
 	      var r = new SCNMatrix4();
@@ -16280,6 +16295,18 @@ module.exports =
 	    key: 'getTranslation',
 	    value: function getTranslation() {
 	      return new _SCNVector2.default(this.m14, this.m24, this.m34);
+	    }
+
+	    /**
+	     * @access public
+	     * @returns {SCNVector4} -
+	     */
+
+	  }, {
+	    key: 'getRotation',
+	    value: function getRotation() {
+	      // TODO: implement
+	      throw new Error('SCNMatrix4.getRotation: not implemented');
 	    }
 
 	    /**
@@ -17537,6 +17564,8 @@ module.exports =
 	     * @see https://developer.apple.com/reference/quartzcore/cabasicanimation/1412445-byvalue
 	     */
 	    _this.byValue = null;
+
+	    _this._baseValue = null;
 	    return _this;
 	  }
 
@@ -17594,11 +17623,16 @@ module.exports =
 	        if (t > 1) {
 	          t = 1;
 	        }
-	        //console.log('t = ' + t)
 	      }
 
 	      var value = 0;
-	      var currentValue = obj.valueForKeyPath(this.keyPath);
+	      if (this._baseValue === null) {
+	        this._baseValue = obj.valueForKeyPath(this.keyPath);
+	        if (typeof this._baseValue !== 'number') {
+	          this._baseValue = this._baseValue._copy();
+	        }
+	      }
+
 	      if (this.fromValue !== null && this.toValue !== null) {
 	        value = this._lerp(this.fromValue, this.toValue, t);
 	      } else if (this.fromValue !== null && this.byValue !== null) {
@@ -17606,14 +17640,15 @@ module.exports =
 	      } else if (this.byValue !== null && this.toValue !== null) {
 	        value = this._lerp(this.toValue - this.byValue, this.toValue, t);
 	      } else if (this.fromValue !== null) {
-	        value = this._lerp(this.fromValue, currentValue, t);
+	        value = this._lerp(this.fromValue, this._baseValue, t);
 	      } else if (this.toValue !== null) {
-	        value = this._lerp(currentValue, this.toValue, t);
+	        value = this._lerp(this._baseValue, this.toValue, t);
 	      } else if (this.byValue !== null) {
-	        value = this._lerp(currentValue, currentValue + this.byValue, t);
+	        value = this._lerp(this._baseValue, this._baseValue + this.byValue, t);
 	      } else {}
 	      // TODO: retain prevValue
 	      //value = this._lerp(prevValue, currentValue, t)
+
 
 	      //console.log(`CABasicAnimation._applyAnimation: keyPath: ${this.keyPath}, time: ${time}, baseTime: ${baseTime}, t: ${t}, value: ${value}`)
 	      this._applyValue(obj, value);
@@ -19078,7 +19113,11 @@ module.exports =
 	        opacity: 'float',
 	        categoryBitMask: 'integer',
 	        hidden: ['boolean', 'isHidden'],
-	        childNodes: ['NSArray', '_childNodes'],
+	        childNodes: ['NSArray', function (obj, childNodes) {
+	          childNodes.forEach(function (child) {
+	            obj.addChildNode(child);
+	          });
+	        }],
 	        renderingOrder: 'integer',
 	        nodeID: ['string', null],
 	        entityID: ['string', null],
@@ -20075,6 +20114,7 @@ module.exports =
 	      // FIXME: use current frame time
 	      anim._animationStartTime = Date.now() * 0.001;
 	      anim._prevTime = anim._animationStartTime - 0.0000001;
+
 	      this._animations.set(key, anim);
 	      this._copyTransformToPresentationRecursive();
 	    }
@@ -20311,18 +20351,21 @@ module.exports =
 	  }, {
 	    key: 'setValueForKey',
 	    value: function setValueForKey(value, key) {
+	      // FIXME: check flags to decide to use a presentation node
+	      var target = this._presentation ? this._presentation : this;
+
 	      if (key === 'position') {
-	        this.position = value;
+	        target.position = value;
 	      } else if (key === 'rotation') {
-	        this.rotation = value;
+	        target.rotation = value;
 	      } else if (key === 'scale') {
-	        this.scale = value;
+	        target.scale = value;
 	      } else if (key === 'eulerAngles') {
-	        this.eulerAngles = value;
+	        target.eulerAngles = value;
 	      } else if (key === 'orientation') {
-	        this.orientation = value;
+	        target.orientation = value;
 	      } else if (key === 'transform') {
-	        this.transform = value;
+	        target.transform = value;
 	      } else {
 	        _get(SCNNode.prototype.__proto__ || Object.getPrototypeOf(SCNNode.prototype), 'setValueForKey', this).call(this, value, key);
 	      }
@@ -20657,6 +20700,51 @@ module.exports =
 	      //console.log(`SCNNode set orientation: ${this._rotation.float32Array()}`)
 	      this._transformUpToDate = false;
 	    }
+
+	    /**
+	     * @access private
+	     * @returns {SCNVector4} -
+	     */
+
+	  }, {
+	    key: '_worldOrientation',
+	    get: function get() {
+	      if (this._parent === null) {
+	        return this.orientation;
+	      }
+	      return this._parent._worldOrientation.cross(this.orientation);
+	    }
+
+	    /**
+	     * @access private
+	     * @returns {SCNVector4} -
+	     */
+
+	  }, {
+	    key: '_worldRotation',
+	    get: function get() {
+	      return this._worldOrientation.quatToRotation();
+	    }
+
+	    /**
+	     * @access private
+	     * @returns {SCNVector3} -
+	     */
+
+	  }, {
+	    key: '_worldTranslation',
+	    get: function get() {
+	      return this.worldTransform.getTranslation();
+	    }
+
+	    /**
+	     * @access private
+	     * @returns {SCNVector3} -
+	     */
+
+	  }, {
+	    key: '_worldScale',
+	    get: function get() {}
 	  }, {
 	    key: 'parent',
 	    get: function get() {
@@ -22542,6 +22630,10 @@ module.exports =
 
 	var _SCNAntialiasingMode2 = _interopRequireDefault(_SCNAntialiasingMode);
 
+	var _SCNMatrix = __webpack_require__(38);
+
+	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
+
 	var _SCNNode = __webpack_require__(54);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
@@ -22794,10 +22886,18 @@ module.exports =
 
 	    _this._location = new Map();
 
+	    _this._defaultCameraPosNode = new _SCNNode2.default();
+	    _this._defaultCameraRotNode = new _SCNNode2.default();
 	    _this._defaultCameraNode = new _SCNNode2.default();
+
 	    var camera = new _SCNCamera2.default();
 	    _this._defaultCameraNode.camera = camera;
 	    _this._defaultCameraNode.position = new _SCNVector2.default(0, 0, 10);
+
+	    _this._defaultCameraPosNode.addChildNode(_this._defaultCameraRotNode);
+	    _this._defaultCameraRotNode.addChildNode(_this._defaultCameraNode);
+
+	    _this._userPOV = null;
 
 	    _this._defaultLightNode = new _SCNNode2.default();
 	    var light = new _SCNLight2.default();
@@ -22892,11 +22992,16 @@ module.exports =
 	      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT);
 
 	      // set camera node
-	      var cameraNode = this.pointOfView || this._defaultCameraNode;
-	      if (cameraNode !== this.pointOfView) {
-	        // TODO: search a camera node from the scene tree.
-	        //       if there's no camera in the tree, use the default camera.
-	        console.warn('pointOfView is null');
+	      var cameraNode = this.pointOfView;
+	      if (cameraNode === null) {
+	        cameraNode = this._searchCameraNode();
+	        this.pointOfView = cameraNode;
+	        if (cameraNode === null) {
+	          cameraNode = this._defaultCameraNode;
+	        }
+	      }
+	      if (cameraNode === this._defaultCameraNode) {
+	        this._defaultCameraPosNode._updateWorldTransform();
 	      }
 	      var camera = cameraNode.camera;
 	      camera._updateProjectionTransform(this._viewRect);
@@ -22964,7 +23069,7 @@ module.exports =
 	  }, {
 	    key: '_createRenderingNodeArray',
 	    value: function _createRenderingNodeArray() {
-	      var arr = [this.scene.rootNode];
+	      var arr = [this.scene._rootNode];
 	      var targetNodes = [];
 	      while (arr.length > 0) {
 	        var node = arr.shift();
@@ -23535,6 +23640,55 @@ module.exports =
 	      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, image.width, image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
 	      gl.bindTexture(gl.TEXTURE_2D, null);
 	      return texture;
+	    }
+	  }, {
+	    key: '_switchToDefaultCamera',
+	    value: function _switchToDefaultCamera() {
+	      if (this.pointOfView === null) {
+	        this._userPOV = null;
+	        this._defaultCameraPosNode.position = new _SCNVector2.default(0, 0, 0);
+	        this._defaultCameraRotNode.rotation = new _SCNVector4.default(0, 0, 0, 0);
+	        this._defaultCameraNode.position = new _SCNVector2.default(0, 0, 10);
+	        //console.log(`pov null: node.pos: ${this._defaultCameraNode._worldPosition.float32Array()}`)
+	        console.log('pov null');
+	      } else if (this.pointOfView !== this._defaultCameraNode) {
+	        this._userPOV = this.pointOfView;
+	        var rot = this.pointOfView._worldRotation;
+	        var rotMat = _SCNMatrix2.default.matrixWithRotation(rot);
+	        var pos = this.pointOfView._worldTranslation;
+
+	        this._defaultCameraPosNode.position = new _SCNVector2.default(0, 0, -10).rotate(rotMat).add(pos);
+	        this._defaultCameraRotNode.rotation = rot;
+	        this._defaultCameraNode.position = new _SCNVector2.default(0, 0, 10);
+	        console.log('pov defined: pov.pos: ' + this.pointOfView._worldTranslation.float32Array());
+	        console.log('pov defined: node.pos: ' + this._defaultCameraNode._worldTranslation.float32Array());
+	      }
+	      this.pointOfView = this._defaultCameraNode;
+	    }
+	  }, {
+	    key: '_setDefaultCameraOrientation',
+	    value: function _setDefaultCameraOrientation(orientation) {
+	      if (this._userPOV) {
+	        this._defaultCameraRotNode.orientation = this._userPOV.orientation.cross(orientation);
+	        console.log('with userPOV: ori: ' + orientation.float32Array() + ', result: ' + this._defaultCameraRotNode.orientation.float32Array());
+	      } else {
+	        this._defaultCameraRotNode.orientation = orientation;
+	        console.log('without userPOV: ' + orientation.float32Array());
+	      }
+	    }
+	  }, {
+	    key: '_searchCameraNode',
+	    value: function _searchCameraNode() {
+	      var nodes = [this.scene._rootNode];
+	      var node = nodes.shift();
+	      while (node) {
+	        if (node.camera !== null) {
+	          return node;
+	        }
+	        nodes.push.apply(nodes, _toConsumableArray(node._childNodes));
+	        node = nodes.shift();
+	      }
+	      return null;
 	    }
 	  }, {
 	    key: 'nextFrameTime',
@@ -37136,6 +37290,10 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+	var _CGPoint = __webpack_require__(7);
+
+	var _CGPoint2 = _interopRequireDefault(_CGPoint);
+
 	var _SCNRenderer = __webpack_require__(62);
 
 	var _SCNRenderer2 = _interopRequireDefault(_SCNRenderer);
@@ -37175,6 +37333,10 @@ module.exports =
 	var _SCNMatrix4MakeTranslation = __webpack_require__(66);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
+
+	var _SCNVector = __webpack_require__(37);
+
+	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
 	var _SKColor = __webpack_require__(11);
 
@@ -37216,6 +37378,8 @@ module.exports =
 	   * @see https://developer.apple.com/reference/scenekit/scnview/1524215-init
 	   */
 	  function SCNView(frame) {
+	    var _this = this;
+
 	    var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
 
 	    _classCallCheck(this, SCNView);
@@ -37243,7 +37407,7 @@ module.exports =
 	     * @type {SKColor}
 	     * @see https://developer.apple.com/reference/scenekit/scnview/1523088-backgroundcolor
 	     */
-	    this.backgroundColor = _SKColor2.default.white;
+	    this._backgroundColor = _SKColor2.default.white;
 
 	    /**
 	     * A Boolean value that determines whether the user can manipulate the current point of view that is used to render the scene. 
@@ -37488,12 +37652,75 @@ module.exports =
 	      throw new Error('can\'t create WebGL context');
 	    }
 	    this._context.viewport(frame.x, frame.y, frame.width, frame.height);
+	    this._context.clearColor(this.backgroundColor.r, this.backgroundColor.g, this.backgroundColor.b, this.backgroundColor.a);
 
 	    this._program = this._context.createProgram();
 
 	    this._renderer._setContext(this._context);
 	    this._renderer.program = this._program;
 	    this._renderer._viewRect = frame;
+
+	    this._mouseIsDown = false;
+	    this._mouseDownX = 0;
+	    this._mouseDownY = 0;
+
+	    // add event listeners
+	    this._canvas.addEventListener('mousedown', function (e) {
+	      var ev = _this._createEvent(e);
+	      _this._mouseIsDown = true;
+	      _this._mouseDownX = e.clientX;
+	      _this._mouseDownY = e.clientY;
+	      _this.mouseDownWith(ev);
+	    });
+	    this._canvas.addEventListener('mousemove', function (e) {
+	      var ev = _this._createEvent(e);
+	      _this.mouseMovedWith(ev);
+	      if (_this._mouseIsDown) {
+	        if (_this.allowsCameraControl) {
+	          var mx = e.clientX;
+	          var my = e.clientY;
+	          var dx = mx - _this._mouseDownX;
+	          var dy = my - _this._mouseDownY;
+	          var d = Math.sqrt(dx * dx + dy * dy) * 0.01;
+	          if (d > 0) {
+	            var r = d * 0.5;
+	            var sinr = Math.sin(r) / d;
+	            var q = new _SCNVector2.default(dy * sinr, dx * sinr, 0, Math.cos(r));
+	            _this._renderer._setDefaultCameraOrientation(q);
+	          }
+	          _this._renderer._switchToDefaultCamera();
+	        }
+	        _this.mouseDraggedWith(ev);
+	      }
+	    });
+	    //this._canvas.addEventListener('mouseup', (e) => {
+	    document.addEventListener('mouseup', function (e) {
+	      if (_this._mouseIsDown) {
+	        _this._mouseIsDown = false;
+	        var ev = _this._createEvent(e);
+	        _this.mouseUpWith(ev);
+	      }
+	    });
+	    this._canvas.addEventListener('mouseover', function (e) {
+	      var ev = _this._createEvent(e);
+	      _this.mouseEnteredWith(ev);
+	    });
+	    this._canvas.addEventListener('mouseout', function (e) {
+	      var ev = _this._createEvent(e);
+	      _this.mouseExitedWith(ev);
+	    });
+	    this._canvas.addEventListener('mousewheel', function (e) {
+	      var ev = _this._createEvent(e);
+	      _this.scrollWheelWith(ev);
+	    });
+	    this._canvas.addEventListener('keydown', function (e) {
+	      var ev = _this._createEvent(e);
+	      _this.keyDownWith(ev);
+	    });
+	    this._canvas.addEventListener('keyup', function (e) {
+	      var ev = _this._createEvent(e);
+	      _this.keyUpWith(ev);
+	    });
 	  }
 
 	  _createClass(SCNView, [{
@@ -37520,13 +37747,6 @@ module.exports =
 	      //element.appendChild(this)
 	      element.appendChild(this._canvas);
 	    }
-
-	    /**
-	     * Required. A Boolean value that determines whether the scene is playing.
-	     * @type {boolean}
-	     * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1523401-isplaying
-	     */
-
 	  }, {
 	    key: 'pause',
 
@@ -37694,7 +37914,9 @@ module.exports =
 	    value: function hitTest(point) {
 	      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
 
-	      return null;
+	      // TODO: implement
+	      console.log('hitTest at: ' + point.x + ', ' + point.y);
+	      return [];
 	    }
 
 	    /**
@@ -37890,17 +38112,17 @@ module.exports =
 	  }, {
 	    key: '__requestAnimationFrame',
 	    value: function __requestAnimationFrame() {
-	      var _this = this;
+	      var _this2 = this;
 
 	      // Reflect.apply(this._requestAnimationFrame, window, () => {
 	      this._requestAnimationFrame.call(window, function () {
-	        _this._currentSystemTime = Date.now() * 0.001;
-	        _this.currentTime = _this._currentSystemTime;
-	        _this._drawAtTimeWithContext(_this.currentTime, _this._context);
+	        _this2._currentSystemTime = Date.now() * 0.001;
+	        _this2.currentTime = _this2._currentSystemTime;
+	        _this2._drawAtTimeWithContext(_this2.currentTime, _this2._context);
 	        //console.log('requestAnimationFrame: time: ' + this.currentTime)
 
-	        if (_this._isPlaying) {
-	          _this.__requestAnimationFrame();
+	        if (_this2._isPlaying) {
+	          _this2.__requestAnimationFrame();
 	        }
 	      });
 	    }
@@ -37912,7 +38134,7 @@ module.exports =
 	  }, {
 	    key: '_updateMorph',
 	    value: function _updateMorph(node) {
-	      var _this2 = this;
+	      var _this3 = this;
 
 	      if (typeof node === 'undefined') {
 	        this._updateMorph(this._scene.rootNode);
@@ -37922,7 +38144,7 @@ module.exports =
 	        node.morpher._morph(node);
 	      }
 	      node.childNodes.forEach(function (child) {
-	        _this2._updateMorph(child);
+	        _this3._updateMorph(child);
 	      });
 	    }
 	  }, {
@@ -37940,7 +38162,7 @@ module.exports =
 	  }, {
 	    key: '_runAnimation',
 	    value: function _runAnimation(node) {
-	      var _this3 = this;
+	      var _this4 = this;
 
 	      var deleteKeys = [];
 	      var time = this.currentTime;
@@ -37956,9 +38178,116 @@ module.exports =
 	        node._animations.delete(key);
 	      });
 	      node.childNodes.forEach(function (child) {
-	        return _this3._runAnimation(child);
+	        return _this4._runAnimation(child);
 	      });
 	    }
+
+	    // NSView
+
+	    /**
+	     * @access private
+	     * @param {Event} e -
+	     * @returns {NSEvent} -
+	     */
+
+	  }, {
+	    key: '_createEvent',
+	    value: function _createEvent(e) {
+	      // TODO: implement
+	      e.locationInWindow = new _CGPoint2.default(e.clientX, e.clientY);
+	      return e;
+	    }
+
+	    /**
+	     * @access public
+	     * @param {NSEvent} theEvent -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: 'mouseDownWith',
+	    value: function mouseDownWith(theEvent) {}
+	  }, {
+	    key: 'mouseDraggedWith',
+	    value: function mouseDraggedWith(theEvent) {}
+	  }, {
+	    key: 'mouseUpWith',
+	    value: function mouseUpWith(theEvent) {}
+	  }, {
+	    key: 'mouseMovedWith',
+	    value: function mouseMovedWith(theEvent) {}
+	  }, {
+	    key: 'mouseEnteredWith',
+	    value: function mouseEnteredWith(theEvent) {}
+	  }, {
+	    key: 'mouseExitedWith',
+	    value: function mouseExitedWith(theEvent) {}
+	  }, {
+	    key: 'rightMouseDraggedWith',
+	    value: function rightMouseDraggedWith(theEvent) {}
+	  }, {
+	    key: 'rightMouseUpWith',
+	    value: function rightMouseUpWith(theEvent) {}
+	  }, {
+	    key: 'otherMouseDownWith',
+	    value: function otherMouseDownWith(theEvent) {}
+	  }, {
+	    key: 'otherMouseDraggedWith',
+	    value: function otherMouseDraggedWith(theEvent) {}
+	  }, {
+	    key: 'otherMouseUpWith',
+	    value: function otherMouseUpWith(theEvent) {}
+	  }, {
+	    key: 'scrollWheelWith',
+	    value: function scrollWheelWith(theEvent) {}
+	  }, {
+	    key: 'keyDownWith',
+	    value: function keyDownWith(theEvent) {}
+	  }, {
+	    key: 'keyUpWith',
+	    value: function keyUpWith(theEvent) {}
+	  }, {
+	    key: 'flagsChangedWith',
+	    value: function flagsChangedWith(theEvent) {}
+	  }, {
+	    key: 'tablePointWith',
+	    value: function tablePointWith(theEvent) {}
+	  }, {
+	    key: 'tableProximityWith',
+	    value: function tableProximityWith(theEvent) {}
+	  }, {
+	    key: 'convertFrom',
+	    value: function convertFrom(point, view) {
+	      var sx = 0;
+	      var sy = 0;
+	      if (view) {
+	        // FIXME: add accessor functions to get the element position
+	        sx = view._frame.origin.x;
+	        sy = view._frame.origin.y;
+	      }
+	      // FIXME: add accessor functions to get the element position
+	      var rect = this._canvas.getBoundingClientRect();
+	      var dx = rect.left;
+	      var dy = rect.top;
+
+	      return new _CGPoint2.default(point.x + sx - dx, point.y + sy - dy);
+	    }
+	  }, {
+	    key: 'backgroundColor',
+	    get: function get() {
+	      return this._backgroundColor;
+	    },
+	    set: function set(newValue) {
+	      this._backgroundColor = newValue;
+	      this._context.clearColor(newValue.r, newValue.g, newValue.b, newValue.a);
+	    }
+
+	    /**
+	     * Required. A Boolean value that determines whether the scene is playing.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1523401-isplaying
+	     */
+
 	  }, {
 	    key: 'isPlaying',
 	    get: function get() {

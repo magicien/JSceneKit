@@ -113,6 +113,10 @@ export default class SCNMatrix4 {
     }
   }
 
+  _copy() {
+    return new SCNMatrix4(this)
+  }
+
   // extensions
 
   /**
@@ -662,6 +666,15 @@ export default class SCNMatrix4 {
    */
   getTranslation() {
     return new SCNVector3(this.m14, this.m24, this.m34)
+  }
+
+  /**
+   * @access public
+   * @returns {SCNVector4} -
+   */
+  getRotation() {
+    // TODO: implement
+    throw new Error('SCNMatrix4.getRotation: not implemented')
   }
 
   /**

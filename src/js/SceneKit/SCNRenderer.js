@@ -7,6 +7,7 @@ import SCNScene from './SCNScene'
 import CGRect from '../CoreGraphics/CGRect'
 import CGSize from '../CoreGraphics/CGSize'
 import SCNAntialiasingMode from './SCNAntialiasingMode'
+import SCNMatrix4 from './SCNMatrix4'
 import SCNNode from './SCNNode'
 import SCNProgram from './SCNProgram'
 import SCNCamera from './SCNCamera'
@@ -332,10 +333,18 @@ export default class SCNRenderer extends NSObject {
 
     this._location = new Map()
 
+    this._defaultCameraPosNode = new SCNNode()
+    this._defaultCameraRotNode = new SCNNode()
     this._defaultCameraNode = new SCNNode()
+
     const camera = new SCNCamera()
     this._defaultCameraNode.camera = camera
     this._defaultCameraNode.position = new SCNVector3(0, 0, 10)
+
+    this._defaultCameraPosNode.addChildNode(this._defaultCameraRotNode)
+    this._defaultCameraRotNode.addChildNode(this._defaultCameraNode)
+
+    this._userPOV = null
 
     this._defaultLightNode = new SCNNode()
     const light = new SCNLight()
@@ -419,11 +428,16 @@ export default class SCNRenderer extends NSObject {
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT)
 
     // set camera node
-    const cameraNode = this.pointOfView || this._defaultCameraNode
-    if(cameraNode !== this.pointOfView){
-      // TODO: search a camera node from the scene tree.
-      //       if there's no camera in the tree, use the default camera.
-      console.warn('pointOfView is null')
+    let cameraNode = this.pointOfView
+    if(cameraNode === null){
+      cameraNode = this._searchCameraNode()
+      this.pointOfView = cameraNode
+      if(cameraNode === null){
+        cameraNode = this._defaultCameraNode
+      }
+    }
+    if(cameraNode === this._defaultCameraNode){
+      this._defaultCameraPosNode._updateWorldTransform()
     }
     const camera = cameraNode.camera
     camera._updateProjectionTransform(this._viewRect)
@@ -488,7 +502,7 @@ export default class SCNRenderer extends NSObject {
    * @returns {SCNNode[]} -
    */
   _createRenderingNodeArray() {
-    const arr = [this.scene.rootNode]
+    const arr = [this.scene._rootNode]
     const targetNodes = []
     while(arr.length > 0){
       const node = arr.shift()
@@ -1160,6 +1174,52 @@ export default class SCNRenderer extends NSObject {
     gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, image.width, image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas)
     gl.bindTexture(gl.TEXTURE_2D, null)
     return texture
+  }
+
+  _switchToDefaultCamera() {
+    if(this.pointOfView === null){
+      this._userPOV = null
+      this._defaultCameraPosNode.position = new SCNVector3(0, 0, 0)
+      this._defaultCameraRotNode.rotation = new SCNVector4(0, 0, 0, 0)
+      this._defaultCameraNode.position = new SCNVector3(0, 0, 10)
+      //console.log(`pov null: node.pos: ${this._defaultCameraNode._worldPosition.float32Array()}`)
+      console.log('pov null')
+    }else if(this.pointOfView !== this._defaultCameraNode){
+      this._userPOV = this.pointOfView
+      const rot = this.pointOfView._worldRotation
+      const rotMat = SCNMatrix4.matrixWithRotation(rot)
+      const pos = this.pointOfView._worldTranslation
+
+      this._defaultCameraPosNode.position = (new SCNVector3(0, 0, -10)).rotate(rotMat).add(pos)
+      this._defaultCameraRotNode.rotation = rot
+      this._defaultCameraNode.position = new SCNVector3(0, 0, 10)
+      console.log(`pov defined: pov.pos: ${this.pointOfView._worldTranslation.float32Array()}`)
+      console.log(`pov defined: node.pos: ${this._defaultCameraNode._worldTranslation.float32Array()}`)
+    }
+    this.pointOfView = this._defaultCameraNode
+  }
+
+  _setDefaultCameraOrientation(orientation) {
+    if(this._userPOV){
+      this._defaultCameraRotNode.orientation = this._userPOV.orientation.cross(orientation)
+      console.log(`with userPOV: ori: ${orientation.float32Array()}, result: ${this._defaultCameraRotNode.orientation.float32Array()}`)
+    }else{
+      this._defaultCameraRotNode.orientation = orientation
+      console.log(`without userPOV: ${orientation.float32Array()}`)
+    }
+  }
+
+  _searchCameraNode() {
+    const nodes = [this.scene._rootNode]
+    let node = nodes.shift()
+    while(node){
+      if(node.camera !== null){
+        return node
+      }
+      nodes.push(...node._childNodes)
+      node = nodes.shift()
+    }
+    return null
   }
 }
 

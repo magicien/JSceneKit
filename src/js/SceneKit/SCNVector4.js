@@ -46,6 +46,10 @@ export default class SCNVector4 {
     return instance
   }
 
+  _copy() {
+    return new SCNVector4(this.x, this.y, this.z, this.w)
+  }
+
   // extensions
 
   /**
