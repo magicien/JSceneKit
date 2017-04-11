@@ -579,9 +579,32 @@ describe('SCNNode class', () => {
       expect(euler.y).to.equal(0)
       expect(euler.z).to.equal(0)
     })
-
-
   })
 
+  /** @test {SCNNode#_worldOrientation} */
+  describe('_worldOrientation', () => {
+    it('should calculate world orientation', () => {
+      const node1 = new SCNNode()
+      const node2 = new SCNNode()
+      const node3 = new SCNNode()
+
+      node1.orientation = new SCNVector4(1, 2, 3, 4)
+      node2.orientation = new SCNVector4(5, 6, 7, 8)
+
+      node1.addChildNode(node2)
+      node2.addChildNode(node3)
+
+      const orientation = node3._worldOrientation
+      const x = 0.332182
+      const y = 0.664364
+      const z = 0.664364
+      const w = -0.0830455
+
+      expect(orientation.x).to.within(x - epsilon, x + epsilon)
+      expect(orientation.y).to.within(y - epsilon, y + epsilon)
+      expect(orientation.z).to.within(z - epsilon, z + epsilon)
+      expect(orientation.w).to.within(w - epsilon, w + epsilon)
+    })
+  })
 })
 

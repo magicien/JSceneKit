@@ -319,6 +319,11 @@ export default class SCNView {
       this._mouseIsDown = true
       this._mouseDownX = e.clientX
       this._mouseDownY = e.clientY
+      if(this.allowsCameraControl){
+        this._baseCameraPosition = this._renderer._getCameraPosition()
+        this._baseCameraOrientation = this._renderer._getCameraOrientation()
+        this._baseCameraDistance = this._renderer._getCameraDistance()
+      }
       this.mouseDownWith(ev)
     })
     this._canvas.addEventListener('mousemove', (e) => {
@@ -330,12 +335,14 @@ export default class SCNView {
           const my = e.clientY
           const dx = mx - this._mouseDownX
           const dy = my - this._mouseDownY
-          const d = Math.sqrt(dx * dx + dy * dy) * 0.01
+          const d = Math.sqrt(dx * dx + dy * dy)
+          const rotScale = 0.01
           if(d > 0){
-            const r = d * 0.5
+            const r = -d * 0.5 * rotScale
             const sinr = Math.sin(r) / d
             const q = new SCNVector4(dy * sinr, dx * sinr, 0, Math.cos(r))
-            this._renderer._setDefaultCameraOrientation(q)
+            const orientation = this._baseCameraOrientation.cross(q)
+            this._renderer._setDefaultCameraOrientation(orientation)
           }
           this._renderer._switchToDefaultCamera()
         }

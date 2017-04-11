@@ -16202,6 +16202,14 @@ module.exports =
 	     * @returns {SCNMatrix4} -
 	     */
 	    value: function rotation(x, y, z, w) {
+	      if (x instanceof _SCNVector4.default) {
+	        var v = x;
+	        x = v.x;
+	        y = v.y;
+	        z = v.z;
+	        w = v.w;
+	      }
+
 	      var m = SCNMatrix4.matrixWithRotation(x, y, z, w);
 	      return this.mult(m);
 	    }
@@ -16294,7 +16302,7 @@ module.exports =
 	  }, {
 	    key: 'getTranslation',
 	    value: function getTranslation() {
-	      return new _SCNVector2.default(this.m14, this.m24, this.m34);
+	      return new _SCNVector2.default(this.m41, this.m42, this.m43);
 	    }
 
 	    /**
@@ -22690,13 +22698,15 @@ module.exports =
 	 * @access private
 	 * @type {string}
 	 */
-	var _defaultVertexShader = '#version 300 es\n  precision mediump float;\n\n  uniform mat4 viewTransform;\n  uniform mat4 viewProjectionTransform;\n\n  uniform vec4 lightAmbient;\n  uniform vec4 lightDiffuse;\n  uniform vec3 lightDirection;\n\n  uniform vec4 materialAmbient;\n  uniform vec4 materialDiffuse;\n  uniform vec4 materialSpecular;\n  uniform vec4 materialEmission;\n\n  //uniform mat3x4[255] skinningJoints;\n  uniform vec4[765] skinningJoints;\n  //uniform bool useSkinner;\n  uniform int numSkinningJoints;\n\n  in vec3 position;\n  in vec3 normal;\n  in vec2 texcoord;\n  in vec4 boneIndices;\n  in vec4 boneWeights;\n\n  out vec2 v_texcoord;\n  out vec4 v_color;\n  //out vec3 v_eye;\n\n  void main() {\n    vec3 pos = vec3(0, 0, 0);\n    vec3 nom = vec3(0, 0, 0);\n    if(numSkinningJoints > 0){\n      for(int i=0; i<numSkinningJoints; i++){\n        float weight = boneWeights[i];\n        if(int(boneIndices[i]) < 0){\n          continue;\n        }\n        int idx = int(boneIndices[i]) * 3;\n        mat4 jointMatrix = transpose(mat4(skinningJoints[idx],\n                                          skinningJoints[idx+1],\n                                          skinningJoints[idx+2],\n                                          vec4(0, 0, 0, 1)));\n        pos += (jointMatrix * vec4(position, 1.0)).xyz * weight;\n        nom += (mat3(jointMatrix) * normal) * weight;\n      }\n    }else{\n      mat4 jointMatrix = transpose(mat4(skinningJoints[0],\n                                        skinningJoints[1],\n                                        skinningJoints[2],\n                                        vec4(0, 0, 0, 1)));\n      pos = (jointMatrix * vec4(position, 1.0)).xyz;\n      nom = mat3(jointMatrix) * normal;\n    }\n    //v_eye = viewTransform * vec4(pos, 1.0).xyz;\n    vec3 viewPos = vec3(-viewTransform[0][3], -viewTransform[1][3], -viewTransform[2][3]);\n    vec3 viewVec = normalize(vec3(viewPos - pos));\n    vec3 lightVec = normalize(-lightDirection);\n\n    float diffuse = dot(lightVec, nom);\n\n    v_color = lightAmbient * materialAmbient;\n    float shininess = 0.5;\n    if(diffuse > 0.0){\n      //vec3 halfway = normalize(lightVec + viewVec);\n      //float specular = pow(max(dot(nom, halfway), 0.0), shininess);\n      //v_color += lightSpecular * materialSpecular * specular;\n      v_color += lightDiffuse * materialDiffuse * diffuse;\n    }\n    v_color += materialEmission;\n\n    //v_color = materialDiffuse;\n    v_texcoord = texcoord;\n    gl_Position = viewProjectionTransform * vec4(pos, 1.0);\n  }\n';
+	var _defaultVertexShader = '#version 300 es\n  precision mediump float;\n\n  uniform mat4 viewTransform;\n  uniform mat4 viewProjectionTransform;\n\n  uniform vec4 lightAmbient;\n  uniform vec4 lightDiffuse;\n  uniform vec3 lightDirection;\n\n  uniform vec4 materialAmbient;\n  uniform vec4 materialDiffuse;\n  //uniform vec4 materialSpecular;\n  uniform vec4 materialEmission;\n\n  //uniform mat3x4[255] skinningJoints;\n  uniform vec4[765] skinningJoints;\n  //uniform bool useSkinner;\n  uniform int numSkinningJoints;\n\n  in vec3 position;\n  in vec3 normal;\n  in vec2 texcoord;\n  in vec4 boneIndices;\n  in vec4 boneWeights;\n\n  out vec3 v_position;\n  out vec3 v_normal;\n  out vec2 v_texcoord;\n  out vec4 v_color;\n  //out vec3 v_eye;\n\n  void main() {\n    vec3 pos = vec3(0, 0, 0);\n    vec3 nom = vec3(0, 0, 0);\n    if(numSkinningJoints > 0){\n      for(int i=0; i<numSkinningJoints; i++){\n        float weight = boneWeights[i];\n        if(int(boneIndices[i]) < 0){\n          continue;\n        }\n        int idx = int(boneIndices[i]) * 3;\n        mat4 jointMatrix = transpose(mat4(skinningJoints[idx],\n                                          skinningJoints[idx+1],\n                                          skinningJoints[idx+2],\n                                          vec4(0, 0, 0, 1)));\n        pos += (jointMatrix * vec4(position, 1.0)).xyz * weight;\n        nom += (mat3(jointMatrix) * normal) * weight;\n      }\n    }else{\n      mat4 jointMatrix = transpose(mat4(skinningJoints[0],\n                                        skinningJoints[1],\n                                        skinningJoints[2],\n                                        vec4(0, 0, 0, 1)));\n      pos = (jointMatrix * vec4(position, 1.0)).xyz;\n      nom = mat3(jointMatrix) * normal;\n    }\n    v_position = pos;\n    v_normal = nom;\n\n    //v_eye = viewTransform * vec4(pos, 1.0).xyz;\n    //vec3 viewPos = vec3(-viewTransform[0][3], -viewTransform[1][3], -viewTransform[2][3]);\n    //vec3 viewVec = normalize(vec3(viewPos - pos));\n    // FIXME: normalize it in JavaScript\n    vec3 lightVec = normalize(-lightDirection);\n\n    float diffuse = dot(lightVec, nom);\n\n    v_color = lightAmbient * materialAmbient;\n    if(diffuse > 0.0){\n      //vec3 halfway = normalize(lightVec + viewVec);\n      //float specular = pow(max(dot(nom, halfway), 0.0), shininess);\n      //v_color += lightSpecular * materialSpecular * specular;\n      v_color += lightDiffuse * materialDiffuse * diffuse;\n    }\n    v_color += materialEmission;\n\n    //v_color = materialDiffuse;\n    v_texcoord = texcoord;\n    gl_Position = viewProjectionTransform * vec4(pos, 1.0);\n  }\n';
 
 	/**
 	 * @access private
 	 * @type {string}
 	 */
-	var _defaultFragmentShader = '#version 300 es\n  precision mediump float;\n\n  uniform sampler2D u_emissionTexture;\n  uniform bool u_useEmissionTexture;\n  uniform sampler2D u_ambientTexture;\n  uniform bool u_useAmbientTexture;\n  uniform sampler2D u_diffuseTexture;\n  uniform bool u_useDiffuseTexture;\n  uniform sampler2D u_specularTexture;\n  uniform bool u_useSpecularTexture;\n  uniform sampler2D u_reflectiveTexture;\n  uniform bool u_useReflectiveTexture;\n  uniform sampler2D u_transparentTexture;\n  uniform bool u_useTransparentTexture;\n  uniform sampler2D u_multiplyTexture;\n  uniform bool u_useMultiplyTexture;\n  uniform sampler2D u_normalTexture;\n  uniform bool u_useNormalTexture;\n\n  in vec2 v_texcoord;\n  in vec4 v_color;\n  //in vec3 v_eye;\n\n  out vec4 outColor;\n\n  void main() {\n    if(u_useDiffuseTexture){\n      vec4 color = texture(u_diffuseTexture, v_texcoord);\n      outColor = color * v_color;\n      //outColor = vec4(0, 1, 0, 1);\n      //outColor = color;\n    }else{\n      outColor = v_color;\n    }\n  }\n';
+	var _defaultFragmentShader = '#version 300 es\n  precision mediump float;\n\n  uniform sampler2D u_emissionTexture;\n  uniform bool u_useEmissionTexture;\n  uniform sampler2D u_ambientTexture;\n  uniform bool u_useAmbientTexture;\n  uniform sampler2D u_diffuseTexture;\n  uniform bool u_useDiffuseTexture;\n  uniform sampler2D u_specularTexture;\n  uniform bool u_useSpecularTexture;\n  uniform sampler2D u_reflectiveTexture;\n  uniform bool u_useReflectiveTexture;\n  uniform sampler2D u_transparentTexture;\n  uniform bool u_useTransparentTexture;\n  uniform sampler2D u_multiplyTexture;\n  uniform bool u_useMultiplyTexture;\n  uniform sampler2D u_normalTexture;\n  uniform bool u_useNormalTexture;\n\n  uniform mat4 viewTransform;\n  uniform vec3 lightDirection;\n  uniform vec4 materialSpecular;\n  uniform float materialShininess;\n\n  in vec3 v_position;\n  in vec3 v_normal;\n  in vec2 v_texcoord;\n  in vec4 v_color;\n  //in vec3 v_eye;\n\n  out vec4 outColor;\n\n  void main() {\n    if(u_useDiffuseTexture){\n      vec4 color = texture(u_diffuseTexture, v_texcoord);\n      outColor = color * v_color;\n    }else{\n      outColor = v_color;\n    }\n\n    // FIXME: normalize it in JavaScript\n    vec3 lightVec = normalize(-lightDirection);\n    vec3 nom = normalize(v_normal);\n    if(dot(lightVec, nom) > 0.0f){\n      vec3 viewPos = vec3(-viewTransform[0][3], -viewTransform[1][3], -viewTransform[2][3]);\n      vec3 viewVec = normalize(vec3(viewPos - v_position));\n      vec3 halfway = normalize(lightVec + viewVec);\n      float specularLight = pow(max(dot(halfway, nom), 0.0), materialShininess);\n      outColor += materialSpecular * specularLight; // TODO: get the light color of specular\n    }\n  }\n';
+
+	var _defaultCameraDistance = 15;
 
 	/**
 	 * A renderer for displaying SceneKit scene in an an existing Metal workflow or OpenGL context. 
@@ -22892,12 +22902,10 @@ module.exports =
 
 	    var camera = new _SCNCamera2.default();
 	    _this._defaultCameraNode.camera = camera;
-	    _this._defaultCameraNode.position = new _SCNVector2.default(0, 0, 10);
+	    _this._defaultCameraNode.position = new _SCNVector2.default(0, 0, _defaultCameraDistance);
 
 	    _this._defaultCameraPosNode.addChildNode(_this._defaultCameraRotNode);
 	    _this._defaultCameraRotNode.addChildNode(_this._defaultCameraNode);
-
-	    _this._userPOV = null;
 
 	    _this._defaultLightNode = new _SCNNode2.default();
 	    var light = new _SCNLight2.default();
@@ -23028,12 +23036,10 @@ module.exports =
 	      lights.forEach(function (lightNode) {
 	        var light = lightNode.light;
 	        if (light.type === _SCNLight2.default.LightType.ambient) {
-	          //console.log('ambient: ' + light.color.float32Array())
 	          hasAmbient = true;
 	          gl.uniform4fv(gl.getUniformLocation(program, 'lightAmbient'), light.color.float32Array());
 	        }
-	        if (light.type === _SCNLight2.default.LightType.directional) {
-	          //console.log('directional: ' + light.color.float32Array())
+	        if (light.type === _SCNLight2.default.LightType.directional || light.type === _SCNLight2.default.LightType.omni) {
 	          hasDiffuse = true;
 	          gl.uniform4fv(gl.getUniformLocation(program, 'lightDiffuse'), light.color.float32Array());
 	        }
@@ -23188,6 +23194,7 @@ module.exports =
 	        gl.uniform4fv(gl.getUniformLocation(program, 'materialDiffuse'), material.diffuse.float32Array());
 	        gl.uniform4fv(gl.getUniformLocation(program, 'materialSpecular'), material.specular.float32Array());
 	        gl.uniform4fv(gl.getUniformLocation(program, 'materialEmission'), material.emission.float32Array());
+	        gl.uniform1f(gl.getUniformLocation(program, 'materialShininess'), material.shininess);
 
 	        //console.log(`materialDiffuse: ${material.diffuse.float32Array()}`)
 
@@ -23645,21 +23652,18 @@ module.exports =
 	    key: '_switchToDefaultCamera',
 	    value: function _switchToDefaultCamera() {
 	      if (this.pointOfView === null) {
-	        this._userPOV = null;
 	        this._defaultCameraPosNode.position = new _SCNVector2.default(0, 0, 0);
 	        this._defaultCameraRotNode.rotation = new _SCNVector4.default(0, 0, 0, 0);
-	        this._defaultCameraNode.position = new _SCNVector2.default(0, 0, 10);
-	        //console.log(`pov null: node.pos: ${this._defaultCameraNode._worldPosition.float32Array()}`)
+	        this._defaultCameraNode.position = new _SCNVector2.default(0, 0, _defaultCameraDistance);
 	        console.log('pov null');
 	      } else if (this.pointOfView !== this._defaultCameraNode) {
-	        this._userPOV = this.pointOfView;
 	        var rot = this.pointOfView._worldRotation;
 	        var rotMat = _SCNMatrix2.default.matrixWithRotation(rot);
 	        var pos = this.pointOfView._worldTranslation;
 
-	        this._defaultCameraPosNode.position = new _SCNVector2.default(0, 0, -10).rotate(rotMat).add(pos);
+	        this._defaultCameraPosNode.position = new _SCNVector2.default(0, 0, -_defaultCameraDistance).rotate(rotMat).add(pos);
 	        this._defaultCameraRotNode.rotation = rot;
-	        this._defaultCameraNode.position = new _SCNVector2.default(0, 0, 10);
+	        this._defaultCameraNode.position = new _SCNVector2.default(0, 0, _defaultCameraDistance);
 	        console.log('pov defined: pov.pos: ' + this.pointOfView._worldTranslation.float32Array());
 	        console.log('pov defined: node.pos: ' + this._defaultCameraNode._worldTranslation.float32Array());
 	      }
@@ -23668,13 +23672,7 @@ module.exports =
 	  }, {
 	    key: '_setDefaultCameraOrientation',
 	    value: function _setDefaultCameraOrientation(orientation) {
-	      if (this._userPOV) {
-	        this._defaultCameraRotNode.orientation = this._userPOV.orientation.cross(orientation);
-	        console.log('with userPOV: ori: ' + orientation.float32Array() + ', result: ' + this._defaultCameraRotNode.orientation.float32Array());
-	      } else {
-	        this._defaultCameraRotNode.orientation = orientation;
-	        console.log('without userPOV: ' + orientation.float32Array());
-	      }
+	      this._defaultCameraRotNode.orientation = orientation;
 	    }
 	  }, {
 	    key: '_searchCameraNode',
@@ -23689,6 +23687,55 @@ module.exports =
 	        node = nodes.shift();
 	      }
 	      return null;
+	    }
+
+	    /**
+	     * @access private
+	     * @returns {SCNVector3} -
+	     */
+
+	  }, {
+	    key: '_getCameraPosition',
+	    value: function _getCameraPosition() {
+	      if (this.pointOfView === this._defaultCameraNode) {
+	        return this._defaultCameraPosNode.position;
+	      } else if (this.pointOfView === null) {
+	        return new _SCNVector2.default(0, 0, 0);
+	      }
+	      var rot = this._getCameraOrientation();
+	      var rotMat = _SCNMatrix2.default.matrixWithRotation(rot);
+	      var pos = this.pointOfView._worldTranslation;
+	      return pos.add(new _SCNVector2.default(0, 0, -_defaultCameraDistance).rotate(rotMat));
+	    }
+
+	    /**
+	     * @access private
+	     * @returns {SCNVector4} -
+	     */
+
+	  }, {
+	    key: '_getCameraOrientation',
+	    value: function _getCameraOrientation() {
+	      if (this.pointOfView === this._defaultCameraNode) {
+	        return this._defaultCameraRotNode.orientation;
+	      } else if (this.pointOfView === null) {
+	        return new _SCNVector4.default(0, 0, 0, 0);
+	      }
+	      return this.pointOfView._worldOrientation;
+	    }
+
+	    /**
+	     * @access private
+	     * @returns {number} -
+	     */
+
+	  }, {
+	    key: '_getCameraDistance',
+	    value: function _getCameraDistance() {
+	      if (this.pointOfView === this._defaultCameraNode) {
+	        return this._defaultCameraNode.position.z;
+	      }
+	      return _defaultCameraDistance;
 	    }
 	  }, {
 	    key: 'nextFrameTime',
@@ -37670,6 +37717,11 @@ module.exports =
 	      _this._mouseIsDown = true;
 	      _this._mouseDownX = e.clientX;
 	      _this._mouseDownY = e.clientY;
+	      if (_this.allowsCameraControl) {
+	        _this._baseCameraPosition = _this._renderer._getCameraPosition();
+	        _this._baseCameraOrientation = _this._renderer._getCameraOrientation();
+	        _this._baseCameraDistance = _this._renderer._getCameraDistance();
+	      }
 	      _this.mouseDownWith(ev);
 	    });
 	    this._canvas.addEventListener('mousemove', function (e) {
@@ -37681,12 +37733,14 @@ module.exports =
 	          var my = e.clientY;
 	          var dx = mx - _this._mouseDownX;
 	          var dy = my - _this._mouseDownY;
-	          var d = Math.sqrt(dx * dx + dy * dy) * 0.01;
+	          var d = Math.sqrt(dx * dx + dy * dy);
+	          var rotScale = 0.01;
 	          if (d > 0) {
-	            var r = d * 0.5;
+	            var r = -d * 0.5 * rotScale;
 	            var sinr = Math.sin(r) / d;
 	            var q = new _SCNVector2.default(dy * sinr, dx * sinr, 0, Math.cos(r));
-	            _this._renderer._setDefaultCameraOrientation(q);
+	            var orientation = _this._baseCameraOrientation.cross(q);
+	            _this._renderer._setDefaultCameraOrientation(orientation);
 	          }
 	          _this._renderer._switchToDefaultCamera();
 	        }

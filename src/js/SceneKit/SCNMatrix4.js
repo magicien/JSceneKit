@@ -520,6 +520,14 @@ export default class SCNMatrix4 {
    * @returns {SCNMatrix4} -
    */
   rotation(x, y, z, w) {
+    if(x instanceof SCNVector4){
+      const v = x
+      x = v.x
+      y = v.y
+      z = v.z
+      w = v.w
+    }
+
     const m = SCNMatrix4.matrixWithRotation(x, y, z, w)
     return this.mult(m)
   }
@@ -665,7 +673,7 @@ export default class SCNMatrix4 {
    * @returns {SCNVector3} -
    */
   getTranslation() {
-    return new SCNVector3(this.m14, this.m24, this.m34)
+    return new SCNVector3(this.m41, this.m42, this.m43)
   }
 
   /**

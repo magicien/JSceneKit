@@ -41,7 +41,7 @@ const _defaultVertexShader =
 
   uniform vec4 materialAmbient;
   uniform vec4 materialDiffuse;
-  uniform vec4 materialSpecular;
+  //uniform vec4 materialSpecular;
   uniform vec4 materialEmission;
 
   //uniform mat3x4[255] skinningJoints;
@@ -55,6 +55,8 @@ const _defaultVertexShader =
   in vec4 boneIndices;
   in vec4 boneWeights;
 
+  out vec3 v_position;
+  out vec3 v_normal;
   out vec2 v_texcoord;
   out vec4 v_color;
   //out vec3 v_eye;
@@ -84,15 +86,18 @@ const _defaultVertexShader =
       pos = (jointMatrix * vec4(position, 1.0)).xyz;
       nom = mat3(jointMatrix) * normal;
     }
+    v_position = pos;
+    v_normal = nom;
+
     //v_eye = viewTransform * vec4(pos, 1.0).xyz;
-    vec3 viewPos = vec3(-viewTransform[0][3], -viewTransform[1][3], -viewTransform[2][3]);
-    vec3 viewVec = normalize(vec3(viewPos - pos));
+    //vec3 viewPos = vec3(-viewTransform[0][3], -viewTransform[1][3], -viewTransform[2][3]);
+    //vec3 viewVec = normalize(vec3(viewPos - pos));
+    // FIXME: normalize it in JavaScript
     vec3 lightVec = normalize(-lightDirection);
 
     float diffuse = dot(lightVec, nom);
 
     v_color = lightAmbient * materialAmbient;
-    float shininess = 0.5;
     if(diffuse > 0.0){
       //vec3 halfway = normalize(lightVec + viewVec);
       //float specular = pow(max(dot(nom, halfway), 0.0), shininess);
@@ -132,6 +137,13 @@ const _defaultFragmentShader =
   uniform sampler2D u_normalTexture;
   uniform bool u_useNormalTexture;
 
+  uniform mat4 viewTransform;
+  uniform vec3 lightDirection;
+  uniform vec4 materialSpecular;
+  uniform float materialShininess;
+
+  in vec3 v_position;
+  in vec3 v_normal;
   in vec2 v_texcoord;
   in vec4 v_color;
   //in vec3 v_eye;
@@ -142,13 +154,24 @@ const _defaultFragmentShader =
     if(u_useDiffuseTexture){
       vec4 color = texture(u_diffuseTexture, v_texcoord);
       outColor = color * v_color;
-      //outColor = vec4(0, 1, 0, 1);
-      //outColor = color;
     }else{
       outColor = v_color;
     }
+
+    // FIXME: normalize it in JavaScript
+    vec3 lightVec = normalize(-lightDirection);
+    vec3 nom = normalize(v_normal);
+    if(dot(lightVec, nom) > 0.0f){
+      vec3 viewPos = vec3(-viewTransform[0][3], -viewTransform[1][3], -viewTransform[2][3]);
+      vec3 viewVec = normalize(vec3(viewPos - v_position));
+      vec3 halfway = normalize(lightVec + viewVec);
+      float specularLight = pow(max(dot(halfway, nom), 0.0), materialShininess);
+      outColor += materialSpecular * specularLight; // TODO: get the light color of specular
+    }
   }
 `
+
+const _defaultCameraDistance = 15
 
 /**
  * A renderer for displaying SceneKit scene in an an existing Metal workflow or OpenGL context. 
@@ -339,12 +362,10 @@ export default class SCNRenderer extends NSObject {
 
     const camera = new SCNCamera()
     this._defaultCameraNode.camera = camera
-    this._defaultCameraNode.position = new SCNVector3(0, 0, 10)
+    this._defaultCameraNode.position = new SCNVector3(0, 0, _defaultCameraDistance)
 
     this._defaultCameraPosNode.addChildNode(this._defaultCameraRotNode)
     this._defaultCameraRotNode.addChildNode(this._defaultCameraNode)
-
-    this._userPOV = null
 
     this._defaultLightNode = new SCNNode()
     const light = new SCNLight()
@@ -464,12 +485,11 @@ export default class SCNRenderer extends NSObject {
     lights.forEach((lightNode) => {
       const light = lightNode.light
       if(light.type === SCNLight.LightType.ambient){
-        //console.log('ambient: ' + light.color.float32Array())
         hasAmbient = true
         gl.uniform4fv(gl.getUniformLocation(program, 'lightAmbient'), light.color.float32Array())
       }
-      if(light.type === SCNLight.LightType.directional){
-        //console.log('directional: ' + light.color.float32Array())
+      if(light.type === SCNLight.LightType.directional 
+        || light.type === SCNLight.LightType.omni){
         hasDiffuse = true
         gl.uniform4fv(gl.getUniformLocation(program, 'lightDiffuse'), light.color.float32Array())
       }
@@ -609,6 +629,7 @@ export default class SCNRenderer extends NSObject {
       gl.uniform4fv(gl.getUniformLocation(program, 'materialDiffuse'), material.diffuse.float32Array())
       gl.uniform4fv(gl.getUniformLocation(program, 'materialSpecular'), material.specular.float32Array())
       gl.uniform4fv(gl.getUniformLocation(program, 'materialEmission'), material.emission.float32Array())
+      gl.uniform1f(gl.getUniformLocation(program, 'materialShininess'), material.shininess)
 
       //console.log(`materialDiffuse: ${material.diffuse.float32Array()}`)
 
@@ -1178,21 +1199,18 @@ export default class SCNRenderer extends NSObject {
 
   _switchToDefaultCamera() {
     if(this.pointOfView === null){
-      this._userPOV = null
       this._defaultCameraPosNode.position = new SCNVector3(0, 0, 0)
       this._defaultCameraRotNode.rotation = new SCNVector4(0, 0, 0, 0)
-      this._defaultCameraNode.position = new SCNVector3(0, 0, 10)
-      //console.log(`pov null: node.pos: ${this._defaultCameraNode._worldPosition.float32Array()}`)
+      this._defaultCameraNode.position = new SCNVector3(0, 0, _defaultCameraDistance)
       console.log('pov null')
     }else if(this.pointOfView !== this._defaultCameraNode){
-      this._userPOV = this.pointOfView
       const rot = this.pointOfView._worldRotation
       const rotMat = SCNMatrix4.matrixWithRotation(rot)
       const pos = this.pointOfView._worldTranslation
 
-      this._defaultCameraPosNode.position = (new SCNVector3(0, 0, -10)).rotate(rotMat).add(pos)
+      this._defaultCameraPosNode.position = (new SCNVector3(0, 0, -_defaultCameraDistance)).rotate(rotMat).add(pos)
       this._defaultCameraRotNode.rotation = rot
-      this._defaultCameraNode.position = new SCNVector3(0, 0, 10)
+      this._defaultCameraNode.position = new SCNVector3(0, 0, _defaultCameraDistance)
       console.log(`pov defined: pov.pos: ${this.pointOfView._worldTranslation.float32Array()}`)
       console.log(`pov defined: node.pos: ${this._defaultCameraNode._worldTranslation.float32Array()}`)
     }
@@ -1200,13 +1218,7 @@ export default class SCNRenderer extends NSObject {
   }
 
   _setDefaultCameraOrientation(orientation) {
-    if(this._userPOV){
-      this._defaultCameraRotNode.orientation = this._userPOV.orientation.cross(orientation)
-      console.log(`with userPOV: ori: ${orientation.float32Array()}, result: ${this._defaultCameraRotNode.orientation.float32Array()}`)
-    }else{
-      this._defaultCameraRotNode.orientation = orientation
-      console.log(`without userPOV: ${orientation.float32Array()}`)
-    }
+    this._defaultCameraRotNode.orientation = orientation
   }
 
   _searchCameraNode() {
@@ -1220,6 +1232,46 @@ export default class SCNRenderer extends NSObject {
       node = nodes.shift()
     }
     return null
+  }
+
+  /**
+   * @access private
+   * @returns {SCNVector3} -
+   */
+  _getCameraPosition() {
+    if(this.pointOfView === this._defaultCameraNode){
+      return this._defaultCameraPosNode.position
+    }else if(this.pointOfView === null){
+      return new SCNVector3(0, 0, 0)
+    }
+    const rot = this._getCameraOrientation()
+    const rotMat = SCNMatrix4.matrixWithRotation(rot)
+    const pos = this.pointOfView._worldTranslation
+    return pos.add((new SCNVector3(0, 0, -_defaultCameraDistance)).rotate(rotMat))
+  }
+
+  /**
+   * @access private
+   * @returns {SCNVector4} -
+   */
+  _getCameraOrientation() {
+    if(this.pointOfView === this._defaultCameraNode){
+      return this._defaultCameraRotNode.orientation
+    }else if(this.pointOfView === null){
+      return new SCNVector4(0, 0, 0, 0)
+    }
+    return this.pointOfView._worldOrientation
+  }
+
+  /**
+   * @access private
+   * @returns {number} -
+   */
+  _getCameraDistance() {
+    if(this.pointOfView === this._defaultCameraNode){
+      return this._defaultCameraNode.position.z
+    }
+    return _defaultCameraDistance
   }
 }
 
