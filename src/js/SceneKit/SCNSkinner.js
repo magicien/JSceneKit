@@ -177,14 +177,6 @@ export default class SCNSkinner extends NSObject {
       //mat = mat.mult(bone.presentation.transform)
       arr.push(...mat.floatArray3x4f())
 
-
-      if(i===21){
-        const p = bone._presentation
-        //console.log(`skinner bone ${i} ${p.name} (${p.position.x}, ${p.position.y}, ${p.position.z}`)
-        //console.log(`mat ${mat.floatArray3x4f()}`)
-      }
-
-
       /*
       if(!mat.isIdentity()){
         console.warn(`inverse: ${this._boneInverseBindTransforms[i].floatArray3x4f()}`)

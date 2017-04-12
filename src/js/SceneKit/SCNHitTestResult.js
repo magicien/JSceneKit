@@ -14,13 +14,13 @@ import CGPoint from '../CoreGraphics/CGPoint'
  * @see https://developer.apple.com/reference/scenekit/scnhittestresult
  */
 export default class SCNHitTestResult extends NSObject {
-
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  init() {
+  constructor() {
+    super()
 
     // Retrieving Information About a Hit-Test Result
 
@@ -51,6 +51,7 @@ export default class SCNHitTestResult extends NSObject {
   textureCoordinatesWithMappingChannel(channel) {
     return null
   }
+
   /**
    * The node whose geometry intersects the search ray.
    * @type {SCNNode}
@@ -60,6 +61,7 @@ export default class SCNHitTestResult extends NSObject {
   get node() {
     return this._node
   }
+
   /**
    * The index of the geometry element whose surface the search ray intersects.
    * @type {number}
@@ -69,6 +71,7 @@ export default class SCNHitTestResult extends NSObject {
   get geometryIndex() {
     return this._geometryIndex
   }
+
   /**
    * The index of the primitive in the geomety element intersected by the search ray.
    * @type {number}
@@ -78,6 +81,7 @@ export default class SCNHitTestResult extends NSObject {
   get faceIndex() {
     return this._faceIndex
   }
+
   /**
    * The point of intersection between the geometry and the search ray, in the local coordinate system of the node containing the geometry.
    * @type {SCNVector3}
@@ -87,6 +91,7 @@ export default class SCNHitTestResult extends NSObject {
   get localCoordinates() {
     return this._localCoordinates
   }
+
   /**
    * The point of intersection between the geometry and the search ray, in the scene’s world coordinate system.
    * @type {SCNVector3}
@@ -96,6 +101,7 @@ export default class SCNHitTestResult extends NSObject {
   get worldCoordinates() {
     return this._worldCoordinates
   }
+
   /**
    * The surface normal vector at the point of intersection, in the local coordinate system of the node containing the geometry intersected by the search ray.
    * @type {SCNVector3}
@@ -105,6 +111,7 @@ export default class SCNHitTestResult extends NSObject {
   get localNormal() {
     return this._localNormal
   }
+
   /**
    * The surface normal vector at the point of intersection, in the scene’s world coordinate system.
    * @type {SCNVector3}
@@ -114,6 +121,7 @@ export default class SCNHitTestResult extends NSObject {
   get worldNormal() {
     return this._worldNormal
   }
+
   /**
    * The world transform matrix of the node containing the intersection.
    * @type {SCNMatrix4}
@@ -125,6 +133,7 @@ export default class SCNHitTestResult extends NSObject {
   }
 
   // Instance Properties
+
   /**
    * 
    * @type {SCNNode}

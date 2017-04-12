@@ -168,4 +168,48 @@ export default class SCNGeometryElement extends NSObject {
     )
     return element
   }
+
+  /**
+   * @access private
+   * @param {number} index -
+   * @returns {number[]} -
+   */
+  _indexAt(index) {
+    if(index < 0 || index >= this.primitiveCount){
+      throw new Error(`index out of range: ${index} (0 - ${this.primitiveCount - 1})`)
+    }
+
+    const arr = []
+    const len = this._primitiveCount
+    if(this._primitiveType === SCNGeometryPrimitiveType.triangles){
+      const i = index * 3
+      return [
+        this._data[i+0],
+        this._data[i+1],
+        this._data[i+2]
+      ]
+    }else if(this._primitiveType === SCNGeometryPrimitiveType.triangleStrip){
+      return [
+        this._data[index+0],
+        this._data[index+1],
+        this._data[index+2]
+      ]
+    }else if(this._primitiveType === SCNGeometryPrimitiveType.line){
+      const i = index * 2
+      return [
+        this._data[i+0],
+        this._data[i+1]
+      ]
+    }else if(this._primitiveType === SCNGeometryPrimitiveType.point){
+      return [this._data[index]]
+    }else if(this._primitiveType === SCNGeometryPrimitiveType.polygon){
+      return [
+        this._data[0],
+        this._data[index+1],
+        this._data[index+2]
+      ]
+    }else{
+      throw new Error(`unknown primitive type: ${this._primitiveType}`)
+    }
+  }
 }

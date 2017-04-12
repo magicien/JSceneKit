@@ -15184,9 +15184,11 @@ module.exports =
 	    key: 'transform',
 	    value: function transform(m) {
 	      var r = new SCNVector3();
-	      r.x = this.x * m.m11 + this.y * m.m21 + this.z * m.m31 + m.m41;
-	      r.y = this.x * m.m12 + this.y * m.m22 + this.z * m.m32 + m.m42;
-	      r.z = this.x * m.m13 + this.y * m.m23 + this.z * m.m33 + m.m43;
+	      var w = this.x * m.m14 + this.y * m.m24 + this.z * m.m34 + m.m44;
+	      var iw = 1.0 / w;
+	      r.x = (this.x * m.m11 + this.y * m.m21 + this.z * m.m31 + m.m41) * iw;
+	      r.y = (this.x * m.m12 + this.y * m.m22 + this.z * m.m32 + m.m42) * iw;
+	      r.z = (this.x * m.m13 + this.y * m.m23 + this.z * m.m33 + m.m43) * iw;
 	      return r;
 	    }
 
@@ -21942,20 +21944,20 @@ module.exports =
 
 	      for (var i = 0; i < vectorCount; i++) {
 	        if (vertexSource) {
-	          arr.push.apply(arr, _toConsumableArray(vertexSource.vectorAt(i)));
+	          arr.push.apply(arr, _toConsumableArray(vertexSource._vectorAt(i)));
 	        }
 	        if (normalSource) {
-	          arr.push.apply(arr, _toConsumableArray(normalSource.vectorAt(i)));
+	          arr.push.apply(arr, _toConsumableArray(normalSource._vectorAt(i)));
 	        }
 	        if (texcoordSource) {
-	          //console.log(`tex ${i} ${texcoordSource.vectorAt(i)}`)
-	          arr.push.apply(arr, _toConsumableArray(texcoordSource.vectorAt(i)));
+	          //console.log(`tex ${i} ${texcoordSource._vectorAt(i)}`)
+	          arr.push.apply(arr, _toConsumableArray(texcoordSource._vectorAt(i)));
 	        }
 	      }
 
-	      //console.log(`vertex(0): ${vertexSource.vectorAt(0)}`)
-	      //console.log(`normal(0): ${normalSource.vectorAt(0)}`)
-	      //console.log(`texcoord(0): ${texcoordSource.vectorAt(0)}`)
+	      //console.log(`vertex(0): ${vertexSource._vectorAt(0)}`)
+	      //console.log(`normal(0): ${normalSource._vectorAt(0)}`)
+	      //console.log(`texcoord(0): ${texcoordSource._vectorAt(0)}`)
 
 	      // update geometry sources
 	      // FIXME: Don't change geometry sources. Use other variables
@@ -22003,10 +22005,10 @@ module.exports =
 
 	      for (var _i = 0; _i < vectorCount; _i++) {
 	        if (indexSource) {
-	          arr.push.apply(arr, _toConsumableArray(indexSource.vectorAt(_i)));
+	          arr.push.apply(arr, _toConsumableArray(indexSource._vectorAt(_i)));
 	        }
 	        if (weightSource) {
-	          arr.push.apply(arr, _toConsumableArray(weightSource.vectorAt(_i)));
+	          arr.push.apply(arr, _toConsumableArray(weightSource._vectorAt(_i)));
 	        }
 	      }
 
@@ -22678,6 +22680,10 @@ module.exports =
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
+	var _SCNHitTestResult = __webpack_require__(83);
+
+	var _SCNHitTestResult2 = _interopRequireDefault(_SCNHitTestResult);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
@@ -23000,17 +23006,7 @@ module.exports =
 	      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT);
 
 	      // set camera node
-	      var cameraNode = this.pointOfView;
-	      if (cameraNode === null) {
-	        cameraNode = this._searchCameraNode();
-	        this.pointOfView = cameraNode;
-	        if (cameraNode === null) {
-	          cameraNode = this._defaultCameraNode;
-	        }
-	      }
-	      if (cameraNode === this._defaultCameraNode) {
-	        this._defaultCameraPosNode._updateWorldTransform();
-	      }
+	      var cameraNode = this._getCameraNode();
 	      var camera = cameraNode.camera;
 	      camera._updateProjectionTransform(this._viewRect);
 
@@ -23051,19 +23047,38 @@ module.exports =
 	        gl.uniform4fv(gl.getUniformLocation(program, 'lightDiffuse'), _SKColor2.default.black.float32Array());
 	      }
 
-	      // FIXME: use uniform var
+	      // FIXME: use uniform var 
 	      var lightDirection = new Float32Array([0, -0.9, -0.1]);
 	      gl.uniform3fv(gl.getUniformLocation(program, 'lightDirection'), lightDirection);
 
 	      var renderingArray = this._createRenderingNodeArray();
-	      //if(renderingArray.length === 0){
-	      //  throw new Error('renderingArray.length: 0')
-	      //}
 	      renderingArray.forEach(function (node) {
 	        _this2._renderNode(node);
 	      });
 
 	      gl.flush();
+	    }
+
+	    /**
+	     * @access private
+	     * @returns {SCNNode} -
+	     */
+
+	  }, {
+	    key: '_getCameraNode',
+	    value: function _getCameraNode() {
+	      var cameraNode = this.pointOfView;
+	      if (cameraNode === null) {
+	        cameraNode = this._searchCameraNode();
+	        this.pointOfView = cameraNode;
+	        if (cameraNode === null) {
+	          cameraNode = this._defaultCameraNode;
+	        }
+	      }
+	      if (cameraNode === this._defaultCameraNode) {
+	        this._defaultCameraPosNode._updateWorldTransform();
+	      }
+	      return cameraNode;
 	    }
 
 	    /**
@@ -23385,9 +23400,33 @@ module.exports =
 	  }, {
 	    key: 'hitTest',
 	    value: function hitTest(point) {
+	      var _this4 = this;
+
 	      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
 
-	      return null;
+	      var result = [];
+
+	      var cameraNode = this._getCameraNode();
+	      cameraNode.camera._updateProjectionTransform(this._viewRect);
+	      var vp = cameraNode.viewProjectionTransform;
+	      var invVp = vp.invert();
+
+	      var viewPoint = new _SCNVector2.default(point.x, point.y, 0);
+	      var viewRay = new _SCNVector2.default(point.x, point.y, 0.1);
+	      var worldPoint = viewPoint.transform(invVp);
+	      var worldRay = viewRay.transform(invVp);
+	      console.log('worldPoint: ' + worldPoint.float32Array());
+	      console.log('worldRay  : ' + worldRay.float32Array());
+	      var rayVec = worldRay.sub(worldPoint);
+
+	      var renderingArray = this._createRenderingNodeArray();
+	      console.log('renderingArray.length: ' + renderingArray.length);
+
+	      renderingArray.forEach(function (node) {
+	        result.push.apply(result, _toConsumableArray(_this4._nodeHitTest(node, worldPoint, rayVec)));
+	      });
+
+	      return result;
 	    }
 
 	    /**
@@ -23736,6 +23775,143 @@ module.exports =
 	        return this._defaultCameraNode.position.z;
 	      }
 	      return _defaultCameraDistance;
+	    }
+
+	    /**
+	     * @access private
+	     * @param {SCNNode} node -
+	     * @param {SCNVector3} rayPoint - 
+	     * @param {SCNVector3} rayVec -
+	     * @returns {SCNHitTestResult[]} -
+	     */
+
+	  }, {
+	    key: '_nodeHitTest',
+	    value: function _nodeHitTest(node, rayPoint, rayVec) {
+	      var result = [];
+	      var geometry = node.presentation.geometry;
+	      var invRay = rayVec.mul(-1);
+
+	      console.log('rayPoint: ' + rayPoint.float32Array());
+	      console.log('rayVec: ' + rayVec.float32Array());
+
+	      //if(node.morpher !== null){
+	      //  this._updateVAO(node)
+	      //}
+
+	      var source = geometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
+	      var sourceLen = source.vectorCount;
+	      var sourceData = [];
+	      var modelTransform = node.presentation._worldTransform;
+	      var skinningJoints = [];
+	      if (node.presentation.skinner) {
+	        var skinner = node.presentation.skinner;
+	        var numBones = skinner._bones.length;
+	        for (var i = 0; i < numBones; i++) {
+	          var bone = skinner._bones[i];
+	          var mat = skinner._boneInverseBindTransform[i].mult(bone._presentation._worldTransform);
+	          skinningJoints.push(mat);
+	        }
+	        for (var _i = 0; _i < sourceLen; _i++) {
+	          var weights = skinner._boneWeights._vectorAt(_i);
+	          var indices = skinner._boneIndices._vectorAt(_i);
+	          var _mat = new _SCNMatrix2.default();
+	          for (var j = 0; j < skinner.numSkinningJoints; j++) {
+	            _mat.add(skinningJoints[indices[j]].mul(weights[j]));
+	          }
+	          sourceData.push(source._scnVectorAt(_i).transform(_mat));
+	        }
+	      } else {
+	        for (var _i2 = 0; _i2 < sourceLen; _i2++) {
+	          sourceData.push(source._scnVectorAt(_i2).transform(modelTransform));
+	        }
+	      }
+
+	      var geometryCount = node.presentation.geometry.geometryElements.length;
+	      for (var _i3 = 0; _i3 < geometryCount; _i3++) {
+	        console.log('geometry element ' + _i3);
+	        var element = node.presentation.geometry.geometryElements[_i3];
+	        switch (element.primitiveType) {
+	          case _SCNGeometryPrimitiveType2.default.line:
+	            console.warn('hitTest for line is not implemented');
+	            continue;
+	          case _SCNGeometryPrimitiveType2.default.point:
+	            console.warn('hitTest for point is not implemented');
+	            continue;
+	        }
+
+	        var elementData = element._glData;
+	        var len = element.primitiveCount;
+	        console.log('primitiveCount: ' + len);
+	        // TODO: check cull settings
+	        for (var pi = 0; pi < len; pi++) {
+	          var _indices = element._indexAt(pi);
+
+	          var v0 = sourceData[_indices[0]];
+	          var v1 = sourceData[_indices[1]];
+	          var v2 = sourceData[_indices[2]];
+
+	          var e1 = v1.sub(v0);
+	          var e2 = v2.sub(v0);
+
+	          var denom = this._det(e1, e2, invRay);
+	          if (denom <= 0) {
+	            continue;
+	          }
+	          denom = 1.0 / denom;
+
+	          var d = rayPoint.sub(v0);
+	          var u = this._det(d, e2, invRay) * denom;
+	          if (u < 0 || u > 1) {
+	            continue;
+	          }
+
+	          var v = this._det(e1, d, invRay) * denom;
+	          if (v < 0 || v > 1) {
+	            continue;
+	          }
+
+	          var t = this._det(e1, e2, d) * denom;
+	          if (t < 0) {
+	            continue;
+	          }
+
+	          // Hit!
+	          console.log('Hit! ' + _i3 + ': ' + pi);
+	          var hitPoint = rayPoint.add(rayVec.mul(t));
+	          var invModel = modelTransform.invert();
+
+	          var res = new _SCNHitTestResult2.default();
+	          res._node = node;
+	          res._geometryIndex = _i3;
+	          res._faceIndex = pi;
+	          res._worldCoordinates = hitPoint;
+	          res._localCoordinates = hitPoint.transform(invModel);
+	          var nom = e1.cross(e2);
+	          res._worldNormal = nom.normalize();
+	          res._localNormal = nom.transform(invModel);
+	          res._modelTransform = modelTransform;
+	          res._boneNode = null; // it should be array... what should I put here?
+	          result.push(res);
+	        }
+	      }
+
+	      return result;
+	    }
+
+	    /**
+	     * calculate a determinant of 3x3 matrix from 3 vectors.
+	     * @access private
+	     * @param {SCNVector3} v1 -
+	     * @param {SCNVector3} v2 -
+	     * @param {SCNVector3} v3 -
+	     * @returns {number} -
+	     */
+
+	  }, {
+	    key: '_det',
+	    value: function _det(v1, v2, v3) {
+	      return v1.x * v2.y * v3.z + v1.y * v2.z * v3.x + v1.z * v2.x * v3.y - v1.x * v2.z * v3.y - v1.y * v2.x * v3.z - v1.z * v2.y * v3.x;
 	    }
 	  }, {
 	    key: 'nextFrameTime',
@@ -27222,55 +27398,51 @@ module.exports =
 	var SCNHitTestResult = function (_NSObject) {
 	  _inherits(SCNHitTestResult, _NSObject);
 
+	  /**
+	   * constructor
+	   * @access public
+	   * @constructor
+	   */
 	  function SCNHitTestResult() {
 	    _classCallCheck(this, SCNHitTestResult);
 
-	    return _possibleConstructorReturn(this, (SCNHitTestResult.__proto__ || Object.getPrototypeOf(SCNHitTestResult)).apply(this, arguments));
-	  }
-
-	  _createClass(SCNHitTestResult, [{
-	    key: 'init',
-
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @returns {void}
-	     */
-	    value: function init() {
-
-	      // Retrieving Information About a Hit-Test Result
-
-	      this._node = null;
-	      this._geometryIndex = 0;
-	      this._faceIndex = 0;
-	      this._localCoordinates = null;
-	      this._worldCoordinates = null;
-	      this._localNormal = null;
-	      this._worldNormal = null;
-	      this._modelTransform = null;
-
-	      // Instance Properties
-
-	      this._boneNode = null;
-	    }
-
 	    // Retrieving Information About a Hit-Test Result
 
-	    /**
-	     * Returns the texture coordinates at the point of intersection for the specified texture mapping channel.
-	     * @access public
-	     * @param {number} channel - The index of the mapping channel in which to look up texture coordinates.
-	     * @returns {CGPoint} - 
-	     * @desc An SCNGeometry object can contain multiple sources of texture coordinates, or texture mapping channels. (With multiple channels, you can map texture images for different material properties in different ways.) To use the texture coordinates of a hit-test result, specify which texture coordinate source to look up coordinates in. For example, to add “scorch marks” to a game character hit by a laser, you might modify a texture image mapped to the multiply property of the geometry’s material. Use the mappingChannel index from that material property as the channel parameter when calling textureCoordinates(withMappingChannel:) to ensure that you modify the correct location in the texture image.
-	     * @see https://developer.apple.com/reference/scenekit/scnhittestresult/1522771-texturecoordinates
-	     */
+	    var _this = _possibleConstructorReturn(this, (SCNHitTestResult.__proto__ || Object.getPrototypeOf(SCNHitTestResult)).call(this));
 
-	  }, {
+	    _this._node = null;
+	    _this._geometryIndex = 0;
+	    _this._faceIndex = 0;
+	    _this._localCoordinates = null;
+	    _this._worldCoordinates = null;
+	    _this._localNormal = null;
+	    _this._worldNormal = null;
+	    _this._modelTransform = null;
+
+	    // Instance Properties
+
+	    _this._boneNode = null;
+	    return _this;
+	  }
+
+	  // Retrieving Information About a Hit-Test Result
+
+	  /**
+	   * Returns the texture coordinates at the point of intersection for the specified texture mapping channel.
+	   * @access public
+	   * @param {number} channel - The index of the mapping channel in which to look up texture coordinates.
+	   * @returns {CGPoint} - 
+	   * @desc An SCNGeometry object can contain multiple sources of texture coordinates, or texture mapping channels. (With multiple channels, you can map texture images for different material properties in different ways.) To use the texture coordinates of a hit-test result, specify which texture coordinate source to look up coordinates in. For example, to add “scorch marks” to a game character hit by a laser, you might modify a texture image mapped to the multiply property of the geometry’s material. Use the mappingChannel index from that material property as the channel parameter when calling textureCoordinates(withMappingChannel:) to ensure that you modify the correct location in the texture image.
+	   * @see https://developer.apple.com/reference/scenekit/scnhittestresult/1522771-texturecoordinates
+	   */
+
+
+	  _createClass(SCNHitTestResult, [{
 	    key: 'textureCoordinatesWithMappingChannel',
 	    value: function textureCoordinatesWithMappingChannel(channel) {
 	      return null;
 	    }
+
 	    /**
 	     * The node whose geometry intersects the search ray.
 	     * @type {SCNNode}
@@ -27283,6 +27455,7 @@ module.exports =
 	    get: function get() {
 	      return this._node;
 	    }
+
 	    /**
 	     * The index of the geometry element whose surface the search ray intersects.
 	     * @type {number}
@@ -27295,6 +27468,7 @@ module.exports =
 	    get: function get() {
 	      return this._geometryIndex;
 	    }
+
 	    /**
 	     * The index of the primitive in the geomety element intersected by the search ray.
 	     * @type {number}
@@ -27307,6 +27481,7 @@ module.exports =
 	    get: function get() {
 	      return this._faceIndex;
 	    }
+
 	    /**
 	     * The point of intersection between the geometry and the search ray, in the local coordinate system of the node containing the geometry.
 	     * @type {SCNVector3}
@@ -27319,6 +27494,7 @@ module.exports =
 	    get: function get() {
 	      return this._localCoordinates;
 	    }
+
 	    /**
 	     * The point of intersection between the geometry and the search ray, in the scene’s world coordinate system.
 	     * @type {SCNVector3}
@@ -27331,6 +27507,7 @@ module.exports =
 	    get: function get() {
 	      return this._worldCoordinates;
 	    }
+
 	    /**
 	     * The surface normal vector at the point of intersection, in the local coordinate system of the node containing the geometry intersected by the search ray.
 	     * @type {SCNVector3}
@@ -27343,6 +27520,7 @@ module.exports =
 	    get: function get() {
 	      return this._localNormal;
 	    }
+
 	    /**
 	     * The surface normal vector at the point of intersection, in the scene’s world coordinate system.
 	     * @type {SCNVector3}
@@ -27355,6 +27533,7 @@ module.exports =
 	    get: function get() {
 	      return this._worldNormal;
 	    }
+
 	    /**
 	     * The world transform matrix of the node containing the intersection.
 	     * @type {SCNMatrix4}
@@ -27369,6 +27548,7 @@ module.exports =
 	    }
 
 	    // Instance Properties
+
 	    /**
 	     * 
 	     * @type {SCNNode}
@@ -30212,15 +30392,15 @@ module.exports =
 	     */
 
 	  }, {
-	    key: 'vectorAt',
+	    key: '_vectorAt',
 
 
 	    /**
-	     * @access public
+	     * @access private
 	     * @param {number} index -
 	     * @returns {number[]} -
 	     */
-	    value: function vectorAt(index) {
+	    value: function _vectorAt(index) {
 	      if (index < 0 || index >= this.vectorCount) {
 	        throw new Error('index out of range: ' + index + ' (0 - ' + (this.vectorCount - 1) + ')');
 	      }
@@ -30234,6 +30414,24 @@ module.exports =
 	    }
 
 	    /**
+	     * @access private
+	     * @param {number} index -
+	     * @returns {SCNVector3|SCNVector4|number[]} -
+	     */
+
+	  }, {
+	    key: '_scnVectorAt',
+	    value: function _scnVectorAt(index) {
+	      var vec = this._vectorAt(index);
+	      if (vec.length === 3) {
+	        return new _SCNVector2.default(vec[0], vec[1], vec[2]);
+	      } else if (vec.length === 4) {
+	        return new _SCNVector4.default(vec[0], vec[1], vec[2], vec[3]);
+	      }
+	      return vec;
+	    }
+
+	    /**
 	     * @access public
 	     * @param {number[]|SCNVector3|SCNVector4} v -
 	     * @param {number} index -
@@ -30241,8 +30439,8 @@ module.exports =
 	     */
 
 	  }, {
-	    key: 'setVectorAt',
-	    value: function setVectorAt(v, index) {
+	    key: '_setVectorAt',
+	    value: function _setVectorAt(v, index) {
 	      if (index < 0 || index >= this.vectorCount) {
 	        throw new Error('index out of range: ' + index + ' (0 - ' + (this.vectorCount - 1) + ')');
 	      }
@@ -30908,6 +31106,38 @@ module.exports =
 	    value: function copy() {
 	      var element = new SCNGeometryElement(this._data.slice(0), this._primitiveType, this._primitiveCount, this._bytesPerIndex);
 	      return element;
+	    }
+
+	    /**
+	     * @access private
+	     * @param {number} index -
+	     * @returns {number[]} -
+	     */
+
+	  }, {
+	    key: '_indexAt',
+	    value: function _indexAt(index) {
+	      if (index < 0 || index >= this.primitiveCount) {
+	        throw new Error('index out of range: ' + index + ' (0 - ' + (this.primitiveCount - 1) + ')');
+	      }
+
+	      var arr = [];
+	      var len = this._primitiveCount;
+	      if (this._primitiveType === _SCNGeometryPrimitiveType2.default.triangles) {
+	        var i = index * 3;
+	        return [this._data[i + 0], this._data[i + 1], this._data[i + 2]];
+	      } else if (this._primitiveType === _SCNGeometryPrimitiveType2.default.triangleStrip) {
+	        return [this._data[index + 0], this._data[index + 1], this._data[index + 2]];
+	      } else if (this._primitiveType === _SCNGeometryPrimitiveType2.default.line) {
+	        var _i = index * 2;
+	        return [this._data[_i + 0], this._data[_i + 1]];
+	      } else if (this._primitiveType === _SCNGeometryPrimitiveType2.default.point) {
+	        return [this._data[index]];
+	      } else if (this._primitiveType === _SCNGeometryPrimitiveType2.default.polygon) {
+	        return [this._data[0], this._data[index + 1], this._data[index + 2]];
+	      } else {
+	        throw new Error('unknown primitive type: ' + this._primitiveType);
+	      }
 	    }
 	  }, {
 	    key: 'primitiveType',
@@ -32300,12 +32530,6 @@ module.exports =
 	        //mat = bone.presentation.transform.mult(mat)
 	        //mat = mat.mult(bone.presentation.transform)
 	        arr.push.apply(arr, _toConsumableArray(mat.floatArray3x4f()));
-
-	        if (i === 21) {
-	          var p = bone._presentation;
-	          //console.log(`skinner bone ${i} ${p.name} (${p.position.x}, ${p.position.y}, ${p.position.z}`)
-	          //console.log(`mat ${mat.floatArray3x4f()}`)
-	        }
 
 	        /*
 	        if(!mat.isIdentity()){
@@ -37408,8 +37632,6 @@ module.exports =
 	 * @implements {SCNTechniqueSupport}
 	 * @see https://developer.apple.com/reference/scenekit/scnview
 	 */
-	// TODO: use extension of HTMLElement when it's supported.
-	//export default class SCNView extends _HTMLCanvasElement {
 
 	var SCNView = function () {
 
@@ -37698,7 +37920,7 @@ module.exports =
 	    if (!this._context) {
 	      throw new Error('can\'t create WebGL context');
 	    }
-	    this._context.viewport(frame.x, frame.y, frame.width, frame.height);
+	    this._context.viewport(frame.minX, frame.minY, frame.width, frame.height);
 	    this._context.clearColor(this.backgroundColor.r, this.backgroundColor.g, this.backgroundColor.b, this.backgroundColor.a);
 
 	    this._program = this._context.createProgram();
@@ -37968,9 +38190,9 @@ module.exports =
 	    value: function hitTest(point) {
 	      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
 
-	      // TODO: implement
-	      console.log('hitTest at: ' + point.x + ', ' + point.y);
-	      return [];
+	      var x = (point.x - this._frame.minX) / this._frame.width * 2.0 - 1.0;
+	      var y = (point.y - this._frame.minY) / this._frame.height * 2.0 - 1.0;
+	      return this._renderer.hitTest(new _CGPoint2.default(x, -y), options);
 	    }
 
 	    /**
@@ -38261,51 +38483,163 @@ module.exports =
 	  }, {
 	    key: 'mouseDownWith',
 	    value: function mouseDownWith(theEvent) {}
+
+	    /**
+	     * @access public
+	     * @param {NSEvent} theEvent -
+	     * @returns {void}
+	     */
+
 	  }, {
 	    key: 'mouseDraggedWith',
 	    value: function mouseDraggedWith(theEvent) {}
+
+	    /**
+	     * @access public
+	     * @param {NSEvent} theEvent -
+	     * @returns {void}
+	     */
+
 	  }, {
 	    key: 'mouseUpWith',
 	    value: function mouseUpWith(theEvent) {}
+
+	    /**
+	     * @access public
+	     * @param {NSEvent} theEvent -
+	     * @returns {void}
+	     */
+
 	  }, {
 	    key: 'mouseMovedWith',
 	    value: function mouseMovedWith(theEvent) {}
+
+	    /**
+	     * @access public
+	     * @param {NSEvent} theEvent -
+	     * @returns {void}
+	     */
+
 	  }, {
 	    key: 'mouseEnteredWith',
 	    value: function mouseEnteredWith(theEvent) {}
+
+	    /**
+	     * @access public
+	     * @param {NSEvent} theEvent -
+	     * @returns {void}
+	     */
+
 	  }, {
 	    key: 'mouseExitedWith',
 	    value: function mouseExitedWith(theEvent) {}
+
+	    /**
+	     * @access public
+	     * @param {NSEvent} theEvent -
+	     * @returns {void}
+	     */
+
 	  }, {
 	    key: 'rightMouseDraggedWith',
 	    value: function rightMouseDraggedWith(theEvent) {}
+
+	    /**
+	     * @access public
+	     * @param {NSEvent} theEvent -
+	     * @returns {void}
+	     */
+
 	  }, {
 	    key: 'rightMouseUpWith',
 	    value: function rightMouseUpWith(theEvent) {}
+
+	    /**
+	     * @access public
+	     * @param {NSEvent} theEvent -
+	     * @returns {void}
+	     */
+
 	  }, {
 	    key: 'otherMouseDownWith',
 	    value: function otherMouseDownWith(theEvent) {}
+
+	    /**
+	     * @access public
+	     * @param {NSEvent} theEvent -
+	     * @returns {void}
+	     */
+
 	  }, {
 	    key: 'otherMouseDraggedWith',
 	    value: function otherMouseDraggedWith(theEvent) {}
+
+	    /**
+	     * @access public
+	     * @param {NSEvent} theEvent -
+	     * @returns {void}
+	     */
+
 	  }, {
 	    key: 'otherMouseUpWith',
 	    value: function otherMouseUpWith(theEvent) {}
+
+	    /**
+	     * @access public
+	     * @param {NSEvent} theEvent -
+	     * @returns {void}
+	     */
+
 	  }, {
 	    key: 'scrollWheelWith',
 	    value: function scrollWheelWith(theEvent) {}
+
+	    /**
+	     * @access public
+	     * @param {NSEvent} theEvent -
+	     * @returns {void}
+	     */
+
 	  }, {
 	    key: 'keyDownWith',
 	    value: function keyDownWith(theEvent) {}
+
+	    /**
+	     * @access public
+	     * @param {NSEvent} theEvent -
+	     * @returns {void}
+	     */
+
 	  }, {
 	    key: 'keyUpWith',
 	    value: function keyUpWith(theEvent) {}
+
+	    /**
+	     * @access public
+	     * @param {NSEvent} theEvent -
+	     * @returns {void}
+	     */
+
 	  }, {
 	    key: 'flagsChangedWith',
 	    value: function flagsChangedWith(theEvent) {}
+
+	    /**
+	     * @access public
+	     * @param {NSEvent} theEvent -
+	     * @returns {void}
+	     */
+
 	  }, {
 	    key: 'tablePointWith',
 	    value: function tablePointWith(theEvent) {}
+
+	    /**
+	     * @access public
+	     * @param {NSEvent} theEvent -
+	     * @returns {void}
+	     */
+
 	  }, {
 	    key: 'tableProximityWith',
 	    value: function tableProximityWith(theEvent) {}

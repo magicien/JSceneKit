@@ -156,9 +156,11 @@ export default class SCNVector3 {
    */
   transform(m) {
     const r = new SCNVector3()
-    r.x = this.x * m.m11 + this.y * m.m21 + this.z * m.m31 + m.m41
-    r.y = this.x * m.m12 + this.y * m.m22 + this.z * m.m32 + m.m42
-    r.z = this.x * m.m13 + this.y * m.m23 + this.z * m.m33 + m.m43
+    const w = this.x * m.m14 + this.y * m.m24 + this.z * m.m34 + m.m44
+    const iw = 1.0 / w
+    r.x = (this.x * m.m11 + this.y * m.m21 + this.z * m.m31 + m.m41) * iw
+    r.y = (this.x * m.m12 + this.y * m.m22 + this.z * m.m32 + m.m42) * iw
+    r.z = (this.x * m.m13 + this.y * m.m23 + this.z * m.m33 + m.m43) * iw
     return r
   }
 

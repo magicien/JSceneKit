@@ -522,20 +522,20 @@ This method is for OpenGL shader programs only. To bind custom variable data for
 
     for(let i=0; i<vectorCount; i++){
       if(vertexSource){
-        arr.push(...vertexSource.vectorAt(i))
+        arr.push(...vertexSource._vectorAt(i))
       }
       if(normalSource){
-        arr.push(...normalSource.vectorAt(i))
+        arr.push(...normalSource._vectorAt(i))
       }
       if(texcoordSource){
-        //console.log(`tex ${i} ${texcoordSource.vectorAt(i)}`)
-        arr.push(...texcoordSource.vectorAt(i))
+        //console.log(`tex ${i} ${texcoordSource._vectorAt(i)}`)
+        arr.push(...texcoordSource._vectorAt(i))
       }
     }
 
-    //console.log(`vertex(0): ${vertexSource.vectorAt(0)}`)
-    //console.log(`normal(0): ${normalSource.vectorAt(0)}`)
-    //console.log(`texcoord(0): ${texcoordSource.vectorAt(0)}`)
+    //console.log(`vertex(0): ${vertexSource._vectorAt(0)}`)
+    //console.log(`normal(0): ${normalSource._vectorAt(0)}`)
+    //console.log(`texcoord(0): ${texcoordSource._vectorAt(0)}`)
 
     // update geometry sources
     // FIXME: Don't change geometry sources. Use other variables
@@ -583,10 +583,10 @@ This method is for OpenGL shader programs only. To bind custom variable data for
 
     for(let i=0; i<vectorCount; i++){
       if(indexSource){
-        arr.push(...indexSource.vectorAt(i))
+        arr.push(...indexSource._vectorAt(i))
       }
       if(weightSource){
-        arr.push(...weightSource.vectorAt(i))
+        arr.push(...weightSource._vectorAt(i))
       }
     }
 

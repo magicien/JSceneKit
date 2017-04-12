@@ -17,6 +17,7 @@ import SCNVector4 from './SCNVector4'
 import SKColor from '../SpriteKit/SKColor'
 import SCNGeometryPrimitiveType from './SCNGeometryPrimitiveType'
 import SCNGeometrySource from './SCNGeometrySource'
+import SCNHitTestResult from './SCNHitTestResult'
 
 /**
  * @access private
@@ -449,17 +450,7 @@ export default class SCNRenderer extends NSObject {
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT)
 
     // set camera node
-    let cameraNode = this.pointOfView
-    if(cameraNode === null){
-      cameraNode = this._searchCameraNode()
-      this.pointOfView = cameraNode
-      if(cameraNode === null){
-        cameraNode = this._defaultCameraNode
-      }
-    }
-    if(cameraNode === this._defaultCameraNode){
-      this._defaultCameraPosNode._updateWorldTransform()
-    }
+    const cameraNode = this._getCameraNode()
     const camera = cameraNode.camera
     camera._updateProjectionTransform(this._viewRect)
 
@@ -501,19 +492,35 @@ export default class SCNRenderer extends NSObject {
       gl.uniform4fv(gl.getUniformLocation(program, 'lightDiffuse'), SKColor.black.float32Array())
     }
 
-    // FIXME: use uniform var
+    // FIXME: use uniform var 
     const lightDirection = new Float32Array([0, -0.9, -0.1])
     gl.uniform3fv(gl.getUniformLocation(program, 'lightDirection'), lightDirection)
 
     const renderingArray = this._createRenderingNodeArray()
-    //if(renderingArray.length === 0){
-    //  throw new Error('renderingArray.length: 0')
-    //}
     renderingArray.forEach((node) => {
       this._renderNode(node)
     })
 
     gl.flush()
+  }
+
+  /**
+   * @access private
+   * @returns {SCNNode} -
+   */
+  _getCameraNode() {
+    let cameraNode = this.pointOfView
+    if(cameraNode === null){
+      cameraNode = this._searchCameraNode()
+      this.pointOfView = cameraNode
+      if(cameraNode === null){
+        cameraNode = this._defaultCameraNode
+      }
+    }
+    if(cameraNode === this._defaultCameraNode){
+      this._defaultCameraPosNode._updateWorldTransform()
+    }
+    return cameraNode
   }
 
   /**
@@ -799,7 +806,29 @@ export default class SCNRenderer extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1522929-hittest
    */
   hitTest(point, options = null) {
-    return null
+    const result = []
+
+    const cameraNode = this._getCameraNode()
+    cameraNode.camera._updateProjectionTransform(this._viewRect)
+    const vp = cameraNode.viewProjectionTransform
+    const invVp = vp.invert()
+
+    const viewPoint = new SCNVector3(point.x, point.y, 0)
+    const viewRay = new SCNVector3(point.x, point.y, 0.1)
+    const worldPoint = viewPoint.transform(invVp)
+    const worldRay = viewRay.transform(invVp)
+    console.log(`worldPoint: ${worldPoint.float32Array()}`)
+    console.log(`worldRay  : ${worldRay.float32Array()}`)
+    const rayVec = worldRay.sub(worldPoint)
+
+    const renderingArray = this._createRenderingNodeArray()
+    console.log(`renderingArray.length: ${renderingArray.length}`)
+
+    renderingArray.forEach((node) => {
+      result.push(...this._nodeHitTest(node, worldPoint, rayVec))
+    })
+
+    return result
   }
 
   /**
@@ -1272,6 +1301,144 @@ export default class SCNRenderer extends NSObject {
       return this._defaultCameraNode.position.z
     }
     return _defaultCameraDistance
+  }
+
+  /**
+   * @access private
+   * @param {SCNNode} node -
+   * @param {SCNVector3} rayPoint - 
+   * @param {SCNVector3} rayVec -
+   * @returns {SCNHitTestResult[]} -
+   */
+  _nodeHitTest(node, rayPoint, rayVec) {
+    const result = []
+    const geometry = node.presentation.geometry
+    const invRay = rayVec.mul(-1)
+
+    console.log(`rayPoint: ${rayPoint.float32Array()}`)
+    console.log(`rayVec: ${rayVec.float32Array()}`)
+
+    //if(node.morpher !== null){
+    //  this._updateVAO(node)
+    //}
+
+    const source = geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
+    const sourceLen = source.vectorCount
+    const sourceData = []
+    const modelTransform = node.presentation._worldTransform
+    const skinningJoints = []
+    if(node.presentation.skinner){
+      const skinner = node.presentation.skinner
+      const numBones = skinner._bones.length
+      for(let i=0; i<numBones; i++){
+        const bone = skinner._bones[i]
+        const mat = skinner._boneInverseBindTransform[i].mult(bone._presentation._worldTransform)
+        skinningJoints.push(mat)
+      }
+      for(let i=0; i<sourceLen; i++){
+        const weights = skinner._boneWeights._vectorAt(i)
+        const indices = skinner._boneIndices._vectorAt(i)
+        const mat = new SCNMatrix4()
+        for(let j=0; j<skinner.numSkinningJoints; j++){
+          mat.add(skinningJoints[indices[j]].mul(weights[j]))
+        }
+        sourceData.push(source._scnVectorAt(i).transform(mat))
+      }
+    }else{
+      for(let i=0; i<sourceLen; i++){
+        sourceData.push(source._scnVectorAt(i).transform(modelTransform))
+      }
+    }
+
+    const geometryCount = node.presentation.geometry.geometryElements.length
+    for(let i=0; i<geometryCount; i++){
+      console.log(`geometry element ${i}`)
+      const element = node.presentation.geometry.geometryElements[i]
+      switch(element.primitiveType){
+        case SCNGeometryPrimitiveType.line:
+          console.warn('hitTest for line is not implemented')
+          continue
+        case SCNGeometryPrimitiveType.point:
+          console.warn('hitTest for point is not implemented')
+          continue
+      }
+
+      const elementData = element._glData
+      const len = element.primitiveCount
+      console.log(`primitiveCount: ${len}`)
+      // TODO: check cull settings
+      for(let pi=0; pi<len; pi++){
+        const indices = element._indexAt(pi)
+
+        const v0 = sourceData[indices[0]]
+        const v1 = sourceData[indices[1]]
+        const v2 = sourceData[indices[2]]
+
+        const e1 = v1.sub(v0)
+        const e2 = v2.sub(v0)
+
+        let denom = this._det(e1, e2, invRay)
+        if(denom <= 0){
+          continue
+        }
+        denom = 1.0 / denom
+
+        const d = rayPoint.sub(v0)
+        const u = this._det(d, e2, invRay) * denom
+        if(u < 0 || u > 1){
+          continue
+        }
+
+        const v = this._det(e1, d, invRay) * denom
+        if(v < 0 || v > 1){
+          continue
+        }
+
+        const t = this._det(e1, e2, d) * denom
+        if(t < 0){
+          continue
+        }
+
+        // Hit!
+        console.log(`Hit! ${i}: ${pi}`)
+        const hitPoint = rayPoint.add(rayVec.mul(t))
+        const invModel = modelTransform.invert()
+
+        const res = new SCNHitTestResult()
+        res._node = node
+        res._geometryIndex = i
+        res._faceIndex = pi
+        res._worldCoordinates = hitPoint
+        res._localCoordinates = hitPoint.transform(invModel)
+        const nom = e1.cross(e2)
+        res._worldNormal = nom.normalize()
+        res._localNormal = nom.transform(invModel)
+        res._modelTransform = modelTransform
+        res._boneNode = null // it should be array... what should I put here?
+        result.push(res)
+      }
+    }
+
+    return result
+  }
+
+  /**
+   * calculate a determinant of 3x3 matrix from 3 vectors.
+   * @access private
+   * @param {SCNVector3} v1 -
+   * @param {SCNVector3} v2 -
+   * @param {SCNVector3} v3 -
+   * @returns {number} -
+   */
+  _det(v1, v2, v3) {
+    return (
+        v1.x * v2.y * v3.z
+      + v1.y * v2.z * v3.x
+      + v1.z * v2.x * v3.y
+      - v1.x * v2.z * v3.y
+      - v1.y * v2.x * v3.z
+      - v1.z * v2.y * v3.x
+    )
   }
 }
 

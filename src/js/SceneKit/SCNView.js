@@ -28,8 +28,6 @@ const _Option = {
  * @implements {SCNTechniqueSupport}
  * @see https://developer.apple.com/reference/scenekit/scnview
  */
-// TODO: use extension of HTMLElement when it's supported.
-//export default class SCNView extends _HTMLCanvasElement {
 export default class SCNView {
 
   // Initializing a SceneKit View
@@ -295,7 +293,7 @@ export default class SCNView {
     if(!this._context){
       throw new Error('can\'t create WebGL context')
     }
-    this._context.viewport(frame.x, frame.y, frame.width, frame.height)
+    this._context.viewport(frame.minX, frame.minY, frame.width, frame.height)
     this._context.clearColor(
       this.backgroundColor.r,
       this.backgroundColor.g,
@@ -709,9 +707,9 @@ export default class SCNView {
    * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1522929-hittest
    */
   hitTest(point, options = null) {
-    // TODO: implement
-    console.log(`hitTest at: ${point.x}, ${point.y}`)
-    return []
+    const x = (point.x - this._frame.minX) / this._frame.width * 2.0 - 1.0
+    const y = (point.y - this._frame.minY) / this._frame.height * 2.0 - 1.0
+    return this._renderer.hitTest(new CGPoint(x, -y), options)
   }
 
   /**
@@ -1086,52 +1084,131 @@ export default class SCNView {
   mouseDownWith(theEvent) {
   }
 
+  /**
+   * @access public
+   * @param {NSEvent} theEvent -
+   * @returns {void}
+   */
   mouseDraggedWith(theEvent) {
-    
   }
 
+  /**
+   * @access public
+   * @param {NSEvent} theEvent -
+   * @returns {void}
+   */
   mouseUpWith(theEvent) {
   }
 
+  /**
+   * @access public
+   * @param {NSEvent} theEvent -
+   * @returns {void}
+   */
   mouseMovedWith(theEvent) {
   }
 
+  /**
+   * @access public
+   * @param {NSEvent} theEvent -
+   * @returns {void}
+   */
   mouseEnteredWith(theEvent) {
   }
 
+  /**
+   * @access public
+   * @param {NSEvent} theEvent -
+   * @returns {void}
+   */
   mouseExitedWith(theEvent) {
   }
 
+  /**
+   * @access public
+   * @param {NSEvent} theEvent -
+   * @returns {void}
+   */
   rightMouseDraggedWith(theEvent) {
   }
 
+  /**
+   * @access public
+   * @param {NSEvent} theEvent -
+   * @returns {void}
+   */
   rightMouseUpWith(theEvent) {
   }
 
+  /**
+   * @access public
+   * @param {NSEvent} theEvent -
+   * @returns {void}
+   */
   otherMouseDownWith(theEvent) {
   }
 
+  /**
+   * @access public
+   * @param {NSEvent} theEvent -
+   * @returns {void}
+   */
   otherMouseDraggedWith(theEvent) {
   }
 
+  /**
+   * @access public
+   * @param {NSEvent} theEvent -
+   * @returns {void}
+   */
   otherMouseUpWith(theEvent) {
   }
 
+  /**
+   * @access public
+   * @param {NSEvent} theEvent -
+   * @returns {void}
+   */
   scrollWheelWith(theEvent) {
   }
 
+  /**
+   * @access public
+   * @param {NSEvent} theEvent -
+   * @returns {void}
+   */
   keyDownWith(theEvent) {
   }
 
+  /**
+   * @access public
+   * @param {NSEvent} theEvent -
+   * @returns {void}
+   */
   keyUpWith(theEvent) {
   }
 
+  /**
+   * @access public
+   * @param {NSEvent} theEvent -
+   * @returns {void}
+   */
   flagsChangedWith(theEvent) {
   }
 
+  /**
+   * @access public
+   * @param {NSEvent} theEvent -
+   * @returns {void}
+   */
   tablePointWith(theEvent) {
   }
 
+  /**
+   * @access public
+   * @param {NSEvent} theEvent -
+   * @returns {void}
+   */
   tableProximityWith(theEvent) {
   }
 

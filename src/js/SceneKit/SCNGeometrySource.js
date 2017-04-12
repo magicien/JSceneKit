@@ -458,11 +458,11 @@ SCNGeometrySource *source = [SCNGeometrySource geometrySourceWithBuffer:buffer
   }
 
   /**
-   * @access public
+   * @access private
    * @param {number} index -
    * @returns {number[]} -
    */
-  vectorAt(index) {
+  _vectorAt(index) {
     if(index < 0 || index >= this.vectorCount){
       throw new Error(`index out of range: ${index} (0 - ${this.vectorCount - 1})`)
     }
@@ -476,12 +476,27 @@ SCNGeometrySource *source = [SCNGeometrySource geometrySourceWithBuffer:buffer
   }
 
   /**
+   * @access private
+   * @param {number} index -
+   * @returns {SCNVector3|SCNVector4|number[]} -
+   */
+  _scnVectorAt(index) {
+    const vec = this._vectorAt(index)
+    if(vec.length === 3){
+      return new SCNVector3(vec[0], vec[1], vec[2])
+    }else if(vec.length === 4){
+      return new SCNVector4(vec[0], vec[1], vec[2], vec[3])
+    }
+    return vec
+  }
+
+  /**
    * @access public
    * @param {number[]|SCNVector3|SCNVector4} v -
    * @param {number} index -
    * @returns {void}
    */
-  setVectorAt(v, index) {
+  _setVectorAt(v, index) {
     if(index < 0 || index >= this.vectorCount){
       throw new Error(`index out of range: ${index} (0 - ${this.vectorCount - 1})`)
     }
