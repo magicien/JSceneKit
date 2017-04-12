@@ -8,6 +8,7 @@ import SCNMatrix4 from '../SceneKit/SCNMatrix4'
 import SCNQuaternion from '../SceneKit/SCNQuaternion'
 import SCNVector4 from '../SceneKit/SCNVector4'
 import SCNVector3 from '../SceneKit/SCNVector3'
+import SKColor from '../SpriteKit/SKColor'
 
 /**
  * An abstract subclass of CAAnimation for creating animations that manipulate the value of layer properties. 
@@ -109,8 +110,9 @@ export default class CAPropertyAnimation extends CAAnimation {
     if(this.valueFunction !== null){
       value = this.valueFunction._getValueAtTime(t)
     }
-    console.log(`CAPropertyAnimation: obj: ${obj.name}, time: ${time}, keyPath: ${this.keyPath}, value: ${value}`)
+    //console.log(`CAPropertyAnimation: obj: ${obj.name}, time: ${time}, keyPath: ${this.keyPath}, value: ${value}`)
     this._applyValue(obj, value)
+    this._handleEvents(obj, t)
   }
 
   _applyValue(obj, value) {
@@ -188,10 +190,12 @@ export default class CAPropertyAnimation extends CAAnimation {
   }
 
   _lerp(from, to, t) {
-    //if(from instanceof SCNQuaternion){
-    //  return from.slerp(to, t)
-    //}else 
+    if(t === null){
+      // the animation is over.
+      return to
+    }
     if(from instanceof SCNVector4){
+      // TODO: slerp for Quaternion
       return from.lerp(to, t)
     }else if(from instanceof SCNVector3){
       return from.lerp(to, t)
@@ -201,6 +205,8 @@ export default class CAPropertyAnimation extends CAAnimation {
       // TODO: implement
     }else if(from instanceof CGRect){
       // TODO: implement
+    }else if(from instanceof SKColor){
+      return from._lerp(to, t)
     }
     return from + (to - from) * t
   }

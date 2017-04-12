@@ -155,15 +155,15 @@ module.exports =
 
 	var _CAAnimationDelegate2 = _interopRequireDefault(_CAAnimationDelegate);
 
-	var _CAAnimationGroup = __webpack_require__(47);
+	var _CAAnimationGroup = __webpack_require__(46);
 
 	var _CAAnimationGroup2 = _interopRequireDefault(_CAAnimationGroup);
 
-	var _CABasicAnimation = __webpack_require__(48);
+	var _CABasicAnimation = __webpack_require__(47);
 
 	var _CABasicAnimation2 = _interopRequireDefault(_CABasicAnimation);
 
-	var _CAKeyframeAnimation = __webpack_require__(51);
+	var _CAKeyframeAnimation = __webpack_require__(50);
 
 	var _CAKeyframeAnimation2 = _interopRequireDefault(_CAKeyframeAnimation);
 
@@ -175,7 +175,7 @@ module.exports =
 
 	var _CAMediaTimingFunction2 = _interopRequireDefault(_CAMediaTimingFunction);
 
-	var _CAPropertyAnimation = __webpack_require__(49);
+	var _CAPropertyAnimation = __webpack_require__(48);
 
 	var _CAPropertyAnimation2 = _interopRequireDefault(_CAPropertyAnimation);
 
@@ -183,11 +183,11 @@ module.exports =
 
 	var _CATransform3D2 = _interopRequireDefault(_CATransform3D);
 
-	var _SCNAction = __webpack_require__(52);
+	var _SCNAction = __webpack_require__(51);
 
 	var _SCNAction2 = _interopRequireDefault(_SCNAction);
 
-	var _SCNActionable = __webpack_require__(55);
+	var _SCNActionable = __webpack_require__(54);
 
 	var _SCNActionable2 = _interopRequireDefault(_SCNActionable);
 
@@ -199,7 +199,7 @@ module.exports =
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
-	var _SCNAnimatable = __webpack_require__(56);
+	var _SCNAnimatable = __webpack_require__(55);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
@@ -207,7 +207,7 @@ module.exports =
 
 	var _SCNAnimationEvent2 = _interopRequireDefault(_SCNAnimationEvent);
 
-	var _SCNAnimationEventBlock = __webpack_require__(46);
+	var _SCNAnimationEventBlock = __webpack_require__(132);
 
 	var _SCNAnimationEventBlock2 = _interopRequireDefault(_SCNAnimationEventBlock);
 
@@ -219,15 +219,15 @@ module.exports =
 
 	var _SCNAudioPlayer2 = _interopRequireDefault(_SCNAudioPlayer);
 
-	var _SCNAudioSource = __webpack_require__(53);
+	var _SCNAudioSource = __webpack_require__(52);
 
 	var _SCNAudioSource2 = _interopRequireDefault(_SCNAudioSource);
 
-	var _SCNBillboardAxis = __webpack_require__(132);
+	var _SCNBillboardAxis = __webpack_require__(133);
 
 	var _SCNBillboardAxis2 = _interopRequireDefault(_SCNBillboardAxis);
 
-	var _SCNBillboardConstraint = __webpack_require__(133);
+	var _SCNBillboardConstraint = __webpack_require__(134);
 
 	var _SCNBillboardConstraint2 = _interopRequireDefault(_SCNBillboardConstraint);
 
@@ -239,11 +239,11 @@ module.exports =
 
 	var _SCNBlendMode2 = _interopRequireDefault(_SCNBlendMode);
 
-	var _SCNBoundingVolume = __webpack_require__(57);
+	var _SCNBoundingVolume = __webpack_require__(56);
 
 	var _SCNBoundingVolume2 = _interopRequireDefault(_SCNBoundingVolume);
 
-	var _SCNBox = __webpack_require__(134);
+	var _SCNBox = __webpack_require__(135);
 
 	var _SCNBox2 = _interopRequireDefault(_SCNBox);
 
@@ -263,15 +263,15 @@ module.exports =
 
 	var _SCNCamera2 = _interopRequireDefault(_SCNCamera);
 
-	var _SCNCapsule = __webpack_require__(135);
+	var _SCNCapsule = __webpack_require__(136);
 
 	var _SCNCapsule2 = _interopRequireDefault(_SCNCapsule);
 
-	var _SCNChamferMode = __webpack_require__(136);
+	var _SCNChamferMode = __webpack_require__(137);
 
 	var _SCNChamferMode2 = _interopRequireDefault(_SCNChamferMode);
 
-	var _SCNCone = __webpack_require__(137);
+	var _SCNCone = __webpack_require__(138);
 
 	var _SCNCone2 = _interopRequireDefault(_SCNCone);
 
@@ -283,7 +283,7 @@ module.exports =
 
 	var _SCNCullMode2 = _interopRequireDefault(_SCNCullMode);
 
-	var _SCNCylinder = __webpack_require__(138);
+	var _SCNCylinder = __webpack_require__(139);
 
 	var _SCNCylinder2 = _interopRequireDefault(_SCNCylinder);
 
@@ -295,15 +295,15 @@ module.exports =
 
 	var _SCNFieldForceEvaluator2 = _interopRequireDefault(_SCNFieldForceEvaluator);
 
-	var _SCNFilterMode = __webpack_require__(68);
+	var _SCNFilterMode = __webpack_require__(65);
 
 	var _SCNFilterMode2 = _interopRequireDefault(_SCNFilterMode);
 
-	var _SCNFloor = __webpack_require__(139);
+	var _SCNFloor = __webpack_require__(140);
 
 	var _SCNFloor2 = _interopRequireDefault(_SCNFloor);
 
-	var _SCNGeometry = __webpack_require__(58);
+	var _SCNGeometry = __webpack_require__(57);
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
@@ -327,11 +327,11 @@ module.exports =
 
 	var _SCNHitTestResult2 = _interopRequireDefault(_SCNHitTestResult);
 
-	var _SCNIKConstraint = __webpack_require__(140);
+	var _SCNIKConstraint = __webpack_require__(141);
 
 	var _SCNIKConstraint2 = _interopRequireDefault(_SCNIKConstraint);
 
-	var _SCNLayer = __webpack_require__(141);
+	var _SCNLayer = __webpack_require__(142);
 
 	var _SCNLayer2 = _interopRequireDefault(_SCNLayer);
 
@@ -343,7 +343,7 @@ module.exports =
 
 	var _SCNLight2 = _interopRequireDefault(_SCNLight);
 
-	var _SCNLookAtConstraint = __webpack_require__(142);
+	var _SCNLookAtConstraint = __webpack_require__(143);
 
 	var _SCNLookAtConstraint2 = _interopRequireDefault(_SCNLookAtConstraint);
 
@@ -351,7 +351,7 @@ module.exports =
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
-	var _SCNMaterialProperty = __webpack_require__(65);
+	var _SCNMaterialProperty = __webpack_require__(64);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
@@ -359,31 +359,31 @@ module.exports =
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNMatrix4EqualToMatrix = __webpack_require__(143);
+	var _SCNMatrix4EqualToMatrix = __webpack_require__(144);
 
 	var _SCNMatrix4EqualToMatrix2 = _interopRequireDefault(_SCNMatrix4EqualToMatrix);
 
-	var _SCNMatrix4FromGLKMatrix = __webpack_require__(144);
+	var _SCNMatrix4FromGLKMatrix = __webpack_require__(145);
 
 	var _SCNMatrix4FromGLKMatrix2 = _interopRequireDefault(_SCNMatrix4FromGLKMatrix);
 
-	var _SCNMatrix4FromMat = __webpack_require__(145);
+	var _SCNMatrix4FromMat = __webpack_require__(146);
 
 	var _SCNMatrix4FromMat2 = _interopRequireDefault(_SCNMatrix4FromMat);
 
-	var _SCNMatrix4Invert = __webpack_require__(146);
+	var _SCNMatrix4Invert = __webpack_require__(147);
 
 	var _SCNMatrix4Invert2 = _interopRequireDefault(_SCNMatrix4Invert);
 
-	var _SCNMatrix4IsIdentity = __webpack_require__(147);
+	var _SCNMatrix4IsIdentity = __webpack_require__(148);
 
 	var _SCNMatrix4IsIdentity2 = _interopRequireDefault(_SCNMatrix4IsIdentity);
 
-	var _SCNMatrix4MakeRotation = __webpack_require__(148);
+	var _SCNMatrix4MakeRotation = __webpack_require__(149);
 
 	var _SCNMatrix4MakeRotation2 = _interopRequireDefault(_SCNMatrix4MakeRotation);
 
-	var _SCNMatrix4MakeScale = __webpack_require__(149);
+	var _SCNMatrix4MakeScale = __webpack_require__(150);
 
 	var _SCNMatrix4MakeScale2 = _interopRequireDefault(_SCNMatrix4MakeScale);
 
@@ -391,27 +391,27 @@ module.exports =
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
-	var _SCNMatrix4Mult = __webpack_require__(150);
+	var _SCNMatrix4Mult = __webpack_require__(151);
 
 	var _SCNMatrix4Mult2 = _interopRequireDefault(_SCNMatrix4Mult);
 
-	var _SCNMatrix4Rotate = __webpack_require__(151);
+	var _SCNMatrix4Rotate = __webpack_require__(152);
 
 	var _SCNMatrix4Rotate2 = _interopRequireDefault(_SCNMatrix4Rotate);
 
-	var _SCNMatrix4Scale = __webpack_require__(152);
+	var _SCNMatrix4Scale = __webpack_require__(153);
 
 	var _SCNMatrix4Scale2 = _interopRequireDefault(_SCNMatrix4Scale);
 
-	var _SCNMatrix4ToGLKMatrix = __webpack_require__(153);
+	var _SCNMatrix4ToGLKMatrix = __webpack_require__(154);
 
 	var _SCNMatrix4ToGLKMatrix2 = _interopRequireDefault(_SCNMatrix4ToGLKMatrix);
 
-	var _SCNMatrix4ToMat = __webpack_require__(154);
+	var _SCNMatrix4ToMat = __webpack_require__(155);
 
 	var _SCNMatrix4ToMat2 = _interopRequireDefault(_SCNMatrix4ToMat);
 
-	var _SCNMatrix4Translate = __webpack_require__(155);
+	var _SCNMatrix4Translate = __webpack_require__(156);
 
 	var _SCNMatrix4Translate2 = _interopRequireDefault(_SCNMatrix4Translate);
 
@@ -427,7 +427,7 @@ module.exports =
 
 	var _SCNMovabilityHint2 = _interopRequireDefault(_SCNMovabilityHint);
 
-	var _SCNNode = __webpack_require__(54);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
@@ -487,7 +487,7 @@ module.exports =
 
 	var _SCNParticleSystem2 = _interopRequireDefault(_SCNParticleSystem);
 
-	var _SCNPhysicsBallSocketJoint = __webpack_require__(156);
+	var _SCNPhysicsBallSocketJoint = __webpack_require__(157);
 
 	var _SCNPhysicsBallSocketJoint2 = _interopRequireDefault(_SCNPhysicsBallSocketJoint);
 
@@ -503,7 +503,7 @@ module.exports =
 
 	var _SCNPhysicsBodyType2 = _interopRequireDefault(_SCNPhysicsBodyType);
 
-	var _SCNPhysicsCollisionCategory = __webpack_require__(157);
+	var _SCNPhysicsCollisionCategory = __webpack_require__(158);
 
 	var _SCNPhysicsCollisionCategory2 = _interopRequireDefault(_SCNPhysicsCollisionCategory);
 
@@ -523,7 +523,7 @@ module.exports =
 
 	var _SCNPhysicsFieldScope2 = _interopRequireDefault(_SCNPhysicsFieldScope);
 
-	var _SCNPhysicsHingeJoint = __webpack_require__(158);
+	var _SCNPhysicsHingeJoint = __webpack_require__(159);
 
 	var _SCNPhysicsHingeJoint2 = _interopRequireDefault(_SCNPhysicsHingeJoint);
 
@@ -531,15 +531,15 @@ module.exports =
 
 	var _SCNPhysicsShape2 = _interopRequireDefault(_SCNPhysicsShape);
 
-	var _SCNPhysicsSliderJoint = __webpack_require__(159);
+	var _SCNPhysicsSliderJoint = __webpack_require__(160);
 
 	var _SCNPhysicsSliderJoint2 = _interopRequireDefault(_SCNPhysicsSliderJoint);
 
-	var _SCNPhysicsVehicle = __webpack_require__(160);
+	var _SCNPhysicsVehicle = __webpack_require__(161);
 
 	var _SCNPhysicsVehicle2 = _interopRequireDefault(_SCNPhysicsVehicle);
 
-	var _SCNPhysicsVehicleWheel = __webpack_require__(161);
+	var _SCNPhysicsVehicleWheel = __webpack_require__(162);
 
 	var _SCNPhysicsVehicleWheel2 = _interopRequireDefault(_SCNPhysicsVehicleWheel);
 
@@ -547,35 +547,35 @@ module.exports =
 
 	var _SCNPhysicsWorld2 = _interopRequireDefault(_SCNPhysicsWorld);
 
-	var _SCNPlane = __webpack_require__(162);
+	var _SCNPlane = __webpack_require__(163);
 
 	var _SCNPlane2 = _interopRequireDefault(_SCNPlane);
 
-	var _SCNProgram = __webpack_require__(60);
+	var _SCNProgram = __webpack_require__(59);
 
 	var _SCNProgram2 = _interopRequireDefault(_SCNProgram);
 
-	var _SCNProgramDelegate = __webpack_require__(61);
+	var _SCNProgramDelegate = __webpack_require__(60);
 
 	var _SCNProgramDelegate2 = _interopRequireDefault(_SCNProgramDelegate);
 
-	var _SCNPyramid = __webpack_require__(163);
+	var _SCNPyramid = __webpack_require__(164);
 
 	var _SCNPyramid2 = _interopRequireDefault(_SCNPyramid);
 
-	var _SCNQuaternion = __webpack_require__(50);
+	var _SCNQuaternion = __webpack_require__(49);
 
 	var _SCNQuaternion2 = _interopRequireDefault(_SCNQuaternion);
 
-	var _SCNReferenceLoadingPolicy = __webpack_require__(164);
+	var _SCNReferenceLoadingPolicy = __webpack_require__(165);
 
 	var _SCNReferenceLoadingPolicy2 = _interopRequireDefault(_SCNReferenceLoadingPolicy);
 
-	var _SCNReferenceNode = __webpack_require__(165);
+	var _SCNReferenceNode = __webpack_require__(166);
 
 	var _SCNReferenceNode2 = _interopRequireDefault(_SCNReferenceNode);
 
-	var _SCNRenderer = __webpack_require__(62);
+	var _SCNRenderer = __webpack_require__(61);
 
 	var _SCNRenderer2 = _interopRequireDefault(_SCNRenderer);
 
@@ -583,7 +583,7 @@ module.exports =
 
 	var _SCNRenderingAPI2 = _interopRequireDefault(_SCNRenderingAPI);
 
-	var _SCNScene = __webpack_require__(64);
+	var _SCNScene = __webpack_require__(63);
 
 	var _SCNScene2 = _interopRequireDefault(_SCNScene);
 
@@ -595,7 +595,7 @@ module.exports =
 
 	var _SCNSceneExportProgressHandler2 = _interopRequireDefault(_SCNSceneExportProgressHandler);
 
-	var _SCNSceneRenderer = __webpack_require__(63);
+	var _SCNSceneRenderer = __webpack_require__(62);
 
 	var _SCNSceneRenderer2 = _interopRequireDefault(_SCNSceneRenderer);
 
@@ -615,7 +615,7 @@ module.exports =
 
 	var _SCNSceneSourceStatusHandler2 = _interopRequireDefault(_SCNSceneSourceStatusHandler);
 
-	var _SCNShadable = __webpack_require__(59);
+	var _SCNShadable = __webpack_require__(58);
 
 	var _SCNShadable2 = _interopRequireDefault(_SCNShadable);
 
@@ -627,7 +627,7 @@ module.exports =
 
 	var _SCNShadowMode2 = _interopRequireDefault(_SCNShadowMode);
 
-	var _SCNShape = __webpack_require__(166);
+	var _SCNShape = __webpack_require__(167);
 
 	var _SCNShape2 = _interopRequireDefault(_SCNShape);
 
@@ -635,7 +635,7 @@ module.exports =
 
 	var _SCNSkinner2 = _interopRequireDefault(_SCNSkinner);
 
-	var _SCNSphere = __webpack_require__(167);
+	var _SCNSphere = __webpack_require__(168);
 
 	var _SCNSphere2 = _interopRequireDefault(_SCNSphere);
 
@@ -647,15 +647,15 @@ module.exports =
 
 	var _SCNTechniqueSupport2 = _interopRequireDefault(_SCNTechniqueSupport);
 
-	var _SCNText = __webpack_require__(168);
+	var _SCNText = __webpack_require__(169);
 
 	var _SCNText2 = _interopRequireDefault(_SCNText);
 
-	var _SCNTorus = __webpack_require__(169);
+	var _SCNTorus = __webpack_require__(170);
 
 	var _SCNTorus2 = _interopRequireDefault(_SCNTorus);
 
-	var _SCNTransaction = __webpack_require__(170);
+	var _SCNTransaction = __webpack_require__(67);
 
 	var _SCNTransaction2 = _interopRequireDefault(_SCNTransaction);
 
@@ -731,7 +731,7 @@ module.exports =
 
 	var _SCNView2 = _interopRequireDefault(_SCNView);
 
-	var _SCNWrapMode = __webpack_require__(67);
+	var _SCNWrapMode = __webpack_require__(68);
 
 	var _SCNWrapMode2 = _interopRequireDefault(_SCNWrapMode);
 
@@ -2177,7 +2177,13 @@ module.exports =
 
 	  }, {
 	    key: 'setValueForKey',
-	    value: function setValueForKey(value, key) {}
+	    value: function setValueForKey(value, key) {
+	      if (typeof this[key] === 'undefined') {
+	        this.setValueForUndefinedKey(value, key);
+	      } else {
+	        this[key] = value;
+	      }
+	    }
 
 	    /**
 	     * Sets the value for the property identified by a given key path to a given value.
@@ -8982,13 +8988,42 @@ module.exports =
 	     */
 
 	  }, {
-	    key: 'float32Array',
+	    key: '_copy',
 
+
+	    /**
+	     * @access private
+	     * @returns {SKColor} -
+	     */
+	    value: function _copy() {
+	      return new SKColor(this.red, this.green, this.blue, this.alpha);
+	    }
+
+	    /**
+	     * @access private
+	     * @param {SKColor} c -
+	     * @param {number} rate -
+	     * @returns {SKColor} -
+	     */
+
+	  }, {
+	    key: '_lerp',
+	    value: function _lerp(c, rate) {
+	      var r = new SKColor();
+	      r.red = this.red + rate * (c.red - this.red);
+	      r.green = this.green + rate * (c.green - this.green);
+	      r.blue = this.blue + rate * (c.blue - this.blue);
+	      r.alpha = this.alpha + rate * (c.alpha - this.alpha);
+	      return r;
+	    }
 
 	    /**
 	     * @access public
 	     * @returns {Float32Array} -
 	     */
+
+	  }, {
+	    key: 'float32Array',
 	    value: function float32Array() {
 	      return new Float32Array([this.red, this.green, this.blue, this.alpha]);
 	    }
@@ -16824,6 +16859,9 @@ module.exports =
 	      }
 	      var prevTime = this._prevTime;
 	      if (prevTime === null) {
+	        if (this.delegate && this.delegate.animationDidStart) {
+	          this.delegate.animationDidStart(this);
+	        }
 	        prevTime = time - 0.0000001;
 	      }
 	      this.animationEvents.forEach(function (event) {
@@ -16866,6 +16904,7 @@ module.exports =
 	        if (this.fillMode === Constants.kCAFillModeBackwards || this.fillMode === Constants.kCAFillModeBoth) {
 	          dt = 0;
 	        } else {
+	          // the animation hasn't started yet.
 	          return null;
 	        }
 	      }
@@ -16891,8 +16930,13 @@ module.exports =
 	      }
 
 	      if (dt > duration) {
-	        // animation is over
-	        this._isFinished = true;
+	        // the animation is over.
+	        if (!this._isFinished) {
+	          this._isFinished = true;
+	          if (this.delegate && this.delegate.animationDidStop) {
+	            this.delegate.animationDidStop(this, true);
+	          }
+	        }
 	        if (this.fillMode === Constants.kCAFillModeForwards || this.fillMode === Constants.kCAFillModeBoth) {
 	          dt = duration;
 	        } else {
@@ -17300,10 +17344,6 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimationEventBlock = __webpack_require__(46);
-
-	var _SCNAnimationEventBlock2 = _interopRequireDefault(_SCNAnimationEventBlock);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -17311,6 +17351,8 @@ module.exports =
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	//import SCNAnimationEventBlock from './SCNAnimationEventBlock'
 
 	/**
 	 * A container for a closure to be executed at a specific time during playback of an animation.
@@ -17321,38 +17363,32 @@ module.exports =
 	var SCNAnimationEvent = function (_NSObject) {
 	  _inherits(SCNAnimationEvent, _NSObject);
 
-	  function SCNAnimationEvent() {
+	  // Creating an Animation Event
+
+	  /**
+	   * Creates an animation event.
+	   * @access public
+	   * @param {number} time - A number between 0.0 and 1.0 specifying the relative time for triggering the event.
+	   * @param {SCNAnimationEventBlock} eventBlock - A block to call at the specified time.
+	   * @constructor
+	   * @desc The time parameter is relative to the duration of the animation the event is attached to. For example, an event with a time of 0.5 triggers when the animation is halfway complete, and an event with a time of 1.0 triggers when the animation ends.
+	   * @see https://developer.apple.com/reference/scenekit/scnanimationevent/1524004-init
+	   */
+	  function SCNAnimationEvent(time, eventBlock) {
 	    _classCallCheck(this, SCNAnimationEvent);
 
-	    return _possibleConstructorReturn(this, (SCNAnimationEvent.__proto__ || Object.getPrototypeOf(SCNAnimationEvent)).apply(this, arguments));
+	    var _this = _possibleConstructorReturn(this, (SCNAnimationEvent.__proto__ || Object.getPrototypeOf(SCNAnimationEvent)).call(this));
+
+	    _this._time = time;
+	    _this._eventBlock = eventBlock;
+	    return _this;
 	  }
 
-	  _createClass(SCNAnimationEvent, [{
-	    key: 'init',
-
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @returns {void}
-	     */
-	    value: function init() {}
-
-	    // Creating an Animation Event
-
-	    /**
-	     * Creates an animation event.
-	     * @access public
-	     * @param {number} time - A number between 0.0 and 1.0 specifying the relative time for triggering the event.
-	     * @param {SCNAnimationEventBlock} eventBlock - A block to call at the specified time.
-	     * @returns {void}
-	     * @desc The time parameter is relative to the duration of the animation the event is attached to. For example, an event with a time of 0.5 triggers when the animation is halfway complete, and an event with a time of 1.0 triggers when the animation ends.
-	     * @see https://developer.apple.com/reference/scenekit/scnanimationevent/1524004-init
-	     */
-
-	  }, {
-	    key: 'initKeyTimeBlock',
-	    value: function initKeyTimeBlock(time, eventBlock) {}
+	  _createClass(SCNAnimationEvent, null, [{
+	    key: 'eventWithTimeEventBlock',
+	    value: function eventWithTimeEventBlock(time, eventBlock) {
+	      return new SCNAnimationEvent(time, eventBlock);
+	    }
 	  }]);
 
 	  return SCNAnimationEvent;
@@ -17362,35 +17398,6 @@ module.exports =
 
 /***/ },
 /* 46 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _CAAnimation = __webpack_require__(40);
-
-	var _CAAnimation2 = _interopRequireDefault(_CAAnimation);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	/**
-	 * Signature for the block called when an animation event triggers.
-	 * @type {function(animation: CAAnimation, animatedObject: Object, playingBackward: boolean): void}
-	 * @param {CAAnimation} animation - The animation triggering the animation event.
-	 * @param {Object} animatedObject - The Scene Kit object affected by the animation.
-	 * @param {boolean} playingBackward - true if the animation is playing in reverse; otherwise, false.
-	 * @returns {void}
-	 * @see https://developer.apple.com/reference/scenekit/scnanimationeventblock
-	 */
-	var SCNAnimationEventBlock = function SCNAnimationEventBlock(animation, animatedObject, playingBackward) {};
-
-	exports.default = SCNAnimationEventBlock;
-
-/***/ },
-/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17473,6 +17480,7 @@ module.exports =
 	      this.animations.forEach(function (animation) {
 	        animation._applyAnimation(obj, t, false);
 	      });
+	      this._handleEvents(obj, t);
 	    }
 
 	    /**
@@ -17507,7 +17515,7 @@ module.exports =
 	exports.default = CAAnimationGroup;
 
 /***/ },
-/* 48 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17520,7 +17528,7 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _CAPropertyAnimation2 = __webpack_require__(49);
+	var _CAPropertyAnimation2 = __webpack_require__(48);
 
 	var _CAPropertyAnimation3 = _interopRequireDefault(_CAPropertyAnimation2);
 
@@ -17662,6 +17670,7 @@ module.exports =
 
 	      //console.log(`CABasicAnimation._applyAnimation: keyPath: ${this.keyPath}, time: ${time}, baseTime: ${baseTime}, t: ${t}, value: ${value}`)
 	      this._applyValue(obj, value);
+	      this._handleEvents(obj, t);
 	    }
 	  }]);
 
@@ -17671,7 +17680,7 @@ module.exports =
 	exports.default = CABasicAnimation;
 
 /***/ },
-/* 49 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17704,7 +17713,7 @@ module.exports =
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNQuaternion = __webpack_require__(50);
+	var _SCNQuaternion = __webpack_require__(49);
 
 	var _SCNQuaternion2 = _interopRequireDefault(_SCNQuaternion);
 
@@ -17715,6 +17724,10 @@ module.exports =
 	var _SCNVector3 = __webpack_require__(36);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
+
+	var _SKColor = __webpack_require__(11);
+
+	var _SKColor2 = _interopRequireDefault(_SKColor);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -17837,8 +17850,9 @@ module.exports =
 	      if (this.valueFunction !== null) {
 	        value = this.valueFunction._getValueAtTime(t);
 	      }
-	      console.log('CAPropertyAnimation: obj: ' + obj.name + ', time: ' + time + ', keyPath: ' + this.keyPath + ', value: ' + value);
+	      //console.log(`CAPropertyAnimation: obj: ${obj.name}, time: ${time}, keyPath: ${this.keyPath}, value: ${value}`)
 	      this._applyValue(obj, value);
+	      this._handleEvents(obj, t);
 	    }
 	  }, {
 	    key: '_applyValue',
@@ -17918,10 +17932,12 @@ module.exports =
 	  }, {
 	    key: '_lerp',
 	    value: function _lerp(from, to, t) {
-	      //if(from instanceof SCNQuaternion){
-	      //  return from.slerp(to, t)
-	      //}else 
+	      if (t === null) {
+	        // the animation is over.
+	        return to;
+	      }
 	      if (from instanceof _SCNVector2.default) {
+	        // TODO: slerp for Quaternion
 	        return from.lerp(to, t);
 	      } else if (from instanceof _SCNVector4.default) {
 	        return from.lerp(to, t);
@@ -17931,6 +17947,8 @@ module.exports =
 	        // TODO: implement
 	      } else if (from instanceof _CGRect2.default) {
 	        // TODO: implement
+	      } else if (from instanceof _SKColor2.default) {
+	        return from._lerp(to, t);
 	      }
 	      return from + (to - from) * t;
 	    }
@@ -17949,7 +17967,7 @@ module.exports =
 	exports.default = CAPropertyAnimation;
 
 /***/ },
-/* 50 */
+/* 49 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17975,7 +17993,7 @@ module.exports =
 	exports.default = SCNQuaternion;
 
 /***/ },
-/* 51 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17988,7 +18006,7 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _CAPropertyAnimation2 = __webpack_require__(49);
+	var _CAPropertyAnimation2 = __webpack_require__(48);
 
 	var _CAPropertyAnimation3 = _interopRequireDefault(_CAPropertyAnimation2);
 
@@ -18241,7 +18259,7 @@ module.exports =
 	exports.default = CAKeyframeAnimation;
 
 /***/ },
-/* 52 */
+/* 51 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18264,11 +18282,11 @@ module.exports =
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
-	var _SCNAudioSource = __webpack_require__(53);
+	var _SCNAudioSource = __webpack_require__(52);
 
 	var _SCNAudioSource2 = _interopRequireDefault(_SCNAudioSource);
 
-	var _SCNNode = __webpack_require__(54);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
@@ -18297,70 +18315,66 @@ module.exports =
 	var SCNAction = function (_NSObject) {
 	  _inherits(SCNAction, _NSObject);
 
+	  /**
+	   * constructor
+	   * @access public
+	   * @constructor
+	   */
 	  function SCNAction() {
 	    _classCallCheck(this, SCNAction);
 
-	    return _possibleConstructorReturn(this, (SCNAction.__proto__ || Object.getPrototypeOf(SCNAction)).apply(this, arguments));
+	    // Adjusting an Action’s Animation Properties
+
+	    /**
+	     * The duration required to complete an action.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnaction/1524162-duration
+	     */
+	    var _this = _possibleConstructorReturn(this, (SCNAction.__proto__ || Object.getPrototypeOf(SCNAction)).call(this));
+
+	    _this.duration = 0;
+
+	    /**
+	     * A speed factor that modifies how fast an action runs.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnaction/1522811-speed
+	     */
+	    _this.speed = 0;
+
+	    /**
+	     * The timing mode used to execute an action.
+	     * @type {SCNActionTimingMode}
+	     * @see https://developer.apple.com/reference/scenekit/scnaction/1524055-timingmode
+	     */
+	    _this.timingMode = null;
+
+	    /**
+	     * A block SceneKit calls to determine the action’s animation timing.
+	     * @type {?SCNActionTimingFunction}
+	     * @see https://developer.apple.com/reference/scenekit/scnaction/1524130-timingfunction
+	     */
+	    _this.timingFunction = null;
+
+	    return _this;
 	  }
 
+	  // Creating Actions That Move a Node
+
+	  /**
+	   * Creates an action that moves a node relative to its current position.
+	   * @access public
+	   * @param {number} deltaX - The distance to move the node in the X direction of its parent node’s local coordinate space.
+	   * @param {number} deltaY - The distance to move the node in the Y direction of its parent node’s local coordinate space.
+	   * @param {number} deltaZ - The distance to move the node in the Z direction of its parent node’s local coordinate space.
+	   * @param {number} duration - The duration, in seconds, of the animation.
+	   * @returns {SCNAction} - 
+	   * @desc When the action executes, the node’s position property animates from its current position to its new position.This action is reversible; the reverse is created as if the following code had been executed:[SCNAction moveByX: -deltaX y: -deltaY z: -deltaZ duration: duration];
+	  [SCNAction moveByX: -deltaX y: -deltaY z: -deltaZ duration: duration];
+	    * @see https://developer.apple.com/reference/scenekit/scnaction/1523238-moveby
+	   */
+
+
 	  _createClass(SCNAction, [{
-	    key: 'init',
-
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @returns {void}
-	     */
-	    value: function init() {
-
-	      // Adjusting an Action’s Animation Properties
-
-	      /**
-	       * The duration required to complete an action.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnaction/1524162-duration
-	       */
-	      this.duration = 0;
-
-	      /**
-	       * A speed factor that modifies how fast an action runs.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnaction/1522811-speed
-	       */
-	      this.speed = 0;
-
-	      /**
-	       * The timing mode used to execute an action.
-	       * @type {SCNActionTimingMode}
-	       * @see https://developer.apple.com/reference/scenekit/scnaction/1524055-timingmode
-	       */
-	      this.timingMode = null;
-
-	      /**
-	       * A block SceneKit calls to determine the action’s animation timing.
-	       * @type {?SCNActionTimingFunction}
-	       * @see https://developer.apple.com/reference/scenekit/scnaction/1524130-timingfunction
-	       */
-	      this.timingFunction = null;
-	    }
-
-	    // Creating Actions That Move a Node
-
-	    /**
-	     * Creates an action that moves a node relative to its current position.
-	     * @access public
-	     * @param {number} deltaX - The distance to move the node in the X direction of its parent node’s local coordinate space.
-	     * @param {number} deltaY - The distance to move the node in the Y direction of its parent node’s local coordinate space.
-	     * @param {number} deltaZ - The distance to move the node in the Z direction of its parent node’s local coordinate space.
-	     * @param {number} duration - The duration, in seconds, of the animation.
-	     * @returns {SCNAction} - 
-	     * @desc When the action executes, the node’s position property animates from its current position to its new position.This action is reversible; the reverse is created as if the following code had been executed:[SCNAction moveByX: -deltaX y: -deltaY z: -deltaZ duration: duration];
-	    [SCNAction moveByX: -deltaX y: -deltaY z: -deltaZ duration: duration];
-	      * @see https://developer.apple.com/reference/scenekit/scnaction/1523238-moveby
-	     */
-
-	  }, {
 	    key: 'reversed',
 
 
@@ -18836,7 +18850,7 @@ module.exports =
 	exports.default = SCNAction;
 
 /***/ },
-/* 53 */
+/* 52 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18983,7 +18997,7 @@ module.exports =
 	exports.default = SCNAudioSource;
 
 /***/ },
-/* 54 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18996,7 +19010,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _CAAnimationGroup = __webpack_require__(47);
+	var _CAAnimationGroup = __webpack_require__(46);
 
 	var _CAAnimationGroup2 = _interopRequireDefault(_CAAnimationGroup);
 
@@ -19004,19 +19018,19 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNActionable = __webpack_require__(55);
+	var _SCNActionable = __webpack_require__(54);
 
 	var _SCNActionable2 = _interopRequireDefault(_SCNActionable);
 
-	var _SCNAnimatable = __webpack_require__(56);
+	var _SCNAnimatable = __webpack_require__(55);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNBoundingVolume = __webpack_require__(57);
+	var _SCNBoundingVolume = __webpack_require__(56);
 
 	var _SCNBoundingVolume2 = _interopRequireDefault(_SCNBoundingVolume);
 
-	var _SCNGeometry = __webpack_require__(58);
+	var _SCNGeometry = __webpack_require__(57);
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
@@ -19052,7 +19066,7 @@ module.exports =
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
-	var _SCNQuaternion = __webpack_require__(50);
+	var _SCNQuaternion = __webpack_require__(49);
 
 	var _SCNQuaternion2 = _interopRequireDefault(_SCNQuaternion);
 
@@ -20116,7 +20130,6 @@ module.exports =
 	  }, {
 	    key: 'addAnimationForKey',
 	    value: function addAnimationForKey(animation, key) {
-	      //console.log('addAnimationForKey: ' + key)
 	      if (typeof key === 'undefined' || key === null) {
 	        key = Symbol();
 	      }
@@ -20904,7 +20917,7 @@ module.exports =
 	exports.default = SCNNode;
 
 /***/ },
-/* 55 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20915,7 +20928,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction = __webpack_require__(52);
+	var _SCNAction = __webpack_require__(51);
 
 	var _SCNAction2 = _interopRequireDefault(_SCNAction);
 
@@ -21087,7 +21100,7 @@ module.exports =
 	exports.default = SCNActionable;
 
 /***/ },
-/* 56 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21276,7 +21289,7 @@ module.exports =
 	exports.default = SCNAnimatable;
 
 /***/ },
-/* 57 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21349,7 +21362,7 @@ module.exports =
 	exports.default = SCNBoundingVolume;
 
 /***/ },
-/* 58 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -21364,15 +21377,15 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimatable = __webpack_require__(56);
+	var _SCNAnimatable = __webpack_require__(55);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNBoundingVolume = __webpack_require__(57);
+	var _SCNBoundingVolume = __webpack_require__(56);
 
 	var _SCNBoundingVolume2 = _interopRequireDefault(_SCNBoundingVolume);
 
-	var _SCNShadable = __webpack_require__(59);
+	var _SCNShadable = __webpack_require__(58);
 
 	var _SCNShadable2 = _interopRequireDefault(_SCNShadable);
 
@@ -21549,9 +21562,11 @@ module.exports =
 	    // SCNAnimatable //
 	    ///////////////////
 
-	    // Managing Animations
-
-	    //this._animationKeys = null
+	    /**
+	     * @access private
+	     * @type {Map}
+	     */
+	    _this._animations = new Map();
 
 	    ///////////////////////
 	    // SCNBoundingVolume //
@@ -21577,6 +21592,9 @@ module.exports =
 
 	    _this._vertexBuffer = null;
 	    _this._indexBuffer = null;
+
+	    _this._isPresentationInstance = false;
+	    _this._presentation = null;
 	    return _this;
 	  }
 
@@ -21772,7 +21790,17 @@ module.exports =
 
 	  }, {
 	    key: 'addAnimationForKey',
-	    value: function addAnimationForKey(animation, key) {}
+	    value: function addAnimationForKey(animation, key) {
+	      if (typeof key === 'undefined' || key === null) {
+	        key = Symbol();
+	      }
+	      var anim = animation.copy();
+	      // FIXME: use current frame time
+	      anim._animationStartTime = Date.now() * 0.001;
+	      anim._prevTime = anim._animationStartTime - 0.0000001;
+
+	      this._animations.set(key, anim);
+	    }
 
 	    /**
 	     * Required. Returns the animation with the specified key.
@@ -21786,7 +21814,7 @@ module.exports =
 	  }, {
 	    key: 'animationForKey',
 	    value: function animationForKey(key) {
-	      return null;
+	      return this._animations.get(key);
 	    }
 
 	    /**
@@ -21798,7 +21826,9 @@ module.exports =
 
 	  }, {
 	    key: 'removeAllAnimations',
-	    value: function removeAllAnimations() {}
+	    value: function removeAllAnimations() {
+	      this._animations.clear();
+	    }
 
 	    /**
 	     * Required. Removes the animation attached to the object with the specified key.
@@ -21810,7 +21840,10 @@ module.exports =
 
 	  }, {
 	    key: 'removeAnimationForKey',
-	    value: function removeAnimationForKey(key) {}
+	    value: function removeAnimationForKey(key) {
+	      this._animations.delete(key);
+	      // TODO: reset values
+	    }
 
 	    /**
 	     * Required. Removes the animation attached to the object with the specified key, smoothly transitioning out of the animation’s effect.
@@ -22151,8 +22184,33 @@ module.exports =
 	  }, {
 	    key: 'animationKeys',
 	    get: function get() {
-	      // TODO: implement
-	      return [];
+	      var keys = [];
+	      var _iteratorNormalCompletion = true;
+	      var _didIteratorError = false;
+	      var _iteratorError = undefined;
+
+	      try {
+	        for (var _iterator = this._animations.keys()[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+	          var key = _step.value;
+
+	          keys.push(key);
+	        }
+	      } catch (err) {
+	        _didIteratorError = true;
+	        _iteratorError = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion && _iterator.return) {
+	            _iterator.return();
+	          }
+	        } finally {
+	          if (_didIteratorError) {
+	            throw _iteratorError;
+	          }
+	        }
+	      }
+
+	      return keys;
 	    }
 	  }]);
 
@@ -22162,7 +22220,7 @@ module.exports =
 	exports.default = SCNGeometry;
 
 /***/ },
-/* 59 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22173,7 +22231,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNProgram = __webpack_require__(60);
+	var _SCNProgram = __webpack_require__(59);
 
 	var _SCNProgram2 = _interopRequireDefault(_SCNProgram);
 
@@ -22279,7 +22337,7 @@ module.exports =
 	exports.default = SCNShadable;
 
 /***/ },
-/* 60 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22294,7 +22352,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNProgramDelegate = __webpack_require__(61);
+	var _SCNProgramDelegate = __webpack_require__(60);
 
 	var _SCNProgramDelegate2 = _interopRequireDefault(_SCNProgramDelegate);
 
@@ -22477,7 +22535,7 @@ module.exports =
 	exports.default = SCNProgram;
 
 /***/ },
-/* 61 */
+/* 60 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22488,11 +22546,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNProgram = __webpack_require__(60);
+	var _SCNProgram = __webpack_require__(59);
 
 	var _SCNProgram2 = _interopRequireDefault(_SCNProgram);
 
-	var _SCNRenderer = __webpack_require__(62);
+	var _SCNRenderer = __webpack_require__(61);
 
 	var _SCNRenderer2 = _interopRequireDefault(_SCNRenderer);
 
@@ -22601,7 +22659,7 @@ module.exports =
 	exports.default = SCNProgramDelegate;
 
 /***/ },
-/* 62 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -22616,7 +22674,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNSceneRenderer = __webpack_require__(63);
+	var _SCNSceneRenderer = __webpack_require__(62);
 
 	var _SCNSceneRenderer2 = _interopRequireDefault(_SCNSceneRenderer);
 
@@ -22624,7 +22682,7 @@ module.exports =
 
 	var _SCNTechniqueSupport2 = _interopRequireDefault(_SCNTechniqueSupport);
 
-	var _SCNScene = __webpack_require__(64);
+	var _SCNScene = __webpack_require__(63);
 
 	var _SCNScene2 = _interopRequireDefault(_SCNScene);
 
@@ -22644,11 +22702,11 @@ module.exports =
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNNode = __webpack_require__(54);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNProgram = __webpack_require__(60);
+	var _SCNProgram = __webpack_require__(59);
 
 	var _SCNProgram2 = _interopRequireDefault(_SCNProgram);
 
@@ -23213,13 +23271,13 @@ module.exports =
 
 	        //console.log(`materialDiffuse: ${material.diffuse.float32Array()}`)
 
-	        if (material.diffuse.contents instanceof Image) {
-	          material.diffuse.contents = this._createTexture(material.diffuse.contents);
+	        if (material.diffuse._contents instanceof Image) {
+	          material.diffuse._contents = this._createTexture(material.diffuse._contents);
 	        }
-	        if (material.diffuse.contents instanceof WebGLTexture) {
+	        if (material.diffuse._contents instanceof WebGLTexture) {
 	          gl.uniform1i(gl.getUniformLocation(program, 'u_useDiffuseTexture'), 1);
 	          gl.activeTexture(gl.TEXTURE2);
-	          gl.bindTexture(gl.TEXTURE_2D, material.diffuse.contents);
+	          gl.bindTexture(gl.TEXTURE_2D, material.diffuse._contents);
 	          // FIXME: use material params
 	          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
 	          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
@@ -24099,7 +24157,7 @@ module.exports =
 	exports.default = SCNRenderer;
 
 /***/ },
-/* 63 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24110,11 +24168,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNScene = __webpack_require__(64);
+	var _SCNScene = __webpack_require__(63);
 
 	var _SCNScene2 = _interopRequireDefault(_SCNScene);
 
-	var _SCNNode = __webpack_require__(54);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
@@ -24568,7 +24626,7 @@ module.exports =
 	exports.default = SCNSceneRenderer;
 
 /***/ },
-/* 64 */
+/* 63 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -24583,11 +24641,11 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNNode = __webpack_require__(54);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNMaterialProperty = __webpack_require__(65);
+	var _SCNMaterialProperty = __webpack_require__(64);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
@@ -25057,7 +25115,7 @@ module.exports =
 	exports.default = SCNScene;
 
 /***/ },
-/* 65 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25072,9 +25130,13 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimatable = __webpack_require__(56);
+	var _SCNAnimatable = __webpack_require__(55);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
+
+	var _SCNFilterMode = __webpack_require__(65);
+
+	var _SCNFilterMode2 = _interopRequireDefault(_SCNFilterMode);
 
 	var _SCNMatrix = __webpack_require__(38);
 
@@ -25084,13 +25146,13 @@ module.exports =
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
-	var _SCNWrapMode = __webpack_require__(67);
+	var _SCNTransaction = __webpack_require__(67);
+
+	var _SCNTransaction2 = _interopRequireDefault(_SCNTransaction);
+
+	var _SCNWrapMode = __webpack_require__(68);
 
 	var _SCNWrapMode2 = _interopRequireDefault(_SCNWrapMode);
-
-	var _SCNFilterMode = __webpack_require__(68);
-
-	var _SCNFilterMode2 = _interopRequireDefault(_SCNFilterMode);
 
 	var _SKColor = __webpack_require__(11);
 
@@ -25118,13 +25180,13 @@ module.exports =
 	    key: '_propTypes',
 	    get: function get() {
 	      return {
-	        color: ['NSColor', 'contents'],
+	        color: ['NSColor', '_contents'],
 	        image: ['NSMutableDictionary', function (obj, dict, key, coder) {
 	          var path = coder._directoryPath + dict.path;
 	          console.log('image.path: ' + path);
 	          var image = new Image();
 	          image.onload = function () {
-	            obj.contents = image;
+	            obj._contents = image;
 	          };
 	          // FIXME: needs directoryPath
 	          image.src = path;
@@ -25141,7 +25203,7 @@ module.exports =
 	        borderColor: 'plist',
 
 	        propertyType: ['integer', null],
-	        parent: ['SCNMaterial', null],
+	        parent: ['SCNMaterial', '_parent'],
 	        isCommonProfileProperty: ['boolean', null]
 	      };
 	    }
@@ -25162,20 +25224,17 @@ module.exports =
 	  function SCNMaterialProperty(contents) {
 	    _classCallCheck(this, SCNMaterialProperty);
 
-	    //if(typeof contents !== 'object'){
-	    //  throw 'SCNMaterialProperty(contents): contents must be Object type: ' + (typeof contents)
-	    //}
-
 	    // Working with Material Property Contents
 
 	    /**
 	     * The visual contents of the material property—a color, image, or source of animated content. Animatable.
+	     * @access private
 	     * @type {?Object}
 	     * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395372-contents
 	     */
 	    var _this = _possibleConstructorReturn(this, (SCNMaterialProperty.__proto__ || Object.getPrototypeOf(SCNMaterialProperty)).call(this));
 
-	    _this.contents = contents;
+	    _this._contents = contents;
 
 	    /**
 	     * A number between 0.0 and 1.0 that modulates the effect of the material property. Animatable.
@@ -25249,55 +25308,238 @@ module.exports =
 	     * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395376-bordercolor
 	     */
 	    _this.borderColor = null;
+
+	    /**
+	     * @access private
+	     * @type {SCNMaterial}
+	     */
+	    _this._parent = null;
+
+	    ///////////////////
+	    // SCNAnimatable //
+	    ///////////////////
+
+	    /**
+	     * @access private
+	     * @type {Map}
+	     */
+	    _this._animations = new Map();
+
 	    return _this;
 	  }
 
 	  /**
-	   * @access public
-	   * @param {NSCoder} coder -
-	   * @returns {SCNMaterialProperty}
-	   */
-	  /*
-	  static initWithCoder(coder) {
-	   const instance = new SCNMaterialProperty()
-	   instance._setValueWithCoder(coder)
-	   return instance
-	  }
-	  */
-
-	  /**
-	   * @access private
-	   * @param {NSCoder} coder -
-	   */
-	  /*
-	  _setValueWithCoder(coder) {
-	   this.minificationFilter = coder.decodeIntegerForKey('minificationFilter')
-	   const propertyType = coder.decodeIntegerForKey('propertyType')
-	   this.wrapT = coder.decodeIntegerForKey('wrapT')
-	   //const _parent = coder.decodeObjectForKey('parent')
-	   const isCommonProfileProperty = coder.decodeBoolForKey('isCommonProfileProperty')
-	   this.magnificationFilter = coder.decodeIntegerForKey('magnificationFilter')
-	   this.mipFilter = coder.decodeIntegerForKey('mipFilter')
-	   this.mappingChannel = coder.decodeIntegerForKey('mappingChannel')
-	   this.wrapS = coder.decodeIntegerForKey('wrapS')
-	   this.maxAnisotropy = coder.decodeFloatForKey('maxAnisotropy')
-	   this.intensity = coder.decodeFloatForKey('intensity')
-	  }
-	  */
-
-	  /**
-	   * @access public
-	   * @returns {Float32Array} -
+	   * The visual contents of the material property—a color, image, or source of animated content. Animatable.
+	   * @type {?Object}
+	   * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395372-contents
 	   */
 
 
 	  _createClass(SCNMaterialProperty, [{
+	    key: 'addAnimationForKey',
+
+
+	    ///////////////////
+	    // SCNAnimatable //
+	    ///////////////////
+
+	    // Managing Animations
+
+	    /**
+	     * Required. Adds an animation object for the specified key.
+	     * @access public
+	     * @param {CAAnimation} animation - The animation object to be added.
+	     * @param {?string} key - An string identifying the animation for later retrieval. You may pass nil if you don’t need to reference the animation later.
+	     * @returns {void}
+	     * @desc Newly added animations begin executing after the current run loop cycle ends.SceneKit does not define any requirements for the contents of the key parameter—it need only be unique among the keys for other animations you add. If you add an animation with an existing key, this method overwrites the existing animation.
+	     * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523386-addanimation
+	     */
+	    value: function addAnimationForKey(animation, key) {
+	      console.log('SCNMaterialProperty addAnimationForKey');
+	      if (typeof key === 'undefined' || key === null) {
+	        key = Symbol();
+	      }
+	      var anim = animation.copy();
+	      // FIXME: use current frame time
+	      anim._animationStartTime = Date.now() * 0.001;
+	      anim._prevTime = anim._animationStartTime - 0.0000001;
+
+	      this._animations.set(key, anim);
+	    }
+
+	    /**
+	     * Required. Returns the animation with the specified key.
+	     * @access public
+	     * @param {string} key - A string identifying a previously added animation.
+	     * @returns {?CAAnimation} - 
+	     * @desc Attempting to modify any properties of the returned object results in undefined behavior.
+	     * @see https://developer.apple.com/reference/scenekit/scnanimatable/1524020-animation
+	     */
+
+	  }, {
+	    key: 'animationForKey',
+	    value: function animationForKey(key) {
+	      return this._animations.get(key);
+	    }
+
+	    /**
+	     * Required. Removes all the animations currently attached to the object.
+	     * @access public
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/scenekit/scnanimatable/1522762-removeallanimations
+	     */
+
+	  }, {
+	    key: 'removeAllAnimations',
+	    value: function removeAllAnimations() {
+	      this._animations.clear();
+	    }
+
+	    /**
+	     * Required. Removes the animation attached to the object with the specified key.
+	     * @access public
+	     * @param {string} key - A string identifying an attached animation to remove.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/scenekit/scnanimatable/1522880-removeanimation
+	     */
+
+	  }, {
+	    key: 'removeAnimationForKey',
+	    value: function removeAnimationForKey(key) {
+	      this._animations.delete(key);
+	      // TODO: reset values
+	    }
+
+	    /**
+	     * Required. Removes the animation attached to the object with the specified key, smoothly transitioning out of the animation’s effect.
+	     * @access public
+	     * @param {string} key - A string identifying an attached animation to remove.
+	     * @param {number} duration - The duration for transitioning out of the animation’s effect before it is removed.
+	     * @returns {void}
+	     * @desc Use this method to create smooth transitions between the effects of multiple animations. For example, the geometry loaded from a scene file for a game character may have associated animations for player actions such as walking and jumping. When the player lands from a jump, you remove the jump animation so the character continues walking. If you use the removeAnimation(forKey:) method to remove the jump animation, SceneKit abruptly switches from the current frame of the jump animation to the current frame of the walk animation. If you use the removeAnimation(forKey:fadeOutDuration:) method instead, SceneKit plays both animations at once during that duration and interpolates vertex positions from one animation to the other, creating a smooth transition.
+	     * @see https://developer.apple.com/reference/scenekit/scnanimatable/1522841-removeanimation
+	     */
+
+	  }, {
+	    key: 'removeAnimationForKeyFadeOutDuration',
+	    value: function removeAnimationForKeyFadeOutDuration(key, duration) {}
+
+	    /**
+	     * Required. An array containing the keys of all animations currently attached to the object.
+	     * @type {string[]}
+	     * @desc This array contains all keys for which animations are attached to the object, or is empty if there are no attached animations. The ordering of animation keys in the array is arbitrary.
+	     * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523610-animationkeys
+	     */
+
+	  }, {
+	    key: 'pauseAnimationForKey',
+
+
+	    // Pausing and Resuming Animations
+
+	    /**
+	     * Required. Pauses the animation attached to the object with the specified key.
+	     * @access public
+	     * @param {string} key - A string identifying an attached animation.
+	     * @returns {void}
+	     * @desc This method has no effect if no animation is attached to the object with the specified key.
+	     * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523592-pauseanimation
+	     */
+	    value: function pauseAnimationForKey(key) {}
+
+	    /**
+	     * Required. Resumes a previously paused animation attached to the object with the specified key.
+	     * @access public
+	     * @param {string} key - A string identifying an attached animation.
+	     * @returns {void}
+	     * @desc This method has no effect if no animation is attached to the object with the specified key or if the specified animation is not currently paused.
+	     * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523332-resumeanimation
+	     */
+
+	  }, {
+	    key: 'resumeAnimationForKey',
+	    value: function resumeAnimationForKey(key) {}
+
+	    /**
+	     * Required. Returns a Boolean value indicating whether the animation attached to the object with the specified key is paused.
+	     * @access public
+	     * @param {string} key - A string identifying an attached animation.
+	     * @returns {boolean} - 
+	     * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523703-isanimationpaused
+	     */
+
+	  }, {
+	    key: 'isAnimationPausedForKey',
+	    value: function isAnimationPausedForKey(key) {
+	      return false;
+	    }
+
+	    // Instance Methods
+
+	    /**
+	     * Required. 
+	     * @access public
+	     * @param {number} speed - 
+	     * @param {string} key - 
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/scenekit/scnanimatable/1778343-setanimationspeed
+	     */
+
+	  }, {
+	    key: 'setAnimationSpeedForKey',
+	    value: function setAnimationSpeedForKey(speed, key) {}
+
+	    /**
+	     * @access public
+	     * @returns {Float32Array} -
+	     */
+
+	  }, {
 	    key: 'float32Array',
 	    value: function float32Array() {
-	      if (this.contents instanceof _SKColor2.default) {
-	        return this.contents.float32Array();
+	      if (this._contents instanceof _SKColor2.default) {
+	        return this._contents.float32Array();
 	      }
 	      return new Float32Array([1, 1, 1, 1]);
+	    }
+	  }, {
+	    key: 'contents',
+	    get: function get() {
+	      return this._contents;
+	    },
+	    set: function set(newValue) {
+	      _SCNTransaction2.default._addChange(this, '_contents', newValue);
+	    }
+	  }, {
+	    key: 'animationKeys',
+	    get: function get() {
+	      var keys = [];
+	      var _iteratorNormalCompletion = true;
+	      var _didIteratorError = false;
+	      var _iteratorError = undefined;
+
+	      try {
+	        for (var _iterator = this._animations.keys()[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+	          var key = _step.value;
+
+	          keys.push(key);
+	        }
+	      } catch (err) {
+	        _didIteratorError = true;
+	        _iteratorError = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion && _iterator.return) {
+	            _iterator.return();
+	          }
+	        } finally {
+	          if (_didIteratorError) {
+	            throw _iteratorError;
+	          }
+	        }
+	      }
+
+	      return keys;
 	    }
 	  }]);
 
@@ -25305,6 +25547,32 @@ module.exports =
 	}(_NSObject3.default);
 
 	exports.default = SCNMaterialProperty;
+
+/***/ },
+/* 65 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * Texture filtering modes, used by the the minificationFilter, magnificationFilter, and mipFilter properties.
+	 * @typedef {Object} SCNFilterMode
+	 * @property {number} none - No texture filtering is applied.
+	 * @property {number} nearest - Texture filtering returns the color from only one texel, whose location is nearest to the coordinates being sampled.
+	 * @property {number} linear - Texture filtering sample texels from the neighborhood of the coordinates being sampled and linearly interpolates their colors.
+	 * @see https://developer.apple.com/reference/scenekit/scnfiltermode
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var SCNFilterMode = {
+	  none: 0,
+	  nearest: 1,
+	  linear: 2
+	};
+
+	exports.default = SCNFilterMode;
 
 /***/ },
 /* 66 */
@@ -25339,6 +25607,429 @@ module.exports =
 
 /***/ },
 /* 67 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
+	var _CAMediaTimingFunction = __webpack_require__(43);
+
+	var _CAMediaTimingFunction2 = _interopRequireDefault(_CAMediaTimingFunction);
+
+	var _CABasicAnimation = __webpack_require__(47);
+
+	var _CABasicAnimation2 = _interopRequireDefault(_CABasicAnimation);
+
+	var _SCNAnimationEvent = __webpack_require__(45);
+
+	var _SCNAnimationEvent2 = _interopRequireDefault(_SCNAnimationEvent);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	var _transactions = [];
+	var _immediateMode = true;
+
+	var _Transaction = function _Transaction() {
+	  _classCallCheck(this, _Transaction);
+
+	  /**
+	   * @type {Object}
+	   */
+	  this._animations = [];
+
+	  /**
+	   * @type {number}
+	   */
+	  this._animationDuration = 0.0;
+
+	  /**
+	   * @type {?CAMediaTimingFunction}
+	   */
+	  this._animationTimingFunction = null;
+
+	  /**
+	   * @type {boolean}
+	   */
+	  this._disableActions = false;
+
+	  /**
+	   * @type {?function}
+	   */
+	  this._completionBlock = null;
+
+	  /**
+	   * @type {Map<string, Object>}
+	   */
+	  this._values = new Map();
+	};
+
+	var _automaticTransaction = new _Transaction();
+
+	/**
+	 * The SCNTransaction class defines SceneKit’s mechanism for batching scene graph modifications into atomic updates. You use SCNTransaction class methods to control the animation that results from changing animatable properties in the scene graph and to combine sets of changes into nested transactions.
+	 * @access public
+	 * @extends {NSObject}
+	 * @see https://developer.apple.com/reference/scenekit/scntransaction
+	 */
+
+	var SCNTransaction = function (_NSObject) {
+	  _inherits(SCNTransaction, _NSObject);
+
+	  /**
+	   * constructor
+	   * @access public
+	   * @constructor
+	   */
+	  function SCNTransaction() {
+	    _classCallCheck(this, SCNTransaction);
+
+	    var _this = _possibleConstructorReturn(this, (SCNTransaction.__proto__ || Object.getPrototypeOf(SCNTransaction)).call(this));
+
+	    throw new Error('do not create an instance of SCNTransaction');
+	    return _this;
+	  }
+
+	  // Creating and Committing Transactions
+
+	  /**
+	   * Begins a new transaction for the current thread.
+	   * @access public
+	   * @returns {void}
+	   * @desc The new transaction is nested within the thread’s current transaction, if there is one.The first time you modify the scene graph during a pass through the run loop, SceneKit automatically creates a transaction and makes it the current transaction. (SceneKit commits that transaction when the next iteration of the run loops begins.) If you call this method to create a custom transaction before modifying the scene graph, your custom transaction becomes the current transaction.
+	   * @see https://developer.apple.com/reference/scenekit/scntransaction/1522820-begin
+	   */
+
+
+	  _createClass(SCNTransaction, null, [{
+	    key: 'begin',
+	    value: function begin() {
+	      var newTransaction = new _Transaction();
+	      newTransaction._disableActions = this._currentTransaction._disabledActions;
+	      _transactions.push(newTransaction);
+	    }
+
+	    /**
+	     * Commits all changes made during the current transaction.
+	     * @access public
+	     * @returns {void}
+	     * @desc If there is no current transaction, this method has no effect.
+	     * @see https://developer.apple.com/reference/scenekit/scntransaction/1523436-commit
+	     */
+
+	  }, {
+	    key: 'commit',
+	    value: function commit() {
+	      var transaction = _transactions.pop();
+	      if (transaction) {
+	        this._apply(transaction);
+	      }
+	    }
+
+	    /**
+	     * Applies all changes from the current automatic transaction.
+	     * @access public
+	     * @returns {void}
+	     * @desc SceneKit automatically calls this method at the end of each pass through the run loop, regardless of the run loop mode. If your app does not have a run loop, you must call this method explicitly.If the current transaction has any nested transactions that are still animating, SceneKit waits to commit the current transaction’s changes until those transactions complete.NoteIf possible, avoid calling flush() explicitly. By allowing flush() to execute during the run loop, your app achieves better performance, atomic screen updates are preserved, and transactions and animations that work from transaction to transaction continue to function.
+	     * @see https://developer.apple.com/reference/scenekit/scntransaction/1522860-flush
+	     */
+
+	  }, {
+	    key: 'flush',
+	    value: function flush() {
+	      // TODO: wait nested transactions
+	      this._apply(_automaticTransaction);
+	    }
+	  }, {
+	    key: '_apply',
+	    value: function _apply(transaction) {
+	      if (transaction._disableActions || transaction._animationDuration === 0) {
+	        transaction._animations.forEach(function (anim) {
+	          anim.target.setValueForKeyPath(anim.newValue, anim.keyPath);
+	        });
+	        if (transaction._completionBlock) {
+	          transaction._completionBlock();
+	        }
+	      } else {
+	        var promises = [];
+	        transaction._animations.forEach(function (anim) {
+	          var promise = new Promise(function (resolve, reject) {
+	            var animation = new _CABasicAnimation2.default(anim.keyPath);
+	            animation.toValue = anim.newValue;
+	            animation.timingFunction = transaction._animationTimingFunction;
+	            animation.duration = transaction._animationDuration;
+	            animation.isRemovedOnCompletion = true;
+	            animation.delegate = {
+	              animationDidStop: function animationDidStop(_anim, _finished) {
+	                if (_finished) {
+	                  console.log('animation completed: ' + anim.keyPath);
+	                  anim.target.setValueForKeyPath(anim.newValue, anim.keyPath);
+	                  resolve(anim, animation);
+	                }
+	              }
+	            };
+	            anim.target.addAnimationForKey(animation, null);
+	          });
+	          promises.push(promise);
+	        });
+	        Promise.all(promises).then(function () {
+	          if (transaction._completionBlock) {
+	            transaction._completionBlock();
+	          }
+	        });
+	      }
+	    }
+
+	    // Overriding Animation Duration and Timing
+
+	    /**
+	     * Returns the duration, in seconds, of all animations within the current transaction.
+	     * @type {number}
+	     * @desc The default duration is zero for transactions automatically created by SceneKit, and 0.25 for animations you create using the begin() method.
+	     * @see https://developer.apple.com/reference/scenekit/scntransaction/1523888-animationduration
+	     */
+
+	  }, {
+	    key: 'lock',
+
+
+	    // Managing Concurrency
+
+	    /**
+	     * Attempts to acquire a recursive spinlock to ensure the validity of values you retrieve during the transaction.
+	     * @access public
+	     * @returns {void}
+	     * @desc SceneKit’s data model is thread-safe in that it ensures that internal data structures will not be corrupted by concurrent attempts to modify their contents from multiple threads. However, this model does not guarantee the validity of values you read from scene graph objects after returning them.For example, consider the following operation:_node.position = SCNVector3Make(_node.position.x, _node.position.y + 10, _node.position.z);
+	    The intent of this line is to move a node by ten units. But if another thread modifies the node’s position property concurrently, the new position value could be unexpected. If your app modifies the scene graph from multiple threads, use a transaction lock to ensure that your modifications take effect as intended.[SCNTransaction lock];
+	    _node.position = SCNVector3Make(_node.position.x, _node.position.y + 10, _node.position.z);
+	    [SCNTransaction unlock];
+	    If another thread currently holds a lock on the transaction, calling lock() has no effect._node.position = SCNVector3Make(_node.position.x, _node.position.y + 10, _node.position.z);
+	    [SCNTransaction lock];
+	    _node.position = SCNVector3Make(_node.position.x, _node.position.y + 10, _node.position.z);
+	    [SCNTransaction unlock];
+	      * @see https://developer.apple.com/reference/scenekit/scntransaction/1523078-lock
+	     */
+	    value: function lock() {
+	      throw new Error('lock() is not implemented');
+	    }
+
+	    /**
+	     * Relinquishes a previously acquired transaction lock.
+	     * @access public
+	     * @returns {void}
+	     * @desc See the lock() method for more details on transaction locking.
+	     * @see https://developer.apple.com/reference/scenekit/scntransaction/1523166-unlock
+	     */
+
+	  }, {
+	    key: 'unlock',
+	    value: function unlock() {
+	      throw new Error('unlock() is not implemented');
+	    }
+
+	    // Getting and Setting Transaction Properties
+
+	    /**
+	     * Associates an arbitrary object with the current transaction using the specified key.
+	     * @access public
+	     * @param {?Object} value - 
+	     * @param {string} key - A unique string identifying the object for later retrieval.
+	     * @returns {void}
+	     * @desc Nested transactions have nested data scope. Setting a value for a key associates it with the current transaction (or innermost nested transaction) only, and reading the value for a key searches through nested transactions (starting from the innermost).
+	     * @see https://developer.apple.com/reference/scenekit/scntransaction/1524124-setvalue
+	     */
+
+	  }, {
+	    key: 'setValueForKey',
+	    value: function setValueForKey(value, key) {
+	      this._currentTransaction._values.set(key, value);
+	    }
+
+	    /**
+	     * Returns the object previously associated with the current transaction using the specified key.
+	     * @access public
+	     * @param {string} key - The unique string identifying an object previously associated with the transaction.
+	     * @returns {?Object} - 
+	     * @desc Nested transactions have nested data scope. Setting a value for a key associates it with the current transaction (or innermost nested transaction) only, but reading the value for a key searches through nested transactions (starting from the innermost).
+	     * @see https://developer.apple.com/reference/scenekit/scntransaction/1523919-value
+	     */
+
+	  }, {
+	    key: 'valueForKey',
+	    value: function valueForKey(key) {
+	      for (var i = _transactions.length - 1; i >= 0; i--) {
+	        var value = _transactions[i]._values.get(key);
+	        if (typeof value !== 'undefined') {
+	          return value;
+	        }
+	      }
+	      return _automaticTransaction._values.get(key);
+	    }
+
+	    /**
+	     * @access private
+	     * @returns {_Transaction} -
+	     */
+
+	  }, {
+	    key: '_addChange',
+	    value: function _addChange(target, keyPath, newValue) {
+	      if (this._immediateMode) {
+	        target.setValueForKeyPath(newValue, keyPath);
+	      } else {
+	        this._currentTransaction._animations.push({
+	          target: target,
+	          keyPath: keyPath,
+	          newValue: newValue
+	        });
+	      }
+	    }
+
+	    /**
+	     * @access public
+	     * @type {boolean}
+	     */
+
+	  }, {
+	    key: 'animationDuration',
+	    get: function get() {
+	      return this._currentTransaction._animationDuration;
+	    }
+
+	    /**
+	     * Returns the duration, in seconds, of all animations within the current transaction.
+	     * @type {number}
+	     * @desc The default duration is zero for transactions automatically created by SceneKit, and 0.25 for animations you create using the begin() method.
+	     * @see https://developer.apple.com/reference/scenekit/scntransaction/1523888-animationduration
+	     */
+	    ,
+	    set: function set(newValue) {
+	      this._currentTransaction._animationDuration = newValue;
+	    }
+
+	    /**
+	     * Returns the timing function that SceneKit uses for all animations within this transaction group. 
+	     * @type {?CAMediaTimingFunction}
+	     * @desc Media timing functions, also known as animation curves, define the relationship between the elapsed time of an animation and its effect on a property. For example, the kCAMediaTimingFunctionEaseInEaseOut function creates an effect that begins slowly, speeds up, and then finishes slowly.
+	     * @see https://developer.apple.com/reference/scenekit/scntransaction/1522614-animationtimingfunction
+	     */
+
+	  }, {
+	    key: 'animationTimingFunction',
+	    get: function get() {
+	      return this._currentTransaction._animationTimingFunction;
+	    }
+
+	    /**
+	     * Returns the timing function that SceneKit uses for all animations within this transaction group. 
+	     * @type {?CAMediaTimingFunction}
+	     * @desc Media timing functions, also known as animation curves, define the relationship between the elapsed time of an animation and its effect on a property. For example, the kCAMediaTimingFunctionEaseInEaseOut function creates an effect that begins slowly, speeds up, and then finishes slowly.
+	     * @see https://developer.apple.com/reference/scenekit/scntransaction/1522614-animationtimingfunction
+	     */
+	    ,
+	    set: function set(newValue) {
+	      this._currentTransaction._animationTimingFunction = newValue;
+	    }
+
+	    // Temporarily Disabling Property Animations
+
+	    /**
+	     * Returns a Boolean value indicating whether changes to animatable properties during the transaction are implicitly animated.
+	     * @type {boolean}
+	     * @desc By default (when this property is false), any changes to animatable properties of objects in the scene graph implicitly create animations. (These animations may not be visible unless you use the animationDuration property to set a nonzero duration for the transaction.) Set this property to true to disable implicit animation during the transaction.Disabling animation applies to all property changes in the current transaction and any nested transactions within it. However, you can use this property again within a nested transaction to enable implicit animation for that transaction.
+	     * @see https://developer.apple.com/reference/scenekit/scntransaction/1524238-disableactions
+	     */
+
+	  }, {
+	    key: 'disableActions',
+	    get: function get() {
+	      return this._currentTransaction._disableActions;
+	    }
+
+	    /**
+	     * Returns a Boolean value indicating whether changes to animatable properties during the transaction are implicitly animated.
+	     * @type {boolean}
+	     * @desc By default (when this property is false), any changes to animatable properties of objects in the scene graph implicitly create animations. (These animations may not be visible unless you use the animationDuration property to set a nonzero duration for the transaction.) Set this property to true to disable implicit animation during the transaction.Disabling animation applies to all property changes in the current transaction and any nested transactions within it. However, you can use this property again within a nested transaction to enable implicit animation for that transaction.
+	     * @see https://developer.apple.com/reference/scenekit/scntransaction/1524238-disableactions
+	     */
+	    ,
+	    set: function set(newValue) {
+	      this._currentTransaction._disableActions = newValue;
+	    }
+
+	    // Getting and Setting Completion Block Objects
+
+	    /**
+	     * Returns the block previously associated with the current transaction.
+	     * @type {?function(): void}
+	     * @desc See setCompletionBlock(_:) for a description of the role of the completion block object.
+	     * @see https://developer.apple.com/reference/scenekit/scntransaction/1523660-completionblock
+	     */
+
+	  }, {
+	    key: 'completionBlock',
+	    get: function get() {
+	      return this._currentTransaction._completionBlock;
+	    }
+
+	    /**
+	     * Returns the block previously associated with the current transaction.
+	     * @type {?function(): void}
+	     * @desc See setCompletionBlock(_:) for a description of the role of the completion block object.
+	     * @see https://developer.apple.com/reference/scenekit/scntransaction/1523660-completionblock
+	     */
+	    ,
+	    set: function set(newValue) {
+	      this._currentTransaction._completionBlock = newValue;
+	    }
+	  }, {
+	    key: '_currentTransaction',
+	    get: function get() {
+	      if (_transactions.length > 0) {
+	        return _transactions[_transactions.length - 1];
+	      }
+	      return _automaticTransaction;
+	    }
+	  }, {
+	    key: 'immediateMode',
+	    get: function get() {
+	      if (_transactions.length > 0) {
+	        return false;
+	      }
+	      return _immediateMode;
+	    }
+
+	    /**
+	     * @access public
+	     * @type {boolean}
+	     */
+	    ,
+	    set: function set(newValue) {
+	      _immediateMode = newValue;
+	    }
+	  }]);
+
+	  return SCNTransaction;
+	}(_NSObject3.default);
+
+	exports.default = SCNTransaction;
+
+/***/ },
+/* 68 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -25364,32 +26055,6 @@ module.exports =
 	};
 
 	exports.default = SCNWrapMode;
-
-/***/ },
-/* 68 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	/**
-	 * Texture filtering modes, used by the the minificationFilter, magnificationFilter, and mipFilter properties.
-	 * @typedef {Object} SCNFilterMode
-	 * @property {number} none - No texture filtering is applied.
-	 * @property {number} nearest - Texture filtering returns the color from only one texel, whose location is nearest to the coordinates being sampled.
-	 * @property {number} linear - Texture filtering sample texels from the neighborhood of the coordinates being sampled and linearly interpolates their colors.
-	 * @see https://developer.apple.com/reference/scenekit/scnfiltermode
-	 */
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var SCNFilterMode = {
-	  none: 0,
-	  nearest: 1,
-	  linear: 2
-	};
-
-	exports.default = SCNFilterMode;
 
 /***/ },
 /* 69 */
@@ -25496,7 +26161,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNScene = __webpack_require__(64);
+	var _SCNScene = __webpack_require__(63);
 
 	var _SCNScene2 = _interopRequireDefault(_SCNScene);
 
@@ -26681,7 +27346,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNNode = __webpack_require__(54);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
@@ -27206,11 +27871,11 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNGeometry = __webpack_require__(58);
+	var _SCNGeometry = __webpack_require__(57);
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
-	var _SCNNode = __webpack_require__(54);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
@@ -27365,7 +28030,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNNode = __webpack_require__(54);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
@@ -27584,11 +28249,11 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimatable = __webpack_require__(56);
+	var _SCNAnimatable = __webpack_require__(55);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNGeometry = __webpack_require__(58);
+	var _SCNGeometry = __webpack_require__(57);
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
@@ -27612,7 +28277,7 @@ module.exports =
 
 	var _SCNParticleImageSequenceAnimationMode2 = _interopRequireDefault(_SCNParticleImageSequenceAnimationMode);
 
-	var _SCNNode = __webpack_require__(54);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
@@ -28554,7 +29219,7 @@ module.exports =
 
 	var _SCNParticleInputMode2 = _interopRequireDefault(_SCNParticleInputMode);
 
-	var _SCNNode = __webpack_require__(54);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
@@ -28966,11 +29631,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNSceneRenderer = __webpack_require__(63);
+	var _SCNSceneRenderer = __webpack_require__(62);
 
 	var _SCNSceneRenderer2 = _interopRequireDefault(_SCNSceneRenderer);
 
-	var _SCNScene = __webpack_require__(64);
+	var _SCNScene = __webpack_require__(63);
 
 	var _SCNScene2 = _interopRequireDefault(_SCNScene);
 
@@ -29155,7 +29820,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimatable = __webpack_require__(56);
+	var _SCNAnimatable = __webpack_require__(55);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
@@ -29290,11 +29955,11 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNNode = __webpack_require__(54);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNRenderer = __webpack_require__(62);
+	var _SCNRenderer = __webpack_require__(61);
 
 	var _SCNRenderer2 = _interopRequireDefault(_SCNRenderer);
 
@@ -29361,7 +30026,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimatable = __webpack_require__(56);
+	var _SCNAnimatable = __webpack_require__(55);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
@@ -29369,7 +30034,7 @@ module.exports =
 
 	var _SCNTechniqueSupport2 = _interopRequireDefault(_SCNTechniqueSupport);
 
-	var _SCNMaterialProperty = __webpack_require__(65);
+	var _SCNMaterialProperty = __webpack_require__(64);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
@@ -29780,7 +30445,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimatable = __webpack_require__(56);
+	var _SCNAnimatable = __webpack_require__(55);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
@@ -29788,7 +30453,7 @@ module.exports =
 
 	var _SCNTechniqueSupport2 = _interopRequireDefault(_SCNTechniqueSupport);
 
-	var _SCNMaterialProperty = __webpack_require__(65);
+	var _SCNMaterialProperty = __webpack_require__(64);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
@@ -30824,15 +31489,15 @@ module.exports =
 
 	var _SCNBufferStream2 = _interopRequireDefault(_SCNBufferStream);
 
-	var _SCNNode = __webpack_require__(54);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNShadable = __webpack_require__(59);
+	var _SCNShadable = __webpack_require__(58);
 
 	var _SCNShadable2 = _interopRequireDefault(_SCNShadable);
 
-	var _SCNRenderer = __webpack_require__(62);
+	var _SCNRenderer = __webpack_require__(61);
 
 	var _SCNRenderer2 = _interopRequireDefault(_SCNRenderer);
 
@@ -31207,7 +31872,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNGeometry = __webpack_require__(58);
+	var _SCNGeometry = __webpack_require__(57);
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
@@ -31342,15 +32007,15 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimatable = __webpack_require__(56);
+	var _SCNAnimatable = __webpack_require__(55);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNShadable = __webpack_require__(59);
+	var _SCNShadable = __webpack_require__(58);
 
 	var _SCNShadable2 = _interopRequireDefault(_SCNShadable);
 
-	var _SCNMaterialProperty = __webpack_require__(65);
+	var _SCNMaterialProperty = __webpack_require__(64);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
@@ -31587,8 +32252,11 @@ module.exports =
 	    // SCNAnimatable //
 	    ///////////////////
 
-	    // Managing Animations
-	    _this._animationKeys = null;
+	    /**
+	     * @access private
+	     * @type {Map}
+	     */
+	    _this._animations = new Map();
 	    return _this;
 	  }
 
@@ -31668,7 +32336,17 @@ module.exports =
 
 	  }, {
 	    key: 'addAnimationForKey',
-	    value: function addAnimationForKey(animation, key) {}
+	    value: function addAnimationForKey(animation, key) {
+	      if (typeof key === 'undefined' || key === null) {
+	        key = Symbol();
+	      }
+	      var anim = animation.copy();
+	      // FIXME: use current frame time
+	      anim._animationStartTime = Date.now() * 0.001;
+	      anim._prevTime = anim._animationStartTime - 0.0000001;
+
+	      this._animations.set(key, anim);
+	    }
 
 	    /**
 	     * Required. Returns the animation with the specified key.
@@ -31682,7 +32360,7 @@ module.exports =
 	  }, {
 	    key: 'animationForKey',
 	    value: function animationForKey(key) {
-	      return null;
+	      return this._animations.get(key);
 	    }
 
 	    /**
@@ -31694,7 +32372,9 @@ module.exports =
 
 	  }, {
 	    key: 'removeAllAnimations',
-	    value: function removeAllAnimations() {}
+	    value: function removeAllAnimations() {
+	      this._animations.clear();
+	    }
 
 	    /**
 	     * Required. Removes the animation attached to the object with the specified key.
@@ -31706,7 +32386,10 @@ module.exports =
 
 	  }, {
 	    key: 'removeAnimationForKey',
-	    value: function removeAnimationForKey(key) {}
+	    value: function removeAnimationForKey(key) {
+	      this._animations.delete(key);
+	      // TODO: reset values
+	    }
 
 	    /**
 	     * Required. Removes the animation attached to the object with the specified key, smoothly transitioning out of the animation’s effect.
@@ -31721,6 +32404,7 @@ module.exports =
 	  }, {
 	    key: 'removeAnimationForKeyFadeOutDuration',
 	    value: function removeAnimationForKeyFadeOutDuration(key, duration) {}
+
 	    /**
 	     * Required. An array containing the keys of all animations currently attached to the object.
 	     * @type {string[]}
@@ -31949,7 +32633,33 @@ module.exports =
 	  }, {
 	    key: 'animationKeys',
 	    get: function get() {
-	      return this._animationKeys;
+	      var keys = [];
+	      var _iteratorNormalCompletion = true;
+	      var _didIteratorError = false;
+	      var _iteratorError = undefined;
+
+	      try {
+	        for (var _iterator = this._animations.keys()[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+	          var key = _step.value;
+
+	          keys.push(key);
+	        }
+	      } catch (err) {
+	        _didIteratorError = true;
+	        _iteratorError = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion && _iterator.return) {
+	            _iterator.return();
+	          }
+	        } finally {
+	          if (_didIteratorError) {
+	            throw _iteratorError;
+	          }
+	        }
+	      }
+
+	      return keys;
 	    }
 	  }], [{
 	    key: 'LightingModel',
@@ -32061,11 +32771,11 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimatable = __webpack_require__(56);
+	var _SCNAnimatable = __webpack_require__(55);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNGeometry = __webpack_require__(58);
+	var _SCNGeometry = __webpack_require__(57);
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
@@ -32365,11 +33075,11 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNGeometry = __webpack_require__(58);
+	var _SCNGeometry = __webpack_require__(57);
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
-	var _SCNNode = __webpack_require__(54);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
@@ -32641,7 +33351,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimatable = __webpack_require__(56);
+	var _SCNAnimatable = __webpack_require__(55);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
@@ -32732,11 +33442,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNNode = __webpack_require__(54);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNRenderer = __webpack_require__(62);
+	var _SCNRenderer = __webpack_require__(61);
 
 	var _SCNRenderer2 = _interopRequireDefault(_SCNRenderer);
 
@@ -33161,7 +33871,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAudioSource = __webpack_require__(53);
+	var _SCNAudioSource = __webpack_require__(52);
 
 	var _SCNAudioSource2 = _interopRequireDefault(_SCNAudioSource);
 
@@ -33345,6 +34055,35 @@ module.exports =
 
 /***/ },
 /* 132 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _CAAnimation = __webpack_require__(40);
+
+	var _CAAnimation2 = _interopRequireDefault(_CAAnimation);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	 * Signature for the block called when an animation event triggers.
+	 * @type {function(animation: CAAnimation, animatedObject: Object, playingBackward: boolean): void}
+	 * @param {CAAnimation} animation - The animation triggering the animation event.
+	 * @param {Object} animatedObject - The Scene Kit object affected by the animation.
+	 * @param {boolean} playingBackward - true if the animation is playing in reverse; otherwise, false.
+	 * @returns {void}
+	 * @see https://developer.apple.com/reference/scenekit/scnanimationeventblock
+	 */
+	var SCNAnimationEventBlock = function SCNAnimationEventBlock(animation, animatedObject, playingBackward) {};
+
+	exports.default = SCNAnimationEventBlock;
+
+/***/ },
+/* 133 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -33448,7 +34187,7 @@ module.exports =
 	exports.default = SCNBillboardAxis;
 
 /***/ },
-/* 133 */
+/* 134 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33463,7 +34202,7 @@ module.exports =
 
 	var _SCNConstraint3 = _interopRequireDefault(_SCNConstraint2);
 
-	var _SCNBillboardAxis = __webpack_require__(132);
+	var _SCNBillboardAxis = __webpack_require__(133);
 
 	var _SCNBillboardAxis2 = _interopRequireDefault(_SCNBillboardAxis);
 
@@ -33518,7 +34257,7 @@ module.exports =
 	exports.default = SCNBillboardConstraint;
 
 /***/ },
-/* 134 */
+/* 135 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33529,7 +34268,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(58);
+	var _SCNGeometry2 = __webpack_require__(57);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -33941,7 +34680,7 @@ module.exports =
 	exports.default = SCNBox;
 
 /***/ },
-/* 135 */
+/* 136 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33950,7 +34689,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNGeometry2 = __webpack_require__(58);
+	var _SCNGeometry2 = __webpack_require__(57);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -34034,7 +34773,7 @@ module.exports =
 	exports.default = SCNCapsule;
 
 /***/ },
-/* 136 */
+/* 137 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -34060,7 +34799,7 @@ module.exports =
 	exports.default = SCNChamferMode;
 
 /***/ },
-/* 137 */
+/* 138 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34071,7 +34810,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(58);
+	var _SCNGeometry2 = __webpack_require__(57);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -34173,7 +34912,7 @@ module.exports =
 	exports.default = SCNCone;
 
 /***/ },
-/* 138 */
+/* 139 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34182,7 +34921,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNGeometry2 = __webpack_require__(58);
+	var _SCNGeometry2 = __webpack_require__(57);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -34259,7 +34998,7 @@ module.exports =
 	exports.default = SCNCylinder;
 
 /***/ },
-/* 139 */
+/* 140 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34270,7 +35009,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(58);
+	var _SCNGeometry2 = __webpack_require__(57);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -34369,7 +35108,7 @@ module.exports =
 	exports.default = SCNFloor;
 
 /***/ },
-/* 140 */
+/* 141 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34384,7 +35123,7 @@ module.exports =
 
 	var _SCNConstraint3 = _interopRequireDefault(_SCNConstraint2);
 
-	var _SCNNode = __webpack_require__(54);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
@@ -34510,7 +35249,7 @@ module.exports =
 	exports.default = SCNIKConstraint;
 
 /***/ },
-/* 141 */
+/* 142 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34521,7 +35260,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNScene = __webpack_require__(64);
+	var _SCNScene = __webpack_require__(63);
 
 	var _SCNScene2 = _interopRequireDefault(_SCNScene);
 
@@ -34567,7 +35306,7 @@ module.exports =
 	exports.default = SCNLayer;
 
 /***/ },
-/* 142 */
+/* 143 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34580,7 +35319,7 @@ module.exports =
 
 	var _SCNConstraint3 = _interopRequireDefault(_SCNConstraint2);
 
-	var _SCNNode = __webpack_require__(54);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
@@ -34640,7 +35379,7 @@ module.exports =
 	exports.default = SCNLookAtConstraint;
 
 /***/ },
-/* 143 */
+/* 144 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34674,7 +35413,7 @@ module.exports =
 	exports.default = SCNMatrix4EqualToMatrix4;
 
 /***/ },
-/* 144 */
+/* 145 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34705,7 +35444,7 @@ module.exports =
 	exports.default = SCNMatrix4FromGLKMatrix4;
 
 /***/ },
-/* 145 */
+/* 146 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34734,7 +35473,7 @@ module.exports =
 	exports.default = SCNMatrix4FromMat4;
 
 /***/ },
-/* 146 */
+/* 147 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34763,7 +35502,7 @@ module.exports =
 	exports.default = SCNMatrix4Invert;
 
 /***/ },
-/* 147 */
+/* 148 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34796,7 +35535,7 @@ module.exports =
 	exports.default = SCNMatrix4IsIdentity;
 
 /***/ },
-/* 148 */
+/* 149 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34858,7 +35597,7 @@ module.exports =
 	exports.default = SCNMatrix4MakeRotation;
 
 /***/ },
-/* 149 */
+/* 150 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34889,7 +35628,7 @@ module.exports =
 	exports.default = SCNMatrix4MakeScale;
 
 /***/ },
-/* 150 */
+/* 151 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34920,7 +35659,7 @@ module.exports =
 	exports.default = SCNMatrix4Mult;
 
 /***/ },
-/* 151 */
+/* 152 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34954,7 +35693,7 @@ module.exports =
 	exports.default = SCNMatrix4Rotate;
 
 /***/ },
-/* 152 */
+/* 153 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34987,7 +35726,7 @@ module.exports =
 	exports.default = SCNMatrix4Scale;
 
 /***/ },
-/* 153 */
+/* 154 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35016,7 +35755,7 @@ module.exports =
 	};exports.default = SCNMatrix4ToGLKMatrix4;
 
 /***/ },
-/* 154 */
+/* 155 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35045,7 +35784,7 @@ module.exports =
 	exports.default = SCNMatrix4ToMat4;
 
 /***/ },
-/* 155 */
+/* 156 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35078,7 +35817,7 @@ module.exports =
 	exports.default = SCNMatrix4Translate;
 
 /***/ },
-/* 156 */
+/* 157 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35193,7 +35932,7 @@ module.exports =
 	exports.default = SCNPhysicsBallSocketJoint;
 
 /***/ },
-/* 157 */
+/* 158 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -35284,7 +36023,7 @@ module.exports =
 	exports.default = SCNPhysicsCollisionCategory;
 
 /***/ },
-/* 158 */
+/* 159 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35415,7 +36154,7 @@ module.exports =
 	exports.default = SCNPhysicsHingeJoint;
 
 /***/ },
-/* 159 */
+/* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35607,7 +36346,7 @@ module.exports =
 	exports.default = SCNPhysicsSliderJoint;
 
 /***/ },
-/* 160 */
+/* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35626,7 +36365,7 @@ module.exports =
 
 	var _SCNPhysicsBody2 = _interopRequireDefault(_SCNPhysicsBody);
 
-	var _SCNPhysicsVehicleWheel = __webpack_require__(161);
+	var _SCNPhysicsVehicleWheel = __webpack_require__(162);
 
 	var _SCNPhysicsVehicleWheel2 = _interopRequireDefault(_SCNPhysicsVehicleWheel);
 
@@ -35770,7 +36509,7 @@ module.exports =
 	exports.default = SCNPhysicsVehicle;
 
 /***/ },
-/* 161 */
+/* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35785,7 +36524,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNNode = __webpack_require__(54);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
@@ -35939,7 +36678,7 @@ module.exports =
 	exports.default = SCNPhysicsVehicleWheel;
 
 /***/ },
-/* 162 */
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35948,7 +36687,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNGeometry2 = __webpack_require__(58);
+	var _SCNGeometry2 = __webpack_require__(57);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -36042,7 +36781,7 @@ module.exports =
 	exports.default = SCNPlane;
 
 /***/ },
-/* 163 */
+/* 164 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36051,7 +36790,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNGeometry2 = __webpack_require__(58);
+	var _SCNGeometry2 = __webpack_require__(57);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -36144,7 +36883,7 @@ module.exports =
 	exports.default = SCNPyramid;
 
 /***/ },
-/* 164 */
+/* 165 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -36168,7 +36907,7 @@ module.exports =
 	exports.default = SCNReferenceLoadingPolicy;
 
 /***/ },
-/* 165 */
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36179,11 +36918,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNNode2 = __webpack_require__(54);
+	var _SCNNode2 = __webpack_require__(53);
 
 	var _SCNNode3 = _interopRequireDefault(_SCNNode2);
 
-	var _SCNReferenceLoadingPolicy = __webpack_require__(164);
+	var _SCNReferenceLoadingPolicy = __webpack_require__(165);
 
 	var _SCNReferenceLoadingPolicy2 = _interopRequireDefault(_SCNReferenceLoadingPolicy);
 
@@ -36323,7 +37062,7 @@ module.exports =
 	exports.default = SCNReferenceNode;
 
 /***/ },
-/* 166 */
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36332,11 +37071,11 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNGeometry2 = __webpack_require__(58);
+	var _SCNGeometry2 = __webpack_require__(57);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
-	var _SCNChamferMode = __webpack_require__(136);
+	var _SCNChamferMode = __webpack_require__(137);
 
 	var _SCNChamferMode2 = _interopRequireDefault(_SCNChamferMode);
 
@@ -36420,7 +37159,7 @@ module.exports =
 	exports.default = SCNShape;
 
 /***/ },
-/* 167 */
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36429,7 +37168,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNGeometry2 = __webpack_require__(58);
+	var _SCNGeometry2 = __webpack_require__(57);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -36498,7 +37237,7 @@ module.exports =
 	exports.default = SCNSphere;
 
 /***/ },
-/* 168 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36509,7 +37248,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(58);
+	var _SCNGeometry2 = __webpack_require__(57);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -36657,7 +37396,7 @@ module.exports =
 	exports.default = SCNText;
 
 /***/ },
-/* 169 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36666,7 +37405,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNGeometry2 = __webpack_require__(58);
+	var _SCNGeometry2 = __webpack_require__(57);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -36743,271 +37482,6 @@ module.exports =
 	exports.default = SCNTorus;
 
 /***/ },
-/* 170 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _NSObject2 = __webpack_require__(2);
-
-	var _NSObject3 = _interopRequireDefault(_NSObject2);
-
-	var _CAMediaTimingFunction = __webpack_require__(43);
-
-	var _CAMediaTimingFunction2 = _interopRequireDefault(_CAMediaTimingFunction);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var _animationDuration = 0;
-	var _animationTimingFunction = null;
-	var _disableActions = false;
-	var _completionBlock = null;
-
-	/**
-	 * The SCNTransaction class defines SceneKit’s mechanism for batching scene graph modifications into atomic updates. You use SCNTransaction class methods to control the animation that results from changing animatable properties in the scene graph and to combine sets of changes into nested transactions.
-	 * @access public
-	 * @extends {NSObject}
-	 * @see https://developer.apple.com/reference/scenekit/scntransaction
-	 */
-
-	var SCNTransaction = function (_NSObject) {
-	  _inherits(SCNTransaction, _NSObject);
-
-	  /**
-	   * constructor
-	   * @access public
-	   * @constructor
-	   */
-	  function SCNTransaction() {
-	    _classCallCheck(this, SCNTransaction);
-
-	    return _possibleConstructorReturn(this, (SCNTransaction.__proto__ || Object.getPrototypeOf(SCNTransaction)).call(this));
-	  }
-
-	  // Creating and Committing Transactions
-
-	  /**
-	   * Begins a new transaction for the current thread.
-	   * @access public
-	   * @returns {void}
-	   * @desc The new transaction is nested within the thread’s current transaction, if there is one.The first time you modify the scene graph during a pass through the run loop, SceneKit automatically creates a transaction and makes it the current transaction. (SceneKit commits that transaction when the next iteration of the run loops begins.) If you call this method to create a custom transaction before modifying the scene graph, your custom transaction becomes the current transaction.
-	   * @see https://developer.apple.com/reference/scenekit/scntransaction/1522820-begin
-	   */
-
-
-	  _createClass(SCNTransaction, null, [{
-	    key: 'begin',
-	    value: function begin() {}
-
-	    /**
-	     * Commits all changes made during the current transaction.
-	     * @access public
-	     * @returns {void}
-	     * @desc If there is no current transaction, this method has no effect.
-	     * @see https://developer.apple.com/reference/scenekit/scntransaction/1523436-commit
-	     */
-
-	  }, {
-	    key: 'commit',
-	    value: function commit() {}
-
-	    /**
-	     * Applies all changes from the current automatic transaction.
-	     * @access public
-	     * @returns {void}
-	     * @desc SceneKit automatically calls this method at the end of each pass through the run loop, regardless of the run loop mode. If your app does not have a run loop, you must call this method explicitly.If the current transaction has any nested transactions that are still animating, SceneKit waits to commit the current transaction’s changes until those transactions complete.NoteIf possible, avoid calling flush() explicitly. By allowing flush() to execute during the run loop, your app achieves better performance, atomic screen updates are preserved, and transactions and animations that work from transaction to transaction continue to function.
-	     * @see https://developer.apple.com/reference/scenekit/scntransaction/1522860-flush
-	     */
-
-	  }, {
-	    key: 'flush',
-	    value: function flush() {}
-
-	    // Overriding Animation Duration and Timing
-
-	    /**
-	     * Returns the duration, in seconds, of all animations within the current transaction.
-	     * @type {number}
-	     * @desc The default duration is zero for transactions automatically created by SceneKit, and 0.25 for animations you create using the begin() method.
-	     * @see https://developer.apple.com/reference/scenekit/scntransaction/1523888-animationduration
-	     */
-
-	  }, {
-	    key: 'lock',
-
-
-	    // Managing Concurrency
-
-	    /**
-	     * Attempts to acquire a recursive spinlock to ensure the validity of values you retrieve during the transaction.
-	     * @access public
-	     * @returns {void}
-	     * @desc SceneKit’s data model is thread-safe in that it ensures that internal data structures will not be corrupted by concurrent attempts to modify their contents from multiple threads. However, this model does not guarantee the validity of values you read from scene graph objects after returning them.For example, consider the following operation:_node.position = SCNVector3Make(_node.position.x, _node.position.y + 10, _node.position.z);
-	    The intent of this line is to move a node by ten units. But if another thread modifies the node’s position property concurrently, the new position value could be unexpected. If your app modifies the scene graph from multiple threads, use a transaction lock to ensure that your modifications take effect as intended.[SCNTransaction lock];
-	    _node.position = SCNVector3Make(_node.position.x, _node.position.y + 10, _node.position.z);
-	    [SCNTransaction unlock];
-	    If another thread currently holds a lock on the transaction, calling lock() has no effect._node.position = SCNVector3Make(_node.position.x, _node.position.y + 10, _node.position.z);
-	    [SCNTransaction lock];
-	    _node.position = SCNVector3Make(_node.position.x, _node.position.y + 10, _node.position.z);
-	    [SCNTransaction unlock];
-	      * @see https://developer.apple.com/reference/scenekit/scntransaction/1523078-lock
-	     */
-	    value: function lock() {}
-
-	    /**
-	     * Relinquishes a previously acquired transaction lock.
-	     * @access public
-	     * @returns {void}
-	     * @desc See the lock() method for more details on transaction locking.
-	     * @see https://developer.apple.com/reference/scenekit/scntransaction/1523166-unlock
-	     */
-
-	  }, {
-	    key: 'unlock',
-	    value: function unlock() {}
-
-	    // Getting and Setting Transaction Properties
-
-	    /**
-	     * Associates an arbitrary object with the current transaction using the specified key.
-	     * @access public
-	     * @param {?Object} value - 
-	     * @param {string} key - A unique string identifying the object for later retrieval.
-	     * @returns {void}
-	     * @desc Nested transactions have nested data scope. Setting a value for a key associates it with the current transaction (or innermost nested transaction) only, and reading the value for a key searches through nested transactions (starting from the innermost).
-	     * @see https://developer.apple.com/reference/scenekit/scntransaction/1524124-setvalue
-	     */
-
-	  }, {
-	    key: 'setValueForKey',
-	    value: function setValueForKey(value, key) {}
-
-	    /**
-	     * Returns the object previously associated with the current transaction using the specified key.
-	     * @access public
-	     * @param {string} key - The unique string identifying an object previously associated with the transaction.
-	     * @returns {?Object} - 
-	     * @desc Nested transactions have nested data scope. Setting a value for a key associates it with the current transaction (or innermost nested transaction) only, but reading the value for a key searches through nested transactions (starting from the innermost).
-	     * @see https://developer.apple.com/reference/scenekit/scntransaction/1523919-value
-	     */
-
-	  }, {
-	    key: 'valueForKey',
-	    value: function valueForKey(key) {
-	      return null;
-	    }
-	  }, {
-	    key: 'animationDuration',
-	    get: function get() {
-	      return _animationDuration;
-	    }
-
-	    /**
-	     * Returns the duration, in seconds, of all animations within the current transaction.
-	     * @type {number}
-	     * @desc The default duration is zero for transactions automatically created by SceneKit, and 0.25 for animations you create using the begin() method.
-	     * @see https://developer.apple.com/reference/scenekit/scntransaction/1523888-animationduration
-	     */
-	    ,
-	    set: function set(newValue) {
-	      _animationDuration = newValue;
-	    }
-
-	    /**
-	     * Returns the timing function that SceneKit uses for all animations within this transaction group. 
-	     * @type {?CAMediaTimingFunction}
-	     * @desc Media timing functions, also known as animation curves, define the relationship between the elapsed time of an animation and its effect on a property. For example, the kCAMediaTimingFunctionEaseInEaseOut function creates an effect that begins slowly, speeds up, and then finishes slowly.
-	     * @see https://developer.apple.com/reference/scenekit/scntransaction/1522614-animationtimingfunction
-	     */
-
-	  }, {
-	    key: 'animationTimingFunction',
-	    get: function get() {
-	      return _animationTimingFunction;
-	    }
-
-	    /**
-	     * Returns the timing function that SceneKit uses for all animations within this transaction group. 
-	     * @type {?CAMediaTimingFunction}
-	     * @desc Media timing functions, also known as animation curves, define the relationship between the elapsed time of an animation and its effect on a property. For example, the kCAMediaTimingFunctionEaseInEaseOut function creates an effect that begins slowly, speeds up, and then finishes slowly.
-	     * @see https://developer.apple.com/reference/scenekit/scntransaction/1522614-animationtimingfunction
-	     */
-	    ,
-	    set: function set(newValue) {
-	      _animationTimingFunction = newValue;
-	    }
-
-	    // Temporarily Disabling Property Animations
-
-	    /**
-	     * Returns a Boolean value indicating whether changes to animatable properties during the transaction are implicitly animated.
-	     * @type {boolean}
-	     * @desc By default (when this property is false), any changes to animatable properties of objects in the scene graph implicitly create animations. (These animations may not be visible unless you use the animationDuration property to set a nonzero duration for the transaction.) Set this property to true to disable implicit animation during the transaction.Disabling animation applies to all property changes in the current transaction and any nested transactions within it. However, you can use this property again within a nested transaction to enable implicit animation for that transaction.
-	     * @see https://developer.apple.com/reference/scenekit/scntransaction/1524238-disableactions
-	     */
-
-	  }, {
-	    key: 'disableActions',
-	    get: function get() {
-	      return _disableActions;
-	    }
-
-	    /**
-	     * Returns a Boolean value indicating whether changes to animatable properties during the transaction are implicitly animated.
-	     * @type {boolean}
-	     * @desc By default (when this property is false), any changes to animatable properties of objects in the scene graph implicitly create animations. (These animations may not be visible unless you use the animationDuration property to set a nonzero duration for the transaction.) Set this property to true to disable implicit animation during the transaction.Disabling animation applies to all property changes in the current transaction and any nested transactions within it. However, you can use this property again within a nested transaction to enable implicit animation for that transaction.
-	     * @see https://developer.apple.com/reference/scenekit/scntransaction/1524238-disableactions
-	     */
-	    ,
-	    set: function set(newValue) {
-	      _disableActions = newValue;
-	    }
-
-	    // Getting and Setting Completion Block Objects
-
-	    /**
-	     * Returns the block previously associated with the current transaction.
-	     * @type {?function(): void}
-	     * @desc See setCompletionBlock(_:) for a description of the role of the completion block object.
-	     * @see https://developer.apple.com/reference/scenekit/scntransaction/1523660-completionblock
-	     */
-
-	  }, {
-	    key: 'completionBlock',
-	    get: function get() {
-	      return _completionBlock;
-	    }
-
-	    /**
-	     * Returns the block previously associated with the current transaction.
-	     * @type {?function(): void}
-	     * @desc See setCompletionBlock(_:) for a description of the role of the completion block object.
-	     * @see https://developer.apple.com/reference/scenekit/scntransaction/1523660-completionblock
-	     */
-	    ,
-	    set: function set(newValue) {
-	      _completionBlock = newValue;
-	    }
-	  }]);
-
-	  return SCNTransaction;
-	}(_NSObject3.default);
-
-	exports.default = SCNTransaction;
-
-/***/ },
 /* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -37023,7 +37497,7 @@ module.exports =
 
 	var _SCNConstraint3 = _interopRequireDefault(_SCNConstraint2);
 
-	var _SCNNode = __webpack_require__(54);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
@@ -37097,7 +37571,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNGeometry2 = __webpack_require__(58);
+	var _SCNGeometry2 = __webpack_require__(57);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -37565,7 +38039,7 @@ module.exports =
 
 	var _CGPoint2 = _interopRequireDefault(_CGPoint);
 
-	var _SCNRenderer = __webpack_require__(62);
+	var _SCNRenderer = __webpack_require__(61);
 
 	var _SCNRenderer2 = _interopRequireDefault(_SCNRenderer);
 
@@ -37577,7 +38051,7 @@ module.exports =
 
 	var _CGRect2 = _interopRequireDefault(_CGRect);
 
-	var _SCNScene = __webpack_require__(64);
+	var _SCNScene = __webpack_require__(63);
 
 	var _SCNScene2 = _interopRequireDefault(_SCNScene);
 
@@ -37589,7 +38063,7 @@ module.exports =
 
 	var _SCNAntialiasingMode2 = _interopRequireDefault(_SCNAntialiasingMode);
 
-	var _SCNNode = __webpack_require__(54);
+	var _SCNNode = __webpack_require__(53);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
@@ -38353,7 +38827,7 @@ module.exports =
 	          p._isPresentationInstance = true;
 	          if (node.geometry !== null) {
 	            p.geometry = node.geometry.copy();
-	            // FIXME: don't access private properties
+	            p.geometry._isPresentationInstance = true;
 	            p.geometry._geometryElements = [];
 	            node.geometry._geometryElements.forEach(function (element) {
 	              p.geometry._geometryElements.push(element.copy());
@@ -38362,6 +38836,7 @@ module.exports =
 	            node.geometry._geometrySources.forEach(function (source) {
 	              p.geometry._geometrySources.push(source.copy());
 	            });
+	            node.geometry._presentation = p.geometry;
 	          }
 	          node._presentation = p;
 	        }
@@ -38432,29 +38907,42 @@ module.exports =
 	  }, {
 	    key: '_runAnimations',
 	    value: function _runAnimations() {
-	      //console.log('_runAnimations')
-	      this._runAnimation(this._scene.rootNode);
+	      this._runAnimationForNode(this._scene.rootNode);
 	    }
 	  }, {
-	    key: '_runAnimation',
-	    value: function _runAnimation(node) {
+	    key: '_runAnimationForNode',
+	    value: function _runAnimationForNode(node) {
 	      var _this4 = this;
 
+	      this._runAnimationForObject(node);
+	      node.childNodes.forEach(function (child) {
+	        return _this4._runAnimationForNode(child);
+	      });
+	      if (node.geometry) {
+	        this._runAnimationForObject(node.geometry);
+	        node.geometry.materials.forEach(function (material) {
+	          _this4._runAnimationForObject(material);
+	          var properties = [material._diffuse, material._ambient, material._specular, material._normal, material._reflective, material._emission, material._transparent, material._multiply, material._ambientOcclusion, material._selfIllumination, material._metalness, material._roughness];
+	          properties.forEach(function (prop) {
+	            _this4._runAnimationForObject(prop);
+	          });
+	        });
+	      }
+	    }
+	  }, {
+	    key: '_runAnimationForObject',
+	    value: function _runAnimationForObject(obj, time) {
+	      var _this5 = this;
+
 	      var deleteKeys = [];
-	      var time = this.currentTime;
-	      //console.log(`time: ${time}`)
-	      node._animations.forEach(function (animation, key) {
-	        //console.log(`node: ${node.name}, animation: ${key} ${animation}`)
-	        animation._applyAnimation(node, time);
+	      obj._animations.forEach(function (animation, key) {
+	        animation._applyAnimation(obj, _this5.currentTime);
 	        if (animation._isFinished && animation.isRemovedOnCompletion) {
 	          deleteKeys.push(key);
 	        }
 	      });
 	      deleteKeys.forEach(function (key) {
-	        node._animations.delete(key);
-	      });
-	      node.childNodes.forEach(function (child) {
-	        return _this4._runAnimation(child);
+	        obj._animations.delete(key);
 	      });
 	    }
 

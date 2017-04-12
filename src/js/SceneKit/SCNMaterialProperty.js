@@ -2,10 +2,11 @@
 
 import NSObject from '../ObjectiveC/NSObject'
 import SCNAnimatable from './SCNAnimatable'
+import SCNFilterMode from './SCNFilterMode'
 import SCNMatrix4 from './SCNMatrix4'
 import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
+import SCNTransaction from './SCNTransaction'
 import SCNWrapMode from './SCNWrapMode'
-import SCNFilterMode from './SCNFilterMode'
 import SKColor from '../SpriteKit/SKColor'
 
 
@@ -19,13 +20,13 @@ import SKColor from '../SpriteKit/SKColor'
 export default class SCNMaterialProperty extends NSObject {
   static get _propTypes() {
     return {
-      color: ['NSColor', 'contents'],
+      color: ['NSColor', '_contents'],
       image: ['NSMutableDictionary', (obj, dict, key, coder) => {
         const path = coder._directoryPath + dict.path
         console.log(`image.path: ${path}`)
         const image = new Image()
         image.onload = () => {
-          obj.contents = image
+          obj._contents = image
         }
         // FIXME: needs directoryPath
         image.src = path
@@ -42,7 +43,7 @@ export default class SCNMaterialProperty extends NSObject {
       borderColor: 'plist',
 
       propertyType: ['integer', null],
-      parent: ['SCNMaterial', null],
+      parent: ['SCNMaterial', '_parent'],
       isCommonProfileProperty: ['boolean', null]
     }
   }
@@ -60,18 +61,15 @@ export default class SCNMaterialProperty extends NSObject {
   constructor(contents) {
     super()
 
-    //if(typeof contents !== 'object'){
-    //  throw 'SCNMaterialProperty(contents): contents must be Object type: ' + (typeof contents)
-    //}
-
     // Working with Material Property Contents
 
     /**
      * The visual contents of the material property—a color, image, or source of animated content. Animatable.
+     * @access private
      * @type {?Object}
      * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395372-contents
      */
-    this.contents = contents
+    this._contents = contents
 
     /**
      * A number between 0.0 and 1.0 that modulates the effect of the material property. Animatable.
@@ -146,48 +144,181 @@ export default class SCNMaterialProperty extends NSObject {
      * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395376-bordercolor
      */
     this.borderColor = null
+
+    /**
+     * @access private
+     * @type {SCNMaterial}
+     */
+    this._parent = null
+
+    ///////////////////
+    // SCNAnimatable //
+    ///////////////////
+
+    /**
+     * @access private
+     * @type {Map}
+     */
+    this._animations = new Map()
+
   }
 
   /**
+   * The visual contents of the material property—a color, image, or source of animated content. Animatable.
+   * @type {?Object}
+   * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395372-contents
+   */
+  get contents() {
+    return this._contents
+  }
+
+  set contents(newValue) {
+    SCNTransaction._addChange(this, '_contents', newValue)
+  }
+
+  ///////////////////
+  // SCNAnimatable //
+  ///////////////////
+
+  // Managing Animations
+
+  /**
+   * Required. Adds an animation object for the specified key.
    * @access public
-   * @param {NSCoder} coder -
-   * @returns {SCNMaterialProperty}
+   * @param {CAAnimation} animation - The animation object to be added.
+   * @param {?string} key - An string identifying the animation for later retrieval. You may pass nil if you don’t need to reference the animation later.
+   * @returns {void}
+   * @desc Newly added animations begin executing after the current run loop cycle ends.SceneKit does not define any requirements for the contents of the key parameter—it need only be unique among the keys for other animations you add. If you add an animation with an existing key, this method overwrites the existing animation.
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523386-addanimation
    */
-   /*
-  static initWithCoder(coder) {
-    const instance = new SCNMaterialProperty()
-    instance._setValueWithCoder(coder)
-    return instance
+  addAnimationForKey(animation, key) {
+    console.log(`SCNMaterialProperty addAnimationForKey`)
+    if(typeof key === 'undefined' || key === null){
+      key = Symbol()
+    }
+    const anim = animation.copy()
+    // FIXME: use current frame time
+    anim._animationStartTime = Date.now() * 0.001
+    anim._prevTime = anim._animationStartTime - 0.0000001
+
+    this._animations.set(key, anim)
   }
-  */
 
   /**
-   * @access private
-   * @param {NSCoder} coder -
+   * Required. Returns the animation with the specified key.
+   * @access public
+   * @param {string} key - A string identifying a previously added animation.
+   * @returns {?CAAnimation} - 
+   * @desc Attempting to modify any properties of the returned object results in undefined behavior.
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1524020-animation
    */
-   /*
-  _setValueWithCoder(coder) {
-    this.minificationFilter = coder.decodeIntegerForKey('minificationFilter')
-    const propertyType = coder.decodeIntegerForKey('propertyType')
-    this.wrapT = coder.decodeIntegerForKey('wrapT')
-    //const _parent = coder.decodeObjectForKey('parent')
-    const isCommonProfileProperty = coder.decodeBoolForKey('isCommonProfileProperty')
-    this.magnificationFilter = coder.decodeIntegerForKey('magnificationFilter')
-    this.mipFilter = coder.decodeIntegerForKey('mipFilter')
-    this.mappingChannel = coder.decodeIntegerForKey('mappingChannel')
-    this.wrapS = coder.decodeIntegerForKey('wrapS')
-    this.maxAnisotropy = coder.decodeFloatForKey('maxAnisotropy')
-    this.intensity = coder.decodeFloatForKey('intensity')
+  animationForKey(key) {
+    return this._animations.get(key)
   }
-  */
- 
+
+  /**
+   * Required. Removes all the animations currently attached to the object.
+   * @access public
+   * @returns {void}
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1522762-removeallanimations
+   */
+  removeAllAnimations() {
+    this._animations.clear()
+  }
+
+  /**
+   * Required. Removes the animation attached to the object with the specified key.
+   * @access public
+   * @param {string} key - A string identifying an attached animation to remove.
+   * @returns {void}
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1522880-removeanimation
+   */
+  removeAnimationForKey(key) {
+    this._animations.delete(key)
+    // TODO: reset values
+  }
+
+  /**
+   * Required. Removes the animation attached to the object with the specified key, smoothly transitioning out of the animation’s effect.
+   * @access public
+   * @param {string} key - A string identifying an attached animation to remove.
+   * @param {number} duration - The duration for transitioning out of the animation’s effect before it is removed.
+   * @returns {void}
+   * @desc Use this method to create smooth transitions between the effects of multiple animations. For example, the geometry loaded from a scene file for a game character may have associated animations for player actions such as walking and jumping. When the player lands from a jump, you remove the jump animation so the character continues walking. If you use the removeAnimation(forKey:) method to remove the jump animation, SceneKit abruptly switches from the current frame of the jump animation to the current frame of the walk animation. If you use the removeAnimation(forKey:fadeOutDuration:) method instead, SceneKit plays both animations at once during that duration and interpolates vertex positions from one animation to the other, creating a smooth transition.
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1522841-removeanimation
+   */
+  removeAnimationForKeyFadeOutDuration(key, duration) {
+  }
+
+  /**
+   * Required. An array containing the keys of all animations currently attached to the object.
+   * @type {string[]}
+   * @desc This array contains all keys for which animations are attached to the object, or is empty if there are no attached animations. The ordering of animation keys in the array is arbitrary.
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523610-animationkeys
+   */
+  get animationKeys() {
+    const keys = []
+    for(const key of this._animations.keys()){
+      keys.push(key)
+    }
+    return keys
+  }
+
+  // Pausing and Resuming Animations
+
+  /**
+   * Required. Pauses the animation attached to the object with the specified key.
+   * @access public
+   * @param {string} key - A string identifying an attached animation.
+   * @returns {void}
+   * @desc This method has no effect if no animation is attached to the object with the specified key.
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523592-pauseanimation
+   */
+  pauseAnimationForKey(key) {
+  }
+
+  /**
+   * Required. Resumes a previously paused animation attached to the object with the specified key.
+   * @access public
+   * @param {string} key - A string identifying an attached animation.
+   * @returns {void}
+   * @desc This method has no effect if no animation is attached to the object with the specified key or if the specified animation is not currently paused.
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523332-resumeanimation
+   */
+  resumeAnimationForKey(key) {
+  }
+
+  /**
+   * Required. Returns a Boolean value indicating whether the animation attached to the object with the specified key is paused.
+   * @access public
+   * @param {string} key - A string identifying an attached animation.
+   * @returns {boolean} - 
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523703-isanimationpaused
+   */
+  isAnimationPausedForKey(key) {
+    return false
+  }
+
+  // Instance Methods
+
+  /**
+   * Required. 
+   * @access public
+   * @param {number} speed - 
+   * @param {string} key - 
+   * @returns {void}
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1778343-setanimationspeed
+   */
+  setAnimationSpeedForKey(speed, key) {
+  }
+
   /**
    * @access public
    * @returns {Float32Array} -
    */
   float32Array() {
-    if(this.contents instanceof SKColor){
-      return this.contents.float32Array()
+    if(this._contents instanceof SKColor){
+      return this._contents.float32Array()
     }
     return new Float32Array([1, 1, 1, 1])
   }

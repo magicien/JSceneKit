@@ -1261,7 +1261,6 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523386-addanimation
    */
   addAnimationForKey(animation, key) {
-    //console.log('addAnimationForKey: ' + key)
     if(typeof key === 'undefined' || key === null){
       key = Symbol()
     }

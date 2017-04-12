@@ -51,6 +51,7 @@ export default class CAAnimationGroup extends CAAnimation {
     this.animations.forEach((animation) => {
       animation._applyAnimation(obj, t, false)
     })
+    this._handleEvents(obj, t)
   }
 
  /**

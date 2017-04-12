@@ -977,7 +977,7 @@ export default class SCNView {
         p._isPresentationInstance = true
         if(node.geometry !== null){
           p.geometry = node.geometry.copy()
-          // FIXME: don't access private properties
+          p.geometry._isPresentationInstance = true
           p.geometry._geometryElements = []
           node.geometry._geometryElements.forEach((element) => {
             p.geometry._geometryElements.push(element.copy())
@@ -986,6 +986,7 @@ export default class SCNView {
           node.geometry._geometrySources.forEach((source) => {
             p.geometry._geometrySources.push(source.copy())
           })
+          node.geometry._presentation = p.geometry
         }
         node._presentation = p
       }
@@ -1042,25 +1043,48 @@ export default class SCNView {
   }
 
   _runAnimations() {
-    //console.log('_runAnimations')
-    this._runAnimation(this._scene.rootNode)
+    this._runAnimationForNode(this._scene.rootNode)
   }
 
-  _runAnimation(node) {
+  _runAnimationForNode(node) {
+    this._runAnimationForObject(node)
+    node.childNodes.forEach((child) => this._runAnimationForNode(child))
+    if(node.geometry){
+      this._runAnimationForObject(node.geometry)
+      node.geometry.materials.forEach((material) => {
+        this._runAnimationForObject(material)
+        const properties = [
+          material._diffuse,
+          material._ambient,
+          material._specular,
+          material._normal,
+          material._reflective,
+          material._emission,
+          material._transparent,
+          material._multiply,
+          material._ambientOcclusion,
+          material._selfIllumination,
+          material._metalness,
+          material._roughness
+        ]
+        properties.forEach((prop) => {
+          this._runAnimationForObject(prop)
+        })
+      })
+    }
+  }
+
+  _runAnimationForObject(obj, time) {
     const deleteKeys = []
-    const time = this.currentTime
-    //console.log(`time: ${time}`)
-    node._animations.forEach((animation, key) => {
-      //console.log(`node: ${node.name}, animation: ${key} ${animation}`)
-      animation._applyAnimation(node, time)
+    obj._animations.forEach((animation, key) => {
+      animation._applyAnimation(obj, this.currentTime)
       if(animation._isFinished && animation.isRemovedOnCompletion){
         deleteKeys.push(key)
       }
     })
     deleteKeys.forEach((key) => {
-      node._animations.delete(key)
+      obj._animations.delete(key)
     })
-    node.childNodes.forEach((child) => this._runAnimation(child))
   }
 
   // NSView

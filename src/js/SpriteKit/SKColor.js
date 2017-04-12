@@ -391,6 +391,29 @@ export default class SKColor extends NSObject {
   }
 
   /**
+   * @access private
+   * @returns {SKColor} -
+   */
+  _copy() {
+    return new SKColor(this.red, this.green, this.blue, this.alpha)
+  }
+
+  /**
+   * @access private
+   * @param {SKColor} c -
+   * @param {number} rate -
+   * @returns {SKColor} -
+   */
+  _lerp(c, rate) {
+    const r = new SKColor()
+    r.red = this.red + rate * (c.red - this.red)
+    r.green = this.green + rate * (c.green - this.green)
+    r.blue = this.blue + rate * (c.blue - this.blue)
+    r.alpha = this.alpha + rate * (c.alpha - this.alpha)
+    return r
+  }
+
+  /**
    * @access public
    * @returns {Float32Array} -
    */

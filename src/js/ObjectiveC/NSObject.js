@@ -1147,6 +1147,11 @@ Typically, however, you are encouraged to relinquish resources prior to finaliza
    * @see https://developer.apple.com/reference/objectivec/nsobject/1415969-setvalue
    */
   setValueForKey(value, key) {
+    if(typeof this[key] === 'undefined'){
+      this.setValueForUndefinedKey(value, key)
+    }else{
+      this[key] = value
+    }
   }
 
   /**

@@ -119,5 +119,6 @@ export default class CABasicAnimation extends CAPropertyAnimation {
 
     //console.log(`CABasicAnimation._applyAnimation: keyPath: ${this.keyPath}, time: ${time}, baseTime: ${baseTime}, t: ${t}, value: ${value}`)
     this._applyValue(obj, value)
+    this._handleEvents(obj, t)
   }
 }

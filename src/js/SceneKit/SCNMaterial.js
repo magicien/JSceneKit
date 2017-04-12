@@ -209,8 +209,11 @@ export default class SCNMaterial extends NSObject {
     // SCNAnimatable //
     ///////////////////
 
-    // Managing Animations
-    this._animationKeys = null
+    /**
+     * @access private
+     * @type {Map}
+     */
+    this._animations = new Map()
   }
 
   // Configuring a Material’s Visual Properties
@@ -406,6 +409,15 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523386-addanimation
    */
   addAnimationForKey(animation, key) {
+    if(typeof key === 'undefined' || key === null){
+      key = Symbol()
+    }
+    const anim = animation.copy()
+    // FIXME: use current frame time
+    anim._animationStartTime = Date.now() * 0.001
+    anim._prevTime = anim._animationStartTime - 0.0000001
+
+    this._animations.set(key, anim)
   }
 
   /**
@@ -417,7 +429,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    * @see https://developer.apple.com/reference/scenekit/scnanimatable/1524020-animation
    */
   animationForKey(key) {
-    return null
+    return this._animations.get(key)
   }
 
   /**
@@ -427,6 +439,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    * @see https://developer.apple.com/reference/scenekit/scnanimatable/1522762-removeallanimations
    */
   removeAllAnimations() {
+    this._animations.clear()
   }
 
   /**
@@ -437,6 +450,8 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    * @see https://developer.apple.com/reference/scenekit/scnanimatable/1522880-removeanimation
    */
   removeAnimationForKey(key) {
+    this._animations.delete(key)
+    // TODO: reset values
   }
 
   /**
@@ -450,6 +465,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    */
   removeAnimationForKeyFadeOutDuration(key, duration) {
   }
+
   /**
    * Required. An array containing the keys of all animations currently attached to the object.
    * @type {string[]}
@@ -457,7 +473,11 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523610-animationkeys
    */
   get animationKeys() {
-    return this._animationKeys
+    const keys = []
+    for(const key of this._animations.keys()){
+      keys.push(key)
+    }
+    return keys
   }
 
   // Pausing and Resuming Animations

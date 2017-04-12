@@ -269,6 +269,9 @@ export default class CAAnimation extends NSObject {
     }
     let prevTime = this._prevTime
     if(prevTime === null){
+      if(this.delegate && this.delegate.animationDidStart){
+        this.delegate.animationDidStart(this)
+      }
       prevTime = time - 0.0000001
     }
     this.animationEvents.forEach((event) => {
@@ -306,6 +309,7 @@ export default class CAAnimation extends NSObject {
          this.fillMode === Constants.kCAFillModeBoth){
         dt = 0
       }else{
+        // the animation hasn't started yet.
         return null
       }
     }
@@ -331,8 +335,13 @@ export default class CAAnimation extends NSObject {
     }
 
     if(dt > duration){
-      // animation is over
-      this._isFinished = true
+      // the animation is over.
+      if(!this._isFinished){
+        this._isFinished = true
+        if(this.delegate && this.delegate.animationDidStop){
+          this.delegate.animationDidStop(this, true)
+        }
+      }
       if(this.fillMode === Constants.kCAFillModeForwards ||
          this.fillMode === Constants.kCAFillModeBoth){
         dt = duration

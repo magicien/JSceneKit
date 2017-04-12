@@ -20,9 +20,10 @@ export default class SCNAction extends NSObject {
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  init() {
+  constructor() {
+    super()
 
     // Adjusting an Action’s Animation Properties
 

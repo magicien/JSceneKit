@@ -2,11 +2,47 @@
 
 import NSObject from '../ObjectiveC/NSObject'
 import CAMediaTimingFunction from '../QuartzCore/CAMediaTimingFunction'
+import CABasicAnimation from '../QuartzCore/CABasicAnimation'
+import SCNAnimationEvent from './SCNAnimationEvent'
 
-let _animationDuration = 0
-let _animationTimingFunction = null
-let _disableActions = false
-let _completionBlock = null
+const _transactions = []
+let _immediateMode = true
+
+class _Transaction {
+  constructor() {
+    /**
+     * @type {Object}
+     */
+    this._animations = []
+
+    /**
+     * @type {number}
+     */
+    this._animationDuration = 0.0
+
+    /**
+     * @type {?CAMediaTimingFunction}
+     */
+    this._animationTimingFunction = null
+
+    /**
+     * @type {boolean}
+     */
+    this._disableActions = false
+
+    /**
+     * @type {?function}
+     */
+    this._completionBlock = null
+
+    /**
+     * @type {Map<string, Object>}
+     */
+    this._values = new Map()
+  }
+}
+
+const _automaticTransaction = new _Transaction()
 
 /**
  * The SCNTransaction class defines SceneKit’s mechanism for batching scene graph modifications into atomic updates. You use SCNTransaction class methods to control the animation that results from changing animatable properties in the scene graph and to combine sets of changes into nested transactions.
@@ -23,6 +59,7 @@ export default class SCNTransaction extends NSObject {
    */
   constructor() {
     super()
+    throw new Error('do not create an instance of SCNTransaction')
   }
 
   // Creating and Committing Transactions
@@ -35,6 +72,9 @@ export default class SCNTransaction extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scntransaction/1522820-begin
    */
   static begin() {
+    const newTransaction = new _Transaction()
+    newTransaction._disableActions = this._currentTransaction._disabledActions
+    _transactions.push(newTransaction)
   }
 
   /**
@@ -45,6 +85,10 @@ export default class SCNTransaction extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scntransaction/1523436-commit
    */
   static commit() {
+    const transaction = _transactions.pop()
+    if(transaction){
+      this._apply(transaction)
+    }
   }
 
   /**
@@ -55,6 +99,46 @@ export default class SCNTransaction extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scntransaction/1522860-flush
    */
   static flush() {
+    // TODO: wait nested transactions
+    this._apply(_automaticTransaction)
+  }
+
+  static _apply(transaction) {
+    if(transaction._disableActions || transaction._animationDuration === 0){
+      transaction._animations.forEach((anim) => {
+        anim.target.setValueForKeyPath(anim.newValue, anim.keyPath)
+      })
+      if(transaction._completionBlock){
+        transaction._completionBlock()
+      }
+    }else{
+      const promises = []
+      transaction._animations.forEach((anim) => {
+        const promise = new Promise((resolve, reject) => {
+          const animation = new CABasicAnimation(anim.keyPath)
+          animation.toValue = anim.newValue
+          animation.timingFunction = transaction._animationTimingFunction
+          animation.duration = transaction._animationDuration
+          animation.isRemovedOnCompletion = true
+          animation.delegate = {
+            animationDidStop: (_anim, _finished) => {
+              if(_finished){
+                console.log(`animation completed: ${anim.keyPath}`)
+                anim.target.setValueForKeyPath(anim.newValue, anim.keyPath)
+                resolve(anim, animation)
+              }
+            }
+          }
+          anim.target.addAnimationForKey(animation, null)
+        })
+        promises.push(promise)
+      })
+      Promise.all(promises).then(() => {
+        if(transaction._completionBlock){
+          transaction._completionBlock()
+        }
+      })
+    }
   }
 
   // Overriding Animation Duration and Timing
@@ -66,7 +150,7 @@ export default class SCNTransaction extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scntransaction/1523888-animationduration
    */
   static get animationDuration() {
-    return _animationDuration
+    return this._currentTransaction._animationDuration
   }
   
   /**
@@ -76,7 +160,7 @@ export default class SCNTransaction extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scntransaction/1523888-animationduration
    */
   static set animationDuration(newValue) {
-    _animationDuration = newValue
+    this._currentTransaction._animationDuration = newValue
   }
 
   /**
@@ -86,7 +170,7 @@ export default class SCNTransaction extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scntransaction/1522614-animationtimingfunction
    */
   static get animationTimingFunction() {
-    return _animationTimingFunction
+    return this._currentTransaction._animationTimingFunction
   }
 
   /**
@@ -96,7 +180,7 @@ export default class SCNTransaction extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scntransaction/1522614-animationtimingfunction
    */
   static set animationTimingFunction(newValue) {
-    _animationTimingFunction = newValue
+    this._currentTransaction._animationTimingFunction = newValue
   }
 
   // Temporarily Disabling Property Animations
@@ -108,7 +192,7 @@ export default class SCNTransaction extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scntransaction/1524238-disableactions
    */
   static get disableActions() {
-    return _disableActions
+    return this._currentTransaction._disableActions
   }
 
   /**
@@ -118,7 +202,7 @@ export default class SCNTransaction extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scntransaction/1524238-disableactions
    */
   static set disableActions(newValue) {
-    _disableActions = newValue
+    this._currentTransaction._disableActions = newValue
   }
 
   // Getting and Setting Completion Block Objects
@@ -130,7 +214,7 @@ export default class SCNTransaction extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scntransaction/1523660-completionblock
    */
   static get completionBlock() {
-    return _completionBlock
+    return this._currentTransaction._completionBlock
   }
 
   /**
@@ -140,7 +224,7 @@ export default class SCNTransaction extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scntransaction/1523660-completionblock
    */
   static set completionBlock(newValue) {
-    _completionBlock = newValue
+    this._currentTransaction._completionBlock = newValue
   }
 
   // Managing Concurrency
@@ -161,6 +245,7 @@ _node.position = SCNVector3Make(_node.position.x, _node.position.y + 10, _node.p
    * @see https://developer.apple.com/reference/scenekit/scntransaction/1523078-lock
    */
   static lock() {
+    throw new Error('lock() is not implemented')
   }
 
   /**
@@ -171,6 +256,7 @@ _node.position = SCNVector3Make(_node.position.x, _node.position.y + 10, _node.p
    * @see https://developer.apple.com/reference/scenekit/scntransaction/1523166-unlock
    */
   static unlock() {
+    throw new Error('unlock() is not implemented')
   }
 
   // Getting and Setting Transaction Properties
@@ -185,6 +271,7 @@ _node.position = SCNVector3Make(_node.position.x, _node.position.y + 10, _node.p
    * @see https://developer.apple.com/reference/scenekit/scntransaction/1524124-setvalue
    */
   static setValueForKey(value, key) {
+    this._currentTransaction._values.set(key, value)
   }
 
   /**
@@ -196,6 +283,54 @@ _node.position = SCNVector3Make(_node.position.x, _node.position.y + 10, _node.p
    * @see https://developer.apple.com/reference/scenekit/scntransaction/1523919-value
    */
   static valueForKey(key) {
-    return null
+    for(let i=_transactions.length-1; i>=0; i--){
+      const value = _transactions[i]._values.get(key)
+      if(typeof value !== 'undefined'){
+        return value
+      }
+    }
+    return _automaticTransaction._values.get(key)
+  }
+
+  /**
+   * @access private
+   * @returns {_Transaction} -
+   */
+  static get _currentTransaction() {
+    if(_transactions.length > 0){
+      return _transactions[_transactions.length - 1]
+    }
+    return _automaticTransaction
+  }
+
+  static _addChange(target, keyPath, newValue) {
+    if(this._immediateMode){
+      target.setValueForKeyPath(newValue, keyPath)
+    }else{
+      this._currentTransaction._animations.push({
+        target: target,
+        keyPath: keyPath,
+        newValue: newValue
+      })
+    }
+  }
+
+  /**
+   * @access public
+   * @type {boolean}
+   */
+  static get immediateMode() {
+    if(_transactions.length > 0){
+      return false
+    }
+    return _immediateMode
+  }
+
+  /**
+   * @access public
+   * @type {boolean}
+   */
+  static set immediateMode(newValue) {
+    _immediateMode = newValue
   }
 }
