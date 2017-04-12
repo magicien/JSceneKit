@@ -38093,6 +38093,8 @@ module.exports =
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
+	/*global window*/
+
 	var _Option = {
 	  preferLowPowerDevice: 'SCNPreferLowPowerDeviceKey',
 	  preferredDevice: 'SCNPreferredDeviceKey',
@@ -38129,9 +38131,9 @@ module.exports =
 
 	    //super()
 
-	    if (frame === undefined) {
-	      frame = _CGRect2.default.rectWithXYWidthHeight(0, 0, 300, 300);
-	    }
+	    //if(frame === undefined){
+	    //  frame = CGRect.rectWithXYWidthHeight(0, 0, 300, 300)
+	    //}
 
 	    // Specifying a Scene
 
@@ -38291,12 +38293,12 @@ module.exports =
 	     * @access private
 	     * @type {HTMLCanvasElement}
 	     */
-	    // TODO: use extension of HTMLElement when it's supported.
-	    //this.width = frame.width
-	    //this.height = frame.height
 	    this._canvas = document.createElement('canvas');
-	    this._canvas.width = frame.width;
-	    this._canvas.height = frame.height;
+	    if (typeof frame === 'undefined') {
+	      frame = _CGRect2.default.rectWithXYWidthHeight(0, 0, 300, 300);
+	    }
+	    this._canvas.style.width = frame.width;
+	    this._canvas.style.height = frame.height;
 
 	    /**
 	     * @access private
@@ -38368,8 +38370,6 @@ module.exports =
 	        var name = _step.value;
 
 	        try {
-	          // TODO: use extension of HTMLElement when it's supported.
-	          //this._context = this.getContext(name, opt)
 	          this._context = this._canvas.getContext(name, opt);
 	        } catch (e) {/* just ignore and try the next name */}
 	        if (this._context) {
@@ -38395,6 +38395,11 @@ module.exports =
 	      throw new Error('can\'t create WebGL context');
 	    }
 	    this._context.viewport(frame.minX, frame.minY, frame.width, frame.height);
+	    console.log('before minX: ' + frame.minX);
+	    console.log('before minY: ' + frame.minY);
+	    console.log('before width: ' + frame.width);
+	    console.log('before height: ' + frame.height);
+
 	    this._context.clearColor(this.backgroundColor.r, this.backgroundColor.g, this.backgroundColor.b, this.backgroundColor.a);
 
 	    this._program = this._context.createProgram();
@@ -38484,6 +38489,27 @@ module.exports =
 	    value: function attributeChangedCallback() {}
 
 	    /**
+	     * @access private
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_resizeCanvas',
+	    value: function _resizeCanvas() {
+	      var w = this._canvas.clientWidth;
+	      var h = this._canvas.clientHeight;
+	      if (this._frame && this._frame.width === w && this._frame.height === h) {
+	        return;
+	      }
+
+	      this._frame = _CGRect2.default.rectWithXYWidthHeight(0, 0, w, h);
+	      this._canvas.width = w;
+	      this._canvas.height = h;
+	      this._context.viewport(0, 0, w, h);
+	      this._renderer._viewRect = this._frame;
+	    }
+
+	    /**
 	     *
 	     * @access public
 	     * @param {HTMLElement} element - parent element to append this view
@@ -38493,9 +38519,24 @@ module.exports =
 	  }, {
 	    key: 'appendTo',
 	    value: function appendTo(element) {
-	      // TODO: use extension of HTMLElement when it's supported.
-	      //element.appendChild(this)
+	      var _this2 = this;
+
 	      element.appendChild(this._canvas);
+
+	      // update canvas size
+	      if (typeof this._frame === 'undefined') {
+	        this._canvas.style.width = '100%';
+	        this._canvas.style.height = '100%';
+	        if (this._canvas.clientHeight <= 0) {
+	          this._canvas.style.height = 300;
+	        }
+	      }
+	      this._resizeCanvas();
+	      if (typeof window !== 'undefined') {
+	        window.addEventListener('resize', function () {
+	          _this2._resizeCanvas();
+	        });
+	      }
 	    }
 	  }, {
 	    key: 'pause',
@@ -38863,17 +38904,17 @@ module.exports =
 	  }, {
 	    key: '__requestAnimationFrame',
 	    value: function __requestAnimationFrame() {
-	      var _this2 = this;
+	      var _this3 = this;
 
 	      // Reflect.apply(this._requestAnimationFrame, window, () => {
 	      this._requestAnimationFrame.call(window, function () {
-	        _this2._currentSystemTime = Date.now() * 0.001;
-	        _this2.currentTime = _this2._currentSystemTime;
-	        _this2._drawAtTimeWithContext(_this2.currentTime, _this2._context);
+	        _this3._currentSystemTime = Date.now() * 0.001;
+	        _this3.currentTime = _this3._currentSystemTime;
+	        _this3._drawAtTimeWithContext(_this3.currentTime, _this3._context);
 	        //console.log('requestAnimationFrame: time: ' + this.currentTime)
 
-	        if (_this2._isPlaying) {
-	          _this2.__requestAnimationFrame();
+	        if (_this3._isPlaying) {
+	          _this3.__requestAnimationFrame();
 	        }
 	      });
 	    }
@@ -38885,7 +38926,7 @@ module.exports =
 	  }, {
 	    key: '_updateMorph',
 	    value: function _updateMorph(node) {
-	      var _this3 = this;
+	      var _this4 = this;
 
 	      if (typeof node === 'undefined') {
 	        this._updateMorph(this._scene.rootNode);
@@ -38895,7 +38936,7 @@ module.exports =
 	        node.morpher._morph(node);
 	      }
 	      node.childNodes.forEach(function (child) {
-	        _this3._updateMorph(child);
+	        _this4._updateMorph(child);
 	      });
 	    }
 	  }, {
@@ -38912,19 +38953,19 @@ module.exports =
 	  }, {
 	    key: '_runAnimationForNode',
 	    value: function _runAnimationForNode(node) {
-	      var _this4 = this;
+	      var _this5 = this;
 
 	      this._runAnimationForObject(node);
 	      node.childNodes.forEach(function (child) {
-	        return _this4._runAnimationForNode(child);
+	        return _this5._runAnimationForNode(child);
 	      });
 	      if (node.geometry) {
 	        this._runAnimationForObject(node.geometry);
 	        node.geometry.materials.forEach(function (material) {
-	          _this4._runAnimationForObject(material);
+	          _this5._runAnimationForObject(material);
 	          var properties = [material._diffuse, material._ambient, material._specular, material._normal, material._reflective, material._emission, material._transparent, material._multiply, material._ambientOcclusion, material._selfIllumination, material._metalness, material._roughness];
 	          properties.forEach(function (prop) {
-	            _this4._runAnimationForObject(prop);
+	            _this5._runAnimationForObject(prop);
 	          });
 	        });
 	      }
@@ -38932,11 +38973,11 @@ module.exports =
 	  }, {
 	    key: '_runAnimationForObject',
 	    value: function _runAnimationForObject(obj, time) {
-	      var _this5 = this;
+	      var _this6 = this;
 
 	      var deleteKeys = [];
 	      obj._animations.forEach(function (animation, key) {
-	        animation._applyAnimation(obj, _this5.currentTime);
+	        animation._applyAnimation(obj, _this6.currentTime);
 	        if (animation._isFinished && animation.isRemovedOnCompletion) {
 	          deleteKeys.push(key);
 	        }

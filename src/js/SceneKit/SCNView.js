@@ -14,6 +14,7 @@ import SCNMatrix4 from './SCNMatrix4'
 import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
 import SCNVector4 from './SCNVector4'
 import SKColor from '../SpriteKit/SKColor'
+/*global window*/
 
 const _Option = {
   preferLowPowerDevice: 'SCNPreferLowPowerDeviceKey',
@@ -44,9 +45,9 @@ export default class SCNView {
   constructor(frame, options = null) {
     //super()
 
-    if(frame === undefined){
-      frame = CGRect.rectWithXYWidthHeight(0, 0, 300, 300)
-    }
+    //if(frame === undefined){
+    //  frame = CGRect.rectWithXYWidthHeight(0, 0, 300, 300)
+    //}
 
     // Specifying a Scene
 
@@ -209,12 +210,12 @@ export default class SCNView {
      * @access private
      * @type {HTMLCanvasElement}
      */
-    // TODO: use extension of HTMLElement when it's supported.
-    //this.width = frame.width
-    //this.height = frame.height
     this._canvas = document.createElement('canvas')
-    this._canvas.width = frame.width
-    this._canvas.height = frame.height
+    if(typeof frame === 'undefined'){
+      frame = CGRect.rectWithXYWidthHeight(0, 0, 300, 300)
+    }
+    this._canvas.style.width = frame.width
+    this._canvas.style.height = frame.height
 
     /**
      * @access private
@@ -282,8 +283,6 @@ export default class SCNView {
     const contextNames = ['webgl2']
     for(const name of contextNames){
       try{
-        // TODO: use extension of HTMLElement when it's supported.
-        //this._context = this.getContext(name, opt)
         this._context = this._canvas.getContext(name, opt)
       }catch(e){ /* just ignore and try the next name */ }
       if(this._context){
@@ -294,6 +293,11 @@ export default class SCNView {
       throw new Error('can\'t create WebGL context')
     }
     this._context.viewport(frame.minX, frame.minY, frame.width, frame.height)
+    console.log(`before minX: ${frame.minX}`)
+    console.log(`before minY: ${frame.minY}`)
+    console.log(`before width: ${frame.width}`)
+    console.log(`before height: ${frame.height}`)
+
     this._context.clearColor(
       this.backgroundColor.r,
       this.backgroundColor.g,
@@ -375,7 +379,7 @@ export default class SCNView {
       const ev = this._createEvent(e)
       this.keyUpWith(ev)
     })
-      
+
   }
 
   connectedCallback() {
@@ -388,15 +392,46 @@ export default class SCNView {
   }
 
   /**
+   * @access private
+   * @returns {void}
+   */
+  _resizeCanvas() {
+    const w = this._canvas.clientWidth
+    const h = this._canvas.clientHeight
+    if(this._frame && this._frame.width === w && this._frame.height === h){
+      return
+    }
+      
+    this._frame = CGRect.rectWithXYWidthHeight(0, 0, w, h)
+    this._canvas.width = w
+    this._canvas.height = h
+    this._context.viewport(0, 0, w, h)
+    this._renderer._viewRect = this._frame
+  }
+
+  /**
    *
    * @access public
    * @param {HTMLElement} element - parent element to append this view
    * @returns {void}
    */
   appendTo(element) {
-    // TODO: use extension of HTMLElement when it's supported.
-    //element.appendChild(this)
     element.appendChild(this._canvas)
+
+    // update canvas size
+    if(typeof this._frame === 'undefined'){
+      this._canvas.style.width = '100%'
+      this._canvas.style.height = '100%'
+      if(this._canvas.clientHeight <= 0){
+        this._canvas.style.height = 300
+      }
+    }
+    this._resizeCanvas()
+    if(typeof window !== 'undefined'){
+      window.addEventListener('resize', () => {
+        this._resizeCanvas()
+      })
+    }
   }
 
   get backgroundColor() {
