@@ -22762,13 +22762,13 @@ module.exports =
 	 * @access private
 	 * @type {string}
 	 */
-	var _defaultVertexShader = '#version 300 es\n  precision mediump float;\n\n  uniform mat4 viewTransform;\n  uniform mat4 viewProjectionTransform;\n\n  uniform vec4 lightAmbient;\n  uniform vec4 lightDiffuse;\n  uniform vec3 lightDirection;\n\n  uniform vec4 materialAmbient;\n  uniform vec4 materialDiffuse;\n  //uniform vec4 materialSpecular;\n  uniform vec4 materialEmission;\n\n  //uniform mat3x4[255] skinningJoints;\n  uniform vec4[765] skinningJoints;\n  //uniform bool useSkinner;\n  uniform int numSkinningJoints;\n\n  in vec3 position;\n  in vec3 normal;\n  in vec2 texcoord;\n  in vec4 boneIndices;\n  in vec4 boneWeights;\n\n  out vec3 v_position;\n  out vec3 v_normal;\n  out vec2 v_texcoord;\n  out vec4 v_color;\n  //out vec3 v_eye;\n\n  void main() {\n    vec3 pos = vec3(0, 0, 0);\n    vec3 nom = vec3(0, 0, 0);\n    if(numSkinningJoints > 0){\n      for(int i=0; i<numSkinningJoints; i++){\n        float weight = boneWeights[i];\n        if(int(boneIndices[i]) < 0){\n          continue;\n        }\n        int idx = int(boneIndices[i]) * 3;\n        mat4 jointMatrix = transpose(mat4(skinningJoints[idx],\n                                          skinningJoints[idx+1],\n                                          skinningJoints[idx+2],\n                                          vec4(0, 0, 0, 1)));\n        pos += (jointMatrix * vec4(position, 1.0)).xyz * weight;\n        nom += (mat3(jointMatrix) * normal) * weight;\n      }\n    }else{\n      mat4 jointMatrix = transpose(mat4(skinningJoints[0],\n                                        skinningJoints[1],\n                                        skinningJoints[2],\n                                        vec4(0, 0, 0, 1)));\n      pos = (jointMatrix * vec4(position, 1.0)).xyz;\n      nom = mat3(jointMatrix) * normal;\n    }\n    v_position = pos;\n    v_normal = nom;\n\n    //v_eye = viewTransform * vec4(pos, 1.0).xyz;\n    //vec3 viewPos = vec3(-viewTransform[0][3], -viewTransform[1][3], -viewTransform[2][3]);\n    //vec3 viewVec = normalize(vec3(viewPos - pos));\n    // FIXME: normalize it in JavaScript\n    vec3 lightVec = normalize(-lightDirection);\n\n    float diffuse = dot(lightVec, nom);\n\n    v_color = lightAmbient * materialAmbient;\n    if(diffuse > 0.0){\n      //vec3 halfway = normalize(lightVec + viewVec);\n      //float specular = pow(max(dot(nom, halfway), 0.0), shininess);\n      //v_color += lightSpecular * materialSpecular * specular;\n      v_color += lightDiffuse * materialDiffuse * diffuse;\n    }\n    v_color += materialEmission;\n\n    //v_color = materialDiffuse;\n    v_texcoord = texcoord;\n    gl_Position = viewProjectionTransform * vec4(pos, 1.0);\n  }\n';
+	var _defaultVertexShader = '#version 300 es\n  precision mediump float;\n\n  uniform mat4 viewTransform;\n  uniform mat4 viewProjectionTransform;\n\n  uniform vec4 lightAmbient;\n  uniform vec3 lightPosition;\n  //uniform vec3 lightDirection;\n\n  uniform vec4 materialAmbient;\n  uniform vec4 materialEmission;\n\n  //uniform mat3x4[255] skinningJoints;\n  uniform vec4[765] skinningJoints;\n  uniform int numSkinningJoints;\n\n  in vec3 position;\n  in vec3 normal;\n  in vec2 texcoord;\n  in vec4 boneIndices;\n  in vec4 boneWeights;\n\n  out vec3 v_position;\n  out vec3 v_normal;\n  out vec2 v_texcoord;\n  out vec4 v_color;\n  out vec3 v_eye;\n  out vec3 v_light;\n\n  void main() {\n    vec3 pos = vec3(0, 0, 0);\n    vec3 nom = vec3(0, 0, 0);\n    if(numSkinningJoints > 0){\n      for(int i=0; i<numSkinningJoints; i++){\n        float weight = boneWeights[i];\n        if(int(boneIndices[i]) < 0){\n          continue;\n        }\n        int idx = int(boneIndices[i]) * 3;\n        mat4 jointMatrix = transpose(mat4(skinningJoints[idx],\n                                          skinningJoints[idx+1],\n                                          skinningJoints[idx+2],\n                                          vec4(0, 0, 0, 1)));\n        pos += (jointMatrix * vec4(position, 1.0)).xyz * weight;\n        nom += (mat3(jointMatrix) * normal) * weight;\n      }\n    }else{\n      mat4 jointMatrix = transpose(mat4(skinningJoints[0],\n                                        skinningJoints[1],\n                                        skinningJoints[2],\n                                        vec4(0, 0, 0, 1)));\n      pos = (jointMatrix * vec4(position, 1.0)).xyz;\n      nom = mat3(jointMatrix) * normal;\n    }\n    v_position = pos;\n    v_normal = nom;\n\n    vec3 viewPos = vec3(-viewTransform[3][0], -viewTransform[3][1], -viewTransform[3][2]);\n    v_eye = viewPos - pos;\n    v_light = lightPosition - pos;\n    v_color = lightAmbient * materialAmbient;\n    v_color += materialEmission;\n\n    v_texcoord = texcoord;\n    gl_Position = viewProjectionTransform * vec4(pos, 1.0);\n  }\n';
 
 	/**
 	 * @access private
 	 * @type {string}
 	 */
-	var _defaultFragmentShader = '#version 300 es\n  precision mediump float;\n\n  uniform sampler2D u_emissionTexture;\n  uniform bool u_useEmissionTexture;\n  uniform sampler2D u_ambientTexture;\n  uniform bool u_useAmbientTexture;\n  uniform sampler2D u_diffuseTexture;\n  uniform bool u_useDiffuseTexture;\n  uniform sampler2D u_specularTexture;\n  uniform bool u_useSpecularTexture;\n  uniform sampler2D u_reflectiveTexture;\n  uniform bool u_useReflectiveTexture;\n  uniform sampler2D u_transparentTexture;\n  uniform bool u_useTransparentTexture;\n  uniform sampler2D u_multiplyTexture;\n  uniform bool u_useMultiplyTexture;\n  uniform sampler2D u_normalTexture;\n  uniform bool u_useNormalTexture;\n\n  uniform mat4 viewTransform;\n  uniform vec3 lightDirection;\n  uniform vec4 materialSpecular;\n  uniform float materialShininess;\n\n  in vec3 v_position;\n  in vec3 v_normal;\n  in vec2 v_texcoord;\n  in vec4 v_color;\n  //in vec3 v_eye;\n\n  out vec4 outColor;\n\n  void main() {\n    if(u_useDiffuseTexture){\n      vec4 color = texture(u_diffuseTexture, v_texcoord);\n      outColor = color * v_color;\n    }else{\n      outColor = v_color;\n    }\n\n    // FIXME: normalize it in JavaScript\n    vec3 lightVec = normalize(-lightDirection);\n    vec3 nom = normalize(v_normal);\n    if(dot(lightVec, nom) > 0.0f){\n      vec3 viewPos = vec3(-viewTransform[0][3], -viewTransform[1][3], -viewTransform[2][3]);\n      vec3 viewVec = normalize(vec3(viewPos - v_position));\n      vec3 halfway = normalize(lightVec + viewVec);\n      float specularLight = pow(max(dot(halfway, nom), 0.0), materialShininess);\n      outColor += materialSpecular * specularLight; // TODO: get the light color of specular\n    }\n  }\n';
+	var _defaultFragmentShader = '#version 300 es\n  precision mediump float;\n\n  uniform sampler2D u_emissionTexture;\n  uniform bool u_useEmissionTexture;\n  uniform sampler2D u_ambientTexture;\n  uniform bool u_useAmbientTexture;\n  uniform sampler2D u_diffuseTexture;\n  uniform bool u_useDiffuseTexture;\n  uniform sampler2D u_specularTexture;\n  uniform bool u_useSpecularTexture;\n  uniform sampler2D u_reflectiveTexture;\n  uniform bool u_useReflectiveTexture;\n  uniform sampler2D u_transparentTexture;\n  uniform bool u_useTransparentTexture;\n  uniform sampler2D u_multiplyTexture;\n  uniform bool u_useMultiplyTexture;\n  uniform sampler2D u_normalTexture;\n  uniform bool u_useNormalTexture;\n\n  uniform mat4 viewTransform;\n  //uniform vec3 lightDirection;\n  uniform vec4 lightDiffuse;\n  uniform vec4 materialDiffuse;\n  uniform vec4 materialSpecular;\n  uniform float materialShininess;\n\n  in vec3 v_position;\n  in vec3 v_normal;\n  in vec2 v_texcoord;\n  in vec4 v_color;\n  in vec3 v_eye;\n  in vec3 v_light;\n\n  out vec4 outColor;\n\n  void main() {\n    outColor = v_color;\n\n    vec3 lightVec = normalize(v_light);\n    vec3 viewVec = normalize(v_eye);\n    vec3 nom = normalize(v_normal);\n\n    // diffuse\n    float diffuse = clamp(dot(lightVec, nom), 0.0f, 1.0f);\n    outColor += lightDiffuse * materialDiffuse * diffuse;\n\n    // specular\n    if(diffuse > 0.0f){\n      vec3 halfVec = normalize(lightVec + viewVec);\n      float specular = pow(dot(halfVec, nom), materialShininess);\n      outColor += materialSpecular * specular; // TODO: get the light color of specular\n    }\n\n    // diffuse texture\n    if(u_useDiffuseTexture){\n      vec4 color = texture(u_diffuseTexture, v_texcoord);\n      outColor = color * outColor;\n    }\n\n  }\n';
 
 	var _defaultCameraDistance = 15;
 
@@ -22963,6 +22963,7 @@ module.exports =
 	    _this._defaultCameraPosNode = new _SCNNode2.default();
 	    _this._defaultCameraRotNode = new _SCNNode2.default();
 	    _this._defaultCameraNode = new _SCNNode2.default();
+	    _this._defaultCameraNode.name = 'kSCNFreeViewCameraName';
 
 	    var camera = new _SCNCamera2.default();
 	    _this._defaultCameraNode.camera = camera;
@@ -23096,6 +23097,7 @@ module.exports =
 	        if (light.type === _SCNLight2.default.LightType.directional || light.type === _SCNLight2.default.LightType.omni) {
 	          hasDiffuse = true;
 	          gl.uniform4fv(gl.getUniformLocation(program, 'lightDiffuse'), light.color.float32Array());
+	          gl.uniform3fv(gl.getUniformLocation(program, 'lightPosition'), lightNode._worldTranslation.float32Array());
 	        }
 	      });
 	      if (!hasAmbient) {
@@ -23103,11 +23105,12 @@ module.exports =
 	      }
 	      if (!hasDiffuse) {
 	        gl.uniform4fv(gl.getUniformLocation(program, 'lightDiffuse'), _SKColor2.default.black.float32Array());
+	        gl.uniform3fv(gl.getUniformLocation(program, 'lightPosition'), new Float32Array([0, 1000, 0]));
 	      }
 
 	      // FIXME: use uniform var 
-	      var lightDirection = new Float32Array([0, -0.9, -0.1]);
-	      gl.uniform3fv(gl.getUniformLocation(program, 'lightDirection'), lightDirection);
+	      //const lightDirection = new Float32Array([0, -0.9, -0.1])
+	      //gl.uniform3fv(gl.getUniformLocation(program, 'lightDirection'), lightDirection)
 
 	      var renderingArray = this._createRenderingNodeArray();
 	      renderingArray.forEach(function (node) {
@@ -30395,7 +30398,7 @@ module.exports =
 	        if (this.yFov > 0) {
 	          yfov = this.yFov;
 	        }
-	        // FIXME: use xFov
+	        // FIXME: check xFov
 
 	        var cot = 1.0 / Math.tan(yfov * Math.PI / 360.0);
 	        m.m11 = cot / aspect;

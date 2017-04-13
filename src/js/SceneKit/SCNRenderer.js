@@ -37,17 +37,14 @@ const _defaultVertexShader =
   uniform mat4 viewProjectionTransform;
 
   uniform vec4 lightAmbient;
-  uniform vec4 lightDiffuse;
-  uniform vec3 lightDirection;
+  uniform vec3 lightPosition;
+  //uniform vec3 lightDirection;
 
   uniform vec4 materialAmbient;
-  uniform vec4 materialDiffuse;
-  //uniform vec4 materialSpecular;
   uniform vec4 materialEmission;
 
   //uniform mat3x4[255] skinningJoints;
   uniform vec4[765] skinningJoints;
-  //uniform bool useSkinner;
   uniform int numSkinningJoints;
 
   in vec3 position;
@@ -60,7 +57,8 @@ const _defaultVertexShader =
   out vec3 v_normal;
   out vec2 v_texcoord;
   out vec4 v_color;
-  //out vec3 v_eye;
+  out vec3 v_eye;
+  out vec3 v_light;
 
   void main() {
     vec3 pos = vec3(0, 0, 0);
@@ -90,24 +88,12 @@ const _defaultVertexShader =
     v_position = pos;
     v_normal = nom;
 
-    //v_eye = viewTransform * vec4(pos, 1.0).xyz;
-    //vec3 viewPos = vec3(-viewTransform[0][3], -viewTransform[1][3], -viewTransform[2][3]);
-    //vec3 viewVec = normalize(vec3(viewPos - pos));
-    // FIXME: normalize it in JavaScript
-    vec3 lightVec = normalize(-lightDirection);
-
-    float diffuse = dot(lightVec, nom);
-
+    vec3 viewPos = vec3(-viewTransform[3][0], -viewTransform[3][1], -viewTransform[3][2]);
+    v_eye = viewPos - pos;
+    v_light = lightPosition - pos;
     v_color = lightAmbient * materialAmbient;
-    if(diffuse > 0.0){
-      //vec3 halfway = normalize(lightVec + viewVec);
-      //float specular = pow(max(dot(nom, halfway), 0.0), shininess);
-      //v_color += lightSpecular * materialSpecular * specular;
-      v_color += lightDiffuse * materialDiffuse * diffuse;
-    }
     v_color += materialEmission;
 
-    //v_color = materialDiffuse;
     v_texcoord = texcoord;
     gl_Position = viewProjectionTransform * vec4(pos, 1.0);
   }
@@ -139,7 +125,9 @@ const _defaultFragmentShader =
   uniform bool u_useNormalTexture;
 
   uniform mat4 viewTransform;
-  uniform vec3 lightDirection;
+  //uniform vec3 lightDirection;
+  uniform vec4 lightDiffuse;
+  uniform vec4 materialDiffuse;
   uniform vec4 materialSpecular;
   uniform float materialShininess;
 
@@ -147,28 +135,35 @@ const _defaultFragmentShader =
   in vec3 v_normal;
   in vec2 v_texcoord;
   in vec4 v_color;
-  //in vec3 v_eye;
+  in vec3 v_eye;
+  in vec3 v_light;
 
   out vec4 outColor;
 
   void main() {
-    if(u_useDiffuseTexture){
-      vec4 color = texture(u_diffuseTexture, v_texcoord);
-      outColor = color * v_color;
-    }else{
-      outColor = v_color;
+    outColor = v_color;
+
+    vec3 lightVec = normalize(v_light);
+    vec3 viewVec = normalize(v_eye);
+    vec3 nom = normalize(v_normal);
+
+    // diffuse
+    float diffuse = clamp(dot(lightVec, nom), 0.0f, 1.0f);
+    outColor += lightDiffuse * materialDiffuse * diffuse;
+
+    // specular
+    if(diffuse > 0.0f){
+      vec3 halfVec = normalize(lightVec + viewVec);
+      float specular = pow(dot(halfVec, nom), materialShininess);
+      outColor += materialSpecular * specular; // TODO: get the light color of specular
     }
 
-    // FIXME: normalize it in JavaScript
-    vec3 lightVec = normalize(-lightDirection);
-    vec3 nom = normalize(v_normal);
-    if(dot(lightVec, nom) > 0.0f){
-      vec3 viewPos = vec3(-viewTransform[0][3], -viewTransform[1][3], -viewTransform[2][3]);
-      vec3 viewVec = normalize(vec3(viewPos - v_position));
-      vec3 halfway = normalize(lightVec + viewVec);
-      float specularLight = pow(max(dot(halfway, nom), 0.0), materialShininess);
-      outColor += materialSpecular * specularLight; // TODO: get the light color of specular
+    // diffuse texture
+    if(u_useDiffuseTexture){
+      vec4 color = texture(u_diffuseTexture, v_texcoord);
+      outColor = color * outColor;
     }
+
   }
 `
 
@@ -360,6 +355,7 @@ export default class SCNRenderer extends NSObject {
     this._defaultCameraPosNode = new SCNNode()
     this._defaultCameraRotNode = new SCNNode()
     this._defaultCameraNode = new SCNNode()
+    this._defaultCameraNode.name = 'kSCNFreeViewCameraName'
 
     const camera = new SCNCamera()
     this._defaultCameraNode.camera = camera
@@ -483,6 +479,7 @@ export default class SCNRenderer extends NSObject {
         || light.type === SCNLight.LightType.omni){
         hasDiffuse = true
         gl.uniform4fv(gl.getUniformLocation(program, 'lightDiffuse'), light.color.float32Array())
+        gl.uniform3fv(gl.getUniformLocation(program, 'lightPosition'), lightNode._worldTranslation.float32Array())
       }
     })
     if(!hasAmbient){
@@ -490,11 +487,14 @@ export default class SCNRenderer extends NSObject {
     }
     if(!hasDiffuse){
       gl.uniform4fv(gl.getUniformLocation(program, 'lightDiffuse'), SKColor.black.float32Array())
+      gl.uniform3fv(gl.getUniformLocation(program, 'lightPosition'), 
+        new Float32Array([0, 1000, 0])
+      )
     }
 
     // FIXME: use uniform var 
-    const lightDirection = new Float32Array([0, -0.9, -0.1])
-    gl.uniform3fv(gl.getUniformLocation(program, 'lightDirection'), lightDirection)
+    //const lightDirection = new Float32Array([0, -0.9, -0.1])
+    //gl.uniform3fv(gl.getUniformLocation(program, 'lightDirection'), lightDirection)
 
     const renderingArray = this._createRenderingNodeArray()
     renderingArray.forEach((node) => {
