@@ -680,7 +680,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
       ...material.diffuse.float32Array(),
       ...material.specular.float32Array(),
       ...material.emission.float32Array(),
-      material.shininess, 0, 0, 0 // needs padding for 16-byte align
+      material.shininess * 100.0, 0, 0, 0 // needs padding for 16-byte align
     ])
     gl.bindBuffer(gl.UNIFORM_BUFFER, this._materialBuffer)
     gl.bufferData(gl.UNIFORM_BUFFER, materialData, gl.DYNAMIC_DRAW)

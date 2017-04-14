@@ -22137,7 +22137,7 @@ module.exports =
 
 	      // TODO: move this function to SCNProgram
 	      var material = this.materials[index];
-	      var materialData = new Float32Array([].concat(_toConsumableArray(material.ambient.float32Array()), _toConsumableArray(material.diffuse.float32Array()), _toConsumableArray(material.specular.float32Array()), _toConsumableArray(material.emission.float32Array()), [material.shininess, 0, 0, 0 // needs padding for 16-byte align
+	      var materialData = new Float32Array([].concat(_toConsumableArray(material.ambient.float32Array()), _toConsumableArray(material.diffuse.float32Array()), _toConsumableArray(material.specular.float32Array()), _toConsumableArray(material.emission.float32Array()), [material.shininess * 100.0, 0, 0, 0 // needs padding for 16-byte align
 	      ]));
 	      gl.bindBuffer(gl.UNIFORM_BUFFER, this._materialBuffer);
 	      gl.bufferData(gl.UNIFORM_BUFFER, materialData, gl.DYNAMIC_DRAW);
