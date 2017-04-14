@@ -96,6 +96,7 @@ export default class SCNGeometry extends NSObject {
     this._geometrySources = sources
     this._vertexArrayObjects = null
     this._materialBuffer = null
+    //this._textureFlagBuffer = null
 
     // Working with Subdivision Surfaces
 
@@ -584,18 +585,6 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     //console.log(`offset: ${offset}, vectorCount: ${vectorCount}`)
     offset *= vectorCount
 
-    // FIXME: check if each source needs to update
-    //if(update){
-    //  const vertexSubData = new Float32Array(arr)
-      // void gl.bufferSubData(target, dstByteOffset, ArrayBufferView srcData, srcOffset, length)
-      //gl.bufferSubData(gl.ARRAY_BUFFER, 0, vertexSubData, 0, arr.length)
-      //gl.bufferSubData(gl.ARRAY_BUFFER, 0, this._hoge, 0, arr.length)
-      //for(let i=0; i<arr.length; i++){
-      //  console.log(`morph ${this._hoge[i]} => ${arr[i]}`)
-      //}
-    //  return this._vertexBuffer
-    //}
-
     const indexArray = indexSource ? indexSource.data : null
     const indexComponents = indexSource ? indexSource.componentsPerVector : 0
     const weightArray = weightSource ? weightSource.data : null
@@ -664,7 +653,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
 
   /**
    * @access private
-   * @param {WebGLContext} gl -
+   * @param {WebGLRenderingContext} gl -
    * @param {SCNGeometry} baseGeometry - 
    * @returns {void}
    */
@@ -678,11 +667,13 @@ This method is for OpenGL shader programs only. To bind custom variable data for
 
   /**
    * @access private
-   * @param {WebGLContext} gl -
+   * @param {WebGLRenderingContext} gl -
+   * @param {WebGLProgram} program -
    * @param {number} index - material index
    * @returns {void}
    */
-  _bufferMaterialData(gl, index) {
+  _bufferMaterialData(gl, program, index) {
+    // TODO: move this function to SCNProgram
     const material = this.materials[index]
     const materialData = new Float32Array([
       ...material.ambient.float32Array(),
@@ -691,11 +682,42 @@ This method is for OpenGL shader programs only. To bind custom variable data for
       ...material.emission.float32Array(),
       material.shininess, 0, 0, 0 // needs padding for 16-byte align
     ])
-    //console.log(`buffer: ${this._materialBuffer}`)
-    //console.log(`bufferMaterialData: ${materialData}`)
     gl.bindBuffer(gl.UNIFORM_BUFFER, this._materialBuffer)
     gl.bufferData(gl.UNIFORM_BUFFER, materialData, gl.DYNAMIC_DRAW)
     gl.bindBuffer(gl.UNIFORM_BUFFER, null)
+
+    const textureFlags = []
+    const textures = [
+      { name: 'emission', symbol: 'TEXTURE0' },
+      { name: 'ambient', symbol: 'TEXTURE1' },
+      { name: 'diffuse', symbol: 'TEXTURE2' },
+      { name: 'specular', symbol: 'TEXTURE3' },
+      { name: 'reflective', symbol: 'TEXTURE4' },
+      { name: 'transparent', symbol: 'TEXTURE5' },
+      { name: 'multiply', symbol: 'TEXTURE6' },
+      { name: 'normal', symbol: 'TEXTURE7' }
+    ]
+    textures.forEach((texture) => {
+      const m = material[texture.name]
+      if(m._contents instanceof Image){
+        console.log(`create texture ${texture.name} ${m}`)
+        m._contents = this._createTexture(gl, m._contents)
+      }
+      if(m._contents instanceof WebGLTexture){
+        console.log(`WebGLTexture ${gl[texture.symbol]} ${m._contents}`)
+        textureFlags.push(1)
+        gl.activeTexture(gl[texture.symbol]) // FIXME: use m._contents.mappingChannel
+        gl.bindTexture(gl.TEXTURE_2D, m._contents)
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, m._magnificationFilterFor(gl))
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, m._minificationFilterFor(gl))
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, m._wrapSFor(gl))
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, m._wrapTFor(gl))
+      }else{
+        textureFlags.push(0)
+      }
+    })
+    // TODO: cache uniform location
+    gl.uniform1iv(gl.getUniformLocation(program, 'textureFlags'), new Int32Array(textureFlags))
   }
 
   copy() {
@@ -719,4 +741,23 @@ This method is for OpenGL shader programs only. To bind custom variable data for
 
     return geometry
   }
+
+  _createTexture(gl, image) {
+    const texture = gl.createTexture()
+
+    const canvas = document.createElement('canvas')
+    canvas.width = image.naturalWidth
+    canvas.height = image.naturalHeight
+    console.warn(`image size: ${image.naturalWidth} ${image.naturalHeight}`)
+    canvas.getContext('2d').drawImage(image, 0, 0)
+
+    gl.bindTexture(gl.TEXTURE_2D, texture)
+    // texImage2D(target, level, internalformat, width, height, border, format, type, source)
+    // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, image.width, image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas)
+    gl.generateMipmap(gl.TEXTURE_2D)
+    gl.bindTexture(gl.TEXTURE_2D, null)
+    return texture
+  }
+
 }

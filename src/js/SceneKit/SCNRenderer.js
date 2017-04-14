@@ -21,12 +21,6 @@ import SCNHitTestResult from './SCNHitTestResult'
 
 /**
  * @access private
- * @type {SCNProgram}
- */
-//let __defaultProgram = null
-
-/**
- * @access private
  * @type {string}
  */
 const _defaultVertexShader = 
@@ -84,16 +78,6 @@ const _defaultVertexShader =
     __LIGHT_DEFINITION__
   } light;
   __VS_LIGHT_VARS__
-  /*
-  layout (std140) uniform lightUniform {
-    AmbientLight ambient[NUM_AMBIENT_LIGHTS];
-    DirectionalLight directional[NUM_DIRECTIONAL_LIGHTS];
-    OmniLight omni[NUM_OMNI_LIGHTS];
-    ProbeLight probe[NUM_PROBE_LIGHTS];
-    SpotLight spot[NUM_SPOT_LIGHTS];
-  } light;
-  out vec3 v_light[NUM_DIRECTIONAL_LIGHTS + NUM_OMNI_LIGHTS];
-  */
 
   //uniform mat3x4[255] skinningJoints;
   uniform vec4[765] skinningJoints;
@@ -195,22 +179,24 @@ const _defaultFragmentShader =
  `#version 300 es
   precision mediump float;
 
+  uniform bool[8] textureFlags;
+  #define TEXTURE_EMISSION_INDEX 0
+  #define TEXTURE_AMBIENT_INDEX 1
+  #define TEXTURE_DIFFUSE_INDEX 2
+  #define TEXTURE_SPECULAR_INDEX 3
+  #define TEXTURE_REFLECTIVE_INDEX 4
+  #define TEXTURE_TRANSPARENT_INDEX 5
+  #define TEXTURE_MULTIPLY_INDEX 6
+  #define TEXTURE_NORMAL_INDEX 7
+
   uniform sampler2D u_emissionTexture;
-  uniform bool u_useEmissionTexture;
   uniform sampler2D u_ambientTexture;
-  uniform bool u_useAmbientTexture;
   uniform sampler2D u_diffuseTexture;
-  uniform bool u_useDiffuseTexture;
   uniform sampler2D u_specularTexture;
-  uniform bool u_useSpecularTexture;
   uniform sampler2D u_reflectiveTexture;
-  uniform bool u_useReflectiveTexture;
   uniform sampler2D u_transparentTexture;
-  uniform bool u_useTransparentTexture;
   uniform sampler2D u_multiplyTexture;
-  uniform bool u_useMultiplyTexture;
   uniform sampler2D u_normalTexture;
-  uniform bool u_useNormalTexture;
 
   #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__
   #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__
@@ -255,16 +241,6 @@ const _defaultFragmentShader =
     __LIGHT_DEFINITION__
   } light;
   __FS_LIGHT_VARS__
-  /*
-  layout (std140) uniform lightUniform {
-    AmbientLight ambient[NUM_AMBIENT_LIGHTS];
-    DirectionalLight directional[NUM_DIRECTIONAL_LIGHTS];
-    OmniLight omni[NUM_OMNI_LIGHTS];
-    ProbeLight probe[NUM_PROBE_LIGHTS];
-    SpotLight spot[NUM_SPOT_LIGHTS];
-  } light;
-  in vec3 v_light[NUM_DIRECTIONAL_LIGHTS + NUM_OMNI_LIGHTS];
-  */
 
   in vec3 v_position;
   in vec3 v_normal;
@@ -285,7 +261,7 @@ const _defaultFragmentShader =
     __FS_LIGHTING__
     
     // diffuse texture
-    if(u_useDiffuseTexture){
+    if(textureFlags[TEXTURE_DIFFUSE_INDEX]){
       vec4 color = texture(u_diffuseTexture, v_texcoord);
       outColor = color * outColor;
     }
@@ -302,6 +278,7 @@ const _fsDirectional = `
     float diffuse = clamp(dot(lightVec, nom), 0.0f, 1.0f);
     outColor += light.directional[i].color * material.diffuse * diffuse;
 
+    // specular
     if(diffuse > 0.0f){
       vec3 halfVec = normalize(lightVec + viewVec);
       float specular = pow(dot(halfVec, nom), material.shininess);
@@ -313,10 +290,12 @@ const _fsDirectional = `
 
 const _fsOmni = `
   for(int i=0; i<NUM_OMNI_LIGHTS; i++){
+    // diffuse
     vec3 lightVec = normalize(v_light[numLights + i]);
     float diffuse = clamp(dot(lightVec, nom), 0.0f, 1.0f);
     outColor += light.omni[i].color * material.diffuse * diffuse;
 
+    // specular
     if(diffuse > 0.0f){
       vec3 halfVec = normalize(lightVec + viewVec);
       float specular = pow(dot(halfVec, nom), material.shininess);
@@ -376,11 +355,6 @@ export default class SCNRenderer extends NSObject {
      * @type {WebGLRenderingContext}
      */
     this._context = null
-
-    /**
-     * @type {WebGLProgram}
-     */
-    //this.program = null
 
     /**
      *
@@ -507,11 +481,6 @@ export default class SCNRenderer extends NSObject {
 
     /**
      * @access private
-     * @type {WebGLProgram}
-     */
-    //this._defaultGLProgram = null
-    /**
-     * @access private
      * @type {SCNProgram}
      */
     this.__defaultProgram = null
@@ -581,6 +550,7 @@ export default class SCNRenderer extends NSObject {
   }
 
   // Managing Animation Timing
+
   /**
    * The timestamp for the next frame to be rendered.
    * @type {number}
@@ -647,40 +617,6 @@ export default class SCNRenderer extends NSObject {
     //console.log('projectionTransform: ' + cameraNode.camera.projectionTransform.float32Array())
     //console.log('viewProjectionTransform: ' + cameraNode.viewProjectionTransform.float32Array())
     
-    // light params
-    //const lights = this._createLightNodeArray()
-    //console.log('lights.length: ' + lights.length)
-
-    // FIXME: use all lights
-    /*
-    let hasAmbient = false
-    let hasDiffuse = false
-    lights.forEach((lightNode) => {
-      const light = lightNode.light
-      if(light.type === SCNLight.LightType.ambient){
-        hasAmbient = true
-        gl.uniform4fv(gl.getUniformLocation(program, 'lightAmbient'), light.color.float32Array())
-      }
-      if(light.type === SCNLight.LightType.directional 
-        || light.type === SCNLight.LightType.omni){
-        hasDiffuse = true
-        gl.uniform4fv(gl.getUniformLocation(program, 'lightDiffuse'), light.color.float32Array())
-        gl.uniform3fv(gl.getUniformLocation(program, 'lightPosition'), lightNode._worldTranslation.float32Array())
-      }
-    })
-    if(!hasAmbient){
-      gl.uniform4fv(gl.getUniformLocation(program, 'lightAmbient'), SKColor.black.float32Array())
-    }
-    if(!hasDiffuse){
-      gl.uniform4fv(gl.getUniformLocation(program, 'lightDiffuse'), SKColor.black.float32Array())
-      gl.uniform3fv(gl.getUniformLocation(program, 'lightPosition'), 
-        new Float32Array([0, 1000, 0])
-      )
-    }
-    */
-
-
-    //gl.uniform3fv(gl.getUniformLocation(program, 'lightDirection'), lightDirection)
     if(this._lightBuffer === null){
       this._initializeLightBuffer(program)
     }
@@ -795,31 +731,6 @@ export default class SCNRenderer extends NSObject {
     return targetNodes
   }
 
-  /*
-  prepareBuffer() {
-    // FIXME: reuse renderingArray
-    const renderingArray = this._createRenderingNodeArray()
-    renderingArray.forEach((node) => {
-      this._prepareBufferForNode(node)
-    })
-  }
-
-  _prepareBufferForNode(node) {
-    const gl = this.context
-    const geometry = node.presentation.geometry
-    let program = this._defaultProgram._glProgram
-    if(geometry.program !== null){
-      program = geometry.program._glProgram
-    }
-    gl.useProgram(program)
-
-    if(geometry._vertexArrayObjects === null){
-      this._initializeVAO(node, program)
-      this._initializeUBO(node, program)
-    }
-  }
-  */
-
   /**
    *
    * @access private
@@ -840,12 +751,6 @@ export default class SCNRenderer extends NSObject {
       this._initializeUBO(node, program)
     }
 
-    //if(geometry._vertexArrayObjects === null){
-    //  this._initializeVAO(node, program)
-    //}else if(node.morpher !== null){
-    //  //console.log(`node.morpher: ${node.morpher}`)
-    //  this._updateVAO(node)
-    //}
     if(node.morpher !== null){
       this._updateVAO(node)
     }
@@ -861,8 +766,6 @@ export default class SCNRenderer extends NSObject {
       gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f())
     }
 
-    // TODO: buffer dynamic vertex data
-
     const geometryCount = node.presentation.geometry.geometryElements.length
     if(geometryCount === 0){
       throw new Error('geometryCount: 0')
@@ -874,32 +777,7 @@ export default class SCNRenderer extends NSObject {
 
       gl.bindVertexArray(vao)
 
-      /*
-      gl.uniform4fv(gl.getUniformLocation(program, 'materialAmbient'), material.ambient.float32Array())
-      gl.uniform4fv(gl.getUniformLocation(program, 'materialDiffuse'), material.diffuse.float32Array())
-      gl.uniform4fv(gl.getUniformLocation(program, 'materialSpecular'), material.specular.float32Array())
-      gl.uniform4fv(gl.getUniformLocation(program, 'materialEmission'), material.emission.float32Array())
-      gl.uniform1f(gl.getUniformLocation(program, 'materialShininess'), material.shininess)
-      */
-      geometry._bufferMaterialData(gl, i)
-
-      //console.log(`materialDiffuse: ${material.diffuse.float32Array()}`)
-
-      if(material.diffuse._contents instanceof Image){
-        material.diffuse._contents = this._createTexture(material.diffuse._contents)
-      }
-      if(material.diffuse._contents instanceof WebGLTexture){
-        gl.uniform1i(gl.getUniformLocation(program, 'u_useDiffuseTexture'), 1)
-        gl.activeTexture(gl.TEXTURE2)
-        gl.bindTexture(gl.TEXTURE_2D, material.diffuse._contents)
-        // FIXME: use material params
-        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR)
-        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR)
-        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.REPEAT)
-        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.REPEAT)
-      }else{
-        gl.uniform1i(gl.getUniformLocation(program, 'u_useDiffuseTexture'), 0)
-      }
+      geometry._bufferMaterialData(gl, program, i)
 
       let shape = null
       switch(element.primitiveType){
@@ -1503,8 +1381,6 @@ export default class SCNRenderer extends NSObject {
     const gl = this.context
     const geometry = node.presentation.geometry
     const baseGeometry = node.geometry
-    //gl.bindVertexArray(vao)
-    //gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer)
 
     geometry._updateVertexBuffer(gl, baseGeometry)
   }
@@ -1515,9 +1391,6 @@ export default class SCNRenderer extends NSObject {
 
   _createDummyTexture() {
     const gl = this.context
-    //const image = new Image()
-    //image.width = 1
-    //image.height = 1
 
     const canvas = document.createElement('canvas')
     canvas.width = 1
@@ -1533,7 +1406,6 @@ export default class SCNRenderer extends NSObject {
     // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
     gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas)
     gl.bindTexture(gl.TEXTURE_2D, null)
-    //this._setDummyTextureAsDefault()
   }
 
   _setDummyTextureAsDefault() {
@@ -1567,29 +1439,6 @@ export default class SCNRenderer extends NSObject {
       gl.activeTexture(texName)
       gl.bindTexture(gl.TEXTURE_2D, this.__dummyTexture)
     }
-  }
-
-  /**
-   * @access private
-   * @param {Image} image -
-   * @returns {WebGLTexture} -
-   */
-  _createTexture(image) {
-    const gl = this.context
-    const texture = gl.createTexture()
-
-    const canvas = document.createElement('canvas')
-    canvas.width = image.naturalWidth
-    canvas.height = image.naturalHeight
-    console.warn(`image size: ${image.naturalWidth} ${image.naturalHeight}`)
-    canvas.getContext('2d').drawImage(image, 0, 0)
-
-    gl.bindTexture(gl.TEXTURE_2D, texture)
-    // texImage2D(target, level, internalformat, width, height, border, format, type, source)
-    // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
-    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, image.width, image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas)
-    gl.bindTexture(gl.TEXTURE_2D, null)
-    return texture
   }
 
   _switchToDefaultCamera() {

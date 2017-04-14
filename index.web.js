@@ -21525,6 +21525,7 @@ module.exports =
 	    _this._geometrySources = sources;
 	    _this._vertexArrayObjects = null;
 	    _this._materialBuffer = null;
+	    //this._textureFlagBuffer = null
 
 	    // Working with Subdivision Surfaces
 
@@ -22031,18 +22032,6 @@ module.exports =
 	      //console.log(`offset: ${offset}, vectorCount: ${vectorCount}`)
 	      offset *= vectorCount;
 
-	      // FIXME: check if each source needs to update
-	      //if(update){
-	      //  const vertexSubData = new Float32Array(arr)
-	      // void gl.bufferSubData(target, dstByteOffset, ArrayBufferView srcData, srcOffset, length)
-	      //gl.bufferSubData(gl.ARRAY_BUFFER, 0, vertexSubData, 0, arr.length)
-	      //gl.bufferSubData(gl.ARRAY_BUFFER, 0, this._hoge, 0, arr.length)
-	      //for(let i=0; i<arr.length; i++){
-	      //  console.log(`morph ${this._hoge[i]} => ${arr[i]}`)
-	      //}
-	      //  return this._vertexBuffer
-	      //}
-
 	      var indexArray = indexSource ? indexSource.data : null;
 	      var indexComponents = indexSource ? indexSource.componentsPerVector : 0;
 	      var weightArray = weightSource ? weightSource.data : null;
@@ -22118,7 +22107,7 @@ module.exports =
 
 	    /**
 	     * @access private
-	     * @param {WebGLContext} gl -
+	     * @param {WebGLRenderingContext} gl -
 	     * @param {SCNGeometry} baseGeometry - 
 	     * @returns {void}
 	     */
@@ -22135,22 +22124,48 @@ module.exports =
 
 	    /**
 	     * @access private
-	     * @param {WebGLContext} gl -
+	     * @param {WebGLRenderingContext} gl -
+	     * @param {WebGLProgram} program -
 	     * @param {number} index - material index
 	     * @returns {void}
 	     */
 
 	  }, {
 	    key: '_bufferMaterialData',
-	    value: function _bufferMaterialData(gl, index) {
+	    value: function _bufferMaterialData(gl, program, index) {
+	      var _this2 = this;
+
+	      // TODO: move this function to SCNProgram
 	      var material = this.materials[index];
 	      var materialData = new Float32Array([].concat(_toConsumableArray(material.ambient.float32Array()), _toConsumableArray(material.diffuse.float32Array()), _toConsumableArray(material.specular.float32Array()), _toConsumableArray(material.emission.float32Array()), [material.shininess, 0, 0, 0 // needs padding for 16-byte align
 	      ]));
-	      //console.log(`buffer: ${this._materialBuffer}`)
-	      //console.log(`bufferMaterialData: ${materialData}`)
 	      gl.bindBuffer(gl.UNIFORM_BUFFER, this._materialBuffer);
 	      gl.bufferData(gl.UNIFORM_BUFFER, materialData, gl.DYNAMIC_DRAW);
 	      gl.bindBuffer(gl.UNIFORM_BUFFER, null);
+
+	      var textureFlags = [];
+	      var textures = [{ name: 'emission', symbol: 'TEXTURE0' }, { name: 'ambient', symbol: 'TEXTURE1' }, { name: 'diffuse', symbol: 'TEXTURE2' }, { name: 'specular', symbol: 'TEXTURE3' }, { name: 'reflective', symbol: 'TEXTURE4' }, { name: 'transparent', symbol: 'TEXTURE5' }, { name: 'multiply', symbol: 'TEXTURE6' }, { name: 'normal', symbol: 'TEXTURE7' }];
+	      textures.forEach(function (texture) {
+	        var m = material[texture.name];
+	        if (m._contents instanceof Image) {
+	          console.log('create texture ' + texture.name + ' ' + m);
+	          m._contents = _this2._createTexture(gl, m._contents);
+	        }
+	        if (m._contents instanceof WebGLTexture) {
+	          console.log('WebGLTexture ' + gl[texture.symbol] + ' ' + m._contents);
+	          textureFlags.push(1);
+	          gl.activeTexture(gl[texture.symbol]); // FIXME: use m._contents.mappingChannel
+	          gl.bindTexture(gl.TEXTURE_2D, m._contents);
+	          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, m._magnificationFilterFor(gl));
+	          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, m._minificationFilterFor(gl));
+	          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, m._wrapSFor(gl));
+	          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, m._wrapTFor(gl));
+	        } else {
+	          textureFlags.push(0);
+	        }
+	      });
+	      // TODO: cache uniform location
+	      gl.uniform1iv(gl.getUniformLocation(program, 'textureFlags'), new Int32Array(textureFlags));
 	    }
 	  }, {
 	    key: 'copy',
@@ -22174,6 +22189,25 @@ module.exports =
 	      geometry._indexBuffer = this._indexBuffer;
 
 	      return geometry;
+	    }
+	  }, {
+	    key: '_createTexture',
+	    value: function _createTexture(gl, image) {
+	      var texture = gl.createTexture();
+
+	      var canvas = document.createElement('canvas');
+	      canvas.width = image.naturalWidth;
+	      canvas.height = image.naturalHeight;
+	      console.warn('image size: ' + image.naturalWidth + ' ' + image.naturalHeight);
+	      canvas.getContext('2d').drawImage(image, 0, 0);
+
+	      gl.bindTexture(gl.TEXTURE_2D, texture);
+	      // texImage2D(target, level, internalformat, width, height, border, format, type, source)
+	      // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
+	      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, image.width, image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
+	      gl.generateMipmap(gl.TEXTURE_2D);
+	      gl.bindTexture(gl.TEXTURE_2D, null);
+	      return texture;
 	    }
 	  }, {
 	    key: 'firstMaterial',
@@ -22792,15 +22826,9 @@ module.exports =
 
 	/**
 	 * @access private
-	 * @type {SCNProgram}
-	 */
-	//let __defaultProgram = null
-
-	/**
-	 * @access private
 	 * @type {string}
 	 */
-	var _defaultVertexShader = '#version 300 es\n  precision mediump float;\n\n  uniform mat4 viewTransform;\n  uniform mat4 viewProjectionTransform;\n\n  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__\n  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__\n  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__\n  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__\n  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__\n  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__\n\n  layout (std140) uniform materialUniform {\n    vec4 ambient;\n    vec4 diffuse;\n    vec4 specular;\n    vec4 emission;\n    float shininess;\n  } material;\n\n  struct AmbientLight {\n    vec4 color;\n  };\n\n  struct DirectionalLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct OmniLight {\n    vec4 color;\n    vec4 position; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct SpotLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct IESLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct ProbeLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  layout (std140) uniform lightUniform {\n    __LIGHT_DEFINITION__\n  } light;\n  __VS_LIGHT_VARS__\n  /*\n  layout (std140) uniform lightUniform {\n    AmbientLight ambient[NUM_AMBIENT_LIGHTS];\n    DirectionalLight directional[NUM_DIRECTIONAL_LIGHTS];\n    OmniLight omni[NUM_OMNI_LIGHTS];\n    ProbeLight probe[NUM_PROBE_LIGHTS];\n    SpotLight spot[NUM_SPOT_LIGHTS];\n  } light;\n  out vec3 v_light[NUM_DIRECTIONAL_LIGHTS + NUM_OMNI_LIGHTS];\n  */\n\n  //uniform mat3x4[255] skinningJoints;\n  uniform vec4[765] skinningJoints;\n  uniform int numSkinningJoints;\n\n  in vec3 position;\n  in vec3 normal;\n  in vec2 texcoord;\n  in vec4 boneIndices;\n  in vec4 boneWeights;\n\n  out vec3 v_position;\n  out vec3 v_normal;\n  out vec2 v_texcoord;\n  out vec4 v_color;\n  out vec3 v_eye;\n\n  void main() {\n    vec3 pos = vec3(0, 0, 0);\n    vec3 nom = vec3(0, 0, 0);\n    if(numSkinningJoints > 0){\n      for(int i=0; i<numSkinningJoints; i++){\n        float weight = boneWeights[i];\n        if(int(boneIndices[i]) < 0){\n          continue;\n        }\n        int idx = int(boneIndices[i]) * 3;\n        mat4 jointMatrix = transpose(mat4(skinningJoints[idx],\n                                          skinningJoints[idx+1],\n                                          skinningJoints[idx+2],\n                                          vec4(0, 0, 0, 1)));\n        pos += (jointMatrix * vec4(position, 1.0)).xyz * weight;\n        nom += (mat3(jointMatrix) * normal) * weight;\n      }\n    }else{\n      mat4 jointMatrix = transpose(mat4(skinningJoints[0],\n                                        skinningJoints[1],\n                                        skinningJoints[2],\n                                        vec4(0, 0, 0, 1)));\n      pos = (jointMatrix * vec4(position, 1.0)).xyz;\n      nom = mat3(jointMatrix) * normal;\n    }\n    v_position = pos;\n    v_normal = nom;\n\n    vec3 viewPos = vec3(-viewTransform[3][0], -viewTransform[3][1], -viewTransform[3][2]);\n    v_eye = viewPos - pos;\n\n    v_color = material.emission;\n    int numLights = 0;\n\n    __VS_LIGHTING__\n\n    v_texcoord = texcoord;\n    gl_Position = viewProjectionTransform * vec4(pos, 1.0);\n  }\n';
+	var _defaultVertexShader = '#version 300 es\n  precision mediump float;\n\n  uniform mat4 viewTransform;\n  uniform mat4 viewProjectionTransform;\n\n  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__\n  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__\n  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__\n  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__\n  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__\n  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__\n\n  layout (std140) uniform materialUniform {\n    vec4 ambient;\n    vec4 diffuse;\n    vec4 specular;\n    vec4 emission;\n    float shininess;\n  } material;\n\n  struct AmbientLight {\n    vec4 color;\n  };\n\n  struct DirectionalLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct OmniLight {\n    vec4 color;\n    vec4 position; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct SpotLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct IESLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct ProbeLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  layout (std140) uniform lightUniform {\n    __LIGHT_DEFINITION__\n  } light;\n  __VS_LIGHT_VARS__\n\n  //uniform mat3x4[255] skinningJoints;\n  uniform vec4[765] skinningJoints;\n  uniform int numSkinningJoints;\n\n  in vec3 position;\n  in vec3 normal;\n  in vec2 texcoord;\n  in vec4 boneIndices;\n  in vec4 boneWeights;\n\n  out vec3 v_position;\n  out vec3 v_normal;\n  out vec2 v_texcoord;\n  out vec4 v_color;\n  out vec3 v_eye;\n\n  void main() {\n    vec3 pos = vec3(0, 0, 0);\n    vec3 nom = vec3(0, 0, 0);\n    if(numSkinningJoints > 0){\n      for(int i=0; i<numSkinningJoints; i++){\n        float weight = boneWeights[i];\n        if(int(boneIndices[i]) < 0){\n          continue;\n        }\n        int idx = int(boneIndices[i]) * 3;\n        mat4 jointMatrix = transpose(mat4(skinningJoints[idx],\n                                          skinningJoints[idx+1],\n                                          skinningJoints[idx+2],\n                                          vec4(0, 0, 0, 1)));\n        pos += (jointMatrix * vec4(position, 1.0)).xyz * weight;\n        nom += (mat3(jointMatrix) * normal) * weight;\n      }\n    }else{\n      mat4 jointMatrix = transpose(mat4(skinningJoints[0],\n                                        skinningJoints[1],\n                                        skinningJoints[2],\n                                        vec4(0, 0, 0, 1)));\n      pos = (jointMatrix * vec4(position, 1.0)).xyz;\n      nom = mat3(jointMatrix) * normal;\n    }\n    v_position = pos;\n    v_normal = nom;\n\n    vec3 viewPos = vec3(-viewTransform[3][0], -viewTransform[3][1], -viewTransform[3][2]);\n    v_eye = viewPos - pos;\n\n    v_color = material.emission;\n    int numLights = 0;\n\n    __VS_LIGHTING__\n\n    v_texcoord = texcoord;\n    gl_Position = viewProjectionTransform * vec4(pos, 1.0);\n  }\n';
 
 	var _vsAmbient = '\n  for(int i=0; i<NUM_AMBIENT_LIGHTS; i++){\n    v_color += light.ambient[i].color * material.ambient;\n  }\n';
 
@@ -22820,13 +22848,13 @@ module.exports =
 	 * @access private
 	 * @type {string}
 	 */
-	var _defaultFragmentShader = '#version 300 es\n  precision mediump float;\n\n  uniform sampler2D u_emissionTexture;\n  uniform bool u_useEmissionTexture;\n  uniform sampler2D u_ambientTexture;\n  uniform bool u_useAmbientTexture;\n  uniform sampler2D u_diffuseTexture;\n  uniform bool u_useDiffuseTexture;\n  uniform sampler2D u_specularTexture;\n  uniform bool u_useSpecularTexture;\n  uniform sampler2D u_reflectiveTexture;\n  uniform bool u_useReflectiveTexture;\n  uniform sampler2D u_transparentTexture;\n  uniform bool u_useTransparentTexture;\n  uniform sampler2D u_multiplyTexture;\n  uniform bool u_useMultiplyTexture;\n  uniform sampler2D u_normalTexture;\n  uniform bool u_useNormalTexture;\n\n  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__\n  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__\n  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__\n  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__\n  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__\n  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__\n\n  layout (std140) uniform materialUniform {\n    vec4 ambient;\n    vec4 diffuse;\n    vec4 specular;\n    vec4 emission;\n    float shininess;\n  } material;\n\n  struct AmbientLight {\n    vec4 color;\n  };\n\n  struct DirectionalLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct OmniLight {\n    vec4 color;\n    vec4 position; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct ProbeLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct SpotLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  layout (std140) uniform lightUniform {\n    __LIGHT_DEFINITION__\n  } light;\n  __FS_LIGHT_VARS__\n  /*\n  layout (std140) uniform lightUniform {\n    AmbientLight ambient[NUM_AMBIENT_LIGHTS];\n    DirectionalLight directional[NUM_DIRECTIONAL_LIGHTS];\n    OmniLight omni[NUM_OMNI_LIGHTS];\n    ProbeLight probe[NUM_PROBE_LIGHTS];\n    SpotLight spot[NUM_SPOT_LIGHTS];\n  } light;\n  in vec3 v_light[NUM_DIRECTIONAL_LIGHTS + NUM_OMNI_LIGHTS];\n  */\n\n  in vec3 v_position;\n  in vec3 v_normal;\n  in vec2 v_texcoord;\n  in vec4 v_color;\n  in vec3 v_eye;\n\n  out vec4 outColor;\n\n  void main() {\n    outColor = v_color;\n\n    vec3 viewVec = normalize(v_eye);\n    vec3 nom = normalize(v_normal);\n\n    int numLights = 0;\n      \n    __FS_LIGHTING__\n    \n    // diffuse texture\n    if(u_useDiffuseTexture){\n      vec4 color = texture(u_diffuseTexture, v_texcoord);\n      outColor = color * outColor;\n    }\n  }\n';
+	var _defaultFragmentShader = '#version 300 es\n  precision mediump float;\n\n  uniform bool[8] textureFlags;\n  #define TEXTURE_EMISSION_INDEX 0\n  #define TEXTURE_AMBIENT_INDEX 1\n  #define TEXTURE_DIFFUSE_INDEX 2\n  #define TEXTURE_SPECULAR_INDEX 3\n  #define TEXTURE_REFLECTIVE_INDEX 4\n  #define TEXTURE_TRANSPARENT_INDEX 5\n  #define TEXTURE_MULTIPLY_INDEX 6\n  #define TEXTURE_NORMAL_INDEX 7\n\n  uniform sampler2D u_emissionTexture;\n  uniform sampler2D u_ambientTexture;\n  uniform sampler2D u_diffuseTexture;\n  uniform sampler2D u_specularTexture;\n  uniform sampler2D u_reflectiveTexture;\n  uniform sampler2D u_transparentTexture;\n  uniform sampler2D u_multiplyTexture;\n  uniform sampler2D u_normalTexture;\n\n  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__\n  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__\n  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__\n  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__\n  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__\n  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__\n\n  layout (std140) uniform materialUniform {\n    vec4 ambient;\n    vec4 diffuse;\n    vec4 specular;\n    vec4 emission;\n    float shininess;\n  } material;\n\n  struct AmbientLight {\n    vec4 color;\n  };\n\n  struct DirectionalLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct OmniLight {\n    vec4 color;\n    vec4 position; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct ProbeLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct SpotLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  layout (std140) uniform lightUniform {\n    __LIGHT_DEFINITION__\n  } light;\n  __FS_LIGHT_VARS__\n\n  in vec3 v_position;\n  in vec3 v_normal;\n  in vec2 v_texcoord;\n  in vec4 v_color;\n  in vec3 v_eye;\n\n  out vec4 outColor;\n\n  void main() {\n    outColor = v_color;\n\n    vec3 viewVec = normalize(v_eye);\n    vec3 nom = normalize(v_normal);\n\n    int numLights = 0;\n      \n    __FS_LIGHTING__\n    \n    // diffuse texture\n    if(textureFlags[TEXTURE_DIFFUSE_INDEX]){\n      vec4 color = texture(u_diffuseTexture, v_texcoord);\n      outColor = color * outColor;\n    }\n  }\n';
 
 	var _fsAmbient = '\n';
 
-	var _fsDirectional = '\n  for(int i=0; i<NUM_DIRECTIONAL_LIGHTS; i++){\n    // diffuse\n    vec3 lightVec = normalize(v_light[numLights + i]);\n    float diffuse = clamp(dot(lightVec, nom), 0.0f, 1.0f);\n    outColor += light.directional[i].color * material.diffuse * diffuse;\n\n    if(diffuse > 0.0f){\n      vec3 halfVec = normalize(lightVec + viewVec);\n      float specular = pow(dot(halfVec, nom), material.shininess);\n      outColor += material.specular * specular; // TODO: get the light color of specular\n    }\n  }\n  numLights += NUM_DIRECTIONAL_LIGHTS;\n';
+	var _fsDirectional = '\n  for(int i=0; i<NUM_DIRECTIONAL_LIGHTS; i++){\n    // diffuse\n    vec3 lightVec = normalize(v_light[numLights + i]);\n    float diffuse = clamp(dot(lightVec, nom), 0.0f, 1.0f);\n    outColor += light.directional[i].color * material.diffuse * diffuse;\n\n    // specular\n    if(diffuse > 0.0f){\n      vec3 halfVec = normalize(lightVec + viewVec);\n      float specular = pow(dot(halfVec, nom), material.shininess);\n      outColor += material.specular * specular; // TODO: get the light color of specular\n    }\n  }\n  numLights += NUM_DIRECTIONAL_LIGHTS;\n';
 
-	var _fsOmni = '\n  for(int i=0; i<NUM_OMNI_LIGHTS; i++){\n    vec3 lightVec = normalize(v_light[numLights + i]);\n    float diffuse = clamp(dot(lightVec, nom), 0.0f, 1.0f);\n    outColor += light.omni[i].color * material.diffuse * diffuse;\n\n    if(diffuse > 0.0f){\n      vec3 halfVec = normalize(lightVec + viewVec);\n      float specular = pow(dot(halfVec, nom), material.shininess);\n      outColor += material.specular * specular; // TODO: get the light color of specular\n    }\n  }\n  numLights += NUM_OMNI_LIGHTS;\n';
+	var _fsOmni = '\n  for(int i=0; i<NUM_OMNI_LIGHTS; i++){\n    // diffuse\n    vec3 lightVec = normalize(v_light[numLights + i]);\n    float diffuse = clamp(dot(lightVec, nom), 0.0f, 1.0f);\n    outColor += light.omni[i].color * material.diffuse * diffuse;\n\n    // specular\n    if(diffuse > 0.0f){\n      vec3 halfVec = normalize(lightVec + viewVec);\n      float specular = pow(dot(halfVec, nom), material.shininess);\n      outColor += material.specular * specular; // TODO: get the light color of specular\n    }\n  }\n  numLights += NUM_OMNI_LIGHTS;\n';
 
 	var _fsSpot = '\n  // TODO: implement\n';
 
@@ -22883,11 +22911,6 @@ module.exports =
 	     * @type {WebGLRenderingContext}
 	     */
 	    _this._context = null;
-
-	    /**
-	     * @type {WebGLProgram}
-	     */
-	    //this.program = null
 
 	    /**
 	     *
@@ -23012,11 +23035,6 @@ module.exports =
 
 	    /**
 	     * @access private
-	     * @type {WebGLProgram}
-	     */
-	    //this._defaultGLProgram = null
-	    /**
-	     * @access private
 	     * @type {SCNProgram}
 	     */
 	    _this.__defaultProgram = null;
@@ -23092,6 +23110,7 @@ module.exports =
 	    }
 
 	    // Managing Animation Timing
+
 	    /**
 	     * The timestamp for the next frame to be rendered.
 	     * @type {number}
@@ -23163,39 +23182,6 @@ module.exports =
 	      //console.log('projectionTransform: ' + cameraNode.camera.projectionTransform.float32Array())
 	      //console.log('viewProjectionTransform: ' + cameraNode.viewProjectionTransform.float32Array())
 
-	      // light params
-	      //const lights = this._createLightNodeArray()
-	      //console.log('lights.length: ' + lights.length)
-
-	      // FIXME: use all lights
-	      /*
-	      let hasAmbient = false
-	      let hasDiffuse = false
-	      lights.forEach((lightNode) => {
-	        const light = lightNode.light
-	        if(light.type === SCNLight.LightType.ambient){
-	          hasAmbient = true
-	          gl.uniform4fv(gl.getUniformLocation(program, 'lightAmbient'), light.color.float32Array())
-	        }
-	        if(light.type === SCNLight.LightType.directional 
-	          || light.type === SCNLight.LightType.omni){
-	          hasDiffuse = true
-	          gl.uniform4fv(gl.getUniformLocation(program, 'lightDiffuse'), light.color.float32Array())
-	          gl.uniform3fv(gl.getUniformLocation(program, 'lightPosition'), lightNode._worldTranslation.float32Array())
-	        }
-	      })
-	      if(!hasAmbient){
-	        gl.uniform4fv(gl.getUniformLocation(program, 'lightAmbient'), SKColor.black.float32Array())
-	      }
-	      if(!hasDiffuse){
-	        gl.uniform4fv(gl.getUniformLocation(program, 'lightDiffuse'), SKColor.black.float32Array())
-	        gl.uniform3fv(gl.getUniformLocation(program, 'lightPosition'), 
-	          new Float32Array([0, 1000, 0])
-	        )
-	      }
-	      */
-
-	      //gl.uniform3fv(gl.getUniformLocation(program, 'lightDirection'), lightDirection)
 	      if (this._lightBuffer === null) {
 	        this._initializeLightBuffer(program);
 	      }
@@ -23315,29 +23301,6 @@ module.exports =
 	      return targetNodes;
 	    }
 
-	    /*
-	    prepareBuffer() {
-	      // FIXME: reuse renderingArray
-	      const renderingArray = this._createRenderingNodeArray()
-	      renderingArray.forEach((node) => {
-	        this._prepareBufferForNode(node)
-	      })
-	    }
-	     _prepareBufferForNode(node) {
-	      const gl = this.context
-	      const geometry = node.presentation.geometry
-	      let program = this._defaultProgram._glProgram
-	      if(geometry.program !== null){
-	        program = geometry.program._glProgram
-	      }
-	      gl.useProgram(program)
-	       if(geometry._vertexArrayObjects === null){
-	        this._initializeVAO(node, program)
-	        this._initializeUBO(node, program)
-	      }
-	    }
-	    */
-
 	    /**
 	     *
 	     * @access private
@@ -23361,12 +23324,6 @@ module.exports =
 	        this._initializeUBO(node, program);
 	      }
 
-	      //if(geometry._vertexArrayObjects === null){
-	      //  this._initializeVAO(node, program)
-	      //}else if(node.morpher !== null){
-	      //  //console.log(`node.morpher: ${node.morpher}`)
-	      //  this._updateVAO(node)
-	      //}
 	      if (node.morpher !== null) {
 	        this._updateVAO(node);
 	      }
@@ -23382,8 +23339,6 @@ module.exports =
 	        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f());
 	      }
 
-	      // TODO: buffer dynamic vertex data
-
 	      var geometryCount = node.presentation.geometry.geometryElements.length;
 	      if (geometryCount === 0) {
 	        throw new Error('geometryCount: 0');
@@ -23395,32 +23350,7 @@ module.exports =
 
 	        gl.bindVertexArray(vao);
 
-	        /*
-	        gl.uniform4fv(gl.getUniformLocation(program, 'materialAmbient'), material.ambient.float32Array())
-	        gl.uniform4fv(gl.getUniformLocation(program, 'materialDiffuse'), material.diffuse.float32Array())
-	        gl.uniform4fv(gl.getUniformLocation(program, 'materialSpecular'), material.specular.float32Array())
-	        gl.uniform4fv(gl.getUniformLocation(program, 'materialEmission'), material.emission.float32Array())
-	        gl.uniform1f(gl.getUniformLocation(program, 'materialShininess'), material.shininess)
-	        */
-	        geometry._bufferMaterialData(gl, i);
-
-	        //console.log(`materialDiffuse: ${material.diffuse.float32Array()}`)
-
-	        if (material.diffuse._contents instanceof Image) {
-	          material.diffuse._contents = this._createTexture(material.diffuse._contents);
-	        }
-	        if (material.diffuse._contents instanceof WebGLTexture) {
-	          gl.uniform1i(gl.getUniformLocation(program, 'u_useDiffuseTexture'), 1);
-	          gl.activeTexture(gl.TEXTURE2);
-	          gl.bindTexture(gl.TEXTURE_2D, material.diffuse._contents);
-	          // FIXME: use material params
-	          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-	          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
-	          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.REPEAT);
-	          gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.REPEAT);
-	        } else {
-	          gl.uniform1i(gl.getUniformLocation(program, 'u_useDiffuseTexture'), 0);
-	        }
+	        geometry._bufferMaterialData(gl, program, i);
 
 	        var shape = null;
 	        switch (element.primitiveType) {
@@ -23910,8 +23840,6 @@ module.exports =
 	      var gl = this.context;
 	      var geometry = node.presentation.geometry;
 	      var baseGeometry = node.geometry;
-	      //gl.bindVertexArray(vao)
-	      //gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer)
 
 	      geometry._updateVertexBuffer(gl, baseGeometry);
 	    }
@@ -23919,9 +23847,6 @@ module.exports =
 	    key: '_createDummyTexture',
 	    value: function _createDummyTexture() {
 	      var gl = this.context;
-	      //const image = new Image()
-	      //image.width = 1
-	      //image.height = 1
 
 	      var canvas = document.createElement('canvas');
 	      canvas.width = 1;
@@ -23937,7 +23862,6 @@ module.exports =
 	      // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
 	      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
 	      gl.bindTexture(gl.TEXTURE_2D, null);
-	      //this._setDummyTextureAsDefault()
 	    }
 	  }, {
 	    key: '_setDummyTextureAsDefault',
@@ -23954,32 +23878,6 @@ module.exports =
 	        gl.activeTexture(texName);
 	        gl.bindTexture(gl.TEXTURE_2D, this.__dummyTexture);
 	      }
-	    }
-
-	    /**
-	     * @access private
-	     * @param {Image} image -
-	     * @returns {WebGLTexture} -
-	     */
-
-	  }, {
-	    key: '_createTexture',
-	    value: function _createTexture(image) {
-	      var gl = this.context;
-	      var texture = gl.createTexture();
-
-	      var canvas = document.createElement('canvas');
-	      canvas.width = image.naturalWidth;
-	      canvas.height = image.naturalHeight;
-	      console.warn('image size: ' + image.naturalWidth + ' ' + image.naturalHeight);
-	      canvas.getContext('2d').drawImage(image, 0, 0);
-
-	      gl.bindTexture(gl.TEXTURE_2D, texture);
-	      // texImage2D(target, level, internalformat, width, height, border, format, type, source)
-	      // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
-	      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, image.width, image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
-	      gl.bindTexture(gl.TEXTURE_2D, null);
-	      return texture;
 	    }
 	  }, {
 	    key: '_switchToDefaultCamera',
@@ -25775,6 +25673,115 @@ module.exports =
 	  }, {
 	    key: 'setAnimationSpeedForKey',
 	    value: function setAnimationSpeedForKey(speed, key) {}
+
+	    /**
+	     * @access private
+	     * @param {WebGLContext} gl -
+	     * @returns {number} -
+	     */
+
+	  }, {
+	    key: '_wrapSFor',
+	    value: function _wrapSFor(gl) {
+	      switch (this.wrapS) {
+	        case _SCNWrapMode2.default.clamp:
+	          return gl.CLAMP_TO_EDGE; // FIXME: do not apply the texture out of 0-1
+	        case _SCNWrapMode2.default.repeat:
+	          return gl.REPEAT;
+	        case _SCNWrapMode2.default.clampToBorder:
+	          return gl.CLAMP_TO_EDGE;
+	        case _SCNWrapMode2.default.mirror:
+	          return gl.MIRRORED_REPEAT;
+	        default:
+	          throw new Error('unknown wrapS: ' + this.wrapS);
+	      }
+	    }
+
+	    /**
+	     * @access private
+	     * @param {WebGLContext} gl -
+	     * @returns {number} -
+	     */
+
+	  }, {
+	    key: '_wrapTFor',
+	    value: function _wrapTFor(gl) {
+	      switch (this.wrapT) {
+	        case _SCNWrapMode2.default.clamp:
+	          return gl.CLAMP_TO_EDGE; // FIXME: do not apply the texture out of 0-1
+	        case _SCNWrapMode2.default.repeat:
+	          return gl.REPEAT;
+	        case _SCNWrapMode2.default.clampToBorder:
+	          return gl.CLAMP_TO_EDGE;
+	        case _SCNWrapMode2.default.mirror:
+	          return gl.MIRRORED_REPEAT;
+	        default:
+	          throw new Error('unknown wrapT: ' + this.wrapT);
+	      }
+	    }
+
+	    /**
+	     * @access private
+	     * @param {WebGLContext} gl -
+	     * @returns {number} -
+	     */
+
+	  }, {
+	    key: '_minificationFilterFor',
+	    value: function _minificationFilterFor(gl) {
+	      switch (this.minificationFilter) {
+	        case _SCNFilterMode2.default.none:
+	        case _SCNFilterMode2.default.linear:
+	          {
+	            switch (this.mipFilter) {
+	              case _SCNFilterMode2.default.none:
+	                return gl.LINEAR;
+	              case _SCNFilterMode2.default.nearest:
+	                return gl.LINEAR_MIPMAP_NEAREST;
+	              case _SCNFilterMode2.default.linear:
+	                return gl.LINEAR_MIPMAP_LINEAR;
+	              default:
+	                throw new Error('unknown mipmapFilter: ' + this.mipmapFilter);
+	            }
+	          }
+	        case _SCNFilterMode2.default.nearest:
+	          {
+	            switch (this.mipFilter) {
+	              case _SCNFilterMode2.default.none:
+	                return gl.NEAREST;
+	              case _SCNFilterMode2.default.nearest:
+	                return gl.NEAREST_MIPMAP_NEAREST;
+	              case _SCNFilterMode2.default.linear:
+	                return gl.NEAREST_MIPMAP_LINEAR;
+	              default:
+	                throw new Error('unknown mipmapFilter: ' + this.mipmapFilter);
+	            }
+	          }
+	        default:
+	          throw new Error('unknown minificationFilter: ' + this.minificationFilter);
+	      }
+	    }
+
+	    /**
+	     * @access private
+	     * @param {WebGLContext} gl -
+	     * @returns {number} -
+	     */
+
+	  }, {
+	    key: '_magnificationFilterFor',
+	    value: function _magnificationFilterFor(gl) {
+	      switch (this.magnificationFilter) {
+	        case _SCNFilterMode2.default.none:
+	          return gl.LINEAR; // default value
+	        case _SCNFilterMode2.default.nearest:
+	          return gl.NEAREST;
+	        case _SCNFilterMode2.default.linear:
+	          return gl.LINEAR;
+	        default:
+	          throw new Error('unknown magnificationFilter: ' + this.magnificationFilter);
+	      }
+	    }
 
 	    /**
 	     * @access public
@@ -38418,10 +38425,6 @@ module.exports =
 
 	    //super()
 
-	    //if(frame === undefined){
-	    //  frame = CGRect.rectWithXYWidthHeight(0, 0, 300, 300)
-	    //}
-
 	    // Specifying a Scene
 
 	    /**
@@ -38589,12 +38592,6 @@ module.exports =
 
 	    /**
 	     * @access private
-	     * @type {WebGLProgram}
-	     */
-	    this._program = null;
-
-	    /**
-	     * @access private
 	     * @type {number}
 	     */
 	    this._canvasWidth = 0;
@@ -38682,17 +38679,10 @@ module.exports =
 	      throw new Error('can\'t create WebGL context');
 	    }
 	    this._context.viewport(frame.minX, frame.minY, frame.width, frame.height);
-	    console.log('before minX: ' + frame.minX);
-	    console.log('before minY: ' + frame.minY);
-	    console.log('before width: ' + frame.width);
-	    console.log('before height: ' + frame.height);
 
 	    this._context.clearColor(this.backgroundColor.r, this.backgroundColor.g, this.backgroundColor.b, this.backgroundColor.a);
 
-	    this._program = this._context.createProgram();
-
 	    this._renderer._setContext(this._context);
-	    this._renderer.program = this._program;
 	    this._renderer._viewRect = frame;
 
 	    this._mouseIsDown = false;
@@ -38735,7 +38725,6 @@ module.exports =
 	        _this.mouseDraggedWith(ev);
 	      }
 	    });
-	    //this._canvas.addEventListener('mouseup', (e) => {
 	    document.addEventListener('mouseup', function (e) {
 	      if (_this._mouseIsDown) {
 	        _this._mouseIsDown = false;
@@ -39093,8 +39082,6 @@ module.exports =
 	    value: function _drawAtTimeWithContext(time, context) {
 	      this._createPresentationNodes();
 
-	      var program = this._program;
-
 	      this._updateTransform();
 
 	      if (this._delegate && this._delegate.rendererUpdateAtTime) {
@@ -39134,7 +39121,6 @@ module.exports =
 	      ///////////////////////
 	      // renders the scene //
 	      ///////////////////////
-	      //this._renderer.prepareBuffer()
 	      this._updateMorph();
 	      this._renderer.render();
 

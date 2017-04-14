@@ -45,10 +45,6 @@ export default class SCNView {
   constructor(frame, options = null) {
     //super()
 
-    //if(frame === undefined){
-    //  frame = CGRect.rectWithXYWidthHeight(0, 0, 300, 300)
-    //}
-
     // Specifying a Scene
 
     /**
@@ -219,12 +215,6 @@ export default class SCNView {
 
     /**
      * @access private
-     * @type {WebGLProgram}
-     */
-    this._program = null
-
-    /**
-     * @access private
      * @type {number}
      */
     this._canvasWidth = 0
@@ -293,10 +283,6 @@ export default class SCNView {
       throw new Error('can\'t create WebGL context')
     }
     this._context.viewport(frame.minX, frame.minY, frame.width, frame.height)
-    console.log(`before minX: ${frame.minX}`)
-    console.log(`before minY: ${frame.minY}`)
-    console.log(`before width: ${frame.width}`)
-    console.log(`before height: ${frame.height}`)
 
     this._context.clearColor(
       this.backgroundColor.r,
@@ -305,10 +291,7 @@ export default class SCNView {
       this.backgroundColor.a
     )
 
-    this._program = this._context.createProgram()
-
     this._renderer._setContext(this._context)
-    this._renderer.program = this._program
     this._renderer._viewRect = frame
 
     this._mouseIsDown = false
@@ -351,7 +334,6 @@ export default class SCNView {
         this.mouseDraggedWith(ev)
       }
     })
-    //this._canvas.addEventListener('mouseup', (e) => {
     document.addEventListener('mouseup', (e) => {
       if(this._mouseIsDown){
         this._mouseIsDown = false
@@ -952,8 +934,6 @@ export default class SCNView {
   _drawAtTimeWithContext(time, context) {
     this._createPresentationNodes()
 
-    const program = this._program
-
     this._updateTransform()
 
     if(this._delegate && this._delegate.rendererUpdateAtTime){
@@ -993,7 +973,6 @@ export default class SCNView {
     ///////////////////////
     // renders the scene //
     ///////////////////////
-    //this._renderer.prepareBuffer()
     this._updateMorph()
     this._renderer.render()
 

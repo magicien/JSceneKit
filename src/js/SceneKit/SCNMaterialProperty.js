@@ -313,6 +313,101 @@ export default class SCNMaterialProperty extends NSObject {
   }
 
   /**
+   * @access private
+   * @param {WebGLContext} gl -
+   * @returns {number} -
+   */
+  _wrapSFor(gl) {
+    switch(this.wrapS){
+      case SCNWrapMode.clamp:
+        return gl.CLAMP_TO_EDGE // FIXME: do not apply the texture out of 0-1
+      case SCNWrapMode.repeat:
+        return gl.REPEAT
+      case SCNWrapMode.clampToBorder:
+        return gl.CLAMP_TO_EDGE
+      case SCNWrapMode.mirror:
+        return gl.MIRRORED_REPEAT
+      default:
+        throw new Error(`unknown wrapS: ${this.wrapS}`)
+    }
+  }
+
+  /**
+   * @access private
+   * @param {WebGLContext} gl -
+   * @returns {number} -
+   */
+  _wrapTFor(gl) {
+    switch(this.wrapT){
+      case SCNWrapMode.clamp:
+        return gl.CLAMP_TO_EDGE // FIXME: do not apply the texture out of 0-1
+      case SCNWrapMode.repeat:
+        return gl.REPEAT
+      case SCNWrapMode.clampToBorder:
+        return gl.CLAMP_TO_EDGE
+      case SCNWrapMode.mirror:
+        return gl.MIRRORED_REPEAT
+      default:
+        throw new Error(`unknown wrapT: ${this.wrapT}`)
+    }
+  }
+
+  /**
+   * @access private
+   * @param {WebGLContext} gl -
+   * @returns {number} -
+   */
+  _minificationFilterFor(gl) {
+    switch(this.minificationFilter){
+      case SCNFilterMode.none:
+      case SCNFilterMode.linear: {
+        switch(this.mipFilter){
+          case SCNFilterMode.none:
+            return gl.LINEAR
+          case SCNFilterMode.nearest:
+            return gl.LINEAR_MIPMAP_NEAREST
+          case SCNFilterMode.linear:
+            return gl.LINEAR_MIPMAP_LINEAR
+          default:
+            throw new Error(`unknown mipmapFilter: ${this.mipmapFilter}`)
+        }
+      }
+      case SCNFilterMode.nearest: {
+        switch(this.mipFilter){
+          case SCNFilterMode.none:
+            return gl.NEAREST
+          case SCNFilterMode.nearest:
+            return gl.NEAREST_MIPMAP_NEAREST
+          case SCNFilterMode.linear:
+            return gl.NEAREST_MIPMAP_LINEAR
+          default:
+            throw new Error(`unknown mipmapFilter: ${this.mipmapFilter}`)
+        }
+      }
+      default:
+        throw new Error(`unknown minificationFilter: ${this.minificationFilter}`)
+    }
+  }
+
+  /**
+   * @access private
+   * @param {WebGLContext} gl -
+   * @returns {number} -
+   */
+  _magnificationFilterFor(gl) {
+    switch(this.magnificationFilter){
+      case SCNFilterMode.none:
+        return gl.LINEAR // default value
+      case SCNFilterMode.nearest:
+        return gl.NEAREST
+      case SCNFilterMode.linear:
+        return gl.LINEAR
+      default:
+        throw new Error(`unknown magnificationFilter: ${this.magnificationFilter}`)
+    }
+  }
+
+  /**
    * @access public
    * @returns {Float32Array} -
    */
