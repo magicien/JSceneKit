@@ -179,6 +179,15 @@ export default class SCNVector3 {
 
   /**
    * @access public
+   * @param {SCNVector4} q -
+   * @returns {SCNVector3} -
+   */
+  rotateWithQuaternion(q) {
+    return this.rotate(q.rotMatrix())
+  }
+
+  /**
+   * @access public
    * @returns {Float32Array} -
    */
   float32Array() {

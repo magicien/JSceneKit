@@ -993,7 +993,7 @@ export default class SCNView {
     ///////////////////////
     // renders the scene //
     ///////////////////////
-    this._renderer.prepareBuffer()
+    //this._renderer.prepareBuffer()
     this._updateMorph()
     this._renderer.render()
 

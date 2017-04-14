@@ -36,12 +36,64 @@ const _defaultVertexShader =
   uniform mat4 viewTransform;
   uniform mat4 viewProjectionTransform;
 
-  uniform vec4 lightAmbient;
-  uniform vec3 lightPosition;
-  //uniform vec3 lightDirection;
+  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__
+  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__
+  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__
+  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__
+  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__
+  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__
 
-  uniform vec4 materialAmbient;
-  uniform vec4 materialEmission;
+  layout (std140) uniform materialUniform {
+    vec4 ambient;
+    vec4 diffuse;
+    vec4 specular;
+    vec4 emission;
+    float shininess;
+  } material;
+
+  struct AmbientLight {
+    vec4 color;
+  };
+
+  struct DirectionalLight {
+    vec4 color;
+    vec4 direction; // should use vec4; vec3 might cause problem for the layout
+  };
+
+  struct OmniLight {
+    vec4 color;
+    vec4 position; // should use vec4; vec3 might cause problem for the layout
+  };
+
+  struct SpotLight {
+    // TODO: implement
+    vec4 color;
+  };
+
+  struct IESLight {
+    // TODO: implement
+    vec4 color;
+  };
+
+  struct ProbeLight {
+    // TODO: implement
+    vec4 color;
+  };
+
+  layout (std140) uniform lightUniform {
+    __LIGHT_DEFINITION__
+  } light;
+  __VS_LIGHT_VARS__
+  /*
+  layout (std140) uniform lightUniform {
+    AmbientLight ambient[NUM_AMBIENT_LIGHTS];
+    DirectionalLight directional[NUM_DIRECTIONAL_LIGHTS];
+    OmniLight omni[NUM_OMNI_LIGHTS];
+    ProbeLight probe[NUM_PROBE_LIGHTS];
+    SpotLight spot[NUM_SPOT_LIGHTS];
+  } light;
+  out vec3 v_light[NUM_DIRECTIONAL_LIGHTS + NUM_OMNI_LIGHTS];
+  */
 
   //uniform mat3x4[255] skinningJoints;
   uniform vec4[765] skinningJoints;
@@ -58,7 +110,6 @@ const _defaultVertexShader =
   out vec2 v_texcoord;
   out vec4 v_color;
   out vec3 v_eye;
-  out vec3 v_light;
 
   void main() {
     vec3 pos = vec3(0, 0, 0);
@@ -90,14 +141,51 @@ const _defaultVertexShader =
 
     vec3 viewPos = vec3(-viewTransform[3][0], -viewTransform[3][1], -viewTransform[3][2]);
     v_eye = viewPos - pos;
-    v_light = lightPosition - pos;
-    v_color = lightAmbient * materialAmbient;
-    v_color += materialEmission;
+
+    v_color = material.emission;
+    int numLights = 0;
+
+    __VS_LIGHTING__
 
     v_texcoord = texcoord;
     gl_Position = viewProjectionTransform * vec4(pos, 1.0);
   }
 `
+
+
+const _vsAmbient = `
+  for(int i=0; i<NUM_AMBIENT_LIGHTS; i++){
+    v_color += light.ambient[i].color * material.ambient;
+  }
+`
+
+const _vsDirectional = `
+  for(int i=0; i<NUM_DIRECTIONAL_LIGHTS; i++){
+    v_light[numLights + i] = -light.directional[i].direction.xyz;
+  }
+  numLights += NUM_DIRECTIONAL_LIGHTS;
+`
+
+const _vsOmni = `
+  for(int i=0; i<NUM_OMNI_LIGHTS; i++){
+    v_light[numLights + i] = light.omni[i].position.xyz - pos;
+  }
+  numLights += NUM_OMNI_LIGHTS;
+`
+
+const _vsSpot = `
+  for(int i=0; i<NUM_SPOT_LIGHTS; i++){
+    v_light[numLights + i] = light.spot[i].position.xyz - pos;
+  }
+  numLights += NUM_SPOT_LIGHTS;
+`
+
+const _vsIES = ''
+const _vsProbe = ''
+
+const _materialLoc = 0
+const _lightLoc = 1
+
 
 /**
  * @access private
@@ -124,48 +212,126 @@ const _defaultFragmentShader =
   uniform sampler2D u_normalTexture;
   uniform bool u_useNormalTexture;
 
-  uniform mat4 viewTransform;
-  //uniform vec3 lightDirection;
-  uniform vec4 lightDiffuse;
-  uniform vec4 materialDiffuse;
-  uniform vec4 materialSpecular;
-  uniform float materialShininess;
+  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__
+  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__
+  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__
+  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__
+  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__
+  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__
+
+  layout (std140) uniform materialUniform {
+    vec4 ambient;
+    vec4 diffuse;
+    vec4 specular;
+    vec4 emission;
+    float shininess;
+  } material;
+
+  struct AmbientLight {
+    vec4 color;
+  };
+
+  struct DirectionalLight {
+    vec4 color;
+    vec4 direction; // should use vec4; vec3 might cause problem for the layout
+  };
+
+  struct OmniLight {
+    vec4 color;
+    vec4 position; // should use vec4; vec3 might cause problem for the layout
+  };
+
+  struct ProbeLight {
+    // TODO: implement
+    vec4 color;
+  };
+
+  struct SpotLight {
+    // TODO: implement
+    vec4 color;
+  };
+
+  layout (std140) uniform lightUniform {
+    __LIGHT_DEFINITION__
+  } light;
+  __FS_LIGHT_VARS__
+  /*
+  layout (std140) uniform lightUniform {
+    AmbientLight ambient[NUM_AMBIENT_LIGHTS];
+    DirectionalLight directional[NUM_DIRECTIONAL_LIGHTS];
+    OmniLight omni[NUM_OMNI_LIGHTS];
+    ProbeLight probe[NUM_PROBE_LIGHTS];
+    SpotLight spot[NUM_SPOT_LIGHTS];
+  } light;
+  in vec3 v_light[NUM_DIRECTIONAL_LIGHTS + NUM_OMNI_LIGHTS];
+  */
 
   in vec3 v_position;
   in vec3 v_normal;
   in vec2 v_texcoord;
   in vec4 v_color;
   in vec3 v_eye;
-  in vec3 v_light;
 
   out vec4 outColor;
 
   void main() {
     outColor = v_color;
 
-    vec3 lightVec = normalize(v_light);
     vec3 viewVec = normalize(v_eye);
     vec3 nom = normalize(v_normal);
 
-    // diffuse
-    float diffuse = clamp(dot(lightVec, nom), 0.0f, 1.0f);
-    outColor += lightDiffuse * materialDiffuse * diffuse;
-
-    // specular
-    if(diffuse > 0.0f){
-      vec3 halfVec = normalize(lightVec + viewVec);
-      float specular = pow(dot(halfVec, nom), materialShininess);
-      outColor += materialSpecular * specular; // TODO: get the light color of specular
-    }
-
+    int numLights = 0;
+      
+    __FS_LIGHTING__
+    
     // diffuse texture
     if(u_useDiffuseTexture){
       vec4 color = texture(u_diffuseTexture, v_texcoord);
       outColor = color * outColor;
     }
-
   }
 `
+
+const _fsAmbient = `
+`
+
+const _fsDirectional = `
+  for(int i=0; i<NUM_DIRECTIONAL_LIGHTS; i++){
+    // diffuse
+    vec3 lightVec = normalize(v_light[numLights + i]);
+    float diffuse = clamp(dot(lightVec, nom), 0.0f, 1.0f);
+    outColor += light.directional[i].color * material.diffuse * diffuse;
+
+    if(diffuse > 0.0f){
+      vec3 halfVec = normalize(lightVec + viewVec);
+      float specular = pow(dot(halfVec, nom), material.shininess);
+      outColor += material.specular * specular; // TODO: get the light color of specular
+    }
+  }
+  numLights += NUM_DIRECTIONAL_LIGHTS;
+`
+
+const _fsOmni = `
+  for(int i=0; i<NUM_OMNI_LIGHTS; i++){
+    vec3 lightVec = normalize(v_light[numLights + i]);
+    float diffuse = clamp(dot(lightVec, nom), 0.0f, 1.0f);
+    outColor += light.omni[i].color * material.diffuse * diffuse;
+
+    if(diffuse > 0.0f){
+      vec3 halfVec = normalize(lightVec + viewVec);
+      float specular = pow(dot(halfVec, nom), material.shininess);
+      outColor += material.specular * specular; // TODO: get the light color of specular
+    }
+  }
+  numLights += NUM_OMNI_LIGHTS;
+`
+
+const _fsSpot = `
+  // TODO: implement
+`
+
+const _fsIES = ''
+const _fsProbe = ''
 
 const _defaultCameraDistance = 15
 
@@ -367,7 +533,8 @@ export default class SCNRenderer extends NSObject {
     this._defaultLightNode = new SCNNode()
     const light = new SCNLight()
     light.color = SKColor.white
-    light.type = SCNLight.directional
+    light.type = SCNLight.LightType.omni
+    light.position = new SCNVector3(0, 10, 10)
     this._defaultLightNode.light = light
 
     /**
@@ -381,6 +548,24 @@ export default class SCNRenderer extends NSObject {
      * @type {WebGLTexture}
      */
     this.__dummyTexture = null
+
+    /**
+     * @access private
+     * @type {Object}
+     */
+    this._lightNodes = {}
+
+    /**
+     * @access private
+     * @type {Object}
+     */
+    this._numLights = {}
+
+    /**
+     * @access private
+     * @type {WebGLBuffer}
+     */
+    this._lightBuffer = null
   }
 
   /**
@@ -441,15 +626,18 @@ export default class SCNRenderer extends NSObject {
       console.error('SCNRenderer.render(): context is null')
       return
     }
-    const gl = this.context
-    const program = this._defaultProgram._glProgram
-    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT)
 
     // set camera node
     const cameraNode = this._getCameraNode()
     const camera = cameraNode.camera
     camera._updateProjectionTransform(this._viewRect)
 
+    // set light node
+    this._lightNodes = this._createLightNodeArray()
+
+    const gl = this.context
+    const program = this._defaultProgram._glProgram
+    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT)
     // camera params
     gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewTransform'), false, cameraNode.viewTransform.float32Array())
     gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewProjectionTransform'), false, cameraNode.viewProjectionTransform.float32Array())
@@ -460,13 +648,11 @@ export default class SCNRenderer extends NSObject {
     //console.log('viewProjectionTransform: ' + cameraNode.viewProjectionTransform.float32Array())
     
     // light params
-    const lights = this._createLightNodeArray()
-    if(lights.length === 0){
-      lights.push(this._defaultLightNode)
-    }
+    //const lights = this._createLightNodeArray()
     //console.log('lights.length: ' + lights.length)
 
     // FIXME: use all lights
+    /*
     let hasAmbient = false
     let hasDiffuse = false
     lights.forEach((lightNode) => {
@@ -491,10 +677,42 @@ export default class SCNRenderer extends NSObject {
         new Float32Array([0, 1000, 0])
       )
     }
+    */
 
-    // FIXME: use uniform var 
-    //const lightDirection = new Float32Array([0, -0.9, -0.1])
+
     //gl.uniform3fv(gl.getUniformLocation(program, 'lightDirection'), lightDirection)
+    if(this._lightBuffer === null){
+      this._initializeLightBuffer(program)
+    }
+
+    const lights = this._lightNodes
+    const lightData = []
+    lights.ambient.forEach((node) => {
+      lightData.push(...node.light.color.float32Array())
+    })
+    lights.directional.forEach((node) => {
+      const direction = (new SCNVector3(0, 0, -1)).rotateWithQuaternion(node._worldOrientaiton)
+      lightData.push(
+        ...node.light.color.float32Array(),
+        ...direction.float32Array(), 0
+      )
+    })
+    lights.omni.forEach((node) => {
+      lightData.push(
+        ...node.light.color.float32Array(),
+        ...node._worldTranslation.float32Array(), 0
+      )
+    })
+    lights.probe.forEach((node) => {
+      lightData.push(...node.light.color.float32Array())
+    })
+    lights.spot.forEach((node) => {
+      lightData.push(...node.light.color.float32Array())
+    })
+
+    gl.bindBuffer(gl.UNIFORM_BUFFER, this._lightBuffer)
+    gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(lightData), gl.DYNAMIC_DRAW)
+    gl.bindBuffer(gl.UNIFORM_BUFFER, null)
 
     const renderingArray = this._createRenderingNodeArray()
     renderingArray.forEach((node) => {
@@ -549,18 +767,35 @@ export default class SCNRenderer extends NSObject {
    * @returns {SCNNode[]} -
    */
   _createLightNodeArray() {
+    const targetNodes = {
+      ies: [],
+      ambient: [],
+      directional: [],
+      omni: [],
+      probe: [],
+      spot: []
+    }
+
     const arr = [this.scene.rootNode]
-    const targetNodes = []
+    let numLights = 0
     while(arr.length > 0){
       const node = arr.shift()
       if(node.presentation.light !== null){
-        targetNodes.push(node.presentation)
+        targetNodes[node.presentation.light.type].push(node.presentation)
+        if(node.presentation.light.type !== SCNLight.LightType.ambient){
+          numLights += 1
+        }
       }
       arr.push(...node.childNodes)
     }
+    if(this.autoenablesDefaultLighting && numLights === 0){
+      targetNodes[this._defaultLightNode.light.type].push(this._defaultLightNode)
+    }
+
     return targetNodes
   }
 
+  /*
   prepareBuffer() {
     // FIXME: reuse renderingArray
     const renderingArray = this._createRenderingNodeArray()
@@ -580,8 +815,10 @@ export default class SCNRenderer extends NSObject {
 
     if(geometry._vertexArrayObjects === null){
       this._initializeVAO(node, program)
+      this._initializeUBO(node, program)
     }
   }
+  */
 
   /**
    *
@@ -597,6 +834,11 @@ export default class SCNRenderer extends NSObject {
       program = geometry.program._glProgram
     }
     gl.useProgram(program)
+
+    if(geometry._vertexArrayObjects === null){
+      this._initializeVAO(node, program)
+      this._initializeUBO(node, program)
+    }
 
     //if(geometry._vertexArrayObjects === null){
     //  this._initializeVAO(node, program)
@@ -632,11 +874,14 @@ export default class SCNRenderer extends NSObject {
 
       gl.bindVertexArray(vao)
 
+      /*
       gl.uniform4fv(gl.getUniformLocation(program, 'materialAmbient'), material.ambient.float32Array())
       gl.uniform4fv(gl.getUniformLocation(program, 'materialDiffuse'), material.diffuse.float32Array())
       gl.uniform4fv(gl.getUniformLocation(program, 'materialSpecular'), material.specular.float32Array())
       gl.uniform4fv(gl.getUniformLocation(program, 'materialEmission'), material.emission.float32Array())
       gl.uniform1f(gl.getUniformLocation(program, 'materialShininess'), material.shininess)
+      */
+      geometry._bufferMaterialData(gl, i)
 
       //console.log(`materialDiffuse: ${material.diffuse.float32Array()}`)
 
@@ -985,18 +1230,23 @@ export default class SCNRenderer extends NSObject {
    * @type {SCNProgram}
    */
   get _defaultProgram() {
-    if(this.__defaultProgram !== null){
+    const numLightsChanged = this._numLightsChanged()
+    if(this.__defaultProgram !== null && !numLightsChanged){
       return this.__defaultProgram
     }
-    const p = new SCNProgram()
-    this.__defaultProgram = p
 
     const gl = this.context
-    p._glProgram = gl.createProgram()
+    if(this.__defaultProgram == null){
+      this.__defaultProgram = new SCNProgram()
+      this.__defaultProgram._glProgram = gl.createProgram()
+    }
+    const p = this.__defaultProgram
+    const vsText = this._defaultVertexShader
+    const fsText = this._defaultFragmentShader
 
     // initialize vertex shader
     const vertexShader = gl.createShader(gl.VERTEX_SHADER)
-    gl.shaderSource(vertexShader, _defaultVertexShader)
+    gl.shaderSource(vertexShader, vsText)
     gl.compileShader(vertexShader)
     if(!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)){
       const info = gl.getShaderInfoLog(vertexShader)
@@ -1005,7 +1255,7 @@ export default class SCNRenderer extends NSObject {
 
     // initialize fragment shader
     const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER)
-    gl.shaderSource(fragmentShader, _defaultFragmentShader)
+    gl.shaderSource(fragmentShader, fsText)
     gl.compileShader(fragmentShader)
     if(!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)){
       const info = gl.getShaderInfoLog(fragmentShader)
@@ -1024,7 +1274,7 @@ export default class SCNRenderer extends NSObject {
     }
 
     gl.useProgram(p._glProgram)
-    gl.clearColor(1, 1, 1, 1) // DEBUG
+    //gl.clearColor(1, 1, 1, 1)
     gl.clearDepth(1.0)
     gl.clearStencil(0)
 
@@ -1034,8 +1284,104 @@ export default class SCNRenderer extends NSObject {
     gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)
     gl.enable(gl.CULL_FACE)
     gl.cullFace(gl.BACK)
+
+    // set default textures to prevent warnings
+    this._setDummyTextureAsDefault()
     
     return this.__defaultProgram
+  }
+
+  /**
+   * @access private
+   * @returns {string} -
+   */
+  get _defaultVertexShader() {
+    return this._replaceTexts(_defaultVertexShader)
+  }
+
+  /**
+   * @access private
+   * @returns {string} -
+   */
+  get _defaultFragmentShader() {
+    return this._replaceTexts(_defaultFragmentShader)
+  }
+
+  /**
+   * @access private
+   * @param {string} text -
+   * @returns {string} -
+   */
+  _replaceTexts(text) {
+    const vars = new Map()
+    const numAmbient = this._numLights[SCNLight.LightType.ambient]
+    const numDirectional = this._numLights[SCNLight.LightType.directional]
+    const numOmni = this._numLights[SCNLight.LightType.omni]
+    const numSpot = this._numLights[SCNLight.LightType.spot]
+    const numIES = this._numLights[SCNLight.LightType.IES]
+    const numProbe = this._numLights[SCNLight.LightType.probe]
+
+    vars.set('__NUM_AMBIENT_LIGHTS__', numAmbient)
+    vars.set('__NUM_DIRECTIONAL_LIGHTS__', numDirectional)
+    vars.set('__NUM_OMNI_LIGHTS__', numOmni)
+    vars.set('__NUM_SPOT_LIGHTS__', numSpot)
+    vars.set('__NUM_IES_LIGHTS__', numIES)
+    vars.set('__NUM_PROBE_LIGHTS__', numProbe)
+
+    let lightDefinition = ''
+    let vsLighting = ''
+    let fsLighting = ''
+    if(numAmbient > 0){
+      lightDefinition += 'AmbientLight ambient[NUM_AMBIENT_LIGHTS]; '
+      vsLighting += _vsAmbient
+      fsLighting += _fsAmbient
+    }
+    if(numDirectional > 0){
+      lightDefinition += 'DirectionalLight directional[NUM_DIRECTIONAL_LIGHTS]; '
+      vsLighting += _vsDirectional
+      fsLighting += _fsDirectional
+
+    }
+    if(numOmni > 0){
+      lightDefinition += 'OmniLight omni[NUM_OMNI_LIGHTS]; '
+      vsLighting += _vsOmni
+      fsLighting += _fsOmni
+    }
+    if(numSpot > 0){
+      lightDefinition += 'OmniLight spot[NUM_OMNI_LIGHTS]; '
+      vsLighting += _vsSpot
+      fsLighting += _fsSpot
+    }
+    if(numIES > 0){
+      lightDefinition += 'IESLight probe[NUM_IES_LIGHTS]; '
+      vsLighting += _vsIES
+      fsLighting += _fsIES
+    }
+    if(numProbe > 0){
+      lightDefinition += 'ProbeLight probe[NUM_PROBE_LIGHTS]; '
+      vsLighting += _vsProbe
+      fsLighting += _fsProbe
+    }
+    vars.set('__LIGHT_DEFINITION__', lightDefinition)
+    vars.set('__VS_LIGHTING__', vsLighting)
+    vars.set('__FS_LIGHTING__', fsLighting)
+
+    if(numDirectional + numOmni + numSpot > 0){
+      const v = 'vec3 v_light[NUM_DIRECTIONAL_LIGHTS + NUM_OMNI_LIGHTS + NUM_SPOT_LIGHTS]; '
+      vars.set('__VS_LIGHT_VARS__', 'out ' + v)
+      vars.set('__FS_LIGHT_VARS__', 'in ' + v)
+    }else{
+      vars.set('__VS_LIGHT_VARS__', '')
+      vars.set('__FS_LIGHT_VARS__', '')
+    }
+
+    let result = text
+    vars.forEach((value, key) => {
+      const rex = new RegExp(key, 'g')
+      result = result.replace(rex, value)
+    })
+
+    return result
   }
 
   _initializeVAO(node, program) {
@@ -1133,6 +1479,26 @@ export default class SCNRenderer extends NSObject {
     }
   }
 
+  _initializeLightBuffer(program) {
+    const gl = this.context
+    
+    const lightIndex = gl.getUniformBlockIndex(program, 'lightUniform')
+
+    this._lightBuffer = gl.createBuffer()
+    gl.uniformBlockBinding(program, lightIndex, _lightLoc)
+    gl.bindBufferBase(gl.UNIFORM_BUFFER, _lightLoc, this._lightBuffer)
+  }
+
+  _initializeUBO(node, program) {
+    const gl = this.context
+    const geometry = node.presentation.geometry
+
+    const materialIndex = gl.getUniformBlockIndex(program, 'materialUniform')
+    geometry._materialBuffer = gl.createBuffer()
+    gl.uniformBlockBinding(program, materialIndex, _materialLoc)
+    gl.bindBufferBase(gl.UNIFORM_BUFFER, _materialLoc, geometry._materialBuffer)
+  }
+
   _updateVAO(node) {
     const gl = this.context
     const geometry = node.presentation.geometry
@@ -1167,7 +1533,7 @@ export default class SCNRenderer extends NSObject {
     // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
     gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas)
     gl.bindTexture(gl.TEXTURE_2D, null)
-    this._setDummyTextureAsDefault()
+    //this._setDummyTextureAsDefault()
   }
 
   _setDummyTextureAsDefault() {
@@ -1301,6 +1667,22 @@ export default class SCNRenderer extends NSObject {
       return this._defaultCameraNode.position.z
     }
     return _defaultCameraDistance
+  }
+
+  /**
+   * @access private
+   * @returns {boolean} - true if the number of lights is changed.
+   */
+  _numLightsChanged() {
+    let changed = false
+    Object.values(SCNLight.LightType).forEach((type) => {
+      const num = this._lightNodes[type].length
+      if(num !== this._numLights[type]){
+        changed = true
+        this._numLights[type] = num
+      }
+    })
+    return changed
   }
 
   /**

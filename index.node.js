@@ -15245,6 +15245,18 @@ module.exports =
 
 	    /**
 	     * @access public
+	     * @param {SCNVector4} q -
+	     * @returns {SCNVector3} -
+	     */
+
+	  }, {
+	    key: 'rotateWithQuaternion',
+	    value: function rotateWithQuaternion(q) {
+	      return this.rotate(q.rotMatrix());
+	    }
+
+	    /**
+	     * @access public
 	     * @returns {Float32Array} -
 	     */
 
@@ -21512,6 +21524,7 @@ module.exports =
 	    _this._geometryElements = elements;
 	    _this._geometrySources = sources;
 	    _this._vertexArrayObjects = null;
+	    _this._materialBuffer = null;
 
 	    // Working with Subdivision Surfaces
 
@@ -22097,6 +22110,11 @@ module.exports =
 	      this._indexBuffer = this._geometryElements[0]._createBuffer(gl);
 	      return this._indexBuffer;
 	    }
+	  }, {
+	    key: '_createIndexBuffer',
+	    value: function _createIndexBuffer(gl) {
+	      var update = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+	    }
 
 	    /**
 	     * @access private
@@ -22113,6 +22131,26 @@ module.exports =
 	      var vertexData = new Float32Array(pVertexSource._data);
 	      gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer);
 	      gl.bufferData(gl.ARRAY_BUFFER, vertexData, gl.DYNAMIC_DRAW);
+	    }
+
+	    /**
+	     * @access private
+	     * @param {WebGLContext} gl -
+	     * @param {number} index - material index
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_bufferMaterialData',
+	    value: function _bufferMaterialData(gl, index) {
+	      var material = this.materials[index];
+	      var materialData = new Float32Array([].concat(_toConsumableArray(material.ambient.float32Array()), _toConsumableArray(material.diffuse.float32Array()), _toConsumableArray(material.specular.float32Array()), _toConsumableArray(material.emission.float32Array()), [material.shininess, 0, 0, 0 // needs padding for 16-byte align
+	      ]));
+	      //console.log(`buffer: ${this._materialBuffer}`)
+	      //console.log(`bufferMaterialData: ${materialData}`)
+	      gl.bindBuffer(gl.UNIFORM_BUFFER, this._materialBuffer);
+	      gl.bufferData(gl.UNIFORM_BUFFER, materialData, gl.DYNAMIC_DRAW);
+	      gl.bindBuffer(gl.UNIFORM_BUFFER, null);
 	    }
 	  }, {
 	    key: 'copy',
@@ -22762,13 +22800,38 @@ module.exports =
 	 * @access private
 	 * @type {string}
 	 */
-	var _defaultVertexShader = '#version 300 es\n  precision mediump float;\n\n  uniform mat4 viewTransform;\n  uniform mat4 viewProjectionTransform;\n\n  uniform vec4 lightAmbient;\n  uniform vec3 lightPosition;\n  //uniform vec3 lightDirection;\n\n  uniform vec4 materialAmbient;\n  uniform vec4 materialEmission;\n\n  //uniform mat3x4[255] skinningJoints;\n  uniform vec4[765] skinningJoints;\n  uniform int numSkinningJoints;\n\n  in vec3 position;\n  in vec3 normal;\n  in vec2 texcoord;\n  in vec4 boneIndices;\n  in vec4 boneWeights;\n\n  out vec3 v_position;\n  out vec3 v_normal;\n  out vec2 v_texcoord;\n  out vec4 v_color;\n  out vec3 v_eye;\n  out vec3 v_light;\n\n  void main() {\n    vec3 pos = vec3(0, 0, 0);\n    vec3 nom = vec3(0, 0, 0);\n    if(numSkinningJoints > 0){\n      for(int i=0; i<numSkinningJoints; i++){\n        float weight = boneWeights[i];\n        if(int(boneIndices[i]) < 0){\n          continue;\n        }\n        int idx = int(boneIndices[i]) * 3;\n        mat4 jointMatrix = transpose(mat4(skinningJoints[idx],\n                                          skinningJoints[idx+1],\n                                          skinningJoints[idx+2],\n                                          vec4(0, 0, 0, 1)));\n        pos += (jointMatrix * vec4(position, 1.0)).xyz * weight;\n        nom += (mat3(jointMatrix) * normal) * weight;\n      }\n    }else{\n      mat4 jointMatrix = transpose(mat4(skinningJoints[0],\n                                        skinningJoints[1],\n                                        skinningJoints[2],\n                                        vec4(0, 0, 0, 1)));\n      pos = (jointMatrix * vec4(position, 1.0)).xyz;\n      nom = mat3(jointMatrix) * normal;\n    }\n    v_position = pos;\n    v_normal = nom;\n\n    vec3 viewPos = vec3(-viewTransform[3][0], -viewTransform[3][1], -viewTransform[3][2]);\n    v_eye = viewPos - pos;\n    v_light = lightPosition - pos;\n    v_color = lightAmbient * materialAmbient;\n    v_color += materialEmission;\n\n    v_texcoord = texcoord;\n    gl_Position = viewProjectionTransform * vec4(pos, 1.0);\n  }\n';
+	var _defaultVertexShader = '#version 300 es\n  precision mediump float;\n\n  uniform mat4 viewTransform;\n  uniform mat4 viewProjectionTransform;\n\n  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__\n  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__\n  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__\n  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__\n  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__\n  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__\n\n  layout (std140) uniform materialUniform {\n    vec4 ambient;\n    vec4 diffuse;\n    vec4 specular;\n    vec4 emission;\n    float shininess;\n  } material;\n\n  struct AmbientLight {\n    vec4 color;\n  };\n\n  struct DirectionalLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct OmniLight {\n    vec4 color;\n    vec4 position; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct SpotLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct IESLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct ProbeLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  layout (std140) uniform lightUniform {\n    __LIGHT_DEFINITION__\n  } light;\n  __VS_LIGHT_VARS__\n  /*\n  layout (std140) uniform lightUniform {\n    AmbientLight ambient[NUM_AMBIENT_LIGHTS];\n    DirectionalLight directional[NUM_DIRECTIONAL_LIGHTS];\n    OmniLight omni[NUM_OMNI_LIGHTS];\n    ProbeLight probe[NUM_PROBE_LIGHTS];\n    SpotLight spot[NUM_SPOT_LIGHTS];\n  } light;\n  out vec3 v_light[NUM_DIRECTIONAL_LIGHTS + NUM_OMNI_LIGHTS];\n  */\n\n  //uniform mat3x4[255] skinningJoints;\n  uniform vec4[765] skinningJoints;\n  uniform int numSkinningJoints;\n\n  in vec3 position;\n  in vec3 normal;\n  in vec2 texcoord;\n  in vec4 boneIndices;\n  in vec4 boneWeights;\n\n  out vec3 v_position;\n  out vec3 v_normal;\n  out vec2 v_texcoord;\n  out vec4 v_color;\n  out vec3 v_eye;\n\n  void main() {\n    vec3 pos = vec3(0, 0, 0);\n    vec3 nom = vec3(0, 0, 0);\n    if(numSkinningJoints > 0){\n      for(int i=0; i<numSkinningJoints; i++){\n        float weight = boneWeights[i];\n        if(int(boneIndices[i]) < 0){\n          continue;\n        }\n        int idx = int(boneIndices[i]) * 3;\n        mat4 jointMatrix = transpose(mat4(skinningJoints[idx],\n                                          skinningJoints[idx+1],\n                                          skinningJoints[idx+2],\n                                          vec4(0, 0, 0, 1)));\n        pos += (jointMatrix * vec4(position, 1.0)).xyz * weight;\n        nom += (mat3(jointMatrix) * normal) * weight;\n      }\n    }else{\n      mat4 jointMatrix = transpose(mat4(skinningJoints[0],\n                                        skinningJoints[1],\n                                        skinningJoints[2],\n                                        vec4(0, 0, 0, 1)));\n      pos = (jointMatrix * vec4(position, 1.0)).xyz;\n      nom = mat3(jointMatrix) * normal;\n    }\n    v_position = pos;\n    v_normal = nom;\n\n    vec3 viewPos = vec3(-viewTransform[3][0], -viewTransform[3][1], -viewTransform[3][2]);\n    v_eye = viewPos - pos;\n\n    v_color = material.emission;\n    int numLights = 0;\n\n    __VS_LIGHTING__\n\n    v_texcoord = texcoord;\n    gl_Position = viewProjectionTransform * vec4(pos, 1.0);\n  }\n';
+
+	var _vsAmbient = '\n  for(int i=0; i<NUM_AMBIENT_LIGHTS; i++){\n    v_color += light.ambient[i].color * material.ambient;\n  }\n';
+
+	var _vsDirectional = '\n  for(int i=0; i<NUM_DIRECTIONAL_LIGHTS; i++){\n    v_light[numLights + i] = -light.directional[i].direction.xyz;\n  }\n  numLights += NUM_DIRECTIONAL_LIGHTS;\n';
+
+	var _vsOmni = '\n  for(int i=0; i<NUM_OMNI_LIGHTS; i++){\n    v_light[numLights + i] = light.omni[i].position.xyz - pos;\n  }\n  numLights += NUM_OMNI_LIGHTS;\n';
+
+	var _vsSpot = '\n  for(int i=0; i<NUM_SPOT_LIGHTS; i++){\n    v_light[numLights + i] = light.spot[i].position.xyz - pos;\n  }\n  numLights += NUM_SPOT_LIGHTS;\n';
+
+	var _vsIES = '';
+	var _vsProbe = '';
+
+	var _materialLoc = 0;
+	var _lightLoc = 1;
 
 	/**
 	 * @access private
 	 * @type {string}
 	 */
-	var _defaultFragmentShader = '#version 300 es\n  precision mediump float;\n\n  uniform sampler2D u_emissionTexture;\n  uniform bool u_useEmissionTexture;\n  uniform sampler2D u_ambientTexture;\n  uniform bool u_useAmbientTexture;\n  uniform sampler2D u_diffuseTexture;\n  uniform bool u_useDiffuseTexture;\n  uniform sampler2D u_specularTexture;\n  uniform bool u_useSpecularTexture;\n  uniform sampler2D u_reflectiveTexture;\n  uniform bool u_useReflectiveTexture;\n  uniform sampler2D u_transparentTexture;\n  uniform bool u_useTransparentTexture;\n  uniform sampler2D u_multiplyTexture;\n  uniform bool u_useMultiplyTexture;\n  uniform sampler2D u_normalTexture;\n  uniform bool u_useNormalTexture;\n\n  uniform mat4 viewTransform;\n  //uniform vec3 lightDirection;\n  uniform vec4 lightDiffuse;\n  uniform vec4 materialDiffuse;\n  uniform vec4 materialSpecular;\n  uniform float materialShininess;\n\n  in vec3 v_position;\n  in vec3 v_normal;\n  in vec2 v_texcoord;\n  in vec4 v_color;\n  in vec3 v_eye;\n  in vec3 v_light;\n\n  out vec4 outColor;\n\n  void main() {\n    outColor = v_color;\n\n    vec3 lightVec = normalize(v_light);\n    vec3 viewVec = normalize(v_eye);\n    vec3 nom = normalize(v_normal);\n\n    // diffuse\n    float diffuse = clamp(dot(lightVec, nom), 0.0f, 1.0f);\n    outColor += lightDiffuse * materialDiffuse * diffuse;\n\n    // specular\n    if(diffuse > 0.0f){\n      vec3 halfVec = normalize(lightVec + viewVec);\n      float specular = pow(dot(halfVec, nom), materialShininess);\n      outColor += materialSpecular * specular; // TODO: get the light color of specular\n    }\n\n    // diffuse texture\n    if(u_useDiffuseTexture){\n      vec4 color = texture(u_diffuseTexture, v_texcoord);\n      outColor = color * outColor;\n    }\n\n  }\n';
+	var _defaultFragmentShader = '#version 300 es\n  precision mediump float;\n\n  uniform sampler2D u_emissionTexture;\n  uniform bool u_useEmissionTexture;\n  uniform sampler2D u_ambientTexture;\n  uniform bool u_useAmbientTexture;\n  uniform sampler2D u_diffuseTexture;\n  uniform bool u_useDiffuseTexture;\n  uniform sampler2D u_specularTexture;\n  uniform bool u_useSpecularTexture;\n  uniform sampler2D u_reflectiveTexture;\n  uniform bool u_useReflectiveTexture;\n  uniform sampler2D u_transparentTexture;\n  uniform bool u_useTransparentTexture;\n  uniform sampler2D u_multiplyTexture;\n  uniform bool u_useMultiplyTexture;\n  uniform sampler2D u_normalTexture;\n  uniform bool u_useNormalTexture;\n\n  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__\n  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__\n  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__\n  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__\n  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__\n  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__\n\n  layout (std140) uniform materialUniform {\n    vec4 ambient;\n    vec4 diffuse;\n    vec4 specular;\n    vec4 emission;\n    float shininess;\n  } material;\n\n  struct AmbientLight {\n    vec4 color;\n  };\n\n  struct DirectionalLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct OmniLight {\n    vec4 color;\n    vec4 position; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct ProbeLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct SpotLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  layout (std140) uniform lightUniform {\n    __LIGHT_DEFINITION__\n  } light;\n  __FS_LIGHT_VARS__\n  /*\n  layout (std140) uniform lightUniform {\n    AmbientLight ambient[NUM_AMBIENT_LIGHTS];\n    DirectionalLight directional[NUM_DIRECTIONAL_LIGHTS];\n    OmniLight omni[NUM_OMNI_LIGHTS];\n    ProbeLight probe[NUM_PROBE_LIGHTS];\n    SpotLight spot[NUM_SPOT_LIGHTS];\n  } light;\n  in vec3 v_light[NUM_DIRECTIONAL_LIGHTS + NUM_OMNI_LIGHTS];\n  */\n\n  in vec3 v_position;\n  in vec3 v_normal;\n  in vec2 v_texcoord;\n  in vec4 v_color;\n  in vec3 v_eye;\n\n  out vec4 outColor;\n\n  void main() {\n    outColor = v_color;\n\n    vec3 viewVec = normalize(v_eye);\n    vec3 nom = normalize(v_normal);\n\n    int numLights = 0;\n      \n    __FS_LIGHTING__\n    \n    // diffuse texture\n    if(u_useDiffuseTexture){\n      vec4 color = texture(u_diffuseTexture, v_texcoord);\n      outColor = color * outColor;\n    }\n  }\n';
+
+	var _fsAmbient = '\n';
+
+	var _fsDirectional = '\n  for(int i=0; i<NUM_DIRECTIONAL_LIGHTS; i++){\n    // diffuse\n    vec3 lightVec = normalize(v_light[numLights + i]);\n    float diffuse = clamp(dot(lightVec, nom), 0.0f, 1.0f);\n    outColor += light.directional[i].color * material.diffuse * diffuse;\n\n    if(diffuse > 0.0f){\n      vec3 halfVec = normalize(lightVec + viewVec);\n      float specular = pow(dot(halfVec, nom), material.shininess);\n      outColor += material.specular * specular; // TODO: get the light color of specular\n    }\n  }\n  numLights += NUM_DIRECTIONAL_LIGHTS;\n';
+
+	var _fsOmni = '\n  for(int i=0; i<NUM_OMNI_LIGHTS; i++){\n    vec3 lightVec = normalize(v_light[numLights + i]);\n    float diffuse = clamp(dot(lightVec, nom), 0.0f, 1.0f);\n    outColor += light.omni[i].color * material.diffuse * diffuse;\n\n    if(diffuse > 0.0f){\n      vec3 halfVec = normalize(lightVec + viewVec);\n      float specular = pow(dot(halfVec, nom), material.shininess);\n      outColor += material.specular * specular; // TODO: get the light color of specular\n    }\n  }\n  numLights += NUM_OMNI_LIGHTS;\n';
+
+	var _fsSpot = '\n  // TODO: implement\n';
+
+	var _fsIES = '';
+	var _fsProbe = '';
 
 	var _defaultCameraDistance = 15;
 
@@ -22975,7 +23038,8 @@ module.exports =
 	    _this._defaultLightNode = new _SCNNode2.default();
 	    var light = new _SCNLight2.default();
 	    light.color = _SKColor2.default.white;
-	    light.type = _SCNLight2.default.directional;
+	    light.type = _SCNLight2.default.LightType.omni;
+	    light.position = new _SCNVector2.default(0, 10, 10);
 	    _this._defaultLightNode.light = light;
 
 	    /**
@@ -22989,6 +23053,24 @@ module.exports =
 	     * @type {WebGLTexture}
 	     */
 	    _this.__dummyTexture = null;
+
+	    /**
+	     * @access private
+	     * @type {Object}
+	     */
+	    _this._lightNodes = {};
+
+	    /**
+	     * @access private
+	     * @type {Object}
+	     */
+	    _this._numLights = {};
+
+	    /**
+	     * @access private
+	     * @type {WebGLBuffer}
+	     */
+	    _this._lightBuffer = null;
 	    return _this;
 	  }
 
@@ -23060,15 +23142,18 @@ module.exports =
 	        console.error('SCNRenderer.render(): context is null');
 	        return;
 	      }
-	      var gl = this.context;
-	      var program = this._defaultProgram._glProgram;
-	      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT);
 
 	      // set camera node
 	      var cameraNode = this._getCameraNode();
 	      var camera = cameraNode.camera;
 	      camera._updateProjectionTransform(this._viewRect);
 
+	      // set light node
+	      this._lightNodes = this._createLightNodeArray();
+
+	      var gl = this.context;
+	      var program = this._defaultProgram._glProgram;
+	      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT);
 	      // camera params
 	      gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewTransform'), false, cameraNode.viewTransform.float32Array());
 	      gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewProjectionTransform'), false, cameraNode.viewProjectionTransform.float32Array());
@@ -23079,38 +23164,64 @@ module.exports =
 	      //console.log('viewProjectionTransform: ' + cameraNode.viewProjectionTransform.float32Array())
 
 	      // light params
-	      var lights = this._createLightNodeArray();
-	      if (lights.length === 0) {
-	        lights.push(this._defaultLightNode);
-	      }
+	      //const lights = this._createLightNodeArray()
 	      //console.log('lights.length: ' + lights.length)
 
 	      // FIXME: use all lights
-	      var hasAmbient = false;
-	      var hasDiffuse = false;
-	      lights.forEach(function (lightNode) {
-	        var light = lightNode.light;
-	        if (light.type === _SCNLight2.default.LightType.ambient) {
-	          hasAmbient = true;
-	          gl.uniform4fv(gl.getUniformLocation(program, 'lightAmbient'), light.color.float32Array());
+	      /*
+	      let hasAmbient = false
+	      let hasDiffuse = false
+	      lights.forEach((lightNode) => {
+	        const light = lightNode.light
+	        if(light.type === SCNLight.LightType.ambient){
+	          hasAmbient = true
+	          gl.uniform4fv(gl.getUniformLocation(program, 'lightAmbient'), light.color.float32Array())
 	        }
-	        if (light.type === _SCNLight2.default.LightType.directional || light.type === _SCNLight2.default.LightType.omni) {
-	          hasDiffuse = true;
-	          gl.uniform4fv(gl.getUniformLocation(program, 'lightDiffuse'), light.color.float32Array());
-	          gl.uniform3fv(gl.getUniformLocation(program, 'lightPosition'), lightNode._worldTranslation.float32Array());
+	        if(light.type === SCNLight.LightType.directional 
+	          || light.type === SCNLight.LightType.omni){
+	          hasDiffuse = true
+	          gl.uniform4fv(gl.getUniformLocation(program, 'lightDiffuse'), light.color.float32Array())
+	          gl.uniform3fv(gl.getUniformLocation(program, 'lightPosition'), lightNode._worldTranslation.float32Array())
 	        }
-	      });
-	      if (!hasAmbient) {
-	        gl.uniform4fv(gl.getUniformLocation(program, 'lightAmbient'), _SKColor2.default.black.float32Array());
+	      })
+	      if(!hasAmbient){
+	        gl.uniform4fv(gl.getUniformLocation(program, 'lightAmbient'), SKColor.black.float32Array())
 	      }
-	      if (!hasDiffuse) {
-	        gl.uniform4fv(gl.getUniformLocation(program, 'lightDiffuse'), _SKColor2.default.black.float32Array());
-	        gl.uniform3fv(gl.getUniformLocation(program, 'lightPosition'), new Float32Array([0, 1000, 0]));
+	      if(!hasDiffuse){
+	        gl.uniform4fv(gl.getUniformLocation(program, 'lightDiffuse'), SKColor.black.float32Array())
+	        gl.uniform3fv(gl.getUniformLocation(program, 'lightPosition'), 
+	          new Float32Array([0, 1000, 0])
+	        )
+	      }
+	      */
+
+	      //gl.uniform3fv(gl.getUniformLocation(program, 'lightDirection'), lightDirection)
+	      if (this._lightBuffer === null) {
+	        this._initializeLightBuffer(program);
 	      }
 
-	      // FIXME: use uniform var 
-	      //const lightDirection = new Float32Array([0, -0.9, -0.1])
-	      //gl.uniform3fv(gl.getUniformLocation(program, 'lightDirection'), lightDirection)
+	      var lights = this._lightNodes;
+	      var lightData = [];
+	      lights.ambient.forEach(function (node) {
+	        lightData.push.apply(lightData, _toConsumableArray(node.light.color.float32Array()));
+	      });
+	      lights.directional.forEach(function (node) {
+	        var direction = new _SCNVector2.default(0, 0, -1).rotateWithQuaternion(node._worldOrientaiton);
+	        lightData.push.apply(lightData, _toConsumableArray(node.light.color.float32Array()).concat(_toConsumableArray(direction.float32Array()), [0]));
+	      });
+	      lights.omni.forEach(function (node) {
+	        lightData.push.apply(lightData, _toConsumableArray(node.light.color.float32Array()).concat(_toConsumableArray(node._worldTranslation.float32Array()), [0]));
+	      });
+	      lights.probe.forEach(function (node) {
+	        lightData.push.apply(lightData, _toConsumableArray(node.light.color.float32Array()));
+	      });
+	      lights.spot.forEach(function (node) {
+	        lightData.push.apply(lightData, _toConsumableArray(node.light.color.float32Array()));
+	      });
+
+	      gl.bindBuffer(gl.UNIFORM_BUFFER, this._lightBuffer);
+	      gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(lightData), gl.DYNAMIC_DRAW);
+	      gl.bindBuffer(gl.UNIFORM_BUFFER, null);
 
 	      var renderingArray = this._createRenderingNodeArray();
 	      renderingArray.forEach(function (node) {
@@ -23176,43 +23287,56 @@ module.exports =
 	  }, {
 	    key: '_createLightNodeArray',
 	    value: function _createLightNodeArray() {
+	      var targetNodes = {
+	        ies: [],
+	        ambient: [],
+	        directional: [],
+	        omni: [],
+	        probe: [],
+	        spot: []
+	      };
+
 	      var arr = [this.scene.rootNode];
-	      var targetNodes = [];
+	      var numLights = 0;
 	      while (arr.length > 0) {
 	        var node = arr.shift();
 	        if (node.presentation.light !== null) {
-	          targetNodes.push(node.presentation);
+	          targetNodes[node.presentation.light.type].push(node.presentation);
+	          if (node.presentation.light.type !== _SCNLight2.default.LightType.ambient) {
+	            numLights += 1;
+	          }
 	        }
 	        arr.push.apply(arr, _toConsumableArray(node.childNodes));
 	      }
+	      if (this.autoenablesDefaultLighting && numLights === 0) {
+	        targetNodes[this._defaultLightNode.light.type].push(this._defaultLightNode);
+	      }
+
 	      return targetNodes;
 	    }
-	  }, {
-	    key: 'prepareBuffer',
-	    value: function prepareBuffer() {
-	      var _this3 = this;
 
+	    /*
+	    prepareBuffer() {
 	      // FIXME: reuse renderingArray
-	      var renderingArray = this._createRenderingNodeArray();
-	      renderingArray.forEach(function (node) {
-	        _this3._prepareBufferForNode(node);
-	      });
+	      const renderingArray = this._createRenderingNodeArray()
+	      renderingArray.forEach((node) => {
+	        this._prepareBufferForNode(node)
+	      })
 	    }
-	  }, {
-	    key: '_prepareBufferForNode',
-	    value: function _prepareBufferForNode(node) {
-	      var gl = this.context;
-	      var geometry = node.presentation.geometry;
-	      var program = this._defaultProgram._glProgram;
-	      if (geometry.program !== null) {
-	        program = geometry.program._glProgram;
+	     _prepareBufferForNode(node) {
+	      const gl = this.context
+	      const geometry = node.presentation.geometry
+	      let program = this._defaultProgram._glProgram
+	      if(geometry.program !== null){
+	        program = geometry.program._glProgram
 	      }
-	      gl.useProgram(program);
-
-	      if (geometry._vertexArrayObjects === null) {
-	        this._initializeVAO(node, program);
+	      gl.useProgram(program)
+	       if(geometry._vertexArrayObjects === null){
+	        this._initializeVAO(node, program)
+	        this._initializeUBO(node, program)
 	      }
 	    }
+	    */
 
 	    /**
 	     *
@@ -23231,6 +23355,11 @@ module.exports =
 	        program = geometry.program._glProgram;
 	      }
 	      gl.useProgram(program);
+
+	      if (geometry._vertexArrayObjects === null) {
+	        this._initializeVAO(node, program);
+	        this._initializeUBO(node, program);
+	      }
 
 	      //if(geometry._vertexArrayObjects === null){
 	      //  this._initializeVAO(node, program)
@@ -23266,11 +23395,14 @@ module.exports =
 
 	        gl.bindVertexArray(vao);
 
-	        gl.uniform4fv(gl.getUniformLocation(program, 'materialAmbient'), material.ambient.float32Array());
-	        gl.uniform4fv(gl.getUniformLocation(program, 'materialDiffuse'), material.diffuse.float32Array());
-	        gl.uniform4fv(gl.getUniformLocation(program, 'materialSpecular'), material.specular.float32Array());
-	        gl.uniform4fv(gl.getUniformLocation(program, 'materialEmission'), material.emission.float32Array());
-	        gl.uniform1f(gl.getUniformLocation(program, 'materialShininess'), material.shininess);
+	        /*
+	        gl.uniform4fv(gl.getUniformLocation(program, 'materialAmbient'), material.ambient.float32Array())
+	        gl.uniform4fv(gl.getUniformLocation(program, 'materialDiffuse'), material.diffuse.float32Array())
+	        gl.uniform4fv(gl.getUniformLocation(program, 'materialSpecular'), material.specular.float32Array())
+	        gl.uniform4fv(gl.getUniformLocation(program, 'materialEmission'), material.emission.float32Array())
+	        gl.uniform1f(gl.getUniformLocation(program, 'materialShininess'), material.shininess)
+	        */
+	        geometry._bufferMaterialData(gl, i);
 
 	        //console.log(`materialDiffuse: ${material.diffuse.float32Array()}`)
 
@@ -23461,7 +23593,7 @@ module.exports =
 	  }, {
 	    key: 'hitTest',
 	    value: function hitTest(point) {
-	      var _this4 = this;
+	      var _this3 = this;
 
 	      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
 
@@ -23484,7 +23616,7 @@ module.exports =
 	      console.log('renderingArray.length: ' + renderingArray.length);
 
 	      renderingArray.forEach(function (node) {
-	        result.push.apply(result, _toConsumableArray(_this4._nodeHitTest(node, worldPoint, rayVec)));
+	        result.push.apply(result, _toConsumableArray(_this3._nodeHitTest(node, worldPoint, rayVec)));
 	      });
 
 	      return result;
@@ -23575,6 +23707,85 @@ module.exports =
 	     * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1523582-audioenvironmentnode
 	     */
 
+	  }, {
+	    key: '_replaceTexts',
+
+
+	    /**
+	     * @access private
+	     * @param {string} text -
+	     * @returns {string} -
+	     */
+	    value: function _replaceTexts(text) {
+	      var vars = new Map();
+	      var numAmbient = this._numLights[_SCNLight2.default.LightType.ambient];
+	      var numDirectional = this._numLights[_SCNLight2.default.LightType.directional];
+	      var numOmni = this._numLights[_SCNLight2.default.LightType.omni];
+	      var numSpot = this._numLights[_SCNLight2.default.LightType.spot];
+	      var numIES = this._numLights[_SCNLight2.default.LightType.IES];
+	      var numProbe = this._numLights[_SCNLight2.default.LightType.probe];
+
+	      vars.set('__NUM_AMBIENT_LIGHTS__', numAmbient);
+	      vars.set('__NUM_DIRECTIONAL_LIGHTS__', numDirectional);
+	      vars.set('__NUM_OMNI_LIGHTS__', numOmni);
+	      vars.set('__NUM_SPOT_LIGHTS__', numSpot);
+	      vars.set('__NUM_IES_LIGHTS__', numIES);
+	      vars.set('__NUM_PROBE_LIGHTS__', numProbe);
+
+	      var lightDefinition = '';
+	      var vsLighting = '';
+	      var fsLighting = '';
+	      if (numAmbient > 0) {
+	        lightDefinition += 'AmbientLight ambient[NUM_AMBIENT_LIGHTS]; ';
+	        vsLighting += _vsAmbient;
+	        fsLighting += _fsAmbient;
+	      }
+	      if (numDirectional > 0) {
+	        lightDefinition += 'DirectionalLight directional[NUM_DIRECTIONAL_LIGHTS]; ';
+	        vsLighting += _vsDirectional;
+	        fsLighting += _fsDirectional;
+	      }
+	      if (numOmni > 0) {
+	        lightDefinition += 'OmniLight omni[NUM_OMNI_LIGHTS]; ';
+	        vsLighting += _vsOmni;
+	        fsLighting += _fsOmni;
+	      }
+	      if (numSpot > 0) {
+	        lightDefinition += 'OmniLight spot[NUM_OMNI_LIGHTS]; ';
+	        vsLighting += _vsSpot;
+	        fsLighting += _fsSpot;
+	      }
+	      if (numIES > 0) {
+	        lightDefinition += 'IESLight probe[NUM_IES_LIGHTS]; ';
+	        vsLighting += _vsIES;
+	        fsLighting += _fsIES;
+	      }
+	      if (numProbe > 0) {
+	        lightDefinition += 'ProbeLight probe[NUM_PROBE_LIGHTS]; ';
+	        vsLighting += _vsProbe;
+	        fsLighting += _fsProbe;
+	      }
+	      vars.set('__LIGHT_DEFINITION__', lightDefinition);
+	      vars.set('__VS_LIGHTING__', vsLighting);
+	      vars.set('__FS_LIGHTING__', fsLighting);
+
+	      if (numDirectional + numOmni + numSpot > 0) {
+	        var v = 'vec3 v_light[NUM_DIRECTIONAL_LIGHTS + NUM_OMNI_LIGHTS + NUM_SPOT_LIGHTS]; ';
+	        vars.set('__VS_LIGHT_VARS__', 'out ' + v);
+	        vars.set('__FS_LIGHT_VARS__', 'in ' + v);
+	      } else {
+	        vars.set('__VS_LIGHT_VARS__', '');
+	        vars.set('__FS_LIGHT_VARS__', '');
+	      }
+
+	      var result = text;
+	      vars.forEach(function (value, key) {
+	        var rex = new RegExp(key, 'g');
+	        result = result.replace(rex, value);
+	      });
+
+	      return result;
+	    }
 	  }, {
 	    key: '_initializeVAO',
 	    value: function _initializeVAO(node, program) {
@@ -23672,6 +23883,28 @@ module.exports =
 	      }
 	    }
 	  }, {
+	    key: '_initializeLightBuffer',
+	    value: function _initializeLightBuffer(program) {
+	      var gl = this.context;
+
+	      var lightIndex = gl.getUniformBlockIndex(program, 'lightUniform');
+
+	      this._lightBuffer = gl.createBuffer();
+	      gl.uniformBlockBinding(program, lightIndex, _lightLoc);
+	      gl.bindBufferBase(gl.UNIFORM_BUFFER, _lightLoc, this._lightBuffer);
+	    }
+	  }, {
+	    key: '_initializeUBO',
+	    value: function _initializeUBO(node, program) {
+	      var gl = this.context;
+	      var geometry = node.presentation.geometry;
+
+	      var materialIndex = gl.getUniformBlockIndex(program, 'materialUniform');
+	      geometry._materialBuffer = gl.createBuffer();
+	      gl.uniformBlockBinding(program, materialIndex, _materialLoc);
+	      gl.bindBufferBase(gl.UNIFORM_BUFFER, _materialLoc, geometry._materialBuffer);
+	    }
+	  }, {
 	    key: '_updateVAO',
 	    value: function _updateVAO(node) {
 	      var gl = this.context;
@@ -23704,7 +23937,7 @@ module.exports =
 	      // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
 	      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
 	      gl.bindTexture(gl.TEXTURE_2D, null);
-	      this._setDummyTextureAsDefault();
+	      //this._setDummyTextureAsDefault()
 	    }
 	  }, {
 	    key: '_setDummyTextureAsDefault',
@@ -23836,6 +24069,27 @@ module.exports =
 	        return this._defaultCameraNode.position.z;
 	      }
 	      return _defaultCameraDistance;
+	    }
+
+	    /**
+	     * @access private
+	     * @returns {boolean} - true if the number of lights is changed.
+	     */
+
+	  }, {
+	    key: '_numLightsChanged',
+	    value: function _numLightsChanged() {
+	      var _this4 = this;
+
+	      var changed = false;
+	      Object.values(_SCNLight2.default.LightType).forEach(function (type) {
+	        var num = _this4._lightNodes[type].length;
+	        if (num !== _this4._numLights[type]) {
+	          changed = true;
+	          _this4._numLights[type] = num;
+	        }
+	      });
+	      return changed;
 	    }
 
 	    /**
@@ -24096,18 +24350,23 @@ module.exports =
 	  }, {
 	    key: '_defaultProgram',
 	    get: function get() {
-	      if (this.__defaultProgram !== null) {
+	      var numLightsChanged = this._numLightsChanged();
+	      if (this.__defaultProgram !== null && !numLightsChanged) {
 	        return this.__defaultProgram;
 	      }
-	      var p = new _SCNProgram2.default();
-	      this.__defaultProgram = p;
 
 	      var gl = this.context;
-	      p._glProgram = gl.createProgram();
+	      if (this.__defaultProgram == null) {
+	        this.__defaultProgram = new _SCNProgram2.default();
+	        this.__defaultProgram._glProgram = gl.createProgram();
+	      }
+	      var p = this.__defaultProgram;
+	      var vsText = this._defaultVertexShader;
+	      var fsText = this._defaultFragmentShader;
 
 	      // initialize vertex shader
 	      var vertexShader = gl.createShader(gl.VERTEX_SHADER);
-	      gl.shaderSource(vertexShader, _defaultVertexShader);
+	      gl.shaderSource(vertexShader, vsText);
 	      gl.compileShader(vertexShader);
 	      if (!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)) {
 	        var info = gl.getShaderInfoLog(vertexShader);
@@ -24116,7 +24375,7 @@ module.exports =
 
 	      // initialize fragment shader
 	      var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
-	      gl.shaderSource(fragmentShader, _defaultFragmentShader);
+	      gl.shaderSource(fragmentShader, fsText);
 	      gl.compileShader(fragmentShader);
 	      if (!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)) {
 	        var _info = gl.getShaderInfoLog(fragmentShader);
@@ -24134,7 +24393,7 @@ module.exports =
 	      }
 
 	      gl.useProgram(p._glProgram);
-	      gl.clearColor(1, 1, 1, 1); // DEBUG
+	      //gl.clearColor(1, 1, 1, 1)
 	      gl.clearDepth(1.0);
 	      gl.clearStencil(0);
 
@@ -24145,7 +24404,32 @@ module.exports =
 	      gl.enable(gl.CULL_FACE);
 	      gl.cullFace(gl.BACK);
 
+	      // set default textures to prevent warnings
+	      this._setDummyTextureAsDefault();
+
 	      return this.__defaultProgram;
+	    }
+
+	    /**
+	     * @access private
+	     * @returns {string} -
+	     */
+
+	  }, {
+	    key: '_defaultVertexShader',
+	    get: function get() {
+	      return this._replaceTexts(_defaultVertexShader);
+	    }
+
+	    /**
+	     * @access private
+	     * @returns {string} -
+	     */
+
+	  }, {
+	    key: '_defaultFragmentShader',
+	    get: function get() {
+	      return this._replaceTexts(_defaultFragmentShader);
 	    }
 	  }, {
 	    key: '_dummyTexture',
@@ -38850,7 +39134,7 @@ module.exports =
 	      ///////////////////////
 	      // renders the scene //
 	      ///////////////////////
-	      this._renderer.prepareBuffer();
+	      //this._renderer.prepareBuffer()
 	      this._updateMorph();
 	      this._renderer.render();
 

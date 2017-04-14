@@ -95,6 +95,7 @@ export default class SCNGeometry extends NSObject {
     this._geometryElements = elements
     this._geometrySources = sources
     this._vertexArrayObjects = null
+    this._materialBuffer = null
 
     // Working with Subdivision Surfaces
 
@@ -658,6 +659,9 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     return this._indexBuffer
   }
 
+  _createIndexBuffer(gl, update = false) {
+  }
+
   /**
    * @access private
    * @param {WebGLContext} gl -
@@ -670,6 +674,28 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     const vertexData = new Float32Array(pVertexSource._data)
     gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer)
     gl.bufferData(gl.ARRAY_BUFFER, vertexData, gl.DYNAMIC_DRAW)
+  }
+
+  /**
+   * @access private
+   * @param {WebGLContext} gl -
+   * @param {number} index - material index
+   * @returns {void}
+   */
+  _bufferMaterialData(gl, index) {
+    const material = this.materials[index]
+    const materialData = new Float32Array([
+      ...material.ambient.float32Array(),
+      ...material.diffuse.float32Array(),
+      ...material.specular.float32Array(),
+      ...material.emission.float32Array(),
+      material.shininess, 0, 0, 0 // needs padding for 16-byte align
+    ])
+    //console.log(`buffer: ${this._materialBuffer}`)
+    //console.log(`bufferMaterialData: ${materialData}`)
+    gl.bindBuffer(gl.UNIFORM_BUFFER, this._materialBuffer)
+    gl.bufferData(gl.UNIFORM_BUFFER, materialData, gl.DYNAMIC_DRAW)
+    gl.bindBuffer(gl.UNIFORM_BUFFER, null)
   }
 
   copy() {
