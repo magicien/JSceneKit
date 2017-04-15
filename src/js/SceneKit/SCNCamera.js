@@ -330,18 +330,18 @@ export default class SCNCamera extends NSObject {
       m.m11 = 2 / (right - left)
       m.m12 = 0
       m.m13 = 0
-      m.m14 = -(right + left) / (right - left)
+      m.m14 = 0
       m.m21 = 0
       m.m22 = 2 / (top - bottom)
       m.m23 = 0
-      m.m24 = -(top + bottom) / (top - bottom)
+      m.m24 = 0
       m.m31 = 0
       m.m32 = 0
       m.m33 = -2 / (this.zFar - this.zNear)
-      m.m34 = -(this.zFar + this.zNear) / (this.zFar - this.zNear)
-      m.m41 = 0
-      m.m42 = 0
-      m.m43 = 0
+      m.m34 = 0
+      m.m41 = -(right + left) / (right - left)
+      m.m42 = -(top + bottom) / (top - bottom)
+      m.m43 = -(this.zFar + this.zNear) / (this.zFar - this.zNear)
       m.m44 = 1
     }else{
       // perspective
@@ -366,10 +366,10 @@ export default class SCNCamera extends NSObject {
       m.m31 = 0
       m.m32 = 0
       m.m33 = -(this.zFar + this.zNear) / (this.zFar - this.zNear)
-      m.m34 = -2 * this.zFar * this.zNear / (this.zFar - this.zNear)
+      m.m34 = -1
       m.m41 = 0
       m.m42 = 0
-      m.m43 = -1
+      m.m43 = -2 * this.zFar * this.zNear / (this.zFar - this.zNear)
       m.m44 = 0
     }
     this.projectionTransform = m

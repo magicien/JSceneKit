@@ -22148,11 +22148,9 @@ module.exports =
 	      textures.forEach(function (texture) {
 	        var m = material[texture.name];
 	        if (m._contents instanceof Image) {
-	          console.log('create texture ' + texture.name + ' ' + m);
 	          m._contents = _this2._createTexture(gl, m._contents);
 	        }
 	        if (m._contents instanceof WebGLTexture) {
-	          console.log('WebGLTexture ' + gl[texture.symbol] + ' ' + m._contents);
 	          textureFlags.push(1);
 	          gl.activeTexture(gl[texture.symbol]); // FIXME: use m._contents.mappingChannel
 	          gl.bindTexture(gl.TEXTURE_2D, m._contents);
@@ -30703,10 +30701,12 @@ module.exports =
 	        m.m31 = 0;
 	        m.m32 = 0;
 	        m.m33 = -(this.zFar + this.zNear) / (this.zFar - this.zNear);
-	        m.m34 = -2 * this.zFar * this.zNear / (this.zFar - this.zNear);
+	        //m.m34 = -this.zFar * this.zNear / (this.zFar - this.zNear)
+	        m.m34 = -1;
 	        m.m41 = 0;
 	        m.m42 = 0;
-	        m.m43 = -1;
+	        //m.m43 = -1
+	        m.m43 = -2 * this.zFar * this.zNear / (this.zFar - this.zNear);
 	        m.m44 = 0;
 	      }
 	      this.projectionTransform = m;

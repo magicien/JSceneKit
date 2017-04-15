@@ -700,11 +700,9 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     textures.forEach((texture) => {
       const m = material[texture.name]
       if(m._contents instanceof Image){
-        console.log(`create texture ${texture.name} ${m}`)
         m._contents = this._createTexture(gl, m._contents)
       }
       if(m._contents instanceof WebGLTexture){
-        console.log(`WebGLTexture ${gl[texture.symbol]} ${m._contents}`)
         textureFlags.push(1)
         gl.activeTexture(gl[texture.symbol]) // FIXME: use m._contents.mappingChannel
         gl.bindTexture(gl.TEXTURE_2D, m._contents)
