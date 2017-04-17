@@ -27,6 +27,41 @@ const _LightType = {
  * @see https://developer.apple.com/reference/scenekit/scnlight
  */
 export default class SCNLight extends NSObject {
+  static get _propTypes() {
+    return {
+      type: 'string',
+      color: 'plist',
+      // temperature
+      // intensity
+      name: 'string',
+      attenuationStartDistance: 'float',
+      attenuationEndDistance: 'float',
+      attenuationFalloffExponent: 'float',
+      spotInnerAngle: 'float',
+      spotOuterAngle: 'float',
+      // gobo
+      castsShadow: 'boolean',
+      shadowRadius: 'float',
+      shadowColor: 'plist',
+      shadowMapSize: 'CGSize',
+      shadowSampleCount: 'integer',
+      // shadowMode
+      shadowBias: 'float',
+      orthographicScale: 'float',
+      zFar: 'float',
+      zNear: 'float',
+      lightCategoryBitMask: ['integer', 'categoryBitMask'],
+
+      entityID: ['string', '_entityID'],
+      spotFallOffExponent: ['float', null],
+      usesDeferredShadows: ['boolean', null],
+      usesModulatedMode: ['boolean', null],
+      shouldBakeIndirectLighting: ['boolean', null],
+      shouldBakeDirectLighting: ['boolean', null],
+      baked: ['boolean', null],
+      goboProjectShadows: ['boolean', null]
+    }
+  }
 
   /**
    * constructor
@@ -210,6 +245,8 @@ export default class SCNLight extends NSObject {
      * @see https://developer.apple.com/reference/scenekit/scnlight/1640546-iesprofileurl
      */
     this.iesProfileURL = null
+
+    this._entityID = null
   }
 
   // Creating a Light

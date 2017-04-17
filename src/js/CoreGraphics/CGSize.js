@@ -6,6 +6,16 @@
  * @see https://developer.apple.com/reference/coregraphics/cgsize
  */
 export default class CGSize {
+  /**
+   * @access private
+   * @param {Buffer} data -
+   * @param {number} [offset = 0] -
+   * @param {boolean} [bigEndian = false] -
+   * @returns {CGSize}
+   */
+  static _initWithData(data, offset = 0, bigEndian = false) {
+    throw new Error('not implemented')
+  }
 
   // Initializers
 

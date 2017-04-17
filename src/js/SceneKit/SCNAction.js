@@ -46,7 +46,7 @@ export default class SCNAction extends NSObject {
      * @type {SCNActionTimingMode}
      * @see https://developer.apple.com/reference/scenekit/scnaction/1524055-timingmode
      */
-    this.timingMode = null
+    this.timingMode = SCNActionTimingMode.linear
 
     /**
      * A block SceneKit calls to determine the action’s animation timing.

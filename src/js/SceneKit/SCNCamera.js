@@ -16,6 +16,44 @@ import SCNMatrix4 from './SCNMatrix4'
  * @see https://developer.apple.com/reference/scenekit/scncamera
  */
 export default class SCNCamera extends NSObject {
+  static get _propTypes() {
+    return {
+      name: 'string',
+      zNear: 'float',
+      zFar: 'float',
+      yFov: 'float',
+      xFov: 'float',
+      automaticallyAdjustsZRange: 'boolean',
+      usesOrthographicProjection: 'boolean',
+      orthographicScale: 'float',
+      categoryBitMask: 'integer',
+      focalDistance: 'float',
+      focalSize: 'float',
+      focalBlurRadius: 'float',
+      aperture: 'float',
+      //motionBlurIntensity: 'float',
+      //wantsHDR: 'boolean',
+      //explosureOffset: 'float',
+      //averageGray: 'float',
+      //whitePoint: 'float',
+      //minimumExposure: 'float',
+      //maximumExposure: 'float',
+      //wantsExposureAdaptation: 'boolean',
+      //exposureAdaptationBrighteningSpeedFactor: 'float',
+      //contrast: 'float',
+      //saturation: 'float',
+      //_colorGrading: 'SCNMaterialProperty',
+      //bloomIntensity: 'float',
+      //bloomThreshold: 'float',
+      //bloomBlurRadius: 'float',
+      //colorFringeIntensity: 'float',
+      //colorFringeStrength: 'float',
+      //vignettingIntensity: 'float',
+      //vignettingPower: 'float',
+      //projectionTransform: 'SCNMatrix4'
+      //exposureAdaptationDarkeningSpeedFactor: 'float'
+    }
+  }
 
   /**
    * constructor

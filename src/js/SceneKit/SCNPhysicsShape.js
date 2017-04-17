@@ -25,6 +25,13 @@ const _ShapeType = {
  * @see https://developer.apple.com/reference/scenekit/scnphysicsshape
  */
 export default class SCNPhysicsShape extends NSObject {
+  static get _propTypes() {
+    return {
+      options: ['NSArray', '_options'],
+      referenceObject: ['NSObject', '_sourceObject']
+    }
+  }
+
   // Creating Physics Shapes
 
   /**
@@ -40,8 +47,8 @@ export default class SCNPhysicsShape extends NSObject {
     super()
 
     // Getting Information About a Shape
-    this._sourceObject = null
-    this._options = null
+    this._sourceObject = geometry
+    this._options = options
     this._transforms = null
   }
 

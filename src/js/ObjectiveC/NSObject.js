@@ -3578,22 +3578,34 @@ validateToolbarItem(_:) is called very frequently, so it must be efficient.If th
 
   static initWithCoder(coder) {
     console.log('initWithCoder: ' + this.className)
-    const propTypes = this._propTypes
+    let propTypes = {}
 
-    // DEBUG: check if all property names are registered
+    // check if all property names are registered
     for(const key of Object.keys(coder._refObj)){
-      if(key.charAt(0) !== '$' && typeof propTypes[key] === 'undefined'){
-        throw new Error(`${this.className}: property ${key} not registered`)
+      if(key.charAt(0) === '$'){
+        continue
+      }
+      if(typeof this._propTypes[key] === 'undefined'){
+        console.warn(`unknown key ${key}`)
+        if(this._propTypes.$unknownKey && this._propTypes.$unknownKey(key) !== null){
+          propTypes[key] = this._propTypes.$unknownKey(key)
+          console.warn(`unknown key: ${key} => ${propTypes[key]}`)
+        }else{
+          console.error(`${this.className}: property ${key} not registered`)
+          throw new Error(`${this.className}: property ${key} not registered`)
+        }
+      }else{
+        propTypes[key] = this._propTypes[key]
       }
     }
 
-    const props = this._loadProperties(coder)
+    const props = this._loadProperties(coder, propTypes)
     const propNames = props.names
     const propValues = props.values
     
     let instance = null
-    if(typeof propTypes.$constructor === 'function'){
-      instance = propTypes.$constructor(propNames, propValues, coder)
+    if(typeof this._propTypes.$constructor === 'function'){
+      instance = this._propTypes.$constructor(propNames, propValues, coder)
     }else{
       instance = new this()
     }
@@ -3608,8 +3620,7 @@ validateToolbarItem(_:) is called very frequently, so it must be efficient.If th
    * @param {NSCoder} coder -
    * @returns {Object} -
    */
-  static _loadProperties(coder) {
-    const propTypes = this._propTypes
+  static _loadProperties(coder, propTypes) {
     const propNames = {}
     const propValues = {}
 
@@ -3670,17 +3681,20 @@ validateToolbarItem(_:) is called very frequently, so it must be efficient.If th
         case 'string':
           value = coder.decodeObjectForKey(key)
           if(typeof value !== 'string'){
+            console.error(`${key}: value is not String type`)
             throw new Error(`${key}: value is not String type`)
           }
           break
         default: {
           const classObj = _ClassList.get(type)
           if(typeof classObj === 'undefined'){
+            console.error(`unknown class name: ${type}`)
             throw new Error(`unknown class name: ${type}`)
           }
           if(coder._refObj[key] instanceof Buffer){
             value = coder.decodeObjectOfTypeForKey(classObj, key)
             if(!(value instanceof classObj)){
+              console.error(`${key}: value is not an instance of ${type}`)
               throw new Error(`${key}: value is not an instance of ${type}`)
             }
           }else{
@@ -3692,9 +3706,11 @@ validateToolbarItem(_:) is called very frequently, so it must be efficient.If th
                 'NSData', 'NSMutableData', // => Buffer
                 'NSArray', 'NSMutableArray', // => Array
                 'NSDictionary', 'NSMutableDictionary', // => Object
-                'NSColor' // => SKColor
+                'NSColor', // => SKColor
+                'NSURL' // => String
               ]
               if(exception.indexOf(classObj.className) < 0){
+                console.error(`${key}: value is not an instance of ${type}`)
                 throw new Error(`${key}: value is not an instance of ${type}`)
               }
             }

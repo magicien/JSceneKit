@@ -2,7 +2,7 @@
 
 import SCNNode from './SCNNode'
 import SCNReferenceLoadingPolicy from './SCNReferenceLoadingPolicy'
-
+import SCNScene from './SCNScene'
 
 /**
  * A scene graph node that serves as a placeholder for content to be loaded from a separate scene file. 
@@ -11,27 +11,52 @@ import SCNReferenceLoadingPolicy from './SCNReferenceLoadingPolicy'
  * @see https://developer.apple.com/reference/scenekit/scnreferencenode
  */
 export default class SCNReferenceNode extends SCNNode {
+  static get _propTypes() {
+    return {
+      paused: ['boolean', 'isPaused'],
+      scale: ['SCNVector3', '_scale'],
+      rotation: ['SCNVector4', '_rotation'],
+      position: ['SCNVector3', '_position'],
+      loadingPolicy: 'integer',
+      referenceURL: ['NSURL', (obj, value) => {
+        obj.referenceURL = value
+        obj.load()
+      }],
+      opacity: 'float',
+      castsShadow: 'boolean',
+      categoryBitMask: 'integer',
+      hidden: ['boolean', 'isHidden'],
+      name: 'string',
+      renderingOrder: 'integer'
+    }
+  }
 
   // Creating a Reference Node
 
   /**
    * Initializes a node whose content is to be loaded from the referenced URL.
    * @access public
+   * @constructor
    * @param {string} referenceURL - The URL to a scene file from which to load the node’s content.
-   * @returns {void}
    * @desc Using this initializer does not load the node’s content. To load content from the referenced URL, use the load() method.
    * @see https://developer.apple.com/reference/scenekit/scnreferencenode/1523967-init
    */
-  initUrl(referenceURL) {
-
-    // Loading and Unloading a Reference Node’s Content
+  constructor(referenceURL) {
+    super()
 
     /**
-     * The URL to a scene file from which to load content for the reference node.
-     * @type {string}
-     * @see https://developer.apple.com/reference/scenekit/scnreferencenode/1522733-referenceurl
+     * @access private
+     * @type {boolean}
      */
-    this.referenceURL = ''
+    this._isLoading = false
+
+    /**
+     * @access private
+     * @type {boolean}
+     */
+    this._isLoaded = false
+
+    // Loading and Unloading a Reference Node’s Content
 
     /**
      * An option for whether to load the node’s content automatically.
@@ -40,7 +65,16 @@ export default class SCNReferenceNode extends SCNNode {
      */
     this.loadingPolicy = null
 
-    this._isLoaded = false
+    /**
+     * The URL to a scene file from which to load content for the reference node.
+     * @type {string}
+     * @see https://developer.apple.com/reference/scenekit/scnreferencenode/1522733-referenceurl
+     */
+    this._referenceURL = referenceURL
+
+    if(referenceURL){
+      this.load()
+    }
   }
 
   // Loading and Unloading a Reference Node’s Content
@@ -53,6 +87,18 @@ export default class SCNReferenceNode extends SCNNode {
    * @see https://developer.apple.com/reference/scenekit/scnreferencenode/1523204-load
    */
   load() {
+    if(this._isLoaded || this._isLoading){
+      return
+    }
+    this._isLoading = true
+
+    new SCNScene(this._referenceURL, null, (scene) => {
+      scene.rootNode.childNodes.forEach((node) => {
+        super.addChildNode(node)
+      })
+      this._isLoaded = true
+      this._isLoading = false
+    })
   }
 
   /**
@@ -63,7 +109,15 @@ export default class SCNReferenceNode extends SCNNode {
    * @see https://developer.apple.com/reference/scenekit/scnreferencenode/1523566-unload
    */
   unload() {
+    if(!this._isLoaded){
+      return
+    }
+    this.childNodes.forEach((child) => {
+      child.removeFromParentNode()
+    })
+    this._isLoaded = false
   }
+
   /**
    * A Boolean value that indicates whether the reference node has already loaded its content.
    * @type {boolean}
@@ -84,23 +138,37 @@ export default class SCNReferenceNode extends SCNNode {
    * @see https://developer.apple.com/reference/scenekit/scnreferencenode/1524061-init
    */
   initCoder(aDecoder) {
+  }
 
-    // Loading and Unloading a Reference Node’s Content
+  get referenceURL() {
+    return this._referenceURL
+  }
 
-    /**
-     * The URL to a scene file from which to load content for the reference node.
-     * @type {string}
-     * @see https://developer.apple.com/reference/scenekit/scnreferencenode/1522733-referenceurl
-     */
-    this.referenceURL = ''
+  set referenceURL(newValue) {
+    this.unload()
+    this._referenceURL = newValue
+    if(this.loadingPolicy === SCNReferenceLoadingPolicy.immediate){
+      this.load()
+    }
+  }
 
-    /**
-     * An option for whether to load the node’s content automatically.
-     * @type {SCNReferenceLoadingPolicy}
-     * @see https://developer.apple.com/reference/scenekit/scnreferencenode/1522996-loadingpolicy
-     */
-    this.loadingPolicy = null
+  addChildNode(child) {
+    throw new Error('cannot add a child node to SCNReferenceNode')
+  }
 
-    this._isLoaded = false
+  insertChildNodeAt(child, index) {
+    throw new Error('cannot add a child node to SCNReferenceNode')
+  }
+
+  replaceChildNodeWith(oldChild, newChild) {
+    throw new Error('cannot add a child node to SCNReferenceNode')
+  }
+
+  get childNodes() {
+    // FIXME: needs synchronous loading
+    if(!this._isLoaded){
+      this.load()
+    }
+    return this._childNodes.slice(0)
   }
 }

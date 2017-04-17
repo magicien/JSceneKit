@@ -38,7 +38,9 @@ export default class SCNGeometry extends NSObject {
       kGeometrySourceSemanticNormal: ['NSArray', addSources],
       kGeometrySourceSemanticTexcoord: ['NSArray', addSources],
       kGeometrySourceSemanticColor: ['NSArray', addSources],
-      entityID: ['string', null]
+
+      entityID: ['string', '_entityID'],
+      shadableHelper: ['SCNShadableHelper', null]
     }
   }
 
@@ -181,6 +183,12 @@ export default class SCNGeometry extends NSObject {
 
     this._isPresentationInstance = false
     this._presentation = null
+
+    /**
+     * @access private
+     * @type {?string}
+     */
+    this._entityID = null
   }
 
   // Managing a Geometry’s Materials
@@ -503,7 +511,11 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    * @param {boolean} update -
    * @returns {WebGLBuffer} -
    */
-  _createVertexBuffer(gl, baseGeometry, update = false) {
+  //_createVertexBuffer(gl, baseGeometry, update = false) {
+  _createVertexBuffer(gl, node, update = false) {
+    const baseGeometry = node.geometry
+    const baseSkinner = node.skinner
+    const skinner = node.presentation.skinner
     if(this._vertexBuffer === null){
       this._vertexBuffer = gl.createBuffer()
     }else if(!update){
@@ -515,15 +527,19 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     const vertexSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
     const normalSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.normal)[0]
     const texcoordSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[0]
-    const indexSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneIndices)[0]
-    const weightSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneWeights)[0]
+    //const indexSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneIndices)[0]
+    const indexSource = baseSkinner ? baseSkinner._boneIndices : null
+    //const weightSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneWeights)[0]
+    const weightSource = baseSkinner ? baseSkinner._boneWeights: null
     const vectorCount = vertexSource.vectorCount
 
     const pVertexSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
     const pNormalSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.normal)[0]
     const pTexcoordSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[0]
-    const pIndexSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneIndices)[0]
-    const pWeightSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneWeights)[0]
+    //const pIndexSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneIndices)[0]
+    const pIndexSource = skinner ? skinner._boneIndices : null
+    //const pWeightSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneWeights)[0]
+    const pWeightSource = skinner ? skinner._boneWeights : null
 
     if(typeof vertexSource === 'undefined'){
       throw new Error('vertexSource is undefined')
@@ -680,7 +696,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
       ...material.diffuse.float32Array(),
       ...material.specular.float32Array(),
       ...material.emission.float32Array(),
-      material.shininess * 100.0, 0, 0, 0 // needs padding for 16-byte align
+      material.shininess * 100.0, 0, 0, 0 // needs padding for 16-byte alignment
     ])
     gl.bindBuffer(gl.UNIFORM_BUFFER, this._materialBuffer)
     gl.bufferData(gl.UNIFORM_BUFFER, materialData, gl.DYNAMIC_DRAW)

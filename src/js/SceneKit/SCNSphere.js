@@ -10,6 +10,20 @@ import SCNGeometry from './SCNGeometry'
  * @see https://developer.apple.com/reference/scenekit/scnsphere
  */
 export default class SCNSphere extends SCNGeometry {
+  static get _propTypes() {
+    return {
+      sphereradius: ['float', 'radius'],
+      spheregeodesic: ['boolean', 'isGeodesic'],
+      spheresegmentCount: ['integer', 'segmentCount'],
+      materials: 'NSArray',
+      subdivisionLevel: 'integer',
+
+      sphereradialSpan: ['float', '_sphereRadialSpan'],
+      spherehemispheric: ['boolean', '_isHemispheric'],
+      sphereprimitiveType: ['integer', '_spherePrimitiveType']
+    }
+  }
+
   // Creating a Sphere
 
   /**
@@ -47,5 +61,9 @@ export default class SCNSphere extends SCNGeometry {
      * @see https://developer.apple.com/reference/scenekit/scnsphere/1523912-segmentcount
      */
     this.segmentCount = 0
+
+    this._sphereRadialSpan = 0
+    this._spherePrimitiveType = 0
+    this._isHemispheric = false
   }
 }

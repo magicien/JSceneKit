@@ -1,6 +1,9 @@
 'use strict'
 
 import CAAnimationGroup from '../QuartzCore/CAAnimationGroup'
+import CABasicAnimation from '../QuartzCore/CABasicAnimation'
+import CAMediaTimingFunction from '../QuartzCore/CAMediaTimingFunction'
+import CAKeyframeAnimation from '../QuartzCore/CAKeyframeAnimation'
 import NSObject from '../ObjectiveC/NSObject'
 import SCNActionable from './SCNActionable'
 import SCNAnimatable from './SCNAnimatable'
@@ -23,6 +26,8 @@ import SCNPhysicsField from './SCNPhysicsField'
 import SCNParticleSystem from './SCNParticleSystem'
 import SCNAudioPlayer from './SCNAudioPlayer'
 import SCNHitTestResult from './SCNHitTestResult'
+import SKColor from '../SpriteKit/SKColor'
+import * as Constants from '../constants'
 
 
 /**
@@ -37,25 +42,41 @@ import SCNHitTestResult from './SCNHitTestResult'
 export default class SCNNode extends NSObject {
   static get _propTypes() {
     return {
-      paused: ['boolean', 'isPaused'],
-      scale: ['SCNVector3', '_scale'],
-      rotation: ['SCNVector4', '_rotation'],
-      position: ['SCNVector3', '_position'],
-      clientAttributes: ['NSMutableDictionary', null],
-      castsShadow: 'boolean',
-      opacity: 'float',
+      name: 'string',
+      light: 'SCNLight',
+      camera: 'SCNCamera',
+      geometry: 'SCNGeometry',
+      morpher: 'SCNMorpher',
+      skinner: 'SCNSkinner',
       categoryBitMask: 'integer',
+      paused: ['boolean', 'isPaused'],
+      position: ['SCNVector3', '_position'],
+      rotation: ['SCNVector4', '_rotation'],
+      scale: ['SCNVector3', '_scale'],
       hidden: ['boolean', 'isHidden'],
+      opacity: 'float',
+      renderingOrder: 'integer',
+      castsShadow: 'boolean',
       childNodes: ['NSArray', (obj, childNodes) => {
         childNodes.forEach((child) => {
           obj.addChildNode(child)
         })
       }],
-      renderingOrder: 'integer',
-      nodeID: ['string', null],
-      entityID: ['string', null],
-      name: 'string',
-      geometry: 'SCNGeometry'
+      physicsBody: 'SCNPhysicsBody',
+      physicsField: 'SCNPhysicsField',
+      particleSystem: ['NSArray', '_particleSystems'],
+      'animation-keys': ['NSArray', null],
+      animations: ['NSMutableDictionary', (obj, anims) => {
+        this._loadAnimationArray(obj, anims)
+      }],
+      'action-keys': ['NSArray', null],
+      actions: ['NSMutableDictionary', (obj, acts) => {
+        this._loadActionArray(obj, acts)
+      }],
+
+      clientAttributes: ['NSMutableDictionary', null],
+      nodeID: ['string', '_nodeID'],
+      entityID: ['string', '_entityID']
     }
   }
 
@@ -356,47 +377,245 @@ export default class SCNNode extends NSObject {
 
     //this._boundingSphere = null
 
+
+    /**
+     * @access private
+     * @type {?string}
+     */
+    this._entityID = null
+
+    /**
+     * @access private
+     * @type {?string}
+     */
+    this._nodeID = null
   }
 
-  /**
-   * @access public
-   * @param {NSCoder} coder -
-   * @returns {SCNNode}
-   */
-   /*
-  static initWithCoder(coder) {
-    const instance = new SCNNode()
-    instance._setValueWithCoder(coder)
-    return instance
+  static _loadAnimationArray(node, animations) {
+    console.log('_loadAnimationArray start')
+    for(const animName of Object.keys(animations)){
+      const data = animations[animName]
+      const animation = this._loadAnimationData(data, animName)
+      node.addAnimationForKey(animation, animName)
+    }
+    console.log('_loadAnimationArray done')
   }
-  */
 
-  /**
-   * @access private
-   * @param {NSCoder} coder -
-   */
-   /*
-  _setValueWithCoder(coder) {
-    this.isPaused = coder.decodeBoolForKey('paused')
-    const scale = coder.decodeBytesForKeyReturnedLength('scale', null)
-    this._scale = new SCNVector3(scale)
-    const rotation = coder.decodeBytesForKeyReturnedLength('rotation', null)
-    this._rotation = new SCNVector3(rotation)
-    const position = coder.decodeBytesForKeyReturnedLength('position', null)
-    this._position = new SCNVector3(position)
-    const clientAttributes = coder.decodeObjectForKey('clientAttributes')
-    this.castsShadow = coder.deocdeBoolForKey('castsShadow')
-    this.opacity = coder.decodeFloatForKey('opacity')
-    this.categoryBitMask = coder.decodeIntegerForKey('categoryBitMask')
-    this.isHidden = coder.decodeBoolForKey('isHidden')
-    this.childNodes = coder.decodeObjectForKey('childNodes')
-    this.renderingOrder = coder.decodeIntegerForKey('renderingOrder')
-    // nodeID object
-    // entityID object
-    // name object
-    // geometry
+  static _loadAnimationData(data, key) {
+    console.log(`_loadAnimationData ${key} start`)
+    if(data.class === 'group'){
+      return this._loadAnimationGroup(data)
+    }else if(data.class === 'keyframe'){
+      return this._loadKeyframeAnimation(data.animation, key)
+    }else if(data.class === 'basic'){
+      const keyPath = data.keyPath || key
+      return this._loadBasicAnimation(data.animation, keyPath)
+    }else if(data.type === 'keyframedAnimation'){
+      return this._loadKeyframeAnimation(data, key)
+    }else{
+      console.error(`unknown animation class: ${data.class}, type: ${data.type}, key: ${key}`)
+      throw new Error(`unknown animation class: ${data.class}, type: ${data.type}, key: ${key}`)
+    }
   }
-  */
+
+  static _loadAnimationGroup(animation) {
+    console.log('_loadAnimationGroup start')
+    const group = new CAAnimationGroup()
+    const data = animation.animation
+    group.isRemovedOnCompletion = !!animation.removeOnCompletion
+    // group.timingFunction
+    // group.delegate
+    group.usesSceneTimeBase = !!animation.usesSceneTimeBase
+    group.fadeInDuration = data.fadeInDuration
+    group.fadeOutDuration = data.fadeOutDuration
+    group.beginTime = data.beginTime
+    group.timeOffset = data.timeOffset
+    group.repeatCount = data.repeatCount
+    // group.repeatDuration
+    group.duration = data.duration
+    group.speed = data.speed
+    group.autoreverses = data.autoreverses
+    const fillMode = [
+      Constants.kCAFillModeRemoved,
+      Constants.kCAFillModeForwards,
+      Constants.kCAFillModeBackwards,
+      Constants.kCAFillModeBoth
+    ]
+    group.fillMode = fillMode[data.fillModeMask]
+    // data.cumulative
+    // data.additive
+    // data.attributes
+    data.channels.forEach((channel) => {
+      const keyPath = channel.targetPath.join('.')
+      console.error(`SCNNode animation group keyPath: ${keyPath}`)
+      const chAnim = this._loadAnimationData(channel.animation, keyPath)
+      group.animations.push(chAnim)
+    })
+    console.log('_loadAnimationGroup done')
+
+    return group
+  }
+
+  static _loadKeyframeAnimation(data, keyPath) {
+    console.log(`_loadKeyframeAnimation ${keyPath} start`)
+    const anim = new CAKeyframeAnimation(keyPath)
+
+    anim.isRemovedOnCompletion = !!data.removeOnCompletion
+    // anim.timingFunction
+    // anim.delegate
+    anim.usesSceneTimeBase = !!data.sceneTimeBased
+    anim.fadeInDuration = data.fadeInDuration
+    anim.fadeOutDuration = data.fadeOutDuration
+    anim.beginTime = data.beginTime
+    anim.timeOffset = data.timeOffset
+    anim.repeatCount = data.repeatCount
+    // anim.repeatDuration
+    anim.duration = data.duration
+    anim.speed = data.speed
+    anim.autoreverses = data.autoreverses
+    const fillMode = [
+      Constants.kCAFillModeRemoved,
+      Constants.kCAFillModeForwards,
+      Constants.kCAFillModeBackwards,
+      Constants.kCAFillModeBoth
+    ]
+    anim.fillMode = fillMode[data.fillModeMask]
+    anim.isCumulative = !!data.cumulative
+    anim.isAdditive = !!data.additive
+    // data.attributes
+
+    const keyframe = data.keyframeController
+    anim.values = this._loadData(keyframe, 'values')
+    //anim.path
+    anim.keyTimes = this._loadData(keyframe, 'keytimes')
+    switch(keyframe.interpolationMode){
+      case 0:
+      default:
+        //anim.timingFunctions =
+        break
+    }
+    anim.keyTimes = anim.keyTimes.map((keyTime) => (keyTime / anim.duration))
+
+    const calculationModes = [
+      Constants.kCAAnimationLinear,
+      Constants.kCAAnimationDiscrete,
+      Constants.kCAAnimationPaced,
+      Constants.kCAAnimationCubic,
+      Constants.kCAAnimationCubicPaced
+    ]
+    anim.calculationMode = calculationModes[keyframe.calculationMode]
+    //anim.rotationMode
+    //anim.tensionValues
+    //anim.continuityValues
+    //anim.biasValues
+
+    console.log(`_loadKeyframeAnimation ${keyPath} done`)
+
+    return anim
+  }
+
+  static _loadBasicAnimation(data, keyPath) {
+    console.log(`_loadBasicAnimation ${keyPath} start`)
+    const anim = new CABasicAnimation(keyPath)
+
+    anim.isRemovedOnCompletion = !!data.removeOnCompletion
+    anim.timingFunction = new CAMediaTimingFunction(
+      data.timingFunction.c0,
+      data.timingFunction.c1,
+      data.timingFunction.c2,
+      data.timingFunction.c3
+    )
+    // anim.delegate
+    anim.usesSceneTimeBase = !!data.sceneTimeBased
+    anim.fadeInDuration = data.fadeInDuration
+    anim.fadeOutDuration = data.fadeOutDuration
+    anim.beginTime = data.beginTime
+    anim.timeOffset = data.timeOffset
+    anim.repeatCount = data.repeatCount
+    // anim.repeatDuration
+    anim.duration = data.duration
+    anim.speed = data.speed
+    anim.autoreverses = data.autoreverses
+    const fillMode = [
+      Constants.kCAFillModeRemoved,
+      Constants.kCAFillModeForwards,
+      Constants.kCAFillModeBackwards,
+      Constants.kCAFillModeBoth
+    ]
+    anim.fillMode = fillMode[data.fillModeMask]
+    anim.isCumulative = !!data.cumulative
+    anim.isAdditive = !!data.additive
+    // data.attributes
+    // data.baseType
+
+    console.log(`_loadBasicAnimation ${keyPath} done`)
+
+    return anim
+  }
+
+  static _loadActionArray(node, actions) {
+    console.log('_loadActionArray start')
+    for(const actName of Object.keys(actions)){
+      const data = actions[actName]
+      const action = this._loadActionData(data, actName)
+      node.runActionForKey(action, actName)
+    }
+    console.log('_loadAnimationArray done')
+  }
+
+  static _loadActionData(data, key) {
+    console.log(`_loadActionData ${key} start`)
+  }
+
+  static _loadData(data, key) {
+    console.log(`_loadData ${key} start`)
+
+    const accessor = data[key].accessor
+    const components = accessor.componentsPerValue
+    const stride = accessor.stride
+    const offset = accessor.offset
+    const typeId = accessor.sourceTypeID
+    const padding = accessor.padding
+    const count = accessor.valuesCount
+
+    const sourceKey = `${key}-data`
+    const source = data[sourceKey]
+
+    const result = []
+    let pos = offset
+    if(accessor.componentsType === 1){
+      for(let i=0; i<count; i++){
+        result.push(source.readFloatBE(pos))
+        pos += stride
+      }
+    }else if(accessor.componentsType === 6){
+      for(let i=0; i<count; i++){
+        result.push(source.readDoubleBE(pos))
+        pos += stride
+      }
+    }else if(accessor.componentsType === 9){
+      for(let i=0; i<count; i++){
+        result.push(SCNVector3._initWithData(source, pos, true))
+        pos += stride
+      }
+    }else if(accessor.componentsType === 10){
+      for(let i=0; i<count; i++){
+        result.push(SCNVector4._initWithData(source, pos, true))
+        pos += stride
+      }
+    }else if(accessor.componentsType === 13){
+      for(let i=0; i<count; i++){
+        result.push(SKColor._initWithData(source, pos, true))
+        pos += stride
+      }
+    }else{
+      console.error(`unknown accessor componentsType: ${accessor.componentsType}`)
+    }
+
+    console.log(`_loadData ${key} done`)
+
+    return result
+  }
 
   /**
    * Constructor for JSExport compatibility
@@ -912,6 +1131,38 @@ export default class SCNNode extends NSObject {
    */
   childNodeWithName(name) {
     return this.childNodeWithNameRecursively(name, false)
+  }
+
+  /**
+   * @access private
+   * @param {string} nodeID -
+   * @param {boolean} recursively -
+   * @returns {?SCNNode} -
+   */
+  _childNodeWithNodeIDRecursively(nodeID, recursively = true) {
+    for(let i=0; i<this._childNodes.length; i++){
+      if(this._childNodes[i]._nodeID === nodeID){
+        return this._childNodes[i]
+      }
+      if(recursively){
+        const result = this._childNodes[i]._childNodeWithNodeIDRecursively(nodeID, recursively)
+        if(result !== null){
+          return result
+        }
+      }
+    }
+
+    return null
+
+  }
+
+  /**
+   * @access private
+   * @param {string} nodeID -
+   * @returns {?SCNNode} -
+   */
+  _childNodeWithNodeID(nodeID) {
+    return this._childNodeWithNodeIDRecursively(name, false)
   }
 
   /**
@@ -1499,6 +1750,28 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     const view = this.viewTransform
     //return proj.mult(view)
     return view.mult(proj)
+  }
+
+  /**
+   * Invoked by value(forKey:) when it finds no property corresponding to a given key.
+   * @access public
+   * @param {string} key - A string that is not equal to the name of any of the receiver's properties.
+   * @returns {?Object} - 
+   * @desc Subclasses can override this method to return an alternate value for undefined keys. The default implementation raises an NSUndefinedKeyException.
+   * @see https://developer.apple.com/reference/objectivec/nsobject/1413457-value
+   */
+  valueForUndefinedKey(key) {
+    if(key.charAt(0) === '/'){
+      const nodeID = key.substr(1)
+      if(this._nodeID === nodeID){
+        return this
+      }
+      const node = this._childNodeWithNodeIDRecursively(nodeID)
+      if(node){
+        return node
+      }
+    }
+    return super.valueForUndefinedKey(key)
   }
 
   setValueForKey(value, key) {

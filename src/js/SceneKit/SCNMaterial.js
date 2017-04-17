@@ -57,7 +57,7 @@ export default class SCNMaterial extends NSObject {
 
       avoidsOverLighting: ['boolean', null],
       fillMode: ['integer', null],
-      entityID: ['string', null],
+      entityID: ['string', '_entityID'],
       indexOfRefraction: ['integer', null]
     }
   }
@@ -214,6 +214,13 @@ export default class SCNMaterial extends NSObject {
      * @type {Map}
      */
     this._animations = new Map()
+
+
+    /**
+     * @access private
+     * @type {?string}
+     */
+    this._entityID = null
   }
 
   // Configuring a Material’s Visual Properties

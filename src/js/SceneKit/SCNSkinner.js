@@ -15,6 +15,49 @@ import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
  * @see https://developer.apple.com/reference/scenekit/scnskinner
  */
 export default class SCNSkinner extends NSObject {
+  static get _propTypes() {
+    return {
+      $constructor: (propNames, propValues) => {
+        console.log('SCNSkinner constructor')
+        const invTransforms = []
+        const len = propValues.bones.length
+        for(let i=0; i<len; i++){
+          const inv = propValues[`baseGeometryBindTransform-${i}`]
+          console.log(`inv ${i} ${inv.float32Array()}`)
+          if(typeof inv === 'undefined'){
+            throw new Error(`boneInverseBindTransforms ${i} does not exist`)
+          }
+          invTransforms.push(inv)
+        }
+
+        const instance = new SCNSkinner(
+          propValues.baseGeometry,
+          propValues.bones,
+          invTransforms,
+          propValues.boneWeights,
+          propValues.boneIndices
+        )
+        instance.skeleton = propValues.skeleton
+        return instance
+      },
+      $unknownKey: (key) => {
+        console.warn(`SCNSkinner unknownKey ${key}`)
+        const pattern = new RegExp(/^baseGeometryBindTransform-(\d+)$/)
+        const result = key.match(pattern)
+        if(result !== null){
+          return ['SCNMatrix4', null]
+        }
+        return null
+      },
+      baseGeometry: ['SCNGeometry', null],
+      baseGeometryBindTransform: ['SCNMatrix4', null],
+      skeleton: ['SCNNode', null],
+      bones: ['NSArray', null],
+      //boneInverseBindTransforms: ['NSArray', null],
+      boneWeights: ['SCNGeometrySource', null],
+      boneIndices: ['SCNGeometrySource', null]
+    }
+  }
 
   // Creating a Skinner Object
 
@@ -100,8 +143,8 @@ export default class SCNSkinner extends NSObject {
     this._boneIndices = boneIndices
 
     // add geometrySources to baseGeometry
-    baseGeometry._geometrySources.push(boneWeights)
-    baseGeometry._geometrySources.push(boneIndices)
+    //baseGeometry._geometrySources.push(boneWeights)
+    //baseGeometry._geometrySources.push(boneIndices)
   }
 
   // Working with an Animation Skeleton

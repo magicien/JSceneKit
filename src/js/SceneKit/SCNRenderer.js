@@ -493,6 +493,7 @@ export default class SCNRenderer extends NSObject {
     this._defaultCameraNode.name = 'kSCNFreeViewCameraName'
 
     const camera = new SCNCamera()
+    camera.name = 'kSCNFreeViewCameraNameCamera'
     this._defaultCameraNode.camera = camera
     this._defaultCameraNode.position = new SCNVector3(0, 0, _defaultCameraDistance)
 
@@ -930,6 +931,9 @@ export default class SCNRenderer extends NSObject {
    */
   hitTest(point, options = null) {
     const result = []
+    if(this.scene === null){
+      return result
+    }
 
     const cameraNode = this._getCameraNode()
     cameraNode.camera._updateProjectionTransform(this._viewRect)
@@ -1268,7 +1272,8 @@ export default class SCNRenderer extends NSObject {
     const baseGeometry = node.geometry
 
     // prepare vertex array data
-    const vertexBuffer = geometry._createVertexBuffer(gl, baseGeometry)
+    //const vertexBuffer = geometry._createVertexBuffer(gl, baseGeometry)
+    const vertexBuffer = geometry._createVertexBuffer(gl, node)
     // TODO: retain attribute locations
     const positionLoc = gl.getAttribLocation(program, 'position')
     const normalLoc = gl.getAttribLocation(program, 'normal')
@@ -1326,7 +1331,8 @@ export default class SCNRenderer extends NSObject {
       }
 
       // boneIndices
-      const indSrc = geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneIndices)[0]
+      //const indSrc = geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneIndices)[0]
+      const indSrc = node.skinner ? node.skinner._boneIndices : null
       if(indSrc){
         //console.log(`indSrc: ${boneIndicesLoc}, ${indSrc.componentsPerVector}, ${indSrc.dataStride}, ${indSrc.dataOffset}`)
         gl.enableVertexAttribArray(boneIndicesLoc)
@@ -1336,7 +1342,8 @@ export default class SCNRenderer extends NSObject {
       }
 
       // boneWeights
-      const wgtSrc = geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneWeights)[0]
+      //const wgtSrc = geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneWeights)[0]
+      const wgtSrc = node.skinner ? node.skinner._boneWeights : null
       if(wgtSrc){
         //console.log(`wgtSrc: ${boneWeightsLoc}, ${wgtSrc.componentsPerVector}, ${wgtSrc.dataStride}, ${wgtSrc.dataOffset}`)
         gl.enableVertexAttribArray(boneWeightsLoc)
@@ -1563,7 +1570,7 @@ export default class SCNRenderer extends NSObject {
       const numBones = skinner._bones.length
       for(let i=0; i<numBones; i++){
         const bone = skinner._bones[i]
-        const mat = skinner._boneInverseBindTransform[i].mult(bone._presentation._worldTransform)
+        const mat = skinner._boneInverseBindTransforms[i].mult(bone._presentation._worldTransform)
         skinningJoints.push(mat)
       }
       for(let i=0; i<sourceLen; i++){

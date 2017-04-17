@@ -18,6 +18,25 @@ import SCNMatrix4 from '../SceneKit/SCNMatrix4'
  * @see https://developer.apple.com/reference/foundation/nsvalue
  */
 export default class NSValue extends NSObject {
+  /**
+   * @access public
+   * @param {NSCoder} coder -
+   * @returns {} -
+   */
+  static initWithCoder(coder) {
+    const special = coder._refObj['NS.special']
+    
+    const size = coder._refObj['NS.sizeval'].obj
+    if(size){
+      if(size.charAt(0) !== '{' || size.charAt(size.length-1) !== '}'){
+        throw new Error(`unknown NSValue size format: ${size}`)
+      }
+      const values = size.slice(1, -1).split(',').map(parseFloat)
+      console.error(`size width: ${values[0]}, height: ${values[1]}`)
+      return new CGSize(values[0], values[1])
+    }
+    throw new Error('unknown NSValue type')
+  }
 
   // Working with Raw Values
 
@@ -31,63 +50,6 @@ export default class NSValue extends NSObject {
    * @see https://developer.apple.com/reference/foundation/nsvalue/1411621-init
    */
   initBytesObjCType(value, type) {
-
-    // Working with Raw Values
-
-    this._objCType = null
-
-    // Working with Pointer and Object Values
-
-    this._pointerValue = null
-    this._nonretainedObjectValue = null
-
-    // Working with Range Values
-
-    this._rangeValue = null
-
-    // Working with Foundation Geometry Values
-
-    this._pointValue = null
-    this._sizeValue = null
-    this._rectValue = null
-
-    // Working with CoreGraphics Geometry Values
-
-    this._cgPointValue = null
-    this._cgVectorValue = null
-    this._cgSizeValue = null
-    this._cgRectValue = null
-    this._cgAffineTransformValue = null
-
-    // Working with UIKit Geometry Values
-
-    this._uiEdgeInsetsValue = null
-    this._uiOffsetValue = null
-
-    // Working with CoreAnimation Transform Values
-
-    this._caTransform3DValue = null
-
-    // Working with Media Time Values
-
-    this._timeValue = null
-    this._timeRangeValue = null
-    this._timeMappingValue = null
-
-    // Working with Geographic Coordinate Values
-
-    this._mkCoordinateValue = null
-    this._mkCoordinateSpanValue = null
-
-    // Working with SceneKit Vector and Matrix Values
-
-    this._scnVector3Value = null
-    this._scnVector4Value = null
-    this._scnMatrix4Value = null
-
-    // Instance Properties
-
-    this._edgeInsetsValue = null
   }
 
   /**
@@ -100,63 +62,6 @@ export default class NSValue extends NSObject {
    * @see https://developer.apple.com/reference/foundation/nsvalue/1417400-init
    */
   initWithObjCType(value, type) {
-
-    // Working with Raw Values
-
-    this._objCType = null
-
-    // Working with Pointer and Object Values
-
-    this._pointerValue = null
-    this._nonretainedObjectValue = null
-
-    // Working with Range Values
-
-    this._rangeValue = null
-
-    // Working with Foundation Geometry Values
-
-    this._pointValue = null
-    this._sizeValue = null
-    this._rectValue = null
-
-    // Working with CoreGraphics Geometry Values
-
-    this._cgPointValue = null
-    this._cgVectorValue = null
-    this._cgSizeValue = null
-    this._cgRectValue = null
-    this._cgAffineTransformValue = null
-
-    // Working with UIKit Geometry Values
-
-    this._uiEdgeInsetsValue = null
-    this._uiOffsetValue = null
-
-    // Working with CoreAnimation Transform Values
-
-    this._caTransform3DValue = null
-
-    // Working with Media Time Values
-
-    this._timeValue = null
-    this._timeRangeValue = null
-    this._timeMappingValue = null
-
-    // Working with Geographic Coordinate Values
-
-    this._mkCoordinateValue = null
-    this._mkCoordinateSpanValue = null
-
-    // Working with SceneKit Vector and Matrix Values
-
-    this._scnVector3Value = null
-    this._scnVector4Value = null
-    this._scnMatrix4Value = null
-
-    // Instance Properties
-
-    this._edgeInsetsValue = null
   }
 
   /**
@@ -168,6 +73,7 @@ export default class NSValue extends NSObject {
    */
   getValue(value) {
   }
+
   /**
    * A C string containing the Objective-C type of the data contained in the value object.
    * @type {UnsafePointer<Int8>}
@@ -183,14 +89,15 @@ export default class NSValue extends NSObject {
   /**
    * Creates a value object containing the specified pointer.
    * @access public
+   * @constructor
    * @param {?UnsafeRawPointer} pointer - 
-   * @returns {void}
    * @desc This method is equivalent to invoking init(_:withObjCType:) in this manner:NSValue *theValue = [NSValue value:&aPointer withObjCType:@encode(void *)];
 This method does not copy the contents of aPointer, so you must not to free the memory at the pointer destination while the NSValue object exists. NSData objects may be more suited for arbitrary pointers than NSValue objects.NSValue *theValue = [NSValue value:&aPointer withObjCType:@encode(void *)];
 
    * @see https://developer.apple.com/reference/foundation/nsvalue/1415975-init
    */
-  init(pointer) {
+  constructor(pointer) {
+    super()
 
     // Working with Raw Values
 
@@ -261,64 +168,8 @@ This method is useful if you want to add an object to a Collection but don’t w
    * @see https://developer.apple.com/reference/foundation/nsvalue/1408098-init
    */
   initNonretainedObject(anObject) {
-
-    // Working with Raw Values
-
-    this._objCType = null
-
-    // Working with Pointer and Object Values
-
-    this._pointerValue = null
-    this._nonretainedObjectValue = null
-
-    // Working with Range Values
-
-    this._rangeValue = null
-
-    // Working with Foundation Geometry Values
-
-    this._pointValue = null
-    this._sizeValue = null
-    this._rectValue = null
-
-    // Working with CoreGraphics Geometry Values
-
-    this._cgPointValue = null
-    this._cgVectorValue = null
-    this._cgSizeValue = null
-    this._cgRectValue = null
-    this._cgAffineTransformValue = null
-
-    // Working with UIKit Geometry Values
-
-    this._uiEdgeInsetsValue = null
-    this._uiOffsetValue = null
-
-    // Working with CoreAnimation Transform Values
-
-    this._caTransform3DValue = null
-
-    // Working with Media Time Values
-
-    this._timeValue = null
-    this._timeRangeValue = null
-    this._timeMappingValue = null
-
-    // Working with Geographic Coordinate Values
-
-    this._mkCoordinateValue = null
-    this._mkCoordinateSpanValue = null
-
-    // Working with SceneKit Vector and Matrix Values
-
-    this._scnVector3Value = null
-    this._scnVector4Value = null
-    this._scnMatrix4Value = null
-
-    // Instance Properties
-
-    this._edgeInsetsValue = null
   }
+
   /**
    * Returns the value as an untyped pointer.
    * @type {?Object}
@@ -328,6 +179,7 @@ This method is useful if you want to add an object to a Collection but don’t w
   get pointerValue() {
     return this._pointerValue
   }
+
   /**
    * The value as a non-retained pointer to an object.
    * @type {?Object}
@@ -359,6 +211,7 @@ This method is useful if you want to add an object to a Collection but don’t w
   get pointValue() {
     return this._pointValue
   }
+
   /**
    * The Foundation size structure representation of the value.
    * @type {CGSize}
@@ -368,6 +221,7 @@ This method is useful if you want to add an object to a Collection but don’t w
   get sizeValue() {
     return this._sizeValue
   }
+
   /**
    * The Foundation rectangle structure representation of the value.
    * @type {CGRect}
@@ -388,63 +242,6 @@ This method is useful if you want to add an object to a Collection but don’t w
    * @see https://developer.apple.com/reference/foundation/nsvalue/1624531-init
    */
   initCgPoint(point) {
-
-    // Working with Raw Values
-
-    this._objCType = null
-
-    // Working with Pointer and Object Values
-
-    this._pointerValue = null
-    this._nonretainedObjectValue = null
-
-    // Working with Range Values
-
-    this._rangeValue = null
-
-    // Working with Foundation Geometry Values
-
-    this._pointValue = null
-    this._sizeValue = null
-    this._rectValue = null
-
-    // Working with CoreGraphics Geometry Values
-
-    this._cgPointValue = null
-    this._cgVectorValue = null
-    this._cgSizeValue = null
-    this._cgRectValue = null
-    this._cgAffineTransformValue = null
-
-    // Working with UIKit Geometry Values
-
-    this._uiEdgeInsetsValue = null
-    this._uiOffsetValue = null
-
-    // Working with CoreAnimation Transform Values
-
-    this._caTransform3DValue = null
-
-    // Working with Media Time Values
-
-    this._timeValue = null
-    this._timeRangeValue = null
-    this._timeMappingValue = null
-
-    // Working with Geographic Coordinate Values
-
-    this._mkCoordinateValue = null
-    this._mkCoordinateSpanValue = null
-
-    // Working with SceneKit Vector and Matrix Values
-
-    this._scnVector3Value = null
-    this._scnVector4Value = null
-    this._scnMatrix4Value = null
-
-    // Instance Properties
-
-    this._edgeInsetsValue = null
   }
 
   /**
@@ -455,63 +252,6 @@ This method is useful if you want to add an object to a Collection but don’t w
    * @see https://developer.apple.com/reference/foundation/nsvalue/1624493-init
    */
   initCgVector(vector) {
-
-    // Working with Raw Values
-
-    this._objCType = null
-
-    // Working with Pointer and Object Values
-
-    this._pointerValue = null
-    this._nonretainedObjectValue = null
-
-    // Working with Range Values
-
-    this._rangeValue = null
-
-    // Working with Foundation Geometry Values
-
-    this._pointValue = null
-    this._sizeValue = null
-    this._rectValue = null
-
-    // Working with CoreGraphics Geometry Values
-
-    this._cgPointValue = null
-    this._cgVectorValue = null
-    this._cgSizeValue = null
-    this._cgRectValue = null
-    this._cgAffineTransformValue = null
-
-    // Working with UIKit Geometry Values
-
-    this._uiEdgeInsetsValue = null
-    this._uiOffsetValue = null
-
-    // Working with CoreAnimation Transform Values
-
-    this._caTransform3DValue = null
-
-    // Working with Media Time Values
-
-    this._timeValue = null
-    this._timeRangeValue = null
-    this._timeMappingValue = null
-
-    // Working with Geographic Coordinate Values
-
-    this._mkCoordinateValue = null
-    this._mkCoordinateSpanValue = null
-
-    // Working with SceneKit Vector and Matrix Values
-
-    this._scnVector3Value = null
-    this._scnVector4Value = null
-    this._scnMatrix4Value = null
-
-    // Instance Properties
-
-    this._edgeInsetsValue = null
   }
 
   /**
@@ -522,63 +262,6 @@ This method is useful if you want to add an object to a Collection but don’t w
    * @see https://developer.apple.com/reference/foundation/nsvalue/1624511-init
    */
   initCgSize(size) {
-
-    // Working with Raw Values
-
-    this._objCType = null
-
-    // Working with Pointer and Object Values
-
-    this._pointerValue = null
-    this._nonretainedObjectValue = null
-
-    // Working with Range Values
-
-    this._rangeValue = null
-
-    // Working with Foundation Geometry Values
-
-    this._pointValue = null
-    this._sizeValue = null
-    this._rectValue = null
-
-    // Working with CoreGraphics Geometry Values
-
-    this._cgPointValue = null
-    this._cgVectorValue = null
-    this._cgSizeValue = null
-    this._cgRectValue = null
-    this._cgAffineTransformValue = null
-
-    // Working with UIKit Geometry Values
-
-    this._uiEdgeInsetsValue = null
-    this._uiOffsetValue = null
-
-    // Working with CoreAnimation Transform Values
-
-    this._caTransform3DValue = null
-
-    // Working with Media Time Values
-
-    this._timeValue = null
-    this._timeRangeValue = null
-    this._timeMappingValue = null
-
-    // Working with Geographic Coordinate Values
-
-    this._mkCoordinateValue = null
-    this._mkCoordinateSpanValue = null
-
-    // Working with SceneKit Vector and Matrix Values
-
-    this._scnVector3Value = null
-    this._scnVector4Value = null
-    this._scnMatrix4Value = null
-
-    // Instance Properties
-
-    this._edgeInsetsValue = null
   }
 
   /**
@@ -589,63 +272,6 @@ This method is useful if you want to add an object to a Collection but don’t w
    * @see https://developer.apple.com/reference/foundation/nsvalue/1624529-init
    */
   initCgRect(rect) {
-
-    // Working with Raw Values
-
-    this._objCType = null
-
-    // Working with Pointer and Object Values
-
-    this._pointerValue = null
-    this._nonretainedObjectValue = null
-
-    // Working with Range Values
-
-    this._rangeValue = null
-
-    // Working with Foundation Geometry Values
-
-    this._pointValue = null
-    this._sizeValue = null
-    this._rectValue = null
-
-    // Working with CoreGraphics Geometry Values
-
-    this._cgPointValue = null
-    this._cgVectorValue = null
-    this._cgSizeValue = null
-    this._cgRectValue = null
-    this._cgAffineTransformValue = null
-
-    // Working with UIKit Geometry Values
-
-    this._uiEdgeInsetsValue = null
-    this._uiOffsetValue = null
-
-    // Working with CoreAnimation Transform Values
-
-    this._caTransform3DValue = null
-
-    // Working with Media Time Values
-
-    this._timeValue = null
-    this._timeRangeValue = null
-    this._timeMappingValue = null
-
-    // Working with Geographic Coordinate Values
-
-    this._mkCoordinateValue = null
-    this._mkCoordinateSpanValue = null
-
-    // Working with SceneKit Vector and Matrix Values
-
-    this._scnVector3Value = null
-    this._scnVector4Value = null
-    this._scnMatrix4Value = null
-
-    // Instance Properties
-
-    this._edgeInsetsValue = null
   }
 
   /**
@@ -656,64 +282,8 @@ This method is useful if you want to add an object to a Collection but don’t w
    * @see https://developer.apple.com/reference/foundation/nsvalue/1624503-init
    */
   initCgAffineTransform(transform) {
-
-    // Working with Raw Values
-
-    this._objCType = null
-
-    // Working with Pointer and Object Values
-
-    this._pointerValue = null
-    this._nonretainedObjectValue = null
-
-    // Working with Range Values
-
-    this._rangeValue = null
-
-    // Working with Foundation Geometry Values
-
-    this._pointValue = null
-    this._sizeValue = null
-    this._rectValue = null
-
-    // Working with CoreGraphics Geometry Values
-
-    this._cgPointValue = null
-    this._cgVectorValue = null
-    this._cgSizeValue = null
-    this._cgRectValue = null
-    this._cgAffineTransformValue = null
-
-    // Working with UIKit Geometry Values
-
-    this._uiEdgeInsetsValue = null
-    this._uiOffsetValue = null
-
-    // Working with CoreAnimation Transform Values
-
-    this._caTransform3DValue = null
-
-    // Working with Media Time Values
-
-    this._timeValue = null
-    this._timeRangeValue = null
-    this._timeMappingValue = null
-
-    // Working with Geographic Coordinate Values
-
-    this._mkCoordinateValue = null
-    this._mkCoordinateSpanValue = null
-
-    // Working with SceneKit Vector and Matrix Values
-
-    this._scnVector3Value = null
-    this._scnVector4Value = null
-    this._scnMatrix4Value = null
-
-    // Instance Properties
-
-    this._edgeInsetsValue = null
   }
+
   /**
    * Returns the CoreGraphics point structure representation of the value.
    * @type {CGPoint}
@@ -723,6 +293,7 @@ This method is useful if you want to add an object to a Collection but don’t w
   get cgPointValue() {
     return this._cgPointValue
   }
+
   /**
    * Returns the CoreGraphics vector structure representation of the value.
    * @type {CGVector}
@@ -732,6 +303,7 @@ This method is useful if you want to add an object to a Collection but don’t w
   get cgVectorValue() {
     return this._cgVectorValue
   }
+
   /**
    * Returns the CoreGraphics size structure representation of the value.
    * @type {CGSize}
@@ -750,6 +322,7 @@ This method is useful if you want to add an object to a Collection but don’t w
   get cgRectValue() {
     return this._cgRectValue
   }
+
   /**
    * Returns the CoreGraphics affine transform representation of the value.
    * @type {CGAffineTransform}
@@ -770,63 +343,6 @@ This method is useful if you want to add an object to a Collection but don’t w
    * @see https://developer.apple.com/reference/foundation/nsvalue/1624485-init
    */
   initUiEdgeInsets(insets) {
-
-    // Working with Raw Values
-
-    this._objCType = null
-
-    // Working with Pointer and Object Values
-
-    this._pointerValue = null
-    this._nonretainedObjectValue = null
-
-    // Working with Range Values
-
-    this._rangeValue = null
-
-    // Working with Foundation Geometry Values
-
-    this._pointValue = null
-    this._sizeValue = null
-    this._rectValue = null
-
-    // Working with CoreGraphics Geometry Values
-
-    this._cgPointValue = null
-    this._cgVectorValue = null
-    this._cgSizeValue = null
-    this._cgRectValue = null
-    this._cgAffineTransformValue = null
-
-    // Working with UIKit Geometry Values
-
-    this._uiEdgeInsetsValue = null
-    this._uiOffsetValue = null
-
-    // Working with CoreAnimation Transform Values
-
-    this._caTransform3DValue = null
-
-    // Working with Media Time Values
-
-    this._timeValue = null
-    this._timeRangeValue = null
-    this._timeMappingValue = null
-
-    // Working with Geographic Coordinate Values
-
-    this._mkCoordinateValue = null
-    this._mkCoordinateSpanValue = null
-
-    // Working with SceneKit Vector and Matrix Values
-
-    this._scnVector3Value = null
-    this._scnVector4Value = null
-    this._scnMatrix4Value = null
-
-    // Instance Properties
-
-    this._edgeInsetsValue = null
   }
 
   /**
@@ -837,64 +353,8 @@ This method is useful if you want to add an object to a Collection but don’t w
    * @see https://developer.apple.com/reference/foundation/nsvalue/1624530-init
    */
   initUiOffset(insets) {
-
-    // Working with Raw Values
-
-    this._objCType = null
-
-    // Working with Pointer and Object Values
-
-    this._pointerValue = null
-    this._nonretainedObjectValue = null
-
-    // Working with Range Values
-
-    this._rangeValue = null
-
-    // Working with Foundation Geometry Values
-
-    this._pointValue = null
-    this._sizeValue = null
-    this._rectValue = null
-
-    // Working with CoreGraphics Geometry Values
-
-    this._cgPointValue = null
-    this._cgVectorValue = null
-    this._cgSizeValue = null
-    this._cgRectValue = null
-    this._cgAffineTransformValue = null
-
-    // Working with UIKit Geometry Values
-
-    this._uiEdgeInsetsValue = null
-    this._uiOffsetValue = null
-
-    // Working with CoreAnimation Transform Values
-
-    this._caTransform3DValue = null
-
-    // Working with Media Time Values
-
-    this._timeValue = null
-    this._timeRangeValue = null
-    this._timeMappingValue = null
-
-    // Working with Geographic Coordinate Values
-
-    this._mkCoordinateValue = null
-    this._mkCoordinateSpanValue = null
-
-    // Working with SceneKit Vector and Matrix Values
-
-    this._scnVector3Value = null
-    this._scnVector4Value = null
-    this._scnMatrix4Value = null
-
-    // Instance Properties
-
-    this._edgeInsetsValue = null
   }
+
   /**
    * Returns the UIKit edge insets structure representation of the value.
    * @type {UIEdgeInsets}
@@ -904,6 +364,7 @@ This method is useful if you want to add an object to a Collection but don’t w
   get uiEdgeInsetsValue() {
     return this._uiEdgeInsetsValue
   }
+
   /**
    * Returns the UIKit offset structure representation of the value.
    * @type {UIOffset}
@@ -924,64 +385,8 @@ This method is useful if you want to add an object to a Collection but don’t w
    * @see https://developer.apple.com/reference/foundation/nsvalue/1436556-init
    */
   initCaTransform3D(t) {
-
-    // Working with Raw Values
-
-    this._objCType = null
-
-    // Working with Pointer and Object Values
-
-    this._pointerValue = null
-    this._nonretainedObjectValue = null
-
-    // Working with Range Values
-
-    this._rangeValue = null
-
-    // Working with Foundation Geometry Values
-
-    this._pointValue = null
-    this._sizeValue = null
-    this._rectValue = null
-
-    // Working with CoreGraphics Geometry Values
-
-    this._cgPointValue = null
-    this._cgVectorValue = null
-    this._cgSizeValue = null
-    this._cgRectValue = null
-    this._cgAffineTransformValue = null
-
-    // Working with UIKit Geometry Values
-
-    this._uiEdgeInsetsValue = null
-    this._uiOffsetValue = null
-
-    // Working with CoreAnimation Transform Values
-
-    this._caTransform3DValue = null
-
-    // Working with Media Time Values
-
-    this._timeValue = null
-    this._timeRangeValue = null
-    this._timeMappingValue = null
-
-    // Working with Geographic Coordinate Values
-
-    this._mkCoordinateValue = null
-    this._mkCoordinateSpanValue = null
-
-    // Working with SceneKit Vector and Matrix Values
-
-    this._scnVector3Value = null
-    this._scnVector4Value = null
-    this._scnMatrix4Value = null
-
-    // Instance Properties
-
-    this._edgeInsetsValue = null
   }
+
   /**
    * The CoreAnimation transform structure representation of the value.
    * @type {CATransform3D}
@@ -1031,63 +436,6 @@ This method is useful if you want to add an object to a Collection but don’t w
    * @see https://developer.apple.com/reference/foundation/nsvalue/1452193-init
    */
   initMkCoordinate(coordinate) {
-
-    // Working with Raw Values
-
-    this._objCType = null
-
-    // Working with Pointer and Object Values
-
-    this._pointerValue = null
-    this._nonretainedObjectValue = null
-
-    // Working with Range Values
-
-    this._rangeValue = null
-
-    // Working with Foundation Geometry Values
-
-    this._pointValue = null
-    this._sizeValue = null
-    this._rectValue = null
-
-    // Working with CoreGraphics Geometry Values
-
-    this._cgPointValue = null
-    this._cgVectorValue = null
-    this._cgSizeValue = null
-    this._cgRectValue = null
-    this._cgAffineTransformValue = null
-
-    // Working with UIKit Geometry Values
-
-    this._uiEdgeInsetsValue = null
-    this._uiOffsetValue = null
-
-    // Working with CoreAnimation Transform Values
-
-    this._caTransform3DValue = null
-
-    // Working with Media Time Values
-
-    this._timeValue = null
-    this._timeRangeValue = null
-    this._timeMappingValue = null
-
-    // Working with Geographic Coordinate Values
-
-    this._mkCoordinateValue = null
-    this._mkCoordinateSpanValue = null
-
-    // Working with SceneKit Vector and Matrix Values
-
-    this._scnVector3Value = null
-    this._scnVector4Value = null
-    this._scnMatrix4Value = null
-
-    // Instance Properties
-
-    this._edgeInsetsValue = null
   }
 
   /**
@@ -1098,64 +446,8 @@ This method is useful if you want to add an object to a Collection but don’t w
    * @see https://developer.apple.com/reference/foundation/nsvalue/1452333-init
    */
   initMkCoordinateSpan(span) {
-
-    // Working with Raw Values
-
-    this._objCType = null
-
-    // Working with Pointer and Object Values
-
-    this._pointerValue = null
-    this._nonretainedObjectValue = null
-
-    // Working with Range Values
-
-    this._rangeValue = null
-
-    // Working with Foundation Geometry Values
-
-    this._pointValue = null
-    this._sizeValue = null
-    this._rectValue = null
-
-    // Working with CoreGraphics Geometry Values
-
-    this._cgPointValue = null
-    this._cgVectorValue = null
-    this._cgSizeValue = null
-    this._cgRectValue = null
-    this._cgAffineTransformValue = null
-
-    // Working with UIKit Geometry Values
-
-    this._uiEdgeInsetsValue = null
-    this._uiOffsetValue = null
-
-    // Working with CoreAnimation Transform Values
-
-    this._caTransform3DValue = null
-
-    // Working with Media Time Values
-
-    this._timeValue = null
-    this._timeRangeValue = null
-    this._timeMappingValue = null
-
-    // Working with Geographic Coordinate Values
-
-    this._mkCoordinateValue = null
-    this._mkCoordinateSpanValue = null
-
-    // Working with SceneKit Vector and Matrix Values
-
-    this._scnVector3Value = null
-    this._scnVector4Value = null
-    this._scnMatrix4Value = null
-
-    // Instance Properties
-
-    this._edgeInsetsValue = null
   }
+
   /**
    * The CoreLocation geographic coordinate structure representation of the value.
    * @type {CLLocationCoordinate2D}
@@ -1185,63 +477,6 @@ This method is useful if you want to add an object to a Collection but don’t w
    * @see https://developer.apple.com/reference/foundation/nsvalue/1409671-init
    */
   initScnVector3(v) {
-
-    // Working with Raw Values
-
-    this._objCType = null
-
-    // Working with Pointer and Object Values
-
-    this._pointerValue = null
-    this._nonretainedObjectValue = null
-
-    // Working with Range Values
-
-    this._rangeValue = null
-
-    // Working with Foundation Geometry Values
-
-    this._pointValue = null
-    this._sizeValue = null
-    this._rectValue = null
-
-    // Working with CoreGraphics Geometry Values
-
-    this._cgPointValue = null
-    this._cgVectorValue = null
-    this._cgSizeValue = null
-    this._cgRectValue = null
-    this._cgAffineTransformValue = null
-
-    // Working with UIKit Geometry Values
-
-    this._uiEdgeInsetsValue = null
-    this._uiOffsetValue = null
-
-    // Working with CoreAnimation Transform Values
-
-    this._caTransform3DValue = null
-
-    // Working with Media Time Values
-
-    this._timeValue = null
-    this._timeRangeValue = null
-    this._timeMappingValue = null
-
-    // Working with Geographic Coordinate Values
-
-    this._mkCoordinateValue = null
-    this._mkCoordinateSpanValue = null
-
-    // Working with SceneKit Vector and Matrix Values
-
-    this._scnVector3Value = null
-    this._scnVector4Value = null
-    this._scnMatrix4Value = null
-
-    // Instance Properties
-
-    this._edgeInsetsValue = null
   }
 
   /**
@@ -1252,63 +487,6 @@ This method is useful if you want to add an object to a Collection but don’t w
    * @see https://developer.apple.com/reference/foundation/nsvalue/1409688-init
    */
   initScnVector4(v) {
-
-    // Working with Raw Values
-
-    this._objCType = null
-
-    // Working with Pointer and Object Values
-
-    this._pointerValue = null
-    this._nonretainedObjectValue = null
-
-    // Working with Range Values
-
-    this._rangeValue = null
-
-    // Working with Foundation Geometry Values
-
-    this._pointValue = null
-    this._sizeValue = null
-    this._rectValue = null
-
-    // Working with CoreGraphics Geometry Values
-
-    this._cgPointValue = null
-    this._cgVectorValue = null
-    this._cgSizeValue = null
-    this._cgRectValue = null
-    this._cgAffineTransformValue = null
-
-    // Working with UIKit Geometry Values
-
-    this._uiEdgeInsetsValue = null
-    this._uiOffsetValue = null
-
-    // Working with CoreAnimation Transform Values
-
-    this._caTransform3DValue = null
-
-    // Working with Media Time Values
-
-    this._timeValue = null
-    this._timeRangeValue = null
-    this._timeMappingValue = null
-
-    // Working with Geographic Coordinate Values
-
-    this._mkCoordinateValue = null
-    this._mkCoordinateSpanValue = null
-
-    // Working with SceneKit Vector and Matrix Values
-
-    this._scnVector3Value = null
-    this._scnVector4Value = null
-    this._scnMatrix4Value = null
-
-    // Instance Properties
-
-    this._edgeInsetsValue = null
   }
 
   /**
@@ -1319,64 +497,8 @@ This method is useful if you want to add an object to a Collection but don’t w
    * @see https://developer.apple.com/reference/foundation/nsvalue/1409680-init
    */
   initScnMatrix4(v) {
-
-    // Working with Raw Values
-
-    this._objCType = null
-
-    // Working with Pointer and Object Values
-
-    this._pointerValue = null
-    this._nonretainedObjectValue = null
-
-    // Working with Range Values
-
-    this._rangeValue = null
-
-    // Working with Foundation Geometry Values
-
-    this._pointValue = null
-    this._sizeValue = null
-    this._rectValue = null
-
-    // Working with CoreGraphics Geometry Values
-
-    this._cgPointValue = null
-    this._cgVectorValue = null
-    this._cgSizeValue = null
-    this._cgRectValue = null
-    this._cgAffineTransformValue = null
-
-    // Working with UIKit Geometry Values
-
-    this._uiEdgeInsetsValue = null
-    this._uiOffsetValue = null
-
-    // Working with CoreAnimation Transform Values
-
-    this._caTransform3DValue = null
-
-    // Working with Media Time Values
-
-    this._timeValue = null
-    this._timeRangeValue = null
-    this._timeMappingValue = null
-
-    // Working with Geographic Coordinate Values
-
-    this._mkCoordinateValue = null
-    this._mkCoordinateSpanValue = null
-
-    // Working with SceneKit Vector and Matrix Values
-
-    this._scnVector3Value = null
-    this._scnVector4Value = null
-    this._scnMatrix4Value = null
-
-    // Instance Properties
-
-    this._edgeInsetsValue = null
   }
+
   /**
    * The three-element Scene Kit vector representation of the value.
    * @type {SCNVector3}
@@ -1429,63 +551,6 @@ This method is useful if you want to add an object to a Collection but don’t w
    * @see https://developer.apple.com/reference/foundation/nsvalue/1417896-init
    */
   initCoder(aDecoder) {
-
-    // Working with Raw Values
-
-    this._objCType = null
-
-    // Working with Pointer and Object Values
-
-    this._pointerValue = null
-    this._nonretainedObjectValue = null
-
-    // Working with Range Values
-
-    this._rangeValue = null
-
-    // Working with Foundation Geometry Values
-
-    this._pointValue = null
-    this._sizeValue = null
-    this._rectValue = null
-
-    // Working with CoreGraphics Geometry Values
-
-    this._cgPointValue = null
-    this._cgVectorValue = null
-    this._cgSizeValue = null
-    this._cgRectValue = null
-    this._cgAffineTransformValue = null
-
-    // Working with UIKit Geometry Values
-
-    this._uiEdgeInsetsValue = null
-    this._uiOffsetValue = null
-
-    // Working with CoreAnimation Transform Values
-
-    this._caTransform3DValue = null
-
-    // Working with Media Time Values
-
-    this._timeValue = null
-    this._timeRangeValue = null
-    this._timeMappingValue = null
-
-    // Working with Geographic Coordinate Values
-
-    this._mkCoordinateValue = null
-    this._mkCoordinateSpanValue = null
-
-    // Working with SceneKit Vector and Matrix Values
-
-    this._scnVector3Value = null
-    this._scnVector4Value = null
-    this._scnMatrix4Value = null
-
-    // Instance Properties
-
-    this._edgeInsetsValue = null
   }
 
   /**
@@ -1496,63 +561,6 @@ This method is useful if you want to add an object to a Collection but don’t w
    * @see https://developer.apple.com/reference/foundation/nsvalue/1391181-init
    */
   initEdgeInsets(insets) {
-
-    // Working with Raw Values
-
-    this._objCType = null
-
-    // Working with Pointer and Object Values
-
-    this._pointerValue = null
-    this._nonretainedObjectValue = null
-
-    // Working with Range Values
-
-    this._rangeValue = null
-
-    // Working with Foundation Geometry Values
-
-    this._pointValue = null
-    this._sizeValue = null
-    this._rectValue = null
-
-    // Working with CoreGraphics Geometry Values
-
-    this._cgPointValue = null
-    this._cgVectorValue = null
-    this._cgSizeValue = null
-    this._cgRectValue = null
-    this._cgAffineTransformValue = null
-
-    // Working with UIKit Geometry Values
-
-    this._uiEdgeInsetsValue = null
-    this._uiOffsetValue = null
-
-    // Working with CoreAnimation Transform Values
-
-    this._caTransform3DValue = null
-
-    // Working with Media Time Values
-
-    this._timeValue = null
-    this._timeRangeValue = null
-    this._timeMappingValue = null
-
-    // Working with Geographic Coordinate Values
-
-    this._mkCoordinateValue = null
-    this._mkCoordinateSpanValue = null
-
-    // Working with SceneKit Vector and Matrix Values
-
-    this._scnVector3Value = null
-    this._scnVector4Value = null
-    this._scnMatrix4Value = null
-
-    // Instance Properties
-
-    this._edgeInsetsValue = null
   }
 
   // Instance Properties

@@ -14,6 +14,37 @@ import SCNVector4 from './SCNVector4'
  * @see https://developer.apple.com/reference/scenekit/scnphysicsbody
  */
 export default class SCNPhysicsBody extends NSObject {
+  static get _propTypes() {
+    return {
+      physicsShape: 'SCNPhysicsShape',
+      type: 'integer',
+      velocityFactor: 'SCNVector3',
+      angularVelocityFactor: 'SCNVector3',
+      ignoreGravity: ['boolean', (obj, value) => {
+        obj.isAffectedByGravity = !value
+      }],
+      mass: 'float',
+      charge: 'float',
+      friction: 'float',
+      rollingFriction: 'float',
+      restitution: 'float',
+      damping: 'float',
+      angularDamping: 'float',
+      momentOfInertia: 'SCNVector3',
+      explicitMomentOfInertia: ['boolean', (obj, value) => {
+        obj.usesDefaultMomentOfInertia = !value
+      }],
+      categoryBitMask: 'integer',
+      contactTestBitMask: 'integer',
+      collisionBitMask: 'integer',
+      velocity: 'SCNVector3',
+      angularVelocity: 'SCNVector4',
+      allowsResting: 'boolean',
+
+      isDefaultShape: ['boolean', null]
+    }
+  }
+
   // Creating Physics Bodies
 
   /**

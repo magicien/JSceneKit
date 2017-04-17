@@ -20,6 +20,7 @@ import NSKeyedUnarchiver from './Foundation/NSKeyedUnarchiver'
 import NSMutableArray from './Foundation/NSMutableArray'
 import NSMutableData from './Foundation/NSMutableData'
 import NSMutableDictionary from './Foundation/NSMutableDictionary'
+import NSURL from './Foundation/NSURL'
 import NSValue from './Foundation/NSValue'
 import NSObject from './ObjectiveC/NSObject'
 import CAAction from './QuartzCore/CAAction'
@@ -34,8 +35,13 @@ import CAPropertyAnimation from './QuartzCore/CAPropertyAnimation'
 import CATransform3D from './QuartzCore/CATransform3D'
 import SCNAction from './SceneKit/SCNAction'
 import SCNActionable from './SceneKit/SCNActionable'
+import SCNActionGroup from './SceneKit/SCNActionGroup'
+import SCNActionRepeat from './SceneKit/SCNActionRepeat'
+import SCNActionRotate from './SceneKit/SCNActionRotate'
+import SCNActionSequence from './SceneKit/SCNActionSequence'
 import SCNActionTimingFunction from './SceneKit/SCNActionTimingFunction'
 import SCNActionTimingMode from './SceneKit/SCNActionTimingMode'
+import SCNActionWait from './SceneKit/SCNActionWait'
 import SCNAnimatable from './SceneKit/SCNAnimatable'
 import SCNAnimationEvent from './SceneKit/SCNAnimationEvent'
 import SCNAnimationEventBlock from './SceneKit/SCNAnimationEventBlock'
@@ -141,6 +147,7 @@ import SCNSceneSource from './SceneKit/SCNSceneSource'
 import SCNSceneSourceStatus from './SceneKit/SCNSceneSourceStatus'
 import SCNSceneSourceStatusHandler from './SceneKit/SCNSceneSourceStatusHandler'
 import SCNShadable from './SceneKit/SCNShadable'
+import SCNShadableHelper from './SceneKit/SCNShadableHelper'
 import SCNShaderModifierEntryPoint from './SceneKit/SCNShaderModifierEntryPoint'
 import SCNShadowMode from './SceneKit/SCNShadowMode'
 import SCNShape from './SceneKit/SCNShape'
@@ -202,6 +209,7 @@ _ClassList.registerClass(NSKeyedUnarchiver)
 _ClassList.registerClass(NSMutableArray)
 _ClassList.registerClass(NSMutableData)
 _ClassList.registerClass(NSMutableDictionary)
+_ClassList.registerClass(NSURL)
 _ClassList.registerClass(NSValue)
 _ClassList.registerClass(NSObject)
 _ClassList.registerClass(CAAction)
@@ -216,8 +224,13 @@ _ClassList.registerClass(CAPropertyAnimation)
 _ClassList.registerClass(CATransform3D)
 _ClassList.registerClass(SCNAction)
 _ClassList.registerClass(SCNActionable)
+_ClassList.registerClass(SCNActionGroup)
+_ClassList.registerClass(SCNActionRepeat)
+_ClassList.registerClass(SCNActionRotate)
+_ClassList.registerClass(SCNActionSequence)
 _ClassList.registerClass(SCNActionTimingFunction)
 _ClassList.registerClass(SCNActionTimingMode)
+_ClassList.registerClass(SCNActionWait)
 _ClassList.registerClass(SCNAnimatable)
 _ClassList.registerClass(SCNAnimationEvent)
 _ClassList.registerClass(SCNAnimationEventBlock)
@@ -323,6 +336,7 @@ _ClassList.registerClass(SCNSceneSource)
 _ClassList.registerClass(SCNSceneSourceStatus)
 _ClassList.registerClass(SCNSceneSourceStatusHandler)
 _ClassList.registerClass(SCNShadable)
+_ClassList.registerClass(SCNShadableHelper)
 _ClassList.registerClass(SCNShaderModifierEntryPoint)
 _ClassList.registerClass(SCNShadowMode)
 _ClassList.registerClass(SCNShape)
@@ -377,6 +391,7 @@ exports.NSKeyedUnarchiver = NSKeyedUnarchiver
 exports.NSMutableArray = NSMutableArray
 exports.NSMutableData = NSMutableData
 exports.NSMutableDictionary = NSMutableDictionary
+exports.NSURL = NSURL
 exports.NSValue = NSValue
 exports.NSObject = NSObject
 exports.CAAction = CAAction
@@ -391,8 +406,13 @@ exports.CAPropertyAnimation = CAPropertyAnimation
 exports.CATransform3D = CATransform3D
 exports.SCNAction = SCNAction
 exports.SCNActionable = SCNActionable
+exports.SCNActionGroup = SCNActionGroup
+exports.SCNActionRepeat = SCNActionRepeat
+exports.SCNActionRotate = SCNActionRotate
+exports.SCNActionSequence = SCNActionSequence
 exports.SCNActionTimingFunction = SCNActionTimingFunction
 exports.SCNActionTimingMode = SCNActionTimingMode
+exports.SCNActionWait = SCNActionWait
 exports.SCNAnimatable = SCNAnimatable
 exports.SCNAnimationEvent = SCNAnimationEvent
 exports.SCNAnimationEventBlock = SCNAnimationEventBlock
@@ -498,6 +518,7 @@ exports.SCNSceneSource = SCNSceneSource
 exports.SCNSceneSourceStatus = SCNSceneSourceStatus
 exports.SCNSceneSourceStatusHandler = SCNSceneSourceStatusHandler
 exports.SCNShadable = SCNShadable
+exports.SCNShadableHelper = SCNShadableHelper
 exports.SCNShaderModifierEntryPoint = SCNShaderModifierEntryPoint
 exports.SCNShadowMode = SCNShadowMode
 exports.SCNShape = SCNShape

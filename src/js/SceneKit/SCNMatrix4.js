@@ -113,11 +113,90 @@ export default class SCNMatrix4 {
     }
   }
 
+  /**
+   * @access private
+   * @param {Buffer} data -
+   * @param {number} [offset = 0] -
+   * @returns {SCNMatrix4}
+   */
+  static _initWithData(data, offset = 0) {
+    const instance = new SCNMatrix4()
+    instance.m11 = data.readFloatLE(offset + 0)
+    instance.m12 = data.readFloatLE(offset + 4)
+    instance.m13 = data.readFloatLE(offset + 8)
+    instance.m14 = data.readFloatLE(offset + 12)
+    instance.m21 = data.readFloatLE(offset + 16)
+    instance.m22 = data.readFloatLE(offset + 20)
+    instance.m23 = data.readFloatLE(offset + 24)
+    instance.m24 = data.readFloatLE(offset + 28)
+    instance.m31 = data.readFloatLE(offset + 32)
+    instance.m32 = data.readFloatLE(offset + 36)
+    instance.m33 = data.readFloatLE(offset + 40)
+    instance.m34 = data.readFloatLE(offset + 44)
+    instance.m41 = data.readFloatLE(offset + 48)
+    instance.m42 = data.readFloatLE(offset + 52)
+    instance.m43 = data.readFloatLE(offset + 56)
+    instance.m44 = data.readFloatLE(offset + 60)
+    return instance
+  }
+
   _copy() {
     return new SCNMatrix4(this)
   }
 
   // extensions
+
+  /**
+   * @access public
+   * @param {SCNMatrix4} m -
+   * @returns {SCNMatrix4} - 
+   */
+  add(m) {
+    const r = new SCNMatrix4()
+    r.m11 = this.m11 + m.m11
+    r.m12 = this.m12 + m.m12
+    r.m13 = this.m13 + m.m13
+    r.m14 = this.m14 + m.m14
+    r.m21 = this.m21 + m.m21
+    r.m22 = this.m22 + m.m22
+    r.m23 = this.m23 + m.m23
+    r.m24 = this.m24 + m.m24
+    r.m31 = this.m31 + m.m31
+    r.m32 = this.m32 + m.m32
+    r.m33 = this.m33 + m.m33
+    r.m34 = this.m34 + m.m34
+    r.m41 = this.m41 + m.m41
+    r.m42 = this.m42 + m.m42
+    r.m43 = this.m43 + m.m43
+    r.m44 = this.m44 + m.m44
+    return r
+  }
+
+  /**
+   * @access public
+   * @param {number} t -
+   * @returns {SCNMatrix4} - 
+   */
+  mul(t) {
+    const r = new SCNMatrix4()
+    r.m11 = this.m11 * t
+    r.m12 = this.mj2 * t
+    r.m13 = this.m13 * t
+    r.m14 = this.m14 * t
+    r.m21 = this.m21 * t
+    r.m22 = this.m22 * t
+    r.m23 = this.m23 * t
+    r.m24 = this.m24 * t
+    r.m31 = this.m31 * t
+    r.m32 = this.m32 * t
+    r.m33 = this.m33 * t
+    r.m34 = this.m34 * t
+    r.m41 = this.m41 * t
+    r.m42 = this.m42 * t
+    r.m43 = this.m43 * t
+    r.m44 = this.m44 * t
+    return r
+  }
 
   /**
    * @access public

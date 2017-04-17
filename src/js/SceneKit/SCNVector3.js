@@ -32,13 +32,21 @@ export default class SCNVector3 {
   /**
    * @access private
    * @param {Buffer} data -
+   * @param {number} [offset = 0] -
+   * @param {boolean} [bigEndian = false] -
    * @returns {SCNVector3}
    */
-  static _initWithData(data) {
+  static _initWithData(data, offset = 0, bigEndian = false) {
     const instance = new SCNVector3()
-    instance.x = data.readFloatLE(0)
-    instance.y = data.readFloatLE(4)
-    instance.z = data.readFloatLE(8)
+    if(bigEndian){
+      instance.x = data.readFloatBE(offset + 0)
+      instance.y = data.readFloatBE(offset + 4)
+      instance.z = data.readFloatBE(offset + 8)
+    }else{
+      instance.x = data.readFloatLE(offset + 0)
+      instance.y = data.readFloatLE(offset + 4)
+      instance.z = data.readFloatLE(offset + 8)
+    }
     return instance
   }
 

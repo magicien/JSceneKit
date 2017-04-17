@@ -12,6 +12,39 @@ import SCNGeometryPrimitiveType from './SCNGeometryPrimitiveType'
  * @see https://developer.apple.com/reference/scenekit/scnbox
  */
 export default class SCNBox extends SCNGeometry {
+  static get _propTypes() {
+    return {
+      $constructor: (propNames, propValues) => {
+        const box = new SCNBox(
+          propValues.boxwidth,
+          propValues.boxheight,
+          propValues.boxlength,
+          propValues.boxchamferRadius
+        )
+        box.widthSegmentCount = propValues.boxwidthSegmentCount
+        box.heightSegmentCount = propValues.boxheightSegmentCount
+        box.lengthSegmentCount = propValues.boxlengthSegmentCount
+        box.chamferSegmentCount = propValues.boxchamferSegmentCount
+        // propValues.boxPrimitiveType
+        box.materials = propValues.materials
+        box.subdivisionLevel = propValues.subdivisionLevel
+        return box
+      },
+      name: 'string',
+      boxwidth: ['float', null],
+      boxheight: ['float', null],
+      boxlength: ['float', null],
+      boxwidthSegmentCount: ['integer', null],
+      boxheightSegmentCount: ['integer', null],
+      boxlengthSegmentCount: ['integer', null],
+      boxchamferRadius: ['float', null],
+      boxchamferSegmentCount: ['integer', null],
+      boxprimitiveType: ['integer', null],
+      materials: ['NSArray', null],
+      subdivisionLevel: ['integer', null]
+    }
+  }
+
   /**
    * Creates a box geometry with the specified width, height, length, and chamfer radius.
    * @access public

@@ -15,7 +15,8 @@ export default class SKColor extends NSObject {
       $constructor: (propNames, propValues) => {
         if(typeof propValues.NSColorSpace !== 'undefined'){
           // initialize for NSColor
-          const buf = propValues.NSRGB
+          /*
+          const buf = propValues.NSRGB || propValues.NSWhite
           const ascii = buf.toString('ascii')
           const values = ascii.split(' ')
           const space = propValues.NSColorSpace - 1
@@ -31,6 +32,10 @@ export default class SKColor extends NSObject {
               return new SKColor(r, g, b, a)
             }
             case NSColorSpaceModel.CMYK:
+              if(propValues.NSWhite){
+                const w = parseFloat(values[0])
+                return new SKColor(w, w, w, 1.0)
+              }
               break
             case NSColorSpaceModel.LAB:
               break
@@ -41,7 +46,29 @@ export default class SKColor extends NSObject {
             case NSColorSpaceModel.patterned:
               break
           }
+          console.error(`unknown color space: ${propValues.NSColorSpace}`)
           throw new Error(`unknown color space: ${propValues.NSColorSpace}`)
+          */
+          if(typeof propValues.NSRGB !== 'undefined'){
+            const ascii = propValues.NSRGB.toString('ascii')
+            const values = ascii.split(' ')
+            const r = parseFloat(values[0])
+            const g = parseFloat(values[1])
+            const b = parseFloat(values[2])
+            const a = 1.0
+            console.log(`NSColor -> SKColor NSRGB: r:${r} g:${g} b:${b} a:${a}`)
+            return new SKColor(r, g, b, a)
+          }else if(typeof propValues.NSWhite !== 'undefined'){
+            const ascii = propValues.NSWhite.toString('ascii')
+            const values = ascii.split(' ')
+            const w = parseFloat(values[0])
+            const a = 1.0
+            console.log(`NSColor -> SKColor NSWhite: r:${w} g:${w} b:${w} a:${a}`)
+            return new SKColor(w, w, w, a)
+          }else{
+            console.error('unknown color space')
+            throw new Error('unknown color space')
+          }
         }else{
           // TODO: implement
           return new SKColor()
@@ -49,8 +76,32 @@ export default class SKColor extends NSObject {
       },
       // for NSColor
       NSRGB: ['bytes', null],
+      NSWhite: ['bytes', null],
       NSColorSpace: ['integer', null],
     }
+  }
+
+  /**
+   * @access private
+   * @param {Buffer} data -
+   * @param {number} [offset = 0] -
+   * @param {boolean} [bigEndian = false] -
+   * @returns {SKColor}
+   */
+  static _initWithData(data, offset = 0, bigEndian = false) {
+    const instance = new SKColor()
+    if(bigEndian){
+      instance.red = data.readFloatBE(offset + 0)
+      instance.blue = data.readFloatBE(offset + 4)
+      instance.green = data.readFloatBE(offset + 8)
+      instance.alpha = data.readFloatBE(offset + 12)
+    }else{
+      instance.red = data.readFloatLE(offset + 0)
+      instance.blue = data.readFloatLE(offset + 4)
+      instance.green = data.readFloatLE(offset + 8)
+      instance.alpha = data.readFloatLE(offset + 12)
+    }
+    return instance
   }
 
   // Initializers

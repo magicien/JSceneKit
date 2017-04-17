@@ -22,7 +22,12 @@ export default class SCNMaterialProperty extends NSObject {
     return {
       color: ['NSColor', '_contents'],
       image: ['NSMutableDictionary', (obj, dict, key, coder) => {
-        const path = coder._directoryPath + dict.path
+        let path = ''
+        if(typeof dict.path !== 'undefined'){
+          path = coder._directoryPath + dict.path
+        }else if(typeof dict.URL !== 'undefined'){
+          path = dict.URL
+        }
         console.log(`image.path: ${path}`)
         const image = new Image()
         image.onload = () => {

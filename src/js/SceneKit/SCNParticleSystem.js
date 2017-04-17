@@ -47,13 +47,96 @@ const _ParticleProperty = {
  * @see https://developer.apple.com/reference/scenekit/scnparticlesystem
  */
 export default class SCNParticleSystem extends NSObject {
+  static get _propTypes() {
+    return {
+      emissionDuration: 'float',
+      emissionDurationVariation: 'float',
+      idleDuration: 'float',
+      idleDurationVariation: 'float',
+      loops: 'boolean',
+      warmupDuration: 'float',
+      birthRate: 'float',
+      birthRateVariation: 'float',
+      emitterShape: 'SCNGeometry',
+      birthLocation: 'integer',
+      birthDirection: 'integer',
+      emittingDirection: 'SCNVector3',
+      spreadingAngle: 'float',
+      particleAngle: 'float',
+      particleAngleVariation: 'float',
+      particleVelocity: 'float',
+      particleVelocityVariation: 'float',
+      particleAngularVelocity: 'float',
+      particleAngularVelocityVariation: 'float',
+      particleLifeSpan: 'float',
+      particleLifeSpanVariation: 'float',
+      particleSize: 'float',
+      particleSizeVariation: 'float',
+      particleColor: 'plist',
+      particleColorVariation: 'SCNVector4',
+      particleImage: ['NSMutableDictionary', (obj, dict, key, coder) => {
+        let path = ''
+        if(typeof dict.path !== 'undefined'){
+          path = coder._directoryPath + dict.path
+        }else if(typeof dict.URL !== 'undefined'){
+          path = dict.URL
+        }
+        const image = new Image()
+        image.onload = () => {
+          obj.particleImage = image
+        }
+        image.src = path
+      }],
+      fresnelExponent: 'float',
+      stretchFactor: 'float',
+      imageSequenceRowCount: 'integer',
+      imageSequenceColumnCount: 'integer',
+      imageSequenceInitialFrame: 'float',
+      imageSequenceInitialFrameVariation: 'float',
+      imageSequenceFrameRate: 'float',
+      imageSequenceFrameRateVariation: 'float',
+      imageSequenceAnimationMode: 'integer',
+      affectedByGravity: ['boolean', 'isAffectedByGravity'],
+      affectedByPhysicsFields: ['boolean', 'isAffectedByPhysicsFields'],
+      colliderNodes: 'NSArray',
+      particleDiesOnCollision: 'boolean',
+      acceleration: 'SCNVector3',
+      dampingFactor: 'float',
+      particleMass: 'float',
+      particleMassVariation: 'float',
+      particleCharge: 'float',
+      particleChargeVariation: 'float',
+      particleBounce: 'float',
+      particleBounceVariation: 'float',
+      particleFriction: 'float',
+      particleFrictionVariation: 'float',
+      systemSpawnedOnCollision: 'SCNParticleSystem',
+      systemSpawnedOnDying: 'SCNParticleSystem',
+      systemSpawnedOnLivint: 'SCNParticleSystem',
+      blendMode: 'integer',
+      orientationMode: 'integer',
+      sortingMode: 'integer',
+      lightingEnabled: ['boolean', 'isLightingEnabled'],
+      blackPassEnabled: ['boolean', 'isBlackPassEnabled'],
+      isLocal: 'boolean',
+      speedFactor: 'float',
+      propertyControllers: 'NSMutableDictionary',
+
+      seed: ['integer', null],
+      softParticlesEnabled: ['boolean', null],
+      fixedTimeStep: ['float', null],
+      renderingMode: ['integer', null],
+      physicsCollisionsEnabled: ['boolean', null]
+    }
+  }
 
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  init() {
+  constructor() {
+    super()
 
     // Managing Particle Emission Timing
 

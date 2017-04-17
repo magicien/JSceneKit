@@ -187,7 +187,10 @@ export default class CAKeyframeAnimation extends CAPropertyAnimation {
     let value = val0
     if(time0 !== time1){
       const dt = (t - time0) / (time1 - time0)
-      const r = this.timingFunctions[key0]._getValueAtTime(dt)
+      let r = dt
+      if(this.timingFunctions !== null){
+        r = this.timingFunctions[key0]._getValueAtTime(dt)
+      }
 
       switch(this.calculationMode){
         case Constants.kCAAnimationLinear:

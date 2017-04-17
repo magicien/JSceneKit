@@ -236,7 +236,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
     return this._parseObj(this._offsetArray[index])
   }
 
-  _parseObj(offset = null, signed = true) {
+  _parseObj(offset = null, signed = false) {
     const reader = this._reader
     if(offset !== null){
       reader.seek(offset)

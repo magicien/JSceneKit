@@ -5,7 +5,6 @@ import CAAnimation from '../QuartzCore/CAAnimation'
 import SCNParticleInputMode from './SCNParticleInputMode'
 import SCNNode from './SCNNode'
 
-
 /**
  * An animation for a single property of the individual particles rendered by a particle system.
  * @access public
@@ -13,6 +12,19 @@ import SCNNode from './SCNNode'
  * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller
  */
 export default class SCNParticlePropertyController extends NSObject {
+  static get _propTypes() {
+    return {
+      animation: ['NSMutableDictionary', (obj, anim) => {
+        obj.animation = SCNNode._loadAnimationData(anim, null)
+      }],
+      inputMode: 'integer',
+      inputBias: 'float',
+      inputScale: 'float',
+      inputOrigin: 'SCNNode'
+      // inputProperty: 'string' ?
+    }
+  }
+
   // Creating a Property Controller
 
   /**
@@ -53,7 +65,7 @@ particleSystem.propertyControllers = @{ SCNParticlePropertySize: controller };
      * @type {CAAnimation}
      * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1523707-animation
      */
-    this.animation = null
+    this.animation = animation
 
     /**
      * The mode that determines input values for the property controller’s animation.
