@@ -258,6 +258,7 @@ const _defaultFragmentShader =
 
     int numLights = 0;
       
+    outColor.a = material.diffuse.a;
     __FS_LIGHTING__
     
     // diffuse texture
@@ -276,13 +277,13 @@ const _fsDirectional = `
     // diffuse
     vec3 lightVec = normalize(v_light[numLights + i]);
     float diffuse = clamp(dot(lightVec, nom), 0.0f, 1.0f);
-    outColor += light.directional[i].color * material.diffuse * diffuse;
+    outColor.rgb += light.directional[i].color.rgb * material.diffuse.rgb * diffuse;
 
     // specular
     if(diffuse > 0.0f){
       vec3 halfVec = normalize(lightVec + viewVec);
       float specular = pow(dot(halfVec, nom), material.shininess);
-      outColor += material.specular * specular; // TODO: get the light color of specular
+      outColor.rgb += material.specular.rgb * specular; // TODO: get the light color of specular
     }
   }
   numLights += NUM_DIRECTIONAL_LIGHTS;
@@ -293,13 +294,13 @@ const _fsOmni = `
     // diffuse
     vec3 lightVec = normalize(v_light[numLights + i]);
     float diffuse = clamp(dot(lightVec, nom), 0.0f, 1.0f);
-    outColor += light.omni[i].color * material.diffuse * diffuse;
+    outColor.rgb += light.omni[i].color.rgb * material.diffuse.rgb * diffuse;
 
     // specular
     if(diffuse > 0.0f){
       vec3 halfVec = normalize(lightVec + viewVec);
       float specular = pow(dot(halfVec, nom), material.shininess);
-      outColor += material.specular * specular; // TODO: get the light color of specular
+      outColor.rgb += material.specular.rgb * specular; // TODO: get the light color of specular
     }
   }
   numLights += NUM_OMNI_LIGHTS;
@@ -739,6 +740,10 @@ export default class SCNRenderer extends NSObject {
    * @returns {void}
    */
   _renderNode(node) {
+    if(node.presentation.isHidden){
+      return
+    }
+
     const gl = this.context
     const geometry = node.presentation.geometry
     let program = this._defaultProgram._glProgram
@@ -777,8 +782,9 @@ export default class SCNRenderer extends NSObject {
       //const material = node.presentation.geometry.materials[i]
 
       gl.bindVertexArray(vao)
+      gl.bindBufferBase(gl.UNIFORM_BUFFER, _materialLoc, geometry._materialBuffer)
 
-      geometry._bufferMaterialData(gl, program, i)
+      geometry._bufferMaterialData(gl, program, i, node.presentation.opacity)
 
       let shape = null
       switch(element.primitiveType){

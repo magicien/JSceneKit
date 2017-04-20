@@ -23477,18 +23477,21 @@ module.exports =
 	     * @param {WebGLRenderingContext} gl -
 	     * @param {WebGLProgram} program -
 	     * @param {number} index - material index
+	     * @param {number} opacity -
 	     * @returns {void}
 	     */
 
 	  }, {
 	    key: '_bufferMaterialData',
-	    value: function _bufferMaterialData(gl, program, index) {
+	    value: function _bufferMaterialData(gl, program, index, opacity) {
 	      var _this2 = this;
 
 	      // TODO: move this function to SCNProgram
 	      var materialCount = this.materials.length;
 	      var material = this.materials[index % materialCount];
-	      var materialData = new Float32Array([].concat(_toConsumableArray(material.ambient.float32Array()), _toConsumableArray(material.diffuse.float32Array()), _toConsumableArray(material.specular.float32Array()), _toConsumableArray(material.emission.float32Array()), [material.shininess * 100.0, 0, 0, 0 // needs padding for 16-byte alignment
+	      var diffuse = material.diffuse.float32Array();
+	      diffuse[3] *= opacity;
+	      var materialData = new Float32Array([].concat(_toConsumableArray(material.ambient.float32Array()), _toConsumableArray(diffuse), _toConsumableArray(material.specular.float32Array()), _toConsumableArray(material.emission.float32Array()), [material.shininess * 100.0, 0, 0, 0 // needs padding for 16-byte alignment
 	      ]));
 	      gl.bindBuffer(gl.UNIFORM_BUFFER, this._materialBuffer);
 	      gl.bufferData(gl.UNIFORM_BUFFER, materialData, gl.DYNAMIC_DRAW);
@@ -24197,13 +24200,13 @@ module.exports =
 	 * @access private
 	 * @type {string}
 	 */
-	var _defaultFragmentShader = '#version 300 es\n  precision mediump float;\n\n  uniform bool[8] textureFlags;\n  #define TEXTURE_EMISSION_INDEX 0\n  #define TEXTURE_AMBIENT_INDEX 1\n  #define TEXTURE_DIFFUSE_INDEX 2\n  #define TEXTURE_SPECULAR_INDEX 3\n  #define TEXTURE_REFLECTIVE_INDEX 4\n  #define TEXTURE_TRANSPARENT_INDEX 5\n  #define TEXTURE_MULTIPLY_INDEX 6\n  #define TEXTURE_NORMAL_INDEX 7\n\n  uniform sampler2D u_emissionTexture;\n  uniform sampler2D u_ambientTexture;\n  uniform sampler2D u_diffuseTexture;\n  uniform sampler2D u_specularTexture;\n  uniform sampler2D u_reflectiveTexture;\n  uniform sampler2D u_transparentTexture;\n  uniform sampler2D u_multiplyTexture;\n  uniform sampler2D u_normalTexture;\n\n  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__\n  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__\n  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__\n  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__\n  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__\n  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__\n\n  layout (std140) uniform materialUniform {\n    vec4 ambient;\n    vec4 diffuse;\n    vec4 specular;\n    vec4 emission;\n    float shininess;\n  } material;\n\n  struct AmbientLight {\n    vec4 color;\n  };\n\n  struct DirectionalLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct OmniLight {\n    vec4 color;\n    vec4 position; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct ProbeLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct SpotLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  layout (std140) uniform lightUniform {\n    __LIGHT_DEFINITION__\n  } light;\n  __FS_LIGHT_VARS__\n\n  in vec3 v_position;\n  in vec3 v_normal;\n  in vec2 v_texcoord;\n  in vec4 v_color;\n  in vec3 v_eye;\n\n  out vec4 outColor;\n\n  void main() {\n    outColor = v_color;\n\n    vec3 viewVec = normalize(v_eye);\n    vec3 nom = normalize(v_normal);\n\n    int numLights = 0;\n      \n    __FS_LIGHTING__\n    \n    // diffuse texture\n    if(textureFlags[TEXTURE_DIFFUSE_INDEX]){\n      vec4 color = texture(u_diffuseTexture, v_texcoord);\n      outColor = color * outColor;\n    }\n  }\n';
+	var _defaultFragmentShader = '#version 300 es\n  precision mediump float;\n\n  uniform bool[8] textureFlags;\n  #define TEXTURE_EMISSION_INDEX 0\n  #define TEXTURE_AMBIENT_INDEX 1\n  #define TEXTURE_DIFFUSE_INDEX 2\n  #define TEXTURE_SPECULAR_INDEX 3\n  #define TEXTURE_REFLECTIVE_INDEX 4\n  #define TEXTURE_TRANSPARENT_INDEX 5\n  #define TEXTURE_MULTIPLY_INDEX 6\n  #define TEXTURE_NORMAL_INDEX 7\n\n  uniform sampler2D u_emissionTexture;\n  uniform sampler2D u_ambientTexture;\n  uniform sampler2D u_diffuseTexture;\n  uniform sampler2D u_specularTexture;\n  uniform sampler2D u_reflectiveTexture;\n  uniform sampler2D u_transparentTexture;\n  uniform sampler2D u_multiplyTexture;\n  uniform sampler2D u_normalTexture;\n\n  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__\n  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__\n  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__\n  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__\n  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__\n  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__\n\n  layout (std140) uniform materialUniform {\n    vec4 ambient;\n    vec4 diffuse;\n    vec4 specular;\n    vec4 emission;\n    float shininess;\n  } material;\n\n  struct AmbientLight {\n    vec4 color;\n  };\n\n  struct DirectionalLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct OmniLight {\n    vec4 color;\n    vec4 position; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct ProbeLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct SpotLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  layout (std140) uniform lightUniform {\n    __LIGHT_DEFINITION__\n  } light;\n  __FS_LIGHT_VARS__\n\n  in vec3 v_position;\n  in vec3 v_normal;\n  in vec2 v_texcoord;\n  in vec4 v_color;\n  in vec3 v_eye;\n\n  out vec4 outColor;\n\n  void main() {\n    outColor = v_color;\n\n    vec3 viewVec = normalize(v_eye);\n    vec3 nom = normalize(v_normal);\n\n    int numLights = 0;\n      \n    outColor.a = material.diffuse.a;\n    __FS_LIGHTING__\n    \n    // diffuse texture\n    if(textureFlags[TEXTURE_DIFFUSE_INDEX]){\n      vec4 color = texture(u_diffuseTexture, v_texcoord);\n      outColor = color * outColor;\n    }\n  }\n';
 
 	var _fsAmbient = '\n';
 
-	var _fsDirectional = '\n  for(int i=0; i<NUM_DIRECTIONAL_LIGHTS; i++){\n    // diffuse\n    vec3 lightVec = normalize(v_light[numLights + i]);\n    float diffuse = clamp(dot(lightVec, nom), 0.0f, 1.0f);\n    outColor += light.directional[i].color * material.diffuse * diffuse;\n\n    // specular\n    if(diffuse > 0.0f){\n      vec3 halfVec = normalize(lightVec + viewVec);\n      float specular = pow(dot(halfVec, nom), material.shininess);\n      outColor += material.specular * specular; // TODO: get the light color of specular\n    }\n  }\n  numLights += NUM_DIRECTIONAL_LIGHTS;\n';
+	var _fsDirectional = '\n  for(int i=0; i<NUM_DIRECTIONAL_LIGHTS; i++){\n    // diffuse\n    vec3 lightVec = normalize(v_light[numLights + i]);\n    float diffuse = clamp(dot(lightVec, nom), 0.0f, 1.0f);\n    outColor.rgb += light.directional[i].color.rgb * material.diffuse.rgb * diffuse;\n\n    // specular\n    if(diffuse > 0.0f){\n      vec3 halfVec = normalize(lightVec + viewVec);\n      float specular = pow(dot(halfVec, nom), material.shininess);\n      outColor.rgb += material.specular.rgb * specular; // TODO: get the light color of specular\n    }\n  }\n  numLights += NUM_DIRECTIONAL_LIGHTS;\n';
 
-	var _fsOmni = '\n  for(int i=0; i<NUM_OMNI_LIGHTS; i++){\n    // diffuse\n    vec3 lightVec = normalize(v_light[numLights + i]);\n    float diffuse = clamp(dot(lightVec, nom), 0.0f, 1.0f);\n    outColor += light.omni[i].color * material.diffuse * diffuse;\n\n    // specular\n    if(diffuse > 0.0f){\n      vec3 halfVec = normalize(lightVec + viewVec);\n      float specular = pow(dot(halfVec, nom), material.shininess);\n      outColor += material.specular * specular; // TODO: get the light color of specular\n    }\n  }\n  numLights += NUM_OMNI_LIGHTS;\n';
+	var _fsOmni = '\n  for(int i=0; i<NUM_OMNI_LIGHTS; i++){\n    // diffuse\n    vec3 lightVec = normalize(v_light[numLights + i]);\n    float diffuse = clamp(dot(lightVec, nom), 0.0f, 1.0f);\n    outColor.rgb += light.omni[i].color.rgb * material.diffuse.rgb * diffuse;\n\n    // specular\n    if(diffuse > 0.0f){\n      vec3 halfVec = normalize(lightVec + viewVec);\n      float specular = pow(dot(halfVec, nom), material.shininess);\n      outColor.rgb += material.specular.rgb * specular; // TODO: get the light color of specular\n    }\n  }\n  numLights += NUM_OMNI_LIGHTS;\n';
 
 	var _fsSpot = '\n  // TODO: implement\n';
 
@@ -24661,6 +24664,10 @@ module.exports =
 	  }, {
 	    key: '_renderNode',
 	    value: function _renderNode(node) {
+	      if (node.presentation.isHidden) {
+	        return;
+	      }
+
 	      var gl = this.context;
 	      var geometry = node.presentation.geometry;
 	      var program = this._defaultProgram._glProgram;
@@ -24699,8 +24706,9 @@ module.exports =
 	        //const material = node.presentation.geometry.materials[i]
 
 	        gl.bindVertexArray(vao);
+	        gl.bindBufferBase(gl.UNIFORM_BUFFER, _materialLoc, geometry._materialBuffer);
 
-	        geometry._bufferMaterialData(gl, program, i);
+	        geometry._bufferMaterialData(gl, program, i, node.presentation.opacity);
 
 	        var shape = null;
 	        switch (element.primitiveType) {

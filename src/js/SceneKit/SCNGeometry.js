@@ -686,15 +686,18 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    * @param {WebGLRenderingContext} gl -
    * @param {WebGLProgram} program -
    * @param {number} index - material index
+   * @param {number} opacity -
    * @returns {void}
    */
-  _bufferMaterialData(gl, program, index) {
+  _bufferMaterialData(gl, program, index, opacity) {
     // TODO: move this function to SCNProgram
     const materialCount = this.materials.length
     const material = this.materials[index % materialCount]
+    let diffuse = material.diffuse.float32Array()
+    diffuse[3] *= opacity
     const materialData = new Float32Array([
       ...material.ambient.float32Array(),
-      ...material.diffuse.float32Array(),
+      ...diffuse,
       ...material.specular.float32Array(),
       ...material.emission.float32Array(),
       material.shininess * 100.0, 0, 0, 0 // needs padding for 16-byte alignment
