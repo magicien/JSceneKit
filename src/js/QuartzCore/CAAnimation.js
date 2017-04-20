@@ -200,7 +200,6 @@ export default class CAAnimation extends NSObject {
    * @returns {CAAnimation} -
    */
   copy() {
-    console.log('CAAnimation.copy')
     const anim = super.copy()
 
     anim.isRemovedOnCompletion = this.isRemovedOnCompletion

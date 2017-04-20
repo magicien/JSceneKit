@@ -3,7 +3,7 @@
 import SCNAction from './SCNAction'
 import SCNActionTimingMode from './SCNActionTimingMode'
 
-export default class SCNActionWait extends SCNAction {
+export default class SCNActionCustom extends SCNAction {
   static get _propTypes() {
     return {
       _actions: 'NSArray',

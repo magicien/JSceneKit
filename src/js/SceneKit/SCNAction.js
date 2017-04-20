@@ -1,13 +1,34 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
+import CGPoint from '../CoreGraphics/CGPoint'
+import CGRect from '../CoreGraphics/CGRect'
+import CGSize from '../CoreGraphics/CGSize'
 import SCNVector3 from './SCNVector3'
 import SCNVector4 from './SCNVector4'
-import SCNAudioSource from './SCNAudioSource'
-import SCNNode from './SCNNode'
+//import SCNAudioSource from './SCNAudioSource'
+//import SCNNode from './SCNNode'
 import SCNActionTimingMode from './SCNActionTimingMode'
-import SCNActionTimingFunction from './SCNActionTimingFunction'
-
+//import SCNActionTimingFunction from './SCNActionTimingFunction'
+//import SCNActionRotate from './SCNActionRotate'
+//import SCNActionSequence from './SCNActionSequence'
+//import SCNActionRepeat from './SCNActionRepeat'
+//import SCNActionGroup from './SCNActionGroup'
+//import SCNActionFade from './SCNActionFade'
+//import SCNActionPlaySound from './SCNActionPlaySound'
+//import SCNActionJavaScript from './SCNActionJavaScript'
+//import SCNActionRunBlock from './SCNActionRunBlock'
+//import SCNActionReference from './SCNActionReference'
+//import SCNActionCustom from './SCNActionCustom'
+//import SCNActionWait from './SCNActionWait'
+//import SCNActionRemove from './SCNActionRemove'
+//import SCNActionPerformSelector from './SCNActionPerformSelector'
+//import SCNActionScale from './SCNActionScale'
+//import SCNActionMove from './SCNActionMove'
+//import SCNActionHide from './SCNActionHide'
+//import SCNActionRunAction from './SCNActionRunAction'
+import SKColor from '../SpriteKit/SKColor'
+import * as Constants from '../constants'
 
 /**
  * A simple, reusable animation that changes attributes of any node you attach it to.
@@ -32,29 +53,42 @@ export default class SCNAction extends NSObject {
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnaction/1524162-duration
      */
-    this.duration = 0
+    this._duration = 0
 
     /**
      * A speed factor that modifies how fast an action runs.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnaction/1522811-speed
      */
-    this.speed = 0
+    this._speed = 1.0
 
     /**
      * The timing mode used to execute an action.
      * @type {SCNActionTimingMode}
      * @see https://developer.apple.com/reference/scenekit/scnaction/1524055-timingmode
      */
-    this.timingMode = SCNActionTimingMode.linear
+    this._timingMode = SCNActionTimingMode.linear
 
     /**
      * A block SceneKit calls to determine the action’s animation timing.
      * @type {?SCNActionTimingFunction}
      * @see https://developer.apple.com/reference/scenekit/scnaction/1524130-timingfunction
      */
-    this.timingFunction = null
+    this._timingFunction = null
 
+    /**
+     * @access private
+     * @type {boolean}
+     */
+    this._finished = false
+
+    this._beginTime = 0
+    this._isRunning = false
+    this._pausedTime = 0
+    this._completionHandler = null
+
+    this.__actionStartTime = null
+    //this._prevTime = null
   }
 
   // Creating Actions That Move a Node
@@ -73,7 +107,8 @@ export default class SCNAction extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnaction/1523238-moveby
    */
   static moveByXYZ(deltaX, deltaY, deltaZ, duration) {
-    return null
+    //return SCNActionMove.moveByXYZ(deltaX, deltaY, deltaZ, duration)
+    throw new Error('not implemented')
   }
 
   /**
@@ -90,7 +125,8 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @see https://developer.apple.com/reference/scenekit/scnaction/1522605-move
    */
   static moveBy(delta, duration) {
-    return null
+    //return SCNActionMove.moveBy(delta, duration)
+    throw new Error('not implemented')
   }
 
   /**
@@ -103,7 +139,8 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @see https://developer.apple.com/reference/scenekit/scnaction/1522826-move
    */
   static moveTo(location, duration) {
-    return null
+    //return SCNActionMove.moveTo(location, duration)
+    throw new Error('not implemented')
   }
 
   // Creating Actions That Rotate a Node
@@ -122,7 +159,8 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @see https://developer.apple.com/reference/scenekit/scnaction/1523522-rotateby
    */
   static rotateByXYZ(xAngle, yAngle, zAngle, duration) {
-    return null
+    //return SCNActionRotate.rotateByXYZ(xAngle, yAngle, zAngle, duration)
+    throw new Error('not implemented')
   }
 
   /**
@@ -137,7 +175,8 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @see https://developer.apple.com/reference/scenekit/scnaction/1524044-rotateto
    */
   static rotateToXYZ(xAngle, yAngle, zAngle, duration) {
-    return null
+    //return SCNActionRotate.rotateToXYZ(xAngle, yAngle, zAngle, duration)
+    throw new Error('not implemented')
   }
 
   /**
@@ -153,7 +192,8 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @see https://developer.apple.com/reference/scenekit/scnaction/1522808-rotateto
    */
   static rotateToXYZUsesShortestUnitArc(xAngle, yAngle, zAngle, duration, shortestUnitArc) {
-    return null
+    //return SCNActionRotate.rotateToXYZUsesShortestUnitArc(xAngle, yAngle, zAngle, duration, shortestUnitArc)
+    throw new Error('not implemented')
   }
 
   /**
@@ -169,7 +209,8 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @see https://developer.apple.com/reference/scenekit/scnaction/1523805-rotate
    */
   static rotateByAround(angle, axis, duration) {
-    return null
+    //return SCNActionRotate.rotateByAround(angle, axis, duration)
+    throw new Error('not implemented')
   }
 
   /**
@@ -182,7 +223,8 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @see https://developer.apple.com/reference/scenekit/scnaction/1524191-rotate
    */
   static rotateToAxisAngle(axisAngle, duration) {
-    return null
+    //return SCNActionRotate.rotateToAxisAngle(axisAngle, duration)
+    throw new Error('not implemented')
   }
 
   // Creating Actions That Change a Node’s Scale
@@ -199,7 +241,8 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @see https://developer.apple.com/reference/scenekit/scnaction/1523129-scale
    */
   static scaleByDuration(scale, sec) {
-    return null
+    //return SCNActionScale.scaleByDuration(scale, sec)
+    throw new Error('not implemented')
   }
 
   /**
@@ -212,7 +255,8 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @see https://developer.apple.com/reference/scenekit/scnaction/1523322-scale
    */
   static scaleToDuration(scale, sec) {
-    return null
+    //return SCNActionScale.scaleToDuration(scale, sec)
+    throw new Error('not implemented')
   }
 
   // Creating Actions That Change a Node’s Opacity
@@ -228,7 +272,8 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @see https://developer.apple.com/reference/scenekit/scnaction/1522777-fadein
    */
   static fadeInDuration(sec) {
-    return null
+    //return SCNActionFade.fadeInDuration(sec)
+    throw new Error('not implemented')
   }
 
   /**
@@ -242,7 +287,8 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @see https://developer.apple.com/reference/scenekit/scnaction/1523922-fadeout
    */
   static fadeOutDuration(sec) {
-    return null
+    //return SCNActionFade.fadeOutDuration(sec)
+    throw new Error('not implemented')
   }
 
   /**
@@ -257,7 +303,8 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @see https://developer.apple.com/reference/scenekit/scnaction/1523595-fadeopacity
    */
   static fadeOpacityByDuration(factor, sec) {
-    return null
+    //return SCNActionFade.fadeOpacityByDuration(factor, sec)
+    throw new Error('not implemented')
   }
 
   /**
@@ -270,7 +317,8 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @see https://developer.apple.com/reference/scenekit/scnaction/1523875-fadeopacity
    */
   static fadeOpacityToDuration(opacity, sec) {
-    return null
+    //return SCNActionFade.fadeOpacityToDuration(opacity, sec)
+    throw new Error('not implemented')
   }
 
   // Creating Actions That Change a Node’s Visibility
@@ -283,7 +331,8 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @see https://developer.apple.com/reference/scenekit/scnaction/1523487-hide
    */
   static hide() {
-    return null
+    //return SCNActionHide.hide()
+    throw new Error('not implemented')
   }
 
   /**
@@ -294,7 +343,8 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @see https://developer.apple.com/reference/scenekit/scnaction/1524205-unhide
    */
   static unhide() {
-    return null
+    //return SCNActionHide.unhide()
+    throw new Error('not implemented')
   }
 
   // Creating Actions That Remove Nodes from the Scene
@@ -307,7 +357,8 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @see https://developer.apple.com/reference/scenekit/scnaction/1522966-removefromparentnode
    */
   static removeFromParentNode() {
-    return null
+    //return SCNActionRemove.removeFromParentNode()
+    throw new Error('not implemented')
   }
 
   // Creating Actions That Play Audio
@@ -322,7 +373,8 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @see https://developer.apple.com/reference/scenekit/scnaction/1523651-playaudio
    */
   static playAudioWaitForCompletion(source, wait) {
-    return null
+    //return SCNActionPlaySound.playAudioWaitForCompletion(source, wait)
+    throw new Error('not implemented')
   }
 
   // Creating Actions That Combine or Repeat Other Actions
@@ -336,7 +388,8 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @see https://developer.apple.com/reference/scenekit/scnaction/1522779-group
    */
   static group(actions) {
-    return null
+    //return SCNActionGroup.group(actions)
+    throw new Error('not implemented')
   }
 
   /**
@@ -358,7 +411,8 @@ SCNAction *sequenceReverse = [sequence reversedAction];
    * @see https://developer.apple.com/reference/scenekit/scnaction/1522793-sequence
    */
   static sequence(actions) {
-    return null
+    //return SCNActionSequence.sequence(actions)
+    throw new Error('not implemented')
   }
 
   /**
@@ -371,7 +425,8 @@ SCNAction *sequenceReverse = [sequence reversedAction];
    * @see https://developer.apple.com/reference/scenekit/scnaction/1522764-repeat
    */
   static repeat(action, count) {
-    return null
+    //return SCNActionRepeat.repeat(action, count)
+    throw new Error('not implemented')
   }
 
   /**
@@ -383,7 +438,8 @@ SCNAction *sequenceReverse = [sequence reversedAction];
    * @see https://developer.apple.com/reference/scenekit/scnaction/1522908-repeatforever
    */
   static repeatForever(action) {
-    return null
+    //return SCNActionRepeat.repeatForever(action)
+    throw new Error('not implemented')
   }
 
   // Creating Actions That Add Delays to Action Sequences
@@ -397,7 +453,8 @@ SCNAction *sequenceReverse = [sequence reversedAction];
    * @see https://developer.apple.com/reference/scenekit/scnaction/1523915-wait
    */
   static waitDuration(sec) {
-    return null
+    //return SCNActionWait.waitDuration(sec)
+    throw new Error('not implemented')
   }
 
   /**
@@ -410,7 +467,8 @@ SCNAction *sequenceReverse = [sequence reversedAction];
    * @see https://developer.apple.com/reference/scenekit/scnaction/1523086-wait
    */
   static waitDurationWithRange(sec, durationRange) {
-    return null
+    //return SCNActionWait.waitDurationWithRange(sec, durationRange)
+    throw new Error('not implemented')
   }
 
   // Creating Custom Actions
@@ -424,7 +482,8 @@ SCNAction *sequenceReverse = [sequence reversedAction];
    * @see https://developer.apple.com/reference/scenekit/scnaction/1523637-run
    */
   static run(block) {
-    return null
+    //return SCNActionRunBlock.run(block)
+    throw new Error('not implemented')
   }
 
   /**
@@ -437,7 +496,8 @@ SCNAction *sequenceReverse = [sequence reversedAction];
    * @see https://developer.apple.com/reference/scenekit/scnaction/1523692-customaction
    */
   static customActionDurationAction(seconds, block) {
-    return null
+    //return SCNActionCustom.customActionDurationAction(seconds, block)
+    throw new Error('not implemented')
   }
 
   /**
@@ -450,7 +510,8 @@ SCNAction *sequenceReverse = [sequence reversedAction];
    * @see https://developer.apple.com/reference/scenekit/scnaction/1523984-javascriptaction
    */
   static javaScriptActionWithScriptDuration(script, seconds) {
-    return null
+    //return SCNActionJavaScript.javaScriptActionWithScriptDuration(script, seconds)
+    throw new Error('not implemented')
   }
 
   // Reversing an Action
@@ -464,5 +525,187 @@ SCNAction *sequenceReverse = [sequence reversedAction];
    */
   reversed() {
     return null
+  }
+
+  /**
+   * @access public
+   * @returns {SCNAction} -
+   */
+  copy() {
+    const action = super.copy()
+
+    action._beginTime = this._beginTime
+    action._duration = this._duration
+    action._speed = this.speed
+    action._timingMode = this.timingMode
+    action._timingFunction = this.timingFunction
+    action._finished = this._finished
+    //action._isRunning = this._isRunning
+    //action._pausedTime = this._pausedTime
+    //action._completionHandler = this._completionHandler
+
+    return action
+  }
+
+  get _actionStartTime() {
+    return this.__actionStartTime
+  }
+  set _actionStartTime(newValue) {
+    this.__actionStartTime = newValue
+  }
+
+  get duration() {
+    return this._duration
+  }
+  set duration(newValue) {
+    this._duration = newValue
+  }
+
+  get speed() {
+    return this._speed
+  }
+  set speed(newValue) {
+    this._speed = newValue
+  }
+
+  get timingMode() {
+    return this._timingMode
+  }
+  set timingMode(newValue) {
+    this._timingMode = newValue
+  }
+
+  get timingFunction() {
+    return this._timingFunction
+  }
+  set timingFunction(newValue) {
+    this._timingFunction = newValue
+  }
+
+  /**
+   * apply action to the given node.
+   * @access private
+   * @param {Object} obj - target object to apply this action.
+   * @param {number} time - active time
+   * @param {boolean} [needTimeConversion = true] -
+   * @returns {void}
+   */
+  _applyAction(obj, time, needTimeConversion = true) {
+    const t = this._getTime(time, needTimeConversion)
+    //this._handleEvents(obj, t)
+  }
+
+  _getTime(time, needTimeConversion) {
+    if(!needTimeConversion){
+      if(time >= 1.0 && !this._finished){
+        this._finished = true
+      }
+      return time
+    }
+
+    const baseTime = this._basetimeFromTime(time)
+    if(this.timingFunction === null){
+      return baseTime
+    }
+
+    return this.timingFunction._getValueAtTime(baseTime)
+  }
+
+  /**
+   * convert parent time to base time
+   * @access private
+   * @param {number} time - parent time
+   * @returns {number} - animation base time for the current frame (0-1 or null).
+   */
+  _basetimeFromTime(time) {
+    const activeTime = time - this._actionStartTime
+    return this._basetimeFromActivetime(activeTime)
+  }
+
+  /**
+   * convert parent time to active time
+   * @access private
+   * @param {number} time - parent time
+   * @returns {number} - animation active time for the current frame.
+   */
+  _activetimeFromTime(time) {
+    return time - this._actionStartTime
+  }
+
+  /**
+   * convert active time to base time
+   * @access private
+   * @param {number} time - active time
+   * @returns {number} - animation base time for the current frame (0-1 or null).
+   */
+  _basetimeFromActivetime(time) {
+    let dt = time - this._beginTime
+    //let dt = time
+    if(this.speed === 0){
+      return 0
+    }
+    if(this._duration === 0){
+      return dt / Math.abs(this.speed)
+    }
+    let duration = this._duration / Math.abs(this.speed)
+    if(duration === 0){
+      duration = 0.25
+    }
+
+    if(dt >= duration){
+      // the action is over.
+      if(!this._finished){
+        this._finished = true
+      }
+    }
+
+    return dt / duration
+  }
+
+  /**
+   * @access private
+   * @param {Object} from -
+   * @param {Object} to -
+   * @param {number} t -
+   * @returns {Object} -
+   */
+  _lerp(from, to, t) {
+    if(t === null){
+      // the action is over.
+      return to
+    }
+    if(from instanceof SCNVector4){
+      // TODO: slerp for Quaternion
+      return from.lerp(to, t)
+    }else if(from instanceof SCNVector3){
+      return from.lerp(to, t)
+    }else if(from instanceof CGSize){
+      // TODO: implement
+    }else if(from instanceof CGPoint){
+      // TODO: implement
+    }else if(from instanceof CGRect){
+      // TODO: implement
+    }else if(from instanceof SKColor){
+      return from._lerp(to, t)
+    }
+    return from + (to - from) * t
+  }
+
+  /**
+   * @access private
+   * @param {Object} from -
+   * @param {Object} to -
+   * @param {number} t -
+   * @returns {Object} -
+   */
+  _slerp(from, to, t) {
+    if(!(from instanceof SCNVector4)){
+      throw new Error('SCNAction._slerp: object is not SCNVector4')
+    }
+    return from.slerp(to, t)
+  }
+
+  _resetFinished() {
+    this._finished = false
   }
 }

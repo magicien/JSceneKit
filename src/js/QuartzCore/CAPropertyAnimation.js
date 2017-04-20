@@ -116,76 +116,6 @@ export default class CAPropertyAnimation extends CAAnimation {
   }
 
   _applyValue(obj, value) {
-    //console.log('CAPropertyAnimation._applyValue: ' + obj + ', ' + value)
-    /*
-    const paths = this.keyPath.split('.')
-    if(obj instanceof SCNMatrix4){
-      switch(this.keyPath){
-        case 'rotation.x':
-          
-          break
-        case 'rotation.y':
-          break
-        case 'rotation.z':
-        case 'rotation':
-          break
-        case 'quaternion':
-          break
-        case 'scale.x':
-          break
-        case 'scale.y':
-          break
-        case 'scale.z':
-          break
-        case 'scale':
-          break
-        case 'translation.x':
-          break
-        case 'translation.y':
-          break
-        case 'translation.z':
-          break
-        case 'translation':
-          break
-        default:
-          break
-      }
-    
-    }else if(obj instanceof CGPoint){
-      switch(this.keyPath){
-        case 'x':
-        case 'y':
-        default:
-      }
-    }else if(obj instanceof CGSize){
-      switch(this.keyPath){
-        case 'width':
-        case 'height':
-        default:
-      }
-    }else if(obj instanceof CGRect){
-      switch(this.keyPath){
-        case 'origin':
-        case 'origin.x':
-        case 'origin.y':
-        case 'size':
-        case 'size.width':
-        case 'size.height':
-      }
-    }
-    */
-
-    /*
-    if(obj._isPresentationInstance || obj._presentation === null){
-      console.log('obj._isPresentationInstance')
-      console.log('func: ' + obj.setValueForKeyPath)
-      obj.setValueForKeyPath(value, this.keyPath)
-    }else{
-      console.log('obj._presentation')
-      console.log('setValueForKeyPath: ' + obj._presentation.setValueForKeyPath)
-      obj._presentation.setValueForKeyPath(value, this.keyPath)
-    }
-    */
     obj.setValueForKeyPath(value, this.keyPath)
   }
 
@@ -215,5 +145,6 @@ export default class CAPropertyAnimation extends CAAnimation {
     if(!(from instanceof SCNVector4)){
       throw new Error('CABasicAnimation._slerp: object is not SCNVector4')
     }
+    return from.slerp(to, t)
   }
 }

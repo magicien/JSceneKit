@@ -446,7 +446,8 @@ export default class NSKeyedUnarchiver extends NSCoder {
     if(this._decodingFinished){
       throw new Error(`can't decode '${key}' after finishDecoding() is called`)
     }
-    return !!this._refObj[key]
+    const value = this._getValueForKey(key)
+    return !!value
   }
 
   /**
@@ -462,7 +463,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
     if(this._decodingFinished){
       throw new Error(`can't decode '${key}' after finishDecoding() is called`)
     }
-    return this._refObj[key]
+    return this._getValueForKey(key)
   }
 
   /**
@@ -477,7 +478,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
     if(this._decodingFinished){
       throw new Error(`can't decode '${key}' after finishDecoding() is called`)
     }
-    return this._refObj[key]
+    return this._getValueForKey(key)
   }
 
   /**
@@ -492,7 +493,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
     if(this._decodingFinished){
       throw new Error(`can't decode '${key}' after finishDecoding() is called`)
     }
-    return this._refObj[key]
+    return this._getValueForKey(key)
   }
   
   /**
@@ -507,7 +508,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
     if(this._decodingFinished){
       throw new Error(`can't decode '${key}' after finishDecoding() is called`)
     }
-    return this._refObj[key]
+    return this._getValueForKey(key)
   }
 
   /**
@@ -522,7 +523,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
     if(this._decodingFinished){
       throw new Error(`can't decode '${key}' after finishDecoding() is called`)
     }
-    return this._refObj[key]
+    return this._getValueForKey(key)
   }
 
   /**
@@ -537,7 +538,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
     if(this._decodingFinished){
       throw new Error(`can't decode '${key}' after finishDecoding() is called`)
     }
-    return this._refObj[key]
+    return this._getValueForKey(key)
   }
 
   /**
@@ -674,5 +675,13 @@ export default class NSKeyedUnarchiver extends NSCoder {
   static unarchiveTopLevelObjectWithData(data, path = null) {
     // what's different from unarchiveObjectWithData???
     return NSKeyedUnarchiver.unarchiveObjectWithData(data, path)
+  }
+
+  _getValueForKey(key) {
+    const value = this._refObj[key]
+    if(value instanceof _UID){
+      return value.obj
+    }
+    return value
   }
 }

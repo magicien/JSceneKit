@@ -690,7 +690,8 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    */
   _bufferMaterialData(gl, program, index) {
     // TODO: move this function to SCNProgram
-    const material = this.materials[index]
+    const materialCount = this.materials.length
+    const material = this.materials[index % materialCount]
     const materialData = new Float32Array([
       ...material.ambient.float32Array(),
       ...material.diffuse.float32Array(),

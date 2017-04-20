@@ -92,30 +92,52 @@ export default class CABasicAnimation extends CAPropertyAnimation {
       }
     }
 
-    let value = 0
+    let isObject = false
     if(this._baseValue === null){
       this._baseValue = obj.valueForKeyPath(this.keyPath)
-      if(typeof this._baseValue !== 'number'){
+      if(typeof this._baseValue !== 'number' && this._baseValue !== null){
         this._baseValue = this._baseValue._copy()
+        isObject = true
       }
     }
 
+    let fromValue = 0
+    let toValue = 0
     if(this.fromValue !== null && this.toValue !== null){
-      value = this._lerp(this.fromValue, this.toValue, t)
+      fromValue = this.fromValue
+      toValue = this.toValue
     }else if(this.fromValue !== null && this.byValue !== null){
-      value = this._lerp(this.fromValue, this.fromValue + this.byValue, t)
+      fromValue = this.fromValue
+      if(isObject){
+        toValue = this.fromValue.add(this.byValue)
+      }else{
+        toValue = this.fromValue + this.byValue
+      }
     }else if(this.byValue !== null && this.toValue !== null){
-      value = this._lerp(this.toValue - this.byValue, this.toValue, t)
+      if(isObject){
+        fromValue = this.toValue.sub(this.byValue)
+      }else{
+        fromValue = this.toValue - this.byValue
+      }
+      toValue = toValue
     }else if(this.fromValue !== null){
-      value = this._lerp(this.fromValue, this._baseValue, t)
+      fromValue = this.fromValue
+      toValue = this._baseValue
     }else if(this.toValue !== null){
-      value = this._lerp(this._baseValue, this.toValue, t)
+      fromValue = this._baseValue
+      toValue = this.toValue
     }else if(this.byValue !== null){
-      value = this._lerp(this._baseValue, this._baseValue + this.byValue, t)
+      fromValue = this._baseValue
+      if(isObject){
+        toValue = this._baseValue.add(this.byValue)
+      }else{
+        toValue = this._baseValue + this.byValue
+      }
     }else{
       // TODO: retain prevValue
       //value = this._lerp(prevValue, currentValue, t)
     }
+    const value = this._lerp(fromValue, toValue, t)
 
     //console.log(`CABasicAnimation._applyAnimation: keyPath: ${this.keyPath}, time: ${time}, baseTime: ${baseTime}, t: ${t}, value: ${value}`)
     this._applyValue(obj, value)

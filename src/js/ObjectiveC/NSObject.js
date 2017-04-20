@@ -1175,6 +1175,10 @@ Typically, however, you are encouraged to relinquish resources prior to finaliza
       return
     }
     const target = this.valueForKey(key)
+    if(target === null){
+      console.error(`setValueForKeyPath: key ${key} is null.`)
+      return
+    }
     //console.log(`NSObject.setValueForKeyPath: ${keyPath}: key ${key} target ${target}`)
     target.setValueForKeyPath(value, paths.join('.'))
   }
@@ -1271,6 +1275,9 @@ You call this method in a try expression and handle any errors in the catch clau
     const value = this.valueForKey(key)
     if(paths.length === 0){
       return value
+    }
+    if(value === null){
+      return null
     }
     return value.valueForKeyPath(paths.join('.'))
   }

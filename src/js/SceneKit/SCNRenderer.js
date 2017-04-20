@@ -628,7 +628,7 @@ export default class SCNRenderer extends NSObject {
       lightData.push(...node.light.color.float32Array())
     })
     lights.directional.forEach((node) => {
-      const direction = (new SCNVector3(0, 0, -1)).rotateWithQuaternion(node._worldOrientaiton)
+      const direction = (new SCNVector3(0, 0, -1)).rotateWithQuaternion(node._worldOrientation)
       lightData.push(
         ...node.light.color.float32Array(),
         ...direction.float32Array(), 0
@@ -767,14 +767,14 @@ export default class SCNRenderer extends NSObject {
       gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f())
     }
 
-    const geometryCount = node.presentation.geometry.geometryElements.length
+    const geometryCount = geometry.geometryElements.length
     if(geometryCount === 0){
       throw new Error('geometryCount: 0')
     }
     for(let i=0; i<geometryCount; i++){
-      const vao = node.presentation.geometry._vertexArrayObjects[i]
-      const element = node.presentation.geometry.geometryElements[i]
-      const material = node.presentation.geometry.materials[i]
+      const vao = geometry._vertexArrayObjects[i]
+      const element = geometry.geometryElements[i]
+      //const material = node.presentation.geometry.materials[i]
 
       gl.bindVertexArray(vao)
 
@@ -1118,7 +1118,7 @@ export default class SCNRenderer extends NSObject {
     }
 
     const gl = this.context
-    if(this.__defaultProgram == null){
+    if(this.__defaultProgram === null){
       this.__defaultProgram = new SCNProgram()
       this.__defaultProgram._glProgram = gl.createProgram()
     }
@@ -1560,6 +1560,8 @@ export default class SCNRenderer extends NSObject {
     //  this._updateVAO(node)
     //}
 
+    // TODO: test the bounding box/sphere first for performance
+
     const source = geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
     const sourceLen = source.vectorCount
     const sourceData = []
@@ -1588,10 +1590,10 @@ export default class SCNRenderer extends NSObject {
       }
     }
 
-    const geometryCount = node.presentation.geometry.geometryElements.length
+    const geometryCount = geometry.geometryElements.length
     for(let i=0; i<geometryCount; i++){
       console.log(`geometry element ${i}`)
-      const element = node.presentation.geometry.geometryElements[i]
+      const element = geometry.geometryElements[i]
       switch(element.primitiveType){
         case SCNGeometryPrimitiveType.line:
           console.warn('hitTest for line is not implemented')

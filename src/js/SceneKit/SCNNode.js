@@ -73,6 +73,9 @@ export default class SCNNode extends NSObject {
       actions: ['NSMutableDictionary', (obj, acts) => {
         this._loadActionArray(obj, acts)
       }],
+      eulerAngles: ['SCNVector3', (obj, value) => {
+        obj.eulerAngles = value
+      }],
 
       clientAttributes: ['NSMutableDictionary', null],
       nodeID: ['string', '_nodeID'],
@@ -412,10 +415,10 @@ export default class SCNNode extends NSObject {
       return this._loadBasicAnimation(data.animation, keyPath)
     }else if(data.type === 'keyframedAnimation'){
       return this._loadKeyframeAnimation(data, key)
-    }else{
-      console.error(`unknown animation class: ${data.class}, type: ${data.type}, key: ${key}`)
-      throw new Error(`unknown animation class: ${data.class}, type: ${data.type}, key: ${key}`)
     }
+
+    console.error(`unknown animation class: ${data.class}, type: ${data.type}, key: ${key}`)
+    throw new Error(`unknown animation class: ${data.class}, type: ${data.type}, key: ${key}`)
   }
 
   static _loadAnimationGroup(animation) {
@@ -494,7 +497,7 @@ export default class SCNNode extends NSObject {
         //anim.timingFunctions =
         break
     }
-    anim.keyTimes = anim.keyTimes.map((keyTime) => (keyTime / anim.duration))
+    anim.keyTimes = anim.keyTimes.map((keyTime) => { return keyTime / anim.duration })
 
     const calculationModes = [
       Constants.kCAAnimationLinear,
@@ -557,15 +560,16 @@ export default class SCNNode extends NSObject {
     console.log('_loadActionArray start')
     for(const actName of Object.keys(actions)){
       const data = actions[actName]
-      const action = this._loadActionData(data, actName)
-      node.runActionForKey(action, actName)
+      //const action = this._loadActionData(data, actName)
+      //node.runActionForKey(action, actName)
+      node.runActionForKey(data, actName)
     }
     console.log('_loadAnimationArray done')
   }
 
-  static _loadActionData(data, key) {
-    console.log(`_loadActionData ${key} start`)
-  }
+  //static _loadActionData(data, key) {
+  //  console.log(`_loadActionData ${key} start`)
+  //}
 
   static _loadData(data, key) {
     console.log(`_loadData ${key} start`)
@@ -799,6 +803,7 @@ export default class SCNNode extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnnode/1407980-eulerangles
    */
   get eulerAngles() {
+    /*
     const rot = this._rotation
     const euler = new SCNVector3()
     const sinW = Math.sin(rot.w)
@@ -830,8 +835,11 @@ export default class SCNNode extends NSObject {
     }
 
     return euler
+    */
+    return this._rotation.rotationToEulerAngles()
   }
   set eulerAngles(newValue) {
+    /*
     const halfX = newValue.x * 0.5
     const halfY = newValue.y * 0.5
     const halfZ = newValue.z * 0.5
@@ -851,8 +859,8 @@ export default class SCNNode extends NSObject {
     q.y = y * r
     q.z = z * r
     q.w = 2 * Math.acos(cosX * cosY * cosZ + sinX * sinY * sinZ)
-
-    this._rotation = q
+    */
+    this._rotation = newValue.eulerAnglesToRotation()
     this._transformUpToDate = false
   }
 
@@ -1396,6 +1404,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @see https://developer.apple.com/reference/scenekit/scnactionable/1523164-runaction
    */
   runAction(action) {
+    this.runActionForKey(action, Symbol())
   }
 
   /**
@@ -1420,6 +1429,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @see https://developer.apple.com/reference/scenekit/scnactionable/1524222-runaction
    */
   runActionForKey(action, key) {
+    this.runActionForKeyCompletionHandler(action, key, null)
   }
 
   /**
@@ -1433,6 +1443,16 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @see https://developer.apple.com/reference/scenekit/scnactionable/1522791-runaction
    */
   runActionForKeyCompletionHandler(action, key, block = null) {
+    if(typeof key === 'undefined' || key === null){
+      key = Symbol()
+    }
+    const act = action.copy()
+    // FIXME: use current frame time
+    act._actionStartTime = Date.now() * 0.001
+    act._completionHandler = block
+    this._actions.set(key, act)
+    //this._animations.set(key, anim)
+    //this._copyTransformToPresentationRecursive()
   }
 
   // Inspecting a Node’s Running Actions
@@ -1518,7 +1538,6 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     const anim = animation.copy()
     // FIXME: use current frame time
     anim._animationStartTime = Date.now() * 0.001
-    anim._prevTime = anim._animationStartTime - 0.0000001
 
     this._animations.set(key, anim)
     this._copyTransformToPresentationRecursive()

@@ -58,7 +58,8 @@ export default class SCNMaterial extends NSObject {
       avoidsOverLighting: ['boolean', null],
       fillMode: ['integer', null],
       entityID: ['string', '_entityID'],
-      indexOfRefraction: ['integer', null]
+      indexOfRefraction: ['integer', null],
+      shadableHelper: ['SCNShadableHelper', null]
     }
   }
 

@@ -1,5 +1,7 @@
 'use strict'
 
+import SCNVector4 from './SCNVector4'
+
 /**
  * A representation of a three-component vector.
  * @access public
@@ -192,6 +194,43 @@ export default class SCNVector3 {
    */
   rotateWithQuaternion(q) {
     return this.rotate(q.rotMatrix())
+  }
+
+  /**
+   * @access public
+   * @returns {SCNVector4} -
+   */
+  eulerAnglesToRotation() {
+    const rot = new SCNVector4()
+    const halfX = this.x * 0.5
+    const halfY = this.y * 0.5
+    const halfZ = this.z * 0.5
+    const cosX = Math.cos(halfX)
+    const sinX = Math.sin(halfX)
+    const cosY = Math.cos(halfY)
+    const sinY = Math.sin(halfY)
+    const cosZ = Math.cos(halfZ)
+    const sinZ = Math.sin(halfZ)
+
+    const q = new SCNVector4()
+    const x = sinX * cosY * cosZ - cosX * sinY * sinZ
+    const y = cosX * sinY * cosZ + sinX * cosY * sinZ
+    const z = cosX * cosY * sinZ - sinX * sinY * cosZ
+    const r = 1.0 / Math.sqrt(x * x + y * y + z * z)
+    rot.x = x * r
+    rot.y = y * r
+    rot.z = z * r
+    rot.w = 2 * Math.acos(cosX * cosY * cosZ + sinX * sinY * sinZ)
+
+    return rot
+  }
+
+  /**
+   * @access public
+   * @returns {SCNVector4} -
+   */
+  eulerAnglesToQuat() {
+    return this.eulerAnglesToRotation().rotationToQuat()
   }
 
   /**

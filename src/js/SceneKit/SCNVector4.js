@@ -1,6 +1,7 @@
 'use strict'
 
 import SCNMatrix4 from './SCNMatrix4'
+import SCNVector3 from './SCNVector3'
 
 /**
  * A representation of a four-component vector.
@@ -336,6 +337,54 @@ export default class SCNVector4 {
       }
     }
     return rot
+  }
+
+  /**
+   * @access public
+   * @returns {SCNVector3} -
+   */
+  rotationToEulerAngles() {
+    const euler = new SCNVector3()
+    const sinW = Math.sin(this.w)
+    const cosWR = 1.0 - Math.cos(this.w)
+    const len2 = this.x * this.x + this.y * this.y + this.z * this.z
+    if(len2 === 0){
+      return euler
+    }
+    const r = 1.0 / Math.sqrt(len2)
+    const x = this.x * r
+    const y = this.y * r
+    const z = this.z * r
+    const s = y * sinW - x * z * cosWR
+
+    //console.log(`s: ${s}`)
+    //const threshold = 0.998
+    const threshold = 0.999999
+    if(s > threshold){
+      // TODO: check SceneKit implementation
+      euler.x = 0
+      euler.y = -Math.PI * 0.5
+      euler.z = -2.0 * Math.atan2(z * Math.sin(this.w * 0.5), Math.cos(this.w * 0.5))
+    }else if(s < -threshold){
+      // TODO: check SceneKit implementation
+      euler.x = 0
+      euler.y = Math.PI * 0.5
+      euler.z = 2.0 * Math.atan2(z * Math.sin(this.w * 0.5), Math.cos(this.w * 0.5))
+    }else{
+      euler.x = Math.atan2(x * sinW + y * z * cosWR, 1 - (y * y + x * x) * cosWR)
+      euler.y = Math.asin(s)
+      euler.z = Math.atan2(z * sinW + x * y * cosWR, 1 - (z * z + y * y) * cosWR)
+    }
+
+    return euler
+  }
+
+  /**
+   * @access public
+   * @retruns {SCNVector3} -
+   */
+  quatToEulerAngles() {
+    return this.quatToRotation().rotationToEulerAngles()
   }
 
   /**

@@ -16,7 +16,11 @@ export default class NSURL extends NSObject {
   static initWithCoder(coder) {
     const base = coder._refObj['NS.base'].obj
     const relative = coder._refObj['NS.relative'].obj
-    const url = relative // Should I add the base url?
+    let url = relative // Should I add the base url?
+
+    if(url.indexOf(':') < 0){
+      url = coder._directoryPath + url
+    }
     console.error(`NSURL: ${url}`)
 
     return url

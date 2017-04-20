@@ -81,11 +81,14 @@ export default class SCNParticleSystem extends NSObject {
         }else if(typeof dict.URL !== 'undefined'){
           path = dict.URL
         }
+        obj._loadParticleImage(path)
+        /*
         const image = new Image()
         image.onload = () => {
           obj.particleImage = image
         }
         image.src = path
+        */
       }],
       fresnelExponent: 'float',
       stretchFactor: 'float',
@@ -709,5 +712,41 @@ export default class SCNParticleSystem extends NSObject {
    */
   static get ParticleProperty() {
     return _ParticleProperty
+  }
+
+  /**
+   * @access private
+   * @param {string} path -
+   * @returns {Image} -
+   */
+  _loadParticleImage(path) {
+    console.log(`image.path: ${path}`)
+    const image = new Image()
+    if(path.indexOf('file:///') === 0){
+      const paths = path.slice(8).split('/')
+      let pathCount = 1
+      let _path = paths.slice(-pathCount).join('/')
+      image.onload = () => {
+        console.info(`image ${_path} onload`)
+        this.particleImage = image
+      }
+      image.onerror = () => {
+        pathCount += 1
+        if(pathCount > paths.length){
+          console.error(`image ${path} load error.`)
+        }else{
+          console.info(`image ${_path} load error.`)
+          _path = paths.slice(-pathCount).join('/')
+          console.info(`try ${_path}`)
+          image.src = _path
+        }
+      }
+    }else{
+      image.onload = () => {
+        this.particleImage = image
+      }
+      image.src = path
+    }
+    return image
   }
 }

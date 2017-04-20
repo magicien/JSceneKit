@@ -1051,9 +1051,28 @@ export default class SCNView {
   }
 
   _runActions() {
+    this._runActionForNode(this._scene.rootNode)
   }
 
-  _runAction() {
+  _runActionForNode(node) {
+    this._runActionForObject(node)
+    node.childNodes.forEach((child) => this._runActionForNode(child))
+  }
+
+  _runActionForObject(obj) {
+    const deleteKeys = []
+    obj._actions.forEach((action, key) => {
+      action._applyAction(obj, this.currentTime)
+      if(action._finished){
+        if(action._completionHandler){
+          action._completionHandler()
+        }
+        deleteKeys.push(key)
+      }
+    })
+    deleteKeys.forEach((key) => {
+      obj._animations.delete(key)
+    })
   }
 
   _runAnimations() {
@@ -1063,6 +1082,9 @@ export default class SCNView {
   _runAnimationForNode(node) {
     this._runAnimationForObject(node)
     node.childNodes.forEach((child) => this._runAnimationForNode(child))
+    // TODO: implement animations for all animatable objects:
+    //         SCNCamera, SCNConstraint, SCNGeometry, SCNLight, SCNMaterial, 
+    //         SCNMaterialProperty, SCNMorpher, SCNParticleSystem, SCNTechnique
     if(node.geometry){
       this._runAnimationForObject(node.geometry)
       node.geometry.materials.forEach((material) => {

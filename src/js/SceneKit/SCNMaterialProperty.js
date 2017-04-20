@@ -28,6 +28,8 @@ export default class SCNMaterialProperty extends NSObject {
         }else if(typeof dict.URL !== 'undefined'){
           path = dict.URL
         }
+        obj._loadContentsImage(path)
+        /*
         console.log(`image.path: ${path}`)
         const image = new Image()
         image.onload = () => {
@@ -35,6 +37,7 @@ export default class SCNMaterialProperty extends NSObject {
         }
         // FIXME: needs directoryPath
         image.src = path
+        */
       }],
       intensity: 'float',
       // contentsTransform
@@ -197,7 +200,7 @@ export default class SCNMaterialProperty extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523386-addanimation
    */
   addAnimationForKey(animation, key) {
-    console.log(`SCNMaterialProperty addAnimationForKey`)
+    console.log('SCNMaterialProperty addAnimationForKey')
     if(typeof key === 'undefined' || key === null){
       key = Symbol()
     }
@@ -410,6 +413,47 @@ export default class SCNMaterialProperty extends NSObject {
       default:
         throw new Error(`unknown magnificationFilter: ${this.magnificationFilter}`)
     }
+  }
+
+  /**
+   * @access private
+   * @param {string} path -
+   * @returns {Image} -
+   */
+  _loadContentsImage(path) {
+    console.log(`image.path: ${path}`)
+    const image = new Image()
+    if(path.indexOf('file:///') === 0){
+      const paths = path.slice(8).split('/')
+      let pathCount = 1
+      let _path = paths.slice(-pathCount).join('/')
+      console.info(`image loading: ${_path}`)
+      image.onload = () => {
+        console.info(`image ${_path} onload`)
+        this._contents = image
+      }
+      image.onerror = () => {
+        pathCount += 1
+        if(pathCount > paths.length){
+          console.error(`image ${path} load error.`)
+        }else{
+          console.info(`image ${_path} load error.`)
+          _path = paths.slice(-pathCount).join('/')
+          console.info(`try ${_path}`)
+          image.src = _path
+        }
+      }
+    }else{
+      console.info(`image loading: ${path}`)
+      image.onload = () => {
+        this._contents = image
+      }
+      image.onerror = () => {
+        console.info(`image ${path} load error.`)
+      }
+      image.src = path
+    }
+    return image
   }
 
   /**

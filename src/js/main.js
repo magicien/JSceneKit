@@ -35,9 +35,21 @@ import CAPropertyAnimation from './QuartzCore/CAPropertyAnimation'
 import CATransform3D from './QuartzCore/CATransform3D'
 import SCNAction from './SceneKit/SCNAction'
 import SCNActionable from './SceneKit/SCNActionable'
+import SCNActionCustom from './SceneKit/SCNActionCustom'
+import SCNActionFade from './SceneKit/SCNActionFade'
 import SCNActionGroup from './SceneKit/SCNActionGroup'
+import SCNActionHide from './SceneKit/SCNActionHide'
+import SCNActionJavaScript from './SceneKit/SCNActionJavaScript'
+import SCNActionMove from './SceneKit/SCNActionMove'
+import SCNActionPerformSelector from './SceneKit/SCNActionPerformSelector'
+import SCNActionPlaySound from './SceneKit/SCNActionPlaySound'
+import SCNActionReference from './SceneKit/SCNActionReference'
+import SCNActionRemove from './SceneKit/SCNActionRemove'
 import SCNActionRepeat from './SceneKit/SCNActionRepeat'
 import SCNActionRotate from './SceneKit/SCNActionRotate'
+import SCNActionRunAction from './SceneKit/SCNActionRunAction'
+import SCNActionRunBlock from './SceneKit/SCNActionRunBlock'
+import SCNActionScale from './SceneKit/SCNActionScale'
 import SCNActionSequence from './SceneKit/SCNActionSequence'
 import SCNActionTimingFunction from './SceneKit/SCNActionTimingFunction'
 import SCNActionTimingMode from './SceneKit/SCNActionTimingMode'
@@ -224,9 +236,21 @@ _ClassList.registerClass(CAPropertyAnimation)
 _ClassList.registerClass(CATransform3D)
 _ClassList.registerClass(SCNAction)
 _ClassList.registerClass(SCNActionable)
+_ClassList.registerClass(SCNActionCustom)
+_ClassList.registerClass(SCNActionFade)
 _ClassList.registerClass(SCNActionGroup)
+_ClassList.registerClass(SCNActionHide)
+_ClassList.registerClass(SCNActionJavaScript)
+_ClassList.registerClass(SCNActionMove)
+_ClassList.registerClass(SCNActionPerformSelector)
+_ClassList.registerClass(SCNActionPlaySound)
+_ClassList.registerClass(SCNActionReference)
+_ClassList.registerClass(SCNActionRemove)
 _ClassList.registerClass(SCNActionRepeat)
 _ClassList.registerClass(SCNActionRotate)
+_ClassList.registerClass(SCNActionRunAction)
+_ClassList.registerClass(SCNActionRunBlock)
+_ClassList.registerClass(SCNActionScale)
 _ClassList.registerClass(SCNActionSequence)
 _ClassList.registerClass(SCNActionTimingFunction)
 _ClassList.registerClass(SCNActionTimingMode)
@@ -406,9 +430,21 @@ exports.CAPropertyAnimation = CAPropertyAnimation
 exports.CATransform3D = CATransform3D
 exports.SCNAction = SCNAction
 exports.SCNActionable = SCNActionable
+exports.SCNActionCustom = SCNActionCustom
+exports.SCNActionFade = SCNActionFade
 exports.SCNActionGroup = SCNActionGroup
+exports.SCNActionHide = SCNActionHide
+exports.SCNActionJavaScript = SCNActionJavaScript
+exports.SCNActionMove = SCNActionMove
+exports.SCNActionPerformSelector = SCNActionPerformSelector
+exports.SCNActionPlaySound = SCNActionPlaySound
+exports.SCNActionReference = SCNActionReference
+exports.SCNActionRemove = SCNActionRemove
 exports.SCNActionRepeat = SCNActionRepeat
 exports.SCNActionRotate = SCNActionRotate
+exports.SCNActionRunAction = SCNActionRunAction
+exports.SCNActionRunBlock = SCNActionRunBlock
+exports.SCNActionScale = SCNActionScale
 exports.SCNActionSequence = SCNActionSequence
 exports.SCNActionTimingFunction = SCNActionTimingFunction
 exports.SCNActionTimingMode = SCNActionTimingMode

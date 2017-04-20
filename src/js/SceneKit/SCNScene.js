@@ -163,7 +163,7 @@ You call this method in a try expression and handle any errors in the catch clau
     if(url instanceof _File){
       return Promise((resolve, reject) => {
         const reader = new _FileReader()
-        reader.onloadend = () => {
+        reader.onload = () => {
           const scene = this._loadSceneWithData(reader.result, _options)
           resolve(scene)
         }
