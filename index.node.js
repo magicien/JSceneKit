@@ -24926,7 +24926,7 @@ module.exports =
 
 	      system._bufferMaterialData(gl, program);
 
-	      console.log('renderParticle node: ' + node.name + ', length: ' + system._particles.length);
+	      //console.log(`renderParticle node: ${node.name}, length: ${system._particles.length}`)
 	      gl.drawElements(gl.TRIANGLES, system._particles.length * 6, system._glIndexSize, 0);
 	    }
 
@@ -28598,6 +28598,7 @@ module.exports =
 	      password: null,
 	      mimeType: null,
 	      isJSONP: false,
+	      responseType: null,
 	      requestHeader: {}
 	    };
 
@@ -28687,6 +28688,7 @@ module.exports =
 	      var mimeType = typeof options.mimeType === 'undefined' ? this.defaultOptions.mimeType : options.mimeType;
 	      var header = typeof options.requestHeader === 'undefined' ? this.defaultOptions.requestHeader : options.requestHeader;
 	      var isJSONP = typeof options.isJSONP === 'undefined' ? this.defaultOptions.isJSONP : options.isJSONP;
+	      var responseType = typeof options.responseType === 'undefined' ? this.defaultOptions.responseType : options.responseType;
 
 	      if (method !== 'POST' && method !== 'GET') {
 	        method = 'POST';
@@ -28721,6 +28723,9 @@ module.exports =
 
 	        if (mimeType) {
 	          xhr.overrideMimeType(mimeType);
+	        }
+	        if (responseType) {
+	          xhr.responseType = responseType;
 	        }
 
 	        if (user) {
@@ -36677,6 +36682,10 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+	var _AjaxRequest2 = __webpack_require__(88);
+
+	var _AjaxRequest3 = _interopRequireDefault(_AjaxRequest2);
+
 	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
@@ -36689,20 +36698,24 @@ module.exports =
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+	/*global AudioContextr*/
+	var _AudioContext = function _AudioContext() {};
+	if (typeof AudioContext !== 'undefined') {
+	  _AudioContext = AudioContext;
+	} else {
+	  console.error('error: AudioContext is not supported');
+	}
+	var _context = new _AudioContext();
+
 	/**
 	 * A simple, reusable audio source—music or sound effects loaded from a file—for use in positional audio playback.
 	 * @access public
 	 * @extends {NSObject}
 	 * @see https://developer.apple.com/reference/scenekit/scnaudiosource
 	 */
+
 	var SCNAudioSource = function (_NSObject) {
 	  _inherits(SCNAudioSource, _NSObject);
-
-	  function SCNAudioSource() {
-	    _classCallCheck(this, SCNAudioSource);
-
-	    return _possibleConstructorReturn(this, (SCNAudioSource.__proto__ || Object.getPrototypeOf(SCNAudioSource)).apply(this, arguments));
-	  }
 
 	  _createClass(SCNAudioSource, [{
 	    key: 'initNamed',
@@ -36736,61 +36749,87 @@ module.exports =
 	    /**
 	     * Initializes an audio source from the specified audio file.
 	     * @access public
+	     * @constructor
 	     * @param {string} url - A URL locating an audio file.
-	     * @returns {void}
 	     * @see https://developer.apple.com/reference/scenekit/scnaudiosource/1523264-init
 	     */
 
-	  }, {
-	    key: 'init',
-	    value: function init(url) {
+	  }]);
 
-	      // Controlling 3D Audio Spatialization
+	  function SCNAudioSource(url) {
+	    _classCallCheck(this, SCNAudioSource);
 
-	      /**
-	       * A Boolean value that determines whether audio from this source uses 3D positional mixing.
-	       * @type {boolean}
-	       * @see https://developer.apple.com/reference/scenekit/scnaudiosource/1524185-ispositional
-	       */
-	      this.isPositional = false;
+	    // Controlling 3D Audio Spatialization
 
-	      // Setting Default Playback Parameters
+	    /**
+	     * A Boolean value that determines whether audio from this source uses 3D positional mixing.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/reference/scenekit/scnaudiosource/1524185-ispositional
+	     */
+	    var _this = _possibleConstructorReturn(this, (SCNAudioSource.__proto__ || Object.getPrototypeOf(SCNAudioSource)).call(this));
 
-	      /**
-	       * The default playback volume for the audio source.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnaudiosource/1524106-volume
-	       */
-	      this.volume = 0;
+	    _this.isPositional = false;
 
-	      /**
-	       * The default playback rate for the audio source.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnaudiosource/1524189-rate
-	       */
-	      this.rate = 0;
+	    // Setting Default Playback Parameters
 
-	      /**
-	       * The default blend of blend of unmodified and reverb-processed (also called dry and wet) audio for playback of the audio source.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/scenekit/scnaudiosource/1523450-reverbblend
-	       */
-	      this.reverbBlend = 0;
+	    /**
+	     * The default playback volume for the audio source.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnaudiosource/1524106-volume
+	     */
+	    //this.volume = 0
 
-	      /**
-	       * A Boolean value that determines whether the audio source should play repeatedly.
-	       * @type {boolean}
-	       * @see https://developer.apple.com/reference/scenekit/scnaudiosource/1524183-loops
-	       */
-	      this.loops = false;
+	    /**
+	     * The default playback rate for the audio source.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnaudiosource/1524189-rate
+	     */
+	    _this.rate = 0;
 
-	      /**
-	       * A Boolean value that determines whether the audio source should stream content from its source URL when playing.
-	       * @type {boolean}
-	       * @see https://developer.apple.com/reference/scenekit/scnaudiosource/1523475-shouldstream
-	       */
-	      this.shouldStream = false;
-	    }
+	    /**
+	     * The default blend of blend of unmodified and reverb-processed (also called dry and wet) audio for playback of the audio source.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnaudiosource/1523450-reverbblend
+	     */
+	    _this.reverbBlend = 0;
+
+	    /**
+	     * A Boolean value that determines whether the audio source should play repeatedly.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/reference/scenekit/scnaudiosource/1524183-loops
+	     */
+	    _this.loops = false;
+
+	    /**
+	     * A Boolean value that determines whether the audio source should stream content from its source URL when playing.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/reference/scenekit/scnaudiosource/1523475-shouldstream
+	     */
+	    _this.shouldStream = false;
+
+	    _this._loading = false;
+	    _this._loadPromise = new Promise(function (resolve, reject) {
+	      _this._resolve = resolve;
+	      _this._reject = reject;
+	    });
+	    _this._url = url;
+	    _this._source = _context.createBufferSource();
+	    _this._gainNode = _context.createGain();
+	    _this._source.connect(_this._gainNode);
+	    _this._gainNode.connect(_context.destination);
+	    return _this;
+	  }
+
+	  /**
+	   * The default playback volume for the audio source.
+	   * @type {number}
+	   * @see https://developer.apple.com/reference/scenekit/scnaudiosource/1524106-volume
+	   */
+
+
+	  _createClass(SCNAudioSource, [{
+	    key: 'load',
+
 
 	    // Preloading Audio Data
 
@@ -36801,10 +36840,39 @@ module.exports =
 	     * @desc This method reads audio data from the source file (specified when initializing the audio source) and performs any decompression necessary to prepare for playing audio. Use this method to control when your app or game incurs the run-time performance cost of such work—for example, you can load all audio source before starting a game level, instead of suffering a frame rate drop upon playing a new audio source during gameplay.This method has no effect if the shouldStream property’s value is true.
 	     * @see https://developer.apple.com/reference/scenekit/scnaudiosource/1523399-load
 	     */
+	    value: function load() {
+	      var _this2 = this;
 
+	      if (this._loading) {
+	        return;
+	      }
+	      this._loading = true;
+
+	      var promise = _AjaxRequest3.default.get(this._url, { responseType: 'arraybuffer' }).then(function (data) {
+	        _context.decodeAudioData(data, function (buffer) {
+	          _this2._source.buffer = buffer;
+	          _this2._resolve();
+	        });
+	      });
+	    }
 	  }, {
-	    key: 'load',
-	    value: function load() {}
+	    key: '_play',
+	    value: function _play() {
+	      var _this3 = this;
+
+	      this.load();
+	      this._loadPromise.then(function () {
+	        _this3._source.start(0);
+	      });
+	    }
+	  }, {
+	    key: 'volume',
+	    get: function get() {
+	      return this._gainNode.gain.volume;
+	    },
+	    set: function set(newValue) {
+	      this._gainNode.gain.value = newValue;
+	    }
 	  }]);
 
 	  return SCNAudioSource;

@@ -19,6 +19,7 @@ export class AjaxRequest {
       password: null,
       mimeType: null,
       isJSONP: false,
+      responseType: null,
       requestHeader: {}
     }
 
@@ -91,6 +92,7 @@ export class AjaxRequest {
     const mimeType = (typeof options.mimeType === 'undefined' ? this.defaultOptions.mimeType : options.mimeType)
     const header = (typeof options.requestHeader === 'undefined' ? this.defaultOptions.requestHeader : options.requestHeader)
     const isJSONP = (typeof options.isJSONP === 'undefined' ? this.defaultOptions.isJSONP : options.isJSONP)
+    const responseType = (typeof options.responseType === 'undefined' ? this.defaultOptions.responseType : options.responseType)
 
     if(method !== 'POST' && method !== 'GET'){
       method = 'POST'
@@ -125,6 +127,9 @@ export class AjaxRequest {
 
       if(mimeType){
         xhr.overrideMimeType(mimeType)
+      }
+      if(responseType){
+        xhr.responseType = responseType
       }
 
       if(user) {

@@ -1,7 +1,16 @@
 'use strict'
 
+import _AjaxRequest from '../util/_AjaxRequest'
 import NSObject from '../ObjectiveC/NSObject'
 
+/*global AudioContextr*/
+let _AudioContext = () => {}
+if(typeof AudioContext !== 'undefined'){
+  _AudioContext = AudioContext
+}else{
+  console.error('error: AudioContext is not supported')
+}
+const _context = new _AudioContext()
 
 /**
  * A simple, reusable audio source—music or sound effects loaded from a file—for use in positional audio playback.
@@ -38,11 +47,12 @@ export default class SCNAudioSource extends NSObject {
   /**
    * Initializes an audio source from the specified audio file.
    * @access public
+   * @constructor
    * @param {string} url - A URL locating an audio file.
-   * @returns {void}
    * @see https://developer.apple.com/reference/scenekit/scnaudiosource/1523264-init
    */
-  init(url) {
+  constructor(url) {
+    super()
 
     // Controlling 3D Audio Spatialization
 
@@ -61,7 +71,7 @@ export default class SCNAudioSource extends NSObject {
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnaudiosource/1524106-volume
      */
-    this.volume = 0
+    //this.volume = 0
 
     /**
      * The default playback rate for the audio source.
@@ -91,6 +101,28 @@ export default class SCNAudioSource extends NSObject {
      */
     this.shouldStream = false
 
+    this._loading = false
+    this._loadPromise = new Promise((resolve, reject) => {
+      this._resolve = resolve
+      this._reject = reject
+    })
+    this._url = url
+    this._source = _context.createBufferSource()
+    this._gainNode = _context.createGain()
+    this._source.connect(this._gainNode)
+    this._gainNode.connect(_context.destination)
+  }
+
+  /**
+   * The default playback volume for the audio source.
+   * @type {number}
+   * @see https://developer.apple.com/reference/scenekit/scnaudiosource/1524106-volume
+   */
+  get volume() {
+    return this._gainNode.gain.volume
+  }
+  set volume(newValue) {
+    this._gainNode.gain.value = newValue
   }
 
   // Preloading Audio Data
@@ -103,5 +135,24 @@ export default class SCNAudioSource extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnaudiosource/1523399-load
    */
   load() {
+    if(this._loading){
+      return
+    }
+    this._loading = true
+
+    const promise = _AjaxRequest.get(this._url, {responseType: 'arraybuffer'})
+    .then((data) => {
+      _context.decodeAudioData(data, (buffer) => {
+        this._source.buffer = buffer
+        this._resolve()
+      })
+    })
+  }
+
+  _play() {
+    this.load()
+    this._loadPromise.then(() => {
+      this._source.start(0)
+    })
   }
 }
