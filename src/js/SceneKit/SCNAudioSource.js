@@ -92,7 +92,7 @@ export default class SCNAudioSource extends NSObject {
      * @type {boolean}
      * @see https://developer.apple.com/reference/scenekit/scnaudiosource/1524183-loops
      */
-    this.loops = false
+    //this.loops = false
 
     /**
      * A Boolean value that determines whether the audio source should stream content from its source URL when playing.
@@ -125,6 +125,18 @@ export default class SCNAudioSource extends NSObject {
     this._gainNode.gain.value = newValue
   }
 
+  /**
+   * A Boolean value that determines whether the audio source should play repeatedly.
+   * @type {boolean}
+   * @see https://developer.apple.com/reference/scenekit/scnaudiosource/1524183-loops
+   */
+  get loops() {
+    this._source.loop
+  }
+  set loops(newValue) {
+    this._source.loop = newValue
+  }
+
   // Preloading Audio Data
 
   /**
@@ -154,5 +166,12 @@ export default class SCNAudioSource extends NSObject {
     this._loadPromise.then(() => {
       this._source.start(0)
     })
+  }
+
+  get _duration() {
+    if(this._source.buffer){
+      return this._source.buffer.duration
+    }
+    return null
   }
 }

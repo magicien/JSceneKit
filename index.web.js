@@ -19479,6 +19479,8 @@ module.exports =
 	  value: true
 	});
 
+	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _SCNAction2 = __webpack_require__(52);
@@ -19534,13 +19536,88 @@ module.exports =
 	    _this._beginTime = 0;
 	    _this._isRunning = false;
 	    _this._pausedTime = 0;
+
+	    _this._source = null;
+	    _this._wait = false;
 	    return _this;
 	  }
+
+	  /**
+	   * Creates an action that plays an audio source.
+	   * @access public
+	   * @param {SCNAudioSource} source - The audio source to play.
+	   * @param {boolean} wait - If true, the duration of this action is the same as the length of the audio playback. If false, the action is considered to have completed immediately.
+	   * @returns {SCNAction} - 
+	   * @desc When the action executes, SceneKit plays the audio source on the target node—any positional audio effects are based on the node’s position. For more information about positional audio in SceneKit, see SCNAudioPlayer.This action is not reversible; the reverse of this action is the same action.
+	   * @see https://developer.apple.com/reference/scenekit/scnaction/1523651-playaudio
+	   */
+
+
+	  _createClass(SCNActionPlaySound, [{
+	    key: 'copy',
+
+
+	    /**
+	     * @access public
+	     * @returns {SCNActionPlaySound} -
+	     */
+	    value: function copy() {
+	      var action = _get(SCNActionPlaySound.prototype.__proto__ || Object.getPrototypeOf(SCNActionPlaySound.prototype), 'copy', this).call(this);
+
+	      action._source = this._source;
+	      action._wait = this._wait;
+
+	      return action;
+	    }
+
+	    /**
+	     * apply action to the given node.
+	     * @access private
+	     * @param {Object} obj - target object to apply this action.
+	     * @param {number} time - active time
+	     * @param {boolean} [needTimeConversion = true] -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_applyAction',
+	    value: function _applyAction(obj, time) {
+	      var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+
+	      if (!this._isRunning) {
+	        this._source._play();
+	        this._isRunning = true;
+	      }
+	      if (this._duration <= 0 && this._source._duration > 0) {
+	        this._duration = this._source._duration;
+	      }
+	      var t = this._getTime(time, needTimeConversion);
+
+	      if (!this.wait) {
+	        this._finished = true;
+	      } else if (!this._source.loops && t >= 1) {
+	        this._finished = true;
+	      } else {
+	        this._finished = false;
+	      }
+	    }
+	  }], [{
+	    key: 'playAudioWaitForCompletion',
+	    value: function playAudioWaitForCompletion(source, wait) {
+	      var action = new SCNActionPlaySound();
+	      action._source = source;
+	      action._wait = wait;
+	      return action;
+	    }
+	  }]);
 
 	  return SCNActionPlaySound;
 	}(_SCNAction3.default);
 
 	exports.default = SCNActionPlaySound;
+
+
+	_SCNAction3.default.playAudioWaitForCompletion = SCNActionPlaySound.playAudioWaitForCompletion;
 
 /***/ },
 /* 63 */
@@ -36798,7 +36875,7 @@ module.exports =
 	     * @type {boolean}
 	     * @see https://developer.apple.com/reference/scenekit/scnaudiosource/1524183-loops
 	     */
-	    _this.loops = false;
+	    //this.loops = false
 
 	    /**
 	     * A Boolean value that determines whether the audio source should stream content from its source URL when playing.
@@ -36872,6 +36949,29 @@ module.exports =
 	    },
 	    set: function set(newValue) {
 	      this._gainNode.gain.value = newValue;
+	    }
+
+	    /**
+	     * A Boolean value that determines whether the audio source should play repeatedly.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/reference/scenekit/scnaudiosource/1524183-loops
+	     */
+
+	  }, {
+	    key: 'loops',
+	    get: function get() {
+	      this._source.loop;
+	    },
+	    set: function set(newValue) {
+	      this._source.loop = newValue;
+	    }
+	  }, {
+	    key: '_duration',
+	    get: function get() {
+	      if (this._source.buffer) {
+	        return this._source.buffer.duration;
+	      }
+	      return null;
 	    }
 	  }]);
 
