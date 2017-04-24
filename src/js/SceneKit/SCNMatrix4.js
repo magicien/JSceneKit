@@ -766,24 +766,40 @@ export default class SCNMatrix4 {
 
   /**
    * @access public
+   * @returns {number[]} -
+   */
+  floatArray() {
+    return [
+      this.m11, this.m12, this.m13, this.m14,
+      this.m21, this.m22, this.m23, this.m24,
+      this.m31, this.m32, this.m33, this.m34,
+      this.m41, this.m42, this.m43, this.m44
+    ]
+  }
+
+  /**
+   * @access public
    * @returns {Float32Array} -
    */
   float32Array() {
-    /*
-    return new Float32Array([
-      this.m11, this.m21, this.m31, this.m41,
-      this.m12, this.m22, this.m32, this.m42,
-      this.m13, this.m23, this.m33, this.m43,
-      this.m14, this.m24, this.m34, this.m44
-    ])
-    */
     return new Float32Array([
       this.m11, this.m12, this.m13, this.m14,
       this.m21, this.m22, this.m23, this.m24,
       this.m31, this.m32, this.m33, this.m34,
       this.m41, this.m42, this.m43, this.m44
     ])
+  }
 
+  /**
+   * @access public
+   * @returns {number[]} -
+   */
+  floatArray3x4f() {
+    return [
+      this.m11, this.m21, this.m31, this.m41,
+      this.m12, this.m22, this.m32, this.m42,
+      this.m13, this.m23, this.m33, this.m43
+    ]
   }
 
   /**
@@ -797,15 +813,7 @@ export default class SCNMatrix4 {
       this.m13, this.m23, this.m33, this.m43
     ])
   }
-
-  floatArray3x4f() {
-    return [
-      this.m11, this.m21, this.m31, this.m41,
-      this.m12, this.m22, this.m32, this.m42,
-      this.m13, this.m23, this.m33, this.m43
-    ]
-  }
-
+  
   static _identity() {
     return new SCNMatrix4(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)
   }

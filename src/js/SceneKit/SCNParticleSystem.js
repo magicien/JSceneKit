@@ -2,13 +2,14 @@
 
 import NSObject from '../ObjectiveC/NSObject'
 import SCNAnimatable from './SCNAnimatable'
-import SCNGeometry from './SCNGeometry'
+//import SCNGeometry from './SCNGeometry'
+import SCNMatrix4 from './SCNMatrix4'
 import SCNParticleBirthLocation from './SCNParticleBirthLocation'
 import SCNParticleBirthDirection from './SCNParticleBirthDirection'
 import SCNVector3 from './SCNVector3'
 import SCNVector4 from './SCNVector4'
 import SCNParticleImageSequenceAnimationMode from './SCNParticleImageSequenceAnimationMode'
-import SCNNode from './SCNNode'
+//import SCNNode from './SCNNode'
 import SCNParticleBlendMode from './SCNParticleBlendMode'
 import SCNParticleOrientationMode from './SCNParticleOrientationMode'
 import SCNParticleSortingMode from './SCNParticleSortingMode'
@@ -38,6 +39,87 @@ const _ParticleProperty = {
   velocity: 'Velocity'
 }
 
+class _Particle extends NSObject {
+  /**
+   * @access public
+   * @constructor
+   */
+  constructor() {
+    super()
+
+    /**
+     * @type {SCNVector3}
+     */
+    this.position = null
+
+    /**
+     * @type {number}
+     */
+    this.angle = 0
+    
+    /**
+     * @type {number}
+     */
+    this.size = 1
+
+    /**
+     * @type {SKColor}
+     */
+    this.color = null
+
+    /**
+     * @type {SCNVector3}
+     */
+    this.velocity = null
+
+    /**
+     * @type {number}
+     */
+    this.angularVelocity = 0
+
+    /**
+     * @type {SCNVector3}
+     */
+    this.acceleration = null
+
+    /**
+     * @type {number}
+     */
+    this.birthTime = 0
+
+    /**
+     * @type {number}
+     */
+    this.lifeSpan = 0
+  }
+
+  /**
+   * @access public
+   * @returns {number[]} -
+   */
+  floatArray() {
+    const baseArray = [
+      ...this.position.floatArray(), this.angle,
+      ...this.color.floatArray(),
+      this.size
+      //this.size, this.life
+    ]
+    return [
+      ...baseArray, -1, -1,
+      ...baseArray,  1, -1,
+      ...baseArray, -1,  1,
+      ...baseArray,  1,  1,
+    ]
+  }
+
+  /**
+   * @access public
+   * @returns {Float32Array} -
+   */
+  float32Array() {
+    return new Float32Array(this.floatArray())
+  }
+}
 
 /**
  * Manages the animation and rendering of a system of small image sprites, or particles, using a high-level simulation whose general behavior you specify.
@@ -73,7 +155,7 @@ export default class SCNParticleSystem extends NSObject {
       particleSize: 'float',
       particleSizeVariation: 'float',
       particleColor: 'plist',
-      particleColorVariation: 'SCNVector4',
+      particleColorVariation: 'SKColor',
       particleImage: ['NSMutableDictionary', (obj, dict, key, coder) => {
         let path = ''
         if(typeof dict.path !== 'undefined'){
@@ -81,14 +163,7 @@ export default class SCNParticleSystem extends NSObject {
         }else if(typeof dict.URL !== 'undefined'){
           path = dict.URL
         }
-        obj._loadParticleImage(path)
-        /*
-        const image = new Image()
-        image.onload = () => {
-          obj.particleImage = image
-        }
-        image.src = path
-        */
+        obj._loadParticleImage(path, coder._directoryPath)
       }],
       fresnelExponent: 'float',
       stretchFactor: 'float',
@@ -115,7 +190,7 @@ export default class SCNParticleSystem extends NSObject {
       particleFrictionVariation: 'float',
       systemSpawnedOnCollision: 'SCNParticleSystem',
       systemSpawnedOnDying: 'SCNParticleSystem',
-      systemSpawnedOnLivint: 'SCNParticleSystem',
+      systemSpawnedOnLiving: 'SCNParticleSystem',
       blendMode: 'integer',
       orientationMode: 'integer',
       sortingMode: 'integer',
@@ -123,7 +198,15 @@ export default class SCNParticleSystem extends NSObject {
       blackPassEnabled: ['boolean', 'isBlackPassEnabled'],
       isLocal: 'boolean',
       speedFactor: 'float',
-      propertyControllers: 'NSMutableDictionary',
+      propertyControllers: ['NSMutableDictionary', (obj, dict) => {
+        Object.keys(_ParticleProperty).forEach((key) => {
+          const d = dict[_ParticleProperty[key]]
+          if(typeof d !== 'undefined'){
+            d.animation.keyPath = key
+          }
+        })
+        obj.propertyControllers = dict
+      }],
 
       seed: ['integer', null],
       softParticlesEnabled: ['boolean', null],
@@ -148,56 +231,56 @@ export default class SCNParticleSystem extends NSObject {
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523998-emissionduration
      */
-    this.emissionDuration = 0
+    this.emissionDuration = 1.0
 
     /**
      * The range, in seconds, of randomized emission duration values. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523842-emissiondurationvariation
      */
-    this.emissionDurationVariation = 0
+    this.emissionDurationVariation = 0.0
 
     /**
      * The duration, in seconds, of periods when the system emits no particles. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522998-idleduration
      */
-    this.idleDuration = 0
+    this.idleDuration = 0.0
 
     /**
      * The range, in seconds, of randomized idle duration values. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523018-idledurationvariation
      */
-    this.idleDurationVariation = 0
+    this.idleDurationVariation = 0.0
 
     /**
      * A Boolean value that determines whether the system repeats its emission and idle periods.
      * @type {boolean}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522618-loops
      */
-    this.loops = false
+    this.loops = true
 
     /**
      * The duration, in seconds, for which particles are spawned before the system is first rendered. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522597-warmupduration
      */
-    this.warmupDuration = 0
+    this.warmupDuration = 0.0
 
     /**
      * The number of particles spawned during each emission period. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522857-birthrate
      */
-    this.birthRate = 0
+    this.birthRate = 0.0
 
     /**
      * The range of randomized particle birth rate values. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1524147-birthratevariation
      */
-    this.birthRateVariation = 0
+    this.birthRateVariation = 0.0
 
 
     // Managing Particle Emission Locations
@@ -214,28 +297,28 @@ export default class SCNParticleSystem extends NSObject {
      * @type {SCNParticleBirthLocation}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522899-birthlocation
      */
-    this.birthLocation = null
+    this.birthLocation = SCNParticleBirthLocation.surface
 
     /**
      * The possible initial directions for newly spawned particles, relative to the emitter shape.
      * @type {SCNParticleBirthDirection}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523361-birthdirection
      */
-    this.birthDirection = null
+    this.birthDirection = SCNParticleBirthDirection.constant
 
     /**
      * The initial direction for newly spawned particles. Animatable.
      * @type {SCNVector3}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523600-emittingdirection
      */
-    this.emittingDirection = null
+    this.emittingDirection = new SCNVector3(0, 1, 0)
 
     /**
      * The range, in degrees, of randomized initial particle directions. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522862-spreadingangle
      */
-    this.spreadingAngle = 0
+    this.spreadingAngle = 0.0
 
 
     // Managing Particle Motion
@@ -245,56 +328,56 @@ export default class SCNParticleSystem extends NSObject {
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523896-particleangle
      */
-    this.particleAngle = 0
+    this.particleAngle = 0.0
 
     /**
      * The range, in degrees of randomized initial particle angles. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522828-particleanglevariation
      */
-    this.particleAngleVariation = 0
+    this.particleAngleVariation = 0.0
 
     /**
      * The initial speed, in units per second, for newly spawned particles. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523946-particlevelocity
      */
-    this.particleVelocity = 0
+    this.particleVelocity = 0.0
 
     /**
      * The range, in units per second, of randomized initial particle speeds. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1524157-particlevelocityvariation
      */
-    this.particleVelocityVariation = 0
+    this.particleVelocityVariation = 0.0
 
     /**
      * The initial spin rate, in degrees per second, of newly spawned particles. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522757-particleangularvelocity
      */
-    this.particleAngularVelocity = 0
+    this.particleAngularVelocity = 0.0
 
     /**
      * The range, in degrees per second, of randomized initial angular velocities for particles. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523590-particleangularvelocityvariation
      */
-    this.particleAngularVelocityVariation = 0
+    this.particleAngularVelocityVariation = 0.0
 
     /**
      * The duration, in seconds, for which each particle is rendered before being removed from the scene. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523575-particlelifespan
      */
-    this.particleLifeSpan = 0
+    this.particleLifeSpan = 1.0
 
     /**
      * The range, in seconds, of randomized particle life spans. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523567-particlelifespanvariation
      */
-    this.particleLifeSpanVariation = 0
+    this.particleLifeSpanVariation = 0.0
 
 
     // Specifying Particle Appearance
@@ -304,28 +387,28 @@ export default class SCNParticleSystem extends NSObject {
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523508-particlesize
      */
-    this.particleSize = 0
+    this.particleSize = 1.0
 
     /**
      * The range of randomized particle sizes. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522716-particlesizevariation
      */
-    this.particleSizeVariation = 0
+    this.particleSizeVariation = 0.0
 
     /**
      * The color of newly spawned particles. Animatable.
      * @type {SKColor}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523248-particlecolor
      */
-    this.particleColor = null
+    this.particleColor = SKColor.white
 
     /**
      * The ranges of randomized particle color components. Animatable.
      * @type {SCNVector4}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523639-particlecolorvariation
      */
-    this.particleColorVariation = null
+    this.particleColorVariation = new SCNVector4(0, 0, 0, 0)
 
     /**
      * The texture image SceneKit uses to render each particle.
@@ -339,14 +422,14 @@ export default class SCNParticleSystem extends NSObject {
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523317-fresnelexponent
      */
-    this.fresnelExponent = 0
+    this.fresnelExponent = 0.0
 
     /**
      * A multiplier for stretching particle images along their direction of motion. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523338-stretchfactor
      */
-    this.stretchFactor = 0
+    this.stretchFactor = 0.0
 
 
     // Animating Particle Images
@@ -356,49 +439,49 @@ export default class SCNParticleSystem extends NSObject {
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523340-imagesequencerowcount
      */
-    this.imageSequenceRowCount = 0
+    this.imageSequenceRowCount = 1
 
     /**
      * The number of columns for treating the particle image as a grid of animation frames.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523462-imagesequencecolumncount
      */
-    this.imageSequenceColumnCount = 0
+    this.imageSequenceColumnCount = 1
 
     /**
      * The index of the first frame in a particle image animation. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523511-imagesequenceinitialframe
      */
-    this.imageSequenceInitialFrame = 0
+    this.imageSequenceInitialFrame = 0.0
 
     /**
      * The range of randomized initial frames for particle image animation. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523821-imagesequenceinitialframevariati
      */
-    this.imageSequenceInitialFrameVariation = 0
+    this.imageSequenceInitialFrameVariation = 0.0
 
     /**
      * The rate, in frames per second, of particle image animation. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1524075-imagesequenceframerate
      */
-    this.imageSequenceFrameRate = 0
+    this.imageSequenceFrameRate = 0.0
 
     /**
      * The range, in frames per second, of randomized frame rates for particle image animation. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523667-imagesequenceframeratevariation
      */
-    this.imageSequenceFrameRateVariation = 0
+    this.imageSequenceFrameRateVariation = 0.0
 
     /**
      * The animation mode for particle image animation.
      * @type {SCNParticleImageSequenceAnimationMode}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522816-imagesequenceanimationmode
      */
-    this.imageSequenceAnimationMode = null
+    this.imageSequenceAnimationMode = SCNParticleImageSequenceAnimationMode.repeat
 
 
     // Simulating Physics for Particles
@@ -436,70 +519,70 @@ export default class SCNParticleSystem extends NSObject {
      * @type {SCNVector3}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522766-acceleration
      */
-    this.acceleration = null
+    this.acceleration = new SCNVector3(0, 0, 0)
 
     /**
      * A factor that slows particles relative to their velocity. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522931-dampingfactor
      */
-    this.dampingFactor = 0
+    this.dampingFactor = 0.0
 
     /**
      * The mass, in kilograms, of each particle in the system. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522607-particlemass
      */
-    this.particleMass = 0
+    this.particleMass = 1.0
 
     /**
      * The range, in kilograms, of randomized particle masses. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523408-particlemassvariation
      */
-    this.particleMassVariation = 0
+    this.particleMassVariation = 0.0
 
     /**
      * The electric charge, in coulombs, of each particle in the system. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523156-particlecharge
      */
-    this.particleCharge = 0
+    this.particleCharge = 0.0
 
     /**
      * The range, in coulombs, of randomized particle charges. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523377-particlechargevariation
      */
-    this.particleChargeVariation = 0
+    this.particleChargeVariation = 0.0
 
     /**
      * The restitution coefficient of each particle in the system. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522637-particlebounce
      */
-    this.particleBounce = 0
+    this.particleBounce = 0.7
 
     /**
      * The range of randomized restitution coefficients for particles. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522662-particlebouncevariation
      */
-    this.particleBounceVariation = 0
+    this.particleBounceVariation = 0.0
 
     /**
      * The friction coefficient of each particle in the system. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1524010-particlefriction
      */
-    this.particleFriction = 0
+    this.particleFriction = 1.0
 
     /**
      * The range of randomized friction coefficients for particles. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522868-particlefrictionvariation
      */
-    this.particleFrictionVariation = 0
+    this.particleFrictionVariation = 0.0
 
 
     // Spawning Additional Particle Systems
@@ -533,21 +616,21 @@ export default class SCNParticleSystem extends NSObject {
      * @type {SCNParticleBlendMode}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523728-blendmode
      */
-    this.blendMode = null
+    this.blendMode = SCNParticleBlendMode.additive
 
     /**
      * The mode defining whether and how particles may rotate.
      * @type {SCNParticleOrientationMode}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523131-orientationmode
      */
-    this.orientationMode = null
+    this.orientationMode = SCNParticleOrientationMode.billboardScreenAligned
 
     /**
      * The mode defining the order in which SceneKit renders the system’s particles.
      * @type {SCNParticleSortingMode}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522795-sortingmode
      */
-    this.sortingMode = null
+    this.sortingMode = SCNParticleSortingMode.none
 
     /**
      * A Boolean value that determines whether SceneKit applies lighting to particle images when rendering.
@@ -578,7 +661,7 @@ export default class SCNParticleSystem extends NSObject {
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522988-speedfactor
      */
-    this.speedFactor = 0
+    this.speedFactor = 1.0
 
 
     // Modifying Particles Over Time
@@ -590,6 +673,16 @@ export default class SCNParticleSystem extends NSObject {
      */
     this.propertyControllers = null
 
+    this._program = null
+    this._vertexArray = null
+    this._vertexBuffer = null
+    this._indexBuffer = null
+    this._particles = []
+    this._glIndexSize = null
+    this._particleTexture = null
+
+    this._prevTime = 0
+    this._nextBirthTime = 0
   }
 
   // Creating a Particle System
@@ -719,34 +812,240 @@ export default class SCNParticleSystem extends NSObject {
    * @param {string} path -
    * @returns {Image} -
    */
-  _loadParticleImage(path) {
-    console.log(`image.path: ${path}`)
+  _loadParticleImage(path, directoryPath) {
+    //console.warn(`image.path: ${path}`)
     const image = new Image()
     if(path.indexOf('file:///') === 0){
       const paths = path.slice(8).split('/')
       let pathCount = 1
-      let _path = paths.slice(-pathCount).join('/')
+      let _path = directoryPath + paths.slice(-pathCount).join('/')
       image.onload = () => {
-        console.info(`image ${_path} onload`)
+        //console.info(`image ${_path} onload`)
         this.particleImage = image
       }
       image.onerror = () => {
         pathCount += 1
         if(pathCount > paths.length){
-          console.error(`image ${path} load error.`)
+          //console.info(`image ${path} load error. pathCount > paths.length`)
         }else{
-          console.info(`image ${_path} load error.`)
-          _path = paths.slice(-pathCount).join('/')
-          console.info(`try ${_path}`)
+          //console.info(`image ${_path} load error.`)
+          _path = directoryPath + paths.slice(-pathCount).join('/')
+          //console.info(`try ${_path}`)
           image.src = _path
         }
       }
+      image.src = _path
     }else{
       image.onload = () => {
+        //console.info(`image ${path} onload`)
         this.particleImage = image
       }
       image.src = path
     }
     return image
+  }
+
+  _initializeVAO(gl, node, program) {
+    if(this._vertexArray !== null){
+      return
+    }
+    this._vertexArray = gl.createVertexArray()
+    gl.bindVertexArray(this._vertexArray)
+
+    this._vertexBuffer = gl.createBuffer()
+    gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer)
+
+    // prepare vertex array data
+    // TODO: retain attribute locations
+    const positionLoc = gl.getAttribLocation(program, 'position')
+    const colorLoc = gl.getAttribLocation(program, 'color')
+    const sizeLoc = gl.getAttribLocation(program, 'size')
+    //const lifeLoc = gl.getAttribLocation(program, 'life')
+    const cornerLoc = gl.getAttribLocation(program, 'corner')
+
+    // vertexAttribPointer(ulong idx, long size, ulong type, bool norm, long stride, ulong offset)
+    gl.enableVertexAttribArray(positionLoc)
+    gl.vertexAttribPointer(positionLoc, 4, gl.FLOAT, false, 44, 0)
+    gl.enableVertexAttribArray(colorLoc)
+    gl.vertexAttribPointer(colorLoc, 4, gl.FLOAT, false, 44, 16)
+    gl.enableVertexAttribArray(sizeLoc)
+    gl.vertexAttribPointer(sizeLoc, 1, gl.FLOAT, false, 44, 32)
+    //gl.enableVertexAttribArray(lifeLoc)
+    //gl.vertexAttribPointer(lifeLoc, 1, gl.FLOAT, false, 48, 36)
+    gl.enableVertexAttribArray(cornerLoc)
+    gl.vertexAttribPointer(cornerLoc, 2, gl.FLOAT, false, 44, 36)
+
+    /*
+    const arr = []
+    this._particles.forEach((particle) => {
+      arr.push(...particle.floatArray())
+    })
+    const particleData = new Float32Array(arr)
+    gl.bufferData(gl.ARRAY_BUFFER, particleData, gl.DYNAMIC_DRAW)
+    */
+
+    const len = this._maxParticles
+    const indexData = []
+    let index=0
+    for(let i=0; i<len; i++){
+      indexData.push(index + 0)
+      indexData.push(index + 3)
+      indexData.push(index + 2)
+      indexData.push(index + 0)
+      indexData.push(index + 1)
+      indexData.push(index + 3)
+      index += 4
+    }
+    let glIndexData = null
+    if(len < 256){
+      glIndexData = new Uint8Array(indexData)
+      this._glIndexSize = gl.UNSIGNED_BYTE
+    }else if(len < 65536){
+      glIndexData = new Uint16Array(indexData)
+      this._glIndexSize = gl.UNSIGNED_SHORT
+    }else{
+      glIndexData = new Uint32Array(indexData)
+      this._glIndexSize = gl.UNSIGNED_INT
+    }
+
+    this._indexBuffer = gl.createBuffer()
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, this._indexBuffer)
+    gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, glIndexData, gl.STATIC_DRAW)
+  }
+
+  /**
+   * @access private
+   * @param {number} birthTime -
+   * @param {SCNVector3} position -
+   * @param {SCNVector4} orientation -
+   * @returns {_Particle} -
+   */
+  _createParticle(birthTime, position, orientation) {
+    const p = new _Particle()
+    // emitterShape, birthLocation, emittingDirection, spreadingAngle, particleAngle/Variation, particleVelocity
+    p.position = position
+    p.angle = (this.particleAngle + this.particleAngleVariation * (Math.random() - 0.5)) / 180.0 * Math.PI
+    p.size = this.particleSize + this.particleSizeVariation * (Math.random() - 0.5)
+    p.color = this.particleColor._copy()
+    const velocity = this.particleVelocity + this.particleVelocityVariation * (Math.random() - 0.5)
+    const spreadingAngle = this.spreadingAngle / 180.0 * Math.PI * Math.random()
+    const spreadingAngleRot = 2.0 * Math.PI * Math.random()
+    //p.velocity = this.particleVelocity + this.particleVelocityVariation * (Math.random() - 0.5)
+    const angleMat = SCNMatrix4.matrixWithRotation(this._normal.x, this._normal.y, this._normal.z, spreadingAngle)
+    const rotMat = SCNMatrix4.matrixWithRotation(this._direction.x, this._direction.y, this._direction.z, spreadingAngleRot)
+    p.velocity = this._direction.rotate(angleMat).rotate(rotMat).rotateWithQuaternion(orientation).mul(velocity)
+    p.angularVelocity = this.particleAngularVelocity + this.particleAngularVelocityVariation * (Math.random() - 0.5)
+    p.acceleration = this.acceleration._copy()
+    p.birthTime = birthTime
+    p.lifeSpan = this.particleLifeSpan + this.particleLifeSpanVariation * (Math.random() - 0.5)
+
+    return p
+  }
+
+  /**
+   * @access private
+   * @param {SCNNode} node -
+   * @param {number} elapsedTime -
+   * @returns {void}
+   */
+  _updateParticles(node, currentTime) {
+    if(this._prevTime <= 0){
+      this._prevTime = currentTime
+      this._nextBirthTime = currentTime
+
+      this._direction = this.emittingDirection.normalize()
+      const u = new SCNVector3(this._direction.z, this._direction.x, this._direction.y)
+      this._normal = this._direction.cross(u)
+    }
+    while(this._nextBirthTime <= currentTime){
+      const p = this._createParticle(this._nextBirthTime, node._presentationWorldTranslation, node._presentationWorldOrientation)
+      this._particles.push(p)
+      let rate = this.birthRate + this.birthRateVariation * (Math.random() - 0.5)
+      if(rate < 0.0000001){
+        rate = 0.0000001
+      }
+      this._nextBirthTime += 1.0 / rate
+    }
+
+    const dt = currentTime - this._prevTime
+    this._particles.forEach((p) => {
+      const t = (currentTime - p.birthTime) / p.lifeSpan
+      p.life = t
+      if(t > 1){
+        return
+      }
+      p.position.x += (0.5 * p.acceleration.x * dt + p.velocity.x) * dt
+      p.position.y += (0.5 * p.acceleration.y * dt + p.velocity.y) * dt
+      p.position.z += (0.5 * p.acceleration.z * dt + p.velocity.z) * dt
+      p.angle += p.angularVelocity * dt
+      p.velocity.x += p.acceleration.x * dt
+      p.velocity.y += p.acceleration.y * dt
+      p.velocity.z += p.acceleration.z * dt
+      if(this.propertyControllers !== null){
+        Object.keys(this.propertyControllers).forEach((key) => {
+          this.propertyControllers[key].animation._applyAnimation(p, t, false) // should I use p.life instead of t?
+        })
+      }
+    })
+    this._particles = this._particles.filter((p) => { return p.life <= 1 })
+    this._prevTime = currentTime
+  }
+
+  /**
+   * @access private
+   * @param {WebGLRenderingContext} gl -
+   * @param {WebGLProgram} program -
+   * @returns {void}
+   */
+  _bufferMaterialData(gl, program) {
+    // particleTexture
+    if(this._particleTexture === null && this.particleImage !== null){
+      this._particleTexture = this._createTexture(gl, this.particleImage)
+    }
+    if(this._particleTexture !== null){
+      gl.activeTexture(gl.TEXTURE0)
+      gl.bindTexture(gl.TEXTURE_2D, this._particleTexture)
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR)
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR)
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE)
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE)
+    }
+
+    // buffer particle data
+    gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer)
+    gl.bufferData(gl.ARRAY_BUFFER, this._particleData, gl.DYNAMIC_DRAW)
+  }
+
+  _createTexture(gl, image) {
+    const texture = gl.createTexture()
+
+    const canvas = document.createElement('canvas')
+    canvas.width = image.naturalWidth
+    canvas.height = image.naturalHeight
+    //console.warn(`image size: ${image.naturalWidth} ${image.naturalHeight}`)
+    canvas.getContext('2d').drawImage(image, 0, 0)
+
+    gl.bindTexture(gl.TEXTURE_2D, texture)
+    // texImage2D(target, level, internalformat, width, height, border, format, type, source)
+    // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, image.width, image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas)
+    gl.generateMipmap(gl.TEXTURE_2D)
+    gl.bindTexture(gl.TEXTURE_2D, null)
+
+    return texture
+  }
+
+  get _particleData() {
+    const arr = []
+    this._particles.forEach((particle) => {
+      arr.push(...particle.floatArray())
+    })
+    return new Float32Array(arr)
+  }
+
+  get _maxParticles() {
+    const maxRate = this.birthRate + this.birthRateVariation * 0.5
+    const maxLifeSpan = this.particleLifeSpan + this.particleLifeSpanVariation * 0.5
+    return Math.ceil(maxRate * maxLifeSpan)
   }
 }

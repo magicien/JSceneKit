@@ -1,6 +1,5 @@
 'use strict'
 
-
 /**
  * Options for the rendering order of particles, used by the sortingMode property.
  * @typedef {Object} SCNParticleSortingMode

@@ -193,7 +193,6 @@ export default class SCNView {
      */
     this.technique = null
 
-
     // for JavaScript
 
     /**
@@ -974,6 +973,7 @@ export default class SCNView {
     // renders the scene //
     ///////////////////////
     this._updateMorph()
+    this._updateParticles()
     this._renderer.render()
 
     if(this._delegate && this._delegate.rendererDidRenderSceneAtTime){
@@ -1122,6 +1122,25 @@ export default class SCNView {
       obj._animations.delete(key)
     })
   }
+
+  _updateParticles() {
+    this._updateParticlesForNode(this._scene.rootNode)
+  }
+
+  _updateParticlesForNode(node) {
+    this._updateParticlesForObject(node)
+    node.childNodes.forEach((child) => this._updateParticlesForNode(child))
+  }
+
+  _updateParticlesForObject(obj) {
+    if(obj.particleSystems === null){
+      return
+    }
+    obj.particleSystems.forEach((system) => {
+      system._updateParticles(obj, this.currentTime)
+    })
+  }
+
 
   // NSView
 

@@ -936,6 +936,17 @@ export default class SCNNode extends NSObject {
    * @access private
    * @returns {SCNVector4} -
    */
+  get _presentationWorldOrientation() {
+    if(this._parent === null){
+      return this.presentation.orientation
+    }
+    return this._parent._presentationWorldOrientation.cross(this.presentation.orientation)
+  }
+
+  /**
+   * @access private
+   * @returns {SCNVector4} -
+   */
   get _worldOrientation() {
     if(this._parent === null){
       return this.orientation
@@ -949,6 +960,14 @@ export default class SCNNode extends NSObject {
    */
   get _worldRotation() {
     return this._worldOrientation.quatToRotation()
+  }
+
+  /**
+   * @access private
+   * @returns {SCNVector3} -
+   */
+  get _presentationWorldTranslation() {
+    return this.presentation.worldTransform.getTranslation()
   }
 
   /**
@@ -1161,7 +1180,6 @@ export default class SCNNode extends NSObject {
     }
 
     return null
-
   }
 
   /**
@@ -1761,13 +1779,19 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     return this.worldTransform.invert()
   }
 
+  get projectionTransform() {
+    if(this.camera === null){
+      return null
+    }
+    return this.camera.projectionTransform
+  }
+
   get viewProjectionTransform() {
     if(this.camera === null){
       return null
     }
     const proj = this.camera.projectionTransform
     const view = this.viewTransform
-    //return proj.mult(view)
     return view.mult(proj)
   }
 

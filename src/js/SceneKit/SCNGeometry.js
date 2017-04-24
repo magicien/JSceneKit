@@ -527,9 +527,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     const vertexSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
     const normalSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.normal)[0]
     const texcoordSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[0]
-    //const indexSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneIndices)[0]
     const indexSource = baseSkinner ? baseSkinner._boneIndices : null
-    //const weightSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneWeights)[0]
     const weightSource = baseSkinner ? baseSkinner._boneWeights: null
     const vectorCount = vertexSource.vectorCount
 

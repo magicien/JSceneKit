@@ -315,6 +315,61 @@ const _fsProbe = ''
 
 const _defaultCameraDistance = 15
 
+const _defaultParticleVertexShader =
+ `#version 300 es
+  precision mediump float;
+
+  uniform mat4 viewTransform;
+  uniform mat4 projectionTransform;
+  //uniform bool textureFlag;
+  //uniform sampler2D colorTexture;
+
+  in vec4 position;
+  in vec4 color;
+  in float size;
+  //in float life;
+  in vec2 corner;
+
+  out vec2 v_texcoord;
+  out vec4 v_color;
+
+  void main() {
+    vec4 pos = viewTransform * vec4(position.xyz, 1.0);
+    float sinAngle = sin(position.w);
+    float cosAngle = cos(position.w);
+    vec2 d = vec2(corner.x * cosAngle - corner.y * sinAngle,
+                  corner.x * sinAngle + corner.y * cosAngle) * size;
+    pos.xy += d;
+    
+    //if(textureFlag){
+    //  v_color = color * texture2D(colorTexture, vec2(life, 0));
+    //}else{
+    //  v_color = color;
+    //}
+    v_color = color;
+    v_texcoord = corner * vec2(0.5, -0.5) + 0.5;
+    gl_Position = projectionTransform * pos;
+  }
+`
+
+const _defaultParticleFragmentShader =
+ `#version 300 es
+  precision mediump float;
+
+  uniform sampler2D particleTexture;
+
+  in vec2 v_texcoord;
+  in vec4 v_color;
+
+  out vec4 outColor;
+
+  void main() {
+    vec4 texColor = texture(particleTexture, v_texcoord);
+    texColor.rgb *= texColor.a;
+    outColor = v_color * texColor;
+  }
+`
+
 /**
  * A renderer for displaying SceneKit scene in an an existing Metal workflow or OpenGL context. 
  * @access public
@@ -478,13 +533,19 @@ export default class SCNRenderer extends NSObject {
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1522854-currenttime
      */
-    //this.currentTime = 0
+    this.currentTime = 0
 
     /**
      * @access private
      * @type {SCNProgram}
      */
     this.__defaultProgram = null
+
+    /**
+     * @access private
+     * @type {SCNProgram}
+     */
+    this.__defaultParticleProgram = null
 
     this._location = new Map()
 
@@ -610,7 +671,12 @@ export default class SCNRenderer extends NSObject {
     const gl = this.context
     const program = this._defaultProgram._glProgram
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT)
+
     // camera params
+    gl.useProgram(program)
+    gl.depthMask(true)
+    gl.enable(gl.BLEND)
+    gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)
     gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewTransform'), false, cameraNode.viewTransform.float32Array())
     gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewProjectionTransform'), false, cameraNode.viewProjectionTransform.float32Array())
 
@@ -657,6 +723,20 @@ export default class SCNRenderer extends NSObject {
       this._renderNode(node)
     })
 
+
+    const particleProgram = this._defaultParticleProgram._glProgram
+    gl.useProgram(particleProgram)
+    gl.depthMask(false)
+    gl.enable(gl.BLEND)
+    gl.blendFunc(gl.SRC_ALPHA, gl.ONE)
+    gl.uniformMatrix4fv(gl.getUniformLocation(particleProgram, 'viewTransform'), false, cameraNode.viewTransform.float32Array())
+    gl.uniformMatrix4fv(gl.getUniformLocation(particleProgram, 'projectionTransform'), false, cameraNode.projectionTransform.float32Array())
+
+    const particleArray = this._createParticleNodeArray()
+    particleArray.forEach((node) => {
+      this._renderParticle(node)
+    })
+
     gl.flush()
   }
 
@@ -690,6 +770,26 @@ export default class SCNRenderer extends NSObject {
     while(arr.length > 0){
       const node = arr.shift()
       if(node.presentation.geometry !== null){
+        targetNodes.push(node)
+      }
+      arr.push(...node.childNodes)
+    }
+    targetNodes.sort((a, b) => { return a.renderingOrder - b.renderingOrder })
+
+    return targetNodes
+  }
+
+  /**
+   *
+   * @access private
+   * @returns {SCNNode[]} -
+   */
+  _createParticleNodeArray() {
+    const arr = [this.scene._rootNode]
+    const targetNodes = []
+    while(arr.length > 0){
+      const node = arr.shift()
+      if(node.presentation.particleSystems !== null){
         targetNodes.push(node)
       }
       arr.push(...node.childNodes)
@@ -740,10 +840,9 @@ export default class SCNRenderer extends NSObject {
    * @returns {void}
    */
   _renderNode(node) {
-    if(node.presentation.isHidden){
+    if(node.presentation.isHidden || node.presentation.opacity <= 0){
       return
     }
-
     const gl = this.context
     const geometry = node.presentation.geometry
     let program = this._defaultProgram._glProgram
@@ -754,7 +853,7 @@ export default class SCNRenderer extends NSObject {
 
     if(geometry._vertexArrayObjects === null){
       this._initializeVAO(node, program)
-      this._initializeUBO(node, program)
+      this._initializeUBO(node, program) // FIXME: program should have UBO, not node.
     }
 
     if(node.morpher !== null){
@@ -782,6 +881,7 @@ export default class SCNRenderer extends NSObject {
       //const material = node.presentation.geometry.materials[i]
 
       gl.bindVertexArray(vao)
+      // FIXME: use bufferData instead of bindBufferBase
       gl.bindBufferBase(gl.UNIFORM_BUFFER, _materialLoc, geometry._materialBuffer)
 
       geometry._bufferMaterialData(gl, program, i, node.presentation.opacity)
@@ -824,6 +924,53 @@ export default class SCNRenderer extends NSObject {
 
       gl.drawElements(shape, element._glData.length, size, 0)
     }
+  }
+
+  /**
+   *
+   * @access private
+   * @param {SCNNode} node -
+   * @returns {void}
+   */
+  _renderParticle(node) {
+    if(node.presentation.isHidden){
+      return
+    }
+
+    const systems = node.presentation.particleSystems
+    //const gl = this.context
+
+    //gl.useProgram(program)
+    systems.forEach((system) => {
+      this._renderParticleSystem(node, system)
+    })
+  }
+
+  /**
+   *
+   * @access private
+   * @param {SCNNode} node -
+   * @param {SCNParticleSystem} system - 
+   * @returns {void}
+   */
+  _renderParticleSystem(node, system) {
+    //this.currentTime
+    const gl = this.context
+    let program = this._defaultParticleProgram._glProgram
+    if(system._program !== null){
+      program = system._program._glProgram
+    }
+    gl.useProgram(program)
+
+    if(system._vertexBuffer === null){
+      system._initializeVAO(gl, node, program)
+    }
+    gl.bindVertexArray(system._vertexArray)
+
+    system._bufferMaterialData(gl, program)
+
+    console.log(`renderParticle node: ${node.name}, length: ${system._particles.length}`)
+    gl.drawElements(gl.TRIANGLES, system._particles.length * 6, system._glIndexSize, 0)
   }
 
   /**
@@ -1666,6 +1813,90 @@ export default class SCNRenderer extends NSObject {
     }
 
     return result
+  }
+
+  /**
+   * @access private
+   * @type {SCNProgram}
+   */
+  get _defaultParticleProgram() {
+    if(this.__defaultParticleProgram !== null){
+      return this.__defaultParticleProgram
+    }
+    const gl = this.context
+    if(this.__defaultParticleProgram === null){
+      this.__defaultParticleProgram = new SCNProgram()
+      this.__defaultParticleProgram._glProgram = gl.createProgram()
+    }
+    const p = this.__defaultParticleProgram
+    const vsText = _defaultParticleVertexShader
+    const fsText = _defaultParticleFragmentShader
+
+    // initialize vertex shader
+    const vertexShader = gl.createShader(gl.VERTEX_SHADER)
+    gl.shaderSource(vertexShader, vsText)
+    gl.compileShader(vertexShader)
+    if(!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)){
+      const info = gl.getShaderInfoLog(vertexShader)
+      throw new Error(`particle vertex shader compile error: ${info}`)
+    }
+
+    // initialize fragment shader
+    const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER)
+    gl.shaderSource(fragmentShader, fsText)
+    gl.compileShader(fragmentShader)
+    if(!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)){
+      const info = gl.getShaderInfoLog(fragmentShader)
+      throw new Error(`particle fragment shader compile error: ${info}`)
+    }
+
+    gl.attachShader(p._glProgram, vertexShader)
+    gl.attachShader(p._glProgram, fragmentShader)
+
+    // link program object
+    gl.linkProgram(p._glProgram)
+    if(!gl.getProgramParameter(p._glProgram, gl.LINK_STATUS)){
+      const info = gl.getProgramInfoLog(p._glProgram)
+      throw new Error(`program link error: ${info}`)
+    }
+
+    gl.useProgram(p._glProgram)
+    //gl.clearColor(1, 1, 1, 1)
+    gl.clearDepth(1.0)
+    gl.clearStencil(0)
+
+    gl.enable(gl.DEPTH_TEST)
+    gl.depthFunc(gl.LEQUAL)
+    gl.enable(gl.BLEND)
+    gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)
+    gl.enable(gl.CULL_FACE)
+    gl.cullFace(gl.BACK)
+
+    // set default textures to prevent warnings
+    this._setDummyParticleTextureAsDefault()
+    
+    return this.__defaultParticleProgram
+  }
+
+  _setDummyParticleTextureAsDefault() {
+    const gl = this.context
+    const p = this._defaultParticleProgram
+
+    const texNames = [
+      gl.TEXTURE0
+      //gl.TEXTURE1
+    ]
+    const texSymbols = [
+      'particleTexture'
+      //'colorTexture'
+    ]
+    for(let i=0; i<texNames.length; i++){
+      const texName = texNames[i]
+      const symbol = texSymbols[i]
+      gl.uniform1i(gl.getUniformLocation(p._glProgram, symbol), i)
+      gl.activeTexture(texName)
+      gl.bindTexture(gl.TEXTURE_2D, this.__dummyTexture)
+    }
   }
 
   /**

@@ -466,6 +466,14 @@ export default class SKColor extends NSObject {
 
   /**
    * @access public
+   * @returns {number[]} -
+   */
+  floatArray() {
+    return [this.red, this.green, this.blue, this.alpha]
+  }
+
+  /**
+   * @access public
    * @returns {Float32Array} -
    */
   float32Array() {

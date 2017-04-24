@@ -235,6 +235,14 @@ export default class SCNVector3 {
 
   /**
    * @access public
+   * @returns {number[]} -
+   */
+  floatArray() {
+    return [this.x, this.y, this.z]
+  }
+
+  /**
+   * @access public
    * @returns {Float32Array} -
    */
   float32Array() {

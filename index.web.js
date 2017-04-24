@@ -9231,6 +9231,17 @@ module.exports =
 
 	    /**
 	     * @access public
+	     * @returns {number[]} -
+	     */
+
+	  }, {
+	    key: 'floatArray',
+	    value: function floatArray() {
+	      return [this.red, this.green, this.blue, this.alpha];
+	    }
+
+	    /**
+	     * @access public
 	     * @returns {Float32Array} -
 	     */
 
@@ -14585,6 +14596,17 @@ module.exports =
 
 	    /**
 	     * @access public
+	     * @returns {number[]} -
+	     */
+
+	  }, {
+	    key: 'floatArray',
+	    value: function floatArray() {
+	      return [this.x, this.y, this.z];
+	    }
+
+	    /**
+	     * @access public
 	     * @returns {Float32Array} -
 	     */
 
@@ -15068,6 +15090,17 @@ module.exports =
 	    key: 'quatToEulerAngles',
 	    value: function quatToEulerAngles() {
 	      return this.quatToRotation().rotationToEulerAngles();
+	    }
+
+	    /**
+	     * @access public
+	     * @returns {number[]} -
+	     */
+
+	  }, {
+	    key: 'floatArray',
+	    value: function floatArray() {
+	      return [this.x, this.y, this.z, this.w];
 	    }
 
 	    /**
@@ -15841,21 +15874,35 @@ module.exports =
 
 	    /**
 	     * @access public
+	     * @returns {number[]} -
+	     */
+
+	  }, {
+	    key: 'floatArray',
+	    value: function floatArray() {
+	      return [this.m11, this.m12, this.m13, this.m14, this.m21, this.m22, this.m23, this.m24, this.m31, this.m32, this.m33, this.m34, this.m41, this.m42, this.m43, this.m44];
+	    }
+
+	    /**
+	     * @access public
 	     * @returns {Float32Array} -
 	     */
 
 	  }, {
 	    key: 'float32Array',
 	    value: function float32Array() {
-	      /*
-	      return new Float32Array([
-	        this.m11, this.m21, this.m31, this.m41,
-	        this.m12, this.m22, this.m32, this.m42,
-	        this.m13, this.m23, this.m33, this.m43,
-	        this.m14, this.m24, this.m34, this.m44
-	      ])
-	      */
 	      return new Float32Array([this.m11, this.m12, this.m13, this.m14, this.m21, this.m22, this.m23, this.m24, this.m31, this.m32, this.m33, this.m34, this.m41, this.m42, this.m43, this.m44]);
+	    }
+
+	    /**
+	     * @access public
+	     * @returns {number[]} -
+	     */
+
+	  }, {
+	    key: 'floatArray3x4f',
+	    value: function floatArray3x4f() {
+	      return [this.m11, this.m21, this.m31, this.m41, this.m12, this.m22, this.m32, this.m42, this.m13, this.m23, this.m33, this.m43];
 	    }
 
 	    /**
@@ -15867,11 +15914,6 @@ module.exports =
 	    key: 'float32Array3x4f',
 	    value: function float32Array3x4f() {
 	      return new Float32Array([this.m11, this.m21, this.m31, this.m41, this.m12, this.m22, this.m32, this.m42, this.m13, this.m23, this.m33, this.m43]);
-	    }
-	  }, {
-	    key: 'floatArray3x4f',
-	    value: function floatArray3x4f() {
-	      return [this.m11, this.m21, this.m31, this.m41, this.m12, this.m22, this.m32, this.m42, this.m13, this.m23, this.m33, this.m43];
 	    }
 	  }], [{
 	    key: '_initWithData',
@@ -21995,6 +22037,20 @@ module.exports =
 	     */
 
 	  }, {
+	    key: '_presentationWorldOrientation',
+	    get: function get() {
+	      if (this._parent === null) {
+	        return this.presentation.orientation;
+	      }
+	      return this._parent._presentationWorldOrientation.cross(this.presentation.orientation);
+	    }
+
+	    /**
+	     * @access private
+	     * @returns {SCNVector4} -
+	     */
+
+	  }, {
 	    key: '_worldOrientation',
 	    get: function get() {
 	      if (this._parent === null) {
@@ -22012,6 +22068,17 @@ module.exports =
 	    key: '_worldRotation',
 	    get: function get() {
 	      return this._worldOrientation.quatToRotation();
+	    }
+
+	    /**
+	     * @access private
+	     * @returns {SCNVector3} -
+	     */
+
+	  }, {
+	    key: '_presentationWorldTranslation',
+	    get: function get() {
+	      return this.presentation.worldTransform.getTranslation();
 	    }
 
 	    /**
@@ -22146,6 +22213,14 @@ module.exports =
 	      return this.worldTransform.invert();
 	    }
 	  }, {
+	    key: 'projectionTransform',
+	    get: function get() {
+	      if (this.camera === null) {
+	        return null;
+	      }
+	      return this.camera.projectionTransform;
+	    }
+	  }, {
 	    key: 'viewProjectionTransform',
 	    get: function get() {
 	      if (this.camera === null) {
@@ -22153,7 +22228,6 @@ module.exports =
 	      }
 	      var proj = this.camera.projectionTransform;
 	      var view = this.viewTransform;
-	      //return proj.mult(view)
 	      return view.mult(proj);
 	    }
 	  }], [{
@@ -23308,9 +23382,7 @@ module.exports =
 	      var vertexSource = baseGeometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
 	      var normalSource = baseGeometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.normal)[0];
 	      var texcoordSource = baseGeometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.texcoord)[0];
-	      //const indexSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneIndices)[0]
 	      var indexSource = baseSkinner ? baseSkinner._boneIndices : null;
-	      //const weightSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneWeights)[0]
 	      var weightSource = baseSkinner ? baseSkinner._boneWeights : null;
 	      var vectorCount = vertexSource.vectorCount;
 
@@ -24215,6 +24287,10 @@ module.exports =
 
 	var _defaultCameraDistance = 15;
 
+	var _defaultParticleVertexShader = '#version 300 es\n  precision mediump float;\n\n  uniform mat4 viewTransform;\n  uniform mat4 projectionTransform;\n  //uniform bool textureFlag;\n  //uniform sampler2D colorTexture;\n\n  in vec4 position;\n  in vec4 color;\n  in float size;\n  //in float life;\n  in vec2 corner;\n\n  out vec2 v_texcoord;\n  out vec4 v_color;\n\n  void main() {\n    vec4 pos = viewTransform * vec4(position.xyz, 1.0);\n    float sinAngle = sin(position.w);\n    float cosAngle = cos(position.w);\n    vec2 d = vec2(corner.x * cosAngle - corner.y * sinAngle,\n                  corner.x * sinAngle + corner.y * cosAngle) * size;\n    pos.xy += d;\n    \n    //if(textureFlag){\n    //  v_color = color * texture2D(colorTexture, vec2(life, 0));\n    //}else{\n    //  v_color = color;\n    //}\n    v_color = color;\n    v_texcoord = corner * vec2(0.5, -0.5) + 0.5;\n    gl_Position = projectionTransform * pos;\n  }\n';
+
+	var _defaultParticleFragmentShader = '#version 300 es\n  precision mediump float;\n\n  uniform sampler2D particleTexture;\n\n  in vec2 v_texcoord;\n  in vec4 v_color;\n\n  out vec4 outColor;\n\n  void main() {\n    vec4 texColor = texture(particleTexture, v_texcoord);\n    texColor.rgb *= texColor.a;\n    outColor = v_color * texColor;\n  }\n';
+
 	/**
 	 * A renderer for displaying SceneKit scene in an an existing Metal workflow or OpenGL context. 
 	 * @access public
@@ -24383,13 +24459,19 @@ module.exports =
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1522854-currenttime
 	     */
-	    //this.currentTime = 0
+	    _this.currentTime = 0;
 
 	    /**
 	     * @access private
 	     * @type {SCNProgram}
 	     */
 	    _this.__defaultProgram = null;
+
+	    /**
+	     * @access private
+	     * @type {SCNProgram}
+	     */
+	    _this.__defaultParticleProgram = null;
 
 	    _this._location = new Map();
 
@@ -24526,7 +24608,12 @@ module.exports =
 	      var gl = this.context;
 	      var program = this._defaultProgram._glProgram;
 	      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT);
+
 	      // camera params
+	      gl.useProgram(program);
+	      gl.depthMask(true);
+	      gl.enable(gl.BLEND);
+	      gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
 	      gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewTransform'), false, cameraNode.viewTransform.float32Array());
 	      gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewProjectionTransform'), false, cameraNode.viewProjectionTransform.float32Array());
 
@@ -24565,6 +24652,19 @@ module.exports =
 	      var renderingArray = this._createRenderingNodeArray();
 	      renderingArray.forEach(function (node) {
 	        _this2._renderNode(node);
+	      });
+
+	      var particleProgram = this._defaultParticleProgram._glProgram;
+	      gl.useProgram(particleProgram);
+	      gl.depthMask(false);
+	      gl.enable(gl.BLEND);
+	      gl.blendFunc(gl.SRC_ALPHA, gl.ONE);
+	      gl.uniformMatrix4fv(gl.getUniformLocation(particleProgram, 'viewTransform'), false, cameraNode.viewTransform.float32Array());
+	      gl.uniformMatrix4fv(gl.getUniformLocation(particleProgram, 'projectionTransform'), false, cameraNode.projectionTransform.float32Array());
+
+	      var particleArray = this._createParticleNodeArray();
+	      particleArray.forEach(function (node) {
+	        _this2._renderParticle(node);
 	      });
 
 	      gl.flush();
@@ -24624,6 +24724,31 @@ module.exports =
 	     */
 
 	  }, {
+	    key: '_createParticleNodeArray',
+	    value: function _createParticleNodeArray() {
+	      var arr = [this.scene._rootNode];
+	      var targetNodes = [];
+	      while (arr.length > 0) {
+	        var node = arr.shift();
+	        if (node.presentation.particleSystems !== null) {
+	          targetNodes.push(node);
+	        }
+	        arr.push.apply(arr, _toConsumableArray(node.childNodes));
+	      }
+	      targetNodes.sort(function (a, b) {
+	        return a.renderingOrder - b.renderingOrder;
+	      });
+
+	      return targetNodes;
+	    }
+
+	    /**
+	     *
+	     * @access private
+	     * @returns {SCNNode[]} -
+	     */
+
+	  }, {
 	    key: '_createLightNodeArray',
 	    value: function _createLightNodeArray() {
 	      var targetNodes = {
@@ -24664,10 +24789,9 @@ module.exports =
 	  }, {
 	    key: '_renderNode',
 	    value: function _renderNode(node) {
-	      if (node.presentation.isHidden) {
+	      if (node.presentation.isHidden || node.presentation.opacity <= 0) {
 	        return;
 	      }
-
 	      var gl = this.context;
 	      var geometry = node.presentation.geometry;
 	      var program = this._defaultProgram._glProgram;
@@ -24678,7 +24802,7 @@ module.exports =
 
 	      if (geometry._vertexArrayObjects === null) {
 	        this._initializeVAO(node, program);
-	        this._initializeUBO(node, program);
+	        this._initializeUBO(node, program); // FIXME: program should have UBO, not node.
 	      }
 
 	      if (node.morpher !== null) {
@@ -24706,6 +24830,7 @@ module.exports =
 	        //const material = node.presentation.geometry.materials[i]
 
 	        gl.bindVertexArray(vao);
+	        // FIXME: use bufferData instead of bindBufferBase
 	        gl.bindBufferBase(gl.UNIFORM_BUFFER, _materialLoc, geometry._materialBuffer);
 
 	        geometry._bufferMaterialData(gl, program, i, node.presentation.opacity);
@@ -24748,6 +24873,61 @@ module.exports =
 
 	        gl.drawElements(shape, element._glData.length, size, 0);
 	      }
+	    }
+
+	    /**
+	     *
+	     * @access private
+	     * @param {SCNNode} node -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_renderParticle',
+	    value: function _renderParticle(node) {
+	      var _this3 = this;
+
+	      if (node.presentation.isHidden) {
+	        return;
+	      }
+
+	      var systems = node.presentation.particleSystems;
+	      //const gl = this.context
+
+	      //gl.useProgram(program)
+	      systems.forEach(function (system) {
+	        _this3._renderParticleSystem(node, system);
+	      });
+	    }
+
+	    /**
+	     *
+	     * @access private
+	     * @param {SCNNode} node -
+	     * @param {SCNParticleSystem} system - 
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_renderParticleSystem',
+	    value: function _renderParticleSystem(node, system) {
+	      //this.currentTime
+	      var gl = this.context;
+	      var program = this._defaultParticleProgram._glProgram;
+	      if (system._program !== null) {
+	        program = system._program._glProgram;
+	      }
+	      gl.useProgram(program);
+
+	      if (system._vertexBuffer === null) {
+	        system._initializeVAO(gl, node, program);
+	      }
+	      gl.bindVertexArray(system._vertexArray);
+
+	      system._bufferMaterialData(gl, program);
+
+	      console.log('renderParticle node: ' + node.name + ', length: ' + system._particles.length);
+	      gl.drawElements(gl.TRIANGLES, system._particles.length * 6, system._glIndexSize, 0);
 	    }
 
 	    /**
@@ -24881,7 +25061,7 @@ module.exports =
 	  }, {
 	    key: 'hitTest',
 	    value: function hitTest(point) {
-	      var _this3 = this;
+	      var _this4 = this;
 
 	      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
 
@@ -24907,7 +25087,7 @@ module.exports =
 	      console.log('renderingArray.length: ' + renderingArray.length);
 
 	      renderingArray.forEach(function (node) {
-	        result.push.apply(result, _toConsumableArray(_this3._nodeHitTest(node, worldPoint, rayVec)));
+	        result.push.apply(result, _toConsumableArray(_this4._nodeHitTest(node, worldPoint, rayVec)));
 	      });
 
 	      return result;
@@ -25341,14 +25521,14 @@ module.exports =
 	  }, {
 	    key: '_numLightsChanged',
 	    value: function _numLightsChanged() {
-	      var _this4 = this;
+	      var _this5 = this;
 
 	      var changed = false;
 	      Object.values(_SCNLight2.default.LightType).forEach(function (type) {
-	        var num = _this4._lightNodes[type].length;
-	        if (num !== _this4._numLights[type]) {
+	        var num = _this5._lightNodes[type].length;
+	        if (num !== _this5._numLights[type]) {
 	          changed = true;
-	          _this4._numLights[type] = num;
+	          _this5._numLights[type] = num;
 	        }
 	      });
 	      return changed;
@@ -25476,6 +25656,32 @@ module.exports =
 	      }
 
 	      return result;
+	    }
+
+	    /**
+	     * @access private
+	     * @type {SCNProgram}
+	     */
+
+	  }, {
+	    key: '_setDummyParticleTextureAsDefault',
+	    value: function _setDummyParticleTextureAsDefault() {
+	      var gl = this.context;
+	      var p = this._defaultParticleProgram;
+
+	      var texNames = [gl.TEXTURE0
+	      //gl.TEXTURE1
+	      ];
+	      var texSymbols = ['particleTexture'
+	      //'colorTexture'
+	      ];
+	      for (var i = 0; i < texNames.length; i++) {
+	        var texName = texNames[i];
+	        var symbol = texSymbols[i];
+	        gl.uniform1i(gl.getUniformLocation(p._glProgram, symbol), i);
+	        gl.activeTexture(texName);
+	        gl.bindTexture(gl.TEXTURE_2D, this.__dummyTexture);
+	      }
 	    }
 
 	    /**
@@ -25699,6 +25905,66 @@ module.exports =
 	    key: '_dummyTexture',
 	    get: function get() {
 	      return this.__dummyTexture;
+	    }
+	  }, {
+	    key: '_defaultParticleProgram',
+	    get: function get() {
+	      if (this.__defaultParticleProgram !== null) {
+	        return this.__defaultParticleProgram;
+	      }
+	      var gl = this.context;
+	      if (this.__defaultParticleProgram === null) {
+	        this.__defaultParticleProgram = new _SCNProgram2.default();
+	        this.__defaultParticleProgram._glProgram = gl.createProgram();
+	      }
+	      var p = this.__defaultParticleProgram;
+	      var vsText = _defaultParticleVertexShader;
+	      var fsText = _defaultParticleFragmentShader;
+
+	      // initialize vertex shader
+	      var vertexShader = gl.createShader(gl.VERTEX_SHADER);
+	      gl.shaderSource(vertexShader, vsText);
+	      gl.compileShader(vertexShader);
+	      if (!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)) {
+	        var info = gl.getShaderInfoLog(vertexShader);
+	        throw new Error('particle vertex shader compile error: ' + info);
+	      }
+
+	      // initialize fragment shader
+	      var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+	      gl.shaderSource(fragmentShader, fsText);
+	      gl.compileShader(fragmentShader);
+	      if (!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)) {
+	        var _info3 = gl.getShaderInfoLog(fragmentShader);
+	        throw new Error('particle fragment shader compile error: ' + _info3);
+	      }
+
+	      gl.attachShader(p._glProgram, vertexShader);
+	      gl.attachShader(p._glProgram, fragmentShader);
+
+	      // link program object
+	      gl.linkProgram(p._glProgram);
+	      if (!gl.getProgramParameter(p._glProgram, gl.LINK_STATUS)) {
+	        var _info4 = gl.getProgramInfoLog(p._glProgram);
+	        throw new Error('program link error: ' + _info4);
+	      }
+
+	      gl.useProgram(p._glProgram);
+	      //gl.clearColor(1, 1, 1, 1)
+	      gl.clearDepth(1.0);
+	      gl.clearStencil(0);
+
+	      gl.enable(gl.DEPTH_TEST);
+	      gl.depthFunc(gl.LEQUAL);
+	      gl.enable(gl.BLEND);
+	      gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+	      gl.enable(gl.CULL_FACE);
+	      gl.cullFace(gl.BACK);
+
+	      // set default textures to prevent warnings
+	      this._setDummyParticleTextureAsDefault();
+
+	      return this.__defaultParticleProgram;
 	    }
 	  }]);
 
@@ -30007,17 +30273,17 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(2);
+	var _NSObject3 = __webpack_require__(2);
 
-	var _NSObject3 = _interopRequireDefault(_NSObject2);
+	var _NSObject4 = _interopRequireDefault(_NSObject3);
 
 	var _SCNAnimatable = __webpack_require__(68);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNGeometry = __webpack_require__(70);
+	var _SCNMatrix = __webpack_require__(39);
 
-	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
+	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
 	var _SCNParticleBirthLocation = __webpack_require__(98);
 
@@ -30038,10 +30304,6 @@ module.exports =
 	var _SCNParticleImageSequenceAnimationMode = __webpack_require__(100);
 
 	var _SCNParticleImageSequenceAnimationMode2 = _interopRequireDefault(_SCNParticleImageSequenceAnimationMode);
-
-	var _SCNNode = __webpack_require__(67);
-
-	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
 	var _SCNParticleBlendMode = __webpack_require__(101);
 
@@ -30081,11 +30343,17 @@ module.exports =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	//import SCNGeometry from './SCNGeometry'
+
+	//import SCNNode from './SCNNode'
+
 
 	var _ParticleProperty = {
 	  angle: 'Angle',
@@ -30106,6 +30374,95 @@ module.exports =
 	  velocity: 'Velocity'
 	};
 
+	var _Particle = function (_NSObject) {
+	  _inherits(_Particle, _NSObject);
+
+	  /**
+	   * @access public
+	   * @constructor
+	   */
+	  function _Particle() {
+	    _classCallCheck(this, _Particle);
+
+	    /**
+	     * @type {SCNVector3}
+	     */
+	    var _this = _possibleConstructorReturn(this, (_Particle.__proto__ || Object.getPrototypeOf(_Particle)).call(this));
+
+	    _this.position = null;
+
+	    /**
+	     * @type {number}
+	     */
+	    _this.angle = 0;
+
+	    /**
+	     * @type {number}
+	     */
+	    _this.size = 1;
+
+	    /**
+	     * @type {SKColor}
+	     */
+	    _this.color = null;
+
+	    /**
+	     * @type {SCNVector3}
+	     */
+	    _this.velocity = null;
+
+	    /**
+	     * @type {number}
+	     */
+	    _this.angularVelocity = 0;
+
+	    /**
+	     * @type {SCNVector3}
+	     */
+	    _this.acceleration = null;
+
+	    /**
+	     * @type {number}
+	     */
+	    _this.birthTime = 0;
+
+	    /**
+	     * @type {number}
+	     */
+	    _this.lifeSpan = 0;
+	    return _this;
+	  }
+
+	  /**
+	   * @access public
+	   * @returns {number[]} -
+	   */
+
+
+	  _createClass(_Particle, [{
+	    key: 'floatArray',
+	    value: function floatArray() {
+	      var baseArray = [].concat(_toConsumableArray(this.position.floatArray()), [this.angle], _toConsumableArray(this.color.floatArray()), [this.size
+	      //this.size, this.life
+	      ]);
+	      return [].concat(_toConsumableArray(baseArray), [-1, -1], _toConsumableArray(baseArray), [1, -1], _toConsumableArray(baseArray), [-1, 1], _toConsumableArray(baseArray), [1, 1]);
+	    }
+
+	    /**
+	     * @access public
+	     * @returns {Float32Array} -
+	     */
+
+	  }, {
+	    key: 'float32Array',
+	    value: function float32Array() {
+	      return new Float32Array(this.floatArray());
+	    }
+	  }]);
+
+	  return _Particle;
+	}(_NSObject4.default);
+
 	/**
 	 * Manages the animation and rendering of a system of small image sprites, or particles, using a high-level simulation whose general behavior you specify.
 	 * @access public
@@ -30114,8 +30471,9 @@ module.exports =
 	 * @see https://developer.apple.com/reference/scenekit/scnparticlesystem
 	 */
 
-	var SCNParticleSystem = function (_NSObject) {
-	  _inherits(SCNParticleSystem, _NSObject);
+
+	var SCNParticleSystem = function (_NSObject2) {
+	  _inherits(SCNParticleSystem, _NSObject2);
 
 	  _createClass(SCNParticleSystem, null, [{
 	    key: '_propTypes',
@@ -30145,7 +30503,7 @@ module.exports =
 	        particleSize: 'float',
 	        particleSizeVariation: 'float',
 	        particleColor: 'plist',
-	        particleColorVariation: 'SCNVector4',
+	        particleColorVariation: 'SKColor',
 	        particleImage: ['NSMutableDictionary', function (obj, dict, key, coder) {
 	          var path = '';
 	          if (typeof dict.path !== 'undefined') {
@@ -30153,14 +30511,7 @@ module.exports =
 	          } else if (typeof dict.URL !== 'undefined') {
 	            path = dict.URL;
 	          }
-	          obj._loadParticleImage(path);
-	          /*
-	          const image = new Image()
-	          image.onload = () => {
-	            obj.particleImage = image
-	          }
-	          image.src = path
-	          */
+	          obj._loadParticleImage(path, coder._directoryPath);
 	        }],
 	        fresnelExponent: 'float',
 	        stretchFactor: 'float',
@@ -30187,7 +30538,7 @@ module.exports =
 	        particleFrictionVariation: 'float',
 	        systemSpawnedOnCollision: 'SCNParticleSystem',
 	        systemSpawnedOnDying: 'SCNParticleSystem',
-	        systemSpawnedOnLivint: 'SCNParticleSystem',
+	        systemSpawnedOnLiving: 'SCNParticleSystem',
 	        blendMode: 'integer',
 	        orientationMode: 'integer',
 	        sortingMode: 'integer',
@@ -30195,7 +30546,15 @@ module.exports =
 	        blackPassEnabled: ['boolean', 'isBlackPassEnabled'],
 	        isLocal: 'boolean',
 	        speedFactor: 'float',
-	        propertyControllers: 'NSMutableDictionary',
+	        propertyControllers: ['NSMutableDictionary', function (obj, dict) {
+	          Object.keys(_ParticleProperty).forEach(function (key) {
+	            var d = dict[_ParticleProperty[key]];
+	            if (typeof d !== 'undefined') {
+	              d.animation.keyPath = key;
+	            }
+	          });
+	          obj.propertyControllers = dict;
+	        }],
 
 	        seed: ['integer', null],
 	        softParticlesEnabled: ['boolean', null],
@@ -30223,58 +30582,58 @@ module.exports =
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523998-emissionduration
 	     */
-	    var _this = _possibleConstructorReturn(this, (SCNParticleSystem.__proto__ || Object.getPrototypeOf(SCNParticleSystem)).call(this));
+	    var _this2 = _possibleConstructorReturn(this, (SCNParticleSystem.__proto__ || Object.getPrototypeOf(SCNParticleSystem)).call(this));
 
-	    _this.emissionDuration = 0;
+	    _this2.emissionDuration = 1.0;
 
 	    /**
 	     * The range, in seconds, of randomized emission duration values. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523842-emissiondurationvariation
 	     */
-	    _this.emissionDurationVariation = 0;
+	    _this2.emissionDurationVariation = 0.0;
 
 	    /**
 	     * The duration, in seconds, of periods when the system emits no particles. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522998-idleduration
 	     */
-	    _this.idleDuration = 0;
+	    _this2.idleDuration = 0.0;
 
 	    /**
 	     * The range, in seconds, of randomized idle duration values. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523018-idledurationvariation
 	     */
-	    _this.idleDurationVariation = 0;
+	    _this2.idleDurationVariation = 0.0;
 
 	    /**
 	     * A Boolean value that determines whether the system repeats its emission and idle periods.
 	     * @type {boolean}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522618-loops
 	     */
-	    _this.loops = false;
+	    _this2.loops = true;
 
 	    /**
 	     * The duration, in seconds, for which particles are spawned before the system is first rendered. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522597-warmupduration
 	     */
-	    _this.warmupDuration = 0;
+	    _this2.warmupDuration = 0.0;
 
 	    /**
 	     * The number of particles spawned during each emission period. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522857-birthrate
 	     */
-	    _this.birthRate = 0;
+	    _this2.birthRate = 0.0;
 
 	    /**
 	     * The range of randomized particle birth rate values. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1524147-birthratevariation
 	     */
-	    _this.birthRateVariation = 0;
+	    _this2.birthRateVariation = 0.0;
 
 	    // Managing Particle Emission Locations
 
@@ -30283,35 +30642,35 @@ module.exports =
 	     * @type {?SCNGeometry}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522737-emittershape
 	     */
-	    _this.emitterShape = null;
+	    _this2.emitterShape = null;
 
 	    /**
 	     * The possible locations for newly spawned particles, relative to the emitter shape.
 	     * @type {SCNParticleBirthLocation}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522899-birthlocation
 	     */
-	    _this.birthLocation = null;
+	    _this2.birthLocation = _SCNParticleBirthLocation2.default.surface;
 
 	    /**
 	     * The possible initial directions for newly spawned particles, relative to the emitter shape.
 	     * @type {SCNParticleBirthDirection}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523361-birthdirection
 	     */
-	    _this.birthDirection = null;
+	    _this2.birthDirection = _SCNParticleBirthDirection2.default.constant;
 
 	    /**
 	     * The initial direction for newly spawned particles. Animatable.
 	     * @type {SCNVector3}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523600-emittingdirection
 	     */
-	    _this.emittingDirection = null;
+	    _this2.emittingDirection = new _SCNVector2.default(0, 1, 0);
 
 	    /**
 	     * The range, in degrees, of randomized initial particle directions. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522862-spreadingangle
 	     */
-	    _this.spreadingAngle = 0;
+	    _this2.spreadingAngle = 0.0;
 
 	    // Managing Particle Motion
 
@@ -30320,56 +30679,56 @@ module.exports =
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523896-particleangle
 	     */
-	    _this.particleAngle = 0;
+	    _this2.particleAngle = 0.0;
 
 	    /**
 	     * The range, in degrees of randomized initial particle angles. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522828-particleanglevariation
 	     */
-	    _this.particleAngleVariation = 0;
+	    _this2.particleAngleVariation = 0.0;
 
 	    /**
 	     * The initial speed, in units per second, for newly spawned particles. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523946-particlevelocity
 	     */
-	    _this.particleVelocity = 0;
+	    _this2.particleVelocity = 0.0;
 
 	    /**
 	     * The range, in units per second, of randomized initial particle speeds. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1524157-particlevelocityvariation
 	     */
-	    _this.particleVelocityVariation = 0;
+	    _this2.particleVelocityVariation = 0.0;
 
 	    /**
 	     * The initial spin rate, in degrees per second, of newly spawned particles. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522757-particleangularvelocity
 	     */
-	    _this.particleAngularVelocity = 0;
+	    _this2.particleAngularVelocity = 0.0;
 
 	    /**
 	     * The range, in degrees per second, of randomized initial angular velocities for particles. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523590-particleangularvelocityvariation
 	     */
-	    _this.particleAngularVelocityVariation = 0;
+	    _this2.particleAngularVelocityVariation = 0.0;
 
 	    /**
 	     * The duration, in seconds, for which each particle is rendered before being removed from the scene. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523575-particlelifespan
 	     */
-	    _this.particleLifeSpan = 0;
+	    _this2.particleLifeSpan = 1.0;
 
 	    /**
 	     * The range, in seconds, of randomized particle life spans. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523567-particlelifespanvariation
 	     */
-	    _this.particleLifeSpanVariation = 0;
+	    _this2.particleLifeSpanVariation = 0.0;
 
 	    // Specifying Particle Appearance
 
@@ -30378,49 +30737,49 @@ module.exports =
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523508-particlesize
 	     */
-	    _this.particleSize = 0;
+	    _this2.particleSize = 1.0;
 
 	    /**
 	     * The range of randomized particle sizes. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522716-particlesizevariation
 	     */
-	    _this.particleSizeVariation = 0;
+	    _this2.particleSizeVariation = 0.0;
 
 	    /**
 	     * The color of newly spawned particles. Animatable.
 	     * @type {SKColor}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523248-particlecolor
 	     */
-	    _this.particleColor = null;
+	    _this2.particleColor = _SKColor2.default.white;
 
 	    /**
 	     * The ranges of randomized particle color components. Animatable.
 	     * @type {SCNVector4}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523639-particlecolorvariation
 	     */
-	    _this.particleColorVariation = null;
+	    _this2.particleColorVariation = new _SCNVector4.default(0, 0, 0, 0);
 
 	    /**
 	     * The texture image SceneKit uses to render each particle.
 	     * @type {?Object}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1524153-particleimage
 	     */
-	    _this.particleImage = null;
+	    _this2.particleImage = null;
 
 	    /**
 	     * The reflectivity exponent SceneKit uses when rendering the particle’s image as a cube map. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523317-fresnelexponent
 	     */
-	    _this.fresnelExponent = 0;
+	    _this2.fresnelExponent = 0.0;
 
 	    /**
 	     * A multiplier for stretching particle images along their direction of motion. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523338-stretchfactor
 	     */
-	    _this.stretchFactor = 0;
+	    _this2.stretchFactor = 0.0;
 
 	    // Animating Particle Images
 
@@ -30429,49 +30788,49 @@ module.exports =
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523340-imagesequencerowcount
 	     */
-	    _this.imageSequenceRowCount = 0;
+	    _this2.imageSequenceRowCount = 1;
 
 	    /**
 	     * The number of columns for treating the particle image as a grid of animation frames.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523462-imagesequencecolumncount
 	     */
-	    _this.imageSequenceColumnCount = 0;
+	    _this2.imageSequenceColumnCount = 1;
 
 	    /**
 	     * The index of the first frame in a particle image animation. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523511-imagesequenceinitialframe
 	     */
-	    _this.imageSequenceInitialFrame = 0;
+	    _this2.imageSequenceInitialFrame = 0.0;
 
 	    /**
 	     * The range of randomized initial frames for particle image animation. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523821-imagesequenceinitialframevariati
 	     */
-	    _this.imageSequenceInitialFrameVariation = 0;
+	    _this2.imageSequenceInitialFrameVariation = 0.0;
 
 	    /**
 	     * The rate, in frames per second, of particle image animation. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1524075-imagesequenceframerate
 	     */
-	    _this.imageSequenceFrameRate = 0;
+	    _this2.imageSequenceFrameRate = 0.0;
 
 	    /**
 	     * The range, in frames per second, of randomized frame rates for particle image animation. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523667-imagesequenceframeratevariation
 	     */
-	    _this.imageSequenceFrameRateVariation = 0;
+	    _this2.imageSequenceFrameRateVariation = 0.0;
 
 	    /**
 	     * The animation mode for particle image animation.
 	     * @type {SCNParticleImageSequenceAnimationMode}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522816-imagesequenceanimationmode
 	     */
-	    _this.imageSequenceAnimationMode = null;
+	    _this2.imageSequenceAnimationMode = _SCNParticleImageSequenceAnimationMode2.default.repeat;
 
 	    // Simulating Physics for Particles
 
@@ -30480,98 +30839,98 @@ module.exports =
 	     * @type {boolean}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523452-isaffectedbygravity
 	     */
-	    _this.isAffectedByGravity = false;
+	    _this2.isAffectedByGravity = false;
 
 	    /**
 	     * A Boolean value that determines whether physics fields in the scene affect the motion of particles.
 	     * @type {boolean}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523353-isaffectedbyphysicsfields
 	     */
-	    _this.isAffectedByPhysicsFields = false;
+	    _this2.isAffectedByPhysicsFields = false;
 
 	    /**
 	     * The nodes whose geometry the system’s particles can collide with.
 	     * @type {?SCNNode[]}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523516-collidernodes
 	     */
-	    _this.colliderNodes = null;
+	    _this2.colliderNodes = null;
 
 	    /**
 	     * A Boolean value that determines whether particles are removed from the scene upon colliding with another object.
 	     * @type {boolean}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523357-particlediesoncollision
 	     */
-	    _this.particleDiesOnCollision = false;
+	    _this2.particleDiesOnCollision = false;
 
 	    /**
 	     * The constant acceleration vector, in units per second per second, applied to all particles in the system. Animatable.
 	     * @type {SCNVector3}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522766-acceleration
 	     */
-	    _this.acceleration = null;
+	    _this2.acceleration = new _SCNVector2.default(0, 0, 0);
 
 	    /**
 	     * A factor that slows particles relative to their velocity. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522931-dampingfactor
 	     */
-	    _this.dampingFactor = 0;
+	    _this2.dampingFactor = 0.0;
 
 	    /**
 	     * The mass, in kilograms, of each particle in the system. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522607-particlemass
 	     */
-	    _this.particleMass = 0;
+	    _this2.particleMass = 1.0;
 
 	    /**
 	     * The range, in kilograms, of randomized particle masses. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523408-particlemassvariation
 	     */
-	    _this.particleMassVariation = 0;
+	    _this2.particleMassVariation = 0.0;
 
 	    /**
 	     * The electric charge, in coulombs, of each particle in the system. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523156-particlecharge
 	     */
-	    _this.particleCharge = 0;
+	    _this2.particleCharge = 0.0;
 
 	    /**
 	     * The range, in coulombs, of randomized particle charges. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523377-particlechargevariation
 	     */
-	    _this.particleChargeVariation = 0;
+	    _this2.particleChargeVariation = 0.0;
 
 	    /**
 	     * The restitution coefficient of each particle in the system. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522637-particlebounce
 	     */
-	    _this.particleBounce = 0;
+	    _this2.particleBounce = 0.7;
 
 	    /**
 	     * The range of randomized restitution coefficients for particles. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522662-particlebouncevariation
 	     */
-	    _this.particleBounceVariation = 0;
+	    _this2.particleBounceVariation = 0.0;
 
 	    /**
 	     * The friction coefficient of each particle in the system. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1524010-particlefriction
 	     */
-	    _this.particleFriction = 0;
+	    _this2.particleFriction = 1.0;
 
 	    /**
 	     * The range of randomized friction coefficients for particles. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522868-particlefrictionvariation
 	     */
-	    _this.particleFrictionVariation = 0;
+	    _this2.particleFrictionVariation = 0.0;
 
 	    // Spawning Additional Particle Systems
 
@@ -30580,21 +30939,21 @@ module.exports =
 	     * @type {?SCNParticleSystem}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1524068-systemspawnedoncollision
 	     */
-	    _this.systemSpawnedOnCollision = null;
+	    _this2.systemSpawnedOnCollision = null;
 
 	    /**
 	     * Another particle system to be added to the scene when a particle dies.
 	     * @type {?SCNParticleSystem}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1524091-systemspawnedondying
 	     */
-	    _this.systemSpawnedOnDying = null;
+	    _this2.systemSpawnedOnDying = null;
 
 	    /**
 	     * Another particle system to be added to the scene for each living particle in the system.
 	     * @type {?SCNParticleSystem}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522751-systemspawnedonliving
 	     */
-	    _this.systemSpawnedOnLiving = null;
+	    _this2.systemSpawnedOnLiving = null;
 
 	    // Managing Particle Rendering
 
@@ -30603,35 +30962,35 @@ module.exports =
 	     * @type {SCNParticleBlendMode}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523728-blendmode
 	     */
-	    _this.blendMode = null;
+	    _this2.blendMode = _SCNParticleBlendMode2.default.additive;
 
 	    /**
 	     * The mode defining whether and how particles may rotate.
 	     * @type {SCNParticleOrientationMode}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523131-orientationmode
 	     */
-	    _this.orientationMode = null;
+	    _this2.orientationMode = _SCNParticleOrientationMode2.default.billboardScreenAligned;
 
 	    /**
 	     * The mode defining the order in which SceneKit renders the system’s particles.
 	     * @type {SCNParticleSortingMode}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522795-sortingmode
 	     */
-	    _this.sortingMode = null;
+	    _this2.sortingMode = _SCNParticleSortingMode2.default.none;
 
 	    /**
 	     * A Boolean value that determines whether SceneKit applies lighting to particle images when rendering.
 	     * @type {boolean}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522794-islightingenabled
 	     */
-	    _this.isLightingEnabled = false;
+	    _this2.isLightingEnabled = false;
 
 	    /**
 	     * A Boolean value that determines whether SceneKit renders particles in black before rendering the particle image.
 	     * @type {boolean}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1523901-isblackpassenabled
 	     */
-	    _this.isBlackPassEnabled = false;
+	    _this2.isBlackPassEnabled = false;
 
 	    // Controlling Particle Simulation
 
@@ -30640,14 +30999,14 @@ module.exports =
 	     * @type {boolean}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522855-islocal
 	     */
-	    _this.isLocal = false;
+	    _this2.isLocal = false;
 
 	    /**
 	     * A multiplier for the speed at which SceneKit runs the particle simulation. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522988-speedfactor
 	     */
-	    _this.speedFactor = 0;
+	    _this2.speedFactor = 1.0;
 
 	    // Modifying Particles Over Time
 
@@ -30656,9 +31015,19 @@ module.exports =
 	     * @type {?Map<SCNParticleSystem.ParticleProperty, SCNParticlePropertyController>}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522775-propertycontrollers
 	     */
-	    _this.propertyControllers = null;
+	    _this2.propertyControllers = null;
 
-	    return _this;
+	    _this2._program = null;
+	    _this2._vertexArray = null;
+	    _this2._vertexBuffer = null;
+	    _this2._indexBuffer = null;
+	    _this2._particles = [];
+	    _this2._glIndexSize = null;
+	    _this2._particleTexture = null;
+
+	    _this2._prevTime = 0;
+	    _this2._nextBirthTime = 0;
+	    return _this2;
 	  }
 
 	  // Creating a Particle System
@@ -30801,37 +31170,260 @@ module.exports =
 	     * @param {string} path -
 	     * @returns {Image} -
 	     */
-	    value: function _loadParticleImage(path) {
-	      var _this2 = this;
+	    value: function _loadParticleImage(path, directoryPath) {
+	      var _this3 = this;
 
-	      console.log('image.path: ' + path);
+	      //console.warn(`image.path: ${path}`)
 	      var image = new Image();
 	      if (path.indexOf('file:///') === 0) {
 	        var paths = path.slice(8).split('/');
 	        var pathCount = 1;
-	        var _path = paths.slice(-pathCount).join('/');
+	        var _path = directoryPath + paths.slice(-pathCount).join('/');
 	        image.onload = function () {
-	          console.info('image ' + _path + ' onload');
-	          _this2.particleImage = image;
+	          //console.info(`image ${_path} onload`)
+	          _this3.particleImage = image;
 	        };
 	        image.onerror = function () {
 	          pathCount += 1;
 	          if (pathCount > paths.length) {
-	            console.error('image ' + path + ' load error.');
+	            //console.info(`image ${path} load error. pathCount > paths.length`)
 	          } else {
-	            console.info('image ' + _path + ' load error.');
-	            _path = paths.slice(-pathCount).join('/');
-	            console.info('try ' + _path);
+	            //console.info(`image ${_path} load error.`)
+	            _path = directoryPath + paths.slice(-pathCount).join('/');
+	            //console.info(`try ${_path}`)
 	            image.src = _path;
 	          }
 	        };
+	        image.src = _path;
 	      } else {
 	        image.onload = function () {
-	          _this2.particleImage = image;
+	          //console.info(`image ${path} onload`)
+	          _this3.particleImage = image;
 	        };
 	        image.src = path;
 	      }
 	      return image;
+	    }
+	  }, {
+	    key: '_initializeVAO',
+	    value: function _initializeVAO(gl, node, program) {
+	      if (this._vertexArray !== null) {
+	        return;
+	      }
+	      this._vertexArray = gl.createVertexArray();
+	      gl.bindVertexArray(this._vertexArray);
+
+	      this._vertexBuffer = gl.createBuffer();
+	      gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer);
+
+	      // prepare vertex array data
+	      // TODO: retain attribute locations
+	      var positionLoc = gl.getAttribLocation(program, 'position');
+	      var colorLoc = gl.getAttribLocation(program, 'color');
+	      var sizeLoc = gl.getAttribLocation(program, 'size');
+	      //const lifeLoc = gl.getAttribLocation(program, 'life')
+	      var cornerLoc = gl.getAttribLocation(program, 'corner');
+
+	      // vertexAttribPointer(ulong idx, long size, ulong type, bool norm, long stride, ulong offset)
+	      gl.enableVertexAttribArray(positionLoc);
+	      gl.vertexAttribPointer(positionLoc, 4, gl.FLOAT, false, 44, 0);
+	      gl.enableVertexAttribArray(colorLoc);
+	      gl.vertexAttribPointer(colorLoc, 4, gl.FLOAT, false, 44, 16);
+	      gl.enableVertexAttribArray(sizeLoc);
+	      gl.vertexAttribPointer(sizeLoc, 1, gl.FLOAT, false, 44, 32);
+	      //gl.enableVertexAttribArray(lifeLoc)
+	      //gl.vertexAttribPointer(lifeLoc, 1, gl.FLOAT, false, 48, 36)
+	      gl.enableVertexAttribArray(cornerLoc);
+	      gl.vertexAttribPointer(cornerLoc, 2, gl.FLOAT, false, 44, 36);
+
+	      /*
+	      const arr = []
+	      this._particles.forEach((particle) => {
+	        arr.push(...particle.floatArray())
+	      })
+	      const particleData = new Float32Array(arr)
+	      gl.bufferData(gl.ARRAY_BUFFER, particleData, gl.DYNAMIC_DRAW)
+	      */
+
+	      var len = this._maxParticles;
+	      var indexData = [];
+	      var index = 0;
+	      for (var i = 0; i < len; i++) {
+	        indexData.push(index + 0);
+	        indexData.push(index + 3);
+	        indexData.push(index + 2);
+	        indexData.push(index + 0);
+	        indexData.push(index + 1);
+	        indexData.push(index + 3);
+	        index += 4;
+	      }
+	      var glIndexData = null;
+	      if (len < 256) {
+	        glIndexData = new Uint8Array(indexData);
+	        this._glIndexSize = gl.UNSIGNED_BYTE;
+	      } else if (len < 65536) {
+	        glIndexData = new Uint16Array(indexData);
+	        this._glIndexSize = gl.UNSIGNED_SHORT;
+	      } else {
+	        glIndexData = new Uint32Array(indexData);
+	        this._glIndexSize = gl.UNSIGNED_INT;
+	      }
+
+	      this._indexBuffer = gl.createBuffer();
+	      gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, this._indexBuffer);
+	      gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, glIndexData, gl.STATIC_DRAW);
+	    }
+
+	    /**
+	     * @access private
+	     * @param {number} birthTime -
+	     * @param {SCNVector3} position -
+	     * @param {SCNVector4} orientation -
+	     * @returns {_Particle} -
+	     */
+
+	  }, {
+	    key: '_createParticle',
+	    value: function _createParticle(birthTime, position, orientation) {
+	      var p = new _Particle();
+	      // emitterShape, birthLocation, emittingDirection, spreadingAngle, particleAngle/Variation, particleVelocity
+	      p.position = position;
+	      p.angle = (this.particleAngle + this.particleAngleVariation * (Math.random() - 0.5)) / 180.0 * Math.PI;
+	      p.size = this.particleSize + this.particleSizeVariation * (Math.random() - 0.5);
+	      p.color = this.particleColor._copy();
+	      var velocity = this.particleVelocity + this.particleVelocityVariation * (Math.random() - 0.5);
+	      var spreadingAngle = this.spreadingAngle / 180.0 * Math.PI * Math.random();
+	      var spreadingAngleRot = 2.0 * Math.PI * Math.random();
+	      //p.velocity = this.particleVelocity + this.particleVelocityVariation * (Math.random() - 0.5)
+	      var angleMat = _SCNMatrix2.default.matrixWithRotation(this._normal.x, this._normal.y, this._normal.z, spreadingAngle);
+	      var rotMat = _SCNMatrix2.default.matrixWithRotation(this._direction.x, this._direction.y, this._direction.z, spreadingAngleRot);
+	      p.velocity = this._direction.rotate(angleMat).rotate(rotMat).rotateWithQuaternion(orientation).mul(velocity);
+	      p.angularVelocity = this.particleAngularVelocity + this.particleAngularVelocityVariation * (Math.random() - 0.5);
+	      p.acceleration = this.acceleration._copy();
+	      p.birthTime = birthTime;
+	      p.lifeSpan = this.particleLifeSpan + this.particleLifeSpanVariation * (Math.random() - 0.5);
+
+	      return p;
+	    }
+
+	    /**
+	     * @access private
+	     * @param {SCNNode} node -
+	     * @param {number} elapsedTime -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_updateParticles',
+	    value: function _updateParticles(node, currentTime) {
+	      var _this4 = this;
+
+	      if (this._prevTime <= 0) {
+	        this._prevTime = currentTime;
+	        this._nextBirthTime = currentTime;
+
+	        this._direction = this.emittingDirection.normalize();
+	        var u = new _SCNVector2.default(this._direction.z, this._direction.x, this._direction.y);
+	        this._normal = this._direction.cross(u);
+	      }
+	      while (this._nextBirthTime <= currentTime) {
+	        var p = this._createParticle(this._nextBirthTime, node._presentationWorldTranslation, node._presentationWorldOrientation);
+	        this._particles.push(p);
+	        var rate = this.birthRate + this.birthRateVariation * (Math.random() - 0.5);
+	        if (rate < 0.0000001) {
+	          rate = 0.0000001;
+	        }
+	        this._nextBirthTime += 1.0 / rate;
+	      }
+
+	      var dt = currentTime - this._prevTime;
+	      this._particles.forEach(function (p) {
+	        var t = (currentTime - p.birthTime) / p.lifeSpan;
+	        p.life = t;
+	        if (t > 1) {
+	          return;
+	        }
+	        p.position.x += (0.5 * p.acceleration.x * dt + p.velocity.x) * dt;
+	        p.position.y += (0.5 * p.acceleration.y * dt + p.velocity.y) * dt;
+	        p.position.z += (0.5 * p.acceleration.z * dt + p.velocity.z) * dt;
+	        p.angle += p.angularVelocity * dt;
+	        p.velocity.x += p.acceleration.x * dt;
+	        p.velocity.y += p.acceleration.y * dt;
+	        p.velocity.z += p.acceleration.z * dt;
+	        if (_this4.propertyControllers !== null) {
+	          Object.keys(_this4.propertyControllers).forEach(function (key) {
+	            _this4.propertyControllers[key].animation._applyAnimation(p, t, false); // should I use p.life instead of t?
+	          });
+	        }
+	      });
+	      this._particles = this._particles.filter(function (p) {
+	        return p.life <= 1;
+	      });
+	      this._prevTime = currentTime;
+	    }
+
+	    /**
+	     * @access private
+	     * @param {WebGLRenderingContext} gl -
+	     * @param {WebGLProgram} program -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_bufferMaterialData',
+	    value: function _bufferMaterialData(gl, program) {
+	      // particleTexture
+	      if (this._particleTexture === null && this.particleImage !== null) {
+	        this._particleTexture = this._createTexture(gl, this.particleImage);
+	      }
+	      if (this._particleTexture !== null) {
+	        gl.activeTexture(gl.TEXTURE0);
+	        gl.bindTexture(gl.TEXTURE_2D, this._particleTexture);
+	        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+	        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+	        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+	        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+	      }
+
+	      // buffer particle data
+	      gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer);
+	      gl.bufferData(gl.ARRAY_BUFFER, this._particleData, gl.DYNAMIC_DRAW);
+	    }
+	  }, {
+	    key: '_createTexture',
+	    value: function _createTexture(gl, image) {
+	      var texture = gl.createTexture();
+
+	      var canvas = document.createElement('canvas');
+	      canvas.width = image.naturalWidth;
+	      canvas.height = image.naturalHeight;
+	      //console.warn(`image size: ${image.naturalWidth} ${image.naturalHeight}`)
+	      canvas.getContext('2d').drawImage(image, 0, 0);
+
+	      gl.bindTexture(gl.TEXTURE_2D, texture);
+	      // texImage2D(target, level, internalformat, width, height, border, format, type, source)
+	      // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
+	      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, image.width, image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
+	      gl.generateMipmap(gl.TEXTURE_2D);
+	      gl.bindTexture(gl.TEXTURE_2D, null);
+
+	      return texture;
+	    }
+	  }, {
+	    key: '_particleData',
+	    get: function get() {
+	      var arr = [];
+	      this._particles.forEach(function (particle) {
+	        arr.push.apply(arr, _toConsumableArray(particle.floatArray()));
+	      });
+	      return new Float32Array(arr);
+	    }
+	  }, {
+	    key: '_maxParticles',
+	    get: function get() {
+	      var maxRate = this.birthRate + this.birthRateVariation * 0.5;
+	      var maxLifeSpan = this.particleLifeSpan + this.particleLifeSpanVariation * 0.5;
+	      return Math.ceil(maxRate * maxLifeSpan);
 	    }
 	  }], [{
 	    key: 'ParticleProperty',
@@ -30841,7 +31433,7 @@ module.exports =
 	  }]);
 
 	  return SCNParticleSystem;
-	}(_NSObject3.default);
+	}(_NSObject4.default);
 
 	exports.default = SCNParticleSystem;
 
@@ -41647,6 +42239,7 @@ module.exports =
 	      // renders the scene //
 	      ///////////////////////
 	      this._updateMorph();
+	      this._updateParticles();
 	      this._renderer.render();
 
 	      if (this._delegate && this._delegate.rendererDidRenderSceneAtTime) {
@@ -41813,6 +42406,33 @@ module.exports =
 	      });
 	      deleteKeys.forEach(function (key) {
 	        obj._animations.delete(key);
+	      });
+	    }
+	  }, {
+	    key: '_updateParticles',
+	    value: function _updateParticles() {
+	      this._updateParticlesForNode(this._scene.rootNode);
+	    }
+	  }, {
+	    key: '_updateParticlesForNode',
+	    value: function _updateParticlesForNode(node) {
+	      var _this9 = this;
+
+	      this._updateParticlesForObject(node);
+	      node.childNodes.forEach(function (child) {
+	        return _this9._updateParticlesForNode(child);
+	      });
+	    }
+	  }, {
+	    key: '_updateParticlesForObject',
+	    value: function _updateParticlesForObject(obj) {
+	      var _this10 = this;
+
+	      if (obj.particleSystems === null) {
+	        return;
+	      }
+	      obj.particleSystems.forEach(function (system) {
+	        system._updateParticles(obj, _this10.currentTime);
 	      });
 	    }
 
