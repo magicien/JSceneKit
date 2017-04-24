@@ -31287,17 +31287,61 @@ module.exports =
 	    value: function _createParticle(birthTime, position, orientation) {
 	      var p = new _Particle();
 	      // emitterShape, birthLocation, emittingDirection, spreadingAngle, particleAngle/Variation, particleVelocity
-	      p.position = position;
+	      if (this.emitterShape === null) {
+	        p.position = position;
+	      } else if (this.birthLocation === _SCNParticleBirthLocation2.default.surface) {
+	        switch (this.emitterShape.className) {
+	          case 'SCNSphere':
+	            {
+	              var v = new _SCNVector2.default(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5).normalize().mul(this.emitterShape.radius);
+	              p.position = position.add(v);
+	              break;
+	            }
+	          default:
+	            // TODO: implement
+	            throw new Error('emitter for ' + this.emitterShape.className + ' is not implemented');
+	        }
+	      } else {
+	        // TODO: implement
+	        throw new Error('birthLocation ' + this.birthLocation + ' is not implemented.');
+	      }
 	      p.angle = (this.particleAngle + this.particleAngleVariation * (Math.random() - 0.5)) / 180.0 * Math.PI;
 	      p.size = this.particleSize + this.particleSizeVariation * (Math.random() - 0.5);
 	      p.color = this.particleColor._copy();
 	      var velocity = this.particleVelocity + this.particleVelocityVariation * (Math.random() - 0.5);
 	      var spreadingAngle = this.spreadingAngle / 180.0 * Math.PI * Math.random();
 	      var spreadingAngleRot = 2.0 * Math.PI * Math.random();
-	      //p.velocity = this.particleVelocity + this.particleVelocityVariation * (Math.random() - 0.5)
 	      var angleMat = _SCNMatrix2.default.matrixWithRotation(this._normal.x, this._normal.y, this._normal.z, spreadingAngle);
 	      var rotMat = _SCNMatrix2.default.matrixWithRotation(this._direction.x, this._direction.y, this._direction.z, spreadingAngleRot);
-	      p.velocity = this._direction.rotate(angleMat).rotate(rotMat).rotateWithQuaternion(orientation).mul(velocity);
+	      switch (this.birthDirection) {
+	        case _SCNParticleBirthDirection2.default.constant:
+	          {
+	            p.velocity = this._direction.rotate(angleMat).rotate(rotMat).rotateWithQuaternion(orientation).mul(velocity);
+	            break;
+	          }
+	        case _SCNParticleBirthDirection2.default.surfaceNormal:
+	          {
+	            if (this.emitterShape.className === 'SCNSphere') {
+	              var _v = p.position.sub(position);
+	              p.velocity = _v.mul(velocity);
+	            } else {
+	              // TODO: implement
+	              throw new Error('velocity for ' + this.emitterShape.className + ' is not implemented.');
+	            }
+	            break;
+	          }
+	        case _SCNParticleBirthDirection2.default.random:
+	          {
+	            var rndAngle = 2.0 * Math.PI * Math.random();
+	            var rndMat = _SCNMatrix2.default.matrixWithRotation(this._normal.x, this._normal.y, this._normal.z, rndAngle);
+	            p.velocity = this._direction.rotate(rndMat).rotate(rotMat).rotateWithQuaternion(orientation).mul(velocity);
+	            break;
+	          }
+	        default:
+	          {
+	            throw new Error('unknown birth direction: ' + this.birthDirection);
+	          }
+	      }
 	      p.angularVelocity = this.particleAngularVelocity + this.particleAngularVelocityVariation * (Math.random() - 0.5);
 	      p.acceleration = this.acceleration._copy();
 	      p.birthTime = birthTime;
