@@ -189,7 +189,18 @@ import SCNVector4ToFloat4 from './SceneKit/SCNVector4ToFloat4'
 import SCNVector4ToGLKVector4 from './SceneKit/SCNVector4ToGLKVector4'
 import SCNView from './SceneKit/SCNView'
 import SCNWrapMode from './SceneKit/SCNWrapMode'
+import SKAction from './SpriteKit/SKAction'
+import SKActionTimingMode from './SpriteKit/SKActionTimingMode'
+import SKBlendMode from './SpriteKit/SKBlendMode'
 import SKColor from './SpriteKit/SKColor'
+import SKEffectNode from './SpriteKit/SKEffectNode'
+import SKNode from './SpriteKit/SKNode'
+import SKScene from './SpriteKit/SKScene'
+import SKSceneScaleMode from './SpriteKit/SKSceneScaleMode'
+import SKShapeNode from './SpriteKit/SKShapeNode'
+import SKSpriteNode from './SpriteKit/SKSpriteNode'
+import SKTexture from './SpriteKit/SKTexture'
+import SKTextureFilteringMode from './SpriteKit/SKTextureFilteringMode'
 import _AjaxRequest from './util/_AjaxRequest'
 import _BinaryReader from './util/_BinaryReader'
 import _BinaryRequest from './util/_BinaryRequest'
@@ -390,7 +401,18 @@ _ClassList.registerClass(SCNVector4ToFloat4)
 _ClassList.registerClass(SCNVector4ToGLKVector4)
 _ClassList.registerClass(SCNView)
 _ClassList.registerClass(SCNWrapMode)
+_ClassList.registerClass(SKAction)
+_ClassList.registerClass(SKActionTimingMode)
+_ClassList.registerClass(SKBlendMode)
 _ClassList.registerClass(SKColor)
+_ClassList.registerClass(SKEffectNode)
+_ClassList.registerClass(SKNode)
+_ClassList.registerClass(SKScene)
+_ClassList.registerClass(SKSceneScaleMode)
+_ClassList.registerClass(SKShapeNode)
+_ClassList.registerClass(SKSpriteNode)
+_ClassList.registerClass(SKTexture)
+_ClassList.registerClass(SKTextureFilteringMode)
 
 /*global exports*/
 exports.NSColor = NSColor
@@ -584,7 +606,18 @@ exports.SCNVector4ToFloat4 = SCNVector4ToFloat4
 exports.SCNVector4ToGLKVector4 = SCNVector4ToGLKVector4
 exports.SCNView = SCNView
 exports.SCNWrapMode = SCNWrapMode
+exports.SKAction = SKAction
+exports.SKActionTimingMode = SKActionTimingMode
+exports.SKBlendMode = SKBlendMode
 exports.SKColor = SKColor
+exports.SKEffectNode = SKEffectNode
+exports.SKNode = SKNode
+exports.SKScene = SKScene
+exports.SKSceneScaleMode = SKSceneScaleMode
+exports.SKShapeNode = SKShapeNode
+exports.SKSpriteNode = SKSpriteNode
+exports.SKTexture = SKTexture
+exports.SKTextureFilteringMode = SKTextureFilteringMode
 exports._AjaxRequest = _AjaxRequest
 exports._BinaryReader = _BinaryReader
 exports._BinaryRequest = _BinaryRequest

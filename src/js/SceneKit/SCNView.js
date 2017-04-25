@@ -2,9 +2,10 @@
 
 //import _HTMLCanvasElement from '../util/HTMLCanvasElement'
 import CGPoint from '../CoreGraphics/CGPoint'
+import CGRect from '../CoreGraphics/CGRect'
+import CGSize from '../CoreGraphics/CGSize'
 import SCNRenderer from './SCNRenderer'
 import SCNTechniqueSupport from './SCNTechniqueSupport'
-import CGRect from '../CoreGraphics/CGRect'
 import SCNScene from './SCNScene'
 import SCNRenderingAPI from './SCNRenderingAPI'
 import SCNAntialiasingMode from './SCNAntialiasingMode'
@@ -1305,6 +1306,14 @@ export default class SCNView {
     const dy = rect.top
 
     return new CGPoint(point.x + sx - dx, point.y + sy - dy)
+  }
+
+  /**
+   * @type {CGRect}
+   */
+  get bounds() {
+    const rect = this._canvas.getBoundingClientRect()
+    return new CGRect(new CGPoint(rect.left, rect.top), new CGSize(rect.width, rect.height))
   }
 }
 

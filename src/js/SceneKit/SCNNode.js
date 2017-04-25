@@ -345,7 +345,7 @@ export default class SCNNode extends NSObject {
     ///////////////////
 
     // Inspecting a Node’s Running Action
-    this._hasActions = false
+    //this._hasActions = false
 
     /**
      * @access private
@@ -1524,7 +1524,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @see https://developer.apple.com/reference/scenekit/scnactionable/1523794-hasactions
    */
   get hasActions() {
-    return this._hasActions
+    return this._actions.size > 0
   }
 
   /**
@@ -1552,6 +1552,8 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @see https://developer.apple.com/reference/scenekit/scnactionable/1523617-removeaction
    */
   removeActionForKey(key) {
+    // TODO: stop action
+    this._actions.delete(key)
   }
 
   /**
@@ -1562,6 +1564,8 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @see https://developer.apple.com/reference/scenekit/scnactionable/1524181-removeallactions
    */
   removeAllActions() {
+    // TODO: stop actions
+    this._actions.clear()
   }
 
   ///////////////////
@@ -1628,6 +1632,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @see https://developer.apple.com/reference/scenekit/scnanimatable/1522762-removeallanimations
    */
   removeAllAnimations() {
+    // TODO: stop animations
     this._animations.clear()
   }
 
@@ -1772,7 +1777,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     node.physicsField = this.physicsField
     node._particleSystems = this._particleSystems ? this._particleSystems.slice() : null
     node._audioPlayers = this._audioPlayers
-    node._hasActions = this._hasActions
+    //node._hasActions = this._hasActions
     node._actions = new Map(this._actions)
     node._animations = new Map(this._animations)
     node.boundingBox = this.boundingBox

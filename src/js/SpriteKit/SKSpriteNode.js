@@ -1,0 +1,264 @@
+'use strict'
+
+import CGPoint from '../CoreGraphics/CGPoint'
+import CGRect from '../CoreGraphics/CGRect'
+import CGSize from '../CoreGraphics/CGSize'
+import SKBlendMode from './SKBlendMode'
+import SKColor from './SKColor'
+import SKNode from './SKNode'
+import SKTexture from './SKTexture'
+//import SKWarpable from './SKWarpable'
+//import SKShader from './SKShader'
+//import SKAttributeValue from './SKAttributeValue'
+//import NSCoder from '../undefined/NSCoder'
+
+
+/**
+ * A node that draws a rectangular texture, image or color. 
+ * @access public
+ * @extends {SKNode}
+ * @implements {SKWarpable}
+ * @see https://developer.apple.com/reference/spritekit/skspritenode
+ */
+export default class SKSpriteNode extends SKNode {
+
+  // Initializing a New Sprite
+
+  /**
+   * Initializes a textured sprite using an image file, optionally adding a normal map to simulate 3D lighting.
+   * @access public
+   * @constructor
+   * @param {string} name - The name of an image file stored in the app bundle.
+   * @param {boolean} generateNormalMap - If true, a normal map is generated from the image texture without applying any filter to it (SKTextureNormalMapFilteringTypeNone). If false, no normal map is generated (matching the behavior of the spriteNodeWithImageNamed: class method).
+   * @desc The normal map is used only when lighting is enabled in the scene. For more information, see Adding Lighting to a Sprite and SKLightNode.
+   * @see https://developer.apple.com/reference/spritekit/skspritenode/1519721-init
+   */
+  constructor(name = null, generateNormalMap = false) {
+    super()
+
+    // Inspecting Physical Properties
+
+    /**
+     * The dimensions of the sprite, in points.
+     * @type {CGSize}
+     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519668-size
+     */
+    this.size = new CGSize(0, 0)
+
+    /**
+     * Defines the point in the sprite that corresponds to the node’s position.
+     * @type {CGPoint}
+     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519877-anchorpoint
+     */
+    this.anchorPoint = new CGPoint(0.5, 0.5)
+
+
+    // Inspecting the Sprite’s Texture
+
+    /**
+     * The texture used to draw the sprite.
+     * @type {?SKTexture}
+     * @see https://developer.apple.com/reference/spritekit/skspritenode/1520011-texture
+     */
+    this.texture = null
+
+    /**
+     * A property that defines how the texture is applied to the sprite.
+     * @type {CGRect}
+     * @see https://developer.apple.com/reference/spritekit/skspritenode/1520119-centerrect
+     */
+    this.centerRect = new CGRect(new CGPoint(0, 0), new CGSize(1, 1))
+
+    /**
+     * A floating-point value that describes how the color is blended with the sprite’s texture.
+     * @type {number}
+     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519780-colorblendfactor
+     */
+    this.colorBlendFactor = 0
+
+
+    // Inspecting Color Properties
+
+    /**
+     * The sprite’s color.
+     * @type {SKColor}
+     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519639-color
+     */
+    this.color = new SKColor(1.0, 1.0, 1.0, 0.0)
+
+
+    // Blending the Sprite with the Framebuffer
+
+    /**
+     * The blend mode used to draw the sprite into the parent’s framebuffer.
+     * @type {SKBlendMode}
+     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519931-blendmode
+     */
+    this.blendMode = SKBlendMode.alpha
+
+
+    // Adding Lighting to a Sprite
+
+    /**
+     * A mask that defines how this sprite is lit by light nodes in the scenes.
+     * @type {number}
+     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519637-lightingbitmask
+     */
+    this.lightingBitMask = 0
+
+    /**
+     * A mask that defines which lights add additional shadows to the sprite.
+     * @type {number}
+     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519974-shadowedbitmask
+     */
+    this.shadowedBitMask = 0
+
+    /**
+     * A mask that defines which lights are occluded by this sprite.
+     * @type {number}
+     * @see https://developer.apple.com/reference/spritekit/skspritenode/1520325-shadowcastbitmask
+     */
+    this.shadowCastBitMask = 0
+
+    /**
+     * A texture that specifies the normal map for the sprite.
+     * @type {?SKTexture}
+     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519657-normaltexture
+     */
+    this.normalTexture = null
+
+
+    // Working with Custom Shaders
+
+    /**
+     * A property that determines whether the sprite is rendered using a custom shader.
+     * @type {?SKShader}
+     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519714-shader
+     */
+    this.shader = null
+
+    /**
+     * The values of each attribute associated with the node's attached shader.
+     * @type {Map<string, SKAttributeValue>}
+     * @see https://developer.apple.com/reference/spritekit/skspritenode/2715845-attributevalues
+     */
+    this.attributeValues = new Map()
+
+
+    // Instance Properties
+
+    //this._customPlaygroundQuickLook = new PlaygroundQuickLook()
+    this._customPlaygroundQuickLook = null
+
+    
+    if(name !== null){
+      this.texture = SKTexture.textureWithImageNamed(name)
+      if(generateNormalMap){
+        this.normalTexture = this.texture.generatingNormalMap()
+      }
+    }
+  }
+
+  /**
+   * Initializes a colored sprite node.
+   * @access public
+   * @param {CGColor} color - The color for the resulting sprite node.
+   * @param {CGSize} size - The size of the sprite node in points.
+   * @returns {SKSpriteNode} -
+   * @desc Although textured nodes are the most common way to use the SKSpriteNode class, you can also create sprite nodes without a texture. The behavior of the class changes when the node lacks a texture:The sprite node that is returned from this method has its texture property set to nil.There is no texture to stretch, so the centerRect parameter is ignored.There is no colorization step; the color property is used as the sprite’s color.The sprite node's alpha component is used to determine how it is blended into the buffer.Listing 1 shows how to create a red sprite node 100 x 100 points in size.Listing 1 Creating a non-textured sprite nodelet node = SKSpriteNode(color: .red,
+                        size: CGSize(width: 100, height: 100))
+Creating a non-textured sprite nodelet node = SKSpriteNode(color: .red,
+                        size: CGSize(width: 100, height: 100))
+
+   * @see https://developer.apple.com/reference/spritekit/skspritenode/1519762-init
+   */
+  static nodeWithColorSize(color, size) {
+    const node = new SKSpriteNode()
+    node.size = size
+    node.color = color
+    return node
+  }
+
+  /**
+   * Initializes a textured sprite using an image file.
+   * @access public
+   * @param {string} name - The name of an image file stored in the app bundle.
+   * @returns {SKSpriteNode} -
+   * @desc This method creates a new texture object from the image file and assigns that texture to the texture property, the normalTexture properties is set to nil. The size property of the sprite is set to the dimensions of the image. The color property is set to white with an alpha of zero (1.0,1.0,1.0,0.0).
+   * @see https://developer.apple.com/reference/spritekit/skspritenode/1520391-init
+   */
+  static nodeWithImageNamed(name) {
+  }
+
+  /**
+   * Initializes a textured sprite using an image file, optionally adding a normal map to simulate 3D lighting.
+   * @access public
+   * @param {string} name - The name of an image file stored in the app bundle.
+   * @param {boolean} generateNormalMap - If true, a normal map is generated from the image texture without applying any filter to it (SKTextureNormalMapFilteringTypeNone). If false, no normal map is generated (matching the behavior of the spriteNodeWithImageNamed: class method).
+   * @returns {SKSpriteNode} -
+   * @desc The normal map is used only when lighting is enabled in the scene. For more information, see Adding Lighting to a Sprite and SKLightNode.
+   * @see https://developer.apple.com/reference/spritekit/skspritenode/1519721-init
+   */
+  static nodeWithImageNamedNormalMapped(name, generateNormalMap) {
+  }
+
+  // Inspecting Physical Properties
+
+  /**
+   * Scales to sprite node to a specified size. 
+   * @access public
+   * @param {CGSize} size - 
+   * @returns {void}
+   * @desc This method works by setting the sprite node's xScale and yScale to achieve the specified size in its parent's coordinate space. 
+   * @see https://developer.apple.com/reference/spritekit/skspritenode/1645445-scale
+   */
+  scaleTo(size) {
+  }
+
+  // Working with Custom Shaders
+
+  /**
+   * Sets an attribute value for an attached shader.
+   * @access public
+   * @param {SKAttributeValue} value - An attribute value object containing the scalar or vector value to set in the attached shader.
+   * @param {string} key - The attribute name.
+   * @returns {void}
+   * @see https://developer.apple.com/reference/spritekit/skspritenode/2715849-setvalue
+   */
+  setValueForAttribute(value, key) {
+  }
+
+  /**
+   * The value of a shader attribute.
+   * @access public
+   * @param {string} key - The attribute name.
+   * @returns {?SKAttributeValue} - 
+   * @see https://developer.apple.com/reference/spritekit/skspritenode/2715846-value
+   */
+  valueForAttributeNamed(key) {
+    return null
+  }
+
+  // Initializers
+
+  /**
+   * 
+   * @access public
+   * @param {NSCoder} aDecoder - 
+   * @returns {void}
+   * @see https://developer.apple.com/reference/spritekit/skspritenode/1520399-init
+   */
+  initCoder(aDecoder) {
+  }
+
+  // Instance Properties
+  /**
+   * A custom playground quick look for this instance.
+   * @type {PlaygroundQuickLook}
+   * @desc 
+   * @see https://developer.apple.com/reference/spritekit/skspritenode/1645797-customplaygroundquicklook
+   */
+  get customPlaygroundQuickLook() {
+    return this._customPlaygroundQuickLook
+  }
+}

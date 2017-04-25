@@ -16,9 +16,10 @@ export default class SCNPhysicsContact extends NSObject {
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  init() {
+  constructor() {
+    super()
 
     // Inspecting the Contact Properties
 

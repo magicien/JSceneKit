@@ -811,9 +811,53 @@ module.exports =
 
 	var _SCNWrapMode2 = _interopRequireDefault(_SCNWrapMode);
 
+	var _SKAction = __webpack_require__(205);
+
+	var _SKAction2 = _interopRequireDefault(_SKAction);
+
+	var _SKActionTimingMode = __webpack_require__(206);
+
+	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
+
+	var _SKBlendMode = __webpack_require__(207);
+
+	var _SKBlendMode2 = _interopRequireDefault(_SKBlendMode);
+
 	var _SKColor = __webpack_require__(11);
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
+
+	var _SKEffectNode = __webpack_require__(208);
+
+	var _SKEffectNode2 = _interopRequireDefault(_SKEffectNode);
+
+	var _SKNode = __webpack_require__(209);
+
+	var _SKNode2 = _interopRequireDefault(_SKNode);
+
+	var _SKScene = __webpack_require__(210);
+
+	var _SKScene2 = _interopRequireDefault(_SKScene);
+
+	var _SKSceneScaleMode = __webpack_require__(211);
+
+	var _SKSceneScaleMode2 = _interopRequireDefault(_SKSceneScaleMode);
+
+	var _SKShapeNode = __webpack_require__(212);
+
+	var _SKShapeNode2 = _interopRequireDefault(_SKShapeNode);
+
+	var _SKSpriteNode = __webpack_require__(213);
+
+	var _SKSpriteNode2 = _interopRequireDefault(_SKSpriteNode);
+
+	var _SKTexture = __webpack_require__(214);
+
+	var _SKTexture2 = _interopRequireDefault(_SKTexture);
+
+	var _SKTextureFilteringMode = __webpack_require__(215);
+
+	var _SKTextureFilteringMode2 = _interopRequireDefault(_SKTextureFilteringMode);
 
 	var _AjaxRequest2 = __webpack_require__(78);
 
@@ -827,7 +871,7 @@ module.exports =
 
 	var _BinaryRequest3 = _interopRequireDefault(_BinaryRequest2);
 
-	var _Buffer2 = __webpack_require__(205);
+	var _Buffer2 = __webpack_require__(216);
 
 	var _Buffer3 = _interopRequireDefault(_Buffer2);
 
@@ -843,7 +887,7 @@ module.exports =
 
 	var _FileReader3 = _interopRequireDefault(_FileReader2);
 
-	var _HTMLCanvasElement2 = __webpack_require__(207);
+	var _HTMLCanvasElement2 = __webpack_require__(218);
 
 	var _HTMLCanvasElement3 = _interopRequireDefault(_HTMLCanvasElement2);
 
@@ -1040,7 +1084,18 @@ module.exports =
 	_ClassList3.default.registerClass(_SCNVector4ToGLKVector2.default);
 	_ClassList3.default.registerClass(_SCNView2.default);
 	_ClassList3.default.registerClass(_SCNWrapMode2.default);
+	_ClassList3.default.registerClass(_SKAction2.default);
+	_ClassList3.default.registerClass(_SKActionTimingMode2.default);
+	_ClassList3.default.registerClass(_SKBlendMode2.default);
 	_ClassList3.default.registerClass(_SKColor2.default);
+	_ClassList3.default.registerClass(_SKEffectNode2.default);
+	_ClassList3.default.registerClass(_SKNode2.default);
+	_ClassList3.default.registerClass(_SKScene2.default);
+	_ClassList3.default.registerClass(_SKSceneScaleMode2.default);
+	_ClassList3.default.registerClass(_SKShapeNode2.default);
+	_ClassList3.default.registerClass(_SKSpriteNode2.default);
+	_ClassList3.default.registerClass(_SKTexture2.default);
+	_ClassList3.default.registerClass(_SKTextureFilteringMode2.default);
 
 	/*global exports*/
 	exports.NSColor = _NSColor2.default;
@@ -1234,7 +1289,18 @@ module.exports =
 	exports.SCNVector4ToGLKVector4 = _SCNVector4ToGLKVector2.default;
 	exports.SCNView = _SCNView2.default;
 	exports.SCNWrapMode = _SCNWrapMode2.default;
+	exports.SKAction = _SKAction2.default;
+	exports.SKActionTimingMode = _SKActionTimingMode2.default;
+	exports.SKBlendMode = _SKBlendMode2.default;
 	exports.SKColor = _SKColor2.default;
+	exports.SKEffectNode = _SKEffectNode2.default;
+	exports.SKNode = _SKNode2.default;
+	exports.SKScene = _SKScene2.default;
+	exports.SKSceneScaleMode = _SKSceneScaleMode2.default;
+	exports.SKShapeNode = _SKShapeNode2.default;
+	exports.SKSpriteNode = _SKSpriteNode2.default;
+	exports.SKTexture = _SKTexture2.default;
+	exports.SKTextureFilteringMode = _SKTextureFilteringMode2.default;
 	exports._AjaxRequest = _AjaxRequest3.default;
 	exports._BinaryReader = _BinaryReader3.default;
 	exports._BinaryRequest = _BinaryRequest3.default;
@@ -19610,7 +19676,7 @@ module.exports =
 	    ///////////////////
 
 	    // Inspecting a Node’s Running Action
-	    _this._hasActions = false;
+	    //this._hasActions = false
 
 	    /**
 	     * @access private
@@ -20351,7 +20417,10 @@ module.exports =
 	     * @desc If the node is currently running an action that matches the key, SceneKit removes that action from the node, skipping any remaining animation it would perform but keeping any changes already made to the node.Use this method to cancel actions you scheduled using the runAction(_:forKey:) or runAction(_:forKey:completionHandler:) method.
 	     * @see https://developer.apple.com/reference/scenekit/scnactionable/1523617-removeaction
 	     */
-	    value: function removeActionForKey(key) {}
+	    value: function removeActionForKey(key) {
+	      // TODO: stop action
+	      this._actions.delete(key);
+	    }
 
 	    /**
 	     * Required. Ends and removes all actions from the node.
@@ -20363,7 +20432,10 @@ module.exports =
 
 	  }, {
 	    key: 'removeAllActions',
-	    value: function removeAllActions() {}
+	    value: function removeAllActions() {
+	      // TODO: stop actions
+	      this._actions.clear();
+	    }
 
 	    ///////////////////
 	    // SCNAnimatable //
@@ -20438,6 +20510,7 @@ module.exports =
 	  }, {
 	    key: 'removeAllAnimations',
 	    value: function removeAllAnimations() {
+	      // TODO: stop animations
 	      this._animations.clear();
 	    }
 
@@ -20590,7 +20663,7 @@ module.exports =
 	      node.physicsField = this.physicsField;
 	      node._particleSystems = this._particleSystems ? this._particleSystems.slice() : null;
 	      node._audioPlayers = this._audioPlayers;
-	      node._hasActions = this._hasActions;
+	      //node._hasActions = this._hasActions
 	      node._actions = new Map(this._actions);
 	      node._animations = new Map(this._animations);
 	      node.boundingBox = this.boundingBox;
@@ -21101,7 +21174,7 @@ module.exports =
 	  }, {
 	    key: 'hasActions',
 	    get: function get() {
-	      return this._hasActions;
+	      return this._actions.size > 0;
 	    }
 
 	    /**
@@ -28328,42 +28401,37 @@ module.exports =
 	var SCNPhysicsContact = function (_NSObject) {
 	  _inherits(SCNPhysicsContact, _NSObject);
 
+	  /**
+	   * constructor
+	   * @access public
+	   * @constructor
+	   */
 	  function SCNPhysicsContact() {
 	    _classCallCheck(this, SCNPhysicsContact);
 
-	    return _possibleConstructorReturn(this, (SCNPhysicsContact.__proto__ || Object.getPrototypeOf(SCNPhysicsContact)).apply(this, arguments));
+	    // Inspecting the Contact Properties
+
+	    var _this = _possibleConstructorReturn(this, (SCNPhysicsContact.__proto__ || Object.getPrototypeOf(SCNPhysicsContact)).call(this));
+
+	    _this._nodeA = null;
+	    _this._nodeB = null;
+	    _this._contactPoint = null;
+	    _this._contactNormal = null;
+	    _this._collisionImpulse = 0;
+	    _this._penetrationDistance = 0;
+	    return _this;
 	  }
 
+	  // Inspecting the Contact Properties
+	  /**
+	   * The node containing the first body in the contact.
+	   * @type {SCNNode}
+	   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.
+	   * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1523445-nodea
+	   */
+
+
 	  _createClass(SCNPhysicsContact, [{
-	    key: 'init',
-
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @returns {void}
-	     */
-	    value: function init() {
-
-	      // Inspecting the Contact Properties
-
-	      this._nodeA = null;
-	      this._nodeB = null;
-	      this._contactPoint = null;
-	      this._contactNormal = null;
-	      this._collisionImpulse = 0;
-	      this._penetrationDistance = 0;
-	    }
-
-	    // Inspecting the Contact Properties
-	    /**
-	     * The node containing the first body in the contact.
-	     * @type {SCNNode}
-	     * @desc Use the node’s physicsBody property to examine physics characteristics of the node.
-	     * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1523445-nodea
-	     */
-
-	  }, {
 	    key: 'nodeA',
 	    get: function get() {
 	      return this._nodeA;
@@ -41943,6 +42011,14 @@ module.exports =
 
 	var _CGPoint2 = _interopRequireDefault(_CGPoint);
 
+	var _CGRect = __webpack_require__(8);
+
+	var _CGRect2 = _interopRequireDefault(_CGRect);
+
+	var _CGSize = __webpack_require__(9);
+
+	var _CGSize2 = _interopRequireDefault(_CGSize);
+
 	var _SCNRenderer = __webpack_require__(64);
 
 	var _SCNRenderer2 = _interopRequireDefault(_SCNRenderer);
@@ -41950,10 +42026,6 @@ module.exports =
 	var _SCNTechniqueSupport = __webpack_require__(104);
 
 	var _SCNTechniqueSupport2 = _interopRequireDefault(_SCNTechniqueSupport);
-
-	var _CGRect = __webpack_require__(8);
-
-	var _CGRect2 = _interopRequireDefault(_CGRect);
 
 	var _SCNScene = __webpack_require__(66);
 
@@ -43131,6 +43203,11 @@ module.exports =
 
 	      return new _CGPoint2.default(point.x + sx - dx, point.y + sy - dy);
 	    }
+
+	    /**
+	     * @type {CGRect}
+	     */
+
 	  }, {
 	    key: 'backgroundColor',
 	    get: function get() {
@@ -43492,6 +43569,12 @@ module.exports =
 	    set: function set(newValue) {
 	      this._renderer.currentTime = newValue;
 	    }
+	  }, {
+	    key: 'bounds',
+	    get: function get() {
+	      var rect = this._canvas.getBoundingClientRect();
+	      return new _CGRect2.default(new _CGPoint2.default(rect.left, rect.top), new _CGSize2.default(rect.width, rect.height));
+	    }
 	  }], [{
 	    key: 'Option',
 	    get: function get() {
@@ -43514,6 +43597,4330 @@ module.exports =
 /* 205 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
+	var _SKActionTimingMode = __webpack_require__(206);
+
+	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	//import CGVector from '../CoreGraphics/CGVector'
+	//import CGPoint from '../CoreGraphics/CGPoint'
+	//import CGPath from '../CoreGraphics/CGPath'
+	//import CGSize from '../CoreGraphics/CGSize'
+	//import SKTexture from './SKTexture'
+	//import SKWarpGeometry from './SKWarpGeometry'
+	//import SKNode from './SKNode'
+	//import SKActionTimingFunction from './SKActionTimingFunction'
+
+
+	/**
+	 * An object that is executed by an SKNode to change its structure or content.
+	 * @access public
+	 * @extends {NSObject}
+	 * @see https://developer.apple.com/reference/spritekit/skaction
+	 */
+	var SKAction = function (_NSObject) {
+	  _inherits(SKAction, _NSObject);
+
+	  // Creating Custom Actions
+
+	  /**
+	   * Creates an action of the given name from an action file with a new duration.
+	   * @access public
+	   * @constructor
+	   * @param {string} name - The name of the action.
+	   * @param {string} url - The URL of the file containing the action.
+	   * @param {number} sec - The duration of the action, in seconds.
+	   * @see https://developer.apple.com/reference/spritekit/skaction/1417754-init
+	   */
+	  function SKAction(name, url, sec) {
+	    _classCallCheck(this, SKAction);
+
+	    // Inspecting an Action’s Animation Properties
+
+	    /**
+	     * A speed factor that modifies how fast an action runs.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417718-speed
+	     */
+	    var _this = _possibleConstructorReturn(this, (SKAction.__proto__ || Object.getPrototypeOf(SKAction)).call(this));
+
+	    _this.speed = 1.0;
+
+	    /**
+	     * The timing mode used to execute an action.
+	     * @type {SKActionTimingMode}
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417807-timingmode
+	     */
+	    _this.timingMode = _SKActionTimingMode2.default.linear;
+
+	    /**
+	     * A block used to customize the timing function.
+	     * @type {SKActionTimingFunction}
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417666-timingfunction
+	     */
+	    _this.timingFunction = null;
+
+	    /**
+	     * The duration required to complete an action.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417790-duration
+	     */
+	    _this.duration = 0;
+	    return _this;
+	  }
+
+	  /**
+	   * Creates an action of the given name from an action file.
+	   * @access public
+	   * @param {string} name - The name of the action.
+	   * @returns {SKAction}
+	   * @see https://developer.apple.com/reference/spritekit/skaction/1417814-init
+	   */
+
+
+	  _createClass(SKAction, [{
+	    key: 'reversed',
+
+
+	    // Reversing an Action
+
+	    /**
+	     * Creates an action that reverses the behavior of another action.
+	     * @access public
+	     * @returns {SKAction} - 
+	     * @desc This method always returns an action object; however, not all actions are reversible. When reversed, some actions return an object that either does nothing or that performs the same action as the original action. For details on how an action is reversed, see the description of the class method used to create that action.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417803-reversed
+	     */
+	    value: function reversed() {
+	      return null;
+	    }
+	  }], [{
+	    key: 'actionWithName',
+	    value: function actionWithName(name) {
+	      return new SKAction(name, null, 0.25);
+	    }
+
+	    /**
+	     * Creates an action of the given name from an action file with a new duration.
+	     * @access public
+	     * @param {string} name - The name of the action.
+	     * @param {number} sec - The duration of the action.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417697-init
+	     */
+
+	  }, {
+	    key: 'actionWithNamedDuration',
+	    value: function actionWithNamedDuration(name, sec) {
+	      return new SKAction(name, null, sec);
+	    }
+
+	    /**
+	     * Creates an action of the given name from an action file.
+	     * @access public
+	     * @param {string} name - The name of the action.
+	     * @param {string} url - The URL of the file containing the action.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417680-init
+	     */
+
+	  }, {
+	    key: 'actionWithNamedFrom',
+	    value: function actionWithNamedFrom(name, url) {
+	      return new SKAction(name, url);
+	    }
+
+	    // Creating Actions That Move Nodes
+
+	    /**
+	     * Creates an action that moves a node relative to its current position.
+	     * @access public
+	     * @param {number} deltaX - The x-value, in points, to add to the node’s position.
+	     * @param {number} deltaY - The y-value, in points, to add to the node’s position.
+	     * @param {number} sec - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the node’s position property animates from its current position to its new position.This action is reversible; the reverse is created as if the following code is executed:let negDelta = CGVector(dx: -deltaX, dy: -deltaY)
+	    let action = SKAction.moveBy(x: -deltaX, y: -deltaX, duration: sec)
+	    let negDelta = CGVector(dx: -deltaX, dy: -deltaY)
+	    let action = SKAction.moveBy(x: -deltaX, y: -deltaX, duration: sec)
+	      * @see https://developer.apple.com/reference/spritekit/skaction/1417722-moveby
+	     */
+
+	  }, {
+	    key: 'moveByXYDuration',
+	    value: function moveByXYDuration(deltaX, deltaY, sec) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that moves a node relative to its current position.
+	     * @access public
+	     * @param {CGVector} delta - A vector that describes the change to apply to the node’s position.
+	     * @param {number} sec - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the node’s position property animates from its current position to its new position.This action is reversible; the reverse is created as if the following code is executed:let negDelta = CGVector(dx: -deltaX, dy: -deltaY)
+	    let action = SKAction.move(by: negDelta, duration: sec)
+	    let negDelta = CGVector(dx: -deltaX, dy: -deltaY)
+	    let action = SKAction.move(by: negDelta, duration: sec)
+	      * @see https://developer.apple.com/reference/spritekit/skaction/1417739-move
+	     */
+
+	  }, {
+	    key: 'moveByDuration',
+	    value: function moveByDuration(delta, sec) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that moves a node to a new position.
+	     * @access public
+	     * @param {CGPoint} location - The coordinates for the node’s new position.
+	     * @param {number} sec - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the node’s position property animates from its current position to its new position.This action is not reversible; the reverse of this action has the same duration but does not move the node.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417768-move
+	     */
+
+	  }, {
+	    key: 'moveToDuration',
+	    value: function moveToDuration(location, sec) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that moves the node along a relative path, orienting the node to the path.
+	     * @access public
+	     * @param {CGPath} path - A Core Graphics path whose coordinates are relative to the node’s current position.
+	     * @param {number} sec - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc Calling this method is equivalent to calling the follow(_:asOffset:orientToPath:duration:) method, passing in true to both the offset and orient parameters.This action is reversible; the resulting action creates and then follows a reversed path with the same duration.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417822-follow
+	     */
+
+	  }, {
+	    key: 'followDuration',
+	    value: function followDuration(path, sec) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that moves the node along a relative path at a specified speed, orienting the node to the path.
+	     * @access public
+	     * @param {CGPath} path - A Core Graphics path whose coordinates are relative to the node’s current position.
+	     * @param {number} speed - The speed at which the node should move, in points per second.
+	     * @returns {SKAction} - 
+	     * @desc Calling this method is equivalent to calling the follow(_:asOffset:orientToPath:speed:) method, passing in true to both the offset and orient parameters.This action is reversible; the resulting action creates and then follows a reversed path with the same speed.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417786-follow
+	     */
+
+	  }, {
+	    key: 'follow',
+	    value: function follow(path, speed) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that moves the node along a path.
+	     * @access public
+	     * @param {CGPath} path - A path to follow.
+	     * @param {boolean} offset - If true, the points in the path are relative offsets to the node’s starting position. If false, the points in the node are absolute coordinate values.
+	     * @param {boolean} orient - If true, the node’s zRotation property animates so that the node turns to follow the path. If false, the zRotation property of the node is unchanged.
+	     * @param {number} sec - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the node’s position and zRotation properties are animated along the provided path.This action is reversible; the resulting action creates a reversed path and then follows it, with the same duration.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417662-follow
+	     */
+
+	  }, {
+	    key: 'followAsOffsetOrientToPathDuration',
+	    value: function followAsOffsetOrientToPathDuration(path, offset, orient, sec) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that moves the node at a specified speed along a path.
+	     * @access public
+	     * @param {CGPath} path - A path to follow.
+	     * @param {boolean} offset - If true, the points in the path are relative offsets to the node’s starting position. If false, the points in the node are absolute coordinate values.
+	     * @param {boolean} orient - If true, the node’s zRotation property animates so that the node turns to follow the path. If false, the zRotation property of the node is unchanged.
+	     * @param {number} speed - The speed at which the node should move, in points per second.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the node’s position and zRotation properties are animated along the provided path. The duration of the action is determined by the length of the path and the speed of the node.This action is reversible; the resulting action creates a reversed path and then follows it, with the same speed.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417798-follow
+	     */
+
+	  }, {
+	    key: 'followAsOffsetOrientToPath',
+	    value: function followAsOffsetOrientToPath(path, offset, orient, speed) {
+	      return null;
+	    }
+
+	    // Creating Actions That Rotate Nodes
+
+	    /**
+	     * Creates an action that rotates the node by a relative value.
+	     * @access public
+	     * @param {number} radians - The amount to rotate the node, in radians.
+	     * @param {number} sec - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the node’s zRotation property animates to the new angle.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.rotate(byAngle: -radians, duration: sec)
+	    let action = SKAction.rotate(byAngle: -radians, duration: sec)
+	      * @see https://developer.apple.com/reference/spritekit/skaction/1417805-rotate
+	     */
+
+	  }, {
+	    key: 'rotateByAngleDuration',
+	    value: function rotateByAngleDuration(radians, sec) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that rotates the node counterclockwise to an absolute angle.
+	     * @access public
+	     * @param {number} radians - The angle to rotate the node to, in radians.
+	     * @param {number} sec - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the node’s zRotation property is interpolated to the new angle.This action is not reversible; the reverse of this action has the same duration but does not change anything.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417668-rotate
+	     */
+
+	  }, {
+	    key: 'rotateToAngleDuration',
+	    value: function rotateToAngleDuration(radians, sec) {
+	      return null;
+	    }
+
+	    // Creating Actions That Change a Node’s Animation Speed
+
+	    /**
+	     * Creates an action that changes how fast the node executes actions by a relative value.
+	     * @access public
+	     * @param {number} speed - The amount to add to the node’s speed.
+	     * @param {number} sec - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the node’s speed property animates to the new value.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.speed(by: -speed, duration: sec)
+	    let action = SKAction.speed(by: -speed, duration: sec)
+	      * @see https://developer.apple.com/reference/spritekit/skaction/1417690-speed
+	     */
+
+	  }, {
+	    key: 'speedByDuration',
+	    value: function speedByDuration(speed, sec) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that changes how fast the node executes actions.
+	     * @access public
+	     * @param {number} speed - The new value for the node’s speed.
+	     * @param {number} sec - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the node’s speed property animates to the new value.This action is not reversible; the reverse of this action has the same duration but does not change anything.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417684-speed
+	     */
+
+	  }, {
+	    key: 'speedToDuration',
+	    value: function speedToDuration(speed, sec) {
+	      return null;
+	    }
+
+	    // Creating Actions That Change a Node’s Scale
+
+	    /**
+	     * Creates an action that changes the x and y scale values of a node by a relative value.
+	     * @access public
+	     * @param {number} scale - The amount to add to the node’s x and y scale values.
+	     * @param {number} sec - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the node’s xScale and yScale properties are animated to the new value.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.scale(by: -scale, duration: sec)
+	    let action = SKAction.scale(by: -scale, duration: sec)
+	      * @see https://developer.apple.com/reference/spritekit/skaction/1417741-scale
+	     */
+
+	  }, {
+	    key: 'scaleByDuration',
+	    value: function scaleByDuration(scale, sec) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that changes the x and y scale values of a node to achieve 
+	     * @access public
+	     * @param {CGSize} size - The new size of the node.
+	     * @param {number} sec - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the node’s xScale and yScale properties are animated to achieve the specified size in its parent's coordinate space. This action is not reversible; the reverse of this action has the same duration but does not change anything.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1643619-scale
+	     */
+
+	  }, {
+	    key: 'scaleToDuration',
+	    value: function scaleToDuration(size, sec) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that adds relative values to the x and y scale values of a node.
+	     * @access public
+	     * @param {number} xScale - The amount to add to the node’s x scale value.
+	     * @param {number} yScale - The amount to add to the node’s y scale value.
+	     * @param {number} sec - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the node’s xScale and yScale properties are animated to the new value.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.scaleX(by: -scaleX, y: -scaleY, duration: sec)
+	    let action = SKAction.scaleX(by: -scaleX, y: -scaleY, duration: sec)
+	      * @see https://developer.apple.com/reference/spritekit/skaction/1417796-scalex
+	     */
+
+	  }, {
+	    key: 'scaleXByYDuration',
+	    value: function scaleXByYDuration(xScale, yScale, sec) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that changes the x and y scale values of a node.
+	     * @access public
+	     * @param {number} xScale - The new value for the node’s x scale value.
+	     * @param {number} yScale - The new value for the node’s y scale value.
+	     * @param {number} sec - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the node’s xScale and yScale properties are animated to the new value.This action is not reversible; the reverse of this action has the same duration but does not change anything.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417728-scalex
+	     */
+
+	  }, {
+	    key: 'scaleXToYDuration',
+	    value: function scaleXToYDuration(xScale, yScale, sec) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that changes the x scale value of a node to a new value.
+	     * @access public
+	     * @param {number} scale - The new value for the node’s x scale value.
+	     * @param {number} sec - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the node’s xScale property animates to the new value.This action is not reversible; the reverse of this action has the same duration but does not change anything.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417699-scalex
+	     */
+
+	  }, {
+	    key: 'scaleXToDuration',
+	    value: function scaleXToDuration(scale, sec) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that changes the y scale value of a node to a new value.
+	     * @access public
+	     * @param {number} scale - The new value for the node’s y scale value.
+	     * @param {number} sec - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the node’s yScale property animates to the new value.This action is not reversible; the reverse of this action has the same duration but does not change anything.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417708-scaley
+	     */
+
+	  }, {
+	    key: 'scaleYToDuration',
+	    value: function scaleYToDuration(scale, sec) {
+	      return null;
+	    }
+
+	    // Creating Actions to Show or Hide a Node
+
+	    /**
+	     * Creates an action that makes a node visible.
+	     * @access public
+	     * @returns {SKAction} - 
+	     * @desc This action has an instantaneous duration. When the action executes, the node’s isHidden property is set to false.This action is reversible; the reversed action hides the node.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417660-unhide
+	     */
+
+	  }, {
+	    key: 'unhide',
+	    value: function unhide() {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that hides a node.
+	     * @access public
+	     * @returns {SKAction} - 
+	     * @desc This action has an instantaneous duration. When the action executes, the node’s isHidden property is set to true.This action is reversible; the reversed action shows the node.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417704-hide
+	     */
+
+	  }, {
+	    key: 'hide',
+	    value: function hide() {
+	      return null;
+	    }
+
+	    // Creating Actions That Change a Node’s Transparency
+
+	    /**
+	     * Creates an action that changes the alpha value of the node to 1.0.
+	     * @access public
+	     * @param {number} sec - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the node’s alpha property animates from its current value to 1.0.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.fadeOut(withDuration: sec)
+	    let action = SKAction.fadeOut(withDuration: sec)
+	      * @see https://developer.apple.com/reference/spritekit/skaction/1417818-fadein
+	     */
+
+	  }, {
+	    key: 'fadeInWithDuration',
+	    value: function fadeInWithDuration(sec) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that changes the alpha value of the node to 0.0.
+	     * @access public
+	     * @param {number} sec - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the node’s alpha property animates from its current value to 0.0. This causes the node to disappear.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.fadeIn(withDuration: sec)
+	    let action = SKAction.fadeIn(withDuration: sec)
+	      * @see https://developer.apple.com/reference/spritekit/skaction/1417738-fadeout
+	     */
+
+	  }, {
+	    key: 'fadeOutWithDuration',
+	    value: function fadeOutWithDuration(sec) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that adjusts the alpha value of a node by a relative value.
+	     * @access public
+	     * @param {number} factor - The amount to add to the node’s alpha value.
+	     * @param {number} sec - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the node’s alpha property animates to its new value.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.fadeAlpha(by: -factor, duration: sec)
+	    let action = SKAction.fadeAlpha(by: -factor, duration: sec)
+	      * @see https://developer.apple.com/reference/spritekit/skaction/1417716-fadealpha
+	     */
+
+	  }, {
+	    key: 'fadeAlphaByDuration',
+	    value: function fadeAlphaByDuration(factor, sec) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that adjusts the alpha value of a node to a new value.
+	     * @access public
+	     * @param {number} alpha - The new value of the node’s alpha.
+	     * @param {number} sec - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the node’s alpha property animates to its new value.This action is not reversible; the reverse of this action has the same duration but does not change anything.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417673-fadealpha
+	     */
+
+	  }, {
+	    key: 'fadeAlphaToDuration',
+	    value: function fadeAlphaToDuration(alpha, sec) {
+	      return null;
+	    }
+
+	    // Creating Actions That Change a Sprite Node’s Content
+
+	    /**
+	     * Creates an action that adjusts the size of a sprite.
+	     * @access public
+	     * @param {number} width - The amount to add to the sprite’s width.
+	     * @param {number} height - The amount to add to the sprite’s height.
+	     * @param {number} duration - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc This action can only be executed by a SKSpriteNode object. When the action executes, the sprite’s size property animates to its new value.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.resize(byWidth: -width, height: -height, duration: sec)
+	    let action = SKAction.resize(byWidth: -width, height: -height, duration: sec)
+	      * @see https://developer.apple.com/reference/spritekit/skaction/1417812-resize
+	     */
+
+	  }, {
+	    key: 'resizeByWidth',
+	    value: function resizeByWidth(width, height, duration) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that changes the height of a sprite to a new absolute value.
+	     * @access public
+	     * @param {number} height - The new height of the sprite.
+	     * @param {number} duration - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc This action can only be executed by an SKSpriteNode object. When the action executes, the sprite’s size property animates to its new value.This action is not reversible; the reverse of this action has the same duration but does not change anything.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417825-resize
+	     */
+
+	  }, {
+	    key: 'resizeToHeight',
+	    value: function resizeToHeight(height, duration) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that changes the width of a sprite to a new absolute value.
+	     * @access public
+	     * @param {number} width - The new width of the sprite.
+	     * @param {number} duration - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc This action can only be executed by an SKSpriteNode object. When the action executes, the sprite’s size property animates to its new value.This action is not reversible; the reverse of this action has the same duration but does not change anything.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417686-resize
+	     */
+
+	  }, {
+	    key: 'resizeToWidth',
+	    value: function resizeToWidth(width, duration) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that changes a sprite’s texture.
+	     * @access public
+	     * @param {SKTexture} texture - The new texture to use on the sprite.
+	     * @returns {SKAction} - 
+	     * @desc This action can only be executed by an SKSpriteNode object. When the action executes, the sprite’s texture property changes immediately to the new texture.This action is not reversible; the reverse of this action does nothing.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417784-settexture
+	     */
+
+	  }, {
+	    key: 'setTexture',
+	    value: function setTexture(texture) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that animates changes to a sprite’s texture.
+	     * @access public
+	     * @param {SKTexture[]} textures - An array of textures to use when animating a sprite.
+	     * @param {number} sec - The duration, in seconds, that each texture is displayed. 
+	     * @returns {SKAction} - 
+	     * @desc This action can only be executed by an SKSpriteNode object. When the action executes, the sprite’s texture property animates through the array of textures. The sprite’s texture property is changed to the next texture in the array. The action then pauses for the specified time before continuing. The action continues until it has finished animating through all of the textures in the array. The total duration of the action is the number of textures multiplied by the frame interval.This action is reversible; the resulting action animates through the same textures from last to first.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417828-animate
+	     */
+
+	  }, {
+	    key: 'animateWithTimePerFrame',
+	    value: function animateWithTimePerFrame(textures, sec) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that changes a sprite’s normal texture.
+	     * @access public
+	     * @param {SKTexture} texture - The new texture to use on the sprite.
+	     * @returns {SKAction} - 
+	     * @desc This action can only be executed by an SKSpriteNode object. When the action executes, the sprite’s normalTexture property changes immediately to the new texture.This action is not reversible; the reverse of this action does nothing.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417706-setnormaltexture
+	     */
+
+	  }, {
+	    key: 'setNormalTexture',
+	    value: function setNormalTexture(texture) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that animates changes to a sprite’s normal texture.
+	     * @access public
+	     * @param {SKTexture[]} textures - An array of textures to use.
+	     * @param {number} sec - The amount of time that each texture is displayed.
+	     * @returns {SKAction} - 
+	     * @desc This action can only be executed by an SKSpriteNode object. When the action executes, the sprite’s normalTexture property animates through the array of textures. The sprite’s normalTexture property is changed to the next texture in the array. The action then pauses for the specified time before continuing. The action continues until it has finished animating through all of the textures in the array. The total duration of the action is the number of textures multiplied by the frame interval.This action is reversible; the resulting action animates through the same textures from last to first.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417746-animate
+	     */
+
+	  }, {
+	    key: 'animateWithNormalTexturesTimePerFrame',
+	    value: function animateWithNormalTexturesTimePerFrame(textures, sec) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an animation that animates a sprite’s color and blend factor.
+	     * @access public
+	     * @param {CGColor} color - The new color for the sprite.
+	     * @param {number} colorBlendFactor - The new blend factor for the sprite.
+	     * @param {number} sec - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc This action can only be executed by an SKSpriteNode object. When the action executes, the sprite’s color and colorBlendFactor properties are animated to their new values.This action is not reversible; the reverse of this action does nothing.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417678-colorize
+	     */
+
+	  }, {
+	    key: 'colorizeWithDuration',
+	    value: function colorizeWithDuration(color, colorBlendFactor, sec) {
+	      return null;
+	    }
+
+	    // Creating Physics Actions
+
+	    /**
+	     * Creates an action that applies a force to the center of gravity of a node’s physics body.
+	     * @access public
+	     * @param {CGVector} force - A vector that describes how much force is applied in each dimension. The force is measured in Newtons.
+	     * @param {number} sec - The duration over which the force is applied to the physics body.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the force is applied continuously to the physics body for the duration of the action. This action accelerates the body without imparting any angular acceleration to it.This action is reversible; it applies an equal force in the opposite direction.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417782-applyforce
+	     */
+
+	  }, {
+	    key: 'applyForceDuration',
+	    value: function applyForceDuration(force, sec) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that applies a torque to an node’s physics body.
+	     * @access public
+	     * @param {number} torque - The amount of torque, in Newton-meters.
+	     * @param {number} sec - The duration over which the torque is applied to the physics body.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the torque is applied continuously to the physics body for the duration of the action. This action generates an angular acceleration on the body without causing any linear acceleration.This action is reversible; it applies an equal torque in the opposite direction.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417756-applytorque
+	     */
+
+	  }, {
+	    key: 'applyTorqueDuration',
+	    value: function applyTorqueDuration(torque, sec) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that applies an force to a specific point on a node’s physics body.
+	     * @access public
+	     * @param {CGVector} force - A vector that describes how much force is applied in each dimension. The force is measured in Newtons.
+	     * @param {CGPoint} point - A point in scene coordinates that defines where the force is applied to the physics body.
+	     * @param {number} sec - The duration over which the force is applied to the physics body.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the force is applied continuously to the physics body for the duration of the action. Because the force is applied to a specific point on the body, it may impart both linear acceleration and angular acceleration. This action is reversible; it applies an equal force in the opposite direction.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417823-applyforce
+	     */
+
+	  }, {
+	    key: 'applyForceAtDuration',
+	    value: function applyForceAtDuration(force, point, sec) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that applies an impulse to the center of gravity of a physics body.
+	     * @access public
+	     * @param {CGVector} impulse - A vector that describes how much momentum to impart to the body in each dimension over the duration of the action. The impulse is measured in Newton-seconds.
+	     * @param {number} sec - The duration over which the total impulse should be applied to the physics body.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, applies a constant force to the physics body for the duration of the action. The force is calculated by dividing the impulse strength by the duration of the action. For example, if an impulse of 1 Newton-second is applied to the physics body, and the the duration is 10 seconds, then a force of 0.1 Newtons is applied to the physics body.This action is reversible; it applies an equal impulse in the opposite direction.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417770-applyimpulse
+	     */
+
+	  }, {
+	    key: 'applyImpulseDuration',
+	    value: function applyImpulseDuration(impulse, sec) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that applies an angular impulse to a node’s physics body.
+	     * @access public
+	     * @param {number} impulse - The total impulse to apply to the physics body. The impulse is measured in Newton-seconds.
+	     * @param {number} sec - The number of seconds over which to apply the impulse. For example, if you specify a duration of four seconds, one quarter of the impulse will be applied each second.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, applies a constant torque to the physics body for the duration of the action. The torque is calculated by dividing the impulse strength by the duration of the action. This action affects the body’s angular velocity without changing the body’s linear velocity.This action is reversible; it applies an equal angular impulse in the opposite direction.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417775-applyangularimpulse
+	     */
+
+	  }, {
+	    key: 'applyAngularImpulseDuration',
+	    value: function applyAngularImpulseDuration(impulse, sec) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that applies an impulse to a specific point of a node’s physics body.
+	     * @access public
+	     * @param {CGVector} impulse - The total impulse to apply to the physics body. The impulse is measured in Newton-seconds.
+	     * @param {CGPoint} point - A point in scene coordinates that defines where the impulse was applied to the physics body.
+	     * @param {number} sec - A new action object.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, applies a constant force to the physics body for the duration of the action. The force is calculated by dividing the impulse strength by the duration of the action. For example, if an impulse of 1 Newton-second is applied to the physics body, and the the duration is 10 seconds, then a force of 0.1 Newtons is applied to the physics body. Because the force is applied to a specific point on the body, it may impart both linear acceleration and angular acceleration.This action is reversible; it applies an equal impulse in the opposite direction.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417732-applyimpulse
+	     */
+
+	  }, {
+	    key: 'applyImpulseAtDuration',
+	    value: function applyImpulseAtDuration(impulse, point, sec) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that changes the charge of a node’s physics body to a new value.
+	     * @access public
+	     * @param {number} v - The new charge of the physics body.
+	     * @param {number} duration - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the physics body’s charge property animates from its current value to its new value.This action is not reversible.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417752-changecharge
+	     */
+
+	  }, {
+	    key: 'changeChargeTo',
+	    value: function changeChargeTo(v, duration) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that changes the charge of a node’s physics body by a relative value.
+	     * @access public
+	     * @param {number} v - The amount to add to the physics body’s charge.
+	     * @param {number} duration - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the physics body’s charge property animates from its current value to its new value.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.changeCharge(by: -v, duration: sec)
+	    let action = SKAction.changeCharge(by: -v, duration: sec)
+	      * @see https://developer.apple.com/reference/spritekit/skaction/1417714-changecharge
+	     */
+
+	  }, {
+	    key: 'changeChargeBy',
+	    value: function changeChargeBy(v, duration) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that changes the mass of a node’s physics body to a new value.
+	     * @access public
+	     * @param {number} v - The new mass of the physics body.
+	     * @param {number} duration - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the physics body’s mass property animates from its current value to its new value.This action is not reversible.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417780-changemass
+	     */
+
+	  }, {
+	    key: 'changeMassTo',
+	    value: function changeMassTo(v, duration) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that changes the mass of a node’s physics body by a relative value.
+	     * @access public
+	     * @param {number} v - The amount to add to the physics body’s mass.
+	     * @param {number} duration - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the physics body’s mass property animates from its current value to its new value.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.changeMass(by: -v, duration: sec)
+	    let action = SKAction.changeMass(by: -v, duration: sec)
+	      * @see https://developer.apple.com/reference/spritekit/skaction/1417710-changemass
+	     */
+
+	  }, {
+	    key: 'changeMassBy',
+	    value: function changeMassBy(v, duration) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that animates a change of a physics field’s strength.
+	     * @access public
+	     * @param {number} strength - The new strength for the field.
+	     * @param {number} sec - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the field node’s strength property animates from its current value to its new value.This action is not reversible; the reverse of this action has the same duration but does not do anything.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417815-strength
+	     */
+
+	  }, {
+	    key: 'strengthToDuration',
+	    value: function strengthToDuration(strength, sec) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that animates a change of a physics field’s strength to a value relative to the existing value.
+	     * @access public
+	     * @param {number} strength - The value to add to the field.
+	     * @param {number} sec - The duration of the animation.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the field node’s strength property animates from its current value to its new value.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.strength(by: -strength, duration: sec)
+	    let action = SKAction.strength(by: -strength, duration: sec)
+	      * @see https://developer.apple.com/reference/spritekit/skaction/1417762-strength
+	     */
+
+	  }, {
+	    key: 'strengthByDuration',
+	    value: function strengthByDuration(strength, sec) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that animates a change of a physics field’s falloff.
+	     * @access public
+	     * @param {number} falloff - The new falloff for the field.
+	     * @param {number} sec - The duration of the animation, in seconds.
+	     * @returns {SKAction} - 
+	     * @desc When the action runs, the field node’s falloff property animates from its current value to its new value. This action is not reversible.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417758-falloff
+	     */
+
+	  }, {
+	    key: 'falloffToDuration',
+	    value: function falloffToDuration(falloff, sec) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that animates a change of a physics field’s falloff to a value relative to the existing value.
+	     * @access public
+	     * @param {number} falloff - The value to add to the falloff.
+	     * @param {number} sec - The duration of the animation, in seconds.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the field node’s falloff property animates from its current value to its new value.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.falloff(by: -falloff, duration: sec)
+	    let action = SKAction.falloff(by: -falloff, duration: sec)
+	      * @see https://developer.apple.com/reference/spritekit/skaction/1417766-falloff
+	     */
+
+	  }, {
+	    key: 'falloffByDuration',
+	    value: function falloffByDuration(falloff, sec) {
+	      return null;
+	    }
+
+	    // Creating Actions to Warp a Node
+
+	    /**
+	     * Creates an action to distort a node through a sequence of SKWarpGeometry objects.  
+	     * @access public
+	     * @param {SKWarpGeometry[]} warps - The sequence of warps to apply to the node.
+	     * @param {number[]} times - The times at which each warp distortion in the sequence should complete.
+	     * @returns {?SKAction} - 
+	     * @desc The numberOfColumns and numberOfRows in each geometry in the sequence should match.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1690937-animate
+	     */
+
+	  }, {
+	    key: 'animateWithWarps',
+	    value: function animateWithWarps(warps, times) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action to distort a node based using an SKWarpGeometry object.  
+	     * @access public
+	     * @param {SKWarpGeometry} warp - The warp geometry to distort the node to.
+	     * @param {number} duration - The duration of the animation.
+	     * @returns {?SKAction} - 
+	     * @desc The numberOfColumns and numberOfRows in the node's current geometry should match those of the specified geometry.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1690951-warp
+	     */
+
+	  }, {
+	    key: 'warpTo',
+	    value: function warpTo(warp, duration) {
+	      return null;
+	    }
+
+	    // Creating Audio Actions
+
+	    /**
+	     * Creates an action that plays a sound.
+	     * @access public
+	     * @param {string} soundFile - The name of a sound file in the app’s bundle.
+	     * @param {boolean} wait - If true, the duration of this action is the same as the length of the audio playback. If false, the action is considered to have completed immediately.
+	     * @returns {SKAction} - 
+	     * @desc Use SKAction playSoundFileNamed:waitForCompletion: only for short incidentals. Use AVAudioPlayer for long running background music. This action is not reversible; the reversed action is identical to the original action.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417664-playsoundfilenamed
+	     */
+
+	  }, {
+	    key: 'playSoundFileNamedWaitForCompletion',
+	    value: function playSoundFileNamedWaitForCompletion(soundFile, wait) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that tells an audio node to start playback.
+	     * @access public
+	     * @returns {SKAction} - 
+	     * @desc This action may only be executed on an SKAudioNode object.This action is not reversible.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417730-play
+	     */
+
+	  }, {
+	    key: 'play',
+	    value: function play() {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that tells an audio node to pause playback.
+	     * @access public
+	     * @returns {SKAction} - 
+	     * @desc This action may only be executed on an SKAudioNode object. The audio is paused, and if restarted, resumes at where it was paused.This action is not reversible.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417820-pause
+	     */
+
+	  }, {
+	    key: 'pause',
+	    value: function pause() {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that tells an audio node to stop playback.
+	     * @access public
+	     * @returns {SKAction} - 
+	     * @desc This action may only be executed on an SKAudioNode object. The audio is stopped, and if restarted, begins at the beginning.This action is not reversible.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417794-stop
+	     */
+
+	  }, {
+	    key: 'stop',
+	    value: function stop() {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that changes an audio node’s playback rate to a new value.
+	     * @access public
+	     * @param {number} v - The new value for the playback rate. A playback rate of 1.0 represents normal speed.
+	     * @param {number} duration - The duration of the animation, in seconds.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the audio node’s playback rate animates from its current value to its new value. For more information, see AVAudio3DMixing.This action is not reversible.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417808-changeplaybackrate
+	     */
+
+	  }, {
+	    key: 'changePlaybackRateTo',
+	    value: function changePlaybackRateTo(v, duration) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that changes an audio node’s playback rate by a relative amount.
+	     * @access public
+	     * @param {number} v - The amount to change the playback rate by. A playback rate of 1.0 represents normal speed.
+	     * @param {number} duration - The duration of the animation, in seconds.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the audio node’s playback rate animates from its current value to its new value. For more information, see AVAudio3DMixing.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.changePlaybackRate(by: -v, duration: sec)
+	    let action = SKAction.changePlaybackRate(by: -v, duration: sec)
+	      * @see https://developer.apple.com/reference/spritekit/skaction/1417670-changeplaybackrate
+	     */
+
+	  }, {
+	    key: 'changePlaybackRateBy',
+	    value: function changePlaybackRateBy(v, duration) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that changes an audio node’s volume to a new value.
+	     * @access public
+	     * @param {number} v - The new value for the volume. The value should be between 0.0 (silence) and 1.0 (maximum value for source audio), inclusive. 
+	     * @param {number} duration - The duration of the animation, in seconds.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the audio node’s volume animates from its current value to its new value. For more information, see AVAudio3DMixing.This action is not reversible.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417682-changevolume
+	     */
+
+	  }, {
+	    key: 'changeVolumeTo',
+	    value: function changeVolumeTo(v, duration) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that changes an audio node’s volume by a relative value.
+	     * @access public
+	     * @param {number} v - The amount to change the volume by. 
+	     * @param {number} duration - The duration of the animation, in seconds.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the audio node’s volume animates from its current value to its new value. For more information, see AVAudio3DMixing.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.changeVolume(by: -v, duration: sec)
+	    let action = SKAction.changeVolume(by: -v, duration: sec)
+	      * @see https://developer.apple.com/reference/spritekit/skaction/1417726-changevolume
+	     */
+
+	  }, {
+	    key: 'changeVolumeBy',
+	    value: function changeVolumeBy(v, duration) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that changes an audio node’s obstruction to a new value.
+	     * @access public
+	     * @param {number} v - The new value for the obstruction, in decibels.
+	     * @param {number} duration - The duration of the animation, in seconds.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the audio node’s obstruction animates from its current value to its new value. Passing this action a value of -100 yields the greatest reduction in volume. For more information, see AVAudio3DMixing.This action is not reversible.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1519718-changeobstruction
+	     */
+
+	  }, {
+	    key: 'changeObstructionTo',
+	    value: function changeObstructionTo(v, duration) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that changes an audio node’s obstruction by a relative value.
+	     * @access public
+	     * @param {number} v - The amount to change the obstruction by, in decibels.
+	     * @param {number} duration - The duration of the animation, in seconds.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the audio node’s obstruction animates from its current value to its new value. For more information, see AVAudio3DMixing.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.changeObstruction(by: -v, duration: sec)
+	    let action = SKAction.changeObstruction(by: -v, duration: sec)
+	      * @see https://developer.apple.com/reference/spritekit/skaction/1520346-changeobstruction
+	     */
+
+	  }, {
+	    key: 'changeObstructionBy',
+	    value: function changeObstructionBy(v, duration) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that changes an audio node’s occlusion to a new value.
+	     * @access public
+	     * @param {number} v - The new value for the occlusion, in decibels.
+	     * @param {number} duration - The duration of the animation, in seconds.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the audio node’s occlusion animates from its current value to its new value. Passing this action a value of -100 yields the greatest reduction in volume. For more information, see AVAudio3DMixing.This action is not reversible.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1520433-changeocclusion
+	     */
+
+	  }, {
+	    key: 'changeOcclusionTo',
+	    value: function changeOcclusionTo(v, duration) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that changes an audio node’s occlusion by a relative value.
+	     * @access public
+	     * @param {number} v - The amount to change the occlusion by, in decibels.
+	     * @param {number} duration - The duration of the animation, in seconds.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the audio node’s occlusion animates from its current value to its new value. For more information, see AVAudio3DMixing.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.changeOcclusion(by: -v, duration: sec)
+	    let action = SKAction.changeOcclusion(by: -v, duration: sec)
+	      * @see https://developer.apple.com/reference/spritekit/skaction/1520117-changeocclusion
+	     */
+
+	  }, {
+	    key: 'changeOcclusionBy',
+	    value: function changeOcclusionBy(v, duration) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that changes an audio node’s reverb to a new value.
+	     * @access public
+	     * @param {number} v - The new value for the reverb. The value should be between 0.0 and 1.0, inclusive.
+	     * @param {number} duration - The duration of the animation, in seconds.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the audio node’s reverb animates from its current value to its new value. For more information, see AVAudio3DMixing.This action is not reversible.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1520320-changereverb
+	     */
+
+	  }, {
+	    key: 'changeReverbTo',
+	    value: function changeReverbTo(v, duration) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that changes an audio node’s reverb by a relative value.
+	     * @access public
+	     * @param {number} v - The amount to change the reverb by.
+	     * @param {number} duration - The duration of the animation, in seconds.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the audio node’s reverb animates from its current value to its new value. For more information, see AVAudio3DMixing.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.changeReverb(by: -v, duration: sec)
+	    let action = SKAction.changeReverb(by: -v, duration: sec)
+	      * @see https://developer.apple.com/reference/spritekit/skaction/1519568-changereverb
+	     */
+
+	  }, {
+	    key: 'changeReverbBy',
+	    value: function changeReverbBy(v, duration) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that changes an audio node’s stereo panning to a new value.
+	     * @access public
+	     * @param {number} v - The new value for stereo panning. The value must between -1.0 (left channel only) and 1.0 (right channel only), inclusive.
+	     * @param {number} duration - The duration of the animation, in seconds.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the audio node’s stereo panning animates from its current value to its new value. For more information, see AVAudio3DMixing.This action is not reversible.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1519976-stereopan
+	     */
+
+	  }, {
+	    key: 'stereoPanTo',
+	    value: function stereoPanTo(v, duration) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that changes an audio node’s stereo panning by a relative value.
+	     * @access public
+	     * @param {number} v - The amount to change the stereo panning by. 
+	     * @param {number} duration - The duration of the animation, in seconds.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the audio node’s stereo panning animates from its current value to its new value. For more information, see AVAudio3DMixing.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.stereoPan(by: -v, duration: sec)
+	    let action = SKAction.stereoPan(by: -v, duration: sec)
+	      * @see https://developer.apple.com/reference/spritekit/skaction/1519713-stereopan
+	     */
+
+	  }, {
+	    key: 'stereoPanBy',
+	    value: function stereoPanBy(v, duration) {
+	      return null;
+	    }
+
+	    // Removing Nodes from the Scene
+
+	    /**
+	     * Creates an action that removes the node from its parent.
+	     * @access public
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the node is immediately removed from its parent.This action is not reversible; the reverse of this action is the same action.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417748-removefromparent
+	     */
+
+	  }, {
+	    key: 'removeFromParent',
+	    value: function removeFromParent() {
+	      return null;
+	    }
+
+	    // Creating Actions That Perform Actions on a Node’s Child
+
+	    /**
+	     * Creates an action that runs an action on a named child object.
+	     * @access public
+	     * @param {SKAction} action - The action to execute.
+	     * @param {string} name - The name of a child object. See the name property on the SKNode object.
+	     * @returns {SKAction} - 
+	     * @desc This action has an instantaneous duration, although the action executed on the child may have a duration of its own. When the action executes, it looks up an appropriate child node and calls its run(_:) method, passing in the action to execute. This action is reversible; it tells the child to execute the reverse of the action specified by the action parameter.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417671-run
+	     */
+
+	  }, {
+	    key: 'runOnChildWithName',
+	    value: function runOnChildWithName(action, name) {
+	      return null;
+	    }
+
+	    // Creating Actions That Combine or Repeat Other Actions
+
+	    /**
+	     * Creates an action that runs a collection of actions in parallel.
+	     * @access public
+	     * @param {SKAction[]} actions - An array of SKAction objects.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the actions that comprise the group all start immediately and run in parallel. The duration of the group action is the longest duration among the collection of actions. If an action in the group has a duration less than the group’s duration, the action completes, then idles until the group completes the remaining actions. This matters most when creating a repeating action that repeats a group.This action is reversible; it creates a new group action that contains the reverse of each action specified in the group. 
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417688-group
+	     */
+
+	  }, {
+	    key: 'group',
+	    value: function group(actions) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that runs a collection of actions sequentially.
+	     * @access public
+	     * @param {SKAction[]} actions - An array of SKAction objects.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the first action in the sequence starts and runs to completion. Subsequent actions in the sequence run in a similar fashion until all of the actions in the sequence have executed. The duration of the sequence action is the sum of the durations of the actions in the sequence.This action is reversible; it creates a new sequence action that reverses the order of the actions. Each action in the reversed sequence is itself reversed. For example, if an action sequence is {1,2,3}, the reversed sequence would be {3R,2R,1R}.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417817-sequence
+	     */
+
+	  }, {
+	    key: 'sequence',
+	    value: function sequence(actions) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that repeats another action a specified number of times.
+	     * @access public
+	     * @param {SKAction} action - The action to execute.
+	     * @param {number} count - The number of times to execute the action.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the associated action runs to completion and then repeats, until the count is reached.This action is reversible; it creates a new action that is the reverse of the specified action and then repeats it the same number of times.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417750-repeat
+	     */
+
+	  }, {
+	    key: 'repeat',
+	    value: function repeat(action, count) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that repeats another action forever.
+	     * @access public
+	     * @param {SKAction} action - The action to execute.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the associated action runs to completion and then repeats.This action is reversible; it creates a new action that is the reverse of the specified action and then repeats it forever.NoteThe action to be repeated must have a non-instantaneous duration.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417676-repeatforever
+	     */
+
+	  }, {
+	    key: 'repeatForever',
+	    value: function repeatForever(action) {
+	      return null;
+	    }
+
+	    // Creating an Action to Introduce a Delay into a Sequence
+
+	    /**
+	     * Creates an action that idles for a specified period of time.
+	     * @access public
+	     * @param {number} sec - The amount of time to wait.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the action waits for the specified amount of time, then ends. This is typically used as part of a sequence of actions to insert a delay between two other actions. You might also use it in conjunction with the run(_:completion:) method to trigger code that needs to run at a later time.This action is not reversible; the reverse of this action is the same action.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417788-wait
+	     */
+
+	  }, {
+	    key: 'waitForDuration',
+	    value: function waitForDuration(sec) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that idles for a randomized period of time.
+	     * @access public
+	     * @param {number} sec - The average amount of time to wait.
+	     * @param {number} durationRange - The range of possible values for the duration.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the action waits for the specified amount of time, then ends. This is typically used as part of a sequence of actions to insert a delay between two other actions. However, you might also use it in conjunction with the run(_:completion:) method to trigger code that needs to run at a later time.Each time the action is executed, the action computes a new random value for the duration. The duration may vary in either direction by up to half of the value of the durationRange parameter.This action is not reversible; the reverse of this action is the same action.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417760-wait
+	     */
+
+	  }, {
+	    key: 'waitForDurationWithRange',
+	    value: function waitForDurationWithRange(sec, durationRange) {
+	      return null;
+	    }
+
+	    // Creating Actions to Perform Inverse Kinematic Calculations
+
+	    /**
+	     * Creates an action that performs an inverse kinematic reach.
+	     * @access public
+	     * @param {SKNode} node - The node whose position the current node should move closer to. 
+	     * @param {SKNode} root - The highest level ancestor of the target node that should be rotated.
+	     * @param {number} sec - The length of the animation.
+	     * @returns {SKAction} - 
+	     * @desc This action is typically used to implement character animation across a series of moving parts. When the action executes, it performs an inverse kinematic calculation to determine new rotation values for the target node and any of its ancestors up to and including the root node. Each node is rotated around its anchor point in an attempt to get the targeted node’s position closer to the intended destination. Each node’s rotation value is constrained by that node’s reachConstraints property. If the action cannot successfully reach the target position, it gets the node as close as it can to the target position.This action is not reversible; the reverse of this action is the same action.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417827-reach
+	     */
+
+	  }, {
+	    key: 'reachToRootNodeDuration',
+	    value: function reachToRootNodeDuration(node, root, sec) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that performs an inverse kinematic reach.
+	     * @access public
+	     * @param {CGPoint} position - The intended destination for the node, specified in the scene’s coordinate system. 
+	     * @param {SKNode} root - The highest level ancestor of the target node that should be rotated.
+	     * @param {number} velocity - The maximum speed at which the node should move.
+	     * @returns {SKAction} - 
+	     * @desc This action is typically used to implement character animation across a series of moving parts. When the action executes, it performs an inverse kinematic calculation to determine new rotation values for the target node and any of its ancestors up to and including the root node. Each node is rotated around its anchor point in an attempt to get the targeted node’s position closer to the intended destination. Each node’s rotation value is constrained by that node’s reachConstraints property. If the action cannot successfully reach the target position, it gets the node as close as it can to the target position.The duration of the action is calculated implicitly based on the speed of movement and the distance that the node needs to travel.This action is not reversible; the reverse of this action is the same action.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417720-reach
+	     */
+
+	  }, {
+	    key: 'reachToRootNode',
+	    value: function reachToRootNode(position, root, velocity) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that executes a block over a duration.
+	     * @access public
+	     * @param {number} seconds - The duration of the action, in seconds.
+	     * @param {function(arg1: SKNode, arg2: number): void} block - The block to run. The block takes the following parameters:nodeThe node on which the action is running.elapsedTimeThe amount of time that has passed in the animation.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the block is called repeatedly until the action’s duration expires. The elapsed time is computed and passed to the block whenever the block is called.This action is not reversible; the reverse action executes the same block.The following code shows how you can create a custom action to update an attribute of an SKShader attached to a sprite node. let customAction = SKAction.customAction(withDuration: 2.0) {
+	      node, elapsedTime in
+	      
+	      if let node = node as? SKSpriteNode {
+	          node.setValue(SKAttributeValue(float: Float(elapsedTime)),
+	                                         forAttribute: "a_time")
+	      }
+	    }
+	    let customAction = SKAction.customAction(withDuration: 2.0) {
+	      node, elapsedTime in
+	      
+	      if let node = node as? SKSpriteNode {
+	          node.setValue(SKAttributeValue(float: Float(elapsedTime)),
+	                                         forAttribute: "a_time")
+	      }
+	    }
+	      * @see https://developer.apple.com/reference/spritekit/skaction/1417745-customaction
+	     */
+
+	  }, {
+	    key: 'customActionWithDurationActionBlock',
+	    value: function customActionWithDurationActionBlock(seconds, block) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that calls a method on an object.
+	     * @access public
+	     * @param {function} selector - The selector of the method to call.
+	     * @param {Object} target - The target object.
+	     * @returns {SKAction} - 
+	     * @desc The action object maintains a strong reference to the target object.When the action executes, the target object’s method is called. This action occurs instantaneously.This action is not reversible; the reverse of this action calls the selector again.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417764-perform
+	     */
+
+	  }, {
+	    key: 'performOnTarget',
+	    value: function performOnTarget(selector, target) {
+	      return null;
+	    }
+
+	    /**
+	     * Creates an action that executes a block.
+	     * @access public
+	     * @param {function(): void} block - The block to run.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the block is called. This action takes place instantaneously.This action is not reversible; the reverse action executes the same block.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417692-run
+	     */
+
+	  }, {
+	    key: 'run',
+	    value: function run(block) {
+	      return null;
+	    }
+	  }]);
+
+	  return SKAction;
+	}(_NSObject3.default);
+
+	exports.default = SKAction;
+
+/***/ },
+/* 206 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * The modes that an action can use to adjust the apparent timing of the action.
+	 * @typedef {Object} SKActionTimingMode
+	 * @property {number} linear - Specifies linear pacing. Linear pacing causes an animation to occur evenly over its duration.
+	 * @property {number} easeIn - Specifies ease-in pacing. Ease-in pacing causes the animation to begin slowly and then speed up as it progresses.
+	 * @property {number} easeOut - Specifies ease-out pacing. Ease-out pacing causes the animation to begin quickly and then slow as it completes.
+	 * @property {number} easeInEaseOut - Specifies ease-in ease-out pacing. An ease-in ease-out animation begins slowly, accelerates through the middle of its duration, and then slows again before completing.
+	 * @see https://developer.apple.com/reference/spritekit/skactiontimingmode
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var SKActionTimingMode = {
+	  linear: 0,
+	  easeIn: 1,
+	  easeOut: 2,
+	  easeInEaseOut: 3
+	};
+
+	exports.default = SKActionTimingMode;
+
+/***/ },
+/* 207 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * The modes that describe how the source and destination pixel colors are used to calculate the new destination color.
+	 * @typedef {Object} SKBlendMode
+	 * @property {number} alpha - The source and destination colors are blended by multiplying the source alpha value.
+	 * @property {number} add - The source and destination colors are added together.
+	 * @property {number} subtract - The source color is subtracted from the destination color.
+	 * @property {number} multiply - The source color is multiplied by the destination color.
+	 * @property {number} multiplyX2 - The source color is multiplied by the destination color and then doubled.
+	 * @property {number} screen - The source color is added to the destination color times the inverted source color.
+	 * @property {number} replace - The source color replaces the destination color.
+	 * @see https://developer.apple.com/reference/spritekit/skblendmode
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var SKBlendMode = {
+	  alpha: 0,
+	  add: 1,
+	  subtract: 2,
+	  multiply: 3,
+	  multiplyX2: 4,
+	  screen: 5,
+	  replace: 6
+	};
+
+	exports.default = SKBlendMode;
+
+/***/ },
+/* 208 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _SKNode2 = __webpack_require__(209);
+
+	var _SKNode3 = _interopRequireDefault(_SKNode2);
+
+	var _SKBlendMode = __webpack_require__(207);
+
+	var _SKBlendMode2 = _interopRequireDefault(_SKBlendMode);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	//import SKWarpable from './SKWarpable'
+
+
+	//import SKShader from './SKShader'
+	//import SKAttributeValue from './SKAttributeValue'
+
+
+	/**
+	 * A node that can apply Core Image filters or SKWarpGeometry distortions to its children.
+	 * @access public
+	 * @extends {SKNode}
+	 * @implements {SKWarpable}
+	 * @see https://developer.apple.com/reference/spritekit/skeffectnode
+	 */
+	var SKEffectNode = function (_SKNode) {
+	  _inherits(SKEffectNode, _SKNode);
+
+	  /**
+	   * constructor
+	   * @access public
+	   * @constructor
+	   */
+	  function SKEffectNode() {
+	    _classCallCheck(this, SKEffectNode);
+
+	    // Enabling Filter Effects
+
+	    /**
+	     * A Boolean value that determines whether the effect node applies the filter to its children as they are drawn.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459385-shouldenableeffects
+	     */
+	    var _this = _possibleConstructorReturn(this, (SKEffectNode.__proto__ || Object.getPrototypeOf(SKEffectNode)).call(this));
+
+	    _this.shouldEnableEffects = true;
+
+	    // Configuring the Filter
+
+	    /**
+	     * The Core Image filter to apply.
+	     * @type {?CIFilter}
+	     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459392-filter
+	     */
+	    _this.filter = null;
+
+	    /**
+	     * A Boolean value that determines whether the effect node automatically sets the filter’s image center.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459390-shouldcenterfilter
+	     */
+	    _this.shouldCenterFilter = true;
+
+	    // Blending the Results to the Framebuffer
+
+	    /**
+	     * The blend mode used to draw the filtered image into the parent’s framebuffer.
+	     * @type {SKBlendMode}
+	     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459386-blendmode
+	     */
+	    _this.blendMode = _SKBlendMode2.default.alpha;
+
+	    // Working with Custom Shaders
+
+	    /**
+	     * A custom shader that is called when the effect node is blended into the parent’s framebuffer.
+	     * @type {?SKShader}
+	     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459388-shader
+	     */
+	    _this.shader = null;
+
+	    /**
+	     * The values of each attribute associated with the node's attached shader.
+	     * @type {Map<string, SKAttributeValue>}
+	     * @see https://developer.apple.com/reference/spritekit/skeffectnode/2715848-attributevalues
+	     */
+	    _this.attributeValues = new Map();
+
+	    // Caching the Filter Results
+
+	    /**
+	     * A Boolean value that indicates whether the results of rendering the child nodes should be cached.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459381-shouldrasterize
+	     */
+	    _this.shouldRasterize = false;
+
+	    return _this;
+	  }
+
+	  // Working with Custom Shaders
+
+	  /**
+	   * Sets an attribute value for an attached shader.
+	   * @access public
+	   * @param {SKAttributeValue} value - An attribute value object containing the scalar or vector value to set in the attached shader.
+	   * @param {string} key - The attribute name.
+	   * @returns {void}
+	   * @see https://developer.apple.com/reference/spritekit/skeffectnode/2715853-setvalue
+	   */
+	  //setValueForAttribute(value, key) {
+	  //}
+
+	  /**
+	   * The value of a shader attribute.
+	   * @access public
+	   * @param {string} key - The attribute name.
+	   * @returns {?SKAttributeValue} - 
+	   * @see https://developer.apple.com/reference/spritekit/skeffectnode/2715844-value
+	   */
+	  //valueForAttributeNamed(key) {
+	  //  return null
+	  //}
+
+
+	  return SKEffectNode;
+	}(_SKNode3.default);
+
+	exports.default = SKEffectNode;
+
+/***/ },
+/* 209 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
+	var _CGPoint = __webpack_require__(7);
+
+	var _CGPoint2 = _interopRequireDefault(_CGPoint);
+
+	var _CGRect = __webpack_require__(8);
+
+	var _CGRect2 = _interopRequireDefault(_CGRect);
+
+	var _CGSize = __webpack_require__(9);
+
+	var _CGSize2 = _interopRequireDefault(_CGSize);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	//import UIFocusItem from '../undefined/UIFocusItem'
+	//import SKScene from './SKScene'
+	//import SKAction from './SKAction'
+	//import SKPhysicsBody from './SKPhysicsBody'
+	//import GKPolygonObstacle from '../undefined/GKPolygonObstacle'
+	//import GKEntity from '../undefined/GKEntity'
+	//import NSMutableDictionary from '../undefined/NSMutableDictionary'
+	//import SKConstraint from './SKConstraint'
+	//import SKReachConstraints from './SKReachConstraints'
+	//import NSCoder from '../undefined/NSCoder'
+	//import SKAttributeValue from './SKAttributeValue'
+
+
+	/**
+	 * The SKNode class is the fundamental building block of most SpriteKit content. 
+	 * @access public
+	 * @extends {NSObject}
+	 * @implements {UIFocusItem}
+	 * @see https://developer.apple.com/reference/spritekit/sknode
+	 */
+	var SKNode = function (_NSObject) {
+	  _inherits(SKNode, _NSObject);
+
+	  // Initializers
+
+	  /**
+	   * 
+	   * @access public
+	   * @constructor
+	   * @see https://developer.apple.com/reference/spritekit/sknode/1483097-init
+	   */
+	  function SKNode() {
+	    _classCallCheck(this, SKNode);
+
+	    // Inspecting the Node’s Position
+
+	    /**
+	     * The position of the node in its parent's coordinate system.
+	     * @type {CGPoint}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483101-position
+	     */
+	    var _this = _possibleConstructorReturn(this, (SKNode.__proto__ || Object.getPrototypeOf(SKNode)).call(this));
+
+	    _this.position = new _CGPoint2.default(0, 0);
+
+	    /**
+	     * The height of the node relative to its parent.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483107-zposition
+	     */
+	    _this.zPosition = 0.0;
+
+	    _this._frame = null;
+
+	    // Setting a Node’s Scaling and Rotation
+
+	    /**
+	     * A scaling factor that multiplies the width of a node and its children.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483087-xscale
+	     */
+	    _this.xScale = 1.0;
+
+	    /**
+	     * A scaling factor that multiplies the height of a node and its children.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483046-yscale
+	     */
+	    _this.yScale = 1.0;
+
+	    /**
+	     * The Euler rotation about the z axis (in radians).
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483089-zrotation
+	     */
+	    _this.zRotation = 0.0;
+
+	    // Inspecting a Node’s Visibility
+
+	    /**
+	     * The transparency value applied to the node’s contents.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483023-alpha
+	     */
+	    _this.alpha = 1.0;
+
+	    /**
+	     * A Boolean value that determines whether a node and its descendants are rendered.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483048-ishidden
+	     */
+	    _this.isHidden = false;
+
+	    // Determining Whether a Node Supports User Interaction
+
+	    /**
+	     * A Boolean value that indicates whether the node receives touch events.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483109-isuserinteractionenabled
+	     */
+	    _this.isUserInteractionEnabled = false;
+
+	    // Working with Node Trees
+
+	    _this._children = [];
+	    _this._parent = null;
+	    _this._scene = null;
+
+	    // Naming Nodes
+
+	    /**
+	     * The node’s assignable name.
+	     * @type {?string}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483136-name
+	     */
+	    _this.name = null;
+
+	    // Running Actions
+
+	    /**
+	     * A speed modifier applied to all actions executed by a node and its descendants.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483036-speed
+	     */
+	    _this.speed = 1.0;
+
+	    /**
+	     * A Boolean value that determines whether actions on the node and its descendants are processed.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483113-ispaused
+	     */
+	    _this.isPaused = false;
+
+	    /**
+	     * @access private
+	     * @type {Map}
+	     */
+	    _this._actions = new Map();
+
+	    // Adding Physics to a Node
+
+	    /**
+	     * The physics body associated with the node.
+	     * @type {?SKPhysicsBody}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483117-physicsbody
+	     */
+	    _this.physicsBody = null;
+
+	    // Working with GameplayKit Entities
+
+	    /**
+	     * The GameplayKit entity this node represents.
+	     * @type {?GKEntity}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1640688-entity
+	     */
+	    //this.entity = null
+
+
+	    // Storing Custom Node Data
+
+	    /**
+	     * A dictionary containing arbitrary data.
+	     * @type {?NSMutableDictionary}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483121-userdata
+	     */
+	    _this.userData = null;
+
+	    // Constraining a Node’s Behavior Relative to Other Nodes
+
+	    /**
+	     * Specifies the list of constraints to apply to the node.
+	     * @type {?SKConstraint[]}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483124-constraints
+	     */
+	    _this.constraints = null;
+
+	    /**
+	     * Specifies the reach constraints to apply to the node when executing a reach action.
+	     * @type {?SKReachConstraints}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483019-reachconstraints
+	     */
+	    _this.reachConstraints = null;
+
+	    // Instance Properties
+
+	    /**
+	     * 
+	     * @type {?Object[]}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1645045-accessibilitychildren
+	     */
+	    _this.accessibilityChildren = [];
+
+	    /**
+	     * 
+	     * @type {CGRect}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1645044-accessibilityframe
+	     */
+	    _this.accessibilityFrame = new _CGRect2.default(new _CGPoint2.default(0, 0), new _CGSize2.default(0, 0));
+
+	    /**
+	     * 
+	     * @type {?string}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1645041-accessibilityhelp
+	     */
+	    _this.accessibilityHelp = null;
+
+	    /**
+	     * 
+	     * @type {?string}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1645039-accessibilitylabel
+	     */
+	    _this.accessibilityLabel = null;
+
+	    /**
+	     * 
+	     * @type {?Object}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1645042-accessibilityparent
+	     */
+	    _this.accessibilityParent = null;
+
+	    /**
+	     * 
+	     * @type {?string}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1645036-accessibilityrole
+	     */
+	    _this.accessibilityRole = 'AXImage';
+
+	    /**
+	     * 
+	     * @type {?string}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1645035-accessibilityroledescription
+	     */
+	    _this.accessibilityRoleDescription = 'SKNode';
+
+	    /**
+	     * 
+	     * @type {?string}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1645043-accessibilitysubrole
+	     */
+	    _this.accessibilitySubrole = null;
+
+	    /**
+	     * The values of each attribute associated with the node's attached shader. 
+	     * @type {Map<string, SKAttributeValue>}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1644181-attributevalues
+	     */
+	    _this.attributeValues = new Map();
+
+	    /**
+	     * 
+	     * @type {boolean}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1645038-isaccessibilityelement
+	     */
+	    _this.isAccessibilityElement = false;
+
+	    /**
+	     * 
+	     * @type {boolean}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1645037-isaccessibilityenabled
+	     */
+	    _this.isAccessibilityEnabled = false;
+
+	    return _this;
+	  }
+
+	  /**
+	   * 
+	   * @access public
+	   * @param {NSCoder} aDecoder - 
+	   * @returns {void}
+	   * @see https://developer.apple.com/reference/spritekit/sknode/1483142-init
+	   */
+	  //initWithCoder(aDecoder) {
+	  //}
+
+
+	  // Creating a New Node
+
+	  /**
+	   * Creates a new node by loading an archive file from the game’s main bundle.
+	   * @access public
+	   * @param {string} filename - The name of the file, without a file extension. The file must be in the app’s main bundle and have a .sks filename extension.
+	   * @returns {void}
+	   * @desc If you call this method on a subclass of the SKScene class and the object in the archive is an SKScene object, the returned object is initialized as if it is a member of the subclass. You use this behavior to create scene layouts in the Xcode Editor and provide custom behaviors in your subclass. 
+	   * @see https://developer.apple.com/reference/spritekit/sknode/1483083-init
+	   */
+
+
+	  _createClass(SKNode, [{
+	    key: 'calculateAccumulatedFrame',
+
+
+	    // Inspecting the Node’s Position
+
+	    /**
+	     * Calculates a rectangle in the parent’s coordinate system that contains the content of the node and all of its descendants. 
+	     * @access public
+	     * @returns {CGRect} - 
+	     * @desc The frame takes into the account the cumulative effect of the xScale, yScale, and zRotation properties of each node in the subtree.Listing 1 shows how calculateAccumulatedFrame() can be used display the bounding box of a shape node. The child node, although smaller than its parent, is rotated by 30° so that its bounds extend beyond its parent's bounds. After childNode has been added to parentNode, a further shape node, boundingBoxNode, is created with its size based on the accumulated frame of parentNode.Listing 1 Displaying the accumulated frame of a shape nodelet parentNode = SKShapeNode(rectOf: CGSize(width: 500, height: 500))
+	    parentNode.lineWidth = 2
+	    parentNode.strokeColor = .blue
+	    parentNode.fillColor = .clear
+	       
+	    let childNode = SKShapeNode(rectOf: CGSize(width: 400, height: 400))
+	    childNode.strokeColor = .red
+	    childNode.fillColor = .clear
+	    childNode.zRotation = -CGFloat.pi / 6 // pi / 6 = 30°
+	       
+	    parentNode.addChild(childNode)
+	       
+	    let boundingBoxNode = SKShapeNode(rectOf: parentNode.calculateAccumulatedFrame().size)
+	    boundingBoxNode.lineWidth = 1
+	    boundingBoxNode.strokeColor = .black
+	    boundingBoxNode.fillColor = .clear
+	    boundingBoxNode.path = boundingBoxNode.path?.copy(dashingWithPhase: 0,
+	                                                    lengths: [10,10])
+	       
+	    parentNode.addChild(boundingBoxNode)
+	    Figure 1 shows the result of Listing 1 with parentNode rendered in blue, childNode rendered in red and the boundingBoxNode rendered with a dashed line. Figure 1 Displaying the accumulated frame of a shape nodeDisplaying the accumulated frame of a shape nodelet parentNode = SKShapeNode(rectOf: CGSize(width: 500, height: 500))
+	    parentNode.lineWidth = 2
+	    parentNode.strokeColor = .blue
+	    parentNode.fillColor = .clear
+	       
+	    let childNode = SKShapeNode(rectOf: CGSize(width: 400, height: 400))
+	    childNode.strokeColor = .red
+	    childNode.fillColor = .clear
+	    childNode.zRotation = -CGFloat.pi / 6 // pi / 6 = 30°
+	       
+	    parentNode.addChild(childNode)
+	       
+	    let boundingBoxNode = SKShapeNode(rectOf: parentNode.calculateAccumulatedFrame().size)
+	    boundingBoxNode.lineWidth = 1
+	    boundingBoxNode.strokeColor = .black
+	    boundingBoxNode.fillColor = .clear
+	    boundingBoxNode.path = boundingBoxNode.path?.copy(dashingWithPhase: 0,
+	                                                    lengths: [10,10])
+	       
+	    parentNode.addChild(boundingBoxNode)
+	    Displaying the accumulated frame of a shape node
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483066-calculateaccumulatedframe
+	     */
+	    value: function calculateAccumulatedFrame() {
+	      return null;
+	    }
+
+	    /**
+	     * A rectangle in the parent’s coordinate system that contains the node’s content, ignoring the node’s children.
+	     * @type {CGRect}
+	     * @desc The frame is the smallest rectangle that contains the node’s content, taking into account the node’s xScale, yScale, and zRotation properties. Not all nodes contain content of their own.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483026-frame
+	     */
+
+	  }, {
+	    key: 'setScale',
+
+
+	    // Setting a Node’s Scaling and Rotation
+
+	    /**
+	     * Sets the xScale and yScale properties of the node.
+	     * @access public
+	     * @param {number} scale - The new value to use for the node’s xScale and yScale properties.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483126-setscale
+	     */
+	    value: function setScale(scale) {
+	      this.xScale = scale;
+	      this.yScale = scale;
+	    }
+
+	    // Working with Node Trees
+
+	    /**
+	     * Adds a node to the end of the receiver’s list of child nodes.
+	     * @access public
+	     * @param {SKNode} node - The node to add. The node must not already have a parent.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483054-addchild
+	     */
+
+	  }, {
+	    key: 'addChild',
+	    value: function addChild(node) {
+	      if (this._children.indexOf(node) >= 0) {
+	        return;
+	      }
+	      node.removeFromParent();
+	      this._children.push(node);
+	      node._parent = this;
+	    }
+
+	    /**
+	     * Inserts a child into a specific position in the receiver’s list of child nodes.
+	     * @access public
+	     * @param {SKNode} node - The node to add. The node must not already have a parent.
+	     * @param {number} index - The position in the array to insert the node.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483062-insertchild
+	     */
+
+	  }, {
+	    key: 'insertChildAt',
+	    value: function insertChildAt(node, index) {
+	      if (this._children.indexOf(node) >= 0) {
+	        return;
+	      }
+	      node.removeFromParent();
+	      this._insertObjectInChildrenAtIndex(node, index);
+	      this._parent = this;
+	    }
+
+	    /**
+	     * Compares the parameter node to the receiving node.
+	     * @access public
+	     * @param {SKNode} node - The node to compare to the receiving node.
+	     * @returns {boolean} - 
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483078-isequal
+	     */
+
+	  }, {
+	    key: 'isEqualTo',
+	    value: function isEqualTo(node) {
+	      return false;
+	    }
+
+	    /**
+	     * Moves the node to a new parent node in the scene. 
+	     * @access public
+	     * @param {SKNode} parent - An SKNode object to move the receiver to. This node must be in the same scene as the node’s current parent.
+	     * @returns {void}
+	     * @desc The node maintains its current position in scene coordinates.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483021-move
+	     */
+
+	  }, {
+	    key: 'moveToParent',
+	    value: function moveToParent(parent) {
+	      parent.addChild(this);
+	    }
+
+	    /**
+	     * Removes the receiving node from its parent.
+	     * @access public
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483119-removefromparent
+	     */
+
+	  }, {
+	    key: 'removeFromParent',
+	    value: function removeFromParent() {
+	      var parentNode = this._parent;
+	      if (parentNode === null) {
+	        return;
+	      }
+	      var index = parentNode._children.indexOf(this);
+	      if (index < 0) {
+	        return;
+	      }
+	      parentNode._removeObjectFromChildrenAtIndex(index);
+	    }
+
+	    /**
+	     * Removes all of the node’s children.
+	     * @access public
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483040-removeallchildren
+	     */
+
+	  }, {
+	    key: 'removeAllChildren',
+	    value: function removeAllChildren() {
+	      var _iteratorNormalCompletion = true;
+	      var _didIteratorError = false;
+	      var _iteratorError = undefined;
+
+	      try {
+	        for (var _iterator = this._children[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+	          var child = _step.value;
+
+	          child.removeFromParent();
+	        }
+	      } catch (err) {
+	        _didIteratorError = true;
+	        _iteratorError = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion && _iterator.return) {
+	            _iterator.return();
+	          }
+	        } finally {
+	          if (_didIteratorError) {
+	            throw _iteratorError;
+	          }
+	        }
+	      }
+	    }
+
+	    /**
+	     * Removes a list of children from the receiving node.
+	     * @access public
+	     * @param {SKNode[]} nodes - An array of SKNode objects that are all children of the receiving node.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483091-removechildren
+	     */
+
+	  }, {
+	    key: 'removeChildrenIn',
+	    value: function removeChildrenIn(nodes) {
+	      var _iteratorNormalCompletion2 = true;
+	      var _didIteratorError2 = false;
+	      var _iteratorError2 = undefined;
+
+	      try {
+	        for (var _iterator2 = nodes[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+	          var node = _step2.value;
+
+	          if (this._children.indexOf(node) >= 0) {
+	            node.removeFromParent();
+	          }
+	        }
+	      } catch (err) {
+	        _didIteratorError2 = true;
+	        _iteratorError2 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion2 && _iterator2.return) {
+	            _iterator2.return();
+	          }
+	        } finally {
+	          if (_didIteratorError2) {
+	            throw _iteratorError2;
+	          }
+	        }
+	      }
+	    }
+
+	    /**
+	     *
+	     * @access private
+	     * @param {number} index -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_removeObjectFromChildrenAtIndex',
+	    value: function _removeObjectFromChildrenAtIndex(index) {
+	      var arr = this._children.splice(index, 1);
+	      if (arr.length === 0) {
+	        return;
+	      }
+	      var obj = arr[0];
+
+	      obj._parent = null;
+	    }
+
+	    /**
+	     *
+	     * @access private
+	     * @param {SCNNode} object -
+	     * @param {number} index -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_insertObjectInChildrenAtIndex',
+	    value: function _insertObjectInChildrenAtIndex(object, index) {
+	      var length = this._children.length;
+	      if (index > length) {
+	        throw new Error('SKNode.children out of index: ' + index + ' > ' + length);
+	      }
+	      this._children.splice(index, 0, object);
+	    }
+
+	    /**
+	     * Returns a Boolean value that indicates whether the node is a descendant of the target node.
+	     * @access public
+	     * @param {SKNode} parent - An SKNode object to test against.
+	     * @returns {boolean} - 
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483111-inparenthierarchy
+	     */
+
+	  }, {
+	    key: 'inParentHierarchy',
+	    value: function inParentHierarchy(parent) {
+	      return false;
+	    }
+	    /**
+	     * The node’s children.
+	     * @type {SKNode[]}
+	     * @desc The objects in this array are all SKNode objects.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483028-children
+	     */
+
+	  }, {
+	    key: 'childNodeWithName',
+
+
+	    // Naming Nodes
+
+	    /**
+	     * Searches the children of the receiving node for a node with a specific name.
+	     * @access public
+	     * @param {string} name - The name to search for. This may be either the literal name of the node or a customized search string. See Searching the Node Tree.
+	     * @returns {?SKNode} - 
+	     * @desc If more than one child share the same name, the first node discovered is returned.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483060-childnode
+	     */
+	    value: function childNodeWithName(name) {
+	      var _iteratorNormalCompletion3 = true;
+	      var _didIteratorError3 = false;
+	      var _iteratorError3 = undefined;
+
+	      try {
+	        for (var _iterator3 = this._children[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+	          var child = _step3.value;
+
+	          if (child.name === name) {
+	            return child;
+	          }
+	        }
+	      } catch (err) {
+	        _didIteratorError3 = true;
+	        _iteratorError3 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion3 && _iterator3.return) {
+	            _iterator3.return();
+	          }
+	        } finally {
+	          if (_didIteratorError3) {
+	            throw _iteratorError3;
+	          }
+	        }
+	      }
+
+	      return null;
+	    }
+
+	    /**
+	     * Search the children of the receiving node to perform processing for nodes which share a name.
+	     * @access public
+	     * @param {string} name - The name to search for. This may be either the literal name of the node or a customized search string. See Searching the Node Tree.
+	     * @param {function(arg1: SKNode, arg2: UnsafeMutablePointer<ObjCBool>): void} block - A block to execute on nodes that match the name parameter. The block has the signature (node: SKNode, stop: UnsafeMutablePointer<ObjCBool>).
+	     * @returns {void}
+	     * @desc This method enumerates the child array in order, searching for nodes whose names match the search parameter. The block is called once for each node that matches the name parameter.The following code shows how you could enumerate through the child nodes of a scene with a name containing the string yellow. Each matching node is hidden until the enumeration finds a node that also contains the string triangle. When this node is reached, stop is set to true and the processing stops.Listing 1 Enumerating child nodesscene.enumerateChildNodes(withName: "*yellow*") {
+	      (node, stop) in
+	      
+	      node.run(SKAction.hide())
+	      
+	      if let name = node.name, name.contains("triangle") {
+	          stop.initialize(to: true)
+	      }
+	    }
+	    You can also search by class name using enumerateChildNodes(withName:using:). However, for custom classes, you need to specify the fully annotated class name (i.e. the project name followed by the class name). The following code shows a custom class, SpaceshipNode, based on SKSpriteNode, and created in a project named SpaceGame. The first search fails to return an instance of  SpaceshipNode added as a child of parentNode:Listing 2 Enumerating child nodesclass SpaceshipNode: SKSpriteNode {
+	    }
+	       
+	    let parentNode = SKNode()
+	    let childNode = SpaceshipNode()
+	    parentNode.addChild(childNode)
+	       
+	    parentNode.enumerateChildNodes(withName: "SpaceshipNode") {
+	      node, _ in
+	      // Unannotated name, returns no results 
+	    }
+	       
+	    parentNode.enumerateChildNodes(withName: "SpaceGame.SpaceshipNode") {
+	      node, _ in
+	      // Annotated name, successfully returns `childNode` 
+	    }
+	       
+	    parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
+	      node, _ in
+	      // Superclass name, successfully returns `childNode` 
+	    }
+	    Enumerating child nodesscene.enumerateChildNodes(withName: "*yellow*") {
+	      (node, stop) in
+	      
+	      node.run(SKAction.hide())
+	      
+	      if let name = node.name, name.contains("triangle") {
+	          stop.initialize(to: true)
+	      }
+	    }
+	    Enumerating child nodesclass SpaceshipNode: SKSpriteNode {
+	    }
+	       
+	    let parentNode = SKNode()
+	    let childNode = SpaceshipNode()
+	    parentNode.addChild(childNode)
+	       
+	    parentNode.enumerateChildNodes(withName: "SpaceshipNode") {
+	      node, _ in
+	      // Unannotated name, returns no results 
+	    }
+	       
+	    parentNode.enumerateChildNodes(withName: "SpaceGame.SpaceshipNode") {
+	      node, _ in
+	      // Annotated name, successfully returns `childNode` 
+	    }
+	       
+	    parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
+	      node, _ in
+	      // Superclass name, successfully returns `childNode` 
+	    }
+	      * @see https://developer.apple.com/reference/spritekit/sknode/1483024-enumeratechildnodes
+	     */
+
+	  }, {
+	    key: 'enumerateChildNodesWithNameUsing',
+	    value: function enumerateChildNodesWithNameUsing(name, block) {}
+
+	    // Running Actions
+
+	    /**
+	     * Adds an action to the list of actions executed by the node.
+	     * @access public
+	     * @param {SKAction} action - The action to perform.
+	     * @returns {void}
+	     * @desc The new action is processed the next time the scene’s animation loop is processed.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483093-run
+	     */
+
+	  }, {
+	    key: 'run',
+	    value: function run(action) {
+	      this.runWithKey(action, Symbol());
+	    }
+
+	    /**
+	     * Adds an action to the list of actions executed by the node.
+	     * @access public
+	     * @param {SKAction} action - The action to perform.
+	     * @param {function(): void} block - A completion block called when the action completes.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483103-run
+	     */
+
+	  }, {
+	    key: 'runCompletion',
+	    value: function runCompletion(action, block) {
+	      this._runActionForKeyCompletionHandler(action, Symbol(), block);
+	    }
+
+	    /**
+	     * Adds an identifiable action to the list of actions executed by the node.
+	     * @access public
+	     * @param {SKAction} action - The action to perform.
+	     * @param {string} key - A unique key used to identify the action.
+	     * @returns {void}
+	     * @desc This method is identical to run(_:), but the action is stored so that it can be retrieved later. If an action using the same key is already running, it is removed before the new action is added.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483042-run
+	     */
+
+	  }, {
+	    key: 'runWithKey',
+	    value: function runWithKey(action, key) {
+	      this._runActionForKeyCompletionHandler(action, key, null);
+	    }
+	  }, {
+	    key: '_runActionForKeyCompletionHandler',
+	    value: function _runActionForKeyCompletionHandler(action, key, block) {
+	      if (typeof key === 'undefined' || key === null) {
+	        key = Symbol();
+	      }
+	      var act = action.copy();
+	      // FIXME: use current frame time
+	      act._actionStartTime = Date.now() * 0.001;
+	      act._completionHandler = block;
+	      this._actions.set(key, act);
+	    }
+
+	    /**
+	     * Returns an action associated with a specific key.
+	     * @access public
+	     * @param {string} key - A string that uniquely identifies an action.
+	     * @returns {?SKAction} - 
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483138-action
+	     */
+
+	  }, {
+	    key: 'actionForKey',
+	    value: function actionForKey(key) {
+	      return this._actions.get(key);
+	    }
+
+	    /**
+	     * Returns a Boolean value that indicates whether the node is executing actions.
+	     * @access public
+	     * @returns {boolean} - 
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483081-hasactions
+	     */
+
+	  }, {
+	    key: 'hasActions',
+	    value: function hasActions() {
+	      return this._actions.size > 0;
+	    }
+
+	    /**
+	     * Ends and removes all actions from the node.
+	     * @access public
+	     * @returns {void}
+	     * @desc When an action is removed from the node, any remaining animation the action would perform is skipped; however, previous changes are not reverted. It is possible that an action may make a final change to the scene when removed; if so, it is documented for the specific action in SKAction.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483030-removeallactions
+	     */
+
+	  }, {
+	    key: 'removeAllActions',
+	    value: function removeAllActions() {
+	      // TODO: stop actions
+	      this._actions.clear();
+	    }
+
+	    /**
+	     * Removes an action associated with a specific key.
+	     * @access public
+	     * @param {string} key - A string that uniquely identifies an action.
+	     * @returns {void}
+	     * @desc If an action is found that matches the key, it is removed from the node.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483076-removeaction
+	     */
+
+	  }, {
+	    key: 'removeActionForKey',
+	    value: function removeActionForKey(key) {
+	      // TODO: stop action
+	      this._actions.delete(key);
+	    }
+
+	    // Converting to and from the Node’s Coordinate System
+
+	    /**
+	     * Converts a point from the coordinate system of another node in the node tree to the coordinate system of this node.
+	     * @access public
+	     * @param {CGPoint} point - A point in the other node’s coordinate system.
+	     * @param {SKNode} node - Another node in the same node tree as this node.
+	     * @returns {CGPoint} - 
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483058-convert
+	     */
+
+	  }, {
+	    key: 'convertFrom',
+	    value: function convertFrom(point, node) {
+	      return null;
+	    }
+
+	    /**
+	     * Converts a point in this node’s coordinate system to the coordinate system of another node in the node tree.
+	     * @access public
+	     * @param {CGPoint} point - A point in this node’s coordinate system.
+	     * @param {SKNode} node - Another node in the same node tree as this node.
+	     * @returns {CGPoint} - 
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483056-convert
+	     */
+
+	  }, {
+	    key: 'convertTo',
+	    value: function convertTo(point, node) {
+	      return null;
+	    }
+
+	    // Determining If a Point Lies in a Node
+
+	    /**
+	     * Returns a Boolean value that indicates whether a point lies inside the parent’s coordinate system.
+	     * @access public
+	     * @param {CGPoint} p - A CGPoint to test against.
+	     * @returns {boolean} - 
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483044-contains
+	     */
+
+	  }, {
+	    key: 'contains',
+	    value: function contains(p) {
+	      return false;
+	    }
+
+	    /**
+	     * Returns the deepest visible descendant that intersects a point.
+	     * @access public
+	     * @param {CGPoint} p - A point in the node’s coordinate system.
+	     * @returns {SKNode} - 
+	     * @desc A point is considered to be in a node if it lies inside the rectangle returned by the calculateAccumulatedFrame() method.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483099-atpoint
+	     */
+
+	  }, {
+	    key: 'atPoint',
+	    value: function atPoint(p) {
+	      return null;
+	    }
+
+	    /**
+	     * Returns an array of all visible descendants that intersect a point.
+	     * @access public
+	     * @param {CGPoint} p - A point in the node’s coordinate system.
+	     * @returns {SKNode[]} - 
+	     * @desc A point is considered to be in a node if it lies inside the rectangle returned by the calculateAccumulatedFrame() method.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483072-nodes
+	     */
+
+	  }, {
+	    key: 'nodesAt',
+	    value: function nodesAt(p) {
+	      return null;
+	    }
+
+	    // Performing Node Intersections
+
+	    /**
+	     * Returns a Boolean value that indicates whether this node intersects the specified node.
+	     * @access public
+	     * @param {SKNode} node - Another node in the same node tree.
+	     * @returns {boolean} - 
+	     * @desc The two nodes are considered to intersect if their frames intersect. The children of both nodes are ignored in this test.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483140-intersects
+	     */
+
+	  }, {
+	    key: 'intersects',
+	    value: function intersects(node) {
+	      return false;
+	    }
+
+	    // Creating GameplayKit Obstacles from a Set of Nodes
+
+	    /**
+	     * Converts each node into an obstacle by transforming its bounds into the scene’s coordinate system.
+	     * @access public
+	     * @param {SKNode[]} nodes - An array of SKNode objects.
+	     * @returns {GKPolygonObstacle[]} - 
+	     * @desc Use the array of obstacles to create an obstacle graph (GKObstacleGraph) in GameplayKit. See GameplayKit and GameplayKit Programming Guide.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483132-obstacles
+	     */
+
+	  }, {
+	    key: 'accessibilityHitTest',
+
+
+	    // Instance Methods
+
+	    /**
+	     * 
+	     * @access public
+	     * @param {CGPoint} point - 
+	     * @returns {?Object} - 
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1645040-accessibilityhittest
+	     */
+	    value: function accessibilityHitTest(point) {
+	      return null;
+	    }
+
+	    /**
+	     * Sets an attribute value for an attached shader
+	     * @deprecated
+	     * @access public
+	     * @param {SKAttributeValue} value - An attribute value object containing the scalar or vector value to set in the attached shader. 
+	     * @param {string} key - The attribute name.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1644180-setvalue
+	     */
+
+	  }, {
+	    key: 'setValueForAttribute',
+	    value: function setValueForAttribute(value, key) {
+	      this.attributeValues.set(key, value);
+	    }
+
+	    /**
+	     * The value of a shader attribute.
+	     * @deprecated
+	     * @access public
+	     * @param {string} key - The attribute name.
+	     * @returns {?SKAttributeValue} - 
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1644182-value
+	     */
+
+	  }, {
+	    key: 'valueForAttributeNamed',
+	    value: function valueForAttributeNamed(key) {
+	      return this.attributeValues.get(key);
+	    }
+	  }, {
+	    key: 'frame',
+	    get: function get() {
+	      return this._frame;
+	    }
+	  }, {
+	    key: 'children',
+	    get: function get() {
+	      return this._children.slice(0);
+	    }
+	    /**
+	     * The node’s parent node.
+	     * @type {?SKNode}
+	     * @desc If the node is not in a node tree, the value is nil.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483080-parent
+	     */
+
+	  }, {
+	    key: 'parent',
+	    get: function get() {
+	      return this._parent;
+	    }
+
+	    /**
+	     * The scene node that contains the node.
+	     * @type {?SKScene}
+	     * @desc If the node is not embedded in a scene, the value is nil.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483064-scene
+	     */
+
+	  }, {
+	    key: 'scene',
+	    get: function get() {
+	      return this._scene;
+	    }
+	  }], [{
+	    key: 'nodeWithFileNamed',
+	    value: function nodeWithFileNamed(filename) {
+	      var node = new SKNode();
+	      return node;
+	    }
+	  }, {
+	    key: 'obstaclesFromNodeBounds',
+	    value: function obstaclesFromNodeBounds(nodes) {
+	      return null;
+	    }
+
+	    /**
+	     * Converts each node into an obstacle by transforming the node’s physics body shape into the scene’s coordinate system.
+	     * @access public
+	     * @param {SKNode[]} nodes - An array of SKNode objects.
+	     * @returns {GKPolygonObstacle[]} - 
+	     * @desc Use the array of obstacles to create an obstacle graph (GKObstacleGraph) in GameplayKit. See GameplayKit and GameplayKit Programming Guide.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483085-obstacles
+	     */
+
+	  }, {
+	    key: 'obstaclesFromNodePhysicsBodies',
+	    value: function obstaclesFromNodePhysicsBodies(nodes) {
+	      return null;
+	    }
+
+	    /**
+	     * Converts each node into an obstacle by first transforming the node’s texture into a physics shape and then converting that shape into the scene’s coordinate system.
+	     * @access public
+	     * @param {SKNode[]} sprites - An array of SKNode objects.
+	     * @param {number} accuracy - A floating point value between 0.001 and 1.0, inclusive. Higher values create a more precise (but more complex) representation of the obstacle.
+	     * @returns {GKPolygonObstacle[]} - 
+	     * @desc Use the array of obstacles to create an obstacle graph (GKObstacleGraph) in GameplayKit. See GameplayKit and GameplayKit Programming Guide.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483134-obstacles
+	     */
+
+	  }, {
+	    key: 'obstaclesFromSpriteTextures',
+	    value: function obstaclesFromSpriteTextures(sprites, accuracy) {
+	      return null;
+	    }
+	  }]);
+
+	  return SKNode;
+	}(_NSObject3.default);
+
+	exports.default = SKNode;
+
+/***/ },
+/* 210 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _CGPoint = __webpack_require__(7);
+
+	var _CGPoint2 = _interopRequireDefault(_CGPoint);
+
+	var _CGSize = __webpack_require__(9);
+
+	var _CGSize2 = _interopRequireDefault(_CGSize);
+
+	var _SKColor = __webpack_require__(11);
+
+	var _SKColor2 = _interopRequireDefault(_SKColor);
+
+	var _SKEffectNode2 = __webpack_require__(208);
+
+	var _SKEffectNode3 = _interopRequireDefault(_SKEffectNode2);
+
+	var _SKSceneScaleMode = __webpack_require__(211);
+
+	var _SKSceneScaleMode2 = _interopRequireDefault(_SKSceneScaleMode);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	//import SKCameraNode from './SKCameraNode'
+	//import SKView from './SKView'
+	//import SKSceneDelegate from './SKSceneDelegate'
+	//import SKPhysicsWorld from './SKPhysicsWorld'
+	//import SKNode from './SKNode'
+
+
+	/**
+	 * The root node for all Sprite Kit objects displayed in a view. 
+	 * @access public
+	 * @extends {SKEffectNode}
+	 * @see https://developer.apple.com/reference/spritekit/skscene
+	 */
+	var SKScene = function (_SKEffectNode) {
+	  _inherits(SKScene, _SKEffectNode);
+
+	  // Initializing a Scene
+
+	  /**
+	   * Initializes a new scene object.
+	   * @access public
+	   * @constructor
+	   * @param {CGSize} size - The size of the scene in points.
+	   * @desc This is the class’s designated initializer method.
+	   * @see https://developer.apple.com/reference/spritekit/skscene/1520435-init
+	   */
+	  function SKScene(size) {
+	    _classCallCheck(this, SKScene);
+
+	    // Determining What Portion of the Scene Is Visible in the View
+
+	    /**
+	     * The camera node in the scene that determines what part of the scene’s coordinate space is visible in the view.
+	     * @type {?SKCameraNode}
+	     * @see https://developer.apple.com/reference/spritekit/skscene/1519696-camera
+	     */
+	    var _this = _possibleConstructorReturn(this, (SKScene.__proto__ || Object.getPrototypeOf(SKScene)).call(this));
+
+	    _this.camera = null;
+
+	    /**
+	     * The point in the view’s frame that corresponds to the scene’s origin.
+	     * @type {CGPoint}
+	     * @see https://developer.apple.com/reference/spritekit/skscene/1519864-anchorpoint
+	     */
+	    _this.anchorPoint = new _CGPoint2.default(0, 0);
+
+	    /**
+	     * The dimensions of the scene in points.
+	     * @type {CGSize}
+	     * @see https://developer.apple.com/reference/spritekit/skscene/1519831-size
+	     */
+	    _this.size = size | new _CGSize2.default(1, 1);
+
+	    /**
+	     * Defines how the scene is mapped to the view that presents it.
+	     * @type {SKSceneScaleMode}
+	     * @see https://developer.apple.com/reference/spritekit/skscene/1519562-scalemode
+	     */
+	    _this.scaleMode = _SKSceneScaleMode2.default.fill;
+
+	    // Setting the Background Color of a Scene
+
+	    /**
+	     * The background color of the scene.
+	     * @type {SKColor}
+	     * @see https://developer.apple.com/reference/spritekit/skscene/1520278-backgroundcolor
+	     */
+	    _this.backgroundColor = new _SKColor2.default(0.15, 0.15, 0.15, 1.0);
+
+	    // Presenting a Scene
+
+	    _this._view = null;
+
+	    // Executing the Animation Loop
+
+	    /**
+	     * A delegate to be called during the animation loop. 
+	     * @type {?SKSceneDelegate}
+	     * @see https://developer.apple.com/reference/spritekit/skscene/1520213-delegate
+	     */
+	    _this.delegate = null;
+
+	    // Working with Physics in the Scene
+
+	    //this._physicsWorld = new SKPhysicsWorld()
+	    _this._physicsWorld = null;
+
+	    // Working with Audio in the Scene
+
+	    /**
+	     * A node used to determine the position of the listener for positional audio in the scene.
+	     * @type {?SKNode}
+	     * @see https://developer.apple.com/reference/spritekit/skscene/1520363-listener
+	     */
+	    _this.listener = null;
+
+	    //this._audioEngine = null
+	    return _this;
+	  }
+
+	  // Determining What Portion of the Scene Is Visible in the View
+
+	  /**
+	   * Called whenever the scene’s size changes.
+	   * @access public
+	   * @param {CGSize} oldSize - The old size of the scene, in points.
+	   * @returns {void}
+	   * @desc This method is intended to be overridden in a subclass. Typically, you use this method to adjust the positions of nodes in the scene.
+	   * @see https://developer.apple.com/reference/spritekit/skscene/1519545-didchangesize
+	   */
+
+
+	  _createClass(SKScene, [{
+	    key: 'didChangeSize',
+	    value: function didChangeSize(oldSize) {}
+
+	    // Converting Between View and Scene Coordinates
+
+	    /**
+	     * Converts a point from view coordinates to scene coordinates.
+	     * @access public
+	     * @param {CGPoint} point - A point in view coordinates.
+	     * @returns {CGPoint} - 
+	     * @desc The scene must be presented in a view before calling this method.
+	     * @see https://developer.apple.com/reference/spritekit/skscene/1520395-convertpoint
+	     */
+
+	  }, {
+	    key: 'convertPointFromView',
+	    value: function convertPointFromView(point) {
+	      return null;
+	    }
+
+	    /**
+	     * Converts a point from scene coordinates to view coordinates.
+	     * @access public
+	     * @param {CGPoint} point - A point in scene coordinates.
+	     * @returns {CGPoint} - 
+	     * @desc The scene must be presented in a view before calling this method.
+	     * @see https://developer.apple.com/reference/spritekit/skscene/1520082-convertpoint
+	     */
+
+	  }, {
+	    key: 'convertPointToView',
+	    value: function convertPointToView(point) {
+	      return null;
+	    }
+
+	    // Presenting a Scene
+
+	    /**
+	     * Called immediately after the scene has been initialized or decoded.
+	     * @access public
+	     * @returns {void}
+	     * @desc This method is intended to be overridden in a subclass. You can use this method to implement any custom behavior after it has been initialized or decoded.
+	     * @see https://developer.apple.com/reference/spritekit/skscene/1645216-scenedidload
+	     */
+
+	  }, {
+	    key: 'sceneDidLoad',
+	    value: function sceneDidLoad() {}
+
+	    /**
+	     * Called immediately before a scene is removed from a view.
+	     * @access public
+	     * @param {SKView} view - The view that is presenting the scene.
+	     * @returns {void}
+	     * @desc This method is intended to be overridden in a subclass. You can use this method to implement any custom behavior for your scene when it is about to be removed from the view.
+	     * @see https://developer.apple.com/reference/spritekit/skscene/1519703-willmove
+	     */
+
+	  }, {
+	    key: 'willMoveFrom',
+	    value: function willMoveFrom(view) {}
+
+	    /**
+	     * Called immediately after a scene is presented by a view.
+	     * @access public
+	     * @param {SKView} view - The view that is presenting the scene.
+	     * @returns {void}
+	     * @desc This method is intended to be overridden in a subclass. You can use this method to implement any custom behavior for your scene when it is about to be presented by a view. For example, you might use this method to create the scene’s contents.
+	     * @see https://developer.apple.com/reference/spritekit/skscene/1519607-didmove
+	     */
+
+	  }, {
+	    key: 'didMoveTo',
+	    value: function didMoveTo(view) {}
+	    /**
+	     * The view that is currently presenting the scene.
+	     * @type {?SKView}
+	     * @desc To present a scene, you call the presentScene(_:) method or presentScene(_:transition:) method on the SKView class. If the scene is not currently presented, this property holds nil.
+	     * @see https://developer.apple.com/reference/spritekit/skscene/1519726-view
+	     */
+
+	  }, {
+	    key: 'update',
+
+
+	    // Executing the Animation Loop
+
+	    /**
+	     * Performs any scene-specific updates that need to occur before scene actions are evaluated.
+	     * @access public
+	     * @param {number} currentTime - The current system time.
+	     * @returns {void}
+	     * @desc Do not call this method directly; it is called exactly once per frame, so long as the scene is presented in a view and is not paused. By default, this method does nothing. Your scene subclass should override this method and perform any necessary updates to the scene.
+	     * @see https://developer.apple.com/reference/spritekit/skscene/1519802-update
+	     */
+	    value: function update(currentTime) {}
+
+	    /**
+	     * Performs any scene-specific updates that need to occur after scene actions are evaluated.
+	     * @access public
+	     * @returns {void}
+	     * @desc Do not call this method directly; it is called exactly once per frame, so long as the scene is presented in a view and is not paused. By default, this method does nothing. Your scene subclass should override this method and perform any necessary updates to the scene.
+	     * @see https://developer.apple.com/reference/spritekit/skscene/1519903-didevaluateactions
+	     */
+
+	  }, {
+	    key: 'didEvaluateActions',
+	    value: function didEvaluateActions() {}
+
+	    /**
+	     * Performs any scene-specific updates that need to occur after physics simulations are performed.
+	     * @access public
+	     * @returns {void}
+	     * @desc Do not call this method directly; it is called exactly once per frame, so long as the scene is presented in a view and is not paused. By default, this method does nothing. Your scene subclass should override this method and perform any necessary updates to the scene.
+	     * @see https://developer.apple.com/reference/spritekit/skscene/1519965-didsimulatephysics
+	     */
+
+	  }, {
+	    key: 'didSimulatePhysics',
+	    value: function didSimulatePhysics() {}
+
+	    /**
+	     * Performs any scene-specific updates that need to occur after constraints are applied.
+	     * @access public
+	     * @returns {void}
+	     * @desc Do not call this method directly; it is called exactly once per frame, so long as the scene is presented in a view and is not paused. By default, this method does nothing. Your scene subclass should override this method and perform any necessary updates to the scene.
+	     * @see https://developer.apple.com/reference/spritekit/skscene/1520006-didapplyconstraints
+	     */
+
+	  }, {
+	    key: 'didApplyConstraints',
+	    value: function didApplyConstraints() {}
+
+	    /**
+	     * Called after the scene has finished all of the steps required to process animations.
+	     * @access public
+	     * @returns {void}
+	     * @desc Do not call this method directly; it is called exactly once per frame, so long as the scene is presented in a view and is not paused. By default, this method does nothing. Your scene subclass should override this method and perform any necessary updates to the scene. This method is the last method to be called before the scene is rendered.
+	     * @see https://developer.apple.com/reference/spritekit/skscene/1520269-didfinishupdate
+	     */
+
+	  }, {
+	    key: 'didFinishUpdate',
+	    value: function didFinishUpdate() {}
+
+	    // Working with Physics in the Scene
+	    /**
+	     * The physics simulation associated with the scene.
+	     * @type {SKPhysicsWorld}
+	     * @desc Every scene automatically creates a physics world object to simulate physics on nodes in the scene. You use this property to access the scene’s global physics properties, such as gravity. To add physics to a particular node, see physicsBody.
+	     * @see https://developer.apple.com/reference/spritekit/skscene/1519584-physicsworld
+	     */
+
+	  }, {
+	    key: 'view',
+	    get: function get() {
+	      return this._view;
+	    }
+	  }, {
+	    key: 'physicsWorld',
+	    get: function get() {
+	      return this._physicsWorld;
+	    }
+
+	    // Working with Audio in the Scene
+	    /**
+	     * The AV Foundation audio engine used to play audio from audio nodes contained in the scene.
+	     * @type {AVAudioEngine}
+	     * @desc An audio engine instance is automatically created for you when the scene is created. You can use methods and properties on a scene’s audio engine for overall control of all of its child audio nodes. The following code shows how a scene’s overall volume can be reduced from its default of 1.0 down to 0.2 and then paused:let scene = SKScene()
+	    scene.audioEngine.mainMixerNode.outputVolume = 0.2
+	    scene.audioEngine.pause()
+	    let scene = SKScene()
+	    scene.audioEngine.mainMixerNode.outputVolume = 0.2
+	    scene.audioEngine.pause()
+	      * @see https://developer.apple.com/reference/spritekit/skscene/1519644-audioengine
+	     */
+	    //get audioEngine() {
+	    //  return this._audioEngine
+	    //}
+
+	  }]);
+
+	  return SKScene;
+	}(_SKEffectNode3.default);
+
+	exports.default = SKScene;
+
+/***/ },
+/* 211 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * The modes that determine how the scene’s area is mapped to the view that presents it.
+	 * @typedef {Object} SKSceneScaleMode
+	 * @property {number} fill - Each axis of the scene is scaled independently so that each axis in the scene exactly maps to the length of that axis in the view.
+	 * @property {number} aspectFill - The scaling factor of each dimension is calculated and the larger of the two is chosen. Each axis of the scene is scaled by the same scaling factor. This guarantees that the entire area of the view is filled but may cause parts of the scene to be cropped.
+	 * @property {number} aspectFit - The scaling factor of each dimension is calculated and the smaller of the two is chosen. Each axis of the scene is scaled by the same scaling factor. This guarantees that the entire scene is visible but may require letterboxing in the view.
+	 * @property {number} resizeFill - The scene is not scaled to match the view. Instead, the scene is automatically resized so that its dimensions always match those of the view.
+	 * @see https://developer.apple.com/reference/spritekit/skscenescalemode
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var SKSceneScaleMode = {
+	  fill: 0,
+	  aspectFill: 1,
+	  aspectFit: 2,
+	  resizeFill: 3
+	};
+
+	exports.default = SKSceneScaleMode;
+
+/***/ },
+/* 212 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _CGLineCap = __webpack_require__(14);
+
+	var _CGLineCap2 = _interopRequireDefault(_CGLineCap);
+
+	var _CGLineJoin = __webpack_require__(15);
+
+	var _CGLineJoin2 = _interopRequireDefault(_CGLineJoin);
+
+	var _SKBlendMode = __webpack_require__(207);
+
+	var _SKBlendMode2 = _interopRequireDefault(_SKBlendMode);
+
+	var _SKColor = __webpack_require__(11);
+
+	var _SKColor2 = _interopRequireDefault(_SKColor);
+
+	var _SKNode2 = __webpack_require__(209);
+
+	var _SKNode3 = _interopRequireDefault(_SKNode2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	//import CGPath from '../CoreGraphics/CGPath'
+	//import CGRect from '../CoreGraphics/CGRect'
+	//import CGSize from '../CoreGraphics/CGSize'
+	//import SKTexture from './SKTexture'
+	//import SKShader from './SKShader'
+	//import SKAttributeValue from './SKAttributeValue'
+
+
+	/**
+	 * A node that renders a shape defined by a Core Graphics path.
+	 * @access public
+	 * @extends {SKNode}
+	 * @see https://developer.apple.com/reference/spritekit/skshapenode
+	 */
+	var SKShapeNode = function (_SKNode) {
+	  _inherits(SKShapeNode, _SKNode);
+
+	  /**
+	   * constructor
+	   * @access public
+	   * @constructor
+	   */
+	  function SKShapeNode() {
+	    _classCallCheck(this, SKShapeNode);
+
+	    // Inspecting the Shape Node’s Path
+
+	    /**
+	     * The path that defines the shape.
+	     * @type {?CGPath}
+	     * @see https://developer.apple.com/reference/spritekit/skshapenode/1519741-path
+	     */
+	    var _this = _possibleConstructorReturn(this, (SKShapeNode.__proto__ || Object.getPrototypeOf(SKShapeNode)).call(this));
+
+	    _this.path = null;
+
+	    // Setting the Fill Properties
+
+	    /**
+	     * The color used to fill the shape.
+	     * @type {SKColor}
+	     * @see https://developer.apple.com/reference/spritekit/skshapenode/1520154-fillcolor
+	     */
+	    _this.fillColor = new _SKColor2.default(0, 0, 0, 0);
+
+	    /**
+	     * The texture used to fill the shape.
+	     * @type {?SKTexture}
+	     * @see https://developer.apple.com/reference/spritekit/skshapenode/1519956-filltexture
+	     */
+	    _this.fillTexture = null;
+
+	    /**
+	     * A custom shader used to determine the color of the filled portion of the shape node.
+	     * @type {?SKShader}
+	     * @see https://developer.apple.com/reference/spritekit/skshapenode/1519629-fillshader
+	     */
+	    _this.fillShader = null;
+
+	    // Setting the Stroke Properties
+
+	    /**
+	     * The width used to stroke the path.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/spritekit/skshapenode/1519885-linewidth
+	     */
+	    _this.lineWidth = 1.0;
+
+	    /**
+	     * The glow that extends outward from the stroked line.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/spritekit/skshapenode/1520116-glowwidth
+	     */
+	    _this.glowWidth = 0;
+
+	    /**
+	     * A Boolean value that determines whether the stroked path is smoothed when drawn.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/reference/spritekit/skshapenode/1519719-isantialiased
+	     */
+	    _this.isAntialiased = true;
+
+	    /**
+	     * The color used to stroke the shape.
+	     * @type {SKColor}
+	     * @see https://developer.apple.com/reference/spritekit/skshapenode/1519748-strokecolor
+	     */
+	    _this.strokeColor = new _SKColor2.default(1.0, 1.0, 1.0, 1.0);
+
+	    /**
+	     * The texture used to stroke the shape.
+	     * @type {?SKTexture}
+	     * @see https://developer.apple.com/reference/spritekit/skshapenode/1519824-stroketexture
+	     */
+	    _this.strokeTexture = null;
+
+	    /**
+	     * A custom shader used to determine the color of the stroked portion of the shape node.
+	     * @type {?SKShader}
+	     * @see https://developer.apple.com/reference/spritekit/skshapenode/1519784-strokeshader
+	     */
+	    _this.strokeShader = null;
+
+	    /**
+	     * The style used to render the endpoints of the stroked portion of the shape node.
+	     * @type {CGLineCap}
+	     * @see https://developer.apple.com/reference/spritekit/skshapenode/1520360-linecap
+	     */
+	    _this.lineCap = _CGLineCap2.default.butt;
+
+	    /**
+	     * The junction type used when the stroked portion of the shape node is rendered.
+	     * @type {CGLineJoin}
+	     * @see https://developer.apple.com/reference/spritekit/skshapenode/1520358-linejoin
+	     */
+	    _this.lineJoin = _CGLineJoin2.default.bevel;
+
+	    /**
+	     * The miter limit to use when the line is stroked using a miter join style.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/spritekit/skshapenode/1520240-miterlimit
+	     */
+	    _this.miterLimit = 0.5;
+
+	    // Blending the Shape with the Framebuffer
+
+	    /**
+	     * The blend mode used to blend the shape into the parent’s framebuffer.
+	     * @type {SKBlendMode}
+	     * @see https://developer.apple.com/reference/spritekit/skshapenode/1520045-blendmode
+	     */
+	    _this.blendMode = _SKBlendMode2.default.alpha;
+
+	    // Reading the Shape Node’s Properties
+
+	    //this._lineLength = 0
+
+	    // Working with Custom Shaders
+
+	    /**
+	     * The values of each attribute associated with the node's attached shader.
+	     * @type {Map<string, SKAttributeValue>}
+	     * @see https://developer.apple.com/reference/spritekit/skshapenode/2715841-attributevalues
+	     */
+	    _this.attributeValues = new Map();
+
+	    // Instance Properties
+
+	    _this._customPlaygroundQuickLook = null;
+	    return _this;
+	  }
+
+	  // Creating a Shape Path
+
+	  /**
+	   * Creates a shape node from a Core Graphics path.
+	   * @access public
+	   * @param {CGPath} path - The Core Graphics path to use. The path is relative to the node’s origin.
+	   * @returns {void}
+	   * @see https://developer.apple.com/reference/spritekit/skshapenode/1520022-init
+	   */
+
+
+	  _createClass(SKShapeNode, [{
+	    key: 'setValueForAttribute',
+
+
+	    // Working with Custom Shaders
+
+	    /**
+	     * Sets an attribute value for an attached shader.
+	     * @access public
+	     * @param {SKAttributeValue} value - An attribute value object containing the scalar or vector value to set in the attached shader.
+	     * @param {string} key - The attribute name.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/skshapenode/2715855-setvalue
+	     */
+	    value: function setValueForAttribute(value, key) {}
+
+	    /**
+	     * The value of a shader attribute.
+	     * @access public
+	     * @param {string} key - The attribute name.
+	     * @returns {?SKAttributeValue} - 
+	     * @see https://developer.apple.com/reference/spritekit/skshapenode/2715843-value
+	     */
+
+	  }, {
+	    key: 'valueForAttributeNamed',
+	    value: function valueForAttributeNamed(key) {
+	      return null;
+	    }
+
+	    // Instance Properties
+	    /**
+	     * A custom playground quick look for this instance.
+	     * @type {PlaygroundQuickLook}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/spritekit/skshapenode/1645784-customplaygroundquicklook
+	     */
+
+	  }, {
+	    key: 'lineLength',
+
+
+	    // Reading the Shape Node’s Properties
+	    /**
+	     * The length of the line defined by the shape node.
+	     * @type {number}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/spritekit/skshapenode/1520398-linelength
+	     */
+	    get: function get() {
+	      //return this._lineLength
+	      // TODO: implement
+	      return 0;
+	    }
+	  }, {
+	    key: 'customPlaygroundQuickLook',
+	    get: function get() {
+	      return this._customPlaygroundQuickLook;
+	    }
+	  }], [{
+	    key: 'node',
+	    value: function node(path) {}
+
+	    /**
+	     * Creates a shape node with a rectangular path centered on the node’s origin.
+	     * @access public
+	     * @param {CGSize} size - The size of the rectangle.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/skshapenode/1520147-init
+	     */
+
+	  }, {
+	    key: 'nodeWithRectOf',
+	    value: function nodeWithRectOf(size) {}
+
+	    /**
+	     * Creates a shape node with a circular path centered on the node’s origin.
+	     * @access public
+	     * @param {number} radius - The radius of the circle.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/skshapenode/1519570-init
+	     */
+
+	  }, {
+	    key: 'nodeWithCircleOfRadius',
+	    value: function nodeWithCircleOfRadius(radius) {}
+
+	    /**
+	     * Creates a shape node with an elliptical path centered on the node’s origin.
+	     * @access public
+	     * @param {CGSize} size - The height and width of the ellipse.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/skshapenode/1519980-init
+	     */
+
+	  }, {
+	    key: 'nodeWithEllipseOf',
+	    value: function nodeWithEllipseOf(size) {}
+
+	    /**
+	     * Creates a shape node with an elliptical path that fills the specified rectangle.
+	     * @access public
+	     * @param {CGRect} rect - A rectangle, relative to the node’s origin.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/skshapenode/1520412-init
+	     */
+
+	  }, {
+	    key: 'nodeWithEllipseIn',
+	    value: function nodeWithEllipseIn(rect) {}
+
+	    /**
+	     * Creates a shape node from a series of points.
+	     * @access public
+	     * @param {UnsafeMutablePointer<CGPoint>} points - An array of Core Graphics points. The points are relative to the node’s origin.
+	     * @param {number} numPoints - The number of points in the array.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/skshapenode/1520120-init
+	     */
+
+	  }, {
+	    key: 'nodeWithPointsCount',
+	    value: function nodeWithPointsCount(points, numPoints) {}
+
+	    /**
+	     * Creates a shape node from a series of spline points.
+	     * @access public
+	     * @param {UnsafeMutablePointer<CGPoint>} points - An array of Core Graphics points.
+	     * @param {number} numPoints - The number of points in the array.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/skshapenode/1520140-init
+	     */
+
+	  }, {
+	    key: 'nodeWithSplinePointsCount',
+	    value: function nodeWithSplinePointsCount(points, numPoints) {}
+	  }]);
+
+	  return SKShapeNode;
+	}(_SKNode3.default);
+
+	exports.default = SKShapeNode;
+
+/***/ },
+/* 213 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _CGPoint = __webpack_require__(7);
+
+	var _CGPoint2 = _interopRequireDefault(_CGPoint);
+
+	var _CGRect = __webpack_require__(8);
+
+	var _CGRect2 = _interopRequireDefault(_CGRect);
+
+	var _CGSize = __webpack_require__(9);
+
+	var _CGSize2 = _interopRequireDefault(_CGSize);
+
+	var _SKBlendMode = __webpack_require__(207);
+
+	var _SKBlendMode2 = _interopRequireDefault(_SKBlendMode);
+
+	var _SKColor = __webpack_require__(11);
+
+	var _SKColor2 = _interopRequireDefault(_SKColor);
+
+	var _SKNode2 = __webpack_require__(209);
+
+	var _SKNode3 = _interopRequireDefault(_SKNode2);
+
+	var _SKTexture = __webpack_require__(214);
+
+	var _SKTexture2 = _interopRequireDefault(_SKTexture);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	//import SKWarpable from './SKWarpable'
+	//import SKShader from './SKShader'
+	//import SKAttributeValue from './SKAttributeValue'
+	//import NSCoder from '../undefined/NSCoder'
+
+
+	/**
+	 * A node that draws a rectangular texture, image or color. 
+	 * @access public
+	 * @extends {SKNode}
+	 * @implements {SKWarpable}
+	 * @see https://developer.apple.com/reference/spritekit/skspritenode
+	 */
+	var SKSpriteNode = function (_SKNode) {
+	  _inherits(SKSpriteNode, _SKNode);
+
+	  // Initializing a New Sprite
+
+	  /**
+	   * Initializes a textured sprite using an image file, optionally adding a normal map to simulate 3D lighting.
+	   * @access public
+	   * @constructor
+	   * @param {string} name - The name of an image file stored in the app bundle.
+	   * @param {boolean} generateNormalMap - If true, a normal map is generated from the image texture without applying any filter to it (SKTextureNormalMapFilteringTypeNone). If false, no normal map is generated (matching the behavior of the spriteNodeWithImageNamed: class method).
+	   * @desc The normal map is used only when lighting is enabled in the scene. For more information, see Adding Lighting to a Sprite and SKLightNode.
+	   * @see https://developer.apple.com/reference/spritekit/skspritenode/1519721-init
+	   */
+	  function SKSpriteNode() {
+	    var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+	    var generateNormalMap = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+	    _classCallCheck(this, SKSpriteNode);
+
+	    // Inspecting Physical Properties
+
+	    /**
+	     * The dimensions of the sprite, in points.
+	     * @type {CGSize}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519668-size
+	     */
+	    var _this = _possibleConstructorReturn(this, (SKSpriteNode.__proto__ || Object.getPrototypeOf(SKSpriteNode)).call(this));
+
+	    _this.size = new _CGSize2.default(0, 0);
+
+	    /**
+	     * Defines the point in the sprite that corresponds to the node’s position.
+	     * @type {CGPoint}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519877-anchorpoint
+	     */
+	    _this.anchorPoint = new _CGPoint2.default(0.5, 0.5);
+
+	    // Inspecting the Sprite’s Texture
+
+	    /**
+	     * The texture used to draw the sprite.
+	     * @type {?SKTexture}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1520011-texture
+	     */
+	    _this.texture = null;
+
+	    /**
+	     * A property that defines how the texture is applied to the sprite.
+	     * @type {CGRect}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1520119-centerrect
+	     */
+	    _this.centerRect = new _CGRect2.default(new _CGPoint2.default(0, 0), new _CGSize2.default(1, 1));
+
+	    /**
+	     * A floating-point value that describes how the color is blended with the sprite’s texture.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519780-colorblendfactor
+	     */
+	    _this.colorBlendFactor = 0;
+
+	    // Inspecting Color Properties
+
+	    /**
+	     * The sprite’s color.
+	     * @type {SKColor}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519639-color
+	     */
+	    _this.color = new _SKColor2.default(1.0, 1.0, 1.0, 0.0);
+
+	    // Blending the Sprite with the Framebuffer
+
+	    /**
+	     * The blend mode used to draw the sprite into the parent’s framebuffer.
+	     * @type {SKBlendMode}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519931-blendmode
+	     */
+	    _this.blendMode = _SKBlendMode2.default.alpha;
+
+	    // Adding Lighting to a Sprite
+
+	    /**
+	     * A mask that defines how this sprite is lit by light nodes in the scenes.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519637-lightingbitmask
+	     */
+	    _this.lightingBitMask = 0;
+
+	    /**
+	     * A mask that defines which lights add additional shadows to the sprite.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519974-shadowedbitmask
+	     */
+	    _this.shadowedBitMask = 0;
+
+	    /**
+	     * A mask that defines which lights are occluded by this sprite.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1520325-shadowcastbitmask
+	     */
+	    _this.shadowCastBitMask = 0;
+
+	    /**
+	     * A texture that specifies the normal map for the sprite.
+	     * @type {?SKTexture}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519657-normaltexture
+	     */
+	    _this.normalTexture = null;
+
+	    // Working with Custom Shaders
+
+	    /**
+	     * A property that determines whether the sprite is rendered using a custom shader.
+	     * @type {?SKShader}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519714-shader
+	     */
+	    _this.shader = null;
+
+	    /**
+	     * The values of each attribute associated with the node's attached shader.
+	     * @type {Map<string, SKAttributeValue>}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/2715845-attributevalues
+	     */
+	    _this.attributeValues = new Map();
+
+	    // Instance Properties
+
+	    //this._customPlaygroundQuickLook = new PlaygroundQuickLook()
+	    _this._customPlaygroundQuickLook = null;
+
+	    if (name !== null) {
+	      _this.texture = _SKTexture2.default.textureWithImageNamed(name);
+	      if (generateNormalMap) {
+	        _this.normalTexture = _this.texture.generatingNormalMap();
+	      }
+	    }
+	    return _this;
+	  }
+
+	  /**
+	   * Initializes a colored sprite node.
+	   * @access public
+	   * @param {CGColor} color - The color for the resulting sprite node.
+	   * @param {CGSize} size - The size of the sprite node in points.
+	   * @returns {SKSpriteNode} -
+	   * @desc Although textured nodes are the most common way to use the SKSpriteNode class, you can also create sprite nodes without a texture. The behavior of the class changes when the node lacks a texture:The sprite node that is returned from this method has its texture property set to nil.There is no texture to stretch, so the centerRect parameter is ignored.There is no colorization step; the color property is used as the sprite’s color.The sprite node's alpha component is used to determine how it is blended into the buffer.Listing 1 shows how to create a red sprite node 100 x 100 points in size.Listing 1 Creating a non-textured sprite nodelet node = SKSpriteNode(color: .red,
+	                        size: CGSize(width: 100, height: 100))
+	  Creating a non-textured sprite nodelet node = SKSpriteNode(color: .red,
+	                        size: CGSize(width: 100, height: 100))
+	    * @see https://developer.apple.com/reference/spritekit/skspritenode/1519762-init
+	   */
+
+
+	  _createClass(SKSpriteNode, [{
+	    key: 'scaleTo',
+
+
+	    // Inspecting Physical Properties
+
+	    /**
+	     * Scales to sprite node to a specified size. 
+	     * @access public
+	     * @param {CGSize} size - 
+	     * @returns {void}
+	     * @desc This method works by setting the sprite node's xScale and yScale to achieve the specified size in its parent's coordinate space. 
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1645445-scale
+	     */
+	    value: function scaleTo(size) {}
+
+	    // Working with Custom Shaders
+
+	    /**
+	     * Sets an attribute value for an attached shader.
+	     * @access public
+	     * @param {SKAttributeValue} value - An attribute value object containing the scalar or vector value to set in the attached shader.
+	     * @param {string} key - The attribute name.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/2715849-setvalue
+	     */
+
+	  }, {
+	    key: 'setValueForAttribute',
+	    value: function setValueForAttribute(value, key) {}
+
+	    /**
+	     * The value of a shader attribute.
+	     * @access public
+	     * @param {string} key - The attribute name.
+	     * @returns {?SKAttributeValue} - 
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/2715846-value
+	     */
+
+	  }, {
+	    key: 'valueForAttributeNamed',
+	    value: function valueForAttributeNamed(key) {
+	      return null;
+	    }
+
+	    // Initializers
+
+	    /**
+	     * 
+	     * @access public
+	     * @param {NSCoder} aDecoder - 
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1520399-init
+	     */
+
+	  }, {
+	    key: 'initCoder',
+	    value: function initCoder(aDecoder) {}
+
+	    // Instance Properties
+	    /**
+	     * A custom playground quick look for this instance.
+	     * @type {PlaygroundQuickLook}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1645797-customplaygroundquicklook
+	     */
+
+	  }, {
+	    key: 'customPlaygroundQuickLook',
+	    get: function get() {
+	      return this._customPlaygroundQuickLook;
+	    }
+	  }], [{
+	    key: 'nodeWithColorSize',
+	    value: function nodeWithColorSize(color, size) {
+	      var node = new SKSpriteNode();
+	      node.size = size;
+	      node.color = color;
+	      return node;
+	    }
+
+	    /**
+	     * Initializes a textured sprite using an image file.
+	     * @access public
+	     * @param {string} name - The name of an image file stored in the app bundle.
+	     * @returns {SKSpriteNode} -
+	     * @desc This method creates a new texture object from the image file and assigns that texture to the texture property, the normalTexture properties is set to nil. The size property of the sprite is set to the dimensions of the image. The color property is set to white with an alpha of zero (1.0,1.0,1.0,0.0).
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1520391-init
+	     */
+
+	  }, {
+	    key: 'nodeWithImageNamed',
+	    value: function nodeWithImageNamed(name) {}
+
+	    /**
+	     * Initializes a textured sprite using an image file, optionally adding a normal map to simulate 3D lighting.
+	     * @access public
+	     * @param {string} name - The name of an image file stored in the app bundle.
+	     * @param {boolean} generateNormalMap - If true, a normal map is generated from the image texture without applying any filter to it (SKTextureNormalMapFilteringTypeNone). If false, no normal map is generated (matching the behavior of the spriteNodeWithImageNamed: class method).
+	     * @returns {SKSpriteNode} -
+	     * @desc The normal map is used only when lighting is enabled in the scene. For more information, see Adding Lighting to a Sprite and SKLightNode.
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519721-init
+	     */
+
+	  }, {
+	    key: 'nodeWithImageNamedNormalMapped',
+	    value: function nodeWithImageNamedNormalMapped(name, generateNormalMap) {}
+	  }]);
+
+	  return SKSpriteNode;
+	}(_SKNode3.default);
+
+	exports.default = SKSpriteNode;
+
+/***/ },
+/* 214 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
+	var _CGRect = __webpack_require__(8);
+
+	var _CGRect2 = _interopRequireDefault(_CGRect);
+
+	var _CGSize = __webpack_require__(9);
+
+	var _CGSize2 = _interopRequireDefault(_CGSize);
+
+	var _SKTextureFilteringMode = __webpack_require__(215);
+
+	var _SKTextureFilteringMode2 = _interopRequireDefault(_SKTextureFilteringMode);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	//import GKNoiseMap from '../undefined/GKNoiseMap'
+
+
+	/**
+	 * A representation of an image for use in SpriteKit.
+	 * @access public
+	 * @extends {NSObject}
+	 * @see https://developer.apple.com/reference/spritekit/sktexture
+	 */
+	var SKTexture = function (_NSObject) {
+	  _inherits(SKTexture, _NSObject);
+
+	  /**
+	   * constructor
+	   * @access public
+	   * @constructor
+	   */
+	  function SKTexture() {
+	    _classCallCheck(this, SKTexture);
+
+	    // Inspecting a Texture’s Properties
+
+	    /**
+	     * The filtering mode used when the size of a sprite drawn with the texture is not drawn at the texture’s native size.
+	     * @type {SKTextureFilteringMode}
+	     * @see https://developer.apple.com/reference/spritekit/sktexture/1519659-filteringmode
+	     */
+	    var _this = _possibleConstructorReturn(this, (SKTexture.__proto__ || Object.getPrototypeOf(SKTexture)).call(this));
+
+	    _this.filteringMode = _SKTextureFilteringMode2.default.linear;
+
+	    /**
+	     * A Boolean value that indicates whether the texture attempts to generate mipmaps.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/reference/spritekit/sktexture/1519960-usesmipmaps
+	     */
+	    _this.usesMipmaps = false;
+
+	    // Instance Properties
+
+	    _this._customPlaygroundQuickLook = null;
+
+	    _this._image = null;
+	    _this._texture = null;
+	    return _this;
+	  }
+
+	  // Creating New Textures from Images
+
+	  /**
+	   * Create a new texture object from an image file stored in the app bundle.
+	   * @access public
+	   * @param {string} name - The name of the image file.
+	   * @returns {void}
+	   * @desc The new texture object is initialized with the name of the image file and then control returns immediately to your game. Sprite Kit loads and prepares the texture data when it is needed by your game.When loading the texture data, Sprite Kit searches the app bundle for an image file with the specified filename. If a matching image file cannot be found, Sprite Kit searches for the texture in any texture atlases stored in the app bundle. If the specified image does not exist anywhere in the bundle, Sprite Kit creates a placeholder texture image.
+	   * @see https://developer.apple.com/reference/spritekit/sktexture/1520086-init
+	   */
+
+
+	  _createClass(SKTexture, [{
+	    key: 'applying',
+
+
+	    /**
+	     * Creates a new texture by applying a Core Image filter to an existing texture.
+	     * @access public
+	     * @param {CIFilter} filter - A Core Image filter that requires a single inputImage parameter and produces an outputImage parameter.
+	     * @returns {SKTexture} - 
+	     * @desc The image data is copied before control is returned to your game.
+	     * @see https://developer.apple.com/reference/spritekit/sktexture/1520388-applying
+	     */
+	    value: function applying(filter) {
+	      return null;
+	    }
+
+	    /**
+	     * Returns the texture’s image data as a Quartz 2D image.
+	     * @access public
+	     * @returns {CGImage} - 
+	     * @see https://developer.apple.com/reference/spritekit/sktexture/1519755-cgimage
+	     */
+
+	  }, {
+	    key: 'cgImage',
+	    value: function cgImage() {
+	      return this._image;
+	    }
+
+	    // Creating Textures from Raw Pixel Data
+
+	    /**
+	     * Creates a new texture from raw pixel data.
+	     * @access public
+	     * @param {Data} pixelData - An NSData object that holds the bitmap data. The pixels must be 32 bpp, 8bpc (unsigned integer) RGBA pixel data. The color components should have been already multiplied by the alpha value.
+	     * @param {CGSize} size - The size of the new texture in points.
+	     * @returns {void}
+	     * @desc The image data is copied before control is returned to your game.Creating textures from raw pixel data is useful if you have a CPU based routine for creating imagery. The following code shows how you can use init(data:size:) to create a texture containing random colors and a solid alpha. The bytes array is populated by iterating over the total number of pixels and adding four UInt8 values for the red, green, blue, and alpha channels.let width = 128
+	    let height = 128
+	    let bytes = stride(from: 0, to: width * height, by: 1).flatMap {
+	      _ in
+	      return [
+	          UInt8(drand48() * 255), // red
+	          UInt8(drand48() * 255), // green
+	          UInt8(drand48() * 255), // blue
+	          UInt8(255)              // alpha
+	      ]
+	    }
+	    let data = Data(bytes: bytes)
+	    let texture = SKTexture(data: data,
+	                          size: CGSize(width: width, height: height))
+	    let width = 128
+	    let height = 128
+	    let bytes = stride(from: 0, to: width * height, by: 1).flatMap {
+	      _ in
+	      return [
+	          UInt8(drand48() * 255), // red
+	          UInt8(drand48() * 255), // green
+	          UInt8(drand48() * 255), // blue
+	          UInt8(255)              // alpha
+	      ]
+	    }
+	    let data = Data(bytes: bytes)
+	    let texture = SKTexture(data: data,
+	                          size: CGSize(width: width, height: height))
+	      * @see https://developer.apple.com/reference/spritekit/sktexture/1519962-init
+	     */
+
+	  }, {
+	    key: 'generatingNormalMap',
+
+
+	    // Creating Normal Map Textures
+
+	    /**
+	     * Creates a normal map texture by analyzing the contents of an existing texture.
+	     * @access public
+	     * @returns {SKTexture} - 
+	     * @see https://developer.apple.com/reference/spritekit/sktexture/1519687-generatingnormalmap
+	     */
+	    value: function generatingNormalMap() {
+	      return null;
+	    }
+
+	    /**
+	     * Creates a normal map texture by analyzing the contents of an existing texture.
+	     * @access public
+	     * @param {number} smoothness - A number between 0.0 and 1.0 indicating how much the texture should be smoothed before the normal map is generated. A value of 0.0 means that the texture is not smoothed at all before being processed.
+	     * @param {number} contrast - A value used to magnify the effect of the generated normal map. A value of 1.0 indicates no magnification is applied.
+	     * @returns {SKTexture} - 
+	     * @see https://developer.apple.com/reference/spritekit/sktexture/1520441-generatingnormalmap
+	     */
+
+	  }, {
+	    key: 'generatingNormalMapWithSmoothness',
+	    value: function generatingNormalMapWithSmoothness(smoothness, contrast) {
+	      return null;
+	    }
+
+	    // Creating Noise Textures
+
+	    /**
+	     * Creates a new texture whose contents are procedurally generated directional noise data.
+	     * @access public
+	     * @param {number} smoothness - A value that indicates how similar neighboring texels will be in the resulting texture. The value should be between 0.0 and 1.0. A value of 1.0 generates a smooth surface.
+	     * @param {CGSize} size - The size of the new texture in points.
+	     * @returns {void}
+	     * @desc The noise texture is tileable with itself. The RGB values stored in the texture can be used as directional (XYZ) data. The alpha values are also randomized and can be used as magnitude data, if desired.The following code creates three sprite nodes with textures generated by init(vectorNoiseWithSmoothness:size:) with smoothness values of 0.0, 0.5 and 1.0.let columWidth = scene.size.width / 3
+	    for i in 0...2 {
+	      
+	      let size = CGSize(width: ceil(columWidth),
+	                        height: 0.5 * scene.size.height)
+	      
+	      let smoothness = CGFloat(i) / 2
+	      
+	      let vectorTexture = SKTexture(vectorNoiseWithSmoothness: smoothness,
+	                                    size: size)
+	      
+	      let sprite = SKSpriteNode(texture: vectorTexture, size: size)
+	      
+	      sprite.position = CGPoint(x: CGFloat(i) * columWidth + (columWidth / 2),
+	                                y: 
+	    scene.size.height / 2)
+	       
+	      scene.addChild(sprite)
+	    }
+	    let columWidth = scene.size.width / 3
+	    for i in 0...2 {
+	      
+	      let size = CGSize(width: ceil(columWidth),
+	                        height: 0.5 * scene.size.height)
+	      
+	      let smoothness = CGFloat(i) / 2
+	      
+	      let vectorTexture = SKTexture(vectorNoiseWithSmoothness: smoothness,
+	                                    size: size)
+	      
+	      let sprite = SKSpriteNode(texture: vectorTexture, size: size)
+	      
+	      sprite.position = CGPoint(x: CGFloat(i) * columWidth + (columWidth / 2),
+	                                y: 
+	    scene.size.height / 2)
+	       
+	      scene.addChild(sprite)
+	    }
+	      * @see https://developer.apple.com/reference/spritekit/sktexture/1520393-init
+	     */
+
+	  }, {
+	    key: 'size',
+
+
+	    // Inspecting a Texture’s Properties
+
+	    /**
+	     * The size of the texture.
+	     * @access public
+	     * @returns {CGSize} - 
+	     * @desc If the texture was created using an image file and that image file hasn’t been loaded, calling this method forces the texture data to be loaded from the file.
+	     * @see https://developer.apple.com/reference/spritekit/sktexture/1519772-size
+	     */
+	    value: function size() {
+	      if (this._image === null) {
+	        return new _CGSize2.default(0, 0);
+	      }
+	      return new _CGSize2.default(this._image.naturalWidth, this._image.naturalHeight);
+	    }
+
+	    /**
+	     * A rectangle that defines the portion of the texture used to render its image.
+	     * @access public
+	     * @returns {CGRect} - 
+	     * @desc The default value is a rectangle that covers the entire texture (0,0) - (1,1). You cannot set this value directly; to use only a portion of a texture, use the init(rect:in:) method to create a new texture.
+	     * @see https://developer.apple.com/reference/spritekit/sktexture/1519707-texturerect
+	     */
+
+	  }, {
+	    key: 'textureRect',
+	    value: function textureRect() {
+	      return null;
+	    }
+
+	    // Preloading the Texture Data
+
+	    /**
+	     * Load the texture data into memory, calling a completion handler after the task completes.
+	     * @access public
+	     * @param {function(): void} completionHandler - A block called after the texture data is loaded.
+	     * @returns {void}
+	     * @desc SpriteKit creates a background task to load the texture data from the associated file, then returns control to your game. After the texture data is loaded, your completion handler is called. Typically, you use this method when you want to guarantee that a particular texture is in memory before accessing it.If you need to preload multiple textures at once, use the preload(_:withCompletionHandler:) method instead.
+	     * @see https://developer.apple.com/reference/spritekit/sktexture/1520172-preload
+	     */
+
+	  }, {
+	    key: 'preload',
+	    value: function preload(completionHandler) {}
+
+	    /**
+	     * Load the texture data of multiple textures into memory.
+	     * @access public
+	     * @param {SKTexture[]} textures - An array of SKTexture objects.
+	     * @param {function(): void} completionHandler - A block called after all of the textures are loaded.
+	     * @returns {void}
+	     * @desc SpriteKit creates a background task that loads the texture data for all of the textures in the array, then returns control to your game. Your completion handler is called after all of the textures are loaded.
+	     * @see https://developer.apple.com/reference/spritekit/sktexture/1519817-preload
+	     */
+
+	  }, {
+	    key: '_loadImage',
+	    value: function _loadImage(path) {
+	      var _this2 = this;
+
+	      var image = new Image();
+	      if (path.indexOf('file:///') === 0) {
+	        var paths = path.slice(8).split('/');
+	        var pathCount = 1;
+	        var _path = paths.slice(-pathCount).join('/');
+	        console.info('image loading: ' + _path);
+	        image.onload = function () {
+	          console.info('image ' + _path + ' onload');
+	          _this2._image = image;
+	        };
+	        image.onerror = function () {
+	          pathCount += 1;
+	          if (pathCount > paths.length) {
+	            console.error('image ' + path + ' load error.');
+	          } else {
+	            console.info('image ' + _path + ' load error.');
+	            _path = paths.slice(-pathCount).join('/');
+	            console.info('try ' + _path);
+	            image.src = _path;
+	          }
+	        };
+	      } else {
+	        console.info('image loading: ' + path);
+	        image.onload = function () {
+	          _this2._image = image;
+	        };
+	        image.onerror = function () {
+	          console.info('image ' + path + ' load error.');
+	        };
+	        image.src = path;
+	      }
+	    }
+	  }, {
+	    key: '_createTexture',
+	    value: function _createTexture(gl) {
+	      var texture = gl.createTexture();
+
+	      var canvas = document.createElement('canvas');
+	      canvas.width = this._image.naturalWidth;
+	      canvas.height = this._image.naturalHeight;
+	      canvas.getContext('2d').drawImage(this._image, 0, 0);
+
+	      gl.bindTexture(gl.TEXTURE_2D, texture);
+	      // texImage2D(target, level, internalformat, width, height, border, format, type, source)
+	      // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
+	      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, this._image.width, this._image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
+	      gl.generateMipmap(gl.TEXTURE_2D);
+	      gl.bindTexture(gl.TEXTURE_2D, null);
+
+	      this._texture = texture;
+	      return texture;
+	    }
+	  }, {
+	    key: 'customPlaygroundQuickLook',
+
+
+	    // Instance Properties
+	    /**
+	     * 
+	     * @type {PlaygroundQuickLook}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/spritekit/sktexture/1645801-customplaygroundquicklook
+	     */
+	    get: function get() {
+	      return this._customPlaygroundQuickLook;
+	    }
+	  }], [{
+	    key: 'textureWithImageNamed',
+	    value: function textureWithImageNamed(name) {
+	      console.log('SKTexture image name: ' + name);
+	      var texture = new SKTexture();
+	      texture._loadImage(name);
+	      return texture;
+	    }
+
+	    /**
+	     * Create a new texture object from an image object.
+	     * @access public
+	     * @param {Image} image - An image.
+	     * @returns {void}
+	     * @desc The image data is copied before control is returned to your game.
+	     * @see https://developer.apple.com/reference/spritekit/sktexture/1520136-init
+	     */
+
+	  }, {
+	    key: 'textureWithImage',
+	    value: function textureWithImage(image) {
+	      var texture = new SKTexture();
+	      texture._image = image;
+	      return texture;
+	    }
+
+	    /**
+	     * Create a new texture object from a Quartz 2D image.
+	     * @access public
+	     * @param {CGImage} image - A Quartz 2D image (CGImage) object. For more information, see Quartz 2D Programming Guide and CGImage.
+	     * @returns {void}
+	     * @desc The image data is copied before control is returned to your game.
+	     * @see https://developer.apple.com/reference/spritekit/sktexture/1519576-init
+	     */
+
+	  }, {
+	    key: 'textureWithCgImage',
+	    value: function textureWithCgImage(image) {
+	      var texture = new SKTexture();
+	      texture._image = image;
+	      return texture;
+	    }
+
+	    /**
+	     * Creates a new texture from a subset of an existing texture.
+	     * @access public
+	     * @param {CGRect} rect - A rectangle in the unit coordinate space that specifies the portion of the texture to use.
+	     * @param {SKTexture} texture - The texture to create the new texture from.
+	     * @returns {void}
+	     * @desc The returned texture object shares the same texture data as the original texture object, meaning that only one copy of the texture data is kept in memory.If you call this method on a texture that itself was created using this method, the original texture is used as the source instead. That is, the rectangle is considered to be in the source texture’s coordinate system. To do this, you should use the source texture's textureRect() rather than relying on hard coded {(0,0) (1,1)} as the coordinates.  Listing 1 shows how you can use the source texture's textureRect() to calculate the portion of the texture to use.Listing 1 Creating a texture from a portion of another texture.let originalTexture = SKTexture(imageNamed: "sourceImage.png")
+	    let rect = CGRect(origin: originalTexture.textureRect().origin,
+	                    size: CGSize(width: originalTexture.textureRect().midX,
+	                                 height: originalTexture.textureRect().midY))
+	    let croppedTexture = SKTexture(rect: rect,
+	                                 in: originalTexture)
+	    In the above example, if originalTexture had a size of (348.0, 282.0) and a textureRect() of {(0,0) (1,1)}, croppedTexture will have a size of (174.0, 141.0) and a textureRect() of {(0,0) (1,1)}. croppedTexture will be a copy of the bottom left quadrant of originalTexture.Creating a texture from a portion of another texture.let originalTexture = SKTexture(imageNamed: "sourceImage.png")
+	    let rect = CGRect(origin: originalTexture.textureRect().origin,
+	                    size: CGSize(width: originalTexture.textureRect().midX,
+	                                 height: originalTexture.textureRect().midY))
+	    let croppedTexture = SKTexture(rect: rect,
+	                                 in: originalTexture)
+	      * @see https://developer.apple.com/reference/spritekit/sktexture/1520425-init
+	     */
+
+	  }, {
+	    key: 'textureWithRectIn',
+	    value: function textureWithRectIn(rect, texture) {
+	      var texutre = new SKTexture();
+	      return texture;
+	    }
+	  }, {
+	    key: 'textureWithDataSize',
+	    value: function textureWithDataSize(pixelData, size) {}
+	  }, {
+	    key: 'textureWithVectorNoiseWithSmoothness',
+	    value: function textureWithVectorNoiseWithSmoothness(smoothness, size) {}
+
+	    /**
+	     * Creates a new texture whose contents are procedurally generated colored noise data.
+	     * @access public
+	     * @param {number} smoothness - A value that indicates how similar neighboring texels will be in the resulting texture. The value should be between 0.0 and 1.0. A value of 1.0 generates a smooth surface.
+	     * @param {CGSize} size - The size of the new texture in points.
+	     * @param {boolean} grayscale - If true, all four components of each texel will have equal values. If false, all four values are completely randomized.
+	     * @returns {void}
+	     * @desc Unlike other textures produced by SpriteKit, the texels are not premultiplied by the alpha value. Your custom shaders should compensate for this as necessary.The following code creates three sprite nodes with textures generated by init(noiseWithSmoothness:size:grayscale:) with smoothness values of 0.0, 0.5 and 1.0.let columWidth = scene.size.width / 3
+	    for i in 0...2 {
+	      
+	      let size = CGSize(width: ceil(columWidth),
+	                        height: 0.5 * scene.size.height)
+	      
+	      let smoothness = CGFloat(i) / 2
+	      
+	      let noiseTexture = SKTexture(noiseWithSmoothness: smoothness,
+	                                    size: size,
+	                                    grayscale: false)
+	      
+	      let sprite = SKSpriteNode(texture: noiseTexture, size: size)
+	      
+	      sprite.position = CGPoint(x: CGFloat(i) * columWidth + (columWidth / 2),
+	                                y: scene.size.height / 2)
+	      
+	      scene.addChild(sprite)
+	    }
+	    let columWidth = scene.size.width / 3
+	    for i in 0...2 {
+	      
+	      let size = CGSize(width: ceil(columWidth),
+	                        height: 0.5 * scene.size.height)
+	      
+	      let smoothness = CGFloat(i) / 2
+	      
+	      let noiseTexture = SKTexture(noiseWithSmoothness: smoothness,
+	                                    size: size,
+	                                    grayscale: false)
+	      
+	      let sprite = SKSpriteNode(texture: noiseTexture, size: size)
+	      
+	      sprite.position = CGPoint(x: CGFloat(i) * columWidth + (columWidth / 2),
+	                                y: scene.size.height / 2)
+	      
+	      scene.addChild(sprite)
+	    }
+	      * @see https://developer.apple.com/reference/spritekit/sktexture/1519971-init
+	     */
+
+	  }, {
+	    key: 'textureWithNoiseWithSmoothness',
+	    value: function textureWithNoiseWithSmoothness(smoothness, size, grayscale) {}
+	  }, {
+	    key: 'preloadWithCompletionHandler',
+	    value: function preloadWithCompletionHandler(textures, completionHandler) {}
+	  }]);
+
+	  return SKTexture;
+	}(_NSObject3.default);
+
+	exports.default = SKTexture;
+
+/***/ },
+/* 215 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * Texture filtering modes to use when the texture is drawn in a size other than its native size.
+	 * @typedef {Object} SKTextureFilteringMode
+	 * @property {number} nearest - Each pixel is drawn using the nearest point in the texture. This mode is faster, but the results are often pixelated.
+	 * @property {number} linear - Each pixel is drawn by using a linear filter of multiple texels in the texture. This mode produces higher quality results but may be slower.
+	 * @see https://developer.apple.com/reference/spritekit/sktexturefilteringmode
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var SKTextureFilteringMode = {
+	  nearest: 0,
+	  linear: 1
+	};
+
+	exports.default = SKTextureFilteringMode;
+
+/***/ },
+/* 216 */
+/***/ function(module, exports, __webpack_require__) {
+
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -43522,7 +47929,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _BinaryParser = __webpack_require__(206);
+	var _BinaryParser = __webpack_require__(217);
 
 	var _BinaryParser2 = _interopRequireDefault(_BinaryParser);
 
@@ -43807,7 +48214,7 @@ module.exports =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3).Buffer))
 
 /***/ },
-/* 206 */
+/* 217 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -43975,7 +48382,7 @@ module.exports =
 	};
 
 /***/ },
-/* 207 */
+/* 218 */
 /***/ function(module, exports) {
 
 	'use strict';
