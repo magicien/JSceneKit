@@ -70,16 +70,15 @@ SCNAction *sequenceReverse = [sequence reversedAction];
     const action =  new SCNActionSequence()
     action._actions = actions
     action._duration = 0
-    //actions.forEach((act) => {
-    //  action._duration += act.duration / act.speed
-    //})
     return action
   }
 
   get duration() {
     let d = 0
     this._actions.forEach((act) => {
-      d += act.duration
+      if(act.speed > 0){
+        d += act.duration / act.speed
+      }
     })
     return d
   }
@@ -106,15 +105,21 @@ SCNAction *sequenceReverse = [sequence reversedAction];
    * @returns {void}
    */
   _applyAction(obj, time, needTimeConversion = true) {
-    //const dt = this._getTime(time, needTimeConversion) * this._duration
-    let duration = this._activetimeFromTime(time)
+    const total = this.duration
+    let duration = 0
+    if(total <= 0 || total === Infinity){
+      duration = this._activetimeFromTime(time)
+    }else{
+      duration = this._getTime(time, needTimeConversion) * total
+    }
 
     for(let i=0; i<this._animIndex; i++){
       duration -= this._actions[i].duration / this._actions[i].speed
     }
     for(; this._animIndex<this._actions.length; this._animIndex++){
       const action = this._actions[this._animIndex]
-      action._applyAction(obj, duration, needTimeConversion)
+      //action._applyAction(obj, duration, needTimeConversion)
+      action._applyAction(obj, duration, true)
       duration -= action.duration / action.speed
       if(duration < 0){
         break

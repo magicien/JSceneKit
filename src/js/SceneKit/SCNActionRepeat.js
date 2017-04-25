@@ -50,7 +50,7 @@ export default class SCNActionRepeat extends SCNAction {
    */
   static repeat(action, count) {
     const _action = new SCNActionRepeat()
-    _action._repeatedActin = action
+    _action._repeatedAction = action
     _action._duration = action.duration
     _action._timesToRepeat = count
     _action._forever = (count === Infinity)
