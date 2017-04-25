@@ -218,5 +218,6 @@ export default class CAKeyframeAnimation extends CAPropertyAnimation {
     }
 
     this._applyValue(obj, value)
+    this._handleEvents(obj, t)
   }
 }

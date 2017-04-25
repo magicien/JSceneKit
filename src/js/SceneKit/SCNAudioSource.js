@@ -107,10 +107,13 @@ export default class SCNAudioSource extends NSObject {
       this._reject = reject
     })
     this._url = url
-    this._source = _context.createBufferSource()
+    this._buffer = null
     this._gainNode = _context.createGain()
-    this._source.connect(this._gainNode)
-    this._gainNode.connect(_context.destination)
+    this._loops = false
+    this._source = null
+    //this._source = _context.createBufferSource()
+    //this._source.connect(this._gainNode)
+    //this._gainNode.connect(_context.destination)
   }
 
   /**
@@ -131,10 +134,13 @@ export default class SCNAudioSource extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnaudiosource/1524183-loops
    */
   get loops() {
-    this._source.loop
+    return this._loops
   }
   set loops(newValue) {
-    this._source.loop = newValue
+    this._loops = newValue
+    if(this._source !== null){
+      this._source.loop = newValue
+    }
   }
 
   // Preloading Audio Data
@@ -155,22 +161,33 @@ export default class SCNAudioSource extends NSObject {
     const promise = _AjaxRequest.get(this._url, {responseType: 'arraybuffer'})
     .then((data) => {
       _context.decodeAudioData(data, (buffer) => {
-        this._source.buffer = buffer
+        this._buffer = buffer
         this._resolve()
       })
     })
   }
 
-  _play() {
+  _play(when = 0) {
     this.load()
     this._loadPromise.then(() => {
-      this._source.start(0)
+      this._source = _context.createBufferSource()
+      this._source.buffer = this._buffer
+      this._source.connect(this._gainNode)
+      this._gainNode.connect(_context.destination)
+      this._source.start(when)
     })
   }
 
+  _stop(when = 0) {
+    if(this._source){
+      this._source.stop(when)
+      this._source = null
+    }
+  }
+
   get _duration() {
-    if(this._source.buffer){
-      return this._source.buffer.duration
+    if(this._buffer){
+      return this._buffer.duration
     }
     return null
   }

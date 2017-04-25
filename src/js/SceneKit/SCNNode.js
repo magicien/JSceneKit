@@ -338,7 +338,7 @@ export default class SCNNode extends NSObject {
 
     // Working With Positional Audio
 
-    this._audioPlayers = null
+    this._audioPlayers = []
 
     ///////////////////
     // SCNActionable //
@@ -1200,6 +1200,9 @@ export default class SCNNode extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnnode/1408032-enumeratechildnodes
    */
   enumerateChildNodes(block) {
+    this._childNodes.some((child) => {
+      return this._enumerateChildNodesRecursive(child, block)
+    })
   }
 
   /**
@@ -1211,7 +1214,20 @@ export default class SCNNode extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnnode/1642248-enumeratehierarchy
    */
   enumerateHierarchy(block) {
+    this._enumerateChildNodesRecursive(this, block)
   }
+
+  _enumerateChildNodesRecursive(node, block) {
+    let stop = block(node)
+    if(stop === true){
+      return true
+    }
+    stop = node._childNodes.some((child) => {
+      return this._enumerateChildNodesRecursive(child, block)
+    })
+    return stop
+  }
+
 
   // Working With Particle Systems
 
@@ -1268,6 +1284,10 @@ export default class SCNNode extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnnode/1523464-addaudioplayer
    */
   addAudioPlayer(player) {
+    if(this._audioPlayers.indexOf(player) < 0){
+      this._audioPlayers.push(player)
+      player._play()
+    }
   }
 
   /**
@@ -1279,6 +1299,11 @@ export default class SCNNode extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnnode/1522767-removeaudioplayer
    */
   removeAudioPlayer(player) {
+    const index = this._audioPlayers.indexOf(player)
+    if(index >= 0){
+      player._stop()
+      delete this._audioPlayers[index]
+    }
   }
 
   /**
@@ -1288,7 +1313,12 @@ export default class SCNNode extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnnode/1523570-removeallaudioplayers
    */
   removeAllAudioPlayers() {
+    this._audioPlayers.forEach((player) => {
+      player._stop()
+    })
+    this._audioPlayers = []
   }
+
   /**
    * The audio players currently attached to the node.
    * @type {SCNAudioPlayer[]}
@@ -1296,7 +1326,7 @@ export default class SCNNode extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnnode/1523244-audioplayers
    */
   get audioPlayers() {
-    return this._audioPlayers
+    return this._audioPlayers.slice(0)
   }
 
   // Copying a Node

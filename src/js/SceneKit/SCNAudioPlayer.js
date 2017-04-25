@@ -17,16 +17,17 @@ export default class SCNAudioPlayer extends NSObject {
   /**
    * Initializes an audio player for playing the specified simple audio source.
    * @access public
+   * @constructor
    * @param {SCNAudioSource} source - An audio source object.
-   * @returns {void}
    * @desc Using this initializer is typically not necessary. Instead, call the audioPlayerWithSource: method, which returns a cached audio player object if one for the specified audio source has already been created and is available for use.
    * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1522736-init
    */
-  init(source) {
+  constructor(source) {
+    super()
 
     // Working with Audio Sources
 
-    this._audioSource = null
+    this._audioSource = source
     this._audioNode = null
 
     // Responding to Playback
@@ -44,7 +45,6 @@ export default class SCNAudioPlayer extends NSObject {
      * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1522818-didfinishplayback
      */
     this.didFinishPlayback = null
-
   }
 
   /**
@@ -81,6 +81,7 @@ export default class SCNAudioPlayer extends NSObject {
   }
 
   // Working with Audio Sources
+
   /**
    * The source of audio played by this player.
    * @type {?SCNAudioSource}
@@ -90,6 +91,7 @@ export default class SCNAudioPlayer extends NSObject {
   get audioSource() {
     return this._audioSource
   }
+
   /**
    * The audio node SceneKit uses for mixing audio from this player.
    * @type {?AVAudioNode}
@@ -98,5 +100,13 @@ export default class SCNAudioPlayer extends NSObject {
    */
   get audioNode() {
     return this._audioNode
+  }
+
+  _play() {
+    this._audioSource._play()
+  }
+
+  _stop() {
+    this._audioSource._stop()
   }
 }

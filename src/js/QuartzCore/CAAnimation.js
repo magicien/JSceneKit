@@ -208,7 +208,7 @@ export default class CAAnimation extends NSObject {
     anim.usesSceneTimeBase = this.usesSceneTimeBase
     anim.fadeInDuration = this.fadeInDuration
     anim.fadeOutDuration = this.fadeOutDuration
-    anim.animationEvents = this.animationEvents
+    anim.animationEvents = this.animationEvents ? this.animationEvents.slice(0) : null
     anim.beginTime = this.beginTime
     anim.timeOffset = this.timeOffset
     anim.repeatCount = this.repeatCount
@@ -274,14 +274,15 @@ export default class CAAnimation extends NSObject {
       prevTime = time - 0.0000001
     }
     this.animationEvents.forEach((event) => {
-      if(prevTime < event.time && event.time <= time){
-        if(event.block){
+      if(prevTime < event._time && event._time <= time){
+        if(event._eventBlock){
           // FIXME: set playingBackward
           // SCNAnimationEventBlock(animation, animatedObject, playingBackward)
-          event.block(this, obj, false)
+          event._eventBlock(this, obj, false)
         }
       }
     })
+    this._prevTime = time
   }
 
   /**

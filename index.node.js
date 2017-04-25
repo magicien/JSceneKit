@@ -16341,7 +16341,7 @@ module.exports =
 	      anim.usesSceneTimeBase = this.usesSceneTimeBase;
 	      anim.fadeInDuration = this.fadeInDuration;
 	      anim.fadeOutDuration = this.fadeOutDuration;
-	      anim.animationEvents = this.animationEvents;
+	      anim.animationEvents = this.animationEvents ? this.animationEvents.slice(0) : null;
 	      anim.beginTime = this.beginTime;
 	      anim.timeOffset = this.timeOffset;
 	      anim.repeatCount = this.repeatCount;
@@ -16415,14 +16415,15 @@ module.exports =
 	        prevTime = time - 0.0000001;
 	      }
 	      this.animationEvents.forEach(function (event) {
-	        if (prevTime < event.time && event.time <= time) {
-	          if (event.block) {
+	        if (prevTime < event._time && event._time <= time) {
+	          if (event._eventBlock) {
 	            // FIXME: set playingBackward
 	            // SCNAnimationEventBlock(animation, animatedObject, playingBackward)
-	            event.block(_this2, obj, false);
+	            event._eventBlock(_this2, obj, false);
 	          }
 	        }
 	      });
+	      this._prevTime = time;
 	    }
 
 	    /**
@@ -17756,6 +17757,7 @@ module.exports =
 	        }
 
 	      this._applyValue(obj, value);
+	      this._handleEvents(obj, t);
 	    }
 	  }]);
 
@@ -19601,7 +19603,7 @@ module.exports =
 
 	    // Working With Positional Audio
 
-	    _this._audioPlayers = null;
+	    _this._audioPlayers = [];
 
 	    ///////////////////
 	    // SCNActionable //
@@ -19952,7 +19954,13 @@ module.exports =
 
 	  }, {
 	    key: 'enumerateChildNodes',
-	    value: function enumerateChildNodes(block) {}
+	    value: function enumerateChildNodes(block) {
+	      var _this3 = this;
+
+	      this._childNodes.some(function (child) {
+	        return _this3._enumerateChildNodesRecursive(child, block);
+	      });
+	    }
 
 	    /**
 	     * Executes the specified block for each of the node’s child and descendant nodes, as well as for the node itself.
@@ -19965,7 +19973,23 @@ module.exports =
 
 	  }, {
 	    key: 'enumerateHierarchy',
-	    value: function enumerateHierarchy(block) {}
+	    value: function enumerateHierarchy(block) {
+	      this._enumerateChildNodesRecursive(this, block);
+	    }
+	  }, {
+	    key: '_enumerateChildNodesRecursive',
+	    value: function _enumerateChildNodesRecursive(node, block) {
+	      var _this4 = this;
+
+	      var stop = block(node);
+	      if (stop === true) {
+	        return true;
+	      }
+	      stop = node._childNodes.some(function (child) {
+	        return _this4._enumerateChildNodesRecursive(child, block);
+	      });
+	      return stop;
+	    }
 
 	    // Working With Particle Systems
 
@@ -20028,7 +20052,12 @@ module.exports =
 	     * @desc Positional audio effects from a player attached to a node are based on that node’s position relative to the audioListener position in the scene.After playback has completed, SceneKit automatically removes the audio player from the node.
 	     * @see https://developer.apple.com/reference/scenekit/scnnode/1523464-addaudioplayer
 	     */
-	    value: function addAudioPlayer(player) {}
+	    value: function addAudioPlayer(player) {
+	      if (this._audioPlayers.indexOf(player) < 0) {
+	        this._audioPlayers.push(player);
+	        player._play();
+	      }
+	    }
 
 	    /**
 	     * Removes the specified audio player from the node, stopping playback.
@@ -20041,7 +20070,13 @@ module.exports =
 
 	  }, {
 	    key: 'removeAudioPlayer',
-	    value: function removeAudioPlayer(player) {}
+	    value: function removeAudioPlayer(player) {
+	      var index = this._audioPlayers.indexOf(player);
+	      if (index >= 0) {
+	        player._stop();
+	        delete this._audioPlayers[index];
+	      }
+	    }
 
 	    /**
 	     * Removes all audio players attached to the node, stopping playback.
@@ -20052,7 +20087,13 @@ module.exports =
 
 	  }, {
 	    key: 'removeAllAudioPlayers',
-	    value: function removeAllAudioPlayers() {}
+	    value: function removeAllAudioPlayers() {
+	      this._audioPlayers.forEach(function (player) {
+	        player._stop();
+	      });
+	      this._audioPlayers = [];
+	    }
+
 	    /**
 	     * The audio players currently attached to the node.
 	     * @type {SCNAudioPlayer[]}
@@ -21055,7 +21096,7 @@ module.exports =
 	  }, {
 	    key: 'audioPlayers',
 	    get: function get() {
-	      return this._audioPlayers;
+	      return this._audioPlayers.slice(0);
 	    }
 	  }, {
 	    key: 'hasActions',
@@ -21215,7 +21256,7 @@ module.exports =
 	  }, {
 	    key: '_loadAnimationGroup',
 	    value: function _loadAnimationGroup(animation) {
-	      var _this3 = this;
+	      var _this5 = this;
 
 	      console.log('_loadAnimationGroup start');
 	      var group = new _CAAnimationGroup2.default();
@@ -21241,7 +21282,7 @@ module.exports =
 	      data.channels.forEach(function (channel) {
 	        var keyPath = channel.targetPath.join('.');
 	        console.error('SCNNode animation group keyPath: ' + keyPath);
-	        var chAnim = _this3._loadAnimationData(channel.animation, keyPath);
+	        var chAnim = _this5._loadAnimationData(channel.animation, keyPath);
 	        group.animations.push(chAnim);
 	      });
 	      console.log('_loadAnimationGroup done');
@@ -35490,60 +35531,55 @@ module.exports =
 	var SCNAudioPlayer = function (_NSObject) {
 	  _inherits(SCNAudioPlayer, _NSObject);
 
-	  function SCNAudioPlayer() {
+	  // Creating an Audio Player
+
+	  /**
+	   * Initializes an audio player for playing the specified simple audio source.
+	   * @access public
+	   * @constructor
+	   * @param {SCNAudioSource} source - An audio source object.
+	   * @desc Using this initializer is typically not necessary. Instead, call the audioPlayerWithSource: method, which returns a cached audio player object if one for the specified audio source has already been created and is available for use.
+	   * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1522736-init
+	   */
+	  function SCNAudioPlayer(source) {
 	    _classCallCheck(this, SCNAudioPlayer);
 
-	    return _possibleConstructorReturn(this, (SCNAudioPlayer.__proto__ || Object.getPrototypeOf(SCNAudioPlayer)).apply(this, arguments));
+	    // Working with Audio Sources
+
+	    var _this = _possibleConstructorReturn(this, (SCNAudioPlayer.__proto__ || Object.getPrototypeOf(SCNAudioPlayer)).call(this));
+
+	    _this._audioSource = source;
+	    _this._audioNode = null;
+
+	    // Responding to Playback
+
+	    /**
+	     * A block called by SceneKit when playback of the player’s audio source is about to begin.
+	     * @type {?function(): void}
+	     * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1524115-willstartplayback
+	     */
+	    _this.willStartPlayback = null;
+
+	    /**
+	     * A block called by SceneKit when playback of the player’s audio source has completed.
+	     * @type {?function(): void}
+	     * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1522818-didfinishplayback
+	     */
+	    _this.didFinishPlayback = null;
+	    return _this;
 	  }
 
+	  /**
+	   * Initializes an audio player for playing the specified AVFoundation audio node.
+	   * @access public
+	   * @param {AVAudioNode} audioNode - An audio node object.
+	   * @returns {void}
+	   * @desc Using this initializer is typically not necessary. Instead, call the audioPlayerWithAVAudioNode: method, which returns a cached audio player object if one for the specified AVAudioNode object has already been created and is available for use.
+	   * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1523010-init
+	   */
+
+
 	  _createClass(SCNAudioPlayer, [{
-	    key: 'init',
-
-
-	    // Creating an Audio Player
-
-	    /**
-	     * Initializes an audio player for playing the specified simple audio source.
-	     * @access public
-	     * @param {SCNAudioSource} source - An audio source object.
-	     * @returns {void}
-	     * @desc Using this initializer is typically not necessary. Instead, call the audioPlayerWithSource: method, which returns a cached audio player object if one for the specified audio source has already been created and is available for use.
-	     * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1522736-init
-	     */
-	    value: function init(source) {
-
-	      // Working with Audio Sources
-
-	      this._audioSource = null;
-	      this._audioNode = null;
-
-	      // Responding to Playback
-
-	      /**
-	       * A block called by SceneKit when playback of the player’s audio source is about to begin.
-	       * @type {?function(): void}
-	       * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1524115-willstartplayback
-	       */
-	      this.willStartPlayback = null;
-
-	      /**
-	       * A block called by SceneKit when playback of the player’s audio source has completed.
-	       * @type {?function(): void}
-	       * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1522818-didfinishplayback
-	       */
-	      this.didFinishPlayback = null;
-	    }
-
-	    /**
-	     * Initializes an audio player for playing the specified AVFoundation audio node.
-	     * @access public
-	     * @param {AVAudioNode} audioNode - An audio node object.
-	     * @returns {void}
-	     * @desc Using this initializer is typically not necessary. Instead, call the audioPlayerWithAVAudioNode: method, which returns a cached audio player object if one for the specified AVAudioNode object has already been created and is available for use.
-	     * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1523010-init
-	     */
-
-	  }, {
 	    key: 'initAvAudioNode',
 	    value: function initAvAudioNode(audioNode) {
 
@@ -35570,6 +35606,7 @@ module.exports =
 	    }
 
 	    // Working with Audio Sources
+
 	    /**
 	     * The source of audio played by this player.
 	     * @type {?SCNAudioSource}
@@ -35578,10 +35615,21 @@ module.exports =
 	     */
 
 	  }, {
+	    key: '_play',
+	    value: function _play() {
+	      this._audioSource._play();
+	    }
+	  }, {
+	    key: '_stop',
+	    value: function _stop() {
+	      this._audioSource._stop();
+	    }
+	  }, {
 	    key: 'audioSource',
 	    get: function get() {
 	      return this._audioSource;
 	    }
+
 	    /**
 	     * The audio node SceneKit uses for mixing audio from this player.
 	     * @type {?AVAudioNode}
@@ -35744,10 +35792,13 @@ module.exports =
 	      _this._reject = reject;
 	    });
 	    _this._url = url;
-	    _this._source = _context.createBufferSource();
+	    _this._buffer = null;
 	    _this._gainNode = _context.createGain();
-	    _this._source.connect(_this._gainNode);
-	    _this._gainNode.connect(_context.destination);
+	    _this._loops = false;
+	    _this._source = null;
+	    //this._source = _context.createBufferSource()
+	    //this._source.connect(this._gainNode)
+	    //this._gainNode.connect(_context.destination)
 	    return _this;
 	  }
 
@@ -35781,7 +35832,7 @@ module.exports =
 
 	      var promise = _AjaxRequest3.default.get(this._url, { responseType: 'arraybuffer' }).then(function (data) {
 	        _context.decodeAudioData(data, function (buffer) {
-	          _this2._source.buffer = buffer;
+	          _this2._buffer = buffer;
 	          _this2._resolve();
 	        });
 	      });
@@ -35791,10 +35842,26 @@ module.exports =
 	    value: function _play() {
 	      var _this3 = this;
 
+	      var when = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+
 	      this.load();
 	      this._loadPromise.then(function () {
-	        _this3._source.start(0);
+	        _this3._source = _context.createBufferSource();
+	        _this3._source.buffer = _this3._buffer;
+	        _this3._source.connect(_this3._gainNode);
+	        _this3._gainNode.connect(_context.destination);
+	        _this3._source.start(when);
 	      });
+	    }
+	  }, {
+	    key: '_stop',
+	    value: function _stop() {
+	      var when = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
+
+	      if (this._source) {
+	        this._source.stop(when);
+	        this._source = null;
+	      }
 	    }
 	  }, {
 	    key: 'volume',
@@ -35814,16 +35881,19 @@ module.exports =
 	  }, {
 	    key: 'loops',
 	    get: function get() {
-	      this._source.loop;
+	      return this._loops;
 	    },
 	    set: function set(newValue) {
-	      this._source.loop = newValue;
+	      this._loops = newValue;
+	      if (this._source !== null) {
+	        this._source.loop = newValue;
+	      }
 	    }
 	  }, {
 	    key: '_duration',
 	    get: function get() {
-	      if (this._source.buffer) {
-	        return this._source.buffer.duration;
+	      if (this._buffer) {
+	        return this._buffer.duration;
 	      }
 	      return null;
 	    }
