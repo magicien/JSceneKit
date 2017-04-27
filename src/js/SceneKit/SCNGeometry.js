@@ -30,16 +30,19 @@ export default class SCNGeometry extends NSObject {
       // levelsOfDetail
       materials: 'NSArray',
       subdivisionLevel: 'integer',
-      // edgeCreasesSource
       // program
       // shaderModifiers
       elements: ['NSArray', '_geometryElements'],
-      kGeometrySourceSemanticVertex: ['NSArray', addSources],
-      kGeometrySourceSemanticNormal: ['NSArray', addSources],
-      kGeometrySourceSemanticTexcoord: ['NSArray', addSources],
       kGeometrySourceSemanticColor: ['NSArray', addSources],
+      kGeometrySourceSemanticEdgeCrease: ['NSArray', addSources],
+      kGeometrySourceSemanticNormal: ['NSArray', addSources],
+      kGeometrySourceSemanticTangent: ['NSArray', addSources],
+      kGeometrySourceSemanticTexcoord: ['NSArray', addSources],
+      kGeometrySourceSemanticVertex: ['NSArray', addSources],
+      kGeometrySourceSemanticVertexCrease: ['NSArray', addSources],
 
       entityID: ['string', '_entityID'],
+      subdivisionSettings: ['bytes', null],
       shadableHelper: ['SCNShadableHelper', null]
     }
   }

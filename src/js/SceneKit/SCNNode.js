@@ -76,6 +76,7 @@ export default class SCNNode extends NSObject {
       eulerAngles: ['SCNVector3', (obj, value) => {
         obj.eulerAngles = value
       }],
+      movabilityHint: 'integer',
 
       clientAttributes: ['NSMutableDictionary', null],
       nodeID: ['string', '_nodeID'],
@@ -277,7 +278,7 @@ export default class SCNNode extends NSObject {
      * @type {SCNMovabilityHint}
      * @see https://developer.apple.com/reference/scenekit/scnnode/1690499-movabilityhint
      */
-    this.movabilityHint = null
+    this.movabilityHint = SCNMovabilityHint.fixed
 
 
     // Managing the Node Hierarchy

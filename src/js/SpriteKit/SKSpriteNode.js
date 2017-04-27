@@ -12,6 +12,49 @@ import SKTexture from './SKTexture'
 //import SKAttributeValue from './SKAttributeValue'
 //import NSCoder from '../undefined/NSCoder'
 
+/**
+ * @access private
+ * @type {string}
+ */
+const _defaultVertexShader =
+ `#version 300 es
+  precision mediump float;
+
+  in vec3 position;
+  in vec2 texcoord;
+
+  uniform float screenWidth;
+  uniform float screenHeight;
+
+  //out vec3 v_position;
+  out vec2 v_texcoord;
+
+  void main() {
+    vec3 pos = position;
+    pos.x = (pos.x * 2.0 / screenWidth) - 1.0;
+    pos.y = (pos.y * 2.0 / screenHeight) - 1.0;
+    v_texcoord = texcoord;
+    gl_Position = vec4(pos, 1.0);
+  }
+`
+
+/**
+ * @access private
+ * @type {string}
+ */
+const _defaultFragmentShader = 
+ `#version 300 es
+  precision mediump float;
+
+  uniform sampler2D spriteTexture;
+  in vec2 v_texcoord;
+
+  out vec4 outColor;
+
+  void main() {
+    outColor = texture(spriteTexture, v_texcoord);
+  }
+`
 
 /**
  * A node that draws a rectangular texture, image or color. 
@@ -153,10 +196,20 @@ export default class SKSpriteNode extends SKNode {
     
     if(name !== null){
       this.texture = SKTexture.textureWithImageNamed(name)
-      if(generateNormalMap){
-        this.normalTexture = this.texture.generatingNormalMap()
-      }
+      //if(generateNormalMap){
+      //  this.normalTexture = this.texture.generatingNormalMap()
+      //}
     }
+
+    /**
+     * @access private
+     * @type {WebGLProgram}
+     */
+    this._program = null
+
+    this._vertexArrayObject = null
+    this._vertexBuffer = null
+    this._indexBuffer = null
   }
 
   /**
@@ -260,5 +313,135 @@ Creating a non-textured sprite nodelet node = SKSpriteNode(color: .red,
    */
   get customPlaygroundQuickLook() {
     return this._customPlaygroundQuickLook
+  }
+
+  /**
+   * @access private
+   * @param {WebGLRenderingContext} gl -
+   * @returns {void}
+   */
+  _render(gl, viewRect) {
+    if(this.texture === null){
+      return
+    }
+    if(this.texture._glTexture === null){
+      this.texture._createTexture(gl)
+      if(this.texture._glTexture === null){
+        // the texture is not ready
+        return
+      }
+      this.size = new CGSize(this.texture._image.naturalWidth, this.texture._image.naturalHeight)
+    }
+    if(this._program === null){
+      this._program = this._createProgram(gl)
+    }
+    const program = this._program
+    gl.useProgram(program)
+
+    if(this._vertexArrayObject === null){
+      this._createVertexArrayObject(gl, program)
+    }
+    gl.bindVertexArray(this._vertexArrayObject)
+
+
+    gl.uniform1f(gl.getUniformLocation(program, 'screenWidth'), viewRect.size.width)
+    gl.uniform1f(gl.getUniformLocation(program, 'screenHeight'), viewRect.size.height)
+
+    const data = this._createVertexData()
+    gl.bufferData(gl.ARRAY_BUFFER, data, gl.DYNAMIC_DRAW)
+
+    gl.activeTexture(gl.TEXTURE0)
+    gl.bindTexture(gl.TEXTURE_2D, this.texture._glTexture)
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR)
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR)
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE)
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE)
+
+    gl.drawElements(gl.TRIANGLES, 6, gl.UNSIGNED_BYTE, 0)
+  }
+
+  _createProgram(gl) {
+    const program = gl.createProgram()
+    const vsText = _defaultVertexShader
+    const fsText = _defaultFragmentShader
+
+    // initialize vertex shader
+    const vertexShader = gl.createShader(gl.VERTEX_SHADER)
+    gl.shaderSource(vertexShader, vsText)
+    gl.compileShader(vertexShader)
+    if(!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)){
+      const info = gl.getShaderInfoLog(vertexShader)
+      throw new Error(`SKSpriteNode vertex shader compile error: ${info}`)
+    }
+
+    // initialize fragment shader
+    const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER)
+    gl.shaderSource(fragmentShader, fsText)
+    gl.compileShader(fragmentShader)
+    if(!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)){
+      const info = gl.getShaderInfoLog(fragmentShader)
+      throw new Error(`particle fragment shader compile error: ${info}`)
+    }
+
+    gl.attachShader(program, vertexShader)
+    gl.attachShader(program, fragmentShader)
+
+    // link program object
+    gl.linkProgram(program)
+    if(!gl.getProgramParameter(program, gl.LINK_STATUS)){
+      const info = gl.getProgramInfoLog(program)
+      throw new Error(`program link error: ${info}`)
+    }
+
+    //gl.useProgram(program)
+
+    return program
+  }
+
+  /**
+   * @access private
+   * @param {WebGLRenderingContext} gl -
+   * @param {WebGLProgram} program -
+   * @returns {void}
+   */
+  _createVertexArrayObject(gl, program) {
+    this._vertexArrayObject = gl.createVertexArray()
+    gl.bindVertexArray(this._vertexArrayObject)
+
+    this._vertexBuffer = gl.createBuffer()
+    gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer)
+
+    const positionLoc = gl.getAttribLocation(program, 'position')
+    gl.bindAttribLocation(program, positionLoc, 'position')
+    gl.enableVertexAttribArray(positionLoc)
+    // idx, size, type, norm, stride, offset
+    gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, 20, 0)
+    
+    const texcoordLoc = gl.getAttribLocation(program, 'texcoord')
+    gl.bindAttribLocation(program, texcoordLoc, 'texcoord')
+    gl.enableVertexAttribArray(texcoordLoc)
+    // idx, size, type, norm, stride, offset
+    gl.vertexAttribPointer(texcoordLoc, 2, gl.FLOAT, false, 20, 12)
+
+    this._indexBuffer = gl.createBuffer()
+    const indexData = new Uint8Array([0, 3, 2, 0, 1, 3])
+    gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, this._indexBuffer)
+    gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, indexData, gl.STATIC_DRAW)
+  }
+
+  _createVertexData() {
+    const w = this.size.width * this.xScale
+    const h = this.size.height * this.yScale
+    const left =  this.position.x - this.anchorPoint.x * w
+    const right = this.position.x + (1.0 - this.anchorPoint.x) * w
+    const top = this.position.y + (1.0 - this.anchorPoint.y) * h
+    const bottom = this.position.y - this.anchorPoint.y * h
+    const arr = [
+      left, top, this.zPosition, this.centerRect.minX, this.centerRect.minY,
+      right, top, this.zPosition, this.centerRect.maxX, this.centerRect.minY,
+      left, bottom, this.zPosition, this.centerRect.minX, this.centerRect.maxY,
+      right, bottom, this.zPosition, this.centerRect.maxX, this.centerRect.maxY
+    ]
+    return new Float32Array(arr)
   }
 }

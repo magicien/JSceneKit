@@ -44,7 +44,7 @@ export default class SKTexture extends NSObject {
     this._customPlaygroundQuickLook = null
 
     this._image = null
-    this._texture = null
+    this._glTexture = null
   }
 
   // Creating New Textures from Images
@@ -417,6 +417,9 @@ for i in 0...2 {
   }
 
   _createTexture(gl) {
+    if(this._image === null){
+      return
+    }
     const texture = gl.createTexture()
 
     const canvas = document.createElement('canvas')
@@ -431,7 +434,6 @@ for i in 0...2 {
     gl.generateMipmap(gl.TEXTURE_2D)
     gl.bindTexture(gl.TEXTURE_2D, null)
 
-    this._texture = texture
-    return texture
+    this._glTexture = texture
   }
 }

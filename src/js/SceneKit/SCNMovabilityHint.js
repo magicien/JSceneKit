@@ -1,6 +1,5 @@
 'use strict'
 
-
 /**
  * Values that inform SceneKit’s rendering for movement-related effects, used by the movabilityHint property.
  * @typedef {Object} SCNMovabilityHint

@@ -31,21 +31,21 @@ export default class SCNLight extends NSObject {
     return {
       type: 'string',
       color: 'plist',
-      // temperature
-      // intensity
+      temperature: 'float',
+      intensity: 'float',
       name: 'string',
       attenuationStartDistance: 'float',
       attenuationEndDistance: 'float',
       attenuationFalloffExponent: 'float',
       spotInnerAngle: 'float',
       spotOuterAngle: 'float',
-      // gobo
+      gobo: ['SCNMaterialProperty', '_gobo'],
       castsShadow: 'boolean',
       shadowRadius: 'float',
       shadowColor: 'plist',
       shadowMapSize: 'CGSize',
       shadowSampleCount: 'integer',
-      // shadowMode
+      shadowMode: 'integer',
       shadowBias: 'float',
       orthographicScale: 'float',
       zFar: 'float',
@@ -53,13 +53,15 @@ export default class SCNLight extends NSObject {
       lightCategoryBitMask: ['integer', 'categoryBitMask'],
 
       entityID: ['string', '_entityID'],
+      version: ['float', null],
       spotFallOffExponent: ['float', null],
       usesDeferredShadows: ['boolean', null],
       usesModulatedMode: ['boolean', null],
       shouldBakeIndirectLighting: ['boolean', null],
       shouldBakeDirectLighting: ['boolean', null],
       baked: ['boolean', null],
-      goboProjectShadows: ['boolean', null]
+      goboProjectShadows: ['boolean', null],
+      shadowSampleCount2: ['integer', null]
     }
   }
 

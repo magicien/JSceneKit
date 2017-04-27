@@ -39,8 +39,8 @@ export default class SCNMaterial extends NSObject {
       multiply: ['SCNMaterialProperty', '_multiply'],
       ambientOcclusion: ['SCNMaterialProperty', '_ambientOcclusion'],
       selfIllumination: ['SCNMaterialProperty', '_selfIllumination'],
-      //metalness: ['SCNMaterialProperty', '_metalness'],
-      //roughness: ['SCNMaterialProperty', '_roughness'],
+      metalness: ['SCNMaterialProperty', '_metalness'],
+      roughness: ['SCNMaterialProperty', '_roughness'],
       name: 'string',
       shininess: 'float',
       fresnelExponent: 'float',
@@ -59,7 +59,8 @@ export default class SCNMaterial extends NSObject {
       fillMode: ['integer', null],
       entityID: ['string', '_entityID'],
       indexOfRefraction: ['integer', null],
-      shadableHelper: ['SCNShadableHelper', null]
+      shadableHelper: ['SCNShadableHelper', null],
+      selfIlluminationOcclusion: ['integer', null]
     }
   }
 

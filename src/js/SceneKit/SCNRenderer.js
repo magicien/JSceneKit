@@ -512,7 +512,7 @@ export default class SCNRenderer extends NSObject {
      * @type {?SKScene}
      * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1524051-overlayskscene
      */
-    //this.overlaySKScene = null
+    this.overlaySKScene = null
 
 
     // Working With Positional Audio
@@ -651,12 +651,12 @@ export default class SCNRenderer extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnrenderer/1518403-render
    */
   render() {
-    if(this.scene === null){
-      console.error('SCNRenderer.render(): scene is null')
-      return
-    }
     if(this.context === null){
       console.error('SCNRenderer.render(): context is null')
+      return
+    }
+    if(this.scene === null){
+      console.error('SCNRenderer.render(): scene is null')
       return
     }
 
@@ -670,10 +670,15 @@ export default class SCNRenderer extends NSObject {
 
     const gl = this.context
     const program = this._defaultProgram._glProgram
+
+    gl.clearDepth(1.0)
+    gl.clearStencil(0)
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT)
 
     // camera params
     gl.useProgram(program)
+
+    gl.depthFunc(gl.LEQUAL)
     gl.depthMask(true)
     gl.enable(gl.BLEND)
     gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)
@@ -732,12 +737,36 @@ export default class SCNRenderer extends NSObject {
     gl.uniformMatrix4fv(gl.getUniformLocation(particleProgram, 'viewTransform'), false, cameraNode.viewTransform.float32Array())
     gl.uniformMatrix4fv(gl.getUniformLocation(particleProgram, 'projectionTransform'), false, cameraNode.projectionTransform.float32Array())
 
+    if(this.scene._particleSystems !== null){
+      // TODO: implement
+    }
     const particleArray = this._createParticleNodeArray()
     particleArray.forEach((node) => {
       this._renderParticle(node)
     })
 
+    this._renderOverlaySKScene()
+
     gl.flush()
+  }
+
+  _renderOverlaySKScene() {
+    if(this.overlaySKScene === null){
+      return
+    }
+    const gl = this.context
+    gl.clearDepth(-1)
+    gl.clearStencil(0)
+    gl.depthMask(true)
+    gl.enable(gl.DEPTH_TEST)
+    gl.depthFunc(gl.GEQUAL)
+    gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)
+    gl.clear(gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT)
+
+    const skNodes = this._createSKNodeArray()
+    for(const node of skNodes){
+      this._renderSKNode(node)
+    }
   }
 
   /**
@@ -971,6 +1000,41 @@ export default class SCNRenderer extends NSObject {
 
     //console.log(`renderParticle node: ${node.name}, length: ${system._particles.length}`)
     gl.drawElements(gl.TRIANGLES, system._particles.length * 6, system._glIndexSize, 0)
+  }
+
+  /**
+   *
+   * @access private
+   * @returns {SKNode[]} -
+   */
+  _createSKNodeArray() {
+    if(this.overlaySKScene === null){
+      return []
+    }
+
+    const arr = [this.overlaySKScene]
+    const targetNodes = []
+    while(arr.length > 0){
+      const node = arr.shift()
+      //if(node.presentation.geometry !== null){
+      //  targetNodes.push(node)
+      //}
+      targetNodes.push(node)
+      arr.push(...node.children)
+    }
+    //targetNodes.sort((a, b) => { return a.renderingOrder - b.renderingOrder })
+
+    return targetNodes
+  }
+
+  /**
+   *
+   * @access private
+   * @param {SKNode} node -
+   * @returns {void}
+   */
+  _renderSKNode(node) {
+    node._render(this.context, this._viewRect)
   }
 
   /**
@@ -1310,8 +1374,8 @@ export default class SCNRenderer extends NSObject {
 
     gl.useProgram(p._glProgram)
     //gl.clearColor(1, 1, 1, 1)
-    gl.clearDepth(1.0)
-    gl.clearStencil(0)
+    //gl.clearDepth(1.0)
+    //gl.clearStencil(0)
 
     gl.enable(gl.DEPTH_TEST)
     gl.depthFunc(gl.LEQUAL)
@@ -1862,8 +1926,8 @@ export default class SCNRenderer extends NSObject {
 
     gl.useProgram(p._glProgram)
     //gl.clearColor(1, 1, 1, 1)
-    gl.clearDepth(1.0)
-    gl.clearStencil(0)
+    //gl.clearDepth(1.0)
+    //gl.clearStencil(0)
 
     gl.enable(gl.DEPTH_TEST)
     gl.depthFunc(gl.LEQUAL)

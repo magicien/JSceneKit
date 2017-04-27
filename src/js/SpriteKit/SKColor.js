@@ -77,7 +77,9 @@ export default class SKColor extends NSObject {
       // for NSColor
       NSRGB: ['bytes', null],
       NSWhite: ['bytes', null],
+      NSComponents: ['bytes', null],
       NSColorSpace: ['integer', null],
+      NSCustomColorSpace: ['NSColorSpace', null]
     }
   }
 

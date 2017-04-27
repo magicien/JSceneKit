@@ -279,4 +279,13 @@ export default class SKShapeNode extends SKNode {
   get customPlaygroundQuickLook() {
     return this._customPlaygroundQuickLook
   }
+
+  /**
+   * @access private
+   * @param {WebGLRenderingContext} gl -
+   * @returns {void}
+   */
+  _render(gl) {
+  }
+
 }

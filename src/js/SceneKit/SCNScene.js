@@ -41,7 +41,9 @@ export default class SCNScene extends NSObject {
       frameRate: ['double', null],
       fogEndDistance: 'double',
       startTime: ['double', null],
-      fogColor: 'plist'
+      fogColor: 'plist',
+      version: ['float', null],
+      environment: ['SCNMaterialProperty', null]
     }
   }
 
@@ -144,7 +146,7 @@ You call this method in a try expression and handle any errors in the catch clau
     this.fogDensityExponent = src.fogDensityExponent
     this.fogColor = src.fogColor
     this._physicsWorld = src._physicsWorld
-    this._particleSystems = src._particleSystems
+    this._particleSystems = src._particleSystems ? src._particleSystems.slice(0) : null
   }
 
   _loadSceneWithURL(url, options) {

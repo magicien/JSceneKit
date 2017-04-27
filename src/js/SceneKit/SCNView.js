@@ -933,6 +933,7 @@ export default class SCNView {
    */
   _drawAtTimeWithContext(time, context) {
     this._createPresentationNodes()
+    this._createSKPresentationNodes()
 
     this._updateTransform()
 
@@ -1012,6 +1013,30 @@ export default class SCNView {
 
       
       arr.push(...node.childNodes)
+    }
+  }
+
+  _createSKPresentationNodes() {
+    if(this.overlaySKScene === null){
+      return
+    }
+
+    const arr = [this.overlaySKScene]
+    while(arr.length > 0){
+      const node = arr.shift()
+      let p = node.__presentation
+      if(p === null){
+        p = node.copy()
+        p._isPresentationInstance = true
+        node.__presentation = p
+      }
+      node._copyTransformToPresentation()
+      //p._position = node._position
+      //p._rotation = node._rotation
+      //p._scale = node._scale
+
+      
+      arr.push(...node.children)
     }
   }
 

@@ -13,6 +13,7 @@ import CGSize from './CoreGraphics/CGSize'
 import CGVector from './CoreGraphics/CGVector'
 import NSArray from './Foundation/NSArray'
 import NSCoder from './Foundation/NSCoder'
+import NSColorSpace from './Foundation/NSColorSpace'
 import NSData from './Foundation/NSData'
 import NSDictionary from './Foundation/NSDictionary'
 import NSKeyedArchiver from './Foundation/NSKeyedArchiver'
@@ -194,6 +195,9 @@ import SKActionTimingMode from './SpriteKit/SKActionTimingMode'
 import SKBlendMode from './SpriteKit/SKBlendMode'
 import SKColor from './SpriteKit/SKColor'
 import SKEffectNode from './SpriteKit/SKEffectNode'
+import SKLabelHorizontalAlignmentMode from './SpriteKit/SKLabelHorizontalAlignmentMode'
+import SKLabelNode from './SpriteKit/SKLabelNode'
+import SKLabelVerticalAlignmentMode from './SpriteKit/SKLabelVerticalAlignmentMode'
 import SKNode from './SpriteKit/SKNode'
 import SKScene from './SpriteKit/SKScene'
 import SKSceneScaleMode from './SpriteKit/SKSceneScaleMode'
@@ -225,6 +229,7 @@ _ClassList.registerClass(CGSize)
 _ClassList.registerClass(CGVector)
 _ClassList.registerClass(NSArray)
 _ClassList.registerClass(NSCoder)
+_ClassList.registerClass(NSColorSpace)
 _ClassList.registerClass(NSData)
 _ClassList.registerClass(NSDictionary)
 _ClassList.registerClass(NSKeyedArchiver)
@@ -406,6 +411,9 @@ _ClassList.registerClass(SKActionTimingMode)
 _ClassList.registerClass(SKBlendMode)
 _ClassList.registerClass(SKColor)
 _ClassList.registerClass(SKEffectNode)
+_ClassList.registerClass(SKLabelHorizontalAlignmentMode)
+_ClassList.registerClass(SKLabelNode)
+_ClassList.registerClass(SKLabelVerticalAlignmentMode)
 _ClassList.registerClass(SKNode)
 _ClassList.registerClass(SKScene)
 _ClassList.registerClass(SKSceneScaleMode)
@@ -430,6 +438,7 @@ exports.CGSize = CGSize
 exports.CGVector = CGVector
 exports.NSArray = NSArray
 exports.NSCoder = NSCoder
+exports.NSColorSpace = NSColorSpace
 exports.NSData = NSData
 exports.NSDictionary = NSDictionary
 exports.NSKeyedArchiver = NSKeyedArchiver
@@ -611,6 +620,9 @@ exports.SKActionTimingMode = SKActionTimingMode
 exports.SKBlendMode = SKBlendMode
 exports.SKColor = SKColor
 exports.SKEffectNode = SKEffectNode
+exports.SKLabelHorizontalAlignmentMode = SKLabelHorizontalAlignmentMode
+exports.SKLabelNode = SKLabelNode
+exports.SKLabelVerticalAlignmentMode = SKLabelVerticalAlignmentMode
 exports.SKNode = SKNode
 exports.SKScene = SKScene
 exports.SKSceneScaleMode = SKSceneScaleMode

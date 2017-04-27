@@ -269,6 +269,14 @@ export default class SKNode extends NSObject {
      */
     this.isAccessibilityEnabled = false
 
+    /**
+     * @type {SKNode}
+     * @access private
+     */
+    this.__presentation = null
+
+    this._isPresentationInstance = false
+
   }
 
   /**
@@ -886,5 +894,72 @@ parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
    */
   valueForAttributeNamed(key) {
     return this.attributeValues.get(key)
+  }
+
+  /**
+   * @type {SKNode}
+   */
+  get _presentation() {
+    return this.__presentation
+  }
+
+  /**
+   *
+   * @access public
+   * @returns {SKNode} -
+   */
+  copy() {
+    const node = new SKNode()
+    node.position = this.position.copy()
+    node.zPosition = this.zPosition
+    node._frame = this._frame
+    node.xScale = this.xScale
+    node.yScale = this.yScale
+    node.zRotation = this.zRotation
+    node.alpha = this.alpha
+    node.isHidden = this.isHidden
+    node.isUserInteractionEnabled = this.isUserInteractionEnabled
+    node.name = this.name
+    node.speed = this.speed
+    node.isPaused = this.isPaused
+    node._actions = new Map(this._actions)
+    node.physicsBody = this.physicsBody
+    node.userData = this.userData
+    node.constraints = this.constraints
+    node.reachConstraints = this.reachConstraints
+    node.accessibilityChildren = this.accessibilityChildren
+    node.accessibilityFrame = this.accessibilityFrame.copy()
+    node.accessibilityHelp = this.accessibilityHelp
+    node.accessibilityLabel = this.accessibilityLabel
+    node.accessibilityParent = this.accessibilityParent
+    node.accessibilityRole = this.accessibilityRole
+    node.accessibilityRoleDescription = this.accessibilityRoleDescription
+    node.accessibilitySubrole = this.accessibilitySubrole
+    node.attributeValues = new Map(this.attributeValues)
+    node.isAccessibilityElement = this.isAccessibilityElement
+    node.isAccessibilityEnabled = this.isAccessibilityEnabled
+
+    return node
+  }
+
+  /**
+   * @access private
+   * @param {WebGLRenderingContext} gl -
+   * @returns {void}
+   */
+  _render(gl) {
+    // nothing to draw
+  }
+
+  _copyTransformToPresentation() {
+    if(this.__presentation === null){
+      return
+    }
+    const p = this.__presentation
+    p.position = this.position
+    p.zPosition = this.zPosition
+    p.xScale = this.xScale
+    p.yScale = this.yScale
+    p.zRotation = this.zRotation
   }
 }
