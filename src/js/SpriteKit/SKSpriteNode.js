@@ -318,6 +318,7 @@ Creating a non-textured sprite nodelet node = SKSpriteNode(color: .red,
   /**
    * @access private
    * @param {WebGLRenderingContext} gl -
+   * @param {CGRect} viewRect -
    * @returns {void}
    */
   _render(gl, viewRect) {
@@ -350,6 +351,7 @@ Creating a non-textured sprite nodelet node = SKSpriteNode(color: .red,
     const data = this._createVertexData()
     gl.bufferData(gl.ARRAY_BUFFER, data, gl.DYNAMIC_DRAW)
 
+    gl.uniform1i(gl.getUniformLocation(program, 'spriteTexture'), 0)
     gl.activeTexture(gl.TEXTURE0)
     gl.bindTexture(gl.TEXTURE_2D, this.texture._glTexture)
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR)

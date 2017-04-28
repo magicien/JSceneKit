@@ -444,6 +444,18 @@ export default class SKColor extends NSObject {
   }
 
   /**
+   * HTML color representation
+   * @access public
+   * @type {string}
+   */
+  get hexColor() {
+    const r = Math.round(this.red * 255).toString(16)
+    const g = Math.round(this.green * 255).toString(16)
+    const b = Math.round(this.blue * 255).toString(16)
+    return `#${r}${g}${b}`
+  }
+
+  /**
    * @access private
    * @returns {SKColor} -
    */

@@ -9350,6 +9350,21 @@ module.exports =
 	      var b = Math.round(this.blue * 255);
 	      return 'rgba(' + r + ', ' + g + ', ' + b + ', ' + this.alpha + ')';
 	    }
+
+	    /**
+	     * HTML color representation
+	     * @access public
+	     * @type {string}
+	     */
+
+	  }, {
+	    key: 'hexColor',
+	    get: function get() {
+	      var r = Math.round(this.red * 255).toString(16);
+	      var g = Math.round(this.green * 255).toString(16);
+	      var b = Math.round(this.blue * 255).toString(16);
+	      return '#' + r + g + b;
+	    }
 	  }], [{
 	    key: 'black',
 	    get: function get() {
@@ -47040,121 +47055,195 @@ module.exports =
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	/**
+	 * @access private
+	 * @type {string}
+	 */
+	var _defaultVertexShader = '#version 300 es\n  precision mediump float;\n\n  in vec3 position;\n  in vec2 texcoord;\n\n  uniform float screenWidth;\n  uniform float screenHeight;\n\n  out vec2 v_texcoord;\n\n  void main() {\n    vec3 pos = position;\n    pos.x = (pos.x * 2.0 / screenWidth) - 1.0;\n    pos.y = (pos.y * 2.0 / screenHeight) - 1.0;\n    v_texcoord = texcoord;\n    gl_Position = vec4(pos, 1.0);\n  }\n';
+
+	/**
+	 * @access private
+	 * @type {string}
+	 */
+	var _defaultFragmentShader = '#version 300 es\n  precision mediump float;\n\n  uniform sampler2D spriteTexture;\n  in vec2 v_texcoord;\n\n  out vec4 outColor;\n\n  void main() {\n    outColor = texture(spriteTexture, v_texcoord);\n  }\n';
+
+	/**
 	 * A node that displays a text label.
 	 * @access public
 	 * @extends {SKNode}
 	 * @see https://developer.apple.com/reference/spritekit/sklabelnode
 	 */
+
 	var SKLabelNode = function (_SKNode) {
 	  _inherits(SKLabelNode, _SKNode);
 
-	  function SKLabelNode() {
+	  // Creating a New Label Node
+
+	  /**
+	   * Initializes a new label object with a text string.
+	   * @access public
+	   * @constructor
+	   * @param {?string} text - The text to use to initialize the label node.
+	   * @desc The label node’s font is set to Helvetica Neue Ultra Light, 32 point.
+	   * @see https://developer.apple.com/reference/spritekit/sklabelnode/1519612-init
+	   */
+	  function SKLabelNode(text) {
 	    _classCallCheck(this, SKLabelNode);
 
-	    return _possibleConstructorReturn(this, (SKLabelNode.__proto__ || Object.getPrototypeOf(SKLabelNode)).apply(this, arguments));
+	    // Configuring the Label Message
+
+	    /**
+	     * The string that the label node displays.
+	     * @access private
+	     * @type {?string}
+	     * @see https://developer.apple.com/reference/spritekit/sklabelnode/1519788-text
+	     */
+	    var _this = _possibleConstructorReturn(this, (SKLabelNode.__proto__ || Object.getPrototypeOf(SKLabelNode)).call(this));
+
+	    _this._text = null;
+
+	    // Configuring the Label Font
+
+	    /**
+	     * The color of the label.
+	     * @access private
+	     * @type {?CGColor}
+	     * @see https://developer.apple.com/reference/spritekit/sklabelnode/1520057-fontcolor
+	     */
+	    _this._fontColor = new _SKColor2.default(1.0, 1.0, 1.0, 1.0);
+
+	    /**
+	     * The font used for the text in the label.
+	     * @access private
+	     * @type {?string}
+	     * @see https://developer.apple.com/reference/spritekit/sklabelnode/1520129-fontname
+	     */
+	    _this._fontName = 'HelveticaNeue-UltraLight';
+
+	    /**
+	     * The size of the font used in the label.
+	     * @access private
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/spritekit/sklabelnode/1520208-fontsize
+	     */
+	    _this._fontSize = 32.0;
+
+	    // Configuring the Label’s Position
+
+	    /**
+	     * The vertical position of the text within the node.
+	     * @access private
+	     * @type {SKLabelVerticalAlignmentMode}
+	     * @see https://developer.apple.com/reference/spritekit/sklabelnode/1519933-verticalalignmentmode
+	     */
+	    _this._verticalAlignmentMode = _SKLabelVerticalAlignmentMode2.default.baseline;
+
+	    /**
+	     * The horizontal position of the text within the node.
+	     * @access private
+	     * @type {SKLabelHorizontalAlignmentMode}
+	     * @see https://developer.apple.com/reference/spritekit/sklabelnode/1519711-horizontalalignmentmode
+	     */
+	    _this._horizontalAlignmentMode = _SKLabelHorizontalAlignmentMode2.default.center;
+
+	    // Performing Color Blending
+
+	    /**
+	     * The label’s blend color.
+	     * @type {?CGColor}
+	     * @see https://developer.apple.com/reference/spritekit/sklabelnode/1519938-color
+	     */
+	    _this.color = new _SKColor2.default(1.0, 1.0, 1.0, 1.0);
+
+	    /**
+	     * A floating-point value that describes how the color is blended with the font color.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/spritekit/sklabelnode/1519724-colorblendfactor
+	     */
+	    _this.colorBlendFactor = 0.0;
+
+	    // Blending the Label into the Framebuffer
+
+	    /**
+	     * The blend mode used to draw the label into the parent’s framebuffer.
+	     * @type {SKBlendMode}
+	     * @see https://developer.apple.com/reference/spritekit/sklabelnode/1519598-blendmode
+	     */
+	    _this.blendMode = _SKBlendMode2.default.alpha;
+
+	    _this._canvas = document.createElement('canvas');
+	    _this._context = _this._canvas.getContext('2d');
+	    _this._glContext = null;
+	    _this._texture = null;
+
+	    /**
+	     * @access private
+	     * @type {WebGLProgram}
+	     */
+	    _this._program = null;
+
+	    _this._vertexArrayObject = null;
+	    _this._vertexBuffer = null;
+	    _this._indexBuffer = null;
+
+	    _this.text = text;
+	    return _this;
 	  }
 
+	  /**
+	   * Initializes a new label object with a specified font.
+	   * @access public
+	   * @param {?string} fontName - The name of the font used by the label.
+	   * @returns {SKLabelNode} -
+	   * @see https://developer.apple.com/reference/spritekit/sklabelnode/1519917-init
+	   */
+
+
 	  _createClass(SKLabelNode, [{
-	    key: 'initFontNamed',
+	    key: '_updateCanvas',
+	    value: function _updateCanvas() {
+	      this._context.font = this._fontSize + 'px ' + this._fontName;
+	      var metrics = this._context.measureText(this._text);
+	      this._canvas.width = metrics.width;
+	      this._canvas.height = this._fontSize * 3;
 
+	      this._context.font = this._fontSize + 'px ' + this._fontName;
+	      this._context.fillStyle = this._fontColor.hexColor;
 
-	    // Creating a New Label Node
+	      switch (this._verticalAlignmentMode) {
+	        case _SKLabelVerticalAlignmentMode2.default.baseline:
+	          this._context.textBaseline = 'alphabetic';
+	          break;
+	        case _SKLabelVerticalAlignmentMode2.default.center:
+	          this._context.textBaseline = 'middle';
+	          break;
+	        case _SKLabelVerticalAlignmentMode2.default.top:
+	          this._context.textBaseline = 'top';
+	          break;
+	        case _SKLabelVerticalAlignmentMode2.default.bottom:
+	          this._context.textBaseline = 'bottom';
+	          break;
+	        default:
+	          throw new Error('unknown vertical alignment mode: ' + this._verticalAlignmentMode);
+	      }
 
-	    /**
-	     * Initializes a new label object with a specified font.
-	     * @access public
-	     * @param {?string} fontName - The name of the font used by the label.
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/spritekit/sklabelnode/1519917-init
-	     */
-	    value: function initFontNamed(fontName) {
+	      //switch(this._horizontalAlignmentMode){
+	      //  case SKLabelHorizontalAlignmentMode.center:
+	      //    this._context.textAlign = 'center'
+	      //    break
+	      //  case SKLabelHorizontalAlignmentMode.left:
+	      //    this._context.textAlign = 'left'
+	      //    break
+	      //  case SKLabelHorizontalAlignmentMode.right:
+	      //    this._context.textAlign = 'right'
+	      //    break
+	      //  default:
+	      //    throw new Error(`unknown horizontal alignment mode: ${this._horizontalAlignmentMode}`)
+	      //}
+	      this._context.textAlign = 'left';
 
-	      // Configuring the Label Message
-
-	      /**
-	       * The string that the label node displays.
-	       * @type {?string}
-	       * @see https://developer.apple.com/reference/spritekit/sklabelnode/1519788-text
-	       */
-	      this.text = null;
-
-	      // Configuring the Label Font
-
-	      /**
-	       * The color of the label.
-	       * @type {?CGColor}
-	       * @see https://developer.apple.com/reference/spritekit/sklabelnode/1520057-fontcolor
-	       */
-	      this.fontColor = new _SKColor2.default(1.0, 1.0, 1.0, 1.0);
-
-	      /**
-	       * The font used for the text in the label.
-	       * @type {?string}
-	       * @see https://developer.apple.com/reference/spritekit/sklabelnode/1520129-fontname
-	       */
-	      this.fontName = 'HelveticaNeue-UltraLight';
-
-	      /**
-	       * The size of the font used in the label.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/spritekit/sklabelnode/1520208-fontsize
-	       */
-	      this.fontSize = 32.0;
-
-	      // Configuring the Label’s Position
-
-	      /**
-	       * The vertical position of the text within the node.
-	       * @type {SKLabelVerticalAlignmentMode}
-	       * @see https://developer.apple.com/reference/spritekit/sklabelnode/1519933-verticalalignmentmode
-	       */
-	      this.verticalAlignmentMode = _SKLabelVerticalAlignmentMode2.default.baseline;
-
-	      /**
-	       * The horizontal position of the text within the node.
-	       * @type {SKLabelHorizontalAlignmentMode}
-	       * @see https://developer.apple.com/reference/spritekit/sklabelnode/1519711-horizontalalignmentmode
-	       */
-	      this.horizontalAlignmentMode = _SKLabelHorizontalAlignmentMode2.default.center;
-
-	      // Performing Color Blending
-
-	      /**
-	       * The label’s blend color.
-	       * @type {?CGColor}
-	       * @see https://developer.apple.com/reference/spritekit/sklabelnode/1519938-color
-	       */
-	      this.color = new _SKColor2.default(1.0, 1.0, 1.0, 1.0);
-
-	      /**
-	       * A floating-point value that describes how the color is blended with the font color.
-	       * @type {number}
-	       * @see https://developer.apple.com/reference/spritekit/sklabelnode/1519724-colorblendfactor
-	       */
-	      this.colorBlendFactor = 0.0;
-
-	      // Blending the Label into the Framebuffer
-
-	      /**
-	       * The blend mode used to draw the label into the parent’s framebuffer.
-	       * @type {SKBlendMode}
-	       * @see https://developer.apple.com/reference/spritekit/sklabelnode/1519598-blendmode
-	       */
-	      this.blendMode = _SKBlendMode2.default.alpha;
+	      this._context.clearRect(0, 0, this._canvas.width, this._canvas.height);
+	      this._context.fillText(this._text, 0, this._canvas.height * 0.5);
 	    }
-
-	    /**
-	     * Initializes a new label object with a text string.
-	     * @access public
-	     * @param {?string} text - The text to use to initialize the label node.
-	     * @returns {void}
-	     * @desc The label node’s font is set to Helvetica Neue Ultra Light, 32 point.
-	     * @see https://developer.apple.com/reference/spritekit/sklabelnode/1519612-init
-	     */
-
-	  }, {
-	    key: 'init',
-	    value: function init(text) {}
 
 	    /**
 	     * @access private
@@ -47164,7 +47253,218 @@ module.exports =
 
 	  }, {
 	    key: '_render',
-	    value: function _render(gl) {}
+	    value: function _render(gl, viewRect) {
+	      if (this._texture === null || this._glContext !== gl) {
+	        this._glContext = gl;
+	        this._texture = gl.createTexture();
+
+	        gl.bindTexture(gl.TEXTURE_2D, this._texture);
+	        // texImage2D(target, level, internalformat, width, height, border, format, type, source)
+	        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, this._canvas.width, this._canvas.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, this._canvas);
+	        gl.generateMipmap(gl.TEXTURE_2D);
+	        gl.bindTexture(gl.TEXTURE_2D, null);
+	      }
+	      if (this._program === null) {
+	        this._program = this._createProgram(gl);
+	      }
+	      var program = this._program;
+	      gl.useProgram(program);
+
+	      if (this._vertexArrayObject === null) {
+	        this._createVertexArrayObject(gl, program);
+	      }
+	      gl.bindVertexArray(this._vertexArrayObject);
+
+	      gl.uniform1f(gl.getUniformLocation(program, 'screenWidth'), viewRect.size.width);
+	      gl.uniform1f(gl.getUniformLocation(program, 'screenHeight'), viewRect.size.height);
+
+	      var data = this._createVertexData();
+	      gl.bufferData(gl.ARRAY_BUFFER, data, gl.DYNAMIC_DRAW);
+
+	      gl.uniform1i(gl.getUniformLocation(program, 'spriteTexture'), 0);
+	      gl.activeTexture(gl.TEXTURE0);
+	      gl.bindTexture(gl.TEXTURE_2D, this._texture);
+	      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+	      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+	      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+	      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+
+	      gl.drawElements(gl.TRIANGLES, 6, gl.UNSIGNED_BYTE, 0);
+	    }
+	  }, {
+	    key: '_createProgram',
+	    value: function _createProgram(gl) {
+	      var program = gl.createProgram();
+	      var vsText = _defaultVertexShader;
+	      var fsText = _defaultFragmentShader;
+
+	      // initialize vertex shader
+	      var vertexShader = gl.createShader(gl.VERTEX_SHADER);
+	      gl.shaderSource(vertexShader, vsText);
+	      gl.compileShader(vertexShader);
+	      if (!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)) {
+	        var info = gl.getShaderInfoLog(vertexShader);
+	        throw new Error('SKSpriteNode vertex shader compile error: ' + info);
+	      }
+
+	      // initialize fragment shader
+	      var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+	      gl.shaderSource(fragmentShader, fsText);
+	      gl.compileShader(fragmentShader);
+	      if (!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)) {
+	        var _info = gl.getShaderInfoLog(fragmentShader);
+	        throw new Error('particle fragment shader compile error: ' + _info);
+	      }
+
+	      gl.attachShader(program, vertexShader);
+	      gl.attachShader(program, fragmentShader);
+
+	      // link program object
+	      gl.linkProgram(program);
+	      if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+	        var _info2 = gl.getProgramInfoLog(program);
+	        throw new Error('program link error: ' + _info2);
+	      }
+
+	      //gl.useProgram(program)
+
+	      return program;
+	    }
+
+	    /**
+	     * @access private
+	     * @param {WebGLRenderingContext} gl -
+	     * @param {WebGLProgram} program -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_createVertexArrayObject',
+	    value: function _createVertexArrayObject(gl, program) {
+	      this._vertexArrayObject = gl.createVertexArray();
+	      gl.bindVertexArray(this._vertexArrayObject);
+
+	      this._vertexBuffer = gl.createBuffer();
+	      gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer);
+
+	      var positionLoc = gl.getAttribLocation(program, 'position');
+	      gl.bindAttribLocation(program, positionLoc, 'position');
+	      gl.enableVertexAttribArray(positionLoc);
+	      // idx, size, type, norm, stride, offset
+	      gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, 20, 0);
+
+	      var texcoordLoc = gl.getAttribLocation(program, 'texcoord');
+	      gl.bindAttribLocation(program, texcoordLoc, 'texcoord');
+	      gl.enableVertexAttribArray(texcoordLoc);
+	      // idx, size, type, norm, stride, offset
+	      gl.vertexAttribPointer(texcoordLoc, 2, gl.FLOAT, false, 20, 12);
+
+	      this._indexBuffer = gl.createBuffer();
+	      var indexData = new Uint8Array([0, 3, 2, 0, 1, 3]);
+	      gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, this._indexBuffer);
+	      gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, indexData, gl.STATIC_DRAW);
+	    }
+	  }, {
+	    key: '_createVertexData',
+	    value: function _createVertexData() {
+	      var w = this._canvas.width * this.xScale;
+	      var h = this._canvas.height * this.yScale;
+	      var left = this.position.x;
+	      var right = this.position.x;
+	      var top = this.position.y + h * 0.5;
+	      var bottom = this.position.y - h * 0.5;
+	      switch (this._horizontalAlignmentMode) {
+	        case _SKLabelHorizontalAlignmentMode2.default.center:
+	          left -= w * 0.5;
+	          right += w * 0.5;
+	          break;
+	        case _SKLabelHorizontalAlignmentMode2.default.left:
+	          right += w;
+	          break;
+	        case _SKLabelHorizontalAlignmentMode2.default.right:
+	          left -= w;
+	          break;
+	      }
+
+	      var arr = [left, top, this.zPosition, 0, 0, right, top, this.zPosition, 1, 0, left, bottom, this.zPosition, 0, 1, right, bottom, this.zPosition, 1, 1];
+	      return new Float32Array(arr);
+	    }
+	  }, {
+	    key: 'text',
+	    get: function get() {
+	      return this._text;
+	    },
+	    set: function set(newValue) {
+	      this._text = newValue;
+	      this._updateCanvas();
+	    }
+	  }, {
+	    key: 'fontColor',
+	    get: function get() {
+	      return this._fontColor;
+	    },
+	    set: function set(newValue) {
+	      this._fontColor = newValue;
+	      this._updateCanvas();
+	    }
+	  }, {
+	    key: 'fontName',
+	    get: function get() {
+	      return this._fontName;
+	    },
+	    set: function set(newValue) {
+	      this._fontName = newValue;
+	      this._updateCanvas();
+	    }
+	  }, {
+	    key: 'fontSize',
+	    get: function get() {
+	      return this._fontSize;
+	    },
+	    set: function set(newValue) {
+	      this._fontSize = newValue;
+	      this._updateCanvas();
+	    }
+	  }, {
+	    key: 'verticalAlignmentMode',
+	    get: function get() {
+	      return this._verticalAlignmentMode;
+	    },
+	    set: function set(newValue) {
+	      this._verticalAlignmentMode = newValue;
+	      this._updateCanvas();
+	    }
+	  }, {
+	    key: 'horizontalAlignmentMode',
+	    get: function get() {
+	      return this._horizontalAlignmentMode;
+	    },
+	    set: function set(newValue) {
+	      this._horizontalAlignmentMode = newValue;
+	      this._updateCanvas();
+	    }
+	  }], [{
+	    key: 'labelWithFontNamed',
+	    value: function labelWithFontNamed(fontName) {
+	      var label = new SKLabelNode();
+	      label.fontName = fontName;
+	      return label;
+	    }
+
+	    /**
+	     * Initializes a new label object with a text string.
+	     * @access public
+	     * @param {?string} text - The text to use to initialize the label node.
+	     * @returns {SKLabelNode} -
+	     * @desc The label node’s font is set to Helvetica Neue Ultra Light, 32 point.
+	     * @see https://developer.apple.com/reference/spritekit/sklabelnode/1519612-init
+	     */
+
+	  }, {
+	    key: 'labelWithText',
+	    value: function labelWithText(text) {
+	      return new SKLabelNode(text);
+	    }
 	  }]);
 
 	  return SKLabelNode;
@@ -48235,6 +48535,7 @@ module.exports =
 	    /**
 	     * @access private
 	     * @param {WebGLRenderingContext} gl -
+	     * @param {CGRect} viewRect -
 	     * @returns {void}
 	     */
 	    value: function _render(gl, viewRect) {
@@ -48266,6 +48567,7 @@ module.exports =
 	      var data = this._createVertexData();
 	      gl.bufferData(gl.ARRAY_BUFFER, data, gl.DYNAMIC_DRAW);
 
+	      gl.uniform1i(gl.getUniformLocation(program, 'spriteTexture'), 0);
 	      gl.activeTexture(gl.TEXTURE0);
 	      gl.bindTexture(gl.TEXTURE_2D, this.texture._glTexture);
 	      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
