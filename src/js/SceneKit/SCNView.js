@@ -976,6 +976,8 @@ export default class SCNView {
     ///////////////////////
     this._updateMorph()
     this._updateParticles()
+
+    this._updateSKTransform()
     this._renderer.render()
 
     if(this._delegate && this._delegate.rendererDidRenderSceneAtTime){
@@ -1074,6 +1076,13 @@ export default class SCNView {
     node.childNodes.forEach((child) => {
       this._updateMorph(child)
     })
+  }
+
+  _updateSKTransform() {
+    if(this.overlaySKScene === null){
+      return
+    }
+    this.overlaySKScene._updateWorldTransform()
   }
 
   _runActions() {

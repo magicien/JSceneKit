@@ -403,13 +403,14 @@ export default class SKLabelNode extends SKNode {
   }
 
   _createVertexData() {
-    const w = this._canvas.width * this.xScale
-    const h = this._canvas.height * this.yScale
-    let left = this.position.x
-    let right = this.position.x
-    let top = this.position.y + h * 0.5
-    let bottom = this.position.y - h * 0.5
-    switch(this._horizontalAlignmentMode){
+    const p = this.__presentation._worldPosition
+    const w = this._canvas.width * this.__presentation.xScale
+    const h = this._canvas.height * this.__presentation.yScale
+    let left = p.x
+    let right = p.x
+    let top = p.y + h * 0.5
+    let bottom = p.y - h * 0.5
+    switch(this.__presentation._horizontalAlignmentMode){
       case SKLabelHorizontalAlignmentMode.center:
         left -= w * 0.5
         right += w * 0.5
@@ -423,12 +424,38 @@ export default class SKLabelNode extends SKNode {
     }
 
     const arr = [
-      left, top, this.zPosition, 0, 0,
-      right, top, this.zPosition, 1, 0,
-      left, bottom, this.zPosition, 0, 1,
-      right, bottom, this.zPosition, 1, 1
+      left, top, this.__presentation._worldZPosition, 0, 0,
+      right, top, this.__presentation._worldZPosition, 1, 0,
+      left, bottom, this.__presentation._worldZPosition, 0, 1,
+      right, bottom, this.__presentation._worldZPosition, 1, 1
     ]
     return new Float32Array(arr)
   }
 
+  copy() {
+    const node = new SKLabelNode()
+    node._copyValue(this)
+    return node
+  }
+
+  _copyValue(src) {
+    super._copyValue(src)
+    this._text = src._text
+    this._fontColor = src._fontColor._copy()
+    this._fontName = src._fontName
+    this._fontSize = src._fontSize
+    this._verticalAlignmentMode = src._verticalAlignmentMode
+    this._horizontalAlignmentMode = src._horizontalAlignmentMode
+    this.color = src.color._copy()
+    this.colorBlendFactor = src.colorBlendFactor
+    this.blendMode = src.blendMode
+    this._canvas = src._canvas
+    this._context = src._context
+    //this._glContext = src._glContext
+    //this._texture = src._texture
+    //this._program = src._program
+    //this._vertexArrayObject = src._vertexArrayObject
+    //this._vertexBuffer = src._vertexBuffer
+    //this._indexBuffer = src._indexBuffer
+  }
 }

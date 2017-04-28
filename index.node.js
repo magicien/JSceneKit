@@ -8118,10 +8118,141 @@ module.exports =
 	      var epsilon = 0.00001;
 	      return Math.abs(this.x - point2.x) < epsilon && Math.abs(this.y - point2.y) < epsilon;
 	    }
+
+	    /**
+	     * @access public
+	     * @returns {CGPoint} -
+	     */
+
 	  }, {
 	    key: 'copy',
 	    value: function copy() {
 	      return new CGPoint(this.x, this.y);
+	    }
+
+	    /**
+	     * @access public
+	     * @param {CGPoint} p -
+	     * @returns {CGPoint} -
+	     */
+
+	  }, {
+	    key: 'add',
+	    value: function add(p) {
+	      var r = new CGPoint();
+	      r.x = this.x + p.x;
+	      r.y = this.y + p.y;
+	      return r;
+	    }
+
+	    /**
+	     * @access public
+	     * @param {CGPoint} p -
+	     * @returns {CGPoint} -
+	     */
+
+	  }, {
+	    key: 'sub',
+	    value: function sub(p) {
+	      var r = new CGPoint();
+	      r.x = this.x - p.x;
+	      r.y = this.y - p.y;
+	      return r;
+	    }
+
+	    /**
+	     * @access public
+	     * @param {number} n -
+	     * @returns {CGPoint} -
+	     */
+
+	  }, {
+	    key: 'mul',
+	    value: function mul(n) {
+	      var r = new CGPoint();
+	      r.x = this.x * n;
+	      r.y = this.y * n;
+	      return r;
+	    }
+
+	    /**
+	     * @access public
+	     * @param {CGPoint} p -
+	     * @returns {number} -
+	     */
+
+	  }, {
+	    key: 'dot',
+	    value: function dot(p) {
+	      return this.x * p.x + this.y * p.y;
+	    }
+
+	    /**
+	     * @access public
+	     * @param {CGPoint} p -
+	     * @param {number} rate -
+	     * @returns {CGPoint} -
+	     */
+
+	  }, {
+	    key: 'lerp',
+	    value: function lerp(p, rate) {
+	      var r = new CGPoint();
+	      r.x = this.x + rate * (p.x - this.x);
+	      r.y = this.y + rate * (p.y - this.y);
+	      return r;
+	    }
+
+	    /**
+	     * @access public
+	     * @returns {CGPoint} -
+	     */
+
+	  }, {
+	    key: 'normalize',
+	    value: function normalize() {
+	      var len = this.length();
+	      var r = new CGPoint();
+	      if (len === 0) {
+	        return r;
+	      }
+	      var sqr = 1.0 / len;
+	      r.x = this.x * sqr;
+	      r.y = this.y * sqr;
+	      return r;
+	    }
+
+	    /**
+	     * @access public
+	     * @returns {number} -
+	     */
+
+	  }, {
+	    key: 'length',
+	    value: function length() {
+	      return Math.sqrt(this.x * this.x + this.y * this.y);
+	    }
+
+	    /**
+	     * @access public
+	     * @returns {number[]} -
+	     */
+
+	  }, {
+	    key: 'floatArray',
+	    value: function floatArray() {
+	      return [this.x, this.y];
+	    }
+
+	    /**
+	     * @access public
+	     * @returns {Float32Array} -
+	     */
+
+	  }, {
+	    key: 'float32Array',
+	    value: function float32Array() {
+	      return new Float32Array([this.x, this.y]);
 	    }
 	  }, {
 	    key: 'dictionaryRepresentation',
@@ -43327,6 +43458,8 @@ module.exports =
 	      ///////////////////////
 	      this._updateMorph();
 	      this._updateParticles();
+
+	      this._updateSKTransform();
 	      this._renderer.render();
 
 	      if (this._delegate && this._delegate.rendererDidRenderSceneAtTime) {
@@ -43441,6 +43574,14 @@ module.exports =
 	      node.childNodes.forEach(function (child) {
 	        _this4._updateMorph(child);
 	      });
+	    }
+	  }, {
+	    key: '_updateSKTransform',
+	    value: function _updateSKTransform() {
+	      if (this.overlaySKScene === null) {
+	        return;
+	      }
+	      this.overlaySKScene._updateWorldTransform();
 	    }
 	  }, {
 	    key: '_runActions',
@@ -46106,7 +46247,8 @@ module.exports =
 	    _this.__presentation = null;
 
 	    _this._isPresentationInstance = false;
-
+	    _this._worldPosition = new _CGPoint2.default(0, 0);
+	    _this._worldZPosition = 0;
 	    return _this;
 	  }
 
@@ -46843,36 +46985,40 @@ module.exports =
 	     */
 	    value: function copy() {
 	      var node = new SKNode();
-	      node.position = this.position.copy();
-	      node.zPosition = this.zPosition;
-	      node._frame = this._frame;
-	      node.xScale = this.xScale;
-	      node.yScale = this.yScale;
-	      node.zRotation = this.zRotation;
-	      node.alpha = this.alpha;
-	      node.isHidden = this.isHidden;
-	      node.isUserInteractionEnabled = this.isUserInteractionEnabled;
-	      node.name = this.name;
-	      node.speed = this.speed;
-	      node.isPaused = this.isPaused;
-	      node._actions = new Map(this._actions);
-	      node.physicsBody = this.physicsBody;
-	      node.userData = this.userData;
-	      node.constraints = this.constraints;
-	      node.reachConstraints = this.reachConstraints;
-	      node.accessibilityChildren = this.accessibilityChildren;
-	      node.accessibilityFrame = this.accessibilityFrame.copy();
-	      node.accessibilityHelp = this.accessibilityHelp;
-	      node.accessibilityLabel = this.accessibilityLabel;
-	      node.accessibilityParent = this.accessibilityParent;
-	      node.accessibilityRole = this.accessibilityRole;
-	      node.accessibilityRoleDescription = this.accessibilityRoleDescription;
-	      node.accessibilitySubrole = this.accessibilitySubrole;
-	      node.attributeValues = new Map(this.attributeValues);
-	      node.isAccessibilityElement = this.isAccessibilityElement;
-	      node.isAccessibilityEnabled = this.isAccessibilityEnabled;
-
+	      node._copyValue(this);
 	      return node;
+	    }
+	  }, {
+	    key: '_copyValue',
+	    value: function _copyValue(src) {
+	      this.position = src.position.copy();
+	      this.zPosition = src.zPosition;
+	      this._frame = src._frame;
+	      this.xScale = src.xScale;
+	      this.yScale = src.yScale;
+	      this.zRotation = src.zRotation;
+	      this.alpha = src.alpha;
+	      this.isHidden = src.isHidden;
+	      this.isUserInteractionEnabled = src.isUserInteractionEnabled;
+	      this.name = src.name;
+	      this.speed = src.speed;
+	      this.isPaused = src.isPaused;
+	      this._actions = new Map(src._actions);
+	      this.physicsBody = src.physicsBody;
+	      this.userData = src.userData;
+	      this.constraints = src.constraints;
+	      this.reachConstraints = src.reachConstraints;
+	      this.accessibilityChildren = src.accessibilityChildren;
+	      this.accessibilityFrame = src.accessibilityFrame.copy();
+	      this.accessibilityHelp = src.accessibilityHelp;
+	      this.accessibilityLabel = src.accessibilityLabel;
+	      this.accessibilityParent = src.accessibilityParent;
+	      this.accessibilityRole = src.accessibilityRole;
+	      this.accessibilityRoleDescription = src.accessibilityRoleDescription;
+	      this.accessibilitySubrole = src.accessibilitySubrole;
+	      this.attributeValues = new Map(src.attributeValues);
+	      this.isAccessibilityElement = src.isAccessibilityElement;
+	      this.isAccessibilityEnabled = src.isAccessibilityEnabled;
 	    }
 
 	    /**
@@ -46898,6 +47044,61 @@ module.exports =
 	      p.xScale = this.xScale;
 	      p.yScale = this.yScale;
 	      p.zRotation = this.zRotation;
+	    }
+	  }, {
+	    key: '_updateWorldTransform',
+	    value: function _updateWorldTransform() {
+	      var p = null;
+	      var pz = 0;
+	      if (this._parent === null) {
+	        p = new _CGPoint2.default(0, 0);
+	      } else {
+	        p = this._parent._worldPosition;
+	        pz = this._parent._worldZPosition;
+	      }
+	      this._worldPosition = this.position.add(p);
+	      this._worldZPosition = this.zPosition + pz;
+
+	      if (this._presentation) {
+	        var pp = null;
+	        var ppz = 0;
+	        if (this._parent === null) {
+	          pp = new _CGPoint2.default(0, 0);
+	        } else if (this._parent._presentation === null) {
+	          pp = this._parent._worldPosition;
+	          ppz = this._parent._worldZPosition;
+	        } else {
+	          pp = this._parent._presentation._worldPosition;
+	          ppz = this._parent._presentation._worldZPosition;
+	        }
+	        this._presentation._worldPosition = this._presentation.position.add(pp);
+	        this._presentation._worldZPosition = this._presentation.zPosition + ppz;
+	      }
+
+	      var _iteratorNormalCompletion4 = true;
+	      var _didIteratorError4 = false;
+	      var _iteratorError4 = undefined;
+
+	      try {
+	        for (var _iterator4 = this._children[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+	          var child = _step4.value;
+
+	          child._updateWorldTransform();
+	        }
+	      } catch (err) {
+	        _didIteratorError4 = true;
+	        _iteratorError4 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion4 && _iterator4.return) {
+	            _iterator4.return();
+	          }
+	        } finally {
+	          if (_didIteratorError4) {
+	            throw _iteratorError4;
+	          }
+	        }
+	      }
 	    }
 	  }, {
 	    key: 'frame',
@@ -47025,6 +47226,8 @@ module.exports =
 	});
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
 	var _SKColor = __webpack_require__(11);
 
@@ -47367,13 +47570,14 @@ module.exports =
 	  }, {
 	    key: '_createVertexData',
 	    value: function _createVertexData() {
-	      var w = this._canvas.width * this.xScale;
-	      var h = this._canvas.height * this.yScale;
-	      var left = this.position.x;
-	      var right = this.position.x;
-	      var top = this.position.y + h * 0.5;
-	      var bottom = this.position.y - h * 0.5;
-	      switch (this._horizontalAlignmentMode) {
+	      var p = this.__presentation._worldPosition;
+	      var w = this._canvas.width * this.__presentation.xScale;
+	      var h = this._canvas.height * this.__presentation.yScale;
+	      var left = p.x;
+	      var right = p.x;
+	      var top = p.y + h * 0.5;
+	      var bottom = p.y - h * 0.5;
+	      switch (this.__presentation._horizontalAlignmentMode) {
 	        case _SKLabelHorizontalAlignmentMode2.default.center:
 	          left -= w * 0.5;
 	          right += w * 0.5;
@@ -47386,8 +47590,37 @@ module.exports =
 	          break;
 	      }
 
-	      var arr = [left, top, this.zPosition, 0, 0, right, top, this.zPosition, 1, 0, left, bottom, this.zPosition, 0, 1, right, bottom, this.zPosition, 1, 1];
+	      var arr = [left, top, this.__presentation._worldZPosition, 0, 0, right, top, this.__presentation._worldZPosition, 1, 0, left, bottom, this.__presentation._worldZPosition, 0, 1, right, bottom, this.__presentation._worldZPosition, 1, 1];
 	      return new Float32Array(arr);
+	    }
+	  }, {
+	    key: 'copy',
+	    value: function copy() {
+	      var node = new SKLabelNode();
+	      node._copyValue(this);
+	      return node;
+	    }
+	  }, {
+	    key: '_copyValue',
+	    value: function _copyValue(src) {
+	      _get(SKLabelNode.prototype.__proto__ || Object.getPrototypeOf(SKLabelNode.prototype), '_copyValue', this).call(this, src);
+	      this._text = src._text;
+	      this._fontColor = src._fontColor._copy();
+	      this._fontName = src._fontName;
+	      this._fontSize = src._fontSize;
+	      this._verticalAlignmentMode = src._verticalAlignmentMode;
+	      this._horizontalAlignmentMode = src._horizontalAlignmentMode;
+	      this.color = src.color._copy();
+	      this.colorBlendFactor = src.colorBlendFactor;
+	      this.blendMode = src.blendMode;
+	      this._canvas = src._canvas;
+	      this._context = src._context;
+	      //this._glContext = src._glContext
+	      //this._texture = src._texture
+	      //this._program = src._program
+	      //this._vertexArrayObject = src._vertexArrayObject
+	      //this._vertexBuffer = src._vertexBuffer
+	      //this._indexBuffer = src._indexBuffer
 	    }
 	  }, {
 	    key: 'text',

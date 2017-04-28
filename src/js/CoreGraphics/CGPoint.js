@@ -120,7 +120,110 @@ export default class CGPoint {
         && Math.abs(this.y - point2.y) < epsilon
   }
 
+  /**
+   * @access public
+   * @returns {CGPoint} -
+   */
   copy() {
     return new CGPoint(this.x, this.y)
   }
+
+  /**
+   * @access public
+   * @param {CGPoint} p -
+   * @returns {CGPoint} -
+   */
+  add(p) {
+    const r = new CGPoint()
+    r.x = this.x + p.x
+    r.y = this.y + p.y
+    return r
+  }
+
+  /**
+   * @access public
+   * @param {CGPoint} p -
+   * @returns {CGPoint} -
+   */
+  sub(p) {
+    const r = new CGPoint()
+    r.x = this.x - p.x
+    r.y = this.y - p.y
+    return r
+  }
+
+  /**
+   * @access public
+   * @param {number} n -
+   * @returns {CGPoint} -
+   */
+  mul(n) {
+    const r = new CGPoint()
+    r.x = this.x * n
+    r.y = this.y * n
+    return r
+  }
+
+  /**
+   * @access public
+   * @param {CGPoint} p -
+   * @returns {number} -
+   */
+  dot(p) {
+    return this.x * p.x + this.y * p.y
+  }
+
+  /**
+   * @access public
+   * @param {CGPoint} p -
+   * @param {number} rate -
+   * @returns {CGPoint} -
+   */
+  lerp(p, rate) {
+    const r = new CGPoint()
+    r.x = this.x + rate * (p.x - this.x)
+    r.y = this.y + rate * (p.y - this.y)
+    return r
+  }
+
+  /**
+   * @access public
+   * @returns {CGPoint} -
+   */
+  normalize() {
+    const len = this.length()
+    const r = new CGPoint()
+    if(len === 0){
+      return r
+    }
+    const sqr = 1.0 / len
+    r.x = this.x * sqr
+    r.y = this.y * sqr
+    return r
+  }
+
+  /**
+   * @access public
+   * @returns {number} -
+   */
+  length() {
+    return Math.sqrt(this.x * this.x + this.y * this.y)
+  }
+
+  /**
+   * @access public
+   * @returns {number[]} -
+   */
+  floatArray() {
+    return [this.x, this.y]
+  }
+
+  /**
+   * @access public
+   * @returns {Float32Array} -
+   */
+  float32Array() {
+    return new Float32Array([this.x, this.y])
+  }
+
 }

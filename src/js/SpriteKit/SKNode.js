@@ -276,7 +276,8 @@ export default class SKNode extends NSObject {
     this.__presentation = null
 
     this._isPresentationInstance = false
-
+    this._worldPosition = new CGPoint(0, 0)
+    this._worldZPosition = 0
   }
 
   /**
@@ -910,36 +911,39 @@ parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
    */
   copy() {
     const node = new SKNode()
-    node.position = this.position.copy()
-    node.zPosition = this.zPosition
-    node._frame = this._frame
-    node.xScale = this.xScale
-    node.yScale = this.yScale
-    node.zRotation = this.zRotation
-    node.alpha = this.alpha
-    node.isHidden = this.isHidden
-    node.isUserInteractionEnabled = this.isUserInteractionEnabled
-    node.name = this.name
-    node.speed = this.speed
-    node.isPaused = this.isPaused
-    node._actions = new Map(this._actions)
-    node.physicsBody = this.physicsBody
-    node.userData = this.userData
-    node.constraints = this.constraints
-    node.reachConstraints = this.reachConstraints
-    node.accessibilityChildren = this.accessibilityChildren
-    node.accessibilityFrame = this.accessibilityFrame.copy()
-    node.accessibilityHelp = this.accessibilityHelp
-    node.accessibilityLabel = this.accessibilityLabel
-    node.accessibilityParent = this.accessibilityParent
-    node.accessibilityRole = this.accessibilityRole
-    node.accessibilityRoleDescription = this.accessibilityRoleDescription
-    node.accessibilitySubrole = this.accessibilitySubrole
-    node.attributeValues = new Map(this.attributeValues)
-    node.isAccessibilityElement = this.isAccessibilityElement
-    node.isAccessibilityEnabled = this.isAccessibilityEnabled
-
+    node._copyValue(this)
     return node
+  }
+
+  _copyValue(src) {
+    this.position = src.position.copy()
+    this.zPosition = src.zPosition
+    this._frame = src._frame
+    this.xScale = src.xScale
+    this.yScale = src.yScale
+    this.zRotation = src.zRotation
+    this.alpha = src.alpha
+    this.isHidden = src.isHidden
+    this.isUserInteractionEnabled = src.isUserInteractionEnabled
+    this.name = src.name
+    this.speed = src.speed
+    this.isPaused = src.isPaused
+    this._actions = new Map(src._actions)
+    this.physicsBody = src.physicsBody
+    this.userData = src.userData
+    this.constraints = src.constraints
+    this.reachConstraints = src.reachConstraints
+    this.accessibilityChildren = src.accessibilityChildren
+    this.accessibilityFrame = src.accessibilityFrame.copy()
+    this.accessibilityHelp = src.accessibilityHelp
+    this.accessibilityLabel = src.accessibilityLabel
+    this.accessibilityParent = src.accessibilityParent
+    this.accessibilityRole = src.accessibilityRole
+    this.accessibilityRoleDescription = src.accessibilityRoleDescription
+    this.accessibilitySubrole = src.accessibilitySubrole
+    this.attributeValues = new Map(src.attributeValues)
+    this.isAccessibilityElement = src.isAccessibilityElement
+    this.isAccessibilityEnabled = src.isAccessibilityEnabled
   }
 
   /**
@@ -961,5 +965,38 @@ parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
     p.xScale = this.xScale
     p.yScale = this.yScale
     p.zRotation = this.zRotation
+  }
+
+  _updateWorldTransform() {
+    let p = null
+    let pz = 0
+    if(this._parent === null){
+      p = new CGPoint(0, 0)
+    }else{
+      p = this._parent._worldPosition
+      pz = this._parent._worldZPosition
+    }
+    this._worldPosition = this.position.add(p)
+    this._worldZPosition = this.zPosition + pz
+
+    if(this._presentation){
+      let pp = null
+      let ppz = 0
+      if(this._parent === null){
+        pp = new CGPoint(0, 0)
+      }else if(this._parent._presentation === null){
+        pp = this._parent._worldPosition
+        ppz = this._parent._worldZPosition
+      }else{
+        pp = this._parent._presentation._worldPosition
+        ppz = this._parent._presentation._worldZPosition
+      }
+      this._presentation._worldPosition = this._presentation.position.add(pp)
+      this._presentation._worldZPosition = this._presentation.zPosition + ppz
+    }
+
+    for(const child of this._children){
+      child._updateWorldTransform()
+    }
   }
 }
