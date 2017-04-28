@@ -47,8 +47,12 @@ module.exports = {
       module: {
         loaders: [
           {
+            test: /ammo.js$/,
+            loader: 'script-loader'
+          },
+          {
             test: /\.js$/,
-            exclude: /node_modules/,
+            exclude: [/node_modules/, /ammo.js$/],
             loader: 'babel-loader',
             query: {
               presets: ['es2015']
@@ -57,7 +61,8 @@ module.exports = {
         ]
       },
       externals: {
-        fs: 'fs'
+        fs: 'fs',
+        //'../third_party/ammo': 'ammo'
       }
     },
     web: {
@@ -77,8 +82,12 @@ module.exports = {
       module: {
         loaders: [
           {
+            test: /ammo.js$/,
+            loader: 'script-loader'
+          },
+          {
             test: /\.js$/,
-            exclude: /node_modules/,
+            exclude: [/node_modules/, /ammo.js$/],
             loader: 'babel-loader',
             query: {
               presets: ['es2015']
@@ -92,6 +101,7 @@ module.exports = {
       },
       externals: {
         //fs: 'fs'
+        //'../third_party/ammo': 'ammo'
       }
 
     }

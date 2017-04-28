@@ -9,6 +9,8 @@ import SCNPhysicsBody from './SCNPhysicsBody'
 import SCNHitTestResult from './SCNHitTestResult'
 import SCNPhysicsShape from './SCNPhysicsShape'
 import SCNMatrix4 from './SCNMatrix4'
+import _Ammo from '../third_party/ammo'
+/*global Ammo*/
 
 const _TestOption = {
   backfaceCulling: 'backfaceCulling',
@@ -92,6 +94,15 @@ export default class SCNPhysicsWorld extends NSObject {
      */
     this.contactDelegate = null
 
+    const collisionConfiguration = new Ammo.btDefaultCollisionConfiguration()
+    const dispatcher = new Ammo.btCollisionDispatcher(collisionConfiguration)
+    const overlappingPairCache = new Ammo.btDbvtBroadphase()
+    const solver = new Ammo.btSequentialImpulseConstraintSolver()
+    this._world = new Ammo.btDiscreteDynamicsWorld(
+      dispatcher, overlappingPairCache, solver, collisionConfiguration
+    )
+
+    this._prevTime = null
   }
 
   /**
@@ -304,5 +315,9 @@ if (contacts.count == 0) {
    */
   static get TestSearchMode() {
     return _TestSearchMode
+  }
+
+  _simulate(time) {
+    this._world.stepSimulation(1.0/60.0, 0)
   }
 }

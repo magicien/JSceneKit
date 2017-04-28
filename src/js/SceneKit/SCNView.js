@@ -958,6 +958,9 @@ export default class SCNView {
     ///////////////////////
     // simulates physics //
     ///////////////////////
+    if(this._scene._physicsWorld !== null){
+      this._scene._physicsWorld._simulate(time)
+    }
 
     if(this._delegate && this._delegate.rendererDidSimulatePhysicsAtTime){
       this._delegate.rendererDidSimulatePhysicsAtTime(this._renderer, time)

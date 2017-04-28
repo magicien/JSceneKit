@@ -59,6 +59,7 @@
     "nyc": "^10.2.0",
     "path": "^0.12.7",
     "require-dir": "^0.3.1",
+    "script-loader": "^0.7.0",
     "sinon": "^2.1.0",
     "sinon-chai": "^2.9.0",
     "uglifyjs-webpack-plugin": "^0.4.2",
