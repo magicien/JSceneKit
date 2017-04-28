@@ -19123,7 +19123,9 @@ module.exports =
 	        _timingMode: 'integer',
 	        _beginTime: 'float',
 	        _isRunning: 'boolean',
-	        _pausedTime: 'float'
+	        _pausedTime: 'float',
+
+	        name: ['string', null]
 	      };
 	    }
 
@@ -23419,7 +23421,7 @@ module.exports =
 
 	var _defaultCameraDistance = 15;
 
-	var _defaultParticleVertexShader = '#version 300 es\n  precision mediump float;\n\n  uniform mat4 viewTransform;\n  uniform mat4 projectionTransform;\n  //uniform bool textureFlag;\n  //uniform sampler2D colorTexture;\n\n  in vec4 position;\n  in vec4 color;\n  in float size;\n  //in float life;\n  in vec2 corner;\n\n  out vec2 v_texcoord;\n  out vec4 v_color;\n\n  void main() {\n    vec4 pos = viewTransform * vec4(position.xyz, 1.0);\n    float sinAngle = sin(position.w);\n    float cosAngle = cos(position.w);\n    vec2 d = vec2(corner.x * cosAngle - corner.y * sinAngle,\n                  corner.x * sinAngle + corner.y * cosAngle) * size;\n    pos.xy += d;\n    \n    //if(textureFlag){\n    //  v_color = color * texture2D(colorTexture, vec2(life, 0));\n    //}else{\n    //  v_color = color;\n    //}\n    v_color = color;\n    v_texcoord = corner * vec2(0.5, -0.5) + 0.5;\n    gl_Position = projectionTransform * pos;\n  }\n';
+	var _defaultParticleVertexShader = '#version 300 es\n  precision mediump float;\n\n  uniform mat4 viewTransform;\n  uniform mat4 projectionTransform;\n\n  in vec3 position;\n  in vec4 rotation;\n  in vec4 color;\n  in float size;\n  //in float life;\n  in vec2 corner;\n\n  out vec2 v_texcoord;\n  out vec4 v_color;\n\n  void main() {\n    vec4 pos = viewTransform * vec4(position, 1.0);\n    float sinAngle = sin(rotation.w);\n    float cosAngle = cos(rotation.w);\n    float tcos = 1.0 - cosAngle;\n    vec3 d = vec3(\n        corner.x * (rotation.x * rotation.x * tcos + cosAngle)\n      + corner.y * (rotation.x * rotation.y * tcos - rotation.z * sinAngle),\n        corner.x * (rotation.y * rotation.x * tcos + rotation.z * sinAngle)\n      + corner.y * (rotation.y * rotation.y * tcos + cosAngle),\n        corner.x * (rotation.z * rotation.x * tcos - rotation.y * sinAngle)\n      + corner.y * (rotation.z * rotation.y * tcos + rotation.x * sinAngle)) * size * 0.5;\n\n    pos.xyz += d;\n\n    v_color = color;\n    v_texcoord = corner * vec2(0.5, -0.5) + 0.5;\n    gl_Position = projectionTransform * pos;\n  }\n';
 
 	var _defaultParticleFragmentShader = '#version 300 es\n  precision mediump float;\n\n  uniform sampler2D particleTexture;\n\n  in vec2 v_texcoord;\n  in vec4 v_color;\n\n  out vec4 outColor;\n\n  void main() {\n    vec4 texColor = texture(particleTexture, v_texcoord);\n    texColor.rgb *= texColor.a;\n    outColor = v_color * texColor;\n  }\n';
 
@@ -23799,7 +23801,30 @@ module.exports =
 	      gl.uniformMatrix4fv(gl.getUniformLocation(particleProgram, 'projectionTransform'), false, cameraNode.projectionTransform.float32Array());
 
 	      if (this.scene._particleSystems !== null) {
-	        // TODO: implement
+	        var _iteratorNormalCompletion = true;
+	        var _didIteratorError = false;
+	        var _iteratorError = undefined;
+
+	        try {
+	          for (var _iterator = this.scene._particleSystems[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+	            var system = _step.value;
+
+	            this._renderParticleSystem(system);
+	          }
+	        } catch (err) {
+	          _didIteratorError = true;
+	          _iteratorError = err;
+	        } finally {
+	          try {
+	            if (!_iteratorNormalCompletion && _iterator.return) {
+	              _iterator.return();
+	            }
+	          } finally {
+	            if (_didIteratorError) {
+	              throw _iteratorError;
+	            }
+	          }
+	        }
 	      }
 	      var particleArray = this._createParticleNodeArray();
 	      particleArray.forEach(function (node) {
@@ -23826,27 +23851,27 @@ module.exports =
 	      gl.clear(gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT);
 
 	      var skNodes = this._createSKNodeArray();
-	      var _iteratorNormalCompletion = true;
-	      var _didIteratorError = false;
-	      var _iteratorError = undefined;
+	      var _iteratorNormalCompletion2 = true;
+	      var _didIteratorError2 = false;
+	      var _iteratorError2 = undefined;
 
 	      try {
-	        for (var _iterator = skNodes[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-	          var node = _step.value;
+	        for (var _iterator2 = skNodes[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+	          var node = _step2.value;
 
 	          this._renderSKNode(node);
 	        }
 	      } catch (err) {
-	        _didIteratorError = true;
-	        _iteratorError = err;
+	        _didIteratorError2 = true;
+	        _iteratorError2 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion && _iterator.return) {
-	            _iterator.return();
+	          if (!_iteratorNormalCompletion2 && _iterator2.return) {
+	            _iterator2.return();
 	          }
 	        } finally {
-	          if (_didIteratorError) {
-	            throw _iteratorError;
+	          if (_didIteratorError2) {
+	            throw _iteratorError2;
 	          }
 	        }
 	      }
@@ -24078,21 +24103,20 @@ module.exports =
 
 	      //gl.useProgram(program)
 	      systems.forEach(function (system) {
-	        _this3._renderParticleSystem(node, system);
+	        _this3._renderParticleSystem(system);
 	      });
 	    }
 
 	    /**
 	     *
 	     * @access private
-	     * @param {SCNNode} node -
 	     * @param {SCNParticleSystem} system - 
 	     * @returns {void}
 	     */
 
 	  }, {
 	    key: '_renderParticleSystem',
-	    value: function _renderParticleSystem(node, system) {
+	    value: function _renderParticleSystem(system) {
 	      //this.currentTime
 	      var gl = this.context;
 	      var program = this._defaultParticleProgram._glProgram;
@@ -24102,7 +24126,7 @@ module.exports =
 	      gl.useProgram(program);
 
 	      if (system._vertexBuffer === null) {
-	        system._initializeVAO(gl, node, program);
+	        system._initializeVAO(gl, program);
 	      }
 	      gl.bindVertexArray(system._vertexArray);
 
@@ -25757,17 +25781,17 @@ module.exports =
 	        paused: ['boolean', 'isPaused'],
 	        rootNode: ['SCNNode', '_rootNode'],
 	        upAxis: ['SCNVector3', null],
-	        fogStartDistance: 'double',
-	        fogDensityExponent: 'double',
 	        physicsWorld: ['SCNPhysicsWorld', '_physicsWorld'],
 	        background: ['SCNMaterialProperty', '_background'],
+	        startTime: ['double', null],
 	        endTime: ['double', null],
 	        frameRate: ['double', null],
+	        fogDensityExponent: 'double',
+	        fogStartDistance: 'double',
 	        fogEndDistance: 'double',
-	        startTime: ['double', null],
 	        fogColor: 'plist',
 	        version: ['float', null],
-	        environment: ['SCNMaterialProperty', null]
+	        environment: ['SCNMaterialProperty', '_lightingEnvironment']
 	      };
 	    }
 
@@ -25849,6 +25873,7 @@ module.exports =
 	    // Working with Particle Systems in the Scene
 
 	    _this._particleSystems = null;
+	    _this._particleSystemsTransform = null;
 
 	    if (typeof url !== 'undefined') {
 	      _this._loadSceneWithURL(url, options).then(function (scene) {
@@ -25878,6 +25903,7 @@ module.exports =
 	      this.fogColor = src.fogColor;
 	      this._physicsWorld = src._physicsWorld;
 	      this._particleSystems = src._particleSystems ? src._particleSystems.slice(0) : null;
+	      this._particleSystemsTransform = src._particleSystemsTransform ? src._particleSystemsTransform.slice(0) : null;
 	    }
 	  }, {
 	    key: '_loadSceneWithURL',
@@ -26009,7 +26035,18 @@ module.exports =
 	     * @desc A particle system directly attached to a scene is not related to the coordinate space of any node in the scene. To attach a particle system whose emitter location follows the movement of a node within the scene, use the corresponding SCNNode method.For details on particle systems, see SCNParticleSystem.
 	     * @see https://developer.apple.com/reference/scenekit/scnscene/1523359-addparticlesystem
 	     */
-	    value: function addParticleSystem(system, transform) {}
+	    value: function addParticleSystem(system, transform) {
+	      if (this._particleSystems === null) {
+	        this._particleSystems = [];
+	        this._particleSystemsTransform = [];
+	      }
+	      this._particleSystems.push(system);
+	      this._particleSystemsTransform.push(transform);
+
+	      if (this._particleSystems.length !== this._particleSystemsTransform.length) {
+	        throw new Error('particleSystems array length inconsistency');
+	      }
+	    }
 
 	    /**
 	     * Removes a particle system attached to the scene.
@@ -26022,7 +26059,17 @@ module.exports =
 
 	  }, {
 	    key: 'removeParticleSystem',
-	    value: function removeParticleSystem(system) {}
+	    value: function removeParticleSystem(system) {
+	      if (this._particleSystems === null) {
+	        return;
+	      }
+	      var index = this._particleSystems.indexOf(system);
+	      if (index < 0) {
+	        return;
+	      }
+	      this._particleSystems.splice(index, 1);
+	      this._particleSystemsTransform.splice(index, 1);
+	    }
 
 	    /**
 	     * Removes any particle systems directly attached to the scene.
@@ -26034,7 +26081,10 @@ module.exports =
 
 	  }, {
 	    key: 'removeAllParticleSystems',
-	    value: function removeAllParticleSystems() {}
+	    value: function removeAllParticleSystems() {
+	      this._particleSystems = [];
+	      this._particleSystemsTransform = [];
+	    }
 
 	    /**
 	     * The particle systems attached to the scene.
@@ -26089,7 +26139,7 @@ module.exports =
 	  }, {
 	    key: 'particleSystems',
 	    get: function get() {
-	      return this._particleSystems;
+	      return this._particleSystems.slice(0);
 	    }
 
 	    // Structures
@@ -29498,6 +29548,14 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+	var _BinaryRequest2 = __webpack_require__(78);
+
+	var _BinaryRequest3 = _interopRequireDefault(_BinaryRequest2);
+
+	var _NSKeyedUnarchiver = __webpack_require__(27);
+
+	var _NSKeyedUnarchiver2 = _interopRequireDefault(_NSKeyedUnarchiver);
+
 	var _NSObject3 = __webpack_require__(2);
 
 	var _NSObject4 = _interopRequireDefault(_NSObject3);
@@ -29617,6 +29675,11 @@ module.exports =
 	    _this.position = null;
 
 	    /**
+	     * @type {SCNVector3}
+	     */
+	    _this.axis = null;
+
+	    /**
 	     * @type {number}
 	     */
 	    _this.angle = 0;
@@ -29667,9 +29730,7 @@ module.exports =
 	  _createClass(_Particle, [{
 	    key: 'floatArray',
 	    value: function floatArray() {
-	      var baseArray = [].concat(_toConsumableArray(this.position.floatArray()), [this.angle], _toConsumableArray(this.color.floatArray()), [this.size
-	      //this.size, this.life
-	      ]);
+	      var baseArray = [].concat(_toConsumableArray(this.position.floatArray()), _toConsumableArray(this.axis.floatArray()), [this.angle], _toConsumableArray(this.color.floatArray()), [this.size]);
 	      return [].concat(_toConsumableArray(baseArray), [-1, -1], _toConsumableArray(baseArray), [1, -1], _toConsumableArray(baseArray), [-1, 1], _toConsumableArray(baseArray), [1, 1]);
 	    }
 
@@ -29728,7 +29789,7 @@ module.exports =
 	        particleSize: 'float',
 	        particleSizeVariation: 'float',
 	        particleColor: 'plist',
-	        particleColorVariation: 'SKColor',
+	        particleColorVariation: 'SCNVector4',
 	        particleImage: ['NSMutableDictionary', function (obj, dict, key, coder) {
 	          var path = '';
 	          if (typeof dict.path !== 'undefined') {
@@ -30269,8 +30330,8 @@ module.exports =
 
 
 	  _createClass(SCNParticleSystem, [{
-	    key: 'initNamedInDirectory',
-	    value: function initNamedInDirectory(name, directory) {}
+	    key: 'reset',
+
 
 	    // Controlling Particle Simulation
 
@@ -30281,9 +30342,6 @@ module.exports =
 	     * @desc Calling this method removes all currently live particles from the scene.
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522968-reset
 	     */
-
-	  }, {
-	    key: 'reset',
 	    value: function reset() {}
 
 	    // Modifying Particles in Response to Particle System Events
@@ -30421,9 +30479,19 @@ module.exports =
 	        };
 	        image.src = _path;
 	      } else {
+	        var _paths = path.split('/');
+	        var _pathCount = 0;
 	        image.onload = function () {
 	          //console.info(`image ${path} onload`)
 	          _this3.particleImage = image;
+	        };
+	        image.onerror = function () {
+	          _pathCount += 1;
+	          if (_pathCount > _paths.length) {
+	            // load error
+	          } else {
+	            image.src = directoryPath + _paths.slice(-_pathCount).join('/');
+	          }
 	        };
 	        image.src = path;
 	      }
@@ -30431,7 +30499,7 @@ module.exports =
 	    }
 	  }, {
 	    key: '_initializeVAO',
-	    value: function _initializeVAO(gl, node, program) {
+	    value: function _initializeVAO(gl, program) {
 	      if (this._vertexArray !== null) {
 	        return;
 	      }
@@ -30444,6 +30512,7 @@ module.exports =
 	      // prepare vertex array data
 	      // TODO: retain attribute locations
 	      var positionLoc = gl.getAttribLocation(program, 'position');
+	      var rotationLoc = gl.getAttribLocation(program, 'rotation');
 	      var colorLoc = gl.getAttribLocation(program, 'color');
 	      var sizeLoc = gl.getAttribLocation(program, 'size');
 	      //const lifeLoc = gl.getAttribLocation(program, 'life')
@@ -30451,15 +30520,17 @@ module.exports =
 
 	      // vertexAttribPointer(ulong idx, long size, ulong type, bool norm, long stride, ulong offset)
 	      gl.enableVertexAttribArray(positionLoc);
-	      gl.vertexAttribPointer(positionLoc, 4, gl.FLOAT, false, 44, 0);
+	      gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, 56, 0);
+	      gl.enableVertexAttribArray(rotationLoc);
+	      gl.vertexAttribPointer(rotationLoc, 4, gl.FLOAT, false, 56, 12);
 	      gl.enableVertexAttribArray(colorLoc);
-	      gl.vertexAttribPointer(colorLoc, 4, gl.FLOAT, false, 44, 16);
+	      gl.vertexAttribPointer(colorLoc, 4, gl.FLOAT, false, 56, 28);
 	      gl.enableVertexAttribArray(sizeLoc);
-	      gl.vertexAttribPointer(sizeLoc, 1, gl.FLOAT, false, 44, 32);
+	      gl.vertexAttribPointer(sizeLoc, 1, gl.FLOAT, false, 56, 44);
 	      //gl.enableVertexAttribArray(lifeLoc)
 	      //gl.vertexAttribPointer(lifeLoc, 1, gl.FLOAT, false, 48, 36)
 	      gl.enableVertexAttribArray(cornerLoc);
-	      gl.vertexAttribPointer(cornerLoc, 2, gl.FLOAT, false, 44, 36);
+	      gl.vertexAttribPointer(cornerLoc, 2, gl.FLOAT, false, 56, 48);
 
 	      /*
 	      const arr = []
@@ -30506,60 +30577,110 @@ module.exports =
 	     * @param {SCNVector4} orientation -
 	     * @returns {_Particle} -
 	     */
+	    //_createParticle(birthTime, position, orientation) {
 
 	  }, {
 	    key: '_createParticle',
-	    value: function _createParticle(birthTime, position, orientation) {
+	    value: function _createParticle(birthTime, transform) {
 	      var p = new _Particle();
+
+	      var position = transform.getTranslation();
+	      var velocity = this.particleVelocity + this.particleVelocityVariation * (Math.random() - 0.5);
+	      var spreadingAngle = this.spreadingAngle / 180.0 * Math.PI * Math.random();
+	      var spreadingAngleRot = 2.0 * Math.PI * Math.random();
+	      var angleMat = _SCNMatrix2.default.matrixWithRotation(this._normal.x, this._normal.y, this._normal.z, spreadingAngle);
+	      var rotMat = _SCNMatrix2.default.matrixWithRotation(this._direction.x, this._direction.y, this._direction.z, spreadingAngleRot);
+
 	      // emitterShape, birthLocation, emittingDirection, spreadingAngle, particleAngle/Variation, particleVelocity
 	      if (this.emitterShape === null) {
 	        p.position = position;
 	      } else if (this.birthLocation === _SCNParticleBirthLocation2.default.surface) {
+	        var pVec = null;
+	        var vVec = null;
 	        switch (this.emitterShape.className) {
+	          case 'SCNBox':
+	            {
+	              // FIXME: calculate the area
+	              var rnd = Math.floor(Math.random() * 6);
+	              var rnd1 = Math.random() - 0.5;
+	              var rnd2 = Math.random() - 0.5;
+	              var w = this.emitterShape.width;
+	              var h = this.emitterShape.height;
+	              var l = this.emitterShape.length;
+
+	              // TODO: chamferRadius
+	              if (rnd === 0) {
+	                // right
+	                pVec = new _SCNVector2.default(w * 0.5, h * rnd1, l * rnd2);
+	                vVec = new _SCNVector2.default(1, 0, 0);
+	              } else if (rnd === 1) {
+	                // left
+	                pVec = new _SCNVector2.default(-w * 0.5, h * rnd1, l * rnd2);
+	                vVec = new _SCNVector2.default(-1, 0, 0);
+	              } else if (rnd === 2) {
+	                // top
+	                pVec = new _SCNVector2.default(w * rnd1, h * 0.5, l * rnd2);
+	                vVec = new _SCNVector2.default(0, 1, 0);
+	              } else if (rnd === 3) {
+	                // bottom
+	                pVec = new _SCNVector2.default(w * rnd1, -h * 0.5, l * rnd2);
+	                vVec = new _SCNVector2.default(0, -1, 0);
+	              } else if (rnd === 4) {
+	                // front
+	                pVec = new _SCNVector2.default(w * rnd1, h * rnd2, l * 0.5);
+	                vVec = new _SCNVector2.default(0, 0, 1);
+	              } else {
+	                // back
+	                pVec = new _SCNVector2.default(w * rnd1, h * rnd2, -l * 0.5);
+	                vVec = new _SCNVector2.default(0, 0, -1);
+	              }
+	              break;
+	            }
 	          case 'SCNSphere':
 	            {
-	              var v = new _SCNVector2.default(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5).normalize().mul(this.emitterShape.radius);
-	              p.position = position.add(v);
+	              var v = new _SCNVector2.default(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5).normalize();
+	              pVec = v.mul(this.emitterShape.radius);
+	              vVec = v;
 	              break;
 	            }
 	          default:
 	            // TODO: implement
 	            throw new Error('emitter for ' + this.emitterShape.className + ' is not implemented');
 	        }
+	        pVec = pVec.rotate(transform);
+	        p.position = position.add(pVec);
+	        if (this.birthDirection === _SCNParticleBirthDirection2.default.surfaceNormal) {
+	          p.velocity = vVec.rotate(transform).normalize().mul(velocity);
+	        }
 	      } else {
 	        // TODO: implement
 	        throw new Error('birthLocation ' + this.birthLocation + ' is not implemented.');
 	      }
+
+	      if (this.orientationMode === _SCNParticleOrientationMode2.default.billboardScreenAligned) {
+	        p.axis = new _SCNVector2.default(0, 0, 1);
+	      } else {
+	        p.axis = new _SCNVector2.default(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5).normalize();
+	      }
 	      p.angle = (this.particleAngle + this.particleAngleVariation * (Math.random() - 0.5)) / 180.0 * Math.PI;
 	      p.size = this.particleSize + this.particleSizeVariation * (Math.random() - 0.5);
-	      p.color = this.particleColor._copy();
-	      var velocity = this.particleVelocity + this.particleVelocityVariation * (Math.random() - 0.5);
-	      var spreadingAngle = this.spreadingAngle / 180.0 * Math.PI * Math.random();
-	      var spreadingAngleRot = 2.0 * Math.PI * Math.random();
-	      var angleMat = _SCNMatrix2.default.matrixWithRotation(this._normal.x, this._normal.y, this._normal.z, spreadingAngle);
-	      var rotMat = _SCNMatrix2.default.matrixWithRotation(this._direction.x, this._direction.y, this._direction.z, spreadingAngleRot);
+	      p.color = this._createColor();
+
 	      switch (this.birthDirection) {
 	        case _SCNParticleBirthDirection2.default.constant:
 	          {
-	            p.velocity = this._direction.rotate(angleMat).rotate(rotMat).rotateWithQuaternion(orientation).mul(velocity);
+	            p.velocity = this._direction.rotate(angleMat).rotate(rotMat).rotate(transform).mul(velocity);
 	            break;
 	          }
 	        case _SCNParticleBirthDirection2.default.surfaceNormal:
 	          {
-	            if (this.emitterShape.className === 'SCNSphere') {
-	              var _v = p.position.sub(position);
-	              p.velocity = _v.mul(velocity);
-	            } else {
-	              // TODO: implement
-	              throw new Error('velocity for ' + this.emitterShape.className + ' is not implemented.');
-	            }
 	            break;
 	          }
 	        case _SCNParticleBirthDirection2.default.random:
 	          {
 	            var rndAngle = 2.0 * Math.PI * Math.random();
 	            var rndMat = _SCNMatrix2.default.matrixWithRotation(this._normal.x, this._normal.y, this._normal.z, rndAngle);
-	            p.velocity = this._direction.rotate(rndMat).rotate(rotMat).rotateWithQuaternion(orientation).mul(velocity);
+	            p.velocity = this._direction.rotate(rndMat).rotate(rotMat).rotate(transform).mul(velocity);
 	            break;
 	          }
 	        default:
@@ -30567,10 +30688,11 @@ module.exports =
 	            throw new Error('unknown birth direction: ' + this.birthDirection);
 	          }
 	      }
-	      p.angularVelocity = this.particleAngularVelocity + this.particleAngularVelocityVariation * (Math.random() - 0.5);
+	      p.angularVelocity = (this.particleAngularVelocity + this.particleAngularVelocityVariation * (Math.random() - 0.5)) / 180.0 * Math.PI;
 	      p.acceleration = this.acceleration._copy();
 	      p.birthTime = birthTime;
-	      p.lifeSpan = this.particleLifeSpan + this.particleLifeSpanVariation * (Math.random() - 0.5);
+	      //p.lifeSpan = this.particleLifeSpan + this.particleLifeSpanVariation * (Math.random() - 0.5)
+	      p.lifeSpan = this.particleLifeSpan + this.particleLifeSpanVariation * (Math.random() * 2.0 - 1.0);
 
 	      return p;
 	    }
@@ -30578,13 +30700,14 @@ module.exports =
 	    /**
 	     * @access private
 	     * @param {SCNNode} node -
+	     * @param {?SCNVector3} gravity -
 	     * @param {number} elapsedTime -
 	     * @returns {void}
 	     */
 
 	  }, {
 	    key: '_updateParticles',
-	    value: function _updateParticles(node, currentTime) {
+	    value: function _updateParticles(transform, gravity, currentTime) {
 	      var _this4 = this;
 
 	      if (this._prevTime <= 0) {
@@ -30596,7 +30719,8 @@ module.exports =
 	        this._normal = this._direction.cross(u);
 	      }
 	      while (this._nextBirthTime <= currentTime) {
-	        var p = this._createParticle(this._nextBirthTime, node._presentationWorldTranslation, node._presentationWorldOrientation);
+	        //const p = this._createParticle(this._nextBirthTime, node._presentationWorldTranslation, node._presentationWorldOrientation)
+	        var p = this._createParticle(this._nextBirthTime, transform);
 	        this._particles.push(p);
 	        var rate = this.birthRate + this.birthRateVariation * (Math.random() - 0.5);
 	        if (rate < 0.0000001) {
@@ -30606,19 +30730,35 @@ module.exports =
 	      }
 
 	      var dt = currentTime - this._prevTime;
+	      var damping = 1;
+	      if (this.dampingFactor > 0) {
+	        //damping = Math.pow((100 - this.dampingFactor) * 0.01, dt)
+	        damping = Math.pow((100 - this.dampingFactor) * 0.01, dt * 60.0);
+	      }
+
 	      this._particles.forEach(function (p) {
 	        var t = (currentTime - p.birthTime) / p.lifeSpan;
 	        p.life = t;
 	        if (t > 1) {
 	          return;
 	        }
-	        p.position.x += (0.5 * p.acceleration.x * dt + p.velocity.x) * dt;
-	        p.position.y += (0.5 * p.acceleration.y * dt + p.velocity.y) * dt;
-	        p.position.z += (0.5 * p.acceleration.z * dt + p.velocity.z) * dt;
+	        var acceleration = p.acceleration;
+	        if (gravity !== null && _this4.isAffectedByGravity) {
+	          acceleration = acceleration.add(gravity);
+	        }
+	        //p.position.x += (0.5 * acceleration.x * dt + p.velocity.x) * dt
+	        //p.position.y += (0.5 * acceleration.y * dt + p.velocity.y) * dt
+	        //p.position.z += (0.5 * acceleration.z * dt + p.velocity.z) * dt
+	        //p.velocity.x += acceleration.x * dt
+	        //p.velocity.y += acceleration.y * dt
+	        //p.velocity.z += acceleration.z * dt
 	        p.angle += p.angularVelocity * dt;
-	        p.velocity.x += p.acceleration.x * dt;
-	        p.velocity.y += p.acceleration.y * dt;
-	        p.velocity.z += p.acceleration.z * dt;
+	        p.velocity.x = (p.velocity.x + acceleration.x * dt) * damping;
+	        p.velocity.y = (p.velocity.y + acceleration.y * dt) * damping;
+	        p.velocity.z = (p.velocity.z + acceleration.z * dt) * damping;
+	        p.position.x += p.velocity.x * dt;
+	        p.position.y += p.velocity.y * dt;
+	        p.position.z += p.velocity.z * dt;
 	        if (_this4.propertyControllers !== null) {
 	          Object.keys(_this4.propertyControllers).forEach(function (key) {
 	            _this4.propertyControllers[key].animation._applyAnimation(p, t, false); // should I use p.life instead of t?
@@ -30678,6 +30818,153 @@ module.exports =
 
 	      return texture;
 	    }
+
+	    /**
+	     * @access private
+	     * @returns {SKColor} -
+	     */
+
+	  }, {
+	    key: '_createColor',
+	    value: function _createColor() {
+	      var hsb = this._rgb2hsb(this.particleColor);
+
+	      // Hue
+	      //hsb.x = (hsb.x + this.particleColorVariation.x * (Math.random() - 0.5)) % 360.0
+	      hsb.x = (hsb.x + this.particleColorVariation.x * (Math.random() * 2.0 - 1.0)) % 360.0;
+	      if (hsb.x < 0) {
+	        hsb.x += 360.0;
+	      }
+
+	      // Saturation
+	      hsb.y = Math.max(0, Math.min(1.0, hsb.y + this.particleColorVariation.y * (Math.random() - 0.5)));
+
+	      // Brightness
+	      hsb.z = Math.max(0, Math.min(1.0, hsb.z + this.particleColorVariation.z * (Math.random() - 0.5)));
+
+	      // Alpha
+	      hsb.w = Math.max(0, Math.min(1.0, hsb.w + this.particleColorVariation.w * (Math.random() - 0.5)));
+
+	      return this._hsb2rgb(hsb);
+	    }
+
+	    /**
+	     * @access private
+	     * @param {SKColor} rgb -
+	     * @returns {SCNVector4} -
+	     */
+
+	  }, {
+	    key: '_rgb2hsb',
+	    value: function _rgb2hsb(rgb) {
+	      var hsb = new _SCNVector4.default();
+	      var min = Math.min(rgb.red, Math.min(rgb.green, rgb.blue));
+	      var max = Math.max(rgb.red, Math.max(rgb.green, rgb.blue));
+	      var delta = max - min;
+	      hsb.w = rgb.alpha;
+	      hsb.z = max;
+
+	      if (hsb.z === 0) {
+	        hsb.x = 0;
+	        hsb.y = 0;
+	        return hsb;
+	      }
+
+	      hsb.y = delta / max;
+	      if (hsb.y === 0) {
+	        hsb.x = 0;
+	        return hsb;
+	      }
+
+	      if (max === rgb.red) {
+	        hsb.x = (60.0 * (rgb.green - rgb.blue) / delta + 360.0) % 360.0;
+	      } else if (max === rgb.green) {
+	        hsb.x = 60.0 * (rgb.blue - rgb.red) / delta + 120.0;
+	      } else {
+	        hsb.x = 60.0 * (rgb.red - rgb.green) / delta + 240.0;
+	      }
+
+	      return hsb;
+	    }
+
+	    /**
+	     * @access private
+	     * @param {SCNVector4} hsb -
+	     * @returns {SKColor} -
+	     */
+
+	  }, {
+	    key: '_hsb2rgb',
+	    value: function _hsb2rgb(hsb) {
+	      //const rgb = new SKColor(0, 0, 0, hsb.w)
+
+	      if (hsb.y === 0) {
+	        //rgb.red = hsb.z
+	        //rgb.green = hsb.z
+	        //rgb.blue = hsb.z
+	        return new _SKColor2.default(hsb.z, hsb.z, hsb.z, hsb.w);
+	      }
+
+	      var region = Math.floor(hsb.x / 60.0);
+	      /*
+	      const c = hsb.z * hsb.y
+	      const x = c * (region % 2)
+	      const m = hsb.z - c
+	       let r = 0
+	      let g = 0
+	      let b = 0
+	      switch(region){
+	        case 0:
+	          r = c
+	          g = x
+	          break
+	        case 1:
+	          r = x
+	          g = c
+	          break
+	        case 2:
+	          g = c
+	          b = x
+	          break
+	        case 3:
+	          g = x
+	          b = c
+	          break
+	        case 4:
+	          r = x
+	          b = c
+	          break
+	        default:
+	          r = c
+	          b = x
+	          break
+	      }
+	      rgb.red = r + m
+	      rgb.green = g + m
+	      rgb.blue = b + m
+	      
+	      return rgb
+	      */
+	      var v = hsb.z;
+	      var f = hsb.x / 60.0 - region;
+	      var m = v * (1.0 - hsb.y);
+	      var n = v * (1.0 - hsb.y * f);
+	      var k = v * (1.0 - hsb.y * (1.0 - f));
+	      switch (region) {
+	        case 0:
+	          return new _SKColor2.default(v, k, m, hsb.w);
+	        case 1:
+	          return new _SKColor2.default(n, v, m, hsb.w);
+	        case 2:
+	          return new _SKColor2.default(m, v, k, hsb.w);
+	        case 3:
+	          return new _SKColor2.default(m, n, v, hsb.w);
+	        case 4:
+	          return new _SKColor2.default(k, m, v, hsb.w);
+	        default:
+	          return new _SKColor2.default(v, m, n, hsb.w);
+	      }
+	    }
 	  }, {
 	    key: '_particleData',
 	    get: function get() {
@@ -30695,6 +30982,24 @@ module.exports =
 	      return Math.ceil(maxRate * maxLifeSpan);
 	    }
 	  }], [{
+	    key: 'systemNamedInDirectory',
+	    value: function systemNamedInDirectory(name) {
+	      var directory = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
+	      var path = name;
+	      if (directory !== null) {
+	        path = directory + '/' + name;
+	      }
+	      var promise = _BinaryRequest3.default.get(path).then(function (data) {
+	        var system = _NSKeyedUnarchiver2.default.unarchiveObjectWithData(data, path);
+	        if (!(system instanceof SCNParticleSystem)) {
+	          throw new Error('file ' + path + ' is not an instance of SCNParticleSystem');
+	        }
+	        return system;
+	      });
+	      return promise;
+	    }
+	  }, {
 	    key: 'ParticleProperty',
 	    get: function get() {
 	      return _ParticleProperty;
@@ -36198,7 +36503,9 @@ module.exports =
 	        _timingMode: 'integer',
 	        _beginTime: 'float',
 	        _isRunning: 'boolean',
-	        _pausedTime: 'float'
+	        _pausedTime: 'float',
+
+	        name: ['string', null]
 	      };
 	    }
 
@@ -36375,7 +36682,9 @@ module.exports =
 	        _timingMode: 'integer',
 	        _beginTime: 'float',
 	        _isRunning: 'boolean',
-	        _pausedTime: 'float'
+	        _pausedTime: 'float',
+
+	        name: ['string', null]
 	      };
 	    }
 
@@ -36669,7 +36978,9 @@ module.exports =
 	        _timingMode: 'integer',
 	        _beginTime: 'float',
 	        _isRunning: 'boolean',
-	        _pausedTime: 'float'
+	        _pausedTime: 'float',
+
+	        name: ['string', null]
 	      };
 	    }
 
@@ -36968,7 +37279,9 @@ module.exports =
 	        _repeatedAction: 'SCNAction',
 	        _forever: 'boolean',
 	        _timesRepeated: 'integer',
-	        _pausedTime: 'float'
+	        _pausedTime: 'float',
+
+	        name: ['string', null]
 	      };
 	    }
 
@@ -37189,7 +37502,9 @@ module.exports =
 	        _duration: 'float',
 	        _pausedTime: 'float',
 	        _timingMode: 'integer',
-	        _beginTime: 'float'
+	        _beginTime: 'float',
+
+	        name: ['string', null]
 	      };
 	    }
 
@@ -37566,7 +37881,9 @@ module.exports =
 	        _timingMode: 'integer',
 	        _beginTime: 'float',
 	        _isRunning: 'boolean',
-	        _pausedTime: 'float'
+	        _pausedTime: 'float',
+
+	        name: ['string', null]
 	      };
 	    }
 
@@ -37770,7 +38087,9 @@ module.exports =
 	        _timingMode: 'integer',
 	        _beginTime: 'float',
 	        _isRunning: 'boolean',
-	        _pausedTime: 'float'
+	        _pausedTime: 'float',
+
+	        name: ['string', null]
 	      };
 	    }
 
@@ -37985,7 +38304,9 @@ module.exports =
 	        _timingMode: 'integer',
 	        _beginTime: 'float',
 	        _isRunning: 'boolean',
-	        _pausedTime: 'float'
+	        _pausedTime: 'float',
+
+	        name: ['string', null]
 	      };
 	    }
 
@@ -38291,7 +38612,8 @@ module.exports =
 	        boxchamferSegmentCount: ['integer', null],
 	        boxprimitiveType: ['integer', null],
 	        materials: ['NSArray', null],
-	        subdivisionLevel: ['integer', null]
+	        subdivisionLevel: ['integer', null],
+	        subdivisionSettings: ['bytes', null]
 	      };
 	    }
 
@@ -41333,7 +41655,8 @@ module.exports =
 
 	        sphereradialSpan: ['float', '_sphereRadialSpan'],
 	        spherehemispheric: ['boolean', '_isHemispheric'],
-	        sphereprimitiveType: ['integer', '_spherePrimitiveType']
+	        sphereprimitiveType: ['integer', '_spherePrimitiveType'],
+	        subdivisionSettings: ['bytes', null]
 	      };
 	    }
 
@@ -43185,7 +43508,22 @@ module.exports =
 	  }, {
 	    key: '_updateParticles',
 	    value: function _updateParticles() {
+	      this._updateParticlesForScene();
 	      this._updateParticlesForNode(this._scene.rootNode);
+	    }
+	  }, {
+	    key: '_updateParticlesForScene',
+	    value: function _updateParticlesForScene() {
+	      if (this._scene._particleSystems === null) {
+	        return;
+	      }
+	      var gravity = this._scene.physicsWorld ? this._scene.physicsWorld.gravity : null;
+	      var len = this._scene._particleSystems.length;
+	      for (var i = 0; i < len; i++) {
+	        var system = this._scene._particleSystems[i];
+	        var transform = this._scene._particleSystemsTransform[i];
+	        system._updateParticles(transform, gravity, this.currentTime);
+	      }
 	    }
 	  }, {
 	    key: '_updateParticlesForNode',
@@ -43205,8 +43543,9 @@ module.exports =
 	      if (obj.particleSystems === null) {
 	        return;
 	      }
+	      var gravity = this._scene.physicsWorld ? this._scene.physicsWorld.gravity : null;
 	      obj.particleSystems.forEach(function (system) {
-	        system._updateParticles(obj, _this10.currentTime);
+	        system._updateParticles(obj.presentation.worldTransform, gravity, _this10.currentTime);
 	      });
 	    }
 

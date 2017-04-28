@@ -15,7 +15,9 @@ export default class SCNActionRepeat extends SCNAction {
       _repeatedAction: 'SCNAction',
       _forever: 'boolean',
       _timesRepeated: 'integer',
-      _pausedTime: 'float'
+      _pausedTime: 'float',
+
+      name: ['string', null]
     }
   }
 

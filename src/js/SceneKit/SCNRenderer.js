@@ -321,10 +321,9 @@ const _defaultParticleVertexShader =
 
   uniform mat4 viewTransform;
   uniform mat4 projectionTransform;
-  //uniform bool textureFlag;
-  //uniform sampler2D colorTexture;
 
-  in vec4 position;
+  in vec3 position;
+  in vec4 rotation;
   in vec4 color;
   in float size;
   //in float life;
@@ -334,18 +333,20 @@ const _defaultParticleVertexShader =
   out vec4 v_color;
 
   void main() {
-    vec4 pos = viewTransform * vec4(position.xyz, 1.0);
-    float sinAngle = sin(position.w);
-    float cosAngle = cos(position.w);
-    vec2 d = vec2(corner.x * cosAngle - corner.y * sinAngle,
-                  corner.x * sinAngle + corner.y * cosAngle) * size;
-    pos.xy += d;
-    
-    //if(textureFlag){
-    //  v_color = color * texture2D(colorTexture, vec2(life, 0));
-    //}else{
-    //  v_color = color;
-    //}
+    vec4 pos = viewTransform * vec4(position, 1.0);
+    float sinAngle = sin(rotation.w);
+    float cosAngle = cos(rotation.w);
+    float tcos = 1.0 - cosAngle;
+    vec3 d = vec3(
+        corner.x * (rotation.x * rotation.x * tcos + cosAngle)
+      + corner.y * (rotation.x * rotation.y * tcos - rotation.z * sinAngle),
+        corner.x * (rotation.y * rotation.x * tcos + rotation.z * sinAngle)
+      + corner.y * (rotation.y * rotation.y * tcos + cosAngle),
+        corner.x * (rotation.z * rotation.x * tcos - rotation.y * sinAngle)
+      + corner.y * (rotation.z * rotation.y * tcos + rotation.x * sinAngle)) * size * 0.5;
+
+    pos.xyz += d;
+
     v_color = color;
     v_texcoord = corner * vec2(0.5, -0.5) + 0.5;
     gl_Position = projectionTransform * pos;
@@ -738,7 +739,9 @@ export default class SCNRenderer extends NSObject {
     gl.uniformMatrix4fv(gl.getUniformLocation(particleProgram, 'projectionTransform'), false, cameraNode.projectionTransform.float32Array())
 
     if(this.scene._particleSystems !== null){
-      // TODO: implement
+      for(const system of this.scene._particleSystems){
+        this._renderParticleSystem(system)
+      }
     }
     const particleArray = this._createParticleNodeArray()
     particleArray.forEach((node) => {
@@ -971,18 +974,17 @@ export default class SCNRenderer extends NSObject {
 
     //gl.useProgram(program)
     systems.forEach((system) => {
-      this._renderParticleSystem(node, system)
+      this._renderParticleSystem(system)
     })
   }
 
   /**
    *
    * @access private
-   * @param {SCNNode} node -
    * @param {SCNParticleSystem} system - 
    * @returns {void}
    */
-  _renderParticleSystem(node, system) {
+  _renderParticleSystem(system) {
     //this.currentTime
     const gl = this.context
     let program = this._defaultParticleProgram._glProgram
@@ -992,7 +994,7 @@ export default class SCNRenderer extends NSObject {
     gl.useProgram(program)
 
     if(system._vertexBuffer === null){
-      system._initializeVAO(gl, node, program)
+      system._initializeVAO(gl, program)
     }
     gl.bindVertexArray(system._vertexArray)
 

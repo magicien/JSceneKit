@@ -41,7 +41,8 @@ export default class SCNBox extends SCNGeometry {
       boxchamferSegmentCount: ['integer', null],
       boxprimitiveType: ['integer', null],
       materials: ['NSArray', null],
-      subdivisionLevel: ['integer', null]
+      subdivisionLevel: ['integer', null],
+      subdivisionSettings: ['bytes', null]
     }
   }
 

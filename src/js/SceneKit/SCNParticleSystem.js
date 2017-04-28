@@ -1,5 +1,7 @@
 'use strict'
 
+import _BinaryRequest from '../util/_BinaryRequest'
+import NSKeyedUnarchiver from '../Foundation/NSKeyedUnarchiver'
 import NSObject from '../ObjectiveC/NSObject'
 import SCNAnimatable from './SCNAnimatable'
 //import SCNGeometry from './SCNGeometry'
@@ -53,6 +55,11 @@ class _Particle extends NSObject {
     this.position = null
 
     /**
+     * @type {SCNVector3}
+     */
+    this.axis = null
+
+    /**
      * @type {number}
      */
     this.angle = 0
@@ -99,10 +106,10 @@ class _Particle extends NSObject {
    */
   floatArray() {
     const baseArray = [
-      ...this.position.floatArray(), this.angle,
+      ...this.position.floatArray(), 
+      ...this.axis.floatArray(), this.angle,
       ...this.color.floatArray(),
       this.size
-      //this.size, this.life
     ]
     return [
       ...baseArray, -1, -1,
@@ -155,7 +162,7 @@ export default class SCNParticleSystem extends NSObject {
       particleSize: 'float',
       particleSizeVariation: 'float',
       particleColor: 'plist',
-      particleColorVariation: 'SKColor',
+      particleColorVariation: 'SCNVector4',
       particleImage: ['NSMutableDictionary', (obj, dict, key, coder) => {
         let path = ''
         if(typeof dict.path !== 'undefined'){
@@ -696,7 +703,20 @@ export default class SCNParticleSystem extends NSObject {
    * @desc A SceneKit particle file created by Xcode contains an archived SCNParticleSystem instance, so you can also use the NSKeyedArchiver and NSKeyedUnarchiver classes to write and read particle files.
    * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522772-init
    */
-  initNamedInDirectory(name, directory) {
+  static systemNamedInDirectory(name, directory = null) {
+    let path = name
+    if(directory !== null){
+      path = `${directory}/${name}`
+    }
+    const promise = _BinaryRequest.get(path)
+    .then((data) => {
+      const system = NSKeyedUnarchiver.unarchiveObjectWithData(data, path)
+      if(!(system instanceof SCNParticleSystem)){
+        throw new Error(`file ${path} is not an instance of SCNParticleSystem`)
+      }
+      return system
+    })
+    return promise
   }
 
   // Controlling Particle Simulation
@@ -836,16 +856,26 @@ export default class SCNParticleSystem extends NSObject {
       }
       image.src = _path
     }else{
+      const paths = path.split('/')
+      let pathCount = 0
       image.onload = () => {
         //console.info(`image ${path} onload`)
         this.particleImage = image
+      }
+      image.onerror = () => {
+        pathCount += 1
+        if(pathCount > paths.length){
+          // load error
+        }else{
+          image.src = directoryPath + paths.slice(-pathCount).join('/')
+        }
       }
       image.src = path
     }
     return image
   }
 
-  _initializeVAO(gl, node, program) {
+  _initializeVAO(gl, program) {
     if(this._vertexArray !== null){
       return
     }
@@ -858,6 +888,7 @@ export default class SCNParticleSystem extends NSObject {
     // prepare vertex array data
     // TODO: retain attribute locations
     const positionLoc = gl.getAttribLocation(program, 'position')
+    const rotationLoc = gl.getAttribLocation(program, 'rotation')
     const colorLoc = gl.getAttribLocation(program, 'color')
     const sizeLoc = gl.getAttribLocation(program, 'size')
     //const lifeLoc = gl.getAttribLocation(program, 'life')
@@ -865,15 +896,17 @@ export default class SCNParticleSystem extends NSObject {
 
     // vertexAttribPointer(ulong idx, long size, ulong type, bool norm, long stride, ulong offset)
     gl.enableVertexAttribArray(positionLoc)
-    gl.vertexAttribPointer(positionLoc, 4, gl.FLOAT, false, 44, 0)
+    gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, 56, 0)
+    gl.enableVertexAttribArray(rotationLoc)
+    gl.vertexAttribPointer(rotationLoc, 4, gl.FLOAT, false, 56, 12)
     gl.enableVertexAttribArray(colorLoc)
-    gl.vertexAttribPointer(colorLoc, 4, gl.FLOAT, false, 44, 16)
+    gl.vertexAttribPointer(colorLoc, 4, gl.FLOAT, false, 56, 28)
     gl.enableVertexAttribArray(sizeLoc)
-    gl.vertexAttribPointer(sizeLoc, 1, gl.FLOAT, false, 44, 32)
+    gl.vertexAttribPointer(sizeLoc, 1, gl.FLOAT, false, 56, 44)
     //gl.enableVertexAttribArray(lifeLoc)
     //gl.vertexAttribPointer(lifeLoc, 1, gl.FLOAT, false, 48, 36)
     gl.enableVertexAttribArray(cornerLoc)
-    gl.vertexAttribPointer(cornerLoc, 2, gl.FLOAT, false, 44, 36)
+    gl.vertexAttribPointer(cornerLoc, 2, gl.FLOAT, false, 56, 48)
 
     /*
     const arr = []
@@ -920,64 +953,113 @@ export default class SCNParticleSystem extends NSObject {
    * @param {SCNVector4} orientation -
    * @returns {_Particle} -
    */
-  _createParticle(birthTime, position, orientation) {
+  //_createParticle(birthTime, position, orientation) {
+  _createParticle(birthTime, transform) {
     const p = new _Particle()
+
+    const position = transform.getTranslation()
+    const velocity = this.particleVelocity + this.particleVelocityVariation * (Math.random() - 0.5)
+    const spreadingAngle = this.spreadingAngle / 180.0 * Math.PI * Math.random()
+    const spreadingAngleRot = 2.0 * Math.PI * Math.random()
+    const angleMat = SCNMatrix4.matrixWithRotation(this._normal.x, this._normal.y, this._normal.z, spreadingAngle)
+    const rotMat = SCNMatrix4.matrixWithRotation(this._direction.x, this._direction.y, this._direction.z, spreadingAngleRot)
+
     // emitterShape, birthLocation, emittingDirection, spreadingAngle, particleAngle/Variation, particleVelocity
     if(this.emitterShape === null){
       p.position = position
     }else if(this.birthLocation === SCNParticleBirthLocation.surface){
+      let pVec = null
+      let vVec = null
       switch(this.emitterShape.className){
+        case 'SCNBox': {
+          // FIXME: calculate the area
+          const rnd = Math.floor(Math.random() * 6)
+          const rnd1 = Math.random() - 0.5
+          const rnd2 = Math.random() - 0.5
+          const w = this.emitterShape.width
+          const h = this.emitterShape.height
+          const l = this.emitterShape.length
+
+          // TODO: chamferRadius
+          if(rnd === 0){
+            // right
+            pVec = new SCNVector3(w * 0.5, h * rnd1, l * rnd2)
+            vVec = new SCNVector3(1, 0, 0)
+          }else if(rnd === 1){
+            // left
+            pVec = new SCNVector3(-w * 0.5, h * rnd1, l * rnd2)
+            vVec = new SCNVector3(-1, 0, 0)
+          }else if(rnd === 2){
+            // top
+            pVec = new SCNVector3(w * rnd1, h * 0.5, l * rnd2)
+            vVec = new SCNVector3(0, 1, 0)
+          }else if(rnd === 3){
+            // bottom
+            pVec = new SCNVector3(w * rnd1, -h * 0.5, l * rnd2)
+            vVec = new SCNVector3(0, -1, 0)
+          }else if(rnd === 4){
+            // front
+            pVec = new SCNVector3(w * rnd1, h * rnd2, l * 0.5)
+            vVec = new SCNVector3(0, 0, 1)
+          }else{
+            // back
+            pVec = new SCNVector3(w * rnd1, h * rnd2, -l * 0.5)
+            vVec = new SCNVector3(0, 0, -1)
+          }
+          break
+        }
         case 'SCNSphere': {
-          const v = (new SCNVector3(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5))
-                      .normalize().mul(this.emitterShape.radius)
-          p.position = position.add(v)
+          const v = (new SCNVector3(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5)).normalize()
+          pVec = v.mul(this.emitterShape.radius)
+          vVec = v
           break
         }
         default:
           // TODO: implement
           throw new Error(`emitter for ${this.emitterShape.className} is not implemented`)
       }
+      pVec = pVec.rotate(transform)
+      p.position = position.add(pVec)
+      if(this.birthDirection === SCNParticleBirthDirection.surfaceNormal){
+        p.velocity = vVec.rotate(transform).normalize().mul(velocity)
+      }
     }else{
       // TODO: implement
       throw new Error(`birthLocation ${this.birthLocation} is not implemented.`)
     }
+
+    if(this.orientationMode === SCNParticleOrientationMode.billboardScreenAligned){
+      p.axis = new SCNVector3(0, 0, 1)
+    }else{
+      p.axis = (new SCNVector3(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5)).normalize()
+    }
     p.angle = (this.particleAngle + this.particleAngleVariation * (Math.random() - 0.5)) / 180.0 * Math.PI
     p.size = this.particleSize + this.particleSizeVariation * (Math.random() - 0.5)
-    p.color = this.particleColor._copy()
-    const velocity = this.particleVelocity + this.particleVelocityVariation * (Math.random() - 0.5)
-    const spreadingAngle = this.spreadingAngle / 180.0 * Math.PI * Math.random()
-    const spreadingAngleRot = 2.0 * Math.PI * Math.random()
-    const angleMat = SCNMatrix4.matrixWithRotation(this._normal.x, this._normal.y, this._normal.z, spreadingAngle)
-    const rotMat = SCNMatrix4.matrixWithRotation(this._direction.x, this._direction.y, this._direction.z, spreadingAngleRot)
+    p.color = this._createColor()
+
     switch(this.birthDirection){
       case SCNParticleBirthDirection.constant: {
-        p.velocity = this._direction.rotate(angleMat).rotate(rotMat).rotateWithQuaternion(orientation).mul(velocity)
+        p.velocity = this._direction.rotate(angleMat).rotate(rotMat).rotate(transform).mul(velocity)
         break
       }
       case SCNParticleBirthDirection.surfaceNormal: {
-        if(this.emitterShape.className === 'SCNSphere'){
-          const v = p.position.sub(position)
-          p.velocity = v.mul(velocity)
-        }else{
-          // TODO: implement
-          throw new Error(`velocity for ${this.emitterShape.className} is not implemented.`)
-        }
         break
       }
       case SCNParticleBirthDirection.random: {
         const rndAngle = 2.0 * Math.PI * Math.random()
         const rndMat = SCNMatrix4.matrixWithRotation(this._normal.x, this._normal.y, this._normal.z, rndAngle)
-        p.velocity = this._direction.rotate(rndMat).rotate(rotMat).rotateWithQuaternion(orientation).mul(velocity)
+        p.velocity = this._direction.rotate(rndMat).rotate(rotMat).rotate(transform).mul(velocity)
         break
       }
       default: {
         throw new Error(`unknown birth direction: ${this.birthDirection}`)
       }
     }
-    p.angularVelocity = this.particleAngularVelocity + this.particleAngularVelocityVariation * (Math.random() - 0.5)
+    p.angularVelocity = (this.particleAngularVelocity + this.particleAngularVelocityVariation * (Math.random() - 0.5)) / 180.0 * Math.PI
     p.acceleration = this.acceleration._copy()
     p.birthTime = birthTime
-    p.lifeSpan = this.particleLifeSpan + this.particleLifeSpanVariation * (Math.random() - 0.5)
+    //p.lifeSpan = this.particleLifeSpan + this.particleLifeSpanVariation * (Math.random() - 0.5)
+    p.lifeSpan = this.particleLifeSpan + this.particleLifeSpanVariation * (Math.random() * 2.0 - 1.0)
 
     return p
   }
@@ -985,10 +1067,11 @@ export default class SCNParticleSystem extends NSObject {
   /**
    * @access private
    * @param {SCNNode} node -
+   * @param {?SCNVector3} gravity -
    * @param {number} elapsedTime -
    * @returns {void}
    */
-  _updateParticles(node, currentTime) {
+  _updateParticles(transform, gravity, currentTime) {
     if(this._prevTime <= 0){
       this._prevTime = currentTime
       this._nextBirthTime = currentTime
@@ -998,7 +1081,8 @@ export default class SCNParticleSystem extends NSObject {
       this._normal = this._direction.cross(u)
     }
     while(this._nextBirthTime <= currentTime){
-      const p = this._createParticle(this._nextBirthTime, node._presentationWorldTranslation, node._presentationWorldOrientation)
+      //const p = this._createParticle(this._nextBirthTime, node._presentationWorldTranslation, node._presentationWorldOrientation)
+      const p = this._createParticle(this._nextBirthTime, transform)
       this._particles.push(p)
       let rate = this.birthRate + this.birthRateVariation * (Math.random() - 0.5)
       if(rate < 0.0000001){
@@ -1008,19 +1092,35 @@ export default class SCNParticleSystem extends NSObject {
     }
 
     const dt = currentTime - this._prevTime
+    let damping = 1
+    if(this.dampingFactor > 0){
+      //damping = Math.pow((100 - this.dampingFactor) * 0.01, dt)
+      damping = Math.pow((100 - this.dampingFactor) * 0.01, dt * 60.0)
+    }
+
     this._particles.forEach((p) => {
       const t = (currentTime - p.birthTime) / p.lifeSpan
       p.life = t
       if(t > 1){
         return
       }
-      p.position.x += (0.5 * p.acceleration.x * dt + p.velocity.x) * dt
-      p.position.y += (0.5 * p.acceleration.y * dt + p.velocity.y) * dt
-      p.position.z += (0.5 * p.acceleration.z * dt + p.velocity.z) * dt
+      let acceleration = p.acceleration
+      if(gravity !== null && this.isAffectedByGravity){
+        acceleration = acceleration.add(gravity)
+      }
+      //p.position.x += (0.5 * acceleration.x * dt + p.velocity.x) * dt
+      //p.position.y += (0.5 * acceleration.y * dt + p.velocity.y) * dt
+      //p.position.z += (0.5 * acceleration.z * dt + p.velocity.z) * dt
+      //p.velocity.x += acceleration.x * dt
+      //p.velocity.y += acceleration.y * dt
+      //p.velocity.z += acceleration.z * dt
       p.angle += p.angularVelocity * dt
-      p.velocity.x += p.acceleration.x * dt
-      p.velocity.y += p.acceleration.y * dt
-      p.velocity.z += p.acceleration.z * dt
+      p.velocity.x = (p.velocity.x + acceleration.x * dt) * damping
+      p.velocity.y = (p.velocity.y + acceleration.y * dt) * damping
+      p.velocity.z = (p.velocity.z + acceleration.z * dt) * damping
+      p.position.x += p.velocity.x * dt
+      p.position.y += p.velocity.y * dt
+      p.position.z += p.velocity.z * dt
       if(this.propertyControllers !== null){
         Object.keys(this.propertyControllers).forEach((key) => {
           this.propertyControllers[key].animation._applyAnimation(p, t, false) // should I use p.life instead of t?
@@ -1073,6 +1173,145 @@ export default class SCNParticleSystem extends NSObject {
     gl.bindTexture(gl.TEXTURE_2D, null)
 
     return texture
+  }
+
+  /**
+   * @access private
+   * @returns {SKColor} -
+   */
+  _createColor() {
+    const hsb = this._rgb2hsb(this.particleColor)
+
+    // Hue
+    //hsb.x = (hsb.x + this.particleColorVariation.x * (Math.random() - 0.5)) % 360.0
+    hsb.x = (hsb.x + this.particleColorVariation.x * (Math.random() * 2.0 - 1.0)) % 360.0
+    if(hsb.x < 0){
+      hsb.x += 360.0
+    }
+
+    // Saturation
+    hsb.y = Math.max(0, Math.min(1.0, hsb.y + this.particleColorVariation.y * (Math.random() - 0.5)))
+
+    // Brightness
+    hsb.z = Math.max(0, Math.min(1.0, hsb.z + this.particleColorVariation.z * (Math.random() - 0.5)))
+
+    // Alpha
+    hsb.w = Math.max(0, Math.min(1.0, hsb.w + this.particleColorVariation.w * (Math.random() - 0.5)))
+
+    return this._hsb2rgb(hsb)
+  }
+
+  /**
+   * @access private
+   * @param {SKColor} rgb -
+   * @returns {SCNVector4} -
+   */
+  _rgb2hsb(rgb) {
+    const hsb = new SCNVector4()
+    const min = Math.min(rgb.red, Math.min(rgb.green, rgb.blue))
+    const max = Math.max(rgb.red, Math.max(rgb.green, rgb.blue))
+    const delta = max - min
+    hsb.w = rgb.alpha
+    hsb.z = max
+
+    if(hsb.z === 0){
+      hsb.x = 0
+      hsb.y = 0
+      return hsb
+    }
+
+    hsb.y = delta / max
+    if(hsb.y === 0){
+      hsb.x = 0
+      return hsb
+    }
+
+    if(max === rgb.red){
+      hsb.x = (60.0 * (rgb.green - rgb.blue) / delta + 360.0) % 360.0
+    }else if(max === rgb.green){
+      hsb.x = 60.0 * (rgb.blue - rgb.red) / delta + 120.0
+    }else{
+      hsb.x = 60.0 * (rgb.red - rgb.green) / delta + 240.0
+    }
+
+    return hsb
+  }
+
+  /**
+   * @access private
+   * @param {SCNVector4} hsb -
+   * @returns {SKColor} -
+   */
+  _hsb2rgb(hsb) {
+    //const rgb = new SKColor(0, 0, 0, hsb.w)
+
+    if(hsb.y === 0){
+      //rgb.red = hsb.z
+      //rgb.green = hsb.z
+      //rgb.blue = hsb.z
+      return new SKColor(hsb.z, hsb.z, hsb.z, hsb.w)
+    }
+
+    const region = Math.floor(hsb.x / 60.0)
+    /*
+    const c = hsb.z * hsb.y
+    const x = c * (region % 2)
+    const m = hsb.z - c
+
+    let r = 0
+    let g = 0
+    let b = 0
+    switch(region){
+      case 0:
+        r = c
+        g = x
+        break
+      case 1:
+        r = x
+        g = c
+        break
+      case 2:
+        g = c
+        b = x
+        break
+      case 3:
+        g = x
+        b = c
+        break
+      case 4:
+        r = x
+        b = c
+        break
+      default:
+        r = c
+        b = x
+        break
+    }
+    rgb.red = r + m
+    rgb.green = g + m
+    rgb.blue = b + m
+    
+    return rgb
+    */
+    const v = hsb.z
+    const f = hsb.x / 60.0 - region
+    const m = v * (1.0 - hsb.y)
+    const n = v * (1.0 - hsb.y * f)
+    const k = v * (1.0 - hsb.y * (1.0 - f))
+    switch(region){
+      case 0:
+        return new SKColor(v, k, m, hsb.w)
+      case 1:
+        return new SKColor(n, v, m, hsb.w)
+      case 2:
+        return new SKColor(m, v, k, hsb.w)
+      case 3:
+        return new SKColor(m, n, v, hsb.w)
+      case 4:
+        return new SKColor(k, m, v, hsb.w)
+      default:
+        return new SKColor(v, m, n, hsb.w)
+    }
   }
 
   get _particleData() {

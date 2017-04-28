@@ -20,7 +20,8 @@ export default class SCNSphere extends SCNGeometry {
 
       sphereradialSpan: ['float', '_sphereRadialSpan'],
       spherehemispheric: ['boolean', '_isHemispheric'],
-      sphereprimitiveType: ['integer', '_spherePrimitiveType']
+      sphereprimitiveType: ['integer', '_spherePrimitiveType'],
+      subdivisionSettings: ['bytes', null]
     }
   }
 

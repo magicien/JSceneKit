@@ -12,7 +12,9 @@ export default class SCNActionGroup extends SCNAction {
       _timingMode: 'integer',
       _beginTime: 'float',
       _isRunning: 'boolean',
-      _pausedTime: 'float'
+      _pausedTime: 'float',
+
+      name: ['string', null]
     }
   }
 

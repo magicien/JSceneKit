@@ -13,7 +13,9 @@ export default class SCNActionFade extends SCNAction {
       _timingMode: 'integer',
       _beginTime: 'float',
       _isRunning: 'boolean',
-      _pausedTime: 'float'
+      _pausedTime: 'float',
+
+      name: ['string', null]
     }
   }
 

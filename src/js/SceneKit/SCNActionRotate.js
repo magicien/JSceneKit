@@ -26,6 +26,8 @@ export default class SCNActionRotate extends SCNAction {
       _pausedTime: 'float',
       _timingMode: 'integer',
       _beginTime: 'float',
+
+      name: ['string', null]
     }
   }
 

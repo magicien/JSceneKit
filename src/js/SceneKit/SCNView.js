@@ -1150,7 +1150,21 @@ export default class SCNView {
   }
 
   _updateParticles() {
+    this._updateParticlesForScene()
     this._updateParticlesForNode(this._scene.rootNode)
+  }
+
+  _updateParticlesForScene() {
+    if(this._scene._particleSystems === null){
+      return
+    }
+    const gravity = this._scene.physicsWorld ? this._scene.physicsWorld.gravity : null
+    const len = this._scene._particleSystems.length
+    for(let i=0; i<len; i++){
+      const system = this._scene._particleSystems[i]
+      const transform = this._scene._particleSystemsTransform[i]
+      system._updateParticles(transform, gravity, this.currentTime)
+    }
   }
 
   _updateParticlesForNode(node) {
@@ -1162,8 +1176,9 @@ export default class SCNView {
     if(obj.particleSystems === null){
       return
     }
+    const gravity = this._scene.physicsWorld ? this._scene.physicsWorld.gravity : null
     obj.particleSystems.forEach((system) => {
-      system._updateParticles(obj, this.currentTime)
+      system._updateParticles(obj.presentation.worldTransform, gravity, this.currentTime)
     })
   }
 

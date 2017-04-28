@@ -33,17 +33,17 @@ export default class SCNScene extends NSObject {
       paused: ['boolean', 'isPaused'],
       rootNode: ['SCNNode', '_rootNode'],
       upAxis: ['SCNVector3', null],
-      fogStartDistance: 'double',
-      fogDensityExponent: 'double',
       physicsWorld: ['SCNPhysicsWorld', '_physicsWorld'],
       background: ['SCNMaterialProperty', '_background'],
+      startTime: ['double', null],
       endTime: ['double', null],
       frameRate: ['double', null],
+      fogDensityExponent: 'double',
+      fogStartDistance: 'double',
       fogEndDistance: 'double',
-      startTime: ['double', null],
       fogColor: 'plist',
       version: ['float', null],
-      environment: ['SCNMaterialProperty', null]
+      environment: ['SCNMaterialProperty', '_lightingEnvironment']
     }
   }
 
@@ -119,6 +119,7 @@ You call this method in a try expression and handle any errors in the catch clau
     // Working with Particle Systems in the Scene
 
     this._particleSystems = null
+    this._particleSystemsTransform = null
 
     if(typeof url !== 'undefined'){
       this._loadSceneWithURL(url, options)
@@ -147,6 +148,7 @@ You call this method in a try expression and handle any errors in the catch clau
     this.fogColor = src.fogColor
     this._physicsWorld = src._physicsWorld
     this._particleSystems = src._particleSystems ? src._particleSystems.slice(0) : null
+    this._particleSystemsTransform = src._particleSystemsTransform ? src._particleSystemsTransform.slice(0) : null
   }
 
   _loadSceneWithURL(url, options) {
@@ -324,6 +326,16 @@ You call this method in a try expression and handle any errors in the catch clau
    * @see https://developer.apple.com/reference/scenekit/scnscene/1523359-addparticlesystem
    */
   addParticleSystem(system, transform) {
+    if(this._particleSystems === null){
+      this._particleSystems = []
+      this._particleSystemsTransform = []
+    }
+    this._particleSystems.push(system)
+    this._particleSystemsTransform.push(transform)
+
+    if(this._particleSystems.length !== this._particleSystemsTransform.length){
+      throw new Error(`particleSystems array length inconsistency`)
+    }
   }
 
   /**
@@ -335,6 +347,15 @@ You call this method in a try expression and handle any errors in the catch clau
    * @see https://developer.apple.com/reference/scenekit/scnscene/1523498-removeparticlesystem
    */
   removeParticleSystem(system) {
+    if(this._particleSystems === null){
+      return
+    }
+    const index = this._particleSystems.indexOf(system)
+    if(index < 0){
+      return
+    }
+    this._particleSystems.splice(index, 1)
+    this._particleSystemsTransform.splice(index, 1)
   }
 
   /**
@@ -345,6 +366,8 @@ You call this method in a try expression and handle any errors in the catch clau
    * @see https://developer.apple.com/reference/scenekit/scnscene/1522786-removeallparticlesystems
    */
   removeAllParticleSystems() {
+    this._particleSystems = []
+    this._particleSystemsTransform = []
   }
 
   /**
@@ -354,7 +377,7 @@ You call this method in a try expression and handle any errors in the catch clau
    * @see https://developer.apple.com/reference/scenekit/scnscene/1522787-particlesystems
    */
   get particleSystems() {
-    return this._particleSystems
+    return this._particleSystems.slice(0)
   }
 
   // Structures
