@@ -8659,7 +8659,10 @@ module.exports =
 	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1455645-height
 	     */
 	    get: function get() {
-	      return this.standardized.size.height;
+	      if (this.isNull) {
+	        return 0;
+	      }
+	      return Math.abs(this.size.height);
 	    }
 	    /**
 	     * Returns the width of a rectangle.
@@ -8671,7 +8674,10 @@ module.exports =
 	  }, {
 	    key: 'width',
 	    get: function get() {
-	      return this.standardized.size.width;
+	      if (this.isNull) {
+	        return 0;
+	      }
+	      return Math.abs(this.size.width);
 	    }
 
 	    /**

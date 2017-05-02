@@ -48,7 +48,10 @@ export default class CGRect {
    * @see https://developer.apple.com/reference/coregraphics/cgrect/1455645-height
    */
   get height() {
-    return this.standardized.size.height
+    if(this.isNull){
+      return 0
+    }
+    return Math.abs(this.size.height)
   }
   /**
    * Returns the width of a rectangle.
@@ -57,7 +60,10 @@ export default class CGRect {
    * @see https://developer.apple.com/reference/coregraphics/cgrect/1454758-width
    */
   get width() {
-    return this.standardized.size.width
+    if(this.isNull){
+      return 0
+    }
+    return Math.abs(this.size.width)
   }
 
   /**
