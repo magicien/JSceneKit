@@ -8398,30 +8398,6 @@ module.exports =
 	    // Basic Geometric Properties
 	    this.origin = origin.copy();
 	    this.size = size.copy();
-
-	    // Calculated Geometric Properties
-	    /*
-	    this._height = size.height
-	    this._width = size.width
-	    this._minX = 0
-	    this._midX = 0
-	    this._maxX = 0
-	    this._minY = 0
-	    this._midY = 0
-	    this._maxY = 0
-	     // Creating Derived Rectangles
-	     this._standardized = null
-	    this._integral = null
-	     // Checking Characteristics
-	     this._isEmpty = false
-	    this._isInfinite = false
-	    this._isNull = false
-	     // Alternate Representations
-	     this._dictionaryRepresentation = null
-	    this._debugDescription = ''
-	    this._customMirror = null
-	    this._customPlaygroundQuickLook = null
-	    */
 	  }
 
 	  // Special Values
@@ -8499,7 +8475,21 @@ module.exports =
 	  }, {
 	    key: 'union',
 	    value: function union(r2) {
-	      return null;
+	      if (this.isNull && r2.isNull) {
+	        return new CGRect(new _CGPoint2.default(0, 0), null);
+	      } else if (this.isNull) {
+	        return r2.copy();
+	      } else if (r2.isNull) {
+	        return this.copy();
+	      }
+
+	      var minX = this.minX < r2.minX ? this.minX : r2.minX;
+	      var maxX = this.maxX > r2.maxX ? this.maxX : r2.maxX;
+	      var minY = this.minY < r2.minY ? this.minY : r2.minY;
+	      var maxY = this.maxY > r2.maxY ? this.maxY : r2.maxY;
+	      var width = maxX - minX;
+	      var height = maxY - minY;
+	      return new CGRect(new _CGPoint2.default(minX, minY), new _CGSize2.default(width, height));
 	    }
 
 	    /**
@@ -8514,7 +8504,19 @@ module.exports =
 	  }, {
 	    key: 'intersection',
 	    value: function intersection(r2) {
-	      return null;
+	      if (this.isNull || r2.isNull) {
+	        return new CGRect(new _CGPoint2.default(0, 0), null);
+	      }
+	      var minX = this.minX > r2.minX ? this.minX : r2.minX;
+	      var maxX = this.maxX < r2.maxX ? this.maxX : r2.maxX;
+	      var minY = this.minY > r2.minY ? this.minY : r2.minY;
+	      var maxY = this.maxY < r2.maxY ? this.maxY : r2.maxY;
+	      var width = maxX - minX;
+	      var height = maxY - minY;
+	      if (width < 0 || height < 0) {
+	        return new CGRect(new _CGPoint2.default(0, 0), null);
+	      }
+	      return new CGRect(new _CGPoint2.default(minX, minY), new _CGSize2.default(width, height));
 	    }
 
 	    /**
@@ -8553,7 +8555,8 @@ module.exports =
 	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1454747-intersects
 	     */
 	    value: function intersects(rect2) {
-	      return false;
+	      var r = this.intersection(rect2);
+	      return this.width > 0 && this.height > 0;
 	    }
 
 	    /**
@@ -8656,7 +8659,7 @@ module.exports =
 	     * @see https://developer.apple.com/reference/coregraphics/cgrect/1455645-height
 	     */
 	    get: function get() {
-	      return this.size.height;
+	      return this.standardized.size.height;
 	    }
 	    /**
 	     * Returns the width of a rectangle.
@@ -8668,7 +8671,7 @@ module.exports =
 	  }, {
 	    key: 'width',
 	    get: function get() {
-	      return this.size.width;
+	      return this.standardized.size.width;
 	    }
 
 	    /**
@@ -8763,8 +8766,21 @@ module.exports =
 	  }, {
 	    key: 'standardized',
 	    get: function get() {
-	      return this._standardized;
+	      var r = this.copy();
+	      if (this.isNull) {
+	        return CGRect.zero;
+	      }
+	      if (this.width < 0) {
+	        r.origin.x = this.origin.x + this.width;
+	        r.size.width = -this.width;
+	      }
+	      if (this.height < 0) {
+	        r.origin.y = this.origin.y + this.height;
+	        r.size.height = -this.height;
+	      }
+	      return r;
 	    }
+
 	    /**
 	     * Returns the smallest rectangle that results from converting the source rectangle values to integers.
 	     * @type {CGRect}
@@ -8775,7 +8791,7 @@ module.exports =
 	  }, {
 	    key: 'integral',
 	    get: function get() {
-	      return this._integral;
+	      return null;
 	    }
 	  }, {
 	    key: 'isEmpty',
@@ -19675,6 +19691,10 @@ module.exports =
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
+	var _SCNGeometrySource = __webpack_require__(116);
+
+	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
+
 	var _SCNLight = __webpack_require__(113);
 
 	var _SCNLight2 = _interopRequireDefault(_SCNLight);
@@ -19872,7 +19892,7 @@ module.exports =
 	     * @type {?SCNGeometry}
 	     * @see https://developer.apple.com/reference/scenekit/scnnode/1407966-geometry
 	     */
-	    _this.geometry = geometry;
+	    _this._geometry = geometry;
 
 	    /**
 	     * The morpher object responsible for blending the node’s geometry.
@@ -20134,6 +20154,8 @@ module.exports =
 	     * @type {?string}
 	     */
 	    _this._nodeID = null;
+
+	    _this._updateBoundingBox();
 	    return _this;
 	  }
 
@@ -21057,7 +21079,7 @@ module.exports =
 	      node.name = this.name;
 	      node.light = this.light;
 	      node.camera = this.camera;
-	      node.geometry = this.geometry;
+	      node._geometry = this._geometry;
 	      node.morpher = this.morpher;
 	      node.skinner = this.skinner;
 	      node.categoryBitMask = this.categoryBitMask;
@@ -21239,6 +21261,61 @@ module.exports =
 
 	      _get(SCNNode.prototype.__proto__ || Object.getPrototypeOf(SCNNode.prototype), 'setValueForKeyPath', this).call(this, value, keyPath);
 	    }
+	  }, {
+	    key: '_updateBoundingBox',
+	    value: function _updateBoundingBox() {
+	      this.boundingBox = {
+	        min: new _SCNVector2.default(0, 0, 0),
+	        max: new _SCNVector2.default(0, 0, 0)
+	      };
+
+	      if (this._geometry === null) {
+	        return;
+	      }
+
+	      var vs = this._geometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex);
+	      if (vs === null) {
+	        return;
+	      }
+
+	      var len = vs.vectorCount;
+	      if (len <= 0) {
+	        return;
+	      }
+
+	      var maxX = -Infinity;
+	      var maxY = -Infinity;
+	      var maxZ = -Infinity;
+	      var minX = Infinity;
+	      var minY = Infinity;
+	      var minZ = Infinity;
+	      for (var i = 0; i < len; i++) {
+	        var v = vs._vectorAt(i);
+	        if (v[0] > maxX) {
+	          maxX = v[0];
+	        }
+	        if (v[0] < minX) {
+	          minX = v[0];
+	        }
+	        if (v[1] > maxY) {
+	          maxY = v[1];
+	        }
+	        if (v[1] < minY) {
+	          maxY = v[1];
+	        }
+	        if (v[2] > maxZ) {
+	          maxZ = v[2];
+	        }
+	        if (v[2] < minZ) {
+	          minZ = v[2];
+	        }
+	      }
+
+	      this.boundingBox = {
+	        min: new _SCNVector2.default(minX, minY, minZ),
+	        max: new _SCNVector2.default(maxX, maxY, maxZ)
+	      };
+	    }
 
 	    /**
 	     * @access private
@@ -21262,10 +21339,10 @@ module.exports =
 	  }, {
 	    key: '_createBtCollisionShape',
 	    value: function _createBtCollisionShape() {
-	      if (this.geometry === null) {
+	      if (this._geometry === null) {
 	        throw new Error('geometry is null');
 	      }
-	      return this.geometry._createBtCollisionShape();
+	      return this._geometry._createBtCollisionShape();
 	    }
 	  }, {
 	    key: 'destory',
@@ -21274,14 +21351,23 @@ module.exports =
 	        this.physicsBody.destory();
 	        this.physicsBody = null;
 	      }
-	      if (this.geometry !== null) {
+	      if (this._geometry !== null) {
 	        // the geometry might be shared with other nodes...
 	        //this.geometry.destroy()
 	      }
 	    }
 	  }, {
-	    key: 'presentation',
+	    key: 'geometry',
 
+
+	    // Managing Node Attributes
+	    get: function get() {
+	      return this._geometry;
+	    },
+	    set: function set(newValue) {
+	      this._geometry = newValue;
+	      this._updateBoundingBox();
+	    }
 
 	    // Working With Node Animation
 
@@ -21291,6 +21377,9 @@ module.exports =
 	     * @desc When you use implicit animation (see SCNTransaction) to change a node’s properties, those node properties are set immediately to their target values, even though the animated node content appears to transition from the old property values to the new. During the animation SceneKit maintains a copy of the node, called the presentation node, whose properties reflect the transitory values determined by any in-flight animations currently affecting the node. The presentation node’s properties provide a close approximation to the version of the node that is currently displayed. SceneKit also uses the presentation node when computing the results of explicit animations, physics, and constraints.Do not modify the properties of the presentation node. (Attempting to do so results in undefined behavior.) Instead, you use the presentation node to read current animation values—for example, to create a new animation starting at those values. The presentation node has no parent or child nodes. To access animated properties of related nodes, use the node’s own parent and childNodes properties and the presentation property of each related node.
 	     * @see https://developer.apple.com/reference/scenekit/scnnode/1408030-presentation
 	     */
+
+	  }, {
+	    key: 'presentation',
 	    get: function get() {
 	      if (this._presentation === null) {
 	        return null;
@@ -37840,6 +37929,8 @@ module.exports =
 	  value: true
 	});
 
+	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _SCNAction2 = __webpack_require__(56);
@@ -37849,6 +37940,10 @@ module.exports =
 	var _SCNActionTimingMode = __webpack_require__(57);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
+
+	var _SCNNode = __webpack_require__(61);
+
+	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -37898,10 +37993,60 @@ module.exports =
 	    return _this;
 	  }
 
+	  /**
+	   * Creates an action that removes the node from its parent.
+	   * @access public
+	   * @returns {SCNAction} - 
+	   * @desc When the action executes, the node is immediately removed from its parent.This action is not reversible; the reverse of this action is the same action.
+	   * @see https://developer.apple.com/reference/scenekit/scnaction/1522966-removefromparentnode
+	   */
+
+
+	  _createClass(SCNActionRemove, [{
+	    key: 'copy',
+
+
+	    /**
+	     * @access public
+	     * @returns {SCNActionRotate} -
+	     */
+	    value: function copy() {
+	      var action = _get(SCNActionRemove.prototype.__proto__ || Object.getPrototypeOf(SCNActionRemove.prototype), 'copy', this).call(this);
+	      return action;
+	    }
+
+	    /**
+	     * apply action to the given node.
+	     * @access private
+	     * @param {Object} obj - target object to apply this action.
+	     * @param {number} time - active time
+	     * @param {boolean} [needTimeConversion = true] -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_applyAction',
+	    value: function _applyAction(obj, time) {
+	      var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+
+	      if (!(obj instanceof _SCNNode2.default)) {
+	        throw new Error('unsupported class for SCNActionRemove: ' + obj.constructor.name);
+	      }
+	      obj.removeFromParentNode();
+	      this._finished = true;
+	    }
+	  }], [{
+	    key: 'removeFromParentNode',
+	    value: function removeFromParentNode() {}
+	  }]);
+
 	  return SCNActionRemove;
 	}(_SCNAction3.default);
 
 	exports.default = SCNActionRemove;
+
+
+	_SCNAction3.default.removeFromParentNode = SCNActionRemove.removeFromParentNode;
 
 /***/ },
 /* 146 */
@@ -38270,10 +38415,10 @@ module.exports =
 	    value: function _applyAction(obj, time) {
 	      var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
 
-	      var t = this._getTime(time, needTimeConversion);
 	      if (!(obj instanceof _SCNNode2.default)) {
 	        throw new Error('unsupported class for SCNActionRotate: ' + obj.constructor.name);
 	      }
+	      var t = this._getTime(time, needTimeConversion);
 	      //console.warn(`SCNActionRotate._applyAction t: ${t}`)
 
 	      if (this._isAxisAngle) {
@@ -46939,7 +47084,33 @@ module.exports =
 	     * @see https://developer.apple.com/reference/spritekit/sknode/1483066-calculateaccumulatedframe
 	     */
 	    value: function calculateAccumulatedFrame() {
-	      return null;
+	      var r = this._frame.copy();
+	      var _iteratorNormalCompletion = true;
+	      var _didIteratorError = false;
+	      var _iteratorError = undefined;
+
+	      try {
+	        for (var _iterator = this._children[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+	          var child = _step.value;
+
+	          r = r.union(child.calculateAccumulatedFrame());
+	        }
+	      } catch (err) {
+	        _didIteratorError = true;
+	        _iteratorError = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion && _iterator.return) {
+	            _iterator.return();
+	          }
+	        } finally {
+	          if (_didIteratorError) {
+	            throw _iteratorError;
+	          }
+	        }
+	      }
+
+	      return r;
 	    }
 
 	    /**
@@ -47068,27 +47239,27 @@ module.exports =
 	  }, {
 	    key: 'removeAllChildren',
 	    value: function removeAllChildren() {
-	      var _iteratorNormalCompletion = true;
-	      var _didIteratorError = false;
-	      var _iteratorError = undefined;
+	      var _iteratorNormalCompletion2 = true;
+	      var _didIteratorError2 = false;
+	      var _iteratorError2 = undefined;
 
 	      try {
-	        for (var _iterator = this._children[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-	          var child = _step.value;
+	        for (var _iterator2 = this._children[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+	          var child = _step2.value;
 
 	          child.removeFromParent();
 	        }
 	      } catch (err) {
-	        _didIteratorError = true;
-	        _iteratorError = err;
+	        _didIteratorError2 = true;
+	        _iteratorError2 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion && _iterator.return) {
-	            _iterator.return();
+	          if (!_iteratorNormalCompletion2 && _iterator2.return) {
+	            _iterator2.return();
 	          }
 	        } finally {
-	          if (_didIteratorError) {
-	            throw _iteratorError;
+	          if (_didIteratorError2) {
+	            throw _iteratorError2;
 	          }
 	        }
 	      }
@@ -47105,29 +47276,29 @@ module.exports =
 	  }, {
 	    key: 'removeChildrenIn',
 	    value: function removeChildrenIn(nodes) {
-	      var _iteratorNormalCompletion2 = true;
-	      var _didIteratorError2 = false;
-	      var _iteratorError2 = undefined;
+	      var _iteratorNormalCompletion3 = true;
+	      var _didIteratorError3 = false;
+	      var _iteratorError3 = undefined;
 
 	      try {
-	        for (var _iterator2 = nodes[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-	          var node = _step2.value;
+	        for (var _iterator3 = nodes[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+	          var node = _step3.value;
 
 	          if (this._children.indexOf(node) >= 0) {
 	            node.removeFromParent();
 	          }
 	        }
 	      } catch (err) {
-	        _didIteratorError2 = true;
-	        _iteratorError2 = err;
+	        _didIteratorError3 = true;
+	        _iteratorError3 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion2 && _iterator2.return) {
-	            _iterator2.return();
+	          if (!_iteratorNormalCompletion3 && _iterator3.return) {
+	            _iterator3.return();
 	          }
 	        } finally {
-	          if (_didIteratorError2) {
-	            throw _iteratorError2;
+	          if (_didIteratorError3) {
+	            throw _iteratorError3;
 	          }
 	        }
 	      }
@@ -47205,29 +47376,29 @@ module.exports =
 	     * @see https://developer.apple.com/reference/spritekit/sknode/1483060-childnode
 	     */
 	    value: function childNodeWithName(name) {
-	      var _iteratorNormalCompletion3 = true;
-	      var _didIteratorError3 = false;
-	      var _iteratorError3 = undefined;
+	      var _iteratorNormalCompletion4 = true;
+	      var _didIteratorError4 = false;
+	      var _iteratorError4 = undefined;
 
 	      try {
-	        for (var _iterator3 = this._children[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-	          var child = _step3.value;
+	        for (var _iterator4 = this._children[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+	          var child = _step4.value;
 
 	          if (child.name === name) {
 	            return child;
 	          }
 	        }
 	      } catch (err) {
-	        _didIteratorError3 = true;
-	        _iteratorError3 = err;
+	        _didIteratorError4 = true;
+	        _iteratorError4 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion3 && _iterator3.return) {
-	            _iterator3.return();
+	          if (!_iteratorNormalCompletion4 && _iterator4.return) {
+	            _iterator4.return();
 	          }
 	        } finally {
-	          if (_didIteratorError3) {
-	            throw _iteratorError3;
+	          if (_didIteratorError4) {
+	            throw _iteratorError4;
 	          }
 	        }
 	      }
@@ -47685,27 +47856,27 @@ module.exports =
 	        this._presentation._worldZPosition = this._presentation.zPosition + ppz;
 	      }
 
-	      var _iteratorNormalCompletion4 = true;
-	      var _didIteratorError4 = false;
-	      var _iteratorError4 = undefined;
+	      var _iteratorNormalCompletion5 = true;
+	      var _didIteratorError5 = false;
+	      var _iteratorError5 = undefined;
 
 	      try {
-	        for (var _iterator4 = this._children[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-	          var child = _step4.value;
+	        for (var _iterator5 = this._children[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+	          var child = _step5.value;
 
 	          child._updateWorldTransform();
 	        }
 	      } catch (err) {
-	        _didIteratorError4 = true;
-	        _iteratorError4 = err;
+	        _didIteratorError5 = true;
+	        _iteratorError5 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion4 && _iterator4.return) {
-	            _iterator4.return();
+	          if (!_iteratorNormalCompletion5 && _iterator5.return) {
+	            _iterator5.return();
 	          }
 	        } finally {
-	          if (_didIteratorError4) {
-	            throw _iteratorError4;
+	          if (_didIteratorError5) {
+	            throw _iteratorError5;
 	          }
 	        }
 	      }

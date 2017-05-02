@@ -9,6 +9,7 @@ import SCNActionable from './SCNActionable'
 import SCNAnimatable from './SCNAnimatable'
 import SCNBoundingVolume from './SCNBoundingVolume'
 import SCNGeometry from './SCNGeometry'
+import SCNGeometrySource from './SCNGeometrySource'
 import SCNLight from './SCNLight'
 import SCNCamera from './SCNCamera'
 import SCNMorpher from './SCNMorpher'
@@ -125,7 +126,7 @@ export default class SCNNode extends NSObject {
      * @type {?SCNGeometry}
      * @see https://developer.apple.com/reference/scenekit/scnnode/1407966-geometry
      */
-    this.geometry = geometry
+    this._geometry = geometry
 
     /**
      * The morpher object responsible for blending the node’s geometry.
@@ -394,6 +395,8 @@ export default class SCNNode extends NSObject {
      * @type {?string}
      */
     this._nodeID = null
+
+    this._updateBoundingBox()
   }
 
   static _loadAnimationArray(node, animations) {
@@ -640,6 +643,15 @@ export default class SCNNode extends NSObject {
    */
   static nodeWithGeometry(geometry) {
     return new SCNNode(geometry)
+  }
+
+  // Managing Node Attributes
+  get geometry() {
+    return this._geometry
+  }
+  set geometry(newValue) {
+    this._geometry = newValue
+    this._updateBoundingBox()
   }
 
   // Working With Node Animation
@@ -1760,7 +1772,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     node.name = this.name
     node.light = this.light
     node.camera = this.camera
-    node.geometry = this.geometry
+    node._geometry = this._geometry
     node.morpher = this.morpher
     node.skinner = this.skinner
     node.categoryBitMask = this.categoryBitMask
@@ -1955,6 +1967,60 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     super.setValueForKeyPath(value, keyPath)
   }
 
+  _updateBoundingBox() {
+    this.boundingBox = {
+      min: new SCNVector3(0, 0, 0),
+      max: new SCNVector3(0, 0, 0)
+    }
+
+    if(this._geometry === null){
+      return
+    }
+
+    const vs = this._geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)
+    if(vs === null){
+      return
+    }
+    
+    const len = vs.vectorCount
+    if(len <= 0){
+      return
+    }
+
+    let maxX = -Infinity
+    let maxY = -Infinity
+    let maxZ = -Infinity
+    let minX = Infinity
+    let minY = Infinity
+    let minZ = Infinity
+    for(let i=0; i<len; i++){
+      const v = vs._vectorAt(i)
+      if(v[0] > maxX){
+        maxX = v[0]
+      }
+      if(v[0] < minX){
+        minX = v[0]
+      }
+      if(v[1] > maxY){
+        maxY = v[1]
+      }
+      if(v[1] < minY){
+        maxY = v[1]
+      }
+      if(v[2] > maxZ){
+        maxZ = v[2]
+      }
+      if(v[2] < minZ){
+        minZ = v[2]
+      }
+    }
+      
+    this.boundingBox = {
+      min: new SCNVector3(minX, minY, minZ),
+      max: new SCNVector3(maxX, maxY, maxZ)
+    }
+  }
+
   /**
    * @access private
    * @returns {Ammo.btTransform}
@@ -1973,10 +2039,10 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
   }
 
   _createBtCollisionShape() {
-    if(this.geometry === null){
+    if(this._geometry === null){
       throw new Error('geometry is null')
     }
-    return this.geometry._createBtCollisionShape()
+    return this._geometry._createBtCollisionShape()
   }
 
   destory() {
@@ -1984,7 +2050,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
       this.physicsBody.destory()
       this.physicsBody = null
     }
-    if(this.geometry !== null){
+    if(this._geometry !== null){
       // the geometry might be shared with other nodes...
       //this.geometry.destroy()
     }

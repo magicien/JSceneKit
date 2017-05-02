@@ -200,10 +200,10 @@ export default class SCNActionRotate extends SCNAction {
    * @returns {void}
    */
   _applyAction(obj, time, needTimeConversion = true) {
-    const t = this._getTime(time, needTimeConversion)
     if(!(obj instanceof SCNNode)){
       throw new Error(`unsupported class for SCNActionRotate: ${obj.constructor.name}`)
     }
+    const t = this._getTime(time, needTimeConversion)
     //console.warn(`SCNActionRotate._applyAction t: ${t}`)
 
     if(this._isAxisAngle){

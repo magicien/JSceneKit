@@ -24,36 +24,6 @@ export default class CGRect {
     // Basic Geometric Properties
     this.origin = origin.copy()
     this.size = size.copy()
-
-    // Calculated Geometric Properties
-    /*
-    this._height = size.height
-    this._width = size.width
-    this._minX = 0
-    this._midX = 0
-    this._maxX = 0
-    this._minY = 0
-    this._midY = 0
-    this._maxY = 0
-
-    // Creating Derived Rectangles
-
-    this._standardized = null
-    this._integral = null
-
-    // Checking Characteristics
-
-    this._isEmpty = false
-    this._isInfinite = false
-    this._isNull = false
-
-    // Alternate Representations
-
-    this._dictionaryRepresentation = null
-    this._debugDescription = ''
-    this._customMirror = null
-    this._customPlaygroundQuickLook = null
-    */
   }
 
   // Special Values
@@ -78,7 +48,7 @@ export default class CGRect {
    * @see https://developer.apple.com/reference/coregraphics/cgrect/1455645-height
    */
   get height() {
-    return this.size.height
+    return this.standardized.size.height
   }
   /**
    * Returns the width of a rectangle.
@@ -87,7 +57,7 @@ export default class CGRect {
    * @see https://developer.apple.com/reference/coregraphics/cgrect/1454758-width
    */
   get width() {
-    return this.size.width
+    return this.standardized.size.width
   }
 
   /**
@@ -214,7 +184,21 @@ export default class CGRect {
    * @see https://developer.apple.com/reference/coregraphics/cgrect/1455837-union
    */
   union(r2) {
-    return null
+    if(this.isNull && r2.isNull){
+      return new CGRect(new CGPoint(0, 0), null)
+    }else if(this.isNull){
+      return r2.copy()
+    }else if(r2.isNull){
+      return this.copy()
+    }
+
+    const minX = this.minX < r2.minX ? this.minX : r2.minX
+    const maxX = this.maxX > r2.maxX ? this.maxX : r2.maxX
+    const minY = this.minY < r2.minY ? this.minY : r2.minY
+    const maxY = this.maxY > r2.maxY ? this.maxY : r2.maxY
+    const width = maxX - minX
+    const height = maxY - minY
+    return new CGRect(new CGPoint(minX, minY), new CGSize(width, height))
   }
 
   /**
@@ -226,7 +210,19 @@ export default class CGRect {
    * @see https://developer.apple.com/reference/coregraphics/cgrect/1455346-intersection
    */
   intersection(r2) {
-    return null
+    if(this.isNull || r2.isNull){
+      return new CGRect(new CGPoint(0, 0), null)
+    }
+    const minX = this.minX > r2.minX ? this.minX : r2.minX
+    const maxX = this.maxX < r2.maxX ? this.maxX : r2.maxX
+    const minY = this.minY > r2.minY ? this.minY : r2.minY
+    const maxY = this.maxY < r2.maxY ? this.maxY : r2.maxY
+    const width = maxX - minX
+    const height = maxY - minY
+    if(width < 0 || height < 0){
+      return new CGRect(new CGPoint(0, 0), null)
+    }
+    return new CGRect(new CGPoint(minX, minY), new CGSize(width, height))
   }
 
   /**
@@ -248,8 +244,21 @@ export default class CGRect {
    * @see https://developer.apple.com/reference/coregraphics/cgrect/1456432-standardized
    */
   get standardized() {
-    return this._standardized
+    const r = this.copy()
+    if(this.isNull){
+      return CGRect.zero
+    }
+    if(this.width < 0){
+      r.origin.x = this.origin.x + this.width
+      r.size.width = -this.width
+    }
+    if(this.height < 0){
+      r.origin.y = this.origin.y + this.height
+      r.size.height = -this.height
+    }
+    return r
   }
+
   /**
    * Returns the smallest rectangle that results from converting the source rectangle values to integers.
    * @type {CGRect}
@@ -257,7 +266,7 @@ export default class CGRect {
    * @see https://developer.apple.com/reference/coregraphics/cgrect/1456348-integral
    */
   get integral() {
-    return this._integral
+    return null
   }
 
   // Checking Characteristics
@@ -270,7 +279,8 @@ export default class CGRect {
    * @see https://developer.apple.com/reference/coregraphics/cgrect/1454747-intersects
    */
   intersects(rect2) {
-    return false
+    const r = this.intersection(rect2)
+    return (this.width > 0 && this.height > 0)
   }
 
   /**

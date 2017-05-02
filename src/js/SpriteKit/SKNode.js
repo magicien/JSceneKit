@@ -356,7 +356,11 @@ Displaying the accumulated frame of a shape node
    * @see https://developer.apple.com/reference/spritekit/sknode/1483066-calculateaccumulatedframe
    */
   calculateAccumulatedFrame() {
-    return null
+    let r = this._frame.copy()
+    for(const child of this._children){
+      r = r.union(child.calculateAccumulatedFrame())
+    }
+    return r
   }
 
   /**
