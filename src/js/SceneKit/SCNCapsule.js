@@ -1,6 +1,7 @@
 'use strict'
 
 import SCNGeometry from './SCNGeometry'
+/*global Ammo*/
 
 
 /**
@@ -63,5 +64,16 @@ export default class SCNCapsule extends SCNGeometry {
      * @see https://developer.apple.com/reference/scenekit/scncapsule/1523697-heightsegmentcount
      */
     this.heightSegmentCount = 0
+  }
+
+  /**
+   * @access private
+   * @returns {Ammo.btCollisionShape}
+   * @desc call Ammo.destroy(shape) after using it.
+   */
+  _createBtCollisionShape() {
+    const height = (this.height - this.capRadius) * 0.5
+    const shape = new Ammo.btCapsuleShape(this.capRadius, height)
+    return shape
   }
 }

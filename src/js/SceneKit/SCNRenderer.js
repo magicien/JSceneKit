@@ -85,12 +85,15 @@ const _defaultVertexShader =
 
   in vec3 position;
   in vec3 normal;
+  //in vec3 tangent;
   in vec2 texcoord;
   in vec4 boneIndices;
   in vec4 boneWeights;
 
   out vec3 v_position;
   out vec3 v_normal;
+  //out vec3 v_tangent;
+  //out vec3 v_bitangent;
   out vec2 v_texcoord;
   out vec4 v_color;
   out vec3 v_eye;
@@ -98,6 +101,9 @@ const _defaultVertexShader =
   void main() {
     vec3 pos = vec3(0, 0, 0);
     vec3 nom = vec3(0, 0, 0);
+    vec3 tangent = vec3(1, 0, 0); // DEBUG
+    vec3 tng = vec3(0, 0, 0);
+
     if(numSkinningJoints > 0){
       for(int i=0; i<numSkinningJoints; i++){
         float weight = boneWeights[i];
@@ -111,6 +117,7 @@ const _defaultVertexShader =
                                           vec4(0, 0, 0, 1)));
         pos += (jointMatrix * vec4(position, 1.0)).xyz * weight;
         nom += (mat3(jointMatrix) * normal) * weight;
+        tng += (mat3(jointMatrix) * tangent) * weight;
       }
     }else{
       mat4 jointMatrix = transpose(mat4(skinningJoints[0],
@@ -119,12 +126,18 @@ const _defaultVertexShader =
                                         vec4(0, 0, 0, 1)));
       pos = (jointMatrix * vec4(position, 1.0)).xyz;
       nom = mat3(jointMatrix) * normal;
+      tng += mat3(jointMatrix) * tangent;
     }
     v_position = pos;
     v_normal = nom;
+    vec3 btng = cross(nom, tng);
 
     vec3 viewPos = vec3(-viewTransform[3][0], -viewTransform[3][1], -viewTransform[3][2]);
-    v_eye = viewPos - pos;
+    vec3 viewVec = viewPos - pos;
+    //v_eye.x = dot(viewVec, tng);
+    //v_eye.y = dot(viewVec, btng);
+    //v_eye.z = dot(viewVec, nom);
+    v_eye = viewVec;
 
     v_color = material.emission;
     int numLights = 0;
@@ -247,6 +260,8 @@ const _defaultFragmentShader =
   in vec2 v_texcoord;
   in vec4 v_color;
   in vec3 v_eye;
+  //in vec3 v_tangent;
+  //in vec3 v_bitangent;
 
   out vec4 outColor;
 
@@ -255,6 +270,10 @@ const _defaultFragmentShader =
 
     vec3 viewVec = normalize(v_eye);
     vec3 nom = normalize(v_normal);
+
+    // normal texture
+    //if(textureFlags[TEXTURE_NORMAL_INDEX]){
+    //}
 
     int numLights = 0;
       
@@ -1353,6 +1372,7 @@ export default class SCNRenderer extends NSObject {
       const info = gl.getShaderInfoLog(vertexShader)
       throw new Error(`vertex shader compile error: ${info}`)
     }
+    this.__defaultProgram.vertexShader = vertexShader
 
     // initialize fragment shader
     const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER)
@@ -1362,6 +1382,7 @@ export default class SCNRenderer extends NSObject {
       const info = gl.getShaderInfoLog(fragmentShader)
       throw new Error(`fragment shader compile error: ${info}`)
     }
+    this.__defaultProgram.fragmentShader = fragmentShader
 
     gl.attachShader(p._glProgram, vertexShader)
     gl.attachShader(p._glProgram, fragmentShader)

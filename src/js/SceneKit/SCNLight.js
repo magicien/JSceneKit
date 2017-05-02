@@ -248,6 +248,10 @@ export default class SCNLight extends NSObject {
      */
     this.iesProfileURL = null
 
+    /**
+     * @access private
+     * @type {?string}
+     */
     this._entityID = null
   }
 

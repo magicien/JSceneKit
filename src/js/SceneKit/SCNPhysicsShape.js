@@ -108,4 +108,16 @@ export default class SCNPhysicsShape extends NSObject {
   static get ShapeType() {
     return _ShapeType
   }
+
+  /**
+   * @access private
+   * @returns {Ammo.btCollisionShape}
+   * @desc call Ammo.destroy(shape) after using it.
+   */
+  _createBtCollisionShape() {
+    if(this._sourceObject === null){
+      throw new Error('_sourceObject is null')
+    }
+    return this._sourceObject._createBtCollisionShape()
+  }
 }

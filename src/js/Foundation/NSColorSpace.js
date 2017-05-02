@@ -11,7 +11,8 @@ export default class NSColorSpace extends NSObject {
   static get _propTypes() {
     return {
       NSICC: ['NSMutableData', '_icc'],
-      NSSpaceID: ['integer', '_spaceID']
+      NSSpaceID: ['integer', '_spaceID'],
+      NSID: ['integer', '_id']
     }
   }
 
@@ -19,5 +20,6 @@ export default class NSColorSpace extends NSObject {
     super()
     this._icc = null
     this._spaceID = null
+    this._id = null
   }
 }

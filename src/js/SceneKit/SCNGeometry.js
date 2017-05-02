@@ -8,6 +8,7 @@ import SCNGeometrySource from './SCNGeometrySource'
 import SCNGeometryElement from './SCNGeometryElement'
 import SCNLevelOfDetail from './SCNLevelOfDetail'
 import SCNMaterial from './SCNMaterial'
+/*global Ammo*/
 
 
 /**
@@ -27,7 +28,7 @@ export default class SCNGeometry extends NSObject {
     }
     return {
       name: 'string',
-      // levelsOfDetail
+      levelsOfDetail: 'NSArray',
       materials: 'NSArray',
       subdivisionLevel: 'integer',
       // program
@@ -192,6 +193,10 @@ export default class SCNGeometry extends NSObject {
      * @type {?string}
      */
     this._entityID = null
+
+    this._btVertices = null
+    this._btMesh = null
+    this._btShape = null
   }
 
   // Managing a Geometry’s Materials
@@ -631,6 +636,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     }
 
     const vertexData = new Float32Array(arr)
+    console.log(`vertexData length: ${arr.length}`)
     gl.bufferData(gl.ARRAY_BUFFER, vertexData, gl.DYNAMIC_DRAW)
 
     // set new data
@@ -779,4 +785,64 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     return texture
   }
 
+  /**
+   * @access private
+   * @returns {Ammo.btCollisionShape}
+   * @desc call Ammo.destroy(shape) after using it.
+   */
+  _createBtCollisionShape() {
+    return this._createBtConvexTriangleMeshShape()
+  }
+
+  _createBtConvexTriangleMeshShape() {
+    this._destoryShape()
+    this._btVertices = []
+
+    const vertexSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
+    const vertexCount = vertexSource.vectorCount
+    for(let i=0; i<vertexCount; i++){
+      this._btVertices.push(vertexSource._scnVectorAt(i)._createBtVector3())
+    }
+
+    this._btMesh = new Ammo.btTriangleMesh(false, false) // 16bit indices, 3 component vertices
+    for(const element of this._geometryElements){
+      const indexCount = element._primitiveCount
+      for(let i=0; i<indexCount; i++){
+        // TODO: check primitiveType
+        const indices = element._indexAt(i)
+        this._btMesh.addTriangle(
+          this._btVertices[indices[0]],
+          this._btVertices[indices[1]],
+          this._btVertices[indices[2]],
+          true
+        )
+      }
+    }
+
+    const calcAabb = true
+    this._btShape = new Ammo.btTriangleMeshShape(this._btMesh, calcAabb)
+
+    return this._btShape
+  }
+
+  _destroyShape() {
+    if(this._btShape === null){
+      return
+    }
+    Ammo.destroy(this._btShape)
+    this._btShape = null
+
+    Ammo.destroy(this._btMesh)
+    this._btMesh = null
+
+    for(const v of this._btVertices){
+      Ammo.destroy(v)
+    }
+    this._btVerices = null
+  }
+
+  _execDestory() {
+    // TODO: delete indexBuffer, vertexBuffer
+    this._destroyShape()
+  }
 }

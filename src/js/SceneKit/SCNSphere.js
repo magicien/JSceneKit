@@ -16,11 +16,12 @@ export default class SCNSphere extends SCNGeometry {
       spheregeodesic: ['boolean', 'isGeodesic'],
       spheresegmentCount: ['integer', 'segmentCount'],
       materials: 'NSArray',
-      subdivisionLevel: 'integer',
 
+      name: 'string',
       sphereradialSpan: ['float', '_sphereRadialSpan'],
       spherehemispheric: ['boolean', '_isHemispheric'],
       sphereprimitiveType: ['integer', '_spherePrimitiveType'],
+      subdivisionLevel: 'integer',
       subdivisionSettings: ['bytes', null]
     }
   }

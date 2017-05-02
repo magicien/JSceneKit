@@ -2,6 +2,7 @@
 
 import SCNMatrix4 from './SCNMatrix4'
 import SCNVector3 from './SCNVector3'
+/*global Ammo*/
 
 /**
  * A representation of a four-component vector.
@@ -31,6 +32,13 @@ export default class SCNVector4 {
     this.z = z
     /** @type {number} */
     this.w = w
+
+    if(x instanceof Ammo.btVector4){
+      this.x = x.x()
+      this.y = x.y()
+      this.z = x.z()
+      this.w = x.w()
+    }
   }
 
   /**
@@ -401,5 +409,23 @@ export default class SCNVector4 {
    */
   float32Array() {
     return new Float32Array([this.x, this.y, this.z, this.w])
+  }
+
+  /**
+   * @access private
+   * @returns {Ammo.btVector4}
+   * @desc call Ammo.destroy(vec) after using it.
+   */
+  _createBtVector4() {
+    return new Ammo.btVector4(this.x, this.y, this.z, this.w)
+  }
+
+  /**
+   * @access private
+   * @returns {Ammo.btQuaternion}
+   * @desc call Ammo.destroy(quat) after using it.
+   */
+  _createBtQuaternion() {
+    return new Ammo.btQuaternion(this.x, this.y, this.z, this.w)
   }
 }

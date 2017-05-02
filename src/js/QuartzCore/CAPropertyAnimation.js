@@ -61,6 +61,8 @@ export default class CAPropertyAnimation extends CAAnimation {
      * @see https://developer.apple.com/reference/quartzcore/capropertyanimation/1412447-valuefunction
      */
     this.valueFunction = null
+
+    this._isMultiplicative = false
   }
 
   /**
@@ -74,6 +76,7 @@ export default class CAPropertyAnimation extends CAAnimation {
     anim.isCumulative = this.isCumulative
     anim.isAdditive = this.isAdditive
     anim.valueFunction = this.valueFunction
+    anim._isMultiplicative = this._isMultiplicative
 
     return anim
   }
@@ -110,13 +113,39 @@ export default class CAPropertyAnimation extends CAAnimation {
     if(this.valueFunction !== null){
       value = this.valueFunction._getValueAtTime(t)
     }
+    value = this._calculateWithBaseValue(obj, value)
     //console.log(`CAPropertyAnimation: obj: ${obj.name}, time: ${time}, keyPath: ${this.keyPath}, value: ${value}`)
     this._applyValue(obj, value)
     this._handleEvents(obj, t)
   }
 
+  _calculateWithBaseValue(obj, value) {
+    if(this.isAdditive){
+      const baseValue = obj.valueForKeyPath(this.keyPath)
+      return this._addValues(baseValue, value)
+    }else if(this._isMultiplicative){
+      const baseValue = obj.valueForKeyPath(this.keyPath)
+      return this._mulValues(baseValue, value)
+    }
+    return value
+  }
+
   _applyValue(obj, value) {
     obj.setValueForKeyPath(value, this.keyPath)
+  }
+
+  _addValues(v1, v2) {
+    if(v1 instanceof Object){
+      return v1.add(v2)
+    }
+    return v1 + v2
+  }
+
+  _mulValues(v1, v2) {
+    if(v1 instanceof Object){
+      return v1.mul(v2)
+    }
+    return v1 * v2
   }
 
   _lerp(from, to, t) {

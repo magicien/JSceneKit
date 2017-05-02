@@ -27,7 +27,8 @@ export default class SCNReferenceNode extends SCNNode {
       categoryBitMask: 'integer',
       hidden: ['boolean', 'isHidden'],
       name: 'string',
-      renderingOrder: 'integer'
+      renderingOrder: 'integer',
+      movabilityHint: 'integer'
     }
   }
 

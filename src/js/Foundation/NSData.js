@@ -14,6 +14,14 @@ export default class NSData extends NSObject {
    * @returns {_Buffer} -
    */
   static initWithCoder(coder) {
-    return coder.decodeBytesForKeyReturnedLength('NS.data', null)
+    const data = coder.decodeBytesForKeyReturnedLength('NS.data', null)
+    if(typeof data !== 'undefined'){
+      return data
+    }
+    const bytes = coder.decodeBytesForKeyReturnedLength('NS.bytes', null)
+    if(typeof bytes !== 'undefined'){
+      return bytes
+    }
+    return null
   }
 }

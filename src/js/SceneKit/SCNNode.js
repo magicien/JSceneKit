@@ -28,6 +28,7 @@ import SCNAudioPlayer from './SCNAudioPlayer'
 import SCNHitTestResult from './SCNHitTestResult'
 import SKColor from '../SpriteKit/SKColor'
 import * as Constants from '../constants'
+/*global Ammo*/
 
 
 /**
@@ -1953,5 +1954,41 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
 
     super.setValueForKeyPath(value, keyPath)
   }
+
+  /**
+   * @access private
+   * @returns {Ammo.btTransform}
+   * @desc call Ammo.destroy(transform) after using it.
+   */
+  _createBtTransform() {
+    const transform = new Ammo.btTransform()
+    const pos = this.position.createBtVector3()
+    const rot = this.orientation.craeteBtQuaternion()
+    transform.setIdentity()
+    transform.setOrigin(pos)
+    transform.setRotation(rot)
+    Ammo.destroy(pos)
+    Ammo.destroy(rot)
+    return transform
+  }
+
+  _createBtCollisionShape() {
+    if(this.geometry === null){
+      throw new Error('geometry is null')
+    }
+    return this.geometry._createBtCollisionShape()
+  }
+
+  destory() {
+    if(this.physicsBody !== null){
+      this.physicsBody.destory()
+      this.physicsBody = null
+    }
+    if(this.geometry !== null){
+      // the geometry might be shared with other nodes...
+      //this.geometry.destroy()
+    }
+  }
 }
+
 

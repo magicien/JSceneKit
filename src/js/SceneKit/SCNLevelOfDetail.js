@@ -3,7 +3,6 @@
 import NSObject from '../ObjectiveC/NSObject'
 import SCNGeometry from './SCNGeometry'
 
-
 /**
  * An object that defines alternate resolutions for a geometry that SceneKit can automatically substitute to improve rendering performance.
  * @access public
@@ -11,13 +10,20 @@ import SCNGeometry from './SCNGeometry'
  * @see https://developer.apple.com/reference/scenekit/scnlevelofdetail
  */
 export default class SCNLevelOfDetail extends NSObject {
+  static get _propTypes() {
+    return {
+      mode: ['integer', null],
+      threshold: ['float', null]
+    }
+  }
 
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  init() {
+  constructor() {
+    super()
 
     // Inspecting a Level of Detail
 
@@ -62,6 +68,7 @@ export default class SCNLevelOfDetail extends NSObject {
   get geometry() {
     return this._geometry
   }
+
   /**
    * The maximum radius (in pixels) of the geometry’s bounding sphere for this level of detail to appear.
    * @type {number}
@@ -71,6 +78,7 @@ export default class SCNLevelOfDetail extends NSObject {
   get screenSpaceRadius() {
     return this._screenSpaceRadius
   }
+
   /**
    * The minimum distance from the current point of view for this level of detail to appear.
    * @type {number}

@@ -217,6 +217,8 @@ export default class CAKeyframeAnimation extends CAPropertyAnimation {
       //console.log(`t: ${t}, time0: ${time0}, time1: ${time1}, value: ${value}`)
     }
 
+    value = this._calculateWithBaseValue(obj, value)
+
     this._applyValue(obj, value)
     this._handleEvents(obj, t)
   }

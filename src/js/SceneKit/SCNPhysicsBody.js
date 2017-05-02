@@ -5,6 +5,7 @@ import SCNPhysicsBodyType from './SCNPhysicsBodyType'
 import SCNPhysicsShape from './SCNPhysicsShape'
 import SCNVector3 from './SCNVector3'
 import SCNVector4 from './SCNVector4'
+/*global Ammo*/
 
 
 /**
@@ -56,7 +57,7 @@ export default class SCNPhysicsBody extends NSObject {
    * @desc For the body to participate in collision detection or respond to forces, you must attach it to the physicsBody property of an SCNNode object in a scene.If you pass nil for the shape parameter, SceneKit automatically creates a physics shape for the body when you attach it to a node, based on that node’s geometry property. To create a physics shape that’s based on the geometries of a node and its hierarchy of children, or to control the level of detail in a physics shape, create the physics shape manually using an SCNPhysicsShape class method.NoteFor nodes containing custom geometry, the physics shape SceneKit automatically creates is a rough approximation of the geometry. This approximation, or convex hull, provides a compromise between accuracy and performance in collision detection. For the best collision detection performance, create an SCNPhysicsShape instance based on a basic geometry class (SCNBox, SCNSphere, SCNPyramid, SCNCone, SCNCylinder, or SCNCapsule).
    * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514797-init
    */
-  constructor(type, shape) {
+  constructor(type = SCNPhysicsBodyType.static, shape = null) {
     super()
 
     // Defining How Forces Affect a Physics Body
@@ -80,21 +81,21 @@ export default class SCNPhysicsBody extends NSObject {
      * @type {SCNVector3}
      * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514753-velocityfactor
      */
-    this.velocityFactor = null
+    this.velocityFactor = new SCNVector3(0, 0, 0)
 
     /**
      * A multiplier affecting how SceneKit applies rotations computed by the physics simulation to the node containing the physics body.
      * @type {SCNVector3}
      * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514748-angularvelocityfactor
      */
-    this.angularVelocityFactor = null
+    this.angularVelocityFactor = new SCNVector3(0, 0, 0)
 
     /**
      * A Boolean value that determines whether the constant gravity of a scene accelerates the body.
      * @type {boolean}
      * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514738-isaffectedbygravity
      */
-    this.isAffectedByGravity = false
+    this.isAffectedByGravity = true
 
 
     // Defining a Body’s Physical Properties
@@ -153,14 +154,14 @@ export default class SCNPhysicsBody extends NSObject {
      * @type {SCNVector3}
      * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514777-momentofinertia
      */
-    this.momentOfInertia = null
+    this.momentOfInertia = new SCNVector3(0, 0, 0)
 
     /**
      * A Boolean value that determines whether SceneKit automatically calculates the body’s moment of inertia or allows setting a custom value.
      * @type {boolean}
      * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514761-usesdefaultmomentofinertia
      */
-    this.usesDefaultMomentOfInertia = false
+    this.usesDefaultMomentOfInertia = true
 
 
     // Working with Contacts and Collisions
@@ -194,14 +195,14 @@ export default class SCNPhysicsBody extends NSObject {
      * @type {SCNVector3}
      * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514757-velocity
      */
-    this.velocity = null
+    this.velocity = new SCNVector3(0, 0, 0)
 
     /**
      * A vector describing both the current rotation axis and rotational speed (in radians per second) of the physics body.
      * @type {SCNVector4}
      * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514770-angularvelocity
      */
-    this.angularVelocity = null
+    this.angularVelocity = new SCNVector4(0, 0, 0, 0)
 
     /**
      * A Boolean value that specifies whether SceneKit can automatically mark the physics body at rest.
@@ -211,6 +212,10 @@ export default class SCNPhysicsBody extends NSObject {
     this.allowsResting = false
 
     this._isResting = false
+
+    this._node = null
+    this._btRigidBody = null
+    this._updateRigidBody()
   }
 
   /**
@@ -316,5 +321,57 @@ export default class SCNPhysicsBody extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514782-resettransform
    */
   resetTransform() {
+  }
+
+  /**
+   * @access private
+   * @returns {void}
+   */
+  _updateRigidBody() {
+    if(this._btRigidBody !== null){
+      Ammo.destroy(this._btRigidBody)
+    }
+    this._btRigidBody = this._createRigidBody()
+  }
+
+  /**
+   * @access private
+   * @returns {Ammo.btRigidBody} -
+   * @desc call Ammo.destroy(rigidBody) after using it.
+   */
+  _createRigidBody() {
+    let btTransform = null
+    if(this.physicsShape === null){
+      return null
+    }
+    if(this._node !== null){
+      btTransform = this._node._createBtTransform()
+    }else{
+      btTransform = new Ammo.btTransform()
+      btTransform.setIdentity()
+    }
+    const btShape = this.physicsShape._createBtCollisionShape()
+    const inertia = this.momentOfInertia._createBtVector3()
+
+    const info = new Ammo.btRigidBodyConstructionInfo(btTransform, btShape, inertia)
+    const rigidBody = new Ammo.btRigidBody(info)
+
+    //Ammo.destroy(btTransform)
+    //Ammo.destroy(btShape)
+    //Ammo.destroy(inertia)
+    //Ammo.destroy(info)
+
+    return rigidBody
+  }
+
+  _execDestroy() {
+    if(this.physicsShape !== null){
+      this.physicsShape._destroy()
+      this.physicsShape = null
+    }
+    if(this._btRigidBody !== null){
+      Ammo.destroy(this._btRigidBody)
+      this._btRigidBody = null
+    }
   }
 }

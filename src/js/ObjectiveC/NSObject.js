@@ -240,6 +240,12 @@ In some cases, a custom implementation of the init() method might return a subst
     this._webFrame = null
     this._webPlugInContainerSelectionColor = null
     this._isSelectable = false
+
+    /**
+     * @access private
+     * @type {boolean}
+     */
+    this._destroyed = false
   }
 
   /**
@@ -3772,5 +3778,17 @@ validateToolbarItem(_:) is called very frequently, so it must be efficient.If th
     }else if(propName !== null){
       instance[propName] = propValue
     }
+  }
+
+  _destroy() {
+    if(this._destroyed){
+      throw new Error('_destroy() called twice')
+    }
+    this._destroyed = true
+    this._execDestroy()
+  }
+
+  _execDestroy() {
+    // destroy objects
   }
 }

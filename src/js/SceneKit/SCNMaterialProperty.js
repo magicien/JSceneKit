@@ -24,20 +24,15 @@ export default class SCNMaterialProperty extends NSObject {
       image: ['NSMutableDictionary', (obj, dict, key, coder) => {
         let path = ''
         if(typeof dict.path !== 'undefined'){
-          path = coder._directoryPath + dict.path
+          //path = coder._directoryPath + dict.path
+          path = dict.path
         }else if(typeof dict.URL !== 'undefined'){
           path = dict.URL
         }
-        obj._loadContentsImage(path)
-        /*
-        console.log(`image.path: ${path}`)
-        const image = new Image()
-        image.onload = () => {
-          obj._contents = image
-        }
-        // FIXME: needs directoryPath
-        image.src = path
-        */
+        obj._loadContentsImage(path, coder._directoryPath)
+      }],
+      float: ['float', (obj, value) => {
+        obj._contents = new SKColor(value, value, value, 1.0)
       }],
       intensity: 'float',
       // contentsTransform
@@ -418,40 +413,44 @@ export default class SCNMaterialProperty extends NSObject {
   /**
    * @access private
    * @param {string} path -
+   * @param {string} dirPath -
    * @returns {Image} -
    */
-  _loadContentsImage(path) {
+  _loadContentsImage(path, dirPath) {
     console.log(`image.path: ${path}`)
     const image = new Image()
     if(path.indexOf('file:///') === 0){
       const paths = path.slice(8).split('/')
       let pathCount = 1
-      let _path = paths.slice(-pathCount).join('/')
-      console.info(`image loading: ${_path}`)
+      let _path = dirPath + paths.slice(-pathCount).join('/')
+      console.warn(`image loading: ${_path}`)
       image.onload = () => {
-        console.info(`image ${_path} onload`)
+        console.info(`image ${image.src} onload`)
         this._contents = image
       }
       image.onerror = () => {
+        console.warn('image.onerror')
         pathCount += 1
         if(pathCount > paths.length){
           console.error(`image ${path} load error.`)
         }else{
-          console.info(`image ${_path} load error.`)
-          _path = paths.slice(-pathCount).join('/')
-          console.info(`try ${_path}`)
+          console.warn(`image ${_path} load error.`)
+          _path = dirPath + paths.slice(-pathCount).join('/')
+          console.warn(`try ${_path}`)
           image.src = _path
         }
       }
+      image.src = _path
     }else{
       console.info(`image loading: ${path}`)
       image.onload = () => {
+        console.warn(`http image ${image.src} onload`)
         this._contents = image
       }
       image.onerror = () => {
-        console.info(`image ${path} load error.`)
+        console.warn(`http image ${path} load error.`)
       }
-      image.src = path
+      image.src = dirPath + path
     }
     return image
   }

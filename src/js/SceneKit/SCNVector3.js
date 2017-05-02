@@ -1,6 +1,8 @@
 'use strict'
 
 import SCNVector4 from './SCNVector4'
+import _Ammo from '../third_party/ammo'
+/*global Ammo*/
 
 /**
  * A representation of a three-component vector.
@@ -29,6 +31,12 @@ export default class SCNVector3 {
     this.y = y
     /** @type {number} */
     this.z = z
+
+    if(x instanceof Ammo.btVector3){
+      this.x = x.x()
+      this.y = x.y()
+      this.z = x.z()
+    }
   }
 
   /**
@@ -247,6 +255,15 @@ export default class SCNVector3 {
    */
   float32Array() {
     return new Float32Array([this.x, this.y, this.z])
+  }
+
+  /**
+   * @access private
+   * @returns {Ammo.btVector3}
+   * @desc call Ammo.destroy(vec) after using it.
+   */
+  _createBtVector3() {
+    return new Ammo.btVector3(this.x, this.y, this.z)
   }
 }
 

@@ -672,7 +672,7 @@ Uw.prototype.setLocalScaling=function(a){var b=this.a;a&&"object"===typeof a&&(a
 function Z(a,b,e,f,g){a&&"object"===typeof a&&(a=a.a);b&&"object"===typeof b&&(b=b.a);e&&"object"===typeof e&&(e=e.a);f&&"object"===typeof f&&(f=f.a);g&&"object"===typeof g&&(g=g.a);this.a=Ms(a,b,e,f,g);q(Z)[this.a]=this}Z.prototype=Object.create(p.prototype);Z.prototype.constructor=Z;Z.prototype.b=Z;Z.c={};c.LocalConvexResult=Z;Z.prototype.get_m_hitCollisionObject=function(){return r(Yi(this.a),w)};
 Z.prototype.set_m_hitCollisionObject=function(a){var b=this.a;a&&"object"===typeof a&&(a=a.a);fv(b,a)};Z.prototype.get_m_localShapeInfo=function(){return r(sr(this.a),nw)};Z.prototype.set_m_localShapeInfo=function(a){var b=this.a;a&&"object"===typeof a&&(a=a.a);Mj(b,a)};Z.prototype.get_m_hitNormalLocal=function(){return r(gc(this.a),B)};Z.prototype.set_m_hitNormalLocal=function(a){var b=this.a;a&&"object"===typeof a&&(a=a.a);Ih(b,a)};
 Z.prototype.get_m_hitPointLocal=function(){return r(Od(this.a),B)};Z.prototype.set_m_hitPointLocal=function(a){var b=this.a;a&&"object"===typeof a&&(a=a.a);Wf(b,a)};Z.prototype.get_m_hitFraction=function(){return Tk(this.a)};Z.prototype.set_m_hitFraction=function(a){var b=this.a;a&&"object"===typeof a&&(a=a.a);Zp(b,a)};Z.prototype.__destroy__=function(){Qi(this.a)};
-(function(){function a(){c.PHY_FLOAT=Vt();c.PHY_DOUBLE=ho();c.PHY_INTEGER=Qn();c.PHY_SHORT=ls();c.PHY_FIXEDPOINT88=Eq();c.PHY_UCHAR=tc()}c.calledRun?a():Ua.unshift(a)})();this.Ammo=c;
+(function(){function a(){c.PHY_FLOAT=Vt();c.PHY_DOUBLE=ho();c.PHY_INTEGER=Qn();c.PHY_SHORT=ls();c.PHY_FIXEDPOINT88=Eq();c.PHY_UCHAR=tc()}c.calledRun?a():Ua.unshift(a)})();//this.Ammo=c;
 
 
   return Ammo;

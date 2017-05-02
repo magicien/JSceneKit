@@ -4,6 +4,7 @@ import SCNGeometry from './SCNGeometry'
 import SCNGeometrySource from './SCNGeometrySource'
 import SCNGeometryElement from './SCNGeometryElement'
 import SCNGeometryPrimitiveType from './SCNGeometryPrimitiveType'
+/*global Ammo*/
 
 /**
  * A six-sided polyhedron geometry whose faces are all rectangles, optionally with rounded edges and corners.
@@ -415,5 +416,17 @@ export default class SCNBox extends SCNGeometry {
    * @returns {void}
    */
   _createFace(sourceData, indexData, v1, v2, v3, v4, s1, s2) {
+  }
+
+  /**
+   * @access private
+   * @returns {Ammo.btCollisionShape}
+   * @desc call Ammo.destroy(shape) after using it.
+   */
+  _createBtCollisionShape() {
+    const size = new Ammo.btVector3(this.width * 0.5, this.height * 0.5, this.length * 0.5)
+    const shape = new Ammo.btBoxShape(size)
+    Ammo.destroy(size)
+    return shape
   }
 }

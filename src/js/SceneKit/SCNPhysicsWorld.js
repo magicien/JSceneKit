@@ -59,7 +59,7 @@ export default class SCNPhysicsWorld extends NSObject {
      * @type {SCNVector3}
      * @see https://developer.apple.com/reference/scenekit/scnphysicsworld/1512855-gravity
      */
-    this.gravity = null
+    this.gravity = new SCNVector3(0, 0, 0)
 
     /**
      * The rate at which the simulation executes.
@@ -83,7 +83,7 @@ export default class SCNPhysicsWorld extends NSObject {
 
     // Registering Physics Behaviors
 
-    this._allBehaviors = null
+    this._allBehaviors = []
 
     // Detecting Contacts Between Physics Bodies
 
@@ -104,33 +104,6 @@ export default class SCNPhysicsWorld extends NSObject {
 
     this._prevTime = null
   }
-
-  /**
-   * @access public
-   * @param {NSCoder} coder -
-   * @returns {SCNPhysicsWorld}
-   */
-   /*
-  static initWithCoder(coder) {
-    const instance = new SCNPhysicsWorld()
-    instance._setValueWithCoder(coder)
-    return instance
-  }
-  */
-
-  /**
-   * @access private
-   * @param {NSCoder} coder -
-   */
-   /*
-  _setValueWithCoder(coder) {
-    this.timeStep = coder.decodeIntegerForKey('timeStep')
-    this.scale = coder.decodeFloatForKey('scale')
-    this.speed = coder.decodeFloatForKey('speed')
-    const gravity = coder.decodeBytesForKeyReturnedLength('gravity', null)
-    this.gravity = new SCNVector3(gravity)
-  }
-  */
 
   // Managing the Physics Simulation
 
@@ -155,6 +128,10 @@ export default class SCNPhysicsWorld extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnphysicsworld/1512839-addbehavior
    */
   addBehavior(behavior) {
+    if(this._allBehaviors.indexOf(behavior) >= 0){
+      return
+    }
+    this._allBehaviors.push(behavior)
   }
 
   /**
@@ -165,6 +142,11 @@ export default class SCNPhysicsWorld extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnphysicsworld/1512870-removebehavior
    */
   removeBehavior(behavior) {
+    const index = this._allBehaviors.indexOf(behavior)
+    if(index < 0){
+      return
+    }
+    this._allBehaviors.splice(index, 1)
   }
 
   /**
@@ -174,7 +156,9 @@ export default class SCNPhysicsWorld extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnphysicsworld/1512849-removeallbehaviors
    */
   removeAllBehaviors() {
+    this._allBehaviors = []
   }
+
   /**
    * The list of behaviors affecting bodies in the physics world.
    * @type {SCNPhysicsBehavior[]}
@@ -182,7 +166,7 @@ export default class SCNPhysicsWorld extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnphysicsworld/1512853-allbehaviors
    */
   get allBehaviors() {
-    return this._allBehaviors
+    return this._allBehaviors.slice(0)
   }
 
   // Detecting Contacts Between Physics Bodies
@@ -253,7 +237,63 @@ if (results.firstObject.node == player) {
    * @see https://developer.apple.com/reference/scenekit/scnphysicsworld/1512857-raytestwithsegment
    */
   rayTestWithSegmentFromTo(origin, dest, options = null) {
-    return null
+    let opt = options
+    if(Array.isArray(options)){
+      opt = new Map(options)
+    }
+    const results = []
+
+    let backfaceCulling = true
+    let collisionBitMask = -1
+    let searchMode = _TestSearchMode.any
+    if(opt.has(_TestOption.backfaceCulling)){
+      backfaceCulling = opt.get(_TestOption.backfaceCulling)
+    }
+    if(opt.has(_TestOption.collisionBitMask)){
+      collisionBitMask = opt.get(_TestOption.collisionBitMask)
+    }
+    if(opt.has(_TestOption.searchMode)){
+      searchMode = opt.get(_TestOption.searchMode)
+    }
+    
+    let originVec = origin._createBtVector3()
+    let destVec = dest._createBtVector3()
+    let rayCallback = null
+    switch(searchMode){
+      case _TestSearchMode.all:
+        // TODO: implement
+        throw new Error('TestSearchMode.all not implemented')
+      case _TestSearchMode.any:
+        // TODO: implement
+        throw new Error('TestSearchMode.any not implemented')
+      case _TestSearchMode.closest:
+        rayCallback = new Ammo.ClosestRayResultCallback(originVec, destVec)
+        break
+      default:
+        throw new Error(`unknown search mode: ${searchMode}`)
+    }
+
+    this._world.rayTest(originVec, destVec, rayCallback)
+    if(rayCallback.hasHit()){
+      const result = new SCNHitTestResult()
+      const body = Ammo.btRigidBody.prototype.upcast(rayCallback.get_m_collisionObject())
+      result._node = null
+      result._geometryIndex = 0
+      result._faceIndex = 0
+      result._worldCoordinates = new SCNVector3(rayCallback.get_m_hitPointWorld())
+      result._localCoordinates = null
+      result._worldNormal = new SCNVector3(rayCallback.get_m_hitNormalWorld())
+      result._localNormal = null
+      result._modelTransform = null
+      result._boneNode = null
+      results.push(result)
+    }
+
+    Ammo.destroy(originVec)
+    Ammo.destroy(destVec)
+    Ammo.destroy(rayCallback)
+
+    return results
   }
 
   /**

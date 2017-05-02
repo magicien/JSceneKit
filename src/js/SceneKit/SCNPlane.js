@@ -10,6 +10,23 @@ import SCNGeometry from './SCNGeometry'
  * @see https://developer.apple.com/reference/scenekit/scnplane
  */
 export default class SCNPlane extends SCNGeometry {
+  static get _propTypes() {
+    return {
+      materials: 'NSArray',
+      width: 'float',
+      height: 'float',
+      widthSegmentCount: 'integer',
+      heightSegmentCount: 'integer',
+      cornerRadius: 'float',
+      cornerSegmentCount: 'integer',
+
+      name: 'string',
+      primitiveType: ['integer', null],
+      subdivisionLevel: 'integer',
+      subdivisionSettings: ['bytes', null]
+    }
+  }
+
   // Creating a Plane
 
   /**
