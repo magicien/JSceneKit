@@ -779,35 +779,39 @@ module.exports =
 
 	var _SCNVector3ToGLKVector2 = _interopRequireDefault(_SCNVector3ToGLKVector);
 
+	var _SCNVector3Zero = __webpack_require__(202);
+
+	var _SCNVector3Zero2 = _interopRequireDefault(_SCNVector3Zero);
+
 	var _SCNVector3 = __webpack_require__(39);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
-	var _SCNVector4EqualToVector = __webpack_require__(202);
+	var _SCNVector4EqualToVector = __webpack_require__(203);
 
 	var _SCNVector4EqualToVector2 = _interopRequireDefault(_SCNVector4EqualToVector);
 
-	var _SCNVector4FromFloat = __webpack_require__(203);
+	var _SCNVector4FromFloat = __webpack_require__(204);
 
 	var _SCNVector4FromFloat2 = _interopRequireDefault(_SCNVector4FromFloat);
 
-	var _SCNVector4FromGLKVector = __webpack_require__(204);
+	var _SCNVector4FromGLKVector = __webpack_require__(205);
 
 	var _SCNVector4FromGLKVector2 = _interopRequireDefault(_SCNVector4FromGLKVector);
 
-	var _SCNVector4Make = __webpack_require__(205);
+	var _SCNVector4Make = __webpack_require__(206);
 
 	var _SCNVector4Make2 = _interopRequireDefault(_SCNVector4Make);
 
-	var _SCNVector4ToFloat = __webpack_require__(206);
+	var _SCNVector4ToFloat = __webpack_require__(207);
 
 	var _SCNVector4ToFloat2 = _interopRequireDefault(_SCNVector4ToFloat);
 
-	var _SCNVector4ToGLKVector = __webpack_require__(207);
+	var _SCNVector4ToGLKVector = __webpack_require__(208);
 
 	var _SCNVector4ToGLKVector2 = _interopRequireDefault(_SCNVector4ToGLKVector);
 
-	var _SCNView = __webpack_require__(208);
+	var _SCNView = __webpack_require__(209);
 
 	var _SCNView2 = _interopRequireDefault(_SCNView);
 
@@ -815,15 +819,15 @@ module.exports =
 
 	var _SCNWrapMode2 = _interopRequireDefault(_SCNWrapMode);
 
-	var _SKAction = __webpack_require__(209);
+	var _SKAction = __webpack_require__(210);
 
 	var _SKAction2 = _interopRequireDefault(_SKAction);
 
-	var _SKActionTimingMode = __webpack_require__(210);
+	var _SKActionTimingMode = __webpack_require__(211);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
-	var _SKBlendMode = __webpack_require__(211);
+	var _SKBlendMode = __webpack_require__(212);
 
 	var _SKBlendMode2 = _interopRequireDefault(_SKBlendMode);
 
@@ -831,47 +835,47 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SKEffectNode = __webpack_require__(212);
+	var _SKEffectNode = __webpack_require__(213);
 
 	var _SKEffectNode2 = _interopRequireDefault(_SKEffectNode);
 
-	var _SKLabelHorizontalAlignmentMode = __webpack_require__(214);
+	var _SKLabelHorizontalAlignmentMode = __webpack_require__(215);
 
 	var _SKLabelHorizontalAlignmentMode2 = _interopRequireDefault(_SKLabelHorizontalAlignmentMode);
 
-	var _SKLabelNode = __webpack_require__(215);
+	var _SKLabelNode = __webpack_require__(216);
 
 	var _SKLabelNode2 = _interopRequireDefault(_SKLabelNode);
 
-	var _SKLabelVerticalAlignmentMode = __webpack_require__(216);
+	var _SKLabelVerticalAlignmentMode = __webpack_require__(217);
 
 	var _SKLabelVerticalAlignmentMode2 = _interopRequireDefault(_SKLabelVerticalAlignmentMode);
 
-	var _SKNode = __webpack_require__(213);
+	var _SKNode = __webpack_require__(214);
 
 	var _SKNode2 = _interopRequireDefault(_SKNode);
 
-	var _SKScene = __webpack_require__(217);
+	var _SKScene = __webpack_require__(218);
 
 	var _SKScene2 = _interopRequireDefault(_SKScene);
 
-	var _SKSceneScaleMode = __webpack_require__(218);
+	var _SKSceneScaleMode = __webpack_require__(219);
 
 	var _SKSceneScaleMode2 = _interopRequireDefault(_SKSceneScaleMode);
 
-	var _SKShapeNode = __webpack_require__(219);
+	var _SKShapeNode = __webpack_require__(220);
 
 	var _SKShapeNode2 = _interopRequireDefault(_SKShapeNode);
 
-	var _SKSpriteNode = __webpack_require__(220);
+	var _SKSpriteNode = __webpack_require__(221);
 
 	var _SKSpriteNode2 = _interopRequireDefault(_SKSpriteNode);
 
-	var _SKTexture = __webpack_require__(221);
+	var _SKTexture = __webpack_require__(222);
 
 	var _SKTexture2 = _interopRequireDefault(_SKTexture);
 
-	var _SKTextureFilteringMode = __webpack_require__(222);
+	var _SKTextureFilteringMode = __webpack_require__(223);
 
 	var _SKTextureFilteringMode2 = _interopRequireDefault(_SKTextureFilteringMode);
 
@@ -887,7 +891,7 @@ module.exports =
 
 	var _BinaryRequest3 = _interopRequireDefault(_BinaryRequest2);
 
-	var _Buffer2 = __webpack_require__(223);
+	var _Buffer2 = __webpack_require__(224);
 
 	var _Buffer3 = _interopRequireDefault(_Buffer2);
 
@@ -903,7 +907,7 @@ module.exports =
 
 	var _FileReader3 = _interopRequireDefault(_FileReader2);
 
-	var _HTMLCanvasElement2 = __webpack_require__(225);
+	var _HTMLCanvasElement2 = __webpack_require__(226);
 
 	var _HTMLCanvasElement3 = _interopRequireDefault(_HTMLCanvasElement2);
 
@@ -1092,6 +1096,7 @@ module.exports =
 	_ClassList3.default.registerClass(_SCNVector3Make2.default);
 	_ClassList3.default.registerClass(_SCNVector3ToFloat2.default);
 	_ClassList3.default.registerClass(_SCNVector3ToGLKVector2.default);
+	_ClassList3.default.registerClass(_SCNVector3Zero2.default);
 	_ClassList3.default.registerClass(_SCNVector4.default);
 	_ClassList3.default.registerClass(_SCNVector4EqualToVector2.default);
 	_ClassList3.default.registerClass(_SCNVector4FromFloat2.default);
@@ -1301,6 +1306,7 @@ module.exports =
 	exports.SCNVector3Make = _SCNVector3Make2.default;
 	exports.SCNVector3ToFloat3 = _SCNVector3ToFloat2.default;
 	exports.SCNVector3ToGLKVector3 = _SCNVector3ToGLKVector2.default;
+	exports.SCNVector3Zero = _SCNVector3Zero2.default;
 	exports.SCNVector4 = _SCNVector4.default;
 	exports.SCNVector4EqualToVector4 = _SCNVector4EqualToVector2.default;
 	exports.SCNVector4FromFloat4 = _SCNVector4FromFloat2.default;
@@ -43053,6 +43059,26 @@ module.exports =
 	  value: true
 	});
 
+	var _SCNVector = __webpack_require__(38);
+
+	var _SCNVector2 = _interopRequireDefault(_SCNVector);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var SCNVector3Zero = new _SCNVector2.default(0, 0, 0);
+
+	exports.default = SCNVector3Zero;
+
+/***/ },
+/* 203 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
 	var _SCNVector = __webpack_require__(39);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
@@ -43077,7 +43103,7 @@ module.exports =
 	exports.default = SCNVector4EqualToVector4;
 
 /***/ },
-/* 203 */
+/* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43106,7 +43132,7 @@ module.exports =
 	exports.default = SCNVector4FromFloat4;
 
 /***/ },
-/* 204 */
+/* 205 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43137,7 +43163,7 @@ module.exports =
 	exports.default = SCNVector4FromGLKVector4;
 
 /***/ },
-/* 205 */
+/* 206 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43169,7 +43195,7 @@ module.exports =
 	exports.default = SCNVector4Make;
 
 /***/ },
-/* 206 */
+/* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43198,7 +43224,7 @@ module.exports =
 	exports.default = SCNVector4ToFloat4;
 
 /***/ },
-/* 207 */
+/* 208 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43227,7 +43253,7 @@ module.exports =
 	};exports.default = SCNVector4ToGLKVector4;
 
 /***/ },
-/* 208 */
+/* 209 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44882,7 +44908,7 @@ module.exports =
 	exports.default = SCNView;
 
 /***/ },
-/* 209 */
+/* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44897,7 +44923,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SKActionTimingMode = __webpack_require__(210);
+	var _SKActionTimingMode = __webpack_require__(211);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
@@ -46321,7 +46347,7 @@ module.exports =
 	exports.default = SKAction;
 
 /***/ },
-/* 210 */
+/* 211 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -46349,7 +46375,7 @@ module.exports =
 	exports.default = SKActionTimingMode;
 
 /***/ },
-/* 211 */
+/* 212 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -46383,7 +46409,7 @@ module.exports =
 	exports.default = SKBlendMode;
 
 /***/ },
-/* 212 */
+/* 213 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46392,11 +46418,11 @@ module.exports =
 	  value: true
 	});
 
-	var _SKNode2 = __webpack_require__(213);
+	var _SKNode2 = __webpack_require__(214);
 
 	var _SKNode3 = _interopRequireDefault(_SKNode2);
 
-	var _SKBlendMode = __webpack_require__(211);
+	var _SKBlendMode = __webpack_require__(212);
 
 	var _SKBlendMode2 = _interopRequireDefault(_SKBlendMode);
 
@@ -46527,7 +46553,7 @@ module.exports =
 	exports.default = SKEffectNode;
 
 /***/ },
-/* 213 */
+/* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47774,7 +47800,7 @@ module.exports =
 	exports.default = SKNode;
 
 /***/ },
-/* 214 */
+/* 215 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -47800,7 +47826,7 @@ module.exports =
 	exports.default = SKLabelHorizontalAlignmentMode;
 
 /***/ },
-/* 215 */
+/* 216 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47817,19 +47843,19 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SKNode2 = __webpack_require__(213);
+	var _SKNode2 = __webpack_require__(214);
 
 	var _SKNode3 = _interopRequireDefault(_SKNode2);
 
-	var _SKLabelVerticalAlignmentMode = __webpack_require__(216);
+	var _SKLabelVerticalAlignmentMode = __webpack_require__(217);
 
 	var _SKLabelVerticalAlignmentMode2 = _interopRequireDefault(_SKLabelVerticalAlignmentMode);
 
-	var _SKLabelHorizontalAlignmentMode = __webpack_require__(214);
+	var _SKLabelHorizontalAlignmentMode = __webpack_require__(215);
 
 	var _SKLabelHorizontalAlignmentMode2 = _interopRequireDefault(_SKLabelHorizontalAlignmentMode);
 
-	var _SKBlendMode = __webpack_require__(211);
+	var _SKBlendMode = __webpack_require__(212);
 
 	var _SKBlendMode2 = _interopRequireDefault(_SKBlendMode);
 
@@ -48290,7 +48316,7 @@ module.exports =
 	exports.default = SKLabelNode;
 
 /***/ },
-/* 216 */
+/* 217 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -48318,7 +48344,7 @@ module.exports =
 	exports.default = SKLabelVerticalAlignmentMode;
 
 /***/ },
-/* 217 */
+/* 218 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -48341,11 +48367,11 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SKEffectNode2 = __webpack_require__(212);
+	var _SKEffectNode2 = __webpack_require__(213);
 
 	var _SKEffectNode3 = _interopRequireDefault(_SKEffectNode2);
 
-	var _SKSceneScaleMode = __webpack_require__(218);
+	var _SKSceneScaleMode = __webpack_require__(219);
 
 	var _SKSceneScaleMode2 = _interopRequireDefault(_SKSceneScaleMode);
 
@@ -48659,7 +48685,7 @@ module.exports =
 	exports.default = SKScene;
 
 /***/ },
-/* 218 */
+/* 219 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -48687,7 +48713,7 @@ module.exports =
 	exports.default = SKSceneScaleMode;
 
 /***/ },
-/* 219 */
+/* 220 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -48706,7 +48732,7 @@ module.exports =
 
 	var _CGLineJoin2 = _interopRequireDefault(_CGLineJoin);
 
-	var _SKBlendMode = __webpack_require__(211);
+	var _SKBlendMode = __webpack_require__(212);
 
 	var _SKBlendMode2 = _interopRequireDefault(_SKBlendMode);
 
@@ -48714,7 +48740,7 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SKNode2 = __webpack_require__(213);
+	var _SKNode2 = __webpack_require__(214);
 
 	var _SKNode3 = _interopRequireDefault(_SKNode2);
 
@@ -49043,7 +49069,7 @@ module.exports =
 	exports.default = SKShapeNode;
 
 /***/ },
-/* 220 */
+/* 221 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -49066,7 +49092,7 @@ module.exports =
 
 	var _CGSize2 = _interopRequireDefault(_CGSize);
 
-	var _SKBlendMode = __webpack_require__(211);
+	var _SKBlendMode = __webpack_require__(212);
 
 	var _SKBlendMode2 = _interopRequireDefault(_SKBlendMode);
 
@@ -49074,11 +49100,11 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SKNode2 = __webpack_require__(213);
+	var _SKNode2 = __webpack_require__(214);
 
 	var _SKNode3 = _interopRequireDefault(_SKNode2);
 
-	var _SKTexture = __webpack_require__(221);
+	var _SKTexture = __webpack_require__(222);
 
 	var _SKTexture2 = _interopRequireDefault(_SKTexture);
 
@@ -49527,7 +49553,7 @@ module.exports =
 	exports.default = SKSpriteNode;
 
 /***/ },
-/* 221 */
+/* 222 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -49550,7 +49576,7 @@ module.exports =
 
 	var _CGSize2 = _interopRequireDefault(_CGSize);
 
-	var _SKTextureFilteringMode = __webpack_require__(222);
+	var _SKTextureFilteringMode = __webpack_require__(223);
 
 	var _SKTextureFilteringMode2 = _interopRequireDefault(_SKTextureFilteringMode);
 
@@ -50039,7 +50065,7 @@ module.exports =
 	exports.default = SKTexture;
 
 /***/ },
-/* 222 */
+/* 223 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -50063,7 +50089,7 @@ module.exports =
 	exports.default = SKTextureFilteringMode;
 
 /***/ },
-/* 223 */
+/* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict';
@@ -50074,7 +50100,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _BinaryParser = __webpack_require__(224);
+	var _BinaryParser = __webpack_require__(225);
 
 	var _BinaryParser2 = _interopRequireDefault(_BinaryParser);
 
@@ -50359,7 +50385,7 @@ module.exports =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3).Buffer))
 
 /***/ },
-/* 224 */
+/* 225 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -50527,7 +50553,7 @@ module.exports =
 	};
 
 /***/ },
-/* 225 */
+/* 226 */
 /***/ function(module, exports) {
 
 	'use strict';

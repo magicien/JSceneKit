@@ -181,6 +181,7 @@ import SCNVector3FromGLKVector3 from './SceneKit/SCNVector3FromGLKVector3'
 import SCNVector3Make from './SceneKit/SCNVector3Make'
 import SCNVector3ToFloat3 from './SceneKit/SCNVector3ToFloat3'
 import SCNVector3ToGLKVector3 from './SceneKit/SCNVector3ToGLKVector3'
+import SCNVector3Zero from './SceneKit/SCNVector3Zero'
 import SCNVector4 from './SceneKit/SCNVector4'
 import SCNVector4EqualToVector4 from './SceneKit/SCNVector4EqualToVector4'
 import SCNVector4FromFloat4 from './SceneKit/SCNVector4FromFloat4'
@@ -397,6 +398,7 @@ _ClassList.registerClass(SCNVector3FromGLKVector3)
 _ClassList.registerClass(SCNVector3Make)
 _ClassList.registerClass(SCNVector3ToFloat3)
 _ClassList.registerClass(SCNVector3ToGLKVector3)
+_ClassList.registerClass(SCNVector3Zero)
 _ClassList.registerClass(SCNVector4)
 _ClassList.registerClass(SCNVector4EqualToVector4)
 _ClassList.registerClass(SCNVector4FromFloat4)
@@ -606,6 +608,7 @@ exports.SCNVector3FromGLKVector3 = SCNVector3FromGLKVector3
 exports.SCNVector3Make = SCNVector3Make
 exports.SCNVector3ToFloat3 = SCNVector3ToFloat3
 exports.SCNVector3ToGLKVector3 = SCNVector3ToGLKVector3
+exports.SCNVector3Zero = SCNVector3Zero
 exports.SCNVector4 = SCNVector4
 exports.SCNVector4EqualToVector4 = SCNVector4EqualToVector4
 exports.SCNVector4FromFloat4 = SCNVector4FromFloat4
