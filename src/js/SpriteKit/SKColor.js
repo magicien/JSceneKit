@@ -56,14 +56,14 @@ export default class SKColor extends NSObject {
             const g = parseFloat(values[1])
             const b = parseFloat(values[2])
             const a = 1.0
-            console.log(`NSColor -> SKColor NSRGB: r:${r} g:${g} b:${b} a:${a}`)
+            //console.log(`NSColor -> SKColor NSRGB: r:${r} g:${g} b:${b} a:${a}`)
             return new SKColor(r, g, b, a)
           }else if(typeof propValues.NSWhite !== 'undefined'){
             const ascii = propValues.NSWhite.toString('ascii')
             const values = ascii.split(' ')
             const w = parseFloat(values[0])
             const a = 1.0
-            console.log(`NSColor -> SKColor NSWhite: r:${w} g:${w} b:${w} a:${a}`)
+            //console.log(`NSColor -> SKColor NSWhite: r:${w} g:${w} b:${w} a:${a}`)
             return new SKColor(w, w, w, a)
           }else{
             console.error('unknown color space')

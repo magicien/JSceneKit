@@ -1,8 +1,12 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
+import SKColor from '../SpriteKit/SKColor'
 import SCNNode from './SCNNode'
+import SCNMaterial from './SCNMaterial'
+import SCNBox from './SCNBox'
 import SCNMaterialProperty from './SCNMaterialProperty'
+import SCNGeometrySource from './SCNGeometrySource'
 import SCNSceneExportDelegate from './SCNSceneExportDelegate'
 import SCNSceneExportProgressHandler from './SCNSceneExportProgressHandler'
 import SCNSceneSource from './SCNSceneSource'
@@ -34,7 +38,9 @@ export default class SCNScene extends NSObject {
       rootNode: ['SCNNode', '_rootNode'],
       upAxis: ['SCNVector3', null],
       physicsWorld: ['SCNPhysicsWorld', '_physicsWorld'],
-      background: ['SCNMaterialProperty', '_background'],
+      background: ['SCNMaterialProperty', (obj, value) => {
+        obj._skyBox.geometry.firstMaterial._emission = value
+      }],
       startTime: ['double', null],
       endTime: ['double', null],
       frameRate: ['double', null],
@@ -78,7 +84,6 @@ You call this method in a try expression and handle any errors in the catch clau
     // Accessing Scene Contents
 
     this._rootNode = new SCNNode()
-    this._background = null
     this._lightingEnvironment = null
 
     // Adding Fog to a Scene
@@ -135,12 +140,65 @@ You call this method in a try expression and handle any errors in the catch clau
         }
       })
     }
+
+    const skyBoxGeometry = new SCNBox()
+    const material = new SCNMaterial()
+    material._diffuse._contents = SKColor.black
+    material._ambient._contents = SKColor.black
+
+    skyBoxGeometry.firstMaterial = material
+    const texSrc = skyBoxGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[0]
+    const margin = 0.001
+    const w0 = 0.0
+    const w1 = 1.0 / 6.0
+    const w2 = 2.0 / 6.0
+    const w3 = 3.0 / 6.0
+    const w4 = 4.0 / 6.0
+    const w5 = 5.0 / 6.0
+    const w6 = 1.0
+    const data = [
+      w5 - margin, 1,
+      w5 - margin, 0,
+      w4 + margin, 1,
+      w4 + margin, 0,
+      w2 - margin, 1,
+      w2 - margin, 0,
+      w1 + margin, 1,
+      w1 + margin, 0,
+      w6 - margin, 1,
+      w6 - margin, 0,
+      w5 + margin, 1,
+      w5 + margin, 0,
+      w1 - margin, 1,
+      w1 - margin, 0,
+      w0 + margin, 1,
+      w0 + margin, 0,
+      w3 - margin, 1,
+      w3 - margin, 0,
+      w2 + margin, 1,
+      w2 + margin, 0,
+      w4 - margin, 1,
+      w4 - margin, 0,
+      w3 + margin, 1,
+      w3 + margin, 0 
+    ]
+    let dataIndex = 0
+    let srcIndex = 6
+    for(let i=0; i<24; i++){
+      texSrc._data[srcIndex + 0] = data[dataIndex + 0]
+      texSrc._data[srcIndex + 1] = data[dataIndex + 1]
+      srcIndex += 8
+      dataIndex += 2
+    }
+    this._skyBox = new SCNNode(skyBoxGeometry)
+    this._skyBox._presentation = this._skyBox
   }
 
   _copyValue(src) {
     this.isPaused = src.isPaused
     this._rootNode = src._rootNode
-    this._background = src._background
+    //this._background = src._background
+    this._skyBox.geometry = src._skyBox.geometry.copy()
     this._lightingEnvironment = src._lightingEnvironment
     this.fogStartDistance = src.fogStartDistance
     this.fogEndDistance = src.fogEndDistance
@@ -243,6 +301,7 @@ You call this method in a try expression and handle any errors in the catch clau
   get rootNode() {
     return this._rootNode
   }
+
   /**
    * A background to be rendered before the rest of the scene.
    * @type {SCNMaterialProperty}
@@ -250,8 +309,9 @@ You call this method in a try expression and handle any errors in the catch clau
    * @see https://developer.apple.com/reference/scenekit/scnscene/1523665-background
    */
   get background() {
-    return this._background
+    return this._skyBox.geometry.firstMaterial._emission
   }
+
   /**
    * A cube map texture that depicts the environment surrounding the scene’s contents, used for advanced lighting effects.
    * @type {SCNMaterialProperty}

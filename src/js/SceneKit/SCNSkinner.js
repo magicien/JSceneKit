@@ -18,12 +18,11 @@ export default class SCNSkinner extends NSObject {
   static get _propTypes() {
     return {
       $constructor: (propNames, propValues) => {
-        console.log('SCNSkinner constructor')
         const invTransforms = []
         const len = propValues.bones.length
         for(let i=0; i<len; i++){
           const inv = propValues[`baseGeometryBindTransform-${i}`]
-          console.log(`inv ${i} ${inv.float32Array()}`)
+          //console.log(`inv ${i} ${inv.float32Array()}`)
           if(typeof inv === 'undefined'){
             throw new Error(`boneInverseBindTransforms ${i} does not exist`)
           }
@@ -41,7 +40,7 @@ export default class SCNSkinner extends NSObject {
         return instance
       },
       $unknownKey: (key) => {
-        console.warn(`SCNSkinner unknownKey ${key}`)
+        //console.warn(`SCNSkinner unknownKey ${key}`)
         const pattern = new RegExp(/^baseGeometryBindTransform-(\d+)$/)
         const result = key.match(pattern)
         if(result !== null){

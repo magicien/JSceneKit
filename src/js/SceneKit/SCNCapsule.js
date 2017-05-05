@@ -72,8 +72,8 @@ export default class SCNCapsule extends SCNGeometry {
    * @desc call Ammo.destroy(shape) after using it.
    */
   _createBtCollisionShape() {
-    const height = (this.height - this.capRadius) * 0.5
-    const shape = new Ammo.btCapsuleShape(this.capRadius, height)
-    return shape
+    //const height = (this.height - this.capRadius) * 0.5
+    //const shape = new Ammo.btCapsuleShape(this.capRadius, height)
+    //return shape
   }
 }

@@ -98,6 +98,37 @@ class _Particle extends NSObject {
      * @type {number}
      */
     this.lifeSpan = 0
+
+    /**
+     * @type {number}
+     */
+    this.imageFrameRate = 0
+
+    /**
+     * @type {number}
+     */
+    this.initialImageFrame = 0
+
+    /**
+     * @type {number}
+     */
+    this.texLeft = 0
+
+    /**
+     * @type {number}
+     */
+    this.texRight = 0
+
+    /**
+     * @type {number}
+     */
+    this.texTop = 0
+
+    /**
+     * @type {number}
+     */
+    this.texBottom = 0
+
   }
 
   /**
@@ -112,10 +143,10 @@ class _Particle extends NSObject {
       this.size
     ]
     return [
-      ...baseArray, -1, -1,
-      ...baseArray,  1, -1,
-      ...baseArray, -1,  1,
-      ...baseArray,  1,  1,
+      ...baseArray, this.texLeft, this.texTop,
+      ...baseArray, this.texRight, this.texTop,
+      ...baseArray, this.texLeft, this.texBottom,
+      ...baseArray, this.texRight, this.texBottom
     ]
   }
 
@@ -210,7 +241,7 @@ export default class SCNParticleSystem extends NSObject {
           const d = dict[_ParticleProperty[key]]
           if(typeof d !== 'undefined'){
             d.animation.keyPath = key
-            console.error(`SCNParticleSystem key: ${key}, ${d.animation.className}`)
+            //console.error(`SCNParticleSystem key: ${key}, ${d.animation.className}`)
             //if(key === 'size'){
             //  d.animation._isMultiplicative = true
             //}
@@ -694,6 +725,9 @@ export default class SCNParticleSystem extends NSObject {
 
     this._prevTime = 0
     this._nextBirthTime = 0
+    this._numImages = null
+    this._imageWidth = null
+    this._imageHeight = null
   }
 
   // Creating a Particle System
@@ -837,7 +871,6 @@ export default class SCNParticleSystem extends NSObject {
    * @returns {Image} -
    */
   _loadParticleImage(path, directoryPath) {
-    //console.warn(`image.path: ${path}`)
     const image = new Image()
     if(path.indexOf('file:///') === 0){
       const paths = path.slice(8).split('/')
@@ -948,6 +981,11 @@ export default class SCNParticleSystem extends NSObject {
     this._indexBuffer = gl.createBuffer()
     gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, this._indexBuffer)
     gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, glIndexData, gl.STATIC_DRAW)
+
+    // initialize parameters
+    this._numImages = this.imageSequenceRowCount * this.imageSequenceColumnCount
+    this._imageWidth = 2.0 / this.imageSequenceColumnCount
+    this._imageHeight = 2.0 / this.imageSequenceRowCount
   }
 
   /**
@@ -1020,12 +1058,42 @@ export default class SCNParticleSystem extends NSObject {
         }
         default:
           // TODO: implement
-          throw new Error(`emitter for ${this.emitterShape.className} is not implemented`)
+          throw new Error(`surface emitter for ${this.emitterShape.className} is not implemented`)
       }
       pVec = pVec.rotate(transform)
       p.position = position.add(pVec)
       if(this.birthDirection === SCNParticleBirthDirection.surfaceNormal){
         p.velocity = vVec.rotate(transform).normalize().mul(velocity)
+      }
+    }else if(this.birthLocation === SCNParticleBirthLocation.volume){
+      let pVec = null
+      switch(this.emitterShape.className){
+        case 'SCNBox': {
+          const x = (Math.random() - 0.5) * this.emitterShape.width
+          const y = (Math.random() - 0.5) * this.emitterShape.height
+          const z = (Math.random() - 0.5) * this.emitterShape.length
+          pVec = new SCNVector3(x, y, z)
+          break
+        }
+        case 'SCNSphere': {
+          const r = Math.random() * this.emitterShape.radius
+          const s = Math.random() * Math.PI
+          const t = Math.random() * Math.PI * 2.0
+          const rsins = r * Math.sin(s)
+          const x = rsins * Math.cos(t)
+          const y = rsins * Math.sin(t)
+          const z = r * Math.cos(s)
+          pVec = new SCNVector3(x, y, z)
+          break
+        }
+        default:
+          // TODO: implement
+          throw new Error(`volume emitter for ${this.emitterShape.className} is not implemented`)
+      }
+      pVec = pVec.rotate(transform)
+      p.position = position.add(pVec)
+      if(this.birthDirection === SCNParticleBirthDirection.surfaceNormal){
+        throw new Error('combination of birthLocation=volume and birthDirection=surfaceNormal is not implemented.')
       }
     }else{
       // TODO: implement
@@ -1062,8 +1130,14 @@ export default class SCNParticleSystem extends NSObject {
     p.angularVelocity = (this.particleAngularVelocity + this.particleAngularVelocityVariation * (Math.random() - 0.5)) / 180.0 * Math.PI
     p.acceleration = this.acceleration._copy()
     p.birthTime = birthTime
-    //p.lifeSpan = this.particleLifeSpan + this.particleLifeSpanVariation * (Math.random() - 0.5)
     p.lifeSpan = this.particleLifeSpan + this.particleLifeSpanVariation * (Math.random() * 2.0 - 1.0)
+
+    p.imageFrameRate = this.imageSequenceFrameRate + this.imageSequenceFrameRateVariation * (Math.random() - 0.5)
+    if(p.imageFrameRate < 0){
+      p.imageFrameRate = 0
+    }
+
+    p.initialImageFrame = this.imageSequenceInitialFrame + this.imageSequenceInitialFrameVariation * (Math.random() - 0.5)
 
     return p
   }
@@ -1085,7 +1159,6 @@ export default class SCNParticleSystem extends NSObject {
       this._normal = this._direction.cross(u)
     }
     while(this._nextBirthTime <= currentTime){
-      //const p = this._createParticle(this._nextBirthTime, node._presentationWorldTranslation, node._presentationWorldOrientation)
       const p = this._createParticle(this._nextBirthTime, transform)
       this._particles.push(p)
       let rate = this.birthRate + this.birthRateVariation * (Math.random() - 0.5)
@@ -1098,12 +1171,12 @@ export default class SCNParticleSystem extends NSObject {
     const dt = currentTime - this._prevTime
     let damping = 1
     if(this.dampingFactor > 0){
-      //damping = Math.pow((100 - this.dampingFactor) * 0.01, dt)
       damping = Math.pow((100 - this.dampingFactor) * 0.01, dt * 60.0)
     }
 
     this._particles.forEach((p) => {
-      const t = (currentTime - p.birthTime) / p.lifeSpan
+      const pdt = currentTime - p.birthTime
+      const t = pdt / p.lifeSpan
       p.life = t
       if(t > 1){
         return
@@ -1130,6 +1203,39 @@ export default class SCNParticleSystem extends NSObject {
           this.propertyControllers[key].animation._applyAnimation(p, t, false) // should I use p.life instead of t?
         })
       }
+
+      const frame = p.initialImageFrame + p.imageFrameRate * pdt
+      let imageFrame = 0
+      switch(p.imageSequenceAnimationMode){
+        case SCNParticleImageSequenceAnimationMode.repeat: {
+          imageFrame = Math.floor(frame % this._numImages)
+          break
+        }
+        case SCNParticleImageSequenceAnimationMode.clamp: {
+          let fr = Math.floor(frame % this._numImages)
+          if(fr >= this._numImages - 1){
+            imageFrame = this._numImages - 1
+          }else{
+            imageFrame = fr
+          }
+          break
+        }
+        case SCNParticleImageSequenceAnimationMode.autoReverse: {
+          let fr = Math.floor(frame % (this._numImages * 2 - 2))
+          if(fr >= this._numImages){
+            fr = (this._numImages * 2 - 2) - fr
+          }
+          imageFrame = fr
+          break
+        }
+      }
+      const imageY = Math.floor(imageFrame / this.imageSequenceRowCount)
+      const imageX = imageFrame % this.imageSequenceColumnCount
+
+      p.texLeft = imageX * this._imageWidth - 1.0
+      p.texTop = imageY * this._imageHeight - 1.0
+      p.texRight = (imageX + 1) * this._imageWidth - 1.0
+      p.texBottom = (imageY + 1) * this._imageHeight - 1.0
     })
     this._particles = this._particles.filter((p) => { return p.life <= 1 })
     this._prevTime = currentTime

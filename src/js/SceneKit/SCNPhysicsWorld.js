@@ -9,7 +9,7 @@ import SCNPhysicsBody from './SCNPhysicsBody'
 import SCNHitTestResult from './SCNHitTestResult'
 import SCNPhysicsShape from './SCNPhysicsShape'
 import SCNMatrix4 from './SCNMatrix4'
-import _Ammo from '../third_party/ammo'
+//import _Ammo from '../third_party/ammo'
 /*global Ammo*/
 
 const _TestOption = {
@@ -94,13 +94,13 @@ export default class SCNPhysicsWorld extends NSObject {
      */
     this.contactDelegate = null
 
-    const collisionConfiguration = new Ammo.btDefaultCollisionConfiguration()
-    const dispatcher = new Ammo.btCollisionDispatcher(collisionConfiguration)
-    const overlappingPairCache = new Ammo.btDbvtBroadphase()
-    const solver = new Ammo.btSequentialImpulseConstraintSolver()
-    this._world = new Ammo.btDiscreteDynamicsWorld(
-      dispatcher, overlappingPairCache, solver, collisionConfiguration
-    )
+    //const collisionConfiguration = new Ammo.btDefaultCollisionConfiguration()
+    //const dispatcher = new Ammo.btCollisionDispatcher(collisionConfiguration)
+    //const overlappingPairCache = new Ammo.btDbvtBroadphase()
+    //const solver = new Ammo.btSequentialImpulseConstraintSolver()
+    //this._world = new Ammo.btDiscreteDynamicsWorld(
+    //  dispatcher, overlappingPairCache, solver, collisionConfiguration
+    //)
 
     this._prevTime = null
   }
@@ -237,63 +237,63 @@ if (results.firstObject.node == player) {
    * @see https://developer.apple.com/reference/scenekit/scnphysicsworld/1512857-raytestwithsegment
    */
   rayTestWithSegmentFromTo(origin, dest, options = null) {
-    let opt = options
-    if(Array.isArray(options)){
-      opt = new Map(options)
-    }
-    const results = []
+    //let opt = options
+    //if(Array.isArray(options)){
+    //  opt = new Map(options)
+    //}
+    //const results = []
 
-    let backfaceCulling = true
-    let collisionBitMask = -1
-    let searchMode = _TestSearchMode.any
-    if(opt.has(_TestOption.backfaceCulling)){
-      backfaceCulling = opt.get(_TestOption.backfaceCulling)
-    }
-    if(opt.has(_TestOption.collisionBitMask)){
-      collisionBitMask = opt.get(_TestOption.collisionBitMask)
-    }
-    if(opt.has(_TestOption.searchMode)){
-      searchMode = opt.get(_TestOption.searchMode)
-    }
-    
-    let originVec = origin._createBtVector3()
-    let destVec = dest._createBtVector3()
-    let rayCallback = null
-    switch(searchMode){
-      case _TestSearchMode.all:
-        // TODO: implement
-        throw new Error('TestSearchMode.all not implemented')
-      case _TestSearchMode.any:
-        // TODO: implement
-        throw new Error('TestSearchMode.any not implemented')
-      case _TestSearchMode.closest:
-        rayCallback = new Ammo.ClosestRayResultCallback(originVec, destVec)
-        break
-      default:
-        throw new Error(`unknown search mode: ${searchMode}`)
-    }
+    //let backfaceCulling = true
+    //let collisionBitMask = -1
+    //let searchMode = _TestSearchMode.any
+    //if(opt.has(_TestOption.backfaceCulling)){
+    //  backfaceCulling = opt.get(_TestOption.backfaceCulling)
+    //}
+    //if(opt.has(_TestOption.collisionBitMask)){
+    //  collisionBitMask = opt.get(_TestOption.collisionBitMask)
+    //}
+    //if(opt.has(_TestOption.searchMode)){
+    //  searchMode = opt.get(_TestOption.searchMode)
+    //}
+    //
+    //let originVec = origin._createBtVector3()
+    //let destVec = dest._createBtVector3()
+    //let rayCallback = null
+    //switch(searchMode){
+    //  case _TestSearchMode.all:
+    //    // TODO: implement
+    //    throw new Error('TestSearchMode.all not implemented')
+    //  case _TestSearchMode.any:
+    //    // TODO: implement
+    //    throw new Error('TestSearchMode.any not implemented')
+    //  case _TestSearchMode.closest:
+    //    rayCallback = new Ammo.ClosestRayResultCallback(originVec, destVec)
+    //    break
+    //  default:
+    //    throw new Error(`unknown search mode: ${searchMode}`)
+    //}
 
-    this._world.rayTest(originVec, destVec, rayCallback)
-    if(rayCallback.hasHit()){
-      const result = new SCNHitTestResult()
-      const body = Ammo.btRigidBody.prototype.upcast(rayCallback.get_m_collisionObject())
-      result._node = null
-      result._geometryIndex = 0
-      result._faceIndex = 0
-      result._worldCoordinates = new SCNVector3(rayCallback.get_m_hitPointWorld())
-      result._localCoordinates = null
-      result._worldNormal = new SCNVector3(rayCallback.get_m_hitNormalWorld())
-      result._localNormal = null
-      result._modelTransform = null
-      result._boneNode = null
-      results.push(result)
-    }
+    //this._world.rayTest(originVec, destVec, rayCallback)
+    //if(rayCallback.hasHit()){
+    //  const result = new SCNHitTestResult()
+    //  const body = Ammo.btRigidBody.prototype.upcast(rayCallback.get_m_collisionObject())
+    //  result._node = null
+    //  result._geometryIndex = 0
+    //  result._faceIndex = 0
+    //  result._worldCoordinates = new SCNVector3(rayCallback.get_m_hitPointWorld())
+    //  result._localCoordinates = null
+    //  result._worldNormal = new SCNVector3(rayCallback.get_m_hitNormalWorld())
+    //  result._localNormal = null
+    //  result._modelTransform = null
+    //  result._boneNode = null
+    //  results.push(result)
+    //}
 
-    Ammo.destroy(originVec)
-    Ammo.destroy(destVec)
-    Ammo.destroy(rayCallback)
+    //Ammo.destroy(originVec)
+    //Ammo.destroy(destVec)
+    //Ammo.destroy(rayCallback)
 
-    return results
+    //return results
   }
 
   /**
@@ -358,6 +358,6 @@ if (contacts.count == 0) {
   }
 
   _simulate(time) {
-    this._world.stepSimulation(1.0/60.0, 0)
+    //this._world.stepSimulation(1.0/60.0, 0)
   }
 }

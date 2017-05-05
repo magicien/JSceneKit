@@ -259,7 +259,7 @@ export default class SCNNode extends NSObject {
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnnode/1408010-opacity
      */
-    this.opacity = 0
+    this.opacity = 1
 
     /**
      * The order the node’s content is drawn in relative to that of other nodes.
@@ -400,17 +400,17 @@ export default class SCNNode extends NSObject {
   }
 
   static _loadAnimationArray(node, animations) {
-    console.log('_loadAnimationArray start')
+    //console.log('_loadAnimationArray start')
     for(const animName of Object.keys(animations)){
       const data = animations[animName]
       const animation = this._loadAnimationData(data, animName)
       node.addAnimationForKey(animation, animName)
     }
-    console.log('_loadAnimationArray done')
+    //console.log('_loadAnimationArray done')
   }
 
   static _loadAnimationData(data, key) {
-    console.log(`_loadAnimationData ${key} start`)
+    //console.log(`_loadAnimationData ${key} start`)
     if(data.class === 'group'){
       return this._loadAnimationGroup(data)
     }else if(data.class === 'keyframe'){
@@ -422,12 +422,12 @@ export default class SCNNode extends NSObject {
       return this._loadKeyframeAnimation(data, key)
     }
 
-    console.error(`unknown animation class: ${data.class}, type: ${data.type}, key: ${key}`)
+    //console.error(`unknown animation class: ${data.class}, type: ${data.type}, key: ${key}`)
     throw new Error(`unknown animation class: ${data.class}, type: ${data.type}, key: ${key}`)
   }
 
   static _loadAnimationGroup(animation) {
-    console.log('_loadAnimationGroup start')
+    //console.log('_loadAnimationGroup start')
     const group = new CAAnimationGroup()
     const data = animation.animation
     group.isRemovedOnCompletion = !!animation.removeOnCompletion
@@ -455,17 +455,17 @@ export default class SCNNode extends NSObject {
     // data.attributes
     data.channels.forEach((channel) => {
       const keyPath = channel.targetPath.join('.')
-      console.error(`SCNNode animation group keyPath: ${keyPath}`)
+      //console.error(`SCNNode animation group keyPath: ${keyPath}`)
       const chAnim = this._loadAnimationData(channel.animation, keyPath)
       group.animations.push(chAnim)
     })
-    console.log('_loadAnimationGroup done')
+    //console.log('_loadAnimationGroup done')
 
     return group
   }
 
   static _loadKeyframeAnimation(data, keyPath) {
-    console.log(`_loadKeyframeAnimation ${keyPath} start`)
+    //console.log(`_loadKeyframeAnimation ${keyPath} start`)
     const anim = new CAKeyframeAnimation(keyPath)
 
     anim.isRemovedOnCompletion = !!data.removeOnCompletion
@@ -517,13 +517,13 @@ export default class SCNNode extends NSObject {
     //anim.continuityValues
     //anim.biasValues
 
-    console.log(`_loadKeyframeAnimation ${keyPath} done`)
+    //console.log(`_loadKeyframeAnimation ${keyPath} done`)
 
     return anim
   }
 
   static _loadBasicAnimation(data, keyPath) {
-    console.log(`_loadBasicAnimation ${keyPath} start`)
+    //console.log(`_loadBasicAnimation ${keyPath} start`)
     const anim = new CABasicAnimation(keyPath)
 
     anim.isRemovedOnCompletion = !!data.removeOnCompletion
@@ -556,20 +556,20 @@ export default class SCNNode extends NSObject {
     // data.attributes
     // data.baseType
 
-    console.log(`_loadBasicAnimation ${keyPath} done`)
+    //console.log(`_loadBasicAnimation ${keyPath} done`)
 
     return anim
   }
 
   static _loadActionArray(node, actions) {
-    console.log('_loadActionArray start')
+    //console.log('_loadActionArray start')
     for(const actName of Object.keys(actions)){
       const data = actions[actName]
       //const action = this._loadActionData(data, actName)
       //node.runActionForKey(action, actName)
       node.runActionForKey(data, actName)
     }
-    console.log('_loadAnimationArray done')
+    //console.log('_loadAnimationArray done')
   }
 
   //static _loadActionData(data, key) {
@@ -577,7 +577,7 @@ export default class SCNNode extends NSObject {
   //}
 
   static _loadData(data, key) {
-    console.log(`_loadData ${key} start`)
+    //console.log(`_loadData ${key} start`)
 
     const accessor = data[key].accessor
     const components = accessor.componentsPerValue
@@ -621,7 +621,7 @@ export default class SCNNode extends NSObject {
       console.error(`unknown accessor componentsType: ${accessor.componentsType}`)
     }
 
-    console.log(`_loadData ${key} done`)
+    //console.log(`_loadData ${key} done`)
 
     return result
   }
@@ -1254,6 +1254,10 @@ export default class SCNNode extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnnode/1523123-addparticlesystem
    */
   addParticleSystem(system) {
+    if(this._particleSystems === null){
+      this._particleSystems = []
+    }
+    this._particleSystems.push(system)
   }
 
   /**
@@ -1265,6 +1269,11 @@ export default class SCNNode extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnnode/1524014-removeparticlesystem
    */
   removeParticleSystem(system) {
+    if(this._particleSystems === null){
+      return
+    }
+    const index = this._particleSystems.indexOf(system)
+    this._particleSystems.splice(index, 1)
   }
 
   /**
@@ -1274,6 +1283,7 @@ export default class SCNNode extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnnode/1522801-removeallparticlesystems
    */
   removeAllParticleSystems() {
+    this._particleSystems = []
   }
 
   /**
@@ -1866,6 +1876,47 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     return super.valueForUndefinedKey(key)
   }
 
+  valueForKeyPath(keyPath) {
+    // FIXME: check flags to decide to use a presentation node
+    const target = this._presentation ? this._presentation : this
+    const paths = keyPath.split('.')
+    const key = paths[0]
+    const key2 = paths[1]
+
+    if(key === 'position'){
+      if(key2){
+        return target.position[key2]
+      }
+      return target.position
+    }else if(key === 'rotation'){
+      if(key2){
+        return target.rotation[key2]
+      }
+      return target.rotation
+    }else if(key === 'scale'){
+      if(key2){
+        return target.scale[key2]
+      }
+      return target.scale
+    }else if(key === 'eulerAngles'){
+      if(key2){
+        return target.eulerAngles[key2]
+      }
+      return target.eulerAngles
+    }else if(key === 'orientation'){
+      if(key2){
+        return target.orientation[key2]
+      }
+      return target.orientation
+    }else if(key === 'transform'){
+      if(key2){
+        return target.transform[key2]
+      }
+      return target.transform
+    }
+    return super.valueForKeyPath(keyPath)
+  }
+
   setValueForKey(value, key) {
     // FIXME: check flags to decide to use a presentation node
     const target = this._presentation ? this._presentation : this
@@ -1955,6 +2006,45 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
         default:
           // do nothing
       }
+    }else if(key === 'position'){
+      if(restPath !== ''){
+        target._position[restPath] = value
+      }else{
+        target._position = value
+      }
+      return
+    }else if(key === 'rotation'){
+      if(restPath !== ''){
+        target._rotation[restPath] = value
+      }else{
+        target._rotation = value
+      }
+      return
+    }else if(key === 'orientation'){
+      if(restPath !== ''){
+        const v = target.orientation
+        v[restPath] = value
+        target.orientation = v
+      }else{
+        target.orientation = value
+      }
+      return
+    }else if(key === 'eulerAngles'){
+      if(restPath !== ''){
+        const v = target.eulerAngles
+        v[restPath] = value
+        target.eulerAngles = v
+      }else{
+        target.eulerAngles = value
+      }
+      return
+    }else if(key === 'scale'){
+      if(restPath !== ''){
+        target._scale[restPath] = value
+      }else{
+        target._scale = value
+      }
+      return
     }else if(key === 'morpher'){
       if(target.morpher === null){
         throw new Error('target morpher === null')
@@ -2027,33 +2117,33 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @desc call Ammo.destroy(transform) after using it.
    */
   _createBtTransform() {
-    const transform = new Ammo.btTransform()
-    const pos = this.position.createBtVector3()
-    const rot = this.orientation.craeteBtQuaternion()
-    transform.setIdentity()
-    transform.setOrigin(pos)
-    transform.setRotation(rot)
-    Ammo.destroy(pos)
-    Ammo.destroy(rot)
-    return transform
+    //const transform = new Ammo.btTransform()
+    //const pos = this.position.createBtVector3()
+    //const rot = this.orientation.craeteBtQuaternion()
+    //transform.setIdentity()
+    //transform.setOrigin(pos)
+    //transform.setRotation(rot)
+    //Ammo.destroy(pos)
+    //Ammo.destroy(rot)
+    //return transform
   }
 
   _createBtCollisionShape() {
-    if(this._geometry === null){
-      throw new Error('geometry is null')
-    }
-    return this._geometry._createBtCollisionShape()
+    //if(this._geometry === null){
+    //  throw new Error('geometry is null')
+    //}
+    //return this._geometry._createBtCollisionShape()
   }
 
   destory() {
-    if(this.physicsBody !== null){
-      this.physicsBody.destory()
-      this.physicsBody = null
-    }
-    if(this._geometry !== null){
-      // the geometry might be shared with other nodes...
-      //this.geometry.destroy()
-    }
+    //if(this.physicsBody !== null){
+    //  this.physicsBody.destory()
+    //  this.physicsBody = null
+    //}
+    //if(this._geometry !== null){
+    //  // the geometry might be shared with other nodes...
+    //  //this.geometry.destroy()
+    //}
   }
 }
 

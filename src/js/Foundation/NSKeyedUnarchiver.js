@@ -213,12 +213,12 @@ export default class NSKeyedUnarchiver extends NSCoder {
     const topIndex = reader.readUnsignedLongLong()
     const tablePos = reader.readUnsignedLongLong()
 
-    console.log(`dataLen: ${dataLen}`)
-    console.log(`intSize: ${intSize}`)
-    console.log(`offsetSize: ${this._offsetSize}`)
-    console.log(`objCount: ${this._objCount}`)
-    console.log(`topIndex: ${topIndex}`)
-    console.log(`tablePos: ${tablePos}`)
+    //console.log(`dataLen: ${dataLen}`)
+    //console.log(`intSize: ${intSize}`)
+    //console.log(`offsetSize: ${this._offsetSize}`)
+    //console.log(`objCount: ${this._objCount}`)
+    //console.log(`topIndex: ${topIndex}`)
+    //console.log(`tablePos: ${tablePos}`)
 
     this._offsetArray = []
     let pos = tablePos
@@ -248,64 +248,64 @@ export default class NSKeyedUnarchiver extends NSCoder {
     if(type1 === 0x00){
       // null, boolean
       if(type2 === 0){
-        console.log('   type: null')
+        //console.log('   type: null')
         return null
       }else if(type2 === 8){
-        console.log('   type: boolean')
+        //console.log('   type: boolean')
         return false
       }else if(type2 === 9){
-        console.log('   type: boolean')
+        //console.log('   type: boolean')
         return true
       }
     }else if(type1 === 0x10){
       // Int
       const len = Math.pow(2, type2)
-      console.log('   type: integer ' + len)
+      //console.log('   type: integer ' + len)
       return reader.readInteger(len, signed)
     }else if(type1 === 0x20){
       // Float
       const len = Math.pow(2, type2)
       if(len === 4){
-        console.log('   type: float')
+        //console.log('   type: float')
         return reader.readFloat()
       }else if(len === 8){
-        console.log('   type: double')
+        //console.log('   type: double')
         return reader.readDouble()
       }
       throw new Error(`unsupported float size: ${len}`)
     }else if(type1 === 0x30){
       // Date
-      console.log('   type: Date')
+      //console.log('   type: Date')
     }else if(type1 === 0x40){
       // Data
       const count = this._getDataSize(type2)
-      console.log(`   type: Data: length: ${count}`)
+      //console.log(`   type: Data: length: ${count}`)
       return reader.readData(count)
     }else if(type1 === 0x50){
       // ASCII
       const count = this._getDataSize(type2)
-      console.log('   type: ascii ' + count)
+      //console.log('   type: ascii ' + count)
       return reader.readString(count, 'ascii')
     }else if(type1 === 0x60){
       // UTF-16
       const count = this._getDataSize(type2)
-      console.log('   type: UTF-16 ' + count)
+      //console.log('   type: UTF-16 ' + count)
       return reader.readString(count, 'utf16be') // Big Endian might not be supported...
     }else if(type1 === 0x80){
       // UID
       const uid = reader.readInteger(type2 + 1, false)
-      console.log('   type: UID: ' + uid)
+      //console.log('   type: UID: ' + uid)
       return new _UID(this, uid)
     }else if(type1 === 0xA0){
       // Array
       const count = this._getDataSize(type2)
-      console.log('   type: array: ' + count)
+      //console.log('   type: array: ' + count)
       const arrIndex = []
       for(let i=0; i<count; i++){
         arrIndex.push(reader.readInteger(this._offsetSize, false))
       }
       const arr = arrIndex.map((index) => this._parseObjAtIndex(index))
-      console.log(`***arr.length: ${arr.length}`)
+      //console.log(`***arr.length: ${arr.length}`)
       return arr
     }else if(type1 === 0xC0){
       // Set
@@ -318,7 +318,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
       return new Set(arr)
     }else if(type1 === 0xD0){
       // Dictionary
-      console.log('   type: dictionary')
+      //console.log('   type: dictionary')
       const count = this._getDataSize(type2)
       const keyIndex = []
       const valueIndex = []
@@ -331,9 +331,9 @@ export default class NSKeyedUnarchiver extends NSCoder {
       const result = {}
       for(let i=0; i<count; i++){
         const key = this._parseObjAtIndex(keyIndex[i])
-        console.log('key: ' + key)
+        //console.log('key: ' + key)
         const val = this._parseObjAtIndex(valueIndex[i])
-        console.log('val: ' + val)
+        //console.log('val: ' + val)
         result[key] = val
       }
       return result
@@ -382,7 +382,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
 
   _parseClass(obj) {
     const className = obj.$class.obj.$classname
-    console.log(`parseClass ${className}`)
+    //console.log(`parseClass ${className}`)
     const classObj = NSKeyedUnarchiver.classForClassName(className)
     if(classObj){
       const unarchiver = this.copy()
@@ -578,15 +578,15 @@ export default class NSKeyedUnarchiver extends NSCoder {
       throw new Error(`can't decode '${key}' after finishDecoding() is called`)
     }
     const parsedObj = this.decodeObjectForKey(key)
-    console.log(`${key}: ${parsedObj.constructor.name}`)
+    //console.log(`${key}: ${parsedObj.constructor.name}`)
     if(!(parsedObj instanceof Buffer)){
       throw new Error(`propertylist of key ${key} is not Buffer data`)
     }
-    console.log(`***header: ${parsedObj.toString('ascii', 0, 8)}`)
-    console.log(`length: ${parsedObj.length}`)
-    for(let i=0; i<8; i++){
-      console.log(`${i}: ${parsedObj.readUIntBE(i, 1)}`)
-    }
+    //console.log(`***header: ${parsedObj.toString('ascii', 0, 8)}`)
+    //console.log(`length: ${parsedObj.length}`)
+    //for(let i=0; i<8; i++){
+    //  console.log(`${i}: ${parsedObj.readUIntBE(i, 1)}`)
+    //}
     return NSKeyedUnarchiver.unarchiveObjectWithData(parsedObj, this._filePath)
   }
 

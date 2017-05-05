@@ -226,7 +226,7 @@ export default class SCNPhysicsBody extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514791-static
    */
   static static() {
-    return null
+    return new SCNPhysicsBody(SCNPhysicsBodyType.static)
   }
 
   /**
@@ -237,7 +237,7 @@ export default class SCNPhysicsBody extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514766-dynamic
    */
   static dynamic() {
-    return null
+    return new SCNPhysicsBody(SCNPhysicsBodyType.dynamic)
   }
 
   /**
@@ -248,7 +248,7 @@ export default class SCNPhysicsBody extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514776-kinematic
    */
   static kinematic() {
-    return null
+    return new SCNPhysicsBody(SCNPhysicsBodyType.kinematic)
   }
 
   // Applying Forces, Impulses, and Torques
@@ -329,9 +329,9 @@ export default class SCNPhysicsBody extends NSObject {
    */
   _updateRigidBody() {
     if(this._btRigidBody !== null){
-      Ammo.destroy(this._btRigidBody)
+      //Ammo.destroy(this._btRigidBody)
     }
-    this._btRigidBody = this._createRigidBody()
+    //this._btRigidBody = this._createRigidBody()
   }
 
   /**
@@ -340,38 +340,33 @@ export default class SCNPhysicsBody extends NSObject {
    * @desc call Ammo.destroy(rigidBody) after using it.
    */
   _createRigidBody() {
-    let btTransform = null
-    if(this.physicsShape === null){
-      return null
-    }
-    if(this._node !== null){
-      btTransform = this._node._createBtTransform()
-    }else{
-      btTransform = new Ammo.btTransform()
-      btTransform.setIdentity()
-    }
-    const btShape = this.physicsShape._createBtCollisionShape()
-    const inertia = this.momentOfInertia._createBtVector3()
+    //let btTransform = null
+    //if(this.physicsShape === null){
+    //  return null
+    //}
+    //if(this._node !== null){
+    //  btTransform = this._node._createBtTransform()
+    //}else{
+    //  btTransform = new Ammo.btTransform()
+    //  btTransform.setIdentity()
+    //}
+    //const btShape = this.physicsShape._createBtCollisionShape()
+    //const inertia = this.momentOfInertia._createBtVector3()
 
-    const info = new Ammo.btRigidBodyConstructionInfo(btTransform, btShape, inertia)
-    const rigidBody = new Ammo.btRigidBody(info)
+    //const info = new Ammo.btRigidBodyConstructionInfo(btTransform, btShape, inertia)
+    //const rigidBody = new Ammo.btRigidBody(info)
 
-    //Ammo.destroy(btTransform)
-    //Ammo.destroy(btShape)
-    //Ammo.destroy(inertia)
-    //Ammo.destroy(info)
-
-    return rigidBody
+    //return rigidBody
   }
 
   _execDestroy() {
-    if(this.physicsShape !== null){
-      this.physicsShape._destroy()
-      this.physicsShape = null
-    }
-    if(this._btRigidBody !== null){
-      Ammo.destroy(this._btRigidBody)
-      this._btRigidBody = null
-    }
+    //if(this.physicsShape !== null){
+    //  this.physicsShape._destroy()
+    //  this.physicsShape = null
+    //}
+    //if(this._btRigidBody !== null){
+    //  Ammo.destroy(this._btRigidBody)
+    //  this._btRigidBody = null
+    //}
   }
 }

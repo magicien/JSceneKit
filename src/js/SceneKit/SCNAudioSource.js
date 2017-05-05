@@ -174,6 +174,7 @@ export default class SCNAudioSource extends NSObject {
       this._source.buffer = this._buffer
       this._source.connect(this._gainNode)
       this._gainNode.connect(_context.destination)
+      this._source.loop = this._loops
       this._source.start(when)
     })
   }

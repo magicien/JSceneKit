@@ -59,7 +59,7 @@ export default class CAAnimationGroup extends CAAnimation {
    * @returns {CAAnimationGroup} -
    */
   copy() {
-    console.log('CAAnimationGroup.copy')
+    //console.log('CAAnimationGroup.copy')
     const anim = super.copy()
 
     anim.animations = this.animations.slice()

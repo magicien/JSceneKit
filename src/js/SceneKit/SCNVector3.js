@@ -1,7 +1,7 @@
 'use strict'
 
 import SCNVector4 from './SCNVector4'
-import _Ammo from '../third_party/ammo'
+//import _Ammo from '../third_party/ammo'
 /*global Ammo*/
 
 /**
@@ -32,11 +32,11 @@ export default class SCNVector3 {
     /** @type {number} */
     this.z = z
 
-    if(x instanceof Ammo.btVector3){
-      this.x = x.x()
-      this.y = x.y()
-      this.z = x.z()
-    }
+    //if(x instanceof Ammo.btVector3){
+    //  this.x = x.x()
+    //  this.y = x.y()
+    //  this.z = x.z()
+    //}
   }
 
   /**
@@ -224,11 +224,19 @@ export default class SCNVector3 {
     const x = sinX * cosY * cosZ - cosX * sinY * sinZ
     const y = cosX * sinY * cosZ + sinX * cosY * sinZ
     const z = cosX * cosY * sinZ - sinX * sinY * cosZ
-    const r = 1.0 / Math.sqrt(x * x + y * y + z * z)
-    rot.x = x * r
-    rot.y = y * r
-    rot.z = z * r
-    rot.w = 2 * Math.acos(cosX * cosY * cosZ + sinX * sinY * sinZ)
+    const d = x * x + y * y + z * z
+    if(d === 0){
+      rot.x = 0
+      rot.y = 0
+      rot.z = 0
+      rot.w = 0
+    }else{
+      const r = 1.0 / Math.sqrt(d)
+      rot.x = x * r
+      rot.y = y * r
+      rot.z = z * r
+      rot.w = 2 * Math.acos(cosX * cosY * cosZ + sinX * sinY * sinZ)
+    }
 
     return rot
   }
@@ -263,7 +271,7 @@ export default class SCNVector3 {
    * @desc call Ammo.destroy(vec) after using it.
    */
   _createBtVector3() {
-    return new Ammo.btVector3(this.x, this.y, this.z)
+    //return new Ammo.btVector3(this.x, this.y, this.z)
   }
 }
 

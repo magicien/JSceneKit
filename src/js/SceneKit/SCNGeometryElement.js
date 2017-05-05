@@ -85,7 +85,7 @@ export default class SCNGeometryElement extends NSObject {
      * @access private
      */
     this._glData = null
-    console.log(`SCNGeometryElement: bytesPerIndex: ${bytesPerIndex}`)
+    //console.log(`SCNGeometryElement: bytesPerIndex: ${bytesPerIndex}`)
     if(bytesPerIndex === 1){
       this._glData = new Uint8Array(this._data)
     }else if(bytesPerIndex === 2){

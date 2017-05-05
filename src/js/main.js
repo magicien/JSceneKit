@@ -11,6 +11,10 @@ import CGPoint from './CoreGraphics/CGPoint'
 import CGRect from './CoreGraphics/CGRect'
 import CGSize from './CoreGraphics/CGSize'
 import CGVector from './CoreGraphics/CGVector'
+import DispatchObject from './Dispatch/DispatchObject'
+import DispatchQueue from './Dispatch/DispatchQueue'
+import DispatchTime from './Dispatch/DispatchTime'
+import DispatchTimeInterval from './Dispatch/DispatchTimeInterval'
 import NSArray from './Foundation/NSArray'
 import NSCoder from './Foundation/NSCoder'
 import NSColorSpace from './Foundation/NSColorSpace'
@@ -29,6 +33,7 @@ import CAAnimation from './QuartzCore/CAAnimation'
 import CAAnimationDelegate from './QuartzCore/CAAnimationDelegate'
 import CAAnimationGroup from './QuartzCore/CAAnimationGroup'
 import CABasicAnimation from './QuartzCore/CABasicAnimation'
+import CACurrentMediaTime from './QuartzCore/CACurrentMediaTime'
 import CAKeyframeAnimation from './QuartzCore/CAKeyframeAnimation'
 import CAMediaTiming from './QuartzCore/CAMediaTiming'
 import CAMediaTimingFunction from './QuartzCore/CAMediaTimingFunction'
@@ -228,6 +233,10 @@ _ClassList.registerClass(CGPoint)
 _ClassList.registerClass(CGRect)
 _ClassList.registerClass(CGSize)
 _ClassList.registerClass(CGVector)
+_ClassList.registerClass(DispatchObject)
+_ClassList.registerClass(DispatchQueue)
+_ClassList.registerClass(DispatchTime)
+_ClassList.registerClass(DispatchTimeInterval)
 _ClassList.registerClass(NSArray)
 _ClassList.registerClass(NSCoder)
 _ClassList.registerClass(NSColorSpace)
@@ -246,6 +255,7 @@ _ClassList.registerClass(CAAnimation)
 _ClassList.registerClass(CAAnimationDelegate)
 _ClassList.registerClass(CAAnimationGroup)
 _ClassList.registerClass(CABasicAnimation)
+_ClassList.registerClass(CACurrentMediaTime)
 _ClassList.registerClass(CAKeyframeAnimation)
 _ClassList.registerClass(CAMediaTiming)
 _ClassList.registerClass(CAMediaTimingFunction)
@@ -438,6 +448,10 @@ exports.CGPoint = CGPoint
 exports.CGRect = CGRect
 exports.CGSize = CGSize
 exports.CGVector = CGVector
+exports.DispatchObject = DispatchObject
+exports.DispatchQueue = DispatchQueue
+exports.DispatchTime = DispatchTime
+exports.DispatchTimeInterval = DispatchTimeInterval
 exports.NSArray = NSArray
 exports.NSCoder = NSCoder
 exports.NSColorSpace = NSColorSpace
@@ -456,6 +470,7 @@ exports.CAAnimation = CAAnimation
 exports.CAAnimationDelegate = CAAnimationDelegate
 exports.CAAnimationGroup = CAAnimationGroup
 exports.CABasicAnimation = CABasicAnimation
+exports.CACurrentMediaTime = CACurrentMediaTime
 exports.CAKeyframeAnimation = CAKeyframeAnimation
 exports.CAMediaTiming = CAMediaTiming
 exports.CAMediaTimingFunction = CAMediaTimingFunction

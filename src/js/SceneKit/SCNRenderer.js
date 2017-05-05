@@ -275,6 +275,12 @@ const _defaultFragmentShader =
     //if(textureFlags[TEXTURE_NORMAL_INDEX]){
     //}
 
+    // emission texture
+    if(textureFlags[TEXTURE_EMISSION_INDEX]){
+      vec4 color = texture(u_emissionTexture, v_texcoord);
+      outColor = color * outColor;
+    }
+
     int numLights = 0;
       
     outColor.a = material.diffuse.a;
@@ -447,10 +453,11 @@ export default class SCNRenderer extends NSObject {
 
     /**
      * Required. The node from which the scene’s contents are viewed for rendering.
+     * @access private
      * @type {?SCNNode}
      * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1523982-pointofview
      */
-    this.pointOfView = null
+    this._pointOfView = null
 
     /**
      * Required. A Boolean value that determines whether SceneKit automatically adds lights to a scene.
@@ -743,6 +750,15 @@ export default class SCNRenderer extends NSObject {
     gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(lightData), gl.DYNAMIC_DRAW)
     gl.bindBuffer(gl.UNIFORM_BUFFER, null)
 
+    if(this.scene.background._contents !== null){
+      const skyBox = this.scene._skyBox
+      skyBox.position = this.pointOfView._worldTranslation
+      const scale = this.pointOfView.camera.zFar * 1.154
+      skyBox.scale = new SCNVector3(scale, scale, scale)
+      skyBox._updateWorldTransform()
+      this._renderNode(skyBox)
+    }
+
     const renderingArray = this._createRenderingNodeArray()
     renderingArray.forEach((node) => {
       this._renderNode(node)
@@ -796,10 +812,10 @@ export default class SCNRenderer extends NSObject {
    * @returns {SCNNode} -
    */
   _getCameraNode() {
-    let cameraNode = this.pointOfView
+    let cameraNode = this._pointOfView
     if(cameraNode === null){
       cameraNode = this._searchCameraNode()
-      this.pointOfView = cameraNode
+      this._pointOfView = cameraNode
       if(cameraNode === null){
         cameraNode = this._defaultCameraNode
       }
@@ -1119,6 +1135,25 @@ export default class SCNRenderer extends NSObject {
   }
 
   // Managing Scene Display
+
+  /**
+   * Required. The node from which the scene’s contents are viewed for rendering.
+   * @type {?SCNNode}
+   * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1523982-pointofview
+   */
+  get pointOfView() {
+    return this._getCameraNode()
+  }
+
+  /**
+   * Required. The node from which the scene’s contents are viewed for rendering.
+   * @type {?SCNNode}
+   * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1523982-pointofview
+   */
+  set pointOfView(newValue) {
+    this._pointOfView = newValue
+  }
+
   /**
    * Required. The graphics technology SceneKit uses to render the scene.
    * @type {SCNRenderingAPI}
@@ -1689,12 +1724,11 @@ export default class SCNRenderer extends NSObject {
   }
 
   _switchToDefaultCamera() {
-    if(this.pointOfView === null){
+    if(this._pointOfView === null){
       this._defaultCameraPosNode.position = new SCNVector3(0, 0, 0)
       this._defaultCameraRotNode.rotation = new SCNVector4(0, 0, 0, 0)
       this._defaultCameraNode.position = new SCNVector3(0, 0, _defaultCameraDistance)
-      console.log('pov null')
-    }else if(this.pointOfView !== this._defaultCameraNode){
+    }else if(this._pointOfView !== this._defaultCameraNode){
       const rot = this.pointOfView._worldRotation
       const rotMat = SCNMatrix4.matrixWithRotation(rot)
       const pos = this.pointOfView._worldTranslation
@@ -1702,10 +1736,10 @@ export default class SCNRenderer extends NSObject {
       this._defaultCameraPosNode.position = (new SCNVector3(0, 0, -_defaultCameraDistance)).rotate(rotMat).add(pos)
       this._defaultCameraRotNode.rotation = rot
       this._defaultCameraNode.position = new SCNVector3(0, 0, _defaultCameraDistance)
-      console.log(`pov defined: pov.pos: ${this.pointOfView._worldTranslation.float32Array()}`)
+      console.log(`pov defined: pov.pos: ${this._pointOfView._worldTranslation.float32Array()}`)
       console.log(`pov defined: node.pos: ${this._defaultCameraNode._worldTranslation.float32Array()}`)
     }
-    this.pointOfView = this._defaultCameraNode
+    this._pointOfView = this._defaultCameraNode
   }
 
   _setDefaultCameraOrientation(orientation) {
@@ -1730,14 +1764,14 @@ export default class SCNRenderer extends NSObject {
    * @returns {SCNVector3} -
    */
   _getCameraPosition() {
-    if(this.pointOfView === this._defaultCameraNode){
+    if(this._pointOfView === this._defaultCameraNode){
       return this._defaultCameraPosNode.position
-    }else if(this.pointOfView === null){
+    }else if(this._pointOfView === null){
       return new SCNVector3(0, 0, 0)
     }
     const rot = this._getCameraOrientation()
     const rotMat = SCNMatrix4.matrixWithRotation(rot)
-    const pos = this.pointOfView._worldTranslation
+    const pos = this._pointOfView._worldTranslation
     return pos.add((new SCNVector3(0, 0, -_defaultCameraDistance)).rotate(rotMat))
   }
 
@@ -1746,12 +1780,12 @@ export default class SCNRenderer extends NSObject {
    * @returns {SCNVector4} -
    */
   _getCameraOrientation() {
-    if(this.pointOfView === this._defaultCameraNode){
+    if(this._pointOfView === this._defaultCameraNode){
       return this._defaultCameraRotNode.orientation
-    }else if(this.pointOfView === null){
+    }else if(this._pointOfView === null){
       return new SCNVector4(0, 0, 0, 0)
     }
-    return this.pointOfView._worldOrientation
+    return this._pointOfView._worldOrientation
   }
 
   /**
@@ -1759,7 +1793,7 @@ export default class SCNRenderer extends NSObject {
    * @returns {number} -
    */
   _getCameraDistance() {
-    if(this.pointOfView === this._defaultCameraNode){
+    if(this._pointOfView === this._defaultCameraNode){
       return this._defaultCameraNode.position.z
     }
     return _defaultCameraDistance

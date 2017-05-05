@@ -33,12 +33,12 @@ export default class SCNVector4 {
     /** @type {number} */
     this.w = w
 
-    if(x instanceof Ammo.btVector4){
-      this.x = x.x()
-      this.y = x.y()
-      this.z = x.z()
-      this.w = x.w()
-    }
+    //if(x instanceof Ammo.btVector4){
+    //  this.x = x.x()
+    //  this.y = x.y()
+    //  this.z = x.z()
+    //  this.w = x.w()
+    //}
   }
 
   /**
@@ -417,7 +417,7 @@ export default class SCNVector4 {
    * @desc call Ammo.destroy(vec) after using it.
    */
   _createBtVector4() {
-    return new Ammo.btVector4(this.x, this.y, this.z, this.w)
+    //return new Ammo.btVector4(this.x, this.y, this.z, this.w)
   }
 
   /**
@@ -426,6 +426,6 @@ export default class SCNVector4 {
    * @desc call Ammo.destroy(quat) after using it.
    */
   _createBtQuaternion() {
-    return new Ammo.btQuaternion(this.x, this.y, this.z, this.w)
+    //return new Ammo.btQuaternion(this.x, this.y, this.z, this.w)
   }
 }

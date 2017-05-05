@@ -111,30 +111,30 @@ export default class SCNGeometrySource extends NSObject {
      * @type {TypedArray}
      * @access private
      */
-    this._glData = null
-    if(this._hasTypedArrayData()){
-      this._glData = this._data
-    }else{
-      if(floatComponents){
-        if(bytesPerComponent === 4){
-          this._glData = new Float32Array(this._data)
-        }else if(bytesPerComponent === 8){
-          this._glData = new Float64Array(this._data)
-        }
-      }else{
-        if(bytesPerComponent === 1){
-          this._glData = new Uint8Array(this._data)
-        }else if(bytesPerComponent === 2){
-          this._glData = new Uint16Array(this._data)
-        }else if(bytesPerComponent === 4){
-          this._glData = new Uint32Array(this._data)
-        }
-      }
-    }
+    //this._glData = null
+    //if(this._hasTypedArrayData()){
+    //  this._glData = this._data
+    //}else{
+    //  if(floatComponents){
+    //    if(bytesPerComponent === 4){
+    //      this._glData = new Float32Array(this._data)
+    //    }else if(bytesPerComponent === 8){
+    //      this._glData = new Float64Array(this._data)
+    //    }
+    //  }else{
+    //    if(bytesPerComponent === 1){
+    //      this._glData = new Uint8Array(this._data)
+    //    }else if(bytesPerComponent === 2){
+    //      this._glData = new Uint16Array(this._data)
+    //    }else if(bytesPerComponent === 4){
+    //      this._glData = new Uint32Array(this._data)
+    //    }
+    //  }
+    //}
 
-    if(this._glData === null){
-      throw new Error(`unknown buffer data type: float: ${floatComponents}, size: ${bytesPerComponent}`)
-    }
+    //if(this._glData === null){
+    //  throw new Error(`unknown buffer data type: float: ${floatComponents}, size: ${bytesPerComponent}`)
+    //}
 
     this._buffer = null
   }

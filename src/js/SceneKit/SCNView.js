@@ -354,11 +354,45 @@ export default class SCNView {
       this.scrollWheelWith(ev)
     })
     this._canvas.addEventListener('keydown', (e) => {
-      const ev = this._createEvent(e)
+      //const ev = this._createEvent(e)
+      const ev = {
+        keyCode: 0
+      }
+      switch(e.code){
+        case 'ArrowDown':
+          ev.keyCode = 125
+          break
+        case 'ArrowUp':
+          ev.keyCode = 126
+          break
+        case 'ArrowLeft':
+          ev.keyCode = 123
+          break
+        case 'ArrowRight':
+          ev.keyCode = 124
+          break
+      }
       this.keyDownWith(ev)
     })
     this._canvas.addEventListener('keyup', (e) => {
-      const ev = this._createEvent(e)
+      //const ev = this._createEvent(e)
+      const ev = {
+        keyCode: 0
+      }
+      switch(e.code){
+        case 'ArrowDown':
+          ev.keyCode = 125
+          break
+        case 'ArrowUp':
+          ev.keyCode = 126
+          break
+        case 'ArrowLeft':
+          ev.keyCode = 123
+          break
+        case 'ArrowRight':
+          ev.keyCode = 124
+          break
+      }
       this.keyUpWith(ev)
     })
 

@@ -3590,7 +3590,7 @@ validateToolbarItem(_:) is called very frequently, so it must be efficient.If th
   }
 
   static initWithCoder(coder) {
-    console.log('initWithCoder: ' + this.className)
+    //console.log('initWithCoder: ' + this.className)
     let propTypes = {}
 
     // check if all property names are registered
@@ -3599,10 +3599,10 @@ validateToolbarItem(_:) is called very frequently, so it must be efficient.If th
         continue
       }
       if(typeof this._propTypes[key] === 'undefined'){
-        console.warn(`unknown key ${key}`)
+        //console.warn(`unknown key ${key}`)
         if(this._propTypes.$unknownKey && this._propTypes.$unknownKey(key) !== null){
           propTypes[key] = this._propTypes.$unknownKey(key)
-          console.warn(`unknown key: ${key} => ${propTypes[key]}`)
+          //console.warn(`unknown key: ${key} => ${propTypes[key]}`)
         }else{
           console.error(`${this.className}: property ${key} not registered`)
           throw new Error(`${this.className}: property ${key} not registered`)
@@ -3638,7 +3638,7 @@ validateToolbarItem(_:) is called very frequently, so it must be efficient.If th
     const propValues = {}
 
     for(const key of Object.keys(propTypes)){
-      console.log(`key: ${key}`)
+      //console.log(`key: ${key}`)
       if(!coder.containsValueForKey(key)){
         console.log(`!coder.containsValueForKey ${key}`)
         continue
@@ -3655,7 +3655,7 @@ validateToolbarItem(_:) is called very frequently, so it must be efficient.If th
         }
       }
 
-      console.log(`type: ${type}, propName: ${propName}`)
+      //console.log(`type: ${type}, propName: ${propName}`)
       let value = null
       switch(type){
         case 'boolean':
@@ -3694,20 +3694,20 @@ validateToolbarItem(_:) is called very frequently, so it must be efficient.If th
         case 'string':
           value = coder.decodeObjectForKey(key)
           if(typeof value !== 'string'){
-            console.error(`${key}: value is not String type`)
+            //console.error(`${key}: value is not String type`)
             throw new Error(`${key}: value is not String type`)
           }
           break
         default: {
           const classObj = _ClassList.get(type)
           if(typeof classObj === 'undefined'){
-            console.error(`unknown class name: ${type}`)
+            //console.error(`unknown class name: ${type}`)
             throw new Error(`unknown class name: ${type}`)
           }
           if(coder._refObj[key] instanceof Buffer){
             value = coder.decodeObjectOfTypeForKey(classObj, key)
             if(!(value instanceof classObj)){
-              console.error(`${key}: value is not an instance of ${type}`)
+              //console.error(`${key}: value is not an instance of ${type}`)
               throw new Error(`${key}: value is not an instance of ${type}`)
             }
           }else{
@@ -3723,20 +3723,20 @@ validateToolbarItem(_:) is called very frequently, so it must be efficient.If th
                 'NSURL' // => String
               ]
               if(exception.indexOf(classObj.className) < 0){
-                console.error(`${key}: value is not an instance of ${type}`)
+                //console.error(`${key}: value is not an instance of ${type}`)
                 throw new Error(`${key}: value is not an instance of ${type}`)
               }
             }
           }
         }
       }
-      if(Array.isArray(value)){
-        console.log(`value: Array[${value.length}]`)
-      }else if(typeof value === 'symbol'){
-        console.log('value: Symbol()')
-      }else{
-        console.log(`value: ${value}`)
-      }
+      //if(Array.isArray(value)){
+      //  console.log(`value: Array[${value.length}]`)
+      //}else if(typeof value === 'symbol'){
+      //  console.log('value: Symbol()')
+      //}else{
+      //  console.log(`value: ${value}`)
+      //}
       
       propValues[key] = value
       propNames[key] = propName

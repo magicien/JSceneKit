@@ -46,9 +46,14 @@ export default class SCNPhysicsShape extends NSObject {
   constructor(geometry, options = null) {
     super()
 
+    let _options = options
+    if(Array.isArray(_options)){
+      _options = new Map(_options)
+    }
+
     // Getting Information About a Shape
     this._sourceObject = geometry
-    this._options = options
+    this._options = _options
     this._transforms = null
   }
 
