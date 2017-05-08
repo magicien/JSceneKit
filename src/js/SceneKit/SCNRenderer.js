@@ -17,6 +17,7 @@ import SCNVector4 from './SCNVector4'
 import SKColor from '../SpriteKit/SKColor'
 import SCNGeometryPrimitiveType from './SCNGeometryPrimitiveType'
 import SCNGeometrySource from './SCNGeometrySource'
+import SCNHitTestOption from './SCNHitTestOption'
 import SCNHitTestResult from './SCNHitTestResult'
 
 /**
@@ -340,6 +341,10 @@ const _fsProbe = ''
 
 const _defaultCameraDistance = 15
 
+/**
+ * @access private
+ * @type {string}
+ */
 const _defaultParticleVertexShader =
  `#version 300 es
   precision mediump float;
@@ -378,6 +383,10 @@ const _defaultParticleVertexShader =
   }
 `
 
+/**
+ * @access private
+ * @type {string}
+ */
 const _defaultParticleFragmentShader =
  `#version 300 es
   precision mediump float;
@@ -393,6 +402,98 @@ const _defaultParticleFragmentShader =
     vec4 texColor = texture(particleTexture, v_texcoord);
     texColor.rgb *= texColor.a;
     outColor = v_color * texColor;
+  }
+`
+
+/**
+ * @access private
+ * @type {string}
+ */
+const _defaultHitTestVertexShader =
+ `#version 300 es
+  precision mediump float;
+
+  uniform mat4 viewProjectionTransform;
+  uniform vec4[765] skinningJoints;
+  uniform int numSkinningJoints;
+
+  in vec3 position;
+  in vec3 normal;
+  in vec4 boneIndices;
+  in vec4 boneWeights;
+  
+  out vec3 v_normal;
+  out vec3 v_position;
+
+  void main() {
+    vec3 pos = vec3(0, 0, 0);
+    vec3 nom = vec3(0, 0, 0);
+    if(numSkinningJoints > 0){
+      for(int i=0; i<numSkinningJoints; i++){
+        float weight = boneWeights[i];
+        if(int(boneIndices[i]) < 0){
+          continue;
+        }
+        int idx = int(boneIndices[i]) * 3;
+        mat4 jointMatrix = transpose(mat4(skinningJoints[idx],
+                                          skinningJoints[idx+1],
+                                          skinningJoints[idx+2],
+                                          vec4(0, 0, 0, 1)));
+        pos += (jointMatrix * vec4(position, 1.0)).xyz * weight;
+        nom += (mat3(jointMatrix) * normal) * weight;
+      }
+    }else{
+      mat4 jointMatrix = transpose(mat4(skinningJoints[0],
+                                        skinningJoints[1],
+                                        skinningJoints[2],
+                                        vec4(0, 0, 0, 1)));
+      pos = (jointMatrix * vec4(position, 1.0)).xyz;
+      nom = mat3(jointMatrix) * normal;
+    }
+    //v_position = pos;
+    v_normal = nom;
+
+    gl_Position = viewProjectionTransform * vec4(pos, 1.0);
+    v_position = gl_Position.xyz / gl_Position.w;
+  }
+`
+
+/**
+ * @access private
+ * @type {string}
+ */
+const _defaultHitTestFragmentShader =
+ `#version 300 es
+  precision mediump float;
+
+  uniform int objectID;
+  uniform int geometryID;
+
+  in vec3 v_normal;
+  in vec3 v_position;
+
+  layout(location = 0) out vec4 out_objectID;
+  layout(location = 1) out vec4 out_faceID;
+  layout(location = 2) out vec3 out_position;
+  layout(location = 3) out vec3 out_normal;
+
+  void main() {
+    out_objectID = vec4(
+      float(objectID >> 8) / 255.0,
+      float(objectID & 0xFF) / 255.0,
+      float(geometryID >> 8) / 255.0,
+      float(geometryID & 0xFF) / 255.0
+    );
+    //out_faceID = vec4(
+    //  (gl_PrimitiveID >> 24) / 255.0,
+    //  ((gl_PrimitiveID >> 16) & 0xFF) / 255.0,
+    //  ((gl_PrimitiveID >> 8) & 0xFF) / 255.0,
+    //  (gl_PrimitiveID & 0xFF) / 255.0
+    //);
+    out_faceID = vec4(0, 0, 0, 0); // TODO: implement
+    vec3 n = normalize(v_normal);
+    out_normal = vec3((n.x + 1.0) * 0.5, (n.y + 1.0) * 0.5, (n.z + 1.0) * 0.5);
+    out_position = vec3((v_position.x + 1.0) * 0.5, (v_position.y + 1.0) * 0.5, v_position.z);
   }
 `
 
@@ -574,6 +675,12 @@ export default class SCNRenderer extends NSObject {
      */
     this.__defaultParticleProgram = null
 
+    /**
+     * @access private
+     * @type {SCNProgram}
+     */
+    this.__defaultHitTestProgram = null
+
     this._location = new Map()
 
     this._defaultCameraPosNode = new SCNNode()
@@ -603,6 +710,12 @@ export default class SCNRenderer extends NSObject {
     this._viewRect = null
 
     /**
+     * The background color of the view.
+     * @type {SKColor}
+     */
+    this._backgroundColor = SKColor.white
+
+    /**
      * @access private
      * @type {WebGLTexture}
      */
@@ -625,6 +738,46 @@ export default class SCNRenderer extends NSObject {
      * @type {WebGLBuffer}
      */
     this._lightBuffer = null
+
+    ////////////////////////////
+    // Hit Test
+    ////////////////////////////
+
+    /**
+     * @access private
+     * @type {WebGLFramebuffer}
+     */
+    this._hitFrameBuffer = null
+
+    /**
+     * @access private
+     * @type {WebGLRenderbuffer}
+     */
+    this._hitDepthBuffer = null
+
+    /**
+     * @access private
+     * @type {WebGLTexture}
+     */
+    this._hitObjectIDTexture = null
+
+    /**
+     * @access private
+     * @type {WebGLTexture}
+     */
+    this._hitFaceIDTexture = null
+
+    /**
+     * @access private
+     * @type {WebGLTexture}
+     */
+    this._hitPositionTexture = null
+
+    /**
+     * @access private
+     * @type {WebGLTexture}
+     */
+    this._hitNormalTexture = null
   }
 
   /**
@@ -698,6 +851,7 @@ export default class SCNRenderer extends NSObject {
     const gl = this.context
     const program = this._defaultProgram._glProgram
 
+    gl.clearColor(this._backgroundColor.r, this._backgroundColor.g, this._backgroundColor.b, this._backgroundColor.a)
     gl.clearDepth(1.0)
     gl.clearStencil(0)
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT)
@@ -763,7 +917,6 @@ export default class SCNRenderer extends NSObject {
     renderingArray.forEach((node) => {
       this._renderNode(node)
     })
-
 
     const particleProgram = this._defaultParticleProgram._glProgram
     gl.useProgram(particleProgram)
@@ -928,7 +1081,7 @@ export default class SCNRenderer extends NSObject {
     }
 
     // TODO: use geometry setting
-    gl.disable(gl.CULL_FACE)
+    //gl.disable(gl.CULL_FACE)
 
     if(node.presentation.skinner !== null){
       gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
@@ -1037,6 +1190,90 @@ export default class SCNRenderer extends NSObject {
 
     //console.log(`renderParticle node: ${node.name}, length: ${system._particles.length}`)
     gl.drawElements(gl.TRIANGLES, system._particles.length * 6, system._glIndexSize, 0)
+  }
+
+  /**
+   *
+   * @access private
+   * @param {SCNNode} node -
+   * @param {number} objectID -
+   * @param {Map} options -
+   * @returns {void}
+   */
+  _renderNodeForHitTest(node, objectID, options) {
+    const gl = this.context
+    const geometry = node.presentation.geometry
+    const program = this._defaultHitTestProgram._glProgram
+
+    if(geometry._vertexArrayObjects === null){
+      // geometry is not ready
+      return
+    }
+    if(geometry._hitTestVAO === null){
+      this._initializeHitTestVAO(node, program)
+    }
+
+    console.log(`uniform1i: objectID: ${objectID}`)
+    gl.uniform1i(gl.getUniformLocation(program, 'objectID'), objectID)
+
+    if(node.presentation.skinner !== null){
+      gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
+      gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array())
+    }else{
+      gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0)
+      gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f())
+    }
+
+    const geometryCount = geometry.geometryElements.length
+    if(geometryCount === 0){
+      throw new Error('geometryCount: 0')
+    }
+    for(let i=0; i<geometryCount; i++){
+      const vao = geometry._hitTestVAO[i]
+      const element = geometry.geometryElements[i]
+
+      gl.bindVertexArray(vao)
+      gl.uniform1i(gl.getUniformLocation(program, 'geometryID'), i)
+
+      let shape = null
+      switch(element.primitiveType){
+        case SCNGeometryPrimitiveType.triangles:
+          shape = gl.TRIANGLES
+          break
+        case SCNGeometryPrimitiveType.triangleStrip:
+          shape = gl.TRIANGLE_STRIP
+          break
+        case SCNGeometryPrimitiveType.line:
+          shape = gl.LINES
+          break
+        case SCNGeometryPrimitiveType.point:
+          shape = gl.POINTS
+          break
+        case SCNGeometryPrimitiveType.polygon:
+          shape = gl.TRIANGLE_FAN
+          break
+        default:
+          throw new Error(`unsupported primitiveType: ${element.primitiveType}`)
+      }
+
+      let size = null
+      switch(element.bytesPerIndex){
+        case 1:
+          size = gl.UNSIGNED_BYTE
+          break
+        case 2:
+          size = gl.UNSIGNED_SHORT
+          break
+        case 4:
+          size = gl.UNSIGNED_INT
+          break
+        default:
+          throw new Error(`unsupported index size: ${element.bytesPerIndex}`)
+      }
+
+      console.log(`hitTest drawElements: length: ${element._glData.length}`)
+      gl.drawElements(shape, element._glData.length, size, 0)
+    }
   }
 
   /**
@@ -1203,30 +1440,230 @@ export default class SCNRenderer extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1522929-hittest
    */
   hitTest(point, options = null) {
-    const result = []
     if(this.scene === null){
-      return result
+      return []
+    }
+    let _options = new Map()
+    if(options instanceof Map){
+      _options = options
+    }else if(Array.isArray(options)){
+      _options = new Map(options)
     }
 
     const cameraNode = this._getCameraNode()
     cameraNode.camera._updateProjectionTransform(this._viewRect)
-    const vp = cameraNode.viewProjectionTransform
-    const invVp = vp.invert()
+    const from = new SCNVector3(point.x, point.y, 0)
+    const to = new SCNVector3(point.x, point.y, 1.0)
 
-    const viewPoint = new SCNVector3(point.x, point.y, 0)
-    const viewRay = new SCNVector3(point.x, point.y, 0.1)
-    const worldPoint = viewPoint.transform(invVp)
-    const worldRay = viewRay.transform(invVp)
-    console.log(`worldPoint: ${worldPoint.float32Array()}`)
-    console.log(`worldRay  : ${worldRay.float32Array()}`)
-    const rayVec = worldRay.sub(worldPoint)
+    const useGPU = true
+    if(!useGPU){
+      return this._hitTestByCPU(cameraNode.viewProjectionTransform, from, to, _options)
+    }
+    return this._hitTestByGPU(cameraNode.viewProjectionTransform, from, to, _options)
+  }
 
+  _initializeHitFrameBuffer() {
+    const gl = this.context
+    //const width = 1
+    //const height = 1
+    const width = this._viewRect.size.width
+    const height = this._viewRect.size.height
+    this._hitFrameBuffer = gl.createFramebuffer()
+    this._hitDepthBuffer = gl.createRenderbuffer()
+    gl.bindFramebuffer(gl.FRAMEBUFFER, this._hitFrameBuffer)
+    gl.bindRenderbuffer(gl.RENDERBUFFER, this._hitDepthBuffer)
+    gl.renderbufferStorage(gl.RENDERBUFFER, gl.DEPTH_COMPONENT16, width, height)
+
+    this._hitObjectIDTexture = gl.createTexture()
+    gl.bindTexture(gl.TEXTURE_2D, this._hitObjectIDTexture)
+    // texImage2D(target, level, internalformat, width, height, border, format, type, source)
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, width, height, 0, gl.RGBA, gl.UNSIGNED_BYTE, null)
+
+    this._hitFaceIDTexture = gl.createTexture()
+    gl.bindTexture(gl.TEXTURE_2D, this._hitFaceIDTexture)
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, width, height, 0, gl.RGBA, gl.UNSIGNED_BYTE, null)
+
+    this._hitPositionTexture = gl.createTexture()
+    gl.bindTexture(gl.TEXTURE_2D, this._hitPositionTexture)
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, width, height, 0, gl.RGB, gl.UNSIGNED_BYTE, null)
+
+    this._hitNormalTexture = gl.createTexture()
+    gl.bindTexture(gl.TEXTURE_2D, this._hitNormalTexture)
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, width, height, 0, gl.RGB, gl.UNSIGNED_BYTE, null)
+
+    //gl.framebufferRenderbuffer(target, attachment, renderbuffertarget, renderbuffer)
+    gl.framebufferRenderbuffer(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT, gl.RENDERBUFFER, this._hitDepthBuffer)
+    //gl.framebufferTexture2D(target, attachment, textarget, texture, level)
+    gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, this._hitObjectIDTexture, 0)
+    gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT1, gl.TEXTURE_2D, this._hitFaceIDTexture, 0)
+    gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT2, gl.TEXTURE_2D, this._hitPositionTexture, 0)
+    gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT3, gl.TEXTURE_2D, this._hitNormalTexture, 0)
+    gl.drawBuffers([gl.COLOR_ATTACHMENT0, gl.COLOR_ATTACHMENT1, gl.COLOR_ATTACHMENT2, gl.COLOR_ATTACHMENT3])
+
+    gl.bindRenderbuffer(gl.RENDERBUFFER, null)
+    gl.bindFramebuffer(gl.FRAMEBUFFER, null)
+  }
+
+  /**
+   * @access private
+   * @param {SCNMatrix4} viewProjectionMatrix -
+   * @param {SCNVector3} from -
+   * @param {SCNVector3} to -
+   * @param {Object} options -
+   * @returns {SCNHitTestResult[]} -
+   */
+  _hitTestByCPU(viewProjectionMatrix, from, to, options) {
+    const result = []
+
+    const invVp = viewProjectionMatrix.invert()
+    const rayFrom = from.transform(invVp)
+    const rayTo = to.transform(invVp)
+    console.log(`rayFrom: ${rayFrom.float32Array()}`)
+    console.log(`rayTo  : ${rayTo.float32Array()}`)
+
+    const rayVec = rayTo.sub(rayFrom)
     const renderingArray = this._createRenderingNodeArray()
     console.log(`renderingArray.length: ${renderingArray.length}`)
 
-    renderingArray.forEach((node) => {
-      result.push(...this._nodeHitTest(node, worldPoint, rayVec))
-    })
+    let categoryBitMask = options.get(SCNHitTestOption.categoryBitMask)
+    if(typeof categoryBitMask === 'undefined'){
+      categoryBitMask = -1
+    }
+
+    for(const node of renderingArray){
+      if(node.categoryBitMask & categoryBitMask){
+        result.push(...this._nodeHitTestByCPU(node, rayFrom, rayVec))
+      }
+    }
+
+    return result
+  }
+
+  /**
+   * @access private
+   * @param {SCNMatrix4} viewProjectionTransform -
+   * @param {SCNVector3} rayFrom -
+   * @param {SCNVector3} rayTo -
+   * @param {Object} options -
+   * @returns {SCNHitTestResult[]} -
+   */
+  _hitTestByGPU(viewProjectionTransform, from, to, options) {
+    const result = []
+    const gl = this._context
+
+    if(this._hitFrameBuffer === null){
+      this._initializeHitFrameBuffer()
+    }
+    const hitTestProgram = this._defaultHitTestProgram._glProgram
+    gl.useProgram(hitTestProgram)
+    gl.bindFramebuffer(gl.FRAMEBUFFER, this._hitFrameBuffer)
+
+    gl.depthMask(true)
+    gl.depthFunc(gl.LEQUAL)
+    //gl.enable(gl.SCISSOR_TEST)
+    gl.disable(gl.BLEND)
+    gl.clearColor(0, 0, 0, 0)
+    gl.clearDepth(1.0)
+    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT)
+
+    const x = (from.x + 1.0) * 0.5 * this._viewRect.size.width
+    const y = (from.y + 1.0) * 0.5 * this._viewRect.size.height
+    let sx = x - 1
+    let sy = y - 1
+    if(sx < 0){
+      sx = 0
+    }else if(sx + 3 > this._viewRect.size.width){
+      sx = this._viewRect.size.width - 3
+    }
+    if(sy < 0){
+      sy = 0
+    }else if(sy + 3 > this._viewRect.size.height){
+      sy = this._viewRect.size.width - 3
+    }
+
+    gl.scissor(sx, sy, 3, 3)
+    gl.uniformMatrix4fv(gl.getUniformLocation(hitTestProgram, 'viewProjectionTransform'), false, viewProjectionTransform.float32Array())
+    let backFaceCulling = options.get(SCNHitTestOption.backFaceCulling)
+    if(typeof backFaceCulling === 'undefined'){
+      backFaceCulling = true
+    }
+    if(backFaceCulling){
+      gl.enable(gl.CULL_FACE)
+      gl.cullFace(gl.BACK)
+    }else{
+      gl.disable(gl.CULL_FACE)
+    }
+
+    let categoryBitMask = options.get(SCNHitTestOption.categoryBitMask)
+    if(typeof categoryBitMask === 'undefined'){
+      categoryBitMask = -1
+    }
+    let ignoreHiddenNodes = options.get(SCNHitTestOption.ignoreHiddenNodes)
+    if(typeof ignoreHiddenNodes === 'undefined'){
+      ignoreHiddenNodes = true
+    }
+
+    const renderingArray = this._createRenderingNodeArray()
+    const len = renderingArray.length
+    for(let i=0; i<len; i++){
+      const node = renderingArray[i]
+      if((node.categoryBitMask & categoryBitMask) == 0){
+        continue
+      }
+      if(ignoreHiddenNodes && node.isHidden){
+        continue
+      }
+      this._renderNodeForHitTest(node, i + 100, options)
+    }
+
+    const objectIDBuf = new Uint8Array(4)
+    gl.readBuffer(gl.COLOR_ATTACHMENT0)
+    gl.readPixels(x, y, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, objectIDBuf, 0)
+    const objectID = objectIDBuf[0] * 256 + objectIDBuf[1]
+    const geometryIndex = objectIDBuf[2] * 256 + objectIDBuf[3]
+
+    const faceIDBuf = new Uint8Array(4)
+    gl.readBuffer(gl.COLOR_ATTACHMENT1)
+    gl.readPixels(x, y, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, faceIDBuf, 0)
+    const faceIndex = faceIDBuf[0] * 16777216 + faceIDBuf[1] * 65536 + faceIDBuf[2] * 256 + faceIDBuf[3]
+
+    const positionBuf = new Uint8Array(3)
+    gl.readBuffer(gl.COLOR_ATTACHMENT2)
+    gl.readPixels(x, y, 1, 1, gl.RGB, gl.UNSIGNED_BYTE, positionBuf, 0)
+    const screenPos = new SCNVector3(positionBuf[0] / 127.5 - 1.0, positionBuf[1] / 127.5 - 1.0, positionBuf[2] / 255.0)
+    const position = screenPos.transform(viewProjectionTransform.invert())
+
+    const normalBuf = new Uint8Array(3)
+    gl.readBuffer(gl.COLOR_ATTACHMENT3)
+    gl.readPixels(x, y, 1, 1, gl.RGB, gl.UNSIGNED_BYTE, normalBuf, 0)
+    const normal = new SCNVector3(normalBuf[0] / 127.5 - 1.0, normalBuf[1] / 127.5 - 1.0, normalBuf[2] / 127.5 - 1.0)
+
+    console.log('***** Hit Result *****')
+    console.log(`objectID: ${objectID}`)
+    console.log(`geometryIndex: ${geometryIndex}`)
+    console.log(`faceIndex: ${faceIndex}`)
+    console.log(`position: ${position.floatArray()}`)
+    console.log(`normal: ${normal.floatArray()}`)
+    console.log('**********************')
+
+    if(objectID >= 100){
+      const r = new SCNHitTestResult()
+      const node = renderingArray[objectID - 100]
+      const worldInv = node.presentation._worldTransform.invert()
+      r._node = node
+      r._geometryIndex = geometryIndex
+      r._faceIndex = faceIndex
+      r._worldCoordinates = position
+      r._worldNormal = normal
+      r._modelTransform = node.presentation._worldTransform
+      r._localCoordinates = position.transform(worldInv)
+      r._localNormal = normal.transform(worldInv)
+
+      result.push(r)
+    }
+
+    gl.disable(gl.SCISSOR_TEST)
+    gl.bindFramebuffer(gl.FRAMEBUFFER, null)
 
     return result
   }
@@ -1639,6 +2076,77 @@ export default class SCNRenderer extends NSObject {
     }
   }
 
+  _initializeHitTestVAO(node, program) {
+    const gl = this.context
+    const geometry = node.presentation.geometry
+    const baseGeometry = node.geometry
+
+    // TODO: retain attribute locations
+    const positionLoc = gl.getAttribLocation(program, 'position')
+    const normalLoc = gl.getAttribLocation(program, 'normal')
+    const boneIndicesLoc = gl.getAttribLocation(program, 'boneIndices')
+    const boneWeightsLoc = gl.getAttribLocation(program, 'boneWeights')
+
+    geometry._hitTestVAO = []
+    const elementCount = node.presentation.geometry.geometryElements.length
+    for(let i=0; i<elementCount; i++){
+      const element = node.presentation.geometry.geometryElements[i]
+      const vao = gl.createVertexArray()
+      gl.bindVertexArray(vao)
+
+      gl.bindBuffer(gl.ARRAY_BUFFER, geometry._vertexBuffer)
+
+      gl.bindAttribLocation(program, positionLoc, 'position')
+      gl.bindAttribLocation(program, normalLoc, 'normal')
+      gl.bindAttribLocation(program, boneIndicesLoc, 'boneIndices')
+      gl.bindAttribLocation(program, boneWeightsLoc, 'boneWeights')
+      
+      // vertexAttribPointer(ulong idx, long size, ulong type, bool norm, long stride, ulong offset)
+
+      // position
+      const posSrc = geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
+      if(posSrc){
+        gl.enableVertexAttribArray(positionLoc)
+        gl.vertexAttribPointer(positionLoc, posSrc.componentsPerVector, gl.FLOAT, false, posSrc.dataStride, posSrc.dataOffset)
+      }else{
+        gl.disableVertexAttribArray(positionLoc)
+      }
+
+      // normal
+      const nrmSrc = geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.normal)[0]
+      if(nrmSrc){
+        gl.enableVertexAttribArray(normalLoc)
+        gl.vertexAttribPointer(normalLoc, nrmSrc.componentsPerVector, gl.FLOAT, false, nrmSrc.dataStride, nrmSrc.dataOffset)
+      }else{
+        gl.disableVertexAttribArray(normalLoc)
+      }
+
+      // boneIndices
+      const indSrc = node.skinner ? node.skinner._boneIndices : null
+      if(indSrc){
+        gl.enableVertexAttribArray(boneIndicesLoc)
+        gl.vertexAttribPointer(boneIndicesLoc, indSrc.componentsPerVector, gl.FLOAT, false, indSrc.dataStride, indSrc.dataOffset)
+      }else{
+        gl.disableVertexAttribArray(boneIndicesLoc)
+      }
+
+      // boneWeights
+      const wgtSrc = node.skinner ? node.skinner._boneWeights : null
+      if(wgtSrc){
+        gl.enableVertexAttribArray(boneWeightsLoc)
+        gl.vertexAttribPointer(boneWeightsLoc, wgtSrc.componentsPerVector, gl.FLOAT, false, wgtSrc.dataStride, wgtSrc.dataOffset)
+      }else{
+        gl.disableVertexAttribArray(boneWeightsLoc)
+      }
+
+      // initialize index buffer
+      // FIXME: check geometrySource semantic
+      gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, element._buffer)
+      
+      geometry._hitTestVAO.push(vao)
+    }
+  }
+
   _initializeLightBuffer(program) {
     const gl = this.context
     
@@ -1692,7 +2200,7 @@ export default class SCNRenderer extends NSObject {
 
   _setDummyTextureAsDefault() {
     const gl = this.context
-    const p = this._defaultProgram
+    const p = this.__defaultProgram
 
     const texNames = [
       gl.TEXTURE0,
@@ -1822,7 +2330,7 @@ export default class SCNRenderer extends NSObject {
    * @param {SCNVector3} rayVec -
    * @returns {SCNHitTestResult[]} -
    */
-  _nodeHitTest(node, rayPoint, rayVec) {
+  _nodeHitTestByCPU(node, rayPoint, rayVec) {
     const result = []
     const geometry = node.presentation.geometry
     const invRay = rayVec.mul(-1)
@@ -2018,6 +2526,68 @@ export default class SCNRenderer extends NSObject {
       gl.activeTexture(texName)
       gl.bindTexture(gl.TEXTURE_2D, this.__dummyTexture)
     }
+  }
+
+  /**
+   * @access private
+   * @type {SCNProgram}
+   */
+  get _defaultHitTestProgram() {
+    if(this.__defaultHitTestProgram !== null){
+      return this.__defaultHitTestProgram
+    }
+    const gl = this.context
+    if(this.__defaultHitTestProgram === null){
+      this.__defaultHitTestProgram = new SCNProgram()
+      this.__defaultHitTestProgram._glProgram = gl.createProgram()
+    }
+    const p = this.__defaultHitTestProgram
+    const vsText = _defaultHitTestVertexShader
+    const fsText = _defaultHitTestFragmentShader
+
+    // initialize vertex shader
+    const vertexShader = gl.createShader(gl.VERTEX_SHADER)
+    gl.shaderSource(vertexShader, vsText)
+    gl.compileShader(vertexShader)
+    if(!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)){
+      const info = gl.getShaderInfoLog(vertexShader)
+      throw new Error(`hitTest vertex shader compile error: ${info}`)
+    }
+
+    // initialize fragment shader
+    const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER)
+    gl.shaderSource(fragmentShader, fsText)
+    gl.compileShader(fragmentShader)
+    if(!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)){
+      const info = gl.getShaderInfoLog(fragmentShader)
+      throw new Error(`hitTest fragment shader compile error: ${info}`)
+    }
+
+    gl.attachShader(p._glProgram, vertexShader)
+    gl.attachShader(p._glProgram, fragmentShader)
+
+    // link program object
+    gl.linkProgram(p._glProgram)
+    if(!gl.getProgramParameter(p._glProgram, gl.LINK_STATUS)){
+      const info = gl.getProgramInfoLog(p._glProgram)
+      throw new Error(`program link error: ${info}`)
+    }
+
+    gl.useProgram(p._glProgram)
+    //gl.clearColor(1, 1, 1, 1)
+    //gl.clearDepth(1.0)
+    //gl.clearStencil(0)
+
+    gl.enable(gl.DEPTH_TEST)
+    gl.depthFunc(gl.LEQUAL)
+    gl.enable(gl.BLEND)
+    gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)
+    gl.enable(gl.CULL_FACE)
+    gl.cullFace(gl.BACK)
+
+    //this._setDummyHitTestTextureAsDefault()
+    
+    return this.__defaultHitTestProgram
   }
 
   /**

@@ -23195,6 +23195,7 @@ module.exports =
 	    _this._vertexArrayObjects = null;
 	    _this._materialBuffer = null;
 	    //this._textureFlagBuffer = null
+	    _this._hitTestVAO = null;
 
 	    // Working with Subdivision Surfaces
 
@@ -23894,7 +23895,7 @@ module.exports =
 	      // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
 	      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, image.width, image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
 	      gl.generateMipmap(gl.TEXTURE_2D);
-	      gl.bindTexture(gl.TEXTURE_2D, null);
+	      //gl.bindTexture(gl.TEXTURE_2D, null)
 	      return texture;
 	    }
 
@@ -26009,7 +26010,9 @@ module.exports =
 
 	  }]);
 
-	  function SCNMaterialProperty(contents) {
+	  function SCNMaterialProperty() {
+	    var contents = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+
 	    _classCallCheck(this, SCNMaterialProperty);
 
 	    // Working with Material Property Contents
@@ -27783,6 +27786,10 @@ module.exports =
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
+	var _SCNHitTestOption = __webpack_require__(119);
+
+	var _SCNHitTestOption2 = _interopRequireDefault(_SCNHitTestOption);
+
 	var _SCNHitTestResult = __webpack_require__(103);
 
 	var _SCNHitTestResult2 = _interopRequireDefault(_SCNHitTestResult);
@@ -27836,9 +27843,29 @@ module.exports =
 
 	var _defaultCameraDistance = 15;
 
+	/**
+	 * @access private
+	 * @type {string}
+	 */
 	var _defaultParticleVertexShader = '#version 300 es\n  precision mediump float;\n\n  uniform mat4 viewTransform;\n  uniform mat4 projectionTransform;\n\n  in vec3 position;\n  in vec4 rotation;\n  in vec4 color;\n  in float size;\n  //in float life;\n  in vec2 corner;\n\n  out vec2 v_texcoord;\n  out vec4 v_color;\n\n  void main() {\n    vec4 pos = viewTransform * vec4(position, 1.0);\n    float sinAngle = sin(rotation.w);\n    float cosAngle = cos(rotation.w);\n    float tcos = 1.0 - cosAngle;\n    vec3 d = vec3(\n        corner.x * (rotation.x * rotation.x * tcos + cosAngle)\n      + corner.y * (rotation.x * rotation.y * tcos - rotation.z * sinAngle),\n        corner.x * (rotation.y * rotation.x * tcos + rotation.z * sinAngle)\n      + corner.y * (rotation.y * rotation.y * tcos + cosAngle),\n        corner.x * (rotation.z * rotation.x * tcos - rotation.y * sinAngle)\n      + corner.y * (rotation.z * rotation.y * tcos + rotation.x * sinAngle)) * size * 0.5;\n\n    pos.xyz += d;\n\n    v_color = color;\n    v_texcoord = corner * vec2(0.5, -0.5) + 0.5;\n    gl_Position = projectionTransform * pos;\n  }\n';
 
+	/**
+	 * @access private
+	 * @type {string}
+	 */
 	var _defaultParticleFragmentShader = '#version 300 es\n  precision mediump float;\n\n  uniform sampler2D particleTexture;\n\n  in vec2 v_texcoord;\n  in vec4 v_color;\n\n  out vec4 outColor;\n\n  void main() {\n    vec4 texColor = texture(particleTexture, v_texcoord);\n    texColor.rgb *= texColor.a;\n    outColor = v_color * texColor;\n  }\n';
+
+	/**
+	 * @access private
+	 * @type {string}
+	 */
+	var _defaultHitTestVertexShader = '#version 300 es\n  precision mediump float;\n\n  uniform mat4 viewProjectionTransform;\n  uniform vec4[765] skinningJoints;\n  uniform int numSkinningJoints;\n\n  in vec3 position;\n  in vec3 normal;\n  in vec4 boneIndices;\n  in vec4 boneWeights;\n  \n  out vec3 v_normal;\n  out vec3 v_position;\n\n  void main() {\n    vec3 pos = vec3(0, 0, 0);\n    vec3 nom = vec3(0, 0, 0);\n    if(numSkinningJoints > 0){\n      for(int i=0; i<numSkinningJoints; i++){\n        float weight = boneWeights[i];\n        if(int(boneIndices[i]) < 0){\n          continue;\n        }\n        int idx = int(boneIndices[i]) * 3;\n        mat4 jointMatrix = transpose(mat4(skinningJoints[idx],\n                                          skinningJoints[idx+1],\n                                          skinningJoints[idx+2],\n                                          vec4(0, 0, 0, 1)));\n        pos += (jointMatrix * vec4(position, 1.0)).xyz * weight;\n        nom += (mat3(jointMatrix) * normal) * weight;\n      }\n    }else{\n      mat4 jointMatrix = transpose(mat4(skinningJoints[0],\n                                        skinningJoints[1],\n                                        skinningJoints[2],\n                                        vec4(0, 0, 0, 1)));\n      pos = (jointMatrix * vec4(position, 1.0)).xyz;\n      nom = mat3(jointMatrix) * normal;\n    }\n    //v_position = pos;\n    v_normal = nom;\n\n    gl_Position = viewProjectionTransform * vec4(pos, 1.0);\n    v_position = gl_Position.xyz / gl_Position.w;\n  }\n';
+
+	/**
+	 * @access private
+	 * @type {string}
+	 */
+	var _defaultHitTestFragmentShader = '#version 300 es\n  precision mediump float;\n\n  uniform int objectID;\n  uniform int geometryID;\n\n  in vec3 v_normal;\n  in vec3 v_position;\n\n  layout(location = 0) out vec4 out_objectID;\n  layout(location = 1) out vec4 out_faceID;\n  layout(location = 2) out vec3 out_position;\n  layout(location = 3) out vec3 out_normal;\n\n  void main() {\n    out_objectID = vec4(\n      float(objectID >> 8) / 255.0,\n      float(objectID & 0xFF) / 255.0,\n      float(geometryID >> 8) / 255.0,\n      float(geometryID & 0xFF) / 255.0\n    );\n    //out_faceID = vec4(\n    //  (gl_PrimitiveID >> 24) / 255.0,\n    //  ((gl_PrimitiveID >> 16) & 0xFF) / 255.0,\n    //  ((gl_PrimitiveID >> 8) & 0xFF) / 255.0,\n    //  (gl_PrimitiveID & 0xFF) / 255.0\n    //);\n    out_faceID = vec4(0, 0, 0, 0); // TODO: implement\n    vec3 n = normalize(v_normal);\n    out_normal = vec3((n.x + 1.0) * 0.5, (n.y + 1.0) * 0.5, (n.z + 1.0) * 0.5);\n    out_position = vec3((v_position.x + 1.0) * 0.5, (v_position.y + 1.0) * 0.5, v_position.z);\n  }\n';
 
 	/**
 	 * A renderer for displaying SceneKit scene in an an existing Metal workflow or OpenGL context. 
@@ -28022,6 +28049,12 @@ module.exports =
 	     */
 	    _this.__defaultParticleProgram = null;
 
+	    /**
+	     * @access private
+	     * @type {SCNProgram}
+	     */
+	    _this.__defaultHitTestProgram = null;
+
 	    _this._location = new Map();
 
 	    _this._defaultCameraPosNode = new _SCNNode2.default();
@@ -28051,6 +28084,12 @@ module.exports =
 	    _this._viewRect = null;
 
 	    /**
+	     * The background color of the view.
+	     * @type {SKColor}
+	     */
+	    _this._backgroundColor = _SKColor2.default.white;
+
+	    /**
 	     * @access private
 	     * @type {WebGLTexture}
 	     */
@@ -28073,6 +28112,46 @@ module.exports =
 	     * @type {WebGLBuffer}
 	     */
 	    _this._lightBuffer = null;
+
+	    ////////////////////////////
+	    // Hit Test
+	    ////////////////////////////
+
+	    /**
+	     * @access private
+	     * @type {WebGLFramebuffer}
+	     */
+	    _this._hitFrameBuffer = null;
+
+	    /**
+	     * @access private
+	     * @type {WebGLRenderbuffer}
+	     */
+	    _this._hitDepthBuffer = null;
+
+	    /**
+	     * @access private
+	     * @type {WebGLTexture}
+	     */
+	    _this._hitObjectIDTexture = null;
+
+	    /**
+	     * @access private
+	     * @type {WebGLTexture}
+	     */
+	    _this._hitFaceIDTexture = null;
+
+	    /**
+	     * @access private
+	     * @type {WebGLTexture}
+	     */
+	    _this._hitPositionTexture = null;
+
+	    /**
+	     * @access private
+	     * @type {WebGLTexture}
+	     */
+	    _this._hitNormalTexture = null;
 	    return _this;
 	  }
 
@@ -28157,6 +28236,7 @@ module.exports =
 	      var gl = this.context;
 	      var program = this._defaultProgram._glProgram;
 
+	      gl.clearColor(this._backgroundColor.r, this._backgroundColor.g, this._backgroundColor.b, this._backgroundColor.a);
 	      gl.clearDepth(1.0);
 	      gl.clearStencil(0);
 	      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT);
@@ -28442,7 +28522,7 @@ module.exports =
 	      }
 
 	      // TODO: use geometry setting
-	      gl.disable(gl.CULL_FACE);
+	      //gl.disable(gl.CULL_FACE)
 
 	      if (node.presentation.skinner !== null) {
 	        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints);
@@ -28559,6 +28639,93 @@ module.exports =
 
 	      //console.log(`renderParticle node: ${node.name}, length: ${system._particles.length}`)
 	      gl.drawElements(gl.TRIANGLES, system._particles.length * 6, system._glIndexSize, 0);
+	    }
+
+	    /**
+	     *
+	     * @access private
+	     * @param {SCNNode} node -
+	     * @param {number} objectID -
+	     * @param {Map} options -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_renderNodeForHitTest',
+	    value: function _renderNodeForHitTest(node, objectID, options) {
+	      var gl = this.context;
+	      var geometry = node.presentation.geometry;
+	      var program = this._defaultHitTestProgram._glProgram;
+
+	      if (geometry._vertexArrayObjects === null) {
+	        // geometry is not ready
+	        return;
+	      }
+	      if (geometry._hitTestVAO === null) {
+	        this._initializeHitTestVAO(node, program);
+	      }
+
+	      console.log('uniform1i: objectID: ' + objectID);
+	      gl.uniform1i(gl.getUniformLocation(program, 'objectID'), objectID);
+
+	      if (node.presentation.skinner !== null) {
+	        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints);
+	        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array());
+	      } else {
+	        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0);
+	        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f());
+	      }
+
+	      var geometryCount = geometry.geometryElements.length;
+	      if (geometryCount === 0) {
+	        throw new Error('geometryCount: 0');
+	      }
+	      for (var i = 0; i < geometryCount; i++) {
+	        var vao = geometry._hitTestVAO[i];
+	        var element = geometry.geometryElements[i];
+
+	        gl.bindVertexArray(vao);
+	        gl.uniform1i(gl.getUniformLocation(program, 'geometryID'), i);
+
+	        var shape = null;
+	        switch (element.primitiveType) {
+	          case _SCNGeometryPrimitiveType2.default.triangles:
+	            shape = gl.TRIANGLES;
+	            break;
+	          case _SCNGeometryPrimitiveType2.default.triangleStrip:
+	            shape = gl.TRIANGLE_STRIP;
+	            break;
+	          case _SCNGeometryPrimitiveType2.default.line:
+	            shape = gl.LINES;
+	            break;
+	          case _SCNGeometryPrimitiveType2.default.point:
+	            shape = gl.POINTS;
+	            break;
+	          case _SCNGeometryPrimitiveType2.default.polygon:
+	            shape = gl.TRIANGLE_FAN;
+	            break;
+	          default:
+	            throw new Error('unsupported primitiveType: ' + element.primitiveType);
+	        }
+
+	        var size = null;
+	        switch (element.bytesPerIndex) {
+	          case 1:
+	            size = gl.UNSIGNED_BYTE;
+	            break;
+	          case 2:
+	            size = gl.UNSIGNED_SHORT;
+	            break;
+	          case 4:
+	            size = gl.UNSIGNED_INT;
+	            break;
+	          default:
+	            throw new Error('unsupported index size: ' + element.bytesPerIndex);
+	        }
+
+	        console.log('hitTest drawElements: length: ' + element._glData.length);
+	        gl.drawElements(shape, element._glData.length, size, 0);
+	      }
 	    }
 
 	    /**
@@ -28733,34 +28900,260 @@ module.exports =
 	  }, {
 	    key: 'hitTest',
 	    value: function hitTest(point) {
-	      var _this4 = this;
-
 	      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
 
-	      var result = [];
 	      if (this.scene === null) {
-	        return result;
+	        return [];
+	      }
+	      var _options = new Map();
+	      if (options instanceof Map) {
+	        _options = options;
+	      } else if (Array.isArray(options)) {
+	        _options = new Map(options);
 	      }
 
 	      var cameraNode = this._getCameraNode();
 	      cameraNode.camera._updateProjectionTransform(this._viewRect);
-	      var vp = cameraNode.viewProjectionTransform;
-	      var invVp = vp.invert();
+	      var from = new _SCNVector2.default(point.x, point.y, 0);
+	      var to = new _SCNVector2.default(point.x, point.y, 1.0);
 
-	      var viewPoint = new _SCNVector2.default(point.x, point.y, 0);
-	      var viewRay = new _SCNVector2.default(point.x, point.y, 0.1);
-	      var worldPoint = viewPoint.transform(invVp);
-	      var worldRay = viewRay.transform(invVp);
-	      console.log('worldPoint: ' + worldPoint.float32Array());
-	      console.log('worldRay  : ' + worldRay.float32Array());
-	      var rayVec = worldRay.sub(worldPoint);
+	      var useGPU = true;
+	      if (!useGPU) {
+	        return this._hitTestByCPU(cameraNode.viewProjectionTransform, from, to, _options);
+	      }
+	      return this._hitTestByGPU(cameraNode.viewProjectionTransform, from, to, _options);
+	    }
+	  }, {
+	    key: '_initializeHitFrameBuffer',
+	    value: function _initializeHitFrameBuffer() {
+	      var gl = this.context;
+	      //const width = 1
+	      //const height = 1
+	      var width = this._viewRect.size.width;
+	      var height = this._viewRect.size.height;
+	      this._hitFrameBuffer = gl.createFramebuffer();
+	      this._hitDepthBuffer = gl.createRenderbuffer();
+	      gl.bindFramebuffer(gl.FRAMEBUFFER, this._hitFrameBuffer);
+	      gl.bindRenderbuffer(gl.RENDERBUFFER, this._hitDepthBuffer);
+	      gl.renderbufferStorage(gl.RENDERBUFFER, gl.DEPTH_COMPONENT16, width, height);
 
+	      this._hitObjectIDTexture = gl.createTexture();
+	      gl.bindTexture(gl.TEXTURE_2D, this._hitObjectIDTexture);
+	      // texImage2D(target, level, internalformat, width, height, border, format, type, source)
+	      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, width, height, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
+
+	      this._hitFaceIDTexture = gl.createTexture();
+	      gl.bindTexture(gl.TEXTURE_2D, this._hitFaceIDTexture);
+	      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, width, height, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
+
+	      this._hitPositionTexture = gl.createTexture();
+	      gl.bindTexture(gl.TEXTURE_2D, this._hitPositionTexture);
+	      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, width, height, 0, gl.RGB, gl.UNSIGNED_BYTE, null);
+
+	      this._hitNormalTexture = gl.createTexture();
+	      gl.bindTexture(gl.TEXTURE_2D, this._hitNormalTexture);
+	      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, width, height, 0, gl.RGB, gl.UNSIGNED_BYTE, null);
+
+	      //gl.framebufferRenderbuffer(target, attachment, renderbuffertarget, renderbuffer)
+	      gl.framebufferRenderbuffer(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT, gl.RENDERBUFFER, this._hitDepthBuffer);
+	      //gl.framebufferTexture2D(target, attachment, textarget, texture, level)
+	      gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, this._hitObjectIDTexture, 0);
+	      gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT1, gl.TEXTURE_2D, this._hitFaceIDTexture, 0);
+	      gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT2, gl.TEXTURE_2D, this._hitPositionTexture, 0);
+	      gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT3, gl.TEXTURE_2D, this._hitNormalTexture, 0);
+	      gl.drawBuffers([gl.COLOR_ATTACHMENT0, gl.COLOR_ATTACHMENT1, gl.COLOR_ATTACHMENT2, gl.COLOR_ATTACHMENT3]);
+
+	      gl.bindRenderbuffer(gl.RENDERBUFFER, null);
+	      gl.bindFramebuffer(gl.FRAMEBUFFER, null);
+	    }
+
+	    /**
+	     * @access private
+	     * @param {SCNMatrix4} viewProjectionMatrix -
+	     * @param {SCNVector3} from -
+	     * @param {SCNVector3} to -
+	     * @param {Object} options -
+	     * @returns {SCNHitTestResult[]} -
+	     */
+
+	  }, {
+	    key: '_hitTestByCPU',
+	    value: function _hitTestByCPU(viewProjectionMatrix, from, to, options) {
+	      var result = [];
+
+	      var invVp = viewProjectionMatrix.invert();
+	      var rayFrom = from.transform(invVp);
+	      var rayTo = to.transform(invVp);
+	      console.log('rayFrom: ' + rayFrom.float32Array());
+	      console.log('rayTo  : ' + rayTo.float32Array());
+
+	      var rayVec = rayTo.sub(rayFrom);
 	      var renderingArray = this._createRenderingNodeArray();
 	      console.log('renderingArray.length: ' + renderingArray.length);
 
-	      renderingArray.forEach(function (node) {
-	        result.push.apply(result, _toConsumableArray(_this4._nodeHitTest(node, worldPoint, rayVec)));
-	      });
+	      var categoryBitMask = options.get(_SCNHitTestOption2.default.categoryBitMask);
+	      if (typeof categoryBitMask === 'undefined') {
+	        categoryBitMask = -1;
+	      }
+
+	      var _iteratorNormalCompletion3 = true;
+	      var _didIteratorError3 = false;
+	      var _iteratorError3 = undefined;
+
+	      try {
+	        for (var _iterator3 = renderingArray[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+	          var node = _step3.value;
+
+	          if (node.categoryBitMask & categoryBitMask) {
+	            result.push.apply(result, _toConsumableArray(this._nodeHitTestByCPU(node, rayFrom, rayVec)));
+	          }
+	        }
+	      } catch (err) {
+	        _didIteratorError3 = true;
+	        _iteratorError3 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion3 && _iterator3.return) {
+	            _iterator3.return();
+	          }
+	        } finally {
+	          if (_didIteratorError3) {
+	            throw _iteratorError3;
+	          }
+	        }
+	      }
+
+	      return result;
+	    }
+
+	    /**
+	     * @access private
+	     * @param {SCNMatrix4} viewProjectionTransform -
+	     * @param {SCNVector3} rayFrom -
+	     * @param {SCNVector3} rayTo -
+	     * @param {Object} options -
+	     * @returns {SCNHitTestResult[]} -
+	     */
+
+	  }, {
+	    key: '_hitTestByGPU',
+	    value: function _hitTestByGPU(viewProjectionTransform, from, to, options) {
+	      var result = [];
+	      var gl = this._context;
+
+	      if (this._hitFrameBuffer === null) {
+	        this._initializeHitFrameBuffer();
+	      }
+	      var hitTestProgram = this._defaultHitTestProgram._glProgram;
+	      gl.useProgram(hitTestProgram);
+	      gl.bindFramebuffer(gl.FRAMEBUFFER, this._hitFrameBuffer);
+
+	      gl.depthMask(true);
+	      gl.depthFunc(gl.LEQUAL);
+	      //gl.enable(gl.SCISSOR_TEST)
+	      gl.disable(gl.BLEND);
+	      gl.clearColor(0, 0, 0, 0);
+	      gl.clearDepth(1.0);
+	      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+
+	      var x = (from.x + 1.0) * 0.5 * this._viewRect.size.width;
+	      var y = (from.y + 1.0) * 0.5 * this._viewRect.size.height;
+	      var sx = x - 1;
+	      var sy = y - 1;
+	      if (sx < 0) {
+	        sx = 0;
+	      } else if (sx + 3 > this._viewRect.size.width) {
+	        sx = this._viewRect.size.width - 3;
+	      }
+	      if (sy < 0) {
+	        sy = 0;
+	      } else if (sy + 3 > this._viewRect.size.height) {
+	        sy = this._viewRect.size.width - 3;
+	      }
+
+	      gl.scissor(sx, sy, 3, 3);
+	      gl.uniformMatrix4fv(gl.getUniformLocation(hitTestProgram, 'viewProjectionTransform'), false, viewProjectionTransform.float32Array());
+	      var backFaceCulling = options.get(_SCNHitTestOption2.default.backFaceCulling);
+	      if (typeof backFaceCulling === 'undefined') {
+	        backFaceCulling = true;
+	      }
+	      if (backFaceCulling) {
+	        gl.enable(gl.CULL_FACE);
+	        gl.cullFace(gl.BACK);
+	      } else {
+	        gl.disable(gl.CULL_FACE);
+	      }
+
+	      var categoryBitMask = options.get(_SCNHitTestOption2.default.categoryBitMask);
+	      if (typeof categoryBitMask === 'undefined') {
+	        categoryBitMask = -1;
+	      }
+	      var ignoreHiddenNodes = options.get(_SCNHitTestOption2.default.ignoreHiddenNodes);
+	      if (typeof ignoreHiddenNodes === 'undefined') {
+	        ignoreHiddenNodes = true;
+	      }
+
+	      var renderingArray = this._createRenderingNodeArray();
+	      var len = renderingArray.length;
+	      for (var i = 0; i < len; i++) {
+	        var node = renderingArray[i];
+	        if ((node.categoryBitMask & categoryBitMask) == 0) {
+	          continue;
+	        }
+	        if (ignoreHiddenNodes && node.isHidden) {
+	          continue;
+	        }
+	        this._renderNodeForHitTest(node, i + 100, options);
+	      }
+
+	      var objectIDBuf = new Uint8Array(4);
+	      gl.readBuffer(gl.COLOR_ATTACHMENT0);
+	      gl.readPixels(x, y, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, objectIDBuf, 0);
+	      var objectID = objectIDBuf[0] * 256 + objectIDBuf[1];
+	      var geometryIndex = objectIDBuf[2] * 256 + objectIDBuf[3];
+
+	      var faceIDBuf = new Uint8Array(4);
+	      gl.readBuffer(gl.COLOR_ATTACHMENT1);
+	      gl.readPixels(x, y, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, faceIDBuf, 0);
+	      var faceIndex = faceIDBuf[0] * 16777216 + faceIDBuf[1] * 65536 + faceIDBuf[2] * 256 + faceIDBuf[3];
+
+	      var positionBuf = new Uint8Array(3);
+	      gl.readBuffer(gl.COLOR_ATTACHMENT2);
+	      gl.readPixels(x, y, 1, 1, gl.RGB, gl.UNSIGNED_BYTE, positionBuf, 0);
+	      var screenPos = new _SCNVector2.default(positionBuf[0] / 127.5 - 1.0, positionBuf[1] / 127.5 - 1.0, positionBuf[2] / 255.0);
+	      var position = screenPos.transform(viewProjectionTransform.invert());
+
+	      var normalBuf = new Uint8Array(3);
+	      gl.readBuffer(gl.COLOR_ATTACHMENT3);
+	      gl.readPixels(x, y, 1, 1, gl.RGB, gl.UNSIGNED_BYTE, normalBuf, 0);
+	      var normal = new _SCNVector2.default(normalBuf[0] / 127.5 - 1.0, normalBuf[1] / 127.5 - 1.0, normalBuf[2] / 127.5 - 1.0);
+
+	      console.log('***** Hit Result *****');
+	      console.log('objectID: ' + objectID);
+	      console.log('geometryIndex: ' + geometryIndex);
+	      console.log('faceIndex: ' + faceIndex);
+	      console.log('position: ' + position.floatArray());
+	      console.log('normal: ' + normal.floatArray());
+	      console.log('**********************');
+
+	      if (objectID >= 100) {
+	        var r = new _SCNHitTestResult2.default();
+	        var _node = renderingArray[objectID - 100];
+	        var worldInv = _node.presentation._worldTransform.invert();
+	        r._node = _node;
+	        r._geometryIndex = geometryIndex;
+	        r._faceIndex = faceIndex;
+	        r._worldCoordinates = position;
+	        r._worldNormal = normal;
+	        r._modelTransform = _node.presentation._worldTransform;
+	        r._localCoordinates = position.transform(worldInv);
+	        r._localNormal = normal.transform(worldInv);
+
+	        result.push(r);
+	      }
+
+	      gl.disable(gl.SCISSOR_TEST);
+	      gl.bindFramebuffer(gl.FRAMEBUFFER, null);
 
 	      return result;
 	    }
@@ -29029,6 +29422,78 @@ module.exports =
 	      }
 	    }
 	  }, {
+	    key: '_initializeHitTestVAO',
+	    value: function _initializeHitTestVAO(node, program) {
+	      var gl = this.context;
+	      var geometry = node.presentation.geometry;
+	      var baseGeometry = node.geometry;
+
+	      // TODO: retain attribute locations
+	      var positionLoc = gl.getAttribLocation(program, 'position');
+	      var normalLoc = gl.getAttribLocation(program, 'normal');
+	      var boneIndicesLoc = gl.getAttribLocation(program, 'boneIndices');
+	      var boneWeightsLoc = gl.getAttribLocation(program, 'boneWeights');
+
+	      geometry._hitTestVAO = [];
+	      var elementCount = node.presentation.geometry.geometryElements.length;
+	      for (var i = 0; i < elementCount; i++) {
+	        var element = node.presentation.geometry.geometryElements[i];
+	        var vao = gl.createVertexArray();
+	        gl.bindVertexArray(vao);
+
+	        gl.bindBuffer(gl.ARRAY_BUFFER, geometry._vertexBuffer);
+
+	        gl.bindAttribLocation(program, positionLoc, 'position');
+	        gl.bindAttribLocation(program, normalLoc, 'normal');
+	        gl.bindAttribLocation(program, boneIndicesLoc, 'boneIndices');
+	        gl.bindAttribLocation(program, boneWeightsLoc, 'boneWeights');
+
+	        // vertexAttribPointer(ulong idx, long size, ulong type, bool norm, long stride, ulong offset)
+
+	        // position
+	        var posSrc = geometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
+	        if (posSrc) {
+	          gl.enableVertexAttribArray(positionLoc);
+	          gl.vertexAttribPointer(positionLoc, posSrc.componentsPerVector, gl.FLOAT, false, posSrc.dataStride, posSrc.dataOffset);
+	        } else {
+	          gl.disableVertexAttribArray(positionLoc);
+	        }
+
+	        // normal
+	        var nrmSrc = geometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.normal)[0];
+	        if (nrmSrc) {
+	          gl.enableVertexAttribArray(normalLoc);
+	          gl.vertexAttribPointer(normalLoc, nrmSrc.componentsPerVector, gl.FLOAT, false, nrmSrc.dataStride, nrmSrc.dataOffset);
+	        } else {
+	          gl.disableVertexAttribArray(normalLoc);
+	        }
+
+	        // boneIndices
+	        var indSrc = node.skinner ? node.skinner._boneIndices : null;
+	        if (indSrc) {
+	          gl.enableVertexAttribArray(boneIndicesLoc);
+	          gl.vertexAttribPointer(boneIndicesLoc, indSrc.componentsPerVector, gl.FLOAT, false, indSrc.dataStride, indSrc.dataOffset);
+	        } else {
+	          gl.disableVertexAttribArray(boneIndicesLoc);
+	        }
+
+	        // boneWeights
+	        var wgtSrc = node.skinner ? node.skinner._boneWeights : null;
+	        if (wgtSrc) {
+	          gl.enableVertexAttribArray(boneWeightsLoc);
+	          gl.vertexAttribPointer(boneWeightsLoc, wgtSrc.componentsPerVector, gl.FLOAT, false, wgtSrc.dataStride, wgtSrc.dataOffset);
+	        } else {
+	          gl.disableVertexAttribArray(boneWeightsLoc);
+	        }
+
+	        // initialize index buffer
+	        // FIXME: check geometrySource semantic
+	        gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, element._buffer);
+
+	        geometry._hitTestVAO.push(vao);
+	      }
+	    }
+	  }, {
 	    key: '_initializeLightBuffer',
 	    value: function _initializeLightBuffer(program) {
 	      var gl = this.context;
@@ -29083,7 +29548,7 @@ module.exports =
 	    key: '_setDummyTextureAsDefault',
 	    value: function _setDummyTextureAsDefault() {
 	      var gl = this.context;
-	      var p = this._defaultProgram;
+	      var p = this.__defaultProgram;
 
 	      var texNames = [gl.TEXTURE0, gl.TEXTURE1, gl.TEXTURE2, gl.TEXTURE3, gl.TEXTURE4, gl.TEXTURE5, gl.TEXTURE6, gl.TEXTURE7];
 	      var texSymbols = ['u_emissionTexture', 'u_ambientTexture', 'u_diffuseTexture', 'u_specularTexture', 'u_reflectiveTexture', 'u_transparentTexture', 'u_multiplyTexture', 'u_normalTexture'];
@@ -29192,14 +29657,14 @@ module.exports =
 	  }, {
 	    key: '_numLightsChanged',
 	    value: function _numLightsChanged() {
-	      var _this5 = this;
+	      var _this4 = this;
 
 	      var changed = false;
 	      Object.values(_SCNLight2.default.LightType).forEach(function (type) {
-	        var num = _this5._lightNodes[type].length;
-	        if (num !== _this5._numLights[type]) {
+	        var num = _this4._lightNodes[type].length;
+	        if (num !== _this4._numLights[type]) {
 	          changed = true;
-	          _this5._numLights[type] = num;
+	          _this4._numLights[type] = num;
 	        }
 	      });
 	      return changed;
@@ -29214,8 +29679,8 @@ module.exports =
 	     */
 
 	  }, {
-	    key: '_nodeHitTest',
-	    value: function _nodeHitTest(node, rayPoint, rayVec) {
+	    key: '_nodeHitTestByCPU',
+	    value: function _nodeHitTestByCPU(node, rayPoint, rayVec) {
 	      var result = [];
 	      var geometry = node.presentation.geometry;
 	      var invRay = rayVec.mul(-1);
@@ -29356,6 +29821,15 @@ module.exports =
 	    }
 
 	    /**
+	     * @access private
+	     * @type {SCNProgram}
+	     */
+
+	  }, {
+	    key: '_det',
+
+
+	    /**
 	     * calculate a determinant of 3x3 matrix from 3 vectors.
 	     * @access private
 	     * @param {SCNVector3} v1 -
@@ -29363,9 +29837,6 @@ module.exports =
 	     * @param {SCNVector3} v3 -
 	     * @returns {number} -
 	     */
-
-	  }, {
-	    key: '_det',
 	    value: function _det(v1, v2, v3) {
 	      return v1.x * v2.y * v3.z + v1.y * v2.z * v3.x + v1.z * v2.x * v3.y - v1.x * v2.z * v3.y - v1.y * v2.x * v3.z - v1.z * v2.y * v3.x;
 	    }
@@ -29661,6 +30132,65 @@ module.exports =
 	      this._setDummyParticleTextureAsDefault();
 
 	      return this.__defaultParticleProgram;
+	    }
+	  }, {
+	    key: '_defaultHitTestProgram',
+	    get: function get() {
+	      if (this.__defaultHitTestProgram !== null) {
+	        return this.__defaultHitTestProgram;
+	      }
+	      var gl = this.context;
+	      if (this.__defaultHitTestProgram === null) {
+	        this.__defaultHitTestProgram = new _SCNProgram2.default();
+	        this.__defaultHitTestProgram._glProgram = gl.createProgram();
+	      }
+	      var p = this.__defaultHitTestProgram;
+	      var vsText = _defaultHitTestVertexShader;
+	      var fsText = _defaultHitTestFragmentShader;
+
+	      // initialize vertex shader
+	      var vertexShader = gl.createShader(gl.VERTEX_SHADER);
+	      gl.shaderSource(vertexShader, vsText);
+	      gl.compileShader(vertexShader);
+	      if (!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)) {
+	        var info = gl.getShaderInfoLog(vertexShader);
+	        throw new Error('hitTest vertex shader compile error: ' + info);
+	      }
+
+	      // initialize fragment shader
+	      var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+	      gl.shaderSource(fragmentShader, fsText);
+	      gl.compileShader(fragmentShader);
+	      if (!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)) {
+	        var _info5 = gl.getShaderInfoLog(fragmentShader);
+	        throw new Error('hitTest fragment shader compile error: ' + _info5);
+	      }
+
+	      gl.attachShader(p._glProgram, vertexShader);
+	      gl.attachShader(p._glProgram, fragmentShader);
+
+	      // link program object
+	      gl.linkProgram(p._glProgram);
+	      if (!gl.getProgramParameter(p._glProgram, gl.LINK_STATUS)) {
+	        var _info6 = gl.getProgramInfoLog(p._glProgram);
+	        throw new Error('program link error: ' + _info6);
+	      }
+
+	      gl.useProgram(p._glProgram);
+	      //gl.clearColor(1, 1, 1, 1)
+	      //gl.clearDepth(1.0)
+	      //gl.clearStencil(0)
+
+	      gl.enable(gl.DEPTH_TEST);
+	      gl.depthFunc(gl.LEQUAL);
+	      gl.enable(gl.BLEND);
+	      gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+	      gl.enable(gl.CULL_FACE);
+	      gl.cullFace(gl.BACK);
+
+	      //this._setDummyHitTestTextureAsDefault()
+
+	      return this.__defaultHitTestProgram;
 	    }
 	  }]);
 
@@ -30358,6 +30888,7 @@ module.exports =
 	    var material = new _SCNMaterial2.default();
 	    material._diffuse._contents = _SKColor2.default.black;
 	    material._ambient._contents = _SKColor2.default.black;
+	    material._emission._contents = null;
 
 	    skyBoxGeometry.firstMaterial = material;
 	    var texSrc = skyBoxGeometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.texcoord)[0];
@@ -32063,6 +32594,12 @@ module.exports =
 	    //)
 
 	    _this._prevTime = null;
+
+	    /**
+	     * @access private
+	     * @type {SCNScene}
+	     */
+	    _this._scene = null;
 	    return _this;
 	  }
 
@@ -44571,9 +45108,8 @@ module.exports =
 	    }
 	    this._context.viewport(frame.minX, frame.minY, frame.width, frame.height);
 
-	    this._context.clearColor(this.backgroundColor.r, this.backgroundColor.g, this.backgroundColor.b, this.backgroundColor.a);
-
 	    this._renderer._setContext(this._context);
+	    this._renderer._backgroundColor = this._backgroundColor;
 	    this._renderer._viewRect = frame;
 
 	    this._mouseIsDown = false;
@@ -45513,7 +46049,8 @@ module.exports =
 	    },
 	    set: function set(newValue) {
 	      this._backgroundColor = newValue;
-	      this._context.clearColor(newValue.r, newValue.g, newValue.b, newValue.a);
+	      //this._context.clearColor(newValue.r, newValue.g, newValue.b, newValue.a)
+	      this._renderer._backgroundColor = newValue;
 	    }
 
 	    /**

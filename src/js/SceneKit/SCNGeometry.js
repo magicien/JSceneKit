@@ -103,6 +103,7 @@ export default class SCNGeometry extends NSObject {
     this._vertexArrayObjects = null
     this._materialBuffer = null
     //this._textureFlagBuffer = null
+    this._hitTestVAO = null
 
     // Working with Subdivision Surfaces
 
@@ -781,7 +782,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
     gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, image.width, image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas)
     gl.generateMipmap(gl.TEXTURE_2D)
-    gl.bindTexture(gl.TEXTURE_2D, null)
+    //gl.bindTexture(gl.TEXTURE_2D, null)
     return texture
   }
 

@@ -61,7 +61,7 @@ export default class SCNMaterialProperty extends NSObject {
    * @desc Newly created SCNMaterial objects contain SCNMaterialProperty instances for all of their visual properties. To change a material’s visual properties, you modify those instances rather than creating new material property objects.You create new SCNMaterialProperty instances to provide textures for use with custom GLSL shaders—for details, see SCNShadable.
    * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395386-init
    */
-  constructor(contents) {
+  constructor(contents = null) {
     super()
 
     // Working with Material Property Contents

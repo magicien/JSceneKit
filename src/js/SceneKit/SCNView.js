@@ -284,14 +284,8 @@ export default class SCNView {
     }
     this._context.viewport(frame.minX, frame.minY, frame.width, frame.height)
 
-    this._context.clearColor(
-      this.backgroundColor.r,
-      this.backgroundColor.g,
-      this.backgroundColor.b,
-      this.backgroundColor.a
-    )
-
     this._renderer._setContext(this._context)
+    this._renderer._backgroundColor = this._backgroundColor
     this._renderer._viewRect = frame
 
     this._mouseIsDown = false
@@ -455,7 +449,8 @@ export default class SCNView {
   }
   set backgroundColor(newValue) {
     this._backgroundColor = newValue
-    this._context.clearColor(newValue.r, newValue.g, newValue.b, newValue.a)
+    //this._context.clearColor(newValue.r, newValue.g, newValue.b, newValue.a)
+    this._renderer._backgroundColor = newValue
   }
 
   /**

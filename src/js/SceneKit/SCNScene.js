@@ -145,6 +145,7 @@ You call this method in a try expression and handle any errors in the catch clau
     const material = new SCNMaterial()
     material._diffuse._contents = SKColor.black
     material._ambient._contents = SKColor.black
+    material._emission._contents = null
 
     skyBoxGeometry.firstMaterial = material
     const texSrc = skyBoxGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[0]

@@ -103,6 +103,12 @@ export default class SCNPhysicsWorld extends NSObject {
     //)
 
     this._prevTime = null
+
+    /**
+     * @access private
+     * @type {SCNScene}
+     */
+    this._scene = null
   }
 
   // Managing the Physics Simulation
