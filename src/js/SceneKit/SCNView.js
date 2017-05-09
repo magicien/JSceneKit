@@ -242,7 +242,10 @@ export default class SCNView {
      * @type {SCNSceneRenderer}
      */
     this._renderer = new SCNRenderer()
-    this._renderer.scene = this._scene
+    //this._renderer.scene = this._scene
+    //if(this._scene !== null){
+    //  this._scene._physicsWorld._renderer = this._renderer
+    //}
 
     /**
      * @access private
@@ -497,6 +500,9 @@ export default class SCNView {
     // FIXME: it should not be changed while drawing
     this._scene = newValue
     this._renderer.scene = this._scene
+    if(this._scene !== null){
+      this._scene._physicsWorld._renderer = this._renderer
+    }
   }
 
 

@@ -40,7 +40,7 @@ export default class SCNPhysicsWorld extends NSObject {
       scale: ['double', '_scale'],
       // _allBehaviors
       // contactDelegate
-      scene: ['SCNScene', null],
+      scene: ['SCNScene', '_scene'],
     }
   }
 
@@ -109,6 +109,9 @@ export default class SCNPhysicsWorld extends NSObject {
      * @type {SCNScene}
      */
     this._scene = null
+
+    // for rayTest
+    this._renderer = null
   }
 
   // Managing the Physics Simulation
@@ -243,25 +246,25 @@ if (results.firstObject.node == player) {
    * @see https://developer.apple.com/reference/scenekit/scnphysicsworld/1512857-raytestwithsegment
    */
   rayTestWithSegmentFromTo(origin, dest, options = null) {
-    //let opt = options
-    //if(Array.isArray(options)){
-    //  opt = new Map(options)
-    //}
-    //const results = []
+    let opt = options
+    if(Array.isArray(options)){
+      opt = new Map(options)
+    }
+    const results = []
 
-    //let backfaceCulling = true
-    //let collisionBitMask = -1
-    //let searchMode = _TestSearchMode.any
-    //if(opt.has(_TestOption.backfaceCulling)){
-    //  backfaceCulling = opt.get(_TestOption.backfaceCulling)
-    //}
-    //if(opt.has(_TestOption.collisionBitMask)){
-    //  collisionBitMask = opt.get(_TestOption.collisionBitMask)
-    //}
-    //if(opt.has(_TestOption.searchMode)){
-    //  searchMode = opt.get(_TestOption.searchMode)
-    //}
-    //
+    let backfaceCulling = true
+    let collisionBitMask = -1
+    let searchMode = _TestSearchMode.any
+    if(opt.has(_TestOption.backfaceCulling)){
+      backfaceCulling = opt.get(_TestOption.backfaceCulling)
+    }
+    if(opt.has(_TestOption.collisionBitMask)){
+      collisionBitMask = opt.get(_TestOption.collisionBitMask)
+    }
+    if(opt.has(_TestOption.searchMode)){
+      searchMode = opt.get(_TestOption.searchMode)
+    }
+    
     //let originVec = origin._createBtVector3()
     //let destVec = dest._createBtVector3()
     //let rayCallback = null
@@ -300,6 +303,59 @@ if (results.firstObject.node == player) {
     //Ammo.destroy(rayCallback)
 
     //return results
+    const viewProjectionTransform = this._createViewProjectionTransform(origin, dest)
+    const from = origin.transform(viewProjectionTransform)
+    const to = dest.transform(viewProjectionTransform)
+    let _options = options
+    if(_options === null){
+      _options = new Map()
+    }else if(Array.isArray(_options)){
+      _options = new Map(_options)
+    }
+    
+    return this._renderer._hitTestByGPU(viewProjectionTransform, from, to, options)
+  }
+
+  /**
+   * @access private
+   * @param {SCNVector3} from -
+   * @param {SCNVector3} to -
+   + @returns {SCNMatrix4} -
+   */
+  _createViewProjectionTransform(from, to) {
+    const vec = to.sub(from)
+    const len = vec.length()
+    const zNear = 1
+    const zFar = zNear + len
+    const proj = new SCNMatrix4()
+    proj.m11 = 1
+    proj.m22 = 1
+    proj.m33 = -(zFar + zNear) / len
+    proj.m34 = -1
+    proj.m43 = -2 * zFar * zNear / len
+    proj.m44 = 1
+
+    const view = new SCNMatrix4()
+    const up = new SCNVector3(0, 1, 0)
+    if(vec.x === 0 && vec.z === 0){
+      up.y = 0
+      up.z = 1
+    }
+    const f = vec.normalize()
+    const s = f.cross(up).normalize()
+    const u = s.cross(f).normalize()
+    view.m11 = s.x
+    view.m21 = s.y
+    view.m31 = s.z
+    view.m12 = u.x
+    view.m22 = u.y
+    view.m32 = u.z
+    view.m13 = -f.x
+    view.m23 = -f.y
+    view.m33 = -f.z
+    view.m44 = 1
+
+    return view.mult(proj)
   }
 
   /**

@@ -260,6 +260,7 @@ describe('SCNMatrix4 class', () => {
         2.3, 8.4, 6.2, 6.4,
         3.3, 8.3, 2.7, 9.5
       )
+      
       const m = m1.invert()
 
       const m11 = 0.593166
@@ -295,6 +296,156 @@ describe('SCNMatrix4 class', () => {
       expect(m.m42).to.within(m42 - epsilon, m42 + epsilon)
       expect(m.m43).to.within(m43 - epsilon, m43 + epsilon)
       expect(m.m44).to.within(m44 - epsilon, m44 + epsilon)
+    })
+  })
+
+  /** @test {SCNMatrix4#getTranslation} */
+  describe('getTranslation', () => {
+    it('should calculate translation from transform marix', () => {
+      const m1 = new SCNMatrix4(
+        3.1, 4.1, 5.9, 2.6,
+        5.3, 5.8, 9.7, 9.3,
+        2.3, 8.4, 6.2, 6.4,
+        3.3, 8.3, 2.7, 9.5
+      )
+      const m2 = new SCNMatrix4(
+        0.2, 8.8, 4.1, 9.7,
+        1.6, 9.3, 9.9, 3.7,
+        5.1, 0.5, 8.2, 0.9,
+        7.4, 9.4, 4.5, 9.2
+      )
+
+      const v1 = m1.getTranslation()
+      const x1 = 0.347368
+      const y1 = 0.873684
+      const z1 = 0.284211
+
+      expect(v1.x).to.within(x1 - epsilon, x1 + epsilon)
+      expect(v1.y).to.within(y1 - epsilon, y1 + epsilon)
+      expect(v1.z).to.within(z1 - epsilon, z1 + epsilon)
+
+      const v2 = m2.getTranslation()
+      const x2 = 0.804348
+      const y2 = 1.021739
+      const z2 = 0.489130
+
+      expect(v2.x).to.within(x2 - epsilon, x2 + epsilon)
+      expect(v2.y).to.within(y2 - epsilon, y2 + epsilon)
+      expect(v2.z).to.within(z2 - epsilon, z2 + epsilon)
+    })
+  })
+
+  /** @test {SCNMatrix4#getOrientation} */
+  describe('getOrientation', () => {
+    it('should calculate orientation from transform marix', () => {
+      const m1 = new SCNMatrix4(
+        3.1, 4.1, 5.9, 2.6,
+        5.3, 5.8, 9.7, 9.3,
+        2.3, 8.4, 6.2, 6.4,
+        3.3, 8.3, 2.7, 9.5
+      )
+      const m2 = new SCNMatrix4(
+        0.2, 8.8, 4.1, 9.7,
+        1.6, 9.3, 9.9, 3.7,
+        5.1, 0.5, 8.2, 0.9,
+        7.4, 9.4, 4.5, 9.2
+      )
+      const v1 = m1.getOrientation()
+      const x1 = 0.772255
+      const y1 = -0.444379
+      const z1 = -0.454025
+      const w1 = 0.00337381
+
+      expect(v1.x).to.within(x1 - epsilon, x1 + epsilon)
+      expect(v1.y).to.within(y1 - epsilon, y1 + epsilon)
+      expect(v1.z).to.within(z1 - epsilon, z1 + epsilon)
+      expect(v1.w).to.within(w1 - epsilon, w1 + epsilon)
+
+      const v2 = m2.getOrientation()
+      const x2 = 0.388553
+      const y2 = 0.0608134
+      const z2 = 0.456267
+      const w2 = 0.798216
+
+      expect(v2.x).to.within(x2 - epsilon, x2 + epsilon)
+      expect(v2.y).to.within(y2 - epsilon, y2 + epsilon)
+      expect(v2.z).to.within(z2 - epsilon, z2 + epsilon)
+      expect(v2.w).to.within(w2 - epsilon, w2 + epsilon)
+    })
+  })
+
+  /** @test {SCNMatrix4#getRotation} */
+  describe('getRotation', () => {
+    it('should calculate rotation from transform marix', () => {
+      const m1 = new SCNMatrix4(
+        3.1, 4.1, 5.9, 2.6,
+        5.3, 5.8, 9.7, 9.3,
+        2.3, 8.4, 6.2, 6.4,
+        3.3, 8.3, 2.7, 9.5
+      )
+      const m2 = new SCNMatrix4(
+        0.2, 8.8, 4.1, 9.7,
+        1.6, 9.3, 9.9, 3.7,
+        5.1, 0.5, 8.2, 0.9,
+        7.4, 9.4, 4.5, 9.2
+      )
+      const v1 = m1.getRotation()
+      const x1 = 0.641957
+      const y1 = -0.369401
+      const z1 = -0.377420
+      const w1 = 3.134845
+      
+      expect(v1.x).to.within(x1 - epsilon, x1 + epsilon)
+      expect(v1.y).to.within(y1 - epsilon, y1 + epsilon)
+      expect(v1.z).to.within(z1 - epsilon, z1 + epsilon)
+      expect(v1.w).to.within(w1 - epsilon, w1 + epsilon)
+
+      const v2 = m2.getRotation()
+      const x2 = 0.349471
+      const y2 = 0.0546967
+      const z2 = 0.410374
+      const w2 = 1.292937
+      
+      console.log(`m2.getRotation: ${v2.x}, ${v2.y}, ${v2.z}, ${v2.w}`)
+      expect(v2.x).to.within(x2 - epsilon, x2 + epsilon)
+      expect(v2.y).to.within(y2 - epsilon, y2 + epsilon)
+      expect(v2.z).to.within(z2 - epsilon, z2 + epsilon)
+      expect(v2.w).to.within(w2 - epsilon, w2 + epsilon)
+    })
+  })
+
+  /** @test {SCNMatrix4#getScale} */
+  describe('getScale', () => {
+    it('should calculate scale from transform marix', () => {
+      const m1 = new SCNMatrix4(
+        3.1, 4.1, 5.9, 2.6,
+        5.3, 5.8, 9.7, 9.3,
+        2.3, 8.4, 6.2, 6.4,
+        3.3, 8.3, 2.7, 9.5
+      )
+      const m2 = new SCNMatrix4(
+        0.2, 8.8, 4.1, 9.7,
+        1.6, 9.3, 9.9, 3.7,
+        5.1, 0.5, 8.2, 0.9,
+        7.4, 9.4, 4.5, 9.2
+      )
+      const v1 = m1.getScale()
+      const x1 = -0.823680
+      const y1 = -1.313978
+      const z1 = -1.125332
+
+      expect(v1.x).to.within(x1 - epsilon, x1 + epsilon)
+      expect(v1.y).to.within(y1 - epsilon, y1 + epsilon)
+      expect(v1.z).to.within(z1 - epsilon, z1 + epsilon)
+
+      const v2 = m2.getScale()
+      const x2 = 1.055468
+      const y2 = 1.486629
+      const z2 = 1.051037
+
+      expect(v2.x).to.within(x2 - epsilon, x2 + epsilon)
+      expect(v2.y).to.within(y2 - epsilon, y2 + epsilon)
+      expect(v2.z).to.within(z2 - epsilon, z2 + epsilon)
     })
   })
 })

@@ -741,10 +741,18 @@ export default class SCNMatrix4 {
    * @returns {SCNVector3} -
    */
   getScale() {
-    const sx = new SCNVector3(this.m11, this.m21, this.m31)
-    const sy = new SCNVector3(this.m12, this.m22, this.m32)
-    const sz = new SCNVector3(this.m13, this.m23, this.m33)
-    return new SCNVector3(sx.length(), sy.length(), sz.length())
+    const det = this.m11 * this.m22 * this.m33
+              + this.m12 * this.m23 * this.m31
+              + this.m13 * this.m21 * this.m32
+              - this.m11 * this.m23 * this.m32
+              - this.m12 * this.m21 * this.m33
+              - this.m13 * this.m22 * this.m31
+    const sign = det > 0 ? 1 : -1
+    const r = sign / this.m44
+    const sx = new SCNVector3(this.m11, this.m12, this.m13)
+    const sy = new SCNVector3(this.m21, this.m22, this.m23)
+    const sz = new SCNVector3(this.m31, this.m32, this.m33)
+    return new SCNVector3(sx.length() * r, sy.length() * r, sz.length() * r)
   }
 
   /**
@@ -752,7 +760,7 @@ export default class SCNMatrix4 {
    * @returns {SCNVector3} -
    */
   getTranslation() {
-    return new SCNVector3(this.m41, this.m42, this.m43)
+    return new SCNVector3(this.m41 / this.m44, this.m42 / this.m44, this.m43 / this.m44)
   }
 
   /**
@@ -760,8 +768,140 @@ export default class SCNMatrix4 {
    * @returns {SCNVector4} -
    */
   getRotation() {
-    // TODO: implement
-    throw new Error('SCNMatrix4.getRotation: not implemented')
+    const e = []
+    const scale = this.getScale().mul(this.m44)
+    const v = new SCNVector4()
+    const n1 = (new SCNVector3(this.m11, this.m12, this.m13)).mul(1.0 / scale.x)
+    const n2 = (new SCNVector3(this.m21, this.m22, this.m23)).mul(1.0 / scale.y)
+    const n3 = (new SCNVector3(this.m31, this.m32, this.m33)).mul(1.0 / scale.z)
+    e[0] = n1.x - n2.y - n3.z + 1.0
+    e[1] = -n1.x + n2.y - n3.z + 1.0
+    e[2] = -n1.x - n2.y + n3.z + 1.0
+    e[3] = n1.x + n2.y + n3.z + 1.0
+    let maxIndex = 0
+    for(let i=1; i<4; i++){
+      if(e[i] > e[maxIndex]){
+        maxIndex = i
+      }
+    }
+    if(e[maxIndex] < 0){
+      throw new Error('something is wrong...')
+    }
+    const d = Math.sqrt(e[maxIndex]) * 0.5
+    const r = 0.25 / d
+
+    //console.log(`n1: ${n1.x}, ${n1.y}, ${n1.z}`)
+    //console.log(`n2: ${n2.x}, ${n2.y}, ${n2.z}`)
+    //console.log(`n3: ${n3.x}, ${n3.y}, ${n3.z}`)
+    //console.log(`d: ${d}, r: ${r}`)
+    switch(maxIndex){
+      case 0:
+        v.x = d
+        v.y = (n1.y + n2.x) * r
+        v.z = (n3.x + n1.z) * r
+        v.w = (n2.z - n3.y) * r
+        break
+      case 1:
+        v.x = (n1.y + n2.x) * r
+        v.y = d
+        v.z = (n2.z + n3.y) * r
+        v.w = (n3.x - n1.z) * r
+        break
+      case 2:
+        v.x = (n3.x + n1.z) * r
+        v.y = (n2.z + n3.y) * r
+        v.z = d
+        v.w = (n1.y - n2.x) * r
+        break
+      case 3:
+        v.x = (n2.z - n3.y) * r
+        v.y = (n3.x - n1.z) * r
+        v.z = (n1.y - n2.x) * r
+        v.w = d
+        break
+    }
+    if(v.x === 0 && v.y === 0 && v.z === 0){
+      v.w = 0
+    }else{
+      const w = Math.acos(v.w)
+      if(isNaN(w)){
+        v.w = 0
+      }else{
+        v.w = w * 2.0
+      }
+    }
+
+    return v
+
+  }
+
+  /**
+   * @access public
+   * @returns {SCNVector4} -
+   */
+  getOrientation() {
+    return this.getRotation().rotationToQuat()
+    /*
+    const e = []
+    const scale = this.getScale().mul(this.m44)
+    const v = new SCNVector4()
+    const n1 = (new SCNVector3(this.m11, this.m12, this.m13)).mul(1.0 / scale.x)
+    const n2 = (new SCNVector3(this.m21, this.m22, this.m23)).mul(1.0 / scale.y)
+    const n3 = (new SCNVector3(this.m31, this.m32, this.m33)).mul(1.0 / scale.z)
+    e[0] = n1.x - n2.y - n3.z + 1.0
+    e[1] = -n1.x + n2.y - n3.z + 1.0
+    e[2] = -n1.x - n2.y + n3.z + 1.0
+    e[3] = n1.x + n2.y + n3.z + 1.0
+    let maxIndex = 0
+    for(let i=1; i<4; i++){
+      if(e[i] > e[maxIndex]){
+        maxIndex = i
+      }
+    }
+    console.log(`maxIndex: ${maxIndex} => ${e[maxIndex]}`)
+    if(e[maxIndex] < 0){
+      throw new Error('something is wrong...')
+    }
+    const d = Math.sqrt(e[maxIndex]) * 0.5
+    const r = 0.25 / d
+
+    //console.log(`n1: ${n1.x}, ${n1.y}, ${n1.z}`)
+    //console.log(`n2: ${n2.x}, ${n2.y}, ${n2.z}`)
+    //console.log(`n3: ${n3.x}, ${n3.y}, ${n3.z}`)
+    //console.log(`d: ${d}, r: ${r}`)
+    switch(maxIndex){
+      case 0:
+        v.x = d
+        v.y = (n1.y + n2.x) * r
+        v.z = (n3.x + n1.z) * r
+        v.w = (n2.z - n3.y) * r
+        break
+      case 1:
+        v.x = (n1.y + n2.x) * r
+        v.y = d
+        v.z = (n2.z + n3.y) * r
+        v.w = (n3.x - n1.z) * r
+        break
+      case 2:
+        v.x = (n3.x + n1.z) * r
+        v.y = (n2.z + n3.y) * r
+        v.z = d
+        v.w = (n1.y - n2.x) * r
+        break
+      case 3:
+        v.x = (n2.z - n3.y) * r
+        v.y = (n3.x - n1.z) * r
+        v.z = (n1.y - n2.x) * r
+        v.w = d
+        break
+    }
+    const len = 1.0 / Math.sqrt(v.x * v.x + v.y * v.y + v.z * v.z)
+    v.x *= len
+    v.y *= len
+    v.z *= len
+
+    return v
+    */
   }
 
   /**

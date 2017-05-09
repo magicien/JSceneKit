@@ -16852,10 +16852,13 @@ module.exports =
 	  }, {
 	    key: 'getScale',
 	    value: function getScale() {
-	      var sx = new _SCNVector2.default(this.m11, this.m21, this.m31);
-	      var sy = new _SCNVector2.default(this.m12, this.m22, this.m32);
-	      var sz = new _SCNVector2.default(this.m13, this.m23, this.m33);
-	      return new _SCNVector2.default(sx.length(), sy.length(), sz.length());
+	      var det = this.m11 * this.m22 * this.m33 + this.m12 * this.m23 * this.m31 + this.m13 * this.m21 * this.m32 - this.m11 * this.m23 * this.m32 - this.m12 * this.m21 * this.m33 - this.m13 * this.m22 * this.m31;
+	      var sign = det > 0 ? 1 : -1;
+	      var r = sign / this.m44;
+	      var sx = new _SCNVector2.default(this.m11, this.m12, this.m13);
+	      var sy = new _SCNVector2.default(this.m21, this.m22, this.m23);
+	      var sz = new _SCNVector2.default(this.m31, this.m32, this.m33);
+	      return new _SCNVector2.default(sx.length() * r, sy.length() * r, sz.length() * r);
 	    }
 
 	    /**
@@ -16866,7 +16869,7 @@ module.exports =
 	  }, {
 	    key: 'getTranslation',
 	    value: function getTranslation() {
-	      return new _SCNVector2.default(this.m41, this.m42, this.m43);
+	      return new _SCNVector2.default(this.m41 / this.m44, this.m42 / this.m44, this.m43 / this.m44);
 	    }
 
 	    /**
@@ -16877,8 +16880,140 @@ module.exports =
 	  }, {
 	    key: 'getRotation',
 	    value: function getRotation() {
-	      // TODO: implement
-	      throw new Error('SCNMatrix4.getRotation: not implemented');
+	      var e = [];
+	      var scale = this.getScale().mul(this.m44);
+	      var v = new _SCNVector4.default();
+	      var n1 = new _SCNVector2.default(this.m11, this.m12, this.m13).mul(1.0 / scale.x);
+	      var n2 = new _SCNVector2.default(this.m21, this.m22, this.m23).mul(1.0 / scale.y);
+	      var n3 = new _SCNVector2.default(this.m31, this.m32, this.m33).mul(1.0 / scale.z);
+	      e[0] = n1.x - n2.y - n3.z + 1.0;
+	      e[1] = -n1.x + n2.y - n3.z + 1.0;
+	      e[2] = -n1.x - n2.y + n3.z + 1.0;
+	      e[3] = n1.x + n2.y + n3.z + 1.0;
+	      var maxIndex = 0;
+	      for (var i = 1; i < 4; i++) {
+	        if (e[i] > e[maxIndex]) {
+	          maxIndex = i;
+	        }
+	      }
+	      if (e[maxIndex] < 0) {
+	        throw new Error('something is wrong...');
+	      }
+	      var d = Math.sqrt(e[maxIndex]) * 0.5;
+	      var r = 0.25 / d;
+
+	      //console.log(`n1: ${n1.x}, ${n1.y}, ${n1.z}`)
+	      //console.log(`n2: ${n2.x}, ${n2.y}, ${n2.z}`)
+	      //console.log(`n3: ${n3.x}, ${n3.y}, ${n3.z}`)
+	      //console.log(`d: ${d}, r: ${r}`)
+	      switch (maxIndex) {
+	        case 0:
+	          v.x = d;
+	          v.y = (n1.y + n2.x) * r;
+	          v.z = (n3.x + n1.z) * r;
+	          v.w = (n2.z - n3.y) * r;
+	          break;
+	        case 1:
+	          v.x = (n1.y + n2.x) * r;
+	          v.y = d;
+	          v.z = (n2.z + n3.y) * r;
+	          v.w = (n3.x - n1.z) * r;
+	          break;
+	        case 2:
+	          v.x = (n3.x + n1.z) * r;
+	          v.y = (n2.z + n3.y) * r;
+	          v.z = d;
+	          v.w = (n1.y - n2.x) * r;
+	          break;
+	        case 3:
+	          v.x = (n2.z - n3.y) * r;
+	          v.y = (n3.x - n1.z) * r;
+	          v.z = (n1.y - n2.x) * r;
+	          v.w = d;
+	          break;
+	      }
+	      if (v.x === 0 && v.y === 0 && v.z === 0) {
+	        v.w = 0;
+	      } else {
+	        var w = Math.acos(v.w);
+	        if (isNaN(w)) {
+	          v.w = 0;
+	        } else {
+	          v.w = w * 2.0;
+	        }
+	      }
+
+	      return v;
+	    }
+
+	    /**
+	     * @access public
+	     * @returns {SCNVector4} -
+	     */
+
+	  }, {
+	    key: 'getOrientation',
+	    value: function getOrientation() {
+	      return this.getRotation().rotationToQuat();
+	      /*
+	      const e = []
+	      const scale = this.getScale().mul(this.m44)
+	      const v = new SCNVector4()
+	      const n1 = (new SCNVector3(this.m11, this.m12, this.m13)).mul(1.0 / scale.x)
+	      const n2 = (new SCNVector3(this.m21, this.m22, this.m23)).mul(1.0 / scale.y)
+	      const n3 = (new SCNVector3(this.m31, this.m32, this.m33)).mul(1.0 / scale.z)
+	      e[0] = n1.x - n2.y - n3.z + 1.0
+	      e[1] = -n1.x + n2.y - n3.z + 1.0
+	      e[2] = -n1.x - n2.y + n3.z + 1.0
+	      e[3] = n1.x + n2.y + n3.z + 1.0
+	      let maxIndex = 0
+	      for(let i=1; i<4; i++){
+	        if(e[i] > e[maxIndex]){
+	          maxIndex = i
+	        }
+	      }
+	      console.log(`maxIndex: ${maxIndex} => ${e[maxIndex]}`)
+	      if(e[maxIndex] < 0){
+	        throw new Error('something is wrong...')
+	      }
+	      const d = Math.sqrt(e[maxIndex]) * 0.5
+	      const r = 0.25 / d
+	       //console.log(`n1: ${n1.x}, ${n1.y}, ${n1.z}`)
+	      //console.log(`n2: ${n2.x}, ${n2.y}, ${n2.z}`)
+	      //console.log(`n3: ${n3.x}, ${n3.y}, ${n3.z}`)
+	      //console.log(`d: ${d}, r: ${r}`)
+	      switch(maxIndex){
+	        case 0:
+	          v.x = d
+	          v.y = (n1.y + n2.x) * r
+	          v.z = (n3.x + n1.z) * r
+	          v.w = (n2.z - n3.y) * r
+	          break
+	        case 1:
+	          v.x = (n1.y + n2.x) * r
+	          v.y = d
+	          v.z = (n2.z + n3.y) * r
+	          v.w = (n3.x - n1.z) * r
+	          break
+	        case 2:
+	          v.x = (n3.x + n1.z) * r
+	          v.y = (n2.z + n3.y) * r
+	          v.z = d
+	          v.w = (n1.y - n2.x) * r
+	          break
+	        case 3:
+	          v.x = (n2.z - n3.y) * r
+	          v.y = (n3.x - n1.z) * r
+	          v.z = (n1.y - n2.x) * r
+	          v.w = d
+	          break
+	      }
+	      const len = 1.0 / Math.sqrt(v.x * v.x + v.y * v.y + v.z * v.z)
+	      v.x *= len
+	      v.y *= len
+	      v.z *= len
+	       return v
+	      */
 	    }
 
 	    /**
@@ -22081,6 +22216,9 @@ module.exports =
 	    set: function set(newValue) {
 	      this._transform = newValue;
 	      // TODO: update position, rotation, scale
+	      this._position = this._transform.getTranslation();
+	      this._rotation = this._transform.getRotation();
+	      this._scale = this._transform.getScale();
 	      this._transformUpToDate = true;
 	    }
 
@@ -27808,7 +27946,7 @@ module.exports =
 	 * @access private
 	 * @type {string}
 	 */
-	var _defaultVertexShader = '#version 300 es\n  precision mediump float;\n\n  uniform mat4 viewTransform;\n  uniform mat4 viewProjectionTransform;\n\n  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__\n  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__\n  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__\n  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__\n  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__\n  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__\n\n  layout (std140) uniform materialUniform {\n    vec4 ambient;\n    vec4 diffuse;\n    vec4 specular;\n    vec4 emission;\n    float shininess;\n  } material;\n\n  struct AmbientLight {\n    vec4 color;\n  };\n\n  struct DirectionalLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct OmniLight {\n    vec4 color;\n    vec4 position; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct SpotLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct IESLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct ProbeLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  layout (std140) uniform lightUniform {\n    __LIGHT_DEFINITION__\n  } light;\n  __VS_LIGHT_VARS__\n\n  //uniform mat3x4[255] skinningJoints;\n  uniform vec4[765] skinningJoints;\n  uniform int numSkinningJoints;\n\n  in vec3 position;\n  in vec3 normal;\n  //in vec3 tangent;\n  in vec2 texcoord;\n  in vec4 boneIndices;\n  in vec4 boneWeights;\n\n  out vec3 v_position;\n  out vec3 v_normal;\n  //out vec3 v_tangent;\n  //out vec3 v_bitangent;\n  out vec2 v_texcoord;\n  out vec4 v_color;\n  out vec3 v_eye;\n\n  void main() {\n    vec3 pos = vec3(0, 0, 0);\n    vec3 nom = vec3(0, 0, 0);\n    vec3 tangent = vec3(1, 0, 0); // DEBUG\n    vec3 tng = vec3(0, 0, 0);\n\n    if(numSkinningJoints > 0){\n      for(int i=0; i<numSkinningJoints; i++){\n        float weight = boneWeights[i];\n        if(int(boneIndices[i]) < 0){\n          continue;\n        }\n        int idx = int(boneIndices[i]) * 3;\n        mat4 jointMatrix = transpose(mat4(skinningJoints[idx],\n                                          skinningJoints[idx+1],\n                                          skinningJoints[idx+2],\n                                          vec4(0, 0, 0, 1)));\n        pos += (jointMatrix * vec4(position, 1.0)).xyz * weight;\n        nom += (mat3(jointMatrix) * normal) * weight;\n        tng += (mat3(jointMatrix) * tangent) * weight;\n      }\n    }else{\n      mat4 jointMatrix = transpose(mat4(skinningJoints[0],\n                                        skinningJoints[1],\n                                        skinningJoints[2],\n                                        vec4(0, 0, 0, 1)));\n      pos = (jointMatrix * vec4(position, 1.0)).xyz;\n      nom = mat3(jointMatrix) * normal;\n      tng += mat3(jointMatrix) * tangent;\n    }\n    v_position = pos;\n    v_normal = nom;\n    vec3 btng = cross(nom, tng);\n\n    vec3 viewPos = vec3(-viewTransform[3][0], -viewTransform[3][1], -viewTransform[3][2]);\n    vec3 viewVec = viewPos - pos;\n    //v_eye.x = dot(viewVec, tng);\n    //v_eye.y = dot(viewVec, btng);\n    //v_eye.z = dot(viewVec, nom);\n    v_eye = viewVec;\n\n    v_color = material.emission;\n    int numLights = 0;\n\n    __VS_LIGHTING__\n\n    v_texcoord = texcoord;\n    gl_Position = viewProjectionTransform * vec4(pos, 1.0);\n  }\n';
+	var _defaultVertexShader = '#version 300 es\n  precision mediump float;\n\n  uniform mat4 viewTransform;\n  uniform mat4 viewProjectionTransform;\n\n  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__\n  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__\n  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__\n  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__\n  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__\n  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__\n\n  layout (std140) uniform materialUniform {\n    vec4 ambient;\n    vec4 diffuse;\n    vec4 specular;\n    vec4 emission;\n    float shininess;\n  } material;\n\n  struct AmbientLight {\n    vec4 color;\n  };\n\n  struct DirectionalLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct OmniLight {\n    vec4 color;\n    vec4 position; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct SpotLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct IESLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct ProbeLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  layout (std140) uniform lightUniform {\n    __LIGHT_DEFINITION__\n  } light;\n  __VS_LIGHT_VARS__\n\n  layout (std140) uniform fogUniform {\n    vec4 color;\n    float startDistance;\n    float endDistance;\n    float densityExponent;\n  } fog;\n\n  //uniform mat3x4[255] skinningJoints;\n  uniform vec4[765] skinningJoints;\n  uniform int numSkinningJoints;\n\n  in vec3 position;\n  in vec3 normal;\n  //in vec3 tangent;\n  in vec2 texcoord;\n  in vec4 boneIndices;\n  in vec4 boneWeights;\n\n  out vec3 v_position;\n  out vec3 v_normal;\n  //out vec3 v_tangent;\n  //out vec3 v_bitangent;\n  out vec2 v_texcoord;\n  out vec4 v_color;\n  out vec3 v_eye;\n  out float v_fogFactor;\n\n  void main() {\n    vec3 pos = vec3(0, 0, 0);\n    vec3 nom = vec3(0, 0, 0);\n    vec3 tangent = vec3(1, 0, 0); // DEBUG\n    vec3 tng = vec3(0, 0, 0);\n\n    if(numSkinningJoints > 0){\n      for(int i=0; i<numSkinningJoints; i++){\n        float weight = boneWeights[i];\n        if(int(boneIndices[i]) < 0){\n          continue;\n        }\n        int idx = int(boneIndices[i]) * 3;\n        mat4 jointMatrix = transpose(mat4(skinningJoints[idx],\n                                          skinningJoints[idx+1],\n                                          skinningJoints[idx+2],\n                                          vec4(0, 0, 0, 1)));\n        pos += (jointMatrix * vec4(position, 1.0)).xyz * weight;\n        nom += (mat3(jointMatrix) * normal) * weight;\n        tng += (mat3(jointMatrix) * tangent) * weight;\n      }\n    }else{\n      mat4 jointMatrix = transpose(mat4(skinningJoints[0],\n                                        skinningJoints[1],\n                                        skinningJoints[2],\n                                        vec4(0, 0, 0, 1)));\n      pos = (jointMatrix * vec4(position, 1.0)).xyz;\n      nom = mat3(jointMatrix) * normal;\n      tng += mat3(jointMatrix) * tangent;\n    }\n    v_position = pos;\n    v_normal = nom;\n    vec3 btng = cross(nom, tng);\n\n    vec3 viewPos = vec3(-viewTransform[3][0], -viewTransform[3][1], -viewTransform[3][2]);\n    vec3 viewVec = viewPos - pos;\n    //v_eye.x = dot(viewVec, tng);\n    //v_eye.y = dot(viewVec, btng);\n    //v_eye.z = dot(viewVec, nom);\n    v_eye = viewVec;\n\n    v_color = material.emission;\n    int numLights = 0;\n\n    __VS_LIGHTING__\n\n    float distance = length(viewVec);\n    v_fogFactor = clamp((distance - fog.startDistance) / (fog.endDistance - fog.startDistance), 0.0, 1.0);\n\n    v_texcoord = texcoord;\n    gl_Position = viewProjectionTransform * vec4(pos, 1.0);\n  }\n';
 
 	var _vsAmbient = '\n  for(int i=0; i<NUM_AMBIENT_LIGHTS; i++){\n    v_color += light.ambient[i].color * material.ambient;\n  }\n';
 
@@ -27823,12 +27961,13 @@ module.exports =
 
 	var _materialLoc = 0;
 	var _lightLoc = 1;
+	var _fogLoc = 2;
 
 	/**
 	 * @access private
 	 * @type {string}
 	 */
-	var _defaultFragmentShader = '#version 300 es\n  precision mediump float;\n\n  uniform bool[8] textureFlags;\n  #define TEXTURE_EMISSION_INDEX 0\n  #define TEXTURE_AMBIENT_INDEX 1\n  #define TEXTURE_DIFFUSE_INDEX 2\n  #define TEXTURE_SPECULAR_INDEX 3\n  #define TEXTURE_REFLECTIVE_INDEX 4\n  #define TEXTURE_TRANSPARENT_INDEX 5\n  #define TEXTURE_MULTIPLY_INDEX 6\n  #define TEXTURE_NORMAL_INDEX 7\n\n  uniform sampler2D u_emissionTexture;\n  uniform sampler2D u_ambientTexture;\n  uniform sampler2D u_diffuseTexture;\n  uniform sampler2D u_specularTexture;\n  uniform sampler2D u_reflectiveTexture;\n  uniform sampler2D u_transparentTexture;\n  uniform sampler2D u_multiplyTexture;\n  uniform sampler2D u_normalTexture;\n\n  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__\n  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__\n  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__\n  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__\n  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__\n  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__\n\n  layout (std140) uniform materialUniform {\n    vec4 ambient;\n    vec4 diffuse;\n    vec4 specular;\n    vec4 emission;\n    float shininess;\n  } material;\n\n  struct AmbientLight {\n    vec4 color;\n  };\n\n  struct DirectionalLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct OmniLight {\n    vec4 color;\n    vec4 position; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct ProbeLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct SpotLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  layout (std140) uniform lightUniform {\n    __LIGHT_DEFINITION__\n  } light;\n  __FS_LIGHT_VARS__\n\n  in vec3 v_position;\n  in vec3 v_normal;\n  in vec2 v_texcoord;\n  in vec4 v_color;\n  in vec3 v_eye;\n  //in vec3 v_tangent;\n  //in vec3 v_bitangent;\n\n  out vec4 outColor;\n\n  void main() {\n    outColor = v_color;\n\n    vec3 viewVec = normalize(v_eye);\n    vec3 nom = normalize(v_normal);\n\n    // normal texture\n    //if(textureFlags[TEXTURE_NORMAL_INDEX]){\n    //}\n\n    // emission texture\n    if(textureFlags[TEXTURE_EMISSION_INDEX]){\n      vec4 color = texture(u_emissionTexture, v_texcoord);\n      outColor = color * outColor;\n    }\n\n    int numLights = 0;\n      \n    outColor.a = material.diffuse.a;\n    __FS_LIGHTING__\n    \n    // diffuse texture\n    if(textureFlags[TEXTURE_DIFFUSE_INDEX]){\n      vec4 color = texture(u_diffuseTexture, v_texcoord);\n      outColor = color * outColor;\n    }\n  }\n';
+	var _defaultFragmentShader = '#version 300 es\n  precision mediump float;\n\n  uniform bool[8] textureFlags;\n  #define TEXTURE_EMISSION_INDEX 0\n  #define TEXTURE_AMBIENT_INDEX 1\n  #define TEXTURE_DIFFUSE_INDEX 2\n  #define TEXTURE_SPECULAR_INDEX 3\n  #define TEXTURE_REFLECTIVE_INDEX 4\n  #define TEXTURE_TRANSPARENT_INDEX 5\n  #define TEXTURE_MULTIPLY_INDEX 6\n  #define TEXTURE_NORMAL_INDEX 7\n\n  uniform sampler2D u_emissionTexture;\n  uniform sampler2D u_ambientTexture;\n  uniform sampler2D u_diffuseTexture;\n  uniform sampler2D u_specularTexture;\n  uniform sampler2D u_reflectiveTexture;\n  uniform sampler2D u_transparentTexture;\n  uniform sampler2D u_multiplyTexture;\n  uniform sampler2D u_normalTexture;\n\n  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__\n  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__\n  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__\n  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__\n  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__\n  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__\n\n  layout (std140) uniform materialUniform {\n    vec4 ambient;\n    vec4 diffuse;\n    vec4 specular;\n    vec4 emission;\n    float shininess;\n  } material;\n\n  struct AmbientLight {\n    vec4 color;\n  };\n\n  struct DirectionalLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct OmniLight {\n    vec4 color;\n    vec4 position; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct ProbeLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct SpotLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  layout (std140) uniform lightUniform {\n    __LIGHT_DEFINITION__\n  } light;\n  __FS_LIGHT_VARS__\n\n  layout (std140) uniform fogUniform {\n    vec4 color;\n    float startDistance;\n    float endDistance;\n    float densityExponent;\n  } fog;\n\n  in vec3 v_position;\n  in vec3 v_normal;\n  in vec2 v_texcoord;\n  in vec4 v_color;\n  in vec3 v_eye;\n  //in vec3 v_tangent;\n  //in vec3 v_bitangent;\n  in float v_fogFactor;\n\n  out vec4 outColor;\n\n  void main() {\n    outColor = v_color;\n\n    vec3 viewVec = normalize(v_eye);\n    vec3 nom = normalize(v_normal);\n\n    // normal texture\n    //if(textureFlags[TEXTURE_NORMAL_INDEX]){\n    //}\n\n    // emission texture\n    if(textureFlags[TEXTURE_EMISSION_INDEX]){\n      vec4 color = texture(u_emissionTexture, v_texcoord);\n      outColor = color * outColor;\n    }\n\n    int numLights = 0;\n      \n    outColor.a = material.diffuse.a;\n    __FS_LIGHTING__\n    \n    // diffuse texture\n    if(textureFlags[TEXTURE_DIFFUSE_INDEX]){\n      vec4 color = texture(u_diffuseTexture, v_texcoord);\n      outColor = color * outColor;\n    }\n\n    float fogFactor = pow(v_fogFactor, fog.densityExponent);\n    outColor = mix(fog.color, outColor, fogFactor);\n  }\n';
 
 	var _fsAmbient = '\n';
 
@@ -28113,6 +28252,12 @@ module.exports =
 	     */
 	    _this._lightBuffer = null;
 
+	    /**
+	     * @access private
+	     * @type {WebGLBuffer}
+	     */
+	    _this._fogBuffer = null;
+
 	    ////////////////////////////
 	    // Hit Test
 	    ////////////////////////////
@@ -28256,10 +28401,30 @@ module.exports =
 	      //console.log('projectionTransform: ' + cameraNode.camera.projectionTransform.float32Array())
 	      //console.log('viewProjectionTransform: ' + cameraNode.viewProjectionTransform.float32Array())
 
+	      //////////////////////////
+	      // Fog
+	      //////////////////////////
+	      if (this._fogBuffer === null) {
+	        this._initializeFogBuffer(program);
+	      }
+	      var fogData = [];
+	      if (this.scene.fogColor !== null) {
+	        fogData.push.apply(fogData, _toConsumableArray(this.scene.fogColor.floatArray()));
+	      } else {
+	        fogData.push(0, 0, 0, 0);
+	      }
+	      fogData.push(this.scene.fogStartDistance, this.scene.fogEndDistance, this.scene.fogDensityExponent, 0);
+	      gl.bindBuffer(gl.UNIFORM_BUFFER, this._fogBuffer);
+	      gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(fogData), gl.DYNAMIC_DRAW);
+	      gl.bindBuffer(gl.UNIFORM_BUFFER, null);
+
 	      if (this._lightBuffer === null) {
 	        this._initializeLightBuffer(program);
 	      }
 
+	      //////////////////////////
+	      // Lights
+	      //////////////////////////
 	      var lights = this._lightNodes;
 	      var lightData = [];
 	      lights.ambient.forEach(function (node) {
@@ -28283,6 +28448,9 @@ module.exports =
 	      gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(lightData), gl.DYNAMIC_DRAW);
 	      gl.bindBuffer(gl.UNIFORM_BUFFER, null);
 
+	      //////////////////////////
+	      // Background (SkyBox)
+	      //////////////////////////
 	      if (this.scene.background._contents !== null) {
 	        var skyBox = this.scene._skyBox;
 	        skyBox.position = this.pointOfView._worldTranslation;
@@ -28292,6 +28460,9 @@ module.exports =
 	        this._renderNode(skyBox);
 	      }
 
+	      //////////////////////////
+	      // Nodes
+	      //////////////////////////
 	      var renderingArray = this._createRenderingNodeArray();
 	      renderingArray.forEach(function (node) {
 	        _this2._renderNode(node);
@@ -28305,6 +28476,9 @@ module.exports =
 	      gl.uniformMatrix4fv(gl.getUniformLocation(particleProgram, 'viewTransform'), false, cameraNode.viewTransform.float32Array());
 	      gl.uniformMatrix4fv(gl.getUniformLocation(particleProgram, 'projectionTransform'), false, cameraNode.projectionTransform.float32Array());
 
+	      //////////////////////////
+	      // Particles
+	      //////////////////////////
 	      if (this.scene._particleSystems !== null) {
 	        var _iteratorNormalCompletion = true;
 	        var _didIteratorError = false;
@@ -28336,6 +28510,9 @@ module.exports =
 	        _this2._renderParticle(node);
 	      });
 
+	      //////////////////////////
+	      // 2D Overlay
+	      //////////////////////////
 	      this._renderOverlaySKScene();
 
 	      gl.flush();
@@ -29031,7 +29208,7 @@ module.exports =
 	     * @param {SCNMatrix4} viewProjectionTransform -
 	     * @param {SCNVector3} rayFrom -
 	     * @param {SCNVector3} rayTo -
-	     * @param {Object} options -
+	     * @param {Map} options -
 	     * @returns {SCNHitTestResult[]} -
 	     */
 
@@ -29492,6 +29669,17 @@ module.exports =
 
 	        geometry._hitTestVAO.push(vao);
 	      }
+	    }
+	  }, {
+	    key: '_initializeFogBuffer',
+	    value: function _initializeFogBuffer(program) {
+	      var gl = this.context;
+
+	      var fogIndex = gl.getUniformBlockIndex(program, 'fogUniform');
+
+	      this._fogBuffer = gl.createBuffer();
+	      gl.uniformBlockBinding(program, fogIndex, _fogLoc);
+	      gl.bindBufferBase(gl.UNIFORM_BUFFER, _fogLoc, this._fogBuffer);
 	    }
 	  }, {
 	    key: '_initializeLightBuffer',
@@ -30776,7 +30964,10 @@ module.exports =
 	        paused: ['boolean', 'isPaused'],
 	        rootNode: ['SCNNode', '_rootNode'],
 	        upAxis: ['SCNVector3', null],
-	        physicsWorld: ['SCNPhysicsWorld', '_physicsWorld'],
+	        physicsWorld: ['SCNPhysicsWorld', function (obj, value) {
+	          obj._physicsWorld = value;
+	          obj._physicsWorld._scene = obj;
+	        }],
 	        background: ['SCNMaterialProperty', function (obj, value) {
 	          obj._skyBox.geometry.firstMaterial._emission = value;
 	        }],
@@ -30864,7 +31055,8 @@ module.exports =
 
 	    // Working With Physics in the Scene
 
-	    _this._physicsWorld = null;
+	    _this._physicsWorld = new _SCNPhysicsWorld2.default();
+	    _this._physicsWorld._scene = _this;
 
 	    // Working with Particle Systems in the Scene
 
@@ -30926,7 +31118,7 @@ module.exports =
 	      this.fogEndDistance = src.fogEndDistance;
 	      this.fogDensityExponent = src.fogDensityExponent;
 	      this.fogColor = src.fogColor;
-	      this._physicsWorld = src._physicsWorld;
+	      this._physicsWorld = src._physicsWorld; // TODO: copy SCNPhysicsWorld
 	      this._particleSystems = src._particleSystems ? src._particleSystems.slice(0) : null;
 	      this._particleSystemsTransform = src._particleSystemsTransform ? src._particleSystemsTransform.slice(0) : null;
 	    }
@@ -32526,7 +32718,7 @@ module.exports =
 	        scale: ['double', '_scale'],
 	        // _allBehaviors
 	        // contactDelegate
-	        scene: ['SCNScene', null]
+	        scene: ['SCNScene', '_scene']
 	      };
 	    }
 
@@ -32600,6 +32792,9 @@ module.exports =
 	     * @type {SCNScene}
 	     */
 	    _this._scene = null;
+
+	    // for rayTest
+	    _this._renderer = null;
 	    return _this;
 	  }
 
@@ -32756,65 +32951,121 @@ module.exports =
 	    key: 'rayTestWithSegmentFromTo',
 	    value: function rayTestWithSegmentFromTo(origin, dest) {
 	      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+
+	      var opt = options;
+	      if (Array.isArray(options)) {
+	        opt = new Map(options);
+	      }
+	      var results = [];
+
+	      var backfaceCulling = true;
+	      var collisionBitMask = -1;
+	      var searchMode = _TestSearchMode.any;
+	      if (opt.has(_TestOption.backfaceCulling)) {
+	        backfaceCulling = opt.get(_TestOption.backfaceCulling);
+	      }
+	      if (opt.has(_TestOption.collisionBitMask)) {
+	        collisionBitMask = opt.get(_TestOption.collisionBitMask);
+	      }
+	      if (opt.has(_TestOption.searchMode)) {
+	        searchMode = opt.get(_TestOption.searchMode);
+	      }
+
+	      //let originVec = origin._createBtVector3()
+	      //let destVec = dest._createBtVector3()
+	      //let rayCallback = null
+	      //switch(searchMode){
+	      //  case _TestSearchMode.all:
+	      //    // TODO: implement
+	      //    throw new Error('TestSearchMode.all not implemented')
+	      //  case _TestSearchMode.any:
+	      //    // TODO: implement
+	      //    throw new Error('TestSearchMode.any not implemented')
+	      //  case _TestSearchMode.closest:
+	      //    rayCallback = new Ammo.ClosestRayResultCallback(originVec, destVec)
+	      //    break
+	      //  default:
+	      //    throw new Error(`unknown search mode: ${searchMode}`)
+	      //}
+
+	      //this._world.rayTest(originVec, destVec, rayCallback)
+	      //if(rayCallback.hasHit()){
+	      //  const result = new SCNHitTestResult()
+	      //  const body = Ammo.btRigidBody.prototype.upcast(rayCallback.get_m_collisionObject())
+	      //  result._node = null
+	      //  result._geometryIndex = 0
+	      //  result._faceIndex = 0
+	      //  result._worldCoordinates = new SCNVector3(rayCallback.get_m_hitPointWorld())
+	      //  result._localCoordinates = null
+	      //  result._worldNormal = new SCNVector3(rayCallback.get_m_hitNormalWorld())
+	      //  result._localNormal = null
+	      //  result._modelTransform = null
+	      //  result._boneNode = null
+	      //  results.push(result)
+	      //}
+
+	      //Ammo.destroy(originVec)
+	      //Ammo.destroy(destVec)
+	      //Ammo.destroy(rayCallback)
+
+	      //return results
+	      var viewProjectionTransform = this._createViewProjectionTransform(origin, dest);
+	      var from = origin.transform(viewProjectionTransform);
+	      var to = dest.transform(viewProjectionTransform);
+	      var _options = options;
+	      if (_options === null) {
+	        _options = new Map();
+	      } else if (Array.isArray(_options)) {
+	        _options = new Map(_options);
+	      }
+
+	      return this._renderer._hitTestByGPU(viewProjectionTransform, from, to, options);
 	    }
-	    //let opt = options
-	    //if(Array.isArray(options)){
-	    //  opt = new Map(options)
-	    //}
-	    //const results = []
 
-	    //let backfaceCulling = true
-	    //let collisionBitMask = -1
-	    //let searchMode = _TestSearchMode.any
-	    //if(opt.has(_TestOption.backfaceCulling)){
-	    //  backfaceCulling = opt.get(_TestOption.backfaceCulling)
-	    //}
-	    //if(opt.has(_TestOption.collisionBitMask)){
-	    //  collisionBitMask = opt.get(_TestOption.collisionBitMask)
-	    //}
-	    //if(opt.has(_TestOption.searchMode)){
-	    //  searchMode = opt.get(_TestOption.searchMode)
-	    //}
-	    //
-	    //let originVec = origin._createBtVector3()
-	    //let destVec = dest._createBtVector3()
-	    //let rayCallback = null
-	    //switch(searchMode){
-	    //  case _TestSearchMode.all:
-	    //    // TODO: implement
-	    //    throw new Error('TestSearchMode.all not implemented')
-	    //  case _TestSearchMode.any:
-	    //    // TODO: implement
-	    //    throw new Error('TestSearchMode.any not implemented')
-	    //  case _TestSearchMode.closest:
-	    //    rayCallback = new Ammo.ClosestRayResultCallback(originVec, destVec)
-	    //    break
-	    //  default:
-	    //    throw new Error(`unknown search mode: ${searchMode}`)
-	    //}
+	    /**
+	     * @access private
+	     * @param {SCNVector3} from -
+	     * @param {SCNVector3} to -
+	     + @returns {SCNMatrix4} -
+	     */
 
-	    //this._world.rayTest(originVec, destVec, rayCallback)
-	    //if(rayCallback.hasHit()){
-	    //  const result = new SCNHitTestResult()
-	    //  const body = Ammo.btRigidBody.prototype.upcast(rayCallback.get_m_collisionObject())
-	    //  result._node = null
-	    //  result._geometryIndex = 0
-	    //  result._faceIndex = 0
-	    //  result._worldCoordinates = new SCNVector3(rayCallback.get_m_hitPointWorld())
-	    //  result._localCoordinates = null
-	    //  result._worldNormal = new SCNVector3(rayCallback.get_m_hitNormalWorld())
-	    //  result._localNormal = null
-	    //  result._modelTransform = null
-	    //  result._boneNode = null
-	    //  results.push(result)
-	    //}
+	  }, {
+	    key: '_createViewProjectionTransform',
+	    value: function _createViewProjectionTransform(from, to) {
+	      var vec = to.sub(from);
+	      var len = vec.length();
+	      var zNear = 1;
+	      var zFar = zNear + len;
+	      var proj = new _SCNMatrix2.default();
+	      proj.m11 = 1;
+	      proj.m22 = 1;
+	      proj.m33 = -(zFar + zNear) / len;
+	      proj.m34 = -1;
+	      proj.m43 = -2 * zFar * zNear / len;
+	      proj.m44 = 1;
 
-	    //Ammo.destroy(originVec)
-	    //Ammo.destroy(destVec)
-	    //Ammo.destroy(rayCallback)
+	      var view = new _SCNMatrix2.default();
+	      var up = new _SCNVector2.default(0, 1, 0);
+	      if (vec.x === 0 && vec.z === 0) {
+	        up.y = 0;
+	        up.z = 1;
+	      }
+	      var f = vec.normalize();
+	      var s = f.cross(up).normalize();
+	      var u = s.cross(f).normalize();
+	      view.m11 = s.x;
+	      view.m21 = s.y;
+	      view.m31 = s.z;
+	      view.m12 = u.x;
+	      view.m22 = u.y;
+	      view.m32 = u.z;
+	      view.m13 = -f.x;
+	      view.m23 = -f.y;
+	      view.m33 = -f.z;
+	      view.m44 = 1;
 
-	    //return results
-
+	      return view.mult(proj);
+	    }
 
 	    /**
 	     * Searches for physics bodies in the space formed by moving a convex shape through the physics world.
@@ -45047,7 +45298,10 @@ module.exports =
 	     * @type {SCNSceneRenderer}
 	     */
 	    this._renderer = new _SCNRenderer2.default();
-	    this._renderer.scene = this._scene;
+	    //this._renderer.scene = this._scene
+	    //if(this._scene !== null){
+	    //  this._scene._physicsWorld._renderer = this._renderer
+	    //}
 
 	    /**
 	     * @access private
@@ -46105,6 +46359,9 @@ module.exports =
 	      // FIXME: it should not be changed while drawing
 	      this._scene = newValue;
 	      this._renderer.scene = this._scene;
+	      if (this._scene !== null) {
+	        this._scene._physicsWorld._renderer = this._renderer;
+	      }
 	    }
 	  }, {
 	    key: 'pointOfView',

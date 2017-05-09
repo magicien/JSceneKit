@@ -80,6 +80,13 @@ const _defaultVertexShader =
   } light;
   __VS_LIGHT_VARS__
 
+  layout (std140) uniform fogUniform {
+    vec4 color;
+    float startDistance;
+    float endDistance;
+    float densityExponent;
+  } fog;
+
   //uniform mat3x4[255] skinningJoints;
   uniform vec4[765] skinningJoints;
   uniform int numSkinningJoints;
@@ -98,6 +105,7 @@ const _defaultVertexShader =
   out vec2 v_texcoord;
   out vec4 v_color;
   out vec3 v_eye;
+  out float v_fogFactor;
 
   void main() {
     vec3 pos = vec3(0, 0, 0);
@@ -145,6 +153,9 @@ const _defaultVertexShader =
 
     __VS_LIGHTING__
 
+    float distance = length(viewVec);
+    v_fogFactor = clamp((distance - fog.startDistance) / (fog.endDistance - fog.startDistance), 0.0, 1.0);
+
     v_texcoord = texcoord;
     gl_Position = viewProjectionTransform * vec4(pos, 1.0);
   }
@@ -183,6 +194,7 @@ const _vsProbe = ''
 
 const _materialLoc = 0
 const _lightLoc = 1
+const _fogLoc = 2
 
 
 /**
@@ -256,6 +268,13 @@ const _defaultFragmentShader =
   } light;
   __FS_LIGHT_VARS__
 
+  layout (std140) uniform fogUniform {
+    vec4 color;
+    float startDistance;
+    float endDistance;
+    float densityExponent;
+  } fog;
+
   in vec3 v_position;
   in vec3 v_normal;
   in vec2 v_texcoord;
@@ -263,6 +282,7 @@ const _defaultFragmentShader =
   in vec3 v_eye;
   //in vec3 v_tangent;
   //in vec3 v_bitangent;
+  in float v_fogFactor;
 
   out vec4 outColor;
 
@@ -292,6 +312,9 @@ const _defaultFragmentShader =
       vec4 color = texture(u_diffuseTexture, v_texcoord);
       outColor = color * outColor;
     }
+
+    float fogFactor = pow(v_fogFactor, fog.densityExponent);
+    outColor = mix(fog.color, outColor, fogFactor);
   }
 `
 
@@ -739,6 +762,12 @@ export default class SCNRenderer extends NSObject {
      */
     this._lightBuffer = null
 
+    /**
+     * @access private
+     * @type {WebGLBuffer}
+     */
+    this._fogBuffer = null
+
     ////////////////////////////
     // Hit Test
     ////////////////////////////
@@ -871,10 +900,35 @@ export default class SCNRenderer extends NSObject {
     //console.log('projectionTransform: ' + cameraNode.camera.projectionTransform.float32Array())
     //console.log('viewProjectionTransform: ' + cameraNode.viewProjectionTransform.float32Array())
     
+    //////////////////////////
+    // Fog
+    //////////////////////////
+    if(this._fogBuffer === null){
+      this._initializeFogBuffer(program)
+    }
+    const fogData = []
+    if(this.scene.fogColor !== null){
+      fogData.push(...this.scene.fogColor.floatArray())
+    }else{
+      fogData.push(0, 0, 0, 0)
+    }
+    fogData.push(
+      this.scene.fogStartDistance,
+      this.scene.fogEndDistance,
+      this.scene.fogDensityExponent,
+      0
+    )
+    gl.bindBuffer(gl.UNIFORM_BUFFER, this._fogBuffer)
+    gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(fogData), gl.DYNAMIC_DRAW)
+    gl.bindBuffer(gl.UNIFORM_BUFFER, null)
+
     if(this._lightBuffer === null){
       this._initializeLightBuffer(program)
     }
 
+    //////////////////////////
+    // Lights
+    //////////////////////////
     const lights = this._lightNodes
     const lightData = []
     lights.ambient.forEach((node) => {
@@ -904,6 +958,9 @@ export default class SCNRenderer extends NSObject {
     gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(lightData), gl.DYNAMIC_DRAW)
     gl.bindBuffer(gl.UNIFORM_BUFFER, null)
 
+    //////////////////////////
+    // Background (SkyBox)
+    //////////////////////////
     if(this.scene.background._contents !== null){
       const skyBox = this.scene._skyBox
       skyBox.position = this.pointOfView._worldTranslation
@@ -913,6 +970,9 @@ export default class SCNRenderer extends NSObject {
       this._renderNode(skyBox)
     }
 
+    //////////////////////////
+    // Nodes
+    //////////////////////////
     const renderingArray = this._createRenderingNodeArray()
     renderingArray.forEach((node) => {
       this._renderNode(node)
@@ -926,6 +986,9 @@ export default class SCNRenderer extends NSObject {
     gl.uniformMatrix4fv(gl.getUniformLocation(particleProgram, 'viewTransform'), false, cameraNode.viewTransform.float32Array())
     gl.uniformMatrix4fv(gl.getUniformLocation(particleProgram, 'projectionTransform'), false, cameraNode.projectionTransform.float32Array())
 
+    //////////////////////////
+    // Particles
+    //////////////////////////
     if(this.scene._particleSystems !== null){
       for(const system of this.scene._particleSystems){
         this._renderParticleSystem(system)
@@ -936,6 +999,9 @@ export default class SCNRenderer extends NSObject {
       this._renderParticle(node)
     })
 
+    //////////////////////////
+    // 2D Overlay
+    //////////////////////////
     this._renderOverlaySKScene()
 
     gl.flush()
@@ -1544,7 +1610,7 @@ export default class SCNRenderer extends NSObject {
    * @param {SCNMatrix4} viewProjectionTransform -
    * @param {SCNVector3} rayFrom -
    * @param {SCNVector3} rayTo -
-   * @param {Object} options -
+   * @param {Map} options -
    * @returns {SCNHitTestResult[]} -
    */
   _hitTestByGPU(viewProjectionTransform, from, to, options) {
@@ -2145,6 +2211,16 @@ export default class SCNRenderer extends NSObject {
       
       geometry._hitTestVAO.push(vao)
     }
+  }
+
+  _initializeFogBuffer(program) {
+    const gl = this.context
+    
+    const fogIndex = gl.getUniformBlockIndex(program, 'fogUniform')
+
+    this._fogBuffer = gl.createBuffer()
+    gl.uniformBlockBinding(program, fogIndex, _fogLoc)
+    gl.bindBufferBase(gl.UNIFORM_BUFFER, _fogLoc, this._fogBuffer)
   }
 
   _initializeLightBuffer(program) {

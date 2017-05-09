@@ -37,7 +37,10 @@ export default class SCNScene extends NSObject {
       paused: ['boolean', 'isPaused'],
       rootNode: ['SCNNode', '_rootNode'],
       upAxis: ['SCNVector3', null],
-      physicsWorld: ['SCNPhysicsWorld', '_physicsWorld'],
+      physicsWorld: ['SCNPhysicsWorld', (obj, value) => {
+        obj._physicsWorld = value
+        obj._physicsWorld._scene = obj
+      }],
       background: ['SCNMaterialProperty', (obj, value) => {
         obj._skyBox.geometry.firstMaterial._emission = value
       }],
@@ -119,7 +122,8 @@ You call this method in a try expression and handle any errors in the catch clau
 
     // Working With Physics in the Scene
 
-    this._physicsWorld = null
+    this._physicsWorld = new SCNPhysicsWorld()
+    this._physicsWorld._scene = this
 
     // Working with Particle Systems in the Scene
 
@@ -205,7 +209,7 @@ You call this method in a try expression and handle any errors in the catch clau
     this.fogEndDistance = src.fogEndDistance
     this.fogDensityExponent = src.fogDensityExponent
     this.fogColor = src.fogColor
-    this._physicsWorld = src._physicsWorld
+    this._physicsWorld = src._physicsWorld // TODO: copy SCNPhysicsWorld
     this._particleSystems = src._particleSystems ? src._particleSystems.slice(0) : null
     this._particleSystemsTransform = src._particleSystemsTransform ? src._particleSystemsTransform.slice(0) : null
   }

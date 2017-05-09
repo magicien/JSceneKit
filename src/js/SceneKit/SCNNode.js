@@ -691,6 +691,9 @@ export default class SCNNode extends NSObject {
   set transform(newValue) {
     this._transform = newValue
     // TODO: update position, rotation, scale
+    this._position = this._transform.getTranslation()
+    this._rotation = this._transform.getRotation()
+    this._scale = this._transform.getScale()
     this._transformUpToDate = true
   }
 
