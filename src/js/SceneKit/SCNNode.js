@@ -1425,7 +1425,10 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @see https://developer.apple.com/reference/scenekit/scnnode/1408018-convertposition
    */
   convertPositionFrom(position, node) {
-    return null
+    if(node === null){
+      return position.transform(this._worldTransform)
+    }
+    return position.transform(node._worldTransform.invert()).transform(this._worldTransform)
   }
 
   /**
@@ -1437,7 +1440,10 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @see https://developer.apple.com/reference/scenekit/scnnode/1407990-convertposition
    */
   convertPositionTo(position, node) {
-    return null
+    if(node === null){
+      return position.transform(this._worldTransform.invert())
+    }
+    return position.transform(this._worldTransoform.invert()).transform(node._worldTransform)
   }
 
   /**
@@ -1448,8 +1454,11 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @returns {SCNMatrix4} - 
    * @see https://developer.apple.com/reference/scenekit/scnnode/1407996-converttransform
    */
-  convertTransformFrom(transform, node) {
-    return null
+  convertTransformFrom(transform, node = null) {
+    if(node === null){
+      return transform.mult(this._worldTransform.invert())
+    }
+    return transform.mult(node._worldTransform).mult(this._worldTransform.invert())
   }
 
   /**
@@ -1460,8 +1469,11 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @returns {SCNMatrix4} - 
    * @see https://developer.apple.com/reference/scenekit/scnnode/1407986-converttransform
    */
-  convertTransformTo(transform, node) {
-    return null
+  convertTransformTo(transform, node = null) {
+    if(node === null){
+      return transform.mult(this._worldTransform)
+    }
+    return transform.mult(this._worldTransform).mult(node._worldTransform.invert())
   }
 
   ///////////////////

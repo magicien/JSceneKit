@@ -17594,7 +17594,12 @@ module.exports =
 	  }, {
 	    key: '_basetimeFromActivetime',
 	    value: function _basetimeFromActivetime(time) {
-	      var dt = time - this.beginTime;
+	      var beginTime = 0;
+	      if (this.beginTime > 0) {
+	        // FIXME: check usesSceneTimeBase value
+	        beginTime = this.beginTime - this._animationStartTime;
+	      }
+	      var dt = time - beginTime;
 	      if (dt < 0) {
 	        if (this.fillMode === Constants.kCAFillModeBackwards || this.fillMode === Constants.kCAFillModeBoth) {
 	          dt = 0;
@@ -21408,7 +21413,10 @@ module.exports =
 	  }, {
 	    key: 'convertPositionFrom',
 	    value: function convertPositionFrom(position, node) {
-	      return null;
+	      if (node === null) {
+	        return position.transform(this._worldTransform);
+	      }
+	      return position.transform(node._worldTransform.invert()).transform(this._worldTransform);
 	    }
 
 	    /**
@@ -21423,7 +21431,10 @@ module.exports =
 	  }, {
 	    key: 'convertPositionTo',
 	    value: function convertPositionTo(position, node) {
-	      return null;
+	      if (node === null) {
+	        return position.transform(this._worldTransform.invert());
+	      }
+	      return position.transform(this._worldTransoform.invert()).transform(node._worldTransform);
 	    }
 
 	    /**
@@ -21437,8 +21448,13 @@ module.exports =
 
 	  }, {
 	    key: 'convertTransformFrom',
-	    value: function convertTransformFrom(transform, node) {
-	      return null;
+	    value: function convertTransformFrom(transform) {
+	      var node = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
+	      if (node === null) {
+	        return transform.mult(this._worldTransform.invert());
+	      }
+	      return transform.mult(node._worldTransform).mult(this._worldTransform.invert());
 	    }
 
 	    /**
@@ -21452,8 +21468,13 @@ module.exports =
 
 	  }, {
 	    key: 'convertTransformTo',
-	    value: function convertTransformTo(transform, node) {
-	      return null;
+	    value: function convertTransformTo(transform) {
+	      var node = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
+	      if (node === null) {
+	        return transform.mult(this._worldTransform);
+	      }
+	      return transform.mult(this._worldTransform).mult(node._worldTransform.invert());
 	    }
 
 	    ///////////////////
@@ -27946,7 +27967,7 @@ module.exports =
 	 * @access private
 	 * @type {string}
 	 */
-	var _defaultVertexShader = '#version 300 es\n  precision mediump float;\n\n  uniform mat4 viewTransform;\n  uniform mat4 viewProjectionTransform;\n\n  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__\n  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__\n  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__\n  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__\n  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__\n  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__\n\n  layout (std140) uniform materialUniform {\n    vec4 ambient;\n    vec4 diffuse;\n    vec4 specular;\n    vec4 emission;\n    float shininess;\n  } material;\n\n  struct AmbientLight {\n    vec4 color;\n  };\n\n  struct DirectionalLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct OmniLight {\n    vec4 color;\n    vec4 position; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct SpotLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct IESLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct ProbeLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  layout (std140) uniform lightUniform {\n    __LIGHT_DEFINITION__\n  } light;\n  __VS_LIGHT_VARS__\n\n  layout (std140) uniform fogUniform {\n    vec4 color;\n    float startDistance;\n    float endDistance;\n    float densityExponent;\n  } fog;\n\n  //uniform mat3x4[255] skinningJoints;\n  uniform vec4[765] skinningJoints;\n  uniform int numSkinningJoints;\n\n  in vec3 position;\n  in vec3 normal;\n  //in vec3 tangent;\n  in vec2 texcoord;\n  in vec4 boneIndices;\n  in vec4 boneWeights;\n\n  out vec3 v_position;\n  out vec3 v_normal;\n  //out vec3 v_tangent;\n  //out vec3 v_bitangent;\n  out vec2 v_texcoord;\n  out vec4 v_color;\n  out vec3 v_eye;\n  out float v_fogFactor;\n\n  void main() {\n    vec3 pos = vec3(0, 0, 0);\n    vec3 nom = vec3(0, 0, 0);\n    vec3 tangent = vec3(1, 0, 0); // DEBUG\n    vec3 tng = vec3(0, 0, 0);\n\n    if(numSkinningJoints > 0){\n      for(int i=0; i<numSkinningJoints; i++){\n        float weight = boneWeights[i];\n        if(int(boneIndices[i]) < 0){\n          continue;\n        }\n        int idx = int(boneIndices[i]) * 3;\n        mat4 jointMatrix = transpose(mat4(skinningJoints[idx],\n                                          skinningJoints[idx+1],\n                                          skinningJoints[idx+2],\n                                          vec4(0, 0, 0, 1)));\n        pos += (jointMatrix * vec4(position, 1.0)).xyz * weight;\n        nom += (mat3(jointMatrix) * normal) * weight;\n        tng += (mat3(jointMatrix) * tangent) * weight;\n      }\n    }else{\n      mat4 jointMatrix = transpose(mat4(skinningJoints[0],\n                                        skinningJoints[1],\n                                        skinningJoints[2],\n                                        vec4(0, 0, 0, 1)));\n      pos = (jointMatrix * vec4(position, 1.0)).xyz;\n      nom = mat3(jointMatrix) * normal;\n      tng += mat3(jointMatrix) * tangent;\n    }\n    v_position = pos;\n    v_normal = nom;\n    vec3 btng = cross(nom, tng);\n\n    vec3 viewPos = vec3(-viewTransform[3][0], -viewTransform[3][1], -viewTransform[3][2]);\n    vec3 viewVec = viewPos - pos;\n    //v_eye.x = dot(viewVec, tng);\n    //v_eye.y = dot(viewVec, btng);\n    //v_eye.z = dot(viewVec, nom);\n    v_eye = viewVec;\n\n    v_color = material.emission;\n    int numLights = 0;\n\n    __VS_LIGHTING__\n\n    float distance = length(viewVec);\n    v_fogFactor = clamp((distance - fog.startDistance) / (fog.endDistance - fog.startDistance), 0.0, 1.0);\n\n    v_texcoord = texcoord;\n    gl_Position = viewProjectionTransform * vec4(pos, 1.0);\n  }\n';
+	var _defaultVertexShader = '#version 300 es\n  precision mediump float;\n\n  uniform mat4 viewTransform;\n  uniform mat4 viewProjectionTransform;\n\n  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__\n  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__\n  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__\n  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__\n  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__\n  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__\n\n  layout (std140) uniform materialUniform {\n    vec4 ambient;\n    vec4 diffuse;\n    vec4 specular;\n    vec4 emission;\n    float shininess;\n  } material;\n\n  struct AmbientLight {\n    vec4 color;\n  };\n\n  struct DirectionalLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct OmniLight {\n    vec4 color;\n    vec4 position; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct SpotLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct IESLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct ProbeLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  layout (std140) uniform lightUniform {\n    __LIGHT_DEFINITION__\n  } light;\n  __VS_LIGHT_VARS__\n\n  layout (std140) uniform fogUniform {\n    vec4 color;\n    float startDistance;\n    float endDistance;\n    float densityExponent;\n  } fog;\n\n  //uniform mat3x4[255] skinningJoints;\n  uniform vec4[765] skinningJoints;\n  uniform int numSkinningJoints;\n\n  in vec3 position;\n  in vec3 normal;\n  //in vec3 tangent;\n  in vec2 texcoord;\n  in vec4 boneIndices;\n  in vec4 boneWeights;\n\n  out vec3 v_position;\n  out vec3 v_normal;\n  //out vec3 v_tangent;\n  //out vec3 v_bitangent;\n  out vec2 v_texcoord;\n  out vec4 v_color;\n  out vec3 v_eye;\n  out float v_fogFactor;\n\n  void main() {\n    vec3 pos = vec3(0, 0, 0);\n    vec3 nom = vec3(0, 0, 0);\n    vec3 tangent = vec3(1, 0, 0); // DEBUG\n    vec3 tng = vec3(0, 0, 0);\n\n    if(numSkinningJoints > 0){\n      for(int i=0; i<numSkinningJoints; i++){\n        float weight = boneWeights[i];\n        if(int(boneIndices[i]) < 0){\n          continue;\n        }\n        int idx = int(boneIndices[i]) * 3;\n        mat4 jointMatrix = transpose(mat4(skinningJoints[idx],\n                                          skinningJoints[idx+1],\n                                          skinningJoints[idx+2],\n                                          vec4(0, 0, 0, 1)));\n        pos += (jointMatrix * vec4(position, 1.0)).xyz * weight;\n        nom += (mat3(jointMatrix) * normal) * weight;\n        tng += (mat3(jointMatrix) * tangent) * weight;\n      }\n    }else{\n      mat4 jointMatrix = transpose(mat4(skinningJoints[0],\n                                        skinningJoints[1],\n                                        skinningJoints[2],\n                                        vec4(0, 0, 0, 1)));\n      pos = (jointMatrix * vec4(position, 1.0)).xyz;\n      nom = mat3(jointMatrix) * normal;\n      tng += mat3(jointMatrix) * tangent;\n    }\n    v_position = pos;\n    v_normal = nom;\n    vec3 btng = cross(nom, tng);\n\n    vec3 viewPos = vec3(-viewTransform[3][0], -viewTransform[3][1], -viewTransform[3][2]);\n    //vec3 viewPos = vec3(-viewTransform[0][3], -viewTransform[1][3], -viewTransform[2][3]);\n    vec3 viewVec = viewPos - pos;\n    //v_eye.x = dot(viewVec, tng);\n    //v_eye.y = dot(viewVec, btng);\n    //v_eye.z = dot(viewVec, nom);\n    v_eye = viewVec;\n\n    v_color = material.emission;\n    int numLights = 0;\n\n    __VS_LIGHTING__\n\n    float distance = length(viewVec);\n    v_fogFactor = clamp((distance - fog.startDistance) / (fog.endDistance - fog.startDistance), 0.0, 1.0);\n\n    v_texcoord = texcoord;\n    gl_Position = viewProjectionTransform * vec4(pos, 1.0);\n  }\n';
 
 	var _vsAmbient = '\n  for(int i=0; i<NUM_AMBIENT_LIGHTS; i++){\n    v_color += light.ambient[i].color * material.ambient;\n  }\n';
 
@@ -28372,7 +28393,9 @@ module.exports =
 
 	      // set camera node
 	      var cameraNode = this._getCameraNode();
-	      var camera = cameraNode.camera;
+	      cameraNode._updateWorldTransform();
+	      var cameraPNode = cameraNode.presentation;
+	      var camera = cameraPNode.camera;
 	      camera._updateProjectionTransform(this._viewRect);
 
 	      // set light node
@@ -28393,8 +28416,8 @@ module.exports =
 	      gl.depthMask(true);
 	      gl.enable(gl.BLEND);
 	      gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
-	      gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewTransform'), false, cameraNode.viewTransform.float32Array());
-	      gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewProjectionTransform'), false, cameraNode.viewProjectionTransform.float32Array());
+	      gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewTransform'), false, cameraPNode.viewTransform.float32Array());
+	      gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewProjectionTransform'), false, cameraPNode.viewProjectionTransform.float32Array());
 
 	      //console.log('cameraNode.position: ' + cameraNode.position.float32Array())
 	      //console.log('viewTransform: ' + cameraNode.viewTransform.float32Array())
@@ -28453,8 +28476,8 @@ module.exports =
 	      //////////////////////////
 	      if (this.scene.background._contents !== null) {
 	        var skyBox = this.scene._skyBox;
-	        skyBox.position = this.pointOfView._worldTranslation;
-	        var scale = this.pointOfView.camera.zFar * 1.154;
+	        skyBox.position = cameraPNode._worldTranslation;
+	        var scale = camera.zFar * 1.154;
 	        skyBox.scale = new _SCNVector2.default(scale, scale, scale);
 	        skyBox._updateWorldTransform();
 	        this._renderNode(skyBox);
@@ -28473,8 +28496,8 @@ module.exports =
 	      gl.depthMask(false);
 	      gl.enable(gl.BLEND);
 	      gl.blendFunc(gl.SRC_ALPHA, gl.ONE);
-	      gl.uniformMatrix4fv(gl.getUniformLocation(particleProgram, 'viewTransform'), false, cameraNode.viewTransform.float32Array());
-	      gl.uniformMatrix4fv(gl.getUniformLocation(particleProgram, 'projectionTransform'), false, cameraNode.projectionTransform.float32Array());
+	      gl.uniformMatrix4fv(gl.getUniformLocation(particleProgram, 'viewTransform'), false, cameraPNode.viewTransform.float32Array());
+	      gl.uniformMatrix4fv(gl.getUniformLocation(particleProgram, 'projectionTransform'), false, cameraPNode.projectionTransform.float32Array());
 
 	      //////////////////////////
 	      // Particles
@@ -37639,19 +37662,33 @@ module.exports =
 	        //this.yFov
 	        //this.xFov
 	        //this.automaticallyAdjustsZRange
-	        var yfov = 60.0;
-	        if (this.yFov > 0) {
-	          yfov = this.yFov;
+	        var m11 = 1;
+	        var m22 = 1;
+	        if (this.yFov <= 0 && this.xFov <= 0) {
+	          var cot = 1.0 / Math.tan(Math.PI / 6.0);
+	          m11 = cot / aspect;
+	          m22 = cot;
+	        } else if (this.yFov <= 0) {
+	          var _cot = 1.0 / Math.tan(this.xFov * Math.PI / 360.0);
+	          m11 = _cot;
+	          m22 = _cot * aspect;
+	        } else if (this.xFov <= 0) {
+	          var _cot2 = 1.0 / Math.tan(this.yFov * Math.PI / 360.0);
+	          m11 = _cot2 / aspect;
+	          m22 = _cot2;
+	        } else {
+	          // FIXME: compare xFov to yFov
+	          var _cot3 = 1.0 / Math.tan(this.yFov * Math.PI / 360.0);
+	          m11 = _cot3 / aspect;
+	          m22 = _cot3;
 	        }
-	        // FIXME: check xFov
 
-	        var cot = 1.0 / Math.tan(yfov * Math.PI / 360.0);
-	        m.m11 = cot / aspect;
+	        m.m11 = m11;
 	        m.m12 = 0;
 	        m.m13 = 0;
 	        m.m14 = 0;
 	        m.m21 = 0;
-	        m.m22 = cot;
+	        m.m22 = m22;
 	        m.m23 = 0;
 	        m.m24 = 0;
 	        m.m31 = 0;
@@ -45263,6 +45300,7 @@ module.exports =
 	     * @type {HTMLCanvasElement}
 	     */
 	    this._canvas = document.createElement('canvas');
+	    this._canvas.tabIndex = 1; // to get keydown/up events, it needs to set tabIndex
 	    if (typeof frame === 'undefined') {
 	      frame = _CGRect2.default.rectWithXYWidthHeight(0, 0, 300, 300);
 	    }
@@ -45425,10 +45463,12 @@ module.exports =
 	      var ev = _this._createEvent(e);
 	      _this.scrollWheelWith(ev);
 	    });
+
 	    this._canvas.addEventListener('keydown', function (e) {
 	      //const ev = this._createEvent(e)
 	      var ev = {
-	        keyCode: 0
+	        keyCode: 0,
+	        isARepeat: false
 	      };
 	      switch (e.code) {
 	        case 'ArrowDown':
@@ -45444,12 +45484,14 @@ module.exports =
 	          ev.keyCode = 124;
 	          break;
 	      }
+
 	      _this.keyDownWith(ev);
 	    });
 	    this._canvas.addEventListener('keyup', function (e) {
 	      //const ev = this._createEvent(e)
 	      var ev = {
-	        keyCode: 0
+	        keyCode: 0,
+	        isARepeat: false
 	      };
 	      switch (e.code) {
 	        case 'ArrowDown':
@@ -45498,6 +45540,8 @@ module.exports =
 	      this._canvas.height = h;
 	      this._context.viewport(0, 0, w, h);
 	      this._renderer._viewRect = this._frame;
+
+	      this.setFrameSize(this._frame.size);
 	    }
 
 	    /**
@@ -48342,6 +48386,8 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
 	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
@@ -48418,7 +48464,7 @@ module.exports =
 	     */
 	    _this.zPosition = 0.0;
 
-	    _this._frame = null;
+	    _this._frame = new _CGRect2.default(new _CGPoint2.default(0, 0), new _CGSize2.default(0, 0));
 
 	    // Setting a Node’s Scaling and Rotation
 
@@ -49398,7 +49444,7 @@ module.exports =
 	     * @returns {SKNode} -
 	     */
 	    value: function copy() {
-	      var node = new SKNode();
+	      var node = _get(SKNode.prototype.__proto__ || Object.getPrototypeOf(SKNode.prototype), 'copy', this).call(this);
 	      node._copyValue(this);
 	      return node;
 	    }
@@ -50884,6 +50930,8 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
 	var _CGPoint = __webpack_require__(7);
 
 	var _CGPoint2 = _interopRequireDefault(_CGPoint);
@@ -51196,6 +51244,7 @@ module.exports =
 	          return;
 	        }
 	        this.size = new _CGSize2.default(this.texture._image.naturalWidth, this.texture._image.naturalHeight);
+	        this.__presentation.size = this.size.copy();
 	      }
 	      if (this._program === null) {
 	        this._program = this._createProgram(gl);
@@ -51300,14 +51349,40 @@ module.exports =
 	  }, {
 	    key: '_createVertexData',
 	    value: function _createVertexData() {
-	      var w = this.size.width * this.xScale;
-	      var h = this.size.height * this.yScale;
-	      var left = this.position.x - this.anchorPoint.x * w;
-	      var right = this.position.x + (1.0 - this.anchorPoint.x) * w;
-	      var top = this.position.y + (1.0 - this.anchorPoint.y) * h;
-	      var bottom = this.position.y - this.anchorPoint.y * h;
-	      var arr = [left, top, this.zPosition, this.centerRect.minX, this.centerRect.minY, right, top, this.zPosition, this.centerRect.maxX, this.centerRect.minY, left, bottom, this.zPosition, this.centerRect.minX, this.centerRect.maxY, right, bottom, this.zPosition, this.centerRect.maxX, this.centerRect.maxY];
+	      var p = this.__presentation;
+	      var w = p.size.width * p.xScale;
+	      var h = p.size.height * p.yScale;
+	      var pos = p._worldPosition;
+	      var zPos = p._worldZPosition;
+	      var left = pos.x - p.anchorPoint.x * w;
+	      var right = pos.x + (1.0 - p.anchorPoint.x) * w;
+	      var top = pos.y + (1.0 - p.anchorPoint.y) * h;
+	      var bottom = pos.y - p.anchorPoint.y * h;
+	      var arr = [left, top, zPos, p.centerRect.minX, p.centerRect.minY, right, top, zPos, p.centerRect.maxX, p.centerRect.minY, left, bottom, zPos, p.centerRect.minX, p.centerRect.maxY, right, bottom, zPos, p.centerRect.maxX, p.centerRect.maxY];
 	      return new Float32Array(arr);
+	    }
+	  }, {
+	    key: '_copyValue',
+	    value: function _copyValue(src) {
+	      _get(SKSpriteNode.prototype.__proto__ || Object.getPrototypeOf(SKSpriteNode.prototype), '_copyValue', this).call(this, src);
+	      this.size = src.size.copy();
+	      this.anchorPoint = src.anchorPoint.copy();
+	      this.texture = src.texture ? src.texture : null;
+	      this.centerRect = src.centerRect.copy();
+	      this.colorBlendFactor = src.colorBlendFactor;
+	      this.color = src.color.copy();
+	      this.blendMode = src.blendMode;
+	      this.lightingBitMask = src.lightingBitMask;
+	      this.shadowedBitMask = src.shadowedBitMask;
+	      this.shadowCastBitMask = src.shadowCastBitMask;
+	      this.normalTexture = src.normalTexture ? src.normalTexture : null;
+	      this.shader = src.shader;
+	      this.attributeValues = src.attributeValues;
+	      this._customerPlaygroundQuickLook = src._customerPlaygroundQuickLook;
+	      // this._program
+	      // this._vertexArrayObject
+	      // this._vertexBuffer
+	      // this._indexBuffer
 	    }
 	  }, {
 	    key: 'customPlaygroundQuickLook',

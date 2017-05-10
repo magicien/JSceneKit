@@ -303,7 +303,12 @@ export default class CAAnimation extends NSObject {
    * @returns {number} - animation base time for the current frame (0-1 or null).
    */
   _basetimeFromActivetime(time) {
-    let dt = time - this.beginTime
+    let beginTime = 0
+    if(this.beginTime > 0){
+      // FIXME: check usesSceneTimeBase value
+      beginTime = this.beginTime - this._animationStartTime
+    }
+    let dt = time - beginTime
     if(dt < 0){
       if(this.fillMode === Constants.kCAFillModeBackwards ||
          this.fillMode === Constants.kCAFillModeBoth){

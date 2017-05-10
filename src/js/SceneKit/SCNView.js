@@ -207,6 +207,7 @@ export default class SCNView {
      * @type {HTMLCanvasElement}
      */
     this._canvas = document.createElement('canvas')
+    this._canvas.tabIndex = 1 // to get keydown/up events, it needs to set tabIndex
     if(typeof frame === 'undefined'){
       frame = CGRect.rectWithXYWidthHeight(0, 0, 300, 300)
     }
@@ -350,10 +351,12 @@ export default class SCNView {
       const ev = this._createEvent(e)
       this.scrollWheelWith(ev)
     })
+
     this._canvas.addEventListener('keydown', (e) => {
       //const ev = this._createEvent(e)
       const ev = {
-        keyCode: 0
+        keyCode: 0,
+        isARepeat: false
       }
       switch(e.code){
         case 'ArrowDown':
@@ -369,12 +372,14 @@ export default class SCNView {
           ev.keyCode = 124
           break
       }
+
       this.keyDownWith(ev)
     })
     this._canvas.addEventListener('keyup', (e) => {
       //const ev = this._createEvent(e)
       const ev = {
-        keyCode: 0
+        keyCode: 0,
+        isARepeat: false
       }
       switch(e.code){
         case 'ArrowDown':
@@ -420,6 +425,8 @@ export default class SCNView {
     this._canvas.height = h
     this._context.viewport(0, 0, w, h)
     this._renderer._viewRect = this._frame
+
+    this.setFrameSize(this._frame.size)
   }
 
   /**
@@ -957,6 +964,7 @@ export default class SCNView {
   ////////////////////////////////////////////////
   // TODO: implement NSView/UIView and extend it
   viewDidMoveToWindow() {}
+
   setFrameSize(newSize) {}
 
   /**

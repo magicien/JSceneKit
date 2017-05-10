@@ -142,6 +142,7 @@ const _defaultVertexShader =
     vec3 btng = cross(nom, tng);
 
     vec3 viewPos = vec3(-viewTransform[3][0], -viewTransform[3][1], -viewTransform[3][2]);
+    //vec3 viewPos = vec3(-viewTransform[0][3], -viewTransform[1][3], -viewTransform[2][3]);
     vec3 viewVec = viewPos - pos;
     //v_eye.x = dot(viewVec, tng);
     //v_eye.y = dot(viewVec, btng);
@@ -871,7 +872,9 @@ export default class SCNRenderer extends NSObject {
 
     // set camera node
     const cameraNode = this._getCameraNode()
-    const camera = cameraNode.camera
+    cameraNode._updateWorldTransform()
+    const cameraPNode = cameraNode.presentation
+    const camera = cameraPNode.camera
     camera._updateProjectionTransform(this._viewRect)
 
     // set light node
@@ -892,8 +895,8 @@ export default class SCNRenderer extends NSObject {
     gl.depthMask(true)
     gl.enable(gl.BLEND)
     gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)
-    gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewTransform'), false, cameraNode.viewTransform.float32Array())
-    gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewProjectionTransform'), false, cameraNode.viewProjectionTransform.float32Array())
+    gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewTransform'), false, cameraPNode.viewTransform.float32Array())
+    gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewProjectionTransform'), false, cameraPNode.viewProjectionTransform.float32Array())
 
     //console.log('cameraNode.position: ' + cameraNode.position.float32Array())
     //console.log('viewTransform: ' + cameraNode.viewTransform.float32Array())
@@ -963,8 +966,8 @@ export default class SCNRenderer extends NSObject {
     //////////////////////////
     if(this.scene.background._contents !== null){
       const skyBox = this.scene._skyBox
-      skyBox.position = this.pointOfView._worldTranslation
-      const scale = this.pointOfView.camera.zFar * 1.154
+      skyBox.position = cameraPNode._worldTranslation
+      const scale = camera.zFar * 1.154
       skyBox.scale = new SCNVector3(scale, scale, scale)
       skyBox._updateWorldTransform()
       this._renderNode(skyBox)
@@ -983,8 +986,8 @@ export default class SCNRenderer extends NSObject {
     gl.depthMask(false)
     gl.enable(gl.BLEND)
     gl.blendFunc(gl.SRC_ALPHA, gl.ONE)
-    gl.uniformMatrix4fv(gl.getUniformLocation(particleProgram, 'viewTransform'), false, cameraNode.viewTransform.float32Array())
-    gl.uniformMatrix4fv(gl.getUniformLocation(particleProgram, 'projectionTransform'), false, cameraNode.projectionTransform.float32Array())
+    gl.uniformMatrix4fv(gl.getUniformLocation(particleProgram, 'viewTransform'), false, cameraPNode.viewTransform.float32Array())
+    gl.uniformMatrix4fv(gl.getUniformLocation(particleProgram, 'projectionTransform'), false, cameraPNode.projectionTransform.float32Array())
 
     //////////////////////////
     // Particles

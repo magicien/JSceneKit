@@ -52,7 +52,7 @@ export default class SKNode extends NSObject {
      */
     this.zPosition = 0.0
 
-    this._frame = null
+    this._frame = new CGRect(new CGPoint(0, 0), new CGSize(0, 0))
 
     // Setting a Node’s Scaling and Rotation
 
@@ -914,7 +914,7 @@ parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
    * @returns {SKNode} -
    */
   copy() {
-    const node = new SKNode()
+    const node = super.copy()
     node._copyValue(this)
     return node
   }

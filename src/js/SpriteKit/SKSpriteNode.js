@@ -332,6 +332,7 @@ Creating a non-textured sprite nodelet node = SKSpriteNode(color: .red,
         return
       }
       this.size = new CGSize(this.texture._image.naturalWidth, this.texture._image.naturalHeight)
+      this.__presentation.size = this.size.copy()
     }
     if(this._program === null){
       this._program = this._createProgram(gl)
@@ -432,18 +433,43 @@ Creating a non-textured sprite nodelet node = SKSpriteNode(color: .red,
   }
 
   _createVertexData() {
-    const w = this.size.width * this.xScale
-    const h = this.size.height * this.yScale
-    const left =  this.position.x - this.anchorPoint.x * w
-    const right = this.position.x + (1.0 - this.anchorPoint.x) * w
-    const top = this.position.y + (1.0 - this.anchorPoint.y) * h
-    const bottom = this.position.y - this.anchorPoint.y * h
+    const p = this.__presentation
+    const w = p.size.width * p.xScale
+    const h = p.size.height * p.yScale
+    const pos = p._worldPosition
+    const zPos = p._worldZPosition
+    const left =  pos.x - p.anchorPoint.x * w
+    const right = pos.x + (1.0 - p.anchorPoint.x) * w
+    const top = pos.y + (1.0 - p.anchorPoint.y) * h
+    const bottom = pos.y - p.anchorPoint.y * h
     const arr = [
-      left, top, this.zPosition, this.centerRect.minX, this.centerRect.minY,
-      right, top, this.zPosition, this.centerRect.maxX, this.centerRect.minY,
-      left, bottom, this.zPosition, this.centerRect.minX, this.centerRect.maxY,
-      right, bottom, this.zPosition, this.centerRect.maxX, this.centerRect.maxY
+      left, top, zPos, p.centerRect.minX, p.centerRect.minY,
+      right, top, zPos, p.centerRect.maxX, p.centerRect.minY,
+      left, bottom, zPos, p.centerRect.minX, p.centerRect.maxY,
+      right, bottom, zPos, p.centerRect.maxX, p.centerRect.maxY
     ]
     return new Float32Array(arr)
+  }
+
+  _copyValue(src) {
+    super._copyValue(src)
+    this.size = src.size.copy()
+    this.anchorPoint = src.anchorPoint.copy()
+    this.texture = src.texture ? src.texture : null
+    this.centerRect = src.centerRect.copy()
+    this.colorBlendFactor = src.colorBlendFactor
+    this.color = src.color.copy()
+    this.blendMode = src.blendMode
+    this.lightingBitMask = src.lightingBitMask
+    this.shadowedBitMask = src.shadowedBitMask
+    this.shadowCastBitMask = src.shadowCastBitMask
+    this.normalTexture = src.normalTexture ? src.normalTexture : null
+    this.shader = src.shader
+    this.attributeValues = src.attributeValues
+    this._customerPlaygroundQuickLook = src._customerPlaygroundQuickLook
+    // this._program
+    // this._vertexArrayObject
+    // this._vertexBuffer
+    // this._indexBuffer
   }
 }

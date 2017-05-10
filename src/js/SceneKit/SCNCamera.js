@@ -394,19 +394,33 @@ export default class SCNCamera extends NSObject {
       //this.yFov
       //this.xFov
       //this.automaticallyAdjustsZRange
-      let yfov = 60.0
-      if(this.yFov > 0){
-        yfov = this.yFov
+      let m11 = 1
+      let m22 = 1
+      if(this.yFov <= 0 && this.xFov <= 0){
+        const cot = 1.0 / Math.tan(Math.PI / 6.0)
+        m11 = cot / aspect
+        m22 = cot
+      }else if(this.yFov <= 0){
+        const cot = 1.0 / Math.tan(this.xFov * Math.PI / 360.0)
+        m11 = cot
+        m22 = cot * aspect
+      }else if(this.xFov <= 0){
+        const cot = 1.0 / Math.tan(this.yFov * Math.PI / 360.0)
+        m11 = cot / aspect
+        m22 = cot
+      }else{
+        // FIXME: compare xFov to yFov
+        const cot = 1.0 / Math.tan(this.yFov * Math.PI / 360.0)
+        m11 = cot / aspect
+        m22 = cot
       }
-      // FIXME: check xFov
 
-      const cot = 1.0 / Math.tan(yfov * Math.PI / 360.0)
-      m.m11 = cot / aspect
+      m.m11 = m11
       m.m12 = 0
       m.m13 = 0
       m.m14 = 0
       m.m21 = 0
-      m.m22 = cot
+      m.m22 = m22
       m.m23 = 0
       m.m24 = 0
       m.m31 = 0
