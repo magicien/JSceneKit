@@ -29,15 +29,18 @@ const _defaultVertexShader =
  `#version 300 es
   precision mediump float;
 
-  uniform mat4 viewTransform;
-  uniform mat4 viewProjectionTransform;
-
   #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__
   #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__
   #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__
   #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__
   #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__
   #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__
+
+  layout (std140) uniform cameraUniform {
+    vec4 position;
+    mat4 viewTransform;
+    mat4 viewProjectionTransform;
+  } camera;
 
   layout (std140) uniform materialUniform {
     vec4 ambient;
@@ -142,9 +145,9 @@ const _defaultVertexShader =
     v_normal = nom;
     vec3 btng = cross(nom, tng);
 
-    vec3 viewPos = vec3(-viewTransform[3][0], -viewTransform[3][1], -viewTransform[3][2]);
+    //vec3 viewPos = vec3(-viewTransform[3][0], -viewTransform[3][1], -viewTransform[3][2]);
     //vec3 viewPos = vec3(-viewTransform[0][3], -viewTransform[1][3], -viewTransform[2][3]);
-    vec3 viewVec = viewPos - pos;
+    vec3 viewVec = camera.position.xyz - pos;
     //v_eye.x = dot(viewVec, tng);
     //v_eye.y = dot(viewVec, btng);
     //v_eye.z = dot(viewVec, nom);
@@ -159,7 +162,7 @@ const _defaultVertexShader =
     v_fogFactor = clamp((distance - fog.startDistance) / (fog.endDistance - fog.startDistance), 0.0, 1.0);
 
     v_texcoord = texcoord;
-    gl_Position = viewProjectionTransform * vec4(pos, 1.0);
+    gl_Position = camera.viewProjectionTransform * vec4(pos, 1.0);
   }
 `
 
@@ -194,9 +197,10 @@ const _vsSpot = `
 const _vsIES = ''
 const _vsProbe = ''
 
-const _materialLoc = 0
-const _lightLoc = 1
-const _fogLoc = 2
+const _cameraLoc = 0
+const _materialLoc = 1
+const _lightLoc = 2
+const _fogLoc = 3
 
 
 /**
@@ -316,7 +320,7 @@ const _defaultFragmentShader =
     }
 
     float fogFactor = pow(v_fogFactor, fog.densityExponent);
-    outColor = mix(fog.color, outColor, fogFactor);
+    outColor = mix(outColor, fog.color, fogFactor);
   }
 `
 
@@ -762,6 +766,12 @@ export default class SCNRenderer extends NSObject {
      * @access private
      * @type {WebGLBuffer}
      */
+    this._cameraBuffer = null
+
+    /**
+     * @access private
+     * @type {WebGLBuffer}
+     */
     this._lightBuffer = null
 
     /**
@@ -871,15 +881,7 @@ export default class SCNRenderer extends NSObject {
       return
     }
 
-    // set camera node
-    const cameraNode = this._getCameraNode()
-    cameraNode._updateWorldTransform()
-    const cameraPNode = cameraNode.presentation
-    const camera = cameraPNode.camera
-    camera._updateProjectionTransform(this._viewRect)
-
-    // set light node
-    this._lightNodes = this._createLightNodeArray()
+    this._lightNodes = this._createLightNodeArray() // createLightNodeArray must be called before getting program
 
     const gl = this.context
     const program = this._defaultProgram._glProgram
@@ -889,21 +891,40 @@ export default class SCNRenderer extends NSObject {
     gl.clearStencil(0)
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT)
 
-    // camera params
     gl.useProgram(program)
 
     gl.depthFunc(gl.LEQUAL)
     gl.depthMask(true)
     gl.enable(gl.BLEND)
     gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)
-    gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewTransform'), false, cameraPNode.viewTransform.float32Array())
-    gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewProjectionTransform'), false, cameraPNode.viewProjectionTransform.float32Array())
+    //gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewTransform'), false, cameraPNode.viewTransform.float32Array())
+    //gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewProjectionTransform'), false, cameraPNode.viewProjectionTransform.float32Array())
 
-    //console.log('cameraNode.position: ' + cameraNode.position.float32Array())
-    //console.log('viewTransform: ' + cameraNode.viewTransform.float32Array())
+    //console.log('cameraNode.worldPosition: ' + cameraPNode.worldTransform.getTranslation().float32Array())
+    //console.log('viewTransform: ' + cameraPNode.viewTransform.float32Array())
     //console.log('projectionTransform: ' + cameraNode.camera.projectionTransform.float32Array())
     //console.log('viewProjectionTransform: ' + cameraNode.viewProjectionTransform.float32Array())
     
+    //////////////////////////
+    // Camera
+    //////////////////////////
+    if(this._cameraBuffer === null){
+      this._initializeCameraBuffer(program)
+    }
+    const cameraData = []
+    const cameraNode = this._getCameraNode()
+    cameraNode._updateWorldTransform()
+    const cameraPNode = cameraNode.presentation
+    const camera = cameraPNode.camera
+    camera._updateProjectionTransform(this._viewRect)
+
+    cameraData.push(...cameraPNode.worldTransform.getTranslation().floatArray(), 0)
+    cameraData.push(...cameraPNode.viewTransform.floatArray())
+    cameraData.push(...cameraPNode.viewProjectionTransform.floatArray())
+    gl.bindBuffer(gl.UNIFORM_BUFFER, this._cameraBuffer)
+    gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(cameraData), gl.DYNAMIC_DRAW)
+    gl.bindBuffer(gl.UNIFORM_BUFFER, null)
+
     //////////////////////////
     // Fog
     //////////////////////////
@@ -926,13 +947,12 @@ export default class SCNRenderer extends NSObject {
     gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(fogData), gl.DYNAMIC_DRAW)
     gl.bindBuffer(gl.UNIFORM_BUFFER, null)
 
-    if(this._lightBuffer === null){
-      this._initializeLightBuffer(program)
-    }
-
     //////////////////////////
     // Lights
     //////////////////////////
+    if(this._lightBuffer === null){
+      this._initializeLightBuffer(program)
+    }
     const lights = this._lightNodes
     const lightData = []
     lights.ambient.forEach((node) => {
@@ -2215,6 +2235,17 @@ export default class SCNRenderer extends NSObject {
       
       geometry._hitTestVAO.push(vao)
     }
+  }
+
+  _initializeCameraBuffer(program) {
+    const gl = this.context
+    
+    const cameraIndex = gl.getUniformBlockIndex(program, 'cameraUniform')
+
+    this._cameraBuffer = gl.createBuffer()
+    gl.uniformBlockBinding(program, cameraIndex, _cameraLoc)
+    gl.bindBufferBase(gl.UNIFORM_BUFFER, _cameraLoc, this._cameraBuffer)
+
   }
 
   _initializeFogBuffer(program) {
