@@ -122,22 +122,42 @@ export default class CABasicAnimation extends CAPropertyAnimation {
       toValue = toValue
     }else if(this.fromValue !== null){
       fromValue = this.fromValue
-      toValue = this._baseValue
+      if(this.isAdditive){
+        toValue = 0
+      }else{
+        toValue = this._baseValue
+      }
     }else if(this.toValue !== null){
-      fromValue = this._baseValue
+      if(this.isAdditive){
+        fromValue = 0
+      }else{
+        fromValue = this._baseValue
+      }
       toValue = this.toValue
     }else if(this.byValue !== null){
-      fromValue = this._baseValue
-      if(isObject){
-        toValue = this._baseValue.add(this.byValue)
+      if(this.isAdditive){
+        fromValue = 0
+        toValue = this.byValue
       }else{
-        toValue = this._baseValue + this.byValue
+        fromValue = this._baseValue
+        if(isObject){
+          toValue = this._baseValue.add(this.byValue)
+        }else{
+          toValue = this._baseValue + this.byValue
+        }
       }
     }else{
       // TODO: retain prevValue
       //value = this._lerp(prevValue, currentValue, t)
     }
-    const value = this._lerp(fromValue, toValue, t)
+    let value = this._lerp(fromValue, toValue, t)
+    if(this.isAdditive){
+      if(isObject){
+        value = value.add(this._baseValue)
+      }else{
+        value += this._baseValue
+      }
+    }
 
     //console.log(`CABasicAnimation._applyAnimation: keyPath: ${this.keyPath}, time: ${time}, baseTime: ${baseTime}, t: ${t}, value: ${value}`)
     this._applyValue(obj, value)

@@ -17617,11 +17617,17 @@ module.exports =
 	        duration = 0.25;
 	      }
 
+	      var repeatCount = this.repeatCount;
+	      if (this.usesSceneTimeBase) {
+	        // FIXME: I don't know why, but if you set usesSceneTimeBase = true, it will animate repeatedly...
+	        repeatCount = Infinity;
+	      }
+
 	      if (this.repeatDuration > 0) {
 	        duration = this.repeatDuration;
 	      } else {
-	        if (this.repeatCount > 0) {
-	          duration *= this.repeatCount;
+	        if (repeatCount > 0) {
+	          duration *= repeatCount;
 	        }
 	        if (this.autoreverses) {
 	          oneLoopDuration *= 2.0;
@@ -17894,6 +17900,12 @@ module.exports =
 	      var t1 = 1;
 	      var t = 0.5;
 	      var r = 0;
+
+	      if (time <= 0) {
+	        return 0;
+	      } else if (time >= 1) {
+	        return 1;
+	      }
 
 	      for (var i = 0; i < 8; i++) {
 	        r = 1 - t;
@@ -18373,22 +18385,42 @@ module.exports =
 	        toValue = toValue;
 	      } else if (this.fromValue !== null) {
 	        fromValue = this.fromValue;
-	        toValue = this._baseValue;
+	        if (this.isAdditive) {
+	          toValue = 0;
+	        } else {
+	          toValue = this._baseValue;
+	        }
 	      } else if (this.toValue !== null) {
-	        fromValue = this._baseValue;
+	        if (this.isAdditive) {
+	          fromValue = 0;
+	        } else {
+	          fromValue = this._baseValue;
+	        }
 	        toValue = this.toValue;
 	      } else if (this.byValue !== null) {
-	        fromValue = this._baseValue;
-	        if (isObject) {
-	          toValue = this._baseValue.add(this.byValue);
+	        if (this.isAdditive) {
+	          fromValue = 0;
+	          toValue = this.byValue;
 	        } else {
-	          toValue = this._baseValue + this.byValue;
+	          fromValue = this._baseValue;
+	          if (isObject) {
+	            toValue = this._baseValue.add(this.byValue);
+	          } else {
+	            toValue = this._baseValue + this.byValue;
+	          }
 	        }
 	      } else {
 	        // TODO: retain prevValue
 	        //value = this._lerp(prevValue, currentValue, t)
 	      }
 	      var value = this._lerp(fromValue, toValue, t);
+	      if (this.isAdditive) {
+	        if (isObject) {
+	          value = value.add(this._baseValue);
+	        } else {
+	          value += this._baseValue;
+	        }
+	      }
 
 	      //console.log(`CABasicAnimation._applyAnimation: keyPath: ${this.keyPath}, time: ${time}, baseTime: ${baseTime}, t: ${t}, value: ${value}`)
 	      this._applyValue(obj, value);
@@ -27877,6 +27909,18 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+	var _CGPoint = __webpack_require__(7);
+
+	var _CGPoint2 = _interopRequireDefault(_CGPoint);
+
+	var _CGRect = __webpack_require__(8);
+
+	var _CGRect2 = _interopRequireDefault(_CGRect);
+
+	var _CGSize = __webpack_require__(9);
+
+	var _CGSize2 = _interopRequireDefault(_CGSize);
+
 	var _NSObject2 = __webpack_require__(2);
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
@@ -27892,14 +27936,6 @@ module.exports =
 	var _SCNScene = __webpack_require__(87);
 
 	var _SCNScene2 = _interopRequireDefault(_SCNScene);
-
-	var _CGRect = __webpack_require__(8);
-
-	var _CGRect2 = _interopRequireDefault(_CGRect);
-
-	var _CGSize = __webpack_require__(9);
-
-	var _CGSize2 = _interopRequireDefault(_CGSize);
 
 	var _SCNAntialiasingMode = __webpack_require__(121);
 
@@ -27933,10 +27969,6 @@ module.exports =
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
-	var _SKColor = __webpack_require__(11);
-
-	var _SKColor2 = _interopRequireDefault(_SKColor);
-
 	var _SCNGeometryPrimitiveType = __webpack_require__(70);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
@@ -27952,6 +27984,10 @@ module.exports =
 	var _SCNHitTestResult = __webpack_require__(103);
 
 	var _SCNHitTestResult2 = _interopRequireDefault(_SCNHitTestResult);
+
+	var _SKColor = __webpack_require__(11);
+
+	var _SKColor2 = _interopRequireDefault(_SKColor);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28241,7 +28277,7 @@ module.exports =
 	     * @access private
 	     * @type {CGRect}
 	     */
-	    _this._viewRect = null;
+	    _this._viewRect = new _CGRect2.default(new _CGPoint2.default(0, 0), new _CGSize2.default(0, 0));
 
 	    /**
 	     * The background color of the view.
@@ -43815,6 +43851,8 @@ module.exports =
 	     */
 	    _this._referenceURL = referenceURL;
 
+	    _this._scene = null;
+
 	    if (referenceURL) {
 	      _this.load();
 	    }
@@ -43843,9 +43881,12 @@ module.exports =
 	      this._isLoading = true;
 
 	      new _SCNScene2.default(this._referenceURL, null, function (scene) {
-	        scene.rootNode.childNodes.forEach(function (node) {
-	          _get(SCNReferenceNode.prototype.__proto__ || Object.getPrototypeOf(SCNReferenceNode.prototype), 'addChildNode', _this2).call(_this2, node);
-	        });
+	        //scene.rootNode.childNodes.forEach((node) => {
+	        //  super.addChildNode(node)
+	        //})
+	        _get(SCNReferenceNode.prototype.__proto__ || Object.getPrototypeOf(SCNReferenceNode.prototype), 'addChildNode', _this2).call(_this2, scene.rootNode);
+	        _this2._scene = scene;
+
 	        _this2._isLoaded = true;
 	        _this2._isLoading = false;
 	      });
@@ -45921,10 +45962,6 @@ module.exports =
 	          node._presentation = p;
 	        }
 	        node._copyTransformToPresentation();
-	        //p._position = node._position
-	        //p._rotation = node._rotation
-	        //p._scale = node._scale
-
 
 	        arr.push.apply(arr, _toConsumableArray(node.childNodes));
 	      };
@@ -45975,7 +46012,6 @@ module.exports =
 	        _this3._currentSystemTime = Date.now() * 0.001;
 	        _this3.currentTime = _this3._currentSystemTime;
 	        _this3._drawAtTimeWithContext(_this3.currentTime, _this3._context);
-	        //console.log('requestAnimationFrame: time: ' + this.currentTime)
 
 	        if (_this3._isPlaying) {
 	          _this3.__requestAnimationFrame();
@@ -49942,6 +49978,7 @@ module.exports =
 	      gl.uniform1f(gl.getUniformLocation(program, 'screenHeight'), viewRect.size.height);
 
 	      var data = this._createVertexData();
+	      gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer);
 	      gl.bufferData(gl.ARRAY_BUFFER, data, gl.DYNAMIC_DRAW);
 
 	      gl.uniform1i(gl.getUniformLocation(program, 'spriteTexture'), 0);
@@ -51261,6 +51298,7 @@ module.exports =
 	      gl.uniform1f(gl.getUniformLocation(program, 'screenHeight'), viewRect.size.height);
 
 	      var data = this._createVertexData();
+	      gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer);
 	      gl.bufferData(gl.ARRAY_BUFFER, data, gl.DYNAMIC_DRAW);
 
 	      gl.uniform1i(gl.getUniformLocation(program, 'spriteTexture'), 0);

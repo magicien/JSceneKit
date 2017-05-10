@@ -1,11 +1,12 @@
 'use strict'
 
+import CGPoint from '../CoreGraphics/CGPoint'
+import CGRect from '../CoreGraphics/CGRect'
+import CGSize from '../CoreGraphics/CGSize'
 import NSObject from '../ObjectiveC/NSObject'
 import SCNSceneRenderer from './SCNSceneRenderer'
 import SCNTechniqueSupport from './SCNTechniqueSupport'
 import SCNScene from './SCNScene'
-import CGRect from '../CoreGraphics/CGRect'
-import CGSize from '../CoreGraphics/CGSize'
 import SCNAntialiasingMode from './SCNAntialiasingMode'
 import SCNMatrix4 from './SCNMatrix4'
 import SCNNode from './SCNNode'
@@ -14,11 +15,11 @@ import SCNCamera from './SCNCamera'
 import SCNLight from './SCNLight'
 import SCNVector3 from './SCNVector3'
 import SCNVector4 from './SCNVector4'
-import SKColor from '../SpriteKit/SKColor'
 import SCNGeometryPrimitiveType from './SCNGeometryPrimitiveType'
 import SCNGeometrySource from './SCNGeometrySource'
 import SCNHitTestOption from './SCNHitTestOption'
 import SCNHitTestResult from './SCNHitTestResult'
+import SKColor from '../SpriteKit/SKColor'
 
 /**
  * @access private
@@ -731,7 +732,7 @@ export default class SCNRenderer extends NSObject {
      * @access private
      * @type {CGRect}
      */
-    this._viewRect = null
+    this._viewRect = new CGRect(new CGPoint(0, 0), new CGSize(0, 0))
 
     /**
      * The background color of the view.

@@ -1055,10 +1055,6 @@ export default class SCNView {
         node._presentation = p
       }
       node._copyTransformToPresentation()
-      //p._position = node._position
-      //p._rotation = node._rotation
-      //p._scale = node._scale
-
       
       arr.push(...node.childNodes)
     }
@@ -1099,7 +1095,6 @@ export default class SCNView {
       this._currentSystemTime = Date.now() * 0.001
       this.currentTime = this._currentSystemTime
       this._drawAtTimeWithContext(this.currentTime, this._context)
-      //console.log('requestAnimationFrame: time: ' + this.currentTime)
 
       if(this._isPlaying){
         this.__requestAnimationFrame()

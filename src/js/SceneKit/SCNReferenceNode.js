@@ -73,6 +73,8 @@ export default class SCNReferenceNode extends SCNNode {
      */
     this._referenceURL = referenceURL
 
+    this._scene = null
+
     if(referenceURL){
       this.load()
     }
@@ -94,9 +96,12 @@ export default class SCNReferenceNode extends SCNNode {
     this._isLoading = true
 
     new SCNScene(this._referenceURL, null, (scene) => {
-      scene.rootNode.childNodes.forEach((node) => {
-        super.addChildNode(node)
-      })
+      //scene.rootNode.childNodes.forEach((node) => {
+      //  super.addChildNode(node)
+      //})
+      super.addChildNode(scene.rootNode)
+      this._scene = scene
+
       this._isLoaded = true
       this._isLoading = false
     })

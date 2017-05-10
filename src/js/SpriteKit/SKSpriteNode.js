@@ -345,11 +345,11 @@ Creating a non-textured sprite nodelet node = SKSpriteNode(color: .red,
     }
     gl.bindVertexArray(this._vertexArrayObject)
 
-
     gl.uniform1f(gl.getUniformLocation(program, 'screenWidth'), viewRect.size.width)
     gl.uniform1f(gl.getUniformLocation(program, 'screenHeight'), viewRect.size.height)
 
     const data = this._createVertexData()
+    gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer)
     gl.bufferData(gl.ARRAY_BUFFER, data, gl.DYNAMIC_DRAW)
 
     gl.uniform1i(gl.getUniformLocation(program, 'spriteTexture'), 0)

@@ -93,6 +93,12 @@ export default class CAMediaTimingFunction extends NSObject {
     let t = 0.5
     let r = 0
 
+    if(time <= 0){
+      return 0
+    }else if(time >= 1){
+      return 1
+    }
+
     for(let i=0; i<8; i++){
       r = 1 - t
       const tval = 3 * t * r * (this._c1x * r + this._c2x * t) + t * t * t

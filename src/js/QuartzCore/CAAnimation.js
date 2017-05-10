@@ -327,11 +327,17 @@ export default class CAAnimation extends NSObject {
       duration = 0.25
     }
 
+    let repeatCount = this.repeatCount
+    if(this.usesSceneTimeBase){
+      // FIXME: I don't know why, but if you set usesSceneTimeBase = true, it will animate repeatedly...
+      repeatCount = Infinity
+    }
+
     if(this.repeatDuration > 0){
       duration = this.repeatDuration
     }else{
-      if(this.repeatCount > 0){
-        duration *= this.repeatCount
+      if(repeatCount > 0){
+        duration *= repeatCount
       }
       if(this.autoreverses){
         oneLoopDuration *= 2.0
