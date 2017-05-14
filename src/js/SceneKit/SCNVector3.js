@@ -64,7 +64,17 @@ export default class SCNVector3 {
     return new SCNVector3(this.x, this.y, this.z)
   }
 
+  _copyFrom(v) {
+    this.x = v.x
+    this.y = v.y
+    this.z = v.z
+  }
+
   // extensions
+
+  zero() {
+    return new SCNVector3()
+  }
 
   /**
    * @access public
@@ -175,6 +185,9 @@ export default class SCNVector3 {
   transform(m) {
     const r = new SCNVector3()
     const w = this.x * m.m14 + this.y * m.m24 + this.z * m.m34 + m.m44
+    if(w === 0){
+      return r
+    }
     const iw = 1.0 / w
     r.x = (this.x * m.m11 + this.y * m.m21 + this.z * m.m31 + m.m41) * iw
     r.y = (this.x * m.m12 + this.y * m.m22 + this.z * m.m32 + m.m42) * iw

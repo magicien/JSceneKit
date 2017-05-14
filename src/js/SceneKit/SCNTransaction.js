@@ -105,9 +105,9 @@ export default class SCNTransaction extends NSObject {
 
   static _apply(transaction) {
     if(transaction._disableActions || transaction._animationDuration === 0){
-      transaction._animations.forEach((anim) => {
-        anim.target.setValueForKeyPath(anim.newValue, anim.keyPath)
-      })
+      //transaction._animations.forEach((anim) => {
+      //  anim.target.setValueForKeyPath(anim.newValue, anim.keyPath)
+      //})
       if(transaction._completionBlock){
         transaction._completionBlock()
       }
@@ -116,15 +116,16 @@ export default class SCNTransaction extends NSObject {
       transaction._animations.forEach((anim) => {
         const promise = new Promise((resolve, reject) => {
           const animation = new CABasicAnimation(anim.keyPath)
-          animation.toValue = anim.newValue
+          animation.fromValue = anim.diff
           animation.timingFunction = transaction._animationTimingFunction
           animation.duration = transaction._animationDuration
+          animation.isAdditive = true
           animation.isRemovedOnCompletion = true
           animation.delegate = {
             animationDidStop: (_anim, _finished) => {
               if(_finished){
                 console.log(`animation completed: ${anim.keyPath}`)
-                anim.target.setValueForKeyPath(anim.newValue, anim.keyPath)
+                //anim.target.setValueForKeyPath(anim.newValue, anim.keyPath)
                 resolve(anim, animation)
               }
             }
@@ -303,13 +304,23 @@ _node.position = SCNVector3Make(_node.position.x, _node.position.y + 10, _node.p
     return _automaticTransaction
   }
 
-  static _addChange(target, keyPath, newValue) {
+  static _addChange(target, keyPath, oldValue, newValue) {
     if(this._immediateMode){
-      target.setValueForKeyPath(newValue, keyPath)
+      //target.setValueForKeyPath(newValue, keyPath)
     }else{
+      let diff = null
+      if(typeof newValue === 'number'){
+        diff = oldValue - newValue
+      }else if(typeof newValue.sub !== 'undefined'){
+        diff = oldValue.sub(newValue)
+      }else{
+        throw new Error(`keyPath ${keyPath} does not have sub function`)
+      }
       this._currentTransaction._animations.push({
         target: target,
         keyPath: keyPath,
+        diff: diff,
+        oldValue: oldValue, 
         newValue: newValue
       })
     }

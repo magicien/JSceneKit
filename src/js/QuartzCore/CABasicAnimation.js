@@ -80,6 +80,9 @@ export default class CABasicAnimation extends CAPropertyAnimation {
     let t = time
     if(needTimeConversion){
       const baseTime = this._basetimeFromTime(time)
+      if(baseTime === null){
+        return
+      }
       t = baseTime
       if(this.timingFunction !== null){
         t = this.timingFunction._getValueAtTime(baseTime)
@@ -90,15 +93,17 @@ export default class CABasicAnimation extends CAPropertyAnimation {
       if(t > 1){
         t = 1
       }
+      if(this.keyPath === 'rotation.w'){
+        console.log(`time: ${time}, activeTime: ${time - this._animationStartTime}, baseTime: ${baseTime}, t: ${t}`)
+      }
     }
 
     let isObject = false
-    if(this._baseValue === null){
-      this._baseValue = obj.valueForKeyPath(this.keyPath)
-      if(typeof this._baseValue !== 'number' && this._baseValue !== null){
-        this._baseValue = this._baseValue._copy()
-        isObject = true
-      }
+    if(this._baseValue === null || this.isAdditive){
+      this._baseValue = obj.valueForKeyPath(this.keyPath, false)
+    }
+    if(typeof this._baseValue !== 'number' && this._baseValue !== null){
+      isObject = true
     }
 
     let fromValue = 0
@@ -123,20 +128,32 @@ export default class CABasicAnimation extends CAPropertyAnimation {
     }else if(this.fromValue !== null){
       fromValue = this.fromValue
       if(this.isAdditive){
-        toValue = 0
+        if(isObject){
+          toValue = this._baseValue.zero()
+        }else{
+          toValue = 0
+        }
       }else{
         toValue = this._baseValue
       }
     }else if(this.toValue !== null){
       if(this.isAdditive){
-        fromValue = 0
+        if(isObject){
+          fromValue = this._baseValue.zero()
+        }else{
+          fromValue = 0
+        }
       }else{
         fromValue = this._baseValue
       }
       toValue = this.toValue
     }else if(this.byValue !== null){
       if(this.isAdditive){
-        fromValue = 0
+        if(isObject){
+          fromValue = this._baseValue.zero()
+        }else{
+          fromValue = 0
+        }
         toValue = this.byValue
       }else{
         fromValue = this._baseValue
@@ -151,12 +168,22 @@ export default class CABasicAnimation extends CAPropertyAnimation {
       //value = this._lerp(prevValue, currentValue, t)
     }
     let value = this._lerp(fromValue, toValue, t)
+
+    if(this.keyPath === 'rotation.w'){
+      console.log(`from: ${fromValue}, to: ${toValue}, t: ${t}, value: ${value}`)
+    }
+
     if(this.isAdditive){
       if(isObject){
+        //value = value.add(obj.valueForKeyPath(this.keyPath))
         value = value.add(this._baseValue)
       }else{
         value += this._baseValue
       }
+    }
+
+    if(this.keyPath === 'rotation.w'){
+      console.log(`value after: ${value}`)
     }
 
     //console.log(`CABasicAnimation._applyAnimation: keyPath: ${this.keyPath}, time: ${time}, baseTime: ${baseTime}, t: ${t}, value: ${value}`)

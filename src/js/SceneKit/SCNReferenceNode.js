@@ -96,9 +96,7 @@ export default class SCNReferenceNode extends SCNNode {
     this._isLoading = true
 
     new SCNScene(this._referenceURL, null, (scene) => {
-      //scene.rootNode.childNodes.forEach((node) => {
-      //  super.addChildNode(node)
-      //})
+      scene.rootNode.name = 'referenceRoot'
       super.addChildNode(scene.rootNode)
       this._scene = scene
 

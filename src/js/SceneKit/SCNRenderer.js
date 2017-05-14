@@ -11,6 +11,7 @@ import SCNAntialiasingMode from './SCNAntialiasingMode'
 import SCNMatrix4 from './SCNMatrix4'
 import SCNNode from './SCNNode'
 import SCNProgram from './SCNProgram'
+import SCNPhysicsWorld from './SCNPhysicsWorld'
 import SCNCamera from './SCNCamera'
 import SCNLight from './SCNLight'
 import SCNVector3 from './SCNVector3'
@@ -522,7 +523,7 @@ const _defaultHitTestFragmentShader =
     out_faceID = vec4(0, 0, 0, 0); // TODO: implement
     vec3 n = normalize(v_normal);
     out_normal = vec3((n.x + 1.0) * 0.5, (n.y + 1.0) * 0.5, (n.z + 1.0) * 0.5);
-    out_position = vec3((v_position.x + 1.0) * 0.5, (v_position.y + 1.0) * 0.5, v_position.z);
+    out_position = vec3((v_position.x + 1.0) * 0.5, (v_position.y + 1.0) * 0.5, (v_position.z + 1.0) * 0.5);
   }
 `
 
@@ -721,6 +722,7 @@ export default class SCNRenderer extends NSObject {
     camera.name = 'kSCNFreeViewCameraNameCamera'
     this._defaultCameraNode.camera = camera
     this._defaultCameraNode.position = new SCNVector3(0, 0, _defaultCameraDistance)
+    this._defaultCameraNode._presentation = this._defaultCameraNode
 
     this._defaultCameraPosNode.addChildNode(this._defaultCameraRotNode)
     this._defaultCameraRotNode.addChildNode(this._defaultCameraNode)
@@ -932,17 +934,17 @@ export default class SCNRenderer extends NSObject {
       this._initializeFogBuffer(program)
     }
     const fogData = []
-    if(this.scene.fogColor !== null){
-      fogData.push(...this.scene.fogColor.floatArray())
+    if(this.scene.fogColor !== null && this.scene.fogEndDistance !== 0){
+      fogData.push(
+        ...this.scene.fogColor.floatArray(),
+        this.scene.fogStartDistance,
+        this.scene.fogEndDistance,
+        this.scene.fogDensityExponent,
+        0
+      )
     }else{
-      fogData.push(0, 0, 0, 0)
+      fogData.push(0, 0, 0, 0, camera.zFar * 2, camera.zFar * 2 + 1, 1, 0)
     }
-    fogData.push(
-      this.scene.fogStartDistance,
-      this.scene.fogEndDistance,
-      this.scene.fogDensityExponent,
-      0
-    )
     gl.bindBuffer(gl.UNIFORM_BUFFER, this._fogBuffer)
     gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(fogData), gl.DYNAMIC_DRAW)
     gl.bindBuffer(gl.UNIFORM_BUFFER, null)
@@ -991,7 +993,22 @@ export default class SCNRenderer extends NSObject {
       const scale = camera.zFar * 1.154
       skyBox.scale = new SCNVector3(scale, scale, scale)
       skyBox._updateWorldTransform()
+
+      // disable fog
+      const disabledFogData = fogData.slice(0)
+      disabledFogData[4] = camera.zFar * 2.0 // startDistance
+      disabledFogData[5] = camera.zFar * 2.1 // endDistance
+      disabledFogData[6] = 1.0 // densityExponent
+      gl.bindBuffer(gl.UNIFORM_BUFFER, this._fogBuffer)
+      gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(disabledFogData), gl.DYNAMIC_DRAW)
+      gl.bindBuffer(gl.UNIFORM_BUFFER, null)
+
       this._renderNode(skyBox)
+
+      // enable fog
+      gl.bindBuffer(gl.UNIFORM_BUFFER, this._fogBuffer)
+      gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(fogData), gl.DYNAMIC_DRAW)
+      gl.bindBuffer(gl.UNIFORM_BUFFER, null)
     }
 
     //////////////////////////
@@ -1040,6 +1057,7 @@ export default class SCNRenderer extends NSObject {
     gl.clearStencil(0)
     gl.depthMask(true)
     gl.enable(gl.DEPTH_TEST)
+    gl.disable(gl.CULL_FACE)
     gl.depthFunc(gl.GEQUAL)
     gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)
     gl.clear(gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT)
@@ -1146,6 +1164,26 @@ export default class SCNRenderer extends NSObject {
   /**
    *
    * @access private
+   * @returns {SCNNode[]} -
+   */
+  _createRenderingPhysicsNodeArray() {
+    const arr = [this.scene._rootNode]
+    const targetNodes = []
+    while(arr.length > 0){
+      const node = arr.shift()
+      if(node.presentation.physicsBody !== null){
+        targetNodes.push(node)
+      }
+      arr.push(...node.childNodes)
+    }
+    targetNodes.sort((a, b) => { return a.renderingOrder - b.renderingOrder })
+
+    return targetNodes
+  }
+
+  /**
+   *
+   * @access private
    * @param {SCNNode} node -
    * @returns {void}
    */
@@ -1169,9 +1207,6 @@ export default class SCNRenderer extends NSObject {
     if(node.morpher !== null){
       this._updateVAO(node)
     }
-
-    // TODO: use geometry setting
-    //gl.disable(gl.CULL_FACE)
 
     if(node.presentation.skinner !== null){
       gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
@@ -1303,7 +1338,7 @@ export default class SCNRenderer extends NSObject {
       this._initializeHitTestVAO(node, program)
     }
 
-    console.log(`uniform1i: objectID: ${objectID}`)
+    //console.log(`uniform1i: objectID: ${objectID}`)
     gl.uniform1i(gl.getUniformLocation(program, 'objectID'), objectID)
 
     if(node.presentation.skinner !== null){
@@ -1361,7 +1396,91 @@ export default class SCNRenderer extends NSObject {
           throw new Error(`unsupported index size: ${element.bytesPerIndex}`)
       }
 
-      console.log(`hitTest drawElements: length: ${element._glData.length}`)
+      //console.log(`hitTest drawElements: length: ${element._glData.length}`)
+      gl.drawElements(shape, element._glData.length, size, 0)
+    }
+  }
+
+  /**
+   *
+   * @access private
+   * @param {SCNNode} node -
+   * @param {number} objectID -
+   * @param {Map} options -
+   * @returns {void}
+   */
+  _renderPhysicsNodeForHitTest(node, objectID, options) {
+    const gl = this.context
+    const p = node.presentation
+    const body = p.physicsBody
+    const geometry = body.physicsShape._sourceGeometry
+    const program = this._defaultHitTestProgram._glProgram
+
+    if(geometry._vertexBuffer === null){
+      // should I copy the geometry?
+      geometry._createVertexBuffer(gl, node, false, geometry)
+    }
+    if(geometry._hitTestVAO === null){
+      this._initializeHitTestVAO(node, program, true)
+    }
+
+    gl.uniform1i(gl.getUniformLocation(program, 'objectID'), objectID)
+
+    if(node.presentation.skinner !== null){
+      gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
+      gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array())
+    }else{
+      gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0)
+      gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f())
+    }
+
+    const geometryCount = geometry.geometryElements.length
+    if(geometryCount === 0){
+      throw new Error('geometryCount: 0')
+    }
+    for(let i=0; i<geometryCount; i++){
+      const vao = geometry._hitTestVAO[i]
+      const element = geometry.geometryElements[i]
+
+      gl.bindVertexArray(vao)
+      gl.uniform1i(gl.getUniformLocation(program, 'geometryID'), i)
+
+      let shape = null
+      switch(element.primitiveType){
+        case SCNGeometryPrimitiveType.triangles:
+          shape = gl.TRIANGLES
+          break
+        case SCNGeometryPrimitiveType.triangleStrip:
+          shape = gl.TRIANGLE_STRIP
+          break
+        case SCNGeometryPrimitiveType.line:
+          shape = gl.LINES
+          break
+        case SCNGeometryPrimitiveType.point:
+          shape = gl.POINTS
+          break
+        case SCNGeometryPrimitiveType.polygon:
+          shape = gl.TRIANGLE_FAN
+          break
+        default:
+          throw new Error(`unsupported primitiveType: ${element.primitiveType}`)
+      }
+
+      let size = null
+      switch(element.bytesPerIndex){
+        case 1:
+          size = gl.UNSIGNED_BYTE
+          break
+        case 2:
+          size = gl.UNSIGNED_SHORT
+          break
+        case 4:
+          size = gl.UNSIGNED_INT
+          break
+        default:
+          throw new Error(`unsupported index size: ${element.bytesPerIndex}`)
+      }
+
       gl.drawElements(shape, element._glData.length, size, 0)
     }
   }
@@ -1608,12 +1727,12 @@ export default class SCNRenderer extends NSObject {
     const invVp = viewProjectionMatrix.invert()
     const rayFrom = from.transform(invVp)
     const rayTo = to.transform(invVp)
-    console.log(`rayFrom: ${rayFrom.float32Array()}`)
-    console.log(`rayTo  : ${rayTo.float32Array()}`)
+    //console.log(`rayFrom: ${rayFrom.float32Array()}`)
+    //console.log(`rayTo  : ${rayTo.float32Array()}`)
 
     const rayVec = rayTo.sub(rayFrom)
     const renderingArray = this._createRenderingNodeArray()
-    console.log(`renderingArray.length: ${renderingArray.length}`)
+    //console.log(`renderingArray.length: ${renderingArray.length}`)
 
     let categoryBitMask = options.get(SCNHitTestOption.categoryBitMask)
     if(typeof categoryBitMask === 'undefined'){
@@ -1650,7 +1769,7 @@ export default class SCNRenderer extends NSObject {
 
     gl.depthMask(true)
     gl.depthFunc(gl.LEQUAL)
-    //gl.enable(gl.SCISSOR_TEST)
+    gl.enable(gl.SCISSOR_TEST)
     gl.disable(gl.BLEND)
     gl.clearColor(0, 0, 0, 0)
     gl.clearDepth(1.0)
@@ -1697,7 +1816,7 @@ export default class SCNRenderer extends NSObject {
     const len = renderingArray.length
     for(let i=0; i<len; i++){
       const node = renderingArray[i]
-      if((node.categoryBitMask & categoryBitMask) == 0){
+      if((node.categoryBitMask & categoryBitMask) === 0){
         continue
       }
       if(ignoreHiddenNodes && node.isHidden){
@@ -1728,13 +1847,13 @@ export default class SCNRenderer extends NSObject {
     gl.readPixels(x, y, 1, 1, gl.RGB, gl.UNSIGNED_BYTE, normalBuf, 0)
     const normal = new SCNVector3(normalBuf[0] / 127.5 - 1.0, normalBuf[1] / 127.5 - 1.0, normalBuf[2] / 127.5 - 1.0)
 
-    console.log('***** Hit Result *****')
-    console.log(`objectID: ${objectID}`)
-    console.log(`geometryIndex: ${geometryIndex}`)
-    console.log(`faceIndex: ${faceIndex}`)
-    console.log(`position: ${position.floatArray()}`)
-    console.log(`normal: ${normal.floatArray()}`)
-    console.log('**********************')
+    //console.log('***** Hit Result *****')
+    //console.log(`objectID: ${objectID}`)
+    //console.log(`geometryIndex: ${geometryIndex}`)
+    //console.log(`faceIndex: ${faceIndex}`)
+    //console.log(`position: ${position.floatArray()}`)
+    //console.log(`normal: ${normal.floatArray()}`)
+    //console.log('**********************')
 
     if(objectID >= 100){
       const r = new SCNHitTestResult()
@@ -1757,6 +1876,139 @@ export default class SCNRenderer extends NSObject {
 
     return result
   }
+
+  /**
+   * @access private
+   * @param {SCNMatrix4} viewProjectionTransform -
+   * @param {SCNVector3} rayFrom -
+   * @param {SCNVector3} rayTo -
+   * @param {Map} options -
+   * @returns {SCNHitTestResult[]} -
+   */
+  _physicsHitTestByGPU(viewProjectionTransform, from, to, options) {
+    const result = []
+    const gl = this._context
+
+    if(this._hitFrameBuffer === null){
+      this._initializeHitFrameBuffer()
+    }
+    const hitTestProgram = this._defaultHitTestProgram._glProgram
+    gl.useProgram(hitTestProgram)
+    gl.bindFramebuffer(gl.FRAMEBUFFER, this._hitFrameBuffer)
+
+    gl.depthMask(true)
+    gl.depthFunc(gl.LEQUAL)
+    gl.enable(gl.SCISSOR_TEST)
+    gl.disable(gl.BLEND)
+    gl.clearColor(0, 0, 0, 0)
+    gl.clearDepth(1.0)
+    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT)
+
+    const x = (from.x + 1.0) * 0.5 * this._viewRect.size.width
+    const y = (from.y + 1.0) * 0.5 * this._viewRect.size.height
+    let sx = x - 1
+    let sy = y - 1
+    if(sx < 0){
+      sx = 0
+    }else if(sx + 3 > this._viewRect.size.width){
+      sx = this._viewRect.size.width - 3
+    }
+    if(sy < 0){
+      sy = 0
+    }else if(sy + 3 > this._viewRect.size.height){
+      sy = this._viewRect.size.width - 3
+    }
+
+    gl.scissor(sx, sy, 3, 3)
+    gl.uniformMatrix4fv(gl.getUniformLocation(hitTestProgram, 'viewProjectionTransform'), false, viewProjectionTransform.float32Array())
+    let backFaceCulling = options.get(SCNPhysicsWorld.TestOption.backfaceCulling)
+    if(typeof backFaceCulling === 'undefined'){
+      backFaceCulling = true
+    }
+    if(backFaceCulling){
+      gl.enable(gl.CULL_FACE)
+      gl.cullFace(gl.BACK)
+    }else{
+      gl.disable(gl.CULL_FACE)
+    }
+
+    let collisionBitMask = options.get(SCNPhysicsWorld.TestOption.collisionBitMask)
+    if(typeof collisionBitMask === 'undefined'){
+      collisionBitMask = -1
+    }
+
+    let searchMode = options.get(SCNPhysicsWorld.TestOption.searchMode)
+    if(typeof searchMode === 'undefined'){
+      searchMode = SCNPhysicsWorld.TestSearchMode.closest
+    }
+
+    const renderingArray = this._createRenderingPhysicsNodeArray()
+    const len = renderingArray.length
+    for(let i=0; i<len; i++){
+      const node = renderingArray[i]
+      const body = node.physicsBody
+      if((body.categoryBitMask & collisionBitMask) === 0){
+        continue
+      }
+      this._renderPhysicsNodeForHitTest(node, i + 100, options)
+    }
+
+    const objectIDBuf = new Uint8Array(4)
+    gl.readBuffer(gl.COLOR_ATTACHMENT0)
+    gl.readPixels(x, y, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, objectIDBuf, 0)
+    const objectID = objectIDBuf[0] * 256 + objectIDBuf[1]
+    const geometryIndex = objectIDBuf[2] * 256 + objectIDBuf[3]
+
+    const faceIDBuf = new Uint8Array(4)
+    gl.readBuffer(gl.COLOR_ATTACHMENT1)
+    gl.readPixels(x, y, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, faceIDBuf, 0)
+    const faceIndex = faceIDBuf[0] * 16777216 + faceIDBuf[1] * 65536 + faceIDBuf[2] * 256 + faceIDBuf[3]
+
+    const positionBuf = new Uint8Array(3)
+    gl.readBuffer(gl.COLOR_ATTACHMENT2)
+    gl.readPixels(x, y, 1, 1, gl.RGB, gl.UNSIGNED_BYTE, positionBuf, 0)
+    const screenPos = new SCNVector3(positionBuf[0] / 127.5 - 1.0, positionBuf[1] / 127.5 - 1.0, positionBuf[2] / 127.5 - 1.0)
+    const position = screenPos.transform(viewProjectionTransform.invert())
+
+    const normalBuf = new Uint8Array(3)
+    gl.readBuffer(gl.COLOR_ATTACHMENT3)
+    gl.readPixels(x, y, 1, 1, gl.RGB, gl.UNSIGNED_BYTE, normalBuf, 0)
+    const normal = new SCNVector3(normalBuf[0] / 127.5 - 1.0, normalBuf[1] / 127.5 - 1.0, normalBuf[2] / 127.5 - 1.0)
+
+    //console.log('***** Hit Result *****')
+    //console.log(`objectID: ${objectID}`)
+    //console.log(`geometryIndex: ${geometryIndex}`)
+    //console.log(`faceIndex: ${faceIndex}`)
+    //console.log(`from: ${from.floatArray()}`)
+    //console.log(`to: ${to.floatArray()}`)
+    //console.log(`positionBuf: ${positionBuf[0]}, ${positionBuf[1]}, ${positionBuf[2]}`)
+    //console.log(`sPos: ${screenPos.floatArray()}`)
+    //console.log(`position: ${position.floatArray()}`)
+    //console.log(`normal: ${normal.floatArray()}`)
+    //console.log('**********************')
+
+    if(objectID >= 100){
+      const r = new SCNHitTestResult()
+      const node = renderingArray[objectID - 100]
+      const worldInv = node.presentation._worldTransform.invert()
+      r._node = node
+      r._geometryIndex = geometryIndex
+      r._faceIndex = faceIndex
+      r._worldCoordinates = position
+      r._worldNormal = normal
+      r._modelTransform = node.presentation._worldTransform
+      r._localCoordinates = position.transform(worldInv)
+      r._localNormal = normal.transform(worldInv)
+
+      result.push(r)
+    }
+
+    gl.disable(gl.SCISSOR_TEST)
+    gl.bindFramebuffer(gl.FRAMEBUFFER, null)
+
+    return result
+  }
+
 
   /**
    * Required. Returns a Boolean value indicating whether a node might be visible from a specified point of view.
@@ -2166,10 +2418,10 @@ export default class SCNRenderer extends NSObject {
     }
   }
 
-  _initializeHitTestVAO(node, program) {
+  _initializeHitTestVAO(node, program, physics = false) {
     const gl = this.context
-    const geometry = node.presentation.geometry
-    const baseGeometry = node.geometry
+    const geometry = physics ? node.physicsBody.physicsShape._sourceGeometry : node.presentation.geometry
+    const baseGeometry = physics ? geometry : node.geometry
 
     // TODO: retain attribute locations
     const positionLoc = gl.getAttribLocation(program, 'position')
@@ -2178,9 +2430,9 @@ export default class SCNRenderer extends NSObject {
     const boneWeightsLoc = gl.getAttribLocation(program, 'boneWeights')
 
     geometry._hitTestVAO = []
-    const elementCount = node.presentation.geometry.geometryElements.length
+    const elementCount = geometry.geometryElements.length
     for(let i=0; i<elementCount; i++){
-      const element = node.presentation.geometry.geometryElements[i]
+      const element = geometry.geometryElements[i]
       const vao = gl.createVertexArray()
       gl.bindVertexArray(vao)
 
@@ -2231,6 +2483,7 @@ export default class SCNRenderer extends NSObject {
 
       // initialize index buffer
       // FIXME: check geometrySource semantic
+      const indexBuffer = element._createBuffer(gl)
       gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, element._buffer)
       
       geometry._hitTestVAO.push(vao)

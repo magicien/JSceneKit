@@ -418,6 +418,18 @@ export default class CGRect {
     return this.origin.equalTo(rect2.origin) && this.size.equalTo(rect2.size)
   }
 
+  zero() {
+    return new CGRect(new CGPoint(0, 0), new CGRect(0, 0))
+  }
+
+  add(rect2) {
+    return new CGRect(this.origin.add(rect2.origin), this.size.add(rect2.size))
+  }
+
+  sub(rect2) {
+    return new CGRect(this.origin.sub(rect2.origin), this.size.sub(rect2.size))
+  }
+
   copy() {
     return new CGRect(this.origin, this.size)
   }

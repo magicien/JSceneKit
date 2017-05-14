@@ -478,6 +478,38 @@ export default class SKColor extends NSObject {
     return r
   }
 
+  zero() {
+    return new SKColor(0, 0, 0, 0)
+  }
+
+  /**
+   * @access private
+   * @param {SKColor} c -
+   * @returns {SKColor} -
+   */
+  add(c) {
+    const r = new SKColor()
+    r.red = this.red + c.red
+    r.green = this.green + c.green
+    r.blue = this.blue + c.blue
+    r.alpha = this.alpha + c.alpha
+    return r
+  }
+
+  /**
+   * @access private
+   * @param {SKColor} c -
+   * @returns {SKColor} -
+   */
+  sub(c) {
+    const r = new SKColor()
+    r.red = this.red - c.red
+    r.green = this.green - c.green
+    r.blue = this.blue - c.blue
+    r.alpha = this.alpha - c.alpha
+    return r
+  }
+
   /**
    * @access public
    * @returns {number[]} -

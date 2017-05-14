@@ -128,6 +128,10 @@ export default class CGPoint {
     return new CGPoint(this.x, this.y)
   }
 
+  zero() {
+    return new CGPoint(0, 0)
+  }
+
   /**
    * @access public
    * @param {CGPoint} p -

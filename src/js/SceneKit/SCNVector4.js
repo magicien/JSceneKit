@@ -68,7 +68,18 @@ export default class SCNVector4 {
     return new SCNVector4(this.x, this.y, this.z, this.w)
   }
 
+  _copyFrom(v) {
+    this.x = v.x
+    this.y = v.y
+    this.z = v.z
+    this.w = v.z
+  }
+
   // extensions
+
+  zero() {
+    return new SCNVector4()
+  }
 
   /**
    * @access public

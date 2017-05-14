@@ -129,6 +129,18 @@ export default class CGSize {
         && Math.abs(this.height - size2.height) < epsilon
   }
 
+  zero() {
+    return new CGSize(0, 0)
+  }
+
+  add(size2) {
+    return new CGSize(this.width + size2.width, this.height + size2.height)
+  }
+
+  sub(size2) {
+    return new CGSize(this.width - size2.width, this.height - size2.height)
+  }
+
   copy() {
     return new CGSize(this.width, this.height)
   }

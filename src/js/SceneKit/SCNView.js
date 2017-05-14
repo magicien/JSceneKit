@@ -372,6 +372,9 @@ export default class SCNView {
           ev.keyCode = 124
           break
       }
+      if(typeof e.repeat !== 'undefined'){
+        ev.isARepeat = e.repeat
+      }
 
       this.keyDownWith(ev)
     })
@@ -1147,7 +1150,7 @@ export default class SCNView {
       }
     })
     deleteKeys.forEach((key) => {
-      obj._animations.delete(key)
+      obj._actions.delete(key)
     })
   }
 

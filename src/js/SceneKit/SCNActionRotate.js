@@ -231,18 +231,26 @@ export default class SCNActionRotate extends SCNAction {
       let value = null
       if(this._isRelative){
         const baseValue = obj.orientation
-        value = baseValue.cross(toValue.mul(t).eulerAnglesToQuat()).quatToEulerAngles()
+        value = baseValue.cross(toValue.mul(t).eulerAnglesToQuat())
+        obj.presentation.orientation = value
+      }else if(this._isUnitArc){
+        const baseValue = obj.orientation
+        value = this._slerp(baseValue, toValue.eulerAnglesToQuat(), t)
+        obj.presentation.orientation = value
       }else{
         const baseValue = obj.eulerAngles
         value = this._lerp(baseValue, toValue, t)
+        obj.presentation.eulerAngles = value
       }
 
-      obj.presentation.eulerAngles = value
+      //obj.presentation.eulerAngles = value
       if(this._finished){
         if(this._isRelative){
-          toValue = obj.orientation.cross(toValue.eulerAnglesToQuat()).quatToEulerAngles()
+          toValue = obj.orientation.cross(toValue.eulerAnglesToQuat())
+          obj.orientation = toValue
+        }else{
+          obj.eulerAngles = toValue
         }
-        obj.eulerAngles = toValue
       }
     }
   }

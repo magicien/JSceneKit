@@ -25,6 +25,7 @@ import SCNNodeRendererDelegate from './SCNNodeRendererDelegate'
 import SCNPhysicsBody from './SCNPhysicsBody'
 import SCNPhysicsField from './SCNPhysicsField'
 import SCNParticleSystem from './SCNParticleSystem'
+import SCNTransaction from './SCNTransaction'
 import SCNAudioPlayer from './SCNAudioPlayer'
 import SCNHitTestResult from './SCNHitTestResult'
 import SKColor from '../SpriteKit/SKColor'
@@ -790,13 +791,29 @@ export default class SCNNode extends NSObject {
       || typeof newValue.w !== 'number'){
       throw new Error('error: SCNNode.rotation must have x, y, z, w values')
     }
+    const oldValue = this._rotation._copy()
     this._rotation.x = newValue.x
     this._rotation.y = newValue.y
     this._rotation.z = newValue.z
     this._rotation.w = newValue.w
     this._transformUpToDate = false
     this._updateWorldTransform()
+    SCNTransaction._addChange(this, 'rotation', oldValue, newValue)
   }
+  //_setRotation(newValue){
+  //  if(typeof newValue.x !== 'number'
+  //    || typeof newValue.y !== 'number'
+  //    || typeof newValue.z !== 'number'
+  //    || typeof newValue.w !== 'number'){
+  //    throw new Error('error: SCNNode.rotation must have x, y, z, w values')
+  //  }
+  //  this._rotation.x = newValue.x
+  //  this._rotation.y = newValue.y
+  //  this._rotation.z = newValue.z
+  //  this._rotation.w = newValue.w
+  //  this._transformUpToDate = false
+  //  this._updateWorldTransform()
+  //}
 
   get scale() {
     return this._scale
@@ -1426,9 +1443,9 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    */
   convertPositionFrom(position, node) {
     if(node === null){
-      return position.transform(this._worldTransform)
+      return position.transform(this._worldTransform.invert())
     }
-    return position.transform(node._worldTransform.invert()).transform(this._worldTransform)
+    return position.transform(node._worldTransform).transform(this._worldTransoform.invert())
   }
 
   /**
@@ -1441,9 +1458,9 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    */
   convertPositionTo(position, node) {
     if(node === null){
-      return position.transform(this._worldTransform.invert())
+      return position.transform(this._worldTransform)
     }
-    return position.transform(this._worldTransoform.invert()).transform(node._worldTransform)
+    return position.transform(this._worldTransform).transform(node._worldTransform.invert())
   }
 
   /**
@@ -1698,6 +1715,8 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    */
    
   removeAnimationForKeyFadeOutDuration(key, duration) {
+    // FIXME: use fadeout duration
+    this.removeAnimationForKey(key)
   }
 
   /**
@@ -1835,9 +1854,15 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
       return
     }
     const p = this._presentation
-    p._position = this._position
-    p._rotation = this._rotation
-    p._scale = this._scale
+    //p._position = this._position
+    //p._rotation = this._rotation
+    //p._scale = this._scale
+    //p._position._copyFrom(this._position)
+    //p._rotation._copyFrom(this._rotation)
+    //p._scale._copyFrom(this._scale)
+    p._position = this._position._copy()
+    p._rotation = this._rotation._copy()
+    p._scale = this._scale._copy()
   }
 
   _copyTransformToPresentationRecursive() {
@@ -1891,9 +1916,9 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     return super.valueForUndefinedKey(key)
   }
 
-  valueForKeyPath(keyPath) {
+  valueForKeyPath(keyPath, usePresentation = true) {
     // FIXME: check flags to decide to use a presentation node
-    const target = this._presentation ? this._presentation : this
+    const target = (usePresentation && this._presentation) ? this._presentation : this
     const paths = keyPath.split('.')
     const key = paths[0]
     const key2 = paths[1]
@@ -1953,8 +1978,12 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     }
   }
 
+  //setValueForKeyPath(value, keyPath, usePresentation = true) {
   setValueForKeyPath(value, keyPath) {
-    // FIXME: check flags to decide to use a presentation node
+    //let target = this
+    //if(usePresentation && this._presentation){
+    //  target = this._presentation
+    //}
     const target = this._presentation ? this._presentation : this
 
     const paths = keyPath.split('.')
@@ -2064,6 +2093,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
       if(target.morpher === null){
         throw new Error('target morpher === null')
       }
+      //target.morpher.setValueForKeyPath(value, restPath, usePresentation)
       target.morpher.setValueForKeyPath(value, restPath)
       return
     }

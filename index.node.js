@@ -375,7 +375,7 @@ module.exports =
 
 	var _SCNConstraint2 = _interopRequireDefault(_SCNConstraint);
 
-	var _SCNCullMode = __webpack_require__(79);
+	var _SCNCullMode = __webpack_require__(67);
 
 	var _SCNCullMode2 = _interopRequireDefault(_SCNCullMode);
 
@@ -391,7 +391,7 @@ module.exports =
 
 	var _SCNFieldForceEvaluator2 = _interopRequireDefault(_SCNFieldForceEvaluator);
 
-	var _SCNFilterMode = __webpack_require__(74);
+	var _SCNFilterMode = __webpack_require__(75);
 
 	var _SCNFilterMode2 = _interopRequireDefault(_SCNFilterMode);
 
@@ -403,15 +403,15 @@ module.exports =
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
-	var _SCNGeometryElement = __webpack_require__(69);
+	var _SCNGeometryElement = __webpack_require__(70);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(70);
+	var _SCNGeometryPrimitiveType = __webpack_require__(71);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNGeometrySource = __webpack_require__(68);
+	var _SCNGeometrySource = __webpack_require__(69);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
@@ -431,7 +431,7 @@ module.exports =
 
 	var _SCNLayer2 = _interopRequireDefault(_SCNLayer);
 
-	var _SCNLevelOfDetail = __webpack_require__(71);
+	var _SCNLevelOfDetail = __webpack_require__(72);
 
 	var _SCNLevelOfDetail2 = _interopRequireDefault(_SCNLevelOfDetail);
 
@@ -443,11 +443,11 @@ module.exports =
 
 	var _SCNLookAtConstraint2 = _interopRequireDefault(_SCNLookAtConstraint);
 
-	var _SCNMaterial = __webpack_require__(72);
+	var _SCNMaterial = __webpack_require__(73);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
-	var _SCNMaterialProperty = __webpack_require__(73);
+	var _SCNMaterialProperty = __webpack_require__(74);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
@@ -483,7 +483,7 @@ module.exports =
 
 	var _SCNMatrix4MakeScale2 = _interopRequireDefault(_SCNMatrix4MakeScale);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(75);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(76);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
@@ -711,7 +711,7 @@ module.exports =
 
 	var _SCNSceneSourceStatusHandler2 = _interopRequireDefault(_SCNSceneSourceStatusHandler);
 
-	var _SCNShadable = __webpack_require__(67);
+	var _SCNShadable = __webpack_require__(68);
 
 	var _SCNShadable2 = _interopRequireDefault(_SCNShadable);
 
@@ -755,7 +755,7 @@ module.exports =
 
 	var _SCNTorus2 = _interopRequireDefault(_SCNTorus);
 
-	var _SCNTransaction = __webpack_require__(76);
+	var _SCNTransaction = __webpack_require__(77);
 
 	var _SCNTransaction2 = _interopRequireDefault(_SCNTransaction);
 
@@ -763,7 +763,7 @@ module.exports =
 
 	var _SCNTransformConstraint2 = _interopRequireDefault(_SCNTransformConstraint);
 
-	var _SCNTransparencyMode = __webpack_require__(78);
+	var _SCNTransparencyMode = __webpack_require__(79);
 
 	var _SCNTransparencyMode2 = _interopRequireDefault(_SCNTransparencyMode);
 
@@ -835,7 +835,7 @@ module.exports =
 
 	var _SCNView2 = _interopRequireDefault(_SCNView);
 
-	var _SCNWrapMode = __webpack_require__(77);
+	var _SCNWrapMode = __webpack_require__(78);
 
 	var _SCNWrapMode2 = _interopRequireDefault(_SCNWrapMode);
 
@@ -8183,6 +8183,11 @@ module.exports =
 	    value: function copy() {
 	      return new CGPoint(this.x, this.y);
 	    }
+	  }, {
+	    key: 'zero',
+	    value: function zero() {
+	      return new CGPoint(0, 0);
+	    }
 
 	    /**
 	     * @access public
@@ -8659,6 +8664,21 @@ module.exports =
 	      return this.origin.equalTo(rect2.origin) && this.size.equalTo(rect2.size);
 	    }
 	  }, {
+	    key: 'zero',
+	    value: function zero() {
+	      return new CGRect(new _CGPoint2.default(0, 0), new CGRect(0, 0));
+	    }
+	  }, {
+	    key: 'add',
+	    value: function add(rect2) {
+	      return new CGRect(this.origin.add(rect2.origin), this.size.add(rect2.size));
+	    }
+	  }, {
+	    key: 'sub',
+	    value: function sub(rect2) {
+	      return new CGRect(this.origin.sub(rect2.origin), this.size.sub(rect2.size));
+	    }
+	  }, {
 	    key: 'copy',
 	    value: function copy() {
 	      return new CGRect(this.origin, this.size);
@@ -9043,6 +9063,21 @@ module.exports =
 	    value: function equalTo(size2) {
 	      var epsilon = 0.00001;
 	      return Math.abs(this.width - size2.width) < epsilon && Math.abs(this.height - size2.height) < epsilon;
+	    }
+	  }, {
+	    key: 'zero',
+	    value: function zero() {
+	      return new CGSize(0, 0);
+	    }
+	  }, {
+	    key: 'add',
+	    value: function add(size2) {
+	      return new CGSize(this.width + size2.width, this.height + size2.height);
+	    }
+	  }, {
+	    key: 'sub',
+	    value: function sub(size2) {
+	      return new CGSize(this.width - size2.width, this.height - size2.height);
 	    }
 	  }, {
 	    key: 'copy',
@@ -9525,6 +9560,45 @@ module.exports =
 	      r.green = this.green + rate * (c.green - this.green);
 	      r.blue = this.blue + rate * (c.blue - this.blue);
 	      r.alpha = this.alpha + rate * (c.alpha - this.alpha);
+	      return r;
+	    }
+	  }, {
+	    key: 'zero',
+	    value: function zero() {
+	      return new SKColor(0, 0, 0, 0);
+	    }
+
+	    /**
+	     * @access private
+	     * @param {SKColor} c -
+	     * @returns {SKColor} -
+	     */
+
+	  }, {
+	    key: 'add',
+	    value: function add(c) {
+	      var r = new SKColor();
+	      r.red = this.red + c.red;
+	      r.green = this.green + c.green;
+	      r.blue = this.blue + c.blue;
+	      r.alpha = this.alpha + c.alpha;
+	      return r;
+	    }
+
+	    /**
+	     * @access private
+	     * @param {SKColor} c -
+	     * @returns {SKColor} -
+	     */
+
+	  }, {
+	    key: 'sub',
+	    value: function sub(c) {
+	      var r = new SKColor();
+	      r.red = this.red - c.red;
+	      r.green = this.green - c.green;
+	      r.blue = this.blue - c.blue;
+	      r.alpha = this.alpha - c.alpha;
 	      return r;
 	    }
 
@@ -15333,8 +15407,21 @@ module.exports =
 	    value: function _copy() {
 	      return new SCNVector3(this.x, this.y, this.z);
 	    }
+	  }, {
+	    key: '_copyFrom',
+	    value: function _copyFrom(v) {
+	      this.x = v.x;
+	      this.y = v.y;
+	      this.z = v.z;
+	    }
 
 	    // extensions
+
+	  }, {
+	    key: 'zero',
+	    value: function zero() {
+	      return new SCNVector3();
+	    }
 
 	    /**
 	     * @access public
@@ -15472,6 +15559,9 @@ module.exports =
 	    value: function transform(m) {
 	      var r = new SCNVector3();
 	      var w = this.x * m.m14 + this.y * m.m24 + this.z * m.m34 + m.m44;
+	      if (w === 0) {
+	        return r;
+	      }
 	      var iw = 1.0 / w;
 	      r.x = (this.x * m.m11 + this.y * m.m21 + this.z * m.m31 + m.m41) * iw;
 	      r.y = (this.x * m.m12 + this.y * m.m22 + this.z * m.m32 + m.m42) * iw;
@@ -15700,8 +15790,22 @@ module.exports =
 	    value: function _copy() {
 	      return new SCNVector4(this.x, this.y, this.z, this.w);
 	    }
+	  }, {
+	    key: '_copyFrom',
+	    value: function _copyFrom(v) {
+	      this.x = v.x;
+	      this.y = v.y;
+	      this.z = v.z;
+	      this.w = v.z;
+	    }
 
 	    // extensions
+
+	  }, {
+	    key: 'zero',
+	    value: function zero() {
+	      return new SCNVector4();
+	    }
 
 	    /**
 	     * @access public
@@ -17312,7 +17416,7 @@ module.exports =
 	     */
 	    var _this = _possibleConstructorReturn(this, (CAAnimation.__proto__ || Object.getPrototypeOf(CAAnimation)).call(this));
 
-	    _this.isRemovedOnCompletion = false;
+	    _this.isRemovedOnCompletion = true;
 
 	    /**
 	     * An optional timing function defining the pacing of the animation.
@@ -18343,6 +18447,9 @@ module.exports =
 	      var t = time;
 	      if (needTimeConversion) {
 	        var baseTime = this._basetimeFromTime(time);
+	        if (baseTime === null) {
+	          return;
+	        }
 	        t = baseTime;
 	        if (this.timingFunction !== null) {
 	          t = this.timingFunction._getValueAtTime(baseTime);
@@ -18353,15 +18460,17 @@ module.exports =
 	        if (t > 1) {
 	          t = 1;
 	        }
+	        if (this.keyPath === 'rotation.w') {
+	          console.log('time: ' + time + ', activeTime: ' + (time - this._animationStartTime) + ', baseTime: ' + baseTime + ', t: ' + t);
+	        }
 	      }
 
 	      var isObject = false;
-	      if (this._baseValue === null) {
-	        this._baseValue = obj.valueForKeyPath(this.keyPath);
-	        if (typeof this._baseValue !== 'number' && this._baseValue !== null) {
-	          this._baseValue = this._baseValue._copy();
-	          isObject = true;
-	        }
+	      if (this._baseValue === null || this.isAdditive) {
+	        this._baseValue = obj.valueForKeyPath(this.keyPath, false);
+	      }
+	      if (typeof this._baseValue !== 'number' && this._baseValue !== null) {
+	        isObject = true;
 	      }
 
 	      var fromValue = 0;
@@ -18386,20 +18495,32 @@ module.exports =
 	      } else if (this.fromValue !== null) {
 	        fromValue = this.fromValue;
 	        if (this.isAdditive) {
-	          toValue = 0;
+	          if (isObject) {
+	            toValue = this._baseValue.zero();
+	          } else {
+	            toValue = 0;
+	          }
 	        } else {
 	          toValue = this._baseValue;
 	        }
 	      } else if (this.toValue !== null) {
 	        if (this.isAdditive) {
-	          fromValue = 0;
+	          if (isObject) {
+	            fromValue = this._baseValue.zero();
+	          } else {
+	            fromValue = 0;
+	          }
 	        } else {
 	          fromValue = this._baseValue;
 	        }
 	        toValue = this.toValue;
 	      } else if (this.byValue !== null) {
 	        if (this.isAdditive) {
-	          fromValue = 0;
+	          if (isObject) {
+	            fromValue = this._baseValue.zero();
+	          } else {
+	            fromValue = 0;
+	          }
 	          toValue = this.byValue;
 	        } else {
 	          fromValue = this._baseValue;
@@ -18414,12 +18535,22 @@ module.exports =
 	        //value = this._lerp(prevValue, currentValue, t)
 	      }
 	      var value = this._lerp(fromValue, toValue, t);
+
+	      if (this.keyPath === 'rotation.w') {
+	        console.log('from: ' + fromValue + ', to: ' + toValue + ', t: ' + t + ', value: ' + value);
+	      }
+
 	      if (this.isAdditive) {
 	        if (isObject) {
+	          //value = value.add(obj.valueForKeyPath(this.keyPath))
 	          value = value.add(this._baseValue);
 	        } else {
 	          value += this._baseValue;
 	        }
+	      }
+
+	      if (this.keyPath === 'rotation.w') {
+	        console.log('value after: ' + value);
 	      }
 
 	      //console.log(`CABasicAnimation._applyAnimation: keyPath: ${this.keyPath}, time: ${time}, baseTime: ${baseTime}, t: ${t}, value: ${value}`)
@@ -20438,7 +20569,7 @@ module.exports =
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
-	var _SCNGeometrySource = __webpack_require__(68);
+	var _SCNGeometrySource = __webpack_require__(69);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
@@ -20462,7 +20593,7 @@ module.exports =
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(75);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(76);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
@@ -20501,6 +20632,10 @@ module.exports =
 	var _SCNParticleSystem = __webpack_require__(104);
 
 	var _SCNParticleSystem2 = _interopRequireDefault(_SCNParticleSystem);
+
+	var _SCNTransaction = __webpack_require__(77);
+
+	var _SCNTransaction2 = _interopRequireDefault(_SCNTransaction);
 
 	var _SCNAudioPlayer = __webpack_require__(138);
 
@@ -21446,9 +21581,9 @@ module.exports =
 	    key: 'convertPositionFrom',
 	    value: function convertPositionFrom(position, node) {
 	      if (node === null) {
-	        return position.transform(this._worldTransform);
+	        return position.transform(this._worldTransform.invert());
 	      }
-	      return position.transform(node._worldTransform.invert()).transform(this._worldTransform);
+	      return position.transform(node._worldTransform).transform(this._worldTransoform.invert());
 	    }
 
 	    /**
@@ -21464,9 +21599,9 @@ module.exports =
 	    key: 'convertPositionTo',
 	    value: function convertPositionTo(position, node) {
 	      if (node === null) {
-	        return position.transform(this._worldTransform.invert());
+	        return position.transform(this._worldTransform);
 	      }
-	      return position.transform(this._worldTransoform.invert()).transform(node._worldTransform);
+	      return position.transform(this._worldTransform).transform(node._worldTransform.invert());
 	    }
 
 	    /**
@@ -21752,7 +21887,10 @@ module.exports =
 
 	  }, {
 	    key: 'removeAnimationForKeyFadeOutDuration',
-	    value: function removeAnimationForKeyFadeOutDuration(key, duration) {}
+	    value: function removeAnimationForKeyFadeOutDuration(key, duration) {
+	      // FIXME: use fadeout duration
+	      this.removeAnimationForKey(key);
+	    }
 
 	    /**
 	     * Required. An array containing the keys of all animations currently attached to the object.
@@ -21894,9 +22032,15 @@ module.exports =
 	        return;
 	      }
 	      var p = this._presentation;
-	      p._position = this._position;
-	      p._rotation = this._rotation;
-	      p._scale = this._scale;
+	      //p._position = this._position
+	      //p._rotation = this._rotation
+	      //p._scale = this._scale
+	      //p._position._copyFrom(this._position)
+	      //p._rotation._copyFrom(this._rotation)
+	      //p._scale._copyFrom(this._scale)
+	      p._position = this._position._copy();
+	      p._rotation = this._rotation._copy();
+	      p._scale = this._scale._copy();
 	    }
 	  }, {
 	    key: '_copyTransformToPresentationRecursive',
@@ -21936,8 +22080,10 @@ module.exports =
 	  }, {
 	    key: 'valueForKeyPath',
 	    value: function valueForKeyPath(keyPath) {
+	      var usePresentation = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+
 	      // FIXME: check flags to decide to use a presentation node
-	      var target = this._presentation ? this._presentation : this;
+	      var target = usePresentation && this._presentation ? this._presentation : this;
 	      var paths = keyPath.split('.');
 	      var key = paths[0];
 	      var key2 = paths[1];
@@ -21997,10 +22143,16 @@ module.exports =
 	        _get(SCNNode.prototype.__proto__ || Object.getPrototypeOf(SCNNode.prototype), 'setValueForKey', this).call(this, value, key);
 	      }
 	    }
+
+	    //setValueForKeyPath(value, keyPath, usePresentation = true) {
+
 	  }, {
 	    key: 'setValueForKeyPath',
 	    value: function setValueForKeyPath(value, keyPath) {
-	      // FIXME: check flags to decide to use a presentation node
+	      //let target = this
+	      //if(usePresentation && this._presentation){
+	      //  target = this._presentation
+	      //}
 	      var target = this._presentation ? this._presentation : this;
 
 	      var paths = keyPath.split('.');
@@ -22111,6 +22263,7 @@ module.exports =
 	        if (target.morpher === null) {
 	          throw new Error('target morpher === null');
 	        }
+	        //target.morpher.setValueForKeyPath(value, restPath, usePresentation)
 	        target.morpher.setValueForKeyPath(value, restPath);
 	        return;
 	      }
@@ -22320,13 +22473,30 @@ module.exports =
 	      if (typeof newValue.x !== 'number' || typeof newValue.y !== 'number' || typeof newValue.z !== 'number' || typeof newValue.w !== 'number') {
 	        throw new Error('error: SCNNode.rotation must have x, y, z, w values');
 	      }
+	      var oldValue = this._rotation._copy();
 	      this._rotation.x = newValue.x;
 	      this._rotation.y = newValue.y;
 	      this._rotation.z = newValue.z;
 	      this._rotation.w = newValue.w;
 	      this._transformUpToDate = false;
 	      this._updateWorldTransform();
+	      _SCNTransaction2.default._addChange(this, 'rotation', oldValue, newValue);
 	    }
+	    //_setRotation(newValue){
+	    //  if(typeof newValue.x !== 'number'
+	    //    || typeof newValue.y !== 'number'
+	    //    || typeof newValue.z !== 'number'
+	    //    || typeof newValue.w !== 'number'){
+	    //    throw new Error('error: SCNNode.rotation must have x, y, z, w values')
+	    //  }
+	    //  this._rotation.x = newValue.x
+	    //  this._rotation.y = newValue.y
+	    //  this._rotation.z = newValue.z
+	    //  this._rotation.w = newValue.w
+	    //  this._transformUpToDate = false
+	    //  this._updateWorldTransform()
+	    //}
+
 	  }, {
 	    key: 'scale',
 	    get: function get() {
@@ -23246,27 +23416,31 @@ module.exports =
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
+	var _SCNCullMode = __webpack_require__(67);
+
+	var _SCNCullMode2 = _interopRequireDefault(_SCNCullMode);
+
 	var _SCNBoundingVolume = __webpack_require__(65);
 
 	var _SCNBoundingVolume2 = _interopRequireDefault(_SCNBoundingVolume);
 
-	var _SCNShadable = __webpack_require__(67);
+	var _SCNShadable = __webpack_require__(68);
 
 	var _SCNShadable2 = _interopRequireDefault(_SCNShadable);
 
-	var _SCNGeometrySource = __webpack_require__(68);
+	var _SCNGeometrySource = __webpack_require__(69);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNGeometryElement = __webpack_require__(69);
+	var _SCNGeometryElement = __webpack_require__(70);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNLevelOfDetail = __webpack_require__(71);
+	var _SCNLevelOfDetail = __webpack_require__(72);
 
 	var _SCNLevelOfDetail2 = _interopRequireDefault(_SCNLevelOfDetail);
 
-	var _SCNMaterial = __webpack_require__(72);
+	var _SCNMaterial = __webpack_require__(73);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
@@ -23823,7 +23997,9 @@ module.exports =
 	    value: function _createVertexBuffer(gl, node) {
 	      var update = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
 
-	      var baseGeometry = node.geometry;
+	      var _base = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : null;
+
+	      var baseGeometry = _base === null ? node.geometry : _base;
 	      var baseSkinner = node.skinner;
 	      var skinner = node.presentation.skinner;
 	      if (this._vertexBuffer === null) {
@@ -23977,11 +24153,6 @@ module.exports =
 	      this._indexBuffer = this._geometryElements[0]._createBuffer(gl);
 	      return this._indexBuffer;
 	    }
-	  }, {
-	    key: '_createIndexBuffer',
-	    value: function _createIndexBuffer(gl) {
-	      var update = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-	    }
 
 	    /**
 	     * @access private
@@ -24046,6 +24217,17 @@ module.exports =
 	      });
 	      // TODO: cache uniform location
 	      gl.uniform1iv(gl.getUniformLocation(program, 'textureFlags'), new Int32Array(textureFlags));
+
+	      if (material.isDoubleSided) {
+	        gl.disable(gl.CULL_FACE);
+	      } else {
+	        gl.enable(gl.CULL_FACE);
+	        if (material.cullMode === _SCNCullMode2.default.back) {
+	          gl.cullFace(gl.BACK);
+	        } else {
+	          gl.cullFace(gl.FRONT);
+	        }
+	      }
 	    }
 	  }, {
 	    key: 'copy',
@@ -24244,6 +24426,30 @@ module.exports =
 
 	'use strict';
 
+	/**
+	 * The modes SceneKit uses to determine which polygons to render in a surface, used by the cullMode property.
+	 * @typedef {Object} SCNCullMode
+	 * @property {number} back - 
+	 * @property {number} front - 
+	 * @see https://developer.apple.com/reference/scenekit/scncullmode
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var SCNCullMode = {
+	  back: 0,
+	  front: 1
+	};
+
+	exports.default = SCNCullMode;
+
+/***/ },
+/* 68 */
+/***/ function(module, exports) {
+
+	'use strict';
+
 	//import SCNProgram from './SCNProgram'
 	//import SCNShaderModifierEntryPoint from './SCNShaderModifierEntryPoint'
 	//import SCNBindingBlock from './SCNBindingBlock'
@@ -24348,7 +24554,7 @@ module.exports =
 	exports.default = SCNShadable;
 
 /***/ },
-/* 68 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict';
@@ -24974,7 +25180,7 @@ module.exports =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3).Buffer))
 
 /***/ },
-/* 69 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict';
@@ -24989,7 +25195,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(70);
+	var _SCNGeometryPrimitiveType = __webpack_require__(71);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
@@ -25228,7 +25434,7 @@ module.exports =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3).Buffer))
 
 /***/ },
-/* 70 */
+/* 71 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -25258,7 +25464,7 @@ module.exports =
 	exports.default = SCNGeometryPrimitiveType;
 
 /***/ },
-/* 71 */
+/* 72 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25402,7 +25608,7 @@ module.exports =
 	exports.default = SCNLevelOfDetail;
 
 /***/ },
-/* 72 */
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -25421,19 +25627,19 @@ module.exports =
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNShadable = __webpack_require__(67);
+	var _SCNShadable = __webpack_require__(68);
 
 	var _SCNShadable2 = _interopRequireDefault(_SCNShadable);
 
-	var _SCNMaterialProperty = __webpack_require__(73);
+	var _SCNMaterialProperty = __webpack_require__(74);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
-	var _SCNTransparencyMode = __webpack_require__(78);
+	var _SCNTransparencyMode = __webpack_require__(79);
 
 	var _SCNTransparencyMode2 = _interopRequireDefault(_SCNTransparencyMode);
 
-	var _SCNCullMode = __webpack_require__(79);
+	var _SCNCullMode = __webpack_require__(67);
 
 	var _SCNCullMode2 = _interopRequireDefault(_SCNCullMode);
 
@@ -26092,7 +26298,7 @@ module.exports =
 	exports.default = SCNMaterial;
 
 /***/ },
-/* 73 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26111,7 +26317,7 @@ module.exports =
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNFilterMode = __webpack_require__(74);
+	var _SCNFilterMode = __webpack_require__(75);
 
 	var _SCNFilterMode2 = _interopRequireDefault(_SCNFilterMode);
 
@@ -26119,15 +26325,15 @@ module.exports =
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(75);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(76);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
-	var _SCNTransaction = __webpack_require__(76);
+	var _SCNTransaction = __webpack_require__(77);
 
 	var _SCNTransaction2 = _interopRequireDefault(_SCNTransaction);
 
-	var _SCNWrapMode = __webpack_require__(77);
+	var _SCNWrapMode = __webpack_require__(78);
 
 	var _SCNWrapMode2 = _interopRequireDefault(_SCNWrapMode);
 
@@ -26649,7 +26855,9 @@ module.exports =
 	      return this._contents;
 	    },
 	    set: function set(newValue) {
-	      _SCNTransaction2.default._addChange(this, '_contents', newValue);
+	      var oldValue = this._contents;
+	      this._contents = newValue;
+	      _SCNTransaction2.default._addChange(this, '_contents', oldValue, newValue);
 	    }
 	  }, {
 	    key: 'animationKeys',
@@ -26690,7 +26898,7 @@ module.exports =
 	exports.default = SCNMaterialProperty;
 
 /***/ },
-/* 74 */
+/* 75 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -26716,7 +26924,7 @@ module.exports =
 	exports.default = SCNFilterMode;
 
 /***/ },
-/* 75 */
+/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26747,7 +26955,7 @@ module.exports =
 	exports.default = SCNMatrix4MakeTranslation;
 
 /***/ },
-/* 76 */
+/* 77 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26899,9 +27107,9 @@ module.exports =
 	    key: '_apply',
 	    value: function _apply(transaction) {
 	      if (transaction._disableActions || transaction._animationDuration === 0) {
-	        transaction._animations.forEach(function (anim) {
-	          anim.target.setValueForKeyPath(anim.newValue, anim.keyPath);
-	        });
+	        //transaction._animations.forEach((anim) => {
+	        //  anim.target.setValueForKeyPath(anim.newValue, anim.keyPath)
+	        //})
 	        if (transaction._completionBlock) {
 	          transaction._completionBlock();
 	        }
@@ -26910,15 +27118,16 @@ module.exports =
 	        transaction._animations.forEach(function (anim) {
 	          var promise = new Promise(function (resolve, reject) {
 	            var animation = new _CABasicAnimation2.default(anim.keyPath);
-	            animation.toValue = anim.newValue;
+	            animation.fromValue = anim.diff;
 	            animation.timingFunction = transaction._animationTimingFunction;
 	            animation.duration = transaction._animationDuration;
+	            animation.isAdditive = true;
 	            animation.isRemovedOnCompletion = true;
 	            animation.delegate = {
 	              animationDidStop: function animationDidStop(_anim, _finished) {
 	                if (_finished) {
 	                  console.log('animation completed: ' + anim.keyPath);
-	                  anim.target.setValueForKeyPath(anim.newValue, anim.keyPath);
+	                  //anim.target.setValueForKeyPath(anim.newValue, anim.keyPath)
 	                  resolve(anim, animation);
 	                }
 	              }
@@ -27028,13 +27237,23 @@ module.exports =
 
 	  }, {
 	    key: '_addChange',
-	    value: function _addChange(target, keyPath, newValue) {
+	    value: function _addChange(target, keyPath, oldValue, newValue) {
 	      if (this._immediateMode) {
-	        target.setValueForKeyPath(newValue, keyPath);
+	        //target.setValueForKeyPath(newValue, keyPath)
 	      } else {
+	        var diff = null;
+	        if (typeof newValue === 'number') {
+	          diff = oldValue - newValue;
+	        } else if (typeof newValue.sub !== 'undefined') {
+	          diff = oldValue.sub(newValue);
+	        } else {
+	          throw new Error('keyPath ' + keyPath + ' does not have sub function');
+	        }
 	        this._currentTransaction._animations.push({
 	          target: target,
 	          keyPath: keyPath,
+	          diff: diff,
+	          oldValue: oldValue,
 	          newValue: newValue
 	        });
 	      }
@@ -27170,7 +27389,7 @@ module.exports =
 	exports.default = SCNTransaction;
 
 /***/ },
-/* 77 */
+/* 78 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -27198,7 +27417,7 @@ module.exports =
 	exports.default = SCNWrapMode;
 
 /***/ },
-/* 78 */
+/* 79 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -27220,30 +27439,6 @@ module.exports =
 	};
 
 	exports.default = SCNTransparencyMode;
-
-/***/ },
-/* 79 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	/**
-	 * The modes SceneKit uses to determine which polygons to render in a surface, used by the cullMode property.
-	 * @typedef {Object} SCNCullMode
-	 * @property {number} back - 
-	 * @property {number} front - 
-	 * @see https://developer.apple.com/reference/scenekit/scncullmode
-	 */
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var SCNCullMode = {
-	  back: 0,
-	  front: 1
-	};
-
-	exports.default = SCNCullMode;
 
 /***/ },
 /* 80 */
@@ -27301,7 +27496,7 @@ module.exports =
 
 	var _SCNTechniqueSupport2 = _interopRequireDefault(_SCNTechniqueSupport);
 
-	var _SCNMaterialProperty = __webpack_require__(73);
+	var _SCNMaterialProperty = __webpack_require__(74);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
@@ -27953,6 +28148,10 @@ module.exports =
 
 	var _SCNProgram2 = _interopRequireDefault(_SCNProgram);
 
+	var _SCNPhysicsWorld = __webpack_require__(96);
+
+	var _SCNPhysicsWorld2 = _interopRequireDefault(_SCNPhysicsWorld);
+
 	var _SCNCamera = __webpack_require__(127);
 
 	var _SCNCamera2 = _interopRequireDefault(_SCNCamera);
@@ -27969,11 +28168,11 @@ module.exports =
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(70);
+	var _SCNGeometryPrimitiveType = __webpack_require__(71);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNGeometrySource = __webpack_require__(68);
+	var _SCNGeometrySource = __webpack_require__(69);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
@@ -28062,7 +28261,7 @@ module.exports =
 	 * @access private
 	 * @type {string}
 	 */
-	var _defaultHitTestFragmentShader = '#version 300 es\n  precision mediump float;\n\n  uniform int objectID;\n  uniform int geometryID;\n\n  in vec3 v_normal;\n  in vec3 v_position;\n\n  layout(location = 0) out vec4 out_objectID;\n  layout(location = 1) out vec4 out_faceID;\n  layout(location = 2) out vec3 out_position;\n  layout(location = 3) out vec3 out_normal;\n\n  void main() {\n    out_objectID = vec4(\n      float(objectID >> 8) / 255.0,\n      float(objectID & 0xFF) / 255.0,\n      float(geometryID >> 8) / 255.0,\n      float(geometryID & 0xFF) / 255.0\n    );\n    //out_faceID = vec4(\n    //  (gl_PrimitiveID >> 24) / 255.0,\n    //  ((gl_PrimitiveID >> 16) & 0xFF) / 255.0,\n    //  ((gl_PrimitiveID >> 8) & 0xFF) / 255.0,\n    //  (gl_PrimitiveID & 0xFF) / 255.0\n    //);\n    out_faceID = vec4(0, 0, 0, 0); // TODO: implement\n    vec3 n = normalize(v_normal);\n    out_normal = vec3((n.x + 1.0) * 0.5, (n.y + 1.0) * 0.5, (n.z + 1.0) * 0.5);\n    out_position = vec3((v_position.x + 1.0) * 0.5, (v_position.y + 1.0) * 0.5, v_position.z);\n  }\n';
+	var _defaultHitTestFragmentShader = '#version 300 es\n  precision mediump float;\n\n  uniform int objectID;\n  uniform int geometryID;\n\n  in vec3 v_normal;\n  in vec3 v_position;\n\n  layout(location = 0) out vec4 out_objectID;\n  layout(location = 1) out vec4 out_faceID;\n  layout(location = 2) out vec3 out_position;\n  layout(location = 3) out vec3 out_normal;\n\n  void main() {\n    out_objectID = vec4(\n      float(objectID >> 8) / 255.0,\n      float(objectID & 0xFF) / 255.0,\n      float(geometryID >> 8) / 255.0,\n      float(geometryID & 0xFF) / 255.0\n    );\n    //out_faceID = vec4(\n    //  (gl_PrimitiveID >> 24) / 255.0,\n    //  ((gl_PrimitiveID >> 16) & 0xFF) / 255.0,\n    //  ((gl_PrimitiveID >> 8) & 0xFF) / 255.0,\n    //  (gl_PrimitiveID & 0xFF) / 255.0\n    //);\n    out_faceID = vec4(0, 0, 0, 0); // TODO: implement\n    vec3 n = normalize(v_normal);\n    out_normal = vec3((n.x + 1.0) * 0.5, (n.y + 1.0) * 0.5, (n.z + 1.0) * 0.5);\n    out_position = vec3((v_position.x + 1.0) * 0.5, (v_position.y + 1.0) * 0.5, (v_position.z + 1.0) * 0.5);\n  }\n';
 
 	/**
 	 * A renderer for displaying SceneKit scene in an an existing Metal workflow or OpenGL context. 
@@ -28263,6 +28462,7 @@ module.exports =
 	    camera.name = 'kSCNFreeViewCameraNameCamera';
 	    _this._defaultCameraNode.camera = camera;
 	    _this._defaultCameraNode.position = new _SCNVector2.default(0, 0, _defaultCameraDistance);
+	    _this._defaultCameraNode._presentation = _this._defaultCameraNode;
 
 	    _this._defaultCameraPosNode.addChildNode(_this._defaultCameraRotNode);
 	    _this._defaultCameraRotNode.addChildNode(_this._defaultCameraNode);
@@ -28485,12 +28685,11 @@ module.exports =
 	        this._initializeFogBuffer(program);
 	      }
 	      var fogData = [];
-	      if (this.scene.fogColor !== null) {
-	        fogData.push.apply(fogData, _toConsumableArray(this.scene.fogColor.floatArray()));
+	      if (this.scene.fogColor !== null && this.scene.fogEndDistance !== 0) {
+	        fogData.push.apply(fogData, _toConsumableArray(this.scene.fogColor.floatArray()).concat([this.scene.fogStartDistance, this.scene.fogEndDistance, this.scene.fogDensityExponent, 0]));
 	      } else {
-	        fogData.push(0, 0, 0, 0);
+	        fogData.push(0, 0, 0, 0, camera.zFar * 2, camera.zFar * 2 + 1, 1, 0);
 	      }
-	      fogData.push(this.scene.fogStartDistance, this.scene.fogEndDistance, this.scene.fogDensityExponent, 0);
 	      gl.bindBuffer(gl.UNIFORM_BUFFER, this._fogBuffer);
 	      gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(fogData), gl.DYNAMIC_DRAW);
 	      gl.bindBuffer(gl.UNIFORM_BUFFER, null);
@@ -28533,7 +28732,22 @@ module.exports =
 	        var scale = camera.zFar * 1.154;
 	        skyBox.scale = new _SCNVector2.default(scale, scale, scale);
 	        skyBox._updateWorldTransform();
+
+	        // disable fog
+	        var disabledFogData = fogData.slice(0);
+	        disabledFogData[4] = camera.zFar * 2.0; // startDistance
+	        disabledFogData[5] = camera.zFar * 2.1; // endDistance
+	        disabledFogData[6] = 1.0; // densityExponent
+	        gl.bindBuffer(gl.UNIFORM_BUFFER, this._fogBuffer);
+	        gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(disabledFogData), gl.DYNAMIC_DRAW);
+	        gl.bindBuffer(gl.UNIFORM_BUFFER, null);
+
 	        this._renderNode(skyBox);
+
+	        // enable fog
+	        gl.bindBuffer(gl.UNIFORM_BUFFER, this._fogBuffer);
+	        gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(fogData), gl.DYNAMIC_DRAW);
+	        gl.bindBuffer(gl.UNIFORM_BUFFER, null);
 	      }
 
 	      //////////////////////////
@@ -28604,6 +28818,7 @@ module.exports =
 	      gl.clearStencil(0);
 	      gl.depthMask(true);
 	      gl.enable(gl.DEPTH_TEST);
+	      gl.disable(gl.CULL_FACE);
 	      gl.depthFunc(gl.GEQUAL);
 	      gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
 	      gl.clear(gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT);
@@ -28747,6 +28962,31 @@ module.exports =
 	    /**
 	     *
 	     * @access private
+	     * @returns {SCNNode[]} -
+	     */
+
+	  }, {
+	    key: '_createRenderingPhysicsNodeArray',
+	    value: function _createRenderingPhysicsNodeArray() {
+	      var arr = [this.scene._rootNode];
+	      var targetNodes = [];
+	      while (arr.length > 0) {
+	        var node = arr.shift();
+	        if (node.presentation.physicsBody !== null) {
+	          targetNodes.push(node);
+	        }
+	        arr.push.apply(arr, _toConsumableArray(node.childNodes));
+	      }
+	      targetNodes.sort(function (a, b) {
+	        return a.renderingOrder - b.renderingOrder;
+	      });
+
+	      return targetNodes;
+	    }
+
+	    /**
+	     *
+	     * @access private
 	     * @param {SCNNode} node -
 	     * @returns {void}
 	     */
@@ -28773,9 +29013,6 @@ module.exports =
 	      if (node.morpher !== null) {
 	        this._updateVAO(node);
 	      }
-
-	      // TODO: use geometry setting
-	      //gl.disable(gl.CULL_FACE)
 
 	      if (node.presentation.skinner !== null) {
 	        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints);
@@ -28918,7 +29155,7 @@ module.exports =
 	        this._initializeHitTestVAO(node, program);
 	      }
 
-	      console.log('uniform1i: objectID: ' + objectID);
+	      //console.log(`uniform1i: objectID: ${objectID}`)
 	      gl.uniform1i(gl.getUniformLocation(program, 'objectID'), objectID);
 
 	      if (node.presentation.skinner !== null) {
@@ -28976,7 +29213,94 @@ module.exports =
 	            throw new Error('unsupported index size: ' + element.bytesPerIndex);
 	        }
 
-	        console.log('hitTest drawElements: length: ' + element._glData.length);
+	        //console.log(`hitTest drawElements: length: ${element._glData.length}`)
+	        gl.drawElements(shape, element._glData.length, size, 0);
+	      }
+	    }
+
+	    /**
+	     *
+	     * @access private
+	     * @param {SCNNode} node -
+	     * @param {number} objectID -
+	     * @param {Map} options -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_renderPhysicsNodeForHitTest',
+	    value: function _renderPhysicsNodeForHitTest(node, objectID, options) {
+	      var gl = this.context;
+	      var p = node.presentation;
+	      var body = p.physicsBody;
+	      var geometry = body.physicsShape._sourceGeometry;
+	      var program = this._defaultHitTestProgram._glProgram;
+
+	      if (geometry._vertexBuffer === null) {
+	        // should I copy the geometry?
+	        geometry._createVertexBuffer(gl, node, false, geometry);
+	      }
+	      if (geometry._hitTestVAO === null) {
+	        this._initializeHitTestVAO(node, program, true);
+	      }
+
+	      gl.uniform1i(gl.getUniformLocation(program, 'objectID'), objectID);
+
+	      if (node.presentation.skinner !== null) {
+	        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints);
+	        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array());
+	      } else {
+	        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0);
+	        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f());
+	      }
+
+	      var geometryCount = geometry.geometryElements.length;
+	      if (geometryCount === 0) {
+	        throw new Error('geometryCount: 0');
+	      }
+	      for (var i = 0; i < geometryCount; i++) {
+	        var vao = geometry._hitTestVAO[i];
+	        var element = geometry.geometryElements[i];
+
+	        gl.bindVertexArray(vao);
+	        gl.uniform1i(gl.getUniformLocation(program, 'geometryID'), i);
+
+	        var shape = null;
+	        switch (element.primitiveType) {
+	          case _SCNGeometryPrimitiveType2.default.triangles:
+	            shape = gl.TRIANGLES;
+	            break;
+	          case _SCNGeometryPrimitiveType2.default.triangleStrip:
+	            shape = gl.TRIANGLE_STRIP;
+	            break;
+	          case _SCNGeometryPrimitiveType2.default.line:
+	            shape = gl.LINES;
+	            break;
+	          case _SCNGeometryPrimitiveType2.default.point:
+	            shape = gl.POINTS;
+	            break;
+	          case _SCNGeometryPrimitiveType2.default.polygon:
+	            shape = gl.TRIANGLE_FAN;
+	            break;
+	          default:
+	            throw new Error('unsupported primitiveType: ' + element.primitiveType);
+	        }
+
+	        var size = null;
+	        switch (element.bytesPerIndex) {
+	          case 1:
+	            size = gl.UNSIGNED_BYTE;
+	            break;
+	          case 2:
+	            size = gl.UNSIGNED_SHORT;
+	            break;
+	          case 4:
+	            size = gl.UNSIGNED_INT;
+	            break;
+	          default:
+	            throw new Error('unsupported index size: ' + element.bytesPerIndex);
+	        }
+
 	        gl.drawElements(shape, element._glData.length, size, 0);
 	      }
 	    }
@@ -29237,12 +29561,12 @@ module.exports =
 	      var invVp = viewProjectionMatrix.invert();
 	      var rayFrom = from.transform(invVp);
 	      var rayTo = to.transform(invVp);
-	      console.log('rayFrom: ' + rayFrom.float32Array());
-	      console.log('rayTo  : ' + rayTo.float32Array());
+	      //console.log(`rayFrom: ${rayFrom.float32Array()}`)
+	      //console.log(`rayTo  : ${rayTo.float32Array()}`)
 
 	      var rayVec = rayTo.sub(rayFrom);
 	      var renderingArray = this._createRenderingNodeArray();
-	      console.log('renderingArray.length: ' + renderingArray.length);
+	      //console.log(`renderingArray.length: ${renderingArray.length}`)
 
 	      var categoryBitMask = options.get(_SCNHitTestOption2.default.categoryBitMask);
 	      if (typeof categoryBitMask === 'undefined') {
@@ -29303,7 +29627,7 @@ module.exports =
 
 	      gl.depthMask(true);
 	      gl.depthFunc(gl.LEQUAL);
-	      //gl.enable(gl.SCISSOR_TEST)
+	      gl.enable(gl.SCISSOR_TEST);
 	      gl.disable(gl.BLEND);
 	      gl.clearColor(0, 0, 0, 0);
 	      gl.clearDepth(1.0);
@@ -29350,7 +29674,7 @@ module.exports =
 	      var len = renderingArray.length;
 	      for (var i = 0; i < len; i++) {
 	        var node = renderingArray[i];
-	        if ((node.categoryBitMask & categoryBitMask) == 0) {
+	        if ((node.categoryBitMask & categoryBitMask) === 0) {
 	          continue;
 	        }
 	        if (ignoreHiddenNodes && node.isHidden) {
@@ -29381,13 +29705,13 @@ module.exports =
 	      gl.readPixels(x, y, 1, 1, gl.RGB, gl.UNSIGNED_BYTE, normalBuf, 0);
 	      var normal = new _SCNVector2.default(normalBuf[0] / 127.5 - 1.0, normalBuf[1] / 127.5 - 1.0, normalBuf[2] / 127.5 - 1.0);
 
-	      console.log('***** Hit Result *****');
-	      console.log('objectID: ' + objectID);
-	      console.log('geometryIndex: ' + geometryIndex);
-	      console.log('faceIndex: ' + faceIndex);
-	      console.log('position: ' + position.floatArray());
-	      console.log('normal: ' + normal.floatArray());
-	      console.log('**********************');
+	      //console.log('***** Hit Result *****')
+	      //console.log(`objectID: ${objectID}`)
+	      //console.log(`geometryIndex: ${geometryIndex}`)
+	      //console.log(`faceIndex: ${faceIndex}`)
+	      //console.log(`position: ${position.floatArray()}`)
+	      //console.log(`normal: ${normal.floatArray()}`)
+	      //console.log('**********************')
 
 	      if (objectID >= 100) {
 	        var r = new _SCNHitTestResult2.default();
@@ -29399,6 +29723,141 @@ module.exports =
 	        r._worldCoordinates = position;
 	        r._worldNormal = normal;
 	        r._modelTransform = _node.presentation._worldTransform;
+	        r._localCoordinates = position.transform(worldInv);
+	        r._localNormal = normal.transform(worldInv);
+
+	        result.push(r);
+	      }
+
+	      gl.disable(gl.SCISSOR_TEST);
+	      gl.bindFramebuffer(gl.FRAMEBUFFER, null);
+
+	      return result;
+	    }
+
+	    /**
+	     * @access private
+	     * @param {SCNMatrix4} viewProjectionTransform -
+	     * @param {SCNVector3} rayFrom -
+	     * @param {SCNVector3} rayTo -
+	     * @param {Map} options -
+	     * @returns {SCNHitTestResult[]} -
+	     */
+
+	  }, {
+	    key: '_physicsHitTestByGPU',
+	    value: function _physicsHitTestByGPU(viewProjectionTransform, from, to, options) {
+	      var result = [];
+	      var gl = this._context;
+
+	      if (this._hitFrameBuffer === null) {
+	        this._initializeHitFrameBuffer();
+	      }
+	      var hitTestProgram = this._defaultHitTestProgram._glProgram;
+	      gl.useProgram(hitTestProgram);
+	      gl.bindFramebuffer(gl.FRAMEBUFFER, this._hitFrameBuffer);
+
+	      gl.depthMask(true);
+	      gl.depthFunc(gl.LEQUAL);
+	      gl.enable(gl.SCISSOR_TEST);
+	      gl.disable(gl.BLEND);
+	      gl.clearColor(0, 0, 0, 0);
+	      gl.clearDepth(1.0);
+	      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+
+	      var x = (from.x + 1.0) * 0.5 * this._viewRect.size.width;
+	      var y = (from.y + 1.0) * 0.5 * this._viewRect.size.height;
+	      var sx = x - 1;
+	      var sy = y - 1;
+	      if (sx < 0) {
+	        sx = 0;
+	      } else if (sx + 3 > this._viewRect.size.width) {
+	        sx = this._viewRect.size.width - 3;
+	      }
+	      if (sy < 0) {
+	        sy = 0;
+	      } else if (sy + 3 > this._viewRect.size.height) {
+	        sy = this._viewRect.size.width - 3;
+	      }
+
+	      gl.scissor(sx, sy, 3, 3);
+	      gl.uniformMatrix4fv(gl.getUniformLocation(hitTestProgram, 'viewProjectionTransform'), false, viewProjectionTransform.float32Array());
+	      var backFaceCulling = options.get(_SCNPhysicsWorld2.default.TestOption.backfaceCulling);
+	      if (typeof backFaceCulling === 'undefined') {
+	        backFaceCulling = true;
+	      }
+	      if (backFaceCulling) {
+	        gl.enable(gl.CULL_FACE);
+	        gl.cullFace(gl.BACK);
+	      } else {
+	        gl.disable(gl.CULL_FACE);
+	      }
+
+	      var collisionBitMask = options.get(_SCNPhysicsWorld2.default.TestOption.collisionBitMask);
+	      if (typeof collisionBitMask === 'undefined') {
+	        collisionBitMask = -1;
+	      }
+
+	      var searchMode = options.get(_SCNPhysicsWorld2.default.TestOption.searchMode);
+	      if (typeof searchMode === 'undefined') {
+	        searchMode = _SCNPhysicsWorld2.default.TestSearchMode.closest;
+	      }
+
+	      var renderingArray = this._createRenderingPhysicsNodeArray();
+	      var len = renderingArray.length;
+	      for (var i = 0; i < len; i++) {
+	        var node = renderingArray[i];
+	        var body = node.physicsBody;
+	        if ((body.categoryBitMask & collisionBitMask) === 0) {
+	          continue;
+	        }
+	        this._renderPhysicsNodeForHitTest(node, i + 100, options);
+	      }
+
+	      var objectIDBuf = new Uint8Array(4);
+	      gl.readBuffer(gl.COLOR_ATTACHMENT0);
+	      gl.readPixels(x, y, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, objectIDBuf, 0);
+	      var objectID = objectIDBuf[0] * 256 + objectIDBuf[1];
+	      var geometryIndex = objectIDBuf[2] * 256 + objectIDBuf[3];
+
+	      var faceIDBuf = new Uint8Array(4);
+	      gl.readBuffer(gl.COLOR_ATTACHMENT1);
+	      gl.readPixels(x, y, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, faceIDBuf, 0);
+	      var faceIndex = faceIDBuf[0] * 16777216 + faceIDBuf[1] * 65536 + faceIDBuf[2] * 256 + faceIDBuf[3];
+
+	      var positionBuf = new Uint8Array(3);
+	      gl.readBuffer(gl.COLOR_ATTACHMENT2);
+	      gl.readPixels(x, y, 1, 1, gl.RGB, gl.UNSIGNED_BYTE, positionBuf, 0);
+	      var screenPos = new _SCNVector2.default(positionBuf[0] / 127.5 - 1.0, positionBuf[1] / 127.5 - 1.0, positionBuf[2] / 127.5 - 1.0);
+	      var position = screenPos.transform(viewProjectionTransform.invert());
+
+	      var normalBuf = new Uint8Array(3);
+	      gl.readBuffer(gl.COLOR_ATTACHMENT3);
+	      gl.readPixels(x, y, 1, 1, gl.RGB, gl.UNSIGNED_BYTE, normalBuf, 0);
+	      var normal = new _SCNVector2.default(normalBuf[0] / 127.5 - 1.0, normalBuf[1] / 127.5 - 1.0, normalBuf[2] / 127.5 - 1.0);
+
+	      //console.log('***** Hit Result *****')
+	      //console.log(`objectID: ${objectID}`)
+	      //console.log(`geometryIndex: ${geometryIndex}`)
+	      //console.log(`faceIndex: ${faceIndex}`)
+	      //console.log(`from: ${from.floatArray()}`)
+	      //console.log(`to: ${to.floatArray()}`)
+	      //console.log(`positionBuf: ${positionBuf[0]}, ${positionBuf[1]}, ${positionBuf[2]}`)
+	      //console.log(`sPos: ${screenPos.floatArray()}`)
+	      //console.log(`position: ${position.floatArray()}`)
+	      //console.log(`normal: ${normal.floatArray()}`)
+	      //console.log('**********************')
+
+	      if (objectID >= 100) {
+	        var r = new _SCNHitTestResult2.default();
+	        var _node2 = renderingArray[objectID - 100];
+	        var worldInv = _node2.presentation._worldTransform.invert();
+	        r._node = _node2;
+	        r._geometryIndex = geometryIndex;
+	        r._faceIndex = faceIndex;
+	        r._worldCoordinates = position;
+	        r._worldNormal = normal;
+	        r._modelTransform = _node2.presentation._worldTransform;
 	        r._localCoordinates = position.transform(worldInv);
 	        r._localNormal = normal.transform(worldInv);
 
@@ -29677,9 +30136,11 @@ module.exports =
 	  }, {
 	    key: '_initializeHitTestVAO',
 	    value: function _initializeHitTestVAO(node, program) {
+	      var physics = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+
 	      var gl = this.context;
-	      var geometry = node.presentation.geometry;
-	      var baseGeometry = node.geometry;
+	      var geometry = physics ? node.physicsBody.physicsShape._sourceGeometry : node.presentation.geometry;
+	      var baseGeometry = physics ? geometry : node.geometry;
 
 	      // TODO: retain attribute locations
 	      var positionLoc = gl.getAttribLocation(program, 'position');
@@ -29688,9 +30149,9 @@ module.exports =
 	      var boneWeightsLoc = gl.getAttribLocation(program, 'boneWeights');
 
 	      geometry._hitTestVAO = [];
-	      var elementCount = node.presentation.geometry.geometryElements.length;
+	      var elementCount = geometry.geometryElements.length;
 	      for (var i = 0; i < elementCount; i++) {
-	        var element = node.presentation.geometry.geometryElements[i];
+	        var element = geometry.geometryElements[i];
 	        var vao = gl.createVertexArray();
 	        gl.bindVertexArray(vao);
 
@@ -29741,6 +30202,7 @@ module.exports =
 
 	        // initialize index buffer
 	        // FIXME: check geometrySource semantic
+	        var indexBuffer = element._createBuffer(gl);
 	        gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, element._buffer);
 
 	        geometry._hitTestVAO.push(vao);
@@ -30967,7 +31429,7 @@ module.exports =
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNMaterial = __webpack_require__(72);
+	var _SCNMaterial = __webpack_require__(73);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
@@ -30975,11 +31437,11 @@ module.exports =
 
 	var _SCNBox2 = _interopRequireDefault(_SCNBox);
 
-	var _SCNMaterialProperty = __webpack_require__(73);
+	var _SCNMaterialProperty = __webpack_require__(74);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
-	var _SCNGeometrySource = __webpack_require__(68);
+	var _SCNGeometrySource = __webpack_require__(69);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
@@ -31168,6 +31630,7 @@ module.exports =
 	    material._diffuse._contents = _SKColor2.default.black;
 	    material._ambient._contents = _SKColor2.default.black;
 	    material._emission._contents = null;
+	    material.isDoubleSided = true;
 
 	    skyBoxGeometry.firstMaterial = material;
 	    var texSrc = skyBoxGeometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.texcoord)[0];
@@ -31528,15 +31991,15 @@ module.exports =
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
-	var _SCNGeometrySource = __webpack_require__(68);
+	var _SCNGeometrySource = __webpack_require__(69);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNGeometryElement = __webpack_require__(69);
+	var _SCNGeometryElement = __webpack_require__(70);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(70);
+	var _SCNGeometryPrimitiveType = __webpack_require__(71);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
@@ -33099,14 +33562,13 @@ module.exports =
 	      var viewProjectionTransform = this._createViewProjectionTransform(origin, dest);
 	      var from = origin.transform(viewProjectionTransform);
 	      var to = dest.transform(viewProjectionTransform);
-	      var _options = options;
-	      if (_options === null) {
-	        _options = new Map();
-	      } else if (Array.isArray(_options)) {
-	        _options = new Map(_options);
-	      }
+	      //console.log('**** rayTestWithSegmentFromTo ****')
+	      //console.log(`origin: ${origin.floatArray()}`)
+	      //console.log(`dest: ${dest.floatArray()}`)
+	      //console.log(`from: ${from.floatArray()}`)
+	      //console.log(`to: ${to.floatArray()}`)
 
-	      return this._renderer._hitTestByGPU(viewProjectionTransform, from, to, options);
+	      return this._renderer._physicsHitTestByGPU(viewProjectionTransform, from, to, opt);
 	    }
 
 	    /**
@@ -33129,7 +33591,7 @@ module.exports =
 	      proj.m33 = -(zFar + zNear) / len;
 	      proj.m34 = -1;
 	      proj.m43 = -2 * zFar * zNear / len;
-	      proj.m44 = 1;
+	      //proj.m44 = 0
 
 	      var view = new _SCNMatrix2.default();
 	      var up = new _SCNVector2.default(0, 1, 0);
@@ -33150,6 +33612,11 @@ module.exports =
 	      view.m23 = -f.y;
 	      view.m33 = -f.z;
 	      view.m44 = 1;
+	      var eye = from.sub(f.mul(zNear));
+	      var t = eye.transform(view);
+	      view.m41 = -t.x;
+	      view.m42 = -t.y;
+	      view.m43 = -t.z;
 
 	      return view.mult(proj);
 	    }
@@ -34068,8 +34535,11 @@ module.exports =
 	    key: '_propTypes',
 	    get: function get() {
 	      return {
-	        options: ['NSArray', '_options'],
-	        referenceObject: ['NSObject', '_sourceObject']
+	        $constructor: function $constructor(propNames, propValues) {
+	          return new SCNPhysicsShape(propValues.referenceObject, propValues.options);
+	        },
+	        options: ['NSArray', null],
+	        referenceObject: ['NSObject', null]
 	      };
 	    }
 
@@ -34099,8 +34569,21 @@ module.exports =
 	      _options = new Map(_options);
 	    }
 
+	    _this._sourceGeometry = null;
+
 	    // Getting Information About a Shape
 	    _this._sourceObject = geometry;
+	    if (_this._sourceObject instanceof _SCNGeometry2.default) {
+	      _this._sourceGeometry = _this._sourceObject;
+	    } else if (_this._sourceObject instanceof _SCNNode2.default) {
+	      _this._sourceGeometry = _this._sourceObject.geometry;
+	    } else {
+	      //throw new Error(`can't use it for source object: ${geometry.className}`)
+	    }
+	    if (!_this._sourceGeometry) {
+	      //throw new Error('source geometry is null')
+	    }
+
 	    _this._options = _options;
 	    _this._transforms = null;
 	    return _this;
@@ -37212,7 +37695,7 @@ module.exports =
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNShadable = __webpack_require__(67);
+	var _SCNShadable = __webpack_require__(68);
 
 	var _SCNShadable2 = _interopRequireDefault(_SCNShadable);
 
@@ -37317,7 +37800,7 @@ module.exports =
 
 	var _SCNTechniqueSupport2 = _interopRequireDefault(_SCNTechniqueSupport);
 
-	var _SCNMaterialProperty = __webpack_require__(73);
+	var _SCNMaterialProperty = __webpack_require__(74);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
@@ -38134,7 +38617,7 @@ module.exports =
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNGeometrySource = __webpack_require__(68);
+	var _SCNGeometrySource = __webpack_require__(69);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
@@ -38142,7 +38625,7 @@ module.exports =
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(75);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(76);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
@@ -40586,18 +41069,26 @@ module.exports =
 	        var _value2 = null;
 	        if (this._isRelative) {
 	          var _baseValue = obj.orientation;
-	          _value2 = _baseValue.cross(_toValue.mul(t).eulerAnglesToQuat()).quatToEulerAngles();
+	          _value2 = _baseValue.cross(_toValue.mul(t).eulerAnglesToQuat());
+	          obj.presentation.orientation = _value2;
+	        } else if (this._isUnitArc) {
+	          var _baseValue2 = obj.orientation;
+	          _value2 = this._slerp(_baseValue2, _toValue.eulerAnglesToQuat(), t);
+	          obj.presentation.orientation = _value2;
 	        } else {
-	          var _baseValue2 = obj.eulerAngles;
-	          _value2 = this._lerp(_baseValue2, _toValue, t);
+	          var _baseValue3 = obj.eulerAngles;
+	          _value2 = this._lerp(_baseValue3, _toValue, t);
+	          obj.presentation.eulerAngles = _value2;
 	        }
 
-	        obj.presentation.eulerAngles = _value2;
+	        //obj.presentation.eulerAngles = value
 	        if (this._finished) {
 	          if (this._isRelative) {
-	            _toValue = obj.orientation.cross(_toValue.eulerAnglesToQuat()).quatToEulerAngles();
+	            _toValue = obj.orientation.cross(_toValue.eulerAnglesToQuat());
+	            obj.orientation = _toValue;
+	          } else {
+	            obj.eulerAngles = _toValue;
 	          }
-	          obj.eulerAngles = _toValue;
 	        }
 	      }
 	    }
@@ -43909,9 +44400,7 @@ module.exports =
 	      this._isLoading = true;
 
 	      new _SCNScene2.default(this._referenceURL, null, function (scene) {
-	        //scene.rootNode.childNodes.forEach((node) => {
-	        //  super.addChildNode(node)
-	        //})
+	        scene.rootNode.name = 'referenceRoot';
 	        _get(SCNReferenceNode.prototype.__proto__ || Object.getPrototypeOf(SCNReferenceNode.prototype), 'addChildNode', _this2).call(_this2, scene.rootNode);
 	        _this2._scene = scene;
 
@@ -45154,7 +45643,7 @@ module.exports =
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(75);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(76);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
@@ -45552,6 +46041,9 @@ module.exports =
 	        case 'ArrowRight':
 	          ev.keyCode = 124;
 	          break;
+	      }
+	      if (typeof e.repeat !== 'undefined') {
+	        ev.isARepeat = e.repeat;
 	      }
 
 	      _this.keyDownWith(ev);
@@ -46106,7 +46598,7 @@ module.exports =
 	        }
 	      });
 	      deleteKeys.forEach(function (key) {
-	        obj._animations.delete(key);
+	        obj._actions.delete(key);
 	      });
 	    }
 	  }, {

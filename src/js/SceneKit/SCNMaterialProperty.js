@@ -176,7 +176,9 @@ export default class SCNMaterialProperty extends NSObject {
   }
 
   set contents(newValue) {
-    SCNTransaction._addChange(this, '_contents', newValue)
+    const oldValue = this._contents
+    this._contents = newValue
+    SCNTransaction._addChange(this, '_contents', oldValue, newValue)
   }
 
   ///////////////////

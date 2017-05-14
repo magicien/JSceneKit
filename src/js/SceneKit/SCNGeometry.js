@@ -2,6 +2,7 @@
 
 import NSObject from '../ObjectiveC/NSObject'
 import SCNAnimatable from './SCNAnimatable'
+import SCNCullMode from './SCNCullMode'
 import SCNBoundingVolume from './SCNBoundingVolume'
 import SCNShadable from './SCNShadable'
 import SCNGeometrySource from './SCNGeometrySource'
@@ -521,8 +522,8 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    * @returns {WebGLBuffer} -
    */
   //_createVertexBuffer(gl, baseGeometry, update = false) {
-  _createVertexBuffer(gl, node, update = false) {
-    const baseGeometry = node.geometry
+  _createVertexBuffer(gl, node, update = false, _base = null) {
+    const baseGeometry = (_base === null ? node.geometry : _base)
     const baseSkinner = node.skinner
     const skinner = node.presentation.skinner
     if(this._vertexBuffer === null){
@@ -672,9 +673,6 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     return this._indexBuffer
   }
 
-  _createIndexBuffer(gl, update = false) {
-  }
-
   /**
    * @access private
    * @param {WebGLRenderingContext} gl -
@@ -744,6 +742,17 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     })
     // TODO: cache uniform location
     gl.uniform1iv(gl.getUniformLocation(program, 'textureFlags'), new Int32Array(textureFlags))
+
+    if(material.isDoubleSided){
+      gl.disable(gl.CULL_FACE)
+    }else{
+      gl.enable(gl.CULL_FACE)
+      if(material.cullMode === SCNCullMode.back){
+        gl.cullFace(gl.BACK)
+      }else{
+        gl.cullFace(gl.FRONT)
+      }
+    }
   }
 
   copy() {

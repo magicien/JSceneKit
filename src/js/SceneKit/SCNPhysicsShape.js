@@ -27,8 +27,11 @@ const _ShapeType = {
 export default class SCNPhysicsShape extends NSObject {
   static get _propTypes() {
     return {
-      options: ['NSArray', '_options'],
-      referenceObject: ['NSObject', '_sourceObject']
+      $constructor: (propNames, propValues) => {
+        return new SCNPhysicsShape(propValues.referenceObject, propValues.options)
+      },
+      options: ['NSArray', null],
+      referenceObject: ['NSObject', null]
     }
   }
 
@@ -51,8 +54,21 @@ export default class SCNPhysicsShape extends NSObject {
       _options = new Map(_options)
     }
 
+    this._sourceGeometry = null
+
     // Getting Information About a Shape
     this._sourceObject = geometry
+    if(this._sourceObject instanceof SCNGeometry){
+      this._sourceGeometry = this._sourceObject
+    }else if(this._sourceObject instanceof SCNNode){
+      this._sourceGeometry = this._sourceObject.geometry
+    }else{
+      //throw new Error(`can't use it for source object: ${geometry.className}`)
+    }
+    if(!this._sourceGeometry){
+      //throw new Error('source geometry is null')
+    }
+
     this._options = _options
     this._transforms = null
   }

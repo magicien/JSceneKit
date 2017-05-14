@@ -306,14 +306,13 @@ if (results.firstObject.node == player) {
     const viewProjectionTransform = this._createViewProjectionTransform(origin, dest)
     const from = origin.transform(viewProjectionTransform)
     const to = dest.transform(viewProjectionTransform)
-    let _options = options
-    if(_options === null){
-      _options = new Map()
-    }else if(Array.isArray(_options)){
-      _options = new Map(_options)
-    }
+    //console.log('**** rayTestWithSegmentFromTo ****')
+    //console.log(`origin: ${origin.floatArray()}`)
+    //console.log(`dest: ${dest.floatArray()}`)
+    //console.log(`from: ${from.floatArray()}`)
+    //console.log(`to: ${to.floatArray()}`)
     
-    return this._renderer._hitTestByGPU(viewProjectionTransform, from, to, options)
+    return this._renderer._physicsHitTestByGPU(viewProjectionTransform, from, to, opt)
   }
 
   /**
@@ -333,7 +332,7 @@ if (results.firstObject.node == player) {
     proj.m33 = -(zFar + zNear) / len
     proj.m34 = -1
     proj.m43 = -2 * zFar * zNear / len
-    proj.m44 = 1
+    //proj.m44 = 0
 
     const view = new SCNMatrix4()
     const up = new SCNVector3(0, 1, 0)
@@ -354,6 +353,11 @@ if (results.firstObject.node == player) {
     view.m23 = -f.y
     view.m33 = -f.z
     view.m44 = 1
+    const eye = from.sub(f.mul(zNear))
+    const t = eye.transform(view)
+    view.m41 = -t.x
+    view.m42 = -t.y
+    view.m43 = -t.z
 
     return view.mult(proj)
   }

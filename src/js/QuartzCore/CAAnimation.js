@@ -34,7 +34,7 @@ export default class CAAnimation extends NSObject {
      * @type {boolean}
      * @see https://developer.apple.com/reference/quartzcore/caanimation/1412458-isremovedoncompletion
      */
-    this.isRemovedOnCompletion = false
+    this.isRemovedOnCompletion = true
 
     /**
      * An optional timing function defining the pacing of the animation.
