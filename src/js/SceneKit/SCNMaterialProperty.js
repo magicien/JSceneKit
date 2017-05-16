@@ -5,6 +5,7 @@ import SCNAnimatable from './SCNAnimatable'
 import SCNFilterMode from './SCNFilterMode'
 import SCNMatrix4 from './SCNMatrix4'
 import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
+import SCNOrderedDictionary from './SCNOrderedDictionary'
 import SCNTransaction from './SCNTransaction'
 import SCNWrapMode from './SCNWrapMode'
 import SKColor from '../SpriteKit/SKColor'
@@ -162,8 +163,7 @@ export default class SCNMaterialProperty extends NSObject {
      * @access private
      * @type {Map}
      */
-    this._animations = new Map()
-
+    this._animations = new SCNOrderedDictionary()
   }
 
   /**

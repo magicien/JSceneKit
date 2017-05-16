@@ -40,12 +40,6 @@ export default class SCNActionGroup extends SCNAction {
   static group(actions) {
     const action = new SCNActionGroup()
     action._actions = actions
-    //actions.forEach((act) => {
-    //  const d = act.duration / act.speed
-    //  if(d > action._duration){
-    //    action._duration = d
-    //  }
-    //})
     return action
   }
 
@@ -63,16 +57,6 @@ export default class SCNActionGroup extends SCNAction {
 
     return action
   }
-
-  //get _actionStartTime() {
-  //  return this.__actionStartTime
-  //}
-  //set _actionStartTime(newValue) {
-  //  this._actions.forEach((act) => {
-  //    act._actionStartTime = newValue
-  //  })
-  //  this.__actionStartTime = newValue
-  //}
 
   get duration() {
     let d = 0

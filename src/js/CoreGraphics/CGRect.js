@@ -430,6 +430,18 @@ export default class CGRect {
     return new CGRect(this.origin.sub(rect2.origin), this.size.sub(rect2.size))
   }
 
+  /**
+   * @access public
+   * @param {CGRect} r -
+   * @param {number} rate -
+   * @returns {CGRect} -
+   */
+  lerp(r, rate) {
+    const origin = this.origin.lerp(r.origin, rate)
+    const size = this.size.lerp(r.size, rate)
+    return new CGRect(origin, size)
+  }
+
   copy() {
     return new CGRect(this.origin, this.size)
   }

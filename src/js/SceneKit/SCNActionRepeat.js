@@ -118,12 +118,12 @@ export default class SCNActionRepeat extends SCNAction {
       if(!this._forever && this._timesRepeated >= this._timesToRepeat){
         this._finished = true
         return
-      }else{
-        this._repeatedAction._resetFinished()
       }
+      this._repeatedAction._resetFinished()
     }
     let t = dt - this._timesRepeated
     this._repeatedAction._applyAction(obj, t, false)
+    this._finished = false
   }
 
   get duration() {

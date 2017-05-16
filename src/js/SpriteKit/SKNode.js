@@ -278,6 +278,9 @@ export default class SKNode extends NSObject {
     this._isPresentationInstance = false
     this._worldPosition = new CGPoint(0, 0)
     this._worldZPosition = 0
+    this._worldXScale = 1
+    this._worldYScale = 1
+    this._worldZRotation = 0
   }
 
   /**
@@ -986,17 +989,27 @@ parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
     if(this._presentation){
       let pp = null
       let ppz = 0
+      let pxScale = 1
+      let pyScale = 1
       if(this._parent === null){
         pp = new CGPoint(0, 0)
       }else if(this._parent._presentation === null){
         pp = this._parent._worldPosition
         ppz = this._parent._worldZPosition
+        pxScale = this._parent._worldXScale
+        pyScale = this._parent._worldYScale
       }else{
         pp = this._parent._presentation._worldPosition
         ppz = this._parent._presentation._worldZPosition
+        pxScale = this._parent._presentation._worldXScale
+        pyScale = this._parent._presentation._worldYScale
       }
-      this._presentation._worldPosition = this._presentation.position.add(pp)
+      //this._presentation._worldPosition = this._presentation.position.add(pp)
+      this._presentation._worldPosition.x = pp.x + this._presentation.position.x * pxScale
+      this._presentation._worldPosition.y = pp.y + this._presentation.position.y * pyScale
       this._presentation._worldZPosition = this._presentation.zPosition + ppz
+      this._presentation._worldXScale = this._presentation.xScale * pxScale
+      this._presentation._worldYScale = this._presentation.yScale * pyScale
     }
 
     for(const child of this._children){

@@ -132,7 +132,7 @@ export default class SCNActionFade extends SCNAction {
   _applyAction(obj, time, needTimeConversion = true) {
     const t = this._getTime(time, needTimeConversion)
     if(!(obj instanceof SCNNode)){
-      throw new Error(`unsupported class for SCNActionRotate: ${obj.constructor.name}`)
+      throw new Error(`unsupported class for SCNActionFade: ${obj.constructor.name}`)
     }
 
     const baseValue = obj.opacity

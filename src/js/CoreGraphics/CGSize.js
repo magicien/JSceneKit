@@ -141,6 +141,18 @@ export default class CGSize {
     return new CGSize(this.width - size2.width, this.height - size2.height)
   }
 
+  /**
+   * @access public
+   * @param {CGSize} s -
+   * @param {number} rate -
+   * @returns {CGSize} -
+   */
+  lerp(s, rate) {
+    const w = this.width + rate * (s.width - this.width)
+    const h = this.height + rate * (s.height - this.height)
+    return new CGSize(w, h)
+  }
+
   copy() {
     return new CGSize(this.width, this.height)
   }

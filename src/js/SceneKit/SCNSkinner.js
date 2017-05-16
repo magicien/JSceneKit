@@ -37,6 +37,7 @@ export default class SCNSkinner extends NSObject {
           propValues.boneIndices
         )
         instance.skeleton = propValues.skeleton
+        instance.baseGeometryBindTransform = propValues.baseGeometryBindTransform
         return instance
       },
       $unknownKey: (key) => {
@@ -52,7 +53,6 @@ export default class SCNSkinner extends NSObject {
       baseGeometryBindTransform: ['SCNMatrix4', null],
       skeleton: ['SCNNode', null],
       bones: ['NSArray', null],
-      //boneInverseBindTransforms: ['NSArray', null],
       boneWeights: ['SCNGeometrySource', null],
       boneIndices: ['SCNGeometrySource', null]
     }
@@ -208,7 +208,8 @@ export default class SCNSkinner extends NSObject {
       const bone = this._bones[i]
       // TODO: implement appropriate matrix multiplication.
       //       it doesn't consider the rotation of initial pose so far.
-      const mat = this._boneInverseBindTransforms[i].mult(bone._presentation._worldTransform)
+      //const mat = this._boneInverseBindTransforms[i].mult(bone._presentation._worldTransform)
+      const mat = this.baseGeometryBindTransform.mult(this._boneInverseBindTransforms[i]).mult(bone._presentation._worldTransform)
       //const mat = bone._presentation._worldTransform.mult(this._boneInverseBindTransforms[i])
       //mat = bone.presentation.transform.mult(mat)
       //if(bone._parent !== null){

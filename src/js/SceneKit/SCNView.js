@@ -992,6 +992,7 @@ export default class SCNView {
     ///////////////////////////////
     this._runActions()
     this._runAnimations()
+    this._runSKActions()
 
     this._updateTransform()
 
@@ -1154,13 +1155,41 @@ export default class SCNView {
     })
   }
 
+  _runSKActions() {
+    if(this.overlaySKScene === null){
+      return
+    }
+    this._runSKActionForNode(this.overlaySKScene)
+  }
+
+  _runSKActionForNode(node) {
+    this._runSKActionForObject(node)
+    node.children.forEach((child) => this._runSKActionForNode(child))
+  }
+
+  _runSKActionForObject(obj) {
+    const deleteKeys = []
+    obj._actions.forEach((action, key) => {
+      action._applyAction(obj, this.currentTime)
+      if(action._finished){
+        if(action._completionHandler){
+          action._completionHandler()
+        }
+        deleteKeys.push(key)
+      }
+    })
+    deleteKeys.forEach((key) => {
+      obj._actions.delete(key)
+    })
+  }
+
   _runAnimations() {
     this._runAnimationForNode(this._scene.rootNode)
   }
 
   _runAnimationForNode(node) {
-    this._runAnimationForObject(node)
     node.childNodes.forEach((child) => this._runAnimationForNode(child))
+    this._runAnimationForObject(node)
     // TODO: implement animations for all animatable objects:
     //         SCNCamera, SCNConstraint, SCNGeometry, SCNLight, SCNMaterial, 
     //         SCNMaterialProperty, SCNMorpher, SCNParticleSystem, SCNTechnique

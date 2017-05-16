@@ -7,6 +7,7 @@ import SCNMaterialProperty from './SCNMaterialProperty'
 import SCNTransparencyMode from './SCNTransparencyMode'
 import SCNCullMode from './SCNCullMode'
 import SCNBlendMode from './SCNBlendMode'
+import SCNOrderedDictionary from './SCNOrderedDictionary'
 import SKColor from '../SpriteKit/SKColor'
 
 const _LightingModel = {
@@ -215,8 +216,7 @@ export default class SCNMaterial extends NSObject {
      * @access private
      * @type {Map}
      */
-    this._animations = new Map()
-
+    this._animations = new SCNOrderedDictionary()
 
     /**
      * @access private

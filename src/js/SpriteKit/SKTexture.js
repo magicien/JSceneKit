@@ -45,6 +45,8 @@ export default class SKTexture extends NSObject {
 
     this._image = null
     this._glTexture = null
+
+    this._loadingImagePromise = null
   }
 
   // Creating New Textures from Images
@@ -75,6 +77,7 @@ export default class SKTexture extends NSObject {
   static textureWithImage(image) {
     const texture = new SKTexture()
     texture._image = image
+    this._loadingImagePromise = Promise.resolve(this)
     return texture
   }
 
@@ -89,6 +92,7 @@ export default class SKTexture extends NSObject {
   static textureWithCgImage(image) {
     const texture = new SKTexture()
     texture._image = image
+    this._loadingImagePromise = Promise.resolve(this)
     return texture
   }
 
@@ -384,36 +388,43 @@ for i in 0...2 {
 
   _loadImage(path) {
     const image = new Image()
-    if(path.indexOf('file:///') === 0){
-      const paths = path.slice(8).split('/')
-      let pathCount = 1
-      let _path = paths.slice(-pathCount).join('/')
-      console.info(`image loading: ${_path}`)
-      image.onload = () => {
-        console.info(`image ${_path} onload`)
-        this._image = image
-      }
-      image.onerror = () => {
-        pathCount += 1
-        if(pathCount > paths.length){
-          console.error(`image ${path} load error.`)
-        }else{
-          console.info(`image ${_path} load error.`)
-          _path = paths.slice(-pathCount).join('/')
-          console.info(`try ${_path}`)
-          image.src = _path
+    this._loadingImagePromise = new Promise((resolve, reject) => {
+      if(path.indexOf('file:///') === 0){
+        const paths = path.slice(8).split('/')
+        let pathCount = 1
+        let _path = paths.slice(-pathCount).join('/')
+        console.info(`image loading: ${_path}`)
+        image.onload = () => {
+          console.info(`image ${_path} onload`)
+          this._image = image
+          resolve(this)
         }
+        image.onerror = () => {
+          pathCount += 1
+          if(pathCount > paths.length){
+            console.error(`image ${path} load error.`)
+            reject(this)
+          }else{
+            // retry
+            console.info(`image ${_path} load error.`)
+            _path = paths.slice(-pathCount).join('/')
+            console.info(`try ${_path}`)
+            image.src = _path
+          }
+        }
+      }else{
+        console.info(`image loading: ${path}`)
+        image.onload = () => {
+          this._image = image
+          resolve(this)
+        }
+        image.onerror = () => {
+          console.info(`image ${path} load error.`)
+          reject(this)
+        }
+        image.src = path
       }
-    }else{
-      console.info(`image loading: ${path}`)
-      image.onload = () => {
-        this._image = image
-      }
-      image.onerror = () => {
-        console.info(`image ${path} load error.`)
-      }
-      image.src = path
-    }
+    })
   }
 
   _createTexture(gl) {

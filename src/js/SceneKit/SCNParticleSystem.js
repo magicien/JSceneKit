@@ -262,8 +262,10 @@ export default class SCNParticleSystem extends NSObject {
    * constructor
    * @access public
    * @constructor
+   * @param {string} name - The name of a particle system file in the app’s bundle resources directory, with or without the .scnp extension.
+   * @param {?string} directory - The subdirectory path in the app’s bundle resources directory.
    */
-  constructor() {
+  constructor(name = null, directory = null) {
     super()
 
     // Managing Particle Emission Timing
@@ -728,6 +730,22 @@ export default class SCNParticleSystem extends NSObject {
     this._numImages = null
     this._imageWidth = null
     this._imageHeight = null
+
+    this._loadingPromise = null
+    //if(name !== null){
+    //  let path = name
+    //  if(directory !== null){
+    //    path = `${directory}/${name}`
+    //  }
+    //  this._loadingPromise = _BinaryRequest.get(path)
+    //  .then((data) => {
+    //    const system = NSKeyedUnarchiver.unarchiveObjectWithData(data, path)
+    //    if(!(system instanceof SCNParticleSystem)){
+    //      throw new Error(`file ${path} is not an instance of SCNParticleSystem`)
+    //    }
+    //    return system
+    //  })
+    //}
   }
 
   // Creating a Particle System
@@ -742,19 +760,24 @@ export default class SCNParticleSystem extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522772-init
    */
   static systemNamedInDirectory(name, directory = null) {
-    let path = name
-    if(directory !== null){
-      path = `${directory}/${name}`
-    }
-    const promise = _BinaryRequest.get(path)
-    .then((data) => {
-      const system = NSKeyedUnarchiver.unarchiveObjectWithData(data, path)
-      if(!(system instanceof SCNParticleSystem)){
-        throw new Error(`file ${path} is not an instance of SCNParticleSystem`)
+    //const system = new SCNParticleSystem(name, directory)
+    if(name !== null){
+      let path = name
+      if(directory !== null){
+        path = `${directory}/${name}`
       }
-      return system
-    })
-    return promise
+      return _BinaryRequest.get(path)
+      .then((data) => {
+        const system = NSKeyedUnarchiver.unarchiveObjectWithData(data, path)
+        if(!(system instanceof SCNParticleSystem)){
+          throw new Error(`file ${path} is not an instance of SCNParticleSystem`)
+        }
+        // FIXME: wait for images
+        system._loadingPromise = Promise.resolve(system)
+        return system
+      })
+    }
+    return null
   }
 
   // Controlling Particle Simulation

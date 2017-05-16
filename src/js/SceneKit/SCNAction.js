@@ -88,7 +88,6 @@ export default class SCNAction extends NSObject {
     this._completionHandler = null
 
     this.__actionStartTime = null
-    //this._prevTime = null
   }
 
   // Creating Actions That Move a Node
@@ -680,11 +679,11 @@ SCNAction *sequenceReverse = [sequence reversedAction];
     }else if(from instanceof SCNVector3){
       return from.lerp(to, t)
     }else if(from instanceof CGSize){
-      // TODO: implement
+      return from.lerp(to, t)
     }else if(from instanceof CGPoint){
-      // TODO: implement
+      return from.lerp(to, t)
     }else if(from instanceof CGRect){
-      // TODO: implement
+      return from.lerp(to, t)
     }else if(from instanceof SKColor){
       return from._lerp(to, t)
     }

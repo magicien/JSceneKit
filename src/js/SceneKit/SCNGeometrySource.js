@@ -519,6 +519,51 @@ SCNGeometrySource *source = [SCNGeometrySource geometrySourceWithBuffer:buffer
 
   /**
    * 
+   * @access private
+   * @returns {Object}
+   */
+  _createBoundingBox() {
+    const min = new SCNVector3(Infinity, Infinity, Infinity)
+    const max = new SCNVector3(-Infinity, -Infinity, -Infinity)
+    if(this._componentsPerVector !== 3){
+      throw new Error('componentsPerVector !== 3')
+    }
+
+    const indexStride = this._dataStride / this._bytesPerComponent
+    let ind = this._dataOffset / this._bytesPerComponent
+    const len = this._vectorCount
+    const arr = []
+    for(let i=0; i<len; i++){
+      const x = this._data[ind + 0]
+      const y = this._data[ind + 1]
+      const z = this._data[ind + 2]
+      if(x < min.x){
+        min.x = x
+      }
+      if(x > max.x){
+        max.x = x
+      }
+      if(y < min.y){
+        min.y = y
+      }
+      if(y > max.y){
+        max.y = y
+      }
+      if(z < min.z){
+        min.z = z
+      }
+      if(z > max.z){
+        max.z = z
+      }
+      ind += indexStride
+    }
+
+    console.log(`boundingBox: min: ${min.floatArray()}, max: ${max.floatArray()}`)
+    return { min: min, max: max }
+  }
+
+  /**
+   * 
    * @access public
    * @param {number} value -
    * @returns {void}

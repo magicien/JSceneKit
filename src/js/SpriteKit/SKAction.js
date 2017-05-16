@@ -3,9 +3,11 @@
 import NSObject from '../ObjectiveC/NSObject'
 import SKActionTimingMode from './SKActionTimingMode'
 //import CGVector from '../CoreGraphics/CGVector'
-//import CGPoint from '../CoreGraphics/CGPoint'
+import CGPoint from '../CoreGraphics/CGPoint'
 //import CGPath from '../CoreGraphics/CGPath'
-//import CGSize from '../CoreGraphics/CGSize'
+import CGSize from '../CoreGraphics/CGSize'
+import CGRect from '../CoreGraphics/CGRect'
+import SKColor from './SKColor'
 //import SKTexture from './SKTexture'
 //import SKWarpGeometry from './SKWarpGeometry'
 //import SKNode from './SKNode'
@@ -41,29 +43,246 @@ export default class SKAction extends NSObject {
      * @type {number}
      * @see https://developer.apple.com/reference/spritekit/skaction/1417718-speed
      */
-    this.speed = 1.0
+    this._speed = 1.0
 
     /**
      * The timing mode used to execute an action.
      * @type {SKActionTimingMode}
      * @see https://developer.apple.com/reference/spritekit/skaction/1417807-timingmode
      */
-    this.timingMode = SKActionTimingMode.linear
+    this._timingMode = SKActionTimingMode.linear
 
     /**
      * A block used to customize the timing function.
      * @type {SKActionTimingFunction}
      * @see https://developer.apple.com/reference/spritekit/skaction/1417666-timingfunction
      */
-    this.timingFunction = null
+    this._timingFunction = null
 
     /**
      * The duration required to complete an action.
      * @type {number}
      * @see https://developer.apple.com/reference/spritekit/skaction/1417790-duration
      */
-    this.duration = 0
+    this._duration = 0
+
+    /**
+     * @access private
+     * @type {boolean}
+     */
+    this._finished = false
+
+    this._beginTime = 0
+    this._isRunning = false
+    this._pausedTime = 0
+    this._completionHandler = null
+
+    this.__actionStartTime = null
   }
+
+  /**
+   * A speed factor that modifies how fast an action runs.
+   * @type {number}
+   * @see https://developer.apple.com/reference/spritekit/skaction/1417718-speed
+   */
+  get speed() {
+    return this._speed
+  }
+  set speed(newValue) {
+    this._speed = newValue
+  }
+
+  /**
+   * The timing mode used to execute an action.
+   * @type {SKActionTimingMode}
+   * @see https://developer.apple.com/reference/spritekit/skaction/1417807-timingmode
+   */
+  get timingMode() {
+    return this._timingMode
+  }
+  set timingMode(newValue) {
+    this._timingMode = newValue
+  }
+
+  /**
+   * A block used to customize the timing function.
+   * @type {SKActionTimingFunction}
+   * @see https://developer.apple.com/reference/spritekit/skaction/1417666-timingfunction
+   */
+  get timingFunction() {
+    return this._timingFunction
+  }
+  set timingFunction(newValue) {
+    this._timingFunction = newValue
+  }
+
+  /**
+   * The duration required to complete an action.
+   * @type {number}
+   * @see https://developer.apple.com/reference/spritekit/skaction/1417790-duration
+   */
+  get duration() {
+    return this._duration
+  }
+  set duration(newValue) {
+    this._duration = newValue
+  }
+
+  get _actionStartTime() {
+    return this.__actionStartTime
+  }
+  set _actionStartTime(newValue) {
+    this.__actionStartTime = newValue
+  }
+
+  /**
+   * @access public
+   * @returns {SKAction} -
+   */
+  copy() {
+    const action = super.copy()
+
+    action._beginTime = this._beginTime
+    action._duration = this._duration
+    action._speed = this.speed
+    action._timingMode = this.timingMode
+    action._timingFunction = this.timingFunction
+    action._finished = this._finished
+    //action._isRunning = this._isRunning
+    //action._pausedTime = this._pausedTime
+    //action._completionHandler = this._completionHandler
+
+    return action
+  }
+
+  /**
+   * apply action to the given node.
+   * @access private
+   * @param {Object} obj - target object to apply this action.
+   * @param {number} time - active time
+   * @param {boolean} [needTimeConversion = true] -
+   * @returns {void}
+   */
+  _applyAction(obj, time, needTimeConversion = true) {
+    const t = this._getTime(time, needTimeConversion)
+    //this._handleEvents(obj, t)
+  }
+
+  _getTime(time, needTimeConversion) {
+    if(!needTimeConversion){
+      if(time >= 1.0 && !this._finished){
+        this._finished = true
+      }
+      return time
+    }
+
+    const baseTime = this._basetimeFromTime(time)
+    if(this.timingFunction === null){
+      return baseTime
+    }
+
+    return this.timingFunction._getValueAtTime(baseTime)
+  }
+
+  /**
+   * convert parent time to base time
+   * @access private
+   * @param {number} time - parent time
+   * @returns {number} - animation base time for the current frame (0-1 or null).
+   */
+  _basetimeFromTime(time) {
+    const activeTime = time - this._actionStartTime
+    return this._basetimeFromActivetime(activeTime)
+  }
+
+  /**
+   * convert parent time to active time
+   * @access private
+   * @param {number} time - parent time
+   * @returns {number} - animation active time for the current frame.
+   */
+  _activetimeFromTime(time) {
+    return time - this._actionStartTime
+  }
+
+  /**
+   * convert active time to base time
+   * @access private
+   * @param {number} time - active time
+   * @returns {number} - animation base time for the current frame (0-1 or null).
+   */
+  _basetimeFromActivetime(time) {
+    let dt = time - this._beginTime
+    //let dt = time
+    if(this.speed === 0){
+      return 0
+    }
+    if(this._duration === 0){
+      return dt / Math.abs(this.speed)
+    }
+    let duration = this._duration / Math.abs(this.speed)
+    if(duration === 0){
+      duration = 0.25
+    }
+
+    if(dt >= duration){
+      // the action is over.
+      if(!this._finished){
+        this._finished = true
+      }
+    }
+
+    return dt / duration
+  }
+
+  /**
+   * @access private
+   * @param {Object} from -
+   * @param {Object} to -
+   * @param {number} t -
+   * @returns {Object} -
+   */
+  _lerp(from, to, t) {
+    if(t === null){
+      // the action is over.
+      return to
+    }
+    //if(from instanceof SCNVector4){
+    //  // TODO: slerp for Quaternion
+    //  return from.lerp(to, t)
+    //}else if(from instanceof SCNVector3){
+    //  return from.lerp(to, t)
+    //}else if(from instanceof CGSize){
+    if(from instanceof CGSize){
+      return from._lerp(to, t)
+    }else if(from instanceof CGPoint){
+      return from._lerp(to, t)
+    }else if(from instanceof CGRect){
+      return from._lerp(to, t)
+    }else if(from instanceof SKColor){
+      return from._lerp(to, t)
+    }
+    return from + (to - from) * t
+  }
+
+  /**
+   * @access private
+   * @param {Object} from -
+   * @param {Object} to -
+   * @param {number} t -
+   * @returns {Object} -
+   */
+  //_slerp(from, to, t) {
+  //  if(!(from instanceof SCNVector4)){
+  //    throw new Error('SCNAction._slerp: object is not SCNVector4')
+  //  }
+  //  return from.slerp(to, t)
+  //}
+
+  _resetFinished() {
+    this._finished = false
+  }
+
 
   /**
    * Creates an action of the given name from an action file.
@@ -1185,3 +1404,4 @@ let customAction = SKAction.customAction(withDuration: 2.0) {
     return null
   }
 }
+

@@ -47,12 +47,14 @@ const _defaultFragmentShader =
   precision mediump float;
 
   uniform sampler2D spriteTexture;
+  uniform float alpha;
   in vec2 v_texcoord;
 
   out vec4 outColor;
 
   void main() {
     outColor = texture(spriteTexture, v_texcoord);
+    outColor.a *= alpha;
   }
 `
 
@@ -103,7 +105,7 @@ export default class SKSpriteNode extends SKNode {
      * @type {?SKTexture}
      * @see https://developer.apple.com/reference/spritekit/skspritenode/1520011-texture
      */
-    this.texture = null
+    this._texture = null
 
     /**
      * A property that defines how the texture is applied to the sprite.
@@ -193,14 +195,6 @@ export default class SKSpriteNode extends SKNode {
     //this._customPlaygroundQuickLook = new PlaygroundQuickLook()
     this._customPlaygroundQuickLook = null
 
-    
-    if(name !== null){
-      this.texture = SKTexture.textureWithImageNamed(name)
-      //if(generateNormalMap){
-      //  this.normalTexture = this.texture.generatingNormalMap()
-      //}
-    }
-
     /**
      * @access private
      * @type {WebGLProgram}
@@ -210,6 +204,15 @@ export default class SKSpriteNode extends SKNode {
     this._vertexArrayObject = null
     this._vertexBuffer = null
     this._indexBuffer = null
+
+    this._loadingImagePromise = null
+
+    if(name !== null){
+      this.texture = SKTexture.textureWithImageNamed(name)
+      //if(generateNormalMap){
+      //  this.normalTexture = this.texture.generatingNormalMap()
+      //}
+    }
   }
 
   /**
@@ -241,6 +244,14 @@ Creating a non-textured sprite nodelet node = SKSpriteNode(color: .red,
    * @see https://developer.apple.com/reference/spritekit/skspritenode/1520391-init
    */
   static nodeWithImageNamed(name) {
+    const node = new SKSpriteNode(name)
+    if(!node._loadingImagePromise){
+      return null
+    }
+    const promise = node._loadingImagePromise.then(() => {
+      return Promise.resolve(node)
+    })
+    return promise
   }
 
   /**
@@ -322,6 +333,7 @@ Creating a non-textured sprite nodelet node = SKSpriteNode(color: .red,
    * @returns {void}
    */
   _render(gl, viewRect) {
+    const p = this.__presentation
     if(this.texture === null){
       return
     }
@@ -332,7 +344,7 @@ Creating a non-textured sprite nodelet node = SKSpriteNode(color: .red,
         return
       }
       this.size = new CGSize(this.texture._image.naturalWidth, this.texture._image.naturalHeight)
-      this.__presentation.size = this.size.copy()
+      p.size = this.size.copy()
     }
     if(this._program === null){
       this._program = this._createProgram(gl)
@@ -347,6 +359,7 @@ Creating a non-textured sprite nodelet node = SKSpriteNode(color: .red,
 
     gl.uniform1f(gl.getUniformLocation(program, 'screenWidth'), viewRect.size.width)
     gl.uniform1f(gl.getUniformLocation(program, 'screenHeight'), viewRect.size.height)
+    gl.uniform1f(gl.getUniformLocation(program, 'alpha'), p.alpha)
 
     const data = this._createVertexData()
     gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer)
@@ -434,8 +447,8 @@ Creating a non-textured sprite nodelet node = SKSpriteNode(color: .red,
 
   _createVertexData() {
     const p = this.__presentation
-    const w = p.size.width * p.xScale
-    const h = p.size.height * p.yScale
+    const w = p.size.width * p._worldXScale
+    const h = p.size.height * p._worldYScale
     const pos = p._worldPosition
     const zPos = p._worldZPosition
     const left =  pos.x - p.anchorPoint.x * w
@@ -455,7 +468,7 @@ Creating a non-textured sprite nodelet node = SKSpriteNode(color: .red,
     super._copyValue(src)
     this.size = src.size.copy()
     this.anchorPoint = src.anchorPoint.copy()
-    this.texture = src.texture ? src.texture : null
+    this._texture = src._texture ? src._texture : null
     this.centerRect = src.centerRect.copy()
     this.colorBlendFactor = src.colorBlendFactor
     this.color = src.color.copy()
@@ -471,5 +484,27 @@ Creating a non-textured sprite nodelet node = SKSpriteNode(color: .red,
     // this._vertexArrayObject
     // this._vertexBuffer
     // this._indexBuffer
+  }
+
+  get texture() {
+    return this._texture
+  }
+  set texture(newValue) {
+    this._texture = newValue
+
+    this.size = new CGSize(0, 0)
+    this._frame = new CGRect(new CGPoint(0, 0), this.size)
+    if(this._texture){
+      this._loadingImagePromise = this._texture._loadingImagePromise.then((texture) => {
+        if(this._texture === texture){
+          this.size = this._texture.size()
+          const x = -this.size.width * this.anchorPoint.x
+          const y = -this.size.height * (1.0 - this.anchorPoint.y)
+          this._frame = new CGRect(new CGPoint(x, y), this.size)
+        }
+      })
+    }else{
+      this._loadingImagePromise = null
+    }
   }
 }

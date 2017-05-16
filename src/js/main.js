@@ -119,6 +119,7 @@ import SCNMorpherCalculationMode from './SceneKit/SCNMorpherCalculationMode'
 import SCNMovabilityHint from './SceneKit/SCNMovabilityHint'
 import SCNNode from './SceneKit/SCNNode'
 import SCNNodeRendererDelegate from './SceneKit/SCNNodeRendererDelegate'
+import SCNOrderedDictionary from './SceneKit/SCNOrderedDictionary'
 import SCNParticleBirthDirection from './SceneKit/SCNParticleBirthDirection'
 import SCNParticleBirthLocation from './SceneKit/SCNParticleBirthLocation'
 import SCNParticleBlendMode from './SceneKit/SCNParticleBlendMode'
@@ -201,16 +202,21 @@ import SKActionTimingMode from './SpriteKit/SKActionTimingMode'
 import SKBlendMode from './SpriteKit/SKBlendMode'
 import SKColor from './SpriteKit/SKColor'
 import SKEffectNode from './SpriteKit/SKEffectNode'
+import SKFade from './SpriteKit/SKFade'
+import SKGroup from './SpriteKit/SKGroup'
 import SKLabelHorizontalAlignmentMode from './SpriteKit/SKLabelHorizontalAlignmentMode'
 import SKLabelNode from './SpriteKit/SKLabelNode'
 import SKLabelVerticalAlignmentMode from './SpriteKit/SKLabelVerticalAlignmentMode'
 import SKNode from './SpriteKit/SKNode'
+import SKScale from './SpriteKit/SKScale'
 import SKScene from './SpriteKit/SKScene'
 import SKSceneScaleMode from './SpriteKit/SKSceneScaleMode'
+import SKSequence from './SpriteKit/SKSequence'
 import SKShapeNode from './SpriteKit/SKShapeNode'
 import SKSpriteNode from './SpriteKit/SKSpriteNode'
 import SKTexture from './SpriteKit/SKTexture'
 import SKTextureFilteringMode from './SpriteKit/SKTextureFilteringMode'
+import SKWait from './SpriteKit/SKWait'
 import _AjaxRequest from './util/_AjaxRequest'
 import _BinaryReader from './util/_BinaryReader'
 import _BinaryRequest from './util/_BinaryRequest'
@@ -341,6 +347,7 @@ _ClassList.registerClass(SCNMorpherCalculationMode)
 _ClassList.registerClass(SCNMovabilityHint)
 _ClassList.registerClass(SCNNode)
 _ClassList.registerClass(SCNNodeRendererDelegate)
+_ClassList.registerClass(SCNOrderedDictionary)
 _ClassList.registerClass(SCNParticleBirthDirection)
 _ClassList.registerClass(SCNParticleBirthLocation)
 _ClassList.registerClass(SCNParticleBlendMode)
@@ -423,16 +430,21 @@ _ClassList.registerClass(SKActionTimingMode)
 _ClassList.registerClass(SKBlendMode)
 _ClassList.registerClass(SKColor)
 _ClassList.registerClass(SKEffectNode)
+_ClassList.registerClass(SKFade)
+_ClassList.registerClass(SKGroup)
 _ClassList.registerClass(SKLabelHorizontalAlignmentMode)
 _ClassList.registerClass(SKLabelNode)
 _ClassList.registerClass(SKLabelVerticalAlignmentMode)
 _ClassList.registerClass(SKNode)
+_ClassList.registerClass(SKScale)
 _ClassList.registerClass(SKScene)
 _ClassList.registerClass(SKSceneScaleMode)
+_ClassList.registerClass(SKSequence)
 _ClassList.registerClass(SKShapeNode)
 _ClassList.registerClass(SKSpriteNode)
 _ClassList.registerClass(SKTexture)
 _ClassList.registerClass(SKTextureFilteringMode)
+_ClassList.registerClass(SKWait)
 
 /*global exports*/
 exports.NSColor = NSColor
@@ -556,6 +568,7 @@ exports.SCNMorpherCalculationMode = SCNMorpherCalculationMode
 exports.SCNMovabilityHint = SCNMovabilityHint
 exports.SCNNode = SCNNode
 exports.SCNNodeRendererDelegate = SCNNodeRendererDelegate
+exports.SCNOrderedDictionary = SCNOrderedDictionary
 exports.SCNParticleBirthDirection = SCNParticleBirthDirection
 exports.SCNParticleBirthLocation = SCNParticleBirthLocation
 exports.SCNParticleBlendMode = SCNParticleBlendMode
@@ -638,16 +651,21 @@ exports.SKActionTimingMode = SKActionTimingMode
 exports.SKBlendMode = SKBlendMode
 exports.SKColor = SKColor
 exports.SKEffectNode = SKEffectNode
+exports.SKFade = SKFade
+exports.SKGroup = SKGroup
 exports.SKLabelHorizontalAlignmentMode = SKLabelHorizontalAlignmentMode
 exports.SKLabelNode = SKLabelNode
 exports.SKLabelVerticalAlignmentMode = SKLabelVerticalAlignmentMode
 exports.SKNode = SKNode
+exports.SKScale = SKScale
 exports.SKScene = SKScene
 exports.SKSceneScaleMode = SKSceneScaleMode
+exports.SKSequence = SKSequence
 exports.SKShapeNode = SKShapeNode
 exports.SKSpriteNode = SKSpriteNode
 exports.SKTexture = SKTexture
 exports.SKTextureFilteringMode = SKTextureFilteringMode
+exports.SKWait = SKWait
 exports._AjaxRequest = _AjaxRequest
 exports._BinaryReader = _BinaryReader
 exports._BinaryRequest = _BinaryRequest

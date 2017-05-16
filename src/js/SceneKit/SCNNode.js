@@ -22,6 +22,7 @@ import SCNQuaternion from './SCNQuaternion'
 import SCNConstraint from './SCNConstraint'
 import SCNMovabilityHint from './SCNMovabilityHint'
 import SCNNodeRendererDelegate from './SCNNodeRendererDelegate'
+import SCNOrderedDictionary from './SCNOrderedDictionary'
 import SCNPhysicsBody from './SCNPhysicsBody'
 import SCNPhysicsField from './SCNPhysicsField'
 import SCNParticleSystem from './SCNParticleSystem'
@@ -48,7 +49,10 @@ export default class SCNNode extends NSObject {
       name: 'string',
       light: 'SCNLight',
       camera: 'SCNCamera',
-      geometry: 'SCNGeometry',
+      geometry: ['SCNGeometry', (obj, value) => {
+        obj.geometry = value
+        obj.boundingBox = value.boundingBox
+      }],
       morpher: 'SCNMorpher',
       skinner: 'SCNSkinner',
       categoryBitMask: 'integer',
@@ -364,10 +368,9 @@ export default class SCNNode extends NSObject {
 
     /**
      * @access private
-     * @type {Map}
+     * @type {SCNOrderedDictionary}
      */
-    this._animations = new Map()
-
+    this._animations = new SCNOrderedDictionary()
 
     ///////////////////////
     // SCNBoundingVolume //
@@ -1555,7 +1558,6 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     act._actionStartTime = Date.now() * 0.001
     act._completionHandler = block
     this._actions.set(key, act)
-    //this._animations.set(key, anim)
     //this._copyTransformToPresentationRecursive()
   }
 
@@ -1837,7 +1839,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     node._audioPlayers = this._audioPlayers
     //node._hasActions = this._hasActions
     node._actions = new Map(this._actions)
-    node._animations = new Map(this._animations)
+    node._animations = this._animations.copy()
     node.boundingBox = this.boundingBox
     //node._boundingSphere = this._boundingSphere
 
@@ -2025,8 +2027,11 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
           target._transformUpToDate = false
           return
         case 'scale': {
-          const rate = value / target._scale.length()
-          target._scale.mul(rate)
+          //const rate = value / target._scale.length()
+          //target._scale = target._scale.mul(rate)
+          target._scale.x = value.x
+          target._scale.y = value.y
+          target._scale.z = value.z
           target._transformUpToDate = false
           return
         }
@@ -2103,57 +2108,57 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
   }
 
   _updateBoundingBox() {
-    this.boundingBox = {
-      min: new SCNVector3(0, 0, 0),
-      max: new SCNVector3(0, 0, 0)
-    }
-
     if(this._geometry === null){
+      this.boundingBox = {
+        min: new SCNVector3(0, 0, 0),
+        max: new SCNVector3(0, 0, 0)
+      }
       return
     }
+    this.boundingBox = this._geometry.boundingBox
 
-    const vs = this._geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)
-    if(vs === null){
-      return
-    }
-    
-    const len = vs.vectorCount
-    if(len <= 0){
-      return
-    }
+    //const vs = this._geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)
+    //if(vs === null){
+    //  return
+    //}
+    //
+    //const len = vs.vectorCount
+    //if(len <= 0){
+    //  return
+    //}
 
-    let maxX = -Infinity
-    let maxY = -Infinity
-    let maxZ = -Infinity
-    let minX = Infinity
-    let minY = Infinity
-    let minZ = Infinity
-    for(let i=0; i<len; i++){
-      const v = vs._vectorAt(i)
-      if(v[0] > maxX){
-        maxX = v[0]
-      }
-      if(v[0] < minX){
-        minX = v[0]
-      }
-      if(v[1] > maxY){
-        maxY = v[1]
-      }
-      if(v[1] < minY){
-        maxY = v[1]
-      }
-      if(v[2] > maxZ){
-        maxZ = v[2]
-      }
-      if(v[2] < minZ){
-        minZ = v[2]
-      }
-    }
-      
-    this.boundingBox = {
-      min: new SCNVector3(minX, minY, minZ),
-      max: new SCNVector3(maxX, maxY, maxZ)
-    }
+    //let maxX = -Infinity
+    //let maxY = -Infinity
+    //let maxZ = -Infinity
+    //let minX = Infinity
+    //let minY = Infinity
+    //let minZ = Infinity
+    //for(let i=0; i<len; i++){
+    //  const v = vs._vectorAt(i)
+    //  if(v[0] > maxX){
+    //    maxX = v[0]
+    //  }
+    //  if(v[0] < minX){
+    //    minX = v[0]
+    //  }
+    //  if(v[1] > maxY){
+    //    maxY = v[1]
+    //  }
+    //  if(v[1] < minY){
+    //    maxY = v[1]
+    //  }
+    //  if(v[2] > maxZ){
+    //    maxZ = v[2]
+    //  }
+    //  if(v[2] < minZ){
+    //    minZ = v[2]
+    //  }
+    //}
+    //  
+    //this.boundingBox = {
+    //  min: new SCNVector3(minX, minY, minZ),
+    //  max: new SCNVector3(maxX, maxY, maxZ)
+    //}
   }
 
   /**

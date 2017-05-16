@@ -9,6 +9,8 @@ import SCNGeometrySource from './SCNGeometrySource'
 import SCNGeometryElement from './SCNGeometryElement'
 import SCNLevelOfDetail from './SCNLevelOfDetail'
 import SCNMaterial from './SCNMaterial'
+import SCNOrderedDictionary from './SCNOrderedDictionary'
+import SCNVector3 from './SCNVector3'
 /*global Ammo*/
 
 
@@ -40,7 +42,33 @@ export default class SCNGeometry extends NSObject {
       kGeometrySourceSemanticNormal: ['NSArray', addSources],
       kGeometrySourceSemanticTangent: ['NSArray', addSources],
       kGeometrySourceSemanticTexcoord: ['NSArray', addSources],
-      kGeometrySourceSemanticVertex: ['NSArray', addSources],
+      kGeometrySourceSemanticVertex: ['NSArray', (obj, sources) => {
+        addSources(obj, sources)
+        const min = new SCNVector3(Infinity, Infinity, Infinity)
+        const max = new SCNVector3(-Infinity, -Infinity, -Infinity)
+        for(const src of sources){
+          const result = src._createBoundingBox()
+          if(result.min.x < min.x){
+            min.x = result.min.x
+          }
+          if(result.max.x > max.x){
+            max.x = result.max.x
+          }
+          if(result.min.y < min.y){
+            min.y = result.min.y
+          }
+          if(result.max.y > max.y){
+            max.y = result.max.y
+          }
+          if(result.min.z < min.z){
+            min.z = result.min.z
+          }
+          if(result.max.z > max.z){
+            max.z = result.max.z
+          }
+        }
+        obj.boundingBox = { min: min, max: max }
+      }],
       kGeometrySourceSemanticVertexCrease: ['NSArray', addSources],
 
       entityID: ['string', '_entityID'],
@@ -158,9 +186,9 @@ export default class SCNGeometry extends NSObject {
 
     /**
      * @access private
-     * @type {Map}
+     * @type {SCNOrderedDictionary}
      */
-    this._animations = new Map()
+    this._animations = new SCNOrderedDictionary()
 
     ///////////////////////
     // SCNBoundingVolume //
@@ -773,6 +801,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     //geometry._boundingSphere = this._boundingSphere
     geometry._vertexBuffer = this._vertexBuffer
     geometry._indexBuffer = this._indexBuffer
+    geometry._animations = this._animations.copy()
 
     return geometry
   }

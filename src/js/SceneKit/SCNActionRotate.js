@@ -73,8 +73,9 @@ export default class SCNActionRotate extends SCNAction {
    */
   static rotateByXYZ(xAngle, yAngle, zAngle, duration) {
     const action = new SCNActionRotate()
-    action._rotX = xAngle
-    action._rotY = yAngle
+    // TODO: Do research the reason why I need to turn around X and Y axes.
+    action._rotX = -xAngle
+    action._rotY = -yAngle
     action._rotZ = zAngle
     action._duration = duration
     action._isRelative = true
