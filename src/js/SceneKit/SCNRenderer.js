@@ -1097,7 +1097,7 @@ export default class SCNRenderer extends NSObject {
     const targetNodes = []
     while(arr.length > 0){
       const node = arr.shift()
-      if(node.presentation.geometry !== null){
+      if(node.presentation !== null && node.presentation.geometry !== null){
         targetNodes.push(node)
       }
       arr.push(...node.childNodes)
@@ -1117,7 +1117,7 @@ export default class SCNRenderer extends NSObject {
     const targetNodes = []
     while(arr.length > 0){
       const node = arr.shift()
-      if(node.presentation.particleSystems !== null){
+      if(node.presentation !== null && node.presentation.particleSystems !== null){
         targetNodes.push(node)
       }
       arr.push(...node.childNodes)
@@ -1146,7 +1146,7 @@ export default class SCNRenderer extends NSObject {
     let numLights = 0
     while(arr.length > 0){
       const node = arr.shift()
-      if(node.presentation.light !== null){
+      if(node.presentation !== null && node.presentation.light !== null){
         targetNodes[node.presentation.light.type].push(node.presentation)
         if(node.presentation.light.type !== SCNLight.LightType.ambient){
           numLights += 1
@@ -1171,7 +1171,7 @@ export default class SCNRenderer extends NSObject {
     const targetNodes = []
     while(arr.length > 0){
       const node = arr.shift()
-      if(node.presentation.physicsBody !== null){
+      if(node.presentation !== null && node.presentation.physicsBody !== null){
         targetNodes.push(node)
       }
       arr.push(...node.childNodes)

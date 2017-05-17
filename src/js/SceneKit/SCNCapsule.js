@@ -1,6 +1,7 @@
 'use strict'
 
 import SCNGeometry from './SCNGeometry'
+import SCNVector3 from './SCNVector3'
 /*global Ammo*/
 
 
@@ -75,5 +76,21 @@ export default class SCNCapsule extends SCNGeometry {
     //const height = (this.height - this.capRadius) * 0.5
     //const shape = new Ammo.btCapsuleShape(this.capRadius, height)
     //return shape
+  }
+
+  /**
+   * The center point and radius of the object’s bounding sphere.
+   * @type {Object}
+   * @parameter {SCNVector3} _boundingSphere.center -
+   * @parameter {number} _boundingSphere.radius -
+   * @returns {Object} -
+   * @desc Scene Kit defines a bounding sphere in the local coordinate space using a center point and a radius. For example, if a node’s bounding sphere has the center point {3, 1, 4} and radius 2.0, all points in the vertex data of node’s geometry (and any geometry attached to its child nodes) lie within 2.0 units of the center point.The coordinates provided when reading this property are valid only if the object has a volume to be measured. For a geometry containing no vertex data or a node containing no geometry (and whose child nodes, if any, contain no geometry), the values center and radius are both zero.
+   * @see https://developer.apple.com/reference/scenekit/scnboundingvolume/2034707-boundingsphere
+   */
+  getBoundingSphere() {
+    const c = new SCNVector3(0, 0, 0)
+    const r = this.height * 0.5
+
+    return { center: c, radius: r }
   }
 }

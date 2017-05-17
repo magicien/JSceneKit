@@ -210,7 +210,7 @@ export default class SCNGeometry extends NSObject {
      * @parameter {SCNVector3} _boundingSphere.center
      * @parameter {number} _boundingSphere.radius
      */
-    this._boundingSphere = null
+    //this._boundingSphere = null
 
     this._vertexBuffer = null
     this._indexBuffer = null
@@ -364,7 +364,18 @@ export default class SCNGeometry extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnboundingvolume/2034707-boundingsphere
    */
   getBoundingSphere() {
-    return this._boundingSphere
+    if(this.boundingBox === null){
+      return { center: new SCNVector3(0, 0, 0), radius: 0 }
+    }
+    const max = this.boundingBox.max
+    const min = this.boundingBox.min
+    const w = (max.x - min.x) * 0.5
+    const h = (max.y - min.y) * 0.5
+    const l = (max.z - min.z) * 0.5
+    const r = Math.sqrt(w * w + h * h + l * l)
+    const c = new SCNVector3(min.x + w, min.y + h, min.z + l)
+
+    return { center: c, radius: r }
   }
 
   /////////////////

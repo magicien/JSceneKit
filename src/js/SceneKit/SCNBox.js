@@ -4,6 +4,7 @@ import SCNGeometry from './SCNGeometry'
 import SCNGeometrySource from './SCNGeometrySource'
 import SCNGeometryElement from './SCNGeometryElement'
 import SCNGeometryPrimitiveType from './SCNGeometryPrimitiveType'
+import SCNVector3 from './SCNVector3'
 /*global Ammo*/
 
 /**
@@ -29,6 +30,7 @@ export default class SCNBox extends SCNGeometry {
         // propValues.boxPrimitiveType
         box.materials = propValues.materials
         box.subdivisionLevel = propValues.subdivisionLevel
+
         return box
       },
       name: 'string',
@@ -401,6 +403,10 @@ export default class SCNBox extends SCNGeometry {
 
     this._geometryElements = [element]
     this._geometrySources = [vertexSource, normalSource, texcoordSource]
+    this.boundingBox = {
+      min: new SCNVector3(left, bottom, back),
+      max: new SCNVector3(right, top, front)
+    }
   }
 
   /**

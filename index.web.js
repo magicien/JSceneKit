@@ -20777,7 +20777,9 @@ module.exports =
 	            obj.addChildNode(child);
 	          });
 	        }],
-	        physicsBody: 'SCNPhysicsBody',
+	        physicsBody: ['SCNPhysicsBody', function (obj, body) {
+	          obj.physicsBody = body;
+	        }],
 	        physicsField: 'SCNPhysicsField',
 	        particleSystem: ['NSArray', '_particleSystems'],
 	        'animation-keys': ['NSArray', null],
@@ -21041,7 +21043,7 @@ module.exports =
 	     * @type {?SCNPhysicsBody}
 	     * @see https://developer.apple.com/reference/scenekit/scnnode/1407988-physicsbody
 	     */
-	    _this.physicsBody = null;
+	    _this._physicsBody = null;
 
 	    /**
 	     * The physics field associated with the node.
@@ -21092,7 +21094,8 @@ module.exports =
 	     * @type {{min: SCNVector3, max: SCNVector3}}
 	     * @see https://developer.apple.com/reference/scenekit/scnboundingvolume/2034705-boundingbox
 	     */
-	    _this.boundingBox = null;
+	    _this._boundingBox = null;
+	    _this._fixedBoundingBox = null;
 
 	    //this._boundingSphere = null
 
@@ -21446,6 +21449,12 @@ module.exports =
 	      return stop;
 	    }
 
+	    // Adding Physics to a Node
+
+	  }, {
+	    key: 'addParticleSystem',
+
+
 	    // Working With Particle Systems
 
 	    /**
@@ -21456,9 +21465,6 @@ module.exports =
 	     * @desc When attached to a node, a particle system’s emitter location follows that node as it moves through the scene. To instead attach a particle system to a location in the scene’s world coordinate space, use the corresponding method on SCNScene.For details on particle systems, see SCNParticleSystem.
 	     * @see https://developer.apple.com/reference/scenekit/scnnode/1523123-addparticlesystem
 	     */
-
-	  }, {
-	    key: 'addParticleSystem',
 	    value: function addParticleSystem(system) {
 	      if (this._particleSystems === null) {
 	        this._particleSystems = [];
@@ -22035,12 +22041,118 @@ module.exports =
 	    // Working with Bounding Volumes
 
 	    /**
-	     * The center point and radius of the object’s bounding sphere.
-	     * @type {{center: SCNVector3, radius: number}}
-	     * @desc Scene Kit defines a bounding sphere in the local coordinate space using a center point and a radius. For example, if a node’s bounding sphere has the center point {3, 1, 4} and radius 2.0, all points in the vertex data of node’s geometry (and any geometry attached to its child nodes) lie within 2.0 units of the center point.The coordinates provided when reading this property are valid only if the object has a volume to be measured. For a geometry containing no vertex data or a node containing no geometry (and whose child nodes, if any, contain no geometry), the values center and radius are both zero.
-	     * @see https://developer.apple.com/reference/scenekit/scnboundingvolume/2034707-boundingsphere
+	     * The minimum and maximum corner points of the object’s bounding box.
+	     * @type {{min: SCNVector3, max: SCNVector3}}
+	     * @see https://developer.apple.com/reference/scenekit/scnboundingvolume/2034705-boundingbox
 	     */
 
+	  }, {
+	    key: '_geometryBoundingBox',
+	    value: function _geometryBoundingBox() {
+	      if (this._geometry === null) {
+	        return {
+	          min: new _SCNVector2.default(Infinity, Infinity, Infinity),
+	          max: new _SCNVector2.default(-Infinity, -Infinity, -Infinity)
+	        };
+	      }
+	      return this._geometry.boundingBox;
+	    }
+	  }, {
+	    key: '_updateBoundingBox',
+	    value: function _updateBoundingBox() {
+	      // FIXME: use rotation of the node
+	      var box = this._geometryBoundingBox();
+	      var p = this.presentation ? this.presentation : this;
+	      if (p.geometry !== null) {
+	        box = this._unionBoundingBox(box, p.geometry.boundingBox);
+	      }
+	      var scale = p._scale;
+	      if (scale.x < 0) {
+	        var minX = box.max.x * scale.x;
+	        var maxX = box.min.x * scale.x;
+	        box.min.x = minX;
+	        box.max.x = maxX;
+	      } else {
+	        box.min.x *= scale.x;
+	        box.max.x *= scale.x;
+	      }
+	      if (scale.y < 0) {
+	        var minY = box.max.y * scale.y;
+	        var maxY = box.min.y * scale.y;
+	        box.min.y = minY;
+	        box.max.y = maxY;
+	      } else {
+	        box.min.y *= scale.y;
+	        box.max.y *= scale.y;
+	      }
+	      if (scale.z < 0) {
+	        var minZ = box.max.z * scale.z;
+	        var maxZ = box.min.z * scale.z;
+	        box.min.z = minZ;
+	        box.max.z = maxZ;
+	      } else {
+	        box.min.z *= scale.z;
+	        box.max.z *= scale.z;
+	      }
+
+	      var _iteratorNormalCompletion = true;
+	      var _didIteratorError = false;
+	      var _iteratorError = undefined;
+
+	      try {
+	        for (var _iterator = this._childNodes[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+	          var child = _step.value;
+
+	          var cbox = child._updateBoundingBox();
+	          box = this._unionChildBoundingBox(box, cbox);
+	        }
+	      } catch (err) {
+	        _didIteratorError = true;
+	        _iteratorError = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion && _iterator.return) {
+	            _iterator.return();
+	          }
+	        } finally {
+	          if (_didIteratorError) {
+	            throw _iteratorError;
+	          }
+	        }
+	      }
+
+	      this._boundingBox = box;
+	      return box;
+	    }
+	  }, {
+	    key: '_unionBoundingBox',
+	    value: function _unionBoundingBox(box1, box2) {
+	      if (box1 === null) {
+	        return box2;
+	      }
+	      if (box2 === null) {
+	        return box1;
+	      }
+	      var min = new _SCNVector2.default();
+	      var max = new _SCNVector2.default();
+	      min.x = Math.min(box1.min.x, box2.min.x);
+	      min.y = Math.min(box1.min.y, box2.min.y);
+	      min.z = Math.min(box1.min.z, box2.min.z);
+	      max.x = Math.max(box1.max.x, box2.max.x);
+	      max.y = Math.max(box1.max.y, box2.max.y);
+	      max.z = Math.max(box1.max.z, box2.max.z);
+	      return { min: min, max: max };
+	    }
+	  }, {
+	    key: '_unionChildBoundingBox',
+	    value: function _unionChildBoundingBox(box, cbox) {
+	      var p = this.presentation ? this.presentation : this;
+	      var pos = p._position;
+	      var scale = p._scale;
+	      var min = new _SCNVector2.default((cbox.min.x + pos.x) * scale.x, (cbox.min.y + pos.y) * scale.y, (cbox.min.z + pos.z) * scale.z);
+	      var max = new _SCNVector2.default((cbox.max.x + pos.x) * scale.x, (cbox.max.y + pos.y) * scale.y, (cbox.max.z + pos.z) * scale.z);
+	      return this._unionBoundingBox(box, { min: min, max: max });
+	    }
 	  }, {
 	    key: '_updateTransform',
 	    value: function _updateTransform() {
@@ -22079,14 +22191,14 @@ module.exports =
 	      node.movabilityHint = this.movabilityHint;
 	      node.filters = this.filters ? this.filters.slice() : null;
 	      node.rendererDelegate = this.rendererDelegate;
-	      node.physicsBody = this.physicsBody;
+	      node._physicsBody = this._physicsBody; // FIXME: copy
 	      node.physicsField = this.physicsField;
 	      node._particleSystems = this._particleSystems ? this._particleSystems.slice() : null;
 	      node._audioPlayers = this._audioPlayers;
 	      //node._hasActions = this._hasActions
 	      node._actions = new Map(this._actions);
 	      node._animations = this._animations.copy();
-	      node.boundingBox = this.boundingBox;
+	      node._boundingBox = this._boundingBox;
 	      //node._boundingSphere = this._boundingSphere
 
 	      node._position = new _SCNVector2.default(this._position.x, this._position.y, this._position.z);
@@ -22344,61 +22456,6 @@ module.exports =
 	      // TODO: add other properties
 
 	      _get(SCNNode.prototype.__proto__ || Object.getPrototypeOf(SCNNode.prototype), 'setValueForKeyPath', this).call(this, value, keyPath);
-	    }
-	  }, {
-	    key: '_updateBoundingBox',
-	    value: function _updateBoundingBox() {
-	      if (this._geometry === null) {
-	        this.boundingBox = {
-	          min: new _SCNVector2.default(0, 0, 0),
-	          max: new _SCNVector2.default(0, 0, 0)
-	        };
-	        return;
-	      }
-	      this.boundingBox = this._geometry.boundingBox;
-
-	      //const vs = this._geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)
-	      //if(vs === null){
-	      //  return
-	      //}
-	      //
-	      //const len = vs.vectorCount
-	      //if(len <= 0){
-	      //  return
-	      //}
-
-	      //let maxX = -Infinity
-	      //let maxY = -Infinity
-	      //let maxZ = -Infinity
-	      //let minX = Infinity
-	      //let minY = Infinity
-	      //let minZ = Infinity
-	      //for(let i=0; i<len; i++){
-	      //  const v = vs._vectorAt(i)
-	      //  if(v[0] > maxX){
-	      //    maxX = v[0]
-	      //  }
-	      //  if(v[0] < minX){
-	      //    minX = v[0]
-	      //  }
-	      //  if(v[1] > maxY){
-	      //    maxY = v[1]
-	      //  }
-	      //  if(v[1] < minY){
-	      //    maxY = v[1]
-	      //  }
-	      //  if(v[2] > maxZ){
-	      //    maxZ = v[2]
-	      //  }
-	      //  if(v[2] < minZ){
-	      //    minZ = v[2]
-	      //  }
-	      //}
-	      //  
-	      //this.boundingBox = {
-	      //  min: new SCNVector3(minX, minY, minZ),
-	      //  max: new SCNVector3(maxX, maxY, maxZ)
-	      //}
 	    }
 
 	    /**
@@ -22808,6 +22865,18 @@ module.exports =
 	      return this._childNodes.slice(0);
 	    }
 	  }, {
+	    key: 'physicsBody',
+	    get: function get() {
+	      return this._physicsBody;
+	    },
+	    set: function set(newValue) {
+	      if (this._physicsBody) {
+	        this._physicsBody._node = null;
+	      }
+	      this._physicsBody = newValue;
+	      this._physicsBody._node = this;
+	    }
+	  }, {
 	    key: 'particleSystems',
 	    get: function get() {
 	      return this._particleSystems;
@@ -22834,43 +22903,12 @@ module.exports =
 	    key: 'actionKeys',
 	    get: function get() {
 	      var keys = [];
-	      var _iteratorNormalCompletion = true;
-	      var _didIteratorError = false;
-	      var _iteratorError = undefined;
-
-	      try {
-	        for (var _iterator = this._actions.keys()[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-	          var key = _step.value;
-
-	          keys.push(key);
-	        }
-	      } catch (err) {
-	        _didIteratorError = true;
-	        _iteratorError = err;
-	      } finally {
-	        try {
-	          if (!_iteratorNormalCompletion && _iterator.return) {
-	            _iterator.return();
-	          }
-	        } finally {
-	          if (_didIteratorError) {
-	            throw _iteratorError;
-	          }
-	        }
-	      }
-
-	      return keys;
-	    }
-	  }, {
-	    key: 'animationKeys',
-	    get: function get() {
-	      var keys = [];
 	      var _iteratorNormalCompletion2 = true;
 	      var _didIteratorError2 = false;
 	      var _iteratorError2 = undefined;
 
 	      try {
-	        for (var _iterator2 = this._animations.keys()[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+	        for (var _iterator2 = this._actions.keys()[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
 	          var key = _step2.value;
 
 	          keys.push(key);
@@ -22892,6 +22930,59 @@ module.exports =
 
 	      return keys;
 	    }
+	  }, {
+	    key: 'animationKeys',
+	    get: function get() {
+	      var keys = [];
+	      var _iteratorNormalCompletion3 = true;
+	      var _didIteratorError3 = false;
+	      var _iteratorError3 = undefined;
+
+	      try {
+	        for (var _iterator3 = this._animations.keys()[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+	          var key = _step3.value;
+
+	          keys.push(key);
+	        }
+	      } catch (err) {
+	        _didIteratorError3 = true;
+	        _iteratorError3 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion3 && _iterator3.return) {
+	            _iterator3.return();
+	          }
+	        } finally {
+	          if (_didIteratorError3) {
+	            throw _iteratorError3;
+	          }
+	        }
+	      }
+
+	      return keys;
+	    }
+	  }, {
+	    key: 'boundingBox',
+	    get: function get() {
+	      if (this._fixedBoundingBox) {
+	        return this._fixedBoundingBox;
+	      }
+	      //if(!this._boundingBox){
+	      this._updateBoundingBox();
+	      //}
+	      return this._boundingBox;
+	    },
+	    set: function set(newValue) {
+	      this._fixedBoundingBox = newValue;
+	    }
+
+	    /**
+	     * The center point and radius of the object’s bounding sphere.
+	     * @type {{center: SCNVector3, radius: number}}
+	     * @desc Scene Kit defines a bounding sphere in the local coordinate space using a center point and a radius. For example, if a node’s bounding sphere has the center point {3, 1, 4} and radius 2.0, all points in the vertex data of node’s geometry (and any geometry attached to its child nodes) lie within 2.0 units of the center point.The coordinates provided when reading this property are valid only if the object has a volume to be measured. For a geometry containing no vertex data or a node containing no geometry (and whose child nodes, if any, contain no geometry), the values center and radius are both zero.
+	     * @see https://developer.apple.com/reference/scenekit/scnboundingvolume/2034707-boundingsphere
+	     */
+
 	  }, {
 	    key: 'boundingSphere',
 	    get: function get() {
@@ -22925,13 +23016,13 @@ module.exports =
 	    key: '_loadAnimationArray',
 	    value: function _loadAnimationArray(node, animations) {
 	      //console.log('_loadAnimationArray start')
-	      var _iteratorNormalCompletion3 = true;
-	      var _didIteratorError3 = false;
-	      var _iteratorError3 = undefined;
+	      var _iteratorNormalCompletion4 = true;
+	      var _didIteratorError4 = false;
+	      var _iteratorError4 = undefined;
 
 	      try {
-	        for (var _iterator3 = Object.keys(animations)[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-	          var animName = _step3.value;
+	        for (var _iterator4 = Object.keys(animations)[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+	          var animName = _step4.value;
 
 	          var data = animations[animName];
 	          var animation = this._loadAnimationData(data, animName);
@@ -22939,16 +23030,16 @@ module.exports =
 	        }
 	        //console.log('_loadAnimationArray done')
 	      } catch (err) {
-	        _didIteratorError3 = true;
-	        _iteratorError3 = err;
+	        _didIteratorError4 = true;
+	        _iteratorError4 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion3 && _iterator3.return) {
-	            _iterator3.return();
+	          if (!_iteratorNormalCompletion4 && _iterator4.return) {
+	            _iterator4.return();
 	          }
 	        } finally {
-	          if (_didIteratorError3) {
-	            throw _iteratorError3;
+	          if (_didIteratorError4) {
+	            throw _iteratorError4;
 	          }
 	        }
 	      }
@@ -23091,13 +23182,13 @@ module.exports =
 	    key: '_loadActionArray',
 	    value: function _loadActionArray(node, actions) {
 	      //console.log('_loadActionArray start')
-	      var _iteratorNormalCompletion4 = true;
-	      var _didIteratorError4 = false;
-	      var _iteratorError4 = undefined;
+	      var _iteratorNormalCompletion5 = true;
+	      var _didIteratorError5 = false;
+	      var _iteratorError5 = undefined;
 
 	      try {
-	        for (var _iterator4 = Object.keys(actions)[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-	          var actName = _step4.value;
+	        for (var _iterator5 = Object.keys(actions)[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+	          var actName = _step5.value;
 
 	          var data = actions[actName];
 	          //const action = this._loadActionData(data, actName)
@@ -23106,16 +23197,16 @@ module.exports =
 	        }
 	        //console.log('_loadAnimationArray done')
 	      } catch (err) {
-	        _didIteratorError4 = true;
-	        _iteratorError4 = err;
+	        _didIteratorError5 = true;
+	        _iteratorError5 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion4 && _iterator4.return) {
-	            _iterator4.return();
+	          if (!_iteratorNormalCompletion5 && _iterator5.return) {
+	            _iterator5.return();
 	          }
 	        } finally {
-	          if (_didIteratorError4) {
-	            throw _iteratorError4;
+	          if (_didIteratorError5) {
+	            throw _iteratorError5;
 	          }
 	        }
 	      }
@@ -23767,7 +23858,7 @@ module.exports =
 	     * @parameter {SCNVector3} _boundingSphere.center
 	     * @parameter {number} _boundingSphere.radius
 	     */
-	    _this._boundingSphere = null;
+	    //this._boundingSphere = null
 
 	    _this._vertexBuffer = null;
 	    _this._indexBuffer = null;
@@ -23911,7 +24002,18 @@ module.exports =
 	     * @see https://developer.apple.com/reference/scenekit/scnboundingvolume/2034707-boundingsphere
 	     */
 	    value: function getBoundingSphere() {
-	      return this._boundingSphere;
+	      if (this.boundingBox === null) {
+	        return { center: new _SCNVector2.default(0, 0, 0), radius: 0 };
+	      }
+	      var max = this.boundingBox.max;
+	      var min = this.boundingBox.min;
+	      var w = (max.x - min.x) * 0.5;
+	      var h = (max.y - min.y) * 0.5;
+	      var l = (max.z - min.z) * 0.5;
+	      var r = Math.sqrt(w * w + h * h + l * l);
+	      var c = new _SCNVector2.default(min.x + w, min.y + h, min.z + l);
+
+	      return { center: c, radius: r };
 	    }
 
 	    /////////////////
@@ -29273,7 +29375,7 @@ module.exports =
 	      var targetNodes = [];
 	      while (arr.length > 0) {
 	        var node = arr.shift();
-	        if (node.presentation.geometry !== null) {
+	        if (node.presentation !== null && node.presentation.geometry !== null) {
 	          targetNodes.push(node);
 	        }
 	        arr.push.apply(arr, _toConsumableArray(node.childNodes));
@@ -29298,7 +29400,7 @@ module.exports =
 	      var targetNodes = [];
 	      while (arr.length > 0) {
 	        var node = arr.shift();
-	        if (node.presentation.particleSystems !== null) {
+	        if (node.presentation !== null && node.presentation.particleSystems !== null) {
 	          targetNodes.push(node);
 	        }
 	        arr.push.apply(arr, _toConsumableArray(node.childNodes));
@@ -29332,7 +29434,7 @@ module.exports =
 	      var numLights = 0;
 	      while (arr.length > 0) {
 	        var node = arr.shift();
-	        if (node.presentation.light !== null) {
+	        if (node.presentation !== null && node.presentation.light !== null) {
 	          targetNodes[node.presentation.light.type].push(node.presentation);
 	          if (node.presentation.light.type !== _SCNLight2.default.LightType.ambient) {
 	            numLights += 1;
@@ -29360,7 +29462,7 @@ module.exports =
 	      var targetNodes = [];
 	      while (arr.length > 0) {
 	        var node = arr.shift();
-	        if (node.presentation.physicsBody !== null) {
+	        if (node.presentation !== null && node.presentation.physicsBody !== null) {
 	          targetNodes.push(node);
 	        }
 	        arr.push.apply(arr, _toConsumableArray(node.childNodes));
@@ -32391,6 +32493,10 @@ module.exports =
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
+	var _SCNVector = __webpack_require__(42);
+
+	var _SCNVector2 = _interopRequireDefault(_SCNVector);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -32423,6 +32529,7 @@ module.exports =
 	          // propValues.boxPrimitiveType
 	          box.materials = propValues.materials;
 	          box.subdivisionLevel = propValues.subdivisionLevel;
+
 	          return box;
 	        },
 	        name: 'string',
@@ -32797,6 +32904,10 @@ module.exports =
 
 	      this._geometryElements = [element];
 	      this._geometrySources = [vertexSource, normalSource, texcoordSource];
+	      this.boundingBox = {
+	        min: new _SCNVector2.default(left, bottom, back),
+	        max: new _SCNVector2.default(right, top, front)
+	      };
 	    }
 
 	    /**
@@ -33615,6 +33726,8 @@ module.exports =
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
+
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
@@ -33828,7 +33941,26 @@ module.exports =
 	    value: function contactTestBetween(bodyA, bodyB) {
 	      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
 
-	      return null;
+	      // FIXME: use physics library
+	      if ((bodyA.categoryBitMask & bodyB.contactTestBitMask) === 0) {
+	        return [];
+	      }
+	      var posA = bodyA._position;
+	      var posB = bodyB._position;
+	      var radA = bodyA._radius;
+	      var radB = bodyB._radius;
+	      var vec = posA.sub(posB);
+	      var l = vec.length();
+	      if (l > radA + radB) {
+	        return [];
+	      }
+	      var contact = new _SCNPhysicsContact2.default();
+	      contact._nodeA = bodyA._node;
+	      contact._nodeB = bodyB._node;
+	      contact._contactPoint = posA.add(vec.mul((radA - radB + l) * 0.5));
+	      contact._contactNormal = vec.mul(-1).normalize();
+	      contact._penetrationDistance = 0.000000001; // FIXME: implement
+	      return [contact];
 	    }
 
 	    /**
@@ -33846,7 +33978,7 @@ module.exports =
 	    value: function contactTestWith(body) {
 	      var options = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
 
-	      return null;
+	      return [];
 	    }
 
 	    // Searching for Physics Bodies
@@ -34064,7 +34196,59 @@ module.exports =
 	  }, {
 	    key: '_simulate',
 	    value: function _simulate(time) {
+	      // FIXME: use physics library
 	      //this._world.stepSimulation(1.0/60.0, 0)
+
+	      var objects = this._renderer._createRenderingPhysicsNodeArray();
+	      var contacts = [];
+
+	      //for(let i=0; i<objects.length-1; i++){
+	      //  const bodyA = objects[i].presentation.physicsBody
+	      //  for(let j=i+1; j<objects.length; j++){
+	      //    const bodyB = objects[j].presentation.physicsBody
+
+	      //    contacts.push(...this.contactTestBetween(bodyA, bodyB))
+	      //  }
+	      //}
+	      for (var i = 0; i < objects.length; i++) {
+	        var bodyA = objects[i].presentation.physicsBody;
+	        for (var j = 0; j < objects.length; j++) {
+	          if (i === j) {
+	            continue;
+	          }
+	          var bodyB = objects[j].presentation.physicsBody;
+	          contacts.push.apply(contacts, _toConsumableArray(this.contactTestBetween(bodyA, bodyB)));
+	        }
+	      }
+
+	      if (this.contactDelegate) {
+	        var _iteratorNormalCompletion = true;
+	        var _didIteratorError = false;
+	        var _iteratorError = undefined;
+
+	        try {
+	          for (var _iterator = contacts[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+	            var contact = _step.value;
+
+	            this.contactDelegate.physicsWorldDidBegin(this, contact);
+	          }
+	          // this.contactDelegate.physicsWorldDidUpdate
+	          // this.contactDelegate.physicsWorldDidEnd
+	        } catch (err) {
+	          _didIteratorError = true;
+	          _iteratorError = err;
+	        } finally {
+	          try {
+	            if (!_iteratorNormalCompletion && _iterator.return) {
+	              _iterator.return();
+	            }
+	          } finally {
+	            if (_didIteratorError) {
+	              throw _iteratorError;
+	            }
+	          }
+	        }
+	      }
 	    }
 	  }, {
 	    key: 'allBehaviors',
@@ -34308,6 +34492,7 @@ module.exports =
 	  }
 
 	  // Inspecting the Contact Properties
+
 	  /**
 	   * The node containing the first body in the contact.
 	   * @type {SCNNode}
@@ -34321,6 +34506,7 @@ module.exports =
 	    get: function get() {
 	      return this._nodeA;
 	    }
+
 	    /**
 	     * The node containing the second body in the contact.
 	     * @type {SCNNode}
@@ -34333,6 +34519,7 @@ module.exports =
 	    get: function get() {
 	      return this._nodeB;
 	    }
+
 	    /**
 	     * The contact point between the two physics bodies, in scene coordinates.
 	     * @type {SCNVector3}
@@ -34345,6 +34532,7 @@ module.exports =
 	    get: function get() {
 	      return this._contactPoint;
 	    }
+
 	    /**
 	     * The normal vector at the contact point between the two physics bodies, in scene coordinates.
 	     * @type {SCNVector3}
@@ -34357,6 +34545,7 @@ module.exports =
 	    get: function get() {
 	      return this._contactNormal;
 	    }
+
 	    /**
 	     * The force over time of the collision, in newton-seconds.
 	     * @type {number}
@@ -34369,6 +34558,7 @@ module.exports =
 	    get: function get() {
 	      return this._collisionImpulse;
 	    }
+
 	    /**
 	     * The distance of overlap, in units of scene coordinate space, between the two physics bodies.
 	     * @type {number}
@@ -34783,20 +34973,44 @@ module.exports =
 	    }
 	  }, {
 	    key: '_execDestroy',
-	    value: function _execDestroy() {
-	      //if(this.physicsShape !== null){
-	      //  this.physicsShape._destroy()
-	      //  this.physicsShape = null
-	      //}
-	      //if(this._btRigidBody !== null){
-	      //  Ammo.destroy(this._btRigidBody)
-	      //  this._btRigidBody = null
-	      //}
-	    }
+	    value: function _execDestroy() {}
+	    //if(this.physicsShape !== null){
+	    //  this.physicsShape._destroy()
+	    //  this.physicsShape = null
+	    //}
+	    //if(this._btRigidBody !== null){
+	    //  Ammo.destroy(this._btRigidBody)
+	    //  this._btRigidBody = null
+	    //}
+
+
+	    // FIXME: use physics library
+
 	  }, {
 	    key: 'isResting',
 	    get: function get() {
 	      return this._isResting;
+	    }
+	  }, {
+	    key: '_position',
+	    get: function get() {
+	      var pos = new _SCNVector2.default(0, 0, 0);
+	      if (this._node !== null) {
+	        pos = this._node._worldTranslation;
+	      }
+	      if (this.physicsShape !== null && this.physicsShape._sourceGeometry !== null) {
+	        var c = this.physicsShape._sourceGeometry.getBoundingSphere().center;
+	        pos = pos.add(c);
+	      }
+	      return pos;
+	    }
+	  }, {
+	    key: '_radius',
+	    get: function get() {
+	      if (this.physicsShape === null || this.physicsShape._sourceGeometry === null) {
+	        return 0;
+	      }
+	      return this.physicsShape._sourceGeometry.getBoundingSphere().radius;
 	    }
 	  }], [{
 	    key: 'static',
@@ -41058,7 +41272,10 @@ module.exports =
 	    }
 	  }], [{
 	    key: 'removeFromParentNode',
-	    value: function removeFromParentNode() {}
+	    value: function removeFromParentNode() {
+	      var action = new SCNActionRemove();
+	      return action;
+	    }
 	  }]);
 
 	  return SCNActionRemove;
@@ -42444,6 +42661,10 @@ module.exports =
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
+	var _SCNVector = __webpack_require__(42);
+
+	var _SCNVector2 = _interopRequireDefault(_SCNVector);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -42529,10 +42750,29 @@ module.exports =
 
 	  _createClass(SCNCapsule, [{
 	    key: '_createBtCollisionShape',
-	    value: function _createBtCollisionShape() {
-	      //const height = (this.height - this.capRadius) * 0.5
-	      //const shape = new Ammo.btCapsuleShape(this.capRadius, height)
-	      //return shape
+	    value: function _createBtCollisionShape() {}
+	    //const height = (this.height - this.capRadius) * 0.5
+	    //const shape = new Ammo.btCapsuleShape(this.capRadius, height)
+	    //return shape
+
+
+	    /**
+	     * The center point and radius of the object’s bounding sphere.
+	     * @type {Object}
+	     * @parameter {SCNVector3} _boundingSphere.center -
+	     * @parameter {number} _boundingSphere.radius -
+	     * @returns {Object} -
+	     * @desc Scene Kit defines a bounding sphere in the local coordinate space using a center point and a radius. For example, if a node’s bounding sphere has the center point {3, 1, 4} and radius 2.0, all points in the vertex data of node’s geometry (and any geometry attached to its child nodes) lie within 2.0 units of the center point.The coordinates provided when reading this property are valid only if the object has a volume to be measured. For a geometry containing no vertex data or a node containing no geometry (and whose child nodes, if any, contain no geometry), the values center and radius are both zero.
+	     * @see https://developer.apple.com/reference/scenekit/scnboundingvolume/2034707-boundingsphere
+	     */
+
+	  }, {
+	    key: 'getBoundingSphere',
+	    value: function getBoundingSphere() {
+	      var c = new _SCNVector2.default(0, 0, 0);
+	      var r = this.height * 0.5;
+
+	      return { center: c, radius: r };
 	    }
 	  }]);
 
@@ -46984,6 +47224,7 @@ module.exports =
 	    key: '_updateTransform',
 	    value: function _updateTransform(node, parentTransform) {
 	      this._scene.rootNode._updateWorldTransform();
+	      this._scene.rootNode._updateBoundingBox();
 	    }
 	  }, {
 	    key: '_updateMorph',

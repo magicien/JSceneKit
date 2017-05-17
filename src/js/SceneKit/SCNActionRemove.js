@@ -42,6 +42,8 @@ export default class SCNActionRemove extends SCNAction {
    * @see https://developer.apple.com/reference/scenekit/scnaction/1522966-removefromparentnode
    */
   static removeFromParentNode() {
+    const action = new SCNActionRemove()
+    return action
   }
 
   /**

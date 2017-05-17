@@ -69,7 +69,9 @@ export default class SCNNode extends NSObject {
           obj.addChildNode(child)
         })
       }],
-      physicsBody: 'SCNPhysicsBody',
+      physicsBody: ['SCNPhysicsBody', (obj, body) => {
+        obj.physicsBody = body
+      }],
       physicsField: 'SCNPhysicsField',
       particleSystem: ['NSArray', '_particleSystems'],
       'animation-keys': ['NSArray', null],
@@ -330,7 +332,7 @@ export default class SCNNode extends NSObject {
      * @type {?SCNPhysicsBody}
      * @see https://developer.apple.com/reference/scenekit/scnnode/1407988-physicsbody
      */
-    this.physicsBody = null
+    this._physicsBody = null
 
     /**
      * The physics field associated with the node.
@@ -383,7 +385,8 @@ export default class SCNNode extends NSObject {
      * @type {{min: SCNVector3, max: SCNVector3}}
      * @see https://developer.apple.com/reference/scenekit/scnboundingvolume/2034705-boundingbox
      */
-    this.boundingBox = null
+    this._boundingBox = null
+    this._fixedBoundingBox = null
 
     //this._boundingSphere = null
 
@@ -1265,6 +1268,18 @@ export default class SCNNode extends NSObject {
     return stop
   }
 
+  // Adding Physics to a Node
+
+  get physicsBody() {
+    return this._physicsBody
+  }
+  set physicsBody(newValue) {
+    if(this._physicsBody){
+      this._physicsBody._node = null
+    }
+    this._physicsBody = newValue
+    this._physicsBody._node = this
+  }
 
   // Working With Particle Systems
 
@@ -1790,6 +1805,24 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
   // Working with Bounding Volumes
 
   /**
+   * The minimum and maximum corner points of the object’s bounding box.
+   * @type {{min: SCNVector3, max: SCNVector3}}
+   * @see https://developer.apple.com/reference/scenekit/scnboundingvolume/2034705-boundingbox
+   */
+  get boundingBox() {
+    if(this._fixedBoundingBox){
+      return this._fixedBoundingBox
+    }
+    //if(!this._boundingBox){
+      this._updateBoundingBox()
+    //}
+    return this._boundingBox
+  }
+  set boundingBox(newValue) {
+    this._fixedBoundingBox = newValue
+  }
+
+  /**
    * The center point and radius of the object’s bounding sphere.
    * @type {{center: SCNVector3, radius: number}}
    * @desc Scene Kit defines a bounding sphere in the local coordinate space using a center point and a radius. For example, if a node’s bounding sphere has the center point {3, 1, 4} and radius 2.0, all points in the vertex data of node’s geometry (and any geometry attached to its child nodes) lie within 2.0 units of the center point.The coordinates provided when reading this property are valid only if the object has a volume to be measured. For a geometry containing no vertex data or a node containing no geometry (and whose child nodes, if any, contain no geometry), the values center and radius are both zero.
@@ -1798,6 +1831,95 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
   get boundingSphere() {
     // TODO: calculate bounding sphere
     return {center: new SCNVector3(), radius: 0}
+  }
+
+  _geometryBoundingBox() {
+    if(this._geometry === null){
+      return {
+        min: new SCNVector3(Infinity, Infinity, Infinity),
+        max: new SCNVector3(-Infinity, -Infinity, -Infinity)
+      }
+    }
+    return this._geometry.boundingBox
+  }
+
+  _updateBoundingBox() {
+    // FIXME: use rotation of the node
+    let box = this._geometryBoundingBox()
+    const p = this.presentation ? this.presentation : this
+    if(p.geometry !== null){
+      box = this._unionBoundingBox(box, p.geometry.boundingBox)
+    }
+    const scale = p._scale
+    if(scale.x < 0){
+      const minX = box.max.x * scale.x
+      const maxX = box.min.x * scale.x
+      box.min.x = minX
+      box.max.x = maxX
+    }else{
+      box.min.x *= scale.x
+      box.max.x *= scale.x
+    }
+    if(scale.y < 0){
+      const minY = box.max.y * scale.y
+      const maxY = box.min.y * scale.y
+      box.min.y = minY
+      box.max.y = maxY
+    }else{
+      box.min.y *= scale.y
+      box.max.y *= scale.y
+    }
+    if(scale.z < 0){
+      const minZ = box.max.z * scale.z
+      const maxZ = box.min.z * scale.z
+      box.min.z = minZ
+      box.max.z = maxZ
+    }else{
+      box.min.z *= scale.z
+      box.max.z *= scale.z
+    }
+
+    for(const child of this._childNodes){
+      const cbox = child._updateBoundingBox()
+      box = this._unionChildBoundingBox(box, cbox)
+    }
+    this._boundingBox = box
+    return box
+  }
+
+  _unionBoundingBox(box1, box2) {
+    if(box1 === null){
+      return box2
+    }
+    if(box2 === null){
+      return box1
+    }
+    const min = new SCNVector3()
+    const max = new SCNVector3()
+    min.x = Math.min(box1.min.x, box2.min.x)
+    min.y = Math.min(box1.min.y, box2.min.y)
+    min.z = Math.min(box1.min.z, box2.min.z)
+    max.x = Math.max(box1.max.x, box2.max.x)
+    max.y = Math.max(box1.max.y, box2.max.y)
+    max.z = Math.max(box1.max.z, box2.max.z)
+    return { min: min, max: max }
+  }
+
+  _unionChildBoundingBox(box, cbox) {
+    let p = this.presentation ? this.presentation : this
+    const pos = p._position
+    const scale = p._scale
+    const min = new SCNVector3(
+      (cbox.min.x + pos.x) * scale.x,
+      (cbox.min.y + pos.y) * scale.y,
+      (cbox.min.z + pos.z) * scale.z
+    )
+    const max = new SCNVector3(
+      (cbox.max.x + pos.x) * scale.x,
+      (cbox.max.y + pos.y) * scale.y,
+      (cbox.max.z + pos.z) * scale.z
+    )
+    return this._unionBoundingBox(box, { min: min, max: max })
   }
 
   _updateTransform() {
@@ -1833,14 +1955,14 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     node.movabilityHint = this.movabilityHint
     node.filters = this.filters ? this.filters.slice() : null
     node.rendererDelegate = this.rendererDelegate
-    node.physicsBody = this.physicsBody
+    node._physicsBody = this._physicsBody // FIXME: copy
     node.physicsField = this.physicsField
     node._particleSystems = this._particleSystems ? this._particleSystems.slice() : null
     node._audioPlayers = this._audioPlayers
     //node._hasActions = this._hasActions
     node._actions = new Map(this._actions)
     node._animations = this._animations.copy()
-    node.boundingBox = this.boundingBox
+    node._boundingBox = this._boundingBox
     //node._boundingSphere = this._boundingSphere
 
     node._position = new SCNVector3(this._position.x, this._position.y, this._position.z)
@@ -2107,60 +2229,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     super.setValueForKeyPath(value, keyPath)
   }
 
-  _updateBoundingBox() {
-    if(this._geometry === null){
-      this.boundingBox = {
-        min: new SCNVector3(0, 0, 0),
-        max: new SCNVector3(0, 0, 0)
-      }
-      return
-    }
-    this.boundingBox = this._geometry.boundingBox
-
-    //const vs = this._geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)
-    //if(vs === null){
-    //  return
-    //}
-    //
-    //const len = vs.vectorCount
-    //if(len <= 0){
-    //  return
-    //}
-
-    //let maxX = -Infinity
-    //let maxY = -Infinity
-    //let maxZ = -Infinity
-    //let minX = Infinity
-    //let minY = Infinity
-    //let minZ = Infinity
-    //for(let i=0; i<len; i++){
-    //  const v = vs._vectorAt(i)
-    //  if(v[0] > maxX){
-    //    maxX = v[0]
-    //  }
-    //  if(v[0] < minX){
-    //    minX = v[0]
-    //  }
-    //  if(v[1] > maxY){
-    //    maxY = v[1]
-    //  }
-    //  if(v[1] < minY){
-    //    maxY = v[1]
-    //  }
-    //  if(v[2] > maxZ){
-    //    maxZ = v[2]
-    //  }
-    //  if(v[2] < minZ){
-    //    minZ = v[2]
-    //  }
-    //}
-    //  
-    //this.boundingBox = {
-    //  min: new SCNVector3(minX, minY, minZ),
-    //  max: new SCNVector3(maxX, maxY, maxZ)
-    //}
-  }
-
+  
   /**
    * @access private
    * @returns {Ammo.btTransform}

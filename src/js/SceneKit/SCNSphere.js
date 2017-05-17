@@ -2,7 +2,6 @@
 
 import SCNGeometry from './SCNGeometry'
 
-
 /**
  * A sphere (or ball or globe) geometry.
  * @access public

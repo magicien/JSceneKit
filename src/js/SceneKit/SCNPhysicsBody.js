@@ -369,4 +369,23 @@ export default class SCNPhysicsBody extends NSObject {
     //  this._btRigidBody = null
     //}
   }
+
+  // FIXME: use physics library
+  get _position() {
+    let pos = new SCNVector3(0, 0, 0)
+    if(this._node !== null){
+      pos = this._node._worldTranslation
+    }
+    if(this.physicsShape !== null && this.physicsShape._sourceGeometry !== null){
+      const c = this.physicsShape._sourceGeometry.getBoundingSphere().center
+      pos = pos.add(c)
+    }
+    return pos
+  }
+  get _radius() {
+    if(this.physicsShape === null || this.physicsShape._sourceGeometry === null){
+      return 0
+    }
+    return this.physicsShape._sourceGeometry.getBoundingSphere().radius
+  }
 }

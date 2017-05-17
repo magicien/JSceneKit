@@ -191,7 +191,26 @@ export default class SCNPhysicsWorld extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnphysicsworld/1512875-contacttestbetween
    */
   contactTestBetween(bodyA, bodyB, options = null) {
-    return null
+    // FIXME: use physics library
+    if((bodyA.categoryBitMask & bodyB.contactTestBitMask) === 0){
+      return []
+    }
+    const posA = bodyA._position
+    const posB = bodyB._position
+    const radA = bodyA._radius
+    const radB = bodyB._radius
+    const vec = posA.sub(posB)
+    const l = vec.length()
+    if(l > radA + radB){
+      return []
+    }
+    const contact = new SCNPhysicsContact()
+    contact._nodeA = bodyA._node
+    contact._nodeB = bodyB._node
+    contact._contactPoint = posA.add(vec.mul((radA - radB + l) * 0.5))
+    contact._contactNormal = vec.mul(-1).normalize()
+    contact._penetrationDistance = 0.000000001 // FIXME: implement
+    return [contact]
   }
 
   /**
@@ -204,7 +223,7 @@ export default class SCNPhysicsWorld extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnphysicsworld/1512841-contacttest
    */
   contactTestWith(body, options = null) {
-    return null
+    return []
   }
 
   // Searching for Physics Bodies
@@ -424,6 +443,37 @@ if (contacts.count == 0) {
   }
 
   _simulate(time) {
+    // FIXME: use physics library
     //this._world.stepSimulation(1.0/60.0, 0)
+
+    const objects = this._renderer._createRenderingPhysicsNodeArray()
+    const contacts = []
+
+    //for(let i=0; i<objects.length-1; i++){
+    //  const bodyA = objects[i].presentation.physicsBody
+    //  for(let j=i+1; j<objects.length; j++){
+    //    const bodyB = objects[j].presentation.physicsBody
+
+    //    contacts.push(...this.contactTestBetween(bodyA, bodyB))
+    //  }
+    //}
+    for(let i=0; i<objects.length; i++){
+      const bodyA = objects[i].presentation.physicsBody
+      for(let j=0; j<objects.length; j++){
+        if(i === j){
+          continue
+        }
+        const bodyB = objects[j].presentation.physicsBody
+        contacts.push(...this.contactTestBetween(bodyA, bodyB))
+      }
+    }
+    
+    if(this.contactDelegate){
+      for(const contact of contacts){
+        this.contactDelegate.physicsWorldDidBegin(this, contact)
+      }
+      // this.contactDelegate.physicsWorldDidUpdate
+      // this.contactDelegate.physicsWorldDidEnd
+    }
   }
 }

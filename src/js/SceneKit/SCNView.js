@@ -1108,6 +1108,7 @@ export default class SCNView {
 
   _updateTransform(node, parentTransform) {
     this._scene.rootNode._updateWorldTransform()
+    this._scene.rootNode._updateBoundingBox()
   }
 
   _updateMorph(node) {

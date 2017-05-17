@@ -32,6 +32,7 @@ export default class SCNPhysicsContact extends NSObject {
   }
 
   // Inspecting the Contact Properties
+
   /**
    * The node containing the first body in the contact.
    * @type {SCNNode}
@@ -41,6 +42,7 @@ export default class SCNPhysicsContact extends NSObject {
   get nodeA() {
     return this._nodeA
   }
+
   /**
    * The node containing the second body in the contact.
    * @type {SCNNode}
@@ -50,6 +52,7 @@ export default class SCNPhysicsContact extends NSObject {
   get nodeB() {
     return this._nodeB
   }
+
   /**
    * The contact point between the two physics bodies, in scene coordinates.
    * @type {SCNVector3}
@@ -59,6 +62,7 @@ export default class SCNPhysicsContact extends NSObject {
   get contactPoint() {
     return this._contactPoint
   }
+
   /**
    * The normal vector at the contact point between the two physics bodies, in scene coordinates.
    * @type {SCNVector3}
@@ -68,6 +72,7 @@ export default class SCNPhysicsContact extends NSObject {
   get contactNormal() {
     return this._contactNormal
   }
+
   /**
    * The force over time of the collision, in newton-seconds.
    * @type {number}
@@ -77,6 +82,7 @@ export default class SCNPhysicsContact extends NSObject {
   get collisionImpulse() {
     return this._collisionImpulse
   }
+
   /**
    * The distance of overlap, in units of scene coordinate space, between the two physics bodies.
    * @type {number}
