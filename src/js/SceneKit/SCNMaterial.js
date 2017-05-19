@@ -30,18 +30,54 @@ const _LightingModel = {
 export default class SCNMaterial extends NSObject {
   static get _propTypes() {
     return {
-      diffuse: ['SCNMaterialProperty', '_diffuse'],
-      ambient: ['SCNMaterialProperty', '_ambient'],
-      specular: ['SCNMaterialProperty', '_specular'],
-      normal: ['SCNMaterialProperty', '_normal'],
-      reflective: ['SCNMaterialProperty', '_reflective'],
-      emission: ['SCNMaterialProperty', '_emission'],
-      transparent: ['SCNMaterialProperty', '_transparent'],
-      multiply: ['SCNMaterialProperty', '_multiply'],
-      ambientOcclusion: ['SCNMaterialProperty', '_ambientOcclusion'],
-      selfIllumination: ['SCNMaterialProperty', '_selfIllumination'],
-      metalness: ['SCNMaterialProperty', '_metalness'],
-      roughness: ['SCNMaterialProperty', '_roughness'],
+      diffuse: ['SCNMaterialProperty', (obj, value) => {
+        obj._diffuse = value
+        value._createPresentation()
+      }],
+      ambient: ['SCNMaterialProperty', (obj, value) => {
+        obj._ambient = value
+        value._createPresentation()
+      }],
+      specular: ['SCNMaterialProperty', (obj, value) => {
+        obj._specular = value
+        value._createPresentation()
+      }],
+      normal: ['SCNMaterialProperty', (obj, value) => {
+        obj._normal = value
+        value._createPresentation()
+      }],
+      reflective: ['SCNMaterialProperty', (obj, value) => {
+        obj._reflective = value
+        value._createPresentation()
+      }],
+      emission: ['SCNMaterialProperty', (obj, value) => {
+        obj._emission = value
+        value._createPresentation()
+      }],
+      transparent: ['SCNMaterialProperty', (obj, value) => {
+        obj._transparent = value
+        value._createPresentation()
+      }],
+      multiply: ['SCNMaterialProperty', (obj, value) => {
+        obj._multiply = value
+        value._createPresentation()
+      }],
+      ambientOcclusion: ['SCNMaterialProperty', (obj, value) => {
+        obj._ambientOcclusion = value
+        value._createPresentation()
+      }],
+      selfIllumination: ['SCNMaterialProperty', (obj, value) => {
+        obj._selfIllumination = value
+        value._createPresentation()
+      }],
+      metalness: ['SCNMaterialProperty', (obj, value) => {
+        obj._metalness = value
+        value._createPresentation()
+      }],
+      roughness: ['SCNMaterialProperty', (obj, value) => {
+        obj._roughness = value
+        value._createPresentation()
+      }],
       name: 'string',
       shininess: 'float',
       fresnelExponent: 'float',
@@ -223,6 +259,8 @@ export default class SCNMaterial extends NSObject {
      * @type {?string}
      */
     this._entityID = null
+
+    this._createPresentationProperties()
   }
 
   // Configuring a Material’s Visual Properties
@@ -345,6 +383,36 @@ export default class SCNMaterial extends NSObject {
    */
   get roughness() {
     return this._roughness
+  }
+
+  _createPresentationProperties() {
+    this._diffuse._createPresentation()
+    this._ambient._createPresentation()
+    this._specular._createPresentation()
+    this._normal._createPresentation()
+    this._reflective._createPresentation()
+    this._emission._createPresentation()
+    this._transparent._createPresentation()
+    this._multiply._createPresentation()
+    this._ambientOcclusion._createPresentation()
+    this._selfIllumination._createPresentation()
+    this._metalness._createPresentation()
+    this._roughness._createPresentation()
+  }
+
+  _copyPresentationProperties() {
+    this._diffuse._copyPresentation()
+    this._ambient._copyPresentation()
+    this._specular._copyPresentation()
+    this._normal._copyPresentation()
+    this._reflective._copyPresentation()
+    this._emission._copyPresentation()
+    this._transparent._copyPresentation()
+    this._multiply._copyPresentation()
+    this._ambientOcclusion._copyPresentation()
+    this._selfIllumination._copyPresentation()
+    this._metalness._copyPresentation()
+    this._roughness._copyPresentation()
   }
 
   // Structures

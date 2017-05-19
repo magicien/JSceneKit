@@ -1295,6 +1295,7 @@ export default class SCNNode extends NSObject {
     if(this._particleSystems === null){
       this._particleSystems = []
     }
+    //system._startTime = Date.now() * 0.001
     this._particleSystems.push(system)
   }
 
@@ -1978,12 +1979,6 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
       return
     }
     const p = this._presentation
-    //p._position = this._position
-    //p._rotation = this._rotation
-    //p._scale = this._scale
-    //p._position._copyFrom(this._position)
-    //p._rotation._copyFrom(this._rotation)
-    //p._scale._copyFrom(this._scale)
     p._position = this._position._copy()
     p._rotation = this._rotation._copy()
     p._scale = this._scale._copy()
@@ -1995,6 +1990,14 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
       const node = nodes.shift()
       node._copyTransformToPresentation()
       nodes.push(...node._childNodes)
+    }
+  }
+
+  _copyMaterialPropertiesToPresentation() {
+    if(this._geometry){
+      for(const material of this._geometry.materials){
+        material._copyPresentationProperties()
+      }
     }
   }
 

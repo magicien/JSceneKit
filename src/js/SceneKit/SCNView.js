@@ -990,6 +990,10 @@ export default class SCNView {
     ///////////////////////////////
     // runs actions & animations //
     ///////////////////////////////
+    this._copyTransformToPresentationNodes()
+    this._copyTransformToPresentationSKNodes()
+    this._updateTransform()
+
     this._runActions()
     this._runAnimations()
     this._runSKActions()
@@ -1058,8 +1062,18 @@ export default class SCNView {
         }
         node._presentation = p
       }
-      node._copyTransformToPresentation()
+      //node._copyTransformToPresentation()
       
+      arr.push(...node.childNodes)
+    }
+  }
+
+  _copyTransformToPresentationNodes() {
+    const arr = [this._scene.rootNode, this._renderer._defaultCameraPosNode, this._scene._skyBox]
+    while(arr.length > 0){
+      const node = arr.shift()
+      node._copyTransformToPresentation()
+      node._copyMaterialPropertiesToPresentation()
       arr.push(...node.childNodes)
     }
   }
@@ -1078,12 +1092,21 @@ export default class SCNView {
         p._isPresentationInstance = true
         node.__presentation = p
       }
-      node._copyTransformToPresentation()
-      //p._position = node._position
-      //p._rotation = node._rotation
-      //p._scale = node._scale
-
+      //node._copyTransformToPresentation()
       
+      arr.push(...node.children)
+    }
+  }
+
+  _copyTransformToPresentationSKNodes() {
+    if(this.overlaySKScene === null){
+      return
+    }
+
+    const arr = [this.overlaySKScene]
+    while(arr.length > 0){
+      const node = arr.shift()
+      node._copyTransformToPresentation()
       arr.push(...node.children)
     }
   }
@@ -1248,6 +1271,11 @@ export default class SCNView {
       const transform = this._scene._particleSystemsTransform[i]
       system._updateParticles(transform, gravity, this.currentTime)
     }
+    for(const system of this._scene._particleSystems){
+      if(system._finished){
+        this._scene.removeParticleSystem(system)
+      }
+    }
   }
 
   _updateParticlesForNode(node) {
@@ -1260,9 +1288,14 @@ export default class SCNView {
       return
     }
     const gravity = this._scene.physicsWorld ? this._scene.physicsWorld.gravity : null
-    obj.particleSystems.forEach((system) => {
+    for(const system of obj.particleSystems){
       system._updateParticles(obj.presentation.worldTransform, gravity, this.currentTime)
-    })
+    }
+    for(const system of obj.particleSystems){
+      if(system._finished){
+        obj.removeParticleSystem(system)
+      }
+    }
   }
 
 

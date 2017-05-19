@@ -164,6 +164,73 @@ export default class SCNMaterialProperty extends NSObject {
      * @type {Map}
      */
     this._animations = new SCNOrderedDictionary()
+
+    this.__presentation = null
+  }
+
+  _createPresentation() {
+    if(this.__presentation === null){
+      this.__presentation = this.copy()
+    }
+  }
+
+  _copyPresentation() {
+    // TODO: copy other properties
+    this.__presentation._contents = this._contents
+  }
+
+  get _presentation() {
+    if(this.__presentation === null){
+      return null
+    }
+    return this.__presentation
+  }
+
+  /**
+   *
+   * @access public
+   * @returns {SCNMaterialProperty} -
+   */
+  copy() {
+    const p = new SCNMaterialProperty()
+    p._contents = this._contents // TODO: copy
+    p.intensity = this.intensity
+    p.contentsTransform = this.contentsTransform // TODO: copy
+    p.wrapS = this.wrapS
+    p.wrapT = this.wrapT
+    p.minificationFilter = this.minificationFilter
+    p.magnicifactionFilter = this.maginicifactionFilter
+    p.mipFilter = this.mipFilter
+    p.maxAnisotropy = this.maxAnisotropy
+    p.mappingChannel = this.mappingChannel
+    p.borderColor = this.borderColor // TODO: copy
+    //p._parent
+    //p._animations
+    //p._presentation
+
+    return p
+  }
+
+  valueForKeyPath(keyPath) {
+    const target = this.__presentation ? this.__presentation : this
+
+    // TODO: add other keys
+    if(keyPath === 'contents'){
+      return target._contents
+    }
+
+    return super.valueForKeyPath(keyPath)
+  }
+
+  setValueForKeyPath(value, keyPath) {
+    const target = this.__presentation ? this.__presentation : this
+
+    // TODO: add other keys
+    if(keyPath === 'contents'){
+      target._contents = value
+    }else{
+      super.setValueForKeyPath(value, keyPath)
+    }
   }
 
   /**
@@ -178,7 +245,7 @@ export default class SCNMaterialProperty extends NSObject {
   set contents(newValue) {
     const oldValue = this._contents
     this._contents = newValue
-    SCNTransaction._addChange(this, '_contents', oldValue, newValue)
+    SCNTransaction._addChange(this, 'contents', oldValue, newValue)
   }
 
   ///////////////////
@@ -425,20 +492,20 @@ export default class SCNMaterialProperty extends NSObject {
       const paths = path.slice(8).split('/')
       let pathCount = 1
       let _path = dirPath + paths.slice(-pathCount).join('/')
-      console.warn(`image loading: ${_path}`)
+      //console.warn(`image loading: ${_path}`)
       image.onload = () => {
-        console.info(`image ${image.src} onload`)
+        //console.info(`image ${image.src} onload`)
         this._contents = image
       }
       image.onerror = () => {
-        console.warn('image.onerror')
+        //console.warn('image.onerror')
         pathCount += 1
         if(pathCount > paths.length){
-          console.error(`image ${path} load error.`)
+          //console.error(`image ${path} load error.`)
+          throw new Error(`image ${path} load error.`)
         }else{
-          console.warn(`image ${_path} load error.`)
+          // retry
           _path = dirPath + paths.slice(-pathCount).join('/')
-          console.warn(`try ${_path}`)
           image.src = _path
         }
       }
@@ -462,8 +529,9 @@ export default class SCNMaterialProperty extends NSObject {
    * @returns {Float32Array} -
    */
   float32Array() {
-    if(this._contents instanceof SKColor){
-      return this._contents.float32Array()
+    const target = this.__presentation ? this.__presentation : this
+    if(target._contents instanceof SKColor){
+      return target._contents.float32Array()
     }
     return new Float32Array([1, 1, 1, 1])
   }

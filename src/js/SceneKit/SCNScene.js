@@ -43,6 +43,7 @@ export default class SCNScene extends NSObject {
       }],
       background: ['SCNMaterialProperty', (obj, value) => {
         obj._skyBox.geometry.firstMaterial._emission = value
+        obj._skyBox.geometry.firstMaterial._emission._createPresentation()
       }],
       startTime: ['double', null],
       endTime: ['double', null],
@@ -396,6 +397,7 @@ You call this method in a try expression and handle any errors in the catch clau
       this._particleSystems = []
       this._particleSystemsTransform = []
     }
+    //system._startTime = Date.now() * 0.001
     this._particleSystems.push(system)
     this._particleSystemsTransform.push(transform)
 

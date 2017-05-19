@@ -128,7 +128,6 @@ class _Particle extends NSObject {
      * @type {number}
      */
     this.texBottom = 0
-
   }
 
   /**
@@ -725,8 +724,12 @@ export default class SCNParticleSystem extends NSObject {
     this._glIndexSize = null
     this._particleTexture = null
 
+    this._finished = false
+    this._startTime = null
     this._prevTime = 0
     this._nextBirthTime = 0
+    this._emissionEndTime = 0
+    this._idleEndTime = 0
     this._numImages = null
     this._imageWidth = null
     this._imageHeight = null
@@ -1176,10 +1179,13 @@ export default class SCNParticleSystem extends NSObject {
     if(this._prevTime <= 0){
       this._prevTime = currentTime
       this._nextBirthTime = currentTime
+      this._startTime = currentTime
 
       this._direction = this.emittingDirection.normalize()
       const u = new SCNVector3(this._direction.z, this._direction.x, this._direction.y)
       this._normal = this._direction.cross(u)
+
+      this._updateEndTime()
     }
     while(this._nextBirthTime <= currentTime){
       const p = this._createParticle(this._nextBirthTime, transform)
@@ -1189,6 +1195,13 @@ export default class SCNParticleSystem extends NSObject {
         rate = 0.0000001
       }
       this._nextBirthTime += 1.0 / rate
+      if(this._nextBirthTime > this._emissionEndTime){
+        this._nextBirthTime = this._idleEndTime
+        if(!this.loops){
+          this._finished = true
+        }
+        this._updateEndTime()
+      }
     }
 
     const dt = currentTime - this._prevTime
@@ -1262,6 +1275,21 @@ export default class SCNParticleSystem extends NSObject {
     })
     this._particles = this._particles.filter((p) => { return p.life <= 1 })
     this._prevTime = currentTime
+  }
+
+  _updateEndTime() {
+    const startTime = (this._idleEndTime === 0 ? this._startTime : this._idleEndTime)
+    let emissionDuration = this.emissionDuration + (Math.random() - 0.5) * this.emissionDurationVariation
+    if(emissionDuration < 0){
+      emissionDuration = 0
+    }
+    this._emissionEndTime = startTime + emissionDuration
+
+    let idleDuration = this.idleDuration + (Math.random() - 0.5) * this.idleDurationVariation
+    if(idleDuration < 0){
+      idleDuration = 0
+    }
+    this._idleEndTime = this._emissionEndTime + idleDuration
   }
 
   /**

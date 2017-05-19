@@ -21469,6 +21469,7 @@ module.exports =
 	      if (this._particleSystems === null) {
 	        this._particleSystems = [];
 	      }
+	      //system._startTime = Date.now() * 0.001
 	      this._particleSystems.push(system);
 	    }
 
@@ -22215,12 +22216,6 @@ module.exports =
 	        return;
 	      }
 	      var p = this._presentation;
-	      //p._position = this._position
-	      //p._rotation = this._rotation
-	      //p._scale = this._scale
-	      //p._position._copyFrom(this._position)
-	      //p._rotation._copyFrom(this._rotation)
-	      //p._scale._copyFrom(this._scale)
 	      p._position = this._position._copy();
 	      p._rotation = this._rotation._copy();
 	      p._scale = this._scale._copy();
@@ -22233,6 +22228,36 @@ module.exports =
 	        var node = nodes.shift();
 	        node._copyTransformToPresentation();
 	        nodes.push.apply(nodes, _toConsumableArray(node._childNodes));
+	      }
+	    }
+	  }, {
+	    key: '_copyMaterialPropertiesToPresentation',
+	    value: function _copyMaterialPropertiesToPresentation() {
+	      if (this._geometry) {
+	        var _iteratorNormalCompletion2 = true;
+	        var _didIteratorError2 = false;
+	        var _iteratorError2 = undefined;
+
+	        try {
+	          for (var _iterator2 = this._geometry.materials[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+	            var material = _step2.value;
+
+	            material._copyPresentationProperties();
+	          }
+	        } catch (err) {
+	          _didIteratorError2 = true;
+	          _iteratorError2 = err;
+	        } finally {
+	          try {
+	            if (!_iteratorNormalCompletion2 && _iterator2.return) {
+	              _iterator2.return();
+	            }
+	          } finally {
+	            if (_didIteratorError2) {
+	              throw _iteratorError2;
+	            }
+	          }
+	        }
 	      }
 	    }
 	  }, {
@@ -22903,43 +22928,12 @@ module.exports =
 	    key: 'actionKeys',
 	    get: function get() {
 	      var keys = [];
-	      var _iteratorNormalCompletion2 = true;
-	      var _didIteratorError2 = false;
-	      var _iteratorError2 = undefined;
-
-	      try {
-	        for (var _iterator2 = this._actions.keys()[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-	          var key = _step2.value;
-
-	          keys.push(key);
-	        }
-	      } catch (err) {
-	        _didIteratorError2 = true;
-	        _iteratorError2 = err;
-	      } finally {
-	        try {
-	          if (!_iteratorNormalCompletion2 && _iterator2.return) {
-	            _iterator2.return();
-	          }
-	        } finally {
-	          if (_didIteratorError2) {
-	            throw _iteratorError2;
-	          }
-	        }
-	      }
-
-	      return keys;
-	    }
-	  }, {
-	    key: 'animationKeys',
-	    get: function get() {
-	      var keys = [];
 	      var _iteratorNormalCompletion3 = true;
 	      var _didIteratorError3 = false;
 	      var _iteratorError3 = undefined;
 
 	      try {
-	        for (var _iterator3 = this._animations.keys()[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+	        for (var _iterator3 = this._actions.keys()[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
 	          var key = _step3.value;
 
 	          keys.push(key);
@@ -22955,6 +22949,37 @@ module.exports =
 	        } finally {
 	          if (_didIteratorError3) {
 	            throw _iteratorError3;
+	          }
+	        }
+	      }
+
+	      return keys;
+	    }
+	  }, {
+	    key: 'animationKeys',
+	    get: function get() {
+	      var keys = [];
+	      var _iteratorNormalCompletion4 = true;
+	      var _didIteratorError4 = false;
+	      var _iteratorError4 = undefined;
+
+	      try {
+	        for (var _iterator4 = this._animations.keys()[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+	          var key = _step4.value;
+
+	          keys.push(key);
+	        }
+	      } catch (err) {
+	        _didIteratorError4 = true;
+	        _iteratorError4 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion4 && _iterator4.return) {
+	            _iterator4.return();
+	          }
+	        } finally {
+	          if (_didIteratorError4) {
+	            throw _iteratorError4;
 	          }
 	        }
 	      }
@@ -23016,13 +23041,13 @@ module.exports =
 	    key: '_loadAnimationArray',
 	    value: function _loadAnimationArray(node, animations) {
 	      //console.log('_loadAnimationArray start')
-	      var _iteratorNormalCompletion4 = true;
-	      var _didIteratorError4 = false;
-	      var _iteratorError4 = undefined;
+	      var _iteratorNormalCompletion5 = true;
+	      var _didIteratorError5 = false;
+	      var _iteratorError5 = undefined;
 
 	      try {
-	        for (var _iterator4 = Object.keys(animations)[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-	          var animName = _step4.value;
+	        for (var _iterator5 = Object.keys(animations)[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+	          var animName = _step5.value;
 
 	          var data = animations[animName];
 	          var animation = this._loadAnimationData(data, animName);
@@ -23030,16 +23055,16 @@ module.exports =
 	        }
 	        //console.log('_loadAnimationArray done')
 	      } catch (err) {
-	        _didIteratorError4 = true;
-	        _iteratorError4 = err;
+	        _didIteratorError5 = true;
+	        _iteratorError5 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion4 && _iterator4.return) {
-	            _iterator4.return();
+	          if (!_iteratorNormalCompletion5 && _iterator5.return) {
+	            _iterator5.return();
 	          }
 	        } finally {
-	          if (_didIteratorError4) {
-	            throw _iteratorError4;
+	          if (_didIteratorError5) {
+	            throw _iteratorError5;
 	          }
 	        }
 	      }
@@ -23182,13 +23207,13 @@ module.exports =
 	    key: '_loadActionArray',
 	    value: function _loadActionArray(node, actions) {
 	      //console.log('_loadActionArray start')
-	      var _iteratorNormalCompletion5 = true;
-	      var _didIteratorError5 = false;
-	      var _iteratorError5 = undefined;
+	      var _iteratorNormalCompletion6 = true;
+	      var _didIteratorError6 = false;
+	      var _iteratorError6 = undefined;
 
 	      try {
-	        for (var _iterator5 = Object.keys(actions)[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
-	          var actName = _step5.value;
+	        for (var _iterator6 = Object.keys(actions)[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
+	          var actName = _step6.value;
 
 	          var data = actions[actName];
 	          //const action = this._loadActionData(data, actName)
@@ -23197,16 +23222,16 @@ module.exports =
 	        }
 	        //console.log('_loadAnimationArray done')
 	      } catch (err) {
-	        _didIteratorError5 = true;
-	        _iteratorError5 = err;
+	        _didIteratorError6 = true;
+	        _iteratorError6 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion5 && _iterator5.return) {
-	            _iterator5.return();
+	          if (!_iteratorNormalCompletion6 && _iterator6.return) {
+	            _iterator6.return();
 	          }
 	        } finally {
-	          if (_didIteratorError5) {
-	            throw _iteratorError5;
+	          if (_didIteratorError6) {
+	            throw _iteratorError6;
 	          }
 	        }
 	      }
@@ -25968,18 +25993,54 @@ module.exports =
 	    key: '_propTypes',
 	    get: function get() {
 	      return {
-	        diffuse: ['SCNMaterialProperty', '_diffuse'],
-	        ambient: ['SCNMaterialProperty', '_ambient'],
-	        specular: ['SCNMaterialProperty', '_specular'],
-	        normal: ['SCNMaterialProperty', '_normal'],
-	        reflective: ['SCNMaterialProperty', '_reflective'],
-	        emission: ['SCNMaterialProperty', '_emission'],
-	        transparent: ['SCNMaterialProperty', '_transparent'],
-	        multiply: ['SCNMaterialProperty', '_multiply'],
-	        ambientOcclusion: ['SCNMaterialProperty', '_ambientOcclusion'],
-	        selfIllumination: ['SCNMaterialProperty', '_selfIllumination'],
-	        metalness: ['SCNMaterialProperty', '_metalness'],
-	        roughness: ['SCNMaterialProperty', '_roughness'],
+	        diffuse: ['SCNMaterialProperty', function (obj, value) {
+	          obj._diffuse = value;
+	          value._createPresentation();
+	        }],
+	        ambient: ['SCNMaterialProperty', function (obj, value) {
+	          obj._ambient = value;
+	          value._createPresentation();
+	        }],
+	        specular: ['SCNMaterialProperty', function (obj, value) {
+	          obj._specular = value;
+	          value._createPresentation();
+	        }],
+	        normal: ['SCNMaterialProperty', function (obj, value) {
+	          obj._normal = value;
+	          value._createPresentation();
+	        }],
+	        reflective: ['SCNMaterialProperty', function (obj, value) {
+	          obj._reflective = value;
+	          value._createPresentation();
+	        }],
+	        emission: ['SCNMaterialProperty', function (obj, value) {
+	          obj._emission = value;
+	          value._createPresentation();
+	        }],
+	        transparent: ['SCNMaterialProperty', function (obj, value) {
+	          obj._transparent = value;
+	          value._createPresentation();
+	        }],
+	        multiply: ['SCNMaterialProperty', function (obj, value) {
+	          obj._multiply = value;
+	          value._createPresentation();
+	        }],
+	        ambientOcclusion: ['SCNMaterialProperty', function (obj, value) {
+	          obj._ambientOcclusion = value;
+	          value._createPresentation();
+	        }],
+	        selfIllumination: ['SCNMaterialProperty', function (obj, value) {
+	          obj._selfIllumination = value;
+	          value._createPresentation();
+	        }],
+	        metalness: ['SCNMaterialProperty', function (obj, value) {
+	          obj._metalness = value;
+	          value._createPresentation();
+	        }],
+	        roughness: ['SCNMaterialProperty', function (obj, value) {
+	          obj._roughness = value;
+	          value._createPresentation();
+	        }],
 	        name: 'string',
 	        shininess: 'float',
 	        fresnelExponent: 'float',
@@ -26166,6 +26227,8 @@ module.exports =
 	     * @type {?string}
 	     */
 	    _this._entityID = null;
+
+	    _this._createPresentationProperties();
 	    return _this;
 	  }
 
@@ -26180,6 +26243,51 @@ module.exports =
 
 
 	  _createClass(SCNMaterial, [{
+	    key: '_createPresentationProperties',
+	    value: function _createPresentationProperties() {
+	      this._diffuse._createPresentation();
+	      this._ambient._createPresentation();
+	      this._specular._createPresentation();
+	      this._normal._createPresentation();
+	      this._reflective._createPresentation();
+	      this._emission._createPresentation();
+	      this._transparent._createPresentation();
+	      this._multiply._createPresentation();
+	      this._ambientOcclusion._createPresentation();
+	      this._selfIllumination._createPresentation();
+	      this._metalness._createPresentation();
+	      this._roughness._createPresentation();
+	    }
+	  }, {
+	    key: '_copyPresentationProperties',
+	    value: function _copyPresentationProperties() {
+	      this._diffuse._copyPresentation();
+	      this._ambient._copyPresentation();
+	      this._specular._copyPresentation();
+	      this._normal._copyPresentation();
+	      this._reflective._copyPresentation();
+	      this._emission._copyPresentation();
+	      this._transparent._copyPresentation();
+	      this._multiply._copyPresentation();
+	      this._ambientOcclusion._copyPresentation();
+	      this._selfIllumination._copyPresentation();
+	      this._metalness._copyPresentation();
+	      this._roughness._copyPresentation();
+	    }
+
+	    // Structures
+
+	    /**
+	     * @type {Object} LightingModel
+	     * @property {string} blinn Shading that incorporates ambient, diffuse, and specular properties, where specular highlights are calculated using the Blinn-Phong  formula.
+	     * @property {string} constant Uniform shading that incorporates ambient lighting only.
+	     * @property {string} lambert Shading that incorporates ambient and diffuse properties only.
+	     * @property {string} phong Shading that incorporates ambient, diffuse, and specular properties, where specular highlights are calculated using the Phong  formula.
+	     * @property {string} physicallyBased Shading based on a realistic abstraction of physical lights and materials.
+	     * @see https://developer.apple.com/reference/scenekit/scnmaterial.lightingmodel
+	     */
+
+	  }, {
 	    key: 'handleBindingOfSymbolHandler',
 
 
@@ -26526,19 +26634,6 @@ module.exports =
 	    get: function get() {
 	      return this._roughness;
 	    }
-
-	    // Structures
-
-	    /**
-	     * @type {Object} LightingModel
-	     * @property {string} blinn Shading that incorporates ambient, diffuse, and specular properties, where specular highlights are calculated using the Blinn-Phong  formula.
-	     * @property {string} constant Uniform shading that incorporates ambient lighting only.
-	     * @property {string} lambert Shading that incorporates ambient and diffuse properties only.
-	     * @property {string} phong Shading that incorporates ambient, diffuse, and specular properties, where specular highlights are calculated using the Phong  formula.
-	     * @property {string} physicallyBased Shading based on a realistic abstraction of physical lights and materials.
-	     * @see https://developer.apple.com/reference/scenekit/scnmaterial.lightingmodel
-	     */
-
 	  }, {
 	    key: 'animationKeys',
 	    get: function get() {
@@ -26591,6 +26686,8 @@ module.exports =
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+
+	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
@@ -26801,17 +26898,84 @@ module.exports =
 	     * @type {Map}
 	     */
 	    _this._animations = new _SCNOrderedDictionary2.default();
+
+	    _this.__presentation = null;
 	    return _this;
 	  }
 
-	  /**
-	   * The visual contents of the material property—a color, image, or source of animated content. Animatable.
-	   * @type {?Object}
-	   * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395372-contents
-	   */
-
-
 	  _createClass(SCNMaterialProperty, [{
+	    key: '_createPresentation',
+	    value: function _createPresentation() {
+	      if (this.__presentation === null) {
+	        this.__presentation = this.copy();
+	      }
+	    }
+	  }, {
+	    key: '_copyPresentation',
+	    value: function _copyPresentation() {
+	      // TODO: copy other properties
+	      this.__presentation._contents = this._contents;
+	    }
+	  }, {
+	    key: 'copy',
+
+
+	    /**
+	     *
+	     * @access public
+	     * @returns {SCNMaterialProperty} -
+	     */
+	    value: function copy() {
+	      var p = new SCNMaterialProperty();
+	      p._contents = this._contents; // TODO: copy
+	      p.intensity = this.intensity;
+	      p.contentsTransform = this.contentsTransform; // TODO: copy
+	      p.wrapS = this.wrapS;
+	      p.wrapT = this.wrapT;
+	      p.minificationFilter = this.minificationFilter;
+	      p.magnicifactionFilter = this.maginicifactionFilter;
+	      p.mipFilter = this.mipFilter;
+	      p.maxAnisotropy = this.maxAnisotropy;
+	      p.mappingChannel = this.mappingChannel;
+	      p.borderColor = this.borderColor; // TODO: copy
+	      //p._parent
+	      //p._animations
+	      //p._presentation
+
+	      return p;
+	    }
+	  }, {
+	    key: 'valueForKeyPath',
+	    value: function valueForKeyPath(keyPath) {
+	      var target = this.__presentation ? this.__presentation : this;
+
+	      // TODO: add other keys
+	      if (keyPath === 'contents') {
+	        return target._contents;
+	      }
+
+	      return _get(SCNMaterialProperty.prototype.__proto__ || Object.getPrototypeOf(SCNMaterialProperty.prototype), 'valueForKeyPath', this).call(this, keyPath);
+	    }
+	  }, {
+	    key: 'setValueForKeyPath',
+	    value: function setValueForKeyPath(value, keyPath) {
+	      var target = this.__presentation ? this.__presentation : this;
+
+	      // TODO: add other keys
+	      if (keyPath === 'contents') {
+	        target._contents = value;
+	      } else {
+	        _get(SCNMaterialProperty.prototype.__proto__ || Object.getPrototypeOf(SCNMaterialProperty.prototype), 'setValueForKeyPath', this).call(this, value, keyPath);
+	      }
+	    }
+
+	    /**
+	     * The visual contents of the material property—a color, image, or source of animated content. Animatable.
+	     * @type {?Object}
+	     * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395372-contents
+	     */
+
+	  }, {
 	    key: 'addAnimationForKey',
 
 
@@ -27092,20 +27256,20 @@ module.exports =
 	        var paths = path.slice(8).split('/');
 	        var pathCount = 1;
 	        var _path = dirPath + paths.slice(-pathCount).join('/');
-	        console.warn('image loading: ' + _path);
+	        //console.warn(`image loading: ${_path}`)
 	        image.onload = function () {
-	          console.info('image ' + image.src + ' onload');
+	          //console.info(`image ${image.src} onload`)
 	          _this2._contents = image;
 	        };
 	        image.onerror = function () {
-	          console.warn('image.onerror');
+	          //console.warn('image.onerror')
 	          pathCount += 1;
 	          if (pathCount > paths.length) {
-	            console.error('image ' + path + ' load error.');
+	            //console.error(`image ${path} load error.`)
+	            throw new Error('image ' + path + ' load error.');
 	          } else {
-	            console.warn('image ' + _path + ' load error.');
+	            // retry
 	            _path = dirPath + paths.slice(-pathCount).join('/');
-	            console.warn('try ' + _path);
 	            image.src = _path;
 	          }
 	        };
@@ -27132,10 +27296,19 @@ module.exports =
 	  }, {
 	    key: 'float32Array',
 	    value: function float32Array() {
-	      if (this._contents instanceof _SKColor2.default) {
-	        return this._contents.float32Array();
+	      var target = this.__presentation ? this.__presentation : this;
+	      if (target._contents instanceof _SKColor2.default) {
+	        return target._contents.float32Array();
 	      }
 	      return new Float32Array([1, 1, 1, 1]);
+	    }
+	  }, {
+	    key: '_presentation',
+	    get: function get() {
+	      if (this.__presentation === null) {
+	        return null;
+	      }
+	      return this.__presentation;
 	    }
 	  }, {
 	    key: 'contents',
@@ -27145,7 +27318,7 @@ module.exports =
 	    set: function set(newValue) {
 	      var oldValue = this._contents;
 	      this._contents = newValue;
-	      _SCNTransaction2.default._addChange(this, '_contents', oldValue, newValue);
+	      _SCNTransaction2.default._addChange(this, 'contents', oldValue, newValue);
 	    }
 	  }, {
 	    key: 'animationKeys',
@@ -28952,10 +29125,12 @@ module.exports =
 	    camera.name = 'kSCNFreeViewCameraNameCamera';
 	    _this._defaultCameraNode.camera = camera;
 	    _this._defaultCameraNode.position = new _SCNVector2.default(0, 0, _defaultCameraDistance);
-	    _this._defaultCameraNode._presentation = _this._defaultCameraNode;
+	    _this._defaultCameraNode._presentation = _this._defaultCameraNode.copy();
 
 	    _this._defaultCameraPosNode.addChildNode(_this._defaultCameraRotNode);
+	    _this._defaultCameraPosNode._presentation = _this._defaultCameraPosNode.copy();
 	    _this._defaultCameraRotNode.addChildNode(_this._defaultCameraNode);
+	    _this._defaultCameraRotNode._presentation = _this._defaultCameraRotNode.copy();
 
 	    _this._defaultLightNode = new _SCNNode2.default();
 	    var light = new _SCNLight2.default();
@@ -30795,9 +30970,9 @@ module.exports =
 	        this._defaultCameraRotNode.rotation = new _SCNVector4.default(0, 0, 0, 0);
 	        this._defaultCameraNode.position = new _SCNVector2.default(0, 0, _defaultCameraDistance);
 	      } else if (this._pointOfView !== this._defaultCameraNode) {
-	        var rot = this.pointOfView._worldRotation;
+	        var rot = this.pointOfView.presentation._worldRotation;
 	        var rotMat = _SCNMatrix2.default.matrixWithRotation(rot);
-	        var pos = this.pointOfView._worldTranslation;
+	        var pos = this.pointOfView.presentation._worldTranslation;
 
 	        this._defaultCameraPosNode.position = new _SCNVector2.default(0, 0, -_defaultCameraDistance).rotate(rotMat).add(pos);
 	        this._defaultCameraRotNode.rotation = rot;
@@ -30842,7 +31017,7 @@ module.exports =
 	      }
 	      var rot = this._getCameraOrientation();
 	      var rotMat = _SCNMatrix2.default.matrixWithRotation(rot);
-	      var pos = this._pointOfView._worldTranslation;
+	      var pos = this._pointOfView.presentation._worldTranslation;
 	      return pos.add(new _SCNVector2.default(0, 0, -_defaultCameraDistance).rotate(rotMat));
 	    }
 
@@ -30855,11 +31030,11 @@ module.exports =
 	    key: '_getCameraOrientation',
 	    value: function _getCameraOrientation() {
 	      if (this._pointOfView === this._defaultCameraNode) {
-	        return this._defaultCameraRotNode.orientation;
+	        return this._defaultCameraRotNode.presentation.orientation;
 	      } else if (this._pointOfView === null) {
 	        return new _SCNVector4.default(0, 0, 0, 0);
 	      }
-	      return this._pointOfView._worldOrientation;
+	      return this._pointOfView.presentation._worldOrientation;
 	    }
 
 	    /**
@@ -30871,7 +31046,7 @@ module.exports =
 	    key: '_getCameraDistance',
 	    value: function _getCameraDistance() {
 	      if (this._pointOfView === this._defaultCameraNode) {
-	        return this._defaultCameraNode.position.z;
+	        return this._defaultCameraNode.presentation.position.z;
 	      }
 	      return _defaultCameraDistance;
 	    }
@@ -32009,6 +32184,7 @@ module.exports =
 	        }],
 	        background: ['SCNMaterialProperty', function (obj, value) {
 	          obj._skyBox.geometry.firstMaterial._emission = value;
+	          obj._skyBox.geometry.firstMaterial._emission._createPresentation();
 	        }],
 	        startTime: ['double', null],
 	        endTime: ['double', null],
@@ -32297,6 +32473,7 @@ module.exports =
 	        this._particleSystems = [];
 	        this._particleSystemsTransform = [];
 	      }
+	      //system._startTime = Date.now() * 0.001
 	      this._particleSystems.push(system);
 	      this._particleSystemsTransform.push(transform);
 
@@ -35716,7 +35893,6 @@ module.exports =
 	     * @type {number}
 	     */
 	    _this.texBottom = 0;
-
 	    return _this;
 	  }
 
@@ -36319,8 +36495,12 @@ module.exports =
 	    _this2._glIndexSize = null;
 	    _this2._particleTexture = null;
 
+	    _this2._finished = false;
+	    _this2._startTime = null;
 	    _this2._prevTime = 0;
 	    _this2._nextBirthTime = 0;
+	    _this2._emissionEndTime = 0;
+	    _this2._idleEndTime = 0;
 	    _this2._numImages = null;
 	    _this2._imageWidth = null;
 	    _this2._imageHeight = null;
@@ -36782,10 +36962,13 @@ module.exports =
 	      if (this._prevTime <= 0) {
 	        this._prevTime = currentTime;
 	        this._nextBirthTime = currentTime;
+	        this._startTime = currentTime;
 
 	        this._direction = this.emittingDirection.normalize();
 	        var u = new _SCNVector2.default(this._direction.z, this._direction.x, this._direction.y);
 	        this._normal = this._direction.cross(u);
+
+	        this._updateEndTime();
 	      }
 	      while (this._nextBirthTime <= currentTime) {
 	        var p = this._createParticle(this._nextBirthTime, transform);
@@ -36795,6 +36978,13 @@ module.exports =
 	          rate = 0.0000001;
 	        }
 	        this._nextBirthTime += 1.0 / rate;
+	        if (this._nextBirthTime > this._emissionEndTime) {
+	          this._nextBirthTime = this._idleEndTime;
+	          if (!this.loops) {
+	            this._finished = true;
+	          }
+	          this._updateEndTime();
+	        }
 	      }
 
 	      var dt = currentTime - this._prevTime;
@@ -36873,6 +37063,22 @@ module.exports =
 	        return p.life <= 1;
 	      });
 	      this._prevTime = currentTime;
+	    }
+	  }, {
+	    key: '_updateEndTime',
+	    value: function _updateEndTime() {
+	      var startTime = this._idleEndTime === 0 ? this._startTime : this._idleEndTime;
+	      var emissionDuration = this.emissionDuration + (Math.random() - 0.5) * this.emissionDurationVariation;
+	      if (emissionDuration < 0) {
+	        emissionDuration = 0;
+	      }
+	      this._emissionEndTime = startTime + emissionDuration;
+
+	      var idleDuration = this.idleDuration + (Math.random() - 0.5) * this.idleDurationVariation;
+	      if (idleDuration < 0) {
+	        idleDuration = 0;
+	      }
+	      this._idleEndTime = this._emissionEndTime + idleDuration;
 	    }
 
 	    /**
@@ -47093,6 +47299,10 @@ module.exports =
 	      ///////////////////////////////
 	      // runs actions & animations //
 	      ///////////////////////////////
+	      this._copyTransformToPresentationNodes();
+	      this._copyTransformToPresentationSKNodes();
+	      this._updateTransform();
+
 	      this._runActions();
 	      this._runAnimations();
 	      this._runSKActions();
@@ -47163,13 +47373,24 @@ module.exports =
 	          }
 	          node._presentation = p;
 	        }
-	        node._copyTransformToPresentation();
+	        //node._copyTransformToPresentation()
 
 	        arr.push.apply(arr, _toConsumableArray(node.childNodes));
 	      };
 
 	      while (arr.length > 0) {
 	        _loop();
+	      }
+	    }
+	  }, {
+	    key: '_copyTransformToPresentationNodes',
+	    value: function _copyTransformToPresentationNodes() {
+	      var arr = [this._scene.rootNode, this._renderer._defaultCameraPosNode, this._scene._skyBox];
+	      while (arr.length > 0) {
+	        var _node = arr.shift();
+	        _node._copyTransformToPresentation();
+	        _node._copyMaterialPropertiesToPresentation();
+	        arr.push.apply(arr, _toConsumableArray(_node.childNodes));
 	      }
 	    }
 	  }, {
@@ -47181,20 +47402,30 @@ module.exports =
 
 	      var arr = [this.overlaySKScene];
 	      while (arr.length > 0) {
-	        var _node = arr.shift();
-	        var _p = _node.__presentation;
+	        var _node2 = arr.shift();
+	        var _p = _node2.__presentation;
 	        if (_p === null) {
-	          _p = _node.copy();
+	          _p = _node2.copy();
 	          _p._isPresentationInstance = true;
-	          _node.__presentation = _p;
+	          _node2.__presentation = _p;
 	        }
-	        _node._copyTransformToPresentation();
-	        //p._position = node._position
-	        //p._rotation = node._rotation
-	        //p._scale = node._scale
+	        //node._copyTransformToPresentation()
 
+	        arr.push.apply(arr, _toConsumableArray(_node2.children));
+	      }
+	    }
+	  }, {
+	    key: '_copyTransformToPresentationSKNodes',
+	    value: function _copyTransformToPresentationSKNodes() {
+	      if (this.overlaySKScene === null) {
+	        return;
+	      }
 
-	        arr.push.apply(arr, _toConsumableArray(_node.children));
+	      var arr = [this.overlaySKScene];
+	      while (arr.length > 0) {
+	        var _node3 = arr.shift();
+	        _node3._copyTransformToPresentation();
+	        arr.push.apply(arr, _toConsumableArray(_node3.children));
 	      }
 	    }
 
@@ -47384,6 +47615,32 @@ module.exports =
 	        var transform = this._scene._particleSystemsTransform[i];
 	        system._updateParticles(transform, gravity, this.currentTime);
 	      }
+	      var _iteratorNormalCompletion2 = true;
+	      var _didIteratorError2 = false;
+	      var _iteratorError2 = undefined;
+
+	      try {
+	        for (var _iterator2 = this._scene._particleSystems[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+	          var _system = _step2.value;
+
+	          if (_system._finished) {
+	            this._scene.removeParticleSystem(_system);
+	          }
+	        }
+	      } catch (err) {
+	        _didIteratorError2 = true;
+	        _iteratorError2 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion2 && _iterator2.return) {
+	            _iterator2.return();
+	          }
+	        } finally {
+	          if (_didIteratorError2) {
+	            throw _iteratorError2;
+	          }
+	        }
+	      }
 	    }
 	  }, {
 	    key: '_updateParticlesForNode',
@@ -47398,15 +47655,61 @@ module.exports =
 	  }, {
 	    key: '_updateParticlesForObject',
 	    value: function _updateParticlesForObject(obj) {
-	      var _this12 = this;
-
 	      if (obj.particleSystems === null) {
 	        return;
 	      }
 	      var gravity = this._scene.physicsWorld ? this._scene.physicsWorld.gravity : null;
-	      obj.particleSystems.forEach(function (system) {
-	        system._updateParticles(obj.presentation.worldTransform, gravity, _this12.currentTime);
-	      });
+	      var _iteratorNormalCompletion3 = true;
+	      var _didIteratorError3 = false;
+	      var _iteratorError3 = undefined;
+
+	      try {
+	        for (var _iterator3 = obj.particleSystems[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+	          var system = _step3.value;
+
+	          system._updateParticles(obj.presentation.worldTransform, gravity, this.currentTime);
+	        }
+	      } catch (err) {
+	        _didIteratorError3 = true;
+	        _iteratorError3 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion3 && _iterator3.return) {
+	            _iterator3.return();
+	          }
+	        } finally {
+	          if (_didIteratorError3) {
+	            throw _iteratorError3;
+	          }
+	        }
+	      }
+
+	      var _iteratorNormalCompletion4 = true;
+	      var _didIteratorError4 = false;
+	      var _iteratorError4 = undefined;
+
+	      try {
+	        for (var _iterator4 = obj.particleSystems[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+	          var _system2 = _step4.value;
+
+	          if (_system2._finished) {
+	            obj.removeParticleSystem(_system2);
+	          }
+	        }
+	      } catch (err) {
+	        _didIteratorError4 = true;
+	        _iteratorError4 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion4 && _iterator4.return) {
+	            _iterator4.return();
+	          }
+	        } finally {
+	          if (_didIteratorError4) {
+	            throw _iteratorError4;
+	          }
+	        }
+	      }
 	    }
 
 	    // NSView
@@ -51743,6 +52046,7 @@ module.exports =
 	    _this._context = _this._canvas.getContext('2d');
 	    _this._glContext = null;
 	    _this._texture = null;
+	    _this._textureUpToDate = false;
 
 	    /**
 	     * @access private
@@ -51812,6 +52116,7 @@ module.exports =
 
 	      this._context.clearRect(0, 0, this._canvas.width, this._canvas.height);
 	      this._context.fillText(this._text, 0, this._canvas.height * 0.5);
+	      this._textureUpToDate = false;
 	    }
 
 	    /**
@@ -51826,12 +52131,16 @@ module.exports =
 	      if (this._texture === null || this._glContext !== gl) {
 	        this._glContext = gl;
 	        this._texture = gl.createTexture();
-
+	        this._textureUpToDate = false;
+	      }
+	      if (!this._textureUpToDate) {
 	        gl.bindTexture(gl.TEXTURE_2D, this._texture);
 	        // texImage2D(target, level, internalformat, width, height, border, format, type, source)
 	        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, this._canvas.width, this._canvas.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, this._canvas);
 	        gl.generateMipmap(gl.TEXTURE_2D);
 	        gl.bindTexture(gl.TEXTURE_2D, null);
+
+	        this._textureUpToDate = true;
 	      }
 	      if (this._program === null) {
 	        this._program = this._createProgram(gl);

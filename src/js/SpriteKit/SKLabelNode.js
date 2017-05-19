@@ -157,6 +157,7 @@ export default class SKLabelNode extends SKNode {
     this._context = this._canvas.getContext('2d')
     this._glContext = null
     this._texture = null
+    this._textureUpToDate = false
 
     /**
      * @access private
@@ -287,6 +288,7 @@ export default class SKLabelNode extends SKNode {
 
     this._context.clearRect(0, 0, this._canvas.width, this._canvas.height)
     this._context.fillText(this._text, 0, this._canvas.height * 0.5)
+    this._textureUpToDate = false
   }
 
   /**
@@ -298,12 +300,16 @@ export default class SKLabelNode extends SKNode {
     if(this._texture === null || this._glContext !== gl){
       this._glContext = gl
       this._texture = gl.createTexture()
-
+      this._textureUpToDate = false
+    }
+    if(!this._textureUpToDate){
       gl.bindTexture(gl.TEXTURE_2D, this._texture)
       // texImage2D(target, level, internalformat, width, height, border, format, type, source)
       gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, this._canvas.width, this._canvas.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, this._canvas)
       gl.generateMipmap(gl.TEXTURE_2D)
       gl.bindTexture(gl.TEXTURE_2D, null)
+
+      this._textureUpToDate = true
     }
     if(this._program === null){
       this._program = this._createProgram(gl)

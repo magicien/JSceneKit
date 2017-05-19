@@ -722,10 +722,12 @@ export default class SCNRenderer extends NSObject {
     camera.name = 'kSCNFreeViewCameraNameCamera'
     this._defaultCameraNode.camera = camera
     this._defaultCameraNode.position = new SCNVector3(0, 0, _defaultCameraDistance)
-    this._defaultCameraNode._presentation = this._defaultCameraNode
+    this._defaultCameraNode._presentation = this._defaultCameraNode.copy()
 
     this._defaultCameraPosNode.addChildNode(this._defaultCameraRotNode)
+    this._defaultCameraPosNode._presentation = this._defaultCameraPosNode.copy()
     this._defaultCameraRotNode.addChildNode(this._defaultCameraNode)
+    this._defaultCameraRotNode._presentation = this._defaultCameraRotNode.copy()
 
     this._defaultLightNode = new SCNNode()
     const light = new SCNLight()
@@ -2601,9 +2603,9 @@ export default class SCNRenderer extends NSObject {
       this._defaultCameraRotNode.rotation = new SCNVector4(0, 0, 0, 0)
       this._defaultCameraNode.position = new SCNVector3(0, 0, _defaultCameraDistance)
     }else if(this._pointOfView !== this._defaultCameraNode){
-      const rot = this.pointOfView._worldRotation
+      const rot = this.pointOfView.presentation._worldRotation
       const rotMat = SCNMatrix4.matrixWithRotation(rot)
-      const pos = this.pointOfView._worldTranslation
+      const pos = this.pointOfView.presentation._worldTranslation
 
       this._defaultCameraPosNode.position = (new SCNVector3(0, 0, -_defaultCameraDistance)).rotate(rotMat).add(pos)
       this._defaultCameraRotNode.rotation = rot
@@ -2643,7 +2645,7 @@ export default class SCNRenderer extends NSObject {
     }
     const rot = this._getCameraOrientation()
     const rotMat = SCNMatrix4.matrixWithRotation(rot)
-    const pos = this._pointOfView._worldTranslation
+    const pos = this._pointOfView.presentation._worldTranslation
     return pos.add((new SCNVector3(0, 0, -_defaultCameraDistance)).rotate(rotMat))
   }
 
@@ -2653,11 +2655,11 @@ export default class SCNRenderer extends NSObject {
    */
   _getCameraOrientation() {
     if(this._pointOfView === this._defaultCameraNode){
-      return this._defaultCameraRotNode.orientation
+      return this._defaultCameraRotNode.presentation.orientation
     }else if(this._pointOfView === null){
       return new SCNVector4(0, 0, 0, 0)
     }
-    return this._pointOfView._worldOrientation
+    return this._pointOfView.presentation._worldOrientation
   }
 
   /**
@@ -2666,7 +2668,7 @@ export default class SCNRenderer extends NSObject {
    */
   _getCameraDistance() {
     if(this._pointOfView === this._defaultCameraNode){
-      return this._defaultCameraNode.position.z
+      return this._defaultCameraNode.presentation.position.z
     }
     return _defaultCameraDistance
   }
