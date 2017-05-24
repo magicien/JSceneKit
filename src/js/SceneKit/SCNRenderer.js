@@ -22,6 +22,9 @@ import SCNHitTestOption from './SCNHitTestOption'
 import SCNHitTestResult from './SCNHitTestResult'
 import SKColor from '../SpriteKit/SKColor'
 
+import SKSpriteNode from '../SpriteKit/SKSpriteNode'
+import SKTexture from '../SpriteKit/SKTexture'
+
 /**
  * @access private
  * @type {string}
@@ -32,6 +35,7 @@ const _defaultVertexShader =
 
   #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__
   #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__
+  #define NUM_DIRECTIONAL_SHADOW_LIGHTS __NUM_DIRECTIONAL_SHADOW_LIGHTS__
   #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__
   #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__
   #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__
@@ -58,6 +62,14 @@ const _defaultVertexShader =
   struct DirectionalLight {
     vec4 color;
     vec4 direction; // should use vec4; vec3 might cause problem for the layout
+  };
+
+  struct DirectionalShadowLight {
+    vec4 color;
+    vec4 direction; // should use vec4; vec3 might cause problem for the layout
+    vec4 shadowColor;
+    mat4 viewProjectionTransform;
+    mat4 shadowProjectionTransform;
   };
 
   struct OmniLight {
@@ -146,8 +158,6 @@ const _defaultVertexShader =
     v_normal = nom;
     vec3 btng = cross(nom, tng);
 
-    //vec3 viewPos = vec3(-viewTransform[3][0], -viewTransform[3][1], -viewTransform[3][2]);
-    //vec3 viewPos = vec3(-viewTransform[0][3], -viewTransform[1][3], -viewTransform[2][3]);
     vec3 viewVec = camera.position.xyz - pos;
     //v_eye.x = dot(viewVec, tng);
     //v_eye.y = dot(viewVec, btng);
@@ -181,6 +191,16 @@ const _vsDirectional = `
   numLights += NUM_DIRECTIONAL_LIGHTS;
 `
 
+const _vsDirectionalShadow = `
+  for(int i=0; i<NUM_DIRECTIONAL_SHADOW_LIGHTS; i++){
+    v_light[numLights + i] = -light.directionalShadow[i].direction.xyz;
+    v_directionalShadowDepth[i] = light.directionalShadow[i].viewProjectionTransform * vec4(pos, 1.0);
+    v_directionalShadowTexcoord[i] = light.directionalShadow[i].shadowProjectionTransform * vec4(pos, 1.0);
+  }
+  numLights += NUM_DIRECTIONAL_SHADOW_LIGHTS;
+`
+
+
 const _vsOmni = `
   for(int i=0; i<NUM_OMNI_LIGHTS; i++){
     v_light[numLights + i] = light.omni[i].position.xyz - pos;
@@ -211,6 +231,7 @@ const _fogLoc = 3
 const _defaultFragmentShader = 
  `#version 300 es
   precision mediump float;
+  precision highp sampler2DShadow;
 
   uniform bool[8] textureFlags;
   #define TEXTURE_EMISSION_INDEX 0
@@ -233,6 +254,7 @@ const _defaultFragmentShader =
 
   #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__
   #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__
+  #define NUM_DIRECTIONAL_SHADOW_LIGHTS __NUM_DIRECTIONAL_SHADOW_LIGHTS__
   #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__
   #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__
   #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__
@@ -253,6 +275,14 @@ const _defaultFragmentShader =
   struct DirectionalLight {
     vec4 color;
     vec4 direction; // should use vec4; vec3 might cause problem for the layout
+  };
+
+  struct DirectionalShadowLight {
+    vec4 color;
+    vec4 direction; // should use vec4; vec3 might cause problem for the layout
+    vec4 shadowColor;
+    mat4 viewProjectionTransform;
+    mat4 shadowProjectionTransform;
   };
 
   struct OmniLight {
@@ -292,6 +322,15 @@ const _defaultFragmentShader =
   in float v_fogFactor;
 
   out vec4 outColor;
+
+  float convDepth(vec4 color) {
+    const float rMask = 1.0;
+    const float gMask = 1.0 / 255.0;
+    const float bMask = 1.0 / (255.0 * 255.0);
+    const float aMask = 1.0 / (255.0 * 255.0 * 255.0);
+    float depth = dot(color, vec4(rMask, gMask, bMask, aMask));
+    return depth * 2.0 - 1.0;
+  }
 
   void main() {
     outColor = v_color;
@@ -343,6 +382,27 @@ const _fsDirectional = `
     }
   }
   numLights += NUM_DIRECTIONAL_LIGHTS;
+`
+
+const _fsDirectionalShadow = `
+  float shadow = convDepth(texture(u_shadowMapTexture__I__, v_directionalShadowTexcoord[__I__].xy / v_directionalShadowTexcoord[__I__].w));
+  if(v_directionalShadowDepth[__I__].z / v_directionalShadowDepth[__I__].w - 0.0001 > shadow){
+    outColor.rgb += material.diffuse.rgb * light.directionalShadow[__I__].shadowColor.rgb;
+  }else{
+    // diffuse
+    vec3 lightVec = normalize(v_light[numLights]);
+    float diffuse = clamp(dot(lightVec, nom), 0.0f, 1.0f);
+    outColor.rgb += light.directionalShadow[__I__].color.rgb * material.diffuse.rgb * diffuse;
+
+    // specular
+    if(diffuse > 0.0f){
+      vec3 halfVec = normalize(lightVec + viewVec);
+      float specular = pow(dot(halfVec, nom), material.shininess);
+      outColor.rgb += material.specular.rgb * specular; // TODO: get the light color of specular
+    }
+  }
+
+  numLights += 1;
 `
 
 const _fsOmni = `
@@ -524,6 +584,82 @@ const _defaultHitTestFragmentShader =
     vec3 n = normalize(v_normal);
     out_normal = vec3((n.x + 1.0) * 0.5, (n.y + 1.0) * 0.5, (n.z + 1.0) * 0.5);
     out_position = vec3((v_position.x + 1.0) * 0.5, (v_position.y + 1.0) * 0.5, (v_position.z + 1.0) * 0.5);
+  }
+`
+
+/**
+ * @access private
+ * @type {string}
+ */
+const _defaultShadowVertexShader =
+ `#version 300 es
+  precision mediump float;
+
+  uniform mat4 viewProjectionTransform;
+  uniform vec4[765] skinningJoints;
+  uniform int numSkinningJoints;
+
+  in vec3 position;
+  //in vec3 normal;
+  in vec4 boneIndices;
+  in vec4 boneWeights;
+
+  out vec3 v_position;
+
+  void main() {
+    vec3 pos = vec3(0, 0, 0);
+    if(numSkinningJoints > 0){
+      for(int i=0; i<numSkinningJoints; i++){
+        float weight = boneWeights[i];
+        if(int(boneIndices[i]) < 0){
+          continue;
+        }
+        int idx = int(boneIndices[i]) * 3;
+        mat4 jointMatrix = transpose(mat4(skinningJoints[idx],
+                                          skinningJoints[idx+1],
+                                          skinningJoints[idx+2],
+                                          vec4(0, 0, 0, 1)));
+        pos += (jointMatrix * vec4(position, 1.0)).xyz * weight;
+      }
+    }else{
+      mat4 jointMatrix = transpose(mat4(skinningJoints[0],
+                                        skinningJoints[1],
+                                        skinningJoints[2],
+                                        vec4(0, 0, 0, 1)));
+      pos = (jointMatrix * vec4(position, 1.0)).xyz;
+    }
+    //v_position = pos;
+
+    gl_Position = viewProjectionTransform * vec4(pos, 1.0);
+    v_position = gl_Position.xyz / gl_Position.w;
+  }
+`
+
+/**
+ * @access private
+ * @type {string}
+ */
+const _defaultShadowFragmentShader =
+ `#version 300 es
+  precision mediump float;
+
+  in vec3 v_position;
+
+  layout(location = 0) out vec4 out_depth;
+  //layout(location = 0) out float out_depth;
+
+  void main() {
+    float r = (v_position.z + 1.0) * 0.5;
+    float g = fract(r * 255.0);
+    float b = fract(g * 255.0);
+    float a = fract(b * 255.0);
+    float coef = 1.0 / 255.0;
+
+    r -= g * coef;
+    g -= b * coef;
+    b -= a * coef;
+    out_depth = vec4(r, g, b, a);
+    //out_depth = v_position.z;
   }
 `
 
@@ -711,6 +847,13 @@ export default class SCNRenderer extends NSObject {
      */
     this.__defaultHitTestProgram = null
 
+    /**
+     * @access private
+     * @type {SCNProgram}
+     */
+    this.__defaultShadowProgram = null
+
+
     this._location = new Map()
 
     this._defaultCameraPosNode = new SCNNode()
@@ -735,6 +878,7 @@ export default class SCNRenderer extends NSObject {
     light.type = SCNLight.LightType.omni
     light.position = new SCNVector3(0, 10, 10)
     this._defaultLightNode.light = light
+    this._defaultLightNode._presentation = this._defaultLightNode.copy()
 
     /**
      * @access private
@@ -901,14 +1045,7 @@ export default class SCNRenderer extends NSObject {
     gl.depthMask(true)
     gl.enable(gl.BLEND)
     gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)
-    //gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewTransform'), false, cameraPNode.viewTransform.float32Array())
-    //gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewProjectionTransform'), false, cameraPNode.viewProjectionTransform.float32Array())
 
-    //console.log('cameraNode.worldPosition: ' + cameraPNode.worldTransform.getTranslation().float32Array())
-    //console.log('viewTransform: ' + cameraPNode.viewTransform.float32Array())
-    //console.log('projectionTransform: ' + cameraNode.camera.projectionTransform.float32Array())
-    //console.log('viewProjectionTransform: ' + cameraNode.viewProjectionTransform.float32Array())
-    
     //////////////////////////
     // Camera
     //////////////////////////
@@ -928,6 +1065,11 @@ export default class SCNRenderer extends NSObject {
     gl.bindBuffer(gl.UNIFORM_BUFFER, this._cameraBuffer)
     gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(cameraData), gl.DYNAMIC_DRAW)
     gl.bindBuffer(gl.UNIFORM_BUFFER, null)
+    
+    //console.log('cameraNode.worldPosition: ' + cameraPNode.worldTransform.getTranslation().float32Array())
+    //console.log('viewTransform: ' + cameraPNode.viewTransform.float32Array())
+    //console.log('projectionTransform: ' + cameraNode.camera.projectionTransform.float32Array())
+    //console.log('viewProjectionTransform: ' + cameraNode.viewProjectionTransform.float32Array())
 
     //////////////////////////
     // Fog
@@ -960,26 +1102,37 @@ export default class SCNRenderer extends NSObject {
     const lights = this._lightNodes
     const lightData = []
     lights.ambient.forEach((node) => {
-      lightData.push(...node.light.color.float32Array())
+      lightData.push(...node.presentation.light.color.float32Array())
     })
     lights.directional.forEach((node) => {
-      const direction = (new SCNVector3(0, 0, -1)).rotateWithQuaternion(node._worldOrientation)
+      const direction = (new SCNVector3(0, 0, -1)).rotateWithQuaternion(node.presentation._worldOrientation)
       lightData.push(
-        ...node.light.color.float32Array(),
+        ...node.presentation.light.color.float32Array(),
         ...direction.float32Array(), 0
+      )
+    })
+    lights.directionalShadow.forEach((node) => {
+      const direction = (new SCNVector3(0, 0, -1)).rotateWithQuaternion(node.presentation._worldOrientation)
+      node.presentation.light._updateProjectionTransform()
+      lightData.push(
+        ...node.presentation.light.color.float32Array(),
+        ...direction.float32Array(), 0,
+        ...node.presentation.light.shadowColor.float32Array(),
+        ...node.presentation.lightViewProjectionTransform.float32Array(),
+        ...node.presentation.shadowProjectionTransform.float32Array()
       )
     })
     lights.omni.forEach((node) => {
       lightData.push(
-        ...node.light.color.float32Array(),
-        ...node._worldTranslation.float32Array(), 0
+        ...node.presentation.light.color.float32Array(),
+        ...node.presentation._worldTranslation.float32Array(), 0
       )
     })
     lights.probe.forEach((node) => {
-      lightData.push(...node.light.color.float32Array())
+      lightData.push(...node.presentation.light.color.float32Array())
     })
     lights.spot.forEach((node) => {
-      lightData.push(...node.light.color.float32Array())
+      lightData.push(...node.presentation.light.color.float32Array())
     })
 
     gl.bindBuffer(gl.UNIFORM_BUFFER, this._lightBuffer)
@@ -1011,6 +1164,30 @@ export default class SCNRenderer extends NSObject {
       gl.bindBuffer(gl.UNIFORM_BUFFER, this._fogBuffer)
       gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(fogData), gl.DYNAMIC_DRAW)
       gl.bindBuffer(gl.UNIFORM_BUFFER, null)
+    }
+
+    //////////////////////////
+    // Shadow
+    //////////////////////////
+    gl.useProgram(this._defaultShadowProgram._glProgram)
+    gl.depthMask(true)
+    gl.depthFunc(gl.LEQUAL)
+    gl.clearDepth(1.0)
+    gl.clearColor(1.0, 1.0, 1.0, 1.0)
+    gl.disable(gl.BLEND)
+    const shadowRenderingArray = this._createShadowNodeArray()
+    for(const key of Object.keys(lights)){
+      for(const lightNode of lights[key]){
+        this._renderNodesShadowOfLight(shadowRenderingArray, lightNode)
+      }
+    }
+    this._setViewPort() // reset viewport size
+    gl.useProgram(program)
+    for(let i=0; i<lights.directionalShadow.length; i++){
+      const node = lights.directionalShadow[i]
+      const symbol = `TEXTURE${i+8}`
+      gl.activeTexture(gl[symbol])
+      gl.bindTexture(gl.TEXTURE_2D, node.presentation.light._shadowDepthTexture)
     }
 
     //////////////////////////
@@ -1046,6 +1223,9 @@ export default class SCNRenderer extends NSObject {
     // 2D Overlay
     //////////////////////////
     this._renderOverlaySKScene()
+
+    // DEBUG: show shadow map
+    //this._showShadowMapOfLight(lights.directionalShadow[0])
 
     gl.flush()
   }
@@ -1087,6 +1267,29 @@ export default class SCNRenderer extends NSObject {
       this._defaultCameraPosNode._updateWorldTransform()
     }
     return cameraNode
+  }
+
+  /**
+   *
+   * @access private
+   * @returns {SCNNode[]} -
+   */
+  _createShadowNodeArray() {
+    const arr = [this.scene._rootNode]
+    const targetNodes = []
+    while(arr.length > 0){
+      const node = arr.shift()
+      if(node.presentation !== null 
+      && node.presentation.geometry !== null
+      && node.presentation.castsShadow
+      && node.presentation.opacity > 0
+      && !node.presentation.isHidden){
+        targetNodes.push(node)
+      }
+      arr.push(...node.childNodes)
+    }
+
+    return targetNodes
   }
 
   /**
@@ -1141,7 +1344,9 @@ export default class SCNRenderer extends NSObject {
       directional: [],
       omni: [],
       probe: [],
-      spot: []
+      spot: [],
+      
+      directionalShadow: []
     }
 
     const arr = [this.scene.rootNode]
@@ -1149,7 +1354,11 @@ export default class SCNRenderer extends NSObject {
     while(arr.length > 0){
       const node = arr.shift()
       if(node.presentation !== null && node.presentation.light !== null){
-        targetNodes[node.presentation.light.type].push(node.presentation)
+        if(node.presentation.light.type === 'directional' && node.presentation.light.castsShadow){
+          targetNodes['directionalShadow'].push(node)
+        }else{
+          targetNodes[node.presentation.light.type].push(node)
+        }
         if(node.presentation.light.type !== SCNLight.LightType.ambient){
           numLights += 1
         }
@@ -1181,6 +1390,99 @@ export default class SCNRenderer extends NSObject {
     targetNodes.sort((a, b) => { return a.renderingOrder - b.renderingOrder })
 
     return targetNodes
+  }
+
+  /**
+   *
+   * @access private
+   * @param {SCNNode} node -
+   * @param {SCNNode} lightNode -
+   * @returns {void}
+   */
+  _renderNodesShadowOfLight(nodes, lightNode) {
+    const lp = lightNode.presentation
+    const light = lp.light
+    if(!lp.castsShadow){
+      return
+    }
+    this._setViewPort(light._shadowMapWidth, light._shadowMapHeight)
+    const gl = this.context
+    const program = this._defaultShadowProgram._glProgram
+    gl.bindFramebuffer(gl.FRAMEBUFFER, light._getDepthBufferForContext(gl))
+    gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT)
+    //gl.clear(gl.DEPTH_BUFFER_BIT)
+
+    gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewProjectionTransform'), false, lp.lightViewProjectionTransform.float32Array())
+
+    for(const node of nodes){
+      const geometry = node.presentation.geometry
+      if(geometry._shadowVAO === null){
+        this._initializeShadowVAO(node, program)
+      }
+
+      if(node.morpher !== null){
+        //this._updateVAO(node)
+      }
+
+      if(node.presentation.skinner !== null){
+        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
+        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array())
+      }else{
+        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0)
+        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f())
+      }
+
+      const geometryCount = geometry.geometryElements.length
+      if(geometryCount === 0){
+        throw new Error('geometryCount: 0')
+      }
+      for(let i=0; i<geometryCount; i++){
+        const vao = geometry._shadowVAO[i]
+        const element = geometry.geometryElements[i]
+
+        gl.bindVertexArray(vao)
+        // FIXME: use bufferData instead of bindBufferBase
+
+        let shape = null
+        switch(element.primitiveType){
+          case SCNGeometryPrimitiveType.triangles:
+            shape = gl.TRIANGLES
+            break
+          case SCNGeometryPrimitiveType.triangleStrip:
+            shape = gl.TRIANGLE_STRIP
+            break
+          case SCNGeometryPrimitiveType.line:
+            shape = gl.LINES
+            break
+          case SCNGeometryPrimitiveType.point:
+            shape = gl.POINTS
+            break
+          case SCNGeometryPrimitiveType.polygon:
+            shape = gl.TRIANGLE_FAN
+            break
+          default:
+            throw new Error(`unsupported primitiveType: ${element.primitiveType}`)
+        }
+
+        let size = null
+        switch(element.bytesPerIndex){
+          case 1:
+            size = gl.UNSIGNED_BYTE
+            break
+          case 2:
+            size = gl.UNSIGNED_SHORT
+            break
+          case 4:
+            size = gl.UNSIGNED_INT
+            break
+          default:
+            throw new Error(`unsupported index size: ${element.bytesPerIndex}`)
+        }
+
+        gl.drawElements(shape, element._glData.length, size, 0)
+      }
+    }
+    gl.bindFramebuffer(gl.FRAMEBUFFER, null)
   }
 
   /**
@@ -1225,7 +1527,6 @@ export default class SCNRenderer extends NSObject {
     for(let i=0; i<geometryCount; i++){
       const vao = geometry._vertexArrayObjects[i]
       const element = geometry.geometryElements[i]
-      //const material = node.presentation.geometry.materials[i]
 
       gl.bindVertexArray(vao)
       // FIXME: use bufferData instead of bindBufferBase
@@ -1285,9 +1586,6 @@ export default class SCNRenderer extends NSObject {
     }
 
     const systems = node.presentation.particleSystems
-    //const gl = this.context
-
-    //gl.useProgram(program)
     systems.forEach((system) => {
       this._renderParticleSystem(system)
     })
@@ -1340,7 +1638,6 @@ export default class SCNRenderer extends NSObject {
       this._initializeHitTestVAO(node, program)
     }
 
-    //console.log(`uniform1i: objectID: ${objectID}`)
     gl.uniform1i(gl.getUniformLocation(program, 'objectID'), objectID)
 
     if(node.presentation.skinner !== null){
@@ -1501,9 +1798,6 @@ export default class SCNRenderer extends NSObject {
     const targetNodes = []
     while(arr.length > 0){
       const node = arr.shift()
-      //if(node.presentation.geometry !== null){
-      //  targetNodes.push(node)
-      //}
       targetNodes.push(node)
       arr.push(...node.children)
     }
@@ -1675,8 +1969,6 @@ export default class SCNRenderer extends NSObject {
 
   _initializeHitFrameBuffer() {
     const gl = this.context
-    //const width = 1
-    //const height = 1
     const width = this._viewRect.size.width
     const height = this._viewRect.size.height
     this._hitFrameBuffer = gl.createFramebuffer()
@@ -2254,6 +2546,7 @@ export default class SCNRenderer extends NSObject {
     const vars = new Map()
     const numAmbient = this._numLights[SCNLight.LightType.ambient]
     const numDirectional = this._numLights[SCNLight.LightType.directional]
+    const numDirectionalShadow = this._numLights['directionalShadow']
     const numOmni = this._numLights[SCNLight.LightType.omni]
     const numSpot = this._numLights[SCNLight.LightType.spot]
     const numIES = this._numLights[SCNLight.LightType.IES]
@@ -2261,6 +2554,7 @@ export default class SCNRenderer extends NSObject {
 
     vars.set('__NUM_AMBIENT_LIGHTS__', numAmbient)
     vars.set('__NUM_DIRECTIONAL_LIGHTS__', numDirectional)
+    vars.set('__NUM_DIRECTIONAL_SHADOW_LIGHTS__', numDirectionalShadow)
     vars.set('__NUM_OMNI_LIGHTS__', numOmni)
     vars.set('__NUM_SPOT_LIGHTS__', numSpot)
     vars.set('__NUM_IES_LIGHTS__', numIES)
@@ -2278,7 +2572,14 @@ export default class SCNRenderer extends NSObject {
       lightDefinition += 'DirectionalLight directional[NUM_DIRECTIONAL_LIGHTS]; '
       vsLighting += _vsDirectional
       fsLighting += _fsDirectional
-
+    }
+    if(numDirectionalShadow > 0){
+      lightDefinition += 'DirectionalShadowLight directionalShadow[NUM_DIRECTIONAL_SHADOW_LIGHTS]; '
+      vsLighting += _vsDirectionalShadow
+      for(let i=0; i<numDirectionalShadow; i++){
+        const fsDSText = _fsDirectionalShadow.replace(new RegExp('__I__', 'g'), i)
+        fsLighting += fsDSText
+      }
     }
     if(numOmni > 0){
       lightDefinition += 'OmniLight omni[NUM_OMNI_LIGHTS]; '
@@ -2291,7 +2592,7 @@ export default class SCNRenderer extends NSObject {
       fsLighting += _fsSpot
     }
     if(numIES > 0){
-      lightDefinition += 'IESLight probe[NUM_IES_LIGHTS]; '
+      lightDefinition += 'IESLight ies[NUM_IES_LIGHTS]; '
       vsLighting += _vsIES
       fsLighting += _fsIES
     }
@@ -2304,10 +2605,23 @@ export default class SCNRenderer extends NSObject {
     vars.set('__VS_LIGHTING__', vsLighting)
     vars.set('__FS_LIGHTING__', fsLighting)
 
-    if(numDirectional + numOmni + numSpot > 0){
-      const v = 'vec3 v_light[NUM_DIRECTIONAL_LIGHTS + NUM_OMNI_LIGHTS + NUM_SPOT_LIGHTS]; '
-      vars.set('__VS_LIGHT_VARS__', 'out ' + v)
-      vars.set('__FS_LIGHT_VARS__', 'in ' + v)
+    if(numDirectional + numDirectionalShadow + numOmni + numSpot > 0){
+      const v = 'vec3 v_light[NUM_DIRECTIONAL_LIGHTS + NUM_DIRECTIONAL_SHADOW_LIGHTS + NUM_OMNI_LIGHTS + NUM_SPOT_LIGHTS]; '
+      let vs = 'out ' + v
+      let fs = 'in ' + v
+      if(numDirectionalShadow > 0){
+        vs += 'out vec4 v_directionalShadowDepth[NUM_DIRECTIONAL_SHADOW_LIGHTS]; '
+        vs += 'out vec4 v_directionalShadowTexcoord[NUM_DIRECTIONAL_SHADOW_LIGHTS]; '
+        fs += 'in vec4 v_directionalShadowDepth[NUM_DIRECTIONAL_SHADOW_LIGHTS]; '
+        fs += 'in vec4 v_directionalShadowTexcoord[NUM_DIRECTIONAL_SHADOW_LIGHTS]; '
+        for(let i=0; i<numDirectionalShadow; i++){
+          //fs += 'uniform sampler2DShadow u_shadowMapTexture' + i + '; '
+          fs += 'uniform sampler2D u_shadowMapTexture' + i + '; '
+        }
+      }
+
+      vars.set('__VS_LIGHT_VARS__', vs)
+      vars.set('__FS_LIGHT_VARS__', fs)
     }else{
       vars.set('__VS_LIGHT_VARS__', '')
       vars.set('__FS_LIGHT_VARS__', '')
@@ -2387,7 +2701,6 @@ export default class SCNRenderer extends NSObject {
       }
 
       // boneIndices
-      //const indSrc = geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneIndices)[0]
       const indSrc = node.skinner ? node.skinner._boneIndices : null
       if(indSrc){
         //console.log(`indSrc: ${boneIndicesLoc}, ${indSrc.componentsPerVector}, ${indSrc.dataStride}, ${indSrc.dataOffset}`)
@@ -2398,7 +2711,6 @@ export default class SCNRenderer extends NSObject {
       }
 
       // boneWeights
-      //const wgtSrc = geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneWeights)[0]
       const wgtSrc = node.skinner ? node.skinner._boneWeights : null
       if(wgtSrc){
         //console.log(`wgtSrc: ${boneWeightsLoc}, ${wgtSrc.componentsPerVector}, ${wgtSrc.dataStride}, ${wgtSrc.dataOffset}`)
@@ -2417,6 +2729,74 @@ export default class SCNRenderer extends NSObject {
       gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indexBuffer)
       
       geometry._vertexArrayObjects.push(vao)
+    }
+  }
+
+  _initializeShadowVAO(node, program) {
+    const gl = this.context
+    const geometry = node.presentation.geometry
+    const baseGeometry = node.geometry
+
+    // prepare vertex array data
+    const vertexBuffer = geometry._createVertexBuffer(gl, node)
+    // TODO: retain attribute locations
+    const positionLoc = gl.getAttribLocation(program, 'position')
+    const boneIndicesLoc = gl.getAttribLocation(program, 'boneIndices')
+    const boneWeightsLoc = gl.getAttribLocation(program, 'boneWeights')
+
+    geometry._shadowVAO = []
+    const elementCount = node.presentation.geometry.geometryElements.length
+    for(let i=0; i<elementCount; i++){
+      const element = node.presentation.geometry.geometryElements[i]
+      const material = node.presentation.geometry.materials[i]
+      const shadowVAO = gl.createVertexArray()
+      gl.bindVertexArray(shadowVAO)
+
+      // initialize vertex buffer
+      gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer)
+
+      gl.bindAttribLocation(program, positionLoc, 'position')
+      gl.bindAttribLocation(program, boneIndicesLoc, 'boneIndices')
+      gl.bindAttribLocation(program, boneWeightsLoc, 'boneWeights')
+      
+      // vertexAttribPointer(ulong idx, long size, ulong type, bool norm, long stride, ulong offset)
+
+      // position
+      const posSrc = geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
+      if(posSrc){
+        gl.enableVertexAttribArray(positionLoc)
+        gl.vertexAttribPointer(positionLoc, posSrc.componentsPerVector, gl.FLOAT, false, posSrc.dataStride, posSrc.dataOffset)
+      }else{
+        gl.disableVertexAttribArray(positionLoc)
+      }
+
+      // boneIndices
+      const indSrc = node.skinner ? node.skinner._boneIndices : null
+      if(indSrc){
+        gl.enableVertexAttribArray(boneIndicesLoc)
+        gl.vertexAttribPointer(boneIndicesLoc, indSrc.componentsPerVector, gl.FLOAT, false, indSrc.dataStride, indSrc.dataOffset)
+      }else{
+        gl.disableVertexAttribArray(boneIndicesLoc)
+      }
+
+      // boneWeights
+      const wgtSrc = node.skinner ? node.skinner._boneWeights : null
+      if(wgtSrc){
+        gl.enableVertexAttribArray(boneWeightsLoc)
+        gl.vertexAttribPointer(boneWeightsLoc, wgtSrc.componentsPerVector, gl.FLOAT, false, wgtSrc.dataStride, wgtSrc.dataOffset)
+      }else{
+        gl.disableVertexAttribArray(boneWeightsLoc)
+      }
+
+      // FIXME: use setting
+      gl.disable(gl.CULL_FACE)
+
+      // initialize index buffer
+      // FIXME: check geometrySource semantic
+      const indexBuffer = element._createBuffer(gl)
+      gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indexBuffer)
+      
+      geometry._shadowVAO.push(shadowVAO)
     }
   }
 
@@ -2521,6 +2901,16 @@ export default class SCNRenderer extends NSObject {
     this._lightBuffer = gl.createBuffer()
     gl.uniformBlockBinding(program, lightIndex, _lightLoc)
     gl.bindBufferBase(gl.UNIFORM_BUFFER, _lightLoc, this._lightBuffer)
+
+    for(let i=0; i<this._lightNodes.directionalShadow.length; i++){
+      const node = this._lightNodes.directionalShadow[i]
+      const symbol = `TEXTURE${i+8}`
+      const name = `u_shadowMapTexture${i}`
+
+      gl.uniform1i(gl.getUniformLocation(program, name), i+8)
+      gl.activeTexture(gl[symbol])
+      gl.bindTexture(gl.TEXTURE_2D, node.presentation.light._shadowDepthTexture)
+    }
   }
 
   _initializeUBO(node, program) {
@@ -2679,13 +3069,14 @@ export default class SCNRenderer extends NSObject {
    */
   _numLightsChanged() {
     let changed = false
-    Object.values(SCNLight.LightType).forEach((type) => {
+    const types = [...Object.values(SCNLight.LightType), 'directionalShadow']
+    for(const type of types){
       const num = this._lightNodes[type].length
       if(num !== this._numLights[type]){
         changed = true
         this._numLights[type] = num
       }
-    })
+    }
     return changed
   }
 
@@ -2873,6 +3264,67 @@ export default class SCNRenderer extends NSObject {
     return this.__defaultParticleProgram
   }
 
+  /**
+   * @access private
+   * @type {SCNProgram}
+   */
+  get _defaultShadowProgram() {
+    if(this.__defaultShadowProgram !== null){
+      return this.__defaultShadowProgram
+    }
+    const gl = this.context
+    if(this.__defaultShadowProgram === null){
+      this.__defaultShadowProgram = new SCNProgram()
+      this.__defaultShadowProgram._glProgram = gl.createProgram()
+    }
+    const p = this.__defaultShadowProgram
+    const vsText = _defaultShadowVertexShader
+    const fsText = _defaultShadowFragmentShader
+
+    // initialize vertex shader
+    const vertexShader = gl.createShader(gl.VERTEX_SHADER)
+    gl.shaderSource(vertexShader, vsText)
+    gl.compileShader(vertexShader)
+    if(!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)){
+      const info = gl.getShaderInfoLog(vertexShader)
+      throw new Error(`particle vertex shader compile error: ${info}`)
+    }
+
+    // initialize fragment shader
+    const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER)
+    gl.shaderSource(fragmentShader, fsText)
+    gl.compileShader(fragmentShader)
+    if(!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)){
+      const info = gl.getShaderInfoLog(fragmentShader)
+      throw new Error(`particle fragment shader compile error: ${info}`)
+    }
+
+    gl.attachShader(p._glProgram, vertexShader)
+    gl.attachShader(p._glProgram, fragmentShader)
+
+    // link program object
+    gl.linkProgram(p._glProgram)
+    if(!gl.getProgramParameter(p._glProgram, gl.LINK_STATUS)){
+      const info = gl.getProgramInfoLog(p._glProgram)
+      throw new Error(`program link error: ${info}`)
+    }
+
+    gl.useProgram(p._glProgram)
+    //gl.clearColor(1, 1, 1, 1)
+    //gl.clearDepth(1.0)
+    //gl.clearStencil(0)
+
+    gl.enable(gl.DEPTH_TEST)
+    gl.depthFunc(gl.LEQUAL)
+    //gl.enable(gl.BLEND)
+    gl.disable(gl.BLEND)
+    //gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)
+    gl.enable(gl.CULL_FACE)
+    gl.cullFace(gl.BACK)
+
+    return this.__defaultShadowProgram
+  }
+
   _setDummyParticleTextureAsDefault() {
     const gl = this.context
     const p = this._defaultParticleProgram
@@ -2954,6 +3406,51 @@ export default class SCNRenderer extends NSObject {
     //this._setDummyHitTestTextureAsDefault()
     
     return this.__defaultHitTestProgram
+  }
+
+  // for debug
+  _showShadowMapOfLight(lightNode) {
+    const gl = this.context
+    const p = lightNode.presentation
+    const light = p.light
+    if(!this.__debugShadowMapSprite){
+      const node = new SKSpriteNode()
+      node.size = new CGSize(100, 100)
+      node.anchorPoint = new CGPoint(0.0, 0.0)
+      const texture = new SKTexture()
+      texture._glTexture = light._shadowDepthTexture
+      texture._image = {
+        naturalWidth: 100,
+        naturalHeight: 100
+      }
+      node._texture = texture
+      node.__presentation = node.copy()
+      node.__presentation._isPresentationInstance = true
+      node.position = new CGPoint(100, 100)
+      node._updateWorldTransform()
+
+      this.__debugShadowMapSprite = node
+    }
+    gl.clearDepth(-1)
+    gl.clearStencil(0)
+    gl.depthMask(true)
+    gl.enable(gl.DEPTH_TEST)
+    gl.disable(gl.CULL_FACE)
+    gl.depthFunc(gl.GEQUAL)
+    gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)
+    gl.clear(gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT)
+
+    this._renderSKNode(this.__debugShadowMapSprite)
+  }
+
+  _setViewPort(width = null, height = null) {
+    let w = width
+    let h = height
+    if(w === null || h === null){
+      w = this._viewRect.size.width
+      h = this._viewRect.size.height
+    }
+    this.context.viewport(0, 0, w, h)
   }
 
   /**

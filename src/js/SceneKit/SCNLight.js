@@ -4,6 +4,7 @@ import NSObject from '../ObjectiveC/NSObject'
 import SCNAnimatable from './SCNAnimatable'
 import SCNTechniqueSupport from './SCNTechniqueSupport'
 import SCNMaterialProperty from './SCNMaterialProperty'
+import SCNMatrix4 from './SCNMatrix4'
 import CGSize from '../CoreGraphics/CGSize'
 import SKColor from '../SpriteKit/SKColor'
 import SCNShadowMode from './SCNShadowMode'
@@ -16,7 +17,6 @@ const _LightType = {
   probe: 'probe',
   spot: 'spot'
 }
-
 
 /**
  * A light source that can be attached to a node to illuminate the scene.
@@ -253,6 +253,12 @@ export default class SCNLight extends NSObject {
      * @type {?string}
      */
     this._entityID = null
+
+    this._context = null
+    this._shadowFrameBuffer = null
+    //this._shadowDepthBuffer = null
+    this._shadowDepthTexture = null
+    this._projectionTransform = null
   }
 
   // Creating a Light
@@ -320,5 +326,139 @@ export default class SCNLight extends NSObject {
    */
   static get LightType() {
     return _LightType
+  }
+
+  get _shadowMapWidth() {
+    if(this.shadowMapSize.width > 0){
+      return this.shadowMapSize.width
+    }
+    // FIXME: adjust shadowMapSize
+    return 1024
+  }
+
+  get _shadowMapHeight() {
+    if(this.shadowMapSize.height > 0){
+      return this.shadowMapSize.height
+    }
+    // FIXME: adjust shadowMapSize
+    return 1024
+  }
+
+
+  _getDepthBufferForContext(context){
+    if(this._shadowFrameBuffer && this._context === context){
+      return this._shadowFrameBuffer
+    }
+    this._context = context
+
+    const gl = context
+    const width = this._shadowMapWidth
+    const height = this._shadowMapHeight
+    this._shadowFrameBuffer = gl.createFramebuffer()
+    //this._shadowDepthBuffer = gl.createRenderbuffer()
+    gl.bindFramebuffer(gl.FRAMEBUFFER, this._shadowFrameBuffer)
+    //gl.bindRenderbuffer(gl.RENDERBUFFER, this._shadowDepthBuffer)
+    //gl.renderbufferStorage(gl.RENDERBUFFER, gl.DEPTH_COMPONENT16, width, height)
+
+    this._shadowDepthTexture = gl.createTexture()
+    gl.bindTexture(gl.TEXTURE_2D, this._shadowDepthTexture)
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, width, height, 0, gl.RGBA, gl.UNSIGNED_BYTE, null)
+    //gl.texImage2D(gl.TEXTURE_2D, 0, gl.DEPTH_COMPONENT32F, width, height, 0, gl.DEPTH_COMPONENT, gl.FLOAT, null)
+    //gl.texImage2D(gl.TEXTURE_2D, 0, gl.R32F, width, height, 0, gl.R32F, gl.FLOAT, null)
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR)
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR)
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE)
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE)
+    gl.generateMipmap(gl.TEXTURE_2D)
+
+    gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, this._shadowDepthTexture, 0)
+    //gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT, gl.TEXTURE_2D, this._shadowDepthTexture, 0)
+    gl.drawBuffers([gl.COLOR_ATTACHMENT0])
+    //gl.drawBuffers([gl.NONE])
+
+    //gl.bindRenderbuffer(gl.RENDERBUFFER, null)
+    gl.bindFramebuffer(gl.FRAMEBUFFER, null)
+
+    return this._shadowFrameBuffer
+  }
+
+  /**
+   * @access private
+   * @param {CGRect} viewRect -
+   * @returns {void}
+   */
+  _updateProjectionTransform() {
+    const m = new SCNMatrix4()
+    const left = 0
+    const right = this._shadowMapWidth
+    const top = 0
+    const bottom = this._shadowMapHeight
+    const aspect = this._shadowMapWidth / this._shadowMapHeight
+
+    if(this.type === _LightType.directional){
+      // orthographic
+      // FIXME: use orthographicScale, adjust x/y scale automatically
+      //m.m11 = 2 / (right - left)
+      m.m11 = 0.2
+      //m.m11 = 2 / (right - left)
+      m.m12 = 0
+      m.m13 = 0
+      m.m14 = 0
+      m.m21 = 0
+      //m.m22 = 2 / (top - bottom)
+      m.m22 = 0.2
+      m.m23 = 0
+      m.m24 = 0
+      m.m31 = 0
+      m.m32 = 0
+      m.m33 = -2 / (this.zFar - this.zNear)
+      //m.m33 = -1 / (this.zFar - this.zNear)
+      m.m34 = 0
+      m.m41 = 0
+      m.m42 = 0
+      m.m43 = -(this.zFar + this.zNear) / (this.zFar - this.zNear)
+      //m.m43 = -this.zFar / (this.zFar - this.zNear)
+      m.m44 = 1
+    }else{
+      // perspective
+      let m11 = 1
+      let m22 = 1
+      if(this.yFov <= 0 && this.xFov <= 0){
+        const cot = 1.0 / Math.tan(Math.PI / 6.0)
+        m11 = cot / aspect
+        m22 = cot
+      }else if(this.yFov <= 0){
+        const cot = 1.0 / Math.tan(this.xFov * Math.PI / 360.0)
+        m11 = cot
+        m22 = cot * aspect
+      }else if(this.xFov <= 0){
+        const cot = 1.0 / Math.tan(this.yFov * Math.PI / 360.0)
+        m11 = cot / aspect
+        m22 = cot
+      }else{
+        // FIXME: compare xFov to yFov
+        const cot = 1.0 / Math.tan(this.yFov * Math.PI / 360.0)
+        m11 = cot / aspect
+        m22 = cot
+      }
+
+      m.m11 = m11
+      m.m12 = 0
+      m.m13 = 0
+      m.m14 = 0
+      m.m21 = 0
+      m.m22 = m22
+      m.m23 = 0
+      m.m24 = 0
+      m.m31 = 0
+      m.m32 = 0
+      m.m33 = -(this.zFar + this.zNear) / (this.zFar - this.zNear)
+      m.m34 = -1
+      m.m41 = 0
+      m.m42 = 0
+      m.m43 = -2 * this.zFar * this.zNear / (this.zFar - this.zNear)
+      m.m44 = 0
+    } 
+    this._projectionTransform = m
   }
 }

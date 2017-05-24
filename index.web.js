@@ -227,63 +227,63 @@ module.exports =
 
 	var _SCNActionFade2 = _interopRequireDefault(_SCNActionFade);
 
-	var _SCNActionGroup = __webpack_require__(141);
+	var _SCNActionGroup = __webpack_require__(147);
 
 	var _SCNActionGroup2 = _interopRequireDefault(_SCNActionGroup);
 
-	var _SCNActionHide = __webpack_require__(142);
+	var _SCNActionHide = __webpack_require__(148);
 
 	var _SCNActionHide2 = _interopRequireDefault(_SCNActionHide);
 
-	var _SCNActionJavaScript = __webpack_require__(143);
+	var _SCNActionJavaScript = __webpack_require__(149);
 
 	var _SCNActionJavaScript2 = _interopRequireDefault(_SCNActionJavaScript);
 
-	var _SCNActionMove = __webpack_require__(144);
+	var _SCNActionMove = __webpack_require__(150);
 
 	var _SCNActionMove2 = _interopRequireDefault(_SCNActionMove);
 
-	var _SCNActionPerformSelector = __webpack_require__(145);
+	var _SCNActionPerformSelector = __webpack_require__(151);
 
 	var _SCNActionPerformSelector2 = _interopRequireDefault(_SCNActionPerformSelector);
 
-	var _SCNActionPlaySound = __webpack_require__(146);
+	var _SCNActionPlaySound = __webpack_require__(152);
 
 	var _SCNActionPlaySound2 = _interopRequireDefault(_SCNActionPlaySound);
 
-	var _SCNActionReference = __webpack_require__(147);
+	var _SCNActionReference = __webpack_require__(153);
 
 	var _SCNActionReference2 = _interopRequireDefault(_SCNActionReference);
 
-	var _SCNActionRemove = __webpack_require__(148);
+	var _SCNActionRemove = __webpack_require__(154);
 
 	var _SCNActionRemove2 = _interopRequireDefault(_SCNActionRemove);
 
-	var _SCNActionRepeat = __webpack_require__(149);
+	var _SCNActionRepeat = __webpack_require__(155);
 
 	var _SCNActionRepeat2 = _interopRequireDefault(_SCNActionRepeat);
 
-	var _SCNActionRotate = __webpack_require__(150);
+	var _SCNActionRotate = __webpack_require__(156);
 
 	var _SCNActionRotate2 = _interopRequireDefault(_SCNActionRotate);
 
-	var _SCNActionRunAction = __webpack_require__(151);
+	var _SCNActionRunAction = __webpack_require__(157);
 
 	var _SCNActionRunAction2 = _interopRequireDefault(_SCNActionRunAction);
 
-	var _SCNActionRunBlock = __webpack_require__(152);
+	var _SCNActionRunBlock = __webpack_require__(158);
 
 	var _SCNActionRunBlock2 = _interopRequireDefault(_SCNActionRunBlock);
 
-	var _SCNActionScale = __webpack_require__(153);
+	var _SCNActionScale = __webpack_require__(159);
 
 	var _SCNActionScale2 = _interopRequireDefault(_SCNActionScale);
 
-	var _SCNActionSequence = __webpack_require__(154);
+	var _SCNActionSequence = __webpack_require__(160);
 
 	var _SCNActionSequence2 = _interopRequireDefault(_SCNActionSequence);
 
-	var _SCNActionTimingFunction = __webpack_require__(155);
+	var _SCNActionTimingFunction = __webpack_require__(161);
 
 	var _SCNActionTimingFunction2 = _interopRequireDefault(_SCNActionTimingFunction);
 
@@ -291,7 +291,7 @@ module.exports =
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
-	var _SCNActionWait = __webpack_require__(156);
+	var _SCNActionWait = __webpack_require__(162);
 
 	var _SCNActionWait2 = _interopRequireDefault(_SCNActionWait);
 
@@ -303,7 +303,7 @@ module.exports =
 
 	var _SCNAnimationEvent2 = _interopRequireDefault(_SCNAnimationEvent);
 
-	var _SCNAnimationEventBlock = __webpack_require__(157);
+	var _SCNAnimationEventBlock = __webpack_require__(163);
 
 	var _SCNAnimationEventBlock2 = _interopRequireDefault(_SCNAnimationEventBlock);
 
@@ -311,19 +311,19 @@ module.exports =
 
 	var _SCNAntialiasingMode2 = _interopRequireDefault(_SCNAntialiasingMode);
 
-	var _SCNAudioPlayer = __webpack_require__(139);
+	var _SCNAudioPlayer = __webpack_require__(145);
 
 	var _SCNAudioPlayer2 = _interopRequireDefault(_SCNAudioPlayer);
 
-	var _SCNAudioSource = __webpack_require__(140);
+	var _SCNAudioSource = __webpack_require__(146);
 
 	var _SCNAudioSource2 = _interopRequireDefault(_SCNAudioSource);
 
-	var _SCNBillboardAxis = __webpack_require__(158);
+	var _SCNBillboardAxis = __webpack_require__(164);
 
 	var _SCNBillboardAxis2 = _interopRequireDefault(_SCNBillboardAxis);
 
-	var _SCNBillboardConstraint = __webpack_require__(159);
+	var _SCNBillboardConstraint = __webpack_require__(165);
 
 	var _SCNBillboardConstraint2 = _interopRequireDefault(_SCNBillboardConstraint);
 
@@ -359,19 +359,19 @@ module.exports =
 
 	var _SCNCamera2 = _interopRequireDefault(_SCNCamera);
 
-	var _SCNCapsule = __webpack_require__(160);
+	var _SCNCapsule = __webpack_require__(166);
 
 	var _SCNCapsule2 = _interopRequireDefault(_SCNCapsule);
 
-	var _SCNChamferMode = __webpack_require__(161);
+	var _SCNChamferMode = __webpack_require__(167);
 
 	var _SCNChamferMode2 = _interopRequireDefault(_SCNChamferMode);
 
-	var _SCNCone = __webpack_require__(162);
+	var _SCNCone = __webpack_require__(168);
 
 	var _SCNCone2 = _interopRequireDefault(_SCNCone);
 
-	var _SCNConstraint = __webpack_require__(133);
+	var _SCNConstraint = __webpack_require__(139);
 
 	var _SCNConstraint2 = _interopRequireDefault(_SCNConstraint);
 
@@ -379,7 +379,7 @@ module.exports =
 
 	var _SCNCullMode2 = _interopRequireDefault(_SCNCullMode);
 
-	var _SCNCylinder = __webpack_require__(163);
+	var _SCNCylinder = __webpack_require__(169);
 
 	var _SCNCylinder2 = _interopRequireDefault(_SCNCylinder);
 
@@ -387,7 +387,7 @@ module.exports =
 
 	var _SCNDebugOptions2 = _interopRequireDefault(_SCNDebugOptions);
 
-	var _SCNFieldForceEvaluator = __webpack_require__(137);
+	var _SCNFieldForceEvaluator = __webpack_require__(143);
 
 	var _SCNFieldForceEvaluator2 = _interopRequireDefault(_SCNFieldForceEvaluator);
 
@@ -395,7 +395,7 @@ module.exports =
 
 	var _SCNFilterMode2 = _interopRequireDefault(_SCNFilterMode);
 
-	var _SCNFloor = __webpack_require__(164);
+	var _SCNFloor = __webpack_require__(170);
 
 	var _SCNFloor2 = _interopRequireDefault(_SCNFloor);
 
@@ -423,11 +423,11 @@ module.exports =
 
 	var _SCNHitTestResult2 = _interopRequireDefault(_SCNHitTestResult);
 
-	var _SCNIKConstraint = __webpack_require__(165);
+	var _SCNIKConstraint = __webpack_require__(171);
 
 	var _SCNIKConstraint2 = _interopRequireDefault(_SCNIKConstraint);
 
-	var _SCNLayer = __webpack_require__(166);
+	var _SCNLayer = __webpack_require__(172);
 
 	var _SCNLayer2 = _interopRequireDefault(_SCNLayer);
 
@@ -439,7 +439,7 @@ module.exports =
 
 	var _SCNLight2 = _interopRequireDefault(_SCNLight);
 
-	var _SCNLookAtConstraint = __webpack_require__(167);
+	var _SCNLookAtConstraint = __webpack_require__(173);
 
 	var _SCNLookAtConstraint2 = _interopRequireDefault(_SCNLookAtConstraint);
 
@@ -455,31 +455,31 @@ module.exports =
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNMatrix4EqualToMatrix = __webpack_require__(168);
+	var _SCNMatrix4EqualToMatrix = __webpack_require__(174);
 
 	var _SCNMatrix4EqualToMatrix2 = _interopRequireDefault(_SCNMatrix4EqualToMatrix);
 
-	var _SCNMatrix4FromGLKMatrix = __webpack_require__(169);
+	var _SCNMatrix4FromGLKMatrix = __webpack_require__(175);
 
 	var _SCNMatrix4FromGLKMatrix2 = _interopRequireDefault(_SCNMatrix4FromGLKMatrix);
 
-	var _SCNMatrix4FromMat = __webpack_require__(170);
+	var _SCNMatrix4FromMat = __webpack_require__(176);
 
 	var _SCNMatrix4FromMat2 = _interopRequireDefault(_SCNMatrix4FromMat);
 
-	var _SCNMatrix4Invert = __webpack_require__(171);
+	var _SCNMatrix4Invert = __webpack_require__(177);
 
 	var _SCNMatrix4Invert2 = _interopRequireDefault(_SCNMatrix4Invert);
 
-	var _SCNMatrix4IsIdentity = __webpack_require__(172);
+	var _SCNMatrix4IsIdentity = __webpack_require__(178);
 
 	var _SCNMatrix4IsIdentity2 = _interopRequireDefault(_SCNMatrix4IsIdentity);
 
-	var _SCNMatrix4MakeRotation = __webpack_require__(173);
+	var _SCNMatrix4MakeRotation = __webpack_require__(179);
 
 	var _SCNMatrix4MakeRotation2 = _interopRequireDefault(_SCNMatrix4MakeRotation);
 
-	var _SCNMatrix4MakeScale = __webpack_require__(174);
+	var _SCNMatrix4MakeScale = __webpack_require__(138);
 
 	var _SCNMatrix4MakeScale2 = _interopRequireDefault(_SCNMatrix4MakeScale);
 
@@ -487,39 +487,39 @@ module.exports =
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
-	var _SCNMatrix4Mult = __webpack_require__(175);
+	var _SCNMatrix4Mult = __webpack_require__(180);
 
 	var _SCNMatrix4Mult2 = _interopRequireDefault(_SCNMatrix4Mult);
 
-	var _SCNMatrix4Rotate = __webpack_require__(176);
+	var _SCNMatrix4Rotate = __webpack_require__(181);
 
 	var _SCNMatrix4Rotate2 = _interopRequireDefault(_SCNMatrix4Rotate);
 
-	var _SCNMatrix4Scale = __webpack_require__(177);
+	var _SCNMatrix4Scale = __webpack_require__(182);
 
 	var _SCNMatrix4Scale2 = _interopRequireDefault(_SCNMatrix4Scale);
 
-	var _SCNMatrix4ToGLKMatrix = __webpack_require__(178);
+	var _SCNMatrix4ToGLKMatrix = __webpack_require__(183);
 
 	var _SCNMatrix4ToGLKMatrix2 = _interopRequireDefault(_SCNMatrix4ToGLKMatrix);
 
-	var _SCNMatrix4ToMat = __webpack_require__(179);
+	var _SCNMatrix4ToMat = __webpack_require__(184);
 
 	var _SCNMatrix4ToMat2 = _interopRequireDefault(_SCNMatrix4ToMat);
 
-	var _SCNMatrix4Translate = __webpack_require__(180);
+	var _SCNMatrix4Translate = __webpack_require__(185);
 
 	var _SCNMatrix4Translate2 = _interopRequireDefault(_SCNMatrix4Translate);
 
-	var _SCNMorpher = __webpack_require__(130);
+	var _SCNMorpher = __webpack_require__(135);
 
 	var _SCNMorpher2 = _interopRequireDefault(_SCNMorpher);
 
-	var _SCNMorpherCalculationMode = __webpack_require__(131);
+	var _SCNMorpherCalculationMode = __webpack_require__(136);
 
 	var _SCNMorpherCalculationMode2 = _interopRequireDefault(_SCNMorpherCalculationMode);
 
-	var _SCNMovabilityHint = __webpack_require__(134);
+	var _SCNMovabilityHint = __webpack_require__(140);
 
 	var _SCNMovabilityHint2 = _interopRequireDefault(_SCNMovabilityHint);
 
@@ -527,7 +527,7 @@ module.exports =
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNNodeRendererDelegate = __webpack_require__(135);
+	var _SCNNodeRendererDelegate = __webpack_require__(141);
 
 	var _SCNNodeRendererDelegate2 = _interopRequireDefault(_SCNNodeRendererDelegate);
 
@@ -587,7 +587,7 @@ module.exports =
 
 	var _SCNParticleSystem2 = _interopRequireDefault(_SCNParticleSystem);
 
-	var _SCNPhysicsBallSocketJoint = __webpack_require__(181);
+	var _SCNPhysicsBallSocketJoint = __webpack_require__(186);
 
 	var _SCNPhysicsBallSocketJoint2 = _interopRequireDefault(_SCNPhysicsBallSocketJoint);
 
@@ -603,7 +603,7 @@ module.exports =
 
 	var _SCNPhysicsBodyType2 = _interopRequireDefault(_SCNPhysicsBodyType);
 
-	var _SCNPhysicsCollisionCategory = __webpack_require__(182);
+	var _SCNPhysicsCollisionCategory = __webpack_require__(187);
 
 	var _SCNPhysicsCollisionCategory2 = _interopRequireDefault(_SCNPhysicsCollisionCategory);
 
@@ -615,15 +615,15 @@ module.exports =
 
 	var _SCNPhysicsContactDelegate2 = _interopRequireDefault(_SCNPhysicsContactDelegate);
 
-	var _SCNPhysicsField = __webpack_require__(136);
+	var _SCNPhysicsField = __webpack_require__(142);
 
 	var _SCNPhysicsField2 = _interopRequireDefault(_SCNPhysicsField);
 
-	var _SCNPhysicsFieldScope = __webpack_require__(138);
+	var _SCNPhysicsFieldScope = __webpack_require__(144);
 
 	var _SCNPhysicsFieldScope2 = _interopRequireDefault(_SCNPhysicsFieldScope);
 
-	var _SCNPhysicsHingeJoint = __webpack_require__(183);
+	var _SCNPhysicsHingeJoint = __webpack_require__(188);
 
 	var _SCNPhysicsHingeJoint2 = _interopRequireDefault(_SCNPhysicsHingeJoint);
 
@@ -631,15 +631,15 @@ module.exports =
 
 	var _SCNPhysicsShape2 = _interopRequireDefault(_SCNPhysicsShape);
 
-	var _SCNPhysicsSliderJoint = __webpack_require__(184);
+	var _SCNPhysicsSliderJoint = __webpack_require__(189);
 
 	var _SCNPhysicsSliderJoint2 = _interopRequireDefault(_SCNPhysicsSliderJoint);
 
-	var _SCNPhysicsVehicle = __webpack_require__(185);
+	var _SCNPhysicsVehicle = __webpack_require__(190);
 
 	var _SCNPhysicsVehicle2 = _interopRequireDefault(_SCNPhysicsVehicle);
 
-	var _SCNPhysicsVehicleWheel = __webpack_require__(186);
+	var _SCNPhysicsVehicleWheel = __webpack_require__(191);
 
 	var _SCNPhysicsVehicleWheel2 = _interopRequireDefault(_SCNPhysicsVehicleWheel);
 
@@ -647,7 +647,7 @@ module.exports =
 
 	var _SCNPhysicsWorld2 = _interopRequireDefault(_SCNPhysicsWorld);
 
-	var _SCNPlane = __webpack_require__(187);
+	var _SCNPlane = __webpack_require__(192);
 
 	var _SCNPlane2 = _interopRequireDefault(_SCNPlane);
 
@@ -659,7 +659,7 @@ module.exports =
 
 	var _SCNProgramDelegate2 = _interopRequireDefault(_SCNProgramDelegate);
 
-	var _SCNPyramid = __webpack_require__(188);
+	var _SCNPyramid = __webpack_require__(193);
 
 	var _SCNPyramid2 = _interopRequireDefault(_SCNPyramid);
 
@@ -667,11 +667,11 @@ module.exports =
 
 	var _SCNQuaternion2 = _interopRequireDefault(_SCNQuaternion);
 
-	var _SCNReferenceLoadingPolicy = __webpack_require__(189);
+	var _SCNReferenceLoadingPolicy = __webpack_require__(194);
 
 	var _SCNReferenceLoadingPolicy2 = _interopRequireDefault(_SCNReferenceLoadingPolicy);
 
-	var _SCNReferenceNode = __webpack_require__(190);
+	var _SCNReferenceNode = __webpack_require__(195);
 
 	var _SCNReferenceNode2 = _interopRequireDefault(_SCNReferenceNode);
 
@@ -719,27 +719,27 @@ module.exports =
 
 	var _SCNShadable2 = _interopRequireDefault(_SCNShadable);
 
-	var _SCNShadableHelper = __webpack_require__(191);
+	var _SCNShadableHelper = __webpack_require__(196);
 
 	var _SCNShadableHelper2 = _interopRequireDefault(_SCNShadableHelper);
 
-	var _SCNShaderModifierEntryPoint = __webpack_require__(192);
+	var _SCNShaderModifierEntryPoint = __webpack_require__(197);
 
 	var _SCNShaderModifierEntryPoint2 = _interopRequireDefault(_SCNShaderModifierEntryPoint);
 
-	var _SCNShadowMode = __webpack_require__(129);
+	var _SCNShadowMode = __webpack_require__(134);
 
 	var _SCNShadowMode2 = _interopRequireDefault(_SCNShadowMode);
 
-	var _SCNShape = __webpack_require__(193);
+	var _SCNShape = __webpack_require__(198);
 
 	var _SCNShape2 = _interopRequireDefault(_SCNShape);
 
-	var _SCNSkinner = __webpack_require__(132);
+	var _SCNSkinner = __webpack_require__(137);
 
 	var _SCNSkinner2 = _interopRequireDefault(_SCNSkinner);
 
-	var _SCNSphere = __webpack_require__(194);
+	var _SCNSphere = __webpack_require__(199);
 
 	var _SCNSphere2 = _interopRequireDefault(_SCNSphere);
 
@@ -751,11 +751,11 @@ module.exports =
 
 	var _SCNTechniqueSupport2 = _interopRequireDefault(_SCNTechniqueSupport);
 
-	var _SCNText = __webpack_require__(195);
+	var _SCNText = __webpack_require__(200);
 
 	var _SCNText2 = _interopRequireDefault(_SCNText);
 
-	var _SCNTorus = __webpack_require__(196);
+	var _SCNTorus = __webpack_require__(201);
 
 	var _SCNTorus2 = _interopRequireDefault(_SCNTorus);
 
@@ -763,7 +763,7 @@ module.exports =
 
 	var _SCNTransaction2 = _interopRequireDefault(_SCNTransaction);
 
-	var _SCNTransformConstraint = __webpack_require__(197);
+	var _SCNTransformConstraint = __webpack_require__(202);
 
 	var _SCNTransformConstraint2 = _interopRequireDefault(_SCNTransformConstraint);
 
@@ -771,7 +771,7 @@ module.exports =
 
 	var _SCNTransparencyMode2 = _interopRequireDefault(_SCNTransparencyMode);
 
-	var _SCNTube = __webpack_require__(198);
+	var _SCNTube = __webpack_require__(203);
 
 	var _SCNTube2 = _interopRequireDefault(_SCNTube);
 
@@ -779,31 +779,31 @@ module.exports =
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3EqualToVector = __webpack_require__(199);
+	var _SCNVector3EqualToVector = __webpack_require__(204);
 
 	var _SCNVector3EqualToVector2 = _interopRequireDefault(_SCNVector3EqualToVector);
 
-	var _SCNVector3FromFloat = __webpack_require__(200);
+	var _SCNVector3FromFloat = __webpack_require__(205);
 
 	var _SCNVector3FromFloat2 = _interopRequireDefault(_SCNVector3FromFloat);
 
-	var _SCNVector3FromGLKVector = __webpack_require__(201);
+	var _SCNVector3FromGLKVector = __webpack_require__(206);
 
 	var _SCNVector3FromGLKVector2 = _interopRequireDefault(_SCNVector3FromGLKVector);
 
-	var _SCNVector3Make = __webpack_require__(202);
+	var _SCNVector3Make = __webpack_require__(207);
 
 	var _SCNVector3Make2 = _interopRequireDefault(_SCNVector3Make);
 
-	var _SCNVector3ToFloat = __webpack_require__(203);
+	var _SCNVector3ToFloat = __webpack_require__(208);
 
 	var _SCNVector3ToFloat2 = _interopRequireDefault(_SCNVector3ToFloat);
 
-	var _SCNVector3ToGLKVector = __webpack_require__(204);
+	var _SCNVector3ToGLKVector = __webpack_require__(209);
 
 	var _SCNVector3ToGLKVector2 = _interopRequireDefault(_SCNVector3ToGLKVector);
 
-	var _SCNVector3Zero = __webpack_require__(205);
+	var _SCNVector3Zero = __webpack_require__(210);
 
 	var _SCNVector3Zero2 = _interopRequireDefault(_SCNVector3Zero);
 
@@ -811,31 +811,31 @@ module.exports =
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
-	var _SCNVector4EqualToVector = __webpack_require__(206);
+	var _SCNVector4EqualToVector = __webpack_require__(211);
 
 	var _SCNVector4EqualToVector2 = _interopRequireDefault(_SCNVector4EqualToVector);
 
-	var _SCNVector4FromFloat = __webpack_require__(207);
+	var _SCNVector4FromFloat = __webpack_require__(212);
 
 	var _SCNVector4FromFloat2 = _interopRequireDefault(_SCNVector4FromFloat);
 
-	var _SCNVector4FromGLKVector = __webpack_require__(208);
+	var _SCNVector4FromGLKVector = __webpack_require__(213);
 
 	var _SCNVector4FromGLKVector2 = _interopRequireDefault(_SCNVector4FromGLKVector);
 
-	var _SCNVector4Make = __webpack_require__(209);
+	var _SCNVector4Make = __webpack_require__(214);
 
 	var _SCNVector4Make2 = _interopRequireDefault(_SCNVector4Make);
 
-	var _SCNVector4ToFloat = __webpack_require__(210);
+	var _SCNVector4ToFloat = __webpack_require__(215);
 
 	var _SCNVector4ToFloat2 = _interopRequireDefault(_SCNVector4ToFloat);
 
-	var _SCNVector4ToGLKVector = __webpack_require__(211);
+	var _SCNVector4ToGLKVector = __webpack_require__(216);
 
 	var _SCNVector4ToGLKVector2 = _interopRequireDefault(_SCNVector4ToGLKVector);
 
-	var _SCNView = __webpack_require__(212);
+	var _SCNView = __webpack_require__(217);
 
 	var _SCNView2 = _interopRequireDefault(_SCNView);
 
@@ -843,15 +843,15 @@ module.exports =
 
 	var _SCNWrapMode2 = _interopRequireDefault(_SCNWrapMode);
 
-	var _SKAction = __webpack_require__(213);
+	var _SKAction = __webpack_require__(218);
 
 	var _SKAction2 = _interopRequireDefault(_SKAction);
 
-	var _SKActionTimingMode = __webpack_require__(214);
+	var _SKActionTimingMode = __webpack_require__(219);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
-	var _SKBlendMode = __webpack_require__(215);
+	var _SKBlendMode = __webpack_require__(130);
 
 	var _SKBlendMode2 = _interopRequireDefault(_SKBlendMode);
 
@@ -859,63 +859,63 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SKEffectNode = __webpack_require__(216);
+	var _SKEffectNode = __webpack_require__(220);
 
 	var _SKEffectNode2 = _interopRequireDefault(_SKEffectNode);
 
-	var _SKFade = __webpack_require__(218);
+	var _SKFade = __webpack_require__(221);
 
 	var _SKFade2 = _interopRequireDefault(_SKFade);
 
-	var _SKGroup = __webpack_require__(219);
+	var _SKGroup = __webpack_require__(222);
 
 	var _SKGroup2 = _interopRequireDefault(_SKGroup);
 
-	var _SKLabelHorizontalAlignmentMode = __webpack_require__(220);
+	var _SKLabelHorizontalAlignmentMode = __webpack_require__(223);
 
 	var _SKLabelHorizontalAlignmentMode2 = _interopRequireDefault(_SKLabelHorizontalAlignmentMode);
 
-	var _SKLabelNode = __webpack_require__(221);
+	var _SKLabelNode = __webpack_require__(224);
 
 	var _SKLabelNode2 = _interopRequireDefault(_SKLabelNode);
 
-	var _SKLabelVerticalAlignmentMode = __webpack_require__(222);
+	var _SKLabelVerticalAlignmentMode = __webpack_require__(225);
 
 	var _SKLabelVerticalAlignmentMode2 = _interopRequireDefault(_SKLabelVerticalAlignmentMode);
 
-	var _SKNode = __webpack_require__(217);
+	var _SKNode = __webpack_require__(131);
 
 	var _SKNode2 = _interopRequireDefault(_SKNode);
 
-	var _SKScale = __webpack_require__(223);
+	var _SKScale = __webpack_require__(226);
 
 	var _SKScale2 = _interopRequireDefault(_SKScale);
 
-	var _SKScene = __webpack_require__(224);
+	var _SKScene = __webpack_require__(227);
 
 	var _SKScene2 = _interopRequireDefault(_SKScene);
 
-	var _SKSceneScaleMode = __webpack_require__(225);
+	var _SKSceneScaleMode = __webpack_require__(228);
 
 	var _SKSceneScaleMode2 = _interopRequireDefault(_SKSceneScaleMode);
 
-	var _SKSequence = __webpack_require__(226);
+	var _SKSequence = __webpack_require__(229);
 
 	var _SKSequence2 = _interopRequireDefault(_SKSequence);
 
-	var _SKShapeNode = __webpack_require__(227);
+	var _SKShapeNode = __webpack_require__(230);
 
 	var _SKShapeNode2 = _interopRequireDefault(_SKShapeNode);
 
-	var _SKSpriteNode = __webpack_require__(228);
+	var _SKSpriteNode = __webpack_require__(129);
 
 	var _SKSpriteNode2 = _interopRequireDefault(_SKSpriteNode);
 
-	var _SKTexture = __webpack_require__(229);
+	var _SKTexture = __webpack_require__(132);
 
 	var _SKTexture2 = _interopRequireDefault(_SKTexture);
 
-	var _SKTextureFilteringMode = __webpack_require__(230);
+	var _SKTextureFilteringMode = __webpack_require__(133);
 
 	var _SKTextureFilteringMode2 = _interopRequireDefault(_SKTextureFilteringMode);
 
@@ -20646,17 +20646,21 @@ module.exports =
 
 	var _SCNCamera2 = _interopRequireDefault(_SCNCamera);
 
-	var _SCNMorpher = __webpack_require__(130);
+	var _SCNMorpher = __webpack_require__(135);
 
 	var _SCNMorpher2 = _interopRequireDefault(_SCNMorpher);
 
-	var _SCNSkinner = __webpack_require__(132);
+	var _SCNSkinner = __webpack_require__(137);
 
 	var _SCNSkinner2 = _interopRequireDefault(_SCNSkinner);
 
 	var _SCNMatrix = __webpack_require__(44);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
+
+	var _SCNMatrix4MakeScale = __webpack_require__(138);
+
+	var _SCNMatrix4MakeScale2 = _interopRequireDefault(_SCNMatrix4MakeScale);
 
 	var _SCNMatrix4MakeTranslation = __webpack_require__(76);
 
@@ -20674,15 +20678,15 @@ module.exports =
 
 	var _SCNQuaternion2 = _interopRequireDefault(_SCNQuaternion);
 
-	var _SCNConstraint = __webpack_require__(133);
+	var _SCNConstraint = __webpack_require__(139);
 
 	var _SCNConstraint2 = _interopRequireDefault(_SCNConstraint);
 
-	var _SCNMovabilityHint = __webpack_require__(134);
+	var _SCNMovabilityHint = __webpack_require__(140);
 
 	var _SCNMovabilityHint2 = _interopRequireDefault(_SCNMovabilityHint);
 
-	var _SCNNodeRendererDelegate = __webpack_require__(135);
+	var _SCNNodeRendererDelegate = __webpack_require__(141);
 
 	var _SCNNodeRendererDelegate2 = _interopRequireDefault(_SCNNodeRendererDelegate);
 
@@ -20694,7 +20698,7 @@ module.exports =
 
 	var _SCNPhysicsBody2 = _interopRequireDefault(_SCNPhysicsBody);
 
-	var _SCNPhysicsField = __webpack_require__(136);
+	var _SCNPhysicsField = __webpack_require__(142);
 
 	var _SCNPhysicsField2 = _interopRequireDefault(_SCNPhysicsField);
 
@@ -20706,7 +20710,7 @@ module.exports =
 
 	var _SCNTransaction2 = _interopRequireDefault(_SCNTransaction);
 
-	var _SCNAudioPlayer = __webpack_require__(139);
+	var _SCNAudioPlayer = __webpack_require__(145);
 
 	var _SCNAudioPlayer2 = _interopRequireDefault(_SCNAudioPlayer);
 
@@ -22351,16 +22355,9 @@ module.exports =
 	        _get(SCNNode.prototype.__proto__ || Object.getPrototypeOf(SCNNode.prototype), 'setValueForKey', this).call(this, value, key);
 	      }
 	    }
-
-	    //setValueForKeyPath(value, keyPath, usePresentation = true) {
-
 	  }, {
 	    key: 'setValueForKeyPath',
 	    value: function setValueForKeyPath(value, keyPath) {
-	      //let target = this
-	      //if(usePresentation && this._presentation){
-	      //  target = this._presentation
-	      //}
 	      var target = this._presentation ? this._presentation : this;
 
 	      var paths = keyPath.split('.');
@@ -22403,8 +22400,6 @@ module.exports =
 	            return;
 	          case 'scale':
 	            {
-	              //const rate = value / target._scale.length()
-	              //target._scale = target._scale.mul(rate)
 	              target._scale.x = value.x;
 	              target._scale.y = value.y;
 	              target._scale.z = value.z;
@@ -22474,7 +22469,6 @@ module.exports =
 	        if (target.morpher === null) {
 	          throw new Error('target morpher === null');
 	        }
-	        //target.morpher.setValueForKeyPath(value, restPath, usePresentation)
 	        target.morpher.setValueForKeyPath(value, restPath);
 	        return;
 	      }
@@ -23036,6 +23030,26 @@ module.exports =
 	      var proj = this.camera.projectionTransform;
 	      var view = this.viewTransform;
 	      return view.mult(proj);
+	    }
+	  }, {
+	    key: 'lightViewProjectionTransform',
+	    get: function get() {
+	      if (this.light === null) {
+	        return null;
+	      }
+	      var proj = this.light._projectionTransform;
+	      var view = this.viewTransform;
+	      return view.mult(proj);
+	    }
+	  }, {
+	    key: 'shadowProjectionTransform',
+	    get: function get() {
+	      if (this.light === null) {
+	        return null;
+	      }
+	      var vp = this.lightViewProjectionTransform;
+	      var scale = (0, _SCNMatrix4MakeTranslation2.default)(1.0, 1.0, 0.0).scale(0.5, 0.5, 1.0); // [-1, 1] => [0, 1]
+	      return vp.mult(scale);
 	    }
 	  }], [{
 	    key: '_loadAnimationArray',
@@ -23806,6 +23820,7 @@ module.exports =
 	    _this._vertexArrayObjects = null;
 	    _this._materialBuffer = null;
 	    //this._textureFlagBuffer = null
+	    _this._shadowVAO = null;
 	    _this._hitTestVAO = null;
 
 	    // Working with Subdivision Surfaces
@@ -28163,6 +28178,10 @@ module.exports =
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
+	var _SCNMatrix = __webpack_require__(44);
+
+	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
+
 	var _CGSize = __webpack_require__(9);
 
 	var _CGSize2 = _interopRequireDefault(_CGSize);
@@ -28171,7 +28190,7 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SCNShadowMode = __webpack_require__(129);
+	var _SCNShadowMode = __webpack_require__(134);
 
 	var _SCNShadowMode2 = _interopRequireDefault(_SCNShadowMode);
 
@@ -28432,6 +28451,12 @@ module.exports =
 	     * @type {?string}
 	     */
 	    _this._entityID = null;
+
+	    _this._context = null;
+	    _this._shadowFrameBuffer = null;
+	    //this._shadowDepthBuffer = null
+	    _this._shadowDepthTexture = null;
+	    _this._projectionTransform = null;
 	    return _this;
 	  }
 
@@ -28493,6 +28518,127 @@ module.exports =
 	     */
 
 	  }, {
+	    key: '_getDepthBufferForContext',
+	    value: function _getDepthBufferForContext(context) {
+	      if (this._shadowFrameBuffer && this._context === context) {
+	        return this._shadowFrameBuffer;
+	      }
+	      this._context = context;
+
+	      var gl = context;
+	      var width = this._shadowMapWidth;
+	      var height = this._shadowMapHeight;
+	      this._shadowFrameBuffer = gl.createFramebuffer();
+	      //this._shadowDepthBuffer = gl.createRenderbuffer()
+	      gl.bindFramebuffer(gl.FRAMEBUFFER, this._shadowFrameBuffer);
+	      //gl.bindRenderbuffer(gl.RENDERBUFFER, this._shadowDepthBuffer)
+	      //gl.renderbufferStorage(gl.RENDERBUFFER, gl.DEPTH_COMPONENT16, width, height)
+
+	      this._shadowDepthTexture = gl.createTexture();
+	      gl.bindTexture(gl.TEXTURE_2D, this._shadowDepthTexture);
+	      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, width, height, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
+	      //gl.texImage2D(gl.TEXTURE_2D, 0, gl.DEPTH_COMPONENT32F, width, height, 0, gl.DEPTH_COMPONENT, gl.FLOAT, null)
+	      //gl.texImage2D(gl.TEXTURE_2D, 0, gl.R32F, width, height, 0, gl.R32F, gl.FLOAT, null)
+	      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+	      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+	      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+	      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+	      gl.generateMipmap(gl.TEXTURE_2D);
+
+	      gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, this._shadowDepthTexture, 0);
+	      //gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT, gl.TEXTURE_2D, this._shadowDepthTexture, 0)
+	      gl.drawBuffers([gl.COLOR_ATTACHMENT0]);
+	      //gl.drawBuffers([gl.NONE])
+
+	      //gl.bindRenderbuffer(gl.RENDERBUFFER, null)
+	      gl.bindFramebuffer(gl.FRAMEBUFFER, null);
+
+	      return this._shadowFrameBuffer;
+	    }
+
+	    /**
+	     * @access private
+	     * @param {CGRect} viewRect -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_updateProjectionTransform',
+	    value: function _updateProjectionTransform() {
+	      var m = new _SCNMatrix2.default();
+	      var left = 0;
+	      var right = this._shadowMapWidth;
+	      var top = 0;
+	      var bottom = this._shadowMapHeight;
+	      var aspect = this._shadowMapWidth / this._shadowMapHeight;
+
+	      if (this.type === _LightType.directional) {
+	        // orthographic
+	        // FIXME: use orthographicScale, adjust x/y scale automatically
+	        //m.m11 = 2 / (right - left)
+	        m.m11 = 0.2;
+	        //m.m11 = 2 / (right - left)
+	        m.m12 = 0;
+	        m.m13 = 0;
+	        m.m14 = 0;
+	        m.m21 = 0;
+	        //m.m22 = 2 / (top - bottom)
+	        m.m22 = 0.2;
+	        m.m23 = 0;
+	        m.m24 = 0;
+	        m.m31 = 0;
+	        m.m32 = 0;
+	        m.m33 = -2 / (this.zFar - this.zNear);
+	        //m.m33 = -1 / (this.zFar - this.zNear)
+	        m.m34 = 0;
+	        m.m41 = 0;
+	        m.m42 = 0;
+	        m.m43 = -(this.zFar + this.zNear) / (this.zFar - this.zNear);
+	        //m.m43 = -this.zFar / (this.zFar - this.zNear)
+	        m.m44 = 1;
+	      } else {
+	        // perspective
+	        var m11 = 1;
+	        var m22 = 1;
+	        if (this.yFov <= 0 && this.xFov <= 0) {
+	          var cot = 1.0 / Math.tan(Math.PI / 6.0);
+	          m11 = cot / aspect;
+	          m22 = cot;
+	        } else if (this.yFov <= 0) {
+	          var _cot = 1.0 / Math.tan(this.xFov * Math.PI / 360.0);
+	          m11 = _cot;
+	          m22 = _cot * aspect;
+	        } else if (this.xFov <= 0) {
+	          var _cot2 = 1.0 / Math.tan(this.yFov * Math.PI / 360.0);
+	          m11 = _cot2 / aspect;
+	          m22 = _cot2;
+	        } else {
+	          // FIXME: compare xFov to yFov
+	          var _cot3 = 1.0 / Math.tan(this.yFov * Math.PI / 360.0);
+	          m11 = _cot3 / aspect;
+	          m22 = _cot3;
+	        }
+
+	        m.m11 = m11;
+	        m.m12 = 0;
+	        m.m13 = 0;
+	        m.m14 = 0;
+	        m.m21 = 0;
+	        m.m22 = m22;
+	        m.m23 = 0;
+	        m.m24 = 0;
+	        m.m31 = 0;
+	        m.m32 = 0;
+	        m.m33 = -(this.zFar + this.zNear) / (this.zFar - this.zNear);
+	        m.m34 = -1;
+	        m.m41 = 0;
+	        m.m42 = 0;
+	        m.m43 = -2 * this.zFar * this.zNear / (this.zFar - this.zNear);
+	        m.m44 = 0;
+	      }
+	      this._projectionTransform = m;
+	    }
+	  }, {
 	    key: 'gobo',
 	    get: function get() {
 	      return this._gobo;
@@ -28510,6 +28656,24 @@ module.exports =
 	     * @see https://developer.apple.com/reference/scenekit/scnlight.lighttype
 	     */
 
+	  }, {
+	    key: '_shadowMapWidth',
+	    get: function get() {
+	      if (this.shadowMapSize.width > 0) {
+	        return this.shadowMapSize.width;
+	      }
+	      // FIXME: adjust shadowMapSize
+	      return 1024;
+	    }
+	  }, {
+	    key: '_shadowMapHeight',
+	    get: function get() {
+	      if (this.shadowMapSize.height > 0) {
+	        return this.shadowMapSize.height;
+	      }
+	      // FIXME: adjust shadowMapSize
+	      return 1024;
+	    }
 	  }], [{
 	    key: 'LightType',
 	    get: function get() {
@@ -28851,6 +29015,14 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
+	var _SKSpriteNode = __webpack_require__(129);
+
+	var _SKSpriteNode2 = _interopRequireDefault(_SKSpriteNode);
+
+	var _SKTexture = __webpack_require__(132);
+
+	var _SKTexture2 = _interopRequireDefault(_SKTexture);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
@@ -28865,11 +29037,13 @@ module.exports =
 	 * @access private
 	 * @type {string}
 	 */
-	var _defaultVertexShader = '#version 300 es\n  precision mediump float;\n\n  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__\n  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__\n  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__\n  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__\n  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__\n  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__\n\n  layout (std140) uniform cameraUniform {\n    vec4 position;\n    mat4 viewTransform;\n    mat4 viewProjectionTransform;\n  } camera;\n\n  layout (std140) uniform materialUniform {\n    vec4 ambient;\n    vec4 diffuse;\n    vec4 specular;\n    vec4 emission;\n    float shininess;\n  } material;\n\n  struct AmbientLight {\n    vec4 color;\n  };\n\n  struct DirectionalLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct OmniLight {\n    vec4 color;\n    vec4 position; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct SpotLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct IESLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct ProbeLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  layout (std140) uniform lightUniform {\n    __LIGHT_DEFINITION__\n  } light;\n  __VS_LIGHT_VARS__\n\n  layout (std140) uniform fogUniform {\n    vec4 color;\n    float startDistance;\n    float endDistance;\n    float densityExponent;\n  } fog;\n\n  //uniform mat3x4[255] skinningJoints;\n  uniform vec4[765] skinningJoints;\n  uniform int numSkinningJoints;\n\n  in vec3 position;\n  in vec3 normal;\n  //in vec3 tangent;\n  in vec2 texcoord;\n  in vec4 boneIndices;\n  in vec4 boneWeights;\n\n  out vec3 v_position;\n  out vec3 v_normal;\n  //out vec3 v_tangent;\n  //out vec3 v_bitangent;\n  out vec2 v_texcoord;\n  out vec4 v_color;\n  out vec3 v_eye;\n  out float v_fogFactor;\n\n  void main() {\n    vec3 pos = vec3(0, 0, 0);\n    vec3 nom = vec3(0, 0, 0);\n    vec3 tangent = vec3(1, 0, 0); // DEBUG\n    vec3 tng = vec3(0, 0, 0);\n\n    if(numSkinningJoints > 0){\n      for(int i=0; i<numSkinningJoints; i++){\n        float weight = boneWeights[i];\n        if(int(boneIndices[i]) < 0){\n          continue;\n        }\n        int idx = int(boneIndices[i]) * 3;\n        mat4 jointMatrix = transpose(mat4(skinningJoints[idx],\n                                          skinningJoints[idx+1],\n                                          skinningJoints[idx+2],\n                                          vec4(0, 0, 0, 1)));\n        pos += (jointMatrix * vec4(position, 1.0)).xyz * weight;\n        nom += (mat3(jointMatrix) * normal) * weight;\n        tng += (mat3(jointMatrix) * tangent) * weight;\n      }\n    }else{\n      mat4 jointMatrix = transpose(mat4(skinningJoints[0],\n                                        skinningJoints[1],\n                                        skinningJoints[2],\n                                        vec4(0, 0, 0, 1)));\n      pos = (jointMatrix * vec4(position, 1.0)).xyz;\n      nom = mat3(jointMatrix) * normal;\n      tng += mat3(jointMatrix) * tangent;\n    }\n    v_position = pos;\n    v_normal = nom;\n    vec3 btng = cross(nom, tng);\n\n    //vec3 viewPos = vec3(-viewTransform[3][0], -viewTransform[3][1], -viewTransform[3][2]);\n    //vec3 viewPos = vec3(-viewTransform[0][3], -viewTransform[1][3], -viewTransform[2][3]);\n    vec3 viewVec = camera.position.xyz - pos;\n    //v_eye.x = dot(viewVec, tng);\n    //v_eye.y = dot(viewVec, btng);\n    //v_eye.z = dot(viewVec, nom);\n    v_eye = viewVec;\n\n    v_color = material.emission;\n    int numLights = 0;\n\n    __VS_LIGHTING__\n\n    float distance = length(viewVec);\n    v_fogFactor = clamp((distance - fog.startDistance) / (fog.endDistance - fog.startDistance), 0.0, 1.0);\n\n    v_texcoord = texcoord;\n    gl_Position = camera.viewProjectionTransform * vec4(pos, 1.0);\n  }\n';
+	var _defaultVertexShader = '#version 300 es\n  precision mediump float;\n\n  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__\n  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__\n  #define NUM_DIRECTIONAL_SHADOW_LIGHTS __NUM_DIRECTIONAL_SHADOW_LIGHTS__\n  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__\n  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__\n  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__\n  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__\n\n  layout (std140) uniform cameraUniform {\n    vec4 position;\n    mat4 viewTransform;\n    mat4 viewProjectionTransform;\n  } camera;\n\n  layout (std140) uniform materialUniform {\n    vec4 ambient;\n    vec4 diffuse;\n    vec4 specular;\n    vec4 emission;\n    float shininess;\n  } material;\n\n  struct AmbientLight {\n    vec4 color;\n  };\n\n  struct DirectionalLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct DirectionalShadowLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n    vec4 shadowColor;\n    mat4 viewProjectionTransform;\n    mat4 shadowProjectionTransform;\n  };\n\n  struct OmniLight {\n    vec4 color;\n    vec4 position; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct SpotLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct IESLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct ProbeLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  layout (std140) uniform lightUniform {\n    __LIGHT_DEFINITION__\n  } light;\n  __VS_LIGHT_VARS__\n\n  layout (std140) uniform fogUniform {\n    vec4 color;\n    float startDistance;\n    float endDistance;\n    float densityExponent;\n  } fog;\n\n  //uniform mat3x4[255] skinningJoints;\n  uniform vec4[765] skinningJoints;\n  uniform int numSkinningJoints;\n\n  in vec3 position;\n  in vec3 normal;\n  //in vec3 tangent;\n  in vec2 texcoord;\n  in vec4 boneIndices;\n  in vec4 boneWeights;\n\n  out vec3 v_position;\n  out vec3 v_normal;\n  //out vec3 v_tangent;\n  //out vec3 v_bitangent;\n  out vec2 v_texcoord;\n  out vec4 v_color;\n  out vec3 v_eye;\n  out float v_fogFactor;\n\n  void main() {\n    vec3 pos = vec3(0, 0, 0);\n    vec3 nom = vec3(0, 0, 0);\n    vec3 tangent = vec3(1, 0, 0); // DEBUG\n    vec3 tng = vec3(0, 0, 0);\n\n    if(numSkinningJoints > 0){\n      for(int i=0; i<numSkinningJoints; i++){\n        float weight = boneWeights[i];\n        if(int(boneIndices[i]) < 0){\n          continue;\n        }\n        int idx = int(boneIndices[i]) * 3;\n        mat4 jointMatrix = transpose(mat4(skinningJoints[idx],\n                                          skinningJoints[idx+1],\n                                          skinningJoints[idx+2],\n                                          vec4(0, 0, 0, 1)));\n        pos += (jointMatrix * vec4(position, 1.0)).xyz * weight;\n        nom += (mat3(jointMatrix) * normal) * weight;\n        tng += (mat3(jointMatrix) * tangent) * weight;\n      }\n    }else{\n      mat4 jointMatrix = transpose(mat4(skinningJoints[0],\n                                        skinningJoints[1],\n                                        skinningJoints[2],\n                                        vec4(0, 0, 0, 1)));\n      pos = (jointMatrix * vec4(position, 1.0)).xyz;\n      nom = mat3(jointMatrix) * normal;\n      tng += mat3(jointMatrix) * tangent;\n    }\n    v_position = pos;\n    v_normal = nom;\n    vec3 btng = cross(nom, tng);\n\n    vec3 viewVec = camera.position.xyz - pos;\n    //v_eye.x = dot(viewVec, tng);\n    //v_eye.y = dot(viewVec, btng);\n    //v_eye.z = dot(viewVec, nom);\n    v_eye = viewVec;\n\n    v_color = material.emission;\n    int numLights = 0;\n\n    __VS_LIGHTING__\n\n    float distance = length(viewVec);\n    v_fogFactor = clamp((distance - fog.startDistance) / (fog.endDistance - fog.startDistance), 0.0, 1.0);\n\n    v_texcoord = texcoord;\n    gl_Position = camera.viewProjectionTransform * vec4(pos, 1.0);\n  }\n';
 
 	var _vsAmbient = '\n  for(int i=0; i<NUM_AMBIENT_LIGHTS; i++){\n    v_color += light.ambient[i].color * material.ambient;\n  }\n';
 
 	var _vsDirectional = '\n  for(int i=0; i<NUM_DIRECTIONAL_LIGHTS; i++){\n    v_light[numLights + i] = -light.directional[i].direction.xyz;\n  }\n  numLights += NUM_DIRECTIONAL_LIGHTS;\n';
+
+	var _vsDirectionalShadow = '\n  for(int i=0; i<NUM_DIRECTIONAL_SHADOW_LIGHTS; i++){\n    v_light[numLights + i] = -light.directionalShadow[i].direction.xyz;\n    v_directionalShadowDepth[i] = light.directionalShadow[i].viewProjectionTransform * vec4(pos, 1.0);\n    v_directionalShadowTexcoord[i] = light.directionalShadow[i].shadowProjectionTransform * vec4(pos, 1.0);\n  }\n  numLights += NUM_DIRECTIONAL_SHADOW_LIGHTS;\n';
 
 	var _vsOmni = '\n  for(int i=0; i<NUM_OMNI_LIGHTS; i++){\n    v_light[numLights + i] = light.omni[i].position.xyz - pos;\n  }\n  numLights += NUM_OMNI_LIGHTS;\n';
 
@@ -28887,11 +29061,13 @@ module.exports =
 	 * @access private
 	 * @type {string}
 	 */
-	var _defaultFragmentShader = '#version 300 es\n  precision mediump float;\n\n  uniform bool[8] textureFlags;\n  #define TEXTURE_EMISSION_INDEX 0\n  #define TEXTURE_AMBIENT_INDEX 1\n  #define TEXTURE_DIFFUSE_INDEX 2\n  #define TEXTURE_SPECULAR_INDEX 3\n  #define TEXTURE_REFLECTIVE_INDEX 4\n  #define TEXTURE_TRANSPARENT_INDEX 5\n  #define TEXTURE_MULTIPLY_INDEX 6\n  #define TEXTURE_NORMAL_INDEX 7\n\n  uniform sampler2D u_emissionTexture;\n  uniform sampler2D u_ambientTexture;\n  uniform sampler2D u_diffuseTexture;\n  uniform sampler2D u_specularTexture;\n  uniform sampler2D u_reflectiveTexture;\n  uniform sampler2D u_transparentTexture;\n  uniform sampler2D u_multiplyTexture;\n  uniform sampler2D u_normalTexture;\n\n  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__\n  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__\n  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__\n  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__\n  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__\n  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__\n\n  layout (std140) uniform materialUniform {\n    vec4 ambient;\n    vec4 diffuse;\n    vec4 specular;\n    vec4 emission;\n    float shininess;\n  } material;\n\n  struct AmbientLight {\n    vec4 color;\n  };\n\n  struct DirectionalLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct OmniLight {\n    vec4 color;\n    vec4 position; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct ProbeLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct SpotLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  layout (std140) uniform lightUniform {\n    __LIGHT_DEFINITION__\n  } light;\n  __FS_LIGHT_VARS__\n\n  layout (std140) uniform fogUniform {\n    vec4 color;\n    float startDistance;\n    float endDistance;\n    float densityExponent;\n  } fog;\n\n  in vec3 v_position;\n  in vec3 v_normal;\n  in vec2 v_texcoord;\n  in vec4 v_color;\n  in vec3 v_eye;\n  //in vec3 v_tangent;\n  //in vec3 v_bitangent;\n  in float v_fogFactor;\n\n  out vec4 outColor;\n\n  void main() {\n    outColor = v_color;\n\n    vec3 viewVec = normalize(v_eye);\n    vec3 nom = normalize(v_normal);\n\n    // normal texture\n    //if(textureFlags[TEXTURE_NORMAL_INDEX]){\n    //}\n\n    // emission texture\n    if(textureFlags[TEXTURE_EMISSION_INDEX]){\n      vec4 color = texture(u_emissionTexture, v_texcoord);\n      outColor = color * outColor;\n    }\n\n    int numLights = 0;\n      \n    outColor.a = material.diffuse.a;\n    __FS_LIGHTING__\n    \n    // diffuse texture\n    if(textureFlags[TEXTURE_DIFFUSE_INDEX]){\n      vec4 color = texture(u_diffuseTexture, v_texcoord);\n      outColor = color * outColor;\n    }\n\n    float fogFactor = pow(v_fogFactor, fog.densityExponent);\n    outColor = mix(outColor, fog.color, fogFactor);\n  }\n';
+	var _defaultFragmentShader = '#version 300 es\n  precision mediump float;\n  precision highp sampler2DShadow;\n\n  uniform bool[8] textureFlags;\n  #define TEXTURE_EMISSION_INDEX 0\n  #define TEXTURE_AMBIENT_INDEX 1\n  #define TEXTURE_DIFFUSE_INDEX 2\n  #define TEXTURE_SPECULAR_INDEX 3\n  #define TEXTURE_REFLECTIVE_INDEX 4\n  #define TEXTURE_TRANSPARENT_INDEX 5\n  #define TEXTURE_MULTIPLY_INDEX 6\n  #define TEXTURE_NORMAL_INDEX 7\n\n  uniform sampler2D u_emissionTexture;\n  uniform sampler2D u_ambientTexture;\n  uniform sampler2D u_diffuseTexture;\n  uniform sampler2D u_specularTexture;\n  uniform sampler2D u_reflectiveTexture;\n  uniform sampler2D u_transparentTexture;\n  uniform sampler2D u_multiplyTexture;\n  uniform sampler2D u_normalTexture;\n\n  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__\n  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__\n  #define NUM_DIRECTIONAL_SHADOW_LIGHTS __NUM_DIRECTIONAL_SHADOW_LIGHTS__\n  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__\n  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__\n  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__\n  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__\n\n  layout (std140) uniform materialUniform {\n    vec4 ambient;\n    vec4 diffuse;\n    vec4 specular;\n    vec4 emission;\n    float shininess;\n  } material;\n\n  struct AmbientLight {\n    vec4 color;\n  };\n\n  struct DirectionalLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct DirectionalShadowLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n    vec4 shadowColor;\n    mat4 viewProjectionTransform;\n    mat4 shadowProjectionTransform;\n  };\n\n  struct OmniLight {\n    vec4 color;\n    vec4 position; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct ProbeLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct SpotLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  layout (std140) uniform lightUniform {\n    __LIGHT_DEFINITION__\n  } light;\n  __FS_LIGHT_VARS__\n\n  layout (std140) uniform fogUniform {\n    vec4 color;\n    float startDistance;\n    float endDistance;\n    float densityExponent;\n  } fog;\n\n  in vec3 v_position;\n  in vec3 v_normal;\n  in vec2 v_texcoord;\n  in vec4 v_color;\n  in vec3 v_eye;\n  //in vec3 v_tangent;\n  //in vec3 v_bitangent;\n  in float v_fogFactor;\n\n  out vec4 outColor;\n\n  float convDepth(vec4 color) {\n    const float rMask = 1.0;\n    const float gMask = 1.0 / 255.0;\n    const float bMask = 1.0 / (255.0 * 255.0);\n    const float aMask = 1.0 / (255.0 * 255.0 * 255.0);\n    float depth = dot(color, vec4(rMask, gMask, bMask, aMask));\n    return depth * 2.0 - 1.0;\n  }\n\n  void main() {\n    outColor = v_color;\n\n    vec3 viewVec = normalize(v_eye);\n    vec3 nom = normalize(v_normal);\n\n    // normal texture\n    //if(textureFlags[TEXTURE_NORMAL_INDEX]){\n    //}\n\n    // emission texture\n    if(textureFlags[TEXTURE_EMISSION_INDEX]){\n      vec4 color = texture(u_emissionTexture, v_texcoord);\n      outColor = color * outColor;\n    }\n\n    int numLights = 0;\n      \n    outColor.a = material.diffuse.a;\n    __FS_LIGHTING__\n    \n    // diffuse texture\n    if(textureFlags[TEXTURE_DIFFUSE_INDEX]){\n      vec4 color = texture(u_diffuseTexture, v_texcoord);\n      outColor = color * outColor;\n    }\n\n    float fogFactor = pow(v_fogFactor, fog.densityExponent);\n    outColor = mix(outColor, fog.color, fogFactor);\n  }\n';
 
 	var _fsAmbient = '\n';
 
 	var _fsDirectional = '\n  for(int i=0; i<NUM_DIRECTIONAL_LIGHTS; i++){\n    // diffuse\n    vec3 lightVec = normalize(v_light[numLights + i]);\n    float diffuse = clamp(dot(lightVec, nom), 0.0f, 1.0f);\n    outColor.rgb += light.directional[i].color.rgb * material.diffuse.rgb * diffuse;\n\n    // specular\n    if(diffuse > 0.0f){\n      vec3 halfVec = normalize(lightVec + viewVec);\n      float specular = pow(dot(halfVec, nom), material.shininess);\n      outColor.rgb += material.specular.rgb * specular; // TODO: get the light color of specular\n    }\n  }\n  numLights += NUM_DIRECTIONAL_LIGHTS;\n';
+
+	var _fsDirectionalShadow = '\n  float shadow = convDepth(texture(u_shadowMapTexture__I__, v_directionalShadowTexcoord[__I__].xy / v_directionalShadowTexcoord[__I__].w));\n  if(v_directionalShadowDepth[__I__].z / v_directionalShadowDepth[__I__].w - 0.0001 > shadow){\n    outColor.rgb += material.diffuse.rgb * light.directionalShadow[__I__].shadowColor.rgb;\n  }else{\n    // diffuse\n    vec3 lightVec = normalize(v_light[numLights]);\n    float diffuse = clamp(dot(lightVec, nom), 0.0f, 1.0f);\n    outColor.rgb += light.directionalShadow[__I__].color.rgb * material.diffuse.rgb * diffuse;\n\n    // specular\n    if(diffuse > 0.0f){\n      vec3 halfVec = normalize(lightVec + viewVec);\n      float specular = pow(dot(halfVec, nom), material.shininess);\n      outColor.rgb += material.specular.rgb * specular; // TODO: get the light color of specular\n    }\n  }\n\n  numLights += 1;\n';
 
 	var _fsOmni = '\n  for(int i=0; i<NUM_OMNI_LIGHTS; i++){\n    // diffuse\n    vec3 lightVec = normalize(v_light[numLights + i]);\n    float diffuse = clamp(dot(lightVec, nom), 0.0f, 1.0f);\n    outColor.rgb += light.omni[i].color.rgb * material.diffuse.rgb * diffuse;\n\n    // specular\n    if(diffuse > 0.0f){\n      vec3 halfVec = normalize(lightVec + viewVec);\n      float specular = pow(dot(halfVec, nom), material.shininess);\n      outColor.rgb += material.specular.rgb * specular; // TODO: get the light color of specular\n    }\n  }\n  numLights += NUM_OMNI_LIGHTS;\n';
 
@@ -28925,6 +29101,18 @@ module.exports =
 	 * @type {string}
 	 */
 	var _defaultHitTestFragmentShader = '#version 300 es\n  precision mediump float;\n\n  uniform int objectID;\n  uniform int geometryID;\n\n  in vec3 v_normal;\n  in vec3 v_position;\n\n  layout(location = 0) out vec4 out_objectID;\n  layout(location = 1) out vec4 out_faceID;\n  layout(location = 2) out vec3 out_position;\n  layout(location = 3) out vec3 out_normal;\n\n  void main() {\n    out_objectID = vec4(\n      float(objectID >> 8) / 255.0,\n      float(objectID & 0xFF) / 255.0,\n      float(geometryID >> 8) / 255.0,\n      float(geometryID & 0xFF) / 255.0\n    );\n    //out_faceID = vec4(\n    //  (gl_PrimitiveID >> 24) / 255.0,\n    //  ((gl_PrimitiveID >> 16) & 0xFF) / 255.0,\n    //  ((gl_PrimitiveID >> 8) & 0xFF) / 255.0,\n    //  (gl_PrimitiveID & 0xFF) / 255.0\n    //);\n    out_faceID = vec4(0, 0, 0, 0); // TODO: implement\n    vec3 n = normalize(v_normal);\n    out_normal = vec3((n.x + 1.0) * 0.5, (n.y + 1.0) * 0.5, (n.z + 1.0) * 0.5);\n    out_position = vec3((v_position.x + 1.0) * 0.5, (v_position.y + 1.0) * 0.5, (v_position.z + 1.0) * 0.5);\n  }\n';
+
+	/**
+	 * @access private
+	 * @type {string}
+	 */
+	var _defaultShadowVertexShader = '#version 300 es\n  precision mediump float;\n\n  uniform mat4 viewProjectionTransform;\n  uniform vec4[765] skinningJoints;\n  uniform int numSkinningJoints;\n\n  in vec3 position;\n  //in vec3 normal;\n  in vec4 boneIndices;\n  in vec4 boneWeights;\n\n  out vec3 v_position;\n\n  void main() {\n    vec3 pos = vec3(0, 0, 0);\n    if(numSkinningJoints > 0){\n      for(int i=0; i<numSkinningJoints; i++){\n        float weight = boneWeights[i];\n        if(int(boneIndices[i]) < 0){\n          continue;\n        }\n        int idx = int(boneIndices[i]) * 3;\n        mat4 jointMatrix = transpose(mat4(skinningJoints[idx],\n                                          skinningJoints[idx+1],\n                                          skinningJoints[idx+2],\n                                          vec4(0, 0, 0, 1)));\n        pos += (jointMatrix * vec4(position, 1.0)).xyz * weight;\n      }\n    }else{\n      mat4 jointMatrix = transpose(mat4(skinningJoints[0],\n                                        skinningJoints[1],\n                                        skinningJoints[2],\n                                        vec4(0, 0, 0, 1)));\n      pos = (jointMatrix * vec4(position, 1.0)).xyz;\n    }\n    //v_position = pos;\n\n    gl_Position = viewProjectionTransform * vec4(pos, 1.0);\n    v_position = gl_Position.xyz / gl_Position.w;\n  }\n';
+
+	/**
+	 * @access private
+	 * @type {string}
+	 */
+	var _defaultShadowFragmentShader = '#version 300 es\n  precision mediump float;\n\n  in vec3 v_position;\n\n  layout(location = 0) out vec4 out_depth;\n  //layout(location = 0) out float out_depth;\n\n  void main() {\n    float r = (v_position.z + 1.0) * 0.5;\n    float g = fract(r * 255.0);\n    float b = fract(g * 255.0);\n    float a = fract(b * 255.0);\n    float coef = 1.0 / 255.0;\n\n    r -= g * coef;\n    g -= b * coef;\n    b -= a * coef;\n    out_depth = vec4(r, g, b, a);\n    //out_depth = v_position.z;\n  }\n';
 
 	/**
 	 * A renderer for displaying SceneKit scene in an an existing Metal workflow or OpenGL context. 
@@ -29114,6 +29302,12 @@ module.exports =
 	     */
 	    _this.__defaultHitTestProgram = null;
 
+	    /**
+	     * @access private
+	     * @type {SCNProgram}
+	     */
+	    _this.__defaultShadowProgram = null;
+
 	    _this._location = new Map();
 
 	    _this._defaultCameraPosNode = new _SCNNode2.default();
@@ -29138,6 +29332,7 @@ module.exports =
 	    light.type = _SCNLight2.default.LightType.omni;
 	    light.position = new _SCNVector2.default(0, 10, 10);
 	    _this._defaultLightNode.light = light;
+	    _this._defaultLightNode._presentation = _this._defaultLightNode.copy();
 
 	    /**
 	     * @access private
@@ -29315,13 +29510,6 @@ module.exports =
 	      gl.depthMask(true);
 	      gl.enable(gl.BLEND);
 	      gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
-	      //gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewTransform'), false, cameraPNode.viewTransform.float32Array())
-	      //gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewProjectionTransform'), false, cameraPNode.viewProjectionTransform.float32Array())
-
-	      //console.log('cameraNode.worldPosition: ' + cameraPNode.worldTransform.getTranslation().float32Array())
-	      //console.log('viewTransform: ' + cameraPNode.viewTransform.float32Array())
-	      //console.log('projectionTransform: ' + cameraNode.camera.projectionTransform.float32Array())
-	      //console.log('viewProjectionTransform: ' + cameraNode.viewProjectionTransform.float32Array())
 
 	      //////////////////////////
 	      // Camera
@@ -29342,6 +29530,11 @@ module.exports =
 	      gl.bindBuffer(gl.UNIFORM_BUFFER, this._cameraBuffer);
 	      gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(cameraData), gl.DYNAMIC_DRAW);
 	      gl.bindBuffer(gl.UNIFORM_BUFFER, null);
+
+	      //console.log('cameraNode.worldPosition: ' + cameraPNode.worldTransform.getTranslation().float32Array())
+	      //console.log('viewTransform: ' + cameraPNode.viewTransform.float32Array())
+	      //console.log('projectionTransform: ' + cameraNode.camera.projectionTransform.float32Array())
+	      //console.log('viewProjectionTransform: ' + cameraNode.viewProjectionTransform.float32Array())
 
 	      //////////////////////////
 	      // Fog
@@ -29368,20 +29561,25 @@ module.exports =
 	      var lights = this._lightNodes;
 	      var lightData = [];
 	      lights.ambient.forEach(function (node) {
-	        lightData.push.apply(lightData, _toConsumableArray(node.light.color.float32Array()));
+	        lightData.push.apply(lightData, _toConsumableArray(node.presentation.light.color.float32Array()));
 	      });
 	      lights.directional.forEach(function (node) {
-	        var direction = new _SCNVector2.default(0, 0, -1).rotateWithQuaternion(node._worldOrientation);
-	        lightData.push.apply(lightData, _toConsumableArray(node.light.color.float32Array()).concat(_toConsumableArray(direction.float32Array()), [0]));
+	        var direction = new _SCNVector2.default(0, 0, -1).rotateWithQuaternion(node.presentation._worldOrientation);
+	        lightData.push.apply(lightData, _toConsumableArray(node.presentation.light.color.float32Array()).concat(_toConsumableArray(direction.float32Array()), [0]));
+	      });
+	      lights.directionalShadow.forEach(function (node) {
+	        var direction = new _SCNVector2.default(0, 0, -1).rotateWithQuaternion(node.presentation._worldOrientation);
+	        node.presentation.light._updateProjectionTransform();
+	        lightData.push.apply(lightData, _toConsumableArray(node.presentation.light.color.float32Array()).concat(_toConsumableArray(direction.float32Array()), [0], _toConsumableArray(node.presentation.light.shadowColor.float32Array()), _toConsumableArray(node.presentation.lightViewProjectionTransform.float32Array()), _toConsumableArray(node.presentation.shadowProjectionTransform.float32Array())));
 	      });
 	      lights.omni.forEach(function (node) {
-	        lightData.push.apply(lightData, _toConsumableArray(node.light.color.float32Array()).concat(_toConsumableArray(node._worldTranslation.float32Array()), [0]));
+	        lightData.push.apply(lightData, _toConsumableArray(node.presentation.light.color.float32Array()).concat(_toConsumableArray(node.presentation._worldTranslation.float32Array()), [0]));
 	      });
 	      lights.probe.forEach(function (node) {
-	        lightData.push.apply(lightData, _toConsumableArray(node.light.color.float32Array()));
+	        lightData.push.apply(lightData, _toConsumableArray(node.presentation.light.color.float32Array()));
 	      });
 	      lights.spot.forEach(function (node) {
-	        lightData.push.apply(lightData, _toConsumableArray(node.light.color.float32Array()));
+	        lightData.push.apply(lightData, _toConsumableArray(node.presentation.light.color.float32Array()));
 	      });
 
 	      gl.bindBuffer(gl.UNIFORM_BUFFER, this._lightBuffer);
@@ -29416,6 +29614,72 @@ module.exports =
 	      }
 
 	      //////////////////////////
+	      // Shadow
+	      //////////////////////////
+	      gl.useProgram(this._defaultShadowProgram._glProgram);
+	      gl.depthMask(true);
+	      gl.depthFunc(gl.LEQUAL);
+	      gl.clearDepth(1.0);
+	      gl.clearColor(1.0, 1.0, 1.0, 1.0);
+	      gl.disable(gl.BLEND);
+	      var shadowRenderingArray = this._createShadowNodeArray();
+	      var _iteratorNormalCompletion = true;
+	      var _didIteratorError = false;
+	      var _iteratorError = undefined;
+
+	      try {
+	        for (var _iterator = Object.keys(lights)[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+	          var key = _step.value;
+	          var _iteratorNormalCompletion3 = true;
+	          var _didIteratorError3 = false;
+	          var _iteratorError3 = undefined;
+
+	          try {
+	            for (var _iterator3 = lights[key][Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+	              var lightNode = _step3.value;
+
+	              this._renderNodesShadowOfLight(shadowRenderingArray, lightNode);
+	            }
+	          } catch (err) {
+	            _didIteratorError3 = true;
+	            _iteratorError3 = err;
+	          } finally {
+	            try {
+	              if (!_iteratorNormalCompletion3 && _iterator3.return) {
+	                _iterator3.return();
+	              }
+	            } finally {
+	              if (_didIteratorError3) {
+	                throw _iteratorError3;
+	              }
+	            }
+	          }
+	        }
+	      } catch (err) {
+	        _didIteratorError = true;
+	        _iteratorError = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion && _iterator.return) {
+	            _iterator.return();
+	          }
+	        } finally {
+	          if (_didIteratorError) {
+	            throw _iteratorError;
+	          }
+	        }
+	      }
+
+	      this._setViewPort(); // reset viewport size
+	      gl.useProgram(program);
+	      for (var i = 0; i < lights.directionalShadow.length; i++) {
+	        var node = lights.directionalShadow[i];
+	        var symbol = 'TEXTURE' + (i + 8);
+	        gl.activeTexture(gl[symbol]);
+	        gl.bindTexture(gl.TEXTURE_2D, node.presentation.light._shadowDepthTexture);
+	      }
+
+	      //////////////////////////
 	      // Nodes
 	      //////////////////////////
 	      var renderingArray = this._createRenderingNodeArray();
@@ -29435,27 +29699,27 @@ module.exports =
 	      // Particles
 	      //////////////////////////
 	      if (this.scene._particleSystems !== null) {
-	        var _iteratorNormalCompletion = true;
-	        var _didIteratorError = false;
-	        var _iteratorError = undefined;
+	        var _iteratorNormalCompletion2 = true;
+	        var _didIteratorError2 = false;
+	        var _iteratorError2 = undefined;
 
 	        try {
-	          for (var _iterator = this.scene._particleSystems[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-	            var system = _step.value;
+	          for (var _iterator2 = this.scene._particleSystems[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+	            var system = _step2.value;
 
 	            this._renderParticleSystem(system);
 	          }
 	        } catch (err) {
-	          _didIteratorError = true;
-	          _iteratorError = err;
+	          _didIteratorError2 = true;
+	          _iteratorError2 = err;
 	        } finally {
 	          try {
-	            if (!_iteratorNormalCompletion && _iterator.return) {
-	              _iterator.return();
+	            if (!_iteratorNormalCompletion2 && _iterator2.return) {
+	              _iterator2.return();
 	            }
 	          } finally {
-	            if (_didIteratorError) {
-	              throw _iteratorError;
+	            if (_didIteratorError2) {
+	              throw _iteratorError2;
 	            }
 	          }
 	        }
@@ -29469,6 +29733,9 @@ module.exports =
 	      // 2D Overlay
 	      //////////////////////////
 	      this._renderOverlaySKScene();
+
+	      // DEBUG: show shadow map
+	      //this._showShadowMapOfLight(lights.directionalShadow[0])
 
 	      gl.flush();
 	    }
@@ -29489,27 +29756,27 @@ module.exports =
 	      gl.clear(gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT);
 
 	      var skNodes = this._createSKNodeArray();
-	      var _iteratorNormalCompletion2 = true;
-	      var _didIteratorError2 = false;
-	      var _iteratorError2 = undefined;
+	      var _iteratorNormalCompletion4 = true;
+	      var _didIteratorError4 = false;
+	      var _iteratorError4 = undefined;
 
 	      try {
-	        for (var _iterator2 = skNodes[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-	          var node = _step2.value;
+	        for (var _iterator4 = skNodes[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+	          var node = _step4.value;
 
 	          this._renderSKNode(node);
 	        }
 	      } catch (err) {
-	        _didIteratorError2 = true;
-	        _iteratorError2 = err;
+	        _didIteratorError4 = true;
+	        _iteratorError4 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion2 && _iterator2.return) {
-	            _iterator2.return();
+	          if (!_iteratorNormalCompletion4 && _iterator4.return) {
+	            _iterator4.return();
 	          }
 	        } finally {
-	          if (_didIteratorError2) {
-	            throw _iteratorError2;
+	          if (_didIteratorError4) {
+	            throw _iteratorError4;
 	          }
 	        }
 	      }
@@ -29535,6 +29802,28 @@ module.exports =
 	        this._defaultCameraPosNode._updateWorldTransform();
 	      }
 	      return cameraNode;
+	    }
+
+	    /**
+	     *
+	     * @access private
+	     * @returns {SCNNode[]} -
+	     */
+
+	  }, {
+	    key: '_createShadowNodeArray',
+	    value: function _createShadowNodeArray() {
+	      var arr = [this.scene._rootNode];
+	      var targetNodes = [];
+	      while (arr.length > 0) {
+	        var node = arr.shift();
+	        if (node.presentation !== null && node.presentation.geometry !== null && node.presentation.castsShadow && node.presentation.opacity > 0 && !node.presentation.isHidden) {
+	          targetNodes.push(node);
+	        }
+	        arr.push.apply(arr, _toConsumableArray(node.childNodes));
+	      }
+
+	      return targetNodes;
 	    }
 
 	    /**
@@ -29602,7 +29891,9 @@ module.exports =
 	        directional: [],
 	        omni: [],
 	        probe: [],
-	        spot: []
+	        spot: [],
+
+	        directionalShadow: []
 	      };
 
 	      var arr = [this.scene.rootNode];
@@ -29610,7 +29901,11 @@ module.exports =
 	      while (arr.length > 0) {
 	        var node = arr.shift();
 	        if (node.presentation !== null && node.presentation.light !== null) {
-	          targetNodes[node.presentation.light.type].push(node.presentation);
+	          if (node.presentation.light.type === 'directional' && node.presentation.light.castsShadow) {
+	            targetNodes['directionalShadow'].push(node);
+	          } else {
+	            targetNodes[node.presentation.light.type].push(node);
+	          }
 	          if (node.presentation.light.type !== _SCNLight2.default.LightType.ambient) {
 	            numLights += 1;
 	          }
@@ -29647,6 +29942,124 @@ module.exports =
 	      });
 
 	      return targetNodes;
+	    }
+
+	    /**
+	     *
+	     * @access private
+	     * @param {SCNNode} node -
+	     * @param {SCNNode} lightNode -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_renderNodesShadowOfLight',
+	    value: function _renderNodesShadowOfLight(nodes, lightNode) {
+	      var lp = lightNode.presentation;
+	      var light = lp.light;
+	      if (!lp.castsShadow) {
+	        return;
+	      }
+	      this._setViewPort(light._shadowMapWidth, light._shadowMapHeight);
+	      var gl = this.context;
+	      var program = this._defaultShadowProgram._glProgram;
+	      gl.bindFramebuffer(gl.FRAMEBUFFER, light._getDepthBufferForContext(gl));
+	      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+	      //gl.clear(gl.DEPTH_BUFFER_BIT)
+
+	      gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewProjectionTransform'), false, lp.lightViewProjectionTransform.float32Array());
+
+	      var _iteratorNormalCompletion5 = true;
+	      var _didIteratorError5 = false;
+	      var _iteratorError5 = undefined;
+
+	      try {
+	        for (var _iterator5 = nodes[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+	          var node = _step5.value;
+
+	          var geometry = node.presentation.geometry;
+	          if (geometry._shadowVAO === null) {
+	            this._initializeShadowVAO(node, program);
+	          }
+
+	          if (node.morpher !== null) {
+	            //this._updateVAO(node)
+	          }
+
+	          if (node.presentation.skinner !== null) {
+	            gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints);
+	            gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array());
+	          } else {
+	            gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0);
+	            gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f());
+	          }
+
+	          var geometryCount = geometry.geometryElements.length;
+	          if (geometryCount === 0) {
+	            throw new Error('geometryCount: 0');
+	          }
+	          for (var i = 0; i < geometryCount; i++) {
+	            var vao = geometry._shadowVAO[i];
+	            var element = geometry.geometryElements[i];
+
+	            gl.bindVertexArray(vao);
+	            // FIXME: use bufferData instead of bindBufferBase
+
+	            var shape = null;
+	            switch (element.primitiveType) {
+	              case _SCNGeometryPrimitiveType2.default.triangles:
+	                shape = gl.TRIANGLES;
+	                break;
+	              case _SCNGeometryPrimitiveType2.default.triangleStrip:
+	                shape = gl.TRIANGLE_STRIP;
+	                break;
+	              case _SCNGeometryPrimitiveType2.default.line:
+	                shape = gl.LINES;
+	                break;
+	              case _SCNGeometryPrimitiveType2.default.point:
+	                shape = gl.POINTS;
+	                break;
+	              case _SCNGeometryPrimitiveType2.default.polygon:
+	                shape = gl.TRIANGLE_FAN;
+	                break;
+	              default:
+	                throw new Error('unsupported primitiveType: ' + element.primitiveType);
+	            }
+
+	            var size = null;
+	            switch (element.bytesPerIndex) {
+	              case 1:
+	                size = gl.UNSIGNED_BYTE;
+	                break;
+	              case 2:
+	                size = gl.UNSIGNED_SHORT;
+	                break;
+	              case 4:
+	                size = gl.UNSIGNED_INT;
+	                break;
+	              default:
+	                throw new Error('unsupported index size: ' + element.bytesPerIndex);
+	            }
+
+	            gl.drawElements(shape, element._glData.length, size, 0);
+	          }
+	        }
+	      } catch (err) {
+	        _didIteratorError5 = true;
+	        _iteratorError5 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion5 && _iterator5.return) {
+	            _iterator5.return();
+	          }
+	        } finally {
+	          if (_didIteratorError5) {
+	            throw _iteratorError5;
+	          }
+	        }
+	      }
+
+	      gl.bindFramebuffer(gl.FRAMEBUFFER, null);
 	    }
 
 	    /**
@@ -29694,7 +30107,6 @@ module.exports =
 	      for (var i = 0; i < geometryCount; i++) {
 	        var vao = geometry._vertexArrayObjects[i];
 	        var element = geometry.geometryElements[i];
-	        //const material = node.presentation.geometry.materials[i]
 
 	        gl.bindVertexArray(vao);
 	        // FIXME: use bufferData instead of bindBufferBase
@@ -29759,9 +30171,6 @@ module.exports =
 	      }
 
 	      var systems = node.presentation.particleSystems;
-	      //const gl = this.context
-
-	      //gl.useProgram(program)
 	      systems.forEach(function (system) {
 	        _this3._renderParticleSystem(system);
 	      });
@@ -29820,7 +30229,6 @@ module.exports =
 	        this._initializeHitTestVAO(node, program);
 	      }
 
-	      //console.log(`uniform1i: objectID: ${objectID}`)
 	      gl.uniform1i(gl.getUniformLocation(program, 'objectID'), objectID);
 
 	      if (node.presentation.skinner !== null) {
@@ -29987,9 +30395,6 @@ module.exports =
 	      var targetNodes = [];
 	      while (arr.length > 0) {
 	        var node = arr.shift();
-	        //if(node.presentation.geometry !== null){
-	        //  targetNodes.push(node)
-	        //}
 	        targetNodes.push(node);
 	        arr.push.apply(arr, _toConsumableArray(node.children));
 	      }
@@ -30169,8 +30574,6 @@ module.exports =
 	    key: '_initializeHitFrameBuffer',
 	    value: function _initializeHitFrameBuffer() {
 	      var gl = this.context;
-	      //const width = 1
-	      //const height = 1
 	      var width = this._viewRect.size.width;
 	      var height = this._viewRect.size.height;
 	      this._hitFrameBuffer = gl.createFramebuffer();
@@ -30238,29 +30641,29 @@ module.exports =
 	        categoryBitMask = -1;
 	      }
 
-	      var _iteratorNormalCompletion3 = true;
-	      var _didIteratorError3 = false;
-	      var _iteratorError3 = undefined;
+	      var _iteratorNormalCompletion6 = true;
+	      var _didIteratorError6 = false;
+	      var _iteratorError6 = undefined;
 
 	      try {
-	        for (var _iterator3 = renderingArray[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-	          var node = _step3.value;
+	        for (var _iterator6 = renderingArray[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
+	          var node = _step6.value;
 
 	          if (node.categoryBitMask & categoryBitMask) {
 	            result.push.apply(result, _toConsumableArray(this._nodeHitTestByCPU(node, rayFrom, rayVec)));
 	          }
 	        }
 	      } catch (err) {
-	        _didIteratorError3 = true;
-	        _iteratorError3 = err;
+	        _didIteratorError6 = true;
+	        _iteratorError6 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion3 && _iterator3.return) {
-	            _iterator3.return();
+	          if (!_iteratorNormalCompletion6 && _iterator6.return) {
+	            _iterator6.return();
 	          }
 	        } finally {
-	          if (_didIteratorError3) {
-	            throw _iteratorError3;
+	          if (_didIteratorError6) {
+	            throw _iteratorError6;
 	          }
 	        }
 	      }
@@ -30633,6 +31036,7 @@ module.exports =
 	      var vars = new Map();
 	      var numAmbient = this._numLights[_SCNLight2.default.LightType.ambient];
 	      var numDirectional = this._numLights[_SCNLight2.default.LightType.directional];
+	      var numDirectionalShadow = this._numLights['directionalShadow'];
 	      var numOmni = this._numLights[_SCNLight2.default.LightType.omni];
 	      var numSpot = this._numLights[_SCNLight2.default.LightType.spot];
 	      var numIES = this._numLights[_SCNLight2.default.LightType.IES];
@@ -30640,6 +31044,7 @@ module.exports =
 
 	      vars.set('__NUM_AMBIENT_LIGHTS__', numAmbient);
 	      vars.set('__NUM_DIRECTIONAL_LIGHTS__', numDirectional);
+	      vars.set('__NUM_DIRECTIONAL_SHADOW_LIGHTS__', numDirectionalShadow);
 	      vars.set('__NUM_OMNI_LIGHTS__', numOmni);
 	      vars.set('__NUM_SPOT_LIGHTS__', numSpot);
 	      vars.set('__NUM_IES_LIGHTS__', numIES);
@@ -30658,6 +31063,14 @@ module.exports =
 	        vsLighting += _vsDirectional;
 	        fsLighting += _fsDirectional;
 	      }
+	      if (numDirectionalShadow > 0) {
+	        lightDefinition += 'DirectionalShadowLight directionalShadow[NUM_DIRECTIONAL_SHADOW_LIGHTS]; ';
+	        vsLighting += _vsDirectionalShadow;
+	        for (var i = 0; i < numDirectionalShadow; i++) {
+	          var fsDSText = _fsDirectionalShadow.replace(new RegExp('__I__', 'g'), i);
+	          fsLighting += fsDSText;
+	        }
+	      }
 	      if (numOmni > 0) {
 	        lightDefinition += 'OmniLight omni[NUM_OMNI_LIGHTS]; ';
 	        vsLighting += _vsOmni;
@@ -30669,7 +31082,7 @@ module.exports =
 	        fsLighting += _fsSpot;
 	      }
 	      if (numIES > 0) {
-	        lightDefinition += 'IESLight probe[NUM_IES_LIGHTS]; ';
+	        lightDefinition += 'IESLight ies[NUM_IES_LIGHTS]; ';
 	        vsLighting += _vsIES;
 	        fsLighting += _fsIES;
 	      }
@@ -30682,10 +31095,23 @@ module.exports =
 	      vars.set('__VS_LIGHTING__', vsLighting);
 	      vars.set('__FS_LIGHTING__', fsLighting);
 
-	      if (numDirectional + numOmni + numSpot > 0) {
-	        var v = 'vec3 v_light[NUM_DIRECTIONAL_LIGHTS + NUM_OMNI_LIGHTS + NUM_SPOT_LIGHTS]; ';
-	        vars.set('__VS_LIGHT_VARS__', 'out ' + v);
-	        vars.set('__FS_LIGHT_VARS__', 'in ' + v);
+	      if (numDirectional + numDirectionalShadow + numOmni + numSpot > 0) {
+	        var v = 'vec3 v_light[NUM_DIRECTIONAL_LIGHTS + NUM_DIRECTIONAL_SHADOW_LIGHTS + NUM_OMNI_LIGHTS + NUM_SPOT_LIGHTS]; ';
+	        var vs = 'out ' + v;
+	        var fs = 'in ' + v;
+	        if (numDirectionalShadow > 0) {
+	          vs += 'out vec4 v_directionalShadowDepth[NUM_DIRECTIONAL_SHADOW_LIGHTS]; ';
+	          vs += 'out vec4 v_directionalShadowTexcoord[NUM_DIRECTIONAL_SHADOW_LIGHTS]; ';
+	          fs += 'in vec4 v_directionalShadowDepth[NUM_DIRECTIONAL_SHADOW_LIGHTS]; ';
+	          fs += 'in vec4 v_directionalShadowTexcoord[NUM_DIRECTIONAL_SHADOW_LIGHTS]; ';
+	          for (var _i = 0; _i < numDirectionalShadow; _i++) {
+	            //fs += 'uniform sampler2DShadow u_shadowMapTexture' + i + '; '
+	            fs += 'uniform sampler2D u_shadowMapTexture' + _i + '; ';
+	          }
+	        }
+
+	        vars.set('__VS_LIGHT_VARS__', vs);
+	        vars.set('__FS_LIGHT_VARS__', fs);
 	      } else {
 	        vars.set('__VS_LIGHT_VARS__', '');
 	        vars.set('__FS_LIGHT_VARS__', '');
@@ -30766,7 +31192,6 @@ module.exports =
 	        }
 
 	        // boneIndices
-	        //const indSrc = geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneIndices)[0]
 	        var indSrc = node.skinner ? node.skinner._boneIndices : null;
 	        if (indSrc) {
 	          //console.log(`indSrc: ${boneIndicesLoc}, ${indSrc.componentsPerVector}, ${indSrc.dataStride}, ${indSrc.dataOffset}`)
@@ -30777,7 +31202,6 @@ module.exports =
 	        }
 
 	        // boneWeights
-	        //const wgtSrc = geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneWeights)[0]
 	        var wgtSrc = node.skinner ? node.skinner._boneWeights : null;
 	        if (wgtSrc) {
 	          //console.log(`wgtSrc: ${boneWeightsLoc}, ${wgtSrc.componentsPerVector}, ${wgtSrc.dataStride}, ${wgtSrc.dataOffset}`)
@@ -30796,6 +31220,75 @@ module.exports =
 	        gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indexBuffer);
 
 	        geometry._vertexArrayObjects.push(vao);
+	      }
+	    }
+	  }, {
+	    key: '_initializeShadowVAO',
+	    value: function _initializeShadowVAO(node, program) {
+	      var gl = this.context;
+	      var geometry = node.presentation.geometry;
+	      var baseGeometry = node.geometry;
+
+	      // prepare vertex array data
+	      var vertexBuffer = geometry._createVertexBuffer(gl, node);
+	      // TODO: retain attribute locations
+	      var positionLoc = gl.getAttribLocation(program, 'position');
+	      var boneIndicesLoc = gl.getAttribLocation(program, 'boneIndices');
+	      var boneWeightsLoc = gl.getAttribLocation(program, 'boneWeights');
+
+	      geometry._shadowVAO = [];
+	      var elementCount = node.presentation.geometry.geometryElements.length;
+	      for (var i = 0; i < elementCount; i++) {
+	        var element = node.presentation.geometry.geometryElements[i];
+	        var material = node.presentation.geometry.materials[i];
+	        var shadowVAO = gl.createVertexArray();
+	        gl.bindVertexArray(shadowVAO);
+
+	        // initialize vertex buffer
+	        gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+
+	        gl.bindAttribLocation(program, positionLoc, 'position');
+	        gl.bindAttribLocation(program, boneIndicesLoc, 'boneIndices');
+	        gl.bindAttribLocation(program, boneWeightsLoc, 'boneWeights');
+
+	        // vertexAttribPointer(ulong idx, long size, ulong type, bool norm, long stride, ulong offset)
+
+	        // position
+	        var posSrc = geometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
+	        if (posSrc) {
+	          gl.enableVertexAttribArray(positionLoc);
+	          gl.vertexAttribPointer(positionLoc, posSrc.componentsPerVector, gl.FLOAT, false, posSrc.dataStride, posSrc.dataOffset);
+	        } else {
+	          gl.disableVertexAttribArray(positionLoc);
+	        }
+
+	        // boneIndices
+	        var indSrc = node.skinner ? node.skinner._boneIndices : null;
+	        if (indSrc) {
+	          gl.enableVertexAttribArray(boneIndicesLoc);
+	          gl.vertexAttribPointer(boneIndicesLoc, indSrc.componentsPerVector, gl.FLOAT, false, indSrc.dataStride, indSrc.dataOffset);
+	        } else {
+	          gl.disableVertexAttribArray(boneIndicesLoc);
+	        }
+
+	        // boneWeights
+	        var wgtSrc = node.skinner ? node.skinner._boneWeights : null;
+	        if (wgtSrc) {
+	          gl.enableVertexAttribArray(boneWeightsLoc);
+	          gl.vertexAttribPointer(boneWeightsLoc, wgtSrc.componentsPerVector, gl.FLOAT, false, wgtSrc.dataStride, wgtSrc.dataOffset);
+	        } else {
+	          gl.disableVertexAttribArray(boneWeightsLoc);
+	        }
+
+	        // FIXME: use setting
+	        gl.disable(gl.CULL_FACE);
+
+	        // initialize index buffer
+	        // FIXME: check geometrySource semantic
+	        var indexBuffer = element._createBuffer(gl);
+	        gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indexBuffer);
+
+	        geometry._shadowVAO.push(shadowVAO);
 	      }
 	    }
 	  }, {
@@ -30905,6 +31398,16 @@ module.exports =
 	      this._lightBuffer = gl.createBuffer();
 	      gl.uniformBlockBinding(program, lightIndex, _lightLoc);
 	      gl.bindBufferBase(gl.UNIFORM_BUFFER, _lightLoc, this._lightBuffer);
+
+	      for (var i = 0; i < this._lightNodes.directionalShadow.length; i++) {
+	        var node = this._lightNodes.directionalShadow[i];
+	        var symbol = 'TEXTURE' + (i + 8);
+	        var name = 'u_shadowMapTexture' + i;
+
+	        gl.uniform1i(gl.getUniformLocation(program, name), i + 8);
+	        gl.activeTexture(gl[symbol]);
+	        gl.bindTexture(gl.TEXTURE_2D, node.presentation.light._shadowDepthTexture);
+	      }
 	    }
 	  }, {
 	    key: '_initializeUBO',
@@ -31059,16 +31562,37 @@ module.exports =
 	  }, {
 	    key: '_numLightsChanged',
 	    value: function _numLightsChanged() {
-	      var _this4 = this;
-
 	      var changed = false;
-	      Object.values(_SCNLight2.default.LightType).forEach(function (type) {
-	        var num = _this4._lightNodes[type].length;
-	        if (num !== _this4._numLights[type]) {
-	          changed = true;
-	          _this4._numLights[type] = num;
+	      var types = [].concat(_toConsumableArray(Object.values(_SCNLight2.default.LightType)), ['directionalShadow']);
+	      var _iteratorNormalCompletion7 = true;
+	      var _didIteratorError7 = false;
+	      var _iteratorError7 = undefined;
+
+	      try {
+	        for (var _iterator7 = types[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
+	          var type = _step7.value;
+
+	          var num = this._lightNodes[type].length;
+	          if (num !== this._numLights[type]) {
+	            changed = true;
+	            this._numLights[type] = num;
+	          }
 	        }
-	      });
+	      } catch (err) {
+	        _didIteratorError7 = true;
+	        _iteratorError7 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion7 && _iterator7.return) {
+	            _iterator7.return();
+	          }
+	        } finally {
+	          if (_didIteratorError7) {
+	            throw _iteratorError7;
+	          }
+	        }
+	      }
+
 	      return changed;
 	    }
 
@@ -31109,25 +31633,25 @@ module.exports =
 	          var mat = skinner._boneInverseBindTransforms[i].mult(bone._presentation._worldTransform);
 	          skinningJoints.push(mat);
 	        }
-	        for (var _i = 0; _i < sourceLen; _i++) {
-	          var weights = skinner._boneWeights._vectorAt(_i);
-	          var indices = skinner._boneIndices._vectorAt(_i);
+	        for (var _i2 = 0; _i2 < sourceLen; _i2++) {
+	          var weights = skinner._boneWeights._vectorAt(_i2);
+	          var indices = skinner._boneIndices._vectorAt(_i2);
 	          var _mat = new _SCNMatrix2.default();
 	          for (var j = 0; j < skinner.numSkinningJoints; j++) {
 	            _mat.add(skinningJoints[indices[j]].mul(weights[j]));
 	          }
-	          sourceData.push(source._scnVectorAt(_i).transform(_mat));
+	          sourceData.push(source._scnVectorAt(_i2).transform(_mat));
 	        }
 	      } else {
-	        for (var _i2 = 0; _i2 < sourceLen; _i2++) {
-	          sourceData.push(source._scnVectorAt(_i2).transform(modelTransform));
+	        for (var _i3 = 0; _i3 < sourceLen; _i3++) {
+	          sourceData.push(source._scnVectorAt(_i3).transform(modelTransform));
 	        }
 	      }
 
 	      var geometryCount = geometry.geometryElements.length;
-	      for (var _i3 = 0; _i3 < geometryCount; _i3++) {
-	        console.log('geometry element ' + _i3);
-	        var element = geometry.geometryElements[_i3];
+	      for (var _i4 = 0; _i4 < geometryCount; _i4++) {
+	        console.log('geometry element ' + _i4);
+	        var element = geometry.geometryElements[_i4];
 	        switch (element.primitiveType) {
 	          case _SCNGeometryPrimitiveType2.default.line:
 	            console.warn('hitTest for line is not implemented');
@@ -31174,13 +31698,13 @@ module.exports =
 	          }
 
 	          // Hit!
-	          console.log('Hit! ' + _i3 + ': ' + pi);
+	          console.log('Hit! ' + _i4 + ': ' + pi);
 	          var hitPoint = rayPoint.add(rayVec.mul(t));
 	          var invModel = modelTransform.invert();
 
 	          var res = new _SCNHitTestResult2.default();
 	          res._node = node;
-	          res._geometryIndex = _i3;
+	          res._geometryIndex = _i4;
 	          res._faceIndex = pi;
 	          res._worldCoordinates = hitPoint;
 	          res._localCoordinates = hitPoint.transform(invModel);
@@ -31228,8 +31752,57 @@ module.exports =
 	     */
 
 	  }, {
-	    key: '_det',
+	    key: '_showShadowMapOfLight',
 
+
+	    // for debug
+	    value: function _showShadowMapOfLight(lightNode) {
+	      var gl = this.context;
+	      var p = lightNode.presentation;
+	      var light = p.light;
+	      if (!this.__debugShadowMapSprite) {
+	        var node = new _SKSpriteNode2.default();
+	        node.size = new _CGSize2.default(100, 100);
+	        node.anchorPoint = new _CGPoint2.default(0.0, 0.0);
+	        var texture = new _SKTexture2.default();
+	        texture._glTexture = light._shadowDepthTexture;
+	        texture._image = {
+	          naturalWidth: 100,
+	          naturalHeight: 100
+	        };
+	        node._texture = texture;
+	        node.__presentation = node.copy();
+	        node.__presentation._isPresentationInstance = true;
+	        node.position = new _CGPoint2.default(100, 100);
+	        node._updateWorldTransform();
+
+	        this.__debugShadowMapSprite = node;
+	      }
+	      gl.clearDepth(-1);
+	      gl.clearStencil(0);
+	      gl.depthMask(true);
+	      gl.enable(gl.DEPTH_TEST);
+	      gl.disable(gl.CULL_FACE);
+	      gl.depthFunc(gl.GEQUAL);
+	      gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+	      gl.clear(gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT);
+
+	      this._renderSKNode(this.__debugShadowMapSprite);
+	    }
+	  }, {
+	    key: '_setViewPort',
+	    value: function _setViewPort() {
+	      var width = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+	      var height = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
+	      var w = width;
+	      var h = height;
+	      if (w === null || h === null) {
+	        w = this._viewRect.size.width;
+	        h = this._viewRect.size.height;
+	      }
+	      this.context.viewport(0, 0, w, h);
+	    }
 
 	    /**
 	     * calculate a determinant of 3x3 matrix from 3 vectors.
@@ -31239,6 +31812,9 @@ module.exports =
 	     * @param {SCNVector3} v3 -
 	     * @returns {number} -
 	     */
+
+	  }, {
+	    key: '_det',
 	    value: function _det(v1, v2, v3) {
 	      return v1.x * v2.y * v3.z + v1.y * v2.z * v3.x + v1.z * v2.x * v3.y - v1.x * v2.z * v3.y - v1.y * v2.x * v3.z - v1.z * v2.y * v3.x;
 	    }
@@ -31535,6 +32111,70 @@ module.exports =
 
 	      return this.__defaultParticleProgram;
 	    }
+
+	    /**
+	     * @access private
+	     * @type {SCNProgram}
+	     */
+
+	  }, {
+	    key: '_defaultShadowProgram',
+	    get: function get() {
+	      if (this.__defaultShadowProgram !== null) {
+	        return this.__defaultShadowProgram;
+	      }
+	      var gl = this.context;
+	      if (this.__defaultShadowProgram === null) {
+	        this.__defaultShadowProgram = new _SCNProgram2.default();
+	        this.__defaultShadowProgram._glProgram = gl.createProgram();
+	      }
+	      var p = this.__defaultShadowProgram;
+	      var vsText = _defaultShadowVertexShader;
+	      var fsText = _defaultShadowFragmentShader;
+
+	      // initialize vertex shader
+	      var vertexShader = gl.createShader(gl.VERTEX_SHADER);
+	      gl.shaderSource(vertexShader, vsText);
+	      gl.compileShader(vertexShader);
+	      if (!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)) {
+	        var info = gl.getShaderInfoLog(vertexShader);
+	        throw new Error('particle vertex shader compile error: ' + info);
+	      }
+
+	      // initialize fragment shader
+	      var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+	      gl.shaderSource(fragmentShader, fsText);
+	      gl.compileShader(fragmentShader);
+	      if (!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)) {
+	        var _info5 = gl.getShaderInfoLog(fragmentShader);
+	        throw new Error('particle fragment shader compile error: ' + _info5);
+	      }
+
+	      gl.attachShader(p._glProgram, vertexShader);
+	      gl.attachShader(p._glProgram, fragmentShader);
+
+	      // link program object
+	      gl.linkProgram(p._glProgram);
+	      if (!gl.getProgramParameter(p._glProgram, gl.LINK_STATUS)) {
+	        var _info6 = gl.getProgramInfoLog(p._glProgram);
+	        throw new Error('program link error: ' + _info6);
+	      }
+
+	      gl.useProgram(p._glProgram);
+	      //gl.clearColor(1, 1, 1, 1)
+	      //gl.clearDepth(1.0)
+	      //gl.clearStencil(0)
+
+	      gl.enable(gl.DEPTH_TEST);
+	      gl.depthFunc(gl.LEQUAL);
+	      //gl.enable(gl.BLEND)
+	      gl.disable(gl.BLEND);
+	      //gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)
+	      gl.enable(gl.CULL_FACE);
+	      gl.cullFace(gl.BACK);
+
+	      return this.__defaultShadowProgram;
+	    }
 	  }, {
 	    key: '_defaultHitTestProgram',
 	    get: function get() {
@@ -31564,8 +32204,8 @@ module.exports =
 	      gl.shaderSource(fragmentShader, fsText);
 	      gl.compileShader(fragmentShader);
 	      if (!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)) {
-	        var _info5 = gl.getShaderInfoLog(fragmentShader);
-	        throw new Error('hitTest fragment shader compile error: ' + _info5);
+	        var _info7 = gl.getShaderInfoLog(fragmentShader);
+	        throw new Error('hitTest fragment shader compile error: ' + _info7);
 	      }
 
 	      gl.attachShader(p._glProgram, vertexShader);
@@ -31574,8 +32214,8 @@ module.exports =
 	      // link program object
 	      gl.linkProgram(p._glProgram);
 	      if (!gl.getProgramParameter(p._glProgram, gl.LINK_STATUS)) {
-	        var _info6 = gl.getProgramInfoLog(p._glProgram);
-	        throw new Error('program link error: ' + _info6);
+	        var _info8 = gl.getProgramInfoLog(p._glProgram);
+	        throw new Error('program link error: ' + _info8);
 	      }
 
 	      gl.useProgram(p._glProgram);
@@ -39097,6 +39737,2427 @@ module.exports =
 
 /***/ },
 /* 129 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+	var _CGPoint = __webpack_require__(7);
+
+	var _CGPoint2 = _interopRequireDefault(_CGPoint);
+
+	var _CGRect = __webpack_require__(8);
+
+	var _CGRect2 = _interopRequireDefault(_CGRect);
+
+	var _CGSize = __webpack_require__(9);
+
+	var _CGSize2 = _interopRequireDefault(_CGSize);
+
+	var _SKBlendMode = __webpack_require__(130);
+
+	var _SKBlendMode2 = _interopRequireDefault(_SKBlendMode);
+
+	var _SKColor = __webpack_require__(11);
+
+	var _SKColor2 = _interopRequireDefault(_SKColor);
+
+	var _SKNode2 = __webpack_require__(131);
+
+	var _SKNode3 = _interopRequireDefault(_SKNode2);
+
+	var _SKTexture = __webpack_require__(132);
+
+	var _SKTexture2 = _interopRequireDefault(_SKTexture);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	//import SKWarpable from './SKWarpable'
+	//import SKShader from './SKShader'
+	//import SKAttributeValue from './SKAttributeValue'
+	//import NSCoder from '../undefined/NSCoder'
+
+	/**
+	 * @access private
+	 * @type {string}
+	 */
+	var _defaultVertexShader = '#version 300 es\n  precision mediump float;\n\n  in vec3 position;\n  in vec2 texcoord;\n\n  uniform float screenWidth;\n  uniform float screenHeight;\n\n  //out vec3 v_position;\n  out vec2 v_texcoord;\n\n  void main() {\n    vec3 pos = position;\n    pos.x = (pos.x * 2.0 / screenWidth) - 1.0;\n    pos.y = (pos.y * 2.0 / screenHeight) - 1.0;\n    v_texcoord = texcoord;\n    gl_Position = vec4(pos, 1.0);\n  }\n';
+
+	/**
+	 * @access private
+	 * @type {string}
+	 */
+	var _defaultFragmentShader = '#version 300 es\n  precision mediump float;\n\n  uniform sampler2D spriteTexture;\n  uniform float alpha;\n  in vec2 v_texcoord;\n\n  out vec4 outColor;\n\n  void main() {\n    outColor = texture(spriteTexture, v_texcoord);\n    outColor.a *= alpha;\n  }\n';
+
+	/**
+	 * A node that draws a rectangular texture, image or color. 
+	 * @access public
+	 * @extends {SKNode}
+	 * @implements {SKWarpable}
+	 * @see https://developer.apple.com/reference/spritekit/skspritenode
+	 */
+
+	var SKSpriteNode = function (_SKNode) {
+	  _inherits(SKSpriteNode, _SKNode);
+
+	  // Initializing a New Sprite
+
+	  /**
+	   * Initializes a textured sprite using an image file, optionally adding a normal map to simulate 3D lighting.
+	   * @access public
+	   * @constructor
+	   * @param {string} name - The name of an image file stored in the app bundle.
+	   * @param {boolean} generateNormalMap - If true, a normal map is generated from the image texture without applying any filter to it (SKTextureNormalMapFilteringTypeNone). If false, no normal map is generated (matching the behavior of the spriteNodeWithImageNamed: class method).
+	   * @desc The normal map is used only when lighting is enabled in the scene. For more information, see Adding Lighting to a Sprite and SKLightNode.
+	   * @see https://developer.apple.com/reference/spritekit/skspritenode/1519721-init
+	   */
+	  function SKSpriteNode() {
+	    var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+	    var generateNormalMap = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
+
+	    _classCallCheck(this, SKSpriteNode);
+
+	    // Inspecting Physical Properties
+
+	    /**
+	     * The dimensions of the sprite, in points.
+	     * @type {CGSize}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519668-size
+	     */
+	    var _this = _possibleConstructorReturn(this, (SKSpriteNode.__proto__ || Object.getPrototypeOf(SKSpriteNode)).call(this));
+
+	    _this.size = new _CGSize2.default(0, 0);
+
+	    /**
+	     * Defines the point in the sprite that corresponds to the node’s position.
+	     * @type {CGPoint}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519877-anchorpoint
+	     */
+	    _this.anchorPoint = new _CGPoint2.default(0.5, 0.5);
+
+	    // Inspecting the Sprite’s Texture
+
+	    /**
+	     * The texture used to draw the sprite.
+	     * @type {?SKTexture}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1520011-texture
+	     */
+	    _this._texture = null;
+
+	    /**
+	     * A property that defines how the texture is applied to the sprite.
+	     * @type {CGRect}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1520119-centerrect
+	     */
+	    _this.centerRect = new _CGRect2.default(new _CGPoint2.default(0, 0), new _CGSize2.default(1, 1));
+
+	    /**
+	     * A floating-point value that describes how the color is blended with the sprite’s texture.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519780-colorblendfactor
+	     */
+	    _this.colorBlendFactor = 0;
+
+	    // Inspecting Color Properties
+
+	    /**
+	     * The sprite’s color.
+	     * @type {SKColor}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519639-color
+	     */
+	    _this.color = new _SKColor2.default(1.0, 1.0, 1.0, 0.0);
+
+	    // Blending the Sprite with the Framebuffer
+
+	    /**
+	     * The blend mode used to draw the sprite into the parent’s framebuffer.
+	     * @type {SKBlendMode}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519931-blendmode
+	     */
+	    _this.blendMode = _SKBlendMode2.default.alpha;
+
+	    // Adding Lighting to a Sprite
+
+	    /**
+	     * A mask that defines how this sprite is lit by light nodes in the scenes.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519637-lightingbitmask
+	     */
+	    _this.lightingBitMask = 0;
+
+	    /**
+	     * A mask that defines which lights add additional shadows to the sprite.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519974-shadowedbitmask
+	     */
+	    _this.shadowedBitMask = 0;
+
+	    /**
+	     * A mask that defines which lights are occluded by this sprite.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1520325-shadowcastbitmask
+	     */
+	    _this.shadowCastBitMask = 0;
+
+	    /**
+	     * A texture that specifies the normal map for the sprite.
+	     * @type {?SKTexture}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519657-normaltexture
+	     */
+	    _this.normalTexture = null;
+
+	    // Working with Custom Shaders
+
+	    /**
+	     * A property that determines whether the sprite is rendered using a custom shader.
+	     * @type {?SKShader}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519714-shader
+	     */
+	    _this.shader = null;
+
+	    /**
+	     * The values of each attribute associated with the node's attached shader.
+	     * @type {Map<string, SKAttributeValue>}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/2715845-attributevalues
+	     */
+	    _this.attributeValues = new Map();
+
+	    // Instance Properties
+
+	    //this._customPlaygroundQuickLook = new PlaygroundQuickLook()
+	    _this._customPlaygroundQuickLook = null;
+
+	    /**
+	     * @access private
+	     * @type {WebGLProgram}
+	     */
+	    _this._program = null;
+
+	    _this._vertexArrayObject = null;
+	    _this._vertexBuffer = null;
+	    _this._indexBuffer = null;
+
+	    _this._loadingImagePromise = null;
+
+	    if (name !== null) {
+	      _this.texture = _SKTexture2.default.textureWithImageNamed(name);
+	      //if(generateNormalMap){
+	      //  this.normalTexture = this.texture.generatingNormalMap()
+	      //}
+	    }
+	    return _this;
+	  }
+
+	  /**
+	   * Initializes a colored sprite node.
+	   * @access public
+	   * @param {CGColor} color - The color for the resulting sprite node.
+	   * @param {CGSize} size - The size of the sprite node in points.
+	   * @returns {SKSpriteNode} -
+	   * @desc Although textured nodes are the most common way to use the SKSpriteNode class, you can also create sprite nodes without a texture. The behavior of the class changes when the node lacks a texture:The sprite node that is returned from this method has its texture property set to nil.There is no texture to stretch, so the centerRect parameter is ignored.There is no colorization step; the color property is used as the sprite’s color.The sprite node's alpha component is used to determine how it is blended into the buffer.Listing 1 shows how to create a red sprite node 100 x 100 points in size.Listing 1 Creating a non-textured sprite nodelet node = SKSpriteNode(color: .red,
+	                        size: CGSize(width: 100, height: 100))
+	  Creating a non-textured sprite nodelet node = SKSpriteNode(color: .red,
+	                        size: CGSize(width: 100, height: 100))
+	    * @see https://developer.apple.com/reference/spritekit/skspritenode/1519762-init
+	   */
+
+
+	  _createClass(SKSpriteNode, [{
+	    key: 'scaleTo',
+
+
+	    // Inspecting Physical Properties
+
+	    /**
+	     * Scales to sprite node to a specified size. 
+	     * @access public
+	     * @param {CGSize} size - 
+	     * @returns {void}
+	     * @desc This method works by setting the sprite node's xScale and yScale to achieve the specified size in its parent's coordinate space. 
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1645445-scale
+	     */
+	    value: function scaleTo(size) {}
+
+	    // Working with Custom Shaders
+
+	    /**
+	     * Sets an attribute value for an attached shader.
+	     * @access public
+	     * @param {SKAttributeValue} value - An attribute value object containing the scalar or vector value to set in the attached shader.
+	     * @param {string} key - The attribute name.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/2715849-setvalue
+	     */
+
+	  }, {
+	    key: 'setValueForAttribute',
+	    value: function setValueForAttribute(value, key) {}
+
+	    /**
+	     * The value of a shader attribute.
+	     * @access public
+	     * @param {string} key - The attribute name.
+	     * @returns {?SKAttributeValue} - 
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/2715846-value
+	     */
+
+	  }, {
+	    key: 'valueForAttributeNamed',
+	    value: function valueForAttributeNamed(key) {
+	      return null;
+	    }
+
+	    // Initializers
+
+	    /**
+	     * 
+	     * @access public
+	     * @param {NSCoder} aDecoder - 
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1520399-init
+	     */
+
+	  }, {
+	    key: 'initCoder',
+	    value: function initCoder(aDecoder) {}
+
+	    // Instance Properties
+	    /**
+	     * A custom playground quick look for this instance.
+	     * @type {PlaygroundQuickLook}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1645797-customplaygroundquicklook
+	     */
+
+	  }, {
+	    key: '_render',
+
+
+	    /**
+	     * @access private
+	     * @param {WebGLRenderingContext} gl -
+	     * @param {CGRect} viewRect -
+	     * @returns {void}
+	     */
+	    value: function _render(gl, viewRect) {
+	      var p = this.__presentation;
+	      if (this.texture === null) {
+	        return;
+	      }
+	      if (this.texture._glTexture === null) {
+	        this.texture._createTexture(gl);
+	        if (this.texture._glTexture === null) {
+	          // the texture is not ready
+	          return;
+	        }
+	        this.size = new _CGSize2.default(this.texture._image.naturalWidth, this.texture._image.naturalHeight);
+	        p.size = this.size.copy();
+	      }
+	      if (this._program === null) {
+	        this._program = this._createProgram(gl);
+	      }
+	      var program = this._program;
+	      gl.useProgram(program);
+
+	      if (this._vertexArrayObject === null) {
+	        this._createVertexArrayObject(gl, program);
+	      }
+	      gl.bindVertexArray(this._vertexArrayObject);
+
+	      gl.uniform1f(gl.getUniformLocation(program, 'screenWidth'), viewRect.size.width);
+	      gl.uniform1f(gl.getUniformLocation(program, 'screenHeight'), viewRect.size.height);
+	      gl.uniform1f(gl.getUniformLocation(program, 'alpha'), p.alpha);
+
+	      var data = this._createVertexData();
+	      gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer);
+	      gl.bufferData(gl.ARRAY_BUFFER, data, gl.DYNAMIC_DRAW);
+
+	      gl.uniform1i(gl.getUniformLocation(program, 'spriteTexture'), 0);
+	      gl.activeTexture(gl.TEXTURE0);
+	      gl.bindTexture(gl.TEXTURE_2D, this.texture._glTexture);
+	      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+	      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+	      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+	      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+
+	      gl.drawElements(gl.TRIANGLES, 6, gl.UNSIGNED_BYTE, 0);
+	    }
+	  }, {
+	    key: '_createProgram',
+	    value: function _createProgram(gl) {
+	      var program = gl.createProgram();
+	      var vsText = _defaultVertexShader;
+	      var fsText = _defaultFragmentShader;
+
+	      // initialize vertex shader
+	      var vertexShader = gl.createShader(gl.VERTEX_SHADER);
+	      gl.shaderSource(vertexShader, vsText);
+	      gl.compileShader(vertexShader);
+	      if (!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)) {
+	        var info = gl.getShaderInfoLog(vertexShader);
+	        throw new Error('SKSpriteNode vertex shader compile error: ' + info);
+	      }
+
+	      // initialize fragment shader
+	      var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+	      gl.shaderSource(fragmentShader, fsText);
+	      gl.compileShader(fragmentShader);
+	      if (!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)) {
+	        var _info = gl.getShaderInfoLog(fragmentShader);
+	        throw new Error('particle fragment shader compile error: ' + _info);
+	      }
+
+	      gl.attachShader(program, vertexShader);
+	      gl.attachShader(program, fragmentShader);
+
+	      // link program object
+	      gl.linkProgram(program);
+	      if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+	        var _info2 = gl.getProgramInfoLog(program);
+	        throw new Error('program link error: ' + _info2);
+	      }
+
+	      //gl.useProgram(program)
+
+	      return program;
+	    }
+
+	    /**
+	     * @access private
+	     * @param {WebGLRenderingContext} gl -
+	     * @param {WebGLProgram} program -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_createVertexArrayObject',
+	    value: function _createVertexArrayObject(gl, program) {
+	      this._vertexArrayObject = gl.createVertexArray();
+	      gl.bindVertexArray(this._vertexArrayObject);
+
+	      this._vertexBuffer = gl.createBuffer();
+	      gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer);
+
+	      var positionLoc = gl.getAttribLocation(program, 'position');
+	      gl.bindAttribLocation(program, positionLoc, 'position');
+	      gl.enableVertexAttribArray(positionLoc);
+	      // idx, size, type, norm, stride, offset
+	      gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, 20, 0);
+
+	      var texcoordLoc = gl.getAttribLocation(program, 'texcoord');
+	      gl.bindAttribLocation(program, texcoordLoc, 'texcoord');
+	      gl.enableVertexAttribArray(texcoordLoc);
+	      // idx, size, type, norm, stride, offset
+	      gl.vertexAttribPointer(texcoordLoc, 2, gl.FLOAT, false, 20, 12);
+
+	      this._indexBuffer = gl.createBuffer();
+	      var indexData = new Uint8Array([0, 3, 2, 0, 1, 3]);
+	      gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, this._indexBuffer);
+	      gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, indexData, gl.STATIC_DRAW);
+	    }
+	  }, {
+	    key: '_createVertexData',
+	    value: function _createVertexData() {
+	      var p = this.__presentation;
+	      var w = p.size.width * p._worldXScale;
+	      var h = p.size.height * p._worldYScale;
+	      var pos = p._worldPosition;
+	      var zPos = p._worldZPosition;
+	      var left = pos.x - p.anchorPoint.x * w;
+	      var right = pos.x + (1.0 - p.anchorPoint.x) * w;
+	      var top = pos.y + (1.0 - p.anchorPoint.y) * h;
+	      var bottom = pos.y - p.anchorPoint.y * h;
+	      var arr = [left, top, zPos, p.centerRect.minX, p.centerRect.minY, right, top, zPos, p.centerRect.maxX, p.centerRect.minY, left, bottom, zPos, p.centerRect.minX, p.centerRect.maxY, right, bottom, zPos, p.centerRect.maxX, p.centerRect.maxY];
+	      return new Float32Array(arr);
+	    }
+	  }, {
+	    key: '_copyValue',
+	    value: function _copyValue(src) {
+	      _get(SKSpriteNode.prototype.__proto__ || Object.getPrototypeOf(SKSpriteNode.prototype), '_copyValue', this).call(this, src);
+	      this.size = src.size.copy();
+	      this.anchorPoint = src.anchorPoint.copy();
+	      this._texture = src._texture ? src._texture : null;
+	      this.centerRect = src.centerRect.copy();
+	      this.colorBlendFactor = src.colorBlendFactor;
+	      this.color = src.color.copy();
+	      this.blendMode = src.blendMode;
+	      this.lightingBitMask = src.lightingBitMask;
+	      this.shadowedBitMask = src.shadowedBitMask;
+	      this.shadowCastBitMask = src.shadowCastBitMask;
+	      this.normalTexture = src.normalTexture ? src.normalTexture : null;
+	      this.shader = src.shader;
+	      this.attributeValues = src.attributeValues;
+	      this._customerPlaygroundQuickLook = src._customerPlaygroundQuickLook;
+	      // this._program
+	      // this._vertexArrayObject
+	      // this._vertexBuffer
+	      // this._indexBuffer
+	    }
+	  }, {
+	    key: 'customPlaygroundQuickLook',
+	    get: function get() {
+	      return this._customPlaygroundQuickLook;
+	    }
+	  }, {
+	    key: 'texture',
+	    get: function get() {
+	      return this._texture;
+	    },
+	    set: function set(newValue) {
+	      var _this2 = this;
+
+	      this._texture = newValue;
+
+	      this.size = new _CGSize2.default(0, 0);
+	      this._frame = new _CGRect2.default(new _CGPoint2.default(0, 0), this.size);
+	      if (this._texture) {
+	        this._loadingImagePromise = this._texture._loadingImagePromise.then(function (texture) {
+	          if (_this2._texture === texture) {
+	            _this2.size = _this2._texture.size();
+	            var x = -_this2.size.width * _this2.anchorPoint.x;
+	            var y = -_this2.size.height * (1.0 - _this2.anchorPoint.y);
+	            _this2._frame = new _CGRect2.default(new _CGPoint2.default(x, y), _this2.size);
+	          }
+	        });
+	      } else {
+	        this._loadingImagePromise = null;
+	      }
+	    }
+	  }], [{
+	    key: 'nodeWithColorSize',
+	    value: function nodeWithColorSize(color, size) {
+	      var node = new SKSpriteNode();
+	      node.size = size;
+	      node.color = color;
+	      return node;
+	    }
+
+	    /**
+	     * Initializes a textured sprite using an image file.
+	     * @access public
+	     * @param {string} name - The name of an image file stored in the app bundle.
+	     * @returns {SKSpriteNode} -
+	     * @desc This method creates a new texture object from the image file and assigns that texture to the texture property, the normalTexture properties is set to nil. The size property of the sprite is set to the dimensions of the image. The color property is set to white with an alpha of zero (1.0,1.0,1.0,0.0).
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1520391-init
+	     */
+
+	  }, {
+	    key: 'nodeWithImageNamed',
+	    value: function nodeWithImageNamed(name) {
+	      var node = new SKSpriteNode(name);
+	      if (!node._loadingImagePromise) {
+	        return null;
+	      }
+	      var promise = node._loadingImagePromise.then(function () {
+	        return Promise.resolve(node);
+	      });
+	      return promise;
+	    }
+
+	    /**
+	     * Initializes a textured sprite using an image file, optionally adding a normal map to simulate 3D lighting.
+	     * @access public
+	     * @param {string} name - The name of an image file stored in the app bundle.
+	     * @param {boolean} generateNormalMap - If true, a normal map is generated from the image texture without applying any filter to it (SKTextureNormalMapFilteringTypeNone). If false, no normal map is generated (matching the behavior of the spriteNodeWithImageNamed: class method).
+	     * @returns {SKSpriteNode} -
+	     * @desc The normal map is used only when lighting is enabled in the scene. For more information, see Adding Lighting to a Sprite and SKLightNode.
+	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519721-init
+	     */
+
+	  }, {
+	    key: 'nodeWithImageNamedNormalMapped',
+	    value: function nodeWithImageNamedNormalMapped(name, generateNormalMap) {}
+	  }]);
+
+	  return SKSpriteNode;
+	}(_SKNode3.default);
+
+	exports.default = SKSpriteNode;
+
+/***/ },
+/* 130 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * The modes that describe how the source and destination pixel colors are used to calculate the new destination color.
+	 * @typedef {Object} SKBlendMode
+	 * @property {number} alpha - The source and destination colors are blended by multiplying the source alpha value.
+	 * @property {number} add - The source and destination colors are added together.
+	 * @property {number} subtract - The source color is subtracted from the destination color.
+	 * @property {number} multiply - The source color is multiplied by the destination color.
+	 * @property {number} multiplyX2 - The source color is multiplied by the destination color and then doubled.
+	 * @property {number} screen - The source color is added to the destination color times the inverted source color.
+	 * @property {number} replace - The source color replaces the destination color.
+	 * @see https://developer.apple.com/reference/spritekit/skblendmode
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var SKBlendMode = {
+	  alpha: 0,
+	  add: 1,
+	  subtract: 2,
+	  multiply: 3,
+	  multiplyX2: 4,
+	  screen: 5,
+	  replace: 6
+	};
+
+	exports.default = SKBlendMode;
+
+/***/ },
+/* 131 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
+	var _CGPoint = __webpack_require__(7);
+
+	var _CGPoint2 = _interopRequireDefault(_CGPoint);
+
+	var _CGRect = __webpack_require__(8);
+
+	var _CGRect2 = _interopRequireDefault(_CGRect);
+
+	var _CGSize = __webpack_require__(9);
+
+	var _CGSize2 = _interopRequireDefault(_CGSize);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	//import UIFocusItem from '../undefined/UIFocusItem'
+	//import SKScene from './SKScene'
+	//import SKAction from './SKAction'
+	//import SKPhysicsBody from './SKPhysicsBody'
+	//import GKPolygonObstacle from '../undefined/GKPolygonObstacle'
+	//import GKEntity from '../undefined/GKEntity'
+	//import NSMutableDictionary from '../undefined/NSMutableDictionary'
+	//import SKConstraint from './SKConstraint'
+	//import SKReachConstraints from './SKReachConstraints'
+	//import NSCoder from '../undefined/NSCoder'
+	//import SKAttributeValue from './SKAttributeValue'
+
+
+	/**
+	 * The SKNode class is the fundamental building block of most SpriteKit content. 
+	 * @access public
+	 * @extends {NSObject}
+	 * @implements {UIFocusItem}
+	 * @see https://developer.apple.com/reference/spritekit/sknode
+	 */
+	var SKNode = function (_NSObject) {
+	  _inherits(SKNode, _NSObject);
+
+	  // Initializers
+
+	  /**
+	   * 
+	   * @access public
+	   * @constructor
+	   * @see https://developer.apple.com/reference/spritekit/sknode/1483097-init
+	   */
+	  function SKNode() {
+	    _classCallCheck(this, SKNode);
+
+	    // Inspecting the Node’s Position
+
+	    /**
+	     * The position of the node in its parent's coordinate system.
+	     * @type {CGPoint}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483101-position
+	     */
+	    var _this = _possibleConstructorReturn(this, (SKNode.__proto__ || Object.getPrototypeOf(SKNode)).call(this));
+
+	    _this.position = new _CGPoint2.default(0, 0);
+
+	    /**
+	     * The height of the node relative to its parent.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483107-zposition
+	     */
+	    _this.zPosition = 0.0;
+
+	    _this._frame = new _CGRect2.default(new _CGPoint2.default(0, 0), new _CGSize2.default(0, 0));
+
+	    // Setting a Node’s Scaling and Rotation
+
+	    /**
+	     * A scaling factor that multiplies the width of a node and its children.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483087-xscale
+	     */
+	    _this.xScale = 1.0;
+
+	    /**
+	     * A scaling factor that multiplies the height of a node and its children.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483046-yscale
+	     */
+	    _this.yScale = 1.0;
+
+	    /**
+	     * The Euler rotation about the z axis (in radians).
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483089-zrotation
+	     */
+	    _this.zRotation = 0.0;
+
+	    // Inspecting a Node’s Visibility
+
+	    /**
+	     * The transparency value applied to the node’s contents.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483023-alpha
+	     */
+	    _this.alpha = 1.0;
+
+	    /**
+	     * A Boolean value that determines whether a node and its descendants are rendered.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483048-ishidden
+	     */
+	    _this.isHidden = false;
+
+	    // Determining Whether a Node Supports User Interaction
+
+	    /**
+	     * A Boolean value that indicates whether the node receives touch events.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483109-isuserinteractionenabled
+	     */
+	    _this.isUserInteractionEnabled = false;
+
+	    // Working with Node Trees
+
+	    _this._children = [];
+	    _this._parent = null;
+	    _this._scene = null;
+
+	    // Naming Nodes
+
+	    /**
+	     * The node’s assignable name.
+	     * @type {?string}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483136-name
+	     */
+	    _this.name = null;
+
+	    // Running Actions
+
+	    /**
+	     * A speed modifier applied to all actions executed by a node and its descendants.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483036-speed
+	     */
+	    _this.speed = 1.0;
+
+	    /**
+	     * A Boolean value that determines whether actions on the node and its descendants are processed.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483113-ispaused
+	     */
+	    _this.isPaused = false;
+
+	    /**
+	     * @access private
+	     * @type {Map}
+	     */
+	    _this._actions = new Map();
+
+	    // Adding Physics to a Node
+
+	    /**
+	     * The physics body associated with the node.
+	     * @type {?SKPhysicsBody}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483117-physicsbody
+	     */
+	    _this.physicsBody = null;
+
+	    // Working with GameplayKit Entities
+
+	    /**
+	     * The GameplayKit entity this node represents.
+	     * @type {?GKEntity}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1640688-entity
+	     */
+	    //this.entity = null
+
+
+	    // Storing Custom Node Data
+
+	    /**
+	     * A dictionary containing arbitrary data.
+	     * @type {?NSMutableDictionary}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483121-userdata
+	     */
+	    _this.userData = null;
+
+	    // Constraining a Node’s Behavior Relative to Other Nodes
+
+	    /**
+	     * Specifies the list of constraints to apply to the node.
+	     * @type {?SKConstraint[]}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483124-constraints
+	     */
+	    _this.constraints = null;
+
+	    /**
+	     * Specifies the reach constraints to apply to the node when executing a reach action.
+	     * @type {?SKReachConstraints}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483019-reachconstraints
+	     */
+	    _this.reachConstraints = null;
+
+	    // Instance Properties
+
+	    /**
+	     * 
+	     * @type {?Object[]}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1645045-accessibilitychildren
+	     */
+	    _this.accessibilityChildren = [];
+
+	    /**
+	     * 
+	     * @type {CGRect}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1645044-accessibilityframe
+	     */
+	    _this.accessibilityFrame = new _CGRect2.default(new _CGPoint2.default(0, 0), new _CGSize2.default(0, 0));
+
+	    /**
+	     * 
+	     * @type {?string}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1645041-accessibilityhelp
+	     */
+	    _this.accessibilityHelp = null;
+
+	    /**
+	     * 
+	     * @type {?string}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1645039-accessibilitylabel
+	     */
+	    _this.accessibilityLabel = null;
+
+	    /**
+	     * 
+	     * @type {?Object}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1645042-accessibilityparent
+	     */
+	    _this.accessibilityParent = null;
+
+	    /**
+	     * 
+	     * @type {?string}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1645036-accessibilityrole
+	     */
+	    _this.accessibilityRole = 'AXImage';
+
+	    /**
+	     * 
+	     * @type {?string}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1645035-accessibilityroledescription
+	     */
+	    _this.accessibilityRoleDescription = 'SKNode';
+
+	    /**
+	     * 
+	     * @type {?string}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1645043-accessibilitysubrole
+	     */
+	    _this.accessibilitySubrole = null;
+
+	    /**
+	     * The values of each attribute associated with the node's attached shader. 
+	     * @type {Map<string, SKAttributeValue>}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1644181-attributevalues
+	     */
+	    _this.attributeValues = new Map();
+
+	    /**
+	     * 
+	     * @type {boolean}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1645038-isaccessibilityelement
+	     */
+	    _this.isAccessibilityElement = false;
+
+	    /**
+	     * 
+	     * @type {boolean}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1645037-isaccessibilityenabled
+	     */
+	    _this.isAccessibilityEnabled = false;
+
+	    /**
+	     * @type {SKNode}
+	     * @access private
+	     */
+	    _this.__presentation = null;
+
+	    _this._isPresentationInstance = false;
+	    _this._worldPosition = new _CGPoint2.default(0, 0);
+	    _this._worldZPosition = 0;
+	    _this._worldXScale = 1;
+	    _this._worldYScale = 1;
+	    _this._worldZRotation = 0;
+	    return _this;
+	  }
+
+	  /**
+	   * 
+	   * @access public
+	   * @param {NSCoder} aDecoder - 
+	   * @returns {void}
+	   * @see https://developer.apple.com/reference/spritekit/sknode/1483142-init
+	   */
+	  //initWithCoder(aDecoder) {
+	  //}
+
+
+	  // Creating a New Node
+
+	  /**
+	   * Creates a new node by loading an archive file from the game’s main bundle.
+	   * @access public
+	   * @param {string} filename - The name of the file, without a file extension. The file must be in the app’s main bundle and have a .sks filename extension.
+	   * @returns {void}
+	   * @desc If you call this method on a subclass of the SKScene class and the object in the archive is an SKScene object, the returned object is initialized as if it is a member of the subclass. You use this behavior to create scene layouts in the Xcode Editor and provide custom behaviors in your subclass. 
+	   * @see https://developer.apple.com/reference/spritekit/sknode/1483083-init
+	   */
+
+
+	  _createClass(SKNode, [{
+	    key: 'calculateAccumulatedFrame',
+
+
+	    // Inspecting the Node’s Position
+
+	    /**
+	     * Calculates a rectangle in the parent’s coordinate system that contains the content of the node and all of its descendants. 
+	     * @access public
+	     * @returns {CGRect} - 
+	     * @desc The frame takes into the account the cumulative effect of the xScale, yScale, and zRotation properties of each node in the subtree.Listing 1 shows how calculateAccumulatedFrame() can be used display the bounding box of a shape node. The child node, although smaller than its parent, is rotated by 30° so that its bounds extend beyond its parent's bounds. After childNode has been added to parentNode, a further shape node, boundingBoxNode, is created with its size based on the accumulated frame of parentNode.Listing 1 Displaying the accumulated frame of a shape nodelet parentNode = SKShapeNode(rectOf: CGSize(width: 500, height: 500))
+	    parentNode.lineWidth = 2
+	    parentNode.strokeColor = .blue
+	    parentNode.fillColor = .clear
+	       
+	    let childNode = SKShapeNode(rectOf: CGSize(width: 400, height: 400))
+	    childNode.strokeColor = .red
+	    childNode.fillColor = .clear
+	    childNode.zRotation = -CGFloat.pi / 6 // pi / 6 = 30°
+	       
+	    parentNode.addChild(childNode)
+	       
+	    let boundingBoxNode = SKShapeNode(rectOf: parentNode.calculateAccumulatedFrame().size)
+	    boundingBoxNode.lineWidth = 1
+	    boundingBoxNode.strokeColor = .black
+	    boundingBoxNode.fillColor = .clear
+	    boundingBoxNode.path = boundingBoxNode.path?.copy(dashingWithPhase: 0,
+	                                                    lengths: [10,10])
+	       
+	    parentNode.addChild(boundingBoxNode)
+	    Figure 1 shows the result of Listing 1 with parentNode rendered in blue, childNode rendered in red and the boundingBoxNode rendered with a dashed line. Figure 1 Displaying the accumulated frame of a shape nodeDisplaying the accumulated frame of a shape nodelet parentNode = SKShapeNode(rectOf: CGSize(width: 500, height: 500))
+	    parentNode.lineWidth = 2
+	    parentNode.strokeColor = .blue
+	    parentNode.fillColor = .clear
+	       
+	    let childNode = SKShapeNode(rectOf: CGSize(width: 400, height: 400))
+	    childNode.strokeColor = .red
+	    childNode.fillColor = .clear
+	    childNode.zRotation = -CGFloat.pi / 6 // pi / 6 = 30°
+	       
+	    parentNode.addChild(childNode)
+	       
+	    let boundingBoxNode = SKShapeNode(rectOf: parentNode.calculateAccumulatedFrame().size)
+	    boundingBoxNode.lineWidth = 1
+	    boundingBoxNode.strokeColor = .black
+	    boundingBoxNode.fillColor = .clear
+	    boundingBoxNode.path = boundingBoxNode.path?.copy(dashingWithPhase: 0,
+	                                                    lengths: [10,10])
+	       
+	    parentNode.addChild(boundingBoxNode)
+	    Displaying the accumulated frame of a shape node
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483066-calculateaccumulatedframe
+	     */
+	    value: function calculateAccumulatedFrame() {
+	      var r = this._frame.copy();
+	      var _iteratorNormalCompletion = true;
+	      var _didIteratorError = false;
+	      var _iteratorError = undefined;
+
+	      try {
+	        for (var _iterator = this._children[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+	          var child = _step.value;
+
+	          r = r.union(child.calculateAccumulatedFrame());
+	        }
+	      } catch (err) {
+	        _didIteratorError = true;
+	        _iteratorError = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion && _iterator.return) {
+	            _iterator.return();
+	          }
+	        } finally {
+	          if (_didIteratorError) {
+	            throw _iteratorError;
+	          }
+	        }
+	      }
+
+	      return r;
+	    }
+
+	    /**
+	     * A rectangle in the parent’s coordinate system that contains the node’s content, ignoring the node’s children.
+	     * @type {CGRect}
+	     * @desc The frame is the smallest rectangle that contains the node’s content, taking into account the node’s xScale, yScale, and zRotation properties. Not all nodes contain content of their own.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483026-frame
+	     */
+
+	  }, {
+	    key: 'setScale',
+
+
+	    // Setting a Node’s Scaling and Rotation
+
+	    /**
+	     * Sets the xScale and yScale properties of the node.
+	     * @access public
+	     * @param {number} scale - The new value to use for the node’s xScale and yScale properties.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483126-setscale
+	     */
+	    value: function setScale(scale) {
+	      this.xScale = scale;
+	      this.yScale = scale;
+	    }
+
+	    // Working with Node Trees
+
+	    /**
+	     * Adds a node to the end of the receiver’s list of child nodes.
+	     * @access public
+	     * @param {SKNode} node - The node to add. The node must not already have a parent.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483054-addchild
+	     */
+
+	  }, {
+	    key: 'addChild',
+	    value: function addChild(node) {
+	      if (this._children.indexOf(node) >= 0) {
+	        return;
+	      }
+	      node.removeFromParent();
+	      this._children.push(node);
+	      node._parent = this;
+	    }
+
+	    /**
+	     * Inserts a child into a specific position in the receiver’s list of child nodes.
+	     * @access public
+	     * @param {SKNode} node - The node to add. The node must not already have a parent.
+	     * @param {number} index - The position in the array to insert the node.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483062-insertchild
+	     */
+
+	  }, {
+	    key: 'insertChildAt',
+	    value: function insertChildAt(node, index) {
+	      if (this._children.indexOf(node) >= 0) {
+	        return;
+	      }
+	      node.removeFromParent();
+	      this._insertObjectInChildrenAtIndex(node, index);
+	      this._parent = this;
+	    }
+
+	    /**
+	     * Compares the parameter node to the receiving node.
+	     * @access public
+	     * @param {SKNode} node - The node to compare to the receiving node.
+	     * @returns {boolean} - 
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483078-isequal
+	     */
+
+	  }, {
+	    key: 'isEqualTo',
+	    value: function isEqualTo(node) {
+	      return false;
+	    }
+
+	    /**
+	     * Moves the node to a new parent node in the scene. 
+	     * @access public
+	     * @param {SKNode} parent - An SKNode object to move the receiver to. This node must be in the same scene as the node’s current parent.
+	     * @returns {void}
+	     * @desc The node maintains its current position in scene coordinates.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483021-move
+	     */
+
+	  }, {
+	    key: 'moveToParent',
+	    value: function moveToParent(parent) {
+	      parent.addChild(this);
+	    }
+
+	    /**
+	     * Removes the receiving node from its parent.
+	     * @access public
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483119-removefromparent
+	     */
+
+	  }, {
+	    key: 'removeFromParent',
+	    value: function removeFromParent() {
+	      var parentNode = this._parent;
+	      if (parentNode === null) {
+	        return;
+	      }
+	      var index = parentNode._children.indexOf(this);
+	      if (index < 0) {
+	        return;
+	      }
+	      parentNode._removeObjectFromChildrenAtIndex(index);
+	    }
+
+	    /**
+	     * Removes all of the node’s children.
+	     * @access public
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483040-removeallchildren
+	     */
+
+	  }, {
+	    key: 'removeAllChildren',
+	    value: function removeAllChildren() {
+	      var _iteratorNormalCompletion2 = true;
+	      var _didIteratorError2 = false;
+	      var _iteratorError2 = undefined;
+
+	      try {
+	        for (var _iterator2 = this._children[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+	          var child = _step2.value;
+
+	          child.removeFromParent();
+	        }
+	      } catch (err) {
+	        _didIteratorError2 = true;
+	        _iteratorError2 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion2 && _iterator2.return) {
+	            _iterator2.return();
+	          }
+	        } finally {
+	          if (_didIteratorError2) {
+	            throw _iteratorError2;
+	          }
+	        }
+	      }
+	    }
+
+	    /**
+	     * Removes a list of children from the receiving node.
+	     * @access public
+	     * @param {SKNode[]} nodes - An array of SKNode objects that are all children of the receiving node.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483091-removechildren
+	     */
+
+	  }, {
+	    key: 'removeChildrenIn',
+	    value: function removeChildrenIn(nodes) {
+	      var _iteratorNormalCompletion3 = true;
+	      var _didIteratorError3 = false;
+	      var _iteratorError3 = undefined;
+
+	      try {
+	        for (var _iterator3 = nodes[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+	          var node = _step3.value;
+
+	          if (this._children.indexOf(node) >= 0) {
+	            node.removeFromParent();
+	          }
+	        }
+	      } catch (err) {
+	        _didIteratorError3 = true;
+	        _iteratorError3 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion3 && _iterator3.return) {
+	            _iterator3.return();
+	          }
+	        } finally {
+	          if (_didIteratorError3) {
+	            throw _iteratorError3;
+	          }
+	        }
+	      }
+	    }
+
+	    /**
+	     *
+	     * @access private
+	     * @param {number} index -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_removeObjectFromChildrenAtIndex',
+	    value: function _removeObjectFromChildrenAtIndex(index) {
+	      var arr = this._children.splice(index, 1);
+	      if (arr.length === 0) {
+	        return;
+	      }
+	      var obj = arr[0];
+
+	      obj._parent = null;
+	    }
+
+	    /**
+	     *
+	     * @access private
+	     * @param {SCNNode} object -
+	     * @param {number} index -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_insertObjectInChildrenAtIndex',
+	    value: function _insertObjectInChildrenAtIndex(object, index) {
+	      var length = this._children.length;
+	      if (index > length) {
+	        throw new Error('SKNode.children out of index: ' + index + ' > ' + length);
+	      }
+	      this._children.splice(index, 0, object);
+	    }
+
+	    /**
+	     * Returns a Boolean value that indicates whether the node is a descendant of the target node.
+	     * @access public
+	     * @param {SKNode} parent - An SKNode object to test against.
+	     * @returns {boolean} - 
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483111-inparenthierarchy
+	     */
+
+	  }, {
+	    key: 'inParentHierarchy',
+	    value: function inParentHierarchy(parent) {
+	      return false;
+	    }
+	    /**
+	     * The node’s children.
+	     * @type {SKNode[]}
+	     * @desc The objects in this array are all SKNode objects.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483028-children
+	     */
+
+	  }, {
+	    key: 'childNodeWithName',
+
+
+	    // Naming Nodes
+
+	    /**
+	     * Searches the children of the receiving node for a node with a specific name.
+	     * @access public
+	     * @param {string} name - The name to search for. This may be either the literal name of the node or a customized search string. See Searching the Node Tree.
+	     * @returns {?SKNode} - 
+	     * @desc If more than one child share the same name, the first node discovered is returned.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483060-childnode
+	     */
+	    value: function childNodeWithName(name) {
+	      var _iteratorNormalCompletion4 = true;
+	      var _didIteratorError4 = false;
+	      var _iteratorError4 = undefined;
+
+	      try {
+	        for (var _iterator4 = this._children[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+	          var child = _step4.value;
+
+	          if (child.name === name) {
+	            return child;
+	          }
+	        }
+	      } catch (err) {
+	        _didIteratorError4 = true;
+	        _iteratorError4 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion4 && _iterator4.return) {
+	            _iterator4.return();
+	          }
+	        } finally {
+	          if (_didIteratorError4) {
+	            throw _iteratorError4;
+	          }
+	        }
+	      }
+
+	      return null;
+	    }
+
+	    /**
+	     * Search the children of the receiving node to perform processing for nodes which share a name.
+	     * @access public
+	     * @param {string} name - The name to search for. This may be either the literal name of the node or a customized search string. See Searching the Node Tree.
+	     * @param {function(arg1: SKNode, arg2: UnsafeMutablePointer<ObjCBool>): void} block - A block to execute on nodes that match the name parameter. The block has the signature (node: SKNode, stop: UnsafeMutablePointer<ObjCBool>).
+	     * @returns {void}
+	     * @desc This method enumerates the child array in order, searching for nodes whose names match the search parameter. The block is called once for each node that matches the name parameter.The following code shows how you could enumerate through the child nodes of a scene with a name containing the string yellow. Each matching node is hidden until the enumeration finds a node that also contains the string triangle. When this node is reached, stop is set to true and the processing stops.Listing 1 Enumerating child nodesscene.enumerateChildNodes(withName: "*yellow*") {
+	      (node, stop) in
+	      
+	      node.run(SKAction.hide())
+	      
+	      if let name = node.name, name.contains("triangle") {
+	          stop.initialize(to: true)
+	      }
+	    }
+	    You can also search by class name using enumerateChildNodes(withName:using:). However, for custom classes, you need to specify the fully annotated class name (i.e. the project name followed by the class name). The following code shows a custom class, SpaceshipNode, based on SKSpriteNode, and created in a project named SpaceGame. The first search fails to return an instance of  SpaceshipNode added as a child of parentNode:Listing 2 Enumerating child nodesclass SpaceshipNode: SKSpriteNode {
+	    }
+	       
+	    let parentNode = SKNode()
+	    let childNode = SpaceshipNode()
+	    parentNode.addChild(childNode)
+	       
+	    parentNode.enumerateChildNodes(withName: "SpaceshipNode") {
+	      node, _ in
+	      // Unannotated name, returns no results 
+	    }
+	       
+	    parentNode.enumerateChildNodes(withName: "SpaceGame.SpaceshipNode") {
+	      node, _ in
+	      // Annotated name, successfully returns `childNode` 
+	    }
+	       
+	    parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
+	      node, _ in
+	      // Superclass name, successfully returns `childNode` 
+	    }
+	    Enumerating child nodesscene.enumerateChildNodes(withName: "*yellow*") {
+	      (node, stop) in
+	      
+	      node.run(SKAction.hide())
+	      
+	      if let name = node.name, name.contains("triangle") {
+	          stop.initialize(to: true)
+	      }
+	    }
+	    Enumerating child nodesclass SpaceshipNode: SKSpriteNode {
+	    }
+	       
+	    let parentNode = SKNode()
+	    let childNode = SpaceshipNode()
+	    parentNode.addChild(childNode)
+	       
+	    parentNode.enumerateChildNodes(withName: "SpaceshipNode") {
+	      node, _ in
+	      // Unannotated name, returns no results 
+	    }
+	       
+	    parentNode.enumerateChildNodes(withName: "SpaceGame.SpaceshipNode") {
+	      node, _ in
+	      // Annotated name, successfully returns `childNode` 
+	    }
+	       
+	    parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
+	      node, _ in
+	      // Superclass name, successfully returns `childNode` 
+	    }
+	      * @see https://developer.apple.com/reference/spritekit/sknode/1483024-enumeratechildnodes
+	     */
+
+	  }, {
+	    key: 'enumerateChildNodesWithNameUsing',
+	    value: function enumerateChildNodesWithNameUsing(name, block) {}
+
+	    // Running Actions
+
+	    /**
+	     * Adds an action to the list of actions executed by the node.
+	     * @access public
+	     * @param {SKAction} action - The action to perform.
+	     * @returns {void}
+	     * @desc The new action is processed the next time the scene’s animation loop is processed.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483093-run
+	     */
+
+	  }, {
+	    key: 'run',
+	    value: function run(action) {
+	      this.runWithKey(action, Symbol());
+	    }
+
+	    /**
+	     * Adds an action to the list of actions executed by the node.
+	     * @access public
+	     * @param {SKAction} action - The action to perform.
+	     * @param {function(): void} block - A completion block called when the action completes.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483103-run
+	     */
+
+	  }, {
+	    key: 'runCompletion',
+	    value: function runCompletion(action, block) {
+	      this._runActionForKeyCompletionHandler(action, Symbol(), block);
+	    }
+
+	    /**
+	     * Adds an identifiable action to the list of actions executed by the node.
+	     * @access public
+	     * @param {SKAction} action - The action to perform.
+	     * @param {string} key - A unique key used to identify the action.
+	     * @returns {void}
+	     * @desc This method is identical to run(_:), but the action is stored so that it can be retrieved later. If an action using the same key is already running, it is removed before the new action is added.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483042-run
+	     */
+
+	  }, {
+	    key: 'runWithKey',
+	    value: function runWithKey(action, key) {
+	      this._runActionForKeyCompletionHandler(action, key, null);
+	    }
+	  }, {
+	    key: '_runActionForKeyCompletionHandler',
+	    value: function _runActionForKeyCompletionHandler(action, key, block) {
+	      if (typeof key === 'undefined' || key === null) {
+	        key = Symbol();
+	      }
+	      var act = action.copy();
+	      // FIXME: use current frame time
+	      act._actionStartTime = Date.now() * 0.001;
+	      act._completionHandler = block;
+	      this._actions.set(key, act);
+	    }
+
+	    /**
+	     * Returns an action associated with a specific key.
+	     * @access public
+	     * @param {string} key - A string that uniquely identifies an action.
+	     * @returns {?SKAction} - 
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483138-action
+	     */
+
+	  }, {
+	    key: 'actionForKey',
+	    value: function actionForKey(key) {
+	      return this._actions.get(key);
+	    }
+
+	    /**
+	     * Returns a Boolean value that indicates whether the node is executing actions.
+	     * @access public
+	     * @returns {boolean} - 
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483081-hasactions
+	     */
+
+	  }, {
+	    key: 'hasActions',
+	    value: function hasActions() {
+	      return this._actions.size > 0;
+	    }
+
+	    /**
+	     * Ends and removes all actions from the node.
+	     * @access public
+	     * @returns {void}
+	     * @desc When an action is removed from the node, any remaining animation the action would perform is skipped; however, previous changes are not reverted. It is possible that an action may make a final change to the scene when removed; if so, it is documented for the specific action in SKAction.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483030-removeallactions
+	     */
+
+	  }, {
+	    key: 'removeAllActions',
+	    value: function removeAllActions() {
+	      // TODO: stop actions
+	      this._actions.clear();
+	    }
+
+	    /**
+	     * Removes an action associated with a specific key.
+	     * @access public
+	     * @param {string} key - A string that uniquely identifies an action.
+	     * @returns {void}
+	     * @desc If an action is found that matches the key, it is removed from the node.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483076-removeaction
+	     */
+
+	  }, {
+	    key: 'removeActionForKey',
+	    value: function removeActionForKey(key) {
+	      // TODO: stop action
+	      this._actions.delete(key);
+	    }
+
+	    // Converting to and from the Node’s Coordinate System
+
+	    /**
+	     * Converts a point from the coordinate system of another node in the node tree to the coordinate system of this node.
+	     * @access public
+	     * @param {CGPoint} point - A point in the other node’s coordinate system.
+	     * @param {SKNode} node - Another node in the same node tree as this node.
+	     * @returns {CGPoint} - 
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483058-convert
+	     */
+
+	  }, {
+	    key: 'convertFrom',
+	    value: function convertFrom(point, node) {
+	      return null;
+	    }
+
+	    /**
+	     * Converts a point in this node’s coordinate system to the coordinate system of another node in the node tree.
+	     * @access public
+	     * @param {CGPoint} point - A point in this node’s coordinate system.
+	     * @param {SKNode} node - Another node in the same node tree as this node.
+	     * @returns {CGPoint} - 
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483056-convert
+	     */
+
+	  }, {
+	    key: 'convertTo',
+	    value: function convertTo(point, node) {
+	      return null;
+	    }
+
+	    // Determining If a Point Lies in a Node
+
+	    /**
+	     * Returns a Boolean value that indicates whether a point lies inside the parent’s coordinate system.
+	     * @access public
+	     * @param {CGPoint} p - A CGPoint to test against.
+	     * @returns {boolean} - 
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483044-contains
+	     */
+
+	  }, {
+	    key: 'contains',
+	    value: function contains(p) {
+	      return false;
+	    }
+
+	    /**
+	     * Returns the deepest visible descendant that intersects a point.
+	     * @access public
+	     * @param {CGPoint} p - A point in the node’s coordinate system.
+	     * @returns {SKNode} - 
+	     * @desc A point is considered to be in a node if it lies inside the rectangle returned by the calculateAccumulatedFrame() method.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483099-atpoint
+	     */
+
+	  }, {
+	    key: 'atPoint',
+	    value: function atPoint(p) {
+	      return null;
+	    }
+
+	    /**
+	     * Returns an array of all visible descendants that intersect a point.
+	     * @access public
+	     * @param {CGPoint} p - A point in the node’s coordinate system.
+	     * @returns {SKNode[]} - 
+	     * @desc A point is considered to be in a node if it lies inside the rectangle returned by the calculateAccumulatedFrame() method.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483072-nodes
+	     */
+
+	  }, {
+	    key: 'nodesAt',
+	    value: function nodesAt(p) {
+	      return null;
+	    }
+
+	    // Performing Node Intersections
+
+	    /**
+	     * Returns a Boolean value that indicates whether this node intersects the specified node.
+	     * @access public
+	     * @param {SKNode} node - Another node in the same node tree.
+	     * @returns {boolean} - 
+	     * @desc The two nodes are considered to intersect if their frames intersect. The children of both nodes are ignored in this test.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483140-intersects
+	     */
+
+	  }, {
+	    key: 'intersects',
+	    value: function intersects(node) {
+	      return false;
+	    }
+
+	    // Creating GameplayKit Obstacles from a Set of Nodes
+
+	    /**
+	     * Converts each node into an obstacle by transforming its bounds into the scene’s coordinate system.
+	     * @access public
+	     * @param {SKNode[]} nodes - An array of SKNode objects.
+	     * @returns {GKPolygonObstacle[]} - 
+	     * @desc Use the array of obstacles to create an obstacle graph (GKObstacleGraph) in GameplayKit. See GameplayKit and GameplayKit Programming Guide.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483132-obstacles
+	     */
+
+	  }, {
+	    key: 'accessibilityHitTest',
+
+
+	    // Instance Methods
+
+	    /**
+	     * 
+	     * @access public
+	     * @param {CGPoint} point - 
+	     * @returns {?Object} - 
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1645040-accessibilityhittest
+	     */
+	    value: function accessibilityHitTest(point) {
+	      return null;
+	    }
+
+	    /**
+	     * Sets an attribute value for an attached shader
+	     * @deprecated
+	     * @access public
+	     * @param {SKAttributeValue} value - An attribute value object containing the scalar or vector value to set in the attached shader. 
+	     * @param {string} key - The attribute name.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1644180-setvalue
+	     */
+
+	  }, {
+	    key: 'setValueForAttribute',
+	    value: function setValueForAttribute(value, key) {
+	      this.attributeValues.set(key, value);
+	    }
+
+	    /**
+	     * The value of a shader attribute.
+	     * @deprecated
+	     * @access public
+	     * @param {string} key - The attribute name.
+	     * @returns {?SKAttributeValue} - 
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1644182-value
+	     */
+
+	  }, {
+	    key: 'valueForAttributeNamed',
+	    value: function valueForAttributeNamed(key) {
+	      return this.attributeValues.get(key);
+	    }
+
+	    /**
+	     * @type {SKNode}
+	     */
+
+	  }, {
+	    key: 'copy',
+
+
+	    /**
+	     *
+	     * @access public
+	     * @returns {SKNode} -
+	     */
+	    value: function copy() {
+	      var node = _get(SKNode.prototype.__proto__ || Object.getPrototypeOf(SKNode.prototype), 'copy', this).call(this);
+	      node._copyValue(this);
+	      return node;
+	    }
+	  }, {
+	    key: '_copyValue',
+	    value: function _copyValue(src) {
+	      this.position = src.position.copy();
+	      this.zPosition = src.zPosition;
+	      this._frame = src._frame;
+	      this.xScale = src.xScale;
+	      this.yScale = src.yScale;
+	      this.zRotation = src.zRotation;
+	      this.alpha = src.alpha;
+	      this.isHidden = src.isHidden;
+	      this.isUserInteractionEnabled = src.isUserInteractionEnabled;
+	      this.name = src.name;
+	      this.speed = src.speed;
+	      this.isPaused = src.isPaused;
+	      this._actions = new Map(src._actions);
+	      this.physicsBody = src.physicsBody;
+	      this.userData = src.userData;
+	      this.constraints = src.constraints;
+	      this.reachConstraints = src.reachConstraints;
+	      this.accessibilityChildren = src.accessibilityChildren;
+	      this.accessibilityFrame = src.accessibilityFrame.copy();
+	      this.accessibilityHelp = src.accessibilityHelp;
+	      this.accessibilityLabel = src.accessibilityLabel;
+	      this.accessibilityParent = src.accessibilityParent;
+	      this.accessibilityRole = src.accessibilityRole;
+	      this.accessibilityRoleDescription = src.accessibilityRoleDescription;
+	      this.accessibilitySubrole = src.accessibilitySubrole;
+	      this.attributeValues = new Map(src.attributeValues);
+	      this.isAccessibilityElement = src.isAccessibilityElement;
+	      this.isAccessibilityEnabled = src.isAccessibilityEnabled;
+	    }
+
+	    /**
+	     * @access private
+	     * @param {WebGLRenderingContext} gl -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_render',
+	    value: function _render(gl) {
+	      // nothing to draw
+	    }
+	  }, {
+	    key: '_copyTransformToPresentation',
+	    value: function _copyTransformToPresentation() {
+	      if (this.__presentation === null) {
+	        return;
+	      }
+	      var p = this.__presentation;
+	      p.position = this.position;
+	      p.zPosition = this.zPosition;
+	      p.xScale = this.xScale;
+	      p.yScale = this.yScale;
+	      p.zRotation = this.zRotation;
+	    }
+	  }, {
+	    key: '_updateWorldTransform',
+	    value: function _updateWorldTransform() {
+	      var p = null;
+	      var pz = 0;
+	      if (this._parent === null) {
+	        p = new _CGPoint2.default(0, 0);
+	      } else {
+	        p = this._parent._worldPosition;
+	        pz = this._parent._worldZPosition;
+	      }
+	      this._worldPosition = this.position.add(p);
+	      this._worldZPosition = this.zPosition + pz;
+
+	      if (this._presentation) {
+	        var pp = null;
+	        var ppz = 0;
+	        var pxScale = 1;
+	        var pyScale = 1;
+	        if (this._parent === null) {
+	          pp = new _CGPoint2.default(0, 0);
+	        } else if (this._parent._presentation === null) {
+	          pp = this._parent._worldPosition;
+	          ppz = this._parent._worldZPosition;
+	          pxScale = this._parent._worldXScale;
+	          pyScale = this._parent._worldYScale;
+	        } else {
+	          pp = this._parent._presentation._worldPosition;
+	          ppz = this._parent._presentation._worldZPosition;
+	          pxScale = this._parent._presentation._worldXScale;
+	          pyScale = this._parent._presentation._worldYScale;
+	        }
+	        //this._presentation._worldPosition = this._presentation.position.add(pp)
+	        this._presentation._worldPosition.x = pp.x + this._presentation.position.x * pxScale;
+	        this._presentation._worldPosition.y = pp.y + this._presentation.position.y * pyScale;
+	        this._presentation._worldZPosition = this._presentation.zPosition + ppz;
+	        this._presentation._worldXScale = this._presentation.xScale * pxScale;
+	        this._presentation._worldYScale = this._presentation.yScale * pyScale;
+	      }
+
+	      var _iteratorNormalCompletion5 = true;
+	      var _didIteratorError5 = false;
+	      var _iteratorError5 = undefined;
+
+	      try {
+	        for (var _iterator5 = this._children[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+	          var child = _step5.value;
+
+	          child._updateWorldTransform();
+	        }
+	      } catch (err) {
+	        _didIteratorError5 = true;
+	        _iteratorError5 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion5 && _iterator5.return) {
+	            _iterator5.return();
+	          }
+	        } finally {
+	          if (_didIteratorError5) {
+	            throw _iteratorError5;
+	          }
+	        }
+	      }
+	    }
+	  }, {
+	    key: 'frame',
+	    get: function get() {
+	      return this._frame;
+	    }
+	  }, {
+	    key: 'children',
+	    get: function get() {
+	      return this._children.slice(0);
+	    }
+	    /**
+	     * The node’s parent node.
+	     * @type {?SKNode}
+	     * @desc If the node is not in a node tree, the value is nil.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483080-parent
+	     */
+
+	  }, {
+	    key: 'parent',
+	    get: function get() {
+	      return this._parent;
+	    }
+
+	    /**
+	     * The scene node that contains the node.
+	     * @type {?SKScene}
+	     * @desc If the node is not embedded in a scene, the value is nil.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483064-scene
+	     */
+
+	  }, {
+	    key: 'scene',
+	    get: function get() {
+	      return this._scene;
+	    }
+	  }, {
+	    key: '_presentation',
+	    get: function get() {
+	      return this.__presentation;
+	    }
+	  }], [{
+	    key: 'nodeWithFileNamed',
+	    value: function nodeWithFileNamed(filename) {
+	      var node = new SKNode();
+	      return node;
+	    }
+	  }, {
+	    key: 'obstaclesFromNodeBounds',
+	    value: function obstaclesFromNodeBounds(nodes) {
+	      return null;
+	    }
+
+	    /**
+	     * Converts each node into an obstacle by transforming the node’s physics body shape into the scene’s coordinate system.
+	     * @access public
+	     * @param {SKNode[]} nodes - An array of SKNode objects.
+	     * @returns {GKPolygonObstacle[]} - 
+	     * @desc Use the array of obstacles to create an obstacle graph (GKObstacleGraph) in GameplayKit. See GameplayKit and GameplayKit Programming Guide.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483085-obstacles
+	     */
+
+	  }, {
+	    key: 'obstaclesFromNodePhysicsBodies',
+	    value: function obstaclesFromNodePhysicsBodies(nodes) {
+	      return null;
+	    }
+
+	    /**
+	     * Converts each node into an obstacle by first transforming the node’s texture into a physics shape and then converting that shape into the scene’s coordinate system.
+	     * @access public
+	     * @param {SKNode[]} sprites - An array of SKNode objects.
+	     * @param {number} accuracy - A floating point value between 0.001 and 1.0, inclusive. Higher values create a more precise (but more complex) representation of the obstacle.
+	     * @returns {GKPolygonObstacle[]} - 
+	     * @desc Use the array of obstacles to create an obstacle graph (GKObstacleGraph) in GameplayKit. See GameplayKit and GameplayKit Programming Guide.
+	     * @see https://developer.apple.com/reference/spritekit/sknode/1483134-obstacles
+	     */
+
+	  }, {
+	    key: 'obstaclesFromSpriteTextures',
+	    value: function obstaclesFromSpriteTextures(sprites, accuracy) {
+	      return null;
+	    }
+	  }]);
+
+	  return SKNode;
+	}(_NSObject3.default);
+
+	exports.default = SKNode;
+
+/***/ },
+/* 132 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
+	var _CGRect = __webpack_require__(8);
+
+	var _CGRect2 = _interopRequireDefault(_CGRect);
+
+	var _CGSize = __webpack_require__(9);
+
+	var _CGSize2 = _interopRequireDefault(_CGSize);
+
+	var _SKTextureFilteringMode = __webpack_require__(133);
+
+	var _SKTextureFilteringMode2 = _interopRequireDefault(_SKTextureFilteringMode);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	//import GKNoiseMap from '../undefined/GKNoiseMap'
+
+
+	/**
+	 * A representation of an image for use in SpriteKit.
+	 * @access public
+	 * @extends {NSObject}
+	 * @see https://developer.apple.com/reference/spritekit/sktexture
+	 */
+	var SKTexture = function (_NSObject) {
+	  _inherits(SKTexture, _NSObject);
+
+	  /**
+	   * constructor
+	   * @access public
+	   * @constructor
+	   */
+	  function SKTexture() {
+	    _classCallCheck(this, SKTexture);
+
+	    // Inspecting a Texture’s Properties
+
+	    /**
+	     * The filtering mode used when the size of a sprite drawn with the texture is not drawn at the texture’s native size.
+	     * @type {SKTextureFilteringMode}
+	     * @see https://developer.apple.com/reference/spritekit/sktexture/1519659-filteringmode
+	     */
+	    var _this = _possibleConstructorReturn(this, (SKTexture.__proto__ || Object.getPrototypeOf(SKTexture)).call(this));
+
+	    _this.filteringMode = _SKTextureFilteringMode2.default.linear;
+
+	    /**
+	     * A Boolean value that indicates whether the texture attempts to generate mipmaps.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/reference/spritekit/sktexture/1519960-usesmipmaps
+	     */
+	    _this.usesMipmaps = false;
+
+	    // Instance Properties
+
+	    _this._customPlaygroundQuickLook = null;
+
+	    _this._image = null;
+	    _this._glTexture = null;
+
+	    _this._loadingImagePromise = null;
+	    return _this;
+	  }
+
+	  // Creating New Textures from Images
+
+	  /**
+	   * Create a new texture object from an image file stored in the app bundle.
+	   * @access public
+	   * @param {string} name - The name of the image file.
+	   * @returns {void}
+	   * @desc The new texture object is initialized with the name of the image file and then control returns immediately to your game. Sprite Kit loads and prepares the texture data when it is needed by your game.When loading the texture data, Sprite Kit searches the app bundle for an image file with the specified filename. If a matching image file cannot be found, Sprite Kit searches for the texture in any texture atlases stored in the app bundle. If the specified image does not exist anywhere in the bundle, Sprite Kit creates a placeholder texture image.
+	   * @see https://developer.apple.com/reference/spritekit/sktexture/1520086-init
+	   */
+
+
+	  _createClass(SKTexture, [{
+	    key: 'applying',
+
+
+	    /**
+	     * Creates a new texture by applying a Core Image filter to an existing texture.
+	     * @access public
+	     * @param {CIFilter} filter - A Core Image filter that requires a single inputImage parameter and produces an outputImage parameter.
+	     * @returns {SKTexture} - 
+	     * @desc The image data is copied before control is returned to your game.
+	     * @see https://developer.apple.com/reference/spritekit/sktexture/1520388-applying
+	     */
+	    value: function applying(filter) {
+	      return null;
+	    }
+
+	    /**
+	     * Returns the texture’s image data as a Quartz 2D image.
+	     * @access public
+	     * @returns {CGImage} - 
+	     * @see https://developer.apple.com/reference/spritekit/sktexture/1519755-cgimage
+	     */
+
+	  }, {
+	    key: 'cgImage',
+	    value: function cgImage() {
+	      return this._image;
+	    }
+
+	    // Creating Textures from Raw Pixel Data
+
+	    /**
+	     * Creates a new texture from raw pixel data.
+	     * @access public
+	     * @param {Data} pixelData - An NSData object that holds the bitmap data. The pixels must be 32 bpp, 8bpc (unsigned integer) RGBA pixel data. The color components should have been already multiplied by the alpha value.
+	     * @param {CGSize} size - The size of the new texture in points.
+	     * @returns {void}
+	     * @desc The image data is copied before control is returned to your game.Creating textures from raw pixel data is useful if you have a CPU based routine for creating imagery. The following code shows how you can use init(data:size:) to create a texture containing random colors and a solid alpha. The bytes array is populated by iterating over the total number of pixels and adding four UInt8 values for the red, green, blue, and alpha channels.let width = 128
+	    let height = 128
+	    let bytes = stride(from: 0, to: width * height, by: 1).flatMap {
+	      _ in
+	      return [
+	          UInt8(drand48() * 255), // red
+	          UInt8(drand48() * 255), // green
+	          UInt8(drand48() * 255), // blue
+	          UInt8(255)              // alpha
+	      ]
+	    }
+	    let data = Data(bytes: bytes)
+	    let texture = SKTexture(data: data,
+	                          size: CGSize(width: width, height: height))
+	    let width = 128
+	    let height = 128
+	    let bytes = stride(from: 0, to: width * height, by: 1).flatMap {
+	      _ in
+	      return [
+	          UInt8(drand48() * 255), // red
+	          UInt8(drand48() * 255), // green
+	          UInt8(drand48() * 255), // blue
+	          UInt8(255)              // alpha
+	      ]
+	    }
+	    let data = Data(bytes: bytes)
+	    let texture = SKTexture(data: data,
+	                          size: CGSize(width: width, height: height))
+	      * @see https://developer.apple.com/reference/spritekit/sktexture/1519962-init
+	     */
+
+	  }, {
+	    key: 'generatingNormalMap',
+
+
+	    // Creating Normal Map Textures
+
+	    /**
+	     * Creates a normal map texture by analyzing the contents of an existing texture.
+	     * @access public
+	     * @returns {SKTexture} - 
+	     * @see https://developer.apple.com/reference/spritekit/sktexture/1519687-generatingnormalmap
+	     */
+	    value: function generatingNormalMap() {
+	      return null;
+	    }
+
+	    /**
+	     * Creates a normal map texture by analyzing the contents of an existing texture.
+	     * @access public
+	     * @param {number} smoothness - A number between 0.0 and 1.0 indicating how much the texture should be smoothed before the normal map is generated. A value of 0.0 means that the texture is not smoothed at all before being processed.
+	     * @param {number} contrast - A value used to magnify the effect of the generated normal map. A value of 1.0 indicates no magnification is applied.
+	     * @returns {SKTexture} - 
+	     * @see https://developer.apple.com/reference/spritekit/sktexture/1520441-generatingnormalmap
+	     */
+
+	  }, {
+	    key: 'generatingNormalMapWithSmoothness',
+	    value: function generatingNormalMapWithSmoothness(smoothness, contrast) {
+	      return null;
+	    }
+
+	    // Creating Noise Textures
+
+	    /**
+	     * Creates a new texture whose contents are procedurally generated directional noise data.
+	     * @access public
+	     * @param {number} smoothness - A value that indicates how similar neighboring texels will be in the resulting texture. The value should be between 0.0 and 1.0. A value of 1.0 generates a smooth surface.
+	     * @param {CGSize} size - The size of the new texture in points.
+	     * @returns {void}
+	     * @desc The noise texture is tileable with itself. The RGB values stored in the texture can be used as directional (XYZ) data. The alpha values are also randomized and can be used as magnitude data, if desired.The following code creates three sprite nodes with textures generated by init(vectorNoiseWithSmoothness:size:) with smoothness values of 0.0, 0.5 and 1.0.let columWidth = scene.size.width / 3
+	    for i in 0...2 {
+	      
+	      let size = CGSize(width: ceil(columWidth),
+	                        height: 0.5 * scene.size.height)
+	      
+	      let smoothness = CGFloat(i) / 2
+	      
+	      let vectorTexture = SKTexture(vectorNoiseWithSmoothness: smoothness,
+	                                    size: size)
+	      
+	      let sprite = SKSpriteNode(texture: vectorTexture, size: size)
+	      
+	      sprite.position = CGPoint(x: CGFloat(i) * columWidth + (columWidth / 2),
+	                                y: 
+	    scene.size.height / 2)
+	       
+	      scene.addChild(sprite)
+	    }
+	    let columWidth = scene.size.width / 3
+	    for i in 0...2 {
+	      
+	      let size = CGSize(width: ceil(columWidth),
+	                        height: 0.5 * scene.size.height)
+	      
+	      let smoothness = CGFloat(i) / 2
+	      
+	      let vectorTexture = SKTexture(vectorNoiseWithSmoothness: smoothness,
+	                                    size: size)
+	      
+	      let sprite = SKSpriteNode(texture: vectorTexture, size: size)
+	      
+	      sprite.position = CGPoint(x: CGFloat(i) * columWidth + (columWidth / 2),
+	                                y: 
+	    scene.size.height / 2)
+	       
+	      scene.addChild(sprite)
+	    }
+	      * @see https://developer.apple.com/reference/spritekit/sktexture/1520393-init
+	     */
+
+	  }, {
+	    key: 'size',
+
+
+	    // Inspecting a Texture’s Properties
+
+	    /**
+	     * The size of the texture.
+	     * @access public
+	     * @returns {CGSize} - 
+	     * @desc If the texture was created using an image file and that image file hasn’t been loaded, calling this method forces the texture data to be loaded from the file.
+	     * @see https://developer.apple.com/reference/spritekit/sktexture/1519772-size
+	     */
+	    value: function size() {
+	      if (this._image === null) {
+	        return new _CGSize2.default(0, 0);
+	      }
+	      return new _CGSize2.default(this._image.naturalWidth, this._image.naturalHeight);
+	    }
+
+	    /**
+	     * A rectangle that defines the portion of the texture used to render its image.
+	     * @access public
+	     * @returns {CGRect} - 
+	     * @desc The default value is a rectangle that covers the entire texture (0,0) - (1,1). You cannot set this value directly; to use only a portion of a texture, use the init(rect:in:) method to create a new texture.
+	     * @see https://developer.apple.com/reference/spritekit/sktexture/1519707-texturerect
+	     */
+
+	  }, {
+	    key: 'textureRect',
+	    value: function textureRect() {
+	      return null;
+	    }
+
+	    // Preloading the Texture Data
+
+	    /**
+	     * Load the texture data into memory, calling a completion handler after the task completes.
+	     * @access public
+	     * @param {function(): void} completionHandler - A block called after the texture data is loaded.
+	     * @returns {void}
+	     * @desc SpriteKit creates a background task to load the texture data from the associated file, then returns control to your game. After the texture data is loaded, your completion handler is called. Typically, you use this method when you want to guarantee that a particular texture is in memory before accessing it.If you need to preload multiple textures at once, use the preload(_:withCompletionHandler:) method instead.
+	     * @see https://developer.apple.com/reference/spritekit/sktexture/1520172-preload
+	     */
+
+	  }, {
+	    key: 'preload',
+	    value: function preload(completionHandler) {}
+
+	    /**
+	     * Load the texture data of multiple textures into memory.
+	     * @access public
+	     * @param {SKTexture[]} textures - An array of SKTexture objects.
+	     * @param {function(): void} completionHandler - A block called after all of the textures are loaded.
+	     * @returns {void}
+	     * @desc SpriteKit creates a background task that loads the texture data for all of the textures in the array, then returns control to your game. Your completion handler is called after all of the textures are loaded.
+	     * @see https://developer.apple.com/reference/spritekit/sktexture/1519817-preload
+	     */
+
+	  }, {
+	    key: '_loadImage',
+	    value: function _loadImage(path) {
+	      var _this2 = this;
+
+	      var image = new Image();
+	      this._loadingImagePromise = new Promise(function (resolve, reject) {
+	        if (path.indexOf('file:///') === 0) {
+	          var paths = path.slice(8).split('/');
+	          var pathCount = 1;
+	          var _path = paths.slice(-pathCount).join('/');
+	          console.info('image loading: ' + _path);
+	          image.onload = function () {
+	            console.info('image ' + _path + ' onload');
+	            _this2._image = image;
+	            resolve(_this2);
+	          };
+	          image.onerror = function () {
+	            pathCount += 1;
+	            if (pathCount > paths.length) {
+	              console.error('image ' + path + ' load error.');
+	              reject(_this2);
+	            } else {
+	              // retry
+	              console.info('image ' + _path + ' load error.');
+	              _path = paths.slice(-pathCount).join('/');
+	              console.info('try ' + _path);
+	              image.src = _path;
+	            }
+	          };
+	        } else {
+	          console.info('image loading: ' + path);
+	          image.onload = function () {
+	            _this2._image = image;
+	            resolve(_this2);
+	          };
+	          image.onerror = function () {
+	            console.info('image ' + path + ' load error.');
+	            reject(_this2);
+	          };
+	          image.src = path;
+	        }
+	      });
+	    }
+	  }, {
+	    key: '_createTexture',
+	    value: function _createTexture(gl) {
+	      if (this._image === null) {
+	        return;
+	      }
+	      var texture = gl.createTexture();
+
+	      var canvas = document.createElement('canvas');
+	      canvas.width = this._image.naturalWidth;
+	      canvas.height = this._image.naturalHeight;
+	      canvas.getContext('2d').drawImage(this._image, 0, 0);
+
+	      gl.bindTexture(gl.TEXTURE_2D, texture);
+	      // texImage2D(target, level, internalformat, width, height, border, format, type, source)
+	      // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
+	      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, this._image.width, this._image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
+	      gl.generateMipmap(gl.TEXTURE_2D);
+	      gl.bindTexture(gl.TEXTURE_2D, null);
+
+	      this._glTexture = texture;
+	    }
+	  }, {
+	    key: 'customPlaygroundQuickLook',
+
+
+	    // Instance Properties
+	    /**
+	     * 
+	     * @type {PlaygroundQuickLook}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/spritekit/sktexture/1645801-customplaygroundquicklook
+	     */
+	    get: function get() {
+	      return this._customPlaygroundQuickLook;
+	    }
+	  }], [{
+	    key: 'textureWithImageNamed',
+	    value: function textureWithImageNamed(name) {
+	      console.log('SKTexture image name: ' + name);
+	      var texture = new SKTexture();
+	      texture._loadImage(name);
+	      return texture;
+	    }
+
+	    /**
+	     * Create a new texture object from an image object.
+	     * @access public
+	     * @param {Image} image - An image.
+	     * @returns {void}
+	     * @desc The image data is copied before control is returned to your game.
+	     * @see https://developer.apple.com/reference/spritekit/sktexture/1520136-init
+	     */
+
+	  }, {
+	    key: 'textureWithImage',
+	    value: function textureWithImage(image) {
+	      var texture = new SKTexture();
+	      texture._image = image;
+	      this._loadingImagePromise = Promise.resolve(this);
+	      return texture;
+	    }
+
+	    /**
+	     * Create a new texture object from a Quartz 2D image.
+	     * @access public
+	     * @param {CGImage} image - A Quartz 2D image (CGImage) object. For more information, see Quartz 2D Programming Guide and CGImage.
+	     * @returns {void}
+	     * @desc The image data is copied before control is returned to your game.
+	     * @see https://developer.apple.com/reference/spritekit/sktexture/1519576-init
+	     */
+
+	  }, {
+	    key: 'textureWithCgImage',
+	    value: function textureWithCgImage(image) {
+	      var texture = new SKTexture();
+	      texture._image = image;
+	      this._loadingImagePromise = Promise.resolve(this);
+	      return texture;
+	    }
+
+	    /**
+	     * Creates a new texture from a subset of an existing texture.
+	     * @access public
+	     * @param {CGRect} rect - A rectangle in the unit coordinate space that specifies the portion of the texture to use.
+	     * @param {SKTexture} texture - The texture to create the new texture from.
+	     * @returns {void}
+	     * @desc The returned texture object shares the same texture data as the original texture object, meaning that only one copy of the texture data is kept in memory.If you call this method on a texture that itself was created using this method, the original texture is used as the source instead. That is, the rectangle is considered to be in the source texture’s coordinate system. To do this, you should use the source texture's textureRect() rather than relying on hard coded {(0,0) (1,1)} as the coordinates.  Listing 1 shows how you can use the source texture's textureRect() to calculate the portion of the texture to use.Listing 1 Creating a texture from a portion of another texture.let originalTexture = SKTexture(imageNamed: "sourceImage.png")
+	    let rect = CGRect(origin: originalTexture.textureRect().origin,
+	                    size: CGSize(width: originalTexture.textureRect().midX,
+	                                 height: originalTexture.textureRect().midY))
+	    let croppedTexture = SKTexture(rect: rect,
+	                                 in: originalTexture)
+	    In the above example, if originalTexture had a size of (348.0, 282.0) and a textureRect() of {(0,0) (1,1)}, croppedTexture will have a size of (174.0, 141.0) and a textureRect() of {(0,0) (1,1)}. croppedTexture will be a copy of the bottom left quadrant of originalTexture.Creating a texture from a portion of another texture.let originalTexture = SKTexture(imageNamed: "sourceImage.png")
+	    let rect = CGRect(origin: originalTexture.textureRect().origin,
+	                    size: CGSize(width: originalTexture.textureRect().midX,
+	                                 height: originalTexture.textureRect().midY))
+	    let croppedTexture = SKTexture(rect: rect,
+	                                 in: originalTexture)
+	      * @see https://developer.apple.com/reference/spritekit/sktexture/1520425-init
+	     */
+
+	  }, {
+	    key: 'textureWithRectIn',
+	    value: function textureWithRectIn(rect, texture) {
+	      var texutre = new SKTexture();
+	      return texture;
+	    }
+	  }, {
+	    key: 'textureWithDataSize',
+	    value: function textureWithDataSize(pixelData, size) {}
+	  }, {
+	    key: 'textureWithVectorNoiseWithSmoothness',
+	    value: function textureWithVectorNoiseWithSmoothness(smoothness, size) {}
+
+	    /**
+	     * Creates a new texture whose contents are procedurally generated colored noise data.
+	     * @access public
+	     * @param {number} smoothness - A value that indicates how similar neighboring texels will be in the resulting texture. The value should be between 0.0 and 1.0. A value of 1.0 generates a smooth surface.
+	     * @param {CGSize} size - The size of the new texture in points.
+	     * @param {boolean} grayscale - If true, all four components of each texel will have equal values. If false, all four values are completely randomized.
+	     * @returns {void}
+	     * @desc Unlike other textures produced by SpriteKit, the texels are not premultiplied by the alpha value. Your custom shaders should compensate for this as necessary.The following code creates three sprite nodes with textures generated by init(noiseWithSmoothness:size:grayscale:) with smoothness values of 0.0, 0.5 and 1.0.let columWidth = scene.size.width / 3
+	    for i in 0...2 {
+	      
+	      let size = CGSize(width: ceil(columWidth),
+	                        height: 0.5 * scene.size.height)
+	      
+	      let smoothness = CGFloat(i) / 2
+	      
+	      let noiseTexture = SKTexture(noiseWithSmoothness: smoothness,
+	                                    size: size,
+	                                    grayscale: false)
+	      
+	      let sprite = SKSpriteNode(texture: noiseTexture, size: size)
+	      
+	      sprite.position = CGPoint(x: CGFloat(i) * columWidth + (columWidth / 2),
+	                                y: scene.size.height / 2)
+	      
+	      scene.addChild(sprite)
+	    }
+	    let columWidth = scene.size.width / 3
+	    for i in 0...2 {
+	      
+	      let size = CGSize(width: ceil(columWidth),
+	                        height: 0.5 * scene.size.height)
+	      
+	      let smoothness = CGFloat(i) / 2
+	      
+	      let noiseTexture = SKTexture(noiseWithSmoothness: smoothness,
+	                                    size: size,
+	                                    grayscale: false)
+	      
+	      let sprite = SKSpriteNode(texture: noiseTexture, size: size)
+	      
+	      sprite.position = CGPoint(x: CGFloat(i) * columWidth + (columWidth / 2),
+	                                y: scene.size.height / 2)
+	      
+	      scene.addChild(sprite)
+	    }
+	      * @see https://developer.apple.com/reference/spritekit/sktexture/1519971-init
+	     */
+
+	  }, {
+	    key: 'textureWithNoiseWithSmoothness',
+	    value: function textureWithNoiseWithSmoothness(smoothness, size, grayscale) {}
+	  }, {
+	    key: 'preloadWithCompletionHandler',
+	    value: function preloadWithCompletionHandler(textures, completionHandler) {}
+	  }]);
+
+	  return SKTexture;
+	}(_NSObject3.default);
+
+	exports.default = SKTexture;
+
+/***/ },
+/* 133 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	/**
+	 * Texture filtering modes to use when the texture is drawn in a size other than its native size.
+	 * @typedef {Object} SKTextureFilteringMode
+	 * @property {number} nearest - Each pixel is drawn using the nearest point in the texture. This mode is faster, but the results are often pixelated.
+	 * @property {number} linear - Each pixel is drawn by using a linear filter of multiple texels in the texture. This mode produces higher quality results but may be slower.
+	 * @see https://developer.apple.com/reference/spritekit/sktexturefilteringmode
+	 */
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var SKTextureFilteringMode = {
+	  nearest: 0,
+	  linear: 1
+	};
+
+	exports.default = SKTextureFilteringMode;
+
+/***/ },
+/* 134 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -39122,7 +42183,7 @@ module.exports =
 	exports.default = SCNShadowMode;
 
 /***/ },
-/* 130 */
+/* 135 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39147,7 +42208,7 @@ module.exports =
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
-	var _SCNMorpherCalculationMode = __webpack_require__(131);
+	var _SCNMorpherCalculationMode = __webpack_require__(136);
 
 	var _SCNMorpherCalculationMode2 = _interopRequireDefault(_SCNMorpherCalculationMode);
 
@@ -39404,7 +42465,7 @@ module.exports =
 	exports.default = SCNMorpher;
 
 /***/ },
-/* 131 */
+/* 136 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -39428,7 +42489,7 @@ module.exports =
 	exports.default = SCNMorpherCalculationMode;
 
 /***/ },
-/* 132 */
+/* 137 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39747,7 +42808,38 @@ module.exports =
 	exports.default = SCNSkinner;
 
 /***/ },
-/* 133 */
+/* 138 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _SCNMatrix = __webpack_require__(44);
+
+	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	 * Returns a matrix describing a scale transformation.
+	 * @access public
+	 * @param {number} sx - The scale factor in the x-axis direction.
+	 * @param {number} sy - The scale factor in the y-axis direction.
+	 * @param {number} sz - The scale factor in the z-axis direction.
+	 * @returns {SCNMatrix4} - 
+	 * @see https://developer.apple.com/reference/scenekit/1409681-scnmatrix4makescale
+	 */
+	var SCNMatrix4MakeScale = function SCNMatrix4MakeScale(sx, sy, sz) {
+	  return new _SCNMatrix2.default(sx, 0, 0, 0, 0, sy, 0, 0, 0, 0, sz, 0, 0, 0, 0, 1);
+	};
+
+	exports.default = SCNMatrix4MakeScale;
+
+/***/ },
+/* 139 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39818,7 +42910,7 @@ module.exports =
 	exports.default = SCNConstraint;
 
 /***/ },
-/* 134 */
+/* 140 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -39842,7 +42934,7 @@ module.exports =
 	exports.default = SCNMovabilityHint;
 
 /***/ },
-/* 135 */
+/* 141 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39910,7 +43002,7 @@ module.exports =
 	exports.default = SCNNodeRendererDelegate;
 
 /***/ },
-/* 136 */
+/* 142 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39925,7 +43017,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNFieldForceEvaluator = __webpack_require__(137);
+	var _SCNFieldForceEvaluator = __webpack_require__(143);
 
 	var _SCNFieldForceEvaluator2 = _interopRequireDefault(_SCNFieldForceEvaluator);
 
@@ -39933,7 +43025,7 @@ module.exports =
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNPhysicsFieldScope = __webpack_require__(138);
+	var _SCNPhysicsFieldScope = __webpack_require__(144);
 
 	var _SCNPhysicsFieldScope2 = _interopRequireDefault(_SCNPhysicsFieldScope);
 
@@ -40211,7 +43303,7 @@ module.exports =
 	exports.default = SCNPhysicsField;
 
 /***/ },
-/* 137 */
+/* 143 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40243,7 +43335,7 @@ module.exports =
 	exports.default = SCNFieldForceEvaluator;
 
 /***/ },
-/* 138 */
+/* 144 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -40267,7 +43359,7 @@ module.exports =
 	exports.default = SCNPhysicsFieldScope;
 
 /***/ },
-/* 139 */
+/* 145 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40282,7 +43374,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAudioSource = __webpack_require__(140);
+	var _SCNAudioSource = __webpack_require__(146);
 
 	var _SCNAudioSource2 = _interopRequireDefault(_SCNAudioSource);
 
@@ -40422,7 +43514,7 @@ module.exports =
 	exports.default = SCNAudioPlayer;
 
 /***/ },
-/* 140 */
+/* 146 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40678,7 +43770,7 @@ module.exports =
 	exports.default = SCNAudioSource;
 
 /***/ },
-/* 141 */
+/* 147 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40842,7 +43934,7 @@ module.exports =
 	_SCNAction3.default.group = SCNActionGroup.group;
 
 /***/ },
-/* 142 */
+/* 148 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40917,7 +44009,7 @@ module.exports =
 	exports.default = SCNActionHide;
 
 /***/ },
-/* 143 */
+/* 149 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40990,7 +44082,7 @@ module.exports =
 	exports.default = SCNActionJavaScript;
 
 /***/ },
-/* 144 */
+/* 150 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41063,7 +44155,7 @@ module.exports =
 	exports.default = SCNActionMove;
 
 /***/ },
-/* 145 */
+/* 151 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41136,7 +44228,7 @@ module.exports =
 	exports.default = SCNActionPerformSelector;
 
 /***/ },
-/* 146 */
+/* 152 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41288,7 +44380,7 @@ module.exports =
 	_SCNAction3.default.playAudioWaitForCompletion = SCNActionPlaySound.playAudioWaitForCompletion;
 
 /***/ },
-/* 147 */
+/* 153 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41361,7 +44453,7 @@ module.exports =
 	exports.default = SCNActionReference;
 
 /***/ },
-/* 148 */
+/* 154 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41493,7 +44585,7 @@ module.exports =
 	_SCNAction3.default.removeFromParentNode = SCNActionRemove.removeFromParentNode;
 
 /***/ },
-/* 149 */
+/* 155 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41697,7 +44789,7 @@ module.exports =
 	_SCNAction3.default.repeatForever = SCNActionRepeat.repeatForever;
 
 /***/ },
-/* 150 */
+/* 156 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42034,7 +45126,7 @@ module.exports =
 	_SCNAction3.default.rotateToAxisAngle = SCNActionRotate.rotateToAxisAngle;
 
 /***/ },
-/* 151 */
+/* 157 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42107,7 +45199,7 @@ module.exports =
 	exports.default = SCNActionRunAction;
 
 /***/ },
-/* 152 */
+/* 158 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42239,7 +45331,7 @@ module.exports =
 	_SCNAction3.default.run = SCNActionRunBlock.run;
 
 /***/ },
-/* 153 */
+/* 159 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42312,7 +45404,7 @@ module.exports =
 	exports.default = SCNActionScale;
 
 /***/ },
-/* 154 */
+/* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42510,7 +45602,7 @@ module.exports =
 	_SCNAction3.default.sequence = SCNActionSequence.sequence;
 
 /***/ },
-/* 155 */
+/* 161 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -42532,7 +45624,7 @@ module.exports =
 	exports.default = SCNActionTimingFunction;
 
 /***/ },
-/* 156 */
+/* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42649,7 +45741,7 @@ module.exports =
 	_SCNAction3.default.waitDurationWithRange = SCNActionWait.waitDurationWithRange;
 
 /***/ },
-/* 157 */
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42678,7 +45770,7 @@ module.exports =
 	exports.default = SCNAnimationEventBlock;
 
 /***/ },
-/* 158 */
+/* 164 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -42782,7 +45874,7 @@ module.exports =
 	exports.default = SCNBillboardAxis;
 
 /***/ },
-/* 159 */
+/* 165 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42793,11 +45885,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNConstraint2 = __webpack_require__(133);
+	var _SCNConstraint2 = __webpack_require__(139);
 
 	var _SCNConstraint3 = _interopRequireDefault(_SCNConstraint2);
 
-	var _SCNBillboardAxis = __webpack_require__(158);
+	var _SCNBillboardAxis = __webpack_require__(164);
 
 	var _SCNBillboardAxis2 = _interopRequireDefault(_SCNBillboardAxis);
 
@@ -42852,7 +45944,7 @@ module.exports =
 	exports.default = SCNBillboardConstraint;
 
 /***/ },
-/* 160 */
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42988,7 +46080,7 @@ module.exports =
 	exports.default = SCNCapsule;
 
 /***/ },
-/* 161 */
+/* 167 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -43014,7 +46106,7 @@ module.exports =
 	exports.default = SCNChamferMode;
 
 /***/ },
-/* 162 */
+/* 168 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43127,7 +46219,7 @@ module.exports =
 	exports.default = SCNCone;
 
 /***/ },
-/* 163 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43213,7 +46305,7 @@ module.exports =
 	exports.default = SCNCylinder;
 
 /***/ },
-/* 164 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43323,7 +46415,7 @@ module.exports =
 	exports.default = SCNFloor;
 
 /***/ },
-/* 165 */
+/* 171 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43334,7 +46426,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNConstraint2 = __webpack_require__(133);
+	var _SCNConstraint2 = __webpack_require__(139);
 
 	var _SCNConstraint3 = _interopRequireDefault(_SCNConstraint2);
 
@@ -43464,7 +46556,7 @@ module.exports =
 	exports.default = SCNIKConstraint;
 
 /***/ },
-/* 166 */
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43521,7 +46613,7 @@ module.exports =
 	exports.default = SCNLayer;
 
 /***/ },
-/* 167 */
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43530,7 +46622,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNConstraint2 = __webpack_require__(133);
+	var _SCNConstraint2 = __webpack_require__(139);
 
 	var _SCNConstraint3 = _interopRequireDefault(_SCNConstraint2);
 
@@ -43594,7 +46686,7 @@ module.exports =
 	exports.default = SCNLookAtConstraint;
 
 /***/ },
-/* 168 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43628,7 +46720,7 @@ module.exports =
 	exports.default = SCNMatrix4EqualToMatrix4;
 
 /***/ },
-/* 169 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43659,7 +46751,7 @@ module.exports =
 	exports.default = SCNMatrix4FromGLKMatrix4;
 
 /***/ },
-/* 170 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43688,7 +46780,7 @@ module.exports =
 	exports.default = SCNMatrix4FromMat4;
 
 /***/ },
-/* 171 */
+/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43717,7 +46809,7 @@ module.exports =
 	exports.default = SCNMatrix4Invert;
 
 /***/ },
-/* 172 */
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43750,7 +46842,7 @@ module.exports =
 	exports.default = SCNMatrix4IsIdentity;
 
 /***/ },
-/* 173 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43812,38 +46904,7 @@ module.exports =
 	exports.default = SCNMatrix4MakeRotation;
 
 /***/ },
-/* 174 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _SCNMatrix = __webpack_require__(44);
-
-	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	/**
-	 * Returns a matrix describing a scale transformation.
-	 * @access public
-	 * @param {number} sx - The scale factor in the x-axis direction.
-	 * @param {number} sy - The scale factor in the y-axis direction.
-	 * @param {number} sz - The scale factor in the z-axis direction.
-	 * @returns {SCNMatrix4} - 
-	 * @see https://developer.apple.com/reference/scenekit/1409681-scnmatrix4makescale
-	 */
-	var SCNMatrix4MakeScale = function SCNMatrix4MakeScale(sx, sy, sz) {
-	  return null;
-	};
-
-	exports.default = SCNMatrix4MakeScale;
-
-/***/ },
-/* 175 */
+/* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43874,7 +46935,7 @@ module.exports =
 	exports.default = SCNMatrix4Mult;
 
 /***/ },
-/* 176 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43908,7 +46969,7 @@ module.exports =
 	exports.default = SCNMatrix4Rotate;
 
 /***/ },
-/* 177 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43920,6 +46981,10 @@ module.exports =
 	var _SCNMatrix = __webpack_require__(44);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
+
+	var _SCNMatrix4MakeScale = __webpack_require__(138);
+
+	var _SCNMatrix4MakeScale2 = _interopRequireDefault(_SCNMatrix4MakeScale);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -43935,13 +47000,13 @@ module.exports =
 	 * @see https://developer.apple.com/reference/scenekit/1409653-scnmatrix4scale
 	 */
 	var SCNMatrix4Scale = function SCNMatrix4Scale(m, sx, sy, sz) {
-	  return null;
+	  return m.mult((0, _SCNMatrix4MakeScale2.default)(sx, sy, sz));
 	};
 
 	exports.default = SCNMatrix4Scale;
 
 /***/ },
-/* 178 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43970,7 +47035,7 @@ module.exports =
 	};exports.default = SCNMatrix4ToGLKMatrix4;
 
 /***/ },
-/* 179 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43999,7 +47064,7 @@ module.exports =
 	exports.default = SCNMatrix4ToMat4;
 
 /***/ },
-/* 180 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44011,6 +47076,10 @@ module.exports =
 	var _SCNMatrix = __webpack_require__(44);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
+
+	var _SCNMatrix4MakeTranslation = __webpack_require__(76);
+
+	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -44026,13 +47095,13 @@ module.exports =
 	 * @see https://developer.apple.com/reference/scenekit/1409717-scnmatrix4translate
 	 */
 	var SCNMatrix4Translate = function SCNMatrix4Translate(m, tx, ty, tz) {
-	  return null;
+	  return m.mult((0, _SCNMatrix4MakeTranslation2.default)(tx, ty, tz));
 	};
 
 	exports.default = SCNMatrix4Translate;
 
 /***/ },
-/* 181 */
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44147,7 +47216,7 @@ module.exports =
 	exports.default = SCNPhysicsBallSocketJoint;
 
 /***/ },
-/* 182 */
+/* 187 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -44238,7 +47307,7 @@ module.exports =
 	exports.default = SCNPhysicsCollisionCategory;
 
 /***/ },
-/* 183 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44369,7 +47438,7 @@ module.exports =
 	exports.default = SCNPhysicsHingeJoint;
 
 /***/ },
-/* 184 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44561,7 +47630,7 @@ module.exports =
 	exports.default = SCNPhysicsSliderJoint;
 
 /***/ },
-/* 185 */
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44580,7 +47649,7 @@ module.exports =
 
 	var _SCNPhysicsBody2 = _interopRequireDefault(_SCNPhysicsBody);
 
-	var _SCNPhysicsVehicleWheel = __webpack_require__(186);
+	var _SCNPhysicsVehicleWheel = __webpack_require__(191);
 
 	var _SCNPhysicsVehicleWheel2 = _interopRequireDefault(_SCNPhysicsVehicleWheel);
 
@@ -44724,7 +47793,7 @@ module.exports =
 	exports.default = SCNPhysicsVehicle;
 
 /***/ },
-/* 186 */
+/* 191 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44893,7 +47962,7 @@ module.exports =
 	exports.default = SCNPhysicsVehicleWheel;
 
 /***/ },
-/* 187 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45020,7 +48089,7 @@ module.exports =
 	exports.default = SCNPlane;
 
 /***/ },
-/* 188 */
+/* 193 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45122,7 +48191,7 @@ module.exports =
 	exports.default = SCNPyramid;
 
 /***/ },
-/* 189 */
+/* 194 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -45146,7 +48215,7 @@ module.exports =
 	exports.default = SCNReferenceLoadingPolicy;
 
 /***/ },
-/* 190 */
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45163,7 +48232,7 @@ module.exports =
 
 	var _SCNNode3 = _interopRequireDefault(_SCNNode2);
 
-	var _SCNReferenceLoadingPolicy = __webpack_require__(189);
+	var _SCNReferenceLoadingPolicy = __webpack_require__(194);
 
 	var _SCNReferenceLoadingPolicy2 = _interopRequireDefault(_SCNReferenceLoadingPolicy);
 
@@ -45386,7 +48455,7 @@ module.exports =
 	exports.default = SCNReferenceNode;
 
 /***/ },
-/* 191 */
+/* 196 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45438,7 +48507,7 @@ module.exports =
 	exports.default = SCNShadableHelper;
 
 /***/ },
-/* 192 */
+/* 197 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -45466,7 +48535,7 @@ module.exports =
 	exports.default = SCNShaderModifierEntryPoint;
 
 /***/ },
-/* 193 */
+/* 198 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45479,7 +48548,7 @@ module.exports =
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
-	var _SCNChamferMode = __webpack_require__(161);
+	var _SCNChamferMode = __webpack_require__(167);
 
 	var _SCNChamferMode2 = _interopRequireDefault(_SCNChamferMode);
 
@@ -45563,7 +48632,7 @@ module.exports =
 	exports.default = SCNShape;
 
 /***/ },
-/* 194 */
+/* 199 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45668,7 +48737,7 @@ module.exports =
 	exports.default = SCNSphere;
 
 /***/ },
-/* 195 */
+/* 200 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45827,7 +48896,7 @@ module.exports =
 	exports.default = SCNText;
 
 /***/ },
-/* 196 */
+/* 201 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45913,7 +48982,7 @@ module.exports =
 	exports.default = SCNTorus;
 
 /***/ },
-/* 197 */
+/* 202 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45924,7 +48993,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNConstraint2 = __webpack_require__(133);
+	var _SCNConstraint2 = __webpack_require__(139);
 
 	var _SCNConstraint3 = _interopRequireDefault(_SCNConstraint2);
 
@@ -45993,7 +49062,7 @@ module.exports =
 	exports.default = SCNTransformConstraint;
 
 /***/ },
-/* 198 */
+/* 203 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46088,7 +49157,7 @@ module.exports =
 	exports.default = SCNTube;
 
 /***/ },
-/* 199 */
+/* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46121,7 +49190,7 @@ module.exports =
 	exports.default = SCNVector3EqualToVector3;
 
 /***/ },
-/* 200 */
+/* 205 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46150,7 +49219,7 @@ module.exports =
 	exports.default = SCNVector3FromFloat3;
 
 /***/ },
-/* 201 */
+/* 206 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46181,7 +49250,7 @@ module.exports =
 	exports.default = SCNVector3FromGLKVector3;
 
 /***/ },
-/* 202 */
+/* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46212,7 +49281,7 @@ module.exports =
 	exports.default = SCNVector3Make;
 
 /***/ },
-/* 203 */
+/* 208 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46241,7 +49310,7 @@ module.exports =
 	exports.default = SCNVector3ToFloat3;
 
 /***/ },
-/* 204 */
+/* 209 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46270,7 +49339,7 @@ module.exports =
 	};exports.default = SCNVector3ToGLKVector3;
 
 /***/ },
-/* 205 */
+/* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46290,7 +49359,7 @@ module.exports =
 	exports.default = SCNVector3Zero;
 
 /***/ },
-/* 206 */
+/* 211 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46323,7 +49392,7 @@ module.exports =
 	exports.default = SCNVector4EqualToVector4;
 
 /***/ },
-/* 207 */
+/* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46352,7 +49421,7 @@ module.exports =
 	exports.default = SCNVector4FromFloat4;
 
 /***/ },
-/* 208 */
+/* 213 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46383,7 +49452,7 @@ module.exports =
 	exports.default = SCNVector4FromGLKVector4;
 
 /***/ },
-/* 209 */
+/* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46415,7 +49484,7 @@ module.exports =
 	exports.default = SCNVector4Make;
 
 /***/ },
-/* 210 */
+/* 215 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46444,7 +49513,7 @@ module.exports =
 	exports.default = SCNVector4ToFloat4;
 
 /***/ },
-/* 211 */
+/* 216 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46473,7 +49542,7 @@ module.exports =
 	};exports.default = SCNVector4ToGLKVector4;
 
 /***/ },
-/* 212 */
+/* 217 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47385,7 +50454,7 @@ module.exports =
 	  }, {
 	    key: '_copyTransformToPresentationNodes',
 	    value: function _copyTransformToPresentationNodes() {
-	      var arr = [this._scene.rootNode, this._renderer._defaultCameraPosNode, this._scene._skyBox];
+	      var arr = [this._scene.rootNode, this._scene._skyBox, this._renderer._defaultCameraPosNode, this._renderer._defaultLightNode];
 	      while (arr.length > 0) {
 	        var _node = arr.shift();
 	        _node._copyTransformToPresentation();
@@ -48309,7 +51378,7 @@ module.exports =
 	exports.default = SCNView;
 
 /***/ },
-/* 213 */
+/* 218 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -48326,7 +51395,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SKActionTimingMode = __webpack_require__(214);
+	var _SKActionTimingMode = __webpack_require__(219);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
@@ -50018,7 +53087,7 @@ module.exports =
 	exports.default = SKAction;
 
 /***/ },
-/* 214 */
+/* 219 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -50046,41 +53115,7 @@ module.exports =
 	exports.default = SKActionTimingMode;
 
 /***/ },
-/* 215 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	/**
-	 * The modes that describe how the source and destination pixel colors are used to calculate the new destination color.
-	 * @typedef {Object} SKBlendMode
-	 * @property {number} alpha - The source and destination colors are blended by multiplying the source alpha value.
-	 * @property {number} add - The source and destination colors are added together.
-	 * @property {number} subtract - The source color is subtracted from the destination color.
-	 * @property {number} multiply - The source color is multiplied by the destination color.
-	 * @property {number} multiplyX2 - The source color is multiplied by the destination color and then doubled.
-	 * @property {number} screen - The source color is added to the destination color times the inverted source color.
-	 * @property {number} replace - The source color replaces the destination color.
-	 * @see https://developer.apple.com/reference/spritekit/skblendmode
-	 */
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var SKBlendMode = {
-	  alpha: 0,
-	  add: 1,
-	  subtract: 2,
-	  multiply: 3,
-	  multiplyX2: 4,
-	  screen: 5,
-	  replace: 6
-	};
-
-	exports.default = SKBlendMode;
-
-/***/ },
-/* 216 */
+/* 220 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50089,11 +53124,11 @@ module.exports =
 	  value: true
 	});
 
-	var _SKNode2 = __webpack_require__(217);
+	var _SKNode2 = __webpack_require__(131);
 
 	var _SKNode3 = _interopRequireDefault(_SKNode2);
 
-	var _SKBlendMode = __webpack_require__(215);
+	var _SKBlendMode = __webpack_require__(130);
 
 	var _SKBlendMode2 = _interopRequireDefault(_SKBlendMode);
 
@@ -50224,7 +53259,7 @@ module.exports =
 	exports.default = SKEffectNode;
 
 /***/ },
-/* 217 */
+/* 221 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50237,1303 +53272,15 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _NSObject2 = __webpack_require__(2);
-
-	var _NSObject3 = _interopRequireDefault(_NSObject2);
-
-	var _CGPoint = __webpack_require__(7);
-
-	var _CGPoint2 = _interopRequireDefault(_CGPoint);
-
-	var _CGRect = __webpack_require__(8);
-
-	var _CGRect2 = _interopRequireDefault(_CGRect);
-
-	var _CGSize = __webpack_require__(9);
-
-	var _CGSize2 = _interopRequireDefault(_CGSize);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	//import UIFocusItem from '../undefined/UIFocusItem'
-	//import SKScene from './SKScene'
-	//import SKAction from './SKAction'
-	//import SKPhysicsBody from './SKPhysicsBody'
-	//import GKPolygonObstacle from '../undefined/GKPolygonObstacle'
-	//import GKEntity from '../undefined/GKEntity'
-	//import NSMutableDictionary from '../undefined/NSMutableDictionary'
-	//import SKConstraint from './SKConstraint'
-	//import SKReachConstraints from './SKReachConstraints'
-	//import NSCoder from '../undefined/NSCoder'
-	//import SKAttributeValue from './SKAttributeValue'
-
-
-	/**
-	 * The SKNode class is the fundamental building block of most SpriteKit content. 
-	 * @access public
-	 * @extends {NSObject}
-	 * @implements {UIFocusItem}
-	 * @see https://developer.apple.com/reference/spritekit/sknode
-	 */
-	var SKNode = function (_NSObject) {
-	  _inherits(SKNode, _NSObject);
-
-	  // Initializers
-
-	  /**
-	   * 
-	   * @access public
-	   * @constructor
-	   * @see https://developer.apple.com/reference/spritekit/sknode/1483097-init
-	   */
-	  function SKNode() {
-	    _classCallCheck(this, SKNode);
-
-	    // Inspecting the Node’s Position
-
-	    /**
-	     * The position of the node in its parent's coordinate system.
-	     * @type {CGPoint}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483101-position
-	     */
-	    var _this = _possibleConstructorReturn(this, (SKNode.__proto__ || Object.getPrototypeOf(SKNode)).call(this));
-
-	    _this.position = new _CGPoint2.default(0, 0);
-
-	    /**
-	     * The height of the node relative to its parent.
-	     * @type {number}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483107-zposition
-	     */
-	    _this.zPosition = 0.0;
-
-	    _this._frame = new _CGRect2.default(new _CGPoint2.default(0, 0), new _CGSize2.default(0, 0));
-
-	    // Setting a Node’s Scaling and Rotation
-
-	    /**
-	     * A scaling factor that multiplies the width of a node and its children.
-	     * @type {number}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483087-xscale
-	     */
-	    _this.xScale = 1.0;
-
-	    /**
-	     * A scaling factor that multiplies the height of a node and its children.
-	     * @type {number}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483046-yscale
-	     */
-	    _this.yScale = 1.0;
-
-	    /**
-	     * The Euler rotation about the z axis (in radians).
-	     * @type {number}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483089-zrotation
-	     */
-	    _this.zRotation = 0.0;
-
-	    // Inspecting a Node’s Visibility
-
-	    /**
-	     * The transparency value applied to the node’s contents.
-	     * @type {number}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483023-alpha
-	     */
-	    _this.alpha = 1.0;
-
-	    /**
-	     * A Boolean value that determines whether a node and its descendants are rendered.
-	     * @type {boolean}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483048-ishidden
-	     */
-	    _this.isHidden = false;
-
-	    // Determining Whether a Node Supports User Interaction
-
-	    /**
-	     * A Boolean value that indicates whether the node receives touch events.
-	     * @type {boolean}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483109-isuserinteractionenabled
-	     */
-	    _this.isUserInteractionEnabled = false;
-
-	    // Working with Node Trees
-
-	    _this._children = [];
-	    _this._parent = null;
-	    _this._scene = null;
-
-	    // Naming Nodes
-
-	    /**
-	     * The node’s assignable name.
-	     * @type {?string}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483136-name
-	     */
-	    _this.name = null;
-
-	    // Running Actions
-
-	    /**
-	     * A speed modifier applied to all actions executed by a node and its descendants.
-	     * @type {number}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483036-speed
-	     */
-	    _this.speed = 1.0;
-
-	    /**
-	     * A Boolean value that determines whether actions on the node and its descendants are processed.
-	     * @type {boolean}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483113-ispaused
-	     */
-	    _this.isPaused = false;
-
-	    /**
-	     * @access private
-	     * @type {Map}
-	     */
-	    _this._actions = new Map();
-
-	    // Adding Physics to a Node
-
-	    /**
-	     * The physics body associated with the node.
-	     * @type {?SKPhysicsBody}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483117-physicsbody
-	     */
-	    _this.physicsBody = null;
-
-	    // Working with GameplayKit Entities
-
-	    /**
-	     * The GameplayKit entity this node represents.
-	     * @type {?GKEntity}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1640688-entity
-	     */
-	    //this.entity = null
-
-
-	    // Storing Custom Node Data
-
-	    /**
-	     * A dictionary containing arbitrary data.
-	     * @type {?NSMutableDictionary}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483121-userdata
-	     */
-	    _this.userData = null;
-
-	    // Constraining a Node’s Behavior Relative to Other Nodes
-
-	    /**
-	     * Specifies the list of constraints to apply to the node.
-	     * @type {?SKConstraint[]}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483124-constraints
-	     */
-	    _this.constraints = null;
-
-	    /**
-	     * Specifies the reach constraints to apply to the node when executing a reach action.
-	     * @type {?SKReachConstraints}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483019-reachconstraints
-	     */
-	    _this.reachConstraints = null;
-
-	    // Instance Properties
-
-	    /**
-	     * 
-	     * @type {?Object[]}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1645045-accessibilitychildren
-	     */
-	    _this.accessibilityChildren = [];
-
-	    /**
-	     * 
-	     * @type {CGRect}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1645044-accessibilityframe
-	     */
-	    _this.accessibilityFrame = new _CGRect2.default(new _CGPoint2.default(0, 0), new _CGSize2.default(0, 0));
-
-	    /**
-	     * 
-	     * @type {?string}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1645041-accessibilityhelp
-	     */
-	    _this.accessibilityHelp = null;
-
-	    /**
-	     * 
-	     * @type {?string}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1645039-accessibilitylabel
-	     */
-	    _this.accessibilityLabel = null;
-
-	    /**
-	     * 
-	     * @type {?Object}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1645042-accessibilityparent
-	     */
-	    _this.accessibilityParent = null;
-
-	    /**
-	     * 
-	     * @type {?string}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1645036-accessibilityrole
-	     */
-	    _this.accessibilityRole = 'AXImage';
-
-	    /**
-	     * 
-	     * @type {?string}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1645035-accessibilityroledescription
-	     */
-	    _this.accessibilityRoleDescription = 'SKNode';
-
-	    /**
-	     * 
-	     * @type {?string}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1645043-accessibilitysubrole
-	     */
-	    _this.accessibilitySubrole = null;
-
-	    /**
-	     * The values of each attribute associated with the node's attached shader. 
-	     * @type {Map<string, SKAttributeValue>}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1644181-attributevalues
-	     */
-	    _this.attributeValues = new Map();
-
-	    /**
-	     * 
-	     * @type {boolean}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1645038-isaccessibilityelement
-	     */
-	    _this.isAccessibilityElement = false;
-
-	    /**
-	     * 
-	     * @type {boolean}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1645037-isaccessibilityenabled
-	     */
-	    _this.isAccessibilityEnabled = false;
-
-	    /**
-	     * @type {SKNode}
-	     * @access private
-	     */
-	    _this.__presentation = null;
-
-	    _this._isPresentationInstance = false;
-	    _this._worldPosition = new _CGPoint2.default(0, 0);
-	    _this._worldZPosition = 0;
-	    _this._worldXScale = 1;
-	    _this._worldYScale = 1;
-	    _this._worldZRotation = 0;
-	    return _this;
-	  }
-
-	  /**
-	   * 
-	   * @access public
-	   * @param {NSCoder} aDecoder - 
-	   * @returns {void}
-	   * @see https://developer.apple.com/reference/spritekit/sknode/1483142-init
-	   */
-	  //initWithCoder(aDecoder) {
-	  //}
-
-
-	  // Creating a New Node
-
-	  /**
-	   * Creates a new node by loading an archive file from the game’s main bundle.
-	   * @access public
-	   * @param {string} filename - The name of the file, without a file extension. The file must be in the app’s main bundle and have a .sks filename extension.
-	   * @returns {void}
-	   * @desc If you call this method on a subclass of the SKScene class and the object in the archive is an SKScene object, the returned object is initialized as if it is a member of the subclass. You use this behavior to create scene layouts in the Xcode Editor and provide custom behaviors in your subclass. 
-	   * @see https://developer.apple.com/reference/spritekit/sknode/1483083-init
-	   */
-
-
-	  _createClass(SKNode, [{
-	    key: 'calculateAccumulatedFrame',
-
-
-	    // Inspecting the Node’s Position
-
-	    /**
-	     * Calculates a rectangle in the parent’s coordinate system that contains the content of the node and all of its descendants. 
-	     * @access public
-	     * @returns {CGRect} - 
-	     * @desc The frame takes into the account the cumulative effect of the xScale, yScale, and zRotation properties of each node in the subtree.Listing 1 shows how calculateAccumulatedFrame() can be used display the bounding box of a shape node. The child node, although smaller than its parent, is rotated by 30° so that its bounds extend beyond its parent's bounds. After childNode has been added to parentNode, a further shape node, boundingBoxNode, is created with its size based on the accumulated frame of parentNode.Listing 1 Displaying the accumulated frame of a shape nodelet parentNode = SKShapeNode(rectOf: CGSize(width: 500, height: 500))
-	    parentNode.lineWidth = 2
-	    parentNode.strokeColor = .blue
-	    parentNode.fillColor = .clear
-	       
-	    let childNode = SKShapeNode(rectOf: CGSize(width: 400, height: 400))
-	    childNode.strokeColor = .red
-	    childNode.fillColor = .clear
-	    childNode.zRotation = -CGFloat.pi / 6 // pi / 6 = 30°
-	       
-	    parentNode.addChild(childNode)
-	       
-	    let boundingBoxNode = SKShapeNode(rectOf: parentNode.calculateAccumulatedFrame().size)
-	    boundingBoxNode.lineWidth = 1
-	    boundingBoxNode.strokeColor = .black
-	    boundingBoxNode.fillColor = .clear
-	    boundingBoxNode.path = boundingBoxNode.path?.copy(dashingWithPhase: 0,
-	                                                    lengths: [10,10])
-	       
-	    parentNode.addChild(boundingBoxNode)
-	    Figure 1 shows the result of Listing 1 with parentNode rendered in blue, childNode rendered in red and the boundingBoxNode rendered with a dashed line. Figure 1 Displaying the accumulated frame of a shape nodeDisplaying the accumulated frame of a shape nodelet parentNode = SKShapeNode(rectOf: CGSize(width: 500, height: 500))
-	    parentNode.lineWidth = 2
-	    parentNode.strokeColor = .blue
-	    parentNode.fillColor = .clear
-	       
-	    let childNode = SKShapeNode(rectOf: CGSize(width: 400, height: 400))
-	    childNode.strokeColor = .red
-	    childNode.fillColor = .clear
-	    childNode.zRotation = -CGFloat.pi / 6 // pi / 6 = 30°
-	       
-	    parentNode.addChild(childNode)
-	       
-	    let boundingBoxNode = SKShapeNode(rectOf: parentNode.calculateAccumulatedFrame().size)
-	    boundingBoxNode.lineWidth = 1
-	    boundingBoxNode.strokeColor = .black
-	    boundingBoxNode.fillColor = .clear
-	    boundingBoxNode.path = boundingBoxNode.path?.copy(dashingWithPhase: 0,
-	                                                    lengths: [10,10])
-	       
-	    parentNode.addChild(boundingBoxNode)
-	    Displaying the accumulated frame of a shape node
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483066-calculateaccumulatedframe
-	     */
-	    value: function calculateAccumulatedFrame() {
-	      var r = this._frame.copy();
-	      var _iteratorNormalCompletion = true;
-	      var _didIteratorError = false;
-	      var _iteratorError = undefined;
-
-	      try {
-	        for (var _iterator = this._children[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-	          var child = _step.value;
-
-	          r = r.union(child.calculateAccumulatedFrame());
-	        }
-	      } catch (err) {
-	        _didIteratorError = true;
-	        _iteratorError = err;
-	      } finally {
-	        try {
-	          if (!_iteratorNormalCompletion && _iterator.return) {
-	            _iterator.return();
-	          }
-	        } finally {
-	          if (_didIteratorError) {
-	            throw _iteratorError;
-	          }
-	        }
-	      }
-
-	      return r;
-	    }
-
-	    /**
-	     * A rectangle in the parent’s coordinate system that contains the node’s content, ignoring the node’s children.
-	     * @type {CGRect}
-	     * @desc The frame is the smallest rectangle that contains the node’s content, taking into account the node’s xScale, yScale, and zRotation properties. Not all nodes contain content of their own.
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483026-frame
-	     */
-
-	  }, {
-	    key: 'setScale',
-
-
-	    // Setting a Node’s Scaling and Rotation
-
-	    /**
-	     * Sets the xScale and yScale properties of the node.
-	     * @access public
-	     * @param {number} scale - The new value to use for the node’s xScale and yScale properties.
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483126-setscale
-	     */
-	    value: function setScale(scale) {
-	      this.xScale = scale;
-	      this.yScale = scale;
-	    }
-
-	    // Working with Node Trees
-
-	    /**
-	     * Adds a node to the end of the receiver’s list of child nodes.
-	     * @access public
-	     * @param {SKNode} node - The node to add. The node must not already have a parent.
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483054-addchild
-	     */
-
-	  }, {
-	    key: 'addChild',
-	    value: function addChild(node) {
-	      if (this._children.indexOf(node) >= 0) {
-	        return;
-	      }
-	      node.removeFromParent();
-	      this._children.push(node);
-	      node._parent = this;
-	    }
-
-	    /**
-	     * Inserts a child into a specific position in the receiver’s list of child nodes.
-	     * @access public
-	     * @param {SKNode} node - The node to add. The node must not already have a parent.
-	     * @param {number} index - The position in the array to insert the node.
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483062-insertchild
-	     */
-
-	  }, {
-	    key: 'insertChildAt',
-	    value: function insertChildAt(node, index) {
-	      if (this._children.indexOf(node) >= 0) {
-	        return;
-	      }
-	      node.removeFromParent();
-	      this._insertObjectInChildrenAtIndex(node, index);
-	      this._parent = this;
-	    }
-
-	    /**
-	     * Compares the parameter node to the receiving node.
-	     * @access public
-	     * @param {SKNode} node - The node to compare to the receiving node.
-	     * @returns {boolean} - 
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483078-isequal
-	     */
-
-	  }, {
-	    key: 'isEqualTo',
-	    value: function isEqualTo(node) {
-	      return false;
-	    }
-
-	    /**
-	     * Moves the node to a new parent node in the scene. 
-	     * @access public
-	     * @param {SKNode} parent - An SKNode object to move the receiver to. This node must be in the same scene as the node’s current parent.
-	     * @returns {void}
-	     * @desc The node maintains its current position in scene coordinates.
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483021-move
-	     */
-
-	  }, {
-	    key: 'moveToParent',
-	    value: function moveToParent(parent) {
-	      parent.addChild(this);
-	    }
-
-	    /**
-	     * Removes the receiving node from its parent.
-	     * @access public
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483119-removefromparent
-	     */
-
-	  }, {
-	    key: 'removeFromParent',
-	    value: function removeFromParent() {
-	      var parentNode = this._parent;
-	      if (parentNode === null) {
-	        return;
-	      }
-	      var index = parentNode._children.indexOf(this);
-	      if (index < 0) {
-	        return;
-	      }
-	      parentNode._removeObjectFromChildrenAtIndex(index);
-	    }
-
-	    /**
-	     * Removes all of the node’s children.
-	     * @access public
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483040-removeallchildren
-	     */
-
-	  }, {
-	    key: 'removeAllChildren',
-	    value: function removeAllChildren() {
-	      var _iteratorNormalCompletion2 = true;
-	      var _didIteratorError2 = false;
-	      var _iteratorError2 = undefined;
-
-	      try {
-	        for (var _iterator2 = this._children[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-	          var child = _step2.value;
-
-	          child.removeFromParent();
-	        }
-	      } catch (err) {
-	        _didIteratorError2 = true;
-	        _iteratorError2 = err;
-	      } finally {
-	        try {
-	          if (!_iteratorNormalCompletion2 && _iterator2.return) {
-	            _iterator2.return();
-	          }
-	        } finally {
-	          if (_didIteratorError2) {
-	            throw _iteratorError2;
-	          }
-	        }
-	      }
-	    }
-
-	    /**
-	     * Removes a list of children from the receiving node.
-	     * @access public
-	     * @param {SKNode[]} nodes - An array of SKNode objects that are all children of the receiving node.
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483091-removechildren
-	     */
-
-	  }, {
-	    key: 'removeChildrenIn',
-	    value: function removeChildrenIn(nodes) {
-	      var _iteratorNormalCompletion3 = true;
-	      var _didIteratorError3 = false;
-	      var _iteratorError3 = undefined;
-
-	      try {
-	        for (var _iterator3 = nodes[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-	          var node = _step3.value;
-
-	          if (this._children.indexOf(node) >= 0) {
-	            node.removeFromParent();
-	          }
-	        }
-	      } catch (err) {
-	        _didIteratorError3 = true;
-	        _iteratorError3 = err;
-	      } finally {
-	        try {
-	          if (!_iteratorNormalCompletion3 && _iterator3.return) {
-	            _iterator3.return();
-	          }
-	        } finally {
-	          if (_didIteratorError3) {
-	            throw _iteratorError3;
-	          }
-	        }
-	      }
-	    }
-
-	    /**
-	     *
-	     * @access private
-	     * @param {number} index -
-	     * @returns {void}
-	     */
-
-	  }, {
-	    key: '_removeObjectFromChildrenAtIndex',
-	    value: function _removeObjectFromChildrenAtIndex(index) {
-	      var arr = this._children.splice(index, 1);
-	      if (arr.length === 0) {
-	        return;
-	      }
-	      var obj = arr[0];
-
-	      obj._parent = null;
-	    }
-
-	    /**
-	     *
-	     * @access private
-	     * @param {SCNNode} object -
-	     * @param {number} index -
-	     * @returns {void}
-	     */
-
-	  }, {
-	    key: '_insertObjectInChildrenAtIndex',
-	    value: function _insertObjectInChildrenAtIndex(object, index) {
-	      var length = this._children.length;
-	      if (index > length) {
-	        throw new Error('SKNode.children out of index: ' + index + ' > ' + length);
-	      }
-	      this._children.splice(index, 0, object);
-	    }
-
-	    /**
-	     * Returns a Boolean value that indicates whether the node is a descendant of the target node.
-	     * @access public
-	     * @param {SKNode} parent - An SKNode object to test against.
-	     * @returns {boolean} - 
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483111-inparenthierarchy
-	     */
-
-	  }, {
-	    key: 'inParentHierarchy',
-	    value: function inParentHierarchy(parent) {
-	      return false;
-	    }
-	    /**
-	     * The node’s children.
-	     * @type {SKNode[]}
-	     * @desc The objects in this array are all SKNode objects.
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483028-children
-	     */
-
-	  }, {
-	    key: 'childNodeWithName',
-
-
-	    // Naming Nodes
-
-	    /**
-	     * Searches the children of the receiving node for a node with a specific name.
-	     * @access public
-	     * @param {string} name - The name to search for. This may be either the literal name of the node or a customized search string. See Searching the Node Tree.
-	     * @returns {?SKNode} - 
-	     * @desc If more than one child share the same name, the first node discovered is returned.
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483060-childnode
-	     */
-	    value: function childNodeWithName(name) {
-	      var _iteratorNormalCompletion4 = true;
-	      var _didIteratorError4 = false;
-	      var _iteratorError4 = undefined;
-
-	      try {
-	        for (var _iterator4 = this._children[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-	          var child = _step4.value;
-
-	          if (child.name === name) {
-	            return child;
-	          }
-	        }
-	      } catch (err) {
-	        _didIteratorError4 = true;
-	        _iteratorError4 = err;
-	      } finally {
-	        try {
-	          if (!_iteratorNormalCompletion4 && _iterator4.return) {
-	            _iterator4.return();
-	          }
-	        } finally {
-	          if (_didIteratorError4) {
-	            throw _iteratorError4;
-	          }
-	        }
-	      }
-
-	      return null;
-	    }
-
-	    /**
-	     * Search the children of the receiving node to perform processing for nodes which share a name.
-	     * @access public
-	     * @param {string} name - The name to search for. This may be either the literal name of the node or a customized search string. See Searching the Node Tree.
-	     * @param {function(arg1: SKNode, arg2: UnsafeMutablePointer<ObjCBool>): void} block - A block to execute on nodes that match the name parameter. The block has the signature (node: SKNode, stop: UnsafeMutablePointer<ObjCBool>).
-	     * @returns {void}
-	     * @desc This method enumerates the child array in order, searching for nodes whose names match the search parameter. The block is called once for each node that matches the name parameter.The following code shows how you could enumerate through the child nodes of a scene with a name containing the string yellow. Each matching node is hidden until the enumeration finds a node that also contains the string triangle. When this node is reached, stop is set to true and the processing stops.Listing 1 Enumerating child nodesscene.enumerateChildNodes(withName: "*yellow*") {
-	      (node, stop) in
-	      
-	      node.run(SKAction.hide())
-	      
-	      if let name = node.name, name.contains("triangle") {
-	          stop.initialize(to: true)
-	      }
-	    }
-	    You can also search by class name using enumerateChildNodes(withName:using:). However, for custom classes, you need to specify the fully annotated class name (i.e. the project name followed by the class name). The following code shows a custom class, SpaceshipNode, based on SKSpriteNode, and created in a project named SpaceGame. The first search fails to return an instance of  SpaceshipNode added as a child of parentNode:Listing 2 Enumerating child nodesclass SpaceshipNode: SKSpriteNode {
-	    }
-	       
-	    let parentNode = SKNode()
-	    let childNode = SpaceshipNode()
-	    parentNode.addChild(childNode)
-	       
-	    parentNode.enumerateChildNodes(withName: "SpaceshipNode") {
-	      node, _ in
-	      // Unannotated name, returns no results 
-	    }
-	       
-	    parentNode.enumerateChildNodes(withName: "SpaceGame.SpaceshipNode") {
-	      node, _ in
-	      // Annotated name, successfully returns `childNode` 
-	    }
-	       
-	    parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
-	      node, _ in
-	      // Superclass name, successfully returns `childNode` 
-	    }
-	    Enumerating child nodesscene.enumerateChildNodes(withName: "*yellow*") {
-	      (node, stop) in
-	      
-	      node.run(SKAction.hide())
-	      
-	      if let name = node.name, name.contains("triangle") {
-	          stop.initialize(to: true)
-	      }
-	    }
-	    Enumerating child nodesclass SpaceshipNode: SKSpriteNode {
-	    }
-	       
-	    let parentNode = SKNode()
-	    let childNode = SpaceshipNode()
-	    parentNode.addChild(childNode)
-	       
-	    parentNode.enumerateChildNodes(withName: "SpaceshipNode") {
-	      node, _ in
-	      // Unannotated name, returns no results 
-	    }
-	       
-	    parentNode.enumerateChildNodes(withName: "SpaceGame.SpaceshipNode") {
-	      node, _ in
-	      // Annotated name, successfully returns `childNode` 
-	    }
-	       
-	    parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
-	      node, _ in
-	      // Superclass name, successfully returns `childNode` 
-	    }
-	      * @see https://developer.apple.com/reference/spritekit/sknode/1483024-enumeratechildnodes
-	     */
-
-	  }, {
-	    key: 'enumerateChildNodesWithNameUsing',
-	    value: function enumerateChildNodesWithNameUsing(name, block) {}
-
-	    // Running Actions
-
-	    /**
-	     * Adds an action to the list of actions executed by the node.
-	     * @access public
-	     * @param {SKAction} action - The action to perform.
-	     * @returns {void}
-	     * @desc The new action is processed the next time the scene’s animation loop is processed.
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483093-run
-	     */
-
-	  }, {
-	    key: 'run',
-	    value: function run(action) {
-	      this.runWithKey(action, Symbol());
-	    }
-
-	    /**
-	     * Adds an action to the list of actions executed by the node.
-	     * @access public
-	     * @param {SKAction} action - The action to perform.
-	     * @param {function(): void} block - A completion block called when the action completes.
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483103-run
-	     */
-
-	  }, {
-	    key: 'runCompletion',
-	    value: function runCompletion(action, block) {
-	      this._runActionForKeyCompletionHandler(action, Symbol(), block);
-	    }
-
-	    /**
-	     * Adds an identifiable action to the list of actions executed by the node.
-	     * @access public
-	     * @param {SKAction} action - The action to perform.
-	     * @param {string} key - A unique key used to identify the action.
-	     * @returns {void}
-	     * @desc This method is identical to run(_:), but the action is stored so that it can be retrieved later. If an action using the same key is already running, it is removed before the new action is added.
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483042-run
-	     */
-
-	  }, {
-	    key: 'runWithKey',
-	    value: function runWithKey(action, key) {
-	      this._runActionForKeyCompletionHandler(action, key, null);
-	    }
-	  }, {
-	    key: '_runActionForKeyCompletionHandler',
-	    value: function _runActionForKeyCompletionHandler(action, key, block) {
-	      if (typeof key === 'undefined' || key === null) {
-	        key = Symbol();
-	      }
-	      var act = action.copy();
-	      // FIXME: use current frame time
-	      act._actionStartTime = Date.now() * 0.001;
-	      act._completionHandler = block;
-	      this._actions.set(key, act);
-	    }
-
-	    /**
-	     * Returns an action associated with a specific key.
-	     * @access public
-	     * @param {string} key - A string that uniquely identifies an action.
-	     * @returns {?SKAction} - 
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483138-action
-	     */
-
-	  }, {
-	    key: 'actionForKey',
-	    value: function actionForKey(key) {
-	      return this._actions.get(key);
-	    }
-
-	    /**
-	     * Returns a Boolean value that indicates whether the node is executing actions.
-	     * @access public
-	     * @returns {boolean} - 
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483081-hasactions
-	     */
-
-	  }, {
-	    key: 'hasActions',
-	    value: function hasActions() {
-	      return this._actions.size > 0;
-	    }
-
-	    /**
-	     * Ends and removes all actions from the node.
-	     * @access public
-	     * @returns {void}
-	     * @desc When an action is removed from the node, any remaining animation the action would perform is skipped; however, previous changes are not reverted. It is possible that an action may make a final change to the scene when removed; if so, it is documented for the specific action in SKAction.
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483030-removeallactions
-	     */
-
-	  }, {
-	    key: 'removeAllActions',
-	    value: function removeAllActions() {
-	      // TODO: stop actions
-	      this._actions.clear();
-	    }
-
-	    /**
-	     * Removes an action associated with a specific key.
-	     * @access public
-	     * @param {string} key - A string that uniquely identifies an action.
-	     * @returns {void}
-	     * @desc If an action is found that matches the key, it is removed from the node.
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483076-removeaction
-	     */
-
-	  }, {
-	    key: 'removeActionForKey',
-	    value: function removeActionForKey(key) {
-	      // TODO: stop action
-	      this._actions.delete(key);
-	    }
-
-	    // Converting to and from the Node’s Coordinate System
-
-	    /**
-	     * Converts a point from the coordinate system of another node in the node tree to the coordinate system of this node.
-	     * @access public
-	     * @param {CGPoint} point - A point in the other node’s coordinate system.
-	     * @param {SKNode} node - Another node in the same node tree as this node.
-	     * @returns {CGPoint} - 
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483058-convert
-	     */
-
-	  }, {
-	    key: 'convertFrom',
-	    value: function convertFrom(point, node) {
-	      return null;
-	    }
-
-	    /**
-	     * Converts a point in this node’s coordinate system to the coordinate system of another node in the node tree.
-	     * @access public
-	     * @param {CGPoint} point - A point in this node’s coordinate system.
-	     * @param {SKNode} node - Another node in the same node tree as this node.
-	     * @returns {CGPoint} - 
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483056-convert
-	     */
-
-	  }, {
-	    key: 'convertTo',
-	    value: function convertTo(point, node) {
-	      return null;
-	    }
-
-	    // Determining If a Point Lies in a Node
-
-	    /**
-	     * Returns a Boolean value that indicates whether a point lies inside the parent’s coordinate system.
-	     * @access public
-	     * @param {CGPoint} p - A CGPoint to test against.
-	     * @returns {boolean} - 
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483044-contains
-	     */
-
-	  }, {
-	    key: 'contains',
-	    value: function contains(p) {
-	      return false;
-	    }
-
-	    /**
-	     * Returns the deepest visible descendant that intersects a point.
-	     * @access public
-	     * @param {CGPoint} p - A point in the node’s coordinate system.
-	     * @returns {SKNode} - 
-	     * @desc A point is considered to be in a node if it lies inside the rectangle returned by the calculateAccumulatedFrame() method.
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483099-atpoint
-	     */
-
-	  }, {
-	    key: 'atPoint',
-	    value: function atPoint(p) {
-	      return null;
-	    }
-
-	    /**
-	     * Returns an array of all visible descendants that intersect a point.
-	     * @access public
-	     * @param {CGPoint} p - A point in the node’s coordinate system.
-	     * @returns {SKNode[]} - 
-	     * @desc A point is considered to be in a node if it lies inside the rectangle returned by the calculateAccumulatedFrame() method.
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483072-nodes
-	     */
-
-	  }, {
-	    key: 'nodesAt',
-	    value: function nodesAt(p) {
-	      return null;
-	    }
-
-	    // Performing Node Intersections
-
-	    /**
-	     * Returns a Boolean value that indicates whether this node intersects the specified node.
-	     * @access public
-	     * @param {SKNode} node - Another node in the same node tree.
-	     * @returns {boolean} - 
-	     * @desc The two nodes are considered to intersect if their frames intersect. The children of both nodes are ignored in this test.
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483140-intersects
-	     */
-
-	  }, {
-	    key: 'intersects',
-	    value: function intersects(node) {
-	      return false;
-	    }
-
-	    // Creating GameplayKit Obstacles from a Set of Nodes
-
-	    /**
-	     * Converts each node into an obstacle by transforming its bounds into the scene’s coordinate system.
-	     * @access public
-	     * @param {SKNode[]} nodes - An array of SKNode objects.
-	     * @returns {GKPolygonObstacle[]} - 
-	     * @desc Use the array of obstacles to create an obstacle graph (GKObstacleGraph) in GameplayKit. See GameplayKit and GameplayKit Programming Guide.
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483132-obstacles
-	     */
-
-	  }, {
-	    key: 'accessibilityHitTest',
-
-
-	    // Instance Methods
-
-	    /**
-	     * 
-	     * @access public
-	     * @param {CGPoint} point - 
-	     * @returns {?Object} - 
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1645040-accessibilityhittest
-	     */
-	    value: function accessibilityHitTest(point) {
-	      return null;
-	    }
-
-	    /**
-	     * Sets an attribute value for an attached shader
-	     * @deprecated
-	     * @access public
-	     * @param {SKAttributeValue} value - An attribute value object containing the scalar or vector value to set in the attached shader. 
-	     * @param {string} key - The attribute name.
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1644180-setvalue
-	     */
-
-	  }, {
-	    key: 'setValueForAttribute',
-	    value: function setValueForAttribute(value, key) {
-	      this.attributeValues.set(key, value);
-	    }
-
-	    /**
-	     * The value of a shader attribute.
-	     * @deprecated
-	     * @access public
-	     * @param {string} key - The attribute name.
-	     * @returns {?SKAttributeValue} - 
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1644182-value
-	     */
-
-	  }, {
-	    key: 'valueForAttributeNamed',
-	    value: function valueForAttributeNamed(key) {
-	      return this.attributeValues.get(key);
-	    }
-
-	    /**
-	     * @type {SKNode}
-	     */
-
-	  }, {
-	    key: 'copy',
-
-
-	    /**
-	     *
-	     * @access public
-	     * @returns {SKNode} -
-	     */
-	    value: function copy() {
-	      var node = _get(SKNode.prototype.__proto__ || Object.getPrototypeOf(SKNode.prototype), 'copy', this).call(this);
-	      node._copyValue(this);
-	      return node;
-	    }
-	  }, {
-	    key: '_copyValue',
-	    value: function _copyValue(src) {
-	      this.position = src.position.copy();
-	      this.zPosition = src.zPosition;
-	      this._frame = src._frame;
-	      this.xScale = src.xScale;
-	      this.yScale = src.yScale;
-	      this.zRotation = src.zRotation;
-	      this.alpha = src.alpha;
-	      this.isHidden = src.isHidden;
-	      this.isUserInteractionEnabled = src.isUserInteractionEnabled;
-	      this.name = src.name;
-	      this.speed = src.speed;
-	      this.isPaused = src.isPaused;
-	      this._actions = new Map(src._actions);
-	      this.physicsBody = src.physicsBody;
-	      this.userData = src.userData;
-	      this.constraints = src.constraints;
-	      this.reachConstraints = src.reachConstraints;
-	      this.accessibilityChildren = src.accessibilityChildren;
-	      this.accessibilityFrame = src.accessibilityFrame.copy();
-	      this.accessibilityHelp = src.accessibilityHelp;
-	      this.accessibilityLabel = src.accessibilityLabel;
-	      this.accessibilityParent = src.accessibilityParent;
-	      this.accessibilityRole = src.accessibilityRole;
-	      this.accessibilityRoleDescription = src.accessibilityRoleDescription;
-	      this.accessibilitySubrole = src.accessibilitySubrole;
-	      this.attributeValues = new Map(src.attributeValues);
-	      this.isAccessibilityElement = src.isAccessibilityElement;
-	      this.isAccessibilityEnabled = src.isAccessibilityEnabled;
-	    }
-
-	    /**
-	     * @access private
-	     * @param {WebGLRenderingContext} gl -
-	     * @returns {void}
-	     */
-
-	  }, {
-	    key: '_render',
-	    value: function _render(gl) {
-	      // nothing to draw
-	    }
-	  }, {
-	    key: '_copyTransformToPresentation',
-	    value: function _copyTransformToPresentation() {
-	      if (this.__presentation === null) {
-	        return;
-	      }
-	      var p = this.__presentation;
-	      p.position = this.position;
-	      p.zPosition = this.zPosition;
-	      p.xScale = this.xScale;
-	      p.yScale = this.yScale;
-	      p.zRotation = this.zRotation;
-	    }
-	  }, {
-	    key: '_updateWorldTransform',
-	    value: function _updateWorldTransform() {
-	      var p = null;
-	      var pz = 0;
-	      if (this._parent === null) {
-	        p = new _CGPoint2.default(0, 0);
-	      } else {
-	        p = this._parent._worldPosition;
-	        pz = this._parent._worldZPosition;
-	      }
-	      this._worldPosition = this.position.add(p);
-	      this._worldZPosition = this.zPosition + pz;
-
-	      if (this._presentation) {
-	        var pp = null;
-	        var ppz = 0;
-	        var pxScale = 1;
-	        var pyScale = 1;
-	        if (this._parent === null) {
-	          pp = new _CGPoint2.default(0, 0);
-	        } else if (this._parent._presentation === null) {
-	          pp = this._parent._worldPosition;
-	          ppz = this._parent._worldZPosition;
-	          pxScale = this._parent._worldXScale;
-	          pyScale = this._parent._worldYScale;
-	        } else {
-	          pp = this._parent._presentation._worldPosition;
-	          ppz = this._parent._presentation._worldZPosition;
-	          pxScale = this._parent._presentation._worldXScale;
-	          pyScale = this._parent._presentation._worldYScale;
-	        }
-	        //this._presentation._worldPosition = this._presentation.position.add(pp)
-	        this._presentation._worldPosition.x = pp.x + this._presentation.position.x * pxScale;
-	        this._presentation._worldPosition.y = pp.y + this._presentation.position.y * pyScale;
-	        this._presentation._worldZPosition = this._presentation.zPosition + ppz;
-	        this._presentation._worldXScale = this._presentation.xScale * pxScale;
-	        this._presentation._worldYScale = this._presentation.yScale * pyScale;
-	      }
-
-	      var _iteratorNormalCompletion5 = true;
-	      var _didIteratorError5 = false;
-	      var _iteratorError5 = undefined;
-
-	      try {
-	        for (var _iterator5 = this._children[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
-	          var child = _step5.value;
-
-	          child._updateWorldTransform();
-	        }
-	      } catch (err) {
-	        _didIteratorError5 = true;
-	        _iteratorError5 = err;
-	      } finally {
-	        try {
-	          if (!_iteratorNormalCompletion5 && _iterator5.return) {
-	            _iterator5.return();
-	          }
-	        } finally {
-	          if (_didIteratorError5) {
-	            throw _iteratorError5;
-	          }
-	        }
-	      }
-	    }
-	  }, {
-	    key: 'frame',
-	    get: function get() {
-	      return this._frame;
-	    }
-	  }, {
-	    key: 'children',
-	    get: function get() {
-	      return this._children.slice(0);
-	    }
-	    /**
-	     * The node’s parent node.
-	     * @type {?SKNode}
-	     * @desc If the node is not in a node tree, the value is nil.
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483080-parent
-	     */
-
-	  }, {
-	    key: 'parent',
-	    get: function get() {
-	      return this._parent;
-	    }
-
-	    /**
-	     * The scene node that contains the node.
-	     * @type {?SKScene}
-	     * @desc If the node is not embedded in a scene, the value is nil.
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483064-scene
-	     */
-
-	  }, {
-	    key: 'scene',
-	    get: function get() {
-	      return this._scene;
-	    }
-	  }, {
-	    key: '_presentation',
-	    get: function get() {
-	      return this.__presentation;
-	    }
-	  }], [{
-	    key: 'nodeWithFileNamed',
-	    value: function nodeWithFileNamed(filename) {
-	      var node = new SKNode();
-	      return node;
-	    }
-	  }, {
-	    key: 'obstaclesFromNodeBounds',
-	    value: function obstaclesFromNodeBounds(nodes) {
-	      return null;
-	    }
-
-	    /**
-	     * Converts each node into an obstacle by transforming the node’s physics body shape into the scene’s coordinate system.
-	     * @access public
-	     * @param {SKNode[]} nodes - An array of SKNode objects.
-	     * @returns {GKPolygonObstacle[]} - 
-	     * @desc Use the array of obstacles to create an obstacle graph (GKObstacleGraph) in GameplayKit. See GameplayKit and GameplayKit Programming Guide.
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483085-obstacles
-	     */
-
-	  }, {
-	    key: 'obstaclesFromNodePhysicsBodies',
-	    value: function obstaclesFromNodePhysicsBodies(nodes) {
-	      return null;
-	    }
-
-	    /**
-	     * Converts each node into an obstacle by first transforming the node’s texture into a physics shape and then converting that shape into the scene’s coordinate system.
-	     * @access public
-	     * @param {SKNode[]} sprites - An array of SKNode objects.
-	     * @param {number} accuracy - A floating point value between 0.001 and 1.0, inclusive. Higher values create a more precise (but more complex) representation of the obstacle.
-	     * @returns {GKPolygonObstacle[]} - 
-	     * @desc Use the array of obstacles to create an obstacle graph (GKObstacleGraph) in GameplayKit. See GameplayKit and GameplayKit Programming Guide.
-	     * @see https://developer.apple.com/reference/spritekit/sknode/1483134-obstacles
-	     */
-
-	  }, {
-	    key: 'obstaclesFromSpriteTextures',
-	    value: function obstaclesFromSpriteTextures(sprites, accuracy) {
-	      return null;
-	    }
-	  }]);
-
-	  return SKNode;
-	}(_NSObject3.default);
-
-	exports.default = SKNode;
-
-/***/ },
-/* 218 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
-
-	var _SKAction2 = __webpack_require__(213);
+	var _SKAction2 = __webpack_require__(218);
 
 	var _SKAction3 = _interopRequireDefault(_SKAction2);
 
-	var _SKActionTimingMode = __webpack_require__(214);
+	var _SKActionTimingMode = __webpack_require__(219);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
-	var _SKNode = __webpack_require__(217);
+	var _SKNode = __webpack_require__(131);
 
 	var _SKNode2 = _interopRequireDefault(_SKNode);
 
@@ -51716,7 +53463,7 @@ module.exports =
 	_SKAction3.default.fadeAlphaToDuration = SKFade.fadeAlphaToDuration;
 
 /***/ },
-/* 219 */
+/* 222 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -51729,15 +53476,15 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _SKAction2 = __webpack_require__(213);
+	var _SKAction2 = __webpack_require__(218);
 
 	var _SKAction3 = _interopRequireDefault(_SKAction2);
 
-	var _SKActionTimingMode = __webpack_require__(214);
+	var _SKActionTimingMode = __webpack_require__(219);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
-	var _SKNode = __webpack_require__(217);
+	var _SKNode = __webpack_require__(131);
 
 	var _SKNode2 = _interopRequireDefault(_SKNode);
 
@@ -51859,7 +53606,7 @@ module.exports =
 	_SKAction3.default.group = SKGroup.group;
 
 /***/ },
-/* 220 */
+/* 223 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -51885,7 +53632,7 @@ module.exports =
 	exports.default = SKLabelHorizontalAlignmentMode;
 
 /***/ },
-/* 221 */
+/* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -51902,19 +53649,19 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SKNode2 = __webpack_require__(217);
+	var _SKNode2 = __webpack_require__(131);
 
 	var _SKNode3 = _interopRequireDefault(_SKNode2);
 
-	var _SKLabelVerticalAlignmentMode = __webpack_require__(222);
+	var _SKLabelVerticalAlignmentMode = __webpack_require__(225);
 
 	var _SKLabelVerticalAlignmentMode2 = _interopRequireDefault(_SKLabelVerticalAlignmentMode);
 
-	var _SKLabelHorizontalAlignmentMode = __webpack_require__(220);
+	var _SKLabelHorizontalAlignmentMode = __webpack_require__(223);
 
 	var _SKLabelHorizontalAlignmentMode2 = _interopRequireDefault(_SKLabelHorizontalAlignmentMode);
 
-	var _SKBlendMode = __webpack_require__(215);
+	var _SKBlendMode = __webpack_require__(130);
 
 	var _SKBlendMode2 = _interopRequireDefault(_SKBlendMode);
 
@@ -52382,7 +54129,7 @@ module.exports =
 	exports.default = SKLabelNode;
 
 /***/ },
-/* 222 */
+/* 225 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -52410,7 +54157,7 @@ module.exports =
 	exports.default = SKLabelVerticalAlignmentMode;
 
 /***/ },
-/* 223 */
+/* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52423,15 +54170,15 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _SKAction2 = __webpack_require__(213);
+	var _SKAction2 = __webpack_require__(218);
 
 	var _SKAction3 = _interopRequireDefault(_SKAction2);
 
-	var _SKActionTimingMode = __webpack_require__(214);
+	var _SKActionTimingMode = __webpack_require__(219);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
-	var _SKNode = __webpack_require__(217);
+	var _SKNode = __webpack_require__(131);
 
 	var _SKNode2 = _interopRequireDefault(_SKNode);
 
@@ -52704,7 +54451,7 @@ module.exports =
 	_SKAction3.default.scaleYToDuration = SKScale.scaleYToDuration;
 
 /***/ },
-/* 224 */
+/* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52727,11 +54474,11 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SKEffectNode2 = __webpack_require__(216);
+	var _SKEffectNode2 = __webpack_require__(220);
 
 	var _SKEffectNode3 = _interopRequireDefault(_SKEffectNode2);
 
-	var _SKSceneScaleMode = __webpack_require__(225);
+	var _SKSceneScaleMode = __webpack_require__(228);
 
 	var _SKSceneScaleMode2 = _interopRequireDefault(_SKSceneScaleMode);
 
@@ -53045,7 +54792,7 @@ module.exports =
 	exports.default = SKScene;
 
 /***/ },
-/* 225 */
+/* 228 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -53073,7 +54820,7 @@ module.exports =
 	exports.default = SKSceneScaleMode;
 
 /***/ },
-/* 226 */
+/* 229 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -53086,15 +54833,15 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _SKAction2 = __webpack_require__(213);
+	var _SKAction2 = __webpack_require__(218);
 
 	var _SKAction3 = _interopRequireDefault(_SKAction2);
 
-	var _SKActionTimingMode = __webpack_require__(214);
+	var _SKActionTimingMode = __webpack_require__(219);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
-	var _SKNode = __webpack_require__(217);
+	var _SKNode = __webpack_require__(131);
 
 	var _SKNode2 = _interopRequireDefault(_SKNode);
 
@@ -53234,7 +54981,7 @@ module.exports =
 	_SKAction3.default.sequence = SKSequence.sequence;
 
 /***/ },
-/* 227 */
+/* 230 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -53253,7 +55000,7 @@ module.exports =
 
 	var _CGLineJoin2 = _interopRequireDefault(_CGLineJoin);
 
-	var _SKBlendMode = __webpack_require__(215);
+	var _SKBlendMode = __webpack_require__(130);
 
 	var _SKBlendMode2 = _interopRequireDefault(_SKBlendMode);
 
@@ -53261,7 +55008,7 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SKNode2 = __webpack_require__(217);
+	var _SKNode2 = __webpack_require__(131);
 
 	var _SKNode3 = _interopRequireDefault(_SKNode2);
 
@@ -53590,1105 +55337,6 @@ module.exports =
 	exports.default = SKShapeNode;
 
 /***/ },
-/* 228 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
-
-	var _CGPoint = __webpack_require__(7);
-
-	var _CGPoint2 = _interopRequireDefault(_CGPoint);
-
-	var _CGRect = __webpack_require__(8);
-
-	var _CGRect2 = _interopRequireDefault(_CGRect);
-
-	var _CGSize = __webpack_require__(9);
-
-	var _CGSize2 = _interopRequireDefault(_CGSize);
-
-	var _SKBlendMode = __webpack_require__(215);
-
-	var _SKBlendMode2 = _interopRequireDefault(_SKBlendMode);
-
-	var _SKColor = __webpack_require__(11);
-
-	var _SKColor2 = _interopRequireDefault(_SKColor);
-
-	var _SKNode2 = __webpack_require__(217);
-
-	var _SKNode3 = _interopRequireDefault(_SKNode2);
-
-	var _SKTexture = __webpack_require__(229);
-
-	var _SKTexture2 = _interopRequireDefault(_SKTexture);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	//import SKWarpable from './SKWarpable'
-	//import SKShader from './SKShader'
-	//import SKAttributeValue from './SKAttributeValue'
-	//import NSCoder from '../undefined/NSCoder'
-
-	/**
-	 * @access private
-	 * @type {string}
-	 */
-	var _defaultVertexShader = '#version 300 es\n  precision mediump float;\n\n  in vec3 position;\n  in vec2 texcoord;\n\n  uniform float screenWidth;\n  uniform float screenHeight;\n\n  //out vec3 v_position;\n  out vec2 v_texcoord;\n\n  void main() {\n    vec3 pos = position;\n    pos.x = (pos.x * 2.0 / screenWidth) - 1.0;\n    pos.y = (pos.y * 2.0 / screenHeight) - 1.0;\n    v_texcoord = texcoord;\n    gl_Position = vec4(pos, 1.0);\n  }\n';
-
-	/**
-	 * @access private
-	 * @type {string}
-	 */
-	var _defaultFragmentShader = '#version 300 es\n  precision mediump float;\n\n  uniform sampler2D spriteTexture;\n  uniform float alpha;\n  in vec2 v_texcoord;\n\n  out vec4 outColor;\n\n  void main() {\n    outColor = texture(spriteTexture, v_texcoord);\n    outColor.a *= alpha;\n  }\n';
-
-	/**
-	 * A node that draws a rectangular texture, image or color. 
-	 * @access public
-	 * @extends {SKNode}
-	 * @implements {SKWarpable}
-	 * @see https://developer.apple.com/reference/spritekit/skspritenode
-	 */
-
-	var SKSpriteNode = function (_SKNode) {
-	  _inherits(SKSpriteNode, _SKNode);
-
-	  // Initializing a New Sprite
-
-	  /**
-	   * Initializes a textured sprite using an image file, optionally adding a normal map to simulate 3D lighting.
-	   * @access public
-	   * @constructor
-	   * @param {string} name - The name of an image file stored in the app bundle.
-	   * @param {boolean} generateNormalMap - If true, a normal map is generated from the image texture without applying any filter to it (SKTextureNormalMapFilteringTypeNone). If false, no normal map is generated (matching the behavior of the spriteNodeWithImageNamed: class method).
-	   * @desc The normal map is used only when lighting is enabled in the scene. For more information, see Adding Lighting to a Sprite and SKLightNode.
-	   * @see https://developer.apple.com/reference/spritekit/skspritenode/1519721-init
-	   */
-	  function SKSpriteNode() {
-	    var name = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-	    var generateNormalMap = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : false;
-
-	    _classCallCheck(this, SKSpriteNode);
-
-	    // Inspecting Physical Properties
-
-	    /**
-	     * The dimensions of the sprite, in points.
-	     * @type {CGSize}
-	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519668-size
-	     */
-	    var _this = _possibleConstructorReturn(this, (SKSpriteNode.__proto__ || Object.getPrototypeOf(SKSpriteNode)).call(this));
-
-	    _this.size = new _CGSize2.default(0, 0);
-
-	    /**
-	     * Defines the point in the sprite that corresponds to the node’s position.
-	     * @type {CGPoint}
-	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519877-anchorpoint
-	     */
-	    _this.anchorPoint = new _CGPoint2.default(0.5, 0.5);
-
-	    // Inspecting the Sprite’s Texture
-
-	    /**
-	     * The texture used to draw the sprite.
-	     * @type {?SKTexture}
-	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1520011-texture
-	     */
-	    _this._texture = null;
-
-	    /**
-	     * A property that defines how the texture is applied to the sprite.
-	     * @type {CGRect}
-	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1520119-centerrect
-	     */
-	    _this.centerRect = new _CGRect2.default(new _CGPoint2.default(0, 0), new _CGSize2.default(1, 1));
-
-	    /**
-	     * A floating-point value that describes how the color is blended with the sprite’s texture.
-	     * @type {number}
-	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519780-colorblendfactor
-	     */
-	    _this.colorBlendFactor = 0;
-
-	    // Inspecting Color Properties
-
-	    /**
-	     * The sprite’s color.
-	     * @type {SKColor}
-	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519639-color
-	     */
-	    _this.color = new _SKColor2.default(1.0, 1.0, 1.0, 0.0);
-
-	    // Blending the Sprite with the Framebuffer
-
-	    /**
-	     * The blend mode used to draw the sprite into the parent’s framebuffer.
-	     * @type {SKBlendMode}
-	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519931-blendmode
-	     */
-	    _this.blendMode = _SKBlendMode2.default.alpha;
-
-	    // Adding Lighting to a Sprite
-
-	    /**
-	     * A mask that defines how this sprite is lit by light nodes in the scenes.
-	     * @type {number}
-	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519637-lightingbitmask
-	     */
-	    _this.lightingBitMask = 0;
-
-	    /**
-	     * A mask that defines which lights add additional shadows to the sprite.
-	     * @type {number}
-	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519974-shadowedbitmask
-	     */
-	    _this.shadowedBitMask = 0;
-
-	    /**
-	     * A mask that defines which lights are occluded by this sprite.
-	     * @type {number}
-	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1520325-shadowcastbitmask
-	     */
-	    _this.shadowCastBitMask = 0;
-
-	    /**
-	     * A texture that specifies the normal map for the sprite.
-	     * @type {?SKTexture}
-	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519657-normaltexture
-	     */
-	    _this.normalTexture = null;
-
-	    // Working with Custom Shaders
-
-	    /**
-	     * A property that determines whether the sprite is rendered using a custom shader.
-	     * @type {?SKShader}
-	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519714-shader
-	     */
-	    _this.shader = null;
-
-	    /**
-	     * The values of each attribute associated with the node's attached shader.
-	     * @type {Map<string, SKAttributeValue>}
-	     * @see https://developer.apple.com/reference/spritekit/skspritenode/2715845-attributevalues
-	     */
-	    _this.attributeValues = new Map();
-
-	    // Instance Properties
-
-	    //this._customPlaygroundQuickLook = new PlaygroundQuickLook()
-	    _this._customPlaygroundQuickLook = null;
-
-	    /**
-	     * @access private
-	     * @type {WebGLProgram}
-	     */
-	    _this._program = null;
-
-	    _this._vertexArrayObject = null;
-	    _this._vertexBuffer = null;
-	    _this._indexBuffer = null;
-
-	    _this._loadingImagePromise = null;
-
-	    if (name !== null) {
-	      _this.texture = _SKTexture2.default.textureWithImageNamed(name);
-	      //if(generateNormalMap){
-	      //  this.normalTexture = this.texture.generatingNormalMap()
-	      //}
-	    }
-	    return _this;
-	  }
-
-	  /**
-	   * Initializes a colored sprite node.
-	   * @access public
-	   * @param {CGColor} color - The color for the resulting sprite node.
-	   * @param {CGSize} size - The size of the sprite node in points.
-	   * @returns {SKSpriteNode} -
-	   * @desc Although textured nodes are the most common way to use the SKSpriteNode class, you can also create sprite nodes without a texture. The behavior of the class changes when the node lacks a texture:The sprite node that is returned from this method has its texture property set to nil.There is no texture to stretch, so the centerRect parameter is ignored.There is no colorization step; the color property is used as the sprite’s color.The sprite node's alpha component is used to determine how it is blended into the buffer.Listing 1 shows how to create a red sprite node 100 x 100 points in size.Listing 1 Creating a non-textured sprite nodelet node = SKSpriteNode(color: .red,
-	                        size: CGSize(width: 100, height: 100))
-	  Creating a non-textured sprite nodelet node = SKSpriteNode(color: .red,
-	                        size: CGSize(width: 100, height: 100))
-	    * @see https://developer.apple.com/reference/spritekit/skspritenode/1519762-init
-	   */
-
-
-	  _createClass(SKSpriteNode, [{
-	    key: 'scaleTo',
-
-
-	    // Inspecting Physical Properties
-
-	    /**
-	     * Scales to sprite node to a specified size. 
-	     * @access public
-	     * @param {CGSize} size - 
-	     * @returns {void}
-	     * @desc This method works by setting the sprite node's xScale and yScale to achieve the specified size in its parent's coordinate space. 
-	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1645445-scale
-	     */
-	    value: function scaleTo(size) {}
-
-	    // Working with Custom Shaders
-
-	    /**
-	     * Sets an attribute value for an attached shader.
-	     * @access public
-	     * @param {SKAttributeValue} value - An attribute value object containing the scalar or vector value to set in the attached shader.
-	     * @param {string} key - The attribute name.
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/spritekit/skspritenode/2715849-setvalue
-	     */
-
-	  }, {
-	    key: 'setValueForAttribute',
-	    value: function setValueForAttribute(value, key) {}
-
-	    /**
-	     * The value of a shader attribute.
-	     * @access public
-	     * @param {string} key - The attribute name.
-	     * @returns {?SKAttributeValue} - 
-	     * @see https://developer.apple.com/reference/spritekit/skspritenode/2715846-value
-	     */
-
-	  }, {
-	    key: 'valueForAttributeNamed',
-	    value: function valueForAttributeNamed(key) {
-	      return null;
-	    }
-
-	    // Initializers
-
-	    /**
-	     * 
-	     * @access public
-	     * @param {NSCoder} aDecoder - 
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1520399-init
-	     */
-
-	  }, {
-	    key: 'initCoder',
-	    value: function initCoder(aDecoder) {}
-
-	    // Instance Properties
-	    /**
-	     * A custom playground quick look for this instance.
-	     * @type {PlaygroundQuickLook}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1645797-customplaygroundquicklook
-	     */
-
-	  }, {
-	    key: '_render',
-
-
-	    /**
-	     * @access private
-	     * @param {WebGLRenderingContext} gl -
-	     * @param {CGRect} viewRect -
-	     * @returns {void}
-	     */
-	    value: function _render(gl, viewRect) {
-	      var p = this.__presentation;
-	      if (this.texture === null) {
-	        return;
-	      }
-	      if (this.texture._glTexture === null) {
-	        this.texture._createTexture(gl);
-	        if (this.texture._glTexture === null) {
-	          // the texture is not ready
-	          return;
-	        }
-	        this.size = new _CGSize2.default(this.texture._image.naturalWidth, this.texture._image.naturalHeight);
-	        p.size = this.size.copy();
-	      }
-	      if (this._program === null) {
-	        this._program = this._createProgram(gl);
-	      }
-	      var program = this._program;
-	      gl.useProgram(program);
-
-	      if (this._vertexArrayObject === null) {
-	        this._createVertexArrayObject(gl, program);
-	      }
-	      gl.bindVertexArray(this._vertexArrayObject);
-
-	      gl.uniform1f(gl.getUniformLocation(program, 'screenWidth'), viewRect.size.width);
-	      gl.uniform1f(gl.getUniformLocation(program, 'screenHeight'), viewRect.size.height);
-	      gl.uniform1f(gl.getUniformLocation(program, 'alpha'), p.alpha);
-
-	      var data = this._createVertexData();
-	      gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer);
-	      gl.bufferData(gl.ARRAY_BUFFER, data, gl.DYNAMIC_DRAW);
-
-	      gl.uniform1i(gl.getUniformLocation(program, 'spriteTexture'), 0);
-	      gl.activeTexture(gl.TEXTURE0);
-	      gl.bindTexture(gl.TEXTURE_2D, this.texture._glTexture);
-	      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-	      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
-	      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-	      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-
-	      gl.drawElements(gl.TRIANGLES, 6, gl.UNSIGNED_BYTE, 0);
-	    }
-	  }, {
-	    key: '_createProgram',
-	    value: function _createProgram(gl) {
-	      var program = gl.createProgram();
-	      var vsText = _defaultVertexShader;
-	      var fsText = _defaultFragmentShader;
-
-	      // initialize vertex shader
-	      var vertexShader = gl.createShader(gl.VERTEX_SHADER);
-	      gl.shaderSource(vertexShader, vsText);
-	      gl.compileShader(vertexShader);
-	      if (!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)) {
-	        var info = gl.getShaderInfoLog(vertexShader);
-	        throw new Error('SKSpriteNode vertex shader compile error: ' + info);
-	      }
-
-	      // initialize fragment shader
-	      var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
-	      gl.shaderSource(fragmentShader, fsText);
-	      gl.compileShader(fragmentShader);
-	      if (!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)) {
-	        var _info = gl.getShaderInfoLog(fragmentShader);
-	        throw new Error('particle fragment shader compile error: ' + _info);
-	      }
-
-	      gl.attachShader(program, vertexShader);
-	      gl.attachShader(program, fragmentShader);
-
-	      // link program object
-	      gl.linkProgram(program);
-	      if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-	        var _info2 = gl.getProgramInfoLog(program);
-	        throw new Error('program link error: ' + _info2);
-	      }
-
-	      //gl.useProgram(program)
-
-	      return program;
-	    }
-
-	    /**
-	     * @access private
-	     * @param {WebGLRenderingContext} gl -
-	     * @param {WebGLProgram} program -
-	     * @returns {void}
-	     */
-
-	  }, {
-	    key: '_createVertexArrayObject',
-	    value: function _createVertexArrayObject(gl, program) {
-	      this._vertexArrayObject = gl.createVertexArray();
-	      gl.bindVertexArray(this._vertexArrayObject);
-
-	      this._vertexBuffer = gl.createBuffer();
-	      gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer);
-
-	      var positionLoc = gl.getAttribLocation(program, 'position');
-	      gl.bindAttribLocation(program, positionLoc, 'position');
-	      gl.enableVertexAttribArray(positionLoc);
-	      // idx, size, type, norm, stride, offset
-	      gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, 20, 0);
-
-	      var texcoordLoc = gl.getAttribLocation(program, 'texcoord');
-	      gl.bindAttribLocation(program, texcoordLoc, 'texcoord');
-	      gl.enableVertexAttribArray(texcoordLoc);
-	      // idx, size, type, norm, stride, offset
-	      gl.vertexAttribPointer(texcoordLoc, 2, gl.FLOAT, false, 20, 12);
-
-	      this._indexBuffer = gl.createBuffer();
-	      var indexData = new Uint8Array([0, 3, 2, 0, 1, 3]);
-	      gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, this._indexBuffer);
-	      gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, indexData, gl.STATIC_DRAW);
-	    }
-	  }, {
-	    key: '_createVertexData',
-	    value: function _createVertexData() {
-	      var p = this.__presentation;
-	      var w = p.size.width * p._worldXScale;
-	      var h = p.size.height * p._worldYScale;
-	      var pos = p._worldPosition;
-	      var zPos = p._worldZPosition;
-	      var left = pos.x - p.anchorPoint.x * w;
-	      var right = pos.x + (1.0 - p.anchorPoint.x) * w;
-	      var top = pos.y + (1.0 - p.anchorPoint.y) * h;
-	      var bottom = pos.y - p.anchorPoint.y * h;
-	      var arr = [left, top, zPos, p.centerRect.minX, p.centerRect.minY, right, top, zPos, p.centerRect.maxX, p.centerRect.minY, left, bottom, zPos, p.centerRect.minX, p.centerRect.maxY, right, bottom, zPos, p.centerRect.maxX, p.centerRect.maxY];
-	      return new Float32Array(arr);
-	    }
-	  }, {
-	    key: '_copyValue',
-	    value: function _copyValue(src) {
-	      _get(SKSpriteNode.prototype.__proto__ || Object.getPrototypeOf(SKSpriteNode.prototype), '_copyValue', this).call(this, src);
-	      this.size = src.size.copy();
-	      this.anchorPoint = src.anchorPoint.copy();
-	      this._texture = src._texture ? src._texture : null;
-	      this.centerRect = src.centerRect.copy();
-	      this.colorBlendFactor = src.colorBlendFactor;
-	      this.color = src.color.copy();
-	      this.blendMode = src.blendMode;
-	      this.lightingBitMask = src.lightingBitMask;
-	      this.shadowedBitMask = src.shadowedBitMask;
-	      this.shadowCastBitMask = src.shadowCastBitMask;
-	      this.normalTexture = src.normalTexture ? src.normalTexture : null;
-	      this.shader = src.shader;
-	      this.attributeValues = src.attributeValues;
-	      this._customerPlaygroundQuickLook = src._customerPlaygroundQuickLook;
-	      // this._program
-	      // this._vertexArrayObject
-	      // this._vertexBuffer
-	      // this._indexBuffer
-	    }
-	  }, {
-	    key: 'customPlaygroundQuickLook',
-	    get: function get() {
-	      return this._customPlaygroundQuickLook;
-	    }
-	  }, {
-	    key: 'texture',
-	    get: function get() {
-	      return this._texture;
-	    },
-	    set: function set(newValue) {
-	      var _this2 = this;
-
-	      this._texture = newValue;
-
-	      this.size = new _CGSize2.default(0, 0);
-	      this._frame = new _CGRect2.default(new _CGPoint2.default(0, 0), this.size);
-	      if (this._texture) {
-	        this._loadingImagePromise = this._texture._loadingImagePromise.then(function (texture) {
-	          if (_this2._texture === texture) {
-	            _this2.size = _this2._texture.size();
-	            var x = -_this2.size.width * _this2.anchorPoint.x;
-	            var y = -_this2.size.height * (1.0 - _this2.anchorPoint.y);
-	            _this2._frame = new _CGRect2.default(new _CGPoint2.default(x, y), _this2.size);
-	          }
-	        });
-	      } else {
-	        this._loadingImagePromise = null;
-	      }
-	    }
-	  }], [{
-	    key: 'nodeWithColorSize',
-	    value: function nodeWithColorSize(color, size) {
-	      var node = new SKSpriteNode();
-	      node.size = size;
-	      node.color = color;
-	      return node;
-	    }
-
-	    /**
-	     * Initializes a textured sprite using an image file.
-	     * @access public
-	     * @param {string} name - The name of an image file stored in the app bundle.
-	     * @returns {SKSpriteNode} -
-	     * @desc This method creates a new texture object from the image file and assigns that texture to the texture property, the normalTexture properties is set to nil. The size property of the sprite is set to the dimensions of the image. The color property is set to white with an alpha of zero (1.0,1.0,1.0,0.0).
-	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1520391-init
-	     */
-
-	  }, {
-	    key: 'nodeWithImageNamed',
-	    value: function nodeWithImageNamed(name) {
-	      var node = new SKSpriteNode(name);
-	      if (!node._loadingImagePromise) {
-	        return null;
-	      }
-	      var promise = node._loadingImagePromise.then(function () {
-	        return Promise.resolve(node);
-	      });
-	      return promise;
-	    }
-
-	    /**
-	     * Initializes a textured sprite using an image file, optionally adding a normal map to simulate 3D lighting.
-	     * @access public
-	     * @param {string} name - The name of an image file stored in the app bundle.
-	     * @param {boolean} generateNormalMap - If true, a normal map is generated from the image texture without applying any filter to it (SKTextureNormalMapFilteringTypeNone). If false, no normal map is generated (matching the behavior of the spriteNodeWithImageNamed: class method).
-	     * @returns {SKSpriteNode} -
-	     * @desc The normal map is used only when lighting is enabled in the scene. For more information, see Adding Lighting to a Sprite and SKLightNode.
-	     * @see https://developer.apple.com/reference/spritekit/skspritenode/1519721-init
-	     */
-
-	  }, {
-	    key: 'nodeWithImageNamedNormalMapped',
-	    value: function nodeWithImageNamedNormalMapped(name, generateNormalMap) {}
-	  }]);
-
-	  return SKSpriteNode;
-	}(_SKNode3.default);
-
-	exports.default = SKSpriteNode;
-
-/***/ },
-/* 229 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _NSObject2 = __webpack_require__(2);
-
-	var _NSObject3 = _interopRequireDefault(_NSObject2);
-
-	var _CGRect = __webpack_require__(8);
-
-	var _CGRect2 = _interopRequireDefault(_CGRect);
-
-	var _CGSize = __webpack_require__(9);
-
-	var _CGSize2 = _interopRequireDefault(_CGSize);
-
-	var _SKTextureFilteringMode = __webpack_require__(230);
-
-	var _SKTextureFilteringMode2 = _interopRequireDefault(_SKTextureFilteringMode);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	//import GKNoiseMap from '../undefined/GKNoiseMap'
-
-
-	/**
-	 * A representation of an image for use in SpriteKit.
-	 * @access public
-	 * @extends {NSObject}
-	 * @see https://developer.apple.com/reference/spritekit/sktexture
-	 */
-	var SKTexture = function (_NSObject) {
-	  _inherits(SKTexture, _NSObject);
-
-	  /**
-	   * constructor
-	   * @access public
-	   * @constructor
-	   */
-	  function SKTexture() {
-	    _classCallCheck(this, SKTexture);
-
-	    // Inspecting a Texture’s Properties
-
-	    /**
-	     * The filtering mode used when the size of a sprite drawn with the texture is not drawn at the texture’s native size.
-	     * @type {SKTextureFilteringMode}
-	     * @see https://developer.apple.com/reference/spritekit/sktexture/1519659-filteringmode
-	     */
-	    var _this = _possibleConstructorReturn(this, (SKTexture.__proto__ || Object.getPrototypeOf(SKTexture)).call(this));
-
-	    _this.filteringMode = _SKTextureFilteringMode2.default.linear;
-
-	    /**
-	     * A Boolean value that indicates whether the texture attempts to generate mipmaps.
-	     * @type {boolean}
-	     * @see https://developer.apple.com/reference/spritekit/sktexture/1519960-usesmipmaps
-	     */
-	    _this.usesMipmaps = false;
-
-	    // Instance Properties
-
-	    _this._customPlaygroundQuickLook = null;
-
-	    _this._image = null;
-	    _this._glTexture = null;
-
-	    _this._loadingImagePromise = null;
-	    return _this;
-	  }
-
-	  // Creating New Textures from Images
-
-	  /**
-	   * Create a new texture object from an image file stored in the app bundle.
-	   * @access public
-	   * @param {string} name - The name of the image file.
-	   * @returns {void}
-	   * @desc The new texture object is initialized with the name of the image file and then control returns immediately to your game. Sprite Kit loads and prepares the texture data when it is needed by your game.When loading the texture data, Sprite Kit searches the app bundle for an image file with the specified filename. If a matching image file cannot be found, Sprite Kit searches for the texture in any texture atlases stored in the app bundle. If the specified image does not exist anywhere in the bundle, Sprite Kit creates a placeholder texture image.
-	   * @see https://developer.apple.com/reference/spritekit/sktexture/1520086-init
-	   */
-
-
-	  _createClass(SKTexture, [{
-	    key: 'applying',
-
-
-	    /**
-	     * Creates a new texture by applying a Core Image filter to an existing texture.
-	     * @access public
-	     * @param {CIFilter} filter - A Core Image filter that requires a single inputImage parameter and produces an outputImage parameter.
-	     * @returns {SKTexture} - 
-	     * @desc The image data is copied before control is returned to your game.
-	     * @see https://developer.apple.com/reference/spritekit/sktexture/1520388-applying
-	     */
-	    value: function applying(filter) {
-	      return null;
-	    }
-
-	    /**
-	     * Returns the texture’s image data as a Quartz 2D image.
-	     * @access public
-	     * @returns {CGImage} - 
-	     * @see https://developer.apple.com/reference/spritekit/sktexture/1519755-cgimage
-	     */
-
-	  }, {
-	    key: 'cgImage',
-	    value: function cgImage() {
-	      return this._image;
-	    }
-
-	    // Creating Textures from Raw Pixel Data
-
-	    /**
-	     * Creates a new texture from raw pixel data.
-	     * @access public
-	     * @param {Data} pixelData - An NSData object that holds the bitmap data. The pixels must be 32 bpp, 8bpc (unsigned integer) RGBA pixel data. The color components should have been already multiplied by the alpha value.
-	     * @param {CGSize} size - The size of the new texture in points.
-	     * @returns {void}
-	     * @desc The image data is copied before control is returned to your game.Creating textures from raw pixel data is useful if you have a CPU based routine for creating imagery. The following code shows how you can use init(data:size:) to create a texture containing random colors and a solid alpha. The bytes array is populated by iterating over the total number of pixels and adding four UInt8 values for the red, green, blue, and alpha channels.let width = 128
-	    let height = 128
-	    let bytes = stride(from: 0, to: width * height, by: 1).flatMap {
-	      _ in
-	      return [
-	          UInt8(drand48() * 255), // red
-	          UInt8(drand48() * 255), // green
-	          UInt8(drand48() * 255), // blue
-	          UInt8(255)              // alpha
-	      ]
-	    }
-	    let data = Data(bytes: bytes)
-	    let texture = SKTexture(data: data,
-	                          size: CGSize(width: width, height: height))
-	    let width = 128
-	    let height = 128
-	    let bytes = stride(from: 0, to: width * height, by: 1).flatMap {
-	      _ in
-	      return [
-	          UInt8(drand48() * 255), // red
-	          UInt8(drand48() * 255), // green
-	          UInt8(drand48() * 255), // blue
-	          UInt8(255)              // alpha
-	      ]
-	    }
-	    let data = Data(bytes: bytes)
-	    let texture = SKTexture(data: data,
-	                          size: CGSize(width: width, height: height))
-	      * @see https://developer.apple.com/reference/spritekit/sktexture/1519962-init
-	     */
-
-	  }, {
-	    key: 'generatingNormalMap',
-
-
-	    // Creating Normal Map Textures
-
-	    /**
-	     * Creates a normal map texture by analyzing the contents of an existing texture.
-	     * @access public
-	     * @returns {SKTexture} - 
-	     * @see https://developer.apple.com/reference/spritekit/sktexture/1519687-generatingnormalmap
-	     */
-	    value: function generatingNormalMap() {
-	      return null;
-	    }
-
-	    /**
-	     * Creates a normal map texture by analyzing the contents of an existing texture.
-	     * @access public
-	     * @param {number} smoothness - A number between 0.0 and 1.0 indicating how much the texture should be smoothed before the normal map is generated. A value of 0.0 means that the texture is not smoothed at all before being processed.
-	     * @param {number} contrast - A value used to magnify the effect of the generated normal map. A value of 1.0 indicates no magnification is applied.
-	     * @returns {SKTexture} - 
-	     * @see https://developer.apple.com/reference/spritekit/sktexture/1520441-generatingnormalmap
-	     */
-
-	  }, {
-	    key: 'generatingNormalMapWithSmoothness',
-	    value: function generatingNormalMapWithSmoothness(smoothness, contrast) {
-	      return null;
-	    }
-
-	    // Creating Noise Textures
-
-	    /**
-	     * Creates a new texture whose contents are procedurally generated directional noise data.
-	     * @access public
-	     * @param {number} smoothness - A value that indicates how similar neighboring texels will be in the resulting texture. The value should be between 0.0 and 1.0. A value of 1.0 generates a smooth surface.
-	     * @param {CGSize} size - The size of the new texture in points.
-	     * @returns {void}
-	     * @desc The noise texture is tileable with itself. The RGB values stored in the texture can be used as directional (XYZ) data. The alpha values are also randomized and can be used as magnitude data, if desired.The following code creates three sprite nodes with textures generated by init(vectorNoiseWithSmoothness:size:) with smoothness values of 0.0, 0.5 and 1.0.let columWidth = scene.size.width / 3
-	    for i in 0...2 {
-	      
-	      let size = CGSize(width: ceil(columWidth),
-	                        height: 0.5 * scene.size.height)
-	      
-	      let smoothness = CGFloat(i) / 2
-	      
-	      let vectorTexture = SKTexture(vectorNoiseWithSmoothness: smoothness,
-	                                    size: size)
-	      
-	      let sprite = SKSpriteNode(texture: vectorTexture, size: size)
-	      
-	      sprite.position = CGPoint(x: CGFloat(i) * columWidth + (columWidth / 2),
-	                                y: 
-	    scene.size.height / 2)
-	       
-	      scene.addChild(sprite)
-	    }
-	    let columWidth = scene.size.width / 3
-	    for i in 0...2 {
-	      
-	      let size = CGSize(width: ceil(columWidth),
-	                        height: 0.5 * scene.size.height)
-	      
-	      let smoothness = CGFloat(i) / 2
-	      
-	      let vectorTexture = SKTexture(vectorNoiseWithSmoothness: smoothness,
-	                                    size: size)
-	      
-	      let sprite = SKSpriteNode(texture: vectorTexture, size: size)
-	      
-	      sprite.position = CGPoint(x: CGFloat(i) * columWidth + (columWidth / 2),
-	                                y: 
-	    scene.size.height / 2)
-	       
-	      scene.addChild(sprite)
-	    }
-	      * @see https://developer.apple.com/reference/spritekit/sktexture/1520393-init
-	     */
-
-	  }, {
-	    key: 'size',
-
-
-	    // Inspecting a Texture’s Properties
-
-	    /**
-	     * The size of the texture.
-	     * @access public
-	     * @returns {CGSize} - 
-	     * @desc If the texture was created using an image file and that image file hasn’t been loaded, calling this method forces the texture data to be loaded from the file.
-	     * @see https://developer.apple.com/reference/spritekit/sktexture/1519772-size
-	     */
-	    value: function size() {
-	      if (this._image === null) {
-	        return new _CGSize2.default(0, 0);
-	      }
-	      return new _CGSize2.default(this._image.naturalWidth, this._image.naturalHeight);
-	    }
-
-	    /**
-	     * A rectangle that defines the portion of the texture used to render its image.
-	     * @access public
-	     * @returns {CGRect} - 
-	     * @desc The default value is a rectangle that covers the entire texture (0,0) - (1,1). You cannot set this value directly; to use only a portion of a texture, use the init(rect:in:) method to create a new texture.
-	     * @see https://developer.apple.com/reference/spritekit/sktexture/1519707-texturerect
-	     */
-
-	  }, {
-	    key: 'textureRect',
-	    value: function textureRect() {
-	      return null;
-	    }
-
-	    // Preloading the Texture Data
-
-	    /**
-	     * Load the texture data into memory, calling a completion handler after the task completes.
-	     * @access public
-	     * @param {function(): void} completionHandler - A block called after the texture data is loaded.
-	     * @returns {void}
-	     * @desc SpriteKit creates a background task to load the texture data from the associated file, then returns control to your game. After the texture data is loaded, your completion handler is called. Typically, you use this method when you want to guarantee that a particular texture is in memory before accessing it.If you need to preload multiple textures at once, use the preload(_:withCompletionHandler:) method instead.
-	     * @see https://developer.apple.com/reference/spritekit/sktexture/1520172-preload
-	     */
-
-	  }, {
-	    key: 'preload',
-	    value: function preload(completionHandler) {}
-
-	    /**
-	     * Load the texture data of multiple textures into memory.
-	     * @access public
-	     * @param {SKTexture[]} textures - An array of SKTexture objects.
-	     * @param {function(): void} completionHandler - A block called after all of the textures are loaded.
-	     * @returns {void}
-	     * @desc SpriteKit creates a background task that loads the texture data for all of the textures in the array, then returns control to your game. Your completion handler is called after all of the textures are loaded.
-	     * @see https://developer.apple.com/reference/spritekit/sktexture/1519817-preload
-	     */
-
-	  }, {
-	    key: '_loadImage',
-	    value: function _loadImage(path) {
-	      var _this2 = this;
-
-	      var image = new Image();
-	      this._loadingImagePromise = new Promise(function (resolve, reject) {
-	        if (path.indexOf('file:///') === 0) {
-	          var paths = path.slice(8).split('/');
-	          var pathCount = 1;
-	          var _path = paths.slice(-pathCount).join('/');
-	          console.info('image loading: ' + _path);
-	          image.onload = function () {
-	            console.info('image ' + _path + ' onload');
-	            _this2._image = image;
-	            resolve(_this2);
-	          };
-	          image.onerror = function () {
-	            pathCount += 1;
-	            if (pathCount > paths.length) {
-	              console.error('image ' + path + ' load error.');
-	              reject(_this2);
-	            } else {
-	              // retry
-	              console.info('image ' + _path + ' load error.');
-	              _path = paths.slice(-pathCount).join('/');
-	              console.info('try ' + _path);
-	              image.src = _path;
-	            }
-	          };
-	        } else {
-	          console.info('image loading: ' + path);
-	          image.onload = function () {
-	            _this2._image = image;
-	            resolve(_this2);
-	          };
-	          image.onerror = function () {
-	            console.info('image ' + path + ' load error.');
-	            reject(_this2);
-	          };
-	          image.src = path;
-	        }
-	      });
-	    }
-	  }, {
-	    key: '_createTexture',
-	    value: function _createTexture(gl) {
-	      if (this._image === null) {
-	        return;
-	      }
-	      var texture = gl.createTexture();
-
-	      var canvas = document.createElement('canvas');
-	      canvas.width = this._image.naturalWidth;
-	      canvas.height = this._image.naturalHeight;
-	      canvas.getContext('2d').drawImage(this._image, 0, 0);
-
-	      gl.bindTexture(gl.TEXTURE_2D, texture);
-	      // texImage2D(target, level, internalformat, width, height, border, format, type, source)
-	      // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
-	      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, this._image.width, this._image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
-	      gl.generateMipmap(gl.TEXTURE_2D);
-	      gl.bindTexture(gl.TEXTURE_2D, null);
-
-	      this._glTexture = texture;
-	    }
-	  }, {
-	    key: 'customPlaygroundQuickLook',
-
-
-	    // Instance Properties
-	    /**
-	     * 
-	     * @type {PlaygroundQuickLook}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/spritekit/sktexture/1645801-customplaygroundquicklook
-	     */
-	    get: function get() {
-	      return this._customPlaygroundQuickLook;
-	    }
-	  }], [{
-	    key: 'textureWithImageNamed',
-	    value: function textureWithImageNamed(name) {
-	      console.log('SKTexture image name: ' + name);
-	      var texture = new SKTexture();
-	      texture._loadImage(name);
-	      return texture;
-	    }
-
-	    /**
-	     * Create a new texture object from an image object.
-	     * @access public
-	     * @param {Image} image - An image.
-	     * @returns {void}
-	     * @desc The image data is copied before control is returned to your game.
-	     * @see https://developer.apple.com/reference/spritekit/sktexture/1520136-init
-	     */
-
-	  }, {
-	    key: 'textureWithImage',
-	    value: function textureWithImage(image) {
-	      var texture = new SKTexture();
-	      texture._image = image;
-	      this._loadingImagePromise = Promise.resolve(this);
-	      return texture;
-	    }
-
-	    /**
-	     * Create a new texture object from a Quartz 2D image.
-	     * @access public
-	     * @param {CGImage} image - A Quartz 2D image (CGImage) object. For more information, see Quartz 2D Programming Guide and CGImage.
-	     * @returns {void}
-	     * @desc The image data is copied before control is returned to your game.
-	     * @see https://developer.apple.com/reference/spritekit/sktexture/1519576-init
-	     */
-
-	  }, {
-	    key: 'textureWithCgImage',
-	    value: function textureWithCgImage(image) {
-	      var texture = new SKTexture();
-	      texture._image = image;
-	      this._loadingImagePromise = Promise.resolve(this);
-	      return texture;
-	    }
-
-	    /**
-	     * Creates a new texture from a subset of an existing texture.
-	     * @access public
-	     * @param {CGRect} rect - A rectangle in the unit coordinate space that specifies the portion of the texture to use.
-	     * @param {SKTexture} texture - The texture to create the new texture from.
-	     * @returns {void}
-	     * @desc The returned texture object shares the same texture data as the original texture object, meaning that only one copy of the texture data is kept in memory.If you call this method on a texture that itself was created using this method, the original texture is used as the source instead. That is, the rectangle is considered to be in the source texture’s coordinate system. To do this, you should use the source texture's textureRect() rather than relying on hard coded {(0,0) (1,1)} as the coordinates.  Listing 1 shows how you can use the source texture's textureRect() to calculate the portion of the texture to use.Listing 1 Creating a texture from a portion of another texture.let originalTexture = SKTexture(imageNamed: "sourceImage.png")
-	    let rect = CGRect(origin: originalTexture.textureRect().origin,
-	                    size: CGSize(width: originalTexture.textureRect().midX,
-	                                 height: originalTexture.textureRect().midY))
-	    let croppedTexture = SKTexture(rect: rect,
-	                                 in: originalTexture)
-	    In the above example, if originalTexture had a size of (348.0, 282.0) and a textureRect() of {(0,0) (1,1)}, croppedTexture will have a size of (174.0, 141.0) and a textureRect() of {(0,0) (1,1)}. croppedTexture will be a copy of the bottom left quadrant of originalTexture.Creating a texture from a portion of another texture.let originalTexture = SKTexture(imageNamed: "sourceImage.png")
-	    let rect = CGRect(origin: originalTexture.textureRect().origin,
-	                    size: CGSize(width: originalTexture.textureRect().midX,
-	                                 height: originalTexture.textureRect().midY))
-	    let croppedTexture = SKTexture(rect: rect,
-	                                 in: originalTexture)
-	      * @see https://developer.apple.com/reference/spritekit/sktexture/1520425-init
-	     */
-
-	  }, {
-	    key: 'textureWithRectIn',
-	    value: function textureWithRectIn(rect, texture) {
-	      var texutre = new SKTexture();
-	      return texture;
-	    }
-	  }, {
-	    key: 'textureWithDataSize',
-	    value: function textureWithDataSize(pixelData, size) {}
-	  }, {
-	    key: 'textureWithVectorNoiseWithSmoothness',
-	    value: function textureWithVectorNoiseWithSmoothness(smoothness, size) {}
-
-	    /**
-	     * Creates a new texture whose contents are procedurally generated colored noise data.
-	     * @access public
-	     * @param {number} smoothness - A value that indicates how similar neighboring texels will be in the resulting texture. The value should be between 0.0 and 1.0. A value of 1.0 generates a smooth surface.
-	     * @param {CGSize} size - The size of the new texture in points.
-	     * @param {boolean} grayscale - If true, all four components of each texel will have equal values. If false, all four values are completely randomized.
-	     * @returns {void}
-	     * @desc Unlike other textures produced by SpriteKit, the texels are not premultiplied by the alpha value. Your custom shaders should compensate for this as necessary.The following code creates three sprite nodes with textures generated by init(noiseWithSmoothness:size:grayscale:) with smoothness values of 0.0, 0.5 and 1.0.let columWidth = scene.size.width / 3
-	    for i in 0...2 {
-	      
-	      let size = CGSize(width: ceil(columWidth),
-	                        height: 0.5 * scene.size.height)
-	      
-	      let smoothness = CGFloat(i) / 2
-	      
-	      let noiseTexture = SKTexture(noiseWithSmoothness: smoothness,
-	                                    size: size,
-	                                    grayscale: false)
-	      
-	      let sprite = SKSpriteNode(texture: noiseTexture, size: size)
-	      
-	      sprite.position = CGPoint(x: CGFloat(i) * columWidth + (columWidth / 2),
-	                                y: scene.size.height / 2)
-	      
-	      scene.addChild(sprite)
-	    }
-	    let columWidth = scene.size.width / 3
-	    for i in 0...2 {
-	      
-	      let size = CGSize(width: ceil(columWidth),
-	                        height: 0.5 * scene.size.height)
-	      
-	      let smoothness = CGFloat(i) / 2
-	      
-	      let noiseTexture = SKTexture(noiseWithSmoothness: smoothness,
-	                                    size: size,
-	                                    grayscale: false)
-	      
-	      let sprite = SKSpriteNode(texture: noiseTexture, size: size)
-	      
-	      sprite.position = CGPoint(x: CGFloat(i) * columWidth + (columWidth / 2),
-	                                y: scene.size.height / 2)
-	      
-	      scene.addChild(sprite)
-	    }
-	      * @see https://developer.apple.com/reference/spritekit/sktexture/1519971-init
-	     */
-
-	  }, {
-	    key: 'textureWithNoiseWithSmoothness',
-	    value: function textureWithNoiseWithSmoothness(smoothness, size, grayscale) {}
-	  }, {
-	    key: 'preloadWithCompletionHandler',
-	    value: function preloadWithCompletionHandler(textures, completionHandler) {}
-	  }]);
-
-	  return SKTexture;
-	}(_NSObject3.default);
-
-	exports.default = SKTexture;
-
-/***/ },
-/* 230 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	/**
-	 * Texture filtering modes to use when the texture is drawn in a size other than its native size.
-	 * @typedef {Object} SKTextureFilteringMode
-	 * @property {number} nearest - Each pixel is drawn using the nearest point in the texture. This mode is faster, but the results are often pixelated.
-	 * @property {number} linear - Each pixel is drawn by using a linear filter of multiple texels in the texture. This mode produces higher quality results but may be slower.
-	 * @see https://developer.apple.com/reference/spritekit/sktexturefilteringmode
-	 */
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-	var SKTextureFilteringMode = {
-	  nearest: 0,
-	  linear: 1
-	};
-
-	exports.default = SKTextureFilteringMode;
-
-/***/ },
 /* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
@@ -54700,15 +55348,15 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SKAction2 = __webpack_require__(213);
+	var _SKAction2 = __webpack_require__(218);
 
 	var _SKAction3 = _interopRequireDefault(_SKAction2);
 
-	var _SKActionTimingMode = __webpack_require__(214);
+	var _SKActionTimingMode = __webpack_require__(219);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
-	var _SKNode = __webpack_require__(217);
+	var _SKNode = __webpack_require__(131);
 
 	var _SKNode2 = _interopRequireDefault(_SKNode);
 

@@ -1069,7 +1069,12 @@ export default class SCNView {
   }
 
   _copyTransformToPresentationNodes() {
-    const arr = [this._scene.rootNode, this._renderer._defaultCameraPosNode, this._scene._skyBox]
+    const arr = [
+      this._scene.rootNode, 
+      this._scene._skyBox,
+      this._renderer._defaultCameraPosNode, 
+      this._renderer._defaultLightNode
+    ]
     while(arr.length > 0){
       const node = arr.shift()
       node._copyTransformToPresentation()

@@ -132,6 +132,7 @@ export default class SCNGeometry extends NSObject {
     this._vertexArrayObjects = null
     this._materialBuffer = null
     //this._textureFlagBuffer = null
+    this._shadowVAO = null
     this._hitTestVAO = null
 
     // Working with Subdivision Surfaces

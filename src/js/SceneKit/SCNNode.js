@@ -15,6 +15,7 @@ import SCNCamera from './SCNCamera'
 import SCNMorpher from './SCNMorpher'
 import SCNSkinner from './SCNSkinner'
 import SCNMatrix4 from './SCNMatrix4'
+import SCNMatrix4MakeScale from './SCNMatrix4MakeScale'
 import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
 import SCNVector3 from './SCNVector3'
 import SCNVector4 from './SCNVector4'
@@ -2021,6 +2022,24 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     return view.mult(proj)
   }
 
+  get lightViewProjectionTransform() {
+    if(this.light === null){
+      return null
+    }
+    const proj = this.light._projectionTransform
+    const view = this.viewTransform
+    return view.mult(proj)
+  }
+
+  get shadowProjectionTransform() {
+    if(this.light === null){
+      return null
+    }
+    const vp = this.lightViewProjectionTransform
+    const scale = SCNMatrix4MakeTranslation(1.0, 1.0, 0.0).scale(0.5, 0.5, 1.0) // [-1, 1] => [0, 1]
+    return vp.mult(scale)
+  }
+
   /**
    * Invoked by value(forKey:) when it finds no property corresponding to a given key.
    * @access public
@@ -2105,12 +2124,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     }
   }
 
-  //setValueForKeyPath(value, keyPath, usePresentation = true) {
   setValueForKeyPath(value, keyPath) {
-    //let target = this
-    //if(usePresentation && this._presentation){
-    //  target = this._presentation
-    //}
     const target = this._presentation ? this._presentation : this
 
     const paths = keyPath.split('.')
@@ -2152,8 +2166,6 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
           target._transformUpToDate = false
           return
         case 'scale': {
-          //const rate = value / target._scale.length()
-          //target._scale = target._scale.mul(rate)
           target._scale.x = value.x
           target._scale.y = value.y
           target._scale.z = value.z
@@ -2223,7 +2235,6 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
       if(target.morpher === null){
         throw new Error('target morpher === null')
       }
-      //target.morpher.setValueForKeyPath(value, restPath, usePresentation)
       target.morpher.setValueForKeyPath(value, restPath)
       return
     }

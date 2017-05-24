@@ -1,6 +1,7 @@
 'use strict'
 
 import SCNMatrix4 from './SCNMatrix4'
+import SCNMatrix4MakeScale from './SCNMatrix4MakeScale'
 
 /**
  * Returns a new matrix created by concatenating the specified matrix with a scale transformation.
@@ -14,7 +15,7 @@ import SCNMatrix4 from './SCNMatrix4'
  * @see https://developer.apple.com/reference/scenekit/1409653-scnmatrix4scale
  */
 const SCNMatrix4Scale = function(m, sx, sy, sz) {
-  return null
+  return m.mult(SCNMatrix4MakeScale(sx, sy, sz))
 }
 
 export default SCNMatrix4Scale

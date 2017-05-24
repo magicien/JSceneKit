@@ -1,6 +1,7 @@
 'use strict'
 
 import SCNMatrix4 from './SCNMatrix4'
+import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
 
 /**
  * Returns a new matrix created by concatenating the specified matrix with a translation transformation.
@@ -14,7 +15,7 @@ import SCNMatrix4 from './SCNMatrix4'
  * @see https://developer.apple.com/reference/scenekit/1409717-scnmatrix4translate
  */
 const SCNMatrix4Translate = function(m, tx, ty, tz) {
-  return null
+  return m.mult(SCNMatrix4MakeTranslation(tx, ty, tz))
 }
 
 export default SCNMatrix4Translate
