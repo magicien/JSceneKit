@@ -1949,7 +1949,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     node.isPaused = this.isPaused
     node._presentation = this._presentation ? this._presentation.copy() : null
     node._isPresentationInstance = this._isPresentationInstance
-    node.constraints = this.constraints ? this.constraints.slice() : null
+    node.constraints = this.constraints ? this.constraints.slice(0) : null
     node.isHidden = this.isHidden
     node.opacity = this.opacity
     node.renderingOrder = this.renderingOrder
@@ -1959,7 +1959,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     node.rendererDelegate = this.rendererDelegate
     node._physicsBody = this._physicsBody // FIXME: copy
     node.physicsField = this.physicsField
-    node._particleSystems = this._particleSystems ? this._particleSystems.slice() : null
+    node._particleSystems = this._particleSystems ? this._particleSystems.slice(0) : null
     node._audioPlayers = this._audioPlayers
     //node._hasActions = this._hasActions
     node._actions = new Map(this._actions)

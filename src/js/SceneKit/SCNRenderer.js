@@ -1613,7 +1613,6 @@ export default class SCNRenderer extends NSObject {
 
     system._bufferMaterialData(gl, program)
 
-    //console.log(`renderParticle node: ${node.name}, length: ${system._particles.length}`)
     gl.drawElements(gl.TRIANGLES, system._particles.length * 6, system._glIndexSize, 0)
   }
 

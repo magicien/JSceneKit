@@ -22188,7 +22188,7 @@ module.exports =
 	      node.isPaused = this.isPaused;
 	      node._presentation = this._presentation ? this._presentation.copy() : null;
 	      node._isPresentationInstance = this._isPresentationInstance;
-	      node.constraints = this.constraints ? this.constraints.slice() : null;
+	      node.constraints = this.constraints ? this.constraints.slice(0) : null;
 	      node.isHidden = this.isHidden;
 	      node.opacity = this.opacity;
 	      node.renderingOrder = this.renderingOrder;
@@ -22198,7 +22198,7 @@ module.exports =
 	      node.rendererDelegate = this.rendererDelegate;
 	      node._physicsBody = this._physicsBody; // FIXME: copy
 	      node.physicsField = this.physicsField;
-	      node._particleSystems = this._particleSystems ? this._particleSystems.slice() : null;
+	      node._particleSystems = this._particleSystems ? this._particleSystems.slice(0) : null;
 	      node._audioPlayers = this._audioPlayers;
 	      //node._hasActions = this._hasActions
 	      node._actions = new Map(this._actions);
@@ -30201,7 +30201,6 @@ module.exports =
 
 	      system._bufferMaterialData(gl, program);
 
-	      //console.log(`renderParticle node: ${node.name}, length: ${system._particles.length}`)
 	      gl.drawElements(gl.TRIANGLES, system._particles.length * 6, system._glIndexSize, 0);
 	    }
 
@@ -36533,6 +36532,8 @@ module.exports =
 	     * @type {number}
 	     */
 	    _this.texBottom = 0;
+
+	    _this._maxParticleIndex = 0;
 	    return _this;
 	  }
 
@@ -37387,10 +37388,21 @@ module.exports =
 	      gl.bufferData(gl.ARRAY_BUFFER, particleData, gl.DYNAMIC_DRAW)
 	      */
 
-	      var len = this._maxParticles;
+	      var len = this._maxParticles + 5;
+	      this._updateIndexBuffer(gl, len);
+
+	      // initialize parameters
+	      this._numImages = this.imageSequenceRowCount * this.imageSequenceColumnCount;
+	      this._imageWidth = 2.0 / this.imageSequenceColumnCount;
+	      this._imageHeight = 2.0 / this.imageSequenceRowCount;
+	    }
+	  }, {
+	    key: '_updateIndexBuffer',
+	    value: function _updateIndexBuffer(context, length) {
+	      var gl = context;
 	      var indexData = [];
 	      var index = 0;
-	      for (var i = 0; i < len; i++) {
+	      for (var i = 0; i < length; i++) {
 	        indexData.push(index + 0);
 	        indexData.push(index + 3);
 	        indexData.push(index + 2);
@@ -37400,10 +37412,10 @@ module.exports =
 	        index += 4;
 	      }
 	      var glIndexData = null;
-	      if (len < 256) {
+	      if (index < 256) {
 	        glIndexData = new Uint8Array(indexData);
 	        this._glIndexSize = gl.UNSIGNED_BYTE;
-	      } else if (len < 65536) {
+	      } else if (index < 65536) {
 	        glIndexData = new Uint16Array(indexData);
 	        this._glIndexSize = gl.UNSIGNED_SHORT;
 	      } else {
@@ -37411,14 +37423,13 @@ module.exports =
 	        this._glIndexSize = gl.UNSIGNED_INT;
 	      }
 
-	      this._indexBuffer = gl.createBuffer();
+	      if (this._indexBuffer === null) {
+	        this._indexBuffer = gl.createBuffer();
+	      }
 	      gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, this._indexBuffer);
 	      gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, glIndexData, gl.STATIC_DRAW);
 
-	      // initialize parameters
-	      this._numImages = this.imageSequenceRowCount * this.imageSequenceColumnCount;
-	      this._imageWidth = 2.0 / this.imageSequenceColumnCount;
-	      this._imageHeight = 2.0 / this.imageSequenceRowCount;
+	      this._maxParticleIndex = length;
 	    }
 
 	    /**
@@ -37610,20 +37621,24 @@ module.exports =
 
 	        this._updateEndTime();
 	      }
-	      while (this._nextBirthTime <= currentTime) {
-	        var p = this._createParticle(this._nextBirthTime, transform);
-	        this._particles.push(p);
-	        var rate = this.birthRate + this.birthRateVariation * (Math.random() - 0.5);
-	        if (rate < 0.0000001) {
-	          rate = 0.0000001;
-	        }
-	        this._nextBirthTime += 1.0 / rate;
-	        if (this._nextBirthTime > this._emissionEndTime) {
-	          this._nextBirthTime = this._idleEndTime;
-	          if (!this.loops) {
-	            this._finished = true;
+
+	      // generate particles
+	      if (this.birthRate + this.birthRateVariation > 0) {
+	        while (this._nextBirthTime <= currentTime) {
+	          var p = this._createParticle(this._nextBirthTime, transform);
+	          this._particles.push(p);
+	          var rate = this.birthRate + this.birthRateVariation * (Math.random() - 0.5);
+	          if (rate < 0.0000001) {
+	            rate = 0.0000001;
 	          }
-	          this._updateEndTime();
+	          this._nextBirthTime += 1.0 / rate;
+	          if (this._nextBirthTime > this._emissionEndTime) {
+	            this._nextBirthTime = this._idleEndTime;
+	            if (!this.loops) {
+	              this._finished = true;
+	            }
+	            this._updateEndTime();
+	          }
 	        }
 	      }
 
@@ -37747,6 +37762,10 @@ module.exports =
 	      // buffer particle data
 	      gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer);
 	      gl.bufferData(gl.ARRAY_BUFFER, this._particleData, gl.DYNAMIC_DRAW);
+
+	      if (this._particles.length > this._maxParticleIndex) {
+	        this._updateIndexBuffer(gl, this._particles.length + 10);
+	      }
 	    }
 	  }, {
 	    key: '_createTexture',

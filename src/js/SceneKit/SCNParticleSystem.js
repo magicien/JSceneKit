@@ -128,6 +128,8 @@ class _Particle extends NSObject {
      * @type {number}
      */
     this.texBottom = 0
+
+    this._maxParticleIndex = 0
   }
 
   /**
@@ -980,10 +982,20 @@ export default class SCNParticleSystem extends NSObject {
     gl.bufferData(gl.ARRAY_BUFFER, particleData, gl.DYNAMIC_DRAW)
     */
 
-    const len = this._maxParticles
+    const len = this._maxParticles + 5
+    this._updateIndexBuffer(gl, len)
+    
+    // initialize parameters
+    this._numImages = this.imageSequenceRowCount * this.imageSequenceColumnCount
+    this._imageWidth = 2.0 / this.imageSequenceColumnCount
+    this._imageHeight = 2.0 / this.imageSequenceRowCount
+  }
+
+  _updateIndexBuffer(context, length) {
+    const gl = context
     const indexData = []
     let index=0
-    for(let i=0; i<len; i++){
+    for(let i=0; i<length; i++){
       indexData.push(index + 0)
       indexData.push(index + 3)
       indexData.push(index + 2)
@@ -993,10 +1005,10 @@ export default class SCNParticleSystem extends NSObject {
       index += 4
     }
     let glIndexData = null
-    if(len < 256){
+    if(index < 256){
       glIndexData = new Uint8Array(indexData)
       this._glIndexSize = gl.UNSIGNED_BYTE
-    }else if(len < 65536){
+    }else if(index < 65536){
       glIndexData = new Uint16Array(indexData)
       this._glIndexSize = gl.UNSIGNED_SHORT
     }else{
@@ -1004,14 +1016,13 @@ export default class SCNParticleSystem extends NSObject {
       this._glIndexSize = gl.UNSIGNED_INT
     }
 
-    this._indexBuffer = gl.createBuffer()
+    if(this._indexBuffer === null){
+      this._indexBuffer = gl.createBuffer()
+    }
     gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, this._indexBuffer)
     gl.bufferData(gl.ELEMENT_ARRAY_BUFFER, glIndexData, gl.STATIC_DRAW)
 
-    // initialize parameters
-    this._numImages = this.imageSequenceRowCount * this.imageSequenceColumnCount
-    this._imageWidth = 2.0 / this.imageSequenceColumnCount
-    this._imageHeight = 2.0 / this.imageSequenceRowCount
+    this._maxParticleIndex = length
   }
 
   /**
@@ -1187,20 +1198,24 @@ export default class SCNParticleSystem extends NSObject {
 
       this._updateEndTime()
     }
-    while(this._nextBirthTime <= currentTime){
-      const p = this._createParticle(this._nextBirthTime, transform)
-      this._particles.push(p)
-      let rate = this.birthRate + this.birthRateVariation * (Math.random() - 0.5)
-      if(rate < 0.0000001){
-        rate = 0.0000001
-      }
-      this._nextBirthTime += 1.0 / rate
-      if(this._nextBirthTime > this._emissionEndTime){
-        this._nextBirthTime = this._idleEndTime
-        if(!this.loops){
-          this._finished = true
+
+    // generate particles
+    if(this.birthRate + this.birthRateVariation > 0){
+      while(this._nextBirthTime <= currentTime){
+        const p = this._createParticle(this._nextBirthTime, transform)
+        this._particles.push(p)
+        let rate = this.birthRate + this.birthRateVariation * (Math.random() - 0.5)
+        if(rate < 0.0000001){
+          rate = 0.0000001
         }
-        this._updateEndTime()
+        this._nextBirthTime += 1.0 / rate
+        if(this._nextBirthTime > this._emissionEndTime){
+          this._nextBirthTime = this._idleEndTime
+          if(!this.loops){
+            this._finished = true
+          }
+          this._updateEndTime()
+        }
       }
     }
 
@@ -1315,6 +1330,10 @@ export default class SCNParticleSystem extends NSObject {
     // buffer particle data
     gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer)
     gl.bufferData(gl.ARRAY_BUFFER, this._particleData, gl.DYNAMIC_DRAW)
+
+    if(this._particles.length > this._maxParticleIndex){
+      this._updateIndexBuffer(gl, this._particles.length + 10)
+    }
   }
 
   _createTexture(gl, image) {
