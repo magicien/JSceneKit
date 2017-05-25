@@ -19,4 +19,4 @@ https://magicien.github.io/JSceneKit/
 
 ### Examples
 
-[JSceneKitExample](https://magicien.github.io/JSceneKitExample/public/)
+[JSceneKitExample](https://magicien.github.io/JSceneKitExample/)
