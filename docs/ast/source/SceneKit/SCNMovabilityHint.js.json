@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 480,
+  "end": 479,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 17,
+      "line": 16,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 480,
+    "end": 479,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 17,
+        "line": 16,
         "column": 0
       }
     },
@@ -30,44 +30,44 @@
     "body": [
       {
         "type": "Identifier",
-        "start": 391,
-        "end": 445,
+        "start": 390,
+        "end": 444,
         "loc": {
           "start": {
-            "line": 11,
+            "line": 10,
             "column": 0
           },
           "end": {
-            "line": 14,
+            "line": 13,
             "column": 1
           }
         },
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 397,
-            "end": 445,
+            "start": 396,
+            "end": 444,
             "loc": {
               "start": {
-                "line": 11,
+                "line": 10,
                 "column": 6
               },
               "end": {
-                "line": 14,
+                "line": 13,
                 "column": 1
               }
             },
             "id": {
               "type": "Identifier",
-              "start": 397,
-              "end": 414,
+              "start": 396,
+              "end": 413,
               "loc": {
                 "start": {
-                  "line": 11,
+                  "line": 10,
                   "column": 6
                 },
                 "end": {
-                  "line": 11,
+                  "line": 10,
                   "column": 23
                 },
                 "identifierName": "SCNMovabilityHint"
@@ -77,30 +77,30 @@
             },
             "init": {
               "type": "ObjectExpression",
-              "start": 417,
-              "end": 445,
+              "start": 416,
+              "end": 444,
               "loc": {
                 "start": {
-                  "line": 11,
+                  "line": 10,
                   "column": 26
                 },
                 "end": {
-                  "line": 14,
+                  "line": 13,
                   "column": 1
                 }
               },
               "properties": [
                 {
                   "type": "ObjectProperty",
-                  "start": 421,
-                  "end": 429,
+                  "start": 420,
+                  "end": 428,
                   "loc": {
                     "start": {
-                      "line": 12,
+                      "line": 11,
                       "column": 2
                     },
                     "end": {
-                      "line": 12,
+                      "line": 11,
                       "column": 10
                     }
                   },
@@ -109,15 +109,15 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 421,
-                    "end": 426,
+                    "start": 420,
+                    "end": 425,
                     "loc": {
                       "start": {
-                        "line": 12,
+                        "line": 11,
                         "column": 2
                       },
                       "end": {
-                        "line": 12,
+                        "line": 11,
                         "column": 7
                       },
                       "identifierName": "fixed"
@@ -126,15 +126,15 @@
                   },
                   "value": {
                     "type": "NumericLiteral",
-                    "start": 428,
-                    "end": 429,
+                    "start": 427,
+                    "end": 428,
                     "loc": {
                       "start": {
-                        "line": 12,
+                        "line": 11,
                         "column": 9
                       },
                       "end": {
-                        "line": 12,
+                        "line": 11,
                         "column": 10
                       }
                     },
@@ -147,15 +147,15 @@
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 433,
-                  "end": 443,
+                  "start": 432,
+                  "end": 442,
                   "loc": {
                     "start": {
-                      "line": 13,
+                      "line": 12,
                       "column": 2
                     },
                     "end": {
-                      "line": 13,
+                      "line": 12,
                       "column": 12
                     }
                   },
@@ -164,15 +164,15 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 433,
-                    "end": 440,
+                    "start": 432,
+                    "end": 439,
                     "loc": {
                       "start": {
-                        "line": 13,
+                        "line": 12,
                         "column": 2
                       },
                       "end": {
-                        "line": 13,
+                        "line": 12,
                         "column": 9
                       },
                       "identifierName": "movable"
@@ -181,15 +181,15 @@
                   },
                   "value": {
                     "type": "NumericLiteral",
-                    "start": 442,
-                    "end": 443,
+                    "start": 441,
+                    "end": 442,
                     "loc": {
                       "start": {
-                        "line": 13,
+                        "line": 12,
                         "column": 11
                       },
                       "end": {
-                        "line": 13,
+                        "line": 12,
                         "column": 12
                       }
                     },
@@ -212,29 +212,29 @@
       },
       {
         "type": "Identifier",
-        "start": 447,
-        "end": 479,
+        "start": 446,
+        "end": 478,
         "loc": {
           "start": {
-            "line": 16,
+            "line": 15,
             "column": 0
           },
           "end": {
-            "line": 16,
+            "line": 15,
             "column": 32
           }
         },
         "declaration": {
           "type": "Identifier",
-          "start": 462,
-          "end": 479,
+          "start": 461,
+          "end": 478,
           "loc": {
             "start": {
-              "line": 16,
+              "line": 15,
               "column": 15
             },
             "end": {
-              "line": 16,
+              "line": 15,
               "column": 32
             },
             "identifierName": "SCNMovabilityHint"
@@ -247,58 +247,58 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 447,
-        "end": 479,
+        "start": 446,
+        "end": 478,
         "loc": {
           "start": {
-            "line": 16,
+            "line": 15,
             "column": 0
           },
           "end": {
-            "line": 16,
+            "line": 15,
             "column": 32
           }
         },
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 391,
-          "end": 445,
+          "start": 390,
+          "end": 444,
           "loc": {
             "start": {
-              "line": 11,
+              "line": 10,
               "column": 0
             },
             "end": {
-              "line": 14,
+              "line": 13,
               "column": 1
             }
           },
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 397,
-              "end": 445,
+              "start": 396,
+              "end": 444,
               "loc": {
                 "start": {
-                  "line": 11,
+                  "line": 10,
                   "column": 6
                 },
                 "end": {
-                  "line": 14,
+                  "line": 13,
                   "column": 1
                 }
               },
               "id": {
                 "type": "Identifier",
-                "start": 397,
-                "end": 414,
+                "start": 396,
+                "end": 413,
                 "loc": {
                   "start": {
-                    "line": 11,
+                    "line": 10,
                     "column": 6
                   },
                   "end": {
-                    "line": 11,
+                    "line": 10,
                     "column": 23
                   },
                   "identifierName": "SCNMovabilityHint"
@@ -308,30 +308,30 @@
               },
               "init": {
                 "type": "ObjectExpression",
-                "start": 417,
-                "end": 445,
+                "start": 416,
+                "end": 444,
                 "loc": {
                   "start": {
-                    "line": 11,
+                    "line": 10,
                     "column": 26
                   },
                   "end": {
-                    "line": 14,
+                    "line": 13,
                     "column": 1
                   }
                 },
                 "properties": [
                   {
                     "type": "ObjectProperty",
-                    "start": 421,
-                    "end": 429,
+                    "start": 420,
+                    "end": 428,
                     "loc": {
                       "start": {
-                        "line": 12,
+                        "line": 11,
                         "column": 2
                       },
                       "end": {
-                        "line": 12,
+                        "line": 11,
                         "column": 10
                       }
                     },
@@ -340,15 +340,15 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 421,
-                      "end": 426,
+                      "start": 420,
+                      "end": 425,
                       "loc": {
                         "start": {
-                          "line": 12,
+                          "line": 11,
                           "column": 2
                         },
                         "end": {
-                          "line": 12,
+                          "line": 11,
                           "column": 7
                         },
                         "identifierName": "fixed"
@@ -357,15 +357,15 @@
                     },
                     "value": {
                       "type": "NumericLiteral",
-                      "start": 428,
-                      "end": 429,
+                      "start": 427,
+                      "end": 428,
                       "loc": {
                         "start": {
-                          "line": 12,
+                          "line": 11,
                           "column": 9
                         },
                         "end": {
-                          "line": 12,
+                          "line": 11,
                           "column": 10
                         }
                       },
@@ -378,15 +378,15 @@
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 433,
-                    "end": 443,
+                    "start": 432,
+                    "end": 442,
                     "loc": {
                       "start": {
-                        "line": 13,
+                        "line": 12,
                         "column": 2
                       },
                       "end": {
-                        "line": 13,
+                        "line": 12,
                         "column": 12
                       }
                     },
@@ -395,15 +395,15 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 433,
-                      "end": 440,
+                      "start": 432,
+                      "end": 439,
                       "loc": {
                         "start": {
-                          "line": 13,
+                          "line": 12,
                           "column": 2
                         },
                         "end": {
-                          "line": 13,
+                          "line": 12,
                           "column": 9
                         },
                         "identifierName": "movable"
@@ -412,15 +412,15 @@
                     },
                     "value": {
                       "type": "NumericLiteral",
-                      "start": 442,
-                      "end": 443,
+                      "start": 441,
+                      "end": 442,
                       "loc": {
                         "start": {
-                          "line": 13,
+                          "line": 12,
                           "column": 11
                         },
                         "end": {
-                          "line": 13,
+                          "line": 12,
                           "column": 12
                         }
                       },
@@ -441,15 +441,15 @@
             {
               "type": "CommentBlock",
               "value": "*\n * Values that inform SceneKit’s rendering for movement-related effects, used by the movabilityHint property.\n * @typedef {Object} SCNMovabilityHint\n * @property {number} fixed - The node is not expected to move over time.\n * @property {number} movable - The node is expected to move over time.\n * @see https://developer.apple.com/reference/scenekit/scnmovabilityhint\n ",
-              "start": 15,
-              "end": 390,
+              "start": 14,
+              "end": 389,
               "loc": {
                 "start": {
-                  "line": 4,
+                  "line": 3,
                   "column": 0
                 },
                 "end": {
-                  "line": 10,
+                  "line": 9,
                   "column": 3
                 }
               }
@@ -499,15 +499,15 @@
           {
             "type": "CommentBlock",
             "value": "*\n * Values that inform SceneKit’s rendering for movement-related effects, used by the movabilityHint property.\n * @typedef {Object} SCNMovabilityHint\n * @property {number} fixed - The node is not expected to move over time.\n * @property {number} movable - The node is expected to move over time.\n * @see https://developer.apple.com/reference/scenekit/scnmovabilityhint\n ",
-            "start": 15,
-            "end": 390,
+            "start": 14,
+            "end": 389,
             "loc": {
               "start": {
-                "line": 4,
+                "line": 3,
                 "column": 0
               },
               "end": {
-                "line": 10,
+                "line": 9,
                 "column": 3
               }
             }
@@ -520,15 +520,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n * Values that inform SceneKit’s rendering for movement-related effects, used by the movabilityHint property.\n * @typedef {Object} SCNMovabilityHint\n * @property {number} fixed - The node is not expected to move over time.\n * @property {number} movable - The node is expected to move over time.\n * @see https://developer.apple.com/reference/scenekit/scnmovabilityhint\n ",
-      "start": 15,
-      "end": 390,
+      "start": 14,
+      "end": 389,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 3,
           "column": 0
         },
         "end": {
-          "line": 10,
+          "line": 9,
           "column": 3
         }
       }
@@ -565,15 +565,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n * Values that inform SceneKit’s rendering for movement-related effects, used by the movabilityHint property.\n * @typedef {Object} SCNMovabilityHint\n * @property {number} fixed - The node is not expected to move over time.\n * @property {number} movable - The node is expected to move over time.\n * @see https://developer.apple.com/reference/scenekit/scnmovabilityhint\n ",
-      "start": 15,
-      "end": 390,
+      "start": 14,
+      "end": 389,
       "loc": {
         "start": {
-          "line": 4,
+          "line": 3,
           "column": 0
         },
         "end": {
-          "line": 10,
+          "line": 9,
           "column": 3
         }
       }
@@ -593,15 +593,15 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 391,
-      "end": 396,
+      "start": 390,
+      "end": 395,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 0
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 5
         }
       }
@@ -619,15 +619,15 @@
         "binop": null
       },
       "value": "SCNMovabilityHint",
-      "start": 397,
-      "end": 414,
+      "start": 396,
+      "end": 413,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 6
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 23
         }
       }
@@ -646,15 +646,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 415,
-      "end": 416,
+      "start": 414,
+      "end": 415,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 24
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 25
         }
       }
@@ -671,15 +671,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 417,
-      "end": 418,
+      "start": 416,
+      "end": 417,
       "loc": {
         "start": {
-          "line": 11,
+          "line": 10,
           "column": 26
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 27
         }
       }
@@ -697,15 +697,15 @@
         "binop": null
       },
       "value": "fixed",
-      "start": 421,
-      "end": 426,
+      "start": 420,
+      "end": 425,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 2
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 7
         }
       }
@@ -723,15 +723,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 426,
-      "end": 427,
+      "start": 425,
+      "end": 426,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 7
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 8
         }
       }
@@ -750,15 +750,15 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 428,
-      "end": 429,
+      "start": 427,
+      "end": 428,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 9
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 10
         }
       }
@@ -776,15 +776,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 429,
-      "end": 430,
+      "start": 428,
+      "end": 429,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 10
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 11
         }
       }
@@ -802,15 +802,15 @@
         "binop": null
       },
       "value": "movable",
-      "start": 433,
-      "end": 440,
+      "start": 432,
+      "end": 439,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 2
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 9
         }
       }
@@ -828,15 +828,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 440,
-      "end": 441,
+      "start": 439,
+      "end": 440,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 9
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 10
         }
       }
@@ -855,15 +855,15 @@
         "updateContext": null
       },
       "value": 1,
-      "start": 442,
-      "end": 443,
+      "start": 441,
+      "end": 442,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 11
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 12
         }
       }
@@ -880,15 +880,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 444,
-      "end": 445,
+      "start": 443,
+      "end": 444,
       "loc": {
         "start": {
-          "line": 14,
+          "line": 13,
           "column": 0
         },
         "end": {
-          "line": 14,
+          "line": 13,
           "column": 1
         }
       }
@@ -908,15 +908,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 447,
-      "end": 453,
+      "start": 446,
+      "end": 452,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 15,
           "column": 0
         },
         "end": {
-          "line": 16,
+          "line": 15,
           "column": 6
         }
       }
@@ -936,15 +936,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 454,
-      "end": 461,
+      "start": 453,
+      "end": 460,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 15,
           "column": 7
         },
         "end": {
-          "line": 16,
+          "line": 15,
           "column": 14
         }
       }
@@ -962,15 +962,15 @@
         "binop": null
       },
       "value": "SCNMovabilityHint",
-      "start": 462,
-      "end": 479,
+      "start": 461,
+      "end": 478,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 15,
           "column": 15
         },
         "end": {
-          "line": 16,
+          "line": 15,
           "column": 32
         }
       }
@@ -988,15 +988,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 480,
-      "end": 480,
+      "start": 479,
+      "end": 479,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 16,
           "column": 0
         },
         "end": {
-          "line": 17,
+          "line": 16,
           "column": 0
         }
       }

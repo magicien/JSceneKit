@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 2450,
+  "end": 3887,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 68,
+      "line": 97,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 2450,
+    "end": 3887,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 68,
+        "line": 97,
         "column": 0
       }
     },
@@ -94,23 +94,108 @@
             "rawValue": "./SCNGeometry",
             "raw": "'./SCNGeometry'"
           },
-          "value": "./SCNGeometry",
+          "value": "./SCNGeometry"
+        }
+      },
+      {
+        "type": "ImportDeclaration",
+        "start": 54,
+        "end": 91,
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 0
+          },
+          "end": {
+            "line": 4,
+            "column": 37
+          }
+        },
+        "specifiers": [
+          {
+            "type": "ImportDefaultSpecifier",
+            "start": 61,
+            "end": 71,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 7
+              },
+              "end": {
+                "line": 4,
+                "column": 17
+              }
+            },
+            "local": {
+              "type": "Identifier",
+              "start": 61,
+              "end": 71,
+              "loc": {
+                "start": {
+                  "line": 4,
+                  "column": 7
+                },
+                "end": {
+                  "line": 4,
+                  "column": 17
+                },
+                "identifierName": "SCNVector3"
+              },
+              "name": "SCNVector3"
+            }
+          }
+        ],
+        "source": {
+          "type": "StringLiteral",
+          "start": 77,
+          "end": 91,
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 23
+            },
+            "end": {
+              "line": 4,
+              "column": 37
+            }
+          },
+          "extra": {
+            "rawValue": "./SCNVector3",
+            "raw": "'./SCNVector3'"
+          },
+          "value": "./SCNVector3",
           "leadingComments": null,
           "trailingComments": null
         },
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * A right circular cylinder geometry whose ends are capped with hemispheres.\n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/reference/scenekit/scncapsule\n ",
-            "start": 56,
-            "end": 251,
+            "value": "global Ammo",
+            "start": 92,
+            "end": 107,
             "loc": {
               "start": {
-                "line": 6,
+                "line": 5,
                 "column": 0
               },
               "end": {
-                "line": 11,
+                "line": 5,
+                "column": 15
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * A right circular cylinder geometry whose ends are capped with hemispheres.\n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/reference/scenekit/scncapsule\n ",
+            "start": 110,
+            "end": 305,
+            "loc": {
+              "start": {
+                "line": 8,
+                "column": 0
+              },
+              "end": {
+                "line": 13,
                 "column": 3
               }
             }
@@ -119,43 +204,43 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 252,
-        "end": 2449,
+        "start": 306,
+        "end": 3886,
         "loc": {
           "start": {
-            "line": 12,
+            "line": 14,
             "column": 0
           },
           "end": {
-            "line": 67,
+            "line": 96,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 267,
-          "end": 2449,
+          "start": 321,
+          "end": 3886,
           "loc": {
             "start": {
-              "line": 12,
+              "line": 14,
               "column": 15
             },
             "end": {
-              "line": 67,
+              "line": 96,
               "column": 1
             }
           },
           "id": {
             "type": "Identifier",
-            "start": 273,
-            "end": 283,
+            "start": 327,
+            "end": 337,
             "loc": {
               "start": {
-                "line": 12,
+                "line": 14,
                 "column": 21
               },
               "end": {
-                "line": 12,
+                "line": 14,
                 "column": 31
               },
               "identifierName": "SCNCapsule"
@@ -165,15 +250,15 @@
           },
           "superClass": {
             "type": "Identifier",
-            "start": 292,
-            "end": 303,
+            "start": 346,
+            "end": 357,
             "loc": {
               "start": {
-                "line": 12,
+                "line": 14,
                 "column": 40
               },
               "end": {
-                "line": 12,
+                "line": 14,
                 "column": 51
               },
               "identifierName": "SCNGeometry"
@@ -182,45 +267,45 @@
           },
           "body": {
             "type": "ClassBody",
-            "start": 304,
-            "end": 2449,
+            "start": 358,
+            "end": 3886,
             "loc": {
               "start": {
-                "line": 12,
+                "line": 14,
                 "column": 52
               },
               "end": {
-                "line": 67,
+                "line": 96,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 1052,
-                "end": 2447,
+                "start": 1106,
+                "end": 2501,
                 "loc": {
                   "start": {
-                    "line": 24,
+                    "line": 26,
                     "column": 2
                   },
                   "end": {
-                    "line": 66,
+                    "line": 68,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1052,
-                  "end": 1063,
+                  "start": 1106,
+                  "end": 1117,
                   "loc": {
                     "start": {
-                      "line": 24,
+                      "line": 26,
                       "column": 2
                     },
                     "end": {
-                      "line": 24,
+                      "line": 26,
                       "column": 13
                     },
                     "identifierName": "constructor"
@@ -237,15 +322,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 1064,
-                    "end": 1073,
+                    "start": 1118,
+                    "end": 1127,
                     "loc": {
                       "start": {
-                        "line": 24,
+                        "line": 26,
                         "column": 14
                       },
                       "end": {
-                        "line": 24,
+                        "line": 26,
                         "column": 23
                       },
                       "identifierName": "capRadius"
@@ -254,15 +339,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1075,
-                    "end": 1081,
+                    "start": 1129,
+                    "end": 1135,
                     "loc": {
                       "start": {
-                        "line": 24,
+                        "line": 26,
                         "column": 25
                       },
                       "end": {
-                        "line": 24,
+                        "line": 26,
                         "column": 31
                       },
                       "identifierName": "height"
@@ -272,58 +357,58 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1083,
-                  "end": 2447,
+                  "start": 1137,
+                  "end": 2501,
                   "loc": {
                     "start": {
-                      "line": 24,
+                      "line": 26,
                       "column": 33
                     },
                     "end": {
-                      "line": 66,
+                      "line": 68,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 1089,
-                      "end": 1096,
+                      "start": 1143,
+                      "end": 1150,
                       "loc": {
                         "start": {
-                          "line": 25,
+                          "line": 27,
                           "column": 4
                         },
                         "end": {
-                          "line": 25,
+                          "line": 27,
                           "column": 11
                         }
                       },
                       "expression": {
                         "type": "CallExpression",
-                        "start": 1089,
-                        "end": 1096,
+                        "start": 1143,
+                        "end": 1150,
                         "loc": {
                           "start": {
-                            "line": 25,
+                            "line": 27,
                             "column": 4
                           },
                           "end": {
-                            "line": 25,
+                            "line": 27,
                             "column": 11
                           }
                         },
                         "callee": {
                           "type": "Super",
-                          "start": 1089,
-                          "end": 1094,
+                          "start": 1143,
+                          "end": 1148,
                           "loc": {
                             "start": {
-                              "line": 25,
+                              "line": 27,
                               "column": 4
                             },
                             "end": {
-                              "line": 25,
+                              "line": 27,
                               "column": 9
                             }
                           }
@@ -335,15 +420,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Adjusting a Capsule’s Dimensions",
-                          "start": 1102,
-                          "end": 1137,
+                          "start": 1156,
+                          "end": 1191,
                           "loc": {
                             "start": {
-                              "line": 27,
+                              "line": 29,
                               "column": 4
                             },
                             "end": {
-                              "line": 27,
+                              "line": 29,
                               "column": 39
                             }
                           }
@@ -351,15 +436,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The radius both of the capsule’s circular center cross section and of its hemispherical ends. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncapsule/1523926-capradius\n     ",
-                          "start": 1143,
-                          "end": 1377,
+                          "start": 1197,
+                          "end": 1431,
                           "loc": {
                             "start": {
-                              "line": 29,
+                              "line": 31,
                               "column": 4
                             },
                             "end": {
-                              "line": 33,
+                              "line": 35,
                               "column": 7
                             }
                           }
@@ -368,58 +453,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1382,
-                      "end": 1408,
+                      "start": 1436,
+                      "end": 1462,
                       "loc": {
                         "start": {
-                          "line": 34,
+                          "line": 36,
                           "column": 4
                         },
                         "end": {
-                          "line": 34,
+                          "line": 36,
                           "column": 30
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1382,
-                        "end": 1408,
+                        "start": 1436,
+                        "end": 1462,
                         "loc": {
                           "start": {
-                            "line": 34,
+                            "line": 36,
                             "column": 4
                           },
                           "end": {
-                            "line": 34,
+                            "line": 36,
                             "column": 30
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1382,
-                          "end": 1396,
+                          "start": 1436,
+                          "end": 1450,
                           "loc": {
                             "start": {
-                              "line": 34,
+                              "line": 36,
                               "column": 4
                             },
                             "end": {
-                              "line": 34,
+                              "line": 36,
                               "column": 18
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1382,
-                            "end": 1386,
+                            "start": 1436,
+                            "end": 1440,
                             "loc": {
                               "start": {
-                                "line": 34,
+                                "line": 36,
                                 "column": 4
                               },
                               "end": {
-                                "line": 34,
+                                "line": 36,
                                 "column": 8
                               }
                             },
@@ -427,15 +512,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1387,
-                            "end": 1396,
+                            "start": 1441,
+                            "end": 1450,
                             "loc": {
                               "start": {
-                                "line": 34,
+                                "line": 36,
                                 "column": 9
                               },
                               "end": {
-                                "line": 34,
+                                "line": 36,
                                 "column": 18
                               },
                               "identifierName": "capRadius"
@@ -447,15 +532,15 @@
                         },
                         "right": {
                           "type": "Identifier",
-                          "start": 1399,
-                          "end": 1408,
+                          "start": 1453,
+                          "end": 1462,
                           "loc": {
                             "start": {
-                              "line": 34,
+                              "line": 36,
                               "column": 21
                             },
                             "end": {
-                              "line": 34,
+                              "line": 36,
                               "column": 30
                             },
                             "identifierName": "capRadius"
@@ -471,15 +556,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Adjusting a Capsule’s Dimensions",
-                          "start": 1102,
-                          "end": 1137,
+                          "start": 1156,
+                          "end": 1191,
                           "loc": {
                             "start": {
-                              "line": 27,
+                              "line": 29,
                               "column": 4
                             },
                             "end": {
-                              "line": 27,
+                              "line": 29,
                               "column": 39
                             }
                           }
@@ -487,15 +572,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The radius both of the capsule’s circular center cross section and of its hemispherical ends. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncapsule/1523926-capradius\n     ",
-                          "start": 1143,
-                          "end": 1377,
+                          "start": 1197,
+                          "end": 1431,
                           "loc": {
                             "start": {
-                              "line": 29,
+                              "line": 31,
                               "column": 4
                             },
                             "end": {
-                              "line": 33,
+                              "line": 35,
                               "column": 7
                             }
                           }
@@ -505,15 +590,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The extent of the capsule along its y-axis. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncapsule/1522789-height\n     ",
-                          "start": 1414,
-                          "end": 1595,
+                          "start": 1468,
+                          "end": 1649,
                           "loc": {
                             "start": {
-                              "line": 36,
+                              "line": 38,
                               "column": 4
                             },
                             "end": {
-                              "line": 40,
+                              "line": 42,
                               "column": 7
                             }
                           }
@@ -522,58 +607,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1600,
-                      "end": 1620,
+                      "start": 1654,
+                      "end": 1674,
                       "loc": {
                         "start": {
-                          "line": 41,
+                          "line": 43,
                           "column": 4
                         },
                         "end": {
-                          "line": 41,
+                          "line": 43,
                           "column": 24
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1600,
-                        "end": 1620,
+                        "start": 1654,
+                        "end": 1674,
                         "loc": {
                           "start": {
-                            "line": 41,
+                            "line": 43,
                             "column": 4
                           },
                           "end": {
-                            "line": 41,
+                            "line": 43,
                             "column": 24
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1600,
-                          "end": 1611,
+                          "start": 1654,
+                          "end": 1665,
                           "loc": {
                             "start": {
-                              "line": 41,
+                              "line": 43,
                               "column": 4
                             },
                             "end": {
-                              "line": 41,
+                              "line": 43,
                               "column": 15
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1600,
-                            "end": 1604,
+                            "start": 1654,
+                            "end": 1658,
                             "loc": {
                               "start": {
-                                "line": 41,
+                                "line": 43,
                                 "column": 4
                               },
                               "end": {
-                                "line": 41,
+                                "line": 43,
                                 "column": 8
                               }
                             },
@@ -581,15 +666,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1605,
-                            "end": 1611,
+                            "start": 1659,
+                            "end": 1665,
                             "loc": {
                               "start": {
-                                "line": 41,
+                                "line": 43,
                                 "column": 9
                               },
                               "end": {
-                                "line": 41,
+                                "line": 43,
                                 "column": 15
                               },
                               "identifierName": "height"
@@ -601,15 +686,15 @@
                         },
                         "right": {
                           "type": "Identifier",
-                          "start": 1614,
-                          "end": 1620,
+                          "start": 1668,
+                          "end": 1674,
                           "loc": {
                             "start": {
-                              "line": 41,
+                              "line": 43,
                               "column": 18
                             },
                             "end": {
-                              "line": 41,
+                              "line": 43,
                               "column": 24
                             },
                             "identifierName": "height"
@@ -625,15 +710,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The extent of the capsule along its y-axis. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncapsule/1522789-height\n     ",
-                          "start": 1414,
-                          "end": 1595,
+                          "start": 1468,
+                          "end": 1649,
                           "loc": {
                             "start": {
-                              "line": 36,
+                              "line": 38,
                               "column": 4
                             },
                             "end": {
-                              "line": 40,
+                              "line": 42,
                               "column": 7
                             }
                           }
@@ -643,15 +728,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Adjusting Geometric Detail",
-                          "start": 1627,
-                          "end": 1656,
+                          "start": 1681,
+                          "end": 1710,
                           "loc": {
                             "start": {
-                              "line": 44,
+                              "line": 46,
                               "column": 4
                             },
                             "end": {
-                              "line": 44,
+                              "line": 46,
                               "column": 33
                             }
                           }
@@ -659,15 +744,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The number of subdivisions around the lateral circumference of the capsule. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncapsule/1522735-radialsegmentcount\n     ",
-                          "start": 1662,
-                          "end": 1887,
+                          "start": 1716,
+                          "end": 1941,
                           "loc": {
                             "start": {
-                              "line": 46,
+                              "line": 48,
                               "column": 4
                             },
                             "end": {
-                              "line": 50,
+                              "line": 52,
                               "column": 7
                             }
                           }
@@ -676,58 +761,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1892,
-                      "end": 1919,
+                      "start": 1946,
+                      "end": 1973,
                       "loc": {
                         "start": {
-                          "line": 51,
+                          "line": 53,
                           "column": 4
                         },
                         "end": {
-                          "line": 51,
+                          "line": 53,
                           "column": 31
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1892,
-                        "end": 1919,
+                        "start": 1946,
+                        "end": 1973,
                         "loc": {
                           "start": {
-                            "line": 51,
+                            "line": 53,
                             "column": 4
                           },
                           "end": {
-                            "line": 51,
+                            "line": 53,
                             "column": 31
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1892,
-                          "end": 1915,
+                          "start": 1946,
+                          "end": 1969,
                           "loc": {
                             "start": {
-                              "line": 51,
+                              "line": 53,
                               "column": 4
                             },
                             "end": {
-                              "line": 51,
+                              "line": 53,
                               "column": 27
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1892,
-                            "end": 1896,
+                            "start": 1946,
+                            "end": 1950,
                             "loc": {
                               "start": {
-                                "line": 51,
+                                "line": 53,
                                 "column": 4
                               },
                               "end": {
-                                "line": 51,
+                                "line": 53,
                                 "column": 8
                               }
                             },
@@ -735,15 +820,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1897,
-                            "end": 1915,
+                            "start": 1951,
+                            "end": 1969,
                             "loc": {
                               "start": {
-                                "line": 51,
+                                "line": 53,
                                 "column": 9
                               },
                               "end": {
-                                "line": 51,
+                                "line": 53,
                                 "column": 27
                               },
                               "identifierName": "radialSegmentCount"
@@ -755,15 +840,15 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 1918,
-                          "end": 1919,
+                          "start": 1972,
+                          "end": 1973,
                           "loc": {
                             "start": {
-                              "line": 51,
+                              "line": 53,
                               "column": 30
                             },
                             "end": {
-                              "line": 51,
+                              "line": 53,
                               "column": 31
                             }
                           },
@@ -782,15 +867,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Adjusting Geometric Detail",
-                          "start": 1627,
-                          "end": 1656,
+                          "start": 1681,
+                          "end": 1710,
                           "loc": {
                             "start": {
-                              "line": 44,
+                              "line": 46,
                               "column": 4
                             },
                             "end": {
-                              "line": 44,
+                              "line": 46,
                               "column": 33
                             }
                           }
@@ -798,15 +883,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The number of subdivisions around the lateral circumference of the capsule. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncapsule/1522735-radialsegmentcount\n     ",
-                          "start": 1662,
-                          "end": 1887,
+                          "start": 1716,
+                          "end": 1941,
                           "loc": {
                             "start": {
-                              "line": 46,
+                              "line": 48,
                               "column": 4
                             },
                             "end": {
-                              "line": 50,
+                              "line": 52,
                               "column": 7
                             }
                           }
@@ -816,15 +901,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The number of subdivisions in the height of each hemispherical end of the capsule. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncapsule/1523561-capsegmentcount\n     ",
-                          "start": 1925,
-                          "end": 2154,
+                          "start": 1979,
+                          "end": 2208,
                           "loc": {
                             "start": {
-                              "line": 53,
+                              "line": 55,
                               "column": 4
                             },
                             "end": {
-                              "line": 57,
+                              "line": 59,
                               "column": 7
                             }
                           }
@@ -833,58 +918,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2159,
-                      "end": 2183,
+                      "start": 2213,
+                      "end": 2237,
                       "loc": {
                         "start": {
-                          "line": 58,
+                          "line": 60,
                           "column": 4
                         },
                         "end": {
-                          "line": 58,
+                          "line": 60,
                           "column": 28
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2159,
-                        "end": 2183,
+                        "start": 2213,
+                        "end": 2237,
                         "loc": {
                           "start": {
-                            "line": 58,
+                            "line": 60,
                             "column": 4
                           },
                           "end": {
-                            "line": 58,
+                            "line": 60,
                             "column": 28
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2159,
-                          "end": 2179,
+                          "start": 2213,
+                          "end": 2233,
                           "loc": {
                             "start": {
-                              "line": 58,
+                              "line": 60,
                               "column": 4
                             },
                             "end": {
-                              "line": 58,
+                              "line": 60,
                               "column": 24
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2159,
-                            "end": 2163,
+                            "start": 2213,
+                            "end": 2217,
                             "loc": {
                               "start": {
-                                "line": 58,
+                                "line": 60,
                                 "column": 4
                               },
                               "end": {
-                                "line": 58,
+                                "line": 60,
                                 "column": 8
                               }
                             },
@@ -892,15 +977,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2164,
-                            "end": 2179,
+                            "start": 2218,
+                            "end": 2233,
                             "loc": {
                               "start": {
-                                "line": 58,
+                                "line": 60,
                                 "column": 9
                               },
                               "end": {
-                                "line": 58,
+                                "line": 60,
                                 "column": 24
                               },
                               "identifierName": "capSegmentCount"
@@ -912,15 +997,15 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 2182,
-                          "end": 2183,
+                          "start": 2236,
+                          "end": 2237,
                           "loc": {
                             "start": {
-                              "line": 58,
+                              "line": 60,
                               "column": 27
                             },
                             "end": {
-                              "line": 58,
+                              "line": 60,
                               "column": 28
                             }
                           },
@@ -939,15 +1024,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The number of subdivisions in the height of each hemispherical end of the capsule. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncapsule/1523561-capsegmentcount\n     ",
-                          "start": 1925,
-                          "end": 2154,
+                          "start": 1979,
+                          "end": 2208,
                           "loc": {
                             "start": {
-                              "line": 53,
+                              "line": 55,
                               "column": 4
                             },
                             "end": {
-                              "line": 57,
+                              "line": 59,
                               "column": 7
                             }
                           }
@@ -957,15 +1042,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The number of subdivisions in the sides of the capsule along its y-axis. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncapsule/1523697-heightsegmentcount\n     ",
-                          "start": 2189,
-                          "end": 2411,
+                          "start": 2243,
+                          "end": 2465,
                           "loc": {
                             "start": {
-                              "line": 60,
+                              "line": 62,
                               "column": 4
                             },
                             "end": {
-                              "line": 64,
+                              "line": 66,
                               "column": 7
                             }
                           }
@@ -974,58 +1059,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2416,
-                      "end": 2443,
+                      "start": 2470,
+                      "end": 2497,
                       "loc": {
                         "start": {
-                          "line": 65,
+                          "line": 67,
                           "column": 4
                         },
                         "end": {
-                          "line": 65,
+                          "line": 67,
                           "column": 31
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2416,
-                        "end": 2443,
+                        "start": 2470,
+                        "end": 2497,
                         "loc": {
                           "start": {
-                            "line": 65,
+                            "line": 67,
                             "column": 4
                           },
                           "end": {
-                            "line": 65,
+                            "line": 67,
                             "column": 31
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2416,
-                          "end": 2439,
+                          "start": 2470,
+                          "end": 2493,
                           "loc": {
                             "start": {
-                              "line": 65,
+                              "line": 67,
                               "column": 4
                             },
                             "end": {
-                              "line": 65,
+                              "line": 67,
                               "column": 27
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2416,
-                            "end": 2420,
+                            "start": 2470,
+                            "end": 2474,
                             "loc": {
                               "start": {
-                                "line": 65,
+                                "line": 67,
                                 "column": 4
                               },
                               "end": {
-                                "line": 65,
+                                "line": 67,
                                 "column": 8
                               }
                             },
@@ -1033,15 +1118,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2421,
-                            "end": 2439,
+                            "start": 2475,
+                            "end": 2493,
                             "loc": {
                               "start": {
-                                "line": 65,
+                                "line": 67,
                                 "column": 9
                               },
                               "end": {
-                                "line": 65,
+                                "line": 67,
                                 "column": 27
                               },
                               "identifierName": "heightSegmentCount"
@@ -1053,15 +1138,15 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 2442,
-                          "end": 2443,
+                          "start": 2496,
+                          "end": 2497,
                           "loc": {
                             "start": {
-                              "line": 65,
+                              "line": 67,
                               "column": 30
                             },
                             "end": {
-                              "line": 65,
+                              "line": 67,
                               "column": 31
                             }
                           },
@@ -1077,15 +1162,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The number of subdivisions in the sides of the capsule along its y-axis. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncapsule/1523697-heightsegmentcount\n     ",
-                          "start": 2189,
-                          "end": 2411,
+                          "start": 2243,
+                          "end": 2465,
                           "loc": {
                             "start": {
-                              "line": 60,
+                              "line": 62,
                               "column": 4
                             },
                             "end": {
-                              "line": 64,
+                              "line": 66,
                               "column": 7
                             }
                           }
@@ -1093,21 +1178,22 @@
                       ]
                     }
                   ],
-                  "directives": []
+                  "directives": [],
+                  "trailingComments": null
                 },
                 "leadingComments": [
                   {
                     "type": "CommentLine",
                     "value": " Creating a Capsule",
-                    "start": 308,
-                    "end": 329,
+                    "start": 362,
+                    "end": 383,
                     "loc": {
                       "start": {
-                        "line": 13,
+                        "line": 15,
                         "column": 2
                       },
                       "end": {
-                        "line": 13,
+                        "line": 15,
                         "column": 23
                       }
                     }
@@ -1115,15 +1201,667 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Creates a capsule geometry with the specified radius and height.\n   * @access public\n   * @constructor\n   * @param {number} capRadius - The radius both of the capsule’s cylindrical body and of its hemispherical ends.\n   * @param {number} height - The height of the capsule along the y-axis of its local coordinate space.\n   * @desc The capsule is centered in its local coordinate system. For example, if you create a capsule whose cap radius is 5.0 and height is 20.0, it extends from -10.0 to 10.0 in the y-axis, and the circular cross section at the center of its body extends from -5.0 to 5.0 along the x- and z-axes.\n   * @see https://developer.apple.com/reference/scenekit/scncapsule/1523790-init\n   ",
-                    "start": 333,
-                    "end": 1049,
+                    "start": 387,
+                    "end": 1103,
                     "loc": {
                       "start": {
-                        "line": 15,
+                        "line": 17,
                         "column": 2
                       },
                       "end": {
-                        "line": 23,
+                        "line": 25,
+                        "column": 5
+                      }
+                    }
+                  }
+                ],
+                "trailingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * @access private\n   * @returns {Ammo.btCollisionShape}\n   * @desc call Ammo.destroy(shape) after using it.\n   ",
+                    "start": 2505,
+                    "end": 2625,
+                    "loc": {
+                      "start": {
+                        "line": 70,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 74,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "ClassMethod",
+                "start": 2628,
+                "end": 2804,
+                "loc": {
+                  "start": {
+                    "line": 75,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 79,
+                    "column": 3
+                  }
+                },
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 2628,
+                  "end": 2651,
+                  "loc": {
+                    "start": {
+                      "line": 75,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 75,
+                      "column": 25
+                    },
+                    "identifierName": "_createBtCollisionShape"
+                  },
+                  "name": "_createBtCollisionShape",
+                  "leadingComments": null
+                },
+                "static": false,
+                "kind": "method",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 2654,
+                  "end": 2804,
+                  "loc": {
+                    "start": {
+                      "line": 75,
+                      "column": 28
+                    },
+                    "end": {
+                      "line": 79,
+                      "column": 3
+                    }
+                  },
+                  "body": [],
+                  "directives": [],
+                  "leadingComments": null,
+                  "trailingComments": [
+                    {
+                      "type": "CommentLine",
+                      "value": "const height = (this.height - this.capRadius) * 0.5",
+                      "start": 2660,
+                      "end": 2713,
+                      "loc": {
+                        "start": {
+                          "line": 76,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 76,
+                          "column": 57
+                        }
+                      }
+                    },
+                    {
+                      "type": "CommentLine",
+                      "value": "const shape = new Ammo.btCapsuleShape(this.capRadius, height)",
+                      "start": 2718,
+                      "end": 2781,
+                      "loc": {
+                        "start": {
+                          "line": 77,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 77,
+                          "column": 67
+                        }
+                      }
+                    },
+                    {
+                      "type": "CommentLine",
+                      "value": "return shape",
+                      "start": 2786,
+                      "end": 2800,
+                      "loc": {
+                        "start": {
+                          "line": 78,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 78,
+                          "column": 18
+                        }
+                      }
+                    },
+                    {
+                      "type": "CommentBlock",
+                      "value": "*\n   * The center point and radius of the object’s bounding sphere.\n   * @type {Object}\n   * @parameter {SCNVector3} _boundingSphere.center -\n   * @parameter {number} _boundingSphere.radius -\n   * @returns {Object} -\n   * @desc Scene Kit defines a bounding sphere in the local coordinate space using a center point and a radius. For example, if a node’s bounding sphere has the center point {3, 1, 4} and radius 2.0, all points in the vertex data of node’s geometry (and any geometry attached to its child nodes) lie within 2.0 units of the center point.The coordinates provided when reading this property are valid only if the object has a volume to be measured. For a geometry containing no vertex data or a node containing no geometry (and whose child nodes, if any, contain no geometry), the values center and radius are both zero.\n   * @see https://developer.apple.com/reference/scenekit/scnboundingvolume/2034707-boundingsphere\n   ",
+                      "start": 2808,
+                      "end": 3749,
+                      "loc": {
+                        "start": {
+                          "line": 81,
+                          "column": 2
+                        },
+                        "end": {
+                          "line": 89,
+                          "column": 5
+                        }
+                      }
+                    }
+                  ]
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * @access private\n   * @returns {Ammo.btCollisionShape}\n   * @desc call Ammo.destroy(shape) after using it.\n   ",
+                    "start": 2505,
+                    "end": 2625,
+                    "loc": {
+                      "start": {
+                        "line": 70,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 74,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "ClassMethod",
+                "start": 3752,
+                "end": 3884,
+                "loc": {
+                  "start": {
+                    "line": 90,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 95,
+                    "column": 3
+                  }
+                },
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 3752,
+                  "end": 3769,
+                  "loc": {
+                    "start": {
+                      "line": 90,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 90,
+                      "column": 19
+                    },
+                    "identifierName": "getBoundingSphere"
+                  },
+                  "name": "getBoundingSphere",
+                  "leadingComments": null
+                },
+                "static": false,
+                "kind": "method",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 3772,
+                  "end": 3884,
+                  "loc": {
+                    "start": {
+                      "line": 90,
+                      "column": 22
+                    },
+                    "end": {
+                      "line": 95,
+                      "column": 3
+                    }
+                  },
+                  "body": [
+                    {
+                      "type": "VariableDeclaration",
+                      "start": 3778,
+                      "end": 3811,
+                      "loc": {
+                        "start": {
+                          "line": 91,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 91,
+                          "column": 37
+                        }
+                      },
+                      "declarations": [
+                        {
+                          "type": "VariableDeclarator",
+                          "start": 3784,
+                          "end": 3811,
+                          "loc": {
+                            "start": {
+                              "line": 91,
+                              "column": 10
+                            },
+                            "end": {
+                              "line": 91,
+                              "column": 37
+                            }
+                          },
+                          "id": {
+                            "type": "Identifier",
+                            "start": 3784,
+                            "end": 3785,
+                            "loc": {
+                              "start": {
+                                "line": 91,
+                                "column": 10
+                              },
+                              "end": {
+                                "line": 91,
+                                "column": 11
+                              },
+                              "identifierName": "c"
+                            },
+                            "name": "c"
+                          },
+                          "init": {
+                            "type": "NewExpression",
+                            "start": 3788,
+                            "end": 3811,
+                            "loc": {
+                              "start": {
+                                "line": 91,
+                                "column": 14
+                              },
+                              "end": {
+                                "line": 91,
+                                "column": 37
+                              }
+                            },
+                            "callee": {
+                              "type": "Identifier",
+                              "start": 3792,
+                              "end": 3802,
+                              "loc": {
+                                "start": {
+                                  "line": 91,
+                                  "column": 18
+                                },
+                                "end": {
+                                  "line": 91,
+                                  "column": 28
+                                },
+                                "identifierName": "SCNVector3"
+                              },
+                              "name": "SCNVector3"
+                            },
+                            "arguments": [
+                              {
+                                "type": "NumericLiteral",
+                                "start": 3803,
+                                "end": 3804,
+                                "loc": {
+                                  "start": {
+                                    "line": 91,
+                                    "column": 29
+                                  },
+                                  "end": {
+                                    "line": 91,
+                                    "column": 30
+                                  }
+                                },
+                                "extra": {
+                                  "rawValue": 0,
+                                  "raw": "0"
+                                },
+                                "value": 0
+                              },
+                              {
+                                "type": "NumericLiteral",
+                                "start": 3806,
+                                "end": 3807,
+                                "loc": {
+                                  "start": {
+                                    "line": 91,
+                                    "column": 32
+                                  },
+                                  "end": {
+                                    "line": 91,
+                                    "column": 33
+                                  }
+                                },
+                                "extra": {
+                                  "rawValue": 0,
+                                  "raw": "0"
+                                },
+                                "value": 0
+                              },
+                              {
+                                "type": "NumericLiteral",
+                                "start": 3809,
+                                "end": 3810,
+                                "loc": {
+                                  "start": {
+                                    "line": 91,
+                                    "column": 35
+                                  },
+                                  "end": {
+                                    "line": 91,
+                                    "column": 36
+                                  }
+                                },
+                                "extra": {
+                                  "rawValue": 0,
+                                  "raw": "0"
+                                },
+                                "value": 0
+                              }
+                            ]
+                          }
+                        }
+                      ],
+                      "kind": "const"
+                    },
+                    {
+                      "type": "VariableDeclaration",
+                      "start": 3816,
+                      "end": 3843,
+                      "loc": {
+                        "start": {
+                          "line": 92,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 92,
+                          "column": 31
+                        }
+                      },
+                      "declarations": [
+                        {
+                          "type": "VariableDeclarator",
+                          "start": 3822,
+                          "end": 3843,
+                          "loc": {
+                            "start": {
+                              "line": 92,
+                              "column": 10
+                            },
+                            "end": {
+                              "line": 92,
+                              "column": 31
+                            }
+                          },
+                          "id": {
+                            "type": "Identifier",
+                            "start": 3822,
+                            "end": 3823,
+                            "loc": {
+                              "start": {
+                                "line": 92,
+                                "column": 10
+                              },
+                              "end": {
+                                "line": 92,
+                                "column": 11
+                              },
+                              "identifierName": "r"
+                            },
+                            "name": "r"
+                          },
+                          "init": {
+                            "type": "BinaryExpression",
+                            "start": 3826,
+                            "end": 3843,
+                            "loc": {
+                              "start": {
+                                "line": 92,
+                                "column": 14
+                              },
+                              "end": {
+                                "line": 92,
+                                "column": 31
+                              }
+                            },
+                            "left": {
+                              "type": "MemberExpression",
+                              "start": 3826,
+                              "end": 3837,
+                              "loc": {
+                                "start": {
+                                  "line": 92,
+                                  "column": 14
+                                },
+                                "end": {
+                                  "line": 92,
+                                  "column": 25
+                                }
+                              },
+                              "object": {
+                                "type": "ThisExpression",
+                                "start": 3826,
+                                "end": 3830,
+                                "loc": {
+                                  "start": {
+                                    "line": 92,
+                                    "column": 14
+                                  },
+                                  "end": {
+                                    "line": 92,
+                                    "column": 18
+                                  }
+                                }
+                              },
+                              "property": {
+                                "type": "Identifier",
+                                "start": 3831,
+                                "end": 3837,
+                                "loc": {
+                                  "start": {
+                                    "line": 92,
+                                    "column": 19
+                                  },
+                                  "end": {
+                                    "line": 92,
+                                    "column": 25
+                                  },
+                                  "identifierName": "height"
+                                },
+                                "name": "height"
+                              },
+                              "computed": false
+                            },
+                            "operator": "*",
+                            "right": {
+                              "type": "NumericLiteral",
+                              "start": 3840,
+                              "end": 3843,
+                              "loc": {
+                                "start": {
+                                  "line": 92,
+                                  "column": 28
+                                },
+                                "end": {
+                                  "line": 92,
+                                  "column": 31
+                                }
+                              },
+                              "extra": {
+                                "rawValue": 0.5,
+                                "raw": "0.5"
+                              },
+                              "value": 0.5
+                            }
+                          }
+                        }
+                      ],
+                      "kind": "const"
+                    },
+                    {
+                      "type": "ReturnStatement",
+                      "start": 3849,
+                      "end": 3880,
+                      "loc": {
+                        "start": {
+                          "line": 94,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 94,
+                          "column": 35
+                        }
+                      },
+                      "argument": {
+                        "type": "ObjectExpression",
+                        "start": 3856,
+                        "end": 3880,
+                        "loc": {
+                          "start": {
+                            "line": 94,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 94,
+                            "column": 35
+                          }
+                        },
+                        "properties": [
+                          {
+                            "type": "ObjectProperty",
+                            "start": 3858,
+                            "end": 3867,
+                            "loc": {
+                              "start": {
+                                "line": 94,
+                                "column": 13
+                              },
+                              "end": {
+                                "line": 94,
+                                "column": 22
+                              }
+                            },
+                            "method": false,
+                            "shorthand": false,
+                            "computed": false,
+                            "key": {
+                              "type": "Identifier",
+                              "start": 3858,
+                              "end": 3864,
+                              "loc": {
+                                "start": {
+                                  "line": 94,
+                                  "column": 13
+                                },
+                                "end": {
+                                  "line": 94,
+                                  "column": 19
+                                },
+                                "identifierName": "center"
+                              },
+                              "name": "center"
+                            },
+                            "value": {
+                              "type": "Identifier",
+                              "start": 3866,
+                              "end": 3867,
+                              "loc": {
+                                "start": {
+                                  "line": 94,
+                                  "column": 21
+                                },
+                                "end": {
+                                  "line": 94,
+                                  "column": 22
+                                },
+                                "identifierName": "c"
+                              },
+                              "name": "c"
+                            }
+                          },
+                          {
+                            "type": "ObjectProperty",
+                            "start": 3869,
+                            "end": 3878,
+                            "loc": {
+                              "start": {
+                                "line": 94,
+                                "column": 24
+                              },
+                              "end": {
+                                "line": 94,
+                                "column": 33
+                              }
+                            },
+                            "method": false,
+                            "shorthand": false,
+                            "computed": false,
+                            "key": {
+                              "type": "Identifier",
+                              "start": 3869,
+                              "end": 3875,
+                              "loc": {
+                                "start": {
+                                  "line": 94,
+                                  "column": 24
+                                },
+                                "end": {
+                                  "line": 94,
+                                  "column": 30
+                                },
+                                "identifierName": "radius"
+                              },
+                              "name": "radius"
+                            },
+                            "value": {
+                              "type": "Identifier",
+                              "start": 3877,
+                              "end": 3878,
+                              "loc": {
+                                "start": {
+                                  "line": 94,
+                                  "column": 32
+                                },
+                                "end": {
+                                  "line": 94,
+                                  "column": 33
+                                },
+                                "identifierName": "r"
+                              },
+                              "name": "r"
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "directives": []
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * The center point and radius of the object’s bounding sphere.\n   * @type {Object}\n   * @parameter {SCNVector3} _boundingSphere.center -\n   * @parameter {number} _boundingSphere.radius -\n   * @returns {Object} -\n   * @desc Scene Kit defines a bounding sphere in the local coordinate space using a center point and a radius. For example, if a node’s bounding sphere has the center point {3, 1, 4} and radius 2.0, all points in the vertex data of node’s geometry (and any geometry attached to its child nodes) lie within 2.0 units of the center point.The coordinates provided when reading this property are valid only if the object has a volume to be measured. For a geometry containing no vertex data or a node containing no geometry (and whose child nodes, if any, contain no geometry), the values center and radius are both zero.\n   * @see https://developer.apple.com/reference/scenekit/scnboundingvolume/2034707-boundingsphere\n   ",
+                    "start": 2808,
+                    "end": 3749,
+                    "loc": {
+                      "start": {
+                        "line": 81,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 89,
                         "column": 5
                       }
                     }
@@ -1135,16 +1873,32 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * A right circular cylinder geometry whose ends are capped with hemispheres.\n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/reference/scenekit/scncapsule\n ",
-              "start": 56,
-              "end": 251,
+              "value": "global Ammo",
+              "start": 92,
+              "end": 107,
               "loc": {
                 "start": {
-                  "line": 6,
+                  "line": 5,
                   "column": 0
                 },
                 "end": {
-                  "line": 11,
+                  "line": 5,
+                  "column": 15
+                }
+              }
+            },
+            {
+              "type": "CommentBlock",
+              "value": "*\n * A right circular cylinder geometry whose ends are capped with hemispheres.\n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/reference/scenekit/scncapsule\n ",
+              "start": 110,
+              "end": 305,
+              "loc": {
+                "start": {
+                  "line": 8,
+                  "column": 0
+                },
+                "end": {
+                  "line": 13,
                   "column": 3
                 }
               }
@@ -1155,16 +1909,32 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * A right circular cylinder geometry whose ends are capped with hemispheres.\n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/reference/scenekit/scncapsule\n ",
-            "start": 56,
-            "end": 251,
+            "value": "global Ammo",
+            "start": 92,
+            "end": 107,
             "loc": {
               "start": {
-                "line": 6,
+                "line": 5,
                 "column": 0
               },
               "end": {
-                "line": 11,
+                "line": 5,
+                "column": 15
+              }
+            }
+          },
+          {
+            "type": "CommentBlock",
+            "value": "*\n * A right circular cylinder geometry whose ends are capped with hemispheres.\n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/reference/scenekit/scncapsule\n ",
+            "start": 110,
+            "end": 305,
+            "loc": {
+              "start": {
+                "line": 8,
+                "column": 0
+              },
+              "end": {
+                "line": 13,
                 "column": 3
               }
             }
@@ -1213,16 +1983,32 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * A right circular cylinder geometry whose ends are capped with hemispheres.\n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/reference/scenekit/scncapsule\n ",
-      "start": 56,
-      "end": 251,
+      "value": "global Ammo",
+      "start": 92,
+      "end": 107,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 5,
           "column": 0
         },
         "end": {
-          "line": 11,
+          "line": 5,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * A right circular cylinder geometry whose ends are capped with hemispheres.\n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/reference/scenekit/scncapsule\n ",
+      "start": 110,
+      "end": 305,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 0
+        },
+        "end": {
+          "line": 13,
           "column": 3
         }
       }
@@ -1230,15 +2016,15 @@
     {
       "type": "CommentLine",
       "value": " Creating a Capsule",
-      "start": 308,
-      "end": 329,
+      "start": 362,
+      "end": 383,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 15,
           "column": 2
         },
         "end": {
-          "line": 13,
+          "line": 15,
           "column": 23
         }
       }
@@ -1246,15 +2032,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Creates a capsule geometry with the specified radius and height.\n   * @access public\n   * @constructor\n   * @param {number} capRadius - The radius both of the capsule’s cylindrical body and of its hemispherical ends.\n   * @param {number} height - The height of the capsule along the y-axis of its local coordinate space.\n   * @desc The capsule is centered in its local coordinate system. For example, if you create a capsule whose cap radius is 5.0 and height is 20.0, it extends from -10.0 to 10.0 in the y-axis, and the circular cross section at the center of its body extends from -5.0 to 5.0 along the x- and z-axes.\n   * @see https://developer.apple.com/reference/scenekit/scncapsule/1523790-init\n   ",
-      "start": 333,
-      "end": 1049,
+      "start": 387,
+      "end": 1103,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 17,
           "column": 2
         },
         "end": {
-          "line": 23,
+          "line": 25,
           "column": 5
         }
       }
@@ -1262,15 +2048,15 @@
     {
       "type": "CommentLine",
       "value": " Adjusting a Capsule’s Dimensions",
-      "start": 1102,
-      "end": 1137,
+      "start": 1156,
+      "end": 1191,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 29,
           "column": 4
         },
         "end": {
-          "line": 27,
+          "line": 29,
           "column": 39
         }
       }
@@ -1278,15 +2064,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The radius both of the capsule’s circular center cross section and of its hemispherical ends. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncapsule/1523926-capradius\n     ",
-      "start": 1143,
-      "end": 1377,
+      "start": 1197,
+      "end": 1431,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 31,
           "column": 4
         },
         "end": {
-          "line": 33,
+          "line": 35,
           "column": 7
         }
       }
@@ -1294,15 +2080,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The extent of the capsule along its y-axis. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncapsule/1522789-height\n     ",
-      "start": 1414,
-      "end": 1595,
+      "start": 1468,
+      "end": 1649,
       "loc": {
         "start": {
-          "line": 36,
+          "line": 38,
           "column": 4
         },
         "end": {
-          "line": 40,
+          "line": 42,
           "column": 7
         }
       }
@@ -1310,15 +2096,15 @@
     {
       "type": "CommentLine",
       "value": " Adjusting Geometric Detail",
-      "start": 1627,
-      "end": 1656,
+      "start": 1681,
+      "end": 1710,
       "loc": {
         "start": {
-          "line": 44,
+          "line": 46,
           "column": 4
         },
         "end": {
-          "line": 44,
+          "line": 46,
           "column": 33
         }
       }
@@ -1326,15 +2112,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The number of subdivisions around the lateral circumference of the capsule. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncapsule/1522735-radialsegmentcount\n     ",
-      "start": 1662,
-      "end": 1887,
+      "start": 1716,
+      "end": 1941,
       "loc": {
         "start": {
-          "line": 46,
+          "line": 48,
           "column": 4
         },
         "end": {
-          "line": 50,
+          "line": 52,
           "column": 7
         }
       }
@@ -1342,15 +2128,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The number of subdivisions in the height of each hemispherical end of the capsule. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncapsule/1523561-capsegmentcount\n     ",
-      "start": 1925,
-      "end": 2154,
+      "start": 1979,
+      "end": 2208,
       "loc": {
         "start": {
-          "line": 53,
+          "line": 55,
           "column": 4
         },
         "end": {
-          "line": 57,
+          "line": 59,
           "column": 7
         }
       }
@@ -1358,16 +2144,96 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The number of subdivisions in the sides of the capsule along its y-axis. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncapsule/1523697-heightsegmentcount\n     ",
-      "start": 2189,
-      "end": 2411,
+      "start": 2243,
+      "end": 2465,
       "loc": {
         "start": {
-          "line": 60,
+          "line": 62,
           "column": 4
         },
         "end": {
-          "line": 64,
+          "line": 66,
           "column": 7
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * @access private\n   * @returns {Ammo.btCollisionShape}\n   * @desc call Ammo.destroy(shape) after using it.\n   ",
+      "start": 2505,
+      "end": 2625,
+      "loc": {
+        "start": {
+          "line": 70,
+          "column": 2
+        },
+        "end": {
+          "line": 74,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "const height = (this.height - this.capRadius) * 0.5",
+      "start": 2660,
+      "end": 2713,
+      "loc": {
+        "start": {
+          "line": 76,
+          "column": 4
+        },
+        "end": {
+          "line": 76,
+          "column": 57
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "const shape = new Ammo.btCapsuleShape(this.capRadius, height)",
+      "start": 2718,
+      "end": 2781,
+      "loc": {
+        "start": {
+          "line": 77,
+          "column": 4
+        },
+        "end": {
+          "line": 77,
+          "column": 67
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "return shape",
+      "start": 2786,
+      "end": 2800,
+      "loc": {
+        "start": {
+          "line": 78,
+          "column": 4
+        },
+        "end": {
+          "line": 78,
+          "column": 18
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * The center point and radius of the object’s bounding sphere.\n   * @type {Object}\n   * @parameter {SCNVector3} _boundingSphere.center -\n   * @parameter {number} _boundingSphere.radius -\n   * @returns {Object} -\n   * @desc Scene Kit defines a bounding sphere in the local coordinate space using a center point and a radius. For example, if a node’s bounding sphere has the center point {3, 1, 4} and radius 2.0, all points in the vertex data of node’s geometry (and any geometry attached to its child nodes) lie within 2.0 units of the center point.The coordinates provided when reading this property are valid only if the object has a volume to be measured. For a geometry containing no vertex data or a node containing no geometry (and whose child nodes, if any, contain no geometry), the values center and radius are both zero.\n   * @see https://developer.apple.com/reference/scenekit/scnboundingvolume/2034707-boundingsphere\n   ",
+      "start": 2808,
+      "end": 3749,
+      "loc": {
+        "start": {
+          "line": 81,
+          "column": 2
+        },
+        "end": {
+          "line": 89,
+          "column": 5
         }
       }
     }
@@ -1508,17 +2374,140 @@
       }
     },
     {
-      "type": "CommentBlock",
-      "value": "*\n * A right circular cylinder geometry whose ends are capped with hemispheres.\n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/reference/scenekit/scncapsule\n ",
-      "start": 56,
-      "end": 251,
+      "type": {
+        "label": "import",
+        "keyword": "import",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "import",
+      "start": 54,
+      "end": 60,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 4,
           "column": 0
         },
         "end": {
-          "line": 11,
+          "line": 4,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "SCNVector3",
+      "start": 61,
+      "end": 71,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 7
+        },
+        "end": {
+          "line": 4,
+          "column": 17
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "from",
+      "start": 72,
+      "end": 76,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 18
+        },
+        "end": {
+          "line": 4,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "./SCNVector3",
+      "start": 77,
+      "end": 91,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 23
+        },
+        "end": {
+          "line": 4,
+          "column": 37
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "global Ammo",
+      "start": 92,
+      "end": 107,
+      "loc": {
+        "start": {
+          "line": 5,
+          "column": 0
+        },
+        "end": {
+          "line": 5,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * A right circular cylinder geometry whose ends are capped with hemispheres.\n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/reference/scenekit/scncapsule\n ",
+      "start": 110,
+      "end": 305,
+      "loc": {
+        "start": {
+          "line": 8,
+          "column": 0
+        },
+        "end": {
+          "line": 13,
           "column": 3
         }
       }
@@ -1538,15 +2527,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 252,
-      "end": 258,
+      "start": 306,
+      "end": 312,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 14,
           "column": 0
         },
         "end": {
-          "line": 12,
+          "line": 14,
           "column": 6
         }
       }
@@ -1566,15 +2555,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 259,
-      "end": 266,
+      "start": 313,
+      "end": 320,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 14,
           "column": 7
         },
         "end": {
-          "line": 12,
+          "line": 14,
           "column": 14
         }
       }
@@ -1594,15 +2583,15 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 267,
-      "end": 272,
+      "start": 321,
+      "end": 326,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 14,
           "column": 15
         },
         "end": {
-          "line": 12,
+          "line": 14,
           "column": 20
         }
       }
@@ -1620,15 +2609,15 @@
         "binop": null
       },
       "value": "SCNCapsule",
-      "start": 273,
-      "end": 283,
+      "start": 327,
+      "end": 337,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 14,
           "column": 21
         },
         "end": {
-          "line": 12,
+          "line": 14,
           "column": 31
         }
       }
@@ -1648,15 +2637,15 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 284,
-      "end": 291,
+      "start": 338,
+      "end": 345,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 14,
           "column": 32
         },
         "end": {
-          "line": 12,
+          "line": 14,
           "column": 39
         }
       }
@@ -1674,15 +2663,15 @@
         "binop": null
       },
       "value": "SCNGeometry",
-      "start": 292,
-      "end": 303,
+      "start": 346,
+      "end": 357,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 14,
           "column": 40
         },
         "end": {
-          "line": 12,
+          "line": 14,
           "column": 51
         }
       }
@@ -1699,15 +2688,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 304,
-      "end": 305,
+      "start": 358,
+      "end": 359,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 14,
           "column": 52
         },
         "end": {
-          "line": 12,
+          "line": 14,
           "column": 53
         }
       }
@@ -1715,15 +2704,15 @@
     {
       "type": "CommentLine",
       "value": " Creating a Capsule",
-      "start": 308,
-      "end": 329,
+      "start": 362,
+      "end": 383,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 15,
           "column": 2
         },
         "end": {
-          "line": 13,
+          "line": 15,
           "column": 23
         }
       }
@@ -1731,15 +2720,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Creates a capsule geometry with the specified radius and height.\n   * @access public\n   * @constructor\n   * @param {number} capRadius - The radius both of the capsule’s cylindrical body and of its hemispherical ends.\n   * @param {number} height - The height of the capsule along the y-axis of its local coordinate space.\n   * @desc The capsule is centered in its local coordinate system. For example, if you create a capsule whose cap radius is 5.0 and height is 20.0, it extends from -10.0 to 10.0 in the y-axis, and the circular cross section at the center of its body extends from -5.0 to 5.0 along the x- and z-axes.\n   * @see https://developer.apple.com/reference/scenekit/scncapsule/1523790-init\n   ",
-      "start": 333,
-      "end": 1049,
+      "start": 387,
+      "end": 1103,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 17,
           "column": 2
         },
         "end": {
-          "line": 23,
+          "line": 25,
           "column": 5
         }
       }
@@ -1757,15 +2746,15 @@
         "binop": null
       },
       "value": "constructor",
-      "start": 1052,
-      "end": 1063,
+      "start": 1106,
+      "end": 1117,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 26,
           "column": 2
         },
         "end": {
-          "line": 24,
+          "line": 26,
           "column": 13
         }
       }
@@ -1782,15 +2771,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1063,
-      "end": 1064,
+      "start": 1117,
+      "end": 1118,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 26,
           "column": 13
         },
         "end": {
-          "line": 24,
+          "line": 26,
           "column": 14
         }
       }
@@ -1808,15 +2797,15 @@
         "binop": null
       },
       "value": "capRadius",
-      "start": 1064,
-      "end": 1073,
+      "start": 1118,
+      "end": 1127,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 26,
           "column": 14
         },
         "end": {
-          "line": 24,
+          "line": 26,
           "column": 23
         }
       }
@@ -1834,15 +2823,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1073,
-      "end": 1074,
+      "start": 1127,
+      "end": 1128,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 26,
           "column": 23
         },
         "end": {
-          "line": 24,
+          "line": 26,
           "column": 24
         }
       }
@@ -1860,15 +2849,15 @@
         "binop": null
       },
       "value": "height",
-      "start": 1075,
-      "end": 1081,
+      "start": 1129,
+      "end": 1135,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 26,
           "column": 25
         },
         "end": {
-          "line": 24,
+          "line": 26,
           "column": 31
         }
       }
@@ -1885,15 +2874,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1081,
-      "end": 1082,
+      "start": 1135,
+      "end": 1136,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 26,
           "column": 31
         },
         "end": {
-          "line": 24,
+          "line": 26,
           "column": 32
         }
       }
@@ -1910,15 +2899,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1083,
-      "end": 1084,
+      "start": 1137,
+      "end": 1138,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 26,
           "column": 33
         },
         "end": {
-          "line": 24,
+          "line": 26,
           "column": 34
         }
       }
@@ -1938,15 +2927,15 @@
         "updateContext": null
       },
       "value": "super",
-      "start": 1089,
-      "end": 1094,
+      "start": 1143,
+      "end": 1148,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 27,
           "column": 4
         },
         "end": {
-          "line": 25,
+          "line": 27,
           "column": 9
         }
       }
@@ -1963,15 +2952,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1094,
-      "end": 1095,
+      "start": 1148,
+      "end": 1149,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 27,
           "column": 9
         },
         "end": {
-          "line": 25,
+          "line": 27,
           "column": 10
         }
       }
@@ -1988,15 +2977,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1095,
-      "end": 1096,
+      "start": 1149,
+      "end": 1150,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 27,
           "column": 10
         },
         "end": {
-          "line": 25,
+          "line": 27,
           "column": 11
         }
       }
@@ -2004,15 +2993,15 @@
     {
       "type": "CommentLine",
       "value": " Adjusting a Capsule’s Dimensions",
-      "start": 1102,
-      "end": 1137,
+      "start": 1156,
+      "end": 1191,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 29,
           "column": 4
         },
         "end": {
-          "line": 27,
+          "line": 29,
           "column": 39
         }
       }
@@ -2020,15 +3009,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The radius both of the capsule’s circular center cross section and of its hemispherical ends. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncapsule/1523926-capradius\n     ",
-      "start": 1143,
-      "end": 1377,
+      "start": 1197,
+      "end": 1431,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 31,
           "column": 4
         },
         "end": {
-          "line": 33,
+          "line": 35,
           "column": 7
         }
       }
@@ -2048,15 +3037,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1382,
-      "end": 1386,
+      "start": 1436,
+      "end": 1440,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 36,
           "column": 4
         },
         "end": {
-          "line": 34,
+          "line": 36,
           "column": 8
         }
       }
@@ -2074,15 +3063,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1386,
-      "end": 1387,
+      "start": 1440,
+      "end": 1441,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 36,
           "column": 8
         },
         "end": {
-          "line": 34,
+          "line": 36,
           "column": 9
         }
       }
@@ -2100,15 +3089,15 @@
         "binop": null
       },
       "value": "capRadius",
-      "start": 1387,
-      "end": 1396,
+      "start": 1441,
+      "end": 1450,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 36,
           "column": 9
         },
         "end": {
-          "line": 34,
+          "line": 36,
           "column": 18
         }
       }
@@ -2127,15 +3116,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1397,
-      "end": 1398,
+      "start": 1451,
+      "end": 1452,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 36,
           "column": 19
         },
         "end": {
-          "line": 34,
+          "line": 36,
           "column": 20
         }
       }
@@ -2153,15 +3142,15 @@
         "binop": null
       },
       "value": "capRadius",
-      "start": 1399,
-      "end": 1408,
+      "start": 1453,
+      "end": 1462,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 36,
           "column": 21
         },
         "end": {
-          "line": 34,
+          "line": 36,
           "column": 30
         }
       }
@@ -2169,15 +3158,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The extent of the capsule along its y-axis. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncapsule/1522789-height\n     ",
-      "start": 1414,
-      "end": 1595,
+      "start": 1468,
+      "end": 1649,
       "loc": {
         "start": {
-          "line": 36,
+          "line": 38,
           "column": 4
         },
         "end": {
-          "line": 40,
+          "line": 42,
           "column": 7
         }
       }
@@ -2197,15 +3186,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1600,
-      "end": 1604,
+      "start": 1654,
+      "end": 1658,
       "loc": {
         "start": {
-          "line": 41,
+          "line": 43,
           "column": 4
         },
         "end": {
-          "line": 41,
+          "line": 43,
           "column": 8
         }
       }
@@ -2223,15 +3212,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1604,
-      "end": 1605,
+      "start": 1658,
+      "end": 1659,
       "loc": {
         "start": {
-          "line": 41,
+          "line": 43,
           "column": 8
         },
         "end": {
-          "line": 41,
+          "line": 43,
           "column": 9
         }
       }
@@ -2249,15 +3238,15 @@
         "binop": null
       },
       "value": "height",
-      "start": 1605,
-      "end": 1611,
+      "start": 1659,
+      "end": 1665,
       "loc": {
         "start": {
-          "line": 41,
+          "line": 43,
           "column": 9
         },
         "end": {
-          "line": 41,
+          "line": 43,
           "column": 15
         }
       }
@@ -2276,15 +3265,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1612,
-      "end": 1613,
+      "start": 1666,
+      "end": 1667,
       "loc": {
         "start": {
-          "line": 41,
+          "line": 43,
           "column": 16
         },
         "end": {
-          "line": 41,
+          "line": 43,
           "column": 17
         }
       }
@@ -2302,15 +3291,15 @@
         "binop": null
       },
       "value": "height",
-      "start": 1614,
-      "end": 1620,
+      "start": 1668,
+      "end": 1674,
       "loc": {
         "start": {
-          "line": 41,
+          "line": 43,
           "column": 18
         },
         "end": {
-          "line": 41,
+          "line": 43,
           "column": 24
         }
       }
@@ -2318,15 +3307,15 @@
     {
       "type": "CommentLine",
       "value": " Adjusting Geometric Detail",
-      "start": 1627,
-      "end": 1656,
+      "start": 1681,
+      "end": 1710,
       "loc": {
         "start": {
-          "line": 44,
+          "line": 46,
           "column": 4
         },
         "end": {
-          "line": 44,
+          "line": 46,
           "column": 33
         }
       }
@@ -2334,15 +3323,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The number of subdivisions around the lateral circumference of the capsule. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncapsule/1522735-radialsegmentcount\n     ",
-      "start": 1662,
-      "end": 1887,
+      "start": 1716,
+      "end": 1941,
       "loc": {
         "start": {
-          "line": 46,
+          "line": 48,
           "column": 4
         },
         "end": {
-          "line": 50,
+          "line": 52,
           "column": 7
         }
       }
@@ -2362,15 +3351,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1892,
-      "end": 1896,
+      "start": 1946,
+      "end": 1950,
       "loc": {
         "start": {
-          "line": 51,
+          "line": 53,
           "column": 4
         },
         "end": {
-          "line": 51,
+          "line": 53,
           "column": 8
         }
       }
@@ -2388,15 +3377,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1896,
-      "end": 1897,
+      "start": 1950,
+      "end": 1951,
       "loc": {
         "start": {
-          "line": 51,
+          "line": 53,
           "column": 8
         },
         "end": {
-          "line": 51,
+          "line": 53,
           "column": 9
         }
       }
@@ -2414,15 +3403,15 @@
         "binop": null
       },
       "value": "radialSegmentCount",
-      "start": 1897,
-      "end": 1915,
+      "start": 1951,
+      "end": 1969,
       "loc": {
         "start": {
-          "line": 51,
+          "line": 53,
           "column": 9
         },
         "end": {
-          "line": 51,
+          "line": 53,
           "column": 27
         }
       }
@@ -2441,15 +3430,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1916,
-      "end": 1917,
+      "start": 1970,
+      "end": 1971,
       "loc": {
         "start": {
-          "line": 51,
+          "line": 53,
           "column": 28
         },
         "end": {
-          "line": 51,
+          "line": 53,
           "column": 29
         }
       }
@@ -2468,15 +3457,15 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 1918,
-      "end": 1919,
+      "start": 1972,
+      "end": 1973,
       "loc": {
         "start": {
-          "line": 51,
+          "line": 53,
           "column": 30
         },
         "end": {
-          "line": 51,
+          "line": 53,
           "column": 31
         }
       }
@@ -2484,15 +3473,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The number of subdivisions in the height of each hemispherical end of the capsule. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncapsule/1523561-capsegmentcount\n     ",
-      "start": 1925,
-      "end": 2154,
+      "start": 1979,
+      "end": 2208,
       "loc": {
         "start": {
-          "line": 53,
+          "line": 55,
           "column": 4
         },
         "end": {
-          "line": 57,
+          "line": 59,
           "column": 7
         }
       }
@@ -2512,15 +3501,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2159,
-      "end": 2163,
+      "start": 2213,
+      "end": 2217,
       "loc": {
         "start": {
-          "line": 58,
+          "line": 60,
           "column": 4
         },
         "end": {
-          "line": 58,
+          "line": 60,
           "column": 8
         }
       }
@@ -2538,15 +3527,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2163,
-      "end": 2164,
+      "start": 2217,
+      "end": 2218,
       "loc": {
         "start": {
-          "line": 58,
+          "line": 60,
           "column": 8
         },
         "end": {
-          "line": 58,
+          "line": 60,
           "column": 9
         }
       }
@@ -2564,15 +3553,15 @@
         "binop": null
       },
       "value": "capSegmentCount",
-      "start": 2164,
-      "end": 2179,
+      "start": 2218,
+      "end": 2233,
       "loc": {
         "start": {
-          "line": 58,
+          "line": 60,
           "column": 9
         },
         "end": {
-          "line": 58,
+          "line": 60,
           "column": 24
         }
       }
@@ -2591,15 +3580,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2180,
-      "end": 2181,
+      "start": 2234,
+      "end": 2235,
       "loc": {
         "start": {
-          "line": 58,
+          "line": 60,
           "column": 25
         },
         "end": {
-          "line": 58,
+          "line": 60,
           "column": 26
         }
       }
@@ -2618,15 +3607,15 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 2182,
-      "end": 2183,
+      "start": 2236,
+      "end": 2237,
       "loc": {
         "start": {
-          "line": 58,
+          "line": 60,
           "column": 27
         },
         "end": {
-          "line": 58,
+          "line": 60,
           "column": 28
         }
       }
@@ -2634,15 +3623,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The number of subdivisions in the sides of the capsule along its y-axis. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scncapsule/1523697-heightsegmentcount\n     ",
-      "start": 2189,
-      "end": 2411,
+      "start": 2243,
+      "end": 2465,
       "loc": {
         "start": {
-          "line": 60,
+          "line": 62,
           "column": 4
         },
         "end": {
-          "line": 64,
+          "line": 66,
           "column": 7
         }
       }
@@ -2662,15 +3651,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2416,
-      "end": 2420,
+      "start": 2470,
+      "end": 2474,
       "loc": {
         "start": {
-          "line": 65,
+          "line": 67,
           "column": 4
         },
         "end": {
-          "line": 65,
+          "line": 67,
           "column": 8
         }
       }
@@ -2688,15 +3677,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2420,
-      "end": 2421,
+      "start": 2474,
+      "end": 2475,
       "loc": {
         "start": {
-          "line": 65,
+          "line": 67,
           "column": 8
         },
         "end": {
-          "line": 65,
+          "line": 67,
           "column": 9
         }
       }
@@ -2714,15 +3703,15 @@
         "binop": null
       },
       "value": "heightSegmentCount",
-      "start": 2421,
-      "end": 2439,
+      "start": 2475,
+      "end": 2493,
       "loc": {
         "start": {
-          "line": 65,
+          "line": 67,
           "column": 9
         },
         "end": {
-          "line": 65,
+          "line": 67,
           "column": 27
         }
       }
@@ -2741,15 +3730,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2440,
-      "end": 2441,
+      "start": 2494,
+      "end": 2495,
       "loc": {
         "start": {
-          "line": 65,
+          "line": 67,
           "column": 28
         },
         "end": {
-          "line": 65,
+          "line": 67,
           "column": 29
         }
       }
@@ -2768,15 +3757,15 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 2442,
-      "end": 2443,
+      "start": 2496,
+      "end": 2497,
       "loc": {
         "start": {
-          "line": 65,
+          "line": 67,
           "column": 30
         },
         "end": {
-          "line": 65,
+          "line": 67,
           "column": 31
         }
       }
@@ -2793,15 +3782,1140 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2446,
-      "end": 2447,
+      "start": 2500,
+      "end": 2501,
       "loc": {
         "start": {
-          "line": 66,
+          "line": 68,
           "column": 2
         },
         "end": {
-          "line": 66,
+          "line": 68,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * @access private\n   * @returns {Ammo.btCollisionShape}\n   * @desc call Ammo.destroy(shape) after using it.\n   ",
+      "start": 2505,
+      "end": 2625,
+      "loc": {
+        "start": {
+          "line": 70,
+          "column": 2
+        },
+        "end": {
+          "line": 74,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "_createBtCollisionShape",
+      "start": 2628,
+      "end": 2651,
+      "loc": {
+        "start": {
+          "line": 75,
+          "column": 2
+        },
+        "end": {
+          "line": 75,
+          "column": 25
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 2651,
+      "end": 2652,
+      "loc": {
+        "start": {
+          "line": 75,
+          "column": 25
+        },
+        "end": {
+          "line": 75,
+          "column": 26
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 2652,
+      "end": 2653,
+      "loc": {
+        "start": {
+          "line": 75,
+          "column": 26
+        },
+        "end": {
+          "line": 75,
+          "column": 27
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 2654,
+      "end": 2655,
+      "loc": {
+        "start": {
+          "line": 75,
+          "column": 28
+        },
+        "end": {
+          "line": 75,
+          "column": 29
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "const height = (this.height - this.capRadius) * 0.5",
+      "start": 2660,
+      "end": 2713,
+      "loc": {
+        "start": {
+          "line": 76,
+          "column": 4
+        },
+        "end": {
+          "line": 76,
+          "column": 57
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "const shape = new Ammo.btCapsuleShape(this.capRadius, height)",
+      "start": 2718,
+      "end": 2781,
+      "loc": {
+        "start": {
+          "line": 77,
+          "column": 4
+        },
+        "end": {
+          "line": 77,
+          "column": 67
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": "return shape",
+      "start": 2786,
+      "end": 2800,
+      "loc": {
+        "start": {
+          "line": 78,
+          "column": 4
+        },
+        "end": {
+          "line": 78,
+          "column": 18
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 2803,
+      "end": 2804,
+      "loc": {
+        "start": {
+          "line": 79,
+          "column": 2
+        },
+        "end": {
+          "line": 79,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * The center point and radius of the object’s bounding sphere.\n   * @type {Object}\n   * @parameter {SCNVector3} _boundingSphere.center -\n   * @parameter {number} _boundingSphere.radius -\n   * @returns {Object} -\n   * @desc Scene Kit defines a bounding sphere in the local coordinate space using a center point and a radius. For example, if a node’s bounding sphere has the center point {3, 1, 4} and radius 2.0, all points in the vertex data of node’s geometry (and any geometry attached to its child nodes) lie within 2.0 units of the center point.The coordinates provided when reading this property are valid only if the object has a volume to be measured. For a geometry containing no vertex data or a node containing no geometry (and whose child nodes, if any, contain no geometry), the values center and radius are both zero.\n   * @see https://developer.apple.com/reference/scenekit/scnboundingvolume/2034707-boundingsphere\n   ",
+      "start": 2808,
+      "end": 3749,
+      "loc": {
+        "start": {
+          "line": 81,
+          "column": 2
+        },
+        "end": {
+          "line": 89,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "getBoundingSphere",
+      "start": 3752,
+      "end": 3769,
+      "loc": {
+        "start": {
+          "line": 90,
+          "column": 2
+        },
+        "end": {
+          "line": 90,
+          "column": 19
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3769,
+      "end": 3770,
+      "loc": {
+        "start": {
+          "line": 90,
+          "column": 19
+        },
+        "end": {
+          "line": 90,
+          "column": 20
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3770,
+      "end": 3771,
+      "loc": {
+        "start": {
+          "line": 90,
+          "column": 20
+        },
+        "end": {
+          "line": 90,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3772,
+      "end": 3773,
+      "loc": {
+        "start": {
+          "line": 90,
+          "column": 22
+        },
+        "end": {
+          "line": 90,
+          "column": 23
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "const",
+        "keyword": "const",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "const",
+      "start": 3778,
+      "end": 3783,
+      "loc": {
+        "start": {
+          "line": 91,
+          "column": 4
+        },
+        "end": {
+          "line": 91,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "c",
+      "start": 3784,
+      "end": 3785,
+      "loc": {
+        "start": {
+          "line": 91,
+          "column": 10
+        },
+        "end": {
+          "line": 91,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 3786,
+      "end": 3787,
+      "loc": {
+        "start": {
+          "line": 91,
+          "column": 12
+        },
+        "end": {
+          "line": 91,
+          "column": 13
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "new",
+        "keyword": "new",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "new",
+      "start": 3788,
+      "end": 3791,
+      "loc": {
+        "start": {
+          "line": 91,
+          "column": 14
+        },
+        "end": {
+          "line": 91,
+          "column": 17
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "SCNVector3",
+      "start": 3792,
+      "end": 3802,
+      "loc": {
+        "start": {
+          "line": 91,
+          "column": 18
+        },
+        "end": {
+          "line": 91,
+          "column": 28
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3802,
+      "end": 3803,
+      "loc": {
+        "start": {
+          "line": 91,
+          "column": 28
+        },
+        "end": {
+          "line": 91,
+          "column": 29
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "num",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": 0,
+      "start": 3803,
+      "end": 3804,
+      "loc": {
+        "start": {
+          "line": 91,
+          "column": 29
+        },
+        "end": {
+          "line": 91,
+          "column": 30
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 3804,
+      "end": 3805,
+      "loc": {
+        "start": {
+          "line": 91,
+          "column": 30
+        },
+        "end": {
+          "line": 91,
+          "column": 31
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "num",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": 0,
+      "start": 3806,
+      "end": 3807,
+      "loc": {
+        "start": {
+          "line": 91,
+          "column": 32
+        },
+        "end": {
+          "line": 91,
+          "column": 33
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 3807,
+      "end": 3808,
+      "loc": {
+        "start": {
+          "line": 91,
+          "column": 33
+        },
+        "end": {
+          "line": 91,
+          "column": 34
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "num",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": 0,
+      "start": 3809,
+      "end": 3810,
+      "loc": {
+        "start": {
+          "line": 91,
+          "column": 35
+        },
+        "end": {
+          "line": 91,
+          "column": 36
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3810,
+      "end": 3811,
+      "loc": {
+        "start": {
+          "line": 91,
+          "column": 36
+        },
+        "end": {
+          "line": 91,
+          "column": 37
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "const",
+        "keyword": "const",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "const",
+      "start": 3816,
+      "end": 3821,
+      "loc": {
+        "start": {
+          "line": 92,
+          "column": 4
+        },
+        "end": {
+          "line": 92,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "r",
+      "start": 3822,
+      "end": 3823,
+      "loc": {
+        "start": {
+          "line": 92,
+          "column": 10
+        },
+        "end": {
+          "line": 92,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 3824,
+      "end": 3825,
+      "loc": {
+        "start": {
+          "line": 92,
+          "column": 12
+        },
+        "end": {
+          "line": 92,
+          "column": 13
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "this",
+        "keyword": "this",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "this",
+      "start": 3826,
+      "end": 3830,
+      "loc": {
+        "start": {
+          "line": 92,
+          "column": 14
+        },
+        "end": {
+          "line": 92,
+          "column": 18
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ".",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 3830,
+      "end": 3831,
+      "loc": {
+        "start": {
+          "line": 92,
+          "column": 18
+        },
+        "end": {
+          "line": 92,
+          "column": 19
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "height",
+      "start": 3831,
+      "end": 3837,
+      "loc": {
+        "start": {
+          "line": 92,
+          "column": 19
+        },
+        "end": {
+          "line": 92,
+          "column": 25
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "*",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": 10,
+        "updateContext": null
+      },
+      "value": "*",
+      "start": 3838,
+      "end": 3839,
+      "loc": {
+        "start": {
+          "line": 92,
+          "column": 26
+        },
+        "end": {
+          "line": 92,
+          "column": 27
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "num",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": 0.5,
+      "start": 3840,
+      "end": 3843,
+      "loc": {
+        "start": {
+          "line": 92,
+          "column": 28
+        },
+        "end": {
+          "line": 92,
+          "column": 31
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "return",
+        "keyword": "return",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "return",
+      "start": 3849,
+      "end": 3855,
+      "loc": {
+        "start": {
+          "line": 94,
+          "column": 4
+        },
+        "end": {
+          "line": 94,
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3856,
+      "end": 3857,
+      "loc": {
+        "start": {
+          "line": 94,
+          "column": 11
+        },
+        "end": {
+          "line": 94,
+          "column": 12
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "center",
+      "start": 3858,
+      "end": 3864,
+      "loc": {
+        "start": {
+          "line": 94,
+          "column": 13
+        },
+        "end": {
+          "line": 94,
+          "column": 19
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 3864,
+      "end": 3865,
+      "loc": {
+        "start": {
+          "line": 94,
+          "column": 19
+        },
+        "end": {
+          "line": 94,
+          "column": 20
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "c",
+      "start": 3866,
+      "end": 3867,
+      "loc": {
+        "start": {
+          "line": 94,
+          "column": 21
+        },
+        "end": {
+          "line": 94,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 3867,
+      "end": 3868,
+      "loc": {
+        "start": {
+          "line": 94,
+          "column": 22
+        },
+        "end": {
+          "line": 94,
+          "column": 23
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "radius",
+      "start": 3869,
+      "end": 3875,
+      "loc": {
+        "start": {
+          "line": 94,
+          "column": 24
+        },
+        "end": {
+          "line": 94,
+          "column": 30
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 3875,
+      "end": 3876,
+      "loc": {
+        "start": {
+          "line": 94,
+          "column": 30
+        },
+        "end": {
+          "line": 94,
+          "column": 31
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "r",
+      "start": 3877,
+      "end": 3878,
+      "loc": {
+        "start": {
+          "line": 94,
+          "column": 32
+        },
+        "end": {
+          "line": 94,
+          "column": 33
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3879,
+      "end": 3880,
+      "loc": {
+        "start": {
+          "line": 94,
+          "column": 34
+        },
+        "end": {
+          "line": 94,
+          "column": 35
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 3883,
+      "end": 3884,
+      "loc": {
+        "start": {
+          "line": 95,
+          "column": 2
+        },
+        "end": {
+          "line": 95,
           "column": 3
         }
       }
@@ -2818,15 +4932,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2448,
-      "end": 2449,
+      "start": 3885,
+      "end": 3886,
       "loc": {
         "start": {
-          "line": 67,
+          "line": 96,
           "column": 0
         },
         "end": {
-          "line": 67,
+          "line": 96,
           "column": 1
         }
       }
@@ -2844,15 +4958,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2450,
-      "end": 2450,
+      "start": 3887,
+      "end": 3887,
       "loc": {
         "start": {
-          "line": 68,
+          "line": 97,
           "column": 0
         },
         "end": {
-          "line": 68,
+          "line": 97,
           "column": 0
         }
       }

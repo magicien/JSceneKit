@@ -21,7 +21,7 @@ export default class NSValue extends NSObject {
   /**
    * @access public
    * @param {NSCoder} coder -
-   * @returns {} -
+   * @returns {Object} -
    */
   static initWithCoder(coder) {
     const special = coder._refObj['NS.special']

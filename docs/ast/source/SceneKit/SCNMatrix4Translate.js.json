@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 645,
+  "end": 754,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 21,
+      "line": 22,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 645,
+    "end": 754,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 21,
+        "line": 22,
         "column": 0
       }
     },
@@ -94,7 +94,76 @@
             "rawValue": "./SCNMatrix4",
             "raw": "'./SCNMatrix4'"
           },
-          "value": "./SCNMatrix4",
+          "value": "./SCNMatrix4"
+        }
+      },
+      {
+        "type": "ImportDeclaration",
+        "start": 52,
+        "end": 119,
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 0
+          },
+          "end": {
+            "line": 4,
+            "column": 67
+          }
+        },
+        "specifiers": [
+          {
+            "type": "ImportDefaultSpecifier",
+            "start": 59,
+            "end": 84,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 7
+              },
+              "end": {
+                "line": 4,
+                "column": 32
+              }
+            },
+            "local": {
+              "type": "Identifier",
+              "start": 59,
+              "end": 84,
+              "loc": {
+                "start": {
+                  "line": 4,
+                  "column": 7
+                },
+                "end": {
+                  "line": 4,
+                  "column": 32
+                },
+                "identifierName": "SCNMatrix4MakeTranslation"
+              },
+              "name": "SCNMatrix4MakeTranslation"
+            }
+          }
+        ],
+        "source": {
+          "type": "StringLiteral",
+          "start": 90,
+          "end": 119,
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 38
+            },
+            "end": {
+              "line": 4,
+              "column": 67
+            }
+          },
+          "extra": {
+            "rawValue": "./SCNMatrix4MakeTranslation",
+            "raw": "'./SCNMatrix4MakeTranslation'"
+          },
+          "value": "./SCNMatrix4MakeTranslation",
           "leadingComments": null,
           "trailingComments": null
         },
@@ -102,15 +171,15 @@
           {
             "type": "CommentBlock",
             "value": "*\n * Returns a new matrix created by concatenating the specified matrix with a translation transformation.\n * @access public\n * @param {SCNMatrix4} m - \n * @param {number} tx - \n * @param {number} ty - \n * @param {number} tz - \n * @returns {SCNMatrix4} - \n * @desc The resulting transformation consists of the specified translation followed by the transformation represented by the mat parameter.\n * @see https://developer.apple.com/reference/scenekit/1409717-scnmatrix4translate\n ",
-            "start": 53,
-            "end": 538,
+            "start": 121,
+            "end": 606,
             "loc": {
               "start": {
-                "line": 5,
+                "line": 6,
                 "column": 0
               },
               "end": {
-                "line": 15,
+                "line": 16,
                 "column": 3
               }
             }
@@ -119,44 +188,44 @@
       },
       {
         "type": "Identifier",
-        "start": 539,
-        "end": 608,
+        "start": 607,
+        "end": 717,
         "loc": {
           "start": {
-            "line": 16,
+            "line": 17,
             "column": 0
           },
           "end": {
-            "line": 18,
+            "line": 19,
             "column": 1
           }
         },
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 545,
-            "end": 608,
+            "start": 613,
+            "end": 717,
             "loc": {
               "start": {
-                "line": 16,
+                "line": 17,
                 "column": 6
               },
               "end": {
-                "line": 18,
+                "line": 19,
                 "column": 1
               }
             },
             "id": {
               "type": "Identifier",
-              "start": 545,
-              "end": 564,
+              "start": 613,
+              "end": 632,
               "loc": {
                 "start": {
-                  "line": 16,
+                  "line": 17,
                   "column": 6
                 },
                 "end": {
-                  "line": 16,
+                  "line": 17,
                   "column": 25
                 },
                 "identifierName": "SCNMatrix4Translate"
@@ -166,15 +235,15 @@
             },
             "init": {
               "type": "FunctionExpression",
-              "start": 567,
-              "end": 608,
+              "start": 635,
+              "end": 717,
               "loc": {
                 "start": {
-                  "line": 16,
+                  "line": 17,
                   "column": 28
                 },
                 "end": {
-                  "line": 18,
+                  "line": 19,
                   "column": 1
                 }
               },
@@ -185,15 +254,15 @@
               "params": [
                 {
                   "type": "Identifier",
-                  "start": 576,
-                  "end": 577,
+                  "start": 644,
+                  "end": 645,
                   "loc": {
                     "start": {
-                      "line": 16,
+                      "line": 17,
                       "column": 37
                     },
                     "end": {
-                      "line": 16,
+                      "line": 17,
                       "column": 38
                     },
                     "identifierName": "m"
@@ -202,15 +271,15 @@
                 },
                 {
                   "type": "Identifier",
-                  "start": 579,
-                  "end": 581,
+                  "start": 647,
+                  "end": 649,
                   "loc": {
                     "start": {
-                      "line": 16,
+                      "line": 17,
                       "column": 40
                     },
                     "end": {
-                      "line": 16,
+                      "line": 17,
                       "column": 42
                     },
                     "identifierName": "tx"
@@ -219,15 +288,15 @@
                 },
                 {
                   "type": "Identifier",
-                  "start": 583,
-                  "end": 585,
+                  "start": 651,
+                  "end": 653,
                   "loc": {
                     "start": {
-                      "line": 16,
+                      "line": 17,
                       "column": 44
                     },
                     "end": {
-                      "line": 16,
+                      "line": 17,
                       "column": 46
                     },
                     "identifierName": "ty"
@@ -236,15 +305,15 @@
                 },
                 {
                   "type": "Identifier",
-                  "start": 587,
-                  "end": 589,
+                  "start": 655,
+                  "end": 657,
                   "loc": {
                     "start": {
-                      "line": 16,
+                      "line": 17,
                       "column": 48
                     },
                     "end": {
-                      "line": 16,
+                      "line": 17,
                       "column": 50
                     },
                     "identifierName": "tz"
@@ -254,47 +323,184 @@
               ],
               "body": {
                 "type": "BlockStatement",
-                "start": 591,
-                "end": 608,
+                "start": 659,
+                "end": 717,
                 "loc": {
                   "start": {
-                    "line": 16,
+                    "line": 17,
                     "column": 52
                   },
                   "end": {
-                    "line": 18,
+                    "line": 19,
                     "column": 1
                   }
                 },
                 "body": [
                   {
                     "type": "ReturnStatement",
-                    "start": 595,
-                    "end": 606,
+                    "start": 663,
+                    "end": 715,
                     "loc": {
                       "start": {
-                        "line": 17,
+                        "line": 18,
                         "column": 2
                       },
                       "end": {
-                        "line": 17,
-                        "column": 13
+                        "line": 18,
+                        "column": 54
                       }
                     },
                     "argument": {
-                      "type": "NullLiteral",
-                      "start": 602,
-                      "end": 606,
+                      "type": "CallExpression",
+                      "start": 670,
+                      "end": 715,
                       "loc": {
                         "start": {
-                          "line": 17,
+                          "line": 18,
                           "column": 9
                         },
                         "end": {
-                          "line": 17,
-                          "column": 13
+                          "line": 18,
+                          "column": 54
                         }
-                      }
+                      },
+                      "callee": {
+                        "type": "MemberExpression",
+                        "start": 670,
+                        "end": 676,
+                        "loc": {
+                          "start": {
+                            "line": 18,
+                            "column": 9
+                          },
+                          "end": {
+                            "line": 18,
+                            "column": 15
+                          }
+                        },
+                        "object": {
+                          "type": "Identifier",
+                          "start": 670,
+                          "end": 671,
+                          "loc": {
+                            "start": {
+                              "line": 18,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 18,
+                              "column": 10
+                            },
+                            "identifierName": "m"
+                          },
+                          "name": "m"
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "start": 672,
+                          "end": 676,
+                          "loc": {
+                            "start": {
+                              "line": 18,
+                              "column": 11
+                            },
+                            "end": {
+                              "line": 18,
+                              "column": 15
+                            },
+                            "identifierName": "mult"
+                          },
+                          "name": "mult"
+                        },
+                        "computed": false
+                      },
+                      "arguments": [
+                        {
+                          "type": "CallExpression",
+                          "start": 677,
+                          "end": 714,
+                          "loc": {
+                            "start": {
+                              "line": 18,
+                              "column": 16
+                            },
+                            "end": {
+                              "line": 18,
+                              "column": 53
+                            }
+                          },
+                          "callee": {
+                            "type": "Identifier",
+                            "start": 677,
+                            "end": 702,
+                            "loc": {
+                              "start": {
+                                "line": 18,
+                                "column": 16
+                              },
+                              "end": {
+                                "line": 18,
+                                "column": 41
+                              },
+                              "identifierName": "SCNMatrix4MakeTranslation"
+                            },
+                            "name": "SCNMatrix4MakeTranslation"
+                          },
+                          "arguments": [
+                            {
+                              "type": "Identifier",
+                              "start": 703,
+                              "end": 705,
+                              "loc": {
+                                "start": {
+                                  "line": 18,
+                                  "column": 42
+                                },
+                                "end": {
+                                  "line": 18,
+                                  "column": 44
+                                },
+                                "identifierName": "tx"
+                              },
+                              "name": "tx"
+                            },
+                            {
+                              "type": "Identifier",
+                              "start": 707,
+                              "end": 709,
+                              "loc": {
+                                "start": {
+                                  "line": 18,
+                                  "column": 46
+                                },
+                                "end": {
+                                  "line": 18,
+                                  "column": 48
+                                },
+                                "identifierName": "ty"
+                              },
+                              "name": "ty"
+                            },
+                            {
+                              "type": "Identifier",
+                              "start": 711,
+                              "end": 713,
+                              "loc": {
+                                "start": {
+                                  "line": 18,
+                                  "column": 50
+                                },
+                                "end": {
+                                  "line": 18,
+                                  "column": 52
+                                },
+                                "identifierName": "tz"
+                              },
+                              "name": "tz"
+                            }
+                          ]
+                        }
+                      ]
                     }
                   }
                 ],
@@ -311,29 +517,29 @@
       },
       {
         "type": "Identifier",
-        "start": 610,
-        "end": 644,
+        "start": 719,
+        "end": 753,
         "loc": {
           "start": {
-            "line": 20,
+            "line": 21,
             "column": 0
           },
           "end": {
-            "line": 20,
+            "line": 21,
             "column": 34
           }
         },
         "declaration": {
           "type": "Identifier",
-          "start": 625,
-          "end": 644,
+          "start": 734,
+          "end": 753,
           "loc": {
             "start": {
-              "line": 20,
+              "line": 21,
               "column": 15
             },
             "end": {
-              "line": 20,
+              "line": 21,
               "column": 34
             },
             "identifierName": "SCNMatrix4Translate"
@@ -346,58 +552,58 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 610,
-        "end": 644,
+        "start": 719,
+        "end": 753,
         "loc": {
           "start": {
-            "line": 20,
+            "line": 21,
             "column": 0
           },
           "end": {
-            "line": 20,
+            "line": 21,
             "column": 34
           }
         },
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 539,
-          "end": 608,
+          "start": 607,
+          "end": 717,
           "loc": {
             "start": {
-              "line": 16,
+              "line": 17,
               "column": 0
             },
             "end": {
-              "line": 18,
+              "line": 19,
               "column": 1
             }
           },
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 545,
-              "end": 608,
+              "start": 613,
+              "end": 717,
               "loc": {
                 "start": {
-                  "line": 16,
+                  "line": 17,
                   "column": 6
                 },
                 "end": {
-                  "line": 18,
+                  "line": 19,
                   "column": 1
                 }
               },
               "id": {
                 "type": "Identifier",
-                "start": 545,
-                "end": 564,
+                "start": 613,
+                "end": 632,
                 "loc": {
                   "start": {
-                    "line": 16,
+                    "line": 17,
                     "column": 6
                   },
                   "end": {
-                    "line": 16,
+                    "line": 17,
                     "column": 25
                   },
                   "identifierName": "SCNMatrix4Translate"
@@ -407,29 +613,29 @@
               },
               "init": {
                 "type": "FunctionExpression",
-                "start": 567,
-                "end": 608,
+                "start": 635,
+                "end": 717,
                 "loc": {
                   "start": {
-                    "line": 16,
+                    "line": 17,
                     "column": 28
                   },
                   "end": {
-                    "line": 18,
+                    "line": 19,
                     "column": 1
                   }
                 },
                 "id": {
                   "type": "Identifier",
-                  "start": 545,
-                  "end": 564,
+                  "start": 613,
+                  "end": 632,
                   "loc": {
                     "start": {
-                      "line": 16,
+                      "line": 17,
                       "column": 6
                     },
                     "end": {
-                      "line": 16,
+                      "line": 17,
                       "column": 25
                     },
                     "identifierName": "SCNMatrix4Translate"
@@ -443,15 +649,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 576,
-                    "end": 577,
+                    "start": 644,
+                    "end": 645,
                     "loc": {
                       "start": {
-                        "line": 16,
+                        "line": 17,
                         "column": 37
                       },
                       "end": {
-                        "line": 16,
+                        "line": 17,
                         "column": 38
                       },
                       "identifierName": "m"
@@ -460,15 +666,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 579,
-                    "end": 581,
+                    "start": 647,
+                    "end": 649,
                     "loc": {
                       "start": {
-                        "line": 16,
+                        "line": 17,
                         "column": 40
                       },
                       "end": {
-                        "line": 16,
+                        "line": 17,
                         "column": 42
                       },
                       "identifierName": "tx"
@@ -477,15 +683,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 583,
-                    "end": 585,
+                    "start": 651,
+                    "end": 653,
                     "loc": {
                       "start": {
-                        "line": 16,
+                        "line": 17,
                         "column": 44
                       },
                       "end": {
-                        "line": 16,
+                        "line": 17,
                         "column": 46
                       },
                       "identifierName": "ty"
@@ -494,15 +700,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 587,
-                    "end": 589,
+                    "start": 655,
+                    "end": 657,
                     "loc": {
                       "start": {
-                        "line": 16,
+                        "line": 17,
                         "column": 48
                       },
                       "end": {
-                        "line": 16,
+                        "line": 17,
                         "column": 50
                       },
                       "identifierName": "tz"
@@ -512,47 +718,184 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 591,
-                  "end": 608,
+                  "start": 659,
+                  "end": 717,
                   "loc": {
                     "start": {
-                      "line": 16,
+                      "line": 17,
                       "column": 52
                     },
                     "end": {
-                      "line": 18,
+                      "line": 19,
                       "column": 1
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 595,
-                      "end": 606,
+                      "start": 663,
+                      "end": 715,
                       "loc": {
                         "start": {
-                          "line": 17,
+                          "line": 18,
                           "column": 2
                         },
                         "end": {
-                          "line": 17,
-                          "column": 13
+                          "line": 18,
+                          "column": 54
                         }
                       },
                       "argument": {
-                        "type": "NullLiteral",
-                        "start": 602,
-                        "end": 606,
+                        "type": "CallExpression",
+                        "start": 670,
+                        "end": 715,
                         "loc": {
                           "start": {
-                            "line": 17,
+                            "line": 18,
                             "column": 9
                           },
                           "end": {
-                            "line": 17,
-                            "column": 13
+                            "line": 18,
+                            "column": 54
                           }
-                        }
+                        },
+                        "callee": {
+                          "type": "MemberExpression",
+                          "start": 670,
+                          "end": 676,
+                          "loc": {
+                            "start": {
+                              "line": 18,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 18,
+                              "column": 15
+                            }
+                          },
+                          "object": {
+                            "type": "Identifier",
+                            "start": 670,
+                            "end": 671,
+                            "loc": {
+                              "start": {
+                                "line": 18,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 18,
+                                "column": 10
+                              },
+                              "identifierName": "m"
+                            },
+                            "name": "m"
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "start": 672,
+                            "end": 676,
+                            "loc": {
+                              "start": {
+                                "line": 18,
+                                "column": 11
+                              },
+                              "end": {
+                                "line": 18,
+                                "column": 15
+                              },
+                              "identifierName": "mult"
+                            },
+                            "name": "mult"
+                          },
+                          "computed": false
+                        },
+                        "arguments": [
+                          {
+                            "type": "CallExpression",
+                            "start": 677,
+                            "end": 714,
+                            "loc": {
+                              "start": {
+                                "line": 18,
+                                "column": 16
+                              },
+                              "end": {
+                                "line": 18,
+                                "column": 53
+                              }
+                            },
+                            "callee": {
+                              "type": "Identifier",
+                              "start": 677,
+                              "end": 702,
+                              "loc": {
+                                "start": {
+                                  "line": 18,
+                                  "column": 16
+                                },
+                                "end": {
+                                  "line": 18,
+                                  "column": 41
+                                },
+                                "identifierName": "SCNMatrix4MakeTranslation"
+                              },
+                              "name": "SCNMatrix4MakeTranslation"
+                            },
+                            "arguments": [
+                              {
+                                "type": "Identifier",
+                                "start": 703,
+                                "end": 705,
+                                "loc": {
+                                  "start": {
+                                    "line": 18,
+                                    "column": 42
+                                  },
+                                  "end": {
+                                    "line": 18,
+                                    "column": 44
+                                  },
+                                  "identifierName": "tx"
+                                },
+                                "name": "tx"
+                              },
+                              {
+                                "type": "Identifier",
+                                "start": 707,
+                                "end": 709,
+                                "loc": {
+                                  "start": {
+                                    "line": 18,
+                                    "column": 46
+                                  },
+                                  "end": {
+                                    "line": 18,
+                                    "column": 48
+                                  },
+                                  "identifierName": "ty"
+                                },
+                                "name": "ty"
+                              },
+                              {
+                                "type": "Identifier",
+                                "start": 711,
+                                "end": 713,
+                                "loc": {
+                                  "start": {
+                                    "line": 18,
+                                    "column": 50
+                                  },
+                                  "end": {
+                                    "line": 18,
+                                    "column": 52
+                                  },
+                                  "identifierName": "tz"
+                                },
+                                "name": "tz"
+                              }
+                            ]
+                          }
+                        ]
                       }
                     }
                   ],
@@ -567,15 +910,15 @@
             {
               "type": "CommentBlock",
               "value": "*\n * Returns a new matrix created by concatenating the specified matrix with a translation transformation.\n * @access public\n * @param {SCNMatrix4} m - \n * @param {number} tx - \n * @param {number} ty - \n * @param {number} tz - \n * @returns {SCNMatrix4} - \n * @desc The resulting transformation consists of the specified translation followed by the transformation represented by the mat parameter.\n * @see https://developer.apple.com/reference/scenekit/1409717-scnmatrix4translate\n ",
-              "start": 53,
-              "end": 538,
+              "start": 121,
+              "end": 606,
               "loc": {
                 "start": {
-                  "line": 5,
+                  "line": 6,
                   "column": 0
                 },
                 "end": {
-                  "line": 15,
+                  "line": 16,
                   "column": 3
                 }
               }
@@ -627,15 +970,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n * Returns a new matrix created by concatenating the specified matrix with a translation transformation.\n * @access public\n * @param {SCNMatrix4} m - \n * @param {number} tx - \n * @param {number} ty - \n * @param {number} tz - \n * @returns {SCNMatrix4} - \n * @desc The resulting transformation consists of the specified translation followed by the transformation represented by the mat parameter.\n * @see https://developer.apple.com/reference/scenekit/1409717-scnmatrix4translate\n ",
-      "start": 53,
-      "end": 538,
+      "start": 121,
+      "end": 606,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 6,
           "column": 0
         },
         "end": {
-          "line": 15,
+          "line": 16,
           "column": 3
         }
       }
@@ -777,17 +1120,124 @@
       }
     },
     {
-      "type": "CommentBlock",
-      "value": "*\n * Returns a new matrix created by concatenating the specified matrix with a translation transformation.\n * @access public\n * @param {SCNMatrix4} m - \n * @param {number} tx - \n * @param {number} ty - \n * @param {number} tz - \n * @returns {SCNMatrix4} - \n * @desc The resulting transformation consists of the specified translation followed by the transformation represented by the mat parameter.\n * @see https://developer.apple.com/reference/scenekit/1409717-scnmatrix4translate\n ",
-      "start": 53,
-      "end": 538,
+      "type": {
+        "label": "import",
+        "keyword": "import",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "import",
+      "start": 52,
+      "end": 58,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 4,
           "column": 0
         },
         "end": {
-          "line": 15,
+          "line": 4,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "SCNMatrix4MakeTranslation",
+      "start": 59,
+      "end": 84,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 7
+        },
+        "end": {
+          "line": 4,
+          "column": 32
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "from",
+      "start": 85,
+      "end": 89,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 33
+        },
+        "end": {
+          "line": 4,
+          "column": 37
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "./SCNMatrix4MakeTranslation",
+      "start": 90,
+      "end": 119,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 38
+        },
+        "end": {
+          "line": 4,
+          "column": 67
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * Returns a new matrix created by concatenating the specified matrix with a translation transformation.\n * @access public\n * @param {SCNMatrix4} m - \n * @param {number} tx - \n * @param {number} ty - \n * @param {number} tz - \n * @returns {SCNMatrix4} - \n * @desc The resulting transformation consists of the specified translation followed by the transformation represented by the mat parameter.\n * @see https://developer.apple.com/reference/scenekit/1409717-scnmatrix4translate\n ",
+      "start": 121,
+      "end": 606,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 16,
           "column": 3
         }
       }
@@ -807,15 +1257,15 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 539,
-      "end": 544,
+      "start": 607,
+      "end": 612,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 0
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 5
         }
       }
@@ -833,15 +1283,15 @@
         "binop": null
       },
       "value": "SCNMatrix4Translate",
-      "start": 545,
-      "end": 564,
+      "start": 613,
+      "end": 632,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 6
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 25
         }
       }
@@ -860,15 +1310,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 565,
-      "end": 566,
+      "start": 633,
+      "end": 634,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 26
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 27
         }
       }
@@ -887,15 +1337,15 @@
         "binop": null
       },
       "value": "function",
-      "start": 567,
-      "end": 575,
+      "start": 635,
+      "end": 643,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 28
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 36
         }
       }
@@ -912,15 +1362,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 575,
-      "end": 576,
+      "start": 643,
+      "end": 644,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 36
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 37
         }
       }
@@ -938,15 +1388,15 @@
         "binop": null
       },
       "value": "m",
-      "start": 576,
-      "end": 577,
+      "start": 644,
+      "end": 645,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 37
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 38
         }
       }
@@ -964,15 +1414,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 577,
-      "end": 578,
+      "start": 645,
+      "end": 646,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 38
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 39
         }
       }
@@ -990,15 +1440,15 @@
         "binop": null
       },
       "value": "tx",
-      "start": 579,
-      "end": 581,
+      "start": 647,
+      "end": 649,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 40
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 42
         }
       }
@@ -1016,15 +1466,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 581,
-      "end": 582,
+      "start": 649,
+      "end": 650,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 42
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 43
         }
       }
@@ -1042,15 +1492,15 @@
         "binop": null
       },
       "value": "ty",
-      "start": 583,
-      "end": 585,
+      "start": 651,
+      "end": 653,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 44
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 46
         }
       }
@@ -1068,15 +1518,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 585,
-      "end": 586,
+      "start": 653,
+      "end": 654,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 46
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 47
         }
       }
@@ -1094,15 +1544,15 @@
         "binop": null
       },
       "value": "tz",
-      "start": 587,
-      "end": 589,
+      "start": 655,
+      "end": 657,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 48
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 50
         }
       }
@@ -1119,15 +1569,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 589,
-      "end": 590,
+      "start": 657,
+      "end": 658,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 50
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 51
         }
       }
@@ -1144,15 +1594,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 591,
-      "end": 592,
+      "start": 659,
+      "end": 660,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 52
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 53
         }
       }
@@ -1172,25 +1622,50 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 595,
-      "end": 601,
+      "start": 663,
+      "end": 669,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 18,
           "column": 2
         },
         "end": {
-          "line": 17,
+          "line": 18,
           "column": 8
         }
       }
     },
     {
       "type": {
-        "label": "null",
-        "keyword": "null",
+        "label": "name",
         "beforeExpr": false,
         "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "m",
+      "start": 670,
+      "end": 671,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 9
+        },
+        "end": {
+          "line": 18,
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ".",
+        "beforeExpr": false,
+        "startsExpr": false,
         "rightAssociative": false,
         "isLoop": false,
         "isAssign": false,
@@ -1199,17 +1674,298 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "null",
-      "start": 602,
-      "end": 606,
+      "start": 671,
+      "end": 672,
       "loc": {
         "start": {
-          "line": 17,
-          "column": 9
+          "line": 18,
+          "column": 10
         },
         "end": {
-          "line": 17,
-          "column": 13
+          "line": 18,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "mult",
+      "start": 672,
+      "end": 676,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 11
+        },
+        "end": {
+          "line": 18,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 676,
+      "end": 677,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 15
+        },
+        "end": {
+          "line": 18,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "SCNMatrix4MakeTranslation",
+      "start": 677,
+      "end": 702,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 16
+        },
+        "end": {
+          "line": 18,
+          "column": 41
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 702,
+      "end": 703,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 41
+        },
+        "end": {
+          "line": 18,
+          "column": 42
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "tx",
+      "start": 703,
+      "end": 705,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 42
+        },
+        "end": {
+          "line": 18,
+          "column": 44
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 705,
+      "end": 706,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 44
+        },
+        "end": {
+          "line": 18,
+          "column": 45
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "ty",
+      "start": 707,
+      "end": 709,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 46
+        },
+        "end": {
+          "line": 18,
+          "column": 48
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 709,
+      "end": 710,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 48
+        },
+        "end": {
+          "line": 18,
+          "column": 49
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "tz",
+      "start": 711,
+      "end": 713,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 50
+        },
+        "end": {
+          "line": 18,
+          "column": 52
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 713,
+      "end": 714,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 52
+        },
+        "end": {
+          "line": 18,
+          "column": 53
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 714,
+      "end": 715,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 53
+        },
+        "end": {
+          "line": 18,
+          "column": 54
         }
       }
     },
@@ -1225,15 +1981,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 607,
-      "end": 608,
+      "start": 716,
+      "end": 717,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 19,
           "column": 0
         },
         "end": {
-          "line": 18,
+          "line": 19,
           "column": 1
         }
       }
@@ -1253,15 +2009,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 610,
-      "end": 616,
+      "start": 719,
+      "end": 725,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 21,
           "column": 0
         },
         "end": {
-          "line": 20,
+          "line": 21,
           "column": 6
         }
       }
@@ -1281,15 +2037,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 617,
-      "end": 624,
+      "start": 726,
+      "end": 733,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 21,
           "column": 7
         },
         "end": {
-          "line": 20,
+          "line": 21,
           "column": 14
         }
       }
@@ -1307,15 +2063,15 @@
         "binop": null
       },
       "value": "SCNMatrix4Translate",
-      "start": 625,
-      "end": 644,
+      "start": 734,
+      "end": 753,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 21,
           "column": 15
         },
         "end": {
-          "line": 20,
+          "line": 21,
           "column": 34
         }
       }
@@ -1333,15 +2089,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 645,
-      "end": 645,
+      "start": 754,
+      "end": 754,
       "loc": {
         "start": {
-          "line": 21,
+          "line": 22,
           "column": 0
         },
         "end": {
-          "line": 21,
+          "line": 22,
           "column": 0
         }
       }

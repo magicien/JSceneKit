@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 4146,
+  "end": 4259,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 103,
+      "line": 113,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 4146,
+    "end": 4259,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 103,
+        "line": 113,
         "column": 0
       }
     },
@@ -189,28 +189,28 @@
       {
         "type": "ExportDefaultDeclaration",
         "start": 306,
-        "end": 4145,
+        "end": 4258,
         "loc": {
           "start": {
             "line": 13,
             "column": 0
           },
           "end": {
-            "line": 102,
+            "line": 112,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
           "start": 321,
-          "end": 4145,
+          "end": 4258,
           "loc": {
             "start": {
               "line": 13,
               "column": 15
             },
             "end": {
-              "line": 102,
+              "line": 112,
               "column": 1
             }
           },
@@ -252,22 +252,22 @@
           "body": {
             "type": "ClassBody",
             "start": 359,
-            "end": 4145,
+            "end": 4258,
             "loc": {
               "start": {
                 "line": 13,
                 "column": 53
               },
               "end": {
-                "line": 102,
+                "line": 112,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 918,
-                "end": 1616,
+                "start": 915,
+                "end": 1633,
                 "loc": {
                   "start": {
                     "line": 25,
@@ -281,8 +281,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 918,
-                  "end": 922,
+                  "start": 915,
+                  "end": 926,
                   "loc": {
                     "start": {
                       "line": 25,
@@ -290,15 +290,15 @@
                     },
                     "end": {
                       "line": 25,
-                      "column": 6
+                      "column": 13
                     },
-                    "identifierName": "init"
+                    "identifierName": "constructor"
                   },
-                  "name": "init",
+                  "name": "constructor",
                   "leadingComments": null
                 },
                 "static": false,
-                "kind": "method",
+                "kind": "constructor",
                 "id": null,
                 "generator": false,
                 "expression": false,
@@ -306,16 +306,16 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 923,
-                    "end": 929,
+                    "start": 927,
+                    "end": 933,
                     "loc": {
                       "start": {
                         "line": 25,
-                        "column": 7
+                        "column": 14
                       },
                       "end": {
                         "line": 25,
-                        "column": 13
+                        "column": 20
                       },
                       "identifierName": "source"
                     },
@@ -324,12 +324,12 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 931,
-                  "end": 1616,
+                  "start": 935,
+                  "end": 1633,
                   "loc": {
                     "start": {
                       "line": 25,
-                      "column": 15
+                      "column": 22
                     },
                     "end": {
                       "line": 48,
@@ -339,58 +339,123 @@
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 973,
-                      "end": 997,
+                      "start": 941,
+                      "end": 948,
                       "loc": {
                         "start": {
-                          "line": 29,
+                          "line": 26,
                           "column": 4
                         },
                         "end": {
-                          "line": 29,
-                          "column": 28
+                          "line": 26,
+                          "column": 11
+                        }
+                      },
+                      "expression": {
+                        "type": "CallExpression",
+                        "start": 941,
+                        "end": 948,
+                        "loc": {
+                          "start": {
+                            "line": 26,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 26,
+                            "column": 11
+                          }
+                        },
+                        "callee": {
+                          "type": "Super",
+                          "start": 941,
+                          "end": 946,
+                          "loc": {
+                            "start": {
+                              "line": 26,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 26,
+                              "column": 9
+                            }
+                          }
+                        },
+                        "arguments": [],
+                        "trailingComments": null
+                      },
+                      "trailingComments": [
+                        {
+                          "type": "CommentLine",
+                          "value": " Working with Audio Sources",
+                          "start": 954,
+                          "end": 983,
+                          "loc": {
+                            "start": {
+                              "line": 28,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 28,
+                              "column": 33
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "start": 989,
+                      "end": 1015,
+                      "loc": {
+                        "start": {
+                          "line": 30,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 30,
+                          "column": 30
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 973,
-                        "end": 997,
+                        "start": 989,
+                        "end": 1015,
                         "loc": {
                           "start": {
-                            "line": 29,
+                            "line": 30,
                             "column": 4
                           },
                           "end": {
-                            "line": 29,
-                            "column": 28
+                            "line": 30,
+                            "column": 30
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 973,
-                          "end": 990,
+                          "start": 989,
+                          "end": 1006,
                           "loc": {
                             "start": {
-                              "line": 29,
+                              "line": 30,
                               "column": 4
                             },
                             "end": {
-                              "line": 29,
+                              "line": 30,
                               "column": 21
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 973,
-                            "end": 977,
+                            "start": 989,
+                            "end": 993,
                             "loc": {
                               "start": {
-                                "line": 29,
+                                "line": 30,
                                 "column": 4
                               },
                               "end": {
-                                "line": 29,
+                                "line": 30,
                                 "column": 8
                               }
                             },
@@ -398,15 +463,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 978,
-                            "end": 990,
+                            "start": 994,
+                            "end": 1006,
                             "loc": {
                               "start": {
-                                "line": 29,
+                                "line": 30,
                                 "column": 9
                               },
                               "end": {
-                                "line": 29,
+                                "line": 30,
                                 "column": 21
                               },
                               "identifierName": "_audioSource"
@@ -417,19 +482,21 @@
                           "leadingComments": null
                         },
                         "right": {
-                          "type": "NullLiteral",
-                          "start": 993,
-                          "end": 997,
+                          "type": "Identifier",
+                          "start": 1009,
+                          "end": 1015,
                           "loc": {
                             "start": {
-                              "line": 29,
+                              "line": 30,
                               "column": 24
                             },
                             "end": {
-                              "line": 29,
-                              "column": 28
-                            }
-                          }
+                              "line": 30,
+                              "column": 30
+                            },
+                            "identifierName": "source"
+                          },
+                          "name": "source"
                         },
                         "leadingComments": null
                       },
@@ -437,15 +504,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Working with Audio Sources",
-                          "start": 938,
-                          "end": 967,
+                          "start": 954,
+                          "end": 983,
                           "loc": {
                             "start": {
-                              "line": 27,
+                              "line": 28,
                               "column": 4
                             },
                             "end": {
-                              "line": 27,
+                              "line": 28,
                               "column": 33
                             }
                           }
@@ -454,73 +521,73 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1002,
-                      "end": 1024,
+                      "start": 1020,
+                      "end": 1042,
                       "loc": {
                         "start": {
-                          "line": 30,
+                          "line": 31,
                           "column": 4
                         },
                         "end": {
-                          "line": 30,
+                          "line": 31,
                           "column": 26
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1002,
-                        "end": 1024,
+                        "start": 1020,
+                        "end": 1042,
                         "loc": {
                           "start": {
-                            "line": 30,
+                            "line": 31,
                             "column": 4
                           },
                           "end": {
-                            "line": 30,
+                            "line": 31,
                             "column": 26
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1002,
-                          "end": 1017,
+                          "start": 1020,
+                          "end": 1035,
                           "loc": {
                             "start": {
-                              "line": 30,
+                              "line": 31,
                               "column": 4
                             },
                             "end": {
-                              "line": 30,
+                              "line": 31,
                               "column": 19
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1002,
-                            "end": 1006,
+                            "start": 1020,
+                            "end": 1024,
                             "loc": {
                               "start": {
-                                "line": 30,
+                                "line": 31,
                                 "column": 4
                               },
                               "end": {
-                                "line": 30,
+                                "line": 31,
                                 "column": 8
                               }
                             }
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1007,
-                            "end": 1017,
+                            "start": 1025,
+                            "end": 1035,
                             "loc": {
                               "start": {
-                                "line": 30,
+                                "line": 31,
                                 "column": 9
                               },
                               "end": {
-                                "line": 30,
+                                "line": 31,
                                 "column": 19
                               },
                               "identifierName": "_audioNode"
@@ -531,15 +598,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 1020,
-                          "end": 1024,
+                          "start": 1038,
+                          "end": 1042,
                           "loc": {
                             "start": {
-                              "line": 30,
+                              "line": 31,
                               "column": 22
                             },
                             "end": {
-                              "line": 30,
+                              "line": 31,
                               "column": 26
                             }
                           },
@@ -552,15 +619,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Responding to Playback",
-                          "start": 1030,
-                          "end": 1055,
+                          "start": 1048,
+                          "end": 1073,
                           "loc": {
                             "start": {
-                              "line": 32,
+                              "line": 33,
                               "column": 4
                             },
                             "end": {
-                              "line": 32,
+                              "line": 33,
                               "column": 29
                             }
                           }
@@ -568,15 +635,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A block called by SceneKit when playback of the player’s audio source is about to begin.\n     * @type {?function(): void}\n     * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1524115-willstartplayback\n     ",
-                          "start": 1061,
-                          "end": 1301,
+                          "start": 1079,
+                          "end": 1319,
                           "loc": {
                             "start": {
-                              "line": 34,
+                              "line": 35,
                               "column": 4
                             },
                             "end": {
-                              "line": 38,
+                              "line": 39,
                               "column": 7
                             }
                           }
@@ -585,58 +652,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1306,
-                      "end": 1335,
+                      "start": 1324,
+                      "end": 1353,
                       "loc": {
                         "start": {
-                          "line": 39,
+                          "line": 40,
                           "column": 4
                         },
                         "end": {
-                          "line": 39,
+                          "line": 40,
                           "column": 33
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1306,
-                        "end": 1335,
+                        "start": 1324,
+                        "end": 1353,
                         "loc": {
                           "start": {
-                            "line": 39,
+                            "line": 40,
                             "column": 4
                           },
                           "end": {
-                            "line": 39,
+                            "line": 40,
                             "column": 33
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1306,
-                          "end": 1328,
+                          "start": 1324,
+                          "end": 1346,
                           "loc": {
                             "start": {
-                              "line": 39,
+                              "line": 40,
                               "column": 4
                             },
                             "end": {
-                              "line": 39,
+                              "line": 40,
                               "column": 26
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1306,
-                            "end": 1310,
+                            "start": 1324,
+                            "end": 1328,
                             "loc": {
                               "start": {
-                                "line": 39,
+                                "line": 40,
                                 "column": 4
                               },
                               "end": {
-                                "line": 39,
+                                "line": 40,
                                 "column": 8
                               }
                             },
@@ -644,15 +711,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1311,
-                            "end": 1328,
+                            "start": 1329,
+                            "end": 1346,
                             "loc": {
                               "start": {
-                                "line": 39,
+                                "line": 40,
                                 "column": 9
                               },
                               "end": {
-                                "line": 39,
+                                "line": 40,
                                 "column": 26
                               },
                               "identifierName": "willStartPlayback"
@@ -664,15 +731,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 1331,
-                          "end": 1335,
+                          "start": 1349,
+                          "end": 1353,
                           "loc": {
                             "start": {
-                              "line": 39,
+                              "line": 40,
                               "column": 29
                             },
                             "end": {
-                              "line": 39,
+                              "line": 40,
                               "column": 33
                             }
                           },
@@ -686,15 +753,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Responding to Playback",
-                          "start": 1030,
-                          "end": 1055,
+                          "start": 1048,
+                          "end": 1073,
                           "loc": {
                             "start": {
-                              "line": 32,
+                              "line": 33,
                               "column": 4
                             },
                             "end": {
-                              "line": 32,
+                              "line": 33,
                               "column": 29
                             }
                           }
@@ -702,15 +769,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A block called by SceneKit when playback of the player’s audio source is about to begin.\n     * @type {?function(): void}\n     * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1524115-willstartplayback\n     ",
-                          "start": 1061,
-                          "end": 1301,
+                          "start": 1079,
+                          "end": 1319,
                           "loc": {
                             "start": {
-                              "line": 34,
+                              "line": 35,
                               "column": 4
                             },
                             "end": {
-                              "line": 38,
+                              "line": 39,
                               "column": 7
                             }
                           }
@@ -720,15 +787,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A block called by SceneKit when playback of the player’s audio source has completed.\n     * @type {?function(): void}\n     * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1522818-didfinishplayback\n     ",
-                          "start": 1341,
-                          "end": 1577,
+                          "start": 1359,
+                          "end": 1595,
                           "loc": {
                             "start": {
-                              "line": 41,
+                              "line": 42,
                               "column": 4
                             },
                             "end": {
-                              "line": 45,
+                              "line": 46,
                               "column": 7
                             }
                           }
@@ -737,58 +804,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1582,
-                      "end": 1611,
+                      "start": 1600,
+                      "end": 1629,
                       "loc": {
                         "start": {
-                          "line": 46,
+                          "line": 47,
                           "column": 4
                         },
                         "end": {
-                          "line": 46,
+                          "line": 47,
                           "column": 33
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1582,
-                        "end": 1611,
+                        "start": 1600,
+                        "end": 1629,
                         "loc": {
                           "start": {
-                            "line": 46,
+                            "line": 47,
                             "column": 4
                           },
                           "end": {
-                            "line": 46,
+                            "line": 47,
                             "column": 33
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1582,
-                          "end": 1604,
+                          "start": 1600,
+                          "end": 1622,
                           "loc": {
                             "start": {
-                              "line": 46,
+                              "line": 47,
                               "column": 4
                             },
                             "end": {
-                              "line": 46,
+                              "line": 47,
                               "column": 26
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1582,
-                            "end": 1586,
+                            "start": 1600,
+                            "end": 1604,
                             "loc": {
                               "start": {
-                                "line": 46,
+                                "line": 47,
                                 "column": 4
                               },
                               "end": {
-                                "line": 46,
+                                "line": 47,
                                 "column": 8
                               }
                             },
@@ -796,15 +863,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1587,
-                            "end": 1604,
+                            "start": 1605,
+                            "end": 1622,
                             "loc": {
                               "start": {
-                                "line": 46,
+                                "line": 47,
                                 "column": 9
                               },
                               "end": {
-                                "line": 46,
+                                "line": 47,
                                 "column": 26
                               },
                               "identifierName": "didFinishPlayback"
@@ -816,15 +883,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 1607,
-                          "end": 1611,
+                          "start": 1625,
+                          "end": 1629,
                           "loc": {
                             "start": {
-                              "line": 46,
+                              "line": 47,
                               "column": 29
                             },
                             "end": {
-                              "line": 46,
+                              "line": 47,
                               "column": 33
                             }
                           }
@@ -835,15 +902,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A block called by SceneKit when playback of the player’s audio source has completed.\n     * @type {?function(): void}\n     * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1522818-didfinishplayback\n     ",
-                          "start": 1341,
-                          "end": 1577,
+                          "start": 1359,
+                          "end": 1595,
                           "loc": {
                             "start": {
-                              "line": 41,
+                              "line": 42,
                               "column": 4
                             },
                             "end": {
-                              "line": 45,
+                              "line": 46,
                               "column": 7
                             }
                           }
@@ -873,9 +940,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Initializes an audio player for playing the specified simple audio source.\n   * @access public\n   * @param {SCNAudioSource} source - An audio source object.\n   * @returns {void}\n   * @desc Using this initializer is typically not necessary. Instead, call the audioPlayerWithSource: method, which returns a cached audio player object if one for the specified audio source has already been created and is available for use.\n   * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1522736-init\n   ",
+                    "value": "*\n   * Initializes an audio player for playing the specified simple audio source.\n   * @access public\n   * @constructor\n   * @param {SCNAudioSource} source - An audio source object.\n   * @desc Using this initializer is typically not necessary. Instead, call the audioPlayerWithSource: method, which returns a cached audio player object if one for the specified audio source has already been created and is available for use.\n   * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1522736-init\n   ",
                     "start": 395,
-                    "end": 915,
+                    "end": 912,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -892,8 +959,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Initializes an audio player for playing the specified AVFoundation audio node.\n   * @access public\n   * @param {AVAudioNode} audioNode - An audio node object.\n   * @returns {void}\n   * @desc Using this initializer is typically not necessary. Instead, call the audioPlayerWithAVAudioNode: method, which returns a cached audio player object if one for the specified AVAudioNode object has already been created and is available for use.\n   * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1523010-init\n   ",
-                    "start": 1620,
-                    "end": 2153,
+                    "start": 1637,
+                    "end": 2170,
                     "loc": {
                       "start": {
                         "line": 50,
@@ -909,8 +976,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 2156,
-                "end": 2868,
+                "start": 2173,
+                "end": 2885,
                 "loc": {
                   "start": {
                     "line": 58,
@@ -924,8 +991,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 2156,
-                  "end": 2171,
+                  "start": 2173,
+                  "end": 2188,
                   "loc": {
                     "start": {
                       "line": 58,
@@ -949,8 +1016,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 2172,
-                    "end": 2181,
+                    "start": 2189,
+                    "end": 2198,
                     "loc": {
                       "start": {
                         "line": 58,
@@ -967,8 +1034,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 2183,
-                  "end": 2868,
+                  "start": 2200,
+                  "end": 2885,
                   "loc": {
                     "start": {
                       "line": 58,
@@ -982,8 +1049,8 @@
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 2225,
-                      "end": 2249,
+                      "start": 2242,
+                      "end": 2266,
                       "loc": {
                         "start": {
                           "line": 62,
@@ -996,8 +1063,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2225,
-                        "end": 2249,
+                        "start": 2242,
+                        "end": 2266,
                         "loc": {
                           "start": {
                             "line": 62,
@@ -1011,8 +1078,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2225,
-                          "end": 2242,
+                          "start": 2242,
+                          "end": 2259,
                           "loc": {
                             "start": {
                               "line": 62,
@@ -1025,8 +1092,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2225,
-                            "end": 2229,
+                            "start": 2242,
+                            "end": 2246,
                             "loc": {
                               "start": {
                                 "line": 62,
@@ -1041,8 +1108,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2230,
-                            "end": 2242,
+                            "start": 2247,
+                            "end": 2259,
                             "loc": {
                               "start": {
                                 "line": 62,
@@ -1061,8 +1128,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 2245,
-                          "end": 2249,
+                          "start": 2262,
+                          "end": 2266,
                           "loc": {
                             "start": {
                               "line": 62,
@@ -1080,8 +1147,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Working with Audio Sources",
-                          "start": 2190,
-                          "end": 2219,
+                          "start": 2207,
+                          "end": 2236,
                           "loc": {
                             "start": {
                               "line": 60,
@@ -1097,8 +1164,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2254,
-                      "end": 2276,
+                      "start": 2271,
+                      "end": 2293,
                       "loc": {
                         "start": {
                           "line": 63,
@@ -1111,8 +1178,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2254,
-                        "end": 2276,
+                        "start": 2271,
+                        "end": 2293,
                         "loc": {
                           "start": {
                             "line": 63,
@@ -1126,8 +1193,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2254,
-                          "end": 2269,
+                          "start": 2271,
+                          "end": 2286,
                           "loc": {
                             "start": {
                               "line": 63,
@@ -1140,8 +1207,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2254,
-                            "end": 2258,
+                            "start": 2271,
+                            "end": 2275,
                             "loc": {
                               "start": {
                                 "line": 63,
@@ -1155,8 +1222,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2259,
-                            "end": 2269,
+                            "start": 2276,
+                            "end": 2286,
                             "loc": {
                               "start": {
                                 "line": 63,
@@ -1174,8 +1241,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 2272,
-                          "end": 2276,
+                          "start": 2289,
+                          "end": 2293,
                           "loc": {
                             "start": {
                               "line": 63,
@@ -1195,8 +1262,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Responding to Playback",
-                          "start": 2282,
-                          "end": 2307,
+                          "start": 2299,
+                          "end": 2324,
                           "loc": {
                             "start": {
                               "line": 65,
@@ -1211,8 +1278,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A block called by SceneKit when playback of the player’s audio source is about to begin.\n     * @type {?function(): void}\n     * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1524115-willstartplayback\n     ",
-                          "start": 2313,
-                          "end": 2553,
+                          "start": 2330,
+                          "end": 2570,
                           "loc": {
                             "start": {
                               "line": 67,
@@ -1228,8 +1295,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2558,
-                      "end": 2587,
+                      "start": 2575,
+                      "end": 2604,
                       "loc": {
                         "start": {
                           "line": 72,
@@ -1242,8 +1309,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2558,
-                        "end": 2587,
+                        "start": 2575,
+                        "end": 2604,
                         "loc": {
                           "start": {
                             "line": 72,
@@ -1257,8 +1324,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2558,
-                          "end": 2580,
+                          "start": 2575,
+                          "end": 2597,
                           "loc": {
                             "start": {
                               "line": 72,
@@ -1271,8 +1338,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2558,
-                            "end": 2562,
+                            "start": 2575,
+                            "end": 2579,
                             "loc": {
                               "start": {
                                 "line": 72,
@@ -1287,8 +1354,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2563,
-                            "end": 2580,
+                            "start": 2580,
+                            "end": 2597,
                             "loc": {
                               "start": {
                                 "line": 72,
@@ -1307,8 +1374,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 2583,
-                          "end": 2587,
+                          "start": 2600,
+                          "end": 2604,
                           "loc": {
                             "start": {
                               "line": 72,
@@ -1329,8 +1396,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Responding to Playback",
-                          "start": 2282,
-                          "end": 2307,
+                          "start": 2299,
+                          "end": 2324,
                           "loc": {
                             "start": {
                               "line": 65,
@@ -1345,8 +1412,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A block called by SceneKit when playback of the player’s audio source is about to begin.\n     * @type {?function(): void}\n     * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1524115-willstartplayback\n     ",
-                          "start": 2313,
-                          "end": 2553,
+                          "start": 2330,
+                          "end": 2570,
                           "loc": {
                             "start": {
                               "line": 67,
@@ -1363,8 +1430,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A block called by SceneKit when playback of the player’s audio source has completed.\n     * @type {?function(): void}\n     * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1522818-didfinishplayback\n     ",
-                          "start": 2593,
-                          "end": 2829,
+                          "start": 2610,
+                          "end": 2846,
                           "loc": {
                             "start": {
                               "line": 74,
@@ -1380,8 +1447,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2834,
-                      "end": 2863,
+                      "start": 2851,
+                      "end": 2880,
                       "loc": {
                         "start": {
                           "line": 79,
@@ -1394,8 +1461,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2834,
-                        "end": 2863,
+                        "start": 2851,
+                        "end": 2880,
                         "loc": {
                           "start": {
                             "line": 79,
@@ -1409,8 +1476,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2834,
-                          "end": 2856,
+                          "start": 2851,
+                          "end": 2873,
                           "loc": {
                             "start": {
                               "line": 79,
@@ -1423,8 +1490,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2834,
-                            "end": 2838,
+                            "start": 2851,
+                            "end": 2855,
                             "loc": {
                               "start": {
                                 "line": 79,
@@ -1439,8 +1506,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2839,
-                            "end": 2856,
+                            "start": 2856,
+                            "end": 2873,
                             "loc": {
                               "start": {
                                 "line": 79,
@@ -1459,8 +1526,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 2859,
-                          "end": 2863,
+                          "start": 2876,
+                          "end": 2880,
                           "loc": {
                             "start": {
                               "line": 79,
@@ -1478,8 +1545,8 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A block called by SceneKit when playback of the player’s audio source has completed.\n     * @type {?function(): void}\n     * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1522818-didfinishplayback\n     ",
-                          "start": 2593,
-                          "end": 2829,
+                          "start": 2610,
+                          "end": 2846,
                           "loc": {
                             "start": {
                               "line": 74,
@@ -1501,8 +1568,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Initializes an audio player for playing the specified AVFoundation audio node.\n   * @access public\n   * @param {AVAudioNode} audioNode - An audio node object.\n   * @returns {void}\n   * @desc Using this initializer is typically not necessary. Instead, call the audioPlayerWithAVAudioNode: method, which returns a cached audio player object if one for the specified AVAudioNode object has already been created and is available for use.\n   * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1523010-init\n   ",
-                    "start": 1620,
-                    "end": 2153,
+                    "start": 1637,
+                    "end": 2170,
                     "loc": {
                       "start": {
                         "line": 50,
@@ -1519,8 +1586,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Working with Audio Sources",
-                    "start": 2872,
-                    "end": 2901,
+                    "start": 2889,
+                    "end": 2918,
                     "loc": {
                       "start": {
                         "line": 83,
@@ -1535,15 +1602,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The source of audio played by this player.\n   * @type {?SCNAudioSource}\n   * @desc An SCNAudioSource object represents a distinct source of audio—for example, a sound file—that can be reused and shared by many player objects. Use a player’s audio source to configure the default values for playback parameters such as volume and reverb. To vary those parameters in real time during playback, use the audioNode property to work with the underlying AVAudioNode object.If the player was created with the audioPlayerWithAVAudioNode: method, this property’s value is nil.\n   * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1523059-audiosource\n   ",
-                    "start": 2904,
-                    "end": 3577,
+                    "start": 2922,
+                    "end": 3595,
                     "loc": {
                       "start": {
-                        "line": 84,
+                        "line": 85,
                         "column": 2
                       },
                       "end": {
-                        "line": 89,
+                        "line": 90,
                         "column": 5
                       }
                     }
@@ -1552,30 +1619,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 3580,
-                "end": 3632,
+                "start": 3598,
+                "end": 3650,
                 "loc": {
                   "start": {
-                    "line": 90,
+                    "line": 91,
                     "column": 2
                   },
                   "end": {
-                    "line": 92,
+                    "line": 93,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 3584,
-                  "end": 3595,
+                  "start": 3602,
+                  "end": 3613,
                   "loc": {
                     "start": {
-                      "line": 90,
+                      "line": 91,
                       "column": 6
                     },
                     "end": {
-                      "line": 90,
+                      "line": 91,
                       "column": 17
                     },
                     "identifierName": "audioSource"
@@ -1591,73 +1658,73 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 3598,
-                  "end": 3632,
+                  "start": 3616,
+                  "end": 3650,
                   "loc": {
                     "start": {
-                      "line": 90,
+                      "line": 91,
                       "column": 20
                     },
                     "end": {
-                      "line": 92,
+                      "line": 93,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 3604,
-                      "end": 3628,
+                      "start": 3622,
+                      "end": 3646,
                       "loc": {
                         "start": {
-                          "line": 91,
+                          "line": 92,
                           "column": 4
                         },
                         "end": {
-                          "line": 91,
+                          "line": 92,
                           "column": 28
                         }
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 3611,
-                        "end": 3628,
+                        "start": 3629,
+                        "end": 3646,
                         "loc": {
                           "start": {
-                            "line": 91,
+                            "line": 92,
                             "column": 11
                           },
                           "end": {
-                            "line": 91,
+                            "line": 92,
                             "column": 28
                           }
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 3611,
-                          "end": 3615,
+                          "start": 3629,
+                          "end": 3633,
                           "loc": {
                             "start": {
-                              "line": 91,
+                              "line": 92,
                               "column": 11
                             },
                             "end": {
-                              "line": 91,
+                              "line": 92,
                               "column": 15
                             }
                           }
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 3616,
-                          "end": 3628,
+                          "start": 3634,
+                          "end": 3646,
                           "loc": {
                             "start": {
-                              "line": 91,
+                              "line": 92,
                               "column": 16
                             },
                             "end": {
-                              "line": 91,
+                              "line": 92,
                               "column": 28
                             },
                             "identifierName": "_audioSource"
@@ -1675,8 +1742,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Working with Audio Sources",
-                    "start": 2872,
-                    "end": 2901,
+                    "start": 2889,
+                    "end": 2918,
                     "loc": {
                       "start": {
                         "line": 83,
@@ -1691,15 +1758,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The source of audio played by this player.\n   * @type {?SCNAudioSource}\n   * @desc An SCNAudioSource object represents a distinct source of audio—for example, a sound file—that can be reused and shared by many player objects. Use a player’s audio source to configure the default values for playback parameters such as volume and reverb. To vary those parameters in real time during playback, use the audioNode property to work with the underlying AVAudioNode object.If the player was created with the audioPlayerWithAVAudioNode: method, this property’s value is nil.\n   * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1523059-audiosource\n   ",
-                    "start": 2904,
-                    "end": 3577,
+                    "start": 2922,
+                    "end": 3595,
                     "loc": {
                       "start": {
-                        "line": 84,
+                        "line": 85,
                         "column": 2
                       },
                       "end": {
-                        "line": 89,
+                        "line": 90,
                         "column": 5
                       }
                     }
@@ -1709,15 +1776,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The audio node SceneKit uses for mixing audio from this player.\n   * @type {?AVAudioNode}\n   * @desc SceneKit uses this AVAudioNode object to perform 3D positional mixing during playback. Use this object to vary parameters such as volume and reverb in real time during playback. To set default values for those parameters, use the audioSource property.\n   * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1522747-audionode\n   ",
-                    "start": 3635,
-                    "end": 4092,
+                    "start": 3654,
+                    "end": 4111,
                     "loc": {
                       "start": {
-                        "line": 93,
+                        "line": 95,
                         "column": 2
                       },
                       "end": {
-                        "line": 98,
+                        "line": 100,
                         "column": 5
                       }
                     }
@@ -1726,30 +1793,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 4095,
-                "end": 4143,
+                "start": 4114,
+                "end": 4162,
                 "loc": {
                   "start": {
-                    "line": 99,
+                    "line": 101,
                     "column": 2
                   },
                   "end": {
-                    "line": 101,
+                    "line": 103,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 4099,
-                  "end": 4108,
+                  "start": 4118,
+                  "end": 4127,
                   "loc": {
                     "start": {
-                      "line": 99,
+                      "line": 101,
                       "column": 6
                     },
                     "end": {
-                      "line": 99,
+                      "line": 101,
                       "column": 15
                     },
                     "identifierName": "audioNode"
@@ -1765,73 +1832,73 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 4111,
-                  "end": 4143,
+                  "start": 4130,
+                  "end": 4162,
                   "loc": {
                     "start": {
-                      "line": 99,
+                      "line": 101,
                       "column": 18
                     },
                     "end": {
-                      "line": 101,
+                      "line": 103,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 4117,
-                      "end": 4139,
+                      "start": 4136,
+                      "end": 4158,
                       "loc": {
                         "start": {
-                          "line": 100,
+                          "line": 102,
                           "column": 4
                         },
                         "end": {
-                          "line": 100,
+                          "line": 102,
                           "column": 26
                         }
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 4124,
-                        "end": 4139,
+                        "start": 4143,
+                        "end": 4158,
                         "loc": {
                           "start": {
-                            "line": 100,
+                            "line": 102,
                             "column": 11
                           },
                           "end": {
-                            "line": 100,
+                            "line": 102,
                             "column": 26
                           }
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 4124,
-                          "end": 4128,
+                          "start": 4143,
+                          "end": 4147,
                           "loc": {
                             "start": {
-                              "line": 100,
+                              "line": 102,
                               "column": 11
                             },
                             "end": {
-                              "line": 100,
+                              "line": 102,
                               "column": 15
                             }
                           }
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 4129,
-                          "end": 4139,
+                          "start": 4148,
+                          "end": 4158,
                           "loc": {
                             "start": {
-                              "line": 100,
+                              "line": 102,
                               "column": 16
                             },
                             "end": {
-                              "line": 100,
+                              "line": 102,
                               "column": 26
                             },
                             "identifierName": "_audioNode"
@@ -1848,20 +1915,360 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The audio node SceneKit uses for mixing audio from this player.\n   * @type {?AVAudioNode}\n   * @desc SceneKit uses this AVAudioNode object to perform 3D positional mixing during playback. Use this object to vary parameters such as volume and reverb in real time during playback. To set default values for those parameters, use the audioSource property.\n   * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1522747-audionode\n   ",
-                    "start": 3635,
-                    "end": 4092,
+                    "start": 3654,
+                    "end": 4111,
                     "loc": {
                       "start": {
-                        "line": 93,
+                        "line": 95,
                         "column": 2
                       },
                       "end": {
-                        "line": 98,
+                        "line": 100,
                         "column": 5
                       }
                     }
                   }
                 ]
+              },
+              {
+                "type": "ClassMethod",
+                "start": 4166,
+                "end": 4209,
+                "loc": {
+                  "start": {
+                    "line": 105,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 107,
+                    "column": 3
+                  }
+                },
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 4166,
+                  "end": 4171,
+                  "loc": {
+                    "start": {
+                      "line": 105,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 105,
+                      "column": 7
+                    },
+                    "identifierName": "_play"
+                  },
+                  "name": "_play"
+                },
+                "static": false,
+                "kind": "method",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 4174,
+                  "end": 4209,
+                  "loc": {
+                    "start": {
+                      "line": 105,
+                      "column": 10
+                    },
+                    "end": {
+                      "line": 107,
+                      "column": 3
+                    }
+                  },
+                  "body": [
+                    {
+                      "type": "ExpressionStatement",
+                      "start": 4180,
+                      "end": 4205,
+                      "loc": {
+                        "start": {
+                          "line": 106,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 106,
+                          "column": 29
+                        }
+                      },
+                      "expression": {
+                        "type": "CallExpression",
+                        "start": 4180,
+                        "end": 4205,
+                        "loc": {
+                          "start": {
+                            "line": 106,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 106,
+                            "column": 29
+                          }
+                        },
+                        "callee": {
+                          "type": "MemberExpression",
+                          "start": 4180,
+                          "end": 4203,
+                          "loc": {
+                            "start": {
+                              "line": 106,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 106,
+                              "column": 27
+                            }
+                          },
+                          "object": {
+                            "type": "MemberExpression",
+                            "start": 4180,
+                            "end": 4197,
+                            "loc": {
+                              "start": {
+                                "line": 106,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 106,
+                                "column": 21
+                              }
+                            },
+                            "object": {
+                              "type": "ThisExpression",
+                              "start": 4180,
+                              "end": 4184,
+                              "loc": {
+                                "start": {
+                                  "line": 106,
+                                  "column": 4
+                                },
+                                "end": {
+                                  "line": 106,
+                                  "column": 8
+                                }
+                              }
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "start": 4185,
+                              "end": 4197,
+                              "loc": {
+                                "start": {
+                                  "line": 106,
+                                  "column": 9
+                                },
+                                "end": {
+                                  "line": 106,
+                                  "column": 21
+                                },
+                                "identifierName": "_audioSource"
+                              },
+                              "name": "_audioSource"
+                            },
+                            "computed": false
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "start": 4198,
+                            "end": 4203,
+                            "loc": {
+                              "start": {
+                                "line": 106,
+                                "column": 22
+                              },
+                              "end": {
+                                "line": 106,
+                                "column": 27
+                              },
+                              "identifierName": "_play"
+                            },
+                            "name": "_play"
+                          },
+                          "computed": false
+                        },
+                        "arguments": []
+                      }
+                    }
+                  ],
+                  "directives": []
+                }
+              },
+              {
+                "type": "ClassMethod",
+                "start": 4213,
+                "end": 4256,
+                "loc": {
+                  "start": {
+                    "line": 109,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 111,
+                    "column": 3
+                  }
+                },
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 4213,
+                  "end": 4218,
+                  "loc": {
+                    "start": {
+                      "line": 109,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 109,
+                      "column": 7
+                    },
+                    "identifierName": "_stop"
+                  },
+                  "name": "_stop"
+                },
+                "static": false,
+                "kind": "method",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 4221,
+                  "end": 4256,
+                  "loc": {
+                    "start": {
+                      "line": 109,
+                      "column": 10
+                    },
+                    "end": {
+                      "line": 111,
+                      "column": 3
+                    }
+                  },
+                  "body": [
+                    {
+                      "type": "ExpressionStatement",
+                      "start": 4227,
+                      "end": 4252,
+                      "loc": {
+                        "start": {
+                          "line": 110,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 110,
+                          "column": 29
+                        }
+                      },
+                      "expression": {
+                        "type": "CallExpression",
+                        "start": 4227,
+                        "end": 4252,
+                        "loc": {
+                          "start": {
+                            "line": 110,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 110,
+                            "column": 29
+                          }
+                        },
+                        "callee": {
+                          "type": "MemberExpression",
+                          "start": 4227,
+                          "end": 4250,
+                          "loc": {
+                            "start": {
+                              "line": 110,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 110,
+                              "column": 27
+                            }
+                          },
+                          "object": {
+                            "type": "MemberExpression",
+                            "start": 4227,
+                            "end": 4244,
+                            "loc": {
+                              "start": {
+                                "line": 110,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 110,
+                                "column": 21
+                              }
+                            },
+                            "object": {
+                              "type": "ThisExpression",
+                              "start": 4227,
+                              "end": 4231,
+                              "loc": {
+                                "start": {
+                                  "line": 110,
+                                  "column": 4
+                                },
+                                "end": {
+                                  "line": 110,
+                                  "column": 8
+                                }
+                              }
+                            },
+                            "property": {
+                              "type": "Identifier",
+                              "start": 4232,
+                              "end": 4244,
+                              "loc": {
+                                "start": {
+                                  "line": 110,
+                                  "column": 9
+                                },
+                                "end": {
+                                  "line": 110,
+                                  "column": 21
+                                },
+                                "identifierName": "_audioSource"
+                              },
+                              "name": "_audioSource"
+                            },
+                            "computed": false
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "start": 4245,
+                            "end": 4250,
+                            "loc": {
+                              "start": {
+                                "line": 110,
+                                "column": 22
+                              },
+                              "end": {
+                                "line": 110,
+                                "column": 27
+                              },
+                              "identifierName": "_stop"
+                            },
+                            "name": "_stop"
+                          },
+                          "computed": false
+                        },
+                        "arguments": []
+                      }
+                    }
+                  ],
+                  "directives": []
+                }
               }
             ]
           },
@@ -1978,9 +2385,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Initializes an audio player for playing the specified simple audio source.\n   * @access public\n   * @param {SCNAudioSource} source - An audio source object.\n   * @returns {void}\n   * @desc Using this initializer is typically not necessary. Instead, call the audioPlayerWithSource: method, which returns a cached audio player object if one for the specified audio source has already been created and is available for use.\n   * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1522736-init\n   ",
+      "value": "*\n   * Initializes an audio player for playing the specified simple audio source.\n   * @access public\n   * @constructor\n   * @param {SCNAudioSource} source - An audio source object.\n   * @desc Using this initializer is typically not necessary. Instead, call the audioPlayerWithSource: method, which returns a cached audio player object if one for the specified audio source has already been created and is available for use.\n   * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1522736-init\n   ",
       "start": 395,
-      "end": 915,
+      "end": 912,
       "loc": {
         "start": {
           "line": 17,
@@ -1995,15 +2402,15 @@
     {
       "type": "CommentLine",
       "value": " Working with Audio Sources",
-      "start": 938,
-      "end": 967,
+      "start": 954,
+      "end": 983,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 28,
           "column": 4
         },
         "end": {
-          "line": 27,
+          "line": 28,
           "column": 33
         }
       }
@@ -2011,15 +2418,15 @@
     {
       "type": "CommentLine",
       "value": " Responding to Playback",
-      "start": 1030,
-      "end": 1055,
+      "start": 1048,
+      "end": 1073,
       "loc": {
         "start": {
-          "line": 32,
+          "line": 33,
           "column": 4
         },
         "end": {
-          "line": 32,
+          "line": 33,
           "column": 29
         }
       }
@@ -2027,15 +2434,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A block called by SceneKit when playback of the player’s audio source is about to begin.\n     * @type {?function(): void}\n     * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1524115-willstartplayback\n     ",
-      "start": 1061,
-      "end": 1301,
+      "start": 1079,
+      "end": 1319,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 35,
           "column": 4
         },
         "end": {
-          "line": 38,
+          "line": 39,
           "column": 7
         }
       }
@@ -2043,15 +2450,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A block called by SceneKit when playback of the player’s audio source has completed.\n     * @type {?function(): void}\n     * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1522818-didfinishplayback\n     ",
-      "start": 1341,
-      "end": 1577,
+      "start": 1359,
+      "end": 1595,
       "loc": {
         "start": {
-          "line": 41,
+          "line": 42,
           "column": 4
         },
         "end": {
-          "line": 45,
+          "line": 46,
           "column": 7
         }
       }
@@ -2059,8 +2466,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Initializes an audio player for playing the specified AVFoundation audio node.\n   * @access public\n   * @param {AVAudioNode} audioNode - An audio node object.\n   * @returns {void}\n   * @desc Using this initializer is typically not necessary. Instead, call the audioPlayerWithAVAudioNode: method, which returns a cached audio player object if one for the specified AVAudioNode object has already been created and is available for use.\n   * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1523010-init\n   ",
-      "start": 1620,
-      "end": 2153,
+      "start": 1637,
+      "end": 2170,
       "loc": {
         "start": {
           "line": 50,
@@ -2075,8 +2482,8 @@
     {
       "type": "CommentLine",
       "value": " Working with Audio Sources",
-      "start": 2190,
-      "end": 2219,
+      "start": 2207,
+      "end": 2236,
       "loc": {
         "start": {
           "line": 60,
@@ -2091,8 +2498,8 @@
     {
       "type": "CommentLine",
       "value": " Responding to Playback",
-      "start": 2282,
-      "end": 2307,
+      "start": 2299,
+      "end": 2324,
       "loc": {
         "start": {
           "line": 65,
@@ -2107,8 +2514,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A block called by SceneKit when playback of the player’s audio source is about to begin.\n     * @type {?function(): void}\n     * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1524115-willstartplayback\n     ",
-      "start": 2313,
-      "end": 2553,
+      "start": 2330,
+      "end": 2570,
       "loc": {
         "start": {
           "line": 67,
@@ -2123,8 +2530,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A block called by SceneKit when playback of the player’s audio source has completed.\n     * @type {?function(): void}\n     * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1522818-didfinishplayback\n     ",
-      "start": 2593,
-      "end": 2829,
+      "start": 2610,
+      "end": 2846,
       "loc": {
         "start": {
           "line": 74,
@@ -2139,8 +2546,8 @@
     {
       "type": "CommentLine",
       "value": " Working with Audio Sources",
-      "start": 2872,
-      "end": 2901,
+      "start": 2889,
+      "end": 2918,
       "loc": {
         "start": {
           "line": 83,
@@ -2155,15 +2562,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The source of audio played by this player.\n   * @type {?SCNAudioSource}\n   * @desc An SCNAudioSource object represents a distinct source of audio—for example, a sound file—that can be reused and shared by many player objects. Use a player’s audio source to configure the default values for playback parameters such as volume and reverb. To vary those parameters in real time during playback, use the audioNode property to work with the underlying AVAudioNode object.If the player was created with the audioPlayerWithAVAudioNode: method, this property’s value is nil.\n   * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1523059-audiosource\n   ",
-      "start": 2904,
-      "end": 3577,
+      "start": 2922,
+      "end": 3595,
       "loc": {
         "start": {
-          "line": 84,
+          "line": 85,
           "column": 2
         },
         "end": {
-          "line": 89,
+          "line": 90,
           "column": 5
         }
       }
@@ -2171,15 +2578,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The audio node SceneKit uses for mixing audio from this player.\n   * @type {?AVAudioNode}\n   * @desc SceneKit uses this AVAudioNode object to perform 3D positional mixing during playback. Use this object to vary parameters such as volume and reverb in real time during playback. To set default values for those parameters, use the audioSource property.\n   * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1522747-audionode\n   ",
-      "start": 3635,
-      "end": 4092,
+      "start": 3654,
+      "end": 4111,
       "loc": {
         "start": {
-          "line": 93,
+          "line": 95,
           "column": 2
         },
         "end": {
-          "line": 98,
+          "line": 100,
           "column": 5
         }
       }
@@ -2650,9 +3057,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Initializes an audio player for playing the specified simple audio source.\n   * @access public\n   * @param {SCNAudioSource} source - An audio source object.\n   * @returns {void}\n   * @desc Using this initializer is typically not necessary. Instead, call the audioPlayerWithSource: method, which returns a cached audio player object if one for the specified audio source has already been created and is available for use.\n   * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1522736-init\n   ",
+      "value": "*\n   * Initializes an audio player for playing the specified simple audio source.\n   * @access public\n   * @constructor\n   * @param {SCNAudioSource} source - An audio source object.\n   * @desc Using this initializer is typically not necessary. Instead, call the audioPlayerWithSource: method, which returns a cached audio player object if one for the specified audio source has already been created and is available for use.\n   * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1522736-init\n   ",
       "start": 395,
-      "end": 915,
+      "end": 912,
       "loc": {
         "start": {
           "line": 17,
@@ -2676,9 +3083,9 @@
         "postfix": false,
         "binop": null
       },
-      "value": "init",
-      "start": 918,
-      "end": 922,
+      "value": "constructor",
+      "start": 915,
+      "end": 926,
       "loc": {
         "start": {
           "line": 25,
@@ -2686,7 +3093,7 @@
         },
         "end": {
           "line": 25,
-          "column": 6
+          "column": 13
         }
       }
     },
@@ -2702,16 +3109,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 922,
-      "end": 923,
+      "start": 926,
+      "end": 927,
       "loc": {
         "start": {
           "line": 25,
-          "column": 6
+          "column": 13
         },
         "end": {
           "line": 25,
-          "column": 7
+          "column": 14
         }
       }
     },
@@ -2728,16 +3135,16 @@
         "binop": null
       },
       "value": "source",
-      "start": 923,
-      "end": 929,
+      "start": 927,
+      "end": 933,
       "loc": {
         "start": {
           "line": 25,
-          "column": 7
+          "column": 14
         },
         "end": {
           "line": 25,
-          "column": 13
+          "column": 20
         }
       }
     },
@@ -2753,16 +3160,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 929,
-      "end": 930,
+      "start": 933,
+      "end": 934,
       "loc": {
         "start": {
           "line": 25,
-          "column": 13
+          "column": 20
         },
         "end": {
           "line": 25,
-          "column": 14
+          "column": 21
         }
       }
     },
@@ -2778,31 +3185,109 @@
         "postfix": false,
         "binop": null
       },
-      "start": 931,
-      "end": 932,
+      "start": 935,
+      "end": 936,
       "loc": {
         "start": {
           "line": 25,
-          "column": 15
+          "column": 22
         },
         "end": {
           "line": 25,
-          "column": 16
+          "column": 23
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "super",
+        "keyword": "super",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "super",
+      "start": 941,
+      "end": 946,
+      "loc": {
+        "start": {
+          "line": 26,
+          "column": 4
+        },
+        "end": {
+          "line": 26,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 946,
+      "end": 947,
+      "loc": {
+        "start": {
+          "line": 26,
+          "column": 9
+        },
+        "end": {
+          "line": 26,
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 947,
+      "end": 948,
+      "loc": {
+        "start": {
+          "line": 26,
+          "column": 10
+        },
+        "end": {
+          "line": 26,
+          "column": 11
         }
       }
     },
     {
       "type": "CommentLine",
       "value": " Working with Audio Sources",
-      "start": 938,
-      "end": 967,
+      "start": 954,
+      "end": 983,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 28,
           "column": 4
         },
         "end": {
-          "line": 27,
+          "line": 28,
           "column": 33
         }
       }
@@ -2822,15 +3307,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 973,
-      "end": 977,
+      "start": 989,
+      "end": 993,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 30,
           "column": 4
         },
         "end": {
-          "line": 29,
+          "line": 30,
           "column": 8
         }
       }
@@ -2848,15 +3333,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 977,
-      "end": 978,
+      "start": 993,
+      "end": 994,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 30,
           "column": 8
         },
         "end": {
-          "line": 29,
+          "line": 30,
           "column": 9
         }
       }
@@ -2874,15 +3359,15 @@
         "binop": null
       },
       "value": "_audioSource",
-      "start": 978,
-      "end": 990,
+      "start": 994,
+      "end": 1006,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 30,
           "column": 9
         },
         "end": {
-          "line": 29,
+          "line": 30,
           "column": 21
         }
       }
@@ -2901,23 +3386,22 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 991,
-      "end": 992,
+      "start": 1007,
+      "end": 1008,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 30,
           "column": 22
         },
         "end": {
-          "line": 29,
+          "line": 30,
           "column": 23
         }
       }
     },
     {
       "type": {
-        "label": "null",
-        "keyword": "null",
+        "label": "name",
         "beforeExpr": false,
         "startsExpr": true,
         "rightAssociative": false,
@@ -2925,20 +3409,19 @@
         "isAssign": false,
         "prefix": false,
         "postfix": false,
-        "binop": null,
-        "updateContext": null
+        "binop": null
       },
-      "value": "null",
-      "start": 993,
-      "end": 997,
+      "value": "source",
+      "start": 1009,
+      "end": 1015,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 30,
           "column": 24
         },
         "end": {
-          "line": 29,
-          "column": 28
+          "line": 30,
+          "column": 30
         }
       }
     },
@@ -2957,15 +3440,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1002,
-      "end": 1006,
+      "start": 1020,
+      "end": 1024,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 31,
           "column": 4
         },
         "end": {
-          "line": 30,
+          "line": 31,
           "column": 8
         }
       }
@@ -2983,15 +3466,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1006,
-      "end": 1007,
+      "start": 1024,
+      "end": 1025,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 31,
           "column": 8
         },
         "end": {
-          "line": 30,
+          "line": 31,
           "column": 9
         }
       }
@@ -3009,15 +3492,15 @@
         "binop": null
       },
       "value": "_audioNode",
-      "start": 1007,
-      "end": 1017,
+      "start": 1025,
+      "end": 1035,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 31,
           "column": 9
         },
         "end": {
-          "line": 30,
+          "line": 31,
           "column": 19
         }
       }
@@ -3036,15 +3519,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1018,
-      "end": 1019,
+      "start": 1036,
+      "end": 1037,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 31,
           "column": 20
         },
         "end": {
-          "line": 30,
+          "line": 31,
           "column": 21
         }
       }
@@ -3064,15 +3547,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 1020,
-      "end": 1024,
+      "start": 1038,
+      "end": 1042,
       "loc": {
         "start": {
-          "line": 30,
+          "line": 31,
           "column": 22
         },
         "end": {
-          "line": 30,
+          "line": 31,
           "column": 26
         }
       }
@@ -3080,15 +3563,15 @@
     {
       "type": "CommentLine",
       "value": " Responding to Playback",
-      "start": 1030,
-      "end": 1055,
+      "start": 1048,
+      "end": 1073,
       "loc": {
         "start": {
-          "line": 32,
+          "line": 33,
           "column": 4
         },
         "end": {
-          "line": 32,
+          "line": 33,
           "column": 29
         }
       }
@@ -3096,15 +3579,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A block called by SceneKit when playback of the player’s audio source is about to begin.\n     * @type {?function(): void}\n     * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1524115-willstartplayback\n     ",
-      "start": 1061,
-      "end": 1301,
+      "start": 1079,
+      "end": 1319,
       "loc": {
         "start": {
-          "line": 34,
+          "line": 35,
           "column": 4
         },
         "end": {
-          "line": 38,
+          "line": 39,
           "column": 7
         }
       }
@@ -3124,15 +3607,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1306,
-      "end": 1310,
+      "start": 1324,
+      "end": 1328,
       "loc": {
         "start": {
-          "line": 39,
+          "line": 40,
           "column": 4
         },
         "end": {
-          "line": 39,
+          "line": 40,
           "column": 8
         }
       }
@@ -3150,15 +3633,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1310,
-      "end": 1311,
+      "start": 1328,
+      "end": 1329,
       "loc": {
         "start": {
-          "line": 39,
+          "line": 40,
           "column": 8
         },
         "end": {
-          "line": 39,
+          "line": 40,
           "column": 9
         }
       }
@@ -3176,15 +3659,15 @@
         "binop": null
       },
       "value": "willStartPlayback",
-      "start": 1311,
-      "end": 1328,
+      "start": 1329,
+      "end": 1346,
       "loc": {
         "start": {
-          "line": 39,
+          "line": 40,
           "column": 9
         },
         "end": {
-          "line": 39,
+          "line": 40,
           "column": 26
         }
       }
@@ -3203,15 +3686,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1329,
-      "end": 1330,
+      "start": 1347,
+      "end": 1348,
       "loc": {
         "start": {
-          "line": 39,
+          "line": 40,
           "column": 27
         },
         "end": {
-          "line": 39,
+          "line": 40,
           "column": 28
         }
       }
@@ -3231,15 +3714,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 1331,
-      "end": 1335,
+      "start": 1349,
+      "end": 1353,
       "loc": {
         "start": {
-          "line": 39,
+          "line": 40,
           "column": 29
         },
         "end": {
-          "line": 39,
+          "line": 40,
           "column": 33
         }
       }
@@ -3247,15 +3730,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A block called by SceneKit when playback of the player’s audio source has completed.\n     * @type {?function(): void}\n     * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1522818-didfinishplayback\n     ",
-      "start": 1341,
-      "end": 1577,
+      "start": 1359,
+      "end": 1595,
       "loc": {
         "start": {
-          "line": 41,
+          "line": 42,
           "column": 4
         },
         "end": {
-          "line": 45,
+          "line": 46,
           "column": 7
         }
       }
@@ -3275,15 +3758,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1582,
-      "end": 1586,
+      "start": 1600,
+      "end": 1604,
       "loc": {
         "start": {
-          "line": 46,
+          "line": 47,
           "column": 4
         },
         "end": {
-          "line": 46,
+          "line": 47,
           "column": 8
         }
       }
@@ -3301,15 +3784,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1586,
-      "end": 1587,
+      "start": 1604,
+      "end": 1605,
       "loc": {
         "start": {
-          "line": 46,
+          "line": 47,
           "column": 8
         },
         "end": {
-          "line": 46,
+          "line": 47,
           "column": 9
         }
       }
@@ -3327,15 +3810,15 @@
         "binop": null
       },
       "value": "didFinishPlayback",
-      "start": 1587,
-      "end": 1604,
+      "start": 1605,
+      "end": 1622,
       "loc": {
         "start": {
-          "line": 46,
+          "line": 47,
           "column": 9
         },
         "end": {
-          "line": 46,
+          "line": 47,
           "column": 26
         }
       }
@@ -3354,15 +3837,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1605,
-      "end": 1606,
+      "start": 1623,
+      "end": 1624,
       "loc": {
         "start": {
-          "line": 46,
+          "line": 47,
           "column": 27
         },
         "end": {
-          "line": 46,
+          "line": 47,
           "column": 28
         }
       }
@@ -3382,15 +3865,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 1607,
-      "end": 1611,
+      "start": 1625,
+      "end": 1629,
       "loc": {
         "start": {
-          "line": 46,
+          "line": 47,
           "column": 29
         },
         "end": {
-          "line": 46,
+          "line": 47,
           "column": 33
         }
       }
@@ -3407,8 +3890,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1615,
-      "end": 1616,
+      "start": 1632,
+      "end": 1633,
       "loc": {
         "start": {
           "line": 48,
@@ -3423,8 +3906,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Initializes an audio player for playing the specified AVFoundation audio node.\n   * @access public\n   * @param {AVAudioNode} audioNode - An audio node object.\n   * @returns {void}\n   * @desc Using this initializer is typically not necessary. Instead, call the audioPlayerWithAVAudioNode: method, which returns a cached audio player object if one for the specified AVAudioNode object has already been created and is available for use.\n   * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1523010-init\n   ",
-      "start": 1620,
-      "end": 2153,
+      "start": 1637,
+      "end": 2170,
       "loc": {
         "start": {
           "line": 50,
@@ -3449,8 +3932,8 @@
         "binop": null
       },
       "value": "initAvAudioNode",
-      "start": 2156,
-      "end": 2171,
+      "start": 2173,
+      "end": 2188,
       "loc": {
         "start": {
           "line": 58,
@@ -3474,8 +3957,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2171,
-      "end": 2172,
+      "start": 2188,
+      "end": 2189,
       "loc": {
         "start": {
           "line": 58,
@@ -3500,8 +3983,8 @@
         "binop": null
       },
       "value": "audioNode",
-      "start": 2172,
-      "end": 2181,
+      "start": 2189,
+      "end": 2198,
       "loc": {
         "start": {
           "line": 58,
@@ -3525,8 +4008,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2181,
-      "end": 2182,
+      "start": 2198,
+      "end": 2199,
       "loc": {
         "start": {
           "line": 58,
@@ -3550,8 +4033,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2183,
-      "end": 2184,
+      "start": 2200,
+      "end": 2201,
       "loc": {
         "start": {
           "line": 58,
@@ -3566,8 +4049,8 @@
     {
       "type": "CommentLine",
       "value": " Working with Audio Sources",
-      "start": 2190,
-      "end": 2219,
+      "start": 2207,
+      "end": 2236,
       "loc": {
         "start": {
           "line": 60,
@@ -3594,8 +4077,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2225,
-      "end": 2229,
+      "start": 2242,
+      "end": 2246,
       "loc": {
         "start": {
           "line": 62,
@@ -3620,8 +4103,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2229,
-      "end": 2230,
+      "start": 2246,
+      "end": 2247,
       "loc": {
         "start": {
           "line": 62,
@@ -3646,8 +4129,8 @@
         "binop": null
       },
       "value": "_audioSource",
-      "start": 2230,
-      "end": 2242,
+      "start": 2247,
+      "end": 2259,
       "loc": {
         "start": {
           "line": 62,
@@ -3673,8 +4156,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2243,
-      "end": 2244,
+      "start": 2260,
+      "end": 2261,
       "loc": {
         "start": {
           "line": 62,
@@ -3701,8 +4184,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2245,
-      "end": 2249,
+      "start": 2262,
+      "end": 2266,
       "loc": {
         "start": {
           "line": 62,
@@ -3729,8 +4212,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2254,
-      "end": 2258,
+      "start": 2271,
+      "end": 2275,
       "loc": {
         "start": {
           "line": 63,
@@ -3755,8 +4238,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2258,
-      "end": 2259,
+      "start": 2275,
+      "end": 2276,
       "loc": {
         "start": {
           "line": 63,
@@ -3781,8 +4264,8 @@
         "binop": null
       },
       "value": "_audioNode",
-      "start": 2259,
-      "end": 2269,
+      "start": 2276,
+      "end": 2286,
       "loc": {
         "start": {
           "line": 63,
@@ -3808,8 +4291,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2270,
-      "end": 2271,
+      "start": 2287,
+      "end": 2288,
       "loc": {
         "start": {
           "line": 63,
@@ -3836,8 +4319,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2272,
-      "end": 2276,
+      "start": 2289,
+      "end": 2293,
       "loc": {
         "start": {
           "line": 63,
@@ -3852,8 +4335,8 @@
     {
       "type": "CommentLine",
       "value": " Responding to Playback",
-      "start": 2282,
-      "end": 2307,
+      "start": 2299,
+      "end": 2324,
       "loc": {
         "start": {
           "line": 65,
@@ -3868,8 +4351,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A block called by SceneKit when playback of the player’s audio source is about to begin.\n     * @type {?function(): void}\n     * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1524115-willstartplayback\n     ",
-      "start": 2313,
-      "end": 2553,
+      "start": 2330,
+      "end": 2570,
       "loc": {
         "start": {
           "line": 67,
@@ -3896,8 +4379,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2558,
-      "end": 2562,
+      "start": 2575,
+      "end": 2579,
       "loc": {
         "start": {
           "line": 72,
@@ -3922,8 +4405,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2562,
-      "end": 2563,
+      "start": 2579,
+      "end": 2580,
       "loc": {
         "start": {
           "line": 72,
@@ -3948,8 +4431,8 @@
         "binop": null
       },
       "value": "willStartPlayback",
-      "start": 2563,
-      "end": 2580,
+      "start": 2580,
+      "end": 2597,
       "loc": {
         "start": {
           "line": 72,
@@ -3975,8 +4458,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2581,
-      "end": 2582,
+      "start": 2598,
+      "end": 2599,
       "loc": {
         "start": {
           "line": 72,
@@ -4003,8 +4486,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2583,
-      "end": 2587,
+      "start": 2600,
+      "end": 2604,
       "loc": {
         "start": {
           "line": 72,
@@ -4019,8 +4502,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A block called by SceneKit when playback of the player’s audio source has completed.\n     * @type {?function(): void}\n     * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1522818-didfinishplayback\n     ",
-      "start": 2593,
-      "end": 2829,
+      "start": 2610,
+      "end": 2846,
       "loc": {
         "start": {
           "line": 74,
@@ -4047,8 +4530,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2834,
-      "end": 2838,
+      "start": 2851,
+      "end": 2855,
       "loc": {
         "start": {
           "line": 79,
@@ -4073,8 +4556,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2838,
-      "end": 2839,
+      "start": 2855,
+      "end": 2856,
       "loc": {
         "start": {
           "line": 79,
@@ -4099,8 +4582,8 @@
         "binop": null
       },
       "value": "didFinishPlayback",
-      "start": 2839,
-      "end": 2856,
+      "start": 2856,
+      "end": 2873,
       "loc": {
         "start": {
           "line": 79,
@@ -4126,8 +4609,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2857,
-      "end": 2858,
+      "start": 2874,
+      "end": 2875,
       "loc": {
         "start": {
           "line": 79,
@@ -4154,8 +4637,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2859,
-      "end": 2863,
+      "start": 2876,
+      "end": 2880,
       "loc": {
         "start": {
           "line": 79,
@@ -4179,8 +4662,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2867,
-      "end": 2868,
+      "start": 2884,
+      "end": 2885,
       "loc": {
         "start": {
           "line": 81,
@@ -4195,8 +4678,8 @@
     {
       "type": "CommentLine",
       "value": " Working with Audio Sources",
-      "start": 2872,
-      "end": 2901,
+      "start": 2889,
+      "end": 2918,
       "loc": {
         "start": {
           "line": 83,
@@ -4211,15 +4694,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The source of audio played by this player.\n   * @type {?SCNAudioSource}\n   * @desc An SCNAudioSource object represents a distinct source of audio—for example, a sound file—that can be reused and shared by many player objects. Use a player’s audio source to configure the default values for playback parameters such as volume and reverb. To vary those parameters in real time during playback, use the audioNode property to work with the underlying AVAudioNode object.If the player was created with the audioPlayerWithAVAudioNode: method, this property’s value is nil.\n   * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1523059-audiosource\n   ",
-      "start": 2904,
-      "end": 3577,
+      "start": 2922,
+      "end": 3595,
       "loc": {
         "start": {
-          "line": 84,
+          "line": 85,
           "column": 2
         },
         "end": {
-          "line": 89,
+          "line": 90,
           "column": 5
         }
       }
@@ -4237,15 +4720,15 @@
         "binop": null
       },
       "value": "get",
-      "start": 3580,
-      "end": 3583,
+      "start": 3598,
+      "end": 3601,
       "loc": {
         "start": {
-          "line": 90,
+          "line": 91,
           "column": 2
         },
         "end": {
-          "line": 90,
+          "line": 91,
           "column": 5
         }
       }
@@ -4263,15 +4746,15 @@
         "binop": null
       },
       "value": "audioSource",
-      "start": 3584,
-      "end": 3595,
+      "start": 3602,
+      "end": 3613,
       "loc": {
         "start": {
-          "line": 90,
+          "line": 91,
           "column": 6
         },
         "end": {
-          "line": 90,
+          "line": 91,
           "column": 17
         }
       }
@@ -4288,15 +4771,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3595,
-      "end": 3596,
+      "start": 3613,
+      "end": 3614,
       "loc": {
         "start": {
-          "line": 90,
+          "line": 91,
           "column": 17
         },
         "end": {
-          "line": 90,
+          "line": 91,
           "column": 18
         }
       }
@@ -4313,15 +4796,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3596,
-      "end": 3597,
+      "start": 3614,
+      "end": 3615,
       "loc": {
         "start": {
-          "line": 90,
+          "line": 91,
           "column": 18
         },
         "end": {
-          "line": 90,
+          "line": 91,
           "column": 19
         }
       }
@@ -4338,15 +4821,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3598,
-      "end": 3599,
+      "start": 3616,
+      "end": 3617,
       "loc": {
         "start": {
-          "line": 90,
+          "line": 91,
           "column": 20
         },
         "end": {
-          "line": 90,
+          "line": 91,
           "column": 21
         }
       }
@@ -4366,15 +4849,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 3604,
-      "end": 3610,
+      "start": 3622,
+      "end": 3628,
       "loc": {
         "start": {
-          "line": 91,
+          "line": 92,
           "column": 4
         },
         "end": {
-          "line": 91,
+          "line": 92,
           "column": 10
         }
       }
@@ -4394,15 +4877,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3611,
-      "end": 3615,
+      "start": 3629,
+      "end": 3633,
       "loc": {
         "start": {
-          "line": 91,
+          "line": 92,
           "column": 11
         },
         "end": {
-          "line": 91,
+          "line": 92,
           "column": 15
         }
       }
@@ -4420,15 +4903,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3615,
-      "end": 3616,
+      "start": 3633,
+      "end": 3634,
       "loc": {
         "start": {
-          "line": 91,
+          "line": 92,
           "column": 15
         },
         "end": {
-          "line": 91,
+          "line": 92,
           "column": 16
         }
       }
@@ -4446,15 +4929,15 @@
         "binop": null
       },
       "value": "_audioSource",
-      "start": 3616,
-      "end": 3628,
+      "start": 3634,
+      "end": 3646,
       "loc": {
         "start": {
-          "line": 91,
+          "line": 92,
           "column": 16
         },
         "end": {
-          "line": 91,
+          "line": 92,
           "column": 28
         }
       }
@@ -4471,15 +4954,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3631,
-      "end": 3632,
+      "start": 3649,
+      "end": 3650,
       "loc": {
         "start": {
-          "line": 92,
+          "line": 93,
           "column": 2
         },
         "end": {
-          "line": 92,
+          "line": 93,
           "column": 3
         }
       }
@@ -4487,15 +4970,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The audio node SceneKit uses for mixing audio from this player.\n   * @type {?AVAudioNode}\n   * @desc SceneKit uses this AVAudioNode object to perform 3D positional mixing during playback. Use this object to vary parameters such as volume and reverb in real time during playback. To set default values for those parameters, use the audioSource property.\n   * @see https://developer.apple.com/reference/scenekit/scnaudioplayer/1522747-audionode\n   ",
-      "start": 3635,
-      "end": 4092,
+      "start": 3654,
+      "end": 4111,
       "loc": {
         "start": {
-          "line": 93,
+          "line": 95,
           "column": 2
         },
         "end": {
-          "line": 98,
+          "line": 100,
           "column": 5
         }
       }
@@ -4513,15 +4996,15 @@
         "binop": null
       },
       "value": "get",
-      "start": 4095,
-      "end": 4098,
+      "start": 4114,
+      "end": 4117,
       "loc": {
         "start": {
-          "line": 99,
+          "line": 101,
           "column": 2
         },
         "end": {
-          "line": 99,
+          "line": 101,
           "column": 5
         }
       }
@@ -4539,15 +5022,15 @@
         "binop": null
       },
       "value": "audioNode",
-      "start": 4099,
-      "end": 4108,
+      "start": 4118,
+      "end": 4127,
       "loc": {
         "start": {
-          "line": 99,
+          "line": 101,
           "column": 6
         },
         "end": {
-          "line": 99,
+          "line": 101,
           "column": 15
         }
       }
@@ -4564,15 +5047,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4108,
-      "end": 4109,
+      "start": 4127,
+      "end": 4128,
       "loc": {
         "start": {
-          "line": 99,
+          "line": 101,
           "column": 15
         },
         "end": {
-          "line": 99,
+          "line": 101,
           "column": 16
         }
       }
@@ -4589,15 +5072,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4109,
-      "end": 4110,
+      "start": 4128,
+      "end": 4129,
       "loc": {
         "start": {
-          "line": 99,
+          "line": 101,
           "column": 16
         },
         "end": {
-          "line": 99,
+          "line": 101,
           "column": 17
         }
       }
@@ -4614,15 +5097,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4111,
-      "end": 4112,
+      "start": 4130,
+      "end": 4131,
       "loc": {
         "start": {
-          "line": 99,
+          "line": 101,
           "column": 18
         },
         "end": {
-          "line": 99,
+          "line": 101,
           "column": 19
         }
       }
@@ -4642,15 +5125,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 4117,
-      "end": 4123,
+      "start": 4136,
+      "end": 4142,
       "loc": {
         "start": {
-          "line": 100,
+          "line": 102,
           "column": 4
         },
         "end": {
-          "line": 100,
+          "line": 102,
           "column": 10
         }
       }
@@ -4670,15 +5153,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 4124,
-      "end": 4128,
+      "start": 4143,
+      "end": 4147,
       "loc": {
         "start": {
-          "line": 100,
+          "line": 102,
           "column": 11
         },
         "end": {
-          "line": 100,
+          "line": 102,
           "column": 15
         }
       }
@@ -4696,15 +5179,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4128,
-      "end": 4129,
+      "start": 4147,
+      "end": 4148,
       "loc": {
         "start": {
-          "line": 100,
+          "line": 102,
           "column": 15
         },
         "end": {
-          "line": 100,
+          "line": 102,
           "column": 16
         }
       }
@@ -4722,15 +5205,15 @@
         "binop": null
       },
       "value": "_audioNode",
-      "start": 4129,
-      "end": 4139,
+      "start": 4148,
+      "end": 4158,
       "loc": {
         "start": {
-          "line": 100,
+          "line": 102,
           "column": 16
         },
         "end": {
-          "line": 100,
+          "line": 102,
           "column": 26
         }
       }
@@ -4747,15 +5230,631 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4142,
-      "end": 4143,
+      "start": 4161,
+      "end": 4162,
       "loc": {
         "start": {
-          "line": 101,
+          "line": 103,
           "column": 2
         },
         "end": {
-          "line": 101,
+          "line": 103,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "_play",
+      "start": 4166,
+      "end": 4171,
+      "loc": {
+        "start": {
+          "line": 105,
+          "column": 2
+        },
+        "end": {
+          "line": 105,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 4171,
+      "end": 4172,
+      "loc": {
+        "start": {
+          "line": 105,
+          "column": 7
+        },
+        "end": {
+          "line": 105,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 4172,
+      "end": 4173,
+      "loc": {
+        "start": {
+          "line": 105,
+          "column": 8
+        },
+        "end": {
+          "line": 105,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 4174,
+      "end": 4175,
+      "loc": {
+        "start": {
+          "line": 105,
+          "column": 10
+        },
+        "end": {
+          "line": 105,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "this",
+        "keyword": "this",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "this",
+      "start": 4180,
+      "end": 4184,
+      "loc": {
+        "start": {
+          "line": 106,
+          "column": 4
+        },
+        "end": {
+          "line": 106,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ".",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 4184,
+      "end": 4185,
+      "loc": {
+        "start": {
+          "line": 106,
+          "column": 8
+        },
+        "end": {
+          "line": 106,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "_audioSource",
+      "start": 4185,
+      "end": 4197,
+      "loc": {
+        "start": {
+          "line": 106,
+          "column": 9
+        },
+        "end": {
+          "line": 106,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ".",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 4197,
+      "end": 4198,
+      "loc": {
+        "start": {
+          "line": 106,
+          "column": 21
+        },
+        "end": {
+          "line": 106,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "_play",
+      "start": 4198,
+      "end": 4203,
+      "loc": {
+        "start": {
+          "line": 106,
+          "column": 22
+        },
+        "end": {
+          "line": 106,
+          "column": 27
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 4203,
+      "end": 4204,
+      "loc": {
+        "start": {
+          "line": 106,
+          "column": 27
+        },
+        "end": {
+          "line": 106,
+          "column": 28
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 4204,
+      "end": 4205,
+      "loc": {
+        "start": {
+          "line": 106,
+          "column": 28
+        },
+        "end": {
+          "line": 106,
+          "column": 29
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 4208,
+      "end": 4209,
+      "loc": {
+        "start": {
+          "line": 107,
+          "column": 2
+        },
+        "end": {
+          "line": 107,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "_stop",
+      "start": 4213,
+      "end": 4218,
+      "loc": {
+        "start": {
+          "line": 109,
+          "column": 2
+        },
+        "end": {
+          "line": 109,
+          "column": 7
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 4218,
+      "end": 4219,
+      "loc": {
+        "start": {
+          "line": 109,
+          "column": 7
+        },
+        "end": {
+          "line": 109,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 4219,
+      "end": 4220,
+      "loc": {
+        "start": {
+          "line": 109,
+          "column": 8
+        },
+        "end": {
+          "line": 109,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 4221,
+      "end": 4222,
+      "loc": {
+        "start": {
+          "line": 109,
+          "column": 10
+        },
+        "end": {
+          "line": 109,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "this",
+        "keyword": "this",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "this",
+      "start": 4227,
+      "end": 4231,
+      "loc": {
+        "start": {
+          "line": 110,
+          "column": 4
+        },
+        "end": {
+          "line": 110,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ".",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 4231,
+      "end": 4232,
+      "loc": {
+        "start": {
+          "line": 110,
+          "column": 8
+        },
+        "end": {
+          "line": 110,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "_audioSource",
+      "start": 4232,
+      "end": 4244,
+      "loc": {
+        "start": {
+          "line": 110,
+          "column": 9
+        },
+        "end": {
+          "line": 110,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ".",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 4244,
+      "end": 4245,
+      "loc": {
+        "start": {
+          "line": 110,
+          "column": 21
+        },
+        "end": {
+          "line": 110,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "_stop",
+      "start": 4245,
+      "end": 4250,
+      "loc": {
+        "start": {
+          "line": 110,
+          "column": 22
+        },
+        "end": {
+          "line": 110,
+          "column": 27
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 4250,
+      "end": 4251,
+      "loc": {
+        "start": {
+          "line": 110,
+          "column": 27
+        },
+        "end": {
+          "line": 110,
+          "column": 28
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 4251,
+      "end": 4252,
+      "loc": {
+        "start": {
+          "line": 110,
+          "column": 28
+        },
+        "end": {
+          "line": 110,
+          "column": 29
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 4255,
+      "end": 4256,
+      "loc": {
+        "start": {
+          "line": 111,
+          "column": 2
+        },
+        "end": {
+          "line": 111,
           "column": 3
         }
       }
@@ -4772,15 +5871,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4144,
-      "end": 4145,
+      "start": 4257,
+      "end": 4258,
       "loc": {
         "start": {
-          "line": 102,
+          "line": 112,
           "column": 0
         },
         "end": {
-          "line": 102,
+          "line": 112,
           "column": 1
         }
       }
@@ -4798,15 +5897,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4146,
-      "end": 4146,
+      "start": 4259,
+      "end": 4259,
       "loc": {
         "start": {
-          "line": 103,
+          "line": 113,
           "column": 0
         },
         "end": {
-          "line": 103,
+          "line": 113,
           "column": 0
         }
       }

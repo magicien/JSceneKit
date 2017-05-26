@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 4597,
+  "end": 4729,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 84,
+      "line": 92,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 4597,
+    "end": 4729,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 84,
+        "line": 92,
         "column": 0
       }
     },
@@ -171,15 +171,15 @@
           {
             "type": "CommentBlock",
             "value": "*\n * An object that defines alternate resolutions for a geometry that SceneKit can automatically substitute to improve rendering performance.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnlevelofdetail\n ",
-            "start": 102,
-            "end": 362,
+            "start": 101,
+            "end": 361,
             "loc": {
               "start": {
-                "line": 7,
+                "line": 6,
                 "column": 0
               },
               "end": {
-                "line": 12,
+                "line": 11,
                 "column": 3
               }
             }
@@ -188,43 +188,43 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 363,
-        "end": 4596,
+        "start": 362,
+        "end": 4728,
         "loc": {
           "start": {
-            "line": 13,
+            "line": 12,
             "column": 0
           },
           "end": {
-            "line": 83,
+            "line": 91,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 378,
-          "end": 4596,
+          "start": 377,
+          "end": 4728,
           "loc": {
             "start": {
-              "line": 13,
+              "line": 12,
               "column": 15
             },
             "end": {
-              "line": 83,
+              "line": 91,
               "column": 1
             }
           },
           "id": {
             "type": "Identifier",
-            "start": 384,
-            "end": 400,
+            "start": 383,
+            "end": 399,
             "loc": {
               "start": {
-                "line": 13,
+                "line": 12,
                 "column": 21
               },
               "end": {
-                "line": 13,
+                "line": 12,
                 "column": 37
               },
               "identifierName": "SCNLevelOfDetail"
@@ -234,15 +234,15 @@
           },
           "superClass": {
             "type": "Identifier",
-            "start": 409,
-            "end": 417,
+            "start": 408,
+            "end": 416,
             "loc": {
               "start": {
-                "line": 13,
+                "line": 12,
                 "column": 46
               },
               "end": {
-                "line": 13,
+                "line": 12,
                 "column": 54
               },
               "identifierName": "NSObject"
@@ -251,54 +251,53 @@
           },
           "body": {
             "type": "ClassBody",
-            "start": 418,
-            "end": 4596,
+            "start": 417,
+            "end": 4728,
             "loc": {
               "start": {
-                "line": 13,
+                "line": 12,
                 "column": 55
               },
               "end": {
-                "line": 83,
+                "line": 91,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 493,
-                "end": 634,
+                "start": 421,
+                "end": 533,
                 "loc": {
                   "start": {
-                    "line": 20,
+                    "line": 13,
                     "column": 2
                   },
                   "end": {
-                    "line": 27,
+                    "line": 18,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 493,
-                  "end": 497,
+                  "start": 432,
+                  "end": 442,
                   "loc": {
                     "start": {
-                      "line": 20,
-                      "column": 2
+                      "line": 13,
+                      "column": 13
                     },
                     "end": {
-                      "line": 20,
-                      "column": 6
+                      "line": 13,
+                      "column": 23
                     },
-                    "identifierName": "init"
+                    "identifierName": "_propTypes"
                   },
-                  "name": "init",
-                  "leadingComments": null
+                  "name": "_propTypes"
                 },
-                "static": false,
-                "kind": "method",
+                "static": true,
+                "kind": "get",
                 "id": null,
                 "generator": false,
                 "expression": false,
@@ -306,73 +305,422 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 500,
-                  "end": 634,
+                  "start": 445,
+                  "end": 533,
                   "loc": {
                     "start": {
-                      "line": 20,
-                      "column": 9
+                      "line": 13,
+                      "column": 26
                     },
                     "end": {
-                      "line": 27,
+                      "line": 18,
+                      "column": 3
+                    }
+                  },
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "start": 451,
+                      "end": 529,
+                      "loc": {
+                        "start": {
+                          "line": 14,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 17,
+                          "column": 5
+                        }
+                      },
+                      "argument": {
+                        "type": "ObjectExpression",
+                        "start": 458,
+                        "end": 529,
+                        "loc": {
+                          "start": {
+                            "line": 14,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 17,
+                            "column": 5
+                          }
+                        },
+                        "properties": [
+                          {
+                            "type": "ObjectProperty",
+                            "start": 466,
+                            "end": 489,
+                            "loc": {
+                              "start": {
+                                "line": 15,
+                                "column": 6
+                              },
+                              "end": {
+                                "line": 15,
+                                "column": 29
+                              }
+                            },
+                            "method": false,
+                            "shorthand": false,
+                            "computed": false,
+                            "key": {
+                              "type": "Identifier",
+                              "start": 466,
+                              "end": 470,
+                              "loc": {
+                                "start": {
+                                  "line": 15,
+                                  "column": 6
+                                },
+                                "end": {
+                                  "line": 15,
+                                  "column": 10
+                                },
+                                "identifierName": "mode"
+                              },
+                              "name": "mode"
+                            },
+                            "value": {
+                              "type": "ArrayExpression",
+                              "start": 472,
+                              "end": 489,
+                              "loc": {
+                                "start": {
+                                  "line": 15,
+                                  "column": 12
+                                },
+                                "end": {
+                                  "line": 15,
+                                  "column": 29
+                                }
+                              },
+                              "elements": [
+                                {
+                                  "type": "StringLiteral",
+                                  "start": 473,
+                                  "end": 482,
+                                  "loc": {
+                                    "start": {
+                                      "line": 15,
+                                      "column": 13
+                                    },
+                                    "end": {
+                                      "line": 15,
+                                      "column": 22
+                                    }
+                                  },
+                                  "extra": {
+                                    "rawValue": "integer",
+                                    "raw": "'integer'"
+                                  },
+                                  "value": "integer"
+                                },
+                                {
+                                  "type": "NullLiteral",
+                                  "start": 484,
+                                  "end": 488,
+                                  "loc": {
+                                    "start": {
+                                      "line": 15,
+                                      "column": 24
+                                    },
+                                    "end": {
+                                      "line": 15,
+                                      "column": 28
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "ObjectProperty",
+                            "start": 497,
+                            "end": 523,
+                            "loc": {
+                              "start": {
+                                "line": 16,
+                                "column": 6
+                              },
+                              "end": {
+                                "line": 16,
+                                "column": 32
+                              }
+                            },
+                            "method": false,
+                            "shorthand": false,
+                            "computed": false,
+                            "key": {
+                              "type": "Identifier",
+                              "start": 497,
+                              "end": 506,
+                              "loc": {
+                                "start": {
+                                  "line": 16,
+                                  "column": 6
+                                },
+                                "end": {
+                                  "line": 16,
+                                  "column": 15
+                                },
+                                "identifierName": "threshold"
+                              },
+                              "name": "threshold"
+                            },
+                            "value": {
+                              "type": "ArrayExpression",
+                              "start": 508,
+                              "end": 523,
+                              "loc": {
+                                "start": {
+                                  "line": 16,
+                                  "column": 17
+                                },
+                                "end": {
+                                  "line": 16,
+                                  "column": 32
+                                }
+                              },
+                              "elements": [
+                                {
+                                  "type": "StringLiteral",
+                                  "start": 509,
+                                  "end": 516,
+                                  "loc": {
+                                    "start": {
+                                      "line": 16,
+                                      "column": 18
+                                    },
+                                    "end": {
+                                      "line": 16,
+                                      "column": 25
+                                    }
+                                  },
+                                  "extra": {
+                                    "rawValue": "float",
+                                    "raw": "'float'"
+                                  },
+                                  "value": "float"
+                                },
+                                {
+                                  "type": "NullLiteral",
+                                  "start": 518,
+                                  "end": 522,
+                                  "loc": {
+                                    "start": {
+                                      "line": 16,
+                                      "column": 27
+                                    },
+                                    "end": {
+                                      "line": 16,
+                                      "column": 31
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "directives": [],
+                  "trailingComments": null
+                },
+                "trailingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+                    "start": 537,
+                    "end": 601,
+                    "loc": {
+                      "start": {
+                        "line": 20,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 24,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "ClassMethod",
+                "start": 604,
+                "end": 764,
+                "loc": {
+                  "start": {
+                    "line": 25,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 33,
+                    "column": 3
+                  }
+                },
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 604,
+                  "end": 615,
+                  "loc": {
+                    "start": {
+                      "line": 25,
+                      "column": 2
+                    },
+                    "end": {
+                      "line": 25,
+                      "column": 13
+                    },
+                    "identifierName": "constructor"
+                  },
+                  "name": "constructor",
+                  "leadingComments": null
+                },
+                "static": false,
+                "kind": "constructor",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 618,
+                  "end": 764,
+                  "loc": {
+                    "start": {
+                      "line": 25,
+                      "column": 16
+                    },
+                    "end": {
+                      "line": 33,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 544,
-                      "end": 565,
+                      "start": 624,
+                      "end": 631,
                       "loc": {
                         "start": {
-                          "line": 24,
+                          "line": 26,
                           "column": 4
                         },
                         "end": {
-                          "line": 24,
+                          "line": 26,
+                          "column": 11
+                        }
+                      },
+                      "expression": {
+                        "type": "CallExpression",
+                        "start": 624,
+                        "end": 631,
+                        "loc": {
+                          "start": {
+                            "line": 26,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 26,
+                            "column": 11
+                          }
+                        },
+                        "callee": {
+                          "type": "Super",
+                          "start": 624,
+                          "end": 629,
+                          "loc": {
+                            "start": {
+                              "line": 26,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 26,
+                              "column": 9
+                            }
+                          }
+                        },
+                        "arguments": [],
+                        "trailingComments": null
+                      },
+                      "trailingComments": [
+                        {
+                          "type": "CommentLine",
+                          "value": " Inspecting a Level of Detail",
+                          "start": 637,
+                          "end": 668,
+                          "loc": {
+                            "start": {
+                              "line": 28,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 28,
+                              "column": 35
+                            }
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "start": 674,
+                      "end": 695,
+                      "loc": {
+                        "start": {
+                          "line": 30,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 30,
                           "column": 25
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 544,
-                        "end": 565,
+                        "start": 674,
+                        "end": 695,
                         "loc": {
                           "start": {
-                            "line": 24,
+                            "line": 30,
                             "column": 4
                           },
                           "end": {
-                            "line": 24,
+                            "line": 30,
                             "column": 25
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 544,
-                          "end": 558,
+                          "start": 674,
+                          "end": 688,
                           "loc": {
                             "start": {
-                              "line": 24,
+                              "line": 30,
                               "column": 4
                             },
                             "end": {
-                              "line": 24,
+                              "line": 30,
                               "column": 18
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 544,
-                            "end": 548,
+                            "start": 674,
+                            "end": 678,
                             "loc": {
                               "start": {
-                                "line": 24,
+                                "line": 30,
                                 "column": 4
                               },
                               "end": {
-                                "line": 24,
+                                "line": 30,
                                 "column": 8
                               }
                             },
@@ -380,15 +728,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 549,
-                            "end": 558,
+                            "start": 679,
+                            "end": 688,
                             "loc": {
                               "start": {
-                                "line": 24,
+                                "line": 30,
                                 "column": 9
                               },
                               "end": {
-                                "line": 24,
+                                "line": 30,
                                 "column": 18
                               },
                               "identifierName": "_geometry"
@@ -400,15 +748,15 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 561,
-                          "end": 565,
+                          "start": 691,
+                          "end": 695,
                           "loc": {
                             "start": {
-                              "line": 24,
+                              "line": 30,
                               "column": 21
                             },
                             "end": {
-                              "line": 24,
+                              "line": 30,
                               "column": 25
                             }
                           }
@@ -419,15 +767,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Inspecting a Level of Detail",
-                          "start": 507,
-                          "end": 538,
+                          "start": 637,
+                          "end": 668,
                           "loc": {
                             "start": {
-                              "line": 22,
+                              "line": 28,
                               "column": 4
                             },
                             "end": {
-                              "line": 22,
+                              "line": 28,
                               "column": 35
                             }
                           }
@@ -436,73 +784,73 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 570,
-                      "end": 597,
+                      "start": 700,
+                      "end": 727,
                       "loc": {
                         "start": {
-                          "line": 25,
+                          "line": 31,
                           "column": 4
                         },
                         "end": {
-                          "line": 25,
+                          "line": 31,
                           "column": 31
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 570,
-                        "end": 597,
+                        "start": 700,
+                        "end": 727,
                         "loc": {
                           "start": {
-                            "line": 25,
+                            "line": 31,
                             "column": 4
                           },
                           "end": {
-                            "line": 25,
+                            "line": 31,
                             "column": 31
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 570,
-                          "end": 593,
+                          "start": 700,
+                          "end": 723,
                           "loc": {
                             "start": {
-                              "line": 25,
+                              "line": 31,
                               "column": 4
                             },
                             "end": {
-                              "line": 25,
+                              "line": 31,
                               "column": 27
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 570,
-                            "end": 574,
+                            "start": 700,
+                            "end": 704,
                             "loc": {
                               "start": {
-                                "line": 25,
+                                "line": 31,
                                 "column": 4
                               },
                               "end": {
-                                "line": 25,
+                                "line": 31,
                                 "column": 8
                               }
                             }
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 575,
-                            "end": 593,
+                            "start": 705,
+                            "end": 723,
                             "loc": {
                               "start": {
-                                "line": 25,
+                                "line": 31,
                                 "column": 9
                               },
                               "end": {
-                                "line": 25,
+                                "line": 31,
                                 "column": 27
                               },
                               "identifierName": "_screenSpaceRadius"
@@ -513,15 +861,15 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 596,
-                          "end": 597,
+                          "start": 726,
+                          "end": 727,
                           "loc": {
                             "start": {
-                              "line": 25,
+                              "line": 31,
                               "column": 30
                             },
                             "end": {
-                              "line": 25,
+                              "line": 31,
                               "column": 31
                             }
                           },
@@ -535,73 +883,73 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 602,
-                      "end": 630,
+                      "start": 732,
+                      "end": 760,
                       "loc": {
                         "start": {
-                          "line": 26,
+                          "line": 32,
                           "column": 4
                         },
                         "end": {
-                          "line": 26,
+                          "line": 32,
                           "column": 32
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 602,
-                        "end": 630,
+                        "start": 732,
+                        "end": 760,
                         "loc": {
                           "start": {
-                            "line": 26,
+                            "line": 32,
                             "column": 4
                           },
                           "end": {
-                            "line": 26,
+                            "line": 32,
                             "column": 32
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 602,
-                          "end": 626,
+                          "start": 732,
+                          "end": 756,
                           "loc": {
                             "start": {
-                              "line": 26,
+                              "line": 32,
                               "column": 4
                             },
                             "end": {
-                              "line": 26,
+                              "line": 32,
                               "column": 28
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 602,
-                            "end": 606,
+                            "start": 732,
+                            "end": 736,
                             "loc": {
                               "start": {
-                                "line": 26,
+                                "line": 32,
                                 "column": 4
                               },
                               "end": {
-                                "line": 26,
+                                "line": 32,
                                 "column": 8
                               }
                             }
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 607,
-                            "end": 626,
+                            "start": 737,
+                            "end": 756,
                             "loc": {
                               "start": {
-                                "line": 26,
+                                "line": 32,
                                 "column": 9
                               },
                               "end": {
-                                "line": 26,
+                                "line": 32,
                                 "column": 28
                               },
                               "identifierName": "_worldSpaceDistance"
@@ -612,15 +960,15 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 629,
-                          "end": 630,
+                          "start": 759,
+                          "end": 760,
                           "loc": {
                             "start": {
-                              "line": 26,
+                              "line": 32,
                               "column": 31
                             },
                             "end": {
-                              "line": 26,
+                              "line": 32,
                               "column": 32
                             }
                           },
@@ -639,16 +987,16 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-                    "start": 423,
-                    "end": 490,
+                    "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+                    "start": 537,
+                    "end": 601,
                     "loc": {
                       "start": {
-                        "line": 15,
+                        "line": 20,
                         "column": 2
                       },
                       "end": {
-                        "line": 19,
+                        "line": 24,
                         "column": 5
                       }
                     }
@@ -658,15 +1006,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Creating a Level of Detail",
-                    "start": 638,
-                    "end": 667,
+                    "start": 768,
+                    "end": 797,
                     "loc": {
                       "start": {
-                        "line": 29,
+                        "line": 35,
                         "column": 2
                       },
                       "end": {
-                        "line": 29,
+                        "line": 35,
                         "column": 31
                       }
                     }
@@ -674,15 +1022,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Creates a level of detail with the specified geometry and threshold pixel radius.\n   * @access public\n   * @param {?SCNGeometry} geometry - The geometry to render for this level of detail.\n   * @param {number} radius - The maximum radius (in pixels) of the geometry’s bounding sphere for this level of detail to appear.\n   * @returns {void}\n   * @desc When rendering a geometry with associated levels of detail, SceneKit calculates the radius in pixels of the circle covered by a geometry’s bounding sphere, then renders the geometry for the SCNLevelOfDetail object with the largest radius parameter smaller than that circle.If you pass nil for the geometry parameter, SceneKit renders no geometry for the level of detail. Creating a level-of-detail object with no geometry allows you to skip rendering costs entirely for an object when it would appear very far away or very small.\n   * @see https://developer.apple.com/reference/scenekit/scnlevelofdetail/1523557-init\n   ",
-                    "start": 671,
-                    "end": 1654,
+                    "start": 801,
+                    "end": 1784,
                     "loc": {
                       "start": {
-                        "line": 31,
+                        "line": 37,
                         "column": 2
                       },
                       "end": {
-                        "line": 39,
+                        "line": 45,
                         "column": 5
                       }
                     }
@@ -691,30 +1039,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 1657,
-                "end": 1702,
+                "start": 1787,
+                "end": 1832,
                 "loc": {
                   "start": {
-                    "line": 40,
+                    "line": 46,
                     "column": 2
                   },
                   "end": {
-                    "line": 41,
+                    "line": 47,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1657,
-                  "end": 1678,
+                  "start": 1787,
+                  "end": 1808,
                   "loc": {
                     "start": {
-                      "line": 40,
+                      "line": 46,
                       "column": 2
                     },
                     "end": {
-                      "line": 40,
+                      "line": 46,
                       "column": 23
                     },
                     "identifierName": "initScreenSpaceRadius"
@@ -731,15 +1079,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 1679,
-                    "end": 1687,
+                    "start": 1809,
+                    "end": 1817,
                     "loc": {
                       "start": {
-                        "line": 40,
+                        "line": 46,
                         "column": 24
                       },
                       "end": {
-                        "line": 40,
+                        "line": 46,
                         "column": 32
                       },
                       "identifierName": "geometry"
@@ -748,15 +1096,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1689,
-                    "end": 1695,
+                    "start": 1819,
+                    "end": 1825,
                     "loc": {
                       "start": {
-                        "line": 40,
+                        "line": 46,
                         "column": 34
                       },
                       "end": {
-                        "line": 40,
+                        "line": 46,
                         "column": 40
                       },
                       "identifierName": "radius"
@@ -766,15 +1114,15 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1697,
-                  "end": 1702,
+                  "start": 1827,
+                  "end": 1832,
                   "loc": {
                     "start": {
-                      "line": 40,
+                      "line": 46,
                       "column": 42
                     },
                     "end": {
-                      "line": 41,
+                      "line": 47,
                       "column": 3
                     }
                   },
@@ -787,15 +1135,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Creating a Level of Detail",
-                    "start": 638,
-                    "end": 667,
+                    "start": 768,
+                    "end": 797,
                     "loc": {
                       "start": {
-                        "line": 29,
+                        "line": 35,
                         "column": 2
                       },
                       "end": {
-                        "line": 29,
+                        "line": 35,
                         "column": 31
                       }
                     }
@@ -803,15 +1151,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Creates a level of detail with the specified geometry and threshold pixel radius.\n   * @access public\n   * @param {?SCNGeometry} geometry - The geometry to render for this level of detail.\n   * @param {number} radius - The maximum radius (in pixels) of the geometry’s bounding sphere for this level of detail to appear.\n   * @returns {void}\n   * @desc When rendering a geometry with associated levels of detail, SceneKit calculates the radius in pixels of the circle covered by a geometry’s bounding sphere, then renders the geometry for the SCNLevelOfDetail object with the largest radius parameter smaller than that circle.If you pass nil for the geometry parameter, SceneKit renders no geometry for the level of detail. Creating a level-of-detail object with no geometry allows you to skip rendering costs entirely for an object when it would appear very far away or very small.\n   * @see https://developer.apple.com/reference/scenekit/scnlevelofdetail/1523557-init\n   ",
-                    "start": 671,
-                    "end": 1654,
+                    "start": 801,
+                    "end": 1784,
                     "loc": {
                       "start": {
-                        "line": 31,
+                        "line": 37,
                         "column": 2
                       },
                       "end": {
-                        "line": 39,
+                        "line": 45,
                         "column": 5
                       }
                     }
@@ -821,15 +1169,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Creates a level of detail with the specified geometry and threshold camera distance.\n   * @access public\n   * @param {?SCNGeometry} geometry - The geometry to render for this level of detail, or nil if SceneKit should render no geometry at this level of detail.\n   * @param {number} distance - The minimum distance from the current point of view for this level of detail to appear.\n   * @returns {void}\n   * @desc When rendering a geometry with associated levels of detail, SceneKit calculates the distance from the current point of view to the geometry’s parent node, then renders the geometry for the SCNLevelOfDetail object with the smallest distance parameter greater than that distance.If you pass nil for the geometry parameter, SceneKit renders no geometry for the level of detail. Creating a level-of-detail object with no geometry allows you to skip rendering costs entirely for an object when it would appear very far away or very small.\n   * @see https://developer.apple.com/reference/scenekit/scnlevelofdetail/1522802-init\n   ",
-                    "start": 1706,
-                    "end": 2755,
+                    "start": 1836,
+                    "end": 2885,
                     "loc": {
                       "start": {
-                        "line": 43,
+                        "line": 49,
                         "column": 2
                       },
                       "end": {
-                        "line": 51,
+                        "line": 57,
                         "column": 5
                       }
                     }
@@ -838,30 +1186,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 2758,
-                "end": 2806,
+                "start": 2888,
+                "end": 2936,
                 "loc": {
                   "start": {
-                    "line": 52,
+                    "line": 58,
                     "column": 2
                   },
                   "end": {
-                    "line": 53,
+                    "line": 59,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 2758,
-                  "end": 2780,
+                  "start": 2888,
+                  "end": 2910,
                   "loc": {
                     "start": {
-                      "line": 52,
+                      "line": 58,
                       "column": 2
                     },
                     "end": {
-                      "line": 52,
+                      "line": 58,
                       "column": 24
                     },
                     "identifierName": "initWorldSpaceDistance"
@@ -878,15 +1226,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 2781,
-                    "end": 2789,
+                    "start": 2911,
+                    "end": 2919,
                     "loc": {
                       "start": {
-                        "line": 52,
+                        "line": 58,
                         "column": 25
                       },
                       "end": {
-                        "line": 52,
+                        "line": 58,
                         "column": 33
                       },
                       "identifierName": "geometry"
@@ -895,15 +1243,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 2791,
-                    "end": 2799,
+                    "start": 2921,
+                    "end": 2929,
                     "loc": {
                       "start": {
-                        "line": 52,
+                        "line": 58,
                         "column": 35
                       },
                       "end": {
-                        "line": 52,
+                        "line": 58,
                         "column": 43
                       },
                       "identifierName": "distance"
@@ -913,15 +1261,15 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 2801,
-                  "end": 2806,
+                  "start": 2931,
+                  "end": 2936,
                   "loc": {
                     "start": {
-                      "line": 52,
+                      "line": 58,
                       "column": 45
                     },
                     "end": {
-                      "line": 53,
+                      "line": 59,
                       "column": 3
                     }
                   },
@@ -934,15 +1282,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Creates a level of detail with the specified geometry and threshold camera distance.\n   * @access public\n   * @param {?SCNGeometry} geometry - The geometry to render for this level of detail, or nil if SceneKit should render no geometry at this level of detail.\n   * @param {number} distance - The minimum distance from the current point of view for this level of detail to appear.\n   * @returns {void}\n   * @desc When rendering a geometry with associated levels of detail, SceneKit calculates the distance from the current point of view to the geometry’s parent node, then renders the geometry for the SCNLevelOfDetail object with the smallest distance parameter greater than that distance.If you pass nil for the geometry parameter, SceneKit renders no geometry for the level of detail. Creating a level-of-detail object with no geometry allows you to skip rendering costs entirely for an object when it would appear very far away or very small.\n   * @see https://developer.apple.com/reference/scenekit/scnlevelofdetail/1522802-init\n   ",
-                    "start": 1706,
-                    "end": 2755,
+                    "start": 1836,
+                    "end": 2885,
                     "loc": {
                       "start": {
-                        "line": 43,
+                        "line": 49,
                         "column": 2
                       },
                       "end": {
-                        "line": 51,
+                        "line": 57,
                         "column": 5
                       }
                     }
@@ -952,15 +1300,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Inspecting a Level of Detail",
-                    "start": 2810,
-                    "end": 2841,
+                    "start": 2940,
+                    "end": 2971,
                     "loc": {
                       "start": {
-                        "line": 55,
+                        "line": 61,
                         "column": 2
                       },
                       "end": {
-                        "line": 55,
+                        "line": 61,
                         "column": 33
                       }
                     }
@@ -968,15 +1316,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The geometry associated with this level of detail.\n   * @type {?SCNGeometry}\n   * @desc SceneKit renders this geometry instead of the original geometry when the level of detail is appropriate. Generally, levels of detail with larger worldSpaceDistance values or smaller screenSpaceRadius values should contain less complex geometries.If the value of this property is nil, SceneKit renders no geometry at this level of detail.\n   * @see https://developer.apple.com/reference/scenekit/scnlevelofdetail/1522819-geometry\n   ",
-                    "start": 2844,
-                    "end": 3375,
+                    "start": 2974,
+                    "end": 3505,
                     "loc": {
                       "start": {
-                        "line": 56,
+                        "line": 62,
                         "column": 2
                       },
                       "end": {
-                        "line": 61,
+                        "line": 67,
                         "column": 5
                       }
                     }
@@ -985,30 +1333,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 3378,
-                "end": 3424,
+                "start": 3508,
+                "end": 3554,
                 "loc": {
                   "start": {
-                    "line": 62,
+                    "line": 68,
                     "column": 2
                   },
                   "end": {
-                    "line": 64,
+                    "line": 70,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 3382,
-                  "end": 3390,
+                  "start": 3512,
+                  "end": 3520,
                   "loc": {
                     "start": {
-                      "line": 62,
+                      "line": 68,
                       "column": 6
                     },
                     "end": {
-                      "line": 62,
+                      "line": 68,
                       "column": 14
                     },
                     "identifierName": "geometry"
@@ -1024,73 +1372,73 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 3393,
-                  "end": 3424,
+                  "start": 3523,
+                  "end": 3554,
                   "loc": {
                     "start": {
-                      "line": 62,
+                      "line": 68,
                       "column": 17
                     },
                     "end": {
-                      "line": 64,
+                      "line": 70,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 3399,
-                      "end": 3420,
+                      "start": 3529,
+                      "end": 3550,
                       "loc": {
                         "start": {
-                          "line": 63,
+                          "line": 69,
                           "column": 4
                         },
                         "end": {
-                          "line": 63,
+                          "line": 69,
                           "column": 25
                         }
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 3406,
-                        "end": 3420,
+                        "start": 3536,
+                        "end": 3550,
                         "loc": {
                           "start": {
-                            "line": 63,
+                            "line": 69,
                             "column": 11
                           },
                           "end": {
-                            "line": 63,
+                            "line": 69,
                             "column": 25
                           }
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 3406,
-                          "end": 3410,
+                          "start": 3536,
+                          "end": 3540,
                           "loc": {
                             "start": {
-                              "line": 63,
+                              "line": 69,
                               "column": 11
                             },
                             "end": {
-                              "line": 63,
+                              "line": 69,
                               "column": 15
                             }
                           }
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 3411,
-                          "end": 3420,
+                          "start": 3541,
+                          "end": 3550,
                           "loc": {
                             "start": {
-                              "line": 63,
+                              "line": 69,
                               "column": 16
                             },
                             "end": {
-                              "line": 63,
+                              "line": 69,
                               "column": 25
                             },
                             "identifierName": "_geometry"
@@ -1108,15 +1456,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Inspecting a Level of Detail",
-                    "start": 2810,
-                    "end": 2841,
+                    "start": 2940,
+                    "end": 2971,
                     "loc": {
                       "start": {
-                        "line": 55,
+                        "line": 61,
                         "column": 2
                       },
                       "end": {
-                        "line": 55,
+                        "line": 61,
                         "column": 33
                       }
                     }
@@ -1124,15 +1472,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The geometry associated with this level of detail.\n   * @type {?SCNGeometry}\n   * @desc SceneKit renders this geometry instead of the original geometry when the level of detail is appropriate. Generally, levels of detail with larger worldSpaceDistance values or smaller screenSpaceRadius values should contain less complex geometries.If the value of this property is nil, SceneKit renders no geometry at this level of detail.\n   * @see https://developer.apple.com/reference/scenekit/scnlevelofdetail/1522819-geometry\n   ",
-                    "start": 2844,
-                    "end": 3375,
+                    "start": 2974,
+                    "end": 3505,
                     "loc": {
                       "start": {
-                        "line": 56,
+                        "line": 62,
                         "column": 2
                       },
                       "end": {
-                        "line": 61,
+                        "line": 67,
                         "column": 5
                       }
                     }
@@ -1142,15 +1490,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The maximum radius (in pixels) of the geometry’s bounding sphere for this level of detail to appear.\n   * @type {number}\n   * @desc When rendering a geometry with associated levels of detail, SceneKit calculates the radius in pixels of the circle covered by a geometry’s bounding sphere, then renders the geometry for the SCNLevelOfDetail object with the smallest radius parameter larger than that circle.\n   * @see https://developer.apple.com/reference/scenekit/scnlevelofdetail/1523554-screenspaceradius\n   ",
-                    "start": 3427,
-                    "end": 3947,
+                    "start": 3558,
+                    "end": 4078,
                     "loc": {
                       "start": {
-                        "line": 65,
+                        "line": 72,
                         "column": 2
                       },
                       "end": {
-                        "line": 70,
+                        "line": 77,
                         "column": 5
                       }
                     }
@@ -1159,30 +1507,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 3950,
-                "end": 4014,
+                "start": 4081,
+                "end": 4145,
                 "loc": {
                   "start": {
-                    "line": 71,
+                    "line": 78,
                     "column": 2
                   },
                   "end": {
-                    "line": 73,
+                    "line": 80,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 3954,
-                  "end": 3971,
+                  "start": 4085,
+                  "end": 4102,
                   "loc": {
                     "start": {
-                      "line": 71,
+                      "line": 78,
                       "column": 6
                     },
                     "end": {
-                      "line": 71,
+                      "line": 78,
                       "column": 23
                     },
                     "identifierName": "screenSpaceRadius"
@@ -1198,73 +1546,73 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 3974,
-                  "end": 4014,
+                  "start": 4105,
+                  "end": 4145,
                   "loc": {
                     "start": {
-                      "line": 71,
+                      "line": 78,
                       "column": 26
                     },
                     "end": {
-                      "line": 73,
+                      "line": 80,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 3980,
-                      "end": 4010,
+                      "start": 4111,
+                      "end": 4141,
                       "loc": {
                         "start": {
-                          "line": 72,
+                          "line": 79,
                           "column": 4
                         },
                         "end": {
-                          "line": 72,
+                          "line": 79,
                           "column": 34
                         }
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 3987,
-                        "end": 4010,
+                        "start": 4118,
+                        "end": 4141,
                         "loc": {
                           "start": {
-                            "line": 72,
+                            "line": 79,
                             "column": 11
                           },
                           "end": {
-                            "line": 72,
+                            "line": 79,
                             "column": 34
                           }
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 3987,
-                          "end": 3991,
+                          "start": 4118,
+                          "end": 4122,
                           "loc": {
                             "start": {
-                              "line": 72,
+                              "line": 79,
                               "column": 11
                             },
                             "end": {
-                              "line": 72,
+                              "line": 79,
                               "column": 15
                             }
                           }
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 3992,
-                          "end": 4010,
+                          "start": 4123,
+                          "end": 4141,
                           "loc": {
                             "start": {
-                              "line": 72,
+                              "line": 79,
                               "column": 16
                             },
                             "end": {
-                              "line": 72,
+                              "line": 79,
                               "column": 34
                             },
                             "identifierName": "_screenSpaceRadius"
@@ -1282,15 +1630,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The maximum radius (in pixels) of the geometry’s bounding sphere for this level of detail to appear.\n   * @type {number}\n   * @desc When rendering a geometry with associated levels of detail, SceneKit calculates the radius in pixels of the circle covered by a geometry’s bounding sphere, then renders the geometry for the SCNLevelOfDetail object with the smallest radius parameter larger than that circle.\n   * @see https://developer.apple.com/reference/scenekit/scnlevelofdetail/1523554-screenspaceradius\n   ",
-                    "start": 3427,
-                    "end": 3947,
+                    "start": 3558,
+                    "end": 4078,
                     "loc": {
                       "start": {
-                        "line": 65,
+                        "line": 72,
                         "column": 2
                       },
                       "end": {
-                        "line": 70,
+                        "line": 77,
                         "column": 5
                       }
                     }
@@ -1300,15 +1648,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The minimum distance from the current point of view for this level of detail to appear.\n   * @type {number}\n   * @desc When rendering a geometry with associated levels of detail, SceneKit calculates the distance from the current point of view to the geometry’s parent node, then renders the geometry for the SCNLevelOfDetail object with the largest distance parameter less than that distance.\n   * @see https://developer.apple.com/reference/scenekit/scnlevelofdetail/1524159-worldspacedistance\n   ",
-                    "start": 4017,
-                    "end": 4525,
+                    "start": 4149,
+                    "end": 4657,
                     "loc": {
                       "start": {
-                        "line": 74,
+                        "line": 82,
                         "column": 2
                       },
                       "end": {
-                        "line": 79,
+                        "line": 87,
                         "column": 5
                       }
                     }
@@ -1317,30 +1665,30 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 4528,
-                "end": 4594,
+                "start": 4660,
+                "end": 4726,
                 "loc": {
                   "start": {
-                    "line": 80,
+                    "line": 88,
                     "column": 2
                   },
                   "end": {
-                    "line": 82,
+                    "line": 90,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 4532,
-                  "end": 4550,
+                  "start": 4664,
+                  "end": 4682,
                   "loc": {
                     "start": {
-                      "line": 80,
+                      "line": 88,
                       "column": 6
                     },
                     "end": {
-                      "line": 80,
+                      "line": 88,
                       "column": 24
                     },
                     "identifierName": "worldSpaceDistance"
@@ -1356,73 +1704,73 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 4553,
-                  "end": 4594,
+                  "start": 4685,
+                  "end": 4726,
                   "loc": {
                     "start": {
-                      "line": 80,
+                      "line": 88,
                       "column": 27
                     },
                     "end": {
-                      "line": 82,
+                      "line": 90,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 4559,
-                      "end": 4590,
+                      "start": 4691,
+                      "end": 4722,
                       "loc": {
                         "start": {
-                          "line": 81,
+                          "line": 89,
                           "column": 4
                         },
                         "end": {
-                          "line": 81,
+                          "line": 89,
                           "column": 35
                         }
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 4566,
-                        "end": 4590,
+                        "start": 4698,
+                        "end": 4722,
                         "loc": {
                           "start": {
-                            "line": 81,
+                            "line": 89,
                             "column": 11
                           },
                           "end": {
-                            "line": 81,
+                            "line": 89,
                             "column": 35
                           }
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 4566,
-                          "end": 4570,
+                          "start": 4698,
+                          "end": 4702,
                           "loc": {
                             "start": {
-                              "line": 81,
+                              "line": 89,
                               "column": 11
                             },
                             "end": {
-                              "line": 81,
+                              "line": 89,
                               "column": 15
                             }
                           }
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 4571,
-                          "end": 4590,
+                          "start": 4703,
+                          "end": 4722,
                           "loc": {
                             "start": {
-                              "line": 81,
+                              "line": 89,
                               "column": 16
                             },
                             "end": {
-                              "line": 81,
+                              "line": 89,
                               "column": 35
                             },
                             "identifierName": "_worldSpaceDistance"
@@ -1439,15 +1787,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * The minimum distance from the current point of view for this level of detail to appear.\n   * @type {number}\n   * @desc When rendering a geometry with associated levels of detail, SceneKit calculates the distance from the current point of view to the geometry’s parent node, then renders the geometry for the SCNLevelOfDetail object with the largest distance parameter less than that distance.\n   * @see https://developer.apple.com/reference/scenekit/scnlevelofdetail/1524159-worldspacedistance\n   ",
-                    "start": 4017,
-                    "end": 4525,
+                    "start": 4149,
+                    "end": 4657,
                     "loc": {
                       "start": {
-                        "line": 74,
+                        "line": 82,
                         "column": 2
                       },
                       "end": {
-                        "line": 79,
+                        "line": 87,
                         "column": 5
                       }
                     }
@@ -1460,15 +1808,15 @@
             {
               "type": "CommentBlock",
               "value": "*\n * An object that defines alternate resolutions for a geometry that SceneKit can automatically substitute to improve rendering performance.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnlevelofdetail\n ",
-              "start": 102,
-              "end": 362,
+              "start": 101,
+              "end": 361,
               "loc": {
                 "start": {
-                  "line": 7,
+                  "line": 6,
                   "column": 0
                 },
                 "end": {
-                  "line": 12,
+                  "line": 11,
                   "column": 3
                 }
               }
@@ -1480,15 +1828,15 @@
           {
             "type": "CommentBlock",
             "value": "*\n * An object that defines alternate resolutions for a geometry that SceneKit can automatically substitute to improve rendering performance.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnlevelofdetail\n ",
-            "start": 102,
-            "end": 362,
+            "start": 101,
+            "end": 361,
             "loc": {
               "start": {
-                "line": 7,
+                "line": 6,
                 "column": 0
               },
               "end": {
-                "line": 12,
+                "line": 11,
                 "column": 3
               }
             }
@@ -1538,31 +1886,31 @@
     {
       "type": "CommentBlock",
       "value": "*\n * An object that defines alternate resolutions for a geometry that SceneKit can automatically substitute to improve rendering performance.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnlevelofdetail\n ",
-      "start": 102,
-      "end": 362,
+      "start": 101,
+      "end": 361,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 6,
           "column": 0
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 3
         }
       }
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 423,
-      "end": 490,
+      "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+      "start": 537,
+      "end": 601,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 20,
           "column": 2
         },
         "end": {
-          "line": 19,
+          "line": 24,
           "column": 5
         }
       }
@@ -1570,15 +1918,15 @@
     {
       "type": "CommentLine",
       "value": " Inspecting a Level of Detail",
-      "start": 507,
-      "end": 538,
+      "start": 637,
+      "end": 668,
       "loc": {
         "start": {
-          "line": 22,
+          "line": 28,
           "column": 4
         },
         "end": {
-          "line": 22,
+          "line": 28,
           "column": 35
         }
       }
@@ -1586,15 +1934,15 @@
     {
       "type": "CommentLine",
       "value": " Creating a Level of Detail",
-      "start": 638,
-      "end": 667,
+      "start": 768,
+      "end": 797,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 35,
           "column": 2
         },
         "end": {
-          "line": 29,
+          "line": 35,
           "column": 31
         }
       }
@@ -1602,15 +1950,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Creates a level of detail with the specified geometry and threshold pixel radius.\n   * @access public\n   * @param {?SCNGeometry} geometry - The geometry to render for this level of detail.\n   * @param {number} radius - The maximum radius (in pixels) of the geometry’s bounding sphere for this level of detail to appear.\n   * @returns {void}\n   * @desc When rendering a geometry with associated levels of detail, SceneKit calculates the radius in pixels of the circle covered by a geometry’s bounding sphere, then renders the geometry for the SCNLevelOfDetail object with the largest radius parameter smaller than that circle.If you pass nil for the geometry parameter, SceneKit renders no geometry for the level of detail. Creating a level-of-detail object with no geometry allows you to skip rendering costs entirely for an object when it would appear very far away or very small.\n   * @see https://developer.apple.com/reference/scenekit/scnlevelofdetail/1523557-init\n   ",
-      "start": 671,
-      "end": 1654,
+      "start": 801,
+      "end": 1784,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 37,
           "column": 2
         },
         "end": {
-          "line": 39,
+          "line": 45,
           "column": 5
         }
       }
@@ -1618,15 +1966,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Creates a level of detail with the specified geometry and threshold camera distance.\n   * @access public\n   * @param {?SCNGeometry} geometry - The geometry to render for this level of detail, or nil if SceneKit should render no geometry at this level of detail.\n   * @param {number} distance - The minimum distance from the current point of view for this level of detail to appear.\n   * @returns {void}\n   * @desc When rendering a geometry with associated levels of detail, SceneKit calculates the distance from the current point of view to the geometry’s parent node, then renders the geometry for the SCNLevelOfDetail object with the smallest distance parameter greater than that distance.If you pass nil for the geometry parameter, SceneKit renders no geometry for the level of detail. Creating a level-of-detail object with no geometry allows you to skip rendering costs entirely for an object when it would appear very far away or very small.\n   * @see https://developer.apple.com/reference/scenekit/scnlevelofdetail/1522802-init\n   ",
-      "start": 1706,
-      "end": 2755,
+      "start": 1836,
+      "end": 2885,
       "loc": {
         "start": {
-          "line": 43,
+          "line": 49,
           "column": 2
         },
         "end": {
-          "line": 51,
+          "line": 57,
           "column": 5
         }
       }
@@ -1634,15 +1982,15 @@
     {
       "type": "CommentLine",
       "value": " Inspecting a Level of Detail",
-      "start": 2810,
-      "end": 2841,
+      "start": 2940,
+      "end": 2971,
       "loc": {
         "start": {
-          "line": 55,
+          "line": 61,
           "column": 2
         },
         "end": {
-          "line": 55,
+          "line": 61,
           "column": 33
         }
       }
@@ -1650,15 +1998,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The geometry associated with this level of detail.\n   * @type {?SCNGeometry}\n   * @desc SceneKit renders this geometry instead of the original geometry when the level of detail is appropriate. Generally, levels of detail with larger worldSpaceDistance values or smaller screenSpaceRadius values should contain less complex geometries.If the value of this property is nil, SceneKit renders no geometry at this level of detail.\n   * @see https://developer.apple.com/reference/scenekit/scnlevelofdetail/1522819-geometry\n   ",
-      "start": 2844,
-      "end": 3375,
+      "start": 2974,
+      "end": 3505,
       "loc": {
         "start": {
-          "line": 56,
+          "line": 62,
           "column": 2
         },
         "end": {
-          "line": 61,
+          "line": 67,
           "column": 5
         }
       }
@@ -1666,15 +2014,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The maximum radius (in pixels) of the geometry’s bounding sphere for this level of detail to appear.\n   * @type {number}\n   * @desc When rendering a geometry with associated levels of detail, SceneKit calculates the radius in pixels of the circle covered by a geometry’s bounding sphere, then renders the geometry for the SCNLevelOfDetail object with the smallest radius parameter larger than that circle.\n   * @see https://developer.apple.com/reference/scenekit/scnlevelofdetail/1523554-screenspaceradius\n   ",
-      "start": 3427,
-      "end": 3947,
+      "start": 3558,
+      "end": 4078,
       "loc": {
         "start": {
-          "line": 65,
+          "line": 72,
           "column": 2
         },
         "end": {
-          "line": 70,
+          "line": 77,
           "column": 5
         }
       }
@@ -1682,15 +2030,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The minimum distance from the current point of view for this level of detail to appear.\n   * @type {number}\n   * @desc When rendering a geometry with associated levels of detail, SceneKit calculates the distance from the current point of view to the geometry’s parent node, then renders the geometry for the SCNLevelOfDetail object with the largest distance parameter less than that distance.\n   * @see https://developer.apple.com/reference/scenekit/scnlevelofdetail/1524159-worldspacedistance\n   ",
-      "start": 4017,
-      "end": 4525,
+      "start": 4149,
+      "end": 4657,
       "loc": {
         "start": {
-          "line": 74,
+          "line": 82,
           "column": 2
         },
         "end": {
-          "line": 79,
+          "line": 87,
           "column": 5
         }
       }
@@ -1941,15 +2289,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n * An object that defines alternate resolutions for a geometry that SceneKit can automatically substitute to improve rendering performance.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnlevelofdetail\n ",
-      "start": 102,
-      "end": 362,
+      "start": 101,
+      "end": 361,
       "loc": {
         "start": {
-          "line": 7,
+          "line": 6,
           "column": 0
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 3
         }
       }
@@ -1969,15 +2317,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 363,
-      "end": 369,
+      "start": 362,
+      "end": 368,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 0
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 6
         }
       }
@@ -1997,15 +2345,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 370,
-      "end": 377,
+      "start": 369,
+      "end": 376,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 7
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 14
         }
       }
@@ -2025,15 +2373,15 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 378,
-      "end": 383,
+      "start": 377,
+      "end": 382,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 15
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 20
         }
       }
@@ -2051,15 +2399,15 @@
         "binop": null
       },
       "value": "SCNLevelOfDetail",
-      "start": 384,
-      "end": 400,
+      "start": 383,
+      "end": 399,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 21
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 37
         }
       }
@@ -2079,15 +2427,15 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 401,
-      "end": 408,
+      "start": 400,
+      "end": 407,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 38
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 45
         }
       }
@@ -2105,15 +2453,15 @@
         "binop": null
       },
       "value": "NSObject",
-      "start": 409,
-      "end": 417,
+      "start": 408,
+      "end": 416,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 46
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 54
         }
       }
@@ -2130,31 +2478,683 @@
         "postfix": false,
         "binop": null
       },
-      "start": 418,
-      "end": 419,
+      "start": 417,
+      "end": 418,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 12,
           "column": 55
         },
         "end": {
-          "line": 13,
+          "line": 12,
           "column": 56
         }
       }
     },
     {
-      "type": "CommentBlock",
-      "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 423,
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "static",
+      "start": 421,
+      "end": 427,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 2
+        },
+        "end": {
+          "line": 13,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "get",
+      "start": 428,
+      "end": 431,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 9
+        },
+        "end": {
+          "line": 13,
+          "column": 12
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "_propTypes",
+      "start": 432,
+      "end": 442,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 13
+        },
+        "end": {
+          "line": 13,
+          "column": 23
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 442,
+      "end": 443,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 23
+        },
+        "end": {
+          "line": 13,
+          "column": 24
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 443,
+      "end": 444,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 24
+        },
+        "end": {
+          "line": 13,
+          "column": 25
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 445,
+      "end": 446,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 26
+        },
+        "end": {
+          "line": 13,
+          "column": 27
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "return",
+        "keyword": "return",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "return",
+      "start": 451,
+      "end": 457,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 4
+        },
+        "end": {
+          "line": 14,
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 458,
+      "end": 459,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 11
+        },
+        "end": {
+          "line": 14,
+          "column": 12
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "mode",
+      "start": 466,
+      "end": 470,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 6
+        },
+        "end": {
+          "line": 15,
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 470,
+      "end": 471,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 10
+        },
+        "end": {
+          "line": 15,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "[",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 472,
+      "end": 473,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 12
+        },
+        "end": {
+          "line": 15,
+          "column": 13
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "integer",
+      "start": 473,
+      "end": 482,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 13
+        },
+        "end": {
+          "line": 15,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 482,
+      "end": 483,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 22
+        },
+        "end": {
+          "line": 15,
+          "column": 23
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "null",
+        "keyword": "null",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "null",
+      "start": 484,
+      "end": 488,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 24
+        },
+        "end": {
+          "line": 15,
+          "column": 28
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "]",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 488,
+      "end": 489,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 28
+        },
+        "end": {
+          "line": 15,
+          "column": 29
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 489,
       "end": 490,
       "loc": {
         "start": {
           "line": 15,
+          "column": 29
+        },
+        "end": {
+          "line": 15,
+          "column": 30
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "threshold",
+      "start": 497,
+      "end": 506,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 6
+        },
+        "end": {
+          "line": 16,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 506,
+      "end": 507,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 15
+        },
+        "end": {
+          "line": 16,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "[",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 508,
+      "end": 509,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 17
+        },
+        "end": {
+          "line": 16,
+          "column": 18
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "float",
+      "start": 509,
+      "end": 516,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 18
+        },
+        "end": {
+          "line": 16,
+          "column": 25
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 516,
+      "end": 517,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 25
+        },
+        "end": {
+          "line": 16,
+          "column": 26
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "null",
+        "keyword": "null",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "null",
+      "start": 518,
+      "end": 522,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 27
+        },
+        "end": {
+          "line": 16,
+          "column": 31
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "]",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 522,
+      "end": 523,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 31
+        },
+        "end": {
+          "line": 16,
+          "column": 32
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 528,
+      "end": 529,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 4
+        },
+        "end": {
+          "line": 17,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 532,
+      "end": 533,
+      "loc": {
+        "start": {
+          "line": 18,
           "column": 2
         },
         "end": {
-          "line": 19,
+          "line": 18,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
+      "start": 537,
+      "end": 601,
+      "loc": {
+        "start": {
+          "line": 20,
+          "column": 2
+        },
+        "end": {
+          "line": 24,
           "column": 5
         }
       }
@@ -2171,17 +3171,17 @@
         "postfix": false,
         "binop": null
       },
-      "value": "init",
-      "start": 493,
-      "end": 497,
+      "value": "constructor",
+      "start": 604,
+      "end": 615,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 25,
           "column": 2
         },
         "end": {
-          "line": 20,
-          "column": 6
+          "line": 25,
+          "column": 13
         }
       }
     },
@@ -2197,16 +3197,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 497,
-      "end": 498,
+      "start": 615,
+      "end": 616,
       "loc": {
         "start": {
-          "line": 20,
-          "column": 6
+          "line": 25,
+          "column": 13
         },
         "end": {
-          "line": 20,
-          "column": 7
+          "line": 25,
+          "column": 14
         }
       }
     },
@@ -2222,16 +3222,16 @@
         "postfix": false,
         "binop": null
       },
-      "start": 498,
-      "end": 499,
+      "start": 616,
+      "end": 617,
       "loc": {
         "start": {
-          "line": 20,
-          "column": 7
+          "line": 25,
+          "column": 14
         },
         "end": {
-          "line": 20,
-          "column": 8
+          "line": 25,
+          "column": 15
         }
       }
     },
@@ -2247,31 +3247,109 @@
         "postfix": false,
         "binop": null
       },
-      "start": 500,
-      "end": 501,
+      "start": 618,
+      "end": 619,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 25,
+          "column": 16
+        },
+        "end": {
+          "line": 25,
+          "column": 17
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "super",
+        "keyword": "super",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "super",
+      "start": 624,
+      "end": 629,
+      "loc": {
+        "start": {
+          "line": 26,
+          "column": 4
+        },
+        "end": {
+          "line": 26,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 629,
+      "end": 630,
+      "loc": {
+        "start": {
+          "line": 26,
           "column": 9
         },
         "end": {
-          "line": 20,
+          "line": 26,
           "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 630,
+      "end": 631,
+      "loc": {
+        "start": {
+          "line": 26,
+          "column": 10
+        },
+        "end": {
+          "line": 26,
+          "column": 11
         }
       }
     },
     {
       "type": "CommentLine",
       "value": " Inspecting a Level of Detail",
-      "start": 507,
-      "end": 538,
+      "start": 637,
+      "end": 668,
       "loc": {
         "start": {
-          "line": 22,
+          "line": 28,
           "column": 4
         },
         "end": {
-          "line": 22,
+          "line": 28,
           "column": 35
         }
       }
@@ -2291,15 +3369,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 544,
-      "end": 548,
+      "start": 674,
+      "end": 678,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 30,
           "column": 4
         },
         "end": {
-          "line": 24,
+          "line": 30,
           "column": 8
         }
       }
@@ -2317,15 +3395,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 548,
-      "end": 549,
+      "start": 678,
+      "end": 679,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 30,
           "column": 8
         },
         "end": {
-          "line": 24,
+          "line": 30,
           "column": 9
         }
       }
@@ -2343,15 +3421,15 @@
         "binop": null
       },
       "value": "_geometry",
-      "start": 549,
-      "end": 558,
+      "start": 679,
+      "end": 688,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 30,
           "column": 9
         },
         "end": {
-          "line": 24,
+          "line": 30,
           "column": 18
         }
       }
@@ -2370,15 +3448,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 559,
-      "end": 560,
+      "start": 689,
+      "end": 690,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 30,
           "column": 19
         },
         "end": {
-          "line": 24,
+          "line": 30,
           "column": 20
         }
       }
@@ -2398,15 +3476,15 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 561,
-      "end": 565,
+      "start": 691,
+      "end": 695,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 30,
           "column": 21
         },
         "end": {
-          "line": 24,
+          "line": 30,
           "column": 25
         }
       }
@@ -2426,15 +3504,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 570,
-      "end": 574,
+      "start": 700,
+      "end": 704,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 31,
           "column": 4
         },
         "end": {
-          "line": 25,
+          "line": 31,
           "column": 8
         }
       }
@@ -2452,15 +3530,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 574,
-      "end": 575,
+      "start": 704,
+      "end": 705,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 31,
           "column": 8
         },
         "end": {
-          "line": 25,
+          "line": 31,
           "column": 9
         }
       }
@@ -2478,15 +3556,15 @@
         "binop": null
       },
       "value": "_screenSpaceRadius",
-      "start": 575,
-      "end": 593,
+      "start": 705,
+      "end": 723,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 31,
           "column": 9
         },
         "end": {
-          "line": 25,
+          "line": 31,
           "column": 27
         }
       }
@@ -2505,15 +3583,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 594,
-      "end": 595,
+      "start": 724,
+      "end": 725,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 31,
           "column": 28
         },
         "end": {
-          "line": 25,
+          "line": 31,
           "column": 29
         }
       }
@@ -2532,15 +3610,15 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 596,
-      "end": 597,
+      "start": 726,
+      "end": 727,
       "loc": {
         "start": {
-          "line": 25,
+          "line": 31,
           "column": 30
         },
         "end": {
-          "line": 25,
+          "line": 31,
           "column": 31
         }
       }
@@ -2560,15 +3638,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 602,
-      "end": 606,
+      "start": 732,
+      "end": 736,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 32,
           "column": 4
         },
         "end": {
-          "line": 26,
+          "line": 32,
           "column": 8
         }
       }
@@ -2586,15 +3664,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 606,
-      "end": 607,
+      "start": 736,
+      "end": 737,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 32,
           "column": 8
         },
         "end": {
-          "line": 26,
+          "line": 32,
           "column": 9
         }
       }
@@ -2612,15 +3690,15 @@
         "binop": null
       },
       "value": "_worldSpaceDistance",
-      "start": 607,
-      "end": 626,
+      "start": 737,
+      "end": 756,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 32,
           "column": 9
         },
         "end": {
-          "line": 26,
+          "line": 32,
           "column": 28
         }
       }
@@ -2639,15 +3717,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 627,
-      "end": 628,
+      "start": 757,
+      "end": 758,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 32,
           "column": 29
         },
         "end": {
-          "line": 26,
+          "line": 32,
           "column": 30
         }
       }
@@ -2666,15 +3744,15 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 629,
-      "end": 630,
+      "start": 759,
+      "end": 760,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 32,
           "column": 31
         },
         "end": {
-          "line": 26,
+          "line": 32,
           "column": 32
         }
       }
@@ -2691,15 +3769,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 633,
-      "end": 634,
+      "start": 763,
+      "end": 764,
       "loc": {
         "start": {
-          "line": 27,
+          "line": 33,
           "column": 2
         },
         "end": {
-          "line": 27,
+          "line": 33,
           "column": 3
         }
       }
@@ -2707,15 +3785,15 @@
     {
       "type": "CommentLine",
       "value": " Creating a Level of Detail",
-      "start": 638,
-      "end": 667,
+      "start": 768,
+      "end": 797,
       "loc": {
         "start": {
-          "line": 29,
+          "line": 35,
           "column": 2
         },
         "end": {
-          "line": 29,
+          "line": 35,
           "column": 31
         }
       }
@@ -2723,15 +3801,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Creates a level of detail with the specified geometry and threshold pixel radius.\n   * @access public\n   * @param {?SCNGeometry} geometry - The geometry to render for this level of detail.\n   * @param {number} radius - The maximum radius (in pixels) of the geometry’s bounding sphere for this level of detail to appear.\n   * @returns {void}\n   * @desc When rendering a geometry with associated levels of detail, SceneKit calculates the radius in pixels of the circle covered by a geometry’s bounding sphere, then renders the geometry for the SCNLevelOfDetail object with the largest radius parameter smaller than that circle.If you pass nil for the geometry parameter, SceneKit renders no geometry for the level of detail. Creating a level-of-detail object with no geometry allows you to skip rendering costs entirely for an object when it would appear very far away or very small.\n   * @see https://developer.apple.com/reference/scenekit/scnlevelofdetail/1523557-init\n   ",
-      "start": 671,
-      "end": 1654,
+      "start": 801,
+      "end": 1784,
       "loc": {
         "start": {
-          "line": 31,
+          "line": 37,
           "column": 2
         },
         "end": {
-          "line": 39,
+          "line": 45,
           "column": 5
         }
       }
@@ -2749,15 +3827,15 @@
         "binop": null
       },
       "value": "initScreenSpaceRadius",
-      "start": 1657,
-      "end": 1678,
+      "start": 1787,
+      "end": 1808,
       "loc": {
         "start": {
-          "line": 40,
+          "line": 46,
           "column": 2
         },
         "end": {
-          "line": 40,
+          "line": 46,
           "column": 23
         }
       }
@@ -2774,15 +3852,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1678,
-      "end": 1679,
+      "start": 1808,
+      "end": 1809,
       "loc": {
         "start": {
-          "line": 40,
+          "line": 46,
           "column": 23
         },
         "end": {
-          "line": 40,
+          "line": 46,
           "column": 24
         }
       }
@@ -2800,15 +3878,15 @@
         "binop": null
       },
       "value": "geometry",
-      "start": 1679,
-      "end": 1687,
+      "start": 1809,
+      "end": 1817,
       "loc": {
         "start": {
-          "line": 40,
+          "line": 46,
           "column": 24
         },
         "end": {
-          "line": 40,
+          "line": 46,
           "column": 32
         }
       }
@@ -2826,15 +3904,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1687,
-      "end": 1688,
+      "start": 1817,
+      "end": 1818,
       "loc": {
         "start": {
-          "line": 40,
+          "line": 46,
           "column": 32
         },
         "end": {
-          "line": 40,
+          "line": 46,
           "column": 33
         }
       }
@@ -2852,15 +3930,15 @@
         "binop": null
       },
       "value": "radius",
-      "start": 1689,
-      "end": 1695,
+      "start": 1819,
+      "end": 1825,
       "loc": {
         "start": {
-          "line": 40,
+          "line": 46,
           "column": 34
         },
         "end": {
-          "line": 40,
+          "line": 46,
           "column": 40
         }
       }
@@ -2877,15 +3955,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1695,
-      "end": 1696,
+      "start": 1825,
+      "end": 1826,
       "loc": {
         "start": {
-          "line": 40,
+          "line": 46,
           "column": 40
         },
         "end": {
-          "line": 40,
+          "line": 46,
           "column": 41
         }
       }
@@ -2902,15 +3980,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1697,
-      "end": 1698,
+      "start": 1827,
+      "end": 1828,
       "loc": {
         "start": {
-          "line": 40,
+          "line": 46,
           "column": 42
         },
         "end": {
-          "line": 40,
+          "line": 46,
           "column": 43
         }
       }
@@ -2927,15 +4005,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1701,
-      "end": 1702,
+      "start": 1831,
+      "end": 1832,
       "loc": {
         "start": {
-          "line": 41,
+          "line": 47,
           "column": 2
         },
         "end": {
-          "line": 41,
+          "line": 47,
           "column": 3
         }
       }
@@ -2943,15 +4021,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Creates a level of detail with the specified geometry and threshold camera distance.\n   * @access public\n   * @param {?SCNGeometry} geometry - The geometry to render for this level of detail, or nil if SceneKit should render no geometry at this level of detail.\n   * @param {number} distance - The minimum distance from the current point of view for this level of detail to appear.\n   * @returns {void}\n   * @desc When rendering a geometry with associated levels of detail, SceneKit calculates the distance from the current point of view to the geometry’s parent node, then renders the geometry for the SCNLevelOfDetail object with the smallest distance parameter greater than that distance.If you pass nil for the geometry parameter, SceneKit renders no geometry for the level of detail. Creating a level-of-detail object with no geometry allows you to skip rendering costs entirely for an object when it would appear very far away or very small.\n   * @see https://developer.apple.com/reference/scenekit/scnlevelofdetail/1522802-init\n   ",
-      "start": 1706,
-      "end": 2755,
+      "start": 1836,
+      "end": 2885,
       "loc": {
         "start": {
-          "line": 43,
+          "line": 49,
           "column": 2
         },
         "end": {
-          "line": 51,
+          "line": 57,
           "column": 5
         }
       }
@@ -2969,15 +4047,15 @@
         "binop": null
       },
       "value": "initWorldSpaceDistance",
-      "start": 2758,
-      "end": 2780,
+      "start": 2888,
+      "end": 2910,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 58,
           "column": 2
         },
         "end": {
-          "line": 52,
+          "line": 58,
           "column": 24
         }
       }
@@ -2994,15 +4072,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2780,
-      "end": 2781,
+      "start": 2910,
+      "end": 2911,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 58,
           "column": 24
         },
         "end": {
-          "line": 52,
+          "line": 58,
           "column": 25
         }
       }
@@ -3020,15 +4098,15 @@
         "binop": null
       },
       "value": "geometry",
-      "start": 2781,
-      "end": 2789,
+      "start": 2911,
+      "end": 2919,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 58,
           "column": 25
         },
         "end": {
-          "line": 52,
+          "line": 58,
           "column": 33
         }
       }
@@ -3046,15 +4124,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2789,
-      "end": 2790,
+      "start": 2919,
+      "end": 2920,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 58,
           "column": 33
         },
         "end": {
-          "line": 52,
+          "line": 58,
           "column": 34
         }
       }
@@ -3072,15 +4150,15 @@
         "binop": null
       },
       "value": "distance",
-      "start": 2791,
-      "end": 2799,
+      "start": 2921,
+      "end": 2929,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 58,
           "column": 35
         },
         "end": {
-          "line": 52,
+          "line": 58,
           "column": 43
         }
       }
@@ -3097,15 +4175,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2799,
-      "end": 2800,
+      "start": 2929,
+      "end": 2930,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 58,
           "column": 43
         },
         "end": {
-          "line": 52,
+          "line": 58,
           "column": 44
         }
       }
@@ -3122,15 +4200,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2801,
-      "end": 2802,
+      "start": 2931,
+      "end": 2932,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 58,
           "column": 45
         },
         "end": {
-          "line": 52,
+          "line": 58,
           "column": 46
         }
       }
@@ -3147,15 +4225,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2805,
-      "end": 2806,
+      "start": 2935,
+      "end": 2936,
       "loc": {
         "start": {
-          "line": 53,
+          "line": 59,
           "column": 2
         },
         "end": {
-          "line": 53,
+          "line": 59,
           "column": 3
         }
       }
@@ -3163,15 +4241,15 @@
     {
       "type": "CommentLine",
       "value": " Inspecting a Level of Detail",
-      "start": 2810,
-      "end": 2841,
+      "start": 2940,
+      "end": 2971,
       "loc": {
         "start": {
-          "line": 55,
+          "line": 61,
           "column": 2
         },
         "end": {
-          "line": 55,
+          "line": 61,
           "column": 33
         }
       }
@@ -3179,15 +4257,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The geometry associated with this level of detail.\n   * @type {?SCNGeometry}\n   * @desc SceneKit renders this geometry instead of the original geometry when the level of detail is appropriate. Generally, levels of detail with larger worldSpaceDistance values or smaller screenSpaceRadius values should contain less complex geometries.If the value of this property is nil, SceneKit renders no geometry at this level of detail.\n   * @see https://developer.apple.com/reference/scenekit/scnlevelofdetail/1522819-geometry\n   ",
-      "start": 2844,
-      "end": 3375,
+      "start": 2974,
+      "end": 3505,
       "loc": {
         "start": {
-          "line": 56,
+          "line": 62,
           "column": 2
         },
         "end": {
-          "line": 61,
+          "line": 67,
           "column": 5
         }
       }
@@ -3205,15 +4283,15 @@
         "binop": null
       },
       "value": "get",
-      "start": 3378,
-      "end": 3381,
+      "start": 3508,
+      "end": 3511,
       "loc": {
         "start": {
-          "line": 62,
+          "line": 68,
           "column": 2
         },
         "end": {
-          "line": 62,
+          "line": 68,
           "column": 5
         }
       }
@@ -3231,15 +4309,15 @@
         "binop": null
       },
       "value": "geometry",
-      "start": 3382,
-      "end": 3390,
+      "start": 3512,
+      "end": 3520,
       "loc": {
         "start": {
-          "line": 62,
+          "line": 68,
           "column": 6
         },
         "end": {
-          "line": 62,
+          "line": 68,
           "column": 14
         }
       }
@@ -3256,15 +4334,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3390,
-      "end": 3391,
+      "start": 3520,
+      "end": 3521,
       "loc": {
         "start": {
-          "line": 62,
+          "line": 68,
           "column": 14
         },
         "end": {
-          "line": 62,
+          "line": 68,
           "column": 15
         }
       }
@@ -3281,15 +4359,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3391,
-      "end": 3392,
+      "start": 3521,
+      "end": 3522,
       "loc": {
         "start": {
-          "line": 62,
+          "line": 68,
           "column": 15
         },
         "end": {
-          "line": 62,
+          "line": 68,
           "column": 16
         }
       }
@@ -3306,15 +4384,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3393,
-      "end": 3394,
+      "start": 3523,
+      "end": 3524,
       "loc": {
         "start": {
-          "line": 62,
+          "line": 68,
           "column": 17
         },
         "end": {
-          "line": 62,
+          "line": 68,
           "column": 18
         }
       }
@@ -3334,15 +4412,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 3399,
-      "end": 3405,
+      "start": 3529,
+      "end": 3535,
       "loc": {
         "start": {
-          "line": 63,
+          "line": 69,
           "column": 4
         },
         "end": {
-          "line": 63,
+          "line": 69,
           "column": 10
         }
       }
@@ -3362,15 +4440,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3406,
-      "end": 3410,
+      "start": 3536,
+      "end": 3540,
       "loc": {
         "start": {
-          "line": 63,
+          "line": 69,
           "column": 11
         },
         "end": {
-          "line": 63,
+          "line": 69,
           "column": 15
         }
       }
@@ -3388,15 +4466,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3410,
-      "end": 3411,
+      "start": 3540,
+      "end": 3541,
       "loc": {
         "start": {
-          "line": 63,
+          "line": 69,
           "column": 15
         },
         "end": {
-          "line": 63,
+          "line": 69,
           "column": 16
         }
       }
@@ -3414,15 +4492,15 @@
         "binop": null
       },
       "value": "_geometry",
-      "start": 3411,
-      "end": 3420,
+      "start": 3541,
+      "end": 3550,
       "loc": {
         "start": {
-          "line": 63,
+          "line": 69,
           "column": 16
         },
         "end": {
-          "line": 63,
+          "line": 69,
           "column": 25
         }
       }
@@ -3439,15 +4517,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3423,
-      "end": 3424,
+      "start": 3553,
+      "end": 3554,
       "loc": {
         "start": {
-          "line": 64,
+          "line": 70,
           "column": 2
         },
         "end": {
-          "line": 64,
+          "line": 70,
           "column": 3
         }
       }
@@ -3455,15 +4533,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The maximum radius (in pixels) of the geometry’s bounding sphere for this level of detail to appear.\n   * @type {number}\n   * @desc When rendering a geometry with associated levels of detail, SceneKit calculates the radius in pixels of the circle covered by a geometry’s bounding sphere, then renders the geometry for the SCNLevelOfDetail object with the smallest radius parameter larger than that circle.\n   * @see https://developer.apple.com/reference/scenekit/scnlevelofdetail/1523554-screenspaceradius\n   ",
-      "start": 3427,
-      "end": 3947,
+      "start": 3558,
+      "end": 4078,
       "loc": {
         "start": {
-          "line": 65,
+          "line": 72,
           "column": 2
         },
         "end": {
-          "line": 70,
+          "line": 77,
           "column": 5
         }
       }
@@ -3481,15 +4559,15 @@
         "binop": null
       },
       "value": "get",
-      "start": 3950,
-      "end": 3953,
+      "start": 4081,
+      "end": 4084,
       "loc": {
         "start": {
-          "line": 71,
+          "line": 78,
           "column": 2
         },
         "end": {
-          "line": 71,
+          "line": 78,
           "column": 5
         }
       }
@@ -3507,15 +4585,15 @@
         "binop": null
       },
       "value": "screenSpaceRadius",
-      "start": 3954,
-      "end": 3971,
+      "start": 4085,
+      "end": 4102,
       "loc": {
         "start": {
-          "line": 71,
+          "line": 78,
           "column": 6
         },
         "end": {
-          "line": 71,
+          "line": 78,
           "column": 23
         }
       }
@@ -3532,15 +4610,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3971,
-      "end": 3972,
+      "start": 4102,
+      "end": 4103,
       "loc": {
         "start": {
-          "line": 71,
+          "line": 78,
           "column": 23
         },
         "end": {
-          "line": 71,
+          "line": 78,
           "column": 24
         }
       }
@@ -3557,15 +4635,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3972,
-      "end": 3973,
+      "start": 4103,
+      "end": 4104,
       "loc": {
         "start": {
-          "line": 71,
+          "line": 78,
           "column": 24
         },
         "end": {
-          "line": 71,
+          "line": 78,
           "column": 25
         }
       }
@@ -3582,15 +4660,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3974,
-      "end": 3975,
+      "start": 4105,
+      "end": 4106,
       "loc": {
         "start": {
-          "line": 71,
+          "line": 78,
           "column": 26
         },
         "end": {
-          "line": 71,
+          "line": 78,
           "column": 27
         }
       }
@@ -3610,15 +4688,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 3980,
-      "end": 3986,
+      "start": 4111,
+      "end": 4117,
       "loc": {
         "start": {
-          "line": 72,
+          "line": 79,
           "column": 4
         },
         "end": {
-          "line": 72,
+          "line": 79,
           "column": 10
         }
       }
@@ -3638,15 +4716,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3987,
-      "end": 3991,
+      "start": 4118,
+      "end": 4122,
       "loc": {
         "start": {
-          "line": 72,
+          "line": 79,
           "column": 11
         },
         "end": {
-          "line": 72,
+          "line": 79,
           "column": 15
         }
       }
@@ -3664,15 +4742,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3991,
-      "end": 3992,
+      "start": 4122,
+      "end": 4123,
       "loc": {
         "start": {
-          "line": 72,
+          "line": 79,
           "column": 15
         },
         "end": {
-          "line": 72,
+          "line": 79,
           "column": 16
         }
       }
@@ -3690,15 +4768,15 @@
         "binop": null
       },
       "value": "_screenSpaceRadius",
-      "start": 3992,
-      "end": 4010,
+      "start": 4123,
+      "end": 4141,
       "loc": {
         "start": {
-          "line": 72,
+          "line": 79,
           "column": 16
         },
         "end": {
-          "line": 72,
+          "line": 79,
           "column": 34
         }
       }
@@ -3715,15 +4793,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4013,
-      "end": 4014,
+      "start": 4144,
+      "end": 4145,
       "loc": {
         "start": {
-          "line": 73,
+          "line": 80,
           "column": 2
         },
         "end": {
-          "line": 73,
+          "line": 80,
           "column": 3
         }
       }
@@ -3731,15 +4809,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * The minimum distance from the current point of view for this level of detail to appear.\n   * @type {number}\n   * @desc When rendering a geometry with associated levels of detail, SceneKit calculates the distance from the current point of view to the geometry’s parent node, then renders the geometry for the SCNLevelOfDetail object with the largest distance parameter less than that distance.\n   * @see https://developer.apple.com/reference/scenekit/scnlevelofdetail/1524159-worldspacedistance\n   ",
-      "start": 4017,
-      "end": 4525,
+      "start": 4149,
+      "end": 4657,
       "loc": {
         "start": {
-          "line": 74,
+          "line": 82,
           "column": 2
         },
         "end": {
-          "line": 79,
+          "line": 87,
           "column": 5
         }
       }
@@ -3757,15 +4835,15 @@
         "binop": null
       },
       "value": "get",
-      "start": 4528,
-      "end": 4531,
+      "start": 4660,
+      "end": 4663,
       "loc": {
         "start": {
-          "line": 80,
+          "line": 88,
           "column": 2
         },
         "end": {
-          "line": 80,
+          "line": 88,
           "column": 5
         }
       }
@@ -3783,15 +4861,15 @@
         "binop": null
       },
       "value": "worldSpaceDistance",
-      "start": 4532,
-      "end": 4550,
+      "start": 4664,
+      "end": 4682,
       "loc": {
         "start": {
-          "line": 80,
+          "line": 88,
           "column": 6
         },
         "end": {
-          "line": 80,
+          "line": 88,
           "column": 24
         }
       }
@@ -3808,15 +4886,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4550,
-      "end": 4551,
+      "start": 4682,
+      "end": 4683,
       "loc": {
         "start": {
-          "line": 80,
+          "line": 88,
           "column": 24
         },
         "end": {
-          "line": 80,
+          "line": 88,
           "column": 25
         }
       }
@@ -3833,15 +4911,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4551,
-      "end": 4552,
+      "start": 4683,
+      "end": 4684,
       "loc": {
         "start": {
-          "line": 80,
+          "line": 88,
           "column": 25
         },
         "end": {
-          "line": 80,
+          "line": 88,
           "column": 26
         }
       }
@@ -3858,15 +4936,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4553,
-      "end": 4554,
+      "start": 4685,
+      "end": 4686,
       "loc": {
         "start": {
-          "line": 80,
+          "line": 88,
           "column": 27
         },
         "end": {
-          "line": 80,
+          "line": 88,
           "column": 28
         }
       }
@@ -3886,15 +4964,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 4559,
-      "end": 4565,
+      "start": 4691,
+      "end": 4697,
       "loc": {
         "start": {
-          "line": 81,
+          "line": 89,
           "column": 4
         },
         "end": {
-          "line": 81,
+          "line": 89,
           "column": 10
         }
       }
@@ -3914,15 +4992,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 4566,
-      "end": 4570,
+      "start": 4698,
+      "end": 4702,
       "loc": {
         "start": {
-          "line": 81,
+          "line": 89,
           "column": 11
         },
         "end": {
-          "line": 81,
+          "line": 89,
           "column": 15
         }
       }
@@ -3940,15 +5018,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4570,
-      "end": 4571,
+      "start": 4702,
+      "end": 4703,
       "loc": {
         "start": {
-          "line": 81,
+          "line": 89,
           "column": 15
         },
         "end": {
-          "line": 81,
+          "line": 89,
           "column": 16
         }
       }
@@ -3966,15 +5044,15 @@
         "binop": null
       },
       "value": "_worldSpaceDistance",
-      "start": 4571,
-      "end": 4590,
+      "start": 4703,
+      "end": 4722,
       "loc": {
         "start": {
-          "line": 81,
+          "line": 89,
           "column": 16
         },
         "end": {
-          "line": 81,
+          "line": 89,
           "column": 35
         }
       }
@@ -3991,15 +5069,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4593,
-      "end": 4594,
+      "start": 4725,
+      "end": 4726,
       "loc": {
         "start": {
-          "line": 82,
+          "line": 90,
           "column": 2
         },
         "end": {
-          "line": 82,
+          "line": 90,
           "column": 3
         }
       }
@@ -4016,15 +5094,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4595,
-      "end": 4596,
+      "start": 4727,
+      "end": 4728,
       "loc": {
         "start": {
-          "line": 83,
+          "line": 91,
           "column": 0
         },
         "end": {
-          "line": 83,
+          "line": 91,
           "column": 1
         }
       }
@@ -4042,15 +5120,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4597,
-      "end": 4597,
+      "start": 4729,
+      "end": 4729,
       "loc": {
         "start": {
-          "line": 84,
+          "line": 92,
           "column": 0
         },
         "end": {
-          "line": 84,
+          "line": 92,
           "column": 0
         }
       }

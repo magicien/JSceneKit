@@ -48,6 +48,12 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
+    "jscenekit/js/quartzcore/cacurrentmediatime.js~cacurrentmediatime",
+    "function/index.html#static-function-CACurrentMediaTime",
+    "<span>CACurrentMediaTime</span> <span class=\"search-result-import-path\">jscenekit/js/QuartzCore/CACurrentMediaTime.js</span>",
+    "function"
+  ],
+  [
     "jscenekit/js/quartzcore/cakeyframeanimation.js~cakeyframeanimation",
     "class/js/QuartzCore/CAKeyframeAnimation.js~CAKeyframeAnimation.html",
     "<span>CAKeyframeAnimation</span> <span class=\"search-result-import-path\">jscenekit/js/QuartzCore/CAKeyframeAnimation.js</span>",
@@ -117,6 +123,24 @@ window.esdocSearchIndex = [
     "jscenekit/js/coregraphics/cgvector.js~cgvector",
     "class/js/CoreGraphics/CGVector.js~CGVector.html",
     "<span>CGVector</span> <span class=\"search-result-import-path\">jscenekit/js/CoreGraphics/CGVector.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/dispatch/dispatchobject.js~dispatchobject",
+    "class/js/Dispatch/DispatchObject.js~DispatchObject.html",
+    "<span>DispatchObject</span> <span class=\"search-result-import-path\">jscenekit/js/Dispatch/DispatchObject.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/dispatch/dispatchqueue.js~dispatchqueue",
+    "class/js/Dispatch/DispatchQueue.js~DispatchQueue.html",
+    "<span>DispatchQueue</span> <span class=\"search-result-import-path\">jscenekit/js/Dispatch/DispatchQueue.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/dispatch/dispatchtime.js~dispatchtime",
+    "class/js/Dispatch/DispatchTime.js~DispatchTime.html",
+    "<span>DispatchTime</span> <span class=\"search-result-import-path\">jscenekit/js/Dispatch/DispatchTime.js</span>",
     "class"
   ],
   [
@@ -216,6 +240,12 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
+    "jscenekit/js/foundation/nscolorspace.js~nscolorspace",
+    "class/js/Foundation/NSColorSpace.js~NSColorSpace.html",
+    "<span>NSColorSpace</span> <span class=\"search-result-import-path\">jscenekit/js/Foundation/NSColorSpace.js</span>",
+    "class"
+  ],
+  [
     "jscenekit/js/foundation/nsdata.js~nsdata",
     "class/js/Foundation/NSData.js~NSData.html",
     "<span>NSData</span> <span class=\"search-result-import-path\">jscenekit/js/Foundation/NSData.js</span>",
@@ -264,6 +294,12 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
+    "jscenekit/js/foundation/nsurl.js~nsurl",
+    "class/js/Foundation/NSURL.js~NSURL.html",
+    "<span>NSURL</span> <span class=\"search-result-import-path\">jscenekit/js/Foundation/NSURL.js</span>",
+    "class"
+  ],
+  [
     "jscenekit/js/foundation/nsvalue.js~nsvalue",
     "class/js/Foundation/NSValue.js~NSValue.html",
     "<span>NSValue</span> <span class=\"search-result-import-path\">jscenekit/js/Foundation/NSValue.js</span>",
@@ -276,10 +312,112 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
+    "jscenekit/js/scenekit/scnactioncustom.js~scnactioncustom",
+    "class/js/SceneKit/SCNActionCustom.js~SCNActionCustom.html",
+    "<span>SCNActionCustom</span> <span class=\"search-result-import-path\">jscenekit/js/SceneKit/SCNActionCustom.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/scenekit/scnactionfade.js~scnactionfade",
+    "class/js/SceneKit/SCNActionFade.js~SCNActionFade.html",
+    "<span>SCNActionFade</span> <span class=\"search-result-import-path\">jscenekit/js/SceneKit/SCNActionFade.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/scenekit/scnactiongroup.js~scnactiongroup",
+    "class/js/SceneKit/SCNActionGroup.js~SCNActionGroup.html",
+    "<span>SCNActionGroup</span> <span class=\"search-result-import-path\">jscenekit/js/SceneKit/SCNActionGroup.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/scenekit/scnactionhide.js~scnactionhide",
+    "class/js/SceneKit/SCNActionHide.js~SCNActionHide.html",
+    "<span>SCNActionHide</span> <span class=\"search-result-import-path\">jscenekit/js/SceneKit/SCNActionHide.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/scenekit/scnactionjavascript.js~scnactionjavascript",
+    "class/js/SceneKit/SCNActionJavaScript.js~SCNActionJavaScript.html",
+    "<span>SCNActionJavaScript</span> <span class=\"search-result-import-path\">jscenekit/js/SceneKit/SCNActionJavaScript.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/scenekit/scnactionmove.js~scnactionmove",
+    "class/js/SceneKit/SCNActionMove.js~SCNActionMove.html",
+    "<span>SCNActionMove</span> <span class=\"search-result-import-path\">jscenekit/js/SceneKit/SCNActionMove.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/scenekit/scnactionperformselector.js~scnactionperformselector",
+    "class/js/SceneKit/SCNActionPerformSelector.js~SCNActionPerformSelector.html",
+    "<span>SCNActionPerformSelector</span> <span class=\"search-result-import-path\">jscenekit/js/SceneKit/SCNActionPerformSelector.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/scenekit/scnactionplaysound.js~scnactionplaysound",
+    "class/js/SceneKit/SCNActionPlaySound.js~SCNActionPlaySound.html",
+    "<span>SCNActionPlaySound</span> <span class=\"search-result-import-path\">jscenekit/js/SceneKit/SCNActionPlaySound.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/scenekit/scnactionreference.js~scnactionreference",
+    "class/js/SceneKit/SCNActionReference.js~SCNActionReference.html",
+    "<span>SCNActionReference</span> <span class=\"search-result-import-path\">jscenekit/js/SceneKit/SCNActionReference.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/scenekit/scnactionremove.js~scnactionremove",
+    "class/js/SceneKit/SCNActionRemove.js~SCNActionRemove.html",
+    "<span>SCNActionRemove</span> <span class=\"search-result-import-path\">jscenekit/js/SceneKit/SCNActionRemove.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/scenekit/scnactionrepeat.js~scnactionrepeat",
+    "class/js/SceneKit/SCNActionRepeat.js~SCNActionRepeat.html",
+    "<span>SCNActionRepeat</span> <span class=\"search-result-import-path\">jscenekit/js/SceneKit/SCNActionRepeat.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/scenekit/scnactionrotate.js~scnactionrotate",
+    "class/js/SceneKit/SCNActionRotate.js~SCNActionRotate.html",
+    "<span>SCNActionRotate</span> <span class=\"search-result-import-path\">jscenekit/js/SceneKit/SCNActionRotate.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/scenekit/scnactionrunaction.js~scnactionrunaction",
+    "class/js/SceneKit/SCNActionRunAction.js~SCNActionRunAction.html",
+    "<span>SCNActionRunAction</span> <span class=\"search-result-import-path\">jscenekit/js/SceneKit/SCNActionRunAction.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/scenekit/scnactionrunblock.js~scnactionrunblock",
+    "class/js/SceneKit/SCNActionRunBlock.js~SCNActionRunBlock.html",
+    "<span>SCNActionRunBlock</span> <span class=\"search-result-import-path\">jscenekit/js/SceneKit/SCNActionRunBlock.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/scenekit/scnactionscale.js~scnactionscale",
+    "class/js/SceneKit/SCNActionScale.js~SCNActionScale.html",
+    "<span>SCNActionScale</span> <span class=\"search-result-import-path\">jscenekit/js/SceneKit/SCNActionScale.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/scenekit/scnactionsequence.js~scnactionsequence",
+    "class/js/SceneKit/SCNActionSequence.js~SCNActionSequence.html",
+    "<span>SCNActionSequence</span> <span class=\"search-result-import-path\">jscenekit/js/SceneKit/SCNActionSequence.js</span>",
+    "class"
+  ],
+  [
     "jscenekit/js/scenekit/scnactiontimingfunction.js~scnactiontimingfunction",
     "function/index.html#static-function-SCNActionTimingFunction",
     "<span>SCNActionTimingFunction</span> <span class=\"search-result-import-path\">jscenekit/js/SceneKit/SCNActionTimingFunction.js</span>",
     "function"
+  ],
+  [
+    "jscenekit/js/scenekit/scnactionwait.js~scnactionwait",
+    "class/js/SceneKit/SCNActionWait.js~SCNActionWait.html",
+    "<span>SCNActionWait</span> <span class=\"search-result-import-path\">jscenekit/js/SceneKit/SCNActionWait.js</span>",
+    "class"
   ],
   [
     "jscenekit/js/scenekit/scnactionable.js~scnactionable",
@@ -582,6 +720,12 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
+    "jscenekit/js/scenekit/scnordereddictionary.js~scnordereddictionary",
+    "class/js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary.html",
+    "<span>SCNOrderedDictionary</span> <span class=\"search-result-import-path\">jscenekit/js/SceneKit/SCNOrderedDictionary.js</span>",
+    "class"
+  ],
+  [
     "jscenekit/js/scenekit/scnparticleeventblock.js~scnparticleeventblock",
     "function/index.html#static-function-SCNParticleEventBlock",
     "<span>SCNParticleEventBlock</span> <span class=\"search-result-import-path\">jscenekit/js/SceneKit/SCNParticleEventBlock.js</span>",
@@ -774,6 +918,12 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
+    "jscenekit/js/scenekit/scnshadablehelper.js~scnshadablehelper",
+    "class/js/SceneKit/SCNShadableHelper.js~SCNShadableHelper.html",
+    "<span>SCNShadableHelper</span> <span class=\"search-result-import-path\">jscenekit/js/SceneKit/SCNShadableHelper.js</span>",
+    "class"
+  ],
+  [
     "jscenekit/js/scenekit/scnshape.js~scnshape",
     "class/js/SceneKit/SCNShape.js~SCNShape.html",
     "<span>SCNShape</span> <span class=\"search-result-import-path\">jscenekit/js/SceneKit/SCNShape.js</span>",
@@ -924,9 +1074,87 @@ window.esdocSearchIndex = [
     "class"
   ],
   [
+    "jscenekit/js/spritekit/skaction.js~skaction",
+    "class/js/SpriteKit/SKAction.js~SKAction.html",
+    "<span>SKAction</span> <span class=\"search-result-import-path\">jscenekit/js/SpriteKit/SKAction.js</span>",
+    "class"
+  ],
+  [
     "jscenekit/js/spritekit/skcolor.js~skcolor",
     "class/js/SpriteKit/SKColor.js~SKColor.html",
     "<span>SKColor</span> <span class=\"search-result-import-path\">jscenekit/js/SpriteKit/SKColor.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/spritekit/skeffectnode.js~skeffectnode",
+    "class/js/SpriteKit/SKEffectNode.js~SKEffectNode.html",
+    "<span>SKEffectNode</span> <span class=\"search-result-import-path\">jscenekit/js/SpriteKit/SKEffectNode.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/spritekit/skfade.js~skfade",
+    "class/js/SpriteKit/SKFade.js~SKFade.html",
+    "<span>SKFade</span> <span class=\"search-result-import-path\">jscenekit/js/SpriteKit/SKFade.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/spritekit/skgroup.js~skgroup",
+    "class/js/SpriteKit/SKGroup.js~SKGroup.html",
+    "<span>SKGroup</span> <span class=\"search-result-import-path\">jscenekit/js/SpriteKit/SKGroup.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/spritekit/sklabelnode.js~sklabelnode",
+    "class/js/SpriteKit/SKLabelNode.js~SKLabelNode.html",
+    "<span>SKLabelNode</span> <span class=\"search-result-import-path\">jscenekit/js/SpriteKit/SKLabelNode.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/spritekit/sknode.js~sknode",
+    "class/js/SpriteKit/SKNode.js~SKNode.html",
+    "<span>SKNode</span> <span class=\"search-result-import-path\">jscenekit/js/SpriteKit/SKNode.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/spritekit/skscale.js~skscale",
+    "class/js/SpriteKit/SKScale.js~SKScale.html",
+    "<span>SKScale</span> <span class=\"search-result-import-path\">jscenekit/js/SpriteKit/SKScale.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/spritekit/skscene.js~skscene",
+    "class/js/SpriteKit/SKScene.js~SKScene.html",
+    "<span>SKScene</span> <span class=\"search-result-import-path\">jscenekit/js/SpriteKit/SKScene.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/spritekit/sksequence.js~sksequence",
+    "class/js/SpriteKit/SKSequence.js~SKSequence.html",
+    "<span>SKSequence</span> <span class=\"search-result-import-path\">jscenekit/js/SpriteKit/SKSequence.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/spritekit/skshapenode.js~skshapenode",
+    "class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html",
+    "<span>SKShapeNode</span> <span class=\"search-result-import-path\">jscenekit/js/SpriteKit/SKShapeNode.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/spritekit/skspritenode.js~skspritenode",
+    "class/js/SpriteKit/SKSpriteNode.js~SKSpriteNode.html",
+    "<span>SKSpriteNode</span> <span class=\"search-result-import-path\">jscenekit/js/SpriteKit/SKSpriteNode.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/spritekit/sktexture.js~sktexture",
+    "class/js/SpriteKit/SKTexture.js~SKTexture.html",
+    "<span>SKTexture</span> <span class=\"search-result-import-path\">jscenekit/js/SpriteKit/SKTexture.js</span>",
+    "class"
+  ],
+  [
+    "jscenekit/js/spritekit/skwait.js~skwait",
+    "class/js/SpriteKit/SKWait.js~SKWait.html",
+    "<span>SKWait</span> <span class=\"search-result-import-path\">jscenekit/js/SpriteKit/SKWait.js</span>",
     "class"
   ],
   [
@@ -1620,6 +1848,12 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "js/coregraphics/cgpoint.js~cgpoint#add",
+    "class/js/CoreGraphics/CGPoint.js~CGPoint.html#instance-method-add",
+    "js/CoreGraphics/CGPoint.js~CGPoint#add",
+    "method"
+  ],
+  [
     "js/coregraphics/cgpoint.js~cgpoint#applying",
     "class/js/CoreGraphics/CGPoint.js~CGPoint.html#instance-method-applying",
     "js/CoreGraphics/CGPoint.js~CGPoint#applying",
@@ -1662,9 +1896,57 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "js/coregraphics/cgpoint.js~cgpoint#dot",
+    "class/js/CoreGraphics/CGPoint.js~CGPoint.html#instance-method-dot",
+    "js/CoreGraphics/CGPoint.js~CGPoint#dot",
+    "method"
+  ],
+  [
     "js/coregraphics/cgpoint.js~cgpoint#equalto",
     "class/js/CoreGraphics/CGPoint.js~CGPoint.html#instance-method-equalTo",
     "js/CoreGraphics/CGPoint.js~CGPoint#equalTo",
+    "method"
+  ],
+  [
+    "js/coregraphics/cgpoint.js~cgpoint#float32array",
+    "class/js/CoreGraphics/CGPoint.js~CGPoint.html#instance-method-float32Array",
+    "js/CoreGraphics/CGPoint.js~CGPoint#float32Array",
+    "method"
+  ],
+  [
+    "js/coregraphics/cgpoint.js~cgpoint#floatarray",
+    "class/js/CoreGraphics/CGPoint.js~CGPoint.html#instance-method-floatArray",
+    "js/CoreGraphics/CGPoint.js~CGPoint#floatArray",
+    "method"
+  ],
+  [
+    "js/coregraphics/cgpoint.js~cgpoint#length",
+    "class/js/CoreGraphics/CGPoint.js~CGPoint.html#instance-method-length",
+    "js/CoreGraphics/CGPoint.js~CGPoint#length",
+    "method"
+  ],
+  [
+    "js/coregraphics/cgpoint.js~cgpoint#lerp",
+    "class/js/CoreGraphics/CGPoint.js~CGPoint.html#instance-method-lerp",
+    "js/CoreGraphics/CGPoint.js~CGPoint#lerp",
+    "method"
+  ],
+  [
+    "js/coregraphics/cgpoint.js~cgpoint#mul",
+    "class/js/CoreGraphics/CGPoint.js~CGPoint.html#instance-method-mul",
+    "js/CoreGraphics/CGPoint.js~CGPoint#mul",
+    "method"
+  ],
+  [
+    "js/coregraphics/cgpoint.js~cgpoint#normalize",
+    "class/js/CoreGraphics/CGPoint.js~CGPoint.html#instance-method-normalize",
+    "js/CoreGraphics/CGPoint.js~CGPoint#normalize",
+    "method"
+  ],
+  [
+    "js/coregraphics/cgpoint.js~cgpoint#sub",
+    "class/js/CoreGraphics/CGPoint.js~CGPoint.html#instance-method-sub",
+    "js/CoreGraphics/CGPoint.js~CGPoint#sub",
     "method"
   ],
   [
@@ -1678,6 +1960,12 @@ window.esdocSearchIndex = [
     "class/js/CoreGraphics/CGPoint.js~CGPoint.html#instance-member-y",
     "js/CoreGraphics/CGPoint.js~CGPoint#y",
     "member"
+  ],
+  [
+    "js/coregraphics/cgpoint.js~cgpoint#zero",
+    "class/js/CoreGraphics/CGPoint.js~CGPoint.html#instance-method-zero",
+    "js/CoreGraphics/CGPoint.js~CGPoint#zero",
+    "method"
   ],
   [
     "js/coregraphics/cgpoint.js~cgpoint.pointwithdictionaryrepresentation",
@@ -1696,6 +1984,12 @@ window.esdocSearchIndex = [
     "file/js/CoreGraphics/CGRect.js.html",
     "js/CoreGraphics/CGRect.js",
     "file"
+  ],
+  [
+    "js/coregraphics/cgrect.js~cgrect#add",
+    "class/js/CoreGraphics/CGRect.js~CGRect.html#instance-method-add",
+    "js/CoreGraphics/CGRect.js~CGRect#add",
+    "method"
   ],
   [
     "js/coregraphics/cgrect.js~cgrect#applying",
@@ -1812,6 +2106,12 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "js/coregraphics/cgrect.js~cgrect#lerp",
+    "class/js/CoreGraphics/CGRect.js~CGRect.html#instance-method-lerp",
+    "js/CoreGraphics/CGRect.js~CGRect#lerp",
+    "method"
+  ],
+  [
     "js/coregraphics/cgrect.js~cgrect#maxx",
     "class/js/CoreGraphics/CGRect.js~CGRect.html#instance-get-maxX",
     "js/CoreGraphics/CGRect.js~CGRect#maxX",
@@ -1872,6 +2172,12 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "js/coregraphics/cgrect.js~cgrect#sub",
+    "class/js/CoreGraphics/CGRect.js~CGRect.html#instance-method-sub",
+    "js/CoreGraphics/CGRect.js~CGRect#sub",
+    "method"
+  ],
+  [
     "js/coregraphics/cgrect.js~cgrect#union",
     "class/js/CoreGraphics/CGRect.js~CGRect.html#instance-method-union",
     "js/CoreGraphics/CGRect.js~CGRect#union",
@@ -1882,6 +2188,12 @@ window.esdocSearchIndex = [
     "class/js/CoreGraphics/CGRect.js~CGRect.html#instance-get-width",
     "js/CoreGraphics/CGRect.js~CGRect#width",
     "member"
+  ],
+  [
+    "js/coregraphics/cgrect.js~cgrect#zero",
+    "class/js/CoreGraphics/CGRect.js~CGRect.html#instance-method-zero",
+    "js/CoreGraphics/CGRect.js~CGRect#zero",
+    "method"
   ],
   [
     "js/coregraphics/cgrect.js~cgrect.rectwithxywidthheight",
@@ -1900,6 +2212,12 @@ window.esdocSearchIndex = [
     "file/js/CoreGraphics/CGSize.js.html",
     "js/CoreGraphics/CGSize.js",
     "file"
+  ],
+  [
+    "js/coregraphics/cgsize.js~cgsize#add",
+    "class/js/CoreGraphics/CGSize.js~CGSize.html#instance-method-add",
+    "js/CoreGraphics/CGSize.js~CGSize#add",
+    "method"
   ],
   [
     "js/coregraphics/cgsize.js~cgsize#applying",
@@ -1956,10 +2274,28 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "js/coregraphics/cgsize.js~cgsize#lerp",
+    "class/js/CoreGraphics/CGSize.js~CGSize.html#instance-method-lerp",
+    "js/CoreGraphics/CGSize.js~CGSize#lerp",
+    "method"
+  ],
+  [
+    "js/coregraphics/cgsize.js~cgsize#sub",
+    "class/js/CoreGraphics/CGSize.js~CGSize.html#instance-method-sub",
+    "js/CoreGraphics/CGSize.js~CGSize#sub",
+    "method"
+  ],
+  [
     "js/coregraphics/cgsize.js~cgsize#width",
     "class/js/CoreGraphics/CGSize.js~CGSize.html#instance-member-width",
     "js/CoreGraphics/CGSize.js~CGSize#width",
     "member"
+  ],
+  [
+    "js/coregraphics/cgsize.js~cgsize#zero",
+    "class/js/CoreGraphics/CGSize.js~CGSize.html#instance-method-zero",
+    "js/CoreGraphics/CGSize.js~CGSize#zero",
+    "method"
   ],
   [
     "js/coregraphics/cgsize.js~cgsize.sizewithdictionaryrepresentation",
@@ -1990,6 +2326,180 @@ window.esdocSearchIndex = [
     "class/js/CoreGraphics/CGVector.js~CGVector.html#instance-get-zero",
     "js/CoreGraphics/CGVector.js~CGVector#zero",
     "member"
+  ],
+  [
+    "js/dispatch/dispatchobject.js",
+    "file/js/Dispatch/DispatchObject.js.html",
+    "js/Dispatch/DispatchObject.js",
+    "file"
+  ],
+  [
+    "js/dispatch/dispatchobject.js~dispatchobject#activate",
+    "class/js/Dispatch/DispatchObject.js~DispatchObject.html#instance-method-activate",
+    "js/Dispatch/DispatchObject.js~DispatchObject#activate",
+    "method"
+  ],
+  [
+    "js/dispatch/dispatchobject.js~dispatchobject#constructor",
+    "class/js/Dispatch/DispatchObject.js~DispatchObject.html#instance-constructor-constructor",
+    "js/Dispatch/DispatchObject.js~DispatchObject#constructor",
+    "method"
+  ],
+  [
+    "js/dispatch/dispatchobject.js~dispatchobject#resume",
+    "class/js/Dispatch/DispatchObject.js~DispatchObject.html#instance-method-resume",
+    "js/Dispatch/DispatchObject.js~DispatchObject#resume",
+    "method"
+  ],
+  [
+    "js/dispatch/dispatchobject.js~dispatchobject#settarget",
+    "class/js/Dispatch/DispatchObject.js~DispatchObject.html#instance-method-setTarget",
+    "js/Dispatch/DispatchObject.js~DispatchObject#setTarget",
+    "method"
+  ],
+  [
+    "js/dispatch/dispatchobject.js~dispatchobject#suspend",
+    "class/js/Dispatch/DispatchObject.js~DispatchObject.html#instance-method-suspend",
+    "js/Dispatch/DispatchObject.js~DispatchObject#suspend",
+    "method"
+  ],
+  [
+    "js/dispatch/dispatchqueue.js",
+    "file/js/Dispatch/DispatchQueue.js.html",
+    "js/Dispatch/DispatchQueue.js",
+    "file"
+  ],
+  [
+    "js/dispatch/dispatchqueue.js~dispatchqueue#asyncafter",
+    "class/js/Dispatch/DispatchQueue.js~DispatchQueue.html#instance-method-asyncAfter",
+    "js/Dispatch/DispatchQueue.js~DispatchQueue#asyncAfter",
+    "method"
+  ],
+  [
+    "js/dispatch/dispatchqueue.js~dispatchqueue#asyncafterexecute",
+    "class/js/Dispatch/DispatchQueue.js~DispatchQueue.html#instance-method-asyncAfterExecute",
+    "js/Dispatch/DispatchQueue.js~DispatchQueue#asyncAfterExecute",
+    "method"
+  ],
+  [
+    "js/dispatch/dispatchqueue.js~dispatchqueue#asyncexecute",
+    "class/js/Dispatch/DispatchQueue.js~DispatchQueue.html#instance-method-asyncExecute",
+    "js/Dispatch/DispatchQueue.js~DispatchQueue#asyncExecute",
+    "method"
+  ],
+  [
+    "js/dispatch/dispatchqueue.js~dispatchqueue#constructor",
+    "class/js/Dispatch/DispatchQueue.js~DispatchQueue.html#instance-constructor-constructor",
+    "js/Dispatch/DispatchQueue.js~DispatchQueue#constructor",
+    "method"
+  ],
+  [
+    "js/dispatch/dispatchqueue.js~dispatchqueue#getspecific",
+    "class/js/Dispatch/DispatchQueue.js~DispatchQueue.html#instance-method-getSpecific",
+    "js/Dispatch/DispatchQueue.js~DispatchQueue#getSpecific",
+    "method"
+  ],
+  [
+    "js/dispatch/dispatchqueue.js~dispatchqueue#init__label",
+    "class/js/Dispatch/DispatchQueue.js~DispatchQueue.html#instance-method-init__label",
+    "js/Dispatch/DispatchQueue.js~DispatchQueue#init__label",
+    "method"
+  ],
+  [
+    "js/dispatch/dispatchqueue.js~dispatchqueue#init__labelqueue",
+    "class/js/Dispatch/DispatchQueue.js~DispatchQueue.html#instance-method-init__labelQueue",
+    "js/Dispatch/DispatchQueue.js~DispatchQueue#init__labelQueue",
+    "method"
+  ],
+  [
+    "js/dispatch/dispatchqueue.js~dispatchqueue#label",
+    "class/js/Dispatch/DispatchQueue.js~DispatchQueue.html#instance-get-label",
+    "js/Dispatch/DispatchQueue.js~DispatchQueue#label",
+    "member"
+  ],
+  [
+    "js/dispatch/dispatchqueue.js~dispatchqueue#qos",
+    "class/js/Dispatch/DispatchQueue.js~DispatchQueue.html#instance-get-qos",
+    "js/Dispatch/DispatchQueue.js~DispatchQueue#qos",
+    "member"
+  ],
+  [
+    "js/dispatch/dispatchqueue.js~dispatchqueue#setspecific",
+    "class/js/Dispatch/DispatchQueue.js~DispatchQueue.html#instance-method-setSpecific",
+    "js/Dispatch/DispatchQueue.js~DispatchQueue#setSpecific",
+    "method"
+  ],
+  [
+    "js/dispatch/dispatchqueue.js~dispatchqueue#sync",
+    "class/js/Dispatch/DispatchQueue.js~DispatchQueue.html#instance-method-sync",
+    "js/Dispatch/DispatchQueue.js~DispatchQueue#sync",
+    "method"
+  ],
+  [
+    "js/dispatch/dispatchqueue.js~dispatchqueue#syncexecute",
+    "class/js/Dispatch/DispatchQueue.js~DispatchQueue.html#instance-method-syncExecute",
+    "js/Dispatch/DispatchQueue.js~DispatchQueue#syncExecute",
+    "method"
+  ],
+  [
+    "js/dispatch/dispatchqueue.js~dispatchqueue.concurrentperformexecute",
+    "class/js/Dispatch/DispatchQueue.js~DispatchQueue.html#static-method-concurrentPerformExecute",
+    "js/Dispatch/DispatchQueue.js~DispatchQueue.concurrentPerformExecute",
+    "method"
+  ],
+  [
+    "js/dispatch/dispatchqueue.js~dispatchqueue.global",
+    "class/js/Dispatch/DispatchQueue.js~DispatchQueue.html#static-method-global",
+    "js/Dispatch/DispatchQueue.js~DispatchQueue.global",
+    "method"
+  ],
+  [
+    "js/dispatch/dispatchqueue.js~dispatchqueue.main",
+    "class/js/Dispatch/DispatchQueue.js~DispatchQueue.html#static-get-main",
+    "js/Dispatch/DispatchQueue.js~DispatchQueue.main",
+    "member"
+  ],
+  [
+    "js/dispatch/dispatchtime.js",
+    "file/js/Dispatch/DispatchTime.js.html",
+    "js/Dispatch/DispatchTime.js",
+    "file"
+  ],
+  [
+    "js/dispatch/dispatchtime.js~dispatchtime#constructor",
+    "class/js/Dispatch/DispatchTime.js~DispatchTime.html#instance-constructor-constructor",
+    "js/Dispatch/DispatchTime.js~DispatchTime#constructor",
+    "method"
+  ],
+  [
+    "js/dispatch/dispatchtime.js~dispatchtime#uptimenanoseconds",
+    "class/js/Dispatch/DispatchTime.js~DispatchTime.html#instance-get-uptimeNanoseconds",
+    "js/Dispatch/DispatchTime.js~DispatchTime#uptimeNanoseconds",
+    "member"
+  ],
+  [
+    "js/dispatch/dispatchtime.js~dispatchtime.distantfuture",
+    "class/js/Dispatch/DispatchTime.js~DispatchTime.html#static-get-distantFuture",
+    "js/Dispatch/DispatchTime.js~DispatchTime.distantFuture",
+    "member"
+  ],
+  [
+    "js/dispatch/dispatchtime.js~dispatchtime.now",
+    "class/js/Dispatch/DispatchTime.js~DispatchTime.html#static-method-now",
+    "js/Dispatch/DispatchTime.js~DispatchTime.now",
+    "method"
+  ],
+  [
+    "js/dispatch/dispatchtimeinterval.js",
+    "file/js/Dispatch/DispatchTimeInterval.js.html",
+    "js/Dispatch/DispatchTimeInterval.js",
+    "file"
+  ],
+  [
+    "js/dispatch/dispatchtimeinterval.js~dispatchtimeinterval",
+    "typedef/index.html#static-typedef-DispatchTimeInterval",
+    "js/Dispatch/DispatchTimeInterval.js~DispatchTimeInterval",
+    "typedef"
   ],
   [
     "js/foundation/nsarray.js",
@@ -2370,6 +2880,18 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "js/foundation/nscolorspace.js",
+    "file/js/Foundation/NSColorSpace.js.html",
+    "js/Foundation/NSColorSpace.js",
+    "file"
+  ],
+  [
+    "js/foundation/nscolorspace.js~nscolorspace#constructor",
+    "class/js/Foundation/NSColorSpace.js~NSColorSpace.html#instance-constructor-constructor",
+    "js/Foundation/NSColorSpace.js~NSColorSpace#constructor",
+    "method"
+  ],
+  [
     "js/foundation/nsdata.js",
     "file/js/Foundation/NSData.js.html",
     "js/Foundation/NSData.js",
@@ -2628,6 +3150,18 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "js/foundation/nsurl.js",
+    "file/js/Foundation/NSURL.js.html",
+    "js/Foundation/NSURL.js",
+    "file"
+  ],
+  [
+    "js/foundation/nsurl.js~nsurl.initwithcoder",
+    "class/js/Foundation/NSURL.js~NSURL.html#static-method-initWithCoder",
+    "js/Foundation/NSURL.js~NSURL.initWithCoder",
+    "method"
+  ],
+  [
     "js/foundation/nsvalue.js",
     "file/js/Foundation/NSValue.js.html",
     "js/Foundation/NSValue.js",
@@ -2670,6 +3204,12 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "js/foundation/nsvalue.js~nsvalue#constructor",
+    "class/js/Foundation/NSValue.js~NSValue.html#instance-constructor-constructor",
+    "js/Foundation/NSValue.js~NSValue#constructor",
+    "method"
+  ],
+  [
     "js/foundation/nsvalue.js~nsvalue#edgeinsetsvalue",
     "class/js/Foundation/NSValue.js~NSValue.html#instance-get-edgeInsetsValue",
     "js/Foundation/NSValue.js~NSValue#edgeInsetsValue",
@@ -2679,12 +3219,6 @@ window.esdocSearchIndex = [
     "js/foundation/nsvalue.js~nsvalue#getvalue",
     "class/js/Foundation/NSValue.js~NSValue.html#instance-method-getValue",
     "js/Foundation/NSValue.js~NSValue#getValue",
-    "method"
-  ],
-  [
-    "js/foundation/nsvalue.js~nsvalue#init",
-    "class/js/Foundation/NSValue.js~NSValue.html#instance-method-init",
-    "js/Foundation/NSValue.js~NSValue#init",
     "method"
   ],
   [
@@ -2904,10 +3438,22 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "js/foundation/nsvalue.js~nsvalue.initwithcoder",
+    "class/js/Foundation/NSValue.js~NSValue.html#static-method-initWithCoder",
+    "js/Foundation/NSValue.js~NSValue.initWithCoder",
+    "method"
+  ],
+  [
     "js/objectivec/nsobject.js",
     "file/js/ObjectiveC/NSObject.js.html",
     "js/ObjectiveC/NSObject.js",
     "file"
+  ],
+  [
+    "js/objectivec/nsobject.js~nsobject#[key]",
+    "class/js/ObjectiveC/NSObject.js~NSObject.html#instance-member-[key]",
+    "js/ObjectiveC/NSObject.js~NSObject#[key]",
+    "member"
   ],
   [
     "js/objectivec/nsobject.js~nsobject#acceptspreviewpanelcontrol",
@@ -4908,6 +5454,12 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "js/quartzcore/cacurrentmediatime.js",
+    "file/js/QuartzCore/CACurrentMediaTime.js.html",
+    "js/QuartzCore/CACurrentMediaTime.js",
+    "file"
+  ],
+  [
     "js/quartzcore/cakeyframeanimation.js",
     "file/js/QuartzCore/CAKeyframeAnimation.js.html",
     "js/QuartzCore/CAKeyframeAnimation.js",
@@ -5130,16 +5682,28 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "js/scenekit/scnaction.js~scnaction#constructor",
+    "class/js/SceneKit/SCNAction.js~SCNAction.html#instance-constructor-constructor",
+    "js/SceneKit/SCNAction.js~SCNAction#constructor",
+    "method"
+  ],
+  [
+    "js/scenekit/scnaction.js~scnaction#copy",
+    "class/js/SceneKit/SCNAction.js~SCNAction.html#instance-method-copy",
+    "js/SceneKit/SCNAction.js~SCNAction#copy",
+    "method"
+  ],
+  [
     "js/scenekit/scnaction.js~scnaction#duration",
-    "class/js/SceneKit/SCNAction.js~SCNAction.html#instance-member-duration",
+    "class/js/SceneKit/SCNAction.js~SCNAction.html#instance-set-duration",
     "js/SceneKit/SCNAction.js~SCNAction#duration",
     "member"
   ],
   [
-    "js/scenekit/scnaction.js~scnaction#init",
-    "class/js/SceneKit/SCNAction.js~SCNAction.html#instance-method-init",
-    "js/SceneKit/SCNAction.js~SCNAction#init",
-    "method"
+    "js/scenekit/scnaction.js~scnaction#duration",
+    "class/js/SceneKit/SCNAction.js~SCNAction.html#instance-get-duration",
+    "js/SceneKit/SCNAction.js~SCNAction#duration",
+    "member"
   ],
   [
     "js/scenekit/scnaction.js~scnaction#reversed",
@@ -5149,19 +5713,37 @@ window.esdocSearchIndex = [
   ],
   [
     "js/scenekit/scnaction.js~scnaction#speed",
-    "class/js/SceneKit/SCNAction.js~SCNAction.html#instance-member-speed",
+    "class/js/SceneKit/SCNAction.js~SCNAction.html#instance-set-speed",
+    "js/SceneKit/SCNAction.js~SCNAction#speed",
+    "member"
+  ],
+  [
+    "js/scenekit/scnaction.js~scnaction#speed",
+    "class/js/SceneKit/SCNAction.js~SCNAction.html#instance-get-speed",
     "js/SceneKit/SCNAction.js~SCNAction#speed",
     "member"
   ],
   [
     "js/scenekit/scnaction.js~scnaction#timingfunction",
-    "class/js/SceneKit/SCNAction.js~SCNAction.html#instance-member-timingFunction",
+    "class/js/SceneKit/SCNAction.js~SCNAction.html#instance-get-timingFunction",
+    "js/SceneKit/SCNAction.js~SCNAction#timingFunction",
+    "member"
+  ],
+  [
+    "js/scenekit/scnaction.js~scnaction#timingfunction",
+    "class/js/SceneKit/SCNAction.js~SCNAction.html#instance-set-timingFunction",
     "js/SceneKit/SCNAction.js~SCNAction#timingFunction",
     "member"
   ],
   [
     "js/scenekit/scnaction.js~scnaction#timingmode",
-    "class/js/SceneKit/SCNAction.js~SCNAction.html#instance-member-timingMode",
+    "class/js/SceneKit/SCNAction.js~SCNAction.html#instance-get-timingMode",
+    "js/SceneKit/SCNAction.js~SCNAction#timingMode",
+    "member"
+  ],
+  [
+    "js/scenekit/scnaction.js~scnaction#timingmode",
+    "class/js/SceneKit/SCNAction.js~SCNAction.html#instance-set-timingMode",
     "js/SceneKit/SCNAction.js~SCNAction#timingMode",
     "member"
   ],
@@ -5328,6 +5910,360 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "js/scenekit/scnactioncustom.js",
+    "file/js/SceneKit/SCNActionCustom.js.html",
+    "js/SceneKit/SCNActionCustom.js",
+    "file"
+  ],
+  [
+    "js/scenekit/scnactioncustom.js~scnactioncustom#constructor",
+    "class/js/SceneKit/SCNActionCustom.js~SCNActionCustom.html#instance-constructor-constructor",
+    "js/SceneKit/SCNActionCustom.js~SCNActionCustom#constructor",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionfade.js",
+    "file/js/SceneKit/SCNActionFade.js.html",
+    "js/SceneKit/SCNActionFade.js",
+    "file"
+  ],
+  [
+    "js/scenekit/scnactionfade.js~scnactionfade#constructor",
+    "class/js/SceneKit/SCNActionFade.js~SCNActionFade.html#instance-constructor-constructor",
+    "js/SceneKit/SCNActionFade.js~SCNActionFade#constructor",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionfade.js~scnactionfade#copy",
+    "class/js/SceneKit/SCNActionFade.js~SCNActionFade.html#instance-method-copy",
+    "js/SceneKit/SCNActionFade.js~SCNActionFade#copy",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionfade.js~scnactionfade.fadeinduration",
+    "class/js/SceneKit/SCNActionFade.js~SCNActionFade.html#static-method-fadeInDuration",
+    "js/SceneKit/SCNActionFade.js~SCNActionFade.fadeInDuration",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionfade.js~scnactionfade.fadeopacitybyduration",
+    "class/js/SceneKit/SCNActionFade.js~SCNActionFade.html#static-method-fadeOpacityByDuration",
+    "js/SceneKit/SCNActionFade.js~SCNActionFade.fadeOpacityByDuration",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionfade.js~scnactionfade.fadeopacitytoduration",
+    "class/js/SceneKit/SCNActionFade.js~SCNActionFade.html#static-method-fadeOpacityToDuration",
+    "js/SceneKit/SCNActionFade.js~SCNActionFade.fadeOpacityToDuration",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionfade.js~scnactionfade.fadeoutduration",
+    "class/js/SceneKit/SCNActionFade.js~SCNActionFade.html#static-method-fadeOutDuration",
+    "js/SceneKit/SCNActionFade.js~SCNActionFade.fadeOutDuration",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactiongroup.js",
+    "file/js/SceneKit/SCNActionGroup.js.html",
+    "js/SceneKit/SCNActionGroup.js",
+    "file"
+  ],
+  [
+    "js/scenekit/scnactiongroup.js~scnactiongroup#constructor",
+    "class/js/SceneKit/SCNActionGroup.js~SCNActionGroup.html#instance-constructor-constructor",
+    "js/SceneKit/SCNActionGroup.js~SCNActionGroup#constructor",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactiongroup.js~scnactiongroup#copy",
+    "class/js/SceneKit/SCNActionGroup.js~SCNActionGroup.html#instance-method-copy",
+    "js/SceneKit/SCNActionGroup.js~SCNActionGroup#copy",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactiongroup.js~scnactiongroup#duration",
+    "class/js/SceneKit/SCNActionGroup.js~SCNActionGroup.html#instance-get-duration",
+    "js/SceneKit/SCNActionGroup.js~SCNActionGroup#duration",
+    "member"
+  ],
+  [
+    "js/scenekit/scnactiongroup.js~scnactiongroup.group",
+    "class/js/SceneKit/SCNActionGroup.js~SCNActionGroup.html#static-method-group",
+    "js/SceneKit/SCNActionGroup.js~SCNActionGroup.group",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionhide.js",
+    "file/js/SceneKit/SCNActionHide.js.html",
+    "js/SceneKit/SCNActionHide.js",
+    "file"
+  ],
+  [
+    "js/scenekit/scnactionhide.js~scnactionhide#constructor",
+    "class/js/SceneKit/SCNActionHide.js~SCNActionHide.html#instance-constructor-constructor",
+    "js/SceneKit/SCNActionHide.js~SCNActionHide#constructor",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionjavascript.js",
+    "file/js/SceneKit/SCNActionJavaScript.js.html",
+    "js/SceneKit/SCNActionJavaScript.js",
+    "file"
+  ],
+  [
+    "js/scenekit/scnactionjavascript.js~scnactionjavascript#constructor",
+    "class/js/SceneKit/SCNActionJavaScript.js~SCNActionJavaScript.html#instance-constructor-constructor",
+    "js/SceneKit/SCNActionJavaScript.js~SCNActionJavaScript#constructor",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionmove.js",
+    "file/js/SceneKit/SCNActionMove.js.html",
+    "js/SceneKit/SCNActionMove.js",
+    "file"
+  ],
+  [
+    "js/scenekit/scnactionmove.js~scnactionmove#constructor",
+    "class/js/SceneKit/SCNActionMove.js~SCNActionMove.html#instance-constructor-constructor",
+    "js/SceneKit/SCNActionMove.js~SCNActionMove#constructor",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionperformselector.js",
+    "file/js/SceneKit/SCNActionPerformSelector.js.html",
+    "js/SceneKit/SCNActionPerformSelector.js",
+    "file"
+  ],
+  [
+    "js/scenekit/scnactionperformselector.js~scnactionperformselector#constructor",
+    "class/js/SceneKit/SCNActionPerformSelector.js~SCNActionPerformSelector.html#instance-constructor-constructor",
+    "js/SceneKit/SCNActionPerformSelector.js~SCNActionPerformSelector#constructor",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionplaysound.js",
+    "file/js/SceneKit/SCNActionPlaySound.js.html",
+    "js/SceneKit/SCNActionPlaySound.js",
+    "file"
+  ],
+  [
+    "js/scenekit/scnactionplaysound.js~scnactionplaysound#constructor",
+    "class/js/SceneKit/SCNActionPlaySound.js~SCNActionPlaySound.html#instance-constructor-constructor",
+    "js/SceneKit/SCNActionPlaySound.js~SCNActionPlaySound#constructor",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionplaysound.js~scnactionplaysound#copy",
+    "class/js/SceneKit/SCNActionPlaySound.js~SCNActionPlaySound.html#instance-method-copy",
+    "js/SceneKit/SCNActionPlaySound.js~SCNActionPlaySound#copy",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionplaysound.js~scnactionplaysound.playaudiowaitforcompletion",
+    "class/js/SceneKit/SCNActionPlaySound.js~SCNActionPlaySound.html#static-method-playAudioWaitForCompletion",
+    "js/SceneKit/SCNActionPlaySound.js~SCNActionPlaySound.playAudioWaitForCompletion",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionreference.js",
+    "file/js/SceneKit/SCNActionReference.js.html",
+    "js/SceneKit/SCNActionReference.js",
+    "file"
+  ],
+  [
+    "js/scenekit/scnactionreference.js~scnactionreference#constructor",
+    "class/js/SceneKit/SCNActionReference.js~SCNActionReference.html#instance-constructor-constructor",
+    "js/SceneKit/SCNActionReference.js~SCNActionReference#constructor",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionremove.js",
+    "file/js/SceneKit/SCNActionRemove.js.html",
+    "js/SceneKit/SCNActionRemove.js",
+    "file"
+  ],
+  [
+    "js/scenekit/scnactionremove.js~scnactionremove#constructor",
+    "class/js/SceneKit/SCNActionRemove.js~SCNActionRemove.html#instance-constructor-constructor",
+    "js/SceneKit/SCNActionRemove.js~SCNActionRemove#constructor",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionremove.js~scnactionremove#copy",
+    "class/js/SceneKit/SCNActionRemove.js~SCNActionRemove.html#instance-method-copy",
+    "js/SceneKit/SCNActionRemove.js~SCNActionRemove#copy",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionremove.js~scnactionremove.removefromparentnode",
+    "class/js/SceneKit/SCNActionRemove.js~SCNActionRemove.html#static-method-removeFromParentNode",
+    "js/SceneKit/SCNActionRemove.js~SCNActionRemove.removeFromParentNode",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionrepeat.js",
+    "file/js/SceneKit/SCNActionRepeat.js.html",
+    "js/SceneKit/SCNActionRepeat.js",
+    "file"
+  ],
+  [
+    "js/scenekit/scnactionrepeat.js~scnactionrepeat#constructor",
+    "class/js/SceneKit/SCNActionRepeat.js~SCNActionRepeat.html#instance-constructor-constructor",
+    "js/SceneKit/SCNActionRepeat.js~SCNActionRepeat#constructor",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionrepeat.js~scnactionrepeat#copy",
+    "class/js/SceneKit/SCNActionRepeat.js~SCNActionRepeat.html#instance-method-copy",
+    "js/SceneKit/SCNActionRepeat.js~SCNActionRepeat#copy",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionrepeat.js~scnactionrepeat#duration",
+    "class/js/SceneKit/SCNActionRepeat.js~SCNActionRepeat.html#instance-get-duration",
+    "js/SceneKit/SCNActionRepeat.js~SCNActionRepeat#duration",
+    "member"
+  ],
+  [
+    "js/scenekit/scnactionrepeat.js~scnactionrepeat.repeat",
+    "class/js/SceneKit/SCNActionRepeat.js~SCNActionRepeat.html#static-method-repeat",
+    "js/SceneKit/SCNActionRepeat.js~SCNActionRepeat.repeat",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionrepeat.js~scnactionrepeat.repeatforever",
+    "class/js/SceneKit/SCNActionRepeat.js~SCNActionRepeat.html#static-method-repeatForever",
+    "js/SceneKit/SCNActionRepeat.js~SCNActionRepeat.repeatForever",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionrotate.js",
+    "file/js/SceneKit/SCNActionRotate.js.html",
+    "js/SceneKit/SCNActionRotate.js",
+    "file"
+  ],
+  [
+    "js/scenekit/scnactionrotate.js~scnactionrotate#constructor",
+    "class/js/SceneKit/SCNActionRotate.js~SCNActionRotate.html#instance-constructor-constructor",
+    "js/SceneKit/SCNActionRotate.js~SCNActionRotate#constructor",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionrotate.js~scnactionrotate#copy",
+    "class/js/SceneKit/SCNActionRotate.js~SCNActionRotate.html#instance-method-copy",
+    "js/SceneKit/SCNActionRotate.js~SCNActionRotate#copy",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionrotate.js~scnactionrotate.rotatebyaround",
+    "class/js/SceneKit/SCNActionRotate.js~SCNActionRotate.html#static-method-rotateByAround",
+    "js/SceneKit/SCNActionRotate.js~SCNActionRotate.rotateByAround",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionrotate.js~scnactionrotate.rotatebyxyz",
+    "class/js/SceneKit/SCNActionRotate.js~SCNActionRotate.html#static-method-rotateByXYZ",
+    "js/SceneKit/SCNActionRotate.js~SCNActionRotate.rotateByXYZ",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionrotate.js~scnactionrotate.rotatetoaxisangle",
+    "class/js/SceneKit/SCNActionRotate.js~SCNActionRotate.html#static-method-rotateToAxisAngle",
+    "js/SceneKit/SCNActionRotate.js~SCNActionRotate.rotateToAxisAngle",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionrotate.js~scnactionrotate.rotatetoxyz",
+    "class/js/SceneKit/SCNActionRotate.js~SCNActionRotate.html#static-method-rotateToXYZ",
+    "js/SceneKit/SCNActionRotate.js~SCNActionRotate.rotateToXYZ",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionrotate.js~scnactionrotate.rotatetoxyzusesshortestunitarc",
+    "class/js/SceneKit/SCNActionRotate.js~SCNActionRotate.html#static-method-rotateToXYZUsesShortestUnitArc",
+    "js/SceneKit/SCNActionRotate.js~SCNActionRotate.rotateToXYZUsesShortestUnitArc",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionrunaction.js",
+    "file/js/SceneKit/SCNActionRunAction.js.html",
+    "js/SceneKit/SCNActionRunAction.js",
+    "file"
+  ],
+  [
+    "js/scenekit/scnactionrunaction.js~scnactionrunaction#constructor",
+    "class/js/SceneKit/SCNActionRunAction.js~SCNActionRunAction.html#instance-constructor-constructor",
+    "js/SceneKit/SCNActionRunAction.js~SCNActionRunAction#constructor",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionrunblock.js",
+    "file/js/SceneKit/SCNActionRunBlock.js.html",
+    "js/SceneKit/SCNActionRunBlock.js",
+    "file"
+  ],
+  [
+    "js/scenekit/scnactionrunblock.js~scnactionrunblock#constructor",
+    "class/js/SceneKit/SCNActionRunBlock.js~SCNActionRunBlock.html#instance-constructor-constructor",
+    "js/SceneKit/SCNActionRunBlock.js~SCNActionRunBlock#constructor",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionrunblock.js~scnactionrunblock#copy",
+    "class/js/SceneKit/SCNActionRunBlock.js~SCNActionRunBlock.html#instance-method-copy",
+    "js/SceneKit/SCNActionRunBlock.js~SCNActionRunBlock#copy",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionrunblock.js~scnactionrunblock.run",
+    "class/js/SceneKit/SCNActionRunBlock.js~SCNActionRunBlock.html#static-method-run",
+    "js/SceneKit/SCNActionRunBlock.js~SCNActionRunBlock.run",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionscale.js",
+    "file/js/SceneKit/SCNActionScale.js.html",
+    "js/SceneKit/SCNActionScale.js",
+    "file"
+  ],
+  [
+    "js/scenekit/scnactionscale.js~scnactionscale#constructor",
+    "class/js/SceneKit/SCNActionScale.js~SCNActionScale.html#instance-constructor-constructor",
+    "js/SceneKit/SCNActionScale.js~SCNActionScale#constructor",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionsequence.js",
+    "file/js/SceneKit/SCNActionSequence.js.html",
+    "js/SceneKit/SCNActionSequence.js",
+    "file"
+  ],
+  [
+    "js/scenekit/scnactionsequence.js~scnactionsequence#constructor",
+    "class/js/SceneKit/SCNActionSequence.js~SCNActionSequence.html#instance-constructor-constructor",
+    "js/SceneKit/SCNActionSequence.js~SCNActionSequence#constructor",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionsequence.js~scnactionsequence#copy",
+    "class/js/SceneKit/SCNActionSequence.js~SCNActionSequence.html#instance-method-copy",
+    "js/SceneKit/SCNActionSequence.js~SCNActionSequence#copy",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionsequence.js~scnactionsequence#duration",
+    "class/js/SceneKit/SCNActionSequence.js~SCNActionSequence.html#instance-get-duration",
+    "js/SceneKit/SCNActionSequence.js~SCNActionSequence#duration",
+    "member"
+  ],
+  [
+    "js/scenekit/scnactionsequence.js~scnactionsequence.sequence",
+    "class/js/SceneKit/SCNActionSequence.js~SCNActionSequence.html#static-method-sequence",
+    "js/SceneKit/SCNActionSequence.js~SCNActionSequence.sequence",
+    "method"
+  ],
+  [
     "js/scenekit/scnactiontimingfunction.js",
     "file/js/SceneKit/SCNActionTimingFunction.js.html",
     "js/SceneKit/SCNActionTimingFunction.js",
@@ -5344,6 +6280,30 @@ window.esdocSearchIndex = [
     "typedef/index.html#static-typedef-SCNActionTimingMode",
     "js/SceneKit/SCNActionTimingMode.js~SCNActionTimingMode",
     "typedef"
+  ],
+  [
+    "js/scenekit/scnactionwait.js",
+    "file/js/SceneKit/SCNActionWait.js.html",
+    "js/SceneKit/SCNActionWait.js",
+    "file"
+  ],
+  [
+    "js/scenekit/scnactionwait.js~scnactionwait#constructor",
+    "class/js/SceneKit/SCNActionWait.js~SCNActionWait.html#instance-constructor-constructor",
+    "js/SceneKit/SCNActionWait.js~SCNActionWait#constructor",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionwait.js~scnactionwait.waitduration",
+    "class/js/SceneKit/SCNActionWait.js~SCNActionWait.html#static-method-waitDuration",
+    "js/SceneKit/SCNActionWait.js~SCNActionWait.waitDuration",
+    "method"
+  ],
+  [
+    "js/scenekit/scnactionwait.js~scnactionwait.waitdurationwithrange",
+    "class/js/SceneKit/SCNActionWait.js~SCNActionWait.html#static-method-waitDurationWithRange",
+    "js/SceneKit/SCNActionWait.js~SCNActionWait.waitDurationWithRange",
+    "method"
   ],
   [
     "js/scenekit/scnactionable.js",
@@ -5490,15 +6450,15 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "js/scenekit/scnanimationevent.js~scnanimationevent#init",
-    "class/js/SceneKit/SCNAnimationEvent.js~SCNAnimationEvent.html#instance-method-init",
-    "js/SceneKit/SCNAnimationEvent.js~SCNAnimationEvent#init",
+    "js/scenekit/scnanimationevent.js~scnanimationevent#constructor",
+    "class/js/SceneKit/SCNAnimationEvent.js~SCNAnimationEvent.html#instance-constructor-constructor",
+    "js/SceneKit/SCNAnimationEvent.js~SCNAnimationEvent#constructor",
     "method"
   ],
   [
-    "js/scenekit/scnanimationevent.js~scnanimationevent#initkeytimeblock",
-    "class/js/SceneKit/SCNAnimationEvent.js~SCNAnimationEvent.html#instance-method-initKeyTimeBlock",
-    "js/SceneKit/SCNAnimationEvent.js~SCNAnimationEvent#initKeyTimeBlock",
+    "js/scenekit/scnanimationevent.js~scnanimationevent.eventwithtimeeventblock",
+    "class/js/SceneKit/SCNAnimationEvent.js~SCNAnimationEvent.html#static-method-eventWithTimeEventBlock",
+    "js/SceneKit/SCNAnimationEvent.js~SCNAnimationEvent.eventWithTimeEventBlock",
     "method"
   ],
   [
@@ -5538,16 +6498,16 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "js/scenekit/scnaudioplayer.js~scnaudioplayer#constructor",
+    "class/js/SceneKit/SCNAudioPlayer.js~SCNAudioPlayer.html#instance-constructor-constructor",
+    "js/SceneKit/SCNAudioPlayer.js~SCNAudioPlayer#constructor",
+    "method"
+  ],
+  [
     "js/scenekit/scnaudioplayer.js~scnaudioplayer#didfinishplayback",
     "class/js/SceneKit/SCNAudioPlayer.js~SCNAudioPlayer.html#instance-member-didFinishPlayback",
     "js/SceneKit/SCNAudioPlayer.js~SCNAudioPlayer#didFinishPlayback",
     "member"
-  ],
-  [
-    "js/scenekit/scnaudioplayer.js~scnaudioplayer#init",
-    "class/js/SceneKit/SCNAudioPlayer.js~SCNAudioPlayer.html#instance-method-init",
-    "js/SceneKit/SCNAudioPlayer.js~SCNAudioPlayer#init",
-    "method"
   ],
   [
     "js/scenekit/scnaudioplayer.js~scnaudioplayer#initavaudionode",
@@ -5568,9 +6528,9 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
-    "js/scenekit/scnaudiosource.js~scnaudiosource#init",
-    "class/js/SceneKit/SCNAudioSource.js~SCNAudioSource.html#instance-method-init",
-    "js/SceneKit/SCNAudioSource.js~SCNAudioSource#init",
+    "js/scenekit/scnaudiosource.js~scnaudiosource#constructor",
+    "class/js/SceneKit/SCNAudioSource.js~SCNAudioSource.html#instance-constructor-constructor",
+    "js/SceneKit/SCNAudioSource.js~SCNAudioSource#constructor",
     "method"
   ],
   [
@@ -5599,7 +6559,13 @@ window.esdocSearchIndex = [
   ],
   [
     "js/scenekit/scnaudiosource.js~scnaudiosource#loops",
-    "class/js/SceneKit/SCNAudioSource.js~SCNAudioSource.html#instance-member-loops",
+    "class/js/SceneKit/SCNAudioSource.js~SCNAudioSource.html#instance-set-loops",
+    "js/SceneKit/SCNAudioSource.js~SCNAudioSource#loops",
+    "member"
+  ],
+  [
+    "js/scenekit/scnaudiosource.js~scnaudiosource#loops",
+    "class/js/SceneKit/SCNAudioSource.js~SCNAudioSource.html#instance-get-loops",
     "js/SceneKit/SCNAudioSource.js~SCNAudioSource#loops",
     "member"
   ],
@@ -5623,7 +6589,13 @@ window.esdocSearchIndex = [
   ],
   [
     "js/scenekit/scnaudiosource.js~scnaudiosource#volume",
-    "class/js/SceneKit/SCNAudioSource.js~SCNAudioSource.html#instance-member-volume",
+    "class/js/SceneKit/SCNAudioSource.js~SCNAudioSource.html#instance-get-volume",
+    "js/SceneKit/SCNAudioSource.js~SCNAudioSource#volume",
+    "member"
+  ],
+  [
+    "js/scenekit/scnaudiosource.js~scnaudiosource#volume",
+    "class/js/SceneKit/SCNAudioSource.js~SCNAudioSource.html#instance-set-volume",
     "js/SceneKit/SCNAudioSource.js~SCNAudioSource#volume",
     "member"
   ],
@@ -5728,6 +6700,12 @@ window.esdocSearchIndex = [
     "file/js/SceneKit/SCNBox.js.html",
     "js/SceneKit/SCNBox.js",
     "file"
+  ],
+  [
+    "js/scenekit/scnbox.js~scnbox#boundingbox",
+    "class/js/SceneKit/SCNBox.js~SCNBox.html#instance-member-boundingBox",
+    "js/SceneKit/SCNBox.js~SCNBox#boundingBox",
+    "member"
   ],
   [
     "js/scenekit/scnbox.js~scnbox#chamferradius",
@@ -6066,6 +7044,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "js/scenekit/scncapsule.js~scncapsule#getboundingsphere",
+    "class/js/SceneKit/SCNCapsule.js~SCNCapsule.html#instance-method-getBoundingSphere",
+    "js/SceneKit/SCNCapsule.js~SCNCapsule#getBoundingSphere",
+    "method"
+  ],
+  [
     "js/scenekit/scncapsule.js~scncapsule#height",
     "class/js/SceneKit/SCNCapsule.js~SCNCapsule.html#instance-member-height",
     "js/SceneKit/SCNCapsule.js~SCNCapsule#height",
@@ -6385,13 +7369,13 @@ window.esdocSearchIndex = [
   ],
   [
     "js/scenekit/scngeometry.js~scngeometry#firstmaterial",
-    "class/js/SceneKit/SCNGeometry.js~SCNGeometry.html#instance-set-firstMaterial",
+    "class/js/SceneKit/SCNGeometry.js~SCNGeometry.html#instance-get-firstMaterial",
     "js/SceneKit/SCNGeometry.js~SCNGeometry#firstMaterial",
     "member"
   ],
   [
     "js/scenekit/scngeometry.js~scngeometry#firstmaterial",
-    "class/js/SceneKit/SCNGeometry.js~SCNGeometry.html#instance-get-firstMaterial",
+    "class/js/SceneKit/SCNGeometry.js~SCNGeometry.html#instance-set-firstMaterial",
     "js/SceneKit/SCNGeometry.js~SCNGeometry#firstMaterial",
     "member"
   ],
@@ -6618,6 +7602,12 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "js/scenekit/scngeometrysource.js~scngeometrysource#_setvectorat",
+    "class/js/SceneKit/SCNGeometrySource.js~SCNGeometrySource.html#instance-method-_setVectorAt",
+    "js/SceneKit/SCNGeometrySource.js~SCNGeometrySource#_setVectorAt",
+    "method"
+  ],
+  [
     "js/scenekit/scngeometrysource.js~scngeometrysource#bytespercomponent",
     "class/js/SceneKit/SCNGeometrySource.js~SCNGeometrySource.html#instance-get-bytesPerComponent",
     "js/SceneKit/SCNGeometrySource.js~SCNGeometrySource#bytesPerComponent",
@@ -6672,22 +7662,10 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
-    "js/scenekit/scngeometrysource.js~scngeometrysource#setvectorat",
-    "class/js/SceneKit/SCNGeometrySource.js~SCNGeometrySource.html#instance-method-setVectorAt",
-    "js/SceneKit/SCNGeometrySource.js~SCNGeometrySource#setVectorAt",
-    "method"
-  ],
-  [
     "js/scenekit/scngeometrysource.js~scngeometrysource#usesfloatcomponents",
     "class/js/SceneKit/SCNGeometrySource.js~SCNGeometrySource.html#instance-get-usesFloatComponents",
     "js/SceneKit/SCNGeometrySource.js~SCNGeometrySource#usesFloatComponents",
     "member"
-  ],
-  [
-    "js/scenekit/scngeometrysource.js~scngeometrysource#vectorat",
-    "class/js/SceneKit/SCNGeometrySource.js~SCNGeometrySource.html#instance-method-vectorAt",
-    "js/SceneKit/SCNGeometrySource.js~SCNGeometrySource#vectorAt",
-    "method"
   ],
   [
     "js/scenekit/scngeometrysource.js~scngeometrysource#vectorcount",
@@ -6756,6 +7734,12 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "js/scenekit/scnhittestresult.js~scnhittestresult#constructor",
+    "class/js/SceneKit/SCNHitTestResult.js~SCNHitTestResult.html#instance-constructor-constructor",
+    "js/SceneKit/SCNHitTestResult.js~SCNHitTestResult#constructor",
+    "method"
+  ],
+  [
     "js/scenekit/scnhittestresult.js~scnhittestresult#faceindex",
     "class/js/SceneKit/SCNHitTestResult.js~SCNHitTestResult.html#instance-get-faceIndex",
     "js/SceneKit/SCNHitTestResult.js~SCNHitTestResult#faceIndex",
@@ -6766,12 +7750,6 @@ window.esdocSearchIndex = [
     "class/js/SceneKit/SCNHitTestResult.js~SCNHitTestResult.html#instance-get-geometryIndex",
     "js/SceneKit/SCNHitTestResult.js~SCNHitTestResult#geometryIndex",
     "member"
-  ],
-  [
-    "js/scenekit/scnhittestresult.js~scnhittestresult#init",
-    "class/js/SceneKit/SCNHitTestResult.js~SCNHitTestResult.html#instance-method-init",
-    "js/SceneKit/SCNHitTestResult.js~SCNHitTestResult#init",
-    "method"
   ],
   [
     "js/scenekit/scnhittestresult.js~scnhittestresult#localcoordinates",
@@ -6882,16 +7860,16 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "js/scenekit/scnlevelofdetail.js~scnlevelofdetail#constructor",
+    "class/js/SceneKit/SCNLevelOfDetail.js~SCNLevelOfDetail.html#instance-constructor-constructor",
+    "js/SceneKit/SCNLevelOfDetail.js~SCNLevelOfDetail#constructor",
+    "method"
+  ],
+  [
     "js/scenekit/scnlevelofdetail.js~scnlevelofdetail#geometry",
     "class/js/SceneKit/SCNLevelOfDetail.js~SCNLevelOfDetail.html#instance-get-geometry",
     "js/SceneKit/SCNLevelOfDetail.js~SCNLevelOfDetail#geometry",
     "member"
-  ],
-  [
-    "js/scenekit/scnlevelofdetail.js~scnlevelofdetail#init",
-    "class/js/SceneKit/SCNLevelOfDetail.js~SCNLevelOfDetail.html#instance-method-init",
-    "js/SceneKit/SCNLevelOfDetail.js~SCNLevelOfDetail#init",
-    "method"
   ],
   [
     "js/scenekit/scnlevelofdetail.js~scnlevelofdetail#initscreenspaceradius",
@@ -7374,6 +8352,24 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "js/scenekit/scnmaterialproperty.js~scnmaterialproperty#addanimationforkey",
+    "class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html#instance-method-addAnimationForKey",
+    "js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty#addAnimationForKey",
+    "method"
+  ],
+  [
+    "js/scenekit/scnmaterialproperty.js~scnmaterialproperty#animationforkey",
+    "class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html#instance-method-animationForKey",
+    "js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty#animationForKey",
+    "method"
+  ],
+  [
+    "js/scenekit/scnmaterialproperty.js~scnmaterialproperty#animationkeys",
+    "class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html#instance-get-animationKeys",
+    "js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty#animationKeys",
+    "member"
+  ],
+  [
     "js/scenekit/scnmaterialproperty.js~scnmaterialproperty#bordercolor",
     "class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html#instance-member-borderColor",
     "js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty#borderColor",
@@ -7387,7 +8383,13 @@ window.esdocSearchIndex = [
   ],
   [
     "js/scenekit/scnmaterialproperty.js~scnmaterialproperty#contents",
-    "class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html#instance-member-contents",
+    "class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html#instance-get-contents",
+    "js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty#contents",
+    "member"
+  ],
+  [
+    "js/scenekit/scnmaterialproperty.js~scnmaterialproperty#contents",
+    "class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html#instance-set-contents",
     "js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty#contents",
     "member"
   ],
@@ -7396,6 +8398,12 @@ window.esdocSearchIndex = [
     "class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html#instance-member-contentsTransform",
     "js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty#contentsTransform",
     "member"
+  ],
+  [
+    "js/scenekit/scnmaterialproperty.js~scnmaterialproperty#copy",
+    "class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html#instance-method-copy",
+    "js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty#copy",
+    "method"
   ],
   [
     "js/scenekit/scnmaterialproperty.js~scnmaterialproperty#float32array",
@@ -7408,6 +8416,12 @@ window.esdocSearchIndex = [
     "class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html#instance-member-intensity",
     "js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty#intensity",
     "member"
+  ],
+  [
+    "js/scenekit/scnmaterialproperty.js~scnmaterialproperty#isanimationpausedforkey",
+    "class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html#instance-method-isAnimationPausedForKey",
+    "js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty#isAnimationPausedForKey",
+    "method"
   ],
   [
     "js/scenekit/scnmaterialproperty.js~scnmaterialproperty#magnificationfilter",
@@ -7440,6 +8454,54 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "js/scenekit/scnmaterialproperty.js~scnmaterialproperty#pauseanimationforkey",
+    "class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html#instance-method-pauseAnimationForKey",
+    "js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty#pauseAnimationForKey",
+    "method"
+  ],
+  [
+    "js/scenekit/scnmaterialproperty.js~scnmaterialproperty#removeallanimations",
+    "class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html#instance-method-removeAllAnimations",
+    "js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty#removeAllAnimations",
+    "method"
+  ],
+  [
+    "js/scenekit/scnmaterialproperty.js~scnmaterialproperty#removeanimationforkey",
+    "class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html#instance-method-removeAnimationForKey",
+    "js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty#removeAnimationForKey",
+    "method"
+  ],
+  [
+    "js/scenekit/scnmaterialproperty.js~scnmaterialproperty#removeanimationforkeyfadeoutduration",
+    "class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html#instance-method-removeAnimationForKeyFadeOutDuration",
+    "js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty#removeAnimationForKeyFadeOutDuration",
+    "method"
+  ],
+  [
+    "js/scenekit/scnmaterialproperty.js~scnmaterialproperty#resumeanimationforkey",
+    "class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html#instance-method-resumeAnimationForKey",
+    "js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty#resumeAnimationForKey",
+    "method"
+  ],
+  [
+    "js/scenekit/scnmaterialproperty.js~scnmaterialproperty#setanimationspeedforkey",
+    "class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html#instance-method-setAnimationSpeedForKey",
+    "js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty#setAnimationSpeedForKey",
+    "method"
+  ],
+  [
+    "js/scenekit/scnmaterialproperty.js~scnmaterialproperty#setvalueforkeypath",
+    "class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html#instance-method-setValueForKeyPath",
+    "js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty#setValueForKeyPath",
+    "method"
+  ],
+  [
+    "js/scenekit/scnmaterialproperty.js~scnmaterialproperty#valueforkeypath",
+    "class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html#instance-method-valueForKeyPath",
+    "js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty#valueForKeyPath",
+    "method"
+  ],
+  [
     "js/scenekit/scnmaterialproperty.js~scnmaterialproperty#wraps",
     "class/js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty.html#instance-member-wrapS",
     "js/SceneKit/SCNMaterialProperty.js~SCNMaterialProperty#wrapS",
@@ -7456,6 +8518,12 @@ window.esdocSearchIndex = [
     "file/js/SceneKit/SCNMatrix4.js.html",
     "js/SceneKit/SCNMatrix4.js",
     "file"
+  ],
+  [
+    "js/scenekit/scnmatrix4.js~scnmatrix4#add",
+    "class/js/SceneKit/SCNMatrix4.js~SCNMatrix4.html#instance-method-add",
+    "js/SceneKit/SCNMatrix4.js~SCNMatrix4#add",
+    "method"
   ],
   [
     "js/scenekit/scnmatrix4.js~scnmatrix4#constructor",
@@ -7482,9 +8550,27 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "js/scenekit/scnmatrix4.js~scnmatrix4#floatarray",
+    "class/js/SceneKit/SCNMatrix4.js~SCNMatrix4.html#instance-method-floatArray",
+    "js/SceneKit/SCNMatrix4.js~SCNMatrix4#floatArray",
+    "method"
+  ],
+  [
     "js/scenekit/scnmatrix4.js~scnmatrix4#floatarray3x4f",
     "class/js/SceneKit/SCNMatrix4.js~SCNMatrix4.html#instance-method-floatArray3x4f",
     "js/SceneKit/SCNMatrix4.js~SCNMatrix4#floatArray3x4f",
+    "method"
+  ],
+  [
+    "js/scenekit/scnmatrix4.js~scnmatrix4#getorientation",
+    "class/js/SceneKit/SCNMatrix4.js~SCNMatrix4.html#instance-method-getOrientation",
+    "js/SceneKit/SCNMatrix4.js~SCNMatrix4#getOrientation",
+    "method"
+  ],
+  [
+    "js/scenekit/scnmatrix4.js~scnmatrix4#getrotation",
+    "class/js/SceneKit/SCNMatrix4.js~SCNMatrix4.html#instance-method-getRotation",
+    "js/SceneKit/SCNMatrix4.js~SCNMatrix4#getRotation",
     "method"
   ],
   [
@@ -7612,6 +8698,12 @@ window.esdocSearchIndex = [
     "class/js/SceneKit/SCNMatrix4.js~SCNMatrix4.html#instance-member-m44",
     "js/SceneKit/SCNMatrix4.js~SCNMatrix4#m44",
     "member"
+  ],
+  [
+    "js/scenekit/scnmatrix4.js~scnmatrix4#mul",
+    "class/js/SceneKit/SCNMatrix4.js~SCNMatrix4.html#instance-method-mul",
+    "js/SceneKit/SCNMatrix4.js~SCNMatrix4#mul",
+    "method"
   ],
   [
     "js/scenekit/scnmatrix4.js~scnmatrix4#mult",
@@ -7879,7 +8971,13 @@ window.esdocSearchIndex = [
   ],
   [
     "js/scenekit/scnnode.js~scnnode#boundingbox",
-    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-member-boundingBox",
+    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-boundingBox",
+    "js/SceneKit/SCNNode.js~SCNNode#boundingBox",
+    "member"
+  ],
+  [
+    "js/scenekit/scnnode.js~scnnode#boundingbox",
+    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-boundingBox",
     "js/SceneKit/SCNNode.js~SCNNode#boundingBox",
     "member"
   ],
@@ -7980,6 +9078,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "js/scenekit/scnnode.js~scnnode#destory",
+    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-destory",
+    "js/SceneKit/SCNNode.js~SCNNode#destory",
+    "method"
+  ],
+  [
     "js/scenekit/scnnode.js~scnnode#enumeratechildnodes",
     "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-enumerateChildNodes",
     "js/SceneKit/SCNNode.js~SCNNode#enumerateChildNodes",
@@ -7993,13 +9097,13 @@ window.esdocSearchIndex = [
   ],
   [
     "js/scenekit/scnnode.js~scnnode#eulerangles",
-    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-eulerAngles",
+    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-eulerAngles",
     "js/SceneKit/SCNNode.js~SCNNode#eulerAngles",
     "member"
   ],
   [
     "js/scenekit/scnnode.js~scnnode#eulerangles",
-    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-eulerAngles",
+    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-eulerAngles",
     "js/SceneKit/SCNNode.js~SCNNode#eulerAngles",
     "member"
   ],
@@ -8017,7 +9121,13 @@ window.esdocSearchIndex = [
   ],
   [
     "js/scenekit/scnnode.js~scnnode#geometry",
-    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-member-geometry",
+    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-geometry",
+    "js/SceneKit/SCNNode.js~SCNNode#geometry",
+    "member"
+  ],
+  [
+    "js/scenekit/scnnode.js~scnnode#geometry",
+    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-geometry",
     "js/SceneKit/SCNNode.js~SCNNode#geometry",
     "member"
   ],
@@ -8061,6 +9171,12 @@ window.esdocSearchIndex = [
     "js/scenekit/scnnode.js~scnnode#light",
     "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-member-light",
     "js/SceneKit/SCNNode.js~SCNNode#light",
+    "member"
+  ],
+  [
+    "js/scenekit/scnnode.js~scnnode#lightviewprojectiontransform",
+    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-lightViewProjectionTransform",
+    "js/SceneKit/SCNNode.js~SCNNode#lightViewProjectionTransform",
     "member"
   ],
   [
@@ -8119,7 +9235,13 @@ window.esdocSearchIndex = [
   ],
   [
     "js/scenekit/scnnode.js~scnnode#physicsbody",
-    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-member-physicsBody",
+    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-physicsBody",
+    "js/SceneKit/SCNNode.js~SCNNode#physicsBody",
+    "member"
+  ],
+  [
+    "js/scenekit/scnnode.js~scnnode#physicsbody",
+    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-physicsBody",
     "js/SceneKit/SCNNode.js~SCNNode#physicsBody",
     "member"
   ],
@@ -8151,6 +9273,12 @@ window.esdocSearchIndex = [
     "js/scenekit/scnnode.js~scnnode#presentation",
     "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-presentation",
     "js/SceneKit/SCNNode.js~SCNNode#presentation",
+    "member"
+  ],
+  [
+    "js/scenekit/scnnode.js~scnnode#projectiontransform",
+    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-projectionTransform",
+    "js/SceneKit/SCNNode.js~SCNNode#projectionTransform",
     "member"
   ],
   [
@@ -8239,13 +9367,13 @@ window.esdocSearchIndex = [
   ],
   [
     "js/scenekit/scnnode.js~scnnode#rotation",
-    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-rotation",
+    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-rotation",
     "js/SceneKit/SCNNode.js~SCNNode#rotation",
     "member"
   ],
   [
     "js/scenekit/scnnode.js~scnnode#rotation",
-    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-rotation",
+    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-rotation",
     "js/SceneKit/SCNNode.js~SCNNode#rotation",
     "member"
   ],
@@ -8304,9 +9432,21 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "js/scenekit/scnnode.js~scnnode#shadowprojectiontransform",
+    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-shadowProjectionTransform",
+    "js/SceneKit/SCNNode.js~SCNNode#shadowProjectionTransform",
+    "member"
+  ],
+  [
     "js/scenekit/scnnode.js~scnnode#skinner",
     "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-member-skinner",
     "js/SceneKit/SCNNode.js~SCNNode#skinner",
+    "member"
+  ],
+  [
+    "js/scenekit/scnnode.js~scnnode#transform",
+    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-transform",
+    "js/SceneKit/SCNNode.js~SCNNode#transform",
     "member"
   ],
   [
@@ -8316,10 +9456,16 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
-    "js/scenekit/scnnode.js~scnnode#transform",
-    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-transform",
-    "js/SceneKit/SCNNode.js~SCNNode#transform",
-    "member"
+    "js/scenekit/scnnode.js~scnnode#valueforkeypath",
+    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-valueForKeyPath",
+    "js/SceneKit/SCNNode.js~SCNNode#valueForKeyPath",
+    "method"
+  ],
+  [
+    "js/scenekit/scnnode.js~scnnode#valueforundefinedkey",
+    "class/js/SceneKit/SCNNode.js~SCNNode.html#instance-method-valueForUndefinedKey",
+    "js/SceneKit/SCNNode.js~SCNNode#valueForUndefinedKey",
+    "method"
   ],
   [
     "js/scenekit/scnnode.js~scnnode#viewprojectiontransform",
@@ -8367,6 +9513,126 @@ window.esdocSearchIndex = [
     "js/scenekit/scnnoderendererdelegate.js~scnnoderendererdelegate#rendernode",
     "class/js/SceneKit/SCNNodeRendererDelegate.js~SCNNodeRendererDelegate.html#instance-method-renderNode",
     "js/SceneKit/SCNNodeRendererDelegate.js~SCNNodeRendererDelegate#renderNode",
+    "method"
+  ],
+  [
+    "js/scenekit/scnordereddictionary.js",
+    "file/js/SceneKit/SCNOrderedDictionary.js.html",
+    "js/SceneKit/SCNOrderedDictionary.js",
+    "file"
+  ],
+  [
+    "js/scenekit/scnordereddictionary.js~scnordereddictionary#allkeys",
+    "class/js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary.html#instance-method-allKeys",
+    "js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary#allKeys",
+    "method"
+  ],
+  [
+    "js/scenekit/scnordereddictionary.js~scnordereddictionary#allvalues",
+    "class/js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary.html#instance-method-allValues",
+    "js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary#allValues",
+    "method"
+  ],
+  [
+    "js/scenekit/scnordereddictionary.js~scnordereddictionary#clear",
+    "class/js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary.html#instance-method-clear",
+    "js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary#clear",
+    "method"
+  ],
+  [
+    "js/scenekit/scnordereddictionary.js~scnordereddictionary#constructor",
+    "class/js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary.html#instance-constructor-constructor",
+    "js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary#constructor",
+    "method"
+  ],
+  [
+    "js/scenekit/scnordereddictionary.js~scnordereddictionary#copy",
+    "class/js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary.html#instance-method-copy",
+    "js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary#copy",
+    "method"
+  ],
+  [
+    "js/scenekit/scnordereddictionary.js~scnordereddictionary#count",
+    "class/js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary.html#instance-method-count",
+    "js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary#count",
+    "method"
+  ],
+  [
+    "js/scenekit/scnordereddictionary.js~scnordereddictionary#delete",
+    "class/js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary.html#instance-method-delete",
+    "js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary#delete",
+    "method"
+  ],
+  [
+    "js/scenekit/scnordereddictionary.js~scnordereddictionary#dictionary",
+    "class/js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary.html#instance-method-dictionary",
+    "js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary#dictionary",
+    "method"
+  ],
+  [
+    "js/scenekit/scnordereddictionary.js~scnordereddictionary#foreach",
+    "class/js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary.html#instance-method-forEach",
+    "js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary#forEach",
+    "method"
+  ],
+  [
+    "js/scenekit/scnordereddictionary.js~scnordereddictionary#get",
+    "class/js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary.html#instance-method-get",
+    "js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary#get",
+    "method"
+  ],
+  [
+    "js/scenekit/scnordereddictionary.js~scnordereddictionary#keys",
+    "class/js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary.html#instance-method-keys",
+    "js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary#keys",
+    "method"
+  ],
+  [
+    "js/scenekit/scnordereddictionary.js~scnordereddictionary#objectforkey",
+    "class/js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary.html#instance-method-objectForKey",
+    "js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary#objectForKey",
+    "method"
+  ],
+  [
+    "js/scenekit/scnordereddictionary.js~scnordereddictionary#removeallobjects",
+    "class/js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary.html#instance-method-removeAllObjects",
+    "js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary#removeAllObjects",
+    "method"
+  ],
+  [
+    "js/scenekit/scnordereddictionary.js~scnordereddictionary#removeobjectforkey",
+    "class/js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary.html#instance-method-removeObjectForKey",
+    "js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary#removeObjectForKey",
+    "method"
+  ],
+  [
+    "js/scenekit/scnordereddictionary.js~scnordereddictionary#set",
+    "class/js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary.html#instance-method-set",
+    "js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary#set",
+    "method"
+  ],
+  [
+    "js/scenekit/scnordereddictionary.js~scnordereddictionary#setobjectforkey",
+    "class/js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary.html#instance-method-setObjectForKey",
+    "js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary#setObjectForKey",
+    "method"
+  ],
+  [
+    "js/scenekit/scnordereddictionary.js~scnordereddictionary#setvalueforkey",
+    "class/js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary.html#instance-method-setValueForKey",
+    "js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary#setValueForKey",
+    "method"
+  ],
+  [
+    "js/scenekit/scnordereddictionary.js~scnordereddictionary#valueforkey",
+    "class/js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary.html#instance-method-valueForKey",
+    "js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary#valueForKey",
+    "method"
+  ],
+  [
+    "js/scenekit/scnordereddictionary.js~scnordereddictionary.initwithcoder",
+    "class/js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary.html#static-method-initWithCoder",
+    "js/SceneKit/SCNOrderedDictionary.js~SCNOrderedDictionary.initWithCoder",
     "method"
   ],
   [
@@ -8592,6 +9858,12 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "js/scenekit/scnparticlesystem.js~scnparticlesystem#constructor",
+    "class/js/SceneKit/SCNParticleSystem.js~SCNParticleSystem.html#instance-constructor-constructor",
+    "js/SceneKit/SCNParticleSystem.js~SCNParticleSystem#constructor",
+    "method"
+  ],
+  [
     "js/scenekit/scnparticlesystem.js~scnparticlesystem#dampingfactor",
     "class/js/SceneKit/SCNParticleSystem.js~SCNParticleSystem.html#instance-member-dampingFactor",
     "js/SceneKit/SCNParticleSystem.js~SCNParticleSystem#dampingFactor",
@@ -8686,18 +9958,6 @@ window.esdocSearchIndex = [
     "class/js/SceneKit/SCNParticleSystem.js~SCNParticleSystem.html#instance-member-imageSequenceRowCount",
     "js/SceneKit/SCNParticleSystem.js~SCNParticleSystem#imageSequenceRowCount",
     "member"
-  ],
-  [
-    "js/scenekit/scnparticlesystem.js~scnparticlesystem#init",
-    "class/js/SceneKit/SCNParticleSystem.js~SCNParticleSystem.html#instance-method-init",
-    "js/SceneKit/SCNParticleSystem.js~SCNParticleSystem#init",
-    "method"
-  ],
-  [
-    "js/scenekit/scnparticlesystem.js~scnparticlesystem#initnamedindirectory",
-    "class/js/SceneKit/SCNParticleSystem.js~SCNParticleSystem.html#instance-method-initNamedInDirectory",
-    "js/SceneKit/SCNParticleSystem.js~SCNParticleSystem#initNamedInDirectory",
-    "method"
   ],
   [
     "js/scenekit/scnparticlesystem.js~scnparticlesystem#isaffectedbygravity",
@@ -8950,6 +10210,12 @@ window.esdocSearchIndex = [
     "class/js/SceneKit/SCNParticleSystem.js~SCNParticleSystem.html#static-get-ParticleProperty",
     "js/SceneKit/SCNParticleSystem.js~SCNParticleSystem.ParticleProperty",
     "member"
+  ],
+  [
+    "js/scenekit/scnparticlesystem.js~scnparticlesystem.systemnamedindirectory",
+    "class/js/SceneKit/SCNParticleSystem.js~SCNParticleSystem.html#static-method-systemNamedInDirectory",
+    "js/SceneKit/SCNParticleSystem.js~SCNParticleSystem.systemNamedInDirectory",
+    "method"
   ],
   [
     "js/scenekit/scnphysicsballsocketjoint.js",
@@ -9240,6 +10506,12 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "js/scenekit/scnphysicscontact.js~scnphysicscontact#constructor",
+    "class/js/SceneKit/SCNPhysicsContact.js~SCNPhysicsContact.html#instance-constructor-constructor",
+    "js/SceneKit/SCNPhysicsContact.js~SCNPhysicsContact#constructor",
+    "method"
+  ],
+  [
     "js/scenekit/scnphysicscontact.js~scnphysicscontact#contactnormal",
     "class/js/SceneKit/SCNPhysicsContact.js~SCNPhysicsContact.html#instance-get-contactNormal",
     "js/SceneKit/SCNPhysicsContact.js~SCNPhysicsContact#contactNormal",
@@ -9250,12 +10522,6 @@ window.esdocSearchIndex = [
     "class/js/SceneKit/SCNPhysicsContact.js~SCNPhysicsContact.html#instance-get-contactPoint",
     "js/SceneKit/SCNPhysicsContact.js~SCNPhysicsContact#contactPoint",
     "member"
-  ],
-  [
-    "js/scenekit/scnphysicscontact.js~scnphysicscontact#init",
-    "class/js/SceneKit/SCNPhysicsContact.js~SCNPhysicsContact.html#instance-method-init",
-    "js/SceneKit/SCNPhysicsContact.js~SCNPhysicsContact#init",
-    "method"
   ],
   [
     "js/scenekit/scnphysicscontact.js~scnphysicscontact#nodea",
@@ -10122,15 +11388,33 @@ window.esdocSearchIndex = [
     "file"
   ],
   [
+    "js/scenekit/scnreferencenode.js~scnreferencenode#addchildnode",
+    "class/js/SceneKit/SCNReferenceNode.js~SCNReferenceNode.html#instance-method-addChildNode",
+    "js/SceneKit/SCNReferenceNode.js~SCNReferenceNode#addChildNode",
+    "method"
+  ],
+  [
+    "js/scenekit/scnreferencenode.js~scnreferencenode#childnodes",
+    "class/js/SceneKit/SCNReferenceNode.js~SCNReferenceNode.html#instance-get-childNodes",
+    "js/SceneKit/SCNReferenceNode.js~SCNReferenceNode#childNodes",
+    "member"
+  ],
+  [
+    "js/scenekit/scnreferencenode.js~scnreferencenode#constructor",
+    "class/js/SceneKit/SCNReferenceNode.js~SCNReferenceNode.html#instance-constructor-constructor",
+    "js/SceneKit/SCNReferenceNode.js~SCNReferenceNode#constructor",
+    "method"
+  ],
+  [
     "js/scenekit/scnreferencenode.js~scnreferencenode#initcoder",
     "class/js/SceneKit/SCNReferenceNode.js~SCNReferenceNode.html#instance-method-initCoder",
     "js/SceneKit/SCNReferenceNode.js~SCNReferenceNode#initCoder",
     "method"
   ],
   [
-    "js/scenekit/scnreferencenode.js~scnreferencenode#initurl",
-    "class/js/SceneKit/SCNReferenceNode.js~SCNReferenceNode.html#instance-method-initUrl",
-    "js/SceneKit/SCNReferenceNode.js~SCNReferenceNode#initUrl",
+    "js/scenekit/scnreferencenode.js~scnreferencenode#insertchildnodeat",
+    "class/js/SceneKit/SCNReferenceNode.js~SCNReferenceNode.html#instance-method-insertChildNodeAt",
+    "js/SceneKit/SCNReferenceNode.js~SCNReferenceNode#insertChildNodeAt",
     "method"
   ],
   [
@@ -10153,9 +11437,21 @@ window.esdocSearchIndex = [
   ],
   [
     "js/scenekit/scnreferencenode.js~scnreferencenode#referenceurl",
-    "class/js/SceneKit/SCNReferenceNode.js~SCNReferenceNode.html#instance-member-referenceURL",
+    "class/js/SceneKit/SCNReferenceNode.js~SCNReferenceNode.html#instance-set-referenceURL",
     "js/SceneKit/SCNReferenceNode.js~SCNReferenceNode#referenceURL",
     "member"
+  ],
+  [
+    "js/scenekit/scnreferencenode.js~scnreferencenode#referenceurl",
+    "class/js/SceneKit/SCNReferenceNode.js~SCNReferenceNode.html#instance-get-referenceURL",
+    "js/SceneKit/SCNReferenceNode.js~SCNReferenceNode#referenceURL",
+    "member"
+  ],
+  [
+    "js/scenekit/scnreferencenode.js~scnreferencenode#replacechildnodewith",
+    "class/js/SceneKit/SCNReferenceNode.js~SCNReferenceNode.html#instance-method-replaceChildNodeWith",
+    "js/SceneKit/SCNReferenceNode.js~SCNReferenceNode#replaceChildNodeWith",
+    "method"
   ],
   [
     "js/scenekit/scnreferencenode.js~scnreferencenode#unload",
@@ -10215,6 +11511,12 @@ window.esdocSearchIndex = [
     "js/scenekit/scnrenderer.js~scnrenderer#currentrendercommandencoder",
     "class/js/SceneKit/SCNRenderer.js~SCNRenderer.html#instance-get-currentRenderCommandEncoder",
     "js/SceneKit/SCNRenderer.js~SCNRenderer#currentRenderCommandEncoder",
+    "member"
+  ],
+  [
+    "js/scenekit/scnrenderer.js~scnrenderer#currenttime",
+    "class/js/SceneKit/SCNRenderer.js~SCNRenderer.html#instance-member-currentTime",
+    "js/SceneKit/SCNRenderer.js~SCNRenderer#currentTime",
     "member"
   ],
   [
@@ -10290,8 +11592,20 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "js/scenekit/scnrenderer.js~scnrenderer#overlayskscene",
+    "class/js/SceneKit/SCNRenderer.js~SCNRenderer.html#instance-member-overlaySKScene",
+    "js/SceneKit/SCNRenderer.js~SCNRenderer#overlaySKScene",
+    "member"
+  ],
+  [
     "js/scenekit/scnrenderer.js~scnrenderer#pointofview",
-    "class/js/SceneKit/SCNRenderer.js~SCNRenderer.html#instance-member-pointOfView",
+    "class/js/SceneKit/SCNRenderer.js~SCNRenderer.html#instance-get-pointOfView",
+    "js/SceneKit/SCNRenderer.js~SCNRenderer#pointOfView",
+    "member"
+  ],
+  [
+    "js/scenekit/scnrenderer.js~scnrenderer#pointofview",
+    "class/js/SceneKit/SCNRenderer.js~SCNRenderer.html#instance-set-pointOfView",
     "js/SceneKit/SCNRenderer.js~SCNRenderer#pointOfView",
     "member"
   ],
@@ -10299,12 +11613,6 @@ window.esdocSearchIndex = [
     "js/scenekit/scnrenderer.js~scnrenderer#prepare",
     "class/js/SceneKit/SCNRenderer.js~SCNRenderer.html#instance-method-prepare",
     "js/SceneKit/SCNRenderer.js~SCNRenderer#prepare",
-    "method"
-  ],
-  [
-    "js/scenekit/scnrenderer.js~scnrenderer#preparebuffer",
-    "class/js/SceneKit/SCNRenderer.js~SCNRenderer.html#instance-method-prepareBuffer",
-    "js/SceneKit/SCNRenderer.js~SCNRenderer#prepareBuffer",
     "method"
   ],
   [
@@ -10932,6 +12240,18 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "js/scenekit/scnshadablehelper.js",
+    "file/js/SceneKit/SCNShadableHelper.js.html",
+    "js/SceneKit/SCNShadableHelper.js",
+    "file"
+  ],
+  [
+    "js/scenekit/scnshadablehelper.js~scnshadablehelper#constructor",
+    "class/js/SceneKit/SCNShadableHelper.js~SCNShadableHelper.html#instance-constructor-constructor",
+    "js/SceneKit/SCNShadableHelper.js~SCNShadableHelper#constructor",
+    "method"
+  ],
+  [
     "js/scenekit/scnshadermodifierentrypoint.js",
     "file/js/SceneKit/SCNShaderModifierEntryPoint.js.html",
     "js/SceneKit/SCNShaderModifierEntryPoint.js",
@@ -11275,13 +12595,13 @@ window.esdocSearchIndex = [
   ],
   [
     "js/scenekit/scntransaction.js~scntransaction.animationduration",
-    "class/js/SceneKit/SCNTransaction.js~SCNTransaction.html#static-get-animationDuration",
+    "class/js/SceneKit/SCNTransaction.js~SCNTransaction.html#static-set-animationDuration",
     "js/SceneKit/SCNTransaction.js~SCNTransaction.animationDuration",
     "member"
   ],
   [
     "js/scenekit/scntransaction.js~scntransaction.animationduration",
-    "class/js/SceneKit/SCNTransaction.js~SCNTransaction.html#static-set-animationDuration",
+    "class/js/SceneKit/SCNTransaction.js~SCNTransaction.html#static-get-animationDuration",
     "js/SceneKit/SCNTransaction.js~SCNTransaction.animationDuration",
     "member"
   ],
@@ -11311,13 +12631,13 @@ window.esdocSearchIndex = [
   ],
   [
     "js/scenekit/scntransaction.js~scntransaction.completionblock",
-    "class/js/SceneKit/SCNTransaction.js~SCNTransaction.html#static-get-completionBlock",
+    "class/js/SceneKit/SCNTransaction.js~SCNTransaction.html#static-set-completionBlock",
     "js/SceneKit/SCNTransaction.js~SCNTransaction.completionBlock",
     "member"
   ],
   [
     "js/scenekit/scntransaction.js~scntransaction.completionblock",
-    "class/js/SceneKit/SCNTransaction.js~SCNTransaction.html#static-set-completionBlock",
+    "class/js/SceneKit/SCNTransaction.js~SCNTransaction.html#static-get-completionBlock",
     "js/SceneKit/SCNTransaction.js~SCNTransaction.completionBlock",
     "member"
   ],
@@ -11338,6 +12658,18 @@ window.esdocSearchIndex = [
     "class/js/SceneKit/SCNTransaction.js~SCNTransaction.html#static-method-flush",
     "js/SceneKit/SCNTransaction.js~SCNTransaction.flush",
     "method"
+  ],
+  [
+    "js/scenekit/scntransaction.js~scntransaction.immediatemode",
+    "class/js/SceneKit/SCNTransaction.js~SCNTransaction.html#static-set-immediateMode",
+    "js/SceneKit/SCNTransaction.js~SCNTransaction.immediateMode",
+    "member"
+  ],
+  [
+    "js/scenekit/scntransaction.js~scntransaction.immediatemode",
+    "class/js/SceneKit/SCNTransaction.js~SCNTransaction.html#static-get-immediateMode",
+    "js/SceneKit/SCNTransaction.js~SCNTransaction.immediateMode",
+    "member"
   ],
   [
     "js/scenekit/scntransaction.js~scntransaction.lock",
@@ -11466,9 +12798,27 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "js/scenekit/scnvector3.js~scnvector3#euleranglestoquat",
+    "class/js/SceneKit/SCNVector3.js~SCNVector3.html#instance-method-eulerAnglesToQuat",
+    "js/SceneKit/SCNVector3.js~SCNVector3#eulerAnglesToQuat",
+    "method"
+  ],
+  [
+    "js/scenekit/scnvector3.js~scnvector3#euleranglestorotation",
+    "class/js/SceneKit/SCNVector3.js~SCNVector3.html#instance-method-eulerAnglesToRotation",
+    "js/SceneKit/SCNVector3.js~SCNVector3#eulerAnglesToRotation",
+    "method"
+  ],
+  [
     "js/scenekit/scnvector3.js~scnvector3#float32array",
     "class/js/SceneKit/SCNVector3.js~SCNVector3.html#instance-method-float32Array",
     "js/SceneKit/SCNVector3.js~SCNVector3#float32Array",
+    "method"
+  ],
+  [
+    "js/scenekit/scnvector3.js~scnvector3#floatarray",
+    "class/js/SceneKit/SCNVector3.js~SCNVector3.html#instance-method-floatArray",
+    "js/SceneKit/SCNVector3.js~SCNVector3#floatArray",
     "method"
   ],
   [
@@ -11502,6 +12852,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "js/scenekit/scnvector3.js~scnvector3#rotatewithquaternion",
+    "class/js/SceneKit/SCNVector3.js~SCNVector3.html#instance-method-rotateWithQuaternion",
+    "js/SceneKit/SCNVector3.js~SCNVector3#rotateWithQuaternion",
+    "method"
+  ],
+  [
     "js/scenekit/scnvector3.js~scnvector3#sub",
     "class/js/SceneKit/SCNVector3.js~SCNVector3.html#instance-method-sub",
     "js/SceneKit/SCNVector3.js~SCNVector3#sub",
@@ -11530,6 +12886,12 @@ window.esdocSearchIndex = [
     "class/js/SceneKit/SCNVector3.js~SCNVector3.html#instance-member-z",
     "js/SceneKit/SCNVector3.js~SCNVector3#z",
     "member"
+  ],
+  [
+    "js/scenekit/scnvector3.js~scnvector3#zero",
+    "class/js/SceneKit/SCNVector3.js~SCNVector3.html#instance-method-zero",
+    "js/SceneKit/SCNVector3.js~SCNVector3#zero",
+    "method"
   ],
   [
     "js/scenekit/scnvector3equaltovector3.js",
@@ -11565,6 +12927,12 @@ window.esdocSearchIndex = [
     "js/scenekit/scnvector3toglkvector3.js",
     "file/js/SceneKit/SCNVector3ToGLKVector3.js.html",
     "js/SceneKit/SCNVector3ToGLKVector3.js",
+    "file"
+  ],
+  [
+    "js/scenekit/scnvector3zero.js",
+    "file/js/SceneKit/SCNVector3Zero.js.html",
+    "js/SceneKit/SCNVector3Zero.js",
     "file"
   ],
   [
@@ -11610,6 +12978,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "js/scenekit/scnvector4.js~scnvector4#floatarray",
+    "class/js/SceneKit/SCNVector4.js~SCNVector4.html#instance-method-floatArray",
+    "js/SceneKit/SCNVector4.js~SCNVector4#floatArray",
+    "method"
+  ],
+  [
     "js/scenekit/scnvector4.js~scnvector4#length",
     "class/js/SceneKit/SCNVector4.js~SCNVector4.html#instance-method-length",
     "js/SceneKit/SCNVector4.js~SCNVector4#length",
@@ -11640,6 +13014,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "js/scenekit/scnvector4.js~scnvector4#quattoeulerangles",
+    "class/js/SceneKit/SCNVector4.js~SCNVector4.html#instance-method-quatToEulerAngles",
+    "js/SceneKit/SCNVector4.js~SCNVector4#quatToEulerAngles",
+    "method"
+  ],
+  [
     "js/scenekit/scnvector4.js~scnvector4#quattorotation",
     "class/js/SceneKit/SCNVector4.js~SCNVector4.html#instance-method-quatToRotation",
     "js/SceneKit/SCNVector4.js~SCNVector4#quatToRotation",
@@ -11649,6 +13029,12 @@ window.esdocSearchIndex = [
     "js/scenekit/scnvector4.js~scnvector4#rotmatrix",
     "class/js/SceneKit/SCNVector4.js~SCNVector4.html#instance-method-rotMatrix",
     "js/SceneKit/SCNVector4.js~SCNVector4#rotMatrix",
+    "method"
+  ],
+  [
+    "js/scenekit/scnvector4.js~scnvector4#rotationtoeulerangles",
+    "class/js/SceneKit/SCNVector4.js~SCNVector4.html#instance-method-rotationToEulerAngles",
+    "js/SceneKit/SCNVector4.js~SCNVector4#rotationToEulerAngles",
     "method"
   ],
   [
@@ -11698,6 +13084,12 @@ window.esdocSearchIndex = [
     "class/js/SceneKit/SCNVector4.js~SCNVector4.html#instance-member-z",
     "js/SceneKit/SCNVector4.js~SCNVector4#z",
     "member"
+  ],
+  [
+    "js/scenekit/scnvector4.js~scnvector4#zero",
+    "class/js/SceneKit/SCNVector4.js~SCNVector4.html#instance-method-zero",
+    "js/SceneKit/SCNVector4.js~SCNVector4#zero",
+    "method"
   ],
   [
     "js/scenekit/scnvector4equaltovector4.js",
@@ -11803,8 +13195,20 @@ window.esdocSearchIndex = [
   ],
   [
     "js/scenekit/scnview.js~scnview#backgroundcolor",
-    "class/js/SceneKit/SCNView.js~SCNView.html#instance-member-backgroundColor",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-get-backgroundColor",
     "js/SceneKit/SCNView.js~SCNView#backgroundColor",
+    "member"
+  ],
+  [
+    "js/scenekit/scnview.js~scnview#backgroundcolor",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-set-backgroundColor",
+    "js/SceneKit/SCNView.js~SCNView#backgroundColor",
+    "member"
+  ],
+  [
+    "js/scenekit/scnview.js~scnview#bounds",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-get-bounds",
+    "js/SceneKit/SCNView.js~SCNView#bounds",
     "member"
   ],
   [
@@ -11838,6 +13242,12 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "js/scenekit/scnview.js~scnview#convertfrom",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-method-convertFrom",
+    "js/SceneKit/SCNView.js~SCNView#convertFrom",
+    "method"
+  ],
+  [
     "js/scenekit/scnview.js~scnview#currentrendercommandencoder",
     "class/js/SceneKit/SCNView.js~SCNView.html#instance-get-currentRenderCommandEncoder",
     "js/SceneKit/SCNView.js~SCNView#currentRenderCommandEncoder",
@@ -11869,13 +13279,13 @@ window.esdocSearchIndex = [
   ],
   [
     "js/scenekit/scnview.js~scnview#delegate",
-    "class/js/SceneKit/SCNView.js~SCNView.html#instance-get-delegate",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-set-delegate",
     "js/SceneKit/SCNView.js~SCNView#delegate",
     "member"
   ],
   [
     "js/scenekit/scnview.js~scnview#delegate",
-    "class/js/SceneKit/SCNView.js~SCNView.html#instance-set-delegate",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-get-delegate",
     "js/SceneKit/SCNView.js~SCNView#delegate",
     "member"
   ],
@@ -11898,6 +13308,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "js/scenekit/scnview.js~scnview#flagschangedwith",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-method-flagsChangedWith",
+    "js/SceneKit/SCNView.js~SCNView#flagsChangedWith",
+    "method"
+  ],
+  [
     "js/scenekit/scnview.js~scnview#hittest",
     "class/js/SceneKit/SCNView.js~SCNView.html#instance-method-hitTest",
     "js/SceneKit/SCNView.js~SCNView#hitTest",
@@ -11905,13 +13321,13 @@ window.esdocSearchIndex = [
   ],
   [
     "js/scenekit/scnview.js~scnview#isjitteringenabled",
-    "class/js/SceneKit/SCNView.js~SCNView.html#instance-get-isJitteringEnabled",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-set-isJitteringEnabled",
     "js/SceneKit/SCNView.js~SCNView#isJitteringEnabled",
     "member"
   ],
   [
     "js/scenekit/scnview.js~scnview#isjitteringenabled",
-    "class/js/SceneKit/SCNView.js~SCNView.html#instance-set-isJitteringEnabled",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-get-isJitteringEnabled",
     "js/SceneKit/SCNView.js~SCNView#isJitteringEnabled",
     "member"
   ],
@@ -11934,6 +13350,18 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "js/scenekit/scnview.js~scnview#keydownwith",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-method-keyDownWith",
+    "js/SceneKit/SCNView.js~SCNView#keyDownWith",
+    "method"
+  ],
+  [
+    "js/scenekit/scnview.js~scnview#keyupwith",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-method-keyUpWith",
+    "js/SceneKit/SCNView.js~SCNView#keyUpWith",
+    "method"
+  ],
+  [
     "js/scenekit/scnview.js~scnview#loops",
     "class/js/SceneKit/SCNView.js~SCNView.html#instance-get-loops",
     "js/SceneKit/SCNView.js~SCNView#loops",
@@ -11946,20 +13374,74 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "js/scenekit/scnview.js~scnview#mousedownwith",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-method-mouseDownWith",
+    "js/SceneKit/SCNView.js~SCNView#mouseDownWith",
+    "method"
+  ],
+  [
+    "js/scenekit/scnview.js~scnview#mousedraggedwith",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-method-mouseDraggedWith",
+    "js/SceneKit/SCNView.js~SCNView#mouseDraggedWith",
+    "method"
+  ],
+  [
+    "js/scenekit/scnview.js~scnview#mouseenteredwith",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-method-mouseEnteredWith",
+    "js/SceneKit/SCNView.js~SCNView#mouseEnteredWith",
+    "method"
+  ],
+  [
+    "js/scenekit/scnview.js~scnview#mouseexitedwith",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-method-mouseExitedWith",
+    "js/SceneKit/SCNView.js~SCNView#mouseExitedWith",
+    "method"
+  ],
+  [
+    "js/scenekit/scnview.js~scnview#mousemovedwith",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-method-mouseMovedWith",
+    "js/SceneKit/SCNView.js~SCNView#mouseMovedWith",
+    "method"
+  ],
+  [
+    "js/scenekit/scnview.js~scnview#mouseupwith",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-method-mouseUpWith",
+    "js/SceneKit/SCNView.js~SCNView#mouseUpWith",
+    "method"
+  ],
+  [
     "js/scenekit/scnview.js~scnview#nodesinsidefrustumof",
     "class/js/SceneKit/SCNView.js~SCNView.html#instance-method-nodesInsideFrustumOf",
     "js/SceneKit/SCNView.js~SCNView#nodesInsideFrustumOf",
     "method"
   ],
   [
+    "js/scenekit/scnview.js~scnview#othermousedownwith",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-method-otherMouseDownWith",
+    "js/SceneKit/SCNView.js~SCNView#otherMouseDownWith",
+    "method"
+  ],
+  [
+    "js/scenekit/scnview.js~scnview#othermousedraggedwith",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-method-otherMouseDraggedWith",
+    "js/SceneKit/SCNView.js~SCNView#otherMouseDraggedWith",
+    "method"
+  ],
+  [
+    "js/scenekit/scnview.js~scnview#othermouseupwith",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-method-otherMouseUpWith",
+    "js/SceneKit/SCNView.js~SCNView#otherMouseUpWith",
+    "method"
+  ],
+  [
     "js/scenekit/scnview.js~scnview#overlayskscene",
-    "class/js/SceneKit/SCNView.js~SCNView.html#instance-get-overlaySKScene",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-set-overlaySKScene",
     "js/SceneKit/SCNView.js~SCNView#overlaySKScene",
     "member"
   ],
   [
     "js/scenekit/scnview.js~scnview#overlayskscene",
-    "class/js/SceneKit/SCNView.js~SCNView.html#instance-set-overlaySKScene",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-get-overlaySKScene",
     "js/SceneKit/SCNView.js~SCNView#overlaySKScene",
     "member"
   ],
@@ -12030,6 +13512,18 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "js/scenekit/scnview.js~scnview#rightmousedraggedwith",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-method-rightMouseDraggedWith",
+    "js/SceneKit/SCNView.js~SCNView#rightMouseDraggedWith",
+    "method"
+  ],
+  [
+    "js/scenekit/scnview.js~scnview#rightmouseupwith",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-method-rightMouseUpWith",
+    "js/SceneKit/SCNView.js~SCNView#rightMouseUpWith",
+    "method"
+  ],
+  [
     "js/scenekit/scnview.js~scnview#scenetime",
     "class/js/SceneKit/SCNView.js~SCNView.html#instance-get-sceneTime",
     "js/SceneKit/SCNView.js~SCNView#sceneTime",
@@ -12040,6 +13534,12 @@ window.esdocSearchIndex = [
     "class/js/SceneKit/SCNView.js~SCNView.html#instance-set-sceneTime",
     "js/SceneKit/SCNView.js~SCNView#sceneTime",
     "member"
+  ],
+  [
+    "js/scenekit/scnview.js~scnview#scrollwheelwith",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-method-scrollWheelWith",
+    "js/SceneKit/SCNView.js~SCNView#scrollWheelWith",
+    "method"
   ],
   [
     "js/scenekit/scnview.js~scnview#setframesize",
@@ -12075,6 +13575,18 @@ window.esdocSearchIndex = [
     "js/scenekit/scnview.js~scnview#stop",
     "class/js/SceneKit/SCNView.js~SCNView.html#instance-method-stop",
     "js/SceneKit/SCNView.js~SCNView#stop",
+    "method"
+  ],
+  [
+    "js/scenekit/scnview.js~scnview#tablepointwith",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-method-tablePointWith",
+    "js/SceneKit/SCNView.js~SCNView#tablePointWith",
+    "method"
+  ],
+  [
+    "js/scenekit/scnview.js~scnview#tableproximitywith",
+    "class/js/SceneKit/SCNView.js~SCNView.html#instance-method-tableProximityWith",
+    "js/SceneKit/SCNView.js~SCNView#tableProximityWith",
     "method"
   ],
   [
@@ -12114,6 +13626,576 @@ window.esdocSearchIndex = [
     "typedef"
   ],
   [
+    "js/spritekit/skaction.js",
+    "file/js/SpriteKit/SKAction.js.html",
+    "js/SpriteKit/SKAction.js",
+    "file"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction#constructor",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#instance-constructor-constructor",
+    "js/SpriteKit/SKAction.js~SKAction#constructor",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction#copy",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#instance-method-copy",
+    "js/SpriteKit/SKAction.js~SKAction#copy",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction#duration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#instance-set-duration",
+    "js/SpriteKit/SKAction.js~SKAction#duration",
+    "member"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction#duration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#instance-get-duration",
+    "js/SpriteKit/SKAction.js~SKAction#duration",
+    "member"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction#reversed",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#instance-method-reversed",
+    "js/SpriteKit/SKAction.js~SKAction#reversed",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction#speed",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#instance-set-speed",
+    "js/SpriteKit/SKAction.js~SKAction#speed",
+    "member"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction#speed",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#instance-get-speed",
+    "js/SpriteKit/SKAction.js~SKAction#speed",
+    "member"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction#timingfunction",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#instance-set-timingFunction",
+    "js/SpriteKit/SKAction.js~SKAction#timingFunction",
+    "member"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction#timingfunction",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#instance-get-timingFunction",
+    "js/SpriteKit/SKAction.js~SKAction#timingFunction",
+    "member"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction#timingmode",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#instance-get-timingMode",
+    "js/SpriteKit/SKAction.js~SKAction#timingMode",
+    "member"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction#timingmode",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#instance-set-timingMode",
+    "js/SpriteKit/SKAction.js~SKAction#timingMode",
+    "member"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.actionwithname",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-actionWithName",
+    "js/SpriteKit/SKAction.js~SKAction.actionWithName",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.actionwithnamedduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-actionWithNamedDuration",
+    "js/SpriteKit/SKAction.js~SKAction.actionWithNamedDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.actionwithnamedfrom",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-actionWithNamedFrom",
+    "js/SpriteKit/SKAction.js~SKAction.actionWithNamedFrom",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.animatewithnormaltexturestimeperframe",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-animateWithNormalTexturesTimePerFrame",
+    "js/SpriteKit/SKAction.js~SKAction.animateWithNormalTexturesTimePerFrame",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.animatewithtimeperframe",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-animateWithTimePerFrame",
+    "js/SpriteKit/SKAction.js~SKAction.animateWithTimePerFrame",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.animatewithwarps",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-animateWithWarps",
+    "js/SpriteKit/SKAction.js~SKAction.animateWithWarps",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.applyangularimpulseduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-applyAngularImpulseDuration",
+    "js/SpriteKit/SKAction.js~SKAction.applyAngularImpulseDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.applyforceatduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-applyForceAtDuration",
+    "js/SpriteKit/SKAction.js~SKAction.applyForceAtDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.applyforceduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-applyForceDuration",
+    "js/SpriteKit/SKAction.js~SKAction.applyForceDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.applyimpulseatduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-applyImpulseAtDuration",
+    "js/SpriteKit/SKAction.js~SKAction.applyImpulseAtDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.applyimpulseduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-applyImpulseDuration",
+    "js/SpriteKit/SKAction.js~SKAction.applyImpulseDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.applytorqueduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-applyTorqueDuration",
+    "js/SpriteKit/SKAction.js~SKAction.applyTorqueDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.changechargeby",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-changeChargeBy",
+    "js/SpriteKit/SKAction.js~SKAction.changeChargeBy",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.changechargeto",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-changeChargeTo",
+    "js/SpriteKit/SKAction.js~SKAction.changeChargeTo",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.changemassby",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-changeMassBy",
+    "js/SpriteKit/SKAction.js~SKAction.changeMassBy",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.changemassto",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-changeMassTo",
+    "js/SpriteKit/SKAction.js~SKAction.changeMassTo",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.changeobstructionby",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-changeObstructionBy",
+    "js/SpriteKit/SKAction.js~SKAction.changeObstructionBy",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.changeobstructionto",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-changeObstructionTo",
+    "js/SpriteKit/SKAction.js~SKAction.changeObstructionTo",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.changeocclusionby",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-changeOcclusionBy",
+    "js/SpriteKit/SKAction.js~SKAction.changeOcclusionBy",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.changeocclusionto",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-changeOcclusionTo",
+    "js/SpriteKit/SKAction.js~SKAction.changeOcclusionTo",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.changeplaybackrateby",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-changePlaybackRateBy",
+    "js/SpriteKit/SKAction.js~SKAction.changePlaybackRateBy",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.changeplaybackrateto",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-changePlaybackRateTo",
+    "js/SpriteKit/SKAction.js~SKAction.changePlaybackRateTo",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.changereverbby",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-changeReverbBy",
+    "js/SpriteKit/SKAction.js~SKAction.changeReverbBy",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.changereverbto",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-changeReverbTo",
+    "js/SpriteKit/SKAction.js~SKAction.changeReverbTo",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.changevolumeby",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-changeVolumeBy",
+    "js/SpriteKit/SKAction.js~SKAction.changeVolumeBy",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.changevolumeto",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-changeVolumeTo",
+    "js/SpriteKit/SKAction.js~SKAction.changeVolumeTo",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.colorizewithduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-colorizeWithDuration",
+    "js/SpriteKit/SKAction.js~SKAction.colorizeWithDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.customactionwithdurationactionblock",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-customActionWithDurationActionBlock",
+    "js/SpriteKit/SKAction.js~SKAction.customActionWithDurationActionBlock",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.fadealphabyduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-fadeAlphaByDuration",
+    "js/SpriteKit/SKAction.js~SKAction.fadeAlphaByDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.fadealphatoduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-fadeAlphaToDuration",
+    "js/SpriteKit/SKAction.js~SKAction.fadeAlphaToDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.fadeinwithduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-fadeInWithDuration",
+    "js/SpriteKit/SKAction.js~SKAction.fadeInWithDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.fadeoutwithduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-fadeOutWithDuration",
+    "js/SpriteKit/SKAction.js~SKAction.fadeOutWithDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.falloffbyduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-falloffByDuration",
+    "js/SpriteKit/SKAction.js~SKAction.falloffByDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.fallofftoduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-falloffToDuration",
+    "js/SpriteKit/SKAction.js~SKAction.falloffToDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.follow",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-follow",
+    "js/SpriteKit/SKAction.js~SKAction.follow",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.followasoffsetorienttopath",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-followAsOffsetOrientToPath",
+    "js/SpriteKit/SKAction.js~SKAction.followAsOffsetOrientToPath",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.followasoffsetorienttopathduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-followAsOffsetOrientToPathDuration",
+    "js/SpriteKit/SKAction.js~SKAction.followAsOffsetOrientToPathDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.followduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-followDuration",
+    "js/SpriteKit/SKAction.js~SKAction.followDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.group",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-group",
+    "js/SpriteKit/SKAction.js~SKAction.group",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.hide",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-hide",
+    "js/SpriteKit/SKAction.js~SKAction.hide",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.movebyduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-moveByDuration",
+    "js/SpriteKit/SKAction.js~SKAction.moveByDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.movebyxyduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-moveByXYDuration",
+    "js/SpriteKit/SKAction.js~SKAction.moveByXYDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.movetoduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-moveToDuration",
+    "js/SpriteKit/SKAction.js~SKAction.moveToDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.pause",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-pause",
+    "js/SpriteKit/SKAction.js~SKAction.pause",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.performontarget",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-performOnTarget",
+    "js/SpriteKit/SKAction.js~SKAction.performOnTarget",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.play",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-play",
+    "js/SpriteKit/SKAction.js~SKAction.play",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.playsoundfilenamedwaitforcompletion",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-playSoundFileNamedWaitForCompletion",
+    "js/SpriteKit/SKAction.js~SKAction.playSoundFileNamedWaitForCompletion",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.reachtorootnode",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-reachToRootNode",
+    "js/SpriteKit/SKAction.js~SKAction.reachToRootNode",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.reachtorootnodeduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-reachToRootNodeDuration",
+    "js/SpriteKit/SKAction.js~SKAction.reachToRootNodeDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.removefromparent",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-removeFromParent",
+    "js/SpriteKit/SKAction.js~SKAction.removeFromParent",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.repeat",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-repeat",
+    "js/SpriteKit/SKAction.js~SKAction.repeat",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.repeatforever",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-repeatForever",
+    "js/SpriteKit/SKAction.js~SKAction.repeatForever",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.resizebywidth",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-resizeByWidth",
+    "js/SpriteKit/SKAction.js~SKAction.resizeByWidth",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.resizetoheight",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-resizeToHeight",
+    "js/SpriteKit/SKAction.js~SKAction.resizeToHeight",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.resizetowidth",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-resizeToWidth",
+    "js/SpriteKit/SKAction.js~SKAction.resizeToWidth",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.rotatebyangleduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-rotateByAngleDuration",
+    "js/SpriteKit/SKAction.js~SKAction.rotateByAngleDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.rotatetoangleduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-rotateToAngleDuration",
+    "js/SpriteKit/SKAction.js~SKAction.rotateToAngleDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.run",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-run",
+    "js/SpriteKit/SKAction.js~SKAction.run",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.runonchildwithname",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-runOnChildWithName",
+    "js/SpriteKit/SKAction.js~SKAction.runOnChildWithName",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.scalebyduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-scaleByDuration",
+    "js/SpriteKit/SKAction.js~SKAction.scaleByDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.scaletoduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-scaleToDuration",
+    "js/SpriteKit/SKAction.js~SKAction.scaleToDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.scalexbyyduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-scaleXByYDuration",
+    "js/SpriteKit/SKAction.js~SKAction.scaleXByYDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.scalextoduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-scaleXToDuration",
+    "js/SpriteKit/SKAction.js~SKAction.scaleXToDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.scalextoyduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-scaleXToYDuration",
+    "js/SpriteKit/SKAction.js~SKAction.scaleXToYDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.scaleytoduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-scaleYToDuration",
+    "js/SpriteKit/SKAction.js~SKAction.scaleYToDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.sequence",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-sequence",
+    "js/SpriteKit/SKAction.js~SKAction.sequence",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.setnormaltexture",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-setNormalTexture",
+    "js/SpriteKit/SKAction.js~SKAction.setNormalTexture",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.settexture",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-setTexture",
+    "js/SpriteKit/SKAction.js~SKAction.setTexture",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.speedbyduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-speedByDuration",
+    "js/SpriteKit/SKAction.js~SKAction.speedByDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.speedtoduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-speedToDuration",
+    "js/SpriteKit/SKAction.js~SKAction.speedToDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.stereopanby",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-stereoPanBy",
+    "js/SpriteKit/SKAction.js~SKAction.stereoPanBy",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.stereopanto",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-stereoPanTo",
+    "js/SpriteKit/SKAction.js~SKAction.stereoPanTo",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.stop",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-stop",
+    "js/SpriteKit/SKAction.js~SKAction.stop",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.strengthbyduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-strengthByDuration",
+    "js/SpriteKit/SKAction.js~SKAction.strengthByDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.strengthtoduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-strengthToDuration",
+    "js/SpriteKit/SKAction.js~SKAction.strengthToDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.unhide",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-unhide",
+    "js/SpriteKit/SKAction.js~SKAction.unhide",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.waitforduration",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-waitForDuration",
+    "js/SpriteKit/SKAction.js~SKAction.waitForDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.waitfordurationwithrange",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-waitForDurationWithRange",
+    "js/SpriteKit/SKAction.js~SKAction.waitForDurationWithRange",
+    "method"
+  ],
+  [
+    "js/spritekit/skaction.js~skaction.warpto",
+    "class/js/SpriteKit/SKAction.js~SKAction.html#static-method-warpTo",
+    "js/SpriteKit/SKAction.js~SKAction.warpTo",
+    "method"
+  ],
+  [
+    "js/spritekit/skactiontimingmode.js",
+    "file/js/SpriteKit/SKActionTimingMode.js.html",
+    "js/SpriteKit/SKActionTimingMode.js",
+    "file"
+  ],
+  [
+    "js/spritekit/skactiontimingmode.js~skactiontimingmode",
+    "typedef/index.html#static-typedef-SKActionTimingMode",
+    "js/SpriteKit/SKActionTimingMode.js~SKActionTimingMode",
+    "typedef"
+  ],
+  [
+    "js/spritekit/skblendmode.js",
+    "file/js/SpriteKit/SKBlendMode.js.html",
+    "js/SpriteKit/SKBlendMode.js",
+    "file"
+  ],
+  [
+    "js/spritekit/skblendmode.js~skblendmode",
+    "typedef/index.html#static-typedef-SKBlendMode",
+    "js/SpriteKit/SKBlendMode.js~SKBlendMode",
+    "typedef"
+  ],
+  [
     "js/spritekit/skcolor.js",
     "file/js/SpriteKit/SKColor.js.html",
     "js/SpriteKit/SKColor.js",
@@ -12144,6 +14226,12 @@ window.esdocSearchIndex = [
     "method"
   ],
   [
+    "js/spritekit/skcolor.js~skcolor#floatarray",
+    "class/js/SpriteKit/SKColor.js~SKColor.html#instance-method-floatArray",
+    "js/SpriteKit/SKColor.js~SKColor#floatArray",
+    "method"
+  ],
+  [
     "js/spritekit/skcolor.js~skcolor#gethsba",
     "class/js/SpriteKit/SKColor.js~SKColor.html#instance-method-getHSBA",
     "js/SpriteKit/SKColor.js~SKColor#getHSBA",
@@ -12159,6 +14247,12 @@ window.esdocSearchIndex = [
     "js/spritekit/skcolor.js~skcolor#green",
     "class/js/SpriteKit/SKColor.js~SKColor.html#instance-member-green",
     "js/SpriteKit/SKColor.js~SKColor#green",
+    "member"
+  ],
+  [
+    "js/spritekit/skcolor.js~skcolor#hexcolor",
+    "class/js/SpriteKit/SKColor.js~SKColor.html#instance-get-hexColor",
+    "js/SpriteKit/SKColor.js~SKColor#hexColor",
     "member"
   ],
   [
@@ -12201,6 +14295,12 @@ window.esdocSearchIndex = [
     "js/spritekit/skcolor.js~skcolor#withalphacomponent",
     "class/js/SpriteKit/SKColor.js~SKColor.html#instance-method-withAlphaComponent",
     "js/SpriteKit/SKColor.js~SKColor#withAlphaComponent",
+    "method"
+  ],
+  [
+    "js/spritekit/skcolor.js~skcolor#zero",
+    "class/js/SpriteKit/SKColor.js~SKColor.html#instance-method-zero",
+    "js/SpriteKit/SKColor.js~SKColor#zero",
     "method"
   ],
   [
@@ -12294,6 +14394,1362 @@ window.esdocSearchIndex = [
     "member"
   ],
   [
+    "js/spritekit/skeffectnode.js",
+    "file/js/SpriteKit/SKEffectNode.js.html",
+    "js/SpriteKit/SKEffectNode.js",
+    "file"
+  ],
+  [
+    "js/spritekit/skeffectnode.js~skeffectnode#attributevalues",
+    "class/js/SpriteKit/SKEffectNode.js~SKEffectNode.html#instance-member-attributeValues",
+    "js/SpriteKit/SKEffectNode.js~SKEffectNode#attributeValues",
+    "member"
+  ],
+  [
+    "js/spritekit/skeffectnode.js~skeffectnode#blendmode",
+    "class/js/SpriteKit/SKEffectNode.js~SKEffectNode.html#instance-member-blendMode",
+    "js/SpriteKit/SKEffectNode.js~SKEffectNode#blendMode",
+    "member"
+  ],
+  [
+    "js/spritekit/skeffectnode.js~skeffectnode#constructor",
+    "class/js/SpriteKit/SKEffectNode.js~SKEffectNode.html#instance-constructor-constructor",
+    "js/SpriteKit/SKEffectNode.js~SKEffectNode#constructor",
+    "method"
+  ],
+  [
+    "js/spritekit/skeffectnode.js~skeffectnode#filter",
+    "class/js/SpriteKit/SKEffectNode.js~SKEffectNode.html#instance-member-filter",
+    "js/SpriteKit/SKEffectNode.js~SKEffectNode#filter",
+    "member"
+  ],
+  [
+    "js/spritekit/skeffectnode.js~skeffectnode#shader",
+    "class/js/SpriteKit/SKEffectNode.js~SKEffectNode.html#instance-member-shader",
+    "js/SpriteKit/SKEffectNode.js~SKEffectNode#shader",
+    "member"
+  ],
+  [
+    "js/spritekit/skeffectnode.js~skeffectnode#shouldcenterfilter",
+    "class/js/SpriteKit/SKEffectNode.js~SKEffectNode.html#instance-member-shouldCenterFilter",
+    "js/SpriteKit/SKEffectNode.js~SKEffectNode#shouldCenterFilter",
+    "member"
+  ],
+  [
+    "js/spritekit/skeffectnode.js~skeffectnode#shouldenableeffects",
+    "class/js/SpriteKit/SKEffectNode.js~SKEffectNode.html#instance-member-shouldEnableEffects",
+    "js/SpriteKit/SKEffectNode.js~SKEffectNode#shouldEnableEffects",
+    "member"
+  ],
+  [
+    "js/spritekit/skeffectnode.js~skeffectnode#shouldrasterize",
+    "class/js/SpriteKit/SKEffectNode.js~SKEffectNode.html#instance-member-shouldRasterize",
+    "js/SpriteKit/SKEffectNode.js~SKEffectNode#shouldRasterize",
+    "member"
+  ],
+  [
+    "js/spritekit/skfade.js",
+    "file/js/SpriteKit/SKFade.js.html",
+    "js/SpriteKit/SKFade.js",
+    "file"
+  ],
+  [
+    "js/spritekit/skfade.js~skfade#constructor",
+    "class/js/SpriteKit/SKFade.js~SKFade.html#instance-constructor-constructor",
+    "js/SpriteKit/SKFade.js~SKFade#constructor",
+    "method"
+  ],
+  [
+    "js/spritekit/skfade.js~skfade#copy",
+    "class/js/SpriteKit/SKFade.js~SKFade.html#instance-method-copy",
+    "js/SpriteKit/SKFade.js~SKFade#copy",
+    "method"
+  ],
+  [
+    "js/spritekit/skfade.js~skfade.fadealphabyduration",
+    "class/js/SpriteKit/SKFade.js~SKFade.html#static-method-fadeAlphaByDuration",
+    "js/SpriteKit/SKFade.js~SKFade.fadeAlphaByDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skfade.js~skfade.fadealphatoduration",
+    "class/js/SpriteKit/SKFade.js~SKFade.html#static-method-fadeAlphaToDuration",
+    "js/SpriteKit/SKFade.js~SKFade.fadeAlphaToDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skfade.js~skfade.fadeinwithduration",
+    "class/js/SpriteKit/SKFade.js~SKFade.html#static-method-fadeInWithDuration",
+    "js/SpriteKit/SKFade.js~SKFade.fadeInWithDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skfade.js~skfade.fadeoutwithduration",
+    "class/js/SpriteKit/SKFade.js~SKFade.html#static-method-fadeOutWithDuration",
+    "js/SpriteKit/SKFade.js~SKFade.fadeOutWithDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skgroup.js",
+    "file/js/SpriteKit/SKGroup.js.html",
+    "js/SpriteKit/SKGroup.js",
+    "file"
+  ],
+  [
+    "js/spritekit/skgroup.js~skgroup#constructor",
+    "class/js/SpriteKit/SKGroup.js~SKGroup.html#instance-constructor-constructor",
+    "js/SpriteKit/SKGroup.js~SKGroup#constructor",
+    "method"
+  ],
+  [
+    "js/spritekit/skgroup.js~skgroup#copy",
+    "class/js/SpriteKit/SKGroup.js~SKGroup.html#instance-method-copy",
+    "js/SpriteKit/SKGroup.js~SKGroup#copy",
+    "method"
+  ],
+  [
+    "js/spritekit/skgroup.js~skgroup#duration",
+    "class/js/SpriteKit/SKGroup.js~SKGroup.html#instance-get-duration",
+    "js/SpriteKit/SKGroup.js~SKGroup#duration",
+    "member"
+  ],
+  [
+    "js/spritekit/skgroup.js~skgroup.group",
+    "class/js/SpriteKit/SKGroup.js~SKGroup.html#static-method-group",
+    "js/SpriteKit/SKGroup.js~SKGroup.group",
+    "method"
+  ],
+  [
+    "js/spritekit/sklabelhorizontalalignmentmode.js",
+    "file/js/SpriteKit/SKLabelHorizontalAlignmentMode.js.html",
+    "js/SpriteKit/SKLabelHorizontalAlignmentMode.js",
+    "file"
+  ],
+  [
+    "js/spritekit/sklabelhorizontalalignmentmode.js~sklabelhorizontalalignmentmode",
+    "typedef/index.html#static-typedef-SKLabelHorizontalAlignmentMode",
+    "js/SpriteKit/SKLabelHorizontalAlignmentMode.js~SKLabelHorizontalAlignmentMode",
+    "typedef"
+  ],
+  [
+    "js/spritekit/sklabelnode.js",
+    "file/js/SpriteKit/SKLabelNode.js.html",
+    "js/SpriteKit/SKLabelNode.js",
+    "file"
+  ],
+  [
+    "js/spritekit/sklabelnode.js~sklabelnode#blendmode",
+    "class/js/SpriteKit/SKLabelNode.js~SKLabelNode.html#instance-member-blendMode",
+    "js/SpriteKit/SKLabelNode.js~SKLabelNode#blendMode",
+    "member"
+  ],
+  [
+    "js/spritekit/sklabelnode.js~sklabelnode#color",
+    "class/js/SpriteKit/SKLabelNode.js~SKLabelNode.html#instance-member-color",
+    "js/SpriteKit/SKLabelNode.js~SKLabelNode#color",
+    "member"
+  ],
+  [
+    "js/spritekit/sklabelnode.js~sklabelnode#colorblendfactor",
+    "class/js/SpriteKit/SKLabelNode.js~SKLabelNode.html#instance-member-colorBlendFactor",
+    "js/SpriteKit/SKLabelNode.js~SKLabelNode#colorBlendFactor",
+    "member"
+  ],
+  [
+    "js/spritekit/sklabelnode.js~sklabelnode#constructor",
+    "class/js/SpriteKit/SKLabelNode.js~SKLabelNode.html#instance-constructor-constructor",
+    "js/SpriteKit/SKLabelNode.js~SKLabelNode#constructor",
+    "method"
+  ],
+  [
+    "js/spritekit/sklabelnode.js~sklabelnode#copy",
+    "class/js/SpriteKit/SKLabelNode.js~SKLabelNode.html#instance-method-copy",
+    "js/SpriteKit/SKLabelNode.js~SKLabelNode#copy",
+    "method"
+  ],
+  [
+    "js/spritekit/sklabelnode.js~sklabelnode#fontcolor",
+    "class/js/SpriteKit/SKLabelNode.js~SKLabelNode.html#instance-set-fontColor",
+    "js/SpriteKit/SKLabelNode.js~SKLabelNode#fontColor",
+    "member"
+  ],
+  [
+    "js/spritekit/sklabelnode.js~sklabelnode#fontcolor",
+    "class/js/SpriteKit/SKLabelNode.js~SKLabelNode.html#instance-get-fontColor",
+    "js/SpriteKit/SKLabelNode.js~SKLabelNode#fontColor",
+    "member"
+  ],
+  [
+    "js/spritekit/sklabelnode.js~sklabelnode#fontname",
+    "class/js/SpriteKit/SKLabelNode.js~SKLabelNode.html#instance-get-fontName",
+    "js/SpriteKit/SKLabelNode.js~SKLabelNode#fontName",
+    "member"
+  ],
+  [
+    "js/spritekit/sklabelnode.js~sklabelnode#fontname",
+    "class/js/SpriteKit/SKLabelNode.js~SKLabelNode.html#instance-set-fontName",
+    "js/SpriteKit/SKLabelNode.js~SKLabelNode#fontName",
+    "member"
+  ],
+  [
+    "js/spritekit/sklabelnode.js~sklabelnode#fontsize",
+    "class/js/SpriteKit/SKLabelNode.js~SKLabelNode.html#instance-set-fontSize",
+    "js/SpriteKit/SKLabelNode.js~SKLabelNode#fontSize",
+    "member"
+  ],
+  [
+    "js/spritekit/sklabelnode.js~sklabelnode#fontsize",
+    "class/js/SpriteKit/SKLabelNode.js~SKLabelNode.html#instance-get-fontSize",
+    "js/SpriteKit/SKLabelNode.js~SKLabelNode#fontSize",
+    "member"
+  ],
+  [
+    "js/spritekit/sklabelnode.js~sklabelnode#horizontalalignmentmode",
+    "class/js/SpriteKit/SKLabelNode.js~SKLabelNode.html#instance-set-horizontalAlignmentMode",
+    "js/SpriteKit/SKLabelNode.js~SKLabelNode#horizontalAlignmentMode",
+    "member"
+  ],
+  [
+    "js/spritekit/sklabelnode.js~sklabelnode#horizontalalignmentmode",
+    "class/js/SpriteKit/SKLabelNode.js~SKLabelNode.html#instance-get-horizontalAlignmentMode",
+    "js/SpriteKit/SKLabelNode.js~SKLabelNode#horizontalAlignmentMode",
+    "member"
+  ],
+  [
+    "js/spritekit/sklabelnode.js~sklabelnode#text",
+    "class/js/SpriteKit/SKLabelNode.js~SKLabelNode.html#instance-get-text",
+    "js/SpriteKit/SKLabelNode.js~SKLabelNode#text",
+    "member"
+  ],
+  [
+    "js/spritekit/sklabelnode.js~sklabelnode#text",
+    "class/js/SpriteKit/SKLabelNode.js~SKLabelNode.html#instance-set-text",
+    "js/SpriteKit/SKLabelNode.js~SKLabelNode#text",
+    "member"
+  ],
+  [
+    "js/spritekit/sklabelnode.js~sklabelnode#verticalalignmentmode",
+    "class/js/SpriteKit/SKLabelNode.js~SKLabelNode.html#instance-set-verticalAlignmentMode",
+    "js/SpriteKit/SKLabelNode.js~SKLabelNode#verticalAlignmentMode",
+    "member"
+  ],
+  [
+    "js/spritekit/sklabelnode.js~sklabelnode#verticalalignmentmode",
+    "class/js/SpriteKit/SKLabelNode.js~SKLabelNode.html#instance-get-verticalAlignmentMode",
+    "js/SpriteKit/SKLabelNode.js~SKLabelNode#verticalAlignmentMode",
+    "member"
+  ],
+  [
+    "js/spritekit/sklabelnode.js~sklabelnode.labelwithfontnamed",
+    "class/js/SpriteKit/SKLabelNode.js~SKLabelNode.html#static-method-labelWithFontNamed",
+    "js/SpriteKit/SKLabelNode.js~SKLabelNode.labelWithFontNamed",
+    "method"
+  ],
+  [
+    "js/spritekit/sklabelnode.js~sklabelnode.labelwithtext",
+    "class/js/SpriteKit/SKLabelNode.js~SKLabelNode.html#static-method-labelWithText",
+    "js/SpriteKit/SKLabelNode.js~SKLabelNode.labelWithText",
+    "method"
+  ],
+  [
+    "js/spritekit/sklabelverticalalignmentmode.js",
+    "file/js/SpriteKit/SKLabelVerticalAlignmentMode.js.html",
+    "js/SpriteKit/SKLabelVerticalAlignmentMode.js",
+    "file"
+  ],
+  [
+    "js/spritekit/sklabelverticalalignmentmode.js~sklabelverticalalignmentmode",
+    "typedef/index.html#static-typedef-SKLabelVerticalAlignmentMode",
+    "js/SpriteKit/SKLabelVerticalAlignmentMode.js~SKLabelVerticalAlignmentMode",
+    "typedef"
+  ],
+  [
+    "js/spritekit/sknode.js",
+    "file/js/SpriteKit/SKNode.js.html",
+    "js/SpriteKit/SKNode.js",
+    "file"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#accessibilitychildren",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-member-accessibilityChildren",
+    "js/SpriteKit/SKNode.js~SKNode#accessibilityChildren",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#accessibilityframe",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-member-accessibilityFrame",
+    "js/SpriteKit/SKNode.js~SKNode#accessibilityFrame",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#accessibilityhelp",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-member-accessibilityHelp",
+    "js/SpriteKit/SKNode.js~SKNode#accessibilityHelp",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#accessibilityhittest",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-accessibilityHitTest",
+    "js/SpriteKit/SKNode.js~SKNode#accessibilityHitTest",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#accessibilitylabel",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-member-accessibilityLabel",
+    "js/SpriteKit/SKNode.js~SKNode#accessibilityLabel",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#accessibilityparent",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-member-accessibilityParent",
+    "js/SpriteKit/SKNode.js~SKNode#accessibilityParent",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#accessibilityrole",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-member-accessibilityRole",
+    "js/SpriteKit/SKNode.js~SKNode#accessibilityRole",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#accessibilityroledescription",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-member-accessibilityRoleDescription",
+    "js/SpriteKit/SKNode.js~SKNode#accessibilityRoleDescription",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#accessibilitysubrole",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-member-accessibilitySubrole",
+    "js/SpriteKit/SKNode.js~SKNode#accessibilitySubrole",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#actionforkey",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-actionForKey",
+    "js/SpriteKit/SKNode.js~SKNode#actionForKey",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#addchild",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-addChild",
+    "js/SpriteKit/SKNode.js~SKNode#addChild",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#alpha",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-member-alpha",
+    "js/SpriteKit/SKNode.js~SKNode#alpha",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#atpoint",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-atPoint",
+    "js/SpriteKit/SKNode.js~SKNode#atPoint",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#attributevalues",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-member-attributeValues",
+    "js/SpriteKit/SKNode.js~SKNode#attributeValues",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#calculateaccumulatedframe",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-calculateAccumulatedFrame",
+    "js/SpriteKit/SKNode.js~SKNode#calculateAccumulatedFrame",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#childnodewithname",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-childNodeWithName",
+    "js/SpriteKit/SKNode.js~SKNode#childNodeWithName",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#children",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-get-children",
+    "js/SpriteKit/SKNode.js~SKNode#children",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#constraints",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-member-constraints",
+    "js/SpriteKit/SKNode.js~SKNode#constraints",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#constructor",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-constructor-constructor",
+    "js/SpriteKit/SKNode.js~SKNode#constructor",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#contains",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-contains",
+    "js/SpriteKit/SKNode.js~SKNode#contains",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#convertfrom",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-convertFrom",
+    "js/SpriteKit/SKNode.js~SKNode#convertFrom",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#convertto",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-convertTo",
+    "js/SpriteKit/SKNode.js~SKNode#convertTo",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#copy",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-copy",
+    "js/SpriteKit/SKNode.js~SKNode#copy",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#enumeratechildnodeswithnameusing",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-enumerateChildNodesWithNameUsing",
+    "js/SpriteKit/SKNode.js~SKNode#enumerateChildNodesWithNameUsing",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#frame",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-get-frame",
+    "js/SpriteKit/SKNode.js~SKNode#frame",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#hasactions",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-hasActions",
+    "js/SpriteKit/SKNode.js~SKNode#hasActions",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#inparenthierarchy",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-inParentHierarchy",
+    "js/SpriteKit/SKNode.js~SKNode#inParentHierarchy",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#insertchildat",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-insertChildAt",
+    "js/SpriteKit/SKNode.js~SKNode#insertChildAt",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#intersects",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-intersects",
+    "js/SpriteKit/SKNode.js~SKNode#intersects",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#isaccessibilityelement",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-member-isAccessibilityElement",
+    "js/SpriteKit/SKNode.js~SKNode#isAccessibilityElement",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#isaccessibilityenabled",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-member-isAccessibilityEnabled",
+    "js/SpriteKit/SKNode.js~SKNode#isAccessibilityEnabled",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#isequalto",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-isEqualTo",
+    "js/SpriteKit/SKNode.js~SKNode#isEqualTo",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#ishidden",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-member-isHidden",
+    "js/SpriteKit/SKNode.js~SKNode#isHidden",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#ispaused",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-member-isPaused",
+    "js/SpriteKit/SKNode.js~SKNode#isPaused",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#isuserinteractionenabled",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-member-isUserInteractionEnabled",
+    "js/SpriteKit/SKNode.js~SKNode#isUserInteractionEnabled",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#movetoparent",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-moveToParent",
+    "js/SpriteKit/SKNode.js~SKNode#moveToParent",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#name",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-member-name",
+    "js/SpriteKit/SKNode.js~SKNode#name",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#nodesat",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-nodesAt",
+    "js/SpriteKit/SKNode.js~SKNode#nodesAt",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#parent",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-get-parent",
+    "js/SpriteKit/SKNode.js~SKNode#parent",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#physicsbody",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-member-physicsBody",
+    "js/SpriteKit/SKNode.js~SKNode#physicsBody",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#position",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-member-position",
+    "js/SpriteKit/SKNode.js~SKNode#position",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#reachconstraints",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-member-reachConstraints",
+    "js/SpriteKit/SKNode.js~SKNode#reachConstraints",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#removeactionforkey",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-removeActionForKey",
+    "js/SpriteKit/SKNode.js~SKNode#removeActionForKey",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#removeallactions",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-removeAllActions",
+    "js/SpriteKit/SKNode.js~SKNode#removeAllActions",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#removeallchildren",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-removeAllChildren",
+    "js/SpriteKit/SKNode.js~SKNode#removeAllChildren",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#removechildrenin",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-removeChildrenIn",
+    "js/SpriteKit/SKNode.js~SKNode#removeChildrenIn",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#removefromparent",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-removeFromParent",
+    "js/SpriteKit/SKNode.js~SKNode#removeFromParent",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#run",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-run",
+    "js/SpriteKit/SKNode.js~SKNode#run",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#runcompletion",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-runCompletion",
+    "js/SpriteKit/SKNode.js~SKNode#runCompletion",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#runwithkey",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-runWithKey",
+    "js/SpriteKit/SKNode.js~SKNode#runWithKey",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#scene",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-get-scene",
+    "js/SpriteKit/SKNode.js~SKNode#scene",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#setscale",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-setScale",
+    "js/SpriteKit/SKNode.js~SKNode#setScale",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#setvalueforattribute",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-setValueForAttribute",
+    "js/SpriteKit/SKNode.js~SKNode#setValueForAttribute",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#speed",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-member-speed",
+    "js/SpriteKit/SKNode.js~SKNode#speed",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#userdata",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-member-userData",
+    "js/SpriteKit/SKNode.js~SKNode#userData",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#valueforattributenamed",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-method-valueForAttributeNamed",
+    "js/SpriteKit/SKNode.js~SKNode#valueForAttributeNamed",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#xscale",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-member-xScale",
+    "js/SpriteKit/SKNode.js~SKNode#xScale",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#yscale",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-member-yScale",
+    "js/SpriteKit/SKNode.js~SKNode#yScale",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#zposition",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-member-zPosition",
+    "js/SpriteKit/SKNode.js~SKNode#zPosition",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode#zrotation",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#instance-member-zRotation",
+    "js/SpriteKit/SKNode.js~SKNode#zRotation",
+    "member"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode.nodewithfilenamed",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#static-method-nodeWithFileNamed",
+    "js/SpriteKit/SKNode.js~SKNode.nodeWithFileNamed",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode.obstaclesfromnodebounds",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#static-method-obstaclesFromNodeBounds",
+    "js/SpriteKit/SKNode.js~SKNode.obstaclesFromNodeBounds",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode.obstaclesfromnodephysicsbodies",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#static-method-obstaclesFromNodePhysicsBodies",
+    "js/SpriteKit/SKNode.js~SKNode.obstaclesFromNodePhysicsBodies",
+    "method"
+  ],
+  [
+    "js/spritekit/sknode.js~sknode.obstaclesfromspritetextures",
+    "class/js/SpriteKit/SKNode.js~SKNode.html#static-method-obstaclesFromSpriteTextures",
+    "js/SpriteKit/SKNode.js~SKNode.obstaclesFromSpriteTextures",
+    "method"
+  ],
+  [
+    "js/spritekit/skscale.js",
+    "file/js/SpriteKit/SKScale.js.html",
+    "js/SpriteKit/SKScale.js",
+    "file"
+  ],
+  [
+    "js/spritekit/skscale.js~skscale#constructor",
+    "class/js/SpriteKit/SKScale.js~SKScale.html#instance-constructor-constructor",
+    "js/SpriteKit/SKScale.js~SKScale#constructor",
+    "method"
+  ],
+  [
+    "js/spritekit/skscale.js~skscale#copy",
+    "class/js/SpriteKit/SKScale.js~SKScale.html#instance-method-copy",
+    "js/SpriteKit/SKScale.js~SKScale#copy",
+    "method"
+  ],
+  [
+    "js/spritekit/skscale.js~skscale.scalebyduration",
+    "class/js/SpriteKit/SKScale.js~SKScale.html#static-method-scaleByDuration",
+    "js/SpriteKit/SKScale.js~SKScale.scaleByDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skscale.js~skscale.scaletoduration",
+    "class/js/SpriteKit/SKScale.js~SKScale.html#static-method-scaleToDuration",
+    "js/SpriteKit/SKScale.js~SKScale.scaleToDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skscale.js~skscale.scalexbyyduration",
+    "class/js/SpriteKit/SKScale.js~SKScale.html#static-method-scaleXByYDuration",
+    "js/SpriteKit/SKScale.js~SKScale.scaleXByYDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skscale.js~skscale.scalextoduration",
+    "class/js/SpriteKit/SKScale.js~SKScale.html#static-method-scaleXToDuration",
+    "js/SpriteKit/SKScale.js~SKScale.scaleXToDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skscale.js~skscale.scalextoyduration",
+    "class/js/SpriteKit/SKScale.js~SKScale.html#static-method-scaleXToYDuration",
+    "js/SpriteKit/SKScale.js~SKScale.scaleXToYDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skscale.js~skscale.scaleytoduration",
+    "class/js/SpriteKit/SKScale.js~SKScale.html#static-method-scaleYToDuration",
+    "js/SpriteKit/SKScale.js~SKScale.scaleYToDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skscene.js",
+    "file/js/SpriteKit/SKScene.js.html",
+    "js/SpriteKit/SKScene.js",
+    "file"
+  ],
+  [
+    "js/spritekit/skscene.js~skscene#anchorpoint",
+    "class/js/SpriteKit/SKScene.js~SKScene.html#instance-member-anchorPoint",
+    "js/SpriteKit/SKScene.js~SKScene#anchorPoint",
+    "member"
+  ],
+  [
+    "js/spritekit/skscene.js~skscene#backgroundcolor",
+    "class/js/SpriteKit/SKScene.js~SKScene.html#instance-member-backgroundColor",
+    "js/SpriteKit/SKScene.js~SKScene#backgroundColor",
+    "member"
+  ],
+  [
+    "js/spritekit/skscene.js~skscene#camera",
+    "class/js/SpriteKit/SKScene.js~SKScene.html#instance-member-camera",
+    "js/SpriteKit/SKScene.js~SKScene#camera",
+    "member"
+  ],
+  [
+    "js/spritekit/skscene.js~skscene#constructor",
+    "class/js/SpriteKit/SKScene.js~SKScene.html#instance-constructor-constructor",
+    "js/SpriteKit/SKScene.js~SKScene#constructor",
+    "method"
+  ],
+  [
+    "js/spritekit/skscene.js~skscene#convertpointfromview",
+    "class/js/SpriteKit/SKScene.js~SKScene.html#instance-method-convertPointFromView",
+    "js/SpriteKit/SKScene.js~SKScene#convertPointFromView",
+    "method"
+  ],
+  [
+    "js/spritekit/skscene.js~skscene#convertpointtoview",
+    "class/js/SpriteKit/SKScene.js~SKScene.html#instance-method-convertPointToView",
+    "js/SpriteKit/SKScene.js~SKScene#convertPointToView",
+    "method"
+  ],
+  [
+    "js/spritekit/skscene.js~skscene#delegate",
+    "class/js/SpriteKit/SKScene.js~SKScene.html#instance-member-delegate",
+    "js/SpriteKit/SKScene.js~SKScene#delegate",
+    "member"
+  ],
+  [
+    "js/spritekit/skscene.js~skscene#didapplyconstraints",
+    "class/js/SpriteKit/SKScene.js~SKScene.html#instance-method-didApplyConstraints",
+    "js/SpriteKit/SKScene.js~SKScene#didApplyConstraints",
+    "method"
+  ],
+  [
+    "js/spritekit/skscene.js~skscene#didchangesize",
+    "class/js/SpriteKit/SKScene.js~SKScene.html#instance-method-didChangeSize",
+    "js/SpriteKit/SKScene.js~SKScene#didChangeSize",
+    "method"
+  ],
+  [
+    "js/spritekit/skscene.js~skscene#didevaluateactions",
+    "class/js/SpriteKit/SKScene.js~SKScene.html#instance-method-didEvaluateActions",
+    "js/SpriteKit/SKScene.js~SKScene#didEvaluateActions",
+    "method"
+  ],
+  [
+    "js/spritekit/skscene.js~skscene#didfinishupdate",
+    "class/js/SpriteKit/SKScene.js~SKScene.html#instance-method-didFinishUpdate",
+    "js/SpriteKit/SKScene.js~SKScene#didFinishUpdate",
+    "method"
+  ],
+  [
+    "js/spritekit/skscene.js~skscene#didmoveto",
+    "class/js/SpriteKit/SKScene.js~SKScene.html#instance-method-didMoveTo",
+    "js/SpriteKit/SKScene.js~SKScene#didMoveTo",
+    "method"
+  ],
+  [
+    "js/spritekit/skscene.js~skscene#didsimulatephysics",
+    "class/js/SpriteKit/SKScene.js~SKScene.html#instance-method-didSimulatePhysics",
+    "js/SpriteKit/SKScene.js~SKScene#didSimulatePhysics",
+    "method"
+  ],
+  [
+    "js/spritekit/skscene.js~skscene#listener",
+    "class/js/SpriteKit/SKScene.js~SKScene.html#instance-member-listener",
+    "js/SpriteKit/SKScene.js~SKScene#listener",
+    "member"
+  ],
+  [
+    "js/spritekit/skscene.js~skscene#physicsworld",
+    "class/js/SpriteKit/SKScene.js~SKScene.html#instance-get-physicsWorld",
+    "js/SpriteKit/SKScene.js~SKScene#physicsWorld",
+    "member"
+  ],
+  [
+    "js/spritekit/skscene.js~skscene#scalemode",
+    "class/js/SpriteKit/SKScene.js~SKScene.html#instance-member-scaleMode",
+    "js/SpriteKit/SKScene.js~SKScene#scaleMode",
+    "member"
+  ],
+  [
+    "js/spritekit/skscene.js~skscene#scenedidload",
+    "class/js/SpriteKit/SKScene.js~SKScene.html#instance-method-sceneDidLoad",
+    "js/SpriteKit/SKScene.js~SKScene#sceneDidLoad",
+    "method"
+  ],
+  [
+    "js/spritekit/skscene.js~skscene#size",
+    "class/js/SpriteKit/SKScene.js~SKScene.html#instance-member-size",
+    "js/SpriteKit/SKScene.js~SKScene#size",
+    "member"
+  ],
+  [
+    "js/spritekit/skscene.js~skscene#update",
+    "class/js/SpriteKit/SKScene.js~SKScene.html#instance-method-update",
+    "js/SpriteKit/SKScene.js~SKScene#update",
+    "method"
+  ],
+  [
+    "js/spritekit/skscene.js~skscene#view",
+    "class/js/SpriteKit/SKScene.js~SKScene.html#instance-get-view",
+    "js/SpriteKit/SKScene.js~SKScene#view",
+    "member"
+  ],
+  [
+    "js/spritekit/skscene.js~skscene#willmovefrom",
+    "class/js/SpriteKit/SKScene.js~SKScene.html#instance-method-willMoveFrom",
+    "js/SpriteKit/SKScene.js~SKScene#willMoveFrom",
+    "method"
+  ],
+  [
+    "js/spritekit/skscenescalemode.js",
+    "file/js/SpriteKit/SKSceneScaleMode.js.html",
+    "js/SpriteKit/SKSceneScaleMode.js",
+    "file"
+  ],
+  [
+    "js/spritekit/skscenescalemode.js~skscenescalemode",
+    "typedef/index.html#static-typedef-SKSceneScaleMode",
+    "js/SpriteKit/SKSceneScaleMode.js~SKSceneScaleMode",
+    "typedef"
+  ],
+  [
+    "js/spritekit/sksequence.js",
+    "file/js/SpriteKit/SKSequence.js.html",
+    "js/SpriteKit/SKSequence.js",
+    "file"
+  ],
+  [
+    "js/spritekit/sksequence.js~sksequence#constructor",
+    "class/js/SpriteKit/SKSequence.js~SKSequence.html#instance-constructor-constructor",
+    "js/SpriteKit/SKSequence.js~SKSequence#constructor",
+    "method"
+  ],
+  [
+    "js/spritekit/sksequence.js~sksequence#copy",
+    "class/js/SpriteKit/SKSequence.js~SKSequence.html#instance-method-copy",
+    "js/SpriteKit/SKSequence.js~SKSequence#copy",
+    "method"
+  ],
+  [
+    "js/spritekit/sksequence.js~sksequence#duration",
+    "class/js/SpriteKit/SKSequence.js~SKSequence.html#instance-get-duration",
+    "js/SpriteKit/SKSequence.js~SKSequence#duration",
+    "member"
+  ],
+  [
+    "js/spritekit/sksequence.js~sksequence.sequence",
+    "class/js/SpriteKit/SKSequence.js~SKSequence.html#static-method-sequence",
+    "js/SpriteKit/SKSequence.js~SKSequence.sequence",
+    "method"
+  ],
+  [
+    "js/spritekit/skshapenode.js",
+    "file/js/SpriteKit/SKShapeNode.js.html",
+    "js/SpriteKit/SKShapeNode.js",
+    "file"
+  ],
+  [
+    "js/spritekit/skshapenode.js~skshapenode#attributevalues",
+    "class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html#instance-member-attributeValues",
+    "js/SpriteKit/SKShapeNode.js~SKShapeNode#attributeValues",
+    "member"
+  ],
+  [
+    "js/spritekit/skshapenode.js~skshapenode#blendmode",
+    "class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html#instance-member-blendMode",
+    "js/SpriteKit/SKShapeNode.js~SKShapeNode#blendMode",
+    "member"
+  ],
+  [
+    "js/spritekit/skshapenode.js~skshapenode#constructor",
+    "class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html#instance-constructor-constructor",
+    "js/SpriteKit/SKShapeNode.js~SKShapeNode#constructor",
+    "method"
+  ],
+  [
+    "js/spritekit/skshapenode.js~skshapenode#customplaygroundquicklook",
+    "class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html#instance-get-customPlaygroundQuickLook",
+    "js/SpriteKit/SKShapeNode.js~SKShapeNode#customPlaygroundQuickLook",
+    "member"
+  ],
+  [
+    "js/spritekit/skshapenode.js~skshapenode#fillcolor",
+    "class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html#instance-member-fillColor",
+    "js/SpriteKit/SKShapeNode.js~SKShapeNode#fillColor",
+    "member"
+  ],
+  [
+    "js/spritekit/skshapenode.js~skshapenode#fillshader",
+    "class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html#instance-member-fillShader",
+    "js/SpriteKit/SKShapeNode.js~SKShapeNode#fillShader",
+    "member"
+  ],
+  [
+    "js/spritekit/skshapenode.js~skshapenode#filltexture",
+    "class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html#instance-member-fillTexture",
+    "js/SpriteKit/SKShapeNode.js~SKShapeNode#fillTexture",
+    "member"
+  ],
+  [
+    "js/spritekit/skshapenode.js~skshapenode#glowwidth",
+    "class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html#instance-member-glowWidth",
+    "js/SpriteKit/SKShapeNode.js~SKShapeNode#glowWidth",
+    "member"
+  ],
+  [
+    "js/spritekit/skshapenode.js~skshapenode#isantialiased",
+    "class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html#instance-member-isAntialiased",
+    "js/SpriteKit/SKShapeNode.js~SKShapeNode#isAntialiased",
+    "member"
+  ],
+  [
+    "js/spritekit/skshapenode.js~skshapenode#linecap",
+    "class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html#instance-member-lineCap",
+    "js/SpriteKit/SKShapeNode.js~SKShapeNode#lineCap",
+    "member"
+  ],
+  [
+    "js/spritekit/skshapenode.js~skshapenode#linejoin",
+    "class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html#instance-member-lineJoin",
+    "js/SpriteKit/SKShapeNode.js~SKShapeNode#lineJoin",
+    "member"
+  ],
+  [
+    "js/spritekit/skshapenode.js~skshapenode#linelength",
+    "class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html#instance-get-lineLength",
+    "js/SpriteKit/SKShapeNode.js~SKShapeNode#lineLength",
+    "member"
+  ],
+  [
+    "js/spritekit/skshapenode.js~skshapenode#linewidth",
+    "class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html#instance-member-lineWidth",
+    "js/SpriteKit/SKShapeNode.js~SKShapeNode#lineWidth",
+    "member"
+  ],
+  [
+    "js/spritekit/skshapenode.js~skshapenode#miterlimit",
+    "class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html#instance-member-miterLimit",
+    "js/SpriteKit/SKShapeNode.js~SKShapeNode#miterLimit",
+    "member"
+  ],
+  [
+    "js/spritekit/skshapenode.js~skshapenode#path",
+    "class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html#instance-member-path",
+    "js/SpriteKit/SKShapeNode.js~SKShapeNode#path",
+    "member"
+  ],
+  [
+    "js/spritekit/skshapenode.js~skshapenode#setvalueforattribute",
+    "class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html#instance-method-setValueForAttribute",
+    "js/SpriteKit/SKShapeNode.js~SKShapeNode#setValueForAttribute",
+    "method"
+  ],
+  [
+    "js/spritekit/skshapenode.js~skshapenode#strokecolor",
+    "class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html#instance-member-strokeColor",
+    "js/SpriteKit/SKShapeNode.js~SKShapeNode#strokeColor",
+    "member"
+  ],
+  [
+    "js/spritekit/skshapenode.js~skshapenode#strokeshader",
+    "class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html#instance-member-strokeShader",
+    "js/SpriteKit/SKShapeNode.js~SKShapeNode#strokeShader",
+    "member"
+  ],
+  [
+    "js/spritekit/skshapenode.js~skshapenode#stroketexture",
+    "class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html#instance-member-strokeTexture",
+    "js/SpriteKit/SKShapeNode.js~SKShapeNode#strokeTexture",
+    "member"
+  ],
+  [
+    "js/spritekit/skshapenode.js~skshapenode#valueforattributenamed",
+    "class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html#instance-method-valueForAttributeNamed",
+    "js/SpriteKit/SKShapeNode.js~SKShapeNode#valueForAttributeNamed",
+    "method"
+  ],
+  [
+    "js/spritekit/skshapenode.js~skshapenode.node",
+    "class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html#static-method-node",
+    "js/SpriteKit/SKShapeNode.js~SKShapeNode.node",
+    "method"
+  ],
+  [
+    "js/spritekit/skshapenode.js~skshapenode.nodewithcircleofradius",
+    "class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html#static-method-nodeWithCircleOfRadius",
+    "js/SpriteKit/SKShapeNode.js~SKShapeNode.nodeWithCircleOfRadius",
+    "method"
+  ],
+  [
+    "js/spritekit/skshapenode.js~skshapenode.nodewithellipsein",
+    "class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html#static-method-nodeWithEllipseIn",
+    "js/SpriteKit/SKShapeNode.js~SKShapeNode.nodeWithEllipseIn",
+    "method"
+  ],
+  [
+    "js/spritekit/skshapenode.js~skshapenode.nodewithellipseof",
+    "class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html#static-method-nodeWithEllipseOf",
+    "js/SpriteKit/SKShapeNode.js~SKShapeNode.nodeWithEllipseOf",
+    "method"
+  ],
+  [
+    "js/spritekit/skshapenode.js~skshapenode.nodewithpointscount",
+    "class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html#static-method-nodeWithPointsCount",
+    "js/SpriteKit/SKShapeNode.js~SKShapeNode.nodeWithPointsCount",
+    "method"
+  ],
+  [
+    "js/spritekit/skshapenode.js~skshapenode.nodewithrectof",
+    "class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html#static-method-nodeWithRectOf",
+    "js/SpriteKit/SKShapeNode.js~SKShapeNode.nodeWithRectOf",
+    "method"
+  ],
+  [
+    "js/spritekit/skshapenode.js~skshapenode.nodewithsplinepointscount",
+    "class/js/SpriteKit/SKShapeNode.js~SKShapeNode.html#static-method-nodeWithSplinePointsCount",
+    "js/SpriteKit/SKShapeNode.js~SKShapeNode.nodeWithSplinePointsCount",
+    "method"
+  ],
+  [
+    "js/spritekit/skspritenode.js",
+    "file/js/SpriteKit/SKSpriteNode.js.html",
+    "js/SpriteKit/SKSpriteNode.js",
+    "file"
+  ],
+  [
+    "js/spritekit/skspritenode.js~skspritenode#anchorpoint",
+    "class/js/SpriteKit/SKSpriteNode.js~SKSpriteNode.html#instance-member-anchorPoint",
+    "js/SpriteKit/SKSpriteNode.js~SKSpriteNode#anchorPoint",
+    "member"
+  ],
+  [
+    "js/spritekit/skspritenode.js~skspritenode#attributevalues",
+    "class/js/SpriteKit/SKSpriteNode.js~SKSpriteNode.html#instance-member-attributeValues",
+    "js/SpriteKit/SKSpriteNode.js~SKSpriteNode#attributeValues",
+    "member"
+  ],
+  [
+    "js/spritekit/skspritenode.js~skspritenode#blendmode",
+    "class/js/SpriteKit/SKSpriteNode.js~SKSpriteNode.html#instance-member-blendMode",
+    "js/SpriteKit/SKSpriteNode.js~SKSpriteNode#blendMode",
+    "member"
+  ],
+  [
+    "js/spritekit/skspritenode.js~skspritenode#centerrect",
+    "class/js/SpriteKit/SKSpriteNode.js~SKSpriteNode.html#instance-member-centerRect",
+    "js/SpriteKit/SKSpriteNode.js~SKSpriteNode#centerRect",
+    "member"
+  ],
+  [
+    "js/spritekit/skspritenode.js~skspritenode#color",
+    "class/js/SpriteKit/SKSpriteNode.js~SKSpriteNode.html#instance-member-color",
+    "js/SpriteKit/SKSpriteNode.js~SKSpriteNode#color",
+    "member"
+  ],
+  [
+    "js/spritekit/skspritenode.js~skspritenode#colorblendfactor",
+    "class/js/SpriteKit/SKSpriteNode.js~SKSpriteNode.html#instance-member-colorBlendFactor",
+    "js/SpriteKit/SKSpriteNode.js~SKSpriteNode#colorBlendFactor",
+    "member"
+  ],
+  [
+    "js/spritekit/skspritenode.js~skspritenode#constructor",
+    "class/js/SpriteKit/SKSpriteNode.js~SKSpriteNode.html#instance-constructor-constructor",
+    "js/SpriteKit/SKSpriteNode.js~SKSpriteNode#constructor",
+    "method"
+  ],
+  [
+    "js/spritekit/skspritenode.js~skspritenode#customplaygroundquicklook",
+    "class/js/SpriteKit/SKSpriteNode.js~SKSpriteNode.html#instance-get-customPlaygroundQuickLook",
+    "js/SpriteKit/SKSpriteNode.js~SKSpriteNode#customPlaygroundQuickLook",
+    "member"
+  ],
+  [
+    "js/spritekit/skspritenode.js~skspritenode#initcoder",
+    "class/js/SpriteKit/SKSpriteNode.js~SKSpriteNode.html#instance-method-initCoder",
+    "js/SpriteKit/SKSpriteNode.js~SKSpriteNode#initCoder",
+    "method"
+  ],
+  [
+    "js/spritekit/skspritenode.js~skspritenode#lightingbitmask",
+    "class/js/SpriteKit/SKSpriteNode.js~SKSpriteNode.html#instance-member-lightingBitMask",
+    "js/SpriteKit/SKSpriteNode.js~SKSpriteNode#lightingBitMask",
+    "member"
+  ],
+  [
+    "js/spritekit/skspritenode.js~skspritenode#normaltexture",
+    "class/js/SpriteKit/SKSpriteNode.js~SKSpriteNode.html#instance-member-normalTexture",
+    "js/SpriteKit/SKSpriteNode.js~SKSpriteNode#normalTexture",
+    "member"
+  ],
+  [
+    "js/spritekit/skspritenode.js~skspritenode#scaleto",
+    "class/js/SpriteKit/SKSpriteNode.js~SKSpriteNode.html#instance-method-scaleTo",
+    "js/SpriteKit/SKSpriteNode.js~SKSpriteNode#scaleTo",
+    "method"
+  ],
+  [
+    "js/spritekit/skspritenode.js~skspritenode#setvalueforattribute",
+    "class/js/SpriteKit/SKSpriteNode.js~SKSpriteNode.html#instance-method-setValueForAttribute",
+    "js/SpriteKit/SKSpriteNode.js~SKSpriteNode#setValueForAttribute",
+    "method"
+  ],
+  [
+    "js/spritekit/skspritenode.js~skspritenode#shader",
+    "class/js/SpriteKit/SKSpriteNode.js~SKSpriteNode.html#instance-member-shader",
+    "js/SpriteKit/SKSpriteNode.js~SKSpriteNode#shader",
+    "member"
+  ],
+  [
+    "js/spritekit/skspritenode.js~skspritenode#shadowcastbitmask",
+    "class/js/SpriteKit/SKSpriteNode.js~SKSpriteNode.html#instance-member-shadowCastBitMask",
+    "js/SpriteKit/SKSpriteNode.js~SKSpriteNode#shadowCastBitMask",
+    "member"
+  ],
+  [
+    "js/spritekit/skspritenode.js~skspritenode#shadowedbitmask",
+    "class/js/SpriteKit/SKSpriteNode.js~SKSpriteNode.html#instance-member-shadowedBitMask",
+    "js/SpriteKit/SKSpriteNode.js~SKSpriteNode#shadowedBitMask",
+    "member"
+  ],
+  [
+    "js/spritekit/skspritenode.js~skspritenode#size",
+    "class/js/SpriteKit/SKSpriteNode.js~SKSpriteNode.html#instance-member-size",
+    "js/SpriteKit/SKSpriteNode.js~SKSpriteNode#size",
+    "member"
+  ],
+  [
+    "js/spritekit/skspritenode.js~skspritenode#texture",
+    "class/js/SpriteKit/SKSpriteNode.js~SKSpriteNode.html#instance-get-texture",
+    "js/SpriteKit/SKSpriteNode.js~SKSpriteNode#texture",
+    "member"
+  ],
+  [
+    "js/spritekit/skspritenode.js~skspritenode#texture",
+    "class/js/SpriteKit/SKSpriteNode.js~SKSpriteNode.html#instance-set-texture",
+    "js/SpriteKit/SKSpriteNode.js~SKSpriteNode#texture",
+    "member"
+  ],
+  [
+    "js/spritekit/skspritenode.js~skspritenode#valueforattributenamed",
+    "class/js/SpriteKit/SKSpriteNode.js~SKSpriteNode.html#instance-method-valueForAttributeNamed",
+    "js/SpriteKit/SKSpriteNode.js~SKSpriteNode#valueForAttributeNamed",
+    "method"
+  ],
+  [
+    "js/spritekit/skspritenode.js~skspritenode.nodewithcolorsize",
+    "class/js/SpriteKit/SKSpriteNode.js~SKSpriteNode.html#static-method-nodeWithColorSize",
+    "js/SpriteKit/SKSpriteNode.js~SKSpriteNode.nodeWithColorSize",
+    "method"
+  ],
+  [
+    "js/spritekit/skspritenode.js~skspritenode.nodewithimagenamed",
+    "class/js/SpriteKit/SKSpriteNode.js~SKSpriteNode.html#static-method-nodeWithImageNamed",
+    "js/SpriteKit/SKSpriteNode.js~SKSpriteNode.nodeWithImageNamed",
+    "method"
+  ],
+  [
+    "js/spritekit/skspritenode.js~skspritenode.nodewithimagenamednormalmapped",
+    "class/js/SpriteKit/SKSpriteNode.js~SKSpriteNode.html#static-method-nodeWithImageNamedNormalMapped",
+    "js/SpriteKit/SKSpriteNode.js~SKSpriteNode.nodeWithImageNamedNormalMapped",
+    "method"
+  ],
+  [
+    "js/spritekit/sktexture.js",
+    "file/js/SpriteKit/SKTexture.js.html",
+    "js/SpriteKit/SKTexture.js",
+    "file"
+  ],
+  [
+    "js/spritekit/sktexture.js~sktexture#applying",
+    "class/js/SpriteKit/SKTexture.js~SKTexture.html#instance-method-applying",
+    "js/SpriteKit/SKTexture.js~SKTexture#applying",
+    "method"
+  ],
+  [
+    "js/spritekit/sktexture.js~sktexture#cgimage",
+    "class/js/SpriteKit/SKTexture.js~SKTexture.html#instance-method-cgImage",
+    "js/SpriteKit/SKTexture.js~SKTexture#cgImage",
+    "method"
+  ],
+  [
+    "js/spritekit/sktexture.js~sktexture#constructor",
+    "class/js/SpriteKit/SKTexture.js~SKTexture.html#instance-constructor-constructor",
+    "js/SpriteKit/SKTexture.js~SKTexture#constructor",
+    "method"
+  ],
+  [
+    "js/spritekit/sktexture.js~sktexture#customplaygroundquicklook",
+    "class/js/SpriteKit/SKTexture.js~SKTexture.html#instance-get-customPlaygroundQuickLook",
+    "js/SpriteKit/SKTexture.js~SKTexture#customPlaygroundQuickLook",
+    "member"
+  ],
+  [
+    "js/spritekit/sktexture.js~sktexture#filteringmode",
+    "class/js/SpriteKit/SKTexture.js~SKTexture.html#instance-member-filteringMode",
+    "js/SpriteKit/SKTexture.js~SKTexture#filteringMode",
+    "member"
+  ],
+  [
+    "js/spritekit/sktexture.js~sktexture#generatingnormalmap",
+    "class/js/SpriteKit/SKTexture.js~SKTexture.html#instance-method-generatingNormalMap",
+    "js/SpriteKit/SKTexture.js~SKTexture#generatingNormalMap",
+    "method"
+  ],
+  [
+    "js/spritekit/sktexture.js~sktexture#generatingnormalmapwithsmoothness",
+    "class/js/SpriteKit/SKTexture.js~SKTexture.html#instance-method-generatingNormalMapWithSmoothness",
+    "js/SpriteKit/SKTexture.js~SKTexture#generatingNormalMapWithSmoothness",
+    "method"
+  ],
+  [
+    "js/spritekit/sktexture.js~sktexture#preload",
+    "class/js/SpriteKit/SKTexture.js~SKTexture.html#instance-method-preload",
+    "js/SpriteKit/SKTexture.js~SKTexture#preload",
+    "method"
+  ],
+  [
+    "js/spritekit/sktexture.js~sktexture#size",
+    "class/js/SpriteKit/SKTexture.js~SKTexture.html#instance-method-size",
+    "js/SpriteKit/SKTexture.js~SKTexture#size",
+    "method"
+  ],
+  [
+    "js/spritekit/sktexture.js~sktexture#texturerect",
+    "class/js/SpriteKit/SKTexture.js~SKTexture.html#instance-method-textureRect",
+    "js/SpriteKit/SKTexture.js~SKTexture#textureRect",
+    "method"
+  ],
+  [
+    "js/spritekit/sktexture.js~sktexture#usesmipmaps",
+    "class/js/SpriteKit/SKTexture.js~SKTexture.html#instance-member-usesMipmaps",
+    "js/SpriteKit/SKTexture.js~SKTexture#usesMipmaps",
+    "member"
+  ],
+  [
+    "js/spritekit/sktexture.js~sktexture.preloadwithcompletionhandler",
+    "class/js/SpriteKit/SKTexture.js~SKTexture.html#static-method-preloadWithCompletionHandler",
+    "js/SpriteKit/SKTexture.js~SKTexture.preloadWithCompletionHandler",
+    "method"
+  ],
+  [
+    "js/spritekit/sktexture.js~sktexture.texturewithcgimage",
+    "class/js/SpriteKit/SKTexture.js~SKTexture.html#static-method-textureWithCgImage",
+    "js/SpriteKit/SKTexture.js~SKTexture.textureWithCgImage",
+    "method"
+  ],
+  [
+    "js/spritekit/sktexture.js~sktexture.texturewithdatasize",
+    "class/js/SpriteKit/SKTexture.js~SKTexture.html#static-method-textureWithDataSize",
+    "js/SpriteKit/SKTexture.js~SKTexture.textureWithDataSize",
+    "method"
+  ],
+  [
+    "js/spritekit/sktexture.js~sktexture.texturewithimage",
+    "class/js/SpriteKit/SKTexture.js~SKTexture.html#static-method-textureWithImage",
+    "js/SpriteKit/SKTexture.js~SKTexture.textureWithImage",
+    "method"
+  ],
+  [
+    "js/spritekit/sktexture.js~sktexture.texturewithimagenamed",
+    "class/js/SpriteKit/SKTexture.js~SKTexture.html#static-method-textureWithImageNamed",
+    "js/SpriteKit/SKTexture.js~SKTexture.textureWithImageNamed",
+    "method"
+  ],
+  [
+    "js/spritekit/sktexture.js~sktexture.texturewithnoisewithsmoothness",
+    "class/js/SpriteKit/SKTexture.js~SKTexture.html#static-method-textureWithNoiseWithSmoothness",
+    "js/SpriteKit/SKTexture.js~SKTexture.textureWithNoiseWithSmoothness",
+    "method"
+  ],
+  [
+    "js/spritekit/sktexture.js~sktexture.texturewithrectin",
+    "class/js/SpriteKit/SKTexture.js~SKTexture.html#static-method-textureWithRectIn",
+    "js/SpriteKit/SKTexture.js~SKTexture.textureWithRectIn",
+    "method"
+  ],
+  [
+    "js/spritekit/sktexture.js~sktexture.texturewithvectornoisewithsmoothness",
+    "class/js/SpriteKit/SKTexture.js~SKTexture.html#static-method-textureWithVectorNoiseWithSmoothness",
+    "js/SpriteKit/SKTexture.js~SKTexture.textureWithVectorNoiseWithSmoothness",
+    "method"
+  ],
+  [
+    "js/spritekit/sktexturefilteringmode.js",
+    "file/js/SpriteKit/SKTextureFilteringMode.js.html",
+    "js/SpriteKit/SKTextureFilteringMode.js",
+    "file"
+  ],
+  [
+    "js/spritekit/sktexturefilteringmode.js~sktexturefilteringmode",
+    "typedef/index.html#static-typedef-SKTextureFilteringMode",
+    "js/SpriteKit/SKTextureFilteringMode.js~SKTextureFilteringMode",
+    "typedef"
+  ],
+  [
+    "js/spritekit/skwait.js",
+    "file/js/SpriteKit/SKWait.js.html",
+    "js/SpriteKit/SKWait.js",
+    "file"
+  ],
+  [
+    "js/spritekit/skwait.js~skwait#constructor",
+    "class/js/SpriteKit/SKWait.js~SKWait.html#instance-constructor-constructor",
+    "js/SpriteKit/SKWait.js~SKWait#constructor",
+    "method"
+  ],
+  [
+    "js/spritekit/skwait.js~skwait.waitforduration",
+    "class/js/SpriteKit/SKWait.js~SKWait.html#static-method-waitForDuration",
+    "js/SpriteKit/SKWait.js~SKWait.waitForDuration",
+    "method"
+  ],
+  [
+    "js/spritekit/skwait.js~skwait.waitfordurationwithrange",
+    "class/js/SpriteKit/SKWait.js~SKWait.html#static-method-waitForDurationWithRange",
+    "js/SpriteKit/SKWait.js~SKWait.waitForDurationWithRange",
+    "method"
+  ],
+  [
     "js/constants.js",
     "file/js/constants.js.html",
     "js/constants.js",
@@ -12309,6 +15765,12 @@ window.esdocSearchIndex = [
     "js/third_party/binaryparser.js",
     "file/js/third_party/BinaryParser.js.html",
     "js/third_party/BinaryParser.js",
+    "file"
+  ],
+  [
+    "js/third_party/ammo.js",
+    "file/js/third_party/ammo.js.html",
+    "js/third_party/ammo.js",
     "file"
   ],
   [

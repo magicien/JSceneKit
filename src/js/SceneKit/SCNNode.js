@@ -2026,6 +2026,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     if(this.light === null){
       return null
     }
+    this.light._updateProjectionTransform()
     const proj = this.light._projectionTransform
     const view = this.viewTransform
     return view.mult(proj)

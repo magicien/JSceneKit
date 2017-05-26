@@ -165,6 +165,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
    * Decodes and returns the object graph previously encoded by NSKeyedArchiver and stored in a given NSData object.
    * @access public
    * @param {Buffer} data - An object graph previously encoded by NSKeyedArchiver.
+   * @param {?string} path - 
    * @returns {?Object} - 
    * @desc This method raises an invalidArchiveOperationException if data is not a valid archive.
    * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1413894-unarchiveobject
@@ -668,6 +669,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
    * 
    * @access public
    * @param {NSData} data - 
+   * @param {string} path -
    * @returns {void}
    * @throws {Error}
    * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1413622-unarchivetoplevelobjectwithdata

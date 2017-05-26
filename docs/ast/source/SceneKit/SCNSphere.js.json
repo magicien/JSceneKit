@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 1586,
+  "end": 2185,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 52,
+      "line": 71,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 1586,
+    "end": 2185,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 52,
+        "line": 71,
         "column": 0
       }
     },
@@ -102,15 +102,15 @@
           {
             "type": "CommentBlock",
             "value": "*\n * A sphere (or ball or globe) geometry.\n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/reference/scenekit/scnsphere\n ",
-            "start": 56,
-            "end": 213,
+            "start": 55,
+            "end": 212,
             "loc": {
               "start": {
-                "line": 6,
+                "line": 5,
                 "column": 0
               },
               "end": {
-                "line": 11,
+                "line": 10,
                 "column": 3
               }
             }
@@ -119,43 +119,43 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 214,
-        "end": 1585,
+        "start": 213,
+        "end": 2184,
         "loc": {
           "start": {
-            "line": 12,
+            "line": 11,
             "column": 0
           },
           "end": {
-            "line": 51,
+            "line": 70,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 229,
-          "end": 1585,
+          "start": 228,
+          "end": 2184,
           "loc": {
             "start": {
-              "line": 12,
+              "line": 11,
               "column": 15
             },
             "end": {
-              "line": 51,
+              "line": 70,
               "column": 1
             }
           },
           "id": {
             "type": "Identifier",
-            "start": 235,
-            "end": 244,
+            "start": 234,
+            "end": 243,
             "loc": {
               "start": {
-                "line": 12,
+                "line": 11,
                 "column": 21
               },
               "end": {
-                "line": 12,
+                "line": 11,
                 "column": 30
               },
               "identifierName": "SCNSphere"
@@ -165,15 +165,15 @@
           },
           "superClass": {
             "type": "Identifier",
-            "start": 253,
-            "end": 264,
+            "start": 252,
+            "end": 263,
             "loc": {
               "start": {
-                "line": 12,
+                "line": 11,
                 "column": 39
               },
               "end": {
-                "line": 12,
+                "line": 11,
                 "column": 50
               },
               "identifierName": "SCNGeometry"
@@ -182,45 +182,974 @@
           },
           "body": {
             "type": "ClassBody",
-            "start": 265,
-            "end": 1585,
+            "start": 264,
+            "end": 2184,
             "loc": {
               "start": {
-                "line": 12,
+                "line": 11,
                 "column": 51
               },
               "end": {
-                "line": 51,
+                "line": 70,
                 "column": 1
               }
             },
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 758,
-                "end": 1583,
+                "start": 268,
+                "end": 766,
                 "loc": {
                   "start": {
-                    "line": 23,
+                    "line": 12,
                     "column": 2
                   },
                   "end": {
-                    "line": 50,
+                    "line": 26,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 758,
-                  "end": 769,
+                  "start": 279,
+                  "end": 289,
                   "loc": {
                     "start": {
-                      "line": 23,
+                      "line": 12,
+                      "column": 13
+                    },
+                    "end": {
+                      "line": 12,
+                      "column": 23
+                    },
+                    "identifierName": "_propTypes"
+                  },
+                  "name": "_propTypes"
+                },
+                "static": true,
+                "kind": "get",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 292,
+                  "end": 766,
+                  "loc": {
+                    "start": {
+                      "line": 12,
+                      "column": 26
+                    },
+                    "end": {
+                      "line": 26,
+                      "column": 3
+                    }
+                  },
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "start": 298,
+                      "end": 762,
+                      "loc": {
+                        "start": {
+                          "line": 13,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 25,
+                          "column": 5
+                        }
+                      },
+                      "argument": {
+                        "type": "ObjectExpression",
+                        "start": 305,
+                        "end": 762,
+                        "loc": {
+                          "start": {
+                            "line": 13,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 25,
+                            "column": 5
+                          }
+                        },
+                        "properties": [
+                          {
+                            "type": "ObjectProperty",
+                            "start": 313,
+                            "end": 346,
+                            "loc": {
+                              "start": {
+                                "line": 14,
+                                "column": 6
+                              },
+                              "end": {
+                                "line": 14,
+                                "column": 39
+                              }
+                            },
+                            "method": false,
+                            "shorthand": false,
+                            "computed": false,
+                            "key": {
+                              "type": "Identifier",
+                              "start": 313,
+                              "end": 325,
+                              "loc": {
+                                "start": {
+                                  "line": 14,
+                                  "column": 6
+                                },
+                                "end": {
+                                  "line": 14,
+                                  "column": 18
+                                },
+                                "identifierName": "sphereradius"
+                              },
+                              "name": "sphereradius"
+                            },
+                            "value": {
+                              "type": "ArrayExpression",
+                              "start": 327,
+                              "end": 346,
+                              "loc": {
+                                "start": {
+                                  "line": 14,
+                                  "column": 20
+                                },
+                                "end": {
+                                  "line": 14,
+                                  "column": 39
+                                }
+                              },
+                              "elements": [
+                                {
+                                  "type": "StringLiteral",
+                                  "start": 328,
+                                  "end": 335,
+                                  "loc": {
+                                    "start": {
+                                      "line": 14,
+                                      "column": 21
+                                    },
+                                    "end": {
+                                      "line": 14,
+                                      "column": 28
+                                    }
+                                  },
+                                  "extra": {
+                                    "rawValue": "float",
+                                    "raw": "'float'"
+                                  },
+                                  "value": "float"
+                                },
+                                {
+                                  "type": "StringLiteral",
+                                  "start": 337,
+                                  "end": 345,
+                                  "loc": {
+                                    "start": {
+                                      "line": 14,
+                                      "column": 30
+                                    },
+                                    "end": {
+                                      "line": 14,
+                                      "column": 38
+                                    }
+                                  },
+                                  "extra": {
+                                    "rawValue": "radius",
+                                    "raw": "'radius'"
+                                  },
+                                  "value": "radius"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "ObjectProperty",
+                            "start": 354,
+                            "end": 395,
+                            "loc": {
+                              "start": {
+                                "line": 15,
+                                "column": 6
+                              },
+                              "end": {
+                                "line": 15,
+                                "column": 47
+                              }
+                            },
+                            "method": false,
+                            "shorthand": false,
+                            "computed": false,
+                            "key": {
+                              "type": "Identifier",
+                              "start": 354,
+                              "end": 368,
+                              "loc": {
+                                "start": {
+                                  "line": 15,
+                                  "column": 6
+                                },
+                                "end": {
+                                  "line": 15,
+                                  "column": 20
+                                },
+                                "identifierName": "spheregeodesic"
+                              },
+                              "name": "spheregeodesic"
+                            },
+                            "value": {
+                              "type": "ArrayExpression",
+                              "start": 370,
+                              "end": 395,
+                              "loc": {
+                                "start": {
+                                  "line": 15,
+                                  "column": 22
+                                },
+                                "end": {
+                                  "line": 15,
+                                  "column": 47
+                                }
+                              },
+                              "elements": [
+                                {
+                                  "type": "StringLiteral",
+                                  "start": 371,
+                                  "end": 380,
+                                  "loc": {
+                                    "start": {
+                                      "line": 15,
+                                      "column": 23
+                                    },
+                                    "end": {
+                                      "line": 15,
+                                      "column": 32
+                                    }
+                                  },
+                                  "extra": {
+                                    "rawValue": "boolean",
+                                    "raw": "'boolean'"
+                                  },
+                                  "value": "boolean"
+                                },
+                                {
+                                  "type": "StringLiteral",
+                                  "start": 382,
+                                  "end": 394,
+                                  "loc": {
+                                    "start": {
+                                      "line": 15,
+                                      "column": 34
+                                    },
+                                    "end": {
+                                      "line": 15,
+                                      "column": 46
+                                    }
+                                  },
+                                  "extra": {
+                                    "rawValue": "isGeodesic",
+                                    "raw": "'isGeodesic'"
+                                  },
+                                  "value": "isGeodesic"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "ObjectProperty",
+                            "start": 403,
+                            "end": 450,
+                            "loc": {
+                              "start": {
+                                "line": 16,
+                                "column": 6
+                              },
+                              "end": {
+                                "line": 16,
+                                "column": 53
+                              }
+                            },
+                            "method": false,
+                            "shorthand": false,
+                            "computed": false,
+                            "key": {
+                              "type": "Identifier",
+                              "start": 403,
+                              "end": 421,
+                              "loc": {
+                                "start": {
+                                  "line": 16,
+                                  "column": 6
+                                },
+                                "end": {
+                                  "line": 16,
+                                  "column": 24
+                                },
+                                "identifierName": "spheresegmentCount"
+                              },
+                              "name": "spheresegmentCount"
+                            },
+                            "value": {
+                              "type": "ArrayExpression",
+                              "start": 423,
+                              "end": 450,
+                              "loc": {
+                                "start": {
+                                  "line": 16,
+                                  "column": 26
+                                },
+                                "end": {
+                                  "line": 16,
+                                  "column": 53
+                                }
+                              },
+                              "elements": [
+                                {
+                                  "type": "StringLiteral",
+                                  "start": 424,
+                                  "end": 433,
+                                  "loc": {
+                                    "start": {
+                                      "line": 16,
+                                      "column": 27
+                                    },
+                                    "end": {
+                                      "line": 16,
+                                      "column": 36
+                                    }
+                                  },
+                                  "extra": {
+                                    "rawValue": "integer",
+                                    "raw": "'integer'"
+                                  },
+                                  "value": "integer"
+                                },
+                                {
+                                  "type": "StringLiteral",
+                                  "start": 435,
+                                  "end": 449,
+                                  "loc": {
+                                    "start": {
+                                      "line": 16,
+                                      "column": 38
+                                    },
+                                    "end": {
+                                      "line": 16,
+                                      "column": 52
+                                    }
+                                  },
+                                  "extra": {
+                                    "rawValue": "segmentCount",
+                                    "raw": "'segmentCount'"
+                                  },
+                                  "value": "segmentCount"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "ObjectProperty",
+                            "start": 458,
+                            "end": 478,
+                            "loc": {
+                              "start": {
+                                "line": 17,
+                                "column": 6
+                              },
+                              "end": {
+                                "line": 17,
+                                "column": 26
+                              }
+                            },
+                            "method": false,
+                            "shorthand": false,
+                            "computed": false,
+                            "key": {
+                              "type": "Identifier",
+                              "start": 458,
+                              "end": 467,
+                              "loc": {
+                                "start": {
+                                  "line": 17,
+                                  "column": 6
+                                },
+                                "end": {
+                                  "line": 17,
+                                  "column": 15
+                                },
+                                "identifierName": "materials"
+                              },
+                              "name": "materials"
+                            },
+                            "value": {
+                              "type": "StringLiteral",
+                              "start": 469,
+                              "end": 478,
+                              "loc": {
+                                "start": {
+                                  "line": 17,
+                                  "column": 17
+                                },
+                                "end": {
+                                  "line": 17,
+                                  "column": 26
+                                }
+                              },
+                              "extra": {
+                                "rawValue": "NSArray",
+                                "raw": "'NSArray'"
+                              },
+                              "value": "NSArray"
+                            }
+                          },
+                          {
+                            "type": "ObjectProperty",
+                            "start": 487,
+                            "end": 501,
+                            "loc": {
+                              "start": {
+                                "line": 19,
+                                "column": 6
+                              },
+                              "end": {
+                                "line": 19,
+                                "column": 20
+                              }
+                            },
+                            "method": false,
+                            "shorthand": false,
+                            "computed": false,
+                            "key": {
+                              "type": "Identifier",
+                              "start": 487,
+                              "end": 491,
+                              "loc": {
+                                "start": {
+                                  "line": 19,
+                                  "column": 6
+                                },
+                                "end": {
+                                  "line": 19,
+                                  "column": 10
+                                },
+                                "identifierName": "name"
+                              },
+                              "name": "name"
+                            },
+                            "value": {
+                              "type": "StringLiteral",
+                              "start": 493,
+                              "end": 501,
+                              "loc": {
+                                "start": {
+                                  "line": 19,
+                                  "column": 12
+                                },
+                                "end": {
+                                  "line": 19,
+                                  "column": 20
+                                }
+                              },
+                              "extra": {
+                                "rawValue": "string",
+                                "raw": "'string'"
+                              },
+                              "value": "string"
+                            }
+                          },
+                          {
+                            "type": "ObjectProperty",
+                            "start": 509,
+                            "end": 557,
+                            "loc": {
+                              "start": {
+                                "line": 20,
+                                "column": 6
+                              },
+                              "end": {
+                                "line": 20,
+                                "column": 54
+                              }
+                            },
+                            "method": false,
+                            "shorthand": false,
+                            "computed": false,
+                            "key": {
+                              "type": "Identifier",
+                              "start": 509,
+                              "end": 525,
+                              "loc": {
+                                "start": {
+                                  "line": 20,
+                                  "column": 6
+                                },
+                                "end": {
+                                  "line": 20,
+                                  "column": 22
+                                },
+                                "identifierName": "sphereradialSpan"
+                              },
+                              "name": "sphereradialSpan"
+                            },
+                            "value": {
+                              "type": "ArrayExpression",
+                              "start": 527,
+                              "end": 557,
+                              "loc": {
+                                "start": {
+                                  "line": 20,
+                                  "column": 24
+                                },
+                                "end": {
+                                  "line": 20,
+                                  "column": 54
+                                }
+                              },
+                              "elements": [
+                                {
+                                  "type": "StringLiteral",
+                                  "start": 528,
+                                  "end": 535,
+                                  "loc": {
+                                    "start": {
+                                      "line": 20,
+                                      "column": 25
+                                    },
+                                    "end": {
+                                      "line": 20,
+                                      "column": 32
+                                    }
+                                  },
+                                  "extra": {
+                                    "rawValue": "float",
+                                    "raw": "'float'"
+                                  },
+                                  "value": "float"
+                                },
+                                {
+                                  "type": "StringLiteral",
+                                  "start": 537,
+                                  "end": 556,
+                                  "loc": {
+                                    "start": {
+                                      "line": 20,
+                                      "column": 34
+                                    },
+                                    "end": {
+                                      "line": 20,
+                                      "column": 53
+                                    }
+                                  },
+                                  "extra": {
+                                    "rawValue": "_sphereRadialSpan",
+                                    "raw": "'_sphereRadialSpan'"
+                                  },
+                                  "value": "_sphereRadialSpan"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "ObjectProperty",
+                            "start": 565,
+                            "end": 613,
+                            "loc": {
+                              "start": {
+                                "line": 21,
+                                "column": 6
+                              },
+                              "end": {
+                                "line": 21,
+                                "column": 54
+                              }
+                            },
+                            "method": false,
+                            "shorthand": false,
+                            "computed": false,
+                            "key": {
+                              "type": "Identifier",
+                              "start": 565,
+                              "end": 582,
+                              "loc": {
+                                "start": {
+                                  "line": 21,
+                                  "column": 6
+                                },
+                                "end": {
+                                  "line": 21,
+                                  "column": 23
+                                },
+                                "identifierName": "spherehemispheric"
+                              },
+                              "name": "spherehemispheric"
+                            },
+                            "value": {
+                              "type": "ArrayExpression",
+                              "start": 584,
+                              "end": 613,
+                              "loc": {
+                                "start": {
+                                  "line": 21,
+                                  "column": 25
+                                },
+                                "end": {
+                                  "line": 21,
+                                  "column": 54
+                                }
+                              },
+                              "elements": [
+                                {
+                                  "type": "StringLiteral",
+                                  "start": 585,
+                                  "end": 594,
+                                  "loc": {
+                                    "start": {
+                                      "line": 21,
+                                      "column": 26
+                                    },
+                                    "end": {
+                                      "line": 21,
+                                      "column": 35
+                                    }
+                                  },
+                                  "extra": {
+                                    "rawValue": "boolean",
+                                    "raw": "'boolean'"
+                                  },
+                                  "value": "boolean"
+                                },
+                                {
+                                  "type": "StringLiteral",
+                                  "start": 596,
+                                  "end": 612,
+                                  "loc": {
+                                    "start": {
+                                      "line": 21,
+                                      "column": 37
+                                    },
+                                    "end": {
+                                      "line": 21,
+                                      "column": 53
+                                    }
+                                  },
+                                  "extra": {
+                                    "rawValue": "_isHemispheric",
+                                    "raw": "'_isHemispheric'"
+                                  },
+                                  "value": "_isHemispheric"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "ObjectProperty",
+                            "start": 621,
+                            "end": 677,
+                            "loc": {
+                              "start": {
+                                "line": 22,
+                                "column": 6
+                              },
+                              "end": {
+                                "line": 22,
+                                "column": 62
+                              }
+                            },
+                            "method": false,
+                            "shorthand": false,
+                            "computed": false,
+                            "key": {
+                              "type": "Identifier",
+                              "start": 621,
+                              "end": 640,
+                              "loc": {
+                                "start": {
+                                  "line": 22,
+                                  "column": 6
+                                },
+                                "end": {
+                                  "line": 22,
+                                  "column": 25
+                                },
+                                "identifierName": "sphereprimitiveType"
+                              },
+                              "name": "sphereprimitiveType"
+                            },
+                            "value": {
+                              "type": "ArrayExpression",
+                              "start": 642,
+                              "end": 677,
+                              "loc": {
+                                "start": {
+                                  "line": 22,
+                                  "column": 27
+                                },
+                                "end": {
+                                  "line": 22,
+                                  "column": 62
+                                }
+                              },
+                              "elements": [
+                                {
+                                  "type": "StringLiteral",
+                                  "start": 643,
+                                  "end": 652,
+                                  "loc": {
+                                    "start": {
+                                      "line": 22,
+                                      "column": 28
+                                    },
+                                    "end": {
+                                      "line": 22,
+                                      "column": 37
+                                    }
+                                  },
+                                  "extra": {
+                                    "rawValue": "integer",
+                                    "raw": "'integer'"
+                                  },
+                                  "value": "integer"
+                                },
+                                {
+                                  "type": "StringLiteral",
+                                  "start": 654,
+                                  "end": 676,
+                                  "loc": {
+                                    "start": {
+                                      "line": 22,
+                                      "column": 39
+                                    },
+                                    "end": {
+                                      "line": 22,
+                                      "column": 61
+                                    }
+                                  },
+                                  "extra": {
+                                    "rawValue": "_spherePrimitiveType",
+                                    "raw": "'_spherePrimitiveType'"
+                                  },
+                                  "value": "_spherePrimitiveType"
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "type": "ObjectProperty",
+                            "start": 685,
+                            "end": 712,
+                            "loc": {
+                              "start": {
+                                "line": 23,
+                                "column": 6
+                              },
+                              "end": {
+                                "line": 23,
+                                "column": 33
+                              }
+                            },
+                            "method": false,
+                            "shorthand": false,
+                            "computed": false,
+                            "key": {
+                              "type": "Identifier",
+                              "start": 685,
+                              "end": 701,
+                              "loc": {
+                                "start": {
+                                  "line": 23,
+                                  "column": 6
+                                },
+                                "end": {
+                                  "line": 23,
+                                  "column": 22
+                                },
+                                "identifierName": "subdivisionLevel"
+                              },
+                              "name": "subdivisionLevel"
+                            },
+                            "value": {
+                              "type": "StringLiteral",
+                              "start": 703,
+                              "end": 712,
+                              "loc": {
+                                "start": {
+                                  "line": 23,
+                                  "column": 24
+                                },
+                                "end": {
+                                  "line": 23,
+                                  "column": 33
+                                }
+                              },
+                              "extra": {
+                                "rawValue": "integer",
+                                "raw": "'integer'"
+                              },
+                              "value": "integer"
+                            }
+                          },
+                          {
+                            "type": "ObjectProperty",
+                            "start": 720,
+                            "end": 756,
+                            "loc": {
+                              "start": {
+                                "line": 24,
+                                "column": 6
+                              },
+                              "end": {
+                                "line": 24,
+                                "column": 42
+                              }
+                            },
+                            "method": false,
+                            "shorthand": false,
+                            "computed": false,
+                            "key": {
+                              "type": "Identifier",
+                              "start": 720,
+                              "end": 739,
+                              "loc": {
+                                "start": {
+                                  "line": 24,
+                                  "column": 6
+                                },
+                                "end": {
+                                  "line": 24,
+                                  "column": 25
+                                },
+                                "identifierName": "subdivisionSettings"
+                              },
+                              "name": "subdivisionSettings"
+                            },
+                            "value": {
+                              "type": "ArrayExpression",
+                              "start": 741,
+                              "end": 756,
+                              "loc": {
+                                "start": {
+                                  "line": 24,
+                                  "column": 27
+                                },
+                                "end": {
+                                  "line": 24,
+                                  "column": 42
+                                }
+                              },
+                              "elements": [
+                                {
+                                  "type": "StringLiteral",
+                                  "start": 742,
+                                  "end": 749,
+                                  "loc": {
+                                    "start": {
+                                      "line": 24,
+                                      "column": 28
+                                    },
+                                    "end": {
+                                      "line": 24,
+                                      "column": 35
+                                    }
+                                  },
+                                  "extra": {
+                                    "rawValue": "bytes",
+                                    "raw": "'bytes'"
+                                  },
+                                  "value": "bytes"
+                                },
+                                {
+                                  "type": "NullLiteral",
+                                  "start": 751,
+                                  "end": 755,
+                                  "loc": {
+                                    "start": {
+                                      "line": 24,
+                                      "column": 37
+                                    },
+                                    "end": {
+                                      "line": 24,
+                                      "column": 41
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  ],
+                  "directives": [],
+                  "trailingComments": null
+                },
+                "trailingComments": [
+                  {
+                    "type": "CommentLine",
+                    "value": " Creating a Sphere",
+                    "start": 770,
+                    "end": 790,
+                    "loc": {
+                      "start": {
+                        "line": 28,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 28,
+                        "column": 22
+                      }
+                    }
+                  },
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * Creates a sphere geometry with the specified radius.\n   * @access public\n   * @constructor\n   * @param {number} radius - The radius of the sphere in its local coordinate space.\n   * @desc The sphere is centered in its local coordinate system. For example, if you create a sphere whose radius is 5.0, it extends from -5.0 to 5.0 along each of the the x, y, and z-axes.\n   * @see https://developer.apple.com/reference/scenekit/scnsphere/1522601-init\n   ",
+                    "start": 794,
+                    "end": 1256,
+                    "loc": {
+                      "start": {
+                        "line": 30,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 37,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "ClassMethod",
+                "start": 1259,
+                "end": 2182,
+                "loc": {
+                  "start": {
+                    "line": 38,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 69,
+                    "column": 3
+                  }
+                },
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 1259,
+                  "end": 1270,
+                  "loc": {
+                    "start": {
+                      "line": 38,
                       "column": 2
                     },
                     "end": {
-                      "line": 23,
+                      "line": 38,
                       "column": 13
                     },
                     "identifierName": "constructor"
@@ -237,15 +1166,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 770,
-                    "end": 776,
+                    "start": 1271,
+                    "end": 1277,
                     "loc": {
                       "start": {
-                        "line": 23,
+                        "line": 38,
                         "column": 14
                       },
                       "end": {
-                        "line": 23,
+                        "line": 38,
                         "column": 20
                       },
                       "identifierName": "radius"
@@ -255,58 +1184,58 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 778,
-                  "end": 1583,
+                  "start": 1279,
+                  "end": 2182,
                   "loc": {
                     "start": {
-                      "line": 23,
+                      "line": 38,
                       "column": 22
                     },
                     "end": {
-                      "line": 50,
+                      "line": 69,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 784,
-                      "end": 791,
+                      "start": 1285,
+                      "end": 1292,
                       "loc": {
                         "start": {
-                          "line": 24,
+                          "line": 39,
                           "column": 4
                         },
                         "end": {
-                          "line": 24,
+                          "line": 39,
                           "column": 11
                         }
                       },
                       "expression": {
                         "type": "CallExpression",
-                        "start": 784,
-                        "end": 791,
+                        "start": 1285,
+                        "end": 1292,
                         "loc": {
                           "start": {
-                            "line": 24,
+                            "line": 39,
                             "column": 4
                           },
                           "end": {
-                            "line": 24,
+                            "line": 39,
                             "column": 11
                           }
                         },
                         "callee": {
                           "type": "Super",
-                          "start": 784,
-                          "end": 789,
+                          "start": 1285,
+                          "end": 1290,
                           "loc": {
                             "start": {
-                              "line": 24,
+                              "line": 39,
                               "column": 4
                             },
                             "end": {
-                              "line": 24,
+                              "line": 39,
                               "column": 9
                             }
                           }
@@ -318,15 +1247,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Adjusting a Sphere’s Dimensions",
-                          "start": 797,
-                          "end": 831,
+                          "start": 1298,
+                          "end": 1332,
                           "loc": {
                             "start": {
-                              "line": 26,
+                              "line": 41,
                               "column": 4
                             },
                             "end": {
-                              "line": 26,
+                              "line": 41,
                               "column": 38
                             }
                           }
@@ -334,15 +1263,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The radius of the sphere. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523787-radius\n     ",
-                          "start": 837,
-                          "end": 999,
+                          "start": 1338,
+                          "end": 1500,
                           "loc": {
                             "start": {
-                              "line": 28,
+                              "line": 43,
                               "column": 4
                             },
                             "end": {
-                              "line": 32,
+                              "line": 47,
                               "column": 7
                             }
                           }
@@ -351,58 +1280,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1004,
-                      "end": 1024,
+                      "start": 1505,
+                      "end": 1525,
                       "loc": {
                         "start": {
-                          "line": 33,
+                          "line": 48,
                           "column": 4
                         },
                         "end": {
-                          "line": 33,
+                          "line": 48,
                           "column": 24
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1004,
-                        "end": 1024,
+                        "start": 1505,
+                        "end": 1525,
                         "loc": {
                           "start": {
-                            "line": 33,
+                            "line": 48,
                             "column": 4
                           },
                           "end": {
-                            "line": 33,
+                            "line": 48,
                             "column": 24
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1004,
-                          "end": 1015,
+                          "start": 1505,
+                          "end": 1516,
                           "loc": {
                             "start": {
-                              "line": 33,
+                              "line": 48,
                               "column": 4
                             },
                             "end": {
-                              "line": 33,
+                              "line": 48,
                               "column": 15
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1004,
-                            "end": 1008,
+                            "start": 1505,
+                            "end": 1509,
                             "loc": {
                               "start": {
-                                "line": 33,
+                                "line": 48,
                                 "column": 4
                               },
                               "end": {
-                                "line": 33,
+                                "line": 48,
                                 "column": 8
                               }
                             },
@@ -410,15 +1339,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1009,
-                            "end": 1015,
+                            "start": 1510,
+                            "end": 1516,
                             "loc": {
                               "start": {
-                                "line": 33,
+                                "line": 48,
                                 "column": 9
                               },
                               "end": {
-                                "line": 33,
+                                "line": 48,
                                 "column": 15
                               },
                               "identifierName": "radius"
@@ -430,15 +1359,15 @@
                         },
                         "right": {
                           "type": "Identifier",
-                          "start": 1018,
-                          "end": 1024,
+                          "start": 1519,
+                          "end": 1525,
                           "loc": {
                             "start": {
-                              "line": 33,
+                              "line": 48,
                               "column": 18
                             },
                             "end": {
-                              "line": 33,
+                              "line": 48,
                               "column": 24
                             },
                             "identifierName": "radius"
@@ -454,15 +1383,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Adjusting a Sphere’s Dimensions",
-                          "start": 797,
-                          "end": 831,
+                          "start": 1298,
+                          "end": 1332,
                           "loc": {
                             "start": {
-                              "line": 26,
+                              "line": 41,
                               "column": 4
                             },
                             "end": {
-                              "line": 26,
+                              "line": 41,
                               "column": 38
                             }
                           }
@@ -470,15 +1399,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * The radius of the sphere. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523787-radius\n     ",
-                          "start": 837,
-                          "end": 999,
+                          "start": 1338,
+                          "end": 1500,
                           "loc": {
                             "start": {
-                              "line": 28,
+                              "line": 43,
                               "column": 4
                             },
                             "end": {
-                              "line": 32,
+                              "line": 47,
                               "column": 7
                             }
                           }
@@ -488,15 +1417,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Adjusting Geometric Detail",
-                          "start": 1030,
-                          "end": 1059,
+                          "start": 1531,
+                          "end": 1560,
                           "loc": {
                             "start": {
-                              "line": 35,
+                              "line": 50,
                               "column": 4
                             },
                             "end": {
-                              "line": 35,
+                              "line": 50,
                               "column": 33
                             }
                           }
@@ -504,15 +1433,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A Boolean value specifying whether SceneKit uses a geodesic polygon mesh to render the sphere.\n     * @type {boolean}\n     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523268-isgeodesic\n     ",
-                          "start": 1065,
-                          "end": 1289,
+                          "start": 1566,
+                          "end": 1790,
                           "loc": {
                             "start": {
-                              "line": 37,
+                              "line": 52,
                               "column": 4
                             },
                             "end": {
-                              "line": 41,
+                              "line": 56,
                               "column": 7
                             }
                           }
@@ -521,58 +1450,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1294,
-                      "end": 1317,
+                      "start": 1795,
+                      "end": 1818,
                       "loc": {
                         "start": {
-                          "line": 42,
+                          "line": 57,
                           "column": 4
                         },
                         "end": {
-                          "line": 42,
+                          "line": 57,
                           "column": 27
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1294,
-                        "end": 1317,
+                        "start": 1795,
+                        "end": 1818,
                         "loc": {
                           "start": {
-                            "line": 42,
+                            "line": 57,
                             "column": 4
                           },
                           "end": {
-                            "line": 42,
+                            "line": 57,
                             "column": 27
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1294,
-                          "end": 1309,
+                          "start": 1795,
+                          "end": 1810,
                           "loc": {
                             "start": {
-                              "line": 42,
+                              "line": 57,
                               "column": 4
                             },
                             "end": {
-                              "line": 42,
+                              "line": 57,
                               "column": 19
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1294,
-                            "end": 1298,
+                            "start": 1795,
+                            "end": 1799,
                             "loc": {
                               "start": {
-                                "line": 42,
+                                "line": 57,
                                 "column": 4
                               },
                               "end": {
-                                "line": 42,
+                                "line": 57,
                                 "column": 8
                               }
                             },
@@ -580,15 +1509,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1299,
-                            "end": 1309,
+                            "start": 1800,
+                            "end": 1810,
                             "loc": {
                               "start": {
-                                "line": 42,
+                                "line": 57,
                                 "column": 9
                               },
                               "end": {
-                                "line": 42,
+                                "line": 57,
                                 "column": 19
                               },
                               "identifierName": "isGeodesic"
@@ -600,15 +1529,15 @@
                         },
                         "right": {
                           "type": "BooleanLiteral",
-                          "start": 1312,
-                          "end": 1317,
+                          "start": 1813,
+                          "end": 1818,
                           "loc": {
                             "start": {
-                              "line": 42,
+                              "line": 57,
                               "column": 22
                             },
                             "end": {
-                              "line": 42,
+                              "line": 57,
                               "column": 27
                             }
                           },
@@ -623,15 +1552,15 @@
                         {
                           "type": "CommentLine",
                           "value": " Adjusting Geometric Detail",
-                          "start": 1030,
-                          "end": 1059,
+                          "start": 1531,
+                          "end": 1560,
                           "loc": {
                             "start": {
-                              "line": 35,
+                              "line": 50,
                               "column": 4
                             },
                             "end": {
-                              "line": 35,
+                              "line": 50,
                               "column": 33
                             }
                           }
@@ -639,15 +1568,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A Boolean value specifying whether SceneKit uses a geodesic polygon mesh to render the sphere.\n     * @type {boolean}\n     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523268-isgeodesic\n     ",
-                          "start": 1065,
-                          "end": 1289,
+                          "start": 1566,
+                          "end": 1790,
                           "loc": {
                             "start": {
-                              "line": 37,
+                              "line": 52,
                               "column": 4
                             },
                             "end": {
-                              "line": 41,
+                              "line": 56,
                               "column": 7
                             }
                           }
@@ -657,15 +1586,15 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A number determining the detail of the polygon mesh SceneKit uses to render the sphere. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523912-segmentcount\n     ",
-                          "start": 1323,
-                          "end": 1553,
+                          "start": 1824,
+                          "end": 2054,
                           "loc": {
                             "start": {
-                              "line": 44,
+                              "line": 59,
                               "column": 4
                             },
                             "end": {
-                              "line": 48,
+                              "line": 63,
                               "column": 7
                             }
                           }
@@ -674,58 +1603,58 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1558,
-                      "end": 1579,
+                      "start": 2059,
+                      "end": 2080,
                       "loc": {
                         "start": {
-                          "line": 49,
+                          "line": 64,
                           "column": 4
                         },
                         "end": {
-                          "line": 49,
+                          "line": 64,
                           "column": 25
                         }
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1558,
-                        "end": 1579,
+                        "start": 2059,
+                        "end": 2080,
                         "loc": {
                           "start": {
-                            "line": 49,
+                            "line": 64,
                             "column": 4
                           },
                           "end": {
-                            "line": 49,
+                            "line": 64,
                             "column": 25
                           }
                         },
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1558,
-                          "end": 1575,
+                          "start": 2059,
+                          "end": 2076,
                           "loc": {
                             "start": {
-                              "line": 49,
+                              "line": 64,
                               "column": 4
                             },
                             "end": {
-                              "line": 49,
+                              "line": 64,
                               "column": 21
                             }
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1558,
-                            "end": 1562,
+                            "start": 2059,
+                            "end": 2063,
                             "loc": {
                               "start": {
-                                "line": 49,
+                                "line": 64,
                                 "column": 4
                               },
                               "end": {
-                                "line": 49,
+                                "line": 64,
                                 "column": 8
                               }
                             },
@@ -733,15 +1662,15 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1563,
-                            "end": 1575,
+                            "start": 2064,
+                            "end": 2076,
                             "loc": {
                               "start": {
-                                "line": 49,
+                                "line": 64,
                                 "column": 9
                               },
                               "end": {
-                                "line": 49,
+                                "line": 64,
                                 "column": 21
                               },
                               "identifierName": "segmentCount"
@@ -753,15 +1682,15 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 1578,
-                          "end": 1579,
+                          "start": 2079,
+                          "end": 2080,
                           "loc": {
                             "start": {
-                              "line": 49,
+                              "line": 64,
                               "column": 24
                             },
                             "end": {
-                              "line": 49,
+                              "line": 64,
                               "column": 25
                             }
                           },
@@ -777,20 +1706,313 @@
                         {
                           "type": "CommentBlock",
                           "value": "*\n     * A number determining the detail of the polygon mesh SceneKit uses to render the sphere. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523912-segmentcount\n     ",
-                          "start": 1323,
-                          "end": 1553,
+                          "start": 1824,
+                          "end": 2054,
                           "loc": {
                             "start": {
-                              "line": 44,
+                              "line": 59,
                               "column": 4
                             },
                             "end": {
-                              "line": 48,
+                              "line": 63,
                               "column": 7
                             }
                           }
                         }
                       ]
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "start": 2086,
+                      "end": 2112,
+                      "loc": {
+                        "start": {
+                          "line": 66,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 66,
+                          "column": 30
+                        }
+                      },
+                      "expression": {
+                        "type": "AssignmentExpression",
+                        "start": 2086,
+                        "end": 2112,
+                        "loc": {
+                          "start": {
+                            "line": 66,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 66,
+                            "column": 30
+                          }
+                        },
+                        "operator": "=",
+                        "left": {
+                          "type": "MemberExpression",
+                          "start": 2086,
+                          "end": 2108,
+                          "loc": {
+                            "start": {
+                              "line": 66,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 66,
+                              "column": 26
+                            }
+                          },
+                          "object": {
+                            "type": "ThisExpression",
+                            "start": 2086,
+                            "end": 2090,
+                            "loc": {
+                              "start": {
+                                "line": 66,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 66,
+                                "column": 8
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "start": 2091,
+                            "end": 2108,
+                            "loc": {
+                              "start": {
+                                "line": 66,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 66,
+                                "column": 26
+                              },
+                              "identifierName": "_sphereRadialSpan"
+                            },
+                            "name": "_sphereRadialSpan"
+                          },
+                          "computed": false
+                        },
+                        "right": {
+                          "type": "NumericLiteral",
+                          "start": 2111,
+                          "end": 2112,
+                          "loc": {
+                            "start": {
+                              "line": 66,
+                              "column": 29
+                            },
+                            "end": {
+                              "line": 66,
+                              "column": 30
+                            }
+                          },
+                          "extra": {
+                            "rawValue": 0,
+                            "raw": "0"
+                          },
+                          "value": 0
+                        }
+                      }
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "start": 2117,
+                      "end": 2146,
+                      "loc": {
+                        "start": {
+                          "line": 67,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 67,
+                          "column": 33
+                        }
+                      },
+                      "expression": {
+                        "type": "AssignmentExpression",
+                        "start": 2117,
+                        "end": 2146,
+                        "loc": {
+                          "start": {
+                            "line": 67,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 67,
+                            "column": 33
+                          }
+                        },
+                        "operator": "=",
+                        "left": {
+                          "type": "MemberExpression",
+                          "start": 2117,
+                          "end": 2142,
+                          "loc": {
+                            "start": {
+                              "line": 67,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 67,
+                              "column": 29
+                            }
+                          },
+                          "object": {
+                            "type": "ThisExpression",
+                            "start": 2117,
+                            "end": 2121,
+                            "loc": {
+                              "start": {
+                                "line": 67,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 67,
+                                "column": 8
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "start": 2122,
+                            "end": 2142,
+                            "loc": {
+                              "start": {
+                                "line": 67,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 67,
+                                "column": 29
+                              },
+                              "identifierName": "_spherePrimitiveType"
+                            },
+                            "name": "_spherePrimitiveType"
+                          },
+                          "computed": false
+                        },
+                        "right": {
+                          "type": "NumericLiteral",
+                          "start": 2145,
+                          "end": 2146,
+                          "loc": {
+                            "start": {
+                              "line": 67,
+                              "column": 32
+                            },
+                            "end": {
+                              "line": 67,
+                              "column": 33
+                            }
+                          },
+                          "extra": {
+                            "rawValue": 0,
+                            "raw": "0"
+                          },
+                          "value": 0
+                        }
+                      }
+                    },
+                    {
+                      "type": "ExpressionStatement",
+                      "start": 2151,
+                      "end": 2178,
+                      "loc": {
+                        "start": {
+                          "line": 68,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 68,
+                          "column": 31
+                        }
+                      },
+                      "expression": {
+                        "type": "AssignmentExpression",
+                        "start": 2151,
+                        "end": 2178,
+                        "loc": {
+                          "start": {
+                            "line": 68,
+                            "column": 4
+                          },
+                          "end": {
+                            "line": 68,
+                            "column": 31
+                          }
+                        },
+                        "operator": "=",
+                        "left": {
+                          "type": "MemberExpression",
+                          "start": 2151,
+                          "end": 2170,
+                          "loc": {
+                            "start": {
+                              "line": 68,
+                              "column": 4
+                            },
+                            "end": {
+                              "line": 68,
+                              "column": 23
+                            }
+                          },
+                          "object": {
+                            "type": "ThisExpression",
+                            "start": 2151,
+                            "end": 2155,
+                            "loc": {
+                              "start": {
+                                "line": 68,
+                                "column": 4
+                              },
+                              "end": {
+                                "line": 68,
+                                "column": 8
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "start": 2156,
+                            "end": 2170,
+                            "loc": {
+                              "start": {
+                                "line": 68,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 68,
+                                "column": 23
+                              },
+                              "identifierName": "_isHemispheric"
+                            },
+                            "name": "_isHemispheric"
+                          },
+                          "computed": false
+                        },
+                        "right": {
+                          "type": "BooleanLiteral",
+                          "start": 2173,
+                          "end": 2178,
+                          "loc": {
+                            "start": {
+                              "line": 68,
+                              "column": 26
+                            },
+                            "end": {
+                              "line": 68,
+                              "column": 31
+                            }
+                          },
+                          "value": false
+                        }
+                      }
                     }
                   ],
                   "directives": []
@@ -799,15 +2021,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Creating a Sphere",
-                    "start": 269,
-                    "end": 289,
+                    "start": 770,
+                    "end": 790,
                     "loc": {
                       "start": {
-                        "line": 13,
+                        "line": 28,
                         "column": 2
                       },
                       "end": {
-                        "line": 13,
+                        "line": 28,
                         "column": 22
                       }
                     }
@@ -815,15 +2037,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * Creates a sphere geometry with the specified radius.\n   * @access public\n   * @constructor\n   * @param {number} radius - The radius of the sphere in its local coordinate space.\n   * @desc The sphere is centered in its local coordinate system. For example, if you create a sphere whose radius is 5.0, it extends from -5.0 to 5.0 along each of the the x, y, and z-axes.\n   * @see https://developer.apple.com/reference/scenekit/scnsphere/1522601-init\n   ",
-                    "start": 293,
-                    "end": 755,
+                    "start": 794,
+                    "end": 1256,
                     "loc": {
                       "start": {
-                        "line": 15,
+                        "line": 30,
                         "column": 2
                       },
                       "end": {
-                        "line": 22,
+                        "line": 37,
                         "column": 5
                       }
                     }
@@ -836,15 +2058,15 @@
             {
               "type": "CommentBlock",
               "value": "*\n * A sphere (or ball or globe) geometry.\n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/reference/scenekit/scnsphere\n ",
-              "start": 56,
-              "end": 213,
+              "start": 55,
+              "end": 212,
               "loc": {
                 "start": {
-                  "line": 6,
+                  "line": 5,
                   "column": 0
                 },
                 "end": {
-                  "line": 11,
+                  "line": 10,
                   "column": 3
                 }
               }
@@ -856,15 +2078,15 @@
           {
             "type": "CommentBlock",
             "value": "*\n * A sphere (or ball or globe) geometry.\n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/reference/scenekit/scnsphere\n ",
-            "start": 56,
-            "end": 213,
+            "start": 55,
+            "end": 212,
             "loc": {
               "start": {
-                "line": 6,
+                "line": 5,
                 "column": 0
               },
               "end": {
-                "line": 11,
+                "line": 10,
                 "column": 3
               }
             }
@@ -914,15 +2136,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n * A sphere (or ball or globe) geometry.\n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/reference/scenekit/scnsphere\n ",
-      "start": 56,
-      "end": 213,
+      "start": 55,
+      "end": 212,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 5,
           "column": 0
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 3
         }
       }
@@ -930,15 +2152,15 @@
     {
       "type": "CommentLine",
       "value": " Creating a Sphere",
-      "start": 269,
-      "end": 289,
+      "start": 770,
+      "end": 790,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 28,
           "column": 2
         },
         "end": {
-          "line": 13,
+          "line": 28,
           "column": 22
         }
       }
@@ -946,15 +2168,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Creates a sphere geometry with the specified radius.\n   * @access public\n   * @constructor\n   * @param {number} radius - The radius of the sphere in its local coordinate space.\n   * @desc The sphere is centered in its local coordinate system. For example, if you create a sphere whose radius is 5.0, it extends from -5.0 to 5.0 along each of the the x, y, and z-axes.\n   * @see https://developer.apple.com/reference/scenekit/scnsphere/1522601-init\n   ",
-      "start": 293,
-      "end": 755,
+      "start": 794,
+      "end": 1256,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 30,
           "column": 2
         },
         "end": {
-          "line": 22,
+          "line": 37,
           "column": 5
         }
       }
@@ -962,15 +2184,15 @@
     {
       "type": "CommentLine",
       "value": " Adjusting a Sphere’s Dimensions",
-      "start": 797,
-      "end": 831,
+      "start": 1298,
+      "end": 1332,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 41,
           "column": 4
         },
         "end": {
-          "line": 26,
+          "line": 41,
           "column": 38
         }
       }
@@ -978,15 +2200,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The radius of the sphere. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523787-radius\n     ",
-      "start": 837,
-      "end": 999,
+      "start": 1338,
+      "end": 1500,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 43,
           "column": 4
         },
         "end": {
-          "line": 32,
+          "line": 47,
           "column": 7
         }
       }
@@ -994,15 +2216,15 @@
     {
       "type": "CommentLine",
       "value": " Adjusting Geometric Detail",
-      "start": 1030,
-      "end": 1059,
+      "start": 1531,
+      "end": 1560,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 50,
           "column": 4
         },
         "end": {
-          "line": 35,
+          "line": 50,
           "column": 33
         }
       }
@@ -1010,15 +2232,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A Boolean value specifying whether SceneKit uses a geodesic polygon mesh to render the sphere.\n     * @type {boolean}\n     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523268-isgeodesic\n     ",
-      "start": 1065,
-      "end": 1289,
+      "start": 1566,
+      "end": 1790,
       "loc": {
         "start": {
-          "line": 37,
+          "line": 52,
           "column": 4
         },
         "end": {
-          "line": 41,
+          "line": 56,
           "column": 7
         }
       }
@@ -1026,15 +2248,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A number determining the detail of the polygon mesh SceneKit uses to render the sphere. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523912-segmentcount\n     ",
-      "start": 1323,
-      "end": 1553,
+      "start": 1824,
+      "end": 2054,
       "loc": {
         "start": {
-          "line": 44,
+          "line": 59,
           "column": 4
         },
         "end": {
-          "line": 48,
+          "line": 63,
           "column": 7
         }
       }
@@ -1178,15 +2400,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n * A sphere (or ball or globe) geometry.\n * @access public\n * @extends {SCNGeometry}\n * @see https://developer.apple.com/reference/scenekit/scnsphere\n ",
-      "start": 56,
-      "end": 213,
+      "start": 55,
+      "end": 212,
       "loc": {
         "start": {
-          "line": 6,
+          "line": 5,
           "column": 0
         },
         "end": {
-          "line": 11,
+          "line": 10,
           "column": 3
         }
       }
@@ -1206,15 +2428,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 214,
-      "end": 220,
+      "start": 213,
+      "end": 219,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 0
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 6
         }
       }
@@ -1234,15 +2456,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 221,
-      "end": 228,
+      "start": 220,
+      "end": 227,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 7
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 14
         }
       }
@@ -1262,15 +2484,15 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 229,
-      "end": 234,
+      "start": 228,
+      "end": 233,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 15
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 20
         }
       }
@@ -1288,15 +2510,15 @@
         "binop": null
       },
       "value": "SCNSphere",
-      "start": 235,
-      "end": 244,
+      "start": 234,
+      "end": 243,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 21
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 30
         }
       }
@@ -1316,15 +2538,15 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 245,
-      "end": 252,
+      "start": 244,
+      "end": 251,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 31
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 38
         }
       }
@@ -1342,15 +2564,15 @@
         "binop": null
       },
       "value": "SCNGeometry",
-      "start": 253,
-      "end": 264,
+      "start": 252,
+      "end": 263,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 39
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 50
         }
       }
@@ -1367,31 +2589,2047 @@
         "postfix": false,
         "binop": null
       },
-      "start": 265,
-      "end": 266,
+      "start": 264,
+      "end": 265,
       "loc": {
         "start": {
-          "line": 12,
+          "line": 11,
           "column": 51
         },
         "end": {
-          "line": 12,
+          "line": 11,
           "column": 52
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "static",
+      "start": 268,
+      "end": 274,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 2
+        },
+        "end": {
+          "line": 12,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "get",
+      "start": 275,
+      "end": 278,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 9
+        },
+        "end": {
+          "line": 12,
+          "column": 12
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "_propTypes",
+      "start": 279,
+      "end": 289,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 13
+        },
+        "end": {
+          "line": 12,
+          "column": 23
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 289,
+      "end": 290,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 23
+        },
+        "end": {
+          "line": 12,
+          "column": 24
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 290,
+      "end": 291,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 24
+        },
+        "end": {
+          "line": 12,
+          "column": 25
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 292,
+      "end": 293,
+      "loc": {
+        "start": {
+          "line": 12,
+          "column": 26
+        },
+        "end": {
+          "line": 12,
+          "column": 27
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "return",
+        "keyword": "return",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "return",
+      "start": 298,
+      "end": 304,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 4
+        },
+        "end": {
+          "line": 13,
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 305,
+      "end": 306,
+      "loc": {
+        "start": {
+          "line": 13,
+          "column": 11
+        },
+        "end": {
+          "line": 13,
+          "column": 12
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "sphereradius",
+      "start": 313,
+      "end": 325,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 6
+        },
+        "end": {
+          "line": 14,
+          "column": 18
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 325,
+      "end": 326,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 18
+        },
+        "end": {
+          "line": 14,
+          "column": 19
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "[",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 327,
+      "end": 328,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 20
+        },
+        "end": {
+          "line": 14,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "float",
+      "start": 328,
+      "end": 335,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 21
+        },
+        "end": {
+          "line": 14,
+          "column": 28
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 335,
+      "end": 336,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 28
+        },
+        "end": {
+          "line": 14,
+          "column": 29
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "radius",
+      "start": 337,
+      "end": 345,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 30
+        },
+        "end": {
+          "line": 14,
+          "column": 38
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "]",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 345,
+      "end": 346,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 38
+        },
+        "end": {
+          "line": 14,
+          "column": 39
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 346,
+      "end": 347,
+      "loc": {
+        "start": {
+          "line": 14,
+          "column": 39
+        },
+        "end": {
+          "line": 14,
+          "column": 40
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "spheregeodesic",
+      "start": 354,
+      "end": 368,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 6
+        },
+        "end": {
+          "line": 15,
+          "column": 20
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 368,
+      "end": 369,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 20
+        },
+        "end": {
+          "line": 15,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "[",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 370,
+      "end": 371,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 22
+        },
+        "end": {
+          "line": 15,
+          "column": 23
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "boolean",
+      "start": 371,
+      "end": 380,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 23
+        },
+        "end": {
+          "line": 15,
+          "column": 32
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 380,
+      "end": 381,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 32
+        },
+        "end": {
+          "line": 15,
+          "column": 33
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "isGeodesic",
+      "start": 382,
+      "end": 394,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 34
+        },
+        "end": {
+          "line": 15,
+          "column": 46
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "]",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 394,
+      "end": 395,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 46
+        },
+        "end": {
+          "line": 15,
+          "column": 47
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 395,
+      "end": 396,
+      "loc": {
+        "start": {
+          "line": 15,
+          "column": 47
+        },
+        "end": {
+          "line": 15,
+          "column": 48
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "spheresegmentCount",
+      "start": 403,
+      "end": 421,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 6
+        },
+        "end": {
+          "line": 16,
+          "column": 24
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 421,
+      "end": 422,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 24
+        },
+        "end": {
+          "line": 16,
+          "column": 25
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "[",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 423,
+      "end": 424,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 26
+        },
+        "end": {
+          "line": 16,
+          "column": 27
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "integer",
+      "start": 424,
+      "end": 433,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 27
+        },
+        "end": {
+          "line": 16,
+          "column": 36
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 433,
+      "end": 434,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 36
+        },
+        "end": {
+          "line": 16,
+          "column": 37
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "segmentCount",
+      "start": 435,
+      "end": 449,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 38
+        },
+        "end": {
+          "line": 16,
+          "column": 52
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "]",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 449,
+      "end": 450,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 52
+        },
+        "end": {
+          "line": 16,
+          "column": 53
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 450,
+      "end": 451,
+      "loc": {
+        "start": {
+          "line": 16,
+          "column": 53
+        },
+        "end": {
+          "line": 16,
+          "column": 54
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "materials",
+      "start": 458,
+      "end": 467,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 6
+        },
+        "end": {
+          "line": 17,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 467,
+      "end": 468,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 15
+        },
+        "end": {
+          "line": 17,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "NSArray",
+      "start": 469,
+      "end": 478,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 17
+        },
+        "end": {
+          "line": 17,
+          "column": 26
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 478,
+      "end": 479,
+      "loc": {
+        "start": {
+          "line": 17,
+          "column": 26
+        },
+        "end": {
+          "line": 17,
+          "column": 27
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "name",
+      "start": 487,
+      "end": 491,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 6
+        },
+        "end": {
+          "line": 19,
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 491,
+      "end": 492,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 10
+        },
+        "end": {
+          "line": 19,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "string",
+      "start": 493,
+      "end": 501,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 12
+        },
+        "end": {
+          "line": 19,
+          "column": 20
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 501,
+      "end": 502,
+      "loc": {
+        "start": {
+          "line": 19,
+          "column": 20
+        },
+        "end": {
+          "line": 19,
+          "column": 21
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "sphereradialSpan",
+      "start": 509,
+      "end": 525,
+      "loc": {
+        "start": {
+          "line": 20,
+          "column": 6
+        },
+        "end": {
+          "line": 20,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 525,
+      "end": 526,
+      "loc": {
+        "start": {
+          "line": 20,
+          "column": 22
+        },
+        "end": {
+          "line": 20,
+          "column": 23
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "[",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 527,
+      "end": 528,
+      "loc": {
+        "start": {
+          "line": 20,
+          "column": 24
+        },
+        "end": {
+          "line": 20,
+          "column": 25
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "float",
+      "start": 528,
+      "end": 535,
+      "loc": {
+        "start": {
+          "line": 20,
+          "column": 25
+        },
+        "end": {
+          "line": 20,
+          "column": 32
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 535,
+      "end": 536,
+      "loc": {
+        "start": {
+          "line": 20,
+          "column": 32
+        },
+        "end": {
+          "line": 20,
+          "column": 33
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "_sphereRadialSpan",
+      "start": 537,
+      "end": 556,
+      "loc": {
+        "start": {
+          "line": 20,
+          "column": 34
+        },
+        "end": {
+          "line": 20,
+          "column": 53
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "]",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 556,
+      "end": 557,
+      "loc": {
+        "start": {
+          "line": 20,
+          "column": 53
+        },
+        "end": {
+          "line": 20,
+          "column": 54
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 557,
+      "end": 558,
+      "loc": {
+        "start": {
+          "line": 20,
+          "column": 54
+        },
+        "end": {
+          "line": 20,
+          "column": 55
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "spherehemispheric",
+      "start": 565,
+      "end": 582,
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 6
+        },
+        "end": {
+          "line": 21,
+          "column": 23
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 582,
+      "end": 583,
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 23
+        },
+        "end": {
+          "line": 21,
+          "column": 24
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "[",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 584,
+      "end": 585,
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 25
+        },
+        "end": {
+          "line": 21,
+          "column": 26
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "boolean",
+      "start": 585,
+      "end": 594,
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 26
+        },
+        "end": {
+          "line": 21,
+          "column": 35
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 594,
+      "end": 595,
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 35
+        },
+        "end": {
+          "line": 21,
+          "column": 36
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "_isHemispheric",
+      "start": 596,
+      "end": 612,
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 37
+        },
+        "end": {
+          "line": 21,
+          "column": 53
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "]",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 612,
+      "end": 613,
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 53
+        },
+        "end": {
+          "line": 21,
+          "column": 54
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 613,
+      "end": 614,
+      "loc": {
+        "start": {
+          "line": 21,
+          "column": 54
+        },
+        "end": {
+          "line": 21,
+          "column": 55
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "sphereprimitiveType",
+      "start": 621,
+      "end": 640,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 6
+        },
+        "end": {
+          "line": 22,
+          "column": 25
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 640,
+      "end": 641,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 25
+        },
+        "end": {
+          "line": 22,
+          "column": 26
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "[",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 642,
+      "end": 643,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 27
+        },
+        "end": {
+          "line": 22,
+          "column": 28
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "integer",
+      "start": 643,
+      "end": 652,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 28
+        },
+        "end": {
+          "line": 22,
+          "column": 37
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 652,
+      "end": 653,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 37
+        },
+        "end": {
+          "line": 22,
+          "column": 38
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "_spherePrimitiveType",
+      "start": 654,
+      "end": 676,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 39
+        },
+        "end": {
+          "line": 22,
+          "column": 61
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "]",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 676,
+      "end": 677,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 61
+        },
+        "end": {
+          "line": 22,
+          "column": 62
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 677,
+      "end": 678,
+      "loc": {
+        "start": {
+          "line": 22,
+          "column": 62
+        },
+        "end": {
+          "line": 22,
+          "column": 63
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "subdivisionLevel",
+      "start": 685,
+      "end": 701,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 6
+        },
+        "end": {
+          "line": 23,
+          "column": 22
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 701,
+      "end": 702,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 22
+        },
+        "end": {
+          "line": 23,
+          "column": 23
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "integer",
+      "start": 703,
+      "end": 712,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 24
+        },
+        "end": {
+          "line": 23,
+          "column": 33
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 712,
+      "end": 713,
+      "loc": {
+        "start": {
+          "line": 23,
+          "column": 33
+        },
+        "end": {
+          "line": 23,
+          "column": 34
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "subdivisionSettings",
+      "start": 720,
+      "end": 739,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 6
+        },
+        "end": {
+          "line": 24,
+          "column": 25
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ":",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 739,
+      "end": 740,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 25
+        },
+        "end": {
+          "line": 24,
+          "column": 26
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "[",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 741,
+      "end": 742,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 27
+        },
+        "end": {
+          "line": 24,
+          "column": 28
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "bytes",
+      "start": 742,
+      "end": 749,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 28
+        },
+        "end": {
+          "line": 24,
+          "column": 35
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 749,
+      "end": 750,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 35
+        },
+        "end": {
+          "line": 24,
+          "column": 36
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "null",
+        "keyword": "null",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "null",
+      "start": 751,
+      "end": 755,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 37
+        },
+        "end": {
+          "line": 24,
+          "column": 41
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "]",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 755,
+      "end": 756,
+      "loc": {
+        "start": {
+          "line": 24,
+          "column": 41
+        },
+        "end": {
+          "line": 24,
+          "column": 42
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 761,
+      "end": 762,
+      "loc": {
+        "start": {
+          "line": 25,
+          "column": 4
+        },
+        "end": {
+          "line": 25,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 765,
+      "end": 766,
+      "loc": {
+        "start": {
+          "line": 26,
+          "column": 2
+        },
+        "end": {
+          "line": 26,
+          "column": 3
         }
       }
     },
     {
       "type": "CommentLine",
       "value": " Creating a Sphere",
-      "start": 269,
-      "end": 289,
+      "start": 770,
+      "end": 790,
       "loc": {
         "start": {
-          "line": 13,
+          "line": 28,
           "column": 2
         },
         "end": {
-          "line": 13,
+          "line": 28,
           "column": 22
         }
       }
@@ -1399,15 +4637,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * Creates a sphere geometry with the specified radius.\n   * @access public\n   * @constructor\n   * @param {number} radius - The radius of the sphere in its local coordinate space.\n   * @desc The sphere is centered in its local coordinate system. For example, if you create a sphere whose radius is 5.0, it extends from -5.0 to 5.0 along each of the the x, y, and z-axes.\n   * @see https://developer.apple.com/reference/scenekit/scnsphere/1522601-init\n   ",
-      "start": 293,
-      "end": 755,
+      "start": 794,
+      "end": 1256,
       "loc": {
         "start": {
-          "line": 15,
+          "line": 30,
           "column": 2
         },
         "end": {
-          "line": 22,
+          "line": 37,
           "column": 5
         }
       }
@@ -1425,15 +4663,15 @@
         "binop": null
       },
       "value": "constructor",
-      "start": 758,
-      "end": 769,
+      "start": 1259,
+      "end": 1270,
       "loc": {
         "start": {
-          "line": 23,
+          "line": 38,
           "column": 2
         },
         "end": {
-          "line": 23,
+          "line": 38,
           "column": 13
         }
       }
@@ -1450,15 +4688,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 769,
-      "end": 770,
+      "start": 1270,
+      "end": 1271,
       "loc": {
         "start": {
-          "line": 23,
+          "line": 38,
           "column": 13
         },
         "end": {
-          "line": 23,
+          "line": 38,
           "column": 14
         }
       }
@@ -1476,15 +4714,15 @@
         "binop": null
       },
       "value": "radius",
-      "start": 770,
-      "end": 776,
+      "start": 1271,
+      "end": 1277,
       "loc": {
         "start": {
-          "line": 23,
+          "line": 38,
           "column": 14
         },
         "end": {
-          "line": 23,
+          "line": 38,
           "column": 20
         }
       }
@@ -1501,15 +4739,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 776,
-      "end": 777,
+      "start": 1277,
+      "end": 1278,
       "loc": {
         "start": {
-          "line": 23,
+          "line": 38,
           "column": 20
         },
         "end": {
-          "line": 23,
+          "line": 38,
           "column": 21
         }
       }
@@ -1526,15 +4764,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 778,
-      "end": 779,
+      "start": 1279,
+      "end": 1280,
       "loc": {
         "start": {
-          "line": 23,
+          "line": 38,
           "column": 22
         },
         "end": {
-          "line": 23,
+          "line": 38,
           "column": 23
         }
       }
@@ -1554,15 +4792,15 @@
         "updateContext": null
       },
       "value": "super",
-      "start": 784,
-      "end": 789,
+      "start": 1285,
+      "end": 1290,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 39,
           "column": 4
         },
         "end": {
-          "line": 24,
+          "line": 39,
           "column": 9
         }
       }
@@ -1579,15 +4817,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 789,
-      "end": 790,
+      "start": 1290,
+      "end": 1291,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 39,
           "column": 9
         },
         "end": {
-          "line": 24,
+          "line": 39,
           "column": 10
         }
       }
@@ -1604,15 +4842,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 790,
-      "end": 791,
+      "start": 1291,
+      "end": 1292,
       "loc": {
         "start": {
-          "line": 24,
+          "line": 39,
           "column": 10
         },
         "end": {
-          "line": 24,
+          "line": 39,
           "column": 11
         }
       }
@@ -1620,15 +4858,15 @@
     {
       "type": "CommentLine",
       "value": " Adjusting a Sphere’s Dimensions",
-      "start": 797,
-      "end": 831,
+      "start": 1298,
+      "end": 1332,
       "loc": {
         "start": {
-          "line": 26,
+          "line": 41,
           "column": 4
         },
         "end": {
-          "line": 26,
+          "line": 41,
           "column": 38
         }
       }
@@ -1636,15 +4874,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * The radius of the sphere. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523787-radius\n     ",
-      "start": 837,
-      "end": 999,
+      "start": 1338,
+      "end": 1500,
       "loc": {
         "start": {
-          "line": 28,
+          "line": 43,
           "column": 4
         },
         "end": {
-          "line": 32,
+          "line": 47,
           "column": 7
         }
       }
@@ -1664,15 +4902,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1004,
-      "end": 1008,
+      "start": 1505,
+      "end": 1509,
       "loc": {
         "start": {
-          "line": 33,
+          "line": 48,
           "column": 4
         },
         "end": {
-          "line": 33,
+          "line": 48,
           "column": 8
         }
       }
@@ -1690,15 +4928,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1008,
-      "end": 1009,
+      "start": 1509,
+      "end": 1510,
       "loc": {
         "start": {
-          "line": 33,
+          "line": 48,
           "column": 8
         },
         "end": {
-          "line": 33,
+          "line": 48,
           "column": 9
         }
       }
@@ -1716,15 +4954,15 @@
         "binop": null
       },
       "value": "radius",
-      "start": 1009,
-      "end": 1015,
+      "start": 1510,
+      "end": 1516,
       "loc": {
         "start": {
-          "line": 33,
+          "line": 48,
           "column": 9
         },
         "end": {
-          "line": 33,
+          "line": 48,
           "column": 15
         }
       }
@@ -1743,15 +4981,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1016,
-      "end": 1017,
+      "start": 1517,
+      "end": 1518,
       "loc": {
         "start": {
-          "line": 33,
+          "line": 48,
           "column": 16
         },
         "end": {
-          "line": 33,
+          "line": 48,
           "column": 17
         }
       }
@@ -1769,15 +5007,15 @@
         "binop": null
       },
       "value": "radius",
-      "start": 1018,
-      "end": 1024,
+      "start": 1519,
+      "end": 1525,
       "loc": {
         "start": {
-          "line": 33,
+          "line": 48,
           "column": 18
         },
         "end": {
-          "line": 33,
+          "line": 48,
           "column": 24
         }
       }
@@ -1785,15 +5023,15 @@
     {
       "type": "CommentLine",
       "value": " Adjusting Geometric Detail",
-      "start": 1030,
-      "end": 1059,
+      "start": 1531,
+      "end": 1560,
       "loc": {
         "start": {
-          "line": 35,
+          "line": 50,
           "column": 4
         },
         "end": {
-          "line": 35,
+          "line": 50,
           "column": 33
         }
       }
@@ -1801,15 +5039,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A Boolean value specifying whether SceneKit uses a geodesic polygon mesh to render the sphere.\n     * @type {boolean}\n     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523268-isgeodesic\n     ",
-      "start": 1065,
-      "end": 1289,
+      "start": 1566,
+      "end": 1790,
       "loc": {
         "start": {
-          "line": 37,
+          "line": 52,
           "column": 4
         },
         "end": {
-          "line": 41,
+          "line": 56,
           "column": 7
         }
       }
@@ -1829,15 +5067,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1294,
-      "end": 1298,
+      "start": 1795,
+      "end": 1799,
       "loc": {
         "start": {
-          "line": 42,
+          "line": 57,
           "column": 4
         },
         "end": {
-          "line": 42,
+          "line": 57,
           "column": 8
         }
       }
@@ -1855,15 +5093,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1298,
-      "end": 1299,
+      "start": 1799,
+      "end": 1800,
       "loc": {
         "start": {
-          "line": 42,
+          "line": 57,
           "column": 8
         },
         "end": {
-          "line": 42,
+          "line": 57,
           "column": 9
         }
       }
@@ -1881,15 +5119,15 @@
         "binop": null
       },
       "value": "isGeodesic",
-      "start": 1299,
-      "end": 1309,
+      "start": 1800,
+      "end": 1810,
       "loc": {
         "start": {
-          "line": 42,
+          "line": 57,
           "column": 9
         },
         "end": {
-          "line": 42,
+          "line": 57,
           "column": 19
         }
       }
@@ -1908,15 +5146,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1310,
-      "end": 1311,
+      "start": 1811,
+      "end": 1812,
       "loc": {
         "start": {
-          "line": 42,
+          "line": 57,
           "column": 20
         },
         "end": {
-          "line": 42,
+          "line": 57,
           "column": 21
         }
       }
@@ -1936,15 +5174,15 @@
         "updateContext": null
       },
       "value": "false",
-      "start": 1312,
-      "end": 1317,
+      "start": 1813,
+      "end": 1818,
       "loc": {
         "start": {
-          "line": 42,
+          "line": 57,
           "column": 22
         },
         "end": {
-          "line": 42,
+          "line": 57,
           "column": 27
         }
       }
@@ -1952,15 +5190,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n     * A number determining the detail of the polygon mesh SceneKit uses to render the sphere. Animatable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523912-segmentcount\n     ",
-      "start": 1323,
-      "end": 1553,
+      "start": 1824,
+      "end": 2054,
       "loc": {
         "start": {
-          "line": 44,
+          "line": 59,
           "column": 4
         },
         "end": {
-          "line": 48,
+          "line": 63,
           "column": 7
         }
       }
@@ -1980,15 +5218,15 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1558,
-      "end": 1562,
+      "start": 2059,
+      "end": 2063,
       "loc": {
         "start": {
-          "line": 49,
+          "line": 64,
           "column": 4
         },
         "end": {
-          "line": 49,
+          "line": 64,
           "column": 8
         }
       }
@@ -2006,15 +5244,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1562,
-      "end": 1563,
+      "start": 2063,
+      "end": 2064,
       "loc": {
         "start": {
-          "line": 49,
+          "line": 64,
           "column": 8
         },
         "end": {
-          "line": 49,
+          "line": 64,
           "column": 9
         }
       }
@@ -2032,15 +5270,15 @@
         "binop": null
       },
       "value": "segmentCount",
-      "start": 1563,
-      "end": 1575,
+      "start": 2064,
+      "end": 2076,
       "loc": {
         "start": {
-          "line": 49,
+          "line": 64,
           "column": 9
         },
         "end": {
-          "line": 49,
+          "line": 64,
           "column": 21
         }
       }
@@ -2059,15 +5297,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1576,
-      "end": 1577,
+      "start": 2077,
+      "end": 2078,
       "loc": {
         "start": {
-          "line": 49,
+          "line": 64,
           "column": 22
         },
         "end": {
-          "line": 49,
+          "line": 64,
           "column": 23
         }
       }
@@ -2086,16 +5324,419 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 1578,
-      "end": 1579,
+      "start": 2079,
+      "end": 2080,
       "loc": {
         "start": {
-          "line": 49,
+          "line": 64,
           "column": 24
         },
         "end": {
-          "line": 49,
+          "line": 64,
           "column": 25
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "this",
+        "keyword": "this",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "this",
+      "start": 2086,
+      "end": 2090,
+      "loc": {
+        "start": {
+          "line": 66,
+          "column": 4
+        },
+        "end": {
+          "line": 66,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ".",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 2090,
+      "end": 2091,
+      "loc": {
+        "start": {
+          "line": 66,
+          "column": 8
+        },
+        "end": {
+          "line": 66,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "_sphereRadialSpan",
+      "start": 2091,
+      "end": 2108,
+      "loc": {
+        "start": {
+          "line": 66,
+          "column": 9
+        },
+        "end": {
+          "line": 66,
+          "column": 26
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 2109,
+      "end": 2110,
+      "loc": {
+        "start": {
+          "line": 66,
+          "column": 27
+        },
+        "end": {
+          "line": 66,
+          "column": 28
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "num",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": 0,
+      "start": 2111,
+      "end": 2112,
+      "loc": {
+        "start": {
+          "line": 66,
+          "column": 29
+        },
+        "end": {
+          "line": 66,
+          "column": 30
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "this",
+        "keyword": "this",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "this",
+      "start": 2117,
+      "end": 2121,
+      "loc": {
+        "start": {
+          "line": 67,
+          "column": 4
+        },
+        "end": {
+          "line": 67,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ".",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 2121,
+      "end": 2122,
+      "loc": {
+        "start": {
+          "line": 67,
+          "column": 8
+        },
+        "end": {
+          "line": 67,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "_spherePrimitiveType",
+      "start": 2122,
+      "end": 2142,
+      "loc": {
+        "start": {
+          "line": 67,
+          "column": 9
+        },
+        "end": {
+          "line": 67,
+          "column": 29
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 2143,
+      "end": 2144,
+      "loc": {
+        "start": {
+          "line": 67,
+          "column": 30
+        },
+        "end": {
+          "line": 67,
+          "column": 31
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "num",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": 0,
+      "start": 2145,
+      "end": 2146,
+      "loc": {
+        "start": {
+          "line": 67,
+          "column": 32
+        },
+        "end": {
+          "line": 67,
+          "column": 33
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "this",
+        "keyword": "this",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "this",
+      "start": 2151,
+      "end": 2155,
+      "loc": {
+        "start": {
+          "line": 68,
+          "column": 4
+        },
+        "end": {
+          "line": 68,
+          "column": 8
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ".",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 2155,
+      "end": 2156,
+      "loc": {
+        "start": {
+          "line": 68,
+          "column": 8
+        },
+        "end": {
+          "line": 68,
+          "column": 9
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "_isHemispheric",
+      "start": 2156,
+      "end": 2170,
+      "loc": {
+        "start": {
+          "line": 68,
+          "column": 9
+        },
+        "end": {
+          "line": 68,
+          "column": 23
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "=",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": true,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "=",
+      "start": 2171,
+      "end": 2172,
+      "loc": {
+        "start": {
+          "line": 68,
+          "column": 24
+        },
+        "end": {
+          "line": 68,
+          "column": 25
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "false",
+        "keyword": "false",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "false",
+      "start": 2173,
+      "end": 2178,
+      "loc": {
+        "start": {
+          "line": 68,
+          "column": 26
+        },
+        "end": {
+          "line": 68,
+          "column": 31
         }
       }
     },
@@ -2111,15 +5752,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1582,
-      "end": 1583,
+      "start": 2181,
+      "end": 2182,
       "loc": {
         "start": {
-          "line": 50,
+          "line": 69,
           "column": 2
         },
         "end": {
-          "line": 50,
+          "line": 69,
           "column": 3
         }
       }
@@ -2136,15 +5777,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1584,
-      "end": 1585,
+      "start": 2183,
+      "end": 2184,
       "loc": {
         "start": {
-          "line": 51,
+          "line": 70,
           "column": 0
         },
         "end": {
-          "line": 51,
+          "line": 70,
           "column": 1
         }
       }
@@ -2162,15 +5803,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1586,
-      "end": 1586,
+      "start": 2185,
+      "end": 2185,
       "loc": {
         "start": {
-          "line": 52,
+          "line": 71,
           "column": 0
         },
         "end": {
-          "line": 52,
+          "line": 71,
           "column": 0
         }
       }

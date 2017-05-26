@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 621,
+  "end": 712,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 21,
+      "line": 22,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 621,
+    "end": 712,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 21,
+        "line": 22,
         "column": 0
       }
     },
@@ -94,7 +94,76 @@
             "rawValue": "./SCNMatrix4",
             "raw": "'./SCNMatrix4'"
           },
-          "value": "./SCNMatrix4",
+          "value": "./SCNMatrix4"
+        }
+      },
+      {
+        "type": "ImportDeclaration",
+        "start": 52,
+        "end": 107,
+        "loc": {
+          "start": {
+            "line": 4,
+            "column": 0
+          },
+          "end": {
+            "line": 4,
+            "column": 55
+          }
+        },
+        "specifiers": [
+          {
+            "type": "ImportDefaultSpecifier",
+            "start": 59,
+            "end": 78,
+            "loc": {
+              "start": {
+                "line": 4,
+                "column": 7
+              },
+              "end": {
+                "line": 4,
+                "column": 26
+              }
+            },
+            "local": {
+              "type": "Identifier",
+              "start": 59,
+              "end": 78,
+              "loc": {
+                "start": {
+                  "line": 4,
+                  "column": 7
+                },
+                "end": {
+                  "line": 4,
+                  "column": 26
+                },
+                "identifierName": "SCNMatrix4MakeScale"
+              },
+              "name": "SCNMatrix4MakeScale"
+            }
+          }
+        ],
+        "source": {
+          "type": "StringLiteral",
+          "start": 84,
+          "end": 107,
+          "loc": {
+            "start": {
+              "line": 4,
+              "column": 32
+            },
+            "end": {
+              "line": 4,
+              "column": 55
+            }
+          },
+          "extra": {
+            "rawValue": "./SCNMatrix4MakeScale",
+            "raw": "'./SCNMatrix4MakeScale'"
+          },
+          "value": "./SCNMatrix4MakeScale",
           "leadingComments": null,
           "trailingComments": null
         },
@@ -102,15 +171,15 @@
           {
             "type": "CommentBlock",
             "value": "*\n * Returns a new matrix created by concatenating the specified matrix with a scale transformation.\n * @access public\n * @param {SCNMatrix4} m - \n * @param {number} sx - \n * @param {number} sy - \n * @param {number} sz - \n * @returns {SCNMatrix4} - \n * @desc The resulting transformation consists of the specified scale followed by the transformation represented by the mat parameter.\n * @see https://developer.apple.com/reference/scenekit/1409653-scnmatrix4scale\n ",
-            "start": 53,
-            "end": 522,
+            "start": 109,
+            "end": 578,
             "loc": {
               "start": {
-                "line": 5,
+                "line": 6,
                 "column": 0
               },
               "end": {
-                "line": 15,
+                "line": 16,
                 "column": 3
               }
             }
@@ -119,44 +188,44 @@
       },
       {
         "type": "Identifier",
-        "start": 523,
-        "end": 588,
+        "start": 579,
+        "end": 679,
         "loc": {
           "start": {
-            "line": 16,
+            "line": 17,
             "column": 0
           },
           "end": {
-            "line": 18,
+            "line": 19,
             "column": 1
           }
         },
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 529,
-            "end": 588,
+            "start": 585,
+            "end": 679,
             "loc": {
               "start": {
-                "line": 16,
+                "line": 17,
                 "column": 6
               },
               "end": {
-                "line": 18,
+                "line": 19,
                 "column": 1
               }
             },
             "id": {
               "type": "Identifier",
-              "start": 529,
-              "end": 544,
+              "start": 585,
+              "end": 600,
               "loc": {
                 "start": {
-                  "line": 16,
+                  "line": 17,
                   "column": 6
                 },
                 "end": {
-                  "line": 16,
+                  "line": 17,
                   "column": 21
                 },
                 "identifierName": "SCNMatrix4Scale"
@@ -166,15 +235,15 @@
             },
             "init": {
               "type": "FunctionExpression",
-              "start": 547,
-              "end": 588,
+              "start": 603,
+              "end": 679,
               "loc": {
                 "start": {
-                  "line": 16,
+                  "line": 17,
                   "column": 24
                 },
                 "end": {
-                  "line": 18,
+                  "line": 19,
                   "column": 1
                 }
               },
@@ -185,15 +254,15 @@
               "params": [
                 {
                   "type": "Identifier",
-                  "start": 556,
-                  "end": 557,
+                  "start": 612,
+                  "end": 613,
                   "loc": {
                     "start": {
-                      "line": 16,
+                      "line": 17,
                       "column": 33
                     },
                     "end": {
-                      "line": 16,
+                      "line": 17,
                       "column": 34
                     },
                     "identifierName": "m"
@@ -202,15 +271,15 @@
                 },
                 {
                   "type": "Identifier",
-                  "start": 559,
-                  "end": 561,
+                  "start": 615,
+                  "end": 617,
                   "loc": {
                     "start": {
-                      "line": 16,
+                      "line": 17,
                       "column": 36
                     },
                     "end": {
-                      "line": 16,
+                      "line": 17,
                       "column": 38
                     },
                     "identifierName": "sx"
@@ -219,15 +288,15 @@
                 },
                 {
                   "type": "Identifier",
-                  "start": 563,
-                  "end": 565,
+                  "start": 619,
+                  "end": 621,
                   "loc": {
                     "start": {
-                      "line": 16,
+                      "line": 17,
                       "column": 40
                     },
                     "end": {
-                      "line": 16,
+                      "line": 17,
                       "column": 42
                     },
                     "identifierName": "sy"
@@ -236,15 +305,15 @@
                 },
                 {
                   "type": "Identifier",
-                  "start": 567,
-                  "end": 569,
+                  "start": 623,
+                  "end": 625,
                   "loc": {
                     "start": {
-                      "line": 16,
+                      "line": 17,
                       "column": 44
                     },
                     "end": {
-                      "line": 16,
+                      "line": 17,
                       "column": 46
                     },
                     "identifierName": "sz"
@@ -254,47 +323,184 @@
               ],
               "body": {
                 "type": "BlockStatement",
-                "start": 571,
-                "end": 588,
+                "start": 627,
+                "end": 679,
                 "loc": {
                   "start": {
-                    "line": 16,
+                    "line": 17,
                     "column": 48
                   },
                   "end": {
-                    "line": 18,
+                    "line": 19,
                     "column": 1
                   }
                 },
                 "body": [
                   {
                     "type": "ReturnStatement",
-                    "start": 575,
-                    "end": 586,
+                    "start": 631,
+                    "end": 677,
                     "loc": {
                       "start": {
-                        "line": 17,
+                        "line": 18,
                         "column": 2
                       },
                       "end": {
-                        "line": 17,
-                        "column": 13
+                        "line": 18,
+                        "column": 48
                       }
                     },
                     "argument": {
-                      "type": "NullLiteral",
-                      "start": 582,
-                      "end": 586,
+                      "type": "CallExpression",
+                      "start": 638,
+                      "end": 677,
                       "loc": {
                         "start": {
-                          "line": 17,
+                          "line": 18,
                           "column": 9
                         },
                         "end": {
-                          "line": 17,
-                          "column": 13
+                          "line": 18,
+                          "column": 48
                         }
-                      }
+                      },
+                      "callee": {
+                        "type": "MemberExpression",
+                        "start": 638,
+                        "end": 644,
+                        "loc": {
+                          "start": {
+                            "line": 18,
+                            "column": 9
+                          },
+                          "end": {
+                            "line": 18,
+                            "column": 15
+                          }
+                        },
+                        "object": {
+                          "type": "Identifier",
+                          "start": 638,
+                          "end": 639,
+                          "loc": {
+                            "start": {
+                              "line": 18,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 18,
+                              "column": 10
+                            },
+                            "identifierName": "m"
+                          },
+                          "name": "m"
+                        },
+                        "property": {
+                          "type": "Identifier",
+                          "start": 640,
+                          "end": 644,
+                          "loc": {
+                            "start": {
+                              "line": 18,
+                              "column": 11
+                            },
+                            "end": {
+                              "line": 18,
+                              "column": 15
+                            },
+                            "identifierName": "mult"
+                          },
+                          "name": "mult"
+                        },
+                        "computed": false
+                      },
+                      "arguments": [
+                        {
+                          "type": "CallExpression",
+                          "start": 645,
+                          "end": 676,
+                          "loc": {
+                            "start": {
+                              "line": 18,
+                              "column": 16
+                            },
+                            "end": {
+                              "line": 18,
+                              "column": 47
+                            }
+                          },
+                          "callee": {
+                            "type": "Identifier",
+                            "start": 645,
+                            "end": 664,
+                            "loc": {
+                              "start": {
+                                "line": 18,
+                                "column": 16
+                              },
+                              "end": {
+                                "line": 18,
+                                "column": 35
+                              },
+                              "identifierName": "SCNMatrix4MakeScale"
+                            },
+                            "name": "SCNMatrix4MakeScale"
+                          },
+                          "arguments": [
+                            {
+                              "type": "Identifier",
+                              "start": 665,
+                              "end": 667,
+                              "loc": {
+                                "start": {
+                                  "line": 18,
+                                  "column": 36
+                                },
+                                "end": {
+                                  "line": 18,
+                                  "column": 38
+                                },
+                                "identifierName": "sx"
+                              },
+                              "name": "sx"
+                            },
+                            {
+                              "type": "Identifier",
+                              "start": 669,
+                              "end": 671,
+                              "loc": {
+                                "start": {
+                                  "line": 18,
+                                  "column": 40
+                                },
+                                "end": {
+                                  "line": 18,
+                                  "column": 42
+                                },
+                                "identifierName": "sy"
+                              },
+                              "name": "sy"
+                            },
+                            {
+                              "type": "Identifier",
+                              "start": 673,
+                              "end": 675,
+                              "loc": {
+                                "start": {
+                                  "line": 18,
+                                  "column": 44
+                                },
+                                "end": {
+                                  "line": 18,
+                                  "column": 46
+                                },
+                                "identifierName": "sz"
+                              },
+                              "name": "sz"
+                            }
+                          ]
+                        }
+                      ]
                     }
                   }
                 ],
@@ -311,29 +517,29 @@
       },
       {
         "type": "Identifier",
-        "start": 590,
-        "end": 620,
+        "start": 681,
+        "end": 711,
         "loc": {
           "start": {
-            "line": 20,
+            "line": 21,
             "column": 0
           },
           "end": {
-            "line": 20,
+            "line": 21,
             "column": 30
           }
         },
         "declaration": {
           "type": "Identifier",
-          "start": 605,
-          "end": 620,
+          "start": 696,
+          "end": 711,
           "loc": {
             "start": {
-              "line": 20,
+              "line": 21,
               "column": 15
             },
             "end": {
-              "line": 20,
+              "line": 21,
               "column": 30
             },
             "identifierName": "SCNMatrix4Scale"
@@ -346,58 +552,58 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 590,
-        "end": 620,
+        "start": 681,
+        "end": 711,
         "loc": {
           "start": {
-            "line": 20,
+            "line": 21,
             "column": 0
           },
           "end": {
-            "line": 20,
+            "line": 21,
             "column": 30
           }
         },
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 523,
-          "end": 588,
+          "start": 579,
+          "end": 679,
           "loc": {
             "start": {
-              "line": 16,
+              "line": 17,
               "column": 0
             },
             "end": {
-              "line": 18,
+              "line": 19,
               "column": 1
             }
           },
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 529,
-              "end": 588,
+              "start": 585,
+              "end": 679,
               "loc": {
                 "start": {
-                  "line": 16,
+                  "line": 17,
                   "column": 6
                 },
                 "end": {
-                  "line": 18,
+                  "line": 19,
                   "column": 1
                 }
               },
               "id": {
                 "type": "Identifier",
-                "start": 529,
-                "end": 544,
+                "start": 585,
+                "end": 600,
                 "loc": {
                   "start": {
-                    "line": 16,
+                    "line": 17,
                     "column": 6
                   },
                   "end": {
-                    "line": 16,
+                    "line": 17,
                     "column": 21
                   },
                   "identifierName": "SCNMatrix4Scale"
@@ -407,29 +613,29 @@
               },
               "init": {
                 "type": "FunctionExpression",
-                "start": 547,
-                "end": 588,
+                "start": 603,
+                "end": 679,
                 "loc": {
                   "start": {
-                    "line": 16,
+                    "line": 17,
                     "column": 24
                   },
                   "end": {
-                    "line": 18,
+                    "line": 19,
                     "column": 1
                   }
                 },
                 "id": {
                   "type": "Identifier",
-                  "start": 529,
-                  "end": 544,
+                  "start": 585,
+                  "end": 600,
                   "loc": {
                     "start": {
-                      "line": 16,
+                      "line": 17,
                       "column": 6
                     },
                     "end": {
-                      "line": 16,
+                      "line": 17,
                       "column": 21
                     },
                     "identifierName": "SCNMatrix4Scale"
@@ -443,15 +649,15 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 556,
-                    "end": 557,
+                    "start": 612,
+                    "end": 613,
                     "loc": {
                       "start": {
-                        "line": 16,
+                        "line": 17,
                         "column": 33
                       },
                       "end": {
-                        "line": 16,
+                        "line": 17,
                         "column": 34
                       },
                       "identifierName": "m"
@@ -460,15 +666,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 559,
-                    "end": 561,
+                    "start": 615,
+                    "end": 617,
                     "loc": {
                       "start": {
-                        "line": 16,
+                        "line": 17,
                         "column": 36
                       },
                       "end": {
-                        "line": 16,
+                        "line": 17,
                         "column": 38
                       },
                       "identifierName": "sx"
@@ -477,15 +683,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 563,
-                    "end": 565,
+                    "start": 619,
+                    "end": 621,
                     "loc": {
                       "start": {
-                        "line": 16,
+                        "line": 17,
                         "column": 40
                       },
                       "end": {
-                        "line": 16,
+                        "line": 17,
                         "column": 42
                       },
                       "identifierName": "sy"
@@ -494,15 +700,15 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 567,
-                    "end": 569,
+                    "start": 623,
+                    "end": 625,
                     "loc": {
                       "start": {
-                        "line": 16,
+                        "line": 17,
                         "column": 44
                       },
                       "end": {
-                        "line": 16,
+                        "line": 17,
                         "column": 46
                       },
                       "identifierName": "sz"
@@ -512,47 +718,184 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 571,
-                  "end": 588,
+                  "start": 627,
+                  "end": 679,
                   "loc": {
                     "start": {
-                      "line": 16,
+                      "line": 17,
                       "column": 48
                     },
                     "end": {
-                      "line": 18,
+                      "line": 19,
                       "column": 1
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 575,
-                      "end": 586,
+                      "start": 631,
+                      "end": 677,
                       "loc": {
                         "start": {
-                          "line": 17,
+                          "line": 18,
                           "column": 2
                         },
                         "end": {
-                          "line": 17,
-                          "column": 13
+                          "line": 18,
+                          "column": 48
                         }
                       },
                       "argument": {
-                        "type": "NullLiteral",
-                        "start": 582,
-                        "end": 586,
+                        "type": "CallExpression",
+                        "start": 638,
+                        "end": 677,
                         "loc": {
                           "start": {
-                            "line": 17,
+                            "line": 18,
                             "column": 9
                           },
                           "end": {
-                            "line": 17,
-                            "column": 13
+                            "line": 18,
+                            "column": 48
                           }
-                        }
+                        },
+                        "callee": {
+                          "type": "MemberExpression",
+                          "start": 638,
+                          "end": 644,
+                          "loc": {
+                            "start": {
+                              "line": 18,
+                              "column": 9
+                            },
+                            "end": {
+                              "line": 18,
+                              "column": 15
+                            }
+                          },
+                          "object": {
+                            "type": "Identifier",
+                            "start": 638,
+                            "end": 639,
+                            "loc": {
+                              "start": {
+                                "line": 18,
+                                "column": 9
+                              },
+                              "end": {
+                                "line": 18,
+                                "column": 10
+                              },
+                              "identifierName": "m"
+                            },
+                            "name": "m"
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "start": 640,
+                            "end": 644,
+                            "loc": {
+                              "start": {
+                                "line": 18,
+                                "column": 11
+                              },
+                              "end": {
+                                "line": 18,
+                                "column": 15
+                              },
+                              "identifierName": "mult"
+                            },
+                            "name": "mult"
+                          },
+                          "computed": false
+                        },
+                        "arguments": [
+                          {
+                            "type": "CallExpression",
+                            "start": 645,
+                            "end": 676,
+                            "loc": {
+                              "start": {
+                                "line": 18,
+                                "column": 16
+                              },
+                              "end": {
+                                "line": 18,
+                                "column": 47
+                              }
+                            },
+                            "callee": {
+                              "type": "Identifier",
+                              "start": 645,
+                              "end": 664,
+                              "loc": {
+                                "start": {
+                                  "line": 18,
+                                  "column": 16
+                                },
+                                "end": {
+                                  "line": 18,
+                                  "column": 35
+                                },
+                                "identifierName": "SCNMatrix4MakeScale"
+                              },
+                              "name": "SCNMatrix4MakeScale"
+                            },
+                            "arguments": [
+                              {
+                                "type": "Identifier",
+                                "start": 665,
+                                "end": 667,
+                                "loc": {
+                                  "start": {
+                                    "line": 18,
+                                    "column": 36
+                                  },
+                                  "end": {
+                                    "line": 18,
+                                    "column": 38
+                                  },
+                                  "identifierName": "sx"
+                                },
+                                "name": "sx"
+                              },
+                              {
+                                "type": "Identifier",
+                                "start": 669,
+                                "end": 671,
+                                "loc": {
+                                  "start": {
+                                    "line": 18,
+                                    "column": 40
+                                  },
+                                  "end": {
+                                    "line": 18,
+                                    "column": 42
+                                  },
+                                  "identifierName": "sy"
+                                },
+                                "name": "sy"
+                              },
+                              {
+                                "type": "Identifier",
+                                "start": 673,
+                                "end": 675,
+                                "loc": {
+                                  "start": {
+                                    "line": 18,
+                                    "column": 44
+                                  },
+                                  "end": {
+                                    "line": 18,
+                                    "column": 46
+                                  },
+                                  "identifierName": "sz"
+                                },
+                                "name": "sz"
+                              }
+                            ]
+                          }
+                        ]
                       }
                     }
                   ],
@@ -567,15 +910,15 @@
             {
               "type": "CommentBlock",
               "value": "*\n * Returns a new matrix created by concatenating the specified matrix with a scale transformation.\n * @access public\n * @param {SCNMatrix4} m - \n * @param {number} sx - \n * @param {number} sy - \n * @param {number} sz - \n * @returns {SCNMatrix4} - \n * @desc The resulting transformation consists of the specified scale followed by the transformation represented by the mat parameter.\n * @see https://developer.apple.com/reference/scenekit/1409653-scnmatrix4scale\n ",
-              "start": 53,
-              "end": 522,
+              "start": 109,
+              "end": 578,
               "loc": {
                 "start": {
-                  "line": 5,
+                  "line": 6,
                   "column": 0
                 },
                 "end": {
-                  "line": 15,
+                  "line": 16,
                   "column": 3
                 }
               }
@@ -627,15 +970,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n * Returns a new matrix created by concatenating the specified matrix with a scale transformation.\n * @access public\n * @param {SCNMatrix4} m - \n * @param {number} sx - \n * @param {number} sy - \n * @param {number} sz - \n * @returns {SCNMatrix4} - \n * @desc The resulting transformation consists of the specified scale followed by the transformation represented by the mat parameter.\n * @see https://developer.apple.com/reference/scenekit/1409653-scnmatrix4scale\n ",
-      "start": 53,
-      "end": 522,
+      "start": 109,
+      "end": 578,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 6,
           "column": 0
         },
         "end": {
-          "line": 15,
+          "line": 16,
           "column": 3
         }
       }
@@ -777,17 +1120,124 @@
       }
     },
     {
-      "type": "CommentBlock",
-      "value": "*\n * Returns a new matrix created by concatenating the specified matrix with a scale transformation.\n * @access public\n * @param {SCNMatrix4} m - \n * @param {number} sx - \n * @param {number} sy - \n * @param {number} sz - \n * @returns {SCNMatrix4} - \n * @desc The resulting transformation consists of the specified scale followed by the transformation represented by the mat parameter.\n * @see https://developer.apple.com/reference/scenekit/1409653-scnmatrix4scale\n ",
-      "start": 53,
-      "end": 522,
+      "type": {
+        "label": "import",
+        "keyword": "import",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "import",
+      "start": 52,
+      "end": 58,
       "loc": {
         "start": {
-          "line": 5,
+          "line": 4,
           "column": 0
         },
         "end": {
-          "line": 15,
+          "line": 4,
+          "column": 6
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "SCNMatrix4MakeScale",
+      "start": 59,
+      "end": 78,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 7
+        },
+        "end": {
+          "line": 4,
+          "column": 26
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "from",
+      "start": 79,
+      "end": 83,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 27
+        },
+        "end": {
+          "line": 4,
+          "column": 31
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "string",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "./SCNMatrix4MakeScale",
+      "start": 84,
+      "end": 107,
+      "loc": {
+        "start": {
+          "line": 4,
+          "column": 32
+        },
+        "end": {
+          "line": 4,
+          "column": 55
+        }
+      }
+    },
+    {
+      "type": "CommentBlock",
+      "value": "*\n * Returns a new matrix created by concatenating the specified matrix with a scale transformation.\n * @access public\n * @param {SCNMatrix4} m - \n * @param {number} sx - \n * @param {number} sy - \n * @param {number} sz - \n * @returns {SCNMatrix4} - \n * @desc The resulting transformation consists of the specified scale followed by the transformation represented by the mat parameter.\n * @see https://developer.apple.com/reference/scenekit/1409653-scnmatrix4scale\n ",
+      "start": 109,
+      "end": 578,
+      "loc": {
+        "start": {
+          "line": 6,
+          "column": 0
+        },
+        "end": {
+          "line": 16,
           "column": 3
         }
       }
@@ -807,15 +1257,15 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 523,
-      "end": 528,
+      "start": 579,
+      "end": 584,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 0
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 5
         }
       }
@@ -833,15 +1283,15 @@
         "binop": null
       },
       "value": "SCNMatrix4Scale",
-      "start": 529,
-      "end": 544,
+      "start": 585,
+      "end": 600,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 6
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 21
         }
       }
@@ -860,15 +1310,15 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 545,
-      "end": 546,
+      "start": 601,
+      "end": 602,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 22
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 23
         }
       }
@@ -887,15 +1337,15 @@
         "binop": null
       },
       "value": "function",
-      "start": 547,
-      "end": 555,
+      "start": 603,
+      "end": 611,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 24
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 32
         }
       }
@@ -912,15 +1362,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 555,
-      "end": 556,
+      "start": 611,
+      "end": 612,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 32
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 33
         }
       }
@@ -938,15 +1388,15 @@
         "binop": null
       },
       "value": "m",
-      "start": 556,
-      "end": 557,
+      "start": 612,
+      "end": 613,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 33
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 34
         }
       }
@@ -964,15 +1414,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 557,
-      "end": 558,
+      "start": 613,
+      "end": 614,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 34
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 35
         }
       }
@@ -990,15 +1440,15 @@
         "binop": null
       },
       "value": "sx",
-      "start": 559,
-      "end": 561,
+      "start": 615,
+      "end": 617,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 36
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 38
         }
       }
@@ -1016,15 +1466,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 561,
-      "end": 562,
+      "start": 617,
+      "end": 618,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 38
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 39
         }
       }
@@ -1042,15 +1492,15 @@
         "binop": null
       },
       "value": "sy",
-      "start": 563,
-      "end": 565,
+      "start": 619,
+      "end": 621,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 40
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 42
         }
       }
@@ -1068,15 +1518,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 565,
-      "end": 566,
+      "start": 621,
+      "end": 622,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 42
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 43
         }
       }
@@ -1094,15 +1544,15 @@
         "binop": null
       },
       "value": "sz",
-      "start": 567,
-      "end": 569,
+      "start": 623,
+      "end": 625,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 44
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 46
         }
       }
@@ -1119,15 +1569,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 569,
-      "end": 570,
+      "start": 625,
+      "end": 626,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 46
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 47
         }
       }
@@ -1144,15 +1594,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 571,
-      "end": 572,
+      "start": 627,
+      "end": 628,
       "loc": {
         "start": {
-          "line": 16,
+          "line": 17,
           "column": 48
         },
         "end": {
-          "line": 16,
+          "line": 17,
           "column": 49
         }
       }
@@ -1172,25 +1622,50 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 575,
-      "end": 581,
+      "start": 631,
+      "end": 637,
       "loc": {
         "start": {
-          "line": 17,
+          "line": 18,
           "column": 2
         },
         "end": {
-          "line": 17,
+          "line": 18,
           "column": 8
         }
       }
     },
     {
       "type": {
-        "label": "null",
-        "keyword": "null",
+        "label": "name",
         "beforeExpr": false,
         "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "m",
+      "start": 638,
+      "end": 639,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 9
+        },
+        "end": {
+          "line": 18,
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ".",
+        "beforeExpr": false,
+        "startsExpr": false,
         "rightAssociative": false,
         "isLoop": false,
         "isAssign": false,
@@ -1199,17 +1674,298 @@
         "binop": null,
         "updateContext": null
       },
-      "value": "null",
-      "start": 582,
-      "end": 586,
+      "start": 639,
+      "end": 640,
       "loc": {
         "start": {
-          "line": 17,
-          "column": 9
+          "line": 18,
+          "column": 10
         },
         "end": {
-          "line": 17,
-          "column": 13
+          "line": 18,
+          "column": 11
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "mult",
+      "start": 640,
+      "end": 644,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 11
+        },
+        "end": {
+          "line": 18,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 644,
+      "end": 645,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 15
+        },
+        "end": {
+          "line": 18,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "SCNMatrix4MakeScale",
+      "start": 645,
+      "end": 664,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 16
+        },
+        "end": {
+          "line": 18,
+          "column": 35
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 664,
+      "end": 665,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 35
+        },
+        "end": {
+          "line": 18,
+          "column": 36
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "sx",
+      "start": 665,
+      "end": 667,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 36
+        },
+        "end": {
+          "line": 18,
+          "column": 38
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 667,
+      "end": 668,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 38
+        },
+        "end": {
+          "line": 18,
+          "column": 39
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "sy",
+      "start": 669,
+      "end": 671,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 40
+        },
+        "end": {
+          "line": 18,
+          "column": 42
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ",",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 671,
+      "end": 672,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 42
+        },
+        "end": {
+          "line": 18,
+          "column": 43
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "sz",
+      "start": 673,
+      "end": 675,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 44
+        },
+        "end": {
+          "line": 18,
+          "column": 46
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 675,
+      "end": 676,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 46
+        },
+        "end": {
+          "line": 18,
+          "column": 47
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 676,
+      "end": 677,
+      "loc": {
+        "start": {
+          "line": 18,
+          "column": 47
+        },
+        "end": {
+          "line": 18,
+          "column": 48
         }
       }
     },
@@ -1225,15 +1981,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 587,
-      "end": 588,
+      "start": 678,
+      "end": 679,
       "loc": {
         "start": {
-          "line": 18,
+          "line": 19,
           "column": 0
         },
         "end": {
-          "line": 18,
+          "line": 19,
           "column": 1
         }
       }
@@ -1253,15 +2009,15 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 590,
-      "end": 596,
+      "start": 681,
+      "end": 687,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 21,
           "column": 0
         },
         "end": {
-          "line": 20,
+          "line": 21,
           "column": 6
         }
       }
@@ -1281,15 +2037,15 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 597,
-      "end": 604,
+      "start": 688,
+      "end": 695,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 21,
           "column": 7
         },
         "end": {
-          "line": 20,
+          "line": 21,
           "column": 14
         }
       }
@@ -1307,15 +2063,15 @@
         "binop": null
       },
       "value": "SCNMatrix4Scale",
-      "start": 605,
-      "end": 620,
+      "start": 696,
+      "end": 711,
       "loc": {
         "start": {
-          "line": 20,
+          "line": 21,
           "column": 15
         },
         "end": {
-          "line": 20,
+          "line": 21,
           "column": 30
         }
       }
@@ -1333,15 +2089,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 621,
-      "end": 621,
+      "start": 712,
+      "end": 712,
       "loc": {
         "start": {
-          "line": 21,
+          "line": 22,
           "column": 0
         },
         "end": {
-          "line": 21,
+          "line": 22,
           "column": 0
         }
       }
