@@ -13086,6 +13086,7 @@ module.exports =
 	     * Decodes and returns the object graph previously encoded by NSKeyedArchiver and stored in a given NSData object.
 	     * @access public
 	     * @param {Buffer} data - An object graph previously encoded by NSKeyedArchiver.
+	     * @param {?string} path - 
 	     * @returns {?Object} - 
 	     * @desc This method raises an invalidArchiveOperationException if data is not a valid archive.
 	     * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1413894-unarchiveobject
@@ -13669,6 +13670,7 @@ module.exports =
 	     * 
 	     * @access public
 	     * @param {NSData} data - 
+	     * @param {string} path -
 	     * @returns {void}
 	     * @throws {Error}
 	     * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1413622-unarchivetoplevelobjectwithdata
@@ -14729,7 +14731,7 @@ module.exports =
 	    /**
 	     * @access public
 	     * @param {NSCoder} coder -
-	     * @returns {} -
+	     * @returns {Object} -
 	     */
 	    value: function initWithCoder(coder) {
 	      var special = coder._refObj['NS.special'];
@@ -23037,6 +23039,7 @@ module.exports =
 	      if (this.light === null) {
 	        return null;
 	      }
+	      this.light._updateProjectionTransform();
 	      var proj = this.light._projectionTransform;
 	      var view = this.viewTransform;
 	      return view.mult(proj);

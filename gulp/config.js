@@ -31,6 +31,7 @@ module.exports = {
 
   webpack: {
     node: {
+      target: 'node',
       entry: src + '/js/main.js',
       output: {
         path: dest,
@@ -66,6 +67,7 @@ module.exports = {
       }
     },
     web: {
+      target: 'web',
       entry: src + '/js/main.js',
       output: {
         path: dest,
