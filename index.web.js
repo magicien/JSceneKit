@@ -21475,7 +21475,7 @@ module.exports =
 	      if (this._particleSystems === null) {
 	        this._particleSystems = [];
 	      }
-	      //system._startTime = Date.now() * 0.001
+	      system.reset();
 	      this._particleSystems.push(system);
 	    }
 
@@ -33116,6 +33116,7 @@ module.exports =
 	        this._particleSystemsTransform = [];
 	      }
 	      //system._startTime = Date.now() * 0.001
+	      system.reset();
 	      this._particleSystems.push(system);
 	      this._particleSystemsTransform.push(transform);
 
@@ -37193,7 +37194,16 @@ module.exports =
 	     * @desc Calling this method removes all currently live particles from the scene.
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522968-reset
 	     */
-	    value: function reset() {}
+	    value: function reset() {
+	      this._finished = false;
+	      this._startTime = null;
+	      this._prevTime = 0;
+	      this._nextBirthTime = 0;
+	      this._emissionEndTime = 0;
+	      this._idleEndTime = 0;
+
+	      this._particles = [];
+	    }
 
 	    // Modifying Particles in Response to Particle System Events
 

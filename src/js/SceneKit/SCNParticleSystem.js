@@ -795,6 +795,14 @@ export default class SCNParticleSystem extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522968-reset
    */
   reset() {
+    this._finished = false
+    this._startTime = null
+    this._prevTime = 0
+    this._nextBirthTime = 0
+    this._emissionEndTime = 0
+    this._idleEndTime = 0
+
+    this._particles = []
   }
 
   // Modifying Particles in Response to Particle System Events

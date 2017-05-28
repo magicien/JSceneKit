@@ -398,6 +398,7 @@ You call this method in a try expression and handle any errors in the catch clau
       this._particleSystemsTransform = []
     }
     //system._startTime = Date.now() * 0.001
+    system.reset()
     this._particleSystems.push(system)
     this._particleSystemsTransform.push(transform)
 

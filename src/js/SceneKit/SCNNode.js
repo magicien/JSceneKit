@@ -1296,7 +1296,7 @@ export default class SCNNode extends NSObject {
     if(this._particleSystems === null){
       this._particleSystems = []
     }
-    //system._startTime = Date.now() * 0.001
+    system.reset()
     this._particleSystems.push(system)
   }
 
