@@ -1170,12 +1170,18 @@ export default class SCNRenderer extends NSObject {
     // Shadow
     //////////////////////////
     gl.useProgram(this._defaultShadowProgram._glProgram)
+    gl.enable(gl.DEPTH_TEST)
     gl.depthMask(true)
     gl.depthFunc(gl.LEQUAL)
     gl.clearDepth(1.0)
     gl.clearColor(1.0, 1.0, 1.0, 1.0)
     gl.disable(gl.BLEND)
     const shadowRenderingArray = this._createShadowNodeArray()
+//const mountain = shadowRenderingArray[4]
+//const lastIndex = shadowRenderingArray.length - 1
+//shadowRenderingArray[4] = shadowRenderingArray[lastIndex]
+//shadowRenderingArray[lastIndex] = mountain
+    
     for(const key of Object.keys(lights)){
       for(const lightNode of lights[key]){
         this._renderNodesShadowOfLight(shadowRenderingArray, lightNode)
