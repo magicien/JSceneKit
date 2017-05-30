@@ -564,8 +564,8 @@ const _defaultHitTestFragmentShader =
 
   layout(location = 0) out vec4 out_objectID;
   layout(location = 1) out vec4 out_faceID;
-  layout(location = 2) out vec3 out_position;
-  layout(location = 3) out vec3 out_normal;
+  layout(location = 2) out vec4 out_position;
+  layout(location = 3) out vec4 out_normal;
 
   void main() {
     out_objectID = vec4(
@@ -582,8 +582,8 @@ const _defaultHitTestFragmentShader =
     //);
     out_faceID = vec4(0, 0, 0, 0); // TODO: implement
     vec3 n = normalize(v_normal);
-    out_normal = vec3((n.x + 1.0) * 0.5, (n.y + 1.0) * 0.5, (n.z + 1.0) * 0.5);
-    out_position = vec3((v_position.x + 1.0) * 0.5, (v_position.y + 1.0) * 0.5, (v_position.z + 1.0) * 0.5);
+    out_normal = vec4((n.x + 1.0) * 0.5, (n.y + 1.0) * 0.5, (n.z + 1.0) * 0.5, 0);
+    out_position = vec4((v_position.x + 1.0) * 0.5, (v_position.y + 1.0) * 0.5, (v_position.z + 1.0) * 0.5, 0);
   }
 `
 
@@ -1993,11 +1993,13 @@ export default class SCNRenderer extends NSObject {
 
     this._hitPositionTexture = gl.createTexture()
     gl.bindTexture(gl.TEXTURE_2D, this._hitPositionTexture)
-    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, width, height, 0, gl.RGB, gl.UNSIGNED_BYTE, null)
+    //gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, width, height, 0, gl.RGB, gl.UNSIGNED_BYTE, null)
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, width, height, 0, gl.RGBA, gl.UNSIGNED_BYTE, null)
 
     this._hitNormalTexture = gl.createTexture()
     gl.bindTexture(gl.TEXTURE_2D, this._hitNormalTexture)
-    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, width, height, 0, gl.RGB, gl.UNSIGNED_BYTE, null)
+    //gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, width, height, 0, gl.RGB, gl.UNSIGNED_BYTE, null)
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, width, height, 0, gl.RGBA, gl.UNSIGNED_BYTE, null)
 
     //gl.framebufferRenderbuffer(target, attachment, renderbuffertarget, renderbuffer)
     gl.framebufferRenderbuffer(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT, gl.RENDERBUFFER, this._hitDepthBuffer)
@@ -2135,15 +2137,15 @@ export default class SCNRenderer extends NSObject {
     gl.readPixels(x, y, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, faceIDBuf, 0)
     const faceIndex = faceIDBuf[0] * 16777216 + faceIDBuf[1] * 65536 + faceIDBuf[2] * 256 + faceIDBuf[3]
 
-    const positionBuf = new Uint8Array(3)
+    const positionBuf = new Uint8Array(4)
     gl.readBuffer(gl.COLOR_ATTACHMENT2)
-    gl.readPixels(x, y, 1, 1, gl.RGB, gl.UNSIGNED_BYTE, positionBuf, 0)
-    const screenPos = new SCNVector3(positionBuf[0] / 127.5 - 1.0, positionBuf[1] / 127.5 - 1.0, positionBuf[2] / 255.0)
+    gl.readPixels(x, y, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, positionBuf, 0)
+    const screenPos = new SCNVector3(positionBuf[0] / 127.5 - 1.0, positionBuf[1] / 127.5 - 1.0, positionBuf[2] / 127.5 - 1.0)
     const position = screenPos.transform(viewProjectionTransform.invert())
 
-    const normalBuf = new Uint8Array(3)
+    const normalBuf = new Uint8Array(4)
     gl.readBuffer(gl.COLOR_ATTACHMENT3)
-    gl.readPixels(x, y, 1, 1, gl.RGB, gl.UNSIGNED_BYTE, normalBuf, 0)
+    gl.readPixels(x, y, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, normalBuf, 0)
     const normal = new SCNVector3(normalBuf[0] / 127.5 - 1.0, normalBuf[1] / 127.5 - 1.0, normalBuf[2] / 127.5 - 1.0)
 
     //console.log('***** Hit Result *****')
@@ -2263,15 +2265,15 @@ export default class SCNRenderer extends NSObject {
     gl.readPixels(x, y, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, faceIDBuf, 0)
     const faceIndex = faceIDBuf[0] * 16777216 + faceIDBuf[1] * 65536 + faceIDBuf[2] * 256 + faceIDBuf[3]
 
-    const positionBuf = new Uint8Array(3)
+    const positionBuf = new Uint8Array(4)
     gl.readBuffer(gl.COLOR_ATTACHMENT2)
-    gl.readPixels(x, y, 1, 1, gl.RGB, gl.UNSIGNED_BYTE, positionBuf, 0)
+    gl.readPixels(x, y, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, positionBuf, 0)
     const screenPos = new SCNVector3(positionBuf[0] / 127.5 - 1.0, positionBuf[1] / 127.5 - 1.0, positionBuf[2] / 127.5 - 1.0)
     const position = screenPos.transform(viewProjectionTransform.invert())
 
-    const normalBuf = new Uint8Array(3)
+    const normalBuf = new Uint8Array(4)
     gl.readBuffer(gl.COLOR_ATTACHMENT3)
-    gl.readPixels(x, y, 1, 1, gl.RGB, gl.UNSIGNED_BYTE, normalBuf, 0)
+    gl.readPixels(x, y, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, normalBuf, 0)
     const normal = new SCNVector3(normalBuf[0] / 127.5 - 1.0, normalBuf[1] / 127.5 - 1.0, normalBuf[2] / 127.5 - 1.0)
 
     //console.log('***** Hit Result *****')

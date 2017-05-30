@@ -741,8 +741,15 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     const material = this.materials[index % materialCount]
     let diffuse = material.diffuse.float32Array()
     diffuse[3] *= opacity
+    let ambient = null
+    if(material.locksAmbientWithDiffuse){
+      ambient = diffuse
+    }else{
+      ambient = material.ambient.float32Array()
+      ambient[3] *= opacity
+    }
     const materialData = new Float32Array([
-      ...material.ambient.float32Array(),
+      ...ambient,
       ...diffuse,
       ...material.specular.float32Array(),
       ...material.emission.float32Array(),
