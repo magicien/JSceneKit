@@ -333,7 +333,7 @@ export default class SCNLight extends NSObject {
       return this.shadowMapSize.width
     }
     // FIXME: adjust shadowMapSize
-    return 1024
+    return 2048
   }
 
   get _shadowMapHeight() {
@@ -341,7 +341,7 @@ export default class SCNLight extends NSObject {
       return this.shadowMapSize.height
     }
     // FIXME: adjust shadowMapSize
-    return 1024
+    return 2048
   }
 
 
