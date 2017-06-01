@@ -53,6 +53,8 @@ const _defaultVertexShader =
     vec4 specular;
     vec4 emission;
     float shininess;
+    //vec4 metalness;
+    //vec4 roughness;
   } material;
 
   struct AmbientLight {
@@ -111,7 +113,8 @@ const _defaultVertexShader =
   in vec3 position;
   in vec3 normal;
   //in vec3 tangent;
-  in vec2 texcoord;
+  in vec2 texcoord0;
+  in vec2 texcoord1;
   in vec4 boneIndices;
   in vec4 boneWeights;
 
@@ -119,7 +122,8 @@ const _defaultVertexShader =
   out vec3 v_normal;
   //out vec3 v_tangent;
   //out vec3 v_bitangent;
-  out vec2 v_texcoord;
+  out vec2 v_texcoord0;
+  out vec2 v_texcoord1;
   out vec4 v_color;
   out vec3 v_eye;
   out float v_fogFactor;
@@ -172,7 +176,8 @@ const _defaultVertexShader =
     float distance = length(viewVec);
     v_fogFactor = clamp((distance - fog.startDistance) / (fog.endDistance - fog.startDistance), 0.0, 1.0);
 
-    v_texcoord = texcoord;
+    v_texcoord0 = texcoord0;
+    v_texcoord1 = texcoord1;
     gl_Position = camera.viewProjectionTransform * vec4(pos, 1.0);
   }
 `
@@ -242,6 +247,8 @@ const _defaultFragmentShader =
   #define TEXTURE_TRANSPARENT_INDEX 5
   #define TEXTURE_MULTIPLY_INDEX 6
   #define TEXTURE_NORMAL_INDEX 7
+
+  uniform bool selfIllumination;
 
   uniform sampler2D u_emissionTexture;
   uniform sampler2D u_ambientTexture;
@@ -314,7 +321,8 @@ const _defaultFragmentShader =
 
   in vec3 v_position;
   in vec3 v_normal;
-  in vec2 v_texcoord;
+  in vec2 v_texcoord0;
+  in vec2 v_texcoord1;
   in vec4 v_color;
   in vec3 v_eye;
   //in vec3 v_tangent;
@@ -344,8 +352,13 @@ const _defaultFragmentShader =
 
     // emission texture
     if(textureFlags[TEXTURE_EMISSION_INDEX]){
-      vec4 color = texture(u_emissionTexture, v_texcoord);
-      outColor = color * outColor;
+      if(selfIllumination){
+        vec4 color = texture(u_emissionTexture, v_texcoord1); // FIXME: check mappingChannel to decide which texture you use.
+        outColor += color;
+      }else{
+        vec4 color = texture(u_emissionTexture, v_texcoord0);
+        outColor = color * outColor;
+      }
     }
 
     int numLights = 0;
@@ -355,7 +368,7 @@ const _defaultFragmentShader =
     
     // diffuse texture
     if(textureFlags[TEXTURE_DIFFUSE_INDEX]){
-      vec4 color = texture(u_diffuseTexture, v_texcoord);
+      vec4 color = texture(u_diffuseTexture, v_texcoord0);
       outColor = color * outColor;
     }
 
@@ -378,7 +391,7 @@ const _fsDirectional = `
     if(diffuse > 0.0f){
       vec3 halfVec = normalize(lightVec + viewVec);
       float specular = pow(dot(halfVec, nom), material.shininess);
-      outColor.rgb += material.specular.rgb * specular; // TODO: get the light color of specular
+      outColor.rgb += material.specular.rgb * specular;
     }
   }
   numLights += NUM_DIRECTIONAL_LIGHTS;
@@ -398,7 +411,7 @@ const _fsDirectionalShadow = `
     if(diffuse > 0.0f){
       vec3 halfVec = normalize(lightVec + viewVec);
       float specular = pow(dot(halfVec, nom), material.shininess);
-      outColor.rgb += material.specular.rgb * specular; // TODO: get the light color of specular
+      outColor.rgb += material.specular.rgb * specular;
     }
   }
 
@@ -2654,7 +2667,8 @@ export default class SCNRenderer extends NSObject {
     // TODO: retain attribute locations
     const positionLoc = gl.getAttribLocation(program, 'position')
     const normalLoc = gl.getAttribLocation(program, 'normal')
-    const texcoordLoc = gl.getAttribLocation(program, 'texcoord')
+    const texcoord0Loc = gl.getAttribLocation(program, 'texcoord0')
+    const texcoord1Loc = gl.getAttribLocation(program, 'texcoord1')
     const boneIndicesLoc = gl.getAttribLocation(program, 'boneIndices')
     const boneWeightsLoc = gl.getAttribLocation(program, 'boneWeights')
 
@@ -2671,7 +2685,8 @@ export default class SCNRenderer extends NSObject {
 
       gl.bindAttribLocation(program, positionLoc, 'position')
       gl.bindAttribLocation(program, normalLoc, 'normal')
-      gl.bindAttribLocation(program, texcoordLoc, 'texcoord')
+      gl.bindAttribLocation(program, texcoord0Loc, 'texcoord0')
+      gl.bindAttribLocation(program, texcoord1Loc, 'texcoord1')
       gl.bindAttribLocation(program, boneIndicesLoc, 'boneIndices')
       gl.bindAttribLocation(program, boneWeightsLoc, 'boneWeights')
       
@@ -2697,14 +2712,23 @@ export default class SCNRenderer extends NSObject {
         gl.disableVertexAttribArray(normalLoc)
       }
 
-      // texcoord
-      const texSrc = geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[0]
-      if(texSrc){
+      // texcoord0
+      const tex0Src = geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[0]
+      if(tex0Src){
         //console.log(`texSrc: ${texcoordLoc}, ${texSrc.componentsPerVector}, ${texSrc.dataStride}, ${texSrc.dataOffset}`)
-        gl.enableVertexAttribArray(texcoordLoc)
-        gl.vertexAttribPointer(texcoordLoc, texSrc.componentsPerVector, gl.FLOAT, false, texSrc.dataStride, texSrc.dataOffset)
+        gl.enableVertexAttribArray(texcoord0Loc)
+        gl.vertexAttribPointer(texcoord0Loc, tex0Src.componentsPerVector, gl.FLOAT, false, tex0Src.dataStride, tex0Src.dataOffset)
       }else{
-        gl.disableVertexAttribArray(texcoordLoc)
+        gl.disableVertexAttribArray(texcoord0Loc)
+      }
+
+      // texcoord1
+      const tex1Src = geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[1]
+      if(tex1Src){
+        gl.enableVertexAttribArray(texcoord1Loc)
+        gl.vertexAttribPointer(texcoord1Loc, tex1Src.componentsPerVector, gl.FLOAT, false, tex1Src.dataStride, tex1Src.dataOffset)
+      }else{
+        gl.disableVertexAttribArray(texcoord1Loc)
       }
 
       // boneIndices

@@ -576,14 +576,16 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     const arr = []
     const vertexSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
     const normalSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.normal)[0]
-    const texcoordSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[0]
+    const texcoordSource0 = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[0]
+    const texcoordSource1 = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[1]
     const indexSource = baseSkinner ? baseSkinner._boneIndices : null
     const weightSource = baseSkinner ? baseSkinner._boneWeights: null
     const vectorCount = vertexSource.vectorCount
 
     const pVertexSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
     const pNormalSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.normal)[0]
-    const pTexcoordSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[0]
+    const pTexcoordSource0 = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[0]
+    const pTexcoordSource1 = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[1]
     //const pIndexSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneIndices)[0]
     const pIndexSource = skinner ? skinner._boneIndices : null
     //const pWeightSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneWeights)[0]
@@ -595,16 +597,20 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     if(typeof normalSource !== 'undefined' && normalSource.vectorCount !== vectorCount){
       throw new Error('normalSource.vectorCount !== vertexSource.vectorCount')
     }
-    if(typeof texcoordSource !== 'undefined' && texcoordSource.vectorCount !== vectorCount){
-      throw new Error('texcoordSource.vectorCount !== vertexSource.vectorCount')
+    if(typeof texcoordSource0 !== 'undefined' && texcoordSource0.vectorCount !== vectorCount){
+      throw new Error('texcoordSource0.vectorCount !== vertexSource.vectorCount')
+    }
+    if(typeof texcoordSource1 !== 'undefined' && texcoordSource1.vectorCount !== vectorCount){
+      throw new Error('texcoordSource1.vectorCount !== vertexSource.vectorCount')
     }
 
-    const vertexArray = vertexSource ? vertexSource.data : null
+    //const vertexArray = vertexSource ? vertexSource.data : null
     const vertexComponents = vertexSource ? vertexSource.componentsPerVector : 0
-    const normalArray = normalSource ? normalSource.data : null
+    //const normalArray = normalSource ? normalSource.data : null
     const normalComponents = normalSource ? normalSource.componentsPerVector : 0
-    const texcoordArray = texcoordSource ? texcoordSource.data : null
-    const texcoordComponents = texcoordSource ? texcoordSource.componentsPerVector : 0
+    //const texcoordArray = texcoordSource ? texcoordSource.data : null
+    const texcoordComponents0 = texcoordSource0 ? texcoordSource0.componentsPerVector : 0
+    const texcoordComponents1 = texcoordSource1 ? texcoordSource1.componentsPerVector : 0
 
     for(let i=0; i<vectorCount; i++){
       if(vertexSource){
@@ -613,9 +619,11 @@ This method is for OpenGL shader programs only. To bind custom variable data for
       if(normalSource){
         arr.push(...normalSource._vectorAt(i))
       }
-      if(texcoordSource){
-        //console.log(`tex ${i} ${texcoordSource._vectorAt(i)}`)
-        arr.push(...texcoordSource._vectorAt(i))
+      if(texcoordSource0){
+        arr.push(...texcoordSource0._vectorAt(i))
+      }
+      if(texcoordSource1){
+        arr.push(...texcoordSource1._vectorAt(i))
       }
     }
 
@@ -627,7 +635,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     // FIXME: Don't change geometry sources. Use other variables
     const bytesPerComponent = 4
     let offset = 0
-    const stride = (vertexComponents + normalComponents + texcoordComponents) * bytesPerComponent
+    const stride = (vertexComponents + normalComponents + texcoordComponents0 + texcoordComponents1) * bytesPerComponent
     pVertexSource._bytesPerComponent = bytesPerComponent
     pVertexSource._dataOffset = offset
     pVertexSource._dataStride = stride
@@ -639,11 +647,17 @@ This method is for OpenGL shader programs only. To bind custom variable data for
       pNormalSource._dataStride = stride
       offset += normalComponents * bytesPerComponent
     }
-    if(pTexcoordSource){
-      pTexcoordSource._bytesPerComponent = bytesPerComponent
-      pTexcoordSource._dataOffset = offset
-      pTexcoordSource._dataStride = stride
-      offset += texcoordComponents * bytesPerComponent
+    if(pTexcoordSource0){
+      pTexcoordSource0._bytesPerComponent = bytesPerComponent
+      pTexcoordSource0._dataOffset = offset
+      pTexcoordSource0._dataStride = stride
+      offset += texcoordComponents0 * bytesPerComponent
+    }
+    if(pTexcoordSource1){
+      pTexcoordSource1._bytesPerComponent = bytesPerComponent
+      pTexcoordSource1._dataOffset = offset
+      pTexcoordSource1._dataStride = stride
+      offset += texcoordComponents1 * bytesPerComponent
     }
 
     //console.log(`offset: ${offset}, vectorCount: ${vectorCount}`)
@@ -686,8 +700,11 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     if(pNormalSource){
       pNormalSource._data = arr
     }
-    if(pTexcoordSource){
-      pTexcoordSource._data = arr
+    if(pTexcoordSource0){
+      pTexcoordSource0._data = arr
+    }
+    if(pTexcoordSource1){
+      pTexcoordSource1._data = arr
     }
     if(pIndexSource){
       pIndexSource._data = arr
@@ -761,7 +778,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
 
     const textureFlags = []
     const textures = [
-      { name: 'emission', symbol: 'TEXTURE0' },
+      //{ name: 'emission', symbol: 'TEXTURE0' },
       { name: 'ambient', symbol: 'TEXTURE1' },
       { name: 'diffuse', symbol: 'TEXTURE2' },
       { name: 'specular', symbol: 'TEXTURE3' },
@@ -770,7 +787,21 @@ This method is for OpenGL shader programs only. To bind custom variable data for
       { name: 'multiply', symbol: 'TEXTURE6' },
       { name: 'normal', symbol: 'TEXTURE7' }
     ]
-    textures.forEach((texture) => {
+
+    let selfIllumination = 0
+    if(material._selfIllumination._contents instanceof Image || material._selfIllumination._contents instanceof WebGLTexture){
+      this._setTextureToName(gl, material._selfIllumination, 'TEXTURE0', textureFlags)
+      selfIllumination = 1
+    }else if(material._emission._contents instanceof Image || material._emission._contents instanceof WebGLTexture){
+      this._setTextureToName(gl, material._emission, 'TEXTURE0', textureFlags)
+    }else{
+      textureFlags.push(0)
+    }
+    gl.uniform1i(gl.getUniformLocation(program, 'selfIllumination'), selfIllumination)
+
+    for(const texture of textures){
+      this._setTextureToName(gl, material[texture.name], texture.symbol, textureFlags)
+      /*
       const m = material[texture.name]
       if(m._contents instanceof Image){
         m._contents = this._createTexture(gl, m._contents)
@@ -786,7 +817,8 @@ This method is for OpenGL shader programs only. To bind custom variable data for
       }else{
         textureFlags.push(0)
       }
-    })
+      */
+    }
     // TODO: cache uniform location
     gl.uniform1iv(gl.getUniformLocation(program, 'textureFlags'), new Int32Array(textureFlags))
 
@@ -799,6 +831,31 @@ This method is for OpenGL shader programs only. To bind custom variable data for
       }else{
         gl.cullFace(gl.FRONT)
       }
+    }
+  }
+
+  /**
+   * @access private
+   * @param {WebGLRenderingContext} gl -
+   * @param {SCNMaterialProperty} m -
+   * @param {string} name -
+   * @param {boolean[]} textureFlags -
+   * @returns {void}
+   */
+  _setTextureToName(gl, m, name, textureFlags) {
+    if(m._contents instanceof Image){
+      m._contents = this._createTexture(gl, m._contents)
+    }
+    if(m._contents instanceof WebGLTexture){
+      textureFlags.push(1)
+      gl.activeTexture(gl[name]) // FIXME: use m._contents.mappingChannel
+      gl.bindTexture(gl.TEXTURE_2D, m._contents)
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, m._magnificationFilterFor(gl))
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, m._minificationFilterFor(gl))
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, m._wrapSFor(gl))
+      gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, m._wrapTFor(gl))
+    }else{
+      textureFlags.push(0)
     }
   }
 
