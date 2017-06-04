@@ -482,7 +482,9 @@ SCNGeometrySource *source = [SCNGeometrySource geometrySourceWithBuffer:buffer
    */
   _scnVectorAt(index) {
     const vec = this._vectorAt(index)
-    if(vec.length === 3){
+    if(vec.length === 2){
+      return new CGPoint(vec[0], vec[1])
+    }else if(vec.length === 3){
       return new SCNVector3(vec[0], vec[1], vec[2])
     }else if(vec.length === 4){
       return new SCNVector4(vec[0], vec[1], vec[2], vec[3])

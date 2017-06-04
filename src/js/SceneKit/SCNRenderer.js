@@ -53,8 +53,7 @@ const _defaultVertexShader =
     vec4 specular;
     vec4 emission;
     float shininess;
-    //vec4 metalness;
-    //vec4 roughness;
+    float fresnelExponent;
   } material;
 
   struct AmbientLight {
@@ -112,7 +111,7 @@ const _defaultVertexShader =
 
   in vec3 position;
   in vec3 normal;
-  //in vec3 tangent;
+  in vec3 tangent;
   in vec2 texcoord0;
   in vec2 texcoord1;
   in vec4 boneIndices;
@@ -120,8 +119,8 @@ const _defaultVertexShader =
 
   out vec3 v_position;
   out vec3 v_normal;
-  //out vec3 v_tangent;
-  //out vec3 v_bitangent;
+  out vec3 v_tangent;
+  out vec3 v_bitangent;
   out vec2 v_texcoord0;
   out vec2 v_texcoord1;
   out vec4 v_color;
@@ -131,7 +130,6 @@ const _defaultVertexShader =
   void main() {
     vec3 pos = vec3(0, 0, 0);
     vec3 nom = vec3(0, 0, 0);
-    vec3 tangent = vec3(1, 0, 0); // DEBUG
     vec3 tng = vec3(0, 0, 0);
 
     if(numSkinningJoints > 0){
@@ -156,16 +154,14 @@ const _defaultVertexShader =
                                         vec4(0, 0, 0, 1)));
       pos = (jointMatrix * vec4(position, 1.0)).xyz;
       nom = mat3(jointMatrix) * normal;
-      tng += mat3(jointMatrix) * tangent;
+      tng = mat3(jointMatrix) * tangent;
     }
     v_position = pos;
-    v_normal = nom;
-    vec3 btng = cross(nom, tng);
+    v_normal = normalize(nom);
+    v_tangent = normalize(tng);
+    v_bitangent = cross(v_tangent, v_normal);
 
     vec3 viewVec = camera.position.xyz - pos;
-    //v_eye.x = dot(viewVec, tng);
-    //v_eye.y = dot(viewVec, btng);
-    //v_eye.z = dot(viewVec, nom);
     v_eye = viewVec;
 
     v_color = material.emission;
@@ -254,7 +250,7 @@ const _defaultFragmentShader =
   uniform sampler2D u_ambientTexture;
   uniform sampler2D u_diffuseTexture;
   uniform sampler2D u_specularTexture;
-  uniform sampler2D u_reflectiveTexture;
+  uniform samplerCube u_reflectiveTexture;
   uniform sampler2D u_transparentTexture;
   uniform sampler2D u_multiplyTexture;
   uniform sampler2D u_normalTexture;
@@ -273,6 +269,7 @@ const _defaultFragmentShader =
     vec4 specular;
     vec4 emission;
     float shininess;
+    float fresnelExponent;
   } material;
 
   struct AmbientLight {
@@ -325,8 +322,8 @@ const _defaultFragmentShader =
   in vec2 v_texcoord1;
   in vec4 v_color;
   in vec3 v_eye;
-  //in vec3 v_tangent;
-  //in vec3 v_bitangent;
+  in vec3 v_tangent;
+  in vec3 v_bitangent;
   in float v_fogFactor;
 
   out vec4 outColor;
@@ -347,8 +344,11 @@ const _defaultFragmentShader =
     vec3 nom = normalize(v_normal);
 
     // normal texture
-    //if(textureFlags[TEXTURE_NORMAL_INDEX]){
-    //}
+    if(textureFlags[TEXTURE_NORMAL_INDEX]){
+      mat3 tsInv = mat3(normalize(v_tangent), normalize(v_bitangent), nom);
+      vec3 color = normalize(texture(u_normalTexture, v_texcoord0).rgb * 2.0 - 1.0); // FIXME: check mappingChannel to decide which texture you use.
+      nom = normalize(tsInv * color);
+    }
 
     // emission texture
     if(textureFlags[TEXTURE_EMISSION_INDEX]){
@@ -372,8 +372,25 @@ const _defaultFragmentShader =
       outColor = color * outColor;
     }
 
+    // fresnel reflection
+    if(textureFlags[TEXTURE_REFLECTIVE_INDEX]){
+      vec3 r = reflect(viewVec, nom);
+      //float f0 = 0.0; // TODO: calculate f0
+      //float fresnel = f0 + (1.0 - f0) * pow(1.0 - clamp(dot(viewVec, nom), 0.0, 1.0), material.fresnelExponent);
+      float fresnel = 0.4 * pow(1.0 - clamp(dot(viewVec, nom), 0.0, 1.0), material.fresnelExponent);
+      outColor += texture(u_reflectiveTexture, r) * fresnel;
+    }
+
     float fogFactor = pow(v_fogFactor, fog.densityExponent);
     outColor = mix(outColor, fog.color, fogFactor);
+
+    // DEBUG
+    //if(textureFlags[TEXTURE_NORMAL_INDEX]){
+    //  mat3 tsInv = mat3(normalize(v_tangent), normalize(v_bitangent), nom);
+    //  vec3 color = normalize(texture(u_normalTexture, v_texcoord0).rgb * 2.0 - 1.0); // FIXME: check mappingChannel to decide which texture you use.
+    //  outColor.rgb = (normalize(tsInv * color) + 1.0) * 0.5;
+    //}
+
   }
 `
 
@@ -454,8 +471,10 @@ const _defaultParticleVertexShader =
 
   uniform mat4 viewTransform;
   uniform mat4 projectionTransform;
+  uniform float stretchFactor;
 
   in vec3 position;
+  in vec3 velocity;
   in vec4 rotation;
   in vec4 color;
   in float size;
@@ -467,20 +486,34 @@ const _defaultParticleVertexShader =
 
   void main() {
     vec4 pos = viewTransform * vec4(position, 1.0);
-    float sinAngle = sin(rotation.w);
-    float cosAngle = cos(rotation.w);
-    float tcos = 1.0 - cosAngle;
-    vec3 d = vec3(
-        corner.x * (rotation.x * rotation.x * tcos + cosAngle)
-      + corner.y * (rotation.x * rotation.y * tcos - rotation.z * sinAngle),
-        corner.x * (rotation.y * rotation.x * tcos + rotation.z * sinAngle)
-      + corner.y * (rotation.y * rotation.y * tcos + cosAngle),
-        corner.x * (rotation.z * rotation.x * tcos - rotation.y * sinAngle)
-      + corner.y * (rotation.z * rotation.y * tcos + rotation.x * sinAngle)) * size * 0.5;
+    vec3 d;
 
+    if(stretchFactor > 0.0){
+      vec4 v = viewTransform * vec4(velocity, 1.0) * stretchFactor;
+      if(corner.y > 0.0){
+        pos.xyz += v.xyz;
+      }
+      vec2 cy = normalize(v.xy);
+      vec2 cx = vec2(-cy.y, cy.x);
+      d = vec3(cx * corner.x + cy * corner.y, 0) * size * 0.5;
+    }else{
+      float sinAngle = sin(rotation.w);
+      float cosAngle = cos(rotation.w);
+      float tcos = 1.0 - cosAngle;
+      d = vec3(
+          corner.x * (rotation.x * rotation.x * tcos + cosAngle)
+        + corner.y * (rotation.x * rotation.y * tcos - rotation.z * sinAngle),
+          corner.x * (rotation.y * rotation.x * tcos + rotation.z * sinAngle)
+        + corner.y * (rotation.y * rotation.y * tcos + cosAngle),
+          corner.x * (rotation.z * rotation.x * tcos - rotation.y * sinAngle)
+        + corner.y * (rotation.z * rotation.y * tcos + rotation.x * sinAngle)) * size * 0.5;
+    }
     pos.xyz += d;
 
     v_color = color;
+    if(stretchFactor > 0.0){
+      v_color = vec4(1.0, 1.0, 1.0, 1.0); // DEBUG
+    }
     v_texcoord = corner * vec2(0.5, -0.5) + 0.5;
     gl_Position = projectionTransform * pos;
   }
@@ -1516,10 +1549,7 @@ export default class SCNRenderer extends NSObject {
     }
     const gl = this.context
     const geometry = node.presentation.geometry
-    let program = this._defaultProgram._glProgram
-    if(geometry.program !== null){
-      program = geometry.program._glProgram
-    }
+    const program = this._getProgramForGeometry(geometry)
     gl.useProgram(program)
 
     if(geometry._vertexArrayObjects === null){
@@ -2473,6 +2503,22 @@ export default class SCNRenderer extends NSObject {
     return this._audioEngine
   }
 
+  _getProgramForGeometry(geometry) {
+    if(geometry.program !== null){
+      return geometry.program._glProgram
+    }
+    if(geometry._shadableHelper === null){
+      return this._defaultProgram._glProgram
+    }
+    return this._defaultProgram._glProgram
+    // TODO: implement
+    //const gl = this.context
+    //const program = new SCNProgram()
+    //program._glProgram = gl.createProgram()
+
+    //geometry.program = program
+  }
+
   /**
    * @access private
    * @type {SCNProgram}
@@ -2667,6 +2713,7 @@ export default class SCNRenderer extends NSObject {
     // TODO: retain attribute locations
     const positionLoc = gl.getAttribLocation(program, 'position')
     const normalLoc = gl.getAttribLocation(program, 'normal')
+    const tangentLoc = gl.getAttribLocation(program, 'tangent')
     const texcoord0Loc = gl.getAttribLocation(program, 'texcoord0')
     const texcoord1Loc = gl.getAttribLocation(program, 'texcoord1')
     const boneIndicesLoc = gl.getAttribLocation(program, 'boneIndices')
@@ -2685,6 +2732,7 @@ export default class SCNRenderer extends NSObject {
 
       gl.bindAttribLocation(program, positionLoc, 'position')
       gl.bindAttribLocation(program, normalLoc, 'normal')
+      gl.bindAttribLocation(program, tangentLoc, 'tangent')
       gl.bindAttribLocation(program, texcoord0Loc, 'texcoord0')
       gl.bindAttribLocation(program, texcoord1Loc, 'texcoord1')
       gl.bindAttribLocation(program, boneIndicesLoc, 'boneIndices')
@@ -2695,7 +2743,6 @@ export default class SCNRenderer extends NSObject {
       // position
       const posSrc = geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
       if(posSrc){
-        //console.log(`posSrc: ${positionLoc}, ${posSrc.componentsPerVector}, ${posSrc.dataStride}, ${posSrc.dataOffset}`)
         gl.enableVertexAttribArray(positionLoc)
         gl.vertexAttribPointer(positionLoc, posSrc.componentsPerVector, gl.FLOAT, false, posSrc.dataStride, posSrc.dataOffset)
       }else{
@@ -2705,11 +2752,19 @@ export default class SCNRenderer extends NSObject {
       // normal
       const nrmSrc = geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.normal)[0]
       if(nrmSrc){
-        //console.log(`nrmSrc: ${normalLoc}, ${nrmSrc.componentsPerVector}, ${nrmSrc.dataStride}, ${nrmSrc.dataOffset}`)
         gl.enableVertexAttribArray(normalLoc)
         gl.vertexAttribPointer(normalLoc, nrmSrc.componentsPerVector, gl.FLOAT, false, nrmSrc.dataStride, nrmSrc.dataOffset)
       }else{
         gl.disableVertexAttribArray(normalLoc)
+      }
+
+      // tangent
+      const tanSrc = geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.tangent)[0]
+      if(tanSrc){
+        gl.enableVertexAttribArray(tangentLoc)
+        gl.vertexAttribPointer(tangentLoc, tanSrc.componentsPerVector, gl.FLOAT, false, tanSrc.dataStride, tanSrc.dataOffset)
+      }else{
+        gl.disableVertexAttribArray(tangentLoc)
       }
 
       // texcoord0

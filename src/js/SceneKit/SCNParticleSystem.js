@@ -139,6 +139,7 @@ class _Particle extends NSObject {
   floatArray() {
     const baseArray = [
       ...this.position.floatArray(), 
+      ...this.velocity.floatArray(),
       ...this.axis.floatArray(), this.angle,
       ...this.color.floatArray(),
       this.size
@@ -961,6 +962,7 @@ export default class SCNParticleSystem extends NSObject {
     // prepare vertex array data
     // TODO: retain attribute locations
     const positionLoc = gl.getAttribLocation(program, 'position')
+    const velocityLoc = gl.getAttribLocation(program, 'velocity')
     const rotationLoc = gl.getAttribLocation(program, 'rotation')
     const colorLoc = gl.getAttribLocation(program, 'color')
     const sizeLoc = gl.getAttribLocation(program, 'size')
@@ -969,17 +971,17 @@ export default class SCNParticleSystem extends NSObject {
 
     // vertexAttribPointer(ulong idx, long size, ulong type, bool norm, long stride, ulong offset)
     gl.enableVertexAttribArray(positionLoc)
-    gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, 56, 0)
+    gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, 68, 0)
+    gl.enableVertexAttribArray(velocityLoc)
+    gl.vertexAttribPointer(velocityLoc, 3, gl.FLOAT, false, 68, 12)
     gl.enableVertexAttribArray(rotationLoc)
-    gl.vertexAttribPointer(rotationLoc, 4, gl.FLOAT, false, 56, 12)
+    gl.vertexAttribPointer(rotationLoc, 4, gl.FLOAT, false, 68, 24)
     gl.enableVertexAttribArray(colorLoc)
-    gl.vertexAttribPointer(colorLoc, 4, gl.FLOAT, false, 56, 28)
+    gl.vertexAttribPointer(colorLoc, 4, gl.FLOAT, false, 68, 40)
     gl.enableVertexAttribArray(sizeLoc)
-    gl.vertexAttribPointer(sizeLoc, 1, gl.FLOAT, false, 56, 44)
-    //gl.enableVertexAttribArray(lifeLoc)
-    //gl.vertexAttribPointer(lifeLoc, 1, gl.FLOAT, false, 48, 36)
+    gl.vertexAttribPointer(sizeLoc, 1, gl.FLOAT, false, 68, 56)
     gl.enableVertexAttribArray(cornerLoc)
-    gl.vertexAttribPointer(cornerLoc, 2, gl.FLOAT, false, 56, 48)
+    gl.vertexAttribPointer(cornerLoc, 2, gl.FLOAT, false, 68, 60)
 
     /*
     const arr = []
@@ -1334,6 +1336,8 @@ export default class SCNParticleSystem extends NSObject {
       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE)
       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE)
     }
+
+    gl.uniform1f(gl.getUniformLocation(program, 'stretchFactor'), this.stretchFactor)
 
     // buffer particle data
     gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer)

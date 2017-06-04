@@ -11,6 +11,7 @@ import SCNLevelOfDetail from './SCNLevelOfDetail'
 import SCNMaterial from './SCNMaterial'
 import SCNOrderedDictionary from './SCNOrderedDictionary'
 import SCNVector3 from './SCNVector3'
+import SKColor from '../SpriteKit/SKColor'
 /*global Ammo*/
 
 
@@ -73,7 +74,7 @@ export default class SCNGeometry extends NSObject {
 
       entityID: ['string', '_entityID'],
       subdivisionSettings: ['bytes', null],
-      shadableHelper: ['SCNShadableHelper', null]
+      shadableHelper: ['SCNShadableHelper', '_shadableHelper']
     }
   }
 
@@ -224,6 +225,12 @@ export default class SCNGeometry extends NSObject {
      * @type {?string}
      */
     this._entityID = null
+
+    /**
+     * @access private
+     * @type {?SCNShadableHelper}
+     */
+    this._shadableHelper = null
 
     this._btVertices = null
     this._btMesh = null
@@ -576,6 +583,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     const arr = []
     const vertexSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
     const normalSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.normal)[0]
+    let tangentSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.tangent)[0]
     const texcoordSource0 = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[0]
     const texcoordSource1 = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[1]
     const indexSource = baseSkinner ? baseSkinner._boneIndices : null
@@ -584,6 +592,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
 
     const pVertexSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
     const pNormalSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.normal)[0]
+    let pTangentSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.tangent)[0]
     const pTexcoordSource0 = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[0]
     const pTexcoordSource1 = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[1]
     //const pIndexSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneIndices)[0]
@@ -597,17 +606,29 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     if(typeof normalSource !== 'undefined' && normalSource.vectorCount !== vectorCount){
       throw new Error('normalSource.vectorCount !== vertexSource.vectorCount')
     }
+    if(typeof tangentSource !== 'undefined' && tangentSource.vectorCount !== vectorCount){
+      throw new Error('tangentSource.vectorCount !== vertexSource.vectorCount')
+    }
     if(typeof texcoordSource0 !== 'undefined' && texcoordSource0.vectorCount !== vectorCount){
       throw new Error('texcoordSource0.vectorCount !== vertexSource.vectorCount')
     }
     if(typeof texcoordSource1 !== 'undefined' && texcoordSource1.vectorCount !== vectorCount){
       throw new Error('texcoordSource1.vectorCount !== vertexSource.vectorCount')
     }
+    if(typeof tangentSource === 'undefined' && this.materials.find((m) => !(m._normal._contents instanceof SKColor))){
+      tangentSource = this._createTangentSource()
+      pTangentSource = tangentSource
+      this._geometrySources.push(tangentSource)
+      if(baseGeometry !== this){
+        baseGeometry._geometrySources.push(tangentSource)
+      }
+    }
 
     //const vertexArray = vertexSource ? vertexSource.data : null
     const vertexComponents = vertexSource ? vertexSource.componentsPerVector : 0
     //const normalArray = normalSource ? normalSource.data : null
     const normalComponents = normalSource ? normalSource.componentsPerVector : 0
+    const tangentComponents = tangentSource ? tangentSource.componentsPerVector : 0
     //const texcoordArray = texcoordSource ? texcoordSource.data : null
     const texcoordComponents0 = texcoordSource0 ? texcoordSource0.componentsPerVector : 0
     const texcoordComponents1 = texcoordSource1 ? texcoordSource1.componentsPerVector : 0
@@ -618,6 +639,9 @@ This method is for OpenGL shader programs only. To bind custom variable data for
       }
       if(normalSource){
         arr.push(...normalSource._vectorAt(i))
+      }
+      if(tangentSource){
+        arr.push(...tangentSource._vectorAt(i))
       }
       if(texcoordSource0){
         arr.push(...texcoordSource0._vectorAt(i))
@@ -635,7 +659,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     // FIXME: Don't change geometry sources. Use other variables
     const bytesPerComponent = 4
     let offset = 0
-    const stride = (vertexComponents + normalComponents + texcoordComponents0 + texcoordComponents1) * bytesPerComponent
+    const stride = (vertexComponents + normalComponents + tangentComponents + texcoordComponents0 + texcoordComponents1) * bytesPerComponent
     pVertexSource._bytesPerComponent = bytesPerComponent
     pVertexSource._dataOffset = offset
     pVertexSource._dataStride = stride
@@ -646,6 +670,12 @@ This method is for OpenGL shader programs only. To bind custom variable data for
       pNormalSource._dataOffset = offset
       pNormalSource._dataStride = stride
       offset += normalComponents * bytesPerComponent
+    }
+    if(pTangentSource){
+      pTangentSource._bytesPerComponent = bytesPerComponent
+      pTangentSource._dataOffset = offset
+      pTangentSource._dataStride = stride
+      offset += tangentComponents * bytesPerComponent
     }
     if(pTexcoordSource0){
       pTexcoordSource0._bytesPerComponent = bytesPerComponent
@@ -699,6 +729,9 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     pVertexSource._data = arr
     if(pNormalSource){
       pNormalSource._data = arr
+    }
+    if(pTangentSource){
+      pTangentSource._data = arr
     }
     if(pTexcoordSource0){
       pTexcoordSource0._data = arr
@@ -770,24 +803,27 @@ This method is for OpenGL shader programs only. To bind custom variable data for
       ...diffuse,
       ...material.specular.float32Array(),
       ...material.emission.float32Array(),
-      material.shininess * 100.0, 0, 0, 0 // needs padding for 16-byte alignment
+      material.shininess * 100.0, 
+      material.fresnelExponent,
+      0, 0 // needs padding for 16-byte alignment
     ])
     gl.bindBuffer(gl.UNIFORM_BUFFER, this._materialBuffer)
     gl.bufferData(gl.UNIFORM_BUFFER, materialData, gl.DYNAMIC_DRAW)
     gl.bindBuffer(gl.UNIFORM_BUFFER, null)
 
     const textureFlags = []
-    const textures = [
-      //{ name: 'emission', symbol: 'TEXTURE0' },
-      { name: 'ambient', symbol: 'TEXTURE1' },
-      { name: 'diffuse', symbol: 'TEXTURE2' },
-      { name: 'specular', symbol: 'TEXTURE3' },
-      { name: 'reflective', symbol: 'TEXTURE4' },
-      { name: 'transparent', symbol: 'TEXTURE5' },
-      { name: 'multiply', symbol: 'TEXTURE6' },
-      { name: 'normal', symbol: 'TEXTURE7' }
-    ]
+    //const textures = [
+    //  { name: 'emission', symbol: 'TEXTURE0' },
+    //  { name: 'ambient', symbol: 'TEXTURE1' },
+    //  { name: 'diffuse', symbol: 'TEXTURE2' },
+    //  { name: 'specular', symbol: 'TEXTURE3' },
+    //  { name: 'reflective', symbol: 'TEXTURE4' },
+    //  { name: 'transparent', symbol: 'TEXTURE5' },
+    //  { name: 'multiply', symbol: 'TEXTURE6' },
+    //  { name: 'normal', symbol: 'TEXTURE7' }
+    //]
 
+    // emission
     let selfIllumination = 0
     if(material._selfIllumination._contents instanceof Image || material._selfIllumination._contents instanceof WebGLTexture){
       this._setTextureToName(gl, material._selfIllumination, 'TEXTURE0', textureFlags)
@@ -799,26 +835,31 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     }
     gl.uniform1i(gl.getUniformLocation(program, 'selfIllumination'), selfIllumination)
 
-    for(const texture of textures){
-      this._setTextureToName(gl, material[texture.name], texture.symbol, textureFlags)
-      /*
-      const m = material[texture.name]
-      if(m._contents instanceof Image){
-        m._contents = this._createTexture(gl, m._contents)
-      }
-      if(m._contents instanceof WebGLTexture){
-        textureFlags.push(1)
-        gl.activeTexture(gl[texture.symbol]) // FIXME: use m._contents.mappingChannel
-        gl.bindTexture(gl.TEXTURE_2D, m._contents)
-        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, m._magnificationFilterFor(gl))
-        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, m._minificationFilterFor(gl))
-        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, m._wrapSFor(gl))
-        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, m._wrapTFor(gl))
-      }else{
-        textureFlags.push(0)
-      }
-      */
-    }
+    // ambient
+    this._setTextureToName(gl, material._ambient, 'TEXTURE1', textureFlags)
+
+    // diffuse
+    this._setTextureToName(gl, material._diffuse, 'TEXTURE2', textureFlags)
+
+    // specular
+    this._setTextureToName(gl, material._specular, 'TEXTURE3', textureFlags)
+
+    // reflective
+    this._setCubeTextureToName(gl, material._reflective, 'TEXTURE4', textureFlags)
+
+    // transparent
+    this._setTextureToName(gl, material._transparent, 'TEXTURE5', textureFlags)
+
+    // multiply
+    this._setTextureToName(gl, material._multiply, 'TEXTURE6', textureFlags)
+
+    // normal
+    this._setTextureToName(gl, material._normal, 'TEXTURE7', textureFlags)
+
+    //for(const texture of textures){
+    //  this._setTextureToName(gl, material[texture.name], texture.symbol, textureFlags)
+    //}
+
     // TODO: cache uniform location
     gl.uniform1iv(gl.getUniformLocation(program, 'textureFlags'), new Int32Array(textureFlags))
 
@@ -842,13 +883,38 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    * @param {boolean[]} textureFlags -
    * @returns {void}
    */
+  _setCubeTextureToName(gl, m, name, textureFlags) {
+    if(m._contents instanceof Image){
+      m._contents = this._createCubeTexture(gl, m._contents)
+    }
+    if(m._contents instanceof WebGLTexture){
+      textureFlags.push(1)
+      gl.activeTexture(gl[name])
+      gl.bindTexture(gl.TEXTURE_CUBE_MAP, m._contents)
+      gl.texParameteri(gl.TEXTURE_CUBE_MAP, gl.TEXTURE_MAG_FILTER, m._magnificationFilterFor(gl))
+      gl.texParameteri(gl.TEXTURE_CUBE_MAP, gl.TEXTURE_MIN_FILTER, m._minificationFilterFor(gl))
+      gl.texParameteri(gl.TEXTURE_CUBE_MAP, gl.TEXTURE_WRAP_S, m._wrapSFor(gl))
+      gl.texParameteri(gl.TEXTURE_CUBE_MAP, gl.TEXTURE_WRAP_T, m._wrapTFor(gl))
+    }else{
+      textureFlags.push(0)
+    }
+  }
+
+  /**
+   * @access private
+   * @param {WebGLRenderingContext} gl -
+   * @param {SCNMaterialProperty} m -
+   * @param {string} name -
+   * @param {boolean[]} textureFlags -
+   * @returns {void}
+   */
   _setTextureToName(gl, m, name, textureFlags) {
     if(m._contents instanceof Image){
       m._contents = this._createTexture(gl, m._contents)
     }
     if(m._contents instanceof WebGLTexture){
       textureFlags.push(1)
-      gl.activeTexture(gl[name]) // FIXME: use m._contents.mappingChannel
+      gl.activeTexture(gl[name])
       gl.bindTexture(gl.TEXTURE_2D, m._contents)
       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, m._magnificationFilterFor(gl))
       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, m._minificationFilterFor(gl))
@@ -857,6 +923,55 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     }else{
       textureFlags.push(0)
     }
+  }
+
+  _createTangentSource() {
+    const elements = this._geometryElements
+    const vertex = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
+    const texcoord = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[0]
+
+    const data = []
+    const semantic = SCNGeometrySource.Semantic.tangent
+    const vectorCount = vertex.vectorCount
+    const floatComponents = true
+    const componentsPerVector = 3
+    const bytesPerComponent = 4
+    const dataOffset = 0
+    const dataStride = 12
+
+    const tangent = []
+    for(let i=0; i<vectorCount; i++){
+      tangent.push(new SCNVector3(0, 0, 0))
+    }
+
+    for(const element of elements){
+      const len = element.primitiveCount
+      for(let i=0; i<len; i++){
+        const index = element._indexAt(i)
+        const pos0 = vertex._scnVectorAt(index[0])
+        const pos1 = vertex._scnVectorAt(index[1])
+        const pos2 = vertex._scnVectorAt(index[2])
+        const tex0 = texcoord._scnVectorAt(index[0])
+        const tex1 = texcoord._scnVectorAt(index[1])
+        const tex2 = texcoord._scnVectorAt(index[2])
+
+        const p1 = pos1.sub(pos0)
+        const p2 = pos2.sub(pos0)
+        const t1 = tex1.sub(tex0)
+        const t2 = tex2.sub(tex0)
+
+        const t = p1.mul(t2.y).sub(p2.mul(t1.y))
+        tangent[index[0]] = tangent[index[0]].add(t)
+        tangent[index[1]] = tangent[index[1]].add(t)
+        tangent[index[2]] = tangent[index[2]].add(t)
+      }
+    }
+
+    for(let i=0; i<vectorCount; i++){
+      data.push(...tangent[i].normalize().floatArray())
+    }
+
+    return new SCNGeometrySource(data, semantic, vectorCount, floatComponents, componentsPerVector, bytesPerComponent, dataOffset, dataStride)
   }
 
   copy() {
@@ -882,6 +997,53 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     return geometry
   }
 
+  /**
+   * @access private
+   * @param {WebGLRenderingContext} gl -
+   * @param {Image} image -
+   * @returns {WebGLTexture} -
+   */
+  _createCubeTexture(gl, image) {
+    const texture = gl.createTexture()
+
+    gl.bindTexture(gl.TEXTURE_CUBE_MAP, texture)
+    // texImage2D(target, level, internalformat, width, height, border, format, type, source)
+    // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
+    const targets = [
+      gl.TEXTURE_CUBE_MAP_POSITIVE_Z,
+      gl.TEXTURE_CUBE_MAP_POSITIVE_X,
+      gl.TEXTURE_CUBE_MAP_NEGATIVE_Z,
+      gl.TEXTURE_CUBE_MAP_NEGATIVE_X,
+      gl.TEXTURE_CUBE_MAP_NEGATIVE_Y,
+      gl.TEXTURE_CUBE_MAP_POSITIVE_Y
+    ]
+    //const tx = [0, 1.0/6.0, 2.0/6.0, 3.0/6.0, 4.0/6.0, 5.0/6.0, 1]
+    //const itx = [4, 1, 5, 0, 2, 3]
+    const margin = 0.001
+    const sx = [4.0/6.0 + margin, 1.0/6.0 + margin, 5.0/6.0 + margin, 0 + margin, 2.0/6.0 + margin, 3.0/6.0 + margin]
+    const imageWidth = image.naturalWidth
+    const imageHeight = image.naturalHeight
+    const srcWidth = imageHeight - margin * 2
+
+    for(let i=0; i<6; i++){
+      const canvas = document.createElement('canvas')
+      canvas.width = imageHeight
+      canvas.height = imageHeight
+      canvas.getContext('2d').drawImage(image, sx[i], 0, srcWidth, imageHeight, 0, 0, imageHeight, imageHeight)
+
+      gl.texImage2D(targets[i], 0, gl.RGBA, imageHeight, imageHeight, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas)
+    }
+
+    gl.generateMipmap(gl.TEXTURE_CUBE_MAP)
+    return texture
+  }
+
+  /**
+   * @access private
+   * @param {WebGLRenderingContext} gl -
+   * @param {Image} image -
+   * @returns {WebGLTexture} -
+   */
   _createTexture(gl, image) {
     const texture = gl.createTexture()
 
