@@ -584,6 +584,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     const vertexSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
     const normalSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.normal)[0]
     let tangentSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.tangent)[0]
+    const colorSource = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.color)[0]
     const texcoordSource0 = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[0]
     const texcoordSource1 = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[1]
     const indexSource = baseSkinner ? baseSkinner._boneIndices : null
@@ -593,6 +594,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     const pVertexSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
     const pNormalSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.normal)[0]
     let pTangentSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.tangent)[0]
+    const pColorSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.color)[0]
     const pTexcoordSource0 = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[0]
     const pTexcoordSource1 = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.texcoord)[1]
     //const pIndexSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneIndices)[0]
@@ -608,6 +610,9 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     }
     if(typeof tangentSource !== 'undefined' && tangentSource.vectorCount !== vectorCount){
       throw new Error('tangentSource.vectorCount !== vertexSource.vectorCount')
+    }
+    if(typeof colorSource !== 'undefined' && colorSource.vectorCount !== vectorCount){
+      throw new Error('colorSource.vectorCount !== vertexSource.vectorCount')
     }
     if(typeof texcoordSource0 !== 'undefined' && texcoordSource0.vectorCount !== vectorCount){
       throw new Error('texcoordSource0.vectorCount !== vertexSource.vectorCount')
@@ -629,9 +634,10 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     //const normalArray = normalSource ? normalSource.data : null
     const normalComponents = normalSource ? normalSource.componentsPerVector : 0
     const tangentComponents = tangentSource ? tangentSource.componentsPerVector : 0
+    const colorComponents = colorSource ? colorSource.componentsPerVector : 0
     //const texcoordArray = texcoordSource ? texcoordSource.data : null
-    const texcoordComponents0 = texcoordSource0 ? texcoordSource0.componentsPerVector : 0
-    const texcoordComponents1 = texcoordSource1 ? texcoordSource1.componentsPerVector : 0
+    const texcoord0Components = texcoordSource0 ? texcoordSource0.componentsPerVector : 0
+    const texcoord1Components = texcoordSource1 ? texcoordSource1.componentsPerVector : 0
 
     for(let i=0; i<vectorCount; i++){
       if(vertexSource){
@@ -642,6 +648,9 @@ This method is for OpenGL shader programs only. To bind custom variable data for
       }
       if(tangentSource){
         arr.push(...tangentSource._vectorAt(i))
+      }
+      if(colorSource){
+        arr.push(...colorSource._vectorAt(i))
       }
       if(texcoordSource0){
         arr.push(...texcoordSource0._vectorAt(i))
@@ -659,7 +668,15 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     // FIXME: Don't change geometry sources. Use other variables
     const bytesPerComponent = 4
     let offset = 0
-    const stride = (vertexComponents + normalComponents + tangentComponents + texcoordComponents0 + texcoordComponents1) * bytesPerComponent
+    const stride = (
+        vertexComponents
+      + normalComponents
+      + tangentComponents
+      + colorComponents
+      + texcoord0Components
+      + texcoord1Components
+    ) * bytesPerComponent
+
     pVertexSource._bytesPerComponent = bytesPerComponent
     pVertexSource._dataOffset = offset
     pVertexSource._dataStride = stride
@@ -677,17 +694,23 @@ This method is for OpenGL shader programs only. To bind custom variable data for
       pTangentSource._dataStride = stride
       offset += tangentComponents * bytesPerComponent
     }
+    if(pColorSource){
+      pColorSource._bytesPerComponent = bytesPerComponent
+      pColorSource._dataOffset = offset
+      pColorSource._dataStride = stride
+      offset += colorComponents * bytesPerComponent
+    }
     if(pTexcoordSource0){
       pTexcoordSource0._bytesPerComponent = bytesPerComponent
       pTexcoordSource0._dataOffset = offset
       pTexcoordSource0._dataStride = stride
-      offset += texcoordComponents0 * bytesPerComponent
+      offset += texcoord0Components * bytesPerComponent
     }
     if(pTexcoordSource1){
       pTexcoordSource1._bytesPerComponent = bytesPerComponent
       pTexcoordSource1._dataOffset = offset
       pTexcoordSource1._dataStride = stride
-      offset += texcoordComponents1 * bytesPerComponent
+      offset += texcoord1Components * bytesPerComponent
     }
 
     //console.log(`offset: ${offset}, vectorCount: ${vectorCount}`)
@@ -732,6 +755,9 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     }
     if(pTangentSource){
       pTangentSource._data = arr
+    }
+    if(pColorSource){
+      pColorSource._data = arr
     }
     if(pTexcoordSource0){
       pTexcoordSource0._data = arr
@@ -993,6 +1019,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     geometry._vertexBuffer = this._vertexBuffer
     geometry._indexBuffer = this._indexBuffer
     geometry._animations = this._animations.copy()
+    geometry._shadableHelper = this._shadableHelper
 
     return geometry
   }

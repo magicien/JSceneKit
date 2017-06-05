@@ -22517,6 +22517,7 @@ module.exports =
 	      var vertexSource = baseGeometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
 	      var normalSource = baseGeometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.normal)[0];
 	      var tangentSource = baseGeometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.tangent)[0];
+	      var colorSource = baseGeometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.color)[0];
 	      var texcoordSource0 = baseGeometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.texcoord)[0];
 	      var texcoordSource1 = baseGeometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.texcoord)[1];
 	      var indexSource = baseSkinner ? baseSkinner._boneIndices : null;
@@ -22526,6 +22527,7 @@ module.exports =
 	      var pVertexSource = this.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
 	      var pNormalSource = this.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.normal)[0];
 	      var pTangentSource = this.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.tangent)[0];
+	      var pColorSource = this.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.color)[0];
 	      var pTexcoordSource0 = this.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.texcoord)[0];
 	      var pTexcoordSource1 = this.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.texcoord)[1];
 	      //const pIndexSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.boneIndices)[0]
@@ -22541,6 +22543,9 @@ module.exports =
 	      }
 	      if (typeof tangentSource !== 'undefined' && tangentSource.vectorCount !== vectorCount) {
 	        throw new Error('tangentSource.vectorCount !== vertexSource.vectorCount');
+	      }
+	      if (typeof colorSource !== 'undefined' && colorSource.vectorCount !== vectorCount) {
+	        throw new Error('colorSource.vectorCount !== vertexSource.vectorCount');
 	      }
 	      if (typeof texcoordSource0 !== 'undefined' && texcoordSource0.vectorCount !== vectorCount) {
 	        throw new Error('texcoordSource0.vectorCount !== vertexSource.vectorCount');
@@ -22564,9 +22569,10 @@ module.exports =
 	      //const normalArray = normalSource ? normalSource.data : null
 	      var normalComponents = normalSource ? normalSource.componentsPerVector : 0;
 	      var tangentComponents = tangentSource ? tangentSource.componentsPerVector : 0;
+	      var colorComponents = colorSource ? colorSource.componentsPerVector : 0;
 	      //const texcoordArray = texcoordSource ? texcoordSource.data : null
-	      var texcoordComponents0 = texcoordSource0 ? texcoordSource0.componentsPerVector : 0;
-	      var texcoordComponents1 = texcoordSource1 ? texcoordSource1.componentsPerVector : 0;
+	      var texcoord0Components = texcoordSource0 ? texcoordSource0.componentsPerVector : 0;
+	      var texcoord1Components = texcoordSource1 ? texcoordSource1.componentsPerVector : 0;
 
 	      for (var i = 0; i < vectorCount; i++) {
 	        if (vertexSource) {
@@ -22577,6 +22583,9 @@ module.exports =
 	        }
 	        if (tangentSource) {
 	          arr.push.apply(arr, _toConsumableArray(tangentSource._vectorAt(i)));
+	        }
+	        if (colorSource) {
+	          arr.push.apply(arr, _toConsumableArray(colorSource._vectorAt(i)));
 	        }
 	        if (texcoordSource0) {
 	          arr.push.apply(arr, _toConsumableArray(texcoordSource0._vectorAt(i)));
@@ -22594,7 +22603,8 @@ module.exports =
 	      // FIXME: Don't change geometry sources. Use other variables
 	      var bytesPerComponent = 4;
 	      var offset = 0;
-	      var stride = (vertexComponents + normalComponents + tangentComponents + texcoordComponents0 + texcoordComponents1) * bytesPerComponent;
+	      var stride = (vertexComponents + normalComponents + tangentComponents + colorComponents + texcoord0Components + texcoord1Components) * bytesPerComponent;
+
 	      pVertexSource._bytesPerComponent = bytesPerComponent;
 	      pVertexSource._dataOffset = offset;
 	      pVertexSource._dataStride = stride;
@@ -22612,17 +22622,23 @@ module.exports =
 	        pTangentSource._dataStride = stride;
 	        offset += tangentComponents * bytesPerComponent;
 	      }
+	      if (pColorSource) {
+	        pColorSource._bytesPerComponent = bytesPerComponent;
+	        pColorSource._dataOffset = offset;
+	        pColorSource._dataStride = stride;
+	        offset += colorComponents * bytesPerComponent;
+	      }
 	      if (pTexcoordSource0) {
 	        pTexcoordSource0._bytesPerComponent = bytesPerComponent;
 	        pTexcoordSource0._dataOffset = offset;
 	        pTexcoordSource0._dataStride = stride;
-	        offset += texcoordComponents0 * bytesPerComponent;
+	        offset += texcoord0Components * bytesPerComponent;
 	      }
 	      if (pTexcoordSource1) {
 	        pTexcoordSource1._bytesPerComponent = bytesPerComponent;
 	        pTexcoordSource1._dataOffset = offset;
 	        pTexcoordSource1._dataStride = stride;
-	        offset += texcoordComponents1 * bytesPerComponent;
+	        offset += texcoord1Components * bytesPerComponent;
 	      }
 
 	      //console.log(`offset: ${offset}, vectorCount: ${vectorCount}`)
@@ -22667,6 +22683,9 @@ module.exports =
 	      }
 	      if (pTangentSource) {
 	        pTangentSource._data = arr;
+	      }
+	      if (pColorSource) {
+	        pColorSource._data = arr;
 	      }
 	      if (pTexcoordSource0) {
 	        pTexcoordSource0._data = arr;
@@ -22961,6 +22980,7 @@ module.exports =
 	      geometry._vertexBuffer = this._vertexBuffer;
 	      geometry._indexBuffer = this._indexBuffer;
 	      geometry._animations = this._animations.copy();
+	      geometry._shadableHelper = this._shadableHelper;
 
 	      return geometry;
 	    }
@@ -27519,7 +27539,7 @@ module.exports =
 	 * @access private
 	 * @type {string}
 	 */
-	var _defaultVertexShader = '#version 300 es\n  precision mediump float;\n\n  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__\n  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__\n  #define NUM_DIRECTIONAL_SHADOW_LIGHTS __NUM_DIRECTIONAL_SHADOW_LIGHTS__\n  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__\n  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__\n  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__\n  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__\n\n  layout (std140) uniform cameraUniform {\n    vec4 position;\n    mat4 viewTransform;\n    mat4 viewProjectionTransform;\n  } camera;\n\n  layout (std140) uniform materialUniform {\n    vec4 ambient;\n    vec4 diffuse;\n    vec4 specular;\n    vec4 emission;\n    float shininess;\n    float fresnelExponent;\n  } material;\n\n  struct AmbientLight {\n    vec4 color;\n  };\n\n  struct DirectionalLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct DirectionalShadowLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n    vec4 shadowColor;\n    mat4 viewProjectionTransform;\n    mat4 shadowProjectionTransform;\n  };\n\n  struct OmniLight {\n    vec4 color;\n    vec4 position; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct SpotLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct IESLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct ProbeLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  layout (std140) uniform lightUniform {\n    __LIGHT_DEFINITION__\n  } light;\n  __VS_LIGHT_VARS__\n\n  layout (std140) uniform fogUniform {\n    vec4 color;\n    float startDistance;\n    float endDistance;\n    float densityExponent;\n  } fog;\n\n  //uniform mat3x4[255] skinningJoints;\n  uniform vec4[765] skinningJoints;\n  uniform int numSkinningJoints;\n\n  in vec3 position;\n  in vec3 normal;\n  in vec3 tangent;\n  in vec2 texcoord0;\n  in vec2 texcoord1;\n  in vec4 boneIndices;\n  in vec4 boneWeights;\n\n  out vec3 v_position;\n  out vec3 v_normal;\n  out vec3 v_tangent;\n  out vec3 v_bitangent;\n  out vec2 v_texcoord0;\n  out vec2 v_texcoord1;\n  out vec4 v_color;\n  out vec3 v_eye;\n  out float v_fogFactor;\n\n  void main() {\n    vec3 pos = vec3(0, 0, 0);\n    vec3 nom = vec3(0, 0, 0);\n    vec3 tng = vec3(0, 0, 0);\n\n    if(numSkinningJoints > 0){\n      for(int i=0; i<numSkinningJoints; i++){\n        float weight = boneWeights[i];\n        if(int(boneIndices[i]) < 0){\n          continue;\n        }\n        int idx = int(boneIndices[i]) * 3;\n        mat4 jointMatrix = transpose(mat4(skinningJoints[idx],\n                                          skinningJoints[idx+1],\n                                          skinningJoints[idx+2],\n                                          vec4(0, 0, 0, 1)));\n        pos += (jointMatrix * vec4(position, 1.0)).xyz * weight;\n        nom += (mat3(jointMatrix) * normal) * weight;\n        tng += (mat3(jointMatrix) * tangent) * weight;\n      }\n    }else{\n      mat4 jointMatrix = transpose(mat4(skinningJoints[0],\n                                        skinningJoints[1],\n                                        skinningJoints[2],\n                                        vec4(0, 0, 0, 1)));\n      pos = (jointMatrix * vec4(position, 1.0)).xyz;\n      nom = mat3(jointMatrix) * normal;\n      tng = mat3(jointMatrix) * tangent;\n    }\n    v_position = pos;\n    v_normal = normalize(nom);\n    v_tangent = normalize(tng);\n    v_bitangent = cross(v_tangent, v_normal);\n\n    vec3 viewVec = camera.position.xyz - pos;\n    v_eye = viewVec;\n\n    v_color = material.emission;\n    int numLights = 0;\n\n    __VS_LIGHTING__\n\n    float distance = length(viewVec);\n    v_fogFactor = clamp((distance - fog.startDistance) / (fog.endDistance - fog.startDistance), 0.0, 1.0);\n\n    v_texcoord0 = texcoord0;\n    v_texcoord1 = texcoord1;\n    gl_Position = camera.viewProjectionTransform * vec4(pos, 1.0);\n  }\n';
+	var _defaultVertexShader = '#version 300 es\n  precision mediump float;\n\n  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__\n  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__\n  #define NUM_DIRECTIONAL_SHADOW_LIGHTS __NUM_DIRECTIONAL_SHADOW_LIGHTS__\n  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__\n  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__\n  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__\n  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__\n  #define USE_SHADER_MODIFIER_GEOMETRY __USE_SHADER_MODIFIER_GEOMETRY__\n\n  layout (std140) uniform cameraUniform {\n    vec4 position;\n    mat4 viewTransform;\n    mat4 viewProjectionTransform;\n  } camera;\n\n  layout (std140) uniform materialUniform {\n    vec4 ambient;\n    vec4 diffuse;\n    vec4 specular;\n    vec4 emission;\n    float shininess;\n    float fresnelExponent;\n  } material;\n\n  struct AmbientLight {\n    vec4 color;\n  };\n\n  struct DirectionalLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct DirectionalShadowLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n    vec4 shadowColor;\n    mat4 viewProjectionTransform;\n    mat4 shadowProjectionTransform;\n  };\n\n  struct OmniLight {\n    vec4 color;\n    vec4 position; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct SpotLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct IESLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct ProbeLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  layout (std140) uniform lightUniform {\n    __LIGHT_DEFINITION__\n  } light;\n  __VS_LIGHT_VARS__\n\n  layout (std140) uniform fogUniform {\n    vec4 color;\n    float startDistance;\n    float endDistance;\n    float densityExponent;\n  } fog;\n\n  #define kSCNTexcoordCount 2\n  #if USE_SHADER_MODIFIER_GEOMETRY\n    struct SCNShaderGeometry {\n      vec3 position;\n      vec3 normal;\n      vec4 tangent;\n      vec4 color;\n      vec2 texcoords[kSCNTexcoordCount];\n    };\n  #endif\n\n  uniform float u_time;\n  //uniform mat3x4[255] skinningJoints;\n  uniform vec4[765] skinningJoints;\n  uniform int numSkinningJoints;\n\n  in vec3 position;\n  in vec3 normal;\n  in vec3 tangent;\n  in vec4 color;\n  in vec2 texcoord0;\n  in vec2 texcoord1;\n  in vec4 boneIndices;\n  in vec4 boneWeights;\n\n  out vec3 v_position;\n  out vec3 v_normal;\n  out vec3 v_tangent;\n  out vec3 v_bitangent;\n  out vec2 v_texcoord0;\n  out vec2 v_texcoord1;\n  out vec4 v_color;\n  out vec3 v_eye;\n  out float v_fogFactor;\n\n  #if USE_SHADER_MODIFIER_GEOMETRY\n  void shaderModifierGeometry(struct SCNShaderGeometry _geometry) {\n    __SHADER_MODIFIER_GEOMETRY__\n  }\n  #endif\n\n  void main() {\n\n    #if USE_SHADER_MODIFIER_GEOMETRY\n      struct SCNShaderGeometry _geometry;\n      _geometry.position = position;\n      _geometry.normal = normal;\n      _geometry.tangent = vec4(tangent, 1.0);\n      _geometry.color = color;\n      _geometry.texcoords[0] = texcoord0;\n      _geometry.texcoords[1] = texcoord1;\n      shaderModifierGeometry(_geometry);\n      position = _geometry.position;\n      normal = _geometry.normal;\n      tangent = _geometry.tangent.xyz;\n      color = _geometry.color;\n      texcoord0 = _geometry.texcoords[0];\n      texcoord1 = _geometry.texcoords[1];\n    #endif\n\n    vec3 pos = vec3(0, 0, 0);\n    vec3 nom = vec3(0, 0, 0);\n    vec3 tng = vec3(0, 0, 0);\n    vec4 col = color;\n\n    if(numSkinningJoints > 0){\n      for(int i=0; i<numSkinningJoints; i++){\n        float weight = boneWeights[i];\n        if(int(boneIndices[i]) < 0){\n          continue;\n        }\n        int idx = int(boneIndices[i]) * 3;\n        mat4 jointMatrix = transpose(mat4(skinningJoints[idx],\n                                          skinningJoints[idx+1],\n                                          skinningJoints[idx+2],\n                                          vec4(0, 0, 0, 1)));\n        pos += (jointMatrix * vec4(position, 1.0)).xyz * weight;\n        nom += (mat3(jointMatrix) * normal) * weight;\n        tng += (mat3(jointMatrix) * tangent) * weight;\n      }\n    }else{\n      mat4 jointMatrix = transpose(mat4(skinningJoints[0],\n                                        skinningJoints[1],\n                                        skinningJoints[2],\n                                        vec4(0, 0, 0, 1)));\n      pos = (jointMatrix * vec4(position, 1.0)).xyz;\n      nom = mat3(jointMatrix) * normal;\n      tng = mat3(jointMatrix) * tangent;\n    }\n    v_position = pos;\n    v_normal = normalize(nom);\n    v_tangent = normalize(tng);\n    v_bitangent = cross(v_tangent, v_normal);\n\n    vec3 viewVec = camera.position.xyz - pos;\n    v_eye = viewVec;\n\n    v_color = material.emission;\n    int numLights = 0;\n\n    __VS_LIGHTING__\n\n    float distance = length(viewVec);\n    v_fogFactor = clamp((distance - fog.startDistance) / (fog.endDistance - fog.startDistance), 0.0, 1.0);\n\n    v_texcoord0 = texcoord0;\n    v_texcoord1 = texcoord1;\n    gl_Position = camera.viewProjectionTransform * vec4(pos, 1.0);\n  }\n';
 
 	var _vsAmbient = '\n  for(int i=0; i<NUM_AMBIENT_LIGHTS; i++){\n    v_color += light.ambient[i].color * material.ambient;\n  }\n';
 
@@ -27564,7 +27584,7 @@ module.exports =
 	 * @access private
 	 * @type {string}
 	 */
-	var _defaultParticleVertexShader = '#version 300 es\n  precision mediump float;\n\n  uniform mat4 viewTransform;\n  uniform mat4 projectionTransform;\n  uniform float stretchFactor;\n\n  in vec3 position;\n  in vec3 velocity;\n  in vec4 rotation;\n  in vec4 color;\n  in float size;\n  //in float life;\n  in vec2 corner;\n\n  out vec2 v_texcoord;\n  out vec4 v_color;\n\n  void main() {\n    vec4 pos = viewTransform * vec4(position, 1.0);\n    vec3 d;\n\n    if(stretchFactor > 0.0){\n      vec4 v = viewTransform * vec4(velocity, 1.0) * stretchFactor;\n      if(corner.y > 0.0){\n        pos.xyz += v.xyz;\n      }\n      vec2 cy = normalize(v.xy);\n      vec2 cx = vec2(-cy.y, cy.x);\n      d = vec3(cx * corner.x + cy * corner.y, 0) * size * 0.5;\n    }else{\n      float sinAngle = sin(rotation.w);\n      float cosAngle = cos(rotation.w);\n      float tcos = 1.0 - cosAngle;\n      d = vec3(\n          corner.x * (rotation.x * rotation.x * tcos + cosAngle)\n        + corner.y * (rotation.x * rotation.y * tcos - rotation.z * sinAngle),\n          corner.x * (rotation.y * rotation.x * tcos + rotation.z * sinAngle)\n        + corner.y * (rotation.y * rotation.y * tcos + cosAngle),\n          corner.x * (rotation.z * rotation.x * tcos - rotation.y * sinAngle)\n        + corner.y * (rotation.z * rotation.y * tcos + rotation.x * sinAngle)) * size * 0.5;\n    }\n    pos.xyz += d;\n\n    v_color = color;\n    if(stretchFactor > 0.0){\n      v_color = vec4(1.0, 1.0, 1.0, 1.0); // DEBUG\n    }\n    v_texcoord = corner * vec2(0.5, -0.5) + 0.5;\n    gl_Position = projectionTransform * pos;\n  }\n';
+	var _defaultParticleVertexShader = '#version 300 es\n  precision mediump float;\n\n  uniform mat4 viewTransform;\n  uniform mat4 projectionTransform;\n  uniform float stretchFactor;\n\n  in vec3 position;\n  in vec3 velocity;\n  in vec4 rotation;\n  in vec4 color;\n  in float size;\n  //in float life;\n  in vec2 corner;\n\n  out vec2 v_texcoord;\n  out vec4 v_color;\n\n  void main() {\n    vec4 pos = viewTransform * vec4(position, 1.0);\n    vec3 d;\n\n    if(stretchFactor > 0.0){\n      vec4 v = viewTransform * vec4(velocity, 0.0) * stretchFactor;\n      if(corner.y > 0.0){\n        pos.xyz += v.xyz;\n      }\n      vec2 cy = normalize(v.xy);\n      vec2 cx = vec2(-cy.y, cy.x);\n      d = vec3(cx * corner.x + cy * corner.y, 0) * size;\n    }else{\n      float sinAngle = sin(rotation.w);\n      float cosAngle = cos(rotation.w);\n      float tcos = 1.0 - cosAngle;\n      d = vec3(\n          corner.x * (rotation.x * rotation.x * tcos + cosAngle)\n        + corner.y * (rotation.x * rotation.y * tcos - rotation.z * sinAngle),\n          corner.x * (rotation.y * rotation.x * tcos + rotation.z * sinAngle)\n        + corner.y * (rotation.y * rotation.y * tcos + cosAngle),\n          corner.x * (rotation.z * rotation.x * tcos - rotation.y * sinAngle)\n        + corner.y * (rotation.z * rotation.y * tcos + rotation.x * sinAngle)) * size * 0.5;\n    }\n    pos.xyz += d;\n\n    v_color = color;\n    v_texcoord = corner * vec2(0.5, -0.5) + 0.5;\n    gl_Position = projectionTransform * pos;\n  }\n';
 
 	/**
 	 * @access private
@@ -27704,6 +27724,13 @@ module.exports =
 	     * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1522680-scenetime
 	     */
 	    _this.sceneTime = 0;
+
+	    /**
+	     * current time in seconds
+	     * @access private
+	     * @type {number}
+	     */
+	    _this._time = 0;
 
 	    /**
 	     * Required. A Boolean value that determines whether the scene is playing.
@@ -28228,6 +28255,33 @@ module.exports =
 	      gl.flush();
 	    }
 	  }, {
+	    key: '_bindBuffersToProgram',
+	    value: function _bindBuffersToProgram(program) {
+	      var gl = this.context;
+	      //gl.bindBuffer(gl.UNIFORM_BUFFER, this._cameraBuffer)
+	      //gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(cameraData), gl.DYNAMIC_DRAW)
+	      //gl.bindBuffer(gl.UNIFORM_BUFFER, this._fogBuffer)
+	      //gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(fogData), gl.DYNAMIC_DRAW)
+	      //gl.bindBuffer(gl.UNIFORM_BUFFER, this._lightBuffer)
+	      //gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(lightData), gl.DYNAMIC_DRAW)
+	      //for(let i=0; i<lights.directionalShadow.length; i++){
+	      //  const node = lights.directionalShadow[i]
+	      //  const symbol = `TEXTURE${i+8}`
+	      //  gl.activeTexture(gl[symbol])
+	      //  gl.bindTexture(gl.TEXTURE_2D, node.presentation.light._shadowDepthTexture)
+	      //}
+
+	      var cameraIndex = gl.getUniformBlockIndex(program, 'cameraUniform');
+	      gl.uniformBlockBinding(program, cameraIndex, _cameraLoc);
+	      gl.bindBufferBase(gl.UNIFORM_BUFFER, _cameraLoc, this._cameraBuffer);
+	      var fogIndex = gl.getUniformBlockIndex(program, 'fogUniform');
+	      gl.uniformBlockBinding(program, fogIndex, _fogLoc);
+	      gl.bindBufferBase(gl.UNIFORM_BUFFER, _fogLoc, this._fogBuffer);
+	      var lightIndex = gl.getUniformBlockIndex(program, 'lightUniform');
+	      gl.uniformBlockBinding(program, lightIndex, _lightLoc);
+	      gl.bindBufferBase(gl.UNIFORM_BUFFER, _lightLoc, this._lightBuffer);
+	    }
+	  }, {
 	    key: '_renderOverlaySKScene',
 	    value: function _renderOverlaySKScene() {
 	      if (this.overlaySKScene === null) {
@@ -28577,6 +28631,8 @@ module.exports =
 	        this._updateVAO(node);
 	      }
 
+	      gl.uniform1f(gl.getUniformLocation(program, 'u_time'), this._time);
+
 	      if (node.presentation.skinner !== null) {
 	        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints);
 	        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array());
@@ -28678,6 +28734,7 @@ module.exports =
 	        program = system._program._glProgram;
 	      }
 	      gl.useProgram(program);
+	      gl.disable(gl.CULL_FACE);
 
 	      if (system._vertexBuffer === null) {
 	        system._initializeVAO(gl, program);
@@ -29518,13 +29575,67 @@ module.exports =
 	      if (geometry._shadableHelper === null) {
 	        return this._defaultProgram._glProgram;
 	      }
-	      return this._defaultProgram._glProgram;
-	      // TODO: implement
-	      //const gl = this.context
-	      //const program = new SCNProgram()
-	      //program._glProgram = gl.createProgram()
 
-	      //geometry.program = program
+	      //return this._defaultProgram._glProgram
+
+	      var gl = this.context;
+	      var p = new _SCNProgram2.default();
+	      p._glProgram = gl.createProgram();
+
+	      var vsText = this._vertexShaderForGeometry(geometry);
+	      var fsText = this._fragmentShaderForGeometry(geometry);
+
+	      // initialize vertex shader
+	      var vertexShader = gl.createShader(gl.VERTEX_SHADER);
+	      gl.shaderSource(vertexShader, vsText);
+	      gl.compileShader(vertexShader);
+	      if (!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)) {
+	        var info = gl.getShaderInfoLog(vertexShader);
+	        throw new Error('vertex shader compile error: ' + info);
+	      }
+	      p.vertexShader = vertexShader;
+
+	      // initialize fragment shader
+	      var fragmentShader = gl.createShader(gl.FRAGMENT_SHADER);
+	      gl.shaderSource(fragmentShader, fsText);
+	      gl.compileShader(fragmentShader);
+	      if (!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)) {
+	        var _info = gl.getShaderInfoLog(fragmentShader);
+	        throw new Error('fragment shader compile error: ' + _info);
+	      }
+	      p.fragmentShader = fragmentShader;
+
+	      gl.attachShader(p._glProgram, vertexShader);
+	      gl.attachShader(p._glProgram, fragmentShader);
+
+	      // link program object
+	      gl.linkProgram(p._glProgram);
+	      if (!gl.getProgramParameter(p._glProgram, gl.LINK_STATUS)) {
+	        var _info2 = gl.getProgramInfoLog(p._glProgram);
+	        throw new Error('program link error: ' + _info2);
+	      }
+
+	      // DEBUG
+	      geometry.program = this._defaultProgram;
+	      return this._defaultProgram._glProgram;
+
+	      //gl.useProgram(p._glProgram)
+
+	      //gl.enable(gl.DEPTH_TEST)
+	      //gl.depthFunc(gl.LEQUAL)
+	      //gl.enable(gl.BLEND)
+	      //gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)
+	      //gl.enable(gl.CULL_FACE)
+	      //gl.cullFace(gl.BACK)
+
+	      //// set default textures to prevent warnings
+	      //this._setDummyTextureAsDefault(p)
+
+	      ////geometry._presentation.program = p
+	      //geometry.program = p
+	      //this._bindBuffersToProgram(p)
+
+	      //return p
 	    }
 
 	    /**
@@ -29533,15 +29644,62 @@ module.exports =
 	     */
 
 	  }, {
-	    key: '_replaceTexts',
+	    key: '_programForGeometry',
 
 
 	    /**
 	     * @access private
-	     * @param {string} text -
+	     * @param {SCNGeometry} geometry -
+	     * @returns {SCNProgram} -
+	     */
+	    value: function _programForGeometry(geometry) {}
+
+	    /**
+	     * @access private
 	     * @returns {string} -
 	     */
-	    value: function _replaceTexts(text) {
+
+	  }, {
+	    key: '_vertexShaderForGeometry',
+
+
+	    /**
+	     * @access private
+	     * @param {SCNGeometry} geometry -
+	     * @returns {string} -
+	     */
+	    value: function _vertexShaderForGeometry(geometry) {
+	      return this._replaceTexts(_defaultVertexShader, geometry);
+	    }
+
+	    /**
+	     * @access private
+	     * @returns {string} -
+	     */
+
+	  }, {
+	    key: '_fragmentShaderForGeometry',
+
+
+	    /**
+	     * @access private
+	     * @param {SCNGeometry} geometry -
+	     * @returns {string} -
+	     */
+	    value: function _fragmentShaderForGeometry(geometry) {
+	      return this._replaceTexts(_defaultFragmentShader, geometry);
+	    }
+
+	    /**
+	     * @access private
+	     * @param {string} text -
+	     * @param {SCNGeometry} geometry -
+	     * @returns {string} -
+	     */
+
+	  }, {
+	    key: '_replaceTexts',
+	    value: function _replaceTexts(text, geometry) {
 	      var vars = new Map();
 	      var numAmbient = this._numLights[_SCNLight2.default.LightType.ambient];
 	      var numDirectional = this._numLights[_SCNLight2.default.LightType.directional];
@@ -29558,6 +29716,14 @@ module.exports =
 	      vars.set('__NUM_SPOT_LIGHTS__', numSpot);
 	      vars.set('__NUM_IES_LIGHTS__', numIES);
 	      vars.set('__NUM_PROBE_LIGHTS__', numProbe);
+
+	      if (geometry && geometry.shadableHelper && geometry.shadableHelper.shaderModifiers.SCNShaderModifierEntryPointGeometry) {
+	        vars.set('__USE_SHADER_MODIFIER_GEOMETRY__', 1);
+	        vars.set('__SHADER_MODIFIER_GEOMETRY__', geometry.shadableHelper.shaderModifiers.SCNShaderModifierEntryPointGeometry);
+	      } else {
+	        vars.set('__USE_SHADER_MODIFIER_GEOMETRY__', 0);
+	        vars.set('__SHADER_MODIFIER_GEOMETRY__', '');
+	      }
 
 	      var lightDefinition = '';
 	      var vsLighting = '';
@@ -29648,6 +29814,7 @@ module.exports =
 	      var positionLoc = gl.getAttribLocation(program, 'position');
 	      var normalLoc = gl.getAttribLocation(program, 'normal');
 	      var tangentLoc = gl.getAttribLocation(program, 'tangent');
+	      var colorLoc = gl.getAttribLocation(program, 'color');
 	      var texcoord0Loc = gl.getAttribLocation(program, 'texcoord0');
 	      var texcoord1Loc = gl.getAttribLocation(program, 'texcoord1');
 	      var boneIndicesLoc = gl.getAttribLocation(program, 'boneIndices');
@@ -29667,6 +29834,7 @@ module.exports =
 	        gl.bindAttribLocation(program, positionLoc, 'position');
 	        gl.bindAttribLocation(program, normalLoc, 'normal');
 	        gl.bindAttribLocation(program, tangentLoc, 'tangent');
+	        gl.bindAttribLocation(program, colorLoc, 'color');
 	        gl.bindAttribLocation(program, texcoord0Loc, 'texcoord0');
 	        gl.bindAttribLocation(program, texcoord1Loc, 'texcoord1');
 	        gl.bindAttribLocation(program, boneIndicesLoc, 'boneIndices');
@@ -29699,6 +29867,15 @@ module.exports =
 	          gl.vertexAttribPointer(tangentLoc, tanSrc.componentsPerVector, gl.FLOAT, false, tanSrc.dataStride, tanSrc.dataOffset);
 	        } else {
 	          gl.disableVertexAttribArray(tangentLoc);
+	        }
+
+	        // color
+	        var colorSrc = geometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.color)[0];
+	        if (colorSrc) {
+	          gl.enableVertexAttribArray(colorLoc);
+	          gl.vertexAttribPointer(colorLoc, colorSrc.componentsPerVector, gl.FLOAT, false, colorSrc.dataStride, colorSrc.dataOffset);
+	        } else {
+	          gl.disableVertexAttribArray(colorLoc);
 	        }
 
 	        // texcoord0
@@ -29978,11 +30155,18 @@ module.exports =
 	      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
 	      gl.bindTexture(gl.TEXTURE_2D, null);
 	    }
+
+	    /**
+	     * @access private
+	     * @param {SCNProgram} program -
+	     * @returns {void}
+	     */
+
 	  }, {
 	    key: '_setDummyTextureAsDefault',
-	    value: function _setDummyTextureAsDefault() {
+	    value: function _setDummyTextureAsDefault(program) {
 	      var gl = this.context;
-	      var p = this.__defaultProgram;
+	      var p = program;
 
 	      var texNames = [gl.TEXTURE0, gl.TEXTURE1, gl.TEXTURE2, gl.TEXTURE3, gl.TEXTURE4, gl.TEXTURE5, gl.TEXTURE6, gl.TEXTURE7];
 	      var texSymbols = ['u_emissionTexture', 'u_ambientTexture', 'u_diffuseTexture', 'u_specularTexture', 'u_reflectiveTexture', 'u_transparentTexture', 'u_multiplyTexture', 'u_normalTexture'];
@@ -30515,8 +30699,8 @@ module.exports =
 	      gl.shaderSource(fragmentShader, fsText);
 	      gl.compileShader(fragmentShader);
 	      if (!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)) {
-	        var _info = gl.getShaderInfoLog(fragmentShader);
-	        throw new Error('fragment shader compile error: ' + _info);
+	        var _info3 = gl.getShaderInfoLog(fragmentShader);
+	        throw new Error('fragment shader compile error: ' + _info3);
 	      }
 	      this.__defaultProgram.fragmentShader = fragmentShader;
 
@@ -30526,14 +30710,11 @@ module.exports =
 	      // link program object
 	      gl.linkProgram(p._glProgram);
 	      if (!gl.getProgramParameter(p._glProgram, gl.LINK_STATUS)) {
-	        var _info2 = gl.getProgramInfoLog(p._glProgram);
-	        throw new Error('program link error: ' + _info2);
+	        var _info4 = gl.getProgramInfoLog(p._glProgram);
+	        throw new Error('program link error: ' + _info4);
 	      }
 
 	      gl.useProgram(p._glProgram);
-	      //gl.clearColor(1, 1, 1, 1)
-	      //gl.clearDepth(1.0)
-	      //gl.clearStencil(0)
 
 	      gl.enable(gl.DEPTH_TEST);
 	      gl.depthFunc(gl.LEQUAL);
@@ -30543,27 +30724,15 @@ module.exports =
 	      gl.cullFace(gl.BACK);
 
 	      // set default textures to prevent warnings
-	      this._setDummyTextureAsDefault();
+	      this._setDummyTextureAsDefault(p);
 
 	      return this.__defaultProgram;
 	    }
-
-	    /**
-	     * @access private
-	     * @returns {string} -
-	     */
-
 	  }, {
 	    key: '_defaultVertexShader',
 	    get: function get() {
 	      return this._replaceTexts(_defaultVertexShader);
 	    }
-
-	    /**
-	     * @access private
-	     * @returns {string} -
-	     */
-
 	  }, {
 	    key: '_defaultFragmentShader',
 	    get: function get() {
@@ -30603,8 +30772,8 @@ module.exports =
 	      gl.shaderSource(fragmentShader, fsText);
 	      gl.compileShader(fragmentShader);
 	      if (!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)) {
-	        var _info3 = gl.getShaderInfoLog(fragmentShader);
-	        throw new Error('particle fragment shader compile error: ' + _info3);
+	        var _info5 = gl.getShaderInfoLog(fragmentShader);
+	        throw new Error('particle fragment shader compile error: ' + _info5);
 	      }
 
 	      gl.attachShader(p._glProgram, vertexShader);
@@ -30613,8 +30782,8 @@ module.exports =
 	      // link program object
 	      gl.linkProgram(p._glProgram);
 	      if (!gl.getProgramParameter(p._glProgram, gl.LINK_STATUS)) {
-	        var _info4 = gl.getProgramInfoLog(p._glProgram);
-	        throw new Error('program link error: ' + _info4);
+	        var _info6 = gl.getProgramInfoLog(p._glProgram);
+	        throw new Error('program link error: ' + _info6);
 	      }
 
 	      gl.useProgram(p._glProgram);
@@ -30669,8 +30838,8 @@ module.exports =
 	      gl.shaderSource(fragmentShader, fsText);
 	      gl.compileShader(fragmentShader);
 	      if (!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)) {
-	        var _info5 = gl.getShaderInfoLog(fragmentShader);
-	        throw new Error('particle fragment shader compile error: ' + _info5);
+	        var _info7 = gl.getShaderInfoLog(fragmentShader);
+	        throw new Error('particle fragment shader compile error: ' + _info7);
 	      }
 
 	      gl.attachShader(p._glProgram, vertexShader);
@@ -30679,8 +30848,8 @@ module.exports =
 	      // link program object
 	      gl.linkProgram(p._glProgram);
 	      if (!gl.getProgramParameter(p._glProgram, gl.LINK_STATUS)) {
-	        var _info6 = gl.getProgramInfoLog(p._glProgram);
-	        throw new Error('program link error: ' + _info6);
+	        var _info8 = gl.getProgramInfoLog(p._glProgram);
+	        throw new Error('program link error: ' + _info8);
 	      }
 
 	      gl.useProgram(p._glProgram);
@@ -30727,8 +30896,8 @@ module.exports =
 	      gl.shaderSource(fragmentShader, fsText);
 	      gl.compileShader(fragmentShader);
 	      if (!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)) {
-	        var _info7 = gl.getShaderInfoLog(fragmentShader);
-	        throw new Error('hitTest fragment shader compile error: ' + _info7);
+	        var _info9 = gl.getShaderInfoLog(fragmentShader);
+	        throw new Error('hitTest fragment shader compile error: ' + _info9);
 	      }
 
 	      gl.attachShader(p._glProgram, vertexShader);
@@ -30737,8 +30906,8 @@ module.exports =
 	      // link program object
 	      gl.linkProgram(p._glProgram);
 	      if (!gl.getProgramParameter(p._glProgram, gl.LINK_STATUS)) {
-	        var _info8 = gl.getProgramInfoLog(p._glProgram);
-	        throw new Error('program link error: ' + _info8);
+	        var _info10 = gl.getProgramInfoLog(p._glProgram);
+	        throw new Error('program link error: ' + _info10);
 	      }
 
 	      gl.useProgram(p._glProgram);
@@ -48912,6 +49081,8 @@ module.exports =
 	  }, {
 	    key: '_drawAtTimeWithContext',
 	    value: function _drawAtTimeWithContext(time, context) {
+	      this._renderer._time = time;
+
 	      this._createPresentationNodes();
 	      this._createSKPresentationNodes();
 

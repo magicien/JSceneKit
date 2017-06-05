@@ -978,6 +978,8 @@ export default class SCNView {
    * @returns {void}
    */
   _drawAtTimeWithContext(time, context) {
+    this._renderer._time = time
+
     this._createPresentationNodes()
     this._createSKPresentationNodes()
 

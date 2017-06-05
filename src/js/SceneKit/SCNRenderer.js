@@ -40,6 +40,7 @@ const _defaultVertexShader =
   #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__
   #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__
   #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__
+  #define USE_SHADER_MODIFIER_GEOMETRY __USE_SHADER_MODIFIER_GEOMETRY__
 
   layout (std140) uniform cameraUniform {
     vec4 position;
@@ -105,6 +106,18 @@ const _defaultVertexShader =
     float densityExponent;
   } fog;
 
+  #define kSCNTexcoordCount 2
+  #if USE_SHADER_MODIFIER_GEOMETRY
+    struct SCNShaderGeometry {
+      vec3 position;
+      vec3 normal;
+      vec4 tangent;
+      vec4 color;
+      vec2 texcoords[kSCNTexcoordCount];
+    };
+  #endif
+
+  uniform float u_time;
   //uniform mat3x4[255] skinningJoints;
   uniform vec4[765] skinningJoints;
   uniform int numSkinningJoints;
@@ -112,6 +125,7 @@ const _defaultVertexShader =
   in vec3 position;
   in vec3 normal;
   in vec3 tangent;
+  in vec4 color;
   in vec2 texcoord0;
   in vec2 texcoord1;
   in vec4 boneIndices;
@@ -127,10 +141,35 @@ const _defaultVertexShader =
   out vec3 v_eye;
   out float v_fogFactor;
 
+  #if USE_SHADER_MODIFIER_GEOMETRY
+  void shaderModifierGeometry(struct SCNShaderGeometry _geometry) {
+    __SHADER_MODIFIER_GEOMETRY__
+  }
+  #endif
+
   void main() {
+
+    #if USE_SHADER_MODIFIER_GEOMETRY
+      struct SCNShaderGeometry _geometry;
+      _geometry.position = position;
+      _geometry.normal = normal;
+      _geometry.tangent = vec4(tangent, 1.0);
+      _geometry.color = color;
+      _geometry.texcoords[0] = texcoord0;
+      _geometry.texcoords[1] = texcoord1;
+      shaderModifierGeometry(_geometry);
+      position = _geometry.position;
+      normal = _geometry.normal;
+      tangent = _geometry.tangent.xyz;
+      color = _geometry.color;
+      texcoord0 = _geometry.texcoords[0];
+      texcoord1 = _geometry.texcoords[1];
+    #endif
+
     vec3 pos = vec3(0, 0, 0);
     vec3 nom = vec3(0, 0, 0);
     vec3 tng = vec3(0, 0, 0);
+    vec4 col = color;
 
     if(numSkinningJoints > 0){
       for(int i=0; i<numSkinningJoints; i++){
@@ -489,13 +528,13 @@ const _defaultParticleVertexShader =
     vec3 d;
 
     if(stretchFactor > 0.0){
-      vec4 v = viewTransform * vec4(velocity, 1.0) * stretchFactor;
+      vec4 v = viewTransform * vec4(velocity, 0.0) * stretchFactor;
       if(corner.y > 0.0){
         pos.xyz += v.xyz;
       }
       vec2 cy = normalize(v.xy);
       vec2 cx = vec2(-cy.y, cy.x);
-      d = vec3(cx * corner.x + cy * corner.y, 0) * size * 0.5;
+      d = vec3(cx * corner.x + cy * corner.y, 0) * size;
     }else{
       float sinAngle = sin(rotation.w);
       float cosAngle = cos(rotation.w);
@@ -511,9 +550,6 @@ const _defaultParticleVertexShader =
     pos.xyz += d;
 
     v_color = color;
-    if(stretchFactor > 0.0){
-      v_color = vec4(1.0, 1.0, 1.0, 1.0); // DEBUG
-    }
     v_texcoord = corner * vec2(0.5, -0.5) + 0.5;
     gl_Position = projectionTransform * pos;
   }
@@ -810,6 +846,13 @@ export default class SCNRenderer extends NSObject {
      * @see https://developer.apple.com/reference/scenekit/scnscenerenderer/1522680-scenetime
      */
     this.sceneTime = 0
+
+    /**
+     * current time in seconds
+     * @access private
+     * @type {number}
+     */
+    this._time = 0
 
     /**
      * Required. A Boolean value that determines whether the scene is playing.
@@ -1282,6 +1325,32 @@ export default class SCNRenderer extends NSObject {
     gl.flush()
   }
 
+  _bindBuffersToProgram(program) {
+    const gl = this.context
+    //gl.bindBuffer(gl.UNIFORM_BUFFER, this._cameraBuffer)
+    //gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(cameraData), gl.DYNAMIC_DRAW)
+    //gl.bindBuffer(gl.UNIFORM_BUFFER, this._fogBuffer)
+    //gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(fogData), gl.DYNAMIC_DRAW)
+    //gl.bindBuffer(gl.UNIFORM_BUFFER, this._lightBuffer)
+    //gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(lightData), gl.DYNAMIC_DRAW)
+    //for(let i=0; i<lights.directionalShadow.length; i++){
+    //  const node = lights.directionalShadow[i]
+    //  const symbol = `TEXTURE${i+8}`
+    //  gl.activeTexture(gl[symbol])
+    //  gl.bindTexture(gl.TEXTURE_2D, node.presentation.light._shadowDepthTexture)
+    //}
+
+    const cameraIndex = gl.getUniformBlockIndex(program, 'cameraUniform')
+    gl.uniformBlockBinding(program, cameraIndex, _cameraLoc)
+    gl.bindBufferBase(gl.UNIFORM_BUFFER, _cameraLoc, this._cameraBuffer)
+    const fogIndex = gl.getUniformBlockIndex(program, 'fogUniform')
+    gl.uniformBlockBinding(program, fogIndex, _fogLoc)
+    gl.bindBufferBase(gl.UNIFORM_BUFFER, _fogLoc, this._fogBuffer)
+    const lightIndex = gl.getUniformBlockIndex(program, 'lightUniform')
+    gl.uniformBlockBinding(program, lightIndex, _lightLoc)
+    gl.bindBufferBase(gl.UNIFORM_BUFFER, _lightLoc, this._lightBuffer)
+  }
+
   _renderOverlaySKScene() {
     if(this.overlaySKScene === null){
       return
@@ -1561,6 +1630,8 @@ export default class SCNRenderer extends NSObject {
       this._updateVAO(node)
     }
 
+    gl.uniform1f(gl.getUniformLocation(program, 'u_time'), this._time)
+
     if(node.presentation.skinner !== null){
       gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
       gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array())
@@ -1654,6 +1725,7 @@ export default class SCNRenderer extends NSObject {
       program = system._program._glProgram
     }
     gl.useProgram(program)
+    gl.disable(gl.CULL_FACE)
 
     if(system._vertexBuffer === null){
       system._initializeVAO(gl, program)
@@ -2510,13 +2582,69 @@ export default class SCNRenderer extends NSObject {
     if(geometry._shadableHelper === null){
       return this._defaultProgram._glProgram
     }
-    return this._defaultProgram._glProgram
-    // TODO: implement
-    //const gl = this.context
-    //const program = new SCNProgram()
-    //program._glProgram = gl.createProgram()
 
-    //geometry.program = program
+    //return this._defaultProgram._glProgram
+
+    const gl = this.context
+    const p = new SCNProgram()
+    p._glProgram = gl.createProgram()
+
+    const vsText = this._vertexShaderForGeometry(geometry)
+    const fsText = this._fragmentShaderForGeometry(geometry)
+
+    // initialize vertex shader
+    const vertexShader = gl.createShader(gl.VERTEX_SHADER)
+    gl.shaderSource(vertexShader, vsText)
+    gl.compileShader(vertexShader)
+    if(!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)){
+      const info = gl.getShaderInfoLog(vertexShader)
+      throw new Error(`vertex shader compile error: ${info}`)
+    }
+    p.vertexShader = vertexShader
+
+    // initialize fragment shader
+    const fragmentShader = gl.createShader(gl.FRAGMENT_SHADER)
+    gl.shaderSource(fragmentShader, fsText)
+    gl.compileShader(fragmentShader)
+    if(!gl.getShaderParameter(fragmentShader, gl.COMPILE_STATUS)){
+      const info = gl.getShaderInfoLog(fragmentShader)
+      throw new Error(`fragment shader compile error: ${info}`)
+    }
+    p.fragmentShader = fragmentShader
+
+    gl.attachShader(p._glProgram, vertexShader)
+    gl.attachShader(p._glProgram, fragmentShader)
+
+
+    // link program object
+    gl.linkProgram(p._glProgram)
+    if(!gl.getProgramParameter(p._glProgram, gl.LINK_STATUS)){
+      const info = gl.getProgramInfoLog(p._glProgram)
+      throw new Error(`program link error: ${info}`)
+    }
+
+    // DEBUG
+    geometry.program = this._defaultProgram
+    return this._defaultProgram._glProgram
+
+
+    //gl.useProgram(p._glProgram)
+
+    //gl.enable(gl.DEPTH_TEST)
+    //gl.depthFunc(gl.LEQUAL)
+    //gl.enable(gl.BLEND)
+    //gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)
+    //gl.enable(gl.CULL_FACE)
+    //gl.cullFace(gl.BACK)
+
+    //// set default textures to prevent warnings
+    //this._setDummyTextureAsDefault(p)
+
+    ////geometry._presentation.program = p
+    //geometry.program = p
+    //this._bindBuffersToProgram(p)
+
+    //return p
   }
 
   /**
@@ -2570,9 +2698,6 @@ export default class SCNRenderer extends NSObject {
     }
 
     gl.useProgram(p._glProgram)
-    //gl.clearColor(1, 1, 1, 1)
-    //gl.clearDepth(1.0)
-    //gl.clearStencil(0)
 
     gl.enable(gl.DEPTH_TEST)
     gl.depthFunc(gl.LEQUAL)
@@ -2582,10 +2707,18 @@ export default class SCNRenderer extends NSObject {
     gl.cullFace(gl.BACK)
 
     // set default textures to prevent warnings
-    this._setDummyTextureAsDefault()
+    this._setDummyTextureAsDefault(p)
     
     return this.__defaultProgram
   }
+
+  /**
+   * @access private
+   * @param {SCNGeometry} geometry -
+   * @returns {SCNProgram} -
+   */
+  _programForGeometry(geometry) {
+      }
 
   /**
    * @access private
@@ -2593,6 +2726,15 @@ export default class SCNRenderer extends NSObject {
    */
   get _defaultVertexShader() {
     return this._replaceTexts(_defaultVertexShader)
+  }
+
+  /**
+   * @access private
+   * @param {SCNGeometry} geometry -
+   * @returns {string} -
+   */
+  _vertexShaderForGeometry(geometry) {
+    return this._replaceTexts(_defaultVertexShader, geometry)
   }
 
   /**
@@ -2605,10 +2747,20 @@ export default class SCNRenderer extends NSObject {
 
   /**
    * @access private
-   * @param {string} text -
+   * @param {SCNGeometry} geometry -
    * @returns {string} -
    */
-  _replaceTexts(text) {
+  _fragmentShaderForGeometry(geometry) {
+    return this._replaceTexts(_defaultFragmentShader, geometry)
+  }
+
+  /**
+   * @access private
+   * @param {string} text -
+   * @param {SCNGeometry} geometry -
+   * @returns {string} -
+   */
+  _replaceTexts(text, geometry) {
     const vars = new Map()
     const numAmbient = this._numLights[SCNLight.LightType.ambient]
     const numDirectional = this._numLights[SCNLight.LightType.directional]
@@ -2625,6 +2777,14 @@ export default class SCNRenderer extends NSObject {
     vars.set('__NUM_SPOT_LIGHTS__', numSpot)
     vars.set('__NUM_IES_LIGHTS__', numIES)
     vars.set('__NUM_PROBE_LIGHTS__', numProbe)
+
+    if(geometry && geometry.shadableHelper && geometry.shadableHelper.shaderModifiers.SCNShaderModifierEntryPointGeometry){
+      vars.set('__USE_SHADER_MODIFIER_GEOMETRY__', 1)
+      vars.set('__SHADER_MODIFIER_GEOMETRY__', geometry.shadableHelper.shaderModifiers.SCNShaderModifierEntryPointGeometry)
+    }else{
+      vars.set('__USE_SHADER_MODIFIER_GEOMETRY__', 0)
+      vars.set('__SHADER_MODIFIER_GEOMETRY__', '')
+    }
 
     let lightDefinition = ''
     let vsLighting = ''
@@ -2714,6 +2874,7 @@ export default class SCNRenderer extends NSObject {
     const positionLoc = gl.getAttribLocation(program, 'position')
     const normalLoc = gl.getAttribLocation(program, 'normal')
     const tangentLoc = gl.getAttribLocation(program, 'tangent')
+    const colorLoc = gl.getAttribLocation(program, 'color')
     const texcoord0Loc = gl.getAttribLocation(program, 'texcoord0')
     const texcoord1Loc = gl.getAttribLocation(program, 'texcoord1')
     const boneIndicesLoc = gl.getAttribLocation(program, 'boneIndices')
@@ -2733,6 +2894,7 @@ export default class SCNRenderer extends NSObject {
       gl.bindAttribLocation(program, positionLoc, 'position')
       gl.bindAttribLocation(program, normalLoc, 'normal')
       gl.bindAttribLocation(program, tangentLoc, 'tangent')
+      gl.bindAttribLocation(program, colorLoc, 'color')
       gl.bindAttribLocation(program, texcoord0Loc, 'texcoord0')
       gl.bindAttribLocation(program, texcoord1Loc, 'texcoord1')
       gl.bindAttribLocation(program, boneIndicesLoc, 'boneIndices')
@@ -2765,6 +2927,15 @@ export default class SCNRenderer extends NSObject {
         gl.vertexAttribPointer(tangentLoc, tanSrc.componentsPerVector, gl.FLOAT, false, tanSrc.dataStride, tanSrc.dataOffset)
       }else{
         gl.disableVertexAttribArray(tangentLoc)
+      }
+
+      // color
+      const colorSrc = geometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.color)[0]
+      if(colorSrc){
+        gl.enableVertexAttribArray(colorLoc)
+        gl.vertexAttribPointer(colorLoc, colorSrc.componentsPerVector, gl.FLOAT, false, colorSrc.dataStride, colorSrc.dataOffset)
+      }else{
+        gl.disableVertexAttribArray(colorLoc)
       }
 
       // texcoord0
@@ -3040,9 +3211,14 @@ export default class SCNRenderer extends NSObject {
     gl.bindTexture(gl.TEXTURE_2D, null)
   }
 
-  _setDummyTextureAsDefault() {
+  /**
+   * @access private
+   * @param {SCNProgram} program -
+   * @returns {void}
+   */
+  _setDummyTextureAsDefault(program) {
     const gl = this.context
-    const p = this.__defaultProgram
+    const p = program
 
     const texNames = [
       gl.TEXTURE0,
