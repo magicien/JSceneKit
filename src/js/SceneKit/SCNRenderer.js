@@ -401,6 +401,14 @@ const _defaultFragmentShader =
     }
 
     int numLights = 0;
+
+    vec4 specularColor;
+    if(textureFlags[TEXTURE_SPECULAR_INDEX]){
+      vec4 color = texture(u_specularTexture, v_texcoord0);
+      specularColor = color;
+    }else{
+      specularColor = material.specular;
+    }
       
     outColor.a = material.diffuse.a;
     __FS_LIGHTING__
@@ -447,7 +455,8 @@ const _fsDirectional = `
     if(diffuse > 0.0f){
       vec3 halfVec = normalize(lightVec + viewVec);
       float specular = pow(dot(halfVec, nom), material.shininess);
-      outColor.rgb += material.specular.rgb * specular;
+      //outColor.rgb += material.specular.rgb * specular;
+      outColor.rgb += specularColor.rgb * specular;
     }
   }
   numLights += NUM_DIRECTIONAL_LIGHTS;
@@ -467,7 +476,8 @@ const _fsDirectionalShadow = `
     if(diffuse > 0.0f){
       vec3 halfVec = normalize(lightVec + viewVec);
       float specular = pow(dot(halfVec, nom), material.shininess);
-      outColor.rgb += material.specular.rgb * specular;
+      //outColor.rgb += material.specular.rgb * specular;
+      outColor.rgb += specularColor.rgb * specular;
     }
   }
 
@@ -485,7 +495,8 @@ const _fsOmni = `
     if(diffuse > 0.0f){
       vec3 halfVec = normalize(lightVec + viewVec);
       float specular = pow(dot(halfVec, nom), material.shininess);
-      outColor.rgb += material.specular.rgb * specular; // TODO: get the light color of specular
+      //outColor.rgb += material.specular.rgb * specular; // TODO: get the light color of specular
+      outColor.rgb += specularColor.rgb * specular;
     }
   }
   numLights += NUM_OMNI_LIGHTS;

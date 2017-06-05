@@ -1346,6 +1346,24 @@ export default class SCNParticleSystem extends NSObject {
     if(this._particles.length > this._maxParticleIndex){
       this._updateIndexBuffer(gl, this._particles.length + 10)
     }
+
+    const blendFuncSrc = [
+      gl.SRC_ALPHA, // additive
+      gl.ZERO, // subtract
+      gl.ZERO, // multiply
+      gl.ZERO, // screen
+      gl.SRC_ALPHA, // alpha
+      gl.ONE // replace
+    ]
+    const blendFuncDst = [
+      gl.ONE, // additive
+      gl.ONE_MINUS_SRC_COLOR, // subtract
+      gl.SRC_COLOR, // multiply
+      gl.SRC_ALPHA, // screen... is it correct?
+      gl.ONE_MINUS_SRC_ALPHA, // alpha
+      gl.ZERO // replace
+    ]
+    gl.blendFunc(blendFuncSrc[this.blendMode], blendFuncDst[this.blendMode])
   }
 
   _createTexture(gl, image) {
