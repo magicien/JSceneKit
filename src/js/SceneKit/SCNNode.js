@@ -1241,7 +1241,8 @@ export default class SCNNode extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnnode/1408032-enumeratechildnodes
    */
   enumerateChildNodes(block) {
-    this._childNodes.some((child) => {
+    //this._childNodes.some((child) => {
+    this.childNodes.some((child) => {
       return this._enumerateChildNodesRecursive(child, block)
     })
   }

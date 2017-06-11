@@ -107,15 +107,13 @@ const _defaultVertexShader =
   } fog;
 
   #define kSCNTexcoordCount 2
-  #if USE_SHADER_MODIFIER_GEOMETRY
-    struct SCNShaderGeometry {
-      vec3 position;
-      vec3 normal;
-      vec4 tangent;
-      vec4 color;
-      vec2 texcoords[kSCNTexcoordCount];
-    };
-  #endif
+  struct SCNShaderGeometry {
+    vec3 position;
+    vec3 normal;
+    vec4 tangent;
+    vec4 color;
+    vec2 texcoords[kSCNTexcoordCount];
+  };
 
   uniform float u_time;
   //uniform mat3x4[255] skinningJoints;
@@ -142,34 +140,28 @@ const _defaultVertexShader =
   out float v_fogFactor;
 
   #if USE_SHADER_MODIFIER_GEOMETRY
-  void shaderModifierGeometry(struct SCNShaderGeometry _geometry) {
+  void shaderModifierGeometry(inout SCNShaderGeometry _geometry) {
     __SHADER_MODIFIER_GEOMETRY__
   }
   #endif
 
   void main() {
-
+    SCNShaderGeometry _geometry;
+    _geometry.position = position;
+    _geometry.normal = normal;
+    _geometry.tangent = vec4(tangent, 1.0);
+    _geometry.color = color;
+    _geometry.texcoords[0] = texcoord0;
+    _geometry.texcoords[1] = texcoord1;
+    
     #if USE_SHADER_MODIFIER_GEOMETRY
-      struct SCNShaderGeometry _geometry;
-      _geometry.position = position;
-      _geometry.normal = normal;
-      _geometry.tangent = vec4(tangent, 1.0);
-      _geometry.color = color;
-      _geometry.texcoords[0] = texcoord0;
-      _geometry.texcoords[1] = texcoord1;
       shaderModifierGeometry(_geometry);
-      position = _geometry.position;
-      normal = _geometry.normal;
-      tangent = _geometry.tangent.xyz;
-      color = _geometry.color;
-      texcoord0 = _geometry.texcoords[0];
-      texcoord1 = _geometry.texcoords[1];
     #endif
 
     vec3 pos = vec3(0, 0, 0);
     vec3 nom = vec3(0, 0, 0);
     vec3 tng = vec3(0, 0, 0);
-    vec4 col = color;
+    vec4 col = _geometry.color;
 
     if(numSkinningJoints > 0){
       for(int i=0; i<numSkinningJoints; i++){
@@ -182,18 +174,18 @@ const _defaultVertexShader =
                                           skinningJoints[idx+1],
                                           skinningJoints[idx+2],
                                           vec4(0, 0, 0, 1)));
-        pos += (jointMatrix * vec4(position, 1.0)).xyz * weight;
-        nom += (mat3(jointMatrix) * normal) * weight;
-        tng += (mat3(jointMatrix) * tangent) * weight;
+        pos += (jointMatrix * vec4(_geometry.position, 1.0)).xyz * weight;
+        nom += (mat3(jointMatrix) * _geometry.normal) * weight;
+        tng += (mat3(jointMatrix) * _geometry.tangent.xyz) * weight;
       }
     }else{
       mat4 jointMatrix = transpose(mat4(skinningJoints[0],
                                         skinningJoints[1],
                                         skinningJoints[2],
                                         vec4(0, 0, 0, 1)));
-      pos = (jointMatrix * vec4(position, 1.0)).xyz;
-      nom = mat3(jointMatrix) * normal;
-      tng = mat3(jointMatrix) * tangent;
+      pos = (jointMatrix * vec4(_geometry.position, 1.0)).xyz;
+      nom = mat3(jointMatrix) * _geometry.normal;
+      tng = mat3(jointMatrix) * _geometry.tangent.xyz;
     }
     v_position = pos;
     v_normal = normalize(nom);
@@ -211,8 +203,8 @@ const _defaultVertexShader =
     float distance = length(viewVec);
     v_fogFactor = clamp((distance - fog.startDistance) / (fog.endDistance - fog.startDistance), 0.0, 1.0);
 
-    v_texcoord0 = texcoord0;
-    v_texcoord1 = texcoord1;
+    v_texcoord0 = _geometry.texcoords[0];
+    v_texcoord1 = _geometry.texcoords[1];
     gl_Position = camera.viewProjectionTransform * vec4(pos, 1.0);
   }
 `
@@ -301,6 +293,8 @@ const _defaultFragmentShader =
   #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__
   #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__
   #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__
+  #define USE_SHADER_MODIFIER_SURFACE __USE_SHADER_MODIFIER_SURFACE__
+  #define USE_SHADER_MODIFIER_FRAGMENT __USE_SHADER_MODIFIER_FRAGMENT__
 
   layout (std140) uniform materialUniform {
     vec4 ambient;
@@ -355,6 +349,33 @@ const _defaultFragmentShader =
     float densityExponent;
   } fog;
 
+  struct SCNShaderSurface {
+    vec3 view;
+    vec3 position;
+    vec3 normal;
+    vec3 tangent;
+    vec3 bitangent;
+    vec4 ambient;
+    vec2 ambientTexcoord;
+    vec4 diffuse;
+    vec2 diffuseTexcoord;
+    vec4 specular;
+    vec2 specularTexcoord;
+    vec4 emission;
+    vec2 emissionTexcoord;
+    vec4 multiply;
+    vec2 multiplyTexcoord;
+    vec4 transparent;
+    vec2 transparentTexcoord;
+    vec4 reflective;
+    float shininess;
+    float fresnel;
+  } _surface;
+
+  struct SCNShaderOutput {
+    vec4 color;
+  } _output;
+
   in vec3 v_position;
   in vec3 v_normal;
   in vec2 v_texcoord0;
@@ -367,6 +388,18 @@ const _defaultFragmentShader =
 
   out vec4 outColor;
 
+  #if USE_SHADER_MODIFIER_SURFACE
+  void shaderModifierSurface() {
+    __SHADER_MODIFIER_SURFACE__
+  }
+  #endif
+
+  #if USE_SHADER_MODIFIER_FRAGMENT
+  void shaderModifierFragment() {
+    __SHADER_MODIFIER_FRAGMENT__
+  }
+  #endif
+
   float convDepth(vec4 color) {
     const float rMask = 1.0;
     const float gMask = 1.0 / 255.0;
@@ -377,26 +410,35 @@ const _defaultFragmentShader =
   }
 
   void main() {
-    outColor = v_color;
+    _output.color = v_color;
 
-    vec3 viewVec = normalize(v_eye);
-    vec3 nom = normalize(v_normal);
+    //vec3 viewVec = normalize(v_eye);
+    //vec3 nom = normalize(v_normal);
+    _surface.view = normalize(v_eye);
+    _surface.position = v_position;
+    _surface.normal = normalize(v_normal);
+    _surface.tangent = normalize(v_tangent);
+    _surface.bitangent = normalize(v_bitangent);
 
     // normal texture
     if(textureFlags[TEXTURE_NORMAL_INDEX]){
-      mat3 tsInv = mat3(normalize(v_tangent), normalize(v_bitangent), nom);
+      mat3 tsInv = mat3(_surface.tangent, _surface.bitangent, _surface.normal);
       vec3 color = normalize(texture(u_normalTexture, v_texcoord0).rgb * 2.0 - 1.0); // FIXME: check mappingChannel to decide which texture you use.
-      nom = normalize(tsInv * color);
+      _surface.normal = normalize(tsInv * color);
     }
+
+    #if USE_SHADER_MODIFIER_SURFACE
+      shaderModifierSurface();
+    #endif
 
     // emission texture
     if(textureFlags[TEXTURE_EMISSION_INDEX]){
       if(selfIllumination){
         vec4 color = texture(u_emissionTexture, v_texcoord1); // FIXME: check mappingChannel to decide which texture you use.
-        outColor += color;
+        _output.color += color;
       }else{
         vec4 color = texture(u_emissionTexture, v_texcoord0);
-        outColor = color * outColor;
+        _output.color = color * _output.color;
       }
     }
 
@@ -410,26 +452,26 @@ const _defaultFragmentShader =
       specularColor = material.specular;
     }
       
-    outColor.a = material.diffuse.a;
+    _output.color.a = material.diffuse.a;
     __FS_LIGHTING__
     
     // diffuse texture
     if(textureFlags[TEXTURE_DIFFUSE_INDEX]){
       vec4 color = texture(u_diffuseTexture, v_texcoord0);
-      outColor = color * outColor;
+      _output.color = color * _output.color;
     }
 
     // fresnel reflection
     if(textureFlags[TEXTURE_REFLECTIVE_INDEX]){
-      vec3 r = reflect(viewVec, nom);
+      vec3 r = reflect(_surface.view, _surface.normal);
       //float f0 = 0.0; // TODO: calculate f0
       //float fresnel = f0 + (1.0 - f0) * pow(1.0 - clamp(dot(viewVec, nom), 0.0, 1.0), material.fresnelExponent);
-      float fresnel = 0.4 * pow(1.0 - clamp(dot(viewVec, nom), 0.0, 1.0), material.fresnelExponent);
-      outColor += texture(u_reflectiveTexture, r) * fresnel;
+      float fresnel = 0.4 * pow(1.0 - clamp(dot(_surface.view, _surface.normal), 0.0, 1.0), material.fresnelExponent);
+      _output.color += texture(u_reflectiveTexture, r) * fresnel;
     }
 
     float fogFactor = pow(v_fogFactor, fog.densityExponent);
-    outColor = mix(outColor, fog.color, fogFactor);
+    _output.color = mix(_output.color, fog.color, fogFactor);
 
     // DEBUG
     //if(textureFlags[TEXTURE_NORMAL_INDEX]){
@@ -438,6 +480,11 @@ const _defaultFragmentShader =
     //  outColor.rgb = (normalize(tsInv * color) + 1.0) * 0.5;
     //}
 
+    #if USE_SHADER_MODIFIER_FRAGMENT
+      shaderModifierFragment();
+    #endif
+
+    outColor = _output.color;
   }
 `
 
@@ -448,15 +495,15 @@ const _fsDirectional = `
   for(int i=0; i<NUM_DIRECTIONAL_LIGHTS; i++){
     // diffuse
     vec3 lightVec = normalize(v_light[numLights + i]);
-    float diffuse = clamp(dot(lightVec, nom), 0.0f, 1.0f);
-    outColor.rgb += light.directional[i].color.rgb * material.diffuse.rgb * diffuse;
+    float diffuse = clamp(dot(lightVec, _surface.normal), 0.0f, 1.0f);
+    _output.color.rgb += light.directional[i].color.rgb * material.diffuse.rgb * diffuse;
 
     // specular
     if(diffuse > 0.0f){
-      vec3 halfVec = normalize(lightVec + viewVec);
-      float specular = pow(dot(halfVec, nom), material.shininess);
+      vec3 halfVec = normalize(lightVec + _surface.view);
+      float specular = pow(dot(halfVec, _surface.normal), material.shininess);
       //outColor.rgb += material.specular.rgb * specular;
-      outColor.rgb += specularColor.rgb * specular;
+      _output.color.rgb += specularColor.rgb * specular;
     }
   }
   numLights += NUM_DIRECTIONAL_LIGHTS;
@@ -465,19 +512,19 @@ const _fsDirectional = `
 const _fsDirectionalShadow = `
   float shadow = convDepth(texture(u_shadowMapTexture__I__, v_directionalShadowTexcoord[__I__].xy / v_directionalShadowTexcoord[__I__].w));
   if(v_directionalShadowDepth[__I__].z / v_directionalShadowDepth[__I__].w - 0.0001 > shadow){
-    outColor.rgb += material.diffuse.rgb * light.directionalShadow[__I__].shadowColor.rgb;
+    _output.color.rgb += material.diffuse.rgb * light.directionalShadow[__I__].shadowColor.rgb;
   }else{
     // diffuse
     vec3 lightVec = normalize(v_light[numLights]);
-    float diffuse = clamp(dot(lightVec, nom), 0.0f, 1.0f);
-    outColor.rgb += light.directionalShadow[__I__].color.rgb * material.diffuse.rgb * diffuse;
+    float diffuse = clamp(dot(lightVec, _surface.normal), 0.0f, 1.0f);
+    _output.color.rgb += light.directionalShadow[__I__].color.rgb * material.diffuse.rgb * diffuse;
 
     // specular
     if(diffuse > 0.0f){
-      vec3 halfVec = normalize(lightVec + viewVec);
-      float specular = pow(dot(halfVec, nom), material.shininess);
+      vec3 halfVec = normalize(lightVec + _surface.view);
+      float specular = pow(dot(halfVec, _surface.normal), material.shininess);
       //outColor.rgb += material.specular.rgb * specular;
-      outColor.rgb += specularColor.rgb * specular;
+      _output.color.rgb += specularColor.rgb * specular;
     }
   }
 
@@ -488,15 +535,15 @@ const _fsOmni = `
   for(int i=0; i<NUM_OMNI_LIGHTS; i++){
     // diffuse
     vec3 lightVec = normalize(v_light[numLights + i]);
-    float diffuse = clamp(dot(lightVec, nom), 0.0f, 1.0f);
-    outColor.rgb += light.omni[i].color.rgb * material.diffuse.rgb * diffuse;
+    float diffuse = clamp(dot(lightVec, _surface.normal), 0.0f, 1.0f);
+    _output.color.rgb += light.omni[i].color.rgb * material.diffuse.rgb * diffuse;
 
     // specular
     if(diffuse > 0.0f){
-      vec3 halfVec = normalize(lightVec + viewVec);
-      float specular = pow(dot(halfVec, nom), material.shininess);
+      vec3 halfVec = normalize(lightVec + _surface.view);
+      float specular = pow(dot(halfVec, _surface.normal), material.shininess);
       //outColor.rgb += material.specular.rgb * specular; // TODO: get the light color of specular
-      outColor.rgb += specularColor.rgb * specular;
+      _output.color.rgb += specularColor.rgb * specular;
     }
   }
   numLights += NUM_OMNI_LIGHTS;
@@ -556,7 +603,7 @@ const _defaultParticleVertexShader =
           corner.x * (rotation.y * rotation.x * tcos + rotation.z * sinAngle)
         + corner.y * (rotation.y * rotation.y * tcos + cosAngle),
           corner.x * (rotation.z * rotation.x * tcos - rotation.y * sinAngle)
-        + corner.y * (rotation.z * rotation.y * tcos + rotation.x * sinAngle)) * size * 0.5;
+        + corner.y * (rotation.z * rotation.y * tcos + rotation.x * sinAngle)) * size;
     }
     pos.xyz += d;
 
@@ -1067,6 +1114,12 @@ export default class SCNRenderer extends NSObject {
      * @type {WebGLTexture}
      */
     this._hitNormalTexture = null
+
+    /**
+     * @access private
+     * @type {SCNProgram}
+     */
+    this._currentProgram = null
   }
 
   /**
@@ -1277,10 +1330,6 @@ export default class SCNRenderer extends NSObject {
     gl.clearColor(1.0, 1.0, 1.0, 1.0)
     gl.disable(gl.BLEND)
     const shadowRenderingArray = this._createShadowNodeArray()
-//const mountain = shadowRenderingArray[4]
-//const lastIndex = shadowRenderingArray.length - 1
-//shadowRenderingArray[4] = shadowRenderingArray[lastIndex]
-//shadowRenderingArray[lastIndex] = mountain
     
     for(const key of Object.keys(lights)){
       for(const lightNode of lights[key]){
@@ -1334,32 +1383,6 @@ export default class SCNRenderer extends NSObject {
     //this._showShadowMapOfLight(lights.directionalShadow[0])
 
     gl.flush()
-  }
-
-  _bindBuffersToProgram(program) {
-    const gl = this.context
-    //gl.bindBuffer(gl.UNIFORM_BUFFER, this._cameraBuffer)
-    //gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(cameraData), gl.DYNAMIC_DRAW)
-    //gl.bindBuffer(gl.UNIFORM_BUFFER, this._fogBuffer)
-    //gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(fogData), gl.DYNAMIC_DRAW)
-    //gl.bindBuffer(gl.UNIFORM_BUFFER, this._lightBuffer)
-    //gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(lightData), gl.DYNAMIC_DRAW)
-    //for(let i=0; i<lights.directionalShadow.length; i++){
-    //  const node = lights.directionalShadow[i]
-    //  const symbol = `TEXTURE${i+8}`
-    //  gl.activeTexture(gl[symbol])
-    //  gl.bindTexture(gl.TEXTURE_2D, node.presentation.light._shadowDepthTexture)
-    //}
-
-    const cameraIndex = gl.getUniformBlockIndex(program, 'cameraUniform')
-    gl.uniformBlockBinding(program, cameraIndex, _cameraLoc)
-    gl.bindBufferBase(gl.UNIFORM_BUFFER, _cameraLoc, this._cameraBuffer)
-    const fogIndex = gl.getUniformBlockIndex(program, 'fogUniform')
-    gl.uniformBlockBinding(program, fogIndex, _fogLoc)
-    gl.bindBufferBase(gl.UNIFORM_BUFFER, _fogLoc, this._fogBuffer)
-    const lightIndex = gl.getUniformBlockIndex(program, 'lightUniform')
-    gl.uniformBlockBinding(program, lightIndex, _lightLoc)
-    gl.bindBufferBase(gl.UNIFORM_BUFFER, _lightLoc, this._lightBuffer)
   }
 
   _renderOverlaySKScene() {
@@ -1629,8 +1652,10 @@ export default class SCNRenderer extends NSObject {
     }
     const gl = this.context
     const geometry = node.presentation.geometry
-    const program = this._getProgramForGeometry(geometry)
-    gl.useProgram(program)
+    const scnProgram = this._getProgramForGeometry(geometry)
+    const program = scnProgram._glProgram
+    //gl.useProgram(program)
+    this._switchProgram(scnProgram)
 
     if(geometry._vertexArrayObjects === null){
       this._initializeVAO(node, program)
@@ -1641,7 +1666,12 @@ export default class SCNRenderer extends NSObject {
       this._updateVAO(node)
     }
 
-    gl.uniform1f(gl.getUniformLocation(program, 'u_time'), this._time)
+    const uniformTime = gl.getUniformLocation(program, 'u_time')
+    if(uniformTime){
+      // this._time might be too large.
+      const time = this._time % 100000.0
+      gl.uniform1f(uniformTime, time)
+    }
 
     if(node.presentation.skinner !== null){
       gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
@@ -1736,6 +1766,7 @@ export default class SCNRenderer extends NSObject {
       program = system._program._glProgram
     }
     gl.useProgram(program)
+    //this._switchProgram(program)
     gl.disable(gl.CULL_FACE)
 
     if(system._vertexBuffer === null){
@@ -2586,15 +2617,20 @@ export default class SCNRenderer extends NSObject {
     return this._audioEngine
   }
 
+  /**
+   * @access private
+   * @param {SCNGeometry} geometry -
+   * @returns {SCNProgram} -
+   */
   _getProgramForGeometry(geometry) {
     if(geometry.program !== null){
-      return geometry.program._glProgram
+      //return geometry.program._glProgram
+      return geometry.program
     }
     if(geometry._shadableHelper === null){
-      return this._defaultProgram._glProgram
+      //return this._defaultProgram._glProgram
+      return this._defaultProgram
     }
-
-    //return this._defaultProgram._glProgram
 
     const gl = this.context
     const p = new SCNProgram()
@@ -2634,28 +2670,43 @@ export default class SCNRenderer extends NSObject {
       throw new Error(`program link error: ${info}`)
     }
 
-    // DEBUG
-    geometry.program = this._defaultProgram
-    return this._defaultProgram._glProgram
+    geometry.program = p
 
+    return p
+  }
 
-    //gl.useProgram(p._glProgram)
+  _switchProgram(program) {
+    if(this._currentProgram === program){
+      return
+    }
 
-    //gl.enable(gl.DEPTH_TEST)
-    //gl.depthFunc(gl.LEQUAL)
-    //gl.enable(gl.BLEND)
-    //gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)
-    //gl.enable(gl.CULL_FACE)
-    //gl.cullFace(gl.BACK)
+    const gl = this.context
+    gl.useProgram(program._glProgram)
 
-    //// set default textures to prevent warnings
-    //this._setDummyTextureAsDefault(p)
+    // set dummy textures
+    program._setDummyTextureForContext(gl)
 
-    ////geometry._presentation.program = p
-    //geometry.program = p
-    //this._bindBuffersToProgram(p)
+    // set shadow textures
+    const lights = this._lightNodes
+    for(let i=0; i<lights.directionalShadow.length; i++){
+      const node = lights.directionalShadow[i]
+      const symbol = `TEXTURE${i+8}`
+      gl.activeTexture(gl[symbol])
+      gl.bindTexture(gl.TEXTURE_2D, node.presentation.light._shadowDepthTexture)
+    }
 
-    //return p
+    // bind buffers
+    const cameraIndex = gl.getUniformBlockIndex(program._glProgram, 'cameraUniform')
+    gl.uniformBlockBinding(program._glProgram, cameraIndex, _cameraLoc)
+    gl.bindBufferBase(gl.UNIFORM_BUFFER, _cameraLoc, this._cameraBuffer)
+    const fogIndex = gl.getUniformBlockIndex(program._glProgram, 'fogUniform')
+    gl.uniformBlockBinding(program._glProgram, fogIndex, _fogLoc)
+    gl.bindBufferBase(gl.UNIFORM_BUFFER, _fogLoc, this._fogBuffer)
+    const lightIndex = gl.getUniformBlockIndex(program._glProgram, 'lightUniform')
+    gl.uniformBlockBinding(program._glProgram, lightIndex, _lightLoc)
+    gl.bindBufferBase(gl.UNIFORM_BUFFER, _lightLoc, this._lightBuffer)
+
+    this._currentProgram = program
   }
 
   /**
@@ -2708,7 +2759,8 @@ export default class SCNRenderer extends NSObject {
       throw new Error(`program link error: ${info}`)
     }
 
-    gl.useProgram(p._glProgram)
+    //gl.useProgram(p._glProgram)
+    this._switchProgram(p)
 
     gl.enable(gl.DEPTH_TEST)
     gl.depthFunc(gl.LEQUAL)
@@ -2718,7 +2770,7 @@ export default class SCNRenderer extends NSObject {
     gl.cullFace(gl.BACK)
 
     // set default textures to prevent warnings
-    this._setDummyTextureAsDefault(p)
+    //this._setDummyTextureAsDefault(p)
     
     return this.__defaultProgram
   }
@@ -2789,12 +2841,27 @@ export default class SCNRenderer extends NSObject {
     vars.set('__NUM_IES_LIGHTS__', numIES)
     vars.set('__NUM_PROBE_LIGHTS__', numProbe)
 
-    if(geometry && geometry.shadableHelper && geometry.shadableHelper.shaderModifiers.SCNShaderModifierEntryPointGeometry){
-      vars.set('__USE_SHADER_MODIFIER_GEOMETRY__', 1)
-      vars.set('__SHADER_MODIFIER_GEOMETRY__', geometry.shadableHelper.shaderModifiers.SCNShaderModifierEntryPointGeometry)
-    }else{
-      vars.set('__USE_SHADER_MODIFIER_GEOMETRY__', 0)
-      vars.set('__SHADER_MODIFIER_GEOMETRY__', '')
+    vars.set('__USE_SHADER_MODIFIER_GEOMETRY__', 0)
+    vars.set('__SHADER_MODIFIER_GEOMETRY__', '')
+    vars.set('__USE_SHADER_MODIFIER_SURFACE__', 0)
+    vars.set('__SHADER_MODIFIER_SURFACE__', '')
+    vars.set('__USE_SHADER_MODIFIER_FRAGMENT__', 0)
+    vars.set('__SHADER_MODIFIER_FRAGMENT__', '')
+
+    if(geometry && geometry._shadableHelper && geometry._shadableHelper._shaderModifiers){
+      const modifiers = geometry._shadableHelper._shaderModifiers
+      if(modifiers.SCNShaderModifierEntryPointGeometry){
+        vars.set('__USE_SHADER_MODIFIER_GEOMETRY__', 1)
+        vars.set('__SHADER_MODIFIER_GEOMETRY__', modifiers.SCNShaderModifierEntryPointGeometry)
+      }
+      if(modifiers.SCNShaderModifierEntryPointSurface){
+        vars.set('__USE_SHADER_MODIFIER_SURFACE__', 1)
+        vars.set('__SHADER_MODIFIER_SURFACE__', modifiers.SCNShaderModifierEntryPointSurface)
+      }
+      if(modifiers.SCNShaderModifierEntryPointFragment){
+        vars.set('__USE_SHADER_MODIFIER_FRAGMENT__', 1)
+        vars.set('__SHADER_MODIFIER_FRAGMENT__', modifiers.SCNShaderModifierEntryPointFragment)
+      }
     }
 
     let lightDefinition = ''
@@ -3227,38 +3294,38 @@ export default class SCNRenderer extends NSObject {
    * @param {SCNProgram} program -
    * @returns {void}
    */
-  _setDummyTextureAsDefault(program) {
-    const gl = this.context
-    const p = program
+  //_setDummyTextureAsDefault(program) {
+  //  const gl = this.context
+  //  const p = program
 
-    const texNames = [
-      gl.TEXTURE0,
-      gl.TEXTURE1,
-      gl.TEXTURE2,
-      gl.TEXTURE3,
-      gl.TEXTURE4,
-      gl.TEXTURE5,
-      gl.TEXTURE6,
-      gl.TEXTURE7
-    ]
-    const texSymbols = [
-      'u_emissionTexture',
-      'u_ambientTexture',
-      'u_diffuseTexture',
-      'u_specularTexture',
-      'u_reflectiveTexture',
-      'u_transparentTexture',
-      'u_multiplyTexture',
-      'u_normalTexture'
-    ]
-    for(let i=0; i<texNames.length; i++){
-      const texName = texNames[i]
-      const symbol = texSymbols[i]
-      gl.uniform1i(gl.getUniformLocation(p._glProgram, symbol), i)
-      gl.activeTexture(texName)
-      gl.bindTexture(gl.TEXTURE_2D, this.__dummyTexture)
-    }
-  }
+  //  const texNames = [
+  //    gl.TEXTURE0,
+  //    gl.TEXTURE1,
+  //    gl.TEXTURE2,
+  //    gl.TEXTURE3,
+  //    gl.TEXTURE4,
+  //    gl.TEXTURE5,
+  //    gl.TEXTURE6,
+  //    gl.TEXTURE7
+  //  ]
+  //  const texSymbols = [
+  //    'u_emissionTexture',
+  //    'u_ambientTexture',
+  //    'u_diffuseTexture',
+  //    'u_specularTexture',
+  //    'u_reflectiveTexture',
+  //    'u_transparentTexture',
+  //    'u_multiplyTexture',
+  //    'u_normalTexture'
+  //  ]
+  //  for(let i=0; i<texNames.length; i++){
+  //    const texName = texNames[i]
+  //    const symbol = texSymbols[i]
+  //    gl.uniform1i(gl.getUniformLocation(p._glProgram, symbol), i)
+  //    gl.activeTexture(texName)
+  //    gl.bindTexture(gl.TEXTURE_2D, this.__dummyTexture)
+  //  }
+  //}
 
   _switchToDefaultCamera() {
     if(this._pointOfView === null){

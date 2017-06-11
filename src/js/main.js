@@ -1,5 +1,7 @@
 import NSColor from './AppKit/NSColor'
 import NSColorSpaceModel from './AppKit/NSColorSpaceModel'
+import AVAudioMixerNode from './AVFoundation/AVAudioMixerNode'
+import AVAudioNode from './AVFoundation/AVAudioNode'
 import CGBlendMode from './CoreGraphics/CGBlendMode'
 import CGLineCap from './CoreGraphics/CGLineCap'
 import CGLineJoin from './CoreGraphics/CGLineJoin'
@@ -228,6 +230,8 @@ import _HTMLCanvasElement from './util/_HTMLCanvasElement'
 
 _ClassList.registerClass(NSColor)
 _ClassList.registerClass(NSColorSpaceModel)
+_ClassList.registerClass(AVAudioMixerNode)
+_ClassList.registerClass(AVAudioNode)
 _ClassList.registerClass(CGBlendMode)
 _ClassList.registerClass(CGLineCap)
 _ClassList.registerClass(CGLineJoin)
@@ -449,6 +453,8 @@ _ClassList.registerClass(SKWait)
 /*global exports*/
 exports.NSColor = NSColor
 exports.NSColorSpaceModel = NSColorSpaceModel
+exports.AVAudioMixerNode = AVAudioMixerNode
+exports.AVAudioNode = AVAudioNode
 exports.CGBlendMode = CGBlendMode
 exports.CGLineCap = CGLineCap
 exports.CGLineJoin = CGLineJoin

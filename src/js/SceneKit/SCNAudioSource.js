@@ -122,7 +122,7 @@ export default class SCNAudioSource extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnaudiosource/1524106-volume
    */
   get volume() {
-    return this._gainNode.gain.volume
+    return this._gainNode.gain.value
   }
   set volume(newValue) {
     this._gainNode.gain.value = newValue

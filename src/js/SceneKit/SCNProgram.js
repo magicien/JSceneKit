@@ -108,6 +108,12 @@ export default class SCNProgram extends NSObject {
      * @type {WebGLProgram}
      */
     this._glProgram = null
+
+    /**
+     * @access private
+     * @type {WebGLTexture}
+     */
+    this._dummyTexture = null
   }
 
   // Mapping GLSL Symbols to SceneKit Semantics
@@ -150,5 +156,62 @@ export default class SCNProgram extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnprogram/1524047-handlebinding
    */
   handleBindingOfBufferNamedHandler(name, frequency, block) {
+  }
+
+  _setDummyTextureForContext(context) {
+    const gl = context
+    this._createDummyTextureForContext(gl)
+
+    const texNames = [
+      gl.TEXTURE0,
+      gl.TEXTURE1,
+      gl.TEXTURE2,
+      gl.TEXTURE3,
+      gl.TEXTURE4,
+      gl.TEXTURE5,
+      gl.TEXTURE6,
+      gl.TEXTURE7
+    ]
+    const texSymbols = [
+      'u_emissionTexture',
+      'u_ambientTexture',
+      'u_diffuseTexture',
+      'u_specularTexture',
+      'u_reflectiveTexture',
+      'u_transparentTexture',
+      'u_multiplyTexture',
+      'u_normalTexture'
+    ]
+    for(let i=0; i<texNames.length; i++){
+      const texName = texNames[i]
+      const symbol = texSymbols[i]
+      const loc = gl.getUniformLocation(this._glProgram, symbol)
+      if(loc !== null){
+        gl.uniform1i(loc, i)
+        gl.activeTexture(texName)
+        gl.bindTexture(gl.TEXTURE_2D, this._dummyTexture)
+      }
+    }
+  }
+
+  _createDummyTextureForContext(context) {
+    if(this._dummyTexture !== null){
+      return
+    }
+    const gl = context
+    const canvas = document.createElement('canvas')
+    canvas.width = 1
+    canvas.height = 1
+    const c = canvas.getContext('2d')
+    c.fillStyle = 'rgba(255, 255, 255, 1.0)'
+    c.fillRect(0, 0, 1, 1)
+
+    this._dummyTexture = gl.createTexture()
+
+    gl.bindTexture(gl.TEXTURE_2D, this._dummyTexture)
+    // texImage2D(target, level, internalformat, width, height, border, format, type, source)
+    // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
+    gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas)
+    gl.bindTexture(gl.TEXTURE_2D, null)
   }
 }

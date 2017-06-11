@@ -2,6 +2,7 @@
 
 import NSObject from '../ObjectiveC/NSObject'
 import SCNAudioSource from './SCNAudioSource'
+import AVAudioMixerNode from '../AVFoundation/AVAudioMixerNode'
 
 
 /**
@@ -28,7 +29,8 @@ export default class SCNAudioPlayer extends NSObject {
     // Working with Audio Sources
 
     this._audioSource = source
-    this._audioNode = null
+    this._audioNode = new AVAudioMixerNode()
+    this._audioNode._gainNode = source._gainNode
 
     // Responding to Playback
 
