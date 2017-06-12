@@ -29471,7 +29471,7 @@ module.exports =
 	 * @access private
 	 * @type {string}
 	 */
-	var _defaultParticleVertexShader = '#version 300 es\n  precision mediump float;\n\n  uniform mat4 modelTransform;\n  uniform mat4 viewTransform;\n  uniform mat4 projectionTransform;\n  uniform int orientationMode;\n  uniform float stretchFactor;\n\n  in vec3 position;\n  in vec3 velocity;\n  in vec4 rotation;\n  in vec4 color;\n  in float size;\n  //in float life;\n  in vec2 corner;\n\n  out vec2 v_texcoord;\n  out vec4 v_color;\n\n  void main() {\n    vec4 pos = viewTransform * vec4(position, 1.0);\n    vec3 d;\n\n    if(stretchFactor > 0.0){\n      vec4 v = viewTransform * vec4(velocity, 0.0) * stretchFactor;\n      if(corner.y > 0.0){\n        pos.xyz += v.xyz;\n      }\n      vec2 cy = normalize(v.xy);\n      vec2 cx = vec2(-cy.y, cy.x);\n      d = vec3(cx * corner.x + cy * corner.y, 0) * size;\n    }else{\n      float sinAngle = sin(rotation.w);\n      float cosAngle = cos(rotation.w);\n      float tcos = 1.0 - cosAngle;\n\n      d = vec3(\n          corner.x * (rotation.x * rotation.x * tcos + cosAngle)\n        + corner.y * (rotation.x * rotation.y * tcos - rotation.z * sinAngle),\n          corner.x * (rotation.y * rotation.x * tcos + rotation.z * sinAngle)\n        + corner.y * (rotation.y * rotation.y * tcos + cosAngle),\n          corner.x * (rotation.z * rotation.x * tcos - rotation.y * sinAngle)\n        + corner.y * (rotation.z * rotation.y * tcos + rotation.x * sinAngle)) * size * 0.5;\n      if(orientationMode == 2){\n        // orientation: free\n        d = mat3(viewTransform) * mat3(modelTransform) * d;\n      }\n    }\n    pos.xyz += d;\n\n    v_color = color;\n    v_texcoord = corner * vec2(0.5, -0.5) + 0.5;\n    gl_Position = projectionTransform * pos;\n  }\n';
+	var _defaultParticleVertexShader = '#version 300 es\n  precision mediump float;\n\n  uniform mat4 modelTransform;\n  uniform mat4 viewTransform;\n  uniform mat4 projectionTransform;\n  uniform int orientationMode;\n  uniform float stretchFactor;\n\n  in vec3 position;\n  in vec3 velocity;\n  in vec4 rotation;\n  in vec4 color;\n  in float size;\n  //in float life;\n  in vec2 corner;\n\n  out vec2 v_texcoord;\n  out vec4 v_color;\n\n  void main() {\n    vec4 pos = viewTransform * vec4(position, 1.0);\n    vec3 d;\n\n    if(stretchFactor > 0.0){\n      vec4 v = viewTransform * vec4(velocity, 0.0) * stretchFactor;\n      if(corner.y > 0.0){\n        pos.xyz += v.xyz;\n      }\n      vec2 cy = normalize(v.xy);\n      vec2 cx = vec2(-cy.y, cy.x);\n      d = vec3(cx * corner.x + cy * corner.y, 0) * size;\n    }else{\n      float sinAngle = sin(rotation.w);\n      float cosAngle = cos(rotation.w);\n      float tcos = 1.0 - cosAngle;\n\n      d = vec3(\n          corner.x * (rotation.x * rotation.x * tcos + cosAngle)\n        + corner.y * (rotation.x * rotation.y * tcos - rotation.z * sinAngle),\n          corner.x * (rotation.y * rotation.x * tcos + rotation.z * sinAngle)\n        + corner.y * (rotation.y * rotation.y * tcos + cosAngle),\n          corner.x * (rotation.z * rotation.x * tcos - rotation.y * sinAngle)\n        + corner.y * (rotation.z * rotation.y * tcos + rotation.x * sinAngle)) * size;\n      if(orientationMode == 2){\n        // orientation: free\n        d = mat3(viewTransform) * mat3(modelTransform) * d;\n      }\n    }\n    pos.xyz += d;\n\n    v_color = color;\n    v_texcoord = corner * vec2(0.5, -0.5) + 0.5;\n    gl_Position = projectionTransform * pos;\n  }\n';
 
 	/**
 	 * @access private
@@ -36960,6 +36960,8 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
 	var _BinaryRequest2 = __webpack_require__(97);
 
 	var _BinaryRequest3 = _interopRequireDefault(_BinaryRequest2);
@@ -37101,6 +37103,8 @@ module.exports =
 	     */
 	    _this.size = 1;
 
+	    _this.baseSize = 1;
+
 	    /**
 	     * @type {SKColor}
 	     */
@@ -37176,6 +37180,14 @@ module.exports =
 	    value: function floatArray() {
 	      var baseArray = [].concat(_toConsumableArray(this.position.floatArray()), _toConsumableArray(this.velocity.floatArray()), _toConsumableArray(this.axis.floatArray()), [this.angle], _toConsumableArray(this.color.floatArray()), [this.size]);
 	      return [].concat(_toConsumableArray(baseArray), [this.texLeft, this.texTop], _toConsumableArray(baseArray), [this.texRight, this.texTop], _toConsumableArray(baseArray), [this.texLeft, this.texBottom], _toConsumableArray(baseArray), [this.texRight, this.texBottom]);
+	    }
+	  }, {
+	    key: 'valueForKeyPath',
+	    value: function valueForKeyPath(keyPath) {
+	      if (keyPath === 'size') {
+	        return this.baseSize;
+	      }
+	      return _get(_Particle.prototype.__proto__ || Object.getPrototypeOf(_Particle.prototype), 'valueForKeyPath', this).call(this, keyPath);
 	    }
 
 	    /**
@@ -38196,6 +38208,7 @@ module.exports =
 	      }
 	      p.angle = (this.particleAngle + this.particleAngleVariation * (Math.random() - 0.5)) / 180.0 * Math.PI;
 	      p.size = this.particleSize + this.particleSizeVariation * (Math.random() - 0.5);
+	      p.baseSize = p.size;
 	      p.color = this._createColor();
 
 	      switch (this.birthDirection) {

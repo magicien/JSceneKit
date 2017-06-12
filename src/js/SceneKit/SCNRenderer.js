@@ -607,7 +607,7 @@ const _defaultParticleVertexShader =
           corner.x * (rotation.y * rotation.x * tcos + rotation.z * sinAngle)
         + corner.y * (rotation.y * rotation.y * tcos + cosAngle),
           corner.x * (rotation.z * rotation.x * tcos - rotation.y * sinAngle)
-        + corner.y * (rotation.z * rotation.y * tcos + rotation.x * sinAngle)) * size * 0.5;
+        + corner.y * (rotation.z * rotation.y * tcos + rotation.x * sinAngle)) * size;
       if(orientationMode == 2){
         // orientation: free
         d = mat3(viewTransform) * mat3(modelTransform) * d;

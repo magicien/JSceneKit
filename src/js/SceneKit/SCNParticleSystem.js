@@ -69,6 +69,8 @@ class _Particle extends NSObject {
      */
     this.size = 1
 
+    this.baseSize = 1
+
     /**
      * @type {SKColor}
      */
@@ -150,6 +152,13 @@ class _Particle extends NSObject {
       ...baseArray, this.texLeft, this.texBottom,
       ...baseArray, this.texRight, this.texBottom
     ]
+  }
+
+  valueForKeyPath(keyPath) {
+    if(keyPath === 'size'){
+      return this.baseSize
+    }
+    return super.valueForKeyPath(keyPath)
   }
 
   /**
@@ -1154,6 +1163,7 @@ export default class SCNParticleSystem extends NSObject {
     }
     p.angle = (this.particleAngle + this.particleAngleVariation * (Math.random() - 0.5)) / 180.0 * Math.PI
     p.size = this.particleSize + this.particleSizeVariation * (Math.random() - 0.5)
+    p.baseSize = p.size
     p.color = this._createColor()
 
     switch(this.birthDirection){
