@@ -1349,10 +1349,10 @@ export default class SCNParticleSystem extends NSObject {
     }
 
     const blendFuncSrc = [
-      gl.SRC_ALPHA, // additive
+      gl.ONE, // additive
       gl.ZERO, // subtract
       gl.ZERO, // multiply
-      gl.ZERO, // screen
+      gl.SRC_ALPHA, // screen
       gl.SRC_ALPHA, // alpha
       gl.ONE // replace
     ]
@@ -1360,7 +1360,7 @@ export default class SCNParticleSystem extends NSObject {
       gl.ONE, // additive
       gl.ONE_MINUS_SRC_COLOR, // subtract
       gl.SRC_COLOR, // multiply
-      gl.SRC_ALPHA, // screen... is it correct?
+      gl.ONE, // screen
       gl.ONE_MINUS_SRC_ALPHA, // alpha
       gl.ZERO // replace
     ]

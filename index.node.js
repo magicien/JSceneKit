@@ -36625,17 +36625,17 @@ module.exports =
 	        this._updateIndexBuffer(gl, this._particles.length + 10);
 	      }
 
-	      var blendFuncSrc = [gl.SRC_ALPHA, // additive
+	      var blendFuncSrc = [gl.ONE, // additive
 	      gl.ZERO, // subtract
 	      gl.ZERO, // multiply
-	      gl.ZERO, // screen
+	      gl.SRC_ALPHA, // screen
 	      gl.SRC_ALPHA, // alpha
 	      gl.ONE // replace
 	      ];
 	      var blendFuncDst = [gl.ONE, // additive
 	      gl.ONE_MINUS_SRC_COLOR, // subtract
 	      gl.SRC_COLOR, // multiply
-	      gl.SRC_ALPHA, // screen... is it correct?
+	      gl.ONE, // screen
 	      gl.ONE_MINUS_SRC_ALPHA, // alpha
 	      gl.ZERO // replace
 	      ];
