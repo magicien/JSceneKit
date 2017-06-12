@@ -244,9 +244,9 @@ export default class SCNParticleSystem extends NSObject {
           if(typeof d !== 'undefined'){
             d.animation.keyPath = key
             //console.error(`SCNParticleSystem key: ${key}, ${d.animation.className}`)
-            //if(key === 'size'){
-            //  d.animation._isMultiplicative = true
-            //}
+            if(key === 'size'){
+              d.animation._isMultiplicative = true
+            }
           }
         })
         obj.propertyControllers = dict
