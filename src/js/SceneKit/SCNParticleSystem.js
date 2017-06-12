@@ -1337,6 +1337,7 @@ export default class SCNParticleSystem extends NSObject {
       gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE)
     }
 
+    gl.uniform1i(gl.getUniformLocation(program, 'orientationMode'), this.orientationMode)
     gl.uniform1f(gl.getUniformLocation(program, 'stretchFactor'), this.stretchFactor)
 
     // buffer particle data

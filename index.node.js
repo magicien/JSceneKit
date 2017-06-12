@@ -27569,6 +27569,10 @@ module.exports =
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
+	var _SCNMatrix4MakeTranslation = __webpack_require__(75);
+
+	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
+
 	var _SCNNode = __webpack_require__(62);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
@@ -27684,7 +27688,7 @@ module.exports =
 	 * @access private
 	 * @type {string}
 	 */
-	var _defaultParticleVertexShader = '#version 300 es\n  precision mediump float;\n\n  uniform mat4 viewTransform;\n  uniform mat4 projectionTransform;\n  uniform float stretchFactor;\n\n  in vec3 position;\n  in vec3 velocity;\n  in vec4 rotation;\n  in vec4 color;\n  in float size;\n  //in float life;\n  in vec2 corner;\n\n  out vec2 v_texcoord;\n  out vec4 v_color;\n\n  void main() {\n    vec4 pos = viewTransform * vec4(position, 1.0);\n    vec3 d;\n\n    if(stretchFactor > 0.0){\n      vec4 v = viewTransform * vec4(velocity, 0.0) * stretchFactor;\n      if(corner.y > 0.0){\n        pos.xyz += v.xyz;\n      }\n      vec2 cy = normalize(v.xy);\n      vec2 cx = vec2(-cy.y, cy.x);\n      d = vec3(cx * corner.x + cy * corner.y, 0) * size;\n    }else{\n      float sinAngle = sin(rotation.w);\n      float cosAngle = cos(rotation.w);\n      float tcos = 1.0 - cosAngle;\n      d = vec3(\n          corner.x * (rotation.x * rotation.x * tcos + cosAngle)\n        + corner.y * (rotation.x * rotation.y * tcos - rotation.z * sinAngle),\n          corner.x * (rotation.y * rotation.x * tcos + rotation.z * sinAngle)\n        + corner.y * (rotation.y * rotation.y * tcos + cosAngle),\n          corner.x * (rotation.z * rotation.x * tcos - rotation.y * sinAngle)\n        + corner.y * (rotation.z * rotation.y * tcos + rotation.x * sinAngle)) * size;\n    }\n    pos.xyz += d;\n\n    v_color = color;\n    v_texcoord = corner * vec2(0.5, -0.5) + 0.5;\n    gl_Position = projectionTransform * pos;\n  }\n';
+	var _defaultParticleVertexShader = '#version 300 es\n  precision mediump float;\n\n  uniform mat4 modelTransform;\n  uniform mat4 viewTransform;\n  uniform mat4 projectionTransform;\n  uniform int orientationMode;\n  uniform float stretchFactor;\n\n  in vec3 position;\n  in vec3 velocity;\n  in vec4 rotation;\n  in vec4 color;\n  in float size;\n  //in float life;\n  in vec2 corner;\n\n  out vec2 v_texcoord;\n  out vec4 v_color;\n\n  void main() {\n    vec4 pos = viewTransform * vec4(position, 1.0);\n    vec3 d;\n\n    if(stretchFactor > 0.0){\n      vec4 v = viewTransform * vec4(velocity, 0.0) * stretchFactor;\n      if(corner.y > 0.0){\n        pos.xyz += v.xyz;\n      }\n      vec2 cy = normalize(v.xy);\n      vec2 cx = vec2(-cy.y, cy.x);\n      d = vec3(cx * corner.x + cy * corner.y, 0) * size;\n    }else{\n      float sinAngle = sin(rotation.w);\n      float cosAngle = cos(rotation.w);\n      float tcos = 1.0 - cosAngle;\n\n      d = vec3(\n          corner.x * (rotation.x * rotation.x * tcos + cosAngle)\n        + corner.y * (rotation.x * rotation.y * tcos - rotation.z * sinAngle),\n          corner.x * (rotation.y * rotation.x * tcos + rotation.z * sinAngle)\n        + corner.y * (rotation.y * rotation.y * tcos + cosAngle),\n          corner.x * (rotation.z * rotation.x * tcos - rotation.y * sinAngle)\n        + corner.y * (rotation.z * rotation.y * tcos + rotation.x * sinAngle)) * size * 0.5;\n      if(orientationMode == 2){\n        // orientation: free\n        d = mat3(viewTransform) * mat3(modelTransform) * d;\n      }\n    }\n    pos.xyz += d;\n\n    v_color = color;\n    v_texcoord = corner * vec2(0.5, -0.5) + 0.5;\n    gl_Position = projectionTransform * pos;\n  }\n';
 
 	/**
 	 * @access private
@@ -28795,7 +28799,7 @@ module.exports =
 
 	      var systems = node.presentation.particleSystems;
 	      systems.forEach(function (system) {
-	        _this3._renderParticleSystem(system);
+	        _this3._renderParticleSystem(system, node);
 	      });
 	    }
 
@@ -28809,6 +28813,8 @@ module.exports =
 	  }, {
 	    key: '_renderParticleSystem',
 	    value: function _renderParticleSystem(system) {
+	      var node = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
 	      //this.currentTime
 	      var gl = this.context;
 	      var program = this._defaultParticleProgram._glProgram;
@@ -28825,6 +28831,12 @@ module.exports =
 	      gl.bindVertexArray(system._vertexArray);
 
 	      system._bufferMaterialData(gl, program);
+	      if (node) {
+	        gl.uniformMatrix4fv(gl.getUniformLocation(program, 'modelTransform'), false, node._worldTransform.float32Array());
+	      } else {
+	        var m = (0, _SCNMatrix4MakeTranslation2.default)(0, 0, 0);
+	        gl.uniformMatrix4fv(gl.getUniformLocation(program, 'modelTransform'), false, m.float32Array());
+	      }
 
 	      gl.drawElements(gl.TRIANGLES, system._particles.length * 6, system._glIndexSize, 0);
 	    }
@@ -36602,6 +36614,7 @@ module.exports =
 	        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
 	      }
 
+	      gl.uniform1i(gl.getUniformLocation(program, 'orientationMode'), this.orientationMode);
 	      gl.uniform1f(gl.getUniformLocation(program, 'stretchFactor'), this.stretchFactor);
 
 	      // buffer particle data

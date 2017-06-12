@@ -9,6 +9,7 @@ import SCNTechniqueSupport from './SCNTechniqueSupport'
 import SCNScene from './SCNScene'
 import SCNAntialiasingMode from './SCNAntialiasingMode'
 import SCNMatrix4 from './SCNMatrix4'
+import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
 import SCNNode from './SCNNode'
 import SCNProgram from './SCNProgram'
 import SCNPhysicsWorld from './SCNPhysicsWorld'
@@ -566,8 +567,10 @@ const _defaultParticleVertexShader =
  `#version 300 es
   precision mediump float;
 
+  uniform mat4 modelTransform;
   uniform mat4 viewTransform;
   uniform mat4 projectionTransform;
+  uniform int orientationMode;
   uniform float stretchFactor;
 
   in vec3 position;
@@ -597,13 +600,18 @@ const _defaultParticleVertexShader =
       float sinAngle = sin(rotation.w);
       float cosAngle = cos(rotation.w);
       float tcos = 1.0 - cosAngle;
+
       d = vec3(
           corner.x * (rotation.x * rotation.x * tcos + cosAngle)
         + corner.y * (rotation.x * rotation.y * tcos - rotation.z * sinAngle),
           corner.x * (rotation.y * rotation.x * tcos + rotation.z * sinAngle)
         + corner.y * (rotation.y * rotation.y * tcos + cosAngle),
           corner.x * (rotation.z * rotation.x * tcos - rotation.y * sinAngle)
-        + corner.y * (rotation.z * rotation.y * tcos + rotation.x * sinAngle)) * size;
+        + corner.y * (rotation.z * rotation.y * tcos + rotation.x * sinAngle)) * size * 0.5;
+      if(orientationMode == 2){
+        // orientation: free
+        d = mat3(viewTransform) * mat3(modelTransform) * d;
+      }
     }
     pos.xyz += d;
 
@@ -1748,7 +1756,7 @@ export default class SCNRenderer extends NSObject {
 
     const systems = node.presentation.particleSystems
     systems.forEach((system) => {
-      this._renderParticleSystem(system)
+      this._renderParticleSystem(system, node)
     })
   }
 
@@ -1758,7 +1766,7 @@ export default class SCNRenderer extends NSObject {
    * @param {SCNParticleSystem} system - 
    * @returns {void}
    */
-  _renderParticleSystem(system) {
+  _renderParticleSystem(system, node = null) {
     //this.currentTime
     const gl = this.context
     let program = this._defaultParticleProgram._glProgram
@@ -1775,6 +1783,12 @@ export default class SCNRenderer extends NSObject {
     gl.bindVertexArray(system._vertexArray)
 
     system._bufferMaterialData(gl, program)
+    if(node){
+      gl.uniformMatrix4fv(gl.getUniformLocation(program, 'modelTransform'), false, node._worldTransform.float32Array())
+    }else{
+      let m = SCNMatrix4MakeTranslation(0, 0, 0)
+      gl.uniformMatrix4fv(gl.getUniformLocation(program, 'modelTransform'), false, m.float32Array())
+    }
 
     gl.drawElements(gl.TRIANGLES, system._particles.length * 6, system._glIndexSize, 0)
   }
