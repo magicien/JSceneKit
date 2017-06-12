@@ -36497,14 +36497,14 @@ module.exports =
 	        }
 	      }
 
-	      var dt = currentTime - this._prevTime;
+	      var dt = (currentTime - this._prevTime) * this.speedFactor;
 	      var damping = 1;
 	      if (this.dampingFactor > 0) {
 	        damping = Math.pow((100 - this.dampingFactor) * 0.01, dt * 60.0);
 	      }
 
 	      this._particles.forEach(function (p) {
-	        var pdt = currentTime - p.birthTime;
+	        var pdt = (currentTime - p.birthTime) * _this4.speedFactor;
 	        var t = pdt / p.lifeSpan;
 	        p.life = t;
 	        if (t > 1) {

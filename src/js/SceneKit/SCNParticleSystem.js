@@ -1229,14 +1229,14 @@ export default class SCNParticleSystem extends NSObject {
       }
     }
 
-    const dt = currentTime - this._prevTime
+    const dt = (currentTime - this._prevTime) * this.speedFactor
     let damping = 1
     if(this.dampingFactor > 0){
       damping = Math.pow((100 - this.dampingFactor) * 0.01, dt * 60.0)
     }
 
     this._particles.forEach((p) => {
-      const pdt = currentTime - p.birthTime
+      const pdt = (currentTime - p.birthTime) * this.speedFactor
       const t = pdt / p.lifeSpan
       p.life = t
       if(t > 1){
