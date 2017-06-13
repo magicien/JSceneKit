@@ -169,12 +169,12 @@
     "browser": true,
     "mocha": true
   },
-  "ecmaFeatures": {
-    "modules": true
-  },
   "extends": "eslint:recommended",
   "parserOptions": {
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "modules": true
+    }
   },
   "globals": {
     "global": true   // for test

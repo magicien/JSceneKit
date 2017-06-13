@@ -1195,10 +1195,10 @@ module.exports =
 	_ClassList3.default.registerClass(_SKSpriteNode2.default);
 	_ClassList3.default.registerClass(_SKTexture2.default);
 	_ClassList3.default.registerClass(_SKTextureFilteringMode2.default);
-	_ClassList3.default.registerClass(_SKWait2.default);
+	_ClassList3.default.registerClass(_SKWait2.default
 
 	/*global exports*/
-	exports.NSColor = _NSColor2.default;
+	);exports.NSColor = _NSColor2.default;
 	exports.NSColorSpaceModel = _NSColorSpaceModel2.default;
 	exports.AVAudioMixerNode = _AVAudioMixerNode2.default;
 	exports.AVAudioNode = _AVAudioNode2.default;
@@ -5852,8 +5852,9 @@ module.exports =
 	          if (typeof this._propTypes[key] === 'undefined') {
 	            //console.warn(`unknown key ${key}`)
 	            if (this._propTypes.$unknownKey && this._propTypes.$unknownKey(key) !== null) {
-	              propTypes[key] = this._propTypes.$unknownKey(key);
+	              propTypes[key] = this._propTypes.$unknownKey(key
 	              //console.warn(`unknown key: ${key} => ${propTypes[key]}`)
+	              );
 	            } else {
 	              console.error(this.className + ': property ' + key + ' not registered');
 	              throw new Error(this.className + ': property ' + key + ' not registered');
@@ -11102,12 +11103,11 @@ module.exports =
 	  inherit: 0,
 	  never: 2,
 	  workItem: 1
-	};
 
-	/**
-	 * @deprecated
-	 */
-	var _GlobalQueuePriority = {
+	  /**
+	   * @deprecated
+	   */
+	};var _GlobalQueuePriority = {
 	  background: 3,
 	  default: 1,
 	  high: 0,
@@ -12200,15 +12200,14 @@ module.exports =
 	  UIAccessibilityVoiceOverStatusDidChange: Symbol(),
 	  UIFocusDidUpdate: Symbol(),
 	  UIFocusMovementDidFail: Symbol()
+
+	  /**
+	   * An object containing information broadcast to registered observers that bridges to Notification; use NSNotification when you need reference semantics or other Foundation-specific behavior. 
+	   * @access public
+	   * @extends {NSObject}
+	   * @see https://developer.apple.com/documentation/foundation/nsnotification
+	   */
 	};
-
-	/**
-	 * An object containing information broadcast to registered observers that bridges to Notification; use NSNotification when you need reference semantics or other Foundation-specific behavior. 
-	 * @access public
-	 * @extends {NSObject}
-	 * @see https://developer.apple.com/documentation/foundation/nsnotification
-	 */
-
 	var NSNotification = function (_NSObject) {
 	  _inherits(NSNotification, _NSObject);
 
@@ -12921,15 +12920,14 @@ module.exports =
 	var _DecodingFailurePolicy = {
 	  raiseException: Symbol('raiseException'),
 	  setErrorAndReturn: Symbol('setErrorAndReturn')
+
+	  /**
+	   * The NSCoder abstract class declares the interface used by concrete subclasses to transfer objects and other values between memory and some other format. This capability provides the basis for archiving (where objects and data items are stored on disk) and distribution (where objects and data items are copied between different processes or threads). The concrete subclasses provided by Foundation for these purposes are NSArchiver, NSUnarchiver, NSKeyedArchiver, NSKeyedUnarchiver, and NSPortCoder. Concrete subclasses of NSCoder are referred to in general as coder classes, and instances of these classes as coder objects (or simply coders). A coder object that can only encode values is referred to as an encoder object, and one that can only decode values as a decoder object.
+	   * @access public
+	   * @extends {NSObject}
+	   * @see https://developer.apple.com/reference/foundation/nscoder
+	   */
 	};
-
-	/**
-	 * The NSCoder abstract class declares the interface used by concrete subclasses to transfer objects and other values between memory and some other format. This capability provides the basis for archiving (where objects and data items are stored on disk) and distribution (where objects and data items are copied between different processes or threads). The concrete subclasses provided by Foundation for these purposes are NSArchiver, NSUnarchiver, NSKeyedArchiver, NSKeyedUnarchiver, and NSPortCoder. Concrete subclasses of NSCoder are referred to in general as coder classes, and instances of these classes as coder objects (or simply coders). A coder object that can only encode values is referred to as an encoder object, and one that can only decode values as a decoder object.
-	 * @access public
-	 * @extends {NSObject}
-	 * @see https://developer.apple.com/reference/foundation/nscoder
-	 */
-
 	var NSCoder = function (_NSObject) {
 	  _inherits(NSCoder, _NSObject);
 
@@ -14505,7 +14503,7 @@ module.exports =
 	      this._offsetSize = reader.readUnsignedByte();
 	      this._objCount = reader.readUnsignedLongLong();
 	      var topIndex = reader.readUnsignedLongLong();
-	      var tablePos = reader.readUnsignedLongLong();
+	      var tablePos = reader.readUnsignedLongLong
 
 	      //console.log(`dataLen: ${dataLen}`)
 	      //console.log(`intSize: ${intSize}`)
@@ -14514,7 +14512,7 @@ module.exports =
 	      //console.log(`topIndex: ${topIndex}`)
 	      //console.log(`tablePos: ${tablePos}`)
 
-	      this._offsetArray = [];
+	      ();this._offsetArray = [];
 	      var pos = tablePos;
 	      reader.seek(pos);
 	      var objCount = this._objCount;
@@ -14560,9 +14558,9 @@ module.exports =
 	        }
 	      } else if (type1 === 0x10) {
 	        // Int
-	        var len = Math.pow(2, type2);
+	        var len = Math.pow(2, type2
 	        //console.log('   type: integer ' + len)
-	        return reader.readInteger(len, signed);
+	        );return reader.readInteger(len, signed);
 	      } else if (type1 === 0x20) {
 	        // Float
 	        var _len = Math.pow(2, type2);
@@ -14579,37 +14577,38 @@ module.exports =
 	        //console.log('   type: Date')
 	      } else if (type1 === 0x40) {
 	        // Data
-	        var count = this._getDataSize(type2);
+	        var count = this._getDataSize(type2
 	        //console.log(`   type: Data: length: ${count}`)
-	        return reader.readData(count);
+	        );return reader.readData(count);
 	      } else if (type1 === 0x50) {
 	        // ASCII
-	        var _count = this._getDataSize(type2);
+	        var _count = this._getDataSize(type2
 	        //console.log('   type: ascii ' + count)
-	        return reader.readString(_count, 'ascii');
+	        );return reader.readString(_count, 'ascii');
 	      } else if (type1 === 0x60) {
 	        // UTF-16
-	        var _count2 = this._getDataSize(type2);
+	        var _count2 = this._getDataSize(type2
 	        //console.log('   type: UTF-16 ' + count)
-	        return reader.readString(_count2, 'utf16be'); // Big Endian might not be supported...
+	        );return reader.readString(_count2, 'utf16be' // Big Endian might not be supported...
+	        );
 	      } else if (type1 === 0x80) {
 	        // UID
-	        var uid = reader.readInteger(type2 + 1, false);
+	        var uid = reader.readInteger(type2 + 1, false
 	        //console.log('   type: UID: ' + uid)
-	        return new _UID(this, uid);
+	        );return new _UID(this, uid);
 	      } else if (type1 === 0xA0) {
 	        // Array
-	        var _count3 = this._getDataSize(type2);
+	        var _count3 = this._getDataSize(type2
 	        //console.log('   type: array: ' + count)
-	        var arrIndex = [];
+	        );var arrIndex = [];
 	        for (var i = 0; i < _count3; i++) {
 	          arrIndex.push(reader.readInteger(this._offsetSize, false));
 	        }
 	        var arr = arrIndex.map(function (index) {
 	          return _this2._parseObjAtIndex(index);
-	        });
+	        }
 	        //console.log(`***arr.length: ${arr.length}`)
-	        return arr;
+	        );return arr;
 	      } else if (type1 === 0xC0) {
 	        // Set
 	        var _count4 = this._getDataSize(type2);
@@ -14635,11 +14634,11 @@ module.exports =
 	        }
 	        var result = {};
 	        for (var _i4 = 0; _i4 < _count5; _i4++) {
-	          var key = this._parseObjAtIndex(keyIndex[_i4]);
+	          var key = this._parseObjAtIndex(keyIndex[_i4]
 	          //console.log('key: ' + key)
-	          var val = this._parseObjAtIndex(valueIndex[_i4]);
+	          );var val = this._parseObjAtIndex(valueIndex[_i4]
 	          //console.log('val: ' + val)
-	          result[key] = val;
+	          );result[key] = val;
 	        }
 	        return result;
 	      }
@@ -14913,9 +14912,9 @@ module.exports =
 	      if (this._decodingFinished) {
 	        throw new Error('can\'t decode \'' + key + '\' after finishDecoding() is called');
 	      }
-	      var parsedObj = this.decodeObjectForKey(key);
+	      var parsedObj = this.decodeObjectForKey(key
 	      //console.log(`${key}: ${parsedObj.constructor.name}`)
-	      if (!(parsedObj instanceof Buffer)) {
+	      );if (!(parsedObj instanceof Buffer)) {
 	        throw new Error('propertylist of key ' + key + ' is not Buffer data');
 	      }
 	      //console.log(`***header: ${parsedObj.toString('ascii', 0, 8)}`)
@@ -18518,7 +18517,7 @@ module.exports =
 	  }, {
 	    key: 'getOrientation',
 	    value: function getOrientation() {
-	      return this.getRotation().rotationToQuat();
+	      return this.getRotation().rotationToQuat
 	      /*
 	      const e = []
 	      const scale = this.getScale().mul(this.m44)
@@ -18578,6 +18577,7 @@ module.exports =
 	      v.z *= len
 	       return v
 	      */
+	      ();
 	    }
 
 	    /**
@@ -20198,9 +20198,9 @@ module.exports =
 	      if (this.valueFunction !== null) {
 	        value = this.valueFunction._getValueAtTime(t);
 	      }
-	      value = this._calculateWithBaseValue(obj, value);
+	      value = this._calculateWithBaseValue(obj, value
 	      //console.log(`CAPropertyAnimation: obj: ${obj.name}, time: ${time}, keyPath: ${this.keyPath}, value: ${value}`)
-	      this._applyValue(obj, value);
+	      );this._applyValue(obj, value);
 	      this._handleEvents(obj, t);
 	    }
 	  }, {
@@ -20810,8 +20810,9 @@ module.exports =
 	    value: function _applyAction(obj, time) {
 	      var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
 
-	      var t = this._getTime(time, needTimeConversion);
+	      var t = this._getTime(time, needTimeConversion
 	      //this._handleEvents(obj, t)
+	      );
 	    }
 	  }, {
 	    key: '_getTime',
@@ -21891,9 +21892,9 @@ module.exports =
 	        throw new Error('both toValue and byValue are null');
 	      }
 
-	      var value = this._lerp(baseValue, toValue, t);
+	      var value = this._lerp(baseValue, toValue, t
 	      //console.warn(`opacity time: ${time}, t: ${t}, base: ${baseValue}, to: ${toValue}, val: ${value}`)
-	      obj.presentation.opacity = value;
+	      );obj.presentation.opacity = value;
 
 	      if (this._finished) {
 	        obj.opacity = toValue;
@@ -23194,12 +23195,13 @@ module.exports =
 	      if (typeof key === 'undefined' || key === null) {
 	        key = Symbol();
 	      }
-	      var act = action.copy();
+	      var act = action.copy
 	      // FIXME: use current frame time
-	      act._actionStartTime = Date.now() * 0.001;
+	      ();act._actionStartTime = Date.now() * 0.001;
 	      act._completionHandler = block;
-	      this._actions.set(key, act);
+	      this._actions.set(key, act
 	      //this._copyTransformToPresentationRecursive()
+	      );
 	    }
 
 	    // Inspecting a Node’s Running Actions
@@ -23282,9 +23284,9 @@ module.exports =
 	      if (typeof key === 'undefined' || key === null) {
 	        key = Symbol();
 	      }
-	      var anim = animation.copy();
+	      var anim = animation.copy
 	      // FIXME: use current frame time
-	      anim._animationStartTime = Date.now() * 0.001;
+	      ();anim._animationStartTime = Date.now() * 0.001;
 
 	      this._animations.set(key, anim);
 	      this._copyTransformToPresentationRecursive();
@@ -23757,9 +23759,9 @@ module.exports =
 
 	      var paths = keyPath.split('.');
 	      var key = paths.shift();
-	      var restPath = paths.join('.');
+	      var restPath = paths.join('.'
 	      //console.log(`SCNNode setValueForKeyPath ${this.name} ${key} ${restPath}`)
-	      if (key === 'transform') {
+	      );if (key === 'transform') {
 	        switch (restPath) {
 	          case 'rotation.x':
 	            target._rotation.x = value;
@@ -24188,9 +24190,9 @@ module.exports =
 	        throw new Error('orientation must be SCNVector4');
 	      }
 
-	      this._rotation = newValue.quatToRotation();
+	      this._rotation = newValue.quatToRotation
 	      //console.log(`SCNNode set orientation: ${this._rotation.float32Array()}`)
-	      this._transformUpToDate = false;
+	      ();this._transformUpToDate = false;
 	    }
 
 	    /**
@@ -24382,9 +24384,9 @@ module.exports =
 	        return this._fixedBoundingBox;
 	      }
 	      //if(!this._boundingBox){
-	      this._updateBoundingBox();
+	      this._updateBoundingBox
 	      //}
-	      return this._boundingBox;
+	      ();return this._boundingBox;
 	    },
 	    set: function set(newValue) {
 	      this._fixedBoundingBox = newValue;
@@ -24444,8 +24446,8 @@ module.exports =
 	        return null;
 	      }
 	      var vp = this.lightViewProjectionTransform;
-	      var scale = (0, _SCNMatrix4MakeTranslation2.default)(1.0, 1.0, 0.0).scale(0.5, 0.5, 1.0); // [-1, 1] => [0, 1]
-	      return vp.mult(scale);
+	      var scale = (0, _SCNMatrix4MakeTranslation2.default)(1.0, 1.0, 0.0).scale(0.5, 0.5, 1.0 // [-1, 1] => [0, 1]
+	      );return vp.mult(scale);
 	    }
 	  }], [{
 	    key: '_loadAnimationArray',
@@ -24524,14 +24526,14 @@ module.exports =
 	      // data.additive
 	      // data.attributes
 	      data.channels.forEach(function (channel) {
-	        var keyPath = channel.targetPath.join('.');
+	        var keyPath = channel.targetPath.join('.'
 	        //console.error(`SCNNode animation group keyPath: ${keyPath}`)
-	        var chAnim = _this5._loadAnimationData(channel.animation, keyPath);
+	        );var chAnim = _this5._loadAnimationData(channel.animation, keyPath);
 	        group.animations.push(chAnim);
-	      });
+	      }
 	      //console.log('_loadAnimationGroup done')
 
-	      return group;
+	      );return group;
 	    }
 	  }, {
 	    key: '_loadKeyframeAnimation',
@@ -24559,9 +24561,9 @@ module.exports =
 	      // data.attributes
 
 	      var keyframe = data.keyframeController;
-	      anim.values = this._loadData(keyframe, 'values');
+	      anim.values = this._loadData(keyframe, 'values'
 	      //anim.path
-	      anim.keyTimes = this._loadData(keyframe, 'keytimes');
+	      );anim.keyTimes = this._loadData(keyframe, 'keytimes');
 	      switch (keyframe.interpolationMode) {
 	        case 0:
 	        default:
@@ -25531,9 +25533,9 @@ module.exports =
 	      if (typeof key === 'undefined' || key === null) {
 	        key = Symbol();
 	      }
-	      var anim = animation.copy();
+	      var anim = animation.copy
 	      // FIXME: use current frame time
-	      anim._animationStartTime = Date.now() * 0.001;
+	      ();anim._animationStartTime = Date.now() * 0.001;
 	      anim._prevTime = anim._animationStartTime - 0.0000001;
 
 	      this._animations.set(key, anim);
@@ -25578,8 +25580,9 @@ module.exports =
 	  }, {
 	    key: 'removeAnimationForKey',
 	    value: function removeAnimationForKey(key) {
-	      this._animations.delete(key);
+	      this._animations.delete(key
 	      // TODO: reset values
+	      );
 	    }
 
 	    /**
@@ -25848,10 +25851,10 @@ module.exports =
 
 	      var vertexData = new Float32Array(arr);
 	      //console.log(`vertexData length: ${arr.length}`)
-	      gl.bufferData(gl.ARRAY_BUFFER, vertexData, gl.DYNAMIC_DRAW);
+	      gl.bufferData(gl.ARRAY_BUFFER, vertexData, gl.DYNAMIC_DRAW
 
 	      // set new data
-	      pVertexSource._data = arr;
+	      );pVertexSource._data = arr;
 	      if (pNormalSource) {
 	        pNormalSource._data = arr;
 	      }
@@ -25955,31 +25958,31 @@ module.exports =
 	      } else {
 	        textureFlags.push(0);
 	      }
-	      gl.uniform1i(gl.getUniformLocation(program, 'selfIllumination'), selfIllumination);
+	      gl.uniform1i(gl.getUniformLocation(program, 'selfIllumination'), selfIllumination
 
 	      // ambient
-	      this._setTextureToName(gl, material._ambient, 'TEXTURE1', textureFlags);
+	      );this._setTextureToName(gl, material._ambient, 'TEXTURE1', textureFlags
 
 	      // diffuse
-	      this._setTextureToName(gl, material._diffuse, 'TEXTURE2', textureFlags);
+	      );this._setTextureToName(gl, material._diffuse, 'TEXTURE2', textureFlags
 
 	      // specular
-	      this._setTextureToName(gl, material._specular, 'TEXTURE3', textureFlags);
+	      );this._setTextureToName(gl, material._specular, 'TEXTURE3', textureFlags
 
 	      // reflective
-	      this._setCubeTextureToName(gl, material._reflective, 'TEXTURE4', textureFlags);
+	      );this._setCubeTextureToName(gl, material._reflective, 'TEXTURE4', textureFlags
 
 	      // transparent
-	      this._setTextureToName(gl, material._transparent, 'TEXTURE5', textureFlags);
+	      );this._setTextureToName(gl, material._transparent, 'TEXTURE5', textureFlags
 
 	      // multiply
-	      this._setTextureToName(gl, material._multiply, 'TEXTURE6', textureFlags);
+	      );this._setTextureToName(gl, material._multiply, 'TEXTURE6', textureFlags
 
 	      // normal
-	      this._setTextureToName(gl, material._normal, 'TEXTURE7', textureFlags);
+	      );this._setTextureToName(gl, material._normal, 'TEXTURE7', textureFlags
 
 	      // TODO: cache uniform location
-	      gl.uniform1iv(gl.getUniformLocation(program, 'textureFlags'), new Int32Array(textureFlags));
+	      );gl.uniform1iv(gl.getUniformLocation(program, 'textureFlags'), new Int32Array(textureFlags));
 
 	      if (material.isDoubleSided) {
 	        gl.disable(gl.CULL_FACE);
@@ -26157,10 +26160,10 @@ module.exports =
 	    value: function _createCubeTexture(gl, image) {
 	      var texture = gl.createTexture();
 
-	      gl.bindTexture(gl.TEXTURE_CUBE_MAP, texture);
+	      gl.bindTexture(gl.TEXTURE_CUBE_MAP, texture
 	      // texImage2D(target, level, internalformat, width, height, border, format, type, source)
 	      // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
-	      var targets = [gl.TEXTURE_CUBE_MAP_POSITIVE_Z, gl.TEXTURE_CUBE_MAP_POSITIVE_X, gl.TEXTURE_CUBE_MAP_NEGATIVE_Z, gl.TEXTURE_CUBE_MAP_NEGATIVE_X, gl.TEXTURE_CUBE_MAP_NEGATIVE_Y, gl.TEXTURE_CUBE_MAP_POSITIVE_Y];
+	      );var targets = [gl.TEXTURE_CUBE_MAP_POSITIVE_Z, gl.TEXTURE_CUBE_MAP_POSITIVE_X, gl.TEXTURE_CUBE_MAP_NEGATIVE_Z, gl.TEXTURE_CUBE_MAP_NEGATIVE_X, gl.TEXTURE_CUBE_MAP_NEGATIVE_Y, gl.TEXTURE_CUBE_MAP_POSITIVE_Y];
 	      //const tx = [0, 1.0/6.0, 2.0/6.0, 3.0/6.0, 4.0/6.0, 5.0/6.0, 1]
 	      //const itx = [4, 1, 5, 0, 2, 3]
 	      var margin = 0.001;
@@ -26200,13 +26203,13 @@ module.exports =
 	      //console.warn(`image size: ${image.naturalWidth} ${image.naturalHeight}`)
 	      canvas.getContext('2d').drawImage(image, 0, 0);
 
-	      gl.bindTexture(gl.TEXTURE_2D, texture);
+	      gl.bindTexture(gl.TEXTURE_2D, texture
 	      // texImage2D(target, level, internalformat, width, height, border, format, type, source)
 	      // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
-	      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, image.width, image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
-	      gl.generateMipmap(gl.TEXTURE_2D);
+	      );gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, image.width, image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
+	      gl.generateMipmap(gl.TEXTURE_2D
 	      //gl.bindTexture(gl.TEXTURE_2D, null)
-	      return texture;
+	      );return texture;
 	    }
 
 	    /**
@@ -26538,15 +26541,14 @@ module.exports =
 	  texcoord: 'kGeometrySourceSemanticTexcoord',
 	  vertex: 'kGeometrySourceSemanticVertex',
 	  vertexCrease: 'kGeometrySourceSemanticVertexCrease'
+
+	  /**
+	   * A container for vertex data forming part of the definition for a three-dimensional object, or geometry.
+	   * @access public
+	   * @extends {NSObject}
+	   * @see https://developer.apple.com/reference/scenekit/scngeometrysource
+	   */
 	};
-
-	/**
-	 * A container for vertex data forming part of the definition for a three-dimensional object, or geometry.
-	 * @access public
-	 * @extends {NSObject}
-	 * @see https://developer.apple.com/reference/scenekit/scngeometrysource
-	 */
-
 	var SCNGeometrySource = function (_NSObject) {
 	  _inherits(SCNGeometrySource, _NSObject);
 
@@ -26673,9 +26675,9 @@ module.exports =
 	    value: function _createBuffer(context) {
 	      var gl = context;
 	      this._buffer = gl.createBuffer();
-	      gl.bindBuffer(gl.ARRAY_BUFFER, this._buffer);
+	      gl.bindBuffer(gl.ARRAY_BUFFER, this._buffer
 	      // FIXME: dynamic data
-	      gl.bufferData(gl.ARRAY_BUFFER, this._glData, gl.STATIC_DRAW);
+	      );gl.bufferData(gl.ARRAY_BUFFER, this._glData, gl.STATIC_DRAW);
 	      return this._buffer;
 	    }
 
@@ -27656,17 +27658,16 @@ module.exports =
 	  lambert: 'SCNLightingModelLambert',
 	  phong: 'SCNLightingModelPhong',
 	  physicallyBased: 'SCNLightingModelPhysicallyBased'
+
+	  /**
+	   * A set of shading attributes that define the appearance of a geometry's surface when rendered.
+	   * @access public
+	   * @extends {NSObject}
+	   * @implements {SCNAnimatable}
+	   * @implements {SCNShadable}
+	   * @see https://developer.apple.com/reference/scenekit/scnmaterial
+	   */
 	};
-
-	/**
-	 * A set of shading attributes that define the appearance of a geometry's surface when rendered.
-	 * @access public
-	 * @extends {NSObject}
-	 * @implements {SCNAnimatable}
-	 * @implements {SCNShadable}
-	 * @see https://developer.apple.com/reference/scenekit/scnmaterial
-	 */
-
 	var SCNMaterial = function (_NSObject) {
 	  _inherits(SCNMaterial, _NSObject);
 
@@ -27909,13 +27910,13 @@ module.exports =
 	     */
 	    _this._entityID = null;
 
-	    _this._createPresentationProperties();
+	    _this._createPresentationProperties
 
 	    /**
 	     * @access private
 	     * @type {?SCNShadableHelper}
 	     */
-	    _this._shadableHelper = null;
+	    ();_this._shadableHelper = null;
 	    return _this;
 	  }
 
@@ -28044,9 +28045,9 @@ module.exports =
 	      if (typeof key === 'undefined' || key === null) {
 	        key = Symbol();
 	      }
-	      var anim = animation.copy();
+	      var anim = animation.copy
 	      // FIXME: use current frame time
-	      anim._animationStartTime = Date.now() * 0.001;
+	      ();anim._animationStartTime = Date.now() * 0.001;
 	      anim._prevTime = anim._animationStartTime - 0.0000001;
 
 	      this._animations.set(key, anim);
@@ -28091,8 +28092,9 @@ module.exports =
 	  }, {
 	    key: 'removeAnimationForKey',
 	    value: function removeAnimationForKey(key) {
-	      this._animations.delete(key);
+	      this._animations.delete(key
 	      // TODO: reset values
+	      );
 	    }
 
 	    /**
@@ -28511,14 +28513,14 @@ module.exports =
 	     * @type {SCNMatrix4}
 	     * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395388-contentstransform
 	     */
-	    _this.contentsTransform = (0, _SCNMatrix4MakeTranslation2.default)(0, 0, 0);
+	    _this.contentsTransform = (0, _SCNMatrix4MakeTranslation2.default)(0, 0, 0
 
 	    /**
 	     * The wrapping behavior for the S texture coordinate.
 	     * @type {SCNWrapMode}
 	     * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395384-wraps
 	     */
-	    _this.wrapS = _SCNWrapMode2.default.clamp;
+	    );_this.wrapS = _SCNWrapMode2.default.clamp;
 
 	    /**
 	     * The wrapping behavior for the T texture coordinate.
@@ -28686,9 +28688,9 @@ module.exports =
 	      if (typeof key === 'undefined' || key === null) {
 	        key = Symbol();
 	      }
-	      var anim = animation.copy();
+	      var anim = animation.copy
 	      // FIXME: use current frame time
-	      anim._animationStartTime = Date.now() * 0.001;
+	      ();anim._animationStartTime = Date.now() * 0.001;
 	      anim._prevTime = anim._animationStartTime - 0.0000001;
 
 	      this._animations.set(key, anim);
@@ -28733,8 +28735,9 @@ module.exports =
 	  }, {
 	    key: 'removeAnimationForKey',
 	    value: function removeAnimationForKey(key) {
-	      this._animations.delete(key);
+	      this._animations.delete(key
 	      // TODO: reset values
+	      );
 	    }
 
 	    /**
@@ -28942,9 +28945,9 @@ module.exports =
 	      if (path.indexOf('file:///') === 0) {
 	        var paths = path.slice(8).split('/');
 	        var pathCount = 1;
-	        var _path = dirPath + paths.slice(-pathCount).join('/');
+	        var _path = dirPath + paths.slice(-pathCount).join('/'
 	        //console.warn(`image loading: ${_path}`)
-	        image.onload = function () {
+	        );image.onload = function () {
 	          //console.info(`image ${image.src} onload`)
 	          _this2._contents = image;
 	        };
@@ -29476,9 +29479,9 @@ module.exports =
 	            animation.delegate = {
 	              animationDidStop: function animationDidStop(_anim, _finished) {
 	                if (_finished) {
-	                  console.log('animation completed: ' + anim.keyPath);
+	                  console.log('animation completed: ' + anim.keyPath
 	                  //anim.target.setValueForKeyPath(anim.newValue, anim.keyPath)
-	                  resolve(anim, animation);
+	                  );resolve(anim, animation);
 	                }
 	              }
 	            };
@@ -29881,17 +29884,16 @@ module.exports =
 	  omni: 'omni',
 	  probe: 'probe',
 	  spot: 'spot'
+
+	  /**
+	   * A light source that can be attached to a node to illuminate the scene.
+	   * @access public
+	   * @extends {NSObject}
+	   * @implements {SCNAnimatable}
+	   * @implements {SCNTechniqueSupport}
+	   * @see https://developer.apple.com/reference/scenekit/scnlight
+	   */
 	};
-
-	/**
-	 * A light source that can be attached to a node to illuminate the scene.
-	 * @access public
-	 * @extends {NSObject}
-	 * @implements {SCNAnimatable}
-	 * @implements {SCNTechniqueSupport}
-	 * @see https://developer.apple.com/reference/scenekit/scnlight
-	 */
-
 	var SCNLight = function (_NSObject) {
 	  _inherits(SCNLight, _NSObject);
 
@@ -31013,13 +31015,13 @@ module.exports =
 	    light.type = _SCNLight2.default.LightType.omni;
 	    light.position = new _SCNVector2.default(0, 10, 10);
 	    _this._defaultLightNode.light = light;
-	    _this._defaultLightNode._presentation = _this._defaultLightNode.copy();
+	    _this._defaultLightNode._presentation = _this._defaultLightNode.copy
 
 	    /**
 	     * @access private
 	     * @type {CGRect}
 	     */
-	    _this._viewRect = new _CGRect2.default(new _CGPoint2.default(0, 0), new _CGSize2.default(0, 0));
+	    ();_this._viewRect = new _CGRect2.default(new _CGPoint2.default(0, 0), new _CGSize2.default(0, 0));
 
 	    /**
 	     * The background color of the view.
@@ -31181,9 +31183,9 @@ module.exports =
 	        return;
 	      }
 
-	      this._lightNodes = this._createLightNodeArray(); // createLightNodeArray must be called before getting program
+	      this._lightNodes = this._createLightNodeArray // createLightNodeArray must be called before getting program
 
-	      var gl = this.context;
+	      ();var gl = this.context;
 	      var program = this._defaultProgram._glProgram;
 
 	      gl.clearColor(this._backgroundColor.r, this._backgroundColor.g, this._backgroundColor.b, this._backgroundColor.a);
@@ -31196,12 +31198,12 @@ module.exports =
 	      gl.depthFunc(gl.LEQUAL);
 	      gl.depthMask(true);
 	      gl.enable(gl.BLEND);
-	      gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
+	      gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA
 
 	      //////////////////////////
 	      // Camera
 	      //////////////////////////
-	      if (this._cameraBuffer === null) {
+	      );if (this._cameraBuffer === null) {
 	        this._initializeCameraBuffer(program);
 	      }
 	      var cameraData = [];
@@ -31216,7 +31218,7 @@ module.exports =
 	      cameraData.push.apply(cameraData, _toConsumableArray(cameraPNode.viewProjectionTransform.floatArray()));
 	      gl.bindBuffer(gl.UNIFORM_BUFFER, this._cameraBuffer);
 	      gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(cameraData), gl.DYNAMIC_DRAW);
-	      gl.bindBuffer(gl.UNIFORM_BUFFER, null);
+	      gl.bindBuffer(gl.UNIFORM_BUFFER, null
 
 	      //console.log('cameraNode.worldPosition: ' + cameraPNode.worldTransform.getTranslation().float32Array())
 	      //console.log('viewTransform: ' + cameraPNode.viewTransform.float32Array())
@@ -31226,7 +31228,7 @@ module.exports =
 	      //////////////////////////
 	      // Fog
 	      //////////////////////////
-	      if (this._fogBuffer === null) {
+	      );if (this._fogBuffer === null) {
 	        this._initializeFogBuffer(program);
 	      }
 	      var fogData = [];
@@ -31237,12 +31239,12 @@ module.exports =
 	      }
 	      gl.bindBuffer(gl.UNIFORM_BUFFER, this._fogBuffer);
 	      gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(fogData), gl.DYNAMIC_DRAW);
-	      gl.bindBuffer(gl.UNIFORM_BUFFER, null);
+	      gl.bindBuffer(gl.UNIFORM_BUFFER, null
 
 	      //////////////////////////
 	      // Lights
 	      //////////////////////////
-	      if (this._lightBuffer === null) {
+	      );if (this._lightBuffer === null) {
 	        this._initializeLightBuffer(program);
 	      }
 	      var lights = this._lightNodes;
@@ -31271,20 +31273,20 @@ module.exports =
 
 	      gl.bindBuffer(gl.UNIFORM_BUFFER, this._lightBuffer);
 	      gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(lightData), gl.DYNAMIC_DRAW);
-	      gl.bindBuffer(gl.UNIFORM_BUFFER, null);
+	      gl.bindBuffer(gl.UNIFORM_BUFFER, null
 
 	      //////////////////////////
 	      // Background (SkyBox)
 	      //////////////////////////
-	      if (this.scene.background._contents !== null) {
+	      );if (this.scene.background._contents !== null) {
 	        var skyBox = this.scene._skyBox;
 	        skyBox.position = cameraPNode._worldTranslation;
 	        var scale = camera.zFar * 1.154;
 	        skyBox.scale = new _SCNVector2.default(scale, scale, scale);
-	        skyBox._updateWorldTransform();
+	        skyBox._updateWorldTransform
 
 	        // disable fog
-	        var disabledFogData = fogData.slice(0);
+	        ();var disabledFogData = fogData.slice(0);
 	        disabledFogData[4] = camera.zFar * 2.0; // startDistance
 	        disabledFogData[5] = camera.zFar * 2.1; // endDistance
 	        disabledFogData[6] = 1.0; // densityExponent
@@ -31292,10 +31294,10 @@ module.exports =
 	        gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(disabledFogData), gl.DYNAMIC_DRAW);
 	        gl.bindBuffer(gl.UNIFORM_BUFFER, null);
 
-	        this._renderNode(skyBox);
+	        this._renderNode(skyBox
 
 	        // enable fog
-	        gl.bindBuffer(gl.UNIFORM_BUFFER, this._fogBuffer);
+	        );gl.bindBuffer(gl.UNIFORM_BUFFER, this._fogBuffer);
 	        gl.bufferData(gl.UNIFORM_BUFFER, new Float32Array(fogData), gl.DYNAMIC_DRAW);
 	        gl.bindBuffer(gl.UNIFORM_BUFFER, null);
 	      }
@@ -31359,8 +31361,8 @@ module.exports =
 	        }
 	      }
 
-	      this._setViewPort(); // reset viewport size
-	      gl.useProgram(program);
+	      this._setViewPort // reset viewport size
+	      ();gl.useProgram(program);
 	      for (var i = 0; i < lights.directionalShadow.length; i++) {
 	        var node = lights.directionalShadow[i];
 	        var symbol = 'TEXTURE' + (i + 8);
@@ -31382,12 +31384,12 @@ module.exports =
 	      gl.enable(gl.BLEND);
 	      gl.blendFunc(gl.SRC_ALPHA, gl.ONE);
 	      gl.uniformMatrix4fv(gl.getUniformLocation(particleProgram, 'viewTransform'), false, cameraPNode.viewTransform.float32Array());
-	      gl.uniformMatrix4fv(gl.getUniformLocation(particleProgram, 'projectionTransform'), false, cameraPNode.projectionTransform.float32Array());
+	      gl.uniformMatrix4fv(gl.getUniformLocation(particleProgram, 'projectionTransform'), false, cameraPNode.projectionTransform.float32Array()
 
 	      //////////////////////////
 	      // Particles
 	      //////////////////////////
-	      if (this.scene._particleSystems !== null) {
+	      );if (this.scene._particleSystems !== null) {
 	        var _iteratorNormalCompletion2 = true;
 	        var _didIteratorError2 = false;
 	        var _iteratorError2 = undefined;
@@ -31416,17 +31418,17 @@ module.exports =
 	      var particleArray = this._createParticleNodeArray();
 	      particleArray.forEach(function (node) {
 	        _this2._renderParticle(node);
-	      });
+	      }
 
 	      //////////////////////////
 	      // 2D Overlay
 	      //////////////////////////
-	      this._renderOverlaySKScene();
+	      );this._renderOverlaySKScene
 
 	      // DEBUG: show shadow map
 	      //this._showShadowMapOfLight(lights.directionalShadow[0])
 
-	      gl.flush();
+	      ();gl.flush();
 	    }
 	  }, {
 	    key: '_renderOverlaySKScene',
@@ -31690,10 +31692,10 @@ module.exports =
 	            var vao = geometry._shadowVAO[i];
 	            var element = geometry.geometryElements[i];
 
-	            gl.bindVertexArray(vao);
+	            gl.bindVertexArray(vao
 	            // FIXME: use bufferData instead of bindBufferBase
 
-	            var shape = null;
+	            );var shape = null;
 	            switch (element.primitiveType) {
 	              case _SCNGeometryPrimitiveType2.default.triangles:
 	                shape = gl.TRIANGLES;
@@ -31772,7 +31774,8 @@ module.exports =
 
 	      if (geometry._vertexArrayObjects === null) {
 	        this._initializeVAO(node, program);
-	        this._initializeUBO(node, program); // FIXME: program should have UBO, not node.
+	        this._initializeUBO(node, program // FIXME: program should have UBO, not node.
+	        );
 	      }
 
 	      if (node.morpher !== null) {
@@ -31803,9 +31806,9 @@ module.exports =
 	        var material = geometry.materials[i % materialCount];
 	        var p = program;
 	        if (material.program) {
-	          this._switchProgram(material.program);
+	          this._switchProgram(material.program
 	          // TODO: refactoring
-	          p = material.program._glProgram;
+	          );p = material.program._glProgram;
 	          var _uniformTime = gl.getUniformLocation(p, 'u_time');
 	          if (uniformTime) {
 	            // this._time might be too large.
@@ -31828,9 +31831,9 @@ module.exports =
 	        var vao = geometry._vertexArrayObjects[i];
 	        var element = geometry.geometryElements[i];
 
-	        gl.bindVertexArray(vao);
+	        gl.bindVertexArray(vao
 	        // FIXME: use bufferData instead of bindBufferBase
-	        gl.bindBufferBase(gl.UNIFORM_BUFFER, _materialLoc, geometry._materialBuffer);
+	        );gl.bindBufferBase(gl.UNIFORM_BUFFER, _materialLoc, geometry._materialBuffer);
 
 	        geometry._bufferMaterialData(gl, p, i, node.presentation.opacity);
 
@@ -31914,9 +31917,9 @@ module.exports =
 	      if (system._program !== null) {
 	        program = system._program._glProgram;
 	      }
-	      gl.useProgram(program);
+	      gl.useProgram(program
 	      //this._switchProgram(program)
-	      gl.disable(gl.CULL_FACE);
+	      );gl.disable(gl.CULL_FACE);
 
 	      if (system._vertexBuffer === null) {
 	        system._initializeVAO(gl, program);
@@ -32312,28 +32315,28 @@ module.exports =
 	      gl.renderbufferStorage(gl.RENDERBUFFER, gl.DEPTH_COMPONENT16, width, height);
 
 	      this._hitObjectIDTexture = gl.createTexture();
-	      gl.bindTexture(gl.TEXTURE_2D, this._hitObjectIDTexture);
+	      gl.bindTexture(gl.TEXTURE_2D, this._hitObjectIDTexture
 	      // texImage2D(target, level, internalformat, width, height, border, format, type, source)
-	      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, width, height, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
+	      );gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, width, height, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
 
 	      this._hitFaceIDTexture = gl.createTexture();
 	      gl.bindTexture(gl.TEXTURE_2D, this._hitFaceIDTexture);
 	      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, width, height, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
 
 	      this._hitPositionTexture = gl.createTexture();
-	      gl.bindTexture(gl.TEXTURE_2D, this._hitPositionTexture);
+	      gl.bindTexture(gl.TEXTURE_2D, this._hitPositionTexture
 	      //gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, width, height, 0, gl.RGB, gl.UNSIGNED_BYTE, null)
-	      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, width, height, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
+	      );gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, width, height, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
 
 	      this._hitNormalTexture = gl.createTexture();
-	      gl.bindTexture(gl.TEXTURE_2D, this._hitNormalTexture);
+	      gl.bindTexture(gl.TEXTURE_2D, this._hitNormalTexture
 	      //gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGB, width, height, 0, gl.RGB, gl.UNSIGNED_BYTE, null)
-	      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, width, height, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
+	      );gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, width, height, 0, gl.RGBA, gl.UNSIGNED_BYTE, null
 
 	      //gl.framebufferRenderbuffer(target, attachment, renderbuffertarget, renderbuffer)
-	      gl.framebufferRenderbuffer(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT, gl.RENDERBUFFER, this._hitDepthBuffer);
+	      );gl.framebufferRenderbuffer(gl.FRAMEBUFFER, gl.DEPTH_ATTACHMENT, gl.RENDERBUFFER, this._hitDepthBuffer
 	      //gl.framebufferTexture2D(target, attachment, textarget, texture, level)
-	      gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, this._hitObjectIDTexture, 0);
+	      );gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, this._hitObjectIDTexture, 0);
 	      gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT1, gl.TEXTURE_2D, this._hitFaceIDTexture, 0);
 	      gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT2, gl.TEXTURE_2D, this._hitPositionTexture, 0);
 	      gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT3, gl.TEXTURE_2D, this._hitNormalTexture, 0);
@@ -32359,15 +32362,15 @@ module.exports =
 
 	      var invVp = viewProjectionMatrix.invert();
 	      var rayFrom = from.transform(invVp);
-	      var rayTo = to.transform(invVp);
+	      var rayTo = to.transform(invVp
 	      //console.log(`rayFrom: ${rayFrom.float32Array()}`)
 	      //console.log(`rayTo  : ${rayTo.float32Array()}`)
 
-	      var rayVec = rayTo.sub(rayFrom);
-	      var renderingArray = this._createRenderingNodeArray();
+	      );var rayVec = rayTo.sub(rayFrom);
+	      var renderingArray = this._createRenderingNodeArray
 	      //console.log(`renderingArray.length: ${renderingArray.length}`)
 
-	      var categoryBitMask = options.get(_SCNHitTestOption2.default.categoryBitMask);
+	      ();var categoryBitMask = options.get(_SCNHitTestOption2.default.categoryBitMask);
 	      if (typeof categoryBitMask === 'undefined') {
 	        categoryBitMask = -1;
 	      }
@@ -32818,10 +32821,10 @@ module.exports =
 	      p._glProgram = gl.createProgram();
 
 	      var vsText = this._vertexShaderForObject(obj);
-	      var fsText = this._fragmentShaderForObject(obj);
+	      var fsText = this._fragmentShaderForObject(obj
 
 	      // initialize vertex shader
-	      var vertexShader = gl.createShader(gl.VERTEX_SHADER);
+	      );var vertexShader = gl.createShader(gl.VERTEX_SHADER);
 	      gl.shaderSource(vertexShader, vsText);
 	      gl.compileShader(vertexShader);
 	      if (!gl.getShaderParameter(vertexShader, gl.COMPILE_STATUS)) {
@@ -32841,10 +32844,10 @@ module.exports =
 	      p.fragmentShader = fragmentShader;
 
 	      gl.attachShader(p._glProgram, vertexShader);
-	      gl.attachShader(p._glProgram, fragmentShader);
+	      gl.attachShader(p._glProgram, fragmentShader
 
 	      // link program object
-	      gl.linkProgram(p._glProgram);
+	      );gl.linkProgram(p._glProgram);
 	      if (!gl.getProgramParameter(p._glProgram, gl.LINK_STATUS)) {
 	        var _info2 = gl.getProgramInfoLog(p._glProgram);
 	        throw new Error('program link error: ' + _info2);
@@ -32862,13 +32865,13 @@ module.exports =
 	      }
 
 	      var gl = this.context;
-	      gl.useProgram(program._glProgram);
+	      gl.useProgram(program._glProgram
 
 	      // set dummy textures
-	      program._setDummyTextureForContext(gl);
+	      );program._setDummyTextureForContext(gl
 
 	      // set shadow textures
-	      var lights = this._lightNodes;
+	      );var lights = this._lightNodes;
 	      for (var i = 0; i < lights.directionalShadow.length; i++) {
 	        var node = lights.directionalShadow[i];
 	        var symbol = 'TEXTURE' + (i + 8);
@@ -33077,9 +33080,9 @@ module.exports =
 	      var baseGeometry = node.geometry;
 
 	      // prepare vertex array data
-	      var vertexBuffer = geometry._createVertexBuffer(gl, node);
+	      var vertexBuffer = geometry._createVertexBuffer(gl, node
 	      // TODO: retain attribute locations
-	      var positionLoc = gl.getAttribLocation(program, 'position');
+	      );var positionLoc = gl.getAttribLocation(program, 'position');
 	      var normalLoc = gl.getAttribLocation(program, 'normal');
 	      var tangentLoc = gl.getAttribLocation(program, 'tangent');
 	      var colorLoc = gl.getAttribLocation(program, 'color');
@@ -33094,10 +33097,10 @@ module.exports =
 	        var element = node.presentation.geometry.geometryElements[i];
 	        var material = node.presentation.geometry.materials[i];
 	        var vao = gl.createVertexArray();
-	        gl.bindVertexArray(vao);
+	        gl.bindVertexArray(vao
 
 	        // initialize vertex buffer
-	        gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+	        );gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
 
 	        gl.bindAttribLocation(program, positionLoc, 'position');
 	        gl.bindAttribLocation(program, normalLoc, 'normal');
@@ -33106,12 +33109,12 @@ module.exports =
 	        gl.bindAttribLocation(program, texcoord0Loc, 'texcoord0');
 	        gl.bindAttribLocation(program, texcoord1Loc, 'texcoord1');
 	        gl.bindAttribLocation(program, boneIndicesLoc, 'boneIndices');
-	        gl.bindAttribLocation(program, boneWeightsLoc, 'boneWeights');
+	        gl.bindAttribLocation(program, boneWeightsLoc, 'boneWeights'
 
 	        // vertexAttribPointer(ulong idx, long size, ulong type, bool norm, long stride, ulong offset)
 
 	        // position
-	        var posSrc = geometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
+	        );var posSrc = geometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
 	        if (posSrc) {
 	          gl.enableVertexAttribArray(positionLoc);
 	          gl.vertexAttribPointer(positionLoc, posSrc.componentsPerVector, gl.FLOAT, false, posSrc.dataStride, posSrc.dataOffset);
@@ -33186,11 +33189,11 @@ module.exports =
 	        }
 
 	        // FIXME: use setting
-	        gl.disable(gl.CULL_FACE);
+	        gl.disable(gl.CULL_FACE
 
 	        // initialize index buffer
 	        // FIXME: check geometrySource semantic
-	        var indexBuffer = element._createBuffer(gl);
+	        );var indexBuffer = element._createBuffer(gl);
 	        gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indexBuffer);
 
 	        geometry._vertexArrayObjects.push(vao);
@@ -33204,9 +33207,9 @@ module.exports =
 	      var baseGeometry = node.geometry;
 
 	      // prepare vertex array data
-	      var vertexBuffer = geometry._createVertexBuffer(gl, node);
+	      var vertexBuffer = geometry._createVertexBuffer(gl, node
 	      // TODO: retain attribute locations
-	      var positionLoc = gl.getAttribLocation(program, 'position');
+	      );var positionLoc = gl.getAttribLocation(program, 'position');
 	      var boneIndicesLoc = gl.getAttribLocation(program, 'boneIndices');
 	      var boneWeightsLoc = gl.getAttribLocation(program, 'boneWeights');
 
@@ -33216,19 +33219,19 @@ module.exports =
 	        var element = node.presentation.geometry.geometryElements[i];
 	        var material = node.presentation.geometry.materials[i];
 	        var shadowVAO = gl.createVertexArray();
-	        gl.bindVertexArray(shadowVAO);
+	        gl.bindVertexArray(shadowVAO
 
 	        // initialize vertex buffer
-	        gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
+	        );gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer);
 
 	        gl.bindAttribLocation(program, positionLoc, 'position');
 	        gl.bindAttribLocation(program, boneIndicesLoc, 'boneIndices');
-	        gl.bindAttribLocation(program, boneWeightsLoc, 'boneWeights');
+	        gl.bindAttribLocation(program, boneWeightsLoc, 'boneWeights'
 
 	        // vertexAttribPointer(ulong idx, long size, ulong type, bool norm, long stride, ulong offset)
 
 	        // position
-	        var posSrc = geometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
+	        );var posSrc = geometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
 	        if (posSrc) {
 	          gl.enableVertexAttribArray(positionLoc);
 	          gl.vertexAttribPointer(positionLoc, posSrc.componentsPerVector, gl.FLOAT, false, posSrc.dataStride, posSrc.dataOffset);
@@ -33255,11 +33258,11 @@ module.exports =
 	        }
 
 	        // FIXME: use setting
-	        gl.disable(gl.CULL_FACE);
+	        gl.disable(gl.CULL_FACE
 
 	        // initialize index buffer
 	        // FIXME: check geometrySource semantic
-	        var indexBuffer = element._createBuffer(gl);
+	        );var indexBuffer = element._createBuffer(gl);
 	        gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, indexBuffer);
 
 	        geometry._shadowVAO.push(shadowVAO);
@@ -33292,12 +33295,12 @@ module.exports =
 	        gl.bindAttribLocation(program, positionLoc, 'position');
 	        gl.bindAttribLocation(program, normalLoc, 'normal');
 	        gl.bindAttribLocation(program, boneIndicesLoc, 'boneIndices');
-	        gl.bindAttribLocation(program, boneWeightsLoc, 'boneWeights');
+	        gl.bindAttribLocation(program, boneWeightsLoc, 'boneWeights'
 
 	        // vertexAttribPointer(ulong idx, long size, ulong type, bool norm, long stride, ulong offset)
 
 	        // position
-	        var posSrc = geometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
+	        );var posSrc = geometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
 	        if (posSrc) {
 	          gl.enableVertexAttribArray(positionLoc);
 	          gl.vertexAttribPointer(positionLoc, posSrc.componentsPerVector, gl.FLOAT, false, posSrc.dataStride, posSrc.dataOffset);
@@ -33417,10 +33420,10 @@ module.exports =
 
 	      this.__dummyTexture = gl.createTexture();
 
-	      gl.bindTexture(gl.TEXTURE_2D, this.__dummyTexture);
+	      gl.bindTexture(gl.TEXTURE_2D, this.__dummyTexture
 	      // texImage2D(target, level, internalformat, width, height, border, format, type, source)
 	      // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
-	      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
+	      );gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
 	      gl.bindTexture(gl.TEXTURE_2D, null);
 	    }
 
@@ -33609,7 +33612,7 @@ module.exports =
 	      var invRay = rayVec.mul(-1);
 
 	      console.log('rayPoint: ' + rayPoint.float32Array());
-	      console.log('rayVec: ' + rayVec.float32Array());
+	      console.log('rayVec: ' + rayVec.float32Array()
 
 	      //if(node.morpher !== null){
 	      //  this._updateVAO(node)
@@ -33617,7 +33620,7 @@ module.exports =
 
 	      // TODO: test the bounding box/sphere first for performance
 
-	      var source = geometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
+	      );var source = geometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
 	      var sourceLen = source.vectorCount;
 	      var sourceData = [];
 	      var modelTransform = node.presentation._worldTransform;
@@ -33660,9 +33663,9 @@ module.exports =
 
 	        var elementData = element._glData;
 	        var len = element.primitiveCount;
-	        console.log('primitiveCount: ' + len);
+	        console.log('primitiveCount: ' + len
 	        // TODO: check cull settings
-	        for (var pi = 0; pi < len; pi++) {
+	        );for (var pi = 0; pi < len; pi++) {
 	          var _indices = element._indexAt(pi);
 
 	          var v0 = sourceData[_indices[0]];
@@ -33989,10 +33992,10 @@ module.exports =
 	      this.__defaultProgram.fragmentShader = fragmentShader;
 
 	      gl.attachShader(p._glProgram, vertexShader);
-	      gl.attachShader(p._glProgram, fragmentShader);
+	      gl.attachShader(p._glProgram, fragmentShader
 
 	      // link program object
-	      gl.linkProgram(p._glProgram);
+	      );gl.linkProgram(p._glProgram);
 	      if (!gl.getProgramParameter(p._glProgram, gl.LINK_STATUS)) {
 	        var _info4 = gl.getProgramInfoLog(p._glProgram);
 	        throw new Error('program link error: ' + _info4);
@@ -34006,12 +34009,12 @@ module.exports =
 	      gl.enable(gl.BLEND);
 	      gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
 	      gl.enable(gl.CULL_FACE);
-	      gl.cullFace(gl.BACK);
+	      gl.cullFace(gl.BACK
 
 	      // set default textures to prevent warnings
 	      //this._setDummyTextureAsDefault(p)
 
-	      return this.__defaultProgram;
+	      );return this.__defaultProgram;
 	    }
 	  }, {
 	    key: '_defaultVertexShader',
@@ -34062,29 +34065,29 @@ module.exports =
 	      }
 
 	      gl.attachShader(p._glProgram, vertexShader);
-	      gl.attachShader(p._glProgram, fragmentShader);
+	      gl.attachShader(p._glProgram, fragmentShader
 
 	      // link program object
-	      gl.linkProgram(p._glProgram);
+	      );gl.linkProgram(p._glProgram);
 	      if (!gl.getProgramParameter(p._glProgram, gl.LINK_STATUS)) {
 	        var _info6 = gl.getProgramInfoLog(p._glProgram);
 	        throw new Error('program link error: ' + _info6);
 	      }
 
-	      gl.useProgram(p._glProgram);
+	      gl.useProgram(p._glProgram
 	      //gl.clearColor(1, 1, 1, 1)
 	      //gl.clearDepth(1.0)
 	      //gl.clearStencil(0)
 
-	      gl.enable(gl.DEPTH_TEST);
+	      );gl.enable(gl.DEPTH_TEST);
 	      gl.depthFunc(gl.LEQUAL);
 	      gl.enable(gl.BLEND);
 	      gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
 	      gl.enable(gl.CULL_FACE);
-	      gl.cullFace(gl.BACK);
+	      gl.cullFace(gl.BACK
 
 	      // set default textures to prevent warnings
-	      this._setDummyParticleTextureAsDefault();
+	      );this._setDummyParticleTextureAsDefault();
 
 	      return this.__defaultParticleProgram;
 	    }
@@ -34128,26 +34131,26 @@ module.exports =
 	      }
 
 	      gl.attachShader(p._glProgram, vertexShader);
-	      gl.attachShader(p._glProgram, fragmentShader);
+	      gl.attachShader(p._glProgram, fragmentShader
 
 	      // link program object
-	      gl.linkProgram(p._glProgram);
+	      );gl.linkProgram(p._glProgram);
 	      if (!gl.getProgramParameter(p._glProgram, gl.LINK_STATUS)) {
 	        var _info8 = gl.getProgramInfoLog(p._glProgram);
 	        throw new Error('program link error: ' + _info8);
 	      }
 
-	      gl.useProgram(p._glProgram);
+	      gl.useProgram(p._glProgram
 	      //gl.clearColor(1, 1, 1, 1)
 	      //gl.clearDepth(1.0)
 	      //gl.clearStencil(0)
 
-	      gl.enable(gl.DEPTH_TEST);
-	      gl.depthFunc(gl.LEQUAL);
+	      );gl.enable(gl.DEPTH_TEST);
+	      gl.depthFunc(gl.LEQUAL
 	      //gl.enable(gl.BLEND)
-	      gl.disable(gl.BLEND);
+	      );gl.disable(gl.BLEND
 	      //gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA)
-	      gl.enable(gl.CULL_FACE);
+	      );gl.enable(gl.CULL_FACE);
 	      gl.cullFace(gl.BACK);
 
 	      return this.__defaultShadowProgram;
@@ -34186,30 +34189,30 @@ module.exports =
 	      }
 
 	      gl.attachShader(p._glProgram, vertexShader);
-	      gl.attachShader(p._glProgram, fragmentShader);
+	      gl.attachShader(p._glProgram, fragmentShader
 
 	      // link program object
-	      gl.linkProgram(p._glProgram);
+	      );gl.linkProgram(p._glProgram);
 	      if (!gl.getProgramParameter(p._glProgram, gl.LINK_STATUS)) {
 	        var _info10 = gl.getProgramInfoLog(p._glProgram);
 	        throw new Error('program link error: ' + _info10);
 	      }
 
-	      gl.useProgram(p._glProgram);
+	      gl.useProgram(p._glProgram
 	      //gl.clearColor(1, 1, 1, 1)
 	      //gl.clearDepth(1.0)
 	      //gl.clearStencil(0)
 
-	      gl.enable(gl.DEPTH_TEST);
+	      );gl.enable(gl.DEPTH_TEST);
 	      gl.depthFunc(gl.LEQUAL);
 	      gl.enable(gl.BLEND);
 	      gl.blendFunc(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA);
 	      gl.enable(gl.CULL_FACE);
-	      gl.cullFace(gl.BACK);
+	      gl.cullFace(gl.BACK
 
 	      //this._setDummyHitTestTextureAsDefault()
 
-	      return this.__defaultHitTestProgram;
+	      );return this.__defaultHitTestProgram;
 	    }
 	  }]);
 
@@ -34776,15 +34779,14 @@ module.exports =
 	  frameRate: 'kSceneFrameRateAttributeKey',
 	  startTime: 'kSceneStartTimeAttributeKey',
 	  upAxis: 'kSceneUpAxisAttributeKey'
+
+	  /**
+	   * A scene graph—a hierarchy of nodes with attached geometries, lights, cameras and other attributes that together form a displayable 3D scene.
+	   * @access public
+	   * @extends {NSObject}
+	   * @see https://developer.apple.com/reference/scenekit/scnscene
+	   */
 	};
-
-	/**
-	 * A scene graph—a hierarchy of nodes with attached geometries, lights, cameras and other attributes that together form a displayable 3D scene.
-	 * @access public
-	 * @extends {NSObject}
-	 * @see https://developer.apple.com/reference/scenekit/scnscene
-	 */
-
 	var SCNScene = function (_NSObject) {
 	  _inherits(SCNScene, _NSObject);
 
@@ -35498,171 +35500,171 @@ module.exports =
 	      */
 
 	      // front
-	      sourceData.push(left, bottom, front); // position
-	      sourceData.push(0, 0, 1); // normal
-	      sourceData.push(0, 1); // texcoord
+	      sourceData.push(left, bottom, front // position
+	      );sourceData.push(0, 0, 1 // normal
+	      );sourceData.push(0, 1 // texcoord
 	      //sourceData.push(0, -1, -1, -1) // boneIndices
 	      //sourceData.push(1, 0, 0, 0) // boneWeights
 
-	      sourceData.push(left, top, front);
+	      );sourceData.push(left, top, front);
 	      sourceData.push(0, 0, 1);
-	      sourceData.push(0, 0);
+	      sourceData.push(0, 0
 	      //sourceData.push(0, -1, -1, -1)
 	      //sourceData.push(1, 0, 0, 0)
 
-	      sourceData.push(right, bottom, front);
+	      );sourceData.push(right, bottom, front);
 	      sourceData.push(0, 0, 1);
-	      sourceData.push(1, 1);
+	      sourceData.push(1, 1
 	      //sourceData.push(0, -1, -1, -1)
 	      //sourceData.push(1, 0, 0, 0)
 
-	      sourceData.push(right, top, front);
+	      );sourceData.push(right, top, front);
 	      sourceData.push(0, 0, 1);
-	      sourceData.push(1, 0);
+	      sourceData.push(1, 0
 	      //sourceData.push(0, -1, -1, -1)
 	      //sourceData.push(1, 0, 0, 0)
 
-	      indexData.push(0, 3, 1);
-	      indexData.push(0, 2, 3);
+	      );indexData.push(0, 3, 1);
+	      indexData.push(0, 2, 3
 
 	      // right
-	      sourceData.push(right, bottom, front);
+	      );sourceData.push(right, bottom, front);
 	      sourceData.push(1, 0, 0);
-	      sourceData.push(0, 1);
+	      sourceData.push(0, 1
 	      //sourceData.push(0, -1, -1, -1)
 	      //sourceData.push(1, 0, 0, 0)
 
-	      sourceData.push(right, top, front);
+	      );sourceData.push(right, top, front);
 	      sourceData.push(1, 0, 0);
-	      sourceData.push(0, 0);
+	      sourceData.push(0, 0
 	      //sourceData.push(0, -1, -1, -1)
 	      //sourceData.push(1, 0, 0, 0)
 
-	      sourceData.push(right, bottom, back);
+	      );sourceData.push(right, bottom, back);
 	      sourceData.push(1, 0, 0);
-	      sourceData.push(1, 1);
+	      sourceData.push(1, 1
 	      //sourceData.push(0, -1, -1, -1)
 	      //sourceData.push(1, 0, 0, 0)
 
-	      sourceData.push(right, top, back);
+	      );sourceData.push(right, top, back);
 	      sourceData.push(1, 0, 0);
-	      sourceData.push(1, 0);
+	      sourceData.push(1, 0
 	      //sourceData.push(0, -1, -1, -1)
 	      //sourceData.push(1, 0, 0, 0)
 
-	      indexData.push(4, 7, 5);
-	      indexData.push(4, 6, 7);
+	      );indexData.push(4, 7, 5);
+	      indexData.push(4, 6, 7
 
 	      // back
-	      sourceData.push(right, bottom, back);
+	      );sourceData.push(right, bottom, back);
 	      sourceData.push(0, 0, -1);
-	      sourceData.push(0, 1);
+	      sourceData.push(0, 1
 	      //sourceData.push(0, -1, -1, -1)
 	      //sourceData.push(1, 0, 0, 0)
 
-	      sourceData.push(right, top, back);
+	      );sourceData.push(right, top, back);
 	      sourceData.push(0, 0, -1);
-	      sourceData.push(0, 0);
+	      sourceData.push(0, 0
 	      //sourceData.push(0, -1, -1, -1)
 	      //sourceData.push(1, 0, 0, 0)
 
-	      sourceData.push(left, bottom, back);
+	      );sourceData.push(left, bottom, back);
 	      sourceData.push(0, 0, -1);
-	      sourceData.push(1, 1);
+	      sourceData.push(1, 1
 	      //sourceData.push(0, -1, -1, -1)
 	      //sourceData.push(1, 0, 0, 0)
 
-	      sourceData.push(left, top, back);
+	      );sourceData.push(left, top, back);
 	      sourceData.push(0, 0, -1);
-	      sourceData.push(1, 0);
+	      sourceData.push(1, 0
 	      //sourceData.push(0, -1, -1, -1)
 	      //sourceData.push(1, 0, 0, 0)
 
-	      indexData.push(8, 11, 9);
-	      indexData.push(8, 10, 11);
+	      );indexData.push(8, 11, 9);
+	      indexData.push(8, 10, 11
 
 	      // left
-	      sourceData.push(left, bottom, back);
+	      );sourceData.push(left, bottom, back);
 	      sourceData.push(-1, 0, 0);
-	      sourceData.push(0, 1);
+	      sourceData.push(0, 1
 	      //sourceData.push(0, -1, -1, -1)
 	      //sourceData.push(1, 0, 0, 0)
 
-	      sourceData.push(left, top, back);
+	      );sourceData.push(left, top, back);
 	      sourceData.push(-1, 0, 0);
-	      sourceData.push(0, 0);
+	      sourceData.push(0, 0
 	      //sourceData.push(0, -1, -1, -1)
 	      //sourceData.push(1, 0, 0, 0)
 
-	      sourceData.push(left, bottom, front);
+	      );sourceData.push(left, bottom, front);
 	      sourceData.push(-1, 0, 0);
-	      sourceData.push(1, 1);
+	      sourceData.push(1, 1
 	      //sourceData.push(0, -1, -1, -1)
 	      //sourceData.push(1, 0, 0, 0)
 
-	      sourceData.push(left, top, front);
+	      );sourceData.push(left, top, front);
 	      sourceData.push(-1, 0, 0);
-	      sourceData.push(1, 0);
+	      sourceData.push(1, 0
 	      //sourceData.push(0, -1, -1, -1)
 	      //sourceData.push(1, 0, 0, 0)
 
-	      indexData.push(12, 15, 13);
-	      indexData.push(12, 14, 15);
+	      );indexData.push(12, 15, 13);
+	      indexData.push(12, 14, 15
 
 	      // top
-	      sourceData.push(left, top, front);
+	      );sourceData.push(left, top, front);
 	      sourceData.push(0, 1, 0);
-	      sourceData.push(0, 1);
+	      sourceData.push(0, 1
 	      //sourceData.push(0, -1, -1, -1)
 	      //sourceData.push(1, 0, 0, 0)
 
-	      sourceData.push(left, top, back);
+	      );sourceData.push(left, top, back);
 	      sourceData.push(0, 1, 0);
-	      sourceData.push(0, 0);
+	      sourceData.push(0, 0
 	      //sourceData.push(0, -1, -1, -1)
 	      //sourceData.push(1, 0, 0, 0)
 
-	      sourceData.push(right, top, front);
+	      );sourceData.push(right, top, front);
 	      sourceData.push(0, 1, 0);
-	      sourceData.push(1, 1);
+	      sourceData.push(1, 1
 	      //sourceData.push(0, -1, -1, -1)
 	      //sourceData.push(1, 0, 0, 0)
 
-	      sourceData.push(right, top, back);
+	      );sourceData.push(right, top, back);
 	      sourceData.push(0, 1, 0);
-	      sourceData.push(1, 0);
+	      sourceData.push(1, 0
 	      //sourceData.push(0, -1, -1, -1)
 	      //sourceData.push(1, 0, 0, 0)
 
-	      indexData.push(16, 19, 17);
-	      indexData.push(16, 18, 19);
+	      );indexData.push(16, 19, 17);
+	      indexData.push(16, 18, 19
 
 	      // bottom
-	      sourceData.push(left, bottom, back);
+	      );sourceData.push(left, bottom, back);
 	      sourceData.push(0, -1, 0);
-	      sourceData.push(0, 1);
+	      sourceData.push(0, 1
 	      //sourceData.push(0, -1, -1, -1)
 	      //sourceData.push(1, 0, 0, 0)
 
-	      sourceData.push(left, bottom, front);
+	      );sourceData.push(left, bottom, front);
 	      sourceData.push(0, -1, 0);
-	      sourceData.push(0, 0);
+	      sourceData.push(0, 0
 	      //sourceData.push(0, -1, -1, -1)
 	      //sourceData.push(1, 0, 0, 0)
 
-	      sourceData.push(right, bottom, back);
+	      );sourceData.push(right, bottom, back);
 	      sourceData.push(0, -1, 0);
-	      sourceData.push(1, 1);
+	      sourceData.push(1, 1
 	      //sourceData.push(0, -1, -1, -1)
 	      //sourceData.push(1, 0, 0, 0)
 
-	      sourceData.push(right, bottom, front);
+	      );sourceData.push(right, bottom, front);
 	      sourceData.push(0, -1, 0);
-	      sourceData.push(1, 0);
+	      sourceData.push(1, 0
 	      //sourceData.push(0, -1, -1, -1)
 	      //sourceData.push(1, 0, 0, 0)
 
-	      indexData.push(20, 23, 21);
+	      );indexData.push(20, 23, 21);
 	      indexData.push(20, 22, 23);
 
 	      var vertexSource = new _SCNGeometrySource2.default(sourceData, // data
@@ -35891,15 +35893,14 @@ module.exports =
 	  preserveOriginalTopology: 'kSceneSourcePreserveOriginalTopology',
 	  strictConformance: 'kSceneSourceStrictConformanceKey',
 	  useSafeMode: 'kSceneSourceUseSafeMode'
+
+	  /**
+	   * Manages the data-reading tasks associated with loading scene contents from a file or data.
+	   * @access public
+	   * @extends {NSObject}
+	   * @see https://developer.apple.com/reference/scenekit/scnscenesource
+	   */
 	};
-
-	/**
-	 * Manages the data-reading tasks associated with loading scene contents from a file or data.
-	 * @access public
-	 * @extends {NSObject}
-	 * @see https://developer.apple.com/reference/scenekit/scnscenesource
-	 */
-
 	var SCNSceneSource = function (_NSObject) {
 	  _inherits(SCNSceneSource, _NSObject);
 
@@ -36542,15 +36543,14 @@ module.exports =
 	  all: 'all',
 	  any: 'any',
 	  closest: 'closest'
+
+	  /**
+	   * The global simulation of collisions, gravity, joints, and other physics effects in a scene.
+	   * @access public
+	   * @extends {NSObject}
+	   * @see https://developer.apple.com/reference/scenekit/scnphysicsworld
+	   */
 	};
-
-	/**
-	 * The global simulation of collisions, gravity, joints, and other physics effects in a scene.
-	 * @access public
-	 * @extends {NSObject}
-	 * @see https://developer.apple.com/reference/scenekit/scnphysicsworld
-	 */
-
 	var SCNPhysicsWorld = function (_NSObject) {
 	  _inherits(SCNPhysicsWorld, _NSObject);
 
@@ -36876,14 +36876,14 @@ module.exports =
 	      //return results
 	      var viewProjectionTransform = this._createViewProjectionTransform(origin, dest);
 	      var from = origin.transform(viewProjectionTransform);
-	      var to = dest.transform(viewProjectionTransform);
+	      var to = dest.transform(viewProjectionTransform
 	      //console.log('**** rayTestWithSegmentFromTo ****')
 	      //console.log(`origin: ${origin.floatArray()}`)
 	      //console.log(`dest: ${dest.floatArray()}`)
 	      //console.log(`from: ${from.floatArray()}`)
 	      //console.log(`to: ${to.floatArray()}`)
 
-	      return this._renderer._physicsHitTestByGPU(viewProjectionTransform, from, to, opt);
+	      );return this._renderer._physicsHitTestByGPU(viewProjectionTransform, from, to, opt);
 	    }
 
 	    /**
@@ -37916,15 +37916,14 @@ module.exports =
 	  boundingBox: 'boundingBox',
 	  concavePolyhedron: 'concaveMesh',
 	  convexHull: 'convexHull'
+
+	  /**
+	   * An abstraction of a physics body’s solid volume for use in tuning or optimizing collision detection.
+	   * @access public
+	   * @extends {NSObject}
+	   * @see https://developer.apple.com/reference/scenekit/scnphysicsshape
+	   */
 	};
-
-	/**
-	 * An abstraction of a physics body’s solid volume for use in tuning or optimizing collision detection.
-	 * @access public
-	 * @extends {NSObject}
-	 * @see https://developer.apple.com/reference/scenekit/scnphysicsshape
-	 */
-
 	var SCNPhysicsShape = function (_NSObject) {
 	  _inherits(SCNPhysicsShape, _NSObject);
 
@@ -39319,9 +39318,9 @@ module.exports =
 	            //console.info(`image ${path} load error. pathCount > paths.length`)
 	          } else {
 	            //console.info(`image ${_path} load error.`)
-	            _path = directoryPath + paths.slice(-pathCount).join('/');
+	            _path = directoryPath + paths.slice(-pathCount).join('/'
 	            //console.info(`try ${_path}`)
-	            image.src = _path;
+	            );image.src = _path;
 	          }
 	        };
 	        image.src = _path;
@@ -39354,20 +39353,20 @@ module.exports =
 	      gl.bindVertexArray(this._vertexArray);
 
 	      this._vertexBuffer = gl.createBuffer();
-	      gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer);
+	      gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer
 
 	      // prepare vertex array data
 	      // TODO: retain attribute locations
-	      var positionLoc = gl.getAttribLocation(program, 'position');
+	      );var positionLoc = gl.getAttribLocation(program, 'position');
 	      var velocityLoc = gl.getAttribLocation(program, 'velocity');
 	      var rotationLoc = gl.getAttribLocation(program, 'rotation');
 	      var colorLoc = gl.getAttribLocation(program, 'color');
-	      var sizeLoc = gl.getAttribLocation(program, 'size');
+	      var sizeLoc = gl.getAttribLocation(program, 'size'
 	      //const lifeLoc = gl.getAttribLocation(program, 'life')
-	      var cornerLoc = gl.getAttribLocation(program, 'corner');
+	      );var cornerLoc = gl.getAttribLocation(program, 'corner'
 
 	      // vertexAttribPointer(ulong idx, long size, ulong type, bool norm, long stride, ulong offset)
-	      gl.enableVertexAttribArray(positionLoc);
+	      );gl.enableVertexAttribArray(positionLoc);
 	      gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, 68, 0);
 	      gl.enableVertexAttribArray(velocityLoc);
 	      gl.vertexAttribPointer(velocityLoc, 3, gl.FLOAT, false, 68, 12);
@@ -39378,7 +39377,7 @@ module.exports =
 	      gl.enableVertexAttribArray(sizeLoc);
 	      gl.vertexAttribPointer(sizeLoc, 1, gl.FLOAT, false, 68, 56);
 	      gl.enableVertexAttribArray(cornerLoc);
-	      gl.vertexAttribPointer(cornerLoc, 2, gl.FLOAT, false, 68, 60);
+	      gl.vertexAttribPointer(cornerLoc, 2, gl.FLOAT, false, 68, 60
 
 	      /*
 	      const arr = []
@@ -39389,11 +39388,11 @@ module.exports =
 	      gl.bufferData(gl.ARRAY_BUFFER, particleData, gl.DYNAMIC_DRAW)
 	      */
 
-	      var len = this._maxParticles + 5;
-	      this._updateIndexBuffer(gl, len);
+	      );var len = this._maxParticles + 5;
+	      this._updateIndexBuffer(gl, len
 
 	      // initialize parameters
-	      this._numImages = this.imageSequenceRowCount * this.imageSequenceColumnCount;
+	      );this._numImages = this.imageSequenceRowCount * this.imageSequenceColumnCount;
 	      this._imageWidth = 2.0 / this.imageSequenceColumnCount;
 	      this._imageHeight = 2.0 / this.imageSequenceRowCount;
 	    }
@@ -39452,10 +39451,10 @@ module.exports =
 	      var spreadingAngle = this.spreadingAngle / 180.0 * Math.PI * Math.random();
 	      var spreadingAngleRot = 2.0 * Math.PI * Math.random();
 	      var angleMat = _SCNMatrix2.default.matrixWithRotation(this._normal.x, this._normal.y, this._normal.z, spreadingAngle);
-	      var rotMat = _SCNMatrix2.default.matrixWithRotation(this._direction.x, this._direction.y, this._direction.z, spreadingAngleRot);
+	      var rotMat = _SCNMatrix2.default.matrixWithRotation(this._direction.x, this._direction.y, this._direction.z, spreadingAngleRot
 
 	      // emitterShape, birthLocation, emittingDirection, spreadingAngle, particleAngle/Variation, particleVelocity
-	      if (this.emitterShape === null) {
+	      );if (this.emitterShape === null) {
 	        p.position = position;
 	      } else if (this.birthLocation === _SCNParticleBirthLocation2.default.surface) {
 	        var pVec = null;
@@ -39676,7 +39675,8 @@ module.exports =
 	        p.position.z += p.velocity.z * dt;
 	        if (_this4.propertyControllers !== null) {
 	          Object.keys(_this4.propertyControllers).forEach(function (key) {
-	            _this4.propertyControllers[key].animation._applyAnimation(p, t, false); // should I use p.life instead of t?
+	            _this4.propertyControllers[key].animation._applyAnimation(p, t, false // should I use p.life instead of t?
+	            );
 	          });
 	        }
 
@@ -39762,10 +39762,10 @@ module.exports =
 	      }
 
 	      gl.uniform1i(gl.getUniformLocation(program, 'orientationMode'), this.orientationMode);
-	      gl.uniform1f(gl.getUniformLocation(program, 'stretchFactor'), this.stretchFactor);
+	      gl.uniform1f(gl.getUniformLocation(program, 'stretchFactor'), this.stretchFactor
 
 	      // buffer particle data
-	      gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer);
+	      );gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer);
 	      gl.bufferData(gl.ARRAY_BUFFER, this._particleData, gl.DYNAMIC_DRAW);
 
 	      if (this._particles.length > this._maxParticleIndex) {
@@ -39799,10 +39799,10 @@ module.exports =
 	      //console.warn(`image size: ${image.naturalWidth} ${image.naturalHeight}`)
 	      canvas.getContext('2d').drawImage(image, 0, 0);
 
-	      gl.bindTexture(gl.TEXTURE_2D, texture);
+	      gl.bindTexture(gl.TEXTURE_2D, texture
 	      // texImage2D(target, level, internalformat, width, height, border, format, type, source)
 	      // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
-	      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, image.width, image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
+	      );gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, image.width, image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
 	      gl.generateMipmap(gl.TEXTURE_2D);
 	      gl.bindTexture(gl.TEXTURE_2D, null);
 
@@ -39817,23 +39817,23 @@ module.exports =
 	  }, {
 	    key: '_createColor',
 	    value: function _createColor() {
-	      var hsb = this._rgb2hsb(this.particleColor);
+	      var hsb = this._rgb2hsb(this.particleColor
 
 	      // Hue
 	      //hsb.x = (hsb.x + this.particleColorVariation.x * (Math.random() - 0.5)) % 360.0
-	      hsb.x = (hsb.x + this.particleColorVariation.x * (Math.random() * 2.0 - 1.0)) % 360.0;
+	      );hsb.x = (hsb.x + this.particleColorVariation.x * (Math.random() * 2.0 - 1.0)) % 360.0;
 	      if (hsb.x < 0) {
 	        hsb.x += 360.0;
 	      }
 
 	      // Saturation
-	      hsb.y = Math.max(0, Math.min(1.0, hsb.y + this.particleColorVariation.y * (Math.random() - 0.5)));
+	      hsb.y = Math.max(0, Math.min(1.0, hsb.y + this.particleColorVariation.y * (Math.random() - 0.5))
 
 	      // Brightness
-	      hsb.z = Math.max(0, Math.min(1.0, hsb.z + this.particleColorVariation.z * (Math.random() - 0.5)));
+	      );hsb.z = Math.max(0, Math.min(1.0, hsb.z + this.particleColorVariation.z * (Math.random() - 0.5))
 
 	      // Alpha
-	      hsb.w = Math.max(0, Math.min(1.0, hsb.w + this.particleColorVariation.w * (Math.random() - 0.5)));
+	      );hsb.w = Math.max(0, Math.min(1.0, hsb.w + this.particleColorVariation.w * (Math.random() - 0.5)));
 
 	      return this._hsb2rgb(hsb);
 	    }
@@ -39895,7 +39895,7 @@ module.exports =
 	        return new _SKColor2.default(hsb.z, hsb.z, hsb.z, hsb.w);
 	      }
 
-	      var region = Math.floor(hsb.x / 60.0);
+	      var region = Math.floor(hsb.x / 60.0
 	      /*
 	      const c = hsb.z * hsb.y
 	      const x = c * (region % 2)
@@ -39935,7 +39935,7 @@ module.exports =
 	      
 	      return rgb
 	      */
-	      var v = hsb.z;
+	      );var v = hsb.z;
 	      var f = hsb.x / 60.0 - region;
 	      var m = v * (1.0 - hsb.y);
 	      var n = v * (1.0 - hsb.y * f);
@@ -41080,10 +41080,10 @@ module.exports =
 
 	      this._dummyTexture = gl.createTexture();
 
-	      gl.bindTexture(gl.TEXTURE_2D, this._dummyTexture);
+	      gl.bindTexture(gl.TEXTURE_2D, this._dummyTexture
 	      // texImage2D(target, level, internalformat, width, height, border, format, type, source)
 	      // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
-	      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
+	      );gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
 	      gl.bindTexture(gl.TEXTURE_2D, null);
 	    }
 	  }]);
@@ -42040,10 +42040,11 @@ module.exports =
 	    _this._loadingImagePromise = null;
 
 	    if (name !== null) {
-	      _this.texture = _SKTexture2.default.textureWithImageNamed(name);
+	      _this.texture = _SKTexture2.default.textureWithImageNamed(name
 	      //if(generateNormalMap){
 	      //  this.normalTexture = this.texture.generatingNormalMap()
 	      //}
+	      );
 	    }
 	    return _this;
 	  }
@@ -42208,10 +42209,10 @@ module.exports =
 	      }
 
 	      gl.attachShader(program, vertexShader);
-	      gl.attachShader(program, fragmentShader);
+	      gl.attachShader(program, fragmentShader
 
 	      // link program object
-	      gl.linkProgram(program);
+	      );gl.linkProgram(program);
 	      if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
 	        var _info2 = gl.getProgramInfoLog(program);
 	        throw new Error('program link error: ' + _info2);
@@ -42240,15 +42241,15 @@ module.exports =
 
 	      var positionLoc = gl.getAttribLocation(program, 'position');
 	      gl.bindAttribLocation(program, positionLoc, 'position');
-	      gl.enableVertexAttribArray(positionLoc);
+	      gl.enableVertexAttribArray(positionLoc
 	      // idx, size, type, norm, stride, offset
-	      gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, 20, 0);
+	      );gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, 20, 0);
 
 	      var texcoordLoc = gl.getAttribLocation(program, 'texcoord');
 	      gl.bindAttribLocation(program, texcoordLoc, 'texcoord');
-	      gl.enableVertexAttribArray(texcoordLoc);
+	      gl.enableVertexAttribArray(texcoordLoc
 	      // idx, size, type, norm, stride, offset
-	      gl.vertexAttribPointer(texcoordLoc, 2, gl.FLOAT, false, 20, 12);
+	      );gl.vertexAttribPointer(texcoordLoc, 2, gl.FLOAT, false, 20, 12);
 
 	      this._indexBuffer = gl.createBuffer();
 	      var indexData = new Uint8Array([0, 3, 2, 0, 1, 3]);
@@ -43248,9 +43249,9 @@ module.exports =
 	      if (typeof key === 'undefined' || key === null) {
 	        key = Symbol();
 	      }
-	      var act = action.copy();
+	      var act = action.copy
 	      // FIXME: use current frame time
-	      act._actionStartTime = Date.now() * 0.001;
+	      ();act._actionStartTime = Date.now() * 0.001;
 	      act._completionHandler = block;
 	      this._actions.set(key, act);
 	    }
@@ -44056,10 +44057,10 @@ module.exports =
 	      canvas.height = this._image.naturalHeight;
 	      canvas.getContext('2d').drawImage(this._image, 0, 0);
 
-	      gl.bindTexture(gl.TEXTURE_2D, texture);
+	      gl.bindTexture(gl.TEXTURE_2D, texture
 	      // texImage2D(target, level, internalformat, width, height, border, format, type, source)
 	      // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
-	      gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, this._image.width, this._image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
+	      );gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, this._image.width, this._image.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
 	      gl.generateMipmap(gl.TEXTURE_2D);
 	      gl.bindTexture(gl.TEXTURE_2D, null);
 
@@ -44455,16 +44456,16 @@ module.exports =
 	      node.geometry.geometrySources.forEach(function (source) {
 	        // FIXME: copy more than 1 source.
 	        var pSource = pg.getGeometrySourcesForSemantic(source.semantic)[0];
-	        pSource.fill(0);
+	        pSource.fill(0
 	        //newData.set(source.semantic, Array(source._data.length).fill(0))
-	        totalWeightForSemantic.set(source.semantic, 0.0);
-	      });
+	        );totalWeightForSemantic.set(source.semantic, 0.0);
+	      }
 
 	      // should I morph elements?
 	      //node.geometry.geometryElements().forEach((element) => {
 	      //})
 
-	      var targetCount = this.targets.length;
+	      );var targetCount = this.targets.length;
 	      //console.log(`targetCount: ${targetCount}`)
 
 	      var _loop = function _loop(i) {
@@ -44479,10 +44480,10 @@ module.exports =
 	          if (typeof pSource === 'undefined') {
 	            return;
 	          }
-	          totalWeightForSemantic.set(source.semantic, totalWeightForSemantic.get(source.semantic) + weight);
+	          totalWeightForSemantic.set(source.semantic, totalWeightForSemantic.get(source.semantic) + weight
 
 	          // FIXME: don't access private properties
-	          var srcIndex = source._dataOffset / source._bytesPerComponent;
+	          );var srcIndex = source._dataOffset / source._bytesPerComponent;
 	          var srcStride = source._dataStride / source._bytesPerComponent;
 	          var dstIndex = pSource._dataOffset / pSource._bytesPerComponent;
 	          var dstStride = pSource._dataStride / pSource._bytesPerComponent;
@@ -44517,9 +44518,9 @@ module.exports =
 	        var vectorCount = source._vectorCount;
 
 	        if (_this2.calculationMode === _SCNMorpherCalculationMode2.default.normalized) {
-	          var _weight = 1.0 - totalWeightForSemantic.get(source.semantic);
+	          var _weight = 1.0 - totalWeightForSemantic.get(source.semantic
 	          // FIXME: don't access private properties
-	          for (var i = 0; i < vectorCount; i++) {
+	          );for (var i = 0; i < vectorCount; i++) {
 	            for (var j = 0; j < componentCount; j++) {
 	              pSource._data[dstIndex + j] += source._data[srcIndex + j] * _weight;
 	            }
@@ -44538,11 +44539,12 @@ module.exports =
 	            dstIndex += dstStride;
 	          }
 	        }
-	      });
+	      }
 
 	      // TODO: needs to update normal vector?
 
 	      //console.log(`_morph done`)
+	      );
 	    }
 	  }]);
 
@@ -44721,7 +44723,7 @@ module.exports =
 	     * @type {SCNMatrix4}
 	     * @see https://developer.apple.com/reference/scenekit/scnskinner/1523160-basegeometrybindtransform
 	     */
-	    _this.baseGeometryBindTransform = (0, _SCNMatrix4MakeTranslation2.default)(0, 0, 0);
+	    _this.baseGeometryBindTransform = (0, _SCNMatrix4MakeTranslation2.default)(0, 0, 0
 
 	    // Working with an Animation Skeleton
 
@@ -44730,7 +44732,7 @@ module.exports =
 	     * @type {?SCNNode}
 	     * @see https://developer.apple.com/reference/scenekit/scnskinner/1523048-skeleton
 	     */
-	    _this.skeleton = null;
+	    );_this.skeleton = null;
 
 	    /**
 	     * @access private
@@ -44789,7 +44791,7 @@ module.exports =
 	        // TODO: implement appropriate matrix multiplication.
 	        //       it doesn't consider the rotation of initial pose so far.
 	        //const mat = this._boneInverseBindTransforms[i].mult(bone._presentation._worldTransform)
-	        var mat = this.baseGeometryBindTransform.mult(this._boneInverseBindTransforms[i]).mult(bone._presentation._worldTransform);
+	        var mat = this.baseGeometryBindTransform.mult(this._boneInverseBindTransforms[i]).mult(bone._presentation._worldTransform
 	        //const mat = bone._presentation._worldTransform.mult(this._boneInverseBindTransforms[i])
 	        //mat = bone.presentation.transform.mult(mat)
 	        //if(bone._parent !== null){
@@ -44798,7 +44800,7 @@ module.exports =
 	        //}
 	        //mat = bone.presentation.transform.mult(mat)
 	        //mat = mat.mult(bone.presentation.transform)
-	        arr.push.apply(arr, _toConsumableArray(mat.floatArray3x4f()));
+	        );arr.push.apply(arr, _toConsumableArray(mat.floatArray3x4f()));
 
 	        /*
 	        if(!mat.isIdentity()){
@@ -47046,10 +47048,10 @@ module.exports =
 	      if (!(obj instanceof _SCNNode2.default)) {
 	        throw new Error('unsupported class for SCNActionRotate: ' + obj.constructor.name);
 	      }
-	      var t = this._getTime(time, needTimeConversion);
+	      var t = this._getTime(time, needTimeConversion
 	      //console.warn(`SCNActionRotate._applyAction t: ${t}`)
 
-	      if (this._isAxisAngle) {
+	      );if (this._isAxisAngle) {
 	        // rotation
 	        var baseValue = obj.rotation;
 	        var toValue = this._axisRot;
@@ -51715,16 +51717,15 @@ module.exports =
 	  preferLowPowerDevice: 'SCNPreferLowPowerDeviceKey',
 	  preferredDevice: 'SCNPreferredDeviceKey',
 	  preferredRenderingAPI: 'SCNPreferredRenderingAPIKey'
+
+	  /**
+	   * A view for displaying 3D SceneKit content.
+	   * @access public
+	   * @implements {SCNSceneRenderer}
+	   * @implements {SCNTechniqueSupport}
+	   * @see https://developer.apple.com/reference/scenekit/scnview
+	   */
 	};
-
-	/**
-	 * A view for displaying 3D SceneKit content.
-	 * @access public
-	 * @implements {SCNSceneRenderer}
-	 * @implements {SCNTechniqueSupport}
-	 * @see https://developer.apple.com/reference/scenekit/scnview
-	 */
-
 	var SCNView = function () {
 
 	  // Initializing a SceneKit View
@@ -51967,10 +51968,9 @@ module.exports =
 	      preserveDrawingBuffer: false,
 	      preferLowPowerToHighPerformance: Boolean(preferLowPowerDevice),
 	      failIfMajorPerformanceCaveat: false
-	    };
 
-	    //const contextNames = ['webgl2', 'webgl', 'webkit-3d', 'moz-webgl', 'experimental-webgl']
-	    var contextNames = ['webgl2'];
+	      //const contextNames = ['webgl2', 'webgl', 'webkit-3d', 'moz-webgl', 'experimental-webgl']
+	    };var contextNames = ['webgl2'];
 	    var _iteratorNormalCompletion = true;
 	    var _didIteratorError = false;
 	    var _iteratorError = undefined;
@@ -52165,10 +52165,10 @@ module.exports =
 	    value: function appendTo(element) {
 	      var _this2 = this;
 
-	      element.appendChild(this._canvas);
+	      element.appendChild(this._canvas
 
 	      // update canvas size
-	      if (typeof this._frame === 'undefined') {
+	      );if (typeof this._frame === 'undefined') {
 	        this._canvas.style.width = '100%';
 	        this._canvas.style.height = '100%';
 	        if (this._canvas.clientHeight <= 0) {
@@ -52476,12 +52476,12 @@ module.exports =
 	        this._delegate.rendererDidApplyAnimationsAtTime(this._renderer, time);
 	      }
 
-	      this._updateTransform();
+	      this._updateTransform
 
 	      ///////////////////////
 	      // simulates physics //
 	      ///////////////////////
-	      if (this._scene._physicsWorld !== null) {
+	      ();if (this._scene._physicsWorld !== null) {
 	        this._scene._physicsWorld._simulate(time);
 	      }
 
@@ -52728,11 +52728,11 @@ module.exports =
 	      node.childNodes.forEach(function (child) {
 	        return _this9._runAnimationForNode(child);
 	      });
-	      this._runAnimationForObject(node);
+	      this._runAnimationForObject(node
 	      // TODO: implement animations for all animatable objects:
 	      //         SCNCamera, SCNConstraint, SCNGeometry, SCNLight, SCNMaterial, 
 	      //         SCNMaterialProperty, SCNMorpher, SCNParticleSystem, SCNTechnique
-	      if (node.geometry) {
+	      );if (node.geometry) {
 	        this._runAnimationForObject(node.geometry);
 	        node.geometry.materials.forEach(function (material) {
 	          _this9._runAnimationForObject(material);
@@ -53642,8 +53642,9 @@ module.exports =
 	    value: function _applyAction(obj, time) {
 	      var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
 
-	      var t = this._getTime(time, needTimeConversion);
+	      var t = this._getTime(time, needTimeConversion
 	      //this._handleEvents(obj, t)
+	      );
 	    }
 	  }, {
 	    key: '_getTime',
@@ -55975,9 +55976,9 @@ module.exports =
 	        this._textureUpToDate = false;
 	      }
 	      if (!this._textureUpToDate) {
-	        gl.bindTexture(gl.TEXTURE_2D, this._texture);
+	        gl.bindTexture(gl.TEXTURE_2D, this._texture
 	        // texImage2D(target, level, internalformat, width, height, border, format, type, source)
-	        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, this._canvas.width, this._canvas.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, this._canvas);
+	        );gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, this._canvas.width, this._canvas.height, 0, gl.RGBA, gl.UNSIGNED_BYTE, this._canvas);
 	        gl.generateMipmap(gl.TEXTURE_2D);
 	        gl.bindTexture(gl.TEXTURE_2D, null);
 
@@ -56037,10 +56038,10 @@ module.exports =
 	      }
 
 	      gl.attachShader(program, vertexShader);
-	      gl.attachShader(program, fragmentShader);
+	      gl.attachShader(program, fragmentShader
 
 	      // link program object
-	      gl.linkProgram(program);
+	      );gl.linkProgram(program);
 	      if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
 	        var _info2 = gl.getProgramInfoLog(program);
 	        throw new Error('program link error: ' + _info2);
@@ -56069,15 +56070,15 @@ module.exports =
 
 	      var positionLoc = gl.getAttribLocation(program, 'position');
 	      gl.bindAttribLocation(program, positionLoc, 'position');
-	      gl.enableVertexAttribArray(positionLoc);
+	      gl.enableVertexAttribArray(positionLoc
 	      // idx, size, type, norm, stride, offset
-	      gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, 20, 0);
+	      );gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, 20, 0);
 
 	      var texcoordLoc = gl.getAttribLocation(program, 'texcoord');
 	      gl.bindAttribLocation(program, texcoordLoc, 'texcoord');
-	      gl.enableVertexAttribArray(texcoordLoc);
+	      gl.enableVertexAttribArray(texcoordLoc
 	      // idx, size, type, norm, stride, offset
-	      gl.vertexAttribPointer(texcoordLoc, 2, gl.FLOAT, false, 20, 12);
+	      );gl.vertexAttribPointer(texcoordLoc, 2, gl.FLOAT, false, 20, 12);
 
 	      this._indexBuffer = gl.createBuffer();
 	      var indexData = new Uint8Array([0, 3, 2, 0, 1, 3]);
