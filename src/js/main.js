@@ -17,6 +17,7 @@ import DispatchObject from './Dispatch/DispatchObject'
 import DispatchQueue from './Dispatch/DispatchQueue'
 import DispatchTime from './Dispatch/DispatchTime'
 import DispatchTimeInterval from './Dispatch/DispatchTimeInterval'
+import NotificationCenter from './Foundation/NotificationCenter'
 import NSArray from './Foundation/NSArray'
 import NSCoder from './Foundation/NSCoder'
 import NSColorSpace from './Foundation/NSColorSpace'
@@ -27,6 +28,7 @@ import NSKeyedUnarchiver from './Foundation/NSKeyedUnarchiver'
 import NSMutableArray from './Foundation/NSMutableArray'
 import NSMutableData from './Foundation/NSMutableData'
 import NSMutableDictionary from './Foundation/NSMutableDictionary'
+import NSNotification from './Foundation/NSNotification'
 import NSURL from './Foundation/NSURL'
 import NSValue from './Foundation/NSValue'
 import NSObject from './ObjectiveC/NSObject'
@@ -247,6 +249,7 @@ _ClassList.registerClass(DispatchObject)
 _ClassList.registerClass(DispatchQueue)
 _ClassList.registerClass(DispatchTime)
 _ClassList.registerClass(DispatchTimeInterval)
+_ClassList.registerClass(NotificationCenter)
 _ClassList.registerClass(NSArray)
 _ClassList.registerClass(NSCoder)
 _ClassList.registerClass(NSColorSpace)
@@ -257,6 +260,7 @@ _ClassList.registerClass(NSKeyedUnarchiver)
 _ClassList.registerClass(NSMutableArray)
 _ClassList.registerClass(NSMutableData)
 _ClassList.registerClass(NSMutableDictionary)
+_ClassList.registerClass(NSNotification)
 _ClassList.registerClass(NSURL)
 _ClassList.registerClass(NSValue)
 _ClassList.registerClass(NSObject)
@@ -470,6 +474,7 @@ exports.DispatchObject = DispatchObject
 exports.DispatchQueue = DispatchQueue
 exports.DispatchTime = DispatchTime
 exports.DispatchTimeInterval = DispatchTimeInterval
+exports.NotificationCenter = NotificationCenter
 exports.NSArray = NSArray
 exports.NSCoder = NSCoder
 exports.NSColorSpace = NSColorSpace
@@ -480,6 +485,7 @@ exports.NSKeyedUnarchiver = NSKeyedUnarchiver
 exports.NSMutableArray = NSMutableArray
 exports.NSMutableData = NSMutableData
 exports.NSMutableDictionary = NSMutableDictionary
+exports.NSNotification = NSNotification
 exports.NSURL = NSURL
 exports.NSValue = NSValue
 exports.NSObject = NSObject

@@ -123,51 +123,59 @@ module.exports =
 
 	var _DispatchTimeInterval2 = _interopRequireDefault(_DispatchTimeInterval);
 
-	var _NSArray = __webpack_require__(27);
+	var _NotificationCenter = __webpack_require__(27);
+
+	var _NotificationCenter2 = _interopRequireDefault(_NotificationCenter);
+
+	var _NSArray = __webpack_require__(29);
 
 	var _NSArray2 = _interopRequireDefault(_NSArray);
 
-	var _NSCoder = __webpack_require__(28);
+	var _NSCoder = __webpack_require__(30);
 
 	var _NSCoder2 = _interopRequireDefault(_NSCoder);
 
-	var _NSColorSpace = __webpack_require__(29);
+	var _NSColorSpace = __webpack_require__(31);
 
 	var _NSColorSpace2 = _interopRequireDefault(_NSColorSpace);
 
-	var _NSData = __webpack_require__(30);
+	var _NSData = __webpack_require__(32);
 
 	var _NSData2 = _interopRequireDefault(_NSData);
 
-	var _NSDictionary = __webpack_require__(31);
+	var _NSDictionary = __webpack_require__(33);
 
 	var _NSDictionary2 = _interopRequireDefault(_NSDictionary);
 
-	var _NSKeyedArchiver = __webpack_require__(32);
+	var _NSKeyedArchiver = __webpack_require__(34);
 
 	var _NSKeyedArchiver2 = _interopRequireDefault(_NSKeyedArchiver);
 
-	var _NSKeyedUnarchiver = __webpack_require__(33);
+	var _NSKeyedUnarchiver = __webpack_require__(35);
 
 	var _NSKeyedUnarchiver2 = _interopRequireDefault(_NSKeyedUnarchiver);
 
-	var _NSMutableArray = __webpack_require__(38);
+	var _NSMutableArray = __webpack_require__(40);
 
 	var _NSMutableArray2 = _interopRequireDefault(_NSMutableArray);
 
-	var _NSMutableData = __webpack_require__(39);
+	var _NSMutableData = __webpack_require__(41);
 
 	var _NSMutableData2 = _interopRequireDefault(_NSMutableData);
 
-	var _NSMutableDictionary = __webpack_require__(40);
+	var _NSMutableDictionary = __webpack_require__(42);
 
 	var _NSMutableDictionary2 = _interopRequireDefault(_NSMutableDictionary);
 
-	var _NSURL = __webpack_require__(41);
+	var _NSNotification = __webpack_require__(28);
+
+	var _NSNotification2 = _interopRequireDefault(_NSNotification);
+
+	var _NSURL = __webpack_require__(43);
 
 	var _NSURL2 = _interopRequireDefault(_NSURL);
 
-	var _NSValue = __webpack_require__(42);
+	var _NSValue = __webpack_require__(44);
 
 	var _NSValue2 = _interopRequireDefault(_NSValue);
 
@@ -175,691 +183,691 @@ module.exports =
 
 	var _NSObject2 = _interopRequireDefault(_NSObject);
 
-	var _CAAction = __webpack_require__(47);
+	var _CAAction = __webpack_require__(49);
 
 	var _CAAction2 = _interopRequireDefault(_CAAction);
 
-	var _CAAnimation = __webpack_require__(48);
+	var _CAAnimation = __webpack_require__(50);
 
 	var _CAAnimation2 = _interopRequireDefault(_CAAnimation);
 
-	var _CAAnimationDelegate = __webpack_require__(52);
+	var _CAAnimationDelegate = __webpack_require__(54);
 
 	var _CAAnimationDelegate2 = _interopRequireDefault(_CAAnimationDelegate);
 
-	var _CAAnimationGroup = __webpack_require__(54);
+	var _CAAnimationGroup = __webpack_require__(56);
 
 	var _CAAnimationGroup2 = _interopRequireDefault(_CAAnimationGroup);
 
-	var _CABasicAnimation = __webpack_require__(55);
+	var _CABasicAnimation = __webpack_require__(57);
 
 	var _CABasicAnimation2 = _interopRequireDefault(_CABasicAnimation);
 
-	var _CACurrentMediaTime = __webpack_require__(58);
+	var _CACurrentMediaTime = __webpack_require__(60);
 
 	var _CACurrentMediaTime2 = _interopRequireDefault(_CACurrentMediaTime);
 
-	var _CAKeyframeAnimation = __webpack_require__(59);
+	var _CAKeyframeAnimation = __webpack_require__(61);
 
 	var _CAKeyframeAnimation2 = _interopRequireDefault(_CAKeyframeAnimation);
 
-	var _CAMediaTiming = __webpack_require__(50);
+	var _CAMediaTiming = __webpack_require__(52);
 
 	var _CAMediaTiming2 = _interopRequireDefault(_CAMediaTiming);
 
-	var _CAMediaTimingFunction = __webpack_require__(51);
+	var _CAMediaTimingFunction = __webpack_require__(53);
 
 	var _CAMediaTimingFunction2 = _interopRequireDefault(_CAMediaTimingFunction);
 
-	var _CAPropertyAnimation = __webpack_require__(56);
+	var _CAPropertyAnimation = __webpack_require__(58);
 
 	var _CAPropertyAnimation2 = _interopRequireDefault(_CAPropertyAnimation);
 
-	var _CATransform3D = __webpack_require__(43);
+	var _CATransform3D = __webpack_require__(45);
 
 	var _CATransform3D2 = _interopRequireDefault(_CATransform3D);
 
-	var _SCNAction = __webpack_require__(60);
+	var _SCNAction = __webpack_require__(62);
 
 	var _SCNAction2 = _interopRequireDefault(_SCNAction);
 
-	var _SCNActionable = __webpack_require__(62);
+	var _SCNActionable = __webpack_require__(64);
 
 	var _SCNActionable2 = _interopRequireDefault(_SCNActionable);
 
-	var _SCNActionCustom = __webpack_require__(63);
+	var _SCNActionCustom = __webpack_require__(65);
 
 	var _SCNActionCustom2 = _interopRequireDefault(_SCNActionCustom);
 
-	var _SCNActionFade = __webpack_require__(64);
+	var _SCNActionFade = __webpack_require__(66);
 
 	var _SCNActionFade2 = _interopRequireDefault(_SCNActionFade);
 
-	var _SCNActionGroup = __webpack_require__(149);
+	var _SCNActionGroup = __webpack_require__(151);
 
 	var _SCNActionGroup2 = _interopRequireDefault(_SCNActionGroup);
 
-	var _SCNActionHide = __webpack_require__(150);
+	var _SCNActionHide = __webpack_require__(152);
 
 	var _SCNActionHide2 = _interopRequireDefault(_SCNActionHide);
 
-	var _SCNActionJavaScript = __webpack_require__(151);
+	var _SCNActionJavaScript = __webpack_require__(153);
 
 	var _SCNActionJavaScript2 = _interopRequireDefault(_SCNActionJavaScript);
 
-	var _SCNActionMove = __webpack_require__(152);
+	var _SCNActionMove = __webpack_require__(154);
 
 	var _SCNActionMove2 = _interopRequireDefault(_SCNActionMove);
 
-	var _SCNActionPerformSelector = __webpack_require__(153);
+	var _SCNActionPerformSelector = __webpack_require__(155);
 
 	var _SCNActionPerformSelector2 = _interopRequireDefault(_SCNActionPerformSelector);
 
-	var _SCNActionPlaySound = __webpack_require__(154);
+	var _SCNActionPlaySound = __webpack_require__(156);
 
 	var _SCNActionPlaySound2 = _interopRequireDefault(_SCNActionPlaySound);
 
-	var _SCNActionReference = __webpack_require__(155);
+	var _SCNActionReference = __webpack_require__(157);
 
 	var _SCNActionReference2 = _interopRequireDefault(_SCNActionReference);
 
-	var _SCNActionRemove = __webpack_require__(156);
+	var _SCNActionRemove = __webpack_require__(158);
 
 	var _SCNActionRemove2 = _interopRequireDefault(_SCNActionRemove);
 
-	var _SCNActionRepeat = __webpack_require__(157);
+	var _SCNActionRepeat = __webpack_require__(159);
 
 	var _SCNActionRepeat2 = _interopRequireDefault(_SCNActionRepeat);
 
-	var _SCNActionRotate = __webpack_require__(158);
+	var _SCNActionRotate = __webpack_require__(160);
 
 	var _SCNActionRotate2 = _interopRequireDefault(_SCNActionRotate);
 
-	var _SCNActionRunAction = __webpack_require__(159);
+	var _SCNActionRunAction = __webpack_require__(161);
 
 	var _SCNActionRunAction2 = _interopRequireDefault(_SCNActionRunAction);
 
-	var _SCNActionRunBlock = __webpack_require__(160);
+	var _SCNActionRunBlock = __webpack_require__(162);
 
 	var _SCNActionRunBlock2 = _interopRequireDefault(_SCNActionRunBlock);
 
-	var _SCNActionScale = __webpack_require__(161);
+	var _SCNActionScale = __webpack_require__(163);
 
 	var _SCNActionScale2 = _interopRequireDefault(_SCNActionScale);
 
-	var _SCNActionSequence = __webpack_require__(162);
+	var _SCNActionSequence = __webpack_require__(164);
 
 	var _SCNActionSequence2 = _interopRequireDefault(_SCNActionSequence);
 
-	var _SCNActionTimingFunction = __webpack_require__(163);
+	var _SCNActionTimingFunction = __webpack_require__(165);
 
 	var _SCNActionTimingFunction2 = _interopRequireDefault(_SCNActionTimingFunction);
 
-	var _SCNActionTimingMode = __webpack_require__(61);
+	var _SCNActionTimingMode = __webpack_require__(63);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
-	var _SCNActionWait = __webpack_require__(164);
+	var _SCNActionWait = __webpack_require__(166);
 
 	var _SCNActionWait2 = _interopRequireDefault(_SCNActionWait);
 
-	var _SCNAnimatable = __webpack_require__(66);
+	var _SCNAnimatable = __webpack_require__(68);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNAnimationEvent = __webpack_require__(53);
+	var _SCNAnimationEvent = __webpack_require__(55);
 
 	var _SCNAnimationEvent2 = _interopRequireDefault(_SCNAnimationEvent);
 
-	var _SCNAnimationEventBlock = __webpack_require__(165);
+	var _SCNAnimationEventBlock = __webpack_require__(167);
 
 	var _SCNAnimationEventBlock2 = _interopRequireDefault(_SCNAnimationEventBlock);
 
-	var _SCNAntialiasingMode = __webpack_require__(124);
+	var _SCNAntialiasingMode = __webpack_require__(126);
 
 	var _SCNAntialiasingMode2 = _interopRequireDefault(_SCNAntialiasingMode);
 
-	var _SCNAudioPlayer = __webpack_require__(147);
+	var _SCNAudioPlayer = __webpack_require__(149);
 
 	var _SCNAudioPlayer2 = _interopRequireDefault(_SCNAudioPlayer);
 
-	var _SCNAudioSource = __webpack_require__(148);
+	var _SCNAudioSource = __webpack_require__(150);
 
 	var _SCNAudioSource2 = _interopRequireDefault(_SCNAudioSource);
 
-	var _SCNBillboardAxis = __webpack_require__(166);
+	var _SCNBillboardAxis = __webpack_require__(168);
 
 	var _SCNBillboardAxis2 = _interopRequireDefault(_SCNBillboardAxis);
 
-	var _SCNBillboardConstraint = __webpack_require__(167);
+	var _SCNBillboardConstraint = __webpack_require__(169);
 
 	var _SCNBillboardConstraint2 = _interopRequireDefault(_SCNBillboardConstraint);
 
-	var _SCNBindingBlock = __webpack_require__(87);
+	var _SCNBindingBlock = __webpack_require__(89);
 
 	var _SCNBindingBlock2 = _interopRequireDefault(_SCNBindingBlock);
 
-	var _SCNBlendMode = __webpack_require__(83);
+	var _SCNBlendMode = __webpack_require__(85);
 
 	var _SCNBlendMode2 = _interopRequireDefault(_SCNBlendMode);
 
-	var _SCNBoundingVolume = __webpack_require__(67);
+	var _SCNBoundingVolume = __webpack_require__(69);
 
 	var _SCNBoundingVolume2 = _interopRequireDefault(_SCNBoundingVolume);
 
-	var _SCNBox = __webpack_require__(91);
+	var _SCNBox = __webpack_require__(93);
 
 	var _SCNBox2 = _interopRequireDefault(_SCNBox);
 
-	var _SCNBufferBindingBlock = __webpack_require__(128);
+	var _SCNBufferBindingBlock = __webpack_require__(130);
 
 	var _SCNBufferBindingBlock2 = _interopRequireDefault(_SCNBufferBindingBlock);
 
-	var _SCNBufferFrequency = __webpack_require__(127);
+	var _SCNBufferFrequency = __webpack_require__(129);
 
 	var _SCNBufferFrequency2 = _interopRequireDefault(_SCNBufferFrequency);
 
-	var _SCNBufferStream = __webpack_require__(129);
+	var _SCNBufferStream = __webpack_require__(131);
 
 	var _SCNBufferStream2 = _interopRequireDefault(_SCNBufferStream);
 
-	var _SCNCamera = __webpack_require__(130);
+	var _SCNCamera = __webpack_require__(132);
 
 	var _SCNCamera2 = _interopRequireDefault(_SCNCamera);
 
-	var _SCNCapsule = __webpack_require__(168);
+	var _SCNCapsule = __webpack_require__(170);
 
 	var _SCNCapsule2 = _interopRequireDefault(_SCNCapsule);
 
-	var _SCNChamferMode = __webpack_require__(169);
+	var _SCNChamferMode = __webpack_require__(171);
 
 	var _SCNChamferMode2 = _interopRequireDefault(_SCNChamferMode);
 
-	var _SCNCone = __webpack_require__(170);
+	var _SCNCone = __webpack_require__(172);
 
 	var _SCNCone2 = _interopRequireDefault(_SCNCone);
 
-	var _SCNConstraint = __webpack_require__(141);
+	var _SCNConstraint = __webpack_require__(143);
 
 	var _SCNConstraint2 = _interopRequireDefault(_SCNConstraint);
 
-	var _SCNCullMode = __webpack_require__(69);
+	var _SCNCullMode = __webpack_require__(71);
 
 	var _SCNCullMode2 = _interopRequireDefault(_SCNCullMode);
 
-	var _SCNCylinder = __webpack_require__(171);
+	var _SCNCylinder = __webpack_require__(173);
 
 	var _SCNCylinder2 = _interopRequireDefault(_SCNCylinder);
 
-	var _SCNDebugOptions = __webpack_require__(120);
+	var _SCNDebugOptions = __webpack_require__(122);
 
 	var _SCNDebugOptions2 = _interopRequireDefault(_SCNDebugOptions);
 
-	var _SCNFieldForceEvaluator = __webpack_require__(145);
+	var _SCNFieldForceEvaluator = __webpack_require__(147);
 
 	var _SCNFieldForceEvaluator2 = _interopRequireDefault(_SCNFieldForceEvaluator);
 
-	var _SCNFilterMode = __webpack_require__(77);
+	var _SCNFilterMode = __webpack_require__(79);
 
 	var _SCNFilterMode2 = _interopRequireDefault(_SCNFilterMode);
 
-	var _SCNFloor = __webpack_require__(172);
+	var _SCNFloor = __webpack_require__(174);
 
 	var _SCNFloor2 = _interopRequireDefault(_SCNFloor);
 
-	var _SCNGeometry = __webpack_require__(68);
+	var _SCNGeometry = __webpack_require__(70);
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
-	var _SCNGeometryElement = __webpack_require__(72);
+	var _SCNGeometryElement = __webpack_require__(74);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(73);
+	var _SCNGeometryPrimitiveType = __webpack_require__(75);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNGeometrySource = __webpack_require__(71);
+	var _SCNGeometrySource = __webpack_require__(73);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNHitTestOption = __webpack_require__(122);
+	var _SCNHitTestOption = __webpack_require__(124);
 
 	var _SCNHitTestOption2 = _interopRequireDefault(_SCNHitTestOption);
 
-	var _SCNHitTestResult = __webpack_require__(106);
+	var _SCNHitTestResult = __webpack_require__(108);
 
 	var _SCNHitTestResult2 = _interopRequireDefault(_SCNHitTestResult);
 
-	var _SCNIKConstraint = __webpack_require__(173);
+	var _SCNIKConstraint = __webpack_require__(175);
 
 	var _SCNIKConstraint2 = _interopRequireDefault(_SCNIKConstraint);
 
-	var _SCNLayer = __webpack_require__(174);
+	var _SCNLayer = __webpack_require__(176);
 
 	var _SCNLayer2 = _interopRequireDefault(_SCNLayer);
 
-	var _SCNLevelOfDetail = __webpack_require__(74);
+	var _SCNLevelOfDetail = __webpack_require__(76);
 
 	var _SCNLevelOfDetail2 = _interopRequireDefault(_SCNLevelOfDetail);
 
-	var _SCNLight = __webpack_require__(84);
+	var _SCNLight = __webpack_require__(86);
 
 	var _SCNLight2 = _interopRequireDefault(_SCNLight);
 
-	var _SCNLookAtConstraint = __webpack_require__(175);
+	var _SCNLookAtConstraint = __webpack_require__(177);
 
 	var _SCNLookAtConstraint2 = _interopRequireDefault(_SCNLookAtConstraint);
 
-	var _SCNMaterial = __webpack_require__(75);
+	var _SCNMaterial = __webpack_require__(77);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
-	var _SCNMaterialProperty = __webpack_require__(76);
+	var _SCNMaterialProperty = __webpack_require__(78);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNMatrix4EqualToMatrix = __webpack_require__(176);
+	var _SCNMatrix4EqualToMatrix = __webpack_require__(178);
 
 	var _SCNMatrix4EqualToMatrix2 = _interopRequireDefault(_SCNMatrix4EqualToMatrix);
 
-	var _SCNMatrix4FromGLKMatrix = __webpack_require__(177);
+	var _SCNMatrix4FromGLKMatrix = __webpack_require__(179);
 
 	var _SCNMatrix4FromGLKMatrix2 = _interopRequireDefault(_SCNMatrix4FromGLKMatrix);
 
-	var _SCNMatrix4FromMat = __webpack_require__(178);
+	var _SCNMatrix4FromMat = __webpack_require__(180);
 
 	var _SCNMatrix4FromMat2 = _interopRequireDefault(_SCNMatrix4FromMat);
 
-	var _SCNMatrix4Invert = __webpack_require__(179);
+	var _SCNMatrix4Invert = __webpack_require__(181);
 
 	var _SCNMatrix4Invert2 = _interopRequireDefault(_SCNMatrix4Invert);
 
-	var _SCNMatrix4IsIdentity = __webpack_require__(180);
+	var _SCNMatrix4IsIdentity = __webpack_require__(182);
 
 	var _SCNMatrix4IsIdentity2 = _interopRequireDefault(_SCNMatrix4IsIdentity);
 
-	var _SCNMatrix4MakeRotation = __webpack_require__(181);
+	var _SCNMatrix4MakeRotation = __webpack_require__(183);
 
 	var _SCNMatrix4MakeRotation2 = _interopRequireDefault(_SCNMatrix4MakeRotation);
 
-	var _SCNMatrix4MakeScale = __webpack_require__(140);
+	var _SCNMatrix4MakeScale = __webpack_require__(142);
 
 	var _SCNMatrix4MakeScale2 = _interopRequireDefault(_SCNMatrix4MakeScale);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(78);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(80);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
-	var _SCNMatrix4Mult = __webpack_require__(182);
+	var _SCNMatrix4Mult = __webpack_require__(184);
 
 	var _SCNMatrix4Mult2 = _interopRequireDefault(_SCNMatrix4Mult);
 
-	var _SCNMatrix4Rotate = __webpack_require__(183);
+	var _SCNMatrix4Rotate = __webpack_require__(185);
 
 	var _SCNMatrix4Rotate2 = _interopRequireDefault(_SCNMatrix4Rotate);
 
-	var _SCNMatrix4Scale = __webpack_require__(184);
+	var _SCNMatrix4Scale = __webpack_require__(186);
 
 	var _SCNMatrix4Scale2 = _interopRequireDefault(_SCNMatrix4Scale);
 
-	var _SCNMatrix4ToGLKMatrix = __webpack_require__(185);
+	var _SCNMatrix4ToGLKMatrix = __webpack_require__(187);
 
 	var _SCNMatrix4ToGLKMatrix2 = _interopRequireDefault(_SCNMatrix4ToGLKMatrix);
 
-	var _SCNMatrix4ToMat = __webpack_require__(186);
+	var _SCNMatrix4ToMat = __webpack_require__(188);
 
 	var _SCNMatrix4ToMat2 = _interopRequireDefault(_SCNMatrix4ToMat);
 
-	var _SCNMatrix4Translate = __webpack_require__(187);
+	var _SCNMatrix4Translate = __webpack_require__(189);
 
 	var _SCNMatrix4Translate2 = _interopRequireDefault(_SCNMatrix4Translate);
 
-	var _SCNMorpher = __webpack_require__(137);
+	var _SCNMorpher = __webpack_require__(139);
 
 	var _SCNMorpher2 = _interopRequireDefault(_SCNMorpher);
 
-	var _SCNMorpherCalculationMode = __webpack_require__(138);
+	var _SCNMorpherCalculationMode = __webpack_require__(140);
 
 	var _SCNMorpherCalculationMode2 = _interopRequireDefault(_SCNMorpherCalculationMode);
 
-	var _SCNMovabilityHint = __webpack_require__(142);
+	var _SCNMovabilityHint = __webpack_require__(144);
 
 	var _SCNMovabilityHint2 = _interopRequireDefault(_SCNMovabilityHint);
 
-	var _SCNNode = __webpack_require__(65);
+	var _SCNNode = __webpack_require__(67);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNNodeRendererDelegate = __webpack_require__(143);
+	var _SCNNodeRendererDelegate = __webpack_require__(145);
 
 	var _SCNNodeRendererDelegate2 = _interopRequireDefault(_SCNNodeRendererDelegate);
 
-	var _SCNOrderedDictionary = __webpack_require__(79);
+	var _SCNOrderedDictionary = __webpack_require__(81);
 
 	var _SCNOrderedDictionary2 = _interopRequireDefault(_SCNOrderedDictionary);
 
-	var _SCNParticleBirthDirection = __webpack_require__(109);
+	var _SCNParticleBirthDirection = __webpack_require__(111);
 
 	var _SCNParticleBirthDirection2 = _interopRequireDefault(_SCNParticleBirthDirection);
 
-	var _SCNParticleBirthLocation = __webpack_require__(108);
+	var _SCNParticleBirthLocation = __webpack_require__(110);
 
 	var _SCNParticleBirthLocation2 = _interopRequireDefault(_SCNParticleBirthLocation);
 
-	var _SCNParticleBlendMode = __webpack_require__(111);
+	var _SCNParticleBlendMode = __webpack_require__(113);
 
 	var _SCNParticleBlendMode2 = _interopRequireDefault(_SCNParticleBlendMode);
 
-	var _SCNParticleEvent = __webpack_require__(114);
+	var _SCNParticleEvent = __webpack_require__(116);
 
 	var _SCNParticleEvent2 = _interopRequireDefault(_SCNParticleEvent);
 
-	var _SCNParticleEventBlock = __webpack_require__(115);
+	var _SCNParticleEventBlock = __webpack_require__(117);
 
 	var _SCNParticleEventBlock2 = _interopRequireDefault(_SCNParticleEventBlock);
 
-	var _SCNParticleImageSequenceAnimationMode = __webpack_require__(110);
+	var _SCNParticleImageSequenceAnimationMode = __webpack_require__(112);
 
 	var _SCNParticleImageSequenceAnimationMode2 = _interopRequireDefault(_SCNParticleImageSequenceAnimationMode);
 
-	var _SCNParticleInputMode = __webpack_require__(117);
+	var _SCNParticleInputMode = __webpack_require__(119);
 
 	var _SCNParticleInputMode2 = _interopRequireDefault(_SCNParticleInputMode);
 
-	var _SCNParticleModifierBlock = __webpack_require__(119);
+	var _SCNParticleModifierBlock = __webpack_require__(121);
 
 	var _SCNParticleModifierBlock2 = _interopRequireDefault(_SCNParticleModifierBlock);
 
-	var _SCNParticleModifierStage = __webpack_require__(118);
+	var _SCNParticleModifierStage = __webpack_require__(120);
 
 	var _SCNParticleModifierStage2 = _interopRequireDefault(_SCNParticleModifierStage);
 
-	var _SCNParticleOrientationMode = __webpack_require__(112);
+	var _SCNParticleOrientationMode = __webpack_require__(114);
 
 	var _SCNParticleOrientationMode2 = _interopRequireDefault(_SCNParticleOrientationMode);
 
-	var _SCNParticlePropertyController = __webpack_require__(116);
+	var _SCNParticlePropertyController = __webpack_require__(118);
 
 	var _SCNParticlePropertyController2 = _interopRequireDefault(_SCNParticlePropertyController);
 
-	var _SCNParticleSortingMode = __webpack_require__(113);
+	var _SCNParticleSortingMode = __webpack_require__(115);
 
 	var _SCNParticleSortingMode2 = _interopRequireDefault(_SCNParticleSortingMode);
 
-	var _SCNParticleSystem = __webpack_require__(107);
+	var _SCNParticleSystem = __webpack_require__(109);
 
 	var _SCNParticleSystem2 = _interopRequireDefault(_SCNParticleSystem);
 
-	var _SCNPhysicsBallSocketJoint = __webpack_require__(188);
+	var _SCNPhysicsBallSocketJoint = __webpack_require__(190);
 
 	var _SCNPhysicsBallSocketJoint2 = _interopRequireDefault(_SCNPhysicsBallSocketJoint);
 
-	var _SCNPhysicsBehavior = __webpack_require__(100);
+	var _SCNPhysicsBehavior = __webpack_require__(102);
 
 	var _SCNPhysicsBehavior2 = _interopRequireDefault(_SCNPhysicsBehavior);
 
-	var _SCNPhysicsBody = __webpack_require__(103);
+	var _SCNPhysicsBody = __webpack_require__(105);
 
 	var _SCNPhysicsBody2 = _interopRequireDefault(_SCNPhysicsBody);
 
-	var _SCNPhysicsBodyType = __webpack_require__(104);
+	var _SCNPhysicsBodyType = __webpack_require__(106);
 
 	var _SCNPhysicsBodyType2 = _interopRequireDefault(_SCNPhysicsBodyType);
 
-	var _SCNPhysicsCollisionCategory = __webpack_require__(189);
+	var _SCNPhysicsCollisionCategory = __webpack_require__(191);
 
 	var _SCNPhysicsCollisionCategory2 = _interopRequireDefault(_SCNPhysicsCollisionCategory);
 
-	var _SCNPhysicsContact = __webpack_require__(102);
+	var _SCNPhysicsContact = __webpack_require__(104);
 
 	var _SCNPhysicsContact2 = _interopRequireDefault(_SCNPhysicsContact);
 
-	var _SCNPhysicsContactDelegate = __webpack_require__(101);
+	var _SCNPhysicsContactDelegate = __webpack_require__(103);
 
 	var _SCNPhysicsContactDelegate2 = _interopRequireDefault(_SCNPhysicsContactDelegate);
 
-	var _SCNPhysicsField = __webpack_require__(144);
+	var _SCNPhysicsField = __webpack_require__(146);
 
 	var _SCNPhysicsField2 = _interopRequireDefault(_SCNPhysicsField);
 
-	var _SCNPhysicsFieldScope = __webpack_require__(146);
+	var _SCNPhysicsFieldScope = __webpack_require__(148);
 
 	var _SCNPhysicsFieldScope2 = _interopRequireDefault(_SCNPhysicsFieldScope);
 
-	var _SCNPhysicsHingeJoint = __webpack_require__(190);
+	var _SCNPhysicsHingeJoint = __webpack_require__(192);
 
 	var _SCNPhysicsHingeJoint2 = _interopRequireDefault(_SCNPhysicsHingeJoint);
 
-	var _SCNPhysicsShape = __webpack_require__(105);
+	var _SCNPhysicsShape = __webpack_require__(107);
 
 	var _SCNPhysicsShape2 = _interopRequireDefault(_SCNPhysicsShape);
 
-	var _SCNPhysicsSliderJoint = __webpack_require__(191);
+	var _SCNPhysicsSliderJoint = __webpack_require__(193);
 
 	var _SCNPhysicsSliderJoint2 = _interopRequireDefault(_SCNPhysicsSliderJoint);
 
-	var _SCNPhysicsVehicle = __webpack_require__(192);
+	var _SCNPhysicsVehicle = __webpack_require__(194);
 
 	var _SCNPhysicsVehicle2 = _interopRequireDefault(_SCNPhysicsVehicle);
 
-	var _SCNPhysicsVehicleWheel = __webpack_require__(193);
+	var _SCNPhysicsVehicleWheel = __webpack_require__(195);
 
 	var _SCNPhysicsVehicleWheel2 = _interopRequireDefault(_SCNPhysicsVehicleWheel);
 
-	var _SCNPhysicsWorld = __webpack_require__(99);
+	var _SCNPhysicsWorld = __webpack_require__(101);
 
 	var _SCNPhysicsWorld2 = _interopRequireDefault(_SCNPhysicsWorld);
 
-	var _SCNPlane = __webpack_require__(194);
+	var _SCNPlane = __webpack_require__(196);
 
 	var _SCNPlane2 = _interopRequireDefault(_SCNPlane);
 
-	var _SCNProgram = __webpack_require__(125);
+	var _SCNProgram = __webpack_require__(127);
 
 	var _SCNProgram2 = _interopRequireDefault(_SCNProgram);
 
-	var _SCNProgramDelegate = __webpack_require__(126);
+	var _SCNProgramDelegate = __webpack_require__(128);
 
 	var _SCNProgramDelegate2 = _interopRequireDefault(_SCNProgramDelegate);
 
-	var _SCNPyramid = __webpack_require__(195);
+	var _SCNPyramid = __webpack_require__(197);
 
 	var _SCNPyramid2 = _interopRequireDefault(_SCNPyramid);
 
-	var _SCNQuaternion = __webpack_require__(57);
+	var _SCNQuaternion = __webpack_require__(59);
 
 	var _SCNQuaternion2 = _interopRequireDefault(_SCNQuaternion);
 
-	var _SCNReferenceLoadingPolicy = __webpack_require__(196);
+	var _SCNReferenceLoadingPolicy = __webpack_require__(198);
 
 	var _SCNReferenceLoadingPolicy2 = _interopRequireDefault(_SCNReferenceLoadingPolicy);
 
-	var _SCNReferenceNode = __webpack_require__(197);
+	var _SCNReferenceNode = __webpack_require__(199);
 
 	var _SCNReferenceNode2 = _interopRequireDefault(_SCNReferenceNode);
 
-	var _SCNRenderer = __webpack_require__(88);
+	var _SCNRenderer = __webpack_require__(90);
 
 	var _SCNRenderer2 = _interopRequireDefault(_SCNRenderer);
 
-	var _SCNRenderingAPI = __webpack_require__(121);
+	var _SCNRenderingAPI = __webpack_require__(123);
 
 	var _SCNRenderingAPI2 = _interopRequireDefault(_SCNRenderingAPI);
 
-	var _SCNScene = __webpack_require__(90);
+	var _SCNScene = __webpack_require__(92);
 
 	var _SCNScene2 = _interopRequireDefault(_SCNScene);
 
-	var _SCNSceneExportDelegate = __webpack_require__(92);
+	var _SCNSceneExportDelegate = __webpack_require__(94);
 
 	var _SCNSceneExportDelegate2 = _interopRequireDefault(_SCNSceneExportDelegate);
 
-	var _SCNSceneExportProgressHandler = __webpack_require__(93);
+	var _SCNSceneExportProgressHandler = __webpack_require__(95);
 
 	var _SCNSceneExportProgressHandler2 = _interopRequireDefault(_SCNSceneExportProgressHandler);
 
-	var _SCNSceneRenderer = __webpack_require__(89);
+	var _SCNSceneRenderer = __webpack_require__(91);
 
 	var _SCNSceneRenderer2 = _interopRequireDefault(_SCNSceneRenderer);
 
-	var _SCNSceneRendererDelegate = __webpack_require__(123);
+	var _SCNSceneRendererDelegate = __webpack_require__(125);
 
 	var _SCNSceneRendererDelegate2 = _interopRequireDefault(_SCNSceneRendererDelegate);
 
-	var _SCNSceneSource = __webpack_require__(94);
+	var _SCNSceneSource = __webpack_require__(96);
 
 	var _SCNSceneSource2 = _interopRequireDefault(_SCNSceneSource);
 
-	var _SCNSceneSourceStatus = __webpack_require__(96);
+	var _SCNSceneSourceStatus = __webpack_require__(98);
 
 	var _SCNSceneSourceStatus2 = _interopRequireDefault(_SCNSceneSourceStatus);
 
-	var _SCNSceneSourceStatusHandler = __webpack_require__(95);
+	var _SCNSceneSourceStatusHandler = __webpack_require__(97);
 
 	var _SCNSceneSourceStatusHandler2 = _interopRequireDefault(_SCNSceneSourceStatusHandler);
 
-	var _SCNShadable = __webpack_require__(70);
+	var _SCNShadable = __webpack_require__(72);
 
 	var _SCNShadable2 = _interopRequireDefault(_SCNShadable);
 
-	var _SCNShadableHelper = __webpack_require__(198);
+	var _SCNShadableHelper = __webpack_require__(200);
 
 	var _SCNShadableHelper2 = _interopRequireDefault(_SCNShadableHelper);
 
-	var _SCNShaderModifierEntryPoint = __webpack_require__(199);
+	var _SCNShaderModifierEntryPoint = __webpack_require__(201);
 
 	var _SCNShaderModifierEntryPoint2 = _interopRequireDefault(_SCNShaderModifierEntryPoint);
 
-	var _SCNShadowMode = __webpack_require__(136);
+	var _SCNShadowMode = __webpack_require__(138);
 
 	var _SCNShadowMode2 = _interopRequireDefault(_SCNShadowMode);
 
-	var _SCNShape = __webpack_require__(200);
+	var _SCNShape = __webpack_require__(202);
 
 	var _SCNShape2 = _interopRequireDefault(_SCNShape);
 
-	var _SCNSkinner = __webpack_require__(139);
+	var _SCNSkinner = __webpack_require__(141);
 
 	var _SCNSkinner2 = _interopRequireDefault(_SCNSkinner);
 
-	var _SCNSphere = __webpack_require__(201);
+	var _SCNSphere = __webpack_require__(203);
 
 	var _SCNSphere2 = _interopRequireDefault(_SCNSphere);
 
-	var _SCNTechnique = __webpack_require__(86);
+	var _SCNTechnique = __webpack_require__(88);
 
 	var _SCNTechnique2 = _interopRequireDefault(_SCNTechnique);
 
-	var _SCNTechniqueSupport = __webpack_require__(85);
+	var _SCNTechniqueSupport = __webpack_require__(87);
 
 	var _SCNTechniqueSupport2 = _interopRequireDefault(_SCNTechniqueSupport);
 
-	var _SCNText = __webpack_require__(202);
+	var _SCNText = __webpack_require__(204);
 
 	var _SCNText2 = _interopRequireDefault(_SCNText);
 
-	var _SCNTorus = __webpack_require__(203);
+	var _SCNTorus = __webpack_require__(205);
 
 	var _SCNTorus2 = _interopRequireDefault(_SCNTorus);
 
-	var _SCNTransaction = __webpack_require__(80);
+	var _SCNTransaction = __webpack_require__(82);
 
 	var _SCNTransaction2 = _interopRequireDefault(_SCNTransaction);
 
-	var _SCNTransformConstraint = __webpack_require__(204);
+	var _SCNTransformConstraint = __webpack_require__(206);
 
 	var _SCNTransformConstraint2 = _interopRequireDefault(_SCNTransformConstraint);
 
-	var _SCNTransparencyMode = __webpack_require__(82);
+	var _SCNTransparencyMode = __webpack_require__(84);
 
 	var _SCNTransparencyMode2 = _interopRequireDefault(_SCNTransparencyMode);
 
-	var _SCNTube = __webpack_require__(205);
+	var _SCNTube = __webpack_require__(207);
 
 	var _SCNTube2 = _interopRequireDefault(_SCNTube);
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3EqualToVector = __webpack_require__(206);
+	var _SCNVector3EqualToVector = __webpack_require__(208);
 
 	var _SCNVector3EqualToVector2 = _interopRequireDefault(_SCNVector3EqualToVector);
 
-	var _SCNVector3FromFloat = __webpack_require__(207);
+	var _SCNVector3FromFloat = __webpack_require__(209);
 
 	var _SCNVector3FromFloat2 = _interopRequireDefault(_SCNVector3FromFloat);
 
-	var _SCNVector3FromGLKVector = __webpack_require__(208);
+	var _SCNVector3FromGLKVector = __webpack_require__(210);
 
 	var _SCNVector3FromGLKVector2 = _interopRequireDefault(_SCNVector3FromGLKVector);
 
-	var _SCNVector3Make = __webpack_require__(209);
+	var _SCNVector3Make = __webpack_require__(211);
 
 	var _SCNVector3Make2 = _interopRequireDefault(_SCNVector3Make);
 
-	var _SCNVector3ToFloat = __webpack_require__(210);
+	var _SCNVector3ToFloat = __webpack_require__(212);
 
 	var _SCNVector3ToFloat2 = _interopRequireDefault(_SCNVector3ToFloat);
 
-	var _SCNVector3ToGLKVector = __webpack_require__(211);
+	var _SCNVector3ToGLKVector = __webpack_require__(213);
 
 	var _SCNVector3ToGLKVector2 = _interopRequireDefault(_SCNVector3ToGLKVector);
 
-	var _SCNVector3Zero = __webpack_require__(212);
+	var _SCNVector3Zero = __webpack_require__(214);
 
 	var _SCNVector3Zero2 = _interopRequireDefault(_SCNVector3Zero);
 
-	var _SCNVector3 = __webpack_require__(45);
+	var _SCNVector3 = __webpack_require__(47);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
-	var _SCNVector4EqualToVector = __webpack_require__(213);
+	var _SCNVector4EqualToVector = __webpack_require__(215);
 
 	var _SCNVector4EqualToVector2 = _interopRequireDefault(_SCNVector4EqualToVector);
 
-	var _SCNVector4FromFloat = __webpack_require__(214);
+	var _SCNVector4FromFloat = __webpack_require__(216);
 
 	var _SCNVector4FromFloat2 = _interopRequireDefault(_SCNVector4FromFloat);
 
-	var _SCNVector4FromGLKVector = __webpack_require__(215);
+	var _SCNVector4FromGLKVector = __webpack_require__(217);
 
 	var _SCNVector4FromGLKVector2 = _interopRequireDefault(_SCNVector4FromGLKVector);
 
-	var _SCNVector4Make = __webpack_require__(216);
+	var _SCNVector4Make = __webpack_require__(218);
 
 	var _SCNVector4Make2 = _interopRequireDefault(_SCNVector4Make);
 
-	var _SCNVector4ToFloat = __webpack_require__(217);
+	var _SCNVector4ToFloat = __webpack_require__(219);
 
 	var _SCNVector4ToFloat2 = _interopRequireDefault(_SCNVector4ToFloat);
 
-	var _SCNVector4ToGLKVector = __webpack_require__(218);
+	var _SCNVector4ToGLKVector = __webpack_require__(220);
 
 	var _SCNVector4ToGLKVector2 = _interopRequireDefault(_SCNVector4ToGLKVector);
 
-	var _SCNView = __webpack_require__(219);
+	var _SCNView = __webpack_require__(221);
 
 	var _SCNView2 = _interopRequireDefault(_SCNView);
 
-	var _SCNWrapMode = __webpack_require__(81);
+	var _SCNWrapMode = __webpack_require__(83);
 
 	var _SCNWrapMode2 = _interopRequireDefault(_SCNWrapMode);
 
-	var _SKAction = __webpack_require__(220);
+	var _SKAction = __webpack_require__(222);
 
 	var _SKAction2 = _interopRequireDefault(_SKAction);
 
-	var _SKActionTimingMode = __webpack_require__(221);
+	var _SKActionTimingMode = __webpack_require__(223);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
-	var _SKBlendMode = __webpack_require__(132);
+	var _SKBlendMode = __webpack_require__(134);
 
 	var _SKBlendMode2 = _interopRequireDefault(_SKBlendMode);
 
@@ -867,83 +875,83 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SKEffectNode = __webpack_require__(222);
+	var _SKEffectNode = __webpack_require__(224);
 
 	var _SKEffectNode2 = _interopRequireDefault(_SKEffectNode);
 
-	var _SKFade = __webpack_require__(223);
+	var _SKFade = __webpack_require__(225);
 
 	var _SKFade2 = _interopRequireDefault(_SKFade);
 
-	var _SKGroup = __webpack_require__(224);
+	var _SKGroup = __webpack_require__(226);
 
 	var _SKGroup2 = _interopRequireDefault(_SKGroup);
 
-	var _SKLabelHorizontalAlignmentMode = __webpack_require__(225);
+	var _SKLabelHorizontalAlignmentMode = __webpack_require__(227);
 
 	var _SKLabelHorizontalAlignmentMode2 = _interopRequireDefault(_SKLabelHorizontalAlignmentMode);
 
-	var _SKLabelNode = __webpack_require__(226);
+	var _SKLabelNode = __webpack_require__(228);
 
 	var _SKLabelNode2 = _interopRequireDefault(_SKLabelNode);
 
-	var _SKLabelVerticalAlignmentMode = __webpack_require__(227);
+	var _SKLabelVerticalAlignmentMode = __webpack_require__(229);
 
 	var _SKLabelVerticalAlignmentMode2 = _interopRequireDefault(_SKLabelVerticalAlignmentMode);
 
-	var _SKNode = __webpack_require__(133);
+	var _SKNode = __webpack_require__(135);
 
 	var _SKNode2 = _interopRequireDefault(_SKNode);
 
-	var _SKScale = __webpack_require__(228);
+	var _SKScale = __webpack_require__(230);
 
 	var _SKScale2 = _interopRequireDefault(_SKScale);
 
-	var _SKScene = __webpack_require__(229);
+	var _SKScene = __webpack_require__(231);
 
 	var _SKScene2 = _interopRequireDefault(_SKScene);
 
-	var _SKSceneScaleMode = __webpack_require__(230);
+	var _SKSceneScaleMode = __webpack_require__(232);
 
 	var _SKSceneScaleMode2 = _interopRequireDefault(_SKSceneScaleMode);
 
-	var _SKSequence = __webpack_require__(231);
+	var _SKSequence = __webpack_require__(233);
 
 	var _SKSequence2 = _interopRequireDefault(_SKSequence);
 
-	var _SKShapeNode = __webpack_require__(232);
+	var _SKShapeNode = __webpack_require__(234);
 
 	var _SKShapeNode2 = _interopRequireDefault(_SKShapeNode);
 
-	var _SKSpriteNode = __webpack_require__(131);
+	var _SKSpriteNode = __webpack_require__(133);
 
 	var _SKSpriteNode2 = _interopRequireDefault(_SKSpriteNode);
 
-	var _SKTexture = __webpack_require__(134);
+	var _SKTexture = __webpack_require__(136);
 
 	var _SKTexture2 = _interopRequireDefault(_SKTexture);
 
-	var _SKTextureFilteringMode = __webpack_require__(135);
+	var _SKTextureFilteringMode = __webpack_require__(137);
 
 	var _SKTextureFilteringMode2 = _interopRequireDefault(_SKTextureFilteringMode);
 
-	var _SKWait = __webpack_require__(233);
+	var _SKWait = __webpack_require__(235);
 
 	var _SKWait2 = _interopRequireDefault(_SKWait);
 
-	var _AjaxRequest2 = __webpack_require__(98);
+	var _AjaxRequest2 = __webpack_require__(100);
 
 	var _AjaxRequest3 = _interopRequireDefault(_AjaxRequest2);
 
-	var _BinaryReader2 = __webpack_require__(36);
+	var _BinaryReader2 = __webpack_require__(38);
 
 	var _BinaryReader3 = _interopRequireDefault(_BinaryReader2);
 
-	var _BinaryRequest2 = __webpack_require__(97);
+	var _BinaryRequest2 = __webpack_require__(99);
 
 	var _BinaryRequest3 = _interopRequireDefault(_BinaryRequest2);
 
-	var _Buffer2 = __webpack_require__(234);
+	var _Buffer2 = __webpack_require__(236);
 
 	var _Buffer3 = _interopRequireDefault(_Buffer2);
 
@@ -951,15 +959,15 @@ module.exports =
 
 	var _ClassList3 = _interopRequireDefault(_ClassList2);
 
-	var _File2 = __webpack_require__(34);
+	var _File2 = __webpack_require__(36);
 
 	var _File3 = _interopRequireDefault(_File2);
 
-	var _FileReader2 = __webpack_require__(35);
+	var _FileReader2 = __webpack_require__(37);
 
 	var _FileReader3 = _interopRequireDefault(_FileReader2);
 
-	var _HTMLCanvasElement2 = __webpack_require__(236);
+	var _HTMLCanvasElement2 = __webpack_require__(238);
 
 	var _HTMLCanvasElement3 = _interopRequireDefault(_HTMLCanvasElement2);
 
@@ -984,6 +992,7 @@ module.exports =
 	_ClassList3.default.registerClass(_DispatchQueue2.default);
 	_ClassList3.default.registerClass(_DispatchTime2.default);
 	_ClassList3.default.registerClass(_DispatchTimeInterval2.default);
+	_ClassList3.default.registerClass(_NotificationCenter2.default);
 	_ClassList3.default.registerClass(_NSArray2.default);
 	_ClassList3.default.registerClass(_NSCoder2.default);
 	_ClassList3.default.registerClass(_NSColorSpace2.default);
@@ -994,6 +1003,7 @@ module.exports =
 	_ClassList3.default.registerClass(_NSMutableArray2.default);
 	_ClassList3.default.registerClass(_NSMutableData2.default);
 	_ClassList3.default.registerClass(_NSMutableDictionary2.default);
+	_ClassList3.default.registerClass(_NSNotification2.default);
 	_ClassList3.default.registerClass(_NSURL2.default);
 	_ClassList3.default.registerClass(_NSValue2.default);
 	_ClassList3.default.registerClass(_NSObject2.default);
@@ -1207,6 +1217,7 @@ module.exports =
 	exports.DispatchQueue = _DispatchQueue2.default;
 	exports.DispatchTime = _DispatchTime2.default;
 	exports.DispatchTimeInterval = _DispatchTimeInterval2.default;
+	exports.NotificationCenter = _NotificationCenter2.default;
 	exports.NSArray = _NSArray2.default;
 	exports.NSCoder = _NSCoder2.default;
 	exports.NSColorSpace = _NSColorSpace2.default;
@@ -1217,6 +1228,7 @@ module.exports =
 	exports.NSMutableArray = _NSMutableArray2.default;
 	exports.NSMutableData = _NSMutableData2.default;
 	exports.NSMutableDictionary = _NSMutableDictionary2.default;
+	exports.NSNotification = _NSNotification2.default;
 	exports.NSURL = _NSURL2.default;
 	exports.NSValue = _NSValue2.default;
 	exports.NSObject = _NSObject2.default;
@@ -11520,6 +11532,1288 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
+	var _NSNotification = __webpack_require__(28);
+
+	var _NSNotification2 = _interopRequireDefault(_NSNotification);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _default = null;
+
+	/**
+	 * A notification dispatch mechanism that enables the broadcast of information to registered observers.
+	 * @access public
+	 * @extends {NSObject}
+	 * @see https://developer.apple.com/documentation/foundation/notificationcenter
+	 */
+
+	var NotificationCenter = function (_NSObject) {
+	  _inherits(NotificationCenter, _NSObject);
+
+	  /**
+	   * constructor
+	   * @access public
+	   * @returns {void}
+	   */
+	  function NotificationCenter() {
+	    _classCallCheck(this, NotificationCenter);
+
+	    return _possibleConstructorReturn(this, (NotificationCenter.__proto__ || Object.getPrototypeOf(NotificationCenter)).call(this));
+	  }
+
+	  // Getting the Notification Center
+
+	  /**
+	   * Returns the process’s default notification center.
+	   * @type {NotificationCenter}
+	   * @desc 
+	   * @see https://developer.apple.com/documentation/foundation/notificationcenter/1414169-default
+	   */
+
+
+	  _createClass(NotificationCenter, [{
+	    key: 'addObserverForNameObjectUsing',
+
+
+	    // Managing Notification Observers
+
+	    /**
+	     * Adds an entry to the receiver’s dispatch table with a notification queue and a block to add to the queue, and optional criteria: notification name and sender.
+	     * @access public
+	     * @param {?NSNotification.Name} name - The name of the notification for which to register the observer; that is, only notifications with this name are used to add the block to the operation queue.If you pass nil, the notification center doesn’t use a notification’s name to decide whether to add the block to the operation queue.
+	     * @param {?Object} obj - The object whose notifications the observer wants to receive; that is, only notifications sent by this sender are delivered to the observer.If you pass nil, the notification center doesn’t use a notification’s sender to decide whether to deliver it to the observer.
+	     * @param {?OperationQueue} queue - The operation queue to which block should be added.If you pass nil, the block is run synchronously on the posting thread.
+	     * @param {function(arg1: Notification): void} block - The block to be executed when the notification is received.The block is copied by the notification center and (the copy) held until the observer registration is removed. The block takes one argument:notificationThe notification.
+	     * @returns {NSObjectProtocol} - 
+	     * @desc If a given notification triggers more than one observer block, the blocks may all be executed concurrently with respect to one another (but on their given queue or on the current thread).The following example shows how you can register to receive locale change notifications.let center = NSNotificationCenter.defaultCenter()
+	    let mainQueue = NSOperationQueue.mainQueue()
+	    self.localeChangeObserver = center.addObserverForName(NSCurrentLocaleDidChangeNotification, object: nil, queue: mainQueue) { (note) in
+	      print("The user's locale changed to: \(NSLocale.currentLocale().localeIdentifier)")
+	    }
+	    To unregister observations, you pass the object returned by this method to removeObserver(_:). You must invoke removeObserver(_:) or removeObserver(_:name:object:) before any object specified by addObserverForName:object:queue:usingBlock: is deallocated.let center = NSNotificationCenter.defaultCenter()
+	    center.removeObserver(self.localeChangeObserver)
+	    Another common pattern is to create a one-time notification by removing the observer from within the observation block, as in the following example.let center = NSNotificationCenter.defaultCenter()
+	    let mainQueue = NSOperationQueue.mainQueue()
+	    var token: NSObjectProtocol?
+	    token = center.addObserverForName("OneTimeNotification", object: nil, queue: mainQueue) { (note) in
+	      print("Received the notification!")
+	      center.removeObserver(token!)
+	    }
+	    let center = NSNotificationCenter.defaultCenter()
+	    let mainQueue = NSOperationQueue.mainQueue()
+	    self.localeChangeObserver = center.addObserverForName(NSCurrentLocaleDidChangeNotification, object: nil, queue: mainQueue) { (note) in
+	      print("The user's locale changed to: \(NSLocale.currentLocale().localeIdentifier)")
+	    }
+	    let center = NSNotificationCenter.defaultCenter()
+	    center.removeObserver(self.localeChangeObserver)
+	    let center = NSNotificationCenter.defaultCenter()
+	    let mainQueue = NSOperationQueue.mainQueue()
+	    var token: NSObjectProtocol?
+	    token = center.addObserverForName("OneTimeNotification", object: nil, queue: mainQueue) { (note) in
+	      print("Received the notification!")
+	      center.removeObserver(token!)
+	    }
+	      * @see https://developer.apple.com/documentation/foundation/notificationcenter/1411723-addobserver
+	     */
+	    value: function addObserverForNameObjectUsing(name, obj, queue, block) {
+	      return null;
+	    }
+
+	    /**
+	     * Adds an entry to the receiver’s dispatch table with an observer, a notification selector and optional criteria: notification name and sender.
+	     * @access public
+	     * @param {Object} observer - Object registering as an observer. This value must not be nil.
+	     * @param {function} aSelector - Selector that specifies the message the receiver sends observer to notify it of the notification posting. The method specified by aSelector must have one and only one argument (an instance of NSNotification).
+	     * @param {?NSNotification.Name} aName - The name of the notification for which to register the observer; that is, only notifications with this name are delivered to the observer.If you pass nil, the notification center doesn’t use a notification’s name to decide whether to deliver it to the observer.
+	     * @param {?Object} anObject - The object whose notifications the observer wants to receive; that is, only notifications sent by this sender are delivered to the observer.If you pass nil, the notification center doesn’t use a notification’s sender to decide whether to deliver it to the observer.
+	     * @returns {void}
+	     * @desc If your app targets iOS 9.0 and later or macOS 10.11 and later, you don't need to unregister an observer in its deallocation method. If your app targets earlier releases, be sure to invoke removeObserver(_:name:object:) before observer or any object specified in addObserver:selector:name:object: is deallocated.
+	     * @see https://developer.apple.com/documentation/foundation/notificationcenter/1415360-addobserver
+	     */
+
+	  }, {
+	    key: 'addObserverSelectorNameObject',
+	    value: function addObserverSelectorNameObject(observer, aSelector, aName, anObject) {
+	      var f = aSelector.bind(observer);
+	      if (aName === _NSNotification2.default.Name.GCControllerDidConnect) {
+	        window.addEventListener('gamepadconnected', function (e) {
+	          console.error('e.gamepad: ' + e.gamepad);
+	          f(new _NSNotification2.default(aName, e.gamepad, anObject));
+	        });
+	      }
+	    }
+
+	    /**
+	     * Removes all the entries specifying a given observer from the receiver’s dispatch table.
+	     * @access public
+	     * @param {Object} observer - The observer to remove. Must not be nil.
+	     * @returns {void}
+	     * @desc Be sure to invoke this method (or removeObserver(_:name:object:)) before observer or any object specified in addObserver(_:selector:name:object:) is deallocated.You should not use this method to remove all observers from an object that is going to be long-lived, because your code may not be the only code adding observers that involve the object. The following example illustrates how to unregister someObserver for all notifications for which it had previously registered. This is safe to do in the dealloc method, but should not otherwise be used—use removeObserver(_:name:object:) instead.[[NSNotificationCenter defaultCenter] removeObserver:someObserver];
+	    [[NSNotificationCenter defaultCenter] removeObserver:someObserver];
+	      * @see https://developer.apple.com/documentation/foundation/notificationcenter/1413994-removeobserver
+	     */
+
+	  }, {
+	    key: 'removeObserver',
+	    value: function removeObserver(observer) {}
+
+	    /**
+	     * Removes matching entries from the receiver’s dispatch table.
+	     * @access public
+	     * @param {Object} observer - Observer to remove from the dispatch table. Specify an observer to remove only entries for this observer. Must not be nil, or message will have no effect.
+	     * @param {?NSNotification.Name} aName - Name of the notification to remove from dispatch table. Specify a notification name to remove only entries that specify this notification name. When nil, the receiver does not use notification names as criteria for removal.
+	     * @param {?Object} anObject - Sender to remove from the dispatch table. Specify a notification sender to remove only entries that specify this sender. When nil, the receiver does not use notification senders as criteria for removal.
+	     * @returns {void}
+	     * @desc Be sure to invoke this method (or removeObserver(_:)) before the observer object or any object specified in addObserver(_:selector:name:object:) is deallocated.
+	     * @see https://developer.apple.com/documentation/foundation/notificationcenter/1407263-removeobserver
+	     */
+
+	  }, {
+	    key: 'removeObserverNameObject',
+	    value: function removeObserverNameObject(observer, aName, anObject) {}
+
+	    // Posting Notifications
+
+	    /**
+	     * Posts a given notification to the receiver.
+	     * @access public
+	     * @param {Notification} notification - The notification to post. This value must not be nil.
+	     * @returns {void}
+	     * @desc You can create a notification with the NSNotification class method init(name:object:) or notificationWithName:object:userInfo:. An exception is raised if notification is nil.
+	     * @see https://developer.apple.com/documentation/foundation/notificationcenter/1410472-post
+	     */
+
+	  }, {
+	    key: 'post',
+	    value: function post(notification) {}
+
+	    /**
+	     * Creates a notification with a given name and sender and posts it to the receiver.
+	     * @access public
+	     * @param {NSNotification.Name} aName - The name of the notification.
+	     * @param {?Object} anObject - The object posting the notification.
+	     * @returns {void}
+	     * @desc This method invokes post(name:object:userInfo:) with an aUserInfo argument of nil.
+	     * @see https://developer.apple.com/documentation/foundation/notificationcenter/1415812-post
+	     */
+
+	  }, {
+	    key: 'postNameObject',
+	    value: function postNameObject(aName, anObject) {}
+
+	    /**
+	     * Creates a notification with a given name, sender, and information and posts it to the receiver.
+	     * @access public
+	     * @param {NSNotification.Name} aName - The name of the notification.
+	     * @param {?Object} anObject - The object posting the notification.
+	     * @param {?Map<AnyHashable, Object>} [aUserInfo = null] - Information about the the notification. May be nil.
+	     * @returns {void}
+	     * @desc This method is the preferred method for posting notifications.
+	     * @see https://developer.apple.com/documentation/foundation/notificationcenter/1410608-post
+	     */
+
+	  }, {
+	    key: 'postNameObjectUserInfo',
+	    value: function postNameObjectUserInfo(aName, anObject) {
+	      var aUserInfo = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+	    }
+	  }], [{
+	    key: 'default',
+	    get: function get() {
+	      if (_default === null) {
+	        _default = new NotificationCenter();
+	      }
+	      return _default;
+	    }
+	  }]);
+
+	  return NotificationCenter;
+	}(_NSObject3.default);
+
+	exports.default = NotificationCenter;
+
+/***/ },
+/* 28 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var _Name = {
+	  AVAudioEngineConfigurationChange: Symbol(),
+	  AVAudioSessionInterruption: Symbol(),
+	  AVAudioSessionMediaServicesWereLost: Symbol(),
+	  AVAudioSessionMediaServicesWereReset: Symbol(),
+	  AVAudioSessionRouteChange: Symbol(),
+	  AVAudioSessionSilenceSecondaryAudioHint: Symbol(),
+	  AVAudioUnitComponentTagsDidChange: Symbol(),
+	  CKAccountChanged: Symbol(),
+	  CLKComplicationServerActiveComplicationsDidChange: Symbol(),
+	  CNContactStoreDidChange: Symbol(),
+	  EKEventStoreChanged: Symbol(),
+	  HKUserPreferencesDidChange: Symbol(),
+	  HMCharacteristicPropertySupportsEvent: Symbol(),
+	  NSBundleResourceRequestLowDiskSpace: Symbol(),
+	  NSCalendarDayChanged: Symbol(),
+	  NSDidBecomeSingleThreaded: Symbol(),
+	  NSExtensionHostDidBecomeActive: Symbol(),
+	  NSExtensionHostDidEnterBackground: Symbol(),
+	  NSExtensionHostWillEnterForeground: Symbol(),
+	  NSExtensionHostWillResignActive: Symbol(),
+	  NSFileHandleConnectionAccepted: Symbol(),
+	  NSFileHandleDataAvailable: Symbol(),
+	  NSFileHandleReadToEndOfFileCompletion: Symbol(),
+	  NSHTTPCookieManagerAcceptPolicyChanged: Symbol(),
+	  NSHTTPCookieManagerCookiesChanged: Symbol(),
+	  NSManagedObjectContextDidSave: Symbol(),
+	  NSManagedObjectContextObjectsDidChange: Symbol(),
+	  NSManagedObjectContextWillSave: Symbol(),
+	  NSMetadataQueryDidFinishGathering: Symbol(),
+	  NSMetadataQueryDidStartGathering: Symbol(),
+	  NSMetadataQueryDidUpdate: Symbol(),
+	  NSMetadataQueryGatheringProgress: Symbol(),
+	  NSPersistentStoreCoordinatorStoresDidChange: Symbol(),
+	  NSPersistentStoreCoordinatorStoresWillChange: Symbol(),
+	  NSPersistentStoreCoordinatorWillRemoveStore: Symbol(),
+	  NSProcessInfoPowerStateDidChange: Symbol(),
+	  NSSystemClockDidChange: Symbol(),
+	  NSSystemTimeZoneDidChange: Symbol(),
+	  NSThreadWillExit: Symbol(),
+	  NSURLCredentialStorageChanged: Symbol(),
+	  NSUbiquityIdentityDidChange: Symbol(),
+	  NSUndoManagerCheckpoint: Symbol(),
+	  NSUndoManagerDidCloseUndoGroup: Symbol(),
+	  NSUndoManagerDidOpenUndoGroup: Symbol(),
+	  NSUndoManagerDidRedoChange: Symbol(),
+	  NSUndoManagerDidUndoChange: Symbol(),
+	  NSUndoManagerWillCloseUndoGroup: Symbol(),
+	  NSUndoManagerWillRedoChange: Symbol(),
+	  NSUndoManagerWillUndoChange: Symbol(),
+	  NSWillBecomeMultiThreaded: Symbol(),
+	  PKPassLibraryDidChange: Symbol(),
+	  PKPassLibraryRemotePaymentPassesDidChange: Symbol(),
+	  UIAccessibilityAnnouncementDidFinish: Symbol(),
+	  UIAccessibilityElementFocused: Symbol(),
+	  WKAudioFilePlayerItemDidPlayToEndTime: Symbol(),
+	  WKAudioFilePlayerItemFailedToPlayToEndTime: Symbol(),
+	  WKAudioFilePlayerItemTimeJumped: Symbol(),
+	  ABPeoplePickerDisplayedPropertyDidChange: Symbol(),
+	  ABPeoplePickerGroupSelectionDidChange: Symbol(),
+	  ABPeoplePickerNameSelectionDidChange: Symbol(),
+	  ABPeoplePickerValueSelectionDidChange: Symbol(),
+	  ACAccountStoreDidChange: Symbol(),
+	  AVAssetChapterMetadataGroupsDidChange: Symbol(),
+	  AVAssetContainsFragmentsDidChange: Symbol(),
+	  AVAssetDurationDidChange: Symbol(),
+	  AVAssetMediaSelectionGroupsDidChange: Symbol(),
+	  AVAssetTrackSegmentsDidChange: Symbol(),
+	  AVAssetTrackTimeRangeDidChange: Symbol(),
+	  AVAssetTrackTrackAssociationsDidChange: Symbol(),
+	  AVAssetWasDefragmented: Symbol(),
+	  AVCaptureDeviceWasConnected: Symbol(),
+	  AVCaptureDeviceWasDisconnected: Symbol(),
+	  AVCaptureInputPortFormatDescriptionDidChange: Symbol(),
+	  AVCaptureSessionDidStartRunning: Symbol(),
+	  AVCaptureSessionDidStopRunning: Symbol(),
+	  AVCaptureSessionRuntimeError: Symbol(),
+	  AVFragmentedMovieContainsMovieFragmentsDidChange: Symbol(),
+	  AVFragmentedMovieDurationDidChange: Symbol(),
+	  AVFragmentedMovieTrackSegmentsDidChange: Symbol(),
+	  AVFragmentedMovieTrackTimeRangeDidChange: Symbol(),
+	  AVFragmentedMovieTrackTotalSampleDataLengthDidChange: Symbol(),
+	  AVFragmentedMovieWasDefragmented: Symbol(),
+	  AVPlayerItemDidPlayToEndTime: Symbol(),
+	  AVPlayerItemFailedToPlayToEndTime: Symbol(),
+	  AVPlayerItemNewAccessLogEntry: Symbol(),
+	  AVPlayerItemNewErrorLogEntry: Symbol(),
+	  AVPlayerItemPlaybackStalled: Symbol(),
+	  AVPlayerItemTimeJumped: Symbol(),
+	  AVSampleBufferDisplayLayerFailedToDecode: Symbol(),
+	  CWBSSIDDidChange: Symbol(),
+	  CWCountryCodeDidChange: Symbol(),
+	  CWLinkDidChange: Symbol(),
+	  CWLinkQualityDidChange: Symbol(),
+	  CWModeDidChange: Symbol(),
+	  CWPowerDidChange: Symbol(),
+	  CWSSIDDidChange: Symbol(),
+	  CWScanCacheDidUpdate: Symbol(),
+	  GCControllerDidConnect: Symbol(),
+	  GCControllerDidDisconnect: Symbol(),
+	  IKFilterBrowserFilterDoubleClick: Symbol(),
+	  IKFilterBrowserFilterSelected: Symbol(),
+	  IKFilterBrowserWillPreviewFilter: Symbol(),
+	  IOBluetoothHostControllerPoweredOff: Symbol(),
+	  IOBluetoothHostControllerPoweredOn: Symbol(),
+	  IOBluetoothL2CAPChannelPublished: Symbol(),
+	  IOBluetoothL2CAPChannelTerminated: Symbol(),
+	  MKAnnotationCalloutInfoDidChange: Symbol(),
+	  NEFilterConfigurationDidChange: Symbol(),
+	  NEVPNConfigurationChange: Symbol(),
+	  NEVPNStatusDidChange: Symbol(),
+	  announcementRequested: Symbol(),
+	  applicationActivated: Symbol(),
+	  applicationDeactivated: Symbol(),
+	  applicationHidden: Symbol(),
+	  applicationShown: Symbol(),
+	  created: Symbol(),
+	  drawerCreated: Symbol(),
+	  focusedUIElementChanged: Symbol(),
+	  focusedWindowChanged: Symbol(),
+	  helpTagCreated: Symbol(),
+	  layoutChanged: Symbol(),
+	  mainWindowChanged: Symbol(),
+	  moved: Symbol(),
+	  resized: Symbol(),
+	  rowCollapsed: Symbol(),
+	  rowCountChanged: Symbol(),
+	  rowExpanded: Symbol(),
+	  selectedCellsChanged: Symbol(),
+	  selectedChildrenChanged: Symbol(),
+	  selectedChildrenMoved: Symbol(),
+	  selectedColumnsChanged: Symbol(),
+	  selectedRowsChanged: Symbol(),
+	  selectedTextChanged: Symbol(),
+	  sheetCreated: Symbol(),
+	  titleChanged: Symbol(),
+	  uiElementDestroyed: Symbol(),
+	  unitsChanged: Symbol(),
+	  valueChanged: Symbol(),
+	  windowCreated: Symbol(),
+	  windowDeminiaturized: Symbol(),
+	  windowMiniaturized: Symbol(),
+	  windowMoved: Symbol(),
+	  windowResized: Symbol(),
+	  progressMarkNotification: Symbol(),
+	  antialiasThresholdChangedNotification: Symbol(),
+	  NSAppleEventManagerWillProcessFirstEvent: Symbol(),
+	  didBecomeActiveNotification: Symbol(),
+	  didChangeOcclusionStateNotification: Symbol(),
+	  didChangeScreenParametersNotification: Symbol(),
+	  didFinishLaunchingNotification: Symbol(),
+	  didFinishRestoringWindowsNotification: Symbol(),
+	  didHideNotification: Symbol(),
+	  didResignActiveNotification: Symbol(),
+	  didUnhideNotification: Symbol(),
+	  didUpdateNotification: Symbol(),
+	  willBecomeActiveNotification: Symbol(),
+	  willFinishLaunchingNotification: Symbol(),
+	  willHideNotification: Symbol(),
+	  willResignActiveNotification: Symbol(),
+	  willTerminateNotification: Symbol(),
+	  willUnhideNotification: Symbol(),
+	  willUpdateNotification: Symbol(),
+	  columnConfigurationDidChangeNotification: Symbol(),
+	  NSClassDescriptionNeededForClass: Symbol(),
+	  didChangeNotification: Symbol(),
+	  colorDidChangeNotification: Symbol(),
+	  selectionDidChangeNotification: Symbol(),
+	  selectionIsChangingNotification: Symbol(),
+	  willDismissNotification: Symbol(),
+	  willPopUpNotification: Symbol(),
+	  contextHelpModeDidActivateNotification: Symbol(),
+	  contextHelpModeDidDeactivateNotification: Symbol(),
+	  textDidBeginEditingNotification: Symbol(),
+	  textDidChangeNotification: Symbol(),
+	  textDidEndEditingNotification: Symbol(),
+	  currentControlTintDidChangeNotification: Symbol(),
+	  didCloseNotification: Symbol(),
+	  didOpenNotification: Symbol(),
+	  willCloseNotification: Symbol(),
+	  willOpenNotification: Symbol(),
+	  fontSetChangedNotification: Symbol(),
+	  registryDidChangeNotification: Symbol(),
+	  didAddItemNotification: Symbol(),
+	  didBeginTrackingNotification: Symbol(),
+	  didChangeItemNotification: Symbol(),
+	  didEndTrackingNotification: Symbol(),
+	  didRemoveItemNotification: Symbol(),
+	  didSendActionNotification: Symbol(),
+	  willSendActionNotification: Symbol(),
+	  columnDidMoveNotification: Symbol(),
+	  columnDidResizeNotification: Symbol(),
+	  itemDidCollapseNotification: Symbol(),
+	  itemDidExpandNotification: Symbol(),
+	  itemWillCollapseNotification: Symbol(),
+	  itemWillExpandNotification: Symbol(),
+	  NSPersistentStoreDidImportUbiquitousContentChanges: Symbol(),
+	  didShowNotification: Symbol(),
+	  willShowNotification: Symbol(),
+	  preferredScrollerStyleDidChangeNotification: Symbol(),
+	  rowsDidChangeNotification: Symbol(),
+	  colorSpaceDidChangeNotification: Symbol(),
+	  didEndLiveMagnifyNotification: Symbol(),
+	  didEndLiveScrollNotification: Symbol(),
+	  didLiveScrollNotification: Symbol(),
+	  willStartLiveMagnifyNotification: Symbol(),
+	  willStartLiveScrollNotification: Symbol(),
+	  didChangeAutomaticCapitalizationNotification: Symbol(),
+	  didChangeAutomaticDashSubstitutionNotification: Symbol(),
+	  didChangeAutomaticPeriodSubstitutionNotification: Symbol(),
+	  didChangeAutomaticQuoteSubstitutionNotification: Symbol(),
+	  didChangeAutomaticSpellingCorrectionNotification: Symbol(),
+	  didChangeAutomaticTextReplacementNotification: Symbol(),
+	  didResizeSubviewsNotification: Symbol(),
+	  willResizeSubviewsNotification: Symbol(),
+	  systemColorsDidChangeNotification: Symbol(),
+	  selectedAlternativeStringNotification: Symbol(),
+	  didBeginEditingNotification: Symbol(),
+	  didEndEditingNotification: Symbol(),
+	  keyboardSelectionDidChangeNotification: Symbol(),
+	  NSTextStorageDidProcessEditing: Symbol(),
+	  NSTextStorageWillProcessEditing: Symbol(),
+	  didChangeSelectionNotification: Symbol(),
+	  didChangeTypingAttributesNotification: Symbol(),
+	  willChangeNotifyingTextViewNotification: Symbol(),
+	  willAddItemNotification: Symbol(),
+	  boundsDidChangeNotification: Symbol(),
+	  didUpdateTrackingAreasNotification: Symbol(),
+	  frameDidChangeNotification: Symbol(),
+	  globalFrameDidChangeNotification: Symbol(),
+	  didBecomeKeyNotification: Symbol(),
+	  didBecomeMainNotification: Symbol(),
+	  didChangeBackingPropertiesNotification: Symbol(),
+	  didChangeScreenNotification: Symbol(),
+	  didChangeScreenProfileNotification: Symbol(),
+	  didDeminiaturizeNotification: Symbol(),
+	  didEndLiveResizeNotification: Symbol(),
+	  didEndSheetNotification: Symbol(),
+	  didEnterFullScreenNotification: Symbol(),
+	  didEnterVersionBrowserNotification: Symbol(),
+	  didExitFullScreenNotification: Symbol(),
+	  didExitVersionBrowserNotification: Symbol(),
+	  didExposeNotification: Symbol(),
+	  didMiniaturizeNotification: Symbol(),
+	  didMoveNotification: Symbol(),
+	  didResignKeyNotification: Symbol(),
+	  didResignMainNotification: Symbol(),
+	  didResizeNotification: Symbol(),
+	  willBeginSheetNotification: Symbol(),
+	  willEnterFullScreenNotification: Symbol(),
+	  willEnterVersionBrowserNotification: Symbol(),
+	  willExitFullScreenNotification: Symbol(),
+	  willExitVersionBrowserNotification: Symbol(),
+	  willMiniaturizeNotification: Symbol(),
+	  willMoveNotification: Symbol(),
+	  willStartLiveResizeNotification: Symbol(),
+	  accessibilityDisplayOptionsDidChangeNotification: Symbol(),
+	  activeSpaceDidChangeNotification: Symbol(),
+	  didActivateApplicationNotification: Symbol(),
+	  didChangeFileLabelsNotification: Symbol(),
+	  didDeactivateApplicationNotification: Symbol(),
+	  didHideApplicationNotification: Symbol(),
+	  didLaunchApplicationNotification: Symbol(),
+	  didMountNotification: Symbol(),
+	  didPerformFileOperationNotification: Symbol(),
+	  didRenameVolumeNotification: Symbol(),
+	  didTerminateApplicationNotification: Symbol(),
+	  didUnhideApplicationNotification: Symbol(),
+	  didUnmountNotification: Symbol(),
+	  didWakeNotification: Symbol(),
+	  screensDidSleepNotification: Symbol(),
+	  screensDidWakeNotification: Symbol(),
+	  sessionDidBecomeActiveNotification: Symbol(),
+	  sessionDidResignActiveNotification: Symbol(),
+	  willLaunchApplicationNotification: Symbol(),
+	  willPowerOffNotification: Symbol(),
+	  willSleepNotification: Symbol(),
+	  willUnmountNotification: Symbol(),
+	  PDFDocumentDidBeginFind: Symbol(),
+	  PDFDocumentDidBeginPageFind: Symbol(),
+	  PDFDocumentDidBeginPageWrite: Symbol(),
+	  PDFDocumentDidBeginWrite: Symbol(),
+	  PDFDocumentDidEndFind: Symbol(),
+	  PDFDocumentDidEndPageFind: Symbol(),
+	  PDFDocumentDidEndPageWrite: Symbol(),
+	  PDFDocumentDidEndWrite: Symbol(),
+	  PDFDocumentDidFindMatch: Symbol(),
+	  PDFDocumentDidUnlock: Symbol(),
+	  PDFThumbnailViewDocumentEdited: Symbol(),
+	  PDFViewAnnotationHit: Symbol(),
+	  PDFViewAnnotationWillHit: Symbol(),
+	  PDFViewChangedHistory: Symbol(),
+	  PDFViewCopyPermission: Symbol(),
+	  PDFViewDisplayBoxChanged: Symbol(),
+	  PDFViewDisplayModeChanged: Symbol(),
+	  PDFViewDocumentChanged: Symbol(),
+	  PDFViewPageChanged: Symbol(),
+	  PDFViewPrintPermission: Symbol(),
+	  PDFViewScaleChanged: Symbol(),
+	  PDFViewSelectionChanged: Symbol(),
+	  PDFViewVisiblePagesChanged: Symbol(),
+	  QCCompositionPickerPanelDidSelectComposition: Symbol(),
+	  QCCompositionPickerViewDidSelectComposition: Symbol(),
+	  QCCompositionRepositoryDidUpdate: Symbol(),
+	  QCViewDidStartRendering: Symbol(),
+	  QCViewDidStopRendering: Symbol(),
+	  WebHistoryAllItemsRemoved: Symbol(),
+	  WebHistoryItemChanged: Symbol(),
+	  WebHistoryItemsAdded: Symbol(),
+	  WebHistoryItemsRemoved: Symbol(),
+	  WebHistoryLoaded: Symbol(),
+	  WebHistorySaved: Symbol(),
+	  WebPreferencesChanged: Symbol(),
+	  WebViewDidBeginEditing: Symbol(),
+	  WebViewDidChange: Symbol(),
+	  WebViewDidChangeSelection: Symbol(),
+	  WebViewDidChangeTypingStyle: Symbol(),
+	  WebViewDidEndEditing: Symbol(),
+	  WebViewProgressEstimateChanged: Symbol(),
+	  WebViewProgressFinished: Symbol(),
+	  WebViewProgressStarted: Symbol(),
+	  abDatabaseChanged: Symbol(),
+	  abDatabaseChangedExternally: Symbol(),
+	  quartzFilterManagerDidAddFilter: Symbol(),
+	  quartzFilterManagerDidModifyFilter: Symbol(),
+	  quartzFilterManagerDidRemoveFilter: Symbol(),
+	  quartzFilterManagerDidSelectFilter: Symbol(),
+	  EAAccessoryDidConnect: Symbol(),
+	  EAAccessoryDidDisconnect: Symbol(),
+	  MPMovieDurationAvailable: Symbol(),
+	  MPMovieMediaTypesAvailable: Symbol(),
+	  MPMovieNaturalSizeAvailable: Symbol(),
+	  MPMoviePlayerDidEnterFullscreen: Symbol(),
+	  MPMoviePlayerDidExitFullscreen: Symbol(),
+	  MPMoviePlayerIsAirPlayVideoActiveDidChange: Symbol(),
+	  MPMoviePlayerLoadStateDidChange: Symbol(),
+	  MPMoviePlayerNowPlayingMovieDidChange: Symbol(),
+	  MPMoviePlayerPlaybackDidFinish: Symbol(),
+	  MPMoviePlayerPlaybackStateDidChange: Symbol(),
+	  MPMoviePlayerReadyForDisplayDidChange: Symbol(),
+	  MPMoviePlayerScalingModeDidChange: Symbol(),
+	  MPMoviePlayerThumbnailImageRequestDidFinish: Symbol(),
+	  MPMoviePlayerTimedMetadataUpdated: Symbol(),
+	  MPMoviePlayerWillEnterFullscreen: Symbol(),
+	  MPMoviePlayerWillExitFullscreen: Symbol(),
+	  MPMovieSourceTypeAvailable: Symbol(),
+	  SKCloudServiceCapabilitiesDidChange: Symbol(),
+	  SKStorefrontIdentifierDidChange: Symbol(),
+	  TVTopShelfItemsDidChange: Symbol(),
+	  UIAccessibilityAssistiveTouchStatusDidChange: Symbol(),
+	  UIAccessibilityBoldTextStatusDidChange: Symbol(),
+	  UIAccessibilityClosedCaptioningStatusDidChange: Symbol(),
+	  UIAccessibilityDarkerSystemColorsStatusDidChange: Symbol(),
+	  UIAccessibilityGrayscaleStatusDidChange: Symbol(),
+	  UIAccessibilityGuidedAccessStatusDidChange: Symbol(),
+	  UIAccessibilityHearingDevicePairedEarDidChange: Symbol(),
+	  UIAccessibilityInvertColorsStatusDidChange: Symbol(),
+	  UIAccessibilityMonoAudioStatusDidChange: Symbol(),
+	  UIAccessibilityReduceMotionStatusDidChange: Symbol(),
+	  UIAccessibilityReduceTransparencyStatusDidChange: Symbol(),
+	  UIAccessibilityShakeToUndoDidChange: Symbol(),
+	  UIAccessibilitySpeakScreenStatusDidChange: Symbol(),
+	  UIAccessibilitySpeakSelectionStatusDidChange: Symbol(),
+	  UIAccessibilitySwitchControlStatusDidChange: Symbol(),
+	  UIApplicationDidBecomeActive: Symbol(),
+	  UIApplicationDidEnterBackground: Symbol(),
+	  UIApplicationDidFinishLaunching: Symbol(),
+	  UIApplicationDidReceiveMemoryWarning: Symbol(),
+	  UIApplicationSignificantTimeChange: Symbol(),
+	  UIApplicationUserDidTakeScreenshot: Symbol(),
+	  UIApplicationWillEnterForeground: Symbol(),
+	  UIApplicationWillResignActive: Symbol(),
+	  UIApplicationWillTerminate: Symbol(),
+	  UIContentSizeCategoryDidChange: Symbol(),
+	  UIDeviceProximityStateDidChange: Symbol(),
+	  UIScreenBrightnessDidChange: Symbol(),
+	  UIScreenDidConnect: Symbol(),
+	  UIScreenDidDisconnect: Symbol(),
+	  UIScreenModeDidChange: Symbol(),
+	  UITableViewSelectionDidChange: Symbol(),
+	  UITextFieldTextDidBeginEditing: Symbol(),
+	  UITextFieldTextDidChange: Symbol(),
+	  UITextFieldTextDidEndEditing: Symbol(),
+	  UITextInputCurrentInputModeDidChange: Symbol(),
+	  UITextViewTextDidBeginEditing: Symbol(),
+	  UITextViewTextDidChange: Symbol(),
+	  UITextViewTextDidEndEditing: Symbol(),
+	  UIViewControllerShowDetailTargetDidChange: Symbol(),
+	  UIWindowDidBecomeHidden: Symbol(),
+	  UIWindowDidBecomeKey: Symbol(),
+	  UIWindowDidBecomeVisible: Symbol(),
+	  UIWindowDidResignKey: Symbol(),
+	  ALAssetsLibraryChanged: Symbol(),
+	  AVCaptureDeviceSubjectAreaDidChange: Symbol(),
+	  AVCaptureSessionInterruptionEnded: Symbol(),
+	  AVCaptureSessionWasInterrupted: Symbol(),
+	  CTRadioAccessTechnologyDidChange: Symbol(),
+	  MFMessageComposeViewControllerTextMessageAvailabilityDidChange: Symbol(),
+	  MPMediaLibraryDidChange: Symbol(),
+	  MPMediaPlaybackIsPreparedToPlayDidChange: Symbol(),
+	  MPMusicPlayerControllerNowPlayingItemDidChange: Symbol(),
+	  MPMusicPlayerControllerPlaybackStateDidChange: Symbol(),
+	  MPMusicPlayerControllerVolumeDidChange: Symbol(),
+	  MPVolumeViewWirelessRouteActiveDidChange: Symbol(),
+	  MPVolumeViewWirelessRoutesAvailableDidChange: Symbol(),
+	  NKIssueDownloadCompleted: Symbol(),
+	  UIApplicationBackgroundRefreshStatusDidChange: Symbol(),
+	  UIApplicationDidChangeStatusBarFrame: Symbol(),
+	  UIApplicationDidChangeStatusBarOrientation: Symbol(),
+	  UIApplicationWillChangeStatusBarFrame: Symbol(),
+	  UIApplicationWillChangeStatusBarOrientation: Symbol(),
+	  UIDeviceBatteryLevelDidChange: Symbol(),
+	  UIDeviceBatteryStateDidChange: Symbol(),
+	  UIDeviceOrientationDidChange: Symbol(),
+	  UIDocumentStateChanged: Symbol(),
+	  UIKeyboardDidChangeFrame: Symbol(),
+	  UIKeyboardDidHide: Symbol(),
+	  UIKeyboardDidShow: Symbol(),
+	  UIKeyboardWillChangeFrame: Symbol(),
+	  UIKeyboardWillHide: Symbol(),
+	  UIKeyboardWillShow: Symbol(),
+	  UIMenuControllerDidHideMenu: Symbol(),
+	  UIMenuControllerDidShowMenu: Symbol(),
+	  UIMenuControllerMenuFrameDidChange: Symbol(),
+	  UIMenuControllerWillHideMenu: Symbol(),
+	  UIMenuControllerWillShowMenu: Symbol(),
+	  UIPasteboardChanged: Symbol(),
+	  UIPasteboardRemoved: Symbol(),
+	  UIApplicationProtectedDataDidBecomeAvailable: Symbol(),
+	  UIApplicationProtectedDataWillBecomeUnavailable: Symbol(),
+	  didChangeAutomaticTextCompletionNotification: Symbol(),
+	  MPMusicPlayerControllerQueueDidChange: Symbol(),
+	  GKPlayerAuthenticationDidChangeNotificationName: Symbol(),
+	  GKPlayerDidChangeNotificationName: Symbol(),
+	  NEDNSProxyConfigurationDidChange: Symbol(),
+	  SKStorefrontCountryCodeDidChange: Symbol(),
+	  UIAccessibilityVoiceOverStatusDidChange: Symbol(),
+	  UIFocusDidUpdate: Symbol(),
+	  UIFocusMovementDidFail: Symbol()
+	};
+
+	/**
+	 * An object containing information broadcast to registered observers that bridges to Notification; use NSNotification when you need reference semantics or other Foundation-specific behavior. 
+	 * @access public
+	 * @extends {NSObject}
+	 * @see https://developer.apple.com/documentation/foundation/nsnotification
+	 */
+
+	var NSNotification = function (_NSObject) {
+	  _inherits(NSNotification, _NSObject);
+
+	  _createClass(NSNotification, [{
+	    key: 'initCoder',
+
+
+	    // Creating Notifications
+
+	    /**
+	     * Initializes a notification with the data from an unarchiver.
+	     * @access public
+	     * @param {NSCoder} aDecoder - 
+	     * @returns {void}
+	     * @see https://developer.apple.com/documentation/foundation/nsnotification/1412464-init
+	     */
+	    value: function initCoder(aDecoder) {}
+
+	    /**
+	     * Returns a new notification object with a specified name and object.
+	     * @access public
+	     * @param {NSNotification.Name} aName - The name for the new notification. May not be nil.
+	     * @param {?Object} anObject - The object for the new notification.
+	     * @returns {void}
+	     * @see https://developer.apple.com/documentation/foundation/nsnotification/1417440-init
+	     */
+
+	  }, {
+	    key: 'initNameObject',
+	    value: function initNameObject(aName, anObject) {}
+
+	    /**
+	     * Initializes a notification with a specified name, object, and user information.
+	     * @access public
+	     * @param {NSNotification.Name} name - 
+	     * @param {?Object} object - The object for the new notification.
+	     * @param {?Map<AnyHashable, Object>} [userInfo = null] - The user information dictionary for the new notification. May be nil.
+	     * @returns {void}
+	     * @see https://developer.apple.com/documentation/foundation/nsnotification/1415764-init
+	     */
+
+	  }]);
+
+	  function NSNotification(name, object) {
+	    var userInfo = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+
+	    _classCallCheck(this, NSNotification);
+
+	    // Getting Notification Information
+
+	    var _this = _possibleConstructorReturn(this, (NSNotification.__proto__ || Object.getPrototypeOf(NSNotification)).call(this));
+
+	    _this._name = name;
+	    _this._object = object;
+	    _this._userInfo = userInfo;
+	    return _this;
+	  }
+
+	  // Getting Notification Information
+
+	  /**
+	   * The name of the notification.
+	   * @type {NSNotification.Name}
+	   * @desc Typically you use this property to find out what kind of notification you are dealing with when you receive a notification.Special ConsiderationsNotification names can be any string. To avoid name collisions, you might want to use a prefix that’s specific to your application.
+	   * @see https://developer.apple.com/documentation/foundation/nsnotification/1416472-name
+	   */
+
+
+	  _createClass(NSNotification, [{
+	    key: 'name',
+	    get: function get() {
+	      return this._name;
+	    }
+
+	    /**
+	     * The object associated with the notification.
+	     * @type {?Object}
+	     * @desc This is often the object that posted this notification. It may be nil.Typically you use this method to find out what object a notification applies to when you receive a notification.
+	     * @see https://developer.apple.com/documentation/foundation/nsnotification/1414469-object
+	     */
+
+	  }, {
+	    key: 'object',
+	    get: function get() {
+	      return this._object;
+	    }
+	    /**
+	     * The user information dictionary associated with the receiver.
+	     * @type {?Map<AnyHashable, Object>}
+	     * @desc May be nil.The user information dictionary stores any additional objects that objects receiving the notification might use.For example, in the Application Kit, NSControl objects post the NSControlTextDidChangeNotification whenever the field editor (an NSText object) changes text inside the NSControl. This notification provides the NSControl object as the notification's associated object. In order to provide access to the field editor, the NSControl object posting the notification adds the field editor to the notification's user information dictionary. Objects receiving the notification can access the field editor and the NSControl object posting the notification as follows:- (void)controlTextDidBeginEditing:(NSNotification *)notification
+	    {
+	      NSText *fieldEditor = [notification.userInfo
+	          objectForKey:@"NSFieldEditor"];               // the field editor
+	      NSControl *postingObject = notification.object;   // the object that posted the notification
+	      ...
+	    }
+	    - (void)controlTextDidBeginEditing:(NSNotification *)notification
+	    {
+	      NSText *fieldEditor = [notification.userInfo
+	          objectForKey:@"NSFieldEditor"];               // the field editor
+	      NSControl *postingObject = notification.object;   // the object that posted the notification
+	      ...
+	    }
+	      * @see https://developer.apple.com/documentation/foundation/nsnotification/1409222-userinfo
+	     */
+
+	  }, {
+	    key: 'userInfo',
+	    get: function get() {
+	      return this._userInfo;
+	    }
+
+	    // Structures
+	    /**
+	     * @type {Object} Name
+	     * @property {Symbol} AVAudioEngineConfigurationChange Posted when the audio engine configuration changes.
+	     * @property {Symbol} AVAudioSessionInterruption Posted when an audio interruption occurs.
+	     * @property {Symbol} AVAudioSessionMediaServicesWereLost Posted when the media server is terminated.
+	     * @property {Symbol} AVAudioSessionMediaServicesWereReset Posted when the media server restarts.
+	     * @property {Symbol} AVAudioSessionRouteChange Posted when the system’s audio route changes.
+	     * @property {Symbol} AVAudioSessionSilenceSecondaryAudioHint Posted when the primary audio from other applications starts and stops.
+	     * @property {Symbol} AVAudioUnitComponentTagsDidChange The component tags changed.
+	     * @property {Symbol} CKAccountChanged Notification posted when the status of the signed-in iCloud account may have changed.
+	     * @property {Symbol} CLKComplicationServerActiveComplicationsDidChange Posted went the set of active complications changes.
+	     * @property {Symbol} CNContactStoreDidChange Posted notifications when changes occur in another CNContactStore.
+	      * @property {Symbol} EKEventStoreChanged Posted whenever changes are made to the Calendar database, including adding, removing, and changing events or reminders. Individual changes are not described. When you receive this notification, you should refetch all EKEvent and EKReminder objects you have accessed, as they are considered stale. If you are actively editing an event and do not wish to refetch it unless it is absolutely necessary to do so, you can call the refresh method on it. If the method returns true, you do not need to refetch the event.
+	     * @property {Symbol} HKUserPreferencesDidChange Notifies observers whenever the user changes his or her preferred units.
+	     * @property {Symbol} HMCharacteristicPropertySupportsEvent The characteristic supports notifications using the event connection established by the controller. The event connection provides unidirectional communication from the accessory to the controller.
+	     * @property {Symbol} NSBundleResourceRequestLowDiskSpace Posted after the system detects that the amount of available disk space is getting low. The notification is posted to the default notification center.
+	     * @property {Symbol} NSCalendarDayChanged A notification that is posted whenever the calendar day of the system changes, as determined by the system calendar, locale, and time zone.
+	     * @property {Symbol} NSDidBecomeSingleThreaded Not implemented.
+	     * @property {Symbol} NSExtensionHostDidBecomeActive Posted when the extension’s host app moves from the inactive to the active state.
+	     * @property {Symbol} NSExtensionHostDidEnterBackground Posted when the extension’s host app begins running in the background.
+	     * @property {Symbol} NSExtensionHostWillEnterForeground Posted when the extension’s host app begins running in the foreground.
+	     * @property {Symbol} NSExtensionHostWillResignActive Posted when the extension’s host app moves from the active to the inactive state.
+	     * @property {Symbol} NSFileHandleConnectionAccepted This notification is posted when an NSFileHandle object establishes a socket connection between two processes, creates an NSFileHandle object for one end of the connection, and makes this object available to observers by putting it in the userInfo dictionary.
+	     * @property {Symbol} NSFileHandleDataAvailable This notification is posted when the file handle determines that data is currently available for reading in a file or at a communications channel.
+	     * @property {Symbol} NSFileHandleReadToEndOfFileCompletion This notification is posted when the file handle reads all data in the file or, if a communications channel, until the other process signals the end of data.
+	     * @property {Symbol} NSHTTPCookieManagerAcceptPolicyChanged This notification is posted when the acceptance policy of the NSHTTPCookieStorage instance has changed.
+	     * @property {Symbol} NSHTTPCookieManagerCookiesChanged This notification is posted when the cookies stored in the NSHTTPCookieStorage instance have changed.
+	     * @property {Symbol} NSManagedObjectContextDidSave A notification that the context completed a save.
+	     * @property {Symbol} NSManagedObjectContextObjectsDidChange A notification of changes made to managed objects associated with this context.
+	     * @property {Symbol} NSManagedObjectContextWillSave A notification that the context is about to save.
+	     * @property {Symbol} NSMetadataQueryDidFinishGathering Posted when the receiver has finished with the initial result-gathering phase of the query.
+	     * @property {Symbol} NSMetadataQueryDidStartGathering Posted when the receiver begins with the initial result-gathering phase of the query.
+	     * @property {Symbol} NSMetadataQueryDidUpdate Posted when the receiver’s results have changed during the live-update phase of the query.
+	     * @property {Symbol} NSMetadataQueryGatheringProgress Posted as the receiver is collecting results during the initial result-gathering phase of the query.
+	     * @property {Symbol} NSPersistentStoreCoordinatorStoresDidChange Posted whenever persistent stores are added to or removed from a persistent store coordinator, or when store UUIDs change.
+	     * @property {Symbol} NSPersistentStoreCoordinatorStoresWillChange Posted before the list of open persistent stores changes.
+	     * @property {Symbol} NSPersistentStoreCoordinatorWillRemoveStore Posted whenever a persistent store is removed from a persistent store coordinator.
+	     * @property {Symbol} NSProcessInfoPowerStateDidChange Posted when the power state (Low Power Mode is enabled or disabled) of an iOS device changes. 
+	     * @property {Symbol} NSSystemClockDidChange A notification posted whenever the system clock is changed. 
+	     * @property {Symbol} NSSystemTimeZoneDidChange A notification posted when the time zone changes.
+	     * @property {Symbol} NSThreadWillExit An NSThread object posts this notification when it receives the exit() message, before the thread exits. Observer methods invoked to receive this notification execute in the exiting thread, before it exits.
+	     * @property {Symbol} NSURLCredentialStorageChanged This notification is posted when the set of stored credentials changes.
+	     * @property {Symbol} NSUbiquityIdentityDidChange Sent after the iCloud (“ubiquity”) identity has changed.
+	     * @property {Symbol} NSUndoManagerCheckpoint Posted whenever an NSUndoManager object opens or closes an undo group (except when it opens a top-level group) and when checking the redo stack in canRedo. 
+	     * @property {Symbol} NSUndoManagerDidCloseUndoGroup Posted after an NSUndoManager object closes an undo group, which occurs in the implementation of the endUndoGrouping() method.
+	     * @property {Symbol} NSUndoManagerDidOpenUndoGroup Posted whenever an NSUndoManager object opens an undo group, which occurs in the implementation of the beginUndoGrouping() method. 
+	     * @property {Symbol} NSUndoManagerDidRedoChange Posted just after an NSUndoManager object performs a redo operation (redo()).
+	     * @property {Symbol} NSUndoManagerDidUndoChange Posted just after an NSUndoManager object performs an undo operation.
+	     * @property {Symbol} NSUndoManagerWillCloseUndoGroup Posted before an NSUndoManager object closes an undo group, which occurs in the implementation of the endUndoGrouping() method.
+	     * @property {Symbol} NSUndoManagerWillRedoChange Posted just before an NSUndoManager object performs a redo operation (redo()).
+	     * @property {Symbol} NSUndoManagerWillUndoChange Posted just before an NSUndoManager object performs an undo operation.
+	     * @property {Symbol} NSWillBecomeMultiThreaded Posted when the first thread is detached from the current thread. The NSThread class posts this notification at most once—the first time a thread is detached using detachNewThreadSelector(_:toTarget:with:) or the start() method. Subsequent invocations of those methods do not post this notification. Observers of this notification have their notification method invoked in the main thread, not the new thread. The observer notification methods always execute before the new thread begins executing.
+	     * @property {Symbol} PKPassLibraryDidChange Posted after the pass library has been changed.
+	     * @property {Symbol} PKPassLibraryRemotePaymentPassesDidChange Posted when an Apple Pay card is added to or removed from a device that is paired with the current iOS device (for example, Apple Watch). 
+	     * @property {Symbol} UIAccessibilityAnnouncementDidFinish Posted by UIKit when the system has finished reading an announcement.
+	     * @property {Symbol} UIAccessibilityElementFocused 
+	     * @property {Symbol} WKAudioFilePlayerItemDidPlayToEndTime Posted when the item has played successfully to its end time.
+	     * @property {Symbol} WKAudioFilePlayerItemFailedToPlayToEndTime Posted when the item failed to play to its end time.
+	     * @property {Symbol} WKAudioFilePlayerItemTimeJumped Posted when the item’s current time has changed discontinuously. 
+	     * @property {Symbol} ABPeoplePickerDisplayedPropertyDidChange Posted when the displayed property in the record list is changed.
+	     * @property {Symbol} ABPeoplePickerGroupSelectionDidChange Posted when the selection in the group list is changed.
+	     * @property {Symbol} ABPeoplePickerNameSelectionDidChange Posted when the selection in the name list is changed.
+	     * @property {Symbol} ABPeoplePickerValueSelectionDidChange Posted when the selection in a multivalue property is changed.
+	     * @property {Symbol} ACAccountStoreDidChange Posted when the accounts managed by this account store changed in the database. There is no userInfo dictionary associated with this notification.
+	     * @property {Symbol} AVAssetChapterMetadataGroupsDidChange 
+	     * @property {Symbol} AVAssetContainsFragmentsDidChange 
+	     * @property {Symbol} AVAssetDurationDidChange 
+	     * @property {Symbol} AVAssetMediaSelectionGroupsDidChange 
+	     * @property {Symbol} AVAssetTrackSegmentsDidChange 
+	     * @property {Symbol} AVAssetTrackTimeRangeDidChange 
+	     * @property {Symbol} AVAssetTrackTrackAssociationsDidChange 
+	     * @property {Symbol} AVAssetWasDefragmented 
+	     * @property {Symbol} AVCaptureDeviceWasConnected Posted when a new device becomes available.
+	     * @property {Symbol} AVCaptureDeviceWasDisconnected Posted when an existing device becomes unavailable.
+	     * @property {Symbol} AVCaptureInputPortFormatDescriptionDidChange Posted if the value of the capture input port’sformatDescription property changes.
+	     * @property {Symbol} AVCaptureSessionDidStartRunning Posted when a capture session starts.
+	     * @property {Symbol} AVCaptureSessionDidStopRunning Posted when a capture session stops.
+	     * @property {Symbol} AVCaptureSessionRuntimeError Posted if an error occurred during a capture session.
+	     * @property {Symbol} AVFragmentedMovieContainsMovieFragmentsDidChange 
+	     * @property {Symbol} AVFragmentedMovieDurationDidChange 
+	     * @property {Symbol} AVFragmentedMovieTrackSegmentsDidChange 
+	     * @property {Symbol} AVFragmentedMovieTrackTimeRangeDidChange 
+	     * @property {Symbol} AVFragmentedMovieTrackTotalSampleDataLengthDidChange 
+	     * @property {Symbol} AVFragmentedMovieWasDefragmented 
+	     * @property {Symbol} AVPlayerItemDidPlayToEndTime Posted when the item has played to its end time.
+	     * @property {Symbol} AVPlayerItemFailedToPlayToEndTime Posted when the item failed to play to its end time.
+	     * @property {Symbol} AVPlayerItemNewAccessLogEntry Posted when a new access log entry has been added.
+	     * @property {Symbol} AVPlayerItemNewErrorLogEntry Posted when a new error log entry has been added.
+	     * @property {Symbol} AVPlayerItemPlaybackStalled Posted when some media did not arrive in time to continue playback.
+	     * @property {Symbol} AVPlayerItemTimeJumped Posted when the item’s current time has changed discontinuously.
+	     * @property {Symbol} AVSampleBufferDisplayLayerFailedToDecode Posted when a buffer display layer failed to decode.
+	     * @property {Symbol} CWBSSIDDidChange 
+	     * @property {Symbol} CWCountryCodeDidChange 
+	     * @property {Symbol} CWLinkDidChange 
+	     * @property {Symbol} CWLinkQualityDidChange 
+	     * @property {Symbol} CWModeDidChange 
+	     * @property {Symbol} CWPowerDidChange 
+	     * @property {Symbol} CWSSIDDidChange 
+	     * @property {Symbol} CWScanCacheDidUpdate 
+	     * @property {Symbol} GCControllerDidConnect Posted immediately after a new controller is connected to the device.
+	     * @property {Symbol} GCControllerDidDisconnect Posted immediately after a controller is disconnected from the device.
+	     * @property {Symbol} IKFilterBrowserFilterDoubleClick Posted when the user double-clicks a filter in the filter browser. 
+	     * @property {Symbol} IKFilterBrowserFilterSelected Posted when the user clicks a filter name in the filter browser. 
+	     * @property {Symbol} IKFilterBrowserWillPreviewFilter Posted before showing a filter preview, allowing an application to set the parameters of a filter.
+	     * @property {Symbol} IOBluetoothHostControllerPoweredOff 
+	     * @property {Symbol} IOBluetoothHostControllerPoweredOn 
+	     * @property {Symbol} IOBluetoothL2CAPChannelPublished 
+	     * @property {Symbol} IOBluetoothL2CAPChannelTerminated 
+	     * @property {Symbol} MKAnnotationCalloutInfoDidChange Notifies observers that the title or subtitle information of an annotation object changed.
+	     * @property {Symbol} NEFilterConfigurationDidChange Posted after the filter configuration stored in the Network Extension preferences changes.
+	     * @property {Symbol} NEVPNConfigurationChange Posted after the VPN configuration stored in the Network Extension preferences changes.
+	     * @property {Symbol} NEVPNStatusDidChange Posted when the status of the VPN connection changes.
+	     * @property {Symbol} announcementRequested This notification is posted whenever an accessibility element needs to make an announcement to the user. This notification requires a userInfo dictionary with the key announcement and a localized string containing the announcement. To help an assistive app determine the importance of the announcement, add the appropriate priority to the userInfo dictionary.
+	     * @property {Symbol} applicationActivated This notification is posted after the app has been activated. Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} applicationDeactivated This notification is posted after the app has been deactivated.  Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} applicationHidden This notification is posted after the app is hidden. Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} applicationShown This notification is posted after the app is shown. Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} created This notification is posted after an accessibility element is created. Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} drawerCreated This notification is posted after a drawer appears. Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} focusedUIElementChanged This notification is posted after an accessibility element gains focus. Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} focusedWindowChanged This notification is posted after the key window changes. Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} helpTagCreated This notification is posted after a help tag appears. Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} layoutChanged This notification is posted after the UI changes in a way that requires the attention of an accessibility client. This notification should be accompanied by a userInfo dictionary with the key uiElements and an array containing the UI elements that have been added or changed. Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} mainWindowChanged This notification is posted after the main window changes. Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} moved This notification is posted after an accessibility element moves. Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} resized This notification is posted after an accessibility element’s size changes. Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} rowCollapsed This notification is posted after a row collapses. Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} rowCountChanged This notification is posted after a row is added or deleted. Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} rowExpanded This notification is posted after a row expands. Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} selectedCellsChanged This notification is posted after one or more cells in a cell-based table are selected or deselected. Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} selectedChildrenChanged This notification is posted after one or more child elements are selected or deselected. Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} selectedChildrenMoved This notification is posted after the selected items in a layout area move. Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} selectedColumnsChanged This notification is posted after one or more columns are selected or deselected. Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} selectedRowsChanged This notification is posted after one or more rows are selected or deselected. Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} selectedTextChanged This notification is posted after text is selected or deselected.  Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} sheetCreated This notification is posted after a sheet appears.  Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} titleChanged This notification is posted after an accessibility element’s title changes. Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} uiElementDestroyed This notification is posted after an accessibility element is destroyed. Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} unitsChanged This notification is posted after the units in a layout area change. Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} valueChanged This notification is posted after an accessibility element’s value changes. Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} windowCreated This notification is posted after a new window appears. Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} windowDeminiaturized This notification is posted after a window is restored to full size from the Dock.  Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} windowMiniaturized This notification is posted after a window is put in the Dock. Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} windowMoved This notification is posted after a window moves.  Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} windowResized This notification is posted after a window’s size changes. Post this notification using the NSAccessibilityPostNotification(_:_:) function instead of an NSNotificationCenter instance.
+	     * @property {Symbol} progressMarkNotification Posted when the current progress of a running animation reaches one of its progress marks.
+	     * @property {Symbol} antialiasThresholdChangedNotification Posted after the threshold for anti-aliasing changes.
+	     * @property {Symbol} NSAppleEventManagerWillProcessFirstEvent Posted by NSAppleEventManager before it first dispatches an Apple event. Your application can use this notification to avoid registering any Apple event handlers until the first time at which they may be needed.
+	     * @property {Symbol} didBecomeActiveNotification Posted immediately after the app becomes active.
+	     * @property {Symbol} didChangeOcclusionStateNotification Posted when the app’s occlusion state changes.
+	     * @property {Symbol} didChangeScreenParametersNotification Posted when the configuration of the displays attached to the computer is changed.
+	     * @property {Symbol} didFinishLaunchingNotification Posted at the end of the finishLaunching() method to indicate that the app has completed launching and is ready to run.
+	     * @property {Symbol} didFinishRestoringWindowsNotification Posted when the app is finished restoring windows.
+	     * @property {Symbol} didHideNotification Posted at the end of the hide(_:) method to indicate that the app is now hidden.
+	     * @property {Symbol} didResignActiveNotification Posted immediately after the app gives up its active status to another app.
+	     * @property {Symbol} didUnhideNotification Posted at the end of the unhideWithoutActivation() method to indicate that the app is now visible.
+	     * @property {Symbol} didUpdateNotification Posted at the end of the updateWindows() method to indicate that the app has finished updating its windows.
+	     * @property {Symbol} willBecomeActiveNotification Posted immediately before the app becomes active.
+	     * @property {Symbol} willFinishLaunchingNotification Posted at the start of the finishLaunching() method to indicate that the app has completed its initialization process and is about to finish launching.
+	     * @property {Symbol} willHideNotification Posted at the start of the hide(_:) method to indicate that the app is about to be hidden.
+	     * @property {Symbol} willResignActiveNotification Posted immediately before the app gives up its active status to another app.
+	     * @property {Symbol} willTerminateNotification Posted by the terminate(_:) method to indicate that the app will terminate.
+	     * @property {Symbol} willUnhideNotification Posted at the start of the unhideWithoutActivation() method to indicate that the app is about to become visible.
+	     * @property {Symbol} willUpdateNotification Posted at the start of the updateWindows() method to indicate that the app is about to update its windows.
+	     * @property {Symbol} columnConfigurationDidChangeNotification Notifies the delegate when the width of a browser column has changed.
+	     * @property {Symbol} NSClassDescriptionNeededForClass Posted by init(for:) when a class description cannot be found for a class.
+	     * @property {Symbol} didChangeNotification 
+	     * @property {Symbol} colorDidChangeNotification Posted when the color of the NSColorPanel is set, as when NSColorPanel is invoked.
+	     * @property {Symbol} selectionDidChangeNotification Posted after the pop-up list selection of the NSComboBox changes. 
+	     * @property {Symbol} selectionIsChangingNotification Posted whenever the pop-up list selection of the NSComboBox is changing. 
+	     * @property {Symbol} willDismissNotification Posted whenever the pop-up list of the NSComboBox is about to be dismissed.
+	     * @property {Symbol} willPopUpNotification Posted whenever the pop-up list of the NSComboBox is going to be displayed. 
+	     * @property {Symbol} contextHelpModeDidActivateNotification Posted when the application enters context-sensitive help mode. This typically happens when the user holds down the Help key.
+	     * @property {Symbol} contextHelpModeDidDeactivateNotification Posted when the application exits context-sensitive help mode. This happens when the user clicks the mouse button while the cursor is anywhere on the screen after displaying a context-sensitive help topic.
+	     * @property {Symbol} textDidBeginEditingNotification Sent when a control with editable cells begins an edit session. 
+	     * @property {Symbol} textDidChangeNotification Sent when the text in the receiving control changes. 
+	     * @property {Symbol} textDidEndEditingNotification Sent when a control with editable cells ends an editing session. 
+	     * @property {Symbol} currentControlTintDidChangeNotification Sent after the user changes control tint preference.
+	     * @property {Symbol} didCloseNotification Posted whenever the drawer is closed. 
+	     * @property {Symbol} didOpenNotification Posted whenever the drawer is opened. 
+	     * @property {Symbol} willCloseNotification Posted whenever the drawer is about to close. 
+	     * @property {Symbol} willOpenNotification Posted whenever the drawer is about to open.
+	     * @property {Symbol} didChangeNotification Posted whenever a font collection is changed.
+	     * @property {Symbol} fontSetChangedNotification Posted after the the currently-set font changes.
+	     * @property {Symbol} registryDidChangeNotification Posted whenever the NSImageRep class registry changes.
+	     * @property {Symbol} didAddItemNotification Posted after a menu item is added to the menu.
+	     * @property {Symbol} didBeginTrackingNotification Posted when menu tracking begins.
+	     * @property {Symbol} didChangeItemNotification Posted after a menu item in the menu changes appearance.
+	     * @property {Symbol} didEndTrackingNotification Posted when menu tracking ends, even if no action is sent.
+	     * @property {Symbol} didRemoveItemNotification Posted after a menu item is removed from the menu.
+	     * @property {Symbol} didSendActionNotification Posted just after the application dispatches a menu item’s action method to the menu item’s target.
+	     * @property {Symbol} willSendActionNotification Posted just before the application dispatches a menu item’s action method to the menu item’s target.
+	     * @property {Symbol} columnDidMoveNotification Posted whenever a column is moved by user action in an NSOutlineView object.
+	     * @property {Symbol} columnDidResizeNotification Posted whenever a column is resized in an NSOutlineView object.
+	     * @property {Symbol} itemDidCollapseNotification Posted whenever an item is collapsed in an NSOutlineView object.
+	     * @property {Symbol} itemDidExpandNotification Posted whenever an item is expanded in an NSOutlineView object.
+	     * @property {Symbol} itemWillCollapseNotification Posted before an item is collapsed (after the user clicks the arrow but before the item is collapsed).
+	     * @property {Symbol} itemWillExpandNotification Posted before an item is expanded (after the user clicks the arrow but before the item is collapsed).
+	     * @property {Symbol} selectionDidChangeNotification Posted after the outline view's selection changes.
+	     * @property {Symbol} selectionIsChangingNotification Posted as the outline view’s selection changes (while the mouse button is still down).
+	     * @property {Symbol} NSPersistentStoreDidImportUbiquitousContentChanges Posted after records are imported from the ubiquitous content store.
+	     * @property {Symbol} willPopUpNotification This notification is posted just before an pop-up menu is attached to its window frame.
+	     * @property {Symbol} willPopUpNotification Posted when an NSPopUpButton object receives a mouse-down event—that is, when the user is about to select an item from the menu.
+	     * @property {Symbol} didCloseNotification Sent after the popover has finished animating offscreen.
+	     * @property {Symbol} didShowNotification Sent after the popover has finished animating onscreen.
+	     * @property {Symbol} willCloseNotification Sent before the popover is closed.
+	     * @property {Symbol} willShowNotification Sent before the popover is shown.
+	     * @property {Symbol} preferredScrollerStyleDidChangeNotification Posted if the preferred scroller style changes.
+	     * @property {Symbol} rowsDidChangeNotification This notification is posted to the default notification center whenever the view's rows change.
+	     * @property {Symbol} colorSpaceDidChangeNotification Posted when the color space of the screen has changed.
+	     * @property {Symbol} didEndLiveMagnifyNotification Posted at the end of a magnify gesture.
+	     * @property {Symbol} didEndLiveScrollNotification Posted on the main thread at the end of live scroll tracking.
+	     * @property {Symbol} didLiveScrollNotification Posted on the main thread after changing the clipview bounds origin due to a user-initiated event.
+	     * @property {Symbol} willStartLiveMagnifyNotification Posted at the beginning of a magnify gesture.
+	     * @property {Symbol} willStartLiveScrollNotification Posted on the main thread at the beginning of user-initiated live scroll tracking (gesture scroll or scroller tracking, for example, thumb dragging).
+	     * @property {Symbol} didChangeAutomaticCapitalizationNotification 
+	     * @property {Symbol} didChangeAutomaticDashSubstitutionNotification 
+	     * @property {Symbol} didChangeAutomaticPeriodSubstitutionNotification 
+	     * @property {Symbol} didChangeAutomaticQuoteSubstitutionNotification 
+	     * @property {Symbol} didChangeAutomaticSpellingCorrectionNotification This notification is posted when the spell checker did change text using automatic spell checking correction. The are posted to the application’s default notification center.
+	     * @property {Symbol} didChangeAutomaticTextReplacementNotification Posted when the spell checker changed text using automatic text replacement.  This notification is posted to the app’s default notification center. 
+	     * @property {Symbol} didResizeSubviewsNotification Posted after an NSSplitView changes the sizes of some or all of its subviews. 
+	     * @property {Symbol} willResizeSubviewsNotification Posted before an NSSplitView changes the sizes of some or all of its subviews.
+	     * @property {Symbol} systemColorsDidChangeNotification Sent when the system colors have been changed (such as through a system control panel interface).
+	     * @property {Symbol} columnDidMoveNotification Posted whenever a column is moved by user action in an NSTableView object.
+	     * @property {Symbol} columnDidResizeNotification Posted whenever a column is resized in an NSTableView object.
+	     * @property {Symbol} selectionDidChangeNotification Posted after an NSTableView object's selection changes.
+	     * @property {Symbol} selectionIsChangingNotification Posted as an NSTableView object's selection changes (while the mouse button is still down).
+	     * @property {Symbol} selectedAlternativeStringNotification Posted when the user selects an alternate string.
+	     * @property {Symbol} didBeginEditingNotification Posted when an NSText object begins any operation that changes characters or formatting attributes.
+	     * @property {Symbol} didChangeNotification Posted after an NSText object performs any operation that changes characters or formatting attributes.
+	     * @property {Symbol} didEndEditingNotification Posted when focus leaves an NSText object, whether or not any operation has changed characters or formatting attributes.
+	     * @property {Symbol} keyboardSelectionDidChangeNotification Posted after the selected text input source changes.
+	     * @property {Symbol} NSTextStorageDidProcessEditing Posted after a text storage finishes processing edits in processEditing().
+	     * @property {Symbol} NSTextStorageWillProcessEditing Posted before a text storage finishes processing edits in processEditing().
+	     * @property {Symbol} didChangeSelectionNotification Posted when the selected range of characters changes.
+	     * @property {Symbol} didChangeTypingAttributesNotification Posted when there is a change in the typing attributes within a text view.
+	     * @property {Symbol} willChangeNotifyingTextViewNotification Posted when a new text view is established as the text view that sends notifications.
+	     * @property {Symbol} didRemoveItemNotification Posted after an item is removed from a toolbar.
+	     * @property {Symbol} willAddItemNotification Posted before a new item is added to the toolbar.
+	     * @property {Symbol} boundsDidChangeNotification Posted whenever the NSView’s bounds rectangle changes to a new value independently of the frame rectangle, but only when the view’s postsBoundsChangedNotifications property is true.  
+	     * @property {Symbol} didUpdateTrackingAreasNotification Posted whenever an NSView object recalculates its tracking areas.
+	     * @property {Symbol} frameDidChangeNotification Posted whenever the view’s frame rectangle changes to a new value, but only when the view’s postsFrameChangedNotifications property is true.
+	     * @property {Symbol} globalFrameDidChangeNotification Posted whenever an NSView object that has attached surfaces (that is, NSOpenGLContext objects) moves to a different screen, or other cases where the NSOpenGLContext object needs to be updated. 
+	     * @property {Symbol} didBecomeKeyNotification Posted whenever an NSWindow object becomes the key window.
+	     * @property {Symbol} didBecomeMainNotification Posted whenever an NSWindow object becomes the main window.
+	     * @property {Symbol} didChangeBackingPropertiesNotification Posted when the window backing properties change.
+	     * @property {Symbol} didChangeOcclusionStateNotification Posted when the window’s occlusion state changes.
+	     * @property {Symbol} didChangeScreenNotification Posted whenever a portion of an NSWindow object’s frame moves onto or off of a screen.
+	     * @property {Symbol} didChangeScreenProfileNotification Posted whenever the display profile for the screen containing the window changes.
+	     * @property {Symbol} didDeminiaturizeNotification Posted whenever an NSWindow object is deminimized.
+	     * @property {Symbol} didEndLiveResizeNotification Posted after the user resizes a window.
+	     * @property {Symbol} didEndSheetNotification Posted whenever an NSWindow object closes an attached sheet.
+	     * @property {Symbol} didEnterFullScreenNotification Posted when the window entered full screen mode.
+	     * @property {Symbol} didEnterVersionBrowserNotification Posted when the window will enter version browser mode.
+	     * @property {Symbol} didExitFullScreenNotification Posted when the window did exit full screen mode.
+	     * @property {Symbol} didExitVersionBrowserNotification Posted when the window did exit version browser mode.
+	     * @property {Symbol} didExposeNotification Posted whenever a portion of a nonretained NSWindow object is exposed, whether by being ordered in front of other windows or by other windows being removed from in front of it.
+	     * @property {Symbol} didMiniaturizeNotification Posted whenever an NSWindow object is minimized.
+	     * @property {Symbol} didMoveNotification Posted whenever an NSWindow object is moved.
+	     * @property {Symbol} didResignKeyNotification Posted whenever an NSWindow object resigns its status as key window.
+	     * @property {Symbol} didResignMainNotification Posted whenever an NSWindow object resigns its status as main window.
+	     * @property {Symbol} didResizeNotification Posted whenever an NSWindow object’s size changes.
+	     * @property {Symbol} didUpdateNotification Posted whenever an NSWindow object receives an update() message.
+	     * @property {Symbol} willBeginSheetNotification Posted whenever an NSWindow object is about to open a sheet.
+	     * @property {Symbol} willCloseNotification Posted whenever an NSWindow object is about to close.
+	     * @property {Symbol} willEnterFullScreenNotification Posted when the window will enter full screen mode.
+	     * @property {Symbol} willEnterVersionBrowserNotification Posted when the window will enter version browser mode.
+	     * @property {Symbol} willExitFullScreenNotification Posted when the window will exit full screen mode.
+	     * @property {Symbol} willExitVersionBrowserNotification Posted when the window will exit version browser mode.
+	     * @property {Symbol} willMiniaturizeNotification Posted whenever an NSWindow object is about to be minimized.
+	     * @property {Symbol} willMoveNotification Posted whenever an NSWindow object is about to move.
+	     * @property {Symbol} willStartLiveResizeNotification Posted before the user resizes a window.
+	     * @property {Symbol} accessibilityDisplayOptionsDidChangeNotification Posted when any of the accessibility display options change.
+	     * @property {Symbol} activeSpaceDidChangeNotification Posted when a Spaces change has occurred.
+	     * @property {Symbol} didActivateApplicationNotification Posted when the Finder is about to activate an app.
+	     * @property {Symbol} didChangeFileLabelsNotification Posted when the Finder file labels or colors change.
+	     * @property {Symbol} didDeactivateApplicationNotification Posted when the Finder deactivated an app.
+	     * @property {Symbol} didHideApplicationNotification Posted when the Finder hid an app.
+	     * @property {Symbol} didLaunchApplicationNotification Posted when a new app has started up.
+	     * @property {Symbol} didMountNotification Posted when a new device has been mounted.
+	     * @property {Symbol} didPerformFileOperationNotification Posted when a file operation has been performed in the receiving app.
+	     * @property {Symbol} didRenameVolumeNotification Posted when a volume changes its name and/or mount path.  These typically change simultaneously, in which case only one notification is posted.
+	     * @property {Symbol} didTerminateApplicationNotification Posted when an app finishes executing.
+	     * @property {Symbol} didUnhideApplicationNotification Posted when the Finder unhid an app.
+	     * @property {Symbol} didUnmountNotification Posted when the Finder did unmount a device.
+	     * @property {Symbol} didWakeNotification Posted when the machine wakes from sleep.
+	     * @property {Symbol} screensDidSleepNotification Posted when the machine’s screen goes to sleep.
+	     * @property {Symbol} screensDidWakeNotification Posted when the machine’s screens wake.
+	     * @property {Symbol} sessionDidBecomeActiveNotification Posted after a user session is switched in.
+	     * @property {Symbol} sessionDidResignActiveNotification Posted before a user session is switched out.
+	     * @property {Symbol} willLaunchApplicationNotification Posted when the Finder is about to launch an app.
+	     * @property {Symbol} willPowerOffNotification Posted when the user has requested a logout or that the machine be powered off.
+	     * @property {Symbol} willSleepNotification Posted before the machine goes to sleep.
+	     * @property {Symbol} willUnmountNotification Posted when the Finder is about to unmount a device.
+	     * @property {Symbol} PDFDocumentDidBeginFind Posted when the beginFindString(_:withOptions:) or findString(_:withOptions:) method begins finding.
+	     * @property {Symbol} PDFDocumentDidBeginPageFind Posted each time a find operation begins working on a new page of a document.
+	     * @property {Symbol} PDFDocumentDidBeginPageWrite Posted each time a write operation begins working on a page in a document.
+	     * @property {Symbol} PDFDocumentDidBeginWrite Posted each time a write operation begins working on a document.
+	     * @property {Symbol} PDFDocumentDidEndFind Posted when the beginFindString(_:withOptions:) or findString(_:withOptions:) method returns.
+	     * @property {Symbol} PDFDocumentDidEndPageFind Posted each time a find operation finishes working on a page in a document.
+	     * @property {Symbol} PDFDocumentDidEndPageWrite Posted each time a write operation finishes working on a page in a document.
+	     * @property {Symbol} PDFDocumentDidEndWrite Posted each time a write operation finishes working on a document.
+	     * @property {Symbol} PDFDocumentDidFindMatch Posted each time a string match is found in a document.
+	     * @property {Symbol} PDFDocumentDidUnlock Posted when a document unlocks after a unlock(withPassword:) message.
+	     * @property {Symbol} PDFThumbnailViewDocumentEdited 
+	     * @property {Symbol} PDFViewAnnotationHit Posted when the user clicks on an annotation. 
+	     * @property {Symbol} PDFViewAnnotationWillHit Posted before the user clicks an annotation.
+	     * @property {Symbol} PDFViewChangedHistory Posted when the page history changes.
+	     * @property {Symbol} PDFViewCopyPermission Posted when the user attempts to copy to the pasteboard without the appropriate permissions. 
+	     * @property {Symbol} PDFViewDisplayBoxChanged Posted when the display box has changed.
+	     * @property {Symbol} PDFViewDisplayModeChanged Posted when the display mode has changed.
+	     * @property {Symbol} PDFViewDocumentChanged Posted when a new document is associated with the view.
+	     * @property {Symbol} PDFViewPageChanged Posted when a new page becomes the current page.
+	     * @property {Symbol} PDFViewPrintPermission Posted when the user attempts to print without the appropriate permissions. 
+	     * @property {Symbol} PDFViewScaleChanged Posted when the scale factor changes. 
+	     * @property {Symbol} PDFViewSelectionChanged Posted when the current selection has changed.
+	     * @property {Symbol} PDFViewVisiblePagesChanged 
+	     * @property {Symbol} QCCompositionPickerPanelDidSelectComposition Posted when the user chooses a composition.
+	     * @property {Symbol} QCCompositionPickerViewDidSelectComposition Posted when the user selects a composition in the picker view.
+	     * @property {Symbol} QCCompositionRepositoryDidUpdate Posted whenever the list of compositions in the composition repository is updated.
+	     * @property {Symbol} QCViewDidStartRendering Posted when the view starts rendering.
+	     * @property {Symbol} QCViewDidStopRendering Posted when the view stops rendering.
+	     * @property {Symbol} WebHistoryAllItemsRemoved Posted when all history items have been removed from the web history.
+	     * @property {Symbol} WebHistoryItemChanged Posted by a WebHistoryItem object when the value of the history item’s title, alternate title, URL strings, or last visited interval changes.
+	     * @property {Symbol} WebHistoryItemsAdded Posted when history items have been added to a web history.
+	     * @property {Symbol} WebHistoryItemsRemoved Posted when items have been removed from the web history.
+	     * @property {Symbol} WebHistoryLoaded Posted when web history items have been loaded from a URL.
+	     * @property {Symbol} WebHistorySaved Posted when web history items have been saved to a URL.
+	     * @property {Symbol} WebPreferencesChanged Posted when the web preference settings are changed. 
+	     * @property {Symbol} WebViewDidBeginEditing Posted when a web view begins any operation that changes its contents in response to user editing.
+	     * @property {Symbol} WebViewDidChange Posted when a web view performs any operation that changes its contents in response to user editing.
+	     * @property {Symbol} WebViewDidChangeSelection Posted when a web view changes its typing selection.
+	     * @property {Symbol} WebViewDidChangeTypingStyle Posted when a web view changes its typing style.
+	     * @property {Symbol} WebViewDidEndEditing Posted when a web view ends any operation that changes its contents in response to user editing.
+	     * @property {Symbol} WebViewProgressEstimateChanged Posted by a WebView object when the estimated progress value of a load changes.
+	     * @property {Symbol} WebViewProgressFinished Posted by a WebView object when the load has finished.
+	     * @property {Symbol} WebViewProgressStarted Posted by a WebView object when a load begins, including a load that is initiated in a subframe.
+	     * @property {Symbol} abDatabaseChanged Posted when this process has changed the Address Book database.
+	     * @property {Symbol} abDatabaseChangedExternally Posted when a process other than the current one has changed the Address Book database.
+	     * @property {Symbol} quartzFilterManagerDidAddFilter 
+	     * @property {Symbol} quartzFilterManagerDidModifyFilter 
+	     * @property {Symbol} quartzFilterManagerDidRemoveFilter 
+	     * @property {Symbol} quartzFilterManagerDidSelectFilter 
+	     * @property {Symbol} EAAccessoryDidConnect Posted when an accessory becomes connected and available for your application to use.
+	     * @property {Symbol} EAAccessoryDidDisconnect Posted when an accessory is disconnected and no longer available for your application to use.
+	     * @property {Symbol} MPMovieDurationAvailable Posted when the duration of a movie has been determined. There is no userInfo dictionary.
+	     * @property {Symbol} MPMovieMediaTypesAvailable Posted when the available media types in a movie are determined. There is no userInfo dictionary.
+	     * @property {Symbol} MPMovieNaturalSizeAvailable Posted when the natural frame size of a movie is first determined or subsequently changes. There is no userInfo dictionary.
+	     * @property {Symbol} MPMoviePlayerDidEnterFullscreen Posted when a movie player has entered full-screen mode. There is no userInfo dictionary.
+	     * @property {Symbol} MPMoviePlayerDidExitFullscreen Posted when a movie player has exited full-screen mode. There is no userInfo dictionary.  
+	     * @property {Symbol} MPMoviePlayerIsAirPlayVideoActiveDidChange Posted when a movie player has started or ended playing a movie via AirPlay. There is no userInfo dictionary.
+	     * @property {Symbol} MPMoviePlayerLoadStateDidChange Posted when a movie player’s network buffering state has changed. There is no userInfo dictionary.
+	     * @property {Symbol} MPMoviePlayerNowPlayingMovieDidChange Posted when the currently playing movie has changed. There is no userInfo dictionary.
+	     * @property {Symbol} MPMoviePlayerPlaybackDidFinish Posted when a movie has finished playing. The userInfo dictionary of this notification contains the MPMoviePlayerPlaybackDidFinishReasonUserInfoKey key, which indicates the reason that playback finished. This notification is also sent when playback fails because of an error.
+	     * @property {Symbol} MPMoviePlayerPlaybackStateDidChange Posted when a movie player’s playback state has changed. There is no userInfo dictionary.
+	     * @property {Symbol} MPMoviePlayerReadyForDisplayDidChange Posted when the ready for display state changes.
+	     * @property {Symbol} MPMoviePlayerScalingModeDidChange Posted when the scaling mode of a movie player has changed. There is no userInfo dictionary.
+	     * @property {Symbol} MPMoviePlayerThumbnailImageRequestDidFinish Posted when a request to capture a thumbnail from a movie has finished whether the request succeeded or failed. Upon successful capture of a thumbnail, the userInfo dictionary contains values for the following keys:
+	     * @property {Symbol} MPMoviePlayerTimedMetadataUpdated Posted when new timed metadata arrives.
+	     * @property {Symbol} MPMoviePlayerWillEnterFullscreen Posted when a movie player is about to enter full-screen mode. The userInfo dictionary contains keys whose values describe the transition animation used to enter full-screen mode. See Fullscreen Notification Keys.
+	     * @property {Symbol} MPMoviePlayerWillExitFullscreen Posted when a movie player is about to exit full-screen mode. The userInfo dictionary contains keys whose values describe the transition animation used to exit full-screen mode. See Fullscreen Notification Keys.
+	     * @property {Symbol} MPMovieSourceTypeAvailable Posted when the source type of a movie was previously unknown and is newly available. There is no userInfo dictionary.
+	     * @property {Symbol} SKCloudServiceCapabilitiesDidChange Called when the capabilities associated with the music library on the device change.
+	     * @property {Symbol} SKStorefrontIdentifierDidChange Called when the storefront identifier associated with the device changes.
+	     * @property {Symbol} TVTopShelfItemsDidChange A notification to post when your app’s Top Shelf content has changed.
+	     * @property {Symbol} UIAccessibilityAssistiveTouchStatusDidChange 
+	     * @property {Symbol} UIAccessibilityBoldTextStatusDidChange Posted by UIKit when the system’s Bold Text setting has changed. 
+	     * @property {Symbol} UIAccessibilityClosedCaptioningStatusDidChange Posted by UIKit when the setting for closed captioning has changed.
+	     * @property {Symbol} UIAccessibilityDarkerSystemColorsStatusDidChange Posted by UIKit when the system’s Darken Colors setting has changed.
+	     * @property {Symbol} UIAccessibilityGrayscaleStatusDidChange Posted by UIKit when the system’s Grayscale setting has changed.
+	     * @property {Symbol} UIAccessibilityGuidedAccessStatusDidChange Posted by UIKit when a Guided Access session starts or ends.  
+	     * @property {Symbol} UIAccessibilityHearingDevicePairedEarDidChange 
+	     * @property {Symbol} UIAccessibilityInvertColorsStatusDidChange Posted by UIKit when the setting for inverted colors has changed.  
+	     * @property {Symbol} UIAccessibilityMonoAudioStatusDidChange Posted by UIKit when system audio changes from stereo to mono.
+	     * @property {Symbol} UIAccessibilityReduceMotionStatusDidChange Posted by UIKit when the system’s Reduce Motion setting has changed.
+	     * @property {Symbol} UIAccessibilityReduceTransparencyStatusDidChange Posted by UIKit when the system’s Reduce Transparency system setting has changed.
+	     * @property {Symbol} UIAccessibilityShakeToUndoDidChange 
+	     * @property {Symbol} UIAccessibilitySpeakScreenStatusDidChange Posted by UIKit when the system’s Speak Screen setting has changed.
+	     * @property {Symbol} UIAccessibilitySpeakSelectionStatusDidChange Posted by UIKit when the system’s Speak Selection setting has changed.
+	     * @property {Symbol} UIAccessibilitySwitchControlStatusDidChange Posted by UIKit when the system’s Switch Control setting has changed.
+	     * @property {Symbol} UIApplicationDidBecomeActive Posted when the app becomes active. 
+	     * @property {Symbol} UIApplicationDidEnterBackground Posted when the app enters the background.
+	     * @property {Symbol} UIApplicationDidFinishLaunching Posted immediately after the app finishes launching.
+	     * @property {Symbol} UIApplicationDidReceiveMemoryWarning Posted when the app receives a warning from the operating system about low memory availability.
+	     * @property {Symbol} UIApplicationSignificantTimeChange Posted when there is a significant change in time, for example, change to a new day (midnight), carrier time update, and change to or from daylight savings time.
+	     * @property {Symbol} UIApplicationUserDidTakeScreenshot Posted when the user presses the Home and Lock buttons to take a screenshot. 
+	     * @property {Symbol} UIApplicationWillEnterForeground Posted shortly before an app leaves the background state on its way to becoming the active app.
+	     * @property {Symbol} UIApplicationWillResignActive Posted when the app is no longer active and loses focus.
+	     * @property {Symbol} UIApplicationWillTerminate Posted when the app is about to terminate.
+	     * @property {Symbol} UIContentSizeCategoryDidChange Posted when the user changes the preferred content size setting. 
+	     * @property {Symbol} UIDeviceProximityStateDidChange Posted when the state of the proximity sensor changes.
+	     * @property {Symbol} UIScreenBrightnessDidChange This notification is posted when the brightness of a screen changes. The object of the notification is the UIScreen object whose brightness property changed. There is no userInfo dictionary. 
+	     * @property {Symbol} UIScreenDidConnect This notification is posted when a new screen is connected to the device. The object of the notification is the UIScreen object representing the new screen. There is no userInfo dictionary. 
+	     * @property {Symbol} UIScreenDidDisconnect This notification is posted when a screen is disconnected from the device. The object of the notification is the UIScreen object that represented the now disconnected screen. There is no userInfo dictionary. 
+	     * @property {Symbol} UIScreenModeDidChange This notification is posted when the current mode of a screen changes. The object of the notification is the UIScreen object whose currentMode property changed. There is no userInfo dictionary. 
+	     * @property {Symbol} UITableViewSelectionDidChange Posted when the selected row in the posting table view changes.
+	     * @property {Symbol} UITextFieldTextDidBeginEditing Notifies observers that an editing session began in a text field. The affected text field is stored in the object parameter of the notification. The userInfo dictionary is not used.
+	     * @property {Symbol} UITextFieldTextDidChange Notifies observers that the text in a text field changed. The affected text field is stored in the object parameter of the notification. 
+	     * @property {Symbol} UITextFieldTextDidEndEditing Notifies observers that the editing session ended for a text field. The affected text field is stored in the object parameter of the notification. The userInfo dictionary is not used.
+	     * @property {Symbol} UITextInputCurrentInputModeDidChange Posted when the current input mode changes.
+	     * @property {Symbol} UITextViewTextDidBeginEditing Notifies observers that an editing session began in a text view. The affected view is stored in the object parameter of the notification. The userInfo dictionary is not used.
+	     * @property {Symbol} UITextViewTextDidChange Notifies observers that the text in a text view changed. The affected view is stored in the object parameter of the notification. The userInfo dictionary is not used.
+	     * @property {Symbol} UITextViewTextDidEndEditing Notifies observers that the editing session ended for a text view. The affected view is stored in the object parameter of the notification. The userInfo dictionary is not used.
+	     * @property {Symbol} UIViewControllerShowDetailTargetDidChange Posted when a split view controller is expanded or collapsed.
+	     * @property {Symbol} UIWindowDidBecomeHidden Posted when an UIWindow object becomes hidden.
+	     * @property {Symbol} UIWindowDidBecomeKey Posted whenever a UIWindow object becomes the key window.
+	     * @property {Symbol} UIWindowDidBecomeVisible Posted when an UIWindow object becomes visible.
+	     * @property {Symbol} UIWindowDidResignKey Posted whenever a UIWindow object resigns its status as main window.
+	     * @property {Symbol} ALAssetsLibraryChanged Sent when the contents of the assets library have changed from under the app that is using the data.
+	     * @property {Symbol} AVCaptureDeviceSubjectAreaDidChange Posted when the instance of AVCaptureDevice has detected a substantial change to the video subject area.
+	     * @property {Symbol} AVCaptureSessionInterruptionEnded Posted if an interruption to a capture session finishes.
+	     * @property {Symbol} AVCaptureSessionWasInterrupted Posted if a capture session is interrupted.
+	     * @property {Symbol} CTRadioAccessTechnologyDidChange 
+	     * @property {Symbol} MFMessageComposeViewControllerTextMessageAvailabilityDidChange Posted when the value returned by the canSendText() class method has changed.
+	     * @property {Symbol} MPMediaLibraryDidChange Indicates the media library has changed.
+	     * @property {Symbol} MPMediaPlaybackIsPreparedToPlayDidChange Indicates that the prepared to play status of the media player has changed.
+	     * @property {Symbol} MPMusicPlayerControllerNowPlayingItemDidChange Posted when the currently playing media item has changed.
+	     * @property {Symbol} MPMusicPlayerControllerPlaybackStateDidChange Posted when the playback state has been changed programmatically or by user action.
+	     * @property {Symbol} MPMusicPlayerControllerVolumeDidChange Posted when the audio playback volume for the music player has changed.
+	     * @property {Symbol} MPVolumeViewWirelessRouteActiveDidChange Indicates the active wireless route changed.
+	     * @property {Symbol} MPVolumeViewWirelessRoutesAvailableDidChange Indicates the available wireless routes changed.
+	     * @property {Symbol} NKIssueDownloadCompleted Posted when all assets of the issue have been downloaded.
+	     * @property {Symbol} UIApplicationBackgroundRefreshStatusDidChange Posted when the app’s status for downloading content in the background changes.
+	     * @property {Symbol} UIApplicationDidChangeStatusBarFrame Posted when the frame of the status bar changes.
+	     * @property {Symbol} UIApplicationDidChangeStatusBarOrientation Posted when the orientation of the app’s user interface changes.
+	     * @property {Symbol} UIApplicationWillChangeStatusBarFrame Posted when the app is about to change the frame of the status bar.
+	     * @property {Symbol} UIApplicationWillChangeStatusBarOrientation Posted when the app is about to change the orientation of its interface.
+	     * @property {Symbol} UIDeviceBatteryLevelDidChange Posted when the battery level changes.
+	     * @property {Symbol} UIDeviceBatteryStateDidChange Posted when battery state changes.
+	     * @property {Symbol} UIDeviceOrientationDidChange Posted when the orientation of the device changes.
+	     * @property {Symbol} UIDocumentStateChanged Posted by the document object when there is a change in the state of the document.
+	     * @property {Symbol} UIKeyboardDidChangeFrame Posted immediately after a change in the keyboard’s frame.
+	     * @property {Symbol} UIKeyboardDidHide Posted immediately after the dismissal of the keyboard.
+	     * @property {Symbol} UIKeyboardDidShow Posted immediately after the display of the keyboard.
+	     * @property {Symbol} UIKeyboardWillChangeFrame Posted immediately prior to a change in the keyboard’s frame.
+	     * @property {Symbol} UIKeyboardWillHide Posted immediately prior to the dismissal of the keyboard.
+	     * @property {Symbol} UIKeyboardWillShow Posted immediately prior to the display of the keyboard.
+	     * @property {Symbol} UIMenuControllerDidHideMenu Posted by the menu controller just after it hides the menu.
+	     * @property {Symbol} UIMenuControllerDidShowMenu Posted by the menu controller just after it shows the menu.
+	     * @property {Symbol} UIMenuControllerMenuFrameDidChange Posted when the frame of a visible menu changes.
+	     * @property {Symbol} UIMenuControllerWillHideMenu Posted by the menu controller just before it hides the menu.
+	     * @property {Symbol} UIMenuControllerWillShowMenu Posted by the menu controller just before it shows the menu.
+	     * @property {Symbol} UIPasteboardChanged Posted by a pasteboard object when its contents change.
+	     * @property {Symbol} UIPasteboardRemoved Posted by a pasteboard object just before an app removes it.
+	     * @property {Symbol} UIApplicationProtectedDataDidBecomeAvailable Posted when the protected files become available for your code to access.
+	     * @property {Symbol} UIApplicationProtectedDataWillBecomeUnavailable Posted shortly before protected files are locked down and become inaccessible.
+	     * @property {Symbol} didChangeAutomaticTextCompletionNotification 
+	     * @property {Symbol} MPMusicPlayerControllerQueueDidChange Indicates the music player's queue changed.
+	     * @property {Symbol} GKPlayerAuthenticationDidChangeNotificationName Posted after the isAuthenticated property of the shared local player object changes. The object property for this notification is a GKLocalPlayer object. Passing nil provides standard Notification Center behavior which is to receive the notification for any object.
+	     * @property {Symbol} GKPlayerDidChangeNotificationName Posted when a player object’s data changes.
+	     * @property {Symbol} NEDNSProxyConfigurationDidChange 
+	     * @property {Symbol} SKStorefrontCountryCodeDidChange 
+	     * @property {Symbol} UIAccessibilityVoiceOverStatusDidChange 
+	     * @property {Symbol} UIFocusDidUpdate 
+	     * @property {Symbol} UIFocusMovementDidFail 
+	     * @property {Symbol} init 
+	     * @property {Symbol} initrawValue 
+	     * @property {Symbol} initnameobjectuserInfo Initializes a new notification.
+	     * @property {Symbol} Notification.Name An alias for a type used to represent the name of a notification.
+	     * @see https://developer.apple.com/documentation/foundation/nsnotification.name
+	     */
+
+	  }], [{
+	    key: 'Name',
+	    get: function get() {
+	      return _Name;
+	    }
+	  }]);
+
+	  return NSNotification;
+	}(_NSObject3.default);
+
+	exports.default = NSNotification;
+
+/***/ },
+/* 29 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -11586,7 +12880,7 @@ module.exports =
 	exports.default = NSArray;
 
 /***/ },
-/* 28 */
+/* 30 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12512,7 +13806,7 @@ module.exports =
 	exports.default = NSCoder;
 
 /***/ },
-/* 29 */
+/* 31 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12571,7 +13865,7 @@ module.exports =
 	exports.default = NSColorSpace;
 
 /***/ },
-/* 30 */
+/* 32 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12635,7 +13929,7 @@ module.exports =
 	exports.default = NSData;
 
 /***/ },
-/* 31 */
+/* 33 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12729,7 +14023,7 @@ module.exports =
 	exports.default = NSDictionary;
 
 /***/ },
-/* 32 */
+/* 34 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -12740,7 +14034,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSCoder2 = __webpack_require__(28);
+	var _NSCoder2 = __webpack_require__(30);
 
 	var _NSCoder3 = _interopRequireDefault(_NSCoder2);
 
@@ -12969,7 +14263,7 @@ module.exports =
 	exports.default = NSKeyedArchiver;
 
 /***/ },
-/* 33 */
+/* 35 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict';
@@ -12980,23 +14274,23 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSCoder2 = __webpack_require__(28);
+	var _NSCoder2 = __webpack_require__(30);
 
 	var _NSCoder3 = _interopRequireDefault(_NSCoder2);
 
-	var _NSData = __webpack_require__(30);
+	var _NSData = __webpack_require__(32);
 
 	var _NSData2 = _interopRequireDefault(_NSData);
 
-	var _File2 = __webpack_require__(34);
+	var _File2 = __webpack_require__(36);
 
 	var _File3 = _interopRequireDefault(_File2);
 
-	var _FileReader2 = __webpack_require__(35);
+	var _FileReader2 = __webpack_require__(37);
 
 	var _FileReader3 = _interopRequireDefault(_FileReader2);
 
-	var _BinaryReader2 = __webpack_require__(36);
+	var _BinaryReader2 = __webpack_require__(38);
 
 	var _BinaryReader3 = _interopRequireDefault(_BinaryReader2);
 
@@ -13792,7 +15086,7 @@ module.exports =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3).Buffer))
 
 /***/ },
-/* 34 */
+/* 36 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -13805,7 +15099,7 @@ module.exports =
 	exports.default = File;
 
 /***/ },
-/* 35 */
+/* 37 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -13818,7 +15112,7 @@ module.exports =
 	exports.default = FileReader;
 
 /***/ },
-/* 36 */
+/* 38 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict';
@@ -13831,7 +15125,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _ecl = __webpack_require__(37);
+	var _ecl = __webpack_require__(39);
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -14216,7 +15510,7 @@ module.exports =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3).Buffer))
 
 /***/ },
-/* 37 */
+/* 39 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -14504,7 +15798,7 @@ module.exports =
 	exports.JCT8836 = JCT8836;
 
 /***/ },
-/* 38 */
+/* 40 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14513,7 +15807,7 @@ module.exports =
 	  value: true
 	});
 
-	var _NSArray2 = __webpack_require__(27);
+	var _NSArray2 = __webpack_require__(29);
 
 	var _NSArray3 = _interopRequireDefault(_NSArray2);
 
@@ -14545,7 +15839,7 @@ module.exports =
 	exports.default = NSMutableArray;
 
 /***/ },
-/* 39 */
+/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14554,7 +15848,7 @@ module.exports =
 	  value: true
 	});
 
-	var _NSData2 = __webpack_require__(30);
+	var _NSData2 = __webpack_require__(32);
 
 	var _NSData3 = _interopRequireDefault(_NSData2);
 
@@ -14586,7 +15880,7 @@ module.exports =
 	exports.default = NSMutableData;
 
 /***/ },
-/* 40 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14595,7 +15889,7 @@ module.exports =
 	  value: true
 	});
 
-	var _NSDictionary2 = __webpack_require__(31);
+	var _NSDictionary2 = __webpack_require__(33);
 
 	var _NSDictionary3 = _interopRequireDefault(_NSDictionary2);
 
@@ -14627,7 +15921,7 @@ module.exports =
 	exports.default = NSMutableDictionary;
 
 /***/ },
-/* 41 */
+/* 43 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14692,7 +15986,7 @@ module.exports =
 	exports.default = NSURL;
 
 /***/ },
-/* 42 */
+/* 44 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -14723,19 +16017,19 @@ module.exports =
 
 	var _CGRect2 = _interopRequireDefault(_CGRect);
 
-	var _CATransform3D = __webpack_require__(43);
+	var _CATransform3D = __webpack_require__(45);
 
 	var _CATransform3D2 = _interopRequireDefault(_CATransform3D);
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3 = __webpack_require__(45);
+	var _SCNVector3 = __webpack_require__(47);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -15440,7 +16734,7 @@ module.exports =
 	exports.default = NSValue;
 
 /***/ },
-/* 43 */
+/* 45 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -15497,7 +16791,7 @@ module.exports =
 	exports.default = CATransform3D;
 
 /***/ },
-/* 44 */
+/* 46 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15508,7 +16802,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNVector = __webpack_require__(45);
+	var _SCNVector = __webpack_require__(47);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -15874,7 +17168,7 @@ module.exports =
 	exports.default = SCNVector3;
 
 /***/ },
-/* 45 */
+/* 47 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -15885,11 +17179,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -16421,7 +17715,7 @@ module.exports =
 	exports.default = SCNVector4;
 
 /***/ },
-/* 46 */
+/* 48 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -16432,11 +17726,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3 = __webpack_require__(45);
+	var _SCNVector3 = __webpack_require__(47);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
@@ -17446,7 +18740,7 @@ module.exports =
 	exports.default = SCNMatrix4;
 
 /***/ },
-/* 47 */
+/* 49 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -17504,7 +18798,7 @@ module.exports =
 	exports.default = CAAction;
 
 /***/ },
-/* 48 */
+/* 50 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -17517,7 +18811,7 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _constants = __webpack_require__(49);
+	var _constants = __webpack_require__(51);
 
 	var Constants = _interopRequireWildcard(_constants);
 
@@ -17525,23 +18819,23 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _CAAction = __webpack_require__(47);
+	var _CAAction = __webpack_require__(49);
 
 	var _CAAction2 = _interopRequireDefault(_CAAction);
 
-	var _CAMediaTiming = __webpack_require__(50);
+	var _CAMediaTiming = __webpack_require__(52);
 
 	var _CAMediaTiming2 = _interopRequireDefault(_CAMediaTiming);
 
-	var _CAMediaTimingFunction = __webpack_require__(51);
+	var _CAMediaTimingFunction = __webpack_require__(53);
 
 	var _CAMediaTimingFunction2 = _interopRequireDefault(_CAMediaTimingFunction);
 
-	var _CAAnimationDelegate = __webpack_require__(52);
+	var _CAAnimationDelegate = __webpack_require__(54);
 
 	var _CAAnimationDelegate2 = _interopRequireDefault(_CAAnimationDelegate);
 
-	var _SCNAnimationEvent = __webpack_require__(53);
+	var _SCNAnimationEvent = __webpack_require__(55);
 
 	var _SCNAnimationEvent2 = _interopRequireDefault(_SCNAnimationEvent);
 
@@ -17949,7 +19243,7 @@ module.exports =
 	exports.default = CAAnimation;
 
 /***/ },
-/* 49 */
+/* 51 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -17981,7 +19275,7 @@ module.exports =
 	exports.kCAAnimationRotateAutoReverse = 'autoReverse';
 
 /***/ },
-/* 50 */
+/* 52 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -18076,7 +19370,7 @@ module.exports =
 	exports.default = CAMediaTiming;
 
 /***/ },
-/* 51 */
+/* 53 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18091,7 +19385,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _constants = __webpack_require__(49);
+	var _constants = __webpack_require__(51);
 
 	var Constants = _interopRequireWildcard(_constants);
 
@@ -18237,7 +19531,7 @@ module.exports =
 	exports.default = CAMediaTimingFunction;
 
 /***/ },
-/* 52 */
+/* 54 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18248,7 +19542,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _CAAnimation = __webpack_require__(48);
+	var _CAAnimation = __webpack_require__(50);
 
 	var _CAAnimation2 = _interopRequireDefault(_CAAnimation);
 
@@ -18312,7 +19606,7 @@ module.exports =
 	exports.default = CAAnimationDelegate;
 
 /***/ },
-/* 53 */
+/* 55 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18380,7 +19674,7 @@ module.exports =
 	exports.default = SCNAnimationEvent;
 
 /***/ },
-/* 54 */
+/* 56 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18393,7 +19687,7 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _CAAnimation2 = __webpack_require__(48);
+	var _CAAnimation2 = __webpack_require__(50);
 
 	var _CAAnimation3 = _interopRequireDefault(_CAAnimation2);
 
@@ -18498,7 +19792,7 @@ module.exports =
 	exports.default = CAAnimationGroup;
 
 /***/ },
-/* 55 */
+/* 57 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18511,7 +19805,7 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _CAPropertyAnimation2 = __webpack_require__(56);
+	var _CAPropertyAnimation2 = __webpack_require__(58);
 
 	var _CAPropertyAnimation3 = _interopRequireDefault(_CAPropertyAnimation2);
 
@@ -18732,7 +20026,7 @@ module.exports =
 	exports.default = CABasicAnimation;
 
 /***/ },
-/* 56 */
+/* 58 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18745,7 +20039,7 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _CAAnimation2 = __webpack_require__(48);
+	var _CAAnimation2 = __webpack_require__(50);
 
 	var _CAAnimation3 = _interopRequireDefault(_CAAnimation2);
 
@@ -18761,19 +20055,19 @@ module.exports =
 
 	var _CGRect2 = _interopRequireDefault(_CGRect);
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNQuaternion = __webpack_require__(57);
+	var _SCNQuaternion = __webpack_require__(59);
 
 	var _SCNQuaternion2 = _interopRequireDefault(_SCNQuaternion);
 
-	var _SCNVector = __webpack_require__(45);
+	var _SCNVector = __webpack_require__(47);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3 = __webpack_require__(44);
+	var _SCNVector3 = __webpack_require__(46);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
@@ -18982,7 +20276,7 @@ module.exports =
 	exports.default = CAPropertyAnimation;
 
 /***/ },
-/* 57 */
+/* 59 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -18991,7 +20285,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(45);
+	var _SCNVector = __webpack_require__(47);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -19008,7 +20302,7 @@ module.exports =
 	exports.default = SCNQuaternion;
 
 /***/ },
-/* 58 */
+/* 60 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -19030,7 +20324,7 @@ module.exports =
 	exports.default = CACurrentMediaTime;
 
 /***/ },
-/* 59 */
+/* 61 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19043,7 +20337,7 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _CAPropertyAnimation2 = __webpack_require__(56);
+	var _CAPropertyAnimation2 = __webpack_require__(58);
 
 	var _CAPropertyAnimation3 = _interopRequireDefault(_CAPropertyAnimation2);
 
@@ -19051,11 +20345,11 @@ module.exports =
 
 	var _CGPath2 = _interopRequireDefault(_CGPath);
 
-	var _CAMediaTimingFunction = __webpack_require__(51);
+	var _CAMediaTimingFunction = __webpack_require__(53);
 
 	var _CAMediaTimingFunction2 = _interopRequireDefault(_CAMediaTimingFunction);
 
-	var _constants = __webpack_require__(49);
+	var _constants = __webpack_require__(51);
 
 	var Constants = _interopRequireWildcard(_constants);
 
@@ -19302,7 +20596,7 @@ module.exports =
 	exports.default = CAKeyframeAnimation;
 
 /***/ },
-/* 60 */
+/* 62 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -19331,15 +20625,15 @@ module.exports =
 
 	var _CGSize2 = _interopRequireDefault(_CGSize);
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3 = __webpack_require__(45);
+	var _SCNVector3 = __webpack_require__(47);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
-	var _SCNActionTimingMode = __webpack_require__(61);
+	var _SCNActionTimingMode = __webpack_require__(63);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -19347,7 +20641,7 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _constants = __webpack_require__(49);
+	var _constants = __webpack_require__(51);
 
 	var Constants = _interopRequireWildcard(_constants);
 
@@ -20178,7 +21472,7 @@ module.exports =
 	exports.default = SCNAction;
 
 /***/ },
-/* 61 */
+/* 63 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -20206,7 +21500,7 @@ module.exports =
 	exports.default = SCNActionTimingMode;
 
 /***/ },
-/* 62 */
+/* 64 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20217,7 +21511,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction = __webpack_require__(60);
+	var _SCNAction = __webpack_require__(62);
 
 	var _SCNAction2 = _interopRequireDefault(_SCNAction);
 
@@ -20389,7 +21683,7 @@ module.exports =
 	exports.default = SCNActionable;
 
 /***/ },
-/* 63 */
+/* 65 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20400,11 +21694,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(60);
+	var _SCNAction2 = __webpack_require__(62);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(61);
+	var _SCNActionTimingMode = __webpack_require__(63);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -20462,7 +21756,7 @@ module.exports =
 	exports.default = SCNActionCustom;
 
 /***/ },
-/* 64 */
+/* 66 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20475,15 +21769,15 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(60);
+	var _SCNAction2 = __webpack_require__(62);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(61);
+	var _SCNActionTimingMode = __webpack_require__(63);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
-	var _SCNNode = __webpack_require__(65);
+	var _SCNNode = __webpack_require__(67);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
@@ -20686,7 +21980,7 @@ module.exports =
 	_SCNAction3.default.fadeOpacityToDuration = SCNActionFade.fadeOpacityToDuration;
 
 /***/ },
-/* 65 */
+/* 67 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -20699,19 +21993,19 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _CAAnimationGroup = __webpack_require__(54);
+	var _CAAnimationGroup = __webpack_require__(56);
 
 	var _CAAnimationGroup2 = _interopRequireDefault(_CAAnimationGroup);
 
-	var _CABasicAnimation = __webpack_require__(55);
+	var _CABasicAnimation = __webpack_require__(57);
 
 	var _CABasicAnimation2 = _interopRequireDefault(_CABasicAnimation);
 
-	var _CAMediaTimingFunction = __webpack_require__(51);
+	var _CAMediaTimingFunction = __webpack_require__(53);
 
 	var _CAMediaTimingFunction2 = _interopRequireDefault(_CAMediaTimingFunction);
 
-	var _CAKeyframeAnimation = __webpack_require__(59);
+	var _CAKeyframeAnimation = __webpack_require__(61);
 
 	var _CAKeyframeAnimation2 = _interopRequireDefault(_CAKeyframeAnimation);
 
@@ -20719,103 +22013,103 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNActionable = __webpack_require__(62);
+	var _SCNActionable = __webpack_require__(64);
 
 	var _SCNActionable2 = _interopRequireDefault(_SCNActionable);
 
-	var _SCNAnimatable = __webpack_require__(66);
+	var _SCNAnimatable = __webpack_require__(68);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNBoundingVolume = __webpack_require__(67);
+	var _SCNBoundingVolume = __webpack_require__(69);
 
 	var _SCNBoundingVolume2 = _interopRequireDefault(_SCNBoundingVolume);
 
-	var _SCNGeometry = __webpack_require__(68);
+	var _SCNGeometry = __webpack_require__(70);
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
-	var _SCNGeometrySource = __webpack_require__(71);
+	var _SCNGeometrySource = __webpack_require__(73);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNLight = __webpack_require__(84);
+	var _SCNLight = __webpack_require__(86);
 
 	var _SCNLight2 = _interopRequireDefault(_SCNLight);
 
-	var _SCNCamera = __webpack_require__(130);
+	var _SCNCamera = __webpack_require__(132);
 
 	var _SCNCamera2 = _interopRequireDefault(_SCNCamera);
 
-	var _SCNMorpher = __webpack_require__(137);
+	var _SCNMorpher = __webpack_require__(139);
 
 	var _SCNMorpher2 = _interopRequireDefault(_SCNMorpher);
 
-	var _SCNSkinner = __webpack_require__(139);
+	var _SCNSkinner = __webpack_require__(141);
 
 	var _SCNSkinner2 = _interopRequireDefault(_SCNSkinner);
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNMatrix4MakeScale = __webpack_require__(140);
+	var _SCNMatrix4MakeScale = __webpack_require__(142);
 
 	var _SCNMatrix4MakeScale2 = _interopRequireDefault(_SCNMatrix4MakeScale);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(78);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(80);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3 = __webpack_require__(45);
+	var _SCNVector3 = __webpack_require__(47);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
-	var _SCNQuaternion = __webpack_require__(57);
+	var _SCNQuaternion = __webpack_require__(59);
 
 	var _SCNQuaternion2 = _interopRequireDefault(_SCNQuaternion);
 
-	var _SCNConstraint = __webpack_require__(141);
+	var _SCNConstraint = __webpack_require__(143);
 
 	var _SCNConstraint2 = _interopRequireDefault(_SCNConstraint);
 
-	var _SCNMovabilityHint = __webpack_require__(142);
+	var _SCNMovabilityHint = __webpack_require__(144);
 
 	var _SCNMovabilityHint2 = _interopRequireDefault(_SCNMovabilityHint);
 
-	var _SCNNodeRendererDelegate = __webpack_require__(143);
+	var _SCNNodeRendererDelegate = __webpack_require__(145);
 
 	var _SCNNodeRendererDelegate2 = _interopRequireDefault(_SCNNodeRendererDelegate);
 
-	var _SCNOrderedDictionary = __webpack_require__(79);
+	var _SCNOrderedDictionary = __webpack_require__(81);
 
 	var _SCNOrderedDictionary2 = _interopRequireDefault(_SCNOrderedDictionary);
 
-	var _SCNPhysicsBody = __webpack_require__(103);
+	var _SCNPhysicsBody = __webpack_require__(105);
 
 	var _SCNPhysicsBody2 = _interopRequireDefault(_SCNPhysicsBody);
 
-	var _SCNPhysicsField = __webpack_require__(144);
+	var _SCNPhysicsField = __webpack_require__(146);
 
 	var _SCNPhysicsField2 = _interopRequireDefault(_SCNPhysicsField);
 
-	var _SCNParticleSystem = __webpack_require__(107);
+	var _SCNParticleSystem = __webpack_require__(109);
 
 	var _SCNParticleSystem2 = _interopRequireDefault(_SCNParticleSystem);
 
-	var _SCNTransaction = __webpack_require__(80);
+	var _SCNTransaction = __webpack_require__(82);
 
 	var _SCNTransaction2 = _interopRequireDefault(_SCNTransaction);
 
-	var _SCNAudioPlayer = __webpack_require__(147);
+	var _SCNAudioPlayer = __webpack_require__(149);
 
 	var _SCNAudioPlayer2 = _interopRequireDefault(_SCNAudioPlayer);
 
-	var _SCNHitTestResult = __webpack_require__(106);
+	var _SCNHitTestResult = __webpack_require__(108);
 
 	var _SCNHitTestResult2 = _interopRequireDefault(_SCNHitTestResult);
 
@@ -20823,7 +22117,7 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _constants = __webpack_require__(49);
+	var _constants = __webpack_require__(51);
 
 	var Constants = _interopRequireWildcard(_constants);
 
@@ -23442,7 +24736,7 @@ module.exports =
 	exports.default = SCNNode;
 
 /***/ },
-/* 66 */
+/* 68 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23453,7 +24747,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _CAAnimation = __webpack_require__(48);
+	var _CAAnimation = __webpack_require__(50);
 
 	var _CAAnimation2 = _interopRequireDefault(_CAAnimation);
 
@@ -23631,7 +24925,7 @@ module.exports =
 	exports.default = SCNAnimatable;
 
 /***/ },
-/* 67 */
+/* 69 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23642,7 +24936,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -23704,7 +24998,7 @@ module.exports =
 	exports.default = SCNBoundingVolume;
 
 /***/ },
-/* 68 */
+/* 70 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -23719,43 +25013,43 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimatable = __webpack_require__(66);
+	var _SCNAnimatable = __webpack_require__(68);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNCullMode = __webpack_require__(69);
+	var _SCNCullMode = __webpack_require__(71);
 
 	var _SCNCullMode2 = _interopRequireDefault(_SCNCullMode);
 
-	var _SCNBoundingVolume = __webpack_require__(67);
+	var _SCNBoundingVolume = __webpack_require__(69);
 
 	var _SCNBoundingVolume2 = _interopRequireDefault(_SCNBoundingVolume);
 
-	var _SCNShadable = __webpack_require__(70);
+	var _SCNShadable = __webpack_require__(72);
 
 	var _SCNShadable2 = _interopRequireDefault(_SCNShadable);
 
-	var _SCNGeometrySource = __webpack_require__(71);
+	var _SCNGeometrySource = __webpack_require__(73);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNGeometryElement = __webpack_require__(72);
+	var _SCNGeometryElement = __webpack_require__(74);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNLevelOfDetail = __webpack_require__(74);
+	var _SCNLevelOfDetail = __webpack_require__(76);
 
 	var _SCNLevelOfDetail2 = _interopRequireDefault(_SCNLevelOfDetail);
 
-	var _SCNMaterial = __webpack_require__(75);
+	var _SCNMaterial = __webpack_require__(77);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
-	var _SCNOrderedDictionary = __webpack_require__(79);
+	var _SCNOrderedDictionary = __webpack_require__(81);
 
 	var _SCNOrderedDictionary2 = _interopRequireDefault(_SCNOrderedDictionary);
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -25079,7 +26373,7 @@ module.exports =
 	exports.default = SCNGeometry;
 
 /***/ },
-/* 69 */
+/* 71 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -25103,7 +26397,7 @@ module.exports =
 	exports.default = SCNCullMode;
 
 /***/ },
-/* 70 */
+/* 72 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -25212,7 +26506,7 @@ module.exports =
 	exports.default = SCNShadable;
 
 /***/ },
-/* 71 */
+/* 73 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict';
@@ -25227,11 +26521,11 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3 = __webpack_require__(45);
+	var _SCNVector3 = __webpack_require__(47);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
@@ -25888,7 +27182,7 @@ module.exports =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3).Buffer))
 
 /***/ },
-/* 72 */
+/* 74 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict';
@@ -25903,7 +27197,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(73);
+	var _SCNGeometryPrimitiveType = __webpack_require__(75);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
@@ -26142,7 +27436,7 @@ module.exports =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3).Buffer))
 
 /***/ },
-/* 73 */
+/* 75 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -26172,7 +27466,7 @@ module.exports =
 	exports.default = SCNGeometryPrimitiveType;
 
 /***/ },
-/* 74 */
+/* 76 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26187,7 +27481,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNGeometry = __webpack_require__(68);
+	var _SCNGeometry = __webpack_require__(70);
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
@@ -26316,7 +27610,7 @@ module.exports =
 	exports.default = SCNLevelOfDetail;
 
 /***/ },
-/* 75 */
+/* 77 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -26331,31 +27625,31 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimatable = __webpack_require__(66);
+	var _SCNAnimatable = __webpack_require__(68);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNShadable = __webpack_require__(70);
+	var _SCNShadable = __webpack_require__(72);
 
 	var _SCNShadable2 = _interopRequireDefault(_SCNShadable);
 
-	var _SCNMaterialProperty = __webpack_require__(76);
+	var _SCNMaterialProperty = __webpack_require__(78);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
-	var _SCNTransparencyMode = __webpack_require__(82);
+	var _SCNTransparencyMode = __webpack_require__(84);
 
 	var _SCNTransparencyMode2 = _interopRequireDefault(_SCNTransparencyMode);
 
-	var _SCNCullMode = __webpack_require__(69);
+	var _SCNCullMode = __webpack_require__(71);
 
 	var _SCNCullMode2 = _interopRequireDefault(_SCNCullMode);
 
-	var _SCNBlendMode = __webpack_require__(83);
+	var _SCNBlendMode = __webpack_require__(85);
 
 	var _SCNBlendMode2 = _interopRequireDefault(_SCNBlendMode);
 
-	var _SCNOrderedDictionary = __webpack_require__(79);
+	var _SCNOrderedDictionary = __webpack_require__(81);
 
 	var _SCNOrderedDictionary2 = _interopRequireDefault(_SCNOrderedDictionary);
 
@@ -27080,7 +28374,7 @@ module.exports =
 	exports.default = SCNMaterial;
 
 /***/ },
-/* 76 */
+/* 78 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27097,31 +28391,31 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimatable = __webpack_require__(66);
+	var _SCNAnimatable = __webpack_require__(68);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNFilterMode = __webpack_require__(77);
+	var _SCNFilterMode = __webpack_require__(79);
 
 	var _SCNFilterMode2 = _interopRequireDefault(_SCNFilterMode);
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(78);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(80);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
-	var _SCNOrderedDictionary = __webpack_require__(79);
+	var _SCNOrderedDictionary = __webpack_require__(81);
 
 	var _SCNOrderedDictionary2 = _interopRequireDefault(_SCNOrderedDictionary);
 
-	var _SCNTransaction = __webpack_require__(80);
+	var _SCNTransaction = __webpack_require__(82);
 
 	var _SCNTransaction2 = _interopRequireDefault(_SCNTransaction);
 
-	var _SCNWrapMode = __webpack_require__(81);
+	var _SCNWrapMode = __webpack_require__(83);
 
 	var _SCNWrapMode2 = _interopRequireDefault(_SCNWrapMode);
 
@@ -27761,7 +29055,7 @@ module.exports =
 	exports.default = SCNMaterialProperty;
 
 /***/ },
-/* 77 */
+/* 79 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -27787,7 +29081,7 @@ module.exports =
 	exports.default = SCNFilterMode;
 
 /***/ },
-/* 78 */
+/* 80 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -27796,7 +29090,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -27818,7 +29112,7 @@ module.exports =
 	exports.default = SCNMatrix4MakeTranslation;
 
 /***/ },
-/* 79 */
+/* 81 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -28020,7 +29314,7 @@ module.exports =
 	exports.default = SCNOrderedDictionary;
 
 /***/ },
-/* 80 */
+/* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28035,15 +29329,15 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _CAMediaTimingFunction = __webpack_require__(51);
+	var _CAMediaTimingFunction = __webpack_require__(53);
 
 	var _CAMediaTimingFunction2 = _interopRequireDefault(_CAMediaTimingFunction);
 
-	var _CABasicAnimation = __webpack_require__(55);
+	var _CABasicAnimation = __webpack_require__(57);
 
 	var _CABasicAnimation2 = _interopRequireDefault(_CABasicAnimation);
 
-	var _SCNAnimationEvent = __webpack_require__(53);
+	var _SCNAnimationEvent = __webpack_require__(55);
 
 	var _SCNAnimationEvent2 = _interopRequireDefault(_SCNAnimationEvent);
 
@@ -28454,7 +29748,7 @@ module.exports =
 	exports.default = SCNTransaction;
 
 /***/ },
-/* 81 */
+/* 83 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -28482,7 +29776,7 @@ module.exports =
 	exports.default = SCNWrapMode;
 
 /***/ },
-/* 82 */
+/* 84 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -28506,7 +29800,7 @@ module.exports =
 	exports.default = SCNTransparencyMode;
 
 /***/ },
-/* 83 */
+/* 85 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -28538,7 +29832,7 @@ module.exports =
 	exports.default = SCNBlendMode;
 
 /***/ },
-/* 84 */
+/* 86 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -28553,19 +29847,19 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimatable = __webpack_require__(66);
+	var _SCNAnimatable = __webpack_require__(68);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNTechniqueSupport = __webpack_require__(85);
+	var _SCNTechniqueSupport = __webpack_require__(87);
 
 	var _SCNTechniqueSupport2 = _interopRequireDefault(_SCNTechniqueSupport);
 
-	var _SCNMaterialProperty = __webpack_require__(76);
+	var _SCNMaterialProperty = __webpack_require__(78);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -28577,7 +29871,7 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SCNShadowMode = __webpack_require__(136);
+	var _SCNShadowMode = __webpack_require__(138);
 
 	var _SCNShadowMode2 = _interopRequireDefault(_SCNShadowMode);
 
@@ -29072,7 +30366,7 @@ module.exports =
 	exports.default = SCNLight;
 
 /***/ },
-/* 85 */
+/* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29083,7 +30377,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNTechnique = __webpack_require__(86);
+	var _SCNTechnique = __webpack_require__(88);
 
 	var _SCNTechnique2 = _interopRequireDefault(_SCNTechnique);
 
@@ -29129,7 +30423,7 @@ module.exports =
 	exports.default = SCNTechniqueSupport;
 
 /***/ },
-/* 86 */
+/* 88 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29144,11 +30438,11 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimatable = __webpack_require__(66);
+	var _SCNAnimatable = __webpack_require__(68);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNBindingBlock = __webpack_require__(87);
+	var _SCNBindingBlock = __webpack_require__(89);
 
 	var _SCNBindingBlock2 = _interopRequireDefault(_SCNBindingBlock);
 
@@ -29270,7 +30564,7 @@ module.exports =
 	exports.default = SCNTechnique;
 
 /***/ },
-/* 87 */
+/* 89 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29279,11 +30573,11 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNNode = __webpack_require__(65);
+	var _SCNNode = __webpack_require__(67);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNRenderer = __webpack_require__(88);
+	var _SCNRenderer = __webpack_require__(90);
 
 	var _SCNRenderer2 = _interopRequireDefault(_SCNRenderer);
 
@@ -29305,7 +30599,7 @@ module.exports =
 	exports.default = SCNBindingBlock;
 
 /***/ },
-/* 88 */
+/* 90 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29332,71 +30626,71 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNSceneRenderer = __webpack_require__(89);
+	var _SCNSceneRenderer = __webpack_require__(91);
 
 	var _SCNSceneRenderer2 = _interopRequireDefault(_SCNSceneRenderer);
 
-	var _SCNTechniqueSupport = __webpack_require__(85);
+	var _SCNTechniqueSupport = __webpack_require__(87);
 
 	var _SCNTechniqueSupport2 = _interopRequireDefault(_SCNTechniqueSupport);
 
-	var _SCNScene = __webpack_require__(90);
+	var _SCNScene = __webpack_require__(92);
 
 	var _SCNScene2 = _interopRequireDefault(_SCNScene);
 
-	var _SCNAntialiasingMode = __webpack_require__(124);
+	var _SCNAntialiasingMode = __webpack_require__(126);
 
 	var _SCNAntialiasingMode2 = _interopRequireDefault(_SCNAntialiasingMode);
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(78);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(80);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
-	var _SCNNode = __webpack_require__(65);
+	var _SCNNode = __webpack_require__(67);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNProgram = __webpack_require__(125);
+	var _SCNProgram = __webpack_require__(127);
 
 	var _SCNProgram2 = _interopRequireDefault(_SCNProgram);
 
-	var _SCNPhysicsWorld = __webpack_require__(99);
+	var _SCNPhysicsWorld = __webpack_require__(101);
 
 	var _SCNPhysicsWorld2 = _interopRequireDefault(_SCNPhysicsWorld);
 
-	var _SCNCamera = __webpack_require__(130);
+	var _SCNCamera = __webpack_require__(132);
 
 	var _SCNCamera2 = _interopRequireDefault(_SCNCamera);
 
-	var _SCNLight = __webpack_require__(84);
+	var _SCNLight = __webpack_require__(86);
 
 	var _SCNLight2 = _interopRequireDefault(_SCNLight);
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3 = __webpack_require__(45);
+	var _SCNVector3 = __webpack_require__(47);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(73);
+	var _SCNGeometryPrimitiveType = __webpack_require__(75);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNGeometrySource = __webpack_require__(71);
+	var _SCNGeometrySource = __webpack_require__(73);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNHitTestOption = __webpack_require__(122);
+	var _SCNHitTestOption = __webpack_require__(124);
 
 	var _SCNHitTestOption2 = _interopRequireDefault(_SCNHitTestOption);
 
-	var _SCNHitTestResult = __webpack_require__(106);
+	var _SCNHitTestResult = __webpack_require__(108);
 
 	var _SCNHitTestResult2 = _interopRequireDefault(_SCNHitTestResult);
 
@@ -29404,11 +30698,11 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SKSpriteNode = __webpack_require__(131);
+	var _SKSpriteNode = __webpack_require__(133);
 
 	var _SKSpriteNode2 = _interopRequireDefault(_SKSpriteNode);
 
-	var _SKTexture = __webpack_require__(134);
+	var _SKTexture = __webpack_require__(136);
 
 	var _SKTexture2 = _interopRequireDefault(_SKTexture);
 
@@ -32868,7 +34162,7 @@ module.exports =
 	exports.default = SCNRenderer;
 
 /***/ },
-/* 89 */
+/* 91 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -32879,23 +34173,23 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNScene = __webpack_require__(90);
+	var _SCNScene = __webpack_require__(92);
 
 	var _SCNScene2 = _interopRequireDefault(_SCNScene);
 
-	var _SCNNode = __webpack_require__(65);
+	var _SCNNode = __webpack_require__(67);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNDebugOptions = __webpack_require__(120);
+	var _SCNDebugOptions = __webpack_require__(122);
 
 	var _SCNDebugOptions2 = _interopRequireDefault(_SCNDebugOptions);
 
-	var _SCNRenderingAPI = __webpack_require__(121);
+	var _SCNRenderingAPI = __webpack_require__(123);
 
 	var _SCNRenderingAPI2 = _interopRequireDefault(_SCNRenderingAPI);
 
-	var _SCNHitTestResult = __webpack_require__(106);
+	var _SCNHitTestResult = __webpack_require__(108);
 
 	var _SCNHitTestResult2 = _interopRequireDefault(_SCNHitTestResult);
 
@@ -32903,15 +34197,15 @@ module.exports =
 
 	var _CGPoint2 = _interopRequireDefault(_CGPoint);
 
-	var _SCNHitTestOption = __webpack_require__(122);
+	var _SCNHitTestOption = __webpack_require__(124);
 
 	var _SCNHitTestOption2 = _interopRequireDefault(_SCNHitTestOption);
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNSceneRendererDelegate = __webpack_require__(123);
+	var _SCNSceneRendererDelegate = __webpack_require__(125);
 
 	var _SCNSceneRendererDelegate2 = _interopRequireDefault(_SCNSceneRendererDelegate);
 
@@ -33337,7 +34631,7 @@ module.exports =
 	exports.default = SCNSceneRenderer;
 
 /***/ },
-/* 90 */
+/* 92 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33356,59 +34650,59 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SCNNode = __webpack_require__(65);
+	var _SCNNode = __webpack_require__(67);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNMaterial = __webpack_require__(75);
+	var _SCNMaterial = __webpack_require__(77);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
-	var _SCNBox = __webpack_require__(91);
+	var _SCNBox = __webpack_require__(93);
 
 	var _SCNBox2 = _interopRequireDefault(_SCNBox);
 
-	var _SCNMaterialProperty = __webpack_require__(76);
+	var _SCNMaterialProperty = __webpack_require__(78);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
-	var _SCNGeometrySource = __webpack_require__(71);
+	var _SCNGeometrySource = __webpack_require__(73);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNSceneExportDelegate = __webpack_require__(92);
+	var _SCNSceneExportDelegate = __webpack_require__(94);
 
 	var _SCNSceneExportDelegate2 = _interopRequireDefault(_SCNSceneExportDelegate);
 
-	var _SCNSceneExportProgressHandler = __webpack_require__(93);
+	var _SCNSceneExportProgressHandler = __webpack_require__(95);
 
 	var _SCNSceneExportProgressHandler2 = _interopRequireDefault(_SCNSceneExportProgressHandler);
 
-	var _SCNSceneSource = __webpack_require__(94);
+	var _SCNSceneSource = __webpack_require__(96);
 
 	var _SCNSceneSource2 = _interopRequireDefault(_SCNSceneSource);
 
-	var _SCNPhysicsWorld = __webpack_require__(99);
+	var _SCNPhysicsWorld = __webpack_require__(101);
 
 	var _SCNPhysicsWorld2 = _interopRequireDefault(_SCNPhysicsWorld);
 
-	var _SCNParticleSystem = __webpack_require__(107);
+	var _SCNParticleSystem = __webpack_require__(109);
 
 	var _SCNParticleSystem2 = _interopRequireDefault(_SCNParticleSystem);
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _BinaryRequest2 = __webpack_require__(97);
+	var _BinaryRequest2 = __webpack_require__(99);
 
 	var _BinaryRequest3 = _interopRequireDefault(_BinaryRequest2);
 
-	var _File2 = __webpack_require__(34);
+	var _File2 = __webpack_require__(36);
 
 	var _File3 = _interopRequireDefault(_File2);
 
-	var _FileReader2 = __webpack_require__(35);
+	var _FileReader2 = __webpack_require__(37);
 
 	var _FileReader3 = _interopRequireDefault(_FileReader2);
 
@@ -33910,7 +35204,7 @@ module.exports =
 	exports.default = SCNScene;
 
 /***/ },
-/* 91 */
+/* 93 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -33921,23 +35215,23 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(68);
+	var _SCNGeometry2 = __webpack_require__(70);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
-	var _SCNGeometrySource = __webpack_require__(71);
+	var _SCNGeometrySource = __webpack_require__(73);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNGeometryElement = __webpack_require__(72);
+	var _SCNGeometryElement = __webpack_require__(74);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(73);
+	var _SCNGeometryPrimitiveType = __webpack_require__(75);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -34393,7 +35687,7 @@ module.exports =
 	exports.default = SCNBox;
 
 /***/ },
-/* 92 */
+/* 94 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -34454,7 +35748,7 @@ module.exports =
 	exports.default = SCNSceneExportDelegate;
 
 /***/ },
-/* 93 */
+/* 95 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -34478,7 +35772,7 @@ module.exports =
 	exports.default = SCNSceneExportProgressHandler;
 
 /***/ },
-/* 94 */
+/* 96 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34489,7 +35783,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSKeyedUnarchiver = __webpack_require__(33);
+	var _NSKeyedUnarchiver = __webpack_require__(35);
 
 	var _NSKeyedUnarchiver2 = _interopRequireDefault(_NSKeyedUnarchiver);
 
@@ -34497,19 +35791,19 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNScene = __webpack_require__(90);
+	var _SCNScene = __webpack_require__(92);
 
 	var _SCNScene2 = _interopRequireDefault(_SCNScene);
 
-	var _SCNSceneSourceStatusHandler = __webpack_require__(95);
+	var _SCNSceneSourceStatusHandler = __webpack_require__(97);
 
 	var _SCNSceneSourceStatusHandler2 = _interopRequireDefault(_SCNSceneSourceStatusHandler);
 
-	var _BinaryRequest2 = __webpack_require__(97);
+	var _BinaryRequest2 = __webpack_require__(99);
 
 	var _BinaryRequest3 = _interopRequireDefault(_BinaryRequest2);
 
-	var _File2 = __webpack_require__(34);
+	var _File2 = __webpack_require__(36);
 
 	var _File3 = _interopRequireDefault(_File2);
 
@@ -34814,7 +36108,7 @@ module.exports =
 	exports.default = SCNSceneSource;
 
 /***/ },
-/* 95 */
+/* 97 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34823,7 +36117,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNSceneSourceStatus = __webpack_require__(96);
+	var _SCNSceneSourceStatus = __webpack_require__(98);
 
 	var _SCNSceneSourceStatus2 = _interopRequireDefault(_SCNSceneSourceStatus);
 
@@ -34844,7 +36138,7 @@ module.exports =
 	exports.default = SCNSceneSourceStatusHandler;
 
 /***/ },
-/* 96 */
+/* 98 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -34874,7 +36168,7 @@ module.exports =
 	exports.default = SCNSceneSourceStatus;
 
 /***/ },
-/* 97 */
+/* 99 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -34884,7 +36178,7 @@ module.exports =
 	});
 	exports.BinaryRequest = undefined;
 
-	var _AjaxRequest2 = __webpack_require__(98);
+	var _AjaxRequest2 = __webpack_require__(100);
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -34919,7 +36213,7 @@ module.exports =
 	exports.default = new BinaryRequest();
 
 /***/ },
-/* 98 */
+/* 100 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -35121,7 +36415,7 @@ module.exports =
 	exports.default = new AjaxRequest();
 
 /***/ },
-/* 99 */
+/* 101 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35136,35 +36430,35 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNPhysicsBehavior = __webpack_require__(100);
+	var _SCNPhysicsBehavior = __webpack_require__(102);
 
 	var _SCNPhysicsBehavior2 = _interopRequireDefault(_SCNPhysicsBehavior);
 
-	var _SCNPhysicsContactDelegate = __webpack_require__(101);
+	var _SCNPhysicsContactDelegate = __webpack_require__(103);
 
 	var _SCNPhysicsContactDelegate2 = _interopRequireDefault(_SCNPhysicsContactDelegate);
 
-	var _SCNPhysicsContact = __webpack_require__(102);
+	var _SCNPhysicsContact = __webpack_require__(104);
 
 	var _SCNPhysicsContact2 = _interopRequireDefault(_SCNPhysicsContact);
 
-	var _SCNPhysicsBody = __webpack_require__(103);
+	var _SCNPhysicsBody = __webpack_require__(105);
 
 	var _SCNPhysicsBody2 = _interopRequireDefault(_SCNPhysicsBody);
 
-	var _SCNHitTestResult = __webpack_require__(106);
+	var _SCNHitTestResult = __webpack_require__(108);
 
 	var _SCNHitTestResult2 = _interopRequireDefault(_SCNHitTestResult);
 
-	var _SCNPhysicsShape = __webpack_require__(105);
+	var _SCNPhysicsShape = __webpack_require__(107);
 
 	var _SCNPhysicsShape2 = _interopRequireDefault(_SCNPhysicsShape);
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -35725,7 +37019,7 @@ module.exports =
 	exports.default = SCNPhysicsWorld;
 
 /***/ },
-/* 100 */
+/* 102 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35781,7 +37075,7 @@ module.exports =
 	exports.default = SCNPhysicsBehavior;
 
 /***/ },
-/* 101 */
+/* 103 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35792,11 +37086,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNPhysicsWorld = __webpack_require__(99);
+	var _SCNPhysicsWorld = __webpack_require__(101);
 
 	var _SCNPhysicsWorld2 = _interopRequireDefault(_SCNPhysicsWorld);
 
-	var _SCNPhysicsContact = __webpack_require__(102);
+	var _SCNPhysicsContact = __webpack_require__(104);
 
 	var _SCNPhysicsContact2 = _interopRequireDefault(_SCNPhysicsContact);
 
@@ -35874,7 +37168,7 @@ module.exports =
 	exports.default = SCNPhysicsContactDelegate;
 
 /***/ },
-/* 102 */
+/* 104 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -35889,11 +37183,11 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNNode = __webpack_require__(65);
+	var _SCNNode = __webpack_require__(67);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -36023,7 +37317,7 @@ module.exports =
 	exports.default = SCNPhysicsContact;
 
 /***/ },
-/* 103 */
+/* 105 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36038,19 +37332,19 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNPhysicsBodyType = __webpack_require__(104);
+	var _SCNPhysicsBodyType = __webpack_require__(106);
 
 	var _SCNPhysicsBodyType2 = _interopRequireDefault(_SCNPhysicsBodyType);
 
-	var _SCNPhysicsShape = __webpack_require__(105);
+	var _SCNPhysicsShape = __webpack_require__(107);
 
 	var _SCNPhysicsShape2 = _interopRequireDefault(_SCNPhysicsShape);
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3 = __webpack_require__(45);
+	var _SCNVector3 = __webpack_require__(47);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
@@ -36497,7 +37791,7 @@ module.exports =
 	exports.default = SCNPhysicsBody;
 
 /***/ },
-/* 104 */
+/* 106 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -36523,7 +37817,7 @@ module.exports =
 	exports.default = SCNPhysicsBodyType;
 
 /***/ },
-/* 105 */
+/* 107 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36538,11 +37832,11 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNGeometry = __webpack_require__(68);
+	var _SCNGeometry = __webpack_require__(70);
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
-	var _SCNNode = __webpack_require__(65);
+	var _SCNNode = __webpack_require__(67);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
@@ -36730,7 +38024,7 @@ module.exports =
 	exports.default = SCNPhysicsShape;
 
 /***/ },
-/* 106 */
+/* 108 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36745,15 +38039,15 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNNode = __webpack_require__(65);
+	var _SCNNode = __webpack_require__(67);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -36949,7 +38243,7 @@ module.exports =
 	exports.default = SCNHitTestResult;
 
 /***/ },
-/* 107 */
+/* 109 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -36962,11 +38256,11 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _BinaryRequest2 = __webpack_require__(97);
+	var _BinaryRequest2 = __webpack_require__(99);
 
 	var _BinaryRequest3 = _interopRequireDefault(_BinaryRequest2);
 
-	var _NSKeyedUnarchiver = __webpack_require__(33);
+	var _NSKeyedUnarchiver = __webpack_require__(35);
 
 	var _NSKeyedUnarchiver2 = _interopRequireDefault(_NSKeyedUnarchiver);
 
@@ -36974,63 +38268,63 @@ module.exports =
 
 	var _NSObject4 = _interopRequireDefault(_NSObject3);
 
-	var _SCNAnimatable = __webpack_require__(66);
+	var _SCNAnimatable = __webpack_require__(68);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNParticleBirthLocation = __webpack_require__(108);
+	var _SCNParticleBirthLocation = __webpack_require__(110);
 
 	var _SCNParticleBirthLocation2 = _interopRequireDefault(_SCNParticleBirthLocation);
 
-	var _SCNParticleBirthDirection = __webpack_require__(109);
+	var _SCNParticleBirthDirection = __webpack_require__(111);
 
 	var _SCNParticleBirthDirection2 = _interopRequireDefault(_SCNParticleBirthDirection);
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3 = __webpack_require__(45);
+	var _SCNVector3 = __webpack_require__(47);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
-	var _SCNParticleImageSequenceAnimationMode = __webpack_require__(110);
+	var _SCNParticleImageSequenceAnimationMode = __webpack_require__(112);
 
 	var _SCNParticleImageSequenceAnimationMode2 = _interopRequireDefault(_SCNParticleImageSequenceAnimationMode);
 
-	var _SCNParticleBlendMode = __webpack_require__(111);
+	var _SCNParticleBlendMode = __webpack_require__(113);
 
 	var _SCNParticleBlendMode2 = _interopRequireDefault(_SCNParticleBlendMode);
 
-	var _SCNParticleOrientationMode = __webpack_require__(112);
+	var _SCNParticleOrientationMode = __webpack_require__(114);
 
 	var _SCNParticleOrientationMode2 = _interopRequireDefault(_SCNParticleOrientationMode);
 
-	var _SCNParticleSortingMode = __webpack_require__(113);
+	var _SCNParticleSortingMode = __webpack_require__(115);
 
 	var _SCNParticleSortingMode2 = _interopRequireDefault(_SCNParticleSortingMode);
 
-	var _SCNParticleEvent = __webpack_require__(114);
+	var _SCNParticleEvent = __webpack_require__(116);
 
 	var _SCNParticleEvent2 = _interopRequireDefault(_SCNParticleEvent);
 
-	var _SCNParticleEventBlock = __webpack_require__(115);
+	var _SCNParticleEventBlock = __webpack_require__(117);
 
 	var _SCNParticleEventBlock2 = _interopRequireDefault(_SCNParticleEventBlock);
 
-	var _SCNParticlePropertyController = __webpack_require__(116);
+	var _SCNParticlePropertyController = __webpack_require__(118);
 
 	var _SCNParticlePropertyController2 = _interopRequireDefault(_SCNParticlePropertyController);
 
-	var _SCNParticleModifierStage = __webpack_require__(118);
+	var _SCNParticleModifierStage = __webpack_require__(120);
 
 	var _SCNParticleModifierStage2 = _interopRequireDefault(_SCNParticleModifierStage);
 
-	var _SCNParticleModifierBlock = __webpack_require__(119);
+	var _SCNParticleModifierBlock = __webpack_require__(121);
 
 	var _SCNParticleModifierBlock2 = _interopRequireDefault(_SCNParticleModifierBlock);
 
@@ -38656,7 +39950,7 @@ module.exports =
 	exports.default = SCNParticleSystem;
 
 /***/ },
-/* 108 */
+/* 110 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -38682,7 +39976,7 @@ module.exports =
 	exports.default = SCNParticleBirthLocation;
 
 /***/ },
-/* 109 */
+/* 111 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -38708,7 +40002,7 @@ module.exports =
 	exports.default = SCNParticleBirthDirection;
 
 /***/ },
-/* 110 */
+/* 112 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -38734,7 +40028,7 @@ module.exports =
 	exports.default = SCNParticleImageSequenceAnimationMode;
 
 /***/ },
-/* 111 */
+/* 113 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -38766,7 +40060,7 @@ module.exports =
 	exports.default = SCNParticleBlendMode;
 
 /***/ },
-/* 112 */
+/* 114 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -38794,7 +40088,7 @@ module.exports =
 	exports.default = SCNParticleOrientationMode;
 
 /***/ },
-/* 113 */
+/* 115 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -38824,7 +40118,7 @@ module.exports =
 	exports.default = SCNParticleSortingMode;
 
 /***/ },
-/* 114 */
+/* 116 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -38850,7 +40144,7 @@ module.exports =
 	exports.default = SCNParticleEvent;
 
 /***/ },
-/* 115 */
+/* 117 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -38898,7 +40192,7 @@ module.exports =
 	exports.default = SCNParticleEventBlock;
 
 /***/ },
-/* 116 */
+/* 118 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -38913,15 +40207,15 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _CAAnimation = __webpack_require__(48);
+	var _CAAnimation = __webpack_require__(50);
 
 	var _CAAnimation2 = _interopRequireDefault(_CAAnimation);
 
-	var _SCNParticleInputMode = __webpack_require__(117);
+	var _SCNParticleInputMode = __webpack_require__(119);
 
 	var _SCNParticleInputMode2 = _interopRequireDefault(_SCNParticleInputMode);
 
-	var _SCNNode = __webpack_require__(65);
+	var _SCNNode = __webpack_require__(67);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
@@ -39042,7 +40336,7 @@ module.exports =
 	exports.default = SCNParticlePropertyController;
 
 /***/ },
-/* 117 */
+/* 119 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -39068,7 +40362,7 @@ module.exports =
 	exports.default = SCNParticleInputMode;
 
 /***/ },
-/* 118 */
+/* 120 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -39096,7 +40390,7 @@ module.exports =
 	exports.default = SCNParticleModifierStage;
 
 /***/ },
-/* 119 */
+/* 121 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -39140,7 +40434,7 @@ module.exports =
 	exports.default = SCNParticleModifierBlock;
 
 /***/ },
-/* 120 */
+/* 122 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -39270,7 +40564,7 @@ module.exports =
 	exports.default = SCNDebugOptions;
 
 /***/ },
-/* 121 */
+/* 123 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -39302,7 +40596,7 @@ module.exports =
 	exports.default = SCNRenderingAPI;
 
 /***/ },
-/* 122 */
+/* 124 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -39340,7 +40634,7 @@ module.exports =
 	exports.default = SCNHitTestOption;
 
 /***/ },
-/* 123 */
+/* 125 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39351,11 +40645,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNSceneRenderer = __webpack_require__(89);
+	var _SCNSceneRenderer = __webpack_require__(91);
 
 	var _SCNSceneRenderer2 = _interopRequireDefault(_SCNSceneRenderer);
 
-	var _SCNScene = __webpack_require__(90);
+	var _SCNScene = __webpack_require__(92);
 
 	var _SCNScene2 = _interopRequireDefault(_SCNScene);
 
@@ -39468,7 +40762,7 @@ module.exports =
 	exports.default = SCNSceneRendererDelegate;
 
 /***/ },
-/* 124 */
+/* 126 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -39498,7 +40792,7 @@ module.exports =
 	exports.default = SCNAntialiasingMode;
 
 /***/ },
-/* 125 */
+/* 127 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39513,15 +40807,15 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNProgramDelegate = __webpack_require__(126);
+	var _SCNProgramDelegate = __webpack_require__(128);
 
 	var _SCNProgramDelegate2 = _interopRequireDefault(_SCNProgramDelegate);
 
-	var _SCNBufferFrequency = __webpack_require__(127);
+	var _SCNBufferFrequency = __webpack_require__(129);
 
 	var _SCNBufferFrequency2 = _interopRequireDefault(_SCNBufferFrequency);
 
-	var _SCNBufferBindingBlock = __webpack_require__(128);
+	var _SCNBufferBindingBlock = __webpack_require__(130);
 
 	var _SCNBufferBindingBlock2 = _interopRequireDefault(_SCNBufferBindingBlock);
 
@@ -39743,7 +41037,7 @@ module.exports =
 	exports.default = SCNProgram;
 
 /***/ },
-/* 126 */
+/* 128 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -39862,7 +41156,7 @@ module.exports =
 	exports.default = SCNProgramDelegate;
 
 /***/ },
-/* 127 */
+/* 129 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -39888,7 +41182,7 @@ module.exports =
 	exports.default = SCNBufferFrequency;
 
 /***/ },
-/* 128 */
+/* 130 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39897,19 +41191,19 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNBufferStream = __webpack_require__(129);
+	var _SCNBufferStream = __webpack_require__(131);
 
 	var _SCNBufferStream2 = _interopRequireDefault(_SCNBufferStream);
 
-	var _SCNNode = __webpack_require__(65);
+	var _SCNNode = __webpack_require__(67);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNShadable = __webpack_require__(70);
+	var _SCNShadable = __webpack_require__(72);
 
 	var _SCNShadable2 = _interopRequireDefault(_SCNShadable);
 
-	var _SCNRenderer = __webpack_require__(88);
+	var _SCNRenderer = __webpack_require__(90);
 
 	var _SCNRenderer2 = _interopRequireDefault(_SCNRenderer);
 
@@ -39930,7 +41224,7 @@ module.exports =
 	exports.default = SCNBufferBindingBlock;
 
 /***/ },
-/* 129 */
+/* 131 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -39987,7 +41281,7 @@ module.exports =
 	exports.default = SCNBufferStream;
 
 /***/ },
-/* 130 */
+/* 132 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40002,19 +41296,19 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimatable = __webpack_require__(66);
+	var _SCNAnimatable = __webpack_require__(68);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNTechniqueSupport = __webpack_require__(85);
+	var _SCNTechniqueSupport = __webpack_require__(87);
 
 	var _SCNTechniqueSupport2 = _interopRequireDefault(_SCNTechniqueSupport);
 
-	var _SCNMaterialProperty = __webpack_require__(76);
+	var _SCNMaterialProperty = __webpack_require__(78);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -40472,7 +41766,7 @@ module.exports =
 	exports.default = SCNCamera;
 
 /***/ },
-/* 131 */
+/* 133 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40497,7 +41791,7 @@ module.exports =
 
 	var _CGSize2 = _interopRequireDefault(_CGSize);
 
-	var _SKBlendMode = __webpack_require__(132);
+	var _SKBlendMode = __webpack_require__(134);
 
 	var _SKBlendMode2 = _interopRequireDefault(_SKBlendMode);
 
@@ -40505,11 +41799,11 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SKNode2 = __webpack_require__(133);
+	var _SKNode2 = __webpack_require__(135);
 
 	var _SKNode3 = _interopRequireDefault(_SKNode2);
 
-	var _SKTexture = __webpack_require__(134);
+	var _SKTexture = __webpack_require__(136);
 
 	var _SKTexture2 = _interopRequireDefault(_SKTexture);
 
@@ -41024,7 +42318,7 @@ module.exports =
 	exports.default = SKSpriteNode;
 
 /***/ },
-/* 132 */
+/* 134 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -41058,7 +42352,7 @@ module.exports =
 	exports.default = SKBlendMode;
 
 /***/ },
-/* 133 */
+/* 135 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42346,7 +43640,7 @@ module.exports =
 	exports.default = SKNode;
 
 /***/ },
-/* 134 */
+/* 136 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42369,7 +43663,7 @@ module.exports =
 
 	var _CGSize2 = _interopRequireDefault(_CGSize);
 
-	var _SKTextureFilteringMode = __webpack_require__(135);
+	var _SKTextureFilteringMode = __webpack_require__(137);
 
 	var _SKTextureFilteringMode2 = _interopRequireDefault(_SKTextureFilteringMode);
 
@@ -42869,7 +44163,7 @@ module.exports =
 	exports.default = SKTexture;
 
 /***/ },
-/* 135 */
+/* 137 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -42893,7 +44187,7 @@ module.exports =
 	exports.default = SKTextureFilteringMode;
 
 /***/ },
-/* 136 */
+/* 138 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -42919,7 +44213,7 @@ module.exports =
 	exports.default = SCNShadowMode;
 
 /***/ },
-/* 137 */
+/* 139 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -42936,15 +44230,15 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimatable = __webpack_require__(66);
+	var _SCNAnimatable = __webpack_require__(68);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNGeometry = __webpack_require__(68);
+	var _SCNGeometry = __webpack_require__(70);
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
-	var _SCNMorpherCalculationMode = __webpack_require__(138);
+	var _SCNMorpherCalculationMode = __webpack_require__(140);
 
 	var _SCNMorpherCalculationMode2 = _interopRequireDefault(_SCNMorpherCalculationMode);
 
@@ -43201,7 +44495,7 @@ module.exports =
 	exports.default = SCNMorpher;
 
 /***/ },
-/* 138 */
+/* 140 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -43225,7 +44519,7 @@ module.exports =
 	exports.default = SCNMorpherCalculationMode;
 
 /***/ },
-/* 139 */
+/* 141 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43240,23 +44534,23 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNGeometry = __webpack_require__(68);
+	var _SCNGeometry = __webpack_require__(70);
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
-	var _SCNNode = __webpack_require__(65);
+	var _SCNNode = __webpack_require__(67);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNGeometrySource = __webpack_require__(71);
+	var _SCNGeometrySource = __webpack_require__(73);
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(78);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(80);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
@@ -43544,7 +44838,7 @@ module.exports =
 	exports.default = SCNSkinner;
 
 /***/ },
-/* 140 */
+/* 142 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43553,7 +44847,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -43575,7 +44869,7 @@ module.exports =
 	exports.default = SCNMatrix4MakeScale;
 
 /***/ },
-/* 141 */
+/* 143 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43590,7 +44884,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAnimatable = __webpack_require__(66);
+	var _SCNAnimatable = __webpack_require__(68);
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
@@ -43646,7 +44940,7 @@ module.exports =
 	exports.default = SCNConstraint;
 
 /***/ },
-/* 142 */
+/* 144 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -43670,7 +44964,7 @@ module.exports =
 	exports.default = SCNMovabilityHint;
 
 /***/ },
-/* 143 */
+/* 145 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43681,11 +44975,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNNode = __webpack_require__(65);
+	var _SCNNode = __webpack_require__(67);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNRenderer = __webpack_require__(88);
+	var _SCNRenderer = __webpack_require__(90);
 
 	var _SCNRenderer2 = _interopRequireDefault(_SCNRenderer);
 
@@ -43738,7 +45032,7 @@ module.exports =
 	exports.default = SCNNodeRendererDelegate;
 
 /***/ },
-/* 144 */
+/* 146 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -43753,15 +45047,15 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNFieldForceEvaluator = __webpack_require__(145);
+	var _SCNFieldForceEvaluator = __webpack_require__(147);
 
 	var _SCNFieldForceEvaluator2 = _interopRequireDefault(_SCNFieldForceEvaluator);
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNPhysicsFieldScope = __webpack_require__(146);
+	var _SCNPhysicsFieldScope = __webpack_require__(148);
 
 	var _SCNPhysicsFieldScope2 = _interopRequireDefault(_SCNPhysicsFieldScope);
 
@@ -44039,7 +45333,7 @@ module.exports =
 	exports.default = SCNPhysicsField;
 
 /***/ },
-/* 145 */
+/* 147 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44048,7 +45342,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -44071,7 +45365,7 @@ module.exports =
 	exports.default = SCNFieldForceEvaluator;
 
 /***/ },
-/* 146 */
+/* 148 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -44095,7 +45389,7 @@ module.exports =
 	exports.default = SCNPhysicsFieldScope;
 
 /***/ },
-/* 147 */
+/* 149 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44110,7 +45404,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNAudioSource = __webpack_require__(148);
+	var _SCNAudioSource = __webpack_require__(150);
 
 	var _SCNAudioSource2 = _interopRequireDefault(_SCNAudioSource);
 
@@ -44255,7 +45549,7 @@ module.exports =
 	exports.default = SCNAudioPlayer;
 
 /***/ },
-/* 148 */
+/* 150 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44266,7 +45560,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _AjaxRequest2 = __webpack_require__(98);
+	var _AjaxRequest2 = __webpack_require__(100);
 
 	var _AjaxRequest3 = _interopRequireDefault(_AjaxRequest2);
 
@@ -44511,7 +45805,7 @@ module.exports =
 	exports.default = SCNAudioSource;
 
 /***/ },
-/* 149 */
+/* 151 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44524,11 +45818,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(60);
+	var _SCNAction2 = __webpack_require__(62);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(61);
+	var _SCNActionTimingMode = __webpack_require__(63);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -44675,7 +45969,7 @@ module.exports =
 	_SCNAction3.default.group = SCNActionGroup.group;
 
 /***/ },
-/* 150 */
+/* 152 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44686,11 +45980,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(60);
+	var _SCNAction2 = __webpack_require__(62);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(61);
+	var _SCNActionTimingMode = __webpack_require__(63);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -44750,7 +46044,7 @@ module.exports =
 	exports.default = SCNActionHide;
 
 /***/ },
-/* 151 */
+/* 153 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44761,11 +46055,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(60);
+	var _SCNAction2 = __webpack_require__(62);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(61);
+	var _SCNActionTimingMode = __webpack_require__(63);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -44823,7 +46117,7 @@ module.exports =
 	exports.default = SCNActionJavaScript;
 
 /***/ },
-/* 152 */
+/* 154 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44834,11 +46128,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(60);
+	var _SCNAction2 = __webpack_require__(62);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(61);
+	var _SCNActionTimingMode = __webpack_require__(63);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -44896,7 +46190,7 @@ module.exports =
 	exports.default = SCNActionMove;
 
 /***/ },
-/* 153 */
+/* 155 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44907,11 +46201,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(60);
+	var _SCNAction2 = __webpack_require__(62);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(61);
+	var _SCNActionTimingMode = __webpack_require__(63);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -44969,7 +46263,7 @@ module.exports =
 	exports.default = SCNActionPerformSelector;
 
 /***/ },
-/* 154 */
+/* 156 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -44982,11 +46276,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(60);
+	var _SCNAction2 = __webpack_require__(62);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(61);
+	var _SCNActionTimingMode = __webpack_require__(63);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -45121,7 +46415,7 @@ module.exports =
 	_SCNAction3.default.playAudioWaitForCompletion = SCNActionPlaySound.playAudioWaitForCompletion;
 
 /***/ },
-/* 155 */
+/* 157 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45132,11 +46426,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(60);
+	var _SCNAction2 = __webpack_require__(62);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(61);
+	var _SCNActionTimingMode = __webpack_require__(63);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -45194,7 +46488,7 @@ module.exports =
 	exports.default = SCNActionReference;
 
 /***/ },
-/* 156 */
+/* 158 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45207,15 +46501,15 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(60);
+	var _SCNAction2 = __webpack_require__(62);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(61);
+	var _SCNActionTimingMode = __webpack_require__(63);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
-	var _SCNNode = __webpack_require__(65);
+	var _SCNNode = __webpack_require__(67);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
@@ -45326,7 +46620,7 @@ module.exports =
 	_SCNAction3.default.removeFromParentNode = SCNActionRemove.removeFromParentNode;
 
 /***/ },
-/* 157 */
+/* 159 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45339,11 +46633,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(60);
+	var _SCNAction2 = __webpack_require__(62);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(61);
+	var _SCNActionTimingMode = __webpack_require__(63);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -45530,7 +46824,7 @@ module.exports =
 	_SCNAction3.default.repeatForever = SCNActionRepeat.repeatForever;
 
 /***/ },
-/* 158 */
+/* 160 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45543,23 +46837,23 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(60);
+	var _SCNAction2 = __webpack_require__(62);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(61);
+	var _SCNActionTimingMode = __webpack_require__(63);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
-	var _SCNNode = __webpack_require__(65);
+	var _SCNNode = __webpack_require__(67);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3 = __webpack_require__(45);
+	var _SCNVector3 = __webpack_require__(47);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
@@ -45867,7 +47161,7 @@ module.exports =
 	_SCNAction3.default.rotateToAxisAngle = SCNActionRotate.rotateToAxisAngle;
 
 /***/ },
-/* 159 */
+/* 161 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45878,11 +47172,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(60);
+	var _SCNAction2 = __webpack_require__(62);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(61);
+	var _SCNActionTimingMode = __webpack_require__(63);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -45940,7 +47234,7 @@ module.exports =
 	exports.default = SCNActionRunAction;
 
 /***/ },
-/* 160 */
+/* 162 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -45953,11 +47247,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(60);
+	var _SCNAction2 = __webpack_require__(62);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(61);
+	var _SCNActionTimingMode = __webpack_require__(63);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -46072,7 +47366,7 @@ module.exports =
 	_SCNAction3.default.run = SCNActionRunBlock.run;
 
 /***/ },
-/* 161 */
+/* 163 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46083,11 +47377,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(60);
+	var _SCNAction2 = __webpack_require__(62);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(61);
+	var _SCNActionTimingMode = __webpack_require__(63);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -46145,7 +47439,7 @@ module.exports =
 	exports.default = SCNActionScale;
 
 /***/ },
-/* 162 */
+/* 164 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46158,11 +47452,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(60);
+	var _SCNAction2 = __webpack_require__(62);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(61);
+	var _SCNActionTimingMode = __webpack_require__(63);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -46343,7 +47637,7 @@ module.exports =
 	_SCNAction3.default.sequence = SCNActionSequence.sequence;
 
 /***/ },
-/* 163 */
+/* 165 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -46365,7 +47659,7 @@ module.exports =
 	exports.default = SCNActionTimingFunction;
 
 /***/ },
-/* 164 */
+/* 166 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46376,11 +47670,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNAction2 = __webpack_require__(60);
+	var _SCNAction2 = __webpack_require__(62);
 
 	var _SCNAction3 = _interopRequireDefault(_SCNAction2);
 
-	var _SCNActionTimingMode = __webpack_require__(61);
+	var _SCNActionTimingMode = __webpack_require__(63);
 
 	var _SCNActionTimingMode2 = _interopRequireDefault(_SCNActionTimingMode);
 
@@ -46482,7 +47776,7 @@ module.exports =
 	_SCNAction3.default.waitDurationWithRange = SCNActionWait.waitDurationWithRange;
 
 /***/ },
-/* 165 */
+/* 167 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46491,7 +47785,7 @@ module.exports =
 	  value: true
 	});
 
-	var _CAAnimation = __webpack_require__(48);
+	var _CAAnimation = __webpack_require__(50);
 
 	var _CAAnimation2 = _interopRequireDefault(_CAAnimation);
 
@@ -46511,7 +47805,7 @@ module.exports =
 	exports.default = SCNAnimationEventBlock;
 
 /***/ },
-/* 166 */
+/* 168 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -46615,7 +47909,7 @@ module.exports =
 	exports.default = SCNBillboardAxis;
 
 /***/ },
-/* 167 */
+/* 169 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46626,11 +47920,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNConstraint2 = __webpack_require__(141);
+	var _SCNConstraint2 = __webpack_require__(143);
 
 	var _SCNConstraint3 = _interopRequireDefault(_SCNConstraint2);
 
-	var _SCNBillboardAxis = __webpack_require__(166);
+	var _SCNBillboardAxis = __webpack_require__(168);
 
 	var _SCNBillboardAxis2 = _interopRequireDefault(_SCNBillboardAxis);
 
@@ -46685,7 +47979,7 @@ module.exports =
 	exports.default = SCNBillboardConstraint;
 
 /***/ },
-/* 168 */
+/* 170 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46696,11 +47990,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(68);
+	var _SCNGeometry2 = __webpack_require__(70);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -46821,7 +48115,7 @@ module.exports =
 	exports.default = SCNCapsule;
 
 /***/ },
-/* 169 */
+/* 171 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -46847,7 +48141,7 @@ module.exports =
 	exports.default = SCNChamferMode;
 
 /***/ },
-/* 170 */
+/* 172 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46858,7 +48152,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(68);
+	var _SCNGeometry2 = __webpack_require__(70);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -46960,7 +48254,7 @@ module.exports =
 	exports.default = SCNCone;
 
 /***/ },
-/* 171 */
+/* 173 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -46969,7 +48263,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNGeometry2 = __webpack_require__(68);
+	var _SCNGeometry2 = __webpack_require__(70);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -47046,7 +48340,7 @@ module.exports =
 	exports.default = SCNCylinder;
 
 /***/ },
-/* 172 */
+/* 174 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47057,7 +48351,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(68);
+	var _SCNGeometry2 = __webpack_require__(70);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -47156,7 +48450,7 @@ module.exports =
 	exports.default = SCNFloor;
 
 /***/ },
-/* 173 */
+/* 175 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47167,15 +48461,15 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNConstraint2 = __webpack_require__(141);
+	var _SCNConstraint2 = __webpack_require__(143);
 
 	var _SCNConstraint3 = _interopRequireDefault(_SCNConstraint2);
 
-	var _SCNNode = __webpack_require__(65);
+	var _SCNNode = __webpack_require__(67);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -47297,7 +48591,7 @@ module.exports =
 	exports.default = SCNIKConstraint;
 
 /***/ },
-/* 174 */
+/* 176 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47308,7 +48602,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNScene = __webpack_require__(90);
+	var _SCNScene = __webpack_require__(92);
 
 	var _SCNScene2 = _interopRequireDefault(_SCNScene);
 
@@ -47354,7 +48648,7 @@ module.exports =
 	exports.default = SCNLayer;
 
 /***/ },
-/* 175 */
+/* 177 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47363,11 +48657,11 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNConstraint2 = __webpack_require__(141);
+	var _SCNConstraint2 = __webpack_require__(143);
 
 	var _SCNConstraint3 = _interopRequireDefault(_SCNConstraint2);
 
-	var _SCNNode = __webpack_require__(65);
+	var _SCNNode = __webpack_require__(67);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
@@ -47427,7 +48721,7 @@ module.exports =
 	exports.default = SCNLookAtConstraint;
 
 /***/ },
-/* 176 */
+/* 178 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47436,7 +48730,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -47461,7 +48755,7 @@ module.exports =
 	exports.default = SCNMatrix4EqualToMatrix4;
 
 /***/ },
-/* 177 */
+/* 179 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47470,7 +48764,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -47492,7 +48786,7 @@ module.exports =
 	exports.default = SCNMatrix4FromGLKMatrix4;
 
 /***/ },
-/* 178 */
+/* 180 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47501,7 +48795,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -47521,7 +48815,7 @@ module.exports =
 	exports.default = SCNMatrix4FromMat4;
 
 /***/ },
-/* 179 */
+/* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47530,7 +48824,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -47550,7 +48844,7 @@ module.exports =
 	exports.default = SCNMatrix4Invert;
 
 /***/ },
-/* 180 */
+/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47559,7 +48853,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -47583,7 +48877,7 @@ module.exports =
 	exports.default = SCNMatrix4IsIdentity;
 
 /***/ },
-/* 181 */
+/* 183 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47592,11 +48886,11 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -47645,7 +48939,7 @@ module.exports =
 	exports.default = SCNMatrix4MakeRotation;
 
 /***/ },
-/* 182 */
+/* 184 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47654,7 +48948,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -47676,7 +48970,7 @@ module.exports =
 	exports.default = SCNMatrix4Mult;
 
 /***/ },
-/* 183 */
+/* 185 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47685,7 +48979,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -47710,7 +49004,7 @@ module.exports =
 	exports.default = SCNMatrix4Rotate;
 
 /***/ },
-/* 184 */
+/* 186 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47719,11 +49013,11 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNMatrix4MakeScale = __webpack_require__(140);
+	var _SCNMatrix4MakeScale = __webpack_require__(142);
 
 	var _SCNMatrix4MakeScale2 = _interopRequireDefault(_SCNMatrix4MakeScale);
 
@@ -47747,7 +49041,7 @@ module.exports =
 	exports.default = SCNMatrix4Scale;
 
 /***/ },
-/* 185 */
+/* 187 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47758,7 +49052,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -47776,7 +49070,7 @@ module.exports =
 	};exports.default = SCNMatrix4ToGLKMatrix4;
 
 /***/ },
-/* 186 */
+/* 188 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47785,7 +49079,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -47805,7 +49099,7 @@ module.exports =
 	exports.default = SCNMatrix4ToMat4;
 
 /***/ },
-/* 187 */
+/* 189 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47814,11 +49108,11 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(78);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(80);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
@@ -47842,7 +49136,7 @@ module.exports =
 	exports.default = SCNMatrix4Translate;
 
 /***/ },
-/* 188 */
+/* 190 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -47853,15 +49147,15 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNPhysicsBehavior2 = __webpack_require__(100);
+	var _SCNPhysicsBehavior2 = __webpack_require__(102);
 
 	var _SCNPhysicsBehavior3 = _interopRequireDefault(_SCNPhysicsBehavior2);
 
-	var _SCNPhysicsBody = __webpack_require__(103);
+	var _SCNPhysicsBody = __webpack_require__(105);
 
 	var _SCNPhysicsBody2 = _interopRequireDefault(_SCNPhysicsBody);
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -47957,7 +49251,7 @@ module.exports =
 	exports.default = SCNPhysicsBallSocketJoint;
 
 /***/ },
-/* 189 */
+/* 191 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -48048,7 +49342,7 @@ module.exports =
 	exports.default = SCNPhysicsCollisionCategory;
 
 /***/ },
-/* 190 */
+/* 192 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -48059,15 +49353,15 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNPhysicsBehavior2 = __webpack_require__(100);
+	var _SCNPhysicsBehavior2 = __webpack_require__(102);
 
 	var _SCNPhysicsBehavior3 = _interopRequireDefault(_SCNPhysicsBehavior2);
 
-	var _SCNPhysicsBody = __webpack_require__(103);
+	var _SCNPhysicsBody = __webpack_require__(105);
 
 	var _SCNPhysicsBody2 = _interopRequireDefault(_SCNPhysicsBody);
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -48179,7 +49473,7 @@ module.exports =
 	exports.default = SCNPhysicsHingeJoint;
 
 /***/ },
-/* 191 */
+/* 193 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -48190,15 +49484,15 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNPhysicsBehavior2 = __webpack_require__(100);
+	var _SCNPhysicsBehavior2 = __webpack_require__(102);
 
 	var _SCNPhysicsBehavior3 = _interopRequireDefault(_SCNPhysicsBehavior2);
 
-	var _SCNPhysicsBody = __webpack_require__(103);
+	var _SCNPhysicsBody = __webpack_require__(105);
 
 	var _SCNPhysicsBody2 = _interopRequireDefault(_SCNPhysicsBody);
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -48371,7 +49665,7 @@ module.exports =
 	exports.default = SCNPhysicsSliderJoint;
 
 /***/ },
-/* 192 */
+/* 194 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -48382,15 +49676,15 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNPhysicsBehavior2 = __webpack_require__(100);
+	var _SCNPhysicsBehavior2 = __webpack_require__(102);
 
 	var _SCNPhysicsBehavior3 = _interopRequireDefault(_SCNPhysicsBehavior2);
 
-	var _SCNPhysicsBody = __webpack_require__(103);
+	var _SCNPhysicsBody = __webpack_require__(105);
 
 	var _SCNPhysicsBody2 = _interopRequireDefault(_SCNPhysicsBody);
 
-	var _SCNPhysicsVehicleWheel = __webpack_require__(193);
+	var _SCNPhysicsVehicleWheel = __webpack_require__(195);
 
 	var _SCNPhysicsVehicleWheel2 = _interopRequireDefault(_SCNPhysicsVehicleWheel);
 
@@ -48534,7 +49828,7 @@ module.exports =
 	exports.default = SCNPhysicsVehicle;
 
 /***/ },
-/* 193 */
+/* 195 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -48549,11 +49843,11 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNNode = __webpack_require__(65);
+	var _SCNNode = __webpack_require__(67);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -48703,7 +49997,7 @@ module.exports =
 	exports.default = SCNPhysicsVehicleWheel;
 
 /***/ },
-/* 194 */
+/* 196 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -48714,7 +50008,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(68);
+	var _SCNGeometry2 = __webpack_require__(70);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -48830,7 +50124,7 @@ module.exports =
 	exports.default = SCNPlane;
 
 /***/ },
-/* 195 */
+/* 197 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -48839,7 +50133,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNGeometry2 = __webpack_require__(68);
+	var _SCNGeometry2 = __webpack_require__(70);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -48932,7 +50226,7 @@ module.exports =
 	exports.default = SCNPyramid;
 
 /***/ },
-/* 196 */
+/* 198 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -48956,7 +50250,7 @@ module.exports =
 	exports.default = SCNReferenceLoadingPolicy;
 
 /***/ },
-/* 197 */
+/* 199 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -48969,15 +50263,15 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNNode2 = __webpack_require__(65);
+	var _SCNNode2 = __webpack_require__(67);
 
 	var _SCNNode3 = _interopRequireDefault(_SCNNode2);
 
-	var _SCNReferenceLoadingPolicy = __webpack_require__(196);
+	var _SCNReferenceLoadingPolicy = __webpack_require__(198);
 
 	var _SCNReferenceLoadingPolicy2 = _interopRequireDefault(_SCNReferenceLoadingPolicy);
 
-	var _SCNScene = __webpack_require__(90);
+	var _SCNScene = __webpack_require__(92);
 
 	var _SCNScene2 = _interopRequireDefault(_SCNScene);
 
@@ -49196,7 +50490,7 @@ module.exports =
 	exports.default = SCNReferenceNode;
 
 /***/ },
-/* 198 */
+/* 200 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -49248,7 +50542,7 @@ module.exports =
 	exports.default = SCNShadableHelper;
 
 /***/ },
-/* 199 */
+/* 201 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -49276,7 +50570,7 @@ module.exports =
 	exports.default = SCNShaderModifierEntryPoint;
 
 /***/ },
-/* 200 */
+/* 202 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -49285,11 +50579,11 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNGeometry2 = __webpack_require__(68);
+	var _SCNGeometry2 = __webpack_require__(70);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
-	var _SCNChamferMode = __webpack_require__(169);
+	var _SCNChamferMode = __webpack_require__(171);
 
 	var _SCNChamferMode2 = _interopRequireDefault(_SCNChamferMode);
 
@@ -49373,7 +50667,7 @@ module.exports =
 	exports.default = SCNShape;
 
 /***/ },
-/* 201 */
+/* 203 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -49384,7 +50678,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(68);
+	var _SCNGeometry2 = __webpack_require__(70);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -49478,7 +50772,7 @@ module.exports =
 	exports.default = SCNSphere;
 
 /***/ },
-/* 202 */
+/* 204 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -49489,7 +50783,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNGeometry2 = __webpack_require__(68);
+	var _SCNGeometry2 = __webpack_require__(70);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -49637,7 +50931,7 @@ module.exports =
 	exports.default = SCNText;
 
 /***/ },
-/* 203 */
+/* 205 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -49646,7 +50940,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNGeometry2 = __webpack_require__(68);
+	var _SCNGeometry2 = __webpack_require__(70);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -49723,7 +51017,7 @@ module.exports =
 	exports.default = SCNTorus;
 
 /***/ },
-/* 204 */
+/* 206 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -49734,15 +51028,15 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNConstraint2 = __webpack_require__(141);
+	var _SCNConstraint2 = __webpack_require__(143);
 
 	var _SCNConstraint3 = _interopRequireDefault(_SCNConstraint2);
 
-	var _SCNNode = __webpack_require__(65);
+	var _SCNNode = __webpack_require__(67);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
@@ -49803,7 +51097,7 @@ module.exports =
 	exports.default = SCNTransformConstraint;
 
 /***/ },
-/* 205 */
+/* 207 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -49812,7 +51106,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNGeometry2 = __webpack_require__(68);
+	var _SCNGeometry2 = __webpack_require__(70);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
@@ -49898,7 +51192,7 @@ module.exports =
 	exports.default = SCNTube;
 
 /***/ },
-/* 206 */
+/* 208 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -49907,7 +51201,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -49931,7 +51225,7 @@ module.exports =
 	exports.default = SCNVector3EqualToVector3;
 
 /***/ },
-/* 207 */
+/* 209 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -49940,7 +51234,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -49960,7 +51254,7 @@ module.exports =
 	exports.default = SCNVector3FromFloat3;
 
 /***/ },
-/* 208 */
+/* 210 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -49969,7 +51263,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -49991,7 +51285,7 @@ module.exports =
 	exports.default = SCNVector3FromGLKVector3;
 
 /***/ },
-/* 209 */
+/* 211 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50000,7 +51294,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -50022,7 +51316,7 @@ module.exports =
 	exports.default = SCNVector3Make;
 
 /***/ },
-/* 210 */
+/* 212 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50031,7 +51325,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -50051,7 +51345,7 @@ module.exports =
 	exports.default = SCNVector3ToFloat3;
 
 /***/ },
-/* 211 */
+/* 213 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50062,7 +51356,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -50080,7 +51374,7 @@ module.exports =
 	};exports.default = SCNVector3ToGLKVector3;
 
 /***/ },
-/* 212 */
+/* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50089,7 +51383,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(44);
+	var _SCNVector = __webpack_require__(46);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -50100,7 +51394,7 @@ module.exports =
 	exports.default = SCNVector3Zero;
 
 /***/ },
-/* 213 */
+/* 215 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50109,7 +51403,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(45);
+	var _SCNVector = __webpack_require__(47);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -50133,7 +51427,7 @@ module.exports =
 	exports.default = SCNVector4EqualToVector4;
 
 /***/ },
-/* 214 */
+/* 216 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50142,7 +51436,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(45);
+	var _SCNVector = __webpack_require__(47);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -50162,7 +51456,7 @@ module.exports =
 	exports.default = SCNVector4FromFloat4;
 
 /***/ },
-/* 215 */
+/* 217 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50171,7 +51465,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(45);
+	var _SCNVector = __webpack_require__(47);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -50193,7 +51487,7 @@ module.exports =
 	exports.default = SCNVector4FromGLKVector4;
 
 /***/ },
-/* 216 */
+/* 218 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50202,7 +51496,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(45);
+	var _SCNVector = __webpack_require__(47);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -50225,7 +51519,7 @@ module.exports =
 	exports.default = SCNVector4Make;
 
 /***/ },
-/* 217 */
+/* 219 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50234,7 +51528,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(45);
+	var _SCNVector = __webpack_require__(47);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -50254,7 +51548,7 @@ module.exports =
 	exports.default = SCNVector4ToFloat4;
 
 /***/ },
-/* 218 */
+/* 220 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50265,7 +51559,7 @@ module.exports =
 	  value: true
 	});
 
-	var _SCNVector = __webpack_require__(45);
+	var _SCNVector = __webpack_require__(47);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -50283,7 +51577,7 @@ module.exports =
 	};exports.default = SCNVector4ToGLKVector4;
 
 /***/ },
-/* 219 */
+/* 221 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -50308,43 +51602,43 @@ module.exports =
 
 	var _CGSize2 = _interopRequireDefault(_CGSize);
 
-	var _SCNRenderer = __webpack_require__(88);
+	var _SCNRenderer = __webpack_require__(90);
 
 	var _SCNRenderer2 = _interopRequireDefault(_SCNRenderer);
 
-	var _SCNTechniqueSupport = __webpack_require__(85);
+	var _SCNTechniqueSupport = __webpack_require__(87);
 
 	var _SCNTechniqueSupport2 = _interopRequireDefault(_SCNTechniqueSupport);
 
-	var _SCNScene = __webpack_require__(90);
+	var _SCNScene = __webpack_require__(92);
 
 	var _SCNScene2 = _interopRequireDefault(_SCNScene);
 
-	var _SCNRenderingAPI = __webpack_require__(121);
+	var _SCNRenderingAPI = __webpack_require__(123);
 
 	var _SCNRenderingAPI2 = _interopRequireDefault(_SCNRenderingAPI);
 
-	var _SCNAntialiasingMode = __webpack_require__(124);
+	var _SCNAntialiasingMode = __webpack_require__(126);
 
 	var _SCNAntialiasingMode2 = _interopRequireDefault(_SCNAntialiasingMode);
 
-	var _SCNNode = __webpack_require__(65);
+	var _SCNNode = __webpack_require__(67);
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNCamera = __webpack_require__(130);
+	var _SCNCamera = __webpack_require__(132);
 
 	var _SCNCamera2 = _interopRequireDefault(_SCNCamera);
 
-	var _SCNMatrix = __webpack_require__(46);
+	var _SCNMatrix = __webpack_require__(48);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(78);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(80);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
-	var _SCNVector = __webpack_require__(45);
+	var _SCNVector = __webpack_require__(47);
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
@@ -52121,7 +53415,7 @@ module.exports =
 	exports.default = SCNView;
 
 /***/ },
-/* 220 */
+/* 222 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -52138,7 +53432,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SKActionTimingMode = __webpack_require__(221);
+	var _SKActionTimingMode = __webpack_require__(223);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
@@ -53830,7 +55124,7 @@ module.exports =
 	exports.default = SKAction;
 
 /***/ },
-/* 221 */
+/* 223 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -53858,7 +55152,7 @@ module.exports =
 	exports.default = SKActionTimingMode;
 
 /***/ },
-/* 222 */
+/* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -53867,11 +55161,11 @@ module.exports =
 	  value: true
 	});
 
-	var _SKNode2 = __webpack_require__(133);
+	var _SKNode2 = __webpack_require__(135);
 
 	var _SKNode3 = _interopRequireDefault(_SKNode2);
 
-	var _SKBlendMode = __webpack_require__(132);
+	var _SKBlendMode = __webpack_require__(134);
 
 	var _SKBlendMode2 = _interopRequireDefault(_SKBlendMode);
 
@@ -54002,7 +55296,7 @@ module.exports =
 	exports.default = SKEffectNode;
 
 /***/ },
-/* 223 */
+/* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -54015,15 +55309,15 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _SKAction2 = __webpack_require__(220);
+	var _SKAction2 = __webpack_require__(222);
 
 	var _SKAction3 = _interopRequireDefault(_SKAction2);
 
-	var _SKActionTimingMode = __webpack_require__(221);
+	var _SKActionTimingMode = __webpack_require__(223);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
-	var _SKNode = __webpack_require__(133);
+	var _SKNode = __webpack_require__(135);
 
 	var _SKNode2 = _interopRequireDefault(_SKNode);
 
@@ -54206,7 +55500,7 @@ module.exports =
 	_SKAction3.default.fadeAlphaToDuration = SKFade.fadeAlphaToDuration;
 
 /***/ },
-/* 224 */
+/* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -54219,15 +55513,15 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _SKAction2 = __webpack_require__(220);
+	var _SKAction2 = __webpack_require__(222);
 
 	var _SKAction3 = _interopRequireDefault(_SKAction2);
 
-	var _SKActionTimingMode = __webpack_require__(221);
+	var _SKActionTimingMode = __webpack_require__(223);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
-	var _SKNode = __webpack_require__(133);
+	var _SKNode = __webpack_require__(135);
 
 	var _SKNode2 = _interopRequireDefault(_SKNode);
 
@@ -54349,7 +55643,7 @@ module.exports =
 	_SKAction3.default.group = SKGroup.group;
 
 /***/ },
-/* 225 */
+/* 227 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -54375,7 +55669,7 @@ module.exports =
 	exports.default = SKLabelHorizontalAlignmentMode;
 
 /***/ },
-/* 226 */
+/* 228 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -54392,19 +55686,19 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SKNode2 = __webpack_require__(133);
+	var _SKNode2 = __webpack_require__(135);
 
 	var _SKNode3 = _interopRequireDefault(_SKNode2);
 
-	var _SKLabelVerticalAlignmentMode = __webpack_require__(227);
+	var _SKLabelVerticalAlignmentMode = __webpack_require__(229);
 
 	var _SKLabelVerticalAlignmentMode2 = _interopRequireDefault(_SKLabelVerticalAlignmentMode);
 
-	var _SKLabelHorizontalAlignmentMode = __webpack_require__(225);
+	var _SKLabelHorizontalAlignmentMode = __webpack_require__(227);
 
 	var _SKLabelHorizontalAlignmentMode2 = _interopRequireDefault(_SKLabelHorizontalAlignmentMode);
 
-	var _SKBlendMode = __webpack_require__(132);
+	var _SKBlendMode = __webpack_require__(134);
 
 	var _SKBlendMode2 = _interopRequireDefault(_SKBlendMode);
 
@@ -54872,7 +56166,7 @@ module.exports =
 	exports.default = SKLabelNode;
 
 /***/ },
-/* 227 */
+/* 229 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -54900,7 +56194,7 @@ module.exports =
 	exports.default = SKLabelVerticalAlignmentMode;
 
 /***/ },
-/* 228 */
+/* 230 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -54913,15 +56207,15 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _SKAction2 = __webpack_require__(220);
+	var _SKAction2 = __webpack_require__(222);
 
 	var _SKAction3 = _interopRequireDefault(_SKAction2);
 
-	var _SKActionTimingMode = __webpack_require__(221);
+	var _SKActionTimingMode = __webpack_require__(223);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
-	var _SKNode = __webpack_require__(133);
+	var _SKNode = __webpack_require__(135);
 
 	var _SKNode2 = _interopRequireDefault(_SKNode);
 
@@ -55194,7 +56488,7 @@ module.exports =
 	_SKAction3.default.scaleYToDuration = SKScale.scaleYToDuration;
 
 /***/ },
-/* 229 */
+/* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -55217,11 +56511,11 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SKEffectNode2 = __webpack_require__(222);
+	var _SKEffectNode2 = __webpack_require__(224);
 
 	var _SKEffectNode3 = _interopRequireDefault(_SKEffectNode2);
 
-	var _SKSceneScaleMode = __webpack_require__(230);
+	var _SKSceneScaleMode = __webpack_require__(232);
 
 	var _SKSceneScaleMode2 = _interopRequireDefault(_SKSceneScaleMode);
 
@@ -55535,7 +56829,7 @@ module.exports =
 	exports.default = SKScene;
 
 /***/ },
-/* 230 */
+/* 232 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -55563,7 +56857,7 @@ module.exports =
 	exports.default = SKSceneScaleMode;
 
 /***/ },
-/* 231 */
+/* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -55576,15 +56870,15 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _SKAction2 = __webpack_require__(220);
+	var _SKAction2 = __webpack_require__(222);
 
 	var _SKAction3 = _interopRequireDefault(_SKAction2);
 
-	var _SKActionTimingMode = __webpack_require__(221);
+	var _SKActionTimingMode = __webpack_require__(223);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
-	var _SKNode = __webpack_require__(133);
+	var _SKNode = __webpack_require__(135);
 
 	var _SKNode2 = _interopRequireDefault(_SKNode);
 
@@ -55724,7 +57018,7 @@ module.exports =
 	_SKAction3.default.sequence = SKSequence.sequence;
 
 /***/ },
-/* 232 */
+/* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -55743,7 +57037,7 @@ module.exports =
 
 	var _CGLineJoin2 = _interopRequireDefault(_CGLineJoin);
 
-	var _SKBlendMode = __webpack_require__(132);
+	var _SKBlendMode = __webpack_require__(134);
 
 	var _SKBlendMode2 = _interopRequireDefault(_SKBlendMode);
 
@@ -55751,7 +57045,7 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SKNode2 = __webpack_require__(133);
+	var _SKNode2 = __webpack_require__(135);
 
 	var _SKNode3 = _interopRequireDefault(_SKNode2);
 
@@ -56080,7 +57374,7 @@ module.exports =
 	exports.default = SKShapeNode;
 
 /***/ },
-/* 233 */
+/* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -56091,15 +57385,15 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SKAction2 = __webpack_require__(220);
+	var _SKAction2 = __webpack_require__(222);
 
 	var _SKAction3 = _interopRequireDefault(_SKAction2);
 
-	var _SKActionTimingMode = __webpack_require__(221);
+	var _SKActionTimingMode = __webpack_require__(223);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
-	var _SKNode = __webpack_require__(133);
+	var _SKNode = __webpack_require__(135);
 
 	var _SKNode2 = _interopRequireDefault(_SKNode);
 
@@ -56182,7 +57476,7 @@ module.exports =
 	_SKAction3.default.waitForDurationWithRange = SKWait.waitForDurationWithRange;
 
 /***/ },
-/* 234 */
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict';
@@ -56193,11 +57487,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _BinaryParser = __webpack_require__(235);
+	var _BinaryParser = __webpack_require__(237);
 
 	var _BinaryParser2 = _interopRequireDefault(_BinaryParser);
 
-	var _ecl = __webpack_require__(37);
+	var _ecl = __webpack_require__(39);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -56478,7 +57772,7 @@ module.exports =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3).Buffer))
 
 /***/ },
-/* 235 */
+/* 237 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -56646,7 +57940,7 @@ module.exports =
 	};
 
 /***/ },
-/* 236 */
+/* 238 */
 /***/ function(module, exports) {
 
 	'use strict';
