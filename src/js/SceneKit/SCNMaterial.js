@@ -96,7 +96,7 @@ export default class SCNMaterial extends NSObject {
       fillMode: ['integer', null],
       entityID: ['string', '_entityID'],
       indexOfRefraction: ['integer', null],
-      shadableHelper: ['SCNShadableHelper', null],
+      shadableHelper: ['SCNShadableHelper', '_shadableHelper'],
       selfIlluminationOcclusion: ['integer', null]
     }
   }
@@ -261,6 +261,12 @@ export default class SCNMaterial extends NSObject {
     this._entityID = null
 
     this._createPresentationProperties()
+
+    /**
+     * @access private
+     * @type {?SCNShadableHelper}
+     */
+    this._shadableHelper = null
   }
 
   // Configuring a Material’s Visual Properties

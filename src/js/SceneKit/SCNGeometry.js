@@ -838,16 +838,6 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     gl.bindBuffer(gl.UNIFORM_BUFFER, null)
 
     const textureFlags = []
-    //const textures = [
-    //  { name: 'emission', symbol: 'TEXTURE0' },
-    //  { name: 'ambient', symbol: 'TEXTURE1' },
-    //  { name: 'diffuse', symbol: 'TEXTURE2' },
-    //  { name: 'specular', symbol: 'TEXTURE3' },
-    //  { name: 'reflective', symbol: 'TEXTURE4' },
-    //  { name: 'transparent', symbol: 'TEXTURE5' },
-    //  { name: 'multiply', symbol: 'TEXTURE6' },
-    //  { name: 'normal', symbol: 'TEXTURE7' }
-    //]
 
     // emission
     let selfIllumination = 0
@@ -881,10 +871,6 @@ This method is for OpenGL shader programs only. To bind custom variable data for
 
     // normal
     this._setTextureToName(gl, material._normal, 'TEXTURE7', textureFlags)
-
-    //for(const texture of textures){
-    //  this._setTextureToName(gl, material[texture.name], texture.symbol, textureFlags)
-    //}
 
     // TODO: cache uniform location
     gl.uniform1iv(gl.getUniformLocation(program, 'textureFlags'), new Int32Array(textureFlags))

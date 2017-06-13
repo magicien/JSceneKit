@@ -9625,7 +9625,6 @@ module.exports =
 	      var f = aSelector.bind(observer);
 	      if (aName === _NSNotification2.default.Name.GCControllerDidConnect) {
 	        window.addEventListener('gamepadconnected', function (e) {
-	          console.error('e.gamepad: ' + e.gamepad);
 	          f(new _NSNotification2.default(aName, e.gamepad, anObject));
 	        });
 	      }
@@ -24164,16 +24163,6 @@ module.exports =
 	      gl.bindBuffer(gl.UNIFORM_BUFFER, null);
 
 	      var textureFlags = [];
-	      //const textures = [
-	      //  { name: 'emission', symbol: 'TEXTURE0' },
-	      //  { name: 'ambient', symbol: 'TEXTURE1' },
-	      //  { name: 'diffuse', symbol: 'TEXTURE2' },
-	      //  { name: 'specular', symbol: 'TEXTURE3' },
-	      //  { name: 'reflective', symbol: 'TEXTURE4' },
-	      //  { name: 'transparent', symbol: 'TEXTURE5' },
-	      //  { name: 'multiply', symbol: 'TEXTURE6' },
-	      //  { name: 'normal', symbol: 'TEXTURE7' }
-	      //]
 
 	      // emission
 	      var selfIllumination = 0;
@@ -24207,10 +24196,6 @@ module.exports =
 
 	      // normal
 	      this._setTextureToName(gl, material._normal, 'TEXTURE7', textureFlags);
-
-	      //for(const texture of textures){
-	      //  this._setTextureToName(gl, material[texture.name], texture.symbol, textureFlags)
-	      //}
 
 	      // TODO: cache uniform location
 	      gl.uniform1iv(gl.getUniformLocation(program, 'textureFlags'), new Int32Array(textureFlags));
@@ -25972,7 +25957,7 @@ module.exports =
 	        fillMode: ['integer', null],
 	        entityID: ['string', '_entityID'],
 	        indexOfRefraction: ['integer', null],
-	        shadableHelper: ['SCNShadableHelper', null],
+	        shadableHelper: ['SCNShadableHelper', '_shadableHelper'],
 	        selfIlluminationOcclusion: ['integer', null]
 	      };
 	    }
@@ -26142,6 +26127,12 @@ module.exports =
 	    _this._entityID = null;
 
 	    _this._createPresentationProperties();
+
+	    /**
+	     * @access private
+	     * @type {?SCNShadableHelper}
+	     */
+	    _this._shadableHelper = null;
 	    return _this;
 	  }
 
@@ -29880,7 +29871,6 @@ module.exports =
 	      var program = this._defaultShadowProgram._glProgram;
 	      gl.bindFramebuffer(gl.FRAMEBUFFER, light._getDepthBufferForContext(gl));
 	      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
-	      //gl.clear(gl.DEPTH_BUFFER_BIT)
 
 	      gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewProjectionTransform'), false, lp.lightViewProjectionTransform.float32Array());
 
@@ -29994,7 +29984,7 @@ module.exports =
 	      var geometry = node.presentation.geometry;
 	      var scnProgram = this._getProgramForGeometry(geometry);
 	      var program = scnProgram._glProgram;
-	      //gl.useProgram(program)
+
 	      this._switchProgram(scnProgram);
 
 	      if (geometry._vertexArrayObjects === null) {
@@ -30026,6 +30016,32 @@ module.exports =
 	        throw new Error('geometryCount: 0');
 	      }
 	      for (var i = 0; i < geometryCount; i++) {
+	        var materialCount = geometry.materials.length;
+	        var material = geometry.materials[i % materialCount];
+	        var p = program;
+	        if (material.program) {
+	          this._switchProgram(material.program);
+	          // TODO: refactoring
+	          p = material.program._glProgram;
+	          var _uniformTime = gl.getUniformLocation(p, 'u_time');
+	          if (uniformTime) {
+	            // this._time might be too large.
+	            var _time = this._time % 100000.0;
+	            gl.uniform1f(uniformTime, _time);
+	          }
+	          if (node.presentation.skinner !== null) {
+	            gl.uniform1i(gl.getUniformLocation(p, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints);
+	            gl.uniform4fv(gl.getUniformLocation(p, 'skinningJoints'), node.presentation.skinner.float32Array());
+	          } else {
+	            gl.uniform1i(gl.getUniformLocation(p, 'numSkinningJoints'), 0);
+	            gl.uniform4fv(gl.getUniformLocation(p, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f());
+	          }
+	          var materialIndex = gl.getUniformBlockIndex(p, 'materialUniform');
+	          gl.uniformBlockBinding(p, materialIndex, _materialLoc);
+	          gl.bindBufferBase(gl.UNIFORM_BUFFER, _materialLoc, geometry._materialBuffer);
+	        } else {
+	          this._switchProgram(scnProgram);
+	        }
 	        var vao = geometry._vertexArrayObjects[i];
 	        var element = geometry.geometryElements[i];
 
@@ -30033,7 +30049,7 @@ module.exports =
 	        // FIXME: use bufferData instead of bindBufferBase
 	        gl.bindBufferBase(gl.UNIFORM_BUFFER, _materialLoc, geometry._materialBuffer);
 
-	        geometry._bufferMaterialData(gl, program, i, node.presentation.opacity);
+	        geometry._bufferMaterialData(gl, p, i, node.presentation.opacity);
 
 	        var shape = null;
 	        switch (element.primitiveType) {
@@ -30966,20 +30982,60 @@ module.exports =
 	     */
 	    value: function _getProgramForGeometry(geometry) {
 	      if (geometry.program !== null) {
-	        //return geometry.program._glProgram
 	        return geometry.program;
 	      }
-	      if (geometry._shadableHelper === null) {
-	        //return this._defaultProgram._glProgram
-	        return this._defaultProgram;
+
+	      if (geometry._shadableHelper !== null) {
+	        this._compileProgramForObject(geometry);
+	      }
+	      var _iteratorNormalCompletion7 = true;
+	      var _didIteratorError7 = false;
+	      var _iteratorError7 = undefined;
+
+	      try {
+	        for (var _iterator7 = geometry.materials[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
+	          var material = _step7.value;
+
+	          if (material._shadableHelper !== null && material.program === null) {
+	            this._compileProgramForObject(material);
+	          }
+	        }
+	      } catch (err) {
+	        _didIteratorError7 = true;
+	        _iteratorError7 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion7 && _iterator7.return) {
+	            _iterator7.return();
+	          }
+	        } finally {
+	          if (_didIteratorError7) {
+	            throw _iteratorError7;
+	          }
+	        }
 	      }
 
+	      if (geometry.program) {
+	        return geometry.program;
+	      }
+	      return this._defaultProgram;
+	    }
+
+	    /**
+	     * @access private
+	     * @param {SCNShadable} obj -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_compileProgramForObject',
+	    value: function _compileProgramForObject(obj) {
 	      var gl = this.context;
 	      var p = new _SCNProgram2.default();
 	      p._glProgram = gl.createProgram();
 
-	      var vsText = this._vertexShaderForGeometry(geometry);
-	      var fsText = this._fragmentShaderForGeometry(geometry);
+	      var vsText = this._vertexShaderForObject(obj);
+	      var fsText = this._fragmentShaderForObject(obj);
 
 	      // initialize vertex shader
 	      var vertexShader = gl.createShader(gl.VERTEX_SHADER);
@@ -31011,7 +31067,7 @@ module.exports =
 	        throw new Error('program link error: ' + _info2);
 	      }
 
-	      geometry.program = p;
+	      obj.program = p;
 
 	      return p;
 	    }
@@ -31073,16 +31129,16 @@ module.exports =
 	     */
 
 	  }, {
-	    key: '_vertexShaderForGeometry',
+	    key: '_vertexShaderForObject',
 
 
 	    /**
 	     * @access private
-	     * @param {SCNGeometry} geometry -
+	     * @param {SCNShadable} obj -
 	     * @returns {string} -
 	     */
-	    value: function _vertexShaderForGeometry(geometry) {
-	      return this._replaceTexts(_defaultVertexShader, geometry);
+	    value: function _vertexShaderForObject(obj) {
+	      return this._replaceTexts(_defaultVertexShader, obj._shadableHelper);
 	    }
 
 	    /**
@@ -31091,28 +31147,30 @@ module.exports =
 	     */
 
 	  }, {
-	    key: '_fragmentShaderForGeometry',
+	    key: '_fragmentShaderForObject',
 
 
 	    /**
 	     * @access private
-	     * @param {SCNGeometry} geometry -
+	     * @param {SCNShadable} obj -
 	     * @returns {string} -
 	     */
-	    value: function _fragmentShaderForGeometry(geometry) {
-	      return this._replaceTexts(_defaultFragmentShader, geometry);
+	    value: function _fragmentShaderForObject(obj) {
+	      return this._replaceTexts(_defaultFragmentShader, obj._shadableHelper);
 	    }
 
 	    /**
 	     * @access private
 	     * @param {string} text -
-	     * @param {SCNGeometry} geometry -
+	     * @param {?SCNShadableHelper} [shadableHelper = null] -
 	     * @returns {string} -
 	     */
 
 	  }, {
 	    key: '_replaceTexts',
-	    value: function _replaceTexts(text, geometry) {
+	    value: function _replaceTexts(text) {
+	      var shadableHelper = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
 	      var vars = new Map();
 	      var numAmbient = this._numLights[_SCNLight2.default.LightType.ambient];
 	      var numDirectional = this._numLights[_SCNLight2.default.LightType.directional];
@@ -31137,8 +31195,8 @@ module.exports =
 	      vars.set('__USE_SHADER_MODIFIER_FRAGMENT__', 0);
 	      vars.set('__SHADER_MODIFIER_FRAGMENT__', '');
 
-	      if (geometry && geometry._shadableHelper && geometry._shadableHelper._shaderModifiers) {
-	        var modifiers = geometry._shadableHelper._shaderModifiers;
+	      if (shadableHelper && shadableHelper._shaderModifiers) {
+	        var modifiers = shadableHelper._shaderModifiers;
 	        if (modifiers.SCNShaderModifierEntryPointGeometry) {
 	          vars.set('__USE_SHADER_MODIFIER_GEOMETRY__', 1);
 	          vars.set('__SHADER_MODIFIER_GEOMETRY__', modifiers.SCNShaderModifierEntryPointGeometry);
@@ -31236,7 +31294,6 @@ module.exports =
 	      var baseGeometry = node.geometry;
 
 	      // prepare vertex array data
-	      //const vertexBuffer = geometry._createVertexBuffer(gl, baseGeometry)
 	      var vertexBuffer = geometry._createVertexBuffer(gl, node);
 	      // TODO: retain attribute locations
 	      var positionLoc = gl.getAttribLocation(program, 'position');
@@ -31721,13 +31778,13 @@ module.exports =
 	    value: function _numLightsChanged() {
 	      var changed = false;
 	      var types = [].concat(_toConsumableArray(Object.values(_SCNLight2.default.LightType)), ['directionalShadow']);
-	      var _iteratorNormalCompletion7 = true;
-	      var _didIteratorError7 = false;
-	      var _iteratorError7 = undefined;
+	      var _iteratorNormalCompletion8 = true;
+	      var _didIteratorError8 = false;
+	      var _iteratorError8 = undefined;
 
 	      try {
-	        for (var _iterator7 = types[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
-	          var type = _step7.value;
+	        for (var _iterator8 = types[Symbol.iterator](), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
+	          var type = _step8.value;
 
 	          var num = this._lightNodes[type].length;
 	          if (num !== this._numLights[type]) {
@@ -31736,16 +31793,16 @@ module.exports =
 	          }
 	        }
 	      } catch (err) {
-	        _didIteratorError7 = true;
-	        _iteratorError7 = err;
+	        _didIteratorError8 = true;
+	        _iteratorError8 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion7 && _iterator7.return) {
-	            _iterator7.return();
+	          if (!_iteratorNormalCompletion8 && _iterator8.return) {
+	            _iterator8.return();
 	          }
 	        } finally {
-	          if (_didIteratorError7) {
-	            throw _iteratorError7;
+	          if (_didIteratorError8) {
+	            throw _iteratorError8;
 	          }
 	        }
 	      }

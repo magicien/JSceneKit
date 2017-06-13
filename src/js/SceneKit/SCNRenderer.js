@@ -1573,7 +1573,6 @@ export default class SCNRenderer extends NSObject {
     const program = this._defaultShadowProgram._glProgram
     gl.bindFramebuffer(gl.FRAMEBUFFER, light._getDepthBufferForContext(gl))
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT)
-    //gl.clear(gl.DEPTH_BUFFER_BIT)
 
     gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewProjectionTransform'), false, lp.lightViewProjectionTransform.float32Array())
 
@@ -1662,7 +1661,7 @@ export default class SCNRenderer extends NSObject {
     const geometry = node.presentation.geometry
     const scnProgram = this._getProgramForGeometry(geometry)
     const program = scnProgram._glProgram
-    //gl.useProgram(program)
+
     this._switchProgram(scnProgram)
 
     if(geometry._vertexArrayObjects === null){
@@ -1694,6 +1693,32 @@ export default class SCNRenderer extends NSObject {
       throw new Error('geometryCount: 0')
     }
     for(let i=0; i<geometryCount; i++){
+      const materialCount = geometry.materials.length
+      const material = geometry.materials[i % materialCount]
+      let p = program
+      if(material.program){
+        this._switchProgram(material.program)
+        // TODO: refactoring
+        p = material.program._glProgram
+        const _uniformTime = gl.getUniformLocation(p, 'u_time')
+        if(uniformTime){
+          // this._time might be too large.
+          const time = this._time % 100000.0
+          gl.uniform1f(uniformTime, time)
+        }
+        if(node.presentation.skinner !== null){
+          gl.uniform1i(gl.getUniformLocation(p, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
+          gl.uniform4fv(gl.getUniformLocation(p, 'skinningJoints'), node.presentation.skinner.float32Array())
+        }else{
+          gl.uniform1i(gl.getUniformLocation(p, 'numSkinningJoints'), 0)
+          gl.uniform4fv(gl.getUniformLocation(p, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f())
+        }
+        const materialIndex = gl.getUniformBlockIndex(p, 'materialUniform')
+        gl.uniformBlockBinding(p, materialIndex, _materialLoc)
+        gl.bindBufferBase(gl.UNIFORM_BUFFER, _materialLoc, geometry._materialBuffer)
+      }else{
+        this._switchProgram(scnProgram)
+      }
       const vao = geometry._vertexArrayObjects[i]
       const element = geometry.geometryElements[i]
 
@@ -1701,7 +1726,7 @@ export default class SCNRenderer extends NSObject {
       // FIXME: use bufferData instead of bindBufferBase
       gl.bindBufferBase(gl.UNIFORM_BUFFER, _materialLoc, geometry._materialBuffer)
 
-      geometry._bufferMaterialData(gl, program, i, node.presentation.opacity)
+      geometry._bufferMaterialData(gl, p, i, node.presentation.opacity)
 
       let shape = null
       switch(element.primitiveType){
@@ -2638,20 +2663,36 @@ export default class SCNRenderer extends NSObject {
    */
   _getProgramForGeometry(geometry) {
     if(geometry.program !== null){
-      //return geometry.program._glProgram
       return geometry.program
     }
-    if(geometry._shadableHelper === null){
-      //return this._defaultProgram._glProgram
-      return this._defaultProgram
+
+    if(geometry._shadableHelper !== null){
+      this._compileProgramForObject(geometry)
+    }
+    for(let material of geometry.materials){
+      if(material._shadableHelper !== null && material.program === null){
+        this._compileProgramForObject(material)
+      }
     }
 
+    if(geometry.program){
+      return geometry.program
+    }
+    return this._defaultProgram
+  }
+
+  /**
+   * @access private
+   * @param {SCNShadable} obj -
+   * @returns {void}
+   */
+  _compileProgramForObject(obj) {
     const gl = this.context
     const p = new SCNProgram()
     p._glProgram = gl.createProgram()
 
-    const vsText = this._vertexShaderForGeometry(geometry)
-    const fsText = this._fragmentShaderForGeometry(geometry)
+    const vsText = this._vertexShaderForObject(obj)
+    const fsText = this._fragmentShaderForObject(obj)
 
     // initialize vertex shader
     const vertexShader = gl.createShader(gl.VERTEX_SHADER)
@@ -2684,7 +2725,7 @@ export default class SCNRenderer extends NSObject {
       throw new Error(`program link error: ${info}`)
     }
 
-    geometry.program = p
+    obj.program = p
 
     return p
   }
@@ -2807,11 +2848,11 @@ export default class SCNRenderer extends NSObject {
 
   /**
    * @access private
-   * @param {SCNGeometry} geometry -
+   * @param {SCNShadable} obj -
    * @returns {string} -
    */
-  _vertexShaderForGeometry(geometry) {
-    return this._replaceTexts(_defaultVertexShader, geometry)
+  _vertexShaderForObject(obj) {
+    return this._replaceTexts(_defaultVertexShader, obj._shadableHelper)
   }
 
   /**
@@ -2824,20 +2865,20 @@ export default class SCNRenderer extends NSObject {
 
   /**
    * @access private
-   * @param {SCNGeometry} geometry -
+   * @param {SCNShadable} obj -
    * @returns {string} -
    */
-  _fragmentShaderForGeometry(geometry) {
-    return this._replaceTexts(_defaultFragmentShader, geometry)
+  _fragmentShaderForObject(obj) {
+    return this._replaceTexts(_defaultFragmentShader, obj._shadableHelper)
   }
 
   /**
    * @access private
    * @param {string} text -
-   * @param {SCNGeometry} geometry -
+   * @param {?SCNShadableHelper} [shadableHelper = null] -
    * @returns {string} -
    */
-  _replaceTexts(text, geometry) {
+  _replaceTexts(text, shadableHelper = null) {
     const vars = new Map()
     const numAmbient = this._numLights[SCNLight.LightType.ambient]
     const numDirectional = this._numLights[SCNLight.LightType.directional]
@@ -2862,8 +2903,8 @@ export default class SCNRenderer extends NSObject {
     vars.set('__USE_SHADER_MODIFIER_FRAGMENT__', 0)
     vars.set('__SHADER_MODIFIER_FRAGMENT__', '')
 
-    if(geometry && geometry._shadableHelper && geometry._shadableHelper._shaderModifiers){
-      const modifiers = geometry._shadableHelper._shaderModifiers
+    if(shadableHelper && shadableHelper._shaderModifiers){
+      const modifiers = shadableHelper._shaderModifiers
       if(modifiers.SCNShaderModifierEntryPointGeometry){
         vars.set('__USE_SHADER_MODIFIER_GEOMETRY__', 1)
         vars.set('__SHADER_MODIFIER_GEOMETRY__', modifiers.SCNShaderModifierEntryPointGeometry)
@@ -2960,7 +3001,6 @@ export default class SCNRenderer extends NSObject {
     const baseGeometry = node.geometry
 
     // prepare vertex array data
-    //const vertexBuffer = geometry._createVertexBuffer(gl, baseGeometry)
     const vertexBuffer = geometry._createVertexBuffer(gl, node)
     // TODO: retain attribute locations
     const positionLoc = gl.getAttribLocation(program, 'position')
