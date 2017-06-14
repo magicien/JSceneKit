@@ -13314,14 +13314,27 @@ module.exports =
 	  DOWN: 13,
 	  LEFT: 14,
 	  RIGHT: 15
-
-	  /**
-	   * The standard set of gamepad controls. 
-	   * @access public
-	   * @extends {NSObject}
-	   * @see https://developer.apple.com/documentation/gamecontroller/gcgamepad
-	   */
 	};
+
+	if (navigator.userAgent.indexOf('Firefox') !== -1) {
+	  // Is this a bug or something?
+	  _defaultMapping.A = 1;
+	  _defaultMapping.B = 2;
+	  _defaultMapping.X = 0;
+	  _defaultMapping.Y = 3;
+	  _defaultMapping.UP = 14;
+	  _defaultMapping.DOWN = 15;
+	  _defaultMapping.LEFT = 16;
+	  _defaultMapping.RIGHT = 17;
+	}
+
+	/**
+	 * The standard set of gamepad controls. 
+	 * @access public
+	 * @extends {NSObject}
+	 * @see https://developer.apple.com/documentation/gamecontroller/gcgamepad
+	 */
+
 	var GCGamepad = function (_NSObject) {
 	  _inherits(GCGamepad, _NSObject);
 
