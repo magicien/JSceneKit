@@ -15545,7 +15545,7 @@ module.exports =
 	  }, {
 	    key: 'dot',
 	    value: function dot(v) {
-	      return this.x * v.x + this.y * v.y + this.z * v.z + this.z * v.z;
+	      return this.x * v.x + this.y * v.y + this.z * v.z + this.w * v.w;
 	    }
 
 	    /**
