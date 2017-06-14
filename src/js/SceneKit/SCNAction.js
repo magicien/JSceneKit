@@ -1,6 +1,7 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
+import CAMediaTimingFunction from '../QuartzCore/CAMediaTimingFunction'
 import CGPoint from '../CoreGraphics/CGPoint'
 import CGRect from '../CoreGraphics/CGRect'
 import CGSize from '../CoreGraphics/CGSize'
@@ -595,6 +596,18 @@ SCNAction *sequenceReverse = [sequence reversedAction];
   }
 
   _getTime(time, needTimeConversion) {
+    const t = this.__getTime(time, needTimeConversion)
+    if(this._timingMode === SCNActionTimingMode.easeIn){
+      return CAMediaTimingFunction.functionWithName(Constants.kCAMediaTimingFunctionEaseIn)._getValueAtTime(t)
+    }else if(this._timingMode === SCNActionTimingMode.easeOut){
+      return CAMediaTimingFunction.functionWithName(Constants.kCAMediaTimingFunctionEaseOut)._getValueAtTime(t)
+    }else if(this._timingMode === SCNActionTimingMode.easeInEaseOut){
+      return CAMediaTimingFunction.functionWithName(Constants.kCAMediaTimingFunctionEaseInEaseOut)._getValueAtTime(t)
+    }
+    return t
+  }
+
+  __getTime(time, needTimeConversion) {
     if(!needTimeConversion){
       if(time >= 1.0 && !this._finished){
         this._finished = true

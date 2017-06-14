@@ -22309,6 +22309,10 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
+	var _CAMediaTimingFunction = __webpack_require__(61);
+
+	var _CAMediaTimingFunction2 = _interopRequireDefault(_CAMediaTimingFunction);
+
 	var _CGPoint = __webpack_require__(7);
 
 	var _CGPoint2 = _interopRequireDefault(_CGPoint);
@@ -22514,6 +22518,19 @@ module.exports =
 	  }, {
 	    key: '_getTime',
 	    value: function _getTime(time, needTimeConversion) {
+	      var t = this.__getTime(time, needTimeConversion);
+	      if (this._timingMode === _SCNActionTimingMode2.default.easeIn) {
+	        return _CAMediaTimingFunction2.default.functionWithName(Constants.kCAMediaTimingFunctionEaseIn)._getValueAtTime(t);
+	      } else if (this._timingMode === _SCNActionTimingMode2.default.easeOut) {
+	        return _CAMediaTimingFunction2.default.functionWithName(Constants.kCAMediaTimingFunctionEaseOut)._getValueAtTime(t);
+	      } else if (this._timingMode === _SCNActionTimingMode2.default.easeInEaseOut) {
+	        return _CAMediaTimingFunction2.default.functionWithName(Constants.kCAMediaTimingFunctionEaseInEaseOut)._getValueAtTime(t);
+	      }
+	      return t;
+	    }
+	  }, {
+	    key: '__getTime',
+	    value: function __getTime(time, needTimeConversion) {
 	      if (!needTimeConversion) {
 	        if (time >= 1.0 && !this._finished) {
 	          this._finished = true;
