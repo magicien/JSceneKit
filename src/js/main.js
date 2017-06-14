@@ -31,6 +31,14 @@ import NSMutableDictionary from './Foundation/NSMutableDictionary'
 import NSNotification from './Foundation/NSNotification'
 import NSURL from './Foundation/NSURL'
 import NSValue from './Foundation/NSValue'
+import GCController from './GameController/GCController'
+import GCControllerAxisInput from './GameController/GCControllerAxisInput'
+import GCControllerButtonInput from './GameController/GCControllerButtonInput'
+import GCControllerDirectionPad from './GameController/GCControllerDirectionPad'
+import GCControllerElement from './GameController/GCControllerElement'
+import GCExtendedGamepad from './GameController/GCExtendedGamepad'
+import GCGamepad from './GameController/GCGamepad'
+import GCMicroGamepad from './GameController/GCMicroGamepad'
 import NSObject from './ObjectiveC/NSObject'
 import CAAction from './QuartzCore/CAAction'
 import CAAnimation from './QuartzCore/CAAnimation'
@@ -263,6 +271,14 @@ _ClassList.registerClass(NSMutableDictionary)
 _ClassList.registerClass(NSNotification)
 _ClassList.registerClass(NSURL)
 _ClassList.registerClass(NSValue)
+_ClassList.registerClass(GCController)
+_ClassList.registerClass(GCControllerAxisInput)
+_ClassList.registerClass(GCControllerButtonInput)
+_ClassList.registerClass(GCControllerDirectionPad)
+_ClassList.registerClass(GCControllerElement)
+_ClassList.registerClass(GCExtendedGamepad)
+_ClassList.registerClass(GCGamepad)
+_ClassList.registerClass(GCMicroGamepad)
 _ClassList.registerClass(NSObject)
 _ClassList.registerClass(CAAction)
 _ClassList.registerClass(CAAnimation)
@@ -488,6 +504,14 @@ exports.NSMutableDictionary = NSMutableDictionary
 exports.NSNotification = NSNotification
 exports.NSURL = NSURL
 exports.NSValue = NSValue
+exports.GCController = GCController
+exports.GCControllerAxisInput = GCControllerAxisInput
+exports.GCControllerButtonInput = GCControllerButtonInput
+exports.GCControllerDirectionPad = GCControllerDirectionPad
+exports.GCControllerElement = GCControllerElement
+exports.GCExtendedGamepad = GCExtendedGamepad
+exports.GCGamepad = GCGamepad
+exports.GCMicroGamepad = GCMicroGamepad
 exports.NSObject = NSObject
 exports.CAAction = CAAction
 exports.CAAnimation = CAAnimation

@@ -4,6 +4,7 @@
 import CGPoint from '../CoreGraphics/CGPoint'
 import CGRect from '../CoreGraphics/CGRect'
 import CGSize from '../CoreGraphics/CGSize'
+import GCController from '../GameController/GCController'
 import SCNRenderer from './SCNRenderer'
 import SCNTechniqueSupport from './SCNTechniqueSupport'
 import SCNScene from './SCNScene'
@@ -1128,6 +1129,7 @@ export default class SCNView {
     this._requestAnimationFrame.call(window, () => {
       this._currentSystemTime = Date.now() * 0.001
       this.currentTime = this._currentSystemTime
+      GCController._update()
       this._drawAtTimeWithContext(this.currentTime, this._context)
 
       if(this._isPlaying){

@@ -2,6 +2,7 @@
 
 import NSObject from '../ObjectiveC/NSObject'
 import NSNotification from './NSNotification'
+import GCController from '../GameController/GCController'
 
 let _default = null
 
@@ -97,7 +98,16 @@ token = center.addObserverForName("OneTimeNotification", object: nil, queue: mai
     const f = aSelector.bind(observer)
     if(aName === NSNotification.Name.GCControllerDidConnect){
       window.addEventListener('gamepadconnected', (e) => {
-        f(new NSNotification(aName, e.gamepad, anObject))
+        const controller = GCController.getController(e.gamepad)
+        if(controller){
+          f(new NSNotification(aName, controller, anObject))
+        }
+      })
+      window.addEventListener('gamepaddisconnected', (e) => {
+        const controller = GCController.getController(e.gamepad)
+        if(controller){
+          f(new NSNotification(aName, controller, anObject))
+        }
       })
     }
   }
