@@ -147,10 +147,10 @@ class _Particle extends NSObject {
       this.size
     ]
     return [
-      ...baseArray, this.texLeft, this.texTop,
-      ...baseArray, this.texRight, this.texTop,
-      ...baseArray, this.texLeft, this.texBottom,
-      ...baseArray, this.texRight, this.texBottom
+      ...baseArray, -1.0, -1.0, this.texLeft, this.texTop,
+      ...baseArray, 1.0, -1.0, this.texRight, this.texTop,
+      ...baseArray, -1.0, 1.0, this.texLeft, this.texBottom,
+      ...baseArray, 1.0, 1.0, this.texRight, this.texBottom
     ]
   }
 
@@ -977,20 +977,24 @@ export default class SCNParticleSystem extends NSObject {
     const sizeLoc = gl.getAttribLocation(program, 'size')
     //const lifeLoc = gl.getAttribLocation(program, 'life')
     const cornerLoc = gl.getAttribLocation(program, 'corner')
+    const texcoordLoc = gl.getAttribLocation(program, 'texcoord')
 
     // vertexAttribPointer(ulong idx, long size, ulong type, bool norm, long stride, ulong offset)
+    const stride = 76
     gl.enableVertexAttribArray(positionLoc)
-    gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, 68, 0)
+    gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, stride, 0)
     gl.enableVertexAttribArray(velocityLoc)
-    gl.vertexAttribPointer(velocityLoc, 3, gl.FLOAT, false, 68, 12)
+    gl.vertexAttribPointer(velocityLoc, 3, gl.FLOAT, false, stride, 12)
     gl.enableVertexAttribArray(rotationLoc)
-    gl.vertexAttribPointer(rotationLoc, 4, gl.FLOAT, false, 68, 24)
+    gl.vertexAttribPointer(rotationLoc, 4, gl.FLOAT, false, stride, 24)
     gl.enableVertexAttribArray(colorLoc)
-    gl.vertexAttribPointer(colorLoc, 4, gl.FLOAT, false, 68, 40)
+    gl.vertexAttribPointer(colorLoc, 4, gl.FLOAT, false, stride, 40)
     gl.enableVertexAttribArray(sizeLoc)
-    gl.vertexAttribPointer(sizeLoc, 1, gl.FLOAT, false, 68, 56)
+    gl.vertexAttribPointer(sizeLoc, 1, gl.FLOAT, false, stride, 56)
     gl.enableVertexAttribArray(cornerLoc)
-    gl.vertexAttribPointer(cornerLoc, 2, gl.FLOAT, false, 68, 60)
+    gl.vertexAttribPointer(cornerLoc, 2, gl.FLOAT, false, stride, 60)
+    gl.enableVertexAttribArray(texcoordLoc)
+    gl.vertexAttribPointer(texcoordLoc, 2, gl.FLOAT, false, stride, 68)
 
     /*
     const arr = []
@@ -1006,8 +1010,8 @@ export default class SCNParticleSystem extends NSObject {
     
     // initialize parameters
     this._numImages = this.imageSequenceRowCount * this.imageSequenceColumnCount
-    this._imageWidth = 2.0 / this.imageSequenceColumnCount
-    this._imageHeight = 2.0 / this.imageSequenceRowCount
+    this._imageWidth = 1.0 / this.imageSequenceColumnCount
+    this._imageHeight = 1.0 / this.imageSequenceRowCount
   }
 
   _updateIndexBuffer(context, length) {
@@ -1194,7 +1198,11 @@ export default class SCNParticleSystem extends NSObject {
       p.imageFrameRate = 0
     }
 
-    p.initialImageFrame = this.imageSequenceInitialFrame + this.imageSequenceInitialFrameVariation * (Math.random() - 0.5)
+    const numImages = this.imageSequenceRowCount * this.imageSequenceColumnCount
+    p.initialImageFrame = (this.imageSequenceInitialFrame + this.imageSequenceInitialFrameVariation * (Math.random() - 0.5)) % numImages
+    if(p.initialImageFrame < 0){
+      p.initialImageFrame += numImages
+    }
 
     return p
   }
@@ -1277,7 +1285,7 @@ export default class SCNParticleSystem extends NSObject {
 
       const frame = p.initialImageFrame + p.imageFrameRate * pdt
       let imageFrame = 0
-      switch(p.imageSequenceAnimationMode){
+      switch(this.imageSequenceAnimationMode){
         case SCNParticleImageSequenceAnimationMode.repeat: {
           imageFrame = Math.floor(frame % this._numImages)
           break
@@ -1303,10 +1311,10 @@ export default class SCNParticleSystem extends NSObject {
       const imageY = Math.floor(imageFrame / this.imageSequenceRowCount)
       const imageX = imageFrame % this.imageSequenceColumnCount
 
-      p.texLeft = imageX * this._imageWidth - 1.0
-      p.texTop = imageY * this._imageHeight - 1.0
-      p.texRight = (imageX + 1) * this._imageWidth - 1.0
-      p.texBottom = (imageY + 1) * this._imageHeight - 1.0
+      p.texLeft = imageX * this._imageWidth
+      p.texTop = (imageY + 1) * this._imageHeight
+      p.texRight = (imageX + 1) * this._imageWidth
+      p.texBottom = imageY * this._imageHeight
     })
     this._particles = this._particles.filter((p) => { return p.life <= 1 })
     this._prevTime = currentTime

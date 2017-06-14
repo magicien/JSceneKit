@@ -32472,7 +32472,7 @@ module.exports =
 	 * @access private
 	 * @type {string}
 	 */
-	var _defaultParticleVertexShader = '#version 300 es\n  precision mediump float;\n\n  uniform mat4 modelTransform;\n  uniform mat4 viewTransform;\n  uniform mat4 projectionTransform;\n  uniform int orientationMode;\n  uniform float stretchFactor;\n\n  in vec3 position;\n  in vec3 velocity;\n  in vec4 rotation;\n  in vec4 color;\n  in float size;\n  //in float life;\n  in vec2 corner;\n\n  out vec2 v_texcoord;\n  out vec4 v_color;\n\n  void main() {\n    vec4 pos = viewTransform * vec4(position, 1.0);\n    vec3 d;\n\n    if(stretchFactor > 0.0){\n      vec4 v = viewTransform * vec4(velocity, 0.0) * stretchFactor;\n      if(corner.y > 0.0){\n        pos.xyz += v.xyz;\n      }\n      vec2 cy = normalize(v.xy);\n      vec2 cx = vec2(-cy.y, cy.x);\n      d = vec3(cx * corner.x + cy * corner.y, 0) * size;\n    }else{\n      float sinAngle = sin(rotation.w);\n      float cosAngle = cos(rotation.w);\n      float tcos = 1.0 - cosAngle;\n\n      d = vec3(\n          corner.x * (rotation.x * rotation.x * tcos + cosAngle)\n        + corner.y * (rotation.x * rotation.y * tcos - rotation.z * sinAngle),\n          corner.x * (rotation.y * rotation.x * tcos + rotation.z * sinAngle)\n        + corner.y * (rotation.y * rotation.y * tcos + cosAngle),\n          corner.x * (rotation.z * rotation.x * tcos - rotation.y * sinAngle)\n        + corner.y * (rotation.z * rotation.y * tcos + rotation.x * sinAngle)) * size;\n      if(orientationMode == 2){\n        // orientation: free\n        d = mat3(viewTransform) * mat3(modelTransform) * d;\n      }\n    }\n    pos.xyz += d;\n\n    v_color = color;\n    v_texcoord = corner * vec2(0.5, -0.5) + 0.5;\n    gl_Position = projectionTransform * pos;\n  }\n';
+	var _defaultParticleVertexShader = '#version 300 es\n  precision mediump float;\n\n  uniform mat4 modelTransform;\n  uniform mat4 viewTransform;\n  uniform mat4 projectionTransform;\n  uniform int orientationMode;\n  uniform float stretchFactor;\n\n  in vec3 position;\n  in vec3 velocity;\n  in vec4 rotation;\n  in vec4 color;\n  in float size;\n  //in float life;\n  in vec2 corner;\n  in vec2 texcoord;\n\n  out vec2 v_texcoord;\n  out vec4 v_color;\n\n  void main() {\n    vec4 pos = viewTransform * vec4(position, 1.0);\n    vec3 d;\n\n    if(stretchFactor > 0.0){\n      vec4 v = viewTransform * vec4(velocity, 0.0) * stretchFactor;\n      if(corner.y > 0.0){\n        pos.xyz += v.xyz;\n      }\n      vec2 cy = normalize(v.xy);\n      vec2 cx = vec2(-cy.y, cy.x);\n      d = vec3(cx * corner.x + cy * corner.y, 0) * size;\n    }else{\n      float sinAngle = sin(rotation.w);\n      float cosAngle = cos(rotation.w);\n      float tcos = 1.0 - cosAngle;\n\n      d = vec3(\n          corner.x * (rotation.x * rotation.x * tcos + cosAngle)\n        + corner.y * (rotation.x * rotation.y * tcos - rotation.z * sinAngle),\n          corner.x * (rotation.y * rotation.x * tcos + rotation.z * sinAngle)\n        + corner.y * (rotation.y * rotation.y * tcos + cosAngle),\n          corner.x * (rotation.z * rotation.x * tcos - rotation.y * sinAngle)\n        + corner.y * (rotation.z * rotation.y * tcos + rotation.x * sinAngle)) * size;\n      if(orientationMode == 2){\n        // orientation: free\n        d = mat3(viewTransform) * mat3(modelTransform) * d;\n      }\n    }\n    pos.xyz += d;\n\n    v_color = color;\n    v_texcoord = texcoord;\n    gl_Position = projectionTransform * pos;\n  }\n';
 
 	/**
 	 * @access private
@@ -40243,7 +40243,7 @@ module.exports =
 	    key: 'floatArray',
 	    value: function floatArray() {
 	      var baseArray = [].concat(_toConsumableArray(this.position.floatArray()), _toConsumableArray(this.velocity.floatArray()), _toConsumableArray(this.axis.floatArray()), [this.angle], _toConsumableArray(this.color.floatArray()), [this.size]);
-	      return [].concat(_toConsumableArray(baseArray), [this.texLeft, this.texTop], _toConsumableArray(baseArray), [this.texRight, this.texTop], _toConsumableArray(baseArray), [this.texLeft, this.texBottom], _toConsumableArray(baseArray), [this.texRight, this.texBottom]);
+	      return [].concat(_toConsumableArray(baseArray), [-1.0, -1.0, this.texLeft, this.texTop], _toConsumableArray(baseArray), [1.0, -1.0, this.texRight, this.texTop], _toConsumableArray(baseArray), [-1.0, 1.0, this.texLeft, this.texBottom], _toConsumableArray(baseArray), [1.0, 1.0, this.texRight, this.texBottom]);
 	    }
 	  }, {
 	    key: 'valueForKeyPath',
@@ -41077,21 +41077,25 @@ module.exports =
 	      var colorLoc = gl.getAttribLocation(program, 'color');
 	      var sizeLoc = gl.getAttribLocation(program, 'size'
 	      //const lifeLoc = gl.getAttribLocation(program, 'life')
-	      );var cornerLoc = gl.getAttribLocation(program, 'corner'
+	      );var cornerLoc = gl.getAttribLocation(program, 'corner');
+	      var texcoordLoc = gl.getAttribLocation(program, 'texcoord'
 
 	      // vertexAttribPointer(ulong idx, long size, ulong type, bool norm, long stride, ulong offset)
-	      );gl.enableVertexAttribArray(positionLoc);
-	      gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, 68, 0);
+	      );var stride = 76;
+	      gl.enableVertexAttribArray(positionLoc);
+	      gl.vertexAttribPointer(positionLoc, 3, gl.FLOAT, false, stride, 0);
 	      gl.enableVertexAttribArray(velocityLoc);
-	      gl.vertexAttribPointer(velocityLoc, 3, gl.FLOAT, false, 68, 12);
+	      gl.vertexAttribPointer(velocityLoc, 3, gl.FLOAT, false, stride, 12);
 	      gl.enableVertexAttribArray(rotationLoc);
-	      gl.vertexAttribPointer(rotationLoc, 4, gl.FLOAT, false, 68, 24);
+	      gl.vertexAttribPointer(rotationLoc, 4, gl.FLOAT, false, stride, 24);
 	      gl.enableVertexAttribArray(colorLoc);
-	      gl.vertexAttribPointer(colorLoc, 4, gl.FLOAT, false, 68, 40);
+	      gl.vertexAttribPointer(colorLoc, 4, gl.FLOAT, false, stride, 40);
 	      gl.enableVertexAttribArray(sizeLoc);
-	      gl.vertexAttribPointer(sizeLoc, 1, gl.FLOAT, false, 68, 56);
+	      gl.vertexAttribPointer(sizeLoc, 1, gl.FLOAT, false, stride, 56);
 	      gl.enableVertexAttribArray(cornerLoc);
-	      gl.vertexAttribPointer(cornerLoc, 2, gl.FLOAT, false, 68, 60
+	      gl.vertexAttribPointer(cornerLoc, 2, gl.FLOAT, false, stride, 60);
+	      gl.enableVertexAttribArray(texcoordLoc);
+	      gl.vertexAttribPointer(texcoordLoc, 2, gl.FLOAT, false, stride, 68
 
 	      /*
 	      const arr = []
@@ -41107,8 +41111,8 @@ module.exports =
 
 	      // initialize parameters
 	      );this._numImages = this.imageSequenceRowCount * this.imageSequenceColumnCount;
-	      this._imageWidth = 2.0 / this.imageSequenceColumnCount;
-	      this._imageHeight = 2.0 / this.imageSequenceRowCount;
+	      this._imageWidth = 1.0 / this.imageSequenceColumnCount;
+	      this._imageHeight = 1.0 / this.imageSequenceRowCount;
 	    }
 	  }, {
 	    key: '_updateIndexBuffer',
@@ -41307,7 +41311,11 @@ module.exports =
 	        p.imageFrameRate = 0;
 	      }
 
-	      p.initialImageFrame = this.imageSequenceInitialFrame + this.imageSequenceInitialFrameVariation * (Math.random() - 0.5);
+	      var numImages = this.imageSequenceRowCount * this.imageSequenceColumnCount;
+	      p.initialImageFrame = (this.imageSequenceInitialFrame + this.imageSequenceInitialFrameVariation * (Math.random() - 0.5)) % numImages;
+	      if (p.initialImageFrame < 0) {
+	        p.initialImageFrame += numImages;
+	      }
 
 	      return p;
 	    }
@@ -41396,7 +41404,7 @@ module.exports =
 
 	        var frame = p.initialImageFrame + p.imageFrameRate * pdt;
 	        var imageFrame = 0;
-	        switch (p.imageSequenceAnimationMode) {
+	        switch (_this4.imageSequenceAnimationMode) {
 	          case _SCNParticleImageSequenceAnimationMode2.default.repeat:
 	            {
 	              imageFrame = Math.floor(frame % _this4._numImages);
@@ -41425,10 +41433,10 @@ module.exports =
 	        var imageY = Math.floor(imageFrame / _this4.imageSequenceRowCount);
 	        var imageX = imageFrame % _this4.imageSequenceColumnCount;
 
-	        p.texLeft = imageX * _this4._imageWidth - 1.0;
-	        p.texTop = imageY * _this4._imageHeight - 1.0;
-	        p.texRight = (imageX + 1) * _this4._imageWidth - 1.0;
-	        p.texBottom = (imageY + 1) * _this4._imageHeight - 1.0;
+	        p.texLeft = imageX * _this4._imageWidth;
+	        p.texTop = (imageY + 1) * _this4._imageHeight;
+	        p.texRight = (imageX + 1) * _this4._imageWidth;
+	        p.texBottom = imageY * _this4._imageHeight;
 	      });
 	      this._particles = this._particles.filter(function (p) {
 	        return p.life <= 1;

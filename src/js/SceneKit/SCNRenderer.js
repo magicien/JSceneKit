@@ -580,6 +580,7 @@ const _defaultParticleVertexShader =
   in float size;
   //in float life;
   in vec2 corner;
+  in vec2 texcoord;
 
   out vec2 v_texcoord;
   out vec4 v_color;
@@ -616,7 +617,7 @@ const _defaultParticleVertexShader =
     pos.xyz += d;
 
     v_color = color;
-    v_texcoord = corner * vec2(0.5, -0.5) + 0.5;
+    v_texcoord = texcoord;
     gl_Position = projectionTransform * pos;
   }
 `
