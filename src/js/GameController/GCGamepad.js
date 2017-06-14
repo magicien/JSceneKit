@@ -20,7 +20,7 @@ const _defaultMapping = {
   RIGHT: 15
 }
 
-if(navigator.userAgent.indexOf('Firefox') !== -1){
+if(typeof navigator !== 'undefined' && navigator.userAgent.indexOf('Firefox') !== -1){
   // Is this a bug or something?
   _defaultMapping.A = 1
   _defaultMapping.B = 2

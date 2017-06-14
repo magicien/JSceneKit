@@ -7,7 +7,13 @@ import GCMicroGamepad from './GCMicroGamepad'
 //import GCMotion from './GCMotion'
 //import GCControllerPlayerIndex from './GCControllerPlayerIndex'
 
-/*global navigator*/
+let navigator = {
+  getGamepads: () => { return [] }
+}
+if(typeof window !== 'undefined' && typeof window.navigator !== 'undefined'){
+  navigator = window.navigator
+}
+
 
 /**
  * @access private

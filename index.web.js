@@ -12896,7 +12896,14 @@ module.exports =
 	//import GCMotion from './GCMotion'
 	//import GCControllerPlayerIndex from './GCControllerPlayerIndex'
 
-	/*global navigator*/
+	var navigator = {
+	  getGamepads: function getGamepads() {
+	    return [];
+	  }
+	};
+	if (typeof window !== 'undefined' && typeof window.navigator !== 'undefined') {
+	  navigator = window.navigator;
+	}
 
 	/**
 	 * @access private
@@ -13316,7 +13323,7 @@ module.exports =
 	  RIGHT: 15
 	};
 
-	if (navigator.userAgent.indexOf('Firefox') !== -1) {
+	if (typeof navigator !== 'undefined' && navigator.userAgent.indexOf('Firefox') !== -1) {
 	  // Is this a bug or something?
 	  _defaultMapping.A = 1;
 	  _defaultMapping.B = 2;
