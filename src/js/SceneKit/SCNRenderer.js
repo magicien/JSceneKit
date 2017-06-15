@@ -410,6 +410,13 @@ const _defaultFragmentShader =
     return depth * 2.0 - 1.0;
   }
 
+  vec2 poissonDisk[4] = vec2[](
+    vec2( -0.94201624, -0.39906216 ),
+    vec2( 0.94558609, -0.76890725 ),
+    vec2( -0.094184101, -0.92938870 ),
+    vec2( 0.34495938, 0.29387760 )
+  );
+
   void main() {
     _output.color = v_color;
 
@@ -511,22 +518,44 @@ const _fsDirectional = `
 `
 
 const _fsDirectionalShadow = `
-  float shadow = convDepth(texture(u_shadowMapTexture__I__, v_directionalShadowTexcoord[__I__].xy / v_directionalShadowTexcoord[__I__].w));
-  if(v_directionalShadowDepth[__I__].z / v_directionalShadowDepth[__I__].w - 0.0001 > shadow){
-    _output.color.rgb += material.diffuse.rgb * light.directionalShadow[__I__].shadowColor.rgb;
-  }else{
+  //float shadow = convDepth(texture(u_shadowMapTexture__I__, v_directionalShadowTexcoord[__I__].xy / v_directionalShadowTexcoord[__I__].w));
+  //if(v_directionalShadowDepth[__I__].z / v_directionalShadowDepth[__I__].w - 0.0001 > shadow){
+  //  _output.color.rgb += material.diffuse.rgb * light.directionalShadow[__I__].shadowColor.rgb;
+  //}else{
+  //  // diffuse
+  //  vec3 lightVec = normalize(v_light[numLights]);
+  //  float diffuse = clamp(dot(lightVec, _surface.normal), 0.0f, 1.0f);
+  //  _output.color.rgb += light.directionalShadow[__I__].color.rgb * material.diffuse.rgb * diffuse;
+
+  //  // specular
+  //  if(diffuse > 0.0f){
+  //    vec3 halfVec = normalize(lightVec + _surface.view);
+  //    float specular = pow(dot(halfVec, _surface.normal), material.shininess);
+  //    _output.color.rgb += specularColor.rgb * specular;
+  //  }
+  //}
+
+  {
+    float shadow = 0.0;
+    for(int i=0; i<4; i++){
+      float d = convDepth(texture(u_shadowMapTexture__I__, (v_directionalShadowTexcoord[__I__].xy + poissonDisk[i]/700.0) / v_directionalShadowTexcoord[__I__].w));
+      if(v_directionalShadowDepth[__I__].z / v_directionalShadowDepth[__I__].w - 0.0001 > d){
+        shadow += 0.25;
+      }
+    }
+    vec3 shadowColor = material.diffuse.rgb * light.directionalShadow[__I__].shadowColor.rgb;
     // diffuse
     vec3 lightVec = normalize(v_light[numLights]);
     float diffuse = clamp(dot(lightVec, _surface.normal), 0.0f, 1.0f);
-    _output.color.rgb += light.directionalShadow[__I__].color.rgb * material.diffuse.rgb * diffuse;
+    vec3 lightColor = light.directionalShadow[__I__].color.rgb * material.diffuse.rgb * diffuse;
 
     // specular
     if(diffuse > 0.0f){
       vec3 halfVec = normalize(lightVec + _surface.view);
       float specular = pow(dot(halfVec, _surface.normal), material.shininess);
-      //outColor.rgb += material.specular.rgb * specular;
-      _output.color.rgb += specularColor.rgb * specular;
+      lightColor += specularColor.rgb * specular;
     }
+    _output.color.rgb += shadowColor * shadow + lightColor * (1.0 - shadow);
   }
 
   numLights += 1;
