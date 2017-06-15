@@ -732,7 +732,17 @@ const _defaultHitTestFragmentShader =
     out_faceID = vec4(0, 0, 0, 0); // TODO: implement
     vec3 n = normalize(v_normal);
     out_normal = vec4((n.x + 1.0) * 0.5, (n.y + 1.0) * 0.5, (n.z + 1.0) * 0.5, 0);
-    out_position = vec4((v_position.x + 1.0) * 0.5, (v_position.y + 1.0) * 0.5, (v_position.z + 1.0) * 0.5, 0);
+    //out_position = vec4((v_position.x + 1.0) * 0.5, (v_position.y + 1.0) * 0.5, (v_position.z + 1.0) * 0.5, 0);
+    float r = (v_position.z + 1.0) * 0.5;
+    float g = fract(r * 255.0);
+    float b = fract(g * 255.0);
+    float a = fract(b * 255.0);
+    float coef = 1.0 / 255.0;
+
+    r -= g * coef;
+    g -= b * coef;
+    b -= a * coef;
+    out_position = vec4(r, g, b, a);
   }
 `
 
@@ -2337,8 +2347,10 @@ export default class SCNRenderer extends NSObject {
     const positionBuf = new Uint8Array(4)
     gl.readBuffer(gl.COLOR_ATTACHMENT2)
     gl.readPixels(x, y, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, positionBuf, 0)
-    const screenPos = new SCNVector3(positionBuf[0] / 127.5 - 1.0, positionBuf[1] / 127.5 - 1.0, positionBuf[2] / 127.5 - 1.0)
-    const position = screenPos.transform(viewProjectionTransform.invert())
+    //const screenPos = new SCNVector3(positionBuf[0] / 127.5 - 1.0, positionBuf[1] / 127.5 - 1.0, positionBuf[2] / 127.5 - 1.0)
+    //const position = screenPos.transform(viewProjectionTransform.invert())
+    const p = (((positionBuf[3] / 255.0 + positionBuf[2]) / 255.0 + positionBuf[1] / 255.0) + positionBuf[0]) / 255.0
+    const position = from.lerp(to, p)
 
     const normalBuf = new Uint8Array(4)
     gl.readBuffer(gl.COLOR_ATTACHMENT3)
@@ -2465,7 +2477,10 @@ export default class SCNRenderer extends NSObject {
     const positionBuf = new Uint8Array(4)
     gl.readBuffer(gl.COLOR_ATTACHMENT2)
     gl.readPixels(x, y, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, positionBuf, 0)
-    const screenPos = new SCNVector3(positionBuf[0] / 127.5 - 1.0, positionBuf[1] / 127.5 - 1.0, positionBuf[2] / 127.5 - 1.0)
+    //const screenPos = new SCNVector3(positionBuf[0] / 127.5 - 1.0, positionBuf[1] / 127.5 - 1.0, positionBuf[2] / 127.5 - 1.0)
+    //const position = screenPos.transform(viewProjectionTransform.invert())
+    const p = (((positionBuf[3] / 255.0 + positionBuf[2]) / 255.0 + positionBuf[1] / 255.0) + positionBuf[0]) / 255.0
+    const screenPos = from.lerp(to, p)
     const position = screenPos.transform(viewProjectionTransform.invert())
 
     const normalBuf = new Uint8Array(4)
