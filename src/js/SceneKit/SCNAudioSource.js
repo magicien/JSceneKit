@@ -102,7 +102,7 @@ export default class SCNAudioSource extends NSObject {
     this.shouldStream = false
 
     this._loading = false
-    this._loadPromise = new Promise((resolve, reject) => {
+    this._loadedPromise = new Promise((resolve, reject) => {
       this._resolve = resolve
       this._reject = reject
     })
@@ -169,7 +169,7 @@ export default class SCNAudioSource extends NSObject {
 
   _play(when = 0) {
     this.load()
-    this._loadPromise.then(() => {
+    this._loadedPromise.then(() => {
       this._source = _context.createBufferSource()
       this._source.buffer = this._buffer
       this._source.connect(this._gainNode)
@@ -191,5 +191,17 @@ export default class SCNAudioSource extends NSObject {
       return this._buffer.duration
     }
     return null
+  }
+
+  /**
+   * @access private
+   * @returns {Promise} -
+   */
+  _getLoadedPromise() {
+    if(this._loadedPromise){
+      return this._loadedPromise
+    }
+    
+    return Promise.resolve()
   }
 }

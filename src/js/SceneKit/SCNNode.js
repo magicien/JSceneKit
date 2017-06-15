@@ -405,6 +405,12 @@ export default class SCNNode extends NSObject {
     this._nodeID = null
 
     this._updateBoundingBox()
+
+    /**
+     * @access private
+     * @type {Promise}
+     */
+    this._loadedPromise = null
   }
 
   static _loadAnimationArray(node, animations) {
@@ -624,6 +630,10 @@ export default class SCNNode extends NSObject {
       for(let i=0; i<count; i++){
         result.push(SKColor._initWithData(source, pos, true))
         pos += stride
+      }
+      // DEBUG
+      for(let i=0; i<count; i++){
+        console.warn(`components 13: ${i}: ${result[i].floatArray()}`)
       }
     }else{
       console.error(`unknown accessor componentsType: ${accessor.componentsType}`)
@@ -2279,6 +2289,34 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     //  // the geometry might be shared with other nodes...
     //  //this.geometry.destroy()
     //}
+  }
+
+  /**
+   * @access private
+   * @returns {Promise} -
+   */
+  _getLoadedPromise() {
+    if(this._loadedPromise){
+      return this._loadedPromise
+    }
+
+    const promises = []
+    for(const child of this._childNodes){
+      promises.push(child._getLoadedPromise())
+    }
+    if(this._particleSystems){
+      for(const system of this._particleSystems){
+        promises.push(system._getLoadedPromise())
+      }
+    }
+    if(this._geometry){
+      promises.push(this._geometry._getLoadedPromise())
+    }
+    for(const player of this._audioPlayers){
+      promises.push(player._getLoadedPromise())
+    }
+    this._loadedPromise = Promise.all(promises)
+    return this._loadedPromise
   }
 }
 

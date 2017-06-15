@@ -14129,6 +14129,8 @@ module.exports =
 	     */
 	    _this._decodingFinished = false;
 
+	    _this._promises = [];
+
 	    if (data !== null) {
 	      _this._reader = new _BinaryReader3.default(data, true, 'utf8');
 	      _this._checkHeader();
@@ -22452,7 +22454,13 @@ module.exports =
 	     */
 	    _this._nodeID = null;
 
-	    _this._updateBoundingBox();
+	    _this._updateBoundingBox
+
+	    /**
+	     * @access private
+	     * @type {Promise}
+	     */
+	    ();_this._loadedPromise = null;
 	    return _this;
 	  }
 
@@ -23844,15 +23852,111 @@ module.exports =
 	    }
 	  }, {
 	    key: 'destory',
-	    value: function destory() {
-	      //if(this.physicsBody !== null){
-	      //  this.physicsBody.destory()
-	      //  this.physicsBody = null
-	      //}
-	      //if(this._geometry !== null){
-	      //  // the geometry might be shared with other nodes...
-	      //  //this.geometry.destroy()
-	      //}
+	    value: function destory() {}
+	    //if(this.physicsBody !== null){
+	    //  this.physicsBody.destory()
+	    //  this.physicsBody = null
+	    //}
+	    //if(this._geometry !== null){
+	    //  // the geometry might be shared with other nodes...
+	    //  //this.geometry.destroy()
+	    //}
+
+
+	    /**
+	     * @access private
+	     * @returns {Promise} -
+	     */
+
+	  }, {
+	    key: '_getLoadedPromise',
+	    value: function _getLoadedPromise() {
+	      if (this._loadedPromise) {
+	        return this._loadedPromise;
+	      }
+
+	      var promises = [];
+	      var _iteratorNormalCompletion3 = true;
+	      var _didIteratorError3 = false;
+	      var _iteratorError3 = undefined;
+
+	      try {
+	        for (var _iterator3 = this._childNodes[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+	          var child = _step3.value;
+
+	          promises.push(child._getLoadedPromise());
+	        }
+	      } catch (err) {
+	        _didIteratorError3 = true;
+	        _iteratorError3 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion3 && _iterator3.return) {
+	            _iterator3.return();
+	          }
+	        } finally {
+	          if (_didIteratorError3) {
+	            throw _iteratorError3;
+	          }
+	        }
+	      }
+
+	      if (this._particleSystems) {
+	        var _iteratorNormalCompletion4 = true;
+	        var _didIteratorError4 = false;
+	        var _iteratorError4 = undefined;
+
+	        try {
+	          for (var _iterator4 = this._particleSystems[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+	            var system = _step4.value;
+
+	            promises.push(system._getLoadedPromise());
+	          }
+	        } catch (err) {
+	          _didIteratorError4 = true;
+	          _iteratorError4 = err;
+	        } finally {
+	          try {
+	            if (!_iteratorNormalCompletion4 && _iterator4.return) {
+	              _iterator4.return();
+	            }
+	          } finally {
+	            if (_didIteratorError4) {
+	              throw _iteratorError4;
+	            }
+	          }
+	        }
+	      }
+	      if (this._geometry) {
+	        promises.push(this._geometry._getLoadedPromise());
+	      }
+	      var _iteratorNormalCompletion5 = true;
+	      var _didIteratorError5 = false;
+	      var _iteratorError5 = undefined;
+
+	      try {
+	        for (var _iterator5 = this._audioPlayers[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+	          var player = _step5.value;
+
+	          promises.push(player._getLoadedPromise());
+	        }
+	      } catch (err) {
+	        _didIteratorError5 = true;
+	        _iteratorError5 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion5 && _iterator5.return) {
+	            _iterator5.return();
+	          }
+	        } finally {
+	          if (_didIteratorError5) {
+	            throw _iteratorError5;
+	          }
+	        }
+	      }
+
+	      this._loadedPromise = Promise.all(promises);
+	      return this._loadedPromise;
 	    }
 	  }, {
 	    key: 'geometry',
@@ -24260,27 +24364,27 @@ module.exports =
 	    key: 'actionKeys',
 	    get: function get() {
 	      var keys = [];
-	      var _iteratorNormalCompletion3 = true;
-	      var _didIteratorError3 = false;
-	      var _iteratorError3 = undefined;
+	      var _iteratorNormalCompletion6 = true;
+	      var _didIteratorError6 = false;
+	      var _iteratorError6 = undefined;
 
 	      try {
-	        for (var _iterator3 = this._actions.keys()[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-	          var key = _step3.value;
+	        for (var _iterator6 = this._actions.keys()[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
+	          var key = _step6.value;
 
 	          keys.push(key);
 	        }
 	      } catch (err) {
-	        _didIteratorError3 = true;
-	        _iteratorError3 = err;
+	        _didIteratorError6 = true;
+	        _iteratorError6 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion3 && _iterator3.return) {
-	            _iterator3.return();
+	          if (!_iteratorNormalCompletion6 && _iterator6.return) {
+	            _iterator6.return();
 	          }
 	        } finally {
-	          if (_didIteratorError3) {
-	            throw _iteratorError3;
+	          if (_didIteratorError6) {
+	            throw _iteratorError6;
 	          }
 	        }
 	      }
@@ -24291,27 +24395,27 @@ module.exports =
 	    key: 'animationKeys',
 	    get: function get() {
 	      var keys = [];
-	      var _iteratorNormalCompletion4 = true;
-	      var _didIteratorError4 = false;
-	      var _iteratorError4 = undefined;
+	      var _iteratorNormalCompletion7 = true;
+	      var _didIteratorError7 = false;
+	      var _iteratorError7 = undefined;
 
 	      try {
-	        for (var _iterator4 = this._animations.keys()[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-	          var key = _step4.value;
+	        for (var _iterator7 = this._animations.keys()[Symbol.iterator](), _step7; !(_iteratorNormalCompletion7 = (_step7 = _iterator7.next()).done); _iteratorNormalCompletion7 = true) {
+	          var key = _step7.value;
 
 	          keys.push(key);
 	        }
 	      } catch (err) {
-	        _didIteratorError4 = true;
-	        _iteratorError4 = err;
+	        _didIteratorError7 = true;
+	        _iteratorError7 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion4 && _iterator4.return) {
-	            _iterator4.return();
+	          if (!_iteratorNormalCompletion7 && _iterator7.return) {
+	            _iterator7.return();
 	          }
 	        } finally {
-	          if (_didIteratorError4) {
-	            throw _iteratorError4;
+	          if (_didIteratorError7) {
+	            throw _iteratorError7;
 	          }
 	        }
 	      }
@@ -24394,13 +24498,13 @@ module.exports =
 	    key: '_loadAnimationArray',
 	    value: function _loadAnimationArray(node, animations) {
 	      //console.log('_loadAnimationArray start')
-	      var _iteratorNormalCompletion5 = true;
-	      var _didIteratorError5 = false;
-	      var _iteratorError5 = undefined;
+	      var _iteratorNormalCompletion8 = true;
+	      var _didIteratorError8 = false;
+	      var _iteratorError8 = undefined;
 
 	      try {
-	        for (var _iterator5 = Object.keys(animations)[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
-	          var animName = _step5.value;
+	        for (var _iterator8 = Object.keys(animations)[Symbol.iterator](), _step8; !(_iteratorNormalCompletion8 = (_step8 = _iterator8.next()).done); _iteratorNormalCompletion8 = true) {
+	          var animName = _step8.value;
 
 	          var data = animations[animName];
 	          var animation = this._loadAnimationData(data, animName);
@@ -24408,16 +24512,16 @@ module.exports =
 	        }
 	        //console.log('_loadAnimationArray done')
 	      } catch (err) {
-	        _didIteratorError5 = true;
-	        _iteratorError5 = err;
+	        _didIteratorError8 = true;
+	        _iteratorError8 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion5 && _iterator5.return) {
-	            _iterator5.return();
+	          if (!_iteratorNormalCompletion8 && _iterator8.return) {
+	            _iterator8.return();
 	          }
 	        } finally {
-	          if (_didIteratorError5) {
-	            throw _iteratorError5;
+	          if (_didIteratorError8) {
+	            throw _iteratorError8;
 	          }
 	        }
 	      }
@@ -24560,13 +24664,13 @@ module.exports =
 	    key: '_loadActionArray',
 	    value: function _loadActionArray(node, actions) {
 	      //console.log('_loadActionArray start')
-	      var _iteratorNormalCompletion6 = true;
-	      var _didIteratorError6 = false;
-	      var _iteratorError6 = undefined;
+	      var _iteratorNormalCompletion9 = true;
+	      var _didIteratorError9 = false;
+	      var _iteratorError9 = undefined;
 
 	      try {
-	        for (var _iterator6 = Object.keys(actions)[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
-	          var actName = _step6.value;
+	        for (var _iterator9 = Object.keys(actions)[Symbol.iterator](), _step9; !(_iteratorNormalCompletion9 = (_step9 = _iterator9.next()).done); _iteratorNormalCompletion9 = true) {
+	          var actName = _step9.value;
 
 	          var data = actions[actName];
 	          //const action = this._loadActionData(data, actName)
@@ -24575,16 +24679,16 @@ module.exports =
 	        }
 	        //console.log('_loadAnimationArray done')
 	      } catch (err) {
-	        _didIteratorError6 = true;
-	        _iteratorError6 = err;
+	        _didIteratorError9 = true;
+	        _iteratorError9 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion6 && _iterator6.return) {
-	            _iterator6.return();
+	          if (!_iteratorNormalCompletion9 && _iterator9.return) {
+	            _iterator9.return();
 	          }
 	        } finally {
-	          if (_didIteratorError6) {
-	            throw _iteratorError6;
+	          if (_didIteratorError9) {
+	            throw _iteratorError9;
 	          }
 	        }
 	      }
@@ -24636,6 +24740,10 @@ module.exports =
 	        for (var _i4 = 0; _i4 < count; _i4++) {
 	          result.push(_SKColor2.default._initWithData(source, pos, true));
 	          pos += stride;
+	        }
+	        // DEBUG
+	        for (var _i5 = 0; _i5 < count; _i5++) {
+	          console.warn('components 13: ' + _i5 + ': ' + result[_i5].floatArray());
 	        }
 	      } else {
 	        console.error('unknown accessor componentsType: ' + accessor.componentsType);
@@ -25264,6 +25372,12 @@ module.exports =
 	    _this._btVertices = null;
 	    _this._btMesh = null;
 	    _this._btShape = null;
+
+	    /**
+	     * @access private
+	     * @type {Promise}
+	     */
+	    _this._loadedPromise = null;
 	    return _this;
 	  }
 
@@ -26219,6 +26333,48 @@ module.exports =
 	      // TODO: delete indexBuffer, vertexBuffer
 	      this._destroyShape();
 	    }
+
+	    /**
+	     * @access private
+	     * @returns {Promise} -
+	     */
+
+	  }, {
+	    key: '_getLoadedPromise',
+	    value: function _getLoadedPromise() {
+	      if (this._loadedPromise) {
+	        return this._loadedPromise;
+	      }
+
+	      var promises = [];
+	      var _iteratorNormalCompletion3 = true;
+	      var _didIteratorError3 = false;
+	      var _iteratorError3 = undefined;
+
+	      try {
+	        for (var _iterator3 = this.materials[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+	          var m = _step3.value;
+
+	          promises.push(m._getLoadedPromise());
+	        }
+	      } catch (err) {
+	        _didIteratorError3 = true;
+	        _iteratorError3 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion3 && _iterator3.return) {
+	            _iterator3.return();
+	          }
+	        } finally {
+	          if (_didIteratorError3) {
+	            throw _iteratorError3;
+	          }
+	        }
+	      }
+
+	      this._loadedPromise = Promise.all(promises);
+	      return this._loadedPromise;
+	    }
 	  }, {
 	    key: 'firstMaterial',
 	    get: function get() {
@@ -26267,27 +26423,27 @@ module.exports =
 	    key: 'animationKeys',
 	    get: function get() {
 	      var keys = [];
-	      var _iteratorNormalCompletion3 = true;
-	      var _didIteratorError3 = false;
-	      var _iteratorError3 = undefined;
+	      var _iteratorNormalCompletion4 = true;
+	      var _didIteratorError4 = false;
+	      var _iteratorError4 = undefined;
 
 	      try {
-	        for (var _iterator3 = this._animations.keys()[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-	          var key = _step3.value;
+	        for (var _iterator4 = this._animations.keys()[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+	          var key = _step4.value;
 
 	          keys.push(key);
 	        }
 	      } catch (err) {
-	        _didIteratorError3 = true;
-	        _iteratorError3 = err;
+	        _didIteratorError4 = true;
+	        _iteratorError4 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion3 && _iterator3.return) {
-	            _iterator3.return();
+	          if (!_iteratorNormalCompletion4 && _iterator4.return) {
+	            _iterator4.return();
 	          }
 	        } finally {
-	          if (_didIteratorError3) {
-	            throw _iteratorError3;
+	          if (_didIteratorError4) {
+	            throw _iteratorError4;
 	          }
 	        }
 	      }
@@ -27856,6 +28012,12 @@ module.exports =
 	     * @type {?SCNShadableHelper}
 	     */
 	    ();_this._shadableHelper = null;
+
+	    /**
+	     * @access private
+	     * @type {Promise}
+	     */
+	    _this._loadedPromise = null;
 	    return _this;
 	  }
 
@@ -28114,6 +28276,51 @@ module.exports =
 	  }, {
 	    key: 'setAnimationSpeedForKey',
 	    value: function setAnimationSpeedForKey(speed, key) {}
+
+	    /**
+	     * @access private
+	     * @returns {Promise} -
+	     */
+
+	  }, {
+	    key: '_getLoadedPromise',
+	    value: function _getLoadedPromise() {
+	      if (this._loadedPromise) {
+	        return this._loadedPromise;
+	      }
+
+	      var properties = [this._ambient, this._specular, this._normal, this._reflective, this._emission, this._transparent, this._multiply, this._ambientOcclusion, this._metalness, this._roughness];
+	      var promises = [];
+	      var _iteratorNormalCompletion = true;
+	      var _didIteratorError = false;
+	      var _iteratorError = undefined;
+
+	      try {
+	        for (var _iterator = properties[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+	          var p = _step.value;
+
+	          if (p) {
+	            promises.push(p._getLoadedPromise());
+	          }
+	        }
+	      } catch (err) {
+	        _didIteratorError = true;
+	        _iteratorError = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion && _iterator.return) {
+	            _iterator.return();
+	          }
+	        } finally {
+	          if (_didIteratorError) {
+	            throw _iteratorError;
+	          }
+	        }
+	      }
+
+	      this._loadedPromise = Promise.all(promises);
+	      return this._loadedPromise;
+	    }
 	  }, {
 	    key: 'diffuse',
 	    get: function get() {
@@ -28266,27 +28473,27 @@ module.exports =
 	    key: 'animationKeys',
 	    get: function get() {
 	      var keys = [];
-	      var _iteratorNormalCompletion = true;
-	      var _didIteratorError = false;
-	      var _iteratorError = undefined;
+	      var _iteratorNormalCompletion2 = true;
+	      var _didIteratorError2 = false;
+	      var _iteratorError2 = undefined;
 
 	      try {
-	        for (var _iterator = this._animations.keys()[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-	          var key = _step.value;
+	        for (var _iterator2 = this._animations.keys()[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+	          var key = _step2.value;
 
 	          keys.push(key);
 	        }
 	      } catch (err) {
-	        _didIteratorError = true;
-	        _iteratorError = err;
+	        _didIteratorError2 = true;
+	        _iteratorError2 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion && _iterator.return) {
-	            _iterator.return();
+	          if (!_iteratorNormalCompletion2 && _iterator2.return) {
+	            _iterator2.return();
 	          }
 	        } finally {
-	          if (_didIteratorError) {
-	            throw _iteratorError;
+	          if (_didIteratorError2) {
+	            throw _iteratorError2;
 	          }
 	        }
 	      }
@@ -28528,6 +28735,12 @@ module.exports =
 	    _this._animations = new _SCNOrderedDictionary2.default();
 
 	    _this.__presentation = null;
+
+	    /**
+	     * @access private
+	     * @type {Promise}
+	     */
+	    _this._loadedPromise = null;
 	    return _this;
 	  }
 
@@ -28881,39 +29094,45 @@ module.exports =
 
 	      console.log('image.path: ' + path);
 	      var image = new Image();
-	      if (path.indexOf('file:///') === 0) {
-	        var paths = path.slice(8).split('/');
-	        var pathCount = 1;
-	        var _path = dirPath + paths.slice(-pathCount).join('/'
-	        //console.warn(`image loading: ${_path}`)
-	        );image.onload = function () {
-	          //console.info(`image ${image.src} onload`)
-	          _this2._contents = image;
-	        };
-	        image.onerror = function () {
-	          //console.warn('image.onerror')
-	          pathCount += 1;
-	          if (pathCount > paths.length) {
-	            //console.error(`image ${path} load error.`)
-	            throw new Error('image ' + path + ' load error.');
-	          } else {
-	            // retry
-	            _path = dirPath + paths.slice(-pathCount).join('/');
-	            image.src = _path;
-	          }
-	        };
-	        image.src = _path;
-	      } else {
-	        console.info('image loading: ' + path);
-	        image.onload = function () {
-	          console.warn('http image ' + image.src + ' onload');
-	          _this2._contents = image;
-	        };
-	        image.onerror = function () {
-	          console.warn('http image ' + path + ' load error.');
-	        };
-	        image.src = dirPath + path;
-	      }
+	      this._loadedPromise = new Promise(function (resolve, reject) {
+	        if (path.indexOf('file:///') === 0) {
+	          var paths = path.slice(8).split('/');
+	          var pathCount = 1;
+	          var _path = dirPath + paths.slice(-pathCount).join('/'
+	          //console.warn(`image loading: ${_path}`)
+	          );image.onload = function () {
+	            //console.info(`image ${image.src} onload`)
+	            _this2._contents = image;
+	            resolve();
+	          };
+	          image.onerror = function () {
+	            //console.warn('image.onerror')
+	            pathCount += 1;
+	            if (pathCount > paths.length) {
+	              reject();
+	              throw new Error('image ' + path + ' load error.');
+	            } else {
+	              // retry
+	              _path = dirPath + paths.slice(-pathCount).join('/');
+	              image.src = _path;
+	            }
+	          };
+	          image.src = _path;
+	        } else {
+	          console.info('image loading: ' + path);
+	          image.onload = function () {
+	            console.warn('http image ' + image.src + ' onload');
+	            _this2._contents = image;
+	            resolve();
+	          };
+	          image.onerror = function () {
+	            // TODO: try different path
+	            console.warn('http image ' + path + ' load error.');
+	            reject();
+	          };
+	          image.src = dirPath + path;
+	        }
+	      });
 	      return image;
 	    }
 
@@ -28930,6 +29149,21 @@ module.exports =
 	        return target._contents.float32Array();
 	      }
 	      return new Float32Array([1, 1, 1, 1]);
+	    }
+
+	    /**
+	     * @access private
+	     * @returns {Promise} -
+	     */
+
+	  }, {
+	    key: '_getLoadedPromise',
+	    value: function _getLoadedPromise() {
+	      if (this._loadedPromise) {
+	        return this._loadedPromise;
+	      }
+
+	      return Promise.resolve();
 	    }
 	  }, {
 	    key: '_presentation',
@@ -34841,8 +35075,14 @@ module.exports =
 	    _this._particleSystems = null;
 	    _this._particleSystemsTransform = null;
 
+	    /**
+	     * @access private
+	     * @type {Promise}
+	     */
+	    _this._dataLoadedPromise = null;
+
 	    if (typeof url !== 'undefined') {
-	      _this._loadSceneWithURL(url, options).then(function (scene) {
+	      var promise = _this._loadSceneWithURL(url, options).then(function (scene) {
 	        _this._copyValue(scene);
 	        if (onload) {
 	          onload(_this);
@@ -34852,6 +35092,7 @@ module.exports =
 	          onerror(error);
 	        }
 	      });
+	      _this._dataLoadedPromise = promise;
 	    }
 
 	    var skyBoxGeometry = new _SCNBox2.default();
@@ -34882,6 +35123,12 @@ module.exports =
 	    }
 	    _this._skyBox = new _SCNNode2.default(skyBoxGeometry);
 	    _this._skyBox._presentation = _this._skyBox;
+
+	    /**
+	     * @access private
+	     * @type {Promise}
+	     */
+	    _this._loadedPromise = null;
 	    return _this;
 	  }
 
@@ -35092,6 +35339,47 @@ module.exports =
 	     */
 
 	  }, {
+	    key: '_getLoadedPromise',
+
+
+	    /**
+	     * @access private
+	     * @returns {Promise} -
+	     */
+	    value: function _getLoadedPromise() {
+	      var _this3 = this;
+
+	      if (this._loadedPromise) {
+	        return this._loadedPromise;
+	      }
+	      if (!this._dataLoadedPromise) {
+	        return Promise.resolve();
+	      }
+
+	      this._loadedPromise = this._dataLoadedPromise.then(function () {
+	        var promises = [];
+	        promises.push(_this3._rootNode._getLoadedPromise());
+	        promises.push(_this3._skyBox._getLoadedPromise());
+	        if (_this3._lightingEnvironment) {
+	          promises.push(_this3._lightingEnvironment._getLoadedPromise());
+	        }
+	        return Promise.all(promises);
+	      });
+	      return this._loadedPromise;
+	    }
+
+	    // Structures
+
+	    /**
+	     * @type {Object} Attribute
+	     * @property {string} endTime A floating-point value (in an NSNumber object) for the end time of the scene.
+	     * @property {string} frameRate A floating-point value (in an NSNumber object) for the frame rate of the scene.
+	     * @property {string} startTime A floating-point value (in an NSNumber object) for the start time of the scene.
+	     * @property {string} upAxis An SCNVector3 structure (in an NSValue object) specifying the orientation of the scene.
+	     * @see https://developer.apple.com/reference/scenekit/scnscene.attribute
+	     */
+
+	  }, {
 	    key: 'rootNode',
 
 
@@ -35141,18 +35429,6 @@ module.exports =
 	    get: function get() {
 	      return this._particleSystems.slice(0);
 	    }
-
-	    // Structures
-
-	    /**
-	     * @type {Object} Attribute
-	     * @property {string} endTime A floating-point value (in an NSNumber object) for the end time of the scene.
-	     * @property {string} frameRate A floating-point value (in an NSNumber object) for the frame rate of the scene.
-	     * @property {string} startTime A floating-point value (in an NSNumber object) for the start time of the scene.
-	     * @property {string} upAxis An SCNVector3 structure (in an NSValue object) specifying the orientation of the scene.
-	     * @see https://developer.apple.com/reference/scenekit/scnscene.attribute
-	     */
-
 	  }], [{
 	    key: 'sceneNamed',
 	    value: function sceneNamed(name) {}
@@ -39080,7 +39356,6 @@ module.exports =
 	    _this2._imageWidth = null;
 	    _this2._imageHeight = null;
 
-	    _this2._loadingPromise = null;
 	    //if(name !== null){
 	    //  let path = name
 	    //  if(directory !== null){
@@ -39095,6 +39370,12 @@ module.exports =
 	    //    return system
 	    //  })
 	    //}
+
+	    /**
+	     * @access private
+	     * @type {Promise}
+	     */
+	    _this2._loadedPromise = null;
 	    return _this2;
 	  }
 
@@ -39248,43 +39529,49 @@ module.exports =
 	      var _this3 = this;
 
 	      var image = new Image();
-	      if (path.indexOf('file:///') === 0) {
-	        var paths = path.slice(8).split('/');
-	        var pathCount = 1;
-	        var _path = directoryPath + paths.slice(-pathCount).join('/');
-	        image.onload = function () {
-	          //console.info(`image ${_path} onload`)
-	          _this3.particleImage = image;
-	        };
-	        image.onerror = function () {
-	          pathCount += 1;
-	          if (pathCount > paths.length) {
-	            //console.info(`image ${path} load error. pathCount > paths.length`)
-	          } else {
-	            //console.info(`image ${_path} load error.`)
-	            _path = directoryPath + paths.slice(-pathCount).join('/'
-	            //console.info(`try ${_path}`)
-	            );image.src = _path;
-	          }
-	        };
-	        image.src = _path;
-	      } else {
-	        var _paths = path.split('/');
-	        var _pathCount = 0;
-	        image.onload = function () {
-	          //console.info(`image ${path} onload`)
-	          _this3.particleImage = image;
-	        };
-	        image.onerror = function () {
-	          _pathCount += 1;
-	          if (_pathCount > _paths.length) {
-	            // load error
-	          } else {
-	            image.src = directoryPath + _paths.slice(-_pathCount).join('/');
-	          }
-	        };
-	        image.src = path;
-	      }
+	      this._loadedPromise = new Promise(function (resolve, reject) {
+	        if (path.indexOf('file:///') === 0) {
+	          var paths = path.slice(8).split('/');
+	          var pathCount = 1;
+	          var _path = directoryPath + paths.slice(-pathCount).join('/');
+	          image.onload = function () {
+	            //console.info(`image ${_path} onload`)
+	            _this3.particleImage = image;
+	            resolve();
+	          };
+	          image.onerror = function () {
+	            pathCount += 1;
+	            if (pathCount > paths.length) {
+	              //console.info(`image ${path} load error. pathCount > paths.length`)
+	              reject();
+	            } else {
+	              //console.info(`image ${_path} load error.`)
+	              _path = directoryPath + paths.slice(-pathCount).join('/'
+	              //console.info(`try ${_path}`)
+	              );image.src = _path;
+	            }
+	          };
+	          image.src = _path;
+	        } else {
+	          var _paths = path.split('/');
+	          var _pathCount = 0;
+	          image.onload = function () {
+	            //console.info(`image ${path} onload`)
+	            _this3.particleImage = image;
+	            resolve();
+	          };
+	          image.onerror = function () {
+	            _pathCount += 1;
+	            if (_pathCount > _paths.length) {
+	              // load error
+	              reject();
+	            } else {
+	              image.src = directoryPath + _paths.slice(-_pathCount).join('/');
+	            }
+	          };
+	          image.src = path;
+	        }
+	      });
 	      return image;
 	    }
 	  }, {
@@ -39914,6 +40201,21 @@ module.exports =
 	      }
 	    }
 	  }, {
+	    key: '_getLoadedPromise',
+
+
+	    /**
+	     * @access private
+	     * @returns {Promise} -
+	     */
+	    value: function _getLoadedPromise() {
+	      if (this._loadedPromise) {
+	        return this._loadedPromise;
+	      }
+
+	      return Promise.resolve();
+	    }
+	  }, {
 	    key: '_particleData',
 	    get: function get() {
 	      var arr = [];
@@ -39946,7 +40248,7 @@ module.exports =
 	            throw new Error('file ' + path + ' is not an instance of SCNParticleSystem');
 	          }
 	          // FIXME: wait for images
-	          system._loadingPromise = Promise.resolve(system);
+	          system._loadedPromise = Promise.resolve(system);
 	          return system;
 	        });
 	      }
@@ -45540,6 +45842,21 @@ module.exports =
 	    value: function _stop() {
 	      this._audioSource._stop();
 	    }
+
+	    /**
+	     * @access private
+	     * @returns {Promise} -
+	     */
+
+	  }, {
+	    key: '_getLoadedPromise',
+	    value: function _getLoadedPromise() {
+	      if (this._audioSource) {
+	        return this._audioSource._getLoadedPromise();
+	      }
+
+	      return Promise.resolve();
+	    }
 	  }, {
 	    key: 'audioSource',
 	    get: function get() {
@@ -45703,7 +46020,7 @@ module.exports =
 	    _this.shouldStream = false;
 
 	    _this._loading = false;
-	    _this._loadPromise = new Promise(function (resolve, reject) {
+	    _this._loadedPromise = new Promise(function (resolve, reject) {
 	      _this._resolve = resolve;
 	      _this._reject = reject;
 	    });
@@ -45761,7 +46078,7 @@ module.exports =
 	      var when = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
 
 	      this.load();
-	      this._loadPromise.then(function () {
+	      this._loadedPromise.then(function () {
 	        _this3._source = _context.createBufferSource();
 	        _this3._source.buffer = _this3._buffer;
 	        _this3._source.connect(_this3._gainNode);
@@ -45779,6 +46096,21 @@ module.exports =
 	        this._source.stop(when);
 	        this._source = null;
 	      }
+	    }
+	  }, {
+	    key: '_getLoadedPromise',
+
+
+	    /**
+	     * @access private
+	     * @returns {Promise} -
+	     */
+	    value: function _getLoadedPromise() {
+	      if (this._loadedPromise) {
+	        return this._loadedPromise;
+	      }
+
+	      return Promise.resolve();
 	    }
 	  }, {
 	    key: 'volume',
@@ -50383,6 +50715,12 @@ module.exports =
 	    if (referenceURL) {
 	      _this.load();
 	    }
+
+	    /**
+	     * @access private
+	     * @type {Promise}
+	     */
+	    _this._loadedPromise = null;
 	    return _this;
 	  }
 
@@ -50405,15 +50743,26 @@ module.exports =
 	      if (this._isLoaded || this._isLoading) {
 	        return;
 	      }
+	      if (!this._referenceURL) {
+	        return;
+	      }
 	      this._isLoading = true;
 
-	      new _SCNScene2.default(this._referenceURL, null, function (scene) {
-	        scene.rootNode.name = 'referenceRoot';
-	        _get(SCNReferenceNode.prototype.__proto__ || Object.getPrototypeOf(SCNReferenceNode.prototype), 'addChildNode', _this2).call(_this2, scene.rootNode);
-	        _this2._scene = scene;
+	      var promise = new Promise(function (resolve, reject) {
+	        new _SCNScene2.default(_this2._referenceURL, null, function (scene) {
+	          scene.rootNode.name = 'referenceRoot';
+	          _get(SCNReferenceNode.prototype.__proto__ || Object.getPrototypeOf(SCNReferenceNode.prototype), 'addChildNode', _this2).call(_this2, scene.rootNode);
+	          _this2._scene = scene;
 
-	        _this2._isLoaded = true;
-	        _this2._isLoading = false;
+	          _this2._isLoaded = true;
+	          _this2._isLoading = false;
+	          resolve();
+	        }, function () {
+	          reject();
+	        });
+	      });
+	      this._loadedPromise = promise.then(function () {
+	        return _this2._scene._getLoadedPromise();
 	      });
 	    }
 
@@ -50435,6 +50784,7 @@ module.exports =
 	        child.removeFromParentNode();
 	      });
 	      this._isLoaded = false;
+	      this._loadedPromise = null;
 	    }
 
 	    /**
@@ -50472,6 +50822,21 @@ module.exports =
 	    key: 'replaceChildNodeWith',
 	    value: function replaceChildNodeWith(oldChild, newChild) {
 	      throw new Error('cannot add a child node to SCNReferenceNode');
+	    }
+	  }, {
+	    key: '_getLoadedPromise',
+
+
+	    /**
+	     * @access private
+	     * @returns {Promise} -
+	     */
+	    value: function _getLoadedPromise() {
+	      if (this._loadedPromise) {
+	        return this._loadedPromise;
+	      }
+	      this.load();
+	      return this._loadedPromise;
 	    }
 	  }, {
 	    key: 'isLoaded',

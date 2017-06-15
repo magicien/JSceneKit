@@ -111,4 +111,17 @@ export default class SCNAudioPlayer extends NSObject {
   _stop() {
     this._audioSource._stop()
   }
+
+  /**
+   * @access private
+   * @returns {Promise} -
+   */
+  _getLoadedPromise() {
+    if(this._audioSource){
+      return this._audioSource._getLoadedPromise()
+    }
+    
+    return Promise.resolve()
+  }
+
 }

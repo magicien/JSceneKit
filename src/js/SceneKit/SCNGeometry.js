@@ -235,6 +235,12 @@ export default class SCNGeometry extends NSObject {
     this._btVertices = null
     this._btMesh = null
     this._btShape = null
+
+    /**
+     * @access private
+     * @type {Promise}
+     */
+    this._loadedPromise = null
   }
 
   // Managing a Geometry’s Materials
@@ -1134,5 +1140,22 @@ This method is for OpenGL shader programs only. To bind custom variable data for
   _execDestory() {
     // TODO: delete indexBuffer, vertexBuffer
     this._destroyShape()
+  }
+
+  /**
+   * @access private
+   * @returns {Promise} -
+   */
+  _getLoadedPromise() {
+    if(this._loadedPromise){
+      return this._loadedPromise
+    }
+
+    const promises = []
+    for(const m of this.materials){
+      promises.push(m._getLoadedPromise())
+    }
+    this._loadedPromise = Promise.all(promises)
+    return this._loadedPromise
   }
 }

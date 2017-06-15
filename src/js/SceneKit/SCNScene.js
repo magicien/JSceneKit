@@ -131,8 +131,14 @@ You call this method in a try expression and handle any errors in the catch clau
     this._particleSystems = null
     this._particleSystemsTransform = null
 
+    /**
+     * @access private
+     * @type {Promise}
+     */
+    this._dataLoadedPromise = null
+
     if(typeof url !== 'undefined'){
-      this._loadSceneWithURL(url, options)
+      const promise = this._loadSceneWithURL(url, options)
       .then((scene) => {
         this._copyValue(scene)
         if(onload){
@@ -144,6 +150,7 @@ You call this method in a try expression and handle any errors in the catch clau
           onerror(error)
         }
       })
+      this._dataLoadedPromise = promise
     }
 
     const skyBoxGeometry = new SCNBox()
@@ -199,6 +206,12 @@ You call this method in a try expression and handle any errors in the catch clau
     }
     this._skyBox = new SCNNode(skyBoxGeometry)
     this._skyBox._presentation = this._skyBox
+
+    /**
+     * @access private
+     * @type {Promise}
+     */
+    this._loadedPromise = null
   }
 
   _copyValue(src) {
@@ -449,6 +462,30 @@ You call this method in a try expression and handle any errors in the catch clau
     return this._particleSystems.slice(0)
   }
 
+  /**
+   * @access private
+   * @returns {Promise} -
+   */
+  _getLoadedPromise() {
+    if(this._loadedPromise){
+      return this._loadedPromise
+    }
+    if(!this._dataLoadedPromise){
+      return Promise.resolve()
+    }
+
+    this._loadedPromise = this._dataLoadedPromise.then(() => {
+      const promises = []
+      promises.push(this._rootNode._getLoadedPromise())
+      promises.push(this._skyBox._getLoadedPromise())
+      if(this._lightingEnvironment){
+        promises.push(this._lightingEnvironment._getLoadedPromise())
+      }
+      return Promise.all(promises)
+    })
+    return this._loadedPromise
+  }
+
   // Structures
 
   /**
@@ -462,5 +499,4 @@ You call this method in a try expression and handle any errors in the catch clau
   static get Attribute() {
     return _Attribute
   }
-
 }

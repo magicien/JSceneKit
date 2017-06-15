@@ -78,6 +78,12 @@ export default class SCNReferenceNode extends SCNNode {
     if(referenceURL){
       this.load()
     }
+
+    /**
+     * @access private
+     * @type {Promise}
+     */
+    this._loadedPromise = null
   }
 
   // Loading and Unloading a Reference Node’s Content
@@ -93,16 +99,25 @@ export default class SCNReferenceNode extends SCNNode {
     if(this._isLoaded || this._isLoading){
       return
     }
+    if(!this._referenceURL){
+      return
+    }
     this._isLoading = true
 
-    new SCNScene(this._referenceURL, null, (scene) => {
-      scene.rootNode.name = 'referenceRoot'
-      super.addChildNode(scene.rootNode)
-      this._scene = scene
+    const promise = new Promise((resolve, reject) => {
+      new SCNScene(this._referenceURL, null, (scene) => {
+        scene.rootNode.name = 'referenceRoot'
+        super.addChildNode(scene.rootNode)
+        this._scene = scene
 
-      this._isLoaded = true
-      this._isLoading = false
+        this._isLoaded = true
+        this._isLoading = false
+        resolve()
+      }, () => {
+        reject()
+      })
     })
+    this._loadedPromise = promise.then(() => this._scene._getLoadedPromise())
   }
 
   /**
@@ -120,6 +135,7 @@ export default class SCNReferenceNode extends SCNNode {
       child.removeFromParentNode()
     })
     this._isLoaded = false
+    this._loadedPromise = null
   }
 
   /**
@@ -174,5 +190,17 @@ export default class SCNReferenceNode extends SCNNode {
       this.load()
     }
     return this._childNodes.slice(0)
+  }
+
+  /**
+   * @access private
+   * @returns {Promise} -
+   */
+  _getLoadedPromise() {
+    if(this._loadedPromise){
+      return this._loadedPromise
+    }
+    this.load()
+    return this._loadedPromise
   }
 }

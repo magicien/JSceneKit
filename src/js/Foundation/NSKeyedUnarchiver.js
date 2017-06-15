@@ -132,6 +132,8 @@ export default class NSKeyedUnarchiver extends NSCoder {
      */
     this._decodingFinished = false
 
+    this._promises = []
+
     if(data !== null){
       this._reader = new _BinaryReader(data, true, 'utf8')
       this._checkHeader()

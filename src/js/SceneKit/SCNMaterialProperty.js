@@ -166,6 +166,12 @@ export default class SCNMaterialProperty extends NSObject {
     this._animations = new SCNOrderedDictionary()
 
     this.__presentation = null
+
+    /**
+     * @access private
+     * @type {Promise}
+     */
+    this._loadedPromise = null
   }
 
   _createPresentation() {
@@ -488,39 +494,45 @@ export default class SCNMaterialProperty extends NSObject {
   _loadContentsImage(path, dirPath) {
     console.log(`image.path: ${path}`)
     const image = new Image()
-    if(path.indexOf('file:///') === 0){
-      const paths = path.slice(8).split('/')
-      let pathCount = 1
-      let _path = dirPath + paths.slice(-pathCount).join('/')
-      //console.warn(`image loading: ${_path}`)
-      image.onload = () => {
-        //console.info(`image ${image.src} onload`)
-        this._contents = image
-      }
-      image.onerror = () => {
-        //console.warn('image.onerror')
-        pathCount += 1
-        if(pathCount > paths.length){
-          //console.error(`image ${path} load error.`)
-          throw new Error(`image ${path} load error.`)
-        }else{
-          // retry
-          _path = dirPath + paths.slice(-pathCount).join('/')
-          image.src = _path
+    this._loadedPromise = new Promise((resolve, reject) => {
+      if(path.indexOf('file:///') === 0){
+        const paths = path.slice(8).split('/')
+        let pathCount = 1
+        let _path = dirPath + paths.slice(-pathCount).join('/')
+        //console.warn(`image loading: ${_path}`)
+        image.onload = () => {
+          //console.info(`image ${image.src} onload`)
+          this._contents = image
+          resolve()
         }
+        image.onerror = () => {
+          //console.warn('image.onerror')
+          pathCount += 1
+          if(pathCount > paths.length){
+            reject()
+            throw new Error(`image ${path} load error.`)
+          }else{
+            // retry
+            _path = dirPath + paths.slice(-pathCount).join('/')
+            image.src = _path
+          }
+        }
+        image.src = _path
+      }else{
+        console.info(`image loading: ${path}`)
+        image.onload = () => {
+          console.warn(`http image ${image.src} onload`)
+          this._contents = image
+          resolve()
+        }
+        image.onerror = () => {
+          // TODO: try different path
+          console.warn(`http image ${path} load error.`)
+          reject()
+        }
+        image.src = dirPath + path
       }
-      image.src = _path
-    }else{
-      console.info(`image loading: ${path}`)
-      image.onload = () => {
-        console.warn(`http image ${image.src} onload`)
-        this._contents = image
-      }
-      image.onerror = () => {
-        console.warn(`http image ${path} load error.`)
-      }
-      image.src = dirPath + path
-    }
+    })
     return image
   }
 
@@ -534,6 +546,18 @@ export default class SCNMaterialProperty extends NSObject {
       return target._contents.float32Array()
     }
     return new Float32Array([1, 1, 1, 1])
+  }
+
+  /**
+   * @access private
+   * @returns {Promise} -
+   */
+  _getLoadedPromise() {
+    if(this._loadedPromise){
+      return this._loadedPromise
+    }
+    
+    return Promise.resolve()
   }
 }
 

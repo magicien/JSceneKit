@@ -267,6 +267,12 @@ export default class SCNMaterial extends NSObject {
      * @type {?SCNShadableHelper}
      */
     this._shadableHelper = null
+
+    /**
+     * @access private
+     * @type {Promise}
+     */
+    this._loadedPromise = null
   }
 
   // Configuring a Material’s Visual Properties
@@ -609,5 +615,36 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    * @see https://developer.apple.com/reference/scenekit/scnanimatable/1778343-setanimationspeed
    */
   setAnimationSpeedForKey(speed, key) {
+  }
+
+  /**
+   * @access private
+   * @returns {Promise} -
+   */
+  _getLoadedPromise() {
+    if(this._loadedPromise){
+      return this._loadedPromise
+    }
+
+    const properties = [
+      this._ambient,
+      this._specular,
+      this._normal,
+      this._reflective,
+      this._emission,
+      this._transparent,
+      this._multiply,
+      this._ambientOcclusion,
+      this._metalness,
+      this._roughness
+    ]
+    const promises = []
+    for(const p of properties){
+      if(p){
+        promises.push(p._getLoadedPromise())
+      }
+    }
+    this._loadedPromise = Promise.all(promises)
+    return this._loadedPromise
   }
 }

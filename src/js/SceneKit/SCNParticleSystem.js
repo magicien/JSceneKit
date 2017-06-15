@@ -746,7 +746,6 @@ export default class SCNParticleSystem extends NSObject {
     this._imageWidth = null
     this._imageHeight = null
 
-    this._loadingPromise = null
     //if(name !== null){
     //  let path = name
     //  if(directory !== null){
@@ -761,6 +760,12 @@ export default class SCNParticleSystem extends NSObject {
     //    return system
     //  })
     //}
+
+    /**
+     * @access private
+     * @type {Promise}
+     */
+    this._loadedPromise = null
   }
 
   // Creating a Particle System
@@ -788,7 +793,7 @@ export default class SCNParticleSystem extends NSObject {
           throw new Error(`file ${path} is not an instance of SCNParticleSystem`)
         }
         // FIXME: wait for images
-        system._loadingPromise = Promise.resolve(system)
+        system._loadedPromise = Promise.resolve(system)
         return system
       })
     }
@@ -918,43 +923,49 @@ export default class SCNParticleSystem extends NSObject {
    */
   _loadParticleImage(path, directoryPath) {
     const image = new Image()
-    if(path.indexOf('file:///') === 0){
-      const paths = path.slice(8).split('/')
-      let pathCount = 1
-      let _path = directoryPath + paths.slice(-pathCount).join('/')
-      image.onload = () => {
-        //console.info(`image ${_path} onload`)
-        this.particleImage = image
-      }
-      image.onerror = () => {
-        pathCount += 1
-        if(pathCount > paths.length){
-          //console.info(`image ${path} load error. pathCount > paths.length`)
-        }else{
-          //console.info(`image ${_path} load error.`)
-          _path = directoryPath + paths.slice(-pathCount).join('/')
-          //console.info(`try ${_path}`)
-          image.src = _path
+    this._loadedPromise = new Promise((resolve, reject) => {
+      if(path.indexOf('file:///') === 0){
+        const paths = path.slice(8).split('/')
+        let pathCount = 1
+        let _path = directoryPath + paths.slice(-pathCount).join('/')
+        image.onload = () => {
+          //console.info(`image ${_path} onload`)
+          this.particleImage = image
+          resolve()
         }
-      }
-      image.src = _path
-    }else{
-      const paths = path.split('/')
-      let pathCount = 0
-      image.onload = () => {
-        //console.info(`image ${path} onload`)
-        this.particleImage = image
-      }
-      image.onerror = () => {
-        pathCount += 1
-        if(pathCount > paths.length){
-          // load error
-        }else{
-          image.src = directoryPath + paths.slice(-pathCount).join('/')
+        image.onerror = () => {
+          pathCount += 1
+          if(pathCount > paths.length){
+            //console.info(`image ${path} load error. pathCount > paths.length`)
+            reject()
+          }else{
+            //console.info(`image ${_path} load error.`)
+            _path = directoryPath + paths.slice(-pathCount).join('/')
+            //console.info(`try ${_path}`)
+            image.src = _path
+          }
         }
+        image.src = _path
+      }else{
+        const paths = path.split('/')
+        let pathCount = 0
+        image.onload = () => {
+          //console.info(`image ${path} onload`)
+          this.particleImage = image
+          resolve()
+        }
+        image.onerror = () => {
+          pathCount += 1
+          if(pathCount > paths.length){
+            // load error
+            reject()
+          }else{
+            image.src = directoryPath + paths.slice(-pathCount).join('/')
+          }
+        }
+        image.src = path
       }
-      image.src = path
-    }
+    })
     return image
   }
 
@@ -1561,5 +1572,17 @@ export default class SCNParticleSystem extends NSObject {
     const maxRate = this.birthRate + this.birthRateVariation * 0.5
     const maxLifeSpan = this.particleLifeSpan + this.particleLifeSpanVariation * 0.5
     return Math.ceil(maxRate * maxLifeSpan)
+  }
+
+  /**
+   * @access private
+   * @returns {Promise} -
+   */
+  _getLoadedPromise() {
+    if(this._loadedPromise){
+      return this._loadedPromise
+    }
+    
+    return Promise.resolve()
   }
 }
