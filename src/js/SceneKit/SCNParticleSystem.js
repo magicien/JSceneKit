@@ -1074,32 +1074,38 @@ export default class SCNParticleSystem extends NSObject {
       let vVec = null
       switch(this.emitterShape.className){
         case 'SCNBox': {
-          // FIXME: calculate the area
-          const rnd = Math.floor(Math.random() * 6)
+          const rnd = Math.random()
           const rnd1 = Math.random() - 0.5
           const rnd2 = Math.random() - 0.5
           const w = this.emitterShape.width
           const h = this.emitterShape.height
           const l = this.emitterShape.length
+          const rx = h * l
+          const ry = l * w
+          const rz = w * h
+          const r = 1.0 / (rx + ry + rz)
+          const tx = rx * r
+          const ty = ry * r
+          const tz = rz * r
 
           // TODO: chamferRadius
-          if(rnd === 0){
+          if(rnd < tx * 0.5){
             // right
             pVec = new SCNVector3(w * 0.5, h * rnd1, l * rnd2)
             vVec = new SCNVector3(1, 0, 0)
-          }else if(rnd === 1){
+          }else if(rnd < tx){
             // left
             pVec = new SCNVector3(-w * 0.5, h * rnd1, l * rnd2)
             vVec = new SCNVector3(-1, 0, 0)
-          }else if(rnd === 2){
+          }else if(rnd < tx + ty * 0.5){
             // top
             pVec = new SCNVector3(w * rnd1, h * 0.5, l * rnd2)
             vVec = new SCNVector3(0, 1, 0)
-          }else if(rnd === 3){
+          }else if(rnd < tx + ty){
             // bottom
             pVec = new SCNVector3(w * rnd1, -h * 0.5, l * rnd2)
             vVec = new SCNVector3(0, -1, 0)
-          }else if(rnd === 4){
+          }else if(rnd < tx + ty + tz * 0.5){
             // front
             pVec = new SCNVector3(w * rnd1, h * rnd2, l * 0.5)
             vVec = new SCNVector3(0, 0, 1)

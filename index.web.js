@@ -9449,7 +9449,15 @@ module.exports =
 	              var b = parseFloat(values[2]);
 	              var a = 1.0;
 	              //console.log(`NSColor -> SKColor NSRGB: r:${r} g:${g} b:${b} a:${a}`)
-	              return new SKColor(r, g, b, a);
+	              console.error('=====');
+	              console.error('NSColorSpace: ' + propValues.NSColorSpace);
+	              console.error('NSCustomColorSpace: ' + propValues.NSCustomColorSpace);
+	              console.error('NSComponents: ' + propValues.NSComponents);
+	              console.error('rgba: ' + r + ' ' + g + ' ' + b + ' ' + a
+	              //if(propValues.NSColorSpace === 1){
+	              //  return new SKColor(1, 1, 1, 1)
+	              //}
+	              );return new SKColor(r, g, b, a);
 	            } else if (typeof propValues.NSWhite !== 'undefined') {
 	              var _ascii = propValues.NSWhite.toString('ascii');
 	              var _values = _ascii.split(' ');
@@ -41185,32 +41193,38 @@ module.exports =
 	        switch (this.emitterShape.className) {
 	          case 'SCNBox':
 	            {
-	              // FIXME: calculate the area
-	              var rnd = Math.floor(Math.random() * 6);
+	              var rnd = Math.random();
 	              var rnd1 = Math.random() - 0.5;
 	              var rnd2 = Math.random() - 0.5;
 	              var w = this.emitterShape.width;
 	              var h = this.emitterShape.height;
 	              var l = this.emitterShape.length;
+	              var rx = h * l;
+	              var ry = l * w;
+	              var rz = w * h;
+	              var r = 1.0 / (rx + ry + rz);
+	              var tx = rx * r;
+	              var ty = ry * r;
+	              var tz = rz * r;
 
 	              // TODO: chamferRadius
-	              if (rnd === 0) {
+	              if (rnd < tx * 0.5) {
 	                // right
 	                pVec = new _SCNVector2.default(w * 0.5, h * rnd1, l * rnd2);
 	                vVec = new _SCNVector2.default(1, 0, 0);
-	              } else if (rnd === 1) {
+	              } else if (rnd < tx) {
 	                // left
 	                pVec = new _SCNVector2.default(-w * 0.5, h * rnd1, l * rnd2);
 	                vVec = new _SCNVector2.default(-1, 0, 0);
-	              } else if (rnd === 2) {
+	              } else if (rnd < tx + ty * 0.5) {
 	                // top
 	                pVec = new _SCNVector2.default(w * rnd1, h * 0.5, l * rnd2);
 	                vVec = new _SCNVector2.default(0, 1, 0);
-	              } else if (rnd === 3) {
+	              } else if (rnd < tx + ty) {
 	                // bottom
 	                pVec = new _SCNVector2.default(w * rnd1, -h * 0.5, l * rnd2);
 	                vVec = new _SCNVector2.default(0, -1, 0);
-	              } else if (rnd === 4) {
+	              } else if (rnd < tx + ty + tz * 0.5) {
 	                // front
 	                pVec = new _SCNVector2.default(w * rnd1, h * rnd2, l * 0.5);
 	                vVec = new _SCNVector2.default(0, 0, 1);
@@ -41250,13 +41264,13 @@ module.exports =
 	            }
 	          case 'SCNSphere':
 	            {
-	              var r = Math.random() * this.emitterShape.radius;
+	              var _r = Math.random() * this.emitterShape.radius;
 	              var s = Math.random() * Math.PI;
 	              var t = Math.random() * Math.PI * 2.0;
-	              var rsins = r * Math.sin(s);
+	              var rsins = _r * Math.sin(s);
 	              var _x3 = rsins * Math.cos(t);
 	              var _y = rsins * Math.sin(t);
-	              var _z = r * Math.cos(s);
+	              var _z = _r * Math.cos(s);
 	              _pVec = new _SCNVector2.default(_x3, _y, _z);
 	              break;
 	            }
