@@ -21,7 +21,7 @@ export default class NSURL extends NSObject {
     if(url.indexOf(':') < 0){
       url = coder._directoryPath + url
     }
-    console.error(`NSURL: ${url}`)
+    //console.error(`NSURL: ${url}`)
 
     return url
   }

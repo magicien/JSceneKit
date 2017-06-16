@@ -813,20 +813,6 @@ export default class SCNNode extends NSObject {
     this._updateWorldTransform()
     SCNTransaction._addChange(this, 'rotation', oldValue, newValue)
   }
-  //_setRotation(newValue){
-  //  if(typeof newValue.x !== 'number'
-  //    || typeof newValue.y !== 'number'
-  //    || typeof newValue.z !== 'number'
-  //    || typeof newValue.w !== 'number'){
-  //    throw new Error('error: SCNNode.rotation must have x, y, z, w values')
-  //  }
-  //  this._rotation.x = newValue.x
-  //  this._rotation.y = newValue.y
-  //  this._rotation.z = newValue.z
-  //  this._rotation.w = newValue.w
-  //  this._transformUpToDate = false
-  //  this._updateWorldTransform()
-  //}
 
   get scale() {
     return this._scale

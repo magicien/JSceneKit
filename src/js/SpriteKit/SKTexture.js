@@ -60,7 +60,6 @@ export default class SKTexture extends NSObject {
    * @see https://developer.apple.com/reference/spritekit/sktexture/1520086-init
    */
   static textureWithImageNamed(name) {
-    console.log(`SKTexture image name: ${name}`)
     const texture = new SKTexture()
     texture._loadImage(name)
     return texture
@@ -393,7 +392,6 @@ for i in 0...2 {
         const paths = path.slice(8).split('/')
         let pathCount = 1
         let _path = paths.slice(-pathCount).join('/')
-        console.info(`image loading: ${_path}`)
         image.onload = () => {
           console.info(`image ${_path} onload`)
           this._image = image
@@ -413,7 +411,6 @@ for i in 0...2 {
           }
         }
       }else{
-        console.info(`image loading: ${path}`)
         image.onload = () => {
           this._image = image
           resolve(this)

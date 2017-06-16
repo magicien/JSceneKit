@@ -15893,7 +15893,7 @@ module.exports =
 	      if (url.indexOf(':') < 0) {
 	        url = coder._directoryPath + url;
 	      }
-	      console.error('NSURL: ' + url);
+	      //console.error(`NSURL: ${url}`)
 
 	      return url;
 	    }
@@ -16054,7 +16054,6 @@ module.exports =
 	          throw new Error('unknown NSValue size format: ' + size);
 	        }
 	        var values = size.slice(1, -1).split(',').map(parseFloat);
-	        console.error('size width: ' + values[0] + ', height: ' + values[1]);
 	        return new _CGSize2.default(values[0], values[1]);
 	      }
 	      throw new Error('unknown NSValue type');
@@ -19841,9 +19840,9 @@ module.exports =
 	        if (t > 1) {
 	          t = 1;
 	        }
-	        if (this.keyPath === 'rotation.w') {
-	          console.log('time: ' + time + ', activeTime: ' + (time - this._animationStartTime) + ', baseTime: ' + baseTime + ', t: ' + t);
-	        }
+	        //if(this.keyPath === 'rotation.w'){
+	        //  console.log(`time: ${time}, activeTime: ${time - this._animationStartTime}, baseTime: ${baseTime}, t: ${t}`)
+	        //}
 	      }
 
 	      var isObject = false;
@@ -19915,13 +19914,13 @@ module.exports =
 	        // TODO: retain prevValue
 	        //value = this._lerp(prevValue, currentValue, t)
 	      }
-	      var value = this._lerp(fromValue, toValue, t);
+	      var value = this._lerp(fromValue, toValue, t
 
-	      if (this.keyPath === 'rotation.w') {
-	        console.log('from: ' + fromValue + ', to: ' + toValue + ', t: ' + t + ', value: ' + value);
-	      }
+	      //if(this.keyPath === 'rotation.w'){
+	      //  console.log(`from: ${fromValue}, to: ${toValue}, t: ${t}, value: ${value}`)
+	      //}
 
-	      if (this.isAdditive) {
+	      );if (this.isAdditive) {
 	        if (isObject) {
 	          //value = value.add(obj.valueForKeyPath(this.keyPath))
 	          value = value.add(this._baseValue);
@@ -19930,9 +19929,9 @@ module.exports =
 	        }
 	      }
 
-	      if (this.keyPath === 'rotation.w') {
-	        console.log('value after: ' + value);
-	      }
+	      //if(this.keyPath === 'rotation.w'){
+	      //  console.log(`value after: ${value}`)
+	      //}
 
 	      //console.log(`CABasicAnimation._applyAnimation: keyPath: ${this.keyPath}, time: ${time}, baseTime: ${baseTime}, t: ${t}, value: ${value}`)
 	      this._applyValue(obj, value);
@@ -24069,21 +24068,6 @@ module.exports =
 	      this._updateWorldTransform();
 	      _SCNTransaction2.default._addChange(this, 'rotation', oldValue, newValue);
 	    }
-	    //_setRotation(newValue){
-	    //  if(typeof newValue.x !== 'number'
-	    //    || typeof newValue.y !== 'number'
-	    //    || typeof newValue.z !== 'number'
-	    //    || typeof newValue.w !== 'number'){
-	    //    throw new Error('error: SCNNode.rotation must have x, y, z, w values')
-	    //  }
-	    //  this._rotation.x = newValue.x
-	    //  this._rotation.y = newValue.y
-	    //  this._rotation.z = newValue.z
-	    //  this._rotation.w = newValue.w
-	    //  this._transformUpToDate = false
-	    //  this._updateWorldTransform()
-	    //}
-
 	  }, {
 	    key: 'scale',
 	    get: function get() {
@@ -26929,7 +26913,6 @@ module.exports =
 	        ind += indexStride;
 	      }
 
-	      console.log('boundingBox: min: ' + min.floatArray() + ', max: ' + max.floatArray());
 	      return { min: min, max: max };
 	    }
 
@@ -28827,7 +28810,7 @@ module.exports =
 	     * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523386-addanimation
 	     */
 	    value: function addAnimationForKey(animation, key) {
-	      console.log('SCNMaterialProperty addAnimationForKey');
+	      //console.log('SCNMaterialProperty addAnimationForKey')
 	      if (typeof key === 'undefined' || key === null) {
 	        key = Symbol();
 	      }
@@ -29083,7 +29066,7 @@ module.exports =
 	    value: function _loadContentsImage(path, dirPath) {
 	      var _this2 = this;
 
-	      console.log('image.path: ' + path);
+	      //console.log(`image.path: ${path}`)
 	      var image = new Image();
 	      this._loadedPromise = new Promise(function (resolve, reject) {
 	        if (path.indexOf('file:///') === 0) {
@@ -29110,9 +29093,9 @@ module.exports =
 	          };
 	          image.src = _path;
 	        } else {
-	          console.info('image loading: ' + path);
+	          //console.info(`image loading: ${path}`)
 	          image.onload = function () {
-	            console.warn('http image ' + image.src + ' onload');
+	            //console.warn(`http image ${image.src} onload`)
 	            _this2._contents = image;
 	            resolve();
 	          };
@@ -29643,9 +29626,8 @@ module.exports =
 	            animation.delegate = {
 	              animationDidStop: function animationDidStop(_anim, _finished) {
 	                if (_finished) {
-	                  console.log('animation completed: ' + anim.keyPath
 	                  //anim.target.setValueForKeyPath(anim.newValue, anim.keyPath)
-	                  );resolve(anim, animation);
+	                  resolve(anim, animation);
 	                }
 	              }
 	            };
@@ -44266,7 +44248,6 @@ module.exports =
 	          var paths = path.slice(8).split('/');
 	          var pathCount = 1;
 	          var _path = paths.slice(-pathCount).join('/');
-	          console.info('image loading: ' + _path);
 	          image.onload = function () {
 	            console.info('image ' + _path + ' onload');
 	            _this2._image = image;
@@ -44286,7 +44267,6 @@ module.exports =
 	            }
 	          };
 	        } else {
-	          console.info('image loading: ' + path);
 	          image.onload = function () {
 	            _this2._image = image;
 	            resolve(_this2);
@@ -44338,7 +44318,6 @@ module.exports =
 	  }], [{
 	    key: 'textureWithImageNamed',
 	    value: function textureWithImageNamed(name) {
-	      console.log('SKTexture image name: ' + name);
 	      var texture = new SKTexture();
 	      texture._loadImage(name);
 	      return texture;

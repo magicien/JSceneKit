@@ -124,7 +124,6 @@ export default class SCNTransaction extends NSObject {
           animation.delegate = {
             animationDidStop: (_anim, _finished) => {
               if(_finished){
-                console.log(`animation completed: ${anim.keyPath}`)
                 //anim.target.setValueForKeyPath(anim.newValue, anim.keyPath)
                 resolve(anim, animation)
               }

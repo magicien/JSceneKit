@@ -560,7 +560,6 @@ SCNGeometrySource *source = [SCNGeometrySource geometrySourceWithBuffer:buffer
       ind += indexStride
     }
 
-    console.log(`boundingBox: min: ${min.floatArray()}, max: ${max.floatArray()}`)
     return { min: min, max: max }
   }
 

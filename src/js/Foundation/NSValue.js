@@ -32,7 +32,6 @@ export default class NSValue extends NSObject {
         throw new Error(`unknown NSValue size format: ${size}`)
       }
       const values = size.slice(1, -1).split(',').map(parseFloat)
-      console.error(`size width: ${values[0]}, height: ${values[1]}`)
       return new CGSize(values[0], values[1])
     }
     throw new Error('unknown NSValue type')

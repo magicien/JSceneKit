@@ -270,7 +270,7 @@ export default class SCNMaterialProperty extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523386-addanimation
    */
   addAnimationForKey(animation, key) {
-    console.log('SCNMaterialProperty addAnimationForKey')
+    //console.log('SCNMaterialProperty addAnimationForKey')
     if(typeof key === 'undefined' || key === null){
       key = Symbol()
     }
@@ -492,7 +492,7 @@ export default class SCNMaterialProperty extends NSObject {
    * @returns {Image} -
    */
   _loadContentsImage(path, dirPath) {
-    console.log(`image.path: ${path}`)
+    //console.log(`image.path: ${path}`)
     const image = new Image()
     this._loadedPromise = new Promise((resolve, reject) => {
       if(path.indexOf('file:///') === 0){
@@ -519,9 +519,9 @@ export default class SCNMaterialProperty extends NSObject {
         }
         image.src = _path
       }else{
-        console.info(`image loading: ${path}`)
+        //console.info(`image loading: ${path}`)
         image.onload = () => {
-          console.warn(`http image ${image.src} onload`)
+          //console.warn(`http image ${image.src} onload`)
           this._contents = image
           resolve()
         }
