@@ -891,6 +891,24 @@ This method is for OpenGL shader programs only. To bind custom variable data for
         gl.cullFace(gl.FRONT)
       }
     }
+
+    const blendFuncSrc = [
+      gl.SRC_ALPHA, // alpha
+      gl.ONE, // add
+      gl.ZERO, // subtract
+      gl.ZERO, // multiply
+      gl.SRC_ALPHA, // screen
+      gl.ONE // replace
+    ]
+    const blendFuncDst = [
+      gl.ONE_MINUS_SRC_ALPHA, // alpha
+      gl.ONE, // add
+      gl.ONE_MINUS_SRC_COLOR, // subtract
+      gl.SRC_COLOR, // multiply
+      gl.ONE, // screen
+      gl.ZERO // replace
+    ]
+    gl.blendFunc(blendFuncSrc[material.blendMode], blendFuncDst[material.blendMode])
   }
 
   /**

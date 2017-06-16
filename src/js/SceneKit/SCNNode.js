@@ -741,15 +741,19 @@ export default class SCNNode extends NSObject {
 
     if(this._presentation){
       let pp = null
+      let pOpacity = 1.0
       if(this._parent === null){
         pp = SCNMatrix4MakeTranslation(0, 0, 0)
       }else if(this._parent._presentation === null){
         pp = this._parent._worldTransform
+        pOpacity = this._parent.opacity
       }else{
         pp = this._parent._presentation._worldTransform
+        pOpacity = this._parent._presentation.opacity
       }
       this._presentation._updateTransform()
       this._presentation._worldTransform = this._presentation.transform.mult(pp)
+      this._presentation.opacity = pOpacity * this.opacity
     }
 
     this._childNodes.forEach((child) => {

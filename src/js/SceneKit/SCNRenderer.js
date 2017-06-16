@@ -475,22 +475,18 @@ const _defaultFragmentShader =
       //float f0 = 0.0; // TODO: calculate f0
       //float fresnel = f0 + (1.0 - f0) * pow(1.0 - clamp(dot(viewVec, nom), 0.0, 1.0), material.fresnelExponent);
       float fresnel = 0.4 * pow(1.0 - clamp(dot(_surface.view, _surface.normal), 0.0, 1.0), material.fresnelExponent);
-      _output.color += texture(u_reflectiveTexture, r) * fresnel;
+      _output.color.rgb += texture(u_reflectiveTexture, r).rgb * fresnel;
     }
 
     float fogFactor = pow(v_fogFactor, fog.densityExponent);
     _output.color = mix(_output.color, fog.color, fogFactor);
 
-    // DEBUG
-    //if(textureFlags[TEXTURE_NORMAL_INDEX]){
-    //  mat3 tsInv = mat3(normalize(v_tangent), normalize(v_bitangent), nom);
-    //  vec3 color = normalize(texture(u_normalTexture, v_texcoord0).rgb * 2.0 - 1.0); // FIXME: check mappingChannel to decide which texture you use.
-    //  outColor.rgb = (normalize(tsInv * color) + 1.0) * 0.5;
-    //}
-
     #if USE_SHADER_MODIFIER_FRAGMENT
       shaderModifierFragment();
     #endif
+
+    // DEBUG
+    //_output.color.a = material.diffuse.a;
 
     outColor = _output.color;
   }
@@ -1392,6 +1388,7 @@ export default class SCNRenderer extends NSObject {
       gl.activeTexture(gl[symbol])
       gl.bindTexture(gl.TEXTURE_2D, node.presentation.light._shadowDepthTexture)
     }
+    gl.enable(gl.BLEND)
 
     //////////////////////////
     // Nodes
@@ -1510,7 +1507,9 @@ export default class SCNRenderer extends NSObject {
       }
       arr.push(...node.childNodes)
     }
-    targetNodes.sort((a, b) => { return a.renderingOrder - b.renderingOrder })
+    targetNodes.sort((a, b) => { 
+      return (a.presentation.renderingOrder - b.presentation.renderingOrder) + (b.presentation.opacity - a.presentation.opacity) * 0.5 
+    })
 
     return targetNodes
   }
@@ -1530,7 +1529,7 @@ export default class SCNRenderer extends NSObject {
       }
       arr.push(...node.childNodes)
     }
-    targetNodes.sort((a, b) => { return a.renderingOrder - b.renderingOrder })
+    targetNodes.sort((a, b) => { return (a.renderingOrder - b.renderingOrder) + (b.opacity - a.opacity) * 0.5 })
 
     return targetNodes
   }
@@ -2881,7 +2880,7 @@ export default class SCNRenderer extends NSObject {
    * @returns {SCNProgram} -
    */
   _programForGeometry(geometry) {
-      }
+  }
 
   /**
    * @access private
