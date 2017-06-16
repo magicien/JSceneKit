@@ -22,7 +22,7 @@ export default class SCNReferenceNode extends SCNNode {
         obj.referenceURL = value
         obj.load()
       }],
-      opacity: 'float',
+      opacity: ['float', '_opacity'],
       castsShadow: 'boolean',
       categoryBitMask: 'integer',
       hidden: ['boolean', 'isHidden'],

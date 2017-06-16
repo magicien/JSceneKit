@@ -21819,7 +21819,7 @@ module.exports =
 	        throw new Error('unsupported class for SCNActionFade: ' + obj.constructor.name);
 	      }
 
-	      var baseValue = obj.opacity;
+	      var baseValue = obj._opacity;
 	      var toValue = 0;
 	      if (this._toValue !== null) {
 	        toValue = this._toValue;
@@ -21831,10 +21831,10 @@ module.exports =
 
 	      var value = this._lerp(baseValue, toValue, t
 	      //console.warn(`opacity time: ${time}, t: ${t}, base: ${baseValue}, to: ${toValue}, val: ${value}`)
-	      );obj.presentation.opacity = value;
+	      );obj.presentation._opacity = value;
 
 	      if (this._finished) {
-	        obj.opacity = toValue;
+	        obj._opacity = toValue;
 	      }
 	    }
 	  }], [{
@@ -22105,7 +22105,7 @@ module.exports =
 	        rotation: ['SCNVector4', '_rotation'],
 	        scale: ['SCNVector3', '_scale'],
 	        hidden: ['boolean', 'isHidden'],
-	        opacity: 'float',
+	        opacity: ['float', '_opacity'],
 	        renderingOrder: 'integer',
 	        castsShadow: 'boolean',
 	        childNodes: ['NSArray', function (obj, childNodes) {
@@ -22315,7 +22315,8 @@ module.exports =
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnnode/1408010-opacity
 	     */
-	    _this.opacity = 1;
+	    _this._opacity = 1;
+	    _this._worldOpacity = 1;
 
 	    /**
 	     * The order the node’s content is drawn in relative to that of other nodes.
@@ -22471,19 +22472,19 @@ module.exports =
 
 	      if (this._presentation) {
 	        var pp = null;
-	        var pOpacity = 1.0;
+	        var ppOpacity = 1.0;
 	        if (this._parent === null) {
 	          pp = (0, _SCNMatrix4MakeTranslation2.default)(0, 0, 0);
 	        } else if (this._parent._presentation === null) {
 	          pp = this._parent._worldTransform;
-	          pOpacity = this._parent.opacity;
+	          ppOpacity = this._parent._worldOpacity;
 	        } else {
 	          pp = this._parent._presentation._worldTransform;
-	          pOpacity = this._parent._presentation.opacity;
+	          ppOpacity = this._parent._presentation._worldOpacity;
 	        }
 	        this._presentation._updateTransform();
 	        this._presentation._worldTransform = this._presentation.transform.mult(pp);
-	        this._presentation.opacity = pOpacity * this.opacity;
+	        this._presentation._worldOpacity = this._presentation._opacity * ppOpacity;
 	      }
 
 	      this._childNodes.forEach(function (child) {
@@ -23534,7 +23535,7 @@ module.exports =
 	      node._isPresentationInstance = this._isPresentationInstance;
 	      node.constraints = this.constraints ? this.constraints.slice(0) : null;
 	      node.isHidden = this.isHidden;
-	      node.opacity = this.opacity;
+	      node._opacity = this._opacity;
 	      node.renderingOrder = this.renderingOrder;
 	      node.castsShadow = this.castsShadow;
 	      node.movabilityHint = this.movabilityHint;
@@ -23581,6 +23582,7 @@ module.exports =
 	  }, {
 	    key: '_copyMaterialPropertiesToPresentation',
 	    value: function _copyMaterialPropertiesToPresentation() {
+	      var p = this._presentation;
 	      if (this._geometry) {
 	        var _iteratorNormalCompletion2 = true;
 	        var _didIteratorError2 = false;
@@ -23607,6 +23609,7 @@ module.exports =
 	          }
 	        }
 	      }
+	      p.opacity = this.opacity;
 	    }
 	  }, {
 	    key: 'valueForUndefinedKey',
@@ -23815,6 +23818,8 @@ module.exports =
 	        }
 	        target.morpher.setValueForKeyPath(value, restPath);
 	        return;
+	      } else if (key === 'opacity') {
+	        target._opacity = value;
 	      }
 	      // TODO: add other properties
 
@@ -24131,26 +24136,6 @@ module.exports =
 	      return this._rotation.rotationToEulerAngles();
 	    },
 	    set: function set(newValue) {
-	      /*
-	      const halfX = newValue.x * 0.5
-	      const halfY = newValue.y * 0.5
-	      const halfZ = newValue.z * 0.5
-	      const cosX = Math.cos(halfX)
-	      const sinX = Math.sin(halfX)
-	      const cosY = Math.cos(halfY)
-	      const sinY = Math.sin(halfY)
-	      const cosZ = Math.cos(halfZ)
-	      const sinZ = Math.sin(halfZ)
-	       const q = new SCNVector4()
-	      const x = sinX * cosY * cosZ - cosX * sinY * sinZ
-	      const y = cosX * sinY * cosZ + sinX * cosY * sinZ
-	      const z = cosX * cosY * sinZ - sinX * sinY * cosZ
-	      const r = 1.0 / Math.sqrt(x * x + y * y + z * z)
-	      q.x = x * r
-	      q.y = y * r
-	      q.z = z * r
-	      q.w = 2 * Math.acos(cosX * cosY * cosZ + sinX * sinY * sinZ)
-	      */
 	      this._rotation = newValue.eulerAnglesToRotation();
 	      this._transformUpToDate = false;
 	    }
@@ -24164,63 +24149,15 @@ module.exports =
 	  }, {
 	    key: 'orientation',
 	    get: function get() {
-	      /*
-	      const quat = new SCNVector4()
-	      const rot = this._rotation
-	       if(rot.x === 0 && rot.y === 0 && rot.z === 0){
-	        quat.x = 0
-	        quat.y = 0
-	        quat.z = 0
-	        quat.w = 1.0
-	      }else{
-	        const r = 1.0 / Math.sqrt(rot.x * rot.x + rot.y * rot.y + rot.z * rot.z)
-	        const cosW = Math.cos(rot.w)
-	        const sinW = Math.sin(rot.w)
-	        quat.x = rot.x * sinW
-	        quat.y = rot.y * sinW
-	        quat.z = rot.z * sinW
-	        quat.w = cosW
-	      }
-	      return quat
-	      */
-	      //console.log(`SCNNode get orientation: ${this._rotation.rotationToQuat()}`)
 	      return this._rotation.rotationToQuat();
 	    },
 	    set: function set(newValue) {
-	      /*
-	      const rot = new SCNVector4()
-	       if(newValue.x === 0 && newValue.y === 0 && newValue.z === 0){
-	        rot.x = 0
-	        rot.y = 0
-	        rot.z = 0
-	        rot.w = 0
-	      }else{
-	        rot.x = newValue.x
-	        rot.y = newValue.y
-	        rot.z = newValue.z
-	        let quatW = newValue.w
-	        if(quatW > 1){
-	          quatW = 1.0
-	        }else if(quatW < -1){
-	          quatW = -1.0
-	        }
-	        const w = Math.acos(quatW)
-	         if(isNaN(w)){
-	          rot.w = 0
-	        }else{
-	          rot.w = w
-	        }
-	      }
-	          
-	      this._rotation = rot
-	      */
 	      if (!(newValue instanceof _SCNVector4.default)) {
 	        throw new Error('orientation must be SCNVector4');
 	      }
 
-	      this._rotation = newValue.quatToRotation
-	      //console.log(`SCNNode set orientation: ${this._rotation.float32Array()}`)
-	      ();this._transformUpToDate = false;
+	      this._rotation = newValue.quatToRotation();
+	      this._transformUpToDate = false;
 	    }
 
 	    /**
@@ -24292,6 +24229,23 @@ module.exports =
 	  }, {
 	    key: '_worldScale',
 	    get: function get() {}
+
+	    /**
+	     * The opacity value of the node. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnnode/1408010-opacity
+	     */
+
+	  }, {
+	    key: 'opacity',
+	    get: function get() {
+	      return this._opacity;
+	    },
+	    set: function set(newValue) {
+	      var oldValue = this._opacity;
+	      this._opacity = newValue;
+	      _SCNTransaction2.default._addChange(this, 'opacity', oldValue, newValue);
+	    }
 	  }, {
 	    key: 'parent',
 	    get: function get() {
@@ -31675,7 +31629,7 @@ module.exports =
 	      var targetNodes = [];
 	      while (arr.length > 0) {
 	        var node = arr.shift();
-	        if (node.presentation !== null && node.presentation.geometry !== null && node.presentation.castsShadow && node.presentation.opacity > 0 && !node.presentation.isHidden) {
+	        if (node.presentation !== null && node.presentation.geometry !== null && node.presentation.castsShadow && node.presentation._worldOpacity > 0 && !node.presentation.isHidden) {
 	          targetNodes.push(node);
 	        }
 	        arr.push.apply(arr, _toConsumableArray(node.childNodes));
@@ -31703,7 +31657,7 @@ module.exports =
 	        arr.push.apply(arr, _toConsumableArray(node.childNodes));
 	      }
 	      targetNodes.sort(function (a, b) {
-	        return a.presentation.renderingOrder - b.presentation.renderingOrder + (b.presentation.opacity - a.presentation.opacity) * 0.5;
+	        return a.presentation.renderingOrder - b.presentation.renderingOrder + (b.presentation._worldOpacity - a.presentation._worldOpacity) * 0.5;
 	      });
 
 	      return targetNodes;
@@ -31929,7 +31883,7 @@ module.exports =
 	  }, {
 	    key: '_renderNode',
 	    value: function _renderNode(node) {
-	      if (node.presentation.isHidden || node.presentation.opacity <= 0) {
+	      if (node.presentation.isHidden || node.presentation._worldOpacity <= 0) {
 	        return;
 	      }
 	      var gl = this.context;
@@ -32002,7 +31956,7 @@ module.exports =
 	        // FIXME: use bufferData instead of bindBufferBase
 	        );gl.bindBufferBase(gl.UNIFORM_BUFFER, _materialLoc, geometry._materialBuffer);
 
-	        geometry._bufferMaterialData(gl, p, i, node.presentation.opacity);
+	        geometry._bufferMaterialData(gl, p, i, node.presentation._worldOpacity);
 
 	        var shape = null;
 	        switch (element.primitiveType) {
@@ -50649,7 +50603,7 @@ module.exports =
 	          obj.referenceURL = value;
 	          obj.load();
 	        }],
-	        opacity: 'float',
+	        opacity: ['float', '_opacity'],
 	        castsShadow: 'boolean',
 	        categoryBitMask: 'integer',
 	        hidden: ['boolean', 'isHidden'],

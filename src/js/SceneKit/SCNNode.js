@@ -62,7 +62,7 @@ export default class SCNNode extends NSObject {
       rotation: ['SCNVector4', '_rotation'],
       scale: ['SCNVector3', '_scale'],
       hidden: ['boolean', 'isHidden'],
-      opacity: 'float',
+      opacity: ['float', '_opacity'],
       renderingOrder: 'integer',
       castsShadow: 'boolean',
       childNodes: ['NSArray', (obj, childNodes) => {
@@ -267,7 +267,8 @@ export default class SCNNode extends NSObject {
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnnode/1408010-opacity
      */
-    this.opacity = 1
+    this._opacity = 1
+    this._worldOpacity = 1
 
     /**
      * The order the node’s content is drawn in relative to that of other nodes.
@@ -741,19 +742,19 @@ export default class SCNNode extends NSObject {
 
     if(this._presentation){
       let pp = null
-      let pOpacity = 1.0
+      let ppOpacity = 1.0
       if(this._parent === null){
         pp = SCNMatrix4MakeTranslation(0, 0, 0)
       }else if(this._parent._presentation === null){
         pp = this._parent._worldTransform
-        pOpacity = this._parent.opacity
+        ppOpacity = this._parent._worldOpacity
       }else{
         pp = this._parent._presentation._worldTransform
-        pOpacity = this._parent._presentation.opacity
+        ppOpacity = this._parent._presentation._worldOpacity
       }
       this._presentation._updateTransform()
       this._presentation._worldTransform = this._presentation.transform.mult(pp)
-      this._presentation.opacity = pOpacity * this.opacity
+      this._presentation._worldOpacity = this._presentation._opacity * ppOpacity
     }
 
     this._childNodes.forEach((child) => {
@@ -876,27 +877,6 @@ export default class SCNNode extends NSObject {
     return this._rotation.rotationToEulerAngles()
   }
   set eulerAngles(newValue) {
-    /*
-    const halfX = newValue.x * 0.5
-    const halfY = newValue.y * 0.5
-    const halfZ = newValue.z * 0.5
-    const cosX = Math.cos(halfX)
-    const sinX = Math.sin(halfX)
-    const cosY = Math.cos(halfY)
-    const sinY = Math.sin(halfY)
-    const cosZ = Math.cos(halfZ)
-    const sinZ = Math.sin(halfZ)
-
-    const q = new SCNVector4()
-    const x = sinX * cosY * cosZ - cosX * sinY * sinZ
-    const y = cosX * sinY * cosZ + sinX * cosY * sinZ
-    const z = cosX * cosY * sinZ - sinX * sinY * cosZ
-    const r = 1.0 / Math.sqrt(x * x + y * y + z * z)
-    q.x = x * r
-    q.y = y * r
-    q.z = z * r
-    q.w = 2 * Math.acos(cosX * cosY * cosZ + sinX * sinY * sinZ)
-    */
     this._rotation = newValue.eulerAnglesToRotation()
     this._transformUpToDate = false
   }
@@ -907,65 +887,14 @@ export default class SCNNode extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnnode/1408048-orientation
    */
   get orientation() {
-    /*
-    const quat = new SCNVector4()
-    const rot = this._rotation
-
-    if(rot.x === 0 && rot.y === 0 && rot.z === 0){
-      quat.x = 0
-      quat.y = 0
-      quat.z = 0
-      quat.w = 1.0
-    }else{
-      const r = 1.0 / Math.sqrt(rot.x * rot.x + rot.y * rot.y + rot.z * rot.z)
-      const cosW = Math.cos(rot.w)
-      const sinW = Math.sin(rot.w)
-      quat.x = rot.x * sinW
-      quat.y = rot.y * sinW
-      quat.z = rot.z * sinW
-      quat.w = cosW
-    }
-    return quat
-    */
-    //console.log(`SCNNode get orientation: ${this._rotation.rotationToQuat()}`)
     return this._rotation.rotationToQuat()
   }
   set orientation(newValue) {
-    /*
-    const rot = new SCNVector4()
-
-    if(newValue.x === 0 && newValue.y === 0 && newValue.z === 0){
-      rot.x = 0
-      rot.y = 0
-      rot.z = 0
-      rot.w = 0
-    }else{
-      rot.x = newValue.x
-      rot.y = newValue.y
-      rot.z = newValue.z
-      let quatW = newValue.w
-      if(quatW > 1){
-        quatW = 1.0
-      }else if(quatW < -1){
-        quatW = -1.0
-      }
-      const w = Math.acos(quatW)
-
-      if(isNaN(w)){
-        rot.w = 0
-      }else{
-        rot.w = w
-      }
-    }
-        
-    this._rotation = rot
-    */
     if(!(newValue instanceof SCNVector4)){
       throw new Error(`orientation must be SCNVector4`)
     }
 
     this._rotation = newValue.quatToRotation()
-    //console.log(`SCNNode set orientation: ${this._rotation.float32Array()}`)
     this._transformUpToDate = false
   }
 
@@ -1020,6 +949,20 @@ export default class SCNNode extends NSObject {
    * @returns {SCNVector3} -
    */
   get _worldScale() {
+  }
+
+  /**
+   * The opacity value of the node. Animatable.
+   * @type {number}
+   * @see https://developer.apple.com/reference/scenekit/scnnode/1408010-opacity
+   */
+  get opacity() {
+    return this._opacity
+  }
+  set opacity(newValue) {
+    const oldValue = this._opacity
+    this._opacity = newValue
+    SCNTransaction._addChange(this, 'opacity', oldValue, newValue)
   }
 
   // Managing the Node Hierarchy
@@ -1948,7 +1891,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     node._isPresentationInstance = this._isPresentationInstance
     node.constraints = this.constraints ? this.constraints.slice(0) : null
     node.isHidden = this.isHidden
-    node.opacity = this.opacity
+    node._opacity = this._opacity
     node.renderingOrder = this.renderingOrder
     node.castsShadow = this.castsShadow
     node.movabilityHint = this.movabilityHint
@@ -1992,11 +1935,13 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
   }
 
   _copyMaterialPropertiesToPresentation() {
+    const p = this._presentation
     if(this._geometry){
       for(const material of this._geometry.materials){
         material._copyPresentationProperties()
       }
     }
+    p.opacity = this.opacity
   }
 
   get viewTransform() {
@@ -2235,6 +2180,8 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
       }
       target.morpher.setValueForKeyPath(value, restPath)
       return
+    }else if(key === 'opacity'){
+      target._opacity = value
     }
     // TODO: add other properties
 

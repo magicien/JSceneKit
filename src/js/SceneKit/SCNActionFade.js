@@ -135,7 +135,7 @@ export default class SCNActionFade extends SCNAction {
       throw new Error(`unsupported class for SCNActionFade: ${obj.constructor.name}`)
     }
 
-    const baseValue = obj.opacity
+    const baseValue = obj._opacity
     let toValue = 0
     if(this._toValue !== null){
       toValue = this._toValue
@@ -147,10 +147,10 @@ export default class SCNActionFade extends SCNAction {
 
     const value = this._lerp(baseValue, toValue, t)
     //console.warn(`opacity time: ${time}, t: ${t}, base: ${baseValue}, to: ${toValue}, val: ${value}`)
-    obj.presentation.opacity = value
+    obj.presentation._opacity = value
 
     if(this._finished){
-      obj.opacity = toValue
+      obj._opacity = toValue
     }
   }
 }

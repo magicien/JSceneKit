@@ -1482,7 +1482,7 @@ export default class SCNRenderer extends NSObject {
       if(node.presentation !== null 
       && node.presentation.geometry !== null
       && node.presentation.castsShadow
-      && node.presentation.opacity > 0
+      && node.presentation._worldOpacity > 0
       && !node.presentation.isHidden){
         targetNodes.push(node)
       }
@@ -1508,7 +1508,7 @@ export default class SCNRenderer extends NSObject {
       arr.push(...node.childNodes)
     }
     targetNodes.sort((a, b) => { 
-      return (a.presentation.renderingOrder - b.presentation.renderingOrder) + (b.presentation.opacity - a.presentation.opacity) * 0.5 
+      return (a.presentation.renderingOrder - b.presentation.renderingOrder) + (b.presentation._worldOpacity - a.presentation._worldOpacity) * 0.5 
     })
 
     return targetNodes
@@ -1693,7 +1693,7 @@ export default class SCNRenderer extends NSObject {
    * @returns {void}
    */
   _renderNode(node) {
-    if(node.presentation.isHidden || node.presentation.opacity <= 0){
+    if(node.presentation.isHidden || node.presentation._worldOpacity <= 0){
       return
     }
     const gl = this.context
@@ -1765,7 +1765,7 @@ export default class SCNRenderer extends NSObject {
       // FIXME: use bufferData instead of bindBufferBase
       gl.bindBufferBase(gl.UNIFORM_BUFFER, _materialLoc, geometry._materialBuffer)
 
-      geometry._bufferMaterialData(gl, p, i, node.presentation.opacity)
+      geometry._bufferMaterialData(gl, p, i, node.presentation._worldOpacity)
 
       let shape = null
       switch(element.primitiveType){
