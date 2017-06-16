@@ -631,10 +631,6 @@ export default class SCNNode extends NSObject {
         result.push(SKColor._initWithData(source, pos, true))
         pos += stride
       }
-      // DEBUG
-      for(let i=0; i<count; i++){
-        console.warn(`components 13: ${i}: ${result[i].floatArray()}`)
-      }
     }else{
       console.error(`unknown accessor componentsType: ${accessor.componentsType}`)
     }

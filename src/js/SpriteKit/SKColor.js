@@ -57,11 +57,6 @@ export default class SKColor extends NSObject {
             const b = parseFloat(values[2])
             const a = 1.0
             //console.log(`NSColor -> SKColor NSRGB: r:${r} g:${g} b:${b} a:${a}`)
-            console.error('=====')
-            console.error('NSColorSpace: ' + propValues.NSColorSpace)
-            console.error('NSCustomColorSpace: ' + propValues.NSCustomColorSpace)
-            console.error('NSComponents: ' + propValues.NSComponents)
-            console.error(`rgba: ${r} ${g} ${b} ${a}`)
             //if(propValues.NSColorSpace === 1){
             //  return new SKColor(1, 1, 1, 1)
             //}
@@ -102,13 +97,13 @@ export default class SKColor extends NSObject {
     const instance = new SKColor()
     if(bigEndian){
       instance.red = data.readFloatBE(offset + 0)
-      instance.blue = data.readFloatBE(offset + 4)
-      instance.green = data.readFloatBE(offset + 8)
+      instance.green = data.readFloatBE(offset + 4)
+      instance.blue = data.readFloatBE(offset + 8)
       instance.alpha = data.readFloatBE(offset + 12)
     }else{
       instance.red = data.readFloatLE(offset + 0)
-      instance.blue = data.readFloatLE(offset + 4)
-      instance.green = data.readFloatLE(offset + 8)
+      instance.green = data.readFloatLE(offset + 4)
+      instance.blue = data.readFloatLE(offset + 8)
       instance.alpha = data.readFloatLE(offset + 12)
     }
     return instance

@@ -1271,7 +1271,11 @@ export default class SCNParticleSystem extends NSObject {
     }
 
     this._particles.forEach((p) => {
+      let _dt = dt
       const pdt = (currentTime - p.birthTime) * this.speedFactor
+      if(p.birthTime > this._prevTime){
+        _dt = pdt
+      }
       const t = pdt / p.lifeSpan
       p.life = t
       if(t > 1){
@@ -1287,13 +1291,13 @@ export default class SCNParticleSystem extends NSObject {
       //p.velocity.x += acceleration.x * dt
       //p.velocity.y += acceleration.y * dt
       //p.velocity.z += acceleration.z * dt
-      p.angle += p.angularVelocity * dt
-      p.velocity.x = (p.velocity.x + acceleration.x * dt) * damping
-      p.velocity.y = (p.velocity.y + acceleration.y * dt) * damping
-      p.velocity.z = (p.velocity.z + acceleration.z * dt) * damping
-      p.position.x += p.velocity.x * dt
-      p.position.y += p.velocity.y * dt
-      p.position.z += p.velocity.z * dt
+      p.angle += p.angularVelocity * _dt
+      p.velocity.x = (p.velocity.x + acceleration.x * _dt) * damping
+      p.velocity.y = (p.velocity.y + acceleration.y * _dt) * damping
+      p.velocity.z = (p.velocity.z + acceleration.z * _dt) * damping
+      p.position.x += p.velocity.x * _dt
+      p.position.y += p.velocity.y * _dt
+      p.position.z += p.velocity.z * _dt
       if(this.propertyControllers !== null){
         Object.keys(this.propertyControllers).forEach((key) => {
           this.propertyControllers[key].animation._applyAnimation(p, t, false) // should I use p.life instead of t?

@@ -9375,13 +9375,13 @@ module.exports =
 	      var instance = new SKColor();
 	      if (bigEndian) {
 	        instance.red = data.readFloatBE(offset + 0);
-	        instance.blue = data.readFloatBE(offset + 4);
-	        instance.green = data.readFloatBE(offset + 8);
+	        instance.green = data.readFloatBE(offset + 4);
+	        instance.blue = data.readFloatBE(offset + 8);
 	        instance.alpha = data.readFloatBE(offset + 12);
 	      } else {
 	        instance.red = data.readFloatLE(offset + 0);
-	        instance.blue = data.readFloatLE(offset + 4);
-	        instance.green = data.readFloatLE(offset + 8);
+	        instance.green = data.readFloatLE(offset + 4);
+	        instance.blue = data.readFloatLE(offset + 8);
 	        instance.alpha = data.readFloatLE(offset + 12);
 	      }
 	      return instance;
@@ -9449,15 +9449,10 @@ module.exports =
 	              var b = parseFloat(values[2]);
 	              var a = 1.0;
 	              //console.log(`NSColor -> SKColor NSRGB: r:${r} g:${g} b:${b} a:${a}`)
-	              console.error('=====');
-	              console.error('NSColorSpace: ' + propValues.NSColorSpace);
-	              console.error('NSCustomColorSpace: ' + propValues.NSCustomColorSpace);
-	              console.error('NSComponents: ' + propValues.NSComponents);
-	              console.error('rgba: ' + r + ' ' + g + ' ' + b + ' ' + a
 	              //if(propValues.NSColorSpace === 1){
 	              //  return new SKColor(1, 1, 1, 1)
 	              //}
-	              );return new SKColor(r, g, b, a);
+	              return new SKColor(r, g, b, a);
 	            } else if (typeof propValues.NSWhite !== 'undefined') {
 	              var _ascii = propValues.NSWhite.toString('ascii');
 	              var _values = _ascii.split(' ');
@@ -26522,10 +26517,6 @@ module.exports =
 	          result.push(_SKColor2.default._initWithData(source, pos, true));
 	          pos += stride;
 	        }
-	        // DEBUG
-	        for (var _i5 = 0; _i5 < count; _i5++) {
-	          console.warn('components 13: ' + _i5 + ': ' + result[_i5].floatArray());
-	        }
 	      } else {
 	        console.error('unknown accessor componentsType: ' + accessor.componentsType);
 	      }
@@ -41678,7 +41669,11 @@ module.exports =
 	      }
 
 	      this._particles.forEach(function (p) {
+	        var _dt = dt;
 	        var pdt = (currentTime - p.birthTime) * _this4.speedFactor;
+	        if (p.birthTime > _this4._prevTime) {
+	          _dt = pdt;
+	        }
 	        var t = pdt / p.lifeSpan;
 	        p.life = t;
 	        if (t > 1) {
@@ -41694,13 +41689,13 @@ module.exports =
 	        //p.velocity.x += acceleration.x * dt
 	        //p.velocity.y += acceleration.y * dt
 	        //p.velocity.z += acceleration.z * dt
-	        p.angle += p.angularVelocity * dt;
-	        p.velocity.x = (p.velocity.x + acceleration.x * dt) * damping;
-	        p.velocity.y = (p.velocity.y + acceleration.y * dt) * damping;
-	        p.velocity.z = (p.velocity.z + acceleration.z * dt) * damping;
-	        p.position.x += p.velocity.x * dt;
-	        p.position.y += p.velocity.y * dt;
-	        p.position.z += p.velocity.z * dt;
+	        p.angle += p.angularVelocity * _dt;
+	        p.velocity.x = (p.velocity.x + acceleration.x * _dt) * damping;
+	        p.velocity.y = (p.velocity.y + acceleration.y * _dt) * damping;
+	        p.velocity.z = (p.velocity.z + acceleration.z * _dt) * damping;
+	        p.position.x += p.velocity.x * _dt;
+	        p.position.y += p.velocity.y * _dt;
+	        p.position.z += p.velocity.z * _dt;
 	        if (_this4.propertyControllers !== null) {
 	          Object.keys(_this4.propertyControllers).forEach(function (key) {
 	            _this4.propertyControllers[key].animation._applyAnimation(p, t, false // should I use p.life instead of t?
