@@ -798,7 +798,11 @@ This method is for OpenGL shader programs only. To bind custom variable data for
   _bufferMaterialData(gl, program, index, opacity) {
     // TODO: move this function to SCNProgram
     const materialCount = this.materials.length
-    const material = this.materials[index % materialCount]
+    let material = this.materials[index % materialCount]
+    if(!material){
+      // FIXME: What should I do if there's no material? 
+      material = new SCNMaterial()
+    }
     let diffuse = material.diffuse.float32Array()
     diffuse[3] *= opacity
     let ambient = null

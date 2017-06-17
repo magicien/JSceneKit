@@ -286,7 +286,7 @@ export default class SKColor extends NSObject {
    * @see https://developer.apple.com/reference/uikit/uicolor/1621920-white
    */
   static get white() {
-    return new SKColor(1.0, 0.0, 0.0, 1.0)
+    return new SKColor(1.0, 1.0, 1.0, 1.0)
   }
 
   /**

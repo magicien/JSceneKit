@@ -7944,7 +7944,7 @@ module.exports =
 	  }, {
 	    key: 'white',
 	    get: function get() {
-	      return new SKColor(1.0, 0.0, 0.0, 1.0);
+	      return new SKColor(1.0, 1.0, 1.0, 1.0);
 	    }
 
 	    /**
@@ -25891,6 +25891,10 @@ module.exports =
 	      // TODO: move this function to SCNProgram
 	      var materialCount = this.materials.length;
 	      var material = this.materials[index % materialCount];
+	      if (!material) {
+	        // FIXME: What should I do if there's no material? 
+	        material = new _SCNMaterial2.default();
+	      }
 	      var diffuse = material.diffuse.float32Array();
 	      diffuse[3] *= opacity;
 	      var ambient = null;
