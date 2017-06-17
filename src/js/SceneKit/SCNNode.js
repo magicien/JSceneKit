@@ -962,7 +962,7 @@ export default class SCNNode extends NSObject {
   set opacity(newValue) {
     const oldValue = this._opacity
     this._opacity = newValue
-    SCNTransaction._addChange(this, 'opacity', oldValue, newValue)
+    SCNTransaction._addChange(this, '_opacity', oldValue, newValue)
   }
 
   // Managing the Node Hierarchy
@@ -1672,7 +1672,6 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @desc Use this method to create smooth transitions between the effects of multiple animations. For example, the geometry loaded from a scene file for a game character may have associated animations for player actions such as walking and jumping. When the player lands from a jump, you remove the jump animation so the character continues walking. If you use the removeAnimation(forKey:) method to remove the jump animation, SceneKit abruptly switches from the current frame of the jump animation to the current frame of the walk animation. If you use the removeAnimation(forKey:fadeOutDuration:) method instead, SceneKit plays both animations at once during that duration and interpolates vertex positions from one animation to the other, creating a smooth transition.
    * @see https://developer.apple.com/reference/scenekit/scnanimatable/1522841-removeanimation
    */
-   
   removeAnimationForKeyFadeOutDuration(key, duration) {
     // FIXME: use fadeout duration
     this.removeAnimationForKey(key)
@@ -1782,7 +1781,23 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
         max: new SCNVector3(-Infinity, -Infinity, -Infinity)
       }
     }
-    return this._geometry.boundingBox
+    const boundingBox = this._geometry.boundingBox
+    // FIXME: rotate and scale
+    if(this.skinner && this.skinner.baseGeometryBindTransform){
+      const tx = this.skinner.baseGeometryBindTransform.m41
+      const ty = this.skinner.baseGeometryBindTransform.m42
+      const tz = this.skinner.baseGeometryBindTransform.m43
+      boundingBox.min.x += tx
+      boundingBox.min.y += ty
+      boundingBox.min.z += tz
+      boundingBox.max.x += tx
+      boundingBox.max.y += ty
+      boundingBox.max.z += tz
+    }
+
+    //return this._geometry.boundingBox
+    //return this._geometry._updateBoundingBoxForSkinner(this.skinner)
+    return boundingBox
   }
 
   _updateBoundingBox() {
@@ -2006,7 +2021,6 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
   }
 
   valueForKeyPath(keyPath, usePresentation = true) {
-    // FIXME: check flags to decide to use a presentation node
     const target = (usePresentation && this._presentation) ? this._presentation : this
     const paths = keyPath.split('.')
     const key = paths[0]
@@ -2043,7 +2057,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
       }
       return target.transform
     }
-    return super.valueForKeyPath(keyPath)
+    return super.valueForKeyPath(keyPath, usePresentation)
   }
 
   setValueForKey(value, key) {
@@ -2180,8 +2194,6 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
       }
       target.morpher.setValueForKeyPath(value, restPath)
       return
-    }else if(key === 'opacity'){
-      target._opacity = value
     }
     // TODO: add other properties
 

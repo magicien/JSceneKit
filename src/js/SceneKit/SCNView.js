@@ -1063,6 +1063,13 @@ export default class SCNView {
           })
           node.geometry._presentation = p.geometry
         }
+        if(node._particleSystems){
+          p._particleSystems = []
+          for(const system of node._particleSystems){
+            const pSystem = system._createPresentation()
+            p._particleSystems.push(pSystem)
+          }
+        }
         node._presentation = p
       }
       //node._copyTransformToPresentation()
@@ -1249,9 +1256,14 @@ export default class SCNView {
         })
       })
     }
+    if(node._particleSystems){
+      for(const system of node._particleSystems){
+        this._runAnimationForObject(system)
+      }
+    }
   }
 
-  _runAnimationForObject(obj, time) {
+  _runAnimationForObject(obj) {
     const deleteKeys = []
     obj._animations.forEach((animation, key) => {
       animation._applyAnimation(obj, this.currentTime)

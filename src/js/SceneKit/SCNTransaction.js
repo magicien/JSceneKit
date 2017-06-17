@@ -105,9 +105,9 @@ export default class SCNTransaction extends NSObject {
 
   static _apply(transaction) {
     if(transaction._disableActions || transaction._animationDuration === 0){
-      //transaction._animations.forEach((anim) => {
-      //  anim.target.setValueForKeyPath(anim.newValue, anim.keyPath)
-      //})
+      transaction._animations.forEach((anim) => {
+        anim.target.setValueForKeyPath(anim.newValue, anim.keyPath)
+      })
       if(transaction._completionBlock){
         transaction._completionBlock()
       }
@@ -124,7 +124,7 @@ export default class SCNTransaction extends NSObject {
           animation.delegate = {
             animationDidStop: (_anim, _finished) => {
               if(_finished){
-                //anim.target.setValueForKeyPath(anim.newValue, anim.keyPath)
+                anim.target.setValueForKeyPath(anim.newValue, anim.keyPath)
                 resolve(anim, animation)
               }
             }
@@ -304,8 +304,8 @@ _node.position = SCNVector3Make(_node.position.x, _node.position.y + 10, _node.p
   }
 
   static _addChange(target, keyPath, oldValue, newValue) {
-    if(this._immediateMode){
-      //target.setValueForKeyPath(newValue, keyPath)
+    if(this.immediateMode){
+      target.setValueForKeyPath(newValue, keyPath)
     }else{
       let diff = null
       if(typeof newValue === 'number'){

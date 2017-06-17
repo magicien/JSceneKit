@@ -195,22 +195,55 @@ export default class SCNPhysicsWorld extends NSObject {
     if((bodyA.categoryBitMask & bodyB.contactTestBitMask) === 0){
       return []
     }
-    const posA = bodyA._position
-    const posB = bodyB._position
-    const radA = bodyA._radius
-    const radB = bodyB._radius
+    // FIXME: implement
+    //if(bodyA._isBox()){
+    //  return this._contactTestBetweenBoxAndSphere(bodyA, bodyB, options)
+    //}else if(bodyB._isBox()){
+    //  return this._contactTestBetweenBoxAndSphere(bodyB, bodyA, options, true)
+    //}else{
+    //  return this._contactTestBetweenSpheres(bodyA, bodyB, options)
+    //}
+    return this._contactTestBetweenSpheres(bodyA, bodyB, options)
+  }
+
+  _contactTestBetweenSpheres(sphereA, sphereB, options) {
+    const posA = sphereA._position
+    const posB = sphereB._position
+    const radA = sphereA._radius
+    const radB = sphereB._radius
     const vec = posA.sub(posB)
     const l = vec.length()
     if(l > radA + radB){
       return []
     }
     const contact = new SCNPhysicsContact()
-    contact._nodeA = bodyA._node
-    contact._nodeB = bodyB._node
+    contact._nodeA = sphereA._node
+    contact._nodeB = sphereB._node
     contact._contactPoint = posA.add(vec.mul((radA - radB + l) * 0.5))
     contact._contactNormal = vec.mul(-1).normalize()
     contact._penetrationDistance = 0.000000001 // FIXME: implement
     return [contact]
+  }
+
+  _contactTestBetweenBoxAndSphere(box, sphere, reverse = false) {
+    const size = new SCNVector3()
+    let transform = null
+
+    const boxShape = this.physicsShape._sourceGeometry
+
+    const contact = new SCNPhysicsContact()
+    if(reverse){
+      contact._nodeA = sphere._node
+      contact._nodeB = box._node
+    }else{
+      contact._nodeA = box._node
+      contact._nodeB = sphere._node
+    }
+    //contact._contactPoint = 
+    //contact._contactNormal = 
+    //contact._penetrationDistance = 
+    return [contact]
+
   }
 
   /**

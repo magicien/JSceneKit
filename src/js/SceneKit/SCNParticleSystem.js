@@ -10,6 +10,7 @@ import SCNParticleBirthLocation from './SCNParticleBirthLocation'
 import SCNParticleBirthDirection from './SCNParticleBirthDirection'
 import SCNVector3 from './SCNVector3'
 import SCNVector4 from './SCNVector4'
+import SCNOrderedDictionary from './SCNOrderedDictionary'
 import SCNParticleImageSequenceAnimationMode from './SCNParticleImageSequenceAnimationMode'
 //import SCNNode from './SCNNode'
 import SCNParticleBlendMode from './SCNParticleBlendMode'
@@ -20,6 +21,7 @@ import SCNParticleEventBlock from './SCNParticleEventBlock'
 import SCNParticlePropertyController from './SCNParticlePropertyController'
 import SCNParticleModifierStage from './SCNParticleModifierStage'
 import SCNParticleModifierBlock from './SCNParticleModifierBlock'
+import SCNTransaction from './SCNTransaction'
 import SKColor from '../SpriteKit/SKColor'
 
 const _ParticleProperty = {
@@ -186,7 +188,7 @@ export default class SCNParticleSystem extends NSObject {
       idleDurationVariation: 'float',
       loops: 'boolean',
       warmupDuration: 'float',
-      birthRate: 'float',
+      birthRate: ['float', '_birthRate'],
       birthRateVariation: 'float',
       emitterShape: 'SCNGeometry',
       birthLocation: 'integer',
@@ -328,7 +330,7 @@ export default class SCNParticleSystem extends NSObject {
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522857-birthrate
      */
-    this.birthRate = 0.0
+    this._birthRate = 0.0
 
     /**
      * The range of randomized particle birth rate values. Animatable.
@@ -746,20 +748,17 @@ export default class SCNParticleSystem extends NSObject {
     this._imageWidth = null
     this._imageHeight = null
 
-    //if(name !== null){
-    //  let path = name
-    //  if(directory !== null){
-    //    path = `${directory}/${name}`
-    //  }
-    //  this._loadingPromise = _BinaryRequest.get(path)
-    //  .then((data) => {
-    //    const system = NSKeyedUnarchiver.unarchiveObjectWithData(data, path)
-    //    if(!(system instanceof SCNParticleSystem)){
-    //      throw new Error(`file ${path} is not an instance of SCNParticleSystem`)
-    //    }
-    //    return system
-    //  })
-    //}
+    this.__presentation = null
+
+    ///////////////////
+    // SCNAnimatable //
+    ///////////////////
+
+    /**
+     * @access private
+     * @type {SCNOrderedDictionary}
+     */
+    this._animations = new SCNOrderedDictionary()
 
     /**
      * @access private
@@ -1245,11 +1244,11 @@ export default class SCNParticleSystem extends NSObject {
     }
 
     // generate particles
-    if(this.birthRate + this.birthRateVariation > 0){
+    if(this._presentation._birthRate + this.birthRateVariation > 0){
       while(this._nextBirthTime <= currentTime){
         const p = this._createParticle(this._nextBirthTime, transform)
         this._particles.push(p)
-        let rate = this.birthRate + this.birthRateVariation * (Math.random() - 0.5)
+        let rate = this._presentation._birthRate + this.birthRateVariation * (Math.random() - 0.5)
         if(rate < 0.0000001){
           rate = 0.0000001
         }
@@ -1573,9 +1572,214 @@ export default class SCNParticleSystem extends NSObject {
   }
 
   get _maxParticles() {
-    const maxRate = this.birthRate + this.birthRateVariation * 0.5
+    const maxRate = this._birthRate + this.birthRateVariation * 0.5
     const maxLifeSpan = this.particleLifeSpan + this.particleLifeSpanVariation * 0.5
     return Math.ceil(maxRate * maxLifeSpan)
+  }
+
+  _copy() {
+    const s = new SCNParticleSystem()
+    const params = [
+      '_birthRate'
+      // TODO: add other parameters... 
+    ]
+    for(const param of params){
+      s[param] = this[param]
+    }
+
+    return s
+  }
+
+  _createPresentation() {
+    if(this.__presentation){
+      return this.__presentation
+    }
+    const s = this._copy()
+    this.__presentation = s
+    return s
+  }
+
+  /// Animatable parameters
+
+  /**
+   * The number of particles spawned during each emission period. Animatable.
+   * @type {number}
+   * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522857-birthrate
+   */
+  get birthRate() {
+    return this._birthRate
+  }
+  set birthRate(newValue) {
+    const oldValue = this._birthRate
+    this._birthRate = newValue
+    SCNTransaction._addChange(this, '_birthRate', oldValue, newValue)
+  }
+
+  ///////////////////
+  // SCNAnimatable //
+  ///////////////////
+
+  // Managing Animations
+
+  /**
+   * Required. Adds an animation object for the specified key.
+   * @access public
+   * @param {CAAnimation} animation - The animation object to be added.
+   * @param {?string} key - An string identifying the animation for later retrieval. You may pass nil if you don’t need to reference the animation later.
+   * @returns {void}
+   * @desc Newly added animations begin executing after the current run loop cycle ends.SceneKit does not define any requirements for the contents of the key parameter—it need only be unique among the keys for other animations you add. If you add an animation with an existing key, this method overwrites the existing animation.
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523386-addanimation
+   */
+  addAnimationForKey(animation, key) {
+    if(typeof key === 'undefined' || key === null){
+      key = Symbol()
+    }
+    const anim = animation.copy()
+    // FIXME: use current frame time
+    anim._animationStartTime = Date.now() * 0.001
+
+    this._animations.set(key, anim)
+  }
+
+  /**
+   * Required. Returns the animation with the specified key.
+   * @access public
+   * @param {string} key - A string identifying a previously added animation.
+   * @returns {?CAAnimation} - 
+   * @desc Attempting to modify any properties of the returned object results in undefined behavior.
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1524020-animation
+   */
+  animationForKey(key) {
+    return this._animations.get(key)
+  }
+
+  /**
+   * Required. Removes all the animations currently attached to the object.
+   * @access public
+   * @returns {void}
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1522762-removeallanimations
+   */
+  removeAllAnimations() {
+    // TODO: stop animations
+    this._animations.clear()
+  }
+
+  /**
+   * Required. Removes the animation attached to the object with the specified key.
+   * @access public
+   * @param {string} key - A string identifying an attached animation to remove.
+   * @returns {void}
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1522880-removeanimation
+   */
+  removeAnimationForKey(key) {
+    this._animations.delete(key)
+    this._copyTransformToPresentationRecursive()
+  }
+
+  /**
+   * Required. Removes the animation attached to the object with the specified key, smoothly transitioning out of the animation’s effect.
+   * @access public
+   * @param {string} key - A string identifying an attached animation to remove.
+   * @param {number} duration - The duration for transitioning out of the animation’s effect before it is removed.
+   * @returns {void}
+   * @desc Use this method to create smooth transitions between the effects of multiple animations. For example, the geometry loaded from a scene file for a game character may have associated animations for player actions such as walking and jumping. When the player lands from a jump, you remove the jump animation so the character continues walking. If you use the removeAnimation(forKey:) method to remove the jump animation, SceneKit abruptly switches from the current frame of the jump animation to the current frame of the walk animation. If you use the removeAnimation(forKey:fadeOutDuration:) method instead, SceneKit plays both animations at once during that duration and interpolates vertex positions from one animation to the other, creating a smooth transition.
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1522841-removeanimation
+   */
+  removeAnimationForKeyFadeOutDuration(key, duration) {
+    // FIXME: use fadeout duration
+    this.removeAnimationForKey(key)
+  }
+
+  /**
+   * Required. An array containing the keys of all animations currently attached to the object.
+   * @type {string[]}
+   * @desc This array contains all keys for which animations are attached to the object, or is empty if there are no attached animations. The ordering of animation keys in the array is arbitrary.
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523610-animationkeys
+   */
+  get animationKeys() {
+    const keys = []
+    for(const key of this._animations.keys()){
+      keys.push(key)
+    }
+    return keys
+  }
+
+  // Pausing and Resuming Animations
+
+  /**
+   * Required. Pauses the animation attached to the object with the specified key.
+   * @access public
+   * @param {string} key - A string identifying an attached animation.
+   * @returns {void}
+   * @desc This method has no effect if no animation is attached to the object with the specified key.
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523592-pauseanimation
+   */
+  pauseAnimationForKey(key) {
+  }
+
+  /**
+   * Required. Resumes a previously paused animation attached to the object with the specified key.
+   * @access public
+   * @param {string} key - A string identifying an attached animation.
+   * @returns {void}
+   * @desc This method has no effect if no animation is attached to the object with the specified key or if the specified animation is not currently paused.
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523332-resumeanimation
+   */
+  resumeAnimationForKey(key) {
+  }
+
+  /**
+   * Required. Returns a Boolean value indicating whether the animation attached to the object with the specified key is paused.
+   * @access public
+   * @param {string} key - A string identifying an attached animation.
+   * @returns {boolean} - 
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523703-isanimationpaused
+   */
+  isAnimationPausedForKey(key) {
+    return false
+  }
+
+  // Instance Methods
+
+  /**
+   * Required. 
+   * @access public
+   * @param {number} speed - 
+   * @param {string} key - 
+   * @returns {void}
+   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1778343-setanimationspeed
+   */
+  setAnimationSpeedForKey(speed, key) {
+  }
+
+  valueForKeyPath(keyPath, usePresentation = true) {
+    const target = (usePresentation && this._presentation) ? this._presentation : this
+    const paths = keyPath.split('.')
+    const key = paths[0]
+    const key2 = paths[1]
+    
+    if(key === '_birthRate'){
+      return target[key]
+    }
+    return super.valueForKeyPath(keyPath, usePresentation)
+  }
+
+  setValueForKeyPath(value, keyPath) {
+    const target = this._presentation ? this._presentation : this
+
+    const paths = keyPath.split('.')
+    const key = paths.shift()
+    const restPath = paths.join('.')
+
+    if(key === '_birthRate'){
+      target[key] = value
+      return
+    }
+    super.setValueForKeyPath(value, keyPath)
+  }
+
+  get _presentation() {
+    return (this.__presentation ? this.__presentation : this)
   }
 
   /**

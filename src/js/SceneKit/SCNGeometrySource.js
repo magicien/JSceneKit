@@ -3,6 +3,7 @@
 import NSObject from '../ObjectiveC/NSObject'
 import SCNVector3 from './SCNVector3'
 import SCNVector4 from './SCNVector4'
+import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
 import CGPoint from '../CoreGraphics/CGPoint'
 /*global Buffer*/
 
@@ -522,9 +523,11 @@ SCNGeometrySource *source = [SCNGeometrySource geometrySourceWithBuffer:buffer
   /**
    * 
    * @access private
+   * @param {SCNMatrix4} transform -
    * @returns {Object}
    */
-  _createBoundingBox() {
+  _createBoundingBox(transform = null) {
+    const t = (transform ? transform : SCNMatrix4MakeTranslation(0, 0, 0))
     const min = new SCNVector3(Infinity, Infinity, Infinity)
     const max = new SCNVector3(-Infinity, -Infinity, -Infinity)
     if(this._componentsPerVector !== 3){
@@ -536,26 +539,27 @@ SCNGeometrySource *source = [SCNGeometrySource geometrySourceWithBuffer:buffer
     const len = this._vectorCount
     const arr = []
     for(let i=0; i<len; i++){
-      const x = this._data[ind + 0]
-      const y = this._data[ind + 1]
-      const z = this._data[ind + 2]
-      if(x < min.x){
-        min.x = x
+      const p = (new SCNVector3(this._data[ind + 0], this._data[ind + 1], this._data[ind + 2])).transform(t)
+      //const x = this._data[ind + 0]
+      //const y = this._data[ind + 1]
+      //const z = this._data[ind + 2]
+      if(p.x < min.x){
+        min.x = p.x
       }
-      if(x > max.x){
-        max.x = x
+      if(p.x > max.x){
+        max.x = p.x
       }
-      if(y < min.y){
-        min.y = y
+      if(p.y < min.y){
+        min.y = p.y
       }
-      if(y > max.y){
-        max.y = y
+      if(p.y > max.y){
+        max.y = p.y
       }
-      if(z < min.z){
-        min.z = z
+      if(p.z < min.z){
+        min.z = p.z
       }
-      if(z > max.z){
-        max.z = z
+      if(p.z > max.z){
+        max.z = p.z
       }
       ind += indexStride
     }

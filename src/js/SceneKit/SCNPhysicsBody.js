@@ -1,6 +1,7 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
+import SCNBox from './SCNBox'
 import SCNPhysicsBodyType from './SCNPhysicsBodyType'
 import SCNPhysicsShape from './SCNPhysicsShape'
 import SCNVector3 from './SCNVector3'
@@ -368,6 +369,19 @@ export default class SCNPhysicsBody extends NSObject {
     //  Ammo.destroy(this._btRigidBody)
     //  this._btRigidBody = null
     //}
+  }
+
+  _isBox() {
+    if(this.physicsShape === null){
+      return false
+    }
+    if(this.physicsShape._options && this.physicsShape._options.type === SCNPhysicsShape.ShapeType.boundingBox){
+      return true
+    }
+    if(this.physicsShape._sourceGeometry && this.physicsShape._sourceGeometry instanceof SCNBox){
+      return true
+    }
+    return false
   }
 
   // FIXME: use physics library

@@ -1818,7 +1818,8 @@ export default class SCNRenderer extends NSObject {
       return
     }
 
-    const systems = node.presentation.particleSystems
+    //const systems = node.presentation.particleSystems
+    const systems = node.particleSystems
     systems.forEach((system) => {
       this._renderParticleSystem(system, node)
     })

@@ -9,6 +9,7 @@ import SCNGeometrySource from './SCNGeometrySource'
 import SCNGeometryElement from './SCNGeometryElement'
 import SCNLevelOfDetail from './SCNLevelOfDetail'
 import SCNMaterial from './SCNMaterial'
+import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
 import SCNOrderedDictionary from './SCNOrderedDictionary'
 import SCNVector3 from './SCNVector3'
 import SKColor from '../SpriteKit/SKColor'
@@ -45,30 +46,7 @@ export default class SCNGeometry extends NSObject {
       kGeometrySourceSemanticTexcoord: ['NSArray', addSources],
       kGeometrySourceSemanticVertex: ['NSArray', (obj, sources) => {
         addSources(obj, sources)
-        const min = new SCNVector3(Infinity, Infinity, Infinity)
-        const max = new SCNVector3(-Infinity, -Infinity, -Infinity)
-        for(const src of sources){
-          const result = src._createBoundingBox()
-          if(result.min.x < min.x){
-            min.x = result.min.x
-          }
-          if(result.max.x > max.x){
-            max.x = result.max.x
-          }
-          if(result.min.y < min.y){
-            min.y = result.min.y
-          }
-          if(result.max.y > max.y){
-            max.y = result.max.y
-          }
-          if(result.min.z < min.z){
-            min.z = result.min.z
-          }
-          if(result.max.z > max.z){
-            max.z = result.max.z
-          }
-        }
-        obj.boundingBox = { min: min, max: max }
+        obj._updateBoundingBox()
       }],
       kGeometrySourceSemanticVertexCrease: ['NSArray', addSources],
 
@@ -1158,6 +1136,47 @@ This method is for OpenGL shader programs only. To bind custom variable data for
   _execDestory() {
     // TODO: delete indexBuffer, vertexBuffer
     this._destroyShape()
+  }
+
+  _updateBoundingBox() {
+    return this._updateBoundingBoxForSkinner()
+  }
+
+  _updateBoundingBoxForSkinner(skinner = null){
+    let transform = null
+    if(skinner){
+      transform = skinner.baseGeometryBindTransform
+    }
+
+    const sources = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)
+    const min = new SCNVector3(Infinity, Infinity, Infinity)
+    const max = new SCNVector3(-Infinity, -Infinity, -Infinity)
+    console.error('===== updateBoundingBoxForSkinner =====')
+    for(const src of sources){
+      const result = src._createBoundingBox(transform)
+      console.error('min: ' + result.min.floatArray() + ', max: ' + result.max.floatArray())
+      if(result.min.x < min.x){
+        min.x = result.min.x
+      }
+      if(result.max.x > max.x){
+        max.x = result.max.x
+      }
+      if(result.min.y < min.y){
+        min.y = result.min.y
+      }
+      if(result.max.y > max.y){
+        max.y = result.max.y
+      }
+      if(result.min.z < min.z){
+        min.z = result.min.z
+      }
+      if(result.max.z > max.z){
+        max.z = result.max.z
+      }
+    }
+    console.error('boundingBox: min: ' + min.floatArray() + ', max: ' + max.floatArray())
+    this.boundingBox = { min: min, max: max }
+    return this.boundingBox
   }
 
   /**
