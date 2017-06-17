@@ -439,7 +439,7 @@ module.exports =
 
 	var _SCNFieldForceEvaluator2 = _interopRequireDefault(_SCNFieldForceEvaluator);
 
-	var _SCNFilterMode = __webpack_require__(87);
+	var _SCNFilterMode = __webpack_require__(88);
 
 	var _SCNFilterMode2 = _interopRequireDefault(_SCNFilterMode);
 
@@ -451,11 +451,11 @@ module.exports =
 
 	var _SCNGeometry2 = _interopRequireDefault(_SCNGeometry);
 
-	var _SCNGeometryElement = __webpack_require__(82);
+	var _SCNGeometryElement = __webpack_require__(83);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(83);
+	var _SCNGeometryPrimitiveType = __webpack_require__(84);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
@@ -479,7 +479,7 @@ module.exports =
 
 	var _SCNLayer2 = _interopRequireDefault(_SCNLayer);
 
-	var _SCNLevelOfDetail = __webpack_require__(84);
+	var _SCNLevelOfDetail = __webpack_require__(85);
 
 	var _SCNLevelOfDetail2 = _interopRequireDefault(_SCNLevelOfDetail);
 
@@ -491,11 +491,11 @@ module.exports =
 
 	var _SCNLookAtConstraint2 = _interopRequireDefault(_SCNLookAtConstraint);
 
-	var _SCNMaterial = __webpack_require__(85);
+	var _SCNMaterial = __webpack_require__(86);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
-	var _SCNMaterialProperty = __webpack_require__(86);
+	var _SCNMaterialProperty = __webpack_require__(87);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
@@ -531,7 +531,7 @@ module.exports =
 
 	var _SCNMatrix4MakeScale2 = _interopRequireDefault(_SCNMatrix4MakeScale);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(88);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(82);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
@@ -23775,7 +23775,7 @@ module.exports =
 
 	var _SCNMatrix4MakeScale2 = _interopRequireDefault(_SCNMatrix4MakeScale);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(88);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(82);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
@@ -25186,7 +25186,23 @@ module.exports =
 	          max: new _SCNVector2.default(-Infinity, -Infinity, -Infinity)
 	        };
 	      }
-	      return this._geometry.boundingBox;
+	      var boundingBox = this._geometry.boundingBox;
+	      // FIXME: rotate and scale
+	      if (this.skinner && this.skinner.baseGeometryBindTransform) {
+	        var tx = this.skinner.baseGeometryBindTransform.m41;
+	        var ty = this.skinner.baseGeometryBindTransform.m42;
+	        var tz = this.skinner.baseGeometryBindTransform.m43;
+	        boundingBox.min.x += tx;
+	        boundingBox.min.y += ty;
+	        boundingBox.min.z += tz;
+	        boundingBox.max.x += tx;
+	        boundingBox.max.y += ty;
+	        boundingBox.max.z += tz;
+	      }
+
+	      //return this._geometry.boundingBox
+	      //return this._geometry._updateBoundingBoxForSkinner(this.skinner)
+	      return boundingBox;
 	    }
 	  }, {
 	    key: '_updateBoundingBox',
@@ -25422,7 +25438,6 @@ module.exports =
 	    value: function valueForKeyPath(keyPath) {
 	      var usePresentation = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
 
-	      // FIXME: check flags to decide to use a presentation node
 	      var target = usePresentation && this._presentation ? this._presentation : this;
 	      var paths = keyPath.split('.');
 	      var key = paths[0];
@@ -25459,7 +25474,7 @@ module.exports =
 	        }
 	        return target.transform;
 	      }
-	      return _get(SCNNode.prototype.__proto__ || Object.getPrototypeOf(SCNNode.prototype), 'valueForKeyPath', this).call(this, keyPath);
+	      return _get(SCNNode.prototype.__proto__ || Object.getPrototypeOf(SCNNode.prototype), 'valueForKeyPath', this).call(this, keyPath, usePresentation);
 	    }
 	  }, {
 	    key: 'setValueForKey',
@@ -25599,8 +25614,6 @@ module.exports =
 	        }
 	        target.morpher.setValueForKeyPath(value, restPath);
 	        return;
-	      } else if (key === 'opacity') {
-	        target._opacity = value;
 	      }
 	      // TODO: add other properties
 
@@ -26025,7 +26038,7 @@ module.exports =
 	    set: function set(newValue) {
 	      var oldValue = this._opacity;
 	      this._opacity = newValue;
-	      _SCNTransaction2.default._addChange(this, 'opacity', oldValue, newValue);
+	      _SCNTransaction2.default._addChange(this, '_opacity', oldValue, newValue);
 	    }
 	  }, {
 	    key: 'parent',
@@ -26797,17 +26810,21 @@ module.exports =
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNGeometryElement = __webpack_require__(82);
+	var _SCNGeometryElement = __webpack_require__(83);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNLevelOfDetail = __webpack_require__(84);
+	var _SCNLevelOfDetail = __webpack_require__(85);
 
 	var _SCNLevelOfDetail2 = _interopRequireDefault(_SCNLevelOfDetail);
 
-	var _SCNMaterial = __webpack_require__(85);
+	var _SCNMaterial = __webpack_require__(86);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
+
+	var _SCNMatrix4MakeTranslation = __webpack_require__(82);
+
+	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
 	var _SCNOrderedDictionary = __webpack_require__(89);
 
@@ -26869,52 +26886,7 @@ module.exports =
 	        kGeometrySourceSemanticTexcoord: ['NSArray', addSources],
 	        kGeometrySourceSemanticVertex: ['NSArray', function (obj, sources) {
 	          addSources(obj, sources);
-	          var min = new _SCNVector2.default(Infinity, Infinity, Infinity);
-	          var max = new _SCNVector2.default(-Infinity, -Infinity, -Infinity);
-	          var _iteratorNormalCompletion = true;
-	          var _didIteratorError = false;
-	          var _iteratorError = undefined;
-
-	          try {
-	            for (var _iterator = sources[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
-	              var src = _step.value;
-
-	              var result = src._createBoundingBox();
-	              if (result.min.x < min.x) {
-	                min.x = result.min.x;
-	              }
-	              if (result.max.x > max.x) {
-	                max.x = result.max.x;
-	              }
-	              if (result.min.y < min.y) {
-	                min.y = result.min.y;
-	              }
-	              if (result.max.y > max.y) {
-	                max.y = result.max.y;
-	              }
-	              if (result.min.z < min.z) {
-	                min.z = result.min.z;
-	              }
-	              if (result.max.z > max.z) {
-	                max.z = result.max.z;
-	              }
-	            }
-	          } catch (err) {
-	            _didIteratorError = true;
-	            _iteratorError = err;
-	          } finally {
-	            try {
-	              if (!_iteratorNormalCompletion && _iterator.return) {
-	                _iterator.return();
-	              }
-	            } finally {
-	              if (_didIteratorError) {
-	                throw _iteratorError;
-	              }
-	            }
-	          }
-
-	          obj.boundingBox = { min: min, max: max };
+	          obj._updateBoundingBox();
 	        }],
 	        kGeometrySourceSemanticVertexCrease: ['NSArray', addSources],
 
@@ -27857,13 +27829,13 @@ module.exports =
 	        tangent.push(new _SCNVector2.default(0, 0, 0));
 	      }
 
-	      var _iteratorNormalCompletion2 = true;
-	      var _didIteratorError2 = false;
-	      var _iteratorError2 = undefined;
+	      var _iteratorNormalCompletion = true;
+	      var _didIteratorError = false;
+	      var _iteratorError = undefined;
 
 	      try {
-	        for (var _iterator2 = elements[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-	          var element = _step2.value;
+	        for (var _iterator = elements[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+	          var element = _step.value;
 
 	          var len = element.primitiveCount;
 	          for (var _i3 = 0; _i3 < len; _i3++) {
@@ -27887,16 +27859,16 @@ module.exports =
 	          }
 	        }
 	      } catch (err) {
-	        _didIteratorError2 = true;
-	        _iteratorError2 = err;
+	        _didIteratorError = true;
+	        _iteratorError = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion2 && _iterator2.return) {
-	            _iterator2.return();
+	          if (!_iteratorNormalCompletion && _iterator.return) {
+	            _iterator.return();
 	          }
 	        } finally {
-	          if (_didIteratorError2) {
-	            throw _iteratorError2;
+	          if (_didIteratorError) {
+	            throw _iteratorError;
 	          }
 	        }
 	      }
@@ -28062,6 +28034,73 @@ module.exports =
 	    value: function _execDestory() {
 	      // TODO: delete indexBuffer, vertexBuffer
 	      this._destroyShape();
+	    }
+	  }, {
+	    key: '_updateBoundingBox',
+	    value: function _updateBoundingBox() {
+	      return this._updateBoundingBoxForSkinner();
+	    }
+	  }, {
+	    key: '_updateBoundingBoxForSkinner',
+	    value: function _updateBoundingBoxForSkinner() {
+	      var skinner = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+
+	      var transform = null;
+	      if (skinner) {
+	        transform = skinner.baseGeometryBindTransform;
+	      }
+
+	      var sources = this.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex);
+	      var min = new _SCNVector2.default(Infinity, Infinity, Infinity);
+	      var max = new _SCNVector2.default(-Infinity, -Infinity, -Infinity);
+	      console.error('===== updateBoundingBoxForSkinner =====');
+	      var _iteratorNormalCompletion2 = true;
+	      var _didIteratorError2 = false;
+	      var _iteratorError2 = undefined;
+
+	      try {
+	        for (var _iterator2 = sources[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+	          var src = _step2.value;
+
+	          var result = src._createBoundingBox(transform);
+	          console.error('min: ' + result.min.floatArray() + ', max: ' + result.max.floatArray());
+	          if (result.min.x < min.x) {
+	            min.x = result.min.x;
+	          }
+	          if (result.max.x > max.x) {
+	            max.x = result.max.x;
+	          }
+	          if (result.min.y < min.y) {
+	            min.y = result.min.y;
+	          }
+	          if (result.max.y > max.y) {
+	            max.y = result.max.y;
+	          }
+	          if (result.min.z < min.z) {
+	            min.z = result.min.z;
+	          }
+	          if (result.max.z > max.z) {
+	            max.z = result.max.z;
+	          }
+	        }
+	      } catch (err) {
+	        _didIteratorError2 = true;
+	        _iteratorError2 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion2 && _iterator2.return) {
+	            _iterator2.return();
+	          }
+	        } finally {
+	          if (_didIteratorError2) {
+	            throw _iteratorError2;
+	          }
+	        }
+	      }
+
+	      console.error('boundingBox: min: ' + min.floatArray() + ', max: ' + max.floatArray());
+	      this.boundingBox = { min: min, max: max };
+	      return this.boundingBox;
 	    }
 
 	    /**
@@ -28343,6 +28382,10 @@ module.exports =
 	var _SCNVector3 = __webpack_require__(55);
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
+
+	var _SCNMatrix4MakeTranslation = __webpack_require__(82);
+
+	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
 	var _CGPoint = __webpack_require__(7);
 
@@ -28627,12 +28670,16 @@ module.exports =
 	    /**
 	     * 
 	     * @access private
+	     * @param {SCNMatrix4} transform -
 	     * @returns {Object}
 	     */
 
 	  }, {
 	    key: '_createBoundingBox',
 	    value: function _createBoundingBox() {
+	      var transform = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+
+	      var t = transform ? transform : (0, _SCNMatrix4MakeTranslation2.default)(0, 0, 0);
 	      var min = new _SCNVector2.default(Infinity, Infinity, Infinity);
 	      var max = new _SCNVector2.default(-Infinity, -Infinity, -Infinity);
 	      if (this._componentsPerVector !== 3) {
@@ -28644,26 +28691,27 @@ module.exports =
 	      var len = this._vectorCount;
 	      var arr = [];
 	      for (var i = 0; i < len; i++) {
-	        var x = this._data[ind + 0];
-	        var y = this._data[ind + 1];
-	        var z = this._data[ind + 2];
-	        if (x < min.x) {
-	          min.x = x;
+	        var p = new _SCNVector2.default(this._data[ind + 0], this._data[ind + 1], this._data[ind + 2]).transform(t
+	        //const x = this._data[ind + 0]
+	        //const y = this._data[ind + 1]
+	        //const z = this._data[ind + 2]
+	        );if (p.x < min.x) {
+	          min.x = p.x;
 	        }
-	        if (x > max.x) {
-	          max.x = x;
+	        if (p.x > max.x) {
+	          max.x = p.x;
 	        }
-	        if (y < min.y) {
-	          min.y = y;
+	        if (p.y < min.y) {
+	          min.y = p.y;
 	        }
-	        if (y > max.y) {
-	          max.y = y;
+	        if (p.y > max.y) {
+	          max.y = p.y;
 	        }
-	        if (z < min.z) {
-	          min.z = z;
+	        if (p.z < min.z) {
+	          min.z = p.z;
 	        }
-	        if (z > max.z) {
-	          max.z = z;
+	        if (p.z > max.z) {
+	          max.z = p.z;
 	        }
 	        ind += indexStride;
 	      }
@@ -28998,6 +29046,37 @@ module.exports =
 /* 82 */
 /***/ function(module, exports, __webpack_require__) {
 
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _SCNMatrix = __webpack_require__(56);
+
+	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	/**
+	 * Returns a matrix describing a translation transformation.
+	 * @access public
+	 * @param {number} tx - 
+	 * @param {number} ty - 
+	 * @param {number} tz - 
+	 * @returns {SCNMatrix4} - 
+	 * @see https://developer.apple.com/reference/scenekit/1409679-scnmatrix4maketranslation
+	 */
+	var SCNMatrix4MakeTranslation = function SCNMatrix4MakeTranslation(tx, ty, tz) {
+	  return new _SCNMatrix2.default(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, tx, ty, tz, 1);
+	};
+
+	exports.default = SCNMatrix4MakeTranslation;
+
+/***/ },
+/* 83 */
+/***/ function(module, exports, __webpack_require__) {
+
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
@@ -29010,7 +29089,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(83);
+	var _SCNGeometryPrimitiveType = __webpack_require__(84);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
@@ -29249,7 +29328,7 @@ module.exports =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3).Buffer))
 
 /***/ },
-/* 83 */
+/* 84 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -29279,7 +29358,7 @@ module.exports =
 	exports.default = SCNGeometryPrimitiveType;
 
 /***/ },
-/* 84 */
+/* 85 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29423,7 +29502,7 @@ module.exports =
 	exports.default = SCNLevelOfDetail;
 
 /***/ },
-/* 85 */
+/* 86 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -29446,7 +29525,7 @@ module.exports =
 
 	var _SCNShadable2 = _interopRequireDefault(_SCNShadable);
 
-	var _SCNMaterialProperty = __webpack_require__(86);
+	var _SCNMaterialProperty = __webpack_require__(87);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
@@ -30244,7 +30323,7 @@ module.exports =
 	exports.default = SCNMaterial;
 
 /***/ },
-/* 86 */
+/* 87 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30265,7 +30344,7 @@ module.exports =
 
 	var _SCNAnimatable2 = _interopRequireDefault(_SCNAnimatable);
 
-	var _SCNFilterMode = __webpack_require__(87);
+	var _SCNFilterMode = __webpack_require__(88);
 
 	var _SCNFilterMode2 = _interopRequireDefault(_SCNFilterMode);
 
@@ -30273,7 +30352,7 @@ module.exports =
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(88);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(82);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
@@ -30953,7 +31032,7 @@ module.exports =
 	exports.default = SCNMaterialProperty;
 
 /***/ },
-/* 87 */
+/* 88 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -30977,37 +31056,6 @@ module.exports =
 	};
 
 	exports.default = SCNFilterMode;
-
-/***/ },
-/* 88 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _SCNMatrix = __webpack_require__(56);
-
-	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	/**
-	 * Returns a matrix describing a translation transformation.
-	 * @access public
-	 * @param {number} tx - 
-	 * @param {number} ty - 
-	 * @param {number} tz - 
-	 * @returns {SCNMatrix4} - 
-	 * @see https://developer.apple.com/reference/scenekit/1409679-scnmatrix4maketranslation
-	 */
-	var SCNMatrix4MakeTranslation = function SCNMatrix4MakeTranslation(tx, ty, tz) {
-	  return new _SCNMatrix2.default(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, tx, ty, tz, 1);
-	};
-
-	exports.default = SCNMatrix4MakeTranslation;
 
 /***/ },
 /* 89 */
@@ -31364,9 +31412,9 @@ module.exports =
 	    key: '_apply',
 	    value: function _apply(transaction) {
 	      if (transaction._disableActions || transaction._animationDuration === 0) {
-	        //transaction._animations.forEach((anim) => {
-	        //  anim.target.setValueForKeyPath(anim.newValue, anim.keyPath)
-	        //})
+	        transaction._animations.forEach(function (anim) {
+	          anim.target.setValueForKeyPath(anim.newValue, anim.keyPath);
+	        });
 	        if (transaction._completionBlock) {
 	          transaction._completionBlock();
 	        }
@@ -31383,7 +31431,7 @@ module.exports =
 	            animation.delegate = {
 	              animationDidStop: function animationDidStop(_anim, _finished) {
 	                if (_finished) {
-	                  //anim.target.setValueForKeyPath(anim.newValue, anim.keyPath)
+	                  anim.target.setValueForKeyPath(anim.newValue, anim.keyPath);
 	                  resolve(anim, animation);
 	                }
 	              }
@@ -31494,8 +31542,8 @@ module.exports =
 	  }, {
 	    key: '_addChange',
 	    value: function _addChange(target, keyPath, oldValue, newValue) {
-	      if (this._immediateMode) {
-	        //target.setValueForKeyPath(newValue, keyPath)
+	      if (this.immediateMode) {
+	        target.setValueForKeyPath(newValue, keyPath);
 	      } else {
 	        var diff = null;
 	        if (typeof newValue === 'number') {
@@ -31752,7 +31800,7 @@ module.exports =
 
 	var _SCNTechniqueSupport2 = _interopRequireDefault(_SCNTechniqueSupport);
 
-	var _SCNMaterialProperty = __webpack_require__(86);
+	var _SCNMaterialProperty = __webpack_require__(87);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
@@ -32542,7 +32590,7 @@ module.exports =
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(88);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(82);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
@@ -32574,7 +32622,7 @@ module.exports =
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(83);
+	var _SCNGeometryPrimitiveType = __webpack_require__(84);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
@@ -33797,7 +33845,8 @@ module.exports =
 	        return;
 	      }
 
-	      var systems = node.presentation.particleSystems;
+	      //const systems = node.presentation.particleSystems
+	      var systems = node.particleSystems;
 	      systems.forEach(function (system) {
 	        _this3._renderParticleSystem(system, node);
 	      });
@@ -36623,7 +36672,7 @@ module.exports =
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNMaterial = __webpack_require__(85);
+	var _SCNMaterial = __webpack_require__(86);
 
 	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
 
@@ -36631,7 +36680,7 @@ module.exports =
 
 	var _SCNBox2 = _interopRequireDefault(_SCNBox);
 
-	var _SCNMaterialProperty = __webpack_require__(86);
+	var _SCNMaterialProperty = __webpack_require__(87);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
@@ -37225,6 +37274,10 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+	var _SCNMaterial = __webpack_require__(86);
+
+	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
+
 	var _SCNGeometry2 = __webpack_require__(78);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
@@ -37233,11 +37286,11 @@ module.exports =
 
 	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
 
-	var _SCNGeometryElement = __webpack_require__(82);
+	var _SCNGeometryElement = __webpack_require__(83);
 
 	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
 
-	var _SCNGeometryPrimitiveType = __webpack_require__(83);
+	var _SCNGeometryPrimitiveType = __webpack_require__(84);
 
 	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
 
@@ -37274,13 +37327,14 @@ module.exports =
 	          box.heightSegmentCount = propValues.boxheightSegmentCount;
 	          box.lengthSegmentCount = propValues.boxlengthSegmentCount;
 	          box.chamferSegmentCount = propValues.boxchamferSegmentCount;
+	          box.name = propValues.name;
 	          // propValues.boxPrimitiveType
 	          box.materials = propValues.materials;
 	          box.subdivisionLevel = propValues.subdivisionLevel;
 
 	          return box;
 	        },
-	        name: 'string',
+	        name: ['string', null],
 	        boxwidth: ['float', null],
 	        boxheight: ['float', null],
 	        boxlength: ['float', null],
@@ -37383,6 +37437,7 @@ module.exports =
 	    _this.chamferSegmentCount = 10;
 
 	    _this._createGeometry();
+	    _this.materials.push(new _SCNMaterial2.default());
 	    return _this;
 	  }
 
@@ -38691,21 +38746,57 @@ module.exports =
 	      if ((bodyA.categoryBitMask & bodyB.contactTestBitMask) === 0) {
 	        return [];
 	      }
-	      var posA = bodyA._position;
-	      var posB = bodyB._position;
-	      var radA = bodyA._radius;
-	      var radB = bodyB._radius;
+	      // FIXME: implement
+	      //if(bodyA._isBox()){
+	      //  return this._contactTestBetweenBoxAndSphere(bodyA, bodyB, options)
+	      //}else if(bodyB._isBox()){
+	      //  return this._contactTestBetweenBoxAndSphere(bodyB, bodyA, options, true)
+	      //}else{
+	      //  return this._contactTestBetweenSpheres(bodyA, bodyB, options)
+	      //}
+	      return this._contactTestBetweenSpheres(bodyA, bodyB, options);
+	    }
+	  }, {
+	    key: '_contactTestBetweenSpheres',
+	    value: function _contactTestBetweenSpheres(sphereA, sphereB, options) {
+	      var posA = sphereA._position;
+	      var posB = sphereB._position;
+	      var radA = sphereA._radius;
+	      var radB = sphereB._radius;
 	      var vec = posA.sub(posB);
 	      var l = vec.length();
 	      if (l > radA + radB) {
 	        return [];
 	      }
 	      var contact = new _SCNPhysicsContact2.default();
-	      contact._nodeA = bodyA._node;
-	      contact._nodeB = bodyB._node;
+	      contact._nodeA = sphereA._node;
+	      contact._nodeB = sphereB._node;
 	      contact._contactPoint = posA.add(vec.mul((radA - radB + l) * 0.5));
 	      contact._contactNormal = vec.mul(-1).normalize();
 	      contact._penetrationDistance = 0.000000001; // FIXME: implement
+	      return [contact];
+	    }
+	  }, {
+	    key: '_contactTestBetweenBoxAndSphere',
+	    value: function _contactTestBetweenBoxAndSphere(box, sphere) {
+	      var reverse = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : false;
+
+	      var size = new _SCNVector2.default();
+	      var transform = null;
+
+	      var boxShape = this.physicsShape._sourceGeometry;
+
+	      var contact = new _SCNPhysicsContact2.default();
+	      if (reverse) {
+	        contact._nodeA = sphere._node;
+	        contact._nodeB = box._node;
+	      } else {
+	        contact._nodeA = box._node;
+	        contact._nodeB = sphere._node;
+	      }
+	      //contact._contactPoint = 
+	      //contact._contactNormal = 
+	      //contact._penetrationDistance = 
 	      return [contact];
 	    }
 
@@ -39340,6 +39431,10 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
+	var _SCNBox = __webpack_require__(101);
+
+	var _SCNBox2 = _interopRequireDefault(_SCNBox);
+
 	var _SCNPhysicsBodyType = __webpack_require__(114);
 
 	var _SCNPhysicsBodyType2 = _interopRequireDefault(_SCNPhysicsBodyType);
@@ -39719,16 +39814,30 @@ module.exports =
 	    }
 	  }, {
 	    key: '_execDestroy',
-	    value: function _execDestroy() {}
-	    //if(this.physicsShape !== null){
-	    //  this.physicsShape._destroy()
-	    //  this.physicsShape = null
-	    //}
-	    //if(this._btRigidBody !== null){
-	    //  Ammo.destroy(this._btRigidBody)
-	    //  this._btRigidBody = null
-	    //}
-
+	    value: function _execDestroy() {
+	      //if(this.physicsShape !== null){
+	      //  this.physicsShape._destroy()
+	      //  this.physicsShape = null
+	      //}
+	      //if(this._btRigidBody !== null){
+	      //  Ammo.destroy(this._btRigidBody)
+	      //  this._btRigidBody = null
+	      //}
+	    }
+	  }, {
+	    key: '_isBox',
+	    value: function _isBox() {
+	      if (this.physicsShape === null) {
+	        return false;
+	      }
+	      if (this.physicsShape._options && this.physicsShape._options.type === _SCNPhysicsShape2.default.ShapeType.boundingBox) {
+	        return true;
+	      }
+	      if (this.physicsShape._sourceGeometry && this.physicsShape._sourceGeometry instanceof _SCNBox2.default) {
+	        return true;
+	      }
+	      return false;
+	    }
 
 	    // FIXME: use physics library
 
@@ -40299,6 +40408,10 @@ module.exports =
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
+	var _SCNOrderedDictionary = __webpack_require__(89);
+
+	var _SCNOrderedDictionary2 = _interopRequireDefault(_SCNOrderedDictionary);
+
 	var _SCNParticleImageSequenceAnimationMode = __webpack_require__(120);
 
 	var _SCNParticleImageSequenceAnimationMode2 = _interopRequireDefault(_SCNParticleImageSequenceAnimationMode);
@@ -40334,6 +40447,10 @@ module.exports =
 	var _SCNParticleModifierBlock = __webpack_require__(129);
 
 	var _SCNParticleModifierBlock2 = _interopRequireDefault(_SCNParticleModifierBlock);
+
+	var _SCNTransaction = __webpack_require__(90);
+
+	var _SCNTransaction2 = _interopRequireDefault(_SCNTransaction);
 
 	var _SKColor = __webpack_require__(11);
 
@@ -40528,7 +40645,7 @@ module.exports =
 	        idleDurationVariation: 'float',
 	        loops: 'boolean',
 	        warmupDuration: 'float',
-	        birthRate: 'float',
+	        birthRate: ['float', '_birthRate'],
 	        birthRateVariation: 'float',
 	        emitterShape: 'SCNGeometry',
 	        birthLocation: 'integer',
@@ -40678,7 +40795,7 @@ module.exports =
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522857-birthrate
 	     */
-	    _this2.birthRate = 0.0;
+	    _this2._birthRate = 0.0;
 
 	    /**
 	     * The range of randomized particle birth rate values. Animatable.
@@ -41087,20 +41204,17 @@ module.exports =
 	    _this2._imageWidth = null;
 	    _this2._imageHeight = null;
 
-	    //if(name !== null){
-	    //  let path = name
-	    //  if(directory !== null){
-	    //    path = `${directory}/${name}`
-	    //  }
-	    //  this._loadingPromise = _BinaryRequest.get(path)
-	    //  .then((data) => {
-	    //    const system = NSKeyedUnarchiver.unarchiveObjectWithData(data, path)
-	    //    if(!(system instanceof SCNParticleSystem)){
-	    //      throw new Error(`file ${path} is not an instance of SCNParticleSystem`)
-	    //    }
-	    //    return system
-	    //  })
-	    //}
+	    _this2.__presentation = null;
+
+	    ///////////////////
+	    // SCNAnimatable //
+	    ///////////////////
+
+	    /**
+	     * @access private
+	     * @type {SCNOrderedDictionary}
+	     */
+	    _this2._animations = new _SCNOrderedDictionary2.default();
 
 	    /**
 	     * @access private
@@ -41600,11 +41714,11 @@ module.exports =
 	      }
 
 	      // generate particles
-	      if (this.birthRate + this.birthRateVariation > 0) {
+	      if (this._presentation._birthRate + this.birthRateVariation > 0) {
 	        while (this._nextBirthTime <= currentTime) {
 	          var p = this._createParticle(this._nextBirthTime, transform);
 	          this._particles.push(p);
-	          var rate = this.birthRate + this.birthRateVariation * (Math.random() - 0.5);
+	          var rate = this._presentation._birthRate + this.birthRateVariation * (Math.random() - 0.5);
 	          if (rate < 0.0000001) {
 	            rate = 0.0000001;
 	          }
@@ -41936,6 +42050,244 @@ module.exports =
 	      }
 	    }
 	  }, {
+	    key: '_copy',
+	    value: function _copy() {
+	      var s = new SCNParticleSystem();
+	      var params = ['_birthRate'
+	      // TODO: add other parameters... 
+	      ];
+	      var _iteratorNormalCompletion = true;
+	      var _didIteratorError = false;
+	      var _iteratorError = undefined;
+
+	      try {
+	        for (var _iterator = params[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+	          var param = _step.value;
+
+	          s[param] = this[param];
+	        }
+	      } catch (err) {
+	        _didIteratorError = true;
+	        _iteratorError = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion && _iterator.return) {
+	            _iterator.return();
+	          }
+	        } finally {
+	          if (_didIteratorError) {
+	            throw _iteratorError;
+	          }
+	        }
+	      }
+
+	      return s;
+	    }
+	  }, {
+	    key: '_createPresentation',
+	    value: function _createPresentation() {
+	      if (this.__presentation) {
+	        return this.__presentation;
+	      }
+	      var s = this._copy();
+	      this.__presentation = s;
+	      return s;
+	    }
+
+	    /// Animatable parameters
+
+	    /**
+	     * The number of particles spawned during each emission period. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scnparticlesystem/1522857-birthrate
+	     */
+
+	  }, {
+	    key: 'addAnimationForKey',
+
+
+	    ///////////////////
+	    // SCNAnimatable //
+	    ///////////////////
+
+	    // Managing Animations
+
+	    /**
+	     * Required. Adds an animation object for the specified key.
+	     * @access public
+	     * @param {CAAnimation} animation - The animation object to be added.
+	     * @param {?string} key - An string identifying the animation for later retrieval. You may pass nil if you don’t need to reference the animation later.
+	     * @returns {void}
+	     * @desc Newly added animations begin executing after the current run loop cycle ends.SceneKit does not define any requirements for the contents of the key parameter—it need only be unique among the keys for other animations you add. If you add an animation with an existing key, this method overwrites the existing animation.
+	     * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523386-addanimation
+	     */
+	    value: function addAnimationForKey(animation, key) {
+	      if (typeof key === 'undefined' || key === null) {
+	        key = Symbol();
+	      }
+	      var anim = animation.copy
+	      // FIXME: use current frame time
+	      ();anim._animationStartTime = Date.now() * 0.001;
+
+	      this._animations.set(key, anim);
+	    }
+
+	    /**
+	     * Required. Returns the animation with the specified key.
+	     * @access public
+	     * @param {string} key - A string identifying a previously added animation.
+	     * @returns {?CAAnimation} - 
+	     * @desc Attempting to modify any properties of the returned object results in undefined behavior.
+	     * @see https://developer.apple.com/reference/scenekit/scnanimatable/1524020-animation
+	     */
+
+	  }, {
+	    key: 'animationForKey',
+	    value: function animationForKey(key) {
+	      return this._animations.get(key);
+	    }
+
+	    /**
+	     * Required. Removes all the animations currently attached to the object.
+	     * @access public
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/scenekit/scnanimatable/1522762-removeallanimations
+	     */
+
+	  }, {
+	    key: 'removeAllAnimations',
+	    value: function removeAllAnimations() {
+	      // TODO: stop animations
+	      this._animations.clear();
+	    }
+
+	    /**
+	     * Required. Removes the animation attached to the object with the specified key.
+	     * @access public
+	     * @param {string} key - A string identifying an attached animation to remove.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/scenekit/scnanimatable/1522880-removeanimation
+	     */
+
+	  }, {
+	    key: 'removeAnimationForKey',
+	    value: function removeAnimationForKey(key) {
+	      this._animations.delete(key);
+	      this._copyTransformToPresentationRecursive();
+	    }
+
+	    /**
+	     * Required. Removes the animation attached to the object with the specified key, smoothly transitioning out of the animation’s effect.
+	     * @access public
+	     * @param {string} key - A string identifying an attached animation to remove.
+	     * @param {number} duration - The duration for transitioning out of the animation’s effect before it is removed.
+	     * @returns {void}
+	     * @desc Use this method to create smooth transitions between the effects of multiple animations. For example, the geometry loaded from a scene file for a game character may have associated animations for player actions such as walking and jumping. When the player lands from a jump, you remove the jump animation so the character continues walking. If you use the removeAnimation(forKey:) method to remove the jump animation, SceneKit abruptly switches from the current frame of the jump animation to the current frame of the walk animation. If you use the removeAnimation(forKey:fadeOutDuration:) method instead, SceneKit plays both animations at once during that duration and interpolates vertex positions from one animation to the other, creating a smooth transition.
+	     * @see https://developer.apple.com/reference/scenekit/scnanimatable/1522841-removeanimation
+	     */
+
+	  }, {
+	    key: 'removeAnimationForKeyFadeOutDuration',
+	    value: function removeAnimationForKeyFadeOutDuration(key, duration) {
+	      // FIXME: use fadeout duration
+	      this.removeAnimationForKey(key);
+	    }
+
+	    /**
+	     * Required. An array containing the keys of all animations currently attached to the object.
+	     * @type {string[]}
+	     * @desc This array contains all keys for which animations are attached to the object, or is empty if there are no attached animations. The ordering of animation keys in the array is arbitrary.
+	     * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523610-animationkeys
+	     */
+
+	  }, {
+	    key: 'pauseAnimationForKey',
+
+
+	    // Pausing and Resuming Animations
+
+	    /**
+	     * Required. Pauses the animation attached to the object with the specified key.
+	     * @access public
+	     * @param {string} key - A string identifying an attached animation.
+	     * @returns {void}
+	     * @desc This method has no effect if no animation is attached to the object with the specified key.
+	     * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523592-pauseanimation
+	     */
+	    value: function pauseAnimationForKey(key) {}
+
+	    /**
+	     * Required. Resumes a previously paused animation attached to the object with the specified key.
+	     * @access public
+	     * @param {string} key - A string identifying an attached animation.
+	     * @returns {void}
+	     * @desc This method has no effect if no animation is attached to the object with the specified key or if the specified animation is not currently paused.
+	     * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523332-resumeanimation
+	     */
+
+	  }, {
+	    key: 'resumeAnimationForKey',
+	    value: function resumeAnimationForKey(key) {}
+
+	    /**
+	     * Required. Returns a Boolean value indicating whether the animation attached to the object with the specified key is paused.
+	     * @access public
+	     * @param {string} key - A string identifying an attached animation.
+	     * @returns {boolean} - 
+	     * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523703-isanimationpaused
+	     */
+
+	  }, {
+	    key: 'isAnimationPausedForKey',
+	    value: function isAnimationPausedForKey(key) {
+	      return false;
+	    }
+
+	    // Instance Methods
+
+	    /**
+	     * Required. 
+	     * @access public
+	     * @param {number} speed - 
+	     * @param {string} key - 
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/scenekit/scnanimatable/1778343-setanimationspeed
+	     */
+
+	  }, {
+	    key: 'setAnimationSpeedForKey',
+	    value: function setAnimationSpeedForKey(speed, key) {}
+	  }, {
+	    key: 'valueForKeyPath',
+	    value: function valueForKeyPath(keyPath) {
+	      var usePresentation = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : true;
+
+	      var target = usePresentation && this._presentation ? this._presentation : this;
+	      var paths = keyPath.split('.');
+	      var key = paths[0];
+	      var key2 = paths[1];
+
+	      if (key === '_birthRate') {
+	        return target[key];
+	      }
+	      return _get(SCNParticleSystem.prototype.__proto__ || Object.getPrototypeOf(SCNParticleSystem.prototype), 'valueForKeyPath', this).call(this, keyPath, usePresentation);
+	    }
+	  }, {
+	    key: 'setValueForKeyPath',
+	    value: function setValueForKeyPath(value, keyPath) {
+	      var target = this._presentation ? this._presentation : this;
+
+	      var paths = keyPath.split('.');
+	      var key = paths.shift();
+	      var restPath = paths.join('.');
+
+	      if (key === '_birthRate') {
+	        target[key] = value;
+	        return;
+	      }
+	      _get(SCNParticleSystem.prototype.__proto__ || Object.getPrototypeOf(SCNParticleSystem.prototype), 'setValueForKeyPath', this).call(this, value, keyPath);
+	    }
+	  }, {
 	    key: '_getLoadedPromise',
 
 
@@ -41962,9 +42314,55 @@ module.exports =
 	  }, {
 	    key: '_maxParticles',
 	    get: function get() {
-	      var maxRate = this.birthRate + this.birthRateVariation * 0.5;
+	      var maxRate = this._birthRate + this.birthRateVariation * 0.5;
 	      var maxLifeSpan = this.particleLifeSpan + this.particleLifeSpanVariation * 0.5;
 	      return Math.ceil(maxRate * maxLifeSpan);
+	    }
+	  }, {
+	    key: 'birthRate',
+	    get: function get() {
+	      return this._birthRate;
+	    },
+	    set: function set(newValue) {
+	      var oldValue = this._birthRate;
+	      this._birthRate = newValue;
+	      _SCNTransaction2.default._addChange(this, '_birthRate', oldValue, newValue);
+	    }
+	  }, {
+	    key: 'animationKeys',
+	    get: function get() {
+	      var keys = [];
+	      var _iteratorNormalCompletion2 = true;
+	      var _didIteratorError2 = false;
+	      var _iteratorError2 = undefined;
+
+	      try {
+	        for (var _iterator2 = this._animations.keys()[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+	          var key = _step2.value;
+
+	          keys.push(key);
+	        }
+	      } catch (err) {
+	        _didIteratorError2 = true;
+	        _iteratorError2 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion2 && _iterator2.return) {
+	            _iterator2.return();
+	          }
+	        } finally {
+	          if (_didIteratorError2) {
+	            throw _iteratorError2;
+	          }
+	        }
+	      }
+
+	      return keys;
+	    }
+	  }, {
+	    key: '_presentation',
+	    get: function get() {
+	      return this.__presentation ? this.__presentation : this;
 	    }
 	  }], [{
 	    key: 'systemNamedInDirectory',
@@ -43356,7 +43754,7 @@ module.exports =
 
 	var _SCNTechniqueSupport2 = _interopRequireDefault(_SCNTechniqueSupport);
 
-	var _SCNMaterialProperty = __webpack_require__(86);
+	var _SCNMaterialProperty = __webpack_require__(87);
 
 	var _SCNMaterialProperty2 = _interopRequireDefault(_SCNMaterialProperty);
 
@@ -46601,7 +46999,7 @@ module.exports =
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(88);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(82);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
@@ -46848,7 +47246,7 @@ module.exports =
 	    /**
 	     * The geometry source that defines the influence of each bone on the positions the geometry’s vertices.
 	     * @type {SCNGeometrySource}
-	     l* @desc This geometry source’s semantic property must be boneWeights. Its data is an array of floating-point vectors, whose componentsPerVector count is the number of bones influencing each vertex. Each vector corresponds to a vertex in the geometry’s vertex geometry source, and each component in a vector specifies the influence of a bone on that vertex’s position. The boneIndices source determines which nodes in the bones array correspond to each component in the vector. A component value of 0.0 means that the bone has no influence on that vertex; positive or negative values scale the transformation of a bone node before SceneKit applies that transformation to the vertex.NoteSceneKit performs skeletal animation on the GPU only if the componentsPerVector count in this geometry source is 4 or less. Larger vectors result in CPU-based animation and drastically reduced rendering performance.
+	     * @desc This geometry source’s semantic property must be boneWeights. Its data is an array of floating-point vectors, whose componentsPerVector count is the number of bones influencing each vertex. Each vector corresponds to a vertex in the geometry’s vertex geometry source, and each component in a vector specifies the influence of a bone on that vertex’s position. The boneIndices source determines which nodes in the bones array correspond to each component in the vector. A component value of 0.0 means that the bone has no influence on that vertex; positive or negative values scale the transformation of a bone node before SceneKit applies that transformation to the vertex.NoteSceneKit performs skeletal animation on the GPU only if the componentsPerVector count in this geometry source is 4 or less. Larger vectors result in CPU-based animation and drastically reduced rendering performance.
 	     * @see https://developer.apple.com/reference/scenekit/scnskinner/1522986-boneweights
 	     */
 
@@ -51193,7 +51591,7 @@ module.exports =
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(88);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(82);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
@@ -52792,9 +53190,29 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+	var _SCNMaterial = __webpack_require__(86);
+
+	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
+
 	var _SCNGeometry2 = __webpack_require__(78);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
+
+	var _SCNGeometryElement = __webpack_require__(83);
+
+	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
+
+	var _SCNGeometryPrimitiveType = __webpack_require__(84);
+
+	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
+
+	var _SCNGeometrySource = __webpack_require__(81);
+
+	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
+
+	var _SCNVector = __webpack_require__(54);
+
+	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -52817,16 +53235,30 @@ module.exports =
 	    key: '_propTypes',
 	    get: function get() {
 	      return {
-	        sphereradius: ['float', 'radius'],
-	        spheregeodesic: ['boolean', 'isGeodesic'],
-	        spheresegmentCount: ['integer', 'segmentCount'],
-	        materials: 'NSArray',
+	        $constructor: function $constructor(propNames, propValues) {
+	          var sphere = new SCNSphere(propValues.sphereradius);
+	          sphere.isGeodesic = propValues.spheregeodesic;
+	          sphere.segmentCount = propValues.spheresegmentCount;
+	          sphere.name = propValues.name;
+	          sphere._sphereRadialSpan = propValues.sphereRadialSpan;
+	          sphere._isHemispheric = propValues.spherehemispheric;
+	          sphere._spherePrimitiveType = propValues.sphereprimitiveType;
+	          sphere.materials = propValues.materials;
+	          sphere.subdivisionLevel = propValues.subdivisionLevel;
+	          sphere._createGeometry();
 
-	        name: 'string',
-	        sphereradialSpan: ['float', '_sphereRadialSpan'],
-	        spherehemispheric: ['boolean', '_isHemispheric'],
-	        sphereprimitiveType: ['integer', '_spherePrimitiveType'],
-	        subdivisionLevel: 'integer',
+	          return sphere;
+	        },
+	        sphereradius: ['float', null],
+	        spheregeodesic: ['boolean', null],
+	        spheresegmentCount: ['integer', null],
+	        materials: ['NSArray', null],
+
+	        name: ['string', null],
+	        sphereradialSpan: ['float', null],
+	        spherehemispheric: ['boolean', null],
+	        sphereprimitiveType: ['integer', null],
+	        subdivisionLevel: ['integer', null],
 	        subdivisionSettings: ['bytes', null]
 	      };
 	    }
@@ -52844,7 +53276,9 @@ module.exports =
 
 	  }]);
 
-	  function SCNSphere(radius) {
+	  function SCNSphere() {
+	    var radius = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0.5;
+
 	    _classCallCheck(this, SCNSphere);
 
 	    // Adjusting a Sphere’s Dimensions
@@ -52854,7 +53288,7 @@ module.exports =
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523787-radius
 	     */
-	    var _this = _possibleConstructorReturn(this, (SCNSphere.__proto__ || Object.getPrototypeOf(SCNSphere)).call(this));
+	    var _this = _possibleConstructorReturn(this, (SCNSphere.__proto__ || Object.getPrototypeOf(SCNSphere)).call(this, [], []));
 
 	    _this.radius = radius;
 
@@ -52872,13 +53306,105 @@ module.exports =
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnsphere/1523912-segmentcount
 	     */
-	    _this.segmentCount = 0;
+	    _this.segmentCount = 24;
 
 	    _this._sphereRadialSpan = 0;
 	    _this._spherePrimitiveType = 0;
 	    _this._isHemispheric = false;
+
+	    _this._createGeometry();
+	    _this.materials.push(new _SCNMaterial2.default());
 	    return _this;
 	  }
+
+	  _createClass(SCNSphere, [{
+	    key: '_createGeometry',
+	    value: function _createGeometry() {
+	      var sourceData = [];
+	      var indexData = [];
+	      var vectorCount = (this.segmentCount + 1) * (this.segmentCount + 1);
+	      var primitiveCount = (this.segmentCount - 1) * this.segmentCount * 2;
+
+	      var yNom = [];
+	      var ySin = [];
+	      for (var lat = 0; lat <= this.segmentCount; lat++) {
+	        yNom.push(-Math.cos(Math.PI * lat / this.segmentCount));
+	        ySin.push(Math.sin(Math.PI * lat / this.segmentCount));
+	      }
+
+	      for (var lng = 0; lng <= this.segmentCount; lng++) {
+	        var x = -Math.sin(2.0 * Math.PI * lng / this.segmentCount);
+	        var z = -Math.cos(2.0 * Math.PI * lng / this.segmentCount);
+	        for (var _lat = 0; _lat <= this.segmentCount; _lat++) {
+	          var xNom = x * ySin[_lat];
+	          var zNom = z * ySin[_lat];
+
+	          // vertex
+	          sourceData.push(xNom * this.radius, yNom[_lat] * this.radius, zNom * this.radius
+
+	          // normal
+	          );sourceData.push(xNom, yNom[_lat], zNom
+
+	          // texcoord
+	          );sourceData.push(lng / 24.0, 1.0 - _lat / 24.0);
+	        }
+	      }
+
+	      for (var i = 0; i < this.segmentCount; i++) {
+	        var index1 = i * (this.segmentCount + 1);
+	        var index2 = index1 + this.segmentCount + 2;
+
+	        indexData.push(index1, index2, index1 + 1);
+	        index1 += 1;
+	        for (var j = 0; j < this.segmentCount - 2; j++) {
+	          indexData.push(index1, index2 + 1, index1 + 1);
+	          indexData.push(index1, index2, index2 + 1);
+	          index1 += 1;
+	          index2 += 1;
+	        }
+	        indexData.push(index1, index2, index2 + 1);
+	      }
+
+	      var vertexSource = new _SCNGeometrySource2.default(sourceData, // data
+	      _SCNGeometrySource2.default.Semantic.vertex, // semantic
+	      vectorCount, // vectorCount
+	      true, // floatComponents
+	      3, // componentsPerVector
+	      4, // bytesPerComponent
+	      0, // offset
+	      32 // sride
+	      );
+
+	      var normalSource = new _SCNGeometrySource2.default(sourceData, // data
+	      _SCNGeometrySource2.default.Semantic.normal, // semantic
+	      vectorCount, // vectorCount
+	      true, // floatComponents
+	      3, // componentsPerVector
+	      4, // bytesPerComponent
+	      12, // offset
+	      32 // stride
+	      );
+
+	      var texcoordSource = new _SCNGeometrySource2.default(sourceData, // data
+	      _SCNGeometrySource2.default.Semantic.texcoord, // semantic
+	      vectorCount, // vectorCount
+	      true, // floatComponents
+	      2, // componentsPerVector
+	      4, // bytesPerComponent
+	      24, // offset
+	      32 // stride
+	      );
+
+	      var element = new _SCNGeometryElement2.default(indexData, _SCNGeometryPrimitiveType2.default.triangles);
+
+	      this._geometryElements = [element];
+	      this._geometrySources = [vertexSource, normalSource, texcoordSource];
+	      this.boundingBox = {
+	        min: new _SCNVector2.default(-this.radius, -this.radius, -this.radius),
+	        max: new _SCNVector2.default(this.radius, this.radius, this.radius)
+	      };
+	    }
+	  }]);
 
 	  return SCNSphere;
 	}(_SCNGeometry3.default);
@@ -53752,7 +54278,7 @@ module.exports =
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
 
-	var _SCNMatrix4MakeTranslation = __webpack_require__(88);
+	var _SCNMatrix4MakeTranslation = __webpack_require__(82);
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
@@ -54593,6 +55119,34 @@ module.exports =
 	            });
 	            node.geometry._presentation = p.geometry;
 	          }
+	          if (node._particleSystems) {
+	            p._particleSystems = [];
+	            var _iteratorNormalCompletion2 = true;
+	            var _didIteratorError2 = false;
+	            var _iteratorError2 = undefined;
+
+	            try {
+	              for (var _iterator2 = node._particleSystems[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
+	                var system = _step2.value;
+
+	                var pSystem = system._createPresentation();
+	                p._particleSystems.push(pSystem);
+	              }
+	            } catch (err) {
+	              _didIteratorError2 = true;
+	              _iteratorError2 = err;
+	            } finally {
+	              try {
+	                if (!_iteratorNormalCompletion2 && _iterator2.return) {
+	                  _iterator2.return();
+	                }
+	              } finally {
+	                if (_didIteratorError2) {
+	                  throw _iteratorError2;
+	                }
+	              }
+	            }
+	          }
 	          node._presentation = p;
 	        }
 	        //node._copyTransformToPresentation()
@@ -54802,10 +55356,36 @@ module.exports =
 	          });
 	        });
 	      }
+	      if (node._particleSystems) {
+	        var _iteratorNormalCompletion3 = true;
+	        var _didIteratorError3 = false;
+	        var _iteratorError3 = undefined;
+
+	        try {
+	          for (var _iterator3 = node._particleSystems[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+	            var system = _step3.value;
+
+	            this._runAnimationForObject(system);
+	          }
+	        } catch (err) {
+	          _didIteratorError3 = true;
+	          _iteratorError3 = err;
+	        } finally {
+	          try {
+	            if (!_iteratorNormalCompletion3 && _iterator3.return) {
+	              _iterator3.return();
+	            }
+	          } finally {
+	            if (_didIteratorError3) {
+	              throw _iteratorError3;
+	            }
+	          }
+	        }
+	      }
 	    }
 	  }, {
 	    key: '_runAnimationForObject',
-	    value: function _runAnimationForObject(obj, time) {
+	    value: function _runAnimationForObject(obj) {
 	      var _this10 = this;
 
 	      var deleteKeys = [];
@@ -54838,29 +55418,29 @@ module.exports =
 	        var transform = this._scene._particleSystemsTransform[i];
 	        system._updateParticles(transform, gravity, this.currentTime);
 	      }
-	      var _iteratorNormalCompletion2 = true;
-	      var _didIteratorError2 = false;
-	      var _iteratorError2 = undefined;
+	      var _iteratorNormalCompletion4 = true;
+	      var _didIteratorError4 = false;
+	      var _iteratorError4 = undefined;
 
 	      try {
-	        for (var _iterator2 = this._scene._particleSystems[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
-	          var _system = _step2.value;
+	        for (var _iterator4 = this._scene._particleSystems[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+	          var _system = _step4.value;
 
 	          if (_system._finished) {
 	            this._scene.removeParticleSystem(_system);
 	          }
 	        }
 	      } catch (err) {
-	        _didIteratorError2 = true;
-	        _iteratorError2 = err;
+	        _didIteratorError4 = true;
+	        _iteratorError4 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion2 && _iterator2.return) {
-	            _iterator2.return();
+	          if (!_iteratorNormalCompletion4 && _iterator4.return) {
+	            _iterator4.return();
 	          }
 	        } finally {
-	          if (_didIteratorError2) {
-	            throw _iteratorError2;
+	          if (_didIteratorError4) {
+	            throw _iteratorError4;
 	          }
 	        }
 	      }
@@ -54882,54 +55462,54 @@ module.exports =
 	        return;
 	      }
 	      var gravity = this._scene.physicsWorld ? this._scene.physicsWorld.gravity : null;
-	      var _iteratorNormalCompletion3 = true;
-	      var _didIteratorError3 = false;
-	      var _iteratorError3 = undefined;
+	      var _iteratorNormalCompletion5 = true;
+	      var _didIteratorError5 = false;
+	      var _iteratorError5 = undefined;
 
 	      try {
-	        for (var _iterator3 = obj.particleSystems[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-	          var system = _step3.value;
+	        for (var _iterator5 = obj.particleSystems[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+	          var system = _step5.value;
 
 	          system._updateParticles(obj.presentation.worldTransform, gravity, this.currentTime);
 	        }
 	      } catch (err) {
-	        _didIteratorError3 = true;
-	        _iteratorError3 = err;
+	        _didIteratorError5 = true;
+	        _iteratorError5 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion3 && _iterator3.return) {
-	            _iterator3.return();
+	          if (!_iteratorNormalCompletion5 && _iterator5.return) {
+	            _iterator5.return();
 	          }
 	        } finally {
-	          if (_didIteratorError3) {
-	            throw _iteratorError3;
+	          if (_didIteratorError5) {
+	            throw _iteratorError5;
 	          }
 	        }
 	      }
 
-	      var _iteratorNormalCompletion4 = true;
-	      var _didIteratorError4 = false;
-	      var _iteratorError4 = undefined;
+	      var _iteratorNormalCompletion6 = true;
+	      var _didIteratorError6 = false;
+	      var _iteratorError6 = undefined;
 
 	      try {
-	        for (var _iterator4 = obj.particleSystems[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
-	          var _system2 = _step4.value;
+	        for (var _iterator6 = obj.particleSystems[Symbol.iterator](), _step6; !(_iteratorNormalCompletion6 = (_step6 = _iterator6.next()).done); _iteratorNormalCompletion6 = true) {
+	          var _system2 = _step6.value;
 
 	          if (_system2._finished) {
 	            obj.removeParticleSystem(_system2);
 	          }
 	        }
 	      } catch (err) {
-	        _didIteratorError4 = true;
-	        _iteratorError4 = err;
+	        _didIteratorError6 = true;
+	        _iteratorError6 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion4 && _iterator4.return) {
-	            _iterator4.return();
+	          if (!_iteratorNormalCompletion6 && _iterator6.return) {
+	            _iterator6.return();
 	          }
 	        } finally {
-	          if (_didIteratorError4) {
-	            throw _iteratorError4;
+	          if (_didIteratorError6) {
+	            throw _iteratorError6;
 	          }
 	        }
 	      }

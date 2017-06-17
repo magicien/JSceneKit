@@ -1,5 +1,6 @@
 'use strict'
 
+import SCNMaterial from './SCNMaterial'
 import SCNGeometry from './SCNGeometry'
 import SCNGeometrySource from './SCNGeometrySource'
 import SCNGeometryElement from './SCNGeometryElement'
@@ -27,13 +28,14 @@ export default class SCNBox extends SCNGeometry {
         box.heightSegmentCount = propValues.boxheightSegmentCount
         box.lengthSegmentCount = propValues.boxlengthSegmentCount
         box.chamferSegmentCount = propValues.boxchamferSegmentCount
+        box.name = propValues.name
         // propValues.boxPrimitiveType
         box.materials = propValues.materials
         box.subdivisionLevel = propValues.subdivisionLevel
 
         return box
       },
-      name: 'string',
+      name: ['string', null],
       boxwidth: ['float', null],
       boxheight: ['float', null],
       boxlength: ['float', null],
@@ -129,6 +131,7 @@ export default class SCNBox extends SCNGeometry {
     this.chamferSegmentCount = 10
 
     this._createGeometry()
+    this.materials.push(new SCNMaterial())
   }
 
   _createGeometry() {
