@@ -114,6 +114,12 @@ export default class SCNProgram extends NSObject {
      * @type {WebGLTexture}
      */
     this._dummyTexture = null
+
+    /**
+     * @access private
+     * @type {WebGLTexture}
+     */
+    this._dummyCubeMapTexture = null
   }
 
   // Mapping GLSL Symbols to SceneKit Semantics
@@ -182,6 +188,9 @@ export default class SCNProgram extends NSObject {
       'u_multiplyTexture',
       'u_normalTexture'
     ]
+    const isCubeMap = [
+      false, false, false, false, true, false, false, false
+    ]
     for(let i=0; i<texNames.length; i++){
       const texName = texNames[i]
       const symbol = texSymbols[i]
@@ -189,7 +198,11 @@ export default class SCNProgram extends NSObject {
       if(loc !== null){
         gl.uniform1i(loc, i)
         gl.activeTexture(texName)
-        gl.bindTexture(gl.TEXTURE_2D, this._dummyTexture)
+        if(isCubeMap[i]){
+          gl.bindTexture(gl.TEXTURE_CUBE_MAP, this._dummyCubeMapTexture)
+        }else{
+          gl.bindTexture(gl.TEXTURE_2D, this._dummyTexture)
+        }
       }
     }
   }
@@ -213,5 +226,22 @@ export default class SCNProgram extends NSObject {
     // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
     gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas)
     gl.bindTexture(gl.TEXTURE_2D, null)
+
+    this._dummyCubeMapTexture = gl.createTexture()
+
+    const targets = [
+      gl.TEXTURE_CUBE_MAP_POSITIVE_Z,
+      gl.TEXTURE_CUBE_MAP_POSITIVE_X,
+      gl.TEXTURE_CUBE_MAP_NEGATIVE_Z,
+      gl.TEXTURE_CUBE_MAP_NEGATIVE_X,
+      gl.TEXTURE_CUBE_MAP_NEGATIVE_Y,
+      gl.TEXTURE_CUBE_MAP_POSITIVE_Y
+    ]
+
+    gl.bindTexture(gl.TEXTURE_CUBE_MAP, this._dummyCubeMapTexture)
+    for(let i=0; i<6; i++){
+      gl.texImage2D(targets[i], 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas)
+    }
+    gl.bindTexture(gl.TEXTURE_CUBE_MAP, null)
   }
 }

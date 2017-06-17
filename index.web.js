@@ -43385,6 +43385,12 @@ module.exports =
 	     * @type {WebGLTexture}
 	     */
 	    _this._dummyTexture = null;
+
+	    /**
+	     * @access private
+	     * @type {WebGLTexture}
+	     */
+	    _this._dummyCubeMapTexture = null;
 	    return _this;
 	  }
 
@@ -43446,6 +43452,7 @@ module.exports =
 
 	      var texNames = [gl.TEXTURE0, gl.TEXTURE1, gl.TEXTURE2, gl.TEXTURE3, gl.TEXTURE4, gl.TEXTURE5, gl.TEXTURE6, gl.TEXTURE7];
 	      var texSymbols = ['u_emissionTexture', 'u_ambientTexture', 'u_diffuseTexture', 'u_specularTexture', 'u_reflectiveTexture', 'u_transparentTexture', 'u_multiplyTexture', 'u_normalTexture'];
+	      var isCubeMap = [false, false, false, false, true, false, false, false];
 	      for (var i = 0; i < texNames.length; i++) {
 	        var texName = texNames[i];
 	        var symbol = texSymbols[i];
@@ -43453,7 +43460,11 @@ module.exports =
 	        if (loc !== null) {
 	          gl.uniform1i(loc, i);
 	          gl.activeTexture(texName);
-	          gl.bindTexture(gl.TEXTURE_2D, this._dummyTexture);
+	          if (isCubeMap[i]) {
+	            gl.bindTexture(gl.TEXTURE_CUBE_MAP, this._dummyCubeMapTexture);
+	          } else {
+	            gl.bindTexture(gl.TEXTURE_2D, this._dummyTexture);
+	          }
 	        }
 	      }
 	    }
@@ -43478,6 +43489,16 @@ module.exports =
 	      // Safari complains that 'source' is not ArrayBufferView type, but WebGL2 should accept HTMLCanvasElement.
 	      );gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
 	      gl.bindTexture(gl.TEXTURE_2D, null);
+
+	      this._dummyCubeMapTexture = gl.createTexture();
+
+	      var targets = [gl.TEXTURE_CUBE_MAP_POSITIVE_Z, gl.TEXTURE_CUBE_MAP_POSITIVE_X, gl.TEXTURE_CUBE_MAP_NEGATIVE_Z, gl.TEXTURE_CUBE_MAP_NEGATIVE_X, gl.TEXTURE_CUBE_MAP_NEGATIVE_Y, gl.TEXTURE_CUBE_MAP_POSITIVE_Y];
+
+	      gl.bindTexture(gl.TEXTURE_CUBE_MAP, this._dummyCubeMapTexture);
+	      for (var i = 0; i < 6; i++) {
+	        gl.texImage2D(targets[i], 0, gl.RGBA, 1, 1, 0, gl.RGBA, gl.UNSIGNED_BYTE, canvas);
+	      }
+	      gl.bindTexture(gl.TEXTURE_CUBE_MAP, null);
 	    }
 	  }]);
 
