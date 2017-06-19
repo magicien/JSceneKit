@@ -1,8 +1,12 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
+import SCNBox from './SCNBox'
+import SCNCapsule from './SCNCapsule'
 import SCNGeometry from './SCNGeometry'
 import SCNNode from './SCNNode'
+import SCNSphere from './SCNSphere'
+import SCNVector3 from './SCNVector3'
 
 const _Option = {
   collisionMargin: 'SCNPhysicsShapeCollisionMarginKey',
@@ -50,17 +54,31 @@ export default class SCNPhysicsShape extends NSObject {
     super()
 
     let _options = options
-    if(Array.isArray(_options)){
-      _options = new Map(_options)
-    }
+    //if(Array.isArray(_options)){
+    //  _options = new Map(_options)
+    //}
 
     this._sourceGeometry = null
 
+    this._options = _options
+    this._transforms = null
+
+    this._shape = null
+    this._center = new SCNVector3(0, 0, 0)
+
     // Getting Information About a Shape
-    this._sourceObject = geometry
+    this._sourceObject = null
+    
+    this._setSourceObject(geometry)
+    this._createShape()
+  }
+
+  _setSourceObject(obj) {
+    this._sourceObject = obj
     if(this._sourceObject instanceof SCNGeometry){
       this._sourceGeometry = this._sourceObject
-    }else if(this._sourceObject instanceof SCNNode){
+    }else if(this._sourceObject instanceof SCNNode && this._sourceObject.geometry){
+      // TODO: get geometries recursively
       this._sourceGeometry = this._sourceObject.geometry
     }else{
       //throw new Error(`can't use it for source object: ${geometry.className}`)
@@ -68,9 +86,65 @@ export default class SCNPhysicsShape extends NSObject {
     if(!this._sourceGeometry){
       //throw new Error('source geometry is null')
     }
+  }
 
-    this._options = _options
-    this._transforms = null
+  _createShape() {
+    if(!this._sourceGeometry){
+      //throw new Error('SCNPhysicsShape: must have a geometry')
+      return
+    }
+
+    //if(this._options && this._options.get(_Option.type) === _ShapeType.boundingBox){
+    if(this._options && this._options[_Option.type] === _ShapeType.boundingBox){
+      this._createShapeAsBoundingBox()
+    }else if(this._sourceGeometry instanceof SCNCapsule){
+      // FIXME: do not convert to SCNBox
+      this._createShapeAsBoundingBox()
+    }else if(this._sourceGeometry instanceof SCNBox){
+      this._createShapeAsBox()
+    }else if(this._sourceGeometry instanceof SCNSphere){
+      this._createShapeAsSphere()
+    //}else if(this._options && this._options.get(_Option.type) === _ShapeType.convecHull){
+    }else if(this._options && this._options[_Option.type] === _ShapeType.concavePolyhedron){
+      // give up making a simple shape
+      this._shape = this._sourceGeometry
+    }else{
+      this._createShapeAsSphere()
+    }
+  }
+
+  _createShapeAsBoundingBox() {
+    const boundingBox = this._sourceGeometry._updateBoundingBox()
+    const width = boundingBox.max.x - boundingBox.min.x
+    const height = boundingBox.max.y - boundingBox.min.y
+    const length = boundingBox.max.z - boundingBox.min.z
+    const chamferRadius = 0
+    const box = new SCNBox(width, height, length, chamferRadius)
+    this._shape = box
+    this._center = new SCNVector3(
+      boundingBox.min.x + width * 0.5,
+      boundingBox.min.y + height * 0.5,
+      boundingBox.min.z + length * 0.5
+    )
+  }
+
+  _createShapeAsBox() {
+    // TODO: copy the geometry
+    this._shape = this._sourceGeometry
+    this._center = new SCNVector3(0, 0, 0)
+  }
+
+  _createShapeAsSphere() {
+    if(this._sourceGeometry instanceof SCNSphere){
+      // TODO: copy the geometry
+      this._shape = this._sourceGeometry
+      this._center = new SCNVector3(0, 0, 0)
+      return
+    }
+    const boundingSphere = this._sourceGeometry.getBoundingSphere()
+    const sphere = new SCNSphere(boundingSphere.radius)
+    this._shape = sphere
+    this._center = boundingSphere.center
   }
 
   // Getting Information About a Shape

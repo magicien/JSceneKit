@@ -217,6 +217,18 @@ export default class SCNPhysicsBody extends NSObject {
     this._node = null
     this._btRigidBody = null
     this._updateRigidBody()
+
+    this._position = null
+    this._transform = null
+    this._invTransform = null
+    this._shape = null
+
+    //this._isBox = false
+    //this._width = 0
+    //this._height = 0
+    //this._length = 0
+    //this._radius = 0
+    //this._center = null
   }
 
   /**
@@ -322,6 +334,37 @@ export default class SCNPhysicsBody extends NSObject {
    * @see https://developer.apple.com/reference/scenekit/scnphysicsbody/1514782-resettransform
    */
   resetTransform() {
+    this._resetTransform(true)
+  }
+
+  _resetTransform(updateWorldTransform = false) {
+    if(this._node !== null){
+      if(updateWorldTransform){
+        this._node._updateWorldTransform()
+      }
+      if(this._node._presentation){
+        this._transform = this._node._presentation._worldTransform
+      }else{
+        this._transform = this._node._worldTransform
+      }
+    }
+
+    if(this.physicsShape){
+      if(!this.physicsShape._sourceObject){
+        this.physicsShape._setSourceObject(this._node)
+      }
+      if(!this.physicsShape._sourceGeometry){
+        this.physicsShape._setSourceObject(this._sourceObject)
+      }
+      if(!this.physicsShape._shape){
+        this.physicsShape._createShape()
+      }
+      const center = this.physicsShape._center
+      this._transform = this._transform.translation(center.x, center.y, center.z)
+    }
+
+    this._position = this._transform.getTranslation()
+    this._invTransform = this._transform.invert()
   }
 
   /**
@@ -371,21 +414,8 @@ export default class SCNPhysicsBody extends NSObject {
     //}
   }
 
-  _isBox() {
-    if(this.physicsShape === null){
-      return false
-    }
-    if(this.physicsShape._options && this.physicsShape._options.type === SCNPhysicsShape.ShapeType.boundingBox){
-      return true
-    }
-    if(this.physicsShape._sourceGeometry && this.physicsShape._sourceGeometry instanceof SCNBox){
-      return true
-    }
-    return false
-  }
-
   // FIXME: use physics library
-  get _position() {
+  _getPosition() {
     let pos = new SCNVector3(0, 0, 0)
     if(this._node !== null){
       pos = this._node._worldTranslation
@@ -396,7 +426,7 @@ export default class SCNPhysicsBody extends NSObject {
     }
     return pos
   }
-  get _radius() {
+  _getRadius() {
     if(this.physicsShape === null || this.physicsShape._sourceGeometry === null){
       return 0
     }

@@ -1,13 +1,16 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
+import SCNBox from './SCNBox'
 import SCNVector3 from './SCNVector3'
 import SCNPhysicsBehavior from './SCNPhysicsBehavior'
 import SCNPhysicsContactDelegate from './SCNPhysicsContactDelegate'
 import SCNPhysicsContact from './SCNPhysicsContact'
 import SCNPhysicsBody from './SCNPhysicsBody'
+import SCNPhysicsBodyType from './SCNPhysicsBodyType'
 import SCNHitTestResult from './SCNHitTestResult'
 import SCNPhysicsShape from './SCNPhysicsShape'
+import SCNSphere from './SCNSphere'
 import SCNMatrix4 from './SCNMatrix4'
 //import _Ammo from '../third_party/ammo'
 /*global Ammo*/
@@ -40,7 +43,7 @@ export default class SCNPhysicsWorld extends NSObject {
       scale: ['double', '_scale'],
       // _allBehaviors
       // contactDelegate
-      scene: ['SCNScene', '_scene'],
+      scene: ['SCNScene', '_scene']
     }
   }
 
@@ -195,22 +198,37 @@ export default class SCNPhysicsWorld extends NSObject {
     if((bodyA.categoryBitMask & bodyB.contactTestBitMask) === 0){
       return []
     }
-    // FIXME: implement
-    //if(bodyA._isBox()){
-    //  return this._contactTestBetweenBoxAndSphere(bodyA, bodyB, options)
-    //}else if(bodyB._isBox()){
-    //  return this._contactTestBetweenBoxAndSphere(bodyB, bodyA, options, true)
-    //}else{
-    //  return this._contactTestBetweenSpheres(bodyA, bodyB, options)
-    //}
-    return this._contactTestBetweenSpheres(bodyA, bodyB, options)
+    if(!bodyA.physicsShape || !bodyB.physicsShape){
+      return []
+    }
+    const shapeA = bodyA.physicsShape._shape
+    const shapeB = bodyB.physicsShape._shape
+
+    if((shapeA instanceof SCNBox) && (shapeB instanceof SCNBox)){
+      return this._contactTestBetweenBoxes(bodyA, bodyB, options)
+    }else if((shapeA instanceof SCNBox) && (shapeB instanceof SCNSphere)){
+      return this._contactTestBetweenBoxAndSphere(bodyA, bodyB, options)
+    }else if((shapeB instanceof SCNBox) && (shapeA instanceof SCNSphere)){
+      return this._contactTestBetweenBoxAndSphere(bodyB, bodyA, options, true)
+    }else if((shapeA instanceof SCNSphere) && (shapeB instanceof SCNSphere)){
+      return this._contactTestBetweenSpheres(bodyA, bodyB, options)
+    }
+    return []
+  }
+
+  _contactTestBetweenBoxes(boxA, boxB, options) {
+    // TODO: implement
+    return []
   }
 
   _contactTestBetweenSpheres(sphereA, sphereB, options) {
+    const shapeA = sphereA.physicsShape._shape
+    const shapeB = sphereB.physicsShape._shape
+
     const posA = sphereA._position
     const posB = sphereB._position
-    const radA = sphereA._radius
-    const radB = sphereB._radius
+    const radA = shapeA.radius
+    const radB = shapeB.radius
     const vec = posA.sub(posB)
     const l = vec.length()
     if(l > radA + radB){
@@ -221,15 +239,42 @@ export default class SCNPhysicsWorld extends NSObject {
     contact._nodeB = sphereB._node
     contact._contactPoint = posA.add(vec.mul((radA - radB + l) * 0.5))
     contact._contactNormal = vec.mul(-1).normalize()
-    contact._penetrationDistance = 0.000000001 // FIXME: implement
+    contact._penetrationDistance = radA + radB - l
     return [contact]
   }
 
   _contactTestBetweenBoxAndSphere(box, sphere, reverse = false) {
+    const boxShape = box.physicsShape._shape
+    const sphereShape = sphere.physicsShape._shape
+
     const size = new SCNVector3()
     let transform = null
+    const spherePos = sphere._position.transform(box._invTransform)
+    const v = new SCNVector3()
 
-    const boxShape = this.physicsShape._sourceGeometry
+    const w = boxShape.width * 0.5
+    const h = boxShape.height * 0.5
+    const l = boxShape.length * 0.5
+    if(Math.abs(spherePos.x) - w <= 0){
+      v.x = 0
+    }else{
+      v.x = spherePos.x - w
+    }
+    if(Math.abs(spherePos.y) - h <= 0){
+      v.y = 0
+    }else{
+      v.y = spherePos.y - h
+    }
+    if(Math.abs(spherePos.z) - l <= 0){
+      v.z = 0
+    }else{
+      v.z = spherePos.z - l
+    }
+
+    const d = v.length()
+    if(d > sphereShape.radius){
+      return []
+    }
 
     const contact = new SCNPhysicsContact()
     if(reverse){
@@ -239,11 +284,14 @@ export default class SCNPhysicsWorld extends NSObject {
       contact._nodeA = box._node
       contact._nodeB = sphere._node
     }
-    //contact._contactPoint = 
-    //contact._contactNormal = 
-    //contact._penetrationDistance = 
-    return [contact]
 
+    contact._contactPoint = v.transform(box._transform)
+    contact._contactNormal = v.rotate(box._transform).normalize()
+    if(reverse){
+      contact._contactNormal = contact._contactNormal.mul(-1)
+    }
+    contact._penetrationDistance = d - sphereShape.radius
+    return [contact]
   }
 
   /**
@@ -490,6 +538,13 @@ if (contacts.count == 0) {
     //    contacts.push(...this.contactTestBetween(bodyA, bodyB))
     //  }
     //}
+    for(const obj of objects){
+      const body = obj.physicsBody
+      if(body.type === SCNPhysicsBodyType.kinematic){
+        body._resetTransform()
+      }
+    }
+
     for(let i=0; i<objects.length; i++){
       const bodyA = objects[i].presentation.physicsBody
       for(let j=0; j<objects.length; j++){

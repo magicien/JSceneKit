@@ -1,6 +1,7 @@
 'use strict'
 
 import SCNGeometry from './SCNGeometry'
+import SCNMaterial from './SCNMaterial'
 import SCNVector3 from './SCNVector3'
 /*global Ammo*/
 
@@ -50,21 +51,33 @@ export default class SCNCapsule extends SCNGeometry {
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scncapsule/1522735-radialsegmentcount
      */
-    this.radialSegmentCount = 0
+    this.radialSegmentCount = 24
 
     /**
      * The number of subdivisions in the height of each hemispherical end of the capsule. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scncapsule/1523561-capsegmentcount
      */
-    this.capSegmentCount = 0
+    this.capSegmentCount = 48
 
     /**
      * The number of subdivisions in the sides of the capsule along its y-axis. Animatable.
      * @type {number}
      * @see https://developer.apple.com/reference/scenekit/scncapsule/1523697-heightsegmentcount
      */
-    this.heightSegmentCount = 0
+    this.heightSegmentCount = 1
+
+    this._createGeometry()
+    this.materials.push(new SCNMaterial())
+  }
+
+  _createGeometry() {
+    // TODO: implement
+
+    this.boundingBox = {
+      min: new SCNVector3(-this.capRadius, -this.height * 0.5, -this.capRadius),
+      max: new SCNVector3(this.capRadius, this.height * 0.5, this.capRadius)
+    }
   }
 
   /**
@@ -93,4 +106,12 @@ export default class SCNCapsule extends SCNGeometry {
 
     return { center: c, radius: r }
   }
+
+  _updateBoundingBoxForSkinner(skinner = null){
+    if(skinner === null){
+      return this.boundingBox
+    }
+    return super._updateBoundingBoxForSkinner(skinner)
+  }
+
 }

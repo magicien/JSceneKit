@@ -514,6 +514,8 @@ export default class SCNView {
     if(this._scene !== null){
       this._scene._physicsWorld._renderer = this._renderer
     }
+    this._updateTransform()
+    this._scene.rootNode._resetPhysicsTransformRecursively()
   }
 
 

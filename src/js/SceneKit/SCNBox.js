@@ -411,6 +411,13 @@ export default class SCNBox extends SCNGeometry {
       max: new SCNVector3(right, top, front)
     }
   }
+  
+  _updateBoundingBoxForSkinner(skinner = null){
+    if(skinner === null){
+      return this.boundingBox
+    }
+    return super._updateBoundingBoxForSkinner(skinner)
+  }
 
   /**
    * @access private

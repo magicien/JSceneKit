@@ -178,4 +178,11 @@ export default class SCNSphere extends SCNGeometry {
       max: new SCNVector3(this.radius, this.radius, this.radius)
     }
   }
+
+  _updateBoundingBoxForSkinner(skinner = null){
+    if(skinner === null){
+      return this.boundingBox
+    }
+    return super._updateBoundingBoxForSkinner(skinner)
+  }
 }

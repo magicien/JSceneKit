@@ -1220,6 +1220,16 @@ export default class SCNNode extends NSObject {
     }
     this._physicsBody = newValue
     this._physicsBody._node = this
+    this._physicsBody.resetTransform()
+  }
+
+  _resetPhysicsTransformRecursively() {
+    if(this._physicsBody){
+      this._physicsBody._resetTransform()
+    }
+    for(const child of this._childNodes){
+      child._resetPhysicsTransformRecursively()
+    }
   }
 
   // Working With Particle Systems
