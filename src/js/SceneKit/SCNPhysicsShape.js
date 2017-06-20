@@ -58,12 +58,29 @@ export default class SCNPhysicsShape extends NSObject {
     //  _options = new Map(_options)
     //}
 
+    /**
+     * @type {SCNGeometry}
+     */
     this._sourceGeometry = null
 
+    /**
+     * @type {Object}
+     */
     this._options = _options
+
+    /**
+     * @type {SCNMatrix4}
+     */
     this._transforms = null
 
+    /**
+     * @type {SCNGeometry}
+     */
     this._shape = null
+
+    /**
+     * @type {SCNVector3}
+     */
     this._center = new SCNVector3(0, 0, 0)
 
     // Getting Information About a Shape

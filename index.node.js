@@ -37026,6 +37026,12 @@ module.exports =
 	      if (!bodyA.physicsShape || !bodyB.physicsShape) {
 	        return [];
 	      }
+	      if (bodyA.type === _SCNPhysicsBodyType2.default.static && bodyB.type === _SCNPhysicsBodyType2.default.static) {
+	        return [];
+	      }
+	      if (bodyA._position.sub(bodyB._position).length() > bodyA._radius + bodyB._radius) {
+	        return [];
+	      }
 	      var shapeA = bodyA.physicsShape._shape;
 	      var shapeB = bodyB.physicsShape._shape;
 
@@ -37043,8 +37049,159 @@ module.exports =
 	  }, {
 	    key: '_contactTestBetweenBoxes',
 	    value: function _contactTestBetweenBoxes(boxA, boxB, options) {
-	      // TODO: implement
-	      return [];
+	      var shapeA = boxA.physicsShape._shape;
+	      var shapeB = boxB.physicsShape._shape;
+
+	      var tb = boxB._transform.mult(boxA._invTransform);
+	      var nb1 = new _SCNVector2.default(tb.m11, tb.m12, tb.m13).normalize();
+	      var nb2 = new _SCNVector2.default(tb.m21, tb.m22, tb.m23).normalize();
+	      var nb3 = new _SCNVector2.default(tb.m31, tb.m32, tb.m33).normalize();
+	      var b1 = nb1.mul(shapeB.width * 0.5);
+	      var b2 = nb2.mul(shapeB.height * 0.5);
+	      var b3 = nb3.mul(shapeB.length * 0.5);
+	      var d = tb.getTranslation();
+
+	      var lax = shapeA.width * 0.5;
+	      var lay = shapeA.height * 0.5;
+	      var laz = shapeA.length * 0.5;
+
+	      // Ae1
+	      var rA = lax;
+	      var rB = Math.abs(b1.x) + Math.abs(b2.x) + Math.abs(b3.x);
+	      var L = Math.abs(d.x);
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      // Ae2
+	      rA = lay;
+	      rB = Math.abs(b1.y) + Math.abs(b2.y) + Math.abs(b3.y);
+	      L = Math.abs(d.y);
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      // Ae3
+	      rA = laz;
+	      rB = Math.abs(b1.z) + Math.abs(b2.z) + Math.abs(b3.z);
+	      L = Math.abs(d.z);
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      // Be1
+	      rA = Math.abs(nb1.x * lax) + Math.abs(nb1.y * lay) + Math.abs(nb1.z * laz);
+	      rB = b1.length();
+	      L = Math.abs(d.dot(nb1));
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      // Be2
+	      rA = Math.abs(nb2.x * lax) + Math.abs(nb2.y * lay) + Math.abs(nb2.z * laz);
+	      rB = b2.length();
+	      L = Math.abs(d.dot(nb2));
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      // Be3
+	      rA = Math.abs(nb3.x * lax) + Math.abs(nb3.y * lay) + Math.abs(nb3.z * laz);
+	      rB = b3.length();
+	      L = Math.abs(d.dot(nb3));
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      // C11
+	      var axis = new _SCNVector2.default(0, -nb1.z, nb1.y);
+	      rA = Math.abs(axis.y * lay) + Math.abs(axis.z * laz);
+	      rB = Math.abs(axis.dot(b2)) + Math.abs(axis.dot(b3));
+	      L = Math.abs(d.dot(axis));
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      // C12
+	      axis = new _SCNVector2.default(0, -nb2.z, nb2.y);
+	      rA = Math.abs(axis.y * lay) + Math.abs(axis.z * laz);
+	      rB = Math.abs(axis.dot(b3)) + Math.abs(axis.dot(b1));
+	      L = Math.abs(d.dot(axis));
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      // C13
+	      axis = new _SCNVector2.default(0, -nb3.z, nb3.y);
+	      rA = Math.abs(axis.y * lay) + Math.abs(axis.z * laz);
+	      rB = Math.abs(axis.dot(b1)) + Math.abs(axis.dot(b2));
+	      L = Math.abs(d.dot(axis));
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      // C21
+	      axis = new _SCNVector2.default(nb1.z, 0, -nb1.x);
+	      rA = Math.abs(axis.x * lax) + Math.abs(axis.z * laz);
+	      rB = Math.abs(axis.dot(b2)) + Math.abs(axis.dot(b3));
+	      L = Math.abs(d.dot(axis));
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      // C22
+	      axis = new _SCNVector2.default(nb2.z, 0, -nb2.x);
+	      rA = Math.abs(axis.x * lax) + Math.abs(axis.z * laz);
+	      rB = Math.abs(axis.dot(b3)) + Math.abs(axis.dot(b1));
+	      L = Math.abs(d.dot(axis));
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      // C23
+	      axis = new _SCNVector2.default(nb3.z, 0, -nb3.x);
+	      rA = Math.abs(axis.x * lax) + Math.abs(axis.z * laz);
+	      rB = Math.abs(axis.dot(b1)) + Math.abs(axis.dot(b2));
+	      L = Math.abs(d.dot(axis));
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      // C31
+	      axis = new _SCNVector2.default(-nb1.y, nb1.x, 0);
+	      rA = Math.abs(axis.x * lax) + Math.abs(axis.y * lay);
+	      rB = Math.abs(axis.dot(b2)) + Math.abs(axis.dot(b3));
+	      L = Math.abs(d.dot(axis));
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      // C32
+	      axis = new _SCNVector2.default(-nb2.y, nb2.x, 0);
+	      rA = Math.abs(axis.x * lax) + Math.abs(axis.y * lay);
+	      rB = Math.abs(axis.dot(b3)) + Math.abs(axis.dot(b1));
+	      L = Math.abs(d.dot(axis));
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      // C33
+	      axis = new _SCNVector2.default(-nb3.y, nb3.x, 0);
+	      rA = Math.abs(axis.x * lax) + Math.abs(axis.y * lay);
+	      rB = Math.abs(axis.dot(b1)) + Math.abs(axis.dot(b2));
+	      L = Math.abs(d.dot(axis));
+	      if (L > rA + rB) {
+	        return [];
+	      }
+
+	      var contact = new _SCNPhysicsContact2.default();
+	      contact._nodeA = boxA._node;
+	      contact._nodeB = boxB._node;
+	      contact._contactPoint = boxA._position.add(d.mul(0.5) // TODO: implement
+	      );contact._contactNormal = d.normalize // TODO: implement
+	      ();contact._penetrationDistance = 0; // TODO: implement
+
+	      return [contact];
 	    }
 	  }, {
 	    key: '_contactTestBetweenSpheres',
@@ -38032,6 +38189,7 @@ module.exports =
 	    _this._updateRigidBody();
 
 	    _this._position = null;
+	    _this._radius = null;
 	    _this._transform = null;
 	    _this._invTransform = null;
 	    _this._shape = null;
@@ -38152,6 +38310,10 @@ module.exports =
 	        }
 	      }
 
+	      this._radius = 0;
+	      if (!this.physicsShape && this._node && this._node.geometry) {
+	        this.physicsShape = new _SCNPhysicsShape2.default(this._node.geometry);
+	      }
 	      if (this.physicsShape) {
 	        if (!this.physicsShape._sourceObject) {
 	          this.physicsShape._setSourceObject(this._node);
@@ -38164,6 +38326,10 @@ module.exports =
 	        }
 	        var center = this.physicsShape._center;
 	        this._transform = this._transform.translation(center.x, center.y, center.z);
+
+	        if (this.physicsShape._shape) {
+	          this._radius = this.physicsShape._shape.getBoundingSphere().radius;
+	        }
 	      }
 
 	      this._position = this._transform.getTranslation();
@@ -38426,12 +38592,29 @@ module.exports =
 	    //  _options = new Map(_options)
 	    //}
 
+	    /**
+	     * @type {SCNGeometry}
+	     */
 	    _this._sourceGeometry = null;
 
+	    /**
+	     * @type {Object}
+	     */
 	    _this._options = _options;
+
+	    /**
+	     * @type {SCNMatrix4}
+	     */
 	    _this._transforms = null;
 
+	    /**
+	     * @type {SCNGeometry}
+	     */
 	    _this._shape = null;
+
+	    /**
+	     * @type {SCNVector3}
+	     */
 	    _this._center = new _SCNVector2.default(0, 0, 0);
 
 	    // Getting Information About a Shape

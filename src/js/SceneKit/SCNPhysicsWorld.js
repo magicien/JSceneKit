@@ -201,6 +201,12 @@ export default class SCNPhysicsWorld extends NSObject {
     if(!bodyA.physicsShape || !bodyB.physicsShape){
       return []
     }
+    if(bodyA.type === SCNPhysicsBodyType.static && bodyB.type === SCNPhysicsBodyType.static){
+      return []
+    }
+    if(bodyA._position.sub(bodyB._position).length() > bodyA._radius + bodyB._radius){
+      return []
+    }
     const shapeA = bodyA.physicsShape._shape
     const shapeB = bodyB.physicsShape._shape
 
@@ -217,8 +223,159 @@ export default class SCNPhysicsWorld extends NSObject {
   }
 
   _contactTestBetweenBoxes(boxA, boxB, options) {
-    // TODO: implement
-    return []
+    const shapeA = boxA.physicsShape._shape
+    const shapeB = boxB.physicsShape._shape
+
+    const tb = boxB._transform.mult(boxA._invTransform)
+    const nb1 = (new SCNVector3(tb.m11, tb.m12, tb.m13)).normalize()
+    const nb2 = (new SCNVector3(tb.m21, tb.m22, tb.m23)).normalize()
+    const nb3 = (new SCNVector3(tb.m31, tb.m32, tb.m33)).normalize()
+    const b1 = nb1.mul(shapeB.width * 0.5)
+    const b2 = nb2.mul(shapeB.height * 0.5)
+    const b3 = nb3.mul(shapeB.length * 0.5)
+    const d = tb.getTranslation()
+
+    const lax = shapeA.width * 0.5
+    const lay = shapeA.height * 0.5
+    const laz = shapeA.length * 0.5
+
+    // Ae1
+    let rA = lax
+    let rB = Math.abs(b1.x) + Math.abs(b2.x) + Math.abs(b3.x)
+    let L = Math.abs(d.x)
+    if(L > rA + rB){
+      return []
+    }
+
+    // Ae2
+    rA = lay
+    rB = Math.abs(b1.y) + Math.abs(b2.y) + Math.abs(b3.y)
+    L = Math.abs(d.y)
+    if(L > rA + rB){
+      return []
+    }
+
+    // Ae3
+    rA = laz
+    rB = Math.abs(b1.z) + Math.abs(b2.z) + Math.abs(b3.z)
+    L = Math.abs(d.z)
+    if(L > rA + rB){
+      return []
+    }
+
+    // Be1
+    rA = Math.abs(nb1.x * lax) + Math.abs(nb1.y * lay) + Math.abs(nb1.z * laz)
+    rB = b1.length()
+    L = Math.abs(d.dot(nb1))
+    if(L > rA + rB){
+      return []
+    }
+
+    // Be2
+    rA = Math.abs(nb2.x * lax) + Math.abs(nb2.y * lay) + Math.abs(nb2.z * laz)
+    rB = b2.length()
+    L = Math.abs(d.dot(nb2))
+    if(L > rA + rB){
+      return []
+    }
+
+    // Be3
+    rA = Math.abs(nb3.x * lax) + Math.abs(nb3.y * lay) + Math.abs(nb3.z * laz)
+    rB = b3.length()
+    L = Math.abs(d.dot(nb3))
+    if(L > rA + rB){
+      return []
+    }
+
+    // C11
+    let axis = new SCNVector3(0, -nb1.z, nb1.y)
+    rA = Math.abs(axis.y * lay) + Math.abs(axis.z * laz)
+    rB = Math.abs(axis.dot(b2)) + Math.abs(axis.dot(b3))
+    L = Math.abs(d.dot(axis))
+    if(L > rA + rB){
+      return []
+    }
+
+    // C12
+    axis = new SCNVector3(0, -nb2.z, nb2.y)
+    rA = Math.abs(axis.y * lay) + Math.abs(axis.z * laz)
+    rB = Math.abs(axis.dot(b3)) + Math.abs(axis.dot(b1))
+    L = Math.abs(d.dot(axis))
+    if(L > rA + rB){
+      return []
+    }
+
+    // C13
+    axis = new SCNVector3(0, -nb3.z, nb3.y)
+    rA = Math.abs(axis.y * lay) + Math.abs(axis.z * laz)
+    rB = Math.abs(axis.dot(b1)) + Math.abs(axis.dot(b2))
+    L = Math.abs(d.dot(axis))
+    if(L > rA + rB){
+      return []
+    }
+
+    // C21
+    axis = new SCNVector3(nb1.z, 0, -nb1.x)
+    rA = Math.abs(axis.x * lax) + Math.abs(axis.z * laz)
+    rB = Math.abs(axis.dot(b2)) + Math.abs(axis.dot(b3))
+    L = Math.abs(d.dot(axis))
+    if(L > rA + rB){
+      return []
+    }
+
+    // C22
+    axis = new SCNVector3(nb2.z, 0, -nb2.x)
+    rA = Math.abs(axis.x * lax) + Math.abs(axis.z * laz)
+    rB = Math.abs(axis.dot(b3)) + Math.abs(axis.dot(b1))
+    L = Math.abs(d.dot(axis))
+    if(L > rA + rB){
+      return []
+    }
+
+    // C23
+    axis = new SCNVector3(nb3.z, 0, -nb3.x)
+    rA = Math.abs(axis.x * lax) + Math.abs(axis.z * laz)
+    rB = Math.abs(axis.dot(b1)) + Math.abs(axis.dot(b2))
+    L = Math.abs(d.dot(axis))
+    if(L > rA + rB){
+      return []
+    }
+
+    // C31
+    axis = new SCNVector3(-nb1.y, nb1.x, 0)
+    rA = Math.abs(axis.x * lax) + Math.abs(axis.y * lay)
+    rB = Math.abs(axis.dot(b2)) + Math.abs(axis.dot(b3))
+    L = Math.abs(d.dot(axis))
+    if(L > rA + rB){
+      return []
+    }
+
+    // C32
+    axis = new SCNVector3(-nb2.y, nb2.x, 0)
+    rA = Math.abs(axis.x * lax) + Math.abs(axis.y * lay)
+    rB = Math.abs(axis.dot(b3)) + Math.abs(axis.dot(b1))
+    L = Math.abs(d.dot(axis))
+    if(L > rA + rB){
+      return []
+    }
+
+    // C33
+    axis = new SCNVector3(-nb3.y, nb3.x, 0)
+    rA = Math.abs(axis.x * lax) + Math.abs(axis.y * lay)
+    rB = Math.abs(axis.dot(b1)) + Math.abs(axis.dot(b2))
+    L = Math.abs(d.dot(axis))
+    if(L > rA + rB){
+      return []
+    }
+
+    const contact = new SCNPhysicsContact()
+    contact._nodeA = boxA._node
+    contact._nodeB = boxB._node
+    contact._contactPoint = boxA._position.add(d.mul(0.5)) // TODO: implement
+    contact._contactNormal = d.normalize() // TODO: implement
+    contact._penetrationDistance = 0 // TODO: implement
+
+    return [contact]
   }
 
   _contactTestBetweenSpheres(sphereA, sphereB, options) {

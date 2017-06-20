@@ -219,6 +219,7 @@ export default class SCNPhysicsBody extends NSObject {
     this._updateRigidBody()
 
     this._position = null
+    this._radius = null
     this._transform = null
     this._invTransform = null
     this._shape = null
@@ -349,6 +350,10 @@ export default class SCNPhysicsBody extends NSObject {
       }
     }
 
+    this._radius = 0
+    if(!this.physicsShape && this._node && this._node.geometry){
+      this.physicsShape = new SCNPhysicsShape(this._node.geometry)
+    }
     if(this.physicsShape){
       if(!this.physicsShape._sourceObject){
         this.physicsShape._setSourceObject(this._node)
@@ -361,6 +366,10 @@ export default class SCNPhysicsBody extends NSObject {
       }
       const center = this.physicsShape._center
       this._transform = this._transform.translation(center.x, center.y, center.z)
+
+      if(this.physicsShape._shape){
+        this._radius = this.physicsShape._shape.getBoundingSphere().radius
+      }
     }
 
     this._position = this._transform.getTranslation()
