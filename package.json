@@ -41,7 +41,7 @@
     "babel": "^6.23.0",
     "babel-core": "^6.25.0",
     "babel-eslint": "^7.2.3",
-    "babel-loader": "^7.0.0",
+    "babel-loader": "^7.1.0",
     "babel-plugin-static-fs": "^1.1.0",
     "chai": "^4.0.2",
     "esdoc": "^0.5.2",
@@ -60,10 +60,10 @@
     "path": "^0.12.7",
     "require-dir": "^0.3.2",
     "script-loader": "^0.7.0",
-    "sinon": "^2.3.4",
+    "sinon": "^2.3.5",
     "sinon-chai": "^2.11.0",
-    "uglifyjs-webpack-plugin": "^0.4.3",
-    "webpack": "^2.6.1",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "webpack": "^3.0.0",
     "webpack-stream": "^3.2.0"
   },
   "dependencies": {
