@@ -1229,14 +1229,16 @@ export default class SCNRenderer extends NSObject {
     this._lightNodes = this._createLightNodeArray() // createLightNodeArray must be called before getting program
 
     const gl = this.context
-    const program = this._defaultProgram._glProgram
+    const p = this._defaultProgram
+    const program = p._glProgram
 
     gl.clearColor(this._backgroundColor.r, this._backgroundColor.g, this._backgroundColor.b, this._backgroundColor.a)
     gl.clearDepth(1.0)
     gl.clearStencil(0)
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT)
 
-    gl.useProgram(program)
+    //gl.useProgram(program)
+    this._useProgram(p)
 
     gl.depthFunc(gl.LEQUAL)
     gl.depthMask(true)
@@ -1366,7 +1368,8 @@ export default class SCNRenderer extends NSObject {
     //////////////////////////
     // Shadow
     //////////////////////////
-    gl.useProgram(this._defaultShadowProgram._glProgram)
+    //gl.useProgram(this._defaultShadowProgram._glProgram)
+    this._useProgram(this._defaultShadowProgram)
     gl.enable(gl.DEPTH_TEST)
     gl.depthMask(true)
     gl.depthFunc(gl.LEQUAL)
@@ -1381,7 +1384,8 @@ export default class SCNRenderer extends NSObject {
       }
     }
     this._setViewPort() // reset viewport size
-    gl.useProgram(program)
+    //gl.useProgram(program)
+    this._useProgram(p)
     for(let i=0; i<lights.directionalShadow.length; i++){
       const node = lights.directionalShadow[i]
       const symbol = `TEXTURE${i+8}`
@@ -1399,7 +1403,8 @@ export default class SCNRenderer extends NSObject {
     })
 
     const particleProgram = this._defaultParticleProgram._glProgram
-    gl.useProgram(particleProgram)
+    //gl.useProgram(particleProgram)
+    this._useProgram(this._defaultParticleProgram)
     gl.depthMask(false)
     gl.enable(gl.BLEND)
     gl.blendFunc(gl.SRC_ALPHA, gl.ONE)
@@ -1834,12 +1839,17 @@ export default class SCNRenderer extends NSObject {
   _renderParticleSystem(system, node = null) {
     //this.currentTime
     const gl = this.context
-    let program = this._defaultParticleProgram._glProgram
+    //let program = this._defaultParticleProgram._glProgram
+    //if(system._program !== null){
+    //  program = system._program._glProgram
+    //}
+    let p = this._defaultParticleProgram
     if(system._program !== null){
-      program = system._program._glProgram
+      p = system._program
     }
-    gl.useProgram(program)
-    //this._switchProgram(program)
+    const program = p._glProgram
+    this._useProgram(p)
+    //this._switchProgram(p)
     gl.disable(gl.CULL_FACE)
 
     if(system._vertexBuffer === null){
@@ -2300,8 +2310,11 @@ export default class SCNRenderer extends NSObject {
     if(this._hitFrameBuffer === null){
       this._initializeHitFrameBuffer()
     }
-    const hitTestProgram = this._defaultHitTestProgram._glProgram
-    gl.useProgram(hitTestProgram)
+    const prg = this._defaultHitTestProgram
+    const hitTestProgram = prg._glProgram
+    this._useProgram(prg)
+    //gl.useProgram(hitTestProgram)
+    
     gl.bindFramebuffer(gl.FRAMEBUFFER, this._hitFrameBuffer)
 
     gl.depthMask(true)
@@ -2431,8 +2444,10 @@ export default class SCNRenderer extends NSObject {
     if(this._hitFrameBuffer === null){
       this._initializeHitFrameBuffer()
     }
-    const hitTestProgram = this._defaultHitTestProgram._glProgram
-    gl.useProgram(hitTestProgram)
+    const prg = this._defaultHitTestProgram
+    const hitTestProgram = prg._glProgram
+    //gl.useProgram(hitTestProgram)
+    this._useProgram(prg)
     gl.bindFramebuffer(gl.FRAMEBUFFER, this._hitFrameBuffer)
 
     gl.depthMask(true)
@@ -2775,6 +2790,16 @@ export default class SCNRenderer extends NSObject {
     return p
   }
 
+  _useProgram(program) {
+    if(this._currentProgram === program){
+      return
+    }
+    const gl = this.context
+    gl.useProgram(program._glProgram)
+    program._setDummyTextureForContext(gl)
+    this._currentProgram = program
+  }
+
   _switchProgram(program) {
     if(this._currentProgram === program){
       return
@@ -2859,7 +2884,6 @@ export default class SCNRenderer extends NSObject {
       throw new Error(`program link error: ${info}`)
     }
 
-    //gl.useProgram(p._glProgram)
     this._switchProgram(p)
 
     gl.enable(gl.DEPTH_TEST)
@@ -3685,7 +3709,8 @@ export default class SCNRenderer extends NSObject {
       throw new Error(`program link error: ${info}`)
     }
 
-    gl.useProgram(p._glProgram)
+    //gl.useProgram(p._glProgram)
+    this._useProgram(p)
     //gl.clearColor(1, 1, 1, 1)
     //gl.clearDepth(1.0)
     //gl.clearStencil(0)
@@ -3748,7 +3773,8 @@ export default class SCNRenderer extends NSObject {
       throw new Error(`program link error: ${info}`)
     }
 
-    gl.useProgram(p._glProgram)
+    //gl.useProgram(p._glProgram)
+    this._useProgram(p)
     //gl.clearColor(1, 1, 1, 1)
     //gl.clearDepth(1.0)
     //gl.clearStencil(0)
@@ -3830,7 +3856,8 @@ export default class SCNRenderer extends NSObject {
       throw new Error(`program link error: ${info}`)
     }
 
-    gl.useProgram(p._glProgram)
+    //gl.useProgram(p._glProgram)
+    this._useProgram(p)
     //gl.clearColor(1, 1, 1, 1)
     //gl.clearDepth(1.0)
     //gl.clearStencil(0)
