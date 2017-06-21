@@ -935,23 +935,27 @@ module.exports =
 
 	var _SKNode2 = _interopRequireDefault(_SKNode);
 
-	var _SKScale = __webpack_require__(235);
+	var _SKRepeat = __webpack_require__(235);
+
+	var _SKRepeat2 = _interopRequireDefault(_SKRepeat);
+
+	var _SKScale = __webpack_require__(236);
 
 	var _SKScale2 = _interopRequireDefault(_SKScale);
 
-	var _SKScene = __webpack_require__(236);
+	var _SKScene = __webpack_require__(237);
 
 	var _SKScene2 = _interopRequireDefault(_SKScene);
 
-	var _SKSceneScaleMode = __webpack_require__(237);
+	var _SKSceneScaleMode = __webpack_require__(238);
 
 	var _SKSceneScaleMode2 = _interopRequireDefault(_SKSceneScaleMode);
 
-	var _SKSequence = __webpack_require__(238);
+	var _SKSequence = __webpack_require__(239);
 
 	var _SKSequence2 = _interopRequireDefault(_SKSequence);
 
-	var _SKShapeNode = __webpack_require__(239);
+	var _SKShapeNode = __webpack_require__(240);
 
 	var _SKShapeNode2 = _interopRequireDefault(_SKShapeNode);
 
@@ -967,7 +971,7 @@ module.exports =
 
 	var _SKTextureFilteringMode2 = _interopRequireDefault(_SKTextureFilteringMode);
 
-	var _SKWait = __webpack_require__(240);
+	var _SKWait = __webpack_require__(241);
 
 	var _SKWait2 = _interopRequireDefault(_SKWait);
 
@@ -983,7 +987,7 @@ module.exports =
 
 	var _BinaryRequest3 = _interopRequireDefault(_BinaryRequest2);
 
-	var _Buffer2 = __webpack_require__(241);
+	var _Buffer2 = __webpack_require__(242);
 
 	var _Buffer3 = _interopRequireDefault(_Buffer2);
 
@@ -999,7 +1003,7 @@ module.exports =
 
 	var _FileReader3 = _interopRequireDefault(_FileReader2);
 
-	var _HTMLCanvasElement2 = __webpack_require__(243);
+	var _HTMLCanvasElement2 = __webpack_require__(244);
 
 	var _HTMLCanvasElement3 = _interopRequireDefault(_HTMLCanvasElement2);
 
@@ -1227,6 +1231,7 @@ module.exports =
 	_ClassList3.default.registerClass(_SKLabelNode2.default);
 	_ClassList3.default.registerClass(_SKLabelVerticalAlignmentMode2.default);
 	_ClassList3.default.registerClass(_SKNode2.default);
+	_ClassList3.default.registerClass(_SKRepeat2.default);
 	_ClassList3.default.registerClass(_SKScale2.default);
 	_ClassList3.default.registerClass(_SKScene2.default);
 	_ClassList3.default.registerClass(_SKSceneScaleMode2.default);
@@ -1460,6 +1465,7 @@ module.exports =
 	exports.SKLabelNode = _SKLabelNode2.default;
 	exports.SKLabelVerticalAlignmentMode = _SKLabelVerticalAlignmentMode2.default;
 	exports.SKNode = _SKNode2.default;
+	exports.SKRepeat = _SKRepeat2.default;
 	exports.SKScale = _SKScale2.default;
 	exports.SKScene = _SKScene2.default;
 	exports.SKSceneScaleMode = _SKSceneScaleMode2.default;
@@ -26308,7 +26314,6 @@ module.exports =
 	      var sources = this.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex);
 	      var min = new _SCNVector2.default(Infinity, Infinity, Infinity);
 	      var max = new _SCNVector2.default(-Infinity, -Infinity, -Infinity);
-	      console.error('===== updateBoundingBoxForSkinner =====');
 	      var _iteratorNormalCompletion2 = true;
 	      var _didIteratorError2 = false;
 	      var _iteratorError2 = undefined;
@@ -26318,7 +26323,6 @@ module.exports =
 	          var src = _step2.value;
 
 	          var result = src._createBoundingBox(transform);
-	          console.error('min: ' + result.min.floatArray() + ', max: ' + result.max.floatArray());
 	          if (result.min.x < min.x) {
 	            min.x = result.min.x;
 	          }
@@ -26353,7 +26357,6 @@ module.exports =
 	        }
 	      }
 
-	      console.error('boundingBox: min: ' + min.floatArray() + ', max: ' + max.floatArray());
 	      this.boundingBox = { min: min, max: max };
 	      return this.boundingBox;
 	    }
@@ -31382,18 +31385,24 @@ module.exports =
 	        console.error('SCNRenderer.render(): context is null');
 	        return;
 	      }
+	      var gl = this.context;
+
 	      if (this.scene === null) {
-	        console.error('SCNRenderer.render(): scene is null');
+	        if (this.overlaySKScene) {
+	          var sk = this.overlaySKScene;
+	          gl.clearColor(sk.backgroundColor.red, sk.backgroundColor.green, sk.backgroundColor.blue, sk.backgroundColor.alpha);
+	          gl.clear(gl.COLOR_BUFFER_BIT);
+	          this._renderOverlaySKScene();
+	        }
 	        return;
 	      }
 
 	      this._lightNodes = this._createLightNodeArray // createLightNodeArray must be called before getting program
 
-	      ();var gl = this.context;
-	      var p = this._defaultProgram;
+	      ();var p = this._defaultProgram;
 	      var program = p._glProgram;
 
-	      gl.clearColor(this._backgroundColor.r, this._backgroundColor.g, this._backgroundColor.b, this._backgroundColor.a);
+	      gl.clearColor(this._backgroundColor.red, this._backgroundColor.green, this._backgroundColor.blue, this._backgroundColor.alpha);
 	      gl.clearDepth(1.0);
 	      gl.clearStencil(0);
 	      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT
@@ -33274,6 +33283,9 @@ module.exports =
 	        lightDefinition += 'ProbeLight probe[NUM_PROBE_LIGHTS]; ';
 	        vsLighting += _vsProbe;
 	        fsLighting += _fsProbe;
+	      }
+	      if (lightDefinition === '') {
+	        lightDefinition = 'vec4 dummy;'; // put something for avoiding error
 	      }
 	      vars.set('__LIGHT_DEFINITION__', lightDefinition);
 	      vars.set('__VS_LIGHTING__', vsLighting);
@@ -53812,7 +53824,7 @@ module.exports =
 	      ///////////////////////
 	      // simulates physics //
 	      ///////////////////////
-	      ();if (this._scene._physicsWorld !== null) {
+	      ();if (this._scene && this._scene._physicsWorld !== null) {
 	        this._scene._physicsWorld._simulate(time);
 	      }
 
@@ -53844,6 +53856,10 @@ module.exports =
 	  }, {
 	    key: '_createPresentationNodes',
 	    value: function _createPresentationNodes() {
+	      if (this._scene === null) {
+	        return;
+	      }
+
 	      var arr = [this._scene.rootNode];
 
 	      var _loop = function _loop() {
@@ -53907,6 +53923,10 @@ module.exports =
 	  }, {
 	    key: '_copyTransformToPresentationNodes',
 	    value: function _copyTransformToPresentationNodes() {
+	      if (this._scene === null) {
+	        return;
+	      }
+
 	      var arr = [this._scene.rootNode, this._scene._skyBox, this._renderer._defaultCameraPosNode, this._renderer._defaultLightNode];
 	      while (arr.length > 0) {
 	        var _node = arr.shift();
@@ -53977,6 +53997,9 @@ module.exports =
 	  }, {
 	    key: '_updateTransform',
 	    value: function _updateTransform(node, parentTransform) {
+	      if (this._scene === null) {
+	        return;
+	      }
 	      this._scene.rootNode._updateWorldTransform();
 	      this._scene.rootNode._updateBoundingBox();
 	    }
@@ -53986,7 +54009,9 @@ module.exports =
 	      var _this4 = this;
 
 	      if (typeof node === 'undefined') {
-	        this._updateMorph(this._scene.rootNode);
+	        if (this._scene) {
+	          this._updateMorph(this._scene.rootNode);
+	        }
 	        return;
 	      }
 	      if (node.morpher !== null) {
@@ -54007,6 +54032,9 @@ module.exports =
 	  }, {
 	    key: '_runActions',
 	    value: function _runActions() {
+	      if (this._scene === null) {
+	        return;
+	      }
 	      this._runActionForNode(this._scene.rootNode);
 	    }
 	  }, {
@@ -54078,6 +54106,9 @@ module.exports =
 	  }, {
 	    key: '_runAnimations',
 	    value: function _runAnimations() {
+	      if (this._scene === null) {
+	        return;
+	      }
 	      this._runAnimationForNode(this._scene.rootNode);
 	    }
 	  }, {
@@ -54148,6 +54179,9 @@ module.exports =
 	  }, {
 	    key: '_updateParticles',
 	    value: function _updateParticles() {
+	      if (this._scene === null) {
+	        return;
+	      }
 	      this._updateParticlesForScene();
 	      this._updateParticlesForNode(this._scene.rootNode);
 	    }
@@ -57166,7 +57200,7 @@ module.exports =
 	 * @access private
 	 * @type {string}
 	 */
-	var _defaultFragmentShader = '#version 300 es\n  precision mediump float;\n\n  uniform sampler2D spriteTexture;\n  in vec2 v_texcoord;\n\n  out vec4 outColor;\n\n  void main() {\n    outColor = texture(spriteTexture, v_texcoord);\n  }\n';
+	var _defaultFragmentShader = '#version 300 es\n  precision mediump float;\n\n  uniform sampler2D spriteTexture;\n  uniform float alpha;\n  in vec2 v_texcoord;\n\n  out vec4 outColor;\n\n  void main() {\n    outColor = texture(spriteTexture, v_texcoord);\n    outColor.a *= alpha;\n  }\n';
 
 	/**
 	 * A node that displays a text label.
@@ -57358,6 +57392,7 @@ module.exports =
 	  }, {
 	    key: '_render',
 	    value: function _render(gl, viewRect) {
+	      var p = this.__presentation;
 	      if (this._texture === null || this._glContext !== gl) {
 	        this._glContext = gl;
 	        this._texture = gl.createTexture();
@@ -57385,6 +57420,7 @@ module.exports =
 
 	      gl.uniform1f(gl.getUniformLocation(program, 'screenWidth'), viewRect.size.width);
 	      gl.uniform1f(gl.getUniformLocation(program, 'screenHeight'), viewRect.size.height);
+	      gl.uniform1f(gl.getUniformLocation(program, 'alpha'), p.alpha);
 
 	      var data = this._createVertexData();
 	      gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer);
@@ -57641,6 +57677,186 @@ module.exports =
 
 /***/ },
 /* 235 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
+	var _SKAction2 = __webpack_require__(227);
+
+	var _SKAction3 = _interopRequireDefault(_SKAction2);
+
+	var _SKActionTimingMode = __webpack_require__(228);
+
+	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
+
+	var _SKNode = __webpack_require__(142);
+
+	var _SKNode2 = _interopRequireDefault(_SKNode);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var SKRepeat = function (_SKAction) {
+	  _inherits(SKRepeat, _SKAction);
+
+	  /**
+	   * constructor
+	   * @access public
+	   * @constructor
+	   */
+	  function SKRepeat() {
+	    _classCallCheck(this, SKRepeat);
+
+	    var _this = _possibleConstructorReturn(this, (SKRepeat.__proto__ || Object.getPrototypeOf(SKRepeat)).call(this));
+
+	    _this._timesToRepeat = 0;
+	    _this._repeatedAtion = null;
+	    _this._forever = false;
+	    _this._timesRepeated = 0;
+	    return _this;
+	  }
+
+	  /**
+	   * Creates an action that repeats another action a specified number of times.
+	   * @access public
+	   * @param {SKAction} action - The action to execute.
+	   * @param {number} count - The number of times to execute the action.
+	   * @returns {SKAction} - 
+	   * @desc When the action executes, the associated action runs to completion and then repeats, until the count is reached.This action is reversible; it creates a new action that is the reverse of the specified action and then repeats it the same number of times.
+	   * @see https://developer.apple.com/reference/spritekit/skaction/1417750-repeat
+	   */
+
+
+	  _createClass(SKRepeat, [{
+	    key: 'copy',
+
+
+	    /**
+	     * @access public
+	     * @returns {SCNActionFade} -
+	     */
+	    value: function copy() {
+	      var action = _get(SKRepeat.prototype.__proto__ || Object.getPrototypeOf(SKRepeat.prototype), 'copy', this).call(this);
+
+	      action._timesToRepeat = this._timesToRepeat;
+	      action._repeatedAction = this._repeatedAction;
+	      action._forever = this._forever;
+	      action._timesRepeated = this._timesRepeated;
+
+	      return action;
+	    }
+	  }, {
+	    key: '_getTime',
+	    value: function _getTime(time, needTimeConversion) {
+	      if (!needTimeConversion) {
+	        return time;
+	      }
+
+	      var baseTime = this._basetimeFromTime(time);
+	      if (this.timingFunction === null) {
+	        return baseTime;
+	      }
+
+	      var n = Math.floor(baseTime);
+	      var t = this.timingFunction._getValueAtTime(baseTime - n);
+	      return n + t;
+	    }
+
+	    /**
+	     * apply action to the given node.
+	     * @access private
+	     * @param {Object} obj - target object to apply this action.
+	     * @param {number} time - active time
+	     * @param {boolean} [needTimeConversion = true] -
+	     * @returns {void}
+	     */
+
+	  }, {
+	    key: '_applyAction',
+	    value: function _applyAction(obj, time) {
+	      var needTimeConversion = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : true;
+
+	      var dt = this._getTime(time, needTimeConversion);
+	      var timesRepeated = Math.floor(dt);
+	      while (timesRepeated > this._timesRepeated) {
+	        this._timesRepeated += 1;
+	        this._repeatedAction._applyAction(obj, 1.0, false);
+	        if (!this._forever && this._timesRepeated >= this._timesToRepeat) {
+	          this._finished = true;
+	          return;
+	        }
+	        this._repeatedAction._resetFinished();
+	      }
+	      var t = dt - this._timesRepeated;
+	      this._repeatedAction._applyAction(obj, t, false);
+	      this._finished = false;
+	    }
+	  }, {
+	    key: '_resetFinished',
+	    value: function _resetFinished() {
+	      this._repeatedAction._resetFinished();
+	      this._timesRepeated = 0;
+	      this._finished = false;
+	    }
+	  }, {
+	    key: 'duration',
+	    get: function get() {
+	      if (this._forever) {
+	        return Infinity;
+	      }
+	      return this._repeatedAction.duration * this._timesToRepeat;
+	    }
+	  }], [{
+	    key: 'repeat',
+	    value: function repeat(action, count) {
+	      var _action = new SKRepeat();
+	      _action._repeatedAction = action;
+	      _action._duration = action.duration;
+	      _action._timesToRepeat = count;
+	      _action._forever = count === Infinity;
+	      return _action;
+	    }
+
+	    /**
+	     * Creates an action that repeats another action forever.
+	     * @access public
+	     * @param {SKAction} action - The action to execute.
+	     * @returns {SKAction} - 
+	     * @desc When the action executes, the associated action runs to completion and then repeats.This action is reversible; it creates a new action that is the reverse of the specified action and then repeats it forever.NoteThe action to be repeated must have a non-instantaneous duration.
+	     * @see https://developer.apple.com/reference/spritekit/skaction/1417676-repeatforever
+	     */
+
+	  }, {
+	    key: 'repeatForever',
+	    value: function repeatForever(action) {
+	      return this.repeat(action, Infinity);
+	    }
+	  }]);
+
+	  return SKRepeat;
+	}(_SKAction3.default);
+
+	exports.default = SKRepeat;
+
+
+	_SKAction3.default.repeat = SKRepeat.repeat;
+	_SKAction3.default.repeatForever = SKRepeat.repeatForever;
+
+/***/ },
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57934,7 +58150,7 @@ module.exports =
 	_SKAction3.default.scaleYToDuration = SKScale.scaleYToDuration;
 
 /***/ },
-/* 236 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57961,7 +58177,7 @@ module.exports =
 
 	var _SKEffectNode3 = _interopRequireDefault(_SKEffectNode2);
 
-	var _SKSceneScaleMode = __webpack_require__(237);
+	var _SKSceneScaleMode = __webpack_require__(238);
 
 	var _SKSceneScaleMode2 = _interopRequireDefault(_SKSceneScaleMode);
 
@@ -58275,7 +58491,7 @@ module.exports =
 	exports.default = SKScene;
 
 /***/ },
-/* 237 */
+/* 238 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -58303,7 +58519,7 @@ module.exports =
 	exports.default = SKSceneScaleMode;
 
 /***/ },
-/* 238 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58464,7 +58680,7 @@ module.exports =
 	_SKAction3.default.sequence = SKSequence.sequence;
 
 /***/ },
-/* 239 */
+/* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58820,7 +59036,7 @@ module.exports =
 	exports.default = SKShapeNode;
 
 /***/ },
-/* 240 */
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58922,7 +59138,7 @@ module.exports =
 	_SKAction3.default.waitForDurationWithRange = SKWait.waitForDurationWithRange;
 
 /***/ },
-/* 241 */
+/* 242 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -58933,7 +59149,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _BinaryParser = __webpack_require__(242);
+	var _BinaryParser = __webpack_require__(243);
 
 	var _BinaryParser2 = _interopRequireDefault(_BinaryParser);
 
@@ -59217,7 +59433,7 @@ module.exports =
 	exports.default = _Buffer;
 
 /***/ },
-/* 242 */
+/* 243 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -59385,7 +59601,7 @@ module.exports =
 	};
 
 /***/ },
-/* 243 */
+/* 244 */
 /***/ function(module, exports) {
 
 	'use strict';

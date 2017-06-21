@@ -1221,18 +1221,24 @@ export default class SCNRenderer extends NSObject {
       console.error('SCNRenderer.render(): context is null')
       return
     }
+    const gl = this.context
+
     if(this.scene === null){
-      console.error('SCNRenderer.render(): scene is null')
+      if(this.overlaySKScene){
+        const sk = this.overlaySKScene
+        gl.clearColor(sk.backgroundColor.red, sk.backgroundColor.green, sk.backgroundColor.blue, sk.backgroundColor.alpha)
+        gl.clear(gl.COLOR_BUFFER_BIT)
+        this._renderOverlaySKScene()
+      }
       return
     }
 
     this._lightNodes = this._createLightNodeArray() // createLightNodeArray must be called before getting program
 
-    const gl = this.context
     const p = this._defaultProgram
     const program = p._glProgram
 
-    gl.clearColor(this._backgroundColor.r, this._backgroundColor.g, this._backgroundColor.b, this._backgroundColor.a)
+    gl.clearColor(this._backgroundColor.red, this._backgroundColor.green, this._backgroundColor.blue, this._backgroundColor.alpha)
     gl.clearDepth(1.0)
     gl.clearStencil(0)
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT)
@@ -3028,6 +3034,9 @@ export default class SCNRenderer extends NSObject {
       lightDefinition += 'ProbeLight probe[NUM_PROBE_LIGHTS]; '
       vsLighting += _vsProbe
       fsLighting += _fsProbe
+    }
+    if(lightDefinition === ''){
+      lightDefinition = 'vec4 dummy;' // put something for avoiding error
     }
     vars.set('__LIGHT_DEFINITION__', lightDefinition)
     vars.set('__VS_LIGHTING__', vsLighting)

@@ -1014,7 +1014,7 @@ export default class SCNView {
     ///////////////////////
     // simulates physics //
     ///////////////////////
-    if(this._scene._physicsWorld !== null){
+    if(this._scene && this._scene._physicsWorld !== null){
       this._scene._physicsWorld._simulate(time)
     }
 
@@ -1045,6 +1045,10 @@ export default class SCNView {
   }
 
   _createPresentationNodes() {
+    if(this._scene === null){
+      return
+    }
+
     const arr = [this._scene.rootNode]
     while(arr.length > 0){
       const node = arr.shift()
@@ -1081,6 +1085,10 @@ export default class SCNView {
   }
 
   _copyTransformToPresentationNodes() {
+    if(this._scene === null){
+      return
+    }
+
     const arr = [
       this._scene.rootNode, 
       this._scene._skyBox,
@@ -1148,13 +1156,18 @@ export default class SCNView {
   }
 
   _updateTransform(node, parentTransform) {
+    if(this._scene === null){
+      return
+    }
     this._scene.rootNode._updateWorldTransform()
     this._scene.rootNode._updateBoundingBox()
   }
 
   _updateMorph(node) {
     if(typeof node === 'undefined'){
-      this._updateMorph(this._scene.rootNode)
+      if(this._scene){
+        this._updateMorph(this._scene.rootNode)
+      }
       return
     }
     if(node.morpher !== null){
@@ -1173,6 +1186,9 @@ export default class SCNView {
   }
 
   _runActions() {
+    if(this._scene === null){
+      return
+    }
     this._runActionForNode(this._scene.rootNode)
   }
 
@@ -1226,6 +1242,9 @@ export default class SCNView {
   }
 
   _runAnimations() {
+    if(this._scene === null){
+      return
+    }
     this._runAnimationForNode(this._scene.rootNode)
   }
 
@@ -1279,6 +1298,9 @@ export default class SCNView {
   }
 
   _updateParticles() {
+    if(this._scene === null){
+      return
+    }
     this._updateParticlesForScene()
     this._updateParticlesForNode(this._scene.rootNode)
   }

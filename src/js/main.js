@@ -220,6 +220,7 @@ import SKLabelHorizontalAlignmentMode from './SpriteKit/SKLabelHorizontalAlignme
 import SKLabelNode from './SpriteKit/SKLabelNode'
 import SKLabelVerticalAlignmentMode from './SpriteKit/SKLabelVerticalAlignmentMode'
 import SKNode from './SpriteKit/SKNode'
+import SKRepeat from './SpriteKit/SKRepeat'
 import SKScale from './SpriteKit/SKScale'
 import SKScene from './SpriteKit/SKScene'
 import SKSceneScaleMode from './SpriteKit/SKSceneScaleMode'
@@ -460,6 +461,7 @@ _ClassList.registerClass(SKLabelHorizontalAlignmentMode)
 _ClassList.registerClass(SKLabelNode)
 _ClassList.registerClass(SKLabelVerticalAlignmentMode)
 _ClassList.registerClass(SKNode)
+_ClassList.registerClass(SKRepeat)
 _ClassList.registerClass(SKScale)
 _ClassList.registerClass(SKScene)
 _ClassList.registerClass(SKSceneScaleMode)
@@ -693,6 +695,7 @@ exports.SKLabelHorizontalAlignmentMode = SKLabelHorizontalAlignmentMode
 exports.SKLabelNode = SKLabelNode
 exports.SKLabelVerticalAlignmentMode = SKLabelVerticalAlignmentMode
 exports.SKNode = SKNode
+exports.SKRepeat = SKRepeat
 exports.SKScale = SKScale
 exports.SKScene = SKScene
 exports.SKSceneScaleMode = SKSceneScaleMode

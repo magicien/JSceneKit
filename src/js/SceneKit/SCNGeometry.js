@@ -1155,10 +1155,8 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     const sources = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)
     const min = new SCNVector3(Infinity, Infinity, Infinity)
     const max = new SCNVector3(-Infinity, -Infinity, -Infinity)
-    console.error('===== updateBoundingBoxForSkinner =====')
     for(const src of sources){
       const result = src._createBoundingBox(transform)
-      console.error('min: ' + result.min.floatArray() + ', max: ' + result.max.floatArray())
       if(result.min.x < min.x){
         min.x = result.min.x
       }
@@ -1178,7 +1176,6 @@ This method is for OpenGL shader programs only. To bind custom variable data for
         max.z = result.max.z
       }
     }
-    console.error('boundingBox: min: ' + min.floatArray() + ', max: ' + max.floatArray())
     this.boundingBox = { min: min, max: max }
     return this.boundingBox
   }

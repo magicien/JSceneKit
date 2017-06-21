@@ -40,12 +40,14 @@ const _defaultFragmentShader =
   precision mediump float;
 
   uniform sampler2D spriteTexture;
+  uniform float alpha;
   in vec2 v_texcoord;
 
   out vec4 outColor;
 
   void main() {
     outColor = texture(spriteTexture, v_texcoord);
+    outColor.a *= alpha;
   }
 `
 
@@ -297,6 +299,7 @@ export default class SKLabelNode extends SKNode {
    * @returns {void}
    */
   _render(gl, viewRect) {
+    const p = this.__presentation
     if(this._texture === null || this._glContext !== gl){
       this._glContext = gl
       this._texture = gl.createTexture()
@@ -324,6 +327,7 @@ export default class SKLabelNode extends SKNode {
 
     gl.uniform1f(gl.getUniformLocation(program, 'screenWidth'), viewRect.size.width)
     gl.uniform1f(gl.getUniformLocation(program, 'screenHeight'), viewRect.size.height)
+    gl.uniform1f(gl.getUniformLocation(program, 'alpha'), p.alpha)
 
     const data = this._createVertexData()
     gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer)
