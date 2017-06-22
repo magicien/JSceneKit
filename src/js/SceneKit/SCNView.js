@@ -1033,6 +1033,7 @@ export default class SCNView {
     ///////////////////////
     // renders the scene //
     ///////////////////////
+    this._updateSkinner()
     this._updateMorph()
     this._updateParticles()
 
@@ -1161,6 +1162,22 @@ export default class SCNView {
     }
     this._scene.rootNode._updateWorldTransform()
     this._scene.rootNode._updateBoundingBox()
+  }
+
+  _updateSkinner(node) {
+    if(typeof node === 'undefined'){
+      if(this._scene){
+        this._updateSkinner(this._scene.rootNode)
+      }
+      return
+    }
+    if(node.skinner !== null && !node.skinner._useGPU){
+      node.skinner._update(node)
+    }
+    node.childNodes.forEach((child) => {
+      this._updateSkinner(child)
+    })
+
   }
 
   _updateMorph(node) {

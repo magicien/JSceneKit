@@ -780,7 +780,6 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    * @returns {void}
    */
   _updateVertexBuffer(gl, baseGeometry) {
-    //this._createVertexBuffer(gl, baseGeometry, true)
     const pVertexSource = this.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
     const vertexData = new Float32Array(pVertexSource._data)
     gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer)

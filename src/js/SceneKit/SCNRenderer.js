@@ -1637,8 +1637,13 @@ export default class SCNRenderer extends NSObject {
       }
 
       if(node.presentation.skinner !== null){
-        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
-        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array())
+        if(node.presentation.skinner._useGPU){
+          gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
+          gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array3x4f())
+        }else{
+          gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0)
+          gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), SCNMatrix4MakeTranslation(0, 0, 0).float32Array3x4f())
+        }
       }else{
         gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0)
         gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f())
@@ -1719,7 +1724,7 @@ export default class SCNRenderer extends NSObject {
       this._initializeUBO(node, program) // FIXME: program should have UBO, not node.
     }
 
-    if(node.morpher !== null){
+    if(node.morpher !== null || (node.skinner && !node.skinner._useGPU)){
       this._updateVAO(node)
     }
 
@@ -1731,8 +1736,13 @@ export default class SCNRenderer extends NSObject {
     }
 
     if(node.presentation.skinner !== null){
-      gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
-      gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array())
+      if(node.presentation.skinner._useGPU){
+        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
+        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array3x4f())
+      }else{
+        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0)
+        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), SCNMatrix4MakeTranslation(0, 0, 0).float32Array3x4f())
+      }
     }else{
       gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0)
       gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f())
@@ -1757,8 +1767,13 @@ export default class SCNRenderer extends NSObject {
           gl.uniform1f(uniformTime, time)
         }
         if(node.presentation.skinner !== null){
-          gl.uniform1i(gl.getUniformLocation(p, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
-          gl.uniform4fv(gl.getUniformLocation(p, 'skinningJoints'), node.presentation.skinner.float32Array())
+          if(node.presentation.skinner._useGPU){
+            gl.uniform1i(gl.getUniformLocation(p, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
+            gl.uniform4fv(gl.getUniformLocation(p, 'skinningJoints'), node.presentation.skinner.float32Array3x4f())
+          }else{
+            gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0)
+            gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), SCNMatrix4MakeTranslation(0, 0, 0).float32Array3x4f())
+          }
         }else{
           gl.uniform1i(gl.getUniformLocation(p, 'numSkinningJoints'), 0)
           gl.uniform4fv(gl.getUniformLocation(p, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f())
@@ -1897,9 +1912,14 @@ export default class SCNRenderer extends NSObject {
 
     gl.uniform1i(gl.getUniformLocation(program, 'objectID'), objectID)
 
-    if(node.presentation.skinner !== null){
-      gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
-      gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array())
+    if(node.presentation.skinner !== null && node.presentation.skinner._useGPU){
+      if(node.presentation.skinner._useGPU){
+        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
+        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array3x4f())
+      }else{
+        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0)
+        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), SCNMatrix4MakeTranslation(0, 0, 0).float32Array3x4f())
+      }
     }else{
       gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0)
       gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f())
@@ -1982,9 +2002,14 @@ export default class SCNRenderer extends NSObject {
 
     gl.uniform1i(gl.getUniformLocation(program, 'objectID'), objectID)
 
-    if(node.presentation.skinner !== null){
-      gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
-      gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array())
+    if(node.presentation.skinner !== null && node.presentation.skinner._useGPU){
+      if(node.presentation.skinner._useGPU){
+        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
+        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array3x4f())
+      }else{
+        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0)
+        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), SCNMatrix4MakeTranslation(0, 0, 0).float32Array3x4f())
+      }
     }else{
       gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0)
       gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f())
@@ -3168,7 +3193,7 @@ export default class SCNRenderer extends NSObject {
       }
 
       // boneIndices
-      const indSrc = node.skinner ? node.skinner._boneIndices : null
+      const indSrc = (node.skinner && node.skinner._useGPU) ? node.skinner._boneIndices : null
       if(indSrc){
         //console.log(`indSrc: ${boneIndicesLoc}, ${indSrc.componentsPerVector}, ${indSrc.dataStride}, ${indSrc.dataOffset}`)
         gl.enableVertexAttribArray(boneIndicesLoc)
@@ -3178,7 +3203,7 @@ export default class SCNRenderer extends NSObject {
       }
 
       // boneWeights
-      const wgtSrc = node.skinner ? node.skinner._boneWeights : null
+      const wgtSrc = (node.skinner && node.skinner._useGPU) ? node.skinner._boneWeights : null
       if(wgtSrc){
         //console.log(`wgtSrc: ${boneWeightsLoc}, ${wgtSrc.componentsPerVector}, ${wgtSrc.dataStride}, ${wgtSrc.dataOffset}`)
         gl.enableVertexAttribArray(boneWeightsLoc)
@@ -3238,7 +3263,7 @@ export default class SCNRenderer extends NSObject {
       }
 
       // boneIndices
-      const indSrc = node.skinner ? node.skinner._boneIndices : null
+      const indSrc = (node.skinner && node.skinner._useGPU) ? node.skinner._boneIndices : null
       if(indSrc){
         gl.enableVertexAttribArray(boneIndicesLoc)
         gl.vertexAttribPointer(boneIndicesLoc, indSrc.componentsPerVector, gl.FLOAT, false, indSrc.dataStride, indSrc.dataOffset)
@@ -3247,7 +3272,7 @@ export default class SCNRenderer extends NSObject {
       }
 
       // boneWeights
-      const wgtSrc = node.skinner ? node.skinner._boneWeights : null
+      const wgtSrc = (node.skinner && node.skinner._useGPU) ? node.skinner._boneWeights : null
       if(wgtSrc){
         gl.enableVertexAttribArray(boneWeightsLoc)
         gl.vertexAttribPointer(boneWeightsLoc, wgtSrc.componentsPerVector, gl.FLOAT, false, wgtSrc.dataStride, wgtSrc.dataOffset)
@@ -3472,8 +3497,8 @@ export default class SCNRenderer extends NSObject {
       this._defaultCameraPosNode.position = (new SCNVector3(0, 0, -_defaultCameraDistance)).rotate(rotMat).add(pos)
       this._defaultCameraRotNode.rotation = rot
       this._defaultCameraNode.position = new SCNVector3(0, 0, _defaultCameraDistance)
-      console.log(`pov defined: pov.pos: ${this._pointOfView._worldTranslation.float32Array()}`)
-      console.log(`pov defined: node.pos: ${this._defaultCameraNode._worldTranslation.float32Array()}`)
+      //console.log(`pov defined: pov.pos: ${this._pointOfView._worldTranslation.float32Array()}`)
+      //console.log(`pov defined: node.pos: ${this._defaultCameraNode._worldTranslation.float32Array()}`)
     }
     this._pointOfView = this._defaultCameraNode
   }
@@ -3564,8 +3589,8 @@ export default class SCNRenderer extends NSObject {
     const geometry = node.presentation.geometry
     const invRay = rayVec.mul(-1)
 
-    console.log(`rayPoint: ${rayPoint.float32Array()}`)
-    console.log(`rayVec: ${rayVec.float32Array()}`)
+    //console.log(`rayPoint: ${rayPoint.float32Array()}`)
+    //console.log(`rayVec: ${rayVec.float32Array()}`)
 
     //if(node.morpher !== null){
     //  this._updateVAO(node)
@@ -3603,7 +3628,7 @@ export default class SCNRenderer extends NSObject {
 
     const geometryCount = geometry.geometryElements.length
     for(let i=0; i<geometryCount; i++){
-      console.log(`geometry element ${i}`)
+      //console.log(`geometry element ${i}`)
       const element = geometry.geometryElements[i]
       switch(element.primitiveType){
         case SCNGeometryPrimitiveType.line:
@@ -3616,7 +3641,7 @@ export default class SCNRenderer extends NSObject {
 
       const elementData = element._glData
       const len = element.primitiveCount
-      console.log(`primitiveCount: ${len}`)
+      //console.log(`primitiveCount: ${len}`)
       // TODO: check cull settings
       for(let pi=0; pi<len; pi++){
         const indices = element._indexAt(pi)
@@ -3651,7 +3676,7 @@ export default class SCNRenderer extends NSObject {
         }
 
         // Hit!
-        console.log(`Hit! ${i}: ${pi}`)
+        //console.log(`Hit! ${i}: ${pi}`)
         const hitPoint = rayPoint.add(rayVec.mul(t))
         const invModel = modelTransform.invert()
 

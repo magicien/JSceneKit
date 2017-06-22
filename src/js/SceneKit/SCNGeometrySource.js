@@ -516,7 +516,7 @@ SCNGeometrySource *source = [SCNGeometrySource geometrySourceWithBuffer:buffer
     const indexStride = this._dataStride / this._bytesPerComponent
     const ind = index * indexStride + this._dataOffset / this._bytesPerComponent
     for(let i=0; i<this._componentsPerVector; i++){
-      this._data[ind + i] = v[i]
+      this._data[ind + i] = data[i]
     }
   }
 

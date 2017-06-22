@@ -27690,7 +27690,6 @@ module.exports =
 	  }, {
 	    key: '_updateVertexBuffer',
 	    value: function _updateVertexBuffer(gl, baseGeometry) {
-	      //this._createVertexBuffer(gl, baseGeometry, true)
 	      var pVertexSource = this.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
 	      var vertexData = new Float32Array(pVertexSource._data);
 	      gl.bindBuffer(gl.ARRAY_BUFFER, this._vertexBuffer);
@@ -28704,7 +28703,7 @@ module.exports =
 	      var indexStride = this._dataStride / this._bytesPerComponent;
 	      var ind = index * indexStride + this._dataOffset / this._bytesPerComponent;
 	      for (var i = 0; i < this._componentsPerVector; i++) {
-	        this._data[ind + i] = v[i];
+	        this._data[ind + i] = data[i];
 	      }
 	    }
 
@@ -33681,8 +33680,13 @@ module.exports =
 	          }
 
 	          if (node.presentation.skinner !== null) {
-	            gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints);
-	            gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array());
+	            if (node.presentation.skinner._useGPU) {
+	              gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints);
+	              gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array3x4f());
+	            } else {
+	              gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0);
+	              gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), (0, _SCNMatrix4MakeTranslation2.default)(0, 0, 0).float32Array3x4f());
+	            }
 	          } else {
 	            gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0);
 	            gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f());
@@ -33782,7 +33786,7 @@ module.exports =
 	        );
 	      }
 
-	      if (node.morpher !== null) {
+	      if (node.morpher !== null || node.skinner && !node.skinner._useGPU) {
 	        this._updateVAO(node);
 	      }
 
@@ -33794,8 +33798,13 @@ module.exports =
 	      }
 
 	      if (node.presentation.skinner !== null) {
-	        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints);
-	        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array());
+	        if (node.presentation.skinner._useGPU) {
+	          gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints);
+	          gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array3x4f());
+	        } else {
+	          gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0);
+	          gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), (0, _SCNMatrix4MakeTranslation2.default)(0, 0, 0).float32Array3x4f());
+	        }
 	      } else {
 	        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0);
 	        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f());
@@ -33820,8 +33829,13 @@ module.exports =
 	            gl.uniform1f(uniformTime, _time);
 	          }
 	          if (node.presentation.skinner !== null) {
-	            gl.uniform1i(gl.getUniformLocation(p, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints);
-	            gl.uniform4fv(gl.getUniformLocation(p, 'skinningJoints'), node.presentation.skinner.float32Array());
+	            if (node.presentation.skinner._useGPU) {
+	              gl.uniform1i(gl.getUniformLocation(p, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints);
+	              gl.uniform4fv(gl.getUniformLocation(p, 'skinningJoints'), node.presentation.skinner.float32Array3x4f());
+	            } else {
+	              gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0);
+	              gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), (0, _SCNMatrix4MakeTranslation2.default)(0, 0, 0).float32Array3x4f());
+	            }
 	          } else {
 	            gl.uniform1i(gl.getUniformLocation(p, 'numSkinningJoints'), 0);
 	            gl.uniform4fv(gl.getUniformLocation(p, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f());
@@ -33973,9 +33987,14 @@ module.exports =
 
 	      gl.uniform1i(gl.getUniformLocation(program, 'objectID'), objectID);
 
-	      if (node.presentation.skinner !== null) {
-	        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints);
-	        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array());
+	      if (node.presentation.skinner !== null && node.presentation.skinner._useGPU) {
+	        if (node.presentation.skinner._useGPU) {
+	          gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints);
+	          gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array3x4f());
+	        } else {
+	          gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0);
+	          gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), (0, _SCNMatrix4MakeTranslation2.default)(0, 0, 0).float32Array3x4f());
+	        }
 	      } else {
 	        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0);
 	        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f());
@@ -34061,9 +34080,14 @@ module.exports =
 
 	      gl.uniform1i(gl.getUniformLocation(program, 'objectID'), objectID);
 
-	      if (node.presentation.skinner !== null) {
-	        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints);
-	        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array());
+	      if (node.presentation.skinner !== null && node.presentation.skinner._useGPU) {
+	        if (node.presentation.skinner._useGPU) {
+	          gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints);
+	          gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array3x4f());
+	        } else {
+	          gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0);
+	          gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), (0, _SCNMatrix4MakeTranslation2.default)(0, 0, 0).float32Array3x4f());
+	        }
 	      } else {
 	        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0);
 	        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f());
@@ -35203,7 +35227,7 @@ module.exports =
 	        }
 
 	        // boneIndices
-	        var indSrc = node.skinner ? node.skinner._boneIndices : null;
+	        var indSrc = node.skinner && node.skinner._useGPU ? node.skinner._boneIndices : null;
 	        if (indSrc) {
 	          //console.log(`indSrc: ${boneIndicesLoc}, ${indSrc.componentsPerVector}, ${indSrc.dataStride}, ${indSrc.dataOffset}`)
 	          gl.enableVertexAttribArray(boneIndicesLoc);
@@ -35213,7 +35237,7 @@ module.exports =
 	        }
 
 	        // boneWeights
-	        var wgtSrc = node.skinner ? node.skinner._boneWeights : null;
+	        var wgtSrc = node.skinner && node.skinner._useGPU ? node.skinner._boneWeights : null;
 	        if (wgtSrc) {
 	          //console.log(`wgtSrc: ${boneWeightsLoc}, ${wgtSrc.componentsPerVector}, ${wgtSrc.dataStride}, ${wgtSrc.dataOffset}`)
 	          gl.enableVertexAttribArray(boneWeightsLoc);
@@ -35274,7 +35298,7 @@ module.exports =
 	        }
 
 	        // boneIndices
-	        var indSrc = node.skinner ? node.skinner._boneIndices : null;
+	        var indSrc = node.skinner && node.skinner._useGPU ? node.skinner._boneIndices : null;
 	        if (indSrc) {
 	          gl.enableVertexAttribArray(boneIndicesLoc);
 	          gl.vertexAttribPointer(boneIndicesLoc, indSrc.componentsPerVector, gl.FLOAT, false, indSrc.dataStride, indSrc.dataOffset);
@@ -35283,7 +35307,7 @@ module.exports =
 	        }
 
 	        // boneWeights
-	        var wgtSrc = node.skinner ? node.skinner._boneWeights : null;
+	        var wgtSrc = node.skinner && node.skinner._useGPU ? node.skinner._boneWeights : null;
 	        if (wgtSrc) {
 	          gl.enableVertexAttribArray(boneWeightsLoc);
 	          gl.vertexAttribPointer(boneWeightsLoc, wgtSrc.componentsPerVector, gl.FLOAT, false, wgtSrc.dataStride, wgtSrc.dataOffset);
@@ -35514,8 +35538,8 @@ module.exports =
 	        this._defaultCameraPosNode.position = new _SCNVector2.default(0, 0, -_defaultCameraDistance).rotate(rotMat).add(pos);
 	        this._defaultCameraRotNode.rotation = rot;
 	        this._defaultCameraNode.position = new _SCNVector2.default(0, 0, _defaultCameraDistance);
-	        console.log('pov defined: pov.pos: ' + this._pointOfView._worldTranslation.float32Array());
-	        console.log('pov defined: node.pos: ' + this._defaultCameraNode._worldTranslation.float32Array());
+	        //console.log(`pov defined: pov.pos: ${this._pointOfView._worldTranslation.float32Array()}`)
+	        //console.log(`pov defined: node.pos: ${this._defaultCameraNode._worldTranslation.float32Array()}`)
 	      }
 	      this._pointOfView = this._defaultCameraNode;
 	    }
@@ -35643,10 +35667,10 @@ module.exports =
 	    value: function _nodeHitTestByCPU(node, rayPoint, rayVec) {
 	      var result = [];
 	      var geometry = node.presentation.geometry;
-	      var invRay = rayVec.mul(-1);
+	      var invRay = rayVec.mul(-1
 
-	      console.log('rayPoint: ' + rayPoint.float32Array());
-	      console.log('rayVec: ' + rayVec.float32Array()
+	      //console.log(`rayPoint: ${rayPoint.float32Array()}`)
+	      //console.log(`rayVec: ${rayVec.float32Array()}`)
 
 	      //if(node.morpher !== null){
 	      //  this._updateVAO(node)
@@ -35684,7 +35708,7 @@ module.exports =
 
 	      var geometryCount = geometry.geometryElements.length;
 	      for (var _i4 = 0; _i4 < geometryCount; _i4++) {
-	        console.log('geometry element ' + _i4);
+	        //console.log(`geometry element ${i}`)
 	        var element = geometry.geometryElements[_i4];
 	        switch (element.primitiveType) {
 	          case _SCNGeometryPrimitiveType2.default.line:
@@ -35697,9 +35721,9 @@ module.exports =
 
 	        var elementData = element._glData;
 	        var len = element.primitiveCount;
-	        console.log('primitiveCount: ' + len
+	        //console.log(`primitiveCount: ${len}`)
 	        // TODO: check cull settings
-	        );for (var pi = 0; pi < len; pi++) {
+	        for (var pi = 0; pi < len; pi++) {
 	          var _indices = element._indexAt(pi);
 
 	          var v0 = sourceData[_indices[0]];
@@ -35732,7 +35756,7 @@ module.exports =
 	          }
 
 	          // Hit!
-	          console.log('Hit! ' + _i4 + ': ' + pi);
+	          //console.log(`Hit! ${i}: ${pi}`)
 	          var hitPoint = rayPoint.add(rayVec.mul(t));
 	          var invModel = modelTransform.invert();
 
@@ -47915,6 +47939,10 @@ module.exports =
 
 	var _SCNMatrix4MakeTranslation2 = _interopRequireDefault(_SCNMatrix4MakeTranslation);
 
+	var _SCNVector = __webpack_require__(54);
+
+	var _SCNVector2 = _interopRequireDefault(_SCNVector);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
@@ -48060,23 +48088,34 @@ module.exports =
 	     */
 	    _this._boneIndices = boneIndices;
 
-	    // add geometrySources to baseGeometry
-	    //baseGeometry._geometrySources.push(boneWeights)
-	    //baseGeometry._geometrySources.push(boneIndices)
+	    _this._useGPU = true;
+
+	    _this._checkUseGPU();
 	    return _this;
 	  }
 
-	  // Working with an Animation Skeleton
-
-	  /**
-	   * The control nodes of the animation skeleton.
-	   * @type {SCNNode[]}
-	   * @desc An array of SCNNode objects, each of which represents a control point of the animation skeleton. Moving a node deforms the surface of the skinner’s geometry, based on the skeleton data from which the skinner object was created.
-	   * @see https://developer.apple.com/reference/scenekit/scnskinner/1522732-bones
-	   */
-
-
 	  _createClass(SCNSkinner, [{
+	    key: '_checkUseGPU',
+	    value: function _checkUseGPU() {
+	      this._useGPU = true;
+	      if (this._boneWeights && this._boneWeights.componentsPerVector > 4) {
+	        this._useGPU = false;
+	      }
+	      if (this._boneIndices && this._boneIndices.componentsPerVector > 4) {
+	        this._useGPU = false;
+	      }
+	    }
+
+	    // Working with an Animation Skeleton
+
+	    /**
+	     * The control nodes of the animation skeleton.
+	     * @type {SCNNode[]}
+	     * @desc An array of SCNNode objects, each of which represents a control point of the animation skeleton. Moving a node deforms the surface of the skinner’s geometry, based on the skeleton data from which the skinner object was created.
+	     * @see https://developer.apple.com/reference/scenekit/scnskinner/1522732-bones
+	     */
+
+	  }, {
 	    key: 'float32Array',
 
 
@@ -48136,6 +48175,72 @@ module.exports =
 
 	      return new Float32Array(arr);
 	    }
+
+	    /**
+	     * @access private
+	     * @param {SCNNode} node -
+	     */
+
+	  }, {
+	    key: '_update',
+	    value: function _update(node) {
+	      if (this._useGPU) {
+	        return;
+	      }
+	      var p = node.presentation;
+	      if (node.geometry === null || p === null || p.geometry === null) {
+	        // data is not ready
+	        return;
+	      }
+	      // baseGeometryBindTransform
+	      this.baseGeometryBindTransform;
+	      this._boneInverseBindTransforms;
+	      var boneLen = this._bones.length;
+	      var transforms = [];
+	      for (var i = 0; i < boneLen; i++) {
+	        var bone = this._bones[i];
+	        //transforms.push(this.baseGeometryBindTransform.mult(this._boneInverseBindTransforms[i]).mult(bone._presentation._worldTransform))
+	        transforms.push(this.baseGeometryBindTransform.mult(this._boneInverseBindTransforms[i]).mult(bone._presentation._worldTransform));
+	      }
+
+	      var baseGeometry = this.baseGeometry;
+	      var baseVertex = baseGeometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
+	      var baseNormal = baseGeometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.normal)[0];
+	      // TODO: tangent
+	      //const pg = baseGeometry.presentation
+	      var pg = p.geometry;
+	      var vertex = pg.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
+	      var normal = pg.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.normal)[0];
+	      var weights = this._boneWeights;
+	      var indices = this._boneIndices;
+	      var len = weights.vectorCount;
+	      var vlen = weights.componentsPerVector;
+	      if (baseNormal) {
+	        for (var _i = 0; _i < len; _i++) {
+	          var bv = baseVertex._scnVectorAt(_i);
+	          var bn = baseNormal._scnVectorAt(_i);
+	          var w = weights._vectorAt(_i);
+	          var ind = indices._vectorAt(_i);
+	          var pos = new _SCNVector2.default(0, 0, 0);
+	          var nom = new _SCNVector2.default(0, 0, 0);
+	          for (var j = 0; j < vlen; j++) {
+	            if (ind[j] < 0) {
+	              continue;
+	            }
+	            if (w[j] === 0) {
+	              continue;
+	            }
+	            var jointMatrix = transforms[ind[j]];
+	            pos = pos.add(bv.transform(jointMatrix).mul(w[j]));
+	            nom = nom.add(bn.rotate(jointMatrix).mul(w[j]));
+	          }
+	          vertex._setVectorAt(pos, _i);
+	          normal._setVectorAt(nom, _i);
+	        }
+	      } else {
+	        // TODO: implement
+	      }
+	    }
 	  }, {
 	    key: 'bones',
 	    get: function get() {
@@ -48167,6 +48272,10 @@ module.exports =
 	    get: function get() {
 	      return this._boneWeights;
 	    }
+	    //set boneWeights(newValue) {
+	    //  this._boneWeights = newValue
+	    //  this._checkUseGPU()
+	    //}
 
 	    /**
 	     * The geometry source defining the mapping from bone indices in skeleton data to the skinner’s bones array.
@@ -48180,6 +48289,10 @@ module.exports =
 	    get: function get() {
 	      return this._boneIndices;
 	    }
+	    //set boneIndices(newValue) {
+	    //  this._boneIndices = newValue
+	    //  this._checkUseGPU()
+	    //}
 
 	    /**
 	     * @access public
@@ -55628,6 +55741,7 @@ module.exports =
 	      ///////////////////////
 	      // renders the scene //
 	      ///////////////////////
+	      this._updateSkinner();
 	      this._updateMorph();
 	      this._updateParticles();
 
@@ -55789,9 +55903,27 @@ module.exports =
 	      this._scene.rootNode._updateBoundingBox();
 	    }
 	  }, {
+	    key: '_updateSkinner',
+	    value: function _updateSkinner(node) {
+	      var _this4 = this;
+
+	      if (typeof node === 'undefined') {
+	        if (this._scene) {
+	          this._updateSkinner(this._scene.rootNode);
+	        }
+	        return;
+	      }
+	      if (node.skinner !== null && !node.skinner._useGPU) {
+	        node.skinner._update(node);
+	      }
+	      node.childNodes.forEach(function (child) {
+	        _this4._updateSkinner(child);
+	      });
+	    }
+	  }, {
 	    key: '_updateMorph',
 	    value: function _updateMorph(node) {
-	      var _this4 = this;
+	      var _this5 = this;
 
 	      if (typeof node === 'undefined') {
 	        if (this._scene) {
@@ -55803,7 +55935,7 @@ module.exports =
 	        node.morpher._morph(node);
 	      }
 	      node.childNodes.forEach(function (child) {
-	        _this4._updateMorph(child);
+	        _this5._updateMorph(child);
 	      });
 	    }
 	  }, {
@@ -55825,21 +55957,21 @@ module.exports =
 	  }, {
 	    key: '_runActionForNode',
 	    value: function _runActionForNode(node) {
-	      var _this5 = this;
+	      var _this6 = this;
 
 	      this._runActionForObject(node);
 	      node.childNodes.forEach(function (child) {
-	        return _this5._runActionForNode(child);
+	        return _this6._runActionForNode(child);
 	      });
 	    }
 	  }, {
 	    key: '_runActionForObject',
 	    value: function _runActionForObject(obj) {
-	      var _this6 = this;
+	      var _this7 = this;
 
 	      var deleteKeys = [];
 	      obj._actions.forEach(function (action, key) {
-	        action._applyAction(obj, _this6.currentTime);
+	        action._applyAction(obj, _this7.currentTime);
 	        if (action._finished) {
 	          if (action._completionHandler) {
 	            action._completionHandler();
@@ -55862,21 +55994,21 @@ module.exports =
 	  }, {
 	    key: '_runSKActionForNode',
 	    value: function _runSKActionForNode(node) {
-	      var _this7 = this;
+	      var _this8 = this;
 
 	      this._runSKActionForObject(node);
 	      node.children.forEach(function (child) {
-	        return _this7._runSKActionForNode(child);
+	        return _this8._runSKActionForNode(child);
 	      });
 	    }
 	  }, {
 	    key: '_runSKActionForObject',
 	    value: function _runSKActionForObject(obj) {
-	      var _this8 = this;
+	      var _this9 = this;
 
 	      var deleteKeys = [];
 	      obj._actions.forEach(function (action, key) {
-	        action._applyAction(obj, _this8.currentTime);
+	        action._applyAction(obj, _this9.currentTime);
 	        if (action._finished) {
 	          if (action._completionHandler) {
 	            action._completionHandler();
@@ -55899,10 +56031,10 @@ module.exports =
 	  }, {
 	    key: '_runAnimationForNode',
 	    value: function _runAnimationForNode(node) {
-	      var _this9 = this;
+	      var _this10 = this;
 
 	      node.childNodes.forEach(function (child) {
-	        return _this9._runAnimationForNode(child);
+	        return _this10._runAnimationForNode(child);
 	      });
 	      this._runAnimationForObject(node
 	      // TODO: implement animations for all animatable objects:
@@ -55911,10 +56043,10 @@ module.exports =
 	      );if (node.geometry) {
 	        this._runAnimationForObject(node.geometry);
 	        node.geometry.materials.forEach(function (material) {
-	          _this9._runAnimationForObject(material);
+	          _this10._runAnimationForObject(material);
 	          var properties = [material._diffuse, material._ambient, material._specular, material._normal, material._reflective, material._emission, material._transparent, material._multiply, material._ambientOcclusion, material._selfIllumination, material._metalness, material._roughness];
 	          properties.forEach(function (prop) {
-	            _this9._runAnimationForObject(prop);
+	            _this10._runAnimationForObject(prop);
 	          });
 	        });
 	      }
@@ -55948,11 +56080,11 @@ module.exports =
 	  }, {
 	    key: '_runAnimationForObject',
 	    value: function _runAnimationForObject(obj) {
-	      var _this10 = this;
+	      var _this11 = this;
 
 	      var deleteKeys = [];
 	      obj._animations.forEach(function (animation, key) {
-	        animation._applyAnimation(obj, _this10.currentTime);
+	        animation._applyAnimation(obj, _this11.currentTime);
 	        if (animation._isFinished && animation.isRemovedOnCompletion) {
 	          deleteKeys.push(key);
 	        }
@@ -56013,11 +56145,11 @@ module.exports =
 	  }, {
 	    key: '_updateParticlesForNode',
 	    value: function _updateParticlesForNode(node) {
-	      var _this11 = this;
+	      var _this12 = this;
 
 	      this._updateParticlesForObject(node);
 	      node.childNodes.forEach(function (child) {
-	        return _this11._updateParticlesForNode(child);
+	        return _this12._updateParticlesForNode(child);
 	      });
 	    }
 	  }, {

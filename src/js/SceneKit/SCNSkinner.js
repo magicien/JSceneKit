@@ -6,6 +6,7 @@ import SCNNode from './SCNNode'
 import SCNGeometrySource from './SCNGeometrySource'
 import SCNMatrix4 from './SCNMatrix4'
 import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
+import SCNVector3 from './SCNVector3'
 
 
 /**
@@ -141,9 +142,19 @@ export default class SCNSkinner extends NSObject {
      */
     this._boneIndices = boneIndices
 
-    // add geometrySources to baseGeometry
-    //baseGeometry._geometrySources.push(boneWeights)
-    //baseGeometry._geometrySources.push(boneIndices)
+    this._useGPU = true
+
+    this._checkUseGPU()
+  }
+
+  _checkUseGPU() {
+    this._useGPU = true
+    if(this._boneWeights && this._boneWeights.componentsPerVector > 4){
+      this._useGPU = false
+    }
+    if(this._boneIndices && this._boneIndices.componentsPerVector > 4){
+      this._useGPU = false
+    }
   }
 
   // Working with an Animation Skeleton
@@ -177,6 +188,10 @@ export default class SCNSkinner extends NSObject {
   get boneWeights() {
     return this._boneWeights
   }
+  //set boneWeights(newValue) {
+  //  this._boneWeights = newValue
+  //  this._checkUseGPU()
+  //}
 
   /**
    * The geometry source defining the mapping from bone indices in skeleton data to the skinner’s bones array.
@@ -187,6 +202,10 @@ export default class SCNSkinner extends NSObject {
   get boneIndices() {
     return this._boneIndices
   }
+  //set boneIndices(newValue) {
+  //  this._boneIndices = newValue
+  //  this._checkUseGPU()
+  //}
 
   /**
    * @access public
@@ -251,5 +270,68 @@ export default class SCNSkinner extends NSObject {
     */
 
     return new Float32Array(arr)
+  }
+
+  /**
+   * @access private
+   * @param {SCNNode} node -
+   */
+  _update(node) {
+    if(this._useGPU){
+      return
+    }
+    const p = node.presentation
+    if(node.geometry === null || p === null || p.geometry === null){
+      // data is not ready
+      return
+    }
+    // baseGeometryBindTransform
+    this.baseGeometryBindTransform
+    this._boneInverseBindTransforms
+    const boneLen = this._bones.length
+    const transforms = []
+    for(let i=0; i<boneLen; i++){
+      const bone = this._bones[i]
+      //transforms.push(this.baseGeometryBindTransform.mult(this._boneInverseBindTransforms[i]).mult(bone._presentation._worldTransform))
+      transforms.push(this.baseGeometryBindTransform.mult(this._boneInverseBindTransforms[i]).mult(bone._presentation._worldTransform))
+    }
+
+    const baseGeometry = this.baseGeometry
+    const baseVertex = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
+    const baseNormal = baseGeometry.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.normal)[0]
+    // TODO: tangent
+    //const pg = baseGeometry.presentation
+    const pg = p.geometry
+    const vertex = pg.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
+    const normal = pg.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.normal)[0]
+    const weights = this._boneWeights
+    const indices = this._boneIndices
+    const len = weights.vectorCount
+    const vlen = weights.componentsPerVector
+    if(baseNormal){
+      for(let i=0; i<len; i++){
+        const bv = baseVertex._scnVectorAt(i)
+        const bn = baseNormal._scnVectorAt(i)
+        const w = weights._vectorAt(i)
+        const ind = indices._vectorAt(i)
+        let pos = new SCNVector3(0, 0, 0)
+        let nom = new SCNVector3(0, 0, 0)
+        for(let j=0; j<vlen; j++){
+          if(ind[j] < 0){
+            continue
+          }
+          if(w[j] === 0){
+            continue
+          }
+          const jointMatrix = transforms[ind[j]]
+          pos = pos.add(bv.transform(jointMatrix).mul(w[j]))
+          nom = nom.add(bn.rotate(jointMatrix).mul(w[j]))
+        }
+        vertex._setVectorAt(pos, i)
+        normal._setVectorAt(nom, i)
+      }
+    }else{
+      // TODO: implement
+    }
   }
 }
