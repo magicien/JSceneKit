@@ -1612,7 +1612,9 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     if(typeof key === 'undefined' || key === null){
       key = Symbol()
     }
-    const anim = animation.copy()
+    //const anim = animation.copy()
+    const anim = animation
+
     // FIXME: use current frame time
     anim._animationStartTime = Date.now() * 0.001
 

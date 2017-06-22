@@ -23269,9 +23269,11 @@ module.exports =
 	      if (typeof key === 'undefined' || key === null) {
 	        key = Symbol();
 	      }
-	      var anim = animation.copy
+	      //const anim = animation.copy()
+	      var anim = animation;
+
 	      // FIXME: use current frame time
-	      ();anim._animationStartTime = Date.now() * 0.001;
+	      anim._animationStartTime = Date.now() * 0.001;
 
 	      this._animations.set(key, anim);
 	      this._copyTransformToPresentationRecursive();
