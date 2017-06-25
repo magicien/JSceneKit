@@ -493,43 +493,33 @@ export default class SCNMaterialProperty extends NSObject {
   _loadContentsImage(path, dirPath) {
     const image = new Image()
     let __path = path
-
+    if(__path.indexOf('file:///') === 0){
+      __path = __path.slice(8)
+    }
     // TODO: load OpenEXR File
     __path = __path.replace(/\.exr$/, '.png')
 
     this._loadedPromise = new Promise((resolve, reject) => {
-      if(path.indexOf('file:///') === 0){
-        const paths = __path.slice(8).split('/')
-        let pathCount = 1
-        let _path = dirPath + paths.slice(-pathCount).join('/')
-        image.onload = () => {
-          this._contents = image
-          resolve()
-        }
-        image.onerror = () => {
-          pathCount += 1
-          if(pathCount > paths.length){
-            reject()
-            throw new Error(`image ${path} load error.`)
-          }else{
-            // retry
-            _path = dirPath + paths.slice(-pathCount).join('/')
-            image.src = _path
-          }
-        }
-        image.src = _path
-      }else{
-        image.onload = () => {
-          this._contents = image
-          resolve()
-        }
-        image.onerror = () => {
-          // TODO: try different path
-          console.warn(`http image ${path} load error.`)
-          reject()
-        }
-        image.src = dirPath + __path
+      const paths = __path.split('/')
+
+      let pathCount = 1
+      let _path = dirPath + paths.slice(-pathCount).join('/')
+      image.onload = () => {
+        this._contents = image
+        resolve()
       }
+      image.onerror = () => {
+        pathCount += 1
+        if(pathCount > paths.length){
+          reject()
+          throw new Error(`image ${path} load error.`)
+        }else{
+          // retry
+          _path = dirPath + paths.slice(-pathCount).join('/')
+          image.src = _path
+        }
+      }
+      image.src = _path
     })
     return image
   }

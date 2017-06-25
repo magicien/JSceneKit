@@ -354,6 +354,7 @@ const _defaultFragmentShader =
     vec3 view;
     vec3 position;
     vec3 normal;
+    vec2 normalTexcoord;
     vec3 tangent;
     vec3 bitangent;
     vec4 ambient;
@@ -376,6 +377,8 @@ const _defaultFragmentShader =
   struct SCNShaderOutput {
     vec4 color;
   } _output;
+
+  uniform float u_time;
 
   in vec3 v_position;
   in vec3 v_normal;
@@ -3006,16 +3009,19 @@ export default class SCNRenderer extends NSObject {
     if(shadableHelper && shadableHelper._shaderModifiers){
       const modifiers = shadableHelper._shaderModifiers
       if(modifiers.SCNShaderModifierEntryPointGeometry){
+        const text = this._processShaderText(modifiers.SCNShaderModifierEntryPointGeometry)
         vars.set('__USE_SHADER_MODIFIER_GEOMETRY__', 1)
-        vars.set('__SHADER_MODIFIER_GEOMETRY__', modifiers.SCNShaderModifierEntryPointGeometry)
+        vars.set('__SHADER_MODIFIER_GEOMETRY__', text)
       }
       if(modifiers.SCNShaderModifierEntryPointSurface){
+        const text = this._processShaderText(modifiers.SCNShaderModifierEntryPointSurface)
         vars.set('__USE_SHADER_MODIFIER_SURFACE__', 1)
-        vars.set('__SHADER_MODIFIER_SURFACE__', modifiers.SCNShaderModifierEntryPointSurface)
+        vars.set('__SHADER_MODIFIER_SURFACE__', text)
       }
       if(modifiers.SCNShaderModifierEntryPointFragment){
+        const text = this._processShaderText(modifiers.SCNShaderModifierEntryPointFragment)
         vars.set('__USE_SHADER_MODIFIER_FRAGMENT__', 1)
-        vars.set('__SHADER_MODIFIER_FRAGMENT__', modifiers.SCNShaderModifierEntryPointFragment)
+        vars.set('__SHADER_MODIFIER_FRAGMENT__', text)
       }
     }
 
@@ -3096,6 +3102,11 @@ export default class SCNRenderer extends NSObject {
     })
 
     return result
+  }
+
+  _processShaderText(text) {
+    let _text = text.replace(/texture2D/, 'texture')
+    return _text
   }
 
   _initializeVAO(node, program) {
