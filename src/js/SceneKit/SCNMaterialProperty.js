@@ -25,7 +25,6 @@ export default class SCNMaterialProperty extends NSObject {
       image: ['NSMutableDictionary', (obj, dict, key, coder) => {
         let path = ''
         if(typeof dict.path !== 'undefined'){
-          //path = coder._directoryPath + dict.path
           path = dict.path
         }else if(typeof dict.URL !== 'undefined'){
           path = dict.URL
@@ -492,21 +491,22 @@ export default class SCNMaterialProperty extends NSObject {
    * @returns {Image} -
    */
   _loadContentsImage(path, dirPath) {
-    //console.log(`image.path: ${path}`)
     const image = new Image()
+    let __path = path
+
+    // TODO: load OpenEXR File
+    __path = __path.replace(/\.exr$/, '.png')
+
     this._loadedPromise = new Promise((resolve, reject) => {
       if(path.indexOf('file:///') === 0){
-        const paths = path.slice(8).split('/')
+        const paths = __path.slice(8).split('/')
         let pathCount = 1
         let _path = dirPath + paths.slice(-pathCount).join('/')
-        //console.warn(`image loading: ${_path}`)
         image.onload = () => {
-          //console.info(`image ${image.src} onload`)
           this._contents = image
           resolve()
         }
         image.onerror = () => {
-          //console.warn('image.onerror')
           pathCount += 1
           if(pathCount > paths.length){
             reject()
@@ -519,9 +519,7 @@ export default class SCNMaterialProperty extends NSObject {
         }
         image.src = _path
       }else{
-        //console.info(`image loading: ${path}`)
         image.onload = () => {
-          //console.warn(`http image ${image.src} onload`)
           this._contents = image
           resolve()
         }
@@ -530,7 +528,7 @@ export default class SCNMaterialProperty extends NSObject {
           console.warn(`http image ${path} load error.`)
           reject()
         }
-        image.src = dirPath + path
+        image.src = dirPath + __path
       }
     })
     return image

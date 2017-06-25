@@ -30438,7 +30438,6 @@ module.exports =
 	        image: ['NSMutableDictionary', function (obj, dict, key, coder) {
 	          var path = '';
 	          if (typeof dict.path !== 'undefined') {
-	            //path = coder._directoryPath + dict.path
 	            path = dict.path;
 	          } else if (typeof dict.URL !== 'undefined') {
 	            path = dict.URL;
@@ -30942,21 +30941,22 @@ module.exports =
 	    value: function _loadContentsImage(path, dirPath) {
 	      var _this2 = this;
 
-	      //console.log(`image.path: ${path}`)
 	      var image = new Image();
+	      var __path = path;
+
+	      // TODO: load OpenEXR File
+	      __path = __path.replace(/\.exr$/, '.png');
+
 	      this._loadedPromise = new Promise(function (resolve, reject) {
-	        if (path.indexOf('file:///') === 0) {
-	          var paths = path.slice(8).split('/');
+	        if (__path.indexOf('file:///') === 0) {
+	          var paths = __path.slice(8).split('/');
 	          var pathCount = 1;
-	          var _path = dirPath + paths.slice(-pathCount).join('/'
-	          //console.warn(`image loading: ${_path}`)
-	          );image.onload = function () {
-	            //console.info(`image ${image.src} onload`)
+	          var _path = dirPath + paths.slice(-pathCount).join('/');
+	          image.onload = function () {
 	            _this2._contents = image;
 	            resolve();
 	          };
 	          image.onerror = function () {
-	            //console.warn('image.onerror')
 	            pathCount += 1;
 	            if (pathCount > paths.length) {
 	              reject();
@@ -30969,9 +30969,7 @@ module.exports =
 	          };
 	          image.src = _path;
 	        } else {
-	          //console.info(`image loading: ${path}`)
 	          image.onload = function () {
-	            //console.warn(`http image ${image.src} onload`)
 	            _this2._contents = image;
 	            resolve();
 	          };
@@ -30980,7 +30978,7 @@ module.exports =
 	            console.warn('http image ' + path + ' load error.');
 	            reject();
 	          };
-	          image.src = dirPath + path;
+	          image.src = dirPath + __path;
 	        }
 	      });
 	      return image;
