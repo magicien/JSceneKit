@@ -1132,6 +1132,11 @@ export default class SCNParticleSystem extends NSObject {
           vVec = v
           break
         }
+        case 'SCNPlane': {
+          pVec = new SCNVector3((Math.random() - 0.5) * this.width, (Math.random() - 0.5) * this.height, 0.0)
+          vVec = new SCNVector3(0, 0, 1)
+          break
+        }
         default:
           // TODO: implement
           throw new Error(`surface emitter for ${this.emitterShape.className} is not implemented`)

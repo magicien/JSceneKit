@@ -355,6 +355,7 @@ const _defaultFragmentShader =
     vec3 position;
     vec3 normal;
     vec2 normalTexcoord;
+    vec3 geometryNormal;
     vec3 tangent;
     vec3 bitangent;
     vec4 ambient;
@@ -1598,7 +1599,9 @@ export default class SCNRenderer extends NSObject {
     const targetNodes = []
     while(arr.length > 0){
       const node = arr.shift()
-      if(node.presentation !== null && node.presentation.physicsBody !== null){
+      if(node.presentation !== null 
+         && node.presentation.physicsBody !== null
+         && node.presentation.physicsBody.physicsShape !== null){
         targetNodes.push(node)
       }
       arr.push(...node.childNodes)
@@ -1631,6 +1634,12 @@ export default class SCNRenderer extends NSObject {
 
     for(const node of nodes){
       const geometry = node.presentation.geometry
+      const geometryCount = geometry.geometryElements.length
+      if(geometryCount === 0){
+        // nothing to draw...
+        continue
+      }
+
       if(geometry._shadowVAO === null){
         this._initializeShadowVAO(node, program)
       }
@@ -1642,7 +1651,7 @@ export default class SCNRenderer extends NSObject {
       if(node.presentation.skinner !== null){
         if(node.presentation.skinner._useGPU){
           gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
-          gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array3x4f())
+          gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array())
         }else{
           gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0)
           gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), SCNMatrix4MakeTranslation(0, 0, 0).float32Array3x4f())
@@ -1652,10 +1661,6 @@ export default class SCNRenderer extends NSObject {
         gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f())
       }
 
-      const geometryCount = geometry.geometryElements.length
-      if(geometryCount === 0){
-        throw new Error('geometryCount: 0')
-      }
       for(let i=0; i<geometryCount; i++){
         const vao = geometry._shadowVAO[i]
         const element = geometry.geometryElements[i]
@@ -1717,6 +1722,11 @@ export default class SCNRenderer extends NSObject {
     }
     const gl = this.context
     const geometry = node.presentation.geometry
+    const geometryCount = geometry.geometryElements.length
+    if(geometryCount === 0){
+      // nothing to draw...
+      return
+    }
     const scnProgram = this._getProgramForGeometry(geometry)
     const program = scnProgram._glProgram
 
@@ -1741,7 +1751,7 @@ export default class SCNRenderer extends NSObject {
     if(node.presentation.skinner !== null){
       if(node.presentation.skinner._useGPU){
         gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
-        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array3x4f())
+        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array())
       }else{
         gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0)
         gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), SCNMatrix4MakeTranslation(0, 0, 0).float32Array3x4f())
@@ -1751,10 +1761,6 @@ export default class SCNRenderer extends NSObject {
       gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f())
     }
 
-    const geometryCount = geometry.geometryElements.length
-    if(geometryCount === 0){
-      throw new Error('geometryCount: 0')
-    }
     for(let i=0; i<geometryCount; i++){
       const materialCount = geometry.materials.length
       const material = geometry.materials[i % materialCount]
@@ -1772,7 +1778,7 @@ export default class SCNRenderer extends NSObject {
         if(node.presentation.skinner !== null){
           if(node.presentation.skinner._useGPU){
             gl.uniform1i(gl.getUniformLocation(p, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
-            gl.uniform4fv(gl.getUniformLocation(p, 'skinningJoints'), node.presentation.skinner.float32Array3x4f())
+            gl.uniform4fv(gl.getUniformLocation(p, 'skinningJoints'), node.presentation.skinner.float32Array())
           }else{
             gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0)
             gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), SCNMatrix4MakeTranslation(0, 0, 0).float32Array3x4f())
@@ -1905,6 +1911,11 @@ export default class SCNRenderer extends NSObject {
     const geometry = node.presentation.geometry
     const program = this._defaultHitTestProgram._glProgram
 
+    const geometryCount = geometry.geometryElements.length
+    if(geometryCount === 0){
+      // nothing to draw...
+      return
+    }
     if(geometry._vertexArrayObjects === null){
       // geometry is not ready
       return
@@ -1918,7 +1929,7 @@ export default class SCNRenderer extends NSObject {
     if(node.presentation.skinner !== null && node.presentation.skinner._useGPU){
       if(node.presentation.skinner._useGPU){
         gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
-        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array3x4f())
+        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array())
       }else{
         gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0)
         gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), SCNMatrix4MakeTranslation(0, 0, 0).float32Array3x4f())
@@ -1928,10 +1939,6 @@ export default class SCNRenderer extends NSObject {
       gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f())
     }
 
-    const geometryCount = geometry.geometryElements.length
-    if(geometryCount === 0){
-      throw new Error('geometryCount: 0')
-    }
     for(let i=0; i<geometryCount; i++){
       const vao = geometry._hitTestVAO[i]
       const element = geometry.geometryElements[i]
@@ -1993,6 +2000,11 @@ export default class SCNRenderer extends NSObject {
     const p = node.presentation
     const body = p.physicsBody
     const geometry = body.physicsShape._sourceGeometry
+    const geometryCount = geometry.geometryElements.length
+    if(geometryCount === 0){
+      // nothing to draw...
+      return
+    }
     const program = this._defaultHitTestProgram._glProgram
 
     if(geometry._vertexBuffer === null){
@@ -2008,7 +2020,7 @@ export default class SCNRenderer extends NSObject {
     if(node.presentation.skinner !== null && node.presentation.skinner._useGPU){
       if(node.presentation.skinner._useGPU){
         gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
-        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array3x4f())
+        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array())
       }else{
         gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0)
         gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), SCNMatrix4MakeTranslation(0, 0, 0).float32Array3x4f())
@@ -2018,10 +2030,6 @@ export default class SCNRenderer extends NSObject {
       gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f())
     }
 
-    const geometryCount = geometry.geometryElements.length
-    if(geometryCount === 0){
-      throw new Error('geometryCount: 0')
-    }
     for(let i=0; i<geometryCount; i++){
       const vao = geometry._hitTestVAO[i]
       const element = geometry.geometryElements[i]
@@ -2469,9 +2477,10 @@ export default class SCNRenderer extends NSObject {
    * @param {SCNVector3} rayFrom -
    * @param {SCNVector3} rayTo -
    * @param {Map} options -
+   * @param {Object} _options -
    * @returns {SCNHitTestResult[]} -
    */
-  _physicsHitTestByGPU(viewProjectionTransform, from, to, options) {
+  _physicsHitTestByGPU(viewProjectionTransform, from, to, options, _options) {
     const result = []
     const gl = this._context
 
@@ -2492,22 +2501,25 @@ export default class SCNRenderer extends NSObject {
     gl.clearDepth(1.0)
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT)
 
+    // screen position
     const x = (from.x + 1.0) * 0.5 * this._viewRect.size.width
     const y = (from.y + 1.0) * 0.5 * this._viewRect.size.height
+    // left top of the scissor area
+    const areaSize = 3
     let sx = x - 1
     let sy = y - 1
     if(sx < 0){
       sx = 0
-    }else if(sx + 3 > this._viewRect.size.width){
-      sx = this._viewRect.size.width - 3
+    }else if(sx + areaSize > this._viewRect.size.width){
+      sx = this._viewRect.size.width - areaSize
     }
     if(sy < 0){
       sy = 0
-    }else if(sy + 3 > this._viewRect.size.height){
-      sy = this._viewRect.size.width - 3
+    }else if(sy + areaSize > this._viewRect.size.height){
+      sy = this._viewRect.size.width - areaSize
     }
 
-    gl.scissor(sx, sy, 3, 3)
+    gl.scissor(sx, sy, areaSize, areaSize)
     gl.uniformMatrix4fv(gl.getUniformLocation(hitTestProgram, 'viewProjectionTransform'), false, viewProjectionTransform.float32Array())
     let backFaceCulling = options.get(SCNPhysicsWorld.TestOption.backfaceCulling)
     if(typeof backFaceCulling === 'undefined'){
@@ -2530,7 +2542,14 @@ export default class SCNRenderer extends NSObject {
       searchMode = SCNPhysicsWorld.TestSearchMode.closest
     }
 
-    const renderingArray = this._createRenderingPhysicsNodeArray()
+    let renderingArray = null
+    if(_options && _options.targets){
+      renderingArray = _options.targets
+      collisionBitMask = -1
+    }else{
+      renderingArray = this._createRenderingPhysicsNodeArray()
+    }
+
     const len = renderingArray.length
     for(let i=0; i<len; i++){
       const node = renderingArray[i]
@@ -3009,19 +3028,19 @@ export default class SCNRenderer extends NSObject {
     if(shadableHelper && shadableHelper._shaderModifiers){
       const modifiers = shadableHelper._shaderModifiers
       if(modifiers.SCNShaderModifierEntryPointGeometry){
-        const text = this._processShaderText(modifiers.SCNShaderModifierEntryPointGeometry)
+        const _text = this._processShaderText(modifiers.SCNShaderModifierEntryPointGeometry)
         vars.set('__USE_SHADER_MODIFIER_GEOMETRY__', 1)
-        vars.set('__SHADER_MODIFIER_GEOMETRY__', text)
+        vars.set('__SHADER_MODIFIER_GEOMETRY__', _text)
       }
       if(modifiers.SCNShaderModifierEntryPointSurface){
-        const text = this._processShaderText(modifiers.SCNShaderModifierEntryPointSurface)
+        const _text = this._processShaderText(modifiers.SCNShaderModifierEntryPointSurface)
         vars.set('__USE_SHADER_MODIFIER_SURFACE__', 1)
-        vars.set('__SHADER_MODIFIER_SURFACE__', text)
+        vars.set('__SHADER_MODIFIER_SURFACE__', _text)
       }
       if(modifiers.SCNShaderModifierEntryPointFragment){
-        const text = this._processShaderText(modifiers.SCNShaderModifierEntryPointFragment)
+        const _text = this._processShaderText(modifiers.SCNShaderModifierEntryPointFragment)
         vars.set('__USE_SHADER_MODIFIER_FRAGMENT__', 1)
-        vars.set('__SHADER_MODIFIER_FRAGMENT__', text)
+        vars.set('__SHADER_MODIFIER_FRAGMENT__', _text)
       }
     }
 
@@ -3105,7 +3124,13 @@ export default class SCNRenderer extends NSObject {
   }
 
   _processShaderText(text) {
-    let _text = text.replace(/texture2D/, 'texture')
+    let _text = text.replace(/texture2D/g, 'texture')
+
+    // workaround for Badger...
+    _text = _text.replace(/uvs.x \*= 2/, 'uvs.x *= 2.0')
+    _text = _text.replace(/tn \* 2 - 1/, 'tn * 2.0 - vec3(1)')
+    _text = _text.replace(/tn2 \* 2 - 1/, 'tn2 * 2.0 - vec3(1)')
+
     return _text
   }
 
@@ -3598,6 +3623,11 @@ export default class SCNRenderer extends NSObject {
   _nodeHitTestByCPU(node, rayPoint, rayVec) {
     const result = []
     const geometry = node.presentation.geometry
+    const geometryCount = geometry.geometryElements.length
+    if(geometryCount === 0){
+      // nothing to draw...
+      return result
+    }
     const invRay = rayVec.mul(-1)
 
     //console.log(`rayPoint: ${rayPoint.float32Array()}`)
@@ -3637,7 +3667,6 @@ export default class SCNRenderer extends NSObject {
       }
     }
 
-    const geometryCount = geometry.geometryElements.length
     for(let i=0; i<geometryCount; i++){
       //console.log(`geometry element ${i}`)
       const element = geometry.geometryElements[i]

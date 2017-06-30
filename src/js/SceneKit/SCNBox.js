@@ -146,85 +146,21 @@ export default class SCNBox extends SCNGeometry {
     const back = -this.length * 0.5
 
     // front
-    /*
-    this._createFace(sourceData, indexData,
-      new SCNVector3(left, bottom, front),
-      new SCNVector3(left, top, front),
-      new SCNVector3(right, bottom, front),
-      new SCNVector3(right, top, front),
-      this.heightSegmentCount,
-      this.widthSegmentCount)
-
-    // right
-    this._createFace(sourceData, indexData,
-      new SCNVector3(right, bottom, front),
-      new SCNVector3(right, top, front),
-      new SCNVector3(right, bottom, back),
-      new SCNVector3(right, top, back),
-      this.heightSegmentCount,
-      this.lengthSegmentCount)
-
-    // back
-    this._createFace(sourceData, indexData,
-      new SCNVector3(right, bottom, back),
-      new SCNVector3(right, top, back),
-      new SCNVector3(left, bottom, back),
-      new SCNVector3(left, top, back),
-      this.heightSegmentCount,
-      this.widthSegmentCount)
-
-    // left
-    this._createFace(sourceData, indexData,
-      new SCNVector3(left, bottom, back),
-      new SCNVector3(left, top, back),
-      new SCNVector3(left, bottom, front),
-      new SCNVector3(left, top, front),
-      this.heightSegmentCount,
-      this.lengthSegmentCount)
-
-    // top
-    this._createFace(sourceData, indexData,
-      new SCNVector3(left, top, front),
-      new SCNVector3(left, top, back),
-      new SCNVector3(right, top, front),
-      new SCNVector3(right, top, back),
-      this.lengthSegmentCount,
-      this.widthSegmentCount)
-
-    // bottom
-    this._createFace(sourceData, indexData,
-      new SCNVector3(left, bottom, back),
-      new SCNVector3(left, bottom, front),
-      new SCNVector3(right, bottom, back),
-      new SCNVector3(right, bottom, front),
-      this.lengthSegmentCount,
-      this.widthSegmentCount)
-    */
-
-    // front
     sourceData.push(left, bottom, front) // position
     sourceData.push(0, 0, 1) // normal
     sourceData.push(0, 1) // texcoord
-    //sourceData.push(0, -1, -1, -1) // boneIndices
-    //sourceData.push(1, 0, 0, 0) // boneWeights
 
     sourceData.push(left, top, front)
     sourceData.push(0, 0, 1)
     sourceData.push(0, 0)
-    //sourceData.push(0, -1, -1, -1)
-    //sourceData.push(1, 0, 0, 0)
 
     sourceData.push(right, bottom, front)
     sourceData.push(0, 0, 1)
     sourceData.push(1, 1)
-    //sourceData.push(0, -1, -1, -1)
-    //sourceData.push(1, 0, 0, 0)
 
     sourceData.push(right, top, front)
     sourceData.push(0, 0, 1)
     sourceData.push(1, 0)
-    //sourceData.push(0, -1, -1, -1)
-    //sourceData.push(1, 0, 0, 0)
 
     indexData.push(0, 3, 1)
     indexData.push(0, 2, 3)
@@ -233,26 +169,18 @@ export default class SCNBox extends SCNGeometry {
     sourceData.push(right, bottom, front)
     sourceData.push(1, 0, 0)
     sourceData.push(0, 1)
-    //sourceData.push(0, -1, -1, -1)
-    //sourceData.push(1, 0, 0, 0)
 
     sourceData.push(right, top, front)
     sourceData.push(1, 0, 0)
     sourceData.push(0, 0)
-    //sourceData.push(0, -1, -1, -1)
-    //sourceData.push(1, 0, 0, 0)
 
     sourceData.push(right, bottom, back)
     sourceData.push(1, 0, 0)
     sourceData.push(1, 1)
-    //sourceData.push(0, -1, -1, -1)
-    //sourceData.push(1, 0, 0, 0)
 
     sourceData.push(right, top, back)
     sourceData.push(1, 0, 0)
     sourceData.push(1, 0)
-    //sourceData.push(0, -1, -1, -1)
-    //sourceData.push(1, 0, 0, 0)
 
     indexData.push(4, 7, 5)
     indexData.push(4, 6, 7)
@@ -261,26 +189,18 @@ export default class SCNBox extends SCNGeometry {
     sourceData.push(right, bottom, back)
     sourceData.push(0, 0, -1)
     sourceData.push(0, 1)
-    //sourceData.push(0, -1, -1, -1)
-    //sourceData.push(1, 0, 0, 0)
 
     sourceData.push(right, top, back)
     sourceData.push(0, 0, -1)
     sourceData.push(0, 0)
-    //sourceData.push(0, -1, -1, -1)
-    //sourceData.push(1, 0, 0, 0)
 
     sourceData.push(left, bottom, back)
     sourceData.push(0, 0, -1)
     sourceData.push(1, 1)
-    //sourceData.push(0, -1, -1, -1)
-    //sourceData.push(1, 0, 0, 0)
 
     sourceData.push(left, top, back)
     sourceData.push(0, 0, -1)
     sourceData.push(1, 0)
-    //sourceData.push(0, -1, -1, -1)
-    //sourceData.push(1, 0, 0, 0)
 
     indexData.push(8, 11, 9)
     indexData.push(8, 10, 11)
@@ -289,26 +209,18 @@ export default class SCNBox extends SCNGeometry {
     sourceData.push(left, bottom, back)
     sourceData.push(-1, 0, 0)
     sourceData.push(0, 1)
-    //sourceData.push(0, -1, -1, -1)
-    //sourceData.push(1, 0, 0, 0)
 
     sourceData.push(left, top, back)
     sourceData.push(-1, 0, 0)
     sourceData.push(0, 0)
-    //sourceData.push(0, -1, -1, -1)
-    //sourceData.push(1, 0, 0, 0)
 
     sourceData.push(left, bottom, front)
     sourceData.push(-1, 0, 0)
     sourceData.push(1, 1)
-    //sourceData.push(0, -1, -1, -1)
-    //sourceData.push(1, 0, 0, 0)
 
     sourceData.push(left, top, front)
     sourceData.push(-1, 0, 0)
     sourceData.push(1, 0)
-    //sourceData.push(0, -1, -1, -1)
-    //sourceData.push(1, 0, 0, 0)
 
     indexData.push(12, 15, 13)
     indexData.push(12, 14, 15)
@@ -317,26 +229,18 @@ export default class SCNBox extends SCNGeometry {
     sourceData.push(left, top, front)
     sourceData.push(0, 1, 0)
     sourceData.push(0, 1)
-    //sourceData.push(0, -1, -1, -1)
-    //sourceData.push(1, 0, 0, 0)
 
     sourceData.push(left, top, back)
     sourceData.push(0, 1, 0)
     sourceData.push(0, 0)
-    //sourceData.push(0, -1, -1, -1)
-    //sourceData.push(1, 0, 0, 0)
 
     sourceData.push(right, top, front)
     sourceData.push(0, 1, 0)
     sourceData.push(1, 1)
-    //sourceData.push(0, -1, -1, -1)
-    //sourceData.push(1, 0, 0, 0)
 
     sourceData.push(right, top, back)
     sourceData.push(0, 1, 0)
     sourceData.push(1, 0)
-    //sourceData.push(0, -1, -1, -1)
-    //sourceData.push(1, 0, 0, 0)
 
     indexData.push(16, 19, 17)
     indexData.push(16, 18, 19)
@@ -345,26 +249,18 @@ export default class SCNBox extends SCNGeometry {
     sourceData.push(left, bottom, back)
     sourceData.push(0, -1, 0)
     sourceData.push(0, 1)
-    //sourceData.push(0, -1, -1, -1)
-    //sourceData.push(1, 0, 0, 0)
 
     sourceData.push(left, bottom, front)
     sourceData.push(0, -1, 0)
     sourceData.push(0, 0)
-    //sourceData.push(0, -1, -1, -1)
-    //sourceData.push(1, 0, 0, 0)
 
     sourceData.push(right, bottom, back)
     sourceData.push(0, -1, 0)
     sourceData.push(1, 1)
-    //sourceData.push(0, -1, -1, -1)
-    //sourceData.push(1, 0, 0, 0)
 
     sourceData.push(right, bottom, front)
     sourceData.push(0, -1, 0)
     sourceData.push(1, 0)
-    //sourceData.push(0, -1, -1, -1)
-    //sourceData.push(1, 0, 0, 0)
 
     indexData.push(20, 23, 21)
     indexData.push(20, 22, 23)

@@ -2,16 +2,17 @@
 
 import NSObject from '../ObjectiveC/NSObject'
 import SCNBox from './SCNBox'
-import SCNVector3 from './SCNVector3'
-import SCNPhysicsBehavior from './SCNPhysicsBehavior'
-import SCNPhysicsContactDelegate from './SCNPhysicsContactDelegate'
-import SCNPhysicsContact from './SCNPhysicsContact'
+import SCNCapsule from './SCNCapsule'
+import SCNHitTestResult from './SCNHitTestResult'
+import SCNMatrix4 from './SCNMatrix4'
 import SCNPhysicsBody from './SCNPhysicsBody'
 import SCNPhysicsBodyType from './SCNPhysicsBodyType'
-import SCNHitTestResult from './SCNHitTestResult'
+import SCNPhysicsBehavior from './SCNPhysicsBehavior'
+import SCNPhysicsContact from './SCNPhysicsContact'
+import SCNPhysicsContactDelegate from './SCNPhysicsContactDelegate'
 import SCNPhysicsShape from './SCNPhysicsShape'
 import SCNSphere from './SCNSphere'
-import SCNMatrix4 from './SCNMatrix4'
+import SCNVector3 from './SCNVector3'
 //import _Ammo from '../third_party/ammo'
 /*global Ammo*/
 
@@ -506,6 +507,8 @@ if (results.firstObject.node == player) {
     let opt = options
     if(Array.isArray(options)){
       opt = new Map(options)
+    }else if(options === null){
+      opt = new Map()
     }
     const results = []
 
@@ -589,7 +592,10 @@ if (results.firstObject.node == player) {
     proj.m33 = -(zFar + zNear) / len
     proj.m34 = -1
     proj.m43 = -2 * zFar * zNear / len
-    //proj.m44 = 0
+    // TODO: use an orthographic projection
+    //proj.m33 = -2 / len
+    //proj.m43 = -(zFar + zNear) / len
+    //proj.m44 = 1
 
     const view = new SCNMatrix4()
     const up = new SCNVector3(0, 1, 0)
@@ -659,6 +665,7 @@ if (contacts.count == 0) {
   }
 
   // Structures
+
   /**
    * @type {Object} TestOption
    * @property {string} backfaceCulling The key for choosing whether to ignore back-facing polygons in physics shapes when searching for contacts.
@@ -687,14 +694,6 @@ if (contacts.count == 0) {
     const objects = this._renderer._createRenderingPhysicsNodeArray()
     const contacts = []
 
-    //for(let i=0; i<objects.length-1; i++){
-    //  const bodyA = objects[i].presentation.physicsBody
-    //  for(let j=i+1; j<objects.length; j++){
-    //    const bodyB = objects[j].presentation.physicsBody
-
-    //    contacts.push(...this.contactTestBetween(bodyA, bodyB))
-    //  }
-    //}
     for(const obj of objects){
       const body = obj.physicsBody
       if(body.type === SCNPhysicsBodyType.kinematic){
@@ -702,13 +701,26 @@ if (contacts.count == 0) {
       }
     }
 
+    const staticType = SCNPhysicsBodyType.static
     for(let i=0; i<objects.length; i++){
       const bodyA = objects[i].presentation.physicsBody
+      //if(bodyA.type === staticType){
+      //  continue
+      //}
+      if(bodyA.physicsShape._sourceGeometry instanceof SCNCapsule){
+        contacts.push(...this._capsuleTestWithObjects(bodyA, objects))
+      }
       for(let j=0; j<objects.length; j++){
         if(i === j){
           continue
         }
         const bodyB = objects[j].presentation.physicsBody
+        //if(bodyB.physicsShape._sourceGeometry instanceof SCNCapsule){
+        //  continue
+        //}
+        //if(i > j && bodyB.type !== staticType){
+        //  continue
+        //}
         contacts.push(...this.contactTestBetween(bodyA, bodyB))
       }
     }
@@ -720,5 +732,57 @@ if (contacts.count == 0) {
       // this.contactDelegate.physicsWorldDidUpdate
       // this.contactDelegate.physicsWorldDidEnd
     }
+  }
+
+  _capsuleTestWithObjects(body, objects) {
+    const result = []
+
+    const objs = objects.filter((obj) => {
+      const bodyB = obj.presentation.physicsBody
+      if(bodyB === body){
+        return false
+      }
+      if(bodyB.physicsShape._type !== SCNPhysicsShape.ShapeType.concavePolyhedron){
+        return false
+      }
+      if((body.categoryBitMask & bodyB.contactTestBitMask) !== 0){
+        return true
+      }
+      if((bodyB.categoryBitMask & body.contactTestBitMask) !== 0){
+        return true
+      }
+      return false
+    })
+    if(objs.length === 0){
+      return result
+    }
+
+    const bodyTransform = body._node._worldTransform
+    const capsule = body.physicsShape._sourceGeometry
+    const origin = (new SCNVector3(0, capsule.height * 0.5, 0)).transform(bodyTransform)
+    const dest = (new SCNVector3(0, -capsule.height * 0.5, 0)).transform(bodyTransform)
+
+    const viewProjectionTransform = this._createViewProjectionTransform(origin, dest)
+    const from = origin.transform(viewProjectionTransform)
+    const to = dest.transform(viewProjectionTransform)
+    
+    const opt = new Map()
+    const opt2 = {
+      targets: objs,
+      rayRadius: capsule.capRadius
+    }
+
+    // TODO: calculate contacts
+    const hitResult = this._renderer._physicsHitTestByGPU(viewProjectionTransform, from, to, opt, opt2)
+    for(const hit of hitResult){
+      const contact = new SCNPhysicsContact()
+      contact._nodeA = body._node
+      contact._nodeB = hit._node
+      contact._contactPoint = hit._worldCoordinates
+      contact._contactNormal = hit._worldNormal
+      contact._penetrationDistance = 1.0
+      result.push(contact)
+    }
+    return result
   }
 }

@@ -407,7 +407,7 @@ module.exports =
 
 	var _SCNCamera2 = _interopRequireDefault(_SCNCamera);
 
-	var _SCNCapsule = __webpack_require__(116);
+	var _SCNCapsule = __webpack_require__(110);
 
 	var _SCNCapsule2 = _interopRequireDefault(_SCNCapsule);
 
@@ -467,7 +467,7 @@ module.exports =
 
 	var _SCNHitTestOption2 = _interopRequireDefault(_SCNHitTestOption);
 
-	var _SCNHitTestResult = __webpack_require__(118);
+	var _SCNHitTestResult = __webpack_require__(111);
 
 	var _SCNHitTestResult2 = _interopRequireDefault(_SCNHitTestResult);
 
@@ -639,15 +639,15 @@ module.exports =
 
 	var _SCNPhysicsBallSocketJoint2 = _interopRequireDefault(_SCNPhysicsBallSocketJoint);
 
-	var _SCNPhysicsBehavior = __webpack_require__(110);
+	var _SCNPhysicsBehavior = __webpack_require__(116);
 
 	var _SCNPhysicsBehavior2 = _interopRequireDefault(_SCNPhysicsBehavior);
 
-	var _SCNPhysicsBody = __webpack_require__(113);
+	var _SCNPhysicsBody = __webpack_require__(112);
 
 	var _SCNPhysicsBody2 = _interopRequireDefault(_SCNPhysicsBody);
 
-	var _SCNPhysicsBodyType = __webpack_require__(114);
+	var _SCNPhysicsBodyType = __webpack_require__(113);
 
 	var _SCNPhysicsBodyType2 = _interopRequireDefault(_SCNPhysicsBodyType);
 
@@ -655,11 +655,11 @@ module.exports =
 
 	var _SCNPhysicsCollisionCategory2 = _interopRequireDefault(_SCNPhysicsCollisionCategory);
 
-	var _SCNPhysicsContact = __webpack_require__(112);
+	var _SCNPhysicsContact = __webpack_require__(117);
 
 	var _SCNPhysicsContact2 = _interopRequireDefault(_SCNPhysicsContact);
 
-	var _SCNPhysicsContactDelegate = __webpack_require__(111);
+	var _SCNPhysicsContactDelegate = __webpack_require__(118);
 
 	var _SCNPhysicsContactDelegate2 = _interopRequireDefault(_SCNPhysicsContactDelegate);
 
@@ -675,7 +675,7 @@ module.exports =
 
 	var _SCNPhysicsHingeJoint2 = _interopRequireDefault(_SCNPhysicsHingeJoint);
 
-	var _SCNPhysicsShape = __webpack_require__(115);
+	var _SCNPhysicsShape = __webpack_require__(114);
 
 	var _SCNPhysicsShape2 = _interopRequireDefault(_SCNPhysicsShape);
 
@@ -787,7 +787,7 @@ module.exports =
 
 	var _SCNSkinner2 = _interopRequireDefault(_SCNSkinner);
 
-	var _SCNSphere = __webpack_require__(117);
+	var _SCNSphere = __webpack_require__(115);
 
 	var _SCNSphere2 = _interopRequireDefault(_SCNSphere);
 
@@ -23813,7 +23813,7 @@ module.exports =
 
 	var _SCNOrderedDictionary2 = _interopRequireDefault(_SCNOrderedDictionary);
 
-	var _SCNPhysicsBody = __webpack_require__(113);
+	var _SCNPhysicsBody = __webpack_require__(112);
 
 	var _SCNPhysicsBody2 = _interopRequireDefault(_SCNPhysicsBody);
 
@@ -23833,7 +23833,7 @@ module.exports =
 
 	var _SCNAudioPlayer2 = _interopRequireDefault(_SCNAudioPlayer);
 
-	var _SCNHitTestResult = __webpack_require__(118);
+	var _SCNHitTestResult = __webpack_require__(111);
 
 	var _SCNHitTestResult2 = _interopRequireDefault(_SCNHitTestResult);
 
@@ -31912,7 +31912,8 @@ module.exports =
 	        shouldBakeDirectLighting: ['boolean', null],
 	        baked: ['boolean', null],
 	        goboProjectShadows: ['boolean', null],
-	        shadowSampleCount2: ['integer', null]
+	        shadowSampleCount2: ['integer', null],
+	        sphericalHarmonics: ['NSMutableData', null]
 	      };
 	    }
 
@@ -32662,7 +32663,7 @@ module.exports =
 
 	var _SCNHitTestOption2 = _interopRequireDefault(_SCNHitTestOption);
 
-	var _SCNHitTestResult = __webpack_require__(118);
+	var _SCNHitTestResult = __webpack_require__(111);
 
 	var _SCNHitTestResult2 = _interopRequireDefault(_SCNHitTestResult);
 
@@ -32716,7 +32717,7 @@ module.exports =
 	 * @access private
 	 * @type {string}
 	 */
-	var _defaultFragmentShader = '#version 300 es\n  precision mediump float;\n  precision highp sampler2DShadow;\n\n  uniform bool[8] textureFlags;\n  #define TEXTURE_EMISSION_INDEX 0\n  #define TEXTURE_AMBIENT_INDEX 1\n  #define TEXTURE_DIFFUSE_INDEX 2\n  #define TEXTURE_SPECULAR_INDEX 3\n  #define TEXTURE_REFLECTIVE_INDEX 4\n  #define TEXTURE_TRANSPARENT_INDEX 5\n  #define TEXTURE_MULTIPLY_INDEX 6\n  #define TEXTURE_NORMAL_INDEX 7\n\n  uniform bool selfIllumination;\n\n  uniform sampler2D u_emissionTexture;\n  uniform sampler2D u_ambientTexture;\n  uniform sampler2D u_diffuseTexture;\n  uniform sampler2D u_specularTexture;\n  uniform samplerCube u_reflectiveTexture;\n  uniform sampler2D u_transparentTexture;\n  uniform sampler2D u_multiplyTexture;\n  uniform sampler2D u_normalTexture;\n\n  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__\n  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__\n  #define NUM_DIRECTIONAL_SHADOW_LIGHTS __NUM_DIRECTIONAL_SHADOW_LIGHTS__\n  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__\n  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__\n  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__\n  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__\n  #define USE_SHADER_MODIFIER_SURFACE __USE_SHADER_MODIFIER_SURFACE__\n  #define USE_SHADER_MODIFIER_FRAGMENT __USE_SHADER_MODIFIER_FRAGMENT__\n\n  layout (std140) uniform materialUniform {\n    vec4 ambient;\n    vec4 diffuse;\n    vec4 specular;\n    vec4 emission;\n    float shininess;\n    float fresnelExponent;\n  } material;\n\n  struct AmbientLight {\n    vec4 color;\n  };\n\n  struct DirectionalLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct DirectionalShadowLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n    vec4 shadowColor;\n    mat4 viewProjectionTransform;\n    mat4 shadowProjectionTransform;\n  };\n\n  struct OmniLight {\n    vec4 color;\n    vec4 position; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct ProbeLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct SpotLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  layout (std140) uniform lightUniform {\n    __LIGHT_DEFINITION__\n  } light;\n  __FS_LIGHT_VARS__\n\n  layout (std140) uniform fogUniform {\n    vec4 color;\n    float startDistance;\n    float endDistance;\n    float densityExponent;\n  } fog;\n\n  struct SCNShaderSurface {\n    vec3 view;\n    vec3 position;\n    vec3 normal;\n    vec2 normalTexcoord;\n    vec3 tangent;\n    vec3 bitangent;\n    vec4 ambient;\n    vec2 ambientTexcoord;\n    vec4 diffuse;\n    vec2 diffuseTexcoord;\n    vec4 specular;\n    vec2 specularTexcoord;\n    vec4 emission;\n    vec2 emissionTexcoord;\n    vec4 multiply;\n    vec2 multiplyTexcoord;\n    vec4 transparent;\n    vec2 transparentTexcoord;\n    vec4 reflective;\n    float shininess;\n    float fresnel;\n  } _surface;\n\n  struct SCNShaderOutput {\n    vec4 color;\n  } _output;\n\n  uniform float u_time;\n\n  in vec3 v_position;\n  in vec3 v_normal;\n  in vec2 v_texcoord0;\n  in vec2 v_texcoord1;\n  in vec4 v_color;\n  in vec3 v_eye;\n  in vec3 v_tangent;\n  in vec3 v_bitangent;\n  in float v_fogFactor;\n\n  out vec4 outColor;\n\n  #if USE_SHADER_MODIFIER_SURFACE\n  void shaderModifierSurface() {\n    __SHADER_MODIFIER_SURFACE__\n  }\n  #endif\n\n  #if USE_SHADER_MODIFIER_FRAGMENT\n  void shaderModifierFragment() {\n    __SHADER_MODIFIER_FRAGMENT__\n  }\n  #endif\n\n  float convDepth(vec4 color) {\n    const float rMask = 1.0;\n    const float gMask = 1.0 / 255.0;\n    const float bMask = 1.0 / (255.0 * 255.0);\n    const float aMask = 1.0 / (255.0 * 255.0 * 255.0);\n    float depth = dot(color, vec4(rMask, gMask, bMask, aMask));\n    return depth * 2.0 - 1.0;\n  }\n\n  vec2 poissonDisk[4] = vec2[](\n    vec2( -0.94201624, -0.39906216 ),\n    vec2( 0.94558609, -0.76890725 ),\n    vec2( -0.094184101, -0.92938870 ),\n    vec2( 0.34495938, 0.29387760 )\n  );\n\n  void main() {\n    _output.color = v_color;\n\n    //vec3 viewVec = normalize(v_eye);\n    //vec3 nom = normalize(v_normal);\n    _surface.view = normalize(v_eye);\n    _surface.position = v_position;\n    _surface.normal = normalize(v_normal);\n    _surface.tangent = normalize(v_tangent);\n    _surface.bitangent = normalize(v_bitangent);\n\n    // normal texture\n    if(textureFlags[TEXTURE_NORMAL_INDEX]){\n      mat3 tsInv = mat3(_surface.tangent, _surface.bitangent, _surface.normal);\n      vec3 color = normalize(texture(u_normalTexture, v_texcoord0).rgb * 2.0 - 1.0); // FIXME: check mappingChannel to decide which texture you use.\n      _surface.normal = normalize(tsInv * color);\n    }\n\n    #if USE_SHADER_MODIFIER_SURFACE\n      shaderModifierSurface();\n    #endif\n\n    // emission texture\n    if(textureFlags[TEXTURE_EMISSION_INDEX]){\n      if(selfIllumination){\n        vec4 color = texture(u_emissionTexture, v_texcoord1); // FIXME: check mappingChannel to decide which texture you use.\n        _output.color += color;\n      }else{\n        vec4 color = texture(u_emissionTexture, v_texcoord0);\n        _output.color = color * _output.color;\n      }\n    }\n\n    int numLights = 0;\n\n    vec4 specularColor;\n    if(textureFlags[TEXTURE_SPECULAR_INDEX]){\n      vec4 color = texture(u_specularTexture, v_texcoord0);\n      specularColor = color;\n    }else{\n      specularColor = material.specular;\n    }\n      \n    _output.color.a = material.diffuse.a;\n    __FS_LIGHTING__\n    \n    // diffuse texture\n    if(textureFlags[TEXTURE_DIFFUSE_INDEX]){\n      vec4 color = texture(u_diffuseTexture, v_texcoord0);\n      _output.color = color * _output.color;\n    }\n\n    // fresnel reflection\n    if(textureFlags[TEXTURE_REFLECTIVE_INDEX]){\n      vec3 r = reflect(_surface.view, _surface.normal);\n      //float f0 = 0.0; // TODO: calculate f0\n      //float fresnel = f0 + (1.0 - f0) * pow(1.0 - clamp(dot(viewVec, nom), 0.0, 1.0), material.fresnelExponent);\n      float fresnel = 0.4 * pow(1.0 - clamp(dot(_surface.view, _surface.normal), 0.0, 1.0), material.fresnelExponent);\n      _output.color.rgb += texture(u_reflectiveTexture, r).rgb * fresnel;\n    }\n\n    float fogFactor = pow(v_fogFactor, fog.densityExponent);\n    _output.color = mix(_output.color, fog.color, fogFactor);\n\n    #if USE_SHADER_MODIFIER_FRAGMENT\n      shaderModifierFragment();\n    #endif\n\n    // DEBUG\n    //_output.color.a = material.diffuse.a;\n\n    outColor = _output.color;\n  }\n';
+	var _defaultFragmentShader = '#version 300 es\n  precision mediump float;\n  precision highp sampler2DShadow;\n\n  uniform bool[8] textureFlags;\n  #define TEXTURE_EMISSION_INDEX 0\n  #define TEXTURE_AMBIENT_INDEX 1\n  #define TEXTURE_DIFFUSE_INDEX 2\n  #define TEXTURE_SPECULAR_INDEX 3\n  #define TEXTURE_REFLECTIVE_INDEX 4\n  #define TEXTURE_TRANSPARENT_INDEX 5\n  #define TEXTURE_MULTIPLY_INDEX 6\n  #define TEXTURE_NORMAL_INDEX 7\n\n  uniform bool selfIllumination;\n\n  uniform sampler2D u_emissionTexture;\n  uniform sampler2D u_ambientTexture;\n  uniform sampler2D u_diffuseTexture;\n  uniform sampler2D u_specularTexture;\n  uniform samplerCube u_reflectiveTexture;\n  uniform sampler2D u_transparentTexture;\n  uniform sampler2D u_multiplyTexture;\n  uniform sampler2D u_normalTexture;\n\n  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__\n  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__\n  #define NUM_DIRECTIONAL_SHADOW_LIGHTS __NUM_DIRECTIONAL_SHADOW_LIGHTS__\n  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__\n  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__\n  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__\n  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__\n  #define USE_SHADER_MODIFIER_SURFACE __USE_SHADER_MODIFIER_SURFACE__\n  #define USE_SHADER_MODIFIER_FRAGMENT __USE_SHADER_MODIFIER_FRAGMENT__\n\n  layout (std140) uniform materialUniform {\n    vec4 ambient;\n    vec4 diffuse;\n    vec4 specular;\n    vec4 emission;\n    float shininess;\n    float fresnelExponent;\n  } material;\n\n  struct AmbientLight {\n    vec4 color;\n  };\n\n  struct DirectionalLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct DirectionalShadowLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n    vec4 shadowColor;\n    mat4 viewProjectionTransform;\n    mat4 shadowProjectionTransform;\n  };\n\n  struct OmniLight {\n    vec4 color;\n    vec4 position; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct ProbeLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct SpotLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  layout (std140) uniform lightUniform {\n    __LIGHT_DEFINITION__\n  } light;\n  __FS_LIGHT_VARS__\n\n  layout (std140) uniform fogUniform {\n    vec4 color;\n    float startDistance;\n    float endDistance;\n    float densityExponent;\n  } fog;\n\n  struct SCNShaderSurface {\n    vec3 view;\n    vec3 position;\n    vec3 normal;\n    vec2 normalTexcoord;\n    vec3 geometryNormal;\n    vec3 tangent;\n    vec3 bitangent;\n    vec4 ambient;\n    vec2 ambientTexcoord;\n    vec4 diffuse;\n    vec2 diffuseTexcoord;\n    vec4 specular;\n    vec2 specularTexcoord;\n    vec4 emission;\n    vec2 emissionTexcoord;\n    vec4 multiply;\n    vec2 multiplyTexcoord;\n    vec4 transparent;\n    vec2 transparentTexcoord;\n    vec4 reflective;\n    float shininess;\n    float fresnel;\n  } _surface;\n\n  struct SCNShaderOutput {\n    vec4 color;\n  } _output;\n\n  uniform float u_time;\n\n  in vec3 v_position;\n  in vec3 v_normal;\n  in vec2 v_texcoord0;\n  in vec2 v_texcoord1;\n  in vec4 v_color;\n  in vec3 v_eye;\n  in vec3 v_tangent;\n  in vec3 v_bitangent;\n  in float v_fogFactor;\n\n  out vec4 outColor;\n\n  #if USE_SHADER_MODIFIER_SURFACE\n  void shaderModifierSurface() {\n    __SHADER_MODIFIER_SURFACE__\n  }\n  #endif\n\n  #if USE_SHADER_MODIFIER_FRAGMENT\n  void shaderModifierFragment() {\n    __SHADER_MODIFIER_FRAGMENT__\n  }\n  #endif\n\n  float convDepth(vec4 color) {\n    const float rMask = 1.0;\n    const float gMask = 1.0 / 255.0;\n    const float bMask = 1.0 / (255.0 * 255.0);\n    const float aMask = 1.0 / (255.0 * 255.0 * 255.0);\n    float depth = dot(color, vec4(rMask, gMask, bMask, aMask));\n    return depth * 2.0 - 1.0;\n  }\n\n  vec2 poissonDisk[4] = vec2[](\n    vec2( -0.94201624, -0.39906216 ),\n    vec2( 0.94558609, -0.76890725 ),\n    vec2( -0.094184101, -0.92938870 ),\n    vec2( 0.34495938, 0.29387760 )\n  );\n\n  void main() {\n    _output.color = v_color;\n\n    //vec3 viewVec = normalize(v_eye);\n    //vec3 nom = normalize(v_normal);\n    _surface.view = normalize(v_eye);\n    _surface.position = v_position;\n    _surface.normal = normalize(v_normal);\n    _surface.tangent = normalize(v_tangent);\n    _surface.bitangent = normalize(v_bitangent);\n\n    // normal texture\n    if(textureFlags[TEXTURE_NORMAL_INDEX]){\n      mat3 tsInv = mat3(_surface.tangent, _surface.bitangent, _surface.normal);\n      vec3 color = normalize(texture(u_normalTexture, v_texcoord0).rgb * 2.0 - 1.0); // FIXME: check mappingChannel to decide which texture you use.\n      _surface.normal = normalize(tsInv * color);\n    }\n\n    #if USE_SHADER_MODIFIER_SURFACE\n      shaderModifierSurface();\n    #endif\n\n    // emission texture\n    if(textureFlags[TEXTURE_EMISSION_INDEX]){\n      if(selfIllumination){\n        vec4 color = texture(u_emissionTexture, v_texcoord1); // FIXME: check mappingChannel to decide which texture you use.\n        _output.color += color;\n      }else{\n        vec4 color = texture(u_emissionTexture, v_texcoord0);\n        _output.color = color * _output.color;\n      }\n    }\n\n    int numLights = 0;\n\n    vec4 specularColor;\n    if(textureFlags[TEXTURE_SPECULAR_INDEX]){\n      vec4 color = texture(u_specularTexture, v_texcoord0);\n      specularColor = color;\n    }else{\n      specularColor = material.specular;\n    }\n      \n    _output.color.a = material.diffuse.a;\n    __FS_LIGHTING__\n    \n    // diffuse texture\n    if(textureFlags[TEXTURE_DIFFUSE_INDEX]){\n      vec4 color = texture(u_diffuseTexture, v_texcoord0);\n      _output.color = color * _output.color;\n    }\n\n    // fresnel reflection\n    if(textureFlags[TEXTURE_REFLECTIVE_INDEX]){\n      vec3 r = reflect(_surface.view, _surface.normal);\n      //float f0 = 0.0; // TODO: calculate f0\n      //float fresnel = f0 + (1.0 - f0) * pow(1.0 - clamp(dot(viewVec, nom), 0.0, 1.0), material.fresnelExponent);\n      float fresnel = 0.4 * pow(1.0 - clamp(dot(_surface.view, _surface.normal), 0.0, 1.0), material.fresnelExponent);\n      _output.color.rgb += texture(u_reflectiveTexture, r).rgb * fresnel;\n    }\n\n    float fogFactor = pow(v_fogFactor, fog.densityExponent);\n    _output.color = mix(_output.color, fog.color, fogFactor);\n\n    #if USE_SHADER_MODIFIER_FRAGMENT\n      shaderModifierFragment();\n    #endif\n\n    // DEBUG\n    //_output.color.a = material.diffuse.a;\n\n    outColor = _output.color;\n  }\n';
 
 	var _fsAmbient = '\n';
 
@@ -33614,7 +33615,7 @@ module.exports =
 	      var targetNodes = [];
 	      while (arr.length > 0) {
 	        var node = arr.shift();
-	        if (node.presentation !== null && node.presentation.physicsBody !== null) {
+	        if (node.presentation !== null && node.presentation.physicsBody !== null && node.presentation.physicsBody.physicsShape !== null) {
 	          targetNodes.push(node);
 	        }
 	        arr.push.apply(arr, _toConsumableArray(node.childNodes));
@@ -33659,6 +33660,12 @@ module.exports =
 	          var node = _step5.value;
 
 	          var geometry = node.presentation.geometry;
+	          var geometryCount = geometry.geometryElements.length;
+	          if (geometryCount === 0) {
+	            // nothing to draw...
+	            continue;
+	          }
+
 	          if (geometry._shadowVAO === null) {
 	            this._initializeShadowVAO(node, program);
 	          }
@@ -33670,7 +33677,7 @@ module.exports =
 	          if (node.presentation.skinner !== null) {
 	            if (node.presentation.skinner._useGPU) {
 	              gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints);
-	              gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array3x4f());
+	              gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array());
 	            } else {
 	              gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0);
 	              gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), (0, _SCNMatrix4MakeTranslation2.default)(0, 0, 0).float32Array3x4f());
@@ -33680,10 +33687,6 @@ module.exports =
 	            gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f());
 	          }
 
-	          var geometryCount = geometry.geometryElements.length;
-	          if (geometryCount === 0) {
-	            throw new Error('geometryCount: 0');
-	          }
 	          for (var i = 0; i < geometryCount; i++) {
 	            var vao = geometry._shadowVAO[i];
 	            var element = geometry.geometryElements[i];
@@ -33763,6 +33766,11 @@ module.exports =
 	      }
 	      var gl = this.context;
 	      var geometry = node.presentation.geometry;
+	      var geometryCount = geometry.geometryElements.length;
+	      if (geometryCount === 0) {
+	        // nothing to draw...
+	        return;
+	      }
 	      var scnProgram = this._getProgramForGeometry(geometry);
 	      var program = scnProgram._glProgram;
 
@@ -33788,7 +33796,7 @@ module.exports =
 	      if (node.presentation.skinner !== null) {
 	        if (node.presentation.skinner._useGPU) {
 	          gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints);
-	          gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array3x4f());
+	          gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array());
 	        } else {
 	          gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0);
 	          gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), (0, _SCNMatrix4MakeTranslation2.default)(0, 0, 0).float32Array3x4f());
@@ -33798,10 +33806,6 @@ module.exports =
 	        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f());
 	      }
 
-	      var geometryCount = geometry.geometryElements.length;
-	      if (geometryCount === 0) {
-	        throw new Error('geometryCount: 0');
-	      }
 	      for (var i = 0; i < geometryCount; i++) {
 	        var materialCount = geometry.materials.length;
 	        var material = geometry.materials[i % materialCount];
@@ -33819,7 +33823,7 @@ module.exports =
 	          if (node.presentation.skinner !== null) {
 	            if (node.presentation.skinner._useGPU) {
 	              gl.uniform1i(gl.getUniformLocation(p, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints);
-	              gl.uniform4fv(gl.getUniformLocation(p, 'skinningJoints'), node.presentation.skinner.float32Array3x4f());
+	              gl.uniform4fv(gl.getUniformLocation(p, 'skinningJoints'), node.presentation.skinner.float32Array());
 	            } else {
 	              gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0);
 	              gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), (0, _SCNMatrix4MakeTranslation2.default)(0, 0, 0).float32Array3x4f());
@@ -33965,6 +33969,11 @@ module.exports =
 	      var geometry = node.presentation.geometry;
 	      var program = this._defaultHitTestProgram._glProgram;
 
+	      var geometryCount = geometry.geometryElements.length;
+	      if (geometryCount === 0) {
+	        // nothing to draw...
+	        return;
+	      }
 	      if (geometry._vertexArrayObjects === null) {
 	        // geometry is not ready
 	        return;
@@ -33978,7 +33987,7 @@ module.exports =
 	      if (node.presentation.skinner !== null && node.presentation.skinner._useGPU) {
 	        if (node.presentation.skinner._useGPU) {
 	          gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints);
-	          gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array3x4f());
+	          gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array());
 	        } else {
 	          gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0);
 	          gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), (0, _SCNMatrix4MakeTranslation2.default)(0, 0, 0).float32Array3x4f());
@@ -33988,10 +33997,6 @@ module.exports =
 	        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f());
 	      }
 
-	      var geometryCount = geometry.geometryElements.length;
-	      if (geometryCount === 0) {
-	        throw new Error('geometryCount: 0');
-	      }
 	      for (var i = 0; i < geometryCount; i++) {
 	        var vao = geometry._hitTestVAO[i];
 	        var element = geometry.geometryElements[i];
@@ -34056,6 +34061,11 @@ module.exports =
 	      var p = node.presentation;
 	      var body = p.physicsBody;
 	      var geometry = body.physicsShape._sourceGeometry;
+	      var geometryCount = geometry.geometryElements.length;
+	      if (geometryCount === 0) {
+	        // nothing to draw...
+	        return;
+	      }
 	      var program = this._defaultHitTestProgram._glProgram;
 
 	      if (geometry._vertexBuffer === null) {
@@ -34071,7 +34081,7 @@ module.exports =
 	      if (node.presentation.skinner !== null && node.presentation.skinner._useGPU) {
 	        if (node.presentation.skinner._useGPU) {
 	          gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints);
-	          gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array3x4f());
+	          gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array());
 	        } else {
 	          gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0);
 	          gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), (0, _SCNMatrix4MakeTranslation2.default)(0, 0, 0).float32Array3x4f());
@@ -34081,10 +34091,6 @@ module.exports =
 	        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f());
 	      }
 
-	      var geometryCount = geometry.geometryElements.length;
-	      if (geometryCount === 0) {
-	        throw new Error('geometryCount: 0');
-	      }
 	      for (var i = 0; i < geometryCount; i++) {
 	        var vao = geometry._hitTestVAO[i];
 	        var element = geometry.geometryElements[i];
@@ -34570,12 +34576,13 @@ module.exports =
 	     * @param {SCNVector3} rayFrom -
 	     * @param {SCNVector3} rayTo -
 	     * @param {Map} options -
+	     * @param {Object} _options -
 	     * @returns {SCNHitTestResult[]} -
 	     */
 
 	  }, {
 	    key: '_physicsHitTestByGPU',
-	    value: function _physicsHitTestByGPU(viewProjectionTransform, from, to, options) {
+	    value: function _physicsHitTestByGPU(viewProjectionTransform, from, to, options, _options) {
 	      var result = [];
 	      var gl = this._context;
 
@@ -34594,24 +34601,27 @@ module.exports =
 	      gl.disable(gl.BLEND);
 	      gl.clearColor(0, 0, 0, 0);
 	      gl.clearDepth(1.0);
-	      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
+	      gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT
 
-	      var x = (from.x + 1.0) * 0.5 * this._viewRect.size.width;
+	      // screen position
+	      );var x = (from.x + 1.0) * 0.5 * this._viewRect.size.width;
 	      var y = (from.y + 1.0) * 0.5 * this._viewRect.size.height;
+	      // left top of the scissor area
+	      var areaSize = 3;
 	      var sx = x - 1;
 	      var sy = y - 1;
 	      if (sx < 0) {
 	        sx = 0;
-	      } else if (sx + 3 > this._viewRect.size.width) {
-	        sx = this._viewRect.size.width - 3;
+	      } else if (sx + areaSize > this._viewRect.size.width) {
+	        sx = this._viewRect.size.width - areaSize;
 	      }
 	      if (sy < 0) {
 	        sy = 0;
-	      } else if (sy + 3 > this._viewRect.size.height) {
-	        sy = this._viewRect.size.width - 3;
+	      } else if (sy + areaSize > this._viewRect.size.height) {
+	        sy = this._viewRect.size.width - areaSize;
 	      }
 
-	      gl.scissor(sx, sy, 3, 3);
+	      gl.scissor(sx, sy, areaSize, areaSize);
 	      gl.uniformMatrix4fv(gl.getUniformLocation(hitTestProgram, 'viewProjectionTransform'), false, viewProjectionTransform.float32Array());
 	      var backFaceCulling = options.get(_SCNPhysicsWorld2.default.TestOption.backfaceCulling);
 	      if (typeof backFaceCulling === 'undefined') {
@@ -34634,7 +34644,14 @@ module.exports =
 	        searchMode = _SCNPhysicsWorld2.default.TestSearchMode.closest;
 	      }
 
-	      var renderingArray = this._createRenderingPhysicsNodeArray();
+	      var renderingArray = null;
+	      if (_options && _options.targets) {
+	        renderingArray = _options.targets;
+	        collisionBitMask = -1;
+	      } else {
+	        renderingArray = this._createRenderingPhysicsNodeArray();
+	      }
+
 	      var len = renderingArray.length;
 	      for (var i = 0; i < len; i++) {
 	        var node = renderingArray[i];
@@ -35027,19 +35044,19 @@ module.exports =
 	      if (shadableHelper && shadableHelper._shaderModifiers) {
 	        var modifiers = shadableHelper._shaderModifiers;
 	        if (modifiers.SCNShaderModifierEntryPointGeometry) {
-	          var _text2 = this._processShaderText(modifiers.SCNShaderModifierEntryPointGeometry);
+	          var _text = this._processShaderText(modifiers.SCNShaderModifierEntryPointGeometry);
 	          vars.set('__USE_SHADER_MODIFIER_GEOMETRY__', 1);
-	          vars.set('__SHADER_MODIFIER_GEOMETRY__', _text2);
+	          vars.set('__SHADER_MODIFIER_GEOMETRY__', _text);
 	        }
 	        if (modifiers.SCNShaderModifierEntryPointSurface) {
-	          var _text3 = this._processShaderText(modifiers.SCNShaderModifierEntryPointSurface);
+	          var _text2 = this._processShaderText(modifiers.SCNShaderModifierEntryPointSurface);
 	          vars.set('__USE_SHADER_MODIFIER_SURFACE__', 1);
-	          vars.set('__SHADER_MODIFIER_SURFACE__', _text3);
+	          vars.set('__SHADER_MODIFIER_SURFACE__', _text2);
 	        }
 	        if (modifiers.SCNShaderModifierEntryPointFragment) {
-	          var _text4 = this._processShaderText(modifiers.SCNShaderModifierEntryPointFragment);
+	          var _text3 = this._processShaderText(modifiers.SCNShaderModifierEntryPointFragment);
 	          vars.set('__USE_SHADER_MODIFIER_FRAGMENT__', 1);
-	          vars.set('__SHADER_MODIFIER_FRAGMENT__', _text4);
+	          vars.set('__SHADER_MODIFIER_FRAGMENT__', _text3);
 	        }
 	      }
 
@@ -35124,7 +35141,13 @@ module.exports =
 	  }, {
 	    key: '_processShaderText',
 	    value: function _processShaderText(text) {
-	      var _text = text.replace(/texture2D/, 'texture');
+	      var _text = text.replace(/texture2D/g, 'texture'
+
+	      // workaround for Badger...
+	      );_text = _text.replace(/uvs.x \*= 2/, 'uvs.x *= 2.0');
+	      _text = _text.replace(/tn \* 2 - 1/, 'tn * 2.0 - vec3(1)');
+	      _text = _text.replace(/tn2 \* 2 - 1/, 'tn2 * 2.0 - vec3(1)');
+
 	      return _text;
 	    }
 	  }, {
@@ -35664,6 +35687,11 @@ module.exports =
 	    value: function _nodeHitTestByCPU(node, rayPoint, rayVec) {
 	      var result = [];
 	      var geometry = node.presentation.geometry;
+	      var geometryCount = geometry.geometryElements.length;
+	      if (geometryCount === 0) {
+	        // nothing to draw...
+	        return result;
+	      }
 	      var invRay = rayVec.mul(-1
 
 	      //console.log(`rayPoint: ${rayPoint.float32Array()}`)
@@ -35703,7 +35731,6 @@ module.exports =
 	        }
 	      }
 
-	      var geometryCount = geometry.geometryElements.length;
 	      for (var _i4 = 0; _i4 < geometryCount; _i4++) {
 	        //console.log(`geometry element ${i}`)
 	        var element = geometry.geometryElements[_i4];
@@ -36306,7 +36333,7 @@ module.exports =
 
 	var _SCNRenderingAPI2 = _interopRequireDefault(_SCNRenderingAPI);
 
-	var _SCNHitTestResult = __webpack_require__(118);
+	var _SCNHitTestResult = __webpack_require__(111);
 
 	var _SCNHitTestResult2 = _interopRequireDefault(_SCNHitTestResult);
 
@@ -37310,7 +37337,9 @@ module.exports =
 	    }
 	  }], [{
 	    key: 'sceneNamed',
-	    value: function sceneNamed(name) {}
+	    value: function sceneNamed(name) {
+	      return this.sceneNamedInDirectory(name);
+	    }
 
 	    /**
 	     * Loads a scene from a file with the specified name in a specific subdirectory of the app’s main bundle.
@@ -37327,6 +37356,12 @@ module.exports =
 	    key: 'sceneNamedInDirectory',
 	    value: function sceneNamedInDirectory(name, directory) {
 	      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : null;
+
+	      var path = name;
+	      if (directory) {
+	        path = directory + '/' + name;
+	      }
+	      return new SCNScene(path, options);
 	    }
 
 	    /**
@@ -37556,222 +37591,123 @@ module.exports =
 	      var back = -this.length * 0.5;
 
 	      // front
-	      /*
-	      this._createFace(sourceData, indexData,
-	        new SCNVector3(left, bottom, front),
-	        new SCNVector3(left, top, front),
-	        new SCNVector3(right, bottom, front),
-	        new SCNVector3(right, top, front),
-	        this.heightSegmentCount,
-	        this.widthSegmentCount)
-	       // right
-	      this._createFace(sourceData, indexData,
-	        new SCNVector3(right, bottom, front),
-	        new SCNVector3(right, top, front),
-	        new SCNVector3(right, bottom, back),
-	        new SCNVector3(right, top, back),
-	        this.heightSegmentCount,
-	        this.lengthSegmentCount)
-	       // back
-	      this._createFace(sourceData, indexData,
-	        new SCNVector3(right, bottom, back),
-	        new SCNVector3(right, top, back),
-	        new SCNVector3(left, bottom, back),
-	        new SCNVector3(left, top, back),
-	        this.heightSegmentCount,
-	        this.widthSegmentCount)
-	       // left
-	      this._createFace(sourceData, indexData,
-	        new SCNVector3(left, bottom, back),
-	        new SCNVector3(left, top, back),
-	        new SCNVector3(left, bottom, front),
-	        new SCNVector3(left, top, front),
-	        this.heightSegmentCount,
-	        this.lengthSegmentCount)
-	       // top
-	      this._createFace(sourceData, indexData,
-	        new SCNVector3(left, top, front),
-	        new SCNVector3(left, top, back),
-	        new SCNVector3(right, top, front),
-	        new SCNVector3(right, top, back),
-	        this.lengthSegmentCount,
-	        this.widthSegmentCount)
-	       // bottom
-	      this._createFace(sourceData, indexData,
-	        new SCNVector3(left, bottom, back),
-	        new SCNVector3(left, bottom, front),
-	        new SCNVector3(right, bottom, back),
-	        new SCNVector3(right, bottom, front),
-	        this.lengthSegmentCount,
-	        this.widthSegmentCount)
-	      */
-
-	      // front
 	      sourceData.push(left, bottom, front // position
 	      );sourceData.push(0, 0, 1 // normal
 	      );sourceData.push(0, 1 // texcoord
-	      //sourceData.push(0, -1, -1, -1) // boneIndices
-	      //sourceData.push(1, 0, 0, 0) // boneWeights
 
 	      );sourceData.push(left, top, front);
 	      sourceData.push(0, 0, 1);
-	      sourceData.push(0, 0
-	      //sourceData.push(0, -1, -1, -1)
-	      //sourceData.push(1, 0, 0, 0)
+	      sourceData.push(0, 0);
 
-	      );sourceData.push(right, bottom, front);
+	      sourceData.push(right, bottom, front);
 	      sourceData.push(0, 0, 1);
-	      sourceData.push(1, 1
-	      //sourceData.push(0, -1, -1, -1)
-	      //sourceData.push(1, 0, 0, 0)
+	      sourceData.push(1, 1);
 
-	      );sourceData.push(right, top, front);
+	      sourceData.push(right, top, front);
 	      sourceData.push(0, 0, 1);
-	      sourceData.push(1, 0
-	      //sourceData.push(0, -1, -1, -1)
-	      //sourceData.push(1, 0, 0, 0)
+	      sourceData.push(1, 0);
 
-	      );indexData.push(0, 3, 1);
+	      indexData.push(0, 3, 1);
 	      indexData.push(0, 2, 3
 
 	      // right
 	      );sourceData.push(right, bottom, front);
 	      sourceData.push(1, 0, 0);
-	      sourceData.push(0, 1
-	      //sourceData.push(0, -1, -1, -1)
-	      //sourceData.push(1, 0, 0, 0)
+	      sourceData.push(0, 1);
 
-	      );sourceData.push(right, top, front);
+	      sourceData.push(right, top, front);
 	      sourceData.push(1, 0, 0);
-	      sourceData.push(0, 0
-	      //sourceData.push(0, -1, -1, -1)
-	      //sourceData.push(1, 0, 0, 0)
+	      sourceData.push(0, 0);
 
-	      );sourceData.push(right, bottom, back);
+	      sourceData.push(right, bottom, back);
 	      sourceData.push(1, 0, 0);
-	      sourceData.push(1, 1
-	      //sourceData.push(0, -1, -1, -1)
-	      //sourceData.push(1, 0, 0, 0)
+	      sourceData.push(1, 1);
 
-	      );sourceData.push(right, top, back);
+	      sourceData.push(right, top, back);
 	      sourceData.push(1, 0, 0);
-	      sourceData.push(1, 0
-	      //sourceData.push(0, -1, -1, -1)
-	      //sourceData.push(1, 0, 0, 0)
+	      sourceData.push(1, 0);
 
-	      );indexData.push(4, 7, 5);
+	      indexData.push(4, 7, 5);
 	      indexData.push(4, 6, 7
 
 	      // back
 	      );sourceData.push(right, bottom, back);
 	      sourceData.push(0, 0, -1);
-	      sourceData.push(0, 1
-	      //sourceData.push(0, -1, -1, -1)
-	      //sourceData.push(1, 0, 0, 0)
+	      sourceData.push(0, 1);
 
-	      );sourceData.push(right, top, back);
+	      sourceData.push(right, top, back);
 	      sourceData.push(0, 0, -1);
-	      sourceData.push(0, 0
-	      //sourceData.push(0, -1, -1, -1)
-	      //sourceData.push(1, 0, 0, 0)
+	      sourceData.push(0, 0);
 
-	      );sourceData.push(left, bottom, back);
+	      sourceData.push(left, bottom, back);
 	      sourceData.push(0, 0, -1);
-	      sourceData.push(1, 1
-	      //sourceData.push(0, -1, -1, -1)
-	      //sourceData.push(1, 0, 0, 0)
+	      sourceData.push(1, 1);
 
-	      );sourceData.push(left, top, back);
+	      sourceData.push(left, top, back);
 	      sourceData.push(0, 0, -1);
-	      sourceData.push(1, 0
-	      //sourceData.push(0, -1, -1, -1)
-	      //sourceData.push(1, 0, 0, 0)
+	      sourceData.push(1, 0);
 
-	      );indexData.push(8, 11, 9);
+	      indexData.push(8, 11, 9);
 	      indexData.push(8, 10, 11
 
 	      // left
 	      );sourceData.push(left, bottom, back);
 	      sourceData.push(-1, 0, 0);
-	      sourceData.push(0, 1
-	      //sourceData.push(0, -1, -1, -1)
-	      //sourceData.push(1, 0, 0, 0)
+	      sourceData.push(0, 1);
 
-	      );sourceData.push(left, top, back);
+	      sourceData.push(left, top, back);
 	      sourceData.push(-1, 0, 0);
-	      sourceData.push(0, 0
-	      //sourceData.push(0, -1, -1, -1)
-	      //sourceData.push(1, 0, 0, 0)
+	      sourceData.push(0, 0);
 
-	      );sourceData.push(left, bottom, front);
+	      sourceData.push(left, bottom, front);
 	      sourceData.push(-1, 0, 0);
-	      sourceData.push(1, 1
-	      //sourceData.push(0, -1, -1, -1)
-	      //sourceData.push(1, 0, 0, 0)
+	      sourceData.push(1, 1);
 
-	      );sourceData.push(left, top, front);
+	      sourceData.push(left, top, front);
 	      sourceData.push(-1, 0, 0);
-	      sourceData.push(1, 0
-	      //sourceData.push(0, -1, -1, -1)
-	      //sourceData.push(1, 0, 0, 0)
+	      sourceData.push(1, 0);
 
-	      );indexData.push(12, 15, 13);
+	      indexData.push(12, 15, 13);
 	      indexData.push(12, 14, 15
 
 	      // top
 	      );sourceData.push(left, top, front);
 	      sourceData.push(0, 1, 0);
-	      sourceData.push(0, 1
-	      //sourceData.push(0, -1, -1, -1)
-	      //sourceData.push(1, 0, 0, 0)
+	      sourceData.push(0, 1);
 
-	      );sourceData.push(left, top, back);
+	      sourceData.push(left, top, back);
 	      sourceData.push(0, 1, 0);
-	      sourceData.push(0, 0
-	      //sourceData.push(0, -1, -1, -1)
-	      //sourceData.push(1, 0, 0, 0)
+	      sourceData.push(0, 0);
 
-	      );sourceData.push(right, top, front);
+	      sourceData.push(right, top, front);
 	      sourceData.push(0, 1, 0);
-	      sourceData.push(1, 1
-	      //sourceData.push(0, -1, -1, -1)
-	      //sourceData.push(1, 0, 0, 0)
+	      sourceData.push(1, 1);
 
-	      );sourceData.push(right, top, back);
+	      sourceData.push(right, top, back);
 	      sourceData.push(0, 1, 0);
-	      sourceData.push(1, 0
-	      //sourceData.push(0, -1, -1, -1)
-	      //sourceData.push(1, 0, 0, 0)
+	      sourceData.push(1, 0);
 
-	      );indexData.push(16, 19, 17);
+	      indexData.push(16, 19, 17);
 	      indexData.push(16, 18, 19
 
 	      // bottom
 	      );sourceData.push(left, bottom, back);
 	      sourceData.push(0, -1, 0);
-	      sourceData.push(0, 1
-	      //sourceData.push(0, -1, -1, -1)
-	      //sourceData.push(1, 0, 0, 0)
+	      sourceData.push(0, 1);
 
-	      );sourceData.push(left, bottom, front);
+	      sourceData.push(left, bottom, front);
 	      sourceData.push(0, -1, 0);
-	      sourceData.push(0, 0
-	      //sourceData.push(0, -1, -1, -1)
-	      //sourceData.push(1, 0, 0, 0)
+	      sourceData.push(0, 0);
 
-	      );sourceData.push(right, bottom, back);
+	      sourceData.push(right, bottom, back);
 	      sourceData.push(0, -1, 0);
-	      sourceData.push(1, 1
-	      //sourceData.push(0, -1, -1, -1)
-	      //sourceData.push(1, 0, 0, 0)
+	      sourceData.push(1, 1);
 
-	      );sourceData.push(right, bottom, front);
+	      sourceData.push(right, bottom, front);
 	      sourceData.push(0, -1, 0);
-	      sourceData.push(1, 0
-	      //sourceData.push(0, -1, -1, -1)
-	      //sourceData.push(1, 0, 0, 0)
+	      sourceData.push(1, 0);
 
-	      );indexData.push(20, 23, 21);
+	      indexData.push(20, 23, 21);
 	      indexData.push(20, 22, 23);
 
 	      var vertexSource = new _SCNGeometrySource2.default(sourceData, // data
@@ -38609,45 +38545,49 @@ module.exports =
 
 	var _SCNBox2 = _interopRequireDefault(_SCNBox);
 
-	var _SCNVector = __webpack_require__(54);
+	var _SCNCapsule = __webpack_require__(110);
 
-	var _SCNVector2 = _interopRequireDefault(_SCNVector);
+	var _SCNCapsule2 = _interopRequireDefault(_SCNCapsule);
 
-	var _SCNPhysicsBehavior = __webpack_require__(110);
-
-	var _SCNPhysicsBehavior2 = _interopRequireDefault(_SCNPhysicsBehavior);
-
-	var _SCNPhysicsContactDelegate = __webpack_require__(111);
-
-	var _SCNPhysicsContactDelegate2 = _interopRequireDefault(_SCNPhysicsContactDelegate);
-
-	var _SCNPhysicsContact = __webpack_require__(112);
-
-	var _SCNPhysicsContact2 = _interopRequireDefault(_SCNPhysicsContact);
-
-	var _SCNPhysicsBody = __webpack_require__(113);
-
-	var _SCNPhysicsBody2 = _interopRequireDefault(_SCNPhysicsBody);
-
-	var _SCNPhysicsBodyType = __webpack_require__(114);
-
-	var _SCNPhysicsBodyType2 = _interopRequireDefault(_SCNPhysicsBodyType);
-
-	var _SCNHitTestResult = __webpack_require__(118);
+	var _SCNHitTestResult = __webpack_require__(111);
 
 	var _SCNHitTestResult2 = _interopRequireDefault(_SCNHitTestResult);
-
-	var _SCNPhysicsShape = __webpack_require__(115);
-
-	var _SCNPhysicsShape2 = _interopRequireDefault(_SCNPhysicsShape);
-
-	var _SCNSphere = __webpack_require__(117);
-
-	var _SCNSphere2 = _interopRequireDefault(_SCNSphere);
 
 	var _SCNMatrix = __webpack_require__(56);
 
 	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
+
+	var _SCNPhysicsBody = __webpack_require__(112);
+
+	var _SCNPhysicsBody2 = _interopRequireDefault(_SCNPhysicsBody);
+
+	var _SCNPhysicsBodyType = __webpack_require__(113);
+
+	var _SCNPhysicsBodyType2 = _interopRequireDefault(_SCNPhysicsBodyType);
+
+	var _SCNPhysicsBehavior = __webpack_require__(116);
+
+	var _SCNPhysicsBehavior2 = _interopRequireDefault(_SCNPhysicsBehavior);
+
+	var _SCNPhysicsContact = __webpack_require__(117);
+
+	var _SCNPhysicsContact2 = _interopRequireDefault(_SCNPhysicsContact);
+
+	var _SCNPhysicsContactDelegate = __webpack_require__(118);
+
+	var _SCNPhysicsContactDelegate2 = _interopRequireDefault(_SCNPhysicsContactDelegate);
+
+	var _SCNPhysicsShape = __webpack_require__(114);
+
+	var _SCNPhysicsShape2 = _interopRequireDefault(_SCNPhysicsShape);
+
+	var _SCNSphere = __webpack_require__(115);
+
+	var _SCNSphere2 = _interopRequireDefault(_SCNSphere);
+
+	var _SCNVector = __webpack_require__(54);
+
+	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -39189,6 +39129,8 @@ module.exports =
 	      var opt = options;
 	      if (Array.isArray(options)) {
 	        opt = new Map(options);
+	      } else if (options === null) {
+	        opt = new Map();
 	      }
 	      var results = [];
 
@@ -39275,7 +39217,10 @@ module.exports =
 	      proj.m33 = -(zFar + zNear) / len;
 	      proj.m34 = -1;
 	      proj.m43 = -2 * zFar * zNear / len;
-	      //proj.m44 = 0
+	      // TODO: use an orthographic projection
+	      //proj.m33 = -2 / len
+	      //proj.m43 = -(zFar + zNear) / len
+	      //proj.m44 = 1
 
 	      var view = new _SCNMatrix2.default();
 	      var up = new _SCNVector2.default(0, 1, 0);
@@ -39349,6 +39294,7 @@ module.exports =
 	    }
 
 	    // Structures
+
 	    /**
 	     * @type {Object} TestOption
 	     * @property {string} backfaceCulling The key for choosing whether to ignore back-facing polygons in physics shapes when searching for contacts.
@@ -39366,14 +39312,6 @@ module.exports =
 	      var objects = this._renderer._createRenderingPhysicsNodeArray();
 	      var contacts = [];
 
-	      //for(let i=0; i<objects.length-1; i++){
-	      //  const bodyA = objects[i].presentation.physicsBody
-	      //  for(let j=i+1; j<objects.length; j++){
-	      //    const bodyB = objects[j].presentation.physicsBody
-
-	      //    contacts.push(...this.contactTestBetween(bodyA, bodyB))
-	      //  }
-	      //}
 	      var _iteratorNormalCompletion = true;
 	      var _didIteratorError = false;
 	      var _iteratorError = undefined;
@@ -39402,13 +39340,26 @@ module.exports =
 	        }
 	      }
 
+	      var staticType = _SCNPhysicsBodyType2.default.static;
 	      for (var i = 0; i < objects.length; i++) {
 	        var bodyA = objects[i].presentation.physicsBody;
+	        //if(bodyA.type === staticType){
+	        //  continue
+	        //}
+	        if (bodyA.physicsShape._sourceGeometry instanceof _SCNCapsule2.default) {
+	          contacts.push.apply(contacts, _toConsumableArray(this._capsuleTestWithObjects(bodyA, objects)));
+	        }
 	        for (var j = 0; j < objects.length; j++) {
 	          if (i === j) {
 	            continue;
 	          }
 	          var bodyB = objects[j].presentation.physicsBody;
+	          //if(bodyB.physicsShape._sourceGeometry instanceof SCNCapsule){
+	          //  continue
+	          //}
+	          //if(i > j && bodyB.type !== staticType){
+	          //  continue
+	          //}
 	          contacts.push.apply(contacts, _toConsumableArray(this.contactTestBetween(bodyA, bodyB)));
 	        }
 	      }
@@ -39441,6 +39392,80 @@ module.exports =
 	          }
 	        }
 	      }
+	    }
+	  }, {
+	    key: '_capsuleTestWithObjects',
+	    value: function _capsuleTestWithObjects(body, objects) {
+	      var result = [];
+
+	      var objs = objects.filter(function (obj) {
+	        var bodyB = obj.presentation.physicsBody;
+	        if (bodyB === body) {
+	          return false;
+	        }
+	        if (bodyB.physicsShape._type !== _SCNPhysicsShape2.default.ShapeType.concavePolyhedron) {
+	          return false;
+	        }
+	        if ((body.categoryBitMask & bodyB.contactTestBitMask) !== 0) {
+	          return true;
+	        }
+	        if ((bodyB.categoryBitMask & body.contactTestBitMask) !== 0) {
+	          return true;
+	        }
+	        return false;
+	      });
+	      if (objs.length === 0) {
+	        return result;
+	      }
+
+	      var bodyTransform = body._node._worldTransform;
+	      var capsule = body.physicsShape._sourceGeometry;
+	      var origin = new _SCNVector2.default(0, capsule.height * 0.5, 0).transform(bodyTransform);
+	      var dest = new _SCNVector2.default(0, -capsule.height * 0.5, 0).transform(bodyTransform);
+
+	      var viewProjectionTransform = this._createViewProjectionTransform(origin, dest);
+	      var from = origin.transform(viewProjectionTransform);
+	      var to = dest.transform(viewProjectionTransform);
+
+	      var opt = new Map();
+	      var opt2 = {
+	        targets: objs,
+	        rayRadius: capsule.capRadius
+
+	        // TODO: calculate contacts
+	      };var hitResult = this._renderer._physicsHitTestByGPU(viewProjectionTransform, from, to, opt, opt2);
+	      var _iteratorNormalCompletion3 = true;
+	      var _didIteratorError3 = false;
+	      var _iteratorError3 = undefined;
+
+	      try {
+	        for (var _iterator3 = hitResult[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+	          var hit = _step3.value;
+
+	          var contact = new _SCNPhysicsContact2.default();
+	          contact._nodeA = body._node;
+	          contact._nodeB = hit._node;
+	          contact._contactPoint = hit._worldCoordinates;
+	          contact._contactNormal = hit._worldNormal;
+	          contact._penetrationDistance = 1.0;
+	          result.push(contact);
+	        }
+	      } catch (err) {
+	        _didIteratorError3 = true;
+	        _iteratorError3 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion3 && _iterator3.return) {
+	            _iterator3.return();
+	          }
+	        } finally {
+	          if (_didIteratorError3) {
+	            throw _iteratorError3;
+	          }
+	        }
+	      }
+
+	      return result;
 	    }
 	  }, {
 	    key: 'allBehaviors',
@@ -39484,9 +39509,19 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _NSObject2 = __webpack_require__(2);
+	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _NSObject3 = _interopRequireDefault(_NSObject2);
+	var _SCNGeometry2 = __webpack_require__(78);
+
+	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
+
+	var _SCNMaterial = __webpack_require__(86);
+
+	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
+
+	var _SCNVector = __webpack_require__(54);
+
+	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -39496,133 +39531,139 @@ module.exports =
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
+	/*global Ammo*/
+
 	/**
-	 * The abstract superclass for joints, vehicle simulations, and other high-level behaviors that incorporate multiple physics bodies.
+	 * A right circular cylinder geometry whose ends are capped with hemispheres.
 	 * @access public
-	 * @extends {NSObject}
-	 * @see https://developer.apple.com/reference/scenekit/scnphysicsbehavior
+	 * @extends {SCNGeometry}
+	 * @see https://developer.apple.com/reference/scenekit/scncapsule
 	 */
-	var SCNPhysicsBehavior = function (_NSObject) {
-	  _inherits(SCNPhysicsBehavior, _NSObject);
+	var SCNCapsule = function (_SCNGeometry) {
+	  _inherits(SCNCapsule, _SCNGeometry);
 
-	  function SCNPhysicsBehavior() {
-	    _classCallCheck(this, SCNPhysicsBehavior);
+	  // Creating a Capsule
 
-	    return _possibleConstructorReturn(this, (SCNPhysicsBehavior.__proto__ || Object.getPrototypeOf(SCNPhysicsBehavior)).apply(this, arguments));
+	  /**
+	   * Creates a capsule geometry with the specified radius and height.
+	   * @access public
+	   * @constructor
+	   * @param {number} capRadius - The radius both of the capsule’s cylindrical body and of its hemispherical ends.
+	   * @param {number} height - The height of the capsule along the y-axis of its local coordinate space.
+	   * @desc The capsule is centered in its local coordinate system. For example, if you create a capsule whose cap radius is 5.0 and height is 20.0, it extends from -10.0 to 10.0 in the y-axis, and the circular cross section at the center of its body extends from -5.0 to 5.0 along the x- and z-axes.
+	   * @see https://developer.apple.com/reference/scenekit/scncapsule/1523790-init
+	   */
+	  function SCNCapsule(capRadius, height) {
+	    _classCallCheck(this, SCNCapsule);
+
+	    // Adjusting a Capsule’s Dimensions
+
+	    /**
+	     * The radius both of the capsule’s circular center cross section and of its hemispherical ends. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scncapsule/1523926-capradius
+	     */
+	    var _this = _possibleConstructorReturn(this, (SCNCapsule.__proto__ || Object.getPrototypeOf(SCNCapsule)).call(this));
+
+	    _this.capRadius = capRadius;
+
+	    /**
+	     * The extent of the capsule along its y-axis. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scncapsule/1522789-height
+	     */
+	    _this.height = height;
+
+	    // Adjusting Geometric Detail
+
+	    /**
+	     * The number of subdivisions around the lateral circumference of the capsule. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scncapsule/1522735-radialsegmentcount
+	     */
+	    _this.radialSegmentCount = 24;
+
+	    /**
+	     * The number of subdivisions in the height of each hemispherical end of the capsule. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scncapsule/1523561-capsegmentcount
+	     */
+	    _this.capSegmentCount = 48;
+
+	    /**
+	     * The number of subdivisions in the sides of the capsule along its y-axis. Animatable.
+	     * @type {number}
+	     * @see https://developer.apple.com/reference/scenekit/scncapsule/1523697-heightsegmentcount
+	     */
+	    _this.heightSegmentCount = 1;
+
+	    _this._createGeometry();
+	    _this.materials.push(new _SCNMaterial2.default());
+	    return _this;
 	  }
 
-	  _createClass(SCNPhysicsBehavior, [{
-	    key: 'init',
+	  _createClass(SCNCapsule, [{
+	    key: '_createGeometry',
+	    value: function _createGeometry() {
+	      // TODO: implement
+
+	      this.boundingBox = {
+	        min: new _SCNVector2.default(-this.capRadius, -this.height * 0.5, -this.capRadius),
+	        max: new _SCNVector2.default(this.capRadius, this.height * 0.5, this.capRadius)
+	      };
+	    }
+
+	    /**
+	     * @access private
+	     * @returns {Ammo.btCollisionShape}
+	     * @desc call Ammo.destroy(shape) after using it.
+	     */
+
+	  }, {
+	    key: '_createBtCollisionShape',
+	    value: function _createBtCollisionShape() {}
+	    //const height = (this.height - this.capRadius) * 0.5
+	    //const shape = new Ammo.btCapsuleShape(this.capRadius, height)
+	    //return shape
 
 
 	    /**
-	     * constructor
-	     * @access public
-	     * @returns {void}
+	     * The center point and radius of the object’s bounding sphere.
+	     * @type {Object}
+	     * @parameter {SCNVector3} _boundingSphere.center -
+	     * @parameter {number} _boundingSphere.radius -
+	     * @returns {Object} -
+	     * @desc Scene Kit defines a bounding sphere in the local coordinate space using a center point and a radius. For example, if a node’s bounding sphere has the center point {3, 1, 4} and radius 2.0, all points in the vertex data of node’s geometry (and any geometry attached to its child nodes) lie within 2.0 units of the center point.The coordinates provided when reading this property are valid only if the object has a volume to be measured. For a geometry containing no vertex data or a node containing no geometry (and whose child nodes, if any, contain no geometry), the values center and radius are both zero.
+	     * @see https://developer.apple.com/reference/scenekit/scnboundingvolume/2034707-boundingsphere
 	     */
-	    value: function init() {}
+
+	  }, {
+	    key: 'getBoundingSphere',
+	    value: function getBoundingSphere() {
+	      var c = new _SCNVector2.default(0, 0, 0);
+	      var r = this.height * 0.5;
+
+	      return { center: c, radius: r };
+	    }
+	  }, {
+	    key: '_updateBoundingBoxForSkinner',
+	    value: function _updateBoundingBoxForSkinner() {
+	      var skinner = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+
+	      if (skinner === null) {
+	        return this.boundingBox;
+	      }
+	      return _get(SCNCapsule.prototype.__proto__ || Object.getPrototypeOf(SCNCapsule.prototype), '_updateBoundingBoxForSkinner', this).call(this, skinner);
+	    }
 	  }]);
 
-	  return SCNPhysicsBehavior;
-	}(_NSObject3.default);
+	  return SCNCapsule;
+	}(_SCNGeometry3.default);
 
-	exports.default = SCNPhysicsBehavior;
+	exports.default = SCNCapsule;
 
 /***/ },
 /* 111 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _SCNPhysicsWorld = __webpack_require__(109);
-
-	var _SCNPhysicsWorld2 = _interopRequireDefault(_SCNPhysicsWorld);
-
-	var _SCNPhysicsContact = __webpack_require__(112);
-
-	var _SCNPhysicsContact2 = _interopRequireDefault(_SCNPhysicsContact);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	/**
-	 * Methods you can implement to respond when a contact or collision occurs between two physics bodies in a scene.
-	 * @interface
-	 * @see https://developer.apple.com/reference/scenekit/scnphysicscontactdelegate
-	 */
-	var SCNPhysicsContactDelegate = function () {
-	  function SCNPhysicsContactDelegate() {
-	    _classCallCheck(this, SCNPhysicsContactDelegate);
-	  }
-
-	  _createClass(SCNPhysicsContactDelegate, [{
-	    key: 'init',
-
-
-	    /**
-	     * constructor
-	     * @access public
-	     * @returns {void}
-	     */
-	    value: function init() {}
-
-	    // Responding to Contact Events
-
-	    /**
-	     * Tells the delegate that two bodies have come into contact.
-	     * @access public
-	     * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.
-	     * @param {SCNPhysicsContact} contact - An object that describes the contact.
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/scenekit/scnphysicscontactdelegate/1512835-physicsworld
-	     */
-
-	  }, {
-	    key: 'physicsWorldDidBegin',
-	    value: function physicsWorldDidBegin(world, contact) {}
-
-	    /**
-	     * Tells the delegate that new information is available about an ongoing contact.
-	     * @access public
-	     * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.
-	     * @param {SCNPhysicsContact} contact - An object that describes the contact.
-	     * @returns {void}
-	     * @desc SceneKit calls this method on each step of the physics simulation (see the timeStep property) if information about the contact changes—for example, if two bodies are sliding against one another.
-	     * @see https://developer.apple.com/reference/scenekit/scnphysicscontactdelegate/1512865-physicsworld
-	     */
-
-	  }, {
-	    key: 'physicsWorldDidUpdate',
-	    value: function physicsWorldDidUpdate(world, contact) {}
-
-	    /**
-	     * Tells the delegate that a contact has ended.
-	     * @access public
-	     * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.
-	     * @param {SCNPhysicsContact} contact - An object that describes the contact.
-	     * @returns {void}
-	     * @see https://developer.apple.com/reference/scenekit/scnphysicscontactdelegate/1512883-physicsworld
-	     */
-
-	  }, {
-	    key: 'physicsWorldDidEnd',
-	    value: function physicsWorldDidEnd(world, contact) {}
-	  }]);
-
-	  return SCNPhysicsContactDelegate;
-	}();
-
-	exports.default = SCNPhysicsContactDelegate;
-
-/***/ },
-/* 112 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39645,6 +39686,14 @@ module.exports =
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
+	var _SCNMatrix = __webpack_require__(56);
+
+	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
+
+	var _CGPoint = __webpack_require__(7);
+
+	var _CGPoint2 = _interopRequireDefault(_CGPoint);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -39654,124 +39703,186 @@ module.exports =
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	/**
-	 * Detailed information about a contact between two physics bodies in a scene’s physics simulation. 
+	 * Detailed information about a result from searching for elements of a scene located at a specified point, or along a specified line segment (or ray).
 	 * @access public
 	 * @extends {NSObject}
-	 * @see https://developer.apple.com/reference/scenekit/scnphysicscontact
+	 * @see https://developer.apple.com/reference/scenekit/scnhittestresult
 	 */
-	var SCNPhysicsContact = function (_NSObject) {
-	  _inherits(SCNPhysicsContact, _NSObject);
+	var SCNHitTestResult = function (_NSObject) {
+	  _inherits(SCNHitTestResult, _NSObject);
 
 	  /**
 	   * constructor
 	   * @access public
 	   * @constructor
 	   */
-	  function SCNPhysicsContact() {
-	    _classCallCheck(this, SCNPhysicsContact);
+	  function SCNHitTestResult() {
+	    _classCallCheck(this, SCNHitTestResult);
 
-	    // Inspecting the Contact Properties
+	    // Retrieving Information About a Hit-Test Result
 
-	    var _this = _possibleConstructorReturn(this, (SCNPhysicsContact.__proto__ || Object.getPrototypeOf(SCNPhysicsContact)).call(this));
+	    var _this = _possibleConstructorReturn(this, (SCNHitTestResult.__proto__ || Object.getPrototypeOf(SCNHitTestResult)).call(this));
 
-	    _this._nodeA = null;
-	    _this._nodeB = null;
-	    _this._contactPoint = null;
-	    _this._contactNormal = null;
-	    _this._collisionImpulse = 0;
-	    _this._penetrationDistance = 0;
+	    _this._node = null;
+	    _this._geometryIndex = 0;
+	    _this._faceIndex = 0;
+	    _this._localCoordinates = null;
+	    _this._worldCoordinates = null;
+	    _this._localNormal = null;
+	    _this._worldNormal = null;
+	    _this._modelTransform = null;
+
+	    // Instance Properties
+
+	    _this._boneNode = null;
 	    return _this;
 	  }
 
-	  // Inspecting the Contact Properties
+	  // Retrieving Information About a Hit-Test Result
 
 	  /**
-	   * The node containing the first body in the contact.
-	   * @type {SCNNode}
-	   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.
-	   * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1523445-nodea
+	   * Returns the texture coordinates at the point of intersection for the specified texture mapping channel.
+	   * @access public
+	   * @param {number} channel - The index of the mapping channel in which to look up texture coordinates.
+	   * @returns {CGPoint} - 
+	   * @desc An SCNGeometry object can contain multiple sources of texture coordinates, or texture mapping channels. (With multiple channels, you can map texture images for different material properties in different ways.) To use the texture coordinates of a hit-test result, specify which texture coordinate source to look up coordinates in. For example, to add “scorch marks” to a game character hit by a laser, you might modify a texture image mapped to the multiply property of the geometry’s material. Use the mappingChannel index from that material property as the channel parameter when calling textureCoordinates(withMappingChannel:) to ensure that you modify the correct location in the texture image.
+	   * @see https://developer.apple.com/reference/scenekit/scnhittestresult/1522771-texturecoordinates
 	   */
 
 
-	  _createClass(SCNPhysicsContact, [{
-	    key: 'nodeA',
-	    get: function get() {
-	      return this._nodeA;
+	  _createClass(SCNHitTestResult, [{
+	    key: 'textureCoordinatesWithMappingChannel',
+	    value: function textureCoordinatesWithMappingChannel(channel) {
+	      return null;
 	    }
 
 	    /**
-	     * The node containing the second body in the contact.
+	     * The node whose geometry intersects the search ray.
 	     * @type {SCNNode}
-	     * @desc Use the node’s physicsBody property to examine physics characteristics of the node.
-	     * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1524232-nodeb
-	     */
-
-	  }, {
-	    key: 'nodeB',
-	    get: function get() {
-	      return this._nodeB;
-	    }
-
-	    /**
-	     * The contact point between the two physics bodies, in scene coordinates.
-	     * @type {SCNVector3}
 	     * @desc 
-	     * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1523810-contactpoint
+	     * @see https://developer.apple.com/reference/scenekit/scnhittestresult/1523256-node
 	     */
 
 	  }, {
-	    key: 'contactPoint',
+	    key: 'node',
 	    get: function get() {
-	      return this._contactPoint;
+	      return this._node;
 	    }
 
 	    /**
-	     * The normal vector at the contact point between the two physics bodies, in scene coordinates.
-	     * @type {SCNVector3}
-	     * @desc This vector tells you which direction the bodies were moving relative to one another at the time of the collision. For example, in a game you can examine this vector to have enemy characters take damage when struck from above by the player character but damage the player character instead when they collide side-to-side.
-	     * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1522833-contactnormal
-	     */
-
-	  }, {
-	    key: 'contactNormal',
-	    get: function get() {
-	      return this._contactNormal;
-	    }
-
-	    /**
-	     * The force over time of the collision, in newton-seconds.
+	     * The index of the geometry element whose surface the search ray intersects.
 	     * @type {number}
-	     * @desc This property’s value tells you how hard the bodies struck each other in a collision. For example, in a game you might allow a character to proceed unhindered after a minor collision, but take damage when struck with sufficient force.
-	     * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1523944-collisionimpulse
+	     * @desc Every SCNGeometry object contains one or more SCNGeometryElement objects that define how its vertices connect to form a surface. This property provides the index of the geometry element intersecting the search ray. For more information about that geometry element, use the geometry’s geometryElement(at:) method.
+	     * @see https://developer.apple.com/reference/scenekit/scnhittestresult/1522625-geometryindex
 	     */
 
 	  }, {
-	    key: 'collisionImpulse',
+	    key: 'geometryIndex',
 	    get: function get() {
-	      return this._collisionImpulse;
+	      return this._geometryIndex;
 	    }
 
 	    /**
-	     * The distance of overlap, in units of scene coordinate space, between the two physics bodies.
+	     * The index of the primitive in the geomety element intersected by the search ray.
 	     * @type {number}
 	     * @desc 
-	     * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1522870-penetrationdistance
+	     * @see https://developer.apple.com/reference/scenekit/scnhittestresult/1522888-faceindex
 	     */
 
 	  }, {
-	    key: 'penetrationDistance',
+	    key: 'faceIndex',
 	    get: function get() {
-	      return this._penetrationDistance;
+	      return this._faceIndex;
+	    }
+
+	    /**
+	     * The point of intersection between the geometry and the search ray, in the local coordinate system of the node containing the geometry.
+	     * @type {SCNVector3}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/scenekit/scnhittestresult/1523032-localcoordinates
+	     */
+
+	  }, {
+	    key: 'localCoordinates',
+	    get: function get() {
+	      return this._localCoordinates;
+	    }
+
+	    /**
+	     * The point of intersection between the geometry and the search ray, in the scene’s world coordinate system.
+	     * @type {SCNVector3}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/scenekit/scnhittestresult/1523058-worldcoordinates
+	     */
+
+	  }, {
+	    key: 'worldCoordinates',
+	    get: function get() {
+	      return this._worldCoordinates;
+	    }
+
+	    /**
+	     * The surface normal vector at the point of intersection, in the local coordinate system of the node containing the geometry intersected by the search ray.
+	     * @type {SCNVector3}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/scenekit/scnhittestresult/1523953-localnormal
+	     */
+
+	  }, {
+	    key: 'localNormal',
+	    get: function get() {
+	      return this._localNormal;
+	    }
+
+	    /**
+	     * The surface normal vector at the point of intersection, in the scene’s world coordinate system.
+	     * @type {SCNVector3}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/scenekit/scnhittestresult/1524066-worldnormal
+	     */
+
+	  }, {
+	    key: 'worldNormal',
+	    get: function get() {
+	      return this._worldNormal;
+	    }
+
+	    /**
+	     * The world transform matrix of the node containing the intersection.
+	     * @type {SCNMatrix4}
+	     * @desc Use this matrix to transform vectors from the local coordinate space of the node whose geometry is intersected by the search ray to the scene’s world coordinate system.
+	     * @see https://developer.apple.com/reference/scenekit/scnhittestresult/1523496-modeltransform
+	     */
+
+	  }, {
+	    key: 'modelTransform',
+	    get: function get() {
+	      return this._modelTransform;
+	    }
+
+	    // Instance Properties
+
+	    /**
+	     * 
+	     * @type {SCNNode}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/scenekit/scnhittestresult/1823463-bonenode
+	     */
+
+	  }, {
+	    key: 'boneNode',
+	    get: function get() {
+	      return this._boneNode;
 	    }
 	  }]);
 
-	  return SCNPhysicsContact;
+	  return SCNHitTestResult;
 	}(_NSObject3.default);
 
-	exports.default = SCNPhysicsContact;
+	exports.default = SCNHitTestResult;
 
 /***/ },
-/* 113 */
+/* 112 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -39790,11 +39901,11 @@ module.exports =
 
 	var _SCNBox2 = _interopRequireDefault(_SCNBox);
 
-	var _SCNPhysicsBodyType = __webpack_require__(114);
+	var _SCNPhysicsBodyType = __webpack_require__(113);
 
 	var _SCNPhysicsBodyType2 = _interopRequireDefault(_SCNPhysicsBodyType);
 
-	var _SCNPhysicsShape = __webpack_require__(115);
+	var _SCNPhysicsShape = __webpack_require__(114);
 
 	var _SCNPhysicsShape2 = _interopRequireDefault(_SCNPhysicsShape);
 
@@ -40305,7 +40416,7 @@ module.exports =
 	exports.default = SCNPhysicsBody;
 
 /***/ },
-/* 114 */
+/* 113 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -40331,7 +40442,7 @@ module.exports =
 	exports.default = SCNPhysicsBodyType;
 
 /***/ },
-/* 115 */
+/* 114 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -40350,7 +40461,7 @@ module.exports =
 
 	var _SCNBox2 = _interopRequireDefault(_SCNBox);
 
-	var _SCNCapsule = __webpack_require__(116);
+	var _SCNCapsule = __webpack_require__(110);
 
 	var _SCNCapsule2 = _interopRequireDefault(_SCNCapsule);
 
@@ -40362,7 +40473,7 @@ module.exports =
 
 	var _SCNNode2 = _interopRequireDefault(_SCNNode);
 
-	var _SCNSphere = __webpack_require__(117);
+	var _SCNSphere = __webpack_require__(115);
 
 	var _SCNSphere2 = _interopRequireDefault(_SCNSphere);
 
@@ -40434,9 +40545,33 @@ module.exports =
 	    var _this = _possibleConstructorReturn(this, (SCNPhysicsShape.__proto__ || Object.getPrototypeOf(SCNPhysicsShape)).call(this));
 
 	    var _options = options;
-	    //if(Array.isArray(_options)){
-	    //  _options = new Map(_options)
-	    //}
+	    if (Array.isArray(options)) {
+	      _options = {};
+	      var _iteratorNormalCompletion = true;
+	      var _didIteratorError = false;
+	      var _iteratorError = undefined;
+
+	      try {
+	        for (var _iterator = options[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+	          var arr = _step.value;
+
+	          _options[arr[0]] = arr[1];
+	        }
+	      } catch (err) {
+	        _didIteratorError = true;
+	        _iteratorError = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion && _iterator.return) {
+	            _iterator.return();
+	          }
+	        } finally {
+	          if (_didIteratorError) {
+	            throw _iteratorError;
+	          }
+	        }
+	      }
+	    }
 
 	    /**
 	     * @type {SCNGeometry}
@@ -40590,6 +40725,14 @@ module.exports =
 	    get: function get() {
 	      return this._options;
 	    }
+	  }, {
+	    key: '_type',
+	    get: function get() {
+	      if (!this._options) {
+	        return null;
+	      }
+	      return this._options[_Option.type];
+	    }
 
 	    /**
 	     * The array of transforms that was used to create a compound shape.
@@ -40642,172 +40785,7 @@ module.exports =
 	exports.default = SCNPhysicsShape;
 
 /***/ },
-/* 116 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
-
-	var _SCNGeometry2 = __webpack_require__(78);
-
-	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
-
-	var _SCNMaterial = __webpack_require__(86);
-
-	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
-
-	var _SCNVector = __webpack_require__(54);
-
-	var _SCNVector2 = _interopRequireDefault(_SCNVector);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	/*global Ammo*/
-
-	/**
-	 * A right circular cylinder geometry whose ends are capped with hemispheres.
-	 * @access public
-	 * @extends {SCNGeometry}
-	 * @see https://developer.apple.com/reference/scenekit/scncapsule
-	 */
-	var SCNCapsule = function (_SCNGeometry) {
-	  _inherits(SCNCapsule, _SCNGeometry);
-
-	  // Creating a Capsule
-
-	  /**
-	   * Creates a capsule geometry with the specified radius and height.
-	   * @access public
-	   * @constructor
-	   * @param {number} capRadius - The radius both of the capsule’s cylindrical body and of its hemispherical ends.
-	   * @param {number} height - The height of the capsule along the y-axis of its local coordinate space.
-	   * @desc The capsule is centered in its local coordinate system. For example, if you create a capsule whose cap radius is 5.0 and height is 20.0, it extends from -10.0 to 10.0 in the y-axis, and the circular cross section at the center of its body extends from -5.0 to 5.0 along the x- and z-axes.
-	   * @see https://developer.apple.com/reference/scenekit/scncapsule/1523790-init
-	   */
-	  function SCNCapsule(capRadius, height) {
-	    _classCallCheck(this, SCNCapsule);
-
-	    // Adjusting a Capsule’s Dimensions
-
-	    /**
-	     * The radius both of the capsule’s circular center cross section and of its hemispherical ends. Animatable.
-	     * @type {number}
-	     * @see https://developer.apple.com/reference/scenekit/scncapsule/1523926-capradius
-	     */
-	    var _this = _possibleConstructorReturn(this, (SCNCapsule.__proto__ || Object.getPrototypeOf(SCNCapsule)).call(this));
-
-	    _this.capRadius = capRadius;
-
-	    /**
-	     * The extent of the capsule along its y-axis. Animatable.
-	     * @type {number}
-	     * @see https://developer.apple.com/reference/scenekit/scncapsule/1522789-height
-	     */
-	    _this.height = height;
-
-	    // Adjusting Geometric Detail
-
-	    /**
-	     * The number of subdivisions around the lateral circumference of the capsule. Animatable.
-	     * @type {number}
-	     * @see https://developer.apple.com/reference/scenekit/scncapsule/1522735-radialsegmentcount
-	     */
-	    _this.radialSegmentCount = 24;
-
-	    /**
-	     * The number of subdivisions in the height of each hemispherical end of the capsule. Animatable.
-	     * @type {number}
-	     * @see https://developer.apple.com/reference/scenekit/scncapsule/1523561-capsegmentcount
-	     */
-	    _this.capSegmentCount = 48;
-
-	    /**
-	     * The number of subdivisions in the sides of the capsule along its y-axis. Animatable.
-	     * @type {number}
-	     * @see https://developer.apple.com/reference/scenekit/scncapsule/1523697-heightsegmentcount
-	     */
-	    _this.heightSegmentCount = 1;
-
-	    _this._createGeometry();
-	    _this.materials.push(new _SCNMaterial2.default());
-	    return _this;
-	  }
-
-	  _createClass(SCNCapsule, [{
-	    key: '_createGeometry',
-	    value: function _createGeometry() {
-	      // TODO: implement
-
-	      this.boundingBox = {
-	        min: new _SCNVector2.default(-this.capRadius, -this.height * 0.5, -this.capRadius),
-	        max: new _SCNVector2.default(this.capRadius, this.height * 0.5, this.capRadius)
-	      };
-	    }
-
-	    /**
-	     * @access private
-	     * @returns {Ammo.btCollisionShape}
-	     * @desc call Ammo.destroy(shape) after using it.
-	     */
-
-	  }, {
-	    key: '_createBtCollisionShape',
-	    value: function _createBtCollisionShape() {}
-	    //const height = (this.height - this.capRadius) * 0.5
-	    //const shape = new Ammo.btCapsuleShape(this.capRadius, height)
-	    //return shape
-
-
-	    /**
-	     * The center point and radius of the object’s bounding sphere.
-	     * @type {Object}
-	     * @parameter {SCNVector3} _boundingSphere.center -
-	     * @parameter {number} _boundingSphere.radius -
-	     * @returns {Object} -
-	     * @desc Scene Kit defines a bounding sphere in the local coordinate space using a center point and a radius. For example, if a node’s bounding sphere has the center point {3, 1, 4} and radius 2.0, all points in the vertex data of node’s geometry (and any geometry attached to its child nodes) lie within 2.0 units of the center point.The coordinates provided when reading this property are valid only if the object has a volume to be measured. For a geometry containing no vertex data or a node containing no geometry (and whose child nodes, if any, contain no geometry), the values center and radius are both zero.
-	     * @see https://developer.apple.com/reference/scenekit/scnboundingvolume/2034707-boundingsphere
-	     */
-
-	  }, {
-	    key: 'getBoundingSphere',
-	    value: function getBoundingSphere() {
-	      var c = new _SCNVector2.default(0, 0, 0);
-	      var r = this.height * 0.5;
-
-	      return { center: c, radius: r };
-	    }
-	  }, {
-	    key: '_updateBoundingBoxForSkinner',
-	    value: function _updateBoundingBoxForSkinner() {
-	      var skinner = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
-
-	      if (skinner === null) {
-	        return this.boundingBox;
-	      }
-	      return _get(SCNCapsule.prototype.__proto__ || Object.getPrototypeOf(SCNCapsule.prototype), '_updateBoundingBoxForSkinner', this).call(this, skinner);
-	    }
-	  }]);
-
-	  return SCNCapsule;
-	}(_SCNGeometry3.default);
-
-	exports.default = SCNCapsule;
-
-/***/ },
-/* 117 */
+/* 115 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41052,7 +41030,63 @@ module.exports =
 	exports.default = SCNSphere;
 
 /***/ },
-/* 118 */
+/* 116 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _NSObject2 = __webpack_require__(2);
+
+	var _NSObject3 = _interopRequireDefault(_NSObject2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	/**
+	 * The abstract superclass for joints, vehicle simulations, and other high-level behaviors that incorporate multiple physics bodies.
+	 * @access public
+	 * @extends {NSObject}
+	 * @see https://developer.apple.com/reference/scenekit/scnphysicsbehavior
+	 */
+	var SCNPhysicsBehavior = function (_NSObject) {
+	  _inherits(SCNPhysicsBehavior, _NSObject);
+
+	  function SCNPhysicsBehavior() {
+	    _classCallCheck(this, SCNPhysicsBehavior);
+
+	    return _possibleConstructorReturn(this, (SCNPhysicsBehavior.__proto__ || Object.getPrototypeOf(SCNPhysicsBehavior)).apply(this, arguments));
+	  }
+
+	  _createClass(SCNPhysicsBehavior, [{
+	    key: 'init',
+
+
+	    /**
+	     * constructor
+	     * @access public
+	     * @returns {void}
+	     */
+	    value: function init() {}
+	  }]);
+
+	  return SCNPhysicsBehavior;
+	}(_NSObject3.default);
+
+	exports.default = SCNPhysicsBehavior;
+
+/***/ },
+/* 117 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -41075,14 +41109,6 @@ module.exports =
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNMatrix = __webpack_require__(56);
-
-	var _SCNMatrix2 = _interopRequireDefault(_SCNMatrix);
-
-	var _CGPoint = __webpack_require__(7);
-
-	var _CGPoint2 = _interopRequireDefault(_CGPoint);
-
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -41092,183 +41118,214 @@ module.exports =
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 	/**
-	 * Detailed information about a result from searching for elements of a scene located at a specified point, or along a specified line segment (or ray).
+	 * Detailed information about a contact between two physics bodies in a scene’s physics simulation. 
 	 * @access public
 	 * @extends {NSObject}
-	 * @see https://developer.apple.com/reference/scenekit/scnhittestresult
+	 * @see https://developer.apple.com/reference/scenekit/scnphysicscontact
 	 */
-	var SCNHitTestResult = function (_NSObject) {
-	  _inherits(SCNHitTestResult, _NSObject);
+	var SCNPhysicsContact = function (_NSObject) {
+	  _inherits(SCNPhysicsContact, _NSObject);
 
 	  /**
 	   * constructor
 	   * @access public
 	   * @constructor
 	   */
-	  function SCNHitTestResult() {
-	    _classCallCheck(this, SCNHitTestResult);
+	  function SCNPhysicsContact() {
+	    _classCallCheck(this, SCNPhysicsContact);
 
-	    // Retrieving Information About a Hit-Test Result
+	    // Inspecting the Contact Properties
 
-	    var _this = _possibleConstructorReturn(this, (SCNHitTestResult.__proto__ || Object.getPrototypeOf(SCNHitTestResult)).call(this));
+	    var _this = _possibleConstructorReturn(this, (SCNPhysicsContact.__proto__ || Object.getPrototypeOf(SCNPhysicsContact)).call(this));
 
-	    _this._node = null;
-	    _this._geometryIndex = 0;
-	    _this._faceIndex = 0;
-	    _this._localCoordinates = null;
-	    _this._worldCoordinates = null;
-	    _this._localNormal = null;
-	    _this._worldNormal = null;
-	    _this._modelTransform = null;
-
-	    // Instance Properties
-
-	    _this._boneNode = null;
+	    _this._nodeA = null;
+	    _this._nodeB = null;
+	    _this._contactPoint = null;
+	    _this._contactNormal = null;
+	    _this._collisionImpulse = 0;
+	    _this._penetrationDistance = 0;
 	    return _this;
 	  }
 
-	  // Retrieving Information About a Hit-Test Result
+	  // Inspecting the Contact Properties
 
 	  /**
-	   * Returns the texture coordinates at the point of intersection for the specified texture mapping channel.
-	   * @access public
-	   * @param {number} channel - The index of the mapping channel in which to look up texture coordinates.
-	   * @returns {CGPoint} - 
-	   * @desc An SCNGeometry object can contain multiple sources of texture coordinates, or texture mapping channels. (With multiple channels, you can map texture images for different material properties in different ways.) To use the texture coordinates of a hit-test result, specify which texture coordinate source to look up coordinates in. For example, to add “scorch marks” to a game character hit by a laser, you might modify a texture image mapped to the multiply property of the geometry’s material. Use the mappingChannel index from that material property as the channel parameter when calling textureCoordinates(withMappingChannel:) to ensure that you modify the correct location in the texture image.
-	   * @see https://developer.apple.com/reference/scenekit/scnhittestresult/1522771-texturecoordinates
+	   * The node containing the first body in the contact.
+	   * @type {SCNNode}
+	   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.
+	   * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1523445-nodea
 	   */
 
 
-	  _createClass(SCNHitTestResult, [{
-	    key: 'textureCoordinatesWithMappingChannel',
-	    value: function textureCoordinatesWithMappingChannel(channel) {
-	      return null;
+	  _createClass(SCNPhysicsContact, [{
+	    key: 'nodeA',
+	    get: function get() {
+	      return this._nodeA;
 	    }
 
 	    /**
-	     * The node whose geometry intersects the search ray.
+	     * The node containing the second body in the contact.
 	     * @type {SCNNode}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/scenekit/scnhittestresult/1523256-node
+	     * @desc Use the node’s physicsBody property to examine physics characteristics of the node.
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1524232-nodeb
 	     */
 
 	  }, {
-	    key: 'node',
+	    key: 'nodeB',
 	    get: function get() {
-	      return this._node;
+	      return this._nodeB;
 	    }
 
 	    /**
-	     * The index of the geometry element whose surface the search ray intersects.
+	     * The contact point between the two physics bodies, in scene coordinates.
+	     * @type {SCNVector3}
+	     * @desc 
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1523810-contactpoint
+	     */
+
+	  }, {
+	    key: 'contactPoint',
+	    get: function get() {
+	      return this._contactPoint;
+	    }
+
+	    /**
+	     * The normal vector at the contact point between the two physics bodies, in scene coordinates.
+	     * @type {SCNVector3}
+	     * @desc This vector tells you which direction the bodies were moving relative to one another at the time of the collision. For example, in a game you can examine this vector to have enemy characters take damage when struck from above by the player character but damage the player character instead when they collide side-to-side.
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1522833-contactnormal
+	     */
+
+	  }, {
+	    key: 'contactNormal',
+	    get: function get() {
+	      return this._contactNormal;
+	    }
+
+	    /**
+	     * The force over time of the collision, in newton-seconds.
 	     * @type {number}
-	     * @desc Every SCNGeometry object contains one or more SCNGeometryElement objects that define how its vertices connect to form a surface. This property provides the index of the geometry element intersecting the search ray. For more information about that geometry element, use the geometry’s geometryElement(at:) method.
-	     * @see https://developer.apple.com/reference/scenekit/scnhittestresult/1522625-geometryindex
+	     * @desc This property’s value tells you how hard the bodies struck each other in a collision. For example, in a game you might allow a character to proceed unhindered after a minor collision, but take damage when struck with sufficient force.
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1523944-collisionimpulse
 	     */
 
 	  }, {
-	    key: 'geometryIndex',
+	    key: 'collisionImpulse',
 	    get: function get() {
-	      return this._geometryIndex;
+	      return this._collisionImpulse;
 	    }
 
 	    /**
-	     * The index of the primitive in the geomety element intersected by the search ray.
+	     * The distance of overlap, in units of scene coordinate space, between the two physics bodies.
 	     * @type {number}
 	     * @desc 
-	     * @see https://developer.apple.com/reference/scenekit/scnhittestresult/1522888-faceindex
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1522870-penetrationdistance
 	     */
 
 	  }, {
-	    key: 'faceIndex',
+	    key: 'penetrationDistance',
 	    get: function get() {
-	      return this._faceIndex;
-	    }
-
-	    /**
-	     * The point of intersection between the geometry and the search ray, in the local coordinate system of the node containing the geometry.
-	     * @type {SCNVector3}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/scenekit/scnhittestresult/1523032-localcoordinates
-	     */
-
-	  }, {
-	    key: 'localCoordinates',
-	    get: function get() {
-	      return this._localCoordinates;
-	    }
-
-	    /**
-	     * The point of intersection between the geometry and the search ray, in the scene’s world coordinate system.
-	     * @type {SCNVector3}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/scenekit/scnhittestresult/1523058-worldcoordinates
-	     */
-
-	  }, {
-	    key: 'worldCoordinates',
-	    get: function get() {
-	      return this._worldCoordinates;
-	    }
-
-	    /**
-	     * The surface normal vector at the point of intersection, in the local coordinate system of the node containing the geometry intersected by the search ray.
-	     * @type {SCNVector3}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/scenekit/scnhittestresult/1523953-localnormal
-	     */
-
-	  }, {
-	    key: 'localNormal',
-	    get: function get() {
-	      return this._localNormal;
-	    }
-
-	    /**
-	     * The surface normal vector at the point of intersection, in the scene’s world coordinate system.
-	     * @type {SCNVector3}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/scenekit/scnhittestresult/1524066-worldnormal
-	     */
-
-	  }, {
-	    key: 'worldNormal',
-	    get: function get() {
-	      return this._worldNormal;
-	    }
-
-	    /**
-	     * The world transform matrix of the node containing the intersection.
-	     * @type {SCNMatrix4}
-	     * @desc Use this matrix to transform vectors from the local coordinate space of the node whose geometry is intersected by the search ray to the scene’s world coordinate system.
-	     * @see https://developer.apple.com/reference/scenekit/scnhittestresult/1523496-modeltransform
-	     */
-
-	  }, {
-	    key: 'modelTransform',
-	    get: function get() {
-	      return this._modelTransform;
-	    }
-
-	    // Instance Properties
-
-	    /**
-	     * 
-	     * @type {SCNNode}
-	     * @desc 
-	     * @see https://developer.apple.com/reference/scenekit/scnhittestresult/1823463-bonenode
-	     */
-
-	  }, {
-	    key: 'boneNode',
-	    get: function get() {
-	      return this._boneNode;
+	      return this._penetrationDistance;
 	    }
 	  }]);
 
-	  return SCNHitTestResult;
+	  return SCNPhysicsContact;
 	}(_NSObject3.default);
 
-	exports.default = SCNHitTestResult;
+	exports.default = SCNPhysicsContact;
+
+/***/ },
+/* 118 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _SCNPhysicsWorld = __webpack_require__(109);
+
+	var _SCNPhysicsWorld2 = _interopRequireDefault(_SCNPhysicsWorld);
+
+	var _SCNPhysicsContact = __webpack_require__(117);
+
+	var _SCNPhysicsContact2 = _interopRequireDefault(_SCNPhysicsContact);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	/**
+	 * Methods you can implement to respond when a contact or collision occurs between two physics bodies in a scene.
+	 * @interface
+	 * @see https://developer.apple.com/reference/scenekit/scnphysicscontactdelegate
+	 */
+	var SCNPhysicsContactDelegate = function () {
+	  function SCNPhysicsContactDelegate() {
+	    _classCallCheck(this, SCNPhysicsContactDelegate);
+	  }
+
+	  _createClass(SCNPhysicsContactDelegate, [{
+	    key: 'init',
+
+
+	    /**
+	     * constructor
+	     * @access public
+	     * @returns {void}
+	     */
+	    value: function init() {}
+
+	    // Responding to Contact Events
+
+	    /**
+	     * Tells the delegate that two bodies have come into contact.
+	     * @access public
+	     * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.
+	     * @param {SCNPhysicsContact} contact - An object that describes the contact.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicscontactdelegate/1512835-physicsworld
+	     */
+
+	  }, {
+	    key: 'physicsWorldDidBegin',
+	    value: function physicsWorldDidBegin(world, contact) {}
+
+	    /**
+	     * Tells the delegate that new information is available about an ongoing contact.
+	     * @access public
+	     * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.
+	     * @param {SCNPhysicsContact} contact - An object that describes the contact.
+	     * @returns {void}
+	     * @desc SceneKit calls this method on each step of the physics simulation (see the timeStep property) if information about the contact changes—for example, if two bodies are sliding against one another.
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicscontactdelegate/1512865-physicsworld
+	     */
+
+	  }, {
+	    key: 'physicsWorldDidUpdate',
+	    value: function physicsWorldDidUpdate(world, contact) {}
+
+	    /**
+	     * Tells the delegate that a contact has ended.
+	     * @access public
+	     * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.
+	     * @param {SCNPhysicsContact} contact - An object that describes the contact.
+	     * @returns {void}
+	     * @see https://developer.apple.com/reference/scenekit/scnphysicscontactdelegate/1512883-physicsworld
+	     */
+
+	  }, {
+	    key: 'physicsWorldDidEnd',
+	    value: function physicsWorldDidEnd(world, contact) {}
+	  }]);
+
+	  return SCNPhysicsContactDelegate;
+	}();
+
+	exports.default = SCNPhysicsContactDelegate;
 
 /***/ },
 /* 119 */
@@ -42501,6 +42558,12 @@ module.exports =
 	              var v = new _SCNVector2.default(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5).normalize();
 	              pVec = v.mul(this.emitterShape.radius);
 	              vVec = v;
+	              break;
+	            }
+	          case 'SCNPlane':
+	            {
+	              pVec = new _SCNVector2.default((Math.random() - 0.5) * this.width, (Math.random() - 0.5) * this.height, 0.0);
+	              vVec = new _SCNVector2.default(0, 0, 1);
 	              break;
 	            }
 	          default:
@@ -52512,11 +52575,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNPhysicsBehavior2 = __webpack_require__(110);
+	var _SCNPhysicsBehavior2 = __webpack_require__(116);
 
 	var _SCNPhysicsBehavior3 = _interopRequireDefault(_SCNPhysicsBehavior2);
 
-	var _SCNPhysicsBody = __webpack_require__(113);
+	var _SCNPhysicsBody = __webpack_require__(112);
 
 	var _SCNPhysicsBody2 = _interopRequireDefault(_SCNPhysicsBody);
 
@@ -52718,11 +52781,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNPhysicsBehavior2 = __webpack_require__(110);
+	var _SCNPhysicsBehavior2 = __webpack_require__(116);
 
 	var _SCNPhysicsBehavior3 = _interopRequireDefault(_SCNPhysicsBehavior2);
 
-	var _SCNPhysicsBody = __webpack_require__(113);
+	var _SCNPhysicsBody = __webpack_require__(112);
 
 	var _SCNPhysicsBody2 = _interopRequireDefault(_SCNPhysicsBody);
 
@@ -52849,11 +52912,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNPhysicsBehavior2 = __webpack_require__(110);
+	var _SCNPhysicsBehavior2 = __webpack_require__(116);
 
 	var _SCNPhysicsBehavior3 = _interopRequireDefault(_SCNPhysicsBehavior2);
 
-	var _SCNPhysicsBody = __webpack_require__(113);
+	var _SCNPhysicsBody = __webpack_require__(112);
 
 	var _SCNPhysicsBody2 = _interopRequireDefault(_SCNPhysicsBody);
 
@@ -53041,11 +53104,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SCNPhysicsBehavior2 = __webpack_require__(110);
+	var _SCNPhysicsBehavior2 = __webpack_require__(116);
 
 	var _SCNPhysicsBehavior3 = _interopRequireDefault(_SCNPhysicsBehavior2);
 
-	var _SCNPhysicsBody = __webpack_require__(113);
+	var _SCNPhysicsBody = __webpack_require__(112);
 
 	var _SCNPhysicsBody2 = _interopRequireDefault(_SCNPhysicsBody);
 
@@ -53377,6 +53440,26 @@ module.exports =
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
 
+	var _SCNGeometrySource = __webpack_require__(81);
+
+	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
+
+	var _SCNGeometryElement = __webpack_require__(83);
+
+	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
+
+	var _SCNGeometryPrimitiveType = __webpack_require__(84);
+
+	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
+
+	var _SCNMaterial = __webpack_require__(86);
+
+	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
+
+	var _SCNVector = __webpack_require__(54);
+
+	var _SCNVector2 = _interopRequireDefault(_SCNVector);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -53427,7 +53510,10 @@ module.exports =
 
 	  }]);
 
-	  function SCNPlane(width, height) {
+	  function SCNPlane() {
+	    var width = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1.0;
+	    var height = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1.0;
+
 	    _classCallCheck(this, SCNPlane);
 
 	    // Adjusting a Plane’s Dimensions
@@ -53437,16 +53523,16 @@ module.exports =
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnplane/1523782-width
 	     */
-	    var _this = _possibleConstructorReturn(this, (SCNPlane.__proto__ || Object.getPrototypeOf(SCNPlane)).call(this));
+	    var _this = _possibleConstructorReturn(this, (SCNPlane.__proto__ || Object.getPrototypeOf(SCNPlane)).call(this, [], []));
 
-	    _this.width = 0;
+	    _this.width = width;
 
 	    /**
 	     * The extent of the plane along its vertical axis. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnplane/1522837-height
 	     */
-	    _this.height = 0;
+	    _this.height = height;
 
 	    // Adjusting Geometric Detail
 
@@ -53455,14 +53541,14 @@ module.exports =
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnplane/1523991-widthsegmentcount
 	     */
-	    _this.widthSegmentCount = 0;
+	    _this.widthSegmentCount = 1;
 
 	    /**
 	     * The number of subdivisions in the plane’s surface along its vertical axis. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnplane/1522889-heightsegmentcount
 	     */
-	    _this.heightSegmentCount = 0;
+	    _this.heightSegmentCount = 1;
 
 	    // Adding Rounded Corners
 
@@ -53478,10 +53564,84 @@ module.exports =
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scnplane/1524234-cornersegmentcount
 	     */
-	    _this.cornerSegmentCount = 0;
+	    _this.cornerSegmentCount = 10;
 
+	    _this._createGeometry();
+	    _this.materials.push(new _SCNMaterial2.default());
 	    return _this;
 	  }
+
+	  _createClass(SCNPlane, [{
+	    key: '_createGeometry',
+	    value: function _createGeometry() {
+	      var sourceData = [];
+	      var indexData = [];
+
+	      // TODO: chamfer
+	      var wStep = 1.0 / this.widthSegmentCount;
+	      for (var i = 0; i <= this.heightSegmentCount; i++) {
+	        var ty = i / this.heightSegmentCount;
+	        var y = (-0.5 + ty) * this.height;
+	        for (var j = 0; j <= this.widthSegmentCount; j++) {
+	          var tx = j / this.widthSegmentCount;
+	          var x = (-0.5 + tx) * this.width;
+
+	          sourceData.push(x, y, 0.0 // position
+	          );sourceData.push(0.0, 0.0, 1.0 // normal
+	          );sourceData.push(tx, ty // texcoord
+	          );
+	        }
+	      }
+
+	      var numSegments = this.widthSegmentCount * this.heightSegmentCount;
+	      for (var _i = 0; _i < numSegments; _i++) {
+	        var index = _i * 4;
+	        indexData.push(index, index + 3, index + 1);
+	        indexData.push(index, index + 2, index + 3);
+	      }
+
+	      var vectorCount = (this.widthSegmentCount + 1) * (this.heightSegmentCount + 1);
+
+	      var vertexSource = new _SCNGeometrySource2.default(sourceData, // data
+	      _SCNGeometrySource2.default.Semantic.vertex, // semantic
+	      vectorCount, // vectorCount
+	      true, // floatComponents
+	      3, // componentsPerVector
+	      4, // bytesPerComponent
+	      0, // offset
+	      32 // sride
+	      );
+
+	      var normalSource = new _SCNGeometrySource2.default(sourceData, // data
+	      _SCNGeometrySource2.default.Semantic.normal, // semantic
+	      vectorCount, // vectorCount
+	      true, // floatComponents
+	      3, // componentsPerVector
+	      4, // bytesPerComponent
+	      12, // offset
+	      32 // stride
+	      );
+
+	      var texcoordSource = new _SCNGeometrySource2.default(sourceData, // data
+	      _SCNGeometrySource2.default.Semantic.texcoord, // semantic
+	      vectorCount, // vectorCount
+	      true, // floatComponents
+	      2, // componentsPerVector
+	      4, // bytesPerComponent
+	      24, // offset
+	      32 // stride
+	      );
+
+	      var element = new _SCNGeometryElement2.default(indexData, _SCNGeometryPrimitiveType2.default.triangles);
+
+	      this._geometryElements = [element];
+	      this._geometrySources = [vertexSource, normalSource, texcoordSource];
+	      this.boundingBox = {
+	        min: new _SCNVector2.default(-0.5 * this.width, -0.5 * this.height, 0.0),
+	        max: new _SCNVector2.default(0.5 * this.width, 0.5 * this.height, 0.0)
+	      };
+	    }
+	  }]);
 
 	  return SCNPlane;
 	}(_SCNGeometry3.default);

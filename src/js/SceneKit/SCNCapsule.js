@@ -113,5 +113,4 @@ export default class SCNCapsule extends SCNGeometry {
     }
     return super._updateBoundingBoxForSkinner(skinner)
   }
-
 }

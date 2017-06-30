@@ -61,7 +61,8 @@ export default class SCNLight extends NSObject {
       shouldBakeDirectLighting: ['boolean', null],
       baked: ['boolean', null],
       goboProjectShadows: ['boolean', null],
-      shadowSampleCount2: ['integer', null]
+      shadowSampleCount2: ['integer', null],
+      sphericalHarmonics: ['NSMutableData', null]
     }
   }
 

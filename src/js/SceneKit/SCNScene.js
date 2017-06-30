@@ -278,7 +278,7 @@ You call this method in a try expression and handle any errors in the catch clau
    * @see https://developer.apple.com/reference/scenekit/scnscene/1523355-init
    */
   static sceneNamed(name) {
-    
+    return this.sceneNamedInDirectory(name)
   }
 
   /**
@@ -292,6 +292,11 @@ You call this method in a try expression and handle any errors in the catch clau
    * @see https://developer.apple.com/reference/scenekit/scnscene/1522851-init
    */
   static sceneNamedInDirectory(name, directory, options = null) {
+    let path = name
+    if(directory){
+      path = directory + '/' + name
+    }
+    return new SCNScene(path, options)
   }
 
   /**

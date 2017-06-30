@@ -54,9 +54,12 @@ export default class SCNPhysicsShape extends NSObject {
     super()
 
     let _options = options
-    //if(Array.isArray(_options)){
-    //  _options = new Map(_options)
-    //}
+    if(Array.isArray(options)){
+      _options = {}
+      for(const arr of options){
+        _options[arr[0]] = arr[1]
+      }
+    }
 
     /**
      * @type {SCNGeometry}
@@ -184,6 +187,13 @@ export default class SCNPhysicsShape extends NSObject {
    */
   get options() {
     return this._options
+  }
+
+  get _type() {
+    if(!this._options){
+      return null
+    }
+    return this._options[_Option.type]
   }
 
   /**
