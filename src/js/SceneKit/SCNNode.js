@@ -1491,6 +1491,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @see https://developer.apple.com/reference/scenekit/scnactionable/1524219-runaction
    */
   runActionCompletionHandler(action, block = null) {
+    this.runActionForKeyCompletionHandler(action, Symbol(), block)
   }
 
   /**

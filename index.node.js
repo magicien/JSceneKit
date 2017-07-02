@@ -23143,6 +23143,8 @@ module.exports =
 	    key: 'runActionCompletionHandler',
 	    value: function runActionCompletionHandler(action) {
 	      var block = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
+
+	      this.runActionForKeyCompletionHandler(action, Symbol(), block);
 	    }
 
 	    /**
@@ -31414,7 +31416,7 @@ module.exports =
 	      var cameraData = [];
 	      var cameraNode = this._getCameraNode();
 	      cameraNode._updateWorldTransform();
-	      var cameraPNode = cameraNode.presentation;
+	      var cameraPNode = cameraNode.presentation || cameraNode;
 	      var camera = cameraPNode.camera;
 	      camera._updateProjectionTransform(this._viewRect);
 
@@ -48164,12 +48166,12 @@ module.exports =
 	        this._source._play();
 	        this._isRunning = true;
 	      }
-	      if (this._duration <= 0 && this._source._duration > 0) {
+	      if (this._duration <= 0 || this._source._duration > 0) {
 	        this._duration = this._source._duration;
 	      }
 	      var t = this._getTime(time, needTimeConversion);
 
-	      if (!this.wait) {
+	      if (!this._wait) {
 	        this._finished = true;
 	      } else if (!this._source.loops && t >= 1) {
 	        this._finished = true;
@@ -49908,9 +49910,33 @@ module.exports =
 	  value: true
 	});
 
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
+
 	var _SCNGeometry2 = __webpack_require__(75);
 
 	var _SCNGeometry3 = _interopRequireDefault(_SCNGeometry2);
+
+	var _SCNGeometryElement = __webpack_require__(80);
+
+	var _SCNGeometryElement2 = _interopRequireDefault(_SCNGeometryElement);
+
+	var _SCNGeometryPrimitiveType = __webpack_require__(81);
+
+	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
+
+	var _SCNGeometrySource = __webpack_require__(78);
+
+	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
+
+	var _SCNMaterial = __webpack_require__(83);
+
+	var _SCNMaterial2 = _interopRequireDefault(_SCNMaterial);
+
+	var _SCNVector = __webpack_require__(51);
+
+	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -49940,7 +49966,10 @@ module.exports =
 	   * @desc The cylinder is centered in its local coordinate system. For example, if you create a cylinder whose radius is 5.0 and height is 10.0, its circular cross section extends from -5.0 to 5.0 along the x- and z-axes, and the y-coordinates of its base and top are -5.0 and 5.0, respectively.
 	   * @see https://developer.apple.com/reference/scenekit/scncylinder/1523685-init
 	   */
-	  function SCNCylinder(radius, height) {
+	  function SCNCylinder() {
+	    var radius = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0.5;
+	    var height = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : 1.0;
+
 	    _classCallCheck(this, SCNCylinder);
 
 	    // Adjusting a Cylinder’s Dimensions
@@ -49950,7 +49979,7 @@ module.exports =
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scncylinder/1522674-radius
 	     */
-	    var _this = _possibleConstructorReturn(this, (SCNCylinder.__proto__ || Object.getPrototypeOf(SCNCylinder)).call(this));
+	    var _this = _possibleConstructorReturn(this, (SCNCylinder.__proto__ || Object.getPrototypeOf(SCNCylinder)).call(this, [], []));
 
 	    _this.radius = radius;
 
@@ -49968,16 +49997,146 @@ module.exports =
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scncylinder/1524002-radialsegmentcount
 	     */
-	    _this.radialSegmentCount = 0;
+	    _this.radialSegmentCount = 48;
 
 	    /**
 	     * The number of subdivisions in the sides of the cylinder along its y-axis. Animatable.
 	     * @type {number}
 	     * @see https://developer.apple.com/reference/scenekit/scncylinder/1523330-heightsegmentcount
 	     */
-	    _this.heightSegmentCount = 0;
+	    _this.heightSegmentCount = 1;
+
+	    _this._createGeometry();
+	    _this.materials.push(new _SCNMaterial2.default());
 	    return _this;
 	  }
+
+	  _createClass(SCNCylinder, [{
+	    key: '_createGeometry',
+	    value: function _createGeometry() {
+	      var sourceData = [];
+
+	      var top = this.height * 0.5;
+	      var bottom = -this.height * 0.5;
+
+	      var sideData = [];
+	      var topData = [];
+	      var bottomData = [];
+
+	      var rStep = 2.0 * Math.PI / this.radialSegmentCount;
+	      var tStep = 1.0 / this.radialSegmentCount;
+	      for (var i = 0; i <= this.radialSegmentCount; i++) {
+	        var x = -Math.sin(rStep * i);
+	        var z = -Math.cos(rStep * i);
+	        var vx = x * this.radius;
+	        var vz = z * this.radius;
+
+	        // vertex
+	        sideData.push(vx, bottom, vz);
+	        topData.push(vx, top, vz);
+	        bottomData.push(-vx, bottom, vz
+
+	        // normal
+	        );sideData.push(x, 0, z);
+	        topData.push(0, 1, 0);
+	        bottomData.push(0, -1, 0
+
+	        // texcoord
+	        );var tx = tStep * i;
+	        sideData.push(tx, 1.0);
+
+	        var ttx = (1 + Math.cos(tStep * Math.PI)) * 0.5;
+	        var tty = (1 + Math.sin(tStep * Math.PI)) * 0.5;
+	        topData.push(ttx, tty);
+	        bottomData.push(ttx, tty
+
+	        // vertex
+	        );sideData.push(vx, top, vz);
+	        topData.push(0, top, 0);
+	        bottomData.push(0, bottom, 0
+
+	        // normal
+	        );sideData.push(x, 0, z);
+	        topData.push(0, 1, 0);
+	        bottomData.push(0, -1, 0
+
+	        // texcoord
+	        );sideData.push(tx, 0.0);
+	        topData.push(0.5, 0.5);
+	        bottomData.push(0.5, 0.5);
+	      }
+	      sourceData.push.apply(sourceData, sideData.concat(topData, bottomData));
+
+	      var vectorCount = (this.radialSegmentCount + 1) * 6;
+	      var vertexSource = new _SCNGeometrySource2.default(sourceData, // data
+	      _SCNGeometrySource2.default.Semantic.vertex, // semantic
+	      vectorCount, // vectorCount
+	      true, // floatComponents
+	      3, // componentsPerVector
+	      4, // bytesPerComponent
+	      0, // offset
+	      32 // sride
+	      );
+
+	      var normalSource = new _SCNGeometrySource2.default(sourceData, // data
+	      _SCNGeometrySource2.default.Semantic.normal, // semantic
+	      vectorCount, // vectorCount
+	      true, // floatComponents
+	      3, // componentsPerVector
+	      4, // bytesPerComponent
+	      12, // offset
+	      32 // stride
+	      );
+
+	      var texcoordSource = new _SCNGeometrySource2.default(sourceData, // data
+	      _SCNGeometrySource2.default.Semantic.texcoord, // semantic
+	      vectorCount, // vectorCount
+	      true, // floatComponents
+	      2, // componentsPerVector
+	      4, // bytesPerComponent
+	      24, // offset
+	      32 // stride
+	      );
+
+	      var elements = [];
+	      var indexData0 = [];
+	      var indexData1 = [];
+	      var indexData2 = [];
+	      var offset1 = (this.radialSegmentCount + 1) * 2;
+	      var offset2 = (this.radialSegmentCount + 1) * 4;
+	      for (var _i = 0; _i < this.radialSegmentCount; _i++) {
+	        var base0 = _i * 2;
+	        indexData0.push(base0, base0 + 3, base0 + 1);
+	        indexData0.push(base0, base0 + 2, base0 + 3);
+
+	        var base1 = offset1 + base0;
+	        indexData1.push(base1, base1 + 2, base1 + 3);
+
+	        var base2 = offset2 + base0;
+	        indexData2.push(base2, base2 + 2, base2 + 3);
+	      }
+	      elements.push(new _SCNGeometryElement2.default(indexData0, _SCNGeometryPrimitiveType2.default.triangles));
+	      elements.push(new _SCNGeometryElement2.default(indexData1, _SCNGeometryPrimitiveType2.default.triangles));
+	      elements.push(new _SCNGeometryElement2.default(indexData2, _SCNGeometryPrimitiveType2.default.triangles));
+
+	      this._geometryElements = elements;
+	      this._geometrySources = [vertexSource, normalSource, texcoordSource];
+	      this.boundingBox = {
+	        min: new _SCNVector2.default(-this.radius, bottom, -this.radius),
+	        max: new _SCNVector2.default(this.radius, top, this.radius)
+	      };
+	    }
+	  }, {
+	    key: '_updateBoundingBoxForSkinner',
+	    value: function _updateBoundingBoxForSkinner() {
+	      var skinner = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : null;
+
+	      if (skinner === null) {
+	        return this.boundingBox;
+	      }
+	      return _get(SCNCylinder.prototype.__proto__ || Object.getPrototypeOf(SCNCylinder.prototype), '_updateBoundingBoxForSkinner', this).call(this, skinner);
+	    }
+	  }]);
 
 	  return SCNCylinder;
 	}(_SCNGeometry3.default);

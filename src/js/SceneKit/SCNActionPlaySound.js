@@ -80,12 +80,12 @@ export default class SCNActionPlaySound extends SCNAction {
       this._source._play()
       this._isRunning = true
     }
-    if(this._duration <= 0 && this._source._duration > 0){
+    if(this._duration <= 0 || this._source._duration > 0){
       this._duration = this._source._duration
     }
     const t = this._getTime(time, needTimeConversion)
 
-    if(!this.wait){
+    if(!this._wait){
       this._finished = true
     }else if(!this._source.loops && t >= 1){
       this._finished = true

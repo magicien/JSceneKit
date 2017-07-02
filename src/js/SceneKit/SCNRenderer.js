@@ -1264,7 +1264,7 @@ export default class SCNRenderer extends NSObject {
     const cameraData = []
     const cameraNode = this._getCameraNode()
     cameraNode._updateWorldTransform()
-    const cameraPNode = cameraNode.presentation
+    const cameraPNode = cameraNode.presentation || cameraNode
     const camera = cameraPNode.camera
     camera._updateProjectionTransform(this._viewRect)
 
