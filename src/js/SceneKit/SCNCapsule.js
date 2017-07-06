@@ -1,6 +1,9 @@
 'use strict'
 
 import SCNGeometry from './SCNGeometry'
+import SCNGeometryElement from './SCNGeometryElement'
+import SCNGeometryPrimitiveType from './SCNGeometryPrimitiveType'
+import SCNGeometrySource from './SCNGeometrySource'
 import SCNMaterial from './SCNMaterial'
 import SCNVector3 from './SCNVector3'
 /*global Ammo*/
@@ -24,8 +27,8 @@ export default class SCNCapsule extends SCNGeometry {
    * @desc The capsule is centered in its local coordinate system. For example, if you create a capsule whose cap radius is 5.0 and height is 20.0, it extends from -10.0 to 10.0 in the y-axis, and the circular cross section at the center of its body extends from -5.0 to 5.0 along the x- and z-axes.
    * @see https://developer.apple.com/reference/scenekit/scncapsule/1523790-init
    */
-  constructor(capRadius, height) {
-    super()
+  constructor(capRadius = 0.5, height = 2.0) {
+    super([], [])
 
     // Adjusting a Capsule’s Dimensions
 
@@ -72,7 +75,91 @@ export default class SCNCapsule extends SCNGeometry {
   }
 
   _createGeometry() {
-    // TODO: implement
+    const sourceData = []
+    const indexData = []
+    const vectorCount = (this.segmentCount + 1) * (this.segmentCount + 4)
+    const primitiveCount = this.segmentCount * this.segmentCount * 2
+
+    const yNom = []
+    const ySin = []
+    for(let lat=0; lat<=this.segmentCount; lat++){
+      yNom.push(-Math.cos(Math.PI * lat / this.segmentCount))
+      ySin.push(Math.sin(Math.PI * lat / this.segmentCount))
+    }
+
+    for(let lng=0; lng<=this.segmentCount; lng++){
+      const x = -Math.sin(2.0 * Math.PI * lng / this.segmentCount)
+      const z = -Math.cos(2.0 * Math.PI * lng / this.segmentCount)
+      for(let lat=0; lat<=this.segmentCount; lat++){
+        const xNom = x * ySin[lat]
+        const zNom = z * ySin[lat]
+
+        // vertex
+        sourceData.push(xNom * this.radius, yNom[lat] * this.radius, zNom * this.radius)
+
+        // normal
+        sourceData.push(xNom, yNom[lat], zNom)
+
+        // texcoord
+        sourceData.push(lng / 24.0, 1.0 - lat / 24.0)
+      }
+    }
+
+
+    // index
+    for(let i=0; i<this.segmentCount; i++){
+      let index1 = i * (this.segmentCount + 4)
+      let index2 = index1 + this.segmentCount + 5
+
+      indexData.push(index1, index2, index1 + 1)
+      index1 += 1
+      for(let j=0; j<this.segmentCount-1; j++){
+        indexData.push(index1, index2 + 1, index1 + 1)
+        indexData.push(index1, index2, index2 + 1)
+        index1 += 1
+        index2 += 1
+      }
+      indexData.push(index1, index2, index2 + 1)
+    }
+
+
+    const vertexSource = new SCNGeometrySource(
+      sourceData, // data
+      SCNGeometrySource.Semantic.vertex, // semantic
+      vectorCount, // vectorCount
+      true, // floatComponents
+      3, // componentsPerVector
+      4, // bytesPerComponent
+      0, // offset
+      32 // sride
+    )
+
+    const normalSource = new SCNGeometrySource(
+      sourceData, // data
+      SCNGeometrySource.Semantic.normal, // semantic
+      vectorCount, // vectorCount
+      true, // floatComponents
+      3, // componentsPerVector
+      4, // bytesPerComponent
+      12, // offset
+      32 // stride
+    )
+
+    const texcoordSource = new SCNGeometrySource(
+      sourceData, // data
+      SCNGeometrySource.Semantic.texcoord, // semantic
+      vectorCount, // vectorCount
+      true, // floatComponents
+      2, // componentsPerVector
+      4, // bytesPerComponent
+      24, // offset
+      32 // stride
+    )
+
+    const element = new SCNGeometryElement(indexData, SCNGeometryPrimitiveType.triangles)
+
+    this._geometryElements = [element]
+    this._geometrySources = [vertexSource, normalSource, texcoordSource]
 
     this.boundingBox = {
       min: new SCNVector3(-this.capRadius, -this.height * 0.5, -this.capRadius),

@@ -114,15 +114,15 @@ export default class SCNPlane extends SCNGeometry {
 
         sourceData.push(x, y, 0.0) // position
         sourceData.push(0.0, 0.0, 1.0) // normal
-        sourceData.push(tx, ty) // texcoord
+        sourceData.push(tx, 1.0 - ty) // texcoord
       }
     }
 
     const numSegments = this.widthSegmentCount * this.heightSegmentCount
     for(let i=0; i<numSegments; i++){
       const index = i * 4
-      indexData.push(index, index + 3, index + 1)
-      indexData.push(index, index + 2, index + 3)
+      indexData.push(index, index + 1, index + 3)
+      indexData.push(index, index + 3, index + 2)
     }
 
     const vectorCount = (this.widthSegmentCount + 1) * (this.heightSegmentCount + 1)

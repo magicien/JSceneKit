@@ -98,8 +98,8 @@ export default class SCNCylinder extends SCNGeometry {
       const tx = tStep * i
       sideData.push(tx, 1.0)
 
-      const ttx = (1 + Math.cos(tStep * Math.PI)) * 0.5
-      const tty = (1 + Math.sin(tStep * Math.PI)) * 0.5
+      const ttx = (1 + Math.cos(i * rStep)) * 0.5
+      const tty = (1 + Math.sin(i * rStep)) * 0.5
       topData.push(ttx, tty)
       bottomData.push(ttx, tty)
 
@@ -155,9 +155,9 @@ export default class SCNCylinder extends SCNGeometry {
     )
 
     const elements = []
-    let indexData0 = []
-    let indexData1 = []
-    let indexData2 = []
+    const indexData0 = []
+    const indexData1 = []
+    const indexData2 = []
     const offset1 = (this.radialSegmentCount + 1) * 2
     const offset2 = (this.radialSegmentCount + 1) * 4
     for(let i=0; i<this.radialSegmentCount; i++){
