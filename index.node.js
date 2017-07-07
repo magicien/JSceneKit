@@ -37841,8 +37841,8 @@ module.exports =
 	    value: function _createGeometry() {
 	      var sourceData = [];
 	      var indexData = [];
-	      var vectorCount = (this.radialSegmentCount + 1) * (this.capSegmentCount + 4);
-	      var primitiveCount = this.radialSegmentCount * this.capSegmentCount * 2;
+	      var vectorCount = (this.radialSegmentCount * 2 + 1) * (this.capSegmentCount + 4);
+	      //const primitiveCount = this.radialSegmentCount * this.capSegmentCount * 4
 
 	      var yNom = [];
 	      var ySin = [];

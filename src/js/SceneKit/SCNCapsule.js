@@ -77,8 +77,8 @@ export default class SCNCapsule extends SCNGeometry {
   _createGeometry() {
     const sourceData = []
     const indexData = []
-    const vectorCount = (this.radialSegmentCount + 1) * (this.capSegmentCount + 4)
-    const primitiveCount = this.radialSegmentCount * this.capSegmentCount * 2
+    const vectorCount = (this.radialSegmentCount * 2 + 1) * (this.capSegmentCount + 4)
+    //const primitiveCount = this.radialSegmentCount * this.capSegmentCount * 4
 
     const yNom = []
     const ySin = []
