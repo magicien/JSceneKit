@@ -77,51 +77,87 @@ export default class SCNCapsule extends SCNGeometry {
   _createGeometry() {
     const sourceData = []
     const indexData = []
-    const vectorCount = (this.segmentCount + 1) * (this.segmentCount + 4)
-    const primitiveCount = this.segmentCount * this.segmentCount * 2
+    const vectorCount = (this.radialSegmentCount + 1) * (this.capSegmentCount + 4)
+    const primitiveCount = this.radialSegmentCount * this.capSegmentCount * 2
 
     const yNom = []
     const ySin = []
-    for(let lat=0; lat<=this.segmentCount; lat++){
-      yNom.push(-Math.cos(Math.PI * lat / this.segmentCount))
-      ySin.push(Math.sin(Math.PI * lat / this.segmentCount))
+    for(let lat=0; lat<=this.capSegmentCount; lat++){
+      yNom.push(-Math.cos(Math.PI * lat / this.capSegmentCount))
+      ySin.push(Math.sin(Math.PI * lat / this.capSegmentCount))
     }
 
-    for(let lng=0; lng<=this.segmentCount; lng++){
-      const x = -Math.sin(2.0 * Math.PI * lng / this.segmentCount)
-      const z = -Math.cos(2.0 * Math.PI * lng / this.segmentCount)
-      for(let lat=0; lat<=this.segmentCount; lat++){
+    const cylinderHeight = this.height - this.capRadius * 2
+    const hemiLen = this.capSegmentCount / 2
+    const rad2 = this.radialSegmentCount * 2
+    for(let lng=0; lng<=rad2; lng++){
+      const x = -Math.sin(2.0 * Math.PI * lng / rad2)
+      const z = -Math.cos(2.0 * Math.PI * lng / rad2)
+      const tx = lng / rad2
+      let y = -cylinderHeight * 0.5
+      for(let lat=0; lat<=hemiLen; lat++){
         const xNom = x * ySin[lat]
         const zNom = z * ySin[lat]
 
         // vertex
-        sourceData.push(xNom * this.radius, yNom[lat] * this.radius, zNom * this.radius)
+        sourceData.push(xNom * this.capRadius, y + yNom[lat] * this.capRadius, zNom * this.capRadius)
 
         // normal
         sourceData.push(xNom, yNom[lat], zNom)
 
         // texcoord
-        sourceData.push(lng / 24.0, 1.0 - lat / 24.0)
+        sourceData.push(tx, 1.0 - 0.25 * lat / hemiLen)
+
+        if(lat === hemiLen){
+          // put the same data again
+          sourceData.push(xNom * this.capRadius, y + yNom[lat] * this.capRadius, zNom * this.capRadius)
+          sourceData.push(xNom, yNom[lat], zNom)
+          sourceData.push(tx, 1.0 - 0.25 * lat / hemiLen)
+        }
+      }
+
+      y = cylinderHeight * 0.5
+      for(let lat=hemiLen; lat<=this.capSegmentCount; lat++){
+        const xNom = x * ySin[lat]
+        const zNom = z * ySin[lat]
+
+        // vertex
+        sourceData.push(xNom * this.capRadius, y + yNom[lat] * this.capRadius, zNom * this.capRadius)
+
+        // normal
+        sourceData.push(xNom, yNom[lat], zNom)
+
+        // texcoord
+        sourceData.push(tx, 0.50 - 0.25 * lat / hemiLen)
+
+        if(lat === hemiLen){
+          // put the same data again
+          sourceData.push(xNom * this.capRadius, y + yNom[lat] * this.capRadius, zNom * this.capRadius)
+          sourceData.push(xNom, yNom[lat], zNom)
+          sourceData.push(tx, 0.50 - 0.25 * lat / hemiLen)
+        }
       }
     }
 
-
     // index
-    for(let i=0; i<this.segmentCount; i++){
-      let index1 = i * (this.segmentCount + 4)
-      let index2 = index1 + this.segmentCount + 5
+    const capLen = this.capSegmentCount
+    const radLen = this.radialSegmentCount * 2 + 1
+    for(let i=0; i<capLen; i++){
+      let index1 = i * (this.capSegmentCount + 4)
+      let index2 = index1 + this.capSegmentCount + 5
 
       indexData.push(index1, index2, index1 + 1)
       index1 += 1
-      for(let j=0; j<this.segmentCount-1; j++){
-        indexData.push(index1, index2 + 1, index1 + 1)
-        indexData.push(index1, index2, index2 + 1)
+      for(let j=0; j<radLen; j++){
+        if(Math.abs(j - this.radialSegmentCount) !== 1){
+          indexData.push(index1, index2 + 1, index1 + 1)
+          indexData.push(index1, index2, index2 + 1)
+        }
         index1 += 1
         index2 += 1
       }
       indexData.push(index1, index2, index2 + 1)
     }
-
 
     const vertexSource = new SCNGeometrySource(
       sourceData, // data

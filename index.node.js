@@ -37841,44 +37841,82 @@ module.exports =
 	    value: function _createGeometry() {
 	      var sourceData = [];
 	      var indexData = [];
-	      var vectorCount = (this.segmentCount + 1) * (this.segmentCount + 4);
-	      var primitiveCount = this.segmentCount * this.segmentCount * 2;
+	      var vectorCount = (this.radialSegmentCount + 1) * (this.capSegmentCount + 4);
+	      var primitiveCount = this.radialSegmentCount * this.capSegmentCount * 2;
 
 	      var yNom = [];
 	      var ySin = [];
-	      for (var lat = 0; lat <= this.segmentCount; lat++) {
-	        yNom.push(-Math.cos(Math.PI * lat / this.segmentCount));
-	        ySin.push(Math.sin(Math.PI * lat / this.segmentCount));
+	      for (var lat = 0; lat <= this.capSegmentCount; lat++) {
+	        yNom.push(-Math.cos(Math.PI * lat / this.capSegmentCount));
+	        ySin.push(Math.sin(Math.PI * lat / this.capSegmentCount));
 	      }
 
-	      for (var lng = 0; lng <= this.segmentCount; lng++) {
-	        var x = -Math.sin(2.0 * Math.PI * lng / this.segmentCount);
-	        var z = -Math.cos(2.0 * Math.PI * lng / this.segmentCount);
-	        for (var _lat = 0; _lat <= this.segmentCount; _lat++) {
+	      var cylinderHeight = this.height - this.capRadius * 2;
+	      var hemiLen = this.capSegmentCount / 2;
+	      var rad2 = this.radialSegmentCount * 2;
+	      for (var lng = 0; lng <= rad2; lng++) {
+	        var x = -Math.sin(2.0 * Math.PI * lng / rad2);
+	        var z = -Math.cos(2.0 * Math.PI * lng / rad2);
+	        var tx = lng / rad2;
+	        var y = -cylinderHeight * 0.5;
+	        for (var _lat = 0; _lat <= hemiLen; _lat++) {
 	          var xNom = x * ySin[_lat];
 	          var zNom = z * ySin[_lat];
 
 	          // vertex
-	          sourceData.push(xNom * this.radius, yNom[_lat] * this.radius, zNom * this.radius
+	          sourceData.push(xNom * this.capRadius, y + yNom[_lat] * this.capRadius, zNom * this.capRadius
 
 	          // normal
 	          );sourceData.push(xNom, yNom[_lat], zNom
 
 	          // texcoord
-	          );sourceData.push(lng / 24.0, 1.0 - _lat / 24.0);
+	          );sourceData.push(tx, 1.0 - 0.25 * _lat / hemiLen);
+
+	          if (_lat === hemiLen) {
+	            // put the same data again
+	            sourceData.push(xNom * this.capRadius, y + yNom[_lat] * this.capRadius, zNom * this.capRadius);
+	            sourceData.push(xNom, yNom[_lat], zNom);
+	            sourceData.push(tx, 1.0 - 0.25 * _lat / hemiLen);
+	          }
+	        }
+
+	        y = cylinderHeight * 0.5;
+	        for (var _lat2 = hemiLen; _lat2 <= this.capSegmentCount; _lat2++) {
+	          var _xNom = x * ySin[_lat2];
+	          var _zNom = z * ySin[_lat2];
+
+	          // vertex
+	          sourceData.push(_xNom * this.capRadius, y + yNom[_lat2] * this.capRadius, _zNom * this.capRadius
+
+	          // normal
+	          );sourceData.push(_xNom, yNom[_lat2], _zNom
+
+	          // texcoord
+	          );sourceData.push(tx, 0.50 - 0.25 * _lat2 / hemiLen);
+
+	          if (_lat2 === hemiLen) {
+	            // put the same data again
+	            sourceData.push(_xNom * this.capRadius, y + yNom[_lat2] * this.capRadius, _zNom * this.capRadius);
+	            sourceData.push(_xNom, yNom[_lat2], _zNom);
+	            sourceData.push(tx, 0.50 - 0.25 * _lat2 / hemiLen);
+	          }
 	        }
 	      }
 
 	      // index
-	      for (var i = 0; i < this.segmentCount; i++) {
-	        var index1 = i * (this.segmentCount + 4);
-	        var index2 = index1 + this.segmentCount + 5;
+	      var capLen = this.capSegmentCount;
+	      var radLen = this.radialSegmentCount * 2 + 1;
+	      for (var i = 0; i < capLen; i++) {
+	        var index1 = i * (this.capSegmentCount + 4);
+	        var index2 = index1 + this.capSegmentCount + 5;
 
 	        indexData.push(index1, index2, index1 + 1);
 	        index1 += 1;
-	        for (var j = 0; j < this.segmentCount - 1; j++) {
-	          indexData.push(index1, index2 + 1, index1 + 1);
-	          indexData.push(index1, index2, index2 + 1);
+	        for (var j = 0; j < radLen; j++) {
+	          if (Math.abs(j - this.radialSegmentCount) !== 1) {
+	            indexData.push(index1, index2 + 1, index1 + 1);
+	            indexData.push(index1, index2, index2 + 1);
+	          }
 	          index1 += 1;
 	          index2 += 1;
 	        }
@@ -39267,7 +39305,7 @@ module.exports =
 	          );sourceData.push(xNom, yNom[_lat], zNom
 
 	          // texcoord
-	          );sourceData.push(lng / 24.0, 1.0 - _lat / 24.0);
+	          );sourceData.push(1.0 * lng / this.segmentCount, 1.0 - 1.0 * _lat / this.segmentCount);
 	        }
 	      }
 

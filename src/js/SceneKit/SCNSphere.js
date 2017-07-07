@@ -117,7 +117,7 @@ export default class SCNSphere extends SCNGeometry {
         sourceData.push(xNom, yNom[lat], zNom)
 
         // texcoord
-        sourceData.push(lng / 24.0, 1.0 - lat / 24.0)
+        sourceData.push(1.0 * lng / this.segmentCount, 1.0 - 1.0 * lat / this.segmentCount)
       }
     }
 
