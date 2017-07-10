@@ -20,3 +20,5 @@ https://magicien.github.io/JSceneKit/
 ### Examples
 
 [JSceneKitExample](https://magicien.github.io/JSceneKitExample/)
+
+![ScreenShot](https://raw.githubusercontent.com/magicien/JSceneKitExample/readme/readme/screenshot_ex2.png)
