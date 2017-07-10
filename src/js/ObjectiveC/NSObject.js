@@ -3712,7 +3712,9 @@ validateToolbarItem(_:) is called very frequently, so it must be efficient.If th
             }
           }else{
             value = coder.decodeObjectForKey(key)
-            if(value instanceof Promise){
+            if(value === '$null'){
+              value = null
+            }else if(value instanceof Promise){
               // wait for loading
             }else if(!(value instanceof classObj)){
               const exception = [

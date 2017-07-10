@@ -39,6 +39,7 @@ import GCControllerElement from './GameController/GCControllerElement'
 import GCExtendedGamepad from './GameController/GCExtendedGamepad'
 import GCGamepad from './GameController/GCGamepad'
 import GCMicroGamepad from './GameController/GCMicroGamepad'
+import MTLTessellationPartitionMode from './Metal/MTLTessellationPartitionMode'
 import NSObject from './ObjectiveC/NSObject'
 import CAAction from './QuartzCore/CAAction'
 import CAAnimation from './QuartzCore/CAAnimation'
@@ -73,8 +74,10 @@ import SCNActionTimingFunction from './SceneKit/SCNActionTimingFunction'
 import SCNActionTimingMode from './SceneKit/SCNActionTimingMode'
 import SCNActionWait from './SceneKit/SCNActionWait'
 import SCNAnimatable from './SceneKit/SCNAnimatable'
+import SCNAnimation from './SceneKit/SCNAnimation'
 import SCNAnimationEvent from './SceneKit/SCNAnimationEvent'
 import SCNAnimationEventBlock from './SceneKit/SCNAnimationEventBlock'
+import SCNAnimationPlayer from './SceneKit/SCNAnimationPlayer'
 import SCNAntialiasingMode from './SceneKit/SCNAntialiasingMode'
 import SCNAudioPlayer from './SceneKit/SCNAudioPlayer'
 import SCNAudioSource from './SceneKit/SCNAudioSource'
@@ -88,20 +91,24 @@ import SCNBufferBindingBlock from './SceneKit/SCNBufferBindingBlock'
 import SCNBufferFrequency from './SceneKit/SCNBufferFrequency'
 import SCNBufferStream from './SceneKit/SCNBufferStream'
 import SCNCamera from './SceneKit/SCNCamera'
+import SCNCameraProjectionDirection from './SceneKit/SCNCameraProjectionDirection'
 import SCNCapsule from './SceneKit/SCNCapsule'
 import SCNChamferMode from './SceneKit/SCNChamferMode'
+import SCNColorMask from './SceneKit/SCNColorMask'
 import SCNCone from './SceneKit/SCNCone'
 import SCNConstraint from './SceneKit/SCNConstraint'
 import SCNCullMode from './SceneKit/SCNCullMode'
 import SCNCylinder from './SceneKit/SCNCylinder'
 import SCNDebugOptions from './SceneKit/SCNDebugOptions'
 import SCNFieldForceEvaluator from './SceneKit/SCNFieldForceEvaluator'
+import SCNFillMode from './SceneKit/SCNFillMode'
 import SCNFilterMode from './SceneKit/SCNFilterMode'
 import SCNFloor from './SceneKit/SCNFloor'
 import SCNGeometry from './SceneKit/SCNGeometry'
 import SCNGeometryElement from './SceneKit/SCNGeometryElement'
 import SCNGeometryPrimitiveType from './SceneKit/SCNGeometryPrimitiveType'
 import SCNGeometrySource from './SceneKit/SCNGeometrySource'
+import SCNGeometryTessellator from './SceneKit/SCNGeometryTessellator'
 import SCNHitTestOption from './SceneKit/SCNHitTestOption'
 import SCNHitTestResult from './SceneKit/SCNHitTestResult'
 import SCNIKConstraint from './SceneKit/SCNIKConstraint'
@@ -186,7 +193,9 @@ import SCNSkinner from './SceneKit/SCNSkinner'
 import SCNSphere from './SceneKit/SCNSphere'
 import SCNTechnique from './SceneKit/SCNTechnique'
 import SCNTechniqueSupport from './SceneKit/SCNTechniqueSupport'
+import SCNTessellationSmoothingMode from './SceneKit/SCNTessellationSmoothingMode'
 import SCNText from './SceneKit/SCNText'
+import SCNTimingFunction from './SceneKit/SCNTimingFunction'
 import SCNTorus from './SceneKit/SCNTorus'
 import SCNTransaction from './SceneKit/SCNTransaction'
 import SCNTransformConstraint from './SceneKit/SCNTransformConstraint'
@@ -280,6 +289,7 @@ _ClassList.registerClass(GCControllerElement)
 _ClassList.registerClass(GCExtendedGamepad)
 _ClassList.registerClass(GCGamepad)
 _ClassList.registerClass(GCMicroGamepad)
+_ClassList.registerClass(MTLTessellationPartitionMode)
 _ClassList.registerClass(NSObject)
 _ClassList.registerClass(CAAction)
 _ClassList.registerClass(CAAnimation)
@@ -314,8 +324,10 @@ _ClassList.registerClass(SCNActionTimingFunction)
 _ClassList.registerClass(SCNActionTimingMode)
 _ClassList.registerClass(SCNActionWait)
 _ClassList.registerClass(SCNAnimatable)
+_ClassList.registerClass(SCNAnimation)
 _ClassList.registerClass(SCNAnimationEvent)
 _ClassList.registerClass(SCNAnimationEventBlock)
+_ClassList.registerClass(SCNAnimationPlayer)
 _ClassList.registerClass(SCNAntialiasingMode)
 _ClassList.registerClass(SCNAudioPlayer)
 _ClassList.registerClass(SCNAudioSource)
@@ -329,20 +341,24 @@ _ClassList.registerClass(SCNBufferBindingBlock)
 _ClassList.registerClass(SCNBufferFrequency)
 _ClassList.registerClass(SCNBufferStream)
 _ClassList.registerClass(SCNCamera)
+_ClassList.registerClass(SCNCameraProjectionDirection)
 _ClassList.registerClass(SCNCapsule)
 _ClassList.registerClass(SCNChamferMode)
+_ClassList.registerClass(SCNColorMask)
 _ClassList.registerClass(SCNCone)
 _ClassList.registerClass(SCNConstraint)
 _ClassList.registerClass(SCNCullMode)
 _ClassList.registerClass(SCNCylinder)
 _ClassList.registerClass(SCNDebugOptions)
 _ClassList.registerClass(SCNFieldForceEvaluator)
+_ClassList.registerClass(SCNFillMode)
 _ClassList.registerClass(SCNFilterMode)
 _ClassList.registerClass(SCNFloor)
 _ClassList.registerClass(SCNGeometry)
 _ClassList.registerClass(SCNGeometryElement)
 _ClassList.registerClass(SCNGeometryPrimitiveType)
 _ClassList.registerClass(SCNGeometrySource)
+_ClassList.registerClass(SCNGeometryTessellator)
 _ClassList.registerClass(SCNHitTestOption)
 _ClassList.registerClass(SCNHitTestResult)
 _ClassList.registerClass(SCNIKConstraint)
@@ -427,7 +443,9 @@ _ClassList.registerClass(SCNSkinner)
 _ClassList.registerClass(SCNSphere)
 _ClassList.registerClass(SCNTechnique)
 _ClassList.registerClass(SCNTechniqueSupport)
+_ClassList.registerClass(SCNTessellationSmoothingMode)
 _ClassList.registerClass(SCNText)
+_ClassList.registerClass(SCNTimingFunction)
 _ClassList.registerClass(SCNTorus)
 _ClassList.registerClass(SCNTransaction)
 _ClassList.registerClass(SCNTransformConstraint)
@@ -514,6 +532,7 @@ exports.GCControllerElement = GCControllerElement
 exports.GCExtendedGamepad = GCExtendedGamepad
 exports.GCGamepad = GCGamepad
 exports.GCMicroGamepad = GCMicroGamepad
+exports.MTLTessellationPartitionMode = MTLTessellationPartitionMode
 exports.NSObject = NSObject
 exports.CAAction = CAAction
 exports.CAAnimation = CAAnimation
@@ -548,8 +567,10 @@ exports.SCNActionTimingFunction = SCNActionTimingFunction
 exports.SCNActionTimingMode = SCNActionTimingMode
 exports.SCNActionWait = SCNActionWait
 exports.SCNAnimatable = SCNAnimatable
+exports.SCNAnimation = SCNAnimation
 exports.SCNAnimationEvent = SCNAnimationEvent
 exports.SCNAnimationEventBlock = SCNAnimationEventBlock
+exports.SCNAnimationPlayer = SCNAnimationPlayer
 exports.SCNAntialiasingMode = SCNAntialiasingMode
 exports.SCNAudioPlayer = SCNAudioPlayer
 exports.SCNAudioSource = SCNAudioSource
@@ -563,20 +584,24 @@ exports.SCNBufferBindingBlock = SCNBufferBindingBlock
 exports.SCNBufferFrequency = SCNBufferFrequency
 exports.SCNBufferStream = SCNBufferStream
 exports.SCNCamera = SCNCamera
+exports.SCNCameraProjectionDirection = SCNCameraProjectionDirection
 exports.SCNCapsule = SCNCapsule
 exports.SCNChamferMode = SCNChamferMode
+exports.SCNColorMask = SCNColorMask
 exports.SCNCone = SCNCone
 exports.SCNConstraint = SCNConstraint
 exports.SCNCullMode = SCNCullMode
 exports.SCNCylinder = SCNCylinder
 exports.SCNDebugOptions = SCNDebugOptions
 exports.SCNFieldForceEvaluator = SCNFieldForceEvaluator
+exports.SCNFillMode = SCNFillMode
 exports.SCNFilterMode = SCNFilterMode
 exports.SCNFloor = SCNFloor
 exports.SCNGeometry = SCNGeometry
 exports.SCNGeometryElement = SCNGeometryElement
 exports.SCNGeometryPrimitiveType = SCNGeometryPrimitiveType
 exports.SCNGeometrySource = SCNGeometrySource
+exports.SCNGeometryTessellator = SCNGeometryTessellator
 exports.SCNHitTestOption = SCNHitTestOption
 exports.SCNHitTestResult = SCNHitTestResult
 exports.SCNIKConstraint = SCNIKConstraint
@@ -661,7 +686,9 @@ exports.SCNSkinner = SCNSkinner
 exports.SCNSphere = SCNSphere
 exports.SCNTechnique = SCNTechnique
 exports.SCNTechniqueSupport = SCNTechniqueSupport
+exports.SCNTessellationSmoothingMode = SCNTessellationSmoothingMode
 exports.SCNText = SCNText
+exports.SCNTimingFunction = SCNTimingFunction
 exports.SCNTorus = SCNTorus
 exports.SCNTransaction = SCNTransaction
 exports.SCNTransformConstraint = SCNTransformConstraint

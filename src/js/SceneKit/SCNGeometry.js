@@ -35,6 +35,7 @@ export default class SCNGeometry extends NSObject {
       name: 'string',
       levelsOfDetail: 'NSArray',
       materials: 'NSArray',
+      tessellator: 'SCNGeometryTessellator',
       subdivisionLevel: 'integer',
       // program
       // shaderModifiers
@@ -49,6 +50,8 @@ export default class SCNGeometry extends NSObject {
         obj._updateBoundingBox()
       }],
       kGeometrySourceSemanticVertexCrease: ['NSArray', addSources],
+      wantsAdaptiveSubdivision: 'boolean',
+      adaptiveSubdivision: ['boolean', null],
 
       entityID: ['string', '_entityID'],
       subdivisionSettings: ['bytes', null],
@@ -191,6 +194,20 @@ export default class SCNGeometry extends NSObject {
      * @parameter {number} _boundingSphere.radius
      */
     //this._boundingSphere = null
+
+    /**
+     * 
+     * @type {SCNGeometryTessellator}
+     * @see https://developer.apple.com/documentation/scenekit/scngeometry/2867472-tessellator
+     */
+    this.tessellator = null
+
+    /**
+     *
+     * @type {boolean}
+     * @see https://developer.apple.com/documentation/scenekit/scngeometry/2888353-wantsadaptivesubdivision
+     */
+    this.wantsAdaptiveSubdivision = false // TODO: check the default value
 
     this._vertexBuffer = null
     this._indexBuffer = null

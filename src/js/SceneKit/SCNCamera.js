@@ -2,6 +2,7 @@
 
 import NSObject from '../ObjectiveC/NSObject'
 import SCNAnimatable from './SCNAnimatable'
+import SCNCameraProjectionDirection from './SCNCameraProjectionDirection'
 import SCNTechniqueSupport from './SCNTechniqueSupport'
 import SCNMaterialProperty from './SCNMaterialProperty'
 import SCNMatrix4 from './SCNMatrix4'
@@ -23,9 +24,11 @@ export default class SCNCamera extends NSObject {
       zFar: 'float',
       yFov: 'float',
       xFov: 'float',
+      fov: ['float', null], // TODO: implement
       automaticallyAdjustsZRange: 'boolean',
       usesOrthographicProjection: 'boolean',
       orthographicScale: 'float',
+      projectionDirection: 'integer',
       categoryBitMask: 'integer',
       focalDistance: 'float',
       focalSize: 'float',
@@ -42,6 +45,9 @@ export default class SCNCamera extends NSObject {
       exposureAdaptationDarkeningSpeedFactor: 'float',
       exposureAdaptationBrighteningSpeedFactor: 'float',
       exposureAdaptationDuration: ['float', null],
+      exposureAdaptationHistogramRangeHighProbability: ['float', null],
+      exposureAdaptationHistogramRangeLowProbability: ['float', null],
+      exposureAdaptationMode: ['integer', null],
       contrast: 'float',
       saturation: 'float',
       //_colorGrading: 'SCNMaterialProperty',
@@ -53,8 +59,22 @@ export default class SCNCamera extends NSObject {
       vignettingIntensity: 'float',
       vignettingPower: 'float',
       //projectionTransform: 'SCNMatrix4'
+      bladeCount: ['integer', 'apertureBladeCount'],
+      fStop: 'float',
+      focalBlurSampleCount: 'integer',
+      focusDistance: 'float',
+      screenSpaceAmbientOcclusionBias: 'float',
+      screenSpaceAmbientOcclusionDepthThreshold: 'float',
+      screenSpaceAmbientOcclusionIntensity: 'float',
+      screenSpaceAmbientOcclusionNormalThreshold: 'float',
+      screenSpaceAmbientOcclusionRadius: 'float',
+      sensorSize: ['float', 'sensorHeight'], // TODO: check if it is correct
 
-      entityID: ['string', '_entityID']
+      entityID: ['string', '_entityID'],
+      screenSpaceAmbientOcclusionSampleCount: ['integer', null],
+      screenSpaceAmbientOcclusionDownSample: ['integer', null],
+      dofIntensity: ['float', null],
+      fillMode: ['integer', null]
     }
   }
 
@@ -129,6 +149,14 @@ export default class SCNCamera extends NSObject {
      * @see https://developer.apple.com/reference/scenekit/scncamera/1436612-orthographicscale
      */
     this.orthographicScale = 1.0
+
+
+    /**
+     *
+     * @type {SCNCameraProjectionDirection}
+     * @see
+     */
+    this.projectionDirection = SCNCameraProjectionDirection.horizontal
 
 
     // Choosing Nodes to Be Visible to the Camera
@@ -332,6 +360,98 @@ export default class SCNCamera extends NSObject {
      * @type {?string}
      */
     this._entityID = null
+
+
+    /**
+     * 
+     * @type {number}
+     * @see https://developer.apple.com/documentation/scenekit/scncamera/2867484-aperturebladecount
+     */
+    this.apertureBladeCount = 0 // TODO: check the default value
+
+    /**
+     *
+     * @type {number}
+     * @see https://developer.apple.com/documentation/scenekit/scncamera/2867490-fstop
+     */
+    this.fStop = 0.0 // TODO: check the default value
+
+    /**
+     *
+     * @type {number}
+     * @see https://developer.apple.com/documentation/scenekit/scncamera/2867510-fieldofview
+     */
+    this.fieldOfView = 0.0 // TODO: check the default value
+
+    /**
+     *
+     * @type {number}
+     * @see https://developer.apple.com/documentation/scenekit/scncamera/2872999-focalblursamplecount
+     */
+    this.focalBlurSampleCount = 0 // TODO: check the default value
+
+    /**
+     *
+     * @type {number}
+     * @see
+     */
+    this.focalLength = 0.0 // TODO:
+
+    /**
+     *
+     * @type {number}
+     * @see
+     */
+    this.focalDistance = 0.0 // TODO:
+
+    /**
+     *
+     * @type {number}
+     * @see
+     */
+    this.screenSpaceAmbientOcclusionBias = 0.0 // TODO:
+
+    /**
+     *
+     * @type {number}
+     * @see
+     */
+    this.screenSpaceAmbientOcclusionDepthThreshold = 0.0 // TODO:
+
+    /**
+     *
+     * @type {number}
+     * @see
+     */
+    this.screenSpaceAmbientOcclusionIntensity = 0.0 // TODO:
+
+    /**
+     *
+     * @type {number}
+     * @see
+     */
+    this.screenSpaceAmbientOcclusionNormalThreshold = 0.0 // TODO:
+
+    /**
+     *
+     * @type {number}
+     * @see
+     */
+    this.screenSpaceAmbientOcclusionRadius = 0.0 // TODO:
+
+    /**
+     *
+     * @type {number}
+     * @see
+     */
+    this.sensorHeight = 0.0 // TODO:
+
+    /**
+     *
+     * @type {boolean}
+     * @see
+     */
+    this.wantsDepthOfField = false // TODO:
   }
 
   // Creating a Camera

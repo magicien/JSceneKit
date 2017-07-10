@@ -690,6 +690,9 @@ if (contacts.count == 0) {
   _simulate(time) {
     // FIXME: use physics library
     //this._world.stepSimulation(1.0/60.0, 0)
+    if(!this._renderer){
+      return
+    }
 
     const objects = this._renderer._createRenderingPhysicsNodeArray()
     const contacts = []

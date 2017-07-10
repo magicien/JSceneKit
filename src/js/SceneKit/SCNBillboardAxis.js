@@ -10,6 +10,7 @@
 export default class SCNBillboardAxis {
 
   // Constants
+
   /**
    * Align an affected node such that its x-axis is always parallel to that of the view, leaving it free to rotate otherwise.
    * @type {SCNBillboardAxis}
@@ -19,6 +20,7 @@ export default class SCNBillboardAxis {
   get X() {
     return this._X
   }
+
   /**
    * Align an affected node such that its y-axis is always parallel to that of the view, leaving it free to rotate otherwise.
    * @type {SCNBillboardAxis}
@@ -28,6 +30,7 @@ export default class SCNBillboardAxis {
   get Y() {
     return this._Y
   }
+
   /**
    * Align an affected node such that its z-axis is always perpendicular to the viewing plane, leaving it free to rotate otherwise.
    * @type {SCNBillboardAxis}
@@ -37,6 +40,7 @@ export default class SCNBillboardAxis {
   get Z() {
     return this._Z
   }
+
   /**
    * Align an affected node such that its orientation always matches that of the view.
    * @type {SCNBillboardAxis}
@@ -52,11 +56,11 @@ export default class SCNBillboardAxis {
   /**
    * 
    * @access public
+   * @constructor
    * @param {number} rawValue - 
-   * @returns {void}
    * @see https://developer.apple.com/reference/scenekit/scnbillboardaxis/1524212-init
    */
-  init(rawValue) {
+  constructor(rawValue) {
 
     // Constants
 

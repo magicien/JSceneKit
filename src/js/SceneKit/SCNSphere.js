@@ -25,7 +25,9 @@ export default class SCNSphere extends SCNGeometry {
         sphere._isHemispheric = propValues.spherehemispheric
         sphere._spherePrimitiveType = propValues.sphereprimitiveType
         sphere.materials = propValues.materials
+        sphere.tessellator = propValues.tessellator
         sphere.subdivisionLevel = propValues.subdivisionLevel
+        sphere.wantsAdaptiveSubdivision = propValues.wantsAdaptiveSubdivision
         sphere._createGeometry()
 
         return sphere
@@ -34,7 +36,10 @@ export default class SCNSphere extends SCNGeometry {
       spheregeodesic: ['boolean', null],
       spheresegmentCount: ['integer', null],
       materials: ['NSArray', null],
+      tessellator: ['SCNGeometryTessellator', null],
+      wantsAdaptiveSubdivision: ['boolean', null],
 
+      adaptiveSubdivision: ['boolean', null],
       name: ['string', null],
       sphereradialSpan: ['float', null],
       spherehemispheric: ['boolean', null],

@@ -158,6 +158,8 @@ export default class CAPropertyAnimation extends CAAnimation {
       return from.lerp(to, t)
     }else if(from instanceof SCNVector3){
       return from.lerp(to, t)
+    }else if(from instanceof SCNMatrix4){
+      return from.lerp(to, t)
     }else if(from instanceof CGSize){
       // TODO: implement
     }else if(from instanceof CGPoint){

@@ -14,17 +14,35 @@ export default class SCNGeometryElement extends NSObject {
   static get _propTypes() {
     return {
       $constructor: (propNames, propValues) => {
-        return new SCNGeometryElement(
+        const element = new SCNGeometryElement(
           propValues.elementData, 
           propValues.primitiveType, 
           propValues.primitiveCount, 
           propValues.bytesPerIndex
         )
+        if(typeof propValues.maximumPointScreenSpaceRadius !== 'undefined'){
+          element.maximumPointScreenSpaceRadius = propValues.maximumPointScreenSpaceRadius
+        }
+        if(typeof propValues.minimumPointScreenSpaceRadius !== 'undefined'){
+          element.minimumPointScreenSpaceRadius = propValues.minimumPointScreenSpaceRadius
+        }
+        if(typeof propValues.ptSize !== 'undefined'){
+          element.pointSize = propValues.ptSize
+        }
+
+        return element
       },
       primitiveType: ['integer', null],
       primitiveCount: ['integer', null],
       elementData: ['NSMutableData', null],
-      bytesPerIndex: ['integer', null]
+      bytesPerIndex: ['integer', null],
+      primitiveRangeLocation: ['integer', null],
+      primitiveRangeLength: ['integer', null],
+      ptSize: ['float', null],
+      indicesChannelCount: ['integer', null],
+      interleavedIndicesChannels: ['integer', null],
+      minimumPointScreenSpaceRadius: ['float', null],
+      maximumPointScreenSpaceRadius: ['float', null]
     }
   }
 
@@ -95,6 +113,26 @@ export default class SCNGeometryElement extends NSObject {
     }else{
       throw new Error(`unknown data size: ${bytesPerIndex}`)
     }
+
+    /**
+     * @type {number}
+     */
+    this.maximumPointScreenSpaceRadius = 0.0 // TODO: check the default value
+
+    /**
+     * @type {number}
+     */
+    this.minimumPointScreenSpaceRadius = 0.0 // TODO: check the default value
+
+    /**
+     * @type {number}
+     */
+    this.pointSize = 0.0 // TODO: check the default value
+
+    /**
+     * @type {NSRange}
+     */
+    this.primitiveRange = null // TODO: check the default value
   }
 
   /**

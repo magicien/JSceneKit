@@ -117,26 +117,46 @@ export default class SCNMatrix4 {
    * @access private
    * @param {Buffer} data -
    * @param {number} [offset = 0] -
+   * @param {boolean} [bigEndian = false] -
    * @returns {SCNMatrix4}
    */
-  static _initWithData(data, offset = 0) {
+  static _initWithData(data, offset = 0, bigEndian = false) {
     const instance = new SCNMatrix4()
-    instance.m11 = data.readFloatLE(offset + 0)
-    instance.m12 = data.readFloatLE(offset + 4)
-    instance.m13 = data.readFloatLE(offset + 8)
-    instance.m14 = data.readFloatLE(offset + 12)
-    instance.m21 = data.readFloatLE(offset + 16)
-    instance.m22 = data.readFloatLE(offset + 20)
-    instance.m23 = data.readFloatLE(offset + 24)
-    instance.m24 = data.readFloatLE(offset + 28)
-    instance.m31 = data.readFloatLE(offset + 32)
-    instance.m32 = data.readFloatLE(offset + 36)
-    instance.m33 = data.readFloatLE(offset + 40)
-    instance.m34 = data.readFloatLE(offset + 44)
-    instance.m41 = data.readFloatLE(offset + 48)
-    instance.m42 = data.readFloatLE(offset + 52)
-    instance.m43 = data.readFloatLE(offset + 56)
-    instance.m44 = data.readFloatLE(offset + 60)
+    if(bigEndian){
+      instance.m11 = data.readFloatBE(offset + 0)
+      instance.m12 = data.readFloatBE(offset + 4)
+      instance.m13 = data.readFloatBE(offset + 8)
+      instance.m14 = data.readFloatBE(offset + 12)
+      instance.m21 = data.readFloatBE(offset + 16)
+      instance.m22 = data.readFloatBE(offset + 20)
+      instance.m23 = data.readFloatBE(offset + 24)
+      instance.m24 = data.readFloatBE(offset + 28)
+      instance.m31 = data.readFloatBE(offset + 32)
+      instance.m32 = data.readFloatBE(offset + 36)
+      instance.m33 = data.readFloatBE(offset + 40)
+      instance.m34 = data.readFloatBE(offset + 44)
+      instance.m41 = data.readFloatBE(offset + 48)
+      instance.m42 = data.readFloatBE(offset + 52)
+      instance.m43 = data.readFloatBE(offset + 56)
+      instance.m44 = data.readFloatBE(offset + 60)
+    }else{
+      instance.m11 = data.readFloatLE(offset + 0)
+      instance.m12 = data.readFloatLE(offset + 4)
+      instance.m13 = data.readFloatLE(offset + 8)
+      instance.m14 = data.readFloatLE(offset + 12)
+      instance.m21 = data.readFloatLE(offset + 16)
+      instance.m22 = data.readFloatLE(offset + 20)
+      instance.m23 = data.readFloatLE(offset + 24)
+      instance.m24 = data.readFloatLE(offset + 28)
+      instance.m31 = data.readFloatLE(offset + 32)
+      instance.m32 = data.readFloatLE(offset + 36)
+      instance.m33 = data.readFloatLE(offset + 40)
+      instance.m34 = data.readFloatLE(offset + 44)
+      instance.m41 = data.readFloatLE(offset + 48)
+      instance.m42 = data.readFloatLE(offset + 52)
+      instance.m43 = data.readFloatLE(offset + 56)
+      instance.m44 = data.readFloatLE(offset + 60)
+    }
     return instance
   }
 

@@ -4,6 +4,7 @@ import SCNGeometry from './SCNGeometry'
 import SCNGeometryElement from './SCNGeometryElement'
 import SCNGeometryPrimitiveType from './SCNGeometryPrimitiveType'
 import SCNGeometrySource from './SCNGeometrySource'
+import SCNGeometryTessellator from './SCNGeometryTessellator'
 import SCNMaterial from './SCNMaterial'
 import SCNVector3 from './SCNVector3'
 
@@ -15,6 +16,36 @@ import SCNVector3 from './SCNVector3'
  * @see https://developer.apple.com/reference/scenekit/scncylinder
  */
 export default class SCNCylinder extends SCNGeometry {
+  static get _propTypes() {
+    return {
+      $constructor: (propNames, propValues) => {
+        const cylinder = new SCNCylinder(
+          propValues.cylinderradius,
+          propValues.cylinderheight
+        )
+        cylinder.radialSegmentCount = propValues.cylinderradialSegmentCount
+        cylinder.heightSegmentCount = propValues.cylinderheightSegmentCount
+        cylinder.materials = propValues.materials
+        cylinder.tessellator = propValues.tessellator
+        cylinder.subdivisionLevel = propValues.subdivisionLevel
+        return cylinder
+      },
+      name: ['string', null],
+      cylinderradius: ['float', null],
+      cylinderheight: ['float', null],
+      cylinderradialSegmentCount: ['integer', null],
+      cylinderheightSegmentCount: ['integer', null],
+      cylinderradialSpan: ['float', null],
+      cylinderprimitiveType: ['integer', null],
+      materials: ['NSArray', null],
+      tessellator: ['SCNGeometryTessellator', null],
+      subdivisionLevel: ['integer', null],
+
+      subdivisionSettings: ['bytes', null],
+      wantsAdaptiveSubdivision: ['boolean', null]
+    }
+  }
+
  // Creating a Cylinder
 
   /**

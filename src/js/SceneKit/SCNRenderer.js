@@ -371,6 +371,7 @@ const _defaultFragmentShader =
     vec4 transparent;
     vec2 transparentTexcoord;
     vec4 reflective;
+    float ambientOcclusion;
     float shininess;
     float fresnel;
   } _surface;
@@ -378,6 +379,13 @@ const _defaultFragmentShader =
   struct SCNShaderOutput {
     vec4 color;
   } _output;
+
+  vec2 poissonDisk[4] = vec2[](
+    vec2( -0.94201624, -0.39906216 ),
+    vec2( 0.94558609, -0.76890725 ),
+    vec2( -0.094184101, -0.92938870 ),
+    vec2( 0.34495938, 0.29387760 )
+  );
 
   uniform float u_time;
 
@@ -393,6 +401,19 @@ const _defaultFragmentShader =
 
   out vec4 outColor;
 
+  float saturate(float value) {
+    return clamp(value, 0.0, 1.0);
+  }
+
+  float convDepth(vec4 color) {
+    const float rMask = 1.0;
+    const float gMask = 1.0 / 255.0;
+    const float bMask = 1.0 / (255.0 * 255.0);
+    const float aMask = 1.0 / (255.0 * 255.0 * 255.0);
+    float depth = dot(color, vec4(rMask, gMask, bMask, aMask));
+    return depth * 2.0 - 1.0;
+  }
+
   #if USE_SHADER_MODIFIER_SURFACE
   void shaderModifierSurface() {
     __SHADER_MODIFIER_SURFACE__
@@ -405,22 +426,7 @@ const _defaultFragmentShader =
   }
   #endif
 
-  float convDepth(vec4 color) {
-    const float rMask = 1.0;
-    const float gMask = 1.0 / 255.0;
-    const float bMask = 1.0 / (255.0 * 255.0);
-    const float aMask = 1.0 / (255.0 * 255.0 * 255.0);
-    float depth = dot(color, vec4(rMask, gMask, bMask, aMask));
-    return depth * 2.0 - 1.0;
-  }
-
-  vec2 poissonDisk[4] = vec2[](
-    vec2( -0.94201624, -0.39906216 ),
-    vec2( 0.94558609, -0.76890725 ),
-    vec2( -0.094184101, -0.92938870 ),
-    vec2( 0.34495938, 0.29387760 )
-  );
-
+    
   void main() {
     _output.color = v_color;
 
@@ -1765,7 +1771,7 @@ export default class SCNRenderer extends NSObject {
       const materialCount = geometry.materials.length
       const material = geometry.materials[i % materialCount]
       let p = program
-      if(material.program){
+      if(material && material.program){
         this._switchProgram(material.program)
         // TODO: refactoring
         p = material.program._glProgram
@@ -3125,11 +3131,26 @@ export default class SCNRenderer extends NSObject {
 
   _processShaderText(text) {
     let _text = text.replace(/texture2D/g, 'texture')
+    _text = _text.replace(/float3/g, 'vec3')
+    _text = _text.replace(/float4/g, 'vec4')
+    _text = _text.replace(/scn_frame\.time/g, 'u_time')
+    _text = _text.replace(/#pragma alpha/g, '')
 
     // workaround for Badger...
     _text = _text.replace(/uvs.x \*= 2/, 'uvs.x *= 2.0')
     _text = _text.replace(/tn \* 2 - 1/, 'tn * 2.0 - vec3(1)')
     _text = _text.replace(/tn2 \* 2 - 1/, 'tn2 * 2.0 - vec3(1)')
+
+    // workaround for Fox2...
+    _text = _text.replace(/pow\(_surface.ambientOcclusion,3\)/, 'pow(_surface.ambientOcclusion,3.0)')
+    _text = _text.replace(/pow\(AO,5\)/, 'pow(AO,5.0)')
+    _text = _text.replace(/pow\(1.-fresnelBasis , 6\)/, 'pow(1.-fresnelBasis , 6.0)')
+    _text = _text.replace(/pow\(1.-fresnelBasis , 4\)/, 'pow(1.-fresnelBasis , 4.0)')
+    _text = _text.replace(/vec3\(1,0.4,0.0\) \* 1;/, 'vec3(1,0.4,0.0);')
+    _text = _text.replace(/vec3\(0.6,0.3,0.2\) \* 1;/, 'vec3(0.6,0.3,0.2);')
+    _text = _text.replace(/vec4 WorldPos/, 'vec3 WorldPos')
+    _text = _text.replace(/mult \* 5;/, 'mult * 5.0;')
+    _text = _text.replace(/mask \* \(1 - feather\) \+ feather \/ 2/, 'mask * (1.0 - feather) + feather / 2.0')
 
     return _text
   }

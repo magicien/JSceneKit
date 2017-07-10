@@ -267,7 +267,10 @@ export default class SCNParticleSystem extends NSObject {
       softParticlesEnabled: ['boolean', null],
       fixedTimeStep: ['float', null],
       renderingMode: ['integer', null],
-      physicsCollisionsEnabled: ['boolean', null]
+      physicsCollisionsEnabled: ['boolean', null],
+      orientationDirection: ['SCNVector3', null],
+      particleIntensity: ['float', null],
+      particleIntensityVariation: ['float', null]
     }
   }
 
@@ -1133,8 +1136,21 @@ export default class SCNParticleSystem extends NSObject {
           break
         }
         case 'SCNPlane': {
-          pVec = new SCNVector3((Math.random() - 0.5) * this.width, (Math.random() - 0.5) * this.height, 0.0)
+          pVec = new SCNVector3(
+            (Math.random() - 0.5) * this.emitterShape.width, 
+            (Math.random() - 0.5) * this.emitterShape.height,
+            0.0
+          )
           vVec = new SCNVector3(0, 0, 1)
+          break
+        }
+        case 'SCNCylinder': {
+          const y = (Math.random() - 0.5) * this.emitterShape.height
+          const r = Math.random() * Math.PI * 2.0
+          const x = Math.sin(r)
+          const z = Math.cos(r)
+          pVec = new SCNVector3(x * this.emitterShape.radius, y, z * this.emitterShape.radius)
+          vVec = new SCNVector3(x, 0, z)
           break
         }
         default:

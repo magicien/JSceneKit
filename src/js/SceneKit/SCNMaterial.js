@@ -2,12 +2,14 @@
 
 import NSObject from '../ObjectiveC/NSObject'
 import SCNAnimatable from './SCNAnimatable'
-import SCNShadable from './SCNShadable'
-import SCNMaterialProperty from './SCNMaterialProperty'
-import SCNTransparencyMode from './SCNTransparencyMode'
-import SCNCullMode from './SCNCullMode'
 import SCNBlendMode from './SCNBlendMode'
+import SCNColorMask from './SCNColorMask'
+import SCNCullMode from './SCNCullMode'
+import SCNFillMode from './SCNFillMode'
+import SCNMaterialProperty from './SCNMaterialProperty'
 import SCNOrderedDictionary from './SCNOrderedDictionary'
+import SCNShadable from './SCNShadable'
+import SCNTransparencyMode from './SCNTransparencyMode'
 import SKColor from '../SpriteKit/SKColor'
 
 const _LightingModel = {
@@ -78,6 +80,10 @@ export default class SCNMaterial extends NSObject {
         obj._roughness = value
         value._createPresentation()
       }],
+      displacement: ['SCNMaterialProperty', (obj, value) => {
+        obj._displacement = value
+        value._createPresentation()
+      }],
       name: 'string',
       shininess: 'float',
       fresnelExponent: 'float',
@@ -91,9 +97,11 @@ export default class SCNMaterial extends NSObject {
       locksAmbientWithDiffuse: 'boolean',
       writesToDepthBuffer: 'boolean',
       readsFromDepthBuffer: 'boolean',
+      colorBufferWriteMask: 'integer',
+      fillMode: 'integer',
+      valuesForUndefinedKeys: ['NSMutableDictionary', '_valuesForUndefinedKeys'],
 
       avoidsOverLighting: ['boolean', null],
-      fillMode: ['integer', null],
       entityID: ['string', '_entityID'],
       indexOfRefraction: ['integer', null],
       shadableHelper: ['SCNShadableHelper', '_shadableHelper'],
@@ -128,6 +136,7 @@ export default class SCNMaterial extends NSObject {
     this._selfIllumination = new SCNMaterialProperty(SKColor.black)
     this._metalness = new SCNMaterialProperty(SKColor.black)
     this._roughness = new SCNMaterialProperty(new SKColor(0.485, 0.485, 0.485, 1.0))
+    this._displacement = new SCNMaterialProperty(SKColor.black) // TODO: check the default value
 
     // Customizing a Material
 
@@ -222,6 +231,20 @@ export default class SCNMaterial extends NSObject {
      */
     this.readsFromDepthBuffer = true
 
+    /**
+     *
+     * @type {SCNColorMask}
+     * @see https://developer.apple.com/documentation/scenekit/scnmaterial/2867554-colorbufferwritemask
+     */
+    this.colorBufferWriteMask = SCNColorMask.all
+
+    /**
+     * 
+     * @type {SCNFillMode}
+     * @see https://developer.apple.com/documentation/scenekit/scnmaterial/2867442-fillmode
+     */
+    this.fillMode = SCNFillMode.fill
+
     /////////////////
     // SCNShadable //
     /////////////////
@@ -273,6 +296,8 @@ export default class SCNMaterial extends NSObject {
      * @type {Promise}
      */
     this._loadedPromise = null
+
+    this._valuesForUndefinedKeys = {}
   }
 
   // Configuring a Material’s Visual Properties
@@ -395,6 +420,16 @@ export default class SCNMaterial extends NSObject {
    */
   get roughness() {
     return this._roughness
+  }
+
+  /**
+   * 
+   * @type {SCNMaterialProperty}
+   * @desc
+   * @see https://developer.apple.com/documentation/scenekit/scnmaterial/2867516-displacement
+   */
+  get displacement() {
+    return this._displacement
   }
 
   _createPresentationProperties() {
@@ -646,5 +681,20 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     }
     this._loadedPromise = Promise.all(promises)
     return this._loadedPromise
+  }
+
+  /**
+   * Invoked by value(forKey:) when it finds no property corresponding to a given key.
+   * @access public
+   * @param {string} key - A string that is not equal to the name of any of the receiver's properties.
+   * @returns {?Object} - 
+   * @desc Subclasses can override this method to return an alternate value for undefined keys. The default implementation raises an NSUndefinedKeyException.
+   * @see https://developer.apple.com/reference/objectivec/nsobject/1413457-value
+   */
+  valueForUndefinedKey(key) {
+    if(typeof this._valuesForUndefinedKeys[key] !== 'undefined'){
+      return this._valuesForUndefinedKeys[key]
+    }
+    return super.valueForUndefinedKey(key)
   }
 }

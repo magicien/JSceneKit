@@ -52,8 +52,11 @@ export default class SCNScene extends NSObject {
       fogStartDistance: 'double',
       fogEndDistance: 'double',
       fogColor: 'plist',
+      environment: ['SCNMaterialProperty', '_lightingEnvironment'],
+
       version: ['float', null],
-      environment: ['SCNMaterialProperty', '_lightingEnvironment']
+      userAttributes: ['NSMutableDictionary', null],
+      sourceURL: ['NSURL', null]
     }
   }
 

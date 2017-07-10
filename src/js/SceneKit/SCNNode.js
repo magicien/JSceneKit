@@ -60,6 +60,9 @@ export default class SCNNode extends NSObject {
       paused: ['boolean', 'isPaused'],
       position: ['SCNVector3', '_position'],
       rotation: ['SCNVector4', '_rotation'],
+      orientation: ['SCNVector4', (obj, value) => {
+        obj.orientation = value
+      }],
       scale: ['SCNVector3', '_scale'],
       hidden: ['boolean', 'isHidden'],
       opacity: ['float', '_opacity'],
@@ -78,6 +81,11 @@ export default class SCNNode extends NSObject {
       'animation-keys': ['NSArray', null],
       animations: ['NSMutableDictionary', (obj, anims) => {
         this._loadAnimationArray(obj, anims)
+      }],
+      'animation-players': ['NSMutableArray', (obj, players) => {
+        for(const player of players){
+          obj.addAnimationPlayerForKey(player, null)
+        }
       }],
       'action-keys': ['NSArray', null],
       actions: ['NSMutableDictionary', (obj, acts) => {
@@ -376,6 +384,12 @@ export default class SCNNode extends NSObject {
      */
     this._animations = new SCNOrderedDictionary()
 
+    /**
+     * @access private
+     * @type {SCNOrderedDictionary}
+     */
+    this._animationPlayers = new SCNOrderedDictionary()
+
     ///////////////////////
     // SCNBoundingVolume //
     ///////////////////////
@@ -608,26 +622,37 @@ export default class SCNNode extends NSObject {
     const result = []
     let pos = offset
     if(accessor.componentsType === 1){
+      // float
       for(let i=0; i<count; i++){
         result.push(source.readFloatBE(pos))
         pos += stride
       }
     }else if(accessor.componentsType === 6){
+      // double
       for(let i=0; i<count; i++){
         result.push(source.readDoubleBE(pos))
         pos += stride
       }
     }else if(accessor.componentsType === 9){
+      // SCNVector3
       for(let i=0; i<count; i++){
         result.push(SCNVector3._initWithData(source, pos, true))
         pos += stride
       }
     }else if(accessor.componentsType === 10){
+      // SCNVector4
       for(let i=0; i<count; i++){
         result.push(SCNVector4._initWithData(source, pos, true))
         pos += stride
       }
+    }else if(accessor.componentsType === 11){
+      // SCNMatrix4
+      for(let i=0; i<count; i++){
+        result.push(SCNMatrix4._initWithData(source, pos, true))
+        pos += stride
+      }
     }else if(accessor.componentsType === 13){
+      // SKColor
       for(let i=0; i<count; i++){
         result.push(SKColor._initWithData(source, pos, true))
         pos += stride
@@ -1068,6 +1093,17 @@ export default class SCNNode extends NSObject {
       throw new Error(`SCNNode.childNodes out of index: ${index} > ${length}`)
     }
     this._childNodes.splice(index, 0, object)
+  }
+
+  /**
+   * @access private
+   * @type {?SCNNode}
+   */
+  get _rootNode() {
+    if(this._parent === null){
+      return this
+    }
+    return this._parent._rootNode
   }
 
   /**
@@ -1672,6 +1708,18 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    * @see https://developer.apple.com/reference/scenekit/scnanimatable/1522880-removeanimation
    */
   removeAnimationForKey(key) {
+    this.removeAnimationForKeyBlendOutDuration(key, 0)
+  }
+
+  /**
+   *
+   * @access public
+   * @param {string} key -
+   * @param {number} duration -
+   * @returns {void}
+   */
+  removeAnimationForKeyBlendOutDuration(key, duration) {
+    // FIXME: use duration
     this._animations.delete(key)
     this._copyTransformToPresentationRecursive()
   }
@@ -1751,6 +1799,34 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
    */
   setAnimationSpeedForKey(speed, key) {
   }
+
+
+  /**
+   *
+   * @access public
+   * @param {SCNAnimationPlayer} player -
+   * @param {?string} key -
+   * @returns {void}
+   */
+  addAnimationPlayerForKey(player, key) {
+    if(typeof key === 'undefined' || key === null){
+      key = Symbol()
+    }
+
+    this._animationPlayers.set(key, player)
+    this._copyTransformToPresentationRecursive()
+  }
+
+  /**
+   * 
+   * @access public
+   * @param {string} key -
+   * @returns {SCNAnimationPlayer} -
+   */
+  animationPlayerForKey(key) {
+    return this._animationPlayers.get(key)
+  }
+  
 
   ///////////////////////
   // SCNBoundingVolume //
@@ -2025,9 +2101,24 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
       if(this._nodeID === nodeID){
         return this
       }
-      const node = this._childNodeWithNodeIDRecursively(nodeID)
+      let node = this._childNodeWithNodeIDRecursively(nodeID)
       if(node){
         return node
+      }
+      node = this.childNodeWithNameRecursively(nodeID)
+      if(node){
+        return node
+      }
+      const rootNode = this._rootNode
+      if(rootNode !== this){
+        node = rootNode._childNodeWithNodeIDRecursively(nodeID)
+        if(node){
+          return node
+        }
+        node = rootNode.childNodeWithNameRecursively(nodeID)
+        if(node){
+          return node
+        }
       }
     }
     return super.valueForUndefinedKey(key)
