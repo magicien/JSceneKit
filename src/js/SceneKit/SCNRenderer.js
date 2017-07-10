@@ -120,6 +120,7 @@ const _defaultVertexShader =
   //uniform mat3x4[255] skinningJoints;
   uniform vec4[765] skinningJoints;
   uniform int numSkinningJoints;
+  uniform mat4 modelTransform;
 
   in vec3 position;
   in vec3 normal;
@@ -3136,6 +3137,8 @@ export default class SCNRenderer extends NSObject {
     _text = _text.replace(/scn_frame\.time/g, 'u_time')
     _text = _text.replace(/#pragma alpha/g, '')
 
+    _text = _text.replace(/u_modelTransform/g, 'modelTransform') // TODO: use u_modelTransform
+
     // workaround for Badger...
     _text = _text.replace(/uvs.x \*= 2/, 'uvs.x *= 2.0')
     _text = _text.replace(/tn \* 2 - 1/, 'tn * 2.0 - vec3(1)')
@@ -3151,6 +3154,12 @@ export default class SCNRenderer extends NSObject {
     _text = _text.replace(/vec4 WorldPos/, 'vec3 WorldPos')
     _text = _text.replace(/mult \* 5;/, 'mult * 5.0;')
     _text = _text.replace(/mask \* \(1 - feather\) \+ feather \/ 2/, 'mask * (1.0 - feather) + feather / 2.0')
+    _text = _text.replace(
+      /vec4 pos = modelTransform \* _geometry.position;/, 
+      'vec4 pos = modelTransform * vec4(_geometry.position, 1);'
+    )
+    _text = _text.replace(/cos\(\(u_time \* 0.5 \+ pos.x\) \* 2\)/, 'cos((u_time * 0.5 + pos.x) * 2.0)')
+
 
     return _text
   }

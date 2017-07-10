@@ -162,8 +162,10 @@ import SCNPhysicsContactDelegate from './SceneKit/SCNPhysicsContactDelegate'
 import SCNPhysicsField from './SceneKit/SCNPhysicsField'
 import SCNPhysicsFieldScope from './SceneKit/SCNPhysicsFieldScope'
 import SCNPhysicsHingeJoint from './SceneKit/SCNPhysicsHingeJoint'
+import SCNPhysicsNoiseField from './SceneKit/SCNPhysicsNoiseField'
 import SCNPhysicsShape from './SceneKit/SCNPhysicsShape'
 import SCNPhysicsSliderJoint from './SceneKit/SCNPhysicsSliderJoint'
+import SCNPhysicsTurbulenceField from './SceneKit/SCNPhysicsTurbulenceField'
 import SCNPhysicsVehicle from './SceneKit/SCNPhysicsVehicle'
 import SCNPhysicsVehicleWheel from './SceneKit/SCNPhysicsVehicleWheel'
 import SCNPhysicsWorld from './SceneKit/SCNPhysicsWorld'
@@ -412,8 +414,10 @@ _ClassList.registerClass(SCNPhysicsContactDelegate)
 _ClassList.registerClass(SCNPhysicsField)
 _ClassList.registerClass(SCNPhysicsFieldScope)
 _ClassList.registerClass(SCNPhysicsHingeJoint)
+_ClassList.registerClass(SCNPhysicsNoiseField)
 _ClassList.registerClass(SCNPhysicsShape)
 _ClassList.registerClass(SCNPhysicsSliderJoint)
+_ClassList.registerClass(SCNPhysicsTurbulenceField)
 _ClassList.registerClass(SCNPhysicsVehicle)
 _ClassList.registerClass(SCNPhysicsVehicleWheel)
 _ClassList.registerClass(SCNPhysicsWorld)
@@ -655,8 +659,10 @@ exports.SCNPhysicsContactDelegate = SCNPhysicsContactDelegate
 exports.SCNPhysicsField = SCNPhysicsField
 exports.SCNPhysicsFieldScope = SCNPhysicsFieldScope
 exports.SCNPhysicsHingeJoint = SCNPhysicsHingeJoint
+exports.SCNPhysicsNoiseField = SCNPhysicsNoiseField
 exports.SCNPhysicsShape = SCNPhysicsShape
 exports.SCNPhysicsSliderJoint = SCNPhysicsSliderJoint
+exports.SCNPhysicsTurbulenceField = SCNPhysicsTurbulenceField
 exports.SCNPhysicsVehicle = SCNPhysicsVehicle
 exports.SCNPhysicsVehicleWheel = SCNPhysicsVehicleWheel
 exports.SCNPhysicsWorld = SCNPhysicsWorld

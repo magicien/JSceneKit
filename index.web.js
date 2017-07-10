@@ -703,19 +703,27 @@ module.exports =
 
 	var _SCNPhysicsHingeJoint2 = _interopRequireDefault(_SCNPhysicsHingeJoint);
 
+	var _SCNPhysicsNoiseField = __webpack_require__(211);
+
+	var _SCNPhysicsNoiseField2 = _interopRequireDefault(_SCNPhysicsNoiseField);
+
 	var _SCNPhysicsShape = __webpack_require__(117);
 
 	var _SCNPhysicsShape2 = _interopRequireDefault(_SCNPhysicsShape);
 
-	var _SCNPhysicsSliderJoint = __webpack_require__(211);
+	var _SCNPhysicsSliderJoint = __webpack_require__(212);
 
 	var _SCNPhysicsSliderJoint2 = _interopRequireDefault(_SCNPhysicsSliderJoint);
 
-	var _SCNPhysicsVehicle = __webpack_require__(212);
+	var _SCNPhysicsTurbulenceField = __webpack_require__(213);
+
+	var _SCNPhysicsTurbulenceField2 = _interopRequireDefault(_SCNPhysicsTurbulenceField);
+
+	var _SCNPhysicsVehicle = __webpack_require__(214);
 
 	var _SCNPhysicsVehicle2 = _interopRequireDefault(_SCNPhysicsVehicle);
 
-	var _SCNPhysicsVehicleWheel = __webpack_require__(213);
+	var _SCNPhysicsVehicleWheel = __webpack_require__(215);
 
 	var _SCNPhysicsVehicleWheel2 = _interopRequireDefault(_SCNPhysicsVehicleWheel);
 
@@ -723,7 +731,7 @@ module.exports =
 
 	var _SCNPhysicsWorld2 = _interopRequireDefault(_SCNPhysicsWorld);
 
-	var _SCNPlane = __webpack_require__(214);
+	var _SCNPlane = __webpack_require__(216);
 
 	var _SCNPlane2 = _interopRequireDefault(_SCNPlane);
 
@@ -735,7 +743,7 @@ module.exports =
 
 	var _SCNProgramDelegate2 = _interopRequireDefault(_SCNProgramDelegate);
 
-	var _SCNPyramid = __webpack_require__(215);
+	var _SCNPyramid = __webpack_require__(217);
 
 	var _SCNPyramid2 = _interopRequireDefault(_SCNPyramid);
 
@@ -743,11 +751,11 @@ module.exports =
 
 	var _SCNQuaternion2 = _interopRequireDefault(_SCNQuaternion);
 
-	var _SCNReferenceLoadingPolicy = __webpack_require__(216);
+	var _SCNReferenceLoadingPolicy = __webpack_require__(218);
 
 	var _SCNReferenceLoadingPolicy2 = _interopRequireDefault(_SCNReferenceLoadingPolicy);
 
-	var _SCNReferenceNode = __webpack_require__(217);
+	var _SCNReferenceNode = __webpack_require__(219);
 
 	var _SCNReferenceNode2 = _interopRequireDefault(_SCNReferenceNode);
 
@@ -795,11 +803,11 @@ module.exports =
 
 	var _SCNShadable2 = _interopRequireDefault(_SCNShadable);
 
-	var _SCNShadableHelper = __webpack_require__(218);
+	var _SCNShadableHelper = __webpack_require__(220);
 
 	var _SCNShadableHelper2 = _interopRequireDefault(_SCNShadableHelper);
 
-	var _SCNShaderModifierEntryPoint = __webpack_require__(219);
+	var _SCNShaderModifierEntryPoint = __webpack_require__(221);
 
 	var _SCNShaderModifierEntryPoint2 = _interopRequireDefault(_SCNShaderModifierEntryPoint);
 
@@ -807,7 +815,7 @@ module.exports =
 
 	var _SCNShadowMode2 = _interopRequireDefault(_SCNShadowMode);
 
-	var _SCNShape = __webpack_require__(220);
+	var _SCNShape = __webpack_require__(222);
 
 	var _SCNShape2 = _interopRequireDefault(_SCNShape);
 
@@ -831,7 +839,7 @@ module.exports =
 
 	var _SCNTessellationSmoothingMode2 = _interopRequireDefault(_SCNTessellationSmoothingMode);
 
-	var _SCNText = __webpack_require__(221);
+	var _SCNText = __webpack_require__(223);
 
 	var _SCNText2 = _interopRequireDefault(_SCNText);
 
@@ -839,7 +847,7 @@ module.exports =
 
 	var _SCNTimingFunction2 = _interopRequireDefault(_SCNTimingFunction);
 
-	var _SCNTorus = __webpack_require__(222);
+	var _SCNTorus = __webpack_require__(224);
 
 	var _SCNTorus2 = _interopRequireDefault(_SCNTorus);
 
@@ -847,7 +855,7 @@ module.exports =
 
 	var _SCNTransaction2 = _interopRequireDefault(_SCNTransaction);
 
-	var _SCNTransformConstraint = __webpack_require__(223);
+	var _SCNTransformConstraint = __webpack_require__(225);
 
 	var _SCNTransformConstraint2 = _interopRequireDefault(_SCNTransformConstraint);
 
@@ -855,7 +863,7 @@ module.exports =
 
 	var _SCNTransparencyMode2 = _interopRequireDefault(_SCNTransparencyMode);
 
-	var _SCNTube = __webpack_require__(224);
+	var _SCNTube = __webpack_require__(226);
 
 	var _SCNTube2 = _interopRequireDefault(_SCNTube);
 
@@ -863,31 +871,31 @@ module.exports =
 
 	var _SCNVector2 = _interopRequireDefault(_SCNVector);
 
-	var _SCNVector3EqualToVector = __webpack_require__(225);
+	var _SCNVector3EqualToVector = __webpack_require__(227);
 
 	var _SCNVector3EqualToVector2 = _interopRequireDefault(_SCNVector3EqualToVector);
 
-	var _SCNVector3FromFloat = __webpack_require__(226);
+	var _SCNVector3FromFloat = __webpack_require__(228);
 
 	var _SCNVector3FromFloat2 = _interopRequireDefault(_SCNVector3FromFloat);
 
-	var _SCNVector3FromGLKVector = __webpack_require__(227);
+	var _SCNVector3FromGLKVector = __webpack_require__(229);
 
 	var _SCNVector3FromGLKVector2 = _interopRequireDefault(_SCNVector3FromGLKVector);
 
-	var _SCNVector3Make = __webpack_require__(228);
+	var _SCNVector3Make = __webpack_require__(230);
 
 	var _SCNVector3Make2 = _interopRequireDefault(_SCNVector3Make);
 
-	var _SCNVector3ToFloat = __webpack_require__(229);
+	var _SCNVector3ToFloat = __webpack_require__(231);
 
 	var _SCNVector3ToFloat2 = _interopRequireDefault(_SCNVector3ToFloat);
 
-	var _SCNVector3ToGLKVector = __webpack_require__(230);
+	var _SCNVector3ToGLKVector = __webpack_require__(232);
 
 	var _SCNVector3ToGLKVector2 = _interopRequireDefault(_SCNVector3ToGLKVector);
 
-	var _SCNVector3Zero = __webpack_require__(231);
+	var _SCNVector3Zero = __webpack_require__(233);
 
 	var _SCNVector3Zero2 = _interopRequireDefault(_SCNVector3Zero);
 
@@ -895,31 +903,31 @@ module.exports =
 
 	var _SCNVector4 = _interopRequireDefault(_SCNVector3);
 
-	var _SCNVector4EqualToVector = __webpack_require__(232);
+	var _SCNVector4EqualToVector = __webpack_require__(234);
 
 	var _SCNVector4EqualToVector2 = _interopRequireDefault(_SCNVector4EqualToVector);
 
-	var _SCNVector4FromFloat = __webpack_require__(233);
+	var _SCNVector4FromFloat = __webpack_require__(235);
 
 	var _SCNVector4FromFloat2 = _interopRequireDefault(_SCNVector4FromFloat);
 
-	var _SCNVector4FromGLKVector = __webpack_require__(234);
+	var _SCNVector4FromGLKVector = __webpack_require__(236);
 
 	var _SCNVector4FromGLKVector2 = _interopRequireDefault(_SCNVector4FromGLKVector);
 
-	var _SCNVector4Make = __webpack_require__(235);
+	var _SCNVector4Make = __webpack_require__(237);
 
 	var _SCNVector4Make2 = _interopRequireDefault(_SCNVector4Make);
 
-	var _SCNVector4ToFloat = __webpack_require__(236);
+	var _SCNVector4ToFloat = __webpack_require__(238);
 
 	var _SCNVector4ToFloat2 = _interopRequireDefault(_SCNVector4ToFloat);
 
-	var _SCNVector4ToGLKVector = __webpack_require__(237);
+	var _SCNVector4ToGLKVector = __webpack_require__(239);
 
 	var _SCNVector4ToGLKVector2 = _interopRequireDefault(_SCNVector4ToGLKVector);
 
-	var _SCNView = __webpack_require__(238);
+	var _SCNView = __webpack_require__(240);
 
 	var _SCNView2 = _interopRequireDefault(_SCNView);
 
@@ -927,11 +935,11 @@ module.exports =
 
 	var _SCNWrapMode2 = _interopRequireDefault(_SCNWrapMode);
 
-	var _SKAction = __webpack_require__(239);
+	var _SKAction = __webpack_require__(241);
 
 	var _SKAction2 = _interopRequireDefault(_SKAction);
 
-	var _SKActionTimingMode = __webpack_require__(240);
+	var _SKActionTimingMode = __webpack_require__(242);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
@@ -943,27 +951,27 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SKEffectNode = __webpack_require__(241);
+	var _SKEffectNode = __webpack_require__(243);
 
 	var _SKEffectNode2 = _interopRequireDefault(_SKEffectNode);
 
-	var _SKFade = __webpack_require__(242);
+	var _SKFade = __webpack_require__(244);
 
 	var _SKFade2 = _interopRequireDefault(_SKFade);
 
-	var _SKGroup = __webpack_require__(243);
+	var _SKGroup = __webpack_require__(245);
 
 	var _SKGroup2 = _interopRequireDefault(_SKGroup);
 
-	var _SKLabelHorizontalAlignmentMode = __webpack_require__(244);
+	var _SKLabelHorizontalAlignmentMode = __webpack_require__(246);
 
 	var _SKLabelHorizontalAlignmentMode2 = _interopRequireDefault(_SKLabelHorizontalAlignmentMode);
 
-	var _SKLabelNode = __webpack_require__(245);
+	var _SKLabelNode = __webpack_require__(247);
 
 	var _SKLabelNode2 = _interopRequireDefault(_SKLabelNode);
 
-	var _SKLabelVerticalAlignmentMode = __webpack_require__(246);
+	var _SKLabelVerticalAlignmentMode = __webpack_require__(248);
 
 	var _SKLabelVerticalAlignmentMode2 = _interopRequireDefault(_SKLabelVerticalAlignmentMode);
 
@@ -971,27 +979,27 @@ module.exports =
 
 	var _SKNode2 = _interopRequireDefault(_SKNode);
 
-	var _SKRepeat = __webpack_require__(247);
+	var _SKRepeat = __webpack_require__(249);
 
 	var _SKRepeat2 = _interopRequireDefault(_SKRepeat);
 
-	var _SKScale = __webpack_require__(248);
+	var _SKScale = __webpack_require__(250);
 
 	var _SKScale2 = _interopRequireDefault(_SKScale);
 
-	var _SKScene = __webpack_require__(249);
+	var _SKScene = __webpack_require__(251);
 
 	var _SKScene2 = _interopRequireDefault(_SKScene);
 
-	var _SKSceneScaleMode = __webpack_require__(250);
+	var _SKSceneScaleMode = __webpack_require__(252);
 
 	var _SKSceneScaleMode2 = _interopRequireDefault(_SKSceneScaleMode);
 
-	var _SKSequence = __webpack_require__(251);
+	var _SKSequence = __webpack_require__(253);
 
 	var _SKSequence2 = _interopRequireDefault(_SKSequence);
 
-	var _SKShapeNode = __webpack_require__(252);
+	var _SKShapeNode = __webpack_require__(254);
 
 	var _SKShapeNode2 = _interopRequireDefault(_SKShapeNode);
 
@@ -1007,7 +1015,7 @@ module.exports =
 
 	var _SKTextureFilteringMode2 = _interopRequireDefault(_SKTextureFilteringMode);
 
-	var _SKWait = __webpack_require__(253);
+	var _SKWait = __webpack_require__(255);
 
 	var _SKWait2 = _interopRequireDefault(_SKWait);
 
@@ -1023,7 +1031,7 @@ module.exports =
 
 	var _BinaryRequest3 = _interopRequireDefault(_BinaryRequest2);
 
-	var _Buffer2 = __webpack_require__(254);
+	var _Buffer2 = __webpack_require__(256);
 
 	var _Buffer3 = _interopRequireDefault(_Buffer2);
 
@@ -1039,7 +1047,7 @@ module.exports =
 
 	var _FileReader3 = _interopRequireDefault(_FileReader2);
 
-	var _HTMLCanvasElement2 = __webpack_require__(256);
+	var _HTMLCanvasElement2 = __webpack_require__(258);
 
 	var _HTMLCanvasElement3 = _interopRequireDefault(_HTMLCanvasElement2);
 
@@ -1209,8 +1217,10 @@ module.exports =
 	_ClassList3.default.registerClass(_SCNPhysicsField2.default);
 	_ClassList3.default.registerClass(_SCNPhysicsFieldScope2.default);
 	_ClassList3.default.registerClass(_SCNPhysicsHingeJoint2.default);
+	_ClassList3.default.registerClass(_SCNPhysicsNoiseField2.default);
 	_ClassList3.default.registerClass(_SCNPhysicsShape2.default);
 	_ClassList3.default.registerClass(_SCNPhysicsSliderJoint2.default);
+	_ClassList3.default.registerClass(_SCNPhysicsTurbulenceField2.default);
 	_ClassList3.default.registerClass(_SCNPhysicsVehicle2.default);
 	_ClassList3.default.registerClass(_SCNPhysicsVehicleWheel2.default);
 	_ClassList3.default.registerClass(_SCNPhysicsWorld2.default);
@@ -1452,8 +1462,10 @@ module.exports =
 	exports.SCNPhysicsField = _SCNPhysicsField2.default;
 	exports.SCNPhysicsFieldScope = _SCNPhysicsFieldScope2.default;
 	exports.SCNPhysicsHingeJoint = _SCNPhysicsHingeJoint2.default;
+	exports.SCNPhysicsNoiseField = _SCNPhysicsNoiseField2.default;
 	exports.SCNPhysicsShape = _SCNPhysicsShape2.default;
 	exports.SCNPhysicsSliderJoint = _SCNPhysicsSliderJoint2.default;
+	exports.SCNPhysicsTurbulenceField = _SCNPhysicsTurbulenceField2.default;
 	exports.SCNPhysicsVehicle = _SCNPhysicsVehicle2.default;
 	exports.SCNPhysicsVehicleWheel = _SCNPhysicsVehicleWheel2.default;
 	exports.SCNPhysicsWorld = _SCNPhysicsWorld2.default;
@@ -28776,6 +28788,11 @@ module.exports =
 	              return data.readDoubleLE(_offset);
 	            };
 	            break;
+	          case 1:
+	            loadFunc = function loadFunc(_offset) {
+	              return data.readIntLE(_offset, 1) / 255.0;
+	            };
+	            break;
 	          default:
 	            throw new Error('unknown float data size: ' + bytesPerComponent);
 	        }
@@ -32309,6 +32326,12 @@ module.exports =
 	        zFar: 'float',
 	        zNear: 'float',
 	        lightCategoryBitMask: ['integer', 'categoryBitMask'],
+	        automaticallyAdjustsShadowProjection: 'boolean',
+	        forcesBackFaceCasters: 'boolean',
+	        maximumShadowDistance: 'float',
+	        sampleDistributedShadowMaps: 'boolean',
+	        shadowCascadeCount: 'integer',
+	        shadowCascadeSplittingFactor: 'float',
 
 	        entityID: ['string', '_entityID'],
 	        version: ['float', null],
@@ -32320,7 +32343,8 @@ module.exports =
 	        baked: ['boolean', null],
 	        goboProjectShadows: ['boolean', null],
 	        shadowSampleCount2: ['integer', null],
-	        sphericalHarmonics: ['NSMutableData', null]
+	        sphericalHarmonics: ['NSMutableData', null],
+	        autoShadowProjection: ['boolean', null]
 	      };
 	    }
 
@@ -32518,6 +32542,48 @@ module.exports =
 	    _this._shadowDepthBuffer = null;
 	    _this._shadowDepthTexture = null;
 	    _this._projectionTransform = null;
+
+	    /**
+	     * 
+	     * @type {boolean}
+	     * @see
+	     */
+	    _this.automaticallyAdjustsShadowProjection = false;
+
+	    /**
+	     * 
+	     * @type {boolean}
+	     * @see
+	     */
+	    _this.forcesBackFaceCasters = false;
+
+	    /**
+	     *
+	     * @type {number}
+	     * @see
+	     */
+	    _this.maximumShadowDistance = 0.0;
+
+	    /**
+	     *
+	     * @type {boolean}
+	     * @see
+	     */
+	    _this.sampleDistributedShadowMaps = false;
+
+	    /**
+	     *
+	     * @type {number}
+	     * @see
+	     */
+	    _this.shadowCascadeCount = 1;
+
+	    /**
+	     *
+	     * @type {number}
+	     * @see
+	     */
+	    _this.shadowCascadeSplittingFactor = 1.0;
 	    return _this;
 	  }
 
@@ -33100,7 +33166,7 @@ module.exports =
 	 * @access private
 	 * @type {string}
 	 */
-	var _defaultVertexShader = '#version 300 es\n  precision mediump float;\n\n  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__\n  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__\n  #define NUM_DIRECTIONAL_SHADOW_LIGHTS __NUM_DIRECTIONAL_SHADOW_LIGHTS__\n  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__\n  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__\n  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__\n  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__\n  #define USE_SHADER_MODIFIER_GEOMETRY __USE_SHADER_MODIFIER_GEOMETRY__\n\n  layout (std140) uniform cameraUniform {\n    vec4 position;\n    mat4 viewTransform;\n    mat4 viewProjectionTransform;\n  } camera;\n\n  layout (std140) uniform materialUniform {\n    vec4 ambient;\n    vec4 diffuse;\n    vec4 specular;\n    vec4 emission;\n    float shininess;\n    float fresnelExponent;\n  } material;\n\n  struct AmbientLight {\n    vec4 color;\n  };\n\n  struct DirectionalLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct DirectionalShadowLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n    vec4 shadowColor;\n    mat4 viewProjectionTransform;\n    mat4 shadowProjectionTransform;\n  };\n\n  struct OmniLight {\n    vec4 color;\n    vec4 position; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct SpotLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct IESLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct ProbeLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  layout (std140) uniform lightUniform {\n    __LIGHT_DEFINITION__\n  } light;\n  __VS_LIGHT_VARS__\n\n  layout (std140) uniform fogUniform {\n    vec4 color;\n    float startDistance;\n    float endDistance;\n    float densityExponent;\n  } fog;\n\n  #define kSCNTexcoordCount 2\n  struct SCNShaderGeometry {\n    vec3 position;\n    vec3 normal;\n    vec4 tangent;\n    vec4 color;\n    vec2 texcoords[kSCNTexcoordCount];\n  };\n\n  uniform float u_time;\n  //uniform mat3x4[255] skinningJoints;\n  uniform vec4[765] skinningJoints;\n  uniform int numSkinningJoints;\n\n  in vec3 position;\n  in vec3 normal;\n  in vec3 tangent;\n  in vec4 color;\n  in vec2 texcoord0;\n  in vec2 texcoord1;\n  in vec4 boneIndices;\n  in vec4 boneWeights;\n\n  out vec3 v_position;\n  out vec3 v_normal;\n  out vec3 v_tangent;\n  out vec3 v_bitangent;\n  out vec2 v_texcoord0;\n  out vec2 v_texcoord1;\n  out vec4 v_color;\n  out vec3 v_eye;\n  out float v_fogFactor;\n\n  #if USE_SHADER_MODIFIER_GEOMETRY\n  void shaderModifierGeometry(inout SCNShaderGeometry _geometry) {\n    __SHADER_MODIFIER_GEOMETRY__\n  }\n  #endif\n\n  void main() {\n    SCNShaderGeometry _geometry;\n    _geometry.position = position;\n    _geometry.normal = normal;\n    _geometry.tangent = vec4(tangent, 1.0);\n    _geometry.color = color;\n    _geometry.texcoords[0] = texcoord0;\n    _geometry.texcoords[1] = texcoord1;\n    \n    #if USE_SHADER_MODIFIER_GEOMETRY\n      shaderModifierGeometry(_geometry);\n    #endif\n\n    vec3 pos = vec3(0, 0, 0);\n    vec3 nom = vec3(0, 0, 0);\n    vec3 tng = vec3(0, 0, 0);\n    vec4 col = _geometry.color;\n\n    if(numSkinningJoints > 0){\n      for(int i=0; i<numSkinningJoints; i++){\n        float weight = boneWeights[i];\n        if(int(boneIndices[i]) < 0){\n          continue;\n        }\n        int idx = int(boneIndices[i]) * 3;\n        mat4 jointMatrix = transpose(mat4(skinningJoints[idx],\n                                          skinningJoints[idx+1],\n                                          skinningJoints[idx+2],\n                                          vec4(0, 0, 0, 1)));\n        pos += (jointMatrix * vec4(_geometry.position, 1.0)).xyz * weight;\n        nom += (mat3(jointMatrix) * _geometry.normal) * weight;\n        tng += (mat3(jointMatrix) * _geometry.tangent.xyz) * weight;\n      }\n    }else{\n      mat4 jointMatrix = transpose(mat4(skinningJoints[0],\n                                        skinningJoints[1],\n                                        skinningJoints[2],\n                                        vec4(0, 0, 0, 1)));\n      pos = (jointMatrix * vec4(_geometry.position, 1.0)).xyz;\n      nom = mat3(jointMatrix) * _geometry.normal;\n      tng = mat3(jointMatrix) * _geometry.tangent.xyz;\n    }\n    v_position = pos;\n    v_normal = normalize(nom);\n    v_tangent = normalize(tng);\n    v_bitangent = cross(v_tangent, v_normal);\n\n    vec3 viewVec = camera.position.xyz - pos;\n    v_eye = viewVec;\n\n    v_color = material.emission;\n    int numLights = 0;\n\n    __VS_LIGHTING__\n\n    float distance = length(viewVec);\n    v_fogFactor = clamp((distance - fog.startDistance) / (fog.endDistance - fog.startDistance), 0.0, 1.0);\n\n    v_texcoord0 = _geometry.texcoords[0];\n    v_texcoord1 = _geometry.texcoords[1];\n    gl_Position = camera.viewProjectionTransform * vec4(pos, 1.0);\n  }\n';
+	var _defaultVertexShader = '#version 300 es\n  precision mediump float;\n\n  #define NUM_AMBIENT_LIGHTS __NUM_AMBIENT_LIGHTS__\n  #define NUM_DIRECTIONAL_LIGHTS __NUM_DIRECTIONAL_LIGHTS__\n  #define NUM_DIRECTIONAL_SHADOW_LIGHTS __NUM_DIRECTIONAL_SHADOW_LIGHTS__\n  #define NUM_OMNI_LIGHTS __NUM_OMNI_LIGHTS__\n  #define NUM_SPOT_LIGHTS __NUM_SPOT_LIGHTS__\n  #define NUM_IES_LIGHTS __NUM_IES_LIGHTS__\n  #define NUM_PROBE_LIGHTS __NUM_PROBE_LIGHTS__\n  #define USE_SHADER_MODIFIER_GEOMETRY __USE_SHADER_MODIFIER_GEOMETRY__\n\n  layout (std140) uniform cameraUniform {\n    vec4 position;\n    mat4 viewTransform;\n    mat4 viewProjectionTransform;\n  } camera;\n\n  layout (std140) uniform materialUniform {\n    vec4 ambient;\n    vec4 diffuse;\n    vec4 specular;\n    vec4 emission;\n    float shininess;\n    float fresnelExponent;\n  } material;\n\n  struct AmbientLight {\n    vec4 color;\n  };\n\n  struct DirectionalLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct DirectionalShadowLight {\n    vec4 color;\n    vec4 direction; // should use vec4; vec3 might cause problem for the layout\n    vec4 shadowColor;\n    mat4 viewProjectionTransform;\n    mat4 shadowProjectionTransform;\n  };\n\n  struct OmniLight {\n    vec4 color;\n    vec4 position; // should use vec4; vec3 might cause problem for the layout\n  };\n\n  struct SpotLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct IESLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  struct ProbeLight {\n    // TODO: implement\n    vec4 color;\n  };\n\n  layout (std140) uniform lightUniform {\n    __LIGHT_DEFINITION__\n  } light;\n  __VS_LIGHT_VARS__\n\n  layout (std140) uniform fogUniform {\n    vec4 color;\n    float startDistance;\n    float endDistance;\n    float densityExponent;\n  } fog;\n\n  #define kSCNTexcoordCount 2\n  struct SCNShaderGeometry {\n    vec3 position;\n    vec3 normal;\n    vec4 tangent;\n    vec4 color;\n    vec2 texcoords[kSCNTexcoordCount];\n  };\n\n  uniform float u_time;\n  //uniform mat3x4[255] skinningJoints;\n  uniform vec4[765] skinningJoints;\n  uniform int numSkinningJoints;\n  uniform mat4 modelTransform;\n\n  in vec3 position;\n  in vec3 normal;\n  in vec3 tangent;\n  in vec4 color;\n  in vec2 texcoord0;\n  in vec2 texcoord1;\n  in vec4 boneIndices;\n  in vec4 boneWeights;\n\n  out vec3 v_position;\n  out vec3 v_normal;\n  out vec3 v_tangent;\n  out vec3 v_bitangent;\n  out vec2 v_texcoord0;\n  out vec2 v_texcoord1;\n  out vec4 v_color;\n  out vec3 v_eye;\n  out float v_fogFactor;\n\n  #if USE_SHADER_MODIFIER_GEOMETRY\n  void shaderModifierGeometry(inout SCNShaderGeometry _geometry) {\n    __SHADER_MODIFIER_GEOMETRY__\n  }\n  #endif\n\n  void main() {\n    SCNShaderGeometry _geometry;\n    _geometry.position = position;\n    _geometry.normal = normal;\n    _geometry.tangent = vec4(tangent, 1.0);\n    _geometry.color = color;\n    _geometry.texcoords[0] = texcoord0;\n    _geometry.texcoords[1] = texcoord1;\n    \n    #if USE_SHADER_MODIFIER_GEOMETRY\n      shaderModifierGeometry(_geometry);\n    #endif\n\n    vec3 pos = vec3(0, 0, 0);\n    vec3 nom = vec3(0, 0, 0);\n    vec3 tng = vec3(0, 0, 0);\n    vec4 col = _geometry.color;\n\n    if(numSkinningJoints > 0){\n      for(int i=0; i<numSkinningJoints; i++){\n        float weight = boneWeights[i];\n        if(int(boneIndices[i]) < 0){\n          continue;\n        }\n        int idx = int(boneIndices[i]) * 3;\n        mat4 jointMatrix = transpose(mat4(skinningJoints[idx],\n                                          skinningJoints[idx+1],\n                                          skinningJoints[idx+2],\n                                          vec4(0, 0, 0, 1)));\n        pos += (jointMatrix * vec4(_geometry.position, 1.0)).xyz * weight;\n        nom += (mat3(jointMatrix) * _geometry.normal) * weight;\n        tng += (mat3(jointMatrix) * _geometry.tangent.xyz) * weight;\n      }\n    }else{\n      mat4 jointMatrix = transpose(mat4(skinningJoints[0],\n                                        skinningJoints[1],\n                                        skinningJoints[2],\n                                        vec4(0, 0, 0, 1)));\n      pos = (jointMatrix * vec4(_geometry.position, 1.0)).xyz;\n      nom = mat3(jointMatrix) * _geometry.normal;\n      tng = mat3(jointMatrix) * _geometry.tangent.xyz;\n    }\n    v_position = pos;\n    v_normal = normalize(nom);\n    v_tangent = normalize(tng);\n    v_bitangent = cross(v_tangent, v_normal);\n\n    vec3 viewVec = camera.position.xyz - pos;\n    v_eye = viewVec;\n\n    v_color = material.emission;\n    int numLights = 0;\n\n    __VS_LIGHTING__\n\n    float distance = length(viewVec);\n    v_fogFactor = clamp((distance - fog.startDistance) / (fog.endDistance - fog.startDistance), 0.0, 1.0);\n\n    v_texcoord0 = _geometry.texcoords[0];\n    v_texcoord1 = _geometry.texcoords[1];\n    gl_Position = camera.viewProjectionTransform * vec4(pos, 1.0);\n  }\n';
 
 	var _vsAmbient = '\n  for(int i=0; i<NUM_AMBIENT_LIGHTS; i++){\n    v_color += light.ambient[i].color * material.ambient;\n  }\n';
 
@@ -35552,7 +35618,9 @@ module.exports =
 	      _text = _text.replace(/float3/g, 'vec3');
 	      _text = _text.replace(/float4/g, 'vec4');
 	      _text = _text.replace(/scn_frame\.time/g, 'u_time');
-	      _text = _text.replace(/#pragma alpha/g, ''
+	      _text = _text.replace(/#pragma alpha/g, '');
+
+	      _text = _text.replace(/u_modelTransform/g, 'modelTransform' // TODO: use u_modelTransform
 
 	      // workaround for Badger...
 	      );_text = _text.replace(/uvs.x \*= 2/, 'uvs.x *= 2.0');
@@ -35569,6 +35637,8 @@ module.exports =
 	      _text = _text.replace(/vec4 WorldPos/, 'vec3 WorldPos');
 	      _text = _text.replace(/mult \* 5;/, 'mult * 5.0;');
 	      _text = _text.replace(/mask \* \(1 - feather\) \+ feather \/ 2/, 'mask * (1.0 - feather) + feather / 2.0');
+	      _text = _text.replace(/vec4 pos = modelTransform \* _geometry.position;/, 'vec4 pos = modelTransform * vec4(_geometry.position, 1);');
+	      _text = _text.replace(/cos\(\(u_time \* 0.5 \+ pos.x\) \* 2\)/, 'cos((u_time * 0.5 + pos.x) * 2.0)');
 
 	      return _text;
 	    }
@@ -37891,6 +37961,8 @@ module.exports =
 	          box.name = propValues.name;
 	          // propValues.boxPrimitiveType
 	          box.materials = propValues.materials;
+	          box.tessellator = propValues.tessellator;
+	          box.wantsAdaptiveSubdivision = propValues.wantsAdaptiveSubdivision;
 	          box.subdivisionLevel = propValues.subdivisionLevel;
 
 	          return box;
@@ -37906,6 +37978,8 @@ module.exports =
 	        boxchamferSegmentCount: ['integer', null],
 	        boxprimitiveType: ['integer', null],
 	        materials: ['NSArray', null],
+	        tessellator: ['SCNGeometryTessellator', null],
+	        wantsAdaptiveSubdivision: ['boolean', null],
 	        subdivisionLevel: ['integer', null],
 	        subdivisionSettings: ['bytes', null]
 	      };
@@ -43073,6 +43147,7 @@ module.exports =
 	      // emitterShape, birthLocation, emittingDirection, spreadingAngle, particleAngle/Variation, particleVelocity
 	      );if (this.emitterShape === null) {
 	        p.position = position;
+	        p.velocity = new _SCNVector2.default(0, 0, velocity); // TODO: use spreadingAngle
 	      } else if (this.birthLocation === _SCNParticleBirthLocation2.default.surface) {
 	        var pVec = null;
 	        var vVec = null;
@@ -43144,6 +43219,16 @@ module.exports =
 	              vVec = new _SCNVector2.default(x, 0, z);
 	              break;
 	            }
+	          case 'SCNGeometry':
+	            {
+	              // TODO: implement
+	              console.warn('surface emitter for SCNGeometry is not implemented. use boundingSphere instead');
+	              var _v = new _SCNVector2.default(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5).normalize();
+	              var _r2 = this.emitterShape.getBoundingSphere().radius;
+	              pVec = _v.mul(_r2);
+	              vVec = _v;
+	              break;
+	            }
 	          default:
 	            // TODO: implement
 	            throw new Error('surface emitter for ' + this.emitterShape.className + ' is not implemented');
@@ -43166,13 +43251,13 @@ module.exports =
 	            }
 	          case 'SCNSphere':
 	            {
-	              var _r2 = Math.random() * this.emitterShape.radius;
+	              var _r3 = Math.random() * this.emitterShape.radius;
 	              var s = Math.random() * Math.PI;
 	              var t = Math.random() * Math.PI * 2.0;
-	              var rsins = _r2 * Math.sin(s);
+	              var rsins = _r3 * Math.sin(s);
 	              var _x4 = rsins * Math.cos(t);
 	              var _y2 = rsins * Math.sin(t);
-	              var _z2 = _r2 * Math.cos(s);
+	              var _z2 = _r3 * Math.cos(s);
 	              _pVec = new _SCNVector2.default(_x4, _y2, _z2);
 	              break;
 	            }
@@ -49333,118 +49418,114 @@ module.exports =
 	var SCNPhysicsField = function (_NSObject) {
 	  _inherits(SCNPhysicsField, _NSObject);
 
+	  /**
+	   * constructor
+	   * @access public
+	   * @constructor
+	   */
 	  function SCNPhysicsField() {
 	    _classCallCheck(this, SCNPhysicsField);
 
-	    return _possibleConstructorReturn(this, (SCNPhysicsField.__proto__ || Object.getPrototypeOf(SCNPhysicsField)).apply(this, arguments));
+	    // Specifying a Field’s Area of Effect
+
+	    /**
+	     * A location marking the end of the field’s area of effect.
+	     * @type {SCNVector3}
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsfield/1388138-halfextent
+	     */
+	    var _this = _possibleConstructorReturn(this, (SCNPhysicsField.__proto__ || Object.getPrototypeOf(SCNPhysicsField)).call(this));
+
+	    _this.halfExtent = null;
+
+	    /**
+	     * The area affected by the field, either inside or outside its region.
+	     * @type {SCNPhysicsFieldScope}
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsfield/1388136-scope
+	     */
+	    _this.scope = null;
+
+	    /**
+	     * A Boolean value that determines whether the field’s area of effect is shaped like a box or ellipsoid.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsfield/1388158-usesellipsoidalextent
+	     */
+	    _this.usesEllipsoidalExtent = false;
+
+	    /**
+	     * The offset of the field’s center within its area of effect.
+	     * @type {SCNVector3}
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsfield/1388154-offset
+	     */
+	    _this.offset = null;
+
+	    /**
+	     * The field’s directional axis.
+	     * @type {SCNVector3}
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsfield/1388128-direction
+	     */
+	    _this.direction = null;
+
+	    // Specifying a Field’s Behavior
+
+	    /**
+	     * A multiplier for the force that the field applies to objects in its area of effect.
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsfield/1388132-strength
+	     */
+	    _this.strength = 0;
+
+	    /**
+	     * An exponent that determines how the field’s strength diminishes with distance.
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsfield/1388146-falloffexponent
+	     */
+	    _this.falloffExponent = 0;
+
+	    /**
+	     * The minimum value for distance-based effects.
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsfield/1388148-minimumdistance
+	     */
+	    _this.minimumDistance = 0;
+
+	    /**
+	     * A Boolean value that determines whether the field’s effect is enabled.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsfield/1388117-isactive
+	     */
+	    _this.isActive = false;
+
+	    /**
+	     * A Boolean value that determines whether the field overrides other fields whose areas of effect it overlaps.
+	     * @type {boolean}
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsfield/1388126-isexclusive
+	     */
+	    _this.isExclusive = false;
+
+	    // Choosing Physics Bodies to Be Affected by the Field
+
+	    /**
+	     * A mask that defines which categories this physics field belongs to.
+	     * @type {number}
+	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsfield/1388119-categorybitmask
+	     */
+	    _this.categoryBitMask = 0;
+
+	    return _this;
 	  }
 
-	  _createClass(SCNPhysicsField, [{
-	    key: 'init',
+	  // Creating Physics Fields
+
+	  /**
+	   * Creates a field that slows any object in its area of effect with a force proportional to the object’s velocity.
+	   * @access public
+	   * @returns {SCNPhysicsField} - 
+	   * @desc Like the damping and angularDamping properties of a physics body, drag fields can simulate effects such as fluid friction or air resistance. Unlike those properties, drag fields can simulate different intensities of fluid friction in different areas of your scene. For example, you can use a drag field to represent underwater areas.The default falloffExponent value for a drag field is 0.0, indicating that the field’s effect is constant throughout its area of effect.
+	   * @see https://developer.apple.com/documentation/scenekit/scnphysicsfield/1388164-drag
+	   */
 
 
-	    /**
-	     * constructor
-	     * @access public
-	     * @returns {void}
-	     */
-	    value: function init() {
-
-	      // Specifying a Field’s Area of Effect
-
-	      /**
-	       * A location marking the end of the field’s area of effect.
-	       * @type {SCNVector3}
-	       * @see https://developer.apple.com/documentation/scenekit/scnphysicsfield/1388138-halfextent
-	       */
-	      this.halfExtent = null;
-
-	      /**
-	       * The area affected by the field, either inside or outside its region.
-	       * @type {SCNPhysicsFieldScope}
-	       * @see https://developer.apple.com/documentation/scenekit/scnphysicsfield/1388136-scope
-	       */
-	      this.scope = null;
-
-	      /**
-	       * A Boolean value that determines whether the field’s area of effect is shaped like a box or ellipsoid.
-	       * @type {boolean}
-	       * @see https://developer.apple.com/documentation/scenekit/scnphysicsfield/1388158-usesellipsoidalextent
-	       */
-	      this.usesEllipsoidalExtent = false;
-
-	      /**
-	       * The offset of the field’s center within its area of effect.
-	       * @type {SCNVector3}
-	       * @see https://developer.apple.com/documentation/scenekit/scnphysicsfield/1388154-offset
-	       */
-	      this.offset = null;
-
-	      /**
-	       * The field’s directional axis.
-	       * @type {SCNVector3}
-	       * @see https://developer.apple.com/documentation/scenekit/scnphysicsfield/1388128-direction
-	       */
-	      this.direction = null;
-
-	      // Specifying a Field’s Behavior
-
-	      /**
-	       * A multiplier for the force that the field applies to objects in its area of effect.
-	       * @type {number}
-	       * @see https://developer.apple.com/documentation/scenekit/scnphysicsfield/1388132-strength
-	       */
-	      this.strength = 0;
-
-	      /**
-	       * An exponent that determines how the field’s strength diminishes with distance.
-	       * @type {number}
-	       * @see https://developer.apple.com/documentation/scenekit/scnphysicsfield/1388146-falloffexponent
-	       */
-	      this.falloffExponent = 0;
-
-	      /**
-	       * The minimum value for distance-based effects.
-	       * @type {number}
-	       * @see https://developer.apple.com/documentation/scenekit/scnphysicsfield/1388148-minimumdistance
-	       */
-	      this.minimumDistance = 0;
-
-	      /**
-	       * A Boolean value that determines whether the field’s effect is enabled.
-	       * @type {boolean}
-	       * @see https://developer.apple.com/documentation/scenekit/scnphysicsfield/1388117-isactive
-	       */
-	      this.isActive = false;
-
-	      /**
-	       * A Boolean value that determines whether the field overrides other fields whose areas of effect it overlaps.
-	       * @type {boolean}
-	       * @see https://developer.apple.com/documentation/scenekit/scnphysicsfield/1388126-isexclusive
-	       */
-	      this.isExclusive = false;
-
-	      // Choosing Physics Bodies to Be Affected by the Field
-
-	      /**
-	       * A mask that defines which categories this physics field belongs to.
-	       * @type {number}
-	       * @see https://developer.apple.com/documentation/scenekit/scnphysicsfield/1388119-categorybitmask
-	       */
-	      this.categoryBitMask = 0;
-	    }
-
-	    // Creating Physics Fields
-
-	    /**
-	     * Creates a field that slows any object in its area of effect with a force proportional to the object’s velocity.
-	     * @access public
-	     * @returns {SCNPhysicsField} - 
-	     * @desc Like the damping and angularDamping properties of a physics body, drag fields can simulate effects such as fluid friction or air resistance. Unlike those properties, drag fields can simulate different intensities of fluid friction in different areas of your scene. For example, you can use a drag field to represent underwater areas.The default falloffExponent value for a drag field is 0.0, indicating that the field’s effect is constant throughout its area of effect.
-	     * @see https://developer.apple.com/documentation/scenekit/scnphysicsfield/1388164-drag
-	     */
-
-	  }], [{
+	  _createClass(SCNPhysicsField, null, [{
 	    key: 'drag',
 	    value: function drag() {
 	      return null;
@@ -54654,6 +54735,57 @@ module.exports =
 	  value: true
 	});
 
+	var _SCNPhysicsField2 = __webpack_require__(160);
+
+	var _SCNPhysicsField3 = _interopRequireDefault(_SCNPhysicsField2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	/**
+	 *
+	 * @access public
+	 * @extends {SCNPhysicsField}
+	 *
+	 */
+	var SCNPhysicsNoiseField = function (_SCNPhysicsField) {
+	  _inherits(SCNPhysicsNoiseField, _SCNPhysicsField);
+
+	  /**
+	   * constructor
+	   * @access public
+	   * @constructor
+	   */
+	  function SCNPhysicsNoiseField() {
+	    _classCallCheck(this, SCNPhysicsNoiseField);
+
+	    var _this = _possibleConstructorReturn(this, (SCNPhysicsNoiseField.__proto__ || Object.getPrototypeOf(SCNPhysicsNoiseField)).call(this));
+
+	    _this._smoothness = 0.0;
+	    _this._animationSpeed = 1.0;
+	    return _this;
+	  }
+
+	  return SCNPhysicsNoiseField;
+	}(_SCNPhysicsField3.default);
+
+	exports.default = SCNPhysicsNoiseField;
+
+/***/ },
+/* 212 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _SCNPhysicsBehavior2 = __webpack_require__(119);
@@ -54837,7 +54969,79 @@ module.exports =
 	exports.default = SCNPhysicsSliderJoint;
 
 /***/ },
-/* 212 */
+/* 213 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _SCNPhysicsNoiseField2 = __webpack_require__(211);
+
+	var _SCNPhysicsNoiseField3 = _interopRequireDefault(_SCNPhysicsNoiseField2);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	/**
+	 *
+	 * @access public
+	 * @extends {SCNPhysicsField}
+	 *
+	 */
+	var SCNPhysicsTurbulenceField = function (_SCNPhysicsNoiseField) {
+	  _inherits(SCNPhysicsTurbulenceField, _SCNPhysicsNoiseField);
+
+	  _createClass(SCNPhysicsTurbulenceField, null, [{
+	    key: '_propTypes',
+	    get: function get() {
+	      return {
+	        halfExtent: 'SCNVector3',
+	        scope: 'integer', // SCNPhysicsFieldScope
+	        usesEllipsoidalExtent: 'boolean',
+	        offset: 'SCNVector3',
+	        // direction: 'SCNVector3',
+	        strength: 'float',
+	        falloffExponent: 'float',
+	        minimumDistance: 'float',
+	        active: ['boolean', 'isActive'],
+	        exclusive: ['boolean', 'isExclusive'],
+	        // categoryBitMask: 'integer',
+	        smoothness: ['float', '_smoothness'],
+	        animationSpeed: ['float', '_animationSpeed']
+	      };
+	    }
+
+	    /**
+	     * constructor
+	     * @access public
+	     * @constructor
+	     */
+
+	  }]);
+
+	  function SCNPhysicsTurbulenceField() {
+	    _classCallCheck(this, SCNPhysicsTurbulenceField);
+
+	    return _possibleConstructorReturn(this, (SCNPhysicsTurbulenceField.__proto__ || Object.getPrototypeOf(SCNPhysicsTurbulenceField)).call(this));
+	  }
+
+	  return SCNPhysicsTurbulenceField;
+	}(_SCNPhysicsNoiseField3.default);
+
+	exports.default = SCNPhysicsTurbulenceField;
+
+/***/ },
+/* 214 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -54856,7 +55060,7 @@ module.exports =
 
 	var _SCNPhysicsBody2 = _interopRequireDefault(_SCNPhysicsBody);
 
-	var _SCNPhysicsVehicleWheel = __webpack_require__(213);
+	var _SCNPhysicsVehicleWheel = __webpack_require__(215);
 
 	var _SCNPhysicsVehicleWheel2 = _interopRequireDefault(_SCNPhysicsVehicleWheel);
 
@@ -55000,7 +55204,7 @@ module.exports =
 	exports.default = SCNPhysicsVehicle;
 
 /***/ },
-/* 213 */
+/* 215 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -55169,7 +55373,7 @@ module.exports =
 	exports.default = SCNPhysicsVehicleWheel;
 
 /***/ },
-/* 214 */
+/* 216 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -55225,13 +55429,15 @@ module.exports =
 	    key: '_propTypes',
 	    get: function get() {
 	      return {
-	        materials: 'NSArray',
 	        width: 'float',
 	        height: 'float',
 	        widthSegmentCount: 'integer',
 	        heightSegmentCount: 'integer',
 	        cornerRadius: 'float',
 	        cornerSegmentCount: 'integer',
+	        materials: 'NSArray',
+	        tessellator: 'SCNGeometryTessellator',
+	        wantsAdaptiveSubdivision: 'boolean',
 
 	        name: 'string',
 	        primitiveType: ['integer', null],
@@ -55393,7 +55599,7 @@ module.exports =
 	exports.default = SCNPlane;
 
 /***/ },
-/* 215 */
+/* 217 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -55676,7 +55882,7 @@ module.exports =
 	exports.default = SCNPyramid;
 
 /***/ },
-/* 216 */
+/* 218 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -55700,7 +55906,7 @@ module.exports =
 	exports.default = SCNReferenceLoadingPolicy;
 
 /***/ },
-/* 217 */
+/* 219 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -55717,7 +55923,7 @@ module.exports =
 
 	var _SCNNode3 = _interopRequireDefault(_SCNNode2);
 
-	var _SCNReferenceLoadingPolicy = __webpack_require__(216);
+	var _SCNReferenceLoadingPolicy = __webpack_require__(218);
 
 	var _SCNReferenceLoadingPolicy2 = _interopRequireDefault(_SCNReferenceLoadingPolicy);
 
@@ -55973,7 +56179,7 @@ module.exports =
 	exports.default = SCNReferenceNode;
 
 /***/ },
-/* 218 */
+/* 220 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -56025,7 +56231,7 @@ module.exports =
 	exports.default = SCNShadableHelper;
 
 /***/ },
-/* 219 */
+/* 221 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -56053,7 +56259,7 @@ module.exports =
 	exports.default = SCNShaderModifierEntryPoint;
 
 /***/ },
-/* 220 */
+/* 222 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -56150,7 +56356,7 @@ module.exports =
 	exports.default = SCNShape;
 
 /***/ },
-/* 221 */
+/* 223 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -56309,7 +56515,7 @@ module.exports =
 	exports.default = SCNText;
 
 /***/ },
-/* 222 */
+/* 224 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -56511,7 +56717,7 @@ module.exports =
 	exports.default = SCNTorus;
 
 /***/ },
-/* 223 */
+/* 225 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -56591,7 +56797,7 @@ module.exports =
 	exports.default = SCNTransformConstraint;
 
 /***/ },
-/* 224 */
+/* 226 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -56846,7 +57052,7 @@ module.exports =
 	exports.default = SCNTube;
 
 /***/ },
-/* 225 */
+/* 227 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -56879,7 +57085,7 @@ module.exports =
 	exports.default = SCNVector3EqualToVector3;
 
 /***/ },
-/* 226 */
+/* 228 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -56908,7 +57114,7 @@ module.exports =
 	exports.default = SCNVector3FromFloat3;
 
 /***/ },
-/* 227 */
+/* 229 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -56939,7 +57145,7 @@ module.exports =
 	exports.default = SCNVector3FromGLKVector3;
 
 /***/ },
-/* 228 */
+/* 230 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -56970,7 +57176,7 @@ module.exports =
 	exports.default = SCNVector3Make;
 
 /***/ },
-/* 229 */
+/* 231 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -56999,7 +57205,7 @@ module.exports =
 	exports.default = SCNVector3ToFloat3;
 
 /***/ },
-/* 230 */
+/* 232 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57028,7 +57234,7 @@ module.exports =
 	};exports.default = SCNVector3ToGLKVector3;
 
 /***/ },
-/* 231 */
+/* 233 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57048,7 +57254,7 @@ module.exports =
 	exports.default = SCNVector3Zero;
 
 /***/ },
-/* 232 */
+/* 234 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57081,7 +57287,7 @@ module.exports =
 	exports.default = SCNVector4EqualToVector4;
 
 /***/ },
-/* 233 */
+/* 235 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57110,7 +57316,7 @@ module.exports =
 	exports.default = SCNVector4FromFloat4;
 
 /***/ },
-/* 234 */
+/* 236 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57141,7 +57347,7 @@ module.exports =
 	exports.default = SCNVector4FromGLKVector4;
 
 /***/ },
-/* 235 */
+/* 237 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57173,7 +57379,7 @@ module.exports =
 	exports.default = SCNVector4Make;
 
 /***/ },
-/* 236 */
+/* 238 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57202,7 +57408,7 @@ module.exports =
 	exports.default = SCNVector4ToFloat4;
 
 /***/ },
-/* 237 */
+/* 239 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -57231,7 +57437,7 @@ module.exports =
 	};exports.default = SCNVector4ToGLKVector4;
 
 /***/ },
-/* 238 */
+/* 240 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59169,7 +59375,7 @@ module.exports =
 	exports.default = SCNView;
 
 /***/ },
-/* 239 */
+/* 241 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59186,7 +59392,7 @@ module.exports =
 
 	var _NSObject3 = _interopRequireDefault(_NSObject2);
 
-	var _SKActionTimingMode = __webpack_require__(240);
+	var _SKActionTimingMode = __webpack_require__(242);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
@@ -60879,7 +61085,7 @@ module.exports =
 	exports.default = SKAction;
 
 /***/ },
-/* 240 */
+/* 242 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -60907,7 +61113,7 @@ module.exports =
 	exports.default = SKActionTimingMode;
 
 /***/ },
-/* 241 */
+/* 243 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61051,7 +61257,7 @@ module.exports =
 	exports.default = SKEffectNode;
 
 /***/ },
-/* 242 */
+/* 244 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61064,11 +61270,11 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _SKAction2 = __webpack_require__(239);
+	var _SKAction2 = __webpack_require__(241);
 
 	var _SKAction3 = _interopRequireDefault(_SKAction2);
 
-	var _SKActionTimingMode = __webpack_require__(240);
+	var _SKActionTimingMode = __webpack_require__(242);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
@@ -61255,7 +61461,7 @@ module.exports =
 	_SKAction3.default.fadeAlphaToDuration = SKFade.fadeAlphaToDuration;
 
 /***/ },
-/* 243 */
+/* 245 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61268,11 +61474,11 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _SKAction2 = __webpack_require__(239);
+	var _SKAction2 = __webpack_require__(241);
 
 	var _SKAction3 = _interopRequireDefault(_SKAction2);
 
-	var _SKActionTimingMode = __webpack_require__(240);
+	var _SKActionTimingMode = __webpack_require__(242);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
@@ -61398,7 +61604,7 @@ module.exports =
 	_SKAction3.default.group = SKGroup.group;
 
 /***/ },
-/* 244 */
+/* 246 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -61424,7 +61630,7 @@ module.exports =
 	exports.default = SKLabelHorizontalAlignmentMode;
 
 /***/ },
-/* 245 */
+/* 247 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61445,11 +61651,11 @@ module.exports =
 
 	var _SKNode3 = _interopRequireDefault(_SKNode2);
 
-	var _SKLabelVerticalAlignmentMode = __webpack_require__(246);
+	var _SKLabelVerticalAlignmentMode = __webpack_require__(248);
 
 	var _SKLabelVerticalAlignmentMode2 = _interopRequireDefault(_SKLabelVerticalAlignmentMode);
 
-	var _SKLabelHorizontalAlignmentMode = __webpack_require__(244);
+	var _SKLabelHorizontalAlignmentMode = __webpack_require__(246);
 
 	var _SKLabelHorizontalAlignmentMode2 = _interopRequireDefault(_SKLabelHorizontalAlignmentMode);
 
@@ -61923,7 +62129,7 @@ module.exports =
 	exports.default = SKLabelNode;
 
 /***/ },
-/* 246 */
+/* 248 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -61951,7 +62157,7 @@ module.exports =
 	exports.default = SKLabelVerticalAlignmentMode;
 
 /***/ },
-/* 247 */
+/* 249 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -61964,11 +62170,11 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _SKAction2 = __webpack_require__(239);
+	var _SKAction2 = __webpack_require__(241);
 
 	var _SKAction3 = _interopRequireDefault(_SKAction2);
 
-	var _SKActionTimingMode = __webpack_require__(240);
+	var _SKActionTimingMode = __webpack_require__(242);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
@@ -62131,7 +62337,7 @@ module.exports =
 	_SKAction3.default.repeatForever = SKRepeat.repeatForever;
 
 /***/ },
-/* 248 */
+/* 250 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62144,11 +62350,11 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _SKAction2 = __webpack_require__(239);
+	var _SKAction2 = __webpack_require__(241);
 
 	var _SKAction3 = _interopRequireDefault(_SKAction2);
 
-	var _SKActionTimingMode = __webpack_require__(240);
+	var _SKActionTimingMode = __webpack_require__(242);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
@@ -62425,7 +62631,7 @@ module.exports =
 	_SKAction3.default.scaleYToDuration = SKScale.scaleYToDuration;
 
 /***/ },
-/* 249 */
+/* 251 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62448,11 +62654,11 @@ module.exports =
 
 	var _SKColor2 = _interopRequireDefault(_SKColor);
 
-	var _SKEffectNode2 = __webpack_require__(241);
+	var _SKEffectNode2 = __webpack_require__(243);
 
 	var _SKEffectNode3 = _interopRequireDefault(_SKEffectNode2);
 
-	var _SKSceneScaleMode = __webpack_require__(250);
+	var _SKSceneScaleMode = __webpack_require__(252);
 
 	var _SKSceneScaleMode2 = _interopRequireDefault(_SKSceneScaleMode);
 
@@ -62766,7 +62972,7 @@ module.exports =
 	exports.default = SKScene;
 
 /***/ },
-/* 250 */
+/* 252 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -62794,7 +63000,7 @@ module.exports =
 	exports.default = SKSceneScaleMode;
 
 /***/ },
-/* 251 */
+/* 253 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -62807,11 +63013,11 @@ module.exports =
 
 	var _get = function get(object, property, receiver) { if (object === null) object = Function.prototype; var desc = Object.getOwnPropertyDescriptor(object, property); if (desc === undefined) { var parent = Object.getPrototypeOf(object); if (parent === null) { return undefined; } else { return get(parent, property, receiver); } } else if ("value" in desc) { return desc.value; } else { var getter = desc.get; if (getter === undefined) { return undefined; } return getter.call(receiver); } };
 
-	var _SKAction2 = __webpack_require__(239);
+	var _SKAction2 = __webpack_require__(241);
 
 	var _SKAction3 = _interopRequireDefault(_SKAction2);
 
-	var _SKActionTimingMode = __webpack_require__(240);
+	var _SKActionTimingMode = __webpack_require__(242);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
@@ -62955,7 +63161,7 @@ module.exports =
 	_SKAction3.default.sequence = SKSequence.sequence;
 
 /***/ },
-/* 252 */
+/* 254 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -63311,7 +63517,7 @@ module.exports =
 	exports.default = SKShapeNode;
 
 /***/ },
-/* 253 */
+/* 255 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -63322,11 +63528,11 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _SKAction2 = __webpack_require__(239);
+	var _SKAction2 = __webpack_require__(241);
 
 	var _SKAction3 = _interopRequireDefault(_SKAction2);
 
-	var _SKActionTimingMode = __webpack_require__(240);
+	var _SKActionTimingMode = __webpack_require__(242);
 
 	var _SKActionTimingMode2 = _interopRequireDefault(_SKActionTimingMode);
 
@@ -63413,7 +63619,7 @@ module.exports =
 	_SKAction3.default.waitForDurationWithRange = SKWait.waitForDurationWithRange;
 
 /***/ },
-/* 254 */
+/* 256 */
 /***/ function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(Buffer) {'use strict';
@@ -63424,7 +63630,7 @@ module.exports =
 
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
-	var _BinaryParser = __webpack_require__(255);
+	var _BinaryParser = __webpack_require__(257);
 
 	var _BinaryParser2 = _interopRequireDefault(_BinaryParser);
 
@@ -63709,7 +63915,7 @@ module.exports =
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(3).Buffer))
 
 /***/ },
-/* 255 */
+/* 257 */
 /***/ function(module, exports) {
 
 	"use strict";
@@ -63877,7 +64083,7 @@ module.exports =
 	};
 
 /***/ },
-/* 256 */
+/* 258 */
 /***/ function(module, exports) {
 
 	'use strict';

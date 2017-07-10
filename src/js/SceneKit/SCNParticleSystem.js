@@ -1082,6 +1082,7 @@ export default class SCNParticleSystem extends NSObject {
     // emitterShape, birthLocation, emittingDirection, spreadingAngle, particleAngle/Variation, particleVelocity
     if(this.emitterShape === null){
       p.position = position
+      p.velocity = new SCNVector3(0, 0, velocity) // TODO: use spreadingAngle
     }else if(this.birthLocation === SCNParticleBirthLocation.surface){
       let pVec = null
       let vVec = null
@@ -1151,6 +1152,15 @@ export default class SCNParticleSystem extends NSObject {
           const z = Math.cos(r)
           pVec = new SCNVector3(x * this.emitterShape.radius, y, z * this.emitterShape.radius)
           vVec = new SCNVector3(x, 0, z)
+          break
+        }
+        case 'SCNGeometry': {
+          // TODO: implement
+          console.warn('surface emitter for SCNGeometry is not implemented. use boundingSphere instead')
+          const v = (new SCNVector3(Math.random() - 0.5, Math.random() - 0.5, Math.random() - 0.5)).normalize()
+          const r = this.emitterShape.getBoundingSphere().radius
+          pVec = v.mul(r)
+          vVec = v
           break
         }
         default:

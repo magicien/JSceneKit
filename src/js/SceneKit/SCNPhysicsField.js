@@ -17,9 +17,10 @@ export default class SCNPhysicsField extends NSObject {
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  init() {
+  constructor() {
+    super()
 
     // Specifying a Field’s Area of Effect
 

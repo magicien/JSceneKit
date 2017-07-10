@@ -16,13 +16,15 @@ import SCNVector3 from './SCNVector3'
 export default class SCNPlane extends SCNGeometry {
   static get _propTypes() {
     return {
-      materials: 'NSArray',
       width: 'float',
       height: 'float',
       widthSegmentCount: 'integer',
       heightSegmentCount: 'integer',
       cornerRadius: 'float',
       cornerSegmentCount: 'integer',
+      materials: 'NSArray',
+      tessellator: 'SCNGeometryTessellator',
+      wantsAdaptiveSubdivision: 'boolean',
 
       name: 'string',
       primitiveType: ['integer', null],

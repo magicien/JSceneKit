@@ -31,6 +31,8 @@ export default class SCNBox extends SCNGeometry {
         box.name = propValues.name
         // propValues.boxPrimitiveType
         box.materials = propValues.materials
+        box.tessellator = propValues.tessellator
+        box.wantsAdaptiveSubdivision = propValues.wantsAdaptiveSubdivision
         box.subdivisionLevel = propValues.subdivisionLevel
 
         return box
@@ -46,6 +48,8 @@ export default class SCNBox extends SCNGeometry {
       boxchamferSegmentCount: ['integer', null],
       boxprimitiveType: ['integer', null],
       materials: ['NSArray', null],
+      tessellator: ['SCNGeometryTessellator', null],
+      wantsAdaptiveSubdivision: ['boolean', null],
       subdivisionLevel: ['integer', null],
       subdivisionSettings: ['bytes', null]
     }

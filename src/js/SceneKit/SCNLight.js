@@ -51,6 +51,12 @@ export default class SCNLight extends NSObject {
       zFar: 'float',
       zNear: 'float',
       lightCategoryBitMask: ['integer', 'categoryBitMask'],
+      automaticallyAdjustsShadowProjection: 'boolean',
+      forcesBackFaceCasters: 'boolean',
+      maximumShadowDistance: 'float',
+      sampleDistributedShadowMaps: 'boolean',
+      shadowCascadeCount: 'integer',
+      shadowCascadeSplittingFactor: 'float',
 
       entityID: ['string', '_entityID'],
       version: ['float', null],
@@ -62,7 +68,8 @@ export default class SCNLight extends NSObject {
       baked: ['boolean', null],
       goboProjectShadows: ['boolean', null],
       shadowSampleCount2: ['integer', null],
-      sphericalHarmonics: ['NSMutableData', null]
+      sphericalHarmonics: ['NSMutableData', null],
+      autoShadowProjection: ['boolean', null]
     }
   }
 
@@ -260,6 +267,49 @@ export default class SCNLight extends NSObject {
     this._shadowDepthBuffer = null
     this._shadowDepthTexture = null
     this._projectionTransform = null
+
+
+    /**
+     * 
+     * @type {boolean}
+     * @see
+     */
+    this.automaticallyAdjustsShadowProjection = false
+
+    /**
+     * 
+     * @type {boolean}
+     * @see
+     */
+    this.forcesBackFaceCasters = false
+
+    /**
+     *
+     * @type {number}
+     * @see
+     */
+    this.maximumShadowDistance = 0.0
+
+    /**
+     *
+     * @type {boolean}
+     * @see
+     */
+    this.sampleDistributedShadowMaps = false
+
+    /**
+     *
+     * @type {number}
+     * @see
+     */
+    this.shadowCascadeCount = 1
+
+    /**
+     *
+     * @type {number}
+     * @see
+     */
+    this.shadowCascadeSplittingFactor = 1.0
   }
 
   // Creating a Light
