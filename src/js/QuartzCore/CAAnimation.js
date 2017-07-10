@@ -15,7 +15,7 @@ import SCNAnimationEvent from '../SceneKit/SCNAnimationEvent'
  * @extends {NSObject}
  * @implements {CAAction}
  * @implements {CAMediaTiming}
- * @see https://developer.apple.com/reference/quartzcore/caanimation
+ * @see https://developer.apple.com/documentation/quartzcore/caanimation
  */
 export default class CAAnimation extends NSObject {
 
@@ -32,14 +32,14 @@ export default class CAAnimation extends NSObject {
     /**
      * Determines if the animation is removed from the target layer’s animations upon completion.
      * @type {boolean}
-     * @see https://developer.apple.com/reference/quartzcore/caanimation/1412458-isremovedoncompletion
+     * @see https://developer.apple.com/documentation/quartzcore/caanimation/1412458-isremovedoncompletion
      */
     this.isRemovedOnCompletion = true
 
     /**
      * An optional timing function defining the pacing of the animation.
      * @type {?CAMediaTimingFunction}
-     * @see https://developer.apple.com/reference/quartzcore/caanimation/1412456-timingfunction
+     * @see https://developer.apple.com/documentation/quartzcore/caanimation/1412456-timingfunction
      */
     this.timingFunction = null
 
@@ -49,7 +49,7 @@ export default class CAAnimation extends NSObject {
     /**
      * Specifies the receiver’s delegate object.
      * @type {?CAAnimationDelegate}
-     * @see https://developer.apple.com/reference/quartzcore/caanimation/1412490-delegate
+     * @see https://developer.apple.com/documentation/quartzcore/caanimation/1412490-delegate
      */
     this.delegate = null
 
@@ -59,7 +59,7 @@ export default class CAAnimation extends NSObject {
     /**
      * For animations attached to SceneKit objects, a Boolean value that determines whether the animation is evaluated using the scene time or the system time.
      * @type {boolean}
-     * @see https://developer.apple.com/reference/quartzcore/caanimation/1523819-usesscenetimebase
+     * @see https://developer.apple.com/documentation/quartzcore/caanimation/1523819-usesscenetimebase
      */
     this.usesSceneTimeBase = false
 
@@ -69,14 +69,14 @@ export default class CAAnimation extends NSObject {
     /**
      * For animations attached to SceneKit objects, the duration for transitioning into the animation’s effect as it beins.
      * @type {number}
-     * @see https://developer.apple.com/reference/quartzcore/caanimation/1523370-fadeinduration
+     * @see https://developer.apple.com/documentation/quartzcore/caanimation/1523370-fadeinduration
      */
     this.fadeInDuration = 0
 
     /**
      * For animations attached to SceneKit objects, the duration for transitioning out of the animation’s effect as it ends.
      * @type {number}
-     * @see https://developer.apple.com/reference/quartzcore/caanimation/1522959-fadeoutduration
+     * @see https://developer.apple.com/documentation/quartzcore/caanimation/1522959-fadeoutduration
      */
     this.fadeOutDuration = 0
 
@@ -86,7 +86,7 @@ export default class CAAnimation extends NSObject {
     /**
      * For animations attached to SceneKit objects, a list of events attached to an animation.
      * @type {?SCNAnimationEvent[]}
-     * @see https://developer.apple.com/reference/quartzcore/caanimation/1523940-animationevents
+     * @see https://developer.apple.com/documentation/quartzcore/caanimation/1523940-animationevents
      */
     this.animationEvents = null
 
@@ -99,14 +99,14 @@ export default class CAAnimation extends NSObject {
     /**
      * Required. Specifies the begin time of the receiver in relation to its parent object, if applicable.
      * @type {number}
-     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427654-begintime
+     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427654-begintime
      */
     this.beginTime = 0
 
     /**
      * Required. Specifies an additional time offset in active local time.
      * @type {number}
-     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427650-timeoffset
+     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427650-timeoffset
      */
     this.timeOffset = 0
 
@@ -116,14 +116,14 @@ export default class CAAnimation extends NSObject {
     /**
      * Required. Determines the number of times the animation will repeat.
      * @type {number}
-     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427666-repeatcount
+     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427666-repeatcount
      */
     this.repeatCount = 0
 
     /**
      * Required. Determines how many seconds the animation will repeat for.
      * @type {number}
-     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427643-repeatduration
+     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427643-repeatduration
      */
     this.repeatDuration = 0
 
@@ -133,14 +133,14 @@ export default class CAAnimation extends NSObject {
     /**
      * Required. Specifies the basic duration of the animation, in seconds.
      * @type {number}
-     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427652-duration
+     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427652-duration
      */
     this.duration = 0
 
     /**
      * Required. Specifies how time is mapped to receiver’s time space from the parent time space. 
      * @type {number}
-     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427647-speed
+     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427647-speed
      */
     this.speed = 1
 
@@ -150,14 +150,14 @@ export default class CAAnimation extends NSObject {
     /**
      * Required. Determines if the receiver plays in the reverse upon completion.
      * @type {boolean}
-     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427645-autoreverses
+     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427645-autoreverses
      */
     this.autoreverses = false
 
     /**
      * Required. Determines if the receiver’s presentation is frozen or removed once its active duration has completed.
      * @type {string}
-     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427656-fillmode
+     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427656-fillmode
      */
     this.fillMode = Constants.kCAFillModeRemoved
 
@@ -175,7 +175,7 @@ export default class CAAnimation extends NSObject {
    * @param {string} key - The name of one of the receiver’s properties.
    * @returns {boolean} - 
    * @desc Called by the object's implementation of encodeWithCoder:. The object must implement keyed archiving. The default implementation returns true. 
-   * @see https://developer.apple.com/reference/quartzcore/caanimation/1412525-shouldarchivevalue
+   * @see https://developer.apple.com/documentation/quartzcore/caanimation/1412525-shouldarchivevalue
    */
   shouldArchiveValueForKey(key) {
     return false
@@ -189,7 +189,7 @@ export default class CAAnimation extends NSObject {
    * @param {string} key - The name of one of the receiver’s properties.
    * @returns {?Object} - 
    * @desc If this method returns nil a suitable “zero” default value for the property is provided, based on the declared type of the key. For example, if key is a CGSize object, a size of (0.0,0.0) is returned. For a CGRect an empty rectangle is returned. For CGAffineTransform and CATransform3D, the appropriate identity matrix is returned. Special ConsiderationsIf key is not a known for property of the class, the result of the method is undefined.
-   * @see https://developer.apple.com/reference/quartzcore/caanimation/1412530-defaultvalue
+   * @see https://developer.apple.com/documentation/quartzcore/caanimation/1412530-defaultvalue
    */
   static defaultValueForKey(key) {
     return null

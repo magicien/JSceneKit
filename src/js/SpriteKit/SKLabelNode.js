@@ -55,7 +55,7 @@ const _defaultFragmentShader =
  * A node that displays a text label.
  * @access public
  * @extends {SKNode}
- * @see https://developer.apple.com/reference/spritekit/sklabelnode
+ * @see https://developer.apple.com/documentation/spritekit/sklabelnode
  */
 export default class SKLabelNode extends SKNode {
 
@@ -67,7 +67,7 @@ export default class SKLabelNode extends SKNode {
    * @constructor
    * @param {?string} text - The text to use to initialize the label node.
    * @desc The label node’s font is set to Helvetica Neue Ultra Light, 32 point.
-   * @see https://developer.apple.com/reference/spritekit/sklabelnode/1519612-init
+   * @see https://developer.apple.com/documentation/spritekit/sklabelnode/1519612-init
    */
   constructor(text) {
     super()
@@ -78,7 +78,7 @@ export default class SKLabelNode extends SKNode {
      * The string that the label node displays.
      * @access private
      * @type {?string}
-     * @see https://developer.apple.com/reference/spritekit/sklabelnode/1519788-text
+     * @see https://developer.apple.com/documentation/spritekit/sklabelnode/1519788-text
      */
     this._text = null
 
@@ -89,7 +89,7 @@ export default class SKLabelNode extends SKNode {
      * The color of the label.
      * @access private
      * @type {?CGColor}
-     * @see https://developer.apple.com/reference/spritekit/sklabelnode/1520057-fontcolor
+     * @see https://developer.apple.com/documentation/spritekit/sklabelnode/1520057-fontcolor
      */
     this._fontColor = new SKColor(1.0, 1.0, 1.0, 1.0)
 
@@ -97,7 +97,7 @@ export default class SKLabelNode extends SKNode {
      * The font used for the text in the label.
      * @access private
      * @type {?string}
-     * @see https://developer.apple.com/reference/spritekit/sklabelnode/1520129-fontname
+     * @see https://developer.apple.com/documentation/spritekit/sklabelnode/1520129-fontname
      */
     this._fontName = 'HelveticaNeue-UltraLight'
 
@@ -105,7 +105,7 @@ export default class SKLabelNode extends SKNode {
      * The size of the font used in the label.
      * @access private
      * @type {number}
-     * @see https://developer.apple.com/reference/spritekit/sklabelnode/1520208-fontsize
+     * @see https://developer.apple.com/documentation/spritekit/sklabelnode/1520208-fontsize
      */
     this._fontSize = 32.0
 
@@ -116,7 +116,7 @@ export default class SKLabelNode extends SKNode {
      * The vertical position of the text within the node.
      * @access private
      * @type {SKLabelVerticalAlignmentMode}
-     * @see https://developer.apple.com/reference/spritekit/sklabelnode/1519933-verticalalignmentmode
+     * @see https://developer.apple.com/documentation/spritekit/sklabelnode/1519933-verticalalignmentmode
      */
     this._verticalAlignmentMode = SKLabelVerticalAlignmentMode.baseline
 
@@ -124,7 +124,7 @@ export default class SKLabelNode extends SKNode {
      * The horizontal position of the text within the node.
      * @access private
      * @type {SKLabelHorizontalAlignmentMode}
-     * @see https://developer.apple.com/reference/spritekit/sklabelnode/1519711-horizontalalignmentmode
+     * @see https://developer.apple.com/documentation/spritekit/sklabelnode/1519711-horizontalalignmentmode
      */
     this._horizontalAlignmentMode = SKLabelHorizontalAlignmentMode.center
 
@@ -134,14 +134,14 @@ export default class SKLabelNode extends SKNode {
     /**
      * The label’s blend color.
      * @type {?CGColor}
-     * @see https://developer.apple.com/reference/spritekit/sklabelnode/1519938-color
+     * @see https://developer.apple.com/documentation/spritekit/sklabelnode/1519938-color
      */
     this.color = new SKColor(1.0, 1.0, 1.0, 1.0)
 
     /**
      * A floating-point value that describes how the color is blended with the font color.
      * @type {number}
-     * @see https://developer.apple.com/reference/spritekit/sklabelnode/1519724-colorblendfactor
+     * @see https://developer.apple.com/documentation/spritekit/sklabelnode/1519724-colorblendfactor
      */
     this.colorBlendFactor = 0.0
 
@@ -151,7 +151,7 @@ export default class SKLabelNode extends SKNode {
     /**
      * The blend mode used to draw the label into the parent’s framebuffer.
      * @type {SKBlendMode}
-     * @see https://developer.apple.com/reference/spritekit/sklabelnode/1519598-blendmode
+     * @see https://developer.apple.com/documentation/spritekit/sklabelnode/1519598-blendmode
      */
     this.blendMode = SKBlendMode.alpha
 
@@ -179,7 +179,7 @@ export default class SKLabelNode extends SKNode {
    * @access public
    * @param {?string} fontName - The name of the font used by the label.
    * @returns {SKLabelNode} -
-   * @see https://developer.apple.com/reference/spritekit/sklabelnode/1519917-init
+   * @see https://developer.apple.com/documentation/spritekit/sklabelnode/1519917-init
    */
   static labelWithFontNamed(fontName) {
     const label = new SKLabelNode()
@@ -193,7 +193,7 @@ export default class SKLabelNode extends SKNode {
    * @param {?string} text - The text to use to initialize the label node.
    * @returns {SKLabelNode} -
    * @desc The label node’s font is set to Helvetica Neue Ultra Light, 32 point.
-   * @see https://developer.apple.com/reference/spritekit/sklabelnode/1519612-init
+   * @see https://developer.apple.com/documentation/spritekit/sklabelnode/1519612-init
    */
   static labelWithText(text) {
     return new SKLabelNode(text)

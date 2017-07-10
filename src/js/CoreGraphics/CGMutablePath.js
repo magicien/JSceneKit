@@ -8,7 +8,7 @@ import CGPath from './CGPath'
 /**
  * A mutable graphics path: a mathematical description of shapes or lines to be drawn in a graphics context.
  * @access public
- * @see https://developer.apple.com/reference/coregraphics/cgmutablepath
+ * @see https://developer.apple.com/documentation/coregraphics/cgmutablepath
  */
 export default class CGMutablePath {
 
@@ -18,7 +18,7 @@ export default class CGMutablePath {
    * Creates a mutable graphics path.
    * @access public
    * @returns {void}
-   * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/1411209-init
+   * @see https://developer.apple.com/documentation/coregraphics/cgmutablepath/1411209-init
    */
   init() {
   }
@@ -30,7 +30,7 @@ export default class CGMutablePath {
    * @access public
    * @returns {?CGMutablePath} - 
    * @desc You can modify a mutable graphics path by calling the various path geometry functions, such as addArc(_:x:y:radius:startAngle:endAngle:clockwise:), addLineTo(_:x:y:), and moveTo(_:x:y:).
-   * @see https://developer.apple.com/reference/coregraphics/cgpath/1411196-mutablecopy
+   * @see https://developer.apple.com/documentation/coregraphics/cgpath/1411196-mutablecopy
    */
   mutableCopy() {
     return null
@@ -41,7 +41,7 @@ export default class CGMutablePath {
    * @access public
    * @param {?UnsafePointer<CGAffineTransform>} transform - A pointer to an affine transformation matrix, or NULL if no transformation is needed. If specified, Core Graphics applies the transformation to all elements of the new path.
    * @returns {?CGMutablePath} - 
-   * @see https://developer.apple.com/reference/coregraphics/cgpath/1411150-mutablecopy
+   * @see https://developer.apple.com/documentation/coregraphics/cgpath/1411150-mutablecopy
    */
   mutableCopyUsing(transform) {
     return null
@@ -56,7 +56,7 @@ export default class CGMutablePath {
    * @param {CGAffineTransform} transform - An affine transform to apply to the point before adding to the path. Defaults to the identity transform if not specified.
    * @returns {void}
    * @desc The specified point becomes the start point of a new subpath. The current point is set to this start point.
-   * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427143-move
+   * @see https://developer.apple.com/documentation/coregraphics/cgmutablepath/2427143-move
    */
   moveTo(point, transform) {
   }
@@ -68,7 +68,7 @@ export default class CGMutablePath {
    * @param {CGAffineTransform} transform - An affine transform to apply to the point before adding to the path. Defaults to the identity transform if not specified.
    * @returns {void}
    * @desc After adding the line segment, the current point is set to the endpoint of the line segment.
-   * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427121-addline
+   * @see https://developer.apple.com/documentation/coregraphics/cgmutablepath/2427121-addline
    */
   addLineTo(point, transform) {
   }
@@ -80,7 +80,7 @@ export default class CGMutablePath {
    * @param {CGAffineTransform} transform - An affine transform to apply to the points before adding to the path. Defaults to the identity transform if not specified.
    * @returns {void}
    * @desc Calling this convenience method is equivalent to calling the move(to:transform:) method with the first value in the points array, then calling the addLine(to:transform:) method for each subsequent point until the array is exhausted. After calling this method, the path's current point is the last point in the array.
-   * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427154-addlines
+   * @see https://developer.apple.com/documentation/coregraphics/cgmutablepath/2427154-addlines
    */
   addLinesBetween(points, transform) {
   }
@@ -92,7 +92,7 @@ export default class CGMutablePath {
    * @param {CGAffineTransform} transform - An affine transform to apply to the rectangle before adding to the path. Defaults to the identity transform if not specified.
    * @returns {void}
    * @desc This is a convenience function that adds a rectangle to a path, starting by moving to the bottom left corner and then adding lines counter-clockwise to create a rectangle, closing the subpath.
-   * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427119-addrect
+   * @see https://developer.apple.com/documentation/coregraphics/cgmutablepath/2427119-addrect
    */
   addRect(rect, transform) {
   }
@@ -104,7 +104,7 @@ export default class CGMutablePath {
    * @param {CGAffineTransform} transform - An affine transform to apply to the rectangles before adding to the path. Defaults to the identity transform if not specified.
    * @returns {void}
    * @desc Calling this convenience method is equivalent to repeatedly calling the addRect(_:transform:) method for each rectangle in the array.
-   * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427131-addrects
+   * @see https://developer.apple.com/documentation/coregraphics/cgmutablepath/2427131-addrects
    */
   addRects(rects, transform) {
   }
@@ -116,7 +116,7 @@ export default class CGMutablePath {
    * @param {CGAffineTransform} transform - An affine transform to apply to the ellipse before adding to the path. Defaults to the identity transform if not specified.
    * @returns {void}
    * @desc The ellipse is approximated by a sequence of Bézier curves. Its center is the midpoint of the rectangle defined by the rect parameter. If the rectangle is square, then the ellipse is circular with a radius equal to one-half the width (or height) of the rectangle. If the rect parameter specifies a rectangular shape, then the major and minor axes of the ellipse are defined by the width and height of the rectangle.The ellipse forms a complete subpath of the path—that is, the ellipse drawing starts with a move-to operation and ends with a close-subpath operation, with all moves oriented in the clockwise direction.
-   * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427120-addellipse
+   * @see https://developer.apple.com/documentation/coregraphics/cgmutablepath/2427120-addellipse
    */
   addEllipseIn(rect, transform) {
   }
@@ -130,7 +130,7 @@ export default class CGMutablePath {
    * @param {CGAffineTransform} transform - An affine transform to apply to the rectangle before adding to the path. Defaults to the identity transform if not specified.
    * @returns {void}
    * @desc This convenience method is equivalent to a move operation to start the subpath followed by a series of arc and line operations that construct the rounded rectangle. Each corner of the rounded rectangle is one-quarter of an ellipse with axes equal to the cornerWidth and cornerHeight parameters. The rounded rectangle forms a closed subpath oriented in the clockwise direction.
-   * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427144-addroundedrect
+   * @see https://developer.apple.com/documentation/coregraphics/cgmutablepath/2427144-addroundedrect
    */
   addRoundedRectIn(rect, cornerWidth, cornerHeight, transform) {
   }
@@ -146,7 +146,7 @@ export default class CGMutablePath {
    * @param {CGAffineTransform} transform - An affine transform to apply to the arc before adding to the path. Defaults to the identity transform if not specified.
    * @returns {void}
    * @desc This method calculates starting and ending points using the radius and angles you specify, uses a sequence of cubic Bézier curves to approximate a segment of a circle between those points, and then appends those curves to the path.The clockwise parameter determines the direction in which the arc is created; the actual direction of the final path is dependent on the transform parameter and the current transform of a context where the path is drawn. In a flipped coordinate system (the default for UIView drawing methods in iOS), specifying a clockwise arc results in a counterclockwise arc after the transformation is applied.If the path already contains a subpath, this method adds a line connecting the current point to the starting point of the arc. If the current path is empty, his method creates a new subpath whose starting point is the starting point of the arc. The ending point of the arc becomes the new current point of the path.
-   * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427140-addarc
+   * @see https://developer.apple.com/documentation/coregraphics/cgmutablepath/2427140-addarc
    */
   addArc(center, radius, startAngle, endAngle, clockwise, transform) {
   }
@@ -161,7 +161,7 @@ export default class CGMutablePath {
    * @param {CGAffineTransform} transform - An affine transform to apply to the arc before adding to the path. Defaults to the identity transform if not specified.
    * @returns {void}
    * @desc This method calculates starting and ending points using the radius and angles you specify, uses a sequence of cubic Bézier curves to approximate a segment of a circle between those points, and then appends those curves to the path.The delta parameter determines both the length of the arc the direction in which the arc is created; the actual direction of the final path is dependent on the transform parameter and the current transform of a context where the path is drawn. In a flipped coordinate system (the default for UIView drawing methods in iOS), specifying a clockwise arc results in a counterclockwise arc after the transformation is applied.If the path already contains a subpath, this method adds a line connecting the current point to the starting point of the arc. If the current path is empty, his method creates a new subpath whose starting point is the starting point of the arc. The ending point of the arc becomes the new current point of the path.
-   * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427147-addrelativearc
+   * @see https://developer.apple.com/documentation/coregraphics/cgmutablepath/2427147-addrelativearc
    */
   addRelativeArc(center, radius, startAngle, delta, transform) {
   }
@@ -175,7 +175,7 @@ export default class CGMutablePath {
    * @param {CGAffineTransform} transform - An affine transform to apply to the curve before adding to the path. Defaults to the identity transform if not specified.
    * @returns {void}
    * @desc This method constructs a curve starting from the path's current point and ending at the specified end point, with curvature defined by the two control points. After this method appends that curve to the current path, the end point of the curve becomes the path's current point.
-   * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427158-addcurve
+   * @see https://developer.apple.com/documentation/coregraphics/cgmutablepath/2427158-addcurve
    */
   addCurveTo(end, control1, control2, transform) {
   }
@@ -188,7 +188,7 @@ export default class CGMutablePath {
    * @param {CGAffineTransform} transform - An affine transform to apply to the curve before adding to the path. Defaults to the identity transform if not specified.
    * @returns {void}
    * @desc This method constructs a curve starting from the path's current point and ending at the specified end point, with curvature defined by the control point. After this method appends that curve to the current path, the end point of the curve becomes the path's current point.
-   * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427128-addquadcurve
+   * @see https://developer.apple.com/documentation/coregraphics/cgmutablepath/2427128-addquadcurve
    */
   addQuadCurveTo(end, control, transform) {
   }
@@ -200,7 +200,7 @@ export default class CGMutablePath {
    * @param {CGAffineTransform} transform - An affine transform to apply to the path parameter before adding to this path. Defaults to the identity transform if not specified.
    * @returns {void}
    * @desc If the path parameter is a non-empty empty path, its path elements are appended in order to this path. Afterward, the start point and current point of this path are those of the last subpath in the path parameter.
-   * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/2427150-addpath
+   * @see https://developer.apple.com/documentation/coregraphics/cgmutablepath/2427150-addpath
    */
   addPath(path, transform) {
   }
@@ -210,7 +210,7 @@ export default class CGMutablePath {
    * @access public
    * @returns {void}
    * @desc Appends a line from the current point to the starting point of the current subpath and ends the subpath. After closing the subpath, your application can begin a new subpath without first calling moveTo(_:x:y:). In this case, a new subpath is implicitly created with a starting and current point equal to the previous subpath’s starting point.
-   * @see https://developer.apple.com/reference/coregraphics/cgmutablepath/1411188-closesubpath
+   * @see https://developer.apple.com/documentation/coregraphics/cgmutablepath/1411188-closesubpath
    */
   closeSubpath() {
   }

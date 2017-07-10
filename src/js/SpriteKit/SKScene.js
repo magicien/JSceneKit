@@ -16,7 +16,7 @@ import SKSceneScaleMode from './SKSceneScaleMode'
  * The root node for all Sprite Kit objects displayed in a view. 
  * @access public
  * @extends {SKEffectNode}
- * @see https://developer.apple.com/reference/spritekit/skscene
+ * @see https://developer.apple.com/documentation/spritekit/skscene
  */
 export default class SKScene extends SKEffectNode {
 
@@ -28,7 +28,7 @@ export default class SKScene extends SKEffectNode {
    * @constructor
    * @param {CGSize} size - The size of the scene in points.
    * @desc This is the class’s designated initializer method.
-   * @see https://developer.apple.com/reference/spritekit/skscene/1520435-init
+   * @see https://developer.apple.com/documentation/spritekit/skscene/1520435-init
    */
   constructor(size) {
     super()
@@ -38,28 +38,28 @@ export default class SKScene extends SKEffectNode {
     /**
      * The camera node in the scene that determines what part of the scene’s coordinate space is visible in the view.
      * @type {?SKCameraNode}
-     * @see https://developer.apple.com/reference/spritekit/skscene/1519696-camera
+     * @see https://developer.apple.com/documentation/spritekit/skscene/1519696-camera
      */
     this.camera = null
 
     /**
      * The point in the view’s frame that corresponds to the scene’s origin.
      * @type {CGPoint}
-     * @see https://developer.apple.com/reference/spritekit/skscene/1519864-anchorpoint
+     * @see https://developer.apple.com/documentation/spritekit/skscene/1519864-anchorpoint
      */
     this.anchorPoint = new CGPoint(0, 0)
 
     /**
      * The dimensions of the scene in points.
      * @type {CGSize}
-     * @see https://developer.apple.com/reference/spritekit/skscene/1519831-size
+     * @see https://developer.apple.com/documentation/spritekit/skscene/1519831-size
      */
     this.size = size | new CGSize(1, 1)
 
     /**
      * Defines how the scene is mapped to the view that presents it.
      * @type {SKSceneScaleMode}
-     * @see https://developer.apple.com/reference/spritekit/skscene/1519562-scalemode
+     * @see https://developer.apple.com/documentation/spritekit/skscene/1519562-scalemode
      */
     this.scaleMode = SKSceneScaleMode.fill
 
@@ -69,7 +69,7 @@ export default class SKScene extends SKEffectNode {
     /**
      * The background color of the scene.
      * @type {SKColor}
-     * @see https://developer.apple.com/reference/spritekit/skscene/1520278-backgroundcolor
+     * @see https://developer.apple.com/documentation/spritekit/skscene/1520278-backgroundcolor
      */
     this.backgroundColor = new SKColor(0.15, 0.15, 0.15, 1.0)
 
@@ -83,7 +83,7 @@ export default class SKScene extends SKEffectNode {
     /**
      * A delegate to be called during the animation loop. 
      * @type {?SKSceneDelegate}
-     * @see https://developer.apple.com/reference/spritekit/skscene/1520213-delegate
+     * @see https://developer.apple.com/documentation/spritekit/skscene/1520213-delegate
      */
     this.delegate = null
 
@@ -98,7 +98,7 @@ export default class SKScene extends SKEffectNode {
     /**
      * A node used to determine the position of the listener for positional audio in the scene.
      * @type {?SKNode}
-     * @see https://developer.apple.com/reference/spritekit/skscene/1520363-listener
+     * @see https://developer.apple.com/documentation/spritekit/skscene/1520363-listener
      */
     this.listener = null
 
@@ -113,7 +113,7 @@ export default class SKScene extends SKEffectNode {
    * @param {CGSize} oldSize - The old size of the scene, in points.
    * @returns {void}
    * @desc This method is intended to be overridden in a subclass. Typically, you use this method to adjust the positions of nodes in the scene.
-   * @see https://developer.apple.com/reference/spritekit/skscene/1519545-didchangesize
+   * @see https://developer.apple.com/documentation/spritekit/skscene/1519545-didchangesize
    */
   didChangeSize(oldSize) {
   }
@@ -126,7 +126,7 @@ export default class SKScene extends SKEffectNode {
    * @param {CGPoint} point - A point in view coordinates.
    * @returns {CGPoint} - 
    * @desc The scene must be presented in a view before calling this method.
-   * @see https://developer.apple.com/reference/spritekit/skscene/1520395-convertpoint
+   * @see https://developer.apple.com/documentation/spritekit/skscene/1520395-convertpoint
    */
   convertPointFromView(point) {
     return null
@@ -138,7 +138,7 @@ export default class SKScene extends SKEffectNode {
    * @param {CGPoint} point - A point in scene coordinates.
    * @returns {CGPoint} - 
    * @desc The scene must be presented in a view before calling this method.
-   * @see https://developer.apple.com/reference/spritekit/skscene/1520082-convertpoint
+   * @see https://developer.apple.com/documentation/spritekit/skscene/1520082-convertpoint
    */
   convertPointToView(point) {
     return null
@@ -151,7 +151,7 @@ export default class SKScene extends SKEffectNode {
    * @access public
    * @returns {void}
    * @desc This method is intended to be overridden in a subclass. You can use this method to implement any custom behavior after it has been initialized or decoded.
-   * @see https://developer.apple.com/reference/spritekit/skscene/1645216-scenedidload
+   * @see https://developer.apple.com/documentation/spritekit/skscene/1645216-scenedidload
    */
   sceneDidLoad() {
   }
@@ -162,7 +162,7 @@ export default class SKScene extends SKEffectNode {
    * @param {SKView} view - The view that is presenting the scene.
    * @returns {void}
    * @desc This method is intended to be overridden in a subclass. You can use this method to implement any custom behavior for your scene when it is about to be removed from the view.
-   * @see https://developer.apple.com/reference/spritekit/skscene/1519703-willmove
+   * @see https://developer.apple.com/documentation/spritekit/skscene/1519703-willmove
    */
   willMoveFrom(view) {
   }
@@ -173,7 +173,7 @@ export default class SKScene extends SKEffectNode {
    * @param {SKView} view - The view that is presenting the scene.
    * @returns {void}
    * @desc This method is intended to be overridden in a subclass. You can use this method to implement any custom behavior for your scene when it is about to be presented by a view. For example, you might use this method to create the scene’s contents.
-   * @see https://developer.apple.com/reference/spritekit/skscene/1519607-didmove
+   * @see https://developer.apple.com/documentation/spritekit/skscene/1519607-didmove
    */
   didMoveTo(view) {
   }
@@ -181,7 +181,7 @@ export default class SKScene extends SKEffectNode {
    * The view that is currently presenting the scene.
    * @type {?SKView}
    * @desc To present a scene, you call the presentScene(_:) method or presentScene(_:transition:) method on the SKView class. If the scene is not currently presented, this property holds nil.
-   * @see https://developer.apple.com/reference/spritekit/skscene/1519726-view
+   * @see https://developer.apple.com/documentation/spritekit/skscene/1519726-view
    */
   get view() {
     return this._view
@@ -195,7 +195,7 @@ export default class SKScene extends SKEffectNode {
    * @param {number} currentTime - The current system time.
    * @returns {void}
    * @desc Do not call this method directly; it is called exactly once per frame, so long as the scene is presented in a view and is not paused. By default, this method does nothing. Your scene subclass should override this method and perform any necessary updates to the scene.
-   * @see https://developer.apple.com/reference/spritekit/skscene/1519802-update
+   * @see https://developer.apple.com/documentation/spritekit/skscene/1519802-update
    */
   update(currentTime) {
   }
@@ -205,7 +205,7 @@ export default class SKScene extends SKEffectNode {
    * @access public
    * @returns {void}
    * @desc Do not call this method directly; it is called exactly once per frame, so long as the scene is presented in a view and is not paused. By default, this method does nothing. Your scene subclass should override this method and perform any necessary updates to the scene.
-   * @see https://developer.apple.com/reference/spritekit/skscene/1519903-didevaluateactions
+   * @see https://developer.apple.com/documentation/spritekit/skscene/1519903-didevaluateactions
    */
   didEvaluateActions() {
   }
@@ -215,7 +215,7 @@ export default class SKScene extends SKEffectNode {
    * @access public
    * @returns {void}
    * @desc Do not call this method directly; it is called exactly once per frame, so long as the scene is presented in a view and is not paused. By default, this method does nothing. Your scene subclass should override this method and perform any necessary updates to the scene.
-   * @see https://developer.apple.com/reference/spritekit/skscene/1519965-didsimulatephysics
+   * @see https://developer.apple.com/documentation/spritekit/skscene/1519965-didsimulatephysics
    */
   didSimulatePhysics() {
   }
@@ -225,7 +225,7 @@ export default class SKScene extends SKEffectNode {
    * @access public
    * @returns {void}
    * @desc Do not call this method directly; it is called exactly once per frame, so long as the scene is presented in a view and is not paused. By default, this method does nothing. Your scene subclass should override this method and perform any necessary updates to the scene.
-   * @see https://developer.apple.com/reference/spritekit/skscene/1520006-didapplyconstraints
+   * @see https://developer.apple.com/documentation/spritekit/skscene/1520006-didapplyconstraints
    */
   didApplyConstraints() {
   }
@@ -235,7 +235,7 @@ export default class SKScene extends SKEffectNode {
    * @access public
    * @returns {void}
    * @desc Do not call this method directly; it is called exactly once per frame, so long as the scene is presented in a view and is not paused. By default, this method does nothing. Your scene subclass should override this method and perform any necessary updates to the scene. This method is the last method to be called before the scene is rendered.
-   * @see https://developer.apple.com/reference/spritekit/skscene/1520269-didfinishupdate
+   * @see https://developer.apple.com/documentation/spritekit/skscene/1520269-didfinishupdate
    */
   didFinishUpdate() {
   }
@@ -245,7 +245,7 @@ export default class SKScene extends SKEffectNode {
    * The physics simulation associated with the scene.
    * @type {SKPhysicsWorld}
    * @desc Every scene automatically creates a physics world object to simulate physics on nodes in the scene. You use this property to access the scene’s global physics properties, such as gravity. To add physics to a particular node, see physicsBody.
-   * @see https://developer.apple.com/reference/spritekit/skscene/1519584-physicsworld
+   * @see https://developer.apple.com/documentation/spritekit/skscene/1519584-physicsworld
    */
   get physicsWorld() {
     return this._physicsWorld
@@ -262,7 +262,7 @@ let scene = SKScene()
 scene.audioEngine.mainMixerNode.outputVolume = 0.2
 scene.audioEngine.pause()
 
-   * @see https://developer.apple.com/reference/spritekit/skscene/1519644-audioengine
+   * @see https://developer.apple.com/documentation/spritekit/skscene/1519644-audioengine
    */
   //get audioEngine() {
   //  return this._audioEngine

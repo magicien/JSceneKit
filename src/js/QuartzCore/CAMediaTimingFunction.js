@@ -7,7 +7,7 @@ import * as Constants from '../constants'
  * A function that defines the pacing of an animation as a timing curve. 
  * @access public
  * @extends {NSObject}
- * @see https://developer.apple.com/reference/quartzcore/camediatimingfunction
+ * @see https://developer.apple.com/documentation/quartzcore/camediatimingfunction
  */
 export default class CAMediaTimingFunction extends NSObject {
 
@@ -22,7 +22,7 @@ export default class CAMediaTimingFunction extends NSObject {
    * @param {number} c2x - A floating point number representing the x position of the c2 control point.
    * @param {number} c2y - A floating point number representing the y position of the c2 control point.
    * @desc The end points of the Bézier curve are automatically set to (0.0,0.0) and (1.0,1.0). The control points defining the Bézier curve are: [(0.0,0.0), (c1x,c1y), (c2x,c2y), (1.0,1.0)].
-   * @see https://developer.apple.com/reference/quartzcore/camediatimingfunction/1522235-init
+   * @see https://developer.apple.com/documentation/quartzcore/camediatimingfunction/1522235-init
    */
   constructor(c1x, c1y, c2x, c2y) {
     super()
@@ -39,7 +39,7 @@ export default class CAMediaTimingFunction extends NSObject {
    * @access public
    * @param {string} name - The timing function to use as specified in Predefined Timing Functions. 
    * @returns {CAMediaTimingFunction} -
-   * @see https://developer.apple.com/reference/quartzcore/camediatimingfunction/1521979-init
+   * @see https://developer.apple.com/documentation/quartzcore/camediatimingfunction/1521979-init
    */
   static functionWithName(name) {
     switch(name){
@@ -67,7 +67,7 @@ export default class CAMediaTimingFunction extends NSObject {
    * @param {number} c2y - A floating point number representing the y position of the c2 control point.
    * @returns {CAMediaTimingFunction} -
    * @desc The end points of the Bézier curve are automatically set to (0.0,0.0) and (1.0,1.0). The control points defining the Bézier curve are: [(0.0,0.0), (c1x,c1y), (c2x,c2y), (1.0,1.0)].
-   * @see https://developer.apple.com/reference/quartzcore/camediatimingfunction/1522235-init
+   * @see https://developer.apple.com/documentation/quartzcore/camediatimingfunction/1522235-init
    */
   static functionWithControlPoints(c1x, c1y, c2x, c2y) {
     return new CAMediaTimingFunction(c1x, c1y, c2x, c2y)
@@ -82,7 +82,7 @@ export default class CAMediaTimingFunction extends NSObject {
    * @param {!UnsafeMutablePointer<Float>} ptr - A pointer to an array that, upon return, will contain the x and y values of the specified point.
    * @returns {void}
    * @desc The value of index must be between 0 and 3.
-   * @see https://developer.apple.com/reference/quartzcore/camediatimingfunction/1522057-getcontrolpoint
+   * @see https://developer.apple.com/documentation/quartzcore/camediatimingfunction/1522057-getcontrolpoint
    */
   getControlPointAtValues(idx, ptr) {
   }

@@ -35,7 +35,7 @@ import * as Constants from '../constants'
  * A simple, reusable animation that changes attributes of any node you attach it to.
  * @access public
  * @extends {NSObject}
- * @see https://developer.apple.com/reference/scenekit/scnaction
+ * @see https://developer.apple.com/documentation/scenekit/scnaction
  */
 export default class SCNAction extends NSObject {
 
@@ -52,28 +52,28 @@ export default class SCNAction extends NSObject {
     /**
      * The duration required to complete an action.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnaction/1524162-duration
+     * @see https://developer.apple.com/documentation/scenekit/scnaction/1524162-duration
      */
     this._duration = 0
 
     /**
      * A speed factor that modifies how fast an action runs.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnaction/1522811-speed
+     * @see https://developer.apple.com/documentation/scenekit/scnaction/1522811-speed
      */
     this._speed = 1.0
 
     /**
      * The timing mode used to execute an action.
      * @type {SCNActionTimingMode}
-     * @see https://developer.apple.com/reference/scenekit/scnaction/1524055-timingmode
+     * @see https://developer.apple.com/documentation/scenekit/scnaction/1524055-timingmode
      */
     this._timingMode = SCNActionTimingMode.linear
 
     /**
      * A block SceneKit calls to determine the action’s animation timing.
      * @type {?SCNActionTimingFunction}
-     * @see https://developer.apple.com/reference/scenekit/scnaction/1524130-timingfunction
+     * @see https://developer.apple.com/documentation/scenekit/scnaction/1524130-timingfunction
      */
     this._timingFunction = null
 
@@ -104,7 +104,7 @@ export default class SCNAction extends NSObject {
    * @desc When the action executes, the node’s position property animates from its current position to its new position.This action is reversible; the reverse is created as if the following code had been executed:[SCNAction moveByX: -deltaX y: -deltaY z: -deltaZ duration: duration];
 [SCNAction moveByX: -deltaX y: -deltaY z: -deltaZ duration: duration];
 
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1523238-moveby
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1523238-moveby
    */
   static moveByXYZ(deltaX, deltaY, deltaZ, duration) {
     //return SCNActionMove.moveByXYZ(deltaX, deltaY, deltaZ, duration)
@@ -122,7 +122,7 @@ export default class SCNAction extends NSObject {
 SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
 [SCNAction moveBy: reverseDelta duration: duration];
 
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1522605-move
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1522605-move
    */
   static moveBy(delta, duration) {
     //return SCNActionMove.moveBy(delta, duration)
@@ -136,7 +136,7 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @param {number} duration - The duration, in seconds, of the animation.
    * @returns {SCNAction} - 
    * @desc When the action executes, the node’s position property animates from its current position to its new position.This action is not reversible; the reverse of this action has the same duration but does not move the node.
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1522826-move
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1522826-move
    */
   static moveTo(location, duration) {
     //return SCNActionMove.moveTo(location, duration)
@@ -156,7 +156,7 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @desc When the action executes, the node’s rotation property animates to the new angle.This action is reversible; the reverse is created as if the following code had been executed:[SCNAction rotateByX: -xAngle y: -yAngle z: -zAngle duration: duration];
 [SCNAction rotateByX: -xAngle y: -yAngle z: -zAngle duration: duration];
 
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1523522-rotateby
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1523522-rotateby
    */
   static rotateByXYZ(xAngle, yAngle, zAngle, duration) {
     //return SCNActionRotate.rotateByXYZ(xAngle, yAngle, zAngle, duration)
@@ -172,7 +172,7 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @param {number} duration - The duration, in seconds, of the animation.
    * @returns {SCNAction} - 
    * @desc When the action executes, the node’s rotation property animates to the new angle. Calling this method is equivalent to calling rotateTo(x:y:z:duration:usesShortestUnitArc:) and passing false for the shortestUnitArc parameter.This action is not reversible; the reverse of this action has the same duration but does not change anything.
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1524044-rotateto
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1524044-rotateto
    */
   static rotateToXYZ(xAngle, yAngle, zAngle, duration) {
     //return SCNActionRotate.rotateToXYZ(xAngle, yAngle, zAngle, duration)
@@ -189,7 +189,7 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @param {boolean} shortestUnitArc - If false (the default), the animation interpolates each component of the node’s rotation between its current value and the new value. If true, the animation makes the most direct rotation possible from the node’s current orientation to the new orientation.
    * @returns {SCNAction} - 
    * @desc When the action executes, the node’s rotation property animates to the new angle.This action is not reversible; the reverse of this action has the same duration but does not change anything.
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1522808-rotateto
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1522808-rotateto
    */
   static rotateToXYZUsesShortestUnitArc(xAngle, yAngle, zAngle, duration, shortestUnitArc) {
     //return SCNActionRotate.rotateToXYZUsesShortestUnitArc(xAngle, yAngle, zAngle, duration, shortestUnitArc)
@@ -206,7 +206,7 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @desc When the action executes, the node’s rotation property animates to the new angle.This action is reversible; the reverse is created as if the following code had been executed:[SCNAction rotateByAngle: -angle aroundAxis: axis duration: sec];
 [SCNAction rotateByAngle: -angle aroundAxis: axis duration: sec];
 
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1523805-rotate
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1523805-rotate
    */
   static rotateByAround(angle, axis, duration) {
     //return SCNActionRotate.rotateByAround(angle, axis, duration)
@@ -220,7 +220,7 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @param {number} duration - The duration, in seconds, of the animation.
    * @returns {SCNAction} - 
    * @desc When the action executes, the node’s rotation property animates to the new angle.This action is not reversible; the reverse of this action has the same duration but does not change anything.
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1524191-rotate
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1524191-rotate
    */
   static rotateToAxisAngle(axisAngle, duration) {
     //return SCNActionRotate.rotateToAxisAngle(axisAngle, duration)
@@ -238,7 +238,7 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @desc When the action executes, the node’s scale property animates to the new value.This action is reversible; the reverse is created as if the following code had been executed:[SCNAction scaleBy: -scale duration: sec];
 [SCNAction scaleBy: -scale duration: sec];
 
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1523129-scale
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1523129-scale
    */
   static scaleByDuration(scale, sec) {
     //return SCNActionScale.scaleByDuration(scale, sec)
@@ -252,7 +252,7 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @param {number} sec - The duration, in seconds, of the animation.
    * @returns {SCNAction} - 
    * @desc When the action executes, the node’s scale property animates to the new value.This action is not reversible; the reverse of this action has the same duration but does not change anything.
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1523322-scale
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1523322-scale
    */
   static scaleToDuration(scale, sec) {
     //return SCNActionScale.scaleToDuration(scale, sec)
@@ -269,7 +269,7 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @desc When the action executes, the node’s opacity property animates from its current value to 1.0.This action is reversible; the reverse is created as if the following code had been executed:[SCNAction fadeOutWithDuration: sec];
 [SCNAction fadeOutWithDuration: sec];
 
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1522777-fadein
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1522777-fadein
    */
   static fadeInDuration(sec) {
     //return SCNActionFade.fadeInDuration(sec)
@@ -284,7 +284,7 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @desc When the action executes, the node’s opacity property animates from its current value to 0.0.This action is reversible; the reverse is created as if the following code had been executed:[SCNAction fadeInWithDuration: sec];
 [SCNAction fadeInWithDuration: sec];
 
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1523922-fadeout
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1523922-fadeout
    */
   static fadeOutDuration(sec) {
     //return SCNActionFade.fadeOutDuration(sec)
@@ -300,7 +300,7 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @desc When the action executes, the node’s opacity property animates to its new value.This action is reversible; the reverse is created as if the following code had been executed:[SCNAction fadeOpacityBy: -factor duration: sec];
 [SCNAction fadeOpacityBy: -factor duration: sec];
 
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1523595-fadeopacity
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1523595-fadeopacity
    */
   static fadeOpacityByDuration(factor, sec) {
     //return SCNActionFade.fadeOpacityByDuration(factor, sec)
@@ -314,7 +314,7 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @param {number} sec - The duration, in seconds, of the animation.
    * @returns {SCNAction} - 
    * @desc When the action executes, the node’s opacity property animates to its new value.This action is not reversible; the reverse of this action has the same duration but does not change anything.
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1523875-fadeopacity
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1523875-fadeopacity
    */
   static fadeOpacityToDuration(opacity, sec) {
     //return SCNActionFade.fadeOpacityToDuration(opacity, sec)
@@ -328,7 +328,7 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @access public
    * @returns {SCNAction} - 
    * @desc When the action executes, the node’s isHidden property is set to true.This action is reversible; the reverse is equivalent to the unhide() action.
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1523487-hide
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1523487-hide
    */
   static hide() {
     //return SCNActionHide.hide()
@@ -340,7 +340,7 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @access public
    * @returns {SCNAction} - 
    * @desc When the action executes, the node’s isHidden property is set to false.This action is reversible; the reverse is equivalent to the hide() action.
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1524205-unhide
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1524205-unhide
    */
   static unhide() {
     //return SCNActionHide.unhide()
@@ -354,7 +354,7 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @access public
    * @returns {SCNAction} - 
    * @desc When the action executes, the node is immediately removed from its parent.This action is not reversible; the reverse of this action is the same action.
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1522966-removefromparentnode
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1522966-removefromparentnode
    */
   static removeFromParentNode() {
     //return SCNActionRemove.removeFromParentNode()
@@ -370,7 +370,7 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @param {boolean} wait - If true, the duration of this action is the same as the length of the audio playback. If false, the action is considered to have completed immediately.
    * @returns {SCNAction} - 
    * @desc When the action executes, SceneKit plays the audio source on the target node—any positional audio effects are based on the node’s position. For more information about positional audio in SceneKit, see SCNAudioPlayer.This action is not reversible; the reverse of this action is the same action.
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1523651-playaudio
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1523651-playaudio
    */
   static playAudioWaitForCompletion(source, wait) {
     //return SCNActionPlaySound.playAudioWaitForCompletion(source, wait)
@@ -385,7 +385,7 @@ SCNVector3 reverseDelta = SCNVector3Make(-delta.x, -delta.y, -delta.z);
    * @param {SCNAction[]} actions - An array of SCNAction objects.
    * @returns {SCNAction} - 
    * @desc When the action executes, the actions that make up the group all start immediately and run in parallel. The duration of the group action is the longest duration among the collection of actions. If an action in the group has a duration less than the group’s duration, the action completes and then idles until the group completes the remaining actions. This matters most when creating a repeating action that repeats a group.This action is reversible; it creates a new group action that contains the reverse of each action specified in the group. 
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1522779-group
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1522779-group
    */
   static group(actions) {
     //return SCNActionGroup.group(actions)
@@ -408,7 +408,7 @@ SCNAction *reverseSequence = [SCNAction sequence:@[ [actionC reversedAction],
                                                     [actionA reversedAction] ]];
 SCNAction *sequenceReverse = [sequence reversedAction];
 
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1522793-sequence
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1522793-sequence
    */
   static sequence(actions) {
     //return SCNActionSequence.sequence(actions)
@@ -422,7 +422,7 @@ SCNAction *sequenceReverse = [sequence reversedAction];
    * @param {number} count - The number of times to execute the action.
    * @returns {SCNAction} - 
    * @desc When the action executes, the associated action runs to completion and then repeats, until the count is reached.This action is reversible; it creates a new action that is the reverse of the specified action and then repeats it the same number of times.
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1522764-repeat
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1522764-repeat
    */
   static repeat(action, count) {
     //return SCNActionRepeat.repeat(action, count)
@@ -435,7 +435,7 @@ SCNAction *sequenceReverse = [sequence reversedAction];
    * @param {SCNAction} action - The action to execute.
    * @returns {SCNAction} - 
    * @desc When the action executes, the associated action runs to completion and then repeats.This action is reversible; it creates a new action that is the reverse of the specified action and then repeats it forever.NoteThe action to be repeated must have a non-instantaneous duration.
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1522908-repeatforever
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1522908-repeatforever
    */
   static repeatForever(action) {
     //return SCNActionRepeat.repeatForever(action)
@@ -450,7 +450,7 @@ SCNAction *sequenceReverse = [sequence reversedAction];
    * @param {number} sec - The amount of time to wait.
    * @returns {SCNAction} - 
    * @desc When the action executes, the action waits for the specified amount of time and then ends. This is typically used as part of a sequence of actions to insert a delay between two other actions. You might also use it in conjunction with the runAction(_:completionHandler:) method to trigger code that needs to run at a later time.This action is not reversible; the reverse of this action is the same action.
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1523915-wait
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1523915-wait
    */
   static waitDuration(sec) {
     //return SCNActionWait.waitDuration(sec)
@@ -464,7 +464,7 @@ SCNAction *sequenceReverse = [sequence reversedAction];
    * @param {number} durationRange - The range of possible values for the duration.
    * @returns {SCNAction} - 
    * @desc When the action executes, the action waits for the specified amount of time and then ends. This is typically used as part of a sequence of actions to insert a delay between two other actions. However, you might also use it in conjunction with the runAction(_:completionHandler:) method to trigger code that needs to run at a later time.Each time the action is executed, the action computes a new random value for the duration. The duration may vary in either direction by up to half of the value of the durationRange parameter.This action is not reversible; the reverse of this action is the same action.
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1523086-wait
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1523086-wait
    */
   static waitDurationWithRange(sec, durationRange) {
     //return SCNActionWait.waitDurationWithRange(sec, durationRange)
@@ -479,7 +479,7 @@ SCNAction *sequenceReverse = [sequence reversedAction];
    * @param {function(arg1: SCNNode): void} block - The block to run. The block takes a single parameter:nodeThe node on which the action is running.
    * @returns {SCNAction} - 
    * @desc When the action executes, SceneKit calls the block. This action takes place instantaneously.This action is not reversible; the reverse action executes the same block.
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1523637-run
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1523637-run
    */
   static run(block) {
     //return SCNActionRunBlock.run(block)
@@ -493,7 +493,7 @@ SCNAction *sequenceReverse = [sequence reversedAction];
    * @param {function(arg1: SCNNode, arg2: number): void} block - The block to run. The block takes the following parameters:nodeThe node on which the action is running.elapsedTimeThe amount of time that has passed since the action began executing.
    * @returns {SCNAction} - 
    * @desc When the action executes, SceneKit calls the block repeatedly until the action’s duration expires. For each call, SceneKit computes the elapsed time and passes it to the block.This action is not reversible; the reverse action executes the same block.
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1523692-customaction
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1523692-customaction
    */
   static customActionDurationAction(seconds, block) {
     //return SCNActionCustom.customActionDurationAction(seconds, block)
@@ -507,7 +507,7 @@ SCNAction *sequenceReverse = [sequence reversedAction];
    * @param {number} seconds - The duration of the action, in seconds.
    * @returns {SCNAction} - 
    * @desc SceneKit exposes its classes, methods, and functions in the JavaScript context that runs the script—see the SCNJavaScript.h header file for details.When the action executes, SceneKit runs the script repeatedly until the action’s duration expires. Each time SceneKit runs the script, it computes the elapsed time since the action began executing (as a fraction of the action’s duration between 0.0 and 1.0) and makes it available to the script as a variable named elapsedTime. The script can also reference the SCNNode object running the action as a variable named node.This action is not reversible; the reverse action executes the same script.
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1523984-javascriptaction
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1523984-javascriptaction
    */
   static javaScriptActionWithScriptDuration(script, seconds) {
     //return SCNActionJavaScript.javaScriptActionWithScriptDuration(script, seconds)
@@ -521,7 +521,7 @@ SCNAction *sequenceReverse = [sequence reversedAction];
    * @access public
    * @returns {SCNAction} - 
    * @desc This method always returns an action object; however, not all actions are reversible. When reversed, some actions return an object that either does nothing or performs the same action as the original action. For details on how an action is reversed, see the description of the class method used to create that action.
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1522815-reversed
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1522815-reversed
    */
   reversed() {
     return null

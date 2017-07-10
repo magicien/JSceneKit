@@ -13,7 +13,7 @@ import SCNVector3 from './SCNVector3'
  * A right circular cylinder geometry.
  * @access public
  * @extends {SCNGeometry}
- * @see https://developer.apple.com/reference/scenekit/scncylinder
+ * @see https://developer.apple.com/documentation/scenekit/scncylinder
  */
 export default class SCNCylinder extends SCNGeometry {
   static get _propTypes() {
@@ -55,7 +55,7 @@ export default class SCNCylinder extends SCNGeometry {
    * @param {number} radius - The radius of the cylinder’s circular cross section in the x- and z-axis dimensions of its local coordinate space.
    * @param {number} height - The height of the cylinder along the y-axis of its local coordinate space.
    * @desc The cylinder is centered in its local coordinate system. For example, if you create a cylinder whose radius is 5.0 and height is 10.0, its circular cross section extends from -5.0 to 5.0 along the x- and z-axes, and the y-coordinates of its base and top are -5.0 and 5.0, respectively.
-   * @see https://developer.apple.com/reference/scenekit/scncylinder/1523685-init
+   * @see https://developer.apple.com/documentation/scenekit/scncylinder/1523685-init
    */
   constructor(radius = 0.5, height = 1.0) {
     super([], [])
@@ -65,14 +65,14 @@ export default class SCNCylinder extends SCNGeometry {
     /**
      * The radius of the cylinder’s circular cross section. Animatable.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scncylinder/1522674-radius
+     * @see https://developer.apple.com/documentation/scenekit/scncylinder/1522674-radius
      */
     this.radius = radius
 
     /**
      * The extent of the cylinder along its y-axis. Animatable.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scncylinder/1523678-height
+     * @see https://developer.apple.com/documentation/scenekit/scncylinder/1523678-height
      */
     this.height = height
 
@@ -82,14 +82,14 @@ export default class SCNCylinder extends SCNGeometry {
     /**
      * The number of subdivisions around the circumference of the cylinder. Animatable.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scncylinder/1524002-radialsegmentcount
+     * @see https://developer.apple.com/documentation/scenekit/scncylinder/1524002-radialsegmentcount
      */
     this.radialSegmentCount = 48
 
     /**
      * The number of subdivisions in the sides of the cylinder along its y-axis. Animatable.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scncylinder/1523330-heightsegmentcount
+     * @see https://developer.apple.com/documentation/scenekit/scncylinder/1523330-heightsegmentcount
      */
     this.heightSegmentCount = 1
 

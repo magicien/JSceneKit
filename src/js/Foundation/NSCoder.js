@@ -15,7 +15,7 @@ const _DecodingFailurePolicy = {
  * The NSCoder abstract class declares the interface used by concrete subclasses to transfer objects and other values between memory and some other format. This capability provides the basis for archiving (where objects and data items are stored on disk) and distribution (where objects and data items are copied between different processes or threads). The concrete subclasses provided by Foundation for these purposes are NSArchiver, NSUnarchiver, NSKeyedArchiver, NSKeyedUnarchiver, and NSPortCoder. Concrete subclasses of NSCoder are referred to in general as coder classes, and instances of these classes as coder objects (or simply coders). A coder object that can only encode values is referred to as an encoder object, and one that can only decode values as a decoder object.
  * @access public
  * @extends {NSObject}
- * @see https://developer.apple.com/reference/foundation/nscoder
+ * @see https://developer.apple.com/documentation/foundation/nscoder
  */
 export default class NSCoder extends NSObject {
 
@@ -58,7 +58,7 @@ export default class NSCoder extends NSObject {
    * @param {string} key - 
    * @returns {boolean} - 
    * @desc Subclasses must override this method if they perform keyed coding. The string is passed as key.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1416125-containsvalue
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1416125-containsvalue
    */
   containsValueForKey(key) {
     return false
@@ -67,7 +67,7 @@ export default class NSCoder extends NSObject {
    * A Boolean value that indicates whether the receiver supports keyed coding of objects.
    * @type {boolean}
    * @desc false by default. Concrete subclasses that support keyed coding, such as NSKeyedArchiver, need to override this property to return true.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1417541-allowskeyedcoding
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1417541-allowskeyedcoding
    */
   get allowsKeyedCoding() {
     return this._allowsKeyedCoding
@@ -83,7 +83,7 @@ export default class NSCoder extends NSObject {
    * @param {UnsafeRawPointer} array - 
    * @returns {void}
    * @desc The values are encoded from the buffer beginning at address. itemType must contain exactly one type code. NSCoder’s implementation invokes encodeValue(ofObjCType:at:) to encode the entire array of items. Subclasses that implement the encodeValue(ofObjCType:at:) method do not need to override this method.This method must be matched by a subsequent decodeArray(ofObjCType:count:at:) message.For information on creating an Objective-C type code suitable for itemType, see Type Encodings.Special ConsiderationsYou should not use this method to encode C arrays of Objective-C objects. See decodeArray(ofObjCType:count:at:) for more details.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1417865-encodearray
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1417865-encodearray
    */
   encodeArrayOfObjCTypeAt(type, count, array) {
   }
@@ -95,7 +95,7 @@ export default class NSCoder extends NSObject {
    * @param {string} key - 
    * @returns {void}
    * @desc Subclasses must override this method to identify multiple encodings of objv and encode a reference to objv instead. For example, NSKeyedArchiver detects duplicate objects and encodes a reference to the original object rather than encode the same object twice.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1411568-encode
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1411568-encode
    */
   encodeForKey(objv, key) {
   }
@@ -106,7 +106,7 @@ export default class NSCoder extends NSObject {
    * @param {?Object} anObject - 
    * @returns {void}
    * @desc NSCoder’s implementation simply invokes encode(_:).This method must be matched by a corresponding decodeObject() message.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1418225-encodebycopyobject
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1418225-encodebycopyobject
    */
   encodeBycopyObject(anObject) {
   }
@@ -117,7 +117,7 @@ export default class NSCoder extends NSObject {
    * @param {?Object} anObject - 
    * @returns {void}
    * @desc NSCoder’s implementation simply invokes encode(_:).This method must be matched by a corresponding decodeObject() message.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1416279-encodebyrefobject
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1416279-encodebyrefobject
    */
   encodeByrefObject(anObject) {
   }
@@ -129,7 +129,7 @@ export default class NSCoder extends NSObject {
    * @param {number} length - 
    * @returns {void}
    * @desc The buffer to be encoded begins at address, and its length in bytes is given by numBytes.This method must be matched by a corresponding decodeBytes(withReturnedLength:) message.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1411664-encodebytes
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1411664-encodebytes
    */
   encodeBytes(byteaddr, length) {
   }
@@ -142,7 +142,7 @@ export default class NSCoder extends NSObject {
    * @param {string} key - 
    * @returns {void}
    * @desc Subclasses must override this method if they perform keyed coding.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1413078-encodebytes
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1413078-encodebytes
    */
   encodeBytesLengthForKey(bytesp, lenv, key) {
   }
@@ -153,7 +153,7 @@ export default class NSCoder extends NSObject {
    * @param {?Object} object - 
    * @returns {void}
    * @desc In the overriding method, object should be encoded only if it’s unconditionally encoded elsewhere (with any other encode...Object: method).This method must be matched by a subsequent decodeObject() message. Upon decoding, if object was never encoded unconditionally, decodeObject returns nil in place of object. However, if object was encoded unconditionally, all references to object must be resolved.NSCoder’s implementation simply invokes encode(_:). 
-   * @see https://developer.apple.com/reference/foundation/nscoder/1415196-encodeconditionalobject
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1415196-encodeconditionalobject
    */
   encodeConditionalObject(object) {
   }
@@ -165,7 +165,7 @@ export default class NSCoder extends NSObject {
    * @param {string} key - 
    * @returns {void}
    * @desc Subclasses must override this method if they support keyed coding.The encoded object is decoded with the decodeObject(forKey:) method. If objv was never encoded unconditionally, decodeObject(forKey:) returns nil in place of objv.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1413918-encodeconditionalobject
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1413918-encodeconditionalobject
    */
   encodeConditionalObjectForKey(objv, key) {
   }
@@ -176,7 +176,7 @@ export default class NSCoder extends NSObject {
    * @param {CGSize} size - 
    * @returns {void}
    * @desc NSCoder’s implementation invokes encodeValue(ofObjCType:at:) to encode size.This method must be matched by a subsequent decodeSize() message.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1391291-encode
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1391291-encode
    */
   encode(size) {
   }
@@ -188,7 +188,7 @@ export default class NSCoder extends NSObject {
    * @param {string} key - 
    * @returns {void}
    * @desc Subclasses must override this method if they perform keyed coding.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1413906-encodecint
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1413906-encodecint
    */
   encodeCIntForKey(intv, key) {
   }
@@ -199,7 +199,7 @@ export default class NSCoder extends NSObject {
    * @param {Object} aPropertyList - 
    * @returns {void}
    * @desc NSCoder’s implementation invokes encodeValue(ofObjCType:at:) to encode aPropertyList.This method must be matched by a subsequent decodePropertyList() message.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1410643-encodepropertylist
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1410643-encodepropertylist
    */
   encodePropertyList(aPropertyList) {
   }
@@ -210,7 +210,7 @@ export default class NSCoder extends NSObject {
    * @param {Object} rootObject - 
    * @returns {void}
    * @desc NSCoder’s implementation simply invokes encode(_:).This method must be matched by a subsequent decodeObject() message.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1409439-encoderootobject
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1409439-encoderootobject
    */
   encodeRootObject(rootObject) {
   }
@@ -222,7 +222,7 @@ export default class NSCoder extends NSObject {
    * @param {UnsafeRawPointer} addr - 
    * @returns {void}
    * @desc  valueType must contain exactly one type code.This method must be matched by a subsequent decodeValue(ofObjCType:at:) message.For information on creating an Objective-C type code suitable for valueType, see Type Encodings.Special ConsiderationsYou should not use this method to encode of Objective-C objects. See decodeArray(ofObjCType:count:at:) for more details.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1414648-encodevalue
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1414648-encodevalue
    */
   encodeValueOfObjCTypeAt(type, addr) {
   }
@@ -237,7 +237,7 @@ export default class NSCoder extends NSObject {
    * @param {Object} array - 
    * @returns {void}
    * @desc The items are decoded into the buffer beginning at address, which must be large enough to contain them all. itemType must contain exactly one type code. NSCoder’s implementation invokes decodeValue(ofObjCType:at:) to decode the entire array of items.This method matches an encodeArray(ofObjCType:count:at:) message used during encoding.For information on creating an Objective-C type code suitable for itemType, see Type Encodings.Special ConsiderationsYou should not use this method to decode C arrays of Objective-C objects. For historical reasons, returned objects will have an additional ownership reference which you can only relinquish using CFRelease.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1408354-decodearray
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1408354-decodearray
    */
   decodeArrayOfObjCTypeAt(itemType, count, array) {
   }
@@ -248,7 +248,7 @@ export default class NSCoder extends NSObject {
    * @param {string} key - 
    * @returns {boolean} - 
    * @desc Subclasses must override this method if they perform keyed coding.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1409293-decodebool
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1409293-decodebool
    */
   decodeBoolForKey(key) {
     return false
@@ -261,7 +261,7 @@ export default class NSCoder extends NSObject {
    * @param {?UnsafeMutablePointer<Int>} lengthp - 
    * @returns {?UnsafePointer<UInt8>} - 
    * @desc  The buffer’s length is returned by reference in lengthp. The returned bytes are immutable. Subclasses must override this method if they perform keyed coding.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1411987-decodebytes
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1411987-decodebytes
    */
   decodeBytesForKeyReturnedLength(key, lengthp) {
     return null
@@ -273,7 +273,7 @@ export default class NSCoder extends NSObject {
    * @param {UnsafeMutablePointer<Int>} lengthp - 
    * @returns {?Object} - 
    * @desc NSCoder’s implementation invokes decodeValue(ofObjCType:at:) to decode the data as a series of bytes, which this method then places into a buffer and returns. The buffer’s length is returned by reference in numBytes. If you need the bytes beyond the scope of the current @autoreleasepool block, you must copy them.This method matches an encodeBytes(_:length:) message used during encoding.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1415441-decodebytes
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1415441-decodebytes
    */
   decodeBytesWithReturnedLength(lengthp) {
     return null
@@ -284,7 +284,7 @@ export default class NSCoder extends NSObject {
    * @access public
    * @returns {?Data} - 
    * @desc The implementation of your overriding method must match the implementation of your encode(_:) method. For example, a typical encode(_:) method encodes the number of bytes of data followed by the bytes themselves. Your override of this method must read the number of bytes, create an NSData object of the appropriate size, and decode the bytes into the new NSData object. 
-   * @see https://developer.apple.com/reference/foundation/nscoder/1409876-decodedata
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1409876-decodedata
    */
   decodeData() {
     return null
@@ -296,7 +296,7 @@ export default class NSCoder extends NSObject {
    * @param {string} key - 
    * @returns {number} - 
    * @desc Subclasses must override this method if they perform keyed coding.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1409374-decodedouble
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1409374-decodedouble
    */
   decodeDoubleForKey(key) {
     return 0
@@ -308,7 +308,7 @@ export default class NSCoder extends NSObject {
    * @param {string} key - 
    * @returns {number} - 
    * @desc If the value was encoded as a double, the extra precision is lost. If the encoded real value does not fit into a float, the method raises an NSRangeException. Subclasses must override this method if they perform keyed coding.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1408104-decodefloat
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1408104-decodefloat
    */
   decodeFloatForKey(key) {
     return 0
@@ -320,7 +320,7 @@ export default class NSCoder extends NSObject {
    * @param {string} key - 
    * @returns {number} - 
    * @desc If the encoded integer does not fit into the default integer size, the method raises an NSRangeException. Subclasses must override this method if they perform keyed coding.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1411168-decodecint
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1411168-decodecint
    */
   decodeCIntForKey(key) {
     return 0
@@ -332,7 +332,7 @@ export default class NSCoder extends NSObject {
    * @param {string} key - 
    * @returns {number} - 
    * @desc If the encoded integer does not fit into the NSInteger size, the method raises an NSRangeException. Subclasses must override this method if they perform keyed coding.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1409246-decodeinteger
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1409246-decodeinteger
    */
   decodeIntegerForKey(key) {
     return 0
@@ -344,7 +344,7 @@ export default class NSCoder extends NSObject {
    * @param {string} key - 
    * @returns {number} - 
    * @desc If the encoded integer does not fit into a 32-bit integer, the method raises an NSRangeException. Subclasses must override this method if they perform keyed coding.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1408918-decodeint32
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1408918-decodeint32
    */
   decodeInt32ForKey(key) {
     return 0
@@ -356,7 +356,7 @@ export default class NSCoder extends NSObject {
    * @param {string} key - 
    * @returns {Int64} - 
    * @desc Subclasses must override this method if they perform keyed coding.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1407878-decodeint64
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1407878-decodeint64
    */
   decodeInt64ForKey(key) {
     return null
@@ -367,7 +367,7 @@ export default class NSCoder extends NSObject {
    * @access public
    * @returns {?Object} - 
    * @desc NSCoder’s implementation invokes decodeValue(ofObjCType:at:) to decode the object data.Subclasses may need to override this method if they override any of the corresponding encode...Object: methods. For example, if an object was encoded conditionally using the encodeConditionalObject(_:) method, this method needs to check whether the object had actually been encoded.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1414478-decodeobject
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1414478-decodeobject
    */
   decodeObject() {
     return null
@@ -379,7 +379,7 @@ export default class NSCoder extends NSObject {
    * @param {string} key - 
    * @returns {?Object} - 
    * @desc Subclasses must override this method if they perform keyed coding.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1418185-decodeobject
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1418185-decodeobject
    */
   decodeObjectForKey(key) {
     return null
@@ -389,7 +389,7 @@ export default class NSCoder extends NSObject {
    * Decodes and returns an NSPoint structure that was previously encoded with encode(_:).
    * @access public
    * @returns {CGPoint} - 
-   * @see https://developer.apple.com/reference/foundation/nscoder/1391189-decodepoint
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1391189-decodepoint
    */
   decodePoint() {
     return null
@@ -400,7 +400,7 @@ export default class NSCoder extends NSObject {
    * @access public
    * @param {string} key - 
    * @returns {CGPoint} - 
-   * @see https://developer.apple.com/reference/foundation/nscoder/1391214-decodepoint
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1391214-decodepoint
    */
   decodePointForKey(key) {
     return null
@@ -410,7 +410,7 @@ export default class NSCoder extends NSObject {
    * Decodes a property list that was previously encoded with encodePropertyList(_:).
    * @access public
    * @returns {?Object} - 
-   * @see https://developer.apple.com/reference/foundation/nscoder/1411916-decodepropertylist
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1411916-decodepropertylist
    */
   decodePropertyList() {
     return null
@@ -420,7 +420,7 @@ export default class NSCoder extends NSObject {
    * Decodes and returns an NSRect structure that was previously encoded with encode(_:).
    * @access public
    * @returns {CGRect} - 
-   * @see https://developer.apple.com/reference/foundation/nscoder/1391269-decoderect
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1391269-decoderect
    */
   decodeRect() {
     return null
@@ -431,7 +431,7 @@ export default class NSCoder extends NSObject {
    * @access public
    * @param {string} key - 
    * @returns {CGRect} - 
-   * @see https://developer.apple.com/reference/foundation/nscoder/1391116-decoderect
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1391116-decoderect
    */
   decodeRectForKey(key) {
     return null
@@ -441,7 +441,7 @@ export default class NSCoder extends NSObject {
    * Decodes and returns an NSSize structure that was previously encoded with encode(_:).
    * @access public
    * @returns {CGSize} - 
-   * @see https://developer.apple.com/reference/foundation/nscoder/1391144-decodesize
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1391144-decodesize
    */
   decodeSize() {
     return null
@@ -452,7 +452,7 @@ export default class NSCoder extends NSObject {
    * @access public
    * @param {string} key - 
    * @returns {CGSize} - 
-   * @see https://developer.apple.com/reference/foundation/nscoder/1391253-decodesize
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1391253-decodesize
    */
   decodeSizeForKey(key) {
     return null
@@ -465,7 +465,7 @@ export default class NSCoder extends NSObject {
    * @param {Object} data - 
    * @returns {void}
    * @desc  valueType must contain exactly one type code, and the buffer specified by data must be large enough to hold the value corresponding to that type code. For information on creating an Objective-C type code suitable for valueType, see Type Encodings.Subclasses must override this method and provide an implementation to decode the value. In your overriding implementation, decode the value into the buffer beginning at data.This method matches an encodeValue(ofObjCType:at:) message used during encoding.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1417159-decodevalue
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1417159-decodevalue
    */
   decodeValueOfObjCTypeAt(type, data) {
   }
@@ -476,7 +476,7 @@ export default class NSCoder extends NSObject {
    * @param {string} key - The coder key.
    * @returns {?Object} - 
    * @desc This method calls decodeObjectOfClasses:forKey: with a set allowing only property list types.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1416284-decodepropertylist
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1416284-decodepropertylist
    */
   decodePropertyListForKey(key) {
     return null
@@ -490,7 +490,7 @@ export default class NSCoder extends NSObject {
    * @param {string} key - The key that identifies the point.
    * @returns {CGPoint} - 
    * @desc Use this method to decode a point that was previously encoded using the encode(_:forKey:) method.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1624523-decodecgpoint
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1624523-decodecgpoint
    */
   decodeCGPointForKey(key) {
     return null
@@ -502,7 +502,7 @@ export default class NSCoder extends NSObject {
    * @param {string} key - The key that identifies the rectangle.
    * @returns {CGRect} - 
    * @desc Use this method to decode a rectangle that was previously encoded using the encode(_:forKey:) method.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1624522-decodecgrect
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1624522-decodecgrect
    */
   decodeCGRectForKey(key) {
     return null
@@ -514,7 +514,7 @@ export default class NSCoder extends NSObject {
    * @param {string} key - The key that identifies the size information.
    * @returns {CGSize} - 
    * @desc Use this method to decode size information that was previously encoded using the encode(_:forKey:) method.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1624519-decodecgsize
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1624519-decodecgsize
    */
   decodeCGSizeForKey(key) {
     return null
@@ -526,7 +526,7 @@ export default class NSCoder extends NSObject {
    * @param {string} key - The key that identifies the affine transform.
    * @returns {CGAffineTransform} - 
    * @desc Use this method to decode size information that was previously encoded using the encode(_:forKey:) method.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1624478-decodecgaffinetransform
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1624478-decodecgaffinetransform
    */
   decodeCGAffineTransformForKey(key) {
     return null
@@ -538,7 +538,7 @@ export default class NSCoder extends NSObject {
    * @param {string} key - The key that identifies the edge insets.
    * @returns {UIEdgeInsets} - 
    * @desc Use this method to decode size information that was previously encoded using the encode(_:forKey:) method.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1624492-decodeuiedgeinsets
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1624492-decodeuiedgeinsets
    */
   decodeUIEdgeInsetsForKey(key) {
     return null
@@ -550,7 +550,7 @@ export default class NSCoder extends NSObject {
    * @param {string} key - The key that identifies the offset.
    * @returns {UIOffset} - 
    * @desc Use this method to decode offset information that was previously encoded using the encode(_:forKey:) method.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1624507-decodeuioffset
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1624507-decodeuioffset
    */
   decodeUIOffsetForKey(key) {
     return null
@@ -562,7 +562,7 @@ export default class NSCoder extends NSObject {
    * @param {string} key - The key that identifies the vector.
    * @returns {CGVector} - 
    * @desc Use this method to decode vector information that was previously encoded using the encode(_:forKey:) method.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1624488-decodecgvector
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1624488-decodecgvector
    */
   decodeCGVectorForKey(key) {
     return null
@@ -575,7 +575,7 @@ export default class NSCoder extends NSObject {
    * @access public
    * @param {string} key - The key for a CMTime structure encoded in the receiver.
    * @returns {CMTime} - 
-   * @see https://developer.apple.com/reference/foundation/nscoder/1389544-decodetime
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1389544-decodetime
    */
   decodeTimeForKey(key) {
     return null
@@ -586,7 +586,7 @@ export default class NSCoder extends NSObject {
    * @access public
    * @param {string} key - The key for a CMTimeRange structure encoded in the receiver.
    * @returns {CMTimeRange} - 
-   * @see https://developer.apple.com/reference/foundation/nscoder/1385718-decodetimerange
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1385718-decodetimerange
    */
   decodeTimeRangeForKey(key) {
     return null
@@ -597,7 +597,7 @@ export default class NSCoder extends NSObject {
    * @access public
    * @param {string} key - The key for a CMTimeMapping structure encoded in the receiver.
    * @returns {CMTimeMapping} - 
-   * @see https://developer.apple.com/reference/foundation/nscoder/1389860-decodetimemapping
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1389860-decodetimemapping
    */
   decodeTimeMappingForKey(key) {
     return null
@@ -608,7 +608,7 @@ export default class NSCoder extends NSObject {
    * Boolean value that indicates whether the coder requires secure coding.
    * @type {boolean}
    * @desc true if this coder requires secure coding; false otherwise.Secure coders check a set of allowed classes before decoding objects, and all objects must implement the NSSecureCoding protocol.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1409845-requiressecurecoding
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1409845-requiressecurecoding
    */
   get requiresSecureCoding() {
     return this._requiresSecureCoding
@@ -617,7 +617,7 @@ export default class NSCoder extends NSObject {
    * The set of coded classes allowed for secure coding.
    * @type {?Set<AnyHashable>}
    * @desc Secure coders check this set of allowed classes before decoding objects, and all objects must implement the NSSecureCoding protocol.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1412486-allowedclasses
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1412486-allowedclasses
    */
   get allowedClasses() {
     return this._allowedClasses
@@ -631,7 +631,7 @@ export default class NSCoder extends NSObject {
    * @param {string} className - 
    * @returns {number} - 
    * @desc The version number does apply not to NSKeyedArchiver/NSKeyedUnarchiver.  A keyed archiver does not encode class version numbers.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1417703-version
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1417703-version
    */
   versionForClassName(className) {
     return 0
@@ -640,7 +640,7 @@ export default class NSCoder extends NSObject {
    * The system version in effect for the archive.
    * @type {number}
    * @desc During encoding, the current version. During decoding, the version that was in effect when the data was encoded.Subclasses that implement decoding must override this property to return the system version of the data being decoded.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1413205-systemversion
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1413205-systemversion
    */
   get systemVersion() {
     return this._systemVersion
@@ -651,7 +651,7 @@ export default class NSCoder extends NSObject {
    * 
    * @type {NSCoder.DecodingFailurePolicy}
    * @desc 
-   * @see https://developer.apple.com/reference/foundation/nscoder/1642984-decodingfailurepolicy
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1642984-decodingfailurepolicy
    */
   get decodingFailurePolicy() {
     return this._decodingFailurePolicy
@@ -661,7 +661,7 @@ export default class NSCoder extends NSObject {
    * 
    * @type {?Error}
    * @desc 
-   * @see https://developer.apple.com/reference/foundation/nscoder/1643263-error
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1643263-error
    */
   get error() {
     return this._error
@@ -675,7 +675,7 @@ export default class NSCoder extends NSObject {
    * @param {DecodedObjectType.Type} cls - 
    * @param {string} key - 
    * @returns {NSCoding} - 
-   * @see https://developer.apple.com/reference/foundation/nscoder/2292924-decodeobject
+   * @see https://developer.apple.com/documentation/foundation/nscoder/2292924-decodeobject
    */
   decodeObjectOfClassForKey(cls, key) {
     return null
@@ -686,7 +686,7 @@ export default class NSCoder extends NSObject {
    * @access public
    * @returns {void}
    * @throws {Error}
-   * @see https://developer.apple.com/reference/foundation/nscoder/1407699-decodetoplevelobject
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1407699-decodetoplevelobject
    */
   decodeTopLevelObject() {
   }
@@ -697,7 +697,7 @@ export default class NSCoder extends NSObject {
    * @param {string} key - 
    * @returns {void}
    * @throws {Error}
-   * @see https://developer.apple.com/reference/foundation/nscoder/2293311-decodetoplevelobject
+   * @see https://developer.apple.com/documentation/foundation/nscoder/2293311-decodetoplevelobject
    */
   decodeTopLevelObjectForKey(key) {
   }
@@ -709,7 +709,7 @@ export default class NSCoder extends NSObject {
    * @param {string} key - 
    * @returns {void}
    * @throws {Error}
-   * @see https://developer.apple.com/reference/foundation/nscoder/2293221-decodetoplevelobject
+   * @see https://developer.apple.com/documentation/foundation/nscoder/2293221-decodetoplevelobject
    */
   decodeTopLevelObjectOfForKey(classes, key) {
   }
@@ -719,7 +719,7 @@ export default class NSCoder extends NSObject {
    * @access public
    * @param {Error} error - 
    * @returns {void}
-   * @see https://developer.apple.com/reference/foundation/nscoder/1411455-failwitherror
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1411455-failwitherror
    */
   failWithError(error) {
   }

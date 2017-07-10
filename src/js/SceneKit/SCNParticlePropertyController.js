@@ -9,7 +9,7 @@ import SCNNode from './SCNNode'
  * An animation for a single property of the individual particles rendered by a particle system.
  * @access public
  * @extends {NSObject}
- * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller
+ * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller
  */
 export default class SCNParticlePropertyController extends NSObject {
   static get _propTypes() {
@@ -53,7 +53,7 @@ SCNParticlePropertyController *controller =
 // 3. Assign the controller to a particle system, associating it with a particle property.
 particleSystem.propertyControllers = @{ SCNParticlePropertySize: controller };
 
-   * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1523579-init
+   * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1523579-init
    */
   constructor(animation) {
     super()
@@ -63,42 +63,42 @@ particleSystem.propertyControllers = @{ SCNParticlePropertySize: controller };
     /**
      * The Core Animation object defining the behavior of the property animation.
      * @type {CAAnimation}
-     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1523707-animation
+     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1523707-animation
      */
     this.animation = animation
 
     /**
      * The mode that determines input values for the property controller’s animation.
      * @type {SCNParticleInputMode}
-     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1522852-inputmode
+     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1522852-inputmode
      */
     this.inputMode = null
 
     /**
      * An offset to add to the input value of the controller’s animation.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1523994-inputbias
+     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1523994-inputbias
      */
     this.inputBias = 0
 
     /**
      * A factor for multiplying the input value of the controller’s animation. 
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1522903-inputscale
+     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1522903-inputscale
      */
     this.inputScale = 0
 
     /**
      * A node whose distance to each particle provides input values for the controller’s animation.
      * @type {?SCNNode}
-     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1522895-inputorigin
+     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1522895-inputorigin
      */
     this.inputOrigin = null
 
     /**
      * A particle property that provides input values for this property controller’s animation.
      * @type {?SCNParticleSystem.ParticleProperty}
-     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1522973-inputproperty
+     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1522973-inputproperty
      */
     this.inputProperty = null
   }

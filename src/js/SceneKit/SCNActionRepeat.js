@@ -48,7 +48,7 @@ export default class SCNActionRepeat extends SCNAction {
    * @param {number} count - The number of times to execute the action.
    * @returns {SCNAction} - 
    * @desc When the action executes, the associated action runs to completion and then repeats, until the count is reached.This action is reversible; it creates a new action that is the reverse of the specified action and then repeats it the same number of times.
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1522764-repeat
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1522764-repeat
    */
   static repeat(action, count) {
     const _action = new SCNActionRepeat()
@@ -65,7 +65,7 @@ export default class SCNActionRepeat extends SCNAction {
    * @param {SCNAction} action - The action to execute.
    * @returns {SCNAction} - 
    * @desc When the action executes, the associated action runs to completion and then repeats.This action is reversible; it creates a new action that is the reverse of the specified action and then repeats it forever.NoteThe action to be repeated must have a non-instantaneous duration.
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1522908-repeatforever
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1522908-repeatforever
    */
   static repeatForever(action) {
     return this.repeat(action, Infinity)

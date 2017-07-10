@@ -10,7 +10,7 @@
  * @property {number} screen - The source color is added to the destination color times the inverted source color.
  * @property {number} alpha - The source and destination colors are blended by multiplying the source alpha value.
  * @property {number} replace - The source color replaces the destination color.
- * @see https://developer.apple.com/reference/scenekit/scnparticleblendmode
+ * @see https://developer.apple.com/documentation/scenekit/scnparticleblendmode
  */
 const SCNParticleBlendMode = {
   additive: 0,

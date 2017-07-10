@@ -8,7 +8,7 @@ import SCNVector3 from './SCNVector3'
  * @access public
  * @param {SCNVector3} vector - A three-element SceneKit vector structure.
  * @returns {GLKVector3} - 
- * @see https://developer.apple.com/reference/scenekit/1409651-scnvector3toglkvector3
+ * @see https://developer.apple.com/documentation/scenekit/1409651-scnvector3toglkvector3
  */
 const SCNVector3ToGLKVector3 = function(vector) {
   return null

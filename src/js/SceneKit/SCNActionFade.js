@@ -47,7 +47,7 @@ export default class SCNActionFade extends SCNAction {
    * @desc When the action executes, the node’s opacity property animates from its current value to 1.0.This action is reversible; the reverse is created as if the following code had been executed:[SCNAction fadeOutWithDuration: sec];
 [SCNAction fadeOutWithDuration: sec];
 
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1522777-fadein
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1522777-fadein
    */
   static fadeInDuration(sec) {
     const action = new SCNActionFade()
@@ -64,7 +64,7 @@ export default class SCNActionFade extends SCNAction {
    * @desc When the action executes, the node’s opacity property animates from its current value to 0.0.This action is reversible; the reverse is created as if the following code had been executed:[SCNAction fadeInWithDuration: sec];
 [SCNAction fadeInWithDuration: sec];
 
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1523922-fadeout
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1523922-fadeout
    */
   static fadeOutDuration(sec) {
     const action = new SCNActionFade()
@@ -82,7 +82,7 @@ export default class SCNActionFade extends SCNAction {
    * @desc When the action executes, the node’s opacity property animates to its new value.This action is reversible; the reverse is created as if the following code had been executed:[SCNAction fadeOpacityBy: -factor duration: sec];
 [SCNAction fadeOpacityBy: -factor duration: sec];
 
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1523595-fadeopacity
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1523595-fadeopacity
    */
   static fadeOpacityByDuration(factor, sec) {
     const action = new SCNActionFade()
@@ -98,7 +98,7 @@ export default class SCNActionFade extends SCNAction {
    * @param {number} sec - The duration, in seconds, of the animation.
    * @returns {SCNAction} - 
    * @desc When the action executes, the node’s opacity property animates to its new value.This action is not reversible; the reverse of this action has the same duration but does not change anything.
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1523875-fadeopacity
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1523875-fadeopacity
    */
   static fadeOpacityToDuration(opacity, sec) {
     const action = new SCNActionFade()

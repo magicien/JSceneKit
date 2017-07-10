@@ -9,7 +9,7 @@ import SCNAnimatable from './SCNAnimatable'
  * @access public
  * @extends {NSObject}
  * @implements {SCNAnimatable}
- * @see https://developer.apple.com/reference/scenekit/scnconstraint
+ * @see https://developer.apple.com/documentation/scenekit/scnconstraint
  */
 export default class SCNConstraint extends NSObject {
 
@@ -25,7 +25,7 @@ export default class SCNConstraint extends NSObject {
     /**
      * The influence of the constraint on the node’s transformation.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnconstraint/1468692-influencefactor
+     * @see https://developer.apple.com/documentation/scenekit/scnconstraint/1468692-influencefactor
      */
     this.influenceFactor = 0
 

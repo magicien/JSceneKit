@@ -10,7 +10,7 @@
  * @property {number} openGLCore32 - Use the OpenGL 3.2 Core Profile API for SceneKit rendering in macOS.
  * @property {number} openGLCore41 - Use the OpenGL 4.1 Core Profile API for SceneKit rendering in macOS.
  * @property {number} webGL - Use the OpenGL 4.1 Core Profile API for SceneKit rendering in macOS.
- * @see https://developer.apple.com/reference/scenekit/scnrenderingapi
+ * @see https://developer.apple.com/documentation/scenekit/scnrenderingapi
  */
 const SCNRenderingAPI = {
   metal: 0,

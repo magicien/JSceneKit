@@ -22,7 +22,7 @@ export default class SKGroup extends SKAction {
    * @param {SKAction[]} actions - An array of SKAction objects.
    * @returns {SKAction} - 
    * @desc When the action executes, the actions that comprise the group all start immediately and run in parallel. The duration of the group action is the longest duration among the collection of actions. If an action in the group has a duration less than the group’s duration, the action completes, then idles until the group completes the remaining actions. This matters most when creating a repeating action that repeats a group.This action is reversible; it creates a new group action that contains the reverse of each action specified in the group. 
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417688-group
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417688-group
    */
   static group(actions) {
     const action = new SKGroup()

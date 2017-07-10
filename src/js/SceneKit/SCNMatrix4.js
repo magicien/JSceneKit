@@ -9,7 +9,7 @@ const _epsilon = 0.0000001
 /**
  * A representation of a 4 x 4 matrix.
  * @access public
- * @see https://developer.apple.com/reference/scenekit/scnmatrix4
+ * @see https://developer.apple.com/documentation/scenekit/scnmatrix4
  */
 export default class SCNMatrix4 {
 
@@ -20,7 +20,7 @@ export default class SCNMatrix4 {
    * @access public
    * @construtor
    * @param {number[][]} [m = null] - 
-   * @see https://developer.apple.com/reference/quartzcore/catransform3d/1524036-init
+   * @see https://developer.apple.com/documentation/quartzcore/catransform3d/1524036-init
    */
   constructor(m = null) {
     // Instance Properties
@@ -721,7 +721,7 @@ export default class SCNMatrix4 {
    * @param {SCNMatrix4} m -
    * @returns {boolean} -
    * @desc This function performs a numeric (not bitwise) comparison of each pair of elements.
-   * @see https://developer.apple.com/reference/scenekit/1409665-scnmatrix4equaltomatrix4
+   * @see https://developer.apple.com/documentation/scenekit/1409665-scnmatrix4equaltomatrix4
    */
   equalTo(m) {
     if(!(m instanceof SCNMatrix4)){
@@ -750,7 +750,7 @@ export default class SCNMatrix4 {
    * Returns a Boolean value that indicates whether the matrix is equal to the identity matrix.
    * @access public
    * @returns {boolean} - 
-   * @see https://developer.apple.com/reference/scenekit/1409715-scnmatrix4isidentity
+   * @see https://developer.apple.com/documentation/scenekit/1409715-scnmatrix4isidentity
    */
   isIdentity() {
     return this.equalTo(SCNMatrix4._identity())

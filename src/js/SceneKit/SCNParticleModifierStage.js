@@ -8,7 +8,7 @@
  * @property {number} postDynamics - The stage after SceneKit simulates the motion of particles.
  * @property {number} preCollision - The stage before SceneKit simulates the results of collisions between particles and scene geometry.
  * @property {number} postCollision - The stage after SceneKit simulates the results of collisions between particles and scene geometry.
- * @see https://developer.apple.com/reference/scenekit/scnparticlemodifierstage
+ * @see https://developer.apple.com/documentation/scenekit/scnparticlemodifierstage
  */
 const SCNParticleModifierStage = {
   preDynamics: 0,

@@ -7,7 +7,7 @@ import SCNMatrix4 from './SCNMatrix4'
  * @type {function}
  * @param {SCNMatrix4} m - 
  * @returns {number[][]} - 
- * @see https://developer.apple.com/reference/scenekit/1523928-scnmatrix4tomat4
+ * @see https://developer.apple.com/documentation/scenekit/1523928-scnmatrix4tomat4
  */
 const SCNMatrix4ToMat4 = function(m) {
   return null

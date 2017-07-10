@@ -9,7 +9,7 @@
  * @property {number} line - The geometry element’s data is a sequence of line segments, with each line segment described by two new vertices. 
  * @property {number} point - The geometry element’s data is a sequence of unconnected points.
  * @property {number} polygon - 
- * @see https://developer.apple.com/reference/scenekit/scngeometryprimitivetype
+ * @see https://developer.apple.com/documentation/scenekit/scngeometryprimitivetype
  */
 const SCNGeometryPrimitiveType = {
   triangles: 0,

@@ -12,7 +12,7 @@ import SCNRenderer from './SCNRenderer'
  * @param {SCNRenderer} renderer - The SCNRenderer object responsible for rendering.
  * @returns {void}
  * @desc Call handleBinding(ofSymbol:handler:) or handleUnbinding(ofSymbol:handler:) to associate a handler block with a GLSL symbol for a SceneKit geometry or material.
- * @see https://developer.apple.com/reference/scenekit/scnbindingblock
+ * @see https://developer.apple.com/documentation/scenekit/scnbindingblock
  */
 const SCNBindingBlock = (programID, location, renderedNode, renderer) => {}
 

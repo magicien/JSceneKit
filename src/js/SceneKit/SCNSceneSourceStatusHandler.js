@@ -10,7 +10,7 @@ import SCNSceneSourceStatus from './SCNSceneSourceStatus'
  * @param {?Error} error - An error object describing any error that has occurred during scene loading, or nil if no errors has been encountered.
  * @param {UnsafeMutablePointer<ObjCBool>} stopLoading - A reference to a Boolean value. Set *stop to true within the block to abort further processing of the scene source’s contents.
  * @returns {void}
- * @see https://developer.apple.com/reference/scenekit/scnscenesourcestatushandler
+ * @see https://developer.apple.com/documentation/scenekit/scnscenesourcestatushandler
  */
 const SCNSceneSourceStatusHandler = (totalProgress, status, error, stopLoading) => {}
 

@@ -30,7 +30,7 @@ export default class SKSequence extends SKAction {
    * @param {SKAction[]} actions - An array of SKAction objects.
    * @returns {SKAction} - 
    * @desc When the action executes, the first action in the sequence starts and runs to completion. Subsequent actions in the sequence run in a similar fashion until all of the actions in the sequence have executed. The duration of the sequence action is the sum of the durations of the actions in the sequence.This action is reversible; it creates a new sequence action that reverses the order of the actions. Each action in the reversed sequence is itself reversed. For example, if an action sequence is {1,2,3}, the reversed sequence would be {3R,2R,1R}.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417817-sequence
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417817-sequence
    */
   static sequence(actions) {
     const action = new SKSequence()

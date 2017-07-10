@@ -11,7 +11,7 @@
  * @property {number} multiplyX2 - The source color is multiplied by the destination color and then doubled.
  * @property {number} screen - The source color is added to the destination color times the inverted source color.
  * @property {number} replace - The source color replaces the destination color.
- * @see https://developer.apple.com/reference/spritekit/skblendmode
+ * @see https://developer.apple.com/documentation/spritekit/skblendmode
  */
 const SKBlendMode = {
   alpha: 0,

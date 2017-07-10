@@ -12,7 +12,7 @@ const _weightsPattern = new RegExp(/^weights\[(\d+)\]$/)
  * @access public
  * @extends {NSObject}
  * @implements {SCNAnimatable}
- * @see https://developer.apple.com/reference/scenekit/scnmorpher
+ * @see https://developer.apple.com/documentation/scenekit/scnmorpher
  */
 export default class SCNMorpher extends NSObject {
 
@@ -29,7 +29,7 @@ export default class SCNMorpher extends NSObject {
     /**
      * The array of target geometries to morph between.
      * @type {SCNGeometry[]}
-     * @see https://developer.apple.com/reference/scenekit/scnmorpher/1523572-targets
+     * @see https://developer.apple.com/documentation/scenekit/scnmorpher/1523572-targets
      */
     this.targets = []
 
@@ -43,7 +43,7 @@ export default class SCNMorpher extends NSObject {
     /**
      * The interpolation formula for blending between target geometries.
      * @type {SCNMorpherCalculationMode}
-     * @see https://developer.apple.com/reference/scenekit/scnmorpher/1523754-calculationmode
+     * @see https://developer.apple.com/documentation/scenekit/scnmorpher/1523754-calculationmode
      */
     this.calculationMode = SCNMorpherCalculationMode.normalized
   }
@@ -56,7 +56,7 @@ export default class SCNMorpher extends NSObject {
    * @param {number} targetIndex - The index of a geometry in the morpher’s targets array.
    * @returns {number} - 
    * @desc Target geometries and their weights determine the current form of the surface produced by the morpher. For example, if a morpher has one target whose weight is 0.5, the form of the resulting surface will be halfway between those of the base geometry and the target geometry.
-   * @see https://developer.apple.com/reference/scenekit/scnmorpher/1522940-weight
+   * @see https://developer.apple.com/documentation/scenekit/scnmorpher/1522940-weight
    */
   weightForTargetAt(targetIndex) {
     return this._weights[targetIndex]
@@ -69,7 +69,7 @@ export default class SCNMorpher extends NSObject {
    * @param {number} targetIndex - The index of a geometry in the morpher’s targets array.
    * @returns {void}
    * @desc Target geometries and their weights determine the current form of the surface produced by the morpher. For example, if a morpher has one target whose weight is 0.5, the form of the resulting surface will be halfway between those of the base geometry and the target geometry.You can also animate weights implicitly or explicitly using the keypath weights[index], where index corresponds to the targetIndex parameter of this method.
-   * @see https://developer.apple.com/reference/scenekit/scnmorpher/1522886-setweight
+   * @see https://developer.apple.com/documentation/scenekit/scnmorpher/1522886-setweight
    */
   setWeightForTargetAt(weight, targetIndex) {
     this._weights[targetIndex] = weight

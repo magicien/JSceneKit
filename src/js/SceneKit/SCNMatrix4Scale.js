@@ -12,7 +12,7 @@ import SCNMatrix4MakeScale from './SCNMatrix4MakeScale'
  * @param {number} sz - 
  * @returns {SCNMatrix4} - 
  * @desc The resulting transformation consists of the specified scale followed by the transformation represented by the mat parameter.
- * @see https://developer.apple.com/reference/scenekit/1409653-scnmatrix4scale
+ * @see https://developer.apple.com/documentation/scenekit/1409653-scnmatrix4scale
  */
 const SCNMatrix4Scale = function(m, sx, sy, sz) {
   return m.mult(SCNMatrix4MakeScale(sx, sy, sz))

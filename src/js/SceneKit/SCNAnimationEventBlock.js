@@ -9,7 +9,7 @@ import CAAnimation from '../QuartzCore/CAAnimation'
  * @param {Object} animatedObject - The Scene Kit object affected by the animation.
  * @param {boolean} playingBackward - true if the animation is playing in reverse; otherwise, false.
  * @returns {void}
- * @see https://developer.apple.com/reference/scenekit/scnanimationeventblock
+ * @see https://developer.apple.com/documentation/scenekit/scnanimationeventblock
  */
 const SCNAnimationEventBlock = (animation, animatedObject, playingBackward) => {}
 

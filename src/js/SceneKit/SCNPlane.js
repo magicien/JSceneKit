@@ -11,7 +11,7 @@ import SCNVector3 from './SCNVector3'
  * A rectangular, one-sided plane geometry of specified width and height.
  * @access public
  * @extends {SCNGeometry}
- * @see https://developer.apple.com/reference/scenekit/scnplane
+ * @see https://developer.apple.com/documentation/scenekit/scnplane
  */
 export default class SCNPlane extends SCNGeometry {
   static get _propTypes() {
@@ -40,7 +40,7 @@ export default class SCNPlane extends SCNGeometry {
    * @param {number} width - The width of the plane along the x-axis of its local coordinate space.
    * @param {number} height - The height of the plane along the y-axis of its local coordinate space.
    * @desc The plane is centered in its local coordinate system. For example, if you create a plane whose width and height are both 10.0, it extends from -5.0 to 5.0 along both the x- and y-axes, and the z-coordinate of all points in the plane is zero.
-   * @see https://developer.apple.com/reference/scenekit/scnplane/1523631-init
+   * @see https://developer.apple.com/documentation/scenekit/scnplane/1523631-init
    */
   constructor(width = 1.0, height = 1.0) {
     super([], [])
@@ -50,14 +50,14 @@ export default class SCNPlane extends SCNGeometry {
     /**
      * The extent of the plane along its horizontal axis. Animatable.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnplane/1523782-width
+     * @see https://developer.apple.com/documentation/scenekit/scnplane/1523782-width
      */
     this.width = width
 
     /**
      * The extent of the plane along its vertical axis. Animatable.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnplane/1522837-height
+     * @see https://developer.apple.com/documentation/scenekit/scnplane/1522837-height
      */
     this.height = height
 
@@ -67,14 +67,14 @@ export default class SCNPlane extends SCNGeometry {
     /**
      * The number of subdivisions in the plane’s surface along its horizontal axis. Animatable.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnplane/1523991-widthsegmentcount
+     * @see https://developer.apple.com/documentation/scenekit/scnplane/1523991-widthsegmentcount
      */
     this.widthSegmentCount = 1
 
     /**
      * The number of subdivisions in the plane’s surface along its vertical axis. Animatable.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnplane/1522889-heightsegmentcount
+     * @see https://developer.apple.com/documentation/scenekit/scnplane/1522889-heightsegmentcount
      */
     this.heightSegmentCount = 1
 
@@ -84,14 +84,14 @@ export default class SCNPlane extends SCNGeometry {
     /**
      * The radius of curvature for the plane’s corners. Animatable.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnplane/1523005-cornerradius
+     * @see https://developer.apple.com/documentation/scenekit/scnplane/1523005-cornerradius
      */
     this.cornerRadius = 0
 
     /**
      * The number of line segments used to create each rounded corner of the plane. Animatable.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnplane/1524234-cornersegmentcount
+     * @see https://developer.apple.com/documentation/scenekit/scnplane/1524234-cornersegmentcount
      */
     this.cornerSegmentCount = 10
 

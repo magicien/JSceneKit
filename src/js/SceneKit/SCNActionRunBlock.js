@@ -53,7 +53,7 @@ export default class SCNActionRunBlock extends SCNAction {
    * @param {function(arg1: SCNNode): void} block - The block to run. The block takes a single parameter:nodeThe node on which the action is running.
    * @returns {SCNAction} - 
    * @desc When the action executes, SceneKit calls the block. This action takes place instantaneously.This action is not reversible; the reverse action executes the same block.
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1523637-run
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1523637-run
    */
   static run(block) {
     const action = new SCNActionRunBlock()

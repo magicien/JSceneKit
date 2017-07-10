@@ -69,7 +69,7 @@ export default class SCNActionRotate extends SCNAction {
    * @desc When the action executes, the node’s rotation property animates to the new angle.This action is reversible; the reverse is created as if the following code had been executed:[SCNAction rotateByX: -xAngle y: -yAngle z: -zAngle duration: duration];
 [SCNAction rotateByX: -xAngle y: -yAngle z: -zAngle duration: duration];
 
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1523522-rotateby
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1523522-rotateby
    */
   static rotateByXYZ(xAngle, yAngle, zAngle, duration) {
     const action = new SCNActionRotate()
@@ -91,7 +91,7 @@ export default class SCNActionRotate extends SCNAction {
    * @param {number} duration - The duration, in seconds, of the animation.
    * @returns {SCNAction} - 
    * @desc When the action executes, the node’s rotation property animates to the new angle. Calling this method is equivalent to calling rotateTo(x:y:z:duration:usesShortestUnitArc:) and passing false for the shortestUnitArc parameter.This action is not reversible; the reverse of this action has the same duration but does not change anything.
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1524044-rotateto
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1524044-rotateto
    */
   static rotateToXYZ(xAngle, yAngle, zAngle, duration) {
     const action = new SCNActionRotate()
@@ -112,7 +112,7 @@ export default class SCNActionRotate extends SCNAction {
    * @param {boolean} shortestUnitArc - If false (the default), the animation interpolates each component of the node’s rotation between its current value and the new value. If true, the animation makes the most direct rotation possible from the node’s current orientation to the new orientation.
    * @returns {SCNAction} - 
    * @desc When the action executes, the node’s rotation property animates to the new angle.This action is not reversible; the reverse of this action has the same duration but does not change anything.
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1522808-rotateto
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1522808-rotateto
    */
   static rotateToXYZUsesShortestUnitArc(xAngle, yAngle, zAngle, duration, shortestUnitArc) {
     const action = new SCNActionRotate()
@@ -134,7 +134,7 @@ export default class SCNActionRotate extends SCNAction {
    * @desc When the action executes, the node’s rotation property animates to the new angle.This action is reversible; the reverse is created as if the following code had been executed:[SCNAction rotateByAngle: -angle aroundAxis: axis duration: sec];
 [SCNAction rotateByAngle: -angle aroundAxis: axis duration: sec];
 
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1523805-rotate
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1523805-rotate
    */
   static rotateByAround(angle, axis, duration) {
     const action = new SCNActionRotate()
@@ -155,7 +155,7 @@ export default class SCNActionRotate extends SCNAction {
    * @param {number} duration - The duration, in seconds, of the animation.
    * @returns {SCNAction} - 
    * @desc When the action executes, the node’s rotation property animates to the new angle.This action is not reversible; the reverse of this action has the same duration but does not change anything.
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1524191-rotate
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1524191-rotate
    */
   static rotateToAxisAngle(axisAngle, duration) {
     const action = new SCNActionRotate()

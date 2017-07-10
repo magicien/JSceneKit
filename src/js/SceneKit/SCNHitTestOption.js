@@ -13,7 +13,7 @@
  * @property {string} ignoreHiddenNodes - An option to ignore hidden nodes when searching.
  * @property {string} rootNode - The root of the node hierarchy to be searched.
  * @property {string} sortResults - An option to sort the results of a hit-test.
- * @see https://developer.apple.com/reference/scenekit/scnhittestoption
+ * @see https://developer.apple.com/documentation/scenekit/scnhittestoption
  */
 const SCNHitTestOption = {
   backFaceCulling: 'kHitTestBackFaceCulling',

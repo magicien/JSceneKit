@@ -6,7 +6,7 @@
  * @typedef {Object} SCNCullMode
  * @property {number} back - 
  * @property {number} front - 
- * @see https://developer.apple.com/reference/scenekit/scncullmode
+ * @see https://developer.apple.com/documentation/scenekit/scncullmode
  */
 const SCNCullMode = {
   back: 0,

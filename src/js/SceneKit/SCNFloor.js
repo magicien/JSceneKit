@@ -11,7 +11,7 @@ import SCNVector3 from './SCNVector3'
  * An infinite plane that can optionally display a reflection of the scene above it.
  * @access public
  * @extends {SCNGeometry}
- * @see https://developer.apple.com/reference/scenekit/scnfloor
+ * @see https://developer.apple.com/documentation/scenekit/scnfloor
  */
 export default class SCNFloor extends SCNGeometry {
 
@@ -28,28 +28,28 @@ export default class SCNFloor extends SCNGeometry {
     /**
      * The intensity of the scene’s reflection on the floor. Animatable.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnfloor/1524175-reflectivity
+     * @see https://developer.apple.com/documentation/scenekit/scnfloor/1524175-reflectivity
      */
     this.reflectivity = 0.25
 
     /**
      * The distance from the floor at which scene contents are no longer reflected. Animatable.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnfloor/1522781-reflectionfalloffend
+     * @see https://developer.apple.com/documentation/scenekit/scnfloor/1522781-reflectionfalloffend
      */
     this.reflectionFalloffEnd = 0.0
 
     /**
      * The distance from the floor at which scene contents are reflected at full intensity. Animatable.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnfloor/1524237-reflectionfalloffstart
+     * @see https://developer.apple.com/documentation/scenekit/scnfloor/1524237-reflectionfalloffstart
      */
     this.reflectionFalloffStart = 0.0
 
     /**
      * The resolution scale factor of the offscreen buffer that SceneKit uses to render reflections.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnfloor/1522809-reflectionresolutionscalefactor
+     * @see https://developer.apple.com/documentation/scenekit/scnfloor/1522809-reflectionresolutionscalefactor
      */
     this.reflectionResolutionScaleFactor = 1.0
 
@@ -59,21 +59,21 @@ export default class SCNFloor extends SCNGeometry {
     /**
      * 
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnfloor/2091890-length
+     * @see https://developer.apple.com/documentation/scenekit/scnfloor/2091890-length
      */
     this.length = 2.0
 
     /**
      * 
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnfloor/1845281-reflectioncategorybitmask
+     * @see https://developer.apple.com/documentation/scenekit/scnfloor/1845281-reflectioncategorybitmask
      */
     this.reflectionCategoryBitMask = -1
 
     /**
      * 
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnfloor/1845280-width
+     * @see https://developer.apple.com/documentation/scenekit/scnfloor/1845280-width
      */
     this.width = 2.0
 

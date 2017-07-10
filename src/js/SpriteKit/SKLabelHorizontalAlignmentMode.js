@@ -6,7 +6,7 @@
  * @property {number} center - Centers the text horizontally on the node’s origin.
  * @property {number} left - Positions the text so that the left side of the text is on the node’s origin.
  * @property {number} right - Positions the text so that the right side of the text is on the node’s origin.
- * @see https://developer.apple.com/reference/spritekit/sklabelhorizontalalignmentmode
+ * @see https://developer.apple.com/documentation/spritekit/sklabelhorizontalalignmentmode
  */
 const SKLabelHorizontalAlignmentMode = {
   center: 0,

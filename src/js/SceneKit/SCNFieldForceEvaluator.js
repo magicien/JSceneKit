@@ -12,7 +12,7 @@ import SCNVector3 from './SCNVector3'
  * @param {number} time - The elapsed time, in seconds, since the last simulation step.
  * @returns {SCNVector3} -
  * @desc Your block uses these parameters to compute and return an SCNVector3 force vector, which SceneKit then applies to the object affected by the field.
- * @see https://developer.apple.com/reference/scenekit/scnfieldforceevaluator
+ * @see https://developer.apple.com/documentation/scenekit/scnfieldforceevaluator
  */
 const SCNFieldForceEvaluator = (position, velocity, mass, charge, time) => {}
 

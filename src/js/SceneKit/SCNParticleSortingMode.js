@@ -8,7 +8,7 @@
  * @property {number} distance - Particles farther from the point of view (as measured using distance from the camera in scene space) are rendered before closer particles.
  * @property {number} oldestFirst - Particles emitted earlier are rendered before particles emitted more recently.
  * @property {number} youngestFirst - Particles emitted more recently are rendered before particles emitted earlier.
- * @see https://developer.apple.com/reference/scenekit/scnparticlesortingmode
+ * @see https://developer.apple.com/documentation/scenekit/scnparticlesortingmode
  */
 const SCNParticleSortingMode = {
   none: 0,

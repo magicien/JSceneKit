@@ -7,7 +7,7 @@ import SCNMatrix4 from './SCNMatrix4'
  * @access public
  * @param {SCNMatrix4} m - 
  * @returns {SCNMatrix4} - 
- * @see https://developer.apple.com/reference/scenekit/1409682-scnmatrix4invert
+ * @see https://developer.apple.com/documentation/scenekit/1409682-scnmatrix4invert
  */
 const SCNMatrix4Invert = function(m) {
   return m.invert()

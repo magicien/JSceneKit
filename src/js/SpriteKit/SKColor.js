@@ -7,7 +7,7 @@ import NSColorSpaceModel from '../AppKit/NSColorSpaceModel'
  * An object that stores color data and sometimes opacity (that is, alpha value). 
  * @access public
  * @extends {NSObject}
- * @see https://developer.apple.com/reference/uikit/uicolor
+ * @see https://developer.apple.com/documentation/uikit/uicolor
  */
 export default class SKColor extends NSObject {
   static get _propTypes() {
@@ -119,7 +119,7 @@ export default class SKColor extends NSObject {
    * @param {number} green - 
    * @param {number} blue - 
    * @param {number} alpha - 
-   * @see https://developer.apple.com/reference/uikit/uicolor/1625015-init
+   * @see https://developer.apple.com/documentation/uikit/uicolor/1625015-init
    */
   constructor(red, green, blue, alpha) {
     super()
@@ -151,7 +151,7 @@ export default class SKColor extends NSObject {
    * A color object in the sRGB color space whose grayscale value is 0.0 and whose alpha value is 1.0.
    * @type {SKColor}
    * @desc 
-   * @see https://developer.apple.com/reference/uikit/uicolor/1621929-black
+   * @see https://developer.apple.com/documentation/uikit/uicolor/1621929-black
    */
   static get black() {
     return new SKColor(0.0, 0.0, 0.0, 1.0)
@@ -161,7 +161,7 @@ export default class SKColor extends NSObject {
    * A color object whose RGB values are 0.0, 0.0, and 1.0 and whose alpha value is 1.0.
    * @type {SKColor}
    * @desc 
-   * @see https://developer.apple.com/reference/uikit/uicolor/1621947-blue
+   * @see https://developer.apple.com/documentation/uikit/uicolor/1621947-blue
    */
   static get blue() {
     return new SKColor(0.0, 0.0, 1.0, 1.0)
@@ -171,7 +171,7 @@ export default class SKColor extends NSObject {
    * A color object whose RGB values are 0.6, 0.4, and 0.2 and whose alpha value is 1.0.
    * @type {SKColor}
    * @desc 
-   * @see https://developer.apple.com/reference/uikit/uicolor/1621950-brown
+   * @see https://developer.apple.com/documentation/uikit/uicolor/1621950-brown
    */
   static get brown() {
     return new SKColor(0.6, 0.4, 0.2, 1.0)
@@ -181,7 +181,7 @@ export default class SKColor extends NSObject {
    * A color object whose grayscale and alpha values are both 0.0.
    * @type {SKColor}
    * @desc 
-   * @see https://developer.apple.com/reference/uikit/uicolor/1621945-clear
+   * @see https://developer.apple.com/documentation/uikit/uicolor/1621945-clear
    */
   static get clear() {
     return new SKColor(0.0, 0.0, 0.0, 0.0)
@@ -191,7 +191,7 @@ export default class SKColor extends NSObject {
    * A color object whose RGB values are 0.0, 1.0, and 1.0 and whose alpha value is 1.0.
    * @type {SKColor}
    * @desc 
-   * @see https://developer.apple.com/reference/uikit/uicolor/1621942-cyan
+   * @see https://developer.apple.com/documentation/uikit/uicolor/1621942-cyan
    */
   static get cyan() {
     return new SKColor(0.0, 1.0, 1.0, 1.0)
@@ -201,7 +201,7 @@ export default class SKColor extends NSObject {
    * A color object whose grayscale value is 1/3 and whose alpha value is 1.0.
    * @type {SKColor}
    * @desc 
-   * @see https://developer.apple.com/reference/uikit/uicolor/1621952-darkgray
+   * @see https://developer.apple.com/documentation/uikit/uicolor/1621952-darkgray
    */
   static get darkGray() {
     const third = 1.0 / 3.0
@@ -212,7 +212,7 @@ export default class SKColor extends NSObject {
    * A color object whose grayscale value is 0.5 and whose alpha value is 1.0.
    * @type {SKColor}
    * @desc 
-   * @see https://developer.apple.com/reference/uikit/uicolor/1621941-gray
+   * @see https://developer.apple.com/documentation/uikit/uicolor/1621941-gray
    */
   static get gray() {
     return new SKColor(0.5, 0.5, 0.5, 1.0)
@@ -222,7 +222,7 @@ export default class SKColor extends NSObject {
    * A color object whose RGB values are 0.0, 1.0, and 0.0 and whose alpha value is 1.0.
    * @type {SKColor}
    * @desc 
-   * @see https://developer.apple.com/reference/uikit/uicolor/1621946-green
+   * @see https://developer.apple.com/documentation/uikit/uicolor/1621946-green
    */
   static get green() {
     return new SKColor(0.0, 1.0, 0.0, 1.0)
@@ -232,7 +232,7 @@ export default class SKColor extends NSObject {
    * A color object whose grayscale value is 2/3 and whose alpha value is 1.0.
    * @type {SKColor}
    * @desc 
-   * @see https://developer.apple.com/reference/uikit/uicolor/1621932-lightgray
+   * @see https://developer.apple.com/documentation/uikit/uicolor/1621932-lightgray
    */
   static get lightGray() {
     const twoThirds = 2.0 / 3.0
@@ -243,7 +243,7 @@ export default class SKColor extends NSObject {
    * A color object whose RGB values are 1.0, 0.0, and 1.0 and whose alpha value is 1.0.
    * @type {SKColor}
    * @desc 
-   * @see https://developer.apple.com/reference/uikit/uicolor/1621934-magenta
+   * @see https://developer.apple.com/documentation/uikit/uicolor/1621934-magenta
    */
   static get magenta() {
     return new SKColor(1.0, 0.0, 1.0, 1.0)
@@ -253,7 +253,7 @@ export default class SKColor extends NSObject {
    * A color object whose RGB values are 1.0, 0.5, and 0.0 and whose alpha value is 1.0.
    * @type {SKColor}
    * @desc 
-   * @see https://developer.apple.com/reference/uikit/uicolor/1621956-orange
+   * @see https://developer.apple.com/documentation/uikit/uicolor/1621956-orange
    */
   static get orange() {
     return new SKColor(1.0, 0.5, 0.0, 1.0)
@@ -263,7 +263,7 @@ export default class SKColor extends NSObject {
    * A color object whose RGB values are 0.5, 0.0, and 0.5 and whose alpha value is 1.0.
    * @type {SKColor}
    * @desc 
-   * @see https://developer.apple.com/reference/uikit/uicolor/1621923-purple
+   * @see https://developer.apple.com/documentation/uikit/uicolor/1621923-purple
    */
   static get purple() {
     return new SKColor(0.5, 0.0, 0.5, 1.0)
@@ -273,7 +273,7 @@ export default class SKColor extends NSObject {
    * A color object whose RGB values are 1.0, 0.0, and 0.0 and whose alpha value is 1.0.
    * @type {SKColor}
    * @desc 
-   * @see https://developer.apple.com/reference/uikit/uicolor/1621924-red
+   * @see https://developer.apple.com/documentation/uikit/uicolor/1621924-red
    */
   static get red() {
     return new SKColor(1.0, 0.0, 0.0, 1.0)
@@ -283,7 +283,7 @@ export default class SKColor extends NSObject {
    * A color object whose grayscale value is 1.0 and whose alpha value is 1.0.
    * @type {SKColor}
    * @desc 
-   * @see https://developer.apple.com/reference/uikit/uicolor/1621920-white
+   * @see https://developer.apple.com/documentation/uikit/uicolor/1621920-white
    */
   static get white() {
     return new SKColor(1.0, 1.0, 1.0, 1.0)
@@ -293,7 +293,7 @@ export default class SKColor extends NSObject {
    * A color object whose RGB values are 1.0, 1.0, and 0.0 and whose alpha value is 1.0.
    * @type {SKColor}
    * @desc 
-   * @see https://developer.apple.com/reference/uikit/uicolor/1621953-yellow
+   * @see https://developer.apple.com/documentation/uikit/uicolor/1621953-yellow
    */
   static get yellow() {
     return new SKColor(1.0, 1.0, 0.0, 1.0)
@@ -308,7 +308,7 @@ export default class SKColor extends NSObject {
    * @param {number} alpha - The opacity value of the color object, specified as a value from 0.0 to 1.0. Alpha values below 0.0 are interpreted as 0.0, and values above 1.0 are interpreted as 1.0
    * @returns {void}
    * @desc On applications linked on iOS 10 or later, the input parameters are not clamped. On earlier versions of iOS, values below 0.0 are interpreted as 0.0, and values above 1.0 are interpreted as 1.0.
-   * @see https://developer.apple.com/reference/uikit/uicolor/1621944-init
+   * @see https://developer.apple.com/documentation/uikit/uicolor/1621944-init
    */
   //init(white, alpha) {
   //}
@@ -321,7 +321,7 @@ export default class SKColor extends NSObject {
    * @param {number} alpha - The opacity value of the new color object, specified as a value from 0.0 to 1.0. Alpha values below 0.0 are interpreted as 0.0, and values above 1.0 are interpreted as 1.0
    * @returns {SKColor} - 
    * @desc A subclass with explicit opacity components should override this method to return a color with the specified alpha.
-   * @see https://developer.apple.com/reference/uikit/uicolor/1621922-withalphacomponent
+   * @see https://developer.apple.com/documentation/uikit/uicolor/1621922-withalphacomponent
    */
   withAlphaComponent(alpha) {
     return new SKColor(this.red, this.green, this.blue, alpha)
@@ -335,7 +335,7 @@ export default class SKColor extends NSObject {
    * @param {Image} image - The image to use when creating the pattern color. 
    * @returns {void}
    * @desc You can use pattern colors to set the fill or stroke color just as you would a solid color. During drawing, the image in the pattern color is tiled as necessary to cover the given area. By default, the phase of the returned color is 0, which causes the top-left corner of the image to be aligned with the drawing origin. To change the phase, make the color the current color and then use the setPatternPhase(_:) function to change the phase.
-   * @see https://developer.apple.com/reference/uikit/uicolor/1621933-init
+   * @see https://developer.apple.com/documentation/uikit/uicolor/1621933-init
    */
   initPatternImage(image) {
   }
@@ -347,7 +347,7 @@ export default class SKColor extends NSObject {
    * @access public
    * @returns {void}
    * @desc If you subclass UIColor, you must implement this method in your subclass. Your custom implementation should modify both the stroke and fill color in the current graphics context by setting them both to the color represented by the receiver.
-   * @see https://developer.apple.com/reference/uikit/uicolor/1621928-set
+   * @see https://developer.apple.com/documentation/uikit/uicolor/1621928-set
    */
   set() {
   }
@@ -357,7 +357,7 @@ export default class SKColor extends NSObject {
    * @access public
    * @returns {void}
    * @desc If you subclass UIColor, you must implement this method in your subclass. Your custom implementation should modify the fill color in the current graphics context by setting it to the color represented by the receiver.
-   * @see https://developer.apple.com/reference/uikit/uicolor/1621926-setfill
+   * @see https://developer.apple.com/documentation/uikit/uicolor/1621926-setfill
    */
   setFill() {
   }
@@ -367,7 +367,7 @@ export default class SKColor extends NSObject {
    * @access public
    * @returns {void}
    * @desc If you subclass UIColor, you must implement this method in your subclass. Your custom implementation should modify the stroke color in the current graphics context by setting it to the color represented by the receiver.
-   * @see https://developer.apple.com/reference/uikit/uicolor/1621948-setstroke
+   * @see https://developer.apple.com/documentation/uikit/uicolor/1621948-setstroke
    */
   setStroke() {
   }
@@ -383,7 +383,7 @@ export default class SKColor extends NSObject {
    * @property {number} color.brightness - On return, the brightness component of the color object. On applications linked for iOS 10 or later, the brightness component is specified in an extended range color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
    * @property {number} color.alpha - On return, the opacity component of the color object, specified as a value between 0.0 and 1.0.
    * @desc If the color is in a compatible color space, the color is converted into the HSB color space and its components are returned to your application. If the color is not in a compatible color space, the parameters are unchanged.
-   * @see https://developer.apple.com/reference/uikit/uicolor/1621949-gethue
+   * @see https://developer.apple.com/documentation/uikit/uicolor/1621949-gethue
    */
   getHSBA() {
     // TODO: implement
@@ -409,7 +409,7 @@ export default class SKColor extends NSObject {
    * @property {number} color.blue - On return, the blue component of the color object. On applications linked for iOS 10 or later, the blue component is specified in an extended range sRGB color space and can have any value. Values between 0.0 and 1.0 are inside the sRGB color gamut. On earlier versions of iOS, the specified value is always between 0.0 and 1.0.
    * @property {number} color.alpha - On return, the opacity component of the color object, specified as a value between 0.0 and 1.0.
    * @desc If the color is in a compatible color space, the color is converted into RGB format and its components are returned to your application. If the color is not in a compatible color space, the parameters are unchanged.
-   * @see https://developer.apple.com/reference/uikit/uicolor/1621919-getred
+   * @see https://developer.apple.com/documentation/uikit/uicolor/1621919-getred
    */
   getRGBA(red, green, blue, alpha) {
     const color = {
@@ -428,7 +428,7 @@ export default class SKColor extends NSObject {
    * @param {?UnsafeMutablePointer<CGFloat>} alpha - On return, the opacity component of the color object, specified as a value between 0.0 and 1.0.
    * @returns {boolean} - 
    * @desc If the color is in a compatible color space, the color is converted into grayscale format and returned to your application. If the color is not in a compatible color space, the parameters are unchanged.
-   * @see https://developer.apple.com/reference/uikit/uicolor/1621927-getwhite
+   * @see https://developer.apple.com/documentation/uikit/uicolor/1621927-getwhite
    */
   //getWhite(white, alpha) {
   //  return false

@@ -7,7 +7,7 @@
  * @property {number} repeat - The animation loops after displaying all of its images.
  * @property {number} clamp - The animation stops after displaying all of its images.
  * @property {number} autoReverse - After the animation displays all of its images, it plays again in reverse order.
- * @see https://developer.apple.com/reference/scenekit/scnparticleimagesequenceanimationmode
+ * @see https://developer.apple.com/documentation/scenekit/scnparticleimagesequenceanimationmode
  */
 const SCNParticleImageSequenceAnimationMode = {
   repeat: 0,

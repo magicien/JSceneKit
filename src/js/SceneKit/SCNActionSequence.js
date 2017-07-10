@@ -35,7 +35,7 @@ SCNAction *reverseSequence = [SCNAction sequence:@[ [actionC reversedAction],
                                                     [actionA reversedAction] ]];
 SCNAction *sequenceReverse = [sequence reversedAction];
 
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1522793-sequence
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1522793-sequence
    */
   constructor() {
     super()
@@ -66,7 +66,7 @@ SCNAction *reverseSequence = [SCNAction sequence:@[ [actionC reversedAction],
                                                     [actionA reversedAction] ]];
 SCNAction *sequenceReverse = [sequence reversedAction];
 
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1522793-sequence
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1522793-sequence
    */
   static sequence(actions) {
     const action =  new SCNActionSequence()

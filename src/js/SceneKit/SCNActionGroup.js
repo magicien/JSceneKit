@@ -35,7 +35,7 @@ export default class SCNActionGroup extends SCNAction {
    * @param {SCNAction[]} actions - An array of SCNAction objects.
    * @returns {SCNAction} - 
    * @desc When the action executes, the actions that make up the group all start immediately and run in parallel. The duration of the group action is the longest duration among the collection of actions. If an action in the group has a duration less than the group’s duration, the action completes and then idles until the group completes the remaining actions. This matters most when creating a repeating action that repeats a group.This action is reversible; it creates a new group action that contains the reverse of each action specified in the group. 
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1522779-group
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1522779-group
    */
   static group(actions) {
     const action = new SCNActionGroup()

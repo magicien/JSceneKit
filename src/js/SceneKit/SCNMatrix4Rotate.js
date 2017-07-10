@@ -12,7 +12,7 @@ import SCNMatrix4 from './SCNMatrix4'
  * @param {number} z - The z-component of the rotation axis.
  * @returns {SCNMatrix4} - 
  * @desc The resulting transformation consists of the specified rotation followed by the transformation represented by the mat parameter.
- * @see https://developer.apple.com/reference/scenekit/1409659-scnmatrix4rotate
+ * @see https://developer.apple.com/documentation/scenekit/1409659-scnmatrix4rotate
  */
 const SCNMatrix4Rotate = function(m, angle, x, y, z) {
   return m.rotation(x, y, z, angle)

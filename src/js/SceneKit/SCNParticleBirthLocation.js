@@ -7,7 +7,7 @@
  * @property {number} surface - New particles can be created at any location on the surface of the emitter shape.
  * @property {number} volume - New particles can be created at any location within the volume of the emitter shape.
  * @property {number} vertex - New particles can be created at only at the locations of the vertices in the emitter shape.
- * @see https://developer.apple.com/reference/scenekit/scnparticlebirthlocation
+ * @see https://developer.apple.com/documentation/scenekit/scnparticlebirthlocation
  */
 const SCNParticleBirthLocation = {
   surface: 0,

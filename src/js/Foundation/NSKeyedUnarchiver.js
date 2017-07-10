@@ -30,7 +30,7 @@ class _UID {
  * NSKeyedUnarchiver, a concrete subclass of NSCoder, defines methods for decoding a set of named objects (and scalar values) from a keyed archive. Such archives are produced by instances of the NSKeyedArchiver class.
  * @access public
  * @extends {NSCoder}
- * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver
+ * @see https://developer.apple.com/documentation/foundation/nskeyedunarchiver
  */
 export default class NSKeyedUnarchiver extends NSCoder {
 
@@ -42,7 +42,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
    * @constructor
    * @param {Data} data - An archive previously encoded by NSKeyedArchiver.
    * @desc When you finish decoding data, you should invoke finishDecoding(). This method throws an exception if data is not a valid archive.
-   * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1410862-init
+   * @see https://developer.apple.com/documentation/foundation/nskeyedunarchiver/1410862-init
    */
   constructor(data = null) {
     super()
@@ -52,7 +52,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
     /**
      * Indicates whether the receiver requires all unarchived classes to conform to NSSecureCoding.
      * @type {boolean}
-     * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1410824-requiressecurecoding
+     * @see https://developer.apple.com/documentation/foundation/nskeyedunarchiver/1410824-requiressecurecoding
      */
     this._requiresSecureCoding = false
 
@@ -62,7 +62,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
     /**
      * The receiver’s delegate.
      * @type {?NSKeyedUnarchiverDelegate}
-     * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1415688-delegate
+     * @see https://developer.apple.com/documentation/foundation/nskeyedunarchiver/1415688-delegate
      */
     this.delegate = null
 
@@ -72,7 +72,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
     /**
      * 
      * @type {NSCoder.DecodingFailurePolicy}
-     * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1643164-decodingfailurepolicy
+     * @see https://developer.apple.com/documentation/foundation/nskeyedunarchiver/1643164-decodingfailurepolicy
      */
     this._decodingFailurePolicy = null
 
@@ -170,7 +170,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
    * @param {?string} path - 
    * @returns {?Object} - 
    * @desc This method raises an invalidArchiveOperationException if data is not a valid archive.
-   * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1413894-unarchiveobject
+   * @see https://developer.apple.com/documentation/foundation/nskeyedunarchiver/1413894-unarchiveobject
    */
   static unarchiveObjectWithData(data, path = null) {
     const unarchiver = new NSKeyedUnarchiver(data)
@@ -414,7 +414,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
    * @param {string} path - A path to a file that contains an object graph previously encoded by NSKeyedArchiver.
    * @returns {Promise} - 
    * @desc This method raises an invalidArgumentException if the file at path does not contain a valid archive.
-   * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1417153-unarchiveobject
+   * @see https://developer.apple.com/documentation/foundation/nskeyedunarchiver/1417153-unarchiveobject
    */
   static unarchiveObjectWithFile(path) {
     const promise = NSKeyedUnarchiver._getBufferOfFile(path)
@@ -432,7 +432,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
    * @access public
    * @param {string} key - A key in the archive within the current decoding scope. key must not be nil.
    * @returns {boolean} - 
-   * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1413564-containsvalue
+   * @see https://developer.apple.com/documentation/foundation/nskeyedunarchiver/1413564-containsvalue
    */
   containsValueForKey(key) {
     return (typeof this._refObj[key] !== 'undefined')
@@ -443,7 +443,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
    * @access public
    * @param {string} key - A key in the archive within the current decoding scope. key must not be nil.
    * @returns {boolean} - 
-   * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1413260-decodebool
+   * @see https://developer.apple.com/documentation/foundation/nskeyedunarchiver/1413260-decodebool
    */
   decodeBoolForKey(key) {
     if(this._decodingFinished){
@@ -460,7 +460,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
    * @param {?UnsafeMutablePointer<Int>} lengthp - Upon return, contains the number of bytes returned.
    * @returns {?UnsafePointer<UInt8>} - 
    * @desc The returned value is a pointer to a temporary buffer owned by the receiver. The buffer goes away with the unarchiver, not the containing autorelease pool block. You must copy the bytes into your own buffer if you need the data to persist beyond the life of the receiver.
-   * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1418091-decodebytes
+   * @see https://developer.apple.com/documentation/foundation/nskeyedunarchiver/1418091-decodebytes
    */
   decodeBytesForKeyReturnedLength(key, lengthp) {
     if(this._decodingFinished){
@@ -475,7 +475,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
    * @param {string} key - A key in the archive within the current decoding scope. key must not be nil.
    * @returns {number} - 
    * @desc If the archived value was encoded as single-precision, the type is coerced. 
-   * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1414963-decodedouble
+   * @see https://developer.apple.com/documentation/foundation/nskeyedunarchiver/1414963-decodedouble
    */
   decodeDoubleForKey(key) {
     if(this._decodingFinished){
@@ -490,7 +490,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
    * @param {string} key - A key in the archive within the current decoding scope. key must not be nil.
    * @returns {number} - 
    * @desc If the archived value was encoded as double precision, the type is coerced, loosing precision. If the archived value is too large for single precision, the method raises an NSRangeException. 
-   * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1412252-decodefloat
+   * @see https://developer.apple.com/documentation/foundation/nskeyedunarchiver/1412252-decodefloat
    */
   decodeFloatForKey(key) {
     if(this._decodingFinished){
@@ -505,7 +505,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
    * @param {string} key - 
    * @returns {number} - 
    * @desc If the encoded integer does not fit into the default integer size, the method raises an NSRangeException. Subclasses must override this method if they perform keyed coding.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1411168-decodecint
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1411168-decodecint
    */
   decodeCIntForKey(key) {
     if(this._decodingFinished){
@@ -520,7 +520,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
    * @param {string} key - A key in the archive within the current decoding scope. key must not be nil.
    * @returns {number} - 
    * @desc If the archived value was encoded with a different size but is still an integer, the type is coerced. If the archived value is too large to fit into a 32-bit integer, the method raises an NSRangeException. 
-   * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1416327-decodeint32
+   * @see https://developer.apple.com/documentation/foundation/nskeyedunarchiver/1416327-decodeint32
    */
   decodeInt32ForKey(key) {
     if(this._decodingFinished){
@@ -535,7 +535,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
    * @param {string} key - A key in the archive within the current decoding scope. key must not be nil.
    * @returns {Int64} - 
    * @desc If the archived value was encoded with a different size but is still an integer, the type is coerced. 
-   * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1413288-decodeint64
+   * @see https://developer.apple.com/documentation/foundation/nskeyedunarchiver/1413288-decodeint64
    */
   decodeInt64ForKey(key) {
     if(this._decodingFinished){
@@ -549,7 +549,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
    * @access public
    * @param {string} key - A key in the archive within the current decoding scope. key must not be nil.
    * @returns {?Object} - 
-   * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1409082-decodeobject
+   * @see https://developer.apple.com/documentation/foundation/nskeyedunarchiver/1409082-decodeobject
    */
   decodeObjectForKey(key) {
     if(this._decodingFinished){
@@ -574,7 +574,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
    * @param {string} key - The coder key.
    * @returns {?Object} - 
    * @desc This method calls decodeObjectOfClasses:forKey: with a set allowing only property list types.
-   * @see https://developer.apple.com/reference/foundation/nscoder/1416284-decodepropertylist
+   * @see https://developer.apple.com/documentation/foundation/nscoder/1416284-decodepropertylist
    */
   decodePropertyListForKey(key) {
     if(this._decodingFinished){
@@ -628,7 +628,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
    * @access public
    * @returns {void}
    * @desc Invoking this method allows the receiver to notify its delegate and to perform any final operations on the archive. Once this method is invoked, the receiver cannot decode any further values.
-   * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1418233-finishdecoding
+   * @see https://developer.apple.com/documentation/foundation/nskeyedunarchiver/1418233-finishdecoding
    */
   finishDecoding() {
     this._decodingFinished = true
@@ -643,7 +643,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
    * @param {string} codedName - 
    * @returns {void}
    * @desc When decoding, the receiver’s translation map overrides any translation that may also be present in the class’s map (see setClass(_:forClassName:)).
-   * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1414659-setclass
+   * @see https://developer.apple.com/documentation/foundation/nskeyedunarchiver/1414659-setclass
    */
   static setClassForClassName(cls, codedName) {
     _classForKey.set(codedName, cls)
@@ -655,7 +655,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
    * @param {string} codedName - 
    * @returns {?Object} - 
    * @desc The class’s separate translation map is not searched.
-   * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1412476-class
+   * @see https://developer.apple.com/documentation/foundation/nskeyedunarchiver/1412476-class
    */
   static classForClassName(codedName) {
     const classObj = _classForKey.get(codedName)
@@ -674,7 +674,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
    * @param {string} path -
    * @returns {void}
    * @throws {Error}
-   * @see https://developer.apple.com/reference/foundation/nskeyedunarchiver/1413622-unarchivetoplevelobjectwithdata
+   * @see https://developer.apple.com/documentation/foundation/nskeyedunarchiver/1413622-unarchivetoplevelobjectwithdata
    */
   static unarchiveTopLevelObjectWithData(data, path = null) {
     // what's different from unarchiveObjectWithData???

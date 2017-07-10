@@ -24,7 +24,7 @@ const _Semantic = {
  * A container for vertex data forming part of the definition for a three-dimensional object, or geometry.
  * @access public
  * @extends {NSObject}
- * @see https://developer.apple.com/reference/scenekit/scngeometrysource
+ * @see https://developer.apple.com/documentation/scenekit/scngeometrysource
  */
 export default class SCNGeometrySource extends NSObject {
   static get _propTypes() {
@@ -66,7 +66,7 @@ export default class SCNGeometrySource extends NSObject {
    * @param {number} offset - The offset, in bytes, from the beginning of the data to the first vector component to be used in the geometry source.
    * @param {number} stride - The number of bytes from each vector to the next in the data.
    * @desc A geometry source’s data is an array of vectors, each of which represents a particular attribute (or semantic) of a vertex in the geometry. The other parameters determine how SceneKit interprets this data. For example, an array of vertex positions may have three 32-bit floating-point components per vector, but an array of texture coordinates may have two 8-bit integer coponents per vector. You can use the offset and stride parameters together to interleave data for multiple geometry sources in the same array, improving rendering performance. See SCNGeometrySource for details.To create a custom SCNGeometry object from the geometry source, use the init(sources:elements:) method.
-   * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1523320-init
+   * @see https://developer.apple.com/documentation/scenekit/scngeometrysource/1523320-init
    */
   constructor(data, semantic, vectorCount, floatComponents, componentsPerVector, bytesPerComponent, offset, stride) {
     super()
@@ -187,7 +187,7 @@ export default class SCNGeometrySource extends NSObject {
    * @param {number} dataStride - The number of bytes from each vector to the next in the data.
    * @returns {SCNGeometrySource} -
    * @desc A geometry source’s data is an array of vectors, each of which represents a particular attribute (or semantic) of a vertex in the geometry. The other parameters determine how SceneKit interprets this data. For example, an array of vertex positions may have three 32-bit floating-point components per vector, but an array of texture coordinates may have two 8-bit integer coponents per vector. You can use the offset and stride parameters together to interleave data for multiple geometry sources in the same array, improving rendering performance. See SCNGeometrySource for details.To create a custom SCNGeometry object from the geometry source, use the init(sources:elements:) method.
-   * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1523320-init
+   * @see https://developer.apple.com/documentation/scenekit/scngeometrysource/1523320-init
    */
   static geometrySourceWithDataSemanticVectorCountFloatComponentsComponentsPerVectorBytesPerComponentDataOffsetDataStride(data, semantic, vectorCount, floatComponents, componentsPerVector, bytesPerComponent, dataOffset, dataStride) {
     const instance = new SCNGeometrySource(
@@ -211,7 +211,7 @@ export default class SCNGeometrySource extends NSObject {
    * @param {number} count - The number of vertices
    * @returns {SCNGeometrySource} -
    * @desc SceneKit converts this data to its own format to optimize rendering performance. To read the converted data, examine the properties of the created SCNGeometrySource object.To create a custom SCNGeometry object from the geometry source, use the init(sources:elements:) method.
-   * @see https://developer.apple.com/reference/scenekit/scngeometrysource/2034708-init
+   * @see https://developer.apple.com/documentation/scenekit/scngeometrysource/2034708-init
    */
   static geometrySourceWithVerticesCount(vertices, count) {
     const data = []
@@ -239,7 +239,7 @@ export default class SCNGeometrySource extends NSObject {
    * @param {number} count - The number of texture coordinate points.
    * @returns {SCNGeometrySource} -
    * @desc SceneKit converts this data to its own format to optimize rendering performance. To read the converted data, examine the properties of the created SCNGeometrySource object.To create a custom SCNGeometry object from the geometry source, use the init(sources:elements:) method.
-   * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1522718-init
+   * @see https://developer.apple.com/documentation/scenekit/scngeometrysource/1522718-init
    */
   static geometrySourceWithTextureCoordinatesCount(texcoord, count) {
     const data = []
@@ -293,7 +293,7 @@ export default class SCNGeometrySource extends NSObject {
    * The data for the geometry source.
    * @type {Data}
    * @desc A geometry source’s data is an array of vectors, each of which represents a particular attribute (or semantic) of a vertex in the geometry. The other properties of the geometry source determine how SceneKit interprets this data. For example, an array of vertex positions may have three 32-bit floating-point components per vector, but an array of texture coordinates may have two 8-bit integer coponents per vector.
-   * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1522881-data
+   * @see https://developer.apple.com/documentation/scenekit/scngeometrysource/1522881-data
    */
   get data() {
     return this._data.slice(0)
@@ -303,7 +303,7 @@ export default class SCNGeometrySource extends NSObject {
    * The semantic value (or attribute) the geometry source describes for each vertex.
    * @type {SCNGeometrySource.Semantic}
    * @desc A semantic describes an attribute for each vertex, such as position, color, surface normal vector, or texture coordinates.See Geometry Semantic Identifiers for available values.
-   * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1523071-semantic
+   * @see https://developer.apple.com/documentation/scenekit/scngeometrysource/1523071-semantic
    */
   get semantic() {
     return this._semantic
@@ -313,7 +313,7 @@ export default class SCNGeometrySource extends NSObject {
    * The number of vectors in the data.
    * @type {number}
    * @desc 
-   * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1522648-vectorcount
+   * @see https://developer.apple.com/documentation/scenekit/scngeometrysource/1522648-vectorcount
    */
   get vectorCount() {
     return this._vectorCount
@@ -323,7 +323,7 @@ export default class SCNGeometrySource extends NSObject {
    * A Boolean value that indicates whether vector components are floating-point values.
    * @type {boolean}
    * @desc If true, SceneKit interprets the geometry source’s data as an array of vectors whose components are floating-point values. The type of floating-point value is determined by the SCNGeometrySource property: 4 bytes for float values or 8 bytes for double values. If false, SceneKit interprets the geometry source’s data as an array of vectors whose components are integer values. The type of integer value is determined by the SCNGeometrySource property; for example, 2 bytes for unsigned short values or 4 bytes for unsigned int values.
-   * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1522920-usesfloatcomponents
+   * @see https://developer.apple.com/documentation/scenekit/scngeometrysource/1522920-usesfloatcomponents
    */
   get usesFloatComponents() {
     return this._usesFloatComponents
@@ -333,7 +333,7 @@ export default class SCNGeometrySource extends NSObject {
    * The number of scalar components in each vector.
    * @type {number}
    * @desc 
-   * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1522832-componentspervector
+   * @see https://developer.apple.com/documentation/scenekit/scngeometrysource/1522832-componentspervector
    */
   get componentsPerVector() {
     return this._componentsPerVector
@@ -343,7 +343,7 @@ export default class SCNGeometrySource extends NSObject {
    * The size, in bytes, of each vector component.
    * @type {number}
    * @desc 
-   * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1522633-bytespercomponent
+   * @see https://developer.apple.com/documentation/scenekit/scngeometrysource/1522633-bytespercomponent
    */
   get bytesPerComponent() {
     return this._bytesPerComponent
@@ -353,7 +353,7 @@ export default class SCNGeometrySource extends NSObject {
    * The offset, in bytes, from the beginning of the data to the first vector component to be used in the geometry source.
    * @type {number}
    * @desc You can use the SCNGeometrySource and SCNGeometrySource parameters can together to interleave data for multiple geometry sources in the same array, improving rendering performance. See SCNGeometrySource for details.
-   * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1522834-dataoffset
+   * @see https://developer.apple.com/documentation/scenekit/scngeometrysource/1522834-dataoffset
    */
   get dataOffset() {
     return this._dataOffset
@@ -363,7 +363,7 @@ export default class SCNGeometrySource extends NSObject {
    * The number of bytes from a vector to the next one in the data.
    * @type {number}
    * @desc You can use the SCNGeometrySource and SCNGeometrySource parameters can together to interleave data for multiple geometry sources in the same array, improving rendering performance. See SCNGeometrySource for details.
-   * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1524197-datastride
+   * @see https://developer.apple.com/documentation/scenekit/scngeometrysource/1524197-datastride
    */
   get dataStride() {
     return this._dataStride
@@ -434,7 +434,7 @@ SCNGeometrySource *source = [SCNGeometrySource geometrySourceWithBuffer:buffer
      [myCommandBuffer commit];
 }
 
-   * @see https://developer.apple.com/reference/scenekit/scngeometrysource/1522873-init
+   * @see https://developer.apple.com/documentation/scenekit/scngeometrysource/1522873-init
    */
   static initBufferDataOffsetDataStride(mtlBuffer, vertexFormat, semantic, vertexCount, offset, stride) {
   }
@@ -452,7 +452,7 @@ SCNGeometrySource *source = [SCNGeometrySource geometrySourceWithBuffer:buffer
    * @property {string} texcoord The semantic for texture coordinate data.
    * @property {string} vertex The semantic for vertex position data.
    * @property {string} vertexCrease The semantic for vertex crease data, used for subdividing surfaces.
-   * @see https://developer.apple.com/reference/scenekit/scngeometrysource.semantic
+   * @see https://developer.apple.com/documentation/scenekit/scngeometrysource.semantic
    */
   static get Semantic() {
     return _Semantic

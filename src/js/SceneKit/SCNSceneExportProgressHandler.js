@@ -9,7 +9,7 @@
  * @param {UnsafeMutablePointer<ObjCBool>} stop - Set *stop to true inside the block to cancel export.
  * @returns {void}
  * @desc stopSet *stop to true inside the block to cancel export.
- * @see https://developer.apple.com/reference/scenekit/scnsceneexportprogresshandler
+ * @see https://developer.apple.com/documentation/scenekit/scnsceneexportprogresshandler
  */
 const SCNSceneExportProgressHandler = (totalProgress, error, stop) => {}
 

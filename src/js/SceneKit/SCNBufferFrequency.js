@@ -7,7 +7,7 @@
  * @property {number} perFrame - Execute the binding handler once for each frame to be rendered using the shader.
  * @property {number} perNode - Execute the binding handler once for each frame, for each node to be rendered using the shader.
  * @property {number} perShadable - Execute the binding handler once for each frame, for each node, for each material or geometry to be rendered using the shader.
- * @see https://developer.apple.com/reference/scenekit/scnbufferfrequency
+ * @see https://developer.apple.com/documentation/scenekit/scnbufferfrequency
  */
 const SCNBufferFrequency = {
   perFrame: 0,

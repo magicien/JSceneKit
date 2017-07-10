@@ -10,7 +10,7 @@ const _identity = new SCNMatrix4()
  * @access public
  * @param {SCNMatrix4} m - 
  * @returns {boolean} - 
- * @see https://developer.apple.com/reference/scenekit/1409715-scnmatrix4isidentity
+ * @see https://developer.apple.com/documentation/scenekit/1409715-scnmatrix4isidentity
  */
 const SCNMatrix4IsIdentity = function(m) {
   return m.isIdentity()

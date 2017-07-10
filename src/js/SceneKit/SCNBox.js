@@ -12,7 +12,7 @@ import SCNVector3 from './SCNVector3'
  * A six-sided polyhedron geometry whose faces are all rectangles, optionally with rounded edges and corners.
  * @access public
  * @extends {SCNGeometry}
- * @see https://developer.apple.com/reference/scenekit/scnbox
+ * @see https://developer.apple.com/documentation/scenekit/scnbox
  */
 export default class SCNBox extends SCNGeometry {
   static get _propTypes() {
@@ -60,7 +60,7 @@ export default class SCNBox extends SCNGeometry {
    * @param {number} [length = 1.0] - The length of the box along the z-axis of its local coordinate space.
    * @param {number} [chamferRadius = 0.0] - The radius of curvature for the edges and corners of the box.
    * @desc The box is centered in its local coordinate system. For example, if you create a box whose width, height and length are all 10.0, it extends from -5.0 to 5.0 along in each of the x-, y-, and z-axes.
-   * @see https://developer.apple.com/reference/scenekit/scnbox/1522620-init
+   * @see https://developer.apple.com/documentation/scenekit/scnbox/1522620-init
    */
   constructor(width = 1.0, height = 1.0, length = 1.0, chamferRadius = 0.0) {
     super([], [])
@@ -71,21 +71,21 @@ export default class SCNBox extends SCNGeometry {
     /**
      * The extent of the box along its x-axis. Animatable.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnbox/1523898-width
+     * @see https://developer.apple.com/documentation/scenekit/scnbox/1523898-width
      */
     this.width = width
 
     /**
      * The extent of the box along its y-axis. Animatable.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnbox/1522901-height
+     * @see https://developer.apple.com/documentation/scenekit/scnbox/1522901-height
      */
     this.height = height
 
     /**
      * The extent of the box along its z-axis. Animatable.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnbox/1523514-length
+     * @see https://developer.apple.com/documentation/scenekit/scnbox/1523514-length
      */
     this.length = length
 
@@ -95,21 +95,21 @@ export default class SCNBox extends SCNGeometry {
     /**
      * The number of subdivisions in each face of the box along its x-axis. Animatable.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnbox/1523559-widthsegmentcount
+     * @see https://developer.apple.com/documentation/scenekit/scnbox/1523559-widthsegmentcount
      */
     this.widthSegmentCount = 1
 
     /**
      * The number of subdivisions in each face of the box along its y-axis. Animatable.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnbox/1522869-heightsegmentcount
+     * @see https://developer.apple.com/documentation/scenekit/scnbox/1522869-heightsegmentcount
      */
     this.heightSegmentCount = 1
 
     /**
      * The number of subdivisions in each face of the box along its z-axis. Animatable.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnbox/1523721-lengthsegmentcount
+     * @see https://developer.apple.com/documentation/scenekit/scnbox/1523721-lengthsegmentcount
      */
     this.lengthSegmentCount = 1
 
@@ -119,14 +119,14 @@ export default class SCNBox extends SCNGeometry {
     /**
      * The radius of curvature for the edges and corners of the box. Animatable.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnbox/1523302-chamferradius
+     * @see https://developer.apple.com/documentation/scenekit/scnbox/1523302-chamferradius
      */
     this.chamferRadius = chamferRadius
 
     /**
      * The number of line segments used to create each rounded edge of the box. Animatable.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnbox/1522976-chamfersegmentcount
+     * @see https://developer.apple.com/documentation/scenekit/scnbox/1522976-chamfersegmentcount
      */
     this.chamferSegmentCount = 10
 

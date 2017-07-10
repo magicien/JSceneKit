@@ -45,7 +45,7 @@ export default class SCNActionPlaySound extends SCNAction {
    * @param {boolean} wait - If true, the duration of this action is the same as the length of the audio playback. If false, the action is considered to have completed immediately.
    * @returns {SCNAction} - 
    * @desc When the action executes, SceneKit plays the audio source on the target node—any positional audio effects are based on the node’s position. For more information about positional audio in SceneKit, see SCNAudioPlayer.This action is not reversible; the reverse of this action is the same action.
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1523651-playaudio
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1523651-playaudio
    */
   static playAudioWaitForCompletion(source, wait) {
     const action = new SCNActionPlaySound()

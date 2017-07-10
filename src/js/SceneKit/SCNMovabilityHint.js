@@ -5,7 +5,7 @@
  * @typedef {Object} SCNMovabilityHint
  * @property {number} fixed - The node is not expected to move over time.
  * @property {number} movable - The node is expected to move over time.
- * @see https://developer.apple.com/reference/scenekit/scnmovabilityhint
+ * @see https://developer.apple.com/documentation/scenekit/scnmovabilityhint
  */
 const SCNMovabilityHint = {
   fixed: 0,

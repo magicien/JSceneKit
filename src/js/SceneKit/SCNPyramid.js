@@ -12,7 +12,7 @@ import SCNVector3 from './SCNVector3'
  * A right rectangular pyramid geometry.
  * @access public
  * @extends {SCNGeometry}
- * @see https://developer.apple.com/reference/scenekit/scnpyramid
+ * @see https://developer.apple.com/documentation/scenekit/scnpyramid
  */
 export default class SCNPyramid extends SCNGeometry {
   // Creating a Pyramid
@@ -25,7 +25,7 @@ export default class SCNPyramid extends SCNGeometry {
    * @param {number} height - The height of the pyramid along the y-axis of its local coordinate space.
    * @param {number} length - The length of the pyramid along the z-axis of its local coordinate space.
    * @desc The pyramid’s base is centered in its local coordinate system. For example, if you create a pyramid whose width, height and length are all 10.0, its apex is at the point {0, 10.0, 0}, and its base lies in the plane whose y-coordinate is 0.0, extending from -5.0 to 5.0 along both the x- and z-axes.
-   * @see https://developer.apple.com/reference/scenekit/scnpyramid/1523254-init
+   * @see https://developer.apple.com/documentation/scenekit/scnpyramid/1523254-init
    */
   constructor(width = 1.0, height = 1.0, length = 1.0) {
     super([], [])
@@ -35,21 +35,21 @@ export default class SCNPyramid extends SCNGeometry {
     /**
      * The extent of the pyramid along its x-axis. Animatable.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnpyramid/1522613-width
+     * @see https://developer.apple.com/documentation/scenekit/scnpyramid/1522613-width
      */
     this.width = 1.0
 
     /**
      * The extent of the pyramid along its y-axis. Animatable.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnpyramid/1522805-height
+     * @see https://developer.apple.com/documentation/scenekit/scnpyramid/1522805-height
      */
     this.height = height
 
     /**
      * The extent of the pyramid along its z-axis. Animatable.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnpyramid/1524203-length
+     * @see https://developer.apple.com/documentation/scenekit/scnpyramid/1524203-length
      */
     this.length = length // For the original SceneKit, the default value is 0.0, but it should be 1.0.
 
@@ -59,21 +59,21 @@ export default class SCNPyramid extends SCNGeometry {
     /**
      * The number of subdivisions in each face of the pyramid along its x-axis. Animatable.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnpyramid/1523083-widthsegmentcount
+     * @see https://developer.apple.com/documentation/scenekit/scnpyramid/1523083-widthsegmentcount
      */
     this.widthSegmentCount = 1
 
     /**
      * The number of subdivisions in each face of the pyramid along its y-axis. Animatable.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnpyramid/1524059-heightsegmentcount
+     * @see https://developer.apple.com/documentation/scenekit/scnpyramid/1524059-heightsegmentcount
      */
     this.heightSegmentCount = 1
 
     /**
      * The number of subdivisions in each face of the pyramid along its z-axis. Animatable.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnpyramid/1524227-lengthsegmentcount
+     * @see https://developer.apple.com/documentation/scenekit/scnpyramid/1524227-lengthsegmentcount
      */
     this.lengthSegmentCount = 1
 

@@ -29,7 +29,7 @@
                            }
                        }];
 
- * @see https://developer.apple.com/reference/scenekit/scnparticlemodifierblock
+ * @see https://developer.apple.com/documentation/scenekit/scnparticlemodifierblock
  */
 const SCNParticleModifierBlock = (data, dataStride, start, end, deltaTime) => {}
 

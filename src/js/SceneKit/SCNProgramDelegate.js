@@ -7,7 +7,7 @@
 /**
  * The interface for tracking errors that occur when compiling shader source code.
  * @interface
- * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate
+ * @see https://developer.apple.com/documentation/scenekit/scnprogramdelegate
  */
 export default class SCNProgramDelegate {
 
@@ -28,7 +28,7 @@ export default class SCNProgramDelegate {
    * @param {Error} error - The compilation error that was raised.
    * @returns {void}
    * @desc Examine the error parameter for details of the compilation error provided by the GLSL compiler.
-   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1523007-program
+   * @see https://developer.apple.com/documentation/scenekit/scnprogramdelegate/1523007-program
    */
   programHandleError(program, error) {
   }
@@ -41,7 +41,7 @@ export default class SCNProgramDelegate {
    * @access public
    * @param {SCNProgram} program - 
    * @returns {boolean} - 
-   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1523068-programisopaque
+   * @see https://developer.apple.com/documentation/scenekit/scnprogramdelegate/1523068-programisopaque
    */
   programIsOpaque(program) {
     return false
@@ -60,7 +60,7 @@ export default class SCNProgramDelegate {
    * @param {SCNRenderer} renderer - The renderer that is currently rendering the scene.
    * @returns {boolean} - 
    * @desc If you use the handleBinding(ofSymbol:handler:) method to associate a handler block with a SceneKit object for a symbol, SceneKit will not call the delegate’s program(_:bindValueForSymbol:atLocation:programID:renderer:) method for that symbol when rendering that object.
-   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1524155-program
+   * @see https://developer.apple.com/documentation/scenekit/scnprogramdelegate/1524155-program
    */
   programBindValueForSymbolAtLocation(program, symbol, location, programID, renderer) {
     return false
@@ -78,7 +78,7 @@ export default class SCNProgramDelegate {
 
    * @returns {void}
    * @desc If you use the handleUnbinding(ofSymbol:handler:) method to associate a handler block with a SceneKit object for a symbol, SceneKit will not call the delegate’s program(_:unbindValueForSymbol:atLocation:programID:renderer:) method for that symbol when rendering that object.
-   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1523857-program
+   * @see https://developer.apple.com/documentation/scenekit/scnprogramdelegate/1523857-program
    */
   programUnbindValueForSymbolAtLocation(program, symbol, location, programID, renderer) {
   }

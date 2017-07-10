@@ -9,7 +9,7 @@
  * @property {number} multisampling4X - Enables multisample antialiasing, with four samples per screen pixel.
  * @property {number} multisampling8X - Enables multisample antialiasing, with eight samples per screen pixel.
  * @property {number} multisampling16X - Enables multisample antialiasing, with sixteen samples per screen pixel.
- * @see https://developer.apple.com/reference/scenekit/scnantialiasingmode
+ * @see https://developer.apple.com/documentation/scenekit/scnantialiasingmode
  */
 const SCNAntialiasingMode = {
   none: 0,

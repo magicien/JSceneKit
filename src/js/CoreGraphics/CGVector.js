@@ -5,7 +5,7 @@
 /**
  * A structure that contains a two-dimensional vector.
  * @access public
- * @see https://developer.apple.com/reference/coregraphics/cgvector
+ * @see https://developer.apple.com/documentation/coregraphics/cgvector
  */
 export default class CGVector {
 
@@ -17,7 +17,7 @@ export default class CGVector {
    * @param {number} dx - 
    * @param {number} dy - 
    * @returns {void}
-   * @see https://developer.apple.com/reference/coregraphics/cgvector/1456249-init
+   * @see https://developer.apple.com/documentation/coregraphics/cgvector/1456249-init
    */
   init(dx, dy) {
 
@@ -36,7 +36,7 @@ export default class CGVector {
    * The vector whose components are both zero.
    * @type {CGVector}
    * @desc 
-   * @see https://developer.apple.com/reference/coregraphics/cgvector/1454067-zero
+   * @see https://developer.apple.com/documentation/coregraphics/cgvector/1454067-zero
    */
   get zero() {
     return this._zero

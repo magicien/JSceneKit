@@ -13,7 +13,7 @@ import SCNRenderer from './SCNRenderer'
  * @param {SCNShadable} shadable - The material or geometry to be rendered using the shader program.
  * @param {SCNRenderer} renderer - The view (or other SceneKit renderer) responsible for rendering.
  * @returns {void}
- * @see https://developer.apple.com/reference/scenekit/scnbufferbindingblock
+ * @see https://developer.apple.com/documentation/scenekit/scnbufferbindingblock
  */
 const SCNBufferBindingBlock = (buffer, node, shadable, renderer) => {}
 

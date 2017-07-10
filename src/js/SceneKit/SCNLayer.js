@@ -6,7 +6,7 @@ import SCNScene from './SCNScene'
 /**
  * A Core Animation layer that renders a SceneKit scene as its content.
  * @access public
- * @see https://developer.apple.com/reference/scenekit/scnlayer
+ * @see https://developer.apple.com/documentation/scenekit/scnlayer
  */
 export default class SCNLayer {
 
@@ -22,7 +22,7 @@ export default class SCNLayer {
     /**
      * The scene to be displayed in the layer.
      * @type {?SCNScene}
-     * @see https://developer.apple.com/reference/scenekit/scnlayer/1393188-scene
+     * @see https://developer.apple.com/documentation/scenekit/scnlayer/1393188-scene
      */
     this.scene = null
 

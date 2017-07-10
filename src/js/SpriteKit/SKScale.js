@@ -39,7 +39,7 @@ export default class SKScale extends SKAction {
    * @desc When the action executes, the node’s xScale and yScale properties are animated to the new value.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.scale(by: -scale, duration: sec)
 let action = SKAction.scale(by: -scale, duration: sec)
 
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417741-scale
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417741-scale
    */
   static scaleByDuration(scale, sec) {
     const action = new SKScale()
@@ -56,7 +56,7 @@ let action = SKAction.scale(by: -scale, duration: sec)
    * @param {number} sec - The duration of the animation.
    * @returns {SKAction} - 
    * @desc When the action executes, the node’s xScale and yScale properties are animated to achieve the specified size in its parent's coordinate space. This action is not reversible; the reverse of this action has the same duration but does not change anything.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1643619-scale
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1643619-scale
    */
   static scaleToDuration(size, sec) {
     const action = new SKScale()
@@ -83,7 +83,7 @@ let action = SKAction.scale(by: -scale, duration: sec)
    * @desc When the action executes, the node’s xScale and yScale properties are animated to the new value.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.scaleX(by: -scaleX, y: -scaleY, duration: sec)
 let action = SKAction.scaleX(by: -scaleX, y: -scaleY, duration: sec)
 
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417796-scalex
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417796-scalex
    */
   static scaleXByYDuration(xScale, yScale, sec) {
     const action = new SKScale()
@@ -101,7 +101,7 @@ let action = SKAction.scaleX(by: -scaleX, y: -scaleY, duration: sec)
    * @param {number} sec - The duration of the animation.
    * @returns {SKAction} - 
    * @desc When the action executes, the node’s xScale and yScale properties are animated to the new value.This action is not reversible; the reverse of this action has the same duration but does not change anything.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417728-scalex
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417728-scalex
    */
   static scaleXToYDuration(xScale, yScale, sec) {
     const action = new SKScale()
@@ -118,7 +118,7 @@ let action = SKAction.scaleX(by: -scaleX, y: -scaleY, duration: sec)
    * @param {number} sec - The duration of the animation.
    * @returns {SKAction} - 
    * @desc When the action executes, the node’s xScale property animates to the new value.This action is not reversible; the reverse of this action has the same duration but does not change anything.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417699-scalex
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417699-scalex
    */
   static scaleXToDuration(scale, sec) {
     const action = new SKScale()
@@ -134,7 +134,7 @@ let action = SKAction.scaleX(by: -scaleX, y: -scaleY, duration: sec)
    * @param {number} sec - The duration of the animation.
    * @returns {SKAction} - 
    * @desc When the action executes, the node’s yScale property animates to the new value.This action is not reversible; the reverse of this action has the same duration but does not change anything.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417708-scaley
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417708-scaley
    */
   static scaleYToDuration(scale, sec) {
     const action = new SKScale()

@@ -26,7 +26,7 @@ export default class SKRepeat extends SKAction {
    * @param {number} count - The number of times to execute the action.
    * @returns {SKAction} - 
    * @desc When the action executes, the associated action runs to completion and then repeats, until the count is reached.This action is reversible; it creates a new action that is the reverse of the specified action and then repeats it the same number of times.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417750-repeat
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417750-repeat
    */
   static repeat(action, count) {
     const _action = new SKRepeat()
@@ -43,7 +43,7 @@ export default class SKRepeat extends SKAction {
    * @param {SKAction} action - The action to execute.
    * @returns {SKAction} - 
    * @desc When the action executes, the associated action runs to completion and then repeats.This action is reversible; it creates a new action that is the reverse of the specified action and then repeats it forever.NoteThe action to be repeated must have a non-instantaneous duration.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417676-repeatforever
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417676-repeatforever
    */
   static repeatForever(action) {
     return this.repeat(action, Infinity)

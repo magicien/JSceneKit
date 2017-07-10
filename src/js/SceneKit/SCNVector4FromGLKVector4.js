@@ -8,7 +8,7 @@ import SCNVector4 from './SCNVector4'
  * @access public
  * @param {GLKVector4} vector - A four-element GLKit vector structure.
  * @returns {SCNVector4} - 
- * @see https://developer.apple.com/reference/scenekit/1409729-scnvector4fromglkvector4
+ * @see https://developer.apple.com/documentation/scenekit/1409729-scnvector4fromglkvector4
  */
 const SCNVector4FromGLKVector4 = function(vector) {
   return null

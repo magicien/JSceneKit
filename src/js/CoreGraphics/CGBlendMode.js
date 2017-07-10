@@ -32,7 +32,7 @@
  * @property {number} xor - R = S*(1 - Da) + D*(1 - Sa). This XOR mode is only nominally related to the classical bitmap XOR operation, which is not supported by Core Graphics
  * @property {number} plusDarker - R = MAX(0, 1 - ((1 - D) + (1 - S)))
  * @property {number} plusLighter - R = MIN(1, S + D)
- * @see https://developer.apple.com/reference/coregraphics/cgblendmode
+ * @see https://developer.apple.com/documentation/coregraphics/cgblendmode
  */
 const CGBlendMode = {
   normal: 0,

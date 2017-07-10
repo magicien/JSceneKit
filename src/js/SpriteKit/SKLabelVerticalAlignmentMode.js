@@ -7,7 +7,7 @@
  * @property {number} center - Centers the text vertically on the node’s origin.
  * @property {number} top - Positions the text so that the top of the text is on the node’s origin.
  * @property {number} bottom - Positions the text so that the bottom of the text is on the node’s origin.
- * @see https://developer.apple.com/reference/spritekit/sklabelverticalalignmentmode
+ * @see https://developer.apple.com/documentation/spritekit/sklabelverticalalignmentmode
  */
 const SKLabelVerticalAlignmentMode = {
   baseline: 0,

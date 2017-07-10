@@ -7,7 +7,7 @@ import NSObject from '../ObjectiveC/NSObject'
  * A container for a closure to be executed at a specific time during playback of an animation.
  * @access public
  * @extends {NSObject}
- * @see https://developer.apple.com/reference/scenekit/scnanimationevent
+ * @see https://developer.apple.com/documentation/scenekit/scnanimationevent
  */
 export default class SCNAnimationEvent extends NSObject {
 
@@ -20,7 +20,7 @@ export default class SCNAnimationEvent extends NSObject {
    * @param {SCNAnimationEventBlock} eventBlock - A block to call at the specified time.
    * @constructor
    * @desc The time parameter is relative to the duration of the animation the event is attached to. For example, an event with a time of 0.5 triggers when the animation is halfway complete, and an event with a time of 1.0 triggers when the animation ends.
-   * @see https://developer.apple.com/reference/scenekit/scnanimationevent/1524004-init
+   * @see https://developer.apple.com/documentation/scenekit/scnanimationevent/1524004-init
    */
   constructor(time, eventBlock) {
     super()

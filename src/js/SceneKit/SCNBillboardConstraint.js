@@ -8,7 +8,7 @@ import SCNBillboardAxis from './SCNBillboardAxis'
  * A constraint that orients a node to always point toward the current camera.
  * @access public
  * @extends {SCNConstraint}
- * @see https://developer.apple.com/reference/scenekit/scnbillboardconstraint
+ * @see https://developer.apple.com/documentation/scenekit/scnbillboardconstraint
  */
 export default class SCNBillboardConstraint extends SCNConstraint {
 
@@ -24,7 +24,7 @@ export default class SCNBillboardConstraint extends SCNConstraint {
     /**
      * An option that specifies which degrees of freedom the constraint affects.
      * @type {SCNBillboardAxis}
-     * @see https://developer.apple.com/reference/scenekit/scnbillboardconstraint/1468685-freeaxes
+     * @see https://developer.apple.com/documentation/scenekit/scnbillboardconstraint/1468685-freeaxes
      */
     this.freeAxes = null
 

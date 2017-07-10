@@ -7,7 +7,7 @@
  * @property {number} both - Apply a chamfer to both front and back edges of the extruded shape.
  * @property {number} front - Apply a chamfer to only the front edge of the extruded shape.
  * @property {number} back - Apply a chamfer to only the back edge of the extruded shape.
- * @see https://developer.apple.com/reference/scenekit/scnchamfermode
+ * @see https://developer.apple.com/documentation/scenekit/scnchamfermode
  */
 const SCNChamferMode = {
   both: 0,

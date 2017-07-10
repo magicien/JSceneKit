@@ -16,7 +16,7 @@ import SKColor from '../SpriteKit/SKColor'
  * @access public
  * @extends {NSObject}
  * @implements {SCNAnimatable}
- * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty
+ * @see https://developer.apple.com/documentation/scenekit/scnmaterialproperty
  */
 export default class SCNMaterialProperty extends NSObject {
   static get _propTypes() {
@@ -61,7 +61,7 @@ export default class SCNMaterialProperty extends NSObject {
    * @constructor
    * @param {Object} contents - The visual contents of the material property—a color, image, or source of animated content. For details, see the discussion of the  contents property.
    * @desc Newly created SCNMaterial objects contain SCNMaterialProperty instances for all of their visual properties. To change a material’s visual properties, you modify those instances rather than creating new material property objects.You create new SCNMaterialProperty instances to provide textures for use with custom GLSL shaders—for details, see SCNShadable.
-   * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395386-init
+   * @see https://developer.apple.com/documentation/scenekit/scnmaterialproperty/1395386-init
    */
   constructor(contents = null) {
     super()
@@ -72,14 +72,14 @@ export default class SCNMaterialProperty extends NSObject {
      * The visual contents of the material property—a color, image, or source of animated content. Animatable.
      * @access private
      * @type {?Object}
-     * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395372-contents
+     * @see https://developer.apple.com/documentation/scenekit/scnmaterialproperty/1395372-contents
      */
     this._contents = contents
 
     /**
      * A number between 0.0 and 1.0 that modulates the effect of the material property. Animatable.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395407-intensity
+     * @see https://developer.apple.com/documentation/scenekit/scnmaterialproperty/1395407-intensity
      */
     this.intensity = 0
 
@@ -89,56 +89,56 @@ export default class SCNMaterialProperty extends NSObject {
     /**
      * The transformation applied to the material property’s visual contents. Animatable.
      * @type {SCNMatrix4}
-     * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395388-contentstransform
+     * @see https://developer.apple.com/documentation/scenekit/scnmaterialproperty/1395388-contentstransform
      */
     this.contentsTransform = SCNMatrix4MakeTranslation(0, 0, 0)
 
     /**
      * The wrapping behavior for the S texture coordinate.
      * @type {SCNWrapMode}
-     * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395384-wraps
+     * @see https://developer.apple.com/documentation/scenekit/scnmaterialproperty/1395384-wraps
      */
     this.wrapS = SCNWrapMode.clamp
 
     /**
      * The wrapping behavior for the T texture coordinate.
      * @type {SCNWrapMode}
-     * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395382-wrapt
+     * @see https://developer.apple.com/documentation/scenekit/scnmaterialproperty/1395382-wrapt
      */
     this.wrapT = SCNWrapMode.clamp
 
     /**
      * Texture filtering for rendering the material property’s image contents at a size smaller than that of the original image.
      * @type {SCNFilterMode}
-     * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395390-minificationfilter
+     * @see https://developer.apple.com/documentation/scenekit/scnmaterialproperty/1395390-minificationfilter
      */
     this.minificationFilter = SCNFilterMode.linear
 
     /**
      * Texture filtering for rendering the material property’s image contents at a size larger than that of the original image.
      * @type {SCNFilterMode}
-     * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395378-magnificationfilter
+     * @see https://developer.apple.com/documentation/scenekit/scnmaterialproperty/1395378-magnificationfilter
      */
     this.magnificationFilter = SCNFilterMode.linear
 
     /**
      * Texture filtering for using mipmaps to render the material property’s image contents at a size smaller than that of the original image.
      * @type {SCNFilterMode}
-     * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395398-mipfilter
+     * @see https://developer.apple.com/documentation/scenekit/scnmaterialproperty/1395398-mipfilter
      */
     this.mipFilter = SCNFilterMode.nearest
 
     /**
      * The amount of anisotropic texture filtering to be used when rendering the material property’s image contents.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395402-maxanisotropy
+     * @see https://developer.apple.com/documentation/scenekit/scnmaterialproperty/1395402-maxanisotropy
      */
     this.maxAnisotropy = 0
 
     /**
      * The source of texture coordinates for mapping the material property’s image contents.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395405-mappingchannel
+     * @see https://developer.apple.com/documentation/scenekit/scnmaterialproperty/1395405-mappingchannel
      */
     this.mappingChannel = 0
 
@@ -146,7 +146,7 @@ export default class SCNMaterialProperty extends NSObject {
      * A color used to fill in areas of a material’s surface not covered by the material property’s image contents.
      * @type {?Object}
      * @deprecated
-     * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395376-bordercolor
+     * @see https://developer.apple.com/documentation/scenekit/scnmaterialproperty/1395376-bordercolor
      */
     this.borderColor = null
 
@@ -243,7 +243,7 @@ export default class SCNMaterialProperty extends NSObject {
   /**
    * The visual contents of the material property—a color, image, or source of animated content. Animatable.
    * @type {?Object}
-   * @see https://developer.apple.com/reference/scenekit/scnmaterialproperty/1395372-contents
+   * @see https://developer.apple.com/documentation/scenekit/scnmaterialproperty/1395372-contents
    */
   get contents() {
     return this._contents
@@ -268,7 +268,7 @@ export default class SCNMaterialProperty extends NSObject {
    * @param {?string} key - An string identifying the animation for later retrieval. You may pass nil if you don’t need to reference the animation later.
    * @returns {void}
    * @desc Newly added animations begin executing after the current run loop cycle ends.SceneKit does not define any requirements for the contents of the key parameter—it need only be unique among the keys for other animations you add. If you add an animation with an existing key, this method overwrites the existing animation.
-   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523386-addanimation
+   * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1523386-addanimation
    */
   addAnimationForKey(animation, key) {
     //console.log('SCNMaterialProperty addAnimationForKey')
@@ -289,7 +289,7 @@ export default class SCNMaterialProperty extends NSObject {
    * @param {string} key - A string identifying a previously added animation.
    * @returns {?CAAnimation} - 
    * @desc Attempting to modify any properties of the returned object results in undefined behavior.
-   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1524020-animation
+   * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1524020-animation
    */
   animationForKey(key) {
     return this._animations.get(key)
@@ -299,7 +299,7 @@ export default class SCNMaterialProperty extends NSObject {
    * Required. Removes all the animations currently attached to the object.
    * @access public
    * @returns {void}
-   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1522762-removeallanimations
+   * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1522762-removeallanimations
    */
   removeAllAnimations() {
     this._animations.clear()
@@ -310,7 +310,7 @@ export default class SCNMaterialProperty extends NSObject {
    * @access public
    * @param {string} key - A string identifying an attached animation to remove.
    * @returns {void}
-   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1522880-removeanimation
+   * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1522880-removeanimation
    */
   removeAnimationForKey(key) {
     this._animations.delete(key)
@@ -324,7 +324,7 @@ export default class SCNMaterialProperty extends NSObject {
    * @param {number} duration - The duration for transitioning out of the animation’s effect before it is removed.
    * @returns {void}
    * @desc Use this method to create smooth transitions between the effects of multiple animations. For example, the geometry loaded from a scene file for a game character may have associated animations for player actions such as walking and jumping. When the player lands from a jump, you remove the jump animation so the character continues walking. If you use the removeAnimation(forKey:) method to remove the jump animation, SceneKit abruptly switches from the current frame of the jump animation to the current frame of the walk animation. If you use the removeAnimation(forKey:fadeOutDuration:) method instead, SceneKit plays both animations at once during that duration and interpolates vertex positions from one animation to the other, creating a smooth transition.
-   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1522841-removeanimation
+   * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1522841-removeanimation
    */
   removeAnimationForKeyFadeOutDuration(key, duration) {
   }
@@ -333,7 +333,7 @@ export default class SCNMaterialProperty extends NSObject {
    * Required. An array containing the keys of all animations currently attached to the object.
    * @type {string[]}
    * @desc This array contains all keys for which animations are attached to the object, or is empty if there are no attached animations. The ordering of animation keys in the array is arbitrary.
-   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523610-animationkeys
+   * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1523610-animationkeys
    */
   get animationKeys() {
     const keys = []
@@ -351,7 +351,7 @@ export default class SCNMaterialProperty extends NSObject {
    * @param {string} key - A string identifying an attached animation.
    * @returns {void}
    * @desc This method has no effect if no animation is attached to the object with the specified key.
-   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523592-pauseanimation
+   * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1523592-pauseanimation
    */
   pauseAnimationForKey(key) {
   }
@@ -362,7 +362,7 @@ export default class SCNMaterialProperty extends NSObject {
    * @param {string} key - A string identifying an attached animation.
    * @returns {void}
    * @desc This method has no effect if no animation is attached to the object with the specified key or if the specified animation is not currently paused.
-   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523332-resumeanimation
+   * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1523332-resumeanimation
    */
   resumeAnimationForKey(key) {
   }
@@ -372,7 +372,7 @@ export default class SCNMaterialProperty extends NSObject {
    * @access public
    * @param {string} key - A string identifying an attached animation.
    * @returns {boolean} - 
-   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523703-isanimationpaused
+   * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1523703-isanimationpaused
    */
   isAnimationPausedForKey(key) {
     return false
@@ -386,7 +386,7 @@ export default class SCNMaterialProperty extends NSObject {
    * @param {number} speed - 
    * @param {string} key - 
    * @returns {void}
-   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1778343-setanimationspeed
+   * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1778343-setanimationspeed
    */
   setAnimationSpeedForKey(speed, key) {
   }

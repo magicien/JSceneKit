@@ -6,7 +6,7 @@ import CGSize from './CGSize'
 /**
  * A structure that contains the location and dimensions of a rectangle.
  * @access public
- * @see https://developer.apple.com/reference/coregraphics/cgrect
+ * @see https://developer.apple.com/documentation/coregraphics/cgrect
  */
 export default class CGRect {
   // Creating Rectangle Values
@@ -17,7 +17,7 @@ export default class CGRect {
    * @constructor
    * @param {CGPoint} origin - 
    * @param {CGSize} size - 
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/1454856-init
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/1454856-init
    */
   constructor(origin, size) {
 
@@ -32,7 +32,7 @@ export default class CGRect {
    * The rectangle whose origin and size are both zero.
    * @type {CGRect}
    * @desc The zero rectangle is equivalent to one created by calling CGRect(x: 0, y: 0, width: 0, height: 0).
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/1455437-zero
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/1455437-zero
    */
   static get zero() {
     return new CGRect(new CGPoint(0, 0), new CGSize(0, 0))
@@ -45,7 +45,7 @@ export default class CGRect {
    * Returns the height of a rectangle.
    * @type {number}
    * @desc Regardless of whether the height is stored in the CGRect data structure as a positive or negative number, this function returns the height as if the rectangle were standardized. That is, the result is never a negative number.
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/1455645-height
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/1455645-height
    */
   get height() {
     if(this.isNull){
@@ -57,7 +57,7 @@ export default class CGRect {
    * Returns the width of a rectangle.
    * @type {number}
    * @desc Regardless of whether the width is stored in the CGRect data structure as a positive or negative number, this function returns the width as if the rectangle were standardized.  That is, the result is never a negative number.
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/1454758-width
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/1454758-width
    */
   get width() {
     if(this.isNull){
@@ -70,7 +70,7 @@ export default class CGRect {
    * Returns the smallest value for the x-coordinate of the rectangle.
    * @type {number}
    * @desc 
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/1455948-minx
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/1455948-minx
    */
   get minX() {
     if(this.size.width < 0){
@@ -83,7 +83,7 @@ export default class CGRect {
    * Returns the x- coordinate that establishes the center of a rectangle.
    * @type {number}
    * @desc 
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/1456175-midx
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/1456175-midx
    */
   get midX() {
     return this.origin.x + this.size.width * 0.5
@@ -93,7 +93,7 @@ export default class CGRect {
    * Returns the largest value of the x-coordinate for the rectangle.
    * @type {number}
    * @desc 
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/1454334-maxx
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/1454334-maxx
    */
   get maxX() {
     if(this.size.width > 0){
@@ -106,7 +106,7 @@ export default class CGRect {
    * Returns the smallest value for the y-coordinate of the rectangle.
    * @type {number}
    * @desc 
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/1454832-miny
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/1454832-miny
    */
   get minY() {
     if(this.size.height < 0){
@@ -119,7 +119,7 @@ export default class CGRect {
    * Returns the y-coordinate that establishes the center of the rectangle.
    * @type {number}
    * @desc 
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/1456550-midy
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/1456550-midy
    */
   get midY() {
     return this.origin.y + this.size.height * 0.5
@@ -129,7 +129,7 @@ export default class CGRect {
    * Returns the largest value for the y-coordinate of the rectangle.
    * @type {number}
    * @desc 
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/1454060-maxy
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/1454060-maxy
    */
   get maxY() {
     if(this.size.height > 0){
@@ -146,7 +146,7 @@ export default class CGRect {
    * @param {CGAffineTransform} t - The affine transform to apply to the rect parameter.
    * @returns {CGRect} - 
    * @desc Because affine transforms do not preserve rectangles in general, this function returns the smallest rectangle that contains the transformed corner points of the rect parameter. If the affine transform t consists solely of scaling and translation operations, then the returned rectangle coincides with the rectangle constructed from the four transformed corners.
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/1455875-applying
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/1455875-applying
    */
   applying(t) {
     return null
@@ -159,7 +159,7 @@ export default class CGRect {
    * @param {number} dy - The y-coordinate value to use for adjusting the source rectangle. To create an inset rectangle, specify a positive value. To create a larger, encompassing rectangle, specify a negative value.
    * @returns {CGRect} - 
    * @desc The rectangle is standardized and then the inset parameters are applied. If the resulting rectangle would have a negative height or width, a null rectangle is returned.
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/1454218-insetby
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/1454218-insetby
    */
   insetBy(dx, dy) {
     const newX = this.minX + dx
@@ -175,7 +175,7 @@ export default class CGRect {
    * @param {number} dx - The offset value for the x-coordinate.
    * @param {number} dy - The offset value for the  y-coordinate.
    * @returns {CGRect} - 
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/1454841-offsetby
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/1454841-offsetby
    */
   offsetBy(dx, dy) {
     return new CGRect(new CGPoint(this.origin.x + dx, this.origin.y + dy), this.size)
@@ -187,7 +187,7 @@ export default class CGRect {
    * @param {CGRect} r2 - Another rectangle to be combined with this rectangle.
    * @returns {CGRect} - 
    * @desc Both rectangles are standardized prior to calculating the union. If either of the rectangles is a null rectangle, a copy of the other rectangle is returned (resulting in a null rectangle if both rectangles are null). Otherwise a rectangle that completely contains the source rectangles is returned.
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/1455837-union
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/1455837-union
    */
   union(r2) {
     if(this.isNull && r2.isNull){
@@ -213,7 +213,7 @@ export default class CGRect {
    * @param {CGRect} r2 - Another rectangle to intersect with this rectangle.
    * @returns {CGRect} - 
    * @desc Both rectangles are standardized prior to calculating the intersection.
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/1455346-intersection
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/1455346-intersection
    */
   intersection(r2) {
     if(this.isNull || r2.isNull){
@@ -238,7 +238,7 @@ export default class CGRect {
    * @param {CGRectEdge} fromEdge - The side of the rectangle from which to measure the atDistance parameter, defining the line along which to divide the rectangle.
    * @returns {{slice: CGRect, remainder: CGRect}} - 
    * @desc Together the fromEdge and atDistance parameters define a line (parallel to the specified edge of the rectangle and at the specified distance from that edge) that divides the rectangle into two component rectangles.
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/2299988-divided
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/2299988-divided
    */
   dividedFrom(atDistance, fromEdge) {
     return null
@@ -247,7 +247,7 @@ export default class CGRect {
    * Returns a rectangle with a positive width and height.
    * @type {CGRect}
    * @desc 
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/1456432-standardized
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/1456432-standardized
    */
   get standardized() {
     const r = this.copy()
@@ -269,7 +269,7 @@ export default class CGRect {
    * Returns the smallest rectangle that results from converting the source rectangle values to integers.
    * @type {CGRect}
    * @desc 
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/1456348-integral
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/1456348-integral
    */
   get integral() {
     return null
@@ -282,7 +282,7 @@ export default class CGRect {
    * @access public
    * @param {CGRect} rect2 - The rectangle to test for intersection with this rectangle.
    * @returns {boolean} - 
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/1454747-intersects
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/1454747-intersects
    */
   intersects(rect2) {
     const r = this.intersection(rect2)
@@ -295,7 +295,7 @@ export default class CGRect {
    * @param {CGPoint} point - The point to examine. 
    * @returns {boolean} - 
    * @desc A point is considered inside the rectangle if its coordinates lie inside the rectangle or on the minimum X or minimum Y edge.
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/1456316-contains
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/1456316-contains
    */
   contains(point) {
     return point.x >= this.minX
@@ -308,7 +308,7 @@ export default class CGRect {
    * Returns whether a rectangle has zero width or height, or is a null rectangle.
    * @type {boolean}
    * @desc An empty rectangle is either a null rectangle or a valid rectangle with zero height or width.
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/1454917-isempty
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/1454917-isempty
    */
   get isEmpty() {
     return this.isNull || this.size.height === 0 || this.size.width === 0
@@ -318,7 +318,7 @@ export default class CGRect {
    * Returns whether a rectangle is infinite.
    * @type {boolean}
    * @desc An infinite rectangle is one that has no defined bounds. Infinite rectangles can be created as output from a tiling filter. For example, the Core Image framework perspective tile filter creates an image whose extent is described by an infinite rectangle.
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/1455008-isinfinite
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/1455008-isinfinite
    */
   get isInfinite() {
     return this.size.width === Infinity && this.size.height === Infinity
@@ -328,7 +328,7 @@ export default class CGRect {
    * Returns whether the rectangle is equal to the null rectangle.
    * @type {boolean}
    * @desc A null rectangle is the equivalent of an empty set. For example, the result of intersecting two disjoint rectangles is a null rectangle. A null rectangle cannot be drawn and interacts with other rectangles in special ways.
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/1455471-isnull
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/1455471-isnull
    */
   get isNull() {
     return this.size === null
@@ -341,7 +341,7 @@ export default class CGRect {
    * @access public
    * @param {Map} dict - A dictionary containing x, y, width, and height values for the rectangle to create, in the format used by the dictionaryRepresentation property.
    * @returns {void}
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/2427139-init
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/2427139-init
    */
   initDictionaryRepresentation(dict) {
     // Basic Geometric Properties
@@ -353,7 +353,7 @@ export default class CGRect {
    * Returns a dictionary representation of the provided rectangle.
    * @type {Map}
    * @desc 
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/1455760-dictionaryrepresentation
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/1455760-dictionaryrepresentation
    */
   get dictionaryRepresentation() {
     const map = new Map()
@@ -366,7 +366,7 @@ export default class CGRect {
    * 
    * @type {string}
    * @desc A textual representation of the rectangle's origin and size values. 
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/1645823-debugdescription
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/1645823-debugdescription
    */
   get debugDescription() {
     if(this.size === null){
@@ -382,7 +382,7 @@ export default class CGRect {
    * A representation of the rectangle's structure and display style for use in debugging. 
    * @type {Mirror}
    * @desc 
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/1645833-custommirror
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/1645833-custommirror
    */
   get customMirror() {
     return null
@@ -392,7 +392,7 @@ export default class CGRect {
    * A representation of the rectangle for use in Playgrounds. 
    * @type {PlaygroundQuickLook}
    * @desc 
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/1645827-customplaygroundquicklook
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/1645827-customplaygroundquicklook
    */
   get customPlaygroundQuickLook() {
     return null
@@ -405,7 +405,7 @@ export default class CGRect {
    * @access public
    * @param {CGRect} rect2 - The rectangle to compare this rectangle with.
    * @returns {boolean} - 
-   * @see https://developer.apple.com/reference/coregraphics/cgrect/1456516-equalto
+   * @see https://developer.apple.com/documentation/coregraphics/cgrect/1456516-equalto
    */
   equalTo(rect2) {
     if(this.origin === null || rect2.origin === null){

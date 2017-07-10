@@ -10,7 +10,7 @@ import SCNBufferBindingBlock from './SCNBufferBindingBlock'
  * A complete Metal or OpenGL shader program that replaces SceneKit's rendering of a geometry or material.
  * @access public
  * @extends {NSObject}
- * @see https://developer.apple.com/reference/scenekit/scnprogram
+ * @see https://developer.apple.com/documentation/scenekit/scnprogram
  */
 export default class SCNProgram extends NSObject {
 
@@ -27,35 +27,35 @@ export default class SCNProgram extends NSObject {
     /**
      * GLSL source code for the program’s vertex shader.
      * @type {?string}
-     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522891-vertexshader
+     * @see https://developer.apple.com/documentation/scenekit/scnprogram/1522891-vertexshader
      */
     this.vertexShader = null
 
     /**
      * GLSL source code for the program’s fragment shader.
      * @type {?string}
-     * @see https://developer.apple.com/reference/scenekit/scnprogram/1523135-fragmentshader
+     * @see https://developer.apple.com/documentation/scenekit/scnprogram/1523135-fragmentshader
      */
     this.fragmentShader = null
 
     /**
      * GLSL source code for the program’s optional geometry shader.
      * @type {?string}
-     * @see https://developer.apple.com/reference/scenekit/scnprogram/1524049-geometryshader
+     * @see https://developer.apple.com/documentation/scenekit/scnprogram/1524049-geometryshader
      */
     this.geometryShader = null
 
     /**
      * GLSL source code for the program’s optional tessellation control shader.
      * @type {?string}
-     * @see https://developer.apple.com/reference/scenekit/scnprogram/1523852-tessellationcontrolshader
+     * @see https://developer.apple.com/documentation/scenekit/scnprogram/1523852-tessellationcontrolshader
      */
     this.tessellationControlShader = null
 
     /**
      * GLSL source code for the program’s optional tessellation evaluation shader.
      * @type {?string}
-     * @see https://developer.apple.com/reference/scenekit/scnprogram/1523760-tessellationevaluationshader
+     * @see https://developer.apple.com/documentation/scenekit/scnprogram/1523760-tessellationevaluationshader
      */
     this.tessellationEvaluationShader = null
 
@@ -65,7 +65,7 @@ export default class SCNProgram extends NSObject {
     /**
      * The delegate of the program object.
      * @type {?SCNProgramDelegate}
-     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522611-delegate
+     * @see https://developer.apple.com/documentation/scenekit/scnprogram/1522611-delegate
      */
     this.delegate = null
 
@@ -75,7 +75,7 @@ export default class SCNProgram extends NSObject {
     /**
      * A Boolean value that indicates whether fragments rendered by the program are fully opaque.
      * @type {boolean}
-     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522844-isopaque
+     * @see https://developer.apple.com/documentation/scenekit/scnprogram/1522844-isopaque
      */
     this.isOpaque = false
 
@@ -85,21 +85,21 @@ export default class SCNProgram extends NSObject {
     /**
      * The name of the vertex shader function to load from a Metal shader library.
      * @type {?string}
-     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522799-vertexfunctionname
+     * @see https://developer.apple.com/documentation/scenekit/scnprogram/1522799-vertexfunctionname
      */
     this.vertexFunctionName = null
 
     /**
      * The name of the fragment shader function to load from a Metal shader library.
      * @type {?string}
-     * @see https://developer.apple.com/reference/scenekit/scnprogram/1524012-fragmentfunctionname
+     * @see https://developer.apple.com/documentation/scenekit/scnprogram/1524012-fragmentfunctionname
      */
     this.fragmentFunctionName = null
 
     /**
      * The Metal shader library containing shader functions to be used by this program.
      * @type {?MTLLibrary}
-     * @see https://developer.apple.com/reference/scenekit/scnprogram/1522934-library
+     * @see https://developer.apple.com/documentation/scenekit/scnprogram/1522934-library
      */
     this.library = null
 
@@ -132,7 +132,7 @@ export default class SCNProgram extends NSObject {
    * @param {?Map<string, Object>} [options = null] - A dictionary of options affecting the semantic. See Program Semantic Options for applicable keys and values.
    * @returns {void}
    * @desc Use this method to provide inputs managed by SceneKit to your GLSL program.To use vertex attributes provided by SCNGeometry objects, use the constants listed in Geometry Semantic Identifiers.To use the coordinate transformations defined by the scene’s node hierarchy and point-of-view camera, use the constants listed in Rendering Transform Keys.
-   * @see https://developer.apple.com/reference/scenekit/scnprogram/1522730-setsemantic
+   * @see https://developer.apple.com/documentation/scenekit/scnprogram/1522730-setsemantic
    */
   setSemanticForSymbol(semantic, symbol, options = null) {
   }
@@ -142,7 +142,7 @@ export default class SCNProgram extends NSObject {
    * @access public
    * @param {string} symbol - The name declared in the program’s GLSL source code for a vertex attribute or uniform variable semantic.
    * @returns {?string} - 
-   * @see https://developer.apple.com/reference/scenekit/scnprogram/1523350-semantic
+   * @see https://developer.apple.com/documentation/scenekit/scnprogram/1523350-semantic
    */
   semanticForSymbol(symbol) {
     return null
@@ -159,7 +159,7 @@ export default class SCNProgram extends NSObject {
    * @returns {void}
    * @desc Use this method to associate a block with a Metal shader program to handle setup of a buffer used in that shader. SceneKit calls your block before rendering any objects whose program property is set to this SCNProgram object. In the block, use the writeBytes(_:count:) method to provide data for the buffer.  
 
-   * @see https://developer.apple.com/reference/scenekit/scnprogram/1524047-handlebinding
+   * @see https://developer.apple.com/documentation/scenekit/scnprogram/1524047-handlebinding
    */
   handleBindingOfBufferNamedHandler(name, frequency, block) {
   }

@@ -32,7 +32,7 @@ let _main = null
  * DispatchQueue manages the execution of work items. Each work item submitted to a queue is processed on a pool of threads managed by the system.
  * @access public
  * @extends {DispatchObject}
- * @see https://developer.apple.com/reference/dispatch/dispatchqueue
+ * @see https://developer.apple.com/documentation/dispatch/dispatchqueue
  */
 export default class DispatchQueue extends DispatchObject {
 
@@ -47,7 +47,7 @@ export default class DispatchQueue extends DispatchObject {
    * @param {DispatchQueue.AutoreleaseFrequency} autoreleaseFrequency - 
    * @param {?DispatchQueue} target - 
    * @constructor
-   * @see https://developer.apple.com/reference/dispatch/dispatchqueue/2300059-init
+   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2300059-init
    */
   constructor(label, qos, attributes, autoreleaseFrequency, target) {
     super()
@@ -85,7 +85,7 @@ export default class DispatchQueue extends DispatchObject {
    * @param {?__OS_dispatch_queue_attr} attr - In macOS 10.7 and later or iOS 4.3 and later, specify DISPATCH_QUEUE_SERIAL (or NULL) to create a serial queue or specify DISPATCH_QUEUE_CONCURRENT to create a concurrent queue. In earlier versions, you must specify NULL for this parameter.
    * @returns {void}
    * @desc Blocks submitted to a serial queue are executed one at a time in FIFO order. Note, however, that blocks submitted to independent queues may be executed concurrently with respect to each other. Blocks submitted to a concurrent queue are dequeued in FIFO order but may run concurrently if resources are available to do so.If your app isn’t using ARC, you should call dispatch_release on a dispatch queue when it’s no longer needed. Any pending blocks submitted to a queue hold a reference to that queue, so the queue is not deallocated until all pending blocks have completed.
-   * @see https://developer.apple.com/reference/dispatch/dispatchqueue/1453030-init
+   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1453030-init
    */
   init__label(label, attr) {
 
@@ -102,7 +102,7 @@ export default class DispatchQueue extends DispatchObject {
    * @param {?__OS_dispatch_queue_attr} attr - 
    * @param {?DispatchQueue} target - 
    * @returns {void}
-   * @see https://developer.apple.com/reference/dispatch/dispatchqueue/1642205-init
+   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1642205-init
    */
   init__labelQueue(label, attr, target) {
 
@@ -119,7 +119,7 @@ export default class DispatchQueue extends DispatchObject {
    * @access public
    * @param {DispatchWorkItem} workItem - 
    * @returns {void}
-   * @see https://developer.apple.com/reference/dispatch/dispatchqueue/1452870-sync
+   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1452870-sync
    */
   syncExecute(workItem) {
   }
@@ -129,7 +129,7 @@ export default class DispatchQueue extends DispatchObject {
    * @access public
    * @param {DispatchWorkItem} workItem - 
    * @returns {void}
-   * @see https://developer.apple.com/reference/dispatch/dispatchqueue/2016103-async
+   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2016103-async
    */
   asyncExecute(workItem) {
   }
@@ -140,7 +140,7 @@ export default class DispatchQueue extends DispatchObject {
    * @param {DispatchTime} deadline - 
    * @param {DispatchWorkItem} execute - 
    * @returns {void}
-   * @see https://developer.apple.com/reference/dispatch/dispatchqueue/2300020-asyncafter
+   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2300020-asyncafter
    */
   asyncAfter(deadline, execute) {
     const delay = deadline - (Date.now())
@@ -155,7 +155,7 @@ export default class DispatchQueue extends DispatchObject {
    * @param {DispatchWorkItemFlags} flags - 
    * @param {function(): void} work - 
    * @returns {void}
-   * @see https://developer.apple.com/reference/dispatch/dispatchqueue/2300100-asyncafter
+   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2300100-asyncafter
    */
   asyncAfterExecute(deadline, qos, flags, work) {
   }
@@ -165,7 +165,7 @@ export default class DispatchQueue extends DispatchObject {
    * @access public
    * @param {DispatchSpecificKey<T>} key - 
    * @returns {?T} - 
-   * @see https://developer.apple.com/reference/dispatch/dispatchqueue/1780751-getspecific
+   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1780751-getspecific
    */
   getSpecific(key) {
     return null
@@ -177,7 +177,7 @@ export default class DispatchQueue extends DispatchObject {
    * @param {DispatchSpecificKey<T>} key - 
    * @param {T} value - 
    * @returns {void}
-   * @see https://developer.apple.com/reference/dispatch/dispatchqueue/1780629-setspecific
+   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1780629-setspecific
    */
   setSpecific(key, value) {
   }
@@ -188,7 +188,7 @@ export default class DispatchQueue extends DispatchObject {
    * @param {DispatchWorkItemFlags} flags - 
    * @returns {void}
    * @throws {Error}
-   * @see https://developer.apple.com/reference/dispatch/dispatchqueue/2016077-sync
+   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2016077-sync
    */
   sync(flags) {
   }
@@ -198,7 +198,7 @@ export default class DispatchQueue extends DispatchObject {
    * 
    * @type {string}
    * @desc 
-   * @see https://developer.apple.com/reference/dispatch/dispatchqueue/1780825-label
+   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1780825-label
    */
   get label() {
     return this._label
@@ -207,7 +207,7 @@ export default class DispatchQueue extends DispatchObject {
    * 
    * @type {DispatchQoS}
    * @desc 
-   * @see https://developer.apple.com/reference/dispatch/dispatchqueue/1781008-qos
+   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1781008-qos
    */
   get qos() {
     return this._qos
@@ -218,7 +218,7 @@ export default class DispatchQueue extends DispatchObject {
    * 
    * @type {DispatchQueue}
    * @desc 
-   * @see https://developer.apple.com/reference/dispatch/dispatchqueue/1781006-main
+   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/1781006-main
    */
   static get main() {
     return _main
@@ -232,7 +232,7 @@ export default class DispatchQueue extends DispatchObject {
    * @param {number} iterations - 
    * @param {function(arg1: number): void} work - 
    * @returns {void}
-   * @see https://developer.apple.com/reference/dispatch/dispatchqueue/2016088-concurrentperform
+   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2016088-concurrentperform
    */
   static concurrentPerformExecute(iterations, work) {
   }
@@ -243,7 +243,7 @@ export default class DispatchQueue extends DispatchObject {
    * @access public
    * @param {DispatchQueue.GlobalQueuePriority} priority - 
    * @returns {DispatchQueue} - 
-   * @see https://developer.apple.com/reference/dispatch/dispatchqueue/2300070-global
+   * @see https://developer.apple.com/documentation/dispatch/dispatchqueue/2300070-global
    */
   static global(priority) {
     return null

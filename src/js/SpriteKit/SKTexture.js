@@ -11,7 +11,7 @@ import SKTextureFilteringMode from './SKTextureFilteringMode'
  * A representation of an image for use in SpriteKit.
  * @access public
  * @extends {NSObject}
- * @see https://developer.apple.com/reference/spritekit/sktexture
+ * @see https://developer.apple.com/documentation/spritekit/sktexture
  */
 export default class SKTexture extends NSObject {
   /**
@@ -27,14 +27,14 @@ export default class SKTexture extends NSObject {
     /**
      * The filtering mode used when the size of a sprite drawn with the texture is not drawn at the texture’s native size.
      * @type {SKTextureFilteringMode}
-     * @see https://developer.apple.com/reference/spritekit/sktexture/1519659-filteringmode
+     * @see https://developer.apple.com/documentation/spritekit/sktexture/1519659-filteringmode
      */
     this.filteringMode = SKTextureFilteringMode.linear
 
     /**
      * A Boolean value that indicates whether the texture attempts to generate mipmaps.
      * @type {boolean}
-     * @see https://developer.apple.com/reference/spritekit/sktexture/1519960-usesmipmaps
+     * @see https://developer.apple.com/documentation/spritekit/sktexture/1519960-usesmipmaps
      */
     this.usesMipmaps = false
 
@@ -57,7 +57,7 @@ export default class SKTexture extends NSObject {
    * @param {string} name - The name of the image file.
    * @returns {void}
    * @desc The new texture object is initialized with the name of the image file and then control returns immediately to your game. Sprite Kit loads and prepares the texture data when it is needed by your game.When loading the texture data, Sprite Kit searches the app bundle for an image file with the specified filename. If a matching image file cannot be found, Sprite Kit searches for the texture in any texture atlases stored in the app bundle. If the specified image does not exist anywhere in the bundle, Sprite Kit creates a placeholder texture image.
-   * @see https://developer.apple.com/reference/spritekit/sktexture/1520086-init
+   * @see https://developer.apple.com/documentation/spritekit/sktexture/1520086-init
    */
   static textureWithImageNamed(name) {
     const texture = new SKTexture()
@@ -71,7 +71,7 @@ export default class SKTexture extends NSObject {
    * @param {Image} image - An image.
    * @returns {void}
    * @desc The image data is copied before control is returned to your game.
-   * @see https://developer.apple.com/reference/spritekit/sktexture/1520136-init
+   * @see https://developer.apple.com/documentation/spritekit/sktexture/1520136-init
    */
   static textureWithImage(image) {
     const texture = new SKTexture()
@@ -86,7 +86,7 @@ export default class SKTexture extends NSObject {
    * @param {CGImage} image - A Quartz 2D image (CGImage) object. For more information, see Quartz 2D Programming Guide and CGImage.
    * @returns {void}
    * @desc The image data is copied before control is returned to your game.
-   * @see https://developer.apple.com/reference/spritekit/sktexture/1519576-init
+   * @see https://developer.apple.com/documentation/spritekit/sktexture/1519576-init
    */
   static textureWithCgImage(image) {
     const texture = new SKTexture()
@@ -118,7 +118,7 @@ let rect = CGRect(origin: originalTexture.textureRect().origin,
 let croppedTexture = SKTexture(rect: rect,
                                in: originalTexture)
 
-   * @see https://developer.apple.com/reference/spritekit/sktexture/1520425-init
+   * @see https://developer.apple.com/documentation/spritekit/sktexture/1520425-init
    */
   static textureWithRectIn(rect, texture) {
     const texutre = new SKTexture()
@@ -131,7 +131,7 @@ let croppedTexture = SKTexture(rect: rect,
    * @param {CIFilter} filter - A Core Image filter that requires a single inputImage parameter and produces an outputImage parameter.
    * @returns {SKTexture} - 
    * @desc The image data is copied before control is returned to your game.
-   * @see https://developer.apple.com/reference/spritekit/sktexture/1520388-applying
+   * @see https://developer.apple.com/documentation/spritekit/sktexture/1520388-applying
    */
   applying(filter) {
     return null
@@ -141,7 +141,7 @@ let croppedTexture = SKTexture(rect: rect,
    * Returns the texture’s image data as a Quartz 2D image.
    * @access public
    * @returns {CGImage} - 
-   * @see https://developer.apple.com/reference/spritekit/sktexture/1519755-cgimage
+   * @see https://developer.apple.com/documentation/spritekit/sktexture/1519755-cgimage
    */
   cgImage() {
     return this._image
@@ -184,7 +184,7 @@ let data = Data(bytes: bytes)
 let texture = SKTexture(data: data,
                         size: CGSize(width: width, height: height))
 
-   * @see https://developer.apple.com/reference/spritekit/sktexture/1519962-init
+   * @see https://developer.apple.com/documentation/spritekit/sktexture/1519962-init
    */
   static textureWithDataSize(pixelData, size) {
   }
@@ -195,7 +195,7 @@ let texture = SKTexture(data: data,
    * Creates a normal map texture by analyzing the contents of an existing texture.
    * @access public
    * @returns {SKTexture} - 
-   * @see https://developer.apple.com/reference/spritekit/sktexture/1519687-generatingnormalmap
+   * @see https://developer.apple.com/documentation/spritekit/sktexture/1519687-generatingnormalmap
    */
   generatingNormalMap() {
     return null
@@ -207,7 +207,7 @@ let texture = SKTexture(data: data,
    * @param {number} smoothness - A number between 0.0 and 1.0 indicating how much the texture should be smoothed before the normal map is generated. A value of 0.0 means that the texture is not smoothed at all before being processed.
    * @param {number} contrast - A value used to magnify the effect of the generated normal map. A value of 1.0 indicates no magnification is applied.
    * @returns {SKTexture} - 
-   * @see https://developer.apple.com/reference/spritekit/sktexture/1520441-generatingnormalmap
+   * @see https://developer.apple.com/documentation/spritekit/sktexture/1520441-generatingnormalmap
    */
   generatingNormalMapWithSmoothness(smoothness, contrast) {
     return null
@@ -264,7 +264,7 @@ scene.size.height / 2)
     scene.addChild(sprite)
 }
 
-   * @see https://developer.apple.com/reference/spritekit/sktexture/1520393-init
+   * @see https://developer.apple.com/documentation/spritekit/sktexture/1520393-init
    */
   static textureWithVectorNoiseWithSmoothness(smoothness, size) {
   }
@@ -317,7 +317,7 @@ for i in 0...2 {
     scene.addChild(sprite)
 }
 
-   * @see https://developer.apple.com/reference/spritekit/sktexture/1519971-init
+   * @see https://developer.apple.com/documentation/spritekit/sktexture/1519971-init
    */
   static textureWithNoiseWithSmoothness(smoothness, size, grayscale) {
   }
@@ -329,7 +329,7 @@ for i in 0...2 {
    * @access public
    * @returns {CGSize} - 
    * @desc If the texture was created using an image file and that image file hasn’t been loaded, calling this method forces the texture data to be loaded from the file.
-   * @see https://developer.apple.com/reference/spritekit/sktexture/1519772-size
+   * @see https://developer.apple.com/documentation/spritekit/sktexture/1519772-size
    */
   size() {
     if(this._image === null){
@@ -343,7 +343,7 @@ for i in 0...2 {
    * @access public
    * @returns {CGRect} - 
    * @desc The default value is a rectangle that covers the entire texture (0,0) - (1,1). You cannot set this value directly; to use only a portion of a texture, use the init(rect:in:) method to create a new texture.
-   * @see https://developer.apple.com/reference/spritekit/sktexture/1519707-texturerect
+   * @see https://developer.apple.com/documentation/spritekit/sktexture/1519707-texturerect
    */
   textureRect() {
     return null
@@ -357,7 +357,7 @@ for i in 0...2 {
    * @param {function(): void} completionHandler - A block called after the texture data is loaded.
    * @returns {void}
    * @desc SpriteKit creates a background task to load the texture data from the associated file, then returns control to your game. After the texture data is loaded, your completion handler is called. Typically, you use this method when you want to guarantee that a particular texture is in memory before accessing it.If you need to preload multiple textures at once, use the preload(_:withCompletionHandler:) method instead.
-   * @see https://developer.apple.com/reference/spritekit/sktexture/1520172-preload
+   * @see https://developer.apple.com/documentation/spritekit/sktexture/1520172-preload
    */
   preload(completionHandler) {
   }
@@ -369,7 +369,7 @@ for i in 0...2 {
    * @param {function(): void} completionHandler - A block called after all of the textures are loaded.
    * @returns {void}
    * @desc SpriteKit creates a background task that loads the texture data for all of the textures in the array, then returns control to your game. Your completion handler is called after all of the textures are loaded.
-   * @see https://developer.apple.com/reference/spritekit/sktexture/1519817-preload
+   * @see https://developer.apple.com/documentation/spritekit/sktexture/1519817-preload
    */
   static preloadWithCompletionHandler(textures, completionHandler) {
   }
@@ -379,7 +379,7 @@ for i in 0...2 {
    * 
    * @type {PlaygroundQuickLook}
    * @desc 
-   * @see https://developer.apple.com/reference/spritekit/sktexture/1645801-customplaygroundquicklook
+   * @see https://developer.apple.com/documentation/spritekit/sktexture/1645801-customplaygroundquicklook
    */
   get customPlaygroundQuickLook() {
     return this._customPlaygroundQuickLook

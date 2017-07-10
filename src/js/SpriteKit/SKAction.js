@@ -18,7 +18,7 @@ import SKColor from './SKColor'
  * An object that is executed by an SKNode to change its structure or content.
  * @access public
  * @extends {NSObject}
- * @see https://developer.apple.com/reference/spritekit/skaction
+ * @see https://developer.apple.com/documentation/spritekit/skaction
  */
 export default class SKAction extends NSObject {
 
@@ -31,7 +31,7 @@ export default class SKAction extends NSObject {
    * @param {string} name - The name of the action.
    * @param {string} url - The URL of the file containing the action.
    * @param {number} sec - The duration of the action, in seconds.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417754-init
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417754-init
    */
   constructor(name, url, sec) {
     super()
@@ -41,28 +41,28 @@ export default class SKAction extends NSObject {
     /**
      * A speed factor that modifies how fast an action runs.
      * @type {number}
-     * @see https://developer.apple.com/reference/spritekit/skaction/1417718-speed
+     * @see https://developer.apple.com/documentation/spritekit/skaction/1417718-speed
      */
     this._speed = 1.0
 
     /**
      * The timing mode used to execute an action.
      * @type {SKActionTimingMode}
-     * @see https://developer.apple.com/reference/spritekit/skaction/1417807-timingmode
+     * @see https://developer.apple.com/documentation/spritekit/skaction/1417807-timingmode
      */
     this._timingMode = SKActionTimingMode.linear
 
     /**
      * A block used to customize the timing function.
      * @type {SKActionTimingFunction}
-     * @see https://developer.apple.com/reference/spritekit/skaction/1417666-timingfunction
+     * @see https://developer.apple.com/documentation/spritekit/skaction/1417666-timingfunction
      */
     this._timingFunction = null
 
     /**
      * The duration required to complete an action.
      * @type {number}
-     * @see https://developer.apple.com/reference/spritekit/skaction/1417790-duration
+     * @see https://developer.apple.com/documentation/spritekit/skaction/1417790-duration
      */
     this._duration = 0
 
@@ -83,7 +83,7 @@ export default class SKAction extends NSObject {
   /**
    * A speed factor that modifies how fast an action runs.
    * @type {number}
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417718-speed
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417718-speed
    */
   get speed() {
     return this._speed
@@ -95,7 +95,7 @@ export default class SKAction extends NSObject {
   /**
    * The timing mode used to execute an action.
    * @type {SKActionTimingMode}
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417807-timingmode
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417807-timingmode
    */
   get timingMode() {
     return this._timingMode
@@ -107,7 +107,7 @@ export default class SKAction extends NSObject {
   /**
    * A block used to customize the timing function.
    * @type {SKActionTimingFunction}
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417666-timingfunction
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417666-timingfunction
    */
   get timingFunction() {
     return this._timingFunction
@@ -119,7 +119,7 @@ export default class SKAction extends NSObject {
   /**
    * The duration required to complete an action.
    * @type {number}
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417790-duration
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417790-duration
    */
   get duration() {
     return this._duration
@@ -289,7 +289,7 @@ export default class SKAction extends NSObject {
    * @access public
    * @param {string} name - The name of the action.
    * @returns {SKAction}
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417814-init
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417814-init
    */
   static actionWithName(name) {
     return new SKAction(name, null, 0.25)
@@ -301,7 +301,7 @@ export default class SKAction extends NSObject {
    * @param {string} name - The name of the action.
    * @param {number} sec - The duration of the action.
    * @returns {void}
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417697-init
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417697-init
    */
   static actionWithNamedDuration(name, sec) {
     return new SKAction(name, null, sec)
@@ -313,7 +313,7 @@ export default class SKAction extends NSObject {
    * @param {string} name - The name of the action.
    * @param {string} url - The URL of the file containing the action.
    * @returns {void}
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417680-init
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417680-init
    */
   static actionWithNamedFrom(name, url) {
     return new SKAction(name, url)
@@ -334,7 +334,7 @@ let action = SKAction.moveBy(x: -deltaX, y: -deltaX, duration: sec)
 let negDelta = CGVector(dx: -deltaX, dy: -deltaY)
 let action = SKAction.moveBy(x: -deltaX, y: -deltaX, duration: sec)
 
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417722-moveby
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417722-moveby
    */
   static moveByXYDuration(deltaX, deltaY, sec) {
     return null
@@ -351,7 +351,7 @@ let action = SKAction.move(by: negDelta, duration: sec)
 let negDelta = CGVector(dx: -deltaX, dy: -deltaY)
 let action = SKAction.move(by: negDelta, duration: sec)
 
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417739-move
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417739-move
    */
   static moveByDuration(delta, sec) {
     return null
@@ -364,7 +364,7 @@ let action = SKAction.move(by: negDelta, duration: sec)
    * @param {number} sec - The duration of the animation.
    * @returns {SKAction} - 
    * @desc When the action executes, the node’s position property animates from its current position to its new position.This action is not reversible; the reverse of this action has the same duration but does not move the node.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417768-move
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417768-move
    */
   static moveToDuration(location, sec) {
     return null
@@ -377,7 +377,7 @@ let action = SKAction.move(by: negDelta, duration: sec)
    * @param {number} sec - The duration of the animation.
    * @returns {SKAction} - 
    * @desc Calling this method is equivalent to calling the follow(_:asOffset:orientToPath:duration:) method, passing in true to both the offset and orient parameters.This action is reversible; the resulting action creates and then follows a reversed path with the same duration.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417822-follow
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417822-follow
    */
   static followDuration(path, sec) {
     return null
@@ -390,7 +390,7 @@ let action = SKAction.move(by: negDelta, duration: sec)
    * @param {number} speed - The speed at which the node should move, in points per second.
    * @returns {SKAction} - 
    * @desc Calling this method is equivalent to calling the follow(_:asOffset:orientToPath:speed:) method, passing in true to both the offset and orient parameters.This action is reversible; the resulting action creates and then follows a reversed path with the same speed.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417786-follow
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417786-follow
    */
   static follow(path, speed) {
     return null
@@ -405,7 +405,7 @@ let action = SKAction.move(by: negDelta, duration: sec)
    * @param {number} sec - The duration of the animation.
    * @returns {SKAction} - 
    * @desc When the action executes, the node’s position and zRotation properties are animated along the provided path.This action is reversible; the resulting action creates a reversed path and then follows it, with the same duration.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417662-follow
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417662-follow
    */
   static followAsOffsetOrientToPathDuration(path, offset, orient, sec) {
     return null
@@ -420,7 +420,7 @@ let action = SKAction.move(by: negDelta, duration: sec)
    * @param {number} speed - The speed at which the node should move, in points per second.
    * @returns {SKAction} - 
    * @desc When the action executes, the node’s position and zRotation properties are animated along the provided path. The duration of the action is determined by the length of the path and the speed of the node.This action is reversible; the resulting action creates a reversed path and then follows it, with the same speed.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417798-follow
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417798-follow
    */
   static followAsOffsetOrientToPath(path, offset, orient, speed) {
     return null
@@ -437,7 +437,7 @@ let action = SKAction.move(by: negDelta, duration: sec)
    * @desc When the action executes, the node’s zRotation property animates to the new angle.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.rotate(byAngle: -radians, duration: sec)
 let action = SKAction.rotate(byAngle: -radians, duration: sec)
 
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417805-rotate
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417805-rotate
    */
   static rotateByAngleDuration(radians, sec) {
     return null
@@ -450,7 +450,7 @@ let action = SKAction.rotate(byAngle: -radians, duration: sec)
    * @param {number} sec - The duration of the animation.
    * @returns {SKAction} - 
    * @desc When the action executes, the node’s zRotation property is interpolated to the new angle.This action is not reversible; the reverse of this action has the same duration but does not change anything.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417668-rotate
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417668-rotate
    */
   static rotateToAngleDuration(radians, sec) {
     return null
@@ -467,7 +467,7 @@ let action = SKAction.rotate(byAngle: -radians, duration: sec)
    * @desc When the action executes, the node’s speed property animates to the new value.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.speed(by: -speed, duration: sec)
 let action = SKAction.speed(by: -speed, duration: sec)
 
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417690-speed
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417690-speed
    */
   static speedByDuration(speed, sec) {
     return null
@@ -480,7 +480,7 @@ let action = SKAction.speed(by: -speed, duration: sec)
    * @param {number} sec - The duration of the animation.
    * @returns {SKAction} - 
    * @desc When the action executes, the node’s speed property animates to the new value.This action is not reversible; the reverse of this action has the same duration but does not change anything.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417684-speed
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417684-speed
    */
   static speedToDuration(speed, sec) {
     return null
@@ -497,7 +497,7 @@ let action = SKAction.speed(by: -speed, duration: sec)
    * @desc When the action executes, the node’s xScale and yScale properties are animated to the new value.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.scale(by: -scale, duration: sec)
 let action = SKAction.scale(by: -scale, duration: sec)
 
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417741-scale
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417741-scale
    */
   static scaleByDuration(scale, sec) {
     return null
@@ -510,7 +510,7 @@ let action = SKAction.scale(by: -scale, duration: sec)
    * @param {number} sec - The duration of the animation.
    * @returns {SKAction} - 
    * @desc When the action executes, the node’s xScale and yScale properties are animated to achieve the specified size in its parent's coordinate space. This action is not reversible; the reverse of this action has the same duration but does not change anything.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1643619-scale
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1643619-scale
    */
   static scaleToDuration(size, sec) {
     return null
@@ -526,7 +526,7 @@ let action = SKAction.scale(by: -scale, duration: sec)
    * @desc When the action executes, the node’s xScale and yScale properties are animated to the new value.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.scaleX(by: -scaleX, y: -scaleY, duration: sec)
 let action = SKAction.scaleX(by: -scaleX, y: -scaleY, duration: sec)
 
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417796-scalex
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417796-scalex
    */
   static scaleXByYDuration(xScale, yScale, sec) {
     return null
@@ -540,7 +540,7 @@ let action = SKAction.scaleX(by: -scaleX, y: -scaleY, duration: sec)
    * @param {number} sec - The duration of the animation.
    * @returns {SKAction} - 
    * @desc When the action executes, the node’s xScale and yScale properties are animated to the new value.This action is not reversible; the reverse of this action has the same duration but does not change anything.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417728-scalex
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417728-scalex
    */
   static scaleXToYDuration(xScale, yScale, sec) {
     return null
@@ -553,7 +553,7 @@ let action = SKAction.scaleX(by: -scaleX, y: -scaleY, duration: sec)
    * @param {number} sec - The duration of the animation.
    * @returns {SKAction} - 
    * @desc When the action executes, the node’s xScale property animates to the new value.This action is not reversible; the reverse of this action has the same duration but does not change anything.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417699-scalex
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417699-scalex
    */
   static scaleXToDuration(scale, sec) {
     return null
@@ -566,7 +566,7 @@ let action = SKAction.scaleX(by: -scaleX, y: -scaleY, duration: sec)
    * @param {number} sec - The duration of the animation.
    * @returns {SKAction} - 
    * @desc When the action executes, the node’s yScale property animates to the new value.This action is not reversible; the reverse of this action has the same duration but does not change anything.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417708-scaley
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417708-scaley
    */
   static scaleYToDuration(scale, sec) {
     return null
@@ -579,7 +579,7 @@ let action = SKAction.scaleX(by: -scaleX, y: -scaleY, duration: sec)
    * @access public
    * @returns {SKAction} - 
    * @desc This action has an instantaneous duration. When the action executes, the node’s isHidden property is set to false.This action is reversible; the reversed action hides the node.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417660-unhide
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417660-unhide
    */
   static unhide() {
     return null
@@ -590,7 +590,7 @@ let action = SKAction.scaleX(by: -scaleX, y: -scaleY, duration: sec)
    * @access public
    * @returns {SKAction} - 
    * @desc This action has an instantaneous duration. When the action executes, the node’s isHidden property is set to true.This action is reversible; the reversed action shows the node.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417704-hide
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417704-hide
    */
   static hide() {
     return null
@@ -606,7 +606,7 @@ let action = SKAction.scaleX(by: -scaleX, y: -scaleY, duration: sec)
    * @desc When the action executes, the node’s alpha property animates from its current value to 1.0.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.fadeOut(withDuration: sec)
 let action = SKAction.fadeOut(withDuration: sec)
 
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417818-fadein
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417818-fadein
    */
   static fadeInWithDuration(sec) {
     return null
@@ -620,7 +620,7 @@ let action = SKAction.fadeOut(withDuration: sec)
    * @desc When the action executes, the node’s alpha property animates from its current value to 0.0. This causes the node to disappear.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.fadeIn(withDuration: sec)
 let action = SKAction.fadeIn(withDuration: sec)
 
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417738-fadeout
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417738-fadeout
    */
   static fadeOutWithDuration(sec) {
     return null
@@ -635,7 +635,7 @@ let action = SKAction.fadeIn(withDuration: sec)
    * @desc When the action executes, the node’s alpha property animates to its new value.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.fadeAlpha(by: -factor, duration: sec)
 let action = SKAction.fadeAlpha(by: -factor, duration: sec)
 
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417716-fadealpha
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417716-fadealpha
    */
   static fadeAlphaByDuration(factor, sec) {
     return null
@@ -648,7 +648,7 @@ let action = SKAction.fadeAlpha(by: -factor, duration: sec)
    * @param {number} sec - The duration of the animation.
    * @returns {SKAction} - 
    * @desc When the action executes, the node’s alpha property animates to its new value.This action is not reversible; the reverse of this action has the same duration but does not change anything.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417673-fadealpha
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417673-fadealpha
    */
   static fadeAlphaToDuration(alpha, sec) {
     return null
@@ -666,7 +666,7 @@ let action = SKAction.fadeAlpha(by: -factor, duration: sec)
    * @desc This action can only be executed by a SKSpriteNode object. When the action executes, the sprite’s size property animates to its new value.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.resize(byWidth: -width, height: -height, duration: sec)
 let action = SKAction.resize(byWidth: -width, height: -height, duration: sec)
 
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417812-resize
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417812-resize
    */
   static resizeByWidth(width, height, duration) {
     return null
@@ -679,7 +679,7 @@ let action = SKAction.resize(byWidth: -width, height: -height, duration: sec)
    * @param {number} duration - The duration of the animation.
    * @returns {SKAction} - 
    * @desc This action can only be executed by an SKSpriteNode object. When the action executes, the sprite’s size property animates to its new value.This action is not reversible; the reverse of this action has the same duration but does not change anything.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417825-resize
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417825-resize
    */
   static resizeToHeight(height, duration) {
     return null
@@ -692,7 +692,7 @@ let action = SKAction.resize(byWidth: -width, height: -height, duration: sec)
    * @param {number} duration - The duration of the animation.
    * @returns {SKAction} - 
    * @desc This action can only be executed by an SKSpriteNode object. When the action executes, the sprite’s size property animates to its new value.This action is not reversible; the reverse of this action has the same duration but does not change anything.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417686-resize
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417686-resize
    */
   static resizeToWidth(width, duration) {
     return null
@@ -704,7 +704,7 @@ let action = SKAction.resize(byWidth: -width, height: -height, duration: sec)
    * @param {SKTexture} texture - The new texture to use on the sprite.
    * @returns {SKAction} - 
    * @desc This action can only be executed by an SKSpriteNode object. When the action executes, the sprite’s texture property changes immediately to the new texture.This action is not reversible; the reverse of this action does nothing.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417784-settexture
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417784-settexture
    */
   static setTexture(texture) {
     return null
@@ -717,7 +717,7 @@ let action = SKAction.resize(byWidth: -width, height: -height, duration: sec)
    * @param {number} sec - The duration, in seconds, that each texture is displayed. 
    * @returns {SKAction} - 
    * @desc This action can only be executed by an SKSpriteNode object. When the action executes, the sprite’s texture property animates through the array of textures. The sprite’s texture property is changed to the next texture in the array. The action then pauses for the specified time before continuing. The action continues until it has finished animating through all of the textures in the array. The total duration of the action is the number of textures multiplied by the frame interval.This action is reversible; the resulting action animates through the same textures from last to first.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417828-animate
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417828-animate
    */
   static animateWithTimePerFrame(textures, sec) {
     return null
@@ -729,7 +729,7 @@ let action = SKAction.resize(byWidth: -width, height: -height, duration: sec)
    * @param {SKTexture} texture - The new texture to use on the sprite.
    * @returns {SKAction} - 
    * @desc This action can only be executed by an SKSpriteNode object. When the action executes, the sprite’s normalTexture property changes immediately to the new texture.This action is not reversible; the reverse of this action does nothing.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417706-setnormaltexture
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417706-setnormaltexture
    */
   static setNormalTexture(texture) {
     return null
@@ -742,7 +742,7 @@ let action = SKAction.resize(byWidth: -width, height: -height, duration: sec)
    * @param {number} sec - The amount of time that each texture is displayed.
    * @returns {SKAction} - 
    * @desc This action can only be executed by an SKSpriteNode object. When the action executes, the sprite’s normalTexture property animates through the array of textures. The sprite’s normalTexture property is changed to the next texture in the array. The action then pauses for the specified time before continuing. The action continues until it has finished animating through all of the textures in the array. The total duration of the action is the number of textures multiplied by the frame interval.This action is reversible; the resulting action animates through the same textures from last to first.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417746-animate
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417746-animate
    */
   static animateWithNormalTexturesTimePerFrame(textures, sec) {
     return null
@@ -756,7 +756,7 @@ let action = SKAction.resize(byWidth: -width, height: -height, duration: sec)
    * @param {number} sec - The duration of the animation.
    * @returns {SKAction} - 
    * @desc This action can only be executed by an SKSpriteNode object. When the action executes, the sprite’s color and colorBlendFactor properties are animated to their new values.This action is not reversible; the reverse of this action does nothing.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417678-colorize
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417678-colorize
    */
   static colorizeWithDuration(color, colorBlendFactor, sec) {
     return null
@@ -771,7 +771,7 @@ let action = SKAction.resize(byWidth: -width, height: -height, duration: sec)
    * @param {number} sec - The duration over which the force is applied to the physics body.
    * @returns {SKAction} - 
    * @desc When the action executes, the force is applied continuously to the physics body for the duration of the action. This action accelerates the body without imparting any angular acceleration to it.This action is reversible; it applies an equal force in the opposite direction.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417782-applyforce
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417782-applyforce
    */
   static applyForceDuration(force, sec) {
     return null
@@ -784,7 +784,7 @@ let action = SKAction.resize(byWidth: -width, height: -height, duration: sec)
    * @param {number} sec - The duration over which the torque is applied to the physics body.
    * @returns {SKAction} - 
    * @desc When the action executes, the torque is applied continuously to the physics body for the duration of the action. This action generates an angular acceleration on the body without causing any linear acceleration.This action is reversible; it applies an equal torque in the opposite direction.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417756-applytorque
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417756-applytorque
    */
   static applyTorqueDuration(torque, sec) {
     return null
@@ -798,7 +798,7 @@ let action = SKAction.resize(byWidth: -width, height: -height, duration: sec)
    * @param {number} sec - The duration over which the force is applied to the physics body.
    * @returns {SKAction} - 
    * @desc When the action executes, the force is applied continuously to the physics body for the duration of the action. Because the force is applied to a specific point on the body, it may impart both linear acceleration and angular acceleration. This action is reversible; it applies an equal force in the opposite direction.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417823-applyforce
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417823-applyforce
    */
   static applyForceAtDuration(force, point, sec) {
     return null
@@ -811,7 +811,7 @@ let action = SKAction.resize(byWidth: -width, height: -height, duration: sec)
    * @param {number} sec - The duration over which the total impulse should be applied to the physics body.
    * @returns {SKAction} - 
    * @desc When the action executes, applies a constant force to the physics body for the duration of the action. The force is calculated by dividing the impulse strength by the duration of the action. For example, if an impulse of 1 Newton-second is applied to the physics body, and the the duration is 10 seconds, then a force of 0.1 Newtons is applied to the physics body.This action is reversible; it applies an equal impulse in the opposite direction.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417770-applyimpulse
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417770-applyimpulse
    */
   static applyImpulseDuration(impulse, sec) {
     return null
@@ -824,7 +824,7 @@ let action = SKAction.resize(byWidth: -width, height: -height, duration: sec)
    * @param {number} sec - The number of seconds over which to apply the impulse. For example, if you specify a duration of four seconds, one quarter of the impulse will be applied each second.
    * @returns {SKAction} - 
    * @desc When the action executes, applies a constant torque to the physics body for the duration of the action. The torque is calculated by dividing the impulse strength by the duration of the action. This action affects the body’s angular velocity without changing the body’s linear velocity.This action is reversible; it applies an equal angular impulse in the opposite direction.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417775-applyangularimpulse
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417775-applyangularimpulse
    */
   static applyAngularImpulseDuration(impulse, sec) {
     return null
@@ -838,7 +838,7 @@ let action = SKAction.resize(byWidth: -width, height: -height, duration: sec)
    * @param {number} sec - A new action object.
    * @returns {SKAction} - 
    * @desc When the action executes, applies a constant force to the physics body for the duration of the action. The force is calculated by dividing the impulse strength by the duration of the action. For example, if an impulse of 1 Newton-second is applied to the physics body, and the the duration is 10 seconds, then a force of 0.1 Newtons is applied to the physics body. Because the force is applied to a specific point on the body, it may impart both linear acceleration and angular acceleration.This action is reversible; it applies an equal impulse in the opposite direction.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417732-applyimpulse
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417732-applyimpulse
    */
   static applyImpulseAtDuration(impulse, point, sec) {
     return null
@@ -851,7 +851,7 @@ let action = SKAction.resize(byWidth: -width, height: -height, duration: sec)
    * @param {number} duration - The duration of the animation.
    * @returns {SKAction} - 
    * @desc When the action executes, the physics body’s charge property animates from its current value to its new value.This action is not reversible.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417752-changecharge
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417752-changecharge
    */
   static changeChargeTo(v, duration) {
     return null
@@ -866,7 +866,7 @@ let action = SKAction.resize(byWidth: -width, height: -height, duration: sec)
    * @desc When the action executes, the physics body’s charge property animates from its current value to its new value.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.changeCharge(by: -v, duration: sec)
 let action = SKAction.changeCharge(by: -v, duration: sec)
 
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417714-changecharge
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417714-changecharge
    */
   static changeChargeBy(v, duration) {
     return null
@@ -879,7 +879,7 @@ let action = SKAction.changeCharge(by: -v, duration: sec)
    * @param {number} duration - The duration of the animation.
    * @returns {SKAction} - 
    * @desc When the action executes, the physics body’s mass property animates from its current value to its new value.This action is not reversible.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417780-changemass
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417780-changemass
    */
   static changeMassTo(v, duration) {
     return null
@@ -894,7 +894,7 @@ let action = SKAction.changeCharge(by: -v, duration: sec)
    * @desc When the action executes, the physics body’s mass property animates from its current value to its new value.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.changeMass(by: -v, duration: sec)
 let action = SKAction.changeMass(by: -v, duration: sec)
 
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417710-changemass
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417710-changemass
    */
   static changeMassBy(v, duration) {
     return null
@@ -907,7 +907,7 @@ let action = SKAction.changeMass(by: -v, duration: sec)
    * @param {number} sec - The duration of the animation.
    * @returns {SKAction} - 
    * @desc When the action executes, the field node’s strength property animates from its current value to its new value.This action is not reversible; the reverse of this action has the same duration but does not do anything.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417815-strength
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417815-strength
    */
   static strengthToDuration(strength, sec) {
     return null
@@ -922,7 +922,7 @@ let action = SKAction.changeMass(by: -v, duration: sec)
    * @desc When the action executes, the field node’s strength property animates from its current value to its new value.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.strength(by: -strength, duration: sec)
 let action = SKAction.strength(by: -strength, duration: sec)
 
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417762-strength
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417762-strength
    */
   static strengthByDuration(strength, sec) {
     return null
@@ -935,7 +935,7 @@ let action = SKAction.strength(by: -strength, duration: sec)
    * @param {number} sec - The duration of the animation, in seconds.
    * @returns {SKAction} - 
    * @desc When the action runs, the field node’s falloff property animates from its current value to its new value. This action is not reversible.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417758-falloff
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417758-falloff
    */
   static falloffToDuration(falloff, sec) {
     return null
@@ -950,7 +950,7 @@ let action = SKAction.strength(by: -strength, duration: sec)
    * @desc When the action executes, the field node’s falloff property animates from its current value to its new value.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.falloff(by: -falloff, duration: sec)
 let action = SKAction.falloff(by: -falloff, duration: sec)
 
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417766-falloff
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417766-falloff
    */
   static falloffByDuration(falloff, sec) {
     return null
@@ -965,7 +965,7 @@ let action = SKAction.falloff(by: -falloff, duration: sec)
    * @param {number[]} times - The times at which each warp distortion in the sequence should complete.
    * @returns {?SKAction} - 
    * @desc The numberOfColumns and numberOfRows in each geometry in the sequence should match.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1690937-animate
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1690937-animate
    */
   static animateWithWarps(warps, times) {
     return null
@@ -978,7 +978,7 @@ let action = SKAction.falloff(by: -falloff, duration: sec)
    * @param {number} duration - The duration of the animation.
    * @returns {?SKAction} - 
    * @desc The numberOfColumns and numberOfRows in the node's current geometry should match those of the specified geometry.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1690951-warp
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1690951-warp
    */
   static warpTo(warp, duration) {
     return null
@@ -993,7 +993,7 @@ let action = SKAction.falloff(by: -falloff, duration: sec)
    * @param {boolean} wait - If true, the duration of this action is the same as the length of the audio playback. If false, the action is considered to have completed immediately.
    * @returns {SKAction} - 
    * @desc Use SKAction playSoundFileNamed:waitForCompletion: only for short incidentals. Use AVAudioPlayer for long running background music. This action is not reversible; the reversed action is identical to the original action.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417664-playsoundfilenamed
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417664-playsoundfilenamed
    */
   static playSoundFileNamedWaitForCompletion(soundFile, wait) {
     return null
@@ -1004,7 +1004,7 @@ let action = SKAction.falloff(by: -falloff, duration: sec)
    * @access public
    * @returns {SKAction} - 
    * @desc This action may only be executed on an SKAudioNode object.This action is not reversible.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417730-play
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417730-play
    */
   static play() {
     return null
@@ -1015,7 +1015,7 @@ let action = SKAction.falloff(by: -falloff, duration: sec)
    * @access public
    * @returns {SKAction} - 
    * @desc This action may only be executed on an SKAudioNode object. The audio is paused, and if restarted, resumes at where it was paused.This action is not reversible.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417820-pause
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417820-pause
    */
   static pause() {
     return null
@@ -1026,7 +1026,7 @@ let action = SKAction.falloff(by: -falloff, duration: sec)
    * @access public
    * @returns {SKAction} - 
    * @desc This action may only be executed on an SKAudioNode object. The audio is stopped, and if restarted, begins at the beginning.This action is not reversible.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417794-stop
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417794-stop
    */
   static stop() {
     return null
@@ -1039,7 +1039,7 @@ let action = SKAction.falloff(by: -falloff, duration: sec)
    * @param {number} duration - The duration of the animation, in seconds.
    * @returns {SKAction} - 
    * @desc When the action executes, the audio node’s playback rate animates from its current value to its new value. For more information, see AVAudio3DMixing.This action is not reversible.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417808-changeplaybackrate
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417808-changeplaybackrate
    */
   static changePlaybackRateTo(v, duration) {
     return null
@@ -1054,7 +1054,7 @@ let action = SKAction.falloff(by: -falloff, duration: sec)
    * @desc When the action executes, the audio node’s playback rate animates from its current value to its new value. For more information, see AVAudio3DMixing.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.changePlaybackRate(by: -v, duration: sec)
 let action = SKAction.changePlaybackRate(by: -v, duration: sec)
 
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417670-changeplaybackrate
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417670-changeplaybackrate
    */
   static changePlaybackRateBy(v, duration) {
     return null
@@ -1067,7 +1067,7 @@ let action = SKAction.changePlaybackRate(by: -v, duration: sec)
    * @param {number} duration - The duration of the animation, in seconds.
    * @returns {SKAction} - 
    * @desc When the action executes, the audio node’s volume animates from its current value to its new value. For more information, see AVAudio3DMixing.This action is not reversible.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417682-changevolume
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417682-changevolume
    */
   static changeVolumeTo(v, duration) {
     return null
@@ -1082,7 +1082,7 @@ let action = SKAction.changePlaybackRate(by: -v, duration: sec)
    * @desc When the action executes, the audio node’s volume animates from its current value to its new value. For more information, see AVAudio3DMixing.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.changeVolume(by: -v, duration: sec)
 let action = SKAction.changeVolume(by: -v, duration: sec)
 
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417726-changevolume
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417726-changevolume
    */
   static changeVolumeBy(v, duration) {
     return null
@@ -1095,7 +1095,7 @@ let action = SKAction.changeVolume(by: -v, duration: sec)
    * @param {number} duration - The duration of the animation, in seconds.
    * @returns {SKAction} - 
    * @desc When the action executes, the audio node’s obstruction animates from its current value to its new value. Passing this action a value of -100 yields the greatest reduction in volume. For more information, see AVAudio3DMixing.This action is not reversible.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1519718-changeobstruction
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1519718-changeobstruction
    */
   static changeObstructionTo(v, duration) {
     return null
@@ -1110,7 +1110,7 @@ let action = SKAction.changeVolume(by: -v, duration: sec)
    * @desc When the action executes, the audio node’s obstruction animates from its current value to its new value. For more information, see AVAudio3DMixing.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.changeObstruction(by: -v, duration: sec)
 let action = SKAction.changeObstruction(by: -v, duration: sec)
 
-   * @see https://developer.apple.com/reference/spritekit/skaction/1520346-changeobstruction
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1520346-changeobstruction
    */
   static changeObstructionBy(v, duration) {
     return null
@@ -1123,7 +1123,7 @@ let action = SKAction.changeObstruction(by: -v, duration: sec)
    * @param {number} duration - The duration of the animation, in seconds.
    * @returns {SKAction} - 
    * @desc When the action executes, the audio node’s occlusion animates from its current value to its new value. Passing this action a value of -100 yields the greatest reduction in volume. For more information, see AVAudio3DMixing.This action is not reversible.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1520433-changeocclusion
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1520433-changeocclusion
    */
   static changeOcclusionTo(v, duration) {
     return null
@@ -1138,7 +1138,7 @@ let action = SKAction.changeObstruction(by: -v, duration: sec)
    * @desc When the action executes, the audio node’s occlusion animates from its current value to its new value. For more information, see AVAudio3DMixing.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.changeOcclusion(by: -v, duration: sec)
 let action = SKAction.changeOcclusion(by: -v, duration: sec)
 
-   * @see https://developer.apple.com/reference/spritekit/skaction/1520117-changeocclusion
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1520117-changeocclusion
    */
   static changeOcclusionBy(v, duration) {
     return null
@@ -1151,7 +1151,7 @@ let action = SKAction.changeOcclusion(by: -v, duration: sec)
    * @param {number} duration - The duration of the animation, in seconds.
    * @returns {SKAction} - 
    * @desc When the action executes, the audio node’s reverb animates from its current value to its new value. For more information, see AVAudio3DMixing.This action is not reversible.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1520320-changereverb
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1520320-changereverb
    */
   static changeReverbTo(v, duration) {
     return null
@@ -1166,7 +1166,7 @@ let action = SKAction.changeOcclusion(by: -v, duration: sec)
    * @desc When the action executes, the audio node’s reverb animates from its current value to its new value. For more information, see AVAudio3DMixing.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.changeReverb(by: -v, duration: sec)
 let action = SKAction.changeReverb(by: -v, duration: sec)
 
-   * @see https://developer.apple.com/reference/spritekit/skaction/1519568-changereverb
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1519568-changereverb
    */
   static changeReverbBy(v, duration) {
     return null
@@ -1179,7 +1179,7 @@ let action = SKAction.changeReverb(by: -v, duration: sec)
    * @param {number} duration - The duration of the animation, in seconds.
    * @returns {SKAction} - 
    * @desc When the action executes, the audio node’s stereo panning animates from its current value to its new value. For more information, see AVAudio3DMixing.This action is not reversible.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1519976-stereopan
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1519976-stereopan
    */
   static stereoPanTo(v, duration) {
     return null
@@ -1194,7 +1194,7 @@ let action = SKAction.changeReverb(by: -v, duration: sec)
    * @desc When the action executes, the audio node’s stereo panning animates from its current value to its new value. For more information, see AVAudio3DMixing.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.stereoPan(by: -v, duration: sec)
 let action = SKAction.stereoPan(by: -v, duration: sec)
 
-   * @see https://developer.apple.com/reference/spritekit/skaction/1519713-stereopan
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1519713-stereopan
    */
   static stereoPanBy(v, duration) {
     return null
@@ -1207,7 +1207,7 @@ let action = SKAction.stereoPan(by: -v, duration: sec)
    * @access public
    * @returns {SKAction} - 
    * @desc When the action executes, the node is immediately removed from its parent.This action is not reversible; the reverse of this action is the same action.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417748-removefromparent
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417748-removefromparent
    */
   static removeFromParent() {
     return null
@@ -1222,7 +1222,7 @@ let action = SKAction.stereoPan(by: -v, duration: sec)
    * @param {string} name - The name of a child object. See the name property on the SKNode object.
    * @returns {SKAction} - 
    * @desc This action has an instantaneous duration, although the action executed on the child may have a duration of its own. When the action executes, it looks up an appropriate child node and calls its run(_:) method, passing in the action to execute. This action is reversible; it tells the child to execute the reverse of the action specified by the action parameter.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417671-run
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417671-run
    */
   static runOnChildWithName(action, name) {
     return null
@@ -1236,7 +1236,7 @@ let action = SKAction.stereoPan(by: -v, duration: sec)
    * @param {SKAction[]} actions - An array of SKAction objects.
    * @returns {SKAction} - 
    * @desc When the action executes, the actions that comprise the group all start immediately and run in parallel. The duration of the group action is the longest duration among the collection of actions. If an action in the group has a duration less than the group’s duration, the action completes, then idles until the group completes the remaining actions. This matters most when creating a repeating action that repeats a group.This action is reversible; it creates a new group action that contains the reverse of each action specified in the group. 
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417688-group
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417688-group
    */
   static group(actions) {
     return null
@@ -1248,7 +1248,7 @@ let action = SKAction.stereoPan(by: -v, duration: sec)
    * @param {SKAction[]} actions - An array of SKAction objects.
    * @returns {SKAction} - 
    * @desc When the action executes, the first action in the sequence starts and runs to completion. Subsequent actions in the sequence run in a similar fashion until all of the actions in the sequence have executed. The duration of the sequence action is the sum of the durations of the actions in the sequence.This action is reversible; it creates a new sequence action that reverses the order of the actions. Each action in the reversed sequence is itself reversed. For example, if an action sequence is {1,2,3}, the reversed sequence would be {3R,2R,1R}.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417817-sequence
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417817-sequence
    */
   static sequence(actions) {
     return null
@@ -1261,7 +1261,7 @@ let action = SKAction.stereoPan(by: -v, duration: sec)
    * @param {number} count - The number of times to execute the action.
    * @returns {SKAction} - 
    * @desc When the action executes, the associated action runs to completion and then repeats, until the count is reached.This action is reversible; it creates a new action that is the reverse of the specified action and then repeats it the same number of times.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417750-repeat
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417750-repeat
    */
   static repeat(action, count) {
     return null
@@ -1273,7 +1273,7 @@ let action = SKAction.stereoPan(by: -v, duration: sec)
    * @param {SKAction} action - The action to execute.
    * @returns {SKAction} - 
    * @desc When the action executes, the associated action runs to completion and then repeats.This action is reversible; it creates a new action that is the reverse of the specified action and then repeats it forever.NoteThe action to be repeated must have a non-instantaneous duration.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417676-repeatforever
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417676-repeatforever
    */
   static repeatForever(action) {
     return null
@@ -1287,7 +1287,7 @@ let action = SKAction.stereoPan(by: -v, duration: sec)
    * @param {number} sec - The amount of time to wait.
    * @returns {SKAction} - 
    * @desc When the action executes, the action waits for the specified amount of time, then ends. This is typically used as part of a sequence of actions to insert a delay between two other actions. You might also use it in conjunction with the run(_:completion:) method to trigger code that needs to run at a later time.This action is not reversible; the reverse of this action is the same action.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417788-wait
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417788-wait
    */
   static waitForDuration(sec) {
     return null
@@ -1300,7 +1300,7 @@ let action = SKAction.stereoPan(by: -v, duration: sec)
    * @param {number} durationRange - The range of possible values for the duration.
    * @returns {SKAction} - 
    * @desc When the action executes, the action waits for the specified amount of time, then ends. This is typically used as part of a sequence of actions to insert a delay between two other actions. However, you might also use it in conjunction with the run(_:completion:) method to trigger code that needs to run at a later time.Each time the action is executed, the action computes a new random value for the duration. The duration may vary in either direction by up to half of the value of the durationRange parameter.This action is not reversible; the reverse of this action is the same action.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417760-wait
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417760-wait
    */
   static waitForDurationWithRange(sec, durationRange) {
     return null
@@ -1316,7 +1316,7 @@ let action = SKAction.stereoPan(by: -v, duration: sec)
    * @param {number} sec - The length of the animation.
    * @returns {SKAction} - 
    * @desc This action is typically used to implement character animation across a series of moving parts. When the action executes, it performs an inverse kinematic calculation to determine new rotation values for the target node and any of its ancestors up to and including the root node. Each node is rotated around its anchor point in an attempt to get the targeted node’s position closer to the intended destination. Each node’s rotation value is constrained by that node’s reachConstraints property. If the action cannot successfully reach the target position, it gets the node as close as it can to the target position.This action is not reversible; the reverse of this action is the same action.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417827-reach
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417827-reach
    */
   static reachToRootNodeDuration(node, root, sec) {
     return null
@@ -1330,7 +1330,7 @@ let action = SKAction.stereoPan(by: -v, duration: sec)
    * @param {number} velocity - The maximum speed at which the node should move.
    * @returns {SKAction} - 
    * @desc This action is typically used to implement character animation across a series of moving parts. When the action executes, it performs an inverse kinematic calculation to determine new rotation values for the target node and any of its ancestors up to and including the root node. Each node is rotated around its anchor point in an attempt to get the targeted node’s position closer to the intended destination. Each node’s rotation value is constrained by that node’s reachConstraints property. If the action cannot successfully reach the target position, it gets the node as close as it can to the target position.The duration of the action is calculated implicitly based on the speed of movement and the distance that the node needs to travel.This action is not reversible; the reverse of this action is the same action.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417720-reach
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417720-reach
    */
   static reachToRootNode(position, root, velocity) {
     return null
@@ -1360,7 +1360,7 @@ let customAction = SKAction.customAction(withDuration: 2.0) {
     }
 }
 
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417745-customaction
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417745-customaction
    */
   static customActionWithDurationActionBlock(seconds, block) {
     return null
@@ -1373,7 +1373,7 @@ let customAction = SKAction.customAction(withDuration: 2.0) {
    * @param {Object} target - The target object.
    * @returns {SKAction} - 
    * @desc The action object maintains a strong reference to the target object.When the action executes, the target object’s method is called. This action occurs instantaneously.This action is not reversible; the reverse of this action calls the selector again.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417764-perform
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417764-perform
    */
   static performOnTarget(selector, target) {
     return null
@@ -1385,7 +1385,7 @@ let customAction = SKAction.customAction(withDuration: 2.0) {
    * @param {function(): void} block - The block to run.
    * @returns {SKAction} - 
    * @desc When the action executes, the block is called. This action takes place instantaneously.This action is not reversible; the reverse action executes the same block.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417692-run
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417692-run
    */
   static run(block) {
     return null
@@ -1398,7 +1398,7 @@ let customAction = SKAction.customAction(withDuration: 2.0) {
    * @access public
    * @returns {SKAction} - 
    * @desc This method always returns an action object; however, not all actions are reversible. When reversed, some actions return an object that either does nothing or that performs the same action as the original action. For details on how an action is reversed, see the description of the class method used to create that action.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417803-reversed
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417803-reversed
    */
   reversed() {
     return null

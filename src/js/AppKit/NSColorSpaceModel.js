@@ -11,7 +11,7 @@
  * @property {number} indexed - 
  * @property {number} patterned - 
  * @property {number} unknown - 
- * @see https://developer.apple.com/reference/appkit/nscolorspacemodel
+ * @see https://developer.apple.com/documentation/appkit/nscolorspacemodel
  */
 const NSColorSpaceModel = {
   gray: 0,

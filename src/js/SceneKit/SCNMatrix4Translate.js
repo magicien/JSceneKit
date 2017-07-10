@@ -12,7 +12,7 @@ import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
  * @param {number} tz - 
  * @returns {SCNMatrix4} - 
  * @desc The resulting transformation consists of the specified translation followed by the transformation represented by the mat parameter.
- * @see https://developer.apple.com/reference/scenekit/1409717-scnmatrix4translate
+ * @see https://developer.apple.com/documentation/scenekit/1409717-scnmatrix4translate
  */
 const SCNMatrix4Translate = function(m, tx, ty, tz) {
   return m.mult(SCNMatrix4MakeTranslation(tx, ty, tz))

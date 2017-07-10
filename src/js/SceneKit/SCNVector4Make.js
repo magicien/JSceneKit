@@ -10,7 +10,7 @@ import SCNVector4 from './SCNVector4'
  * @param {number} z - The third component of the vector.
  * @param {number} w - The fourth component of the vector.
  * @returns {SCNVector4} - 
- * @see https://developer.apple.com/reference/scenekit/1409677-scnvector4make
+ * @see https://developer.apple.com/documentation/scenekit/1409677-scnvector4make
  */
 const SCNVector4Make = function(x, y, z, w) {
   return new SCNVector4Make(x, y, z, w)

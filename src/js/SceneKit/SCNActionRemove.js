@@ -39,7 +39,7 @@ export default class SCNActionRemove extends SCNAction {
    * @access public
    * @returns {SCNAction} - 
    * @desc When the action executes, the node is immediately removed from its parent.This action is not reversible; the reverse of this action is the same action.
-   * @see https://developer.apple.com/reference/scenekit/scnaction/1522966-removefromparentnode
+   * @see https://developer.apple.com/documentation/scenekit/scnaction/1522966-removefromparentnode
    */
   static removeFromParentNode() {
     const action = new SCNActionRemove()

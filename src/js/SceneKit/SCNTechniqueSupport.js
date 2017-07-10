@@ -6,7 +6,7 @@ import SCNTechnique from './SCNTechnique'
 /**
  * The common interface for SceneKit objects that support multipass rendering using SCNTechnique objects.
  * @interface
- * @see https://developer.apple.com/reference/scenekit/scntechniquesupport
+ * @see https://developer.apple.com/documentation/scenekit/scntechniquesupport
  */
 export default class SCNTechniqueSupport {
 
@@ -22,7 +22,7 @@ export default class SCNTechniqueSupport {
     /**
      * Required. The technique SceneKit uses when rendering the object.
      * @type {?SCNTechnique}
-     * @see https://developer.apple.com/reference/scenekit/scntechniquesupport/1520496-technique
+     * @see https://developer.apple.com/documentation/scenekit/scntechniquesupport/1520496-technique
      */
     this.technique = null
 

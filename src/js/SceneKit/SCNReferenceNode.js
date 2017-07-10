@@ -8,7 +8,7 @@ import SCNScene from './SCNScene'
  * A scene graph node that serves as a placeholder for content to be loaded from a separate scene file. 
  * @access public
  * @extends {SCNNode}
- * @see https://developer.apple.com/reference/scenekit/scnreferencenode
+ * @see https://developer.apple.com/documentation/scenekit/scnreferencenode
  */
 export default class SCNReferenceNode extends SCNNode {
   static get _propTypes() {
@@ -40,7 +40,7 @@ export default class SCNReferenceNode extends SCNNode {
    * @constructor
    * @param {string} referenceURL - The URL to a scene file from which to load the node’s content.
    * @desc Using this initializer does not load the node’s content. To load content from the referenced URL, use the load() method.
-   * @see https://developer.apple.com/reference/scenekit/scnreferencenode/1523967-init
+   * @see https://developer.apple.com/documentation/scenekit/scnreferencenode/1523967-init
    */
   constructor(referenceURL) {
     super()
@@ -62,14 +62,14 @@ export default class SCNReferenceNode extends SCNNode {
     /**
      * An option for whether to load the node’s content automatically.
      * @type {SCNReferenceLoadingPolicy}
-     * @see https://developer.apple.com/reference/scenekit/scnreferencenode/1522996-loadingpolicy
+     * @see https://developer.apple.com/documentation/scenekit/scnreferencenode/1522996-loadingpolicy
      */
     this.loadingPolicy = null
 
     /**
      * The URL to a scene file from which to load content for the reference node.
      * @type {string}
-     * @see https://developer.apple.com/reference/scenekit/scnreferencenode/1522733-referenceurl
+     * @see https://developer.apple.com/documentation/scenekit/scnreferencenode/1522733-referenceurl
      */
     this._referenceURL = referenceURL
 
@@ -93,7 +93,7 @@ export default class SCNReferenceNode extends SCNNode {
    * @access public
    * @returns {void}
    * @desc When SceneKit loads the referenced scene file, all children of the scene file’s root node become children of the reference node.If the node has already been loaded (either automatically, according to the loadingPolicy property, or through a previous call to this method), calling this method has no effect.
-   * @see https://developer.apple.com/reference/scenekit/scnreferencenode/1523204-load
+   * @see https://developer.apple.com/documentation/scenekit/scnreferencenode/1523204-load
    */
   load() {
     if(this._isLoaded || this._isLoading){
@@ -125,7 +125,7 @@ export default class SCNReferenceNode extends SCNNode {
    * @access public
    * @returns {void}
    * @desc Calling this method does not necessarily unload any content associated with the node’s child nodes from memory—it merely removes them from the scene graph. The unlinked nodes and their content are then subject to normal object memory management rules. Under ARC, those objects are deallocated if and only if they are not referenced from elsewhere in your program.
-   * @see https://developer.apple.com/reference/scenekit/scnreferencenode/1523566-unload
+   * @see https://developer.apple.com/documentation/scenekit/scnreferencenode/1523566-unload
    */
   unload() {
     if(!this._isLoaded){
@@ -142,7 +142,7 @@ export default class SCNReferenceNode extends SCNNode {
    * A Boolean value that indicates whether the reference node has already loaded its content.
    * @type {boolean}
    * @desc 
-   * @see https://developer.apple.com/reference/scenekit/scnreferencenode/1523906-isloaded
+   * @see https://developer.apple.com/documentation/scenekit/scnreferencenode/1523906-isloaded
    */
   get isLoaded() {
     return this._isLoaded
@@ -155,7 +155,7 @@ export default class SCNReferenceNode extends SCNNode {
    * @access public
    * @param {NSCoder} aDecoder - 
    * @returns {void}
-   * @see https://developer.apple.com/reference/scenekit/scnreferencenode/1524061-init
+   * @see https://developer.apple.com/documentation/scenekit/scnreferencenode/1524061-init
    */
   initCoder(aDecoder) {
   }

@@ -7,7 +7,7 @@ import SCNVector4 from './SCNVector4'
 /**
  * A representation of a three-component vector.
  * @access public
- * @see https://developer.apple.com/reference/scenekit/scnvector3
+ * @see https://developer.apple.com/documentation/scenekit/scnvector3
  */
 export default class SCNVector3 {
 
@@ -21,7 +21,7 @@ export default class SCNVector3 {
    * @param {number} y - 
    * @param {number} z - 
    * @returns {void}
-   * @see https://developer.apple.com/reference/scenekit/scnvector3/1522904-init
+   * @see https://developer.apple.com/documentation/scenekit/scnvector3/1522904-init
    */
   constructor(x = 0, y = 0, z = 0) {
     // Instance Properties

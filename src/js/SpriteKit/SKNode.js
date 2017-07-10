@@ -22,7 +22,7 @@ import CGSize from '../CoreGraphics/CGSize'
  * @access public
  * @extends {NSObject}
  * @implements {UIFocusItem}
- * @see https://developer.apple.com/reference/spritekit/sknode
+ * @see https://developer.apple.com/documentation/spritekit/sknode
  */
 export default class SKNode extends NSObject {
   // Initializers
@@ -31,7 +31,7 @@ export default class SKNode extends NSObject {
    * 
    * @access public
    * @constructor
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483097-init
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483097-init
    */
   constructor() {
     super()
@@ -41,14 +41,14 @@ export default class SKNode extends NSObject {
     /**
      * The position of the node in its parent's coordinate system.
      * @type {CGPoint}
-     * @see https://developer.apple.com/reference/spritekit/sknode/1483101-position
+     * @see https://developer.apple.com/documentation/spritekit/sknode/1483101-position
      */
     this.position = new CGPoint(0, 0)
 
     /**
      * The height of the node relative to its parent.
      * @type {number}
-     * @see https://developer.apple.com/reference/spritekit/sknode/1483107-zposition
+     * @see https://developer.apple.com/documentation/spritekit/sknode/1483107-zposition
      */
     this.zPosition = 0.0
 
@@ -59,21 +59,21 @@ export default class SKNode extends NSObject {
     /**
      * A scaling factor that multiplies the width of a node and its children.
      * @type {number}
-     * @see https://developer.apple.com/reference/spritekit/sknode/1483087-xscale
+     * @see https://developer.apple.com/documentation/spritekit/sknode/1483087-xscale
      */
     this.xScale = 1.0
 
     /**
      * A scaling factor that multiplies the height of a node and its children.
      * @type {number}
-     * @see https://developer.apple.com/reference/spritekit/sknode/1483046-yscale
+     * @see https://developer.apple.com/documentation/spritekit/sknode/1483046-yscale
      */
     this.yScale = 1.0
 
     /**
      * The Euler rotation about the z axis (in radians).
      * @type {number}
-     * @see https://developer.apple.com/reference/spritekit/sknode/1483089-zrotation
+     * @see https://developer.apple.com/documentation/spritekit/sknode/1483089-zrotation
      */
     this.zRotation = 0.0
 
@@ -83,14 +83,14 @@ export default class SKNode extends NSObject {
     /**
      * The transparency value applied to the node’s contents.
      * @type {number}
-     * @see https://developer.apple.com/reference/spritekit/sknode/1483023-alpha
+     * @see https://developer.apple.com/documentation/spritekit/sknode/1483023-alpha
      */
     this.alpha = 1.0
 
     /**
      * A Boolean value that determines whether a node and its descendants are rendered.
      * @type {boolean}
-     * @see https://developer.apple.com/reference/spritekit/sknode/1483048-ishidden
+     * @see https://developer.apple.com/documentation/spritekit/sknode/1483048-ishidden
      */
     this.isHidden = false
 
@@ -100,7 +100,7 @@ export default class SKNode extends NSObject {
     /**
      * A Boolean value that indicates whether the node receives touch events.
      * @type {boolean}
-     * @see https://developer.apple.com/reference/spritekit/sknode/1483109-isuserinteractionenabled
+     * @see https://developer.apple.com/documentation/spritekit/sknode/1483109-isuserinteractionenabled
      */
     this.isUserInteractionEnabled = false
 
@@ -116,7 +116,7 @@ export default class SKNode extends NSObject {
     /**
      * The node’s assignable name.
      * @type {?string}
-     * @see https://developer.apple.com/reference/spritekit/sknode/1483136-name
+     * @see https://developer.apple.com/documentation/spritekit/sknode/1483136-name
      */
     this.name = null
 
@@ -126,14 +126,14 @@ export default class SKNode extends NSObject {
     /**
      * A speed modifier applied to all actions executed by a node and its descendants.
      * @type {number}
-     * @see https://developer.apple.com/reference/spritekit/sknode/1483036-speed
+     * @see https://developer.apple.com/documentation/spritekit/sknode/1483036-speed
      */
     this.speed = 1.0
 
     /**
      * A Boolean value that determines whether actions on the node and its descendants are processed.
      * @type {boolean}
-     * @see https://developer.apple.com/reference/spritekit/sknode/1483113-ispaused
+     * @see https://developer.apple.com/documentation/spritekit/sknode/1483113-ispaused
      */
     this.isPaused = false
 
@@ -148,7 +148,7 @@ export default class SKNode extends NSObject {
     /**
      * The physics body associated with the node.
      * @type {?SKPhysicsBody}
-     * @see https://developer.apple.com/reference/spritekit/sknode/1483117-physicsbody
+     * @see https://developer.apple.com/documentation/spritekit/sknode/1483117-physicsbody
      */
     this.physicsBody = null
 
@@ -158,7 +158,7 @@ export default class SKNode extends NSObject {
     /**
      * The GameplayKit entity this node represents.
      * @type {?GKEntity}
-     * @see https://developer.apple.com/reference/spritekit/sknode/1640688-entity
+     * @see https://developer.apple.com/documentation/spritekit/sknode/1640688-entity
      */
     //this.entity = null
 
@@ -168,7 +168,7 @@ export default class SKNode extends NSObject {
     /**
      * A dictionary containing arbitrary data.
      * @type {?NSMutableDictionary}
-     * @see https://developer.apple.com/reference/spritekit/sknode/1483121-userdata
+     * @see https://developer.apple.com/documentation/spritekit/sknode/1483121-userdata
      */
     this.userData = null
 
@@ -178,14 +178,14 @@ export default class SKNode extends NSObject {
     /**
      * Specifies the list of constraints to apply to the node.
      * @type {?SKConstraint[]}
-     * @see https://developer.apple.com/reference/spritekit/sknode/1483124-constraints
+     * @see https://developer.apple.com/documentation/spritekit/sknode/1483124-constraints
      */
     this.constraints = null
 
     /**
      * Specifies the reach constraints to apply to the node when executing a reach action.
      * @type {?SKReachConstraints}
-     * @see https://developer.apple.com/reference/spritekit/sknode/1483019-reachconstraints
+     * @see https://developer.apple.com/documentation/spritekit/sknode/1483019-reachconstraints
      */
     this.reachConstraints = null
 
@@ -195,77 +195,77 @@ export default class SKNode extends NSObject {
     /**
      * 
      * @type {?Object[]}
-     * @see https://developer.apple.com/reference/spritekit/sknode/1645045-accessibilitychildren
+     * @see https://developer.apple.com/documentation/spritekit/sknode/1645045-accessibilitychildren
      */
     this.accessibilityChildren = []
 
     /**
      * 
      * @type {CGRect}
-     * @see https://developer.apple.com/reference/spritekit/sknode/1645044-accessibilityframe
+     * @see https://developer.apple.com/documentation/spritekit/sknode/1645044-accessibilityframe
      */
     this.accessibilityFrame = new CGRect(new CGPoint(0, 0), new CGSize(0, 0))
 
     /**
      * 
      * @type {?string}
-     * @see https://developer.apple.com/reference/spritekit/sknode/1645041-accessibilityhelp
+     * @see https://developer.apple.com/documentation/spritekit/sknode/1645041-accessibilityhelp
      */
     this.accessibilityHelp = null
 
     /**
      * 
      * @type {?string}
-     * @see https://developer.apple.com/reference/spritekit/sknode/1645039-accessibilitylabel
+     * @see https://developer.apple.com/documentation/spritekit/sknode/1645039-accessibilitylabel
      */
     this.accessibilityLabel = null
 
     /**
      * 
      * @type {?Object}
-     * @see https://developer.apple.com/reference/spritekit/sknode/1645042-accessibilityparent
+     * @see https://developer.apple.com/documentation/spritekit/sknode/1645042-accessibilityparent
      */
     this.accessibilityParent = null
 
     /**
      * 
      * @type {?string}
-     * @see https://developer.apple.com/reference/spritekit/sknode/1645036-accessibilityrole
+     * @see https://developer.apple.com/documentation/spritekit/sknode/1645036-accessibilityrole
      */
     this.accessibilityRole = 'AXImage'
 
     /**
      * 
      * @type {?string}
-     * @see https://developer.apple.com/reference/spritekit/sknode/1645035-accessibilityroledescription
+     * @see https://developer.apple.com/documentation/spritekit/sknode/1645035-accessibilityroledescription
      */
     this.accessibilityRoleDescription = 'SKNode'
 
     /**
      * 
      * @type {?string}
-     * @see https://developer.apple.com/reference/spritekit/sknode/1645043-accessibilitysubrole
+     * @see https://developer.apple.com/documentation/spritekit/sknode/1645043-accessibilitysubrole
      */
     this.accessibilitySubrole = null
 
     /**
      * The values of each attribute associated with the node's attached shader. 
      * @type {Map<string, SKAttributeValue>}
-     * @see https://developer.apple.com/reference/spritekit/sknode/1644181-attributevalues
+     * @see https://developer.apple.com/documentation/spritekit/sknode/1644181-attributevalues
      */
     this.attributeValues = new Map()
 
     /**
      * 
      * @type {boolean}
-     * @see https://developer.apple.com/reference/spritekit/sknode/1645038-isaccessibilityelement
+     * @see https://developer.apple.com/documentation/spritekit/sknode/1645038-isaccessibilityelement
      */
     this.isAccessibilityElement = false
 
     /**
      * 
      * @type {boolean}
-     * @see https://developer.apple.com/reference/spritekit/sknode/1645037-isaccessibilityenabled
+     * @see https://developer.apple.com/documentation/spritekit/sknode/1645037-isaccessibilityenabled
      */
     this.isAccessibilityEnabled = false
 
@@ -288,7 +288,7 @@ export default class SKNode extends NSObject {
    * @access public
    * @param {NSCoder} aDecoder - 
    * @returns {void}
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483142-init
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483142-init
    */
   //initWithCoder(aDecoder) {
   //}
@@ -302,7 +302,7 @@ export default class SKNode extends NSObject {
    * @param {string} filename - The name of the file, without a file extension. The file must be in the app’s main bundle and have a .sks filename extension.
    * @returns {void}
    * @desc If you call this method on a subclass of the SKScene class and the object in the archive is an SKScene object, the returned object is initialized as if it is a member of the subclass. You use this behavior to create scene layouts in the Xcode Editor and provide custom behaviors in your subclass. 
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483083-init
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483083-init
    */
   static nodeWithFileNamed(filename) {
     const node = new SKNode()
@@ -356,7 +356,7 @@ boundingBoxNode.path = boundingBoxNode.path?.copy(dashingWithPhase: 0,
      
 parentNode.addChild(boundingBoxNode)
 Displaying the accumulated frame of a shape node
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483066-calculateaccumulatedframe
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483066-calculateaccumulatedframe
    */
   calculateAccumulatedFrame() {
     let r = this._frame.copy()
@@ -370,7 +370,7 @@ Displaying the accumulated frame of a shape node
    * A rectangle in the parent’s coordinate system that contains the node’s content, ignoring the node’s children.
    * @type {CGRect}
    * @desc The frame is the smallest rectangle that contains the node’s content, taking into account the node’s xScale, yScale, and zRotation properties. Not all nodes contain content of their own.
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483026-frame
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483026-frame
    */
   get frame() {
     return this._frame
@@ -383,7 +383,7 @@ Displaying the accumulated frame of a shape node
    * @access public
    * @param {number} scale - The new value to use for the node’s xScale and yScale properties.
    * @returns {void}
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483126-setscale
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483126-setscale
    */
   setScale(scale) {
     this.xScale = scale
@@ -397,7 +397,7 @@ Displaying the accumulated frame of a shape node
    * @access public
    * @param {SKNode} node - The node to add. The node must not already have a parent.
    * @returns {void}
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483054-addchild
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483054-addchild
    */
   addChild(node) {
     if(this._children.indexOf(node) >= 0){
@@ -414,7 +414,7 @@ Displaying the accumulated frame of a shape node
    * @param {SKNode} node - The node to add. The node must not already have a parent.
    * @param {number} index - The position in the array to insert the node.
    * @returns {void}
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483062-insertchild
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483062-insertchild
    */
   insertChildAt(node, index) {
     if(this._children.indexOf(node) >= 0){
@@ -430,7 +430,7 @@ Displaying the accumulated frame of a shape node
    * @access public
    * @param {SKNode} node - The node to compare to the receiving node.
    * @returns {boolean} - 
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483078-isequal
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483078-isequal
    */
   isEqualTo(node) {
     return false
@@ -442,7 +442,7 @@ Displaying the accumulated frame of a shape node
    * @param {SKNode} parent - An SKNode object to move the receiver to. This node must be in the same scene as the node’s current parent.
    * @returns {void}
    * @desc The node maintains its current position in scene coordinates.
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483021-move
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483021-move
    */
   moveToParent(parent) {
     parent.addChild(this)
@@ -452,7 +452,7 @@ Displaying the accumulated frame of a shape node
    * Removes the receiving node from its parent.
    * @access public
    * @returns {void}
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483119-removefromparent
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483119-removefromparent
    */
   removeFromParent() {
     const parentNode = this._parent
@@ -470,7 +470,7 @@ Displaying the accumulated frame of a shape node
    * Removes all of the node’s children.
    * @access public
    * @returns {void}
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483040-removeallchildren
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483040-removeallchildren
    */
   removeAllChildren() {
     for(const child of this._children){
@@ -483,7 +483,7 @@ Displaying the accumulated frame of a shape node
    * @access public
    * @param {SKNode[]} nodes - An array of SKNode objects that are all children of the receiving node.
    * @returns {void}
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483091-removechildren
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483091-removechildren
    */
   removeChildrenIn(nodes) {
     for(const node of nodes){
@@ -529,7 +529,7 @@ Displaying the accumulated frame of a shape node
    * @access public
    * @param {SKNode} parent - An SKNode object to test against.
    * @returns {boolean} - 
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483111-inparenthierarchy
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483111-inparenthierarchy
    */
   inParentHierarchy(parent) {
     return false
@@ -538,7 +538,7 @@ Displaying the accumulated frame of a shape node
    * The node’s children.
    * @type {SKNode[]}
    * @desc The objects in this array are all SKNode objects.
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483028-children
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483028-children
    */
   get children() {
     return this._children.slice(0)
@@ -547,7 +547,7 @@ Displaying the accumulated frame of a shape node
    * The node’s parent node.
    * @type {?SKNode}
    * @desc If the node is not in a node tree, the value is nil.
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483080-parent
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483080-parent
    */
   get parent() {
     return this._parent
@@ -557,7 +557,7 @@ Displaying the accumulated frame of a shape node
    * The scene node that contains the node.
    * @type {?SKScene}
    * @desc If the node is not embedded in a scene, the value is nil.
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483064-scene
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483064-scene
    */
   get scene() {
     return this._scene
@@ -571,7 +571,7 @@ Displaying the accumulated frame of a shape node
    * @param {string} name - The name to search for. This may be either the literal name of the node or a customized search string. See Searching the Node Tree.
    * @returns {?SKNode} - 
    * @desc If more than one child share the same name, the first node discovered is returned.
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483060-childnode
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483060-childnode
    */
   childNodeWithName(name) {
     for(const child of this._children){
@@ -649,7 +649,7 @@ parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
     // Superclass name, successfully returns `childNode` 
 }
 
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483024-enumeratechildnodes
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483024-enumeratechildnodes
    */
   enumerateChildNodesWithNameUsing(name, block) {
   }
@@ -662,7 +662,7 @@ parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
    * @param {SKAction} action - The action to perform.
    * @returns {void}
    * @desc The new action is processed the next time the scene’s animation loop is processed.
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483093-run
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483093-run
    */
   run(action) {
     this.runWithKey(action, Symbol())
@@ -674,7 +674,7 @@ parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
    * @param {SKAction} action - The action to perform.
    * @param {function(): void} block - A completion block called when the action completes.
    * @returns {void}
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483103-run
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483103-run
    */
   runCompletion(action, block) {
     this._runActionForKeyCompletionHandler(action, Symbol(), block)
@@ -687,7 +687,7 @@ parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
    * @param {string} key - A unique key used to identify the action.
    * @returns {void}
    * @desc This method is identical to run(_:), but the action is stored so that it can be retrieved later. If an action using the same key is already running, it is removed before the new action is added.
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483042-run
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483042-run
    */
   runWithKey(action, key) {
     this._runActionForKeyCompletionHandler(action, key, null)
@@ -709,7 +709,7 @@ parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
    * @access public
    * @param {string} key - A string that uniquely identifies an action.
    * @returns {?SKAction} - 
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483138-action
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483138-action
    */
   actionForKey(key) {
     return this._actions.get(key)
@@ -719,7 +719,7 @@ parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
    * Returns a Boolean value that indicates whether the node is executing actions.
    * @access public
    * @returns {boolean} - 
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483081-hasactions
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483081-hasactions
    */
   hasActions() {
     return this._actions.size > 0
@@ -730,7 +730,7 @@ parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
    * @access public
    * @returns {void}
    * @desc When an action is removed from the node, any remaining animation the action would perform is skipped; however, previous changes are not reverted. It is possible that an action may make a final change to the scene when removed; if so, it is documented for the specific action in SKAction.
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483030-removeallactions
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483030-removeallactions
    */
   removeAllActions() {
     // TODO: stop actions
@@ -743,7 +743,7 @@ parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
    * @param {string} key - A string that uniquely identifies an action.
    * @returns {void}
    * @desc If an action is found that matches the key, it is removed from the node.
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483076-removeaction
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483076-removeaction
    */
   removeActionForKey(key) {
     // TODO: stop action
@@ -758,7 +758,7 @@ parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
    * @param {CGPoint} point - A point in the other node’s coordinate system.
    * @param {SKNode} node - Another node in the same node tree as this node.
    * @returns {CGPoint} - 
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483058-convert
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483058-convert
    */
   convertFrom(point, node) {
     return null
@@ -770,7 +770,7 @@ parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
    * @param {CGPoint} point - A point in this node’s coordinate system.
    * @param {SKNode} node - Another node in the same node tree as this node.
    * @returns {CGPoint} - 
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483056-convert
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483056-convert
    */
   convertTo(point, node) {
     return null
@@ -783,7 +783,7 @@ parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
    * @access public
    * @param {CGPoint} p - A CGPoint to test against.
    * @returns {boolean} - 
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483044-contains
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483044-contains
    */
   contains(p) {
     return false
@@ -795,7 +795,7 @@ parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
    * @param {CGPoint} p - A point in the node’s coordinate system.
    * @returns {SKNode} - 
    * @desc A point is considered to be in a node if it lies inside the rectangle returned by the calculateAccumulatedFrame() method.
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483099-atpoint
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483099-atpoint
    */
   atPoint(p) {
     return null
@@ -807,7 +807,7 @@ parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
    * @param {CGPoint} p - A point in the node’s coordinate system.
    * @returns {SKNode[]} - 
    * @desc A point is considered to be in a node if it lies inside the rectangle returned by the calculateAccumulatedFrame() method.
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483072-nodes
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483072-nodes
    */
   nodesAt(p) {
     return null
@@ -821,7 +821,7 @@ parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
    * @param {SKNode} node - Another node in the same node tree.
    * @returns {boolean} - 
    * @desc The two nodes are considered to intersect if their frames intersect. The children of both nodes are ignored in this test.
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483140-intersects
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483140-intersects
    */
   intersects(node) {
     return false
@@ -835,7 +835,7 @@ parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
    * @param {SKNode[]} nodes - An array of SKNode objects.
    * @returns {GKPolygonObstacle[]} - 
    * @desc Use the array of obstacles to create an obstacle graph (GKObstacleGraph) in GameplayKit. See GameplayKit and GameplayKit Programming Guide.
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483132-obstacles
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483132-obstacles
    */
   static obstaclesFromNodeBounds(nodes) {
     return null
@@ -847,7 +847,7 @@ parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
    * @param {SKNode[]} nodes - An array of SKNode objects.
    * @returns {GKPolygonObstacle[]} - 
    * @desc Use the array of obstacles to create an obstacle graph (GKObstacleGraph) in GameplayKit. See GameplayKit and GameplayKit Programming Guide.
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483085-obstacles
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483085-obstacles
    */
   static obstaclesFromNodePhysicsBodies(nodes) {
     return null
@@ -860,7 +860,7 @@ parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
    * @param {number} accuracy - A floating point value between 0.001 and 1.0, inclusive. Higher values create a more precise (but more complex) representation of the obstacle.
    * @returns {GKPolygonObstacle[]} - 
    * @desc Use the array of obstacles to create an obstacle graph (GKObstacleGraph) in GameplayKit. See GameplayKit and GameplayKit Programming Guide.
-   * @see https://developer.apple.com/reference/spritekit/sknode/1483134-obstacles
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1483134-obstacles
    */
   static obstaclesFromSpriteTextures(sprites, accuracy) {
     return null
@@ -873,7 +873,7 @@ parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
    * @access public
    * @param {CGPoint} point - 
    * @returns {?Object} - 
-   * @see https://developer.apple.com/reference/spritekit/sknode/1645040-accessibilityhittest
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1645040-accessibilityhittest
    */
   accessibilityHitTest(point) {
     return null
@@ -886,7 +886,7 @@ parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
    * @param {SKAttributeValue} value - An attribute value object containing the scalar or vector value to set in the attached shader. 
    * @param {string} key - The attribute name.
    * @returns {void}
-   * @see https://developer.apple.com/reference/spritekit/sknode/1644180-setvalue
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1644180-setvalue
    */
   setValueForAttribute(value, key) {
     this.attributeValues.set(key, value)
@@ -898,7 +898,7 @@ parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
    * @access public
    * @param {string} key - The attribute name.
    * @returns {?SKAttributeValue} - 
-   * @see https://developer.apple.com/reference/spritekit/sknode/1644182-value
+   * @see https://developer.apple.com/documentation/spritekit/sknode/1644182-value
    */
   valueForAttributeNamed(key) {
     return this.attributeValues.get(key)

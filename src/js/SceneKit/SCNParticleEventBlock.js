@@ -33,7 +33,7 @@
               }
           }];
 
- * @see https://developer.apple.com/reference/scenekit/scnparticleeventblock
+ * @see https://developer.apple.com/documentation/scenekit/scnparticleeventblock
  */
 const SCNParticleEventBlock = (data, dataStride, indices, count) => {}
 

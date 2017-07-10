@@ -7,7 +7,7 @@
  * @property {number} overLife - The controller’s effect on a particle property is a function of the time since the particle’s birth.
  * @property {number} overDistance - The controller’s effect on a particle property is a function of the particle’s distance from the position of a specified node.
  * @property {number} overOtherProperty - The controller’s effect on a particle property is a function of another of the particle’s properties.
- * @see https://developer.apple.com/reference/scenekit/scnparticleinputmode
+ * @see https://developer.apple.com/documentation/scenekit/scnparticleinputmode
  */
 const SCNParticleInputMode = {
   overLife: 0,

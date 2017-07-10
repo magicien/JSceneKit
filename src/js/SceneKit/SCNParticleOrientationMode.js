@@ -8,7 +8,7 @@
  * @property {number} billboardViewAligned - Each particle always faces the point of view camera (but may rotate about an axis parallel to the view direction).
  * @property {number} free - Particle orientations are not restricted; they may rotate freely in all axes.
  * @property {number} billboardYAligned - The y-axis direction of each particle is always fixed with respect to the point of view camera.
- * @see https://developer.apple.com/reference/scenekit/scnparticleorientationmode
+ * @see https://developer.apple.com/documentation/scenekit/scnparticleorientationmode
  */
 const SCNParticleOrientationMode = {
   billboardScreenAligned: 0,

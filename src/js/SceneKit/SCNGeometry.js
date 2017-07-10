@@ -23,7 +23,7 @@ import SKColor from '../SpriteKit/SKColor'
  * @implements {SCNAnimatable}
  * @implements {SCNBoundingVolume}
  * @implements {SCNShadable}
- * @see https://developer.apple.com/reference/scenekit/scngeometry
+ * @see https://developer.apple.com/documentation/scenekit/scngeometry
  */
 export default class SCNGeometry extends NSObject {
   static get _propTypes() {
@@ -68,7 +68,7 @@ export default class SCNGeometry extends NSObject {
    * @param {SCNGeometrySource[]} sources - An array of SCNGeometrySource objects describing vertices in the geometry and their attributes.
    * @param {?SCNGeometryElement[]} elements - An array of SCNGeometryElement objects describing how to connect the geometry’s vertices.
    * @desc A geometry's visible content comes from the combination of geometry sources, which contain data describing its vertices, with geometry elements, which contain data describing how the vertices connect to form a surface. Each SCNGeometrySource object describes an attribute of all vertices in the geometry (vertex position, surface normal vector, color, or texture mapping coordinates) identified by the source's semantic property. To create a custom geometry you must provide at least one source, for the vertex semantic. Typically, you also provide sources for normals and texture coordinates for use in lighting and shading.Sources for the vertex, normal, and color semantics must be unique-if multiple objects in the sources array have the same semantic, SceneKit uses only the first. A geometry may have multiple sources for the texcoord semantic-the order of texture coordinate sources in the sources array determines the value to use for the mappingChannel property when attaching materials.Each SCNGeometryElement object describes how vertices from the geometry sources are combined into polygons to create the geometry's shape. Creating a custom geometry requires at least one element. If the elements array contains multiple objects, their order determines the arrangement of the geometry's materials-for details, see the discussion of the materials property.
-   * @see https://developer.apple.com/reference/scenekit/scngeometry/1522803-init
+   * @see https://developer.apple.com/documentation/scenekit/scngeometry/1522803-init
    */
   constructor(sources = [], elements = []) {
     super()
@@ -85,14 +85,14 @@ export default class SCNGeometry extends NSObject {
     /**
      * A name associated with the geometry object.
      * @type {?string}
-     * @see https://developer.apple.com/reference/scenekit/scngeometry/1522953-name
+     * @see https://developer.apple.com/documentation/scenekit/scngeometry/1522953-name
      */
     this.name = null
 
     /**
      * An array of SCNLevelOfDetail objects for managing the geometry’s appearance when viewed from far away.
      * @type {?SCNLevelOfDetail[]}
-     * @see https://developer.apple.com/reference/scenekit/scngeometry/1523745-levelsofdetail
+     * @see https://developer.apple.com/documentation/scenekit/scngeometry/1523745-levelsofdetail
      */
     this.levelsOfDetail = null
 
@@ -102,7 +102,7 @@ export default class SCNGeometry extends NSObject {
     /**
      * An array of SCNMaterial objects that determine the geometry’s appearance when rendered.
      * @type {SCNMaterial[]}
-     * @see https://developer.apple.com/reference/scenekit/scngeometry/1523472-materials
+     * @see https://developer.apple.com/documentation/scenekit/scngeometry/1523472-materials
      */
     this.materials = []
 
@@ -122,21 +122,21 @@ export default class SCNGeometry extends NSObject {
     /**
      * The number of subdivisions SceneKit uses to smooth the geometry’s surface at render time.
      * @type {number}
-     * @see https://developer.apple.com/reference/scenekit/scngeometry/1524177-subdivisionlevel
+     * @see https://developer.apple.com/documentation/scenekit/scngeometry/1524177-subdivisionlevel
      */
     this.subdivisionLevel = 0
 
     /**
      * The geometry element identifying which edges of the geometry’s surface should remain sharp after subdivision.
      * @type {?SCNGeometryElement}
-     * @see https://developer.apple.com/reference/scenekit/scngeometry/1523246-edgecreaseselement
+     * @see https://developer.apple.com/documentation/scenekit/scngeometry/1523246-edgecreaseselement
      */
     this.edgeCreasesElement = null
 
     /**
      * The geometry source specifying the smoothness or sharpness of edges after surface subdivision.
      * @type {?SCNGeometrySource}
-     * @see https://developer.apple.com/reference/scenekit/scngeometry/1523479-edgecreasessource
+     * @see https://developer.apple.com/documentation/scenekit/scngeometry/1523479-edgecreasessource
      */
     this.edgeCreasesSource = null
 
@@ -150,7 +150,7 @@ export default class SCNGeometry extends NSObject {
     /**
      * A program used when rendering the object.
      * @type {?SCNProgram}
-     * @see https://developer.apple.com/reference/scenekit/scnshadable/1523689-program
+     * @see https://developer.apple.com/documentation/scenekit/scnshadable/1523689-program
      */
     this.program = null
 
@@ -159,7 +159,7 @@ export default class SCNGeometry extends NSObject {
     /**
      * A dictionary of GLSL source code snippets for customizing the shader programs provided by SceneKit.
      * @type {?Map<SCNShaderModifierEntryPoint, string>}
-     * @see https://developer.apple.com/reference/scenekit/scnshadable/1523348-shadermodifiers
+     * @see https://developer.apple.com/documentation/scenekit/scnshadable/1523348-shadermodifiers
      */
     this.shaderModifiers = null
 
@@ -182,7 +182,7 @@ export default class SCNGeometry extends NSObject {
     /**
      * The minimum and maximum corner points of the object’s bounding box.
      * @type {{min: SCNVector3, max: SCNVector3}}
-     * @see https://developer.apple.com/reference/scenekit/scnboundingvolume/2034705-boundingbox
+     * @see https://developer.apple.com/documentation/scenekit/scnboundingvolume/2034705-boundingbox
      */
     this.boundingBox = null
 
@@ -243,7 +243,7 @@ export default class SCNGeometry extends NSObject {
   /**
    * The first material attached to the geometry.
    * @type {?SCNMaterial}
-   * @see https://developer.apple.com/reference/scenekit/scngeometry/1523485-firstmaterial
+   * @see https://developer.apple.com/documentation/scenekit/scngeometry/1523485-firstmaterial
    */
   get firstMaterial() {
     return this.materials[0]
@@ -259,7 +259,7 @@ export default class SCNGeometry extends NSObject {
    * @param {string} name - The name of the material to be retrieved.
    * @returns {?SCNMaterial} - 
    * @desc You can use the name property of each SCNMaterial object to make managing your scene graph easier. Materials loaded from a scene file may have names assigned by an artist using a 3D authoring tool.If a geometry has multiple materials attached with the same name, this method returns the first according to the order of the materials array.
-   * @see https://developer.apple.com/reference/scenekit/scngeometry/1523789-material
+   * @see https://developer.apple.com/documentation/scenekit/scngeometry/1523789-material
    */
   materialNamed(name) {
     return null
@@ -271,7 +271,7 @@ export default class SCNGeometry extends NSObject {
    * @param {SCNMaterial} material - The material to attach.
    * @param {number} index - The location in the geometry’s materials array at which to add the new material.ImportantRaises an exception (rangeException) if index is greater than the number of elements in the materials array.
    * @returns {void}
-   * @see https://developer.apple.com/reference/scenekit/scngeometry/1522876-insertmaterial
+   * @see https://developer.apple.com/documentation/scenekit/scngeometry/1522876-insertmaterial
    */
   insertMaterialAt(material, index) {
   }
@@ -281,7 +281,7 @@ export default class SCNGeometry extends NSObject {
    * @access public
    * @param {number} index - The index of the attached material to be removed.ImportantRaises an exception (rangeException) if index is beyond the bounds of the materials array.
    * @returns {void}
-   * @see https://developer.apple.com/reference/scenekit/scngeometry/1522646-removematerial
+   * @see https://developer.apple.com/documentation/scenekit/scngeometry/1522646-removematerial
    */
   removeMaterialAt(index) {
   }
@@ -292,7 +292,7 @@ export default class SCNGeometry extends NSObject {
    * @param {number} index - The index of the attached material to be replaced.ImportantRaises an exception (rangeException) if index is beyond the bounds of the materials array.
    * @param {SCNMaterial} material - The material with which to replace the attached material.
    * @returns {void}
-   * @see https://developer.apple.com/reference/scenekit/scngeometry/1522714-replacematerial
+   * @see https://developer.apple.com/documentation/scenekit/scngeometry/1522714-replacematerial
    */
   replaceMaterialAtIndexWith(index, material) {
   }
@@ -305,7 +305,7 @@ export default class SCNGeometry extends NSObject {
    * @param {number} elementIndex - The index of the geometry element.
    * @returns {SCNGeometryElement} - 
    * @desc Each SCNGeometryElement object describes how vertices from the geometry’s sources are combined into polygons to create the geometry’s shape. Visible geometries contain at least one element.
-   * @see https://developer.apple.com/reference/scenekit/scngeometry/1523266-geometryelement
+   * @see https://developer.apple.com/documentation/scenekit/scngeometry/1523266-geometryelement
    */
   geometryElementAtIndex(elementIndex) {
     return this._geometryElements[elementIndex]
@@ -317,7 +317,7 @@ export default class SCNGeometry extends NSObject {
    * @param {SCNGeometrySource.Semantic} semantic - A constant identifying a semantic for which to return geometry sources. See Geometry Semantic Identifiers for possible values.
    * @returns {SCNGeometrySource[]} - 
    * @desc Each SCNGeometrySource object describes an attribute of all vertices in the geometry (such as vertex position, surface normal vector, color, or texture mapping coordinates) identified by the source’s semantic property. A geometry always has at least one source, for the vertex semantic, typically has additional sources for use in lighting and shading, and may have other sources for skeletal animation or surface subdivision information.The vertex, normal, and color semantics each refer to at most one source. A geometry may have multiple sources for the texcoord semantic—in this case, indices in the returned array correspond to values for the mappingChannel property used when attaching textures to materials.
-   * @see https://developer.apple.com/reference/scenekit/scngeometry/1522926-getgeometrysources
+   * @see https://developer.apple.com/documentation/scenekit/scngeometry/1522926-getgeometrysources
    */
   getGeometrySourcesForSemantic(semantic) {
     return this._geometrySources.filter((source) => source.semantic === semantic)
@@ -327,7 +327,7 @@ export default class SCNGeometry extends NSObject {
    * An array of geometry elements that describe the geometry’s shape.
    * @type {SCNGeometryElement[]}
    * @desc Each SCNGeometryElement object describes how vertices from the geometry’s sources are combined into polygons to create the geometry’s shape. Visible geometries contain at least one element.For geometries with multiple elements, you can use the materials property to attach different materials to each element.
-   * @see https://developer.apple.com/reference/scenekit/scngeometry/1523046-geometryelements
+   * @see https://developer.apple.com/documentation/scenekit/scngeometry/1523046-geometryelements
    */
   get geometryElements() {
     return this._geometryElements.slice(0)
@@ -337,7 +337,7 @@ export default class SCNGeometry extends NSObject {
    * An array of geometry sources that provide vertex data for the geometry.
    * @type {SCNGeometrySource[]}
    * @desc Each SCNGeometrySource object describes an attribute of all vertices in the geometry (such as vertex position, surface normal vector, color, or texture mapping coordinates) identified by the source’s semantic property. A geometry always has at least one source (for the vertex semantic), typically has additional sources for use in lighting and shading, and may have other sources for skeletal animation or surface subdivision information.
-   * @see https://developer.apple.com/reference/scenekit/scngeometry/1523662-geometrysources
+   * @see https://developer.apple.com/documentation/scenekit/scngeometry/1523662-geometrysources
    */
   get geometrySources() {
     return this._geometrySources.slice(0)
@@ -351,7 +351,7 @@ export default class SCNGeometry extends NSObject {
    * The number of geometry elements in the geometry.
    * @type {number}
    * @desc Each SCNGeometryElement object describes how vertices from the geometry’s sources are combined into polygons to create the geometry’s shape. Visible geometries contain at least one element.For geometries with multiple elements, you can use the materials property to attach different materials to each element.
-   * @see https://developer.apple.com/reference/scenekit/scngeometry/1523800-geometryelementcount
+   * @see https://developer.apple.com/documentation/scenekit/scngeometry/1523800-geometryelementcount
    */
   get geometryElementCount() {
     return this._geometryElements.length
@@ -370,7 +370,7 @@ export default class SCNGeometry extends NSObject {
    * @parameter {number} _boundingSphere.radius -
    * @returns {Object} -
    * @desc Scene Kit defines a bounding sphere in the local coordinate space using a center point and a radius. For example, if a node’s bounding sphere has the center point {3, 1, 4} and radius 2.0, all points in the vertex data of node’s geometry (and any geometry attached to its child nodes) lie within 2.0 units of the center point.The coordinates provided when reading this property are valid only if the object has a volume to be measured. For a geometry containing no vertex data or a node containing no geometry (and whose child nodes, if any, contain no geometry), the values center and radius are both zero.
-   * @see https://developer.apple.com/reference/scenekit/scnboundingvolume/2034707-boundingsphere
+   * @see https://developer.apple.com/documentation/scenekit/scnboundingvolume/2034707-boundingsphere
    */
   getBoundingSphere() {
     if(this.boundingBox === null){
@@ -410,7 +410,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
         glUniform1f(location, CFAbsoluteTimeGetCurrent() - startTime);
     }];
 
-   * @see https://developer.apple.com/reference/scenekit/scnshadable/1523063-handlebinding
+   * @see https://developer.apple.com/documentation/scenekit/scnshadable/1523063-handlebinding
    */
   handleBindingOfSymbolHandler(symbol, block = null) {
   }
@@ -422,7 +422,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    * @param {?SCNBindingBlock} [block = null] - A block to be called by SceneKit.
    * @returns {void}
    * @desc Use this method to associate a block with a SceneKit object (geometry or material) to handle cleanup related to an attribute or uniform variable in a custom SCNProgram shader associated with that object. SceneKit will call your block after rendering the object. In the block, you can execute any OpenGL commands or other code necessary for post-rendering tasks.This method is for OpenGL shader programs only. To bind custom variable data for Metal shader programs, use the handleBinding(ofBufferNamed:frequency:handler:) method.
-   * @see https://developer.apple.com/reference/scenekit/scnshadable/1522783-handleunbinding
+   * @see https://developer.apple.com/documentation/scenekit/scnshadable/1522783-handleunbinding
    */
   handleUnbindingOfSymbolHandler(symbol, block = null) {
   }
@@ -440,7 +440,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    * @param {?string} key - An string identifying the animation for later retrieval. You may pass nil if you don’t need to reference the animation later.
    * @returns {void}
    * @desc Newly added animations begin executing after the current run loop cycle ends.SceneKit does not define any requirements for the contents of the key parameter—it need only be unique among the keys for other animations you add. If you add an animation with an existing key, this method overwrites the existing animation.
-   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523386-addanimation
+   * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1523386-addanimation
    */
   addAnimationForKey(animation, key) {
     if(typeof key === 'undefined' || key === null){
@@ -460,7 +460,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    * @param {string} key - A string identifying a previously added animation.
    * @returns {?CAAnimation} - 
    * @desc Attempting to modify any properties of the returned object results in undefined behavior.
-   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1524020-animation
+   * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1524020-animation
    */
   animationForKey(key) {
     return this._animations.get(key)
@@ -470,7 +470,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    * Required. Removes all the animations currently attached to the object.
    * @access public
    * @returns {void}
-   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1522762-removeallanimations
+   * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1522762-removeallanimations
    */
   removeAllAnimations() {
     this._animations.clear()
@@ -481,7 +481,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    * @access public
    * @param {string} key - A string identifying an attached animation to remove.
    * @returns {void}
-   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1522880-removeanimation
+   * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1522880-removeanimation
    */
   removeAnimationForKey(key) {
     this._animations.delete(key)
@@ -495,7 +495,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    * @param {number} duration - The duration for transitioning out of the animation’s effect before it is removed.
    * @returns {void}
    * @desc Use this method to create smooth transitions between the effects of multiple animations. For example, the geometry loaded from a scene file for a game character may have associated animations for player actions such as walking and jumping. When the player lands from a jump, you remove the jump animation so the character continues walking. If you use the removeAnimation(forKey:) method to remove the jump animation, SceneKit abruptly switches from the current frame of the jump animation to the current frame of the walk animation. If you use the removeAnimation(forKey:fadeOutDuration:) method instead, SceneKit plays both animations at once during that duration and interpolates vertex positions from one animation to the other, creating a smooth transition.
-   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1522841-removeanimation
+   * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1522841-removeanimation
    */
   removeAnimationForKeyFadeOutDuration(key, duration) {
   }
@@ -504,7 +504,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    * Required. An array containing the keys of all animations currently attached to the object.
    * @type {string[]}
    * @desc This array contains all keys for which animations are attached to the object, or is empty if there are no attached animations. The ordering of animation keys in the array is arbitrary.
-   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523610-animationkeys
+   * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1523610-animationkeys
    */
   get animationKeys() {
     const keys = []
@@ -522,7 +522,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    * @param {string} key - A string identifying an attached animation.
    * @returns {void}
    * @desc This method has no effect if no animation is attached to the object with the specified key.
-   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523592-pauseanimation
+   * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1523592-pauseanimation
    */
   pauseAnimationForKey(key) {
   }
@@ -533,7 +533,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    * @param {string} key - A string identifying an attached animation.
    * @returns {void}
    * @desc This method has no effect if no animation is attached to the object with the specified key or if the specified animation is not currently paused.
-   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523332-resumeanimation
+   * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1523332-resumeanimation
    */
   resumeAnimationForKey(key) {
   }
@@ -543,7 +543,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    * @access public
    * @param {string} key - A string identifying an attached animation.
    * @returns {boolean} - 
-   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1523703-isanimationpaused
+   * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1523703-isanimationpaused
    */
   isAnimationPausedForKey(key) {
     return false
@@ -557,7 +557,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
    * @param {number} speed - 
    * @param {string} key - 
    * @returns {void}
-   * @see https://developer.apple.com/reference/scenekit/scnanimatable/1778343-setanimationspeed
+   * @see https://developer.apple.com/documentation/scenekit/scnanimatable/1778343-setanimationspeed
    */
   setAnimationSpeedForKey(speed, key) {
   }

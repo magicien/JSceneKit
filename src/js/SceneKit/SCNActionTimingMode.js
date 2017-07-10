@@ -8,7 +8,7 @@
  * @property {number} easeIn - Ease-in pacing. The animation begins slowly, and then speeds up as it progresses.
  * @property {number} easeOut - Ease-out pacing. The animation begins quickly, and then slows as it completes.
  * @property {number} easeInEaseOut - Ease-in ease-out pacing. The animation begins slowly, accelerates through the middle of its duration, and then slows again before completing.
- * @see https://developer.apple.com/reference/scenekit/scnactiontimingmode
+ * @see https://developer.apple.com/documentation/scenekit/scnactiontimingmode
  */
 const SCNActionTimingMode = {
   linear: 0,

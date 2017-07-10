@@ -9,7 +9,7 @@ import NSCoder from './NSCoder'
  * NSKeyedArchiver, a concrete subclass of NSCoder, provides a way to encode objects (and scalar values) into an architecture-independent format that can be stored in a file. When you archive a set of objects, the class information and instance variables for each object are written to the archive. NSKeyedArchiver’s companion class, NSKeyedUnarchiver, decodes the data in an archive and creates a set of objects equivalent to the original set.
  * @access public
  * @extends {NSCoder}
- * @see https://developer.apple.com/reference/foundation/nskeyedarchiver
+ * @see https://developer.apple.com/documentation/foundation/nskeyedarchiver
  */
 export default class NSKeyedArchiver extends NSCoder {
   // Initializers
@@ -18,7 +18,7 @@ export default class NSKeyedArchiver extends NSCoder {
    * 
    * @access public
    * @constructor
-   * @see https://developer.apple.com/reference/foundation/nskeyedarchiver/1642790-init
+   * @see https://developer.apple.com/documentation/foundation/nskeyedarchiver/1642790-init
    */
   constructor() {
     super()
@@ -28,14 +28,14 @@ export default class NSKeyedArchiver extends NSCoder {
     /**
      * The format in which the receiver encodes its data.
      * @type {PropertyListSerialization.PropertyListFormat}
-     * @see https://developer.apple.com/reference/foundation/nskeyedarchiver/1417520-outputformat
+     * @see https://developer.apple.com/documentation/foundation/nskeyedarchiver/1417520-outputformat
      */
     this.outputFormat = null
 
     /**
      * Indicates whether the receiver requires all archived classes to conform to NSSecureCoding.
      * @type {boolean}
-     * @see https://developer.apple.com/reference/foundation/nskeyedarchiver/1417084-requiressecurecoding
+     * @see https://developer.apple.com/documentation/foundation/nskeyedarchiver/1417084-requiressecurecoding
      */
     this.requiresSecureCoding = false
 
@@ -45,7 +45,7 @@ export default class NSKeyedArchiver extends NSCoder {
     /**
      * The archiver’s delegate.
      * @type {?NSKeyedArchiverDelegate}
-     * @see https://developer.apple.com/reference/foundation/nskeyedarchiver/1412809-delegate
+     * @see https://developer.apple.com/documentation/foundation/nskeyedarchiver/1412809-delegate
      */
     this.delegate = null
 
@@ -63,7 +63,7 @@ export default class NSKeyedArchiver extends NSCoder {
    * @param {NSMutableData} data - The mutable-data object into which the archive is written.
    * @returns {NSKeyedArchiver}
    * @desc When you finish encoding data, you must invoke finishEncoding() at which point data is filled. The format of the receiver is NSPropertyListBinaryFormat_v1_0.
-   * @see https://developer.apple.com/reference/foundation/nskeyedarchiver/1409579-init
+   * @see https://developer.apple.com/documentation/foundation/nskeyedarchiver/1409579-init
    */
   //initForWritingWith(data) {
   static archiverForWritingWithData(data) {
@@ -81,7 +81,7 @@ export default class NSKeyedArchiver extends NSCoder {
    * @access public
    * @param {Object} rootObject - 
    * @returns {Data} - 
-   * @see https://developer.apple.com/reference/foundation/nskeyedarchiver/1413189-archiveddata
+   * @see https://developer.apple.com/documentation/foundation/nskeyedarchiver/1413189-archiveddata
    */
   static archivedDataWithRootObject(rootObject) {
     return null
@@ -94,7 +94,7 @@ export default class NSKeyedArchiver extends NSCoder {
    * @param {string} path - The path of the file in which to write the archive.
    * @returns {boolean} - 
    * @desc The format of the archive is NSPropertyListBinaryFormat_v1_0.
-   * @see https://developer.apple.com/reference/foundation/nskeyedarchiver/1410621-archiverootobject
+   * @see https://developer.apple.com/documentation/foundation/nskeyedarchiver/1410621-archiverootobject
    */
   static archiveRootObjectToFile(rootObject, path) {
     return false
@@ -105,7 +105,7 @@ export default class NSKeyedArchiver extends NSCoder {
    * @access public
    * @returns {void}
    * @desc No more values can be encoded after this method is called. You must call this method when finished.
-   * @see https://developer.apple.com/reference/foundation/nskeyedarchiver/1413904-finishencoding
+   * @see https://developer.apple.com/documentation/foundation/nskeyedarchiver/1413904-finishencoding
    */
   finishEncoding() {
   }
@@ -118,7 +118,7 @@ export default class NSKeyedArchiver extends NSCoder {
    * @param {number} realv - The value to encode.
    * @param {string} key - The key with which to associate realv. This value must not be nil.
    * @returns {void}
-   * @see https://developer.apple.com/reference/foundation/nskeyedarchiver/1416972-encode
+   * @see https://developer.apple.com/documentation/foundation/nskeyedarchiver/1416972-encode
    */
   encodeForKey(realv, key) {
   }
@@ -130,7 +130,7 @@ export default class NSKeyedArchiver extends NSCoder {
    * @param {number} lenv - The number of bytes from bytesp to encode.
    * @param {string} key - The key with which to associate the encoded value. This value must not be nil.
    * @returns {void}
-   * @see https://developer.apple.com/reference/foundation/nskeyedarchiver/1417696-encodebytes
+   * @see https://developer.apple.com/documentation/foundation/nskeyedarchiver/1417696-encodebytes
    */
   encodeBytesLengthForKey(bytesp, lenv, key) {
   }
@@ -141,7 +141,7 @@ export default class NSKeyedArchiver extends NSCoder {
    * @param {?Object} objv - The object to encode. 
    * @param {string} key - The key with which to associate the encoded value. This value must not be nil.
    * @returns {void}
-   * @see https://developer.apple.com/reference/foundation/nskeyedarchiver/1413677-encodeconditionalobject
+   * @see https://developer.apple.com/documentation/foundation/nskeyedarchiver/1413677-encodeconditionalobject
    */
   encodeConditionalObjectForKey(objv, key) {
   }
@@ -155,7 +155,7 @@ export default class NSKeyedArchiver extends NSCoder {
    * @param {Object} cls - The class for which to set up a translation mapping.
    * @returns {void}
    * @desc When encoding, the receiver’s translation map overrides any translation that may also be present in the class’s map.
-   * @see https://developer.apple.com/reference/foundation/nskeyedarchiver/1414746-setclassname
+   * @see https://developer.apple.com/documentation/foundation/nskeyedarchiver/1414746-setclassname
    */
   static setClassNameFor(codedName, cls) {
   }
@@ -165,7 +165,7 @@ export default class NSKeyedArchiver extends NSCoder {
    * @access public
    * @param {Object} cls - The class for which to determine the translation mapping.
    * @returns {?string} - 
-   * @see https://developer.apple.com/reference/foundation/nskeyedarchiver/1407245-classname
+   * @see https://developer.apple.com/documentation/foundation/nskeyedarchiver/1407245-classname
    */
   static classNameFor(cls) {
     return null
@@ -177,7 +177,7 @@ export default class NSKeyedArchiver extends NSCoder {
    * Returns the encoded data for the archiver.
    * @type {Data}
    * @desc If encoding has not yet finished, invoking this property calls finishEncoding() and returns the data. If you initialized the keyed archiver with a specific mutable data instance, then that data is returned by the property after finishEncoding() is called.
-   * @see https://developer.apple.com/reference/foundation/nskeyedarchiver/1643042-encodeddata
+   * @see https://developer.apple.com/documentation/foundation/nskeyedarchiver/1643042-encodeddata
    */
   get encodedData() {
     return this._encodedData

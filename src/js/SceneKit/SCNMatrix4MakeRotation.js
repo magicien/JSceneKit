@@ -11,7 +11,7 @@ import SCNVector3 from './SCNVector3'
  * @param {number} y - The y-component of the rotation axis.
  * @param {number} z - The z-component of the rotation axis.
  * @returns {SCNMatrix4} - 
- * @see https://developer.apple.com/reference/scenekit/1409686-scnmatrix4makerotation
+ * @see https://developer.apple.com/documentation/scenekit/1409686-scnmatrix4makerotation
  */
 const SCNMatrix4MakeRotation = function(angle, x, y, z) {
   const c = Math.cos(angle)

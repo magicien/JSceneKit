@@ -5,7 +5,7 @@
 /**
  * An interface that allows objects to respond to actions triggered by a CALayer.
  * @interface
- * @see https://developer.apple.com/reference/quartzcore/caaction
+ * @see https://developer.apple.com/documentation/quartzcore/caaction
  */
 export default class CAAction {
 
@@ -26,7 +26,7 @@ export default class CAAction {
    * @param {Object} anObject - The layer on which the action should occur.
    * @param {?Map<AnyHashable, Object>} dict - A dictionary containing parameters associated with this event. May be nil.
    * @returns {void}
-   * @see https://developer.apple.com/reference/quartzcore/caaction/1410806-run
+   * @see https://developer.apple.com/documentation/quartzcore/caaction/1410806-run
    */
   runForKeyObjectArguments(event, anObject, dict) {
   }

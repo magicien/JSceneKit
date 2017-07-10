@@ -5,7 +5,7 @@
 /**
  * An object that manages a Metal buffer used by a custom shader program. 
  * @interface
- * @see https://developer.apple.com/reference/scenekit/scnbufferstream
+ * @see https://developer.apple.com/documentation/scenekit/scnbufferstream
  */
 export default class SCNBufferStream {
 
@@ -25,7 +25,7 @@ export default class SCNBufferStream {
    * @param {Object} bytes - The memory address from which to copy data.
    * @param {number} length - The number of bytes to copy into the Metal buffer.
    * @returns {void}
-   * @see https://developer.apple.com/reference/scenekit/scnbufferstream/1523175-writebytes
+   * @see https://developer.apple.com/documentation/scenekit/scnbufferstream/1523175-writebytes
    */
   writeBytesCount(bytes, length) {
   }

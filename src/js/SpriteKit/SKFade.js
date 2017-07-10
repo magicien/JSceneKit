@@ -33,7 +33,7 @@ export default class SKFade extends SKAction {
    * @desc When the action executes, the node’s alpha property animates from its current value to 1.0.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.fadeOut(withDuration: sec)
 let action = SKAction.fadeOut(withDuration: sec)
 
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417818-fadein
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417818-fadein
    */
   static fadeInWithDuration(sec) {
     const action = new SKFade()
@@ -50,7 +50,7 @@ let action = SKAction.fadeOut(withDuration: sec)
    * @desc When the action executes, the node’s alpha property animates from its current value to 0.0. This causes the node to disappear.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.fadeIn(withDuration: sec)
 let action = SKAction.fadeIn(withDuration: sec)
 
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417738-fadeout
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417738-fadeout
    */
   static fadeOutWithDuration(sec) {
     const action = new SKFade()
@@ -68,7 +68,7 @@ let action = SKAction.fadeIn(withDuration: sec)
    * @desc When the action executes, the node’s alpha property animates to its new value.This action is reversible; the reverse is created as if the following code is executed:let action = SKAction.fadeAlpha(by: -factor, duration: sec)
 let action = SKAction.fadeAlpha(by: -factor, duration: sec)
 
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417716-fadealpha
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417716-fadealpha
    */
   static fadeAlphaByDuration(factor, sec) {
     const action = new SKFade()
@@ -84,7 +84,7 @@ let action = SKAction.fadeAlpha(by: -factor, duration: sec)
    * @param {number} sec - The duration of the animation.
    * @returns {SKAction} - 
    * @desc When the action executes, the node’s alpha property animates to its new value.This action is not reversible; the reverse of this action has the same duration but does not change anything.
-   * @see https://developer.apple.com/reference/spritekit/skaction/1417673-fadealpha
+   * @see https://developer.apple.com/documentation/spritekit/skaction/1417673-fadealpha
    */
   static fadeAlphaToDuration(alpha, sec) {
     const action = new SKFade()

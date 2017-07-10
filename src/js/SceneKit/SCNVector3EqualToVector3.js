@@ -11,7 +11,7 @@ const _epsilon = 0.00001
  * @param {SCNVector3} b - The second vector.
  * @returns {boolean} - 
  * @desc This function performs a numeric (not bitwise) comparison of each pair of component values.
- * @see https://developer.apple.com/reference/scenekit/1409643-scnvector3equaltovector3
+ * @see https://developer.apple.com/documentation/scenekit/1409643-scnvector3equaltovector3
  */
 const SCNVector3EqualToVector3 = function(a, b) {
   return Math.abs(a.x - b.x) < _epsilon

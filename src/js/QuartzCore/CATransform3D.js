@@ -3,7 +3,7 @@
 /**
  * Defines the standard transform matrix used throughout Core Animation.
  * @access public
- * @see https://developer.apple.com/reference/quartzcore/catransform3d
+ * @see https://developer.apple.com/documentation/quartzcore/catransform3d
  */
 export default class CATransform3D {
 
@@ -14,7 +14,7 @@ export default class CATransform3D {
    * @access public
    * @param {number[][]} m - 
    * @returns {void}
-   * @see https://developer.apple.com/reference/quartzcore/catransform3d/1523734-init
+   * @see https://developer.apple.com/documentation/quartzcore/catransform3d/1523734-init
    */
   constructor(m) {
 

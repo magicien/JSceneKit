@@ -5,7 +5,7 @@
 /**
  * Default values for a physics body’s categoryBitMask and collisionBitMask properties.
  * @access public
- * @see https://developer.apple.com/reference/scenekit/scnphysicscollisioncategory
+ * @see https://developer.apple.com/documentation/scenekit/scnphysicscollisioncategory
  */
 export default class SCNPhysicsCollisionCategory {
 
@@ -14,7 +14,7 @@ export default class SCNPhysicsCollisionCategory {
    * The default categoryBitMask value for dynamic and kinematic bodies.
    * @type {SCNPhysicsCollisionCategory}
    * @desc 
-   * @see https://developer.apple.com/reference/scenekit/scnphysicscollisioncategory/1514799-default
+   * @see https://developer.apple.com/documentation/scenekit/scnphysicscollisioncategory/1514799-default
    */
   get default() {
     return this._default
@@ -23,7 +23,7 @@ export default class SCNPhysicsCollisionCategory {
    * The default categoryBitMask value for static bodies.
    * @type {SCNPhysicsCollisionCategory}
    * @desc 
-   * @see https://developer.apple.com/reference/scenekit/scnphysicscollisioncategory/1514778-static
+   * @see https://developer.apple.com/documentation/scenekit/scnphysicscollisioncategory/1514778-static
    */
   get static() {
     return this._static
@@ -32,7 +32,7 @@ export default class SCNPhysicsCollisionCategory {
    * This is the default value for a physics body’s collisionBitMask property.
    * @type {SCNPhysicsCollisionCategory}
    * @desc With this collision mask, a physics body can collide with all other physics bodies.
-   * @see https://developer.apple.com/reference/scenekit/scnphysicscollisioncategory/1514784-all
+   * @see https://developer.apple.com/documentation/scenekit/scnphysicscollisioncategory/1514784-all
    */
   get all() {
     return this._all
@@ -45,7 +45,7 @@ export default class SCNPhysicsCollisionCategory {
    * @access public
    * @param {number} rawValue - 
    * @returns {void}
-   * @see https://developer.apple.com/reference/scenekit/scnphysicscollisioncategory/1523649-init
+   * @see https://developer.apple.com/documentation/scenekit/scnphysicscollisioncategory/1523649-init
    */
   init(rawValue) {
 

@@ -7,7 +7,7 @@
  * @property {function} milliseconds - A number of milliseconds.
  * @property {function} microseconds - A number of microseconds.
  * @property {function} nanoseconds - A number of nanoseconds.
- * @see https://developer.apple.com/reference/dispatch/dispatchtimeinterval
+ * @see https://developer.apple.com/documentation/dispatch/dispatchtimeinterval
  */
 const DispatchTimeInterval = {
   seconds: (value) => {

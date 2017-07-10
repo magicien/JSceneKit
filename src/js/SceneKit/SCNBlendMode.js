@@ -10,7 +10,7 @@
  * @property {number} multiply - Blend by multiplying the source color with the background color.
  * @property {number} screen - Blend by multiplying the inverse of the source color with the inverse of the destination color.
  * @property {number} replace - Blend by replacing the destination color with the source color, ignoring alpha.
- * @see https://developer.apple.com/reference/scenekit/scnblendmode
+ * @see https://developer.apple.com/documentation/scenekit/scnblendmode
  */
 const SCNBlendMode = {
   alpha: 0,
