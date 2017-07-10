@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 3133,
+  "end": 3161,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 3133,
+    "end": 3161,
     "loc": {
       "start": {
         "line": 1,
@@ -239,9 +239,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Detailed information about a contact between two physics bodies in a scene’s physics simulation. \n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnphysicscontact\n ",
+            "value": "*\n * Detailed information about a contact between two physics bodies in a scene’s physics simulation. \n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact\n ",
             "start": 132,
-            "end": 354,
+            "end": 358,
             "loc": {
               "start": {
                 "line": 8,
@@ -257,8 +257,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 355,
-        "end": 3132,
+        "start": 359,
+        "end": 3160,
         "loc": {
           "start": {
             "line": 14,
@@ -271,8 +271,8 @@
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 370,
-          "end": 3132,
+          "start": 374,
+          "end": 3160,
           "loc": {
             "start": {
               "line": 14,
@@ -285,8 +285,8 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 376,
-            "end": 393,
+            "start": 380,
+            "end": 397,
             "loc": {
               "start": {
                 "line": 14,
@@ -303,8 +303,8 @@
           },
           "superClass": {
             "type": "Identifier",
-            "start": 402,
-            "end": 410,
+            "start": 406,
+            "end": 414,
             "loc": {
               "start": {
                 "line": 14,
@@ -320,8 +320,8 @@
           },
           "body": {
             "type": "ClassBody",
-            "start": 411,
-            "end": 3132,
+            "start": 415,
+            "end": 3160,
             "loc": {
               "start": {
                 "line": 14,
@@ -335,8 +335,8 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 483,
-                "end": 729,
+                "start": 487,
+                "end": 733,
                 "loc": {
                   "start": {
                     "line": 21,
@@ -350,8 +350,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 483,
-                  "end": 494,
+                  "start": 487,
+                  "end": 498,
                   "loc": {
                     "start": {
                       "line": 21,
@@ -375,8 +375,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 497,
-                  "end": 729,
+                  "start": 501,
+                  "end": 733,
                   "loc": {
                     "start": {
                       "line": 21,
@@ -390,8 +390,8 @@
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 503,
-                      "end": 510,
+                      "start": 507,
+                      "end": 514,
                       "loc": {
                         "start": {
                           "line": 22,
@@ -404,8 +404,8 @@
                       },
                       "expression": {
                         "type": "CallExpression",
-                        "start": 503,
-                        "end": 510,
+                        "start": 507,
+                        "end": 514,
                         "loc": {
                           "start": {
                             "line": 22,
@@ -418,8 +418,8 @@
                         },
                         "callee": {
                           "type": "Super",
-                          "start": 503,
-                          "end": 508,
+                          "start": 507,
+                          "end": 512,
                           "loc": {
                             "start": {
                               "line": 22,
@@ -438,8 +438,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Inspecting the Contact Properties",
-                          "start": 516,
-                          "end": 552,
+                          "start": 520,
+                          "end": 556,
                           "loc": {
                             "start": {
                               "line": 24,
@@ -455,8 +455,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 558,
-                      "end": 576,
+                      "start": 562,
+                      "end": 580,
                       "loc": {
                         "start": {
                           "line": 26,
@@ -469,8 +469,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 558,
-                        "end": 576,
+                        "start": 562,
+                        "end": 580,
                         "loc": {
                           "start": {
                             "line": 26,
@@ -484,8 +484,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 558,
-                          "end": 569,
+                          "start": 562,
+                          "end": 573,
                           "loc": {
                             "start": {
                               "line": 26,
@@ -498,8 +498,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 558,
-                            "end": 562,
+                            "start": 562,
+                            "end": 566,
                             "loc": {
                               "start": {
                                 "line": 26,
@@ -514,8 +514,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 563,
-                            "end": 569,
+                            "start": 567,
+                            "end": 573,
                             "loc": {
                               "start": {
                                 "line": 26,
@@ -534,8 +534,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 572,
-                          "end": 576,
+                          "start": 576,
+                          "end": 580,
                           "loc": {
                             "start": {
                               "line": 26,
@@ -553,8 +553,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Inspecting the Contact Properties",
-                          "start": 516,
-                          "end": 552,
+                          "start": 520,
+                          "end": 556,
                           "loc": {
                             "start": {
                               "line": 24,
@@ -570,8 +570,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 581,
-                      "end": 599,
+                      "start": 585,
+                      "end": 603,
                       "loc": {
                         "start": {
                           "line": 27,
@@ -584,8 +584,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 581,
-                        "end": 599,
+                        "start": 585,
+                        "end": 603,
                         "loc": {
                           "start": {
                             "line": 27,
@@ -599,8 +599,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 581,
-                          "end": 592,
+                          "start": 585,
+                          "end": 596,
                           "loc": {
                             "start": {
                               "line": 27,
@@ -613,8 +613,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 581,
-                            "end": 585,
+                            "start": 585,
+                            "end": 589,
                             "loc": {
                               "start": {
                                 "line": 27,
@@ -628,8 +628,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 586,
-                            "end": 592,
+                            "start": 590,
+                            "end": 596,
                             "loc": {
                               "start": {
                                 "line": 27,
@@ -647,8 +647,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 595,
-                          "end": 599,
+                          "start": 599,
+                          "end": 603,
                           "loc": {
                             "start": {
                               "line": 27,
@@ -664,8 +664,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 604,
-                      "end": 629,
+                      "start": 608,
+                      "end": 633,
                       "loc": {
                         "start": {
                           "line": 28,
@@ -678,8 +678,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 604,
-                        "end": 629,
+                        "start": 608,
+                        "end": 633,
                         "loc": {
                           "start": {
                             "line": 28,
@@ -693,8 +693,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 604,
-                          "end": 622,
+                          "start": 608,
+                          "end": 626,
                           "loc": {
                             "start": {
                               "line": 28,
@@ -707,8 +707,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 604,
-                            "end": 608,
+                            "start": 608,
+                            "end": 612,
                             "loc": {
                               "start": {
                                 "line": 28,
@@ -722,8 +722,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 609,
-                            "end": 622,
+                            "start": 613,
+                            "end": 626,
                             "loc": {
                               "start": {
                                 "line": 28,
@@ -741,8 +741,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 625,
-                          "end": 629,
+                          "start": 629,
+                          "end": 633,
                           "loc": {
                             "start": {
                               "line": 28,
@@ -758,8 +758,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 634,
-                      "end": 660,
+                      "start": 638,
+                      "end": 664,
                       "loc": {
                         "start": {
                           "line": 29,
@@ -772,8 +772,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 634,
-                        "end": 660,
+                        "start": 638,
+                        "end": 664,
                         "loc": {
                           "start": {
                             "line": 29,
@@ -787,8 +787,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 634,
-                          "end": 653,
+                          "start": 638,
+                          "end": 657,
                           "loc": {
                             "start": {
                               "line": 29,
@@ -801,8 +801,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 634,
-                            "end": 638,
+                            "start": 638,
+                            "end": 642,
                             "loc": {
                               "start": {
                                 "line": 29,
@@ -816,8 +816,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 639,
-                            "end": 653,
+                            "start": 643,
+                            "end": 657,
                             "loc": {
                               "start": {
                                 "line": 29,
@@ -835,8 +835,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 656,
-                          "end": 660,
+                          "start": 660,
+                          "end": 664,
                           "loc": {
                             "start": {
                               "line": 29,
@@ -852,8 +852,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 665,
-                      "end": 691,
+                      "start": 669,
+                      "end": 695,
                       "loc": {
                         "start": {
                           "line": 30,
@@ -866,8 +866,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 665,
-                        "end": 691,
+                        "start": 669,
+                        "end": 695,
                         "loc": {
                           "start": {
                             "line": 30,
@@ -881,8 +881,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 665,
-                          "end": 687,
+                          "start": 669,
+                          "end": 691,
                           "loc": {
                             "start": {
                               "line": 30,
@@ -895,8 +895,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 665,
-                            "end": 669,
+                            "start": 669,
+                            "end": 673,
                             "loc": {
                               "start": {
                                 "line": 30,
@@ -910,8 +910,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 670,
-                            "end": 687,
+                            "start": 674,
+                            "end": 691,
                             "loc": {
                               "start": {
                                 "line": 30,
@@ -929,8 +929,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 690,
-                          "end": 691,
+                          "start": 694,
+                          "end": 695,
                           "loc": {
                             "start": {
                               "line": 30,
@@ -951,8 +951,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 696,
-                      "end": 725,
+                      "start": 700,
+                      "end": 729,
                       "loc": {
                         "start": {
                           "line": 31,
@@ -965,8 +965,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 696,
-                        "end": 725,
+                        "start": 700,
+                        "end": 729,
                         "loc": {
                           "start": {
                             "line": 31,
@@ -980,8 +980,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 696,
-                          "end": 721,
+                          "start": 700,
+                          "end": 725,
                           "loc": {
                             "start": {
                               "line": 31,
@@ -994,8 +994,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 696,
-                            "end": 700,
+                            "start": 700,
+                            "end": 704,
                             "loc": {
                               "start": {
                                 "line": 31,
@@ -1009,8 +1009,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 701,
-                            "end": 721,
+                            "start": 705,
+                            "end": 725,
                             "loc": {
                               "start": {
                                 "line": 31,
@@ -1028,8 +1028,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 724,
-                          "end": 725,
+                          "start": 728,
+                          "end": 729,
                           "loc": {
                             "start": {
                               "line": 31,
@@ -1056,8 +1056,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
-                    "start": 416,
-                    "end": 480,
+                    "start": 420,
+                    "end": 484,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -1074,8 +1074,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Inspecting the Contact Properties",
-                    "start": 733,
-                    "end": 769,
+                    "start": 737,
+                    "end": 773,
                     "loc": {
                       "start": {
                         "line": 34,
@@ -1089,9 +1089,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The node containing the first body in the contact.\n   * @type {SCNNode}\n   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1523445-nodea\n   ",
-                    "start": 773,
-                    "end": 1043,
+                    "value": "*\n   * The node containing the first body in the contact.\n   * @type {SCNNode}\n   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523445-nodea\n   ",
+                    "start": 777,
+                    "end": 1051,
                     "loc": {
                       "start": {
                         "line": 36,
@@ -1107,8 +1107,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 1046,
-                "end": 1086,
+                "start": 1054,
+                "end": 1094,
                 "loc": {
                   "start": {
                     "line": 42,
@@ -1122,8 +1122,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1050,
-                  "end": 1055,
+                  "start": 1058,
+                  "end": 1063,
                   "loc": {
                     "start": {
                       "line": 42,
@@ -1146,8 +1146,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1058,
-                  "end": 1086,
+                  "start": 1066,
+                  "end": 1094,
                   "loc": {
                     "start": {
                       "line": 42,
@@ -1161,8 +1161,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 1064,
-                      "end": 1082,
+                      "start": 1072,
+                      "end": 1090,
                       "loc": {
                         "start": {
                           "line": 43,
@@ -1175,8 +1175,8 @@
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 1071,
-                        "end": 1082,
+                        "start": 1079,
+                        "end": 1090,
                         "loc": {
                           "start": {
                             "line": 43,
@@ -1189,8 +1189,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 1071,
-                          "end": 1075,
+                          "start": 1079,
+                          "end": 1083,
                           "loc": {
                             "start": {
                               "line": 43,
@@ -1204,8 +1204,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 1076,
-                          "end": 1082,
+                          "start": 1084,
+                          "end": 1090,
                           "loc": {
                             "start": {
                               "line": 43,
@@ -1230,8 +1230,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Inspecting the Contact Properties",
-                    "start": 733,
-                    "end": 769,
+                    "start": 737,
+                    "end": 773,
                     "loc": {
                       "start": {
                         "line": 34,
@@ -1245,9 +1245,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The node containing the first body in the contact.\n   * @type {SCNNode}\n   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1523445-nodea\n   ",
-                    "start": 773,
-                    "end": 1043,
+                    "value": "*\n   * The node containing the first body in the contact.\n   * @type {SCNNode}\n   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523445-nodea\n   ",
+                    "start": 777,
+                    "end": 1051,
                     "loc": {
                       "start": {
                         "line": 36,
@@ -1263,9 +1263,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The node containing the second body in the contact.\n   * @type {SCNNode}\n   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1524232-nodeb\n   ",
-                    "start": 1090,
-                    "end": 1361,
+                    "value": "*\n   * The node containing the second body in the contact.\n   * @type {SCNNode}\n   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1524232-nodeb\n   ",
+                    "start": 1098,
+                    "end": 1373,
                     "loc": {
                       "start": {
                         "line": 46,
@@ -1281,8 +1281,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 1364,
-                "end": 1404,
+                "start": 1376,
+                "end": 1416,
                 "loc": {
                   "start": {
                     "line": 52,
@@ -1296,8 +1296,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1368,
-                  "end": 1373,
+                  "start": 1380,
+                  "end": 1385,
                   "loc": {
                     "start": {
                       "line": 52,
@@ -1320,8 +1320,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1376,
-                  "end": 1404,
+                  "start": 1388,
+                  "end": 1416,
                   "loc": {
                     "start": {
                       "line": 52,
@@ -1335,8 +1335,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 1382,
-                      "end": 1400,
+                      "start": 1394,
+                      "end": 1412,
                       "loc": {
                         "start": {
                           "line": 53,
@@ -1349,8 +1349,8 @@
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 1389,
-                        "end": 1400,
+                        "start": 1401,
+                        "end": 1412,
                         "loc": {
                           "start": {
                             "line": 53,
@@ -1363,8 +1363,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 1389,
-                          "end": 1393,
+                          "start": 1401,
+                          "end": 1405,
                           "loc": {
                             "start": {
                               "line": 53,
@@ -1378,8 +1378,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 1394,
-                          "end": 1400,
+                          "start": 1406,
+                          "end": 1412,
                           "loc": {
                             "start": {
                               "line": 53,
@@ -1403,9 +1403,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The node containing the second body in the contact.\n   * @type {SCNNode}\n   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1524232-nodeb\n   ",
-                    "start": 1090,
-                    "end": 1361,
+                    "value": "*\n   * The node containing the second body in the contact.\n   * @type {SCNNode}\n   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1524232-nodeb\n   ",
+                    "start": 1098,
+                    "end": 1373,
                     "loc": {
                       "start": {
                         "line": 46,
@@ -1421,9 +1421,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The contact point between the two physics bodies, in scene coordinates.\n   * @type {SCNVector3}\n   * @desc \n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1523810-contactpoint\n   ",
-                    "start": 1408,
-                    "end": 1626,
+                    "value": "*\n   * The contact point between the two physics bodies, in scene coordinates.\n   * @type {SCNVector3}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523810-contactpoint\n   ",
+                    "start": 1420,
+                    "end": 1642,
                     "loc": {
                       "start": {
                         "line": 56,
@@ -1439,8 +1439,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 1629,
-                "end": 1683,
+                "start": 1645,
+                "end": 1699,
                 "loc": {
                   "start": {
                     "line": 62,
@@ -1454,8 +1454,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1633,
-                  "end": 1645,
+                  "start": 1649,
+                  "end": 1661,
                   "loc": {
                     "start": {
                       "line": 62,
@@ -1478,8 +1478,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1648,
-                  "end": 1683,
+                  "start": 1664,
+                  "end": 1699,
                   "loc": {
                     "start": {
                       "line": 62,
@@ -1493,8 +1493,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 1654,
-                      "end": 1679,
+                      "start": 1670,
+                      "end": 1695,
                       "loc": {
                         "start": {
                           "line": 63,
@@ -1507,8 +1507,8 @@
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 1661,
-                        "end": 1679,
+                        "start": 1677,
+                        "end": 1695,
                         "loc": {
                           "start": {
                             "line": 63,
@@ -1521,8 +1521,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 1661,
-                          "end": 1665,
+                          "start": 1677,
+                          "end": 1681,
                           "loc": {
                             "start": {
                               "line": 63,
@@ -1536,8 +1536,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 1666,
-                          "end": 1679,
+                          "start": 1682,
+                          "end": 1695,
                           "loc": {
                             "start": {
                               "line": 63,
@@ -1561,9 +1561,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The contact point between the two physics bodies, in scene coordinates.\n   * @type {SCNVector3}\n   * @desc \n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1523810-contactpoint\n   ",
-                    "start": 1408,
-                    "end": 1626,
+                    "value": "*\n   * The contact point between the two physics bodies, in scene coordinates.\n   * @type {SCNVector3}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523810-contactpoint\n   ",
+                    "start": 1420,
+                    "end": 1642,
                     "loc": {
                       "start": {
                         "line": 56,
@@ -1579,9 +1579,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The normal vector at the contact point between the two physics bodies, in scene coordinates.\n   * @type {SCNVector3}\n   * @desc This vector tells you which direction the bodies were moving relative to one another at the time of the collision. For example, in a game you can examine this vector to have enemy characters take damage when struck from above by the player character but damage the player character instead when they collide side-to-side.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1522833-contactnormal\n   ",
-                    "start": 1687,
-                    "end": 2248,
+                    "value": "*\n   * The normal vector at the contact point between the two physics bodies, in scene coordinates.\n   * @type {SCNVector3}\n   * @desc This vector tells you which direction the bodies were moving relative to one another at the time of the collision. For example, in a game you can examine this vector to have enemy characters take damage when struck from above by the player character but damage the player character instead when they collide side-to-side.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1522833-contactnormal\n   ",
+                    "start": 1703,
+                    "end": 2268,
                     "loc": {
                       "start": {
                         "line": 66,
@@ -1597,8 +1597,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 2251,
-                "end": 2307,
+                "start": 2271,
+                "end": 2327,
                 "loc": {
                   "start": {
                     "line": 72,
@@ -1612,8 +1612,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 2255,
-                  "end": 2268,
+                  "start": 2275,
+                  "end": 2288,
                   "loc": {
                     "start": {
                       "line": 72,
@@ -1636,8 +1636,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 2271,
-                  "end": 2307,
+                  "start": 2291,
+                  "end": 2327,
                   "loc": {
                     "start": {
                       "line": 72,
@@ -1651,8 +1651,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 2277,
-                      "end": 2303,
+                      "start": 2297,
+                      "end": 2323,
                       "loc": {
                         "start": {
                           "line": 73,
@@ -1665,8 +1665,8 @@
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 2284,
-                        "end": 2303,
+                        "start": 2304,
+                        "end": 2323,
                         "loc": {
                           "start": {
                             "line": 73,
@@ -1679,8 +1679,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 2284,
-                          "end": 2288,
+                          "start": 2304,
+                          "end": 2308,
                           "loc": {
                             "start": {
                               "line": 73,
@@ -1694,8 +1694,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 2289,
-                          "end": 2303,
+                          "start": 2309,
+                          "end": 2323,
                           "loc": {
                             "start": {
                               "line": 73,
@@ -1719,9 +1719,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The normal vector at the contact point between the two physics bodies, in scene coordinates.\n   * @type {SCNVector3}\n   * @desc This vector tells you which direction the bodies were moving relative to one another at the time of the collision. For example, in a game you can examine this vector to have enemy characters take damage when struck from above by the player character but damage the player character instead when they collide side-to-side.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1522833-contactnormal\n   ",
-                    "start": 1687,
-                    "end": 2248,
+                    "value": "*\n   * The normal vector at the contact point between the two physics bodies, in scene coordinates.\n   * @type {SCNVector3}\n   * @desc This vector tells you which direction the bodies were moving relative to one another at the time of the collision. For example, in a game you can examine this vector to have enemy characters take damage when struck from above by the player character but damage the player character instead when they collide side-to-side.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1522833-contactnormal\n   ",
+                    "start": 1703,
+                    "end": 2268,
                     "loc": {
                       "start": {
                         "line": 66,
@@ -1737,9 +1737,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The force over time of the collision, in newton-seconds.\n   * @type {number}\n   * @desc This property’s value tells you how hard the bodies struck each other in a collision. For example, in a game you might allow a character to proceed unhindered after a minor collision, but take damage when struck with sufficient force.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1523944-collisionimpulse\n   ",
-                    "start": 2311,
-                    "end": 2748,
+                    "value": "*\n   * The force over time of the collision, in newton-seconds.\n   * @type {number}\n   * @desc This property’s value tells you how hard the bodies struck each other in a collision. For example, in a game you might allow a character to proceed unhindered after a minor collision, but take damage when struck with sufficient force.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523944-collisionimpulse\n   ",
+                    "start": 2331,
+                    "end": 2772,
                     "loc": {
                       "start": {
                         "line": 76,
@@ -1755,8 +1755,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 2751,
-                "end": 2813,
+                "start": 2775,
+                "end": 2837,
                 "loc": {
                   "start": {
                     "line": 82,
@@ -1770,8 +1770,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 2755,
-                  "end": 2771,
+                  "start": 2779,
+                  "end": 2795,
                   "loc": {
                     "start": {
                       "line": 82,
@@ -1794,8 +1794,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 2774,
-                  "end": 2813,
+                  "start": 2798,
+                  "end": 2837,
                   "loc": {
                     "start": {
                       "line": 82,
@@ -1809,8 +1809,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 2780,
-                      "end": 2809,
+                      "start": 2804,
+                      "end": 2833,
                       "loc": {
                         "start": {
                           "line": 83,
@@ -1823,8 +1823,8 @@
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 2787,
-                        "end": 2809,
+                        "start": 2811,
+                        "end": 2833,
                         "loc": {
                           "start": {
                             "line": 83,
@@ -1837,8 +1837,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 2787,
-                          "end": 2791,
+                          "start": 2811,
+                          "end": 2815,
                           "loc": {
                             "start": {
                               "line": 83,
@@ -1852,8 +1852,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 2792,
-                          "end": 2809,
+                          "start": 2816,
+                          "end": 2833,
                           "loc": {
                             "start": {
                               "line": 83,
@@ -1877,9 +1877,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The force over time of the collision, in newton-seconds.\n   * @type {number}\n   * @desc This property’s value tells you how hard the bodies struck each other in a collision. For example, in a game you might allow a character to proceed unhindered after a minor collision, but take damage when struck with sufficient force.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1523944-collisionimpulse\n   ",
-                    "start": 2311,
-                    "end": 2748,
+                    "value": "*\n   * The force over time of the collision, in newton-seconds.\n   * @type {number}\n   * @desc This property’s value tells you how hard the bodies struck each other in a collision. For example, in a game you might allow a character to proceed unhindered after a minor collision, but take damage when struck with sufficient force.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523944-collisionimpulse\n   ",
+                    "start": 2331,
+                    "end": 2772,
                     "loc": {
                       "start": {
                         "line": 76,
@@ -1895,9 +1895,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The distance of overlap, in units of scene coordinate space, between the two physics bodies.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1522870-penetrationdistance\n   ",
-                    "start": 2817,
-                    "end": 3059,
+                    "value": "*\n   * The distance of overlap, in units of scene coordinate space, between the two physics bodies.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1522870-penetrationdistance\n   ",
+                    "start": 2841,
+                    "end": 3087,
                     "loc": {
                       "start": {
                         "line": 86,
@@ -1913,8 +1913,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 3062,
-                "end": 3130,
+                "start": 3090,
+                "end": 3158,
                 "loc": {
                   "start": {
                     "line": 92,
@@ -1928,8 +1928,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 3066,
-                  "end": 3085,
+                  "start": 3094,
+                  "end": 3113,
                   "loc": {
                     "start": {
                       "line": 92,
@@ -1952,8 +1952,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 3088,
-                  "end": 3130,
+                  "start": 3116,
+                  "end": 3158,
                   "loc": {
                     "start": {
                       "line": 92,
@@ -1967,8 +1967,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 3094,
-                      "end": 3126,
+                      "start": 3122,
+                      "end": 3154,
                       "loc": {
                         "start": {
                           "line": 93,
@@ -1981,8 +1981,8 @@
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 3101,
-                        "end": 3126,
+                        "start": 3129,
+                        "end": 3154,
                         "loc": {
                           "start": {
                             "line": 93,
@@ -1995,8 +1995,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 3101,
-                          "end": 3105,
+                          "start": 3129,
+                          "end": 3133,
                           "loc": {
                             "start": {
                               "line": 93,
@@ -2010,8 +2010,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 3106,
-                          "end": 3126,
+                          "start": 3134,
+                          "end": 3154,
                           "loc": {
                             "start": {
                               "line": 93,
@@ -2034,9 +2034,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The distance of overlap, in units of scene coordinate space, between the two physics bodies.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1522870-penetrationdistance\n   ",
-                    "start": 2817,
-                    "end": 3059,
+                    "value": "*\n   * The distance of overlap, in units of scene coordinate space, between the two physics bodies.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1522870-penetrationdistance\n   ",
+                    "start": 2841,
+                    "end": 3087,
                     "loc": {
                       "start": {
                         "line": 86,
@@ -2055,9 +2055,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * Detailed information about a contact between two physics bodies in a scene’s physics simulation. \n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnphysicscontact\n ",
+              "value": "*\n * Detailed information about a contact between two physics bodies in a scene’s physics simulation. \n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact\n ",
               "start": 132,
-              "end": 354,
+              "end": 358,
               "loc": {
                 "start": {
                   "line": 8,
@@ -2075,9 +2075,9 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Detailed information about a contact between two physics bodies in a scene’s physics simulation. \n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnphysicscontact\n ",
+            "value": "*\n * Detailed information about a contact between two physics bodies in a scene’s physics simulation. \n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact\n ",
             "start": 132,
-            "end": 354,
+            "end": 358,
             "loc": {
               "start": {
                 "line": 8,
@@ -2133,9 +2133,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * Detailed information about a contact between two physics bodies in a scene’s physics simulation. \n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnphysicscontact\n ",
+      "value": "*\n * Detailed information about a contact between two physics bodies in a scene’s physics simulation. \n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact\n ",
       "start": 132,
-      "end": 354,
+      "end": 358,
       "loc": {
         "start": {
           "line": 8,
@@ -2150,8 +2150,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
-      "start": 416,
-      "end": 480,
+      "start": 420,
+      "end": 484,
       "loc": {
         "start": {
           "line": 16,
@@ -2166,8 +2166,8 @@
     {
       "type": "CommentLine",
       "value": " Inspecting the Contact Properties",
-      "start": 516,
-      "end": 552,
+      "start": 520,
+      "end": 556,
       "loc": {
         "start": {
           "line": 24,
@@ -2182,8 +2182,8 @@
     {
       "type": "CommentLine",
       "value": " Inspecting the Contact Properties",
-      "start": 733,
-      "end": 769,
+      "start": 737,
+      "end": 773,
       "loc": {
         "start": {
           "line": 34,
@@ -2197,9 +2197,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The node containing the first body in the contact.\n   * @type {SCNNode}\n   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1523445-nodea\n   ",
-      "start": 773,
-      "end": 1043,
+      "value": "*\n   * The node containing the first body in the contact.\n   * @type {SCNNode}\n   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523445-nodea\n   ",
+      "start": 777,
+      "end": 1051,
       "loc": {
         "start": {
           "line": 36,
@@ -2213,9 +2213,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The node containing the second body in the contact.\n   * @type {SCNNode}\n   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1524232-nodeb\n   ",
-      "start": 1090,
-      "end": 1361,
+      "value": "*\n   * The node containing the second body in the contact.\n   * @type {SCNNode}\n   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1524232-nodeb\n   ",
+      "start": 1098,
+      "end": 1373,
       "loc": {
         "start": {
           "line": 46,
@@ -2229,9 +2229,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The contact point between the two physics bodies, in scene coordinates.\n   * @type {SCNVector3}\n   * @desc \n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1523810-contactpoint\n   ",
-      "start": 1408,
-      "end": 1626,
+      "value": "*\n   * The contact point between the two physics bodies, in scene coordinates.\n   * @type {SCNVector3}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523810-contactpoint\n   ",
+      "start": 1420,
+      "end": 1642,
       "loc": {
         "start": {
           "line": 56,
@@ -2245,9 +2245,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The normal vector at the contact point between the two physics bodies, in scene coordinates.\n   * @type {SCNVector3}\n   * @desc This vector tells you which direction the bodies were moving relative to one another at the time of the collision. For example, in a game you can examine this vector to have enemy characters take damage when struck from above by the player character but damage the player character instead when they collide side-to-side.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1522833-contactnormal\n   ",
-      "start": 1687,
-      "end": 2248,
+      "value": "*\n   * The normal vector at the contact point between the two physics bodies, in scene coordinates.\n   * @type {SCNVector3}\n   * @desc This vector tells you which direction the bodies were moving relative to one another at the time of the collision. For example, in a game you can examine this vector to have enemy characters take damage when struck from above by the player character but damage the player character instead when they collide side-to-side.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1522833-contactnormal\n   ",
+      "start": 1703,
+      "end": 2268,
       "loc": {
         "start": {
           "line": 66,
@@ -2261,9 +2261,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The force over time of the collision, in newton-seconds.\n   * @type {number}\n   * @desc This property’s value tells you how hard the bodies struck each other in a collision. For example, in a game you might allow a character to proceed unhindered after a minor collision, but take damage when struck with sufficient force.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1523944-collisionimpulse\n   ",
-      "start": 2311,
-      "end": 2748,
+      "value": "*\n   * The force over time of the collision, in newton-seconds.\n   * @type {number}\n   * @desc This property’s value tells you how hard the bodies struck each other in a collision. For example, in a game you might allow a character to proceed unhindered after a minor collision, but take damage when struck with sufficient force.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523944-collisionimpulse\n   ",
+      "start": 2331,
+      "end": 2772,
       "loc": {
         "start": {
           "line": 76,
@@ -2277,9 +2277,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The distance of overlap, in units of scene coordinate space, between the two physics bodies.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1522870-penetrationdistance\n   ",
-      "start": 2817,
-      "end": 3059,
+      "value": "*\n   * The distance of overlap, in units of scene coordinate space, between the two physics bodies.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1522870-penetrationdistance\n   ",
+      "start": 2841,
+      "end": 3087,
       "loc": {
         "start": {
           "line": 86,
@@ -2643,9 +2643,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Detailed information about a contact between two physics bodies in a scene’s physics simulation. \n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnphysicscontact\n ",
+      "value": "*\n * Detailed information about a contact between two physics bodies in a scene’s physics simulation. \n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact\n ",
       "start": 132,
-      "end": 354,
+      "end": 358,
       "loc": {
         "start": {
           "line": 8,
@@ -2672,8 +2672,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 355,
-      "end": 361,
+      "start": 359,
+      "end": 365,
       "loc": {
         "start": {
           "line": 14,
@@ -2700,8 +2700,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 362,
-      "end": 369,
+      "start": 366,
+      "end": 373,
       "loc": {
         "start": {
           "line": 14,
@@ -2728,8 +2728,8 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 370,
-      "end": 375,
+      "start": 374,
+      "end": 379,
       "loc": {
         "start": {
           "line": 14,
@@ -2754,8 +2754,8 @@
         "binop": null
       },
       "value": "SCNPhysicsContact",
-      "start": 376,
-      "end": 393,
+      "start": 380,
+      "end": 397,
       "loc": {
         "start": {
           "line": 14,
@@ -2782,8 +2782,8 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 394,
-      "end": 401,
+      "start": 398,
+      "end": 405,
       "loc": {
         "start": {
           "line": 14,
@@ -2808,8 +2808,8 @@
         "binop": null
       },
       "value": "NSObject",
-      "start": 402,
-      "end": 410,
+      "start": 406,
+      "end": 414,
       "loc": {
         "start": {
           "line": 14,
@@ -2833,8 +2833,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 411,
-      "end": 412,
+      "start": 415,
+      "end": 416,
       "loc": {
         "start": {
           "line": 14,
@@ -2849,8 +2849,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
-      "start": 416,
-      "end": 480,
+      "start": 420,
+      "end": 484,
       "loc": {
         "start": {
           "line": 16,
@@ -2875,8 +2875,8 @@
         "binop": null
       },
       "value": "constructor",
-      "start": 483,
-      "end": 494,
+      "start": 487,
+      "end": 498,
       "loc": {
         "start": {
           "line": 21,
@@ -2900,8 +2900,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 494,
-      "end": 495,
+      "start": 498,
+      "end": 499,
       "loc": {
         "start": {
           "line": 21,
@@ -2925,8 +2925,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 495,
-      "end": 496,
+      "start": 499,
+      "end": 500,
       "loc": {
         "start": {
           "line": 21,
@@ -2950,8 +2950,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 497,
-      "end": 498,
+      "start": 501,
+      "end": 502,
       "loc": {
         "start": {
           "line": 21,
@@ -2978,8 +2978,8 @@
         "updateContext": null
       },
       "value": "super",
-      "start": 503,
-      "end": 508,
+      "start": 507,
+      "end": 512,
       "loc": {
         "start": {
           "line": 22,
@@ -3003,8 +3003,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 508,
-      "end": 509,
+      "start": 512,
+      "end": 513,
       "loc": {
         "start": {
           "line": 22,
@@ -3028,8 +3028,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 509,
-      "end": 510,
+      "start": 513,
+      "end": 514,
       "loc": {
         "start": {
           "line": 22,
@@ -3044,8 +3044,8 @@
     {
       "type": "CommentLine",
       "value": " Inspecting the Contact Properties",
-      "start": 516,
-      "end": 552,
+      "start": 520,
+      "end": 556,
       "loc": {
         "start": {
           "line": 24,
@@ -3072,8 +3072,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 558,
-      "end": 562,
+      "start": 562,
+      "end": 566,
       "loc": {
         "start": {
           "line": 26,
@@ -3098,8 +3098,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 562,
-      "end": 563,
+      "start": 566,
+      "end": 567,
       "loc": {
         "start": {
           "line": 26,
@@ -3124,8 +3124,8 @@
         "binop": null
       },
       "value": "_nodeA",
-      "start": 563,
-      "end": 569,
+      "start": 567,
+      "end": 573,
       "loc": {
         "start": {
           "line": 26,
@@ -3151,8 +3151,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 570,
-      "end": 571,
+      "start": 574,
+      "end": 575,
       "loc": {
         "start": {
           "line": 26,
@@ -3179,8 +3179,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 572,
-      "end": 576,
+      "start": 576,
+      "end": 580,
       "loc": {
         "start": {
           "line": 26,
@@ -3207,8 +3207,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 581,
-      "end": 585,
+      "start": 585,
+      "end": 589,
       "loc": {
         "start": {
           "line": 27,
@@ -3233,8 +3233,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 585,
-      "end": 586,
+      "start": 589,
+      "end": 590,
       "loc": {
         "start": {
           "line": 27,
@@ -3259,8 +3259,8 @@
         "binop": null
       },
       "value": "_nodeB",
-      "start": 586,
-      "end": 592,
+      "start": 590,
+      "end": 596,
       "loc": {
         "start": {
           "line": 27,
@@ -3286,8 +3286,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 593,
-      "end": 594,
+      "start": 597,
+      "end": 598,
       "loc": {
         "start": {
           "line": 27,
@@ -3314,8 +3314,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 595,
-      "end": 599,
+      "start": 599,
+      "end": 603,
       "loc": {
         "start": {
           "line": 27,
@@ -3342,8 +3342,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 604,
-      "end": 608,
+      "start": 608,
+      "end": 612,
       "loc": {
         "start": {
           "line": 28,
@@ -3368,8 +3368,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 608,
-      "end": 609,
+      "start": 612,
+      "end": 613,
       "loc": {
         "start": {
           "line": 28,
@@ -3394,8 +3394,8 @@
         "binop": null
       },
       "value": "_contactPoint",
-      "start": 609,
-      "end": 622,
+      "start": 613,
+      "end": 626,
       "loc": {
         "start": {
           "line": 28,
@@ -3421,8 +3421,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 623,
-      "end": 624,
+      "start": 627,
+      "end": 628,
       "loc": {
         "start": {
           "line": 28,
@@ -3449,8 +3449,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 625,
-      "end": 629,
+      "start": 629,
+      "end": 633,
       "loc": {
         "start": {
           "line": 28,
@@ -3477,8 +3477,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 634,
-      "end": 638,
+      "start": 638,
+      "end": 642,
       "loc": {
         "start": {
           "line": 29,
@@ -3503,8 +3503,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 638,
-      "end": 639,
+      "start": 642,
+      "end": 643,
       "loc": {
         "start": {
           "line": 29,
@@ -3529,8 +3529,8 @@
         "binop": null
       },
       "value": "_contactNormal",
-      "start": 639,
-      "end": 653,
+      "start": 643,
+      "end": 657,
       "loc": {
         "start": {
           "line": 29,
@@ -3556,8 +3556,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 654,
-      "end": 655,
+      "start": 658,
+      "end": 659,
       "loc": {
         "start": {
           "line": 29,
@@ -3584,8 +3584,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 656,
-      "end": 660,
+      "start": 660,
+      "end": 664,
       "loc": {
         "start": {
           "line": 29,
@@ -3612,8 +3612,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 665,
-      "end": 669,
+      "start": 669,
+      "end": 673,
       "loc": {
         "start": {
           "line": 30,
@@ -3638,8 +3638,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 669,
-      "end": 670,
+      "start": 673,
+      "end": 674,
       "loc": {
         "start": {
           "line": 30,
@@ -3664,8 +3664,8 @@
         "binop": null
       },
       "value": "_collisionImpulse",
-      "start": 670,
-      "end": 687,
+      "start": 674,
+      "end": 691,
       "loc": {
         "start": {
           "line": 30,
@@ -3691,8 +3691,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 688,
-      "end": 689,
+      "start": 692,
+      "end": 693,
       "loc": {
         "start": {
           "line": 30,
@@ -3718,8 +3718,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 690,
-      "end": 691,
+      "start": 694,
+      "end": 695,
       "loc": {
         "start": {
           "line": 30,
@@ -3746,8 +3746,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 696,
-      "end": 700,
+      "start": 700,
+      "end": 704,
       "loc": {
         "start": {
           "line": 31,
@@ -3772,8 +3772,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 700,
-      "end": 701,
+      "start": 704,
+      "end": 705,
       "loc": {
         "start": {
           "line": 31,
@@ -3798,8 +3798,8 @@
         "binop": null
       },
       "value": "_penetrationDistance",
-      "start": 701,
-      "end": 721,
+      "start": 705,
+      "end": 725,
       "loc": {
         "start": {
           "line": 31,
@@ -3825,8 +3825,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 722,
-      "end": 723,
+      "start": 726,
+      "end": 727,
       "loc": {
         "start": {
           "line": 31,
@@ -3852,8 +3852,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 724,
-      "end": 725,
+      "start": 728,
+      "end": 729,
       "loc": {
         "start": {
           "line": 31,
@@ -3877,8 +3877,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 728,
-      "end": 729,
+      "start": 732,
+      "end": 733,
       "loc": {
         "start": {
           "line": 32,
@@ -3893,8 +3893,8 @@
     {
       "type": "CommentLine",
       "value": " Inspecting the Contact Properties",
-      "start": 733,
-      "end": 769,
+      "start": 737,
+      "end": 773,
       "loc": {
         "start": {
           "line": 34,
@@ -3908,9 +3908,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The node containing the first body in the contact.\n   * @type {SCNNode}\n   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1523445-nodea\n   ",
-      "start": 773,
-      "end": 1043,
+      "value": "*\n   * The node containing the first body in the contact.\n   * @type {SCNNode}\n   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523445-nodea\n   ",
+      "start": 777,
+      "end": 1051,
       "loc": {
         "start": {
           "line": 36,
@@ -3935,8 +3935,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 1046,
-      "end": 1049,
+      "start": 1054,
+      "end": 1057,
       "loc": {
         "start": {
           "line": 42,
@@ -3961,8 +3961,8 @@
         "binop": null
       },
       "value": "nodeA",
-      "start": 1050,
-      "end": 1055,
+      "start": 1058,
+      "end": 1063,
       "loc": {
         "start": {
           "line": 42,
@@ -3986,8 +3986,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1055,
-      "end": 1056,
+      "start": 1063,
+      "end": 1064,
       "loc": {
         "start": {
           "line": 42,
@@ -4011,8 +4011,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1056,
-      "end": 1057,
+      "start": 1064,
+      "end": 1065,
       "loc": {
         "start": {
           "line": 42,
@@ -4036,8 +4036,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1058,
-      "end": 1059,
+      "start": 1066,
+      "end": 1067,
       "loc": {
         "start": {
           "line": 42,
@@ -4064,8 +4064,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 1064,
-      "end": 1070,
+      "start": 1072,
+      "end": 1078,
       "loc": {
         "start": {
           "line": 43,
@@ -4092,8 +4092,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1071,
-      "end": 1075,
+      "start": 1079,
+      "end": 1083,
       "loc": {
         "start": {
           "line": 43,
@@ -4118,8 +4118,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1075,
-      "end": 1076,
+      "start": 1083,
+      "end": 1084,
       "loc": {
         "start": {
           "line": 43,
@@ -4144,8 +4144,8 @@
         "binop": null
       },
       "value": "_nodeA",
-      "start": 1076,
-      "end": 1082,
+      "start": 1084,
+      "end": 1090,
       "loc": {
         "start": {
           "line": 43,
@@ -4169,8 +4169,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1085,
-      "end": 1086,
+      "start": 1093,
+      "end": 1094,
       "loc": {
         "start": {
           "line": 44,
@@ -4184,9 +4184,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The node containing the second body in the contact.\n   * @type {SCNNode}\n   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1524232-nodeb\n   ",
-      "start": 1090,
-      "end": 1361,
+      "value": "*\n   * The node containing the second body in the contact.\n   * @type {SCNNode}\n   * @desc Use the node’s physicsBody property to examine physics characteristics of the node.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1524232-nodeb\n   ",
+      "start": 1098,
+      "end": 1373,
       "loc": {
         "start": {
           "line": 46,
@@ -4211,8 +4211,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 1364,
-      "end": 1367,
+      "start": 1376,
+      "end": 1379,
       "loc": {
         "start": {
           "line": 52,
@@ -4237,8 +4237,8 @@
         "binop": null
       },
       "value": "nodeB",
-      "start": 1368,
-      "end": 1373,
+      "start": 1380,
+      "end": 1385,
       "loc": {
         "start": {
           "line": 52,
@@ -4262,8 +4262,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1373,
-      "end": 1374,
+      "start": 1385,
+      "end": 1386,
       "loc": {
         "start": {
           "line": 52,
@@ -4287,8 +4287,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1374,
-      "end": 1375,
+      "start": 1386,
+      "end": 1387,
       "loc": {
         "start": {
           "line": 52,
@@ -4312,8 +4312,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1376,
-      "end": 1377,
+      "start": 1388,
+      "end": 1389,
       "loc": {
         "start": {
           "line": 52,
@@ -4340,8 +4340,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 1382,
-      "end": 1388,
+      "start": 1394,
+      "end": 1400,
       "loc": {
         "start": {
           "line": 53,
@@ -4368,8 +4368,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1389,
-      "end": 1393,
+      "start": 1401,
+      "end": 1405,
       "loc": {
         "start": {
           "line": 53,
@@ -4394,8 +4394,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1393,
-      "end": 1394,
+      "start": 1405,
+      "end": 1406,
       "loc": {
         "start": {
           "line": 53,
@@ -4420,8 +4420,8 @@
         "binop": null
       },
       "value": "_nodeB",
-      "start": 1394,
-      "end": 1400,
+      "start": 1406,
+      "end": 1412,
       "loc": {
         "start": {
           "line": 53,
@@ -4445,8 +4445,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1403,
-      "end": 1404,
+      "start": 1415,
+      "end": 1416,
       "loc": {
         "start": {
           "line": 54,
@@ -4460,9 +4460,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The contact point between the two physics bodies, in scene coordinates.\n   * @type {SCNVector3}\n   * @desc \n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1523810-contactpoint\n   ",
-      "start": 1408,
-      "end": 1626,
+      "value": "*\n   * The contact point between the two physics bodies, in scene coordinates.\n   * @type {SCNVector3}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523810-contactpoint\n   ",
+      "start": 1420,
+      "end": 1642,
       "loc": {
         "start": {
           "line": 56,
@@ -4487,8 +4487,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 1629,
-      "end": 1632,
+      "start": 1645,
+      "end": 1648,
       "loc": {
         "start": {
           "line": 62,
@@ -4513,8 +4513,8 @@
         "binop": null
       },
       "value": "contactPoint",
-      "start": 1633,
-      "end": 1645,
+      "start": 1649,
+      "end": 1661,
       "loc": {
         "start": {
           "line": 62,
@@ -4538,8 +4538,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1645,
-      "end": 1646,
+      "start": 1661,
+      "end": 1662,
       "loc": {
         "start": {
           "line": 62,
@@ -4563,8 +4563,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1646,
-      "end": 1647,
+      "start": 1662,
+      "end": 1663,
       "loc": {
         "start": {
           "line": 62,
@@ -4588,8 +4588,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1648,
-      "end": 1649,
+      "start": 1664,
+      "end": 1665,
       "loc": {
         "start": {
           "line": 62,
@@ -4616,8 +4616,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 1654,
-      "end": 1660,
+      "start": 1670,
+      "end": 1676,
       "loc": {
         "start": {
           "line": 63,
@@ -4644,8 +4644,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1661,
-      "end": 1665,
+      "start": 1677,
+      "end": 1681,
       "loc": {
         "start": {
           "line": 63,
@@ -4670,8 +4670,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1665,
-      "end": 1666,
+      "start": 1681,
+      "end": 1682,
       "loc": {
         "start": {
           "line": 63,
@@ -4696,8 +4696,8 @@
         "binop": null
       },
       "value": "_contactPoint",
-      "start": 1666,
-      "end": 1679,
+      "start": 1682,
+      "end": 1695,
       "loc": {
         "start": {
           "line": 63,
@@ -4721,8 +4721,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1682,
-      "end": 1683,
+      "start": 1698,
+      "end": 1699,
       "loc": {
         "start": {
           "line": 64,
@@ -4736,9 +4736,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The normal vector at the contact point between the two physics bodies, in scene coordinates.\n   * @type {SCNVector3}\n   * @desc This vector tells you which direction the bodies were moving relative to one another at the time of the collision. For example, in a game you can examine this vector to have enemy characters take damage when struck from above by the player character but damage the player character instead when they collide side-to-side.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1522833-contactnormal\n   ",
-      "start": 1687,
-      "end": 2248,
+      "value": "*\n   * The normal vector at the contact point between the two physics bodies, in scene coordinates.\n   * @type {SCNVector3}\n   * @desc This vector tells you which direction the bodies were moving relative to one another at the time of the collision. For example, in a game you can examine this vector to have enemy characters take damage when struck from above by the player character but damage the player character instead when they collide side-to-side.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1522833-contactnormal\n   ",
+      "start": 1703,
+      "end": 2268,
       "loc": {
         "start": {
           "line": 66,
@@ -4763,8 +4763,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 2251,
-      "end": 2254,
+      "start": 2271,
+      "end": 2274,
       "loc": {
         "start": {
           "line": 72,
@@ -4789,8 +4789,8 @@
         "binop": null
       },
       "value": "contactNormal",
-      "start": 2255,
-      "end": 2268,
+      "start": 2275,
+      "end": 2288,
       "loc": {
         "start": {
           "line": 72,
@@ -4814,8 +4814,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2268,
-      "end": 2269,
+      "start": 2288,
+      "end": 2289,
       "loc": {
         "start": {
           "line": 72,
@@ -4839,8 +4839,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2269,
-      "end": 2270,
+      "start": 2289,
+      "end": 2290,
       "loc": {
         "start": {
           "line": 72,
@@ -4864,8 +4864,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2271,
-      "end": 2272,
+      "start": 2291,
+      "end": 2292,
       "loc": {
         "start": {
           "line": 72,
@@ -4892,8 +4892,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 2277,
-      "end": 2283,
+      "start": 2297,
+      "end": 2303,
       "loc": {
         "start": {
           "line": 73,
@@ -4920,8 +4920,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2284,
-      "end": 2288,
+      "start": 2304,
+      "end": 2308,
       "loc": {
         "start": {
           "line": 73,
@@ -4946,8 +4946,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2288,
-      "end": 2289,
+      "start": 2308,
+      "end": 2309,
       "loc": {
         "start": {
           "line": 73,
@@ -4972,8 +4972,8 @@
         "binop": null
       },
       "value": "_contactNormal",
-      "start": 2289,
-      "end": 2303,
+      "start": 2309,
+      "end": 2323,
       "loc": {
         "start": {
           "line": 73,
@@ -4997,8 +4997,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2306,
-      "end": 2307,
+      "start": 2326,
+      "end": 2327,
       "loc": {
         "start": {
           "line": 74,
@@ -5012,9 +5012,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The force over time of the collision, in newton-seconds.\n   * @type {number}\n   * @desc This property’s value tells you how hard the bodies struck each other in a collision. For example, in a game you might allow a character to proceed unhindered after a minor collision, but take damage when struck with sufficient force.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1523944-collisionimpulse\n   ",
-      "start": 2311,
-      "end": 2748,
+      "value": "*\n   * The force over time of the collision, in newton-seconds.\n   * @type {number}\n   * @desc This property’s value tells you how hard the bodies struck each other in a collision. For example, in a game you might allow a character to proceed unhindered after a minor collision, but take damage when struck with sufficient force.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1523944-collisionimpulse\n   ",
+      "start": 2331,
+      "end": 2772,
       "loc": {
         "start": {
           "line": 76,
@@ -5039,8 +5039,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 2751,
-      "end": 2754,
+      "start": 2775,
+      "end": 2778,
       "loc": {
         "start": {
           "line": 82,
@@ -5065,8 +5065,8 @@
         "binop": null
       },
       "value": "collisionImpulse",
-      "start": 2755,
-      "end": 2771,
+      "start": 2779,
+      "end": 2795,
       "loc": {
         "start": {
           "line": 82,
@@ -5090,8 +5090,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2771,
-      "end": 2772,
+      "start": 2795,
+      "end": 2796,
       "loc": {
         "start": {
           "line": 82,
@@ -5115,8 +5115,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2772,
-      "end": 2773,
+      "start": 2796,
+      "end": 2797,
       "loc": {
         "start": {
           "line": 82,
@@ -5140,8 +5140,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2774,
-      "end": 2775,
+      "start": 2798,
+      "end": 2799,
       "loc": {
         "start": {
           "line": 82,
@@ -5168,8 +5168,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 2780,
-      "end": 2786,
+      "start": 2804,
+      "end": 2810,
       "loc": {
         "start": {
           "line": 83,
@@ -5196,8 +5196,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2787,
-      "end": 2791,
+      "start": 2811,
+      "end": 2815,
       "loc": {
         "start": {
           "line": 83,
@@ -5222,8 +5222,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2791,
-      "end": 2792,
+      "start": 2815,
+      "end": 2816,
       "loc": {
         "start": {
           "line": 83,
@@ -5248,8 +5248,8 @@
         "binop": null
       },
       "value": "_collisionImpulse",
-      "start": 2792,
-      "end": 2809,
+      "start": 2816,
+      "end": 2833,
       "loc": {
         "start": {
           "line": 83,
@@ -5273,8 +5273,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2812,
-      "end": 2813,
+      "start": 2836,
+      "end": 2837,
       "loc": {
         "start": {
           "line": 84,
@@ -5288,9 +5288,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The distance of overlap, in units of scene coordinate space, between the two physics bodies.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontact/1522870-penetrationdistance\n   ",
-      "start": 2817,
-      "end": 3059,
+      "value": "*\n   * The distance of overlap, in units of scene coordinate space, between the two physics bodies.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontact/1522870-penetrationdistance\n   ",
+      "start": 2841,
+      "end": 3087,
       "loc": {
         "start": {
           "line": 86,
@@ -5315,8 +5315,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 3062,
-      "end": 3065,
+      "start": 3090,
+      "end": 3093,
       "loc": {
         "start": {
           "line": 92,
@@ -5341,8 +5341,8 @@
         "binop": null
       },
       "value": "penetrationDistance",
-      "start": 3066,
-      "end": 3085,
+      "start": 3094,
+      "end": 3113,
       "loc": {
         "start": {
           "line": 92,
@@ -5366,8 +5366,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3085,
-      "end": 3086,
+      "start": 3113,
+      "end": 3114,
       "loc": {
         "start": {
           "line": 92,
@@ -5391,8 +5391,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3086,
-      "end": 3087,
+      "start": 3114,
+      "end": 3115,
       "loc": {
         "start": {
           "line": 92,
@@ -5416,8 +5416,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3088,
-      "end": 3089,
+      "start": 3116,
+      "end": 3117,
       "loc": {
         "start": {
           "line": 92,
@@ -5444,8 +5444,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 3094,
-      "end": 3100,
+      "start": 3122,
+      "end": 3128,
       "loc": {
         "start": {
           "line": 93,
@@ -5472,8 +5472,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3101,
-      "end": 3105,
+      "start": 3129,
+      "end": 3133,
       "loc": {
         "start": {
           "line": 93,
@@ -5498,8 +5498,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3105,
-      "end": 3106,
+      "start": 3133,
+      "end": 3134,
       "loc": {
         "start": {
           "line": 93,
@@ -5524,8 +5524,8 @@
         "binop": null
       },
       "value": "_penetrationDistance",
-      "start": 3106,
-      "end": 3126,
+      "start": 3134,
+      "end": 3154,
       "loc": {
         "start": {
           "line": 93,
@@ -5549,8 +5549,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3129,
-      "end": 3130,
+      "start": 3157,
+      "end": 3158,
       "loc": {
         "start": {
           "line": 94,
@@ -5574,8 +5574,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3131,
-      "end": 3132,
+      "start": 3159,
+      "end": 3160,
       "loc": {
         "start": {
           "line": 95,
@@ -5600,8 +5600,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3133,
-      "end": 3133,
+      "start": 3161,
+      "end": 3161,
       "loc": {
         "start": {
           "line": 96,

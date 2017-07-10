@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 617,
+  "end": 621,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 617,
+    "end": 621,
     "loc": {
       "start": {
         "line": 1,
@@ -30,8 +30,8 @@
     "body": [
       {
         "type": "Identifier",
-        "start": 525,
-        "end": 580,
+        "start": 529,
+        "end": 584,
         "loc": {
           "start": {
             "line": 11,
@@ -45,8 +45,8 @@
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 531,
-            "end": 580,
+            "start": 535,
+            "end": 584,
             "loc": {
               "start": {
                 "line": 11,
@@ -59,8 +59,8 @@
             },
             "id": {
               "type": "Identifier",
-              "start": 531,
-              "end": 550,
+              "start": 535,
+              "end": 554,
               "loc": {
                 "start": {
                   "line": 11,
@@ -77,8 +77,8 @@
             },
             "init": {
               "type": "ObjectExpression",
-              "start": 553,
-              "end": 580,
+              "start": 557,
+              "end": 584,
               "loc": {
                 "start": {
                   "line": 11,
@@ -92,8 +92,8 @@
               "properties": [
                 {
                   "type": "ObjectProperty",
-                  "start": 557,
-                  "end": 564,
+                  "start": 561,
+                  "end": 568,
                   "loc": {
                     "start": {
                       "line": 12,
@@ -109,8 +109,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 557,
-                    "end": 561,
+                    "start": 561,
+                    "end": 565,
                     "loc": {
                       "start": {
                         "line": 12,
@@ -126,8 +126,8 @@
                   },
                   "value": {
                     "type": "NumericLiteral",
-                    "start": 563,
-                    "end": 564,
+                    "start": 567,
+                    "end": 568,
                     "loc": {
                       "start": {
                         "line": 12,
@@ -147,8 +147,8 @@
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 568,
-                  "end": 578,
+                  "start": 572,
+                  "end": 582,
                   "loc": {
                     "start": {
                       "line": 13,
@@ -164,8 +164,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 568,
-                    "end": 575,
+                    "start": 572,
+                    "end": 579,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -181,8 +181,8 @@
                   },
                   "value": {
                     "type": "NumericLiteral",
-                    "start": 577,
-                    "end": 578,
+                    "start": 581,
+                    "end": 582,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -212,8 +212,8 @@
       },
       {
         "type": "Identifier",
-        "start": 582,
-        "end": 616,
+        "start": 586,
+        "end": 620,
         "loc": {
           "start": {
             "line": 16,
@@ -226,8 +226,8 @@
         },
         "declaration": {
           "type": "Identifier",
-          "start": 597,
-          "end": 616,
+          "start": 601,
+          "end": 620,
           "loc": {
             "start": {
               "line": 16,
@@ -247,8 +247,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 582,
-        "end": 616,
+        "start": 586,
+        "end": 620,
         "loc": {
           "start": {
             "line": 16,
@@ -261,8 +261,8 @@
         },
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 525,
-          "end": 580,
+          "start": 529,
+          "end": 584,
           "loc": {
             "start": {
               "line": 11,
@@ -276,8 +276,8 @@
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 531,
-              "end": 580,
+              "start": 535,
+              "end": 584,
               "loc": {
                 "start": {
                   "line": 11,
@@ -290,8 +290,8 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 531,
-                "end": 550,
+                "start": 535,
+                "end": 554,
                 "loc": {
                   "start": {
                     "line": 11,
@@ -308,8 +308,8 @@
               },
               "init": {
                 "type": "ObjectExpression",
-                "start": 553,
-                "end": 580,
+                "start": 557,
+                "end": 584,
                 "loc": {
                   "start": {
                     "line": 11,
@@ -323,8 +323,8 @@
                 "properties": [
                   {
                     "type": "ObjectProperty",
-                    "start": 557,
-                    "end": 564,
+                    "start": 561,
+                    "end": 568,
                     "loc": {
                       "start": {
                         "line": 12,
@@ -340,8 +340,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 557,
-                      "end": 561,
+                      "start": 561,
+                      "end": 565,
                       "loc": {
                         "start": {
                           "line": 12,
@@ -357,8 +357,8 @@
                     },
                     "value": {
                       "type": "NumericLiteral",
-                      "start": 563,
-                      "end": 564,
+                      "start": 567,
+                      "end": 568,
                       "loc": {
                         "start": {
                           "line": 12,
@@ -378,8 +378,8 @@
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 568,
-                    "end": 578,
+                    "start": 572,
+                    "end": 582,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -395,8 +395,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 568,
-                      "end": 575,
+                      "start": 572,
+                      "end": 579,
                       "loc": {
                         "start": {
                           "line": 13,
@@ -412,8 +412,8 @@
                     },
                     "value": {
                       "type": "NumericLiteral",
-                      "start": 577,
-                      "end": 578,
+                      "start": 581,
+                      "end": 582,
                       "loc": {
                         "start": {
                           "line": 13,
@@ -440,9 +440,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * The modes SceneKit uses to calculate the opacity of pixels rendered with a material, used by the transparencyMode property.\n * @typedef {Object} SCNTransparencyMode\n * @property {number} aOne - SceneKit derives transparency information from the alpha channel of colors. The value 1.0 is opaque.\n * @property {number} rgbZero - SceneKit derives transparency information from the luminance of colors. The value 0.0 is opaque.\n * @see https://developer.apple.com/reference/scenekit/scntransparencymode\n ",
+              "value": "*\n * The modes SceneKit uses to calculate the opacity of pixels rendered with a material, used by the transparencyMode property.\n * @typedef {Object} SCNTransparencyMode\n * @property {number} aOne - SceneKit derives transparency information from the alpha channel of colors. The value 1.0 is opaque.\n * @property {number} rgbZero - SceneKit derives transparency information from the luminance of colors. The value 0.0 is opaque.\n * @see https://developer.apple.com/documentation/scenekit/scntransparencymode\n ",
               "start": 15,
-              "end": 524,
+              "end": 528,
               "loc": {
                 "start": {
                   "line": 4,
@@ -498,9 +498,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * The modes SceneKit uses to calculate the opacity of pixels rendered with a material, used by the transparencyMode property.\n * @typedef {Object} SCNTransparencyMode\n * @property {number} aOne - SceneKit derives transparency information from the alpha channel of colors. The value 1.0 is opaque.\n * @property {number} rgbZero - SceneKit derives transparency information from the luminance of colors. The value 0.0 is opaque.\n * @see https://developer.apple.com/reference/scenekit/scntransparencymode\n ",
+            "value": "*\n * The modes SceneKit uses to calculate the opacity of pixels rendered with a material, used by the transparencyMode property.\n * @typedef {Object} SCNTransparencyMode\n * @property {number} aOne - SceneKit derives transparency information from the alpha channel of colors. The value 1.0 is opaque.\n * @property {number} rgbZero - SceneKit derives transparency information from the luminance of colors. The value 0.0 is opaque.\n * @see https://developer.apple.com/documentation/scenekit/scntransparencymode\n ",
             "start": 15,
-            "end": 524,
+            "end": 528,
             "loc": {
               "start": {
                 "line": 4,
@@ -519,9 +519,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * The modes SceneKit uses to calculate the opacity of pixels rendered with a material, used by the transparencyMode property.\n * @typedef {Object} SCNTransparencyMode\n * @property {number} aOne - SceneKit derives transparency information from the alpha channel of colors. The value 1.0 is opaque.\n * @property {number} rgbZero - SceneKit derives transparency information from the luminance of colors. The value 0.0 is opaque.\n * @see https://developer.apple.com/reference/scenekit/scntransparencymode\n ",
+      "value": "*\n * The modes SceneKit uses to calculate the opacity of pixels rendered with a material, used by the transparencyMode property.\n * @typedef {Object} SCNTransparencyMode\n * @property {number} aOne - SceneKit derives transparency information from the alpha channel of colors. The value 1.0 is opaque.\n * @property {number} rgbZero - SceneKit derives transparency information from the luminance of colors. The value 0.0 is opaque.\n * @see https://developer.apple.com/documentation/scenekit/scntransparencymode\n ",
       "start": 15,
-      "end": 524,
+      "end": 528,
       "loc": {
         "start": {
           "line": 4,
@@ -564,9 +564,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * The modes SceneKit uses to calculate the opacity of pixels rendered with a material, used by the transparencyMode property.\n * @typedef {Object} SCNTransparencyMode\n * @property {number} aOne - SceneKit derives transparency information from the alpha channel of colors. The value 1.0 is opaque.\n * @property {number} rgbZero - SceneKit derives transparency information from the luminance of colors. The value 0.0 is opaque.\n * @see https://developer.apple.com/reference/scenekit/scntransparencymode\n ",
+      "value": "*\n * The modes SceneKit uses to calculate the opacity of pixels rendered with a material, used by the transparencyMode property.\n * @typedef {Object} SCNTransparencyMode\n * @property {number} aOne - SceneKit derives transparency information from the alpha channel of colors. The value 1.0 is opaque.\n * @property {number} rgbZero - SceneKit derives transparency information from the luminance of colors. The value 0.0 is opaque.\n * @see https://developer.apple.com/documentation/scenekit/scntransparencymode\n ",
       "start": 15,
-      "end": 524,
+      "end": 528,
       "loc": {
         "start": {
           "line": 4,
@@ -593,8 +593,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 525,
-      "end": 530,
+      "start": 529,
+      "end": 534,
       "loc": {
         "start": {
           "line": 11,
@@ -619,8 +619,8 @@
         "binop": null
       },
       "value": "SCNTransparencyMode",
-      "start": 531,
-      "end": 550,
+      "start": 535,
+      "end": 554,
       "loc": {
         "start": {
           "line": 11,
@@ -646,8 +646,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 551,
-      "end": 552,
+      "start": 555,
+      "end": 556,
       "loc": {
         "start": {
           "line": 11,
@@ -671,8 +671,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 553,
-      "end": 554,
+      "start": 557,
+      "end": 558,
       "loc": {
         "start": {
           "line": 11,
@@ -697,8 +697,8 @@
         "binop": null
       },
       "value": "aOne",
-      "start": 557,
-      "end": 561,
+      "start": 561,
+      "end": 565,
       "loc": {
         "start": {
           "line": 12,
@@ -723,8 +723,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 561,
-      "end": 562,
+      "start": 565,
+      "end": 566,
       "loc": {
         "start": {
           "line": 12,
@@ -750,8 +750,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 563,
-      "end": 564,
+      "start": 567,
+      "end": 568,
       "loc": {
         "start": {
           "line": 12,
@@ -776,8 +776,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 564,
-      "end": 565,
+      "start": 568,
+      "end": 569,
       "loc": {
         "start": {
           "line": 12,
@@ -802,8 +802,8 @@
         "binop": null
       },
       "value": "rgbZero",
-      "start": 568,
-      "end": 575,
+      "start": 572,
+      "end": 579,
       "loc": {
         "start": {
           "line": 13,
@@ -828,8 +828,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 575,
-      "end": 576,
+      "start": 579,
+      "end": 580,
       "loc": {
         "start": {
           "line": 13,
@@ -855,8 +855,8 @@
         "updateContext": null
       },
       "value": 1,
-      "start": 577,
-      "end": 578,
+      "start": 581,
+      "end": 582,
       "loc": {
         "start": {
           "line": 13,
@@ -880,8 +880,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 579,
-      "end": 580,
+      "start": 583,
+      "end": 584,
       "loc": {
         "start": {
           "line": 14,
@@ -908,8 +908,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 582,
-      "end": 588,
+      "start": 586,
+      "end": 592,
       "loc": {
         "start": {
           "line": 16,
@@ -936,8 +936,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 589,
-      "end": 596,
+      "start": 593,
+      "end": 600,
       "loc": {
         "start": {
           "line": 16,
@@ -962,8 +962,8 @@
         "binop": null
       },
       "value": "SCNTransparencyMode",
-      "start": 597,
-      "end": 616,
+      "start": 601,
+      "end": 620,
       "loc": {
         "start": {
           "line": 16,
@@ -988,8 +988,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 617,
-      "end": 617,
+      "start": 621,
+      "end": 621,
       "loc": {
         "start": {
           "line": 17,

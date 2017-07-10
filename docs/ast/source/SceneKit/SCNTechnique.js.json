@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 4907,
+  "end": 4931,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 4907,
+    "end": 4931,
     "loc": {
       "start": {
         "line": 1,
@@ -239,9 +239,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * A specification for augmenting or postprocessing SceneKit's rendering of a scene using additional drawing passes with custom Metal or OpenGL shaders.\n * @access public\n * @extends {NSObject}\n * @implements {SCNAnimatable}\n * @see https://developer.apple.com/reference/scenekit/scntechnique\n ",
+            "value": "*\n * A specification for augmenting or postprocessing SceneKit's rendering of a scene using additional drawing passes with custom Metal or OpenGL shaders.\n * @access public\n * @extends {NSObject}\n * @implements {SCNAnimatable}\n * @see https://developer.apple.com/documentation/scenekit/scntechnique\n ",
             "start": 154,
-            "end": 454,
+            "end": 458,
             "loc": {
               "start": {
                 "line": 8,
@@ -257,8 +257,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 455,
-        "end": 4906,
+        "start": 459,
+        "end": 4930,
         "loc": {
           "start": {
             "line": 15,
@@ -271,8 +271,8 @@
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 470,
-          "end": 4906,
+          "start": 474,
+          "end": 4930,
           "loc": {
             "start": {
               "line": 15,
@@ -285,8 +285,8 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 476,
-            "end": 488,
+            "start": 480,
+            "end": 492,
             "loc": {
               "start": {
                 "line": 15,
@@ -303,8 +303,8 @@
           },
           "superClass": {
             "type": "Identifier",
-            "start": 497,
-            "end": 505,
+            "start": 501,
+            "end": 509,
             "loc": {
               "start": {
                 "line": 15,
@@ -320,8 +320,8 @@
           },
           "body": {
             "type": "ClassBody",
-            "start": 506,
-            "end": 4906,
+            "start": 510,
+            "end": 4930,
             "loc": {
               "start": {
                 "line": 15,
@@ -335,8 +335,8 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 953,
-                "end": 1062,
+                "start": 961,
+                "end": 1070,
                 "loc": {
                   "start": {
                     "line": 27,
@@ -350,8 +350,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 953,
-                  "end": 957,
+                  "start": 961,
+                  "end": 965,
                   "loc": {
                     "start": {
                       "line": 27,
@@ -375,8 +375,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 958,
-                    "end": 968,
+                    "start": 966,
+                    "end": 976,
                     "loc": {
                       "start": {
                         "line": 27,
@@ -393,8 +393,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 970,
-                  "end": 1062,
+                  "start": 978,
+                  "end": 1070,
                   "loc": {
                     "start": {
                       "line": 27,
@@ -408,8 +408,8 @@
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 1021,
-                      "end": 1058,
+                      "start": 1029,
+                      "end": 1066,
                       "loc": {
                         "start": {
                           "line": 31,
@@ -422,8 +422,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1021,
-                        "end": 1058,
+                        "start": 1029,
+                        "end": 1066,
                         "loc": {
                           "start": {
                             "line": 31,
@@ -437,8 +437,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1021,
-                          "end": 1051,
+                          "start": 1029,
+                          "end": 1059,
                           "loc": {
                             "start": {
                               "line": 31,
@@ -451,8 +451,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1021,
-                            "end": 1025,
+                            "start": 1029,
+                            "end": 1033,
                             "loc": {
                               "start": {
                                 "line": 31,
@@ -467,8 +467,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1026,
-                            "end": 1051,
+                            "start": 1034,
+                            "end": 1059,
                             "loc": {
                               "start": {
                                 "line": 31,
@@ -487,8 +487,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 1054,
-                          "end": 1058,
+                          "start": 1062,
+                          "end": 1066,
                           "loc": {
                             "start": {
                               "line": 31,
@@ -506,8 +506,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Retrieving a Technique’s Definition",
-                          "start": 977,
-                          "end": 1015,
+                          "start": 985,
+                          "end": 1023,
                           "loc": {
                             "start": {
                               "line": 29,
@@ -529,8 +529,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Creating a Technique",
-                    "start": 511,
-                    "end": 534,
+                    "start": 515,
+                    "end": 538,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -544,9 +544,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Creates a technique from a technique definition dictionary.,\n   * @access public\n   * @param {Map<string, Object>} dictionary - A dictionary defining the series of rendering passes that comprise the technique.\n   * @returns {void}\n   * @desc See the class overview for details of a technique definition dictionary.\n   * @see https://developer.apple.com/reference/scenekit/scntechnique/1520494-init\n   ",
-                    "start": 538,
-                    "end": 950,
+                    "value": "*\n   * Creates a technique from a technique definition dictionary.,\n   * @access public\n   * @param {Map<string, Object>} dictionary - A dictionary defining the series of rendering passes that comprise the technique.\n   * @returns {void}\n   * @desc See the class overview for details of a technique definition dictionary.\n   * @see https://developer.apple.com/documentation/scenekit/scntechnique/1520494-init\n   ",
+                    "start": 542,
+                    "end": 958,
                     "loc": {
                       "start": {
                         "line": 19,
@@ -563,8 +563,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Combining Techniques",
-                    "start": 1066,
-                    "end": 1089,
+                    "start": 1074,
+                    "end": 1097,
                     "loc": {
                       "start": {
                         "line": 34,
@@ -578,9 +578,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Creates a new rendering technique that combines a series of techniques.\n   * @access public\n   * @param {SCNTechnique[]} techniques - An array of SCNTechnique objects.\n   * @returns {void}\n   * @desc The new technique applies the effects of the techniques in the order specified in the techniques array. Each output of a technique in the array becomes an input to the next technique in the array.\n   * @see https://developer.apple.com/reference/scenekit/scntechnique/1520497-init\n   ",
-                    "start": 1093,
-                    "end": 1587,
+                    "value": "*\n   * Creates a new rendering technique that combines a series of techniques.\n   * @access public\n   * @param {SCNTechnique[]} techniques - An array of SCNTechnique objects.\n   * @returns {void}\n   * @desc The new technique applies the effects of the techniques in the order specified in the techniques array. Each output of a technique in the array becomes an input to the next technique in the array.\n   * @see https://developer.apple.com/documentation/scenekit/scntechnique/1520497-init\n   ",
+                    "start": 1101,
+                    "end": 1599,
                     "loc": {
                       "start": {
                         "line": 36,
@@ -596,8 +596,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 1590,
-                "end": 1721,
+                "start": 1602,
+                "end": 1733,
                 "loc": {
                   "start": {
                     "line": 44,
@@ -611,8 +611,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1590,
-                  "end": 1616,
+                  "start": 1602,
+                  "end": 1628,
                   "loc": {
                     "start": {
                       "line": 44,
@@ -636,8 +636,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 1617,
-                    "end": 1627,
+                    "start": 1629,
+                    "end": 1639,
                     "loc": {
                       "start": {
                         "line": 44,
@@ -654,8 +654,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1629,
-                  "end": 1721,
+                  "start": 1641,
+                  "end": 1733,
                   "loc": {
                     "start": {
                       "line": 44,
@@ -669,8 +669,8 @@
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 1680,
-                      "end": 1717,
+                      "start": 1692,
+                      "end": 1729,
                       "loc": {
                         "start": {
                           "line": 48,
@@ -683,8 +683,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1680,
-                        "end": 1717,
+                        "start": 1692,
+                        "end": 1729,
                         "loc": {
                           "start": {
                             "line": 48,
@@ -698,8 +698,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1680,
-                          "end": 1710,
+                          "start": 1692,
+                          "end": 1722,
                           "loc": {
                             "start": {
                               "line": 48,
@@ -712,8 +712,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1680,
-                            "end": 1684,
+                            "start": 1692,
+                            "end": 1696,
                             "loc": {
                               "start": {
                                 "line": 48,
@@ -728,8 +728,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1685,
-                            "end": 1710,
+                            "start": 1697,
+                            "end": 1722,
                             "loc": {
                               "start": {
                                 "line": 48,
@@ -748,8 +748,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 1713,
-                          "end": 1717,
+                          "start": 1725,
+                          "end": 1729,
                           "loc": {
                             "start": {
                               "line": 48,
@@ -767,8 +767,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Retrieving a Technique’s Definition",
-                          "start": 1636,
-                          "end": 1674,
+                          "start": 1648,
+                          "end": 1686,
                           "loc": {
                             "start": {
                               "line": 46,
@@ -790,8 +790,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Combining Techniques",
-                    "start": 1066,
-                    "end": 1089,
+                    "start": 1074,
+                    "end": 1097,
                     "loc": {
                       "start": {
                         "line": 34,
@@ -805,9 +805,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Creates a new rendering technique that combines a series of techniques.\n   * @access public\n   * @param {SCNTechnique[]} techniques - An array of SCNTechnique objects.\n   * @returns {void}\n   * @desc The new technique applies the effects of the techniques in the order specified in the techniques array. Each output of a technique in the array becomes an input to the next technique in the array.\n   * @see https://developer.apple.com/reference/scenekit/scntechnique/1520497-init\n   ",
-                    "start": 1093,
-                    "end": 1587,
+                    "value": "*\n   * Creates a new rendering technique that combines a series of techniques.\n   * @access public\n   * @param {SCNTechnique[]} techniques - An array of SCNTechnique objects.\n   * @returns {void}\n   * @desc The new technique applies the effects of the techniques in the order specified in the techniques array. Each output of a technique in the array becomes an input to the next technique in the array.\n   * @see https://developer.apple.com/documentation/scenekit/scntechnique/1520497-init\n   ",
+                    "start": 1101,
+                    "end": 1599,
                     "loc": {
                       "start": {
                         "line": 36,
@@ -824,8 +824,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Retrieving a Technique’s Definition",
-                    "start": 1725,
-                    "end": 1763,
+                    "start": 1737,
+                    "end": 1775,
                     "loc": {
                       "start": {
                         "line": 51,
@@ -839,9 +839,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The dictionary defining the rendering technique.\n   * @type {Map<string, Object>}\n   * @desc Read this property when you want to save a property list file containing the definition of a technique.See the class overview for details of a technique definition dictionary.\n   * @see https://developer.apple.com/reference/scenekit/scntechnique/1520492-dictionaryrepresentation\n   ",
-                    "start": 1766,
-                    "end": 2152,
+                    "value": "*\n   * The dictionary defining the rendering technique.\n   * @type {Map<string, Object>}\n   * @desc Read this property when you want to save a property list file containing the definition of a technique.See the class overview for details of a technique definition dictionary.\n   * @see https://developer.apple.com/documentation/scenekit/scntechnique/1520492-dictionaryrepresentation\n   ",
+                    "start": 1778,
+                    "end": 2168,
                     "loc": {
                       "start": {
                         "line": 52,
@@ -857,8 +857,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 2155,
-                "end": 2233,
+                "start": 2171,
+                "end": 2249,
                 "loc": {
                   "start": {
                     "line": 58,
@@ -872,8 +872,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 2159,
-                  "end": 2183,
+                  "start": 2175,
+                  "end": 2199,
                   "loc": {
                     "start": {
                       "line": 58,
@@ -896,8 +896,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 2186,
-                  "end": 2233,
+                  "start": 2202,
+                  "end": 2249,
                   "loc": {
                     "start": {
                       "line": 58,
@@ -911,8 +911,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 2192,
-                      "end": 2229,
+                      "start": 2208,
+                      "end": 2245,
                       "loc": {
                         "start": {
                           "line": 59,
@@ -925,8 +925,8 @@
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 2199,
-                        "end": 2229,
+                        "start": 2215,
+                        "end": 2245,
                         "loc": {
                           "start": {
                             "line": 59,
@@ -939,8 +939,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 2199,
-                          "end": 2203,
+                          "start": 2215,
+                          "end": 2219,
                           "loc": {
                             "start": {
                               "line": 59,
@@ -954,8 +954,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 2204,
-                          "end": 2229,
+                          "start": 2220,
+                          "end": 2245,
                           "loc": {
                             "start": {
                               "line": 59,
@@ -980,8 +980,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Retrieving a Technique’s Definition",
-                    "start": 1725,
-                    "end": 1763,
+                    "start": 1737,
+                    "end": 1775,
                     "loc": {
                       "start": {
                         "line": 51,
@@ -995,9 +995,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The dictionary defining the rendering technique.\n   * @type {Map<string, Object>}\n   * @desc Read this property when you want to save a property list file containing the definition of a technique.See the class overview for details of a technique definition dictionary.\n   * @see https://developer.apple.com/reference/scenekit/scntechnique/1520492-dictionaryrepresentation\n   ",
-                    "start": 1766,
-                    "end": 2152,
+                    "value": "*\n   * The dictionary defining the rendering technique.\n   * @type {Map<string, Object>}\n   * @desc Read this property when you want to save a property list file containing the definition of a technique.See the class overview for details of a technique definition dictionary.\n   * @see https://developer.apple.com/documentation/scenekit/scntechnique/1520492-dictionaryrepresentation\n   ",
+                    "start": 1778,
+                    "end": 2168,
                     "loc": {
                       "start": {
                         "line": 52,
@@ -1014,8 +1014,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Handling Parameters for a Technique’s Shader Programs",
-                    "start": 2237,
-                    "end": 2293,
+                    "start": 2253,
+                    "end": 2309,
                     "loc": {
                       "start": {
                         "line": 62,
@@ -1029,9 +1029,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Specifies a block to be called before rendering using programs with the specified GLSL uniform variable or attribute name.\n   * @access public\n   * @param {string} symbol - A GLSL uniform variable or attribute name used in one of the technique’s shader programs.\n   * @param {?SCNBindingBlock} [block = null] - A block that SceneKit calls.\n   * @returns {void}\n   * @desc This method associates a block for handling setup of an attribute or uniform variable in the shader programs associated with the technique. SceneKit calls your block before any performing any rendering passes that use that symbol. In the block, you can execute any OpenGL commands or other code necessary for preparing your custom shader.NoteYou must associate a handler block with a technique before assigning that technique to a SceneKit object. The result of calling this method on a technique currently in use is undefined.Use this method when you need to update a value in a shader program every time SceneKit renders a frame. To set a value infrequently, or only once, use the setObject(_:forKeyedSubscript:) or setValue(_:forKey:) method instead.If you associate a block with a symbol using this method, SceneKit ignores values set using the setObject(_:forKeyedSubscript:) method.\n   * @see https://developer.apple.com/reference/scenekit/scntechnique/1520490-handlebinding\n   ",
-                    "start": 2297,
-                    "end": 3664,
+                    "value": "*\n   * Specifies a block to be called before rendering using programs with the specified GLSL uniform variable or attribute name.\n   * @access public\n   * @param {string} symbol - A GLSL uniform variable or attribute name used in one of the technique’s shader programs.\n   * @param {?SCNBindingBlock} [block = null] - A block that SceneKit calls.\n   * @returns {void}\n   * @desc This method associates a block for handling setup of an attribute or uniform variable in the shader programs associated with the technique. SceneKit calls your block before any performing any rendering passes that use that symbol. In the block, you can execute any OpenGL commands or other code necessary for preparing your custom shader.NoteYou must associate a handler block with a technique before assigning that technique to a SceneKit object. The result of calling this method on a technique currently in use is undefined.Use this method when you need to update a value in a shader program every time SceneKit renders a frame. To set a value infrequently, or only once, use the setObject(_:forKeyedSubscript:) or setValue(_:forKey:) method instead.If you associate a block with a symbol using this method, SceneKit ignores values set using the setObject(_:forKeyedSubscript:) method.\n   * @see https://developer.apple.com/documentation/scenekit/scntechnique/1520490-handlebinding\n   ",
+                    "start": 2313,
+                    "end": 3684,
                     "loc": {
                       "start": {
                         "line": 64,
@@ -1047,8 +1047,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 3667,
-                "end": 3721,
+                "start": 3687,
+                "end": 3741,
                 "loc": {
                   "start": {
                     "line": 73,
@@ -1062,8 +1062,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 3667,
-                  "end": 3693,
+                  "start": 3687,
+                  "end": 3713,
                   "loc": {
                     "start": {
                       "line": 73,
@@ -1087,8 +1087,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 3694,
-                    "end": 3700,
+                    "start": 3714,
+                    "end": 3720,
                     "loc": {
                       "start": {
                         "line": 73,
@@ -1104,8 +1104,8 @@
                   },
                   {
                     "type": "AssignmentPattern",
-                    "start": 3702,
-                    "end": 3714,
+                    "start": 3722,
+                    "end": 3734,
                     "loc": {
                       "start": {
                         "line": 73,
@@ -1118,8 +1118,8 @@
                     },
                     "left": {
                       "type": "Identifier",
-                      "start": 3702,
-                      "end": 3707,
+                      "start": 3722,
+                      "end": 3727,
                       "loc": {
                         "start": {
                           "line": 73,
@@ -1135,8 +1135,8 @@
                     },
                     "right": {
                       "type": "NullLiteral",
-                      "start": 3710,
-                      "end": 3714,
+                      "start": 3730,
+                      "end": 3734,
                       "loc": {
                         "start": {
                           "line": 73,
@@ -1152,8 +1152,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 3716,
-                  "end": 3721,
+                  "start": 3736,
+                  "end": 3741,
                   "loc": {
                     "start": {
                       "line": 73,
@@ -1173,8 +1173,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Handling Parameters for a Technique’s Shader Programs",
-                    "start": 2237,
-                    "end": 2293,
+                    "start": 2253,
+                    "end": 2309,
                     "loc": {
                       "start": {
                         "line": 62,
@@ -1188,9 +1188,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Specifies a block to be called before rendering using programs with the specified GLSL uniform variable or attribute name.\n   * @access public\n   * @param {string} symbol - A GLSL uniform variable or attribute name used in one of the technique’s shader programs.\n   * @param {?SCNBindingBlock} [block = null] - A block that SceneKit calls.\n   * @returns {void}\n   * @desc This method associates a block for handling setup of an attribute or uniform variable in the shader programs associated with the technique. SceneKit calls your block before any performing any rendering passes that use that symbol. In the block, you can execute any OpenGL commands or other code necessary for preparing your custom shader.NoteYou must associate a handler block with a technique before assigning that technique to a SceneKit object. The result of calling this method on a technique currently in use is undefined.Use this method when you need to update a value in a shader program every time SceneKit renders a frame. To set a value infrequently, or only once, use the setObject(_:forKeyedSubscript:) or setValue(_:forKey:) method instead.If you associate a block with a symbol using this method, SceneKit ignores values set using the setObject(_:forKeyedSubscript:) method.\n   * @see https://developer.apple.com/reference/scenekit/scntechnique/1520490-handlebinding\n   ",
-                    "start": 2297,
-                    "end": 3664,
+                    "value": "*\n   * Specifies a block to be called before rendering using programs with the specified GLSL uniform variable or attribute name.\n   * @access public\n   * @param {string} symbol - A GLSL uniform variable or attribute name used in one of the technique’s shader programs.\n   * @param {?SCNBindingBlock} [block = null] - A block that SceneKit calls.\n   * @returns {void}\n   * @desc This method associates a block for handling setup of an attribute or uniform variable in the shader programs associated with the technique. SceneKit calls your block before any performing any rendering passes that use that symbol. In the block, you can execute any OpenGL commands or other code necessary for preparing your custom shader.NoteYou must associate a handler block with a technique before assigning that technique to a SceneKit object. The result of calling this method on a technique currently in use is undefined.Use this method when you need to update a value in a shader program every time SceneKit renders a frame. To set a value infrequently, or only once, use the setObject(_:forKeyedSubscript:) or setValue(_:forKey:) method instead.If you associate a block with a symbol using this method, SceneKit ignores values set using the setObject(_:forKeyedSubscript:) method.\n   * @see https://developer.apple.com/documentation/scenekit/scntechnique/1520490-handlebinding\n   ",
+                    "start": 2313,
+                    "end": 3684,
                     "loc": {
                       "start": {
                         "line": 64,
@@ -1206,9 +1206,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Sets a value for the specified shader  variable or attribute name, using subscript syntax.\n   * @access public\n   * @param {?Object} obj - An object containing a new value for the shader symbol.\n   * @param {NSCopying} key - A shader variable or attribute name used in one of the technique’s shader programs.\n   * @returns {void}\n   * @desc The value parameter should be an object appropriate to the type of the shader symbol being set. For example, use an NSNumber object to set the value of a float uniform variable, or use an NSValue object containing an SCNVector3 structure to set the value of a GLSL vec3 uniform variable or a Metal float3 variable.Use this method when you need to set a value infrequently or only once. To update a shader value every time SceneKit renders a frame, use the handleBinding(ofSymbol:using:) method instead.If you use the handleBinding(ofSymbol:using:) method to associate a handler block for a symbol, SceneKit ignores values set for the symbol using the setObject(_:forKeyedSubscript:) method.\n   * @see https://developer.apple.com/reference/scenekit/scntechnique/1520495-setobject\n   ",
-                    "start": 3725,
-                    "end": 4859,
+                    "value": "*\n   * Sets a value for the specified shader  variable or attribute name, using subscript syntax.\n   * @access public\n   * @param {?Object} obj - An object containing a new value for the shader symbol.\n   * @param {NSCopying} key - A shader variable or attribute name used in one of the technique’s shader programs.\n   * @returns {void}\n   * @desc The value parameter should be an object appropriate to the type of the shader symbol being set. For example, use an NSNumber object to set the value of a float uniform variable, or use an NSValue object containing an SCNVector3 structure to set the value of a GLSL vec3 uniform variable or a Metal float3 variable.Use this method when you need to set a value infrequently or only once. To update a shader value every time SceneKit renders a frame, use the handleBinding(ofSymbol:using:) method instead.If you use the handleBinding(ofSymbol:using:) method to associate a handler block for a symbol, SceneKit ignores values set for the symbol using the setObject(_:forKeyedSubscript:) method.\n   * @see https://developer.apple.com/documentation/scenekit/scntechnique/1520495-setobject\n   ",
+                    "start": 3745,
+                    "end": 4883,
                     "loc": {
                       "start": {
                         "line": 76,
@@ -1224,8 +1224,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 4862,
-                "end": 4904,
+                "start": 4886,
+                "end": 4928,
                 "loc": {
                   "start": {
                     "line": 85,
@@ -1239,8 +1239,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 4862,
-                  "end": 4888,
+                  "start": 4886,
+                  "end": 4912,
                   "loc": {
                     "start": {
                       "line": 85,
@@ -1264,8 +1264,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 4889,
-                    "end": 4892,
+                    "start": 4913,
+                    "end": 4916,
                     "loc": {
                       "start": {
                         "line": 85,
@@ -1281,8 +1281,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 4894,
-                    "end": 4897,
+                    "start": 4918,
+                    "end": 4921,
                     "loc": {
                       "start": {
                         "line": 85,
@@ -1299,8 +1299,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 4899,
-                  "end": 4904,
+                  "start": 4923,
+                  "end": 4928,
                   "loc": {
                     "start": {
                       "line": 85,
@@ -1317,9 +1317,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Sets a value for the specified shader  variable or attribute name, using subscript syntax.\n   * @access public\n   * @param {?Object} obj - An object containing a new value for the shader symbol.\n   * @param {NSCopying} key - A shader variable or attribute name used in one of the technique’s shader programs.\n   * @returns {void}\n   * @desc The value parameter should be an object appropriate to the type of the shader symbol being set. For example, use an NSNumber object to set the value of a float uniform variable, or use an NSValue object containing an SCNVector3 structure to set the value of a GLSL vec3 uniform variable or a Metal float3 variable.Use this method when you need to set a value infrequently or only once. To update a shader value every time SceneKit renders a frame, use the handleBinding(ofSymbol:using:) method instead.If you use the handleBinding(ofSymbol:using:) method to associate a handler block for a symbol, SceneKit ignores values set for the symbol using the setObject(_:forKeyedSubscript:) method.\n   * @see https://developer.apple.com/reference/scenekit/scntechnique/1520495-setobject\n   ",
-                    "start": 3725,
-                    "end": 4859,
+                    "value": "*\n   * Sets a value for the specified shader  variable or attribute name, using subscript syntax.\n   * @access public\n   * @param {?Object} obj - An object containing a new value for the shader symbol.\n   * @param {NSCopying} key - A shader variable or attribute name used in one of the technique’s shader programs.\n   * @returns {void}\n   * @desc The value parameter should be an object appropriate to the type of the shader symbol being set. For example, use an NSNumber object to set the value of a float uniform variable, or use an NSValue object containing an SCNVector3 structure to set the value of a GLSL vec3 uniform variable or a Metal float3 variable.Use this method when you need to set a value infrequently or only once. To update a shader value every time SceneKit renders a frame, use the handleBinding(ofSymbol:using:) method instead.If you use the handleBinding(ofSymbol:using:) method to associate a handler block for a symbol, SceneKit ignores values set for the symbol using the setObject(_:forKeyedSubscript:) method.\n   * @see https://developer.apple.com/documentation/scenekit/scntechnique/1520495-setobject\n   ",
+                    "start": 3745,
+                    "end": 4883,
                     "loc": {
                       "start": {
                         "line": 76,
@@ -1338,9 +1338,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * A specification for augmenting or postprocessing SceneKit's rendering of a scene using additional drawing passes with custom Metal or OpenGL shaders.\n * @access public\n * @extends {NSObject}\n * @implements {SCNAnimatable}\n * @see https://developer.apple.com/reference/scenekit/scntechnique\n ",
+              "value": "*\n * A specification for augmenting or postprocessing SceneKit's rendering of a scene using additional drawing passes with custom Metal or OpenGL shaders.\n * @access public\n * @extends {NSObject}\n * @implements {SCNAnimatable}\n * @see https://developer.apple.com/documentation/scenekit/scntechnique\n ",
               "start": 154,
-              "end": 454,
+              "end": 458,
               "loc": {
                 "start": {
                   "line": 8,
@@ -1358,9 +1358,9 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * A specification for augmenting or postprocessing SceneKit's rendering of a scene using additional drawing passes with custom Metal or OpenGL shaders.\n * @access public\n * @extends {NSObject}\n * @implements {SCNAnimatable}\n * @see https://developer.apple.com/reference/scenekit/scntechnique\n ",
+            "value": "*\n * A specification for augmenting or postprocessing SceneKit's rendering of a scene using additional drawing passes with custom Metal or OpenGL shaders.\n * @access public\n * @extends {NSObject}\n * @implements {SCNAnimatable}\n * @see https://developer.apple.com/documentation/scenekit/scntechnique\n ",
             "start": 154,
-            "end": 454,
+            "end": 458,
             "loc": {
               "start": {
                 "line": 8,
@@ -1416,9 +1416,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * A specification for augmenting or postprocessing SceneKit's rendering of a scene using additional drawing passes with custom Metal or OpenGL shaders.\n * @access public\n * @extends {NSObject}\n * @implements {SCNAnimatable}\n * @see https://developer.apple.com/reference/scenekit/scntechnique\n ",
+      "value": "*\n * A specification for augmenting or postprocessing SceneKit's rendering of a scene using additional drawing passes with custom Metal or OpenGL shaders.\n * @access public\n * @extends {NSObject}\n * @implements {SCNAnimatable}\n * @see https://developer.apple.com/documentation/scenekit/scntechnique\n ",
       "start": 154,
-      "end": 454,
+      "end": 458,
       "loc": {
         "start": {
           "line": 8,
@@ -1433,8 +1433,8 @@
     {
       "type": "CommentLine",
       "value": " Creating a Technique",
-      "start": 511,
-      "end": 534,
+      "start": 515,
+      "end": 538,
       "loc": {
         "start": {
           "line": 17,
@@ -1448,9 +1448,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Creates a technique from a technique definition dictionary.,\n   * @access public\n   * @param {Map<string, Object>} dictionary - A dictionary defining the series of rendering passes that comprise the technique.\n   * @returns {void}\n   * @desc See the class overview for details of a technique definition dictionary.\n   * @see https://developer.apple.com/reference/scenekit/scntechnique/1520494-init\n   ",
-      "start": 538,
-      "end": 950,
+      "value": "*\n   * Creates a technique from a technique definition dictionary.,\n   * @access public\n   * @param {Map<string, Object>} dictionary - A dictionary defining the series of rendering passes that comprise the technique.\n   * @returns {void}\n   * @desc See the class overview for details of a technique definition dictionary.\n   * @see https://developer.apple.com/documentation/scenekit/scntechnique/1520494-init\n   ",
+      "start": 542,
+      "end": 958,
       "loc": {
         "start": {
           "line": 19,
@@ -1465,8 +1465,8 @@
     {
       "type": "CommentLine",
       "value": " Retrieving a Technique’s Definition",
-      "start": 977,
-      "end": 1015,
+      "start": 985,
+      "end": 1023,
       "loc": {
         "start": {
           "line": 29,
@@ -1481,8 +1481,8 @@
     {
       "type": "CommentLine",
       "value": " Combining Techniques",
-      "start": 1066,
-      "end": 1089,
+      "start": 1074,
+      "end": 1097,
       "loc": {
         "start": {
           "line": 34,
@@ -1496,9 +1496,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Creates a new rendering technique that combines a series of techniques.\n   * @access public\n   * @param {SCNTechnique[]} techniques - An array of SCNTechnique objects.\n   * @returns {void}\n   * @desc The new technique applies the effects of the techniques in the order specified in the techniques array. Each output of a technique in the array becomes an input to the next technique in the array.\n   * @see https://developer.apple.com/reference/scenekit/scntechnique/1520497-init\n   ",
-      "start": 1093,
-      "end": 1587,
+      "value": "*\n   * Creates a new rendering technique that combines a series of techniques.\n   * @access public\n   * @param {SCNTechnique[]} techniques - An array of SCNTechnique objects.\n   * @returns {void}\n   * @desc The new technique applies the effects of the techniques in the order specified in the techniques array. Each output of a technique in the array becomes an input to the next technique in the array.\n   * @see https://developer.apple.com/documentation/scenekit/scntechnique/1520497-init\n   ",
+      "start": 1101,
+      "end": 1599,
       "loc": {
         "start": {
           "line": 36,
@@ -1513,8 +1513,8 @@
     {
       "type": "CommentLine",
       "value": " Retrieving a Technique’s Definition",
-      "start": 1636,
-      "end": 1674,
+      "start": 1648,
+      "end": 1686,
       "loc": {
         "start": {
           "line": 46,
@@ -1529,8 +1529,8 @@
     {
       "type": "CommentLine",
       "value": " Retrieving a Technique’s Definition",
-      "start": 1725,
-      "end": 1763,
+      "start": 1737,
+      "end": 1775,
       "loc": {
         "start": {
           "line": 51,
@@ -1544,9 +1544,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The dictionary defining the rendering technique.\n   * @type {Map<string, Object>}\n   * @desc Read this property when you want to save a property list file containing the definition of a technique.See the class overview for details of a technique definition dictionary.\n   * @see https://developer.apple.com/reference/scenekit/scntechnique/1520492-dictionaryrepresentation\n   ",
-      "start": 1766,
-      "end": 2152,
+      "value": "*\n   * The dictionary defining the rendering technique.\n   * @type {Map<string, Object>}\n   * @desc Read this property when you want to save a property list file containing the definition of a technique.See the class overview for details of a technique definition dictionary.\n   * @see https://developer.apple.com/documentation/scenekit/scntechnique/1520492-dictionaryrepresentation\n   ",
+      "start": 1778,
+      "end": 2168,
       "loc": {
         "start": {
           "line": 52,
@@ -1561,8 +1561,8 @@
     {
       "type": "CommentLine",
       "value": " Handling Parameters for a Technique’s Shader Programs",
-      "start": 2237,
-      "end": 2293,
+      "start": 2253,
+      "end": 2309,
       "loc": {
         "start": {
           "line": 62,
@@ -1576,9 +1576,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Specifies a block to be called before rendering using programs with the specified GLSL uniform variable or attribute name.\n   * @access public\n   * @param {string} symbol - A GLSL uniform variable or attribute name used in one of the technique’s shader programs.\n   * @param {?SCNBindingBlock} [block = null] - A block that SceneKit calls.\n   * @returns {void}\n   * @desc This method associates a block for handling setup of an attribute or uniform variable in the shader programs associated with the technique. SceneKit calls your block before any performing any rendering passes that use that symbol. In the block, you can execute any OpenGL commands or other code necessary for preparing your custom shader.NoteYou must associate a handler block with a technique before assigning that technique to a SceneKit object. The result of calling this method on a technique currently in use is undefined.Use this method when you need to update a value in a shader program every time SceneKit renders a frame. To set a value infrequently, or only once, use the setObject(_:forKeyedSubscript:) or setValue(_:forKey:) method instead.If you associate a block with a symbol using this method, SceneKit ignores values set using the setObject(_:forKeyedSubscript:) method.\n   * @see https://developer.apple.com/reference/scenekit/scntechnique/1520490-handlebinding\n   ",
-      "start": 2297,
-      "end": 3664,
+      "value": "*\n   * Specifies a block to be called before rendering using programs with the specified GLSL uniform variable or attribute name.\n   * @access public\n   * @param {string} symbol - A GLSL uniform variable or attribute name used in one of the technique’s shader programs.\n   * @param {?SCNBindingBlock} [block = null] - A block that SceneKit calls.\n   * @returns {void}\n   * @desc This method associates a block for handling setup of an attribute or uniform variable in the shader programs associated with the technique. SceneKit calls your block before any performing any rendering passes that use that symbol. In the block, you can execute any OpenGL commands or other code necessary for preparing your custom shader.NoteYou must associate a handler block with a technique before assigning that technique to a SceneKit object. The result of calling this method on a technique currently in use is undefined.Use this method when you need to update a value in a shader program every time SceneKit renders a frame. To set a value infrequently, or only once, use the setObject(_:forKeyedSubscript:) or setValue(_:forKey:) method instead.If you associate a block with a symbol using this method, SceneKit ignores values set using the setObject(_:forKeyedSubscript:) method.\n   * @see https://developer.apple.com/documentation/scenekit/scntechnique/1520490-handlebinding\n   ",
+      "start": 2313,
+      "end": 3684,
       "loc": {
         "start": {
           "line": 64,
@@ -1592,9 +1592,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Sets a value for the specified shader  variable or attribute name, using subscript syntax.\n   * @access public\n   * @param {?Object} obj - An object containing a new value for the shader symbol.\n   * @param {NSCopying} key - A shader variable or attribute name used in one of the technique’s shader programs.\n   * @returns {void}\n   * @desc The value parameter should be an object appropriate to the type of the shader symbol being set. For example, use an NSNumber object to set the value of a float uniform variable, or use an NSValue object containing an SCNVector3 structure to set the value of a GLSL vec3 uniform variable or a Metal float3 variable.Use this method when you need to set a value infrequently or only once. To update a shader value every time SceneKit renders a frame, use the handleBinding(ofSymbol:using:) method instead.If you use the handleBinding(ofSymbol:using:) method to associate a handler block for a symbol, SceneKit ignores values set for the symbol using the setObject(_:forKeyedSubscript:) method.\n   * @see https://developer.apple.com/reference/scenekit/scntechnique/1520495-setobject\n   ",
-      "start": 3725,
-      "end": 4859,
+      "value": "*\n   * Sets a value for the specified shader  variable or attribute name, using subscript syntax.\n   * @access public\n   * @param {?Object} obj - An object containing a new value for the shader symbol.\n   * @param {NSCopying} key - A shader variable or attribute name used in one of the technique’s shader programs.\n   * @returns {void}\n   * @desc The value parameter should be an object appropriate to the type of the shader symbol being set. For example, use an NSNumber object to set the value of a float uniform variable, or use an NSValue object containing an SCNVector3 structure to set the value of a GLSL vec3 uniform variable or a Metal float3 variable.Use this method when you need to set a value infrequently or only once. To update a shader value every time SceneKit renders a frame, use the handleBinding(ofSymbol:using:) method instead.If you use the handleBinding(ofSymbol:using:) method to associate a handler block for a symbol, SceneKit ignores values set for the symbol using the setObject(_:forKeyedSubscript:) method.\n   * @see https://developer.apple.com/documentation/scenekit/scntechnique/1520495-setobject\n   ",
+      "start": 3745,
+      "end": 4883,
       "loc": {
         "start": {
           "line": 76,
@@ -1958,9 +1958,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * A specification for augmenting or postprocessing SceneKit's rendering of a scene using additional drawing passes with custom Metal or OpenGL shaders.\n * @access public\n * @extends {NSObject}\n * @implements {SCNAnimatable}\n * @see https://developer.apple.com/reference/scenekit/scntechnique\n ",
+      "value": "*\n * A specification for augmenting or postprocessing SceneKit's rendering of a scene using additional drawing passes with custom Metal or OpenGL shaders.\n * @access public\n * @extends {NSObject}\n * @implements {SCNAnimatable}\n * @see https://developer.apple.com/documentation/scenekit/scntechnique\n ",
       "start": 154,
-      "end": 454,
+      "end": 458,
       "loc": {
         "start": {
           "line": 8,
@@ -1987,8 +1987,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 455,
-      "end": 461,
+      "start": 459,
+      "end": 465,
       "loc": {
         "start": {
           "line": 15,
@@ -2015,8 +2015,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 462,
-      "end": 469,
+      "start": 466,
+      "end": 473,
       "loc": {
         "start": {
           "line": 15,
@@ -2043,8 +2043,8 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 470,
-      "end": 475,
+      "start": 474,
+      "end": 479,
       "loc": {
         "start": {
           "line": 15,
@@ -2069,8 +2069,8 @@
         "binop": null
       },
       "value": "SCNTechnique",
-      "start": 476,
-      "end": 488,
+      "start": 480,
+      "end": 492,
       "loc": {
         "start": {
           "line": 15,
@@ -2097,8 +2097,8 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 489,
-      "end": 496,
+      "start": 493,
+      "end": 500,
       "loc": {
         "start": {
           "line": 15,
@@ -2123,8 +2123,8 @@
         "binop": null
       },
       "value": "NSObject",
-      "start": 497,
-      "end": 505,
+      "start": 501,
+      "end": 509,
       "loc": {
         "start": {
           "line": 15,
@@ -2148,8 +2148,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 506,
-      "end": 507,
+      "start": 510,
+      "end": 511,
       "loc": {
         "start": {
           "line": 15,
@@ -2164,8 +2164,8 @@
     {
       "type": "CommentLine",
       "value": " Creating a Technique",
-      "start": 511,
-      "end": 534,
+      "start": 515,
+      "end": 538,
       "loc": {
         "start": {
           "line": 17,
@@ -2179,9 +2179,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Creates a technique from a technique definition dictionary.,\n   * @access public\n   * @param {Map<string, Object>} dictionary - A dictionary defining the series of rendering passes that comprise the technique.\n   * @returns {void}\n   * @desc See the class overview for details of a technique definition dictionary.\n   * @see https://developer.apple.com/reference/scenekit/scntechnique/1520494-init\n   ",
-      "start": 538,
-      "end": 950,
+      "value": "*\n   * Creates a technique from a technique definition dictionary.,\n   * @access public\n   * @param {Map<string, Object>} dictionary - A dictionary defining the series of rendering passes that comprise the technique.\n   * @returns {void}\n   * @desc See the class overview for details of a technique definition dictionary.\n   * @see https://developer.apple.com/documentation/scenekit/scntechnique/1520494-init\n   ",
+      "start": 542,
+      "end": 958,
       "loc": {
         "start": {
           "line": 19,
@@ -2206,8 +2206,8 @@
         "binop": null
       },
       "value": "init",
-      "start": 953,
-      "end": 957,
+      "start": 961,
+      "end": 965,
       "loc": {
         "start": {
           "line": 27,
@@ -2231,8 +2231,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 957,
-      "end": 958,
+      "start": 965,
+      "end": 966,
       "loc": {
         "start": {
           "line": 27,
@@ -2257,8 +2257,8 @@
         "binop": null
       },
       "value": "dictionary",
-      "start": 958,
-      "end": 968,
+      "start": 966,
+      "end": 976,
       "loc": {
         "start": {
           "line": 27,
@@ -2282,8 +2282,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 968,
-      "end": 969,
+      "start": 976,
+      "end": 977,
       "loc": {
         "start": {
           "line": 27,
@@ -2307,8 +2307,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 970,
-      "end": 971,
+      "start": 978,
+      "end": 979,
       "loc": {
         "start": {
           "line": 27,
@@ -2323,8 +2323,8 @@
     {
       "type": "CommentLine",
       "value": " Retrieving a Technique’s Definition",
-      "start": 977,
-      "end": 1015,
+      "start": 985,
+      "end": 1023,
       "loc": {
         "start": {
           "line": 29,
@@ -2351,8 +2351,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1021,
-      "end": 1025,
+      "start": 1029,
+      "end": 1033,
       "loc": {
         "start": {
           "line": 31,
@@ -2377,8 +2377,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1025,
-      "end": 1026,
+      "start": 1033,
+      "end": 1034,
       "loc": {
         "start": {
           "line": 31,
@@ -2403,8 +2403,8 @@
         "binop": null
       },
       "value": "_dictionaryRepresentation",
-      "start": 1026,
-      "end": 1051,
+      "start": 1034,
+      "end": 1059,
       "loc": {
         "start": {
           "line": 31,
@@ -2430,8 +2430,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1052,
-      "end": 1053,
+      "start": 1060,
+      "end": 1061,
       "loc": {
         "start": {
           "line": 31,
@@ -2458,8 +2458,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 1054,
-      "end": 1058,
+      "start": 1062,
+      "end": 1066,
       "loc": {
         "start": {
           "line": 31,
@@ -2483,8 +2483,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1061,
-      "end": 1062,
+      "start": 1069,
+      "end": 1070,
       "loc": {
         "start": {
           "line": 32,
@@ -2499,8 +2499,8 @@
     {
       "type": "CommentLine",
       "value": " Combining Techniques",
-      "start": 1066,
-      "end": 1089,
+      "start": 1074,
+      "end": 1097,
       "loc": {
         "start": {
           "line": 34,
@@ -2514,9 +2514,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Creates a new rendering technique that combines a series of techniques.\n   * @access public\n   * @param {SCNTechnique[]} techniques - An array of SCNTechnique objects.\n   * @returns {void}\n   * @desc The new technique applies the effects of the techniques in the order specified in the techniques array. Each output of a technique in the array becomes an input to the next technique in the array.\n   * @see https://developer.apple.com/reference/scenekit/scntechnique/1520497-init\n   ",
-      "start": 1093,
-      "end": 1587,
+      "value": "*\n   * Creates a new rendering technique that combines a series of techniques.\n   * @access public\n   * @param {SCNTechnique[]} techniques - An array of SCNTechnique objects.\n   * @returns {void}\n   * @desc The new technique applies the effects of the techniques in the order specified in the techniques array. Each output of a technique in the array becomes an input to the next technique in the array.\n   * @see https://developer.apple.com/documentation/scenekit/scntechnique/1520497-init\n   ",
+      "start": 1101,
+      "end": 1599,
       "loc": {
         "start": {
           "line": 36,
@@ -2541,8 +2541,8 @@
         "binop": null
       },
       "value": "initBySequencingTechniques",
-      "start": 1590,
-      "end": 1616,
+      "start": 1602,
+      "end": 1628,
       "loc": {
         "start": {
           "line": 44,
@@ -2566,8 +2566,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1616,
-      "end": 1617,
+      "start": 1628,
+      "end": 1629,
       "loc": {
         "start": {
           "line": 44,
@@ -2592,8 +2592,8 @@
         "binop": null
       },
       "value": "techniques",
-      "start": 1617,
-      "end": 1627,
+      "start": 1629,
+      "end": 1639,
       "loc": {
         "start": {
           "line": 44,
@@ -2617,8 +2617,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1627,
-      "end": 1628,
+      "start": 1639,
+      "end": 1640,
       "loc": {
         "start": {
           "line": 44,
@@ -2642,8 +2642,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1629,
-      "end": 1630,
+      "start": 1641,
+      "end": 1642,
       "loc": {
         "start": {
           "line": 44,
@@ -2658,8 +2658,8 @@
     {
       "type": "CommentLine",
       "value": " Retrieving a Technique’s Definition",
-      "start": 1636,
-      "end": 1674,
+      "start": 1648,
+      "end": 1686,
       "loc": {
         "start": {
           "line": 46,
@@ -2686,8 +2686,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1680,
-      "end": 1684,
+      "start": 1692,
+      "end": 1696,
       "loc": {
         "start": {
           "line": 48,
@@ -2712,8 +2712,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1684,
-      "end": 1685,
+      "start": 1696,
+      "end": 1697,
       "loc": {
         "start": {
           "line": 48,
@@ -2738,8 +2738,8 @@
         "binop": null
       },
       "value": "_dictionaryRepresentation",
-      "start": 1685,
-      "end": 1710,
+      "start": 1697,
+      "end": 1722,
       "loc": {
         "start": {
           "line": 48,
@@ -2765,8 +2765,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1711,
-      "end": 1712,
+      "start": 1723,
+      "end": 1724,
       "loc": {
         "start": {
           "line": 48,
@@ -2793,8 +2793,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 1713,
-      "end": 1717,
+      "start": 1725,
+      "end": 1729,
       "loc": {
         "start": {
           "line": 48,
@@ -2818,8 +2818,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1720,
-      "end": 1721,
+      "start": 1732,
+      "end": 1733,
       "loc": {
         "start": {
           "line": 49,
@@ -2834,8 +2834,8 @@
     {
       "type": "CommentLine",
       "value": " Retrieving a Technique’s Definition",
-      "start": 1725,
-      "end": 1763,
+      "start": 1737,
+      "end": 1775,
       "loc": {
         "start": {
           "line": 51,
@@ -2849,9 +2849,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The dictionary defining the rendering technique.\n   * @type {Map<string, Object>}\n   * @desc Read this property when you want to save a property list file containing the definition of a technique.See the class overview for details of a technique definition dictionary.\n   * @see https://developer.apple.com/reference/scenekit/scntechnique/1520492-dictionaryrepresentation\n   ",
-      "start": 1766,
-      "end": 2152,
+      "value": "*\n   * The dictionary defining the rendering technique.\n   * @type {Map<string, Object>}\n   * @desc Read this property when you want to save a property list file containing the definition of a technique.See the class overview for details of a technique definition dictionary.\n   * @see https://developer.apple.com/documentation/scenekit/scntechnique/1520492-dictionaryrepresentation\n   ",
+      "start": 1778,
+      "end": 2168,
       "loc": {
         "start": {
           "line": 52,
@@ -2876,8 +2876,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 2155,
-      "end": 2158,
+      "start": 2171,
+      "end": 2174,
       "loc": {
         "start": {
           "line": 58,
@@ -2902,8 +2902,8 @@
         "binop": null
       },
       "value": "dictionaryRepresentation",
-      "start": 2159,
-      "end": 2183,
+      "start": 2175,
+      "end": 2199,
       "loc": {
         "start": {
           "line": 58,
@@ -2927,8 +2927,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2183,
-      "end": 2184,
+      "start": 2199,
+      "end": 2200,
       "loc": {
         "start": {
           "line": 58,
@@ -2952,8 +2952,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2184,
-      "end": 2185,
+      "start": 2200,
+      "end": 2201,
       "loc": {
         "start": {
           "line": 58,
@@ -2977,8 +2977,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2186,
-      "end": 2187,
+      "start": 2202,
+      "end": 2203,
       "loc": {
         "start": {
           "line": 58,
@@ -3005,8 +3005,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 2192,
-      "end": 2198,
+      "start": 2208,
+      "end": 2214,
       "loc": {
         "start": {
           "line": 59,
@@ -3033,8 +3033,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2199,
-      "end": 2203,
+      "start": 2215,
+      "end": 2219,
       "loc": {
         "start": {
           "line": 59,
@@ -3059,8 +3059,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2203,
-      "end": 2204,
+      "start": 2219,
+      "end": 2220,
       "loc": {
         "start": {
           "line": 59,
@@ -3085,8 +3085,8 @@
         "binop": null
       },
       "value": "_dictionaryRepresentation",
-      "start": 2204,
-      "end": 2229,
+      "start": 2220,
+      "end": 2245,
       "loc": {
         "start": {
           "line": 59,
@@ -3110,8 +3110,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2232,
-      "end": 2233,
+      "start": 2248,
+      "end": 2249,
       "loc": {
         "start": {
           "line": 60,
@@ -3126,8 +3126,8 @@
     {
       "type": "CommentLine",
       "value": " Handling Parameters for a Technique’s Shader Programs",
-      "start": 2237,
-      "end": 2293,
+      "start": 2253,
+      "end": 2309,
       "loc": {
         "start": {
           "line": 62,
@@ -3141,9 +3141,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Specifies a block to be called before rendering using programs with the specified GLSL uniform variable or attribute name.\n   * @access public\n   * @param {string} symbol - A GLSL uniform variable or attribute name used in one of the technique’s shader programs.\n   * @param {?SCNBindingBlock} [block = null] - A block that SceneKit calls.\n   * @returns {void}\n   * @desc This method associates a block for handling setup of an attribute or uniform variable in the shader programs associated with the technique. SceneKit calls your block before any performing any rendering passes that use that symbol. In the block, you can execute any OpenGL commands or other code necessary for preparing your custom shader.NoteYou must associate a handler block with a technique before assigning that technique to a SceneKit object. The result of calling this method on a technique currently in use is undefined.Use this method when you need to update a value in a shader program every time SceneKit renders a frame. To set a value infrequently, or only once, use the setObject(_:forKeyedSubscript:) or setValue(_:forKey:) method instead.If you associate a block with a symbol using this method, SceneKit ignores values set using the setObject(_:forKeyedSubscript:) method.\n   * @see https://developer.apple.com/reference/scenekit/scntechnique/1520490-handlebinding\n   ",
-      "start": 2297,
-      "end": 3664,
+      "value": "*\n   * Specifies a block to be called before rendering using programs with the specified GLSL uniform variable or attribute name.\n   * @access public\n   * @param {string} symbol - A GLSL uniform variable or attribute name used in one of the technique’s shader programs.\n   * @param {?SCNBindingBlock} [block = null] - A block that SceneKit calls.\n   * @returns {void}\n   * @desc This method associates a block for handling setup of an attribute or uniform variable in the shader programs associated with the technique. SceneKit calls your block before any performing any rendering passes that use that symbol. In the block, you can execute any OpenGL commands or other code necessary for preparing your custom shader.NoteYou must associate a handler block with a technique before assigning that technique to a SceneKit object. The result of calling this method on a technique currently in use is undefined.Use this method when you need to update a value in a shader program every time SceneKit renders a frame. To set a value infrequently, or only once, use the setObject(_:forKeyedSubscript:) or setValue(_:forKey:) method instead.If you associate a block with a symbol using this method, SceneKit ignores values set using the setObject(_:forKeyedSubscript:) method.\n   * @see https://developer.apple.com/documentation/scenekit/scntechnique/1520490-handlebinding\n   ",
+      "start": 2313,
+      "end": 3684,
       "loc": {
         "start": {
           "line": 64,
@@ -3168,8 +3168,8 @@
         "binop": null
       },
       "value": "handleBindingOfSymbolUsing",
-      "start": 3667,
-      "end": 3693,
+      "start": 3687,
+      "end": 3713,
       "loc": {
         "start": {
           "line": 73,
@@ -3193,8 +3193,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3693,
-      "end": 3694,
+      "start": 3713,
+      "end": 3714,
       "loc": {
         "start": {
           "line": 73,
@@ -3219,8 +3219,8 @@
         "binop": null
       },
       "value": "symbol",
-      "start": 3694,
-      "end": 3700,
+      "start": 3714,
+      "end": 3720,
       "loc": {
         "start": {
           "line": 73,
@@ -3245,8 +3245,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3700,
-      "end": 3701,
+      "start": 3720,
+      "end": 3721,
       "loc": {
         "start": {
           "line": 73,
@@ -3271,8 +3271,8 @@
         "binop": null
       },
       "value": "block",
-      "start": 3702,
-      "end": 3707,
+      "start": 3722,
+      "end": 3727,
       "loc": {
         "start": {
           "line": 73,
@@ -3298,8 +3298,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 3708,
-      "end": 3709,
+      "start": 3728,
+      "end": 3729,
       "loc": {
         "start": {
           "line": 73,
@@ -3326,8 +3326,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 3710,
-      "end": 3714,
+      "start": 3730,
+      "end": 3734,
       "loc": {
         "start": {
           "line": 73,
@@ -3351,8 +3351,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3714,
-      "end": 3715,
+      "start": 3734,
+      "end": 3735,
       "loc": {
         "start": {
           "line": 73,
@@ -3376,8 +3376,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3716,
-      "end": 3717,
+      "start": 3736,
+      "end": 3737,
       "loc": {
         "start": {
           "line": 73,
@@ -3401,8 +3401,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3720,
-      "end": 3721,
+      "start": 3740,
+      "end": 3741,
       "loc": {
         "start": {
           "line": 74,
@@ -3416,9 +3416,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Sets a value for the specified shader  variable or attribute name, using subscript syntax.\n   * @access public\n   * @param {?Object} obj - An object containing a new value for the shader symbol.\n   * @param {NSCopying} key - A shader variable or attribute name used in one of the technique’s shader programs.\n   * @returns {void}\n   * @desc The value parameter should be an object appropriate to the type of the shader symbol being set. For example, use an NSNumber object to set the value of a float uniform variable, or use an NSValue object containing an SCNVector3 structure to set the value of a GLSL vec3 uniform variable or a Metal float3 variable.Use this method when you need to set a value infrequently or only once. To update a shader value every time SceneKit renders a frame, use the handleBinding(ofSymbol:using:) method instead.If you use the handleBinding(ofSymbol:using:) method to associate a handler block for a symbol, SceneKit ignores values set for the symbol using the setObject(_:forKeyedSubscript:) method.\n   * @see https://developer.apple.com/reference/scenekit/scntechnique/1520495-setobject\n   ",
-      "start": 3725,
-      "end": 4859,
+      "value": "*\n   * Sets a value for the specified shader  variable or attribute name, using subscript syntax.\n   * @access public\n   * @param {?Object} obj - An object containing a new value for the shader symbol.\n   * @param {NSCopying} key - A shader variable or attribute name used in one of the technique’s shader programs.\n   * @returns {void}\n   * @desc The value parameter should be an object appropriate to the type of the shader symbol being set. For example, use an NSNumber object to set the value of a float uniform variable, or use an NSValue object containing an SCNVector3 structure to set the value of a GLSL vec3 uniform variable or a Metal float3 variable.Use this method when you need to set a value infrequently or only once. To update a shader value every time SceneKit renders a frame, use the handleBinding(ofSymbol:using:) method instead.If you use the handleBinding(ofSymbol:using:) method to associate a handler block for a symbol, SceneKit ignores values set for the symbol using the setObject(_:forKeyedSubscript:) method.\n   * @see https://developer.apple.com/documentation/scenekit/scntechnique/1520495-setobject\n   ",
+      "start": 3745,
+      "end": 4883,
       "loc": {
         "start": {
           "line": 76,
@@ -3443,8 +3443,8 @@
         "binop": null
       },
       "value": "setObjectForKeyedSubscript",
-      "start": 4862,
-      "end": 4888,
+      "start": 4886,
+      "end": 4912,
       "loc": {
         "start": {
           "line": 85,
@@ -3468,8 +3468,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4888,
-      "end": 4889,
+      "start": 4912,
+      "end": 4913,
       "loc": {
         "start": {
           "line": 85,
@@ -3494,8 +3494,8 @@
         "binop": null
       },
       "value": "obj",
-      "start": 4889,
-      "end": 4892,
+      "start": 4913,
+      "end": 4916,
       "loc": {
         "start": {
           "line": 85,
@@ -3520,8 +3520,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4892,
-      "end": 4893,
+      "start": 4916,
+      "end": 4917,
       "loc": {
         "start": {
           "line": 85,
@@ -3546,8 +3546,8 @@
         "binop": null
       },
       "value": "key",
-      "start": 4894,
-      "end": 4897,
+      "start": 4918,
+      "end": 4921,
       "loc": {
         "start": {
           "line": 85,
@@ -3571,8 +3571,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4897,
-      "end": 4898,
+      "start": 4921,
+      "end": 4922,
       "loc": {
         "start": {
           "line": 85,
@@ -3596,8 +3596,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4899,
-      "end": 4900,
+      "start": 4923,
+      "end": 4924,
       "loc": {
         "start": {
           "line": 85,
@@ -3621,8 +3621,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4903,
-      "end": 4904,
+      "start": 4927,
+      "end": 4928,
       "loc": {
         "start": {
           "line": 86,
@@ -3646,8 +3646,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4905,
-      "end": 4906,
+      "start": 4929,
+      "end": 4930,
       "loc": {
         "start": {
           "line": 87,
@@ -3672,8 +3672,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4907,
-      "end": 4907,
+      "start": 4931,
+      "end": 4931,
       "loc": {
         "start": {
           "line": 88,

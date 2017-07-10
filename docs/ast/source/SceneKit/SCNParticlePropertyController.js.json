@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 4912,
+  "end": 4944,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 4912,
+    "end": 4944,
     "loc": {
       "start": {
         "line": 1,
@@ -308,9 +308,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * An animation for a single property of the individual particles rendered by a particle system.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller\n ",
+            "value": "*\n * An animation for a single property of the individual particles rendered by a particle system.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller\n ",
             "start": 203,
-            "end": 433,
+            "end": 437,
             "loc": {
               "start": {
                 "line": 8,
@@ -326,8 +326,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 434,
-        "end": 4911,
+        "start": 438,
+        "end": 4943,
         "loc": {
           "start": {
             "line": 14,
@@ -340,8 +340,8 @@
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 449,
-          "end": 4911,
+          "start": 453,
+          "end": 4943,
           "loc": {
             "start": {
               "line": 14,
@@ -354,8 +354,8 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 455,
-            "end": 484,
+            "start": 459,
+            "end": 488,
             "loc": {
               "start": {
                 "line": 14,
@@ -372,8 +372,8 @@
           },
           "superClass": {
             "type": "Identifier",
-            "start": 493,
-            "end": 501,
+            "start": 497,
+            "end": 505,
             "loc": {
               "start": {
                 "line": 14,
@@ -389,8 +389,8 @@
           },
           "body": {
             "type": "ClassBody",
-            "start": 502,
-            "end": 4911,
+            "start": 506,
+            "end": 4943,
             "loc": {
               "start": {
                 "line": 14,
@@ -404,8 +404,8 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 506,
-                "end": 830,
+                "start": 510,
+                "end": 834,
                 "loc": {
                   "start": {
                     "line": 15,
@@ -419,8 +419,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 517,
-                  "end": 527,
+                  "start": 521,
+                  "end": 531,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -443,8 +443,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 530,
-                  "end": 830,
+                  "start": 534,
+                  "end": 834,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -458,8 +458,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 536,
-                      "end": 826,
+                      "start": 540,
+                      "end": 830,
                       "loc": {
                         "start": {
                           "line": 16,
@@ -472,8 +472,8 @@
                       },
                       "argument": {
                         "type": "ObjectExpression",
-                        "start": 543,
-                        "end": 826,
+                        "start": 547,
+                        "end": 830,
                         "loc": {
                           "start": {
                             "line": 16,
@@ -487,8 +487,8 @@
                         "properties": [
                           {
                             "type": "ObjectProperty",
-                            "start": 551,
-                            "end": 674,
+                            "start": 555,
+                            "end": 678,
                             "loc": {
                               "start": {
                                 "line": 17,
@@ -504,8 +504,8 @@
                             "computed": false,
                             "key": {
                               "type": "Identifier",
-                              "start": 551,
-                              "end": 560,
+                              "start": 555,
+                              "end": 564,
                               "loc": {
                                 "start": {
                                   "line": 17,
@@ -521,8 +521,8 @@
                             },
                             "value": {
                               "type": "ArrayExpression",
-                              "start": 562,
-                              "end": 674,
+                              "start": 566,
+                              "end": 678,
                               "loc": {
                                 "start": {
                                   "line": 17,
@@ -536,8 +536,8 @@
                               "elements": [
                                 {
                                   "type": "StringLiteral",
-                                  "start": 563,
-                                  "end": 584,
+                                  "start": 567,
+                                  "end": 588,
                                   "loc": {
                                     "start": {
                                       "line": 17,
@@ -556,8 +556,8 @@
                                 },
                                 {
                                   "type": "ArrowFunctionExpression",
-                                  "start": 586,
-                                  "end": 673,
+                                  "start": 590,
+                                  "end": 677,
                                   "loc": {
                                     "start": {
                                       "line": 17,
@@ -575,8 +575,8 @@
                                   "params": [
                                     {
                                       "type": "Identifier",
-                                      "start": 587,
-                                      "end": 590,
+                                      "start": 591,
+                                      "end": 594,
                                       "loc": {
                                         "start": {
                                           "line": 17,
@@ -592,8 +592,8 @@
                                     },
                                     {
                                       "type": "Identifier",
-                                      "start": 592,
-                                      "end": 596,
+                                      "start": 596,
+                                      "end": 600,
                                       "loc": {
                                         "start": {
                                           "line": 17,
@@ -610,8 +610,8 @@
                                   ],
                                   "body": {
                                     "type": "BlockStatement",
-                                    "start": 601,
-                                    "end": 673,
+                                    "start": 605,
+                                    "end": 677,
                                     "loc": {
                                       "start": {
                                         "line": 17,
@@ -625,8 +625,8 @@
                                     "body": [
                                       {
                                         "type": "ExpressionStatement",
-                                        "start": 611,
-                                        "end": 665,
+                                        "start": 615,
+                                        "end": 669,
                                         "loc": {
                                           "start": {
                                             "line": 18,
@@ -639,8 +639,8 @@
                                         },
                                         "expression": {
                                           "type": "AssignmentExpression",
-                                          "start": 611,
-                                          "end": 665,
+                                          "start": 615,
+                                          "end": 669,
                                           "loc": {
                                             "start": {
                                               "line": 18,
@@ -654,8 +654,8 @@
                                           "operator": "=",
                                           "left": {
                                             "type": "MemberExpression",
-                                            "start": 611,
-                                            "end": 624,
+                                            "start": 615,
+                                            "end": 628,
                                             "loc": {
                                               "start": {
                                                 "line": 18,
@@ -668,8 +668,8 @@
                                             },
                                             "object": {
                                               "type": "Identifier",
-                                              "start": 611,
-                                              "end": 614,
+                                              "start": 615,
+                                              "end": 618,
                                               "loc": {
                                                 "start": {
                                                   "line": 18,
@@ -685,8 +685,8 @@
                                             },
                                             "property": {
                                               "type": "Identifier",
-                                              "start": 615,
-                                              "end": 624,
+                                              "start": 619,
+                                              "end": 628,
                                               "loc": {
                                                 "start": {
                                                   "line": 18,
@@ -704,8 +704,8 @@
                                           },
                                           "right": {
                                             "type": "CallExpression",
-                                            "start": 627,
-                                            "end": 665,
+                                            "start": 631,
+                                            "end": 669,
                                             "loc": {
                                               "start": {
                                                 "line": 18,
@@ -718,8 +718,8 @@
                                             },
                                             "callee": {
                                               "type": "MemberExpression",
-                                              "start": 627,
-                                              "end": 653,
+                                              "start": 631,
+                                              "end": 657,
                                               "loc": {
                                                 "start": {
                                                   "line": 18,
@@ -732,8 +732,8 @@
                                               },
                                               "object": {
                                                 "type": "Identifier",
-                                                "start": 627,
-                                                "end": 634,
+                                                "start": 631,
+                                                "end": 638,
                                                 "loc": {
                                                   "start": {
                                                     "line": 18,
@@ -749,8 +749,8 @@
                                               },
                                               "property": {
                                                 "type": "Identifier",
-                                                "start": 635,
-                                                "end": 653,
+                                                "start": 639,
+                                                "end": 657,
                                                 "loc": {
                                                   "start": {
                                                     "line": 18,
@@ -769,8 +769,8 @@
                                             "arguments": [
                                               {
                                                 "type": "Identifier",
-                                                "start": 654,
-                                                "end": 658,
+                                                "start": 658,
+                                                "end": 662,
                                                 "loc": {
                                                   "start": {
                                                     "line": 18,
@@ -786,8 +786,8 @@
                                               },
                                               {
                                                 "type": "NullLiteral",
-                                                "start": 660,
-                                                "end": 664,
+                                                "start": 664,
+                                                "end": 668,
                                                 "loc": {
                                                   "start": {
                                                     "line": 18,
@@ -812,8 +812,8 @@
                           },
                           {
                             "type": "ObjectProperty",
-                            "start": 682,
-                            "end": 702,
+                            "start": 686,
+                            "end": 706,
                             "loc": {
                               "start": {
                                 "line": 20,
@@ -829,8 +829,8 @@
                             "computed": false,
                             "key": {
                               "type": "Identifier",
-                              "start": 682,
-                              "end": 691,
+                              "start": 686,
+                              "end": 695,
                               "loc": {
                                 "start": {
                                   "line": 20,
@@ -846,8 +846,8 @@
                             },
                             "value": {
                               "type": "StringLiteral",
-                              "start": 693,
-                              "end": 702,
+                              "start": 697,
+                              "end": 706,
                               "loc": {
                                 "start": {
                                   "line": 20,
@@ -867,8 +867,8 @@
                           },
                           {
                             "type": "ObjectProperty",
-                            "start": 710,
-                            "end": 728,
+                            "start": 714,
+                            "end": 732,
                             "loc": {
                               "start": {
                                 "line": 21,
@@ -884,8 +884,8 @@
                             "computed": false,
                             "key": {
                               "type": "Identifier",
-                              "start": 710,
-                              "end": 719,
+                              "start": 714,
+                              "end": 723,
                               "loc": {
                                 "start": {
                                   "line": 21,
@@ -901,8 +901,8 @@
                             },
                             "value": {
                               "type": "StringLiteral",
-                              "start": 721,
-                              "end": 728,
+                              "start": 725,
+                              "end": 732,
                               "loc": {
                                 "start": {
                                   "line": 21,
@@ -922,8 +922,8 @@
                           },
                           {
                             "type": "ObjectProperty",
-                            "start": 736,
-                            "end": 755,
+                            "start": 740,
+                            "end": 759,
                             "loc": {
                               "start": {
                                 "line": 22,
@@ -939,8 +939,8 @@
                             "computed": false,
                             "key": {
                               "type": "Identifier",
-                              "start": 736,
-                              "end": 746,
+                              "start": 740,
+                              "end": 750,
                               "loc": {
                                 "start": {
                                   "line": 22,
@@ -956,8 +956,8 @@
                             },
                             "value": {
                               "type": "StringLiteral",
-                              "start": 748,
-                              "end": 755,
+                              "start": 752,
+                              "end": 759,
                               "loc": {
                                 "start": {
                                   "line": 22,
@@ -977,8 +977,8 @@
                           },
                           {
                             "type": "ObjectProperty",
-                            "start": 763,
-                            "end": 785,
+                            "start": 767,
+                            "end": 789,
                             "loc": {
                               "start": {
                                 "line": 23,
@@ -994,8 +994,8 @@
                             "computed": false,
                             "key": {
                               "type": "Identifier",
-                              "start": 763,
-                              "end": 774,
+                              "start": 767,
+                              "end": 778,
                               "loc": {
                                 "start": {
                                   "line": 23,
@@ -1011,8 +1011,8 @@
                             },
                             "value": {
                               "type": "StringLiteral",
-                              "start": 776,
-                              "end": 785,
+                              "start": 780,
+                              "end": 789,
                               "loc": {
                                 "start": {
                                   "line": 23,
@@ -1035,8 +1035,8 @@
                               {
                                 "type": "CommentLine",
                                 "value": " inputProperty: 'string' ?",
-                                "start": 792,
-                                "end": 820,
+                                "start": 796,
+                                "end": 824,
                                 "loc": {
                                   "start": {
                                     "line": 24,
@@ -1061,8 +1061,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Creating a Property Controller",
-                    "start": 834,
-                    "end": 867,
+                    "start": 838,
+                    "end": 871,
                     "loc": {
                       "start": {
                         "line": 28,
@@ -1076,9 +1076,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Creates a particle property controller with the specified Core Animation animation.\n   * @access public\n   * @constructor\n   * @param {CAAnimation} animation - A Core Animation object specifying the behavior of the property animation. Must not be nil.You can use different CAAnimation subclasses to animate effects in different ways. For example, a CABasicAnimation instance transitions a property from one value to another, and a CAKeyframeAnimation instance transitions a property through a series of values. You use properties of the animation object to define its timing curve, repeat mode, and other options.SceneKit ignores the keyPath, duration, and repeatCount properties of this animation object.\n   * @desc To set up a particle property animation:Create a CAAnimation object defining how a property of each particle in the system changes over time.Create a particle property controller using the init(animation:) method.Attach the property controller to a particle system using the propertyControllers dictionary, choosing a key listed in Particle Property Keys to identify the particle property it animates.For example, the following code sets up a controller to animate particle sizes:// 1. Create and configure an animation object.\nCAKeyframeAnimation *animation = [CAKeyframeAnimation animation];\nanimation.values = @[ @0.1, @1.0, @3.0, @0.5 ];\n \n// 2. Create a property controller from the animation object.\nSCNParticlePropertyController *controller =\n    [SCNParticlePropertyController controllerWithAnimation:animation];\n \n// 3. Assign the controller to a particle system, associating it with a particle property.\nparticleSystem.propertyControllers = @{ SCNParticlePropertySize: controller };\n// 1. Create and configure an animation object.\nCAKeyframeAnimation *animation = [CAKeyframeAnimation animation];\nanimation.values = @[ @0.1, @1.0, @3.0, @0.5 ];\n \n// 2. Create a property controller from the animation object.\nSCNParticlePropertyController *controller =\n    [SCNParticlePropertyController controllerWithAnimation:animation];\n \n// 3. Assign the controller to a particle system, associating it with a particle property.\nparticleSystem.propertyControllers = @{ SCNParticlePropertySize: controller };\n\n   * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1523579-init\n   ",
-                    "start": 871,
-                    "end": 3209,
+                    "value": "*\n   * Creates a particle property controller with the specified Core Animation animation.\n   * @access public\n   * @constructor\n   * @param {CAAnimation} animation - A Core Animation object specifying the behavior of the property animation. Must not be nil.You can use different CAAnimation subclasses to animate effects in different ways. For example, a CABasicAnimation instance transitions a property from one value to another, and a CAKeyframeAnimation instance transitions a property through a series of values. You use properties of the animation object to define its timing curve, repeat mode, and other options.SceneKit ignores the keyPath, duration, and repeatCount properties of this animation object.\n   * @desc To set up a particle property animation:Create a CAAnimation object defining how a property of each particle in the system changes over time.Create a particle property controller using the init(animation:) method.Attach the property controller to a particle system using the propertyControllers dictionary, choosing a key listed in Particle Property Keys to identify the particle property it animates.For example, the following code sets up a controller to animate particle sizes:// 1. Create and configure an animation object.\nCAKeyframeAnimation *animation = [CAKeyframeAnimation animation];\nanimation.values = @[ @0.1, @1.0, @3.0, @0.5 ];\n \n// 2. Create a property controller from the animation object.\nSCNParticlePropertyController *controller =\n    [SCNParticlePropertyController controllerWithAnimation:animation];\n \n// 3. Assign the controller to a particle system, associating it with a particle property.\nparticleSystem.propertyControllers = @{ SCNParticlePropertySize: controller };\n// 1. Create and configure an animation object.\nCAKeyframeAnimation *animation = [CAKeyframeAnimation animation];\nanimation.values = @[ @0.1, @1.0, @3.0, @0.5 ];\n \n// 2. Create a property controller from the animation object.\nSCNParticlePropertyController *controller =\n    [SCNParticlePropertyController controllerWithAnimation:animation];\n \n// 3. Assign the controller to a particle system, associating it with a particle property.\nparticleSystem.propertyControllers = @{ SCNParticlePropertySize: controller };\n\n   * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1523579-init\n   ",
+                    "start": 875,
+                    "end": 3217,
                     "loc": {
                       "start": {
                         "line": 30,
@@ -1094,8 +1094,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 3212,
-                "end": 4909,
+                "start": 3220,
+                "end": 4941,
                 "loc": {
                   "start": {
                     "line": 58,
@@ -1109,8 +1109,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 3212,
-                  "end": 3223,
+                  "start": 3220,
+                  "end": 3231,
                   "loc": {
                     "start": {
                       "line": 58,
@@ -1134,8 +1134,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 3224,
-                    "end": 3233,
+                    "start": 3232,
+                    "end": 3241,
                     "loc": {
                       "start": {
                         "line": 58,
@@ -1152,8 +1152,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 3235,
-                  "end": 4909,
+                  "start": 3243,
+                  "end": 4941,
                   "loc": {
                     "start": {
                       "line": 58,
@@ -1167,8 +1167,8 @@
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 3241,
-                      "end": 3248,
+                      "start": 3249,
+                      "end": 3256,
                       "loc": {
                         "start": {
                           "line": 59,
@@ -1181,8 +1181,8 @@
                       },
                       "expression": {
                         "type": "CallExpression",
-                        "start": 3241,
-                        "end": 3248,
+                        "start": 3249,
+                        "end": 3256,
                         "loc": {
                           "start": {
                             "line": 59,
@@ -1195,8 +1195,8 @@
                         },
                         "callee": {
                           "type": "Super",
-                          "start": 3241,
-                          "end": 3246,
+                          "start": 3249,
+                          "end": 3254,
                           "loc": {
                             "start": {
                               "line": 59,
@@ -1215,8 +1215,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Managing the Controller’s Animation",
-                          "start": 3254,
-                          "end": 3292,
+                          "start": 3262,
+                          "end": 3300,
                           "loc": {
                             "start": {
                               "line": 61,
@@ -1230,9 +1230,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The Core Animation object defining the behavior of the property animation.\n     * @type {CAAnimation}\n     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1523707-animation\n     ",
-                          "start": 3298,
-                          "end": 3525,
+                          "value": "*\n     * The Core Animation object defining the behavior of the property animation.\n     * @type {CAAnimation}\n     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1523707-animation\n     ",
+                          "start": 3306,
+                          "end": 3537,
                           "loc": {
                             "start": {
                               "line": 63,
@@ -1248,8 +1248,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 3530,
-                      "end": 3556,
+                      "start": 3542,
+                      "end": 3568,
                       "loc": {
                         "start": {
                           "line": 68,
@@ -1262,8 +1262,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 3530,
-                        "end": 3556,
+                        "start": 3542,
+                        "end": 3568,
                         "loc": {
                           "start": {
                             "line": 68,
@@ -1277,8 +1277,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 3530,
-                          "end": 3544,
+                          "start": 3542,
+                          "end": 3556,
                           "loc": {
                             "start": {
                               "line": 68,
@@ -1291,8 +1291,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 3530,
-                            "end": 3534,
+                            "start": 3542,
+                            "end": 3546,
                             "loc": {
                               "start": {
                                 "line": 68,
@@ -1307,8 +1307,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 3535,
-                            "end": 3544,
+                            "start": 3547,
+                            "end": 3556,
                             "loc": {
                               "start": {
                                 "line": 68,
@@ -1327,8 +1327,8 @@
                         },
                         "right": {
                           "type": "Identifier",
-                          "start": 3547,
-                          "end": 3556,
+                          "start": 3559,
+                          "end": 3568,
                           "loc": {
                             "start": {
                               "line": 68,
@@ -1351,8 +1351,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Managing the Controller’s Animation",
-                          "start": 3254,
-                          "end": 3292,
+                          "start": 3262,
+                          "end": 3300,
                           "loc": {
                             "start": {
                               "line": 61,
@@ -1366,9 +1366,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The Core Animation object defining the behavior of the property animation.\n     * @type {CAAnimation}\n     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1523707-animation\n     ",
-                          "start": 3298,
-                          "end": 3525,
+                          "value": "*\n     * The Core Animation object defining the behavior of the property animation.\n     * @type {CAAnimation}\n     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1523707-animation\n     ",
+                          "start": 3306,
+                          "end": 3537,
                           "loc": {
                             "start": {
                               "line": 63,
@@ -1384,9 +1384,9 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The mode that determines input values for the property controller’s animation.\n     * @type {SCNParticleInputMode}\n     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1522852-inputmode\n     ",
-                          "start": 3562,
-                          "end": 3802,
+                          "value": "*\n     * The mode that determines input values for the property controller’s animation.\n     * @type {SCNParticleInputMode}\n     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1522852-inputmode\n     ",
+                          "start": 3574,
+                          "end": 3818,
                           "loc": {
                             "start": {
                               "line": 70,
@@ -1402,8 +1402,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 3807,
-                      "end": 3828,
+                      "start": 3823,
+                      "end": 3844,
                       "loc": {
                         "start": {
                           "line": 75,
@@ -1416,8 +1416,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 3807,
-                        "end": 3828,
+                        "start": 3823,
+                        "end": 3844,
                         "loc": {
                           "start": {
                             "line": 75,
@@ -1431,8 +1431,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 3807,
-                          "end": 3821,
+                          "start": 3823,
+                          "end": 3837,
                           "loc": {
                             "start": {
                               "line": 75,
@@ -1445,8 +1445,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 3807,
-                            "end": 3811,
+                            "start": 3823,
+                            "end": 3827,
                             "loc": {
                               "start": {
                                 "line": 75,
@@ -1461,8 +1461,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 3812,
-                            "end": 3821,
+                            "start": 3828,
+                            "end": 3837,
                             "loc": {
                               "start": {
                                 "line": 75,
@@ -1481,8 +1481,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 3824,
-                          "end": 3828,
+                          "start": 3840,
+                          "end": 3844,
                           "loc": {
                             "start": {
                               "line": 75,
@@ -1502,9 +1502,9 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The mode that determines input values for the property controller’s animation.\n     * @type {SCNParticleInputMode}\n     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1522852-inputmode\n     ",
-                          "start": 3562,
-                          "end": 3802,
+                          "value": "*\n     * The mode that determines input values for the property controller’s animation.\n     * @type {SCNParticleInputMode}\n     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1522852-inputmode\n     ",
+                          "start": 3574,
+                          "end": 3818,
                           "loc": {
                             "start": {
                               "line": 70,
@@ -1520,9 +1520,9 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * An offset to add to the input value of the controller’s animation.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1523994-inputbias\n     ",
-                          "start": 3834,
-                          "end": 4048,
+                          "value": "*\n     * An offset to add to the input value of the controller’s animation.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1523994-inputbias\n     ",
+                          "start": 3850,
+                          "end": 4068,
                           "loc": {
                             "start": {
                               "line": 77,
@@ -1538,8 +1538,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 4053,
-                      "end": 4071,
+                      "start": 4073,
+                      "end": 4091,
                       "loc": {
                         "start": {
                           "line": 82,
@@ -1552,8 +1552,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 4053,
-                        "end": 4071,
+                        "start": 4073,
+                        "end": 4091,
                         "loc": {
                           "start": {
                             "line": 82,
@@ -1567,8 +1567,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 4053,
-                          "end": 4067,
+                          "start": 4073,
+                          "end": 4087,
                           "loc": {
                             "start": {
                               "line": 82,
@@ -1581,8 +1581,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 4053,
-                            "end": 4057,
+                            "start": 4073,
+                            "end": 4077,
                             "loc": {
                               "start": {
                                 "line": 82,
@@ -1597,8 +1597,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 4058,
-                            "end": 4067,
+                            "start": 4078,
+                            "end": 4087,
                             "loc": {
                               "start": {
                                 "line": 82,
@@ -1617,8 +1617,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 4070,
-                          "end": 4071,
+                          "start": 4090,
+                          "end": 4091,
                           "loc": {
                             "start": {
                               "line": 82,
@@ -1643,9 +1643,9 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * An offset to add to the input value of the controller’s animation.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1523994-inputbias\n     ",
-                          "start": 3834,
-                          "end": 4048,
+                          "value": "*\n     * An offset to add to the input value of the controller’s animation.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1523994-inputbias\n     ",
+                          "start": 3850,
+                          "end": 4068,
                           "loc": {
                             "start": {
                               "line": 77,
@@ -1661,9 +1661,9 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * A factor for multiplying the input value of the controller’s animation. \n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1522903-inputscale\n     ",
-                          "start": 4077,
-                          "end": 4298,
+                          "value": "*\n     * A factor for multiplying the input value of the controller’s animation. \n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1522903-inputscale\n     ",
+                          "start": 4097,
+                          "end": 4322,
                           "loc": {
                             "start": {
                               "line": 84,
@@ -1679,8 +1679,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 4303,
-                      "end": 4322,
+                      "start": 4327,
+                      "end": 4346,
                       "loc": {
                         "start": {
                           "line": 89,
@@ -1693,8 +1693,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 4303,
-                        "end": 4322,
+                        "start": 4327,
+                        "end": 4346,
                         "loc": {
                           "start": {
                             "line": 89,
@@ -1708,8 +1708,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 4303,
-                          "end": 4318,
+                          "start": 4327,
+                          "end": 4342,
                           "loc": {
                             "start": {
                               "line": 89,
@@ -1722,8 +1722,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 4303,
-                            "end": 4307,
+                            "start": 4327,
+                            "end": 4331,
                             "loc": {
                               "start": {
                                 "line": 89,
@@ -1738,8 +1738,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 4308,
-                            "end": 4318,
+                            "start": 4332,
+                            "end": 4342,
                             "loc": {
                               "start": {
                                 "line": 89,
@@ -1758,8 +1758,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 4321,
-                          "end": 4322,
+                          "start": 4345,
+                          "end": 4346,
                           "loc": {
                             "start": {
                               "line": 89,
@@ -1784,9 +1784,9 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * A factor for multiplying the input value of the controller’s animation. \n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1522903-inputscale\n     ",
-                          "start": 4077,
-                          "end": 4298,
+                          "value": "*\n     * A factor for multiplying the input value of the controller’s animation. \n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1522903-inputscale\n     ",
+                          "start": 4097,
+                          "end": 4322,
                           "loc": {
                             "start": {
                               "line": 84,
@@ -1802,9 +1802,9 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * A node whose distance to each particle provides input values for the controller’s animation.\n     * @type {?SCNNode}\n     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1522895-inputorigin\n     ",
-                          "start": 4328,
-                          "end": 4572,
+                          "value": "*\n     * A node whose distance to each particle provides input values for the controller’s animation.\n     * @type {?SCNNode}\n     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1522895-inputorigin\n     ",
+                          "start": 4352,
+                          "end": 4600,
                           "loc": {
                             "start": {
                               "line": 91,
@@ -1820,8 +1820,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 4577,
-                      "end": 4600,
+                      "start": 4605,
+                      "end": 4628,
                       "loc": {
                         "start": {
                           "line": 96,
@@ -1834,8 +1834,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 4577,
-                        "end": 4600,
+                        "start": 4605,
+                        "end": 4628,
                         "loc": {
                           "start": {
                             "line": 96,
@@ -1849,8 +1849,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 4577,
-                          "end": 4593,
+                          "start": 4605,
+                          "end": 4621,
                           "loc": {
                             "start": {
                               "line": 96,
@@ -1863,8 +1863,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 4577,
-                            "end": 4581,
+                            "start": 4605,
+                            "end": 4609,
                             "loc": {
                               "start": {
                                 "line": 96,
@@ -1879,8 +1879,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 4582,
-                            "end": 4593,
+                            "start": 4610,
+                            "end": 4621,
                             "loc": {
                               "start": {
                                 "line": 96,
@@ -1899,8 +1899,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 4596,
-                          "end": 4600,
+                          "start": 4624,
+                          "end": 4628,
                           "loc": {
                             "start": {
                               "line": 96,
@@ -1920,9 +1920,9 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * A node whose distance to each particle provides input values for the controller’s animation.\n     * @type {?SCNNode}\n     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1522895-inputorigin\n     ",
-                          "start": 4328,
-                          "end": 4572,
+                          "value": "*\n     * A node whose distance to each particle provides input values for the controller’s animation.\n     * @type {?SCNNode}\n     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1522895-inputorigin\n     ",
+                          "start": 4352,
+                          "end": 4600,
                           "loc": {
                             "start": {
                               "line": 91,
@@ -1938,9 +1938,9 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * A particle property that provides input values for this property controller’s animation.\n     * @type {?SCNParticleSystem.ParticleProperty}\n     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1522973-inputproperty\n     ",
-                          "start": 4606,
-                          "end": 4875,
+                          "value": "*\n     * A particle property that provides input values for this property controller’s animation.\n     * @type {?SCNParticleSystem.ParticleProperty}\n     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1522973-inputproperty\n     ",
+                          "start": 4634,
+                          "end": 4907,
                           "loc": {
                             "start": {
                               "line": 98,
@@ -1956,8 +1956,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 4880,
-                      "end": 4905,
+                      "start": 4912,
+                      "end": 4937,
                       "loc": {
                         "start": {
                           "line": 103,
@@ -1970,8 +1970,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 4880,
-                        "end": 4905,
+                        "start": 4912,
+                        "end": 4937,
                         "loc": {
                           "start": {
                             "line": 103,
@@ -1985,8 +1985,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 4880,
-                          "end": 4898,
+                          "start": 4912,
+                          "end": 4930,
                           "loc": {
                             "start": {
                               "line": 103,
@@ -1999,8 +1999,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 4880,
-                            "end": 4884,
+                            "start": 4912,
+                            "end": 4916,
                             "loc": {
                               "start": {
                                 "line": 103,
@@ -2015,8 +2015,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 4885,
-                            "end": 4898,
+                            "start": 4917,
+                            "end": 4930,
                             "loc": {
                               "start": {
                                 "line": 103,
@@ -2035,8 +2035,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 4901,
-                          "end": 4905,
+                          "start": 4933,
+                          "end": 4937,
                           "loc": {
                             "start": {
                               "line": 103,
@@ -2053,9 +2053,9 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * A particle property that provides input values for this property controller’s animation.\n     * @type {?SCNParticleSystem.ParticleProperty}\n     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1522973-inputproperty\n     ",
-                          "start": 4606,
-                          "end": 4875,
+                          "value": "*\n     * A particle property that provides input values for this property controller’s animation.\n     * @type {?SCNParticleSystem.ParticleProperty}\n     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1522973-inputproperty\n     ",
+                          "start": 4634,
+                          "end": 4907,
                           "loc": {
                             "start": {
                               "line": 98,
@@ -2076,8 +2076,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Creating a Property Controller",
-                    "start": 834,
-                    "end": 867,
+                    "start": 838,
+                    "end": 871,
                     "loc": {
                       "start": {
                         "line": 28,
@@ -2091,9 +2091,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Creates a particle property controller with the specified Core Animation animation.\n   * @access public\n   * @constructor\n   * @param {CAAnimation} animation - A Core Animation object specifying the behavior of the property animation. Must not be nil.You can use different CAAnimation subclasses to animate effects in different ways. For example, a CABasicAnimation instance transitions a property from one value to another, and a CAKeyframeAnimation instance transitions a property through a series of values. You use properties of the animation object to define its timing curve, repeat mode, and other options.SceneKit ignores the keyPath, duration, and repeatCount properties of this animation object.\n   * @desc To set up a particle property animation:Create a CAAnimation object defining how a property of each particle in the system changes over time.Create a particle property controller using the init(animation:) method.Attach the property controller to a particle system using the propertyControllers dictionary, choosing a key listed in Particle Property Keys to identify the particle property it animates.For example, the following code sets up a controller to animate particle sizes:// 1. Create and configure an animation object.\nCAKeyframeAnimation *animation = [CAKeyframeAnimation animation];\nanimation.values = @[ @0.1, @1.0, @3.0, @0.5 ];\n \n// 2. Create a property controller from the animation object.\nSCNParticlePropertyController *controller =\n    [SCNParticlePropertyController controllerWithAnimation:animation];\n \n// 3. Assign the controller to a particle system, associating it with a particle property.\nparticleSystem.propertyControllers = @{ SCNParticlePropertySize: controller };\n// 1. Create and configure an animation object.\nCAKeyframeAnimation *animation = [CAKeyframeAnimation animation];\nanimation.values = @[ @0.1, @1.0, @3.0, @0.5 ];\n \n// 2. Create a property controller from the animation object.\nSCNParticlePropertyController *controller =\n    [SCNParticlePropertyController controllerWithAnimation:animation];\n \n// 3. Assign the controller to a particle system, associating it with a particle property.\nparticleSystem.propertyControllers = @{ SCNParticlePropertySize: controller };\n\n   * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1523579-init\n   ",
-                    "start": 871,
-                    "end": 3209,
+                    "value": "*\n   * Creates a particle property controller with the specified Core Animation animation.\n   * @access public\n   * @constructor\n   * @param {CAAnimation} animation - A Core Animation object specifying the behavior of the property animation. Must not be nil.You can use different CAAnimation subclasses to animate effects in different ways. For example, a CABasicAnimation instance transitions a property from one value to another, and a CAKeyframeAnimation instance transitions a property through a series of values. You use properties of the animation object to define its timing curve, repeat mode, and other options.SceneKit ignores the keyPath, duration, and repeatCount properties of this animation object.\n   * @desc To set up a particle property animation:Create a CAAnimation object defining how a property of each particle in the system changes over time.Create a particle property controller using the init(animation:) method.Attach the property controller to a particle system using the propertyControllers dictionary, choosing a key listed in Particle Property Keys to identify the particle property it animates.For example, the following code sets up a controller to animate particle sizes:// 1. Create and configure an animation object.\nCAKeyframeAnimation *animation = [CAKeyframeAnimation animation];\nanimation.values = @[ @0.1, @1.0, @3.0, @0.5 ];\n \n// 2. Create a property controller from the animation object.\nSCNParticlePropertyController *controller =\n    [SCNParticlePropertyController controllerWithAnimation:animation];\n \n// 3. Assign the controller to a particle system, associating it with a particle property.\nparticleSystem.propertyControllers = @{ SCNParticlePropertySize: controller };\n// 1. Create and configure an animation object.\nCAKeyframeAnimation *animation = [CAKeyframeAnimation animation];\nanimation.values = @[ @0.1, @1.0, @3.0, @0.5 ];\n \n// 2. Create a property controller from the animation object.\nSCNParticlePropertyController *controller =\n    [SCNParticlePropertyController controllerWithAnimation:animation];\n \n// 3. Assign the controller to a particle system, associating it with a particle property.\nparticleSystem.propertyControllers = @{ SCNParticlePropertySize: controller };\n\n   * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1523579-init\n   ",
+                    "start": 875,
+                    "end": 3217,
                     "loc": {
                       "start": {
                         "line": 30,
@@ -2112,9 +2112,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * An animation for a single property of the individual particles rendered by a particle system.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller\n ",
+              "value": "*\n * An animation for a single property of the individual particles rendered by a particle system.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller\n ",
               "start": 203,
-              "end": 433,
+              "end": 437,
               "loc": {
                 "start": {
                   "line": 8,
@@ -2132,9 +2132,9 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * An animation for a single property of the individual particles rendered by a particle system.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller\n ",
+            "value": "*\n * An animation for a single property of the individual particles rendered by a particle system.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller\n ",
             "start": 203,
-            "end": 433,
+            "end": 437,
             "loc": {
               "start": {
                 "line": 8,
@@ -2190,9 +2190,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * An animation for a single property of the individual particles rendered by a particle system.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller\n ",
+      "value": "*\n * An animation for a single property of the individual particles rendered by a particle system.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller\n ",
       "start": 203,
-      "end": 433,
+      "end": 437,
       "loc": {
         "start": {
           "line": 8,
@@ -2207,8 +2207,8 @@
     {
       "type": "CommentLine",
       "value": " inputProperty: 'string' ?",
-      "start": 792,
-      "end": 820,
+      "start": 796,
+      "end": 824,
       "loc": {
         "start": {
           "line": 24,
@@ -2223,8 +2223,8 @@
     {
       "type": "CommentLine",
       "value": " Creating a Property Controller",
-      "start": 834,
-      "end": 867,
+      "start": 838,
+      "end": 871,
       "loc": {
         "start": {
           "line": 28,
@@ -2238,9 +2238,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Creates a particle property controller with the specified Core Animation animation.\n   * @access public\n   * @constructor\n   * @param {CAAnimation} animation - A Core Animation object specifying the behavior of the property animation. Must not be nil.You can use different CAAnimation subclasses to animate effects in different ways. For example, a CABasicAnimation instance transitions a property from one value to another, and a CAKeyframeAnimation instance transitions a property through a series of values. You use properties of the animation object to define its timing curve, repeat mode, and other options.SceneKit ignores the keyPath, duration, and repeatCount properties of this animation object.\n   * @desc To set up a particle property animation:Create a CAAnimation object defining how a property of each particle in the system changes over time.Create a particle property controller using the init(animation:) method.Attach the property controller to a particle system using the propertyControllers dictionary, choosing a key listed in Particle Property Keys to identify the particle property it animates.For example, the following code sets up a controller to animate particle sizes:// 1. Create and configure an animation object.\nCAKeyframeAnimation *animation = [CAKeyframeAnimation animation];\nanimation.values = @[ @0.1, @1.0, @3.0, @0.5 ];\n \n// 2. Create a property controller from the animation object.\nSCNParticlePropertyController *controller =\n    [SCNParticlePropertyController controllerWithAnimation:animation];\n \n// 3. Assign the controller to a particle system, associating it with a particle property.\nparticleSystem.propertyControllers = @{ SCNParticlePropertySize: controller };\n// 1. Create and configure an animation object.\nCAKeyframeAnimation *animation = [CAKeyframeAnimation animation];\nanimation.values = @[ @0.1, @1.0, @3.0, @0.5 ];\n \n// 2. Create a property controller from the animation object.\nSCNParticlePropertyController *controller =\n    [SCNParticlePropertyController controllerWithAnimation:animation];\n \n// 3. Assign the controller to a particle system, associating it with a particle property.\nparticleSystem.propertyControllers = @{ SCNParticlePropertySize: controller };\n\n   * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1523579-init\n   ",
-      "start": 871,
-      "end": 3209,
+      "value": "*\n   * Creates a particle property controller with the specified Core Animation animation.\n   * @access public\n   * @constructor\n   * @param {CAAnimation} animation - A Core Animation object specifying the behavior of the property animation. Must not be nil.You can use different CAAnimation subclasses to animate effects in different ways. For example, a CABasicAnimation instance transitions a property from one value to another, and a CAKeyframeAnimation instance transitions a property through a series of values. You use properties of the animation object to define its timing curve, repeat mode, and other options.SceneKit ignores the keyPath, duration, and repeatCount properties of this animation object.\n   * @desc To set up a particle property animation:Create a CAAnimation object defining how a property of each particle in the system changes over time.Create a particle property controller using the init(animation:) method.Attach the property controller to a particle system using the propertyControllers dictionary, choosing a key listed in Particle Property Keys to identify the particle property it animates.For example, the following code sets up a controller to animate particle sizes:// 1. Create and configure an animation object.\nCAKeyframeAnimation *animation = [CAKeyframeAnimation animation];\nanimation.values = @[ @0.1, @1.0, @3.0, @0.5 ];\n \n// 2. Create a property controller from the animation object.\nSCNParticlePropertyController *controller =\n    [SCNParticlePropertyController controllerWithAnimation:animation];\n \n// 3. Assign the controller to a particle system, associating it with a particle property.\nparticleSystem.propertyControllers = @{ SCNParticlePropertySize: controller };\n// 1. Create and configure an animation object.\nCAKeyframeAnimation *animation = [CAKeyframeAnimation animation];\nanimation.values = @[ @0.1, @1.0, @3.0, @0.5 ];\n \n// 2. Create a property controller from the animation object.\nSCNParticlePropertyController *controller =\n    [SCNParticlePropertyController controllerWithAnimation:animation];\n \n// 3. Assign the controller to a particle system, associating it with a particle property.\nparticleSystem.propertyControllers = @{ SCNParticlePropertySize: controller };\n\n   * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1523579-init\n   ",
+      "start": 875,
+      "end": 3217,
       "loc": {
         "start": {
           "line": 30,
@@ -2255,8 +2255,8 @@
     {
       "type": "CommentLine",
       "value": " Managing the Controller’s Animation",
-      "start": 3254,
-      "end": 3292,
+      "start": 3262,
+      "end": 3300,
       "loc": {
         "start": {
           "line": 61,
@@ -2270,9 +2270,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The Core Animation object defining the behavior of the property animation.\n     * @type {CAAnimation}\n     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1523707-animation\n     ",
-      "start": 3298,
-      "end": 3525,
+      "value": "*\n     * The Core Animation object defining the behavior of the property animation.\n     * @type {CAAnimation}\n     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1523707-animation\n     ",
+      "start": 3306,
+      "end": 3537,
       "loc": {
         "start": {
           "line": 63,
@@ -2286,9 +2286,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The mode that determines input values for the property controller’s animation.\n     * @type {SCNParticleInputMode}\n     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1522852-inputmode\n     ",
-      "start": 3562,
-      "end": 3802,
+      "value": "*\n     * The mode that determines input values for the property controller’s animation.\n     * @type {SCNParticleInputMode}\n     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1522852-inputmode\n     ",
+      "start": 3574,
+      "end": 3818,
       "loc": {
         "start": {
           "line": 70,
@@ -2302,9 +2302,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * An offset to add to the input value of the controller’s animation.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1523994-inputbias\n     ",
-      "start": 3834,
-      "end": 4048,
+      "value": "*\n     * An offset to add to the input value of the controller’s animation.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1523994-inputbias\n     ",
+      "start": 3850,
+      "end": 4068,
       "loc": {
         "start": {
           "line": 77,
@@ -2318,9 +2318,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * A factor for multiplying the input value of the controller’s animation. \n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1522903-inputscale\n     ",
-      "start": 4077,
-      "end": 4298,
+      "value": "*\n     * A factor for multiplying the input value of the controller’s animation. \n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1522903-inputscale\n     ",
+      "start": 4097,
+      "end": 4322,
       "loc": {
         "start": {
           "line": 84,
@@ -2334,9 +2334,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * A node whose distance to each particle provides input values for the controller’s animation.\n     * @type {?SCNNode}\n     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1522895-inputorigin\n     ",
-      "start": 4328,
-      "end": 4572,
+      "value": "*\n     * A node whose distance to each particle provides input values for the controller’s animation.\n     * @type {?SCNNode}\n     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1522895-inputorigin\n     ",
+      "start": 4352,
+      "end": 4600,
       "loc": {
         "start": {
           "line": 91,
@@ -2350,9 +2350,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * A particle property that provides input values for this property controller’s animation.\n     * @type {?SCNParticleSystem.ParticleProperty}\n     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1522973-inputproperty\n     ",
-      "start": 4606,
-      "end": 4875,
+      "value": "*\n     * A particle property that provides input values for this property controller’s animation.\n     * @type {?SCNParticleSystem.ParticleProperty}\n     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1522973-inputproperty\n     ",
+      "start": 4634,
+      "end": 4907,
       "loc": {
         "start": {
           "line": 98,
@@ -2823,9 +2823,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * An animation for a single property of the individual particles rendered by a particle system.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller\n ",
+      "value": "*\n * An animation for a single property of the individual particles rendered by a particle system.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller\n ",
       "start": 203,
-      "end": 433,
+      "end": 437,
       "loc": {
         "start": {
           "line": 8,
@@ -2852,8 +2852,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 434,
-      "end": 440,
+      "start": 438,
+      "end": 444,
       "loc": {
         "start": {
           "line": 14,
@@ -2880,8 +2880,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 441,
-      "end": 448,
+      "start": 445,
+      "end": 452,
       "loc": {
         "start": {
           "line": 14,
@@ -2908,8 +2908,8 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 449,
-      "end": 454,
+      "start": 453,
+      "end": 458,
       "loc": {
         "start": {
           "line": 14,
@@ -2934,8 +2934,8 @@
         "binop": null
       },
       "value": "SCNParticlePropertyController",
-      "start": 455,
-      "end": 484,
+      "start": 459,
+      "end": 488,
       "loc": {
         "start": {
           "line": 14,
@@ -2962,8 +2962,8 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 485,
-      "end": 492,
+      "start": 489,
+      "end": 496,
       "loc": {
         "start": {
           "line": 14,
@@ -2988,8 +2988,8 @@
         "binop": null
       },
       "value": "NSObject",
-      "start": 493,
-      "end": 501,
+      "start": 497,
+      "end": 505,
       "loc": {
         "start": {
           "line": 14,
@@ -3013,8 +3013,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 502,
-      "end": 503,
+      "start": 506,
+      "end": 507,
       "loc": {
         "start": {
           "line": 14,
@@ -3039,8 +3039,8 @@
         "binop": null
       },
       "value": "static",
-      "start": 506,
-      "end": 512,
+      "start": 510,
+      "end": 516,
       "loc": {
         "start": {
           "line": 15,
@@ -3065,8 +3065,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 513,
-      "end": 516,
+      "start": 517,
+      "end": 520,
       "loc": {
         "start": {
           "line": 15,
@@ -3091,8 +3091,8 @@
         "binop": null
       },
       "value": "_propTypes",
-      "start": 517,
-      "end": 527,
+      "start": 521,
+      "end": 531,
       "loc": {
         "start": {
           "line": 15,
@@ -3116,8 +3116,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 527,
-      "end": 528,
+      "start": 531,
+      "end": 532,
       "loc": {
         "start": {
           "line": 15,
@@ -3141,8 +3141,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 528,
-      "end": 529,
+      "start": 532,
+      "end": 533,
       "loc": {
         "start": {
           "line": 15,
@@ -3166,8 +3166,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 530,
-      "end": 531,
+      "start": 534,
+      "end": 535,
       "loc": {
         "start": {
           "line": 15,
@@ -3194,8 +3194,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 536,
-      "end": 542,
+      "start": 540,
+      "end": 546,
       "loc": {
         "start": {
           "line": 16,
@@ -3219,8 +3219,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 543,
-      "end": 544,
+      "start": 547,
+      "end": 548,
       "loc": {
         "start": {
           "line": 16,
@@ -3245,8 +3245,8 @@
         "binop": null
       },
       "value": "animation",
-      "start": 551,
-      "end": 560,
+      "start": 555,
+      "end": 564,
       "loc": {
         "start": {
           "line": 17,
@@ -3271,8 +3271,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 560,
-      "end": 561,
+      "start": 564,
+      "end": 565,
       "loc": {
         "start": {
           "line": 17,
@@ -3297,8 +3297,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 562,
-      "end": 563,
+      "start": 566,
+      "end": 567,
       "loc": {
         "start": {
           "line": 17,
@@ -3324,8 +3324,8 @@
         "updateContext": null
       },
       "value": "NSMutableDictionary",
-      "start": 563,
-      "end": 584,
+      "start": 567,
+      "end": 588,
       "loc": {
         "start": {
           "line": 17,
@@ -3350,8 +3350,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 584,
-      "end": 585,
+      "start": 588,
+      "end": 589,
       "loc": {
         "start": {
           "line": 17,
@@ -3375,8 +3375,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 586,
-      "end": 587,
+      "start": 590,
+      "end": 591,
       "loc": {
         "start": {
           "line": 17,
@@ -3401,8 +3401,8 @@
         "binop": null
       },
       "value": "obj",
-      "start": 587,
-      "end": 590,
+      "start": 591,
+      "end": 594,
       "loc": {
         "start": {
           "line": 17,
@@ -3427,8 +3427,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 590,
-      "end": 591,
+      "start": 594,
+      "end": 595,
       "loc": {
         "start": {
           "line": 17,
@@ -3453,8 +3453,8 @@
         "binop": null
       },
       "value": "anim",
-      "start": 592,
-      "end": 596,
+      "start": 596,
+      "end": 600,
       "loc": {
         "start": {
           "line": 17,
@@ -3478,8 +3478,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 596,
-      "end": 597,
+      "start": 600,
+      "end": 601,
       "loc": {
         "start": {
           "line": 17,
@@ -3504,8 +3504,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 598,
-      "end": 600,
+      "start": 602,
+      "end": 604,
       "loc": {
         "start": {
           "line": 17,
@@ -3529,8 +3529,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 601,
-      "end": 602,
+      "start": 605,
+      "end": 606,
       "loc": {
         "start": {
           "line": 17,
@@ -3555,8 +3555,8 @@
         "binop": null
       },
       "value": "obj",
-      "start": 611,
-      "end": 614,
+      "start": 615,
+      "end": 618,
       "loc": {
         "start": {
           "line": 18,
@@ -3581,8 +3581,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 614,
-      "end": 615,
+      "start": 618,
+      "end": 619,
       "loc": {
         "start": {
           "line": 18,
@@ -3607,8 +3607,8 @@
         "binop": null
       },
       "value": "animation",
-      "start": 615,
-      "end": 624,
+      "start": 619,
+      "end": 628,
       "loc": {
         "start": {
           "line": 18,
@@ -3634,8 +3634,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 625,
-      "end": 626,
+      "start": 629,
+      "end": 630,
       "loc": {
         "start": {
           "line": 18,
@@ -3660,8 +3660,8 @@
         "binop": null
       },
       "value": "SCNNode",
-      "start": 627,
-      "end": 634,
+      "start": 631,
+      "end": 638,
       "loc": {
         "start": {
           "line": 18,
@@ -3686,8 +3686,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 634,
-      "end": 635,
+      "start": 638,
+      "end": 639,
       "loc": {
         "start": {
           "line": 18,
@@ -3712,8 +3712,8 @@
         "binop": null
       },
       "value": "_loadAnimationData",
-      "start": 635,
-      "end": 653,
+      "start": 639,
+      "end": 657,
       "loc": {
         "start": {
           "line": 18,
@@ -3737,8 +3737,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 653,
-      "end": 654,
+      "start": 657,
+      "end": 658,
       "loc": {
         "start": {
           "line": 18,
@@ -3763,8 +3763,8 @@
         "binop": null
       },
       "value": "anim",
-      "start": 654,
-      "end": 658,
+      "start": 658,
+      "end": 662,
       "loc": {
         "start": {
           "line": 18,
@@ -3789,8 +3789,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 658,
-      "end": 659,
+      "start": 662,
+      "end": 663,
       "loc": {
         "start": {
           "line": 18,
@@ -3817,8 +3817,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 660,
-      "end": 664,
+      "start": 664,
+      "end": 668,
       "loc": {
         "start": {
           "line": 18,
@@ -3842,8 +3842,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 664,
-      "end": 665,
+      "start": 668,
+      "end": 669,
       "loc": {
         "start": {
           "line": 18,
@@ -3867,8 +3867,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 672,
-      "end": 673,
+      "start": 676,
+      "end": 677,
       "loc": {
         "start": {
           "line": 19,
@@ -3893,8 +3893,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 673,
-      "end": 674,
+      "start": 677,
+      "end": 678,
       "loc": {
         "start": {
           "line": 19,
@@ -3919,8 +3919,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 674,
-      "end": 675,
+      "start": 678,
+      "end": 679,
       "loc": {
         "start": {
           "line": 19,
@@ -3945,8 +3945,8 @@
         "binop": null
       },
       "value": "inputMode",
-      "start": 682,
-      "end": 691,
+      "start": 686,
+      "end": 695,
       "loc": {
         "start": {
           "line": 20,
@@ -3971,8 +3971,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 691,
-      "end": 692,
+      "start": 695,
+      "end": 696,
       "loc": {
         "start": {
           "line": 20,
@@ -3998,8 +3998,8 @@
         "updateContext": null
       },
       "value": "integer",
-      "start": 693,
-      "end": 702,
+      "start": 697,
+      "end": 706,
       "loc": {
         "start": {
           "line": 20,
@@ -4024,8 +4024,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 702,
-      "end": 703,
+      "start": 706,
+      "end": 707,
       "loc": {
         "start": {
           "line": 20,
@@ -4050,8 +4050,8 @@
         "binop": null
       },
       "value": "inputBias",
-      "start": 710,
-      "end": 719,
+      "start": 714,
+      "end": 723,
       "loc": {
         "start": {
           "line": 21,
@@ -4076,8 +4076,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 719,
-      "end": 720,
+      "start": 723,
+      "end": 724,
       "loc": {
         "start": {
           "line": 21,
@@ -4103,8 +4103,8 @@
         "updateContext": null
       },
       "value": "float",
-      "start": 721,
-      "end": 728,
+      "start": 725,
+      "end": 732,
       "loc": {
         "start": {
           "line": 21,
@@ -4129,8 +4129,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 728,
-      "end": 729,
+      "start": 732,
+      "end": 733,
       "loc": {
         "start": {
           "line": 21,
@@ -4155,8 +4155,8 @@
         "binop": null
       },
       "value": "inputScale",
-      "start": 736,
-      "end": 746,
+      "start": 740,
+      "end": 750,
       "loc": {
         "start": {
           "line": 22,
@@ -4181,8 +4181,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 746,
-      "end": 747,
+      "start": 750,
+      "end": 751,
       "loc": {
         "start": {
           "line": 22,
@@ -4208,8 +4208,8 @@
         "updateContext": null
       },
       "value": "float",
-      "start": 748,
-      "end": 755,
+      "start": 752,
+      "end": 759,
       "loc": {
         "start": {
           "line": 22,
@@ -4234,8 +4234,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 755,
-      "end": 756,
+      "start": 759,
+      "end": 760,
       "loc": {
         "start": {
           "line": 22,
@@ -4260,8 +4260,8 @@
         "binop": null
       },
       "value": "inputOrigin",
-      "start": 763,
-      "end": 774,
+      "start": 767,
+      "end": 778,
       "loc": {
         "start": {
           "line": 23,
@@ -4286,8 +4286,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 774,
-      "end": 775,
+      "start": 778,
+      "end": 779,
       "loc": {
         "start": {
           "line": 23,
@@ -4313,8 +4313,8 @@
         "updateContext": null
       },
       "value": "SCNNode",
-      "start": 776,
-      "end": 785,
+      "start": 780,
+      "end": 789,
       "loc": {
         "start": {
           "line": 23,
@@ -4329,8 +4329,8 @@
     {
       "type": "CommentLine",
       "value": " inputProperty: 'string' ?",
-      "start": 792,
-      "end": 820,
+      "start": 796,
+      "end": 824,
       "loc": {
         "start": {
           "line": 24,
@@ -4354,8 +4354,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 825,
-      "end": 826,
+      "start": 829,
+      "end": 830,
       "loc": {
         "start": {
           "line": 25,
@@ -4379,8 +4379,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 829,
-      "end": 830,
+      "start": 833,
+      "end": 834,
       "loc": {
         "start": {
           "line": 26,
@@ -4395,8 +4395,8 @@
     {
       "type": "CommentLine",
       "value": " Creating a Property Controller",
-      "start": 834,
-      "end": 867,
+      "start": 838,
+      "end": 871,
       "loc": {
         "start": {
           "line": 28,
@@ -4410,9 +4410,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Creates a particle property controller with the specified Core Animation animation.\n   * @access public\n   * @constructor\n   * @param {CAAnimation} animation - A Core Animation object specifying the behavior of the property animation. Must not be nil.You can use different CAAnimation subclasses to animate effects in different ways. For example, a CABasicAnimation instance transitions a property from one value to another, and a CAKeyframeAnimation instance transitions a property through a series of values. You use properties of the animation object to define its timing curve, repeat mode, and other options.SceneKit ignores the keyPath, duration, and repeatCount properties of this animation object.\n   * @desc To set up a particle property animation:Create a CAAnimation object defining how a property of each particle in the system changes over time.Create a particle property controller using the init(animation:) method.Attach the property controller to a particle system using the propertyControllers dictionary, choosing a key listed in Particle Property Keys to identify the particle property it animates.For example, the following code sets up a controller to animate particle sizes:// 1. Create and configure an animation object.\nCAKeyframeAnimation *animation = [CAKeyframeAnimation animation];\nanimation.values = @[ @0.1, @1.0, @3.0, @0.5 ];\n \n// 2. Create a property controller from the animation object.\nSCNParticlePropertyController *controller =\n    [SCNParticlePropertyController controllerWithAnimation:animation];\n \n// 3. Assign the controller to a particle system, associating it with a particle property.\nparticleSystem.propertyControllers = @{ SCNParticlePropertySize: controller };\n// 1. Create and configure an animation object.\nCAKeyframeAnimation *animation = [CAKeyframeAnimation animation];\nanimation.values = @[ @0.1, @1.0, @3.0, @0.5 ];\n \n// 2. Create a property controller from the animation object.\nSCNParticlePropertyController *controller =\n    [SCNParticlePropertyController controllerWithAnimation:animation];\n \n// 3. Assign the controller to a particle system, associating it with a particle property.\nparticleSystem.propertyControllers = @{ SCNParticlePropertySize: controller };\n\n   * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1523579-init\n   ",
-      "start": 871,
-      "end": 3209,
+      "value": "*\n   * Creates a particle property controller with the specified Core Animation animation.\n   * @access public\n   * @constructor\n   * @param {CAAnimation} animation - A Core Animation object specifying the behavior of the property animation. Must not be nil.You can use different CAAnimation subclasses to animate effects in different ways. For example, a CABasicAnimation instance transitions a property from one value to another, and a CAKeyframeAnimation instance transitions a property through a series of values. You use properties of the animation object to define its timing curve, repeat mode, and other options.SceneKit ignores the keyPath, duration, and repeatCount properties of this animation object.\n   * @desc To set up a particle property animation:Create a CAAnimation object defining how a property of each particle in the system changes over time.Create a particle property controller using the init(animation:) method.Attach the property controller to a particle system using the propertyControllers dictionary, choosing a key listed in Particle Property Keys to identify the particle property it animates.For example, the following code sets up a controller to animate particle sizes:// 1. Create and configure an animation object.\nCAKeyframeAnimation *animation = [CAKeyframeAnimation animation];\nanimation.values = @[ @0.1, @1.0, @3.0, @0.5 ];\n \n// 2. Create a property controller from the animation object.\nSCNParticlePropertyController *controller =\n    [SCNParticlePropertyController controllerWithAnimation:animation];\n \n// 3. Assign the controller to a particle system, associating it with a particle property.\nparticleSystem.propertyControllers = @{ SCNParticlePropertySize: controller };\n// 1. Create and configure an animation object.\nCAKeyframeAnimation *animation = [CAKeyframeAnimation animation];\nanimation.values = @[ @0.1, @1.0, @3.0, @0.5 ];\n \n// 2. Create a property controller from the animation object.\nSCNParticlePropertyController *controller =\n    [SCNParticlePropertyController controllerWithAnimation:animation];\n \n// 3. Assign the controller to a particle system, associating it with a particle property.\nparticleSystem.propertyControllers = @{ SCNParticlePropertySize: controller };\n\n   * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1523579-init\n   ",
+      "start": 875,
+      "end": 3217,
       "loc": {
         "start": {
           "line": 30,
@@ -4437,8 +4437,8 @@
         "binop": null
       },
       "value": "constructor",
-      "start": 3212,
-      "end": 3223,
+      "start": 3220,
+      "end": 3231,
       "loc": {
         "start": {
           "line": 58,
@@ -4462,8 +4462,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3223,
-      "end": 3224,
+      "start": 3231,
+      "end": 3232,
       "loc": {
         "start": {
           "line": 58,
@@ -4488,8 +4488,8 @@
         "binop": null
       },
       "value": "animation",
-      "start": 3224,
-      "end": 3233,
+      "start": 3232,
+      "end": 3241,
       "loc": {
         "start": {
           "line": 58,
@@ -4513,8 +4513,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3233,
-      "end": 3234,
+      "start": 3241,
+      "end": 3242,
       "loc": {
         "start": {
           "line": 58,
@@ -4538,8 +4538,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3235,
-      "end": 3236,
+      "start": 3243,
+      "end": 3244,
       "loc": {
         "start": {
           "line": 58,
@@ -4566,8 +4566,8 @@
         "updateContext": null
       },
       "value": "super",
-      "start": 3241,
-      "end": 3246,
+      "start": 3249,
+      "end": 3254,
       "loc": {
         "start": {
           "line": 59,
@@ -4591,8 +4591,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3246,
-      "end": 3247,
+      "start": 3254,
+      "end": 3255,
       "loc": {
         "start": {
           "line": 59,
@@ -4616,8 +4616,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3247,
-      "end": 3248,
+      "start": 3255,
+      "end": 3256,
       "loc": {
         "start": {
           "line": 59,
@@ -4632,8 +4632,8 @@
     {
       "type": "CommentLine",
       "value": " Managing the Controller’s Animation",
-      "start": 3254,
-      "end": 3292,
+      "start": 3262,
+      "end": 3300,
       "loc": {
         "start": {
           "line": 61,
@@ -4647,9 +4647,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The Core Animation object defining the behavior of the property animation.\n     * @type {CAAnimation}\n     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1523707-animation\n     ",
-      "start": 3298,
-      "end": 3525,
+      "value": "*\n     * The Core Animation object defining the behavior of the property animation.\n     * @type {CAAnimation}\n     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1523707-animation\n     ",
+      "start": 3306,
+      "end": 3537,
       "loc": {
         "start": {
           "line": 63,
@@ -4676,8 +4676,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3530,
-      "end": 3534,
+      "start": 3542,
+      "end": 3546,
       "loc": {
         "start": {
           "line": 68,
@@ -4702,8 +4702,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3534,
-      "end": 3535,
+      "start": 3546,
+      "end": 3547,
       "loc": {
         "start": {
           "line": 68,
@@ -4728,8 +4728,8 @@
         "binop": null
       },
       "value": "animation",
-      "start": 3535,
-      "end": 3544,
+      "start": 3547,
+      "end": 3556,
       "loc": {
         "start": {
           "line": 68,
@@ -4755,8 +4755,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 3545,
-      "end": 3546,
+      "start": 3557,
+      "end": 3558,
       "loc": {
         "start": {
           "line": 68,
@@ -4781,8 +4781,8 @@
         "binop": null
       },
       "value": "animation",
-      "start": 3547,
-      "end": 3556,
+      "start": 3559,
+      "end": 3568,
       "loc": {
         "start": {
           "line": 68,
@@ -4796,9 +4796,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The mode that determines input values for the property controller’s animation.\n     * @type {SCNParticleInputMode}\n     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1522852-inputmode\n     ",
-      "start": 3562,
-      "end": 3802,
+      "value": "*\n     * The mode that determines input values for the property controller’s animation.\n     * @type {SCNParticleInputMode}\n     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1522852-inputmode\n     ",
+      "start": 3574,
+      "end": 3818,
       "loc": {
         "start": {
           "line": 70,
@@ -4825,8 +4825,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3807,
-      "end": 3811,
+      "start": 3823,
+      "end": 3827,
       "loc": {
         "start": {
           "line": 75,
@@ -4851,8 +4851,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3811,
-      "end": 3812,
+      "start": 3827,
+      "end": 3828,
       "loc": {
         "start": {
           "line": 75,
@@ -4877,8 +4877,8 @@
         "binop": null
       },
       "value": "inputMode",
-      "start": 3812,
-      "end": 3821,
+      "start": 3828,
+      "end": 3837,
       "loc": {
         "start": {
           "line": 75,
@@ -4904,8 +4904,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 3822,
-      "end": 3823,
+      "start": 3838,
+      "end": 3839,
       "loc": {
         "start": {
           "line": 75,
@@ -4932,8 +4932,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 3824,
-      "end": 3828,
+      "start": 3840,
+      "end": 3844,
       "loc": {
         "start": {
           "line": 75,
@@ -4947,9 +4947,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * An offset to add to the input value of the controller’s animation.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1523994-inputbias\n     ",
-      "start": 3834,
-      "end": 4048,
+      "value": "*\n     * An offset to add to the input value of the controller’s animation.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1523994-inputbias\n     ",
+      "start": 3850,
+      "end": 4068,
       "loc": {
         "start": {
           "line": 77,
@@ -4976,8 +4976,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 4053,
-      "end": 4057,
+      "start": 4073,
+      "end": 4077,
       "loc": {
         "start": {
           "line": 82,
@@ -5002,8 +5002,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4057,
-      "end": 4058,
+      "start": 4077,
+      "end": 4078,
       "loc": {
         "start": {
           "line": 82,
@@ -5028,8 +5028,8 @@
         "binop": null
       },
       "value": "inputBias",
-      "start": 4058,
-      "end": 4067,
+      "start": 4078,
+      "end": 4087,
       "loc": {
         "start": {
           "line": 82,
@@ -5055,8 +5055,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 4068,
-      "end": 4069,
+      "start": 4088,
+      "end": 4089,
       "loc": {
         "start": {
           "line": 82,
@@ -5082,8 +5082,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 4070,
-      "end": 4071,
+      "start": 4090,
+      "end": 4091,
       "loc": {
         "start": {
           "line": 82,
@@ -5097,9 +5097,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * A factor for multiplying the input value of the controller’s animation. \n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1522903-inputscale\n     ",
-      "start": 4077,
-      "end": 4298,
+      "value": "*\n     * A factor for multiplying the input value of the controller’s animation. \n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1522903-inputscale\n     ",
+      "start": 4097,
+      "end": 4322,
       "loc": {
         "start": {
           "line": 84,
@@ -5126,8 +5126,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 4303,
-      "end": 4307,
+      "start": 4327,
+      "end": 4331,
       "loc": {
         "start": {
           "line": 89,
@@ -5152,8 +5152,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4307,
-      "end": 4308,
+      "start": 4331,
+      "end": 4332,
       "loc": {
         "start": {
           "line": 89,
@@ -5178,8 +5178,8 @@
         "binop": null
       },
       "value": "inputScale",
-      "start": 4308,
-      "end": 4318,
+      "start": 4332,
+      "end": 4342,
       "loc": {
         "start": {
           "line": 89,
@@ -5205,8 +5205,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 4319,
-      "end": 4320,
+      "start": 4343,
+      "end": 4344,
       "loc": {
         "start": {
           "line": 89,
@@ -5232,8 +5232,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 4321,
-      "end": 4322,
+      "start": 4345,
+      "end": 4346,
       "loc": {
         "start": {
           "line": 89,
@@ -5247,9 +5247,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * A node whose distance to each particle provides input values for the controller’s animation.\n     * @type {?SCNNode}\n     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1522895-inputorigin\n     ",
-      "start": 4328,
-      "end": 4572,
+      "value": "*\n     * A node whose distance to each particle provides input values for the controller’s animation.\n     * @type {?SCNNode}\n     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1522895-inputorigin\n     ",
+      "start": 4352,
+      "end": 4600,
       "loc": {
         "start": {
           "line": 91,
@@ -5276,8 +5276,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 4577,
-      "end": 4581,
+      "start": 4605,
+      "end": 4609,
       "loc": {
         "start": {
           "line": 96,
@@ -5302,8 +5302,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4581,
-      "end": 4582,
+      "start": 4609,
+      "end": 4610,
       "loc": {
         "start": {
           "line": 96,
@@ -5328,8 +5328,8 @@
         "binop": null
       },
       "value": "inputOrigin",
-      "start": 4582,
-      "end": 4593,
+      "start": 4610,
+      "end": 4621,
       "loc": {
         "start": {
           "line": 96,
@@ -5355,8 +5355,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 4594,
-      "end": 4595,
+      "start": 4622,
+      "end": 4623,
       "loc": {
         "start": {
           "line": 96,
@@ -5383,8 +5383,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 4596,
-      "end": 4600,
+      "start": 4624,
+      "end": 4628,
       "loc": {
         "start": {
           "line": 96,
@@ -5398,9 +5398,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * A particle property that provides input values for this property controller’s animation.\n     * @type {?SCNParticleSystem.ParticleProperty}\n     * @see https://developer.apple.com/reference/scenekit/scnparticlepropertycontroller/1522973-inputproperty\n     ",
-      "start": 4606,
-      "end": 4875,
+      "value": "*\n     * A particle property that provides input values for this property controller’s animation.\n     * @type {?SCNParticleSystem.ParticleProperty}\n     * @see https://developer.apple.com/documentation/scenekit/scnparticlepropertycontroller/1522973-inputproperty\n     ",
+      "start": 4634,
+      "end": 4907,
       "loc": {
         "start": {
           "line": 98,
@@ -5427,8 +5427,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 4880,
-      "end": 4884,
+      "start": 4912,
+      "end": 4916,
       "loc": {
         "start": {
           "line": 103,
@@ -5453,8 +5453,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4884,
-      "end": 4885,
+      "start": 4916,
+      "end": 4917,
       "loc": {
         "start": {
           "line": 103,
@@ -5479,8 +5479,8 @@
         "binop": null
       },
       "value": "inputProperty",
-      "start": 4885,
-      "end": 4898,
+      "start": 4917,
+      "end": 4930,
       "loc": {
         "start": {
           "line": 103,
@@ -5506,8 +5506,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 4899,
-      "end": 4900,
+      "start": 4931,
+      "end": 4932,
       "loc": {
         "start": {
           "line": 103,
@@ -5534,8 +5534,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 4901,
-      "end": 4905,
+      "start": 4933,
+      "end": 4937,
       "loc": {
         "start": {
           "line": 103,
@@ -5559,8 +5559,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4908,
-      "end": 4909,
+      "start": 4940,
+      "end": 4941,
       "loc": {
         "start": {
           "line": 104,
@@ -5584,8 +5584,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4910,
-      "end": 4911,
+      "start": 4942,
+      "end": 4943,
       "loc": {
         "start": {
           "line": 105,
@@ -5610,8 +5610,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4912,
-      "end": 4912,
+      "start": 4944,
+      "end": 4944,
       "loc": {
         "start": {
           "line": 106,

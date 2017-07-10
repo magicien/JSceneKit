@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 6942,
+  "end": 6966,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 6942,
+    "end": 6966,
     "loc": {
       "start": {
         "line": 1,
@@ -170,9 +170,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Methods your app can implement to participate in SceneKit’s animation loop or perform additional rendering. \n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnscenerendererdelegate\n ",
+            "value": "*\n * Methods your app can implement to participate in SceneKit’s animation loop or perform additional rendering. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate\n ",
             "start": 100,
-            "end": 313,
+            "end": 317,
             "loc": {
               "start": {
                 "line": 7,
@@ -188,8 +188,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 314,
-        "end": 6941,
+        "start": 318,
+        "end": 6965,
         "loc": {
           "start": {
             "line": 12,
@@ -202,8 +202,8 @@
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 329,
-          "end": 6941,
+          "start": 333,
+          "end": 6965,
           "loc": {
             "start": {
               "line": 12,
@@ -216,8 +216,8 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 335,
-            "end": 359,
+            "start": 339,
+            "end": 363,
             "loc": {
               "start": {
                 "line": 12,
@@ -235,8 +235,8 @@
           "superClass": null,
           "body": {
             "type": "ClassBody",
-            "start": 360,
-            "end": 6941,
+            "start": 364,
+            "end": 6965,
             "loc": {
               "start": {
                 "line": 12,
@@ -250,8 +250,8 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 435,
-                "end": 447,
+                "start": 439,
+                "end": 451,
                 "loc": {
                   "start": {
                     "line": 19,
@@ -265,8 +265,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 435,
-                  "end": 439,
+                  "start": 439,
+                  "end": 443,
                   "loc": {
                     "start": {
                       "line": 19,
@@ -290,8 +290,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 442,
-                  "end": 447,
+                  "start": 446,
+                  "end": 451,
                   "loc": {
                     "start": {
                       "line": 19,
@@ -311,8 +311,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-                    "start": 365,
-                    "end": 432,
+                    "start": 369,
+                    "end": 436,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -329,8 +329,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Adding Custom Logic to the Rendering Loop",
-                    "start": 451,
-                    "end": 495,
+                    "start": 455,
+                    "end": 499,
                     "loc": {
                       "start": {
                         "line": 22,
@@ -344,9 +344,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Tells the delegate to perform any updates that need to occur before actions, animations, and physics are evaluated.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\n\n   * @see https://developer.apple.com/reference/scenekit/scnscenerendererdelegate/1522937-renderer\n   ",
-                    "start": 499,
-                    "end": 1451,
+                    "value": "*\n   * Tells the delegate to perform any updates that need to occur before actions, animations, and physics are evaluated.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\n\n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1522937-renderer\n   ",
+                    "start": 503,
+                    "end": 1459,
                     "loc": {
                       "start": {
                         "line": 24,
@@ -362,8 +362,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 1454,
-                "end": 1496,
+                "start": 1462,
+                "end": 1504,
                 "loc": {
                   "start": {
                     "line": 34,
@@ -377,8 +377,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1454,
-                  "end": 1474,
+                  "start": 1462,
+                  "end": 1482,
                   "loc": {
                     "start": {
                       "line": 34,
@@ -402,8 +402,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 1475,
-                    "end": 1483,
+                    "start": 1483,
+                    "end": 1491,
                     "loc": {
                       "start": {
                         "line": 34,
@@ -419,8 +419,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1485,
-                    "end": 1489,
+                    "start": 1493,
+                    "end": 1497,
                     "loc": {
                       "start": {
                         "line": 34,
@@ -437,8 +437,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1491,
-                  "end": 1496,
+                  "start": 1499,
+                  "end": 1504,
                   "loc": {
                     "start": {
                       "line": 34,
@@ -458,8 +458,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Adding Custom Logic to the Rendering Loop",
-                    "start": 451,
-                    "end": 495,
+                    "start": 455,
+                    "end": 499,
                     "loc": {
                       "start": {
                         "line": 22,
@@ -473,9 +473,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Tells the delegate to perform any updates that need to occur before actions, animations, and physics are evaluated.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\n\n   * @see https://developer.apple.com/reference/scenekit/scnscenerendererdelegate/1522937-renderer\n   ",
-                    "start": 499,
-                    "end": 1451,
+                    "value": "*\n   * Tells the delegate to perform any updates that need to occur before actions, animations, and physics are evaluated.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\n\n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1522937-renderer\n   ",
+                    "start": 503,
+                    "end": 1459,
                     "loc": {
                       "start": {
                         "line": 24,
@@ -491,9 +491,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Tells the delegate to perform any updates that need to occur after actions and animations are evaluated.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\n\n   * @see https://developer.apple.com/reference/scenekit/scnscenerendererdelegate/1523038-renderer\n   ",
-                    "start": 1500,
-                    "end": 2441,
+                    "value": "*\n   * Tells the delegate to perform any updates that need to occur after actions and animations are evaluated.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\n\n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1523038-renderer\n   ",
+                    "start": 1508,
+                    "end": 2453,
                     "loc": {
                       "start": {
                         "line": 37,
@@ -509,8 +509,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 2444,
-                "end": 2498,
+                "start": 2456,
+                "end": 2510,
                 "loc": {
                   "start": {
                     "line": 47,
@@ -524,8 +524,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 2444,
-                  "end": 2476,
+                  "start": 2456,
+                  "end": 2488,
                   "loc": {
                     "start": {
                       "line": 47,
@@ -549,8 +549,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 2477,
-                    "end": 2485,
+                    "start": 2489,
+                    "end": 2497,
                     "loc": {
                       "start": {
                         "line": 47,
@@ -566,8 +566,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 2487,
-                    "end": 2491,
+                    "start": 2499,
+                    "end": 2503,
                     "loc": {
                       "start": {
                         "line": 47,
@@ -584,8 +584,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 2493,
-                  "end": 2498,
+                  "start": 2505,
+                  "end": 2510,
                   "loc": {
                     "start": {
                       "line": 47,
@@ -604,9 +604,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Tells the delegate to perform any updates that need to occur after actions and animations are evaluated.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\n\n   * @see https://developer.apple.com/reference/scenekit/scnscenerendererdelegate/1523038-renderer\n   ",
-                    "start": 1500,
-                    "end": 2441,
+                    "value": "*\n   * Tells the delegate to perform any updates that need to occur after actions and animations are evaluated.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\n\n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1523038-renderer\n   ",
+                    "start": 1508,
+                    "end": 2453,
                     "loc": {
                       "start": {
                         "line": 37,
@@ -622,9 +622,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Tells the delegate to perform any updates that need to occur after physics simulations are performed.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\nThis method is the last opportunity SceneKit provides for you to change the scene graph before rendering.\n   * @see https://developer.apple.com/reference/scenekit/scnscenerendererdelegate/1522738-renderer\n   ",
-                    "start": 2502,
-                    "end": 3545,
+                    "value": "*\n   * Tells the delegate to perform any updates that need to occur after physics simulations are performed.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\nThis method is the last opportunity SceneKit provides for you to change the scene graph before rendering.\n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1522738-renderer\n   ",
+                    "start": 2514,
+                    "end": 3561,
                     "loc": {
                       "start": {
                         "line": 50,
@@ -640,8 +640,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 3548,
-                "end": 3602,
+                "start": 3564,
+                "end": 3618,
                 "loc": {
                   "start": {
                     "line": 60,
@@ -655,8 +655,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 3548,
-                  "end": 3580,
+                  "start": 3564,
+                  "end": 3596,
                   "loc": {
                     "start": {
                       "line": 60,
@@ -680,8 +680,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 3581,
-                    "end": 3589,
+                    "start": 3597,
+                    "end": 3605,
                     "loc": {
                       "start": {
                         "line": 60,
@@ -697,8 +697,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 3591,
-                    "end": 3595,
+                    "start": 3607,
+                    "end": 3611,
                     "loc": {
                       "start": {
                         "line": 60,
@@ -715,8 +715,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 3597,
-                  "end": 3602,
+                  "start": 3613,
+                  "end": 3618,
                   "loc": {
                     "start": {
                       "line": 60,
@@ -735,9 +735,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Tells the delegate to perform any updates that need to occur after physics simulations are performed.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\nThis method is the last opportunity SceneKit provides for you to change the scene graph before rendering.\n   * @see https://developer.apple.com/reference/scenekit/scnscenerendererdelegate/1522738-renderer\n   ",
-                    "start": 2502,
-                    "end": 3545,
+                    "value": "*\n   * Tells the delegate to perform any updates that need to occur after physics simulations are performed.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\nThis method is the last opportunity SceneKit provides for you to change the scene graph before rendering.\n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1522738-renderer\n   ",
+                    "start": 2514,
+                    "end": 3561,
                     "loc": {
                       "start": {
                         "line": 50,
@@ -754,8 +754,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Rendering Custom Scene Content",
-                    "start": 3606,
-                    "end": 3639,
+                    "start": 3622,
+                    "end": 3655,
                     "loc": {
                       "start": {
                         "line": 63,
@@ -769,9 +769,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Tells the delegate that the renderer has cleared the viewport and is about to render the scene.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {SCNScene} scene - The SCNScene object to be rendered.\n   * @param {number} time - The current system time, in seconds. If your custom rendering involves animation, use this parameter to compute your own animation state.\n   * @returns {void}\n   * @desc Implement this method to perform custom drawing before SceneKit renders a scene—for example, to draw backdrop content underneath SceneKit content. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects during this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/reference/scenekit/scnscenerendererdelegate/1523483-renderer\n   ",
-                    "start": 3643,
-                    "end": 5247,
+                    "value": "*\n   * Tells the delegate that the renderer has cleared the viewport and is about to render the scene.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {SCNScene} scene - The SCNScene object to be rendered.\n   * @param {number} time - The current system time, in seconds. If your custom rendering involves animation, use this parameter to compute your own animation state.\n   * @returns {void}\n   * @desc Implement this method to perform custom drawing before SceneKit renders a scene—for example, to draw backdrop content underneath SceneKit content. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects during this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1523483-renderer\n   ",
+                    "start": 3659,
+                    "end": 5267,
                     "loc": {
                       "start": {
                         "line": 65,
@@ -787,8 +787,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 5250,
-                "end": 5308,
+                "start": 5270,
+                "end": 5328,
                 "loc": {
                   "start": {
                     "line": 75,
@@ -802,8 +802,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 5250,
-                  "end": 5279,
+                  "start": 5270,
+                  "end": 5299,
                   "loc": {
                     "start": {
                       "line": 75,
@@ -827,8 +827,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 5280,
-                    "end": 5288,
+                    "start": 5300,
+                    "end": 5308,
                     "loc": {
                       "start": {
                         "line": 75,
@@ -844,8 +844,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 5290,
-                    "end": 5295,
+                    "start": 5310,
+                    "end": 5315,
                     "loc": {
                       "start": {
                         "line": 75,
@@ -861,8 +861,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 5297,
-                    "end": 5301,
+                    "start": 5317,
+                    "end": 5321,
                     "loc": {
                       "start": {
                         "line": 75,
@@ -879,8 +879,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 5303,
-                  "end": 5308,
+                  "start": 5323,
+                  "end": 5328,
                   "loc": {
                     "start": {
                       "line": 75,
@@ -900,8 +900,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Rendering Custom Scene Content",
-                    "start": 3606,
-                    "end": 3639,
+                    "start": 3622,
+                    "end": 3655,
                     "loc": {
                       "start": {
                         "line": 63,
@@ -915,9 +915,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Tells the delegate that the renderer has cleared the viewport and is about to render the scene.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {SCNScene} scene - The SCNScene object to be rendered.\n   * @param {number} time - The current system time, in seconds. If your custom rendering involves animation, use this parameter to compute your own animation state.\n   * @returns {void}\n   * @desc Implement this method to perform custom drawing before SceneKit renders a scene—for example, to draw backdrop content underneath SceneKit content. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects during this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/reference/scenekit/scnscenerendererdelegate/1523483-renderer\n   ",
-                    "start": 3643,
-                    "end": 5247,
+                    "value": "*\n   * Tells the delegate that the renderer has cleared the viewport and is about to render the scene.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {SCNScene} scene - The SCNScene object to be rendered.\n   * @param {number} time - The current system time, in seconds. If your custom rendering involves animation, use this parameter to compute your own animation state.\n   * @returns {void}\n   * @desc Implement this method to perform custom drawing before SceneKit renders a scene—for example, to draw backdrop content underneath SceneKit content. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects during this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1523483-renderer\n   ",
+                    "start": 3659,
+                    "end": 5267,
                     "loc": {
                       "start": {
                         "line": 65,
@@ -933,9 +933,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Tells the delegate that the renderer has rendered the scene.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {SCNScene} scene - The scene object that was rendered.\n   * @param {number} time - The current system time, in seconds. If your custom rendering involves animation, use this parameter to compute your own animation state.\n   * @returns {void}\n   * @desc Implement this method to perform custom drawing after SceneKit has rendered a scene—for example, to draw overlay content on top of SceneKit content. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects in this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/reference/scenekit/scnscenerendererdelegate/1524233-renderer\n   ",
-                    "start": 5312,
-                    "end": 6879,
+                    "value": "*\n   * Tells the delegate that the renderer has rendered the scene.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {SCNScene} scene - The scene object that was rendered.\n   * @param {number} time - The current system time, in seconds. If your custom rendering involves animation, use this parameter to compute your own animation state.\n   * @returns {void}\n   * @desc Implement this method to perform custom drawing after SceneKit has rendered a scene—for example, to draw overlay content on top of SceneKit content. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects in this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1524233-renderer\n   ",
+                    "start": 5332,
+                    "end": 6903,
                     "loc": {
                       "start": {
                         "line": 78,
@@ -951,8 +951,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 6882,
-                "end": 6939,
+                "start": 6906,
+                "end": 6963,
                 "loc": {
                   "start": {
                     "line": 88,
@@ -966,8 +966,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 6882,
-                  "end": 6910,
+                  "start": 6906,
+                  "end": 6934,
                   "loc": {
                     "start": {
                       "line": 88,
@@ -991,8 +991,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 6911,
-                    "end": 6919,
+                    "start": 6935,
+                    "end": 6943,
                     "loc": {
                       "start": {
                         "line": 88,
@@ -1008,8 +1008,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 6921,
-                    "end": 6926,
+                    "start": 6945,
+                    "end": 6950,
                     "loc": {
                       "start": {
                         "line": 88,
@@ -1025,8 +1025,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 6928,
-                    "end": 6932,
+                    "start": 6952,
+                    "end": 6956,
                     "loc": {
                       "start": {
                         "line": 88,
@@ -1043,8 +1043,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 6934,
-                  "end": 6939,
+                  "start": 6958,
+                  "end": 6963,
                   "loc": {
                     "start": {
                       "line": 88,
@@ -1061,9 +1061,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Tells the delegate that the renderer has rendered the scene.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {SCNScene} scene - The scene object that was rendered.\n   * @param {number} time - The current system time, in seconds. If your custom rendering involves animation, use this parameter to compute your own animation state.\n   * @returns {void}\n   * @desc Implement this method to perform custom drawing after SceneKit has rendered a scene—for example, to draw overlay content on top of SceneKit content. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects in this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/reference/scenekit/scnscenerendererdelegate/1524233-renderer\n   ",
-                    "start": 5312,
-                    "end": 6879,
+                    "value": "*\n   * Tells the delegate that the renderer has rendered the scene.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {SCNScene} scene - The scene object that was rendered.\n   * @param {number} time - The current system time, in seconds. If your custom rendering involves animation, use this parameter to compute your own animation state.\n   * @returns {void}\n   * @desc Implement this method to perform custom drawing after SceneKit has rendered a scene—for example, to draw overlay content on top of SceneKit content. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects in this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1524233-renderer\n   ",
+                    "start": 5332,
+                    "end": 6903,
                     "loc": {
                       "start": {
                         "line": 78,
@@ -1082,9 +1082,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * Methods your app can implement to participate in SceneKit’s animation loop or perform additional rendering. \n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnscenerendererdelegate\n ",
+              "value": "*\n * Methods your app can implement to participate in SceneKit’s animation loop or perform additional rendering. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate\n ",
               "start": 100,
-              "end": 313,
+              "end": 317,
               "loc": {
                 "start": {
                   "line": 7,
@@ -1102,9 +1102,9 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Methods your app can implement to participate in SceneKit’s animation loop or perform additional rendering. \n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnscenerendererdelegate\n ",
+            "value": "*\n * Methods your app can implement to participate in SceneKit’s animation loop or perform additional rendering. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate\n ",
             "start": 100,
-            "end": 313,
+            "end": 317,
             "loc": {
               "start": {
                 "line": 7,
@@ -1160,9 +1160,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * Methods your app can implement to participate in SceneKit’s animation loop or perform additional rendering. \n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnscenerendererdelegate\n ",
+      "value": "*\n * Methods your app can implement to participate in SceneKit’s animation loop or perform additional rendering. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate\n ",
       "start": 100,
-      "end": 313,
+      "end": 317,
       "loc": {
         "start": {
           "line": 7,
@@ -1177,8 +1177,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 365,
-      "end": 432,
+      "start": 369,
+      "end": 436,
       "loc": {
         "start": {
           "line": 14,
@@ -1193,8 +1193,8 @@
     {
       "type": "CommentLine",
       "value": " Adding Custom Logic to the Rendering Loop",
-      "start": 451,
-      "end": 495,
+      "start": 455,
+      "end": 499,
       "loc": {
         "start": {
           "line": 22,
@@ -1208,9 +1208,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Tells the delegate to perform any updates that need to occur before actions, animations, and physics are evaluated.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\n\n   * @see https://developer.apple.com/reference/scenekit/scnscenerendererdelegate/1522937-renderer\n   ",
-      "start": 499,
-      "end": 1451,
+      "value": "*\n   * Tells the delegate to perform any updates that need to occur before actions, animations, and physics are evaluated.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\n\n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1522937-renderer\n   ",
+      "start": 503,
+      "end": 1459,
       "loc": {
         "start": {
           "line": 24,
@@ -1224,9 +1224,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Tells the delegate to perform any updates that need to occur after actions and animations are evaluated.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\n\n   * @see https://developer.apple.com/reference/scenekit/scnscenerendererdelegate/1523038-renderer\n   ",
-      "start": 1500,
-      "end": 2441,
+      "value": "*\n   * Tells the delegate to perform any updates that need to occur after actions and animations are evaluated.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\n\n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1523038-renderer\n   ",
+      "start": 1508,
+      "end": 2453,
       "loc": {
         "start": {
           "line": 37,
@@ -1240,9 +1240,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Tells the delegate to perform any updates that need to occur after physics simulations are performed.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\nThis method is the last opportunity SceneKit provides for you to change the scene graph before rendering.\n   * @see https://developer.apple.com/reference/scenekit/scnscenerendererdelegate/1522738-renderer\n   ",
-      "start": 2502,
-      "end": 3545,
+      "value": "*\n   * Tells the delegate to perform any updates that need to occur after physics simulations are performed.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\nThis method is the last opportunity SceneKit provides for you to change the scene graph before rendering.\n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1522738-renderer\n   ",
+      "start": 2514,
+      "end": 3561,
       "loc": {
         "start": {
           "line": 50,
@@ -1257,8 +1257,8 @@
     {
       "type": "CommentLine",
       "value": " Rendering Custom Scene Content",
-      "start": 3606,
-      "end": 3639,
+      "start": 3622,
+      "end": 3655,
       "loc": {
         "start": {
           "line": 63,
@@ -1272,9 +1272,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Tells the delegate that the renderer has cleared the viewport and is about to render the scene.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {SCNScene} scene - The SCNScene object to be rendered.\n   * @param {number} time - The current system time, in seconds. If your custom rendering involves animation, use this parameter to compute your own animation state.\n   * @returns {void}\n   * @desc Implement this method to perform custom drawing before SceneKit renders a scene—for example, to draw backdrop content underneath SceneKit content. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects during this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/reference/scenekit/scnscenerendererdelegate/1523483-renderer\n   ",
-      "start": 3643,
-      "end": 5247,
+      "value": "*\n   * Tells the delegate that the renderer has cleared the viewport and is about to render the scene.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {SCNScene} scene - The SCNScene object to be rendered.\n   * @param {number} time - The current system time, in seconds. If your custom rendering involves animation, use this parameter to compute your own animation state.\n   * @returns {void}\n   * @desc Implement this method to perform custom drawing before SceneKit renders a scene—for example, to draw backdrop content underneath SceneKit content. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects during this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1523483-renderer\n   ",
+      "start": 3659,
+      "end": 5267,
       "loc": {
         "start": {
           "line": 65,
@@ -1288,9 +1288,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Tells the delegate that the renderer has rendered the scene.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {SCNScene} scene - The scene object that was rendered.\n   * @param {number} time - The current system time, in seconds. If your custom rendering involves animation, use this parameter to compute your own animation state.\n   * @returns {void}\n   * @desc Implement this method to perform custom drawing after SceneKit has rendered a scene—for example, to draw overlay content on top of SceneKit content. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects in this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/reference/scenekit/scnscenerendererdelegate/1524233-renderer\n   ",
-      "start": 5312,
-      "end": 6879,
+      "value": "*\n   * Tells the delegate that the renderer has rendered the scene.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {SCNScene} scene - The scene object that was rendered.\n   * @param {number} time - The current system time, in seconds. If your custom rendering involves animation, use this parameter to compute your own animation state.\n   * @returns {void}\n   * @desc Implement this method to perform custom drawing after SceneKit has rendered a scene—for example, to draw overlay content on top of SceneKit content. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects in this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1524233-renderer\n   ",
+      "start": 5332,
+      "end": 6903,
       "loc": {
         "start": {
           "line": 78,
@@ -1547,9 +1547,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Methods your app can implement to participate in SceneKit’s animation loop or perform additional rendering. \n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnscenerendererdelegate\n ",
+      "value": "*\n * Methods your app can implement to participate in SceneKit’s animation loop or perform additional rendering. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate\n ",
       "start": 100,
-      "end": 313,
+      "end": 317,
       "loc": {
         "start": {
           "line": 7,
@@ -1576,8 +1576,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 314,
-      "end": 320,
+      "start": 318,
+      "end": 324,
       "loc": {
         "start": {
           "line": 12,
@@ -1604,8 +1604,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 321,
-      "end": 328,
+      "start": 325,
+      "end": 332,
       "loc": {
         "start": {
           "line": 12,
@@ -1632,8 +1632,8 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 329,
-      "end": 334,
+      "start": 333,
+      "end": 338,
       "loc": {
         "start": {
           "line": 12,
@@ -1658,8 +1658,8 @@
         "binop": null
       },
       "value": "SCNSceneRendererDelegate",
-      "start": 335,
-      "end": 359,
+      "start": 339,
+      "end": 363,
       "loc": {
         "start": {
           "line": 12,
@@ -1683,8 +1683,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 360,
-      "end": 361,
+      "start": 364,
+      "end": 365,
       "loc": {
         "start": {
           "line": 12,
@@ -1699,8 +1699,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 365,
-      "end": 432,
+      "start": 369,
+      "end": 436,
       "loc": {
         "start": {
           "line": 14,
@@ -1725,8 +1725,8 @@
         "binop": null
       },
       "value": "init",
-      "start": 435,
-      "end": 439,
+      "start": 439,
+      "end": 443,
       "loc": {
         "start": {
           "line": 19,
@@ -1750,8 +1750,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 439,
-      "end": 440,
+      "start": 443,
+      "end": 444,
       "loc": {
         "start": {
           "line": 19,
@@ -1775,8 +1775,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 440,
-      "end": 441,
+      "start": 444,
+      "end": 445,
       "loc": {
         "start": {
           "line": 19,
@@ -1800,8 +1800,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 442,
-      "end": 443,
+      "start": 446,
+      "end": 447,
       "loc": {
         "start": {
           "line": 19,
@@ -1825,8 +1825,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 446,
-      "end": 447,
+      "start": 450,
+      "end": 451,
       "loc": {
         "start": {
           "line": 20,
@@ -1841,8 +1841,8 @@
     {
       "type": "CommentLine",
       "value": " Adding Custom Logic to the Rendering Loop",
-      "start": 451,
-      "end": 495,
+      "start": 455,
+      "end": 499,
       "loc": {
         "start": {
           "line": 22,
@@ -1856,9 +1856,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Tells the delegate to perform any updates that need to occur before actions, animations, and physics are evaluated.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\n\n   * @see https://developer.apple.com/reference/scenekit/scnscenerendererdelegate/1522937-renderer\n   ",
-      "start": 499,
-      "end": 1451,
+      "value": "*\n   * Tells the delegate to perform any updates that need to occur before actions, animations, and physics are evaluated.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\n\n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1522937-renderer\n   ",
+      "start": 503,
+      "end": 1459,
       "loc": {
         "start": {
           "line": 24,
@@ -1883,8 +1883,8 @@
         "binop": null
       },
       "value": "rendererUpdateAtTime",
-      "start": 1454,
-      "end": 1474,
+      "start": 1462,
+      "end": 1482,
       "loc": {
         "start": {
           "line": 34,
@@ -1908,8 +1908,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1474,
-      "end": 1475,
+      "start": 1482,
+      "end": 1483,
       "loc": {
         "start": {
           "line": 34,
@@ -1934,8 +1934,8 @@
         "binop": null
       },
       "value": "renderer",
-      "start": 1475,
-      "end": 1483,
+      "start": 1483,
+      "end": 1491,
       "loc": {
         "start": {
           "line": 34,
@@ -1960,8 +1960,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1483,
-      "end": 1484,
+      "start": 1491,
+      "end": 1492,
       "loc": {
         "start": {
           "line": 34,
@@ -1986,8 +1986,8 @@
         "binop": null
       },
       "value": "time",
-      "start": 1485,
-      "end": 1489,
+      "start": 1493,
+      "end": 1497,
       "loc": {
         "start": {
           "line": 34,
@@ -2011,8 +2011,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1489,
-      "end": 1490,
+      "start": 1497,
+      "end": 1498,
       "loc": {
         "start": {
           "line": 34,
@@ -2036,8 +2036,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1491,
-      "end": 1492,
+      "start": 1499,
+      "end": 1500,
       "loc": {
         "start": {
           "line": 34,
@@ -2061,8 +2061,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1495,
-      "end": 1496,
+      "start": 1503,
+      "end": 1504,
       "loc": {
         "start": {
           "line": 35,
@@ -2076,9 +2076,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Tells the delegate to perform any updates that need to occur after actions and animations are evaluated.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\n\n   * @see https://developer.apple.com/reference/scenekit/scnscenerendererdelegate/1523038-renderer\n   ",
-      "start": 1500,
-      "end": 2441,
+      "value": "*\n   * Tells the delegate to perform any updates that need to occur after actions and animations are evaluated.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\n\n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1523038-renderer\n   ",
+      "start": 1508,
+      "end": 2453,
       "loc": {
         "start": {
           "line": 37,
@@ -2103,8 +2103,8 @@
         "binop": null
       },
       "value": "rendererDidApplyAnimationsAtTime",
-      "start": 2444,
-      "end": 2476,
+      "start": 2456,
+      "end": 2488,
       "loc": {
         "start": {
           "line": 47,
@@ -2128,8 +2128,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2476,
-      "end": 2477,
+      "start": 2488,
+      "end": 2489,
       "loc": {
         "start": {
           "line": 47,
@@ -2154,8 +2154,8 @@
         "binop": null
       },
       "value": "renderer",
-      "start": 2477,
-      "end": 2485,
+      "start": 2489,
+      "end": 2497,
       "loc": {
         "start": {
           "line": 47,
@@ -2180,8 +2180,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2485,
-      "end": 2486,
+      "start": 2497,
+      "end": 2498,
       "loc": {
         "start": {
           "line": 47,
@@ -2206,8 +2206,8 @@
         "binop": null
       },
       "value": "time",
-      "start": 2487,
-      "end": 2491,
+      "start": 2499,
+      "end": 2503,
       "loc": {
         "start": {
           "line": 47,
@@ -2231,8 +2231,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2491,
-      "end": 2492,
+      "start": 2503,
+      "end": 2504,
       "loc": {
         "start": {
           "line": 47,
@@ -2256,8 +2256,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2493,
-      "end": 2494,
+      "start": 2505,
+      "end": 2506,
       "loc": {
         "start": {
           "line": 47,
@@ -2281,8 +2281,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2497,
-      "end": 2498,
+      "start": 2509,
+      "end": 2510,
       "loc": {
         "start": {
           "line": 48,
@@ -2296,9 +2296,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Tells the delegate to perform any updates that need to occur after physics simulations are performed.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\nThis method is the last opportunity SceneKit provides for you to change the scene graph before rendering.\n   * @see https://developer.apple.com/reference/scenekit/scnscenerendererdelegate/1522738-renderer\n   ",
-      "start": 2502,
-      "end": 3545,
+      "value": "*\n   * Tells the delegate to perform any updates that need to occur after physics simulations are performed.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {number} time - The current system time, in seconds. Use this parameter for any time-based elements of your game logic.\n   * @returns {void}\n   * @desc SceneKit calls this method exactly once per frame, so long as the SCNView object (or other SCNSceneRenderer object) displaying the scene is not paused. Implement this method to add game logic to the rendering loop. Any changes you make to the scene graph during this method are immediately reflected in the displayed scene. That is, SceneKit immediately updates the hierarchy of presentation nodes it uses to render the scene (instead of using the SCNTransaction class to “batch” your changes).\nThis method is the last opportunity SceneKit provides for you to change the scene graph before rendering.\n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1522738-renderer\n   ",
+      "start": 2514,
+      "end": 3561,
       "loc": {
         "start": {
           "line": 50,
@@ -2323,8 +2323,8 @@
         "binop": null
       },
       "value": "rendererDidSimulatePhysicsAtTime",
-      "start": 3548,
-      "end": 3580,
+      "start": 3564,
+      "end": 3596,
       "loc": {
         "start": {
           "line": 60,
@@ -2348,8 +2348,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3580,
-      "end": 3581,
+      "start": 3596,
+      "end": 3597,
       "loc": {
         "start": {
           "line": 60,
@@ -2374,8 +2374,8 @@
         "binop": null
       },
       "value": "renderer",
-      "start": 3581,
-      "end": 3589,
+      "start": 3597,
+      "end": 3605,
       "loc": {
         "start": {
           "line": 60,
@@ -2400,8 +2400,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3589,
-      "end": 3590,
+      "start": 3605,
+      "end": 3606,
       "loc": {
         "start": {
           "line": 60,
@@ -2426,8 +2426,8 @@
         "binop": null
       },
       "value": "time",
-      "start": 3591,
-      "end": 3595,
+      "start": 3607,
+      "end": 3611,
       "loc": {
         "start": {
           "line": 60,
@@ -2451,8 +2451,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3595,
-      "end": 3596,
+      "start": 3611,
+      "end": 3612,
       "loc": {
         "start": {
           "line": 60,
@@ -2476,8 +2476,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3597,
-      "end": 3598,
+      "start": 3613,
+      "end": 3614,
       "loc": {
         "start": {
           "line": 60,
@@ -2501,8 +2501,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3601,
-      "end": 3602,
+      "start": 3617,
+      "end": 3618,
       "loc": {
         "start": {
           "line": 61,
@@ -2517,8 +2517,8 @@
     {
       "type": "CommentLine",
       "value": " Rendering Custom Scene Content",
-      "start": 3606,
-      "end": 3639,
+      "start": 3622,
+      "end": 3655,
       "loc": {
         "start": {
           "line": 63,
@@ -2532,9 +2532,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Tells the delegate that the renderer has cleared the viewport and is about to render the scene.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {SCNScene} scene - The SCNScene object to be rendered.\n   * @param {number} time - The current system time, in seconds. If your custom rendering involves animation, use this parameter to compute your own animation state.\n   * @returns {void}\n   * @desc Implement this method to perform custom drawing before SceneKit renders a scene—for example, to draw backdrop content underneath SceneKit content. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects during this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/reference/scenekit/scnscenerendererdelegate/1523483-renderer\n   ",
-      "start": 3643,
-      "end": 5247,
+      "value": "*\n   * Tells the delegate that the renderer has cleared the viewport and is about to render the scene.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {SCNScene} scene - The SCNScene object to be rendered.\n   * @param {number} time - The current system time, in seconds. If your custom rendering involves animation, use this parameter to compute your own animation state.\n   * @returns {void}\n   * @desc Implement this method to perform custom drawing before SceneKit renders a scene—for example, to draw backdrop content underneath SceneKit content. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects during this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1523483-renderer\n   ",
+      "start": 3659,
+      "end": 5267,
       "loc": {
         "start": {
           "line": 65,
@@ -2559,8 +2559,8 @@
         "binop": null
       },
       "value": "rendererWillRenderSceneAtTime",
-      "start": 5250,
-      "end": 5279,
+      "start": 5270,
+      "end": 5299,
       "loc": {
         "start": {
           "line": 75,
@@ -2584,8 +2584,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5279,
-      "end": 5280,
+      "start": 5299,
+      "end": 5300,
       "loc": {
         "start": {
           "line": 75,
@@ -2610,8 +2610,8 @@
         "binop": null
       },
       "value": "renderer",
-      "start": 5280,
-      "end": 5288,
+      "start": 5300,
+      "end": 5308,
       "loc": {
         "start": {
           "line": 75,
@@ -2636,8 +2636,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 5288,
-      "end": 5289,
+      "start": 5308,
+      "end": 5309,
       "loc": {
         "start": {
           "line": 75,
@@ -2662,8 +2662,8 @@
         "binop": null
       },
       "value": "scene",
-      "start": 5290,
-      "end": 5295,
+      "start": 5310,
+      "end": 5315,
       "loc": {
         "start": {
           "line": 75,
@@ -2688,8 +2688,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 5295,
-      "end": 5296,
+      "start": 5315,
+      "end": 5316,
       "loc": {
         "start": {
           "line": 75,
@@ -2714,8 +2714,8 @@
         "binop": null
       },
       "value": "time",
-      "start": 5297,
-      "end": 5301,
+      "start": 5317,
+      "end": 5321,
       "loc": {
         "start": {
           "line": 75,
@@ -2739,8 +2739,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5301,
-      "end": 5302,
+      "start": 5321,
+      "end": 5322,
       "loc": {
         "start": {
           "line": 75,
@@ -2764,8 +2764,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5303,
-      "end": 5304,
+      "start": 5323,
+      "end": 5324,
       "loc": {
         "start": {
           "line": 75,
@@ -2789,8 +2789,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5307,
-      "end": 5308,
+      "start": 5327,
+      "end": 5328,
       "loc": {
         "start": {
           "line": 76,
@@ -2804,9 +2804,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Tells the delegate that the renderer has rendered the scene.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {SCNScene} scene - The scene object that was rendered.\n   * @param {number} time - The current system time, in seconds. If your custom rendering involves animation, use this parameter to compute your own animation state.\n   * @returns {void}\n   * @desc Implement this method to perform custom drawing after SceneKit has rendered a scene—for example, to draw overlay content on top of SceneKit content. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects in this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/reference/scenekit/scnscenerendererdelegate/1524233-renderer\n   ",
-      "start": 5312,
-      "end": 6879,
+      "value": "*\n   * Tells the delegate that the renderer has rendered the scene.\n   * @access public\n   * @param {SCNSceneRenderer} renderer - \n   * @param {SCNScene} scene - The scene object that was rendered.\n   * @param {number} time - The current system time, in seconds. If your custom rendering involves animation, use this parameter to compute your own animation state.\n   * @returns {void}\n   * @desc Implement this method to perform custom drawing after SceneKit has rendered a scene—for example, to draw overlay content on top of SceneKit content. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects in this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/documentation/scenekit/scnscenerendererdelegate/1524233-renderer\n   ",
+      "start": 5332,
+      "end": 6903,
       "loc": {
         "start": {
           "line": 78,
@@ -2831,8 +2831,8 @@
         "binop": null
       },
       "value": "rendererDidRenderSceneAtTime",
-      "start": 6882,
-      "end": 6910,
+      "start": 6906,
+      "end": 6934,
       "loc": {
         "start": {
           "line": 88,
@@ -2856,8 +2856,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6910,
-      "end": 6911,
+      "start": 6934,
+      "end": 6935,
       "loc": {
         "start": {
           "line": 88,
@@ -2882,8 +2882,8 @@
         "binop": null
       },
       "value": "renderer",
-      "start": 6911,
-      "end": 6919,
+      "start": 6935,
+      "end": 6943,
       "loc": {
         "start": {
           "line": 88,
@@ -2908,8 +2908,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 6919,
-      "end": 6920,
+      "start": 6943,
+      "end": 6944,
       "loc": {
         "start": {
           "line": 88,
@@ -2934,8 +2934,8 @@
         "binop": null
       },
       "value": "scene",
-      "start": 6921,
-      "end": 6926,
+      "start": 6945,
+      "end": 6950,
       "loc": {
         "start": {
           "line": 88,
@@ -2960,8 +2960,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 6926,
-      "end": 6927,
+      "start": 6950,
+      "end": 6951,
       "loc": {
         "start": {
           "line": 88,
@@ -2986,8 +2986,8 @@
         "binop": null
       },
       "value": "time",
-      "start": 6928,
-      "end": 6932,
+      "start": 6952,
+      "end": 6956,
       "loc": {
         "start": {
           "line": 88,
@@ -3011,8 +3011,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6932,
-      "end": 6933,
+      "start": 6956,
+      "end": 6957,
       "loc": {
         "start": {
           "line": 88,
@@ -3036,8 +3036,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6934,
-      "end": 6935,
+      "start": 6958,
+      "end": 6959,
       "loc": {
         "start": {
           "line": 88,
@@ -3061,8 +3061,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6938,
-      "end": 6939,
+      "start": 6962,
+      "end": 6963,
       "loc": {
         "start": {
           "line": 89,
@@ -3086,8 +3086,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6940,
-      "end": 6941,
+      "start": 6964,
+      "end": 6965,
       "loc": {
         "start": {
           "line": 90,
@@ -3112,8 +3112,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 6942,
-      "end": 6942,
+      "start": 6966,
+      "end": 6966,
       "loc": {
         "start": {
           "line": 91,

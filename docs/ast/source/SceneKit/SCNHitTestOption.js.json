@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 1374,
+  "end": 1378,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 1374,
+    "end": 1378,
     "loc": {
       "start": {
         "line": 1,
@@ -30,8 +30,8 @@
     "body": [
       {
         "type": "Identifier",
-        "start": 926,
-        "end": 1340,
+        "start": 930,
+        "end": 1344,
         "loc": {
           "start": {
             "line": 18,
@@ -45,8 +45,8 @@
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 932,
-            "end": 1340,
+            "start": 936,
+            "end": 1344,
             "loc": {
               "start": {
                 "line": 18,
@@ -59,8 +59,8 @@
             },
             "id": {
               "type": "Identifier",
-              "start": 932,
-              "end": 948,
+              "start": 936,
+              "end": 952,
               "loc": {
                 "start": {
                   "line": 18,
@@ -77,8 +77,8 @@
             },
             "init": {
               "type": "ObjectExpression",
-              "start": 951,
-              "end": 1340,
+              "start": 955,
+              "end": 1344,
               "loc": {
                 "start": {
                   "line": 18,
@@ -92,8 +92,8 @@
               "properties": [
                 {
                   "type": "ObjectProperty",
-                  "start": 955,
-                  "end": 997,
+                  "start": 959,
+                  "end": 1001,
                   "loc": {
                     "start": {
                       "line": 19,
@@ -109,8 +109,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 955,
-                    "end": 970,
+                    "start": 959,
+                    "end": 974,
                     "loc": {
                       "start": {
                         "line": 19,
@@ -126,8 +126,8 @@
                   },
                   "value": {
                     "type": "StringLiteral",
-                    "start": 972,
-                    "end": 997,
+                    "start": 976,
+                    "end": 1001,
                     "loc": {
                       "start": {
                         "line": 19,
@@ -147,8 +147,8 @@
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 1001,
-                  "end": 1043,
+                  "start": 1005,
+                  "end": 1047,
                   "loc": {
                     "start": {
                       "line": 20,
@@ -164,8 +164,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 1001,
-                    "end": 1016,
+                    "start": 1005,
+                    "end": 1020,
                     "loc": {
                       "start": {
                         "line": 20,
@@ -181,8 +181,8 @@
                   },
                   "value": {
                     "type": "StringLiteral",
-                    "start": 1018,
-                    "end": 1043,
+                    "start": 1022,
+                    "end": 1047,
                     "loc": {
                       "start": {
                         "line": 20,
@@ -202,8 +202,8 @@
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 1047,
-                  "end": 1089,
+                  "start": 1051,
+                  "end": 1093,
                   "loc": {
                     "start": {
                       "line": 21,
@@ -219,8 +219,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 1047,
-                    "end": 1062,
+                    "start": 1051,
+                    "end": 1066,
                     "loc": {
                       "start": {
                         "line": 21,
@@ -236,8 +236,8 @@
                   },
                   "value": {
                     "type": "StringLiteral",
-                    "start": 1064,
-                    "end": 1089,
+                    "start": 1068,
+                    "end": 1093,
                     "loc": {
                       "start": {
                         "line": 21,
@@ -257,8 +257,8 @@
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 1093,
-                  "end": 1129,
+                  "start": 1097,
+                  "end": 1133,
                   "loc": {
                     "start": {
                       "line": 22,
@@ -274,8 +274,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 1093,
-                    "end": 1105,
+                    "start": 1097,
+                    "end": 1109,
                     "loc": {
                       "start": {
                         "line": 22,
@@ -291,8 +291,8 @@
                   },
                   "value": {
                     "type": "StringLiteral",
-                    "start": 1107,
-                    "end": 1129,
+                    "start": 1111,
+                    "end": 1133,
                     "loc": {
                       "start": {
                         "line": 22,
@@ -312,8 +312,8 @@
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 1133,
-                  "end": 1173,
+                  "start": 1137,
+                  "end": 1177,
                   "loc": {
                     "start": {
                       "line": 23,
@@ -329,8 +329,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 1133,
-                    "end": 1147,
+                    "start": 1137,
+                    "end": 1151,
                     "loc": {
                       "start": {
                         "line": 23,
@@ -346,8 +346,8 @@
                   },
                   "value": {
                     "type": "StringLiteral",
-                    "start": 1149,
-                    "end": 1173,
+                    "start": 1153,
+                    "end": 1177,
                     "loc": {
                       "start": {
                         "line": 23,
@@ -367,8 +367,8 @@
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 1177,
-                  "end": 1221,
+                  "start": 1181,
+                  "end": 1225,
                   "loc": {
                     "start": {
                       "line": 24,
@@ -384,8 +384,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 1177,
-                    "end": 1193,
+                    "start": 1181,
+                    "end": 1197,
                     "loc": {
                       "start": {
                         "line": 24,
@@ -401,8 +401,8 @@
                   },
                   "value": {
                     "type": "StringLiteral",
-                    "start": 1195,
-                    "end": 1221,
+                    "start": 1199,
+                    "end": 1225,
                     "loc": {
                       "start": {
                         "line": 24,
@@ -422,8 +422,8 @@
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 1225,
-                  "end": 1268,
+                  "start": 1229,
+                  "end": 1272,
                   "loc": {
                     "start": {
                       "line": 25,
@@ -439,8 +439,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 1225,
-                    "end": 1242,
+                    "start": 1229,
+                    "end": 1246,
                     "loc": {
                       "start": {
                         "line": 25,
@@ -456,8 +456,8 @@
                   },
                   "value": {
                     "type": "StringLiteral",
-                    "start": 1244,
-                    "end": 1268,
+                    "start": 1248,
+                    "end": 1272,
                     "loc": {
                       "start": {
                         "line": 25,
@@ -477,8 +477,8 @@
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 1272,
-                  "end": 1300,
+                  "start": 1276,
+                  "end": 1304,
                   "loc": {
                     "start": {
                       "line": 26,
@@ -494,8 +494,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 1272,
-                    "end": 1280,
+                    "start": 1276,
+                    "end": 1284,
                     "loc": {
                       "start": {
                         "line": 26,
@@ -511,8 +511,8 @@
                   },
                   "value": {
                     "type": "StringLiteral",
-                    "start": 1282,
-                    "end": 1300,
+                    "start": 1286,
+                    "end": 1304,
                     "loc": {
                       "start": {
                         "line": 26,
@@ -532,8 +532,8 @@
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 1304,
-                  "end": 1338,
+                  "start": 1308,
+                  "end": 1342,
                   "loc": {
                     "start": {
                       "line": 27,
@@ -549,8 +549,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 1304,
-                    "end": 1315,
+                    "start": 1308,
+                    "end": 1319,
                     "loc": {
                       "start": {
                         "line": 27,
@@ -566,8 +566,8 @@
                   },
                   "value": {
                     "type": "StringLiteral",
-                    "start": 1317,
-                    "end": 1338,
+                    "start": 1321,
+                    "end": 1342,
                     "loc": {
                       "start": {
                         "line": 27,
@@ -597,8 +597,8 @@
       },
       {
         "type": "Identifier",
-        "start": 1342,
-        "end": 1373,
+        "start": 1346,
+        "end": 1377,
         "loc": {
           "start": {
             "line": 30,
@@ -611,8 +611,8 @@
         },
         "declaration": {
           "type": "Identifier",
-          "start": 1357,
-          "end": 1373,
+          "start": 1361,
+          "end": 1377,
           "loc": {
             "start": {
               "line": 30,
@@ -632,8 +632,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 1342,
-        "end": 1373,
+        "start": 1346,
+        "end": 1377,
         "loc": {
           "start": {
             "line": 30,
@@ -646,8 +646,8 @@
         },
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 926,
-          "end": 1340,
+          "start": 930,
+          "end": 1344,
           "loc": {
             "start": {
               "line": 18,
@@ -661,8 +661,8 @@
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 932,
-              "end": 1340,
+              "start": 936,
+              "end": 1344,
               "loc": {
                 "start": {
                   "line": 18,
@@ -675,8 +675,8 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 932,
-                "end": 948,
+                "start": 936,
+                "end": 952,
                 "loc": {
                   "start": {
                     "line": 18,
@@ -693,8 +693,8 @@
               },
               "init": {
                 "type": "ObjectExpression",
-                "start": 951,
-                "end": 1340,
+                "start": 955,
+                "end": 1344,
                 "loc": {
                   "start": {
                     "line": 18,
@@ -708,8 +708,8 @@
                 "properties": [
                   {
                     "type": "ObjectProperty",
-                    "start": 955,
-                    "end": 997,
+                    "start": 959,
+                    "end": 1001,
                     "loc": {
                       "start": {
                         "line": 19,
@@ -725,8 +725,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 955,
-                      "end": 970,
+                      "start": 959,
+                      "end": 974,
                       "loc": {
                         "start": {
                           "line": 19,
@@ -742,8 +742,8 @@
                     },
                     "value": {
                       "type": "StringLiteral",
-                      "start": 972,
-                      "end": 997,
+                      "start": 976,
+                      "end": 1001,
                       "loc": {
                         "start": {
                           "line": 19,
@@ -763,8 +763,8 @@
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 1001,
-                    "end": 1043,
+                    "start": 1005,
+                    "end": 1047,
                     "loc": {
                       "start": {
                         "line": 20,
@@ -780,8 +780,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 1001,
-                      "end": 1016,
+                      "start": 1005,
+                      "end": 1020,
                       "loc": {
                         "start": {
                           "line": 20,
@@ -797,8 +797,8 @@
                     },
                     "value": {
                       "type": "StringLiteral",
-                      "start": 1018,
-                      "end": 1043,
+                      "start": 1022,
+                      "end": 1047,
                       "loc": {
                         "start": {
                           "line": 20,
@@ -818,8 +818,8 @@
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 1047,
-                    "end": 1089,
+                    "start": 1051,
+                    "end": 1093,
                     "loc": {
                       "start": {
                         "line": 21,
@@ -835,8 +835,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 1047,
-                      "end": 1062,
+                      "start": 1051,
+                      "end": 1066,
                       "loc": {
                         "start": {
                           "line": 21,
@@ -852,8 +852,8 @@
                     },
                     "value": {
                       "type": "StringLiteral",
-                      "start": 1064,
-                      "end": 1089,
+                      "start": 1068,
+                      "end": 1093,
                       "loc": {
                         "start": {
                           "line": 21,
@@ -873,8 +873,8 @@
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 1093,
-                    "end": 1129,
+                    "start": 1097,
+                    "end": 1133,
                     "loc": {
                       "start": {
                         "line": 22,
@@ -890,8 +890,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 1093,
-                      "end": 1105,
+                      "start": 1097,
+                      "end": 1109,
                       "loc": {
                         "start": {
                           "line": 22,
@@ -907,8 +907,8 @@
                     },
                     "value": {
                       "type": "StringLiteral",
-                      "start": 1107,
-                      "end": 1129,
+                      "start": 1111,
+                      "end": 1133,
                       "loc": {
                         "start": {
                           "line": 22,
@@ -928,8 +928,8 @@
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 1133,
-                    "end": 1173,
+                    "start": 1137,
+                    "end": 1177,
                     "loc": {
                       "start": {
                         "line": 23,
@@ -945,8 +945,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 1133,
-                      "end": 1147,
+                      "start": 1137,
+                      "end": 1151,
                       "loc": {
                         "start": {
                           "line": 23,
@@ -962,8 +962,8 @@
                     },
                     "value": {
                       "type": "StringLiteral",
-                      "start": 1149,
-                      "end": 1173,
+                      "start": 1153,
+                      "end": 1177,
                       "loc": {
                         "start": {
                           "line": 23,
@@ -983,8 +983,8 @@
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 1177,
-                    "end": 1221,
+                    "start": 1181,
+                    "end": 1225,
                     "loc": {
                       "start": {
                         "line": 24,
@@ -1000,8 +1000,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 1177,
-                      "end": 1193,
+                      "start": 1181,
+                      "end": 1197,
                       "loc": {
                         "start": {
                           "line": 24,
@@ -1017,8 +1017,8 @@
                     },
                     "value": {
                       "type": "StringLiteral",
-                      "start": 1195,
-                      "end": 1221,
+                      "start": 1199,
+                      "end": 1225,
                       "loc": {
                         "start": {
                           "line": 24,
@@ -1038,8 +1038,8 @@
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 1225,
-                    "end": 1268,
+                    "start": 1229,
+                    "end": 1272,
                     "loc": {
                       "start": {
                         "line": 25,
@@ -1055,8 +1055,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 1225,
-                      "end": 1242,
+                      "start": 1229,
+                      "end": 1246,
                       "loc": {
                         "start": {
                           "line": 25,
@@ -1072,8 +1072,8 @@
                     },
                     "value": {
                       "type": "StringLiteral",
-                      "start": 1244,
-                      "end": 1268,
+                      "start": 1248,
+                      "end": 1272,
                       "loc": {
                         "start": {
                           "line": 25,
@@ -1093,8 +1093,8 @@
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 1272,
-                    "end": 1300,
+                    "start": 1276,
+                    "end": 1304,
                     "loc": {
                       "start": {
                         "line": 26,
@@ -1110,8 +1110,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 1272,
-                      "end": 1280,
+                      "start": 1276,
+                      "end": 1284,
                       "loc": {
                         "start": {
                           "line": 26,
@@ -1127,8 +1127,8 @@
                     },
                     "value": {
                       "type": "StringLiteral",
-                      "start": 1282,
-                      "end": 1300,
+                      "start": 1286,
+                      "end": 1304,
                       "loc": {
                         "start": {
                           "line": 26,
@@ -1148,8 +1148,8 @@
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 1304,
-                    "end": 1338,
+                    "start": 1308,
+                    "end": 1342,
                     "loc": {
                       "start": {
                         "line": 27,
@@ -1165,8 +1165,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 1304,
-                      "end": 1315,
+                      "start": 1308,
+                      "end": 1319,
                       "loc": {
                         "start": {
                           "line": 27,
@@ -1182,8 +1182,8 @@
                     },
                     "value": {
                       "type": "StringLiteral",
-                      "start": 1317,
-                      "end": 1338,
+                      "start": 1321,
+                      "end": 1342,
                       "loc": {
                         "start": {
                           "line": 27,
@@ -1210,9 +1210,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * \n * @typedef {Object} SCNHitTestOption\n * @property {string} backFaceCulling - An option to ignore faces not oriented toward the camera.\n * @property {string} boundingBoxOnly - An option to search for objects by bounding box only.\n * @property {string} categoryBitMask - \n * @property {string} clipToZRange - An option to search for objects only within the depth range of the current point of view.\n * @property {string} firstFoundOnly - An option to return only the first object found.\n * @property {string} ignoreChildNodes - An option to ignore child nodes when searching.\n * @property {string} ignoreHiddenNodes - An option to ignore hidden nodes when searching.\n * @property {string} rootNode - The root of the node hierarchy to be searched.\n * @property {string} sortResults - An option to sort the results of a hit-test.\n * @see https://developer.apple.com/reference/scenekit/scnhittestoption\n ",
+              "value": "*\n * \n * @typedef {Object} SCNHitTestOption\n * @property {string} backFaceCulling - An option to ignore faces not oriented toward the camera.\n * @property {string} boundingBoxOnly - An option to search for objects by bounding box only.\n * @property {string} categoryBitMask - \n * @property {string} clipToZRange - An option to search for objects only within the depth range of the current point of view.\n * @property {string} firstFoundOnly - An option to return only the first object found.\n * @property {string} ignoreChildNodes - An option to ignore child nodes when searching.\n * @property {string} ignoreHiddenNodes - An option to ignore hidden nodes when searching.\n * @property {string} rootNode - The root of the node hierarchy to be searched.\n * @property {string} sortResults - An option to sort the results of a hit-test.\n * @see https://developer.apple.com/documentation/scenekit/scnhittestoption\n ",
               "start": 15,
-              "end": 925,
+              "end": 929,
               "loc": {
                 "start": {
                   "line": 4,
@@ -1268,9 +1268,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * \n * @typedef {Object} SCNHitTestOption\n * @property {string} backFaceCulling - An option to ignore faces not oriented toward the camera.\n * @property {string} boundingBoxOnly - An option to search for objects by bounding box only.\n * @property {string} categoryBitMask - \n * @property {string} clipToZRange - An option to search for objects only within the depth range of the current point of view.\n * @property {string} firstFoundOnly - An option to return only the first object found.\n * @property {string} ignoreChildNodes - An option to ignore child nodes when searching.\n * @property {string} ignoreHiddenNodes - An option to ignore hidden nodes when searching.\n * @property {string} rootNode - The root of the node hierarchy to be searched.\n * @property {string} sortResults - An option to sort the results of a hit-test.\n * @see https://developer.apple.com/reference/scenekit/scnhittestoption\n ",
+            "value": "*\n * \n * @typedef {Object} SCNHitTestOption\n * @property {string} backFaceCulling - An option to ignore faces not oriented toward the camera.\n * @property {string} boundingBoxOnly - An option to search for objects by bounding box only.\n * @property {string} categoryBitMask - \n * @property {string} clipToZRange - An option to search for objects only within the depth range of the current point of view.\n * @property {string} firstFoundOnly - An option to return only the first object found.\n * @property {string} ignoreChildNodes - An option to ignore child nodes when searching.\n * @property {string} ignoreHiddenNodes - An option to ignore hidden nodes when searching.\n * @property {string} rootNode - The root of the node hierarchy to be searched.\n * @property {string} sortResults - An option to sort the results of a hit-test.\n * @see https://developer.apple.com/documentation/scenekit/scnhittestoption\n ",
             "start": 15,
-            "end": 925,
+            "end": 929,
             "loc": {
               "start": {
                 "line": 4,
@@ -1289,9 +1289,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * \n * @typedef {Object} SCNHitTestOption\n * @property {string} backFaceCulling - An option to ignore faces not oriented toward the camera.\n * @property {string} boundingBoxOnly - An option to search for objects by bounding box only.\n * @property {string} categoryBitMask - \n * @property {string} clipToZRange - An option to search for objects only within the depth range of the current point of view.\n * @property {string} firstFoundOnly - An option to return only the first object found.\n * @property {string} ignoreChildNodes - An option to ignore child nodes when searching.\n * @property {string} ignoreHiddenNodes - An option to ignore hidden nodes when searching.\n * @property {string} rootNode - The root of the node hierarchy to be searched.\n * @property {string} sortResults - An option to sort the results of a hit-test.\n * @see https://developer.apple.com/reference/scenekit/scnhittestoption\n ",
+      "value": "*\n * \n * @typedef {Object} SCNHitTestOption\n * @property {string} backFaceCulling - An option to ignore faces not oriented toward the camera.\n * @property {string} boundingBoxOnly - An option to search for objects by bounding box only.\n * @property {string} categoryBitMask - \n * @property {string} clipToZRange - An option to search for objects only within the depth range of the current point of view.\n * @property {string} firstFoundOnly - An option to return only the first object found.\n * @property {string} ignoreChildNodes - An option to ignore child nodes when searching.\n * @property {string} ignoreHiddenNodes - An option to ignore hidden nodes when searching.\n * @property {string} rootNode - The root of the node hierarchy to be searched.\n * @property {string} sortResults - An option to sort the results of a hit-test.\n * @see https://developer.apple.com/documentation/scenekit/scnhittestoption\n ",
       "start": 15,
-      "end": 925,
+      "end": 929,
       "loc": {
         "start": {
           "line": 4,
@@ -1334,9 +1334,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * \n * @typedef {Object} SCNHitTestOption\n * @property {string} backFaceCulling - An option to ignore faces not oriented toward the camera.\n * @property {string} boundingBoxOnly - An option to search for objects by bounding box only.\n * @property {string} categoryBitMask - \n * @property {string} clipToZRange - An option to search for objects only within the depth range of the current point of view.\n * @property {string} firstFoundOnly - An option to return only the first object found.\n * @property {string} ignoreChildNodes - An option to ignore child nodes when searching.\n * @property {string} ignoreHiddenNodes - An option to ignore hidden nodes when searching.\n * @property {string} rootNode - The root of the node hierarchy to be searched.\n * @property {string} sortResults - An option to sort the results of a hit-test.\n * @see https://developer.apple.com/reference/scenekit/scnhittestoption\n ",
+      "value": "*\n * \n * @typedef {Object} SCNHitTestOption\n * @property {string} backFaceCulling - An option to ignore faces not oriented toward the camera.\n * @property {string} boundingBoxOnly - An option to search for objects by bounding box only.\n * @property {string} categoryBitMask - \n * @property {string} clipToZRange - An option to search for objects only within the depth range of the current point of view.\n * @property {string} firstFoundOnly - An option to return only the first object found.\n * @property {string} ignoreChildNodes - An option to ignore child nodes when searching.\n * @property {string} ignoreHiddenNodes - An option to ignore hidden nodes when searching.\n * @property {string} rootNode - The root of the node hierarchy to be searched.\n * @property {string} sortResults - An option to sort the results of a hit-test.\n * @see https://developer.apple.com/documentation/scenekit/scnhittestoption\n ",
       "start": 15,
-      "end": 925,
+      "end": 929,
       "loc": {
         "start": {
           "line": 4,
@@ -1363,8 +1363,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 926,
-      "end": 931,
+      "start": 930,
+      "end": 935,
       "loc": {
         "start": {
           "line": 18,
@@ -1389,8 +1389,8 @@
         "binop": null
       },
       "value": "SCNHitTestOption",
-      "start": 932,
-      "end": 948,
+      "start": 936,
+      "end": 952,
       "loc": {
         "start": {
           "line": 18,
@@ -1416,8 +1416,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 949,
-      "end": 950,
+      "start": 953,
+      "end": 954,
       "loc": {
         "start": {
           "line": 18,
@@ -1441,8 +1441,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 951,
-      "end": 952,
+      "start": 955,
+      "end": 956,
       "loc": {
         "start": {
           "line": 18,
@@ -1467,8 +1467,8 @@
         "binop": null
       },
       "value": "backFaceCulling",
-      "start": 955,
-      "end": 970,
+      "start": 959,
+      "end": 974,
       "loc": {
         "start": {
           "line": 19,
@@ -1493,8 +1493,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 970,
-      "end": 971,
+      "start": 974,
+      "end": 975,
       "loc": {
         "start": {
           "line": 19,
@@ -1520,8 +1520,8 @@
         "updateContext": null
       },
       "value": "kHitTestBackFaceCulling",
-      "start": 972,
-      "end": 997,
+      "start": 976,
+      "end": 1001,
       "loc": {
         "start": {
           "line": 19,
@@ -1546,8 +1546,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 997,
-      "end": 998,
+      "start": 1001,
+      "end": 1002,
       "loc": {
         "start": {
           "line": 19,
@@ -1572,8 +1572,8 @@
         "binop": null
       },
       "value": "boundingBoxOnly",
-      "start": 1001,
-      "end": 1016,
+      "start": 1005,
+      "end": 1020,
       "loc": {
         "start": {
           "line": 20,
@@ -1598,8 +1598,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1016,
-      "end": 1017,
+      "start": 1020,
+      "end": 1021,
       "loc": {
         "start": {
           "line": 20,
@@ -1625,8 +1625,8 @@
         "updateContext": null
       },
       "value": "kHitTestBoundingBoxOnly",
-      "start": 1018,
-      "end": 1043,
+      "start": 1022,
+      "end": 1047,
       "loc": {
         "start": {
           "line": 20,
@@ -1651,8 +1651,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1043,
-      "end": 1044,
+      "start": 1047,
+      "end": 1048,
       "loc": {
         "start": {
           "line": 20,
@@ -1677,8 +1677,8 @@
         "binop": null
       },
       "value": "categoryBitMask",
-      "start": 1047,
-      "end": 1062,
+      "start": 1051,
+      "end": 1066,
       "loc": {
         "start": {
           "line": 21,
@@ -1703,8 +1703,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1062,
-      "end": 1063,
+      "start": 1066,
+      "end": 1067,
       "loc": {
         "start": {
           "line": 21,
@@ -1730,8 +1730,8 @@
         "updateContext": null
       },
       "value": "kHitTestCategoryBitMask",
-      "start": 1064,
-      "end": 1089,
+      "start": 1068,
+      "end": 1093,
       "loc": {
         "start": {
           "line": 21,
@@ -1756,8 +1756,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1089,
-      "end": 1090,
+      "start": 1093,
+      "end": 1094,
       "loc": {
         "start": {
           "line": 21,
@@ -1782,8 +1782,8 @@
         "binop": null
       },
       "value": "clipToZRange",
-      "start": 1093,
-      "end": 1105,
+      "start": 1097,
+      "end": 1109,
       "loc": {
         "start": {
           "line": 22,
@@ -1808,8 +1808,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1105,
-      "end": 1106,
+      "start": 1109,
+      "end": 1110,
       "loc": {
         "start": {
           "line": 22,
@@ -1835,8 +1835,8 @@
         "updateContext": null
       },
       "value": "kHitTestClipToZRange",
-      "start": 1107,
-      "end": 1129,
+      "start": 1111,
+      "end": 1133,
       "loc": {
         "start": {
           "line": 22,
@@ -1861,8 +1861,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1129,
-      "end": 1130,
+      "start": 1133,
+      "end": 1134,
       "loc": {
         "start": {
           "line": 22,
@@ -1887,8 +1887,8 @@
         "binop": null
       },
       "value": "firstFoundOnly",
-      "start": 1133,
-      "end": 1147,
+      "start": 1137,
+      "end": 1151,
       "loc": {
         "start": {
           "line": 23,
@@ -1913,8 +1913,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1147,
-      "end": 1148,
+      "start": 1151,
+      "end": 1152,
       "loc": {
         "start": {
           "line": 23,
@@ -1940,8 +1940,8 @@
         "updateContext": null
       },
       "value": "kHitTestFirstFoundOnly",
-      "start": 1149,
-      "end": 1173,
+      "start": 1153,
+      "end": 1177,
       "loc": {
         "start": {
           "line": 23,
@@ -1966,8 +1966,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1173,
-      "end": 1174,
+      "start": 1177,
+      "end": 1178,
       "loc": {
         "start": {
           "line": 23,
@@ -1992,8 +1992,8 @@
         "binop": null
       },
       "value": "ignoreChildNodes",
-      "start": 1177,
-      "end": 1193,
+      "start": 1181,
+      "end": 1197,
       "loc": {
         "start": {
           "line": 24,
@@ -2018,8 +2018,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1193,
-      "end": 1194,
+      "start": 1197,
+      "end": 1198,
       "loc": {
         "start": {
           "line": 24,
@@ -2045,8 +2045,8 @@
         "updateContext": null
       },
       "value": "kHitTestIgnoreChildNodes",
-      "start": 1195,
-      "end": 1221,
+      "start": 1199,
+      "end": 1225,
       "loc": {
         "start": {
           "line": 24,
@@ -2071,8 +2071,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1221,
-      "end": 1222,
+      "start": 1225,
+      "end": 1226,
       "loc": {
         "start": {
           "line": 24,
@@ -2097,8 +2097,8 @@
         "binop": null
       },
       "value": "ignoreHiddenNodes",
-      "start": 1225,
-      "end": 1242,
+      "start": 1229,
+      "end": 1246,
       "loc": {
         "start": {
           "line": 25,
@@ -2123,8 +2123,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1242,
-      "end": 1243,
+      "start": 1246,
+      "end": 1247,
       "loc": {
         "start": {
           "line": 25,
@@ -2150,8 +2150,8 @@
         "updateContext": null
       },
       "value": "kHitTestSkipHiddenNode",
-      "start": 1244,
-      "end": 1268,
+      "start": 1248,
+      "end": 1272,
       "loc": {
         "start": {
           "line": 25,
@@ -2176,8 +2176,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1268,
-      "end": 1269,
+      "start": 1272,
+      "end": 1273,
       "loc": {
         "start": {
           "line": 25,
@@ -2202,8 +2202,8 @@
         "binop": null
       },
       "value": "rootNode",
-      "start": 1272,
-      "end": 1280,
+      "start": 1276,
+      "end": 1284,
       "loc": {
         "start": {
           "line": 26,
@@ -2228,8 +2228,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1280,
-      "end": 1281,
+      "start": 1284,
+      "end": 1285,
       "loc": {
         "start": {
           "line": 26,
@@ -2255,8 +2255,8 @@
         "updateContext": null
       },
       "value": "kHitTestRootNode",
-      "start": 1282,
-      "end": 1300,
+      "start": 1286,
+      "end": 1304,
       "loc": {
         "start": {
           "line": 26,
@@ -2281,8 +2281,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1300,
-      "end": 1301,
+      "start": 1304,
+      "end": 1305,
       "loc": {
         "start": {
           "line": 26,
@@ -2307,8 +2307,8 @@
         "binop": null
       },
       "value": "sortResults",
-      "start": 1304,
-      "end": 1315,
+      "start": 1308,
+      "end": 1319,
       "loc": {
         "start": {
           "line": 27,
@@ -2333,8 +2333,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1315,
-      "end": 1316,
+      "start": 1319,
+      "end": 1320,
       "loc": {
         "start": {
           "line": 27,
@@ -2360,8 +2360,8 @@
         "updateContext": null
       },
       "value": "kHitTestSortResults",
-      "start": 1317,
-      "end": 1338,
+      "start": 1321,
+      "end": 1342,
       "loc": {
         "start": {
           "line": 27,
@@ -2385,8 +2385,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1339,
-      "end": 1340,
+      "start": 1343,
+      "end": 1344,
       "loc": {
         "start": {
           "line": 28,
@@ -2413,8 +2413,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 1342,
-      "end": 1348,
+      "start": 1346,
+      "end": 1352,
       "loc": {
         "start": {
           "line": 30,
@@ -2441,8 +2441,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 1349,
-      "end": 1356,
+      "start": 1353,
+      "end": 1360,
       "loc": {
         "start": {
           "line": 30,
@@ -2467,8 +2467,8 @@
         "binop": null
       },
       "value": "SCNHitTestOption",
-      "start": 1357,
-      "end": 1373,
+      "start": 1361,
+      "end": 1377,
       "loc": {
         "start": {
           "line": 30,
@@ -2493,8 +2493,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1374,
-      "end": 1374,
+      "start": 1378,
+      "end": 1378,
       "loc": {
         "start": {
           "line": 31,

@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 694,
+  "end": 698,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 694,
+    "end": 698,
     "loc": {
       "start": {
         "line": 1,
@@ -30,8 +30,8 @@
     "body": [
       {
         "type": "Identifier",
-        "start": 609,
-        "end": 653,
+        "start": 613,
+        "end": 657,
         "loc": {
           "start": {
             "line": 11,
@@ -45,8 +45,8 @@
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 615,
-            "end": 653,
+            "start": 619,
+            "end": 657,
             "loc": {
               "start": {
                 "line": 11,
@@ -59,8 +59,8 @@
             },
             "id": {
               "type": "Identifier",
-              "start": 615,
-              "end": 638,
+              "start": 619,
+              "end": 642,
               "loc": {
                 "start": {
                   "line": 11,
@@ -77,8 +77,8 @@
             },
             "init": {
               "type": "ArrowFunctionExpression",
-              "start": 641,
-              "end": 653,
+              "start": 645,
+              "end": 657,
               "loc": {
                 "start": {
                   "line": 11,
@@ -96,8 +96,8 @@
               "params": [
                 {
                   "type": "Identifier",
-                  "start": 642,
-                  "end": 646,
+                  "start": 646,
+                  "end": 650,
                   "loc": {
                     "start": {
                       "line": 11,
@@ -114,8 +114,8 @@
               ],
               "body": {
                 "type": "BlockStatement",
-                "start": 651,
-                "end": 653,
+                "start": 655,
+                "end": 657,
                 "loc": {
                   "start": {
                     "line": 11,
@@ -140,8 +140,8 @@
       },
       {
         "type": "Identifier",
-        "start": 655,
-        "end": 693,
+        "start": 659,
+        "end": 697,
         "loc": {
           "start": {
             "line": 13,
@@ -154,8 +154,8 @@
         },
         "declaration": {
           "type": "Identifier",
-          "start": 670,
-          "end": 693,
+          "start": 674,
+          "end": 697,
           "loc": {
             "start": {
               "line": 13,
@@ -175,8 +175,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 655,
-        "end": 693,
+        "start": 659,
+        "end": 697,
         "loc": {
           "start": {
             "line": 13,
@@ -189,8 +189,8 @@
         },
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 609,
-          "end": 653,
+          "start": 613,
+          "end": 657,
           "loc": {
             "start": {
               "line": 11,
@@ -204,8 +204,8 @@
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 615,
-              "end": 653,
+              "start": 619,
+              "end": 657,
               "loc": {
                 "start": {
                   "line": 11,
@@ -218,8 +218,8 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 615,
-                "end": 638,
+                "start": 619,
+                "end": 642,
                 "loc": {
                   "start": {
                     "line": 11,
@@ -236,8 +236,8 @@
               },
               "init": {
                 "type": "ArrowFunctionExpression",
-                "start": 641,
-                "end": 653,
+                "start": 645,
+                "end": 657,
                 "loc": {
                   "start": {
                     "line": 11,
@@ -250,8 +250,8 @@
                 },
                 "id": {
                   "type": "Identifier",
-                  "start": 615,
-                  "end": 638,
+                  "start": 619,
+                  "end": 642,
                   "loc": {
                     "start": {
                       "line": 11,
@@ -272,8 +272,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 642,
-                    "end": 646,
+                    "start": 646,
+                    "end": 650,
                     "loc": {
                       "start": {
                         "line": 11,
@@ -290,8 +290,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 651,
-                  "end": 653,
+                  "start": 655,
+                  "end": 657,
                   "loc": {
                     "start": {
                       "line": 11,
@@ -313,9 +313,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * The signature for a block that manages animation timing, used by the timingFunction property.\n * @type {function(time: number): number}\n * @param {number} time - A fraction of the action’s The input value for the timing function, as determined by the timingMode property and the action’s current progress.\n * @returns {number} -\n * @desc Your block must return a floating-point value between 0.0 and 1.0, where 0.0 represents the starting state of the action’s animation and 1.0 represents the end state.\n * @see https://developer.apple.com/reference/scenekit/scnactiontimingfunction\n ",
+              "value": "*\n * The signature for a block that manages animation timing, used by the timingFunction property.\n * @type {function(time: number): number}\n * @param {number} time - A fraction of the action’s The input value for the timing function, as determined by the timingMode property and the action’s current progress.\n * @returns {number} -\n * @desc Your block must return a floating-point value between 0.0 and 1.0, where 0.0 represents the starting state of the action’s animation and 1.0 represents the end state.\n * @see https://developer.apple.com/documentation/scenekit/scnactiontimingfunction\n ",
               "start": 14,
-              "end": 608,
+              "end": 612,
               "loc": {
                 "start": {
                   "line": 3,
@@ -371,9 +371,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * The signature for a block that manages animation timing, used by the timingFunction property.\n * @type {function(time: number): number}\n * @param {number} time - A fraction of the action’s The input value for the timing function, as determined by the timingMode property and the action’s current progress.\n * @returns {number} -\n * @desc Your block must return a floating-point value between 0.0 and 1.0, where 0.0 represents the starting state of the action’s animation and 1.0 represents the end state.\n * @see https://developer.apple.com/reference/scenekit/scnactiontimingfunction\n ",
+            "value": "*\n * The signature for a block that manages animation timing, used by the timingFunction property.\n * @type {function(time: number): number}\n * @param {number} time - A fraction of the action’s The input value for the timing function, as determined by the timingMode property and the action’s current progress.\n * @returns {number} -\n * @desc Your block must return a floating-point value between 0.0 and 1.0, where 0.0 represents the starting state of the action’s animation and 1.0 represents the end state.\n * @see https://developer.apple.com/documentation/scenekit/scnactiontimingfunction\n ",
             "start": 14,
-            "end": 608,
+            "end": 612,
             "loc": {
               "start": {
                 "line": 3,
@@ -392,9 +392,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * The signature for a block that manages animation timing, used by the timingFunction property.\n * @type {function(time: number): number}\n * @param {number} time - A fraction of the action’s The input value for the timing function, as determined by the timingMode property and the action’s current progress.\n * @returns {number} -\n * @desc Your block must return a floating-point value between 0.0 and 1.0, where 0.0 represents the starting state of the action’s animation and 1.0 represents the end state.\n * @see https://developer.apple.com/reference/scenekit/scnactiontimingfunction\n ",
+      "value": "*\n * The signature for a block that manages animation timing, used by the timingFunction property.\n * @type {function(time: number): number}\n * @param {number} time - A fraction of the action’s The input value for the timing function, as determined by the timingMode property and the action’s current progress.\n * @returns {number} -\n * @desc Your block must return a floating-point value between 0.0 and 1.0, where 0.0 represents the starting state of the action’s animation and 1.0 represents the end state.\n * @see https://developer.apple.com/documentation/scenekit/scnactiontimingfunction\n ",
       "start": 14,
-      "end": 608,
+      "end": 612,
       "loc": {
         "start": {
           "line": 3,
@@ -437,9 +437,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * The signature for a block that manages animation timing, used by the timingFunction property.\n * @type {function(time: number): number}\n * @param {number} time - A fraction of the action’s The input value for the timing function, as determined by the timingMode property and the action’s current progress.\n * @returns {number} -\n * @desc Your block must return a floating-point value between 0.0 and 1.0, where 0.0 represents the starting state of the action’s animation and 1.0 represents the end state.\n * @see https://developer.apple.com/reference/scenekit/scnactiontimingfunction\n ",
+      "value": "*\n * The signature for a block that manages animation timing, used by the timingFunction property.\n * @type {function(time: number): number}\n * @param {number} time - A fraction of the action’s The input value for the timing function, as determined by the timingMode property and the action’s current progress.\n * @returns {number} -\n * @desc Your block must return a floating-point value between 0.0 and 1.0, where 0.0 represents the starting state of the action’s animation and 1.0 represents the end state.\n * @see https://developer.apple.com/documentation/scenekit/scnactiontimingfunction\n ",
       "start": 14,
-      "end": 608,
+      "end": 612,
       "loc": {
         "start": {
           "line": 3,
@@ -466,8 +466,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 609,
-      "end": 614,
+      "start": 613,
+      "end": 618,
       "loc": {
         "start": {
           "line": 11,
@@ -492,8 +492,8 @@
         "binop": null
       },
       "value": "SCNActionTimingFunction",
-      "start": 615,
-      "end": 638,
+      "start": 619,
+      "end": 642,
       "loc": {
         "start": {
           "line": 11,
@@ -519,8 +519,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 639,
-      "end": 640,
+      "start": 643,
+      "end": 644,
       "loc": {
         "start": {
           "line": 11,
@@ -544,8 +544,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 641,
-      "end": 642,
+      "start": 645,
+      "end": 646,
       "loc": {
         "start": {
           "line": 11,
@@ -570,8 +570,8 @@
         "binop": null
       },
       "value": "time",
-      "start": 642,
-      "end": 646,
+      "start": 646,
+      "end": 650,
       "loc": {
         "start": {
           "line": 11,
@@ -595,8 +595,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 646,
-      "end": 647,
+      "start": 650,
+      "end": 651,
       "loc": {
         "start": {
           "line": 11,
@@ -621,8 +621,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 648,
-      "end": 650,
+      "start": 652,
+      "end": 654,
       "loc": {
         "start": {
           "line": 11,
@@ -646,8 +646,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 651,
-      "end": 652,
+      "start": 655,
+      "end": 656,
       "loc": {
         "start": {
           "line": 11,
@@ -671,8 +671,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 652,
-      "end": 653,
+      "start": 656,
+      "end": 657,
       "loc": {
         "start": {
           "line": 11,
@@ -699,8 +699,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 655,
-      "end": 661,
+      "start": 659,
+      "end": 665,
       "loc": {
         "start": {
           "line": 13,
@@ -727,8 +727,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 662,
-      "end": 669,
+      "start": 666,
+      "end": 673,
       "loc": {
         "start": {
           "line": 13,
@@ -753,8 +753,8 @@
         "binop": null
       },
       "value": "SCNActionTimingFunction",
-      "start": 670,
-      "end": 693,
+      "start": 674,
+      "end": 697,
       "loc": {
         "start": {
           "line": 13,
@@ -779,8 +779,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 694,
-      "end": 694,
+      "start": 698,
+      "end": 698,
       "loc": {
         "start": {
           "line": 14,

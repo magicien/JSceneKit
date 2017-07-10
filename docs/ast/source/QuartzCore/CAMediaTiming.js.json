@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 2436,
+  "end": 2472,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 2436,
+    "end": 2472,
     "loc": {
       "start": {
         "line": 1,
@@ -30,8 +30,8 @@
     "body": [
       {
         "type": "ExportDefaultDeclaration",
-        "start": 228,
-        "end": 2435,
+        "start": 232,
+        "end": 2471,
         "loc": {
           "start": {
             "line": 10,
@@ -44,8 +44,8 @@
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 243,
-          "end": 2435,
+          "start": 247,
+          "end": 2471,
           "loc": {
             "start": {
               "line": 10,
@@ -58,8 +58,8 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 249,
-            "end": 262,
+            "start": 253,
+            "end": 266,
             "loc": {
               "start": {
                 "line": 10,
@@ -77,8 +77,8 @@
           "superClass": null,
           "body": {
             "type": "ClassBody",
-            "start": 263,
-            "end": 2435,
+            "start": 267,
+            "end": 2471,
             "loc": {
               "start": {
                 "line": 10,
@@ -92,8 +92,8 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 335,
-                "end": 2433,
+                "start": 339,
+                "end": 2469,
                 "loc": {
                   "start": {
                     "line": 17,
@@ -107,8 +107,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 335,
-                  "end": 346,
+                  "start": 339,
+                  "end": 350,
                   "loc": {
                     "start": {
                       "line": 17,
@@ -132,8 +132,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 349,
-                  "end": 2433,
+                  "start": 353,
+                  "end": 2469,
                   "loc": {
                     "start": {
                       "line": 17,
@@ -147,8 +147,8 @@
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 623,
-                      "end": 641,
+                      "start": 631,
+                      "end": 649,
                       "loc": {
                         "start": {
                           "line": 26,
@@ -161,8 +161,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 623,
-                        "end": 641,
+                        "start": 631,
+                        "end": 649,
                         "loc": {
                           "start": {
                             "line": 26,
@@ -176,8 +176,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 623,
-                          "end": 637,
+                          "start": 631,
+                          "end": 645,
                           "loc": {
                             "start": {
                               "line": 26,
@@ -190,8 +190,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 623,
-                            "end": 627,
+                            "start": 631,
+                            "end": 635,
                             "loc": {
                               "start": {
                                 "line": 26,
@@ -206,8 +206,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 628,
-                            "end": 637,
+                            "start": 636,
+                            "end": 645,
                             "loc": {
                               "start": {
                                 "line": 26,
@@ -226,8 +226,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 640,
-                          "end": 641,
+                          "start": 648,
+                          "end": 649,
                           "loc": {
                             "start": {
                               "line": 26,
@@ -253,8 +253,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Animation Start Time",
-                          "start": 356,
-                          "end": 379,
+                          "start": 360,
+                          "end": 383,
                           "loc": {
                             "start": {
                               "line": 19,
@@ -268,9 +268,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * Required. Specifies the begin time of the receiver in relation to its parent object, if applicable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427654-begintime\n     ",
-                          "start": 385,
-                          "end": 618,
+                          "value": "*\n     * Required. Specifies the begin time of the receiver in relation to its parent object, if applicable.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427654-begintime\n     ",
+                          "start": 389,
+                          "end": 626,
                           "loc": {
                             "start": {
                               "line": 21,
@@ -286,9 +286,9 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * Required. Specifies an additional time offset in active local time.\n     * @type {number}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427650-timeoffset\n     ",
-                          "start": 647,
-                          "end": 849,
+                          "value": "*\n     * Required. Specifies an additional time offset in active local time.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427650-timeoffset\n     ",
+                          "start": 655,
+                          "end": 861,
                           "loc": {
                             "start": {
                               "line": 28,
@@ -304,8 +304,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 854,
-                      "end": 873,
+                      "start": 866,
+                      "end": 885,
                       "loc": {
                         "start": {
                           "line": 33,
@@ -318,8 +318,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 854,
-                        "end": 873,
+                        "start": 866,
+                        "end": 885,
                         "loc": {
                           "start": {
                             "line": 33,
@@ -333,8 +333,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 854,
-                          "end": 869,
+                          "start": 866,
+                          "end": 881,
                           "loc": {
                             "start": {
                               "line": 33,
@@ -347,8 +347,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 854,
-                            "end": 858,
+                            "start": 866,
+                            "end": 870,
                             "loc": {
                               "start": {
                                 "line": 33,
@@ -363,8 +363,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 859,
-                            "end": 869,
+                            "start": 871,
+                            "end": 881,
                             "loc": {
                               "start": {
                                 "line": 33,
@@ -383,8 +383,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 872,
-                          "end": 873,
+                          "start": 884,
+                          "end": 885,
                           "loc": {
                             "start": {
                               "line": 33,
@@ -409,9 +409,9 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * Required. Specifies an additional time offset in active local time.\n     * @type {number}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427650-timeoffset\n     ",
-                          "start": 647,
-                          "end": 849,
+                          "value": "*\n     * Required. Specifies an additional time offset in active local time.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427650-timeoffset\n     ",
+                          "start": 655,
+                          "end": 861,
                           "loc": {
                             "start": {
                               "line": 28,
@@ -428,8 +428,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Repeating Animations",
-                          "start": 880,
-                          "end": 903,
+                          "start": 892,
+                          "end": 915,
                           "loc": {
                             "start": {
                               "line": 36,
@@ -443,9 +443,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * Required. Determines the number of times the animation will repeat.\n     * @type {number}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427666-repeatcount\n     ",
-                          "start": 909,
-                          "end": 1112,
+                          "value": "*\n     * Required. Determines the number of times the animation will repeat.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427666-repeatcount\n     ",
+                          "start": 921,
+                          "end": 1128,
                           "loc": {
                             "start": {
                               "line": 38,
@@ -461,8 +461,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1117,
-                      "end": 1137,
+                      "start": 1133,
+                      "end": 1153,
                       "loc": {
                         "start": {
                           "line": 43,
@@ -475,8 +475,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1117,
-                        "end": 1137,
+                        "start": 1133,
+                        "end": 1153,
                         "loc": {
                           "start": {
                             "line": 43,
@@ -490,8 +490,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1117,
-                          "end": 1133,
+                          "start": 1133,
+                          "end": 1149,
                           "loc": {
                             "start": {
                               "line": 43,
@@ -504,8 +504,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1117,
-                            "end": 1121,
+                            "start": 1133,
+                            "end": 1137,
                             "loc": {
                               "start": {
                                 "line": 43,
@@ -520,8 +520,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1122,
-                            "end": 1133,
+                            "start": 1138,
+                            "end": 1149,
                             "loc": {
                               "start": {
                                 "line": 43,
@@ -540,8 +540,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 1136,
-                          "end": 1137,
+                          "start": 1152,
+                          "end": 1153,
                           "loc": {
                             "start": {
                               "line": 43,
@@ -567,8 +567,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Repeating Animations",
-                          "start": 880,
-                          "end": 903,
+                          "start": 892,
+                          "end": 915,
                           "loc": {
                             "start": {
                               "line": 36,
@@ -582,9 +582,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * Required. Determines the number of times the animation will repeat.\n     * @type {number}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427666-repeatcount\n     ",
-                          "start": 909,
-                          "end": 1112,
+                          "value": "*\n     * Required. Determines the number of times the animation will repeat.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427666-repeatcount\n     ",
+                          "start": 921,
+                          "end": 1128,
                           "loc": {
                             "start": {
                               "line": 38,
@@ -600,9 +600,9 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * Required. Determines how many seconds the animation will repeat for.\n     * @type {number}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427643-repeatduration\n     ",
-                          "start": 1143,
-                          "end": 1350,
+                          "value": "*\n     * Required. Determines how many seconds the animation will repeat for.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427643-repeatduration\n     ",
+                          "start": 1159,
+                          "end": 1370,
                           "loc": {
                             "start": {
                               "line": 45,
@@ -618,8 +618,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1355,
-                      "end": 1378,
+                      "start": 1375,
+                      "end": 1398,
                       "loc": {
                         "start": {
                           "line": 50,
@@ -632,8 +632,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1355,
-                        "end": 1378,
+                        "start": 1375,
+                        "end": 1398,
                         "loc": {
                           "start": {
                             "line": 50,
@@ -647,8 +647,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1355,
-                          "end": 1374,
+                          "start": 1375,
+                          "end": 1394,
                           "loc": {
                             "start": {
                               "line": 50,
@@ -661,8 +661,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1355,
-                            "end": 1359,
+                            "start": 1375,
+                            "end": 1379,
                             "loc": {
                               "start": {
                                 "line": 50,
@@ -677,8 +677,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1360,
-                            "end": 1374,
+                            "start": 1380,
+                            "end": 1394,
                             "loc": {
                               "start": {
                                 "line": 50,
@@ -697,8 +697,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 1377,
-                          "end": 1378,
+                          "start": 1397,
+                          "end": 1398,
                           "loc": {
                             "start": {
                               "line": 50,
@@ -723,9 +723,9 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * Required. Determines how many seconds the animation will repeat for.\n     * @type {number}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427643-repeatduration\n     ",
-                          "start": 1143,
-                          "end": 1350,
+                          "value": "*\n     * Required. Determines how many seconds the animation will repeat for.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427643-repeatduration\n     ",
+                          "start": 1159,
+                          "end": 1370,
                           "loc": {
                             "start": {
                               "line": 45,
@@ -742,8 +742,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Duration and Speed",
-                          "start": 1385,
-                          "end": 1406,
+                          "start": 1405,
+                          "end": 1426,
                           "loc": {
                             "start": {
                               "line": 53,
@@ -757,9 +757,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * Required. Specifies the basic duration of the animation, in seconds.\n     * @type {number}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427652-duration\n     ",
-                          "start": 1412,
-                          "end": 1613,
+                          "value": "*\n     * Required. Specifies the basic duration of the animation, in seconds.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427652-duration\n     ",
+                          "start": 1432,
+                          "end": 1637,
                           "loc": {
                             "start": {
                               "line": 55,
@@ -775,8 +775,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1618,
-                      "end": 1635,
+                      "start": 1642,
+                      "end": 1659,
                       "loc": {
                         "start": {
                           "line": 60,
@@ -789,8 +789,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1618,
-                        "end": 1635,
+                        "start": 1642,
+                        "end": 1659,
                         "loc": {
                           "start": {
                             "line": 60,
@@ -804,8 +804,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1618,
-                          "end": 1631,
+                          "start": 1642,
+                          "end": 1655,
                           "loc": {
                             "start": {
                               "line": 60,
@@ -818,8 +818,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1618,
-                            "end": 1622,
+                            "start": 1642,
+                            "end": 1646,
                             "loc": {
                               "start": {
                                 "line": 60,
@@ -834,8 +834,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1623,
-                            "end": 1631,
+                            "start": 1647,
+                            "end": 1655,
                             "loc": {
                               "start": {
                                 "line": 60,
@@ -854,8 +854,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 1634,
-                          "end": 1635,
+                          "start": 1658,
+                          "end": 1659,
                           "loc": {
                             "start": {
                               "line": 60,
@@ -881,8 +881,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Duration and Speed",
-                          "start": 1385,
-                          "end": 1406,
+                          "start": 1405,
+                          "end": 1426,
                           "loc": {
                             "start": {
                               "line": 53,
@@ -896,9 +896,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * Required. Specifies the basic duration of the animation, in seconds.\n     * @type {number}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427652-duration\n     ",
-                          "start": 1412,
-                          "end": 1613,
+                          "value": "*\n     * Required. Specifies the basic duration of the animation, in seconds.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427652-duration\n     ",
+                          "start": 1432,
+                          "end": 1637,
                           "loc": {
                             "start": {
                               "line": 55,
@@ -914,9 +914,9 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * Required. Specifies how time is mapped to receiver’s time space from the parent time space. \n     * @type {number}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427647-speed\n     ",
-                          "start": 1641,
-                          "end": 1863,
+                          "value": "*\n     * Required. Specifies how time is mapped to receiver’s time space from the parent time space. \n     * @type {number}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427647-speed\n     ",
+                          "start": 1665,
+                          "end": 1891,
                           "loc": {
                             "start": {
                               "line": 62,
@@ -932,8 +932,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1868,
-                      "end": 1882,
+                      "start": 1896,
+                      "end": 1910,
                       "loc": {
                         "start": {
                           "line": 67,
@@ -946,8 +946,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1868,
-                        "end": 1882,
+                        "start": 1896,
+                        "end": 1910,
                         "loc": {
                           "start": {
                             "line": 67,
@@ -961,8 +961,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1868,
-                          "end": 1878,
+                          "start": 1896,
+                          "end": 1906,
                           "loc": {
                             "start": {
                               "line": 67,
@@ -975,8 +975,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1868,
-                            "end": 1872,
+                            "start": 1896,
+                            "end": 1900,
                             "loc": {
                               "start": {
                                 "line": 67,
@@ -991,8 +991,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1873,
-                            "end": 1878,
+                            "start": 1901,
+                            "end": 1906,
                             "loc": {
                               "start": {
                                 "line": 67,
@@ -1011,8 +1011,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 1881,
-                          "end": 1882,
+                          "start": 1909,
+                          "end": 1910,
                           "loc": {
                             "start": {
                               "line": 67,
@@ -1037,9 +1037,9 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * Required. Specifies how time is mapped to receiver’s time space from the parent time space. \n     * @type {number}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427647-speed\n     ",
-                          "start": 1641,
-                          "end": 1863,
+                          "value": "*\n     * Required. Specifies how time is mapped to receiver’s time space from the parent time space. \n     * @type {number}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427647-speed\n     ",
+                          "start": 1665,
+                          "end": 1891,
                           "loc": {
                             "start": {
                               "line": 62,
@@ -1056,8 +1056,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Playback Modes",
-                          "start": 1889,
-                          "end": 1906,
+                          "start": 1917,
+                          "end": 1934,
                           "loc": {
                             "start": {
                               "line": 70,
@@ -1071,9 +1071,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * Required. Determines if the receiver plays in the reverse upon completion.\n     * @type {boolean}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427645-autoreverses\n     ",
-                          "start": 1912,
-                          "end": 2124,
+                          "value": "*\n     * Required. Determines if the receiver plays in the reverse upon completion.\n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427645-autoreverses\n     ",
+                          "start": 1940,
+                          "end": 2156,
                           "loc": {
                             "start": {
                               "line": 72,
@@ -1089,8 +1089,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2129,
-                      "end": 2154,
+                      "start": 2161,
+                      "end": 2186,
                       "loc": {
                         "start": {
                           "line": 77,
@@ -1103,8 +1103,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2129,
-                        "end": 2154,
+                        "start": 2161,
+                        "end": 2186,
                         "loc": {
                           "start": {
                             "line": 77,
@@ -1118,8 +1118,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2129,
-                          "end": 2146,
+                          "start": 2161,
+                          "end": 2178,
                           "loc": {
                             "start": {
                               "line": 77,
@@ -1132,8 +1132,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2129,
-                            "end": 2133,
+                            "start": 2161,
+                            "end": 2165,
                             "loc": {
                               "start": {
                                 "line": 77,
@@ -1148,8 +1148,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2134,
-                            "end": 2146,
+                            "start": 2166,
+                            "end": 2178,
                             "loc": {
                               "start": {
                                 "line": 77,
@@ -1168,8 +1168,8 @@
                         },
                         "right": {
                           "type": "BooleanLiteral",
-                          "start": 2149,
-                          "end": 2154,
+                          "start": 2181,
+                          "end": 2186,
                           "loc": {
                             "start": {
                               "line": 77,
@@ -1191,8 +1191,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Playback Modes",
-                          "start": 1889,
-                          "end": 1906,
+                          "start": 1917,
+                          "end": 1934,
                           "loc": {
                             "start": {
                               "line": 70,
@@ -1206,9 +1206,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * Required. Determines if the receiver plays in the reverse upon completion.\n     * @type {boolean}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427645-autoreverses\n     ",
-                          "start": 1912,
-                          "end": 2124,
+                          "value": "*\n     * Required. Determines if the receiver plays in the reverse upon completion.\n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427645-autoreverses\n     ",
+                          "start": 1940,
+                          "end": 2156,
                           "loc": {
                             "start": {
                               "line": 72,
@@ -1224,9 +1224,9 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * Required. Determines if the receiver’s presentation is frozen or removed once its active duration has completed.\n     * @type {string}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427656-fillmode\n     ",
-                          "start": 2160,
-                          "end": 2405,
+                          "value": "*\n     * Required. Determines if the receiver’s presentation is frozen or removed once its active duration has completed.\n     * @type {string}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427656-fillmode\n     ",
+                          "start": 2192,
+                          "end": 2441,
                           "loc": {
                             "start": {
                               "line": 79,
@@ -1242,8 +1242,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2410,
-                      "end": 2428,
+                      "start": 2446,
+                      "end": 2464,
                       "loc": {
                         "start": {
                           "line": 84,
@@ -1256,8 +1256,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2410,
-                        "end": 2428,
+                        "start": 2446,
+                        "end": 2464,
                         "loc": {
                           "start": {
                             "line": 84,
@@ -1271,8 +1271,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2410,
-                          "end": 2423,
+                          "start": 2446,
+                          "end": 2459,
                           "loc": {
                             "start": {
                               "line": 84,
@@ -1285,8 +1285,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2410,
-                            "end": 2414,
+                            "start": 2446,
+                            "end": 2450,
                             "loc": {
                               "start": {
                                 "line": 84,
@@ -1301,8 +1301,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2415,
-                            "end": 2423,
+                            "start": 2451,
+                            "end": 2459,
                             "loc": {
                               "start": {
                                 "line": 84,
@@ -1321,8 +1321,8 @@
                         },
                         "right": {
                           "type": "StringLiteral",
-                          "start": 2426,
-                          "end": 2428,
+                          "start": 2462,
+                          "end": 2464,
                           "loc": {
                             "start": {
                               "line": 84,
@@ -1344,9 +1344,9 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * Required. Determines if the receiver’s presentation is frozen or removed once its active duration has completed.\n     * @type {string}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427656-fillmode\n     ",
-                          "start": 2160,
-                          "end": 2405,
+                          "value": "*\n     * Required. Determines if the receiver’s presentation is frozen or removed once its active duration has completed.\n     * @type {string}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427656-fillmode\n     ",
+                          "start": 2192,
+                          "end": 2441,
                           "loc": {
                             "start": {
                               "line": 79,
@@ -1367,8 +1367,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
-                    "start": 268,
-                    "end": 332,
+                    "start": 272,
+                    "end": 336,
                     "loc": {
                       "start": {
                         "line": 12,
@@ -1387,9 +1387,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * Methods that model a hierarchical timing system, allowing objects to map time between their parent and local time. \n * @interface\n * @see https://developer.apple.com/reference/quartzcore/camediatiming\n ",
+              "value": "*\n * Methods that model a hierarchical timing system, allowing objects to map time between their parent and local time. \n * @interface\n * @see https://developer.apple.com/documentation/quartzcore/camediatiming\n ",
               "start": 16,
-              "end": 227,
+              "end": 231,
               "loc": {
                 "start": {
                   "line": 5,
@@ -1407,9 +1407,9 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Methods that model a hierarchical timing system, allowing objects to map time between their parent and local time. \n * @interface\n * @see https://developer.apple.com/reference/quartzcore/camediatiming\n ",
+            "value": "*\n * Methods that model a hierarchical timing system, allowing objects to map time between their parent and local time. \n * @interface\n * @see https://developer.apple.com/documentation/quartzcore/camediatiming\n ",
             "start": 16,
-            "end": 227,
+            "end": 231,
             "loc": {
               "start": {
                 "line": 5,
@@ -1463,9 +1463,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Methods that model a hierarchical timing system, allowing objects to map time between their parent and local time. \n * @interface\n * @see https://developer.apple.com/reference/quartzcore/camediatiming\n ",
+            "value": "*\n * Methods that model a hierarchical timing system, allowing objects to map time between their parent and local time. \n * @interface\n * @see https://developer.apple.com/documentation/quartzcore/camediatiming\n ",
             "start": 16,
-            "end": 227,
+            "end": 231,
             "loc": {
               "start": {
                 "line": 5,
@@ -1484,9 +1484,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * Methods that model a hierarchical timing system, allowing objects to map time between their parent and local time. \n * @interface\n * @see https://developer.apple.com/reference/quartzcore/camediatiming\n ",
+      "value": "*\n * Methods that model a hierarchical timing system, allowing objects to map time between their parent and local time. \n * @interface\n * @see https://developer.apple.com/documentation/quartzcore/camediatiming\n ",
       "start": 16,
-      "end": 227,
+      "end": 231,
       "loc": {
         "start": {
           "line": 5,
@@ -1501,8 +1501,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
-      "start": 268,
-      "end": 332,
+      "start": 272,
+      "end": 336,
       "loc": {
         "start": {
           "line": 12,
@@ -1517,8 +1517,8 @@
     {
       "type": "CommentLine",
       "value": " Animation Start Time",
-      "start": 356,
-      "end": 379,
+      "start": 360,
+      "end": 383,
       "loc": {
         "start": {
           "line": 19,
@@ -1532,9 +1532,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Required. Specifies the begin time of the receiver in relation to its parent object, if applicable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427654-begintime\n     ",
-      "start": 385,
-      "end": 618,
+      "value": "*\n     * Required. Specifies the begin time of the receiver in relation to its parent object, if applicable.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427654-begintime\n     ",
+      "start": 389,
+      "end": 626,
       "loc": {
         "start": {
           "line": 21,
@@ -1548,9 +1548,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Required. Specifies an additional time offset in active local time.\n     * @type {number}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427650-timeoffset\n     ",
-      "start": 647,
-      "end": 849,
+      "value": "*\n     * Required. Specifies an additional time offset in active local time.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427650-timeoffset\n     ",
+      "start": 655,
+      "end": 861,
       "loc": {
         "start": {
           "line": 28,
@@ -1565,8 +1565,8 @@
     {
       "type": "CommentLine",
       "value": " Repeating Animations",
-      "start": 880,
-      "end": 903,
+      "start": 892,
+      "end": 915,
       "loc": {
         "start": {
           "line": 36,
@@ -1580,9 +1580,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Required. Determines the number of times the animation will repeat.\n     * @type {number}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427666-repeatcount\n     ",
-      "start": 909,
-      "end": 1112,
+      "value": "*\n     * Required. Determines the number of times the animation will repeat.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427666-repeatcount\n     ",
+      "start": 921,
+      "end": 1128,
       "loc": {
         "start": {
           "line": 38,
@@ -1596,9 +1596,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Required. Determines how many seconds the animation will repeat for.\n     * @type {number}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427643-repeatduration\n     ",
-      "start": 1143,
-      "end": 1350,
+      "value": "*\n     * Required. Determines how many seconds the animation will repeat for.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427643-repeatduration\n     ",
+      "start": 1159,
+      "end": 1370,
       "loc": {
         "start": {
           "line": 45,
@@ -1613,8 +1613,8 @@
     {
       "type": "CommentLine",
       "value": " Duration and Speed",
-      "start": 1385,
-      "end": 1406,
+      "start": 1405,
+      "end": 1426,
       "loc": {
         "start": {
           "line": 53,
@@ -1628,9 +1628,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Required. Specifies the basic duration of the animation, in seconds.\n     * @type {number}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427652-duration\n     ",
-      "start": 1412,
-      "end": 1613,
+      "value": "*\n     * Required. Specifies the basic duration of the animation, in seconds.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427652-duration\n     ",
+      "start": 1432,
+      "end": 1637,
       "loc": {
         "start": {
           "line": 55,
@@ -1644,9 +1644,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Required. Specifies how time is mapped to receiver’s time space from the parent time space. \n     * @type {number}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427647-speed\n     ",
-      "start": 1641,
-      "end": 1863,
+      "value": "*\n     * Required. Specifies how time is mapped to receiver’s time space from the parent time space. \n     * @type {number}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427647-speed\n     ",
+      "start": 1665,
+      "end": 1891,
       "loc": {
         "start": {
           "line": 62,
@@ -1661,8 +1661,8 @@
     {
       "type": "CommentLine",
       "value": " Playback Modes",
-      "start": 1889,
-      "end": 1906,
+      "start": 1917,
+      "end": 1934,
       "loc": {
         "start": {
           "line": 70,
@@ -1676,9 +1676,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Required. Determines if the receiver plays in the reverse upon completion.\n     * @type {boolean}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427645-autoreverses\n     ",
-      "start": 1912,
-      "end": 2124,
+      "value": "*\n     * Required. Determines if the receiver plays in the reverse upon completion.\n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427645-autoreverses\n     ",
+      "start": 1940,
+      "end": 2156,
       "loc": {
         "start": {
           "line": 72,
@@ -1692,9 +1692,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Required. Determines if the receiver’s presentation is frozen or removed once its active duration has completed.\n     * @type {string}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427656-fillmode\n     ",
-      "start": 2160,
-      "end": 2405,
+      "value": "*\n     * Required. Determines if the receiver’s presentation is frozen or removed once its active duration has completed.\n     * @type {string}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427656-fillmode\n     ",
+      "start": 2192,
+      "end": 2441,
       "loc": {
         "start": {
           "line": 79,
@@ -1737,9 +1737,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Methods that model a hierarchical timing system, allowing objects to map time between their parent and local time. \n * @interface\n * @see https://developer.apple.com/reference/quartzcore/camediatiming\n ",
+      "value": "*\n * Methods that model a hierarchical timing system, allowing objects to map time between their parent and local time. \n * @interface\n * @see https://developer.apple.com/documentation/quartzcore/camediatiming\n ",
       "start": 16,
-      "end": 227,
+      "end": 231,
       "loc": {
         "start": {
           "line": 5,
@@ -1766,8 +1766,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 228,
-      "end": 234,
+      "start": 232,
+      "end": 238,
       "loc": {
         "start": {
           "line": 10,
@@ -1794,8 +1794,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 235,
-      "end": 242,
+      "start": 239,
+      "end": 246,
       "loc": {
         "start": {
           "line": 10,
@@ -1822,8 +1822,8 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 243,
-      "end": 248,
+      "start": 247,
+      "end": 252,
       "loc": {
         "start": {
           "line": 10,
@@ -1848,8 +1848,8 @@
         "binop": null
       },
       "value": "CAMediaTiming",
-      "start": 249,
-      "end": 262,
+      "start": 253,
+      "end": 266,
       "loc": {
         "start": {
           "line": 10,
@@ -1873,8 +1873,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 263,
-      "end": 264,
+      "start": 267,
+      "end": 268,
       "loc": {
         "start": {
           "line": 10,
@@ -1889,8 +1889,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
-      "start": 268,
-      "end": 332,
+      "start": 272,
+      "end": 336,
       "loc": {
         "start": {
           "line": 12,
@@ -1915,8 +1915,8 @@
         "binop": null
       },
       "value": "constructor",
-      "start": 335,
-      "end": 346,
+      "start": 339,
+      "end": 350,
       "loc": {
         "start": {
           "line": 17,
@@ -1940,8 +1940,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 346,
-      "end": 347,
+      "start": 350,
+      "end": 351,
       "loc": {
         "start": {
           "line": 17,
@@ -1965,8 +1965,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 347,
-      "end": 348,
+      "start": 351,
+      "end": 352,
       "loc": {
         "start": {
           "line": 17,
@@ -1990,8 +1990,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 349,
-      "end": 350,
+      "start": 353,
+      "end": 354,
       "loc": {
         "start": {
           "line": 17,
@@ -2006,8 +2006,8 @@
     {
       "type": "CommentLine",
       "value": " Animation Start Time",
-      "start": 356,
-      "end": 379,
+      "start": 360,
+      "end": 383,
       "loc": {
         "start": {
           "line": 19,
@@ -2021,9 +2021,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Required. Specifies the begin time of the receiver in relation to its parent object, if applicable.\n     * @type {number}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427654-begintime\n     ",
-      "start": 385,
-      "end": 618,
+      "value": "*\n     * Required. Specifies the begin time of the receiver in relation to its parent object, if applicable.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427654-begintime\n     ",
+      "start": 389,
+      "end": 626,
       "loc": {
         "start": {
           "line": 21,
@@ -2050,8 +2050,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 623,
-      "end": 627,
+      "start": 631,
+      "end": 635,
       "loc": {
         "start": {
           "line": 26,
@@ -2076,8 +2076,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 627,
-      "end": 628,
+      "start": 635,
+      "end": 636,
       "loc": {
         "start": {
           "line": 26,
@@ -2102,8 +2102,8 @@
         "binop": null
       },
       "value": "beginTime",
-      "start": 628,
-      "end": 637,
+      "start": 636,
+      "end": 645,
       "loc": {
         "start": {
           "line": 26,
@@ -2129,8 +2129,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 638,
-      "end": 639,
+      "start": 646,
+      "end": 647,
       "loc": {
         "start": {
           "line": 26,
@@ -2156,8 +2156,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 640,
-      "end": 641,
+      "start": 648,
+      "end": 649,
       "loc": {
         "start": {
           "line": 26,
@@ -2171,9 +2171,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Required. Specifies an additional time offset in active local time.\n     * @type {number}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427650-timeoffset\n     ",
-      "start": 647,
-      "end": 849,
+      "value": "*\n     * Required. Specifies an additional time offset in active local time.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427650-timeoffset\n     ",
+      "start": 655,
+      "end": 861,
       "loc": {
         "start": {
           "line": 28,
@@ -2200,8 +2200,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 854,
-      "end": 858,
+      "start": 866,
+      "end": 870,
       "loc": {
         "start": {
           "line": 33,
@@ -2226,8 +2226,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 858,
-      "end": 859,
+      "start": 870,
+      "end": 871,
       "loc": {
         "start": {
           "line": 33,
@@ -2252,8 +2252,8 @@
         "binop": null
       },
       "value": "timeOffset",
-      "start": 859,
-      "end": 869,
+      "start": 871,
+      "end": 881,
       "loc": {
         "start": {
           "line": 33,
@@ -2279,8 +2279,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 870,
-      "end": 871,
+      "start": 882,
+      "end": 883,
       "loc": {
         "start": {
           "line": 33,
@@ -2306,8 +2306,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 872,
-      "end": 873,
+      "start": 884,
+      "end": 885,
       "loc": {
         "start": {
           "line": 33,
@@ -2322,8 +2322,8 @@
     {
       "type": "CommentLine",
       "value": " Repeating Animations",
-      "start": 880,
-      "end": 903,
+      "start": 892,
+      "end": 915,
       "loc": {
         "start": {
           "line": 36,
@@ -2337,9 +2337,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Required. Determines the number of times the animation will repeat.\n     * @type {number}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427666-repeatcount\n     ",
-      "start": 909,
-      "end": 1112,
+      "value": "*\n     * Required. Determines the number of times the animation will repeat.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427666-repeatcount\n     ",
+      "start": 921,
+      "end": 1128,
       "loc": {
         "start": {
           "line": 38,
@@ -2366,8 +2366,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1117,
-      "end": 1121,
+      "start": 1133,
+      "end": 1137,
       "loc": {
         "start": {
           "line": 43,
@@ -2392,8 +2392,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1121,
-      "end": 1122,
+      "start": 1137,
+      "end": 1138,
       "loc": {
         "start": {
           "line": 43,
@@ -2418,8 +2418,8 @@
         "binop": null
       },
       "value": "repeatCount",
-      "start": 1122,
-      "end": 1133,
+      "start": 1138,
+      "end": 1149,
       "loc": {
         "start": {
           "line": 43,
@@ -2445,8 +2445,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1134,
-      "end": 1135,
+      "start": 1150,
+      "end": 1151,
       "loc": {
         "start": {
           "line": 43,
@@ -2472,8 +2472,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 1136,
-      "end": 1137,
+      "start": 1152,
+      "end": 1153,
       "loc": {
         "start": {
           "line": 43,
@@ -2487,9 +2487,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Required. Determines how many seconds the animation will repeat for.\n     * @type {number}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427643-repeatduration\n     ",
-      "start": 1143,
-      "end": 1350,
+      "value": "*\n     * Required. Determines how many seconds the animation will repeat for.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427643-repeatduration\n     ",
+      "start": 1159,
+      "end": 1370,
       "loc": {
         "start": {
           "line": 45,
@@ -2516,8 +2516,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1355,
-      "end": 1359,
+      "start": 1375,
+      "end": 1379,
       "loc": {
         "start": {
           "line": 50,
@@ -2542,8 +2542,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1359,
-      "end": 1360,
+      "start": 1379,
+      "end": 1380,
       "loc": {
         "start": {
           "line": 50,
@@ -2568,8 +2568,8 @@
         "binop": null
       },
       "value": "repeatDuration",
-      "start": 1360,
-      "end": 1374,
+      "start": 1380,
+      "end": 1394,
       "loc": {
         "start": {
           "line": 50,
@@ -2595,8 +2595,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1375,
-      "end": 1376,
+      "start": 1395,
+      "end": 1396,
       "loc": {
         "start": {
           "line": 50,
@@ -2622,8 +2622,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 1377,
-      "end": 1378,
+      "start": 1397,
+      "end": 1398,
       "loc": {
         "start": {
           "line": 50,
@@ -2638,8 +2638,8 @@
     {
       "type": "CommentLine",
       "value": " Duration and Speed",
-      "start": 1385,
-      "end": 1406,
+      "start": 1405,
+      "end": 1426,
       "loc": {
         "start": {
           "line": 53,
@@ -2653,9 +2653,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Required. Specifies the basic duration of the animation, in seconds.\n     * @type {number}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427652-duration\n     ",
-      "start": 1412,
-      "end": 1613,
+      "value": "*\n     * Required. Specifies the basic duration of the animation, in seconds.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427652-duration\n     ",
+      "start": 1432,
+      "end": 1637,
       "loc": {
         "start": {
           "line": 55,
@@ -2682,8 +2682,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1618,
-      "end": 1622,
+      "start": 1642,
+      "end": 1646,
       "loc": {
         "start": {
           "line": 60,
@@ -2708,8 +2708,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1622,
-      "end": 1623,
+      "start": 1646,
+      "end": 1647,
       "loc": {
         "start": {
           "line": 60,
@@ -2734,8 +2734,8 @@
         "binop": null
       },
       "value": "duration",
-      "start": 1623,
-      "end": 1631,
+      "start": 1647,
+      "end": 1655,
       "loc": {
         "start": {
           "line": 60,
@@ -2761,8 +2761,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1632,
-      "end": 1633,
+      "start": 1656,
+      "end": 1657,
       "loc": {
         "start": {
           "line": 60,
@@ -2788,8 +2788,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 1634,
-      "end": 1635,
+      "start": 1658,
+      "end": 1659,
       "loc": {
         "start": {
           "line": 60,
@@ -2803,9 +2803,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Required. Specifies how time is mapped to receiver’s time space from the parent time space. \n     * @type {number}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427647-speed\n     ",
-      "start": 1641,
-      "end": 1863,
+      "value": "*\n     * Required. Specifies how time is mapped to receiver’s time space from the parent time space. \n     * @type {number}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427647-speed\n     ",
+      "start": 1665,
+      "end": 1891,
       "loc": {
         "start": {
           "line": 62,
@@ -2832,8 +2832,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1868,
-      "end": 1872,
+      "start": 1896,
+      "end": 1900,
       "loc": {
         "start": {
           "line": 67,
@@ -2858,8 +2858,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1872,
-      "end": 1873,
+      "start": 1900,
+      "end": 1901,
       "loc": {
         "start": {
           "line": 67,
@@ -2884,8 +2884,8 @@
         "binop": null
       },
       "value": "speed",
-      "start": 1873,
-      "end": 1878,
+      "start": 1901,
+      "end": 1906,
       "loc": {
         "start": {
           "line": 67,
@@ -2911,8 +2911,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1879,
-      "end": 1880,
+      "start": 1907,
+      "end": 1908,
       "loc": {
         "start": {
           "line": 67,
@@ -2938,8 +2938,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 1881,
-      "end": 1882,
+      "start": 1909,
+      "end": 1910,
       "loc": {
         "start": {
           "line": 67,
@@ -2954,8 +2954,8 @@
     {
       "type": "CommentLine",
       "value": " Playback Modes",
-      "start": 1889,
-      "end": 1906,
+      "start": 1917,
+      "end": 1934,
       "loc": {
         "start": {
           "line": 70,
@@ -2969,9 +2969,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Required. Determines if the receiver plays in the reverse upon completion.\n     * @type {boolean}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427645-autoreverses\n     ",
-      "start": 1912,
-      "end": 2124,
+      "value": "*\n     * Required. Determines if the receiver plays in the reverse upon completion.\n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427645-autoreverses\n     ",
+      "start": 1940,
+      "end": 2156,
       "loc": {
         "start": {
           "line": 72,
@@ -2998,8 +2998,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2129,
-      "end": 2133,
+      "start": 2161,
+      "end": 2165,
       "loc": {
         "start": {
           "line": 77,
@@ -3024,8 +3024,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2133,
-      "end": 2134,
+      "start": 2165,
+      "end": 2166,
       "loc": {
         "start": {
           "line": 77,
@@ -3050,8 +3050,8 @@
         "binop": null
       },
       "value": "autoreverses",
-      "start": 2134,
-      "end": 2146,
+      "start": 2166,
+      "end": 2178,
       "loc": {
         "start": {
           "line": 77,
@@ -3077,8 +3077,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2147,
-      "end": 2148,
+      "start": 2179,
+      "end": 2180,
       "loc": {
         "start": {
           "line": 77,
@@ -3105,8 +3105,8 @@
         "updateContext": null
       },
       "value": "false",
-      "start": 2149,
-      "end": 2154,
+      "start": 2181,
+      "end": 2186,
       "loc": {
         "start": {
           "line": 77,
@@ -3120,9 +3120,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * Required. Determines if the receiver’s presentation is frozen or removed once its active duration has completed.\n     * @type {string}\n     * @see https://developer.apple.com/reference/quartzcore/camediatiming/1427656-fillmode\n     ",
-      "start": 2160,
-      "end": 2405,
+      "value": "*\n     * Required. Determines if the receiver’s presentation is frozen or removed once its active duration has completed.\n     * @type {string}\n     * @see https://developer.apple.com/documentation/quartzcore/camediatiming/1427656-fillmode\n     ",
+      "start": 2192,
+      "end": 2441,
       "loc": {
         "start": {
           "line": 79,
@@ -3149,8 +3149,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2410,
-      "end": 2414,
+      "start": 2446,
+      "end": 2450,
       "loc": {
         "start": {
           "line": 84,
@@ -3175,8 +3175,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2414,
-      "end": 2415,
+      "start": 2450,
+      "end": 2451,
       "loc": {
         "start": {
           "line": 84,
@@ -3201,8 +3201,8 @@
         "binop": null
       },
       "value": "fillMode",
-      "start": 2415,
-      "end": 2423,
+      "start": 2451,
+      "end": 2459,
       "loc": {
         "start": {
           "line": 84,
@@ -3228,8 +3228,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2424,
-      "end": 2425,
+      "start": 2460,
+      "end": 2461,
       "loc": {
         "start": {
           "line": 84,
@@ -3255,8 +3255,8 @@
         "updateContext": null
       },
       "value": "",
-      "start": 2426,
-      "end": 2428,
+      "start": 2462,
+      "end": 2464,
       "loc": {
         "start": {
           "line": 84,
@@ -3280,8 +3280,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2432,
-      "end": 2433,
+      "start": 2468,
+      "end": 2469,
       "loc": {
         "start": {
           "line": 86,
@@ -3305,8 +3305,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2434,
-      "end": 2435,
+      "start": 2470,
+      "end": 2471,
       "loc": {
         "start": {
           "line": 87,
@@ -3331,8 +3331,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2436,
-      "end": 2436,
+      "start": 2472,
+      "end": 2472,
       "loc": {
         "start": {
           "line": 88,

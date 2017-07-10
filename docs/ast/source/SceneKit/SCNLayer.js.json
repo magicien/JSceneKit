@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 553,
+  "end": 561,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 553,
+    "end": 561,
     "loc": {
       "start": {
         "line": 1,
@@ -101,9 +101,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * A Core Animation layer that renders a SceneKit scene as its content.\n * @access public\n * @see https://developer.apple.com/reference/scenekit/scnlayer\n ",
+            "value": "*\n * A Core Animation layer that renders a SceneKit scene as its content.\n * @access public\n * @see https://developer.apple.com/documentation/scenekit/scnlayer\n ",
             "start": 50,
-            "end": 211,
+            "end": 215,
             "loc": {
               "start": {
                 "line": 6,
@@ -119,8 +119,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 212,
-        "end": 552,
+        "start": 216,
+        "end": 560,
         "loc": {
           "start": {
             "line": 11,
@@ -133,8 +133,8 @@
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 227,
-          "end": 552,
+          "start": 231,
+          "end": 560,
           "loc": {
             "start": {
               "line": 11,
@@ -147,8 +147,8 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 233,
-            "end": 241,
+            "start": 237,
+            "end": 245,
             "loc": {
               "start": {
                 "line": 11,
@@ -166,8 +166,8 @@
           "superClass": null,
           "body": {
             "type": "ClassBody",
-            "start": 242,
-            "end": 552,
+            "start": 246,
+            "end": 560,
             "loc": {
               "start": {
                 "line": 11,
@@ -181,8 +181,8 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 317,
-                "end": 550,
+                "start": 321,
+                "end": 558,
                 "loc": {
                   "start": {
                     "line": 18,
@@ -196,8 +196,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 317,
-                  "end": 321,
+                  "start": 321,
+                  "end": 325,
                   "loc": {
                     "start": {
                       "line": 18,
@@ -221,8 +221,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 324,
-                  "end": 550,
+                  "start": 328,
+                  "end": 558,
                   "loc": {
                     "start": {
                       "line": 18,
@@ -236,8 +236,8 @@
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 528,
-                      "end": 545,
+                      "start": 536,
+                      "end": 553,
                       "loc": {
                         "start": {
                           "line": 27,
@@ -250,8 +250,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 528,
-                        "end": 545,
+                        "start": 536,
+                        "end": 553,
                         "loc": {
                           "start": {
                             "line": 27,
@@ -265,8 +265,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 528,
-                          "end": 538,
+                          "start": 536,
+                          "end": 546,
                           "loc": {
                             "start": {
                               "line": 27,
@@ -279,8 +279,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 528,
-                            "end": 532,
+                            "start": 536,
+                            "end": 540,
                             "loc": {
                               "start": {
                                 "line": 27,
@@ -295,8 +295,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 533,
-                            "end": 538,
+                            "start": 541,
+                            "end": 546,
                             "loc": {
                               "start": {
                                 "line": 27,
@@ -315,8 +315,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 541,
-                          "end": 545,
+                          "start": 549,
+                          "end": 553,
                           "loc": {
                             "start": {
                               "line": 27,
@@ -334,8 +334,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Specifying a Scene",
-                          "start": 331,
-                          "end": 352,
+                          "start": 335,
+                          "end": 356,
                           "loc": {
                             "start": {
                               "line": 20,
@@ -349,9 +349,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The scene to be displayed in the layer.\n     * @type {?SCNScene}\n     * @see https://developer.apple.com/reference/scenekit/scnlayer/1393188-scene\n     ",
-                          "start": 358,
-                          "end": 523,
+                          "value": "*\n     * The scene to be displayed in the layer.\n     * @type {?SCNScene}\n     * @see https://developer.apple.com/documentation/scenekit/scnlayer/1393188-scene\n     ",
+                          "start": 362,
+                          "end": 531,
                           "loc": {
                             "start": {
                               "line": 22,
@@ -372,8 +372,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-                    "start": 247,
-                    "end": 314,
+                    "start": 251,
+                    "end": 318,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -392,9 +392,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * A Core Animation layer that renders a SceneKit scene as its content.\n * @access public\n * @see https://developer.apple.com/reference/scenekit/scnlayer\n ",
+              "value": "*\n * A Core Animation layer that renders a SceneKit scene as its content.\n * @access public\n * @see https://developer.apple.com/documentation/scenekit/scnlayer\n ",
               "start": 50,
-              "end": 211,
+              "end": 215,
               "loc": {
                 "start": {
                   "line": 6,
@@ -412,9 +412,9 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * A Core Animation layer that renders a SceneKit scene as its content.\n * @access public\n * @see https://developer.apple.com/reference/scenekit/scnlayer\n ",
+            "value": "*\n * A Core Animation layer that renders a SceneKit scene as its content.\n * @access public\n * @see https://developer.apple.com/documentation/scenekit/scnlayer\n ",
             "start": 50,
-            "end": 211,
+            "end": 215,
             "loc": {
               "start": {
                 "line": 6,
@@ -470,9 +470,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * A Core Animation layer that renders a SceneKit scene as its content.\n * @access public\n * @see https://developer.apple.com/reference/scenekit/scnlayer\n ",
+      "value": "*\n * A Core Animation layer that renders a SceneKit scene as its content.\n * @access public\n * @see https://developer.apple.com/documentation/scenekit/scnlayer\n ",
       "start": 50,
-      "end": 211,
+      "end": 215,
       "loc": {
         "start": {
           "line": 6,
@@ -487,8 +487,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 247,
-      "end": 314,
+      "start": 251,
+      "end": 318,
       "loc": {
         "start": {
           "line": 13,
@@ -503,8 +503,8 @@
     {
       "type": "CommentLine",
       "value": " Specifying a Scene",
-      "start": 331,
-      "end": 352,
+      "start": 335,
+      "end": 356,
       "loc": {
         "start": {
           "line": 20,
@@ -518,9 +518,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The scene to be displayed in the layer.\n     * @type {?SCNScene}\n     * @see https://developer.apple.com/reference/scenekit/scnlayer/1393188-scene\n     ",
-      "start": 358,
-      "end": 523,
+      "value": "*\n     * The scene to be displayed in the layer.\n     * @type {?SCNScene}\n     * @see https://developer.apple.com/documentation/scenekit/scnlayer/1393188-scene\n     ",
+      "start": 362,
+      "end": 531,
       "loc": {
         "start": {
           "line": 22,
@@ -670,9 +670,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * A Core Animation layer that renders a SceneKit scene as its content.\n * @access public\n * @see https://developer.apple.com/reference/scenekit/scnlayer\n ",
+      "value": "*\n * A Core Animation layer that renders a SceneKit scene as its content.\n * @access public\n * @see https://developer.apple.com/documentation/scenekit/scnlayer\n ",
       "start": 50,
-      "end": 211,
+      "end": 215,
       "loc": {
         "start": {
           "line": 6,
@@ -699,8 +699,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 212,
-      "end": 218,
+      "start": 216,
+      "end": 222,
       "loc": {
         "start": {
           "line": 11,
@@ -727,8 +727,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 219,
-      "end": 226,
+      "start": 223,
+      "end": 230,
       "loc": {
         "start": {
           "line": 11,
@@ -755,8 +755,8 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 227,
-      "end": 232,
+      "start": 231,
+      "end": 236,
       "loc": {
         "start": {
           "line": 11,
@@ -781,8 +781,8 @@
         "binop": null
       },
       "value": "SCNLayer",
-      "start": 233,
-      "end": 241,
+      "start": 237,
+      "end": 245,
       "loc": {
         "start": {
           "line": 11,
@@ -806,8 +806,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 242,
-      "end": 243,
+      "start": 246,
+      "end": 247,
       "loc": {
         "start": {
           "line": 11,
@@ -822,8 +822,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 247,
-      "end": 314,
+      "start": 251,
+      "end": 318,
       "loc": {
         "start": {
           "line": 13,
@@ -848,8 +848,8 @@
         "binop": null
       },
       "value": "init",
-      "start": 317,
-      "end": 321,
+      "start": 321,
+      "end": 325,
       "loc": {
         "start": {
           "line": 18,
@@ -873,8 +873,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 321,
-      "end": 322,
+      "start": 325,
+      "end": 326,
       "loc": {
         "start": {
           "line": 18,
@@ -898,8 +898,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 322,
-      "end": 323,
+      "start": 326,
+      "end": 327,
       "loc": {
         "start": {
           "line": 18,
@@ -923,8 +923,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 324,
-      "end": 325,
+      "start": 328,
+      "end": 329,
       "loc": {
         "start": {
           "line": 18,
@@ -939,8 +939,8 @@
     {
       "type": "CommentLine",
       "value": " Specifying a Scene",
-      "start": 331,
-      "end": 352,
+      "start": 335,
+      "end": 356,
       "loc": {
         "start": {
           "line": 20,
@@ -954,9 +954,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The scene to be displayed in the layer.\n     * @type {?SCNScene}\n     * @see https://developer.apple.com/reference/scenekit/scnlayer/1393188-scene\n     ",
-      "start": 358,
-      "end": 523,
+      "value": "*\n     * The scene to be displayed in the layer.\n     * @type {?SCNScene}\n     * @see https://developer.apple.com/documentation/scenekit/scnlayer/1393188-scene\n     ",
+      "start": 362,
+      "end": 531,
       "loc": {
         "start": {
           "line": 22,
@@ -983,8 +983,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 528,
-      "end": 532,
+      "start": 536,
+      "end": 540,
       "loc": {
         "start": {
           "line": 27,
@@ -1009,8 +1009,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 532,
-      "end": 533,
+      "start": 540,
+      "end": 541,
       "loc": {
         "start": {
           "line": 27,
@@ -1035,8 +1035,8 @@
         "binop": null
       },
       "value": "scene",
-      "start": 533,
-      "end": 538,
+      "start": 541,
+      "end": 546,
       "loc": {
         "start": {
           "line": 27,
@@ -1062,8 +1062,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 539,
-      "end": 540,
+      "start": 547,
+      "end": 548,
       "loc": {
         "start": {
           "line": 27,
@@ -1090,8 +1090,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 541,
-      "end": 545,
+      "start": 549,
+      "end": 553,
       "loc": {
         "start": {
           "line": 27,
@@ -1115,8 +1115,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 549,
-      "end": 550,
+      "start": 557,
+      "end": 558,
       "loc": {
         "start": {
           "line": 29,
@@ -1140,8 +1140,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 551,
-      "end": 552,
+      "start": 559,
+      "end": 560,
       "loc": {
         "start": {
           "line": 30,
@@ -1166,8 +1166,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 553,
-      "end": 553,
+      "start": 561,
+      "end": 561,
       "loc": {
         "start": {
           "line": 31,

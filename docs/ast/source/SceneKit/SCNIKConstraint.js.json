@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 6244,
+  "end": 6272,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 6244,
+    "end": 6272,
     "loc": {
       "start": {
         "line": 1,
@@ -239,9 +239,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * A constraint that applies inverse kinematics to make a chain of nodes “reach” toward a target point.\n * @access public\n * @extends {SCNConstraint}\n * @see https://developer.apple.com/reference/scenekit/scnikconstraint\n ",
+            "value": "*\n * A constraint that applies inverse kinematics to make a chain of nodes “reach” toward a target point.\n * @access public\n * @extends {SCNConstraint}\n * @see https://developer.apple.com/documentation/scenekit/scnikconstraint\n ",
             "start": 130,
-            "end": 358,
+            "end": 362,
             "loc": {
               "start": {
                 "line": 8,
@@ -257,8 +257,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 359,
-        "end": 6243,
+        "start": 363,
+        "end": 6271,
         "loc": {
           "start": {
             "line": 14,
@@ -271,8 +271,8 @@
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 374,
-          "end": 6243,
+          "start": 378,
+          "end": 6271,
           "loc": {
             "start": {
               "line": 14,
@@ -285,8 +285,8 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 380,
-            "end": 395,
+            "start": 384,
+            "end": 399,
             "loc": {
               "start": {
                 "line": 14,
@@ -303,8 +303,8 @@
           },
           "superClass": {
             "type": "Identifier",
-            "start": 404,
-            "end": 417,
+            "start": 408,
+            "end": 421,
             "loc": {
               "start": {
                 "line": 14,
@@ -320,8 +320,8 @@
           },
           "body": {
             "type": "ClassBody",
-            "start": 418,
-            "end": 6243,
+            "start": 422,
+            "end": 6271,
             "loc": {
               "start": {
                 "line": 14,
@@ -335,8 +335,8 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 1635,
-                "end": 2082,
+                "start": 1643,
+                "end": 2094,
                 "loc": {
                   "start": {
                     "line": 26,
@@ -350,8 +350,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1635,
-                  "end": 1639,
+                  "start": 1643,
+                  "end": 1647,
                   "loc": {
                     "start": {
                       "line": 26,
@@ -375,8 +375,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 1640,
-                    "end": 1653,
+                    "start": 1648,
+                    "end": 1661,
                     "loc": {
                       "start": {
                         "line": 26,
@@ -393,8 +393,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1655,
-                  "end": 2082,
+                  "start": 1663,
+                  "end": 2094,
                   "loc": {
                     "start": {
                       "line": 26,
@@ -408,8 +408,8 @@
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 1714,
-                      "end": 1740,
+                      "start": 1722,
+                      "end": 1748,
                       "loc": {
                         "start": {
                           "line": 30,
@@ -422,8 +422,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1714,
-                        "end": 1740,
+                        "start": 1722,
+                        "end": 1748,
                         "loc": {
                           "start": {
                             "line": 30,
@@ -437,8 +437,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1714,
-                          "end": 1733,
+                          "start": 1722,
+                          "end": 1741,
                           "loc": {
                             "start": {
                               "line": 30,
@@ -451,8 +451,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1714,
-                            "end": 1718,
+                            "start": 1722,
+                            "end": 1726,
                             "loc": {
                               "start": {
                                 "line": 30,
@@ -467,8 +467,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1719,
-                            "end": 1733,
+                            "start": 1727,
+                            "end": 1741,
                             "loc": {
                               "start": {
                                 "line": 30,
@@ -487,8 +487,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 1736,
-                          "end": 1740,
+                          "start": 1744,
+                          "end": 1748,
                           "loc": {
                             "start": {
                               "line": 30,
@@ -509,8 +509,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Adjusting the Constraint’s Limits of Motion",
-                          "start": 1662,
-                          "end": 1708,
+                          "start": 1670,
+                          "end": 1716,
                           "loc": {
                             "start": {
                               "line": 28,
@@ -527,8 +527,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Applying Inverse Kinematics to the Constrained Node",
-                          "start": 1746,
-                          "end": 1800,
+                          "start": 1754,
+                          "end": 1808,
                           "loc": {
                             "start": {
                               "line": 32,
@@ -542,9 +542,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The desired position for the constrained node, in the scene’s world coordinate space. Animatable.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnikconstraint/1468651-targetposition\n     ",
-                          "start": 1806,
-                          "end": 2046,
+                          "value": "*\n     * The desired position for the constrained node, in the scene’s world coordinate space. Animatable.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnikconstraint/1468651-targetposition\n     ",
+                          "start": 1814,
+                          "end": 2058,
                           "loc": {
                             "start": {
                               "line": 34,
@@ -560,8 +560,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2051,
-                      "end": 2077,
+                      "start": 2063,
+                      "end": 2089,
                       "loc": {
                         "start": {
                           "line": 39,
@@ -574,8 +574,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2051,
-                        "end": 2077,
+                        "start": 2063,
+                        "end": 2089,
                         "loc": {
                           "start": {
                             "line": 39,
@@ -589,8 +589,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2051,
-                          "end": 2070,
+                          "start": 2063,
+                          "end": 2082,
                           "loc": {
                             "start": {
                               "line": 39,
@@ -603,8 +603,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2051,
-                            "end": 2055,
+                            "start": 2063,
+                            "end": 2067,
                             "loc": {
                               "start": {
                                 "line": 39,
@@ -619,8 +619,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2056,
-                            "end": 2070,
+                            "start": 2068,
+                            "end": 2082,
                             "loc": {
                               "start": {
                                 "line": 39,
@@ -639,8 +639,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 2073,
-                          "end": 2077,
+                          "start": 2085,
+                          "end": 2089,
                           "loc": {
                             "start": {
                               "line": 39,
@@ -658,8 +658,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Applying Inverse Kinematics to the Constrained Node",
-                          "start": 1746,
-                          "end": 1800,
+                          "start": 1754,
+                          "end": 1808,
                           "loc": {
                             "start": {
                               "line": 32,
@@ -673,9 +673,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The desired position for the constrained node, in the scene’s world coordinate space. Animatable.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnikconstraint/1468651-targetposition\n     ",
-                          "start": 1806,
-                          "end": 2046,
+                          "value": "*\n     * The desired position for the constrained node, in the scene’s world coordinate space. Animatable.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnikconstraint/1468651-targetposition\n     ",
+                          "start": 1814,
+                          "end": 2058,
                           "loc": {
                             "start": {
                               "line": 34,
@@ -697,8 +697,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Creating an Inverse Kinematics Constraint",
-                    "start": 423,
-                    "end": 467,
+                    "start": 427,
+                    "end": 471,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -712,9 +712,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Initializes an inverse kinematics constraint whose chain of nodes begins with the specified node.\n   * @access public\n   * @param {SCNNode} chainRootNode - \n   * @returns {void}\n   * @desc The root node is the highest node in the hierarchy moved by the constraint. For example, a robot arm may have two arm segments and a hand connected to a body. The upper arm is a child node of the body, the lower arm is a child node of the upper arm, and the hand is a child node of the lower arm. In this case, the upper arm is the chain root node, because the body should not move to follow the hand.The node you apply the constraint to (using that node’s constraints property) is the end effector of the chain—the lowest node in the hierarchy. When you set the constraint’s targetPosition property, SceneKit attempts to move this node toward the target point by rotating it relative to its parent node (and rotating its parent and ancestor nodes, up the chain ending with the chainRoot node). Continuing the above example, the end effector of the robot arm is its hand.\n   * @see https://developer.apple.com/reference/scenekit/scnikconstraint/1468694-init\n   ",
-                    "start": 471,
-                    "end": 1632,
+                    "value": "*\n   * Initializes an inverse kinematics constraint whose chain of nodes begins with the specified node.\n   * @access public\n   * @param {SCNNode} chainRootNode - \n   * @returns {void}\n   * @desc The root node is the highest node in the hierarchy moved by the constraint. For example, a robot arm may have two arm segments and a hand connected to a body. The upper arm is a child node of the body, the lower arm is a child node of the upper arm, and the hand is a child node of the lower arm. In this case, the upper arm is the chain root node, because the body should not move to follow the hand.The node you apply the constraint to (using that node’s constraints property) is the end effector of the chain—the lowest node in the hierarchy. When you set the constraint’s targetPosition property, SceneKit attempts to move this node toward the target point by rotating it relative to its parent node (and rotating its parent and ancestor nodes, up the chain ending with the chainRoot node). Continuing the above example, the end effector of the robot arm is its hand.\n   * @see https://developer.apple.com/documentation/scenekit/scnikconstraint/1468694-init\n   ",
+                    "start": 475,
+                    "end": 1640,
                     "loc": {
                       "start": {
                         "line": 18,
@@ -730,9 +730,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Creates an inverse kinematics constraint whose chain of nodes begins with the specified node.\n   * @access public\n   * @param {SCNNode} chainRootNode - \n   * @returns {SCNIKConstraint} - \n   * @desc The root node is the highest node in the hierarchy moved by the constraint. For example, a robot arm may have two arm segments and a hand connected to a body. The upper arm is a child node of the body, the lower arm is a child node of the upper arm, and the hand is a child node of the lower arm. In this case, the upper arm is the chain root node, because the body should not move to follow the hand.The node you apply the constraint to (using that node’s constraints property) is the end effector of the chain—the lowest node in the hierarchy. When you set the constraint’s targetPosition property, SceneKit attempts to move this node toward the target point by rotating it relative to its parent node (and rotating its parent and ancestor nodes, up the chain ending with the chainRoot node). Continuing the above example, the end effector of the robot arm is its hand.\n   * @see https://developer.apple.com/reference/scenekit/scnikconstraint/1468653-inversekinematicsconstraint\n   ",
-                    "start": 2086,
-                    "end": 3280,
+                    "value": "*\n   * Creates an inverse kinematics constraint whose chain of nodes begins with the specified node.\n   * @access public\n   * @param {SCNNode} chainRootNode - \n   * @returns {SCNIKConstraint} - \n   * @desc The root node is the highest node in the hierarchy moved by the constraint. For example, a robot arm may have two arm segments and a hand connected to a body. The upper arm is a child node of the body, the lower arm is a child node of the upper arm, and the hand is a child node of the lower arm. In this case, the upper arm is the chain root node, because the body should not move to follow the hand.The node you apply the constraint to (using that node’s constraints property) is the end effector of the chain—the lowest node in the hierarchy. When you set the constraint’s targetPosition property, SceneKit attempts to move this node toward the target point by rotating it relative to its parent node (and rotating its parent and ancestor nodes, up the chain ending with the chainRoot node). Continuing the above example, the end effector of the robot arm is its hand.\n   * @see https://developer.apple.com/documentation/scenekit/scnikconstraint/1468653-inversekinematicsconstraint\n   ",
+                    "start": 2098,
+                    "end": 3296,
                     "loc": {
                       "start": {
                         "line": 43,
@@ -748,8 +748,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 3283,
-                "end": 3354,
+                "start": 3299,
+                "end": 3370,
                 "loc": {
                   "start": {
                     "line": 51,
@@ -763,8 +763,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 3290,
-                  "end": 3317,
+                  "start": 3306,
+                  "end": 3333,
                   "loc": {
                     "start": {
                       "line": 51,
@@ -787,8 +787,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 3318,
-                    "end": 3331,
+                    "start": 3334,
+                    "end": 3347,
                     "loc": {
                       "start": {
                         "line": 51,
@@ -805,8 +805,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 3333,
-                  "end": 3354,
+                  "start": 3349,
+                  "end": 3370,
                   "loc": {
                     "start": {
                       "line": 51,
@@ -820,8 +820,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 3339,
-                      "end": 3350,
+                      "start": 3355,
+                      "end": 3366,
                       "loc": {
                         "start": {
                           "line": 52,
@@ -834,8 +834,8 @@
                       },
                       "argument": {
                         "type": "NullLiteral",
-                        "start": 3346,
-                        "end": 3350,
+                        "start": 3362,
+                        "end": 3366,
                         "loc": {
                           "start": {
                             "line": 52,
@@ -855,9 +855,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Creates an inverse kinematics constraint whose chain of nodes begins with the specified node.\n   * @access public\n   * @param {SCNNode} chainRootNode - \n   * @returns {SCNIKConstraint} - \n   * @desc The root node is the highest node in the hierarchy moved by the constraint. For example, a robot arm may have two arm segments and a hand connected to a body. The upper arm is a child node of the body, the lower arm is a child node of the upper arm, and the hand is a child node of the lower arm. In this case, the upper arm is the chain root node, because the body should not move to follow the hand.The node you apply the constraint to (using that node’s constraints property) is the end effector of the chain—the lowest node in the hierarchy. When you set the constraint’s targetPosition property, SceneKit attempts to move this node toward the target point by rotating it relative to its parent node (and rotating its parent and ancestor nodes, up the chain ending with the chainRoot node). Continuing the above example, the end effector of the robot arm is its hand.\n   * @see https://developer.apple.com/reference/scenekit/scnikconstraint/1468653-inversekinematicsconstraint\n   ",
-                    "start": 2086,
-                    "end": 3280,
+                    "value": "*\n   * Creates an inverse kinematics constraint whose chain of nodes begins with the specified node.\n   * @access public\n   * @param {SCNNode} chainRootNode - \n   * @returns {SCNIKConstraint} - \n   * @desc The root node is the highest node in the hierarchy moved by the constraint. For example, a robot arm may have two arm segments and a hand connected to a body. The upper arm is a child node of the body, the lower arm is a child node of the upper arm, and the hand is a child node of the lower arm. In this case, the upper arm is the chain root node, because the body should not move to follow the hand.The node you apply the constraint to (using that node’s constraints property) is the end effector of the chain—the lowest node in the hierarchy. When you set the constraint’s targetPosition property, SceneKit attempts to move this node toward the target point by rotating it relative to its parent node (and rotating its parent and ancestor nodes, up the chain ending with the chainRoot node). Continuing the above example, the end effector of the robot arm is its hand.\n   * @see https://developer.apple.com/documentation/scenekit/scnikconstraint/1468653-inversekinematicsconstraint\n   ",
+                    "start": 2098,
+                    "end": 3296,
                     "loc": {
                       "start": {
                         "line": 43,
@@ -874,8 +874,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Adjusting the Constraint’s Limits of Motion",
-                    "start": 3358,
-                    "end": 3404,
+                    "start": 3374,
+                    "end": 3420,
                     "loc": {
                       "start": {
                         "line": 55,
@@ -889,9 +889,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Returns the rotation limit, in degrees, for the specified node.\n   * @access public\n   * @param {SCNNode} node - A node affected by the constraint—either the node whose constraints property references the constraint or one of that node’s parent or ancestor nodes, up to the node specified by the constraint’s chainRootNode property.\n   * @returns {number} - \n   * @desc When SceneKit evaluates the IK constraint, it checks the target orientations of each node in the chain relative to their initial orientations (as of when the constraint was applied to a node). For each node in the chain, SceneKit limits the rotation (in any direction) between the initial and target orientations to the value returned by this method.The default rotation limit for each joint is 180 degrees in either direction, allowing unconstrained rotation.\n   * @see https://developer.apple.com/reference/scenekit/scnikconstraint/1468681-maxallowedrotationangle\n   ",
-                    "start": 3408,
-                    "end": 4358,
+                    "value": "*\n   * Returns the rotation limit, in degrees, for the specified node.\n   * @access public\n   * @param {SCNNode} node - A node affected by the constraint—either the node whose constraints property references the constraint or one of that node’s parent or ancestor nodes, up to the node specified by the constraint’s chainRootNode property.\n   * @returns {number} - \n   * @desc When SceneKit evaluates the IK constraint, it checks the target orientations of each node in the chain relative to their initial orientations (as of when the constraint was applied to a node). For each node in the chain, SceneKit limits the rotation (in any direction) between the initial and target orientations to the value returned by this method.The default rotation limit for each joint is 180 degrees in either direction, allowing unconstrained rotation.\n   * @see https://developer.apple.com/documentation/scenekit/scnikconstraint/1468681-maxallowedrotationangle\n   ",
+                    "start": 3424,
+                    "end": 4378,
                     "loc": {
                       "start": {
                         "line": 57,
@@ -907,8 +907,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 4361,
-                "end": 4417,
+                "start": 4381,
+                "end": 4437,
                 "loc": {
                   "start": {
                     "line": 65,
@@ -922,8 +922,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 4361,
-                  "end": 4392,
+                  "start": 4381,
+                  "end": 4412,
                   "loc": {
                     "start": {
                       "line": 65,
@@ -947,8 +947,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 4393,
-                    "end": 4397,
+                    "start": 4413,
+                    "end": 4417,
                     "loc": {
                       "start": {
                         "line": 65,
@@ -965,8 +965,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 4399,
-                  "end": 4417,
+                  "start": 4419,
+                  "end": 4437,
                   "loc": {
                     "start": {
                       "line": 65,
@@ -980,8 +980,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 4405,
-                      "end": 4413,
+                      "start": 4425,
+                      "end": 4433,
                       "loc": {
                         "start": {
                           "line": 66,
@@ -994,8 +994,8 @@
                       },
                       "argument": {
                         "type": "NumericLiteral",
-                        "start": 4412,
-                        "end": 4413,
+                        "start": 4432,
+                        "end": 4433,
                         "loc": {
                           "start": {
                             "line": 66,
@@ -1021,8 +1021,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Adjusting the Constraint’s Limits of Motion",
-                    "start": 3358,
-                    "end": 3404,
+                    "start": 3374,
+                    "end": 3420,
                     "loc": {
                       "start": {
                         "line": 55,
@@ -1036,9 +1036,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Returns the rotation limit, in degrees, for the specified node.\n   * @access public\n   * @param {SCNNode} node - A node affected by the constraint—either the node whose constraints property references the constraint or one of that node’s parent or ancestor nodes, up to the node specified by the constraint’s chainRootNode property.\n   * @returns {number} - \n   * @desc When SceneKit evaluates the IK constraint, it checks the target orientations of each node in the chain relative to their initial orientations (as of when the constraint was applied to a node). For each node in the chain, SceneKit limits the rotation (in any direction) between the initial and target orientations to the value returned by this method.The default rotation limit for each joint is 180 degrees in either direction, allowing unconstrained rotation.\n   * @see https://developer.apple.com/reference/scenekit/scnikconstraint/1468681-maxallowedrotationangle\n   ",
-                    "start": 3408,
-                    "end": 4358,
+                    "value": "*\n   * Returns the rotation limit, in degrees, for the specified node.\n   * @access public\n   * @param {SCNNode} node - A node affected by the constraint—either the node whose constraints property references the constraint or one of that node’s parent or ancestor nodes, up to the node specified by the constraint’s chainRootNode property.\n   * @returns {number} - \n   * @desc When SceneKit evaluates the IK constraint, it checks the target orientations of each node in the chain relative to their initial orientations (as of when the constraint was applied to a node). For each node in the chain, SceneKit limits the rotation (in any direction) between the initial and target orientations to the value returned by this method.The default rotation limit for each joint is 180 degrees in either direction, allowing unconstrained rotation.\n   * @see https://developer.apple.com/documentation/scenekit/scnikconstraint/1468681-maxallowedrotationangle\n   ",
+                    "start": 3424,
+                    "end": 4378,
                     "loc": {
                       "start": {
                         "line": 57,
@@ -1054,9 +1054,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Sets the rotation limit, in degrees, for the specified node.\n   * @access public\n   * @param {number} angle - The maximum rotation, in degrees, that SceneKit should apply to the specified node when evaluating the constraint.\n   * @param {SCNNode} node - A node affected by the constraint—either the node whose constraints property references the constraint, or one of that node’s parent or ancestor nodes up to the node specified by the constraint’s chainRootNode property.\n   * @returns {void}\n   * @desc When SceneKit evaluates the IK constraint, it checks the target orientations of each node in the chain relative to their initial orientations (as of when the constraint was applied to a node). For each node in the chain, SceneKit limits the rotation (in any direction) between the initial and target orientations to the angle value specified with this method.The default rotation limit for each joint is 180 degrees in either direction, allowing unconstrained rotation.\n   * @see https://developer.apple.com/reference/scenekit/scnikconstraint/1468649-setmaxallowedrotationangle\n   ",
-                    "start": 4421,
-                    "end": 5519,
+                    "value": "*\n   * Sets the rotation limit, in degrees, for the specified node.\n   * @access public\n   * @param {number} angle - The maximum rotation, in degrees, that SceneKit should apply to the specified node when evaluating the constraint.\n   * @param {SCNNode} node - A node affected by the constraint—either the node whose constraints property references the constraint, or one of that node’s parent or ancestor nodes up to the node specified by the constraint’s chainRootNode property.\n   * @returns {void}\n   * @desc When SceneKit evaluates the IK constraint, it checks the target orientations of each node in the chain relative to their initial orientations (as of when the constraint was applied to a node). For each node in the chain, SceneKit limits the rotation (in any direction) between the initial and target orientations to the angle value specified with this method.The default rotation limit for each joint is 180 degrees in either direction, allowing unconstrained rotation.\n   * @see https://developer.apple.com/documentation/scenekit/scnikconstraint/1468649-setmaxallowedrotationangle\n   ",
+                    "start": 4441,
+                    "end": 5543,
                     "loc": {
                       "start": {
                         "line": 69,
@@ -1072,8 +1072,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 5522,
-                "end": 5575,
+                "start": 5546,
+                "end": 5599,
                 "loc": {
                   "start": {
                     "line": 78,
@@ -1087,8 +1087,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 5522,
-                  "end": 5556,
+                  "start": 5546,
+                  "end": 5580,
                   "loc": {
                     "start": {
                       "line": 78,
@@ -1112,8 +1112,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 5557,
-                    "end": 5562,
+                    "start": 5581,
+                    "end": 5586,
                     "loc": {
                       "start": {
                         "line": 78,
@@ -1129,8 +1129,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 5564,
-                    "end": 5568,
+                    "start": 5588,
+                    "end": 5592,
                     "loc": {
                       "start": {
                         "line": 78,
@@ -1147,8 +1147,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 5570,
-                  "end": 5575,
+                  "start": 5594,
+                  "end": 5599,
                   "loc": {
                     "start": {
                       "line": 78,
@@ -1167,9 +1167,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Sets the rotation limit, in degrees, for the specified node.\n   * @access public\n   * @param {number} angle - The maximum rotation, in degrees, that SceneKit should apply to the specified node when evaluating the constraint.\n   * @param {SCNNode} node - A node affected by the constraint—either the node whose constraints property references the constraint, or one of that node’s parent or ancestor nodes up to the node specified by the constraint’s chainRootNode property.\n   * @returns {void}\n   * @desc When SceneKit evaluates the IK constraint, it checks the target orientations of each node in the chain relative to their initial orientations (as of when the constraint was applied to a node). For each node in the chain, SceneKit limits the rotation (in any direction) between the initial and target orientations to the angle value specified with this method.The default rotation limit for each joint is 180 degrees in either direction, allowing unconstrained rotation.\n   * @see https://developer.apple.com/reference/scenekit/scnikconstraint/1468649-setmaxallowedrotationangle\n   ",
-                    "start": 4421,
-                    "end": 5519,
+                    "value": "*\n   * Sets the rotation limit, in degrees, for the specified node.\n   * @access public\n   * @param {number} angle - The maximum rotation, in degrees, that SceneKit should apply to the specified node when evaluating the constraint.\n   * @param {SCNNode} node - A node affected by the constraint—either the node whose constraints property references the constraint, or one of that node’s parent or ancestor nodes up to the node specified by the constraint’s chainRootNode property.\n   * @returns {void}\n   * @desc When SceneKit evaluates the IK constraint, it checks the target orientations of each node in the chain relative to their initial orientations (as of when the constraint was applied to a node). For each node in the chain, SceneKit limits the rotation (in any direction) between the initial and target orientations to the angle value specified with this method.The default rotation limit for each joint is 180 degrees in either direction, allowing unconstrained rotation.\n   * @see https://developer.apple.com/documentation/scenekit/scnikconstraint/1468649-setmaxallowedrotationangle\n   ",
+                    "start": 4441,
+                    "end": 5543,
                     "loc": {
                       "start": {
                         "line": 69,
@@ -1185,9 +1185,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The parent node of the hierarchy affected by the constraint.\n   * @type {SCNNode}\n   * @desc The root node is the highest node in the hierarchy moved by the constraint. For example, a robot arm may have two arm segments and a hand connected to a body. The upper arm is a child node of the body, the lower arm is a child node of the upper arm, and the hand is a child node of the lower arm. In this case, the upper arm is the chain root node, because the body should not move to follow the hand.\n   * @see https://developer.apple.com/reference/scenekit/scnikconstraint/1468690-chainrootnode\n   ",
-                    "start": 5578,
-                    "end": 6182,
+                    "value": "*\n   * The parent node of the hierarchy affected by the constraint.\n   * @type {SCNNode}\n   * @desc The root node is the highest node in the hierarchy moved by the constraint. For example, a robot arm may have two arm segments and a hand connected to a body. The upper arm is a child node of the body, the lower arm is a child node of the upper arm, and the hand is a child node of the lower arm. In this case, the upper arm is the chain root node, because the body should not move to follow the hand.\n   * @see https://developer.apple.com/documentation/scenekit/scnikconstraint/1468690-chainrootnode\n   ",
+                    "start": 5602,
+                    "end": 6210,
                     "loc": {
                       "start": {
                         "line": 80,
@@ -1203,8 +1203,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 6185,
-                "end": 6241,
+                "start": 6213,
+                "end": 6269,
                 "loc": {
                   "start": {
                     "line": 86,
@@ -1218,8 +1218,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 6189,
-                  "end": 6202,
+                  "start": 6217,
+                  "end": 6230,
                   "loc": {
                     "start": {
                       "line": 86,
@@ -1242,8 +1242,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 6205,
-                  "end": 6241,
+                  "start": 6233,
+                  "end": 6269,
                   "loc": {
                     "start": {
                       "line": 86,
@@ -1257,8 +1257,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 6211,
-                      "end": 6237,
+                      "start": 6239,
+                      "end": 6265,
                       "loc": {
                         "start": {
                           "line": 87,
@@ -1271,8 +1271,8 @@
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 6218,
-                        "end": 6237,
+                        "start": 6246,
+                        "end": 6265,
                         "loc": {
                           "start": {
                             "line": 87,
@@ -1285,8 +1285,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 6218,
-                          "end": 6222,
+                          "start": 6246,
+                          "end": 6250,
                           "loc": {
                             "start": {
                               "line": 87,
@@ -1300,8 +1300,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 6223,
-                          "end": 6237,
+                          "start": 6251,
+                          "end": 6265,
                           "loc": {
                             "start": {
                               "line": 87,
@@ -1324,9 +1324,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The parent node of the hierarchy affected by the constraint.\n   * @type {SCNNode}\n   * @desc The root node is the highest node in the hierarchy moved by the constraint. For example, a robot arm may have two arm segments and a hand connected to a body. The upper arm is a child node of the body, the lower arm is a child node of the upper arm, and the hand is a child node of the lower arm. In this case, the upper arm is the chain root node, because the body should not move to follow the hand.\n   * @see https://developer.apple.com/reference/scenekit/scnikconstraint/1468690-chainrootnode\n   ",
-                    "start": 5578,
-                    "end": 6182,
+                    "value": "*\n   * The parent node of the hierarchy affected by the constraint.\n   * @type {SCNNode}\n   * @desc The root node is the highest node in the hierarchy moved by the constraint. For example, a robot arm may have two arm segments and a hand connected to a body. The upper arm is a child node of the body, the lower arm is a child node of the upper arm, and the hand is a child node of the lower arm. In this case, the upper arm is the chain root node, because the body should not move to follow the hand.\n   * @see https://developer.apple.com/documentation/scenekit/scnikconstraint/1468690-chainrootnode\n   ",
+                    "start": 5602,
+                    "end": 6210,
                     "loc": {
                       "start": {
                         "line": 80,
@@ -1345,9 +1345,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * A constraint that applies inverse kinematics to make a chain of nodes “reach” toward a target point.\n * @access public\n * @extends {SCNConstraint}\n * @see https://developer.apple.com/reference/scenekit/scnikconstraint\n ",
+              "value": "*\n * A constraint that applies inverse kinematics to make a chain of nodes “reach” toward a target point.\n * @access public\n * @extends {SCNConstraint}\n * @see https://developer.apple.com/documentation/scenekit/scnikconstraint\n ",
               "start": 130,
-              "end": 358,
+              "end": 362,
               "loc": {
                 "start": {
                   "line": 8,
@@ -1365,9 +1365,9 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * A constraint that applies inverse kinematics to make a chain of nodes “reach” toward a target point.\n * @access public\n * @extends {SCNConstraint}\n * @see https://developer.apple.com/reference/scenekit/scnikconstraint\n ",
+            "value": "*\n * A constraint that applies inverse kinematics to make a chain of nodes “reach” toward a target point.\n * @access public\n * @extends {SCNConstraint}\n * @see https://developer.apple.com/documentation/scenekit/scnikconstraint\n ",
             "start": 130,
-            "end": 358,
+            "end": 362,
             "loc": {
               "start": {
                 "line": 8,
@@ -1423,9 +1423,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * A constraint that applies inverse kinematics to make a chain of nodes “reach” toward a target point.\n * @access public\n * @extends {SCNConstraint}\n * @see https://developer.apple.com/reference/scenekit/scnikconstraint\n ",
+      "value": "*\n * A constraint that applies inverse kinematics to make a chain of nodes “reach” toward a target point.\n * @access public\n * @extends {SCNConstraint}\n * @see https://developer.apple.com/documentation/scenekit/scnikconstraint\n ",
       "start": 130,
-      "end": 358,
+      "end": 362,
       "loc": {
         "start": {
           "line": 8,
@@ -1440,8 +1440,8 @@
     {
       "type": "CommentLine",
       "value": " Creating an Inverse Kinematics Constraint",
-      "start": 423,
-      "end": 467,
+      "start": 427,
+      "end": 471,
       "loc": {
         "start": {
           "line": 16,
@@ -1455,9 +1455,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Initializes an inverse kinematics constraint whose chain of nodes begins with the specified node.\n   * @access public\n   * @param {SCNNode} chainRootNode - \n   * @returns {void}\n   * @desc The root node is the highest node in the hierarchy moved by the constraint. For example, a robot arm may have two arm segments and a hand connected to a body. The upper arm is a child node of the body, the lower arm is a child node of the upper arm, and the hand is a child node of the lower arm. In this case, the upper arm is the chain root node, because the body should not move to follow the hand.The node you apply the constraint to (using that node’s constraints property) is the end effector of the chain—the lowest node in the hierarchy. When you set the constraint’s targetPosition property, SceneKit attempts to move this node toward the target point by rotating it relative to its parent node (and rotating its parent and ancestor nodes, up the chain ending with the chainRoot node). Continuing the above example, the end effector of the robot arm is its hand.\n   * @see https://developer.apple.com/reference/scenekit/scnikconstraint/1468694-init\n   ",
-      "start": 471,
-      "end": 1632,
+      "value": "*\n   * Initializes an inverse kinematics constraint whose chain of nodes begins with the specified node.\n   * @access public\n   * @param {SCNNode} chainRootNode - \n   * @returns {void}\n   * @desc The root node is the highest node in the hierarchy moved by the constraint. For example, a robot arm may have two arm segments and a hand connected to a body. The upper arm is a child node of the body, the lower arm is a child node of the upper arm, and the hand is a child node of the lower arm. In this case, the upper arm is the chain root node, because the body should not move to follow the hand.The node you apply the constraint to (using that node’s constraints property) is the end effector of the chain—the lowest node in the hierarchy. When you set the constraint’s targetPosition property, SceneKit attempts to move this node toward the target point by rotating it relative to its parent node (and rotating its parent and ancestor nodes, up the chain ending with the chainRoot node). Continuing the above example, the end effector of the robot arm is its hand.\n   * @see https://developer.apple.com/documentation/scenekit/scnikconstraint/1468694-init\n   ",
+      "start": 475,
+      "end": 1640,
       "loc": {
         "start": {
           "line": 18,
@@ -1472,8 +1472,8 @@
     {
       "type": "CommentLine",
       "value": " Adjusting the Constraint’s Limits of Motion",
-      "start": 1662,
-      "end": 1708,
+      "start": 1670,
+      "end": 1716,
       "loc": {
         "start": {
           "line": 28,
@@ -1488,8 +1488,8 @@
     {
       "type": "CommentLine",
       "value": " Applying Inverse Kinematics to the Constrained Node",
-      "start": 1746,
-      "end": 1800,
+      "start": 1754,
+      "end": 1808,
       "loc": {
         "start": {
           "line": 32,
@@ -1503,9 +1503,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The desired position for the constrained node, in the scene’s world coordinate space. Animatable.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnikconstraint/1468651-targetposition\n     ",
-      "start": 1806,
-      "end": 2046,
+      "value": "*\n     * The desired position for the constrained node, in the scene’s world coordinate space. Animatable.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnikconstraint/1468651-targetposition\n     ",
+      "start": 1814,
+      "end": 2058,
       "loc": {
         "start": {
           "line": 34,
@@ -1519,9 +1519,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Creates an inverse kinematics constraint whose chain of nodes begins with the specified node.\n   * @access public\n   * @param {SCNNode} chainRootNode - \n   * @returns {SCNIKConstraint} - \n   * @desc The root node is the highest node in the hierarchy moved by the constraint. For example, a robot arm may have two arm segments and a hand connected to a body. The upper arm is a child node of the body, the lower arm is a child node of the upper arm, and the hand is a child node of the lower arm. In this case, the upper arm is the chain root node, because the body should not move to follow the hand.The node you apply the constraint to (using that node’s constraints property) is the end effector of the chain—the lowest node in the hierarchy. When you set the constraint’s targetPosition property, SceneKit attempts to move this node toward the target point by rotating it relative to its parent node (and rotating its parent and ancestor nodes, up the chain ending with the chainRoot node). Continuing the above example, the end effector of the robot arm is its hand.\n   * @see https://developer.apple.com/reference/scenekit/scnikconstraint/1468653-inversekinematicsconstraint\n   ",
-      "start": 2086,
-      "end": 3280,
+      "value": "*\n   * Creates an inverse kinematics constraint whose chain of nodes begins with the specified node.\n   * @access public\n   * @param {SCNNode} chainRootNode - \n   * @returns {SCNIKConstraint} - \n   * @desc The root node is the highest node in the hierarchy moved by the constraint. For example, a robot arm may have two arm segments and a hand connected to a body. The upper arm is a child node of the body, the lower arm is a child node of the upper arm, and the hand is a child node of the lower arm. In this case, the upper arm is the chain root node, because the body should not move to follow the hand.The node you apply the constraint to (using that node’s constraints property) is the end effector of the chain—the lowest node in the hierarchy. When you set the constraint’s targetPosition property, SceneKit attempts to move this node toward the target point by rotating it relative to its parent node (and rotating its parent and ancestor nodes, up the chain ending with the chainRoot node). Continuing the above example, the end effector of the robot arm is its hand.\n   * @see https://developer.apple.com/documentation/scenekit/scnikconstraint/1468653-inversekinematicsconstraint\n   ",
+      "start": 2098,
+      "end": 3296,
       "loc": {
         "start": {
           "line": 43,
@@ -1536,8 +1536,8 @@
     {
       "type": "CommentLine",
       "value": " Adjusting the Constraint’s Limits of Motion",
-      "start": 3358,
-      "end": 3404,
+      "start": 3374,
+      "end": 3420,
       "loc": {
         "start": {
           "line": 55,
@@ -1551,9 +1551,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Returns the rotation limit, in degrees, for the specified node.\n   * @access public\n   * @param {SCNNode} node - A node affected by the constraint—either the node whose constraints property references the constraint or one of that node’s parent or ancestor nodes, up to the node specified by the constraint’s chainRootNode property.\n   * @returns {number} - \n   * @desc When SceneKit evaluates the IK constraint, it checks the target orientations of each node in the chain relative to their initial orientations (as of when the constraint was applied to a node). For each node in the chain, SceneKit limits the rotation (in any direction) between the initial and target orientations to the value returned by this method.The default rotation limit for each joint is 180 degrees in either direction, allowing unconstrained rotation.\n   * @see https://developer.apple.com/reference/scenekit/scnikconstraint/1468681-maxallowedrotationangle\n   ",
-      "start": 3408,
-      "end": 4358,
+      "value": "*\n   * Returns the rotation limit, in degrees, for the specified node.\n   * @access public\n   * @param {SCNNode} node - A node affected by the constraint—either the node whose constraints property references the constraint or one of that node’s parent or ancestor nodes, up to the node specified by the constraint’s chainRootNode property.\n   * @returns {number} - \n   * @desc When SceneKit evaluates the IK constraint, it checks the target orientations of each node in the chain relative to their initial orientations (as of when the constraint was applied to a node). For each node in the chain, SceneKit limits the rotation (in any direction) between the initial and target orientations to the value returned by this method.The default rotation limit for each joint is 180 degrees in either direction, allowing unconstrained rotation.\n   * @see https://developer.apple.com/documentation/scenekit/scnikconstraint/1468681-maxallowedrotationangle\n   ",
+      "start": 3424,
+      "end": 4378,
       "loc": {
         "start": {
           "line": 57,
@@ -1567,9 +1567,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Sets the rotation limit, in degrees, for the specified node.\n   * @access public\n   * @param {number} angle - The maximum rotation, in degrees, that SceneKit should apply to the specified node when evaluating the constraint.\n   * @param {SCNNode} node - A node affected by the constraint—either the node whose constraints property references the constraint, or one of that node’s parent or ancestor nodes up to the node specified by the constraint’s chainRootNode property.\n   * @returns {void}\n   * @desc When SceneKit evaluates the IK constraint, it checks the target orientations of each node in the chain relative to their initial orientations (as of when the constraint was applied to a node). For each node in the chain, SceneKit limits the rotation (in any direction) between the initial and target orientations to the angle value specified with this method.The default rotation limit for each joint is 180 degrees in either direction, allowing unconstrained rotation.\n   * @see https://developer.apple.com/reference/scenekit/scnikconstraint/1468649-setmaxallowedrotationangle\n   ",
-      "start": 4421,
-      "end": 5519,
+      "value": "*\n   * Sets the rotation limit, in degrees, for the specified node.\n   * @access public\n   * @param {number} angle - The maximum rotation, in degrees, that SceneKit should apply to the specified node when evaluating the constraint.\n   * @param {SCNNode} node - A node affected by the constraint—either the node whose constraints property references the constraint, or one of that node’s parent or ancestor nodes up to the node specified by the constraint’s chainRootNode property.\n   * @returns {void}\n   * @desc When SceneKit evaluates the IK constraint, it checks the target orientations of each node in the chain relative to their initial orientations (as of when the constraint was applied to a node). For each node in the chain, SceneKit limits the rotation (in any direction) between the initial and target orientations to the angle value specified with this method.The default rotation limit for each joint is 180 degrees in either direction, allowing unconstrained rotation.\n   * @see https://developer.apple.com/documentation/scenekit/scnikconstraint/1468649-setmaxallowedrotationangle\n   ",
+      "start": 4441,
+      "end": 5543,
       "loc": {
         "start": {
           "line": 69,
@@ -1583,9 +1583,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The parent node of the hierarchy affected by the constraint.\n   * @type {SCNNode}\n   * @desc The root node is the highest node in the hierarchy moved by the constraint. For example, a robot arm may have two arm segments and a hand connected to a body. The upper arm is a child node of the body, the lower arm is a child node of the upper arm, and the hand is a child node of the lower arm. In this case, the upper arm is the chain root node, because the body should not move to follow the hand.\n   * @see https://developer.apple.com/reference/scenekit/scnikconstraint/1468690-chainrootnode\n   ",
-      "start": 5578,
-      "end": 6182,
+      "value": "*\n   * The parent node of the hierarchy affected by the constraint.\n   * @type {SCNNode}\n   * @desc The root node is the highest node in the hierarchy moved by the constraint. For example, a robot arm may have two arm segments and a hand connected to a body. The upper arm is a child node of the body, the lower arm is a child node of the upper arm, and the hand is a child node of the lower arm. In this case, the upper arm is the chain root node, because the body should not move to follow the hand.\n   * @see https://developer.apple.com/documentation/scenekit/scnikconstraint/1468690-chainrootnode\n   ",
+      "start": 5602,
+      "end": 6210,
       "loc": {
         "start": {
           "line": 80,
@@ -1949,9 +1949,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * A constraint that applies inverse kinematics to make a chain of nodes “reach” toward a target point.\n * @access public\n * @extends {SCNConstraint}\n * @see https://developer.apple.com/reference/scenekit/scnikconstraint\n ",
+      "value": "*\n * A constraint that applies inverse kinematics to make a chain of nodes “reach” toward a target point.\n * @access public\n * @extends {SCNConstraint}\n * @see https://developer.apple.com/documentation/scenekit/scnikconstraint\n ",
       "start": 130,
-      "end": 358,
+      "end": 362,
       "loc": {
         "start": {
           "line": 8,
@@ -1978,8 +1978,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 359,
-      "end": 365,
+      "start": 363,
+      "end": 369,
       "loc": {
         "start": {
           "line": 14,
@@ -2006,8 +2006,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 366,
-      "end": 373,
+      "start": 370,
+      "end": 377,
       "loc": {
         "start": {
           "line": 14,
@@ -2034,8 +2034,8 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 374,
-      "end": 379,
+      "start": 378,
+      "end": 383,
       "loc": {
         "start": {
           "line": 14,
@@ -2060,8 +2060,8 @@
         "binop": null
       },
       "value": "SCNIKConstraint",
-      "start": 380,
-      "end": 395,
+      "start": 384,
+      "end": 399,
       "loc": {
         "start": {
           "line": 14,
@@ -2088,8 +2088,8 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 396,
-      "end": 403,
+      "start": 400,
+      "end": 407,
       "loc": {
         "start": {
           "line": 14,
@@ -2114,8 +2114,8 @@
         "binop": null
       },
       "value": "SCNConstraint",
-      "start": 404,
-      "end": 417,
+      "start": 408,
+      "end": 421,
       "loc": {
         "start": {
           "line": 14,
@@ -2139,8 +2139,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 418,
-      "end": 419,
+      "start": 422,
+      "end": 423,
       "loc": {
         "start": {
           "line": 14,
@@ -2155,8 +2155,8 @@
     {
       "type": "CommentLine",
       "value": " Creating an Inverse Kinematics Constraint",
-      "start": 423,
-      "end": 467,
+      "start": 427,
+      "end": 471,
       "loc": {
         "start": {
           "line": 16,
@@ -2170,9 +2170,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Initializes an inverse kinematics constraint whose chain of nodes begins with the specified node.\n   * @access public\n   * @param {SCNNode} chainRootNode - \n   * @returns {void}\n   * @desc The root node is the highest node in the hierarchy moved by the constraint. For example, a robot arm may have two arm segments and a hand connected to a body. The upper arm is a child node of the body, the lower arm is a child node of the upper arm, and the hand is a child node of the lower arm. In this case, the upper arm is the chain root node, because the body should not move to follow the hand.The node you apply the constraint to (using that node’s constraints property) is the end effector of the chain—the lowest node in the hierarchy. When you set the constraint’s targetPosition property, SceneKit attempts to move this node toward the target point by rotating it relative to its parent node (and rotating its parent and ancestor nodes, up the chain ending with the chainRoot node). Continuing the above example, the end effector of the robot arm is its hand.\n   * @see https://developer.apple.com/reference/scenekit/scnikconstraint/1468694-init\n   ",
-      "start": 471,
-      "end": 1632,
+      "value": "*\n   * Initializes an inverse kinematics constraint whose chain of nodes begins with the specified node.\n   * @access public\n   * @param {SCNNode} chainRootNode - \n   * @returns {void}\n   * @desc The root node is the highest node in the hierarchy moved by the constraint. For example, a robot arm may have two arm segments and a hand connected to a body. The upper arm is a child node of the body, the lower arm is a child node of the upper arm, and the hand is a child node of the lower arm. In this case, the upper arm is the chain root node, because the body should not move to follow the hand.The node you apply the constraint to (using that node’s constraints property) is the end effector of the chain—the lowest node in the hierarchy. When you set the constraint’s targetPosition property, SceneKit attempts to move this node toward the target point by rotating it relative to its parent node (and rotating its parent and ancestor nodes, up the chain ending with the chainRoot node). Continuing the above example, the end effector of the robot arm is its hand.\n   * @see https://developer.apple.com/documentation/scenekit/scnikconstraint/1468694-init\n   ",
+      "start": 475,
+      "end": 1640,
       "loc": {
         "start": {
           "line": 18,
@@ -2197,8 +2197,8 @@
         "binop": null
       },
       "value": "init",
-      "start": 1635,
-      "end": 1639,
+      "start": 1643,
+      "end": 1647,
       "loc": {
         "start": {
           "line": 26,
@@ -2222,8 +2222,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1639,
-      "end": 1640,
+      "start": 1647,
+      "end": 1648,
       "loc": {
         "start": {
           "line": 26,
@@ -2248,8 +2248,8 @@
         "binop": null
       },
       "value": "chainRootNode",
-      "start": 1640,
-      "end": 1653,
+      "start": 1648,
+      "end": 1661,
       "loc": {
         "start": {
           "line": 26,
@@ -2273,8 +2273,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1653,
-      "end": 1654,
+      "start": 1661,
+      "end": 1662,
       "loc": {
         "start": {
           "line": 26,
@@ -2298,8 +2298,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1655,
-      "end": 1656,
+      "start": 1663,
+      "end": 1664,
       "loc": {
         "start": {
           "line": 26,
@@ -2314,8 +2314,8 @@
     {
       "type": "CommentLine",
       "value": " Adjusting the Constraint’s Limits of Motion",
-      "start": 1662,
-      "end": 1708,
+      "start": 1670,
+      "end": 1716,
       "loc": {
         "start": {
           "line": 28,
@@ -2342,8 +2342,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1714,
-      "end": 1718,
+      "start": 1722,
+      "end": 1726,
       "loc": {
         "start": {
           "line": 30,
@@ -2368,8 +2368,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1718,
-      "end": 1719,
+      "start": 1726,
+      "end": 1727,
       "loc": {
         "start": {
           "line": 30,
@@ -2394,8 +2394,8 @@
         "binop": null
       },
       "value": "_chainRootNode",
-      "start": 1719,
-      "end": 1733,
+      "start": 1727,
+      "end": 1741,
       "loc": {
         "start": {
           "line": 30,
@@ -2421,8 +2421,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1734,
-      "end": 1735,
+      "start": 1742,
+      "end": 1743,
       "loc": {
         "start": {
           "line": 30,
@@ -2449,8 +2449,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 1736,
-      "end": 1740,
+      "start": 1744,
+      "end": 1748,
       "loc": {
         "start": {
           "line": 30,
@@ -2465,8 +2465,8 @@
     {
       "type": "CommentLine",
       "value": " Applying Inverse Kinematics to the Constrained Node",
-      "start": 1746,
-      "end": 1800,
+      "start": 1754,
+      "end": 1808,
       "loc": {
         "start": {
           "line": 32,
@@ -2480,9 +2480,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The desired position for the constrained node, in the scene’s world coordinate space. Animatable.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnikconstraint/1468651-targetposition\n     ",
-      "start": 1806,
-      "end": 2046,
+      "value": "*\n     * The desired position for the constrained node, in the scene’s world coordinate space. Animatable.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnikconstraint/1468651-targetposition\n     ",
+      "start": 1814,
+      "end": 2058,
       "loc": {
         "start": {
           "line": 34,
@@ -2509,8 +2509,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2051,
-      "end": 2055,
+      "start": 2063,
+      "end": 2067,
       "loc": {
         "start": {
           "line": 39,
@@ -2535,8 +2535,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2055,
-      "end": 2056,
+      "start": 2067,
+      "end": 2068,
       "loc": {
         "start": {
           "line": 39,
@@ -2561,8 +2561,8 @@
         "binop": null
       },
       "value": "targetPosition",
-      "start": 2056,
-      "end": 2070,
+      "start": 2068,
+      "end": 2082,
       "loc": {
         "start": {
           "line": 39,
@@ -2588,8 +2588,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2071,
-      "end": 2072,
+      "start": 2083,
+      "end": 2084,
       "loc": {
         "start": {
           "line": 39,
@@ -2616,8 +2616,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2073,
-      "end": 2077,
+      "start": 2085,
+      "end": 2089,
       "loc": {
         "start": {
           "line": 39,
@@ -2641,8 +2641,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2081,
-      "end": 2082,
+      "start": 2093,
+      "end": 2094,
       "loc": {
         "start": {
           "line": 41,
@@ -2656,9 +2656,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Creates an inverse kinematics constraint whose chain of nodes begins with the specified node.\n   * @access public\n   * @param {SCNNode} chainRootNode - \n   * @returns {SCNIKConstraint} - \n   * @desc The root node is the highest node in the hierarchy moved by the constraint. For example, a robot arm may have two arm segments and a hand connected to a body. The upper arm is a child node of the body, the lower arm is a child node of the upper arm, and the hand is a child node of the lower arm. In this case, the upper arm is the chain root node, because the body should not move to follow the hand.The node you apply the constraint to (using that node’s constraints property) is the end effector of the chain—the lowest node in the hierarchy. When you set the constraint’s targetPosition property, SceneKit attempts to move this node toward the target point by rotating it relative to its parent node (and rotating its parent and ancestor nodes, up the chain ending with the chainRoot node). Continuing the above example, the end effector of the robot arm is its hand.\n   * @see https://developer.apple.com/reference/scenekit/scnikconstraint/1468653-inversekinematicsconstraint\n   ",
-      "start": 2086,
-      "end": 3280,
+      "value": "*\n   * Creates an inverse kinematics constraint whose chain of nodes begins with the specified node.\n   * @access public\n   * @param {SCNNode} chainRootNode - \n   * @returns {SCNIKConstraint} - \n   * @desc The root node is the highest node in the hierarchy moved by the constraint. For example, a robot arm may have two arm segments and a hand connected to a body. The upper arm is a child node of the body, the lower arm is a child node of the upper arm, and the hand is a child node of the lower arm. In this case, the upper arm is the chain root node, because the body should not move to follow the hand.The node you apply the constraint to (using that node’s constraints property) is the end effector of the chain—the lowest node in the hierarchy. When you set the constraint’s targetPosition property, SceneKit attempts to move this node toward the target point by rotating it relative to its parent node (and rotating its parent and ancestor nodes, up the chain ending with the chainRoot node). Continuing the above example, the end effector of the robot arm is its hand.\n   * @see https://developer.apple.com/documentation/scenekit/scnikconstraint/1468653-inversekinematicsconstraint\n   ",
+      "start": 2098,
+      "end": 3296,
       "loc": {
         "start": {
           "line": 43,
@@ -2683,8 +2683,8 @@
         "binop": null
       },
       "value": "static",
-      "start": 3283,
-      "end": 3289,
+      "start": 3299,
+      "end": 3305,
       "loc": {
         "start": {
           "line": 51,
@@ -2709,8 +2709,8 @@
         "binop": null
       },
       "value": "inverseKinematicsConstraint",
-      "start": 3290,
-      "end": 3317,
+      "start": 3306,
+      "end": 3333,
       "loc": {
         "start": {
           "line": 51,
@@ -2734,8 +2734,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3317,
-      "end": 3318,
+      "start": 3333,
+      "end": 3334,
       "loc": {
         "start": {
           "line": 51,
@@ -2760,8 +2760,8 @@
         "binop": null
       },
       "value": "chainRootNode",
-      "start": 3318,
-      "end": 3331,
+      "start": 3334,
+      "end": 3347,
       "loc": {
         "start": {
           "line": 51,
@@ -2785,8 +2785,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3331,
-      "end": 3332,
+      "start": 3347,
+      "end": 3348,
       "loc": {
         "start": {
           "line": 51,
@@ -2810,8 +2810,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3333,
-      "end": 3334,
+      "start": 3349,
+      "end": 3350,
       "loc": {
         "start": {
           "line": 51,
@@ -2838,8 +2838,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 3339,
-      "end": 3345,
+      "start": 3355,
+      "end": 3361,
       "loc": {
         "start": {
           "line": 52,
@@ -2866,8 +2866,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 3346,
-      "end": 3350,
+      "start": 3362,
+      "end": 3366,
       "loc": {
         "start": {
           "line": 52,
@@ -2891,8 +2891,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3353,
-      "end": 3354,
+      "start": 3369,
+      "end": 3370,
       "loc": {
         "start": {
           "line": 53,
@@ -2907,8 +2907,8 @@
     {
       "type": "CommentLine",
       "value": " Adjusting the Constraint’s Limits of Motion",
-      "start": 3358,
-      "end": 3404,
+      "start": 3374,
+      "end": 3420,
       "loc": {
         "start": {
           "line": 55,
@@ -2922,9 +2922,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Returns the rotation limit, in degrees, for the specified node.\n   * @access public\n   * @param {SCNNode} node - A node affected by the constraint—either the node whose constraints property references the constraint or one of that node’s parent or ancestor nodes, up to the node specified by the constraint’s chainRootNode property.\n   * @returns {number} - \n   * @desc When SceneKit evaluates the IK constraint, it checks the target orientations of each node in the chain relative to their initial orientations (as of when the constraint was applied to a node). For each node in the chain, SceneKit limits the rotation (in any direction) between the initial and target orientations to the value returned by this method.The default rotation limit for each joint is 180 degrees in either direction, allowing unconstrained rotation.\n   * @see https://developer.apple.com/reference/scenekit/scnikconstraint/1468681-maxallowedrotationangle\n   ",
-      "start": 3408,
-      "end": 4358,
+      "value": "*\n   * Returns the rotation limit, in degrees, for the specified node.\n   * @access public\n   * @param {SCNNode} node - A node affected by the constraint—either the node whose constraints property references the constraint or one of that node’s parent or ancestor nodes, up to the node specified by the constraint’s chainRootNode property.\n   * @returns {number} - \n   * @desc When SceneKit evaluates the IK constraint, it checks the target orientations of each node in the chain relative to their initial orientations (as of when the constraint was applied to a node). For each node in the chain, SceneKit limits the rotation (in any direction) between the initial and target orientations to the value returned by this method.The default rotation limit for each joint is 180 degrees in either direction, allowing unconstrained rotation.\n   * @see https://developer.apple.com/documentation/scenekit/scnikconstraint/1468681-maxallowedrotationangle\n   ",
+      "start": 3424,
+      "end": 4378,
       "loc": {
         "start": {
           "line": 57,
@@ -2949,8 +2949,8 @@
         "binop": null
       },
       "value": "maxAllowedRotationAngleForJoint",
-      "start": 4361,
-      "end": 4392,
+      "start": 4381,
+      "end": 4412,
       "loc": {
         "start": {
           "line": 65,
@@ -2974,8 +2974,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4392,
-      "end": 4393,
+      "start": 4412,
+      "end": 4413,
       "loc": {
         "start": {
           "line": 65,
@@ -3000,8 +3000,8 @@
         "binop": null
       },
       "value": "node",
-      "start": 4393,
-      "end": 4397,
+      "start": 4413,
+      "end": 4417,
       "loc": {
         "start": {
           "line": 65,
@@ -3025,8 +3025,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4397,
-      "end": 4398,
+      "start": 4417,
+      "end": 4418,
       "loc": {
         "start": {
           "line": 65,
@@ -3050,8 +3050,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4399,
-      "end": 4400,
+      "start": 4419,
+      "end": 4420,
       "loc": {
         "start": {
           "line": 65,
@@ -3078,8 +3078,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 4405,
-      "end": 4411,
+      "start": 4425,
+      "end": 4431,
       "loc": {
         "start": {
           "line": 66,
@@ -3105,8 +3105,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 4412,
-      "end": 4413,
+      "start": 4432,
+      "end": 4433,
       "loc": {
         "start": {
           "line": 66,
@@ -3130,8 +3130,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4416,
-      "end": 4417,
+      "start": 4436,
+      "end": 4437,
       "loc": {
         "start": {
           "line": 67,
@@ -3145,9 +3145,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Sets the rotation limit, in degrees, for the specified node.\n   * @access public\n   * @param {number} angle - The maximum rotation, in degrees, that SceneKit should apply to the specified node when evaluating the constraint.\n   * @param {SCNNode} node - A node affected by the constraint—either the node whose constraints property references the constraint, or one of that node’s parent or ancestor nodes up to the node specified by the constraint’s chainRootNode property.\n   * @returns {void}\n   * @desc When SceneKit evaluates the IK constraint, it checks the target orientations of each node in the chain relative to their initial orientations (as of when the constraint was applied to a node). For each node in the chain, SceneKit limits the rotation (in any direction) between the initial and target orientations to the angle value specified with this method.The default rotation limit for each joint is 180 degrees in either direction, allowing unconstrained rotation.\n   * @see https://developer.apple.com/reference/scenekit/scnikconstraint/1468649-setmaxallowedrotationangle\n   ",
-      "start": 4421,
-      "end": 5519,
+      "value": "*\n   * Sets the rotation limit, in degrees, for the specified node.\n   * @access public\n   * @param {number} angle - The maximum rotation, in degrees, that SceneKit should apply to the specified node when evaluating the constraint.\n   * @param {SCNNode} node - A node affected by the constraint—either the node whose constraints property references the constraint, or one of that node’s parent or ancestor nodes up to the node specified by the constraint’s chainRootNode property.\n   * @returns {void}\n   * @desc When SceneKit evaluates the IK constraint, it checks the target orientations of each node in the chain relative to their initial orientations (as of when the constraint was applied to a node). For each node in the chain, SceneKit limits the rotation (in any direction) between the initial and target orientations to the angle value specified with this method.The default rotation limit for each joint is 180 degrees in either direction, allowing unconstrained rotation.\n   * @see https://developer.apple.com/documentation/scenekit/scnikconstraint/1468649-setmaxallowedrotationangle\n   ",
+      "start": 4441,
+      "end": 5543,
       "loc": {
         "start": {
           "line": 69,
@@ -3172,8 +3172,8 @@
         "binop": null
       },
       "value": "setMaxAllowedRotationAngleForJoint",
-      "start": 5522,
-      "end": 5556,
+      "start": 5546,
+      "end": 5580,
       "loc": {
         "start": {
           "line": 78,
@@ -3197,8 +3197,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5556,
-      "end": 5557,
+      "start": 5580,
+      "end": 5581,
       "loc": {
         "start": {
           "line": 78,
@@ -3223,8 +3223,8 @@
         "binop": null
       },
       "value": "angle",
-      "start": 5557,
-      "end": 5562,
+      "start": 5581,
+      "end": 5586,
       "loc": {
         "start": {
           "line": 78,
@@ -3249,8 +3249,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 5562,
-      "end": 5563,
+      "start": 5586,
+      "end": 5587,
       "loc": {
         "start": {
           "line": 78,
@@ -3275,8 +3275,8 @@
         "binop": null
       },
       "value": "node",
-      "start": 5564,
-      "end": 5568,
+      "start": 5588,
+      "end": 5592,
       "loc": {
         "start": {
           "line": 78,
@@ -3300,8 +3300,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5568,
-      "end": 5569,
+      "start": 5592,
+      "end": 5593,
       "loc": {
         "start": {
           "line": 78,
@@ -3325,8 +3325,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5570,
-      "end": 5571,
+      "start": 5594,
+      "end": 5595,
       "loc": {
         "start": {
           "line": 78,
@@ -3350,8 +3350,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5574,
-      "end": 5575,
+      "start": 5598,
+      "end": 5599,
       "loc": {
         "start": {
           "line": 79,
@@ -3365,9 +3365,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The parent node of the hierarchy affected by the constraint.\n   * @type {SCNNode}\n   * @desc The root node is the highest node in the hierarchy moved by the constraint. For example, a robot arm may have two arm segments and a hand connected to a body. The upper arm is a child node of the body, the lower arm is a child node of the upper arm, and the hand is a child node of the lower arm. In this case, the upper arm is the chain root node, because the body should not move to follow the hand.\n   * @see https://developer.apple.com/reference/scenekit/scnikconstraint/1468690-chainrootnode\n   ",
-      "start": 5578,
-      "end": 6182,
+      "value": "*\n   * The parent node of the hierarchy affected by the constraint.\n   * @type {SCNNode}\n   * @desc The root node is the highest node in the hierarchy moved by the constraint. For example, a robot arm may have two arm segments and a hand connected to a body. The upper arm is a child node of the body, the lower arm is a child node of the upper arm, and the hand is a child node of the lower arm. In this case, the upper arm is the chain root node, because the body should not move to follow the hand.\n   * @see https://developer.apple.com/documentation/scenekit/scnikconstraint/1468690-chainrootnode\n   ",
+      "start": 5602,
+      "end": 6210,
       "loc": {
         "start": {
           "line": 80,
@@ -3392,8 +3392,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 6185,
-      "end": 6188,
+      "start": 6213,
+      "end": 6216,
       "loc": {
         "start": {
           "line": 86,
@@ -3418,8 +3418,8 @@
         "binop": null
       },
       "value": "chainRootNode",
-      "start": 6189,
-      "end": 6202,
+      "start": 6217,
+      "end": 6230,
       "loc": {
         "start": {
           "line": 86,
@@ -3443,8 +3443,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6202,
-      "end": 6203,
+      "start": 6230,
+      "end": 6231,
       "loc": {
         "start": {
           "line": 86,
@@ -3468,8 +3468,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6203,
-      "end": 6204,
+      "start": 6231,
+      "end": 6232,
       "loc": {
         "start": {
           "line": 86,
@@ -3493,8 +3493,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6205,
-      "end": 6206,
+      "start": 6233,
+      "end": 6234,
       "loc": {
         "start": {
           "line": 86,
@@ -3521,8 +3521,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 6211,
-      "end": 6217,
+      "start": 6239,
+      "end": 6245,
       "loc": {
         "start": {
           "line": 87,
@@ -3549,8 +3549,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 6218,
-      "end": 6222,
+      "start": 6246,
+      "end": 6250,
       "loc": {
         "start": {
           "line": 87,
@@ -3575,8 +3575,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 6222,
-      "end": 6223,
+      "start": 6250,
+      "end": 6251,
       "loc": {
         "start": {
           "line": 87,
@@ -3601,8 +3601,8 @@
         "binop": null
       },
       "value": "_chainRootNode",
-      "start": 6223,
-      "end": 6237,
+      "start": 6251,
+      "end": 6265,
       "loc": {
         "start": {
           "line": 87,
@@ -3626,8 +3626,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6240,
-      "end": 6241,
+      "start": 6268,
+      "end": 6269,
       "loc": {
         "start": {
           "line": 88,
@@ -3651,8 +3651,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6242,
-      "end": 6243,
+      "start": 6270,
+      "end": 6271,
       "loc": {
         "start": {
           "line": 89,
@@ -3677,8 +3677,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 6244,
-      "end": 6244,
+      "start": 6272,
+      "end": 6272,
       "loc": {
         "start": {
           "line": 90,

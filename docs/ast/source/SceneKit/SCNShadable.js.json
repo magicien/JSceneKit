@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 3960,
+  "end": 3980,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 3960,
+    "end": 3980,
     "loc": {
       "start": {
         "line": 1,
@@ -30,8 +30,8 @@
     "body": [
       {
         "type": "ExportDefaultDeclaration",
-        "start": 382,
-        "end": 3959,
+        "start": 386,
+        "end": 3979,
         "loc": {
           "start": {
             "line": 13,
@@ -44,8 +44,8 @@
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 397,
-          "end": 3959,
+          "start": 401,
+          "end": 3979,
           "loc": {
             "start": {
               "line": 13,
@@ -58,8 +58,8 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 403,
-            "end": 414,
+            "start": 407,
+            "end": 418,
             "loc": {
               "start": {
                 "line": 13,
@@ -77,8 +77,8 @@
           "superClass": null,
           "body": {
             "type": "ClassBody",
-            "start": 415,
-            "end": 3959,
+            "start": 419,
+            "end": 3979,
             "loc": {
               "start": {
                 "line": 13,
@@ -92,8 +92,8 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 490,
-                "end": 1105,
+                "start": 494,
+                "end": 1117,
                 "loc": {
                   "start": {
                     "line": 20,
@@ -107,8 +107,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 490,
-                  "end": 494,
+                  "start": 494,
+                  "end": 498,
                   "loc": {
                     "start": {
                       "line": 20,
@@ -132,8 +132,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 497,
-                  "end": 1105,
+                  "start": 501,
+                  "end": 1117,
                   "loc": {
                     "start": {
                       "line": 20,
@@ -147,8 +147,8 @@
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 725,
-                      "end": 744,
+                      "start": 733,
+                      "end": 752,
                       "loc": {
                         "start": {
                           "line": 29,
@@ -161,8 +161,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 725,
-                        "end": 744,
+                        "start": 733,
+                        "end": 752,
                         "loc": {
                           "start": {
                             "line": 29,
@@ -176,8 +176,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 725,
-                          "end": 737,
+                          "start": 733,
+                          "end": 745,
                           "loc": {
                             "start": {
                               "line": 29,
@@ -190,8 +190,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 725,
-                            "end": 729,
+                            "start": 733,
+                            "end": 737,
                             "loc": {
                               "start": {
                                 "line": 29,
@@ -206,8 +206,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 730,
-                            "end": 737,
+                            "start": 738,
+                            "end": 745,
                             "loc": {
                               "start": {
                                 "line": 29,
@@ -226,8 +226,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 740,
-                          "end": 744,
+                          "start": 748,
+                          "end": 752,
                           "loc": {
                             "start": {
                               "line": 29,
@@ -248,8 +248,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Assigning a Custom Shader Program",
-                          "start": 504,
-                          "end": 540,
+                          "start": 508,
+                          "end": 544,
                           "loc": {
                             "start": {
                               "line": 22,
@@ -263,9 +263,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * A program used when rendering the object.\n     * @type {?SCNProgram}\n     * @see https://developer.apple.com/reference/scenekit/scnshadable/1523689-program\n     ",
-                          "start": 546,
-                          "end": 720,
+                          "value": "*\n     * A program used when rendering the object.\n     * @type {?SCNProgram}\n     * @see https://developer.apple.com/documentation/scenekit/scnshadable/1523689-program\n     ",
+                          "start": 550,
+                          "end": 728,
                           "loc": {
                             "start": {
                               "line": 24,
@@ -282,8 +282,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Customizing SceneKit’s Shader Programs",
-                          "start": 751,
-                          "end": 792,
+                          "start": 759,
+                          "end": 800,
                           "loc": {
                             "start": {
                               "line": 32,
@@ -297,9 +297,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * A dictionary of GLSL source code snippets for customizing the shader programs provided by SceneKit.\n     * @type {?Map<SCNShaderModifierEntryPoint, string>}\n     * @see https://developer.apple.com/reference/scenekit/scnshadable/1523348-shadermodifiers\n     ",
-                          "start": 798,
-                          "end": 1068,
+                          "value": "*\n     * A dictionary of GLSL source code snippets for customizing the shader programs provided by SceneKit.\n     * @type {?Map<SCNShaderModifierEntryPoint, string>}\n     * @see https://developer.apple.com/documentation/scenekit/scnshadable/1523348-shadermodifiers\n     ",
+                          "start": 806,
+                          "end": 1080,
                           "loc": {
                             "start": {
                               "line": 34,
@@ -315,8 +315,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1073,
-                      "end": 1100,
+                      "start": 1085,
+                      "end": 1112,
                       "loc": {
                         "start": {
                           "line": 39,
@@ -329,8 +329,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1073,
-                        "end": 1100,
+                        "start": 1085,
+                        "end": 1112,
                         "loc": {
                           "start": {
                             "line": 39,
@@ -344,8 +344,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1073,
-                          "end": 1093,
+                          "start": 1085,
+                          "end": 1105,
                           "loc": {
                             "start": {
                               "line": 39,
@@ -358,8 +358,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1073,
-                            "end": 1077,
+                            "start": 1085,
+                            "end": 1089,
                             "loc": {
                               "start": {
                                 "line": 39,
@@ -374,8 +374,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1078,
-                            "end": 1093,
+                            "start": 1090,
+                            "end": 1105,
                             "loc": {
                               "start": {
                                 "line": 39,
@@ -394,8 +394,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 1096,
-                          "end": 1100,
+                          "start": 1108,
+                          "end": 1112,
                           "loc": {
                             "start": {
                               "line": 39,
@@ -413,8 +413,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Customizing SceneKit’s Shader Programs",
-                          "start": 751,
-                          "end": 792,
+                          "start": 759,
+                          "end": 800,
                           "loc": {
                             "start": {
                               "line": 32,
@@ -428,9 +428,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * A dictionary of GLSL source code snippets for customizing the shader programs provided by SceneKit.\n     * @type {?Map<SCNShaderModifierEntryPoint, string>}\n     * @see https://developer.apple.com/reference/scenekit/scnshadable/1523348-shadermodifiers\n     ",
-                          "start": 798,
-                          "end": 1068,
+                          "value": "*\n     * A dictionary of GLSL source code snippets for customizing the shader programs provided by SceneKit.\n     * @type {?Map<SCNShaderModifierEntryPoint, string>}\n     * @see https://developer.apple.com/documentation/scenekit/scnshadable/1523348-shadermodifiers\n     ",
+                          "start": 806,
+                          "end": 1080,
                           "loc": {
                             "start": {
                               "line": 34,
@@ -452,8 +452,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-                    "start": 420,
-                    "end": 487,
+                    "start": 424,
+                    "end": 491,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -470,8 +470,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Handling Parameters in Custom OpenGL Shader Programs",
-                    "start": 1109,
-                    "end": 1164,
+                    "start": 1121,
+                    "end": 1176,
                     "loc": {
                       "start": {
                         "line": 43,
@@ -485,9 +485,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Specifies a block to be called before rendering with programs with the specified GLSL uniform variable or attribute name.\n   * @access public\n   * @param {string} symbol - A GLSL uniform variable or attribute name.\n   * @param {?SCNBindingBlock} [block = null] - A block to be called by SceneKit.\n   * @returns {void}\n   * @desc Use this method to associate a block with a SceneKit object (geometry or material) to handle setup of an attribute or uniform variable in a custom SCNProgram shader associated with that object. SceneKit calls your block before rendering the object. In the block, you can execute any OpenGL commands or other code necessary for preparing your custom shader. For example, the following block updates the time uniform variable in a custom fragment shader for producing animated effects:CFTimeInterval startTime = CFAbsoluteTimeGetCurrent();\n[myNode.geometry.firstMaterial handleBindingOfSymbol:@\"time\" usingBlock:\n    ^(unsigned int programID, unsigned int location, SCNNode *renderedNode, SCNRenderer *renderer) {\n        glUniform1f(location, CFAbsoluteTimeGetCurrent() - startTime);\n    }];\nThis method is for OpenGL shader programs only. To bind custom variable data for Metal shader programs, use the handleBinding(ofBufferNamed:frequency:handler:) method.CFTimeInterval startTime = CFAbsoluteTimeGetCurrent();\n[myNode.geometry.firstMaterial handleBindingOfSymbol:@\"time\" usingBlock:\n    ^(unsigned int programID, unsigned int location, SCNNode *renderedNode, SCNRenderer *renderer) {\n        glUniform1f(location, CFAbsoluteTimeGetCurrent() - startTime);\n    }];\n\n   * @see https://developer.apple.com/reference/scenekit/scnshadable/1523063-handlebinding\n   ",
-                    "start": 1168,
-                    "end": 2869,
+                    "value": "*\n   * Specifies a block to be called before rendering with programs with the specified GLSL uniform variable or attribute name.\n   * @access public\n   * @param {string} symbol - A GLSL uniform variable or attribute name.\n   * @param {?SCNBindingBlock} [block = null] - A block to be called by SceneKit.\n   * @returns {void}\n   * @desc Use this method to associate a block with a SceneKit object (geometry or material) to handle setup of an attribute or uniform variable in a custom SCNProgram shader associated with that object. SceneKit calls your block before rendering the object. In the block, you can execute any OpenGL commands or other code necessary for preparing your custom shader. For example, the following block updates the time uniform variable in a custom fragment shader for producing animated effects:CFTimeInterval startTime = CFAbsoluteTimeGetCurrent();\n[myNode.geometry.firstMaterial handleBindingOfSymbol:@\"time\" usingBlock:\n    ^(unsigned int programID, unsigned int location, SCNNode *renderedNode, SCNRenderer *renderer) {\n        glUniform1f(location, CFAbsoluteTimeGetCurrent() - startTime);\n    }];\nThis method is for OpenGL shader programs only. To bind custom variable data for Metal shader programs, use the handleBinding(ofBufferNamed:frequency:handler:) method.CFTimeInterval startTime = CFAbsoluteTimeGetCurrent();\n[myNode.geometry.firstMaterial handleBindingOfSymbol:@\"time\" usingBlock:\n    ^(unsigned int programID, unsigned int location, SCNNode *renderedNode, SCNRenderer *renderer) {\n        glUniform1f(location, CFAbsoluteTimeGetCurrent() - startTime);\n    }];\n\n   * @see https://developer.apple.com/documentation/scenekit/scnshadable/1523063-handlebinding\n   ",
+                    "start": 1180,
+                    "end": 2885,
                     "loc": {
                       "start": {
                         "line": 45,
@@ -503,8 +503,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 2872,
-                "end": 2928,
+                "start": 2888,
+                "end": 2944,
                 "loc": {
                   "start": {
                     "line": 64,
@@ -518,8 +518,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 2872,
-                  "end": 2900,
+                  "start": 2888,
+                  "end": 2916,
                   "loc": {
                     "start": {
                       "line": 64,
@@ -543,8 +543,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 2901,
-                    "end": 2907,
+                    "start": 2917,
+                    "end": 2923,
                     "loc": {
                       "start": {
                         "line": 64,
@@ -560,8 +560,8 @@
                   },
                   {
                     "type": "AssignmentPattern",
-                    "start": 2909,
-                    "end": 2921,
+                    "start": 2925,
+                    "end": 2937,
                     "loc": {
                       "start": {
                         "line": 64,
@@ -574,8 +574,8 @@
                     },
                     "left": {
                       "type": "Identifier",
-                      "start": 2909,
-                      "end": 2914,
+                      "start": 2925,
+                      "end": 2930,
                       "loc": {
                         "start": {
                           "line": 64,
@@ -591,8 +591,8 @@
                     },
                     "right": {
                       "type": "NullLiteral",
-                      "start": 2917,
-                      "end": 2921,
+                      "start": 2933,
+                      "end": 2937,
                       "loc": {
                         "start": {
                           "line": 64,
@@ -608,8 +608,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 2923,
-                  "end": 2928,
+                  "start": 2939,
+                  "end": 2944,
                   "loc": {
                     "start": {
                       "line": 64,
@@ -629,8 +629,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Handling Parameters in Custom OpenGL Shader Programs",
-                    "start": 1109,
-                    "end": 1164,
+                    "start": 1121,
+                    "end": 1176,
                     "loc": {
                       "start": {
                         "line": 43,
@@ -644,9 +644,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Specifies a block to be called before rendering with programs with the specified GLSL uniform variable or attribute name.\n   * @access public\n   * @param {string} symbol - A GLSL uniform variable or attribute name.\n   * @param {?SCNBindingBlock} [block = null] - A block to be called by SceneKit.\n   * @returns {void}\n   * @desc Use this method to associate a block with a SceneKit object (geometry or material) to handle setup of an attribute or uniform variable in a custom SCNProgram shader associated with that object. SceneKit calls your block before rendering the object. In the block, you can execute any OpenGL commands or other code necessary for preparing your custom shader. For example, the following block updates the time uniform variable in a custom fragment shader for producing animated effects:CFTimeInterval startTime = CFAbsoluteTimeGetCurrent();\n[myNode.geometry.firstMaterial handleBindingOfSymbol:@\"time\" usingBlock:\n    ^(unsigned int programID, unsigned int location, SCNNode *renderedNode, SCNRenderer *renderer) {\n        glUniform1f(location, CFAbsoluteTimeGetCurrent() - startTime);\n    }];\nThis method is for OpenGL shader programs only. To bind custom variable data for Metal shader programs, use the handleBinding(ofBufferNamed:frequency:handler:) method.CFTimeInterval startTime = CFAbsoluteTimeGetCurrent();\n[myNode.geometry.firstMaterial handleBindingOfSymbol:@\"time\" usingBlock:\n    ^(unsigned int programID, unsigned int location, SCNNode *renderedNode, SCNRenderer *renderer) {\n        glUniform1f(location, CFAbsoluteTimeGetCurrent() - startTime);\n    }];\n\n   * @see https://developer.apple.com/reference/scenekit/scnshadable/1523063-handlebinding\n   ",
-                    "start": 1168,
-                    "end": 2869,
+                    "value": "*\n   * Specifies a block to be called before rendering with programs with the specified GLSL uniform variable or attribute name.\n   * @access public\n   * @param {string} symbol - A GLSL uniform variable or attribute name.\n   * @param {?SCNBindingBlock} [block = null] - A block to be called by SceneKit.\n   * @returns {void}\n   * @desc Use this method to associate a block with a SceneKit object (geometry or material) to handle setup of an attribute or uniform variable in a custom SCNProgram shader associated with that object. SceneKit calls your block before rendering the object. In the block, you can execute any OpenGL commands or other code necessary for preparing your custom shader. For example, the following block updates the time uniform variable in a custom fragment shader for producing animated effects:CFTimeInterval startTime = CFAbsoluteTimeGetCurrent();\n[myNode.geometry.firstMaterial handleBindingOfSymbol:@\"time\" usingBlock:\n    ^(unsigned int programID, unsigned int location, SCNNode *renderedNode, SCNRenderer *renderer) {\n        glUniform1f(location, CFAbsoluteTimeGetCurrent() - startTime);\n    }];\nThis method is for OpenGL shader programs only. To bind custom variable data for Metal shader programs, use the handleBinding(ofBufferNamed:frequency:handler:) method.CFTimeInterval startTime = CFAbsoluteTimeGetCurrent();\n[myNode.geometry.firstMaterial handleBindingOfSymbol:@\"time\" usingBlock:\n    ^(unsigned int programID, unsigned int location, SCNNode *renderedNode, SCNRenderer *renderer) {\n        glUniform1f(location, CFAbsoluteTimeGetCurrent() - startTime);\n    }];\n\n   * @see https://developer.apple.com/documentation/scenekit/scnshadable/1523063-handlebinding\n   ",
+                    "start": 1180,
+                    "end": 2885,
                     "loc": {
                       "start": {
                         "line": 45,
@@ -662,9 +662,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Specifies a block to be called after rendering with programs with the specified GLSL uniform variable or attribute name.\n   * @access public\n   * @param {string} symbol - A GLSL uniform variable or attribute name.\n   * @param {?SCNBindingBlock} [block = null] - A block to be called by SceneKit.\n   * @returns {void}\n   * @desc Use this method to associate a block with a SceneKit object (geometry or material) to handle cleanup related to an attribute or uniform variable in a custom SCNProgram shader associated with that object. SceneKit will call your block after rendering the object. In the block, you can execute any OpenGL commands or other code necessary for post-rendering tasks.This method is for OpenGL shader programs only. To bind custom variable data for Metal shader programs, use the handleBinding(ofBufferNamed:frequency:handler:) method.\n   * @see https://developer.apple.com/reference/scenekit/scnshadable/1522783-handleunbinding\n   ",
-                    "start": 2932,
-                    "end": 3896,
+                    "value": "*\n   * Specifies a block to be called after rendering with programs with the specified GLSL uniform variable or attribute name.\n   * @access public\n   * @param {string} symbol - A GLSL uniform variable or attribute name.\n   * @param {?SCNBindingBlock} [block = null] - A block to be called by SceneKit.\n   * @returns {void}\n   * @desc Use this method to associate a block with a SceneKit object (geometry or material) to handle cleanup related to an attribute or uniform variable in a custom SCNProgram shader associated with that object. SceneKit will call your block after rendering the object. In the block, you can execute any OpenGL commands or other code necessary for post-rendering tasks.This method is for OpenGL shader programs only. To bind custom variable data for Metal shader programs, use the handleBinding(ofBufferNamed:frequency:handler:) method.\n   * @see https://developer.apple.com/documentation/scenekit/scnshadable/1522783-handleunbinding\n   ",
+                    "start": 2948,
+                    "end": 3916,
                     "loc": {
                       "start": {
                         "line": 67,
@@ -680,8 +680,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 3899,
-                "end": 3957,
+                "start": 3919,
+                "end": 3977,
                 "loc": {
                   "start": {
                     "line": 76,
@@ -695,8 +695,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 3899,
-                  "end": 3929,
+                  "start": 3919,
+                  "end": 3949,
                   "loc": {
                     "start": {
                       "line": 76,
@@ -720,8 +720,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 3930,
-                    "end": 3936,
+                    "start": 3950,
+                    "end": 3956,
                     "loc": {
                       "start": {
                         "line": 76,
@@ -737,8 +737,8 @@
                   },
                   {
                     "type": "AssignmentPattern",
-                    "start": 3938,
-                    "end": 3950,
+                    "start": 3958,
+                    "end": 3970,
                     "loc": {
                       "start": {
                         "line": 76,
@@ -751,8 +751,8 @@
                     },
                     "left": {
                       "type": "Identifier",
-                      "start": 3938,
-                      "end": 3943,
+                      "start": 3958,
+                      "end": 3963,
                       "loc": {
                         "start": {
                           "line": 76,
@@ -768,8 +768,8 @@
                     },
                     "right": {
                       "type": "NullLiteral",
-                      "start": 3946,
-                      "end": 3950,
+                      "start": 3966,
+                      "end": 3970,
                       "loc": {
                         "start": {
                           "line": 76,
@@ -785,8 +785,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 3952,
-                  "end": 3957,
+                  "start": 3972,
+                  "end": 3977,
                   "loc": {
                     "start": {
                       "line": 76,
@@ -803,9 +803,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Specifies a block to be called after rendering with programs with the specified GLSL uniform variable or attribute name.\n   * @access public\n   * @param {string} symbol - A GLSL uniform variable or attribute name.\n   * @param {?SCNBindingBlock} [block = null] - A block to be called by SceneKit.\n   * @returns {void}\n   * @desc Use this method to associate a block with a SceneKit object (geometry or material) to handle cleanup related to an attribute or uniform variable in a custom SCNProgram shader associated with that object. SceneKit will call your block after rendering the object. In the block, you can execute any OpenGL commands or other code necessary for post-rendering tasks.This method is for OpenGL shader programs only. To bind custom variable data for Metal shader programs, use the handleBinding(ofBufferNamed:frequency:handler:) method.\n   * @see https://developer.apple.com/reference/scenekit/scnshadable/1522783-handleunbinding\n   ",
-                    "start": 2932,
-                    "end": 3896,
+                    "value": "*\n   * Specifies a block to be called after rendering with programs with the specified GLSL uniform variable or attribute name.\n   * @access public\n   * @param {string} symbol - A GLSL uniform variable or attribute name.\n   * @param {?SCNBindingBlock} [block = null] - A block to be called by SceneKit.\n   * @returns {void}\n   * @desc Use this method to associate a block with a SceneKit object (geometry or material) to handle cleanup related to an attribute or uniform variable in a custom SCNProgram shader associated with that object. SceneKit will call your block after rendering the object. In the block, you can execute any OpenGL commands or other code necessary for post-rendering tasks.This method is for OpenGL shader programs only. To bind custom variable data for Metal shader programs, use the handleBinding(ofBufferNamed:frequency:handler:) method.\n   * @see https://developer.apple.com/documentation/scenekit/scnshadable/1522783-handleunbinding\n   ",
+                    "start": 2948,
+                    "end": 3916,
                     "loc": {
                       "start": {
                         "line": 67,
@@ -872,9 +872,9 @@
             },
             {
               "type": "CommentBlock",
-              "value": "*\n * Methods for customizing SceneKit's rendering of geometry and materials using Metal or OpenGL shader programs.\n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnshadable\n ",
+              "value": "*\n * Methods for customizing SceneKit's rendering of geometry and materials using Metal or OpenGL shader programs.\n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnshadable\n ",
               "start": 180,
-              "end": 381,
+              "end": 385,
               "loc": {
                 "start": {
                   "line": 8,
@@ -940,9 +940,9 @@
           },
           {
             "type": "CommentBlock",
-            "value": "*\n * Methods for customizing SceneKit's rendering of geometry and materials using Metal or OpenGL shader programs.\n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnshadable\n ",
+            "value": "*\n * Methods for customizing SceneKit's rendering of geometry and materials using Metal or OpenGL shader programs.\n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnshadable\n ",
             "start": 180,
-            "end": 381,
+            "end": 385,
             "loc": {
               "start": {
                 "line": 8,
@@ -1044,9 +1044,9 @@
           },
           {
             "type": "CommentBlock",
-            "value": "*\n * Methods for customizing SceneKit's rendering of geometry and materials using Metal or OpenGL shader programs.\n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnshadable\n ",
+            "value": "*\n * Methods for customizing SceneKit's rendering of geometry and materials using Metal or OpenGL shader programs.\n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnshadable\n ",
             "start": 180,
-            "end": 381,
+            "end": 385,
             "loc": {
               "start": {
                 "line": 8,
@@ -1113,9 +1113,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Methods for customizing SceneKit's rendering of geometry and materials using Metal or OpenGL shader programs.\n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnshadable\n ",
+      "value": "*\n * Methods for customizing SceneKit's rendering of geometry and materials using Metal or OpenGL shader programs.\n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnshadable\n ",
       "start": 180,
-      "end": 381,
+      "end": 385,
       "loc": {
         "start": {
           "line": 8,
@@ -1130,8 +1130,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 420,
-      "end": 487,
+      "start": 424,
+      "end": 491,
       "loc": {
         "start": {
           "line": 15,
@@ -1146,8 +1146,8 @@
     {
       "type": "CommentLine",
       "value": " Assigning a Custom Shader Program",
-      "start": 504,
-      "end": 540,
+      "start": 508,
+      "end": 544,
       "loc": {
         "start": {
           "line": 22,
@@ -1161,9 +1161,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * A program used when rendering the object.\n     * @type {?SCNProgram}\n     * @see https://developer.apple.com/reference/scenekit/scnshadable/1523689-program\n     ",
-      "start": 546,
-      "end": 720,
+      "value": "*\n     * A program used when rendering the object.\n     * @type {?SCNProgram}\n     * @see https://developer.apple.com/documentation/scenekit/scnshadable/1523689-program\n     ",
+      "start": 550,
+      "end": 728,
       "loc": {
         "start": {
           "line": 24,
@@ -1178,8 +1178,8 @@
     {
       "type": "CommentLine",
       "value": " Customizing SceneKit’s Shader Programs",
-      "start": 751,
-      "end": 792,
+      "start": 759,
+      "end": 800,
       "loc": {
         "start": {
           "line": 32,
@@ -1193,9 +1193,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * A dictionary of GLSL source code snippets for customizing the shader programs provided by SceneKit.\n     * @type {?Map<SCNShaderModifierEntryPoint, string>}\n     * @see https://developer.apple.com/reference/scenekit/scnshadable/1523348-shadermodifiers\n     ",
-      "start": 798,
-      "end": 1068,
+      "value": "*\n     * A dictionary of GLSL source code snippets for customizing the shader programs provided by SceneKit.\n     * @type {?Map<SCNShaderModifierEntryPoint, string>}\n     * @see https://developer.apple.com/documentation/scenekit/scnshadable/1523348-shadermodifiers\n     ",
+      "start": 806,
+      "end": 1080,
       "loc": {
         "start": {
           "line": 34,
@@ -1210,8 +1210,8 @@
     {
       "type": "CommentLine",
       "value": " Handling Parameters in Custom OpenGL Shader Programs",
-      "start": 1109,
-      "end": 1164,
+      "start": 1121,
+      "end": 1176,
       "loc": {
         "start": {
           "line": 43,
@@ -1225,9 +1225,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Specifies a block to be called before rendering with programs with the specified GLSL uniform variable or attribute name.\n   * @access public\n   * @param {string} symbol - A GLSL uniform variable or attribute name.\n   * @param {?SCNBindingBlock} [block = null] - A block to be called by SceneKit.\n   * @returns {void}\n   * @desc Use this method to associate a block with a SceneKit object (geometry or material) to handle setup of an attribute or uniform variable in a custom SCNProgram shader associated with that object. SceneKit calls your block before rendering the object. In the block, you can execute any OpenGL commands or other code necessary for preparing your custom shader. For example, the following block updates the time uniform variable in a custom fragment shader for producing animated effects:CFTimeInterval startTime = CFAbsoluteTimeGetCurrent();\n[myNode.geometry.firstMaterial handleBindingOfSymbol:@\"time\" usingBlock:\n    ^(unsigned int programID, unsigned int location, SCNNode *renderedNode, SCNRenderer *renderer) {\n        glUniform1f(location, CFAbsoluteTimeGetCurrent() - startTime);\n    }];\nThis method is for OpenGL shader programs only. To bind custom variable data for Metal shader programs, use the handleBinding(ofBufferNamed:frequency:handler:) method.CFTimeInterval startTime = CFAbsoluteTimeGetCurrent();\n[myNode.geometry.firstMaterial handleBindingOfSymbol:@\"time\" usingBlock:\n    ^(unsigned int programID, unsigned int location, SCNNode *renderedNode, SCNRenderer *renderer) {\n        glUniform1f(location, CFAbsoluteTimeGetCurrent() - startTime);\n    }];\n\n   * @see https://developer.apple.com/reference/scenekit/scnshadable/1523063-handlebinding\n   ",
-      "start": 1168,
-      "end": 2869,
+      "value": "*\n   * Specifies a block to be called before rendering with programs with the specified GLSL uniform variable or attribute name.\n   * @access public\n   * @param {string} symbol - A GLSL uniform variable or attribute name.\n   * @param {?SCNBindingBlock} [block = null] - A block to be called by SceneKit.\n   * @returns {void}\n   * @desc Use this method to associate a block with a SceneKit object (geometry or material) to handle setup of an attribute or uniform variable in a custom SCNProgram shader associated with that object. SceneKit calls your block before rendering the object. In the block, you can execute any OpenGL commands or other code necessary for preparing your custom shader. For example, the following block updates the time uniform variable in a custom fragment shader for producing animated effects:CFTimeInterval startTime = CFAbsoluteTimeGetCurrent();\n[myNode.geometry.firstMaterial handleBindingOfSymbol:@\"time\" usingBlock:\n    ^(unsigned int programID, unsigned int location, SCNNode *renderedNode, SCNRenderer *renderer) {\n        glUniform1f(location, CFAbsoluteTimeGetCurrent() - startTime);\n    }];\nThis method is for OpenGL shader programs only. To bind custom variable data for Metal shader programs, use the handleBinding(ofBufferNamed:frequency:handler:) method.CFTimeInterval startTime = CFAbsoluteTimeGetCurrent();\n[myNode.geometry.firstMaterial handleBindingOfSymbol:@\"time\" usingBlock:\n    ^(unsigned int programID, unsigned int location, SCNNode *renderedNode, SCNRenderer *renderer) {\n        glUniform1f(location, CFAbsoluteTimeGetCurrent() - startTime);\n    }];\n\n   * @see https://developer.apple.com/documentation/scenekit/scnshadable/1523063-handlebinding\n   ",
+      "start": 1180,
+      "end": 2885,
       "loc": {
         "start": {
           "line": 45,
@@ -1241,9 +1241,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Specifies a block to be called after rendering with programs with the specified GLSL uniform variable or attribute name.\n   * @access public\n   * @param {string} symbol - A GLSL uniform variable or attribute name.\n   * @param {?SCNBindingBlock} [block = null] - A block to be called by SceneKit.\n   * @returns {void}\n   * @desc Use this method to associate a block with a SceneKit object (geometry or material) to handle cleanup related to an attribute or uniform variable in a custom SCNProgram shader associated with that object. SceneKit will call your block after rendering the object. In the block, you can execute any OpenGL commands or other code necessary for post-rendering tasks.This method is for OpenGL shader programs only. To bind custom variable data for Metal shader programs, use the handleBinding(ofBufferNamed:frequency:handler:) method.\n   * @see https://developer.apple.com/reference/scenekit/scnshadable/1522783-handleunbinding\n   ",
-      "start": 2932,
-      "end": 3896,
+      "value": "*\n   * Specifies a block to be called after rendering with programs with the specified GLSL uniform variable or attribute name.\n   * @access public\n   * @param {string} symbol - A GLSL uniform variable or attribute name.\n   * @param {?SCNBindingBlock} [block = null] - A block to be called by SceneKit.\n   * @returns {void}\n   * @desc Use this method to associate a block with a SceneKit object (geometry or material) to handle cleanup related to an attribute or uniform variable in a custom SCNProgram shader associated with that object. SceneKit will call your block after rendering the object. In the block, you can execute any OpenGL commands or other code necessary for post-rendering tasks.This method is for OpenGL shader programs only. To bind custom variable data for Metal shader programs, use the handleBinding(ofBufferNamed:frequency:handler:) method.\n   * @see https://developer.apple.com/documentation/scenekit/scnshadable/1522783-handleunbinding\n   ",
+      "start": 2948,
+      "end": 3916,
       "loc": {
         "start": {
           "line": 67,
@@ -1334,9 +1334,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Methods for customizing SceneKit's rendering of geometry and materials using Metal or OpenGL shader programs.\n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnshadable\n ",
+      "value": "*\n * Methods for customizing SceneKit's rendering of geometry and materials using Metal or OpenGL shader programs.\n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnshadable\n ",
       "start": 180,
-      "end": 381,
+      "end": 385,
       "loc": {
         "start": {
           "line": 8,
@@ -1363,8 +1363,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 382,
-      "end": 388,
+      "start": 386,
+      "end": 392,
       "loc": {
         "start": {
           "line": 13,
@@ -1391,8 +1391,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 389,
-      "end": 396,
+      "start": 393,
+      "end": 400,
       "loc": {
         "start": {
           "line": 13,
@@ -1419,8 +1419,8 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 397,
-      "end": 402,
+      "start": 401,
+      "end": 406,
       "loc": {
         "start": {
           "line": 13,
@@ -1445,8 +1445,8 @@
         "binop": null
       },
       "value": "SCNShadable",
-      "start": 403,
-      "end": 414,
+      "start": 407,
+      "end": 418,
       "loc": {
         "start": {
           "line": 13,
@@ -1470,8 +1470,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 415,
-      "end": 416,
+      "start": 419,
+      "end": 420,
       "loc": {
         "start": {
           "line": 13,
@@ -1486,8 +1486,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 420,
-      "end": 487,
+      "start": 424,
+      "end": 491,
       "loc": {
         "start": {
           "line": 15,
@@ -1512,8 +1512,8 @@
         "binop": null
       },
       "value": "init",
-      "start": 490,
-      "end": 494,
+      "start": 494,
+      "end": 498,
       "loc": {
         "start": {
           "line": 20,
@@ -1537,8 +1537,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 494,
-      "end": 495,
+      "start": 498,
+      "end": 499,
       "loc": {
         "start": {
           "line": 20,
@@ -1562,8 +1562,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 495,
-      "end": 496,
+      "start": 499,
+      "end": 500,
       "loc": {
         "start": {
           "line": 20,
@@ -1587,8 +1587,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 497,
-      "end": 498,
+      "start": 501,
+      "end": 502,
       "loc": {
         "start": {
           "line": 20,
@@ -1603,8 +1603,8 @@
     {
       "type": "CommentLine",
       "value": " Assigning a Custom Shader Program",
-      "start": 504,
-      "end": 540,
+      "start": 508,
+      "end": 544,
       "loc": {
         "start": {
           "line": 22,
@@ -1618,9 +1618,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * A program used when rendering the object.\n     * @type {?SCNProgram}\n     * @see https://developer.apple.com/reference/scenekit/scnshadable/1523689-program\n     ",
-      "start": 546,
-      "end": 720,
+      "value": "*\n     * A program used when rendering the object.\n     * @type {?SCNProgram}\n     * @see https://developer.apple.com/documentation/scenekit/scnshadable/1523689-program\n     ",
+      "start": 550,
+      "end": 728,
       "loc": {
         "start": {
           "line": 24,
@@ -1647,8 +1647,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 725,
-      "end": 729,
+      "start": 733,
+      "end": 737,
       "loc": {
         "start": {
           "line": 29,
@@ -1673,8 +1673,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 729,
-      "end": 730,
+      "start": 737,
+      "end": 738,
       "loc": {
         "start": {
           "line": 29,
@@ -1699,8 +1699,8 @@
         "binop": null
       },
       "value": "program",
-      "start": 730,
-      "end": 737,
+      "start": 738,
+      "end": 745,
       "loc": {
         "start": {
           "line": 29,
@@ -1726,8 +1726,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 738,
-      "end": 739,
+      "start": 746,
+      "end": 747,
       "loc": {
         "start": {
           "line": 29,
@@ -1754,8 +1754,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 740,
-      "end": 744,
+      "start": 748,
+      "end": 752,
       "loc": {
         "start": {
           "line": 29,
@@ -1770,8 +1770,8 @@
     {
       "type": "CommentLine",
       "value": " Customizing SceneKit’s Shader Programs",
-      "start": 751,
-      "end": 792,
+      "start": 759,
+      "end": 800,
       "loc": {
         "start": {
           "line": 32,
@@ -1785,9 +1785,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * A dictionary of GLSL source code snippets for customizing the shader programs provided by SceneKit.\n     * @type {?Map<SCNShaderModifierEntryPoint, string>}\n     * @see https://developer.apple.com/reference/scenekit/scnshadable/1523348-shadermodifiers\n     ",
-      "start": 798,
-      "end": 1068,
+      "value": "*\n     * A dictionary of GLSL source code snippets for customizing the shader programs provided by SceneKit.\n     * @type {?Map<SCNShaderModifierEntryPoint, string>}\n     * @see https://developer.apple.com/documentation/scenekit/scnshadable/1523348-shadermodifiers\n     ",
+      "start": 806,
+      "end": 1080,
       "loc": {
         "start": {
           "line": 34,
@@ -1814,8 +1814,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1073,
-      "end": 1077,
+      "start": 1085,
+      "end": 1089,
       "loc": {
         "start": {
           "line": 39,
@@ -1840,8 +1840,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1077,
-      "end": 1078,
+      "start": 1089,
+      "end": 1090,
       "loc": {
         "start": {
           "line": 39,
@@ -1866,8 +1866,8 @@
         "binop": null
       },
       "value": "shaderModifiers",
-      "start": 1078,
-      "end": 1093,
+      "start": 1090,
+      "end": 1105,
       "loc": {
         "start": {
           "line": 39,
@@ -1893,8 +1893,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1094,
-      "end": 1095,
+      "start": 1106,
+      "end": 1107,
       "loc": {
         "start": {
           "line": 39,
@@ -1921,8 +1921,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 1096,
-      "end": 1100,
+      "start": 1108,
+      "end": 1112,
       "loc": {
         "start": {
           "line": 39,
@@ -1946,8 +1946,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1104,
-      "end": 1105,
+      "start": 1116,
+      "end": 1117,
       "loc": {
         "start": {
           "line": 41,
@@ -1962,8 +1962,8 @@
     {
       "type": "CommentLine",
       "value": " Handling Parameters in Custom OpenGL Shader Programs",
-      "start": 1109,
-      "end": 1164,
+      "start": 1121,
+      "end": 1176,
       "loc": {
         "start": {
           "line": 43,
@@ -1977,9 +1977,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Specifies a block to be called before rendering with programs with the specified GLSL uniform variable or attribute name.\n   * @access public\n   * @param {string} symbol - A GLSL uniform variable or attribute name.\n   * @param {?SCNBindingBlock} [block = null] - A block to be called by SceneKit.\n   * @returns {void}\n   * @desc Use this method to associate a block with a SceneKit object (geometry or material) to handle setup of an attribute or uniform variable in a custom SCNProgram shader associated with that object. SceneKit calls your block before rendering the object. In the block, you can execute any OpenGL commands or other code necessary for preparing your custom shader. For example, the following block updates the time uniform variable in a custom fragment shader for producing animated effects:CFTimeInterval startTime = CFAbsoluteTimeGetCurrent();\n[myNode.geometry.firstMaterial handleBindingOfSymbol:@\"time\" usingBlock:\n    ^(unsigned int programID, unsigned int location, SCNNode *renderedNode, SCNRenderer *renderer) {\n        glUniform1f(location, CFAbsoluteTimeGetCurrent() - startTime);\n    }];\nThis method is for OpenGL shader programs only. To bind custom variable data for Metal shader programs, use the handleBinding(ofBufferNamed:frequency:handler:) method.CFTimeInterval startTime = CFAbsoluteTimeGetCurrent();\n[myNode.geometry.firstMaterial handleBindingOfSymbol:@\"time\" usingBlock:\n    ^(unsigned int programID, unsigned int location, SCNNode *renderedNode, SCNRenderer *renderer) {\n        glUniform1f(location, CFAbsoluteTimeGetCurrent() - startTime);\n    }];\n\n   * @see https://developer.apple.com/reference/scenekit/scnshadable/1523063-handlebinding\n   ",
-      "start": 1168,
-      "end": 2869,
+      "value": "*\n   * Specifies a block to be called before rendering with programs with the specified GLSL uniform variable or attribute name.\n   * @access public\n   * @param {string} symbol - A GLSL uniform variable or attribute name.\n   * @param {?SCNBindingBlock} [block = null] - A block to be called by SceneKit.\n   * @returns {void}\n   * @desc Use this method to associate a block with a SceneKit object (geometry or material) to handle setup of an attribute or uniform variable in a custom SCNProgram shader associated with that object. SceneKit calls your block before rendering the object. In the block, you can execute any OpenGL commands or other code necessary for preparing your custom shader. For example, the following block updates the time uniform variable in a custom fragment shader for producing animated effects:CFTimeInterval startTime = CFAbsoluteTimeGetCurrent();\n[myNode.geometry.firstMaterial handleBindingOfSymbol:@\"time\" usingBlock:\n    ^(unsigned int programID, unsigned int location, SCNNode *renderedNode, SCNRenderer *renderer) {\n        glUniform1f(location, CFAbsoluteTimeGetCurrent() - startTime);\n    }];\nThis method is for OpenGL shader programs only. To bind custom variable data for Metal shader programs, use the handleBinding(ofBufferNamed:frequency:handler:) method.CFTimeInterval startTime = CFAbsoluteTimeGetCurrent();\n[myNode.geometry.firstMaterial handleBindingOfSymbol:@\"time\" usingBlock:\n    ^(unsigned int programID, unsigned int location, SCNNode *renderedNode, SCNRenderer *renderer) {\n        glUniform1f(location, CFAbsoluteTimeGetCurrent() - startTime);\n    }];\n\n   * @see https://developer.apple.com/documentation/scenekit/scnshadable/1523063-handlebinding\n   ",
+      "start": 1180,
+      "end": 2885,
       "loc": {
         "start": {
           "line": 45,
@@ -2004,8 +2004,8 @@
         "binop": null
       },
       "value": "handleBindingOfSymbolHandler",
-      "start": 2872,
-      "end": 2900,
+      "start": 2888,
+      "end": 2916,
       "loc": {
         "start": {
           "line": 64,
@@ -2029,8 +2029,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2900,
-      "end": 2901,
+      "start": 2916,
+      "end": 2917,
       "loc": {
         "start": {
           "line": 64,
@@ -2055,8 +2055,8 @@
         "binop": null
       },
       "value": "symbol",
-      "start": 2901,
-      "end": 2907,
+      "start": 2917,
+      "end": 2923,
       "loc": {
         "start": {
           "line": 64,
@@ -2081,8 +2081,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2907,
-      "end": 2908,
+      "start": 2923,
+      "end": 2924,
       "loc": {
         "start": {
           "line": 64,
@@ -2107,8 +2107,8 @@
         "binop": null
       },
       "value": "block",
-      "start": 2909,
-      "end": 2914,
+      "start": 2925,
+      "end": 2930,
       "loc": {
         "start": {
           "line": 64,
@@ -2134,8 +2134,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2915,
-      "end": 2916,
+      "start": 2931,
+      "end": 2932,
       "loc": {
         "start": {
           "line": 64,
@@ -2162,8 +2162,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2917,
-      "end": 2921,
+      "start": 2933,
+      "end": 2937,
       "loc": {
         "start": {
           "line": 64,
@@ -2187,8 +2187,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2921,
-      "end": 2922,
+      "start": 2937,
+      "end": 2938,
       "loc": {
         "start": {
           "line": 64,
@@ -2212,8 +2212,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2923,
-      "end": 2924,
+      "start": 2939,
+      "end": 2940,
       "loc": {
         "start": {
           "line": 64,
@@ -2237,8 +2237,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2927,
-      "end": 2928,
+      "start": 2943,
+      "end": 2944,
       "loc": {
         "start": {
           "line": 65,
@@ -2252,9 +2252,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Specifies a block to be called after rendering with programs with the specified GLSL uniform variable or attribute name.\n   * @access public\n   * @param {string} symbol - A GLSL uniform variable or attribute name.\n   * @param {?SCNBindingBlock} [block = null] - A block to be called by SceneKit.\n   * @returns {void}\n   * @desc Use this method to associate a block with a SceneKit object (geometry or material) to handle cleanup related to an attribute or uniform variable in a custom SCNProgram shader associated with that object. SceneKit will call your block after rendering the object. In the block, you can execute any OpenGL commands or other code necessary for post-rendering tasks.This method is for OpenGL shader programs only. To bind custom variable data for Metal shader programs, use the handleBinding(ofBufferNamed:frequency:handler:) method.\n   * @see https://developer.apple.com/reference/scenekit/scnshadable/1522783-handleunbinding\n   ",
-      "start": 2932,
-      "end": 3896,
+      "value": "*\n   * Specifies a block to be called after rendering with programs with the specified GLSL uniform variable or attribute name.\n   * @access public\n   * @param {string} symbol - A GLSL uniform variable or attribute name.\n   * @param {?SCNBindingBlock} [block = null] - A block to be called by SceneKit.\n   * @returns {void}\n   * @desc Use this method to associate a block with a SceneKit object (geometry or material) to handle cleanup related to an attribute or uniform variable in a custom SCNProgram shader associated with that object. SceneKit will call your block after rendering the object. In the block, you can execute any OpenGL commands or other code necessary for post-rendering tasks.This method is for OpenGL shader programs only. To bind custom variable data for Metal shader programs, use the handleBinding(ofBufferNamed:frequency:handler:) method.\n   * @see https://developer.apple.com/documentation/scenekit/scnshadable/1522783-handleunbinding\n   ",
+      "start": 2948,
+      "end": 3916,
       "loc": {
         "start": {
           "line": 67,
@@ -2279,8 +2279,8 @@
         "binop": null
       },
       "value": "handleUnbindingOfSymbolHandler",
-      "start": 3899,
-      "end": 3929,
+      "start": 3919,
+      "end": 3949,
       "loc": {
         "start": {
           "line": 76,
@@ -2304,8 +2304,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3929,
-      "end": 3930,
+      "start": 3949,
+      "end": 3950,
       "loc": {
         "start": {
           "line": 76,
@@ -2330,8 +2330,8 @@
         "binop": null
       },
       "value": "symbol",
-      "start": 3930,
-      "end": 3936,
+      "start": 3950,
+      "end": 3956,
       "loc": {
         "start": {
           "line": 76,
@@ -2356,8 +2356,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3936,
-      "end": 3937,
+      "start": 3956,
+      "end": 3957,
       "loc": {
         "start": {
           "line": 76,
@@ -2382,8 +2382,8 @@
         "binop": null
       },
       "value": "block",
-      "start": 3938,
-      "end": 3943,
+      "start": 3958,
+      "end": 3963,
       "loc": {
         "start": {
           "line": 76,
@@ -2409,8 +2409,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 3944,
-      "end": 3945,
+      "start": 3964,
+      "end": 3965,
       "loc": {
         "start": {
           "line": 76,
@@ -2437,8 +2437,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 3946,
-      "end": 3950,
+      "start": 3966,
+      "end": 3970,
       "loc": {
         "start": {
           "line": 76,
@@ -2462,8 +2462,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3950,
-      "end": 3951,
+      "start": 3970,
+      "end": 3971,
       "loc": {
         "start": {
           "line": 76,
@@ -2487,8 +2487,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3952,
-      "end": 3953,
+      "start": 3972,
+      "end": 3973,
       "loc": {
         "start": {
           "line": 76,
@@ -2512,8 +2512,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3956,
-      "end": 3957,
+      "start": 3976,
+      "end": 3977,
       "loc": {
         "start": {
           "line": 77,
@@ -2537,8 +2537,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3958,
-      "end": 3959,
+      "start": 3978,
+      "end": 3979,
       "loc": {
         "start": {
           "line": 78,
@@ -2563,8 +2563,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3960,
-      "end": 3960,
+      "start": 3980,
+      "end": 3980,
       "loc": {
         "start": {
           "line": 79,

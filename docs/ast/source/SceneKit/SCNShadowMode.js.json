@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 633,
+  "end": 637,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 633,
+    "end": 637,
     "loc": {
       "start": {
         "line": 1,
@@ -30,8 +30,8 @@
     "body": [
       {
         "type": "Identifier",
-        "start": 533,
-        "end": 602,
+        "start": 537,
+        "end": 606,
         "loc": {
           "start": {
             "line": 12,
@@ -45,8 +45,8 @@
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 539,
-            "end": 602,
+            "start": 543,
+            "end": 606,
             "loc": {
               "start": {
                 "line": 12,
@@ -59,8 +59,8 @@
             },
             "id": {
               "type": "Identifier",
-              "start": 539,
-              "end": 552,
+              "start": 543,
+              "end": 556,
               "loc": {
                 "start": {
                   "line": 12,
@@ -77,8 +77,8 @@
             },
             "init": {
               "type": "ObjectExpression",
-              "start": 555,
-              "end": 602,
+              "start": 559,
+              "end": 606,
               "loc": {
                 "start": {
                   "line": 12,
@@ -92,8 +92,8 @@
               "properties": [
                 {
                   "type": "ObjectProperty",
-                  "start": 559,
-                  "end": 569,
+                  "start": 563,
+                  "end": 573,
                   "loc": {
                     "start": {
                       "line": 13,
@@ -109,8 +109,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 559,
-                    "end": 566,
+                    "start": 563,
+                    "end": 570,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -126,8 +126,8 @@
                   },
                   "value": {
                     "type": "NumericLiteral",
-                    "start": 568,
-                    "end": 569,
+                    "start": 572,
+                    "end": 573,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -147,8 +147,8 @@
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 573,
-                  "end": 584,
+                  "start": 577,
+                  "end": 588,
                   "loc": {
                     "start": {
                       "line": 14,
@@ -164,8 +164,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 573,
-                    "end": 581,
+                    "start": 577,
+                    "end": 585,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -181,8 +181,8 @@
                   },
                   "value": {
                     "type": "NumericLiteral",
-                    "start": 583,
-                    "end": 584,
+                    "start": 587,
+                    "end": 588,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -202,8 +202,8 @@
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 588,
-                  "end": 600,
+                  "start": 592,
+                  "end": 604,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -219,8 +219,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 588,
-                    "end": 597,
+                    "start": 592,
+                    "end": 601,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -236,8 +236,8 @@
                   },
                   "value": {
                     "type": "NumericLiteral",
-                    "start": 599,
-                    "end": 600,
+                    "start": 603,
+                    "end": 604,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -267,8 +267,8 @@
       },
       {
         "type": "Identifier",
-        "start": 604,
-        "end": 632,
+        "start": 608,
+        "end": 636,
         "loc": {
           "start": {
             "line": 18,
@@ -281,8 +281,8 @@
         },
         "declaration": {
           "type": "Identifier",
-          "start": 619,
-          "end": 632,
+          "start": 623,
+          "end": 636,
           "loc": {
             "start": {
               "line": 18,
@@ -302,8 +302,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 604,
-        "end": 632,
+        "start": 608,
+        "end": 636,
         "loc": {
           "start": {
             "line": 18,
@@ -316,8 +316,8 @@
         },
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 533,
-          "end": 602,
+          "start": 537,
+          "end": 606,
           "loc": {
             "start": {
               "line": 12,
@@ -331,8 +331,8 @@
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 539,
-              "end": 602,
+              "start": 543,
+              "end": 606,
               "loc": {
                 "start": {
                   "line": 12,
@@ -345,8 +345,8 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 539,
-                "end": 552,
+                "start": 543,
+                "end": 556,
                 "loc": {
                   "start": {
                     "line": 12,
@@ -363,8 +363,8 @@
               },
               "init": {
                 "type": "ObjectExpression",
-                "start": 555,
-                "end": 602,
+                "start": 559,
+                "end": 606,
                 "loc": {
                   "start": {
                     "line": 12,
@@ -378,8 +378,8 @@
                 "properties": [
                   {
                     "type": "ObjectProperty",
-                    "start": 559,
-                    "end": 569,
+                    "start": 563,
+                    "end": 573,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -395,8 +395,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 559,
-                      "end": 566,
+                      "start": 563,
+                      "end": 570,
                       "loc": {
                         "start": {
                           "line": 13,
@@ -412,8 +412,8 @@
                     },
                     "value": {
                       "type": "NumericLiteral",
-                      "start": 568,
-                      "end": 569,
+                      "start": 572,
+                      "end": 573,
                       "loc": {
                         "start": {
                           "line": 13,
@@ -433,8 +433,8 @@
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 573,
-                    "end": 584,
+                    "start": 577,
+                    "end": 588,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -450,8 +450,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 573,
-                      "end": 581,
+                      "start": 577,
+                      "end": 585,
                       "loc": {
                         "start": {
                           "line": 14,
@@ -467,8 +467,8 @@
                     },
                     "value": {
                       "type": "NumericLiteral",
-                      "start": 583,
-                      "end": 584,
+                      "start": 587,
+                      "end": 588,
                       "loc": {
                         "start": {
                           "line": 14,
@@ -488,8 +488,8 @@
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 588,
-                    "end": 600,
+                    "start": 592,
+                    "end": 604,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -505,8 +505,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 588,
-                      "end": 597,
+                      "start": 592,
+                      "end": 601,
                       "loc": {
                         "start": {
                           "line": 15,
@@ -522,8 +522,8 @@
                     },
                     "value": {
                       "type": "NumericLiteral",
-                      "start": 599,
-                      "end": 600,
+                      "start": 603,
+                      "end": 604,
                       "loc": {
                         "start": {
                           "line": 15,
@@ -550,9 +550,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * Options for SceneKit’s rendering of shadows cast by a light, used by the shadowMode property.\n * @typedef {Object} SCNShadowMode\n * @property {number} forward - SceneKit renders shadows during lighting computations.\n * @property {number} deferred - SceneKit renders shadows in a postprocessing pass.\n * @property {number} modulated - SceneKit renders shadows by projecting the light’s gobo image. The light does not illuminate the scene.\n * @see https://developer.apple.com/reference/scenekit/scnshadowmode\n ",
+              "value": "*\n * Options for SceneKit’s rendering of shadows cast by a light, used by the shadowMode property.\n * @typedef {Object} SCNShadowMode\n * @property {number} forward - SceneKit renders shadows during lighting computations.\n * @property {number} deferred - SceneKit renders shadows in a postprocessing pass.\n * @property {number} modulated - SceneKit renders shadows by projecting the light’s gobo image. The light does not illuminate the scene.\n * @see https://developer.apple.com/documentation/scenekit/scnshadowmode\n ",
               "start": 15,
-              "end": 532,
+              "end": 536,
               "loc": {
                 "start": {
                   "line": 4,
@@ -608,9 +608,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Options for SceneKit’s rendering of shadows cast by a light, used by the shadowMode property.\n * @typedef {Object} SCNShadowMode\n * @property {number} forward - SceneKit renders shadows during lighting computations.\n * @property {number} deferred - SceneKit renders shadows in a postprocessing pass.\n * @property {number} modulated - SceneKit renders shadows by projecting the light’s gobo image. The light does not illuminate the scene.\n * @see https://developer.apple.com/reference/scenekit/scnshadowmode\n ",
+            "value": "*\n * Options for SceneKit’s rendering of shadows cast by a light, used by the shadowMode property.\n * @typedef {Object} SCNShadowMode\n * @property {number} forward - SceneKit renders shadows during lighting computations.\n * @property {number} deferred - SceneKit renders shadows in a postprocessing pass.\n * @property {number} modulated - SceneKit renders shadows by projecting the light’s gobo image. The light does not illuminate the scene.\n * @see https://developer.apple.com/documentation/scenekit/scnshadowmode\n ",
             "start": 15,
-            "end": 532,
+            "end": 536,
             "loc": {
               "start": {
                 "line": 4,
@@ -629,9 +629,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * Options for SceneKit’s rendering of shadows cast by a light, used by the shadowMode property.\n * @typedef {Object} SCNShadowMode\n * @property {number} forward - SceneKit renders shadows during lighting computations.\n * @property {number} deferred - SceneKit renders shadows in a postprocessing pass.\n * @property {number} modulated - SceneKit renders shadows by projecting the light’s gobo image. The light does not illuminate the scene.\n * @see https://developer.apple.com/reference/scenekit/scnshadowmode\n ",
+      "value": "*\n * Options for SceneKit’s rendering of shadows cast by a light, used by the shadowMode property.\n * @typedef {Object} SCNShadowMode\n * @property {number} forward - SceneKit renders shadows during lighting computations.\n * @property {number} deferred - SceneKit renders shadows in a postprocessing pass.\n * @property {number} modulated - SceneKit renders shadows by projecting the light’s gobo image. The light does not illuminate the scene.\n * @see https://developer.apple.com/documentation/scenekit/scnshadowmode\n ",
       "start": 15,
-      "end": 532,
+      "end": 536,
       "loc": {
         "start": {
           "line": 4,
@@ -674,9 +674,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Options for SceneKit’s rendering of shadows cast by a light, used by the shadowMode property.\n * @typedef {Object} SCNShadowMode\n * @property {number} forward - SceneKit renders shadows during lighting computations.\n * @property {number} deferred - SceneKit renders shadows in a postprocessing pass.\n * @property {number} modulated - SceneKit renders shadows by projecting the light’s gobo image. The light does not illuminate the scene.\n * @see https://developer.apple.com/reference/scenekit/scnshadowmode\n ",
+      "value": "*\n * Options for SceneKit’s rendering of shadows cast by a light, used by the shadowMode property.\n * @typedef {Object} SCNShadowMode\n * @property {number} forward - SceneKit renders shadows during lighting computations.\n * @property {number} deferred - SceneKit renders shadows in a postprocessing pass.\n * @property {number} modulated - SceneKit renders shadows by projecting the light’s gobo image. The light does not illuminate the scene.\n * @see https://developer.apple.com/documentation/scenekit/scnshadowmode\n ",
       "start": 15,
-      "end": 532,
+      "end": 536,
       "loc": {
         "start": {
           "line": 4,
@@ -703,8 +703,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 533,
-      "end": 538,
+      "start": 537,
+      "end": 542,
       "loc": {
         "start": {
           "line": 12,
@@ -729,8 +729,8 @@
         "binop": null
       },
       "value": "SCNShadowMode",
-      "start": 539,
-      "end": 552,
+      "start": 543,
+      "end": 556,
       "loc": {
         "start": {
           "line": 12,
@@ -756,8 +756,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 553,
-      "end": 554,
+      "start": 557,
+      "end": 558,
       "loc": {
         "start": {
           "line": 12,
@@ -781,8 +781,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 555,
-      "end": 556,
+      "start": 559,
+      "end": 560,
       "loc": {
         "start": {
           "line": 12,
@@ -807,8 +807,8 @@
         "binop": null
       },
       "value": "forward",
-      "start": 559,
-      "end": 566,
+      "start": 563,
+      "end": 570,
       "loc": {
         "start": {
           "line": 13,
@@ -833,8 +833,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 566,
-      "end": 567,
+      "start": 570,
+      "end": 571,
       "loc": {
         "start": {
           "line": 13,
@@ -860,8 +860,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 568,
-      "end": 569,
+      "start": 572,
+      "end": 573,
       "loc": {
         "start": {
           "line": 13,
@@ -886,8 +886,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 569,
-      "end": 570,
+      "start": 573,
+      "end": 574,
       "loc": {
         "start": {
           "line": 13,
@@ -912,8 +912,8 @@
         "binop": null
       },
       "value": "deferred",
-      "start": 573,
-      "end": 581,
+      "start": 577,
+      "end": 585,
       "loc": {
         "start": {
           "line": 14,
@@ -938,8 +938,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 581,
-      "end": 582,
+      "start": 585,
+      "end": 586,
       "loc": {
         "start": {
           "line": 14,
@@ -965,8 +965,8 @@
         "updateContext": null
       },
       "value": 1,
-      "start": 583,
-      "end": 584,
+      "start": 587,
+      "end": 588,
       "loc": {
         "start": {
           "line": 14,
@@ -991,8 +991,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 584,
-      "end": 585,
+      "start": 588,
+      "end": 589,
       "loc": {
         "start": {
           "line": 14,
@@ -1017,8 +1017,8 @@
         "binop": null
       },
       "value": "modulated",
-      "start": 588,
-      "end": 597,
+      "start": 592,
+      "end": 601,
       "loc": {
         "start": {
           "line": 15,
@@ -1043,8 +1043,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 597,
-      "end": 598,
+      "start": 601,
+      "end": 602,
       "loc": {
         "start": {
           "line": 15,
@@ -1070,8 +1070,8 @@
         "updateContext": null
       },
       "value": 2,
-      "start": 599,
-      "end": 600,
+      "start": 603,
+      "end": 604,
       "loc": {
         "start": {
           "line": 15,
@@ -1095,8 +1095,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 601,
-      "end": 602,
+      "start": 605,
+      "end": 606,
       "loc": {
         "start": {
           "line": 16,
@@ -1123,8 +1123,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 604,
-      "end": 610,
+      "start": 608,
+      "end": 614,
       "loc": {
         "start": {
           "line": 18,
@@ -1151,8 +1151,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 611,
-      "end": 618,
+      "start": 615,
+      "end": 622,
       "loc": {
         "start": {
           "line": 18,
@@ -1177,8 +1177,8 @@
         "binop": null
       },
       "value": "SCNShadowMode",
-      "start": 619,
-      "end": 632,
+      "start": 623,
+      "end": 636,
       "loc": {
         "start": {
           "line": 18,
@@ -1203,8 +1203,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 633,
-      "end": 633,
+      "start": 637,
+      "end": 637,
       "loc": {
         "start": {
           "line": 19,

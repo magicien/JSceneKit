@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 3632,
+  "end": 3652,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 3632,
+    "end": 3652,
     "loc": {
       "start": {
         "line": 1,
@@ -30,8 +30,8 @@
     "body": [
       {
         "type": "ExportDefaultDeclaration",
-        "start": 277,
-        "end": 3631,
+        "start": 281,
+        "end": 3651,
         "loc": {
           "start": {
             "line": 12,
@@ -44,8 +44,8 @@
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 292,
-          "end": 3631,
+          "start": 296,
+          "end": 3651,
           "loc": {
             "start": {
               "line": 12,
@@ -58,8 +58,8 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 298,
-            "end": 316,
+            "start": 302,
+            "end": 320,
             "loc": {
               "start": {
                 "line": 12,
@@ -77,8 +77,8 @@
           "superClass": null,
           "body": {
             "type": "ClassBody",
-            "start": 317,
-            "end": 3631,
+            "start": 321,
+            "end": 3651,
             "loc": {
               "start": {
                 "line": 12,
@@ -92,8 +92,8 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 392,
-                "end": 404,
+                "start": 396,
+                "end": 408,
                 "loc": {
                   "start": {
                     "line": 19,
@@ -107,8 +107,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 392,
-                  "end": 396,
+                  "start": 396,
+                  "end": 400,
                   "loc": {
                     "start": {
                       "line": 19,
@@ -132,8 +132,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 399,
-                  "end": 404,
+                  "start": 403,
+                  "end": 408,
                   "loc": {
                     "start": {
                       "line": 19,
@@ -153,8 +153,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-                    "start": 322,
-                    "end": 389,
+                    "start": 326,
+                    "end": 393,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -171,8 +171,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Handling Shader Compilation Errors",
-                    "start": 408,
-                    "end": 445,
+                    "start": 412,
+                    "end": 449,
                     "loc": {
                       "start": {
                         "line": 22,
@@ -186,9 +186,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Tells the delegate that an error occurred when compiling GLSL source code.\n   * @access public\n   * @param {SCNProgram} program - The program that generated the compilation error.\n   * @param {Error} error - The compilation error that was raised.\n   * @returns {void}\n   * @desc Examine the error parameter for details of the compilation error provided by the GLSL compiler.\n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1523007-program\n   ",
-                    "start": 449,
-                    "end": 930,
+                    "value": "*\n   * Tells the delegate that an error occurred when compiling GLSL source code.\n   * @access public\n   * @param {SCNProgram} program - The program that generated the compilation error.\n   * @param {Error} error - The compilation error that was raised.\n   * @returns {void}\n   * @desc Examine the error parameter for details of the compilation error provided by the GLSL compiler.\n   * @see https://developer.apple.com/documentation/scenekit/scnprogramdelegate/1523007-program\n   ",
+                    "start": 453,
+                    "end": 938,
                     "loc": {
                       "start": {
                         "line": 24,
@@ -204,8 +204,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 933,
-                "end": 973,
+                "start": 941,
+                "end": 981,
                 "loc": {
                   "start": {
                     "line": 33,
@@ -219,8 +219,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 933,
-                  "end": 951,
+                  "start": 941,
+                  "end": 959,
                   "loc": {
                     "start": {
                       "line": 33,
@@ -244,8 +244,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 952,
-                    "end": 959,
+                    "start": 960,
+                    "end": 967,
                     "loc": {
                       "start": {
                         "line": 33,
@@ -261,8 +261,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 961,
-                    "end": 966,
+                    "start": 969,
+                    "end": 974,
                     "loc": {
                       "start": {
                         "line": 33,
@@ -279,8 +279,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 968,
-                  "end": 973,
+                  "start": 976,
+                  "end": 981,
                   "loc": {
                     "start": {
                       "line": 33,
@@ -300,8 +300,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Handling Shader Compilation Errors",
-                    "start": 408,
-                    "end": 445,
+                    "start": 412,
+                    "end": 449,
                     "loc": {
                       "start": {
                         "line": 22,
@@ -315,9 +315,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Tells the delegate that an error occurred when compiling GLSL source code.\n   * @access public\n   * @param {SCNProgram} program - The program that generated the compilation error.\n   * @param {Error} error - The compilation error that was raised.\n   * @returns {void}\n   * @desc Examine the error parameter for details of the compilation error provided by the GLSL compiler.\n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1523007-program\n   ",
-                    "start": 449,
-                    "end": 930,
+                    "value": "*\n   * Tells the delegate that an error occurred when compiling GLSL source code.\n   * @access public\n   * @param {SCNProgram} program - The program that generated the compilation error.\n   * @param {Error} error - The compilation error that was raised.\n   * @returns {void}\n   * @desc Examine the error parameter for details of the compilation error provided by the GLSL compiler.\n   * @see https://developer.apple.com/documentation/scenekit/scnprogramdelegate/1523007-program\n   ",
+                    "start": 453,
+                    "end": 938,
                     "loc": {
                       "start": {
                         "line": 24,
@@ -334,8 +334,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Finding Fragment Opaqueness",
-                    "start": 977,
-                    "end": 1007,
+                    "start": 985,
+                    "end": 1015,
                     "loc": {
                       "start": {
                         "line": 36,
@@ -349,9 +349,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Asks the delegate whether fragments rendered by a program are opaque.\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - \n   * @returns {boolean} - \n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1523068-programisopaque\n   ",
-                    "start": 1011,
-                    "end": 1295,
+                    "value": "*\n   * Asks the delegate whether fragments rendered by a program are opaque.\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - \n   * @returns {boolean} - \n   * @see https://developer.apple.com/documentation/scenekit/scnprogramdelegate/1523068-programisopaque\n   ",
+                    "start": 1019,
+                    "end": 1307,
                     "loc": {
                       "start": {
                         "line": 38,
@@ -367,8 +367,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 1298,
-                "end": 1345,
+                "start": 1310,
+                "end": 1357,
                 "loc": {
                   "start": {
                     "line": 46,
@@ -382,8 +382,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1298,
-                  "end": 1313,
+                  "start": 1310,
+                  "end": 1325,
                   "loc": {
                     "start": {
                       "line": 46,
@@ -407,8 +407,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 1314,
-                    "end": 1321,
+                    "start": 1326,
+                    "end": 1333,
                     "loc": {
                       "start": {
                         "line": 46,
@@ -425,8 +425,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1323,
-                  "end": 1345,
+                  "start": 1335,
+                  "end": 1357,
                   "loc": {
                     "start": {
                       "line": 46,
@@ -440,8 +440,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 1329,
-                      "end": 1341,
+                      "start": 1341,
+                      "end": 1353,
                       "loc": {
                         "start": {
                           "line": 47,
@@ -454,8 +454,8 @@
                       },
                       "argument": {
                         "type": "BooleanLiteral",
-                        "start": 1336,
-                        "end": 1341,
+                        "start": 1348,
+                        "end": 1353,
                         "loc": {
                           "start": {
                             "line": 47,
@@ -477,8 +477,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Finding Fragment Opaqueness",
-                    "start": 977,
-                    "end": 1007,
+                    "start": 985,
+                    "end": 1015,
                     "loc": {
                       "start": {
                         "line": 36,
@@ -492,9 +492,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Asks the delegate whether fragments rendered by a program are opaque.\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - \n   * @returns {boolean} - \n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1523068-programisopaque\n   ",
-                    "start": 1011,
-                    "end": 1295,
+                    "value": "*\n   * Asks the delegate whether fragments rendered by a program are opaque.\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - \n   * @returns {boolean} - \n   * @see https://developer.apple.com/documentation/scenekit/scnprogramdelegate/1523068-programisopaque\n   ",
+                    "start": 1019,
+                    "end": 1307,
                     "loc": {
                       "start": {
                         "line": 38,
@@ -511,8 +511,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Binding and Unbinding Values",
-                    "start": 1349,
-                    "end": 1380,
+                    "start": 1361,
+                    "end": 1392,
                     "loc": {
                       "start": {
                         "line": 50,
@@ -526,9 +526,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Invoked on the delegate to let it bind program values and/or associated graphics resources (such as textures) for symbols.\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - The SCNProgram object to bind values for.\n   * @param {string} symbol - The name of the symbol to bind a value for.\n   * @param {number} location - The location of the symbol within the program object to be modified.\n   * @param {number} programID - The underlying OpenGL program object in which the binding is made.\n   * @param {SCNRenderer} renderer - The renderer that is currently rendering the scene.\n   * @returns {boolean} - \n   * @desc If you use the handleBinding(ofSymbol:handler:) method to associate a handler block with a SceneKit object for a symbol, SceneKit will not call the delegate’s program(_:bindValueForSymbol:atLocation:programID:renderer:) method for that symbol when rendering that object.\n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1524155-program\n   ",
-                    "start": 1384,
-                    "end": 2400,
+                    "value": "*\n   * Invoked on the delegate to let it bind program values and/or associated graphics resources (such as textures) for symbols.\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - The SCNProgram object to bind values for.\n   * @param {string} symbol - The name of the symbol to bind a value for.\n   * @param {number} location - The location of the symbol within the program object to be modified.\n   * @param {number} programID - The underlying OpenGL program object in which the binding is made.\n   * @param {SCNRenderer} renderer - The renderer that is currently rendering the scene.\n   * @returns {boolean} - \n   * @desc If you use the handleBinding(ofSymbol:handler:) method to associate a handler block with a SceneKit object for a symbol, SceneKit will not call the delegate’s program(_:bindValueForSymbol:atLocation:programID:renderer:) method for that symbol when rendering that object.\n   * @see https://developer.apple.com/documentation/scenekit/scnprogramdelegate/1524155-program\n   ",
+                    "start": 1396,
+                    "end": 2416,
                     "loc": {
                       "start": {
                         "line": 52,
@@ -544,8 +544,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 2403,
-                "end": 2509,
+                "start": 2419,
+                "end": 2525,
                 "loc": {
                   "start": {
                     "line": 65,
@@ -559,8 +559,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 2403,
-                  "end": 2438,
+                  "start": 2419,
+                  "end": 2454,
                   "loc": {
                     "start": {
                       "line": 65,
@@ -584,8 +584,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 2439,
-                    "end": 2446,
+                    "start": 2455,
+                    "end": 2462,
                     "loc": {
                       "start": {
                         "line": 65,
@@ -601,8 +601,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 2448,
-                    "end": 2454,
+                    "start": 2464,
+                    "end": 2470,
                     "loc": {
                       "start": {
                         "line": 65,
@@ -618,8 +618,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 2456,
-                    "end": 2464,
+                    "start": 2472,
+                    "end": 2480,
                     "loc": {
                       "start": {
                         "line": 65,
@@ -635,8 +635,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 2466,
-                    "end": 2475,
+                    "start": 2482,
+                    "end": 2491,
                     "loc": {
                       "start": {
                         "line": 65,
@@ -652,8 +652,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 2477,
-                    "end": 2485,
+                    "start": 2493,
+                    "end": 2501,
                     "loc": {
                       "start": {
                         "line": 65,
@@ -670,8 +670,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 2487,
-                  "end": 2509,
+                  "start": 2503,
+                  "end": 2525,
                   "loc": {
                     "start": {
                       "line": 65,
@@ -685,8 +685,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 2493,
-                      "end": 2505,
+                      "start": 2509,
+                      "end": 2521,
                       "loc": {
                         "start": {
                           "line": 66,
@@ -699,8 +699,8 @@
                       },
                       "argument": {
                         "type": "BooleanLiteral",
-                        "start": 2500,
-                        "end": 2505,
+                        "start": 2516,
+                        "end": 2521,
                         "loc": {
                           "start": {
                             "line": 66,
@@ -722,8 +722,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Binding and Unbinding Values",
-                    "start": 1349,
-                    "end": 1380,
+                    "start": 1361,
+                    "end": 1392,
                     "loc": {
                       "start": {
                         "line": 50,
@@ -737,9 +737,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Invoked on the delegate to let it bind program values and/or associated graphics resources (such as textures) for symbols.\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - The SCNProgram object to bind values for.\n   * @param {string} symbol - The name of the symbol to bind a value for.\n   * @param {number} location - The location of the symbol within the program object to be modified.\n   * @param {number} programID - The underlying OpenGL program object in which the binding is made.\n   * @param {SCNRenderer} renderer - The renderer that is currently rendering the scene.\n   * @returns {boolean} - \n   * @desc If you use the handleBinding(ofSymbol:handler:) method to associate a handler block with a SceneKit object for a symbol, SceneKit will not call the delegate’s program(_:bindValueForSymbol:atLocation:programID:renderer:) method for that symbol when rendering that object.\n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1524155-program\n   ",
-                    "start": 1384,
-                    "end": 2400,
+                    "value": "*\n   * Invoked on the delegate to let it bind program values and/or associated graphics resources (such as textures) for symbols.\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - The SCNProgram object to bind values for.\n   * @param {string} symbol - The name of the symbol to bind a value for.\n   * @param {number} location - The location of the symbol within the program object to be modified.\n   * @param {number} programID - The underlying OpenGL program object in which the binding is made.\n   * @param {SCNRenderer} renderer - The renderer that is currently rendering the scene.\n   * @returns {boolean} - \n   * @desc If you use the handleBinding(ofSymbol:handler:) method to associate a handler block with a SceneKit object for a symbol, SceneKit will not call the delegate’s program(_:bindValueForSymbol:atLocation:programID:renderer:) method for that symbol when rendering that object.\n   * @see https://developer.apple.com/documentation/scenekit/scnprogramdelegate/1524155-program\n   ",
+                    "start": 1396,
+                    "end": 2416,
                     "loc": {
                       "start": {
                         "line": 52,
@@ -755,9 +755,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Invoked on the delegate to let it unbind program values and/or also unbind associated graphic resources (such as textures).\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - The SCNProgram object to unbind values for.\n   * @param {string} symbol - The name of the symbol to unbind a value for.\n   * @param {number} location - The location of the symbol within the program object to be modified.\n   * @param {number} programID - The underlying OpenGL program object in which the unbinding is done.\n   * @param {SCNRenderer} renderer - The renderer that is currently rendering the scene.\n\n   * @returns {void}\n   * @desc If you use the handleUnbinding(ofSymbol:handler:) method to associate a handler block with a SceneKit object for a symbol, SceneKit will not call the delegate’s program(_:unbindValueForSymbol:atLocation:programID:renderer:) method for that symbol when rendering that object.\n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1523857-program\n   ",
-                    "start": 2513,
-                    "end": 3535,
+                    "value": "*\n   * Invoked on the delegate to let it unbind program values and/or also unbind associated graphic resources (such as textures).\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - The SCNProgram object to unbind values for.\n   * @param {string} symbol - The name of the symbol to unbind a value for.\n   * @param {number} location - The location of the symbol within the program object to be modified.\n   * @param {number} programID - The underlying OpenGL program object in which the unbinding is done.\n   * @param {SCNRenderer} renderer - The renderer that is currently rendering the scene.\n\n   * @returns {void}\n   * @desc If you use the handleUnbinding(ofSymbol:handler:) method to associate a handler block with a SceneKit object for a symbol, SceneKit will not call the delegate’s program(_:unbindValueForSymbol:atLocation:programID:renderer:) method for that symbol when rendering that object.\n   * @see https://developer.apple.com/documentation/scenekit/scnprogramdelegate/1523857-program\n   ",
+                    "start": 2529,
+                    "end": 3555,
                     "loc": {
                       "start": {
                         "line": 69,
@@ -773,8 +773,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 3538,
-                "end": 3629,
+                "start": 3558,
+                "end": 3649,
                 "loc": {
                   "start": {
                     "line": 83,
@@ -788,8 +788,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 3538,
-                  "end": 3575,
+                  "start": 3558,
+                  "end": 3595,
                   "loc": {
                     "start": {
                       "line": 83,
@@ -813,8 +813,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 3576,
-                    "end": 3583,
+                    "start": 3596,
+                    "end": 3603,
                     "loc": {
                       "start": {
                         "line": 83,
@@ -830,8 +830,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 3585,
-                    "end": 3591,
+                    "start": 3605,
+                    "end": 3611,
                     "loc": {
                       "start": {
                         "line": 83,
@@ -847,8 +847,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 3593,
-                    "end": 3601,
+                    "start": 3613,
+                    "end": 3621,
                     "loc": {
                       "start": {
                         "line": 83,
@@ -864,8 +864,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 3603,
-                    "end": 3612,
+                    "start": 3623,
+                    "end": 3632,
                     "loc": {
                       "start": {
                         "line": 83,
@@ -881,8 +881,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 3614,
-                    "end": 3622,
+                    "start": 3634,
+                    "end": 3642,
                     "loc": {
                       "start": {
                         "line": 83,
@@ -899,8 +899,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 3624,
-                  "end": 3629,
+                  "start": 3644,
+                  "end": 3649,
                   "loc": {
                     "start": {
                       "line": 83,
@@ -917,9 +917,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Invoked on the delegate to let it unbind program values and/or also unbind associated graphic resources (such as textures).\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - The SCNProgram object to unbind values for.\n   * @param {string} symbol - The name of the symbol to unbind a value for.\n   * @param {number} location - The location of the symbol within the program object to be modified.\n   * @param {number} programID - The underlying OpenGL program object in which the unbinding is done.\n   * @param {SCNRenderer} renderer - The renderer that is currently rendering the scene.\n\n   * @returns {void}\n   * @desc If you use the handleUnbinding(ofSymbol:handler:) method to associate a handler block with a SceneKit object for a symbol, SceneKit will not call the delegate’s program(_:unbindValueForSymbol:atLocation:programID:renderer:) method for that symbol when rendering that object.\n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1523857-program\n   ",
-                    "start": 2513,
-                    "end": 3535,
+                    "value": "*\n   * Invoked on the delegate to let it unbind program values and/or also unbind associated graphic resources (such as textures).\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - The SCNProgram object to unbind values for.\n   * @param {string} symbol - The name of the symbol to unbind a value for.\n   * @param {number} location - The location of the symbol within the program object to be modified.\n   * @param {number} programID - The underlying OpenGL program object in which the unbinding is done.\n   * @param {SCNRenderer} renderer - The renderer that is currently rendering the scene.\n\n   * @returns {void}\n   * @desc If you use the handleUnbinding(ofSymbol:handler:) method to associate a handler block with a SceneKit object for a symbol, SceneKit will not call the delegate’s program(_:unbindValueForSymbol:atLocation:programID:renderer:) method for that symbol when rendering that object.\n   * @see https://developer.apple.com/documentation/scenekit/scnprogramdelegate/1523857-program\n   ",
+                    "start": 2529,
+                    "end": 3555,
                     "loc": {
                       "start": {
                         "line": 69,
@@ -970,9 +970,9 @@
             },
             {
               "type": "CommentBlock",
-              "value": "*\n * The interface for tracking errors that occur when compiling shader source code.\n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate\n ",
+              "value": "*\n * The interface for tracking errors that occur when compiling shader source code.\n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnprogramdelegate\n ",
               "start": 98,
-              "end": 276,
+              "end": 280,
               "loc": {
                 "start": {
                   "line": 7,
@@ -1022,9 +1022,9 @@
           },
           {
             "type": "CommentBlock",
-            "value": "*\n * The interface for tracking errors that occur when compiling shader source code.\n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate\n ",
+            "value": "*\n * The interface for tracking errors that occur when compiling shader source code.\n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnprogramdelegate\n ",
             "start": 98,
-            "end": 276,
+            "end": 280,
             "loc": {
               "start": {
                 "line": 7,
@@ -1110,9 +1110,9 @@
           },
           {
             "type": "CommentBlock",
-            "value": "*\n * The interface for tracking errors that occur when compiling shader source code.\n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate\n ",
+            "value": "*\n * The interface for tracking errors that occur when compiling shader source code.\n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnprogramdelegate\n ",
             "start": 98,
-            "end": 276,
+            "end": 280,
             "loc": {
               "start": {
                 "line": 7,
@@ -1163,9 +1163,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * The interface for tracking errors that occur when compiling shader source code.\n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate\n ",
+      "value": "*\n * The interface for tracking errors that occur when compiling shader source code.\n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnprogramdelegate\n ",
       "start": 98,
-      "end": 276,
+      "end": 280,
       "loc": {
         "start": {
           "line": 7,
@@ -1180,8 +1180,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 322,
-      "end": 389,
+      "start": 326,
+      "end": 393,
       "loc": {
         "start": {
           "line": 14,
@@ -1196,8 +1196,8 @@
     {
       "type": "CommentLine",
       "value": " Handling Shader Compilation Errors",
-      "start": 408,
-      "end": 445,
+      "start": 412,
+      "end": 449,
       "loc": {
         "start": {
           "line": 22,
@@ -1211,9 +1211,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Tells the delegate that an error occurred when compiling GLSL source code.\n   * @access public\n   * @param {SCNProgram} program - The program that generated the compilation error.\n   * @param {Error} error - The compilation error that was raised.\n   * @returns {void}\n   * @desc Examine the error parameter for details of the compilation error provided by the GLSL compiler.\n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1523007-program\n   ",
-      "start": 449,
-      "end": 930,
+      "value": "*\n   * Tells the delegate that an error occurred when compiling GLSL source code.\n   * @access public\n   * @param {SCNProgram} program - The program that generated the compilation error.\n   * @param {Error} error - The compilation error that was raised.\n   * @returns {void}\n   * @desc Examine the error parameter for details of the compilation error provided by the GLSL compiler.\n   * @see https://developer.apple.com/documentation/scenekit/scnprogramdelegate/1523007-program\n   ",
+      "start": 453,
+      "end": 938,
       "loc": {
         "start": {
           "line": 24,
@@ -1228,8 +1228,8 @@
     {
       "type": "CommentLine",
       "value": " Finding Fragment Opaqueness",
-      "start": 977,
-      "end": 1007,
+      "start": 985,
+      "end": 1015,
       "loc": {
         "start": {
           "line": 36,
@@ -1243,9 +1243,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Asks the delegate whether fragments rendered by a program are opaque.\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - \n   * @returns {boolean} - \n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1523068-programisopaque\n   ",
-      "start": 1011,
-      "end": 1295,
+      "value": "*\n   * Asks the delegate whether fragments rendered by a program are opaque.\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - \n   * @returns {boolean} - \n   * @see https://developer.apple.com/documentation/scenekit/scnprogramdelegate/1523068-programisopaque\n   ",
+      "start": 1019,
+      "end": 1307,
       "loc": {
         "start": {
           "line": 38,
@@ -1260,8 +1260,8 @@
     {
       "type": "CommentLine",
       "value": " Binding and Unbinding Values",
-      "start": 1349,
-      "end": 1380,
+      "start": 1361,
+      "end": 1392,
       "loc": {
         "start": {
           "line": 50,
@@ -1275,9 +1275,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Invoked on the delegate to let it bind program values and/or associated graphics resources (such as textures) for symbols.\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - The SCNProgram object to bind values for.\n   * @param {string} symbol - The name of the symbol to bind a value for.\n   * @param {number} location - The location of the symbol within the program object to be modified.\n   * @param {number} programID - The underlying OpenGL program object in which the binding is made.\n   * @param {SCNRenderer} renderer - The renderer that is currently rendering the scene.\n   * @returns {boolean} - \n   * @desc If you use the handleBinding(ofSymbol:handler:) method to associate a handler block with a SceneKit object for a symbol, SceneKit will not call the delegate’s program(_:bindValueForSymbol:atLocation:programID:renderer:) method for that symbol when rendering that object.\n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1524155-program\n   ",
-      "start": 1384,
-      "end": 2400,
+      "value": "*\n   * Invoked on the delegate to let it bind program values and/or associated graphics resources (such as textures) for symbols.\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - The SCNProgram object to bind values for.\n   * @param {string} symbol - The name of the symbol to bind a value for.\n   * @param {number} location - The location of the symbol within the program object to be modified.\n   * @param {number} programID - The underlying OpenGL program object in which the binding is made.\n   * @param {SCNRenderer} renderer - The renderer that is currently rendering the scene.\n   * @returns {boolean} - \n   * @desc If you use the handleBinding(ofSymbol:handler:) method to associate a handler block with a SceneKit object for a symbol, SceneKit will not call the delegate’s program(_:bindValueForSymbol:atLocation:programID:renderer:) method for that symbol when rendering that object.\n   * @see https://developer.apple.com/documentation/scenekit/scnprogramdelegate/1524155-program\n   ",
+      "start": 1396,
+      "end": 2416,
       "loc": {
         "start": {
           "line": 52,
@@ -1291,9 +1291,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Invoked on the delegate to let it unbind program values and/or also unbind associated graphic resources (such as textures).\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - The SCNProgram object to unbind values for.\n   * @param {string} symbol - The name of the symbol to unbind a value for.\n   * @param {number} location - The location of the symbol within the program object to be modified.\n   * @param {number} programID - The underlying OpenGL program object in which the unbinding is done.\n   * @param {SCNRenderer} renderer - The renderer that is currently rendering the scene.\n\n   * @returns {void}\n   * @desc If you use the handleUnbinding(ofSymbol:handler:) method to associate a handler block with a SceneKit object for a symbol, SceneKit will not call the delegate’s program(_:unbindValueForSymbol:atLocation:programID:renderer:) method for that symbol when rendering that object.\n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1523857-program\n   ",
-      "start": 2513,
-      "end": 3535,
+      "value": "*\n   * Invoked on the delegate to let it unbind program values and/or also unbind associated graphic resources (such as textures).\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - The SCNProgram object to unbind values for.\n   * @param {string} symbol - The name of the symbol to unbind a value for.\n   * @param {number} location - The location of the symbol within the program object to be modified.\n   * @param {number} programID - The underlying OpenGL program object in which the unbinding is done.\n   * @param {SCNRenderer} renderer - The renderer that is currently rendering the scene.\n\n   * @returns {void}\n   * @desc If you use the handleUnbinding(ofSymbol:handler:) method to associate a handler block with a SceneKit object for a symbol, SceneKit will not call the delegate’s program(_:unbindValueForSymbol:atLocation:programID:renderer:) method for that symbol when rendering that object.\n   * @see https://developer.apple.com/documentation/scenekit/scnprogramdelegate/1523857-program\n   ",
+      "start": 2529,
+      "end": 3555,
       "loc": {
         "start": {
           "line": 69,
@@ -1368,9 +1368,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * The interface for tracking errors that occur when compiling shader source code.\n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate\n ",
+      "value": "*\n * The interface for tracking errors that occur when compiling shader source code.\n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnprogramdelegate\n ",
       "start": 98,
-      "end": 276,
+      "end": 280,
       "loc": {
         "start": {
           "line": 7,
@@ -1397,8 +1397,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 277,
-      "end": 283,
+      "start": 281,
+      "end": 287,
       "loc": {
         "start": {
           "line": 12,
@@ -1425,8 +1425,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 284,
-      "end": 291,
+      "start": 288,
+      "end": 295,
       "loc": {
         "start": {
           "line": 12,
@@ -1453,8 +1453,8 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 292,
-      "end": 297,
+      "start": 296,
+      "end": 301,
       "loc": {
         "start": {
           "line": 12,
@@ -1479,8 +1479,8 @@
         "binop": null
       },
       "value": "SCNProgramDelegate",
-      "start": 298,
-      "end": 316,
+      "start": 302,
+      "end": 320,
       "loc": {
         "start": {
           "line": 12,
@@ -1504,8 +1504,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 317,
-      "end": 318,
+      "start": 321,
+      "end": 322,
       "loc": {
         "start": {
           "line": 12,
@@ -1520,8 +1520,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 322,
-      "end": 389,
+      "start": 326,
+      "end": 393,
       "loc": {
         "start": {
           "line": 14,
@@ -1546,8 +1546,8 @@
         "binop": null
       },
       "value": "init",
-      "start": 392,
-      "end": 396,
+      "start": 396,
+      "end": 400,
       "loc": {
         "start": {
           "line": 19,
@@ -1571,8 +1571,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 396,
-      "end": 397,
+      "start": 400,
+      "end": 401,
       "loc": {
         "start": {
           "line": 19,
@@ -1596,8 +1596,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 397,
-      "end": 398,
+      "start": 401,
+      "end": 402,
       "loc": {
         "start": {
           "line": 19,
@@ -1621,8 +1621,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 399,
-      "end": 400,
+      "start": 403,
+      "end": 404,
       "loc": {
         "start": {
           "line": 19,
@@ -1646,8 +1646,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 403,
-      "end": 404,
+      "start": 407,
+      "end": 408,
       "loc": {
         "start": {
           "line": 20,
@@ -1662,8 +1662,8 @@
     {
       "type": "CommentLine",
       "value": " Handling Shader Compilation Errors",
-      "start": 408,
-      "end": 445,
+      "start": 412,
+      "end": 449,
       "loc": {
         "start": {
           "line": 22,
@@ -1677,9 +1677,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Tells the delegate that an error occurred when compiling GLSL source code.\n   * @access public\n   * @param {SCNProgram} program - The program that generated the compilation error.\n   * @param {Error} error - The compilation error that was raised.\n   * @returns {void}\n   * @desc Examine the error parameter for details of the compilation error provided by the GLSL compiler.\n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1523007-program\n   ",
-      "start": 449,
-      "end": 930,
+      "value": "*\n   * Tells the delegate that an error occurred when compiling GLSL source code.\n   * @access public\n   * @param {SCNProgram} program - The program that generated the compilation error.\n   * @param {Error} error - The compilation error that was raised.\n   * @returns {void}\n   * @desc Examine the error parameter for details of the compilation error provided by the GLSL compiler.\n   * @see https://developer.apple.com/documentation/scenekit/scnprogramdelegate/1523007-program\n   ",
+      "start": 453,
+      "end": 938,
       "loc": {
         "start": {
           "line": 24,
@@ -1704,8 +1704,8 @@
         "binop": null
       },
       "value": "programHandleError",
-      "start": 933,
-      "end": 951,
+      "start": 941,
+      "end": 959,
       "loc": {
         "start": {
           "line": 33,
@@ -1729,8 +1729,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 951,
-      "end": 952,
+      "start": 959,
+      "end": 960,
       "loc": {
         "start": {
           "line": 33,
@@ -1755,8 +1755,8 @@
         "binop": null
       },
       "value": "program",
-      "start": 952,
-      "end": 959,
+      "start": 960,
+      "end": 967,
       "loc": {
         "start": {
           "line": 33,
@@ -1781,8 +1781,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 959,
-      "end": 960,
+      "start": 967,
+      "end": 968,
       "loc": {
         "start": {
           "line": 33,
@@ -1807,8 +1807,8 @@
         "binop": null
       },
       "value": "error",
-      "start": 961,
-      "end": 966,
+      "start": 969,
+      "end": 974,
       "loc": {
         "start": {
           "line": 33,
@@ -1832,8 +1832,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 966,
-      "end": 967,
+      "start": 974,
+      "end": 975,
       "loc": {
         "start": {
           "line": 33,
@@ -1857,8 +1857,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 968,
-      "end": 969,
+      "start": 976,
+      "end": 977,
       "loc": {
         "start": {
           "line": 33,
@@ -1882,8 +1882,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 972,
-      "end": 973,
+      "start": 980,
+      "end": 981,
       "loc": {
         "start": {
           "line": 34,
@@ -1898,8 +1898,8 @@
     {
       "type": "CommentLine",
       "value": " Finding Fragment Opaqueness",
-      "start": 977,
-      "end": 1007,
+      "start": 985,
+      "end": 1015,
       "loc": {
         "start": {
           "line": 36,
@@ -1913,9 +1913,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Asks the delegate whether fragments rendered by a program are opaque.\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - \n   * @returns {boolean} - \n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1523068-programisopaque\n   ",
-      "start": 1011,
-      "end": 1295,
+      "value": "*\n   * Asks the delegate whether fragments rendered by a program are opaque.\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - \n   * @returns {boolean} - \n   * @see https://developer.apple.com/documentation/scenekit/scnprogramdelegate/1523068-programisopaque\n   ",
+      "start": 1019,
+      "end": 1307,
       "loc": {
         "start": {
           "line": 38,
@@ -1940,8 +1940,8 @@
         "binop": null
       },
       "value": "programIsOpaque",
-      "start": 1298,
-      "end": 1313,
+      "start": 1310,
+      "end": 1325,
       "loc": {
         "start": {
           "line": 46,
@@ -1965,8 +1965,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1313,
-      "end": 1314,
+      "start": 1325,
+      "end": 1326,
       "loc": {
         "start": {
           "line": 46,
@@ -1991,8 +1991,8 @@
         "binop": null
       },
       "value": "program",
-      "start": 1314,
-      "end": 1321,
+      "start": 1326,
+      "end": 1333,
       "loc": {
         "start": {
           "line": 46,
@@ -2016,8 +2016,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1321,
-      "end": 1322,
+      "start": 1333,
+      "end": 1334,
       "loc": {
         "start": {
           "line": 46,
@@ -2041,8 +2041,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1323,
-      "end": 1324,
+      "start": 1335,
+      "end": 1336,
       "loc": {
         "start": {
           "line": 46,
@@ -2069,8 +2069,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 1329,
-      "end": 1335,
+      "start": 1341,
+      "end": 1347,
       "loc": {
         "start": {
           "line": 47,
@@ -2097,8 +2097,8 @@
         "updateContext": null
       },
       "value": "false",
-      "start": 1336,
-      "end": 1341,
+      "start": 1348,
+      "end": 1353,
       "loc": {
         "start": {
           "line": 47,
@@ -2122,8 +2122,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1344,
-      "end": 1345,
+      "start": 1356,
+      "end": 1357,
       "loc": {
         "start": {
           "line": 48,
@@ -2138,8 +2138,8 @@
     {
       "type": "CommentLine",
       "value": " Binding and Unbinding Values",
-      "start": 1349,
-      "end": 1380,
+      "start": 1361,
+      "end": 1392,
       "loc": {
         "start": {
           "line": 50,
@@ -2153,9 +2153,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Invoked on the delegate to let it bind program values and/or associated graphics resources (such as textures) for symbols.\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - The SCNProgram object to bind values for.\n   * @param {string} symbol - The name of the symbol to bind a value for.\n   * @param {number} location - The location of the symbol within the program object to be modified.\n   * @param {number} programID - The underlying OpenGL program object in which the binding is made.\n   * @param {SCNRenderer} renderer - The renderer that is currently rendering the scene.\n   * @returns {boolean} - \n   * @desc If you use the handleBinding(ofSymbol:handler:) method to associate a handler block with a SceneKit object for a symbol, SceneKit will not call the delegate’s program(_:bindValueForSymbol:atLocation:programID:renderer:) method for that symbol when rendering that object.\n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1524155-program\n   ",
-      "start": 1384,
-      "end": 2400,
+      "value": "*\n   * Invoked on the delegate to let it bind program values and/or associated graphics resources (such as textures) for symbols.\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - The SCNProgram object to bind values for.\n   * @param {string} symbol - The name of the symbol to bind a value for.\n   * @param {number} location - The location of the symbol within the program object to be modified.\n   * @param {number} programID - The underlying OpenGL program object in which the binding is made.\n   * @param {SCNRenderer} renderer - The renderer that is currently rendering the scene.\n   * @returns {boolean} - \n   * @desc If you use the handleBinding(ofSymbol:handler:) method to associate a handler block with a SceneKit object for a symbol, SceneKit will not call the delegate’s program(_:bindValueForSymbol:atLocation:programID:renderer:) method for that symbol when rendering that object.\n   * @see https://developer.apple.com/documentation/scenekit/scnprogramdelegate/1524155-program\n   ",
+      "start": 1396,
+      "end": 2416,
       "loc": {
         "start": {
           "line": 52,
@@ -2180,8 +2180,8 @@
         "binop": null
       },
       "value": "programBindValueForSymbolAtLocation",
-      "start": 2403,
-      "end": 2438,
+      "start": 2419,
+      "end": 2454,
       "loc": {
         "start": {
           "line": 65,
@@ -2205,8 +2205,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2438,
-      "end": 2439,
+      "start": 2454,
+      "end": 2455,
       "loc": {
         "start": {
           "line": 65,
@@ -2231,8 +2231,8 @@
         "binop": null
       },
       "value": "program",
-      "start": 2439,
-      "end": 2446,
+      "start": 2455,
+      "end": 2462,
       "loc": {
         "start": {
           "line": 65,
@@ -2257,8 +2257,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2446,
-      "end": 2447,
+      "start": 2462,
+      "end": 2463,
       "loc": {
         "start": {
           "line": 65,
@@ -2283,8 +2283,8 @@
         "binop": null
       },
       "value": "symbol",
-      "start": 2448,
-      "end": 2454,
+      "start": 2464,
+      "end": 2470,
       "loc": {
         "start": {
           "line": 65,
@@ -2309,8 +2309,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2454,
-      "end": 2455,
+      "start": 2470,
+      "end": 2471,
       "loc": {
         "start": {
           "line": 65,
@@ -2335,8 +2335,8 @@
         "binop": null
       },
       "value": "location",
-      "start": 2456,
-      "end": 2464,
+      "start": 2472,
+      "end": 2480,
       "loc": {
         "start": {
           "line": 65,
@@ -2361,8 +2361,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2464,
-      "end": 2465,
+      "start": 2480,
+      "end": 2481,
       "loc": {
         "start": {
           "line": 65,
@@ -2387,8 +2387,8 @@
         "binop": null
       },
       "value": "programID",
-      "start": 2466,
-      "end": 2475,
+      "start": 2482,
+      "end": 2491,
       "loc": {
         "start": {
           "line": 65,
@@ -2413,8 +2413,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2475,
-      "end": 2476,
+      "start": 2491,
+      "end": 2492,
       "loc": {
         "start": {
           "line": 65,
@@ -2439,8 +2439,8 @@
         "binop": null
       },
       "value": "renderer",
-      "start": 2477,
-      "end": 2485,
+      "start": 2493,
+      "end": 2501,
       "loc": {
         "start": {
           "line": 65,
@@ -2464,8 +2464,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2485,
-      "end": 2486,
+      "start": 2501,
+      "end": 2502,
       "loc": {
         "start": {
           "line": 65,
@@ -2489,8 +2489,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2487,
-      "end": 2488,
+      "start": 2503,
+      "end": 2504,
       "loc": {
         "start": {
           "line": 65,
@@ -2517,8 +2517,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 2493,
-      "end": 2499,
+      "start": 2509,
+      "end": 2515,
       "loc": {
         "start": {
           "line": 66,
@@ -2545,8 +2545,8 @@
         "updateContext": null
       },
       "value": "false",
-      "start": 2500,
-      "end": 2505,
+      "start": 2516,
+      "end": 2521,
       "loc": {
         "start": {
           "line": 66,
@@ -2570,8 +2570,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2508,
-      "end": 2509,
+      "start": 2524,
+      "end": 2525,
       "loc": {
         "start": {
           "line": 67,
@@ -2585,9 +2585,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Invoked on the delegate to let it unbind program values and/or also unbind associated graphic resources (such as textures).\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - The SCNProgram object to unbind values for.\n   * @param {string} symbol - The name of the symbol to unbind a value for.\n   * @param {number} location - The location of the symbol within the program object to be modified.\n   * @param {number} programID - The underlying OpenGL program object in which the unbinding is done.\n   * @param {SCNRenderer} renderer - The renderer that is currently rendering the scene.\n\n   * @returns {void}\n   * @desc If you use the handleUnbinding(ofSymbol:handler:) method to associate a handler block with a SceneKit object for a symbol, SceneKit will not call the delegate’s program(_:unbindValueForSymbol:atLocation:programID:renderer:) method for that symbol when rendering that object.\n   * @see https://developer.apple.com/reference/scenekit/scnprogramdelegate/1523857-program\n   ",
-      "start": 2513,
-      "end": 3535,
+      "value": "*\n   * Invoked on the delegate to let it unbind program values and/or also unbind associated graphic resources (such as textures).\n   * @deprecated\n   * @access public\n   * @param {SCNProgram} program - The SCNProgram object to unbind values for.\n   * @param {string} symbol - The name of the symbol to unbind a value for.\n   * @param {number} location - The location of the symbol within the program object to be modified.\n   * @param {number} programID - The underlying OpenGL program object in which the unbinding is done.\n   * @param {SCNRenderer} renderer - The renderer that is currently rendering the scene.\n\n   * @returns {void}\n   * @desc If you use the handleUnbinding(ofSymbol:handler:) method to associate a handler block with a SceneKit object for a symbol, SceneKit will not call the delegate’s program(_:unbindValueForSymbol:atLocation:programID:renderer:) method for that symbol when rendering that object.\n   * @see https://developer.apple.com/documentation/scenekit/scnprogramdelegate/1523857-program\n   ",
+      "start": 2529,
+      "end": 3555,
       "loc": {
         "start": {
           "line": 69,
@@ -2612,8 +2612,8 @@
         "binop": null
       },
       "value": "programUnbindValueForSymbolAtLocation",
-      "start": 3538,
-      "end": 3575,
+      "start": 3558,
+      "end": 3595,
       "loc": {
         "start": {
           "line": 83,
@@ -2637,8 +2637,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3575,
-      "end": 3576,
+      "start": 3595,
+      "end": 3596,
       "loc": {
         "start": {
           "line": 83,
@@ -2663,8 +2663,8 @@
         "binop": null
       },
       "value": "program",
-      "start": 3576,
-      "end": 3583,
+      "start": 3596,
+      "end": 3603,
       "loc": {
         "start": {
           "line": 83,
@@ -2689,8 +2689,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3583,
-      "end": 3584,
+      "start": 3603,
+      "end": 3604,
       "loc": {
         "start": {
           "line": 83,
@@ -2715,8 +2715,8 @@
         "binop": null
       },
       "value": "symbol",
-      "start": 3585,
-      "end": 3591,
+      "start": 3605,
+      "end": 3611,
       "loc": {
         "start": {
           "line": 83,
@@ -2741,8 +2741,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3591,
-      "end": 3592,
+      "start": 3611,
+      "end": 3612,
       "loc": {
         "start": {
           "line": 83,
@@ -2767,8 +2767,8 @@
         "binop": null
       },
       "value": "location",
-      "start": 3593,
-      "end": 3601,
+      "start": 3613,
+      "end": 3621,
       "loc": {
         "start": {
           "line": 83,
@@ -2793,8 +2793,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3601,
-      "end": 3602,
+      "start": 3621,
+      "end": 3622,
       "loc": {
         "start": {
           "line": 83,
@@ -2819,8 +2819,8 @@
         "binop": null
       },
       "value": "programID",
-      "start": 3603,
-      "end": 3612,
+      "start": 3623,
+      "end": 3632,
       "loc": {
         "start": {
           "line": 83,
@@ -2845,8 +2845,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3612,
-      "end": 3613,
+      "start": 3632,
+      "end": 3633,
       "loc": {
         "start": {
           "line": 83,
@@ -2871,8 +2871,8 @@
         "binop": null
       },
       "value": "renderer",
-      "start": 3614,
-      "end": 3622,
+      "start": 3634,
+      "end": 3642,
       "loc": {
         "start": {
           "line": 83,
@@ -2896,8 +2896,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3622,
-      "end": 3623,
+      "start": 3642,
+      "end": 3643,
       "loc": {
         "start": {
           "line": 83,
@@ -2921,8 +2921,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3624,
-      "end": 3625,
+      "start": 3644,
+      "end": 3645,
       "loc": {
         "start": {
           "line": 83,
@@ -2946,8 +2946,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3628,
-      "end": 3629,
+      "start": 3648,
+      "end": 3649,
       "loc": {
         "start": {
           "line": 84,
@@ -2971,8 +2971,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3630,
-      "end": 3631,
+      "start": 3650,
+      "end": 3651,
       "loc": {
         "start": {
           "line": 85,
@@ -2997,8 +2997,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3632,
-      "end": 3632,
+      "start": 3652,
+      "end": 3652,
       "loc": {
         "start": {
           "line": 86,

@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 624,
+  "end": 628,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 624,
+    "end": 628,
     "loc": {
       "start": {
         "line": 1,
@@ -30,8 +30,8 @@
     "body": [
       {
         "type": "Identifier",
-        "start": 539,
-        "end": 592,
+        "start": 543,
+        "end": 596,
         "loc": {
           "start": {
             "line": 11,
@@ -45,8 +45,8 @@
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 545,
-            "end": 592,
+            "start": 549,
+            "end": 596,
             "loc": {
               "start": {
                 "line": 11,
@@ -59,8 +59,8 @@
             },
             "id": {
               "type": "Identifier",
-              "start": 545,
-              "end": 559,
+              "start": 549,
+              "end": 563,
               "loc": {
                 "start": {
                   "line": 11,
@@ -77,8 +77,8 @@
             },
             "init": {
               "type": "ObjectExpression",
-              "start": 562,
-              "end": 592,
+              "start": 566,
+              "end": 596,
               "loc": {
                 "start": {
                   "line": 11,
@@ -92,8 +92,8 @@
               "properties": [
                 {
                   "type": "ObjectProperty",
-                  "start": 566,
-                  "end": 576,
+                  "start": 570,
+                  "end": 580,
                   "loc": {
                     "start": {
                       "line": 12,
@@ -109,8 +109,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 566,
-                    "end": 573,
+                    "start": 570,
+                    "end": 577,
                     "loc": {
                       "start": {
                         "line": 12,
@@ -126,8 +126,8 @@
                   },
                   "value": {
                     "type": "NumericLiteral",
-                    "start": 575,
-                    "end": 576,
+                    "start": 579,
+                    "end": 580,
                     "loc": {
                       "start": {
                         "line": 12,
@@ -147,8 +147,8 @@
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 580,
-                  "end": 590,
+                  "start": 584,
+                  "end": 594,
                   "loc": {
                     "start": {
                       "line": 13,
@@ -164,8 +164,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 580,
-                    "end": 587,
+                    "start": 584,
+                    "end": 591,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -181,8 +181,8 @@
                   },
                   "value": {
                     "type": "NumericLiteral",
-                    "start": 589,
-                    "end": 590,
+                    "start": 593,
+                    "end": 594,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -212,8 +212,8 @@
       },
       {
         "type": "Identifier",
-        "start": 594,
-        "end": 623,
+        "start": 598,
+        "end": 627,
         "loc": {
           "start": {
             "line": 16,
@@ -226,8 +226,8 @@
         },
         "declaration": {
           "type": "Identifier",
-          "start": 609,
-          "end": 623,
+          "start": 613,
+          "end": 627,
           "loc": {
             "start": {
               "line": 16,
@@ -247,8 +247,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 594,
-        "end": 623,
+        "start": 598,
+        "end": 627,
         "loc": {
           "start": {
             "line": 16,
@@ -261,8 +261,8 @@
         },
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 539,
-          "end": 592,
+          "start": 543,
+          "end": 596,
           "loc": {
             "start": {
               "line": 11,
@@ -276,8 +276,8 @@
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 545,
-              "end": 592,
+              "start": 549,
+              "end": 596,
               "loc": {
                 "start": {
                   "line": 11,
@@ -290,8 +290,8 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 545,
-                "end": 559,
+                "start": 549,
+                "end": 563,
                 "loc": {
                   "start": {
                     "line": 11,
@@ -308,8 +308,8 @@
               },
               "init": {
                 "type": "ObjectExpression",
-                "start": 562,
-                "end": 592,
+                "start": 566,
+                "end": 596,
                 "loc": {
                   "start": {
                     "line": 11,
@@ -323,8 +323,8 @@
                 "properties": [
                   {
                     "type": "ObjectProperty",
-                    "start": 566,
-                    "end": 576,
+                    "start": 570,
+                    "end": 580,
                     "loc": {
                       "start": {
                         "line": 12,
@@ -340,8 +340,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 566,
-                      "end": 573,
+                      "start": 570,
+                      "end": 577,
                       "loc": {
                         "start": {
                           "line": 12,
@@ -357,8 +357,8 @@
                     },
                     "value": {
                       "type": "NumericLiteral",
-                      "start": 575,
-                      "end": 576,
+                      "start": 579,
+                      "end": 580,
                       "loc": {
                         "start": {
                           "line": 12,
@@ -378,8 +378,8 @@
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 580,
-                    "end": 590,
+                    "start": 584,
+                    "end": 594,
                     "loc": {
                       "start": {
                         "line": 13,
@@ -395,8 +395,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 580,
-                      "end": 587,
+                      "start": 584,
+                      "end": 591,
                       "loc": {
                         "start": {
                           "line": 13,
@@ -412,8 +412,8 @@
                     },
                     "value": {
                       "type": "NumericLiteral",
-                      "start": 589,
-                      "end": 590,
+                      "start": 593,
+                      "end": 594,
                       "loc": {
                         "start": {
                           "line": 13,
@@ -440,9 +440,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * Rules for determining which regions are interior to a path, used by the fillPath(using:) and clip(using:) methods.\n * @typedef {Object} CGPathFillRule\n * @property {number} evenOdd - A rule that considers a region to be interior to a path based on the number of times it is enclosed by path elements.\n * @property {number} winding - A rule that considers a region to be interior to a path if the winding number for that region is nonzero.\n * @see https://developer.apple.com/reference/coregraphics/cgpathfillrule\n ",
+              "value": "*\n * Rules for determining which regions are interior to a path, used by the fillPath(using:) and clip(using:) methods.\n * @typedef {Object} CGPathFillRule\n * @property {number} evenOdd - A rule that considers a region to be interior to a path based on the number of times it is enclosed by path elements.\n * @property {number} winding - A rule that considers a region to be interior to a path if the winding number for that region is nonzero.\n * @see https://developer.apple.com/documentation/coregraphics/cgpathfillrule\n ",
               "start": 15,
-              "end": 538,
+              "end": 542,
               "loc": {
                 "start": {
                   "line": 4,
@@ -498,9 +498,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Rules for determining which regions are interior to a path, used by the fillPath(using:) and clip(using:) methods.\n * @typedef {Object} CGPathFillRule\n * @property {number} evenOdd - A rule that considers a region to be interior to a path based on the number of times it is enclosed by path elements.\n * @property {number} winding - A rule that considers a region to be interior to a path if the winding number for that region is nonzero.\n * @see https://developer.apple.com/reference/coregraphics/cgpathfillrule\n ",
+            "value": "*\n * Rules for determining which regions are interior to a path, used by the fillPath(using:) and clip(using:) methods.\n * @typedef {Object} CGPathFillRule\n * @property {number} evenOdd - A rule that considers a region to be interior to a path based on the number of times it is enclosed by path elements.\n * @property {number} winding - A rule that considers a region to be interior to a path if the winding number for that region is nonzero.\n * @see https://developer.apple.com/documentation/coregraphics/cgpathfillrule\n ",
             "start": 15,
-            "end": 538,
+            "end": 542,
             "loc": {
               "start": {
                 "line": 4,
@@ -519,9 +519,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * Rules for determining which regions are interior to a path, used by the fillPath(using:) and clip(using:) methods.\n * @typedef {Object} CGPathFillRule\n * @property {number} evenOdd - A rule that considers a region to be interior to a path based on the number of times it is enclosed by path elements.\n * @property {number} winding - A rule that considers a region to be interior to a path if the winding number for that region is nonzero.\n * @see https://developer.apple.com/reference/coregraphics/cgpathfillrule\n ",
+      "value": "*\n * Rules for determining which regions are interior to a path, used by the fillPath(using:) and clip(using:) methods.\n * @typedef {Object} CGPathFillRule\n * @property {number} evenOdd - A rule that considers a region to be interior to a path based on the number of times it is enclosed by path elements.\n * @property {number} winding - A rule that considers a region to be interior to a path if the winding number for that region is nonzero.\n * @see https://developer.apple.com/documentation/coregraphics/cgpathfillrule\n ",
       "start": 15,
-      "end": 538,
+      "end": 542,
       "loc": {
         "start": {
           "line": 4,
@@ -564,9 +564,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Rules for determining which regions are interior to a path, used by the fillPath(using:) and clip(using:) methods.\n * @typedef {Object} CGPathFillRule\n * @property {number} evenOdd - A rule that considers a region to be interior to a path based on the number of times it is enclosed by path elements.\n * @property {number} winding - A rule that considers a region to be interior to a path if the winding number for that region is nonzero.\n * @see https://developer.apple.com/reference/coregraphics/cgpathfillrule\n ",
+      "value": "*\n * Rules for determining which regions are interior to a path, used by the fillPath(using:) and clip(using:) methods.\n * @typedef {Object} CGPathFillRule\n * @property {number} evenOdd - A rule that considers a region to be interior to a path based on the number of times it is enclosed by path elements.\n * @property {number} winding - A rule that considers a region to be interior to a path if the winding number for that region is nonzero.\n * @see https://developer.apple.com/documentation/coregraphics/cgpathfillrule\n ",
       "start": 15,
-      "end": 538,
+      "end": 542,
       "loc": {
         "start": {
           "line": 4,
@@ -593,8 +593,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 539,
-      "end": 544,
+      "start": 543,
+      "end": 548,
       "loc": {
         "start": {
           "line": 11,
@@ -619,8 +619,8 @@
         "binop": null
       },
       "value": "CGPathFillRule",
-      "start": 545,
-      "end": 559,
+      "start": 549,
+      "end": 563,
       "loc": {
         "start": {
           "line": 11,
@@ -646,8 +646,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 560,
-      "end": 561,
+      "start": 564,
+      "end": 565,
       "loc": {
         "start": {
           "line": 11,
@@ -671,8 +671,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 562,
-      "end": 563,
+      "start": 566,
+      "end": 567,
       "loc": {
         "start": {
           "line": 11,
@@ -697,8 +697,8 @@
         "binop": null
       },
       "value": "evenOdd",
-      "start": 566,
-      "end": 573,
+      "start": 570,
+      "end": 577,
       "loc": {
         "start": {
           "line": 12,
@@ -723,8 +723,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 573,
-      "end": 574,
+      "start": 577,
+      "end": 578,
       "loc": {
         "start": {
           "line": 12,
@@ -750,8 +750,8 @@
         "updateContext": null
       },
       "value": 1,
-      "start": 575,
-      "end": 576,
+      "start": 579,
+      "end": 580,
       "loc": {
         "start": {
           "line": 12,
@@ -776,8 +776,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 576,
-      "end": 577,
+      "start": 580,
+      "end": 581,
       "loc": {
         "start": {
           "line": 12,
@@ -802,8 +802,8 @@
         "binop": null
       },
       "value": "winding",
-      "start": 580,
-      "end": 587,
+      "start": 584,
+      "end": 591,
       "loc": {
         "start": {
           "line": 13,
@@ -828,8 +828,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 587,
-      "end": 588,
+      "start": 591,
+      "end": 592,
       "loc": {
         "start": {
           "line": 13,
@@ -855,8 +855,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 589,
-      "end": 590,
+      "start": 593,
+      "end": 594,
       "loc": {
         "start": {
           "line": 13,
@@ -880,8 +880,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 591,
-      "end": 592,
+      "start": 595,
+      "end": 596,
       "loc": {
         "start": {
           "line": 14,
@@ -908,8 +908,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 594,
-      "end": 600,
+      "start": 598,
+      "end": 604,
       "loc": {
         "start": {
           "line": 16,
@@ -936,8 +936,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 601,
-      "end": 608,
+      "start": 605,
+      "end": 612,
       "loc": {
         "start": {
           "line": 16,
@@ -962,8 +962,8 @@
         "binop": null
       },
       "value": "CGPathFillRule",
-      "start": 609,
-      "end": 623,
+      "start": 613,
+      "end": 627,
       "loc": {
         "start": {
           "line": 16,
@@ -988,8 +988,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 624,
-      "end": 624,
+      "start": 628,
+      "end": 628,
       "loc": {
         "start": {
           "line": 17,

@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 6611,
+  "end": 6643,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 6611,
+    "end": 6643,
     "loc": {
       "start": {
         "line": 1,
@@ -239,9 +239,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * A physics behavior that modifies a physics body to behave like a car, motorcycle, or other wheeled vehicle.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle\n ",
+            "value": "*\n * A physics behavior that modifies a physics body to behave like a car, motorcycle, or other wheeled vehicle.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle\n ",
             "start": 178,
-            "end": 420,
+            "end": 424,
             "loc": {
               "start": {
                 "line": 8,
@@ -257,8 +257,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 421,
-        "end": 6610,
+        "start": 425,
+        "end": 6642,
         "loc": {
           "start": {
             "line": 14,
@@ -271,8 +271,8 @@
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 436,
-          "end": 6610,
+          "start": 440,
+          "end": 6642,
           "loc": {
             "start": {
               "line": 14,
@@ -285,8 +285,8 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 442,
-            "end": 459,
+            "start": 446,
+            "end": 463,
             "loc": {
               "start": {
                 "line": 14,
@@ -303,8 +303,8 @@
           },
           "superClass": {
             "type": "Identifier",
-            "start": 468,
-            "end": 486,
+            "start": 472,
+            "end": 490,
             "loc": {
               "start": {
                 "line": 14,
@@ -320,8 +320,8 @@
           },
           "body": {
             "type": "ClassBody",
-            "start": 487,
-            "end": 6610,
+            "start": 491,
+            "end": 6642,
             "loc": {
               "start": {
                 "line": 14,
@@ -335,8 +335,8 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 1582,
-                "end": 1810,
+                "start": 1590,
+                "end": 1818,
                 "loc": {
                   "start": {
                     "line": 26,
@@ -350,8 +350,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1582,
-                  "end": 1593,
+                  "start": 1590,
+                  "end": 1601,
                   "loc": {
                     "start": {
                       "line": 26,
@@ -375,8 +375,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 1594,
-                    "end": 1605,
+                    "start": 1602,
+                    "end": 1613,
                     "loc": {
                       "start": {
                         "line": 26,
@@ -392,8 +392,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1607,
-                    "end": 1613,
+                    "start": 1615,
+                    "end": 1621,
                     "loc": {
                       "start": {
                         "line": 26,
@@ -410,8 +410,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1615,
-                  "end": 1810,
+                  "start": 1623,
+                  "end": 1818,
                   "loc": {
                     "start": {
                       "line": 26,
@@ -425,8 +425,8 @@
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 1621,
-                      "end": 1628,
+                      "start": 1629,
+                      "end": 1636,
                       "loc": {
                         "start": {
                           "line": 27,
@@ -439,8 +439,8 @@
                       },
                       "expression": {
                         "type": "CallExpression",
-                        "start": 1621,
-                        "end": 1628,
+                        "start": 1629,
+                        "end": 1636,
                         "loc": {
                           "start": {
                             "line": 27,
@@ -453,8 +453,8 @@
                         },
                         "callee": {
                           "type": "Super",
-                          "start": 1621,
-                          "end": 1626,
+                          "start": 1629,
+                          "end": 1634,
                           "loc": {
                             "start": {
                               "line": 27,
@@ -473,8 +473,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Working with a Vehicle’s Physical Characteristics",
-                          "start": 1634,
-                          "end": 1686,
+                          "start": 1642,
+                          "end": 1694,
                           "loc": {
                             "start": {
                               "line": 29,
@@ -490,8 +490,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1692,
-                      "end": 1716,
+                      "start": 1700,
+                      "end": 1724,
                       "loc": {
                         "start": {
                           "line": 31,
@@ -504,8 +504,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1692,
-                        "end": 1716,
+                        "start": 1700,
+                        "end": 1724,
                         "loc": {
                           "start": {
                             "line": 31,
@@ -519,8 +519,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1692,
-                          "end": 1709,
+                          "start": 1700,
+                          "end": 1717,
                           "loc": {
                             "start": {
                               "line": 31,
@@ -533,8 +533,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1692,
-                            "end": 1696,
+                            "start": 1700,
+                            "end": 1704,
                             "loc": {
                               "start": {
                                 "line": 31,
@@ -549,8 +549,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1697,
-                            "end": 1709,
+                            "start": 1705,
+                            "end": 1717,
                             "loc": {
                               "start": {
                                 "line": 31,
@@ -569,8 +569,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 1712,
-                          "end": 1716,
+                          "start": 1720,
+                          "end": 1724,
                           "loc": {
                             "start": {
                               "line": 31,
@@ -588,8 +588,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Working with a Vehicle’s Physical Characteristics",
-                          "start": 1634,
-                          "end": 1686,
+                          "start": 1642,
+                          "end": 1694,
                           "loc": {
                             "start": {
                               "line": 29,
@@ -605,8 +605,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1721,
-                      "end": 1740,
+                      "start": 1729,
+                      "end": 1748,
                       "loc": {
                         "start": {
                           "line": 32,
@@ -619,8 +619,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1721,
-                        "end": 1740,
+                        "start": 1729,
+                        "end": 1748,
                         "loc": {
                           "start": {
                             "line": 32,
@@ -634,8 +634,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1721,
-                          "end": 1733,
+                          "start": 1729,
+                          "end": 1741,
                           "loc": {
                             "start": {
                               "line": 32,
@@ -648,8 +648,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1721,
-                            "end": 1725,
+                            "start": 1729,
+                            "end": 1733,
                             "loc": {
                               "start": {
                                 "line": 32,
@@ -663,8 +663,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1726,
-                            "end": 1733,
+                            "start": 1734,
+                            "end": 1741,
                             "loc": {
                               "start": {
                                 "line": 32,
@@ -682,8 +682,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 1736,
-                          "end": 1740,
+                          "start": 1744,
+                          "end": 1748,
                           "loc": {
                             "start": {
                               "line": 32,
@@ -703,8 +703,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Driving a Vehicle",
-                          "start": 1746,
-                          "end": 1766,
+                          "start": 1754,
+                          "end": 1774,
                           "loc": {
                             "start": {
                               "line": 34,
@@ -720,8 +720,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1772,
-                      "end": 1806,
+                      "start": 1780,
+                      "end": 1814,
                       "loc": {
                         "start": {
                           "line": 36,
@@ -734,8 +734,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1772,
-                        "end": 1806,
+                        "start": 1780,
+                        "end": 1814,
                         "loc": {
                           "start": {
                             "line": 36,
@@ -749,8 +749,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1772,
-                          "end": 1802,
+                          "start": 1780,
+                          "end": 1810,
                           "loc": {
                             "start": {
                               "line": 36,
@@ -763,8 +763,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1772,
-                            "end": 1776,
+                            "start": 1780,
+                            "end": 1784,
                             "loc": {
                               "start": {
                                 "line": 36,
@@ -779,8 +779,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1777,
-                            "end": 1802,
+                            "start": 1785,
+                            "end": 1810,
                             "loc": {
                               "start": {
                                 "line": 36,
@@ -799,8 +799,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 1805,
-                          "end": 1806,
+                          "start": 1813,
+                          "end": 1814,
                           "loc": {
                             "start": {
                               "line": 36,
@@ -823,8 +823,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Driving a Vehicle",
-                          "start": 1746,
-                          "end": 1766,
+                          "start": 1754,
+                          "end": 1774,
                           "loc": {
                             "start": {
                               "line": 34,
@@ -846,8 +846,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Creating a Vehicle",
-                    "start": 491,
-                    "end": 512,
+                    "start": 495,
+                    "end": 516,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -861,9 +861,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Creates a vehicle behavior.\n   * @access public\n   * @constructor\n   * @param {SCNPhysicsBody} chassisBody - A physics body to serve as the vehicle’s chassis.\n   * @param {SCNPhysicsVehicleWheel[]} wheels - An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels. A vehicle must have at least one wheel.\n   * @desc Each object in the wheels array associates a node with the wheel to serve as its visual representation and defines properties for the wheel’s physical characteristics. Each wheel object must reference a unique node, which should be a child of the node containing the physics body used for the vehicle’s chassis. Typically, you load a node hierarchy representing the vehicle and all of its wheels from a scene file and then designate which nodes serve as the body and wheels.For a behavior to take effect, you must add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387943-init\n   ",
-                    "start": 516,
-                    "end": 1579,
+                    "value": "*\n   * Creates a vehicle behavior.\n   * @access public\n   * @constructor\n   * @param {SCNPhysicsBody} chassisBody - A physics body to serve as the vehicle’s chassis.\n   * @param {SCNPhysicsVehicleWheel[]} wheels - An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels. A vehicle must have at least one wheel.\n   * @desc Each object in the wheels array associates a node with the wheel to serve as its visual representation and defines properties for the wheel’s physical characteristics. Each wheel object must reference a unique node, which should be a child of the node containing the physics body used for the vehicle’s chassis. Typically, you load a node hierarchy representing the vehicle and all of its wheels from a scene file and then designate which nodes serve as the body and wheels.For a behavior to take effect, you must add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle/1387943-init\n   ",
+                    "start": 520,
+                    "end": 1587,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -880,8 +880,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Working with a Vehicle’s Physical Characteristics",
-                    "start": 1814,
-                    "end": 1866,
+                    "start": 1822,
+                    "end": 1874,
                     "loc": {
                       "start": {
                         "line": 39,
@@ -895,9 +895,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The physics body representing the vehicle’s chassis.\n   * @type {SCNPhysicsBody}\n   * @desc The vehicle’s chassis must be a dynamic body.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387985-chassisbody\n   ",
-                    "start": 1870,
-                    "end": 2117,
+                    "value": "*\n   * The physics body representing the vehicle’s chassis.\n   * @type {SCNPhysicsBody}\n   * @desc The vehicle’s chassis must be a dynamic body.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle/1387985-chassisbody\n   ",
+                    "start": 1878,
+                    "end": 2129,
                     "loc": {
                       "start": {
                         "line": 41,
@@ -913,8 +913,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 2120,
-                "end": 2172,
+                "start": 2132,
+                "end": 2184,
                 "loc": {
                   "start": {
                     "line": 47,
@@ -928,8 +928,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 2124,
-                  "end": 2135,
+                  "start": 2136,
+                  "end": 2147,
                   "loc": {
                     "start": {
                       "line": 47,
@@ -952,8 +952,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 2138,
-                  "end": 2172,
+                  "start": 2150,
+                  "end": 2184,
                   "loc": {
                     "start": {
                       "line": 47,
@@ -967,8 +967,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 2144,
-                      "end": 2168,
+                      "start": 2156,
+                      "end": 2180,
                       "loc": {
                         "start": {
                           "line": 48,
@@ -981,8 +981,8 @@
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 2151,
-                        "end": 2168,
+                        "start": 2163,
+                        "end": 2180,
                         "loc": {
                           "start": {
                             "line": 48,
@@ -995,8 +995,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 2151,
-                          "end": 2155,
+                          "start": 2163,
+                          "end": 2167,
                           "loc": {
                             "start": {
                               "line": 48,
@@ -1010,8 +1010,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 2156,
-                          "end": 2168,
+                          "start": 2168,
+                          "end": 2180,
                           "loc": {
                             "start": {
                               "line": 48,
@@ -1036,8 +1036,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Working with a Vehicle’s Physical Characteristics",
-                    "start": 1814,
-                    "end": 1866,
+                    "start": 1822,
+                    "end": 1874,
                     "loc": {
                       "start": {
                         "line": 39,
@@ -1051,9 +1051,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The physics body representing the vehicle’s chassis.\n   * @type {SCNPhysicsBody}\n   * @desc The vehicle’s chassis must be a dynamic body.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387985-chassisbody\n   ",
-                    "start": 1870,
-                    "end": 2117,
+                    "value": "*\n   * The physics body representing the vehicle’s chassis.\n   * @type {SCNPhysicsBody}\n   * @desc The vehicle’s chassis must be a dynamic body.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle/1387985-chassisbody\n   ",
+                    "start": 1878,
+                    "end": 2129,
                     "loc": {
                       "start": {
                         "line": 41,
@@ -1069,9 +1069,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels.\n   * @type {SCNPhysicsVehicleWheel[]}\n   * @desc You can dynamically change the suspension and traction properties of a wheel connected to the vehicle by using the corresponding SCNPhysicsVehicleWheel object or by using Key-value coding with a keypath of the form wheels[index].propertyName. For example, the following code changes the size of the first wheel attached to the vehicle, simulating a failed tire:SCNPhysicsVehicle *vehicle = [SCNPhysicsVehicle vehicleWithChassisBody:car wheels:wheels];\n[vehicle setValue:@0.1 forKeyPath:@\"wheels[0].radius\"];\nSCNPhysicsVehicle *vehicle = [SCNPhysicsVehicle vehicleWithChassisBody:car wheels:wheels];\n[vehicle setValue:@0.1 forKeyPath:@\"wheels[0].radius\"];\n\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387906-wheels\n   ",
-                    "start": 2176,
-                    "end": 3063,
+                    "value": "*\n   * An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels.\n   * @type {SCNPhysicsVehicleWheel[]}\n   * @desc You can dynamically change the suspension and traction properties of a wheel connected to the vehicle by using the corresponding SCNPhysicsVehicleWheel object or by using Key-value coding with a keypath of the form wheels[index].propertyName. For example, the following code changes the size of the first wheel attached to the vehicle, simulating a failed tire:SCNPhysicsVehicle *vehicle = [SCNPhysicsVehicle vehicleWithChassisBody:car wheels:wheels];\n[vehicle setValue:@0.1 forKeyPath:@\"wheels[0].radius\"];\nSCNPhysicsVehicle *vehicle = [SCNPhysicsVehicle vehicleWithChassisBody:car wheels:wheels];\n[vehicle setValue:@0.1 forKeyPath:@\"wheels[0].radius\"];\n\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle/1387906-wheels\n   ",
+                    "start": 2188,
+                    "end": 3079,
                     "loc": {
                       "start": {
                         "line": 51,
@@ -1087,8 +1087,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 3066,
-                "end": 3108,
+                "start": 3082,
+                "end": 3124,
                 "loc": {
                   "start": {
                     "line": 61,
@@ -1102,8 +1102,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 3070,
-                  "end": 3076,
+                  "start": 3086,
+                  "end": 3092,
                   "loc": {
                     "start": {
                       "line": 61,
@@ -1126,8 +1126,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 3079,
-                  "end": 3108,
+                  "start": 3095,
+                  "end": 3124,
                   "loc": {
                     "start": {
                       "line": 61,
@@ -1141,8 +1141,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 3085,
-                      "end": 3104,
+                      "start": 3101,
+                      "end": 3120,
                       "loc": {
                         "start": {
                           "line": 62,
@@ -1155,8 +1155,8 @@
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 3092,
-                        "end": 3104,
+                        "start": 3108,
+                        "end": 3120,
                         "loc": {
                           "start": {
                             "line": 62,
@@ -1169,8 +1169,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 3092,
-                          "end": 3096,
+                          "start": 3108,
+                          "end": 3112,
                           "loc": {
                             "start": {
                               "line": 62,
@@ -1184,8 +1184,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 3097,
-                          "end": 3104,
+                          "start": 3113,
+                          "end": 3120,
                           "loc": {
                             "start": {
                               "line": 62,
@@ -1209,9 +1209,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels.\n   * @type {SCNPhysicsVehicleWheel[]}\n   * @desc You can dynamically change the suspension and traction properties of a wheel connected to the vehicle by using the corresponding SCNPhysicsVehicleWheel object or by using Key-value coding with a keypath of the form wheels[index].propertyName. For example, the following code changes the size of the first wheel attached to the vehicle, simulating a failed tire:SCNPhysicsVehicle *vehicle = [SCNPhysicsVehicle vehicleWithChassisBody:car wheels:wheels];\n[vehicle setValue:@0.1 forKeyPath:@\"wheels[0].radius\"];\nSCNPhysicsVehicle *vehicle = [SCNPhysicsVehicle vehicleWithChassisBody:car wheels:wheels];\n[vehicle setValue:@0.1 forKeyPath:@\"wheels[0].radius\"];\n\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387906-wheels\n   ",
-                    "start": 2176,
-                    "end": 3063,
+                    "value": "*\n   * An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels.\n   * @type {SCNPhysicsVehicleWheel[]}\n   * @desc You can dynamically change the suspension and traction properties of a wheel connected to the vehicle by using the corresponding SCNPhysicsVehicleWheel object or by using Key-value coding with a keypath of the form wheels[index].propertyName. For example, the following code changes the size of the first wheel attached to the vehicle, simulating a failed tire:SCNPhysicsVehicle *vehicle = [SCNPhysicsVehicle vehicleWithChassisBody:car wheels:wheels];\n[vehicle setValue:@0.1 forKeyPath:@\"wheels[0].radius\"];\nSCNPhysicsVehicle *vehicle = [SCNPhysicsVehicle vehicleWithChassisBody:car wheels:wheels];\n[vehicle setValue:@0.1 forKeyPath:@\"wheels[0].radius\"];\n\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle/1387906-wheels\n   ",
+                    "start": 2188,
+                    "end": 3079,
                     "loc": {
                       "start": {
                         "line": 51,
@@ -1228,8 +1228,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Driving a Vehicle",
-                    "start": 3112,
-                    "end": 3132,
+                    "start": 3128,
+                    "end": 3148,
                     "loc": {
                       "start": {
                         "line": 65,
@@ -1243,9 +1243,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Applies a force between the specified wheel and the ground under the vehicle.\n   * @access public\n   * @param {number} value - The magnitude of the force, in newtons.\n   * @param {number} index - The index of the wheel applying the force.\n   * @returns {void}\n   * @desc Applying a positive force turns the wheel in a direction that would move the vehicle forward; applying a negative force moves the vehicle in reverse.As with all physical quantities in SceneKit, you need not use realistic force measurements in your app—the effects of the physics simulation depend on the relative differences between forces, not on their absolute values. You may use whatever values produce the behavior or gameplay you’re looking for as long as you use them consistently.Calling this method applies a force for one step (or frame) of the physics simulation. To continuously accelerate a vehicle, call this method again on subequent simulation steps (for example, from your scene renderer delegate’s renderer(_:updateAtTime:) method) until the vehicle reaches your desired speed.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387963-applyengineforce\n   ",
-                    "start": 3136,
-                    "end": 4317,
+                    "value": "*\n   * Applies a force between the specified wheel and the ground under the vehicle.\n   * @access public\n   * @param {number} value - The magnitude of the force, in newtons.\n   * @param {number} index - The index of the wheel applying the force.\n   * @returns {void}\n   * @desc Applying a positive force turns the wheel in a direction that would move the vehicle forward; applying a negative force moves the vehicle in reverse.As with all physical quantities in SceneKit, you need not use realistic force measurements in your app—the effects of the physics simulation depend on the relative differences between forces, not on their absolute values. You may use whatever values produce the behavior or gameplay you’re looking for as long as you use them consistently.Calling this method applies a force for one step (or frame) of the physics simulation. To continuously accelerate a vehicle, call this method again on subequent simulation steps (for example, from your scene renderer delegate’s renderer(_:updateAtTime:) method) until the vehicle reaches your desired speed.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle/1387963-applyengineforce\n   ",
+                    "start": 3152,
+                    "end": 4337,
                     "loc": {
                       "start": {
                         "line": 67,
@@ -1261,8 +1261,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 4320,
-                "end": 4366,
+                "start": 4340,
+                "end": 4386,
                 "loc": {
                   "start": {
                     "line": 76,
@@ -1276,8 +1276,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 4320,
-                  "end": 4346,
+                  "start": 4340,
+                  "end": 4366,
                   "loc": {
                     "start": {
                       "line": 76,
@@ -1301,8 +1301,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 4347,
-                    "end": 4352,
+                    "start": 4367,
+                    "end": 4372,
                     "loc": {
                       "start": {
                         "line": 76,
@@ -1318,8 +1318,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 4354,
-                    "end": 4359,
+                    "start": 4374,
+                    "end": 4379,
                     "loc": {
                       "start": {
                         "line": 76,
@@ -1336,8 +1336,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 4361,
-                  "end": 4366,
+                  "start": 4381,
+                  "end": 4386,
                   "loc": {
                     "start": {
                       "line": 76,
@@ -1357,8 +1357,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Driving a Vehicle",
-                    "start": 3112,
-                    "end": 3132,
+                    "start": 3128,
+                    "end": 3148,
                     "loc": {
                       "start": {
                         "line": 65,
@@ -1372,9 +1372,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Applies a force between the specified wheel and the ground under the vehicle.\n   * @access public\n   * @param {number} value - The magnitude of the force, in newtons.\n   * @param {number} index - The index of the wheel applying the force.\n   * @returns {void}\n   * @desc Applying a positive force turns the wheel in a direction that would move the vehicle forward; applying a negative force moves the vehicle in reverse.As with all physical quantities in SceneKit, you need not use realistic force measurements in your app—the effects of the physics simulation depend on the relative differences between forces, not on their absolute values. You may use whatever values produce the behavior or gameplay you’re looking for as long as you use them consistently.Calling this method applies a force for one step (or frame) of the physics simulation. To continuously accelerate a vehicle, call this method again on subequent simulation steps (for example, from your scene renderer delegate’s renderer(_:updateAtTime:) method) until the vehicle reaches your desired speed.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387963-applyengineforce\n   ",
-                    "start": 3136,
-                    "end": 4317,
+                    "value": "*\n   * Applies a force between the specified wheel and the ground under the vehicle.\n   * @access public\n   * @param {number} value - The magnitude of the force, in newtons.\n   * @param {number} index - The index of the wheel applying the force.\n   * @returns {void}\n   * @desc Applying a positive force turns the wheel in a direction that would move the vehicle forward; applying a negative force moves the vehicle in reverse.As with all physical quantities in SceneKit, you need not use realistic force measurements in your app—the effects of the physics simulation depend on the relative differences between forces, not on their absolute values. You may use whatever values produce the behavior or gameplay you’re looking for as long as you use them consistently.Calling this method applies a force for one step (or frame) of the physics simulation. To continuously accelerate a vehicle, call this method again on subequent simulation steps (for example, from your scene renderer delegate’s renderer(_:updateAtTime:) method) until the vehicle reaches your desired speed.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle/1387963-applyengineforce\n   ",
+                    "start": 3152,
+                    "end": 4337,
                     "loc": {
                       "start": {
                         "line": 67,
@@ -1390,9 +1390,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Applies a force between the specified wheel and the ground under the vehicle.\n   * @access public\n   * @param {number} value - The magnitude of the torque, in newton-meters.\n   * @param {number} index - The index of the wheel applying the force.\n   * @returns {void}\n   * @desc Applying a braking force causes the wheel to slow down regardless of the direction it’s currently spinning in.As with all physical quantities in SceneKit, you need not use realistic force measurements in your app—the effects of the physics simulation depend on the relative differences between forces, not on their absolute values. You may use whatever values produce the behavior or gameplay you’re looking for as long as you use them consistently.Calling this method applies a braking force for one step (or frame) of the physics simulation. To continuously decelerate a vehicle, call this method again on subequent simulation steps (for example, from your scene renderer delegate’s renderer(_:updateAtTime:) method) until the vehicle stops or reaches your desired speed.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387894-applybrakingforce\n   ",
-                    "start": 4370,
-                    "end": 5537,
+                    "value": "*\n   * Applies a force between the specified wheel and the ground under the vehicle.\n   * @access public\n   * @param {number} value - The magnitude of the torque, in newton-meters.\n   * @param {number} index - The index of the wheel applying the force.\n   * @returns {void}\n   * @desc Applying a braking force causes the wheel to slow down regardless of the direction it’s currently spinning in.As with all physical quantities in SceneKit, you need not use realistic force measurements in your app—the effects of the physics simulation depend on the relative differences between forces, not on their absolute values. You may use whatever values produce the behavior or gameplay you’re looking for as long as you use them consistently.Calling this method applies a braking force for one step (or frame) of the physics simulation. To continuously decelerate a vehicle, call this method again on subequent simulation steps (for example, from your scene renderer delegate’s renderer(_:updateAtTime:) method) until the vehicle stops or reaches your desired speed.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle/1387894-applybrakingforce\n   ",
+                    "start": 4390,
+                    "end": 5561,
                     "loc": {
                       "start": {
                         "line": 79,
@@ -1408,8 +1408,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 5540,
-                "end": 5587,
+                "start": 5564,
+                "end": 5611,
                 "loc": {
                   "start": {
                     "line": 88,
@@ -1423,8 +1423,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 5540,
-                  "end": 5567,
+                  "start": 5564,
+                  "end": 5591,
                   "loc": {
                     "start": {
                       "line": 88,
@@ -1448,8 +1448,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 5568,
-                    "end": 5573,
+                    "start": 5592,
+                    "end": 5597,
                     "loc": {
                       "start": {
                         "line": 88,
@@ -1465,8 +1465,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 5575,
-                    "end": 5580,
+                    "start": 5599,
+                    "end": 5604,
                     "loc": {
                       "start": {
                         "line": 88,
@@ -1483,8 +1483,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 5582,
-                  "end": 5587,
+                  "start": 5606,
+                  "end": 5611,
                   "loc": {
                     "start": {
                       "line": 88,
@@ -1503,9 +1503,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Applies a force between the specified wheel and the ground under the vehicle.\n   * @access public\n   * @param {number} value - The magnitude of the torque, in newton-meters.\n   * @param {number} index - The index of the wheel applying the force.\n   * @returns {void}\n   * @desc Applying a braking force causes the wheel to slow down regardless of the direction it’s currently spinning in.As with all physical quantities in SceneKit, you need not use realistic force measurements in your app—the effects of the physics simulation depend on the relative differences between forces, not on their absolute values. You may use whatever values produce the behavior or gameplay you’re looking for as long as you use them consistently.Calling this method applies a braking force for one step (or frame) of the physics simulation. To continuously decelerate a vehicle, call this method again on subequent simulation steps (for example, from your scene renderer delegate’s renderer(_:updateAtTime:) method) until the vehicle stops or reaches your desired speed.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387894-applybrakingforce\n   ",
-                    "start": 4370,
-                    "end": 5537,
+                    "value": "*\n   * Applies a force between the specified wheel and the ground under the vehicle.\n   * @access public\n   * @param {number} value - The magnitude of the torque, in newton-meters.\n   * @param {number} index - The index of the wheel applying the force.\n   * @returns {void}\n   * @desc Applying a braking force causes the wheel to slow down regardless of the direction it’s currently spinning in.As with all physical quantities in SceneKit, you need not use realistic force measurements in your app—the effects of the physics simulation depend on the relative differences between forces, not on their absolute values. You may use whatever values produce the behavior or gameplay you’re looking for as long as you use them consistently.Calling this method applies a braking force for one step (or frame) of the physics simulation. To continuously decelerate a vehicle, call this method again on subequent simulation steps (for example, from your scene renderer delegate’s renderer(_:updateAtTime:) method) until the vehicle stops or reaches your desired speed.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle/1387894-applybrakingforce\n   ",
+                    "start": 4390,
+                    "end": 5561,
                     "loc": {
                       "start": {
                         "line": 79,
@@ -1521,9 +1521,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Pivots the specified wheel around its steering axis.\n   * @access public\n   * @param {number} value - The angle to set the wheel at relative to its steering axis, in radians.\n   * @param {number} index - The index, in the vehicle’s wheels array, of the wheel to be pivoted.\n   * @returns {void}\n   * @desc Steering angles are relative to the wheel’s steeringAxis vector. With the default steering axis of {0.0, -1.0, 0.0}, a steering angle of 0.0 represents neutral steering, positive values steer the vehicle to the right, and negative values steer to the left.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387952-setsteeringangle\n   ",
-                    "start": 5591,
-                    "end": 6268,
+                    "value": "*\n   * Pivots the specified wheel around its steering axis.\n   * @access public\n   * @param {number} value - The angle to set the wheel at relative to its steering axis, in radians.\n   * @param {number} index - The index, in the vehicle’s wheels array, of the wheel to be pivoted.\n   * @returns {void}\n   * @desc Steering angles are relative to the wheel’s steeringAxis vector. With the default steering axis of {0.0, -1.0, 0.0}, a steering angle of 0.0 represents neutral steering, positive values steer the vehicle to the right, and negative values steer to the left.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle/1387952-setsteeringangle\n   ",
+                    "start": 5615,
+                    "end": 6296,
                     "loc": {
                       "start": {
                         "line": 91,
@@ -1539,8 +1539,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 6271,
-                "end": 6317,
+                "start": 6299,
+                "end": 6345,
                 "loc": {
                   "start": {
                     "line": 100,
@@ -1554,8 +1554,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 6271,
-                  "end": 6297,
+                  "start": 6299,
+                  "end": 6325,
                   "loc": {
                     "start": {
                       "line": 100,
@@ -1579,8 +1579,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 6298,
-                    "end": 6303,
+                    "start": 6326,
+                    "end": 6331,
                     "loc": {
                       "start": {
                         "line": 100,
@@ -1596,8 +1596,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 6305,
-                    "end": 6310,
+                    "start": 6333,
+                    "end": 6338,
                     "loc": {
                       "start": {
                         "line": 100,
@@ -1614,8 +1614,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 6312,
-                  "end": 6317,
+                  "start": 6340,
+                  "end": 6345,
                   "loc": {
                     "start": {
                       "line": 100,
@@ -1634,9 +1634,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Pivots the specified wheel around its steering axis.\n   * @access public\n   * @param {number} value - The angle to set the wheel at relative to its steering axis, in radians.\n   * @param {number} index - The index, in the vehicle’s wheels array, of the wheel to be pivoted.\n   * @returns {void}\n   * @desc Steering angles are relative to the wheel’s steeringAxis vector. With the default steering axis of {0.0, -1.0, 0.0}, a steering angle of 0.0 represents neutral steering, positive values steer the vehicle to the right, and negative values steer to the left.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387952-setsteeringangle\n   ",
-                    "start": 5591,
-                    "end": 6268,
+                    "value": "*\n   * Pivots the specified wheel around its steering axis.\n   * @access public\n   * @param {number} value - The angle to set the wheel at relative to its steering axis, in radians.\n   * @param {number} index - The index, in the vehicle’s wheels array, of the wheel to be pivoted.\n   * @returns {void}\n   * @desc Steering angles are relative to the wheel’s steeringAxis vector. With the default steering axis of {0.0, -1.0, 0.0}, a steering angle of 0.0 represents neutral steering, positive values steer the vehicle to the right, and negative values steer to the left.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle/1387952-setsteeringangle\n   ",
+                    "start": 5615,
+                    "end": 6296,
                     "loc": {
                       "start": {
                         "line": 91,
@@ -1652,9 +1652,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The vehicle’s ground speed, in kilometers per hour.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387910-speedinkilometersperhour\n   ",
-                    "start": 6321,
-                    "end": 6527,
+                    "value": "*\n   * The vehicle’s ground speed, in kilometers per hour.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle/1387910-speedinkilometersperhour\n   ",
+                    "start": 6349,
+                    "end": 6559,
                     "loc": {
                       "start": {
                         "line": 103,
@@ -1670,8 +1670,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 6530,
-                "end": 6608,
+                "start": 6562,
+                "end": 6640,
                 "loc": {
                   "start": {
                     "line": 109,
@@ -1685,8 +1685,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 6534,
-                  "end": 6558,
+                  "start": 6566,
+                  "end": 6590,
                   "loc": {
                     "start": {
                       "line": 109,
@@ -1709,8 +1709,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 6561,
-                  "end": 6608,
+                  "start": 6593,
+                  "end": 6640,
                   "loc": {
                     "start": {
                       "line": 109,
@@ -1724,8 +1724,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 6567,
-                      "end": 6604,
+                      "start": 6599,
+                      "end": 6636,
                       "loc": {
                         "start": {
                           "line": 110,
@@ -1738,8 +1738,8 @@
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 6574,
-                        "end": 6604,
+                        "start": 6606,
+                        "end": 6636,
                         "loc": {
                           "start": {
                             "line": 110,
@@ -1752,8 +1752,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 6574,
-                          "end": 6578,
+                          "start": 6606,
+                          "end": 6610,
                           "loc": {
                             "start": {
                               "line": 110,
@@ -1767,8 +1767,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 6579,
-                          "end": 6604,
+                          "start": 6611,
+                          "end": 6636,
                           "loc": {
                             "start": {
                               "line": 110,
@@ -1791,9 +1791,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The vehicle’s ground speed, in kilometers per hour.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387910-speedinkilometersperhour\n   ",
-                    "start": 6321,
-                    "end": 6527,
+                    "value": "*\n   * The vehicle’s ground speed, in kilometers per hour.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle/1387910-speedinkilometersperhour\n   ",
+                    "start": 6349,
+                    "end": 6559,
                     "loc": {
                       "start": {
                         "line": 103,
@@ -1812,9 +1812,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * A physics behavior that modifies a physics body to behave like a car, motorcycle, or other wheeled vehicle.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle\n ",
+              "value": "*\n * A physics behavior that modifies a physics body to behave like a car, motorcycle, or other wheeled vehicle.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle\n ",
               "start": 178,
-              "end": 420,
+              "end": 424,
               "loc": {
                 "start": {
                   "line": 8,
@@ -1832,9 +1832,9 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * A physics behavior that modifies a physics body to behave like a car, motorcycle, or other wheeled vehicle.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle\n ",
+            "value": "*\n * A physics behavior that modifies a physics body to behave like a car, motorcycle, or other wheeled vehicle.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle\n ",
             "start": 178,
-            "end": 420,
+            "end": 424,
             "loc": {
               "start": {
                 "line": 8,
@@ -1890,9 +1890,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * A physics behavior that modifies a physics body to behave like a car, motorcycle, or other wheeled vehicle.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle\n ",
+      "value": "*\n * A physics behavior that modifies a physics body to behave like a car, motorcycle, or other wheeled vehicle.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle\n ",
       "start": 178,
-      "end": 420,
+      "end": 424,
       "loc": {
         "start": {
           "line": 8,
@@ -1907,8 +1907,8 @@
     {
       "type": "CommentLine",
       "value": " Creating a Vehicle",
-      "start": 491,
-      "end": 512,
+      "start": 495,
+      "end": 516,
       "loc": {
         "start": {
           "line": 15,
@@ -1922,9 +1922,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Creates a vehicle behavior.\n   * @access public\n   * @constructor\n   * @param {SCNPhysicsBody} chassisBody - A physics body to serve as the vehicle’s chassis.\n   * @param {SCNPhysicsVehicleWheel[]} wheels - An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels. A vehicle must have at least one wheel.\n   * @desc Each object in the wheels array associates a node with the wheel to serve as its visual representation and defines properties for the wheel’s physical characteristics. Each wheel object must reference a unique node, which should be a child of the node containing the physics body used for the vehicle’s chassis. Typically, you load a node hierarchy representing the vehicle and all of its wheels from a scene file and then designate which nodes serve as the body and wheels.For a behavior to take effect, you must add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387943-init\n   ",
-      "start": 516,
-      "end": 1579,
+      "value": "*\n   * Creates a vehicle behavior.\n   * @access public\n   * @constructor\n   * @param {SCNPhysicsBody} chassisBody - A physics body to serve as the vehicle’s chassis.\n   * @param {SCNPhysicsVehicleWheel[]} wheels - An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels. A vehicle must have at least one wheel.\n   * @desc Each object in the wheels array associates a node with the wheel to serve as its visual representation and defines properties for the wheel’s physical characteristics. Each wheel object must reference a unique node, which should be a child of the node containing the physics body used for the vehicle’s chassis. Typically, you load a node hierarchy representing the vehicle and all of its wheels from a scene file and then designate which nodes serve as the body and wheels.For a behavior to take effect, you must add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle/1387943-init\n   ",
+      "start": 520,
+      "end": 1587,
       "loc": {
         "start": {
           "line": 17,
@@ -1939,8 +1939,8 @@
     {
       "type": "CommentLine",
       "value": " Working with a Vehicle’s Physical Characteristics",
-      "start": 1634,
-      "end": 1686,
+      "start": 1642,
+      "end": 1694,
       "loc": {
         "start": {
           "line": 29,
@@ -1955,8 +1955,8 @@
     {
       "type": "CommentLine",
       "value": " Driving a Vehicle",
-      "start": 1746,
-      "end": 1766,
+      "start": 1754,
+      "end": 1774,
       "loc": {
         "start": {
           "line": 34,
@@ -1971,8 +1971,8 @@
     {
       "type": "CommentLine",
       "value": " Working with a Vehicle’s Physical Characteristics",
-      "start": 1814,
-      "end": 1866,
+      "start": 1822,
+      "end": 1874,
       "loc": {
         "start": {
           "line": 39,
@@ -1986,9 +1986,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The physics body representing the vehicle’s chassis.\n   * @type {SCNPhysicsBody}\n   * @desc The vehicle’s chassis must be a dynamic body.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387985-chassisbody\n   ",
-      "start": 1870,
-      "end": 2117,
+      "value": "*\n   * The physics body representing the vehicle’s chassis.\n   * @type {SCNPhysicsBody}\n   * @desc The vehicle’s chassis must be a dynamic body.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle/1387985-chassisbody\n   ",
+      "start": 1878,
+      "end": 2129,
       "loc": {
         "start": {
           "line": 41,
@@ -2002,9 +2002,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels.\n   * @type {SCNPhysicsVehicleWheel[]}\n   * @desc You can dynamically change the suspension and traction properties of a wheel connected to the vehicle by using the corresponding SCNPhysicsVehicleWheel object or by using Key-value coding with a keypath of the form wheels[index].propertyName. For example, the following code changes the size of the first wheel attached to the vehicle, simulating a failed tire:SCNPhysicsVehicle *vehicle = [SCNPhysicsVehicle vehicleWithChassisBody:car wheels:wheels];\n[vehicle setValue:@0.1 forKeyPath:@\"wheels[0].radius\"];\nSCNPhysicsVehicle *vehicle = [SCNPhysicsVehicle vehicleWithChassisBody:car wheels:wheels];\n[vehicle setValue:@0.1 forKeyPath:@\"wheels[0].radius\"];\n\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387906-wheels\n   ",
-      "start": 2176,
-      "end": 3063,
+      "value": "*\n   * An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels.\n   * @type {SCNPhysicsVehicleWheel[]}\n   * @desc You can dynamically change the suspension and traction properties of a wheel connected to the vehicle by using the corresponding SCNPhysicsVehicleWheel object or by using Key-value coding with a keypath of the form wheels[index].propertyName. For example, the following code changes the size of the first wheel attached to the vehicle, simulating a failed tire:SCNPhysicsVehicle *vehicle = [SCNPhysicsVehicle vehicleWithChassisBody:car wheels:wheels];\n[vehicle setValue:@0.1 forKeyPath:@\"wheels[0].radius\"];\nSCNPhysicsVehicle *vehicle = [SCNPhysicsVehicle vehicleWithChassisBody:car wheels:wheels];\n[vehicle setValue:@0.1 forKeyPath:@\"wheels[0].radius\"];\n\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle/1387906-wheels\n   ",
+      "start": 2188,
+      "end": 3079,
       "loc": {
         "start": {
           "line": 51,
@@ -2019,8 +2019,8 @@
     {
       "type": "CommentLine",
       "value": " Driving a Vehicle",
-      "start": 3112,
-      "end": 3132,
+      "start": 3128,
+      "end": 3148,
       "loc": {
         "start": {
           "line": 65,
@@ -2034,9 +2034,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Applies a force between the specified wheel and the ground under the vehicle.\n   * @access public\n   * @param {number} value - The magnitude of the force, in newtons.\n   * @param {number} index - The index of the wheel applying the force.\n   * @returns {void}\n   * @desc Applying a positive force turns the wheel in a direction that would move the vehicle forward; applying a negative force moves the vehicle in reverse.As with all physical quantities in SceneKit, you need not use realistic force measurements in your app—the effects of the physics simulation depend on the relative differences between forces, not on their absolute values. You may use whatever values produce the behavior or gameplay you’re looking for as long as you use them consistently.Calling this method applies a force for one step (or frame) of the physics simulation. To continuously accelerate a vehicle, call this method again on subequent simulation steps (for example, from your scene renderer delegate’s renderer(_:updateAtTime:) method) until the vehicle reaches your desired speed.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387963-applyengineforce\n   ",
-      "start": 3136,
-      "end": 4317,
+      "value": "*\n   * Applies a force between the specified wheel and the ground under the vehicle.\n   * @access public\n   * @param {number} value - The magnitude of the force, in newtons.\n   * @param {number} index - The index of the wheel applying the force.\n   * @returns {void}\n   * @desc Applying a positive force turns the wheel in a direction that would move the vehicle forward; applying a negative force moves the vehicle in reverse.As with all physical quantities in SceneKit, you need not use realistic force measurements in your app—the effects of the physics simulation depend on the relative differences between forces, not on their absolute values. You may use whatever values produce the behavior or gameplay you’re looking for as long as you use them consistently.Calling this method applies a force for one step (or frame) of the physics simulation. To continuously accelerate a vehicle, call this method again on subequent simulation steps (for example, from your scene renderer delegate’s renderer(_:updateAtTime:) method) until the vehicle reaches your desired speed.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle/1387963-applyengineforce\n   ",
+      "start": 3152,
+      "end": 4337,
       "loc": {
         "start": {
           "line": 67,
@@ -2050,9 +2050,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Applies a force between the specified wheel and the ground under the vehicle.\n   * @access public\n   * @param {number} value - The magnitude of the torque, in newton-meters.\n   * @param {number} index - The index of the wheel applying the force.\n   * @returns {void}\n   * @desc Applying a braking force causes the wheel to slow down regardless of the direction it’s currently spinning in.As with all physical quantities in SceneKit, you need not use realistic force measurements in your app—the effects of the physics simulation depend on the relative differences between forces, not on their absolute values. You may use whatever values produce the behavior or gameplay you’re looking for as long as you use them consistently.Calling this method applies a braking force for one step (or frame) of the physics simulation. To continuously decelerate a vehicle, call this method again on subequent simulation steps (for example, from your scene renderer delegate’s renderer(_:updateAtTime:) method) until the vehicle stops or reaches your desired speed.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387894-applybrakingforce\n   ",
-      "start": 4370,
-      "end": 5537,
+      "value": "*\n   * Applies a force between the specified wheel and the ground under the vehicle.\n   * @access public\n   * @param {number} value - The magnitude of the torque, in newton-meters.\n   * @param {number} index - The index of the wheel applying the force.\n   * @returns {void}\n   * @desc Applying a braking force causes the wheel to slow down regardless of the direction it’s currently spinning in.As with all physical quantities in SceneKit, you need not use realistic force measurements in your app—the effects of the physics simulation depend on the relative differences between forces, not on their absolute values. You may use whatever values produce the behavior or gameplay you’re looking for as long as you use them consistently.Calling this method applies a braking force for one step (or frame) of the physics simulation. To continuously decelerate a vehicle, call this method again on subequent simulation steps (for example, from your scene renderer delegate’s renderer(_:updateAtTime:) method) until the vehicle stops or reaches your desired speed.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle/1387894-applybrakingforce\n   ",
+      "start": 4390,
+      "end": 5561,
       "loc": {
         "start": {
           "line": 79,
@@ -2066,9 +2066,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Pivots the specified wheel around its steering axis.\n   * @access public\n   * @param {number} value - The angle to set the wheel at relative to its steering axis, in radians.\n   * @param {number} index - The index, in the vehicle’s wheels array, of the wheel to be pivoted.\n   * @returns {void}\n   * @desc Steering angles are relative to the wheel’s steeringAxis vector. With the default steering axis of {0.0, -1.0, 0.0}, a steering angle of 0.0 represents neutral steering, positive values steer the vehicle to the right, and negative values steer to the left.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387952-setsteeringangle\n   ",
-      "start": 5591,
-      "end": 6268,
+      "value": "*\n   * Pivots the specified wheel around its steering axis.\n   * @access public\n   * @param {number} value - The angle to set the wheel at relative to its steering axis, in radians.\n   * @param {number} index - The index, in the vehicle’s wheels array, of the wheel to be pivoted.\n   * @returns {void}\n   * @desc Steering angles are relative to the wheel’s steeringAxis vector. With the default steering axis of {0.0, -1.0, 0.0}, a steering angle of 0.0 represents neutral steering, positive values steer the vehicle to the right, and negative values steer to the left.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle/1387952-setsteeringangle\n   ",
+      "start": 5615,
+      "end": 6296,
       "loc": {
         "start": {
           "line": 91,
@@ -2082,9 +2082,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The vehicle’s ground speed, in kilometers per hour.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387910-speedinkilometersperhour\n   ",
-      "start": 6321,
-      "end": 6527,
+      "value": "*\n   * The vehicle’s ground speed, in kilometers per hour.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle/1387910-speedinkilometersperhour\n   ",
+      "start": 6349,
+      "end": 6559,
       "loc": {
         "start": {
           "line": 103,
@@ -2448,9 +2448,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * A physics behavior that modifies a physics body to behave like a car, motorcycle, or other wheeled vehicle.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle\n ",
+      "value": "*\n * A physics behavior that modifies a physics body to behave like a car, motorcycle, or other wheeled vehicle.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle\n ",
       "start": 178,
-      "end": 420,
+      "end": 424,
       "loc": {
         "start": {
           "line": 8,
@@ -2477,8 +2477,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 421,
-      "end": 427,
+      "start": 425,
+      "end": 431,
       "loc": {
         "start": {
           "line": 14,
@@ -2505,8 +2505,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 428,
-      "end": 435,
+      "start": 432,
+      "end": 439,
       "loc": {
         "start": {
           "line": 14,
@@ -2533,8 +2533,8 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 436,
-      "end": 441,
+      "start": 440,
+      "end": 445,
       "loc": {
         "start": {
           "line": 14,
@@ -2559,8 +2559,8 @@
         "binop": null
       },
       "value": "SCNPhysicsVehicle",
-      "start": 442,
-      "end": 459,
+      "start": 446,
+      "end": 463,
       "loc": {
         "start": {
           "line": 14,
@@ -2587,8 +2587,8 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 460,
-      "end": 467,
+      "start": 464,
+      "end": 471,
       "loc": {
         "start": {
           "line": 14,
@@ -2613,8 +2613,8 @@
         "binop": null
       },
       "value": "SCNPhysicsBehavior",
-      "start": 468,
-      "end": 486,
+      "start": 472,
+      "end": 490,
       "loc": {
         "start": {
           "line": 14,
@@ -2638,8 +2638,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 487,
-      "end": 488,
+      "start": 491,
+      "end": 492,
       "loc": {
         "start": {
           "line": 14,
@@ -2654,8 +2654,8 @@
     {
       "type": "CommentLine",
       "value": " Creating a Vehicle",
-      "start": 491,
-      "end": 512,
+      "start": 495,
+      "end": 516,
       "loc": {
         "start": {
           "line": 15,
@@ -2669,9 +2669,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Creates a vehicle behavior.\n   * @access public\n   * @constructor\n   * @param {SCNPhysicsBody} chassisBody - A physics body to serve as the vehicle’s chassis.\n   * @param {SCNPhysicsVehicleWheel[]} wheels - An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels. A vehicle must have at least one wheel.\n   * @desc Each object in the wheels array associates a node with the wheel to serve as its visual representation and defines properties for the wheel’s physical characteristics. Each wheel object must reference a unique node, which should be a child of the node containing the physics body used for the vehicle’s chassis. Typically, you load a node hierarchy representing the vehicle and all of its wheels from a scene file and then designate which nodes serve as the body and wheels.For a behavior to take effect, you must add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387943-init\n   ",
-      "start": 516,
-      "end": 1579,
+      "value": "*\n   * Creates a vehicle behavior.\n   * @access public\n   * @constructor\n   * @param {SCNPhysicsBody} chassisBody - A physics body to serve as the vehicle’s chassis.\n   * @param {SCNPhysicsVehicleWheel[]} wheels - An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels. A vehicle must have at least one wheel.\n   * @desc Each object in the wheels array associates a node with the wheel to serve as its visual representation and defines properties for the wheel’s physical characteristics. Each wheel object must reference a unique node, which should be a child of the node containing the physics body used for the vehicle’s chassis. Typically, you load a node hierarchy representing the vehicle and all of its wheels from a scene file and then designate which nodes serve as the body and wheels.For a behavior to take effect, you must add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle/1387943-init\n   ",
+      "start": 520,
+      "end": 1587,
       "loc": {
         "start": {
           "line": 17,
@@ -2696,8 +2696,8 @@
         "binop": null
       },
       "value": "constructor",
-      "start": 1582,
-      "end": 1593,
+      "start": 1590,
+      "end": 1601,
       "loc": {
         "start": {
           "line": 26,
@@ -2721,8 +2721,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1593,
-      "end": 1594,
+      "start": 1601,
+      "end": 1602,
       "loc": {
         "start": {
           "line": 26,
@@ -2747,8 +2747,8 @@
         "binop": null
       },
       "value": "chassisBody",
-      "start": 1594,
-      "end": 1605,
+      "start": 1602,
+      "end": 1613,
       "loc": {
         "start": {
           "line": 26,
@@ -2773,8 +2773,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1605,
-      "end": 1606,
+      "start": 1613,
+      "end": 1614,
       "loc": {
         "start": {
           "line": 26,
@@ -2799,8 +2799,8 @@
         "binop": null
       },
       "value": "wheels",
-      "start": 1607,
-      "end": 1613,
+      "start": 1615,
+      "end": 1621,
       "loc": {
         "start": {
           "line": 26,
@@ -2824,8 +2824,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1613,
-      "end": 1614,
+      "start": 1621,
+      "end": 1622,
       "loc": {
         "start": {
           "line": 26,
@@ -2849,8 +2849,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1615,
-      "end": 1616,
+      "start": 1623,
+      "end": 1624,
       "loc": {
         "start": {
           "line": 26,
@@ -2877,8 +2877,8 @@
         "updateContext": null
       },
       "value": "super",
-      "start": 1621,
-      "end": 1626,
+      "start": 1629,
+      "end": 1634,
       "loc": {
         "start": {
           "line": 27,
@@ -2902,8 +2902,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1626,
-      "end": 1627,
+      "start": 1634,
+      "end": 1635,
       "loc": {
         "start": {
           "line": 27,
@@ -2927,8 +2927,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1627,
-      "end": 1628,
+      "start": 1635,
+      "end": 1636,
       "loc": {
         "start": {
           "line": 27,
@@ -2943,8 +2943,8 @@
     {
       "type": "CommentLine",
       "value": " Working with a Vehicle’s Physical Characteristics",
-      "start": 1634,
-      "end": 1686,
+      "start": 1642,
+      "end": 1694,
       "loc": {
         "start": {
           "line": 29,
@@ -2971,8 +2971,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1692,
-      "end": 1696,
+      "start": 1700,
+      "end": 1704,
       "loc": {
         "start": {
           "line": 31,
@@ -2997,8 +2997,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1696,
-      "end": 1697,
+      "start": 1704,
+      "end": 1705,
       "loc": {
         "start": {
           "line": 31,
@@ -3023,8 +3023,8 @@
         "binop": null
       },
       "value": "_chassisBody",
-      "start": 1697,
-      "end": 1709,
+      "start": 1705,
+      "end": 1717,
       "loc": {
         "start": {
           "line": 31,
@@ -3050,8 +3050,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1710,
-      "end": 1711,
+      "start": 1718,
+      "end": 1719,
       "loc": {
         "start": {
           "line": 31,
@@ -3078,8 +3078,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 1712,
-      "end": 1716,
+      "start": 1720,
+      "end": 1724,
       "loc": {
         "start": {
           "line": 31,
@@ -3106,8 +3106,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1721,
-      "end": 1725,
+      "start": 1729,
+      "end": 1733,
       "loc": {
         "start": {
           "line": 32,
@@ -3132,8 +3132,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1725,
-      "end": 1726,
+      "start": 1733,
+      "end": 1734,
       "loc": {
         "start": {
           "line": 32,
@@ -3158,8 +3158,8 @@
         "binop": null
       },
       "value": "_wheels",
-      "start": 1726,
-      "end": 1733,
+      "start": 1734,
+      "end": 1741,
       "loc": {
         "start": {
           "line": 32,
@@ -3185,8 +3185,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1734,
-      "end": 1735,
+      "start": 1742,
+      "end": 1743,
       "loc": {
         "start": {
           "line": 32,
@@ -3213,8 +3213,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 1736,
-      "end": 1740,
+      "start": 1744,
+      "end": 1748,
       "loc": {
         "start": {
           "line": 32,
@@ -3229,8 +3229,8 @@
     {
       "type": "CommentLine",
       "value": " Driving a Vehicle",
-      "start": 1746,
-      "end": 1766,
+      "start": 1754,
+      "end": 1774,
       "loc": {
         "start": {
           "line": 34,
@@ -3257,8 +3257,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1772,
-      "end": 1776,
+      "start": 1780,
+      "end": 1784,
       "loc": {
         "start": {
           "line": 36,
@@ -3283,8 +3283,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1776,
-      "end": 1777,
+      "start": 1784,
+      "end": 1785,
       "loc": {
         "start": {
           "line": 36,
@@ -3309,8 +3309,8 @@
         "binop": null
       },
       "value": "_speedInKilometersPerHour",
-      "start": 1777,
-      "end": 1802,
+      "start": 1785,
+      "end": 1810,
       "loc": {
         "start": {
           "line": 36,
@@ -3336,8 +3336,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1803,
-      "end": 1804,
+      "start": 1811,
+      "end": 1812,
       "loc": {
         "start": {
           "line": 36,
@@ -3363,8 +3363,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 1805,
-      "end": 1806,
+      "start": 1813,
+      "end": 1814,
       "loc": {
         "start": {
           "line": 36,
@@ -3388,8 +3388,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1809,
-      "end": 1810,
+      "start": 1817,
+      "end": 1818,
       "loc": {
         "start": {
           "line": 37,
@@ -3404,8 +3404,8 @@
     {
       "type": "CommentLine",
       "value": " Working with a Vehicle’s Physical Characteristics",
-      "start": 1814,
-      "end": 1866,
+      "start": 1822,
+      "end": 1874,
       "loc": {
         "start": {
           "line": 39,
@@ -3419,9 +3419,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The physics body representing the vehicle’s chassis.\n   * @type {SCNPhysicsBody}\n   * @desc The vehicle’s chassis must be a dynamic body.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387985-chassisbody\n   ",
-      "start": 1870,
-      "end": 2117,
+      "value": "*\n   * The physics body representing the vehicle’s chassis.\n   * @type {SCNPhysicsBody}\n   * @desc The vehicle’s chassis must be a dynamic body.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle/1387985-chassisbody\n   ",
+      "start": 1878,
+      "end": 2129,
       "loc": {
         "start": {
           "line": 41,
@@ -3446,8 +3446,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 2120,
-      "end": 2123,
+      "start": 2132,
+      "end": 2135,
       "loc": {
         "start": {
           "line": 47,
@@ -3472,8 +3472,8 @@
         "binop": null
       },
       "value": "chassisBody",
-      "start": 2124,
-      "end": 2135,
+      "start": 2136,
+      "end": 2147,
       "loc": {
         "start": {
           "line": 47,
@@ -3497,8 +3497,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2135,
-      "end": 2136,
+      "start": 2147,
+      "end": 2148,
       "loc": {
         "start": {
           "line": 47,
@@ -3522,8 +3522,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2136,
-      "end": 2137,
+      "start": 2148,
+      "end": 2149,
       "loc": {
         "start": {
           "line": 47,
@@ -3547,8 +3547,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2138,
-      "end": 2139,
+      "start": 2150,
+      "end": 2151,
       "loc": {
         "start": {
           "line": 47,
@@ -3575,8 +3575,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 2144,
-      "end": 2150,
+      "start": 2156,
+      "end": 2162,
       "loc": {
         "start": {
           "line": 48,
@@ -3603,8 +3603,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2151,
-      "end": 2155,
+      "start": 2163,
+      "end": 2167,
       "loc": {
         "start": {
           "line": 48,
@@ -3629,8 +3629,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2155,
-      "end": 2156,
+      "start": 2167,
+      "end": 2168,
       "loc": {
         "start": {
           "line": 48,
@@ -3655,8 +3655,8 @@
         "binop": null
       },
       "value": "_chassisBody",
-      "start": 2156,
-      "end": 2168,
+      "start": 2168,
+      "end": 2180,
       "loc": {
         "start": {
           "line": 48,
@@ -3680,8 +3680,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2171,
-      "end": 2172,
+      "start": 2183,
+      "end": 2184,
       "loc": {
         "start": {
           "line": 49,
@@ -3695,9 +3695,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels.\n   * @type {SCNPhysicsVehicleWheel[]}\n   * @desc You can dynamically change the suspension and traction properties of a wheel connected to the vehicle by using the corresponding SCNPhysicsVehicleWheel object or by using Key-value coding with a keypath of the form wheels[index].propertyName. For example, the following code changes the size of the first wheel attached to the vehicle, simulating a failed tire:SCNPhysicsVehicle *vehicle = [SCNPhysicsVehicle vehicleWithChassisBody:car wheels:wheels];\n[vehicle setValue:@0.1 forKeyPath:@\"wheels[0].radius\"];\nSCNPhysicsVehicle *vehicle = [SCNPhysicsVehicle vehicleWithChassisBody:car wheels:wheels];\n[vehicle setValue:@0.1 forKeyPath:@\"wheels[0].radius\"];\n\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387906-wheels\n   ",
-      "start": 2176,
-      "end": 3063,
+      "value": "*\n   * An array of SCNPhysicsVehicleWheel objects representing the vehicle’s wheels.\n   * @type {SCNPhysicsVehicleWheel[]}\n   * @desc You can dynamically change the suspension and traction properties of a wheel connected to the vehicle by using the corresponding SCNPhysicsVehicleWheel object or by using Key-value coding with a keypath of the form wheels[index].propertyName. For example, the following code changes the size of the first wheel attached to the vehicle, simulating a failed tire:SCNPhysicsVehicle *vehicle = [SCNPhysicsVehicle vehicleWithChassisBody:car wheels:wheels];\n[vehicle setValue:@0.1 forKeyPath:@\"wheels[0].radius\"];\nSCNPhysicsVehicle *vehicle = [SCNPhysicsVehicle vehicleWithChassisBody:car wheels:wheels];\n[vehicle setValue:@0.1 forKeyPath:@\"wheels[0].radius\"];\n\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle/1387906-wheels\n   ",
+      "start": 2188,
+      "end": 3079,
       "loc": {
         "start": {
           "line": 51,
@@ -3722,8 +3722,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 3066,
-      "end": 3069,
+      "start": 3082,
+      "end": 3085,
       "loc": {
         "start": {
           "line": 61,
@@ -3748,8 +3748,8 @@
         "binop": null
       },
       "value": "wheels",
-      "start": 3070,
-      "end": 3076,
+      "start": 3086,
+      "end": 3092,
       "loc": {
         "start": {
           "line": 61,
@@ -3773,8 +3773,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3076,
-      "end": 3077,
+      "start": 3092,
+      "end": 3093,
       "loc": {
         "start": {
           "line": 61,
@@ -3798,8 +3798,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3077,
-      "end": 3078,
+      "start": 3093,
+      "end": 3094,
       "loc": {
         "start": {
           "line": 61,
@@ -3823,8 +3823,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3079,
-      "end": 3080,
+      "start": 3095,
+      "end": 3096,
       "loc": {
         "start": {
           "line": 61,
@@ -3851,8 +3851,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 3085,
-      "end": 3091,
+      "start": 3101,
+      "end": 3107,
       "loc": {
         "start": {
           "line": 62,
@@ -3879,8 +3879,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3092,
-      "end": 3096,
+      "start": 3108,
+      "end": 3112,
       "loc": {
         "start": {
           "line": 62,
@@ -3905,8 +3905,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3096,
-      "end": 3097,
+      "start": 3112,
+      "end": 3113,
       "loc": {
         "start": {
           "line": 62,
@@ -3931,8 +3931,8 @@
         "binop": null
       },
       "value": "_wheels",
-      "start": 3097,
-      "end": 3104,
+      "start": 3113,
+      "end": 3120,
       "loc": {
         "start": {
           "line": 62,
@@ -3956,8 +3956,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3107,
-      "end": 3108,
+      "start": 3123,
+      "end": 3124,
       "loc": {
         "start": {
           "line": 63,
@@ -3972,8 +3972,8 @@
     {
       "type": "CommentLine",
       "value": " Driving a Vehicle",
-      "start": 3112,
-      "end": 3132,
+      "start": 3128,
+      "end": 3148,
       "loc": {
         "start": {
           "line": 65,
@@ -3987,9 +3987,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Applies a force between the specified wheel and the ground under the vehicle.\n   * @access public\n   * @param {number} value - The magnitude of the force, in newtons.\n   * @param {number} index - The index of the wheel applying the force.\n   * @returns {void}\n   * @desc Applying a positive force turns the wheel in a direction that would move the vehicle forward; applying a negative force moves the vehicle in reverse.As with all physical quantities in SceneKit, you need not use realistic force measurements in your app—the effects of the physics simulation depend on the relative differences between forces, not on their absolute values. You may use whatever values produce the behavior or gameplay you’re looking for as long as you use them consistently.Calling this method applies a force for one step (or frame) of the physics simulation. To continuously accelerate a vehicle, call this method again on subequent simulation steps (for example, from your scene renderer delegate’s renderer(_:updateAtTime:) method) until the vehicle reaches your desired speed.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387963-applyengineforce\n   ",
-      "start": 3136,
-      "end": 4317,
+      "value": "*\n   * Applies a force between the specified wheel and the ground under the vehicle.\n   * @access public\n   * @param {number} value - The magnitude of the force, in newtons.\n   * @param {number} index - The index of the wheel applying the force.\n   * @returns {void}\n   * @desc Applying a positive force turns the wheel in a direction that would move the vehicle forward; applying a negative force moves the vehicle in reverse.As with all physical quantities in SceneKit, you need not use realistic force measurements in your app—the effects of the physics simulation depend on the relative differences between forces, not on their absolute values. You may use whatever values produce the behavior or gameplay you’re looking for as long as you use them consistently.Calling this method applies a force for one step (or frame) of the physics simulation. To continuously accelerate a vehicle, call this method again on subequent simulation steps (for example, from your scene renderer delegate’s renderer(_:updateAtTime:) method) until the vehicle reaches your desired speed.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle/1387963-applyengineforce\n   ",
+      "start": 3152,
+      "end": 4337,
       "loc": {
         "start": {
           "line": 67,
@@ -4014,8 +4014,8 @@
         "binop": null
       },
       "value": "applyEngineForceForWheelAt",
-      "start": 4320,
-      "end": 4346,
+      "start": 4340,
+      "end": 4366,
       "loc": {
         "start": {
           "line": 76,
@@ -4039,8 +4039,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4346,
-      "end": 4347,
+      "start": 4366,
+      "end": 4367,
       "loc": {
         "start": {
           "line": 76,
@@ -4065,8 +4065,8 @@
         "binop": null
       },
       "value": "value",
-      "start": 4347,
-      "end": 4352,
+      "start": 4367,
+      "end": 4372,
       "loc": {
         "start": {
           "line": 76,
@@ -4091,8 +4091,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4352,
-      "end": 4353,
+      "start": 4372,
+      "end": 4373,
       "loc": {
         "start": {
           "line": 76,
@@ -4117,8 +4117,8 @@
         "binop": null
       },
       "value": "index",
-      "start": 4354,
-      "end": 4359,
+      "start": 4374,
+      "end": 4379,
       "loc": {
         "start": {
           "line": 76,
@@ -4142,8 +4142,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4359,
-      "end": 4360,
+      "start": 4379,
+      "end": 4380,
       "loc": {
         "start": {
           "line": 76,
@@ -4167,8 +4167,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4361,
-      "end": 4362,
+      "start": 4381,
+      "end": 4382,
       "loc": {
         "start": {
           "line": 76,
@@ -4192,8 +4192,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4365,
-      "end": 4366,
+      "start": 4385,
+      "end": 4386,
       "loc": {
         "start": {
           "line": 77,
@@ -4207,9 +4207,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Applies a force between the specified wheel and the ground under the vehicle.\n   * @access public\n   * @param {number} value - The magnitude of the torque, in newton-meters.\n   * @param {number} index - The index of the wheel applying the force.\n   * @returns {void}\n   * @desc Applying a braking force causes the wheel to slow down regardless of the direction it’s currently spinning in.As with all physical quantities in SceneKit, you need not use realistic force measurements in your app—the effects of the physics simulation depend on the relative differences between forces, not on their absolute values. You may use whatever values produce the behavior or gameplay you’re looking for as long as you use them consistently.Calling this method applies a braking force for one step (or frame) of the physics simulation. To continuously decelerate a vehicle, call this method again on subequent simulation steps (for example, from your scene renderer delegate’s renderer(_:updateAtTime:) method) until the vehicle stops or reaches your desired speed.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387894-applybrakingforce\n   ",
-      "start": 4370,
-      "end": 5537,
+      "value": "*\n   * Applies a force between the specified wheel and the ground under the vehicle.\n   * @access public\n   * @param {number} value - The magnitude of the torque, in newton-meters.\n   * @param {number} index - The index of the wheel applying the force.\n   * @returns {void}\n   * @desc Applying a braking force causes the wheel to slow down regardless of the direction it’s currently spinning in.As with all physical quantities in SceneKit, you need not use realistic force measurements in your app—the effects of the physics simulation depend on the relative differences between forces, not on their absolute values. You may use whatever values produce the behavior or gameplay you’re looking for as long as you use them consistently.Calling this method applies a braking force for one step (or frame) of the physics simulation. To continuously decelerate a vehicle, call this method again on subequent simulation steps (for example, from your scene renderer delegate’s renderer(_:updateAtTime:) method) until the vehicle stops or reaches your desired speed.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle/1387894-applybrakingforce\n   ",
+      "start": 4390,
+      "end": 5561,
       "loc": {
         "start": {
           "line": 79,
@@ -4234,8 +4234,8 @@
         "binop": null
       },
       "value": "applyBrakingForceForWheelAt",
-      "start": 5540,
-      "end": 5567,
+      "start": 5564,
+      "end": 5591,
       "loc": {
         "start": {
           "line": 88,
@@ -4259,8 +4259,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5567,
-      "end": 5568,
+      "start": 5591,
+      "end": 5592,
       "loc": {
         "start": {
           "line": 88,
@@ -4285,8 +4285,8 @@
         "binop": null
       },
       "value": "value",
-      "start": 5568,
-      "end": 5573,
+      "start": 5592,
+      "end": 5597,
       "loc": {
         "start": {
           "line": 88,
@@ -4311,8 +4311,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 5573,
-      "end": 5574,
+      "start": 5597,
+      "end": 5598,
       "loc": {
         "start": {
           "line": 88,
@@ -4337,8 +4337,8 @@
         "binop": null
       },
       "value": "index",
-      "start": 5575,
-      "end": 5580,
+      "start": 5599,
+      "end": 5604,
       "loc": {
         "start": {
           "line": 88,
@@ -4362,8 +4362,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5580,
-      "end": 5581,
+      "start": 5604,
+      "end": 5605,
       "loc": {
         "start": {
           "line": 88,
@@ -4387,8 +4387,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5582,
-      "end": 5583,
+      "start": 5606,
+      "end": 5607,
       "loc": {
         "start": {
           "line": 88,
@@ -4412,8 +4412,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5586,
-      "end": 5587,
+      "start": 5610,
+      "end": 5611,
       "loc": {
         "start": {
           "line": 89,
@@ -4427,9 +4427,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Pivots the specified wheel around its steering axis.\n   * @access public\n   * @param {number} value - The angle to set the wheel at relative to its steering axis, in radians.\n   * @param {number} index - The index, in the vehicle’s wheels array, of the wheel to be pivoted.\n   * @returns {void}\n   * @desc Steering angles are relative to the wheel’s steeringAxis vector. With the default steering axis of {0.0, -1.0, 0.0}, a steering angle of 0.0 represents neutral steering, positive values steer the vehicle to the right, and negative values steer to the left.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387952-setsteeringangle\n   ",
-      "start": 5591,
-      "end": 6268,
+      "value": "*\n   * Pivots the specified wheel around its steering axis.\n   * @access public\n   * @param {number} value - The angle to set the wheel at relative to its steering axis, in radians.\n   * @param {number} index - The index, in the vehicle’s wheels array, of the wheel to be pivoted.\n   * @returns {void}\n   * @desc Steering angles are relative to the wheel’s steeringAxis vector. With the default steering axis of {0.0, -1.0, 0.0}, a steering angle of 0.0 represents neutral steering, positive values steer the vehicle to the right, and negative values steer to the left.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle/1387952-setsteeringangle\n   ",
+      "start": 5615,
+      "end": 6296,
       "loc": {
         "start": {
           "line": 91,
@@ -4454,8 +4454,8 @@
         "binop": null
       },
       "value": "setSteeringAngleForWheelAt",
-      "start": 6271,
-      "end": 6297,
+      "start": 6299,
+      "end": 6325,
       "loc": {
         "start": {
           "line": 100,
@@ -4479,8 +4479,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6297,
-      "end": 6298,
+      "start": 6325,
+      "end": 6326,
       "loc": {
         "start": {
           "line": 100,
@@ -4505,8 +4505,8 @@
         "binop": null
       },
       "value": "value",
-      "start": 6298,
-      "end": 6303,
+      "start": 6326,
+      "end": 6331,
       "loc": {
         "start": {
           "line": 100,
@@ -4531,8 +4531,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 6303,
-      "end": 6304,
+      "start": 6331,
+      "end": 6332,
       "loc": {
         "start": {
           "line": 100,
@@ -4557,8 +4557,8 @@
         "binop": null
       },
       "value": "index",
-      "start": 6305,
-      "end": 6310,
+      "start": 6333,
+      "end": 6338,
       "loc": {
         "start": {
           "line": 100,
@@ -4582,8 +4582,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6310,
-      "end": 6311,
+      "start": 6338,
+      "end": 6339,
       "loc": {
         "start": {
           "line": 100,
@@ -4607,8 +4607,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6312,
-      "end": 6313,
+      "start": 6340,
+      "end": 6341,
       "loc": {
         "start": {
           "line": 100,
@@ -4632,8 +4632,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6316,
-      "end": 6317,
+      "start": 6344,
+      "end": 6345,
       "loc": {
         "start": {
           "line": 101,
@@ -4647,9 +4647,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The vehicle’s ground speed, in kilometers per hour.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehicle/1387910-speedinkilometersperhour\n   ",
-      "start": 6321,
-      "end": 6527,
+      "value": "*\n   * The vehicle’s ground speed, in kilometers per hour.\n   * @type {number}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehicle/1387910-speedinkilometersperhour\n   ",
+      "start": 6349,
+      "end": 6559,
       "loc": {
         "start": {
           "line": 103,
@@ -4674,8 +4674,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 6530,
-      "end": 6533,
+      "start": 6562,
+      "end": 6565,
       "loc": {
         "start": {
           "line": 109,
@@ -4700,8 +4700,8 @@
         "binop": null
       },
       "value": "speedInKilometersPerHour",
-      "start": 6534,
-      "end": 6558,
+      "start": 6566,
+      "end": 6590,
       "loc": {
         "start": {
           "line": 109,
@@ -4725,8 +4725,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6558,
-      "end": 6559,
+      "start": 6590,
+      "end": 6591,
       "loc": {
         "start": {
           "line": 109,
@@ -4750,8 +4750,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6559,
-      "end": 6560,
+      "start": 6591,
+      "end": 6592,
       "loc": {
         "start": {
           "line": 109,
@@ -4775,8 +4775,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6561,
-      "end": 6562,
+      "start": 6593,
+      "end": 6594,
       "loc": {
         "start": {
           "line": 109,
@@ -4803,8 +4803,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 6567,
-      "end": 6573,
+      "start": 6599,
+      "end": 6605,
       "loc": {
         "start": {
           "line": 110,
@@ -4831,8 +4831,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 6574,
-      "end": 6578,
+      "start": 6606,
+      "end": 6610,
       "loc": {
         "start": {
           "line": 110,
@@ -4857,8 +4857,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 6578,
-      "end": 6579,
+      "start": 6610,
+      "end": 6611,
       "loc": {
         "start": {
           "line": 110,
@@ -4883,8 +4883,8 @@
         "binop": null
       },
       "value": "_speedInKilometersPerHour",
-      "start": 6579,
-      "end": 6604,
+      "start": 6611,
+      "end": 6636,
       "loc": {
         "start": {
           "line": 110,
@@ -4908,8 +4908,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6607,
-      "end": 6608,
+      "start": 6639,
+      "end": 6640,
       "loc": {
         "start": {
           "line": 111,
@@ -4933,8 +4933,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6609,
-      "end": 6610,
+      "start": 6641,
+      "end": 6642,
       "loc": {
         "start": {
           "line": 112,
@@ -4959,8 +4959,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 6611,
-      "end": 6611,
+      "start": 6643,
+      "end": 6643,
       "loc": {
         "start": {
           "line": 113,

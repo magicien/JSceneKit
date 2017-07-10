@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 2748,
+  "end": 2772,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 2748,
+    "end": 2772,
     "loc": {
       "start": {
         "line": 1,
@@ -239,9 +239,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * A physics behavior that connects two physics bodies and allows them to pivot around each other in any direction.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint\n ",
+            "value": "*\n * A physics behavior that connects two physics bodies and allows them to pivot around each other in any direction.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicsballsocketjoint\n ",
             "start": 154,
-            "end": 409,
+            "end": 413,
             "loc": {
               "start": {
                 "line": 8,
@@ -257,8 +257,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 410,
-        "end": 2747,
+        "start": 414,
+        "end": 2771,
         "loc": {
           "start": {
             "line": 14,
@@ -271,8 +271,8 @@
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 425,
-          "end": 2747,
+          "start": 429,
+          "end": 2771,
           "loc": {
             "start": {
               "line": 14,
@@ -285,8 +285,8 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 431,
-            "end": 456,
+            "start": 435,
+            "end": 460,
             "loc": {
               "start": {
                 "line": 14,
@@ -303,8 +303,8 @@
           },
           "superClass": {
             "type": "Identifier",
-            "start": 465,
-            "end": 483,
+            "start": 469,
+            "end": 487,
             "loc": {
               "start": {
                 "line": 14,
@@ -320,8 +320,8 @@
           },
           "body": {
             "type": "ClassBody",
-            "start": 484,
-            "end": 2747,
+            "start": 488,
+            "end": 2771,
             "loc": {
               "start": {
                 "line": 14,
@@ -335,8 +335,8 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 1404,
-                "end": 2101,
+                "start": 1412,
+                "end": 2117,
                 "loc": {
                   "start": {
                     "line": 28,
@@ -350,8 +350,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1404,
-                  "end": 1415,
+                  "start": 1412,
+                  "end": 1423,
                   "loc": {
                     "start": {
                       "line": 28,
@@ -375,8 +375,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 1416,
-                    "end": 1421,
+                    "start": 1424,
+                    "end": 1429,
                     "loc": {
                       "start": {
                         "line": 28,
@@ -392,8 +392,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1423,
-                    "end": 1430,
+                    "start": 1431,
+                    "end": 1438,
                     "loc": {
                       "start": {
                         "line": 28,
@@ -409,8 +409,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1432,
-                    "end": 1437,
+                    "start": 1440,
+                    "end": 1445,
                     "loc": {
                       "start": {
                         "line": 28,
@@ -426,8 +426,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1439,
-                    "end": 1446,
+                    "start": 1447,
+                    "end": 1454,
                     "loc": {
                       "start": {
                         "line": 28,
@@ -444,8 +444,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1448,
-                  "end": 2101,
+                  "start": 1456,
+                  "end": 2117,
                   "loc": {
                     "start": {
                       "line": 28,
@@ -459,8 +459,8 @@
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 1454,
-                      "end": 1461,
+                      "start": 1462,
+                      "end": 1469,
                       "loc": {
                         "start": {
                           "line": 29,
@@ -473,8 +473,8 @@
                       },
                       "expression": {
                         "type": "CallExpression",
-                        "start": 1454,
-                        "end": 1461,
+                        "start": 1462,
+                        "end": 1469,
                         "loc": {
                           "start": {
                             "line": 29,
@@ -487,8 +487,8 @@
                         },
                         "callee": {
                           "type": "Super",
-                          "start": 1454,
-                          "end": 1459,
+                          "start": 1462,
+                          "end": 1467,
                           "loc": {
                             "start": {
                               "line": 29,
@@ -507,8 +507,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Managing the Characteristics of a Ball and Socket Joint",
-                          "start": 1467,
-                          "end": 1525,
+                          "start": 1475,
+                          "end": 1533,
                           "loc": {
                             "start": {
                               "line": 31,
@@ -522,9 +522,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The point at which the joint connects, relative to the node containing the first body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint/1387956-anchora\n     ",
-                          "start": 1531,
-                          "end": 1763,
+                          "value": "*\n     * The point at which the joint connects, relative to the node containing the first body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsballsocketjoint/1387956-anchora\n     ",
+                          "start": 1539,
+                          "end": 1775,
                           "loc": {
                             "start": {
                               "line": 33,
@@ -540,8 +540,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1768,
-                      "end": 1787,
+                      "start": 1780,
+                      "end": 1799,
                       "loc": {
                         "start": {
                           "line": 38,
@@ -554,8 +554,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1768,
-                        "end": 1787,
+                        "start": 1780,
+                        "end": 1799,
                         "loc": {
                           "start": {
                             "line": 38,
@@ -569,8 +569,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1768,
-                          "end": 1780,
+                          "start": 1780,
+                          "end": 1792,
                           "loc": {
                             "start": {
                               "line": 38,
@@ -583,8 +583,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1768,
-                            "end": 1772,
+                            "start": 1780,
+                            "end": 1784,
                             "loc": {
                               "start": {
                                 "line": 38,
@@ -599,8 +599,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1773,
-                            "end": 1780,
+                            "start": 1785,
+                            "end": 1792,
                             "loc": {
                               "start": {
                                 "line": 38,
@@ -619,8 +619,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 1783,
-                          "end": 1787,
+                          "start": 1795,
+                          "end": 1799,
                           "loc": {
                             "start": {
                               "line": 38,
@@ -641,8 +641,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Managing the Characteristics of a Ball and Socket Joint",
-                          "start": 1467,
-                          "end": 1525,
+                          "start": 1475,
+                          "end": 1533,
                           "loc": {
                             "start": {
                               "line": 31,
@@ -656,9 +656,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The point at which the joint connects, relative to the node containing the first body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint/1387956-anchora\n     ",
-                          "start": 1531,
-                          "end": 1763,
+                          "value": "*\n     * The point at which the joint connects, relative to the node containing the first body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsballsocketjoint/1387956-anchora\n     ",
+                          "start": 1539,
+                          "end": 1775,
                           "loc": {
                             "start": {
                               "line": 33,
@@ -674,9 +674,9 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The point at which the joint connects, relative to the node containing the second body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint/1387965-anchorb\n     ",
-                          "start": 1793,
-                          "end": 2026,
+                          "value": "*\n     * The point at which the joint connects, relative to the node containing the second body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsballsocketjoint/1387965-anchorb\n     ",
+                          "start": 1805,
+                          "end": 2042,
                           "loc": {
                             "start": {
                               "line": 40,
@@ -692,8 +692,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2031,
-                      "end": 2050,
+                      "start": 2047,
+                      "end": 2066,
                       "loc": {
                         "start": {
                           "line": 45,
@@ -706,8 +706,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2031,
-                        "end": 2050,
+                        "start": 2047,
+                        "end": 2066,
                         "loc": {
                           "start": {
                             "line": 45,
@@ -721,8 +721,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2031,
-                          "end": 2043,
+                          "start": 2047,
+                          "end": 2059,
                           "loc": {
                             "start": {
                               "line": 45,
@@ -735,8 +735,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2031,
-                            "end": 2035,
+                            "start": 2047,
+                            "end": 2051,
                             "loc": {
                               "start": {
                                 "line": 45,
@@ -751,8 +751,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2036,
-                            "end": 2043,
+                            "start": 2052,
+                            "end": 2059,
                             "loc": {
                               "start": {
                                 "line": 45,
@@ -771,8 +771,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 2046,
-                          "end": 2050,
+                          "start": 2062,
+                          "end": 2066,
                           "loc": {
                             "start": {
                               "line": 45,
@@ -789,9 +789,9 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The point at which the joint connects, relative to the node containing the second body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint/1387965-anchorb\n     ",
-                          "start": 1793,
-                          "end": 2026,
+                          "value": "*\n     * The point at which the joint connects, relative to the node containing the second body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsballsocketjoint/1387965-anchorb\n     ",
+                          "start": 1805,
+                          "end": 2042,
                           "loc": {
                             "start": {
                               "line": 40,
@@ -807,8 +807,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2056,
-                      "end": 2074,
+                      "start": 2072,
+                      "end": 2090,
                       "loc": {
                         "start": {
                           "line": 47,
@@ -821,8 +821,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2056,
-                        "end": 2074,
+                        "start": 2072,
+                        "end": 2090,
                         "loc": {
                           "start": {
                             "line": 47,
@@ -836,8 +836,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2056,
-                          "end": 2067,
+                          "start": 2072,
+                          "end": 2083,
                           "loc": {
                             "start": {
                               "line": 47,
@@ -850,8 +850,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2056,
-                            "end": 2060,
+                            "start": 2072,
+                            "end": 2076,
                             "loc": {
                               "start": {
                                 "line": 47,
@@ -865,8 +865,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2061,
-                            "end": 2067,
+                            "start": 2077,
+                            "end": 2083,
                             "loc": {
                               "start": {
                                 "line": 47,
@@ -884,8 +884,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 2070,
-                          "end": 2074,
+                          "start": 2086,
+                          "end": 2090,
                           "loc": {
                             "start": {
                               "line": 47,
@@ -901,8 +901,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2079,
-                      "end": 2097,
+                      "start": 2095,
+                      "end": 2113,
                       "loc": {
                         "start": {
                           "line": 48,
@@ -915,8 +915,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2079,
-                        "end": 2097,
+                        "start": 2095,
+                        "end": 2113,
                         "loc": {
                           "start": {
                             "line": 48,
@@ -930,8 +930,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2079,
-                          "end": 2090,
+                          "start": 2095,
+                          "end": 2106,
                           "loc": {
                             "start": {
                               "line": 48,
@@ -944,8 +944,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2079,
-                            "end": 2083,
+                            "start": 2095,
+                            "end": 2099,
                             "loc": {
                               "start": {
                                 "line": 48,
@@ -959,8 +959,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2084,
-                            "end": 2090,
+                            "start": 2100,
+                            "end": 2106,
                             "loc": {
                               "start": {
                                 "line": 48,
@@ -978,8 +978,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 2093,
-                          "end": 2097,
+                          "start": 2109,
+                          "end": 2113,
                           "loc": {
                             "start": {
                               "line": 48,
@@ -1001,8 +1001,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Creating a Ball and Socket Joint",
-                    "start": 488,
-                    "end": 523,
+                    "start": 492,
+                    "end": 527,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -1016,9 +1016,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Creates a ball and socket joint connecting two physics bodies.\n   * @access public\n   * @constructor\n   * @param {SCNPhysicsBody} bodyA - The first physics body to be connected by the joint.\n   * @param {SCNVector3} anchorA - The point at which the joint connects, relative to the node containing the first body.\n   * @param {SCNPhysicsBody} bodyB - The second physics body to be connected by the joint.\n   * @param {SCNVector3} anchorB - The point at which the joint connects, relative to the node containing the second body.\n   * @desc For a behavior to take effect, add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object. The physics bodies constrained by the joint must be attached to nodes in the scene.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint/1387926-init\n   ",
-                    "start": 527,
-                    "end": 1401,
+                    "value": "*\n   * Creates a ball and socket joint connecting two physics bodies.\n   * @access public\n   * @constructor\n   * @param {SCNPhysicsBody} bodyA - The first physics body to be connected by the joint.\n   * @param {SCNVector3} anchorA - The point at which the joint connects, relative to the node containing the first body.\n   * @param {SCNPhysicsBody} bodyB - The second physics body to be connected by the joint.\n   * @param {SCNVector3} anchorB - The point at which the joint connects, relative to the node containing the second body.\n   * @desc For a behavior to take effect, add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object. The physics bodies constrained by the joint must be attached to nodes in the scene.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsballsocketjoint/1387926-init\n   ",
+                    "start": 531,
+                    "end": 1409,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -1035,8 +1035,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Managing the Characteristics of a Ball and Socket Joint",
-                    "start": 2105,
-                    "end": 2163,
+                    "start": 2121,
+                    "end": 2179,
                     "loc": {
                       "start": {
                         "line": 51,
@@ -1050,9 +1050,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The first physics body connected by the joint.\n   * @type {SCNPhysicsBody}\n   * @desc \n   * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint/1387981-bodya\n   ",
-                    "start": 2167,
-                    "end": 2365,
+                    "value": "*\n   * The first physics body connected by the joint.\n   * @type {SCNPhysicsBody}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsballsocketjoint/1387981-bodya\n   ",
+                    "start": 2183,
+                    "end": 2385,
                     "loc": {
                       "start": {
                         "line": 53,
@@ -1068,8 +1068,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 2368,
-                "end": 2408,
+                "start": 2388,
+                "end": 2428,
                 "loc": {
                   "start": {
                     "line": 59,
@@ -1083,8 +1083,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 2372,
-                  "end": 2377,
+                  "start": 2392,
+                  "end": 2397,
                   "loc": {
                     "start": {
                       "line": 59,
@@ -1107,8 +1107,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 2380,
-                  "end": 2408,
+                  "start": 2400,
+                  "end": 2428,
                   "loc": {
                     "start": {
                       "line": 59,
@@ -1122,8 +1122,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 2386,
-                      "end": 2404,
+                      "start": 2406,
+                      "end": 2424,
                       "loc": {
                         "start": {
                           "line": 60,
@@ -1136,8 +1136,8 @@
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 2393,
-                        "end": 2404,
+                        "start": 2413,
+                        "end": 2424,
                         "loc": {
                           "start": {
                             "line": 60,
@@ -1150,8 +1150,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 2393,
-                          "end": 2397,
+                          "start": 2413,
+                          "end": 2417,
                           "loc": {
                             "start": {
                               "line": 60,
@@ -1165,8 +1165,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 2398,
-                          "end": 2404,
+                          "start": 2418,
+                          "end": 2424,
                           "loc": {
                             "start": {
                               "line": 60,
@@ -1191,8 +1191,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Managing the Characteristics of a Ball and Socket Joint",
-                    "start": 2105,
-                    "end": 2163,
+                    "start": 2121,
+                    "end": 2179,
                     "loc": {
                       "start": {
                         "line": 51,
@@ -1206,9 +1206,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The first physics body connected by the joint.\n   * @type {SCNPhysicsBody}\n   * @desc \n   * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint/1387981-bodya\n   ",
-                    "start": 2167,
-                    "end": 2365,
+                    "value": "*\n   * The first physics body connected by the joint.\n   * @type {SCNPhysicsBody}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsballsocketjoint/1387981-bodya\n   ",
+                    "start": 2183,
+                    "end": 2385,
                     "loc": {
                       "start": {
                         "line": 53,
@@ -1224,9 +1224,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The second physics body connected by the joint.\n   * @type {?SCNPhysicsBody}\n   * @desc This property’s value is nil if the joint was created using the init(body:anchor:) method.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint/1387902-bodyb\n   ",
-                    "start": 2412,
-                    "end": 2702,
+                    "value": "*\n   * The second physics body connected by the joint.\n   * @type {?SCNPhysicsBody}\n   * @desc This property’s value is nil if the joint was created using the init(body:anchor:) method.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsballsocketjoint/1387902-bodyb\n   ",
+                    "start": 2432,
+                    "end": 2726,
                     "loc": {
                       "start": {
                         "line": 63,
@@ -1242,8 +1242,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 2705,
-                "end": 2745,
+                "start": 2729,
+                "end": 2769,
                 "loc": {
                   "start": {
                     "line": 69,
@@ -1257,8 +1257,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 2709,
-                  "end": 2714,
+                  "start": 2733,
+                  "end": 2738,
                   "loc": {
                     "start": {
                       "line": 69,
@@ -1281,8 +1281,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 2717,
-                  "end": 2745,
+                  "start": 2741,
+                  "end": 2769,
                   "loc": {
                     "start": {
                       "line": 69,
@@ -1296,8 +1296,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 2723,
-                      "end": 2741,
+                      "start": 2747,
+                      "end": 2765,
                       "loc": {
                         "start": {
                           "line": 70,
@@ -1310,8 +1310,8 @@
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 2730,
-                        "end": 2741,
+                        "start": 2754,
+                        "end": 2765,
                         "loc": {
                           "start": {
                             "line": 70,
@@ -1324,8 +1324,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 2730,
-                          "end": 2734,
+                          "start": 2754,
+                          "end": 2758,
                           "loc": {
                             "start": {
                               "line": 70,
@@ -1339,8 +1339,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 2735,
-                          "end": 2741,
+                          "start": 2759,
+                          "end": 2765,
                           "loc": {
                             "start": {
                               "line": 70,
@@ -1363,9 +1363,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The second physics body connected by the joint.\n   * @type {?SCNPhysicsBody}\n   * @desc This property’s value is nil if the joint was created using the init(body:anchor:) method.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint/1387902-bodyb\n   ",
-                    "start": 2412,
-                    "end": 2702,
+                    "value": "*\n   * The second physics body connected by the joint.\n   * @type {?SCNPhysicsBody}\n   * @desc This property’s value is nil if the joint was created using the init(body:anchor:) method.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsballsocketjoint/1387902-bodyb\n   ",
+                    "start": 2432,
+                    "end": 2726,
                     "loc": {
                       "start": {
                         "line": 63,
@@ -1384,9 +1384,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * A physics behavior that connects two physics bodies and allows them to pivot around each other in any direction.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint\n ",
+              "value": "*\n * A physics behavior that connects two physics bodies and allows them to pivot around each other in any direction.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicsballsocketjoint\n ",
               "start": 154,
-              "end": 409,
+              "end": 413,
               "loc": {
                 "start": {
                   "line": 8,
@@ -1404,9 +1404,9 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * A physics behavior that connects two physics bodies and allows them to pivot around each other in any direction.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint\n ",
+            "value": "*\n * A physics behavior that connects two physics bodies and allows them to pivot around each other in any direction.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicsballsocketjoint\n ",
             "start": 154,
-            "end": 409,
+            "end": 413,
             "loc": {
               "start": {
                 "line": 8,
@@ -1462,9 +1462,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * A physics behavior that connects two physics bodies and allows them to pivot around each other in any direction.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint\n ",
+      "value": "*\n * A physics behavior that connects two physics bodies and allows them to pivot around each other in any direction.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicsballsocketjoint\n ",
       "start": 154,
-      "end": 409,
+      "end": 413,
       "loc": {
         "start": {
           "line": 8,
@@ -1479,8 +1479,8 @@
     {
       "type": "CommentLine",
       "value": " Creating a Ball and Socket Joint",
-      "start": 488,
-      "end": 523,
+      "start": 492,
+      "end": 527,
       "loc": {
         "start": {
           "line": 15,
@@ -1494,9 +1494,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Creates a ball and socket joint connecting two physics bodies.\n   * @access public\n   * @constructor\n   * @param {SCNPhysicsBody} bodyA - The first physics body to be connected by the joint.\n   * @param {SCNVector3} anchorA - The point at which the joint connects, relative to the node containing the first body.\n   * @param {SCNPhysicsBody} bodyB - The second physics body to be connected by the joint.\n   * @param {SCNVector3} anchorB - The point at which the joint connects, relative to the node containing the second body.\n   * @desc For a behavior to take effect, add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object. The physics bodies constrained by the joint must be attached to nodes in the scene.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint/1387926-init\n   ",
-      "start": 527,
-      "end": 1401,
+      "value": "*\n   * Creates a ball and socket joint connecting two physics bodies.\n   * @access public\n   * @constructor\n   * @param {SCNPhysicsBody} bodyA - The first physics body to be connected by the joint.\n   * @param {SCNVector3} anchorA - The point at which the joint connects, relative to the node containing the first body.\n   * @param {SCNPhysicsBody} bodyB - The second physics body to be connected by the joint.\n   * @param {SCNVector3} anchorB - The point at which the joint connects, relative to the node containing the second body.\n   * @desc For a behavior to take effect, add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object. The physics bodies constrained by the joint must be attached to nodes in the scene.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsballsocketjoint/1387926-init\n   ",
+      "start": 531,
+      "end": 1409,
       "loc": {
         "start": {
           "line": 17,
@@ -1511,8 +1511,8 @@
     {
       "type": "CommentLine",
       "value": " Managing the Characteristics of a Ball and Socket Joint",
-      "start": 1467,
-      "end": 1525,
+      "start": 1475,
+      "end": 1533,
       "loc": {
         "start": {
           "line": 31,
@@ -1526,9 +1526,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The point at which the joint connects, relative to the node containing the first body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint/1387956-anchora\n     ",
-      "start": 1531,
-      "end": 1763,
+      "value": "*\n     * The point at which the joint connects, relative to the node containing the first body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsballsocketjoint/1387956-anchora\n     ",
+      "start": 1539,
+      "end": 1775,
       "loc": {
         "start": {
           "line": 33,
@@ -1542,9 +1542,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The point at which the joint connects, relative to the node containing the second body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint/1387965-anchorb\n     ",
-      "start": 1793,
-      "end": 2026,
+      "value": "*\n     * The point at which the joint connects, relative to the node containing the second body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsballsocketjoint/1387965-anchorb\n     ",
+      "start": 1805,
+      "end": 2042,
       "loc": {
         "start": {
           "line": 40,
@@ -1559,8 +1559,8 @@
     {
       "type": "CommentLine",
       "value": " Managing the Characteristics of a Ball and Socket Joint",
-      "start": 2105,
-      "end": 2163,
+      "start": 2121,
+      "end": 2179,
       "loc": {
         "start": {
           "line": 51,
@@ -1574,9 +1574,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The first physics body connected by the joint.\n   * @type {SCNPhysicsBody}\n   * @desc \n   * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint/1387981-bodya\n   ",
-      "start": 2167,
-      "end": 2365,
+      "value": "*\n   * The first physics body connected by the joint.\n   * @type {SCNPhysicsBody}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsballsocketjoint/1387981-bodya\n   ",
+      "start": 2183,
+      "end": 2385,
       "loc": {
         "start": {
           "line": 53,
@@ -1590,9 +1590,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The second physics body connected by the joint.\n   * @type {?SCNPhysicsBody}\n   * @desc This property’s value is nil if the joint was created using the init(body:anchor:) method.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint/1387902-bodyb\n   ",
-      "start": 2412,
-      "end": 2702,
+      "value": "*\n   * The second physics body connected by the joint.\n   * @type {?SCNPhysicsBody}\n   * @desc This property’s value is nil if the joint was created using the init(body:anchor:) method.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsballsocketjoint/1387902-bodyb\n   ",
+      "start": 2432,
+      "end": 2726,
       "loc": {
         "start": {
           "line": 63,
@@ -1956,9 +1956,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * A physics behavior that connects two physics bodies and allows them to pivot around each other in any direction.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint\n ",
+      "value": "*\n * A physics behavior that connects two physics bodies and allows them to pivot around each other in any direction.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicsballsocketjoint\n ",
       "start": 154,
-      "end": 409,
+      "end": 413,
       "loc": {
         "start": {
           "line": 8,
@@ -1985,8 +1985,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 410,
-      "end": 416,
+      "start": 414,
+      "end": 420,
       "loc": {
         "start": {
           "line": 14,
@@ -2013,8 +2013,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 417,
-      "end": 424,
+      "start": 421,
+      "end": 428,
       "loc": {
         "start": {
           "line": 14,
@@ -2041,8 +2041,8 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 425,
-      "end": 430,
+      "start": 429,
+      "end": 434,
       "loc": {
         "start": {
           "line": 14,
@@ -2067,8 +2067,8 @@
         "binop": null
       },
       "value": "SCNPhysicsBallSocketJoint",
-      "start": 431,
-      "end": 456,
+      "start": 435,
+      "end": 460,
       "loc": {
         "start": {
           "line": 14,
@@ -2095,8 +2095,8 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 457,
-      "end": 464,
+      "start": 461,
+      "end": 468,
       "loc": {
         "start": {
           "line": 14,
@@ -2121,8 +2121,8 @@
         "binop": null
       },
       "value": "SCNPhysicsBehavior",
-      "start": 465,
-      "end": 483,
+      "start": 469,
+      "end": 487,
       "loc": {
         "start": {
           "line": 14,
@@ -2146,8 +2146,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 484,
-      "end": 485,
+      "start": 488,
+      "end": 489,
       "loc": {
         "start": {
           "line": 14,
@@ -2162,8 +2162,8 @@
     {
       "type": "CommentLine",
       "value": " Creating a Ball and Socket Joint",
-      "start": 488,
-      "end": 523,
+      "start": 492,
+      "end": 527,
       "loc": {
         "start": {
           "line": 15,
@@ -2177,9 +2177,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Creates a ball and socket joint connecting two physics bodies.\n   * @access public\n   * @constructor\n   * @param {SCNPhysicsBody} bodyA - The first physics body to be connected by the joint.\n   * @param {SCNVector3} anchorA - The point at which the joint connects, relative to the node containing the first body.\n   * @param {SCNPhysicsBody} bodyB - The second physics body to be connected by the joint.\n   * @param {SCNVector3} anchorB - The point at which the joint connects, relative to the node containing the second body.\n   * @desc For a behavior to take effect, add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object. The physics bodies constrained by the joint must be attached to nodes in the scene.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint/1387926-init\n   ",
-      "start": 527,
-      "end": 1401,
+      "value": "*\n   * Creates a ball and socket joint connecting two physics bodies.\n   * @access public\n   * @constructor\n   * @param {SCNPhysicsBody} bodyA - The first physics body to be connected by the joint.\n   * @param {SCNVector3} anchorA - The point at which the joint connects, relative to the node containing the first body.\n   * @param {SCNPhysicsBody} bodyB - The second physics body to be connected by the joint.\n   * @param {SCNVector3} anchorB - The point at which the joint connects, relative to the node containing the second body.\n   * @desc For a behavior to take effect, add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object. The physics bodies constrained by the joint must be attached to nodes in the scene.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsballsocketjoint/1387926-init\n   ",
+      "start": 531,
+      "end": 1409,
       "loc": {
         "start": {
           "line": 17,
@@ -2204,8 +2204,8 @@
         "binop": null
       },
       "value": "constructor",
-      "start": 1404,
-      "end": 1415,
+      "start": 1412,
+      "end": 1423,
       "loc": {
         "start": {
           "line": 28,
@@ -2229,8 +2229,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1415,
-      "end": 1416,
+      "start": 1423,
+      "end": 1424,
       "loc": {
         "start": {
           "line": 28,
@@ -2255,8 +2255,8 @@
         "binop": null
       },
       "value": "bodyA",
-      "start": 1416,
-      "end": 1421,
+      "start": 1424,
+      "end": 1429,
       "loc": {
         "start": {
           "line": 28,
@@ -2281,8 +2281,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1421,
-      "end": 1422,
+      "start": 1429,
+      "end": 1430,
       "loc": {
         "start": {
           "line": 28,
@@ -2307,8 +2307,8 @@
         "binop": null
       },
       "value": "anchorA",
-      "start": 1423,
-      "end": 1430,
+      "start": 1431,
+      "end": 1438,
       "loc": {
         "start": {
           "line": 28,
@@ -2333,8 +2333,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1430,
-      "end": 1431,
+      "start": 1438,
+      "end": 1439,
       "loc": {
         "start": {
           "line": 28,
@@ -2359,8 +2359,8 @@
         "binop": null
       },
       "value": "bodyB",
-      "start": 1432,
-      "end": 1437,
+      "start": 1440,
+      "end": 1445,
       "loc": {
         "start": {
           "line": 28,
@@ -2385,8 +2385,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1437,
-      "end": 1438,
+      "start": 1445,
+      "end": 1446,
       "loc": {
         "start": {
           "line": 28,
@@ -2411,8 +2411,8 @@
         "binop": null
       },
       "value": "anchorB",
-      "start": 1439,
-      "end": 1446,
+      "start": 1447,
+      "end": 1454,
       "loc": {
         "start": {
           "line": 28,
@@ -2436,8 +2436,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1446,
-      "end": 1447,
+      "start": 1454,
+      "end": 1455,
       "loc": {
         "start": {
           "line": 28,
@@ -2461,8 +2461,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1448,
-      "end": 1449,
+      "start": 1456,
+      "end": 1457,
       "loc": {
         "start": {
           "line": 28,
@@ -2489,8 +2489,8 @@
         "updateContext": null
       },
       "value": "super",
-      "start": 1454,
-      "end": 1459,
+      "start": 1462,
+      "end": 1467,
       "loc": {
         "start": {
           "line": 29,
@@ -2514,8 +2514,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1459,
-      "end": 1460,
+      "start": 1467,
+      "end": 1468,
       "loc": {
         "start": {
           "line": 29,
@@ -2539,8 +2539,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1460,
-      "end": 1461,
+      "start": 1468,
+      "end": 1469,
       "loc": {
         "start": {
           "line": 29,
@@ -2555,8 +2555,8 @@
     {
       "type": "CommentLine",
       "value": " Managing the Characteristics of a Ball and Socket Joint",
-      "start": 1467,
-      "end": 1525,
+      "start": 1475,
+      "end": 1533,
       "loc": {
         "start": {
           "line": 31,
@@ -2570,9 +2570,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The point at which the joint connects, relative to the node containing the first body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint/1387956-anchora\n     ",
-      "start": 1531,
-      "end": 1763,
+      "value": "*\n     * The point at which the joint connects, relative to the node containing the first body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsballsocketjoint/1387956-anchora\n     ",
+      "start": 1539,
+      "end": 1775,
       "loc": {
         "start": {
           "line": 33,
@@ -2599,8 +2599,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1768,
-      "end": 1772,
+      "start": 1780,
+      "end": 1784,
       "loc": {
         "start": {
           "line": 38,
@@ -2625,8 +2625,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1772,
-      "end": 1773,
+      "start": 1784,
+      "end": 1785,
       "loc": {
         "start": {
           "line": 38,
@@ -2651,8 +2651,8 @@
         "binop": null
       },
       "value": "anchorA",
-      "start": 1773,
-      "end": 1780,
+      "start": 1785,
+      "end": 1792,
       "loc": {
         "start": {
           "line": 38,
@@ -2678,8 +2678,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1781,
-      "end": 1782,
+      "start": 1793,
+      "end": 1794,
       "loc": {
         "start": {
           "line": 38,
@@ -2706,8 +2706,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 1783,
-      "end": 1787,
+      "start": 1795,
+      "end": 1799,
       "loc": {
         "start": {
           "line": 38,
@@ -2721,9 +2721,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The point at which the joint connects, relative to the node containing the second body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint/1387965-anchorb\n     ",
-      "start": 1793,
-      "end": 2026,
+      "value": "*\n     * The point at which the joint connects, relative to the node containing the second body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsballsocketjoint/1387965-anchorb\n     ",
+      "start": 1805,
+      "end": 2042,
       "loc": {
         "start": {
           "line": 40,
@@ -2750,8 +2750,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2031,
-      "end": 2035,
+      "start": 2047,
+      "end": 2051,
       "loc": {
         "start": {
           "line": 45,
@@ -2776,8 +2776,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2035,
-      "end": 2036,
+      "start": 2051,
+      "end": 2052,
       "loc": {
         "start": {
           "line": 45,
@@ -2802,8 +2802,8 @@
         "binop": null
       },
       "value": "anchorB",
-      "start": 2036,
-      "end": 2043,
+      "start": 2052,
+      "end": 2059,
       "loc": {
         "start": {
           "line": 45,
@@ -2829,8 +2829,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2044,
-      "end": 2045,
+      "start": 2060,
+      "end": 2061,
       "loc": {
         "start": {
           "line": 45,
@@ -2857,8 +2857,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2046,
-      "end": 2050,
+      "start": 2062,
+      "end": 2066,
       "loc": {
         "start": {
           "line": 45,
@@ -2885,8 +2885,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2056,
-      "end": 2060,
+      "start": 2072,
+      "end": 2076,
       "loc": {
         "start": {
           "line": 47,
@@ -2911,8 +2911,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2060,
-      "end": 2061,
+      "start": 2076,
+      "end": 2077,
       "loc": {
         "start": {
           "line": 47,
@@ -2937,8 +2937,8 @@
         "binop": null
       },
       "value": "_bodyA",
-      "start": 2061,
-      "end": 2067,
+      "start": 2077,
+      "end": 2083,
       "loc": {
         "start": {
           "line": 47,
@@ -2964,8 +2964,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2068,
-      "end": 2069,
+      "start": 2084,
+      "end": 2085,
       "loc": {
         "start": {
           "line": 47,
@@ -2992,8 +2992,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2070,
-      "end": 2074,
+      "start": 2086,
+      "end": 2090,
       "loc": {
         "start": {
           "line": 47,
@@ -3020,8 +3020,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2079,
-      "end": 2083,
+      "start": 2095,
+      "end": 2099,
       "loc": {
         "start": {
           "line": 48,
@@ -3046,8 +3046,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2083,
-      "end": 2084,
+      "start": 2099,
+      "end": 2100,
       "loc": {
         "start": {
           "line": 48,
@@ -3072,8 +3072,8 @@
         "binop": null
       },
       "value": "_bodyB",
-      "start": 2084,
-      "end": 2090,
+      "start": 2100,
+      "end": 2106,
       "loc": {
         "start": {
           "line": 48,
@@ -3099,8 +3099,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2091,
-      "end": 2092,
+      "start": 2107,
+      "end": 2108,
       "loc": {
         "start": {
           "line": 48,
@@ -3127,8 +3127,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2093,
-      "end": 2097,
+      "start": 2109,
+      "end": 2113,
       "loc": {
         "start": {
           "line": 48,
@@ -3152,8 +3152,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2100,
-      "end": 2101,
+      "start": 2116,
+      "end": 2117,
       "loc": {
         "start": {
           "line": 49,
@@ -3168,8 +3168,8 @@
     {
       "type": "CommentLine",
       "value": " Managing the Characteristics of a Ball and Socket Joint",
-      "start": 2105,
-      "end": 2163,
+      "start": 2121,
+      "end": 2179,
       "loc": {
         "start": {
           "line": 51,
@@ -3183,9 +3183,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The first physics body connected by the joint.\n   * @type {SCNPhysicsBody}\n   * @desc \n   * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint/1387981-bodya\n   ",
-      "start": 2167,
-      "end": 2365,
+      "value": "*\n   * The first physics body connected by the joint.\n   * @type {SCNPhysicsBody}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsballsocketjoint/1387981-bodya\n   ",
+      "start": 2183,
+      "end": 2385,
       "loc": {
         "start": {
           "line": 53,
@@ -3210,8 +3210,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 2368,
-      "end": 2371,
+      "start": 2388,
+      "end": 2391,
       "loc": {
         "start": {
           "line": 59,
@@ -3236,8 +3236,8 @@
         "binop": null
       },
       "value": "bodyA",
-      "start": 2372,
-      "end": 2377,
+      "start": 2392,
+      "end": 2397,
       "loc": {
         "start": {
           "line": 59,
@@ -3261,8 +3261,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2377,
-      "end": 2378,
+      "start": 2397,
+      "end": 2398,
       "loc": {
         "start": {
           "line": 59,
@@ -3286,8 +3286,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2378,
-      "end": 2379,
+      "start": 2398,
+      "end": 2399,
       "loc": {
         "start": {
           "line": 59,
@@ -3311,8 +3311,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2380,
-      "end": 2381,
+      "start": 2400,
+      "end": 2401,
       "loc": {
         "start": {
           "line": 59,
@@ -3339,8 +3339,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 2386,
-      "end": 2392,
+      "start": 2406,
+      "end": 2412,
       "loc": {
         "start": {
           "line": 60,
@@ -3367,8 +3367,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2393,
-      "end": 2397,
+      "start": 2413,
+      "end": 2417,
       "loc": {
         "start": {
           "line": 60,
@@ -3393,8 +3393,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2397,
-      "end": 2398,
+      "start": 2417,
+      "end": 2418,
       "loc": {
         "start": {
           "line": 60,
@@ -3419,8 +3419,8 @@
         "binop": null
       },
       "value": "_bodyA",
-      "start": 2398,
-      "end": 2404,
+      "start": 2418,
+      "end": 2424,
       "loc": {
         "start": {
           "line": 60,
@@ -3444,8 +3444,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2407,
-      "end": 2408,
+      "start": 2427,
+      "end": 2428,
       "loc": {
         "start": {
           "line": 61,
@@ -3459,9 +3459,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The second physics body connected by the joint.\n   * @type {?SCNPhysicsBody}\n   * @desc This property’s value is nil if the joint was created using the init(body:anchor:) method.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsballsocketjoint/1387902-bodyb\n   ",
-      "start": 2412,
-      "end": 2702,
+      "value": "*\n   * The second physics body connected by the joint.\n   * @type {?SCNPhysicsBody}\n   * @desc This property’s value is nil if the joint was created using the init(body:anchor:) method.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsballsocketjoint/1387902-bodyb\n   ",
+      "start": 2432,
+      "end": 2726,
       "loc": {
         "start": {
           "line": 63,
@@ -3486,8 +3486,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 2705,
-      "end": 2708,
+      "start": 2729,
+      "end": 2732,
       "loc": {
         "start": {
           "line": 69,
@@ -3512,8 +3512,8 @@
         "binop": null
       },
       "value": "bodyB",
-      "start": 2709,
-      "end": 2714,
+      "start": 2733,
+      "end": 2738,
       "loc": {
         "start": {
           "line": 69,
@@ -3537,8 +3537,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2714,
-      "end": 2715,
+      "start": 2738,
+      "end": 2739,
       "loc": {
         "start": {
           "line": 69,
@@ -3562,8 +3562,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2715,
-      "end": 2716,
+      "start": 2739,
+      "end": 2740,
       "loc": {
         "start": {
           "line": 69,
@@ -3587,8 +3587,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2717,
-      "end": 2718,
+      "start": 2741,
+      "end": 2742,
       "loc": {
         "start": {
           "line": 69,
@@ -3615,8 +3615,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 2723,
-      "end": 2729,
+      "start": 2747,
+      "end": 2753,
       "loc": {
         "start": {
           "line": 70,
@@ -3643,8 +3643,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2730,
-      "end": 2734,
+      "start": 2754,
+      "end": 2758,
       "loc": {
         "start": {
           "line": 70,
@@ -3669,8 +3669,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2734,
-      "end": 2735,
+      "start": 2758,
+      "end": 2759,
       "loc": {
         "start": {
           "line": 70,
@@ -3695,8 +3695,8 @@
         "binop": null
       },
       "value": "_bodyB",
-      "start": 2735,
-      "end": 2741,
+      "start": 2759,
+      "end": 2765,
       "loc": {
         "start": {
           "line": 70,
@@ -3720,8 +3720,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2744,
-      "end": 2745,
+      "start": 2768,
+      "end": 2769,
       "loc": {
         "start": {
           "line": 71,
@@ -3745,8 +3745,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2746,
-      "end": 2747,
+      "start": 2770,
+      "end": 2771,
       "loc": {
         "start": {
           "line": 72,
@@ -3771,8 +3771,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2748,
-      "end": 2748,
+      "start": 2772,
+      "end": 2772,
       "loc": {
         "start": {
           "line": 73,

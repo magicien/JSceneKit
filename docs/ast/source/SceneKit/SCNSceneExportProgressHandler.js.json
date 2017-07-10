@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 918,
+  "end": 922,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 918,
+    "end": 922,
     "loc": {
       "start": {
         "line": 1,
@@ -30,8 +30,8 @@
     "body": [
       {
         "type": "Identifier",
-        "start": 799,
-        "end": 871,
+        "start": 803,
+        "end": 875,
         "loc": {
           "start": {
             "line": 14,
@@ -45,8 +45,8 @@
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 805,
-            "end": 871,
+            "start": 809,
+            "end": 875,
             "loc": {
               "start": {
                 "line": 14,
@@ -59,8 +59,8 @@
             },
             "id": {
               "type": "Identifier",
-              "start": 805,
-              "end": 834,
+              "start": 809,
+              "end": 838,
               "loc": {
                 "start": {
                   "line": 14,
@@ -77,8 +77,8 @@
             },
             "init": {
               "type": "ArrowFunctionExpression",
-              "start": 837,
-              "end": 871,
+              "start": 841,
+              "end": 875,
               "loc": {
                 "start": {
                   "line": 14,
@@ -96,8 +96,8 @@
               "params": [
                 {
                   "type": "Identifier",
-                  "start": 838,
-                  "end": 851,
+                  "start": 842,
+                  "end": 855,
                   "loc": {
                     "start": {
                       "line": 14,
@@ -113,8 +113,8 @@
                 },
                 {
                   "type": "Identifier",
-                  "start": 853,
-                  "end": 858,
+                  "start": 857,
+                  "end": 862,
                   "loc": {
                     "start": {
                       "line": 14,
@@ -130,8 +130,8 @@
                 },
                 {
                   "type": "Identifier",
-                  "start": 860,
-                  "end": 864,
+                  "start": 864,
+                  "end": 868,
                   "loc": {
                     "start": {
                       "line": 14,
@@ -148,8 +148,8 @@
               ],
               "body": {
                 "type": "BlockStatement",
-                "start": 869,
-                "end": 871,
+                "start": 873,
+                "end": 875,
                 "loc": {
                   "start": {
                     "line": 14,
@@ -174,8 +174,8 @@
       },
       {
         "type": "Identifier",
-        "start": 873,
-        "end": 917,
+        "start": 877,
+        "end": 921,
         "loc": {
           "start": {
             "line": 16,
@@ -188,8 +188,8 @@
         },
         "declaration": {
           "type": "Identifier",
-          "start": 888,
-          "end": 917,
+          "start": 892,
+          "end": 921,
           "loc": {
             "start": {
               "line": 16,
@@ -209,8 +209,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 873,
-        "end": 917,
+        "start": 877,
+        "end": 921,
         "loc": {
           "start": {
             "line": 16,
@@ -223,8 +223,8 @@
         },
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 799,
-          "end": 871,
+          "start": 803,
+          "end": 875,
           "loc": {
             "start": {
               "line": 14,
@@ -238,8 +238,8 @@
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 805,
-              "end": 871,
+              "start": 809,
+              "end": 875,
               "loc": {
                 "start": {
                   "line": 14,
@@ -252,8 +252,8 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 805,
-                "end": 834,
+                "start": 809,
+                "end": 838,
                 "loc": {
                   "start": {
                     "line": 14,
@@ -270,8 +270,8 @@
               },
               "init": {
                 "type": "ArrowFunctionExpression",
-                "start": 837,
-                "end": 871,
+                "start": 841,
+                "end": 875,
                 "loc": {
                   "start": {
                     "line": 14,
@@ -284,8 +284,8 @@
                 },
                 "id": {
                   "type": "Identifier",
-                  "start": 805,
-                  "end": 834,
+                  "start": 809,
+                  "end": 838,
                   "loc": {
                     "start": {
                       "line": 14,
@@ -306,8 +306,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 838,
-                    "end": 851,
+                    "start": 842,
+                    "end": 855,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -323,8 +323,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 853,
-                    "end": 858,
+                    "start": 857,
+                    "end": 862,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -340,8 +340,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 860,
-                    "end": 864,
+                    "start": 864,
+                    "end": 868,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -358,8 +358,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 869,
-                  "end": 871,
+                  "start": 873,
+                  "end": 875,
                   "loc": {
                     "start": {
                       "line": 14,
@@ -381,9 +381,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * The signature for the block that SceneKit calls during scene export.\n * @type {function(totalProgress: number, error: ?Error, stop: UnsafeMutablePointer<ObjCBool>): void}\n * @param {number} totalProgress - A number between 0.0 and 1.0 that indicates the progress of the export operation, with 0.0 indicating that the operation has just begun and 1.0 indicating the operation has completed.\n * @param {?Error} error - An error encountered during the export process, or nil if no errors have occurred.\n * @param {UnsafeMutablePointer<ObjCBool>} stop - Set *stop to true inside the block to cancel export.\n * @returns {void}\n * @desc stopSet *stop to true inside the block to cancel export.\n * @see https://developer.apple.com/reference/scenekit/scnsceneexportprogresshandler\n ",
+              "value": "*\n * The signature for the block that SceneKit calls during scene export.\n * @type {function(totalProgress: number, error: ?Error, stop: UnsafeMutablePointer<ObjCBool>): void}\n * @param {number} totalProgress - A number between 0.0 and 1.0 that indicates the progress of the export operation, with 0.0 indicating that the operation has just begun and 1.0 indicating the operation has completed.\n * @param {?Error} error - An error encountered during the export process, or nil if no errors have occurred.\n * @param {UnsafeMutablePointer<ObjCBool>} stop - Set *stop to true inside the block to cancel export.\n * @returns {void}\n * @desc stopSet *stop to true inside the block to cancel export.\n * @see https://developer.apple.com/documentation/scenekit/scnsceneexportprogresshandler\n ",
               "start": 15,
-              "end": 798,
+              "end": 802,
               "loc": {
                 "start": {
                   "line": 4,
@@ -439,9 +439,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * The signature for the block that SceneKit calls during scene export.\n * @type {function(totalProgress: number, error: ?Error, stop: UnsafeMutablePointer<ObjCBool>): void}\n * @param {number} totalProgress - A number between 0.0 and 1.0 that indicates the progress of the export operation, with 0.0 indicating that the operation has just begun and 1.0 indicating the operation has completed.\n * @param {?Error} error - An error encountered during the export process, or nil if no errors have occurred.\n * @param {UnsafeMutablePointer<ObjCBool>} stop - Set *stop to true inside the block to cancel export.\n * @returns {void}\n * @desc stopSet *stop to true inside the block to cancel export.\n * @see https://developer.apple.com/reference/scenekit/scnsceneexportprogresshandler\n ",
+            "value": "*\n * The signature for the block that SceneKit calls during scene export.\n * @type {function(totalProgress: number, error: ?Error, stop: UnsafeMutablePointer<ObjCBool>): void}\n * @param {number} totalProgress - A number between 0.0 and 1.0 that indicates the progress of the export operation, with 0.0 indicating that the operation has just begun and 1.0 indicating the operation has completed.\n * @param {?Error} error - An error encountered during the export process, or nil if no errors have occurred.\n * @param {UnsafeMutablePointer<ObjCBool>} stop - Set *stop to true inside the block to cancel export.\n * @returns {void}\n * @desc stopSet *stop to true inside the block to cancel export.\n * @see https://developer.apple.com/documentation/scenekit/scnsceneexportprogresshandler\n ",
             "start": 15,
-            "end": 798,
+            "end": 802,
             "loc": {
               "start": {
                 "line": 4,
@@ -460,9 +460,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * The signature for the block that SceneKit calls during scene export.\n * @type {function(totalProgress: number, error: ?Error, stop: UnsafeMutablePointer<ObjCBool>): void}\n * @param {number} totalProgress - A number between 0.0 and 1.0 that indicates the progress of the export operation, with 0.0 indicating that the operation has just begun and 1.0 indicating the operation has completed.\n * @param {?Error} error - An error encountered during the export process, or nil if no errors have occurred.\n * @param {UnsafeMutablePointer<ObjCBool>} stop - Set *stop to true inside the block to cancel export.\n * @returns {void}\n * @desc stopSet *stop to true inside the block to cancel export.\n * @see https://developer.apple.com/reference/scenekit/scnsceneexportprogresshandler\n ",
+      "value": "*\n * The signature for the block that SceneKit calls during scene export.\n * @type {function(totalProgress: number, error: ?Error, stop: UnsafeMutablePointer<ObjCBool>): void}\n * @param {number} totalProgress - A number between 0.0 and 1.0 that indicates the progress of the export operation, with 0.0 indicating that the operation has just begun and 1.0 indicating the operation has completed.\n * @param {?Error} error - An error encountered during the export process, or nil if no errors have occurred.\n * @param {UnsafeMutablePointer<ObjCBool>} stop - Set *stop to true inside the block to cancel export.\n * @returns {void}\n * @desc stopSet *stop to true inside the block to cancel export.\n * @see https://developer.apple.com/documentation/scenekit/scnsceneexportprogresshandler\n ",
       "start": 15,
-      "end": 798,
+      "end": 802,
       "loc": {
         "start": {
           "line": 4,
@@ -505,9 +505,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * The signature for the block that SceneKit calls during scene export.\n * @type {function(totalProgress: number, error: ?Error, stop: UnsafeMutablePointer<ObjCBool>): void}\n * @param {number} totalProgress - A number between 0.0 and 1.0 that indicates the progress of the export operation, with 0.0 indicating that the operation has just begun and 1.0 indicating the operation has completed.\n * @param {?Error} error - An error encountered during the export process, or nil if no errors have occurred.\n * @param {UnsafeMutablePointer<ObjCBool>} stop - Set *stop to true inside the block to cancel export.\n * @returns {void}\n * @desc stopSet *stop to true inside the block to cancel export.\n * @see https://developer.apple.com/reference/scenekit/scnsceneexportprogresshandler\n ",
+      "value": "*\n * The signature for the block that SceneKit calls during scene export.\n * @type {function(totalProgress: number, error: ?Error, stop: UnsafeMutablePointer<ObjCBool>): void}\n * @param {number} totalProgress - A number between 0.0 and 1.0 that indicates the progress of the export operation, with 0.0 indicating that the operation has just begun and 1.0 indicating the operation has completed.\n * @param {?Error} error - An error encountered during the export process, or nil if no errors have occurred.\n * @param {UnsafeMutablePointer<ObjCBool>} stop - Set *stop to true inside the block to cancel export.\n * @returns {void}\n * @desc stopSet *stop to true inside the block to cancel export.\n * @see https://developer.apple.com/documentation/scenekit/scnsceneexportprogresshandler\n ",
       "start": 15,
-      "end": 798,
+      "end": 802,
       "loc": {
         "start": {
           "line": 4,
@@ -534,8 +534,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 799,
-      "end": 804,
+      "start": 803,
+      "end": 808,
       "loc": {
         "start": {
           "line": 14,
@@ -560,8 +560,8 @@
         "binop": null
       },
       "value": "SCNSceneExportProgressHandler",
-      "start": 805,
-      "end": 834,
+      "start": 809,
+      "end": 838,
       "loc": {
         "start": {
           "line": 14,
@@ -587,8 +587,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 835,
-      "end": 836,
+      "start": 839,
+      "end": 840,
       "loc": {
         "start": {
           "line": 14,
@@ -612,8 +612,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 837,
-      "end": 838,
+      "start": 841,
+      "end": 842,
       "loc": {
         "start": {
           "line": 14,
@@ -638,8 +638,8 @@
         "binop": null
       },
       "value": "totalProgress",
-      "start": 838,
-      "end": 851,
+      "start": 842,
+      "end": 855,
       "loc": {
         "start": {
           "line": 14,
@@ -664,8 +664,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 851,
-      "end": 852,
+      "start": 855,
+      "end": 856,
       "loc": {
         "start": {
           "line": 14,
@@ -690,8 +690,8 @@
         "binop": null
       },
       "value": "error",
-      "start": 853,
-      "end": 858,
+      "start": 857,
+      "end": 862,
       "loc": {
         "start": {
           "line": 14,
@@ -716,8 +716,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 858,
-      "end": 859,
+      "start": 862,
+      "end": 863,
       "loc": {
         "start": {
           "line": 14,
@@ -742,8 +742,8 @@
         "binop": null
       },
       "value": "stop",
-      "start": 860,
-      "end": 864,
+      "start": 864,
+      "end": 868,
       "loc": {
         "start": {
           "line": 14,
@@ -767,8 +767,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 864,
-      "end": 865,
+      "start": 868,
+      "end": 869,
       "loc": {
         "start": {
           "line": 14,
@@ -793,8 +793,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 866,
-      "end": 868,
+      "start": 870,
+      "end": 872,
       "loc": {
         "start": {
           "line": 14,
@@ -818,8 +818,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 869,
-      "end": 870,
+      "start": 873,
+      "end": 874,
       "loc": {
         "start": {
           "line": 14,
@@ -843,8 +843,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 870,
-      "end": 871,
+      "start": 874,
+      "end": 875,
       "loc": {
         "start": {
           "line": 14,
@@ -871,8 +871,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 873,
-      "end": 879,
+      "start": 877,
+      "end": 883,
       "loc": {
         "start": {
           "line": 16,
@@ -899,8 +899,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 880,
-      "end": 887,
+      "start": 884,
+      "end": 891,
       "loc": {
         "start": {
           "line": 16,
@@ -925,8 +925,8 @@
         "binop": null
       },
       "value": "SCNSceneExportProgressHandler",
-      "start": 888,
-      "end": 917,
+      "start": 892,
+      "end": 921,
       "loc": {
         "start": {
           "line": 16,
@@ -951,8 +951,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 918,
-      "end": 918,
+      "start": 922,
+      "end": 922,
       "loc": {
         "start": {
           "line": 17,

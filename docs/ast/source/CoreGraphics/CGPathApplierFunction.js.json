@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 304,
+  "end": 308,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 304,
+    "end": 308,
     "loc": {
       "start": {
         "line": 1,
@@ -30,8 +30,8 @@
     "body": [
       {
         "type": "Identifier",
-        "start": 227,
-        "end": 265,
+        "start": 231,
+        "end": 269,
         "loc": {
           "start": {
             "line": 10,
@@ -45,8 +45,8 @@
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 233,
-            "end": 265,
+            "start": 237,
+            "end": 269,
             "loc": {
               "start": {
                 "line": 10,
@@ -59,8 +59,8 @@
             },
             "id": {
               "type": "Identifier",
-              "start": 233,
-              "end": 254,
+              "start": 237,
+              "end": 258,
               "loc": {
                 "start": {
                   "line": 10,
@@ -77,8 +77,8 @@
             },
             "init": {
               "type": "ArrowFunctionExpression",
-              "start": 257,
-              "end": 265,
+              "start": 261,
+              "end": 269,
               "loc": {
                 "start": {
                   "line": 10,
@@ -96,8 +96,8 @@
               "params": [],
               "body": {
                 "type": "BlockStatement",
-                "start": 263,
-                "end": 265,
+                "start": 267,
+                "end": 269,
                 "loc": {
                   "start": {
                     "line": 10,
@@ -122,8 +122,8 @@
       },
       {
         "type": "Identifier",
-        "start": 267,
-        "end": 303,
+        "start": 271,
+        "end": 307,
         "loc": {
           "start": {
             "line": 12,
@@ -136,8 +136,8 @@
         },
         "declaration": {
           "type": "Identifier",
-          "start": 282,
-          "end": 303,
+          "start": 286,
+          "end": 307,
           "loc": {
             "start": {
               "line": 12,
@@ -157,8 +157,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 267,
-        "end": 303,
+        "start": 271,
+        "end": 307,
         "loc": {
           "start": {
             "line": 12,
@@ -171,8 +171,8 @@
         },
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 227,
-          "end": 265,
+          "start": 231,
+          "end": 269,
           "loc": {
             "start": {
               "line": 10,
@@ -186,8 +186,8 @@
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 233,
-              "end": 265,
+              "start": 237,
+              "end": 269,
               "loc": {
                 "start": {
                   "line": 10,
@@ -200,8 +200,8 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 233,
-                "end": 254,
+                "start": 237,
+                "end": 258,
                 "loc": {
                   "start": {
                     "line": 10,
@@ -218,8 +218,8 @@
               },
               "init": {
                 "type": "ArrowFunctionExpression",
-                "start": 257,
-                "end": 265,
+                "start": 261,
+                "end": 269,
                 "loc": {
                   "start": {
                     "line": 10,
@@ -232,8 +232,8 @@
                 },
                 "id": {
                   "type": "Identifier",
-                  "start": 233,
-                  "end": 254,
+                  "start": 237,
+                  "end": 258,
                   "loc": {
                     "start": {
                       "line": 10,
@@ -254,8 +254,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 263,
-                  "end": 265,
+                  "start": 267,
+                  "end": 269,
                   "loc": {
                     "start": {
                       "line": 10,
@@ -277,9 +277,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * Defines a callback function that can view an element in a graphics path.\n * @type {function(): void}\n * @returns {void}\n * @see https://developer.apple.com/reference/coregraphics/cgpathapplierfunction\n ",
+              "value": "*\n * Defines a callback function that can view an element in a graphics path.\n * @type {function(): void}\n * @returns {void}\n * @see https://developer.apple.com/documentation/coregraphics/cgpathapplierfunction\n ",
               "start": 15,
-              "end": 226,
+              "end": 230,
               "loc": {
                 "start": {
                   "line": 4,
@@ -335,9 +335,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Defines a callback function that can view an element in a graphics path.\n * @type {function(): void}\n * @returns {void}\n * @see https://developer.apple.com/reference/coregraphics/cgpathapplierfunction\n ",
+            "value": "*\n * Defines a callback function that can view an element in a graphics path.\n * @type {function(): void}\n * @returns {void}\n * @see https://developer.apple.com/documentation/coregraphics/cgpathapplierfunction\n ",
             "start": 15,
-            "end": 226,
+            "end": 230,
             "loc": {
               "start": {
                 "line": 4,
@@ -356,9 +356,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * Defines a callback function that can view an element in a graphics path.\n * @type {function(): void}\n * @returns {void}\n * @see https://developer.apple.com/reference/coregraphics/cgpathapplierfunction\n ",
+      "value": "*\n * Defines a callback function that can view an element in a graphics path.\n * @type {function(): void}\n * @returns {void}\n * @see https://developer.apple.com/documentation/coregraphics/cgpathapplierfunction\n ",
       "start": 15,
-      "end": 226,
+      "end": 230,
       "loc": {
         "start": {
           "line": 4,
@@ -401,9 +401,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Defines a callback function that can view an element in a graphics path.\n * @type {function(): void}\n * @returns {void}\n * @see https://developer.apple.com/reference/coregraphics/cgpathapplierfunction\n ",
+      "value": "*\n * Defines a callback function that can view an element in a graphics path.\n * @type {function(): void}\n * @returns {void}\n * @see https://developer.apple.com/documentation/coregraphics/cgpathapplierfunction\n ",
       "start": 15,
-      "end": 226,
+      "end": 230,
       "loc": {
         "start": {
           "line": 4,
@@ -430,8 +430,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 227,
-      "end": 232,
+      "start": 231,
+      "end": 236,
       "loc": {
         "start": {
           "line": 10,
@@ -456,8 +456,8 @@
         "binop": null
       },
       "value": "CGPathApplierFunction",
-      "start": 233,
-      "end": 254,
+      "start": 237,
+      "end": 258,
       "loc": {
         "start": {
           "line": 10,
@@ -483,8 +483,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 255,
-      "end": 256,
+      "start": 259,
+      "end": 260,
       "loc": {
         "start": {
           "line": 10,
@@ -508,8 +508,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 257,
-      "end": 258,
+      "start": 261,
+      "end": 262,
       "loc": {
         "start": {
           "line": 10,
@@ -533,8 +533,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 258,
-      "end": 259,
+      "start": 262,
+      "end": 263,
       "loc": {
         "start": {
           "line": 10,
@@ -559,8 +559,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 260,
-      "end": 262,
+      "start": 264,
+      "end": 266,
       "loc": {
         "start": {
           "line": 10,
@@ -584,8 +584,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 263,
-      "end": 264,
+      "start": 267,
+      "end": 268,
       "loc": {
         "start": {
           "line": 10,
@@ -609,8 +609,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 264,
-      "end": 265,
+      "start": 268,
+      "end": 269,
       "loc": {
         "start": {
           "line": 10,
@@ -637,8 +637,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 267,
-      "end": 273,
+      "start": 271,
+      "end": 277,
       "loc": {
         "start": {
           "line": 12,
@@ -665,8 +665,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 274,
-      "end": 281,
+      "start": 278,
+      "end": 285,
       "loc": {
         "start": {
           "line": 12,
@@ -691,8 +691,8 @@
         "binop": null
       },
       "value": "CGPathApplierFunction",
-      "start": 282,
-      "end": 303,
+      "start": 286,
+      "end": 307,
       "loc": {
         "start": {
           "line": 12,
@@ -717,8 +717,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 304,
-      "end": 304,
+      "start": 308,
+      "end": 308,
       "loc": {
         "start": {
           "line": 13,

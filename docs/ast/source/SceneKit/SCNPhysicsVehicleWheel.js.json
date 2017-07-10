@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 4719,
+  "end": 4775,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 4719,
+    "end": 4775,
     "loc": {
       "start": {
         "line": 1,
@@ -239,9 +239,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * The appearance and physical characteristics of an individual wheel associated with an physics vehicle behavior.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel\n ",
+            "value": "*\n * The appearance and physical characteristics of an individual wheel associated with an physics vehicle behavior.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel\n ",
             "start": 132,
-            "end": 373,
+            "end": 377,
             "loc": {
               "start": {
                 "line": 8,
@@ -257,8 +257,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 374,
-        "end": 4718,
+        "start": 378,
+        "end": 4774,
         "loc": {
           "start": {
             "line": 14,
@@ -271,8 +271,8 @@
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 389,
-          "end": 4718,
+          "start": 393,
+          "end": 4774,
           "loc": {
             "start": {
               "line": 14,
@@ -285,8 +285,8 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 395,
-            "end": 417,
+            "start": 399,
+            "end": 421,
             "loc": {
               "start": {
                 "line": 14,
@@ -303,8 +303,8 @@
           },
           "superClass": {
             "type": "Identifier",
-            "start": 426,
-            "end": 434,
+            "start": 430,
+            "end": 438,
             "loc": {
               "start": {
                 "line": 14,
@@ -320,8 +320,8 @@
           },
           "body": {
             "type": "ClassBody",
-            "start": 435,
-            "end": 4718,
+            "start": 439,
+            "end": 4774,
             "loc": {
               "start": {
                 "line": 14,
@@ -335,8 +335,8 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 1279,
-                "end": 4350,
+                "start": 1287,
+                "end": 4402,
                 "loc": {
                   "start": {
                     "line": 25,
@@ -350,8 +350,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1279,
-                  "end": 1290,
+                  "start": 1287,
+                  "end": 1298,
                   "loc": {
                     "start": {
                       "line": 25,
@@ -375,8 +375,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 1291,
-                    "end": 1295,
+                    "start": 1299,
+                    "end": 1303,
                     "loc": {
                       "start": {
                         "line": 25,
@@ -393,8 +393,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1297,
-                  "end": 4350,
+                  "start": 1305,
+                  "end": 4402,
                   "loc": {
                     "start": {
                       "line": 25,
@@ -408,8 +408,8 @@
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 1303,
-                      "end": 1310,
+                      "start": 1311,
+                      "end": 1318,
                       "loc": {
                         "start": {
                           "line": 26,
@@ -422,8 +422,8 @@
                       },
                       "expression": {
                         "type": "CallExpression",
-                        "start": 1303,
-                        "end": 1310,
+                        "start": 1311,
+                        "end": 1318,
                         "loc": {
                           "start": {
                             "line": 26,
@@ -436,8 +436,8 @@
                         },
                         "callee": {
                           "type": "Super",
-                          "start": 1303,
-                          "end": 1308,
+                          "start": 1311,
+                          "end": 1316,
                           "loc": {
                             "start": {
                               "line": 26,
@@ -456,8 +456,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Managing a Wheel’s Connection to a Vehicle",
-                          "start": 1316,
-                          "end": 1361,
+                          "start": 1324,
+                          "end": 1369,
                           "loc": {
                             "start": {
                               "line": 28,
@@ -471,9 +471,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The position of the wheel’s connection to the vehicle’s chassis.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387959-connectionposition\n     ",
-                          "start": 1367,
-                          "end": 1585,
+                          "value": "*\n     * The position of the wheel’s connection to the vehicle’s chassis.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387959-connectionposition\n     ",
+                          "start": 1375,
+                          "end": 1597,
                           "loc": {
                             "start": {
                               "line": 30,
@@ -489,8 +489,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1590,
-                      "end": 1620,
+                      "start": 1602,
+                      "end": 1632,
                       "loc": {
                         "start": {
                           "line": 35,
@@ -503,8 +503,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1590,
-                        "end": 1620,
+                        "start": 1602,
+                        "end": 1632,
                         "loc": {
                           "start": {
                             "line": 35,
@@ -518,8 +518,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1590,
-                          "end": 1613,
+                          "start": 1602,
+                          "end": 1625,
                           "loc": {
                             "start": {
                               "line": 35,
@@ -532,8 +532,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1590,
-                            "end": 1594,
+                            "start": 1602,
+                            "end": 1606,
                             "loc": {
                               "start": {
                                 "line": 35,
@@ -548,8 +548,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1595,
-                            "end": 1613,
+                            "start": 1607,
+                            "end": 1625,
                             "loc": {
                               "start": {
                                 "line": 35,
@@ -568,8 +568,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 1616,
-                          "end": 1620,
+                          "start": 1628,
+                          "end": 1632,
                           "loc": {
                             "start": {
                               "line": 35,
@@ -590,8 +590,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Managing a Wheel’s Connection to a Vehicle",
-                          "start": 1316,
-                          "end": 1361,
+                          "start": 1324,
+                          "end": 1369,
                           "loc": {
                             "start": {
                               "line": 28,
@@ -605,9 +605,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The position of the wheel’s connection to the vehicle’s chassis.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387959-connectionposition\n     ",
-                          "start": 1367,
-                          "end": 1585,
+                          "value": "*\n     * The position of the wheel’s connection to the vehicle’s chassis.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387959-connectionposition\n     ",
+                          "start": 1375,
+                          "end": 1597,
                           "loc": {
                             "start": {
                               "line": 30,
@@ -623,9 +623,9 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The direction of the axis that the wheel spins around to move the vehicle.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387969-axle\n     ",
-                          "start": 1626,
-                          "end": 1840,
+                          "value": "*\n     * The direction of the axis that the wheel spins around to move the vehicle.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387969-axle\n     ",
+                          "start": 1638,
+                          "end": 1856,
                           "loc": {
                             "start": {
                               "line": 37,
@@ -641,8 +641,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1845,
-                      "end": 1861,
+                      "start": 1861,
+                      "end": 1877,
                       "loc": {
                         "start": {
                           "line": 42,
@@ -655,8 +655,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1845,
-                        "end": 1861,
+                        "start": 1861,
+                        "end": 1877,
                         "loc": {
                           "start": {
                             "line": 42,
@@ -670,8 +670,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1845,
-                          "end": 1854,
+                          "start": 1861,
+                          "end": 1870,
                           "loc": {
                             "start": {
                               "line": 42,
@@ -684,8 +684,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1845,
-                            "end": 1849,
+                            "start": 1861,
+                            "end": 1865,
                             "loc": {
                               "start": {
                                 "line": 42,
@@ -700,8 +700,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1850,
-                            "end": 1854,
+                            "start": 1866,
+                            "end": 1870,
                             "loc": {
                               "start": {
                                 "line": 42,
@@ -720,8 +720,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 1857,
-                          "end": 1861,
+                          "start": 1873,
+                          "end": 1877,
                           "loc": {
                             "start": {
                               "line": 42,
@@ -741,9 +741,9 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The direction of the axis that the wheel spins around to move the vehicle.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387969-axle\n     ",
-                          "start": 1626,
-                          "end": 1840,
+                          "value": "*\n     * The direction of the axis that the wheel spins around to move the vehicle.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387969-axle\n     ",
+                          "start": 1638,
+                          "end": 1856,
                           "loc": {
                             "start": {
                               "line": 37,
@@ -759,9 +759,9 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The direction of the axis that the wheel pivots around to steer the vehicle.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387882-steeringaxis\n     ",
-                          "start": 1867,
-                          "end": 2091,
+                          "value": "*\n     * The direction of the axis that the wheel pivots around to steer the vehicle.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387882-steeringaxis\n     ",
+                          "start": 1883,
+                          "end": 2111,
                           "loc": {
                             "start": {
                               "line": 44,
@@ -777,8 +777,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2096,
-                      "end": 2120,
+                      "start": 2116,
+                      "end": 2140,
                       "loc": {
                         "start": {
                           "line": 49,
@@ -791,8 +791,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2096,
-                        "end": 2120,
+                        "start": 2116,
+                        "end": 2140,
                         "loc": {
                           "start": {
                             "line": 49,
@@ -806,8 +806,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2096,
-                          "end": 2113,
+                          "start": 2116,
+                          "end": 2133,
                           "loc": {
                             "start": {
                               "line": 49,
@@ -820,8 +820,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2096,
-                            "end": 2100,
+                            "start": 2116,
+                            "end": 2120,
                             "loc": {
                               "start": {
                                 "line": 49,
@@ -836,8 +836,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2101,
-                            "end": 2113,
+                            "start": 2121,
+                            "end": 2133,
                             "loc": {
                               "start": {
                                 "line": 49,
@@ -856,8 +856,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 2116,
-                          "end": 2120,
+                          "start": 2136,
+                          "end": 2140,
                           "loc": {
                             "start": {
                               "line": 49,
@@ -877,9 +877,9 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The direction of the axis that the wheel pivots around to steer the vehicle.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387882-steeringaxis\n     ",
-                          "start": 1867,
-                          "end": 2091,
+                          "value": "*\n     * The direction of the axis that the wheel pivots around to steer the vehicle.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387882-steeringaxis\n     ",
+                          "start": 1883,
+                          "end": 2111,
                           "loc": {
                             "start": {
                               "line": 44,
@@ -896,8 +896,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Simulating Wheel Size",
-                          "start": 2127,
-                          "end": 2151,
+                          "start": 2147,
+                          "end": 2171,
                           "loc": {
                             "start": {
                               "line": 52,
@@ -911,9 +911,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The radius of the wheel.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387991-radius\n     ",
-                          "start": 2157,
-                          "end": 2319,
+                          "value": "*\n     * The radius of the wheel.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387991-radius\n     ",
+                          "start": 2177,
+                          "end": 2343,
                           "loc": {
                             "start": {
                               "line": 54,
@@ -929,8 +929,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2324,
-                      "end": 2339,
+                      "start": 2348,
+                      "end": 2363,
                       "loc": {
                         "start": {
                           "line": 59,
@@ -943,8 +943,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2324,
-                        "end": 2339,
+                        "start": 2348,
+                        "end": 2363,
                         "loc": {
                           "start": {
                             "line": 59,
@@ -958,8 +958,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2324,
-                          "end": 2335,
+                          "start": 2348,
+                          "end": 2359,
                           "loc": {
                             "start": {
                               "line": 59,
@@ -972,8 +972,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2324,
-                            "end": 2328,
+                            "start": 2348,
+                            "end": 2352,
                             "loc": {
                               "start": {
                                 "line": 59,
@@ -988,8 +988,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2329,
-                            "end": 2335,
+                            "start": 2353,
+                            "end": 2359,
                             "loc": {
                               "start": {
                                 "line": 59,
@@ -1008,8 +1008,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 2338,
-                          "end": 2339,
+                          "start": 2362,
+                          "end": 2363,
                           "loc": {
                             "start": {
                               "line": 59,
@@ -1035,8 +1035,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Simulating Wheel Size",
-                          "start": 2127,
-                          "end": 2151,
+                          "start": 2147,
+                          "end": 2171,
                           "loc": {
                             "start": {
                               "line": 52,
@@ -1050,9 +1050,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The radius of the wheel.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387991-radius\n     ",
-                          "start": 2157,
-                          "end": 2319,
+                          "value": "*\n     * The radius of the wheel.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387991-radius\n     ",
+                          "start": 2177,
+                          "end": 2343,
                           "loc": {
                             "start": {
                               "line": 54,
@@ -1069,8 +1069,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Simulating Traction",
-                          "start": 2346,
-                          "end": 2368,
+                          "start": 2370,
+                          "end": 2392,
                           "loc": {
                             "start": {
                               "line": 62,
@@ -1084,9 +1084,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The traction between the wheel and any surface in contact with it.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387904-frictionslip\n     ",
-                          "start": 2374,
-                          "end": 2584,
+                          "value": "*\n     * The traction between the wheel and any surface in contact with it.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387904-frictionslip\n     ",
+                          "start": 2398,
+                          "end": 2612,
                           "loc": {
                             "start": {
                               "line": 64,
@@ -1102,8 +1102,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2589,
-                      "end": 2610,
+                      "start": 2617,
+                      "end": 2638,
                       "loc": {
                         "start": {
                           "line": 69,
@@ -1116,8 +1116,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2589,
-                        "end": 2610,
+                        "start": 2617,
+                        "end": 2638,
                         "loc": {
                           "start": {
                             "line": 69,
@@ -1131,8 +1131,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2589,
-                          "end": 2606,
+                          "start": 2617,
+                          "end": 2634,
                           "loc": {
                             "start": {
                               "line": 69,
@@ -1145,8 +1145,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2589,
-                            "end": 2593,
+                            "start": 2617,
+                            "end": 2621,
                             "loc": {
                               "start": {
                                 "line": 69,
@@ -1161,8 +1161,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2594,
-                            "end": 2606,
+                            "start": 2622,
+                            "end": 2634,
                             "loc": {
                               "start": {
                                 "line": 69,
@@ -1181,8 +1181,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 2609,
-                          "end": 2610,
+                          "start": 2637,
+                          "end": 2638,
                           "loc": {
                             "start": {
                               "line": 69,
@@ -1208,8 +1208,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Simulating Traction",
-                          "start": 2346,
-                          "end": 2368,
+                          "start": 2370,
+                          "end": 2392,
                           "loc": {
                             "start": {
                               "line": 62,
@@ -1223,9 +1223,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The traction between the wheel and any surface in contact with it.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387904-frictionslip\n     ",
-                          "start": 2374,
-                          "end": 2584,
+                          "value": "*\n     * The traction between the wheel and any surface in contact with it.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387904-frictionslip\n     ",
+                          "start": 2398,
+                          "end": 2612,
                           "loc": {
                             "start": {
                               "line": 64,
@@ -1242,8 +1242,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Simulating Suspension",
-                          "start": 2617,
-                          "end": 2641,
+                          "start": 2645,
+                          "end": 2669,
                           "loc": {
                             "start": {
                               "line": 72,
@@ -1257,9 +1257,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The spring coefficient of the suspension between the vehicle and the wheel.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387983-suspensionstiffness\n     ",
-                          "start": 2647,
-                          "end": 2873,
+                          "value": "*\n     * The spring coefficient of the suspension between the vehicle and the wheel.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387983-suspensionstiffness\n     ",
+                          "start": 2675,
+                          "end": 2905,
                           "loc": {
                             "start": {
                               "line": 74,
@@ -1275,8 +1275,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2878,
-                      "end": 2906,
+                      "start": 2910,
+                      "end": 2938,
                       "loc": {
                         "start": {
                           "line": 79,
@@ -1289,8 +1289,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2878,
-                        "end": 2906,
+                        "start": 2910,
+                        "end": 2938,
                         "loc": {
                           "start": {
                             "line": 79,
@@ -1304,8 +1304,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2878,
-                          "end": 2902,
+                          "start": 2910,
+                          "end": 2934,
                           "loc": {
                             "start": {
                               "line": 79,
@@ -1318,8 +1318,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2878,
-                            "end": 2882,
+                            "start": 2910,
+                            "end": 2914,
                             "loc": {
                               "start": {
                                 "line": 79,
@@ -1334,8 +1334,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2883,
-                            "end": 2902,
+                            "start": 2915,
+                            "end": 2934,
                             "loc": {
                               "start": {
                                 "line": 79,
@@ -1354,8 +1354,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 2905,
-                          "end": 2906,
+                          "start": 2937,
+                          "end": 2938,
                           "loc": {
                             "start": {
                               "line": 79,
@@ -1381,8 +1381,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Simulating Suspension",
-                          "start": 2617,
-                          "end": 2641,
+                          "start": 2645,
+                          "end": 2669,
                           "loc": {
                             "start": {
                               "line": 72,
@@ -1396,9 +1396,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The spring coefficient of the suspension between the vehicle and the wheel.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387983-suspensionstiffness\n     ",
-                          "start": 2647,
-                          "end": 2873,
+                          "value": "*\n     * The spring coefficient of the suspension between the vehicle and the wheel.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387983-suspensionstiffness\n     ",
+                          "start": 2675,
+                          "end": 2905,
                           "loc": {
                             "start": {
                               "line": 74,
@@ -1414,9 +1414,9 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The coefficient that limits the speed of the suspension returning to its rest length when compressed.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387971-suspensioncompression\n     ",
-                          "start": 2912,
-                          "end": 3166,
+                          "value": "*\n     * The coefficient that limits the speed of the suspension returning to its rest length when compressed.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387971-suspensioncompression\n     ",
+                          "start": 2944,
+                          "end": 3202,
                           "loc": {
                             "start": {
                               "line": 81,
@@ -1432,8 +1432,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 3171,
-                      "end": 3201,
+                      "start": 3207,
+                      "end": 3237,
                       "loc": {
                         "start": {
                           "line": 86,
@@ -1446,8 +1446,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 3171,
-                        "end": 3201,
+                        "start": 3207,
+                        "end": 3237,
                         "loc": {
                           "start": {
                             "line": 86,
@@ -1461,8 +1461,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 3171,
-                          "end": 3197,
+                          "start": 3207,
+                          "end": 3233,
                           "loc": {
                             "start": {
                               "line": 86,
@@ -1475,8 +1475,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 3171,
-                            "end": 3175,
+                            "start": 3207,
+                            "end": 3211,
                             "loc": {
                               "start": {
                                 "line": 86,
@@ -1491,8 +1491,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 3176,
-                            "end": 3197,
+                            "start": 3212,
+                            "end": 3233,
                             "loc": {
                               "start": {
                                 "line": 86,
@@ -1511,8 +1511,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 3200,
-                          "end": 3201,
+                          "start": 3236,
+                          "end": 3237,
                           "loc": {
                             "start": {
                               "line": 86,
@@ -1537,9 +1537,9 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The coefficient that limits the speed of the suspension returning to its rest length when compressed.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387971-suspensioncompression\n     ",
-                          "start": 2912,
-                          "end": 3166,
+                          "value": "*\n     * The coefficient that limits the speed of the suspension returning to its rest length when compressed.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387971-suspensioncompression\n     ",
+                          "start": 2944,
+                          "end": 3202,
                           "loc": {
                             "start": {
                               "line": 81,
@@ -1555,9 +1555,9 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The damping ratio that limits oscillation in the vehicle’s suspension.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387886-suspensiondamping\n     ",
-                          "start": 3207,
-                          "end": 3426,
+                          "value": "*\n     * The damping ratio that limits oscillation in the vehicle’s suspension.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387886-suspensiondamping\n     ",
+                          "start": 3243,
+                          "end": 3466,
                           "loc": {
                             "start": {
                               "line": 88,
@@ -1573,8 +1573,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 3431,
-                      "end": 3457,
+                      "start": 3471,
+                      "end": 3497,
                       "loc": {
                         "start": {
                           "line": 93,
@@ -1587,8 +1587,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 3431,
-                        "end": 3457,
+                        "start": 3471,
+                        "end": 3497,
                         "loc": {
                           "start": {
                             "line": 93,
@@ -1602,8 +1602,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 3431,
-                          "end": 3453,
+                          "start": 3471,
+                          "end": 3493,
                           "loc": {
                             "start": {
                               "line": 93,
@@ -1616,8 +1616,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 3431,
-                            "end": 3435,
+                            "start": 3471,
+                            "end": 3475,
                             "loc": {
                               "start": {
                                 "line": 93,
@@ -1632,8 +1632,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 3436,
-                            "end": 3453,
+                            "start": 3476,
+                            "end": 3493,
                             "loc": {
                               "start": {
                                 "line": 93,
@@ -1652,8 +1652,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 3456,
-                          "end": 3457,
+                          "start": 3496,
+                          "end": 3497,
                           "loc": {
                             "start": {
                               "line": 93,
@@ -1678,9 +1678,9 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The damping ratio that limits oscillation in the vehicle’s suspension.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387886-suspensiondamping\n     ",
-                          "start": 3207,
-                          "end": 3426,
+                          "value": "*\n     * The damping ratio that limits oscillation in the vehicle’s suspension.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387886-suspensiondamping\n     ",
+                          "start": 3243,
+                          "end": 3466,
                           "loc": {
                             "start": {
                               "line": 88,
@@ -1696,9 +1696,9 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The maximum distance that the wheel is allowed to move up or down relative to its connection point, in centimeters.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387928-maximumsuspensiontravel\n     ",
-                          "start": 3463,
-                          "end": 3733,
+                          "value": "*\n     * The maximum distance that the wheel is allowed to move up or down relative to its connection point, in centimeters.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387928-maximumsuspensiontravel\n     ",
+                          "start": 3503,
+                          "end": 3777,
                           "loc": {
                             "start": {
                               "line": 95,
@@ -1714,8 +1714,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 3738,
-                      "end": 3770,
+                      "start": 3782,
+                      "end": 3814,
                       "loc": {
                         "start": {
                           "line": 100,
@@ -1728,8 +1728,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 3738,
-                        "end": 3770,
+                        "start": 3782,
+                        "end": 3814,
                         "loc": {
                           "start": {
                             "line": 100,
@@ -1743,8 +1743,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 3738,
-                          "end": 3766,
+                          "start": 3782,
+                          "end": 3810,
                           "loc": {
                             "start": {
                               "line": 100,
@@ -1757,8 +1757,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 3738,
-                            "end": 3742,
+                            "start": 3782,
+                            "end": 3786,
                             "loc": {
                               "start": {
                                 "line": 100,
@@ -1773,8 +1773,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 3743,
-                            "end": 3766,
+                            "start": 3787,
+                            "end": 3810,
                             "loc": {
                               "start": {
                                 "line": 100,
@@ -1793,8 +1793,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 3769,
-                          "end": 3770,
+                          "start": 3813,
+                          "end": 3814,
                           "loc": {
                             "start": {
                               "line": 100,
@@ -1819,9 +1819,9 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The maximum distance that the wheel is allowed to move up or down relative to its connection point, in centimeters.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387928-maximumsuspensiontravel\n     ",
-                          "start": 3463,
-                          "end": 3733,
+                          "value": "*\n     * The maximum distance that the wheel is allowed to move up or down relative to its connection point, in centimeters.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387928-maximumsuspensiontravel\n     ",
+                          "start": 3503,
+                          "end": 3777,
                           "loc": {
                             "start": {
                               "line": 95,
@@ -1837,9 +1837,9 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The maximum force of the suspension between the vehicle and the wheel, in newtons.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387934-maximumsuspensionforce\n     ",
-                          "start": 3776,
-                          "end": 4012,
+                          "value": "*\n     * The maximum force of the suspension between the vehicle and the wheel, in newtons.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387934-maximumsuspensionforce\n     ",
+                          "start": 3820,
+                          "end": 4060,
                           "loc": {
                             "start": {
                               "line": 102,
@@ -1855,8 +1855,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 4017,
-                      "end": 4048,
+                      "start": 4065,
+                      "end": 4096,
                       "loc": {
                         "start": {
                           "line": 107,
@@ -1869,8 +1869,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 4017,
-                        "end": 4048,
+                        "start": 4065,
+                        "end": 4096,
                         "loc": {
                           "start": {
                             "line": 107,
@@ -1884,8 +1884,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 4017,
-                          "end": 4044,
+                          "start": 4065,
+                          "end": 4092,
                           "loc": {
                             "start": {
                               "line": 107,
@@ -1898,8 +1898,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 4017,
-                            "end": 4021,
+                            "start": 4065,
+                            "end": 4069,
                             "loc": {
                               "start": {
                                 "line": 107,
@@ -1914,8 +1914,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 4022,
-                            "end": 4044,
+                            "start": 4070,
+                            "end": 4092,
                             "loc": {
                               "start": {
                                 "line": 107,
@@ -1934,8 +1934,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 4047,
-                          "end": 4048,
+                          "start": 4095,
+                          "end": 4096,
                           "loc": {
                             "start": {
                               "line": 107,
@@ -1960,9 +1960,9 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The maximum force of the suspension between the vehicle and the wheel, in newtons.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387934-maximumsuspensionforce\n     ",
-                          "start": 3776,
-                          "end": 4012,
+                          "value": "*\n     * The maximum force of the suspension between the vehicle and the wheel, in newtons.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387934-maximumsuspensionforce\n     ",
+                          "start": 3820,
+                          "end": 4060,
                           "loc": {
                             "start": {
                               "line": 102,
@@ -1978,9 +1978,9 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The resting length of the suspension, in meters.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387880-suspensionrestlength\n     ",
-                          "start": 4054,
-                          "end": 4254,
+                          "value": "*\n     * The resting length of the suspension, in meters.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387880-suspensionrestlength\n     ",
+                          "start": 4102,
+                          "end": 4306,
                           "loc": {
                             "start": {
                               "line": 109,
@@ -1996,8 +1996,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 4259,
-                      "end": 4288,
+                      "start": 4311,
+                      "end": 4340,
                       "loc": {
                         "start": {
                           "line": 114,
@@ -2010,8 +2010,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 4259,
-                        "end": 4288,
+                        "start": 4311,
+                        "end": 4340,
                         "loc": {
                           "start": {
                             "line": 114,
@@ -2025,8 +2025,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 4259,
-                          "end": 4284,
+                          "start": 4311,
+                          "end": 4336,
                           "loc": {
                             "start": {
                               "line": 114,
@@ -2039,8 +2039,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 4259,
-                            "end": 4263,
+                            "start": 4311,
+                            "end": 4315,
                             "loc": {
                               "start": {
                                 "line": 114,
@@ -2055,8 +2055,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 4264,
-                            "end": 4284,
+                            "start": 4316,
+                            "end": 4336,
                             "loc": {
                               "start": {
                                 "line": 114,
@@ -2075,8 +2075,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 4287,
-                          "end": 4288,
+                          "start": 4339,
+                          "end": 4340,
                           "loc": {
                             "start": {
                               "line": 114,
@@ -2101,9 +2101,9 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The resting length of the suspension, in meters.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387880-suspensionrestlength\n     ",
-                          "start": 4054,
-                          "end": 4254,
+                          "value": "*\n     * The resting length of the suspension, in meters.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387880-suspensionrestlength\n     ",
+                          "start": 4102,
+                          "end": 4306,
                           "loc": {
                             "start": {
                               "line": 109,
@@ -2120,8 +2120,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Inspecting the Wheel Node",
-                          "start": 4295,
-                          "end": 4323,
+                          "start": 4347,
+                          "end": 4375,
                           "loc": {
                             "start": {
                               "line": 117,
@@ -2137,8 +2137,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 4329,
-                      "end": 4346,
+                      "start": 4381,
+                      "end": 4398,
                       "loc": {
                         "start": {
                           "line": 119,
@@ -2151,8 +2151,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 4329,
-                        "end": 4346,
+                        "start": 4381,
+                        "end": 4398,
                         "loc": {
                           "start": {
                             "line": 119,
@@ -2166,8 +2166,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 4329,
-                          "end": 4339,
+                          "start": 4381,
+                          "end": 4391,
                           "loc": {
                             "start": {
                               "line": 119,
@@ -2180,8 +2180,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 4329,
-                            "end": 4333,
+                            "start": 4381,
+                            "end": 4385,
                             "loc": {
                               "start": {
                                 "line": 119,
@@ -2196,8 +2196,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 4334,
-                            "end": 4339,
+                            "start": 4386,
+                            "end": 4391,
                             "loc": {
                               "start": {
                                 "line": 119,
@@ -2216,8 +2216,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 4342,
-                          "end": 4346,
+                          "start": 4394,
+                          "end": 4398,
                           "loc": {
                             "start": {
                               "line": 119,
@@ -2235,8 +2235,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Inspecting the Wheel Node",
-                          "start": 4295,
-                          "end": 4323,
+                          "start": 4347,
+                          "end": 4375,
                           "loc": {
                             "start": {
                               "line": 117,
@@ -2258,8 +2258,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Creating a Wheel",
-                    "start": 439,
-                    "end": 458,
+                    "start": 443,
+                    "end": 462,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -2273,9 +2273,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Creates a wheel object.\n   * @access public\n   * @constructor\n   * @param {SCNNode} node - The node whose contents provide the wheel’s visual representation.\n   * @desc The node representing a wheel must be a child of the node whose physics body serves as the chassis of the SCNPhysicsVehicle behavior the wheel is attached to. Each wheel object must reference a unique node. To use the wheel, add it to the vehicle behavior using the addWheel: method.SceneKit uses the node’s bounding box to determine the wheel’s initial size, and it uses the node’s position to determine the where the wheel connects to the vehicle’s chassis. You can change attributes using the radius and connectionPosition properties.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387989-init\n   ",
-                    "start": 462,
-                    "end": 1276,
+                    "value": "*\n   * Creates a wheel object.\n   * @access public\n   * @constructor\n   * @param {SCNNode} node - The node whose contents provide the wheel’s visual representation.\n   * @desc The node representing a wheel must be a child of the node whose physics body serves as the chassis of the SCNPhysicsVehicle behavior the wheel is attached to. Each wheel object must reference a unique node. To use the wheel, add it to the vehicle behavior using the addWheel: method.SceneKit uses the node’s bounding box to determine the wheel’s initial size, and it uses the node’s position to determine the where the wheel connects to the vehicle’s chassis. You can change attributes using the radius and connectionPosition properties.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387989-init\n   ",
+                    "start": 466,
+                    "end": 1284,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -2292,8 +2292,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Inspecting the Wheel Node",
-                    "start": 4354,
-                    "end": 4382,
+                    "start": 4406,
+                    "end": 4434,
                     "loc": {
                       "start": {
                         "line": 122,
@@ -2307,9 +2307,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The node providing the wheel’s visual representation.\n   * @type {SCNNode}\n   * @desc SceneKit automatically rotates and repositions this node in response to the physics simulation.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387892-node\n   ",
-                    "start": 4386,
-                    "end": 4675,
+                    "value": "*\n   * The node providing the wheel’s visual representation.\n   * @type {SCNNode}\n   * @desc SceneKit automatically rotates and repositions this node in response to the physics simulation.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387892-node\n   ",
+                    "start": 4438,
+                    "end": 4731,
                     "loc": {
                       "start": {
                         "line": 124,
@@ -2325,8 +2325,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 4678,
-                "end": 4716,
+                "start": 4734,
+                "end": 4772,
                 "loc": {
                   "start": {
                     "line": 130,
@@ -2340,8 +2340,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 4682,
-                  "end": 4686,
+                  "start": 4738,
+                  "end": 4742,
                   "loc": {
                     "start": {
                       "line": 130,
@@ -2364,8 +2364,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 4689,
-                  "end": 4716,
+                  "start": 4745,
+                  "end": 4772,
                   "loc": {
                     "start": {
                       "line": 130,
@@ -2379,8 +2379,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 4695,
-                      "end": 4712,
+                      "start": 4751,
+                      "end": 4768,
                       "loc": {
                         "start": {
                           "line": 131,
@@ -2393,8 +2393,8 @@
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 4702,
-                        "end": 4712,
+                        "start": 4758,
+                        "end": 4768,
                         "loc": {
                           "start": {
                             "line": 131,
@@ -2407,8 +2407,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 4702,
-                          "end": 4706,
+                          "start": 4758,
+                          "end": 4762,
                           "loc": {
                             "start": {
                               "line": 131,
@@ -2422,8 +2422,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 4707,
-                          "end": 4712,
+                          "start": 4763,
+                          "end": 4768,
                           "loc": {
                             "start": {
                               "line": 131,
@@ -2447,8 +2447,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Inspecting the Wheel Node",
-                    "start": 4354,
-                    "end": 4382,
+                    "start": 4406,
+                    "end": 4434,
                     "loc": {
                       "start": {
                         "line": 122,
@@ -2462,9 +2462,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The node providing the wheel’s visual representation.\n   * @type {SCNNode}\n   * @desc SceneKit automatically rotates and repositions this node in response to the physics simulation.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387892-node\n   ",
-                    "start": 4386,
-                    "end": 4675,
+                    "value": "*\n   * The node providing the wheel’s visual representation.\n   * @type {SCNNode}\n   * @desc SceneKit automatically rotates and repositions this node in response to the physics simulation.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387892-node\n   ",
+                    "start": 4438,
+                    "end": 4731,
                     "loc": {
                       "start": {
                         "line": 124,
@@ -2483,9 +2483,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * The appearance and physical characteristics of an individual wheel associated with an physics vehicle behavior.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel\n ",
+              "value": "*\n * The appearance and physical characteristics of an individual wheel associated with an physics vehicle behavior.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel\n ",
               "start": 132,
-              "end": 373,
+              "end": 377,
               "loc": {
                 "start": {
                   "line": 8,
@@ -2503,9 +2503,9 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * The appearance and physical characteristics of an individual wheel associated with an physics vehicle behavior.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel\n ",
+            "value": "*\n * The appearance and physical characteristics of an individual wheel associated with an physics vehicle behavior.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel\n ",
             "start": 132,
-            "end": 373,
+            "end": 377,
             "loc": {
               "start": {
                 "line": 8,
@@ -2561,9 +2561,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * The appearance and physical characteristics of an individual wheel associated with an physics vehicle behavior.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel\n ",
+      "value": "*\n * The appearance and physical characteristics of an individual wheel associated with an physics vehicle behavior.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel\n ",
       "start": 132,
-      "end": 373,
+      "end": 377,
       "loc": {
         "start": {
           "line": 8,
@@ -2578,8 +2578,8 @@
     {
       "type": "CommentLine",
       "value": " Creating a Wheel",
-      "start": 439,
-      "end": 458,
+      "start": 443,
+      "end": 462,
       "loc": {
         "start": {
           "line": 15,
@@ -2593,9 +2593,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Creates a wheel object.\n   * @access public\n   * @constructor\n   * @param {SCNNode} node - The node whose contents provide the wheel’s visual representation.\n   * @desc The node representing a wheel must be a child of the node whose physics body serves as the chassis of the SCNPhysicsVehicle behavior the wheel is attached to. Each wheel object must reference a unique node. To use the wheel, add it to the vehicle behavior using the addWheel: method.SceneKit uses the node’s bounding box to determine the wheel’s initial size, and it uses the node’s position to determine the where the wheel connects to the vehicle’s chassis. You can change attributes using the radius and connectionPosition properties.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387989-init\n   ",
-      "start": 462,
-      "end": 1276,
+      "value": "*\n   * Creates a wheel object.\n   * @access public\n   * @constructor\n   * @param {SCNNode} node - The node whose contents provide the wheel’s visual representation.\n   * @desc The node representing a wheel must be a child of the node whose physics body serves as the chassis of the SCNPhysicsVehicle behavior the wheel is attached to. Each wheel object must reference a unique node. To use the wheel, add it to the vehicle behavior using the addWheel: method.SceneKit uses the node’s bounding box to determine the wheel’s initial size, and it uses the node’s position to determine the where the wheel connects to the vehicle’s chassis. You can change attributes using the radius and connectionPosition properties.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387989-init\n   ",
+      "start": 466,
+      "end": 1284,
       "loc": {
         "start": {
           "line": 17,
@@ -2610,8 +2610,8 @@
     {
       "type": "CommentLine",
       "value": " Managing a Wheel’s Connection to a Vehicle",
-      "start": 1316,
-      "end": 1361,
+      "start": 1324,
+      "end": 1369,
       "loc": {
         "start": {
           "line": 28,
@@ -2625,9 +2625,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The position of the wheel’s connection to the vehicle’s chassis.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387959-connectionposition\n     ",
-      "start": 1367,
-      "end": 1585,
+      "value": "*\n     * The position of the wheel’s connection to the vehicle’s chassis.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387959-connectionposition\n     ",
+      "start": 1375,
+      "end": 1597,
       "loc": {
         "start": {
           "line": 30,
@@ -2641,9 +2641,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The direction of the axis that the wheel spins around to move the vehicle.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387969-axle\n     ",
-      "start": 1626,
-      "end": 1840,
+      "value": "*\n     * The direction of the axis that the wheel spins around to move the vehicle.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387969-axle\n     ",
+      "start": 1638,
+      "end": 1856,
       "loc": {
         "start": {
           "line": 37,
@@ -2657,9 +2657,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The direction of the axis that the wheel pivots around to steer the vehicle.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387882-steeringaxis\n     ",
-      "start": 1867,
-      "end": 2091,
+      "value": "*\n     * The direction of the axis that the wheel pivots around to steer the vehicle.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387882-steeringaxis\n     ",
+      "start": 1883,
+      "end": 2111,
       "loc": {
         "start": {
           "line": 44,
@@ -2674,8 +2674,8 @@
     {
       "type": "CommentLine",
       "value": " Simulating Wheel Size",
-      "start": 2127,
-      "end": 2151,
+      "start": 2147,
+      "end": 2171,
       "loc": {
         "start": {
           "line": 52,
@@ -2689,9 +2689,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The radius of the wheel.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387991-radius\n     ",
-      "start": 2157,
-      "end": 2319,
+      "value": "*\n     * The radius of the wheel.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387991-radius\n     ",
+      "start": 2177,
+      "end": 2343,
       "loc": {
         "start": {
           "line": 54,
@@ -2706,8 +2706,8 @@
     {
       "type": "CommentLine",
       "value": " Simulating Traction",
-      "start": 2346,
-      "end": 2368,
+      "start": 2370,
+      "end": 2392,
       "loc": {
         "start": {
           "line": 62,
@@ -2721,9 +2721,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The traction between the wheel and any surface in contact with it.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387904-frictionslip\n     ",
-      "start": 2374,
-      "end": 2584,
+      "value": "*\n     * The traction between the wheel and any surface in contact with it.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387904-frictionslip\n     ",
+      "start": 2398,
+      "end": 2612,
       "loc": {
         "start": {
           "line": 64,
@@ -2738,8 +2738,8 @@
     {
       "type": "CommentLine",
       "value": " Simulating Suspension",
-      "start": 2617,
-      "end": 2641,
+      "start": 2645,
+      "end": 2669,
       "loc": {
         "start": {
           "line": 72,
@@ -2753,9 +2753,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The spring coefficient of the suspension between the vehicle and the wheel.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387983-suspensionstiffness\n     ",
-      "start": 2647,
-      "end": 2873,
+      "value": "*\n     * The spring coefficient of the suspension between the vehicle and the wheel.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387983-suspensionstiffness\n     ",
+      "start": 2675,
+      "end": 2905,
       "loc": {
         "start": {
           "line": 74,
@@ -2769,9 +2769,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The coefficient that limits the speed of the suspension returning to its rest length when compressed.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387971-suspensioncompression\n     ",
-      "start": 2912,
-      "end": 3166,
+      "value": "*\n     * The coefficient that limits the speed of the suspension returning to its rest length when compressed.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387971-suspensioncompression\n     ",
+      "start": 2944,
+      "end": 3202,
       "loc": {
         "start": {
           "line": 81,
@@ -2785,9 +2785,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The damping ratio that limits oscillation in the vehicle’s suspension.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387886-suspensiondamping\n     ",
-      "start": 3207,
-      "end": 3426,
+      "value": "*\n     * The damping ratio that limits oscillation in the vehicle’s suspension.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387886-suspensiondamping\n     ",
+      "start": 3243,
+      "end": 3466,
       "loc": {
         "start": {
           "line": 88,
@@ -2801,9 +2801,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The maximum distance that the wheel is allowed to move up or down relative to its connection point, in centimeters.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387928-maximumsuspensiontravel\n     ",
-      "start": 3463,
-      "end": 3733,
+      "value": "*\n     * The maximum distance that the wheel is allowed to move up or down relative to its connection point, in centimeters.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387928-maximumsuspensiontravel\n     ",
+      "start": 3503,
+      "end": 3777,
       "loc": {
         "start": {
           "line": 95,
@@ -2817,9 +2817,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The maximum force of the suspension between the vehicle and the wheel, in newtons.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387934-maximumsuspensionforce\n     ",
-      "start": 3776,
-      "end": 4012,
+      "value": "*\n     * The maximum force of the suspension between the vehicle and the wheel, in newtons.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387934-maximumsuspensionforce\n     ",
+      "start": 3820,
+      "end": 4060,
       "loc": {
         "start": {
           "line": 102,
@@ -2833,9 +2833,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The resting length of the suspension, in meters.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387880-suspensionrestlength\n     ",
-      "start": 4054,
-      "end": 4254,
+      "value": "*\n     * The resting length of the suspension, in meters.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387880-suspensionrestlength\n     ",
+      "start": 4102,
+      "end": 4306,
       "loc": {
         "start": {
           "line": 109,
@@ -2850,8 +2850,8 @@
     {
       "type": "CommentLine",
       "value": " Inspecting the Wheel Node",
-      "start": 4295,
-      "end": 4323,
+      "start": 4347,
+      "end": 4375,
       "loc": {
         "start": {
           "line": 117,
@@ -2866,8 +2866,8 @@
     {
       "type": "CommentLine",
       "value": " Inspecting the Wheel Node",
-      "start": 4354,
-      "end": 4382,
+      "start": 4406,
+      "end": 4434,
       "loc": {
         "start": {
           "line": 122,
@@ -2881,9 +2881,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The node providing the wheel’s visual representation.\n   * @type {SCNNode}\n   * @desc SceneKit automatically rotates and repositions this node in response to the physics simulation.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387892-node\n   ",
-      "start": 4386,
-      "end": 4675,
+      "value": "*\n   * The node providing the wheel’s visual representation.\n   * @type {SCNNode}\n   * @desc SceneKit automatically rotates and repositions this node in response to the physics simulation.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387892-node\n   ",
+      "start": 4438,
+      "end": 4731,
       "loc": {
         "start": {
           "line": 124,
@@ -3247,9 +3247,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * The appearance and physical characteristics of an individual wheel associated with an physics vehicle behavior.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel\n ",
+      "value": "*\n * The appearance and physical characteristics of an individual wheel associated with an physics vehicle behavior.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel\n ",
       "start": 132,
-      "end": 373,
+      "end": 377,
       "loc": {
         "start": {
           "line": 8,
@@ -3276,8 +3276,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 374,
-      "end": 380,
+      "start": 378,
+      "end": 384,
       "loc": {
         "start": {
           "line": 14,
@@ -3304,8 +3304,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 381,
-      "end": 388,
+      "start": 385,
+      "end": 392,
       "loc": {
         "start": {
           "line": 14,
@@ -3332,8 +3332,8 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 389,
-      "end": 394,
+      "start": 393,
+      "end": 398,
       "loc": {
         "start": {
           "line": 14,
@@ -3358,8 +3358,8 @@
         "binop": null
       },
       "value": "SCNPhysicsVehicleWheel",
-      "start": 395,
-      "end": 417,
+      "start": 399,
+      "end": 421,
       "loc": {
         "start": {
           "line": 14,
@@ -3386,8 +3386,8 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 418,
-      "end": 425,
+      "start": 422,
+      "end": 429,
       "loc": {
         "start": {
           "line": 14,
@@ -3412,8 +3412,8 @@
         "binop": null
       },
       "value": "NSObject",
-      "start": 426,
-      "end": 434,
+      "start": 430,
+      "end": 438,
       "loc": {
         "start": {
           "line": 14,
@@ -3437,8 +3437,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 435,
-      "end": 436,
+      "start": 439,
+      "end": 440,
       "loc": {
         "start": {
           "line": 14,
@@ -3453,8 +3453,8 @@
     {
       "type": "CommentLine",
       "value": " Creating a Wheel",
-      "start": 439,
-      "end": 458,
+      "start": 443,
+      "end": 462,
       "loc": {
         "start": {
           "line": 15,
@@ -3468,9 +3468,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Creates a wheel object.\n   * @access public\n   * @constructor\n   * @param {SCNNode} node - The node whose contents provide the wheel’s visual representation.\n   * @desc The node representing a wheel must be a child of the node whose physics body serves as the chassis of the SCNPhysicsVehicle behavior the wheel is attached to. Each wheel object must reference a unique node. To use the wheel, add it to the vehicle behavior using the addWheel: method.SceneKit uses the node’s bounding box to determine the wheel’s initial size, and it uses the node’s position to determine the where the wheel connects to the vehicle’s chassis. You can change attributes using the radius and connectionPosition properties.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387989-init\n   ",
-      "start": 462,
-      "end": 1276,
+      "value": "*\n   * Creates a wheel object.\n   * @access public\n   * @constructor\n   * @param {SCNNode} node - The node whose contents provide the wheel’s visual representation.\n   * @desc The node representing a wheel must be a child of the node whose physics body serves as the chassis of the SCNPhysicsVehicle behavior the wheel is attached to. Each wheel object must reference a unique node. To use the wheel, add it to the vehicle behavior using the addWheel: method.SceneKit uses the node’s bounding box to determine the wheel’s initial size, and it uses the node’s position to determine the where the wheel connects to the vehicle’s chassis. You can change attributes using the radius and connectionPosition properties.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387989-init\n   ",
+      "start": 466,
+      "end": 1284,
       "loc": {
         "start": {
           "line": 17,
@@ -3495,8 +3495,8 @@
         "binop": null
       },
       "value": "constructor",
-      "start": 1279,
-      "end": 1290,
+      "start": 1287,
+      "end": 1298,
       "loc": {
         "start": {
           "line": 25,
@@ -3520,8 +3520,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1290,
-      "end": 1291,
+      "start": 1298,
+      "end": 1299,
       "loc": {
         "start": {
           "line": 25,
@@ -3546,8 +3546,8 @@
         "binop": null
       },
       "value": "node",
-      "start": 1291,
-      "end": 1295,
+      "start": 1299,
+      "end": 1303,
       "loc": {
         "start": {
           "line": 25,
@@ -3571,8 +3571,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1295,
-      "end": 1296,
+      "start": 1303,
+      "end": 1304,
       "loc": {
         "start": {
           "line": 25,
@@ -3596,8 +3596,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1297,
-      "end": 1298,
+      "start": 1305,
+      "end": 1306,
       "loc": {
         "start": {
           "line": 25,
@@ -3624,8 +3624,8 @@
         "updateContext": null
       },
       "value": "super",
-      "start": 1303,
-      "end": 1308,
+      "start": 1311,
+      "end": 1316,
       "loc": {
         "start": {
           "line": 26,
@@ -3649,8 +3649,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1308,
-      "end": 1309,
+      "start": 1316,
+      "end": 1317,
       "loc": {
         "start": {
           "line": 26,
@@ -3674,8 +3674,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1309,
-      "end": 1310,
+      "start": 1317,
+      "end": 1318,
       "loc": {
         "start": {
           "line": 26,
@@ -3690,8 +3690,8 @@
     {
       "type": "CommentLine",
       "value": " Managing a Wheel’s Connection to a Vehicle",
-      "start": 1316,
-      "end": 1361,
+      "start": 1324,
+      "end": 1369,
       "loc": {
         "start": {
           "line": 28,
@@ -3705,9 +3705,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The position of the wheel’s connection to the vehicle’s chassis.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387959-connectionposition\n     ",
-      "start": 1367,
-      "end": 1585,
+      "value": "*\n     * The position of the wheel’s connection to the vehicle’s chassis.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387959-connectionposition\n     ",
+      "start": 1375,
+      "end": 1597,
       "loc": {
         "start": {
           "line": 30,
@@ -3734,8 +3734,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1590,
-      "end": 1594,
+      "start": 1602,
+      "end": 1606,
       "loc": {
         "start": {
           "line": 35,
@@ -3760,8 +3760,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1594,
-      "end": 1595,
+      "start": 1606,
+      "end": 1607,
       "loc": {
         "start": {
           "line": 35,
@@ -3786,8 +3786,8 @@
         "binop": null
       },
       "value": "connectionPosition",
-      "start": 1595,
-      "end": 1613,
+      "start": 1607,
+      "end": 1625,
       "loc": {
         "start": {
           "line": 35,
@@ -3813,8 +3813,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1614,
-      "end": 1615,
+      "start": 1626,
+      "end": 1627,
       "loc": {
         "start": {
           "line": 35,
@@ -3841,8 +3841,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 1616,
-      "end": 1620,
+      "start": 1628,
+      "end": 1632,
       "loc": {
         "start": {
           "line": 35,
@@ -3856,9 +3856,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The direction of the axis that the wheel spins around to move the vehicle.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387969-axle\n     ",
-      "start": 1626,
-      "end": 1840,
+      "value": "*\n     * The direction of the axis that the wheel spins around to move the vehicle.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387969-axle\n     ",
+      "start": 1638,
+      "end": 1856,
       "loc": {
         "start": {
           "line": 37,
@@ -3885,8 +3885,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1845,
-      "end": 1849,
+      "start": 1861,
+      "end": 1865,
       "loc": {
         "start": {
           "line": 42,
@@ -3911,8 +3911,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1849,
-      "end": 1850,
+      "start": 1865,
+      "end": 1866,
       "loc": {
         "start": {
           "line": 42,
@@ -3937,8 +3937,8 @@
         "binop": null
       },
       "value": "axle",
-      "start": 1850,
-      "end": 1854,
+      "start": 1866,
+      "end": 1870,
       "loc": {
         "start": {
           "line": 42,
@@ -3964,8 +3964,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1855,
-      "end": 1856,
+      "start": 1871,
+      "end": 1872,
       "loc": {
         "start": {
           "line": 42,
@@ -3992,8 +3992,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 1857,
-      "end": 1861,
+      "start": 1873,
+      "end": 1877,
       "loc": {
         "start": {
           "line": 42,
@@ -4007,9 +4007,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The direction of the axis that the wheel pivots around to steer the vehicle.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387882-steeringaxis\n     ",
-      "start": 1867,
-      "end": 2091,
+      "value": "*\n     * The direction of the axis that the wheel pivots around to steer the vehicle.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387882-steeringaxis\n     ",
+      "start": 1883,
+      "end": 2111,
       "loc": {
         "start": {
           "line": 44,
@@ -4036,8 +4036,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2096,
-      "end": 2100,
+      "start": 2116,
+      "end": 2120,
       "loc": {
         "start": {
           "line": 49,
@@ -4062,8 +4062,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2100,
-      "end": 2101,
+      "start": 2120,
+      "end": 2121,
       "loc": {
         "start": {
           "line": 49,
@@ -4088,8 +4088,8 @@
         "binop": null
       },
       "value": "steeringAxis",
-      "start": 2101,
-      "end": 2113,
+      "start": 2121,
+      "end": 2133,
       "loc": {
         "start": {
           "line": 49,
@@ -4115,8 +4115,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2114,
-      "end": 2115,
+      "start": 2134,
+      "end": 2135,
       "loc": {
         "start": {
           "line": 49,
@@ -4143,8 +4143,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2116,
-      "end": 2120,
+      "start": 2136,
+      "end": 2140,
       "loc": {
         "start": {
           "line": 49,
@@ -4159,8 +4159,8 @@
     {
       "type": "CommentLine",
       "value": " Simulating Wheel Size",
-      "start": 2127,
-      "end": 2151,
+      "start": 2147,
+      "end": 2171,
       "loc": {
         "start": {
           "line": 52,
@@ -4174,9 +4174,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The radius of the wheel.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387991-radius\n     ",
-      "start": 2157,
-      "end": 2319,
+      "value": "*\n     * The radius of the wheel.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387991-radius\n     ",
+      "start": 2177,
+      "end": 2343,
       "loc": {
         "start": {
           "line": 54,
@@ -4203,8 +4203,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2324,
-      "end": 2328,
+      "start": 2348,
+      "end": 2352,
       "loc": {
         "start": {
           "line": 59,
@@ -4229,8 +4229,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2328,
-      "end": 2329,
+      "start": 2352,
+      "end": 2353,
       "loc": {
         "start": {
           "line": 59,
@@ -4255,8 +4255,8 @@
         "binop": null
       },
       "value": "radius",
-      "start": 2329,
-      "end": 2335,
+      "start": 2353,
+      "end": 2359,
       "loc": {
         "start": {
           "line": 59,
@@ -4282,8 +4282,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2336,
-      "end": 2337,
+      "start": 2360,
+      "end": 2361,
       "loc": {
         "start": {
           "line": 59,
@@ -4309,8 +4309,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 2338,
-      "end": 2339,
+      "start": 2362,
+      "end": 2363,
       "loc": {
         "start": {
           "line": 59,
@@ -4325,8 +4325,8 @@
     {
       "type": "CommentLine",
       "value": " Simulating Traction",
-      "start": 2346,
-      "end": 2368,
+      "start": 2370,
+      "end": 2392,
       "loc": {
         "start": {
           "line": 62,
@@ -4340,9 +4340,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The traction between the wheel and any surface in contact with it.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387904-frictionslip\n     ",
-      "start": 2374,
-      "end": 2584,
+      "value": "*\n     * The traction between the wheel and any surface in contact with it.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387904-frictionslip\n     ",
+      "start": 2398,
+      "end": 2612,
       "loc": {
         "start": {
           "line": 64,
@@ -4369,8 +4369,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2589,
-      "end": 2593,
+      "start": 2617,
+      "end": 2621,
       "loc": {
         "start": {
           "line": 69,
@@ -4395,8 +4395,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2593,
-      "end": 2594,
+      "start": 2621,
+      "end": 2622,
       "loc": {
         "start": {
           "line": 69,
@@ -4421,8 +4421,8 @@
         "binop": null
       },
       "value": "frictionSlip",
-      "start": 2594,
-      "end": 2606,
+      "start": 2622,
+      "end": 2634,
       "loc": {
         "start": {
           "line": 69,
@@ -4448,8 +4448,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2607,
-      "end": 2608,
+      "start": 2635,
+      "end": 2636,
       "loc": {
         "start": {
           "line": 69,
@@ -4475,8 +4475,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 2609,
-      "end": 2610,
+      "start": 2637,
+      "end": 2638,
       "loc": {
         "start": {
           "line": 69,
@@ -4491,8 +4491,8 @@
     {
       "type": "CommentLine",
       "value": " Simulating Suspension",
-      "start": 2617,
-      "end": 2641,
+      "start": 2645,
+      "end": 2669,
       "loc": {
         "start": {
           "line": 72,
@@ -4506,9 +4506,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The spring coefficient of the suspension between the vehicle and the wheel.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387983-suspensionstiffness\n     ",
-      "start": 2647,
-      "end": 2873,
+      "value": "*\n     * The spring coefficient of the suspension between the vehicle and the wheel.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387983-suspensionstiffness\n     ",
+      "start": 2675,
+      "end": 2905,
       "loc": {
         "start": {
           "line": 74,
@@ -4535,8 +4535,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2878,
-      "end": 2882,
+      "start": 2910,
+      "end": 2914,
       "loc": {
         "start": {
           "line": 79,
@@ -4561,8 +4561,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2882,
-      "end": 2883,
+      "start": 2914,
+      "end": 2915,
       "loc": {
         "start": {
           "line": 79,
@@ -4587,8 +4587,8 @@
         "binop": null
       },
       "value": "suspensionStiffness",
-      "start": 2883,
-      "end": 2902,
+      "start": 2915,
+      "end": 2934,
       "loc": {
         "start": {
           "line": 79,
@@ -4614,8 +4614,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2903,
-      "end": 2904,
+      "start": 2935,
+      "end": 2936,
       "loc": {
         "start": {
           "line": 79,
@@ -4641,8 +4641,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 2905,
-      "end": 2906,
+      "start": 2937,
+      "end": 2938,
       "loc": {
         "start": {
           "line": 79,
@@ -4656,9 +4656,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The coefficient that limits the speed of the suspension returning to its rest length when compressed.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387971-suspensioncompression\n     ",
-      "start": 2912,
-      "end": 3166,
+      "value": "*\n     * The coefficient that limits the speed of the suspension returning to its rest length when compressed.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387971-suspensioncompression\n     ",
+      "start": 2944,
+      "end": 3202,
       "loc": {
         "start": {
           "line": 81,
@@ -4685,8 +4685,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3171,
-      "end": 3175,
+      "start": 3207,
+      "end": 3211,
       "loc": {
         "start": {
           "line": 86,
@@ -4711,8 +4711,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3175,
-      "end": 3176,
+      "start": 3211,
+      "end": 3212,
       "loc": {
         "start": {
           "line": 86,
@@ -4737,8 +4737,8 @@
         "binop": null
       },
       "value": "suspensionCompression",
-      "start": 3176,
-      "end": 3197,
+      "start": 3212,
+      "end": 3233,
       "loc": {
         "start": {
           "line": 86,
@@ -4764,8 +4764,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 3198,
-      "end": 3199,
+      "start": 3234,
+      "end": 3235,
       "loc": {
         "start": {
           "line": 86,
@@ -4791,8 +4791,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 3200,
-      "end": 3201,
+      "start": 3236,
+      "end": 3237,
       "loc": {
         "start": {
           "line": 86,
@@ -4806,9 +4806,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The damping ratio that limits oscillation in the vehicle’s suspension.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387886-suspensiondamping\n     ",
-      "start": 3207,
-      "end": 3426,
+      "value": "*\n     * The damping ratio that limits oscillation in the vehicle’s suspension.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387886-suspensiondamping\n     ",
+      "start": 3243,
+      "end": 3466,
       "loc": {
         "start": {
           "line": 88,
@@ -4835,8 +4835,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3431,
-      "end": 3435,
+      "start": 3471,
+      "end": 3475,
       "loc": {
         "start": {
           "line": 93,
@@ -4861,8 +4861,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3435,
-      "end": 3436,
+      "start": 3475,
+      "end": 3476,
       "loc": {
         "start": {
           "line": 93,
@@ -4887,8 +4887,8 @@
         "binop": null
       },
       "value": "suspensionDamping",
-      "start": 3436,
-      "end": 3453,
+      "start": 3476,
+      "end": 3493,
       "loc": {
         "start": {
           "line": 93,
@@ -4914,8 +4914,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 3454,
-      "end": 3455,
+      "start": 3494,
+      "end": 3495,
       "loc": {
         "start": {
           "line": 93,
@@ -4941,8 +4941,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 3456,
-      "end": 3457,
+      "start": 3496,
+      "end": 3497,
       "loc": {
         "start": {
           "line": 93,
@@ -4956,9 +4956,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The maximum distance that the wheel is allowed to move up or down relative to its connection point, in centimeters.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387928-maximumsuspensiontravel\n     ",
-      "start": 3463,
-      "end": 3733,
+      "value": "*\n     * The maximum distance that the wheel is allowed to move up or down relative to its connection point, in centimeters.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387928-maximumsuspensiontravel\n     ",
+      "start": 3503,
+      "end": 3777,
       "loc": {
         "start": {
           "line": 95,
@@ -4985,8 +4985,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3738,
-      "end": 3742,
+      "start": 3782,
+      "end": 3786,
       "loc": {
         "start": {
           "line": 100,
@@ -5011,8 +5011,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3742,
-      "end": 3743,
+      "start": 3786,
+      "end": 3787,
       "loc": {
         "start": {
           "line": 100,
@@ -5037,8 +5037,8 @@
         "binop": null
       },
       "value": "maximumSuspensionTravel",
-      "start": 3743,
-      "end": 3766,
+      "start": 3787,
+      "end": 3810,
       "loc": {
         "start": {
           "line": 100,
@@ -5064,8 +5064,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 3767,
-      "end": 3768,
+      "start": 3811,
+      "end": 3812,
       "loc": {
         "start": {
           "line": 100,
@@ -5091,8 +5091,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 3769,
-      "end": 3770,
+      "start": 3813,
+      "end": 3814,
       "loc": {
         "start": {
           "line": 100,
@@ -5106,9 +5106,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The maximum force of the suspension between the vehicle and the wheel, in newtons.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387934-maximumsuspensionforce\n     ",
-      "start": 3776,
-      "end": 4012,
+      "value": "*\n     * The maximum force of the suspension between the vehicle and the wheel, in newtons.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387934-maximumsuspensionforce\n     ",
+      "start": 3820,
+      "end": 4060,
       "loc": {
         "start": {
           "line": 102,
@@ -5135,8 +5135,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 4017,
-      "end": 4021,
+      "start": 4065,
+      "end": 4069,
       "loc": {
         "start": {
           "line": 107,
@@ -5161,8 +5161,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4021,
-      "end": 4022,
+      "start": 4069,
+      "end": 4070,
       "loc": {
         "start": {
           "line": 107,
@@ -5187,8 +5187,8 @@
         "binop": null
       },
       "value": "maximumSuspensionForce",
-      "start": 4022,
-      "end": 4044,
+      "start": 4070,
+      "end": 4092,
       "loc": {
         "start": {
           "line": 107,
@@ -5214,8 +5214,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 4045,
-      "end": 4046,
+      "start": 4093,
+      "end": 4094,
       "loc": {
         "start": {
           "line": 107,
@@ -5241,8 +5241,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 4047,
-      "end": 4048,
+      "start": 4095,
+      "end": 4096,
       "loc": {
         "start": {
           "line": 107,
@@ -5256,9 +5256,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The resting length of the suspension, in meters.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387880-suspensionrestlength\n     ",
-      "start": 4054,
-      "end": 4254,
+      "value": "*\n     * The resting length of the suspension, in meters.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387880-suspensionrestlength\n     ",
+      "start": 4102,
+      "end": 4306,
       "loc": {
         "start": {
           "line": 109,
@@ -5285,8 +5285,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 4259,
-      "end": 4263,
+      "start": 4311,
+      "end": 4315,
       "loc": {
         "start": {
           "line": 114,
@@ -5311,8 +5311,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4263,
-      "end": 4264,
+      "start": 4315,
+      "end": 4316,
       "loc": {
         "start": {
           "line": 114,
@@ -5337,8 +5337,8 @@
         "binop": null
       },
       "value": "suspensionRestLength",
-      "start": 4264,
-      "end": 4284,
+      "start": 4316,
+      "end": 4336,
       "loc": {
         "start": {
           "line": 114,
@@ -5364,8 +5364,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 4285,
-      "end": 4286,
+      "start": 4337,
+      "end": 4338,
       "loc": {
         "start": {
           "line": 114,
@@ -5391,8 +5391,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 4287,
-      "end": 4288,
+      "start": 4339,
+      "end": 4340,
       "loc": {
         "start": {
           "line": 114,
@@ -5407,8 +5407,8 @@
     {
       "type": "CommentLine",
       "value": " Inspecting the Wheel Node",
-      "start": 4295,
-      "end": 4323,
+      "start": 4347,
+      "end": 4375,
       "loc": {
         "start": {
           "line": 117,
@@ -5435,8 +5435,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 4329,
-      "end": 4333,
+      "start": 4381,
+      "end": 4385,
       "loc": {
         "start": {
           "line": 119,
@@ -5461,8 +5461,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4333,
-      "end": 4334,
+      "start": 4385,
+      "end": 4386,
       "loc": {
         "start": {
           "line": 119,
@@ -5487,8 +5487,8 @@
         "binop": null
       },
       "value": "_node",
-      "start": 4334,
-      "end": 4339,
+      "start": 4386,
+      "end": 4391,
       "loc": {
         "start": {
           "line": 119,
@@ -5514,8 +5514,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 4340,
-      "end": 4341,
+      "start": 4392,
+      "end": 4393,
       "loc": {
         "start": {
           "line": 119,
@@ -5542,8 +5542,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 4342,
-      "end": 4346,
+      "start": 4394,
+      "end": 4398,
       "loc": {
         "start": {
           "line": 119,
@@ -5567,8 +5567,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4349,
-      "end": 4350,
+      "start": 4401,
+      "end": 4402,
       "loc": {
         "start": {
           "line": 120,
@@ -5583,8 +5583,8 @@
     {
       "type": "CommentLine",
       "value": " Inspecting the Wheel Node",
-      "start": 4354,
-      "end": 4382,
+      "start": 4406,
+      "end": 4434,
       "loc": {
         "start": {
           "line": 122,
@@ -5598,9 +5598,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The node providing the wheel’s visual representation.\n   * @type {SCNNode}\n   * @desc SceneKit automatically rotates and repositions this node in response to the physics simulation.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicsvehiclewheel/1387892-node\n   ",
-      "start": 4386,
-      "end": 4675,
+      "value": "*\n   * The node providing the wheel’s visual representation.\n   * @type {SCNNode}\n   * @desc SceneKit automatically rotates and repositions this node in response to the physics simulation.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicsvehiclewheel/1387892-node\n   ",
+      "start": 4438,
+      "end": 4731,
       "loc": {
         "start": {
           "line": 124,
@@ -5625,8 +5625,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 4678,
-      "end": 4681,
+      "start": 4734,
+      "end": 4737,
       "loc": {
         "start": {
           "line": 130,
@@ -5651,8 +5651,8 @@
         "binop": null
       },
       "value": "node",
-      "start": 4682,
-      "end": 4686,
+      "start": 4738,
+      "end": 4742,
       "loc": {
         "start": {
           "line": 130,
@@ -5676,8 +5676,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4686,
-      "end": 4687,
+      "start": 4742,
+      "end": 4743,
       "loc": {
         "start": {
           "line": 130,
@@ -5701,8 +5701,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4687,
-      "end": 4688,
+      "start": 4743,
+      "end": 4744,
       "loc": {
         "start": {
           "line": 130,
@@ -5726,8 +5726,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4689,
-      "end": 4690,
+      "start": 4745,
+      "end": 4746,
       "loc": {
         "start": {
           "line": 130,
@@ -5754,8 +5754,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 4695,
-      "end": 4701,
+      "start": 4751,
+      "end": 4757,
       "loc": {
         "start": {
           "line": 131,
@@ -5782,8 +5782,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 4702,
-      "end": 4706,
+      "start": 4758,
+      "end": 4762,
       "loc": {
         "start": {
           "line": 131,
@@ -5808,8 +5808,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4706,
-      "end": 4707,
+      "start": 4762,
+      "end": 4763,
       "loc": {
         "start": {
           "line": 131,
@@ -5834,8 +5834,8 @@
         "binop": null
       },
       "value": "_node",
-      "start": 4707,
-      "end": 4712,
+      "start": 4763,
+      "end": 4768,
       "loc": {
         "start": {
           "line": 131,
@@ -5859,8 +5859,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4715,
-      "end": 4716,
+      "start": 4771,
+      "end": 4772,
       "loc": {
         "start": {
           "line": 132,
@@ -5884,8 +5884,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4717,
-      "end": 4718,
+      "start": 4773,
+      "end": 4774,
       "loc": {
         "start": {
           "line": 133,
@@ -5910,8 +5910,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4719,
-      "end": 4719,
+      "start": 4775,
+      "end": 4775,
       "loc": {
         "start": {
           "line": 134,

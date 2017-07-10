@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 3306,
+  "end": 3310,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 3306,
+    "end": 3310,
     "loc": {
       "start": {
         "line": 1,
@@ -30,8 +30,8 @@
     "body": [
       {
         "type": "Identifier",
-        "start": 3197,
-        "end": 3267,
+        "start": 3201,
+        "end": 3271,
         "loc": {
           "start": {
             "line": 38,
@@ -45,8 +45,8 @@
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 3203,
-            "end": 3267,
+            "start": 3207,
+            "end": 3271,
             "loc": {
               "start": {
                 "line": 38,
@@ -59,8 +59,8 @@
             },
             "id": {
               "type": "Identifier",
-              "start": 3203,
-              "end": 3224,
+              "start": 3207,
+              "end": 3228,
               "loc": {
                 "start": {
                   "line": 38,
@@ -77,8 +77,8 @@
             },
             "init": {
               "type": "ArrowFunctionExpression",
-              "start": 3227,
-              "end": 3267,
+              "start": 3231,
+              "end": 3271,
               "loc": {
                 "start": {
                   "line": 38,
@@ -96,8 +96,8 @@
               "params": [
                 {
                   "type": "Identifier",
-                  "start": 3228,
-                  "end": 3232,
+                  "start": 3232,
+                  "end": 3236,
                   "loc": {
                     "start": {
                       "line": 38,
@@ -113,8 +113,8 @@
                 },
                 {
                   "type": "Identifier",
-                  "start": 3234,
-                  "end": 3244,
+                  "start": 3238,
+                  "end": 3248,
                   "loc": {
                     "start": {
                       "line": 38,
@@ -130,8 +130,8 @@
                 },
                 {
                   "type": "Identifier",
-                  "start": 3246,
-                  "end": 3253,
+                  "start": 3250,
+                  "end": 3257,
                   "loc": {
                     "start": {
                       "line": 38,
@@ -147,8 +147,8 @@
                 },
                 {
                   "type": "Identifier",
-                  "start": 3255,
-                  "end": 3260,
+                  "start": 3259,
+                  "end": 3264,
                   "loc": {
                     "start": {
                       "line": 38,
@@ -165,8 +165,8 @@
               ],
               "body": {
                 "type": "BlockStatement",
-                "start": 3265,
-                "end": 3267,
+                "start": 3269,
+                "end": 3271,
                 "loc": {
                   "start": {
                     "line": 38,
@@ -191,8 +191,8 @@
       },
       {
         "type": "Identifier",
-        "start": 3269,
-        "end": 3305,
+        "start": 3273,
+        "end": 3309,
         "loc": {
           "start": {
             "line": 40,
@@ -205,8 +205,8 @@
         },
         "declaration": {
           "type": "Identifier",
-          "start": 3284,
-          "end": 3305,
+          "start": 3288,
+          "end": 3309,
           "loc": {
             "start": {
               "line": 40,
@@ -226,8 +226,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 3269,
-        "end": 3305,
+        "start": 3273,
+        "end": 3309,
         "loc": {
           "start": {
             "line": 40,
@@ -240,8 +240,8 @@
         },
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 3197,
-          "end": 3267,
+          "start": 3201,
+          "end": 3271,
           "loc": {
             "start": {
               "line": 38,
@@ -255,8 +255,8 @@
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 3203,
-              "end": 3267,
+              "start": 3207,
+              "end": 3271,
               "loc": {
                 "start": {
                   "line": 38,
@@ -269,8 +269,8 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 3203,
-                "end": 3224,
+                "start": 3207,
+                "end": 3228,
                 "loc": {
                   "start": {
                     "line": 38,
@@ -287,8 +287,8 @@
               },
               "init": {
                 "type": "ArrowFunctionExpression",
-                "start": 3227,
-                "end": 3267,
+                "start": 3231,
+                "end": 3271,
                 "loc": {
                   "start": {
                     "line": 38,
@@ -301,8 +301,8 @@
                 },
                 "id": {
                   "type": "Identifier",
-                  "start": 3203,
-                  "end": 3224,
+                  "start": 3207,
+                  "end": 3228,
                   "loc": {
                     "start": {
                       "line": 38,
@@ -323,8 +323,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 3228,
-                    "end": 3232,
+                    "start": 3232,
+                    "end": 3236,
                     "loc": {
                       "start": {
                         "line": 38,
@@ -340,8 +340,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 3234,
-                    "end": 3244,
+                    "start": 3238,
+                    "end": 3248,
                     "loc": {
                       "start": {
                         "line": 38,
@@ -357,8 +357,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 3246,
-                    "end": 3253,
+                    "start": 3250,
+                    "end": 3257,
                     "loc": {
                       "start": {
                         "line": 38,
@@ -374,8 +374,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 3255,
-                    "end": 3260,
+                    "start": 3259,
+                    "end": 3264,
                     "loc": {
                       "start": {
                         "line": 38,
@@ -392,8 +392,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 3265,
-                  "end": 3267,
+                  "start": 3269,
+                  "end": 3271,
                   "loc": {
                     "start": {
                       "line": 38,
@@ -415,9 +415,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * The signature for blocks called by SceneKit in response to significant events during particle simulation, used by the handle(_:forProperties:handler:) method.\n * @type {function(data: UnsafeMutablePointer<UnsafeMutableRawPointer>, dataStride: UnsafeMutablePointer<Int>, indices: ?UnsafeMutablePointer<UInt32>, count: number): void}\n * @param {UnsafeMutablePointer<UnsafeMutableRawPointer>} data - An array of floating-point values containing stripes of property data for the system’s particles. The width and format of each data stripe depend on the properties you specify when calling the handle(_:forProperties:handler:) method.\n * @param {UnsafeMutablePointer<Int>} dataStride - An array identifying the offset, in bytes, of each property’s value in the data stripe for each particle. The order of offsets in this array corresponds to the order of the properties array you specify when calling the handle(_:forProperties:handler:) method.\n * @param {?UnsafeMutablePointer<UInt32>} indices - An array in which each element is an index that identifies (in the data array) the data stripe for each particle affected by the event that caused SceneKit to call the handler block.When SceneKit calls your handler block for the birth event, you need not use this parameter—at that time, the affected particles are indexed from 0 to the count parameter’s value.\n * @param {number} count - The number of particles affected by the current event.\n * @returns {void}\n * @desc Use this block to change properties of individual particles when they are spawned, when they collide with scene geometry, or when they die (that is, reach the end of their life spans and are removed from the scene). The following example illustrates setting up a handler block for particle collision events:[system handleEvent:SCNParticleEventCollision\n      forProperties:@[SCNParticlePropertyAngle,\n                      SCNParticlePropertyRotationAxis,\n                      SCNParticlePropertyContactNormal]\n          withBlock:^(void **data, size_t *dataStride, uint32_t *indices, NSInteger count) {\n              // For each particle affected by the collision event,\n              // calculate pointers in the data to each property's value.\n              for (NSInteger i = 0; i < count; ++i) {\n                  // SCNParticlePropertyAngle (float)\n                  float *angle = (float *)((char *)data[0] + dataStride[0] * indices[i]);\n                  // angle[0] is the particle's rotation angle in radians.\n \n                  // SCNParticlePropertyRotationAxis (float3)\n                  float *axis = (float *)((char *)data[1] + dataStride[1] * indices[i]);\n                  // axis[0..2] are the xyz components of the particle's rotation axis.\n \n                  // SCNParticlePropertyContactNormal (float3)\n                  float *norm = (float *)((char *)data[2] + dataStride[2] * indices[i]);\n                  // norm[0..2] are the xyz components of the contact normal vector.\n \n                  // Now, use the norm vector to rotate the particle's axis/angle (not shown).\n              }\n          }];\n\n * @see https://developer.apple.com/reference/scenekit/scnparticleeventblock\n ",
+              "value": "*\n * The signature for blocks called by SceneKit in response to significant events during particle simulation, used by the handle(_:forProperties:handler:) method.\n * @type {function(data: UnsafeMutablePointer<UnsafeMutableRawPointer>, dataStride: UnsafeMutablePointer<Int>, indices: ?UnsafeMutablePointer<UInt32>, count: number): void}\n * @param {UnsafeMutablePointer<UnsafeMutableRawPointer>} data - An array of floating-point values containing stripes of property data for the system’s particles. The width and format of each data stripe depend on the properties you specify when calling the handle(_:forProperties:handler:) method.\n * @param {UnsafeMutablePointer<Int>} dataStride - An array identifying the offset, in bytes, of each property’s value in the data stripe for each particle. The order of offsets in this array corresponds to the order of the properties array you specify when calling the handle(_:forProperties:handler:) method.\n * @param {?UnsafeMutablePointer<UInt32>} indices - An array in which each element is an index that identifies (in the data array) the data stripe for each particle affected by the event that caused SceneKit to call the handler block.When SceneKit calls your handler block for the birth event, you need not use this parameter—at that time, the affected particles are indexed from 0 to the count parameter’s value.\n * @param {number} count - The number of particles affected by the current event.\n * @returns {void}\n * @desc Use this block to change properties of individual particles when they are spawned, when they collide with scene geometry, or when they die (that is, reach the end of their life spans and are removed from the scene). The following example illustrates setting up a handler block for particle collision events:[system handleEvent:SCNParticleEventCollision\n      forProperties:@[SCNParticlePropertyAngle,\n                      SCNParticlePropertyRotationAxis,\n                      SCNParticlePropertyContactNormal]\n          withBlock:^(void **data, size_t *dataStride, uint32_t *indices, NSInteger count) {\n              // For each particle affected by the collision event,\n              // calculate pointers in the data to each property's value.\n              for (NSInteger i = 0; i < count; ++i) {\n                  // SCNParticlePropertyAngle (float)\n                  float *angle = (float *)((char *)data[0] + dataStride[0] * indices[i]);\n                  // angle[0] is the particle's rotation angle in radians.\n \n                  // SCNParticlePropertyRotationAxis (float3)\n                  float *axis = (float *)((char *)data[1] + dataStride[1] * indices[i]);\n                  // axis[0..2] are the xyz components of the particle's rotation axis.\n \n                  // SCNParticlePropertyContactNormal (float3)\n                  float *norm = (float *)((char *)data[2] + dataStride[2] * indices[i]);\n                  // norm[0..2] are the xyz components of the contact normal vector.\n \n                  // Now, use the norm vector to rotate the particle's axis/angle (not shown).\n              }\n          }];\n\n * @see https://developer.apple.com/documentation/scenekit/scnparticleeventblock\n ",
               "start": 15,
-              "end": 3196,
+              "end": 3200,
               "loc": {
                 "start": {
                   "line": 4,
@@ -473,9 +473,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * The signature for blocks called by SceneKit in response to significant events during particle simulation, used by the handle(_:forProperties:handler:) method.\n * @type {function(data: UnsafeMutablePointer<UnsafeMutableRawPointer>, dataStride: UnsafeMutablePointer<Int>, indices: ?UnsafeMutablePointer<UInt32>, count: number): void}\n * @param {UnsafeMutablePointer<UnsafeMutableRawPointer>} data - An array of floating-point values containing stripes of property data for the system’s particles. The width and format of each data stripe depend on the properties you specify when calling the handle(_:forProperties:handler:) method.\n * @param {UnsafeMutablePointer<Int>} dataStride - An array identifying the offset, in bytes, of each property’s value in the data stripe for each particle. The order of offsets in this array corresponds to the order of the properties array you specify when calling the handle(_:forProperties:handler:) method.\n * @param {?UnsafeMutablePointer<UInt32>} indices - An array in which each element is an index that identifies (in the data array) the data stripe for each particle affected by the event that caused SceneKit to call the handler block.When SceneKit calls your handler block for the birth event, you need not use this parameter—at that time, the affected particles are indexed from 0 to the count parameter’s value.\n * @param {number} count - The number of particles affected by the current event.\n * @returns {void}\n * @desc Use this block to change properties of individual particles when they are spawned, when they collide with scene geometry, or when they die (that is, reach the end of their life spans and are removed from the scene). The following example illustrates setting up a handler block for particle collision events:[system handleEvent:SCNParticleEventCollision\n      forProperties:@[SCNParticlePropertyAngle,\n                      SCNParticlePropertyRotationAxis,\n                      SCNParticlePropertyContactNormal]\n          withBlock:^(void **data, size_t *dataStride, uint32_t *indices, NSInteger count) {\n              // For each particle affected by the collision event,\n              // calculate pointers in the data to each property's value.\n              for (NSInteger i = 0; i < count; ++i) {\n                  // SCNParticlePropertyAngle (float)\n                  float *angle = (float *)((char *)data[0] + dataStride[0] * indices[i]);\n                  // angle[0] is the particle's rotation angle in radians.\n \n                  // SCNParticlePropertyRotationAxis (float3)\n                  float *axis = (float *)((char *)data[1] + dataStride[1] * indices[i]);\n                  // axis[0..2] are the xyz components of the particle's rotation axis.\n \n                  // SCNParticlePropertyContactNormal (float3)\n                  float *norm = (float *)((char *)data[2] + dataStride[2] * indices[i]);\n                  // norm[0..2] are the xyz components of the contact normal vector.\n \n                  // Now, use the norm vector to rotate the particle's axis/angle (not shown).\n              }\n          }];\n\n * @see https://developer.apple.com/reference/scenekit/scnparticleeventblock\n ",
+            "value": "*\n * The signature for blocks called by SceneKit in response to significant events during particle simulation, used by the handle(_:forProperties:handler:) method.\n * @type {function(data: UnsafeMutablePointer<UnsafeMutableRawPointer>, dataStride: UnsafeMutablePointer<Int>, indices: ?UnsafeMutablePointer<UInt32>, count: number): void}\n * @param {UnsafeMutablePointer<UnsafeMutableRawPointer>} data - An array of floating-point values containing stripes of property data for the system’s particles. The width and format of each data stripe depend on the properties you specify when calling the handle(_:forProperties:handler:) method.\n * @param {UnsafeMutablePointer<Int>} dataStride - An array identifying the offset, in bytes, of each property’s value in the data stripe for each particle. The order of offsets in this array corresponds to the order of the properties array you specify when calling the handle(_:forProperties:handler:) method.\n * @param {?UnsafeMutablePointer<UInt32>} indices - An array in which each element is an index that identifies (in the data array) the data stripe for each particle affected by the event that caused SceneKit to call the handler block.When SceneKit calls your handler block for the birth event, you need not use this parameter—at that time, the affected particles are indexed from 0 to the count parameter’s value.\n * @param {number} count - The number of particles affected by the current event.\n * @returns {void}\n * @desc Use this block to change properties of individual particles when they are spawned, when they collide with scene geometry, or when they die (that is, reach the end of their life spans and are removed from the scene). The following example illustrates setting up a handler block for particle collision events:[system handleEvent:SCNParticleEventCollision\n      forProperties:@[SCNParticlePropertyAngle,\n                      SCNParticlePropertyRotationAxis,\n                      SCNParticlePropertyContactNormal]\n          withBlock:^(void **data, size_t *dataStride, uint32_t *indices, NSInteger count) {\n              // For each particle affected by the collision event,\n              // calculate pointers in the data to each property's value.\n              for (NSInteger i = 0; i < count; ++i) {\n                  // SCNParticlePropertyAngle (float)\n                  float *angle = (float *)((char *)data[0] + dataStride[0] * indices[i]);\n                  // angle[0] is the particle's rotation angle in radians.\n \n                  // SCNParticlePropertyRotationAxis (float3)\n                  float *axis = (float *)((char *)data[1] + dataStride[1] * indices[i]);\n                  // axis[0..2] are the xyz components of the particle's rotation axis.\n \n                  // SCNParticlePropertyContactNormal (float3)\n                  float *norm = (float *)((char *)data[2] + dataStride[2] * indices[i]);\n                  // norm[0..2] are the xyz components of the contact normal vector.\n \n                  // Now, use the norm vector to rotate the particle's axis/angle (not shown).\n              }\n          }];\n\n * @see https://developer.apple.com/documentation/scenekit/scnparticleeventblock\n ",
             "start": 15,
-            "end": 3196,
+            "end": 3200,
             "loc": {
               "start": {
                 "line": 4,
@@ -494,9 +494,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * The signature for blocks called by SceneKit in response to significant events during particle simulation, used by the handle(_:forProperties:handler:) method.\n * @type {function(data: UnsafeMutablePointer<UnsafeMutableRawPointer>, dataStride: UnsafeMutablePointer<Int>, indices: ?UnsafeMutablePointer<UInt32>, count: number): void}\n * @param {UnsafeMutablePointer<UnsafeMutableRawPointer>} data - An array of floating-point values containing stripes of property data for the system’s particles. The width and format of each data stripe depend on the properties you specify when calling the handle(_:forProperties:handler:) method.\n * @param {UnsafeMutablePointer<Int>} dataStride - An array identifying the offset, in bytes, of each property’s value in the data stripe for each particle. The order of offsets in this array corresponds to the order of the properties array you specify when calling the handle(_:forProperties:handler:) method.\n * @param {?UnsafeMutablePointer<UInt32>} indices - An array in which each element is an index that identifies (in the data array) the data stripe for each particle affected by the event that caused SceneKit to call the handler block.When SceneKit calls your handler block for the birth event, you need not use this parameter—at that time, the affected particles are indexed from 0 to the count parameter’s value.\n * @param {number} count - The number of particles affected by the current event.\n * @returns {void}\n * @desc Use this block to change properties of individual particles when they are spawned, when they collide with scene geometry, or when they die (that is, reach the end of their life spans and are removed from the scene). The following example illustrates setting up a handler block for particle collision events:[system handleEvent:SCNParticleEventCollision\n      forProperties:@[SCNParticlePropertyAngle,\n                      SCNParticlePropertyRotationAxis,\n                      SCNParticlePropertyContactNormal]\n          withBlock:^(void **data, size_t *dataStride, uint32_t *indices, NSInteger count) {\n              // For each particle affected by the collision event,\n              // calculate pointers in the data to each property's value.\n              for (NSInteger i = 0; i < count; ++i) {\n                  // SCNParticlePropertyAngle (float)\n                  float *angle = (float *)((char *)data[0] + dataStride[0] * indices[i]);\n                  // angle[0] is the particle's rotation angle in radians.\n \n                  // SCNParticlePropertyRotationAxis (float3)\n                  float *axis = (float *)((char *)data[1] + dataStride[1] * indices[i]);\n                  // axis[0..2] are the xyz components of the particle's rotation axis.\n \n                  // SCNParticlePropertyContactNormal (float3)\n                  float *norm = (float *)((char *)data[2] + dataStride[2] * indices[i]);\n                  // norm[0..2] are the xyz components of the contact normal vector.\n \n                  // Now, use the norm vector to rotate the particle's axis/angle (not shown).\n              }\n          }];\n\n * @see https://developer.apple.com/reference/scenekit/scnparticleeventblock\n ",
+      "value": "*\n * The signature for blocks called by SceneKit in response to significant events during particle simulation, used by the handle(_:forProperties:handler:) method.\n * @type {function(data: UnsafeMutablePointer<UnsafeMutableRawPointer>, dataStride: UnsafeMutablePointer<Int>, indices: ?UnsafeMutablePointer<UInt32>, count: number): void}\n * @param {UnsafeMutablePointer<UnsafeMutableRawPointer>} data - An array of floating-point values containing stripes of property data for the system’s particles. The width and format of each data stripe depend on the properties you specify when calling the handle(_:forProperties:handler:) method.\n * @param {UnsafeMutablePointer<Int>} dataStride - An array identifying the offset, in bytes, of each property’s value in the data stripe for each particle. The order of offsets in this array corresponds to the order of the properties array you specify when calling the handle(_:forProperties:handler:) method.\n * @param {?UnsafeMutablePointer<UInt32>} indices - An array in which each element is an index that identifies (in the data array) the data stripe for each particle affected by the event that caused SceneKit to call the handler block.When SceneKit calls your handler block for the birth event, you need not use this parameter—at that time, the affected particles are indexed from 0 to the count parameter’s value.\n * @param {number} count - The number of particles affected by the current event.\n * @returns {void}\n * @desc Use this block to change properties of individual particles when they are spawned, when they collide with scene geometry, or when they die (that is, reach the end of their life spans and are removed from the scene). The following example illustrates setting up a handler block for particle collision events:[system handleEvent:SCNParticleEventCollision\n      forProperties:@[SCNParticlePropertyAngle,\n                      SCNParticlePropertyRotationAxis,\n                      SCNParticlePropertyContactNormal]\n          withBlock:^(void **data, size_t *dataStride, uint32_t *indices, NSInteger count) {\n              // For each particle affected by the collision event,\n              // calculate pointers in the data to each property's value.\n              for (NSInteger i = 0; i < count; ++i) {\n                  // SCNParticlePropertyAngle (float)\n                  float *angle = (float *)((char *)data[0] + dataStride[0] * indices[i]);\n                  // angle[0] is the particle's rotation angle in radians.\n \n                  // SCNParticlePropertyRotationAxis (float3)\n                  float *axis = (float *)((char *)data[1] + dataStride[1] * indices[i]);\n                  // axis[0..2] are the xyz components of the particle's rotation axis.\n \n                  // SCNParticlePropertyContactNormal (float3)\n                  float *norm = (float *)((char *)data[2] + dataStride[2] * indices[i]);\n                  // norm[0..2] are the xyz components of the contact normal vector.\n \n                  // Now, use the norm vector to rotate the particle's axis/angle (not shown).\n              }\n          }];\n\n * @see https://developer.apple.com/documentation/scenekit/scnparticleeventblock\n ",
       "start": 15,
-      "end": 3196,
+      "end": 3200,
       "loc": {
         "start": {
           "line": 4,
@@ -539,9 +539,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * The signature for blocks called by SceneKit in response to significant events during particle simulation, used by the handle(_:forProperties:handler:) method.\n * @type {function(data: UnsafeMutablePointer<UnsafeMutableRawPointer>, dataStride: UnsafeMutablePointer<Int>, indices: ?UnsafeMutablePointer<UInt32>, count: number): void}\n * @param {UnsafeMutablePointer<UnsafeMutableRawPointer>} data - An array of floating-point values containing stripes of property data for the system’s particles. The width and format of each data stripe depend on the properties you specify when calling the handle(_:forProperties:handler:) method.\n * @param {UnsafeMutablePointer<Int>} dataStride - An array identifying the offset, in bytes, of each property’s value in the data stripe for each particle. The order of offsets in this array corresponds to the order of the properties array you specify when calling the handle(_:forProperties:handler:) method.\n * @param {?UnsafeMutablePointer<UInt32>} indices - An array in which each element is an index that identifies (in the data array) the data stripe for each particle affected by the event that caused SceneKit to call the handler block.When SceneKit calls your handler block for the birth event, you need not use this parameter—at that time, the affected particles are indexed from 0 to the count parameter’s value.\n * @param {number} count - The number of particles affected by the current event.\n * @returns {void}\n * @desc Use this block to change properties of individual particles when they are spawned, when they collide with scene geometry, or when they die (that is, reach the end of their life spans and are removed from the scene). The following example illustrates setting up a handler block for particle collision events:[system handleEvent:SCNParticleEventCollision\n      forProperties:@[SCNParticlePropertyAngle,\n                      SCNParticlePropertyRotationAxis,\n                      SCNParticlePropertyContactNormal]\n          withBlock:^(void **data, size_t *dataStride, uint32_t *indices, NSInteger count) {\n              // For each particle affected by the collision event,\n              // calculate pointers in the data to each property's value.\n              for (NSInteger i = 0; i < count; ++i) {\n                  // SCNParticlePropertyAngle (float)\n                  float *angle = (float *)((char *)data[0] + dataStride[0] * indices[i]);\n                  // angle[0] is the particle's rotation angle in radians.\n \n                  // SCNParticlePropertyRotationAxis (float3)\n                  float *axis = (float *)((char *)data[1] + dataStride[1] * indices[i]);\n                  // axis[0..2] are the xyz components of the particle's rotation axis.\n \n                  // SCNParticlePropertyContactNormal (float3)\n                  float *norm = (float *)((char *)data[2] + dataStride[2] * indices[i]);\n                  // norm[0..2] are the xyz components of the contact normal vector.\n \n                  // Now, use the norm vector to rotate the particle's axis/angle (not shown).\n              }\n          }];\n\n * @see https://developer.apple.com/reference/scenekit/scnparticleeventblock\n ",
+      "value": "*\n * The signature for blocks called by SceneKit in response to significant events during particle simulation, used by the handle(_:forProperties:handler:) method.\n * @type {function(data: UnsafeMutablePointer<UnsafeMutableRawPointer>, dataStride: UnsafeMutablePointer<Int>, indices: ?UnsafeMutablePointer<UInt32>, count: number): void}\n * @param {UnsafeMutablePointer<UnsafeMutableRawPointer>} data - An array of floating-point values containing stripes of property data for the system’s particles. The width and format of each data stripe depend on the properties you specify when calling the handle(_:forProperties:handler:) method.\n * @param {UnsafeMutablePointer<Int>} dataStride - An array identifying the offset, in bytes, of each property’s value in the data stripe for each particle. The order of offsets in this array corresponds to the order of the properties array you specify when calling the handle(_:forProperties:handler:) method.\n * @param {?UnsafeMutablePointer<UInt32>} indices - An array in which each element is an index that identifies (in the data array) the data stripe for each particle affected by the event that caused SceneKit to call the handler block.When SceneKit calls your handler block for the birth event, you need not use this parameter—at that time, the affected particles are indexed from 0 to the count parameter’s value.\n * @param {number} count - The number of particles affected by the current event.\n * @returns {void}\n * @desc Use this block to change properties of individual particles when they are spawned, when they collide with scene geometry, or when they die (that is, reach the end of their life spans and are removed from the scene). The following example illustrates setting up a handler block for particle collision events:[system handleEvent:SCNParticleEventCollision\n      forProperties:@[SCNParticlePropertyAngle,\n                      SCNParticlePropertyRotationAxis,\n                      SCNParticlePropertyContactNormal]\n          withBlock:^(void **data, size_t *dataStride, uint32_t *indices, NSInteger count) {\n              // For each particle affected by the collision event,\n              // calculate pointers in the data to each property's value.\n              for (NSInteger i = 0; i < count; ++i) {\n                  // SCNParticlePropertyAngle (float)\n                  float *angle = (float *)((char *)data[0] + dataStride[0] * indices[i]);\n                  // angle[0] is the particle's rotation angle in radians.\n \n                  // SCNParticlePropertyRotationAxis (float3)\n                  float *axis = (float *)((char *)data[1] + dataStride[1] * indices[i]);\n                  // axis[0..2] are the xyz components of the particle's rotation axis.\n \n                  // SCNParticlePropertyContactNormal (float3)\n                  float *norm = (float *)((char *)data[2] + dataStride[2] * indices[i]);\n                  // norm[0..2] are the xyz components of the contact normal vector.\n \n                  // Now, use the norm vector to rotate the particle's axis/angle (not shown).\n              }\n          }];\n\n * @see https://developer.apple.com/documentation/scenekit/scnparticleeventblock\n ",
       "start": 15,
-      "end": 3196,
+      "end": 3200,
       "loc": {
         "start": {
           "line": 4,
@@ -568,8 +568,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 3197,
-      "end": 3202,
+      "start": 3201,
+      "end": 3206,
       "loc": {
         "start": {
           "line": 38,
@@ -594,8 +594,8 @@
         "binop": null
       },
       "value": "SCNParticleEventBlock",
-      "start": 3203,
-      "end": 3224,
+      "start": 3207,
+      "end": 3228,
       "loc": {
         "start": {
           "line": 38,
@@ -621,8 +621,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 3225,
-      "end": 3226,
+      "start": 3229,
+      "end": 3230,
       "loc": {
         "start": {
           "line": 38,
@@ -646,8 +646,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3227,
-      "end": 3228,
+      "start": 3231,
+      "end": 3232,
       "loc": {
         "start": {
           "line": 38,
@@ -672,8 +672,8 @@
         "binop": null
       },
       "value": "data",
-      "start": 3228,
-      "end": 3232,
+      "start": 3232,
+      "end": 3236,
       "loc": {
         "start": {
           "line": 38,
@@ -698,8 +698,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3232,
-      "end": 3233,
+      "start": 3236,
+      "end": 3237,
       "loc": {
         "start": {
           "line": 38,
@@ -724,8 +724,8 @@
         "binop": null
       },
       "value": "dataStride",
-      "start": 3234,
-      "end": 3244,
+      "start": 3238,
+      "end": 3248,
       "loc": {
         "start": {
           "line": 38,
@@ -750,8 +750,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3244,
-      "end": 3245,
+      "start": 3248,
+      "end": 3249,
       "loc": {
         "start": {
           "line": 38,
@@ -776,8 +776,8 @@
         "binop": null
       },
       "value": "indices",
-      "start": 3246,
-      "end": 3253,
+      "start": 3250,
+      "end": 3257,
       "loc": {
         "start": {
           "line": 38,
@@ -802,8 +802,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3253,
-      "end": 3254,
+      "start": 3257,
+      "end": 3258,
       "loc": {
         "start": {
           "line": 38,
@@ -828,8 +828,8 @@
         "binop": null
       },
       "value": "count",
-      "start": 3255,
-      "end": 3260,
+      "start": 3259,
+      "end": 3264,
       "loc": {
         "start": {
           "line": 38,
@@ -853,8 +853,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3260,
-      "end": 3261,
+      "start": 3264,
+      "end": 3265,
       "loc": {
         "start": {
           "line": 38,
@@ -879,8 +879,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3262,
-      "end": 3264,
+      "start": 3266,
+      "end": 3268,
       "loc": {
         "start": {
           "line": 38,
@@ -904,8 +904,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3265,
-      "end": 3266,
+      "start": 3269,
+      "end": 3270,
       "loc": {
         "start": {
           "line": 38,
@@ -929,8 +929,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3266,
-      "end": 3267,
+      "start": 3270,
+      "end": 3271,
       "loc": {
         "start": {
           "line": 38,
@@ -957,8 +957,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 3269,
-      "end": 3275,
+      "start": 3273,
+      "end": 3279,
       "loc": {
         "start": {
           "line": 40,
@@ -985,8 +985,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 3276,
-      "end": 3283,
+      "start": 3280,
+      "end": 3287,
       "loc": {
         "start": {
           "line": 40,
@@ -1011,8 +1011,8 @@
         "binop": null
       },
       "value": "SCNParticleEventBlock",
-      "start": 3284,
-      "end": 3305,
+      "start": 3288,
+      "end": 3309,
       "loc": {
         "start": {
           "line": 40,
@@ -1037,8 +1037,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3306,
-      "end": 3306,
+      "start": 3310,
+      "end": 3310,
       "loc": {
         "start": {
           "line": 41,

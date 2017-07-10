@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 530,
+  "end": 534,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 530,
+    "end": 534,
     "loc": {
       "start": {
         "line": 1,
@@ -224,9 +224,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Returns a Boolean value that indicates whether the specified matrix is equal to the identity matrix.\n * @access public\n * @param {SCNMatrix4} m - \n * @returns {boolean} - \n * @see https://developer.apple.com/reference/scenekit/1409715-scnmatrix4isidentity\n ",
+            "value": "*\n * Returns a Boolean value that indicates whether the specified matrix is equal to the identity matrix.\n * @access public\n * @param {SCNMatrix4} m - \n * @returns {boolean} - \n * @see https://developer.apple.com/documentation/scenekit/1409715-scnmatrix4isidentity\n ",
             "start": 157,
-            "end": 423,
+            "end": 427,
             "loc": {
               "start": {
                 "line": 8,
@@ -242,8 +242,8 @@
       },
       {
         "type": "Identifier",
-        "start": 424,
-        "end": 492,
+        "start": 428,
+        "end": 496,
         "loc": {
           "start": {
             "line": 15,
@@ -257,8 +257,8 @@
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 430,
-            "end": 492,
+            "start": 434,
+            "end": 496,
             "loc": {
               "start": {
                 "line": 15,
@@ -271,8 +271,8 @@
             },
             "id": {
               "type": "Identifier",
-              "start": 430,
-              "end": 450,
+              "start": 434,
+              "end": 454,
               "loc": {
                 "start": {
                   "line": 15,
@@ -289,8 +289,8 @@
             },
             "init": {
               "type": "FunctionExpression",
-              "start": 453,
-              "end": 492,
+              "start": 457,
+              "end": 496,
               "loc": {
                 "start": {
                   "line": 15,
@@ -308,8 +308,8 @@
               "params": [
                 {
                   "type": "Identifier",
-                  "start": 462,
-                  "end": 463,
+                  "start": 466,
+                  "end": 467,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -326,8 +326,8 @@
               ],
               "body": {
                 "type": "BlockStatement",
-                "start": 465,
-                "end": 492,
+                "start": 469,
+                "end": 496,
                 "loc": {
                   "start": {
                     "line": 15,
@@ -341,8 +341,8 @@
                 "body": [
                   {
                     "type": "ReturnStatement",
-                    "start": 469,
-                    "end": 490,
+                    "start": 473,
+                    "end": 494,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -355,8 +355,8 @@
                     },
                     "argument": {
                       "type": "CallExpression",
-                      "start": 476,
-                      "end": 490,
+                      "start": 480,
+                      "end": 494,
                       "loc": {
                         "start": {
                           "line": 16,
@@ -369,8 +369,8 @@
                       },
                       "callee": {
                         "type": "MemberExpression",
-                        "start": 476,
-                        "end": 488,
+                        "start": 480,
+                        "end": 492,
                         "loc": {
                           "start": {
                             "line": 16,
@@ -383,8 +383,8 @@
                         },
                         "object": {
                           "type": "Identifier",
-                          "start": 476,
-                          "end": 477,
+                          "start": 480,
+                          "end": 481,
                           "loc": {
                             "start": {
                               "line": 16,
@@ -400,8 +400,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 478,
-                          "end": 488,
+                          "start": 482,
+                          "end": 492,
                           "loc": {
                             "start": {
                               "line": 16,
@@ -434,8 +434,8 @@
       },
       {
         "type": "Identifier",
-        "start": 494,
-        "end": 529,
+        "start": 498,
+        "end": 533,
         "loc": {
           "start": {
             "line": 19,
@@ -448,8 +448,8 @@
         },
         "declaration": {
           "type": "Identifier",
-          "start": 509,
-          "end": 529,
+          "start": 513,
+          "end": 533,
           "loc": {
             "start": {
               "line": 19,
@@ -469,8 +469,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 494,
-        "end": 529,
+        "start": 498,
+        "end": 533,
         "loc": {
           "start": {
             "line": 19,
@@ -483,8 +483,8 @@
         },
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 424,
-          "end": 492,
+          "start": 428,
+          "end": 496,
           "loc": {
             "start": {
               "line": 15,
@@ -498,8 +498,8 @@
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 430,
-              "end": 492,
+              "start": 434,
+              "end": 496,
               "loc": {
                 "start": {
                   "line": 15,
@@ -512,8 +512,8 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 430,
-                "end": 450,
+                "start": 434,
+                "end": 454,
                 "loc": {
                   "start": {
                     "line": 15,
@@ -530,8 +530,8 @@
               },
               "init": {
                 "type": "FunctionExpression",
-                "start": 453,
-                "end": 492,
+                "start": 457,
+                "end": 496,
                 "loc": {
                   "start": {
                     "line": 15,
@@ -544,8 +544,8 @@
                 },
                 "id": {
                   "type": "Identifier",
-                  "start": 430,
-                  "end": 450,
+                  "start": 434,
+                  "end": 454,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -566,8 +566,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 462,
-                    "end": 463,
+                    "start": 466,
+                    "end": 467,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -584,8 +584,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 465,
-                  "end": 492,
+                  "start": 469,
+                  "end": 496,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -599,8 +599,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 469,
-                      "end": 490,
+                      "start": 473,
+                      "end": 494,
                       "loc": {
                         "start": {
                           "line": 16,
@@ -613,8 +613,8 @@
                       },
                       "argument": {
                         "type": "CallExpression",
-                        "start": 476,
-                        "end": 490,
+                        "start": 480,
+                        "end": 494,
                         "loc": {
                           "start": {
                             "line": 16,
@@ -627,8 +627,8 @@
                         },
                         "callee": {
                           "type": "MemberExpression",
-                          "start": 476,
-                          "end": 488,
+                          "start": 480,
+                          "end": 492,
                           "loc": {
                             "start": {
                               "line": 16,
@@ -641,8 +641,8 @@
                           },
                           "object": {
                             "type": "Identifier",
-                            "start": 476,
-                            "end": 477,
+                            "start": 480,
+                            "end": 481,
                             "loc": {
                               "start": {
                                 "line": 16,
@@ -658,8 +658,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 478,
-                            "end": 488,
+                            "start": 482,
+                            "end": 492,
                             "loc": {
                               "start": {
                                 "line": 16,
@@ -689,9 +689,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * Returns a Boolean value that indicates whether the specified matrix is equal to the identity matrix.\n * @access public\n * @param {SCNMatrix4} m - \n * @returns {boolean} - \n * @see https://developer.apple.com/reference/scenekit/1409715-scnmatrix4isidentity\n ",
+              "value": "*\n * Returns a Boolean value that indicates whether the specified matrix is equal to the identity matrix.\n * @access public\n * @param {SCNMatrix4} m - \n * @returns {boolean} - \n * @see https://developer.apple.com/documentation/scenekit/1409715-scnmatrix4isidentity\n ",
               "start": 157,
-              "end": 423,
+              "end": 427,
               "loc": {
                 "start": {
                   "line": 8,
@@ -765,9 +765,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Returns a Boolean value that indicates whether the specified matrix is equal to the identity matrix.\n * @access public\n * @param {SCNMatrix4} m - \n * @returns {boolean} - \n * @see https://developer.apple.com/reference/scenekit/1409715-scnmatrix4isidentity\n ",
+      "value": "*\n * Returns a Boolean value that indicates whether the specified matrix is equal to the identity matrix.\n * @access public\n * @param {SCNMatrix4} m - \n * @returns {boolean} - \n * @see https://developer.apple.com/documentation/scenekit/1409715-scnmatrix4isidentity\n ",
       "start": 157,
-      "end": 423,
+      "end": 427,
       "loc": {
         "start": {
           "line": 8,
@@ -1118,9 +1118,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Returns a Boolean value that indicates whether the specified matrix is equal to the identity matrix.\n * @access public\n * @param {SCNMatrix4} m - \n * @returns {boolean} - \n * @see https://developer.apple.com/reference/scenekit/1409715-scnmatrix4isidentity\n ",
+      "value": "*\n * Returns a Boolean value that indicates whether the specified matrix is equal to the identity matrix.\n * @access public\n * @param {SCNMatrix4} m - \n * @returns {boolean} - \n * @see https://developer.apple.com/documentation/scenekit/1409715-scnmatrix4isidentity\n ",
       "start": 157,
-      "end": 423,
+      "end": 427,
       "loc": {
         "start": {
           "line": 8,
@@ -1147,8 +1147,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 424,
-      "end": 429,
+      "start": 428,
+      "end": 433,
       "loc": {
         "start": {
           "line": 15,
@@ -1173,8 +1173,8 @@
         "binop": null
       },
       "value": "SCNMatrix4IsIdentity",
-      "start": 430,
-      "end": 450,
+      "start": 434,
+      "end": 454,
       "loc": {
         "start": {
           "line": 15,
@@ -1200,8 +1200,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 451,
-      "end": 452,
+      "start": 455,
+      "end": 456,
       "loc": {
         "start": {
           "line": 15,
@@ -1227,8 +1227,8 @@
         "binop": null
       },
       "value": "function",
-      "start": 453,
-      "end": 461,
+      "start": 457,
+      "end": 465,
       "loc": {
         "start": {
           "line": 15,
@@ -1252,8 +1252,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 461,
-      "end": 462,
+      "start": 465,
+      "end": 466,
       "loc": {
         "start": {
           "line": 15,
@@ -1278,8 +1278,8 @@
         "binop": null
       },
       "value": "m",
-      "start": 462,
-      "end": 463,
+      "start": 466,
+      "end": 467,
       "loc": {
         "start": {
           "line": 15,
@@ -1303,8 +1303,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 463,
-      "end": 464,
+      "start": 467,
+      "end": 468,
       "loc": {
         "start": {
           "line": 15,
@@ -1328,8 +1328,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 465,
-      "end": 466,
+      "start": 469,
+      "end": 470,
       "loc": {
         "start": {
           "line": 15,
@@ -1356,8 +1356,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 469,
-      "end": 475,
+      "start": 473,
+      "end": 479,
       "loc": {
         "start": {
           "line": 16,
@@ -1382,8 +1382,8 @@
         "binop": null
       },
       "value": "m",
-      "start": 476,
-      "end": 477,
+      "start": 480,
+      "end": 481,
       "loc": {
         "start": {
           "line": 16,
@@ -1408,8 +1408,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 477,
-      "end": 478,
+      "start": 481,
+      "end": 482,
       "loc": {
         "start": {
           "line": 16,
@@ -1434,8 +1434,8 @@
         "binop": null
       },
       "value": "isIdentity",
-      "start": 478,
-      "end": 488,
+      "start": 482,
+      "end": 492,
       "loc": {
         "start": {
           "line": 16,
@@ -1459,8 +1459,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 488,
-      "end": 489,
+      "start": 492,
+      "end": 493,
       "loc": {
         "start": {
           "line": 16,
@@ -1484,8 +1484,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 489,
-      "end": 490,
+      "start": 493,
+      "end": 494,
       "loc": {
         "start": {
           "line": 16,
@@ -1509,8 +1509,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 491,
-      "end": 492,
+      "start": 495,
+      "end": 496,
       "loc": {
         "start": {
           "line": 17,
@@ -1537,8 +1537,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 494,
-      "end": 500,
+      "start": 498,
+      "end": 504,
       "loc": {
         "start": {
           "line": 19,
@@ -1565,8 +1565,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 501,
-      "end": 508,
+      "start": 505,
+      "end": 512,
       "loc": {
         "start": {
           "line": 19,
@@ -1591,8 +1591,8 @@
         "binop": null
       },
       "value": "SCNMatrix4IsIdentity",
-      "start": 509,
-      "end": 529,
+      "start": 513,
+      "end": 533,
       "loc": {
         "start": {
           "line": 19,
@@ -1617,8 +1617,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 530,
-      "end": 530,
+      "start": 534,
+      "end": 534,
       "loc": {
         "start": {
           "line": 20,

@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 827,
+  "end": 835,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 827,
+    "end": 835,
     "loc": {
       "start": {
         "line": 1,
@@ -30,8 +30,8 @@
     "body": [
       {
         "type": "ExportDefaultDeclaration",
-        "start": 186,
-        "end": 826,
+        "start": 190,
+        "end": 834,
         "loc": {
           "start": {
             "line": 10,
@@ -44,8 +44,8 @@
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 201,
-          "end": 826,
+          "start": 205,
+          "end": 834,
           "loc": {
             "start": {
               "line": 10,
@@ -58,8 +58,8 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 207,
-            "end": 215,
+            "start": 211,
+            "end": 219,
             "loc": {
               "start": {
                 "line": 10,
@@ -77,8 +77,8 @@
           "superClass": null,
           "body": {
             "type": "ClassBody",
-            "start": 216,
-            "end": 826,
+            "start": 220,
+            "end": 834,
             "loc": {
               "start": {
                 "line": 10,
@@ -92,8 +92,8 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 291,
-                "end": 303,
+                "start": 295,
+                "end": 307,
                 "loc": {
                   "start": {
                     "line": 17,
@@ -107,8 +107,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 291,
-                  "end": 295,
+                  "start": 295,
+                  "end": 299,
                   "loc": {
                     "start": {
                       "line": 17,
@@ -132,8 +132,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 298,
-                  "end": 303,
+                  "start": 302,
+                  "end": 307,
                   "loc": {
                     "start": {
                       "line": 17,
@@ -153,8 +153,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-                    "start": 221,
-                    "end": 288,
+                    "start": 225,
+                    "end": 292,
                     "loc": {
                       "start": {
                         "line": 12,
@@ -171,8 +171,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Responding to an action",
-                    "start": 307,
-                    "end": 333,
+                    "start": 311,
+                    "end": 337,
                     "loc": {
                       "start": {
                         "line": 20,
@@ -186,9 +186,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Required. Called to trigger the action specified by the identifier.\n   * @access public\n   * @param {string} event - \n   * @param {Object} anObject - The layer on which the action should occur.\n   * @param {?Map<AnyHashable, Object>} dict - A dictionary containing parameters associated with this event. May be nil.\n   * @returns {void}\n   * @see https://developer.apple.com/reference/quartzcore/caaction/1410806-run\n   ",
-                    "start": 337,
-                    "end": 768,
+                    "value": "*\n   * Required. Called to trigger the action specified by the identifier.\n   * @access public\n   * @param {string} event - \n   * @param {Object} anObject - The layer on which the action should occur.\n   * @param {?Map<AnyHashable, Object>} dict - A dictionary containing parameters associated with this event. May be nil.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/quartzcore/caaction/1410806-run\n   ",
+                    "start": 341,
+                    "end": 776,
                     "loc": {
                       "start": {
                         "line": 22,
@@ -204,8 +204,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 771,
-                "end": 824,
+                "start": 779,
+                "end": 832,
                 "loc": {
                   "start": {
                     "line": 31,
@@ -219,8 +219,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 771,
-                  "end": 795,
+                  "start": 779,
+                  "end": 803,
                   "loc": {
                     "start": {
                       "line": 31,
@@ -244,8 +244,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 796,
-                    "end": 801,
+                    "start": 804,
+                    "end": 809,
                     "loc": {
                       "start": {
                         "line": 31,
@@ -261,8 +261,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 803,
-                    "end": 811,
+                    "start": 811,
+                    "end": 819,
                     "loc": {
                       "start": {
                         "line": 31,
@@ -278,8 +278,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 813,
-                    "end": 817,
+                    "start": 821,
+                    "end": 825,
                     "loc": {
                       "start": {
                         "line": 31,
@@ -296,8 +296,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 819,
-                  "end": 824,
+                  "start": 827,
+                  "end": 832,
                   "loc": {
                     "start": {
                       "line": 31,
@@ -315,8 +315,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Responding to an action",
-                    "start": 307,
-                    "end": 333,
+                    "start": 311,
+                    "end": 337,
                     "loc": {
                       "start": {
                         "line": 20,
@@ -330,9 +330,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Required. Called to trigger the action specified by the identifier.\n   * @access public\n   * @param {string} event - \n   * @param {Object} anObject - The layer on which the action should occur.\n   * @param {?Map<AnyHashable, Object>} dict - A dictionary containing parameters associated with this event. May be nil.\n   * @returns {void}\n   * @see https://developer.apple.com/reference/quartzcore/caaction/1410806-run\n   ",
-                    "start": 337,
-                    "end": 768,
+                    "value": "*\n   * Required. Called to trigger the action specified by the identifier.\n   * @access public\n   * @param {string} event - \n   * @param {Object} anObject - The layer on which the action should occur.\n   * @param {?Map<AnyHashable, Object>} dict - A dictionary containing parameters associated with this event. May be nil.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/quartzcore/caaction/1410806-run\n   ",
+                    "start": 341,
+                    "end": 776,
                     "loc": {
                       "start": {
                         "line": 22,
@@ -351,9 +351,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * An interface that allows objects to respond to actions triggered by a CALayer.\n * @interface\n * @see https://developer.apple.com/reference/quartzcore/caaction\n ",
+              "value": "*\n * An interface that allows objects to respond to actions triggered by a CALayer.\n * @interface\n * @see https://developer.apple.com/documentation/quartzcore/caaction\n ",
               "start": 16,
-              "end": 185,
+              "end": 189,
               "loc": {
                 "start": {
                   "line": 5,
@@ -371,9 +371,9 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * An interface that allows objects to respond to actions triggered by a CALayer.\n * @interface\n * @see https://developer.apple.com/reference/quartzcore/caaction\n ",
+            "value": "*\n * An interface that allows objects to respond to actions triggered by a CALayer.\n * @interface\n * @see https://developer.apple.com/documentation/quartzcore/caaction\n ",
             "start": 16,
-            "end": 185,
+            "end": 189,
             "loc": {
               "start": {
                 "line": 5,
@@ -427,9 +427,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * An interface that allows objects to respond to actions triggered by a CALayer.\n * @interface\n * @see https://developer.apple.com/reference/quartzcore/caaction\n ",
+            "value": "*\n * An interface that allows objects to respond to actions triggered by a CALayer.\n * @interface\n * @see https://developer.apple.com/documentation/quartzcore/caaction\n ",
             "start": 16,
-            "end": 185,
+            "end": 189,
             "loc": {
               "start": {
                 "line": 5,
@@ -448,9 +448,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * An interface that allows objects to respond to actions triggered by a CALayer.\n * @interface\n * @see https://developer.apple.com/reference/quartzcore/caaction\n ",
+      "value": "*\n * An interface that allows objects to respond to actions triggered by a CALayer.\n * @interface\n * @see https://developer.apple.com/documentation/quartzcore/caaction\n ",
       "start": 16,
-      "end": 185,
+      "end": 189,
       "loc": {
         "start": {
           "line": 5,
@@ -465,8 +465,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 221,
-      "end": 288,
+      "start": 225,
+      "end": 292,
       "loc": {
         "start": {
           "line": 12,
@@ -481,8 +481,8 @@
     {
       "type": "CommentLine",
       "value": " Responding to an action",
-      "start": 307,
-      "end": 333,
+      "start": 311,
+      "end": 337,
       "loc": {
         "start": {
           "line": 20,
@@ -496,9 +496,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Required. Called to trigger the action specified by the identifier.\n   * @access public\n   * @param {string} event - \n   * @param {Object} anObject - The layer on which the action should occur.\n   * @param {?Map<AnyHashable, Object>} dict - A dictionary containing parameters associated with this event. May be nil.\n   * @returns {void}\n   * @see https://developer.apple.com/reference/quartzcore/caaction/1410806-run\n   ",
-      "start": 337,
-      "end": 768,
+      "value": "*\n   * Required. Called to trigger the action specified by the identifier.\n   * @access public\n   * @param {string} event - \n   * @param {Object} anObject - The layer on which the action should occur.\n   * @param {?Map<AnyHashable, Object>} dict - A dictionary containing parameters associated with this event. May be nil.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/quartzcore/caaction/1410806-run\n   ",
+      "start": 341,
+      "end": 776,
       "loc": {
         "start": {
           "line": 22,
@@ -541,9 +541,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * An interface that allows objects to respond to actions triggered by a CALayer.\n * @interface\n * @see https://developer.apple.com/reference/quartzcore/caaction\n ",
+      "value": "*\n * An interface that allows objects to respond to actions triggered by a CALayer.\n * @interface\n * @see https://developer.apple.com/documentation/quartzcore/caaction\n ",
       "start": 16,
-      "end": 185,
+      "end": 189,
       "loc": {
         "start": {
           "line": 5,
@@ -570,8 +570,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 186,
-      "end": 192,
+      "start": 190,
+      "end": 196,
       "loc": {
         "start": {
           "line": 10,
@@ -598,8 +598,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 193,
-      "end": 200,
+      "start": 197,
+      "end": 204,
       "loc": {
         "start": {
           "line": 10,
@@ -626,8 +626,8 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 201,
-      "end": 206,
+      "start": 205,
+      "end": 210,
       "loc": {
         "start": {
           "line": 10,
@@ -652,8 +652,8 @@
         "binop": null
       },
       "value": "CAAction",
-      "start": 207,
-      "end": 215,
+      "start": 211,
+      "end": 219,
       "loc": {
         "start": {
           "line": 10,
@@ -677,8 +677,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 216,
-      "end": 217,
+      "start": 220,
+      "end": 221,
       "loc": {
         "start": {
           "line": 10,
@@ -693,8 +693,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 221,
-      "end": 288,
+      "start": 225,
+      "end": 292,
       "loc": {
         "start": {
           "line": 12,
@@ -719,8 +719,8 @@
         "binop": null
       },
       "value": "init",
-      "start": 291,
-      "end": 295,
+      "start": 295,
+      "end": 299,
       "loc": {
         "start": {
           "line": 17,
@@ -744,8 +744,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 295,
-      "end": 296,
+      "start": 299,
+      "end": 300,
       "loc": {
         "start": {
           "line": 17,
@@ -769,8 +769,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 296,
-      "end": 297,
+      "start": 300,
+      "end": 301,
       "loc": {
         "start": {
           "line": 17,
@@ -794,8 +794,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 298,
-      "end": 299,
+      "start": 302,
+      "end": 303,
       "loc": {
         "start": {
           "line": 17,
@@ -819,8 +819,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 302,
-      "end": 303,
+      "start": 306,
+      "end": 307,
       "loc": {
         "start": {
           "line": 18,
@@ -835,8 +835,8 @@
     {
       "type": "CommentLine",
       "value": " Responding to an action",
-      "start": 307,
-      "end": 333,
+      "start": 311,
+      "end": 337,
       "loc": {
         "start": {
           "line": 20,
@@ -850,9 +850,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Required. Called to trigger the action specified by the identifier.\n   * @access public\n   * @param {string} event - \n   * @param {Object} anObject - The layer on which the action should occur.\n   * @param {?Map<AnyHashable, Object>} dict - A dictionary containing parameters associated with this event. May be nil.\n   * @returns {void}\n   * @see https://developer.apple.com/reference/quartzcore/caaction/1410806-run\n   ",
-      "start": 337,
-      "end": 768,
+      "value": "*\n   * Required. Called to trigger the action specified by the identifier.\n   * @access public\n   * @param {string} event - \n   * @param {Object} anObject - The layer on which the action should occur.\n   * @param {?Map<AnyHashable, Object>} dict - A dictionary containing parameters associated with this event. May be nil.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/quartzcore/caaction/1410806-run\n   ",
+      "start": 341,
+      "end": 776,
       "loc": {
         "start": {
           "line": 22,
@@ -877,8 +877,8 @@
         "binop": null
       },
       "value": "runForKeyObjectArguments",
-      "start": 771,
-      "end": 795,
+      "start": 779,
+      "end": 803,
       "loc": {
         "start": {
           "line": 31,
@@ -902,8 +902,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 795,
-      "end": 796,
+      "start": 803,
+      "end": 804,
       "loc": {
         "start": {
           "line": 31,
@@ -928,8 +928,8 @@
         "binop": null
       },
       "value": "event",
-      "start": 796,
-      "end": 801,
+      "start": 804,
+      "end": 809,
       "loc": {
         "start": {
           "line": 31,
@@ -954,8 +954,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 801,
-      "end": 802,
+      "start": 809,
+      "end": 810,
       "loc": {
         "start": {
           "line": 31,
@@ -980,8 +980,8 @@
         "binop": null
       },
       "value": "anObject",
-      "start": 803,
-      "end": 811,
+      "start": 811,
+      "end": 819,
       "loc": {
         "start": {
           "line": 31,
@@ -1006,8 +1006,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 811,
-      "end": 812,
+      "start": 819,
+      "end": 820,
       "loc": {
         "start": {
           "line": 31,
@@ -1032,8 +1032,8 @@
         "binop": null
       },
       "value": "dict",
-      "start": 813,
-      "end": 817,
+      "start": 821,
+      "end": 825,
       "loc": {
         "start": {
           "line": 31,
@@ -1057,8 +1057,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 817,
-      "end": 818,
+      "start": 825,
+      "end": 826,
       "loc": {
         "start": {
           "line": 31,
@@ -1082,8 +1082,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 819,
-      "end": 820,
+      "start": 827,
+      "end": 828,
       "loc": {
         "start": {
           "line": 31,
@@ -1107,8 +1107,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 823,
-      "end": 824,
+      "start": 831,
+      "end": 832,
       "loc": {
         "start": {
           "line": 32,
@@ -1132,8 +1132,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 825,
-      "end": 826,
+      "start": 833,
+      "end": 834,
       "loc": {
         "start": {
           "line": 33,
@@ -1158,8 +1158,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 827,
-      "end": 827,
+      "start": 835,
+      "end": 835,
       "loc": {
         "start": {
           "line": 34,

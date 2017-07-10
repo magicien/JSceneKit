@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 873,
+  "end": 885,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 873,
+    "end": 885,
     "loc": {
       "start": {
         "line": 1,
@@ -30,8 +30,8 @@
     "body": [
       {
         "type": "ExportDefaultDeclaration",
-        "start": 165,
-        "end": 872,
+        "start": 169,
+        "end": 884,
         "loc": {
           "start": {
             "line": 10,
@@ -44,8 +44,8 @@
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 180,
-          "end": 872,
+          "start": 184,
+          "end": 884,
           "loc": {
             "start": {
               "line": 10,
@@ -58,8 +58,8 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 186,
-            "end": 194,
+            "start": 190,
+            "end": 198,
             "loc": {
               "start": {
                 "line": 10,
@@ -77,8 +77,8 @@
           "superClass": null,
           "body": {
             "type": "ClassBody",
-            "start": 195,
-            "end": 872,
+            "start": 199,
+            "end": 884,
             "loc": {
               "start": {
                 "line": 10,
@@ -92,8 +92,8 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 476,
-                "end": 604,
+                "start": 484,
+                "end": 612,
                 "loc": {
                   "start": {
                     "line": 22,
@@ -107,8 +107,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 476,
-                  "end": 480,
+                  "start": 484,
+                  "end": 488,
                   "loc": {
                     "start": {
                       "line": 22,
@@ -132,8 +132,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 481,
-                    "end": 483,
+                    "start": 489,
+                    "end": 491,
                     "loc": {
                       "start": {
                         "line": 22,
@@ -149,8 +149,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 485,
-                    "end": 487,
+                    "start": 493,
+                    "end": 495,
                     "loc": {
                       "start": {
                         "line": 22,
@@ -167,8 +167,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 489,
-                  "end": 604,
+                  "start": 497,
+                  "end": 612,
                   "loc": {
                     "start": {
                       "line": 22,
@@ -182,8 +182,8 @@
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 519,
-                      "end": 536,
+                      "start": 527,
+                      "end": 544,
                       "loc": {
                         "start": {
                           "line": 26,
@@ -196,8 +196,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 519,
-                        "end": 536,
+                        "start": 527,
+                        "end": 544,
                         "loc": {
                           "start": {
                             "line": 26,
@@ -211,8 +211,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 519,
-                          "end": 529,
+                          "start": 527,
+                          "end": 537,
                           "loc": {
                             "start": {
                               "line": 26,
@@ -225,8 +225,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 519,
-                            "end": 523,
+                            "start": 527,
+                            "end": 531,
                             "loc": {
                               "start": {
                                 "line": 26,
@@ -241,8 +241,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 524,
-                            "end": 529,
+                            "start": 532,
+                            "end": 537,
                             "loc": {
                               "start": {
                                 "line": 26,
@@ -261,8 +261,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 532,
-                          "end": 536,
+                          "start": 540,
+                          "end": 544,
                           "loc": {
                             "start": {
                               "line": 26,
@@ -283,8 +283,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Special Values",
-                          "start": 496,
-                          "end": 513,
+                          "start": 504,
+                          "end": 521,
                           "loc": {
                             "start": {
                               "line": 24,
@@ -301,8 +301,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Geometric Properties",
-                          "start": 542,
-                          "end": 565,
+                          "start": 550,
+                          "end": 573,
                           "loc": {
                             "start": {
                               "line": 28,
@@ -318,8 +318,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 571,
-                      "end": 583,
+                      "start": 579,
+                      "end": 591,
                       "loc": {
                         "start": {
                           "line": 30,
@@ -332,8 +332,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 571,
-                        "end": 583,
+                        "start": 579,
+                        "end": 591,
                         "loc": {
                           "start": {
                             "line": 30,
@@ -347,8 +347,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 571,
-                          "end": 579,
+                          "start": 579,
+                          "end": 587,
                           "loc": {
                             "start": {
                               "line": 30,
@@ -361,8 +361,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 571,
-                            "end": 575,
+                            "start": 579,
+                            "end": 583,
                             "loc": {
                               "start": {
                                 "line": 30,
@@ -377,8 +377,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 576,
-                            "end": 579,
+                            "start": 584,
+                            "end": 587,
                             "loc": {
                               "start": {
                                 "line": 30,
@@ -397,8 +397,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 582,
-                          "end": 583,
+                          "start": 590,
+                          "end": 591,
                           "loc": {
                             "start": {
                               "line": 30,
@@ -421,8 +421,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Geometric Properties",
-                          "start": 542,
-                          "end": 565,
+                          "start": 550,
+                          "end": 573,
                           "loc": {
                             "start": {
                               "line": 28,
@@ -438,8 +438,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 588,
-                      "end": 600,
+                      "start": 596,
+                      "end": 608,
                       "loc": {
                         "start": {
                           "line": 31,
@@ -452,8 +452,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 588,
-                        "end": 600,
+                        "start": 596,
+                        "end": 608,
                         "loc": {
                           "start": {
                             "line": 31,
@@ -467,8 +467,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 588,
-                          "end": 596,
+                          "start": 596,
+                          "end": 604,
                           "loc": {
                             "start": {
                               "line": 31,
@@ -481,8 +481,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 588,
-                            "end": 592,
+                            "start": 596,
+                            "end": 600,
                             "loc": {
                               "start": {
                                 "line": 31,
@@ -496,8 +496,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 593,
-                            "end": 596,
+                            "start": 601,
+                            "end": 604,
                             "loc": {
                               "start": {
                                 "line": 31,
@@ -515,8 +515,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 599,
-                          "end": 600,
+                          "start": 607,
+                          "end": 608,
                           "loc": {
                             "start": {
                               "line": 31,
@@ -543,8 +543,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Initializers",
-                    "start": 200,
-                    "end": 215,
+                    "start": 204,
+                    "end": 219,
                     "loc": {
                       "start": {
                         "line": 12,
@@ -558,9 +558,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Creates a vector with components specified as integer values.\n   * @access public\n   * @param {number} dx - \n   * @param {number} dy - \n   * @returns {void}\n   * @see https://developer.apple.com/reference/coregraphics/cgvector/1456249-init\n   ",
-                    "start": 219,
-                    "end": 473,
+                    "value": "*\n   * Creates a vector with components specified as integer values.\n   * @access public\n   * @param {number} dx - \n   * @param {number} dy - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/coregraphics/cgvector/1456249-init\n   ",
+                    "start": 223,
+                    "end": 481,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -577,8 +577,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Special Values",
-                    "start": 608,
-                    "end": 625,
+                    "start": 616,
+                    "end": 633,
                     "loc": {
                       "start": {
                         "line": 34,
@@ -592,9 +592,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The vector whose components are both zero.\n   * @type {CGVector}\n   * @desc \n   * @see https://developer.apple.com/reference/coregraphics/cgvector/1454067-zero\n   ",
-                    "start": 628,
-                    "end": 802,
+                    "value": "*\n   * The vector whose components are both zero.\n   * @type {CGVector}\n   * @desc \n   * @see https://developer.apple.com/documentation/coregraphics/cgvector/1454067-zero\n   ",
+                    "start": 636,
+                    "end": 814,
                     "loc": {
                       "start": {
                         "line": 35,
@@ -610,8 +610,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 805,
-                "end": 843,
+                "start": 817,
+                "end": 855,
                 "loc": {
                   "start": {
                     "line": 41,
@@ -625,8 +625,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 809,
-                  "end": 813,
+                  "start": 821,
+                  "end": 825,
                   "loc": {
                     "start": {
                       "line": 41,
@@ -649,8 +649,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 816,
-                  "end": 843,
+                  "start": 828,
+                  "end": 855,
                   "loc": {
                     "start": {
                       "line": 41,
@@ -664,8 +664,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 822,
-                      "end": 839,
+                      "start": 834,
+                      "end": 851,
                       "loc": {
                         "start": {
                           "line": 42,
@@ -678,8 +678,8 @@
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 829,
-                        "end": 839,
+                        "start": 841,
+                        "end": 851,
                         "loc": {
                           "start": {
                             "line": 42,
@@ -692,8 +692,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 829,
-                          "end": 833,
+                          "start": 841,
+                          "end": 845,
                           "loc": {
                             "start": {
                               "line": 42,
@@ -707,8 +707,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 834,
-                          "end": 839,
+                          "start": 846,
+                          "end": 851,
                           "loc": {
                             "start": {
                               "line": 42,
@@ -733,8 +733,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Special Values",
-                    "start": 608,
-                    "end": 625,
+                    "start": 616,
+                    "end": 633,
                     "loc": {
                       "start": {
                         "line": 34,
@@ -748,9 +748,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The vector whose components are both zero.\n   * @type {CGVector}\n   * @desc \n   * @see https://developer.apple.com/reference/coregraphics/cgvector/1454067-zero\n   ",
-                    "start": 628,
-                    "end": 802,
+                    "value": "*\n   * The vector whose components are both zero.\n   * @type {CGVector}\n   * @desc \n   * @see https://developer.apple.com/documentation/coregraphics/cgvector/1454067-zero\n   ",
+                    "start": 636,
+                    "end": 814,
                     "loc": {
                       "start": {
                         "line": 35,
@@ -767,8 +767,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Geometric Properties",
-                    "start": 847,
-                    "end": 870,
+                    "start": 859,
+                    "end": 882,
                     "loc": {
                       "start": {
                         "line": 45,
@@ -787,9 +787,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * A structure that contains a two-dimensional vector.\n * @access public\n * @see https://developer.apple.com/reference/coregraphics/cgvector\n ",
+              "value": "*\n * A structure that contains a two-dimensional vector.\n * @access public\n * @see https://developer.apple.com/documentation/coregraphics/cgvector\n ",
               "start": 16,
-              "end": 164,
+              "end": 168,
               "loc": {
                 "start": {
                   "line": 5,
@@ -807,9 +807,9 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * A structure that contains a two-dimensional vector.\n * @access public\n * @see https://developer.apple.com/reference/coregraphics/cgvector\n ",
+            "value": "*\n * A structure that contains a two-dimensional vector.\n * @access public\n * @see https://developer.apple.com/documentation/coregraphics/cgvector\n ",
             "start": 16,
-            "end": 164,
+            "end": 168,
             "loc": {
               "start": {
                 "line": 5,
@@ -863,9 +863,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * A structure that contains a two-dimensional vector.\n * @access public\n * @see https://developer.apple.com/reference/coregraphics/cgvector\n ",
+            "value": "*\n * A structure that contains a two-dimensional vector.\n * @access public\n * @see https://developer.apple.com/documentation/coregraphics/cgvector\n ",
             "start": 16,
-            "end": 164,
+            "end": 168,
             "loc": {
               "start": {
                 "line": 5,
@@ -884,9 +884,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * A structure that contains a two-dimensional vector.\n * @access public\n * @see https://developer.apple.com/reference/coregraphics/cgvector\n ",
+      "value": "*\n * A structure that contains a two-dimensional vector.\n * @access public\n * @see https://developer.apple.com/documentation/coregraphics/cgvector\n ",
       "start": 16,
-      "end": 164,
+      "end": 168,
       "loc": {
         "start": {
           "line": 5,
@@ -901,8 +901,8 @@
     {
       "type": "CommentLine",
       "value": " Initializers",
-      "start": 200,
-      "end": 215,
+      "start": 204,
+      "end": 219,
       "loc": {
         "start": {
           "line": 12,
@@ -916,9 +916,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Creates a vector with components specified as integer values.\n   * @access public\n   * @param {number} dx - \n   * @param {number} dy - \n   * @returns {void}\n   * @see https://developer.apple.com/reference/coregraphics/cgvector/1456249-init\n   ",
-      "start": 219,
-      "end": 473,
+      "value": "*\n   * Creates a vector with components specified as integer values.\n   * @access public\n   * @param {number} dx - \n   * @param {number} dy - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/coregraphics/cgvector/1456249-init\n   ",
+      "start": 223,
+      "end": 481,
       "loc": {
         "start": {
           "line": 14,
@@ -933,8 +933,8 @@
     {
       "type": "CommentLine",
       "value": " Special Values",
-      "start": 496,
-      "end": 513,
+      "start": 504,
+      "end": 521,
       "loc": {
         "start": {
           "line": 24,
@@ -949,8 +949,8 @@
     {
       "type": "CommentLine",
       "value": " Geometric Properties",
-      "start": 542,
-      "end": 565,
+      "start": 550,
+      "end": 573,
       "loc": {
         "start": {
           "line": 28,
@@ -965,8 +965,8 @@
     {
       "type": "CommentLine",
       "value": " Special Values",
-      "start": 608,
-      "end": 625,
+      "start": 616,
+      "end": 633,
       "loc": {
         "start": {
           "line": 34,
@@ -980,9 +980,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The vector whose components are both zero.\n   * @type {CGVector}\n   * @desc \n   * @see https://developer.apple.com/reference/coregraphics/cgvector/1454067-zero\n   ",
-      "start": 628,
-      "end": 802,
+      "value": "*\n   * The vector whose components are both zero.\n   * @type {CGVector}\n   * @desc \n   * @see https://developer.apple.com/documentation/coregraphics/cgvector/1454067-zero\n   ",
+      "start": 636,
+      "end": 814,
       "loc": {
         "start": {
           "line": 35,
@@ -997,8 +997,8 @@
     {
       "type": "CommentLine",
       "value": " Geometric Properties",
-      "start": 847,
-      "end": 870,
+      "start": 859,
+      "end": 882,
       "loc": {
         "start": {
           "line": 45,
@@ -1041,9 +1041,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * A structure that contains a two-dimensional vector.\n * @access public\n * @see https://developer.apple.com/reference/coregraphics/cgvector\n ",
+      "value": "*\n * A structure that contains a two-dimensional vector.\n * @access public\n * @see https://developer.apple.com/documentation/coregraphics/cgvector\n ",
       "start": 16,
-      "end": 164,
+      "end": 168,
       "loc": {
         "start": {
           "line": 5,
@@ -1070,8 +1070,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 165,
-      "end": 171,
+      "start": 169,
+      "end": 175,
       "loc": {
         "start": {
           "line": 10,
@@ -1098,8 +1098,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 172,
-      "end": 179,
+      "start": 176,
+      "end": 183,
       "loc": {
         "start": {
           "line": 10,
@@ -1126,8 +1126,8 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 180,
-      "end": 185,
+      "start": 184,
+      "end": 189,
       "loc": {
         "start": {
           "line": 10,
@@ -1152,8 +1152,8 @@
         "binop": null
       },
       "value": "CGVector",
-      "start": 186,
-      "end": 194,
+      "start": 190,
+      "end": 198,
       "loc": {
         "start": {
           "line": 10,
@@ -1177,8 +1177,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 195,
-      "end": 196,
+      "start": 199,
+      "end": 200,
       "loc": {
         "start": {
           "line": 10,
@@ -1193,8 +1193,8 @@
     {
       "type": "CommentLine",
       "value": " Initializers",
-      "start": 200,
-      "end": 215,
+      "start": 204,
+      "end": 219,
       "loc": {
         "start": {
           "line": 12,
@@ -1208,9 +1208,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Creates a vector with components specified as integer values.\n   * @access public\n   * @param {number} dx - \n   * @param {number} dy - \n   * @returns {void}\n   * @see https://developer.apple.com/reference/coregraphics/cgvector/1456249-init\n   ",
-      "start": 219,
-      "end": 473,
+      "value": "*\n   * Creates a vector with components specified as integer values.\n   * @access public\n   * @param {number} dx - \n   * @param {number} dy - \n   * @returns {void}\n   * @see https://developer.apple.com/documentation/coregraphics/cgvector/1456249-init\n   ",
+      "start": 223,
+      "end": 481,
       "loc": {
         "start": {
           "line": 14,
@@ -1235,8 +1235,8 @@
         "binop": null
       },
       "value": "init",
-      "start": 476,
-      "end": 480,
+      "start": 484,
+      "end": 488,
       "loc": {
         "start": {
           "line": 22,
@@ -1260,8 +1260,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 480,
-      "end": 481,
+      "start": 488,
+      "end": 489,
       "loc": {
         "start": {
           "line": 22,
@@ -1286,8 +1286,8 @@
         "binop": null
       },
       "value": "dx",
-      "start": 481,
-      "end": 483,
+      "start": 489,
+      "end": 491,
       "loc": {
         "start": {
           "line": 22,
@@ -1312,8 +1312,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 483,
-      "end": 484,
+      "start": 491,
+      "end": 492,
       "loc": {
         "start": {
           "line": 22,
@@ -1338,8 +1338,8 @@
         "binop": null
       },
       "value": "dy",
-      "start": 485,
-      "end": 487,
+      "start": 493,
+      "end": 495,
       "loc": {
         "start": {
           "line": 22,
@@ -1363,8 +1363,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 487,
-      "end": 488,
+      "start": 495,
+      "end": 496,
       "loc": {
         "start": {
           "line": 22,
@@ -1388,8 +1388,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 489,
-      "end": 490,
+      "start": 497,
+      "end": 498,
       "loc": {
         "start": {
           "line": 22,
@@ -1404,8 +1404,8 @@
     {
       "type": "CommentLine",
       "value": " Special Values",
-      "start": 496,
-      "end": 513,
+      "start": 504,
+      "end": 521,
       "loc": {
         "start": {
           "line": 24,
@@ -1432,8 +1432,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 519,
-      "end": 523,
+      "start": 527,
+      "end": 531,
       "loc": {
         "start": {
           "line": 26,
@@ -1458,8 +1458,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 523,
-      "end": 524,
+      "start": 531,
+      "end": 532,
       "loc": {
         "start": {
           "line": 26,
@@ -1484,8 +1484,8 @@
         "binop": null
       },
       "value": "_zero",
-      "start": 524,
-      "end": 529,
+      "start": 532,
+      "end": 537,
       "loc": {
         "start": {
           "line": 26,
@@ -1511,8 +1511,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 530,
-      "end": 531,
+      "start": 538,
+      "end": 539,
       "loc": {
         "start": {
           "line": 26,
@@ -1539,8 +1539,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 532,
-      "end": 536,
+      "start": 540,
+      "end": 544,
       "loc": {
         "start": {
           "line": 26,
@@ -1555,8 +1555,8 @@
     {
       "type": "CommentLine",
       "value": " Geometric Properties",
-      "start": 542,
-      "end": 565,
+      "start": 550,
+      "end": 573,
       "loc": {
         "start": {
           "line": 28,
@@ -1583,8 +1583,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 571,
-      "end": 575,
+      "start": 579,
+      "end": 583,
       "loc": {
         "start": {
           "line": 30,
@@ -1609,8 +1609,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 575,
-      "end": 576,
+      "start": 583,
+      "end": 584,
       "loc": {
         "start": {
           "line": 30,
@@ -1635,8 +1635,8 @@
         "binop": null
       },
       "value": "_dx",
-      "start": 576,
-      "end": 579,
+      "start": 584,
+      "end": 587,
       "loc": {
         "start": {
           "line": 30,
@@ -1662,8 +1662,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 580,
-      "end": 581,
+      "start": 588,
+      "end": 589,
       "loc": {
         "start": {
           "line": 30,
@@ -1689,8 +1689,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 582,
-      "end": 583,
+      "start": 590,
+      "end": 591,
       "loc": {
         "start": {
           "line": 30,
@@ -1717,8 +1717,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 588,
-      "end": 592,
+      "start": 596,
+      "end": 600,
       "loc": {
         "start": {
           "line": 31,
@@ -1743,8 +1743,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 592,
-      "end": 593,
+      "start": 600,
+      "end": 601,
       "loc": {
         "start": {
           "line": 31,
@@ -1769,8 +1769,8 @@
         "binop": null
       },
       "value": "_dy",
-      "start": 593,
-      "end": 596,
+      "start": 601,
+      "end": 604,
       "loc": {
         "start": {
           "line": 31,
@@ -1796,8 +1796,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 597,
-      "end": 598,
+      "start": 605,
+      "end": 606,
       "loc": {
         "start": {
           "line": 31,
@@ -1823,8 +1823,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 599,
-      "end": 600,
+      "start": 607,
+      "end": 608,
       "loc": {
         "start": {
           "line": 31,
@@ -1848,8 +1848,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 603,
-      "end": 604,
+      "start": 611,
+      "end": 612,
       "loc": {
         "start": {
           "line": 32,
@@ -1864,8 +1864,8 @@
     {
       "type": "CommentLine",
       "value": " Special Values",
-      "start": 608,
-      "end": 625,
+      "start": 616,
+      "end": 633,
       "loc": {
         "start": {
           "line": 34,
@@ -1879,9 +1879,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The vector whose components are both zero.\n   * @type {CGVector}\n   * @desc \n   * @see https://developer.apple.com/reference/coregraphics/cgvector/1454067-zero\n   ",
-      "start": 628,
-      "end": 802,
+      "value": "*\n   * The vector whose components are both zero.\n   * @type {CGVector}\n   * @desc \n   * @see https://developer.apple.com/documentation/coregraphics/cgvector/1454067-zero\n   ",
+      "start": 636,
+      "end": 814,
       "loc": {
         "start": {
           "line": 35,
@@ -1906,8 +1906,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 805,
-      "end": 808,
+      "start": 817,
+      "end": 820,
       "loc": {
         "start": {
           "line": 41,
@@ -1932,8 +1932,8 @@
         "binop": null
       },
       "value": "zero",
-      "start": 809,
-      "end": 813,
+      "start": 821,
+      "end": 825,
       "loc": {
         "start": {
           "line": 41,
@@ -1957,8 +1957,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 813,
-      "end": 814,
+      "start": 825,
+      "end": 826,
       "loc": {
         "start": {
           "line": 41,
@@ -1982,8 +1982,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 814,
-      "end": 815,
+      "start": 826,
+      "end": 827,
       "loc": {
         "start": {
           "line": 41,
@@ -2007,8 +2007,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 816,
-      "end": 817,
+      "start": 828,
+      "end": 829,
       "loc": {
         "start": {
           "line": 41,
@@ -2035,8 +2035,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 822,
-      "end": 828,
+      "start": 834,
+      "end": 840,
       "loc": {
         "start": {
           "line": 42,
@@ -2063,8 +2063,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 829,
-      "end": 833,
+      "start": 841,
+      "end": 845,
       "loc": {
         "start": {
           "line": 42,
@@ -2089,8 +2089,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 833,
-      "end": 834,
+      "start": 845,
+      "end": 846,
       "loc": {
         "start": {
           "line": 42,
@@ -2115,8 +2115,8 @@
         "binop": null
       },
       "value": "_zero",
-      "start": 834,
-      "end": 839,
+      "start": 846,
+      "end": 851,
       "loc": {
         "start": {
           "line": 42,
@@ -2140,8 +2140,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 842,
-      "end": 843,
+      "start": 854,
+      "end": 855,
       "loc": {
         "start": {
           "line": 43,
@@ -2156,8 +2156,8 @@
     {
       "type": "CommentLine",
       "value": " Geometric Properties",
-      "start": 847,
-      "end": 870,
+      "start": 859,
+      "end": 882,
       "loc": {
         "start": {
           "line": 45,
@@ -2181,8 +2181,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 871,
-      "end": 872,
+      "start": 883,
+      "end": 884,
       "loc": {
         "start": {
           "line": 46,
@@ -2207,8 +2207,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 873,
-      "end": 873,
+      "start": 885,
+      "end": 885,
       "loc": {
         "start": {
           "line": 47,

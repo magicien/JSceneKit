@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 1282,
+  "end": 1290,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 1282,
+    "end": 1290,
     "loc": {
       "start": {
         "line": 1,
@@ -117,9 +117,9 @@
           },
           {
             "type": "CommentBlock",
-            "value": "*\n * A container for a closure to be executed at a specific time during playback of an animation.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnanimationevent\n ",
+            "value": "*\n * A container for a closure to be executed at a specific time during playback of an animation.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnanimationevent\n ",
             "start": 125,
-            "end": 342,
+            "end": 346,
             "loc": {
               "start": {
                 "line": 6,
@@ -135,8 +135,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 343,
-        "end": 1281,
+        "start": 347,
+        "end": 1289,
         "loc": {
           "start": {
             "line": 12,
@@ -149,8 +149,8 @@
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 358,
-          "end": 1281,
+          "start": 362,
+          "end": 1289,
           "loc": {
             "start": {
               "line": 12,
@@ -163,8 +163,8 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 364,
-            "end": 381,
+            "start": 368,
+            "end": 385,
             "loc": {
               "start": {
                 "line": 12,
@@ -181,8 +181,8 @@
           },
           "superClass": {
             "type": "Identifier",
-            "start": 390,
-            "end": 398,
+            "start": 394,
+            "end": 402,
             "loc": {
               "start": {
                 "line": 12,
@@ -198,8 +198,8 @@
           },
           "body": {
             "type": "ClassBody",
-            "start": 399,
-            "end": 1281,
+            "start": 403,
+            "end": 1289,
             "loc": {
               "start": {
                 "line": 12,
@@ -213,8 +213,8 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 1067,
-                "end": 1170,
+                "start": 1075,
+                "end": 1178,
                 "loc": {
                   "start": {
                     "line": 25,
@@ -228,8 +228,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1067,
-                  "end": 1078,
+                  "start": 1075,
+                  "end": 1086,
                   "loc": {
                     "start": {
                       "line": 25,
@@ -253,8 +253,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 1079,
-                    "end": 1083,
+                    "start": 1087,
+                    "end": 1091,
                     "loc": {
                       "start": {
                         "line": 25,
@@ -270,8 +270,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1085,
-                    "end": 1095,
+                    "start": 1093,
+                    "end": 1103,
                     "loc": {
                       "start": {
                         "line": 25,
@@ -288,8 +288,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1097,
-                  "end": 1170,
+                  "start": 1105,
+                  "end": 1178,
                   "loc": {
                     "start": {
                       "line": 25,
@@ -303,8 +303,8 @@
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 1103,
-                      "end": 1110,
+                      "start": 1111,
+                      "end": 1118,
                       "loc": {
                         "start": {
                           "line": 26,
@@ -317,8 +317,8 @@
                       },
                       "expression": {
                         "type": "CallExpression",
-                        "start": 1103,
-                        "end": 1110,
+                        "start": 1111,
+                        "end": 1118,
                         "loc": {
                           "start": {
                             "line": 26,
@@ -331,8 +331,8 @@
                         },
                         "callee": {
                           "type": "Super",
-                          "start": 1103,
-                          "end": 1108,
+                          "start": 1111,
+                          "end": 1116,
                           "loc": {
                             "start": {
                               "line": 26,
@@ -349,8 +349,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1115,
-                      "end": 1132,
+                      "start": 1123,
+                      "end": 1140,
                       "loc": {
                         "start": {
                           "line": 27,
@@ -363,8 +363,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1115,
-                        "end": 1132,
+                        "start": 1123,
+                        "end": 1140,
                         "loc": {
                           "start": {
                             "line": 27,
@@ -378,8 +378,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1115,
-                          "end": 1125,
+                          "start": 1123,
+                          "end": 1133,
                           "loc": {
                             "start": {
                               "line": 27,
@@ -392,8 +392,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1115,
-                            "end": 1119,
+                            "start": 1123,
+                            "end": 1127,
                             "loc": {
                               "start": {
                                 "line": 27,
@@ -407,8 +407,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1120,
-                            "end": 1125,
+                            "start": 1128,
+                            "end": 1133,
                             "loc": {
                               "start": {
                                 "line": 27,
@@ -426,8 +426,8 @@
                         },
                         "right": {
                           "type": "Identifier",
-                          "start": 1128,
-                          "end": 1132,
+                          "start": 1136,
+                          "end": 1140,
                           "loc": {
                             "start": {
                               "line": 27,
@@ -445,8 +445,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1137,
-                      "end": 1166,
+                      "start": 1145,
+                      "end": 1174,
                       "loc": {
                         "start": {
                           "line": 28,
@@ -459,8 +459,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1137,
-                        "end": 1166,
+                        "start": 1145,
+                        "end": 1174,
                         "loc": {
                           "start": {
                             "line": 28,
@@ -474,8 +474,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1137,
-                          "end": 1153,
+                          "start": 1145,
+                          "end": 1161,
                           "loc": {
                             "start": {
                               "line": 28,
@@ -488,8 +488,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1137,
-                            "end": 1141,
+                            "start": 1145,
+                            "end": 1149,
                             "loc": {
                               "start": {
                                 "line": 28,
@@ -503,8 +503,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1142,
-                            "end": 1153,
+                            "start": 1150,
+                            "end": 1161,
                             "loc": {
                               "start": {
                                 "line": 28,
@@ -522,8 +522,8 @@
                         },
                         "right": {
                           "type": "Identifier",
-                          "start": 1156,
-                          "end": 1166,
+                          "start": 1164,
+                          "end": 1174,
                           "loc": {
                             "start": {
                               "line": 28,
@@ -546,8 +546,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Creating an Animation Event",
-                    "start": 404,
-                    "end": 434,
+                    "start": 408,
+                    "end": 438,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -561,9 +561,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Creates an animation event.\n   * @access public\n   * @param {number} time - A number between 0.0 and 1.0 specifying the relative time for triggering the event.\n   * @param {SCNAnimationEventBlock} eventBlock - A block to call at the specified time.\n   * @constructor\n   * @desc The time parameter is relative to the duration of the animation the event is attached to. For example, an event with a time of 0.5 triggers when the animation is halfway complete, and an event with a time of 1.0 triggers when the animation ends.\n   * @see https://developer.apple.com/reference/scenekit/scnanimationevent/1524004-init\n   ",
-                    "start": 438,
-                    "end": 1064,
+                    "value": "*\n   * Creates an animation event.\n   * @access public\n   * @param {number} time - A number between 0.0 and 1.0 specifying the relative time for triggering the event.\n   * @param {SCNAnimationEventBlock} eventBlock - A block to call at the specified time.\n   * @constructor\n   * @desc The time parameter is relative to the duration of the animation the event is attached to. For example, an event with a time of 0.5 triggers when the animation is halfway complete, and an event with a time of 1.0 triggers when the animation ends.\n   * @see https://developer.apple.com/documentation/scenekit/scnanimationevent/1524004-init\n   ",
+                    "start": 442,
+                    "end": 1072,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -579,8 +579,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 1174,
-                "end": 1279,
+                "start": 1182,
+                "end": 1287,
                 "loc": {
                   "start": {
                     "line": 31,
@@ -594,8 +594,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1181,
-                  "end": 1204,
+                  "start": 1189,
+                  "end": 1212,
                   "loc": {
                     "start": {
                       "line": 31,
@@ -618,8 +618,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 1205,
-                    "end": 1209,
+                    "start": 1213,
+                    "end": 1217,
                     "loc": {
                       "start": {
                         "line": 31,
@@ -635,8 +635,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1211,
-                    "end": 1221,
+                    "start": 1219,
+                    "end": 1229,
                     "loc": {
                       "start": {
                         "line": 31,
@@ -653,8 +653,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1223,
-                  "end": 1279,
+                  "start": 1231,
+                  "end": 1287,
                   "loc": {
                     "start": {
                       "line": 31,
@@ -668,8 +668,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 1229,
-                      "end": 1275,
+                      "start": 1237,
+                      "end": 1283,
                       "loc": {
                         "start": {
                           "line": 32,
@@ -682,8 +682,8 @@
                       },
                       "argument": {
                         "type": "NewExpression",
-                        "start": 1236,
-                        "end": 1275,
+                        "start": 1244,
+                        "end": 1283,
                         "loc": {
                           "start": {
                             "line": 32,
@@ -696,8 +696,8 @@
                         },
                         "callee": {
                           "type": "Identifier",
-                          "start": 1240,
-                          "end": 1257,
+                          "start": 1248,
+                          "end": 1265,
                           "loc": {
                             "start": {
                               "line": 32,
@@ -714,8 +714,8 @@
                         "arguments": [
                           {
                             "type": "Identifier",
-                            "start": 1258,
-                            "end": 1262,
+                            "start": 1266,
+                            "end": 1270,
                             "loc": {
                               "start": {
                                 "line": 32,
@@ -731,8 +731,8 @@
                           },
                           {
                             "type": "Identifier",
-                            "start": 1264,
-                            "end": 1274,
+                            "start": 1272,
+                            "end": 1282,
                             "loc": {
                               "start": {
                                 "line": 32,
@@ -774,9 +774,9 @@
             },
             {
               "type": "CommentBlock",
-              "value": "*\n * A container for a closure to be executed at a specific time during playback of an animation.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnanimationevent\n ",
+              "value": "*\n * A container for a closure to be executed at a specific time during playback of an animation.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnanimationevent\n ",
               "start": 125,
-              "end": 342,
+              "end": 346,
               "loc": {
                 "start": {
                   "line": 6,
@@ -810,9 +810,9 @@
           },
           {
             "type": "CommentBlock",
-            "value": "*\n * A container for a closure to be executed at a specific time during playback of an animation.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnanimationevent\n ",
+            "value": "*\n * A container for a closure to be executed at a specific time during playback of an animation.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnanimationevent\n ",
             "start": 125,
-            "end": 342,
+            "end": 346,
             "loc": {
               "start": {
                 "line": 6,
@@ -884,9 +884,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * A container for a closure to be executed at a specific time during playback of an animation.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnanimationevent\n ",
+      "value": "*\n * A container for a closure to be executed at a specific time during playback of an animation.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnanimationevent\n ",
       "start": 125,
-      "end": 342,
+      "end": 346,
       "loc": {
         "start": {
           "line": 6,
@@ -901,8 +901,8 @@
     {
       "type": "CommentLine",
       "value": " Creating an Animation Event",
-      "start": 404,
-      "end": 434,
+      "start": 408,
+      "end": 438,
       "loc": {
         "start": {
           "line": 14,
@@ -916,9 +916,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Creates an animation event.\n   * @access public\n   * @param {number} time - A number between 0.0 and 1.0 specifying the relative time for triggering the event.\n   * @param {SCNAnimationEventBlock} eventBlock - A block to call at the specified time.\n   * @constructor\n   * @desc The time parameter is relative to the duration of the animation the event is attached to. For example, an event with a time of 0.5 triggers when the animation is halfway complete, and an event with a time of 1.0 triggers when the animation ends.\n   * @see https://developer.apple.com/reference/scenekit/scnanimationevent/1524004-init\n   ",
-      "start": 438,
-      "end": 1064,
+      "value": "*\n   * Creates an animation event.\n   * @access public\n   * @param {number} time - A number between 0.0 and 1.0 specifying the relative time for triggering the event.\n   * @param {SCNAnimationEventBlock} eventBlock - A block to call at the specified time.\n   * @constructor\n   * @desc The time parameter is relative to the duration of the animation the event is attached to. For example, an event with a time of 0.5 triggers when the animation is halfway complete, and an event with a time of 1.0 triggers when the animation ends.\n   * @see https://developer.apple.com/documentation/scenekit/scnanimationevent/1524004-init\n   ",
+      "start": 442,
+      "end": 1072,
       "loc": {
         "start": {
           "line": 16,
@@ -1084,9 +1084,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * A container for a closure to be executed at a specific time during playback of an animation.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/reference/scenekit/scnanimationevent\n ",
+      "value": "*\n * A container for a closure to be executed at a specific time during playback of an animation.\n * @access public\n * @extends {NSObject}\n * @see https://developer.apple.com/documentation/scenekit/scnanimationevent\n ",
       "start": 125,
-      "end": 342,
+      "end": 346,
       "loc": {
         "start": {
           "line": 6,
@@ -1113,8 +1113,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 343,
-      "end": 349,
+      "start": 347,
+      "end": 353,
       "loc": {
         "start": {
           "line": 12,
@@ -1141,8 +1141,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 350,
-      "end": 357,
+      "start": 354,
+      "end": 361,
       "loc": {
         "start": {
           "line": 12,
@@ -1169,8 +1169,8 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 358,
-      "end": 363,
+      "start": 362,
+      "end": 367,
       "loc": {
         "start": {
           "line": 12,
@@ -1195,8 +1195,8 @@
         "binop": null
       },
       "value": "SCNAnimationEvent",
-      "start": 364,
-      "end": 381,
+      "start": 368,
+      "end": 385,
       "loc": {
         "start": {
           "line": 12,
@@ -1223,8 +1223,8 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 382,
-      "end": 389,
+      "start": 386,
+      "end": 393,
       "loc": {
         "start": {
           "line": 12,
@@ -1249,8 +1249,8 @@
         "binop": null
       },
       "value": "NSObject",
-      "start": 390,
-      "end": 398,
+      "start": 394,
+      "end": 402,
       "loc": {
         "start": {
           "line": 12,
@@ -1274,8 +1274,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 399,
-      "end": 400,
+      "start": 403,
+      "end": 404,
       "loc": {
         "start": {
           "line": 12,
@@ -1290,8 +1290,8 @@
     {
       "type": "CommentLine",
       "value": " Creating an Animation Event",
-      "start": 404,
-      "end": 434,
+      "start": 408,
+      "end": 438,
       "loc": {
         "start": {
           "line": 14,
@@ -1305,9 +1305,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Creates an animation event.\n   * @access public\n   * @param {number} time - A number between 0.0 and 1.0 specifying the relative time for triggering the event.\n   * @param {SCNAnimationEventBlock} eventBlock - A block to call at the specified time.\n   * @constructor\n   * @desc The time parameter is relative to the duration of the animation the event is attached to. For example, an event with a time of 0.5 triggers when the animation is halfway complete, and an event with a time of 1.0 triggers when the animation ends.\n   * @see https://developer.apple.com/reference/scenekit/scnanimationevent/1524004-init\n   ",
-      "start": 438,
-      "end": 1064,
+      "value": "*\n   * Creates an animation event.\n   * @access public\n   * @param {number} time - A number between 0.0 and 1.0 specifying the relative time for triggering the event.\n   * @param {SCNAnimationEventBlock} eventBlock - A block to call at the specified time.\n   * @constructor\n   * @desc The time parameter is relative to the duration of the animation the event is attached to. For example, an event with a time of 0.5 triggers when the animation is halfway complete, and an event with a time of 1.0 triggers when the animation ends.\n   * @see https://developer.apple.com/documentation/scenekit/scnanimationevent/1524004-init\n   ",
+      "start": 442,
+      "end": 1072,
       "loc": {
         "start": {
           "line": 16,
@@ -1332,8 +1332,8 @@
         "binop": null
       },
       "value": "constructor",
-      "start": 1067,
-      "end": 1078,
+      "start": 1075,
+      "end": 1086,
       "loc": {
         "start": {
           "line": 25,
@@ -1357,8 +1357,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1078,
-      "end": 1079,
+      "start": 1086,
+      "end": 1087,
       "loc": {
         "start": {
           "line": 25,
@@ -1383,8 +1383,8 @@
         "binop": null
       },
       "value": "time",
-      "start": 1079,
-      "end": 1083,
+      "start": 1087,
+      "end": 1091,
       "loc": {
         "start": {
           "line": 25,
@@ -1409,8 +1409,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1083,
-      "end": 1084,
+      "start": 1091,
+      "end": 1092,
       "loc": {
         "start": {
           "line": 25,
@@ -1435,8 +1435,8 @@
         "binop": null
       },
       "value": "eventBlock",
-      "start": 1085,
-      "end": 1095,
+      "start": 1093,
+      "end": 1103,
       "loc": {
         "start": {
           "line": 25,
@@ -1460,8 +1460,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1095,
-      "end": 1096,
+      "start": 1103,
+      "end": 1104,
       "loc": {
         "start": {
           "line": 25,
@@ -1485,8 +1485,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1097,
-      "end": 1098,
+      "start": 1105,
+      "end": 1106,
       "loc": {
         "start": {
           "line": 25,
@@ -1513,8 +1513,8 @@
         "updateContext": null
       },
       "value": "super",
-      "start": 1103,
-      "end": 1108,
+      "start": 1111,
+      "end": 1116,
       "loc": {
         "start": {
           "line": 26,
@@ -1538,8 +1538,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1108,
-      "end": 1109,
+      "start": 1116,
+      "end": 1117,
       "loc": {
         "start": {
           "line": 26,
@@ -1563,8 +1563,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1109,
-      "end": 1110,
+      "start": 1117,
+      "end": 1118,
       "loc": {
         "start": {
           "line": 26,
@@ -1591,8 +1591,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1115,
-      "end": 1119,
+      "start": 1123,
+      "end": 1127,
       "loc": {
         "start": {
           "line": 27,
@@ -1617,8 +1617,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1119,
-      "end": 1120,
+      "start": 1127,
+      "end": 1128,
       "loc": {
         "start": {
           "line": 27,
@@ -1643,8 +1643,8 @@
         "binop": null
       },
       "value": "_time",
-      "start": 1120,
-      "end": 1125,
+      "start": 1128,
+      "end": 1133,
       "loc": {
         "start": {
           "line": 27,
@@ -1670,8 +1670,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1126,
-      "end": 1127,
+      "start": 1134,
+      "end": 1135,
       "loc": {
         "start": {
           "line": 27,
@@ -1696,8 +1696,8 @@
         "binop": null
       },
       "value": "time",
-      "start": 1128,
-      "end": 1132,
+      "start": 1136,
+      "end": 1140,
       "loc": {
         "start": {
           "line": 27,
@@ -1724,8 +1724,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1137,
-      "end": 1141,
+      "start": 1145,
+      "end": 1149,
       "loc": {
         "start": {
           "line": 28,
@@ -1750,8 +1750,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1141,
-      "end": 1142,
+      "start": 1149,
+      "end": 1150,
       "loc": {
         "start": {
           "line": 28,
@@ -1776,8 +1776,8 @@
         "binop": null
       },
       "value": "_eventBlock",
-      "start": 1142,
-      "end": 1153,
+      "start": 1150,
+      "end": 1161,
       "loc": {
         "start": {
           "line": 28,
@@ -1803,8 +1803,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1154,
-      "end": 1155,
+      "start": 1162,
+      "end": 1163,
       "loc": {
         "start": {
           "line": 28,
@@ -1829,8 +1829,8 @@
         "binop": null
       },
       "value": "eventBlock",
-      "start": 1156,
-      "end": 1166,
+      "start": 1164,
+      "end": 1174,
       "loc": {
         "start": {
           "line": 28,
@@ -1854,8 +1854,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1169,
-      "end": 1170,
+      "start": 1177,
+      "end": 1178,
       "loc": {
         "start": {
           "line": 29,
@@ -1880,8 +1880,8 @@
         "binop": null
       },
       "value": "static",
-      "start": 1174,
-      "end": 1180,
+      "start": 1182,
+      "end": 1188,
       "loc": {
         "start": {
           "line": 31,
@@ -1906,8 +1906,8 @@
         "binop": null
       },
       "value": "eventWithTimeEventBlock",
-      "start": 1181,
-      "end": 1204,
+      "start": 1189,
+      "end": 1212,
       "loc": {
         "start": {
           "line": 31,
@@ -1931,8 +1931,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1204,
-      "end": 1205,
+      "start": 1212,
+      "end": 1213,
       "loc": {
         "start": {
           "line": 31,
@@ -1957,8 +1957,8 @@
         "binop": null
       },
       "value": "time",
-      "start": 1205,
-      "end": 1209,
+      "start": 1213,
+      "end": 1217,
       "loc": {
         "start": {
           "line": 31,
@@ -1983,8 +1983,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1209,
-      "end": 1210,
+      "start": 1217,
+      "end": 1218,
       "loc": {
         "start": {
           "line": 31,
@@ -2009,8 +2009,8 @@
         "binop": null
       },
       "value": "eventBlock",
-      "start": 1211,
-      "end": 1221,
+      "start": 1219,
+      "end": 1229,
       "loc": {
         "start": {
           "line": 31,
@@ -2034,8 +2034,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1221,
-      "end": 1222,
+      "start": 1229,
+      "end": 1230,
       "loc": {
         "start": {
           "line": 31,
@@ -2059,8 +2059,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1223,
-      "end": 1224,
+      "start": 1231,
+      "end": 1232,
       "loc": {
         "start": {
           "line": 31,
@@ -2087,8 +2087,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 1229,
-      "end": 1235,
+      "start": 1237,
+      "end": 1243,
       "loc": {
         "start": {
           "line": 32,
@@ -2115,8 +2115,8 @@
         "updateContext": null
       },
       "value": "new",
-      "start": 1236,
-      "end": 1239,
+      "start": 1244,
+      "end": 1247,
       "loc": {
         "start": {
           "line": 32,
@@ -2141,8 +2141,8 @@
         "binop": null
       },
       "value": "SCNAnimationEvent",
-      "start": 1240,
-      "end": 1257,
+      "start": 1248,
+      "end": 1265,
       "loc": {
         "start": {
           "line": 32,
@@ -2166,8 +2166,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1257,
-      "end": 1258,
+      "start": 1265,
+      "end": 1266,
       "loc": {
         "start": {
           "line": 32,
@@ -2192,8 +2192,8 @@
         "binop": null
       },
       "value": "time",
-      "start": 1258,
-      "end": 1262,
+      "start": 1266,
+      "end": 1270,
       "loc": {
         "start": {
           "line": 32,
@@ -2218,8 +2218,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1262,
-      "end": 1263,
+      "start": 1270,
+      "end": 1271,
       "loc": {
         "start": {
           "line": 32,
@@ -2244,8 +2244,8 @@
         "binop": null
       },
       "value": "eventBlock",
-      "start": 1264,
-      "end": 1274,
+      "start": 1272,
+      "end": 1282,
       "loc": {
         "start": {
           "line": 32,
@@ -2269,8 +2269,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1274,
-      "end": 1275,
+      "start": 1282,
+      "end": 1283,
       "loc": {
         "start": {
           "line": 32,
@@ -2294,8 +2294,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1278,
-      "end": 1279,
+      "start": 1286,
+      "end": 1287,
       "loc": {
         "start": {
           "line": 33,
@@ -2319,8 +2319,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1280,
-      "end": 1281,
+      "start": 1288,
+      "end": 1289,
       "loc": {
         "start": {
           "line": 34,
@@ -2345,8 +2345,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1282,
-      "end": 1282,
+      "start": 1290,
+      "end": 1290,
       "loc": {
         "start": {
           "line": 35,

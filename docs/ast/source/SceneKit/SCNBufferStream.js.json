@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 782,
+  "end": 790,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 782,
+    "end": 790,
     "loc": {
       "start": {
         "line": 1,
@@ -30,8 +30,8 @@
     "body": [
       {
         "type": "ExportDefaultDeclaration",
-        "start": 184,
-        "end": 781,
+        "start": 188,
+        "end": 789,
         "loc": {
           "start": {
             "line": 10,
@@ -44,8 +44,8 @@
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 199,
-          "end": 781,
+          "start": 203,
+          "end": 789,
           "loc": {
             "start": {
               "line": 10,
@@ -58,8 +58,8 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 205,
-            "end": 220,
+            "start": 209,
+            "end": 224,
             "loc": {
               "start": {
                 "line": 10,
@@ -77,8 +77,8 @@
           "superClass": null,
           "body": {
             "type": "ClassBody",
-            "start": 221,
-            "end": 781,
+            "start": 225,
+            "end": 789,
             "loc": {
               "start": {
                 "line": 10,
@@ -92,8 +92,8 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 296,
-                "end": 308,
+                "start": 300,
+                "end": 312,
                 "loc": {
                   "start": {
                     "line": 17,
@@ -107,8 +107,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 296,
-                  "end": 300,
+                  "start": 300,
+                  "end": 304,
                   "loc": {
                     "start": {
                       "line": 17,
@@ -132,8 +132,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 303,
-                  "end": 308,
+                  "start": 307,
+                  "end": 312,
                   "loc": {
                     "start": {
                       "line": 17,
@@ -153,8 +153,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-                    "start": 226,
-                    "end": 293,
+                    "start": 230,
+                    "end": 297,
                     "loc": {
                       "start": {
                         "line": 12,
@@ -171,8 +171,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Writing Data to a Buffer",
-                    "start": 312,
-                    "end": 339,
+                    "start": 316,
+                    "end": 343,
                     "loc": {
                       "start": {
                         "line": 20,
@@ -186,9 +186,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Required. Copies the specified data bytes into the underlying Metal buffer for use by a shader.\n   * @access public\n   * @param {Object} bytes - The memory address from which to copy data.\n   * @param {number} length - The number of bytes to copy into the Metal buffer.\n   * @returns {void}\n   * @see https://developer.apple.com/reference/scenekit/scnbufferstream/1523175-writebytes\n   ",
-                    "start": 343,
-                    "end": 740,
+                    "value": "*\n   * Required. Copies the specified data bytes into the underlying Metal buffer for use by a shader.\n   * @access public\n   * @param {Object} bytes - The memory address from which to copy data.\n   * @param {number} length - The number of bytes to copy into the Metal buffer.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/scenekit/scnbufferstream/1523175-writebytes\n   ",
+                    "start": 347,
+                    "end": 748,
                     "loc": {
                       "start": {
                         "line": 22,
@@ -204,8 +204,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 743,
-                "end": 779,
+                "start": 751,
+                "end": 787,
                 "loc": {
                   "start": {
                     "line": 30,
@@ -219,8 +219,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 743,
-                  "end": 758,
+                  "start": 751,
+                  "end": 766,
                   "loc": {
                     "start": {
                       "line": 30,
@@ -244,8 +244,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 759,
-                    "end": 764,
+                    "start": 767,
+                    "end": 772,
                     "loc": {
                       "start": {
                         "line": 30,
@@ -261,8 +261,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 766,
-                    "end": 772,
+                    "start": 774,
+                    "end": 780,
                     "loc": {
                       "start": {
                         "line": 30,
@@ -279,8 +279,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 774,
-                  "end": 779,
+                  "start": 782,
+                  "end": 787,
                   "loc": {
                     "start": {
                       "line": 30,
@@ -298,8 +298,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Writing Data to a Buffer",
-                    "start": 312,
-                    "end": 339,
+                    "start": 316,
+                    "end": 343,
                     "loc": {
                       "start": {
                         "line": 20,
@@ -313,9 +313,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Required. Copies the specified data bytes into the underlying Metal buffer for use by a shader.\n   * @access public\n   * @param {Object} bytes - The memory address from which to copy data.\n   * @param {number} length - The number of bytes to copy into the Metal buffer.\n   * @returns {void}\n   * @see https://developer.apple.com/reference/scenekit/scnbufferstream/1523175-writebytes\n   ",
-                    "start": 343,
-                    "end": 740,
+                    "value": "*\n   * Required. Copies the specified data bytes into the underlying Metal buffer for use by a shader.\n   * @access public\n   * @param {Object} bytes - The memory address from which to copy data.\n   * @param {number} length - The number of bytes to copy into the Metal buffer.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/scenekit/scnbufferstream/1523175-writebytes\n   ",
+                    "start": 347,
+                    "end": 748,
                     "loc": {
                       "start": {
                         "line": 22,
@@ -334,9 +334,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * An object that manages a Metal buffer used by a custom shader program. \n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnbufferstream\n ",
+              "value": "*\n * An object that manages a Metal buffer used by a custom shader program. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnbufferstream\n ",
               "start": 16,
-              "end": 183,
+              "end": 187,
               "loc": {
                 "start": {
                   "line": 5,
@@ -354,9 +354,9 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * An object that manages a Metal buffer used by a custom shader program. \n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnbufferstream\n ",
+            "value": "*\n * An object that manages a Metal buffer used by a custom shader program. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnbufferstream\n ",
             "start": 16,
-            "end": 183,
+            "end": 187,
             "loc": {
               "start": {
                 "line": 5,
@@ -410,9 +410,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * An object that manages a Metal buffer used by a custom shader program. \n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnbufferstream\n ",
+            "value": "*\n * An object that manages a Metal buffer used by a custom shader program. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnbufferstream\n ",
             "start": 16,
-            "end": 183,
+            "end": 187,
             "loc": {
               "start": {
                 "line": 5,
@@ -431,9 +431,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * An object that manages a Metal buffer used by a custom shader program. \n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnbufferstream\n ",
+      "value": "*\n * An object that manages a Metal buffer used by a custom shader program. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnbufferstream\n ",
       "start": 16,
-      "end": 183,
+      "end": 187,
       "loc": {
         "start": {
           "line": 5,
@@ -448,8 +448,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 226,
-      "end": 293,
+      "start": 230,
+      "end": 297,
       "loc": {
         "start": {
           "line": 12,
@@ -464,8 +464,8 @@
     {
       "type": "CommentLine",
       "value": " Writing Data to a Buffer",
-      "start": 312,
-      "end": 339,
+      "start": 316,
+      "end": 343,
       "loc": {
         "start": {
           "line": 20,
@@ -479,9 +479,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Required. Copies the specified data bytes into the underlying Metal buffer for use by a shader.\n   * @access public\n   * @param {Object} bytes - The memory address from which to copy data.\n   * @param {number} length - The number of bytes to copy into the Metal buffer.\n   * @returns {void}\n   * @see https://developer.apple.com/reference/scenekit/scnbufferstream/1523175-writebytes\n   ",
-      "start": 343,
-      "end": 740,
+      "value": "*\n   * Required. Copies the specified data bytes into the underlying Metal buffer for use by a shader.\n   * @access public\n   * @param {Object} bytes - The memory address from which to copy data.\n   * @param {number} length - The number of bytes to copy into the Metal buffer.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/scenekit/scnbufferstream/1523175-writebytes\n   ",
+      "start": 347,
+      "end": 748,
       "loc": {
         "start": {
           "line": 22,
@@ -524,9 +524,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * An object that manages a Metal buffer used by a custom shader program. \n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnbufferstream\n ",
+      "value": "*\n * An object that manages a Metal buffer used by a custom shader program. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnbufferstream\n ",
       "start": 16,
-      "end": 183,
+      "end": 187,
       "loc": {
         "start": {
           "line": 5,
@@ -553,8 +553,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 184,
-      "end": 190,
+      "start": 188,
+      "end": 194,
       "loc": {
         "start": {
           "line": 10,
@@ -581,8 +581,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 191,
-      "end": 198,
+      "start": 195,
+      "end": 202,
       "loc": {
         "start": {
           "line": 10,
@@ -609,8 +609,8 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 199,
-      "end": 204,
+      "start": 203,
+      "end": 208,
       "loc": {
         "start": {
           "line": 10,
@@ -635,8 +635,8 @@
         "binop": null
       },
       "value": "SCNBufferStream",
-      "start": 205,
-      "end": 220,
+      "start": 209,
+      "end": 224,
       "loc": {
         "start": {
           "line": 10,
@@ -660,8 +660,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 221,
-      "end": 222,
+      "start": 225,
+      "end": 226,
       "loc": {
         "start": {
           "line": 10,
@@ -676,8 +676,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 226,
-      "end": 293,
+      "start": 230,
+      "end": 297,
       "loc": {
         "start": {
           "line": 12,
@@ -702,8 +702,8 @@
         "binop": null
       },
       "value": "init",
-      "start": 296,
-      "end": 300,
+      "start": 300,
+      "end": 304,
       "loc": {
         "start": {
           "line": 17,
@@ -727,8 +727,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 300,
-      "end": 301,
+      "start": 304,
+      "end": 305,
       "loc": {
         "start": {
           "line": 17,
@@ -752,8 +752,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 301,
-      "end": 302,
+      "start": 305,
+      "end": 306,
       "loc": {
         "start": {
           "line": 17,
@@ -777,8 +777,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 303,
-      "end": 304,
+      "start": 307,
+      "end": 308,
       "loc": {
         "start": {
           "line": 17,
@@ -802,8 +802,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 307,
-      "end": 308,
+      "start": 311,
+      "end": 312,
       "loc": {
         "start": {
           "line": 18,
@@ -818,8 +818,8 @@
     {
       "type": "CommentLine",
       "value": " Writing Data to a Buffer",
-      "start": 312,
-      "end": 339,
+      "start": 316,
+      "end": 343,
       "loc": {
         "start": {
           "line": 20,
@@ -833,9 +833,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Required. Copies the specified data bytes into the underlying Metal buffer for use by a shader.\n   * @access public\n   * @param {Object} bytes - The memory address from which to copy data.\n   * @param {number} length - The number of bytes to copy into the Metal buffer.\n   * @returns {void}\n   * @see https://developer.apple.com/reference/scenekit/scnbufferstream/1523175-writebytes\n   ",
-      "start": 343,
-      "end": 740,
+      "value": "*\n   * Required. Copies the specified data bytes into the underlying Metal buffer for use by a shader.\n   * @access public\n   * @param {Object} bytes - The memory address from which to copy data.\n   * @param {number} length - The number of bytes to copy into the Metal buffer.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/scenekit/scnbufferstream/1523175-writebytes\n   ",
+      "start": 347,
+      "end": 748,
       "loc": {
         "start": {
           "line": 22,
@@ -860,8 +860,8 @@
         "binop": null
       },
       "value": "writeBytesCount",
-      "start": 743,
-      "end": 758,
+      "start": 751,
+      "end": 766,
       "loc": {
         "start": {
           "line": 30,
@@ -885,8 +885,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 758,
-      "end": 759,
+      "start": 766,
+      "end": 767,
       "loc": {
         "start": {
           "line": 30,
@@ -911,8 +911,8 @@
         "binop": null
       },
       "value": "bytes",
-      "start": 759,
-      "end": 764,
+      "start": 767,
+      "end": 772,
       "loc": {
         "start": {
           "line": 30,
@@ -937,8 +937,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 764,
-      "end": 765,
+      "start": 772,
+      "end": 773,
       "loc": {
         "start": {
           "line": 30,
@@ -963,8 +963,8 @@
         "binop": null
       },
       "value": "length",
-      "start": 766,
-      "end": 772,
+      "start": 774,
+      "end": 780,
       "loc": {
         "start": {
           "line": 30,
@@ -988,8 +988,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 772,
-      "end": 773,
+      "start": 780,
+      "end": 781,
       "loc": {
         "start": {
           "line": 30,
@@ -1013,8 +1013,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 774,
-      "end": 775,
+      "start": 782,
+      "end": 783,
       "loc": {
         "start": {
           "line": 30,
@@ -1038,8 +1038,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 778,
-      "end": 779,
+      "start": 786,
+      "end": 787,
       "loc": {
         "start": {
           "line": 31,
@@ -1063,8 +1063,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 780,
-      "end": 781,
+      "start": 788,
+      "end": 789,
       "loc": {
         "start": {
           "line": 32,
@@ -1089,8 +1089,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 782,
-      "end": 782,
+      "start": 790,
+      "end": 790,
       "loc": {
         "start": {
           "line": 33,

@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 3378,
+  "end": 3418,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 3378,
+    "end": 3418,
     "loc": {
       "start": {
         "line": 1,
@@ -242,9 +242,9 @@
           },
           {
             "type": "CommentBlock",
-            "value": "*\n * A node that can apply Core Image filters or SKWarpGeometry distortions to its children.\n * @access public\n * @extends {SKNode}\n * @implements {SKWarpable}\n * @see https://developer.apple.com/reference/spritekit/skeffectnode\n ",
+            "value": "*\n * A node that can apply Core Image filters or SKWarpGeometry distortions to its children.\n * @access public\n * @extends {SKNode}\n * @implements {SKWarpable}\n * @see https://developer.apple.com/documentation/spritekit/skeffectnode\n ",
             "start": 214,
-            "end": 448,
+            "end": 452,
             "loc": {
               "start": {
                 "line": 10,
@@ -260,8 +260,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 449,
-        "end": 3377,
+        "start": 453,
+        "end": 3417,
         "loc": {
           "start": {
             "line": 17,
@@ -274,8 +274,8 @@
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 464,
-          "end": 3377,
+          "start": 468,
+          "end": 3417,
           "loc": {
             "start": {
               "line": 17,
@@ -288,8 +288,8 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 470,
-            "end": 482,
+            "start": 474,
+            "end": 486,
             "loc": {
               "start": {
                 "line": 17,
@@ -306,8 +306,8 @@
           },
           "superClass": {
             "type": "Identifier",
-            "start": 491,
-            "end": 497,
+            "start": 495,
+            "end": 501,
             "loc": {
               "start": {
                 "line": 17,
@@ -323,8 +323,8 @@
           },
           "body": {
             "type": "ClassBody",
-            "start": 498,
-            "end": 3377,
+            "start": 502,
+            "end": 3417,
             "loc": {
               "start": {
                 "line": 17,
@@ -338,8 +338,8 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 570,
-                "end": 2622,
+                "start": 574,
+                "end": 2654,
                 "loc": {
                   "start": {
                     "line": 24,
@@ -353,8 +353,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 570,
-                  "end": 581,
+                  "start": 574,
+                  "end": 585,
                   "loc": {
                     "start": {
                       "line": 24,
@@ -378,8 +378,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 584,
-                  "end": 2622,
+                  "start": 588,
+                  "end": 2654,
                   "loc": {
                     "start": {
                       "line": 24,
@@ -393,8 +393,8 @@
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 590,
-                      "end": 597,
+                      "start": 594,
+                      "end": 601,
                       "loc": {
                         "start": {
                           "line": 25,
@@ -407,8 +407,8 @@
                       },
                       "expression": {
                         "type": "CallExpression",
-                        "start": 590,
-                        "end": 597,
+                        "start": 594,
+                        "end": 601,
                         "loc": {
                           "start": {
                             "line": 25,
@@ -421,8 +421,8 @@
                         },
                         "callee": {
                           "type": "Super",
-                          "start": 590,
-                          "end": 595,
+                          "start": 594,
+                          "end": 599,
                           "loc": {
                             "start": {
                               "line": 25,
@@ -441,8 +441,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Enabling Filter Effects",
-                          "start": 603,
-                          "end": 629,
+                          "start": 607,
+                          "end": 633,
                           "loc": {
                             "start": {
                               "line": 27,
@@ -456,9 +456,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * A Boolean value that determines whether the effect node applies the filter to its children as they are drawn.\n     * @type {boolean}\n     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459385-shouldenableeffects\n     ",
-                          "start": 635,
-                          "end": 887,
+                          "value": "*\n     * A Boolean value that determines whether the effect node applies the filter to its children as they are drawn.\n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/spritekit/skeffectnode/1459385-shouldenableeffects\n     ",
+                          "start": 639,
+                          "end": 895,
                           "loc": {
                             "start": {
                               "line": 29,
@@ -474,8 +474,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 892,
-                      "end": 923,
+                      "start": 900,
+                      "end": 931,
                       "loc": {
                         "start": {
                           "line": 34,
@@ -488,8 +488,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 892,
-                        "end": 923,
+                        "start": 900,
+                        "end": 931,
                         "loc": {
                           "start": {
                             "line": 34,
@@ -503,8 +503,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 892,
-                          "end": 916,
+                          "start": 900,
+                          "end": 924,
                           "loc": {
                             "start": {
                               "line": 34,
@@ -517,8 +517,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 892,
-                            "end": 896,
+                            "start": 900,
+                            "end": 904,
                             "loc": {
                               "start": {
                                 "line": 34,
@@ -533,8 +533,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 897,
-                            "end": 916,
+                            "start": 905,
+                            "end": 924,
                             "loc": {
                               "start": {
                                 "line": 34,
@@ -553,8 +553,8 @@
                         },
                         "right": {
                           "type": "BooleanLiteral",
-                          "start": 919,
-                          "end": 923,
+                          "start": 927,
+                          "end": 931,
                           "loc": {
                             "start": {
                               "line": 34,
@@ -576,8 +576,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Enabling Filter Effects",
-                          "start": 603,
-                          "end": 629,
+                          "start": 607,
+                          "end": 633,
                           "loc": {
                             "start": {
                               "line": 27,
@@ -591,9 +591,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * A Boolean value that determines whether the effect node applies the filter to its children as they are drawn.\n     * @type {boolean}\n     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459385-shouldenableeffects\n     ",
-                          "start": 635,
-                          "end": 887,
+                          "value": "*\n     * A Boolean value that determines whether the effect node applies the filter to its children as they are drawn.\n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/spritekit/skeffectnode/1459385-shouldenableeffects\n     ",
+                          "start": 639,
+                          "end": 895,
                           "loc": {
                             "start": {
                               "line": 29,
@@ -610,8 +610,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Configuring the Filter",
-                          "start": 930,
-                          "end": 955,
+                          "start": 938,
+                          "end": 963,
                           "loc": {
                             "start": {
                               "line": 37,
@@ -625,9 +625,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The Core Image filter to apply.\n     * @type {?CIFilter}\n     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459392-filter\n     ",
-                          "start": 961,
-                          "end": 1124,
+                          "value": "*\n     * The Core Image filter to apply.\n     * @type {?CIFilter}\n     * @see https://developer.apple.com/documentation/spritekit/skeffectnode/1459392-filter\n     ",
+                          "start": 969,
+                          "end": 1136,
                           "loc": {
                             "start": {
                               "line": 39,
@@ -643,8 +643,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1129,
-                      "end": 1147,
+                      "start": 1141,
+                      "end": 1159,
                       "loc": {
                         "start": {
                           "line": 44,
@@ -657,8 +657,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1129,
-                        "end": 1147,
+                        "start": 1141,
+                        "end": 1159,
                         "loc": {
                           "start": {
                             "line": 44,
@@ -672,8 +672,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1129,
-                          "end": 1140,
+                          "start": 1141,
+                          "end": 1152,
                           "loc": {
                             "start": {
                               "line": 44,
@@ -686,8 +686,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1129,
-                            "end": 1133,
+                            "start": 1141,
+                            "end": 1145,
                             "loc": {
                               "start": {
                                 "line": 44,
@@ -702,8 +702,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1134,
-                            "end": 1140,
+                            "start": 1146,
+                            "end": 1152,
                             "loc": {
                               "start": {
                                 "line": 44,
@@ -722,8 +722,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 1143,
-                          "end": 1147,
+                          "start": 1155,
+                          "end": 1159,
                           "loc": {
                             "start": {
                               "line": 44,
@@ -744,8 +744,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Configuring the Filter",
-                          "start": 930,
-                          "end": 955,
+                          "start": 938,
+                          "end": 963,
                           "loc": {
                             "start": {
                               "line": 37,
@@ -759,9 +759,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The Core Image filter to apply.\n     * @type {?CIFilter}\n     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459392-filter\n     ",
-                          "start": 961,
-                          "end": 1124,
+                          "value": "*\n     * The Core Image filter to apply.\n     * @type {?CIFilter}\n     * @see https://developer.apple.com/documentation/spritekit/skeffectnode/1459392-filter\n     ",
+                          "start": 969,
+                          "end": 1136,
                           "loc": {
                             "start": {
                               "line": 39,
@@ -777,9 +777,9 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * A Boolean value that determines whether the effect node automatically sets the filter’s image center.\n     * @type {boolean}\n     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459390-shouldcenterfilter\n     ",
-                          "start": 1153,
-                          "end": 1396,
+                          "value": "*\n     * A Boolean value that determines whether the effect node automatically sets the filter’s image center.\n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/spritekit/skeffectnode/1459390-shouldcenterfilter\n     ",
+                          "start": 1165,
+                          "end": 1412,
                           "loc": {
                             "start": {
                               "line": 46,
@@ -795,8 +795,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1401,
-                      "end": 1431,
+                      "start": 1417,
+                      "end": 1447,
                       "loc": {
                         "start": {
                           "line": 51,
@@ -809,8 +809,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1401,
-                        "end": 1431,
+                        "start": 1417,
+                        "end": 1447,
                         "loc": {
                           "start": {
                             "line": 51,
@@ -824,8 +824,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1401,
-                          "end": 1424,
+                          "start": 1417,
+                          "end": 1440,
                           "loc": {
                             "start": {
                               "line": 51,
@@ -838,8 +838,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1401,
-                            "end": 1405,
+                            "start": 1417,
+                            "end": 1421,
                             "loc": {
                               "start": {
                                 "line": 51,
@@ -854,8 +854,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1406,
-                            "end": 1424,
+                            "start": 1422,
+                            "end": 1440,
                             "loc": {
                               "start": {
                                 "line": 51,
@@ -874,8 +874,8 @@
                         },
                         "right": {
                           "type": "BooleanLiteral",
-                          "start": 1427,
-                          "end": 1431,
+                          "start": 1443,
+                          "end": 1447,
                           "loc": {
                             "start": {
                               "line": 51,
@@ -896,9 +896,9 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * A Boolean value that determines whether the effect node automatically sets the filter’s image center.\n     * @type {boolean}\n     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459390-shouldcenterfilter\n     ",
-                          "start": 1153,
-                          "end": 1396,
+                          "value": "*\n     * A Boolean value that determines whether the effect node automatically sets the filter’s image center.\n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/spritekit/skeffectnode/1459390-shouldcenterfilter\n     ",
+                          "start": 1165,
+                          "end": 1412,
                           "loc": {
                             "start": {
                               "line": 46,
@@ -915,8 +915,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Blending the Results to the Framebuffer",
-                          "start": 1438,
-                          "end": 1480,
+                          "start": 1454,
+                          "end": 1496,
                           "loc": {
                             "start": {
                               "line": 54,
@@ -930,9 +930,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The blend mode used to draw the filtered image into the parent’s framebuffer.\n     * @type {SKBlendMode}\n     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459386-blendmode\n     ",
-                          "start": 1486,
-                          "end": 1700,
+                          "value": "*\n     * The blend mode used to draw the filtered image into the parent’s framebuffer.\n     * @type {SKBlendMode}\n     * @see https://developer.apple.com/documentation/spritekit/skeffectnode/1459386-blendmode\n     ",
+                          "start": 1502,
+                          "end": 1720,
                           "loc": {
                             "start": {
                               "line": 56,
@@ -948,8 +948,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 1705,
-                      "end": 1739,
+                      "start": 1725,
+                      "end": 1759,
                       "loc": {
                         "start": {
                           "line": 61,
@@ -962,8 +962,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 1705,
-                        "end": 1739,
+                        "start": 1725,
+                        "end": 1759,
                         "loc": {
                           "start": {
                             "line": 61,
@@ -977,8 +977,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 1705,
-                          "end": 1719,
+                          "start": 1725,
+                          "end": 1739,
                           "loc": {
                             "start": {
                               "line": 61,
@@ -991,8 +991,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 1705,
-                            "end": 1709,
+                            "start": 1725,
+                            "end": 1729,
                             "loc": {
                               "start": {
                                 "line": 61,
@@ -1007,8 +1007,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1710,
-                            "end": 1719,
+                            "start": 1730,
+                            "end": 1739,
                             "loc": {
                               "start": {
                                 "line": 61,
@@ -1027,8 +1027,8 @@
                         },
                         "right": {
                           "type": "MemberExpression",
-                          "start": 1722,
-                          "end": 1739,
+                          "start": 1742,
+                          "end": 1759,
                           "loc": {
                             "start": {
                               "line": 61,
@@ -1041,8 +1041,8 @@
                           },
                           "object": {
                             "type": "Identifier",
-                            "start": 1722,
-                            "end": 1733,
+                            "start": 1742,
+                            "end": 1753,
                             "loc": {
                               "start": {
                                 "line": 61,
@@ -1058,8 +1058,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 1734,
-                            "end": 1739,
+                            "start": 1754,
+                            "end": 1759,
                             "loc": {
                               "start": {
                                 "line": 61,
@@ -1085,8 +1085,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Blending the Results to the Framebuffer",
-                          "start": 1438,
-                          "end": 1480,
+                          "start": 1454,
+                          "end": 1496,
                           "loc": {
                             "start": {
                               "line": 54,
@@ -1100,9 +1100,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The blend mode used to draw the filtered image into the parent’s framebuffer.\n     * @type {SKBlendMode}\n     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459386-blendmode\n     ",
-                          "start": 1486,
-                          "end": 1700,
+                          "value": "*\n     * The blend mode used to draw the filtered image into the parent’s framebuffer.\n     * @type {SKBlendMode}\n     * @see https://developer.apple.com/documentation/spritekit/skeffectnode/1459386-blendmode\n     ",
+                          "start": 1502,
+                          "end": 1720,
                           "loc": {
                             "start": {
                               "line": 56,
@@ -1119,8 +1119,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Working with Custom Shaders",
-                          "start": 1746,
-                          "end": 1776,
+                          "start": 1766,
+                          "end": 1796,
                           "loc": {
                             "start": {
                               "line": 64,
@@ -1134,9 +1134,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * A custom shader that is called when the effect node is blended into the parent’s framebuffer.\n     * @type {?SKShader}\n     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459388-shader\n     ",
-                          "start": 1782,
-                          "end": 2007,
+                          "value": "*\n     * A custom shader that is called when the effect node is blended into the parent’s framebuffer.\n     * @type {?SKShader}\n     * @see https://developer.apple.com/documentation/spritekit/skeffectnode/1459388-shader\n     ",
+                          "start": 1802,
+                          "end": 2031,
                           "loc": {
                             "start": {
                               "line": 66,
@@ -1152,8 +1152,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2012,
-                      "end": 2030,
+                      "start": 2036,
+                      "end": 2054,
                       "loc": {
                         "start": {
                           "line": 71,
@@ -1166,8 +1166,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2012,
-                        "end": 2030,
+                        "start": 2036,
+                        "end": 2054,
                         "loc": {
                           "start": {
                             "line": 71,
@@ -1181,8 +1181,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2012,
-                          "end": 2023,
+                          "start": 2036,
+                          "end": 2047,
                           "loc": {
                             "start": {
                               "line": 71,
@@ -1195,8 +1195,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2012,
-                            "end": 2016,
+                            "start": 2036,
+                            "end": 2040,
                             "loc": {
                               "start": {
                                 "line": 71,
@@ -1211,8 +1211,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2017,
-                            "end": 2023,
+                            "start": 2041,
+                            "end": 2047,
                             "loc": {
                               "start": {
                                 "line": 71,
@@ -1231,8 +1231,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 2026,
-                          "end": 2030,
+                          "start": 2050,
+                          "end": 2054,
                           "loc": {
                             "start": {
                               "line": 71,
@@ -1253,8 +1253,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Working with Custom Shaders",
-                          "start": 1746,
-                          "end": 1776,
+                          "start": 1766,
+                          "end": 1796,
                           "loc": {
                             "start": {
                               "line": 64,
@@ -1268,9 +1268,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * A custom shader that is called when the effect node is blended into the parent’s framebuffer.\n     * @type {?SKShader}\n     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459388-shader\n     ",
-                          "start": 1782,
-                          "end": 2007,
+                          "value": "*\n     * A custom shader that is called when the effect node is blended into the parent’s framebuffer.\n     * @type {?SKShader}\n     * @see https://developer.apple.com/documentation/spritekit/skeffectnode/1459388-shader\n     ",
+                          "start": 1802,
+                          "end": 2031,
                           "loc": {
                             "start": {
                               "line": 66,
@@ -1286,9 +1286,9 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The values of each attribute associated with the node's attached shader.\n     * @type {Map<string, SKAttributeValue>}\n     * @see https://developer.apple.com/reference/spritekit/skeffectnode/2715848-attributevalues\n     ",
-                          "start": 2036,
-                          "end": 2269,
+                          "value": "*\n     * The values of each attribute associated with the node's attached shader.\n     * @type {Map<string, SKAttributeValue>}\n     * @see https://developer.apple.com/documentation/spritekit/skeffectnode/2715848-attributevalues\n     ",
+                          "start": 2060,
+                          "end": 2297,
                           "loc": {
                             "start": {
                               "line": 73,
@@ -1304,8 +1304,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2274,
-                      "end": 2306,
+                      "start": 2302,
+                      "end": 2334,
                       "loc": {
                         "start": {
                           "line": 78,
@@ -1318,8 +1318,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2274,
-                        "end": 2306,
+                        "start": 2302,
+                        "end": 2334,
                         "loc": {
                           "start": {
                             "line": 78,
@@ -1333,8 +1333,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2274,
-                          "end": 2294,
+                          "start": 2302,
+                          "end": 2322,
                           "loc": {
                             "start": {
                               "line": 78,
@@ -1347,8 +1347,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2274,
-                            "end": 2278,
+                            "start": 2302,
+                            "end": 2306,
                             "loc": {
                               "start": {
                                 "line": 78,
@@ -1363,8 +1363,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2279,
-                            "end": 2294,
+                            "start": 2307,
+                            "end": 2322,
                             "loc": {
                               "start": {
                                 "line": 78,
@@ -1383,8 +1383,8 @@
                         },
                         "right": {
                           "type": "NewExpression",
-                          "start": 2297,
-                          "end": 2306,
+                          "start": 2325,
+                          "end": 2334,
                           "loc": {
                             "start": {
                               "line": 78,
@@ -1397,8 +1397,8 @@
                           },
                           "callee": {
                             "type": "Identifier",
-                            "start": 2301,
-                            "end": 2304,
+                            "start": 2329,
+                            "end": 2332,
                             "loc": {
                               "start": {
                                 "line": 78,
@@ -1421,9 +1421,9 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The values of each attribute associated with the node's attached shader.\n     * @type {Map<string, SKAttributeValue>}\n     * @see https://developer.apple.com/reference/spritekit/skeffectnode/2715848-attributevalues\n     ",
-                          "start": 2036,
-                          "end": 2269,
+                          "value": "*\n     * The values of each attribute associated with the node's attached shader.\n     * @type {Map<string, SKAttributeValue>}\n     * @see https://developer.apple.com/documentation/spritekit/skeffectnode/2715848-attributevalues\n     ",
+                          "start": 2060,
+                          "end": 2297,
                           "loc": {
                             "start": {
                               "line": 73,
@@ -1440,8 +1440,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Caching the Filter Results",
-                          "start": 2313,
-                          "end": 2342,
+                          "start": 2341,
+                          "end": 2370,
                           "loc": {
                             "start": {
                               "line": 81,
@@ -1455,9 +1455,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * A Boolean value that indicates whether the results of rendering the child nodes should be cached.\n     * @type {boolean}\n     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459381-shouldrasterize\n     ",
-                          "start": 2348,
-                          "end": 2584,
+                          "value": "*\n     * A Boolean value that indicates whether the results of rendering the child nodes should be cached.\n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/spritekit/skeffectnode/1459381-shouldrasterize\n     ",
+                          "start": 2376,
+                          "end": 2616,
                           "loc": {
                             "start": {
                               "line": 83,
@@ -1473,8 +1473,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2589,
-                      "end": 2617,
+                      "start": 2621,
+                      "end": 2649,
                       "loc": {
                         "start": {
                           "line": 88,
@@ -1487,8 +1487,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2589,
-                        "end": 2617,
+                        "start": 2621,
+                        "end": 2649,
                         "loc": {
                           "start": {
                             "line": 88,
@@ -1502,8 +1502,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2589,
-                          "end": 2609,
+                          "start": 2621,
+                          "end": 2641,
                           "loc": {
                             "start": {
                               "line": 88,
@@ -1516,8 +1516,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2589,
-                            "end": 2593,
+                            "start": 2621,
+                            "end": 2625,
                             "loc": {
                               "start": {
                                 "line": 88,
@@ -1532,8 +1532,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2594,
-                            "end": 2609,
+                            "start": 2626,
+                            "end": 2641,
                             "loc": {
                               "start": {
                                 "line": 88,
@@ -1552,8 +1552,8 @@
                         },
                         "right": {
                           "type": "BooleanLiteral",
-                          "start": 2612,
-                          "end": 2617,
+                          "start": 2644,
+                          "end": 2649,
                           "loc": {
                             "start": {
                               "line": 88,
@@ -1572,8 +1572,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Caching the Filter Results",
-                          "start": 2313,
-                          "end": 2342,
+                          "start": 2341,
+                          "end": 2370,
                           "loc": {
                             "start": {
                               "line": 81,
@@ -1587,9 +1587,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * A Boolean value that indicates whether the results of rendering the child nodes should be cached.\n     * @type {boolean}\n     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459381-shouldrasterize\n     ",
-                          "start": 2348,
-                          "end": 2584,
+                          "value": "*\n     * A Boolean value that indicates whether the results of rendering the child nodes should be cached.\n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/spritekit/skeffectnode/1459381-shouldrasterize\n     ",
+                          "start": 2376,
+                          "end": 2616,
                           "loc": {
                             "start": {
                               "line": 83,
@@ -1611,8 +1611,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
-                    "start": 503,
-                    "end": 567,
+                    "start": 507,
+                    "end": 571,
                     "loc": {
                       "start": {
                         "line": 19,
@@ -1629,8 +1629,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Working with Custom Shaders",
-                    "start": 2626,
-                    "end": 2656,
+                    "start": 2658,
+                    "end": 2688,
                     "loc": {
                       "start": {
                         "line": 92,
@@ -1644,9 +1644,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Sets an attribute value for an attached shader.\n   * @access public\n   * @param {SKAttributeValue} value - An attribute value object containing the scalar or vector value to set in the attached shader.\n   * @param {string} key - The attribute name.\n   * @returns {void}\n   * @see https://developer.apple.com/reference/spritekit/skeffectnode/2715853-setvalue\n   ",
-                    "start": 2660,
-                    "end": 3032,
+                    "value": "*\n   * Sets an attribute value for an attached shader.\n   * @access public\n   * @param {SKAttributeValue} value - An attribute value object containing the scalar or vector value to set in the attached shader.\n   * @param {string} key - The attribute name.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/spritekit/skeffectnode/2715853-setvalue\n   ",
+                    "start": 2692,
+                    "end": 3068,
                     "loc": {
                       "start": {
                         "line": 94,
@@ -1661,8 +1661,8 @@
                   {
                     "type": "CommentLine",
                     "value": "setValueForAttribute(value, key) {",
-                    "start": 3035,
-                    "end": 3071,
+                    "start": 3071,
+                    "end": 3107,
                     "loc": {
                       "start": {
                         "line": 102,
@@ -1677,8 +1677,8 @@
                   {
                     "type": "CommentLine",
                     "value": "}",
-                    "start": 3074,
-                    "end": 3077,
+                    "start": 3110,
+                    "end": 3113,
                     "loc": {
                       "start": {
                         "line": 103,
@@ -1692,9 +1692,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The value of a shader attribute.\n   * @access public\n   * @param {string} key - The attribute name.\n   * @returns {?SKAttributeValue} - \n   * @see https://developer.apple.com/reference/spritekit/skeffectnode/2715844-value\n   ",
-                    "start": 3081,
-                    "end": 3317,
+                    "value": "*\n   * The value of a shader attribute.\n   * @access public\n   * @param {string} key - The attribute name.\n   * @returns {?SKAttributeValue} - \n   * @see https://developer.apple.com/documentation/spritekit/skeffectnode/2715844-value\n   ",
+                    "start": 3117,
+                    "end": 3357,
                     "loc": {
                       "start": {
                         "line": 105,
@@ -1709,8 +1709,8 @@
                   {
                     "type": "CommentLine",
                     "value": "valueForAttributeNamed(key) {",
-                    "start": 3320,
-                    "end": 3351,
+                    "start": 3360,
+                    "end": 3391,
                     "loc": {
                       "start": {
                         "line": 112,
@@ -1725,8 +1725,8 @@
                   {
                     "type": "CommentLine",
                     "value": "  return null",
-                    "start": 3354,
-                    "end": 3369,
+                    "start": 3394,
+                    "end": 3409,
                     "loc": {
                       "start": {
                         "line": 113,
@@ -1741,8 +1741,8 @@
                   {
                     "type": "CommentLine",
                     "value": "}",
-                    "start": 3372,
-                    "end": 3375,
+                    "start": 3412,
+                    "end": 3415,
                     "loc": {
                       "start": {
                         "line": 114,
@@ -1793,9 +1793,9 @@
             },
             {
               "type": "CommentBlock",
-              "value": "*\n * A node that can apply Core Image filters or SKWarpGeometry distortions to its children.\n * @access public\n * @extends {SKNode}\n * @implements {SKWarpable}\n * @see https://developer.apple.com/reference/spritekit/skeffectnode\n ",
+              "value": "*\n * A node that can apply Core Image filters or SKWarpGeometry distortions to its children.\n * @access public\n * @extends {SKNode}\n * @implements {SKWarpable}\n * @see https://developer.apple.com/documentation/spritekit/skeffectnode\n ",
               "start": 214,
-              "end": 448,
+              "end": 452,
               "loc": {
                 "start": {
                   "line": 10,
@@ -1845,9 +1845,9 @@
           },
           {
             "type": "CommentBlock",
-            "value": "*\n * A node that can apply Core Image filters or SKWarpGeometry distortions to its children.\n * @access public\n * @extends {SKNode}\n * @implements {SKWarpable}\n * @see https://developer.apple.com/reference/spritekit/skeffectnode\n ",
+            "value": "*\n * A node that can apply Core Image filters or SKWarpGeometry distortions to its children.\n * @access public\n * @extends {SKNode}\n * @implements {SKWarpable}\n * @see https://developer.apple.com/documentation/spritekit/skeffectnode\n ",
             "start": 214,
-            "end": 448,
+            "end": 452,
             "loc": {
               "start": {
                 "line": 10,
@@ -1951,9 +1951,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * A node that can apply Core Image filters or SKWarpGeometry distortions to its children.\n * @access public\n * @extends {SKNode}\n * @implements {SKWarpable}\n * @see https://developer.apple.com/reference/spritekit/skeffectnode\n ",
+      "value": "*\n * A node that can apply Core Image filters or SKWarpGeometry distortions to its children.\n * @access public\n * @extends {SKNode}\n * @implements {SKWarpable}\n * @see https://developer.apple.com/documentation/spritekit/skeffectnode\n ",
       "start": 214,
-      "end": 448,
+      "end": 452,
       "loc": {
         "start": {
           "line": 10,
@@ -1968,8 +1968,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
-      "start": 503,
-      "end": 567,
+      "start": 507,
+      "end": 571,
       "loc": {
         "start": {
           "line": 19,
@@ -1984,8 +1984,8 @@
     {
       "type": "CommentLine",
       "value": " Enabling Filter Effects",
-      "start": 603,
-      "end": 629,
+      "start": 607,
+      "end": 633,
       "loc": {
         "start": {
           "line": 27,
@@ -1999,9 +1999,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * A Boolean value that determines whether the effect node applies the filter to its children as they are drawn.\n     * @type {boolean}\n     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459385-shouldenableeffects\n     ",
-      "start": 635,
-      "end": 887,
+      "value": "*\n     * A Boolean value that determines whether the effect node applies the filter to its children as they are drawn.\n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/spritekit/skeffectnode/1459385-shouldenableeffects\n     ",
+      "start": 639,
+      "end": 895,
       "loc": {
         "start": {
           "line": 29,
@@ -2016,8 +2016,8 @@
     {
       "type": "CommentLine",
       "value": " Configuring the Filter",
-      "start": 930,
-      "end": 955,
+      "start": 938,
+      "end": 963,
       "loc": {
         "start": {
           "line": 37,
@@ -2031,9 +2031,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The Core Image filter to apply.\n     * @type {?CIFilter}\n     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459392-filter\n     ",
-      "start": 961,
-      "end": 1124,
+      "value": "*\n     * The Core Image filter to apply.\n     * @type {?CIFilter}\n     * @see https://developer.apple.com/documentation/spritekit/skeffectnode/1459392-filter\n     ",
+      "start": 969,
+      "end": 1136,
       "loc": {
         "start": {
           "line": 39,
@@ -2047,9 +2047,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * A Boolean value that determines whether the effect node automatically sets the filter’s image center.\n     * @type {boolean}\n     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459390-shouldcenterfilter\n     ",
-      "start": 1153,
-      "end": 1396,
+      "value": "*\n     * A Boolean value that determines whether the effect node automatically sets the filter’s image center.\n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/spritekit/skeffectnode/1459390-shouldcenterfilter\n     ",
+      "start": 1165,
+      "end": 1412,
       "loc": {
         "start": {
           "line": 46,
@@ -2064,8 +2064,8 @@
     {
       "type": "CommentLine",
       "value": " Blending the Results to the Framebuffer",
-      "start": 1438,
-      "end": 1480,
+      "start": 1454,
+      "end": 1496,
       "loc": {
         "start": {
           "line": 54,
@@ -2079,9 +2079,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The blend mode used to draw the filtered image into the parent’s framebuffer.\n     * @type {SKBlendMode}\n     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459386-blendmode\n     ",
-      "start": 1486,
-      "end": 1700,
+      "value": "*\n     * The blend mode used to draw the filtered image into the parent’s framebuffer.\n     * @type {SKBlendMode}\n     * @see https://developer.apple.com/documentation/spritekit/skeffectnode/1459386-blendmode\n     ",
+      "start": 1502,
+      "end": 1720,
       "loc": {
         "start": {
           "line": 56,
@@ -2096,8 +2096,8 @@
     {
       "type": "CommentLine",
       "value": " Working with Custom Shaders",
-      "start": 1746,
-      "end": 1776,
+      "start": 1766,
+      "end": 1796,
       "loc": {
         "start": {
           "line": 64,
@@ -2111,9 +2111,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * A custom shader that is called when the effect node is blended into the parent’s framebuffer.\n     * @type {?SKShader}\n     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459388-shader\n     ",
-      "start": 1782,
-      "end": 2007,
+      "value": "*\n     * A custom shader that is called when the effect node is blended into the parent’s framebuffer.\n     * @type {?SKShader}\n     * @see https://developer.apple.com/documentation/spritekit/skeffectnode/1459388-shader\n     ",
+      "start": 1802,
+      "end": 2031,
       "loc": {
         "start": {
           "line": 66,
@@ -2127,9 +2127,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The values of each attribute associated with the node's attached shader.\n     * @type {Map<string, SKAttributeValue>}\n     * @see https://developer.apple.com/reference/spritekit/skeffectnode/2715848-attributevalues\n     ",
-      "start": 2036,
-      "end": 2269,
+      "value": "*\n     * The values of each attribute associated with the node's attached shader.\n     * @type {Map<string, SKAttributeValue>}\n     * @see https://developer.apple.com/documentation/spritekit/skeffectnode/2715848-attributevalues\n     ",
+      "start": 2060,
+      "end": 2297,
       "loc": {
         "start": {
           "line": 73,
@@ -2144,8 +2144,8 @@
     {
       "type": "CommentLine",
       "value": " Caching the Filter Results",
-      "start": 2313,
-      "end": 2342,
+      "start": 2341,
+      "end": 2370,
       "loc": {
         "start": {
           "line": 81,
@@ -2159,9 +2159,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * A Boolean value that indicates whether the results of rendering the child nodes should be cached.\n     * @type {boolean}\n     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459381-shouldrasterize\n     ",
-      "start": 2348,
-      "end": 2584,
+      "value": "*\n     * A Boolean value that indicates whether the results of rendering the child nodes should be cached.\n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/spritekit/skeffectnode/1459381-shouldrasterize\n     ",
+      "start": 2376,
+      "end": 2616,
       "loc": {
         "start": {
           "line": 83,
@@ -2176,8 +2176,8 @@
     {
       "type": "CommentLine",
       "value": " Working with Custom Shaders",
-      "start": 2626,
-      "end": 2656,
+      "start": 2658,
+      "end": 2688,
       "loc": {
         "start": {
           "line": 92,
@@ -2191,9 +2191,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Sets an attribute value for an attached shader.\n   * @access public\n   * @param {SKAttributeValue} value - An attribute value object containing the scalar or vector value to set in the attached shader.\n   * @param {string} key - The attribute name.\n   * @returns {void}\n   * @see https://developer.apple.com/reference/spritekit/skeffectnode/2715853-setvalue\n   ",
-      "start": 2660,
-      "end": 3032,
+      "value": "*\n   * Sets an attribute value for an attached shader.\n   * @access public\n   * @param {SKAttributeValue} value - An attribute value object containing the scalar or vector value to set in the attached shader.\n   * @param {string} key - The attribute name.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/spritekit/skeffectnode/2715853-setvalue\n   ",
+      "start": 2692,
+      "end": 3068,
       "loc": {
         "start": {
           "line": 94,
@@ -2208,8 +2208,8 @@
     {
       "type": "CommentLine",
       "value": "setValueForAttribute(value, key) {",
-      "start": 3035,
-      "end": 3071,
+      "start": 3071,
+      "end": 3107,
       "loc": {
         "start": {
           "line": 102,
@@ -2224,8 +2224,8 @@
     {
       "type": "CommentLine",
       "value": "}",
-      "start": 3074,
-      "end": 3077,
+      "start": 3110,
+      "end": 3113,
       "loc": {
         "start": {
           "line": 103,
@@ -2239,9 +2239,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The value of a shader attribute.\n   * @access public\n   * @param {string} key - The attribute name.\n   * @returns {?SKAttributeValue} - \n   * @see https://developer.apple.com/reference/spritekit/skeffectnode/2715844-value\n   ",
-      "start": 3081,
-      "end": 3317,
+      "value": "*\n   * The value of a shader attribute.\n   * @access public\n   * @param {string} key - The attribute name.\n   * @returns {?SKAttributeValue} - \n   * @see https://developer.apple.com/documentation/spritekit/skeffectnode/2715844-value\n   ",
+      "start": 3117,
+      "end": 3357,
       "loc": {
         "start": {
           "line": 105,
@@ -2256,8 +2256,8 @@
     {
       "type": "CommentLine",
       "value": "valueForAttributeNamed(key) {",
-      "start": 3320,
-      "end": 3351,
+      "start": 3360,
+      "end": 3391,
       "loc": {
         "start": {
           "line": 112,
@@ -2272,8 +2272,8 @@
     {
       "type": "CommentLine",
       "value": "  return null",
-      "start": 3354,
-      "end": 3369,
+      "start": 3394,
+      "end": 3409,
       "loc": {
         "start": {
           "line": 113,
@@ -2288,8 +2288,8 @@
     {
       "type": "CommentLine",
       "value": "}",
-      "start": 3372,
-      "end": 3375,
+      "start": 3412,
+      "end": 3415,
       "loc": {
         "start": {
           "line": 114,
@@ -2594,9 +2594,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * A node that can apply Core Image filters or SKWarpGeometry distortions to its children.\n * @access public\n * @extends {SKNode}\n * @implements {SKWarpable}\n * @see https://developer.apple.com/reference/spritekit/skeffectnode\n ",
+      "value": "*\n * A node that can apply Core Image filters or SKWarpGeometry distortions to its children.\n * @access public\n * @extends {SKNode}\n * @implements {SKWarpable}\n * @see https://developer.apple.com/documentation/spritekit/skeffectnode\n ",
       "start": 214,
-      "end": 448,
+      "end": 452,
       "loc": {
         "start": {
           "line": 10,
@@ -2623,8 +2623,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 449,
-      "end": 455,
+      "start": 453,
+      "end": 459,
       "loc": {
         "start": {
           "line": 17,
@@ -2651,8 +2651,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 456,
-      "end": 463,
+      "start": 460,
+      "end": 467,
       "loc": {
         "start": {
           "line": 17,
@@ -2679,8 +2679,8 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 464,
-      "end": 469,
+      "start": 468,
+      "end": 473,
       "loc": {
         "start": {
           "line": 17,
@@ -2705,8 +2705,8 @@
         "binop": null
       },
       "value": "SKEffectNode",
-      "start": 470,
-      "end": 482,
+      "start": 474,
+      "end": 486,
       "loc": {
         "start": {
           "line": 17,
@@ -2733,8 +2733,8 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 483,
-      "end": 490,
+      "start": 487,
+      "end": 494,
       "loc": {
         "start": {
           "line": 17,
@@ -2759,8 +2759,8 @@
         "binop": null
       },
       "value": "SKNode",
-      "start": 491,
-      "end": 497,
+      "start": 495,
+      "end": 501,
       "loc": {
         "start": {
           "line": 17,
@@ -2784,8 +2784,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 498,
-      "end": 499,
+      "start": 502,
+      "end": 503,
       "loc": {
         "start": {
           "line": 17,
@@ -2800,8 +2800,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
-      "start": 503,
-      "end": 567,
+      "start": 507,
+      "end": 571,
       "loc": {
         "start": {
           "line": 19,
@@ -2826,8 +2826,8 @@
         "binop": null
       },
       "value": "constructor",
-      "start": 570,
-      "end": 581,
+      "start": 574,
+      "end": 585,
       "loc": {
         "start": {
           "line": 24,
@@ -2851,8 +2851,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 581,
-      "end": 582,
+      "start": 585,
+      "end": 586,
       "loc": {
         "start": {
           "line": 24,
@@ -2876,8 +2876,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 582,
-      "end": 583,
+      "start": 586,
+      "end": 587,
       "loc": {
         "start": {
           "line": 24,
@@ -2901,8 +2901,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 584,
-      "end": 585,
+      "start": 588,
+      "end": 589,
       "loc": {
         "start": {
           "line": 24,
@@ -2929,8 +2929,8 @@
         "updateContext": null
       },
       "value": "super",
-      "start": 590,
-      "end": 595,
+      "start": 594,
+      "end": 599,
       "loc": {
         "start": {
           "line": 25,
@@ -2954,8 +2954,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 595,
-      "end": 596,
+      "start": 599,
+      "end": 600,
       "loc": {
         "start": {
           "line": 25,
@@ -2979,8 +2979,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 596,
-      "end": 597,
+      "start": 600,
+      "end": 601,
       "loc": {
         "start": {
           "line": 25,
@@ -2995,8 +2995,8 @@
     {
       "type": "CommentLine",
       "value": " Enabling Filter Effects",
-      "start": 603,
-      "end": 629,
+      "start": 607,
+      "end": 633,
       "loc": {
         "start": {
           "line": 27,
@@ -3010,9 +3010,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * A Boolean value that determines whether the effect node applies the filter to its children as they are drawn.\n     * @type {boolean}\n     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459385-shouldenableeffects\n     ",
-      "start": 635,
-      "end": 887,
+      "value": "*\n     * A Boolean value that determines whether the effect node applies the filter to its children as they are drawn.\n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/spritekit/skeffectnode/1459385-shouldenableeffects\n     ",
+      "start": 639,
+      "end": 895,
       "loc": {
         "start": {
           "line": 29,
@@ -3039,8 +3039,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 892,
-      "end": 896,
+      "start": 900,
+      "end": 904,
       "loc": {
         "start": {
           "line": 34,
@@ -3065,8 +3065,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 896,
-      "end": 897,
+      "start": 904,
+      "end": 905,
       "loc": {
         "start": {
           "line": 34,
@@ -3091,8 +3091,8 @@
         "binop": null
       },
       "value": "shouldEnableEffects",
-      "start": 897,
-      "end": 916,
+      "start": 905,
+      "end": 924,
       "loc": {
         "start": {
           "line": 34,
@@ -3118,8 +3118,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 917,
-      "end": 918,
+      "start": 925,
+      "end": 926,
       "loc": {
         "start": {
           "line": 34,
@@ -3146,8 +3146,8 @@
         "updateContext": null
       },
       "value": "true",
-      "start": 919,
-      "end": 923,
+      "start": 927,
+      "end": 931,
       "loc": {
         "start": {
           "line": 34,
@@ -3162,8 +3162,8 @@
     {
       "type": "CommentLine",
       "value": " Configuring the Filter",
-      "start": 930,
-      "end": 955,
+      "start": 938,
+      "end": 963,
       "loc": {
         "start": {
           "line": 37,
@@ -3177,9 +3177,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The Core Image filter to apply.\n     * @type {?CIFilter}\n     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459392-filter\n     ",
-      "start": 961,
-      "end": 1124,
+      "value": "*\n     * The Core Image filter to apply.\n     * @type {?CIFilter}\n     * @see https://developer.apple.com/documentation/spritekit/skeffectnode/1459392-filter\n     ",
+      "start": 969,
+      "end": 1136,
       "loc": {
         "start": {
           "line": 39,
@@ -3206,8 +3206,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1129,
-      "end": 1133,
+      "start": 1141,
+      "end": 1145,
       "loc": {
         "start": {
           "line": 44,
@@ -3232,8 +3232,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1133,
-      "end": 1134,
+      "start": 1145,
+      "end": 1146,
       "loc": {
         "start": {
           "line": 44,
@@ -3258,8 +3258,8 @@
         "binop": null
       },
       "value": "filter",
-      "start": 1134,
-      "end": 1140,
+      "start": 1146,
+      "end": 1152,
       "loc": {
         "start": {
           "line": 44,
@@ -3285,8 +3285,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1141,
-      "end": 1142,
+      "start": 1153,
+      "end": 1154,
       "loc": {
         "start": {
           "line": 44,
@@ -3313,8 +3313,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 1143,
-      "end": 1147,
+      "start": 1155,
+      "end": 1159,
       "loc": {
         "start": {
           "line": 44,
@@ -3328,9 +3328,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * A Boolean value that determines whether the effect node automatically sets the filter’s image center.\n     * @type {boolean}\n     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459390-shouldcenterfilter\n     ",
-      "start": 1153,
-      "end": 1396,
+      "value": "*\n     * A Boolean value that determines whether the effect node automatically sets the filter’s image center.\n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/spritekit/skeffectnode/1459390-shouldcenterfilter\n     ",
+      "start": 1165,
+      "end": 1412,
       "loc": {
         "start": {
           "line": 46,
@@ -3357,8 +3357,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1401,
-      "end": 1405,
+      "start": 1417,
+      "end": 1421,
       "loc": {
         "start": {
           "line": 51,
@@ -3383,8 +3383,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1405,
-      "end": 1406,
+      "start": 1421,
+      "end": 1422,
       "loc": {
         "start": {
           "line": 51,
@@ -3409,8 +3409,8 @@
         "binop": null
       },
       "value": "shouldCenterFilter",
-      "start": 1406,
-      "end": 1424,
+      "start": 1422,
+      "end": 1440,
       "loc": {
         "start": {
           "line": 51,
@@ -3436,8 +3436,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1425,
-      "end": 1426,
+      "start": 1441,
+      "end": 1442,
       "loc": {
         "start": {
           "line": 51,
@@ -3464,8 +3464,8 @@
         "updateContext": null
       },
       "value": "true",
-      "start": 1427,
-      "end": 1431,
+      "start": 1443,
+      "end": 1447,
       "loc": {
         "start": {
           "line": 51,
@@ -3480,8 +3480,8 @@
     {
       "type": "CommentLine",
       "value": " Blending the Results to the Framebuffer",
-      "start": 1438,
-      "end": 1480,
+      "start": 1454,
+      "end": 1496,
       "loc": {
         "start": {
           "line": 54,
@@ -3495,9 +3495,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The blend mode used to draw the filtered image into the parent’s framebuffer.\n     * @type {SKBlendMode}\n     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459386-blendmode\n     ",
-      "start": 1486,
-      "end": 1700,
+      "value": "*\n     * The blend mode used to draw the filtered image into the parent’s framebuffer.\n     * @type {SKBlendMode}\n     * @see https://developer.apple.com/documentation/spritekit/skeffectnode/1459386-blendmode\n     ",
+      "start": 1502,
+      "end": 1720,
       "loc": {
         "start": {
           "line": 56,
@@ -3524,8 +3524,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 1705,
-      "end": 1709,
+      "start": 1725,
+      "end": 1729,
       "loc": {
         "start": {
           "line": 61,
@@ -3550,8 +3550,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1709,
-      "end": 1710,
+      "start": 1729,
+      "end": 1730,
       "loc": {
         "start": {
           "line": 61,
@@ -3576,8 +3576,8 @@
         "binop": null
       },
       "value": "blendMode",
-      "start": 1710,
-      "end": 1719,
+      "start": 1730,
+      "end": 1739,
       "loc": {
         "start": {
           "line": 61,
@@ -3603,8 +3603,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 1720,
-      "end": 1721,
+      "start": 1740,
+      "end": 1741,
       "loc": {
         "start": {
           "line": 61,
@@ -3629,8 +3629,8 @@
         "binop": null
       },
       "value": "SKBlendMode",
-      "start": 1722,
-      "end": 1733,
+      "start": 1742,
+      "end": 1753,
       "loc": {
         "start": {
           "line": 61,
@@ -3655,8 +3655,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1733,
-      "end": 1734,
+      "start": 1753,
+      "end": 1754,
       "loc": {
         "start": {
           "line": 61,
@@ -3681,8 +3681,8 @@
         "binop": null
       },
       "value": "alpha",
-      "start": 1734,
-      "end": 1739,
+      "start": 1754,
+      "end": 1759,
       "loc": {
         "start": {
           "line": 61,
@@ -3697,8 +3697,8 @@
     {
       "type": "CommentLine",
       "value": " Working with Custom Shaders",
-      "start": 1746,
-      "end": 1776,
+      "start": 1766,
+      "end": 1796,
       "loc": {
         "start": {
           "line": 64,
@@ -3712,9 +3712,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * A custom shader that is called when the effect node is blended into the parent’s framebuffer.\n     * @type {?SKShader}\n     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459388-shader\n     ",
-      "start": 1782,
-      "end": 2007,
+      "value": "*\n     * A custom shader that is called when the effect node is blended into the parent’s framebuffer.\n     * @type {?SKShader}\n     * @see https://developer.apple.com/documentation/spritekit/skeffectnode/1459388-shader\n     ",
+      "start": 1802,
+      "end": 2031,
       "loc": {
         "start": {
           "line": 66,
@@ -3741,8 +3741,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2012,
-      "end": 2016,
+      "start": 2036,
+      "end": 2040,
       "loc": {
         "start": {
           "line": 71,
@@ -3767,8 +3767,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2016,
-      "end": 2017,
+      "start": 2040,
+      "end": 2041,
       "loc": {
         "start": {
           "line": 71,
@@ -3793,8 +3793,8 @@
         "binop": null
       },
       "value": "shader",
-      "start": 2017,
-      "end": 2023,
+      "start": 2041,
+      "end": 2047,
       "loc": {
         "start": {
           "line": 71,
@@ -3820,8 +3820,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2024,
-      "end": 2025,
+      "start": 2048,
+      "end": 2049,
       "loc": {
         "start": {
           "line": 71,
@@ -3848,8 +3848,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2026,
-      "end": 2030,
+      "start": 2050,
+      "end": 2054,
       "loc": {
         "start": {
           "line": 71,
@@ -3863,9 +3863,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The values of each attribute associated with the node's attached shader.\n     * @type {Map<string, SKAttributeValue>}\n     * @see https://developer.apple.com/reference/spritekit/skeffectnode/2715848-attributevalues\n     ",
-      "start": 2036,
-      "end": 2269,
+      "value": "*\n     * The values of each attribute associated with the node's attached shader.\n     * @type {Map<string, SKAttributeValue>}\n     * @see https://developer.apple.com/documentation/spritekit/skeffectnode/2715848-attributevalues\n     ",
+      "start": 2060,
+      "end": 2297,
       "loc": {
         "start": {
           "line": 73,
@@ -3892,8 +3892,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2274,
-      "end": 2278,
+      "start": 2302,
+      "end": 2306,
       "loc": {
         "start": {
           "line": 78,
@@ -3918,8 +3918,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2278,
-      "end": 2279,
+      "start": 2306,
+      "end": 2307,
       "loc": {
         "start": {
           "line": 78,
@@ -3944,8 +3944,8 @@
         "binop": null
       },
       "value": "attributeValues",
-      "start": 2279,
-      "end": 2294,
+      "start": 2307,
+      "end": 2322,
       "loc": {
         "start": {
           "line": 78,
@@ -3971,8 +3971,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2295,
-      "end": 2296,
+      "start": 2323,
+      "end": 2324,
       "loc": {
         "start": {
           "line": 78,
@@ -3999,8 +3999,8 @@
         "updateContext": null
       },
       "value": "new",
-      "start": 2297,
-      "end": 2300,
+      "start": 2325,
+      "end": 2328,
       "loc": {
         "start": {
           "line": 78,
@@ -4025,8 +4025,8 @@
         "binop": null
       },
       "value": "Map",
-      "start": 2301,
-      "end": 2304,
+      "start": 2329,
+      "end": 2332,
       "loc": {
         "start": {
           "line": 78,
@@ -4050,8 +4050,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2304,
-      "end": 2305,
+      "start": 2332,
+      "end": 2333,
       "loc": {
         "start": {
           "line": 78,
@@ -4075,8 +4075,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2305,
-      "end": 2306,
+      "start": 2333,
+      "end": 2334,
       "loc": {
         "start": {
           "line": 78,
@@ -4091,8 +4091,8 @@
     {
       "type": "CommentLine",
       "value": " Caching the Filter Results",
-      "start": 2313,
-      "end": 2342,
+      "start": 2341,
+      "end": 2370,
       "loc": {
         "start": {
           "line": 81,
@@ -4106,9 +4106,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * A Boolean value that indicates whether the results of rendering the child nodes should be cached.\n     * @type {boolean}\n     * @see https://developer.apple.com/reference/spritekit/skeffectnode/1459381-shouldrasterize\n     ",
-      "start": 2348,
-      "end": 2584,
+      "value": "*\n     * A Boolean value that indicates whether the results of rendering the child nodes should be cached.\n     * @type {boolean}\n     * @see https://developer.apple.com/documentation/spritekit/skeffectnode/1459381-shouldrasterize\n     ",
+      "start": 2376,
+      "end": 2616,
       "loc": {
         "start": {
           "line": 83,
@@ -4135,8 +4135,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2589,
-      "end": 2593,
+      "start": 2621,
+      "end": 2625,
       "loc": {
         "start": {
           "line": 88,
@@ -4161,8 +4161,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2593,
-      "end": 2594,
+      "start": 2625,
+      "end": 2626,
       "loc": {
         "start": {
           "line": 88,
@@ -4187,8 +4187,8 @@
         "binop": null
       },
       "value": "shouldRasterize",
-      "start": 2594,
-      "end": 2609,
+      "start": 2626,
+      "end": 2641,
       "loc": {
         "start": {
           "line": 88,
@@ -4214,8 +4214,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2610,
-      "end": 2611,
+      "start": 2642,
+      "end": 2643,
       "loc": {
         "start": {
           "line": 88,
@@ -4242,8 +4242,8 @@
         "updateContext": null
       },
       "value": "false",
-      "start": 2612,
-      "end": 2617,
+      "start": 2644,
+      "end": 2649,
       "loc": {
         "start": {
           "line": 88,
@@ -4267,8 +4267,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2621,
-      "end": 2622,
+      "start": 2653,
+      "end": 2654,
       "loc": {
         "start": {
           "line": 90,
@@ -4283,8 +4283,8 @@
     {
       "type": "CommentLine",
       "value": " Working with Custom Shaders",
-      "start": 2626,
-      "end": 2656,
+      "start": 2658,
+      "end": 2688,
       "loc": {
         "start": {
           "line": 92,
@@ -4298,9 +4298,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Sets an attribute value for an attached shader.\n   * @access public\n   * @param {SKAttributeValue} value - An attribute value object containing the scalar or vector value to set in the attached shader.\n   * @param {string} key - The attribute name.\n   * @returns {void}\n   * @see https://developer.apple.com/reference/spritekit/skeffectnode/2715853-setvalue\n   ",
-      "start": 2660,
-      "end": 3032,
+      "value": "*\n   * Sets an attribute value for an attached shader.\n   * @access public\n   * @param {SKAttributeValue} value - An attribute value object containing the scalar or vector value to set in the attached shader.\n   * @param {string} key - The attribute name.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/spritekit/skeffectnode/2715853-setvalue\n   ",
+      "start": 2692,
+      "end": 3068,
       "loc": {
         "start": {
           "line": 94,
@@ -4315,8 +4315,8 @@
     {
       "type": "CommentLine",
       "value": "setValueForAttribute(value, key) {",
-      "start": 3035,
-      "end": 3071,
+      "start": 3071,
+      "end": 3107,
       "loc": {
         "start": {
           "line": 102,
@@ -4331,8 +4331,8 @@
     {
       "type": "CommentLine",
       "value": "}",
-      "start": 3074,
-      "end": 3077,
+      "start": 3110,
+      "end": 3113,
       "loc": {
         "start": {
           "line": 103,
@@ -4346,9 +4346,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The value of a shader attribute.\n   * @access public\n   * @param {string} key - The attribute name.\n   * @returns {?SKAttributeValue} - \n   * @see https://developer.apple.com/reference/spritekit/skeffectnode/2715844-value\n   ",
-      "start": 3081,
-      "end": 3317,
+      "value": "*\n   * The value of a shader attribute.\n   * @access public\n   * @param {string} key - The attribute name.\n   * @returns {?SKAttributeValue} - \n   * @see https://developer.apple.com/documentation/spritekit/skeffectnode/2715844-value\n   ",
+      "start": 3117,
+      "end": 3357,
       "loc": {
         "start": {
           "line": 105,
@@ -4363,8 +4363,8 @@
     {
       "type": "CommentLine",
       "value": "valueForAttributeNamed(key) {",
-      "start": 3320,
-      "end": 3351,
+      "start": 3360,
+      "end": 3391,
       "loc": {
         "start": {
           "line": 112,
@@ -4379,8 +4379,8 @@
     {
       "type": "CommentLine",
       "value": "  return null",
-      "start": 3354,
-      "end": 3369,
+      "start": 3394,
+      "end": 3409,
       "loc": {
         "start": {
           "line": 113,
@@ -4395,8 +4395,8 @@
     {
       "type": "CommentLine",
       "value": "}",
-      "start": 3372,
-      "end": 3375,
+      "start": 3412,
+      "end": 3415,
       "loc": {
         "start": {
           "line": 114,
@@ -4420,8 +4420,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3376,
-      "end": 3377,
+      "start": 3416,
+      "end": 3417,
       "loc": {
         "start": {
           "line": 115,
@@ -4446,8 +4446,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3378,
-      "end": 3378,
+      "start": 3418,
+      "end": 3418,
       "loc": {
         "start": {
           "line": 116,

@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 2021,
+  "end": 2037,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 2021,
+    "end": 2037,
     "loc": {
       "start": {
         "line": 1,
@@ -170,9 +170,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Methods you can implement to respond when a contact or collision occurs between two physics bodies in a scene.\n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnphysicscontactdelegate\n ",
+            "value": "*\n * Methods you can implement to respond when a contact or collision occurs between two physics bodies in a scene.\n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnphysicscontactdelegate\n ",
             "start": 116,
-            "end": 332,
+            "end": 336,
             "loc": {
               "start": {
                 "line": 7,
@@ -188,8 +188,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 333,
-        "end": 2020,
+        "start": 337,
+        "end": 2036,
         "loc": {
           "start": {
             "line": 12,
@@ -202,8 +202,8 @@
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 348,
-          "end": 2020,
+          "start": 352,
+          "end": 2036,
           "loc": {
             "start": {
               "line": 12,
@@ -216,8 +216,8 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 354,
-            "end": 379,
+            "start": 358,
+            "end": 383,
             "loc": {
               "start": {
                 "line": 12,
@@ -235,8 +235,8 @@
           "superClass": null,
           "body": {
             "type": "ClassBody",
-            "start": 380,
-            "end": 2020,
+            "start": 384,
+            "end": 2036,
             "loc": {
               "start": {
                 "line": 12,
@@ -250,8 +250,8 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 455,
-                "end": 467,
+                "start": 459,
+                "end": 471,
                 "loc": {
                   "start": {
                     "line": 19,
@@ -265,8 +265,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 455,
-                  "end": 459,
+                  "start": 459,
+                  "end": 463,
                   "loc": {
                     "start": {
                       "line": 19,
@@ -290,8 +290,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 462,
-                  "end": 467,
+                  "start": 466,
+                  "end": 471,
                   "loc": {
                     "start": {
                       "line": 19,
@@ -311,8 +311,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-                    "start": 385,
-                    "end": 452,
+                    "start": 389,
+                    "end": 456,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -329,8 +329,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Responding to Contact Events",
-                    "start": 471,
-                    "end": 502,
+                    "start": 475,
+                    "end": 506,
                     "loc": {
                       "start": {
                         "line": 22,
@@ -344,9 +344,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Tells the delegate that two bodies have come into contact.\n   * @access public\n   * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.\n   * @param {SCNPhysicsContact} contact - An object that describes the contact.\n   * @returns {void}\n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontactdelegate/1512835-physicsworld\n   ",
-                    "start": 506,
-                    "end": 892,
+                    "value": "*\n   * Tells the delegate that two bodies have come into contact.\n   * @access public\n   * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.\n   * @param {SCNPhysicsContact} contact - An object that describes the contact.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontactdelegate/1512835-physicsworld\n   ",
+                    "start": 510,
+                    "end": 900,
                     "loc": {
                       "start": {
                         "line": 24,
@@ -362,8 +362,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 895,
-                "end": 937,
+                "start": 903,
+                "end": 945,
                 "loc": {
                   "start": {
                     "line": 32,
@@ -377,8 +377,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 895,
-                  "end": 915,
+                  "start": 903,
+                  "end": 923,
                   "loc": {
                     "start": {
                       "line": 32,
@@ -402,8 +402,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 916,
-                    "end": 921,
+                    "start": 924,
+                    "end": 929,
                     "loc": {
                       "start": {
                         "line": 32,
@@ -419,8 +419,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 923,
-                    "end": 930,
+                    "start": 931,
+                    "end": 938,
                     "loc": {
                       "start": {
                         "line": 32,
@@ -437,8 +437,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 932,
-                  "end": 937,
+                  "start": 940,
+                  "end": 945,
                   "loc": {
                     "start": {
                       "line": 32,
@@ -458,8 +458,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Responding to Contact Events",
-                    "start": 471,
-                    "end": 502,
+                    "start": 475,
+                    "end": 506,
                     "loc": {
                       "start": {
                         "line": 22,
@@ -473,9 +473,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Tells the delegate that two bodies have come into contact.\n   * @access public\n   * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.\n   * @param {SCNPhysicsContact} contact - An object that describes the contact.\n   * @returns {void}\n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontactdelegate/1512835-physicsworld\n   ",
-                    "start": 506,
-                    "end": 892,
+                    "value": "*\n   * Tells the delegate that two bodies have come into contact.\n   * @access public\n   * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.\n   * @param {SCNPhysicsContact} contact - An object that describes the contact.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontactdelegate/1512835-physicsworld\n   ",
+                    "start": 510,
+                    "end": 900,
                     "loc": {
                       "start": {
                         "line": 24,
@@ -491,9 +491,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Tells the delegate that new information is available about an ongoing contact.\n   * @access public\n   * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.\n   * @param {SCNPhysicsContact} contact - An object that describes the contact.\n   * @returns {void}\n   * @desc SceneKit calls this method on each step of the physics simulation (see the timeStep property) if information about the contact changes—for example, if two bodies are sliding against one another.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontactdelegate/1512865-physicsworld\n   ",
-                    "start": 941,
-                    "end": 1553,
+                    "value": "*\n   * Tells the delegate that new information is available about an ongoing contact.\n   * @access public\n   * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.\n   * @param {SCNPhysicsContact} contact - An object that describes the contact.\n   * @returns {void}\n   * @desc SceneKit calls this method on each step of the physics simulation (see the timeStep property) if information about the contact changes—for example, if two bodies are sliding against one another.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontactdelegate/1512865-physicsworld\n   ",
+                    "start": 949,
+                    "end": 1565,
                     "loc": {
                       "start": {
                         "line": 35,
@@ -509,8 +509,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 1556,
-                "end": 1599,
+                "start": 1568,
+                "end": 1611,
                 "loc": {
                   "start": {
                     "line": 44,
@@ -524,8 +524,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1556,
-                  "end": 1577,
+                  "start": 1568,
+                  "end": 1589,
                   "loc": {
                     "start": {
                       "line": 44,
@@ -549,8 +549,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 1578,
-                    "end": 1583,
+                    "start": 1590,
+                    "end": 1595,
                     "loc": {
                       "start": {
                         "line": 44,
@@ -566,8 +566,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1585,
-                    "end": 1592,
+                    "start": 1597,
+                    "end": 1604,
                     "loc": {
                       "start": {
                         "line": 44,
@@ -584,8 +584,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1594,
-                  "end": 1599,
+                  "start": 1606,
+                  "end": 1611,
                   "loc": {
                     "start": {
                       "line": 44,
@@ -604,9 +604,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Tells the delegate that new information is available about an ongoing contact.\n   * @access public\n   * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.\n   * @param {SCNPhysicsContact} contact - An object that describes the contact.\n   * @returns {void}\n   * @desc SceneKit calls this method on each step of the physics simulation (see the timeStep property) if information about the contact changes—for example, if two bodies are sliding against one another.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontactdelegate/1512865-physicsworld\n   ",
-                    "start": 941,
-                    "end": 1553,
+                    "value": "*\n   * Tells the delegate that new information is available about an ongoing contact.\n   * @access public\n   * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.\n   * @param {SCNPhysicsContact} contact - An object that describes the contact.\n   * @returns {void}\n   * @desc SceneKit calls this method on each step of the physics simulation (see the timeStep property) if information about the contact changes—for example, if two bodies are sliding against one another.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontactdelegate/1512865-physicsworld\n   ",
+                    "start": 949,
+                    "end": 1565,
                     "loc": {
                       "start": {
                         "line": 35,
@@ -622,9 +622,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Tells the delegate that a contact has ended.\n   * @access public\n   * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.\n   * @param {SCNPhysicsContact} contact - An object that describes the contact.\n   * @returns {void}\n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontactdelegate/1512883-physicsworld\n   ",
-                    "start": 1603,
-                    "end": 1975,
+                    "value": "*\n   * Tells the delegate that a contact has ended.\n   * @access public\n   * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.\n   * @param {SCNPhysicsContact} contact - An object that describes the contact.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontactdelegate/1512883-physicsworld\n   ",
+                    "start": 1615,
+                    "end": 1991,
                     "loc": {
                       "start": {
                         "line": 47,
@@ -640,8 +640,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 1978,
-                "end": 2018,
+                "start": 1994,
+                "end": 2034,
                 "loc": {
                   "start": {
                     "line": 55,
@@ -655,8 +655,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1978,
-                  "end": 1996,
+                  "start": 1994,
+                  "end": 2012,
                   "loc": {
                     "start": {
                       "line": 55,
@@ -680,8 +680,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 1997,
-                    "end": 2002,
+                    "start": 2013,
+                    "end": 2018,
                     "loc": {
                       "start": {
                         "line": 55,
@@ -697,8 +697,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 2004,
-                    "end": 2011,
+                    "start": 2020,
+                    "end": 2027,
                     "loc": {
                       "start": {
                         "line": 55,
@@ -715,8 +715,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 2013,
-                  "end": 2018,
+                  "start": 2029,
+                  "end": 2034,
                   "loc": {
                     "start": {
                       "line": 55,
@@ -733,9 +733,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Tells the delegate that a contact has ended.\n   * @access public\n   * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.\n   * @param {SCNPhysicsContact} contact - An object that describes the contact.\n   * @returns {void}\n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontactdelegate/1512883-physicsworld\n   ",
-                    "start": 1603,
-                    "end": 1975,
+                    "value": "*\n   * Tells the delegate that a contact has ended.\n   * @access public\n   * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.\n   * @param {SCNPhysicsContact} contact - An object that describes the contact.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontactdelegate/1512883-physicsworld\n   ",
+                    "start": 1615,
+                    "end": 1991,
                     "loc": {
                       "start": {
                         "line": 47,
@@ -754,9 +754,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * Methods you can implement to respond when a contact or collision occurs between two physics bodies in a scene.\n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnphysicscontactdelegate\n ",
+              "value": "*\n * Methods you can implement to respond when a contact or collision occurs between two physics bodies in a scene.\n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnphysicscontactdelegate\n ",
               "start": 116,
-              "end": 332,
+              "end": 336,
               "loc": {
                 "start": {
                   "line": 7,
@@ -774,9 +774,9 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Methods you can implement to respond when a contact or collision occurs between two physics bodies in a scene.\n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnphysicscontactdelegate\n ",
+            "value": "*\n * Methods you can implement to respond when a contact or collision occurs between two physics bodies in a scene.\n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnphysicscontactdelegate\n ",
             "start": 116,
-            "end": 332,
+            "end": 336,
             "loc": {
               "start": {
                 "line": 7,
@@ -832,9 +832,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * Methods you can implement to respond when a contact or collision occurs between two physics bodies in a scene.\n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnphysicscontactdelegate\n ",
+      "value": "*\n * Methods you can implement to respond when a contact or collision occurs between two physics bodies in a scene.\n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnphysicscontactdelegate\n ",
       "start": 116,
-      "end": 332,
+      "end": 336,
       "loc": {
         "start": {
           "line": 7,
@@ -849,8 +849,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 385,
-      "end": 452,
+      "start": 389,
+      "end": 456,
       "loc": {
         "start": {
           "line": 14,
@@ -865,8 +865,8 @@
     {
       "type": "CommentLine",
       "value": " Responding to Contact Events",
-      "start": 471,
-      "end": 502,
+      "start": 475,
+      "end": 506,
       "loc": {
         "start": {
           "line": 22,
@@ -880,9 +880,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Tells the delegate that two bodies have come into contact.\n   * @access public\n   * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.\n   * @param {SCNPhysicsContact} contact - An object that describes the contact.\n   * @returns {void}\n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontactdelegate/1512835-physicsworld\n   ",
-      "start": 506,
-      "end": 892,
+      "value": "*\n   * Tells the delegate that two bodies have come into contact.\n   * @access public\n   * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.\n   * @param {SCNPhysicsContact} contact - An object that describes the contact.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontactdelegate/1512835-physicsworld\n   ",
+      "start": 510,
+      "end": 900,
       "loc": {
         "start": {
           "line": 24,
@@ -896,9 +896,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Tells the delegate that new information is available about an ongoing contact.\n   * @access public\n   * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.\n   * @param {SCNPhysicsContact} contact - An object that describes the contact.\n   * @returns {void}\n   * @desc SceneKit calls this method on each step of the physics simulation (see the timeStep property) if information about the contact changes—for example, if two bodies are sliding against one another.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontactdelegate/1512865-physicsworld\n   ",
-      "start": 941,
-      "end": 1553,
+      "value": "*\n   * Tells the delegate that new information is available about an ongoing contact.\n   * @access public\n   * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.\n   * @param {SCNPhysicsContact} contact - An object that describes the contact.\n   * @returns {void}\n   * @desc SceneKit calls this method on each step of the physics simulation (see the timeStep property) if information about the contact changes—for example, if two bodies are sliding against one another.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontactdelegate/1512865-physicsworld\n   ",
+      "start": 949,
+      "end": 1565,
       "loc": {
         "start": {
           "line": 35,
@@ -912,9 +912,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Tells the delegate that a contact has ended.\n   * @access public\n   * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.\n   * @param {SCNPhysicsContact} contact - An object that describes the contact.\n   * @returns {void}\n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontactdelegate/1512883-physicsworld\n   ",
-      "start": 1603,
-      "end": 1975,
+      "value": "*\n   * Tells the delegate that a contact has ended.\n   * @access public\n   * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.\n   * @param {SCNPhysicsContact} contact - An object that describes the contact.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontactdelegate/1512883-physicsworld\n   ",
+      "start": 1615,
+      "end": 1991,
       "loc": {
         "start": {
           "line": 47,
@@ -1171,9 +1171,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Methods you can implement to respond when a contact or collision occurs between two physics bodies in a scene.\n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnphysicscontactdelegate\n ",
+      "value": "*\n * Methods you can implement to respond when a contact or collision occurs between two physics bodies in a scene.\n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnphysicscontactdelegate\n ",
       "start": 116,
-      "end": 332,
+      "end": 336,
       "loc": {
         "start": {
           "line": 7,
@@ -1200,8 +1200,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 333,
-      "end": 339,
+      "start": 337,
+      "end": 343,
       "loc": {
         "start": {
           "line": 12,
@@ -1228,8 +1228,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 340,
-      "end": 347,
+      "start": 344,
+      "end": 351,
       "loc": {
         "start": {
           "line": 12,
@@ -1256,8 +1256,8 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 348,
-      "end": 353,
+      "start": 352,
+      "end": 357,
       "loc": {
         "start": {
           "line": 12,
@@ -1282,8 +1282,8 @@
         "binop": null
       },
       "value": "SCNPhysicsContactDelegate",
-      "start": 354,
-      "end": 379,
+      "start": 358,
+      "end": 383,
       "loc": {
         "start": {
           "line": 12,
@@ -1307,8 +1307,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 380,
-      "end": 381,
+      "start": 384,
+      "end": 385,
       "loc": {
         "start": {
           "line": 12,
@@ -1323,8 +1323,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 385,
-      "end": 452,
+      "start": 389,
+      "end": 456,
       "loc": {
         "start": {
           "line": 14,
@@ -1349,8 +1349,8 @@
         "binop": null
       },
       "value": "init",
-      "start": 455,
-      "end": 459,
+      "start": 459,
+      "end": 463,
       "loc": {
         "start": {
           "line": 19,
@@ -1374,8 +1374,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 459,
-      "end": 460,
+      "start": 463,
+      "end": 464,
       "loc": {
         "start": {
           "line": 19,
@@ -1399,8 +1399,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 460,
-      "end": 461,
+      "start": 464,
+      "end": 465,
       "loc": {
         "start": {
           "line": 19,
@@ -1424,8 +1424,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 462,
-      "end": 463,
+      "start": 466,
+      "end": 467,
       "loc": {
         "start": {
           "line": 19,
@@ -1449,8 +1449,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 466,
-      "end": 467,
+      "start": 470,
+      "end": 471,
       "loc": {
         "start": {
           "line": 20,
@@ -1465,8 +1465,8 @@
     {
       "type": "CommentLine",
       "value": " Responding to Contact Events",
-      "start": 471,
-      "end": 502,
+      "start": 475,
+      "end": 506,
       "loc": {
         "start": {
           "line": 22,
@@ -1480,9 +1480,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Tells the delegate that two bodies have come into contact.\n   * @access public\n   * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.\n   * @param {SCNPhysicsContact} contact - An object that describes the contact.\n   * @returns {void}\n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontactdelegate/1512835-physicsworld\n   ",
-      "start": 506,
-      "end": 892,
+      "value": "*\n   * Tells the delegate that two bodies have come into contact.\n   * @access public\n   * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.\n   * @param {SCNPhysicsContact} contact - An object that describes the contact.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontactdelegate/1512835-physicsworld\n   ",
+      "start": 510,
+      "end": 900,
       "loc": {
         "start": {
           "line": 24,
@@ -1507,8 +1507,8 @@
         "binop": null
       },
       "value": "physicsWorldDidBegin",
-      "start": 895,
-      "end": 915,
+      "start": 903,
+      "end": 923,
       "loc": {
         "start": {
           "line": 32,
@@ -1532,8 +1532,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 915,
-      "end": 916,
+      "start": 923,
+      "end": 924,
       "loc": {
         "start": {
           "line": 32,
@@ -1558,8 +1558,8 @@
         "binop": null
       },
       "value": "world",
-      "start": 916,
-      "end": 921,
+      "start": 924,
+      "end": 929,
       "loc": {
         "start": {
           "line": 32,
@@ -1584,8 +1584,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 921,
-      "end": 922,
+      "start": 929,
+      "end": 930,
       "loc": {
         "start": {
           "line": 32,
@@ -1610,8 +1610,8 @@
         "binop": null
       },
       "value": "contact",
-      "start": 923,
-      "end": 930,
+      "start": 931,
+      "end": 938,
       "loc": {
         "start": {
           "line": 32,
@@ -1635,8 +1635,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 930,
-      "end": 931,
+      "start": 938,
+      "end": 939,
       "loc": {
         "start": {
           "line": 32,
@@ -1660,8 +1660,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 932,
-      "end": 933,
+      "start": 940,
+      "end": 941,
       "loc": {
         "start": {
           "line": 32,
@@ -1685,8 +1685,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 936,
-      "end": 937,
+      "start": 944,
+      "end": 945,
       "loc": {
         "start": {
           "line": 33,
@@ -1700,9 +1700,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Tells the delegate that new information is available about an ongoing contact.\n   * @access public\n   * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.\n   * @param {SCNPhysicsContact} contact - An object that describes the contact.\n   * @returns {void}\n   * @desc SceneKit calls this method on each step of the physics simulation (see the timeStep property) if information about the contact changes—for example, if two bodies are sliding against one another.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontactdelegate/1512865-physicsworld\n   ",
-      "start": 941,
-      "end": 1553,
+      "value": "*\n   * Tells the delegate that new information is available about an ongoing contact.\n   * @access public\n   * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.\n   * @param {SCNPhysicsContact} contact - An object that describes the contact.\n   * @returns {void}\n   * @desc SceneKit calls this method on each step of the physics simulation (see the timeStep property) if information about the contact changes—for example, if two bodies are sliding against one another.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontactdelegate/1512865-physicsworld\n   ",
+      "start": 949,
+      "end": 1565,
       "loc": {
         "start": {
           "line": 35,
@@ -1727,8 +1727,8 @@
         "binop": null
       },
       "value": "physicsWorldDidUpdate",
-      "start": 1556,
-      "end": 1577,
+      "start": 1568,
+      "end": 1589,
       "loc": {
         "start": {
           "line": 44,
@@ -1752,8 +1752,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1577,
-      "end": 1578,
+      "start": 1589,
+      "end": 1590,
       "loc": {
         "start": {
           "line": 44,
@@ -1778,8 +1778,8 @@
         "binop": null
       },
       "value": "world",
-      "start": 1578,
-      "end": 1583,
+      "start": 1590,
+      "end": 1595,
       "loc": {
         "start": {
           "line": 44,
@@ -1804,8 +1804,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1583,
-      "end": 1584,
+      "start": 1595,
+      "end": 1596,
       "loc": {
         "start": {
           "line": 44,
@@ -1830,8 +1830,8 @@
         "binop": null
       },
       "value": "contact",
-      "start": 1585,
-      "end": 1592,
+      "start": 1597,
+      "end": 1604,
       "loc": {
         "start": {
           "line": 44,
@@ -1855,8 +1855,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1592,
-      "end": 1593,
+      "start": 1604,
+      "end": 1605,
       "loc": {
         "start": {
           "line": 44,
@@ -1880,8 +1880,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1594,
-      "end": 1595,
+      "start": 1606,
+      "end": 1607,
       "loc": {
         "start": {
           "line": 44,
@@ -1905,8 +1905,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1598,
-      "end": 1599,
+      "start": 1610,
+      "end": 1611,
       "loc": {
         "start": {
           "line": 45,
@@ -1920,9 +1920,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Tells the delegate that a contact has ended.\n   * @access public\n   * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.\n   * @param {SCNPhysicsContact} contact - An object that describes the contact.\n   * @returns {void}\n   * @see https://developer.apple.com/reference/scenekit/scnphysicscontactdelegate/1512883-physicsworld\n   ",
-      "start": 1603,
-      "end": 1975,
+      "value": "*\n   * Tells the delegate that a contact has ended.\n   * @access public\n   * @param {SCNPhysicsWorld} world - The physics world that is processing the contact.\n   * @param {SCNPhysicsContact} contact - An object that describes the contact.\n   * @returns {void}\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicscontactdelegate/1512883-physicsworld\n   ",
+      "start": 1615,
+      "end": 1991,
       "loc": {
         "start": {
           "line": 47,
@@ -1947,8 +1947,8 @@
         "binop": null
       },
       "value": "physicsWorldDidEnd",
-      "start": 1978,
-      "end": 1996,
+      "start": 1994,
+      "end": 2012,
       "loc": {
         "start": {
           "line": 55,
@@ -1972,8 +1972,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1996,
-      "end": 1997,
+      "start": 2012,
+      "end": 2013,
       "loc": {
         "start": {
           "line": 55,
@@ -1998,8 +1998,8 @@
         "binop": null
       },
       "value": "world",
-      "start": 1997,
-      "end": 2002,
+      "start": 2013,
+      "end": 2018,
       "loc": {
         "start": {
           "line": 55,
@@ -2024,8 +2024,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2002,
-      "end": 2003,
+      "start": 2018,
+      "end": 2019,
       "loc": {
         "start": {
           "line": 55,
@@ -2050,8 +2050,8 @@
         "binop": null
       },
       "value": "contact",
-      "start": 2004,
-      "end": 2011,
+      "start": 2020,
+      "end": 2027,
       "loc": {
         "start": {
           "line": 55,
@@ -2075,8 +2075,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2011,
-      "end": 2012,
+      "start": 2027,
+      "end": 2028,
       "loc": {
         "start": {
           "line": 55,
@@ -2100,8 +2100,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2013,
-      "end": 2014,
+      "start": 2029,
+      "end": 2030,
       "loc": {
         "start": {
           "line": 55,
@@ -2125,8 +2125,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2017,
-      "end": 2018,
+      "start": 2033,
+      "end": 2034,
       "loc": {
         "start": {
           "line": 56,
@@ -2150,8 +2150,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 2019,
-      "end": 2020,
+      "start": 2035,
+      "end": 2036,
       "loc": {
         "start": {
           "line": 57,
@@ -2176,8 +2176,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2021,
-      "end": 2021,
+      "start": 2037,
+      "end": 2037,
       "loc": {
         "start": {
           "line": 58,

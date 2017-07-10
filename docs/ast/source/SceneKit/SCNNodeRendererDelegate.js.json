@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 1947,
+  "end": 1955,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 1947,
+    "end": 1955,
     "loc": {
       "start": {
         "line": 1,
@@ -170,9 +170,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Methods you can implement to use your own custom Metal or OpenGL drawing code to render content for a node. \n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnnoderendererdelegate\n ",
+            "value": "*\n * Methods you can implement to use your own custom Metal or OpenGL drawing code to render content for a node. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnnoderendererdelegate\n ",
             "start": 88,
-            "end": 300,
+            "end": 304,
             "loc": {
               "start": {
                 "line": 7,
@@ -188,8 +188,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 301,
-        "end": 1946,
+        "start": 305,
+        "end": 1954,
         "loc": {
           "start": {
             "line": 12,
@@ -202,8 +202,8 @@
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 316,
-          "end": 1946,
+          "start": 320,
+          "end": 1954,
           "loc": {
             "start": {
               "line": 12,
@@ -216,8 +216,8 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 322,
-            "end": 345,
+            "start": 326,
+            "end": 349,
             "loc": {
               "start": {
                 "line": 12,
@@ -235,8 +235,8 @@
           "superClass": null,
           "body": {
             "type": "ClassBody",
-            "start": 346,
-            "end": 1946,
+            "start": 350,
+            "end": 1954,
             "loc": {
               "start": {
                 "line": 12,
@@ -250,8 +250,8 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 421,
-                "end": 433,
+                "start": 425,
+                "end": 437,
                 "loc": {
                   "start": {
                     "line": 19,
@@ -265,8 +265,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 421,
-                  "end": 425,
+                  "start": 425,
+                  "end": 429,
                   "loc": {
                     "start": {
                       "line": 19,
@@ -290,8 +290,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 428,
-                  "end": 433,
+                  "start": 432,
+                  "end": 437,
                   "loc": {
                     "start": {
                       "line": 19,
@@ -311,8 +311,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-                    "start": 351,
-                    "end": 418,
+                    "start": 355,
+                    "end": 422,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -329,8 +329,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Customizing the Rendering of a Node",
-                    "start": 437,
-                    "end": 475,
+                    "start": 441,
+                    "end": 479,
                     "loc": {
                       "start": {
                         "line": 22,
@@ -344,9 +344,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Tells the delegate to perform rendering for a node.\n   * @access public\n   * @param {SCNNode} node - The node to render.\n   * @param {SCNRenderer} renderer - The SceneKit object (such as an SCNView instance) responsible for rendering the scene. \n   * @param {Map<string, Object>} _arguments - \n   * @returns {void}\n   * @desc Implement this method to perform custom rendering for a node. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects in this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/reference/scenekit/scnnoderendererdelegate/1407993-rendernode\n   ",
-                    "start": 479,
-                    "end": 1897,
+                    "value": "*\n   * Tells the delegate to perform rendering for a node.\n   * @access public\n   * @param {SCNNode} node - The node to render.\n   * @param {SCNRenderer} renderer - The SceneKit object (such as an SCNView instance) responsible for rendering the scene. \n   * @param {Map<string, Object>} _arguments - \n   * @returns {void}\n   * @desc Implement this method to perform custom rendering for a node. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects in this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/documentation/scenekit/scnnoderendererdelegate/1407993-rendernode\n   ",
+                    "start": 483,
+                    "end": 1905,
                     "loc": {
                       "start": {
                         "line": 24,
@@ -362,8 +362,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 1900,
-                "end": 1944,
+                "start": 1908,
+                "end": 1952,
                 "loc": {
                   "start": {
                     "line": 34,
@@ -377,8 +377,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1900,
-                  "end": 1910,
+                  "start": 1908,
+                  "end": 1918,
                   "loc": {
                     "start": {
                       "line": 34,
@@ -402,8 +402,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 1911,
-                    "end": 1915,
+                    "start": 1919,
+                    "end": 1923,
                     "loc": {
                       "start": {
                         "line": 34,
@@ -419,8 +419,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1917,
-                    "end": 1925,
+                    "start": 1925,
+                    "end": 1933,
                     "loc": {
                       "start": {
                         "line": 34,
@@ -436,8 +436,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1927,
-                    "end": 1937,
+                    "start": 1935,
+                    "end": 1945,
                     "loc": {
                       "start": {
                         "line": 34,
@@ -454,8 +454,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1939,
-                  "end": 1944,
+                  "start": 1947,
+                  "end": 1952,
                   "loc": {
                     "start": {
                       "line": 34,
@@ -473,8 +473,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Customizing the Rendering of a Node",
-                    "start": 437,
-                    "end": 475,
+                    "start": 441,
+                    "end": 479,
                     "loc": {
                       "start": {
                         "line": 22,
@@ -488,9 +488,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Tells the delegate to perform rendering for a node.\n   * @access public\n   * @param {SCNNode} node - The node to render.\n   * @param {SCNRenderer} renderer - The SceneKit object (such as an SCNView instance) responsible for rendering the scene. \n   * @param {Map<string, Object>} _arguments - \n   * @returns {void}\n   * @desc Implement this method to perform custom rendering for a node. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects in this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/reference/scenekit/scnnoderendererdelegate/1407993-rendernode\n   ",
-                    "start": 479,
-                    "end": 1897,
+                    "value": "*\n   * Tells the delegate to perform rendering for a node.\n   * @access public\n   * @param {SCNNode} node - The node to render.\n   * @param {SCNRenderer} renderer - The SceneKit object (such as an SCNView instance) responsible for rendering the scene. \n   * @param {Map<string, Object>} _arguments - \n   * @returns {void}\n   * @desc Implement this method to perform custom rendering for a node. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects in this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/documentation/scenekit/scnnoderendererdelegate/1407993-rendernode\n   ",
+                    "start": 483,
+                    "end": 1905,
                     "loc": {
                       "start": {
                         "line": 24,
@@ -509,9 +509,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * Methods you can implement to use your own custom Metal or OpenGL drawing code to render content for a node. \n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnnoderendererdelegate\n ",
+              "value": "*\n * Methods you can implement to use your own custom Metal or OpenGL drawing code to render content for a node. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnnoderendererdelegate\n ",
               "start": 88,
-              "end": 300,
+              "end": 304,
               "loc": {
                 "start": {
                   "line": 7,
@@ -529,9 +529,9 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Methods you can implement to use your own custom Metal or OpenGL drawing code to render content for a node. \n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnnoderendererdelegate\n ",
+            "value": "*\n * Methods you can implement to use your own custom Metal or OpenGL drawing code to render content for a node. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnnoderendererdelegate\n ",
             "start": 88,
-            "end": 300,
+            "end": 304,
             "loc": {
               "start": {
                 "line": 7,
@@ -587,9 +587,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * Methods you can implement to use your own custom Metal or OpenGL drawing code to render content for a node. \n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnnoderendererdelegate\n ",
+      "value": "*\n * Methods you can implement to use your own custom Metal or OpenGL drawing code to render content for a node. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnnoderendererdelegate\n ",
       "start": 88,
-      "end": 300,
+      "end": 304,
       "loc": {
         "start": {
           "line": 7,
@@ -604,8 +604,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 351,
-      "end": 418,
+      "start": 355,
+      "end": 422,
       "loc": {
         "start": {
           "line": 14,
@@ -620,8 +620,8 @@
     {
       "type": "CommentLine",
       "value": " Customizing the Rendering of a Node",
-      "start": 437,
-      "end": 475,
+      "start": 441,
+      "end": 479,
       "loc": {
         "start": {
           "line": 22,
@@ -635,9 +635,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Tells the delegate to perform rendering for a node.\n   * @access public\n   * @param {SCNNode} node - The node to render.\n   * @param {SCNRenderer} renderer - The SceneKit object (such as an SCNView instance) responsible for rendering the scene. \n   * @param {Map<string, Object>} _arguments - \n   * @returns {void}\n   * @desc Implement this method to perform custom rendering for a node. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects in this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/reference/scenekit/scnnoderendererdelegate/1407993-rendernode\n   ",
-      "start": 479,
-      "end": 1897,
+      "value": "*\n   * Tells the delegate to perform rendering for a node.\n   * @access public\n   * @param {SCNNode} node - The node to render.\n   * @param {SCNRenderer} renderer - The SceneKit object (such as an SCNView instance) responsible for rendering the scene. \n   * @param {Map<string, Object>} _arguments - \n   * @returns {void}\n   * @desc Implement this method to perform custom rendering for a node. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects in this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/documentation/scenekit/scnnoderendererdelegate/1407993-rendernode\n   ",
+      "start": 483,
+      "end": 1905,
       "loc": {
         "start": {
           "line": 24,
@@ -894,9 +894,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Methods you can implement to use your own custom Metal or OpenGL drawing code to render content for a node. \n * @interface\n * @see https://developer.apple.com/reference/scenekit/scnnoderendererdelegate\n ",
+      "value": "*\n * Methods you can implement to use your own custom Metal or OpenGL drawing code to render content for a node. \n * @interface\n * @see https://developer.apple.com/documentation/scenekit/scnnoderendererdelegate\n ",
       "start": 88,
-      "end": 300,
+      "end": 304,
       "loc": {
         "start": {
           "line": 7,
@@ -923,8 +923,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 301,
-      "end": 307,
+      "start": 305,
+      "end": 311,
       "loc": {
         "start": {
           "line": 12,
@@ -951,8 +951,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 308,
-      "end": 315,
+      "start": 312,
+      "end": 319,
       "loc": {
         "start": {
           "line": 12,
@@ -979,8 +979,8 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 316,
-      "end": 321,
+      "start": 320,
+      "end": 325,
       "loc": {
         "start": {
           "line": 12,
@@ -1005,8 +1005,8 @@
         "binop": null
       },
       "value": "SCNNodeRendererDelegate",
-      "start": 322,
-      "end": 345,
+      "start": 326,
+      "end": 349,
       "loc": {
         "start": {
           "line": 12,
@@ -1030,8 +1030,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 346,
-      "end": 347,
+      "start": 350,
+      "end": 351,
       "loc": {
         "start": {
           "line": 12,
@@ -1046,8 +1046,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * constructor\n   * @access public\n   * @returns {void}\n   ",
-      "start": 351,
-      "end": 418,
+      "start": 355,
+      "end": 422,
       "loc": {
         "start": {
           "line": 14,
@@ -1072,8 +1072,8 @@
         "binop": null
       },
       "value": "init",
-      "start": 421,
-      "end": 425,
+      "start": 425,
+      "end": 429,
       "loc": {
         "start": {
           "line": 19,
@@ -1097,8 +1097,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 425,
-      "end": 426,
+      "start": 429,
+      "end": 430,
       "loc": {
         "start": {
           "line": 19,
@@ -1122,8 +1122,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 426,
-      "end": 427,
+      "start": 430,
+      "end": 431,
       "loc": {
         "start": {
           "line": 19,
@@ -1147,8 +1147,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 428,
-      "end": 429,
+      "start": 432,
+      "end": 433,
       "loc": {
         "start": {
           "line": 19,
@@ -1172,8 +1172,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 432,
-      "end": 433,
+      "start": 436,
+      "end": 437,
       "loc": {
         "start": {
           "line": 20,
@@ -1188,8 +1188,8 @@
     {
       "type": "CommentLine",
       "value": " Customizing the Rendering of a Node",
-      "start": 437,
-      "end": 475,
+      "start": 441,
+      "end": 479,
       "loc": {
         "start": {
           "line": 22,
@@ -1203,9 +1203,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Tells the delegate to perform rendering for a node.\n   * @access public\n   * @param {SCNNode} node - The node to render.\n   * @param {SCNRenderer} renderer - The SceneKit object (such as an SCNView instance) responsible for rendering the scene. \n   * @param {Map<string, Object>} _arguments - \n   * @returns {void}\n   * @desc Implement this method to perform custom rendering for a node. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects in this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/reference/scenekit/scnnoderendererdelegate/1407993-rendernode\n   ",
-      "start": 479,
-      "end": 1897,
+      "value": "*\n   * Tells the delegate to perform rendering for a node.\n   * @access public\n   * @param {SCNNode} node - The node to render.\n   * @param {SCNRenderer} renderer - The SceneKit object (such as an SCNView instance) responsible for rendering the scene. \n   * @param {Map<string, Object>} _arguments - \n   * @returns {void}\n   * @desc Implement this method to perform custom rendering for a node. You should only execute Metal or OpenGL drawing commands (and any setup required to perform them) in this method—the results of modifying SceneKit objects in this method are undefined.To render using Metal, use the renderer parameter to retrieve the scene renderer’s currentRenderCommandEncoder object and encode your own drawing commands. If you need to reference other Metal state, see the properties listed in SCNSceneRenderer.To render using OpenGL, simply call the relevant OpenGL drawing commands—SceneKit automatically makes its OpenGL context the current context before calling this method. If you need to reference the OpenGL context being rendered into, examine the context property of the renderer parameter.You must draw using the appropriate graphics technology for the view currently being rendered. Use the renderingAPI property of the renderer object to determine whether Metal or OpenGL is in use. \n   * @see https://developer.apple.com/documentation/scenekit/scnnoderendererdelegate/1407993-rendernode\n   ",
+      "start": 483,
+      "end": 1905,
       "loc": {
         "start": {
           "line": 24,
@@ -1230,8 +1230,8 @@
         "binop": null
       },
       "value": "renderNode",
-      "start": 1900,
-      "end": 1910,
+      "start": 1908,
+      "end": 1918,
       "loc": {
         "start": {
           "line": 34,
@@ -1255,8 +1255,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1910,
-      "end": 1911,
+      "start": 1918,
+      "end": 1919,
       "loc": {
         "start": {
           "line": 34,
@@ -1281,8 +1281,8 @@
         "binop": null
       },
       "value": "node",
-      "start": 1911,
-      "end": 1915,
+      "start": 1919,
+      "end": 1923,
       "loc": {
         "start": {
           "line": 34,
@@ -1307,8 +1307,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1915,
-      "end": 1916,
+      "start": 1923,
+      "end": 1924,
       "loc": {
         "start": {
           "line": 34,
@@ -1333,8 +1333,8 @@
         "binop": null
       },
       "value": "renderer",
-      "start": 1917,
-      "end": 1925,
+      "start": 1925,
+      "end": 1933,
       "loc": {
         "start": {
           "line": 34,
@@ -1359,8 +1359,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1925,
-      "end": 1926,
+      "start": 1933,
+      "end": 1934,
       "loc": {
         "start": {
           "line": 34,
@@ -1385,8 +1385,8 @@
         "binop": null
       },
       "value": "_arguments",
-      "start": 1927,
-      "end": 1937,
+      "start": 1935,
+      "end": 1945,
       "loc": {
         "start": {
           "line": 34,
@@ -1410,8 +1410,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1937,
-      "end": 1938,
+      "start": 1945,
+      "end": 1946,
       "loc": {
         "start": {
           "line": 34,
@@ -1435,8 +1435,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1939,
-      "end": 1940,
+      "start": 1947,
+      "end": 1948,
       "loc": {
         "start": {
           "line": 34,
@@ -1460,8 +1460,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1943,
-      "end": 1944,
+      "start": 1951,
+      "end": 1952,
       "loc": {
         "start": {
           "line": 35,
@@ -1485,8 +1485,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1945,
-      "end": 1946,
+      "start": 1953,
+      "end": 1954,
       "loc": {
         "start": {
           "line": 36,
@@ -1511,8 +1511,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1947,
-      "end": 1947,
+      "start": 1955,
+      "end": 1955,
       "loc": {
         "start": {
           "line": 37,

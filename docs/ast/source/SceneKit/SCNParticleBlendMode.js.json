@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 1012,
+  "end": 1016,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 1012,
+    "end": 1016,
     "loc": {
       "start": {
         "line": 1,
@@ -30,8 +30,8 @@
     "body": [
       {
         "type": "Identifier",
-        "start": 859,
-        "end": 974,
+        "start": 863,
+        "end": 978,
         "loc": {
           "start": {
             "line": 15,
@@ -45,8 +45,8 @@
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 865,
-            "end": 974,
+            "start": 869,
+            "end": 978,
             "loc": {
               "start": {
                 "line": 15,
@@ -59,8 +59,8 @@
             },
             "id": {
               "type": "Identifier",
-              "start": 865,
-              "end": 885,
+              "start": 869,
+              "end": 889,
               "loc": {
                 "start": {
                   "line": 15,
@@ -77,8 +77,8 @@
             },
             "init": {
               "type": "ObjectExpression",
-              "start": 888,
-              "end": 974,
+              "start": 892,
+              "end": 978,
               "loc": {
                 "start": {
                   "line": 15,
@@ -92,8 +92,8 @@
               "properties": [
                 {
                   "type": "ObjectProperty",
-                  "start": 892,
-                  "end": 903,
+                  "start": 896,
+                  "end": 907,
                   "loc": {
                     "start": {
                       "line": 16,
@@ -109,8 +109,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 892,
-                    "end": 900,
+                    "start": 896,
+                    "end": 904,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -126,8 +126,8 @@
                   },
                   "value": {
                     "type": "NumericLiteral",
-                    "start": 902,
-                    "end": 903,
+                    "start": 906,
+                    "end": 907,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -147,8 +147,8 @@
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 907,
-                  "end": 918,
+                  "start": 911,
+                  "end": 922,
                   "loc": {
                     "start": {
                       "line": 17,
@@ -164,8 +164,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 907,
-                    "end": 915,
+                    "start": 911,
+                    "end": 919,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -181,8 +181,8 @@
                   },
                   "value": {
                     "type": "NumericLiteral",
-                    "start": 917,
-                    "end": 918,
+                    "start": 921,
+                    "end": 922,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -202,8 +202,8 @@
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 922,
-                  "end": 933,
+                  "start": 926,
+                  "end": 937,
                   "loc": {
                     "start": {
                       "line": 18,
@@ -219,8 +219,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 922,
-                    "end": 930,
+                    "start": 926,
+                    "end": 934,
                     "loc": {
                       "start": {
                         "line": 18,
@@ -236,8 +236,8 @@
                   },
                   "value": {
                     "type": "NumericLiteral",
-                    "start": 932,
-                    "end": 933,
+                    "start": 936,
+                    "end": 937,
                     "loc": {
                       "start": {
                         "line": 18,
@@ -257,8 +257,8 @@
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 937,
-                  "end": 946,
+                  "start": 941,
+                  "end": 950,
                   "loc": {
                     "start": {
                       "line": 19,
@@ -274,8 +274,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 937,
-                    "end": 943,
+                    "start": 941,
+                    "end": 947,
                     "loc": {
                       "start": {
                         "line": 19,
@@ -291,8 +291,8 @@
                   },
                   "value": {
                     "type": "NumericLiteral",
-                    "start": 945,
-                    "end": 946,
+                    "start": 949,
+                    "end": 950,
                     "loc": {
                       "start": {
                         "line": 19,
@@ -312,8 +312,8 @@
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 950,
-                  "end": 958,
+                  "start": 954,
+                  "end": 962,
                   "loc": {
                     "start": {
                       "line": 20,
@@ -329,8 +329,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 950,
-                    "end": 955,
+                    "start": 954,
+                    "end": 959,
                     "loc": {
                       "start": {
                         "line": 20,
@@ -346,8 +346,8 @@
                   },
                   "value": {
                     "type": "NumericLiteral",
-                    "start": 957,
-                    "end": 958,
+                    "start": 961,
+                    "end": 962,
                     "loc": {
                       "start": {
                         "line": 20,
@@ -367,8 +367,8 @@
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 962,
-                  "end": 972,
+                  "start": 966,
+                  "end": 976,
                   "loc": {
                     "start": {
                       "line": 21,
@@ -384,8 +384,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 962,
-                    "end": 969,
+                    "start": 966,
+                    "end": 973,
                     "loc": {
                       "start": {
                         "line": 21,
@@ -401,8 +401,8 @@
                   },
                   "value": {
                     "type": "NumericLiteral",
-                    "start": 971,
-                    "end": 972,
+                    "start": 975,
+                    "end": 976,
                     "loc": {
                       "start": {
                         "line": 21,
@@ -432,8 +432,8 @@
       },
       {
         "type": "Identifier",
-        "start": 976,
-        "end": 1011,
+        "start": 980,
+        "end": 1015,
         "loc": {
           "start": {
             "line": 24,
@@ -446,8 +446,8 @@
         },
         "declaration": {
           "type": "Identifier",
-          "start": 991,
-          "end": 1011,
+          "start": 995,
+          "end": 1015,
           "loc": {
             "start": {
               "line": 24,
@@ -467,8 +467,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 976,
-        "end": 1011,
+        "start": 980,
+        "end": 1015,
         "loc": {
           "start": {
             "line": 24,
@@ -481,8 +481,8 @@
         },
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 859,
-          "end": 974,
+          "start": 863,
+          "end": 978,
           "loc": {
             "start": {
               "line": 15,
@@ -496,8 +496,8 @@
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 865,
-              "end": 974,
+              "start": 869,
+              "end": 978,
               "loc": {
                 "start": {
                   "line": 15,
@@ -510,8 +510,8 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 865,
-                "end": 885,
+                "start": 869,
+                "end": 889,
                 "loc": {
                   "start": {
                     "line": 15,
@@ -528,8 +528,8 @@
               },
               "init": {
                 "type": "ObjectExpression",
-                "start": 888,
-                "end": 974,
+                "start": 892,
+                "end": 978,
                 "loc": {
                   "start": {
                     "line": 15,
@@ -543,8 +543,8 @@
                 "properties": [
                   {
                     "type": "ObjectProperty",
-                    "start": 892,
-                    "end": 903,
+                    "start": 896,
+                    "end": 907,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -560,8 +560,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 892,
-                      "end": 900,
+                      "start": 896,
+                      "end": 904,
                       "loc": {
                         "start": {
                           "line": 16,
@@ -577,8 +577,8 @@
                     },
                     "value": {
                       "type": "NumericLiteral",
-                      "start": 902,
-                      "end": 903,
+                      "start": 906,
+                      "end": 907,
                       "loc": {
                         "start": {
                           "line": 16,
@@ -598,8 +598,8 @@
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 907,
-                    "end": 918,
+                    "start": 911,
+                    "end": 922,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -615,8 +615,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 907,
-                      "end": 915,
+                      "start": 911,
+                      "end": 919,
                       "loc": {
                         "start": {
                           "line": 17,
@@ -632,8 +632,8 @@
                     },
                     "value": {
                       "type": "NumericLiteral",
-                      "start": 917,
-                      "end": 918,
+                      "start": 921,
+                      "end": 922,
                       "loc": {
                         "start": {
                           "line": 17,
@@ -653,8 +653,8 @@
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 922,
-                    "end": 933,
+                    "start": 926,
+                    "end": 937,
                     "loc": {
                       "start": {
                         "line": 18,
@@ -670,8 +670,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 922,
-                      "end": 930,
+                      "start": 926,
+                      "end": 934,
                       "loc": {
                         "start": {
                           "line": 18,
@@ -687,8 +687,8 @@
                     },
                     "value": {
                       "type": "NumericLiteral",
-                      "start": 932,
-                      "end": 933,
+                      "start": 936,
+                      "end": 937,
                       "loc": {
                         "start": {
                           "line": 18,
@@ -708,8 +708,8 @@
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 937,
-                    "end": 946,
+                    "start": 941,
+                    "end": 950,
                     "loc": {
                       "start": {
                         "line": 19,
@@ -725,8 +725,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 937,
-                      "end": 943,
+                      "start": 941,
+                      "end": 947,
                       "loc": {
                         "start": {
                           "line": 19,
@@ -742,8 +742,8 @@
                     },
                     "value": {
                       "type": "NumericLiteral",
-                      "start": 945,
-                      "end": 946,
+                      "start": 949,
+                      "end": 950,
                       "loc": {
                         "start": {
                           "line": 19,
@@ -763,8 +763,8 @@
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 950,
-                    "end": 958,
+                    "start": 954,
+                    "end": 962,
                     "loc": {
                       "start": {
                         "line": 20,
@@ -780,8 +780,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 950,
-                      "end": 955,
+                      "start": 954,
+                      "end": 959,
                       "loc": {
                         "start": {
                           "line": 20,
@@ -797,8 +797,8 @@
                     },
                     "value": {
                       "type": "NumericLiteral",
-                      "start": 957,
-                      "end": 958,
+                      "start": 961,
+                      "end": 962,
                       "loc": {
                         "start": {
                           "line": 20,
@@ -818,8 +818,8 @@
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 962,
-                    "end": 972,
+                    "start": 966,
+                    "end": 976,
                     "loc": {
                       "start": {
                         "line": 21,
@@ -835,8 +835,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 962,
-                      "end": 969,
+                      "start": 966,
+                      "end": 973,
                       "loc": {
                         "start": {
                           "line": 21,
@@ -852,8 +852,8 @@
                     },
                     "value": {
                       "type": "NumericLiteral",
-                      "start": 971,
-                      "end": 972,
+                      "start": 975,
+                      "end": 976,
                       "loc": {
                         "start": {
                           "line": 21,
@@ -880,9 +880,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * Options for combining source and destination pixel colors when compositing particles during rendering, used by the blendMode property.\n * @typedef {Object} SCNParticleBlendMode\n * @property {number} additive - The source and destination colors are added together.\n * @property {number} subtract - The source color is subtracted from the destination color.\n * @property {number} multiply - The source color is multiplied by the destination color.\n * @property {number} screen - The source color is added to the destination color times the inverted source color.\n * @property {number} alpha - The source and destination colors are blended by multiplying the source alpha value.\n * @property {number} replace - The source color replaces the destination color.\n * @see https://developer.apple.com/reference/scenekit/scnparticleblendmode\n ",
+              "value": "*\n * Options for combining source and destination pixel colors when compositing particles during rendering, used by the blendMode property.\n * @typedef {Object} SCNParticleBlendMode\n * @property {number} additive - The source and destination colors are added together.\n * @property {number} subtract - The source color is subtracted from the destination color.\n * @property {number} multiply - The source color is multiplied by the destination color.\n * @property {number} screen - The source color is added to the destination color times the inverted source color.\n * @property {number} alpha - The source and destination colors are blended by multiplying the source alpha value.\n * @property {number} replace - The source color replaces the destination color.\n * @see https://developer.apple.com/documentation/scenekit/scnparticleblendmode\n ",
               "start": 15,
-              "end": 858,
+              "end": 862,
               "loc": {
                 "start": {
                   "line": 4,
@@ -938,9 +938,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Options for combining source and destination pixel colors when compositing particles during rendering, used by the blendMode property.\n * @typedef {Object} SCNParticleBlendMode\n * @property {number} additive - The source and destination colors are added together.\n * @property {number} subtract - The source color is subtracted from the destination color.\n * @property {number} multiply - The source color is multiplied by the destination color.\n * @property {number} screen - The source color is added to the destination color times the inverted source color.\n * @property {number} alpha - The source and destination colors are blended by multiplying the source alpha value.\n * @property {number} replace - The source color replaces the destination color.\n * @see https://developer.apple.com/reference/scenekit/scnparticleblendmode\n ",
+            "value": "*\n * Options for combining source and destination pixel colors when compositing particles during rendering, used by the blendMode property.\n * @typedef {Object} SCNParticleBlendMode\n * @property {number} additive - The source and destination colors are added together.\n * @property {number} subtract - The source color is subtracted from the destination color.\n * @property {number} multiply - The source color is multiplied by the destination color.\n * @property {number} screen - The source color is added to the destination color times the inverted source color.\n * @property {number} alpha - The source and destination colors are blended by multiplying the source alpha value.\n * @property {number} replace - The source color replaces the destination color.\n * @see https://developer.apple.com/documentation/scenekit/scnparticleblendmode\n ",
             "start": 15,
-            "end": 858,
+            "end": 862,
             "loc": {
               "start": {
                 "line": 4,
@@ -959,9 +959,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * Options for combining source and destination pixel colors when compositing particles during rendering, used by the blendMode property.\n * @typedef {Object} SCNParticleBlendMode\n * @property {number} additive - The source and destination colors are added together.\n * @property {number} subtract - The source color is subtracted from the destination color.\n * @property {number} multiply - The source color is multiplied by the destination color.\n * @property {number} screen - The source color is added to the destination color times the inverted source color.\n * @property {number} alpha - The source and destination colors are blended by multiplying the source alpha value.\n * @property {number} replace - The source color replaces the destination color.\n * @see https://developer.apple.com/reference/scenekit/scnparticleblendmode\n ",
+      "value": "*\n * Options for combining source and destination pixel colors when compositing particles during rendering, used by the blendMode property.\n * @typedef {Object} SCNParticleBlendMode\n * @property {number} additive - The source and destination colors are added together.\n * @property {number} subtract - The source color is subtracted from the destination color.\n * @property {number} multiply - The source color is multiplied by the destination color.\n * @property {number} screen - The source color is added to the destination color times the inverted source color.\n * @property {number} alpha - The source and destination colors are blended by multiplying the source alpha value.\n * @property {number} replace - The source color replaces the destination color.\n * @see https://developer.apple.com/documentation/scenekit/scnparticleblendmode\n ",
       "start": 15,
-      "end": 858,
+      "end": 862,
       "loc": {
         "start": {
           "line": 4,
@@ -1004,9 +1004,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Options for combining source and destination pixel colors when compositing particles during rendering, used by the blendMode property.\n * @typedef {Object} SCNParticleBlendMode\n * @property {number} additive - The source and destination colors are added together.\n * @property {number} subtract - The source color is subtracted from the destination color.\n * @property {number} multiply - The source color is multiplied by the destination color.\n * @property {number} screen - The source color is added to the destination color times the inverted source color.\n * @property {number} alpha - The source and destination colors are blended by multiplying the source alpha value.\n * @property {number} replace - The source color replaces the destination color.\n * @see https://developer.apple.com/reference/scenekit/scnparticleblendmode\n ",
+      "value": "*\n * Options for combining source and destination pixel colors when compositing particles during rendering, used by the blendMode property.\n * @typedef {Object} SCNParticleBlendMode\n * @property {number} additive - The source and destination colors are added together.\n * @property {number} subtract - The source color is subtracted from the destination color.\n * @property {number} multiply - The source color is multiplied by the destination color.\n * @property {number} screen - The source color is added to the destination color times the inverted source color.\n * @property {number} alpha - The source and destination colors are blended by multiplying the source alpha value.\n * @property {number} replace - The source color replaces the destination color.\n * @see https://developer.apple.com/documentation/scenekit/scnparticleblendmode\n ",
       "start": 15,
-      "end": 858,
+      "end": 862,
       "loc": {
         "start": {
           "line": 4,
@@ -1033,8 +1033,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 859,
-      "end": 864,
+      "start": 863,
+      "end": 868,
       "loc": {
         "start": {
           "line": 15,
@@ -1059,8 +1059,8 @@
         "binop": null
       },
       "value": "SCNParticleBlendMode",
-      "start": 865,
-      "end": 885,
+      "start": 869,
+      "end": 889,
       "loc": {
         "start": {
           "line": 15,
@@ -1086,8 +1086,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 886,
-      "end": 887,
+      "start": 890,
+      "end": 891,
       "loc": {
         "start": {
           "line": 15,
@@ -1111,8 +1111,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 888,
-      "end": 889,
+      "start": 892,
+      "end": 893,
       "loc": {
         "start": {
           "line": 15,
@@ -1137,8 +1137,8 @@
         "binop": null
       },
       "value": "additive",
-      "start": 892,
-      "end": 900,
+      "start": 896,
+      "end": 904,
       "loc": {
         "start": {
           "line": 16,
@@ -1163,8 +1163,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 900,
-      "end": 901,
+      "start": 904,
+      "end": 905,
       "loc": {
         "start": {
           "line": 16,
@@ -1190,8 +1190,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 902,
-      "end": 903,
+      "start": 906,
+      "end": 907,
       "loc": {
         "start": {
           "line": 16,
@@ -1216,8 +1216,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 903,
-      "end": 904,
+      "start": 907,
+      "end": 908,
       "loc": {
         "start": {
           "line": 16,
@@ -1242,8 +1242,8 @@
         "binop": null
       },
       "value": "subtract",
-      "start": 907,
-      "end": 915,
+      "start": 911,
+      "end": 919,
       "loc": {
         "start": {
           "line": 17,
@@ -1268,8 +1268,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 915,
-      "end": 916,
+      "start": 919,
+      "end": 920,
       "loc": {
         "start": {
           "line": 17,
@@ -1295,8 +1295,8 @@
         "updateContext": null
       },
       "value": 1,
-      "start": 917,
-      "end": 918,
+      "start": 921,
+      "end": 922,
       "loc": {
         "start": {
           "line": 17,
@@ -1321,8 +1321,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 918,
-      "end": 919,
+      "start": 922,
+      "end": 923,
       "loc": {
         "start": {
           "line": 17,
@@ -1347,8 +1347,8 @@
         "binop": null
       },
       "value": "multiply",
-      "start": 922,
-      "end": 930,
+      "start": 926,
+      "end": 934,
       "loc": {
         "start": {
           "line": 18,
@@ -1373,8 +1373,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 930,
-      "end": 931,
+      "start": 934,
+      "end": 935,
       "loc": {
         "start": {
           "line": 18,
@@ -1400,8 +1400,8 @@
         "updateContext": null
       },
       "value": 2,
-      "start": 932,
-      "end": 933,
+      "start": 936,
+      "end": 937,
       "loc": {
         "start": {
           "line": 18,
@@ -1426,8 +1426,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 933,
-      "end": 934,
+      "start": 937,
+      "end": 938,
       "loc": {
         "start": {
           "line": 18,
@@ -1452,8 +1452,8 @@
         "binop": null
       },
       "value": "screen",
-      "start": 937,
-      "end": 943,
+      "start": 941,
+      "end": 947,
       "loc": {
         "start": {
           "line": 19,
@@ -1478,8 +1478,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 943,
-      "end": 944,
+      "start": 947,
+      "end": 948,
       "loc": {
         "start": {
           "line": 19,
@@ -1505,8 +1505,8 @@
         "updateContext": null
       },
       "value": 3,
-      "start": 945,
-      "end": 946,
+      "start": 949,
+      "end": 950,
       "loc": {
         "start": {
           "line": 19,
@@ -1531,8 +1531,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 946,
-      "end": 947,
+      "start": 950,
+      "end": 951,
       "loc": {
         "start": {
           "line": 19,
@@ -1557,8 +1557,8 @@
         "binop": null
       },
       "value": "alpha",
-      "start": 950,
-      "end": 955,
+      "start": 954,
+      "end": 959,
       "loc": {
         "start": {
           "line": 20,
@@ -1583,8 +1583,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 955,
-      "end": 956,
+      "start": 959,
+      "end": 960,
       "loc": {
         "start": {
           "line": 20,
@@ -1610,8 +1610,8 @@
         "updateContext": null
       },
       "value": 4,
-      "start": 957,
-      "end": 958,
+      "start": 961,
+      "end": 962,
       "loc": {
         "start": {
           "line": 20,
@@ -1636,8 +1636,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 958,
-      "end": 959,
+      "start": 962,
+      "end": 963,
       "loc": {
         "start": {
           "line": 20,
@@ -1662,8 +1662,8 @@
         "binop": null
       },
       "value": "replace",
-      "start": 962,
-      "end": 969,
+      "start": 966,
+      "end": 973,
       "loc": {
         "start": {
           "line": 21,
@@ -1688,8 +1688,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 969,
-      "end": 970,
+      "start": 973,
+      "end": 974,
       "loc": {
         "start": {
           "line": 21,
@@ -1715,8 +1715,8 @@
         "updateContext": null
       },
       "value": 5,
-      "start": 971,
-      "end": 972,
+      "start": 975,
+      "end": 976,
       "loc": {
         "start": {
           "line": 21,
@@ -1740,8 +1740,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 973,
-      "end": 974,
+      "start": 977,
+      "end": 978,
       "loc": {
         "start": {
           "line": 22,
@@ -1768,8 +1768,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 976,
-      "end": 982,
+      "start": 980,
+      "end": 986,
       "loc": {
         "start": {
           "line": 24,
@@ -1796,8 +1796,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 983,
-      "end": 990,
+      "start": 987,
+      "end": 994,
       "loc": {
         "start": {
           "line": 24,
@@ -1822,8 +1822,8 @@
         "binop": null
       },
       "value": "SCNParticleBlendMode",
-      "start": 991,
-      "end": 1011,
+      "start": 995,
+      "end": 1015,
       "loc": {
         "start": {
           "line": 24,
@@ -1848,8 +1848,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1012,
-      "end": 1012,
+      "start": 1016,
+      "end": 1016,
       "loc": {
         "start": {
           "line": 25,

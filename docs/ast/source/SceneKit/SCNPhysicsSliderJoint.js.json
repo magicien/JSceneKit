@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 6015,
+  "end": 6079,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 6015,
+    "end": 6079,
     "loc": {
       "start": {
         "line": 1,
@@ -239,9 +239,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * A physics behavior that connects two bodies and allows them to slide against each other and rotate around their connecting points.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint\n ",
+            "value": "*\n * A physics behavior that connects two bodies and allows them to slide against each other and rotate around their connecting points.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint\n ",
             "start": 154,
-            "end": 423,
+            "end": 427,
             "loc": {
               "start": {
                 "line": 8,
@@ -257,8 +257,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 424,
-        "end": 6014,
+        "start": 428,
+        "end": 6078,
         "loc": {
           "start": {
             "line": 14,
@@ -271,8 +271,8 @@
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 439,
-          "end": 6014,
+          "start": 443,
+          "end": 6078,
           "loc": {
             "start": {
               "line": 14,
@@ -285,8 +285,8 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 445,
-            "end": 466,
+            "start": 449,
+            "end": 470,
             "loc": {
               "start": {
                 "line": 14,
@@ -303,8 +303,8 @@
           },
           "superClass": {
             "type": "Identifier",
-            "start": 475,
-            "end": 493,
+            "start": 479,
+            "end": 497,
             "loc": {
               "start": {
                 "line": 14,
@@ -320,8 +320,8 @@
           },
           "body": {
             "type": "ClassBody",
-            "start": 494,
-            "end": 6014,
+            "start": 498,
+            "end": 6078,
             "loc": {
               "start": {
                 "line": 14,
@@ -335,8 +335,8 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 1830,
-                "end": 5380,
+                "start": 1838,
+                "end": 5436,
                 "loc": {
                   "start": {
                     "line": 30,
@@ -350,8 +350,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1830,
-                  "end": 1841,
+                  "start": 1838,
+                  "end": 1849,
                   "loc": {
                     "start": {
                       "line": 30,
@@ -375,8 +375,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 1842,
-                    "end": 1847,
+                    "start": 1850,
+                    "end": 1855,
                     "loc": {
                       "start": {
                         "line": 30,
@@ -392,8 +392,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1849,
-                    "end": 1854,
+                    "start": 1857,
+                    "end": 1862,
                     "loc": {
                       "start": {
                         "line": 30,
@@ -409,8 +409,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1856,
-                    "end": 1863,
+                    "start": 1864,
+                    "end": 1871,
                     "loc": {
                       "start": {
                         "line": 30,
@@ -426,8 +426,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1865,
-                    "end": 1870,
+                    "start": 1873,
+                    "end": 1878,
                     "loc": {
                       "start": {
                         "line": 30,
@@ -443,8 +443,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1872,
-                    "end": 1877,
+                    "start": 1880,
+                    "end": 1885,
                     "loc": {
                       "start": {
                         "line": 30,
@@ -460,8 +460,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 1879,
-                    "end": 1886,
+                    "start": 1887,
+                    "end": 1894,
                     "loc": {
                       "start": {
                         "line": 30,
@@ -478,8 +478,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1888,
-                  "end": 5380,
+                  "start": 1896,
+                  "end": 5436,
                   "loc": {
                     "start": {
                       "line": 30,
@@ -493,8 +493,8 @@
                   "body": [
                     {
                       "type": "ExpressionStatement",
-                      "start": 1894,
-                      "end": 1901,
+                      "start": 1902,
+                      "end": 1909,
                       "loc": {
                         "start": {
                           "line": 31,
@@ -507,8 +507,8 @@
                       },
                       "expression": {
                         "type": "CallExpression",
-                        "start": 1894,
-                        "end": 1901,
+                        "start": 1902,
+                        "end": 1909,
                         "loc": {
                           "start": {
                             "line": 31,
@@ -521,8 +521,8 @@
                         },
                         "callee": {
                           "type": "Super",
-                          "start": 1894,
-                          "end": 1899,
+                          "start": 1902,
+                          "end": 1907,
                           "loc": {
                             "start": {
                               "line": 31,
@@ -541,8 +541,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Managing the Characteristics of a Slider Joint",
-                          "start": 1907,
-                          "end": 1956,
+                          "start": 1915,
+                          "end": 1964,
                           "loc": {
                             "start": {
                               "line": 33,
@@ -556,9 +556,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The axis along which the first body can slide, relative to the node containing it.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387900-axisa\n     ",
-                          "start": 1962,
-                          "end": 2184,
+                          "value": "*\n     * The axis along which the first body can slide, relative to the node containing it.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387900-axisa\n     ",
+                          "start": 1970,
+                          "end": 2196,
                           "loc": {
                             "start": {
                               "line": 35,
@@ -574,8 +574,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2189,
-                      "end": 2206,
+                      "start": 2201,
+                      "end": 2218,
                       "loc": {
                         "start": {
                           "line": 40,
@@ -588,8 +588,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2189,
-                        "end": 2206,
+                        "start": 2201,
+                        "end": 2218,
                         "loc": {
                           "start": {
                             "line": 40,
@@ -603,8 +603,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2189,
-                          "end": 2199,
+                          "start": 2201,
+                          "end": 2211,
                           "loc": {
                             "start": {
                               "line": 40,
@@ -617,8 +617,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2189,
-                            "end": 2193,
+                            "start": 2201,
+                            "end": 2205,
                             "loc": {
                               "start": {
                                 "line": 40,
@@ -633,8 +633,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2194,
-                            "end": 2199,
+                            "start": 2206,
+                            "end": 2211,
                             "loc": {
                               "start": {
                                 "line": 40,
@@ -653,8 +653,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 2202,
-                          "end": 2206,
+                          "start": 2214,
+                          "end": 2218,
                           "loc": {
                             "start": {
                               "line": 40,
@@ -675,8 +675,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Managing the Characteristics of a Slider Joint",
-                          "start": 1907,
-                          "end": 1956,
+                          "start": 1915,
+                          "end": 1964,
                           "loc": {
                             "start": {
                               "line": 33,
@@ -690,9 +690,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The axis along which the first body can slide, relative to the node containing it.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387900-axisa\n     ",
-                          "start": 1962,
-                          "end": 2184,
+                          "value": "*\n     * The axis along which the first body can slide, relative to the node containing it.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387900-axisa\n     ",
+                          "start": 1970,
+                          "end": 2196,
                           "loc": {
                             "start": {
                               "line": 35,
@@ -708,9 +708,9 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The point at which the joint connects, relative to the node containing the first body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387958-anchora\n     ",
-                          "start": 2212,
-                          "end": 2440,
+                          "value": "*\n     * The point at which the joint connects, relative to the node containing the first body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387958-anchora\n     ",
+                          "start": 2224,
+                          "end": 2456,
                           "loc": {
                             "start": {
                               "line": 42,
@@ -726,8 +726,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2445,
-                      "end": 2464,
+                      "start": 2461,
+                      "end": 2480,
                       "loc": {
                         "start": {
                           "line": 47,
@@ -740,8 +740,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2445,
-                        "end": 2464,
+                        "start": 2461,
+                        "end": 2480,
                         "loc": {
                           "start": {
                             "line": 47,
@@ -755,8 +755,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2445,
-                          "end": 2457,
+                          "start": 2461,
+                          "end": 2473,
                           "loc": {
                             "start": {
                               "line": 47,
@@ -769,8 +769,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2445,
-                            "end": 2449,
+                            "start": 2461,
+                            "end": 2465,
                             "loc": {
                               "start": {
                                 "line": 47,
@@ -785,8 +785,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2450,
-                            "end": 2457,
+                            "start": 2466,
+                            "end": 2473,
                             "loc": {
                               "start": {
                                 "line": 47,
@@ -805,8 +805,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 2460,
-                          "end": 2464,
+                          "start": 2476,
+                          "end": 2480,
                           "loc": {
                             "start": {
                               "line": 47,
@@ -826,9 +826,9 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The point at which the joint connects, relative to the node containing the first body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387958-anchora\n     ",
-                          "start": 2212,
-                          "end": 2440,
+                          "value": "*\n     * The point at which the joint connects, relative to the node containing the first body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387958-anchora\n     ",
+                          "start": 2224,
+                          "end": 2456,
                           "loc": {
                             "start": {
                               "line": 42,
@@ -844,9 +844,9 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The axis along which the second body can slide, relative to the node containing it.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387948-axisb\n     ",
-                          "start": 2470,
-                          "end": 2693,
+                          "value": "*\n     * The axis along which the second body can slide, relative to the node containing it.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387948-axisb\n     ",
+                          "start": 2486,
+                          "end": 2713,
                           "loc": {
                             "start": {
                               "line": 49,
@@ -862,8 +862,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2698,
-                      "end": 2715,
+                      "start": 2718,
+                      "end": 2735,
                       "loc": {
                         "start": {
                           "line": 54,
@@ -876,8 +876,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2698,
-                        "end": 2715,
+                        "start": 2718,
+                        "end": 2735,
                         "loc": {
                           "start": {
                             "line": 54,
@@ -891,8 +891,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2698,
-                          "end": 2708,
+                          "start": 2718,
+                          "end": 2728,
                           "loc": {
                             "start": {
                               "line": 54,
@@ -905,8 +905,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2698,
-                            "end": 2702,
+                            "start": 2718,
+                            "end": 2722,
                             "loc": {
                               "start": {
                                 "line": 54,
@@ -921,8 +921,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2703,
-                            "end": 2708,
+                            "start": 2723,
+                            "end": 2728,
                             "loc": {
                               "start": {
                                 "line": 54,
@@ -941,8 +941,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 2711,
-                          "end": 2715,
+                          "start": 2731,
+                          "end": 2735,
                           "loc": {
                             "start": {
                               "line": 54,
@@ -962,9 +962,9 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The axis along which the second body can slide, relative to the node containing it.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387948-axisb\n     ",
-                          "start": 2470,
-                          "end": 2693,
+                          "value": "*\n     * The axis along which the second body can slide, relative to the node containing it.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387948-axisb\n     ",
+                          "start": 2486,
+                          "end": 2713,
                           "loc": {
                             "start": {
                               "line": 49,
@@ -980,9 +980,9 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The point at which the joint connects, relative to the node containing the second body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387916-anchorb\n     ",
-                          "start": 2721,
-                          "end": 2950,
+                          "value": "*\n     * The point at which the joint connects, relative to the node containing the second body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387916-anchorb\n     ",
+                          "start": 2741,
+                          "end": 2974,
                           "loc": {
                             "start": {
                               "line": 56,
@@ -998,8 +998,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2955,
-                      "end": 2974,
+                      "start": 2979,
+                      "end": 2998,
                       "loc": {
                         "start": {
                           "line": 61,
@@ -1012,8 +1012,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2955,
-                        "end": 2974,
+                        "start": 2979,
+                        "end": 2998,
                         "loc": {
                           "start": {
                             "line": 61,
@@ -1027,8 +1027,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2955,
-                          "end": 2967,
+                          "start": 2979,
+                          "end": 2991,
                           "loc": {
                             "start": {
                               "line": 61,
@@ -1041,8 +1041,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2955,
-                            "end": 2959,
+                            "start": 2979,
+                            "end": 2983,
                             "loc": {
                               "start": {
                                 "line": 61,
@@ -1057,8 +1057,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2960,
-                            "end": 2967,
+                            "start": 2984,
+                            "end": 2991,
                             "loc": {
                               "start": {
                                 "line": 61,
@@ -1077,8 +1077,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 2970,
-                          "end": 2974,
+                          "start": 2994,
+                          "end": 2998,
                           "loc": {
                             "start": {
                               "line": 61,
@@ -1095,9 +1095,9 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The point at which the joint connects, relative to the node containing the second body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387916-anchorb\n     ",
-                          "start": 2721,
-                          "end": 2950,
+                          "value": "*\n     * The point at which the joint connects, relative to the node containing the second body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387916-anchorb\n     ",
+                          "start": 2741,
+                          "end": 2974,
                           "loc": {
                             "start": {
                               "line": 56,
@@ -1113,8 +1113,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 2980,
-                      "end": 2998,
+                      "start": 3004,
+                      "end": 3022,
                       "loc": {
                         "start": {
                           "line": 63,
@@ -1127,8 +1127,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 2980,
-                        "end": 2998,
+                        "start": 3004,
+                        "end": 3022,
                         "loc": {
                           "start": {
                             "line": 63,
@@ -1142,8 +1142,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 2980,
-                          "end": 2991,
+                          "start": 3004,
+                          "end": 3015,
                           "loc": {
                             "start": {
                               "line": 63,
@@ -1156,8 +1156,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 2980,
-                            "end": 2984,
+                            "start": 3004,
+                            "end": 3008,
                             "loc": {
                               "start": {
                                 "line": 63,
@@ -1171,8 +1171,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 2985,
-                            "end": 2991,
+                            "start": 3009,
+                            "end": 3015,
                             "loc": {
                               "start": {
                                 "line": 63,
@@ -1190,8 +1190,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 2994,
-                          "end": 2998,
+                          "start": 3018,
+                          "end": 3022,
                           "loc": {
                             "start": {
                               "line": 63,
@@ -1207,8 +1207,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 3003,
-                      "end": 3021,
+                      "start": 3027,
+                      "end": 3045,
                       "loc": {
                         "start": {
                           "line": 64,
@@ -1221,8 +1221,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 3003,
-                        "end": 3021,
+                        "start": 3027,
+                        "end": 3045,
                         "loc": {
                           "start": {
                             "line": 64,
@@ -1236,8 +1236,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 3003,
-                          "end": 3014,
+                          "start": 3027,
+                          "end": 3038,
                           "loc": {
                             "start": {
                               "line": 64,
@@ -1250,8 +1250,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 3003,
-                            "end": 3007,
+                            "start": 3027,
+                            "end": 3031,
                             "loc": {
                               "start": {
                                 "line": 64,
@@ -1265,8 +1265,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 3008,
-                            "end": 3014,
+                            "start": 3032,
+                            "end": 3038,
                             "loc": {
                               "start": {
                                 "line": 64,
@@ -1284,8 +1284,8 @@
                         },
                         "right": {
                           "type": "NullLiteral",
-                          "start": 3017,
-                          "end": 3021,
+                          "start": 3041,
+                          "end": 3045,
                           "loc": {
                             "start": {
                               "line": 64,
@@ -1305,8 +1305,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Limiting the Motion of a Slider Joint",
-                          "start": 3027,
-                          "end": 3067,
+                          "start": 3051,
+                          "end": 3091,
                           "loc": {
                             "start": {
                               "line": 66,
@@ -1320,9 +1320,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The minimum distance between the anchor points of the two bodies, relative to their initial positions.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387920-minimumlinearlimit\n     ",
-                          "start": 3073,
-                          "end": 3324,
+                          "value": "*\n     * The minimum distance between the anchor points of the two bodies, relative to their initial positions.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387920-minimumlinearlimit\n     ",
+                          "start": 3097,
+                          "end": 3352,
                           "loc": {
                             "start": {
                               "line": 68,
@@ -1338,8 +1338,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 3329,
-                      "end": 3356,
+                      "start": 3357,
+                      "end": 3384,
                       "loc": {
                         "start": {
                           "line": 73,
@@ -1352,8 +1352,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 3329,
-                        "end": 3356,
+                        "start": 3357,
+                        "end": 3384,
                         "loc": {
                           "start": {
                             "line": 73,
@@ -1367,8 +1367,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 3329,
-                          "end": 3352,
+                          "start": 3357,
+                          "end": 3380,
                           "loc": {
                             "start": {
                               "line": 73,
@@ -1381,8 +1381,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 3329,
-                            "end": 3333,
+                            "start": 3357,
+                            "end": 3361,
                             "loc": {
                               "start": {
                                 "line": 73,
@@ -1397,8 +1397,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 3334,
-                            "end": 3352,
+                            "start": 3362,
+                            "end": 3380,
                             "loc": {
                               "start": {
                                 "line": 73,
@@ -1417,8 +1417,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 3355,
-                          "end": 3356,
+                          "start": 3383,
+                          "end": 3384,
                           "loc": {
                             "start": {
                               "line": 73,
@@ -1444,8 +1444,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Limiting the Motion of a Slider Joint",
-                          "start": 3027,
-                          "end": 3067,
+                          "start": 3051,
+                          "end": 3091,
                           "loc": {
                             "start": {
                               "line": 66,
@@ -1459,9 +1459,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The minimum distance between the anchor points of the two bodies, relative to their initial positions.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387920-minimumlinearlimit\n     ",
-                          "start": 3073,
-                          "end": 3324,
+                          "value": "*\n     * The minimum distance between the anchor points of the two bodies, relative to their initial positions.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387920-minimumlinearlimit\n     ",
+                          "start": 3097,
+                          "end": 3352,
                           "loc": {
                             "start": {
                               "line": 68,
@@ -1477,9 +1477,9 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The maximum distance between the anchor points of the two bodies, relative to their initial positions.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387890-maximumlinearlimit\n     ",
-                          "start": 3362,
-                          "end": 3613,
+                          "value": "*\n     * The maximum distance between the anchor points of the two bodies, relative to their initial positions.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387890-maximumlinearlimit\n     ",
+                          "start": 3390,
+                          "end": 3645,
                           "loc": {
                             "start": {
                               "line": 75,
@@ -1495,8 +1495,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 3618,
-                      "end": 3645,
+                      "start": 3650,
+                      "end": 3677,
                       "loc": {
                         "start": {
                           "line": 80,
@@ -1509,8 +1509,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 3618,
-                        "end": 3645,
+                        "start": 3650,
+                        "end": 3677,
                         "loc": {
                           "start": {
                             "line": 80,
@@ -1524,8 +1524,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 3618,
-                          "end": 3641,
+                          "start": 3650,
+                          "end": 3673,
                           "loc": {
                             "start": {
                               "line": 80,
@@ -1538,8 +1538,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 3618,
-                            "end": 3622,
+                            "start": 3650,
+                            "end": 3654,
                             "loc": {
                               "start": {
                                 "line": 80,
@@ -1554,8 +1554,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 3623,
-                            "end": 3641,
+                            "start": 3655,
+                            "end": 3673,
                             "loc": {
                               "start": {
                                 "line": 80,
@@ -1574,8 +1574,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 3644,
-                          "end": 3645,
+                          "start": 3676,
+                          "end": 3677,
                           "loc": {
                             "start": {
                               "line": 80,
@@ -1600,9 +1600,9 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The maximum distance between the anchor points of the two bodies, relative to their initial positions.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387890-maximumlinearlimit\n     ",
-                          "start": 3362,
-                          "end": 3613,
+                          "value": "*\n     * The maximum distance between the anchor points of the two bodies, relative to their initial positions.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387890-maximumlinearlimit\n     ",
+                          "start": 3390,
+                          "end": 3645,
                           "loc": {
                             "start": {
                               "line": 75,
@@ -1618,9 +1618,9 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The minimum rotation angle between the two bodies, measured in radians relative to their initial orientations.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387967-minimumangularlimit\n     ",
-                          "start": 3651,
-                          "end": 3911,
+                          "value": "*\n     * The minimum rotation angle between the two bodies, measured in radians relative to their initial orientations.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387967-minimumangularlimit\n     ",
+                          "start": 3683,
+                          "end": 3947,
                           "loc": {
                             "start": {
                               "line": 82,
@@ -1636,8 +1636,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 3916,
-                      "end": 3944,
+                      "start": 3952,
+                      "end": 3980,
                       "loc": {
                         "start": {
                           "line": 87,
@@ -1650,8 +1650,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 3916,
-                        "end": 3944,
+                        "start": 3952,
+                        "end": 3980,
                         "loc": {
                           "start": {
                             "line": 87,
@@ -1665,8 +1665,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 3916,
-                          "end": 3940,
+                          "start": 3952,
+                          "end": 3976,
                           "loc": {
                             "start": {
                               "line": 87,
@@ -1679,8 +1679,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 3916,
-                            "end": 3920,
+                            "start": 3952,
+                            "end": 3956,
                             "loc": {
                               "start": {
                                 "line": 87,
@@ -1695,8 +1695,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 3921,
-                            "end": 3940,
+                            "start": 3957,
+                            "end": 3976,
                             "loc": {
                               "start": {
                                 "line": 87,
@@ -1715,8 +1715,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 3943,
-                          "end": 3944,
+                          "start": 3979,
+                          "end": 3980,
                           "loc": {
                             "start": {
                               "line": 87,
@@ -1741,9 +1741,9 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The minimum rotation angle between the two bodies, measured in radians relative to their initial orientations.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387967-minimumangularlimit\n     ",
-                          "start": 3651,
-                          "end": 3911,
+                          "value": "*\n     * The minimum rotation angle between the two bodies, measured in radians relative to their initial orientations.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387967-minimumangularlimit\n     ",
+                          "start": 3683,
+                          "end": 3947,
                           "loc": {
                             "start": {
                               "line": 82,
@@ -1759,9 +1759,9 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The maximum rotation angle between the two bodies, measured in radians relative to their initial orientations.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387924-maximumangularlimit\n     ",
-                          "start": 3950,
-                          "end": 4210,
+                          "value": "*\n     * The maximum rotation angle between the two bodies, measured in radians relative to their initial orientations.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387924-maximumangularlimit\n     ",
+                          "start": 3986,
+                          "end": 4250,
                           "loc": {
                             "start": {
                               "line": 89,
@@ -1777,8 +1777,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 4215,
-                      "end": 4243,
+                      "start": 4255,
+                      "end": 4283,
                       "loc": {
                         "start": {
                           "line": 94,
@@ -1791,8 +1791,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 4215,
-                        "end": 4243,
+                        "start": 4255,
+                        "end": 4283,
                         "loc": {
                           "start": {
                             "line": 94,
@@ -1806,8 +1806,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 4215,
-                          "end": 4239,
+                          "start": 4255,
+                          "end": 4279,
                           "loc": {
                             "start": {
                               "line": 94,
@@ -1820,8 +1820,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 4215,
-                            "end": 4219,
+                            "start": 4255,
+                            "end": 4259,
                             "loc": {
                               "start": {
                                 "line": 94,
@@ -1836,8 +1836,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 4220,
-                            "end": 4239,
+                            "start": 4260,
+                            "end": 4279,
                             "loc": {
                               "start": {
                                 "line": 94,
@@ -1856,8 +1856,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 4242,
-                          "end": 4243,
+                          "start": 4282,
+                          "end": 4283,
                           "loc": {
                             "start": {
                               "line": 94,
@@ -1882,9 +1882,9 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The maximum rotation angle between the two bodies, measured in radians relative to their initial orientations.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387924-maximumangularlimit\n     ",
-                          "start": 3950,
-                          "end": 4210,
+                          "value": "*\n     * The maximum rotation angle between the two bodies, measured in radians relative to their initial orientations.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387924-maximumangularlimit\n     ",
+                          "start": 3986,
+                          "end": 4250,
                           "loc": {
                             "start": {
                               "line": 89,
@@ -1901,8 +1901,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Applying Forces and Torques",
-                          "start": 4250,
-                          "end": 4280,
+                          "start": 4290,
+                          "end": 4320,
                           "loc": {
                             "start": {
                               "line": 97,
@@ -1916,9 +1916,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The velocity at which the joint’s connected bodies should slide.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387938-motortargetlinearvelocity\n     ",
-                          "start": 4286,
-                          "end": 4506,
+                          "value": "*\n     * The velocity at which the joint’s connected bodies should slide.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387938-motortargetlinearvelocity\n     ",
+                          "start": 4326,
+                          "end": 4550,
                           "loc": {
                             "start": {
                               "line": 99,
@@ -1934,8 +1934,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 4511,
-                      "end": 4545,
+                      "start": 4555,
+                      "end": 4589,
                       "loc": {
                         "start": {
                           "line": 104,
@@ -1948,8 +1948,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 4511,
-                        "end": 4545,
+                        "start": 4555,
+                        "end": 4589,
                         "loc": {
                           "start": {
                             "line": 104,
@@ -1963,8 +1963,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 4511,
-                          "end": 4541,
+                          "start": 4555,
+                          "end": 4585,
                           "loc": {
                             "start": {
                               "line": 104,
@@ -1977,8 +1977,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 4511,
-                            "end": 4515,
+                            "start": 4555,
+                            "end": 4559,
                             "loc": {
                               "start": {
                                 "line": 104,
@@ -1993,8 +1993,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 4516,
-                            "end": 4541,
+                            "start": 4560,
+                            "end": 4585,
                             "loc": {
                               "start": {
                                 "line": 104,
@@ -2013,8 +2013,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 4544,
-                          "end": 4545,
+                          "start": 4588,
+                          "end": 4589,
                           "loc": {
                             "start": {
                               "line": 104,
@@ -2040,8 +2040,8 @@
                         {
                           "type": "CommentLine",
                           "value": " Applying Forces and Torques",
-                          "start": 4250,
-                          "end": 4280,
+                          "start": 4290,
+                          "end": 4320,
                           "loc": {
                             "start": {
                               "line": 97,
@@ -2055,9 +2055,9 @@
                         },
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The velocity at which the joint’s connected bodies should slide.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387938-motortargetlinearvelocity\n     ",
-                          "start": 4286,
-                          "end": 4506,
+                          "value": "*\n     * The velocity at which the joint’s connected bodies should slide.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387938-motortargetlinearvelocity\n     ",
+                          "start": 4326,
+                          "end": 4550,
                           "loc": {
                             "start": {
                               "line": 99,
@@ -2073,9 +2073,9 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The maximum linear force that the joint can apply to its connected bodies, in newtons.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387954-motormaximumforce\n     ",
-                          "start": 4551,
-                          "end": 4785,
+                          "value": "*\n     * The maximum linear force that the joint can apply to its connected bodies, in newtons.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387954-motormaximumforce\n     ",
+                          "start": 4595,
+                          "end": 4833,
                           "loc": {
                             "start": {
                               "line": 106,
@@ -2091,8 +2091,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 4790,
-                      "end": 4816,
+                      "start": 4838,
+                      "end": 4864,
                       "loc": {
                         "start": {
                           "line": 111,
@@ -2105,8 +2105,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 4790,
-                        "end": 4816,
+                        "start": 4838,
+                        "end": 4864,
                         "loc": {
                           "start": {
                             "line": 111,
@@ -2120,8 +2120,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 4790,
-                          "end": 4812,
+                          "start": 4838,
+                          "end": 4860,
                           "loc": {
                             "start": {
                               "line": 111,
@@ -2134,8 +2134,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 4790,
-                            "end": 4794,
+                            "start": 4838,
+                            "end": 4842,
                             "loc": {
                               "start": {
                                 "line": 111,
@@ -2150,8 +2150,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 4795,
-                            "end": 4812,
+                            "start": 4843,
+                            "end": 4860,
                             "loc": {
                               "start": {
                                 "line": 111,
@@ -2170,8 +2170,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 4815,
-                          "end": 4816,
+                          "start": 4863,
+                          "end": 4864,
                           "loc": {
                             "start": {
                               "line": 111,
@@ -2196,9 +2196,9 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The maximum linear force that the joint can apply to its connected bodies, in newtons.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387954-motormaximumforce\n     ",
-                          "start": 4551,
-                          "end": 4785,
+                          "value": "*\n     * The maximum linear force that the joint can apply to its connected bodies, in newtons.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387954-motormaximumforce\n     ",
+                          "start": 4595,
+                          "end": 4833,
                           "loc": {
                             "start": {
                               "line": 106,
@@ -2214,9 +2214,9 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The angular velocity at which the joint’s connected bodies should rotate around it.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387908-motortargetangularvelocity\n     ",
-                          "start": 4822,
-                          "end": 5062,
+                          "value": "*\n     * The angular velocity at which the joint’s connected bodies should rotate around it.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387908-motortargetangularvelocity\n     ",
+                          "start": 4870,
+                          "end": 5114,
                           "loc": {
                             "start": {
                               "line": 113,
@@ -2232,8 +2232,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 5067,
-                      "end": 5102,
+                      "start": 5119,
+                      "end": 5154,
                       "loc": {
                         "start": {
                           "line": 118,
@@ -2246,8 +2246,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 5067,
-                        "end": 5102,
+                        "start": 5119,
+                        "end": 5154,
                         "loc": {
                           "start": {
                             "line": 118,
@@ -2261,8 +2261,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 5067,
-                          "end": 5098,
+                          "start": 5119,
+                          "end": 5150,
                           "loc": {
                             "start": {
                               "line": 118,
@@ -2275,8 +2275,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 5067,
-                            "end": 5071,
+                            "start": 5119,
+                            "end": 5123,
                             "loc": {
                               "start": {
                                 "line": 118,
@@ -2291,8 +2291,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 5072,
-                            "end": 5098,
+                            "start": 5124,
+                            "end": 5150,
                             "loc": {
                               "start": {
                                 "line": 118,
@@ -2311,8 +2311,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 5101,
-                          "end": 5102,
+                          "start": 5153,
+                          "end": 5154,
                           "loc": {
                             "start": {
                               "line": 118,
@@ -2337,9 +2337,9 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The angular velocity at which the joint’s connected bodies should rotate around it.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387908-motortargetangularvelocity\n     ",
-                          "start": 4822,
-                          "end": 5062,
+                          "value": "*\n     * The angular velocity at which the joint’s connected bodies should rotate around it.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387908-motortargetangularvelocity\n     ",
+                          "start": 4870,
+                          "end": 5114,
                           "loc": {
                             "start": {
                               "line": 113,
@@ -2355,9 +2355,9 @@
                       "trailingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The maximum torque that the joint can apply to its connected bodies, in newton-meters.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387961-motormaximumtorque\n     ",
-                          "start": 5108,
-                          "end": 5343,
+                          "value": "*\n     * The maximum torque that the joint can apply to its connected bodies, in newton-meters.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387961-motormaximumtorque\n     ",
+                          "start": 5160,
+                          "end": 5399,
                           "loc": {
                             "start": {
                               "line": 120,
@@ -2373,8 +2373,8 @@
                     },
                     {
                       "type": "ExpressionStatement",
-                      "start": 5348,
-                      "end": 5375,
+                      "start": 5404,
+                      "end": 5431,
                       "loc": {
                         "start": {
                           "line": 125,
@@ -2387,8 +2387,8 @@
                       },
                       "expression": {
                         "type": "AssignmentExpression",
-                        "start": 5348,
-                        "end": 5375,
+                        "start": 5404,
+                        "end": 5431,
                         "loc": {
                           "start": {
                             "line": 125,
@@ -2402,8 +2402,8 @@
                         "operator": "=",
                         "left": {
                           "type": "MemberExpression",
-                          "start": 5348,
-                          "end": 5371,
+                          "start": 5404,
+                          "end": 5427,
                           "loc": {
                             "start": {
                               "line": 125,
@@ -2416,8 +2416,8 @@
                           },
                           "object": {
                             "type": "ThisExpression",
-                            "start": 5348,
-                            "end": 5352,
+                            "start": 5404,
+                            "end": 5408,
                             "loc": {
                               "start": {
                                 "line": 125,
@@ -2432,8 +2432,8 @@
                           },
                           "property": {
                             "type": "Identifier",
-                            "start": 5353,
-                            "end": 5371,
+                            "start": 5409,
+                            "end": 5427,
                             "loc": {
                               "start": {
                                 "line": 125,
@@ -2452,8 +2452,8 @@
                         },
                         "right": {
                           "type": "NumericLiteral",
-                          "start": 5374,
-                          "end": 5375,
+                          "start": 5430,
+                          "end": 5431,
                           "loc": {
                             "start": {
                               "line": 125,
@@ -2475,9 +2475,9 @@
                       "leadingComments": [
                         {
                           "type": "CommentBlock",
-                          "value": "*\n     * The maximum torque that the joint can apply to its connected bodies, in newton-meters.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387961-motormaximumtorque\n     ",
-                          "start": 5108,
-                          "end": 5343,
+                          "value": "*\n     * The maximum torque that the joint can apply to its connected bodies, in newton-meters.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387961-motormaximumtorque\n     ",
+                          "start": 5160,
+                          "end": 5399,
                           "loc": {
                             "start": {
                               "line": 120,
@@ -2499,8 +2499,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Creating a Slider Joint",
-                    "start": 498,
-                    "end": 524,
+                    "start": 502,
+                    "end": 528,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -2514,9 +2514,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Creates a slider joint connecting two physics bodies.\n   * @access public\n   * @constructor\n   * @param {SCNPhysicsBody} bodyA - The first physics body to be connected by the joint.\n   * @param {SCNVector3} axisA - The axis along which the first body can slide, relative to the node containing it.\n   * @param {SCNVector3} anchorA - The point at which the joint connects, relative to the node containing the first body.\n   * @param {SCNPhysicsBody} bodyB - The second physics body to be connected by the joint.\n   * @param {SCNVector3} axisB - The axis along which the second body can slide, relative to the node containing it.\n   * @param {SCNVector3} anchorB - The point at which the joint connects, relative to the node containing the second body.\n   * @desc This method defines the location where the bodies are pinned together. To define their sliding or rotation motion relative to that point, use the properties listed in Limiting the Motion of a Slider Joint.For a behavior to take effect, add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object. The physics bodies constrained by the joint must be attached to nodes in the scene.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387922-init\n   ",
-                    "start": 528,
-                    "end": 1827,
+                    "value": "*\n   * Creates a slider joint connecting two physics bodies.\n   * @access public\n   * @constructor\n   * @param {SCNPhysicsBody} bodyA - The first physics body to be connected by the joint.\n   * @param {SCNVector3} axisA - The axis along which the first body can slide, relative to the node containing it.\n   * @param {SCNVector3} anchorA - The point at which the joint connects, relative to the node containing the first body.\n   * @param {SCNPhysicsBody} bodyB - The second physics body to be connected by the joint.\n   * @param {SCNVector3} axisB - The axis along which the second body can slide, relative to the node containing it.\n   * @param {SCNVector3} anchorB - The point at which the joint connects, relative to the node containing the second body.\n   * @desc This method defines the location where the bodies are pinned together. To define their sliding or rotation motion relative to that point, use the properties listed in Limiting the Motion of a Slider Joint.For a behavior to take effect, add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object. The physics bodies constrained by the joint must be attached to nodes in the scene.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387922-init\n   ",
+                    "start": 532,
+                    "end": 1835,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -2533,8 +2533,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Managing the Characteristics of a Slider Joint",
-                    "start": 5384,
-                    "end": 5433,
+                    "start": 5440,
+                    "end": 5489,
                     "loc": {
                       "start": {
                         "line": 129,
@@ -2548,9 +2548,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The first physics body connected by the joint.\n   * @type {SCNPhysicsBody}\n   * @desc \n   * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387987-bodya\n   ",
-                    "start": 5437,
-                    "end": 5631,
+                    "value": "*\n   * The first physics body connected by the joint.\n   * @type {SCNPhysicsBody}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387987-bodya\n   ",
+                    "start": 5493,
+                    "end": 5691,
                     "loc": {
                       "start": {
                         "line": 131,
@@ -2566,8 +2566,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 5634,
-                "end": 5674,
+                "start": 5694,
+                "end": 5734,
                 "loc": {
                   "start": {
                     "line": 137,
@@ -2581,8 +2581,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 5638,
-                  "end": 5643,
+                  "start": 5698,
+                  "end": 5703,
                   "loc": {
                     "start": {
                       "line": 137,
@@ -2605,8 +2605,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 5646,
-                  "end": 5674,
+                  "start": 5706,
+                  "end": 5734,
                   "loc": {
                     "start": {
                       "line": 137,
@@ -2620,8 +2620,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 5652,
-                      "end": 5670,
+                      "start": 5712,
+                      "end": 5730,
                       "loc": {
                         "start": {
                           "line": 138,
@@ -2634,8 +2634,8 @@
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 5659,
-                        "end": 5670,
+                        "start": 5719,
+                        "end": 5730,
                         "loc": {
                           "start": {
                             "line": 138,
@@ -2648,8 +2648,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 5659,
-                          "end": 5663,
+                          "start": 5719,
+                          "end": 5723,
                           "loc": {
                             "start": {
                               "line": 138,
@@ -2663,8 +2663,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 5664,
-                          "end": 5670,
+                          "start": 5724,
+                          "end": 5730,
                           "loc": {
                             "start": {
                               "line": 138,
@@ -2689,8 +2689,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Managing the Characteristics of a Slider Joint",
-                    "start": 5384,
-                    "end": 5433,
+                    "start": 5440,
+                    "end": 5489,
                     "loc": {
                       "start": {
                         "line": 129,
@@ -2704,9 +2704,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The first physics body connected by the joint.\n   * @type {SCNPhysicsBody}\n   * @desc \n   * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387987-bodya\n   ",
-                    "start": 5437,
-                    "end": 5631,
+                    "value": "*\n   * The first physics body connected by the joint.\n   * @type {SCNPhysicsBody}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387987-bodya\n   ",
+                    "start": 5493,
+                    "end": 5691,
                     "loc": {
                       "start": {
                         "line": 131,
@@ -2722,9 +2722,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The second physics body connected by the joint.\n   * @type {?SCNPhysicsBody}\n   * @desc This property’s value is nil if the joint was created using the init(body:axis:anchor:) method.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387896-bodyb\n   ",
-                    "start": 5678,
-                    "end": 5969,
+                    "value": "*\n   * The second physics body connected by the joint.\n   * @type {?SCNPhysicsBody}\n   * @desc This property’s value is nil if the joint was created using the init(body:axis:anchor:) method.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387896-bodyb\n   ",
+                    "start": 5738,
+                    "end": 6033,
                     "loc": {
                       "start": {
                         "line": 141,
@@ -2740,8 +2740,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 5972,
-                "end": 6012,
+                "start": 6036,
+                "end": 6076,
                 "loc": {
                   "start": {
                     "line": 147,
@@ -2755,8 +2755,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 5976,
-                  "end": 5981,
+                  "start": 6040,
+                  "end": 6045,
                   "loc": {
                     "start": {
                       "line": 147,
@@ -2779,8 +2779,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 5984,
-                  "end": 6012,
+                  "start": 6048,
+                  "end": 6076,
                   "loc": {
                     "start": {
                       "line": 147,
@@ -2794,8 +2794,8 @@
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 5990,
-                      "end": 6008,
+                      "start": 6054,
+                      "end": 6072,
                       "loc": {
                         "start": {
                           "line": 148,
@@ -2808,8 +2808,8 @@
                       },
                       "argument": {
                         "type": "MemberExpression",
-                        "start": 5997,
-                        "end": 6008,
+                        "start": 6061,
+                        "end": 6072,
                         "loc": {
                           "start": {
                             "line": 148,
@@ -2822,8 +2822,8 @@
                         },
                         "object": {
                           "type": "ThisExpression",
-                          "start": 5997,
-                          "end": 6001,
+                          "start": 6061,
+                          "end": 6065,
                           "loc": {
                             "start": {
                               "line": 148,
@@ -2837,8 +2837,8 @@
                         },
                         "property": {
                           "type": "Identifier",
-                          "start": 6002,
-                          "end": 6008,
+                          "start": 6066,
+                          "end": 6072,
                           "loc": {
                             "start": {
                               "line": 148,
@@ -2861,9 +2861,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * The second physics body connected by the joint.\n   * @type {?SCNPhysicsBody}\n   * @desc This property’s value is nil if the joint was created using the init(body:axis:anchor:) method.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387896-bodyb\n   ",
-                    "start": 5678,
-                    "end": 5969,
+                    "value": "*\n   * The second physics body connected by the joint.\n   * @type {?SCNPhysicsBody}\n   * @desc This property’s value is nil if the joint was created using the init(body:axis:anchor:) method.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387896-bodyb\n   ",
+                    "start": 5738,
+                    "end": 6033,
                     "loc": {
                       "start": {
                         "line": 141,
@@ -2882,9 +2882,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * A physics behavior that connects two bodies and allows them to slide against each other and rotate around their connecting points.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint\n ",
+              "value": "*\n * A physics behavior that connects two bodies and allows them to slide against each other and rotate around their connecting points.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint\n ",
               "start": 154,
-              "end": 423,
+              "end": 427,
               "loc": {
                 "start": {
                   "line": 8,
@@ -2902,9 +2902,9 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * A physics behavior that connects two bodies and allows them to slide against each other and rotate around their connecting points.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint\n ",
+            "value": "*\n * A physics behavior that connects two bodies and allows them to slide against each other and rotate around their connecting points.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint\n ",
             "start": 154,
-            "end": 423,
+            "end": 427,
             "loc": {
               "start": {
                 "line": 8,
@@ -2960,9 +2960,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * A physics behavior that connects two bodies and allows them to slide against each other and rotate around their connecting points.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint\n ",
+      "value": "*\n * A physics behavior that connects two bodies and allows them to slide against each other and rotate around their connecting points.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint\n ",
       "start": 154,
-      "end": 423,
+      "end": 427,
       "loc": {
         "start": {
           "line": 8,
@@ -2977,8 +2977,8 @@
     {
       "type": "CommentLine",
       "value": " Creating a Slider Joint",
-      "start": 498,
-      "end": 524,
+      "start": 502,
+      "end": 528,
       "loc": {
         "start": {
           "line": 15,
@@ -2992,9 +2992,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Creates a slider joint connecting two physics bodies.\n   * @access public\n   * @constructor\n   * @param {SCNPhysicsBody} bodyA - The first physics body to be connected by the joint.\n   * @param {SCNVector3} axisA - The axis along which the first body can slide, relative to the node containing it.\n   * @param {SCNVector3} anchorA - The point at which the joint connects, relative to the node containing the first body.\n   * @param {SCNPhysicsBody} bodyB - The second physics body to be connected by the joint.\n   * @param {SCNVector3} axisB - The axis along which the second body can slide, relative to the node containing it.\n   * @param {SCNVector3} anchorB - The point at which the joint connects, relative to the node containing the second body.\n   * @desc This method defines the location where the bodies are pinned together. To define their sliding or rotation motion relative to that point, use the properties listed in Limiting the Motion of a Slider Joint.For a behavior to take effect, add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object. The physics bodies constrained by the joint must be attached to nodes in the scene.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387922-init\n   ",
-      "start": 528,
-      "end": 1827,
+      "value": "*\n   * Creates a slider joint connecting two physics bodies.\n   * @access public\n   * @constructor\n   * @param {SCNPhysicsBody} bodyA - The first physics body to be connected by the joint.\n   * @param {SCNVector3} axisA - The axis along which the first body can slide, relative to the node containing it.\n   * @param {SCNVector3} anchorA - The point at which the joint connects, relative to the node containing the first body.\n   * @param {SCNPhysicsBody} bodyB - The second physics body to be connected by the joint.\n   * @param {SCNVector3} axisB - The axis along which the second body can slide, relative to the node containing it.\n   * @param {SCNVector3} anchorB - The point at which the joint connects, relative to the node containing the second body.\n   * @desc This method defines the location where the bodies are pinned together. To define their sliding or rotation motion relative to that point, use the properties listed in Limiting the Motion of a Slider Joint.For a behavior to take effect, add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object. The physics bodies constrained by the joint must be attached to nodes in the scene.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387922-init\n   ",
+      "start": 532,
+      "end": 1835,
       "loc": {
         "start": {
           "line": 17,
@@ -3009,8 +3009,8 @@
     {
       "type": "CommentLine",
       "value": " Managing the Characteristics of a Slider Joint",
-      "start": 1907,
-      "end": 1956,
+      "start": 1915,
+      "end": 1964,
       "loc": {
         "start": {
           "line": 33,
@@ -3024,9 +3024,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The axis along which the first body can slide, relative to the node containing it.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387900-axisa\n     ",
-      "start": 1962,
-      "end": 2184,
+      "value": "*\n     * The axis along which the first body can slide, relative to the node containing it.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387900-axisa\n     ",
+      "start": 1970,
+      "end": 2196,
       "loc": {
         "start": {
           "line": 35,
@@ -3040,9 +3040,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The point at which the joint connects, relative to the node containing the first body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387958-anchora\n     ",
-      "start": 2212,
-      "end": 2440,
+      "value": "*\n     * The point at which the joint connects, relative to the node containing the first body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387958-anchora\n     ",
+      "start": 2224,
+      "end": 2456,
       "loc": {
         "start": {
           "line": 42,
@@ -3056,9 +3056,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The axis along which the second body can slide, relative to the node containing it.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387948-axisb\n     ",
-      "start": 2470,
-      "end": 2693,
+      "value": "*\n     * The axis along which the second body can slide, relative to the node containing it.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387948-axisb\n     ",
+      "start": 2486,
+      "end": 2713,
       "loc": {
         "start": {
           "line": 49,
@@ -3072,9 +3072,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The point at which the joint connects, relative to the node containing the second body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387916-anchorb\n     ",
-      "start": 2721,
-      "end": 2950,
+      "value": "*\n     * The point at which the joint connects, relative to the node containing the second body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387916-anchorb\n     ",
+      "start": 2741,
+      "end": 2974,
       "loc": {
         "start": {
           "line": 56,
@@ -3089,8 +3089,8 @@
     {
       "type": "CommentLine",
       "value": " Limiting the Motion of a Slider Joint",
-      "start": 3027,
-      "end": 3067,
+      "start": 3051,
+      "end": 3091,
       "loc": {
         "start": {
           "line": 66,
@@ -3104,9 +3104,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The minimum distance between the anchor points of the two bodies, relative to their initial positions.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387920-minimumlinearlimit\n     ",
-      "start": 3073,
-      "end": 3324,
+      "value": "*\n     * The minimum distance between the anchor points of the two bodies, relative to their initial positions.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387920-minimumlinearlimit\n     ",
+      "start": 3097,
+      "end": 3352,
       "loc": {
         "start": {
           "line": 68,
@@ -3120,9 +3120,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The maximum distance between the anchor points of the two bodies, relative to their initial positions.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387890-maximumlinearlimit\n     ",
-      "start": 3362,
-      "end": 3613,
+      "value": "*\n     * The maximum distance between the anchor points of the two bodies, relative to their initial positions.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387890-maximumlinearlimit\n     ",
+      "start": 3390,
+      "end": 3645,
       "loc": {
         "start": {
           "line": 75,
@@ -3136,9 +3136,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The minimum rotation angle between the two bodies, measured in radians relative to their initial orientations.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387967-minimumangularlimit\n     ",
-      "start": 3651,
-      "end": 3911,
+      "value": "*\n     * The minimum rotation angle between the two bodies, measured in radians relative to their initial orientations.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387967-minimumangularlimit\n     ",
+      "start": 3683,
+      "end": 3947,
       "loc": {
         "start": {
           "line": 82,
@@ -3152,9 +3152,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The maximum rotation angle between the two bodies, measured in radians relative to their initial orientations.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387924-maximumangularlimit\n     ",
-      "start": 3950,
-      "end": 4210,
+      "value": "*\n     * The maximum rotation angle between the two bodies, measured in radians relative to their initial orientations.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387924-maximumangularlimit\n     ",
+      "start": 3986,
+      "end": 4250,
       "loc": {
         "start": {
           "line": 89,
@@ -3169,8 +3169,8 @@
     {
       "type": "CommentLine",
       "value": " Applying Forces and Torques",
-      "start": 4250,
-      "end": 4280,
+      "start": 4290,
+      "end": 4320,
       "loc": {
         "start": {
           "line": 97,
@@ -3184,9 +3184,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The velocity at which the joint’s connected bodies should slide.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387938-motortargetlinearvelocity\n     ",
-      "start": 4286,
-      "end": 4506,
+      "value": "*\n     * The velocity at which the joint’s connected bodies should slide.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387938-motortargetlinearvelocity\n     ",
+      "start": 4326,
+      "end": 4550,
       "loc": {
         "start": {
           "line": 99,
@@ -3200,9 +3200,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The maximum linear force that the joint can apply to its connected bodies, in newtons.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387954-motormaximumforce\n     ",
-      "start": 4551,
-      "end": 4785,
+      "value": "*\n     * The maximum linear force that the joint can apply to its connected bodies, in newtons.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387954-motormaximumforce\n     ",
+      "start": 4595,
+      "end": 4833,
       "loc": {
         "start": {
           "line": 106,
@@ -3216,9 +3216,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The angular velocity at which the joint’s connected bodies should rotate around it.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387908-motortargetangularvelocity\n     ",
-      "start": 4822,
-      "end": 5062,
+      "value": "*\n     * The angular velocity at which the joint’s connected bodies should rotate around it.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387908-motortargetangularvelocity\n     ",
+      "start": 4870,
+      "end": 5114,
       "loc": {
         "start": {
           "line": 113,
@@ -3232,9 +3232,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The maximum torque that the joint can apply to its connected bodies, in newton-meters.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387961-motormaximumtorque\n     ",
-      "start": 5108,
-      "end": 5343,
+      "value": "*\n     * The maximum torque that the joint can apply to its connected bodies, in newton-meters.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387961-motormaximumtorque\n     ",
+      "start": 5160,
+      "end": 5399,
       "loc": {
         "start": {
           "line": 120,
@@ -3249,8 +3249,8 @@
     {
       "type": "CommentLine",
       "value": " Managing the Characteristics of a Slider Joint",
-      "start": 5384,
-      "end": 5433,
+      "start": 5440,
+      "end": 5489,
       "loc": {
         "start": {
           "line": 129,
@@ -3264,9 +3264,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The first physics body connected by the joint.\n   * @type {SCNPhysicsBody}\n   * @desc \n   * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387987-bodya\n   ",
-      "start": 5437,
-      "end": 5631,
+      "value": "*\n   * The first physics body connected by the joint.\n   * @type {SCNPhysicsBody}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387987-bodya\n   ",
+      "start": 5493,
+      "end": 5691,
       "loc": {
         "start": {
           "line": 131,
@@ -3280,9 +3280,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The second physics body connected by the joint.\n   * @type {?SCNPhysicsBody}\n   * @desc This property’s value is nil if the joint was created using the init(body:axis:anchor:) method.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387896-bodyb\n   ",
-      "start": 5678,
-      "end": 5969,
+      "value": "*\n   * The second physics body connected by the joint.\n   * @type {?SCNPhysicsBody}\n   * @desc This property’s value is nil if the joint was created using the init(body:axis:anchor:) method.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387896-bodyb\n   ",
+      "start": 5738,
+      "end": 6033,
       "loc": {
         "start": {
           "line": 141,
@@ -3646,9 +3646,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * A physics behavior that connects two bodies and allows them to slide against each other and rotate around their connecting points.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint\n ",
+      "value": "*\n * A physics behavior that connects two bodies and allows them to slide against each other and rotate around their connecting points.\n * @access public\n * @extends {SCNPhysicsBehavior}\n * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint\n ",
       "start": 154,
-      "end": 423,
+      "end": 427,
       "loc": {
         "start": {
           "line": 8,
@@ -3675,8 +3675,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 424,
-      "end": 430,
+      "start": 428,
+      "end": 434,
       "loc": {
         "start": {
           "line": 14,
@@ -3703,8 +3703,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 431,
-      "end": 438,
+      "start": 435,
+      "end": 442,
       "loc": {
         "start": {
           "line": 14,
@@ -3731,8 +3731,8 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 439,
-      "end": 444,
+      "start": 443,
+      "end": 448,
       "loc": {
         "start": {
           "line": 14,
@@ -3757,8 +3757,8 @@
         "binop": null
       },
       "value": "SCNPhysicsSliderJoint",
-      "start": 445,
-      "end": 466,
+      "start": 449,
+      "end": 470,
       "loc": {
         "start": {
           "line": 14,
@@ -3785,8 +3785,8 @@
         "updateContext": null
       },
       "value": "extends",
-      "start": 467,
-      "end": 474,
+      "start": 471,
+      "end": 478,
       "loc": {
         "start": {
           "line": 14,
@@ -3811,8 +3811,8 @@
         "binop": null
       },
       "value": "SCNPhysicsBehavior",
-      "start": 475,
-      "end": 493,
+      "start": 479,
+      "end": 497,
       "loc": {
         "start": {
           "line": 14,
@@ -3836,8 +3836,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 494,
-      "end": 495,
+      "start": 498,
+      "end": 499,
       "loc": {
         "start": {
           "line": 14,
@@ -3852,8 +3852,8 @@
     {
       "type": "CommentLine",
       "value": " Creating a Slider Joint",
-      "start": 498,
-      "end": 524,
+      "start": 502,
+      "end": 528,
       "loc": {
         "start": {
           "line": 15,
@@ -3867,9 +3867,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Creates a slider joint connecting two physics bodies.\n   * @access public\n   * @constructor\n   * @param {SCNPhysicsBody} bodyA - The first physics body to be connected by the joint.\n   * @param {SCNVector3} axisA - The axis along which the first body can slide, relative to the node containing it.\n   * @param {SCNVector3} anchorA - The point at which the joint connects, relative to the node containing the first body.\n   * @param {SCNPhysicsBody} bodyB - The second physics body to be connected by the joint.\n   * @param {SCNVector3} axisB - The axis along which the second body can slide, relative to the node containing it.\n   * @param {SCNVector3} anchorB - The point at which the joint connects, relative to the node containing the second body.\n   * @desc This method defines the location where the bodies are pinned together. To define their sliding or rotation motion relative to that point, use the properties listed in Limiting the Motion of a Slider Joint.For a behavior to take effect, add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object. The physics bodies constrained by the joint must be attached to nodes in the scene.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387922-init\n   ",
-      "start": 528,
-      "end": 1827,
+      "value": "*\n   * Creates a slider joint connecting two physics bodies.\n   * @access public\n   * @constructor\n   * @param {SCNPhysicsBody} bodyA - The first physics body to be connected by the joint.\n   * @param {SCNVector3} axisA - The axis along which the first body can slide, relative to the node containing it.\n   * @param {SCNVector3} anchorA - The point at which the joint connects, relative to the node containing the first body.\n   * @param {SCNPhysicsBody} bodyB - The second physics body to be connected by the joint.\n   * @param {SCNVector3} axisB - The axis along which the second body can slide, relative to the node containing it.\n   * @param {SCNVector3} anchorB - The point at which the joint connects, relative to the node containing the second body.\n   * @desc This method defines the location where the bodies are pinned together. To define their sliding or rotation motion relative to that point, use the properties listed in Limiting the Motion of a Slider Joint.For a behavior to take effect, add it to the physics simulation by calling the addBehavior(_:) method on your scene’s SCNPhysicsWorld object. The physics bodies constrained by the joint must be attached to nodes in the scene.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387922-init\n   ",
+      "start": 532,
+      "end": 1835,
       "loc": {
         "start": {
           "line": 17,
@@ -3894,8 +3894,8 @@
         "binop": null
       },
       "value": "constructor",
-      "start": 1830,
-      "end": 1841,
+      "start": 1838,
+      "end": 1849,
       "loc": {
         "start": {
           "line": 30,
@@ -3919,8 +3919,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1841,
-      "end": 1842,
+      "start": 1849,
+      "end": 1850,
       "loc": {
         "start": {
           "line": 30,
@@ -3945,8 +3945,8 @@
         "binop": null
       },
       "value": "bodyA",
-      "start": 1842,
-      "end": 1847,
+      "start": 1850,
+      "end": 1855,
       "loc": {
         "start": {
           "line": 30,
@@ -3971,8 +3971,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1847,
-      "end": 1848,
+      "start": 1855,
+      "end": 1856,
       "loc": {
         "start": {
           "line": 30,
@@ -3997,8 +3997,8 @@
         "binop": null
       },
       "value": "axisA",
-      "start": 1849,
-      "end": 1854,
+      "start": 1857,
+      "end": 1862,
       "loc": {
         "start": {
           "line": 30,
@@ -4023,8 +4023,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1854,
-      "end": 1855,
+      "start": 1862,
+      "end": 1863,
       "loc": {
         "start": {
           "line": 30,
@@ -4049,8 +4049,8 @@
         "binop": null
       },
       "value": "anchorA",
-      "start": 1856,
-      "end": 1863,
+      "start": 1864,
+      "end": 1871,
       "loc": {
         "start": {
           "line": 30,
@@ -4075,8 +4075,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1863,
-      "end": 1864,
+      "start": 1871,
+      "end": 1872,
       "loc": {
         "start": {
           "line": 30,
@@ -4101,8 +4101,8 @@
         "binop": null
       },
       "value": "bodyB",
-      "start": 1865,
-      "end": 1870,
+      "start": 1873,
+      "end": 1878,
       "loc": {
         "start": {
           "line": 30,
@@ -4127,8 +4127,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1870,
-      "end": 1871,
+      "start": 1878,
+      "end": 1879,
       "loc": {
         "start": {
           "line": 30,
@@ -4153,8 +4153,8 @@
         "binop": null
       },
       "value": "axisB",
-      "start": 1872,
-      "end": 1877,
+      "start": 1880,
+      "end": 1885,
       "loc": {
         "start": {
           "line": 30,
@@ -4179,8 +4179,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1877,
-      "end": 1878,
+      "start": 1885,
+      "end": 1886,
       "loc": {
         "start": {
           "line": 30,
@@ -4205,8 +4205,8 @@
         "binop": null
       },
       "value": "anchorB",
-      "start": 1879,
-      "end": 1886,
+      "start": 1887,
+      "end": 1894,
       "loc": {
         "start": {
           "line": 30,
@@ -4230,8 +4230,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1886,
-      "end": 1887,
+      "start": 1894,
+      "end": 1895,
       "loc": {
         "start": {
           "line": 30,
@@ -4255,8 +4255,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1888,
-      "end": 1889,
+      "start": 1896,
+      "end": 1897,
       "loc": {
         "start": {
           "line": 30,
@@ -4283,8 +4283,8 @@
         "updateContext": null
       },
       "value": "super",
-      "start": 1894,
-      "end": 1899,
+      "start": 1902,
+      "end": 1907,
       "loc": {
         "start": {
           "line": 31,
@@ -4308,8 +4308,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1899,
-      "end": 1900,
+      "start": 1907,
+      "end": 1908,
       "loc": {
         "start": {
           "line": 31,
@@ -4333,8 +4333,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1900,
-      "end": 1901,
+      "start": 1908,
+      "end": 1909,
       "loc": {
         "start": {
           "line": 31,
@@ -4349,8 +4349,8 @@
     {
       "type": "CommentLine",
       "value": " Managing the Characteristics of a Slider Joint",
-      "start": 1907,
-      "end": 1956,
+      "start": 1915,
+      "end": 1964,
       "loc": {
         "start": {
           "line": 33,
@@ -4364,9 +4364,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The axis along which the first body can slide, relative to the node containing it.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387900-axisa\n     ",
-      "start": 1962,
-      "end": 2184,
+      "value": "*\n     * The axis along which the first body can slide, relative to the node containing it.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387900-axisa\n     ",
+      "start": 1970,
+      "end": 2196,
       "loc": {
         "start": {
           "line": 35,
@@ -4393,8 +4393,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2189,
-      "end": 2193,
+      "start": 2201,
+      "end": 2205,
       "loc": {
         "start": {
           "line": 40,
@@ -4419,8 +4419,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2193,
-      "end": 2194,
+      "start": 2205,
+      "end": 2206,
       "loc": {
         "start": {
           "line": 40,
@@ -4445,8 +4445,8 @@
         "binop": null
       },
       "value": "axisA",
-      "start": 2194,
-      "end": 2199,
+      "start": 2206,
+      "end": 2211,
       "loc": {
         "start": {
           "line": 40,
@@ -4472,8 +4472,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2200,
-      "end": 2201,
+      "start": 2212,
+      "end": 2213,
       "loc": {
         "start": {
           "line": 40,
@@ -4500,8 +4500,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2202,
-      "end": 2206,
+      "start": 2214,
+      "end": 2218,
       "loc": {
         "start": {
           "line": 40,
@@ -4515,9 +4515,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The point at which the joint connects, relative to the node containing the first body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387958-anchora\n     ",
-      "start": 2212,
-      "end": 2440,
+      "value": "*\n     * The point at which the joint connects, relative to the node containing the first body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387958-anchora\n     ",
+      "start": 2224,
+      "end": 2456,
       "loc": {
         "start": {
           "line": 42,
@@ -4544,8 +4544,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2445,
-      "end": 2449,
+      "start": 2461,
+      "end": 2465,
       "loc": {
         "start": {
           "line": 47,
@@ -4570,8 +4570,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2449,
-      "end": 2450,
+      "start": 2465,
+      "end": 2466,
       "loc": {
         "start": {
           "line": 47,
@@ -4596,8 +4596,8 @@
         "binop": null
       },
       "value": "anchorA",
-      "start": 2450,
-      "end": 2457,
+      "start": 2466,
+      "end": 2473,
       "loc": {
         "start": {
           "line": 47,
@@ -4623,8 +4623,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2458,
-      "end": 2459,
+      "start": 2474,
+      "end": 2475,
       "loc": {
         "start": {
           "line": 47,
@@ -4651,8 +4651,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2460,
-      "end": 2464,
+      "start": 2476,
+      "end": 2480,
       "loc": {
         "start": {
           "line": 47,
@@ -4666,9 +4666,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The axis along which the second body can slide, relative to the node containing it.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387948-axisb\n     ",
-      "start": 2470,
-      "end": 2693,
+      "value": "*\n     * The axis along which the second body can slide, relative to the node containing it.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387948-axisb\n     ",
+      "start": 2486,
+      "end": 2713,
       "loc": {
         "start": {
           "line": 49,
@@ -4695,8 +4695,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2698,
-      "end": 2702,
+      "start": 2718,
+      "end": 2722,
       "loc": {
         "start": {
           "line": 54,
@@ -4721,8 +4721,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2702,
-      "end": 2703,
+      "start": 2722,
+      "end": 2723,
       "loc": {
         "start": {
           "line": 54,
@@ -4747,8 +4747,8 @@
         "binop": null
       },
       "value": "axisB",
-      "start": 2703,
-      "end": 2708,
+      "start": 2723,
+      "end": 2728,
       "loc": {
         "start": {
           "line": 54,
@@ -4774,8 +4774,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2709,
-      "end": 2710,
+      "start": 2729,
+      "end": 2730,
       "loc": {
         "start": {
           "line": 54,
@@ -4802,8 +4802,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2711,
-      "end": 2715,
+      "start": 2731,
+      "end": 2735,
       "loc": {
         "start": {
           "line": 54,
@@ -4817,9 +4817,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The point at which the joint connects, relative to the node containing the second body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387916-anchorb\n     ",
-      "start": 2721,
-      "end": 2950,
+      "value": "*\n     * The point at which the joint connects, relative to the node containing the second body.\n     * @type {SCNVector3}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387916-anchorb\n     ",
+      "start": 2741,
+      "end": 2974,
       "loc": {
         "start": {
           "line": 56,
@@ -4846,8 +4846,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2955,
-      "end": 2959,
+      "start": 2979,
+      "end": 2983,
       "loc": {
         "start": {
           "line": 61,
@@ -4872,8 +4872,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2959,
-      "end": 2960,
+      "start": 2983,
+      "end": 2984,
       "loc": {
         "start": {
           "line": 61,
@@ -4898,8 +4898,8 @@
         "binop": null
       },
       "value": "anchorB",
-      "start": 2960,
-      "end": 2967,
+      "start": 2984,
+      "end": 2991,
       "loc": {
         "start": {
           "line": 61,
@@ -4925,8 +4925,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2968,
-      "end": 2969,
+      "start": 2992,
+      "end": 2993,
       "loc": {
         "start": {
           "line": 61,
@@ -4953,8 +4953,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2970,
-      "end": 2974,
+      "start": 2994,
+      "end": 2998,
       "loc": {
         "start": {
           "line": 61,
@@ -4981,8 +4981,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 2980,
-      "end": 2984,
+      "start": 3004,
+      "end": 3008,
       "loc": {
         "start": {
           "line": 63,
@@ -5007,8 +5007,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 2984,
-      "end": 2985,
+      "start": 3008,
+      "end": 3009,
       "loc": {
         "start": {
           "line": 63,
@@ -5033,8 +5033,8 @@
         "binop": null
       },
       "value": "_bodyA",
-      "start": 2985,
-      "end": 2991,
+      "start": 3009,
+      "end": 3015,
       "loc": {
         "start": {
           "line": 63,
@@ -5060,8 +5060,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 2992,
-      "end": 2993,
+      "start": 3016,
+      "end": 3017,
       "loc": {
         "start": {
           "line": 63,
@@ -5088,8 +5088,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 2994,
-      "end": 2998,
+      "start": 3018,
+      "end": 3022,
       "loc": {
         "start": {
           "line": 63,
@@ -5116,8 +5116,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3003,
-      "end": 3007,
+      "start": 3027,
+      "end": 3031,
       "loc": {
         "start": {
           "line": 64,
@@ -5142,8 +5142,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3007,
-      "end": 3008,
+      "start": 3031,
+      "end": 3032,
       "loc": {
         "start": {
           "line": 64,
@@ -5168,8 +5168,8 @@
         "binop": null
       },
       "value": "_bodyB",
-      "start": 3008,
-      "end": 3014,
+      "start": 3032,
+      "end": 3038,
       "loc": {
         "start": {
           "line": 64,
@@ -5195,8 +5195,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 3015,
-      "end": 3016,
+      "start": 3039,
+      "end": 3040,
       "loc": {
         "start": {
           "line": 64,
@@ -5223,8 +5223,8 @@
         "updateContext": null
       },
       "value": "null",
-      "start": 3017,
-      "end": 3021,
+      "start": 3041,
+      "end": 3045,
       "loc": {
         "start": {
           "line": 64,
@@ -5239,8 +5239,8 @@
     {
       "type": "CommentLine",
       "value": " Limiting the Motion of a Slider Joint",
-      "start": 3027,
-      "end": 3067,
+      "start": 3051,
+      "end": 3091,
       "loc": {
         "start": {
           "line": 66,
@@ -5254,9 +5254,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The minimum distance between the anchor points of the two bodies, relative to their initial positions.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387920-minimumlinearlimit\n     ",
-      "start": 3073,
-      "end": 3324,
+      "value": "*\n     * The minimum distance between the anchor points of the two bodies, relative to their initial positions.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387920-minimumlinearlimit\n     ",
+      "start": 3097,
+      "end": 3352,
       "loc": {
         "start": {
           "line": 68,
@@ -5283,8 +5283,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3329,
-      "end": 3333,
+      "start": 3357,
+      "end": 3361,
       "loc": {
         "start": {
           "line": 73,
@@ -5309,8 +5309,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3333,
-      "end": 3334,
+      "start": 3361,
+      "end": 3362,
       "loc": {
         "start": {
           "line": 73,
@@ -5335,8 +5335,8 @@
         "binop": null
       },
       "value": "minimumLinearLimit",
-      "start": 3334,
-      "end": 3352,
+      "start": 3362,
+      "end": 3380,
       "loc": {
         "start": {
           "line": 73,
@@ -5362,8 +5362,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 3353,
-      "end": 3354,
+      "start": 3381,
+      "end": 3382,
       "loc": {
         "start": {
           "line": 73,
@@ -5389,8 +5389,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 3355,
-      "end": 3356,
+      "start": 3383,
+      "end": 3384,
       "loc": {
         "start": {
           "line": 73,
@@ -5404,9 +5404,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The maximum distance between the anchor points of the two bodies, relative to their initial positions.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387890-maximumlinearlimit\n     ",
-      "start": 3362,
-      "end": 3613,
+      "value": "*\n     * The maximum distance between the anchor points of the two bodies, relative to their initial positions.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387890-maximumlinearlimit\n     ",
+      "start": 3390,
+      "end": 3645,
       "loc": {
         "start": {
           "line": 75,
@@ -5433,8 +5433,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3618,
-      "end": 3622,
+      "start": 3650,
+      "end": 3654,
       "loc": {
         "start": {
           "line": 80,
@@ -5459,8 +5459,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3622,
-      "end": 3623,
+      "start": 3654,
+      "end": 3655,
       "loc": {
         "start": {
           "line": 80,
@@ -5485,8 +5485,8 @@
         "binop": null
       },
       "value": "maximumLinearLimit",
-      "start": 3623,
-      "end": 3641,
+      "start": 3655,
+      "end": 3673,
       "loc": {
         "start": {
           "line": 80,
@@ -5512,8 +5512,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 3642,
-      "end": 3643,
+      "start": 3674,
+      "end": 3675,
       "loc": {
         "start": {
           "line": 80,
@@ -5539,8 +5539,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 3644,
-      "end": 3645,
+      "start": 3676,
+      "end": 3677,
       "loc": {
         "start": {
           "line": 80,
@@ -5554,9 +5554,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The minimum rotation angle between the two bodies, measured in radians relative to their initial orientations.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387967-minimumangularlimit\n     ",
-      "start": 3651,
-      "end": 3911,
+      "value": "*\n     * The minimum rotation angle between the two bodies, measured in radians relative to their initial orientations.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387967-minimumangularlimit\n     ",
+      "start": 3683,
+      "end": 3947,
       "loc": {
         "start": {
           "line": 82,
@@ -5583,8 +5583,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 3916,
-      "end": 3920,
+      "start": 3952,
+      "end": 3956,
       "loc": {
         "start": {
           "line": 87,
@@ -5609,8 +5609,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 3920,
-      "end": 3921,
+      "start": 3956,
+      "end": 3957,
       "loc": {
         "start": {
           "line": 87,
@@ -5635,8 +5635,8 @@
         "binop": null
       },
       "value": "minimumAngularLimit",
-      "start": 3921,
-      "end": 3940,
+      "start": 3957,
+      "end": 3976,
       "loc": {
         "start": {
           "line": 87,
@@ -5662,8 +5662,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 3941,
-      "end": 3942,
+      "start": 3977,
+      "end": 3978,
       "loc": {
         "start": {
           "line": 87,
@@ -5689,8 +5689,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 3943,
-      "end": 3944,
+      "start": 3979,
+      "end": 3980,
       "loc": {
         "start": {
           "line": 87,
@@ -5704,9 +5704,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The maximum rotation angle between the two bodies, measured in radians relative to their initial orientations.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387924-maximumangularlimit\n     ",
-      "start": 3950,
-      "end": 4210,
+      "value": "*\n     * The maximum rotation angle between the two bodies, measured in radians relative to their initial orientations.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387924-maximumangularlimit\n     ",
+      "start": 3986,
+      "end": 4250,
       "loc": {
         "start": {
           "line": 89,
@@ -5733,8 +5733,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 4215,
-      "end": 4219,
+      "start": 4255,
+      "end": 4259,
       "loc": {
         "start": {
           "line": 94,
@@ -5759,8 +5759,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4219,
-      "end": 4220,
+      "start": 4259,
+      "end": 4260,
       "loc": {
         "start": {
           "line": 94,
@@ -5785,8 +5785,8 @@
         "binop": null
       },
       "value": "maximumAngularLimit",
-      "start": 4220,
-      "end": 4239,
+      "start": 4260,
+      "end": 4279,
       "loc": {
         "start": {
           "line": 94,
@@ -5812,8 +5812,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 4240,
-      "end": 4241,
+      "start": 4280,
+      "end": 4281,
       "loc": {
         "start": {
           "line": 94,
@@ -5839,8 +5839,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 4242,
-      "end": 4243,
+      "start": 4282,
+      "end": 4283,
       "loc": {
         "start": {
           "line": 94,
@@ -5855,8 +5855,8 @@
     {
       "type": "CommentLine",
       "value": " Applying Forces and Torques",
-      "start": 4250,
-      "end": 4280,
+      "start": 4290,
+      "end": 4320,
       "loc": {
         "start": {
           "line": 97,
@@ -5870,9 +5870,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The velocity at which the joint’s connected bodies should slide.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387938-motortargetlinearvelocity\n     ",
-      "start": 4286,
-      "end": 4506,
+      "value": "*\n     * The velocity at which the joint’s connected bodies should slide.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387938-motortargetlinearvelocity\n     ",
+      "start": 4326,
+      "end": 4550,
       "loc": {
         "start": {
           "line": 99,
@@ -5899,8 +5899,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 4511,
-      "end": 4515,
+      "start": 4555,
+      "end": 4559,
       "loc": {
         "start": {
           "line": 104,
@@ -5925,8 +5925,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4515,
-      "end": 4516,
+      "start": 4559,
+      "end": 4560,
       "loc": {
         "start": {
           "line": 104,
@@ -5951,8 +5951,8 @@
         "binop": null
       },
       "value": "motorTargetLinearVelocity",
-      "start": 4516,
-      "end": 4541,
+      "start": 4560,
+      "end": 4585,
       "loc": {
         "start": {
           "line": 104,
@@ -5978,8 +5978,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 4542,
-      "end": 4543,
+      "start": 4586,
+      "end": 4587,
       "loc": {
         "start": {
           "line": 104,
@@ -6005,8 +6005,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 4544,
-      "end": 4545,
+      "start": 4588,
+      "end": 4589,
       "loc": {
         "start": {
           "line": 104,
@@ -6020,9 +6020,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The maximum linear force that the joint can apply to its connected bodies, in newtons.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387954-motormaximumforce\n     ",
-      "start": 4551,
-      "end": 4785,
+      "value": "*\n     * The maximum linear force that the joint can apply to its connected bodies, in newtons.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387954-motormaximumforce\n     ",
+      "start": 4595,
+      "end": 4833,
       "loc": {
         "start": {
           "line": 106,
@@ -6049,8 +6049,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 4790,
-      "end": 4794,
+      "start": 4838,
+      "end": 4842,
       "loc": {
         "start": {
           "line": 111,
@@ -6075,8 +6075,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4794,
-      "end": 4795,
+      "start": 4842,
+      "end": 4843,
       "loc": {
         "start": {
           "line": 111,
@@ -6101,8 +6101,8 @@
         "binop": null
       },
       "value": "motorMaximumForce",
-      "start": 4795,
-      "end": 4812,
+      "start": 4843,
+      "end": 4860,
       "loc": {
         "start": {
           "line": 111,
@@ -6128,8 +6128,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 4813,
-      "end": 4814,
+      "start": 4861,
+      "end": 4862,
       "loc": {
         "start": {
           "line": 111,
@@ -6155,8 +6155,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 4815,
-      "end": 4816,
+      "start": 4863,
+      "end": 4864,
       "loc": {
         "start": {
           "line": 111,
@@ -6170,9 +6170,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The angular velocity at which the joint’s connected bodies should rotate around it.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387908-motortargetangularvelocity\n     ",
-      "start": 4822,
-      "end": 5062,
+      "value": "*\n     * The angular velocity at which the joint’s connected bodies should rotate around it.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387908-motortargetangularvelocity\n     ",
+      "start": 4870,
+      "end": 5114,
       "loc": {
         "start": {
           "line": 113,
@@ -6199,8 +6199,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 5067,
-      "end": 5071,
+      "start": 5119,
+      "end": 5123,
       "loc": {
         "start": {
           "line": 118,
@@ -6225,8 +6225,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 5071,
-      "end": 5072,
+      "start": 5123,
+      "end": 5124,
       "loc": {
         "start": {
           "line": 118,
@@ -6251,8 +6251,8 @@
         "binop": null
       },
       "value": "motorTargetAngularVelocity",
-      "start": 5072,
-      "end": 5098,
+      "start": 5124,
+      "end": 5150,
       "loc": {
         "start": {
           "line": 118,
@@ -6278,8 +6278,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 5099,
-      "end": 5100,
+      "start": 5151,
+      "end": 5152,
       "loc": {
         "start": {
           "line": 118,
@@ -6305,8 +6305,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 5101,
-      "end": 5102,
+      "start": 5153,
+      "end": 5154,
       "loc": {
         "start": {
           "line": 118,
@@ -6320,9 +6320,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n     * The maximum torque that the joint can apply to its connected bodies, in newton-meters.\n     * @type {number}\n     * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387961-motormaximumtorque\n     ",
-      "start": 5108,
-      "end": 5343,
+      "value": "*\n     * The maximum torque that the joint can apply to its connected bodies, in newton-meters.\n     * @type {number}\n     * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387961-motormaximumtorque\n     ",
+      "start": 5160,
+      "end": 5399,
       "loc": {
         "start": {
           "line": 120,
@@ -6349,8 +6349,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 5348,
-      "end": 5352,
+      "start": 5404,
+      "end": 5408,
       "loc": {
         "start": {
           "line": 125,
@@ -6375,8 +6375,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 5352,
-      "end": 5353,
+      "start": 5408,
+      "end": 5409,
       "loc": {
         "start": {
           "line": 125,
@@ -6401,8 +6401,8 @@
         "binop": null
       },
       "value": "motorMaximumTorque",
-      "start": 5353,
-      "end": 5371,
+      "start": 5409,
+      "end": 5427,
       "loc": {
         "start": {
           "line": 125,
@@ -6428,8 +6428,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 5372,
-      "end": 5373,
+      "start": 5428,
+      "end": 5429,
       "loc": {
         "start": {
           "line": 125,
@@ -6455,8 +6455,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 5374,
-      "end": 5375,
+      "start": 5430,
+      "end": 5431,
       "loc": {
         "start": {
           "line": 125,
@@ -6480,8 +6480,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5379,
-      "end": 5380,
+      "start": 5435,
+      "end": 5436,
       "loc": {
         "start": {
           "line": 127,
@@ -6496,8 +6496,8 @@
     {
       "type": "CommentLine",
       "value": " Managing the Characteristics of a Slider Joint",
-      "start": 5384,
-      "end": 5433,
+      "start": 5440,
+      "end": 5489,
       "loc": {
         "start": {
           "line": 129,
@@ -6511,9 +6511,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The first physics body connected by the joint.\n   * @type {SCNPhysicsBody}\n   * @desc \n   * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387987-bodya\n   ",
-      "start": 5437,
-      "end": 5631,
+      "value": "*\n   * The first physics body connected by the joint.\n   * @type {SCNPhysicsBody}\n   * @desc \n   * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387987-bodya\n   ",
+      "start": 5493,
+      "end": 5691,
       "loc": {
         "start": {
           "line": 131,
@@ -6538,8 +6538,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 5634,
-      "end": 5637,
+      "start": 5694,
+      "end": 5697,
       "loc": {
         "start": {
           "line": 137,
@@ -6564,8 +6564,8 @@
         "binop": null
       },
       "value": "bodyA",
-      "start": 5638,
-      "end": 5643,
+      "start": 5698,
+      "end": 5703,
       "loc": {
         "start": {
           "line": 137,
@@ -6589,8 +6589,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5643,
-      "end": 5644,
+      "start": 5703,
+      "end": 5704,
       "loc": {
         "start": {
           "line": 137,
@@ -6614,8 +6614,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5644,
-      "end": 5645,
+      "start": 5704,
+      "end": 5705,
       "loc": {
         "start": {
           "line": 137,
@@ -6639,8 +6639,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5646,
-      "end": 5647,
+      "start": 5706,
+      "end": 5707,
       "loc": {
         "start": {
           "line": 137,
@@ -6667,8 +6667,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 5652,
-      "end": 5658,
+      "start": 5712,
+      "end": 5718,
       "loc": {
         "start": {
           "line": 138,
@@ -6695,8 +6695,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 5659,
-      "end": 5663,
+      "start": 5719,
+      "end": 5723,
       "loc": {
         "start": {
           "line": 138,
@@ -6721,8 +6721,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 5663,
-      "end": 5664,
+      "start": 5723,
+      "end": 5724,
       "loc": {
         "start": {
           "line": 138,
@@ -6747,8 +6747,8 @@
         "binop": null
       },
       "value": "_bodyA",
-      "start": 5664,
-      "end": 5670,
+      "start": 5724,
+      "end": 5730,
       "loc": {
         "start": {
           "line": 138,
@@ -6772,8 +6772,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5673,
-      "end": 5674,
+      "start": 5733,
+      "end": 5734,
       "loc": {
         "start": {
           "line": 139,
@@ -6787,9 +6787,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * The second physics body connected by the joint.\n   * @type {?SCNPhysicsBody}\n   * @desc This property’s value is nil if the joint was created using the init(body:axis:anchor:) method.\n   * @see https://developer.apple.com/reference/scenekit/scnphysicssliderjoint/1387896-bodyb\n   ",
-      "start": 5678,
-      "end": 5969,
+      "value": "*\n   * The second physics body connected by the joint.\n   * @type {?SCNPhysicsBody}\n   * @desc This property’s value is nil if the joint was created using the init(body:axis:anchor:) method.\n   * @see https://developer.apple.com/documentation/scenekit/scnphysicssliderjoint/1387896-bodyb\n   ",
+      "start": 5738,
+      "end": 6033,
       "loc": {
         "start": {
           "line": 141,
@@ -6814,8 +6814,8 @@
         "binop": null
       },
       "value": "get",
-      "start": 5972,
-      "end": 5975,
+      "start": 6036,
+      "end": 6039,
       "loc": {
         "start": {
           "line": 147,
@@ -6840,8 +6840,8 @@
         "binop": null
       },
       "value": "bodyB",
-      "start": 5976,
-      "end": 5981,
+      "start": 6040,
+      "end": 6045,
       "loc": {
         "start": {
           "line": 147,
@@ -6865,8 +6865,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5981,
-      "end": 5982,
+      "start": 6045,
+      "end": 6046,
       "loc": {
         "start": {
           "line": 147,
@@ -6890,8 +6890,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5982,
-      "end": 5983,
+      "start": 6046,
+      "end": 6047,
       "loc": {
         "start": {
           "line": 147,
@@ -6915,8 +6915,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 5984,
-      "end": 5985,
+      "start": 6048,
+      "end": 6049,
       "loc": {
         "start": {
           "line": 147,
@@ -6943,8 +6943,8 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 5990,
-      "end": 5996,
+      "start": 6054,
+      "end": 6060,
       "loc": {
         "start": {
           "line": 148,
@@ -6971,8 +6971,8 @@
         "updateContext": null
       },
       "value": "this",
-      "start": 5997,
-      "end": 6001,
+      "start": 6061,
+      "end": 6065,
       "loc": {
         "start": {
           "line": 148,
@@ -6997,8 +6997,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 6001,
-      "end": 6002,
+      "start": 6065,
+      "end": 6066,
       "loc": {
         "start": {
           "line": 148,
@@ -7023,8 +7023,8 @@
         "binop": null
       },
       "value": "_bodyB",
-      "start": 6002,
-      "end": 6008,
+      "start": 6066,
+      "end": 6072,
       "loc": {
         "start": {
           "line": 148,
@@ -7048,8 +7048,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6011,
-      "end": 6012,
+      "start": 6075,
+      "end": 6076,
       "loc": {
         "start": {
           "line": 149,
@@ -7073,8 +7073,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 6013,
-      "end": 6014,
+      "start": 6077,
+      "end": 6078,
       "loc": {
         "start": {
           "line": 150,
@@ -7099,8 +7099,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 6015,
-      "end": 6015,
+      "start": 6079,
+      "end": 6079,
       "loc": {
         "start": {
           "line": 151,

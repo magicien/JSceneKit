@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 728,
+  "end": 732,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 728,
+    "end": 732,
     "loc": {
       "start": {
         "line": 1,
@@ -101,9 +101,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * Signature for the block called when an animation event triggers.\n * @type {function(animation: CAAnimation, animatedObject: Object, playingBackward: boolean): void}\n * @param {CAAnimation} animation - The animation triggering the animation event.\n * @param {Object} animatedObject - The Scene Kit object affected by the animation.\n * @param {boolean} playingBackward - true if the animation is playing in reverse; otherwise, false.\n * @returns {void}\n * @see https://developer.apple.com/reference/scenekit/scnanimationeventblock\n ",
+            "value": "*\n * Signature for the block called when an animation event triggers.\n * @type {function(animation: CAAnimation, animatedObject: Object, playingBackward: boolean): void}\n * @param {CAAnimation} animation - The animation triggering the animation event.\n * @param {Object} animatedObject - The Scene Kit object affected by the animation.\n * @param {boolean} playingBackward - true if the animation is playing in reverse; otherwise, false.\n * @returns {void}\n * @see https://developer.apple.com/documentation/scenekit/scnanimationeventblock\n ",
             "start": 67,
-            "end": 606,
+            "end": 610,
             "loc": {
               "start": {
                 "line": 5,
@@ -119,8 +119,8 @@
       },
       {
         "type": "Identifier",
-        "start": 607,
-        "end": 688,
+        "start": 611,
+        "end": 692,
         "loc": {
           "start": {
             "line": 14,
@@ -134,8 +134,8 @@
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 613,
-            "end": 688,
+            "start": 617,
+            "end": 692,
             "loc": {
               "start": {
                 "line": 14,
@@ -148,8 +148,8 @@
             },
             "id": {
               "type": "Identifier",
-              "start": 613,
-              "end": 635,
+              "start": 617,
+              "end": 639,
               "loc": {
                 "start": {
                   "line": 14,
@@ -166,8 +166,8 @@
             },
             "init": {
               "type": "ArrowFunctionExpression",
-              "start": 638,
-              "end": 688,
+              "start": 642,
+              "end": 692,
               "loc": {
                 "start": {
                   "line": 14,
@@ -185,8 +185,8 @@
               "params": [
                 {
                   "type": "Identifier",
-                  "start": 639,
-                  "end": 648,
+                  "start": 643,
+                  "end": 652,
                   "loc": {
                     "start": {
                       "line": 14,
@@ -202,8 +202,8 @@
                 },
                 {
                   "type": "Identifier",
-                  "start": 650,
-                  "end": 664,
+                  "start": 654,
+                  "end": 668,
                   "loc": {
                     "start": {
                       "line": 14,
@@ -219,8 +219,8 @@
                 },
                 {
                   "type": "Identifier",
-                  "start": 666,
-                  "end": 681,
+                  "start": 670,
+                  "end": 685,
                   "loc": {
                     "start": {
                       "line": 14,
@@ -237,8 +237,8 @@
               ],
               "body": {
                 "type": "BlockStatement",
-                "start": 686,
-                "end": 688,
+                "start": 690,
+                "end": 692,
                 "loc": {
                   "start": {
                     "line": 14,
@@ -263,8 +263,8 @@
       },
       {
         "type": "Identifier",
-        "start": 690,
-        "end": 727,
+        "start": 694,
+        "end": 731,
         "loc": {
           "start": {
             "line": 16,
@@ -277,8 +277,8 @@
         },
         "declaration": {
           "type": "Identifier",
-          "start": 705,
-          "end": 727,
+          "start": 709,
+          "end": 731,
           "loc": {
             "start": {
               "line": 16,
@@ -298,8 +298,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 690,
-        "end": 727,
+        "start": 694,
+        "end": 731,
         "loc": {
           "start": {
             "line": 16,
@@ -312,8 +312,8 @@
         },
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 607,
-          "end": 688,
+          "start": 611,
+          "end": 692,
           "loc": {
             "start": {
               "line": 14,
@@ -327,8 +327,8 @@
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 613,
-              "end": 688,
+              "start": 617,
+              "end": 692,
               "loc": {
                 "start": {
                   "line": 14,
@@ -341,8 +341,8 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 613,
-                "end": 635,
+                "start": 617,
+                "end": 639,
                 "loc": {
                   "start": {
                     "line": 14,
@@ -359,8 +359,8 @@
               },
               "init": {
                 "type": "ArrowFunctionExpression",
-                "start": 638,
-                "end": 688,
+                "start": 642,
+                "end": 692,
                 "loc": {
                   "start": {
                     "line": 14,
@@ -373,8 +373,8 @@
                 },
                 "id": {
                   "type": "Identifier",
-                  "start": 613,
-                  "end": 635,
+                  "start": 617,
+                  "end": 639,
                   "loc": {
                     "start": {
                       "line": 14,
@@ -395,8 +395,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 639,
-                    "end": 648,
+                    "start": 643,
+                    "end": 652,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -412,8 +412,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 650,
-                    "end": 664,
+                    "start": 654,
+                    "end": 668,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -429,8 +429,8 @@
                   },
                   {
                     "type": "Identifier",
-                    "start": 666,
-                    "end": 681,
+                    "start": 670,
+                    "end": 685,
                     "loc": {
                       "start": {
                         "line": 14,
@@ -447,8 +447,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 686,
-                  "end": 688,
+                  "start": 690,
+                  "end": 692,
                   "loc": {
                     "start": {
                       "line": 14,
@@ -470,9 +470,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * Signature for the block called when an animation event triggers.\n * @type {function(animation: CAAnimation, animatedObject: Object, playingBackward: boolean): void}\n * @param {CAAnimation} animation - The animation triggering the animation event.\n * @param {Object} animatedObject - The Scene Kit object affected by the animation.\n * @param {boolean} playingBackward - true if the animation is playing in reverse; otherwise, false.\n * @returns {void}\n * @see https://developer.apple.com/reference/scenekit/scnanimationeventblock\n ",
+              "value": "*\n * Signature for the block called when an animation event triggers.\n * @type {function(animation: CAAnimation, animatedObject: Object, playingBackward: boolean): void}\n * @param {CAAnimation} animation - The animation triggering the animation event.\n * @param {Object} animatedObject - The Scene Kit object affected by the animation.\n * @param {boolean} playingBackward - true if the animation is playing in reverse; otherwise, false.\n * @returns {void}\n * @see https://developer.apple.com/documentation/scenekit/scnanimationeventblock\n ",
               "start": 67,
-              "end": 606,
+              "end": 610,
               "loc": {
                 "start": {
                   "line": 5,
@@ -530,9 +530,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * Signature for the block called when an animation event triggers.\n * @type {function(animation: CAAnimation, animatedObject: Object, playingBackward: boolean): void}\n * @param {CAAnimation} animation - The animation triggering the animation event.\n * @param {Object} animatedObject - The Scene Kit object affected by the animation.\n * @param {boolean} playingBackward - true if the animation is playing in reverse; otherwise, false.\n * @returns {void}\n * @see https://developer.apple.com/reference/scenekit/scnanimationeventblock\n ",
+      "value": "*\n * Signature for the block called when an animation event triggers.\n * @type {function(animation: CAAnimation, animatedObject: Object, playingBackward: boolean): void}\n * @param {CAAnimation} animation - The animation triggering the animation event.\n * @param {Object} animatedObject - The Scene Kit object affected by the animation.\n * @param {boolean} playingBackward - true if the animation is playing in reverse; otherwise, false.\n * @returns {void}\n * @see https://developer.apple.com/documentation/scenekit/scnanimationeventblock\n ",
       "start": 67,
-      "end": 606,
+      "end": 610,
       "loc": {
         "start": {
           "line": 5,
@@ -682,9 +682,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * Signature for the block called when an animation event triggers.\n * @type {function(animation: CAAnimation, animatedObject: Object, playingBackward: boolean): void}\n * @param {CAAnimation} animation - The animation triggering the animation event.\n * @param {Object} animatedObject - The Scene Kit object affected by the animation.\n * @param {boolean} playingBackward - true if the animation is playing in reverse; otherwise, false.\n * @returns {void}\n * @see https://developer.apple.com/reference/scenekit/scnanimationeventblock\n ",
+      "value": "*\n * Signature for the block called when an animation event triggers.\n * @type {function(animation: CAAnimation, animatedObject: Object, playingBackward: boolean): void}\n * @param {CAAnimation} animation - The animation triggering the animation event.\n * @param {Object} animatedObject - The Scene Kit object affected by the animation.\n * @param {boolean} playingBackward - true if the animation is playing in reverse; otherwise, false.\n * @returns {void}\n * @see https://developer.apple.com/documentation/scenekit/scnanimationeventblock\n ",
       "start": 67,
-      "end": 606,
+      "end": 610,
       "loc": {
         "start": {
           "line": 5,
@@ -711,8 +711,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 607,
-      "end": 612,
+      "start": 611,
+      "end": 616,
       "loc": {
         "start": {
           "line": 14,
@@ -737,8 +737,8 @@
         "binop": null
       },
       "value": "SCNAnimationEventBlock",
-      "start": 613,
-      "end": 635,
+      "start": 617,
+      "end": 639,
       "loc": {
         "start": {
           "line": 14,
@@ -764,8 +764,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 636,
-      "end": 637,
+      "start": 640,
+      "end": 641,
       "loc": {
         "start": {
           "line": 14,
@@ -789,8 +789,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 638,
-      "end": 639,
+      "start": 642,
+      "end": 643,
       "loc": {
         "start": {
           "line": 14,
@@ -815,8 +815,8 @@
         "binop": null
       },
       "value": "animation",
-      "start": 639,
-      "end": 648,
+      "start": 643,
+      "end": 652,
       "loc": {
         "start": {
           "line": 14,
@@ -841,8 +841,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 648,
-      "end": 649,
+      "start": 652,
+      "end": 653,
       "loc": {
         "start": {
           "line": 14,
@@ -867,8 +867,8 @@
         "binop": null
       },
       "value": "animatedObject",
-      "start": 650,
-      "end": 664,
+      "start": 654,
+      "end": 668,
       "loc": {
         "start": {
           "line": 14,
@@ -893,8 +893,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 664,
-      "end": 665,
+      "start": 668,
+      "end": 669,
       "loc": {
         "start": {
           "line": 14,
@@ -919,8 +919,8 @@
         "binop": null
       },
       "value": "playingBackward",
-      "start": 666,
-      "end": 681,
+      "start": 670,
+      "end": 685,
       "loc": {
         "start": {
           "line": 14,
@@ -944,8 +944,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 681,
-      "end": 682,
+      "start": 685,
+      "end": 686,
       "loc": {
         "start": {
           "line": 14,
@@ -970,8 +970,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 683,
-      "end": 685,
+      "start": 687,
+      "end": 689,
       "loc": {
         "start": {
           "line": 14,
@@ -995,8 +995,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 686,
-      "end": 687,
+      "start": 690,
+      "end": 691,
       "loc": {
         "start": {
           "line": 14,
@@ -1020,8 +1020,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 687,
-      "end": 688,
+      "start": 691,
+      "end": 692,
       "loc": {
         "start": {
           "line": 14,
@@ -1048,8 +1048,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 690,
-      "end": 696,
+      "start": 694,
+      "end": 700,
       "loc": {
         "start": {
           "line": 16,
@@ -1076,8 +1076,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 697,
-      "end": 704,
+      "start": 701,
+      "end": 708,
       "loc": {
         "start": {
           "line": 16,
@@ -1102,8 +1102,8 @@
         "binop": null
       },
       "value": "SCNAnimationEventBlock",
-      "start": 705,
-      "end": 727,
+      "start": 709,
+      "end": 731,
       "loc": {
         "start": {
           "line": 16,
@@ -1128,8 +1128,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 728,
-      "end": 728,
+      "start": 732,
+      "end": 732,
       "loc": {
         "start": {
           "line": 17,

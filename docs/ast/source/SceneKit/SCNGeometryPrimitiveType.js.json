@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 1082,
+  "end": 1086,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 1082,
+    "end": 1086,
     "loc": {
       "start": {
         "line": 1,
@@ -30,8 +30,8 @@
     "body": [
       {
         "type": "Identifier",
-        "start": 932,
-        "end": 1040,
+        "start": 936,
+        "end": 1044,
         "loc": {
           "start": {
             "line": 14,
@@ -45,8 +45,8 @@
         "declarations": [
           {
             "type": "VariableDeclarator",
-            "start": 938,
-            "end": 1040,
+            "start": 942,
+            "end": 1044,
             "loc": {
               "start": {
                 "line": 14,
@@ -59,8 +59,8 @@
             },
             "id": {
               "type": "Identifier",
-              "start": 938,
-              "end": 962,
+              "start": 942,
+              "end": 966,
               "loc": {
                 "start": {
                   "line": 14,
@@ -77,8 +77,8 @@
             },
             "init": {
               "type": "ObjectExpression",
-              "start": 965,
-              "end": 1040,
+              "start": 969,
+              "end": 1044,
               "loc": {
                 "start": {
                   "line": 14,
@@ -92,8 +92,8 @@
               "properties": [
                 {
                   "type": "ObjectProperty",
-                  "start": 969,
-                  "end": 981,
+                  "start": 973,
+                  "end": 985,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -109,8 +109,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 969,
-                    "end": 978,
+                    "start": 973,
+                    "end": 982,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -126,8 +126,8 @@
                   },
                   "value": {
                     "type": "NumericLiteral",
-                    "start": 980,
-                    "end": 981,
+                    "start": 984,
+                    "end": 985,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -147,8 +147,8 @@
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 985,
-                  "end": 1001,
+                  "start": 989,
+                  "end": 1005,
                   "loc": {
                     "start": {
                       "line": 16,
@@ -164,8 +164,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 985,
-                    "end": 998,
+                    "start": 989,
+                    "end": 1002,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -181,8 +181,8 @@
                   },
                   "value": {
                     "type": "NumericLiteral",
-                    "start": 1000,
-                    "end": 1001,
+                    "start": 1004,
+                    "end": 1005,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -202,8 +202,8 @@
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 1005,
-                  "end": 1012,
+                  "start": 1009,
+                  "end": 1016,
                   "loc": {
                     "start": {
                       "line": 17,
@@ -219,8 +219,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 1005,
-                    "end": 1009,
+                    "start": 1009,
+                    "end": 1013,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -236,8 +236,8 @@
                   },
                   "value": {
                     "type": "NumericLiteral",
-                    "start": 1011,
-                    "end": 1012,
+                    "start": 1015,
+                    "end": 1016,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -257,8 +257,8 @@
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 1016,
-                  "end": 1024,
+                  "start": 1020,
+                  "end": 1028,
                   "loc": {
                     "start": {
                       "line": 18,
@@ -274,8 +274,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 1016,
-                    "end": 1021,
+                    "start": 1020,
+                    "end": 1025,
                     "loc": {
                       "start": {
                         "line": 18,
@@ -291,8 +291,8 @@
                   },
                   "value": {
                     "type": "NumericLiteral",
-                    "start": 1023,
-                    "end": 1024,
+                    "start": 1027,
+                    "end": 1028,
                     "loc": {
                       "start": {
                         "line": 18,
@@ -312,8 +312,8 @@
                 },
                 {
                   "type": "ObjectProperty",
-                  "start": 1028,
-                  "end": 1038,
+                  "start": 1032,
+                  "end": 1042,
                   "loc": {
                     "start": {
                       "line": 19,
@@ -329,8 +329,8 @@
                   "computed": false,
                   "key": {
                     "type": "Identifier",
-                    "start": 1028,
-                    "end": 1035,
+                    "start": 1032,
+                    "end": 1039,
                     "loc": {
                       "start": {
                         "line": 19,
@@ -346,8 +346,8 @@
                   },
                   "value": {
                     "type": "NumericLiteral",
-                    "start": 1037,
-                    "end": 1038,
+                    "start": 1041,
+                    "end": 1042,
                     "loc": {
                       "start": {
                         "line": 19,
@@ -377,8 +377,8 @@
       },
       {
         "type": "Identifier",
-        "start": 1042,
-        "end": 1081,
+        "start": 1046,
+        "end": 1085,
         "loc": {
           "start": {
             "line": 22,
@@ -391,8 +391,8 @@
         },
         "declaration": {
           "type": "Identifier",
-          "start": 1057,
-          "end": 1081,
+          "start": 1061,
+          "end": 1085,
           "loc": {
             "start": {
               "line": 22,
@@ -412,8 +412,8 @@
       },
       {
         "type": "ExportDefaultDeclaration",
-        "start": 1042,
-        "end": 1081,
+        "start": 1046,
+        "end": 1085,
         "loc": {
           "start": {
             "line": 22,
@@ -426,8 +426,8 @@
         },
         "declaration": {
           "type": "VariableDeclaration",
-          "start": 932,
-          "end": 1040,
+          "start": 936,
+          "end": 1044,
           "loc": {
             "start": {
               "line": 14,
@@ -441,8 +441,8 @@
           "declarations": [
             {
               "type": "VariableDeclarator",
-              "start": 938,
-              "end": 1040,
+              "start": 942,
+              "end": 1044,
               "loc": {
                 "start": {
                   "line": 14,
@@ -455,8 +455,8 @@
               },
               "id": {
                 "type": "Identifier",
-                "start": 938,
-                "end": 962,
+                "start": 942,
+                "end": 966,
                 "loc": {
                   "start": {
                     "line": 14,
@@ -473,8 +473,8 @@
               },
               "init": {
                 "type": "ObjectExpression",
-                "start": 965,
-                "end": 1040,
+                "start": 969,
+                "end": 1044,
                 "loc": {
                   "start": {
                     "line": 14,
@@ -488,8 +488,8 @@
                 "properties": [
                   {
                     "type": "ObjectProperty",
-                    "start": 969,
-                    "end": 981,
+                    "start": 973,
+                    "end": 985,
                     "loc": {
                       "start": {
                         "line": 15,
@@ -505,8 +505,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 969,
-                      "end": 978,
+                      "start": 973,
+                      "end": 982,
                       "loc": {
                         "start": {
                           "line": 15,
@@ -522,8 +522,8 @@
                     },
                     "value": {
                       "type": "NumericLiteral",
-                      "start": 980,
-                      "end": 981,
+                      "start": 984,
+                      "end": 985,
                       "loc": {
                         "start": {
                           "line": 15,
@@ -543,8 +543,8 @@
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 985,
-                    "end": 1001,
+                    "start": 989,
+                    "end": 1005,
                     "loc": {
                       "start": {
                         "line": 16,
@@ -560,8 +560,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 985,
-                      "end": 998,
+                      "start": 989,
+                      "end": 1002,
                       "loc": {
                         "start": {
                           "line": 16,
@@ -577,8 +577,8 @@
                     },
                     "value": {
                       "type": "NumericLiteral",
-                      "start": 1000,
-                      "end": 1001,
+                      "start": 1004,
+                      "end": 1005,
                       "loc": {
                         "start": {
                           "line": 16,
@@ -598,8 +598,8 @@
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 1005,
-                    "end": 1012,
+                    "start": 1009,
+                    "end": 1016,
                     "loc": {
                       "start": {
                         "line": 17,
@@ -615,8 +615,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 1005,
-                      "end": 1009,
+                      "start": 1009,
+                      "end": 1013,
                       "loc": {
                         "start": {
                           "line": 17,
@@ -632,8 +632,8 @@
                     },
                     "value": {
                       "type": "NumericLiteral",
-                      "start": 1011,
-                      "end": 1012,
+                      "start": 1015,
+                      "end": 1016,
                       "loc": {
                         "start": {
                           "line": 17,
@@ -653,8 +653,8 @@
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 1016,
-                    "end": 1024,
+                    "start": 1020,
+                    "end": 1028,
                     "loc": {
                       "start": {
                         "line": 18,
@@ -670,8 +670,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 1016,
-                      "end": 1021,
+                      "start": 1020,
+                      "end": 1025,
                       "loc": {
                         "start": {
                           "line": 18,
@@ -687,8 +687,8 @@
                     },
                     "value": {
                       "type": "NumericLiteral",
-                      "start": 1023,
-                      "end": 1024,
+                      "start": 1027,
+                      "end": 1028,
                       "loc": {
                         "start": {
                           "line": 18,
@@ -708,8 +708,8 @@
                   },
                   {
                     "type": "ObjectProperty",
-                    "start": 1028,
-                    "end": 1038,
+                    "start": 1032,
+                    "end": 1042,
                     "loc": {
                       "start": {
                         "line": 19,
@@ -725,8 +725,8 @@
                     "computed": false,
                     "key": {
                       "type": "Identifier",
-                      "start": 1028,
-                      "end": 1035,
+                      "start": 1032,
+                      "end": 1039,
                       "loc": {
                         "start": {
                           "line": 19,
@@ -742,8 +742,8 @@
                     },
                     "value": {
                       "type": "NumericLiteral",
-                      "start": 1037,
-                      "end": 1038,
+                      "start": 1041,
+                      "end": 1042,
                       "loc": {
                         "start": {
                           "line": 19,
@@ -770,9 +770,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * The drawing primitive that connects vertices when rendering a geometry element, used by the primitiveType property to specify how SceneKit interprets the geometry element’s data.\n * @typedef {Object} SCNGeometryPrimitiveType\n * @property {number} triangles - The geometry element’s data is a sequence of triangles, with each triangle described by three new vertices.\n * @property {number} triangleStrip - The geometry element’s data is a sequence of triangles, with each triangle described by one new vertex and two vertices from the previous triangle. \n * @property {number} line - The geometry element’s data is a sequence of line segments, with each line segment described by two new vertices. \n * @property {number} point - The geometry element’s data is a sequence of unconnected points.\n * @property {number} polygon - \n * @see https://developer.apple.com/reference/scenekit/scngeometryprimitivetype\n ",
+              "value": "*\n * The drawing primitive that connects vertices when rendering a geometry element, used by the primitiveType property to specify how SceneKit interprets the geometry element’s data.\n * @typedef {Object} SCNGeometryPrimitiveType\n * @property {number} triangles - The geometry element’s data is a sequence of triangles, with each triangle described by three new vertices.\n * @property {number} triangleStrip - The geometry element’s data is a sequence of triangles, with each triangle described by one new vertex and two vertices from the previous triangle. \n * @property {number} line - The geometry element’s data is a sequence of line segments, with each line segment described by two new vertices. \n * @property {number} point - The geometry element’s data is a sequence of unconnected points.\n * @property {number} polygon - \n * @see https://developer.apple.com/documentation/scenekit/scngeometryprimitivetype\n ",
               "start": 15,
-              "end": 931,
+              "end": 935,
               "loc": {
                 "start": {
                   "line": 4,
@@ -828,9 +828,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * The drawing primitive that connects vertices when rendering a geometry element, used by the primitiveType property to specify how SceneKit interprets the geometry element’s data.\n * @typedef {Object} SCNGeometryPrimitiveType\n * @property {number} triangles - The geometry element’s data is a sequence of triangles, with each triangle described by three new vertices.\n * @property {number} triangleStrip - The geometry element’s data is a sequence of triangles, with each triangle described by one new vertex and two vertices from the previous triangle. \n * @property {number} line - The geometry element’s data is a sequence of line segments, with each line segment described by two new vertices. \n * @property {number} point - The geometry element’s data is a sequence of unconnected points.\n * @property {number} polygon - \n * @see https://developer.apple.com/reference/scenekit/scngeometryprimitivetype\n ",
+            "value": "*\n * The drawing primitive that connects vertices when rendering a geometry element, used by the primitiveType property to specify how SceneKit interprets the geometry element’s data.\n * @typedef {Object} SCNGeometryPrimitiveType\n * @property {number} triangles - The geometry element’s data is a sequence of triangles, with each triangle described by three new vertices.\n * @property {number} triangleStrip - The geometry element’s data is a sequence of triangles, with each triangle described by one new vertex and two vertices from the previous triangle. \n * @property {number} line - The geometry element’s data is a sequence of line segments, with each line segment described by two new vertices. \n * @property {number} point - The geometry element’s data is a sequence of unconnected points.\n * @property {number} polygon - \n * @see https://developer.apple.com/documentation/scenekit/scngeometryprimitivetype\n ",
             "start": 15,
-            "end": 931,
+            "end": 935,
             "loc": {
               "start": {
                 "line": 4,
@@ -849,9 +849,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * The drawing primitive that connects vertices when rendering a geometry element, used by the primitiveType property to specify how SceneKit interprets the geometry element’s data.\n * @typedef {Object} SCNGeometryPrimitiveType\n * @property {number} triangles - The geometry element’s data is a sequence of triangles, with each triangle described by three new vertices.\n * @property {number} triangleStrip - The geometry element’s data is a sequence of triangles, with each triangle described by one new vertex and two vertices from the previous triangle. \n * @property {number} line - The geometry element’s data is a sequence of line segments, with each line segment described by two new vertices. \n * @property {number} point - The geometry element’s data is a sequence of unconnected points.\n * @property {number} polygon - \n * @see https://developer.apple.com/reference/scenekit/scngeometryprimitivetype\n ",
+      "value": "*\n * The drawing primitive that connects vertices when rendering a geometry element, used by the primitiveType property to specify how SceneKit interprets the geometry element’s data.\n * @typedef {Object} SCNGeometryPrimitiveType\n * @property {number} triangles - The geometry element’s data is a sequence of triangles, with each triangle described by three new vertices.\n * @property {number} triangleStrip - The geometry element’s data is a sequence of triangles, with each triangle described by one new vertex and two vertices from the previous triangle. \n * @property {number} line - The geometry element’s data is a sequence of line segments, with each line segment described by two new vertices. \n * @property {number} point - The geometry element’s data is a sequence of unconnected points.\n * @property {number} polygon - \n * @see https://developer.apple.com/documentation/scenekit/scngeometryprimitivetype\n ",
       "start": 15,
-      "end": 931,
+      "end": 935,
       "loc": {
         "start": {
           "line": 4,
@@ -894,9 +894,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * The drawing primitive that connects vertices when rendering a geometry element, used by the primitiveType property to specify how SceneKit interprets the geometry element’s data.\n * @typedef {Object} SCNGeometryPrimitiveType\n * @property {number} triangles - The geometry element’s data is a sequence of triangles, with each triangle described by three new vertices.\n * @property {number} triangleStrip - The geometry element’s data is a sequence of triangles, with each triangle described by one new vertex and two vertices from the previous triangle. \n * @property {number} line - The geometry element’s data is a sequence of line segments, with each line segment described by two new vertices. \n * @property {number} point - The geometry element’s data is a sequence of unconnected points.\n * @property {number} polygon - \n * @see https://developer.apple.com/reference/scenekit/scngeometryprimitivetype\n ",
+      "value": "*\n * The drawing primitive that connects vertices when rendering a geometry element, used by the primitiveType property to specify how SceneKit interprets the geometry element’s data.\n * @typedef {Object} SCNGeometryPrimitiveType\n * @property {number} triangles - The geometry element’s data is a sequence of triangles, with each triangle described by three new vertices.\n * @property {number} triangleStrip - The geometry element’s data is a sequence of triangles, with each triangle described by one new vertex and two vertices from the previous triangle. \n * @property {number} line - The geometry element’s data is a sequence of line segments, with each line segment described by two new vertices. \n * @property {number} point - The geometry element’s data is a sequence of unconnected points.\n * @property {number} polygon - \n * @see https://developer.apple.com/documentation/scenekit/scngeometryprimitivetype\n ",
       "start": 15,
-      "end": 931,
+      "end": 935,
       "loc": {
         "start": {
           "line": 4,
@@ -923,8 +923,8 @@
         "updateContext": null
       },
       "value": "const",
-      "start": 932,
-      "end": 937,
+      "start": 936,
+      "end": 941,
       "loc": {
         "start": {
           "line": 14,
@@ -949,8 +949,8 @@
         "binop": null
       },
       "value": "SCNGeometryPrimitiveType",
-      "start": 938,
-      "end": 962,
+      "start": 942,
+      "end": 966,
       "loc": {
         "start": {
           "line": 14,
@@ -976,8 +976,8 @@
         "updateContext": null
       },
       "value": "=",
-      "start": 963,
-      "end": 964,
+      "start": 967,
+      "end": 968,
       "loc": {
         "start": {
           "line": 14,
@@ -1001,8 +1001,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 965,
-      "end": 966,
+      "start": 969,
+      "end": 970,
       "loc": {
         "start": {
           "line": 14,
@@ -1027,8 +1027,8 @@
         "binop": null
       },
       "value": "triangles",
-      "start": 969,
-      "end": 978,
+      "start": 973,
+      "end": 982,
       "loc": {
         "start": {
           "line": 15,
@@ -1053,8 +1053,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 978,
-      "end": 979,
+      "start": 982,
+      "end": 983,
       "loc": {
         "start": {
           "line": 15,
@@ -1080,8 +1080,8 @@
         "updateContext": null
       },
       "value": 0,
-      "start": 980,
-      "end": 981,
+      "start": 984,
+      "end": 985,
       "loc": {
         "start": {
           "line": 15,
@@ -1106,8 +1106,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 981,
-      "end": 982,
+      "start": 985,
+      "end": 986,
       "loc": {
         "start": {
           "line": 15,
@@ -1132,8 +1132,8 @@
         "binop": null
       },
       "value": "triangleStrip",
-      "start": 985,
-      "end": 998,
+      "start": 989,
+      "end": 1002,
       "loc": {
         "start": {
           "line": 16,
@@ -1158,8 +1158,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 998,
-      "end": 999,
+      "start": 1002,
+      "end": 1003,
       "loc": {
         "start": {
           "line": 16,
@@ -1185,8 +1185,8 @@
         "updateContext": null
       },
       "value": 1,
-      "start": 1000,
-      "end": 1001,
+      "start": 1004,
+      "end": 1005,
       "loc": {
         "start": {
           "line": 16,
@@ -1211,8 +1211,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1001,
-      "end": 1002,
+      "start": 1005,
+      "end": 1006,
       "loc": {
         "start": {
           "line": 16,
@@ -1237,8 +1237,8 @@
         "binop": null
       },
       "value": "line",
-      "start": 1005,
-      "end": 1009,
+      "start": 1009,
+      "end": 1013,
       "loc": {
         "start": {
           "line": 17,
@@ -1263,8 +1263,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1009,
-      "end": 1010,
+      "start": 1013,
+      "end": 1014,
       "loc": {
         "start": {
           "line": 17,
@@ -1290,8 +1290,8 @@
         "updateContext": null
       },
       "value": 2,
-      "start": 1011,
-      "end": 1012,
+      "start": 1015,
+      "end": 1016,
       "loc": {
         "start": {
           "line": 17,
@@ -1316,8 +1316,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1012,
-      "end": 1013,
+      "start": 1016,
+      "end": 1017,
       "loc": {
         "start": {
           "line": 17,
@@ -1342,8 +1342,8 @@
         "binop": null
       },
       "value": "point",
-      "start": 1016,
-      "end": 1021,
+      "start": 1020,
+      "end": 1025,
       "loc": {
         "start": {
           "line": 18,
@@ -1368,8 +1368,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1021,
-      "end": 1022,
+      "start": 1025,
+      "end": 1026,
       "loc": {
         "start": {
           "line": 18,
@@ -1395,8 +1395,8 @@
         "updateContext": null
       },
       "value": 3,
-      "start": 1023,
-      "end": 1024,
+      "start": 1027,
+      "end": 1028,
       "loc": {
         "start": {
           "line": 18,
@@ -1421,8 +1421,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1024,
-      "end": 1025,
+      "start": 1028,
+      "end": 1029,
       "loc": {
         "start": {
           "line": 18,
@@ -1447,8 +1447,8 @@
         "binop": null
       },
       "value": "polygon",
-      "start": 1028,
-      "end": 1035,
+      "start": 1032,
+      "end": 1039,
       "loc": {
         "start": {
           "line": 19,
@@ -1473,8 +1473,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1035,
-      "end": 1036,
+      "start": 1039,
+      "end": 1040,
       "loc": {
         "start": {
           "line": 19,
@@ -1500,8 +1500,8 @@
         "updateContext": null
       },
       "value": 4,
-      "start": 1037,
-      "end": 1038,
+      "start": 1041,
+      "end": 1042,
       "loc": {
         "start": {
           "line": 19,
@@ -1525,8 +1525,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1039,
-      "end": 1040,
+      "start": 1043,
+      "end": 1044,
       "loc": {
         "start": {
           "line": 20,
@@ -1553,8 +1553,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 1042,
-      "end": 1048,
+      "start": 1046,
+      "end": 1052,
       "loc": {
         "start": {
           "line": 22,
@@ -1581,8 +1581,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 1049,
-      "end": 1056,
+      "start": 1053,
+      "end": 1060,
       "loc": {
         "start": {
           "line": 22,
@@ -1607,8 +1607,8 @@
         "binop": null
       },
       "value": "SCNGeometryPrimitiveType",
-      "start": 1057,
-      "end": 1081,
+      "start": 1061,
+      "end": 1085,
       "loc": {
         "start": {
           "line": 22,
@@ -1633,8 +1633,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 1082,
-      "end": 1082,
+      "start": 1086,
+      "end": 1086,
       "loc": {
         "start": {
           "line": 23,

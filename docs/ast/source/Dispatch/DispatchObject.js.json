@@ -1,7 +1,7 @@
 {
   "type": "File",
   "start": 0,
-  "end": 4339,
+  "end": 4359,
   "loc": {
     "start": {
       "line": 1,
@@ -15,7 +15,7 @@
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 4339,
+    "end": 4359,
     "loc": {
       "start": {
         "line": 1,
@@ -30,8 +30,8 @@
     "body": [
       {
         "type": "ExportDefaultDeclaration",
-        "start": 232,
-        "end": 4338,
+        "start": 236,
+        "end": 4358,
         "loc": {
           "start": {
             "line": 8,
@@ -44,8 +44,8 @@
         },
         "declaration": {
           "type": "ClassDeclaration",
-          "start": 247,
-          "end": 4338,
+          "start": 251,
+          "end": 4358,
           "loc": {
             "start": {
               "line": 8,
@@ -58,8 +58,8 @@
           },
           "id": {
             "type": "Identifier",
-            "start": 253,
-            "end": 267,
+            "start": 257,
+            "end": 271,
             "loc": {
               "start": {
                 "line": 8,
@@ -77,8 +77,8 @@
           "superClass": null,
           "body": {
             "type": "ClassBody",
-            "start": 268,
-            "end": 4338,
+            "start": 272,
+            "end": 4358,
             "loc": {
               "start": {
                 "line": 8,
@@ -92,8 +92,8 @@
             "body": [
               {
                 "type": "ClassMethod",
-                "start": 340,
-                "end": 380,
+                "start": 344,
+                "end": 384,
                 "loc": {
                   "start": {
                     "line": 15,
@@ -107,8 +107,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 340,
-                  "end": 351,
+                  "start": 344,
+                  "end": 355,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -132,8 +132,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 354,
-                  "end": 380,
+                  "start": 358,
+                  "end": 384,
                   "loc": {
                     "start": {
                       "line": 15,
@@ -151,8 +151,8 @@
                     {
                       "type": "CommentLine",
                       "value": " nothing to do",
-                      "start": 360,
-                      "end": 376,
+                      "start": 364,
+                      "end": 380,
                       "loc": {
                         "start": {
                           "line": 16,
@@ -167,8 +167,8 @@
                     {
                       "type": "CommentLine",
                       "value": " Instance Methods",
-                      "start": 384,
-                      "end": 403,
+                      "start": 388,
+                      "end": 407,
                       "loc": {
                         "start": {
                           "line": 19,
@@ -182,9 +182,9 @@
                     },
                     {
                       "type": "CommentBlock",
-                      "value": "*\n   * Activates the dispatch object.\n   * @access public\n   * @returns {void}\n   * @desc Once a dispatch object has been activated, it cannot change its target queue.\n   * @see https://developer.apple.com/reference/dispatch/dispatchobject/1641002-activate\n   ",
-                      "start": 407,
-                      "end": 671,
+                      "value": "*\n   * Activates the dispatch object.\n   * @access public\n   * @returns {void}\n   * @desc Once a dispatch object has been activated, it cannot change its target queue.\n   * @see https://developer.apple.com/documentation/dispatch/dispatchobject/1641002-activate\n   ",
+                      "start": 411,
+                      "end": 679,
                       "loc": {
                         "start": {
                           "line": 21,
@@ -202,8 +202,8 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
-                    "start": 273,
-                    "end": 337,
+                    "start": 277,
+                    "end": 341,
                     "loc": {
                       "start": {
                         "line": 10,
@@ -219,8 +219,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 674,
-                "end": 690,
+                "start": 682,
+                "end": 698,
                 "loc": {
                   "start": {
                     "line": 28,
@@ -234,8 +234,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 674,
-                  "end": 682,
+                  "start": 682,
+                  "end": 690,
                   "loc": {
                     "start": {
                       "line": 28,
@@ -259,8 +259,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 685,
-                  "end": 690,
+                  "start": 693,
+                  "end": 698,
                   "loc": {
                     "start": {
                       "line": 28,
@@ -280,8 +280,8 @@
                   {
                     "type": "CommentLine",
                     "value": " Instance Methods",
-                    "start": 384,
-                    "end": 403,
+                    "start": 388,
+                    "end": 407,
                     "loc": {
                       "start": {
                         "line": 19,
@@ -295,9 +295,9 @@
                   },
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Activates the dispatch object.\n   * @access public\n   * @returns {void}\n   * @desc Once a dispatch object has been activated, it cannot change its target queue.\n   * @see https://developer.apple.com/reference/dispatch/dispatchobject/1641002-activate\n   ",
-                    "start": 407,
-                    "end": 671,
+                    "value": "*\n   * Activates the dispatch object.\n   * @access public\n   * @returns {void}\n   * @desc Once a dispatch object has been activated, it cannot change its target queue.\n   * @see https://developer.apple.com/documentation/dispatch/dispatchobject/1641002-activate\n   ",
+                    "start": 411,
+                    "end": 679,
                     "loc": {
                       "start": {
                         "line": 21,
@@ -313,9 +313,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Resume the invocation of block objects on a dispatch object.\n   * @access public\n   * @returns {void}\n   * @desc Calling this function decrements the suspension count of a suspended dispatch queue or dispatch event source object. While the count is greater than zero, the object remains suspended. When the suspension count returns to zero, any blocks submitted to the dispatch queue or any events observed by the dispatch source while suspended are delivered.With one exception, each call to resume() must balance a call to suspend(). New dispatch event source objects returned by dispatch_source_create(_:_:_:_:) have a suspension count of 1 and must be resumed before any events are delivered. This approach allows your application to fully configure the dispatch event source object prior to delivery of the first event. In all other cases, it is undefined to call resume() more times than suspend(), which would result in a negative suspension count.\n   * @see https://developer.apple.com/reference/dispatch/dispatchobject/1452929-resume\n   ",
-                    "start": 694,
-                    "end": 1751,
+                    "value": "*\n   * Resume the invocation of block objects on a dispatch object.\n   * @access public\n   * @returns {void}\n   * @desc Calling this function decrements the suspension count of a suspended dispatch queue or dispatch event source object. While the count is greater than zero, the object remains suspended. When the suspension count returns to zero, any blocks submitted to the dispatch queue or any events observed by the dispatch source while suspended are delivered.With one exception, each call to resume() must balance a call to suspend(). New dispatch event source objects returned by dispatch_source_create(_:_:_:_:) have a suspension count of 1 and must be resumed before any events are delivered. This approach allows your application to fully configure the dispatch event source object prior to delivery of the first event. In all other cases, it is undefined to call resume() more times than suspend(), which would result in a negative suspension count.\n   * @see https://developer.apple.com/documentation/dispatch/dispatchobject/1452929-resume\n   ",
+                    "start": 702,
+                    "end": 1763,
                     "loc": {
                       "start": {
                         "line": 31,
@@ -331,8 +331,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 1754,
-                "end": 1768,
+                "start": 1766,
+                "end": 1780,
                 "loc": {
                   "start": {
                     "line": 38,
@@ -346,8 +346,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 1754,
-                  "end": 1760,
+                  "start": 1766,
+                  "end": 1772,
                   "loc": {
                     "start": {
                       "line": 38,
@@ -371,8 +371,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 1763,
-                  "end": 1768,
+                  "start": 1775,
+                  "end": 1780,
                   "loc": {
                     "start": {
                       "line": 38,
@@ -391,9 +391,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Resume the invocation of block objects on a dispatch object.\n   * @access public\n   * @returns {void}\n   * @desc Calling this function decrements the suspension count of a suspended dispatch queue or dispatch event source object. While the count is greater than zero, the object remains suspended. When the suspension count returns to zero, any blocks submitted to the dispatch queue or any events observed by the dispatch source while suspended are delivered.With one exception, each call to resume() must balance a call to suspend(). New dispatch event source objects returned by dispatch_source_create(_:_:_:_:) have a suspension count of 1 and must be resumed before any events are delivered. This approach allows your application to fully configure the dispatch event source object prior to delivery of the first event. In all other cases, it is undefined to call resume() more times than suspend(), which would result in a negative suspension count.\n   * @see https://developer.apple.com/reference/dispatch/dispatchobject/1452929-resume\n   ",
-                    "start": 694,
-                    "end": 1751,
+                    "value": "*\n   * Resume the invocation of block objects on a dispatch object.\n   * @access public\n   * @returns {void}\n   * @desc Calling this function decrements the suspension count of a suspended dispatch queue or dispatch event source object. While the count is greater than zero, the object remains suspended. When the suspension count returns to zero, any blocks submitted to the dispatch queue or any events observed by the dispatch source while suspended are delivered.With one exception, each call to resume() must balance a call to suspend(). New dispatch event source objects returned by dispatch_source_create(_:_:_:_:) have a suspension count of 1 and must be resumed before any events are delivered. This approach allows your application to fully configure the dispatch event source object prior to delivery of the first event. In all other cases, it is undefined to call resume() more times than suspend(), which would result in a negative suspension count.\n   * @see https://developer.apple.com/documentation/dispatch/dispatchobject/1452929-resume\n   ",
+                    "start": 702,
+                    "end": 1763,
                     "loc": {
                       "start": {
                         "line": 31,
@@ -409,9 +409,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Sets the target queue for the given object.\n   * @access public\n   * @param {?DispatchQueue} queue - The new target queue for the object. The queue is retained, and the previous one, if any, is released. This parameter cannot be NULL.\n   * @returns {void}\n   * @desc An object's target queue is responsible for processing the object. The target queue determines the queue on which the object's finalizer is invoked. In addition, modifying the target queue of some objects changes their behavior:Dispatch queues:A dispatch queue's priority is inherited from its target queue. Use the dispatch_get_global_queue(_:_:) function to obtain a suitable target queue of the desired priority.If you submit a block to a serial queue, and the serial queue’s target queue is a different serial queue, that block is not invoked concurrently with blocks submitted to the target queue or to any other queue with that same target queue.ImportantIf you modify the target queue for a queue, you must be careful to avoid creating cycles in the queue hierarchy.Dispatch sources:A dispatch source's target queue specifies where its event handler and cancellation handler blocks are submitted.Dispatch I/O channels:A dispatch I/O channel's target queue specifies where its I/O operations are executed. This may affect the priority of the resulting I/O operations. For example, if the channel's target queue's priority is set to DISPATCH_QUEUE_PRIORITY_BACKGROUND, then any I/O operations performed by read(offset:length:queue:ioHandler:) or write(offset:data:queue:ioHandler:) on that queue are throttled when there is I/O contention.\n   * @see https://developer.apple.com/reference/dispatch/dispatchobject/1452989-settarget\n   ",
-                    "start": 1772,
-                    "end": 3488,
+                    "value": "*\n   * Sets the target queue for the given object.\n   * @access public\n   * @param {?DispatchQueue} queue - The new target queue for the object. The queue is retained, and the previous one, if any, is released. This parameter cannot be NULL.\n   * @returns {void}\n   * @desc An object's target queue is responsible for processing the object. The target queue determines the queue on which the object's finalizer is invoked. In addition, modifying the target queue of some objects changes their behavior:Dispatch queues:A dispatch queue's priority is inherited from its target queue. Use the dispatch_get_global_queue(_:_:) function to obtain a suitable target queue of the desired priority.If you submit a block to a serial queue, and the serial queue’s target queue is a different serial queue, that block is not invoked concurrently with blocks submitted to the target queue or to any other queue with that same target queue.ImportantIf you modify the target queue for a queue, you must be careful to avoid creating cycles in the queue hierarchy.Dispatch sources:A dispatch source's target queue specifies where its event handler and cancellation handler blocks are submitted.Dispatch I/O channels:A dispatch I/O channel's target queue specifies where its I/O operations are executed. This may affect the priority of the resulting I/O operations. For example, if the channel's target queue's priority is set to DISPATCH_QUEUE_PRIORITY_BACKGROUND, then any I/O operations performed by read(offset:length:queue:ioHandler:) or write(offset:data:queue:ioHandler:) on that queue are throttled when there is I/O contention.\n   * @see https://developer.apple.com/documentation/dispatch/dispatchobject/1452989-settarget\n   ",
+                    "start": 1784,
+                    "end": 3504,
                     "loc": {
                       "start": {
                         "line": 41,
@@ -427,8 +427,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 3491,
-                "end": 3513,
+                "start": 3507,
+                "end": 3529,
                 "loc": {
                   "start": {
                     "line": 49,
@@ -442,8 +442,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 3491,
-                  "end": 3500,
+                  "start": 3507,
+                  "end": 3516,
                   "loc": {
                     "start": {
                       "line": 49,
@@ -467,8 +467,8 @@
                 "params": [
                   {
                     "type": "Identifier",
-                    "start": 3501,
-                    "end": 3506,
+                    "start": 3517,
+                    "end": 3522,
                     "loc": {
                       "start": {
                         "line": 49,
@@ -485,8 +485,8 @@
                 ],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 3508,
-                  "end": 3513,
+                  "start": 3524,
+                  "end": 3529,
                   "loc": {
                     "start": {
                       "line": 49,
@@ -505,9 +505,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Sets the target queue for the given object.\n   * @access public\n   * @param {?DispatchQueue} queue - The new target queue for the object. The queue is retained, and the previous one, if any, is released. This parameter cannot be NULL.\n   * @returns {void}\n   * @desc An object's target queue is responsible for processing the object. The target queue determines the queue on which the object's finalizer is invoked. In addition, modifying the target queue of some objects changes their behavior:Dispatch queues:A dispatch queue's priority is inherited from its target queue. Use the dispatch_get_global_queue(_:_:) function to obtain a suitable target queue of the desired priority.If you submit a block to a serial queue, and the serial queue’s target queue is a different serial queue, that block is not invoked concurrently with blocks submitted to the target queue or to any other queue with that same target queue.ImportantIf you modify the target queue for a queue, you must be careful to avoid creating cycles in the queue hierarchy.Dispatch sources:A dispatch source's target queue specifies where its event handler and cancellation handler blocks are submitted.Dispatch I/O channels:A dispatch I/O channel's target queue specifies where its I/O operations are executed. This may affect the priority of the resulting I/O operations. For example, if the channel's target queue's priority is set to DISPATCH_QUEUE_PRIORITY_BACKGROUND, then any I/O operations performed by read(offset:length:queue:ioHandler:) or write(offset:data:queue:ioHandler:) on that queue are throttled when there is I/O contention.\n   * @see https://developer.apple.com/reference/dispatch/dispatchobject/1452989-settarget\n   ",
-                    "start": 1772,
-                    "end": 3488,
+                    "value": "*\n   * Sets the target queue for the given object.\n   * @access public\n   * @param {?DispatchQueue} queue - The new target queue for the object. The queue is retained, and the previous one, if any, is released. This parameter cannot be NULL.\n   * @returns {void}\n   * @desc An object's target queue is responsible for processing the object. The target queue determines the queue on which the object's finalizer is invoked. In addition, modifying the target queue of some objects changes their behavior:Dispatch queues:A dispatch queue's priority is inherited from its target queue. Use the dispatch_get_global_queue(_:_:) function to obtain a suitable target queue of the desired priority.If you submit a block to a serial queue, and the serial queue’s target queue is a different serial queue, that block is not invoked concurrently with blocks submitted to the target queue or to any other queue with that same target queue.ImportantIf you modify the target queue for a queue, you must be careful to avoid creating cycles in the queue hierarchy.Dispatch sources:A dispatch source's target queue specifies where its event handler and cancellation handler blocks are submitted.Dispatch I/O channels:A dispatch I/O channel's target queue specifies where its I/O operations are executed. This may affect the priority of the resulting I/O operations. For example, if the channel's target queue's priority is set to DISPATCH_QUEUE_PRIORITY_BACKGROUND, then any I/O operations performed by read(offset:length:queue:ioHandler:) or write(offset:data:queue:ioHandler:) on that queue are throttled when there is I/O contention.\n   * @see https://developer.apple.com/documentation/dispatch/dispatchobject/1452989-settarget\n   ",
+                    "start": 1784,
+                    "end": 3504,
                     "loc": {
                       "start": {
                         "line": 41,
@@ -523,9 +523,9 @@
                 "trailingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Suspends the invocation of block objects on a dispatch object.\n   * @access public\n   * @returns {void}\n   * @desc By suspending a dispatch object, your application can temporarily prevent the execution of any blocks associated with that object. The suspension occurs after completion of any blocks running at the time of the call. Calling this function increments the suspension count of the object, and calling resume() decrements it. While the count is greater than zero, the object remains suspended, so you must balance each suspend() call with a matching resume() call.Any blocks submitted to a dispatch queue or events observed by a dispatch source are delivered once the object is resumed. \n   * @see https://developer.apple.com/reference/dispatch/dispatchobject/1452801-suspend\n   ",
-                    "start": 3517,
-                    "end": 4318,
+                    "value": "*\n   * Suspends the invocation of block objects on a dispatch object.\n   * @access public\n   * @returns {void}\n   * @desc By suspending a dispatch object, your application can temporarily prevent the execution of any blocks associated with that object. The suspension occurs after completion of any blocks running at the time of the call. Calling this function increments the suspension count of the object, and calling resume() decrements it. While the count is greater than zero, the object remains suspended, so you must balance each suspend() call with a matching resume() call.Any blocks submitted to a dispatch queue or events observed by a dispatch source are delivered once the object is resumed. \n   * @see https://developer.apple.com/documentation/dispatch/dispatchobject/1452801-suspend\n   ",
+                    "start": 3533,
+                    "end": 4338,
                     "loc": {
                       "start": {
                         "line": 52,
@@ -541,8 +541,8 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 4321,
-                "end": 4336,
+                "start": 4341,
+                "end": 4356,
                 "loc": {
                   "start": {
                     "line": 59,
@@ -556,8 +556,8 @@
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 4321,
-                  "end": 4328,
+                  "start": 4341,
+                  "end": 4348,
                   "loc": {
                     "start": {
                       "line": 59,
@@ -581,8 +581,8 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 4331,
-                  "end": 4336,
+                  "start": 4351,
+                  "end": 4356,
                   "loc": {
                     "start": {
                       "line": 59,
@@ -599,9 +599,9 @@
                 "leadingComments": [
                   {
                     "type": "CommentBlock",
-                    "value": "*\n   * Suspends the invocation of block objects on a dispatch object.\n   * @access public\n   * @returns {void}\n   * @desc By suspending a dispatch object, your application can temporarily prevent the execution of any blocks associated with that object. The suspension occurs after completion of any blocks running at the time of the call. Calling this function increments the suspension count of the object, and calling resume() decrements it. While the count is greater than zero, the object remains suspended, so you must balance each suspend() call with a matching resume() call.Any blocks submitted to a dispatch queue or events observed by a dispatch source are delivered once the object is resumed. \n   * @see https://developer.apple.com/reference/dispatch/dispatchobject/1452801-suspend\n   ",
-                    "start": 3517,
-                    "end": 4318,
+                    "value": "*\n   * Suspends the invocation of block objects on a dispatch object.\n   * @access public\n   * @returns {void}\n   * @desc By suspending a dispatch object, your application can temporarily prevent the execution of any blocks associated with that object. The suspension occurs after completion of any blocks running at the time of the call. Calling this function increments the suspension count of the object, and calling resume() decrements it. While the count is greater than zero, the object remains suspended, so you must balance each suspend() call with a matching resume() call.Any blocks submitted to a dispatch queue or events observed by a dispatch source are delivered once the object is resumed. \n   * @see https://developer.apple.com/documentation/dispatch/dispatchobject/1452801-suspend\n   ",
+                    "start": 3533,
+                    "end": 4338,
                     "loc": {
                       "start": {
                         "line": 52,
@@ -620,9 +620,9 @@
           "leadingComments": [
             {
               "type": "CommentBlock",
-              "value": "*\n * DispatchObject is the base class for many dispatch types, including DispatchQueue, DispatchGroup, and DispatchSource. \n * @access public\n * @see https://developer.apple.com/reference/dispatch/dispatchobject\n ",
+              "value": "*\n * DispatchObject is the base class for many dispatch types, including DispatchQueue, DispatchGroup, and DispatchSource. \n * @access public\n * @see https://developer.apple.com/documentation/dispatch/dispatchobject\n ",
               "start": 14,
-              "end": 231,
+              "end": 235,
               "loc": {
                 "start": {
                   "line": 3,
@@ -640,9 +640,9 @@
         "leadingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * DispatchObject is the base class for many dispatch types, including DispatchQueue, DispatchGroup, and DispatchSource. \n * @access public\n * @see https://developer.apple.com/reference/dispatch/dispatchobject\n ",
+            "value": "*\n * DispatchObject is the base class for many dispatch types, including DispatchQueue, DispatchGroup, and DispatchSource. \n * @access public\n * @see https://developer.apple.com/documentation/dispatch/dispatchobject\n ",
             "start": 14,
-            "end": 231,
+            "end": 235,
             "loc": {
               "start": {
                 "line": 3,
@@ -696,9 +696,9 @@
         "trailingComments": [
           {
             "type": "CommentBlock",
-            "value": "*\n * DispatchObject is the base class for many dispatch types, including DispatchQueue, DispatchGroup, and DispatchSource. \n * @access public\n * @see https://developer.apple.com/reference/dispatch/dispatchobject\n ",
+            "value": "*\n * DispatchObject is the base class for many dispatch types, including DispatchQueue, DispatchGroup, and DispatchSource. \n * @access public\n * @see https://developer.apple.com/documentation/dispatch/dispatchobject\n ",
             "start": 14,
-            "end": 231,
+            "end": 235,
             "loc": {
               "start": {
                 "line": 3,
@@ -717,9 +717,9 @@
   "comments": [
     {
       "type": "CommentBlock",
-      "value": "*\n * DispatchObject is the base class for many dispatch types, including DispatchQueue, DispatchGroup, and DispatchSource. \n * @access public\n * @see https://developer.apple.com/reference/dispatch/dispatchobject\n ",
+      "value": "*\n * DispatchObject is the base class for many dispatch types, including DispatchQueue, DispatchGroup, and DispatchSource. \n * @access public\n * @see https://developer.apple.com/documentation/dispatch/dispatchobject\n ",
       "start": 14,
-      "end": 231,
+      "end": 235,
       "loc": {
         "start": {
           "line": 3,
@@ -734,8 +734,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
-      "start": 273,
-      "end": 337,
+      "start": 277,
+      "end": 341,
       "loc": {
         "start": {
           "line": 10,
@@ -750,8 +750,8 @@
     {
       "type": "CommentLine",
       "value": " nothing to do",
-      "start": 360,
-      "end": 376,
+      "start": 364,
+      "end": 380,
       "loc": {
         "start": {
           "line": 16,
@@ -766,8 +766,8 @@
     {
       "type": "CommentLine",
       "value": " Instance Methods",
-      "start": 384,
-      "end": 403,
+      "start": 388,
+      "end": 407,
       "loc": {
         "start": {
           "line": 19,
@@ -781,9 +781,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Activates the dispatch object.\n   * @access public\n   * @returns {void}\n   * @desc Once a dispatch object has been activated, it cannot change its target queue.\n   * @see https://developer.apple.com/reference/dispatch/dispatchobject/1641002-activate\n   ",
-      "start": 407,
-      "end": 671,
+      "value": "*\n   * Activates the dispatch object.\n   * @access public\n   * @returns {void}\n   * @desc Once a dispatch object has been activated, it cannot change its target queue.\n   * @see https://developer.apple.com/documentation/dispatch/dispatchobject/1641002-activate\n   ",
+      "start": 411,
+      "end": 679,
       "loc": {
         "start": {
           "line": 21,
@@ -797,9 +797,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Resume the invocation of block objects on a dispatch object.\n   * @access public\n   * @returns {void}\n   * @desc Calling this function decrements the suspension count of a suspended dispatch queue or dispatch event source object. While the count is greater than zero, the object remains suspended. When the suspension count returns to zero, any blocks submitted to the dispatch queue or any events observed by the dispatch source while suspended are delivered.With one exception, each call to resume() must balance a call to suspend(). New dispatch event source objects returned by dispatch_source_create(_:_:_:_:) have a suspension count of 1 and must be resumed before any events are delivered. This approach allows your application to fully configure the dispatch event source object prior to delivery of the first event. In all other cases, it is undefined to call resume() more times than suspend(), which would result in a negative suspension count.\n   * @see https://developer.apple.com/reference/dispatch/dispatchobject/1452929-resume\n   ",
-      "start": 694,
-      "end": 1751,
+      "value": "*\n   * Resume the invocation of block objects on a dispatch object.\n   * @access public\n   * @returns {void}\n   * @desc Calling this function decrements the suspension count of a suspended dispatch queue or dispatch event source object. While the count is greater than zero, the object remains suspended. When the suspension count returns to zero, any blocks submitted to the dispatch queue or any events observed by the dispatch source while suspended are delivered.With one exception, each call to resume() must balance a call to suspend(). New dispatch event source objects returned by dispatch_source_create(_:_:_:_:) have a suspension count of 1 and must be resumed before any events are delivered. This approach allows your application to fully configure the dispatch event source object prior to delivery of the first event. In all other cases, it is undefined to call resume() more times than suspend(), which would result in a negative suspension count.\n   * @see https://developer.apple.com/documentation/dispatch/dispatchobject/1452929-resume\n   ",
+      "start": 702,
+      "end": 1763,
       "loc": {
         "start": {
           "line": 31,
@@ -813,9 +813,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Sets the target queue for the given object.\n   * @access public\n   * @param {?DispatchQueue} queue - The new target queue for the object. The queue is retained, and the previous one, if any, is released. This parameter cannot be NULL.\n   * @returns {void}\n   * @desc An object's target queue is responsible for processing the object. The target queue determines the queue on which the object's finalizer is invoked. In addition, modifying the target queue of some objects changes their behavior:Dispatch queues:A dispatch queue's priority is inherited from its target queue. Use the dispatch_get_global_queue(_:_:) function to obtain a suitable target queue of the desired priority.If you submit a block to a serial queue, and the serial queue’s target queue is a different serial queue, that block is not invoked concurrently with blocks submitted to the target queue or to any other queue with that same target queue.ImportantIf you modify the target queue for a queue, you must be careful to avoid creating cycles in the queue hierarchy.Dispatch sources:A dispatch source's target queue specifies where its event handler and cancellation handler blocks are submitted.Dispatch I/O channels:A dispatch I/O channel's target queue specifies where its I/O operations are executed. This may affect the priority of the resulting I/O operations. For example, if the channel's target queue's priority is set to DISPATCH_QUEUE_PRIORITY_BACKGROUND, then any I/O operations performed by read(offset:length:queue:ioHandler:) or write(offset:data:queue:ioHandler:) on that queue are throttled when there is I/O contention.\n   * @see https://developer.apple.com/reference/dispatch/dispatchobject/1452989-settarget\n   ",
-      "start": 1772,
-      "end": 3488,
+      "value": "*\n   * Sets the target queue for the given object.\n   * @access public\n   * @param {?DispatchQueue} queue - The new target queue for the object. The queue is retained, and the previous one, if any, is released. This parameter cannot be NULL.\n   * @returns {void}\n   * @desc An object's target queue is responsible for processing the object. The target queue determines the queue on which the object's finalizer is invoked. In addition, modifying the target queue of some objects changes their behavior:Dispatch queues:A dispatch queue's priority is inherited from its target queue. Use the dispatch_get_global_queue(_:_:) function to obtain a suitable target queue of the desired priority.If you submit a block to a serial queue, and the serial queue’s target queue is a different serial queue, that block is not invoked concurrently with blocks submitted to the target queue or to any other queue with that same target queue.ImportantIf you modify the target queue for a queue, you must be careful to avoid creating cycles in the queue hierarchy.Dispatch sources:A dispatch source's target queue specifies where its event handler and cancellation handler blocks are submitted.Dispatch I/O channels:A dispatch I/O channel's target queue specifies where its I/O operations are executed. This may affect the priority of the resulting I/O operations. For example, if the channel's target queue's priority is set to DISPATCH_QUEUE_PRIORITY_BACKGROUND, then any I/O operations performed by read(offset:length:queue:ioHandler:) or write(offset:data:queue:ioHandler:) on that queue are throttled when there is I/O contention.\n   * @see https://developer.apple.com/documentation/dispatch/dispatchobject/1452989-settarget\n   ",
+      "start": 1784,
+      "end": 3504,
       "loc": {
         "start": {
           "line": 41,
@@ -829,9 +829,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Suspends the invocation of block objects on a dispatch object.\n   * @access public\n   * @returns {void}\n   * @desc By suspending a dispatch object, your application can temporarily prevent the execution of any blocks associated with that object. The suspension occurs after completion of any blocks running at the time of the call. Calling this function increments the suspension count of the object, and calling resume() decrements it. While the count is greater than zero, the object remains suspended, so you must balance each suspend() call with a matching resume() call.Any blocks submitted to a dispatch queue or events observed by a dispatch source are delivered once the object is resumed. \n   * @see https://developer.apple.com/reference/dispatch/dispatchobject/1452801-suspend\n   ",
-      "start": 3517,
-      "end": 4318,
+      "value": "*\n   * Suspends the invocation of block objects on a dispatch object.\n   * @access public\n   * @returns {void}\n   * @desc By suspending a dispatch object, your application can temporarily prevent the execution of any blocks associated with that object. The suspension occurs after completion of any blocks running at the time of the call. Calling this function increments the suspension count of the object, and calling resume() decrements it. While the count is greater than zero, the object remains suspended, so you must balance each suspend() call with a matching resume() call.Any blocks submitted to a dispatch queue or events observed by a dispatch source are delivered once the object is resumed. \n   * @see https://developer.apple.com/documentation/dispatch/dispatchobject/1452801-suspend\n   ",
+      "start": 3533,
+      "end": 4338,
       "loc": {
         "start": {
           "line": 52,
@@ -874,9 +874,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n * DispatchObject is the base class for many dispatch types, including DispatchQueue, DispatchGroup, and DispatchSource. \n * @access public\n * @see https://developer.apple.com/reference/dispatch/dispatchobject\n ",
+      "value": "*\n * DispatchObject is the base class for many dispatch types, including DispatchQueue, DispatchGroup, and DispatchSource. \n * @access public\n * @see https://developer.apple.com/documentation/dispatch/dispatchobject\n ",
       "start": 14,
-      "end": 231,
+      "end": 235,
       "loc": {
         "start": {
           "line": 3,
@@ -903,8 +903,8 @@
         "updateContext": null
       },
       "value": "export",
-      "start": 232,
-      "end": 238,
+      "start": 236,
+      "end": 242,
       "loc": {
         "start": {
           "line": 8,
@@ -931,8 +931,8 @@
         "updateContext": null
       },
       "value": "default",
-      "start": 239,
-      "end": 246,
+      "start": 243,
+      "end": 250,
       "loc": {
         "start": {
           "line": 8,
@@ -959,8 +959,8 @@
         "updateContext": null
       },
       "value": "class",
-      "start": 247,
-      "end": 252,
+      "start": 251,
+      "end": 256,
       "loc": {
         "start": {
           "line": 8,
@@ -985,8 +985,8 @@
         "binop": null
       },
       "value": "DispatchObject",
-      "start": 253,
-      "end": 267,
+      "start": 257,
+      "end": 271,
       "loc": {
         "start": {
           "line": 8,
@@ -1010,8 +1010,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 268,
-      "end": 269,
+      "start": 272,
+      "end": 273,
       "loc": {
         "start": {
           "line": 8,
@@ -1026,8 +1026,8 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * constructor\n   * @access public\n   * @constructor\n   ",
-      "start": 273,
-      "end": 337,
+      "start": 277,
+      "end": 341,
       "loc": {
         "start": {
           "line": 10,
@@ -1052,8 +1052,8 @@
         "binop": null
       },
       "value": "constructor",
-      "start": 340,
-      "end": 351,
+      "start": 344,
+      "end": 355,
       "loc": {
         "start": {
           "line": 15,
@@ -1077,8 +1077,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 351,
-      "end": 352,
+      "start": 355,
+      "end": 356,
       "loc": {
         "start": {
           "line": 15,
@@ -1102,8 +1102,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 352,
-      "end": 353,
+      "start": 356,
+      "end": 357,
       "loc": {
         "start": {
           "line": 15,
@@ -1127,8 +1127,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 354,
-      "end": 355,
+      "start": 358,
+      "end": 359,
       "loc": {
         "start": {
           "line": 15,
@@ -1143,8 +1143,8 @@
     {
       "type": "CommentLine",
       "value": " nothing to do",
-      "start": 360,
-      "end": 376,
+      "start": 364,
+      "end": 380,
       "loc": {
         "start": {
           "line": 16,
@@ -1168,8 +1168,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 379,
-      "end": 380,
+      "start": 383,
+      "end": 384,
       "loc": {
         "start": {
           "line": 17,
@@ -1184,8 +1184,8 @@
     {
       "type": "CommentLine",
       "value": " Instance Methods",
-      "start": 384,
-      "end": 403,
+      "start": 388,
+      "end": 407,
       "loc": {
         "start": {
           "line": 19,
@@ -1199,9 +1199,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Activates the dispatch object.\n   * @access public\n   * @returns {void}\n   * @desc Once a dispatch object has been activated, it cannot change its target queue.\n   * @see https://developer.apple.com/reference/dispatch/dispatchobject/1641002-activate\n   ",
-      "start": 407,
-      "end": 671,
+      "value": "*\n   * Activates the dispatch object.\n   * @access public\n   * @returns {void}\n   * @desc Once a dispatch object has been activated, it cannot change its target queue.\n   * @see https://developer.apple.com/documentation/dispatch/dispatchobject/1641002-activate\n   ",
+      "start": 411,
+      "end": 679,
       "loc": {
         "start": {
           "line": 21,
@@ -1226,8 +1226,8 @@
         "binop": null
       },
       "value": "activate",
-      "start": 674,
-      "end": 682,
+      "start": 682,
+      "end": 690,
       "loc": {
         "start": {
           "line": 28,
@@ -1251,8 +1251,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 682,
-      "end": 683,
+      "start": 690,
+      "end": 691,
       "loc": {
         "start": {
           "line": 28,
@@ -1276,8 +1276,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 683,
-      "end": 684,
+      "start": 691,
+      "end": 692,
       "loc": {
         "start": {
           "line": 28,
@@ -1301,8 +1301,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 685,
-      "end": 686,
+      "start": 693,
+      "end": 694,
       "loc": {
         "start": {
           "line": 28,
@@ -1326,8 +1326,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 689,
-      "end": 690,
+      "start": 697,
+      "end": 698,
       "loc": {
         "start": {
           "line": 29,
@@ -1341,9 +1341,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Resume the invocation of block objects on a dispatch object.\n   * @access public\n   * @returns {void}\n   * @desc Calling this function decrements the suspension count of a suspended dispatch queue or dispatch event source object. While the count is greater than zero, the object remains suspended. When the suspension count returns to zero, any blocks submitted to the dispatch queue or any events observed by the dispatch source while suspended are delivered.With one exception, each call to resume() must balance a call to suspend(). New dispatch event source objects returned by dispatch_source_create(_:_:_:_:) have a suspension count of 1 and must be resumed before any events are delivered. This approach allows your application to fully configure the dispatch event source object prior to delivery of the first event. In all other cases, it is undefined to call resume() more times than suspend(), which would result in a negative suspension count.\n   * @see https://developer.apple.com/reference/dispatch/dispatchobject/1452929-resume\n   ",
-      "start": 694,
-      "end": 1751,
+      "value": "*\n   * Resume the invocation of block objects on a dispatch object.\n   * @access public\n   * @returns {void}\n   * @desc Calling this function decrements the suspension count of a suspended dispatch queue or dispatch event source object. While the count is greater than zero, the object remains suspended. When the suspension count returns to zero, any blocks submitted to the dispatch queue or any events observed by the dispatch source while suspended are delivered.With one exception, each call to resume() must balance a call to suspend(). New dispatch event source objects returned by dispatch_source_create(_:_:_:_:) have a suspension count of 1 and must be resumed before any events are delivered. This approach allows your application to fully configure the dispatch event source object prior to delivery of the first event. In all other cases, it is undefined to call resume() more times than suspend(), which would result in a negative suspension count.\n   * @see https://developer.apple.com/documentation/dispatch/dispatchobject/1452929-resume\n   ",
+      "start": 702,
+      "end": 1763,
       "loc": {
         "start": {
           "line": 31,
@@ -1368,8 +1368,8 @@
         "binop": null
       },
       "value": "resume",
-      "start": 1754,
-      "end": 1760,
+      "start": 1766,
+      "end": 1772,
       "loc": {
         "start": {
           "line": 38,
@@ -1393,8 +1393,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1760,
-      "end": 1761,
+      "start": 1772,
+      "end": 1773,
       "loc": {
         "start": {
           "line": 38,
@@ -1418,8 +1418,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1761,
-      "end": 1762,
+      "start": 1773,
+      "end": 1774,
       "loc": {
         "start": {
           "line": 38,
@@ -1443,8 +1443,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1763,
-      "end": 1764,
+      "start": 1775,
+      "end": 1776,
       "loc": {
         "start": {
           "line": 38,
@@ -1468,8 +1468,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 1767,
-      "end": 1768,
+      "start": 1779,
+      "end": 1780,
       "loc": {
         "start": {
           "line": 39,
@@ -1483,9 +1483,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Sets the target queue for the given object.\n   * @access public\n   * @param {?DispatchQueue} queue - The new target queue for the object. The queue is retained, and the previous one, if any, is released. This parameter cannot be NULL.\n   * @returns {void}\n   * @desc An object's target queue is responsible for processing the object. The target queue determines the queue on which the object's finalizer is invoked. In addition, modifying the target queue of some objects changes their behavior:Dispatch queues:A dispatch queue's priority is inherited from its target queue. Use the dispatch_get_global_queue(_:_:) function to obtain a suitable target queue of the desired priority.If you submit a block to a serial queue, and the serial queue’s target queue is a different serial queue, that block is not invoked concurrently with blocks submitted to the target queue or to any other queue with that same target queue.ImportantIf you modify the target queue for a queue, you must be careful to avoid creating cycles in the queue hierarchy.Dispatch sources:A dispatch source's target queue specifies where its event handler and cancellation handler blocks are submitted.Dispatch I/O channels:A dispatch I/O channel's target queue specifies where its I/O operations are executed. This may affect the priority of the resulting I/O operations. For example, if the channel's target queue's priority is set to DISPATCH_QUEUE_PRIORITY_BACKGROUND, then any I/O operations performed by read(offset:length:queue:ioHandler:) or write(offset:data:queue:ioHandler:) on that queue are throttled when there is I/O contention.\n   * @see https://developer.apple.com/reference/dispatch/dispatchobject/1452989-settarget\n   ",
-      "start": 1772,
-      "end": 3488,
+      "value": "*\n   * Sets the target queue for the given object.\n   * @access public\n   * @param {?DispatchQueue} queue - The new target queue for the object. The queue is retained, and the previous one, if any, is released. This parameter cannot be NULL.\n   * @returns {void}\n   * @desc An object's target queue is responsible for processing the object. The target queue determines the queue on which the object's finalizer is invoked. In addition, modifying the target queue of some objects changes their behavior:Dispatch queues:A dispatch queue's priority is inherited from its target queue. Use the dispatch_get_global_queue(_:_:) function to obtain a suitable target queue of the desired priority.If you submit a block to a serial queue, and the serial queue’s target queue is a different serial queue, that block is not invoked concurrently with blocks submitted to the target queue or to any other queue with that same target queue.ImportantIf you modify the target queue for a queue, you must be careful to avoid creating cycles in the queue hierarchy.Dispatch sources:A dispatch source's target queue specifies where its event handler and cancellation handler blocks are submitted.Dispatch I/O channels:A dispatch I/O channel's target queue specifies where its I/O operations are executed. This may affect the priority of the resulting I/O operations. For example, if the channel's target queue's priority is set to DISPATCH_QUEUE_PRIORITY_BACKGROUND, then any I/O operations performed by read(offset:length:queue:ioHandler:) or write(offset:data:queue:ioHandler:) on that queue are throttled when there is I/O contention.\n   * @see https://developer.apple.com/documentation/dispatch/dispatchobject/1452989-settarget\n   ",
+      "start": 1784,
+      "end": 3504,
       "loc": {
         "start": {
           "line": 41,
@@ -1510,8 +1510,8 @@
         "binop": null
       },
       "value": "setTarget",
-      "start": 3491,
-      "end": 3500,
+      "start": 3507,
+      "end": 3516,
       "loc": {
         "start": {
           "line": 49,
@@ -1535,8 +1535,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3500,
-      "end": 3501,
+      "start": 3516,
+      "end": 3517,
       "loc": {
         "start": {
           "line": 49,
@@ -1561,8 +1561,8 @@
         "binop": null
       },
       "value": "queue",
-      "start": 3501,
-      "end": 3506,
+      "start": 3517,
+      "end": 3522,
       "loc": {
         "start": {
           "line": 49,
@@ -1586,8 +1586,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3506,
-      "end": 3507,
+      "start": 3522,
+      "end": 3523,
       "loc": {
         "start": {
           "line": 49,
@@ -1611,8 +1611,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3508,
-      "end": 3509,
+      "start": 3524,
+      "end": 3525,
       "loc": {
         "start": {
           "line": 49,
@@ -1636,8 +1636,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 3512,
-      "end": 3513,
+      "start": 3528,
+      "end": 3529,
       "loc": {
         "start": {
           "line": 50,
@@ -1651,9 +1651,9 @@
     },
     {
       "type": "CommentBlock",
-      "value": "*\n   * Suspends the invocation of block objects on a dispatch object.\n   * @access public\n   * @returns {void}\n   * @desc By suspending a dispatch object, your application can temporarily prevent the execution of any blocks associated with that object. The suspension occurs after completion of any blocks running at the time of the call. Calling this function increments the suspension count of the object, and calling resume() decrements it. While the count is greater than zero, the object remains suspended, so you must balance each suspend() call with a matching resume() call.Any blocks submitted to a dispatch queue or events observed by a dispatch source are delivered once the object is resumed. \n   * @see https://developer.apple.com/reference/dispatch/dispatchobject/1452801-suspend\n   ",
-      "start": 3517,
-      "end": 4318,
+      "value": "*\n   * Suspends the invocation of block objects on a dispatch object.\n   * @access public\n   * @returns {void}\n   * @desc By suspending a dispatch object, your application can temporarily prevent the execution of any blocks associated with that object. The suspension occurs after completion of any blocks running at the time of the call. Calling this function increments the suspension count of the object, and calling resume() decrements it. While the count is greater than zero, the object remains suspended, so you must balance each suspend() call with a matching resume() call.Any blocks submitted to a dispatch queue or events observed by a dispatch source are delivered once the object is resumed. \n   * @see https://developer.apple.com/documentation/dispatch/dispatchobject/1452801-suspend\n   ",
+      "start": 3533,
+      "end": 4338,
       "loc": {
         "start": {
           "line": 52,
@@ -1678,8 +1678,8 @@
         "binop": null
       },
       "value": "suspend",
-      "start": 4321,
-      "end": 4328,
+      "start": 4341,
+      "end": 4348,
       "loc": {
         "start": {
           "line": 59,
@@ -1703,8 +1703,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4328,
-      "end": 4329,
+      "start": 4348,
+      "end": 4349,
       "loc": {
         "start": {
           "line": 59,
@@ -1728,8 +1728,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4329,
-      "end": 4330,
+      "start": 4349,
+      "end": 4350,
       "loc": {
         "start": {
           "line": 59,
@@ -1753,8 +1753,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4331,
-      "end": 4332,
+      "start": 4351,
+      "end": 4352,
       "loc": {
         "start": {
           "line": 59,
@@ -1778,8 +1778,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4335,
-      "end": 4336,
+      "start": 4355,
+      "end": 4356,
       "loc": {
         "start": {
           "line": 60,
@@ -1803,8 +1803,8 @@
         "postfix": false,
         "binop": null
       },
-      "start": 4337,
-      "end": 4338,
+      "start": 4357,
+      "end": 4358,
       "loc": {
         "start": {
           "line": 61,
@@ -1829,8 +1829,8 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 4339,
-      "end": 4339,
+      "start": 4359,
+      "end": 4359,
       "loc": {
         "start": {
           "line": 62,
