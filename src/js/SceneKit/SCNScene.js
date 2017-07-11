@@ -494,6 +494,14 @@ You call this method in a try expression and handle any errors in the catch clau
     return this._loadedPromise
   }
 
+  /**
+   * @access public
+   * @type {Promise} -
+   */
+  get didLoad() {
+    return this._getLoadedPromise()
+  }
+
   // Structures
 
   /**

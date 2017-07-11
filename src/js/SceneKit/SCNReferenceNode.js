@@ -203,4 +203,12 @@ export default class SCNReferenceNode extends SCNNode {
     this.load()
     return this._loadedPromise
   }
+
+  /**
+   * @access public
+   * @type {Promise} -
+   */
+  get didLoad() {
+    return this._getLoadedPromise()
+  }
 }

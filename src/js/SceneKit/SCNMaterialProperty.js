@@ -549,5 +549,13 @@ export default class SCNMaterialProperty extends NSObject {
     
     return Promise.resolve()
   }
+
+  /**
+   * @access public
+   * @type {Promise} -
+   */
+  get didLoad() {
+    return this._getLoadedPromise()
+  }
 }
 

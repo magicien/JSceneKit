@@ -684,6 +684,14 @@ This method is for OpenGL shader programs only. To bind custom variable data for
   }
 
   /**
+   * @access public
+   * @type {Promise} -
+   */
+  get didLoad() {
+    return this._getLoadedPromise()
+  }
+
+  /**
    * Invoked by value(forKey:) when it finds no property corresponding to a given key.
    * @access public
    * @param {string} key - A string that is not equal to the name of any of the receiver's properties.

@@ -26010,6 +26010,12 @@ module.exports =
 	      this._loadedPromise = Promise.all(promises);
 	      return this._loadedPromise;
 	    }
+
+	    /**
+	     * @access public
+	     * @returns {Promise} -
+	     */
+
 	  }, {
 	    key: 'geometry',
 
@@ -26496,6 +26502,11 @@ module.exports =
 	      var vp = this.lightViewProjectionTransform;
 	      var scale = (0, _SCNMatrix4MakeTranslation2.default)(1.0, 1.0, 0.0).scale(0.5, 0.5, 1.0 // [-1, 1] => [0, 1]
 	      );return vp.mult(scale);
+	    }
+	  }, {
+	    key: 'didLoad',
+	    get: function get() {
+	      return this._getLoadedPromise();
 	    }
 	  }], [{
 	    key: '_loadAnimationArray',
@@ -28444,6 +28455,12 @@ module.exports =
 	      this._loadedPromise = Promise.all(promises);
 	      return this._loadedPromise;
 	    }
+
+	    /**
+	     * @access public
+	     * @type {Promise} -
+	     */
+
 	  }, {
 	    key: 'firstMaterial',
 	    get: function get() {
@@ -28518,6 +28535,11 @@ module.exports =
 	      }
 
 	      return keys;
+	    }
+	  }, {
+	    key: 'didLoad',
+	    get: function get() {
+	      return this._getLoadedPromise();
 	    }
 	  }]);
 
@@ -30509,6 +30531,15 @@ module.exports =
 	    }
 
 	    /**
+	     * @access public
+	     * @type {Promise} -
+	     */
+
+	  }, {
+	    key: 'valueForUndefinedKey',
+
+
+	    /**
 	     * Invoked by value(forKey:) when it finds no property corresponding to a given key.
 	     * @access public
 	     * @param {string} key - A string that is not equal to the name of any of the receiver's properties.
@@ -30516,9 +30547,6 @@ module.exports =
 	     * @desc Subclasses can override this method to return an alternate value for undefined keys. The default implementation raises an NSUndefinedKeyException.
 	     * @see https://developer.apple.com/documentation/objectivec/nsobject/1413457-value
 	     */
-
-	  }, {
-	    key: 'valueForUndefinedKey',
 	    value: function valueForUndefinedKey(key) {
 	      if (typeof this._valuesForUndefinedKeys[key] !== 'undefined') {
 	        return this._valuesForUndefinedKeys[key];
@@ -30716,6 +30744,11 @@ module.exports =
 	      }
 
 	      return keys;
+	    }
+	  }, {
+	    key: 'didLoad',
+	    get: function get() {
+	      return this._getLoadedPromise();
 	    }
 	  }], [{
 	    key: 'LightingModel',
@@ -31459,6 +31492,12 @@ module.exports =
 
 	      return Promise.resolve();
 	    }
+
+	    /**
+	     * @access public
+	     * @type {Promise} -
+	     */
+
 	  }, {
 	    key: '_presentation',
 	    get: function get() {
@@ -31507,6 +31546,11 @@ module.exports =
 	      }
 
 	      return keys;
+	    }
+	  }, {
+	    key: 'didLoad',
+	    get: function get() {
+	      return this._getLoadedPromise();
 	    }
 	  }]);
 
@@ -37769,15 +37813,9 @@ module.exports =
 	      return this._loadedPromise;
 	    }
 
-	    // Structures
-
 	    /**
-	     * @type {Object} Attribute
-	     * @property {string} endTime A floating-point value (in an NSNumber object) for the end time of the scene.
-	     * @property {string} frameRate A floating-point value (in an NSNumber object) for the frame rate of the scene.
-	     * @property {string} startTime A floating-point value (in an NSNumber object) for the start time of the scene.
-	     * @property {string} upAxis An SCNVector3 structure (in an NSValue object) specifying the orientation of the scene.
-	     * @see https://developer.apple.com/documentation/scenekit/scnscene.attribute
+	     * @access public
+	     * @type {Promise} -
 	     */
 
 	  }, {
@@ -37830,6 +37868,23 @@ module.exports =
 	    get: function get() {
 	      return this._particleSystems.slice(0);
 	    }
+	  }, {
+	    key: 'didLoad',
+	    get: function get() {
+	      return this._getLoadedPromise();
+	    }
+
+	    // Structures
+
+	    /**
+	     * @type {Object} Attribute
+	     * @property {string} endTime A floating-point value (in an NSNumber object) for the end time of the scene.
+	     * @property {string} frameRate A floating-point value (in an NSNumber object) for the frame rate of the scene.
+	     * @property {string} startTime A floating-point value (in an NSNumber object) for the start time of the scene.
+	     * @property {string} upAxis An SCNVector3 structure (in an NSValue object) specifying the orientation of the scene.
+	     * @see https://developer.apple.com/documentation/scenekit/scnscene.attribute
+	     */
+
 	  }], [{
 	    key: 'sceneNamed',
 	    value: function sceneNamed(name) {
@@ -43940,6 +43995,12 @@ module.exports =
 
 	      return Promise.resolve();
 	    }
+
+	    /**
+	     * @access public
+	     * @returns {Promise} -
+	     */
+
 	  }, {
 	    key: '_particleData',
 	    get: function get() {
@@ -44001,6 +44062,11 @@ module.exports =
 	    key: '_presentation',
 	    get: function get() {
 	      return this.__presentation ? this.__presentation : this;
+	    }
+	  }, {
+	    key: 'didLoad',
+	    get: function get() {
+	      return this._getLoadedPromise();
 	    }
 	  }], [{
 	    key: 'systemNamedInDirectory',
@@ -49876,6 +49942,12 @@ module.exports =
 
 	      return Promise.resolve();
 	    }
+
+	    /**
+	     * @access public
+	     * @type {Promise} -
+	     */
+
 	  }, {
 	    key: 'audioSource',
 	    get: function get() {
@@ -49893,6 +49965,11 @@ module.exports =
 	    key: 'audioNode',
 	    get: function get() {
 	      return this._audioNode;
+	    }
+	  }, {
+	    key: 'didLoad',
+	    get: function get() {
+	      return this._getLoadedPromise();
 	    }
 	  }]);
 
@@ -50131,6 +50208,12 @@ module.exports =
 
 	      return Promise.resolve();
 	    }
+
+	    /**
+	     * @access public
+	     * @type {Promise} -
+	     */
+
 	  }, {
 	    key: 'volume',
 	    get: function get() {
@@ -50164,6 +50247,11 @@ module.exports =
 	        return this._buffer.duration;
 	      }
 	      return null;
+	    }
+	  }, {
+	    key: 'didLoad',
+	    get: function get() {
+	      return this._getLoadedPromise();
 	    }
 	  }]);
 
@@ -56145,6 +56233,12 @@ module.exports =
 	      this.load();
 	      return this._loadedPromise;
 	    }
+
+	    /**
+	     * @access public
+	     * @type {Promise} -
+	     */
+
 	  }, {
 	    key: 'isLoaded',
 	    get: function get() {
@@ -56170,6 +56264,11 @@ module.exports =
 	        this.load();
 	      }
 	      return this._childNodes.slice(0);
+	    }
+	  }, {
+	    key: 'didLoad',
+	    get: function get() {
+	      return this._getLoadedPromise();
 	    }
 	  }]);
 

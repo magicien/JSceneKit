@@ -2367,6 +2367,14 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     this._loadedPromise = Promise.all(promises)
     return this._loadedPromise
   }
+
+  /**
+   * @access public
+   * @returns {Promise} -
+   */
+  get didLoad() {
+    return this._getLoadedPromise()
+  }
 }
 
 

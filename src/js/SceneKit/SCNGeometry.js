@@ -1212,4 +1212,12 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     this._loadedPromise = Promise.all(promises)
     return this._loadedPromise
   }
+
+  /**
+   * @access public
+   * @type {Promise} -
+   */
+  get didLoad() {
+    return this._getLoadedPromise()
+  }
 }

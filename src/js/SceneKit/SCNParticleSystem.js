@@ -1824,4 +1824,12 @@ export default class SCNParticleSystem extends NSObject {
     
     return Promise.resolve()
   }
+
+  /**
+   * @access public
+   * @returns {Promise} -
+   */
+  get didLoad() {
+    return this._getLoadedPromise()
+  }
 }
