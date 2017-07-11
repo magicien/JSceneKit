@@ -140,7 +140,7 @@ You call this method in a try expression and handle any errors in the catch clau
      */
     this._dataLoadedPromise = null
 
-    if(typeof url !== 'undefined'){
+    if(url){
       const promise = this._loadSceneWithURL(url, options)
       .then((scene) => {
         this._copyValue(scene)
@@ -156,6 +156,81 @@ You call this method in a try expression and handle any errors in the catch clau
       this._dataLoadedPromise = promise
     }
 
+    this._createSkyBox()
+    
+    /**
+     * @access private
+     * @type {Promise}
+     */
+    this._loadedPromise = null
+  }
+
+  _copyValue(src) {
+    this.isPaused = src.isPaused
+    this._rootNode = src._rootNode
+    //this._background = src._background
+    this._skyBox.geometry = src._skyBox.geometry.copy()
+    this._lightingEnvironment = src._lightingEnvironment
+    this.fogStartDistance = src.fogStartDistance
+    this.fogEndDistance = src.fogEndDistance
+    this.fogDensityExponent = src.fogDensityExponent
+    this.fogColor = src.fogColor
+    this._physicsWorld = src._physicsWorld // TODO: copy SCNPhysicsWorld
+    this._particleSystems = src._particleSystems ? src._particleSystems.slice(0) : null
+    this._particleSystemsTransform = src._particleSystemsTransform ? src._particleSystemsTransform.slice(0) : null
+  }
+
+  /**
+   * @access private
+   * @param {string} url -
+   * @param {Object} options -
+   * @returns {Promise} -
+   */
+  _loadSceneWithURL(url, options) {
+    let _options = options
+    if(_options === null){
+      _options = new Map()
+    }
+    if(typeof _options.get(SCNSceneSource.LoadingOption.assetDirectoryURLs) === 'undefined'){
+      const paths = url.split('/')
+      const name = paths.pop()
+      const directory = paths.join('/')
+
+      _options.set(SCNSceneSource.LoadingOption.assetDirectoryURLs, directory)
+    }
+
+    if(url instanceof _File){
+      return Promise((resolve, reject) => {
+        const reader = new _FileReader()
+        reader.onload = () => {
+          const scene = this._loadSceneWithData(reader.result, _options)
+          resolve(scene)
+        }
+        reader.onerror = () => {
+          reject(reader.error)
+        }
+        reader.readAsBinaryString(url)
+      })
+    }else{
+      return _BinaryRequest.get(url)
+        .then((data) => {
+          return this._loadSceneWithData(data, _options)
+        })
+    }
+  }
+
+  /**
+   * @access private
+   * @param {Blob} data -
+   * @param {Object} options -
+   * @returns {SCNScene} -
+   */
+  _loadSceneWithData(data, options) {
+    const source = new SCNSceneSource(data, options)
+    return source.scene()
+  }
+
+  _createSkyBox() {
     const skyBoxGeometry = new SCNBox()
     const material = new SCNMaterial()
     material._diffuse._contents = SKColor.black
@@ -209,65 +284,6 @@ You call this method in a try expression and handle any errors in the catch clau
     }
     this._skyBox = new SCNNode(skyBoxGeometry)
     this._skyBox._presentation = this._skyBox
-
-    /**
-     * @access private
-     * @type {Promise}
-     */
-    this._loadedPromise = null
-  }
-
-  _copyValue(src) {
-    this.isPaused = src.isPaused
-    this._rootNode = src._rootNode
-    //this._background = src._background
-    this._skyBox.geometry = src._skyBox.geometry.copy()
-    this._lightingEnvironment = src._lightingEnvironment
-    this.fogStartDistance = src.fogStartDistance
-    this.fogEndDistance = src.fogEndDistance
-    this.fogDensityExponent = src.fogDensityExponent
-    this.fogColor = src.fogColor
-    this._physicsWorld = src._physicsWorld // TODO: copy SCNPhysicsWorld
-    this._particleSystems = src._particleSystems ? src._particleSystems.slice(0) : null
-    this._particleSystemsTransform = src._particleSystemsTransform ? src._particleSystemsTransform.slice(0) : null
-  }
-
-  _loadSceneWithURL(url, options) {
-    let _options = options
-    if(_options === null){
-      _options = new Map()
-    }
-    if(typeof _options.get(SCNSceneSource.LoadingOption.assetDirectoryURLs) === 'undefined'){
-      const paths = url.split('/')
-      const name = paths.pop()
-      const directory = paths.join('/')
-
-      _options.set(SCNSceneSource.LoadingOption.assetDirectoryURLs, directory)
-    }
-
-    if(url instanceof _File){
-      return Promise((resolve, reject) => {
-        const reader = new _FileReader()
-        reader.onload = () => {
-          const scene = this._loadSceneWithData(reader.result, _options)
-          resolve(scene)
-        }
-        reader.onerror = () => {
-          reject(reader.error)
-        }
-        reader.readAsBinaryString(url)
-      })
-    }else{
-      return _BinaryRequest.get(url)
-        .then((data) => {
-          return this._loadSceneWithData(data, _options)
-        })
-    }
-  }
-
-  _loadSceneWithData(data, options) {
-    const source = new SCNSceneSource(data, options)
-    return source.scene()
   }
 
   // Creating or Loading a Scene
