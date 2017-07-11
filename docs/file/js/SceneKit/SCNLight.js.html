@@ -144,8 +144,10 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsContact.js~SCNPhysicsContact.html">SCNPhysicsContact</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsField.js~SCNPhysicsField.html">SCNPhysicsField</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsHingeJoint.js~SCNPhysicsHingeJoint.html">SCNPhysicsHingeJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsNoiseField.js~SCNPhysicsNoiseField.html">SCNPhysicsNoiseField</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsShape.js~SCNPhysicsShape.html">SCNPhysicsShape</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsSliderJoint.js~SCNPhysicsSliderJoint.html">SCNPhysicsSliderJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsTurbulenceField.js~SCNPhysicsTurbulenceField.html">SCNPhysicsTurbulenceField</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsVehicle.js~SCNPhysicsVehicle.html">SCNPhysicsVehicle</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsVehicleWheel.js~SCNPhysicsVehicleWheel.html">SCNPhysicsVehicleWheel</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsWorld.js~SCNPhysicsWorld.html">SCNPhysicsWorld</a></span></span></li>
@@ -355,6 +357,12 @@ export default class SCNLight extends NSObject {
       zFar: &apos;float&apos;,
       zNear: &apos;float&apos;,
       lightCategoryBitMask: [&apos;integer&apos;, &apos;categoryBitMask&apos;],
+      automaticallyAdjustsShadowProjection: &apos;boolean&apos;,
+      forcesBackFaceCasters: &apos;boolean&apos;,
+      maximumShadowDistance: &apos;float&apos;,
+      sampleDistributedShadowMaps: &apos;boolean&apos;,
+      shadowCascadeCount: &apos;integer&apos;,
+      shadowCascadeSplittingFactor: &apos;float&apos;,
 
       entityID: [&apos;string&apos;, &apos;_entityID&apos;],
       version: [&apos;float&apos;, null],
@@ -366,7 +374,8 @@ export default class SCNLight extends NSObject {
       baked: [&apos;boolean&apos;, null],
       goboProjectShadows: [&apos;boolean&apos;, null],
       shadowSampleCount2: [&apos;integer&apos;, null],
-      sphericalHarmonics: [&apos;NSMutableData&apos;, null]
+      sphericalHarmonics: [&apos;NSMutableData&apos;, null],
+      autoShadowProjection: [&apos;boolean&apos;, null]
     }
   }
 
@@ -564,6 +573,49 @@ export default class SCNLight extends NSObject {
     this._shadowDepthBuffer = null
     this._shadowDepthTexture = null
     this._projectionTransform = null
+
+
+    /**
+     * 
+     * @type {boolean}
+     * @see
+     */
+    this.automaticallyAdjustsShadowProjection = false
+
+    /**
+     * 
+     * @type {boolean}
+     * @see
+     */
+    this.forcesBackFaceCasters = false
+
+    /**
+     *
+     * @type {number}
+     * @see
+     */
+    this.maximumShadowDistance = 0.0
+
+    /**
+     *
+     * @type {boolean}
+     * @see
+     */
+    this.sampleDistributedShadowMaps = false
+
+    /**
+     *
+     * @type {number}
+     * @see
+     */
+    this.shadowCascadeCount = 1
+
+    /**
+     *
+     * @type {number}
+     * @see
+     */
+    this.shadowCascadeSplittingFactor = 1.0
   }
 
   // Creating a Light

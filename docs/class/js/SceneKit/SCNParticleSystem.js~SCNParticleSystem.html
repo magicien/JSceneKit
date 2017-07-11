@@ -144,8 +144,10 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsContact.js~SCNPhysicsContact.html">SCNPhysicsContact</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsField.js~SCNPhysicsField.html">SCNPhysicsField</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsHingeJoint.js~SCNPhysicsHingeJoint.html">SCNPhysicsHingeJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsNoiseField.js~SCNPhysicsNoiseField.html">SCNPhysicsNoiseField</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsShape.js~SCNPhysicsShape.html">SCNPhysicsShape</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsSliderJoint.js~SCNPhysicsSliderJoint.html">SCNPhysicsSliderJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsTurbulenceField.js~SCNPhysicsTurbulenceField.html">SCNPhysicsTurbulenceField</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsVehicle.js~SCNPhysicsVehicle.html">SCNPhysicsVehicle</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsVehicleWheel.js~SCNPhysicsVehicleWheel.html">SCNPhysicsVehicleWheel</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsWorld.js~SCNPhysicsWorld.html">SCNPhysicsWorld</a></span></span></li>
@@ -721,6 +723,33 @@
         
         <div data-ice="description"><p>A factor that slows particles relative to their velocity.</p>
 </div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      <span class="kind" data-ice="kind">get</span>
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNParticleSystem.js~SCNParticleSystem.html#instance-get-didLoad">didLoad</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>: <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
       </div>
     </td>
     <td>
@@ -11304,7 +11333,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1720">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1730">source</a></span></span>
     </span>
   </h3>
 
@@ -11436,7 +11465,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1633">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1643">source</a></span></span>
     </span>
   </h3>
 
@@ -11479,7 +11508,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1630">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1640">source</a></span></span>
     </span>
   </h3>
 
@@ -11685,6 +11714,61 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
   
 
   <div data-ice="see"><h4>See:</h4><ul><li><span><a href="https://developer.apple.com/documentation/scenekit/scnparticlesystem/1522931-dampingfactor">https://developer.apple.com/documentation/scenekit/scnparticlesystem/1522931-dampingfactor</a></span></li></ul></div>
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-get-didLoad">
+    <span class="access" data-ice="access">public</span>
+    
+    <span class="kind" data-ice="kind">get</span>
+    
+    
+    
+    <span data-ice="name">didLoad</span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>: <span>*</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1832">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
   
 </div>
 <div class="detail" data-ice="detail">
@@ -13990,7 +14074,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1654">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1664">source</a></span></span>
     </span>
   </h3>
 
@@ -14157,7 +14241,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1673">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1683">source</a></span></span>
     </span>
   </h3>
 
@@ -14338,7 +14422,7 @@ color[1] = 0;
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1759">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1769">source</a></span></span>
     </span>
   </h3>
 
@@ -14411,7 +14495,7 @@ color[1] = 0;
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1738">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1748">source</a></span></span>
     </span>
   </h3>
 
@@ -14484,7 +14568,7 @@ color[1] = 0;
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1683">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1693">source</a></span></span>
     </span>
   </h3>
 
@@ -14596,7 +14680,7 @@ color[1] = 0;
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1695">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1705">source</a></span></span>
     </span>
   </h3>
 
@@ -14669,7 +14753,7 @@ color[1] = 0;
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1709">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1719">source</a></span></span>
     </span>
   </h3>
 
@@ -14878,7 +14962,7 @@ color[1] = 0;
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1749">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1759">source</a></span></span>
     </span>
   </h3>
 
@@ -14951,7 +15035,7 @@ color[1] = 0;
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1773">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1783">source</a></span></span>
     </span>
   </h3>
 
@@ -15029,7 +15113,7 @@ color[1] = 0;
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1788">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1798">source</a></span></span>
     </span>
   </h3>
 
@@ -15095,7 +15179,7 @@ color[1] = 0;
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1776">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNParticleSystem.js.html#lineNumber1786">source</a></span></span>
     </span>
   </h3>
 

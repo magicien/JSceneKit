@@ -144,8 +144,10 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsContact.js~SCNPhysicsContact.html">SCNPhysicsContact</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsField.js~SCNPhysicsField.html">SCNPhysicsField</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsHingeJoint.js~SCNPhysicsHingeJoint.html">SCNPhysicsHingeJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsNoiseField.js~SCNPhysicsNoiseField.html">SCNPhysicsNoiseField</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsShape.js~SCNPhysicsShape.html">SCNPhysicsShape</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsSliderJoint.js~SCNPhysicsSliderJoint.html">SCNPhysicsSliderJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsTurbulenceField.js~SCNPhysicsTurbulenceField.html">SCNPhysicsTurbulenceField</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsVehicle.js~SCNPhysicsVehicle.html">SCNPhysicsVehicle</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsVehicleWheel.js~SCNPhysicsVehicleWheel.html">SCNPhysicsVehicleWheel</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsWorld.js~SCNPhysicsWorld.html">SCNPhysicsWorld</a></span></span></li>
@@ -764,14 +766,13 @@
         <p>
           
           
-          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-eulerAngles">eulerAngles</a></span></span><span data-ice="signature">: <span><a href="class/js/SceneKit/SCNVector3.js~SCNVector3.html">SCNVector3</a></span></span>
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-didLoad">didLoad</a></span></span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>: <span>*</span></span>
         </p>
       </div>
       <div>
         
         
-        <div data-ice="description"><p>The node&#x2019;s orientation, expressed as pitch, yaw, and roll angles, each in radians.</p>
-</div>
+        
       </div>
     </td>
     <td>
@@ -799,6 +800,34 @@
         
         
         
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      <span class="kind" data-ice="kind">get</span>
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-eulerAngles">eulerAngles</a></span></span><span data-ice="signature">: <span><a href="class/js/SceneKit/SCNVector3.js~SCNVector3.html">SCNVector3</a></span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>The node&#x2019;s orientation, expressed as pitch, yaw, and roll angles, each in radians.</p>
+</div>
       </div>
     </td>
     <td>
@@ -838,7 +867,7 @@
     <td>
       <span class="access" data-ice="access">public</span>
       
-      <span class="kind" data-ice="kind">set</span>
+      <span class="kind" data-ice="kind">get</span>
       
       <span class="override" data-ice="override"></span>
     </td>
@@ -847,7 +876,7 @@
         <p>
           
           
-          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-geometry">geometry</a></span></span><span data-ice="signature">: <span>*</span></span>
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-geometry">geometry</a></span></span><span data-ice="signature">: <span>*</span></span>
         </p>
       </div>
       <div>
@@ -865,7 +894,7 @@
     <td>
       <span class="access" data-ice="access">public</span>
       
-      <span class="kind" data-ice="kind">get</span>
+      <span class="kind" data-ice="kind">set</span>
       
       <span class="override" data-ice="override"></span>
     </td>
@@ -874,7 +903,7 @@
         <p>
           
           
-          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-geometry">geometry</a></span></span><span data-ice="signature">: <span>*</span></span>
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-geometry">geometry</a></span></span><span data-ice="signature">: <span>*</span></span>
         </p>
       </div>
       <div>
@@ -1115,6 +1144,33 @@
     <td>
       <span class="access" data-ice="access">public</span>
       
+      <span class="kind" data-ice="kind">set</span>
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-opacity">opacity</a></span></span><span data-ice="signature">: <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
       <span class="kind" data-ice="kind">get</span>
       
       <span class="override" data-ice="override"></span>
@@ -1132,33 +1188,6 @@
         
         <div data-ice="description"><p>The opacity value of the node.</p>
 </div>
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      <span class="kind" data-ice="kind">set</span>
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-opacity">opacity</a></span></span><span data-ice="signature">: <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
       </div>
     </td>
     <td>
@@ -1281,7 +1310,7 @@
     <td>
       <span class="access" data-ice="access">public</span>
       
-      <span class="kind" data-ice="kind">set</span>
+      <span class="kind" data-ice="kind">get</span>
       
       <span class="override" data-ice="override"></span>
     </td>
@@ -1290,7 +1319,7 @@
         <p>
           
           
-          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-physicsBody">physicsBody</a></span></span><span data-ice="signature">: <span>*</span></span>
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-physicsBody">physicsBody</a></span></span><span data-ice="signature">: <span>*</span></span>
         </p>
       </div>
       <div>
@@ -1308,7 +1337,7 @@
     <td>
       <span class="access" data-ice="access">public</span>
       
-      <span class="kind" data-ice="kind">get</span>
+      <span class="kind" data-ice="kind">set</span>
       
       <span class="override" data-ice="override"></span>
     </td>
@@ -1317,7 +1346,7 @@
         <p>
           
           
-          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-physicsBody">physicsBody</a></span></span><span data-ice="signature">: <span>*</span></span>
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-physicsBody">physicsBody</a></span></span><span data-ice="signature">: <span>*</span></span>
         </p>
       </div>
       <div>
@@ -1557,7 +1586,7 @@
     <td>
       <span class="access" data-ice="access">public</span>
       
-      <span class="kind" data-ice="kind">get</span>
+      <span class="kind" data-ice="kind">set</span>
       
       <span class="override" data-ice="override"></span>
     </td>
@@ -1566,7 +1595,7 @@
         <p>
           
           
-          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-rotation">rotation</a></span></span><span data-ice="signature">: <span>*</span></span>
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-rotation">rotation</a></span></span><span data-ice="signature">: <span>*</span></span>
         </p>
       </div>
       <div>
@@ -1584,7 +1613,7 @@
     <td>
       <span class="access" data-ice="access">public</span>
       
-      <span class="kind" data-ice="kind">set</span>
+      <span class="kind" data-ice="kind">get</span>
       
       <span class="override" data-ice="override"></span>
     </td>
@@ -1593,7 +1622,7 @@
         <p>
           
           
-          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-rotation">rotation</a></span></span><span data-ice="signature">: <span>*</span></span>
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-get-rotation">rotation</a></span></span><span data-ice="signature">: <span>*</span></span>
         </p>
       </div>
       <div>
@@ -1720,33 +1749,6 @@
     <td>
       <span class="access" data-ice="access">public</span>
       
-      <span class="kind" data-ice="kind">set</span>
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-transform">transform</a></span></span><span data-ice="signature">: <span>*</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-<tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
       <span class="kind" data-ice="kind">get</span>
       
       <span class="override" data-ice="override"></span>
@@ -1764,6 +1766,33 @@
         
         <div data-ice="description"><p>The transformation applied to the node relative to its parent.</p>
 </div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+<tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      <span class="kind" data-ice="kind">set</span>
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNNode.js~SCNNode.html#instance-set-transform">transform</a></span></span><span data-ice="signature">: <span>*</span></span>
+        </p>
+      </div>
+      <div>
+        
+        
+        
       </div>
     </td>
     <td>
@@ -12141,33 +12170,44 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
   
 </div>
 <div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-get-eulerAngles">
+  <h3 data-ice="anchor" id="instance-get-didLoad">
     <span class="access" data-ice="access">public</span>
     
     <span class="kind" data-ice="kind">get</span>
     
     
     
-    <span data-ice="name">eulerAngles</span><span data-ice="signature">: <span><a href="class/js/SceneKit/SCNVector3.js~SCNVector3.html">SCNVector3</a></span></span>
+    <span data-ice="name">didLoad</span><span data-ice="signature">: <span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span>: <span>*</span></span>
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNNode.js.html#lineNumber868">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNNode.js.html#lineNumber2375">source</a></span></span>
     </span>
   </h3>
 
   
   
   
-  <div data-ice="description"><p>The node&#x2019;s orientation, expressed as pitch, yaw, and roll angles, each in radians. Animatable.</p>
-</div>
+  
 
   
 
   <div data-ice="properties">
 </div>
 
-  
+  <div class="return-params" data-ice="returnParams">
+    <h4>Return:</h4>
+    <table>
+      <tbody>
+        <tr>
+          <td class="return-type" data-ice="returnType"><span><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></span></td>
+          
+        </tr>
+      </tbody>
+    </table>
+    <div data-ice="returnProperties">
+</div>
+  </div>
 
   
 
@@ -12181,7 +12221,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
 
   
 
-  <div data-ice="see"><h4>See:</h4><ul><li><span><a href="https://developer.apple.com/documentation/scenekit/scnnode/1407980-eulerangles">https://developer.apple.com/documentation/scenekit/scnnode/1407980-eulerangles</a></span></li></ul></div>
+  
   
 </div>
 <div class="detail" data-ice="detail">
@@ -12225,6 +12265,50 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
   
 
   
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-get-eulerAngles">
+    <span class="access" data-ice="access">public</span>
+    
+    <span class="kind" data-ice="kind">get</span>
+    
+    
+    
+    <span data-ice="name">eulerAngles</span><span data-ice="signature">: <span><a href="class/js/SceneKit/SCNVector3.js~SCNVector3.html">SCNVector3</a></span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNNode.js.html#lineNumber868">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>The node&#x2019;s orientation, expressed as pitch, yaw, and roll angles, each in radians. Animatable.</p>
+</div>
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  <div data-ice="see"><h4>See:</h4><ul><li><span><a href="https://developer.apple.com/documentation/scenekit/scnnode/1407980-eulerangles">https://developer.apple.com/documentation/scenekit/scnnode/1407980-eulerangles</a></span></li></ul></div>
   
 </div>
 <div class="detail" data-ice="detail">
@@ -12272,10 +12356,10 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
   
 </div>
 <div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-set-geometry">
+  <h3 data-ice="anchor" id="instance-get-geometry">
     <span class="access" data-ice="access">public</span>
     
-    <span class="kind" data-ice="kind">set</span>
+    <span class="kind" data-ice="kind">get</span>
     
     
     
@@ -12283,7 +12367,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNNode.js.html#lineNumber692">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNNode.js.html#lineNumber689">source</a></span></span>
     </span>
   </h3>
 
@@ -12315,10 +12399,10 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
   
 </div>
 <div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-get-geometry">
+  <h3 data-ice="anchor" id="instance-set-geometry">
     <span class="access" data-ice="access">public</span>
     
-    <span class="kind" data-ice="kind">get</span>
+    <span class="kind" data-ice="kind">set</span>
     
     
     
@@ -12326,7 +12410,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNNode.js.html#lineNumber689">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNNode.js.html#lineNumber692">source</a></span></span>
     </span>
   </h3>
 
@@ -12709,6 +12793,49 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
   
 </div>
 <div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-set-opacity">
+    <span class="access" data-ice="access">public</span>
+    
+    <span class="kind" data-ice="kind">set</span>
+    
+    
+    
+    <span data-ice="name">opacity</span><span data-ice="signature">: <span>*</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNNode.js.html#lineNumber987">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+<div class="detail" data-ice="detail">
   <h3 data-ice="anchor" id="instance-get-opacity">
     <span class="access" data-ice="access">public</span>
     
@@ -12750,49 +12877,6 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
   
 
   <div data-ice="see"><h4>See:</h4><ul><li><span><a href="https://developer.apple.com/documentation/scenekit/scnnode/1408010-opacity">https://developer.apple.com/documentation/scenekit/scnnode/1408010-opacity</a></span></li></ul></div>
-  
-</div>
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-set-opacity">
-    <span class="access" data-ice="access">public</span>
-    
-    <span class="kind" data-ice="kind">set</span>
-    
-    
-    
-    <span data-ice="name">opacity</span><span data-ice="signature">: <span>*</span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNNode.js.html#lineNumber987">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
   
 </div>
 <div class="detail" data-ice="detail">
@@ -12971,10 +13055,10 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
   
 </div>
 <div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-set-physicsBody">
+  <h3 data-ice="anchor" id="instance-get-physicsBody">
     <span class="access" data-ice="access">public</span>
     
-    <span class="kind" data-ice="kind">set</span>
+    <span class="kind" data-ice="kind">get</span>
     
     
     
@@ -12982,7 +13066,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNNode.js.html#lineNumber1253">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNNode.js.html#lineNumber1250">source</a></span></span>
     </span>
   </h3>
 
@@ -13014,10 +13098,10 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
   
 </div>
 <div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-get-physicsBody">
+  <h3 data-ice="anchor" id="instance-set-physicsBody">
     <span class="access" data-ice="access">public</span>
     
-    <span class="kind" data-ice="kind">get</span>
+    <span class="kind" data-ice="kind">set</span>
     
     
     
@@ -13025,7 +13109,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNNode.js.html#lineNumber1250">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNNode.js.html#lineNumber1253">source</a></span></span>
     </span>
   </h3>
 
@@ -13407,10 +13491,10 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
   
 </div>
 <div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-get-rotation">
+  <h3 data-ice="anchor" id="instance-set-rotation">
     <span class="access" data-ice="access">public</span>
     
-    <span class="kind" data-ice="kind">get</span>
+    <span class="kind" data-ice="kind">set</span>
     
     
     
@@ -13418,7 +13502,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNNode.js.html#lineNumber827">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNNode.js.html#lineNumber830">source</a></span></span>
     </span>
   </h3>
 
@@ -13450,10 +13534,10 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
   
 </div>
 <div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-set-rotation">
+  <h3 data-ice="anchor" id="instance-get-rotation">
     <span class="access" data-ice="access">public</span>
     
-    <span class="kind" data-ice="kind">set</span>
+    <span class="kind" data-ice="kind">get</span>
     
     
     
@@ -13461,7 +13545,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNNode.js.html#lineNumber830">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNNode.js.html#lineNumber827">source</a></span></span>
     </span>
   </h3>
 
@@ -13666,49 +13750,6 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
   
 </div>
 <div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-set-transform">
-    <span class="access" data-ice="access">public</span>
-    
-    <span class="kind" data-ice="kind">set</span>
-    
-    
-    
-    <span data-ice="name">transform</span><span data-ice="signature">: <span>*</span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNNode.js.html#lineNumber731">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-<div class="detail" data-ice="detail">
   <h3 data-ice="anchor" id="instance-get-transform">
     <span class="access" data-ice="access">public</span>
     
@@ -13750,6 +13791,49 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
   
 
   <div data-ice="see"><h4>See:</h4><ul><li><span><a href="https://developer.apple.com/documentation/scenekit/scnnode/1407964-transform">https://developer.apple.com/documentation/scenekit/scnnode/1407964-transform</a></span></li></ul></div>
+  
+</div>
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-set-transform">
+    <span class="access" data-ice="access">public</span>
+    
+    <span class="kind" data-ice="kind">set</span>
+    
+    
+    
+    <span data-ice="name">transform</span><span data-ice="signature">: <span>*</span></span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNNode.js.html#lineNumber731">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  
+
+  
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
   
 </div>
 <div class="detail" data-ice="detail">

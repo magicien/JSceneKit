@@ -1,28 +1,28 @@
 {
   "type": "File",
   "start": 0,
-  "end": 22289,
+  "end": 22403,
   "loc": {
     "start": {
       "line": 1,
       "column": 0
     },
     "end": {
-      "line": 511,
+      "line": 519,
       "column": 0
     }
   },
   "program": {
     "type": "Program",
     "start": 0,
-    "end": 22289,
+    "end": 22403,
     "loc": {
       "start": {
         "line": 1,
         "column": 0
       },
       "end": {
-        "line": 511,
+        "line": 519,
         "column": 0
       }
     },
@@ -1442,28 +1442,28 @@
       {
         "type": "ExportDefaultDeclaration",
         "start": 1219,
-        "end": 22288,
+        "end": 22402,
         "loc": {
           "start": {
             "line": 34,
             "column": 0
           },
           "end": {
-            "line": 510,
+            "line": 518,
             "column": 1
           }
         },
         "declaration": {
           "type": "ClassDeclaration",
           "start": 1234,
-          "end": 22288,
+          "end": 22402,
           "loc": {
             "start": {
               "line": 34,
               "column": 15
             },
             "end": {
-              "line": 510,
+              "line": 518,
               "column": 1
             }
           },
@@ -1505,14 +1505,14 @@
           "body": {
             "type": "ClassBody",
             "start": 1266,
-            "end": 22288,
+            "end": 22402,
             "loc": {
               "start": {
                 "line": 34,
                 "column": 47
               },
               "end": {
-                "line": 510,
+                "line": 518,
                 "column": 1
               }
             },
@@ -22473,33 +22473,17 @@
                 ],
                 "trailingComments": [
                   {
-                    "type": "CommentLine",
-                    "value": " Structures",
-                    "start": 21640,
-                    "end": 21653,
-                    "loc": {
-                      "start": {
-                        "line": 497,
-                        "column": 2
-                      },
-                      "end": {
-                        "line": 497,
-                        "column": 15
-                      }
-                    }
-                  },
-                  {
                     "type": "CommentBlock",
-                    "value": "*\n   * @type {Object} Attribute\n   * @property {string} endTime A floating-point value (in an NSNumber object) for the end time of the scene.\n   * @property {string} frameRate A floating-point value (in an NSNumber object) for the frame rate of the scene.\n   * @property {string} startTime A floating-point value (in an NSNumber object) for the start time of the scene.\n   * @property {string} upAxis An SCNVector3 structure (in an NSValue object) specifying the orientation of the scene.\n   * @see https://developer.apple.com/documentation/scenekit/scnscene.attribute\n   ",
-                    "start": 21657,
-                    "end": 22233,
+                    "value": "*\n   * @access public\n   * @type {Promise} -\n   ",
+                    "start": 21640,
+                    "end": 21692,
                     "loc": {
                       "start": {
-                        "line": 499,
+                        "line": 497,
                         "column": 2
                       },
                       "end": {
-                        "line": 506,
+                        "line": 500,
                         "column": 5
                       }
                     }
@@ -22508,30 +22492,220 @@
               },
               {
                 "type": "ClassMethod",
-                "start": 22236,
-                "end": 22286,
+                "start": 21695,
+                "end": 21750,
                 "loc": {
                   "start": {
-                    "line": 507,
+                    "line": 501,
                     "column": 2
                   },
                   "end": {
-                    "line": 509,
+                    "line": 503,
                     "column": 3
                   }
                 },
                 "computed": false,
                 "key": {
                   "type": "Identifier",
-                  "start": 22247,
-                  "end": 22256,
+                  "start": 21699,
+                  "end": 21706,
                   "loc": {
                     "start": {
-                      "line": 507,
+                      "line": 501,
+                      "column": 6
+                    },
+                    "end": {
+                      "line": 501,
+                      "column": 13
+                    },
+                    "identifierName": "didLoad"
+                  },
+                  "name": "didLoad"
+                },
+                "static": false,
+                "kind": "get",
+                "id": null,
+                "generator": false,
+                "expression": false,
+                "async": false,
+                "params": [],
+                "body": {
+                  "type": "BlockStatement",
+                  "start": 21709,
+                  "end": 21750,
+                  "loc": {
+                    "start": {
+                      "line": 501,
+                      "column": 16
+                    },
+                    "end": {
+                      "line": 503,
+                      "column": 3
+                    }
+                  },
+                  "body": [
+                    {
+                      "type": "ReturnStatement",
+                      "start": 21715,
+                      "end": 21746,
+                      "loc": {
+                        "start": {
+                          "line": 502,
+                          "column": 4
+                        },
+                        "end": {
+                          "line": 502,
+                          "column": 35
+                        }
+                      },
+                      "argument": {
+                        "type": "CallExpression",
+                        "start": 21722,
+                        "end": 21746,
+                        "loc": {
+                          "start": {
+                            "line": 502,
+                            "column": 11
+                          },
+                          "end": {
+                            "line": 502,
+                            "column": 35
+                          }
+                        },
+                        "callee": {
+                          "type": "MemberExpression",
+                          "start": 21722,
+                          "end": 21744,
+                          "loc": {
+                            "start": {
+                              "line": 502,
+                              "column": 11
+                            },
+                            "end": {
+                              "line": 502,
+                              "column": 33
+                            }
+                          },
+                          "object": {
+                            "type": "ThisExpression",
+                            "start": 21722,
+                            "end": 21726,
+                            "loc": {
+                              "start": {
+                                "line": 502,
+                                "column": 11
+                              },
+                              "end": {
+                                "line": 502,
+                                "column": 15
+                              }
+                            }
+                          },
+                          "property": {
+                            "type": "Identifier",
+                            "start": 21727,
+                            "end": 21744,
+                            "loc": {
+                              "start": {
+                                "line": 502,
+                                "column": 16
+                              },
+                              "end": {
+                                "line": 502,
+                                "column": 33
+                              },
+                              "identifierName": "_getLoadedPromise"
+                            },
+                            "name": "_getLoadedPromise"
+                          },
+                          "computed": false
+                        },
+                        "arguments": []
+                      }
+                    }
+                  ],
+                  "directives": [],
+                  "trailingComments": null
+                },
+                "leadingComments": [
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * @access public\n   * @type {Promise} -\n   ",
+                    "start": 21640,
+                    "end": 21692,
+                    "loc": {
+                      "start": {
+                        "line": 497,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 500,
+                        "column": 5
+                      }
+                    }
+                  }
+                ],
+                "trailingComments": [
+                  {
+                    "type": "CommentLine",
+                    "value": " Structures",
+                    "start": 21754,
+                    "end": 21767,
+                    "loc": {
+                      "start": {
+                        "line": 505,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 505,
+                        "column": 15
+                      }
+                    }
+                  },
+                  {
+                    "type": "CommentBlock",
+                    "value": "*\n   * @type {Object} Attribute\n   * @property {string} endTime A floating-point value (in an NSNumber object) for the end time of the scene.\n   * @property {string} frameRate A floating-point value (in an NSNumber object) for the frame rate of the scene.\n   * @property {string} startTime A floating-point value (in an NSNumber object) for the start time of the scene.\n   * @property {string} upAxis An SCNVector3 structure (in an NSValue object) specifying the orientation of the scene.\n   * @see https://developer.apple.com/documentation/scenekit/scnscene.attribute\n   ",
+                    "start": 21771,
+                    "end": 22347,
+                    "loc": {
+                      "start": {
+                        "line": 507,
+                        "column": 2
+                      },
+                      "end": {
+                        "line": 514,
+                        "column": 5
+                      }
+                    }
+                  }
+                ]
+              },
+              {
+                "type": "ClassMethod",
+                "start": 22350,
+                "end": 22400,
+                "loc": {
+                  "start": {
+                    "line": 515,
+                    "column": 2
+                  },
+                  "end": {
+                    "line": 517,
+                    "column": 3
+                  }
+                },
+                "computed": false,
+                "key": {
+                  "type": "Identifier",
+                  "start": 22361,
+                  "end": 22370,
+                  "loc": {
+                    "start": {
+                      "line": 515,
                       "column": 13
                     },
                     "end": {
-                      "line": 507,
+                      "line": 515,
                       "column": 22
                     },
                     "identifierName": "Attribute"
@@ -22547,44 +22721,44 @@
                 "params": [],
                 "body": {
                   "type": "BlockStatement",
-                  "start": 22259,
-                  "end": 22286,
+                  "start": 22373,
+                  "end": 22400,
                   "loc": {
                     "start": {
-                      "line": 507,
+                      "line": 515,
                       "column": 25
                     },
                     "end": {
-                      "line": 509,
+                      "line": 517,
                       "column": 3
                     }
                   },
                   "body": [
                     {
                       "type": "ReturnStatement",
-                      "start": 22265,
-                      "end": 22282,
+                      "start": 22379,
+                      "end": 22396,
                       "loc": {
                         "start": {
-                          "line": 508,
+                          "line": 516,
                           "column": 4
                         },
                         "end": {
-                          "line": 508,
+                          "line": 516,
                           "column": 21
                         }
                       },
                       "argument": {
                         "type": "Identifier",
-                        "start": 22272,
-                        "end": 22282,
+                        "start": 22386,
+                        "end": 22396,
                         "loc": {
                           "start": {
-                            "line": 508,
+                            "line": 516,
                             "column": 11
                           },
                           "end": {
-                            "line": 508,
+                            "line": 516,
                             "column": 21
                           },
                           "identifierName": "_Attribute"
@@ -22599,15 +22773,15 @@
                   {
                     "type": "CommentLine",
                     "value": " Structures",
-                    "start": 21640,
-                    "end": 21653,
+                    "start": 21754,
+                    "end": 21767,
                     "loc": {
                       "start": {
-                        "line": 497,
+                        "line": 505,
                         "column": 2
                       },
                       "end": {
-                        "line": 497,
+                        "line": 505,
                         "column": 15
                       }
                     }
@@ -22615,15 +22789,15 @@
                   {
                     "type": "CommentBlock",
                     "value": "*\n   * @type {Object} Attribute\n   * @property {string} endTime A floating-point value (in an NSNumber object) for the end time of the scene.\n   * @property {string} frameRate A floating-point value (in an NSNumber object) for the frame rate of the scene.\n   * @property {string} startTime A floating-point value (in an NSNumber object) for the start time of the scene.\n   * @property {string} upAxis An SCNVector3 structure (in an NSValue object) specifying the orientation of the scene.\n   * @see https://developer.apple.com/documentation/scenekit/scnscene.attribute\n   ",
-                    "start": 21657,
-                    "end": 22233,
+                    "start": 21771,
+                    "end": 22347,
                     "loc": {
                       "start": {
-                        "line": 499,
+                        "line": 507,
                         "column": 2
                       },
                       "end": {
-                        "line": 506,
+                        "line": 514,
                         "column": 5
                       }
                     }
@@ -23320,17 +23494,33 @@
       }
     },
     {
-      "type": "CommentLine",
-      "value": " Structures",
+      "type": "CommentBlock",
+      "value": "*\n   * @access public\n   * @type {Promise} -\n   ",
       "start": 21640,
-      "end": 21653,
+      "end": 21692,
       "loc": {
         "start": {
           "line": 497,
           "column": 2
         },
         "end": {
-          "line": 497,
+          "line": 500,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " Structures",
+      "start": 21754,
+      "end": 21767,
+      "loc": {
+        "start": {
+          "line": 505,
+          "column": 2
+        },
+        "end": {
+          "line": 505,
           "column": 15
         }
       }
@@ -23338,15 +23528,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @type {Object} Attribute\n   * @property {string} endTime A floating-point value (in an NSNumber object) for the end time of the scene.\n   * @property {string} frameRate A floating-point value (in an NSNumber object) for the frame rate of the scene.\n   * @property {string} startTime A floating-point value (in an NSNumber object) for the start time of the scene.\n   * @property {string} upAxis An SCNVector3 structure (in an NSValue object) specifying the orientation of the scene.\n   * @see https://developer.apple.com/documentation/scenekit/scnscene.attribute\n   ",
-      "start": 21657,
-      "end": 22233,
+      "start": 21771,
+      "end": 22347,
       "loc": {
         "start": {
-          "line": 499,
+          "line": 507,
           "column": 2
         },
         "end": {
-          "line": 506,
+          "line": 514,
           "column": 5
         }
       }
@@ -63442,17 +63632,343 @@
       }
     },
     {
-      "type": "CommentLine",
-      "value": " Structures",
+      "type": "CommentBlock",
+      "value": "*\n   * @access public\n   * @type {Promise} -\n   ",
       "start": 21640,
-      "end": 21653,
+      "end": 21692,
       "loc": {
         "start": {
           "line": 497,
           "column": 2
         },
         "end": {
-          "line": 497,
+          "line": 500,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "get",
+      "start": 21695,
+      "end": 21698,
+      "loc": {
+        "start": {
+          "line": 501,
+          "column": 2
+        },
+        "end": {
+          "line": 501,
+          "column": 5
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "didLoad",
+      "start": 21699,
+      "end": 21706,
+      "loc": {
+        "start": {
+          "line": 501,
+          "column": 6
+        },
+        "end": {
+          "line": 501,
+          "column": 13
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 21706,
+      "end": 21707,
+      "loc": {
+        "start": {
+          "line": 501,
+          "column": 13
+        },
+        "end": {
+          "line": 501,
+          "column": 14
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 21707,
+      "end": 21708,
+      "loc": {
+        "start": {
+          "line": 501,
+          "column": 14
+        },
+        "end": {
+          "line": 501,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "{",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 21709,
+      "end": 21710,
+      "loc": {
+        "start": {
+          "line": 501,
+          "column": 16
+        },
+        "end": {
+          "line": 501,
+          "column": 17
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "return",
+        "keyword": "return",
+        "beforeExpr": true,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "return",
+      "start": 21715,
+      "end": 21721,
+      "loc": {
+        "start": {
+          "line": 502,
+          "column": 4
+        },
+        "end": {
+          "line": 502,
+          "column": 10
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "this",
+        "keyword": "this",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "value": "this",
+      "start": 21722,
+      "end": 21726,
+      "loc": {
+        "start": {
+          "line": 502,
+          "column": 11
+        },
+        "end": {
+          "line": 502,
+          "column": 15
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ".",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null,
+        "updateContext": null
+      },
+      "start": 21726,
+      "end": 21727,
+      "loc": {
+        "start": {
+          "line": 502,
+          "column": 15
+        },
+        "end": {
+          "line": 502,
+          "column": 16
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "name",
+        "beforeExpr": false,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "value": "_getLoadedPromise",
+      "start": 21727,
+      "end": 21744,
+      "loc": {
+        "start": {
+          "line": 502,
+          "column": 16
+        },
+        "end": {
+          "line": 502,
+          "column": 33
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "(",
+        "beforeExpr": true,
+        "startsExpr": true,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 21744,
+      "end": 21745,
+      "loc": {
+        "start": {
+          "line": 502,
+          "column": 33
+        },
+        "end": {
+          "line": 502,
+          "column": 34
+        }
+      }
+    },
+    {
+      "type": {
+        "label": ")",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 21745,
+      "end": 21746,
+      "loc": {
+        "start": {
+          "line": 502,
+          "column": 34
+        },
+        "end": {
+          "line": 502,
+          "column": 35
+        }
+      }
+    },
+    {
+      "type": {
+        "label": "}",
+        "beforeExpr": false,
+        "startsExpr": false,
+        "rightAssociative": false,
+        "isLoop": false,
+        "isAssign": false,
+        "prefix": false,
+        "postfix": false,
+        "binop": null
+      },
+      "start": 21749,
+      "end": 21750,
+      "loc": {
+        "start": {
+          "line": 503,
+          "column": 2
+        },
+        "end": {
+          "line": 503,
+          "column": 3
+        }
+      }
+    },
+    {
+      "type": "CommentLine",
+      "value": " Structures",
+      "start": 21754,
+      "end": 21767,
+      "loc": {
+        "start": {
+          "line": 505,
+          "column": 2
+        },
+        "end": {
+          "line": 505,
           "column": 15
         }
       }
@@ -63460,15 +63976,15 @@
     {
       "type": "CommentBlock",
       "value": "*\n   * @type {Object} Attribute\n   * @property {string} endTime A floating-point value (in an NSNumber object) for the end time of the scene.\n   * @property {string} frameRate A floating-point value (in an NSNumber object) for the frame rate of the scene.\n   * @property {string} startTime A floating-point value (in an NSNumber object) for the start time of the scene.\n   * @property {string} upAxis An SCNVector3 structure (in an NSValue object) specifying the orientation of the scene.\n   * @see https://developer.apple.com/documentation/scenekit/scnscene.attribute\n   ",
-      "start": 21657,
-      "end": 22233,
+      "start": 21771,
+      "end": 22347,
       "loc": {
         "start": {
-          "line": 499,
+          "line": 507,
           "column": 2
         },
         "end": {
-          "line": 506,
+          "line": 514,
           "column": 5
         }
       }
@@ -63486,15 +64002,15 @@
         "binop": null
       },
       "value": "static",
-      "start": 22236,
-      "end": 22242,
+      "start": 22350,
+      "end": 22356,
       "loc": {
         "start": {
-          "line": 507,
+          "line": 515,
           "column": 2
         },
         "end": {
-          "line": 507,
+          "line": 515,
           "column": 8
         }
       }
@@ -63512,15 +64028,15 @@
         "binop": null
       },
       "value": "get",
-      "start": 22243,
-      "end": 22246,
+      "start": 22357,
+      "end": 22360,
       "loc": {
         "start": {
-          "line": 507,
+          "line": 515,
           "column": 9
         },
         "end": {
-          "line": 507,
+          "line": 515,
           "column": 12
         }
       }
@@ -63538,15 +64054,15 @@
         "binop": null
       },
       "value": "Attribute",
-      "start": 22247,
-      "end": 22256,
+      "start": 22361,
+      "end": 22370,
       "loc": {
         "start": {
-          "line": 507,
+          "line": 515,
           "column": 13
         },
         "end": {
-          "line": 507,
+          "line": 515,
           "column": 22
         }
       }
@@ -63563,15 +64079,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 22256,
-      "end": 22257,
+      "start": 22370,
+      "end": 22371,
       "loc": {
         "start": {
-          "line": 507,
+          "line": 515,
           "column": 22
         },
         "end": {
-          "line": 507,
+          "line": 515,
           "column": 23
         }
       }
@@ -63588,15 +64104,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 22257,
-      "end": 22258,
+      "start": 22371,
+      "end": 22372,
       "loc": {
         "start": {
-          "line": 507,
+          "line": 515,
           "column": 23
         },
         "end": {
-          "line": 507,
+          "line": 515,
           "column": 24
         }
       }
@@ -63613,15 +64129,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 22259,
-      "end": 22260,
+      "start": 22373,
+      "end": 22374,
       "loc": {
         "start": {
-          "line": 507,
+          "line": 515,
           "column": 25
         },
         "end": {
-          "line": 507,
+          "line": 515,
           "column": 26
         }
       }
@@ -63641,15 +64157,15 @@
         "updateContext": null
       },
       "value": "return",
-      "start": 22265,
-      "end": 22271,
+      "start": 22379,
+      "end": 22385,
       "loc": {
         "start": {
-          "line": 508,
+          "line": 516,
           "column": 4
         },
         "end": {
-          "line": 508,
+          "line": 516,
           "column": 10
         }
       }
@@ -63667,15 +64183,15 @@
         "binop": null
       },
       "value": "_Attribute",
-      "start": 22272,
-      "end": 22282,
+      "start": 22386,
+      "end": 22396,
       "loc": {
         "start": {
-          "line": 508,
+          "line": 516,
           "column": 11
         },
         "end": {
-          "line": 508,
+          "line": 516,
           "column": 21
         }
       }
@@ -63692,15 +64208,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 22285,
-      "end": 22286,
+      "start": 22399,
+      "end": 22400,
       "loc": {
         "start": {
-          "line": 509,
+          "line": 517,
           "column": 2
         },
         "end": {
-          "line": 509,
+          "line": 517,
           "column": 3
         }
       }
@@ -63717,15 +64233,15 @@
         "postfix": false,
         "binop": null
       },
-      "start": 22287,
-      "end": 22288,
+      "start": 22401,
+      "end": 22402,
       "loc": {
         "start": {
-          "line": 510,
+          "line": 518,
           "column": 0
         },
         "end": {
-          "line": 510,
+          "line": 518,
           "column": 1
         }
       }
@@ -63743,15 +64259,15 @@
         "binop": null,
         "updateContext": null
       },
-      "start": 22289,
-      "end": 22289,
+      "start": 22403,
+      "end": 22403,
       "loc": {
         "start": {
-          "line": 511,
+          "line": 519,
           "column": 0
         },
         "end": {
-          "line": 511,
+          "line": 519,
           "column": 0
         }
       }

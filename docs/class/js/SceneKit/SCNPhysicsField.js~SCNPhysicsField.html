@@ -144,8 +144,10 @@
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsContact.js~SCNPhysicsContact.html">SCNPhysicsContact</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsField.js~SCNPhysicsField.html">SCNPhysicsField</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsHingeJoint.js~SCNPhysicsHingeJoint.html">SCNPhysicsHingeJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsNoiseField.js~SCNPhysicsNoiseField.html">SCNPhysicsNoiseField</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsShape.js~SCNPhysicsShape.html">SCNPhysicsShape</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsSliderJoint.js~SCNPhysicsSliderJoint.html">SCNPhysicsSliderJoint</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsTurbulenceField.js~SCNPhysicsTurbulenceField.html">SCNPhysicsTurbulenceField</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsVehicle.js~SCNPhysicsVehicle.html">SCNPhysicsVehicle</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsVehicleWheel.js~SCNPhysicsVehicleWheel.html">SCNPhysicsVehicleWheel</a></span></span></li>
 <li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsWorld.js~SCNPhysicsWorld.html">SCNPhysicsWorld</a></span></span></li>
@@ -319,7 +321,7 @@
   
   
   <div class="flat-list" data-ice="extendsChain"><h4>Extends:</h4><div><span><a href="class/js/ObjectiveC/NSObject.js~NSObject.html">NSObject</a></span> &#x2192; SCNPhysicsField</div></div>
-  
+  <div class="flat-list" data-ice="directSubclass"><h4>Direct Subclass:</h4><div><span><a href="class/js/SceneKit/SCNPhysicsNoiseField.js~SCNPhysicsNoiseField.html">SCNPhysicsNoiseField</a></span>, <span><a href="class/js/SceneKit/SCNPhysicsTurbulenceField.js~SCNPhysicsTurbulenceField.html">SCNPhysicsTurbulenceField</a></span></div></div>
   
   
   
@@ -629,7 +631,41 @@
 </tbody>
 </table>
 </div>
-
+<div data-ice="constructorSummary"><h2>Constructor Summary</h2><table class="summary" data-ice="summary">
+  <thead><tr><td data-ice="title" colspan="3">Public Constructor</td></tr></thead>
+  <tbody>
+  
+  <tr data-ice="target">
+    <td>
+      <span class="access" data-ice="access">public</span>
+      
+      
+      
+      <span class="override" data-ice="override"></span>
+    </td>
+    <td>
+      <div>
+        <p>
+          
+          
+          <span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsField.js~SCNPhysicsField.html#instance-constructor-constructor">constructor</a></span></span><span data-ice="signature">()</span>
+        </p>
+      </div>
+      <div>
+        
+        
+        <div data-ice="description"><p>constructor</p>
+</div>
+      </div>
+    </td>
+    <td>
+      
+      
+    </td>
+  </tr>
+</tbody>
+</table>
+</div>
 <div data-ice="memberSummary"><h2>Member Summary</h2><table class="summary" data-ice="summary">
   <thead><tr><td data-ice="title" colspan="3">Public Members</td></tr></thead>
   <tbody>
@@ -945,41 +981,7 @@
 </tbody>
 </table>
 </div>
-<div data-ice="methodSummary"><h2>Method Summary</h2><table class="summary" data-ice="summary">
-  <thead><tr><td data-ice="title" colspan="3">Public Methods</td></tr></thead>
-  <tbody>
-  
-  <tr data-ice="target">
-    <td>
-      <span class="access" data-ice="access">public</span>
-      
-      
-      
-      <span class="override" data-ice="override"></span>
-    </td>
-    <td>
-      <div>
-        <p>
-          
-          
-          <span data-ice="name"><span><a href="class/js/SceneKit/SCNPhysicsField.js~SCNPhysicsField.html#instance-method-init">init</a></span></span><span data-ice="signature">(): <span>void</span></span>
-        </p>
-      </div>
-      <div>
-        
-        
-        <div data-ice="description"><p>constructor</p>
-</div>
-      </div>
-    </td>
-    <td>
-      
-      
-    </td>
-  </tr>
-</tbody>
-</table>
-</div>
+
 
 <div class="inherited-summary" data-ice="inheritedSummary"><h2>Inherited Summary</h2><table class="summary" data-ice="summary">
   <thead><tr><td data-ice="title" colspan="3"><span class="toggle closed"></span> From class <span><a href="class/js/ObjectiveC/NSObject.js~NSObject.html">NSObject</a></span></td></tr></thead>
@@ -9279,7 +9281,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber226">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber227">source</a></span></span>
     </span>
   </h3>
 
@@ -9352,7 +9354,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber120">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber121">source</a></span></span>
     </span>
   </h3>
 
@@ -9408,7 +9410,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber201">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber202">source</a></span></span>
     </span>
   </h3>
 
@@ -9464,7 +9466,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber153">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber154">source</a></span></span>
     </span>
   </h3>
 
@@ -9520,7 +9522,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber212">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber213">source</a></span></span>
     </span>
   </h3>
 
@@ -9576,7 +9578,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber166">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber167">source</a></span></span>
     </span>
   </h3>
 
@@ -9656,7 +9658,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber142">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber143">source</a></span></span>
     </span>
   </h3>
 
@@ -9712,7 +9714,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber190">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber191">source</a></span></span>
     </span>
   </h3>
 
@@ -9768,7 +9770,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber179">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber180">source</a></span></span>
     </span>
   </h3>
 
@@ -9848,7 +9850,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber131">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber132">source</a></span></span>
     </span>
   </h3>
 
@@ -9893,7 +9895,53 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
   
 </div>
 </div>
+<div data-ice="constructorDetails"><h2 data-ice="title">Public Constructors</h2>
 
+<div class="detail" data-ice="detail">
+  <h3 data-ice="anchor" id="instance-constructor-constructor">
+    <span class="access" data-ice="access">public</span>
+    
+    
+    
+    
+    
+    <span data-ice="name">constructor</span><span data-ice="signature">()</span>
+    <span class="right-info">
+      
+      
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber22">source</a></span></span>
+    </span>
+  </h3>
+
+  
+  
+  
+  <div data-ice="description"><p>constructor</p>
+</div>
+
+  <div data-ice="override"><h4>Override:</h4><span><a href="class/js/ObjectiveC/NSObject.js~NSObject.html#instance-constructor-constructor">NSObject#constructor</a></span></div>
+
+  <div data-ice="properties">
+</div>
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+  
+</div>
+</div>
 <div data-ice="memberDetails"><h2 data-ice="title">Public Members</h2>
 
 <div class="detail" data-ice="detail">
@@ -9908,7 +9956,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber107">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber108">source</a></span></span>
     </span>
   </h3>
 
@@ -9952,7 +10000,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber59">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber60">source</a></span></span>
     </span>
   </h3>
 
@@ -9996,7 +10044,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber76">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber77">source</a></span></span>
     </span>
   </h3>
 
@@ -10040,7 +10088,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber31">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber32">source</a></span></span>
     </span>
   </h3>
 
@@ -10084,7 +10132,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber90">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber91">source</a></span></span>
     </span>
   </h3>
 
@@ -10128,7 +10176,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber97">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber98">source</a></span></span>
     </span>
   </h3>
 
@@ -10172,7 +10220,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber83">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber84">source</a></span></span>
     </span>
   </h3>
 
@@ -10216,7 +10264,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber52">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber53">source</a></span></span>
     </span>
   </h3>
 
@@ -10260,7 +10308,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber38">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber39">source</a></span></span>
     </span>
   </h3>
 
@@ -10304,7 +10352,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber69">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber70">source</a></span></span>
     </span>
   </h3>
 
@@ -10348,7 +10396,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
     <span class="right-info">
       
       
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber45">source</a></span></span>
+      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber46">source</a></span></span>
     </span>
   </h3>
 
@@ -10381,65 +10429,7 @@ In Swift, this method returns Void and is marked with the throws keyword to indi
   
 </div>
 </div>
-<div data-ice="methodDetails"><h2 data-ice="title">Public Methods</h2>
 
-<div class="detail" data-ice="detail">
-  <h3 data-ice="anchor" id="instance-method-init">
-    <span class="access" data-ice="access">public</span>
-    
-    
-    
-    
-    
-    <span data-ice="name">init</span><span data-ice="signature">(): <span>void</span></span>
-    <span class="right-info">
-      
-      
-      <span data-ice="source"><span><a href="file/js/SceneKit/SCNPhysicsField.js.html#lineNumber22">source</a></span></span>
-    </span>
-  </h3>
-
-  
-  
-  
-  <div data-ice="description"><p>constructor</p>
-</div>
-
-  
-
-  <div data-ice="properties">
-</div>
-
-  <div class="return-params" data-ice="returnParams">
-    <h4>Return:</h4>
-    <table>
-      <tbody>
-        <tr>
-          <td class="return-type" data-ice="returnType"><span>void</span></td>
-          
-        </tr>
-      </tbody>
-    </table>
-    <div data-ice="returnProperties">
-</div>
-  </div>
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-  
-</div>
-</div>
 </div>
 
 <footer class="footer">
