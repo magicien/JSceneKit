@@ -224,12 +224,8 @@ export default class SCNPhysicsBody extends NSObject {
     this._invTransform = null
     this._shape = null
 
-    //this._isBox = false
-    //this._width = 0
-    //this._height = 0
-    //this._length = 0
-    //this._radius = 0
-    //this._center = null
+    this._prevPosition = null
+    this._positionDiff = new SCNVector3()
   }
 
   /**

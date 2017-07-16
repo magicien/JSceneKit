@@ -3,6 +3,8 @@
 import NSObject from '../ObjectiveC/NSObject'
 import SCNBox from './SCNBox'
 import SCNCapsule from './SCNCapsule'
+import SCNGeometryPrimitiveType from './SCNGeometryPrimitiveType'
+import SCNGeometrySource from './SCNGeometrySource'
 import SCNHitTestResult from './SCNHitTestResult'
 import SCNMatrix4 from './SCNMatrix4'
 import SCNPhysicsBody from './SCNPhysicsBody'
@@ -699,9 +701,13 @@ if (contacts.count == 0) {
 
     for(const obj of objects){
       const body = obj.physicsBody
+      body._prevPosition = body._position
       if(body.type === SCNPhysicsBodyType.kinematic){
         body._resetTransform()
+      }else if(body.type === SCNPhysicsBodyType.dynamic){
+        // TODO: move physics bodies
       }
+      body._positionDiff = body._position.sub(body._prevPosition)
     }
 
     const staticType = SCNPhysicsBodyType.static
@@ -730,10 +736,17 @@ if (contacts.count == 0) {
     
     if(this.contactDelegate){
       for(const contact of contacts){
-        this.contactDelegate.physicsWorldDidBegin(this, contact)
+        if(this.contactDelegate.physicsWorldDidBegin){
+          this.contactDelegate.physicsWorldDidBegin(this, contact)
+        }
       }
       // this.contactDelegate.physicsWorldDidUpdate
       // this.contactDelegate.physicsWorldDidEnd
+    }
+
+    for(const obj of objects){
+      const body = obj.physicsBody
+      body._prevPosition = body._position
     }
   }
 
@@ -760,6 +773,7 @@ if (contacts.count == 0) {
       return result
     }
 
+    /*
     const bodyTransform = body._node._worldTransform
     const capsule = body.physicsShape._sourceGeometry
     const origin = (new SCNVector3(0, capsule.height * 0.5, 0)).transform(bodyTransform)
@@ -787,5 +801,446 @@ if (contacts.count == 0) {
       result.push(contact)
     }
     return result
+    */
+    const bodyTransform = body._node._worldTransform
+    const capsule = body.physicsShape._sourceGeometry
+    //console.warn(`capsule ${body._node.name}`)
+    for(const obj of objs){
+      if(!this._intersectsBoundingBox(body._node, obj)){
+        continue
+      }
+
+      //console.warn(`  intersects with ${obj.name}`)
+
+      const contacts = this._contactTestCapsuleAndConcave(body._node, obj)
+      result.push(...contacts)
+    }
+    return result
+  }
+
+  _intersectsBoundingBox(node1, node2) {
+    const pos1 = node1._worldTranslation
+    const pos2 = node2._worldTranslation
+    const geo1 = node1.physicsBody.physicsShape._sourceGeometry
+    const geo2 = node2.physicsBody.physicsShape._sourceGeometry
+    if(!geo1 || !geo2){
+      return false
+    }
+    const box1 = geo1.boundingBox
+    const box2 = geo2.boundingBox
+    if((box1.min.x + pos1.x > box2.max.x + pos2.x) || (box1.max.x + pos1.x < box2.min.x + pos2.x)){
+      return false
+    }
+    if((box1.min.y + pos1.y > box2.max.y + pos2.y) || (box1.max.y + pos1.y < box2.min.y + pos2.y)){
+      return false
+    }
+    if((box1.min.z + pos1.z > box2.max.z + pos2.z) || (box1.max.z + pos1.z < box2.min.z + pos2.z)){
+      return false
+    }
+    return true
+  }
+
+  _contactTestCapsuleAndConcave(capNode, conNode) {
+    const result = []
+    const capBody = capNode.physicsBody
+    const conBody = conNode.physicsBody
+    const capsule = capBody.physicsShape._sourceGeometry
+    const concave = conBody.physicsShape._sourceGeometry
+    const transform = capBody._transform.mult(conBody._invTransform)
+    const capSize = capsule.capRadius
+    const capHeight = capsule.height * 0.5 - capSize
+    const capV = capBody._positionDiff.rotate(transform).normalize()
+    const p0 = (new SCNVector3(0, capHeight, 0)).transform(transform)
+    const p1 = (new SCNVector3(0, -capHeight, 0)).transform(transform)
+    const elems = concave.geometryElements
+    const vert = concave.getGeometrySourcesForSemantic(SCNGeometrySource.Semantic.vertex)[0]
+
+    for(const elem of elems){
+      if(elem._primitiveType !== SCNGeometryPrimitiveType.triangles){
+        continue
+      }
+      const edata = elem._data
+      const elen = elem._primitiveCount
+      let ind = 0
+      //console.warn(`    elen = ${elen}`)
+      for(let i=0; i<elen; i++){
+        const v0 = vert._scnVectorAt(edata[ind])
+        const v1 = vert._scnVectorAt(edata[ind + 1])
+        const v2 = vert._scnVectorAt(edata[ind + 2])
+        ind += 3
+
+        //const n = this._normalOfTriangle(v0, v1, v2)
+        //if(n.dot(capV) >= 0){
+        //  continue
+        //}
+
+        const contactInfo = this._capsuleTriangleContact(p0, p1, capSize, v0, v1, v2)
+        if(contactInfo){
+          const contact = new SCNPhysicsContact()
+          contact._nodeA = capNode
+          contact._nodeB = conNode
+          contact._contactPoint = contactInfo.point
+          contact._contactNormal = contactInfo.normal
+          contact._penetrationDistance = contactInfo.penetration
+          result.push(contact)
+        }
+      }
+    }
+    //console.warn(`    result length = ${result.length}`)
+
+    return result
+  }
+
+  // http://marupeke296.com/COL_3D_No27_CapsuleCapsule.html
+
+  /**
+   * 
+   * @access private
+   * @param {SCNVector3} p0 - position of an edge of the capsule (in the triangle's coordinate)
+   * @param {SCNVector3} p1 - position of another edge of the capsule (in the triangle's coordinate)
+   * @param {number} capSize - capsule radius
+   * @param {SCNVector3} v0 - vertex position (in the triangle's coordinate)
+   * @param {SCNVector3} v1 - vertex position (in the triangle's coordinate)
+   * @param {SCNVector3} v2 - vertex position (in the triangle's coordinate)
+   * @returns {?Object} -
+   *    {SCNVector3} point -
+   *    {SCNVector3} normal -
+   *    {number} distance -
+   */
+  _capsuleTriangleContact(p0, p1, capSize, v0, v1, v2) {
+    const seg = p1.sub(p0)
+
+    const segTri = this._segmentTriangleIntersection(p0, p1, v0, v1, v2)
+    if(segTri.intersection){
+      let penetration = 0
+      if(segTri.d0 < 0){
+        penetration = capSize - segTri.d0
+      }else{
+        penetration = capSize - segTri.d1
+      }
+      return {
+        point: segTri.intersection,
+        normal: segTri.normal,
+        distance: 0,
+        penetration: penetration
+      }
+    }
+
+    const d0 = this._segmentSegmentDist(p0, p1, v0, v1)
+    let min = d0
+
+    const d1 = this._segmentSegmentDist(p0, p1, v1, v2)
+    if(d1.distance < min.distance){
+      min = d1
+    }
+
+    const d2 = this._segmentSegmentDist(p0, p1, v2, v0)
+    if(d2.distance < min.distance){
+      min = d2
+    }
+
+    const h0 = p0.add(segTri.normal.mul(-segTri.d0))
+    if(this._pointIsInsideTriangle(h0, v0, v1, v2)){
+      if(Math.abs(segTri.d0) < min.distance){
+        min.distance = Math.abs(segTri.d0)
+        min.nearestPos1 = h0
+      }
+    }
+
+    const h1 = p1.add(segTri.normal.mul(-segTri.d1))
+    if(this._pointIsInsideTriangle(h1, v0, v1, v2)){
+      if(Math.abs(segTri.d1) < min.distance){
+        min.distance = Math.abs(segTri.d1)
+        min.nearestPos1 = h1
+      }
+    }
+
+    if(min.distance < capSize){
+      return {
+        point: min.nearestPos1,
+        normal: segTri.normal,
+        distance: 0,
+        penetration: (capSize - min.distance)
+      }
+    }
+
+    return null
+  }
+
+  /**
+   *
+   * @access private
+   * @param {SCNVector3} p0 - an edge of the segment
+   * @param {SCNVector3} p1 - another edge of the segment
+   * @param {SCNVector3} v0 - the fist point of the vertex
+   * @param {SCNVector3} v1 - the second point of the vertex
+   * @param {SCNVector3} v2 - the third point of the vertex
+   * @returns {Object} -
+   *    {SCNVector3} normal - normal vector of the vertex
+   *    {number} d0 - distance between p0 and the plane which contains the vertex
+   *    {number} d1 - distance between p1 and the plane which contains the vertex
+   *    {?SCNVector3} intersection - intersection point of the segment and the vertex
+   */
+  _segmentTriangleIntersection(p0, p1, v0, v1, v2) {
+    const v0p0 = p0.sub(v0)
+    const v0p1 = p1.sub(v0)
+    const n = this._normalOfTriangle(v0, v1, v2)
+    const d0 = v0p0.dot(n)
+    const d1 = v0p1.dot(n)
+    const result = { normal: n, d0: d0, d1: d1, intersection: null }
+    if(d0 * d1 > 0){
+      return result
+    }
+    const t = d0 / (d0 - d1)
+    const h = v0p0.mul(1-t).add(v0p1.mul(t))
+    if(!this._pointIsInsideTriangle(h, v0, v1, v2)){
+      return result
+    }
+    result.intersection = h
+    return result
+  }
+
+  /**
+   * 
+   * @access private
+   * @param {SCNVector3} p0 - the first point of the triangle
+   * @param {SCNVector3} p1 - the second point of the triangle
+   * @param {SCNVector3} p2 - the third point of the triangle
+   * @returns {SCNVector3} - normal vector (normalized)
+   */
+  _normalOfTriangle(p0, p1, p2) {
+    const v1 = p1.sub(p0)
+    const v2 = p2.sub(p0)
+    return v1.cross(v2).normalize()
+  }
+
+  /**
+   * 
+   * @access private
+   * @param {SCNVector3} p - point
+   * @param {SCNVector3} p0 - the first point of the triangle
+   * @param {SCNVector3} p1 - the second point of the triangle
+   * @param {SCNVector3} p2 - the third point of the triangle
+   * @returns {boolean} - true if the point is in the triangle.
+   */
+  _pointIsInsideTriangle(p, p0, p1, p2) {
+    const n = this._normalOfTriangle(p0, p1, p2)
+    const v0 = p1.sub(p0).cross(n).dot(p.sub(p0))
+    const v1 = p2.sub(p1).cross(n).dot(p.sub(p1))
+    const v2 = p0.sub(p2).cross(n).dot(p.sub(p2))
+    
+    if(v0 < 0 && v1 < 0 && v2 < 0){
+      return true
+    }
+    if(v0 > 0 && v1 > 0 && v2 > 0){
+      return true
+    }
+    return false
+  }
+
+  /**
+   * 
+   * @access private
+   * @param {SCNVector3} p - point
+   * @param {SCNVector3} lp - a point on the line
+   * @param {SCNVector3} lv - line vector
+   * @returns {Object} -
+   *    {number} coeff -
+   *    {SCNVector3} nearestPos -
+   *    {number} distance -
+   */
+  _pointLineDist(p, lp, lv) {
+    const len2 = lv.length2()
+    let t = 0
+    if(len2 > 0){
+      t = lv.dot(p.sub(lp)) / len2
+    }
+    const h = lp.add(lv.mul(t))
+    const d = h.sub(p).length()
+    return {
+      coeff: t,
+      nearestPos: h,
+      distance: d
+    }
+  }
+
+  /**
+   *
+   * @access private
+   * @param {SCNVector3} p - point
+   * @param {SCNVector3} s0 - an edge of the segment
+   * @param {SCNVector3} s1 - another edge of the segment
+   * @returns {Object} -
+   *    {number} coeff -
+   *    {SCNVector3} nearestPos -
+   *    {number} distance -
+   */
+  _pointSegmentDist(p, s0, s1) {
+    const lv = s1.sub(s0)
+    const plDist = this._pointLineDist(p, s0, lv)
+    if(plDist.coeff < 0){
+      const d = s0.sub(p).length()
+      return {
+        coeff: plDist.coeff,
+        nearestPos: s0,
+        distance: d
+      }
+    }else if(plDist.coeff > 1){
+      const d = s1.sub(p).length()
+      return {
+        coeff: plDist.coeff,
+        nearestPos: s1,
+        distance: d
+      }
+    }
+    return plDist
+  }
+
+  /**
+   *
+   * @access private
+   * @param {SCNVector3} p0 - a point on the first line
+   * @param {SCNVector3} v0 - a line vector
+   * @param {SCNVector3} p1 - a point on the second line
+   * @param {SCNVector3} v1 - a line vector
+   * @returns {Object} -
+   *    {number} coeff0 -
+   *    {SCNVector3} nearestPos0 - 
+   *    {number} coeff1 -
+   *    {SCNVector3} nearestPos1 -
+   *    {number} distance -
+   */
+  _lineLineDist(p0, v0, p1, v1) {
+    if(this._isParallel(v0, v1)){
+      const plDist = this._pointLineDist(p0, p1, v1)
+      return {
+        coeff0: 0,
+        nearestPos0: p0,
+        coeff1: plDist.coeff,
+        nearestPos1: plDist.nearestPos,
+        distance: plDist.distance
+      }
+    }
+
+    const v01 = v0.dot(v1)
+    const v00 = v0.dot(v0)
+    const v11 = v1.dot(v1)
+    const p10 = p0.sub(p1)
+    const coeff0 = (v01 * v1.dot(p10) - v11 * v0.dot(p10)) / (v00 * v11 - v01 * v01)
+    const np0 = p0.add(v0.mul(coeff0))
+    const coeff1 = v1.dot(np0.sub(p1)) / v11
+    const np1 = p1.add(v1.mul(coeff1))
+    const d = np1.sub(np0).length()
+
+    return {
+      coeff0: coeff0,
+      nearestPos0: np0,
+      coeff1: coeff1,
+      nearestPos1: np1,
+      distance: d
+    }
+  }
+
+  /**
+   *
+   * @access private
+   * @param {SCNVector3} v0 - line vector
+   * @param {SCNVector3} v1 - line vector
+   * @returns {boolean} - true if the lines are parallel
+   */
+  _isParallel(v0, v1) {
+    const l = v0.cross(v1).length2()
+    return (l < 0.0000000000001)
+  }
+
+  _clamp(val) {
+    if(val < 0){
+      return 0
+    }
+    if(val > 1){
+      return 1
+    }
+    return val
+  }
+
+  /**
+   *
+   * @access private
+   * @param {SCNVector3} s00 - an edge of the first segment
+   * @param {SCNVector3} s01 - another edge of the first segment
+   * @param {SCNVector3} s10 - an edge of the second segment
+   * @param {SCNVector3} s11 - another edge of the second segment
+   * @returns {Object} -
+   *    {number} coeff0 -
+   *    {SCNVector3} nearestPos0 -
+   *    {number} coeff1 -
+   *    {SCNVector3} nearestPos1 -
+   *    {number} distance -
+   */
+  _segmentSegmentDist(s00, s01, s10, s11) {
+    const v0 = s01.sub(s00)
+    const v1 = s11.sub(s10)
+    let dist = null
+    if(this._isParallel(v0, v1)){
+      dist = this._pointSegmentDist(s00, s10, s11)
+      if(0.0 <= dist.coeff && dist.coeff <= 1.0){
+        return {
+          coeff0: 0.0,
+          nearestPos0: s00,
+          coeff1: dist.coeff,
+          nearestPos1: dist.nearestPos,
+          distance: dist.distance
+        }
+      }
+      dist.coeff0 = 0.0
+      dist.coeff1 = dist.coeff
+    }else{
+      dist = this._lineLineDist(s00, v0, s10, v1)
+      if(0.0 <= dist.coeff0 && dist.coeff0 <= 1.0
+        && 0.0 <= dist.coeff1 && dist.coeff1 <= 1.0){
+        return dist
+      }
+    }
+    
+    let dist2 = dist
+    const t0 = this._clamp(dist.coeff0)
+    if(t0 !== dist.coeff0){
+      const p0 = s00.add(v0.mul(t0))
+      dist2 = this._pointSegmentDist(p0, s10, s11)
+      if(0.0 <= dist2.coeff && dist2.coeff <= 1.0){
+        return {
+          coeff0: t0,
+          nearestPos0: p0,
+          coeff1: dist2.coeff,
+          nearestPos1: dist2.nearestPos,
+          distance: dist2.distance
+        }
+      }
+      dist2.coeff1 = dist2.coeff
+    }
+
+    const t1 = this._clamp(dist2.coeff1)
+    const p1 = s10.add(v1.mul(t1))
+    const dist3 = this._pointSegmentDist(p1, s00, s01)
+    if(0.0 <= dist3.coeff && dist3.coeff <= 1.0){
+      return {
+        coeff0: dist3.coeff,
+        nearestPos0: dist3.nearestPos,
+        coeff1: t1,
+        nearestPos1: p1,
+        distance: dist3.distance
+      }
+    }
+
+    const t = this._clamp(dist3.coeff)
+    const p = s00.add(v0.mul(t))
+    const d = p1.sub(p).length()
+    return {
+      coeff0: t,
+      nearestPos0: p,
+      coeff1: t1,
+      nearestPos1: p1,
+      distance: d
+    }
   }
 }

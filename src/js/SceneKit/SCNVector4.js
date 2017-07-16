@@ -203,6 +203,14 @@ export default class SCNVector4 {
    * @access public
    * @returns {number} -
    */
+  length2() {
+    return (this.x * this.x + this.y * this.y + this.z * this.z + this.w * this.w)
+  }
+
+  /**
+   * @access public
+   * @returns {number} -
+   */
   length() {
     return Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z + this.w * this.w)
   }

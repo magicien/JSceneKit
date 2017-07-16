@@ -1198,6 +1198,27 @@ This method is for OpenGL shader programs only. To bind custom variable data for
 
   /**
    * @access private
+   * @param {SCNGeometry} geometry -
+   * @returns {boolean} -
+   */
+  _intersectsBoundingBox(geometry) {
+    const b1 = this.boundingBox
+    const b2 = geometry.boundingBox
+
+    if(b1.min.x > b2.max.x || b1.max.x < b2.min.x){
+      return false
+    }
+    if(b1.min.y > b2.max.y || b1.max.y < b2.min.y){
+      return false
+    }
+    if(b1.min.z > b2.max.z || b1.max.z < b2.min.z){
+      return false
+    }
+    return true
+  }
+
+  /**
+   * @access private
    * @returns {Promise} -
    */
   _getLoadedPromise() {

@@ -18777,6 +18777,17 @@ module.exports =
 	     */
 
 	  }, {
+	    key: 'length2',
+	    value: function length2() {
+	      return this.x * this.x + this.y * this.y + this.z * this.z;
+	    }
+
+	    /**
+	     * @access public
+	     * @returns {number} -
+	     */
+
+	  }, {
 	    key: 'length',
 	    value: function length() {
 	      return Math.sqrt(this.x * this.x + this.y * this.y + this.z * this.z);
@@ -19181,6 +19192,17 @@ module.exports =
 	      r.z = this.z * sqr;
 	      r.w = this.w * sqr;
 	      return r;
+	    }
+
+	    /**
+	     * @access public
+	     * @returns {number} -
+	     */
+
+	  }, {
+	    key: 'length2',
+	    value: function length2() {
+	      return this.x * this.x + this.y * this.y + this.z * this.z + this.w * this.w;
 	    }
 
 	    /**
@@ -24476,6 +24498,8 @@ module.exports =
 	      child.removeFromParentNode();
 	      this._childNodes.push(child);
 	      child._parent = this;
+
+	      child._resetPhysicsTransformRecursively(true);
 	    }
 
 	    /**
@@ -24741,8 +24765,10 @@ module.exports =
 	  }, {
 	    key: '_resetPhysicsTransformRecursively',
 	    value: function _resetPhysicsTransformRecursively() {
+	      var updateWorldTransform = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+
 	      if (this._physicsBody) {
-	        this._physicsBody._resetTransform();
+	        this._physicsBody._resetTransform(updateWorldTransform);
 	      }
 	      var _iteratorNormalCompletion2 = true;
 	      var _didIteratorError2 = false;
@@ -24752,7 +24778,7 @@ module.exports =
 	        for (var _iterator2 = this._childNodes[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
 	          var child = _step2.value;
 
-	          child._resetPhysicsTransformRecursively();
+	          child._resetPhysicsTransformRecursively(updateWorldTransform);
 	        }
 	      } catch (err) {
 	        _didIteratorError2 = true;
@@ -28412,6 +28438,30 @@ module.exports =
 
 	      this.boundingBox = { min: min, max: max };
 	      return this.boundingBox;
+	    }
+
+	    /**
+	     * @access private
+	     * @param {SCNGeometry} geometry -
+	     * @returns {boolean} -
+	     */
+
+	  }, {
+	    key: '_intersectsBoundingBox',
+	    value: function _intersectsBoundingBox(geometry) {
+	      var b1 = this.boundingBox;
+	      var b2 = geometry.boundingBox;
+
+	      if (b1.min.x > b2.max.x || b1.max.x < b2.min.x) {
+	        return false;
+	      }
+	      if (b1.min.y > b2.max.y || b1.max.y < b2.min.y) {
+	        return false;
+	      }
+	      if (b1.min.z > b2.max.z || b1.max.z < b2.min.z) {
+	        return false;
+	      }
+	      return true;
 	    }
 
 	    /**
@@ -37526,7 +37576,7 @@ module.exports =
 	     */
 	    _this._dataLoadedPromise = null;
 
-	    if (typeof url !== 'undefined') {
+	    if (url) {
 	      var promise = _this._loadSceneWithURL(url, options).then(function (scene) {
 	        _this._copyValue(scene);
 	        if (onload) {
@@ -37540,40 +37590,13 @@ module.exports =
 	      _this._dataLoadedPromise = promise;
 	    }
 
-	    var skyBoxGeometry = new _SCNBox2.default();
-	    var material = new _SCNMaterial2.default();
-	    material._diffuse._contents = _SKColor2.default.black;
-	    material._ambient._contents = _SKColor2.default.black;
-	    material._emission._contents = null;
-	    material.isDoubleSided = true;
-
-	    skyBoxGeometry.firstMaterial = material;
-	    var texSrc = skyBoxGeometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.texcoord)[0];
-	    var margin = 0.001;
-	    var w0 = 0.0;
-	    var w1 = 1.0 / 6.0;
-	    var w2 = 2.0 / 6.0;
-	    var w3 = 3.0 / 6.0;
-	    var w4 = 4.0 / 6.0;
-	    var w5 = 5.0 / 6.0;
-	    var w6 = 1.0;
-	    var data = [w5 - margin, 1, w5 - margin, 0, w4 + margin, 1, w4 + margin, 0, w2 - margin, 1, w2 - margin, 0, w1 + margin, 1, w1 + margin, 0, w6 - margin, 1, w6 - margin, 0, w5 + margin, 1, w5 + margin, 0, w1 - margin, 1, w1 - margin, 0, w0 + margin, 1, w0 + margin, 0, w3 - margin, 1, w3 - margin, 0, w2 + margin, 1, w2 + margin, 0, w4 - margin, 1, w4 - margin, 0, w3 + margin, 1, w3 + margin, 0];
-	    var dataIndex = 0;
-	    var srcIndex = 6;
-	    for (var i = 0; i < 24; i++) {
-	      texSrc._data[srcIndex + 0] = data[dataIndex + 0];
-	      texSrc._data[srcIndex + 1] = data[dataIndex + 1];
-	      srcIndex += 8;
-	      dataIndex += 2;
-	    }
-	    _this._skyBox = new _SCNNode2.default(skyBoxGeometry);
-	    _this._skyBox._presentation = _this._skyBox;
+	    _this._createSkyBox
 
 	    /**
 	     * @access private
 	     * @type {Promise}
 	     */
-	    _this._loadedPromise = null;
+	    ();_this._loadedPromise = null;
 	    return _this;
 	  }
 
@@ -37593,6 +37616,14 @@ module.exports =
 	      this._particleSystems = src._particleSystems ? src._particleSystems.slice(0) : null;
 	      this._particleSystemsTransform = src._particleSystemsTransform ? src._particleSystemsTransform.slice(0) : null;
 	    }
+
+	    /**
+	     * @access private
+	     * @param {string} url -
+	     * @param {Object} options -
+	     * @returns {Promise} -
+	     */
+
 	  }, {
 	    key: '_loadSceneWithURL',
 	    value: function _loadSceneWithURL(url, options) {
@@ -37628,11 +37659,51 @@ module.exports =
 	        });
 	      }
 	    }
+
+	    /**
+	     * @access private
+	     * @param {Blob} data -
+	     * @param {Object} options -
+	     * @returns {SCNScene} -
+	     */
+
 	  }, {
 	    key: '_loadSceneWithData',
 	    value: function _loadSceneWithData(data, options) {
 	      var source = new _SCNSceneSource2.default(data, options);
 	      return source.scene();
+	    }
+	  }, {
+	    key: '_createSkyBox',
+	    value: function _createSkyBox() {
+	      var skyBoxGeometry = new _SCNBox2.default();
+	      var material = new _SCNMaterial2.default();
+	      material._diffuse._contents = _SKColor2.default.black;
+	      material._ambient._contents = _SKColor2.default.black;
+	      material._emission._contents = null;
+	      material.isDoubleSided = true;
+
+	      skyBoxGeometry.firstMaterial = material;
+	      var texSrc = skyBoxGeometry.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.texcoord)[0];
+	      var margin = 0.001;
+	      var w0 = 0.0;
+	      var w1 = 1.0 / 6.0;
+	      var w2 = 2.0 / 6.0;
+	      var w3 = 3.0 / 6.0;
+	      var w4 = 4.0 / 6.0;
+	      var w5 = 5.0 / 6.0;
+	      var w6 = 1.0;
+	      var data = [w5 - margin, 1, w5 - margin, 0, w4 + margin, 1, w4 + margin, 0, w2 - margin, 1, w2 - margin, 0, w1 + margin, 1, w1 + margin, 0, w6 - margin, 1, w6 - margin, 0, w5 + margin, 1, w5 + margin, 0, w1 - margin, 1, w1 - margin, 0, w0 + margin, 1, w0 + margin, 0, w3 - margin, 1, w3 - margin, 0, w2 + margin, 1, w2 + margin, 0, w4 - margin, 1, w4 - margin, 0, w3 + margin, 1, w3 + margin, 0];
+	      var dataIndex = 0;
+	      var srcIndex = 6;
+	      for (var i = 0; i < 24; i++) {
+	        texSrc._data[srcIndex + 0] = data[dataIndex + 0];
+	        texSrc._data[srcIndex + 1] = data[dataIndex + 1];
+	        srcIndex += 8;
+	        dataIndex += 2;
+	      }
+	      this._skyBox = new _SCNNode2.default(skyBoxGeometry);
+	      this._skyBox._presentation = this._skyBox;
 	    }
 
 	    // Creating or Loading a Scene
@@ -39103,6 +39174,14 @@ module.exports =
 
 	var _SCNCapsule2 = _interopRequireDefault(_SCNCapsule);
 
+	var _SCNGeometryPrimitiveType = __webpack_require__(85);
+
+	var _SCNGeometryPrimitiveType2 = _interopRequireDefault(_SCNGeometryPrimitiveType);
+
+	var _SCNGeometrySource = __webpack_require__(82);
+
+	var _SCNGeometrySource2 = _interopRequireDefault(_SCNGeometrySource);
+
 	var _SCNHitTestResult = __webpack_require__(114);
 
 	var _SCNHitTestResult2 = _interopRequireDefault(_SCNHitTestResult);
@@ -39878,9 +39957,13 @@ module.exports =
 	          var obj = _step.value;
 
 	          var body = obj.physicsBody;
+	          body._prevPosition = body._position;
 	          if (body.type === _SCNPhysicsBodyType2.default.kinematic) {
 	            body._resetTransform();
+	          } else if (body.type === _SCNPhysicsBodyType2.default.dynamic) {
+	            // TODO: move physics bodies
 	          }
+	          body._positionDiff = body._position.sub(body._prevPosition);
 	        }
 	      } catch (err) {
 	        _didIteratorError = true;
@@ -39930,7 +40013,9 @@ module.exports =
 	          for (var _iterator2 = contacts[Symbol.iterator](), _step2; !(_iteratorNormalCompletion2 = (_step2 = _iterator2.next()).done); _iteratorNormalCompletion2 = true) {
 	            var contact = _step2.value;
 
-	            this.contactDelegate.physicsWorldDidBegin(this, contact);
+	            if (this.contactDelegate.physicsWorldDidBegin) {
+	              this.contactDelegate.physicsWorldDidBegin(this, contact);
+	            }
 	          }
 	          // this.contactDelegate.physicsWorldDidUpdate
 	          // this.contactDelegate.physicsWorldDidEnd
@@ -39946,6 +40031,32 @@ module.exports =
 	            if (_didIteratorError2) {
 	              throw _iteratorError2;
 	            }
+	          }
+	        }
+	      }
+
+	      var _iteratorNormalCompletion3 = true;
+	      var _didIteratorError3 = false;
+	      var _iteratorError3 = undefined;
+
+	      try {
+	        for (var _iterator3 = objects[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
+	          var _obj = _step3.value;
+
+	          var _body = _obj.physicsBody;
+	          _body._prevPosition = _body._position;
+	        }
+	      } catch (err) {
+	        _didIteratorError3 = true;
+	        _iteratorError3 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion3 && _iterator3.return) {
+	            _iterator3.return();
+	          }
+	        } finally {
+	          if (_didIteratorError3) {
+	            throw _iteratorError3;
 	          }
 	        }
 	      }
@@ -39975,54 +40086,545 @@ module.exports =
 	        return result;
 	      }
 
-	      var bodyTransform = body._node._worldTransform;
-	      var capsule = body.physicsShape._sourceGeometry;
-	      var origin = new _SCNVector2.default(0, capsule.height * 0.5, 0).transform(bodyTransform);
-	      var dest = new _SCNVector2.default(0, -capsule.height * 0.5, 0).transform(bodyTransform);
-
-	      var viewProjectionTransform = this._createViewProjectionTransform(origin, dest);
-	      var from = origin.transform(viewProjectionTransform);
-	      var to = dest.transform(viewProjectionTransform);
-
-	      var opt = new Map();
-	      var opt2 = {
+	      /*
+	      const bodyTransform = body._node._worldTransform
+	      const capsule = body.physicsShape._sourceGeometry
+	      const origin = (new SCNVector3(0, capsule.height * 0.5, 0)).transform(bodyTransform)
+	      const dest = (new SCNVector3(0, -capsule.height * 0.5, 0)).transform(bodyTransform)
+	       const viewProjectionTransform = this._createViewProjectionTransform(origin, dest)
+	      const from = origin.transform(viewProjectionTransform)
+	      const to = dest.transform(viewProjectionTransform)
+	      
+	      const opt = new Map()
+	      const opt2 = {
 	        targets: objs,
 	        rayRadius: capsule.capRadius
-
-	        // TODO: calculate contacts
-	      };var hitResult = this._renderer._physicsHitTestByGPU(viewProjectionTransform, from, to, opt, opt2);
-	      var _iteratorNormalCompletion3 = true;
-	      var _didIteratorError3 = false;
-	      var _iteratorError3 = undefined;
+	      }
+	       // TODO: calculate contacts
+	      const hitResult = this._renderer._physicsHitTestByGPU(viewProjectionTransform, from, to, opt, opt2)
+	      for(const hit of hitResult){
+	        const contact = new SCNPhysicsContact()
+	        contact._nodeA = body._node
+	        contact._nodeB = hit._node
+	        contact._contactPoint = hit._worldCoordinates
+	        contact._contactNormal = hit._worldNormal
+	        contact._penetrationDistance = 1.0
+	        result.push(contact)
+	      }
+	      return result
+	      */
+	      var bodyTransform = body._node._worldTransform;
+	      var capsule = body.physicsShape._sourceGeometry;
+	      //console.warn(`capsule ${body._node.name}`)
+	      var _iteratorNormalCompletion4 = true;
+	      var _didIteratorError4 = false;
+	      var _iteratorError4 = undefined;
 
 	      try {
-	        for (var _iterator3 = hitResult[Symbol.iterator](), _step3; !(_iteratorNormalCompletion3 = (_step3 = _iterator3.next()).done); _iteratorNormalCompletion3 = true) {
-	          var hit = _step3.value;
+	        for (var _iterator4 = objs[Symbol.iterator](), _step4; !(_iteratorNormalCompletion4 = (_step4 = _iterator4.next()).done); _iteratorNormalCompletion4 = true) {
+	          var obj = _step4.value;
 
-	          var contact = new _SCNPhysicsContact2.default();
-	          contact._nodeA = body._node;
-	          contact._nodeB = hit._node;
-	          contact._contactPoint = hit._worldCoordinates;
-	          contact._contactNormal = hit._worldNormal;
-	          contact._penetrationDistance = 1.0;
-	          result.push(contact);
+	          if (!this._intersectsBoundingBox(body._node, obj)) {
+	            continue;
+	          }
+
+	          //console.warn(`  intersects with ${obj.name}`)
+
+	          var contacts = this._contactTestCapsuleAndConcave(body._node, obj);
+	          result.push.apply(result, _toConsumableArray(contacts));
 	        }
 	      } catch (err) {
-	        _didIteratorError3 = true;
-	        _iteratorError3 = err;
+	        _didIteratorError4 = true;
+	        _iteratorError4 = err;
 	      } finally {
 	        try {
-	          if (!_iteratorNormalCompletion3 && _iterator3.return) {
-	            _iterator3.return();
+	          if (!_iteratorNormalCompletion4 && _iterator4.return) {
+	            _iterator4.return();
 	          }
 	        } finally {
-	          if (_didIteratorError3) {
-	            throw _iteratorError3;
+	          if (_didIteratorError4) {
+	            throw _iteratorError4;
 	          }
 	        }
 	      }
 
 	      return result;
+	    }
+	  }, {
+	    key: '_intersectsBoundingBox',
+	    value: function _intersectsBoundingBox(node1, node2) {
+	      var pos1 = node1._worldTranslation;
+	      var pos2 = node2._worldTranslation;
+	      var geo1 = node1.physicsBody.physicsShape._sourceGeometry;
+	      var geo2 = node2.physicsBody.physicsShape._sourceGeometry;
+	      if (!geo1 || !geo2) {
+	        return false;
+	      }
+	      var box1 = geo1.boundingBox;
+	      var box2 = geo2.boundingBox;
+	      if (box1.min.x + pos1.x > box2.max.x + pos2.x || box1.max.x + pos1.x < box2.min.x + pos2.x) {
+	        return false;
+	      }
+	      if (box1.min.y + pos1.y > box2.max.y + pos2.y || box1.max.y + pos1.y < box2.min.y + pos2.y) {
+	        return false;
+	      }
+	      if (box1.min.z + pos1.z > box2.max.z + pos2.z || box1.max.z + pos1.z < box2.min.z + pos2.z) {
+	        return false;
+	      }
+	      return true;
+	    }
+	  }, {
+	    key: '_contactTestCapsuleAndConcave',
+	    value: function _contactTestCapsuleAndConcave(capNode, conNode) {
+	      var result = [];
+	      var capBody = capNode.physicsBody;
+	      var conBody = conNode.physicsBody;
+	      var capsule = capBody.physicsShape._sourceGeometry;
+	      var concave = conBody.physicsShape._sourceGeometry;
+	      var transform = capBody._transform.mult(conBody._invTransform);
+	      var capSize = capsule.capRadius;
+	      var capHeight = capsule.height * 0.5 - capSize;
+	      var capV = capBody._positionDiff.rotate(transform).normalize();
+	      var p0 = new _SCNVector2.default(0, capHeight, 0).transform(transform);
+	      var p1 = new _SCNVector2.default(0, -capHeight, 0).transform(transform);
+	      var elems = concave.geometryElements;
+	      var vert = concave.getGeometrySourcesForSemantic(_SCNGeometrySource2.default.Semantic.vertex)[0];
+
+	      var _iteratorNormalCompletion5 = true;
+	      var _didIteratorError5 = false;
+	      var _iteratorError5 = undefined;
+
+	      try {
+	        for (var _iterator5 = elems[Symbol.iterator](), _step5; !(_iteratorNormalCompletion5 = (_step5 = _iterator5.next()).done); _iteratorNormalCompletion5 = true) {
+	          var elem = _step5.value;
+
+	          if (elem._primitiveType !== _SCNGeometryPrimitiveType2.default.triangles) {
+	            continue;
+	          }
+	          var edata = elem._data;
+	          var elen = elem._primitiveCount;
+	          var ind = 0;
+	          //console.warn(`    elen = ${elen}`)
+	          for (var i = 0; i < elen; i++) {
+	            var v0 = vert._scnVectorAt(edata[ind]);
+	            var v1 = vert._scnVectorAt(edata[ind + 1]);
+	            var v2 = vert._scnVectorAt(edata[ind + 2]);
+	            ind += 3;
+
+	            //const n = this._normalOfTriangle(v0, v1, v2)
+	            //if(n.dot(capV) >= 0){
+	            //  continue
+	            //}
+
+	            var contactInfo = this._capsuleTriangleContact(p0, p1, capSize, v0, v1, v2);
+	            if (contactInfo) {
+	              var contact = new _SCNPhysicsContact2.default();
+	              contact._nodeA = capNode;
+	              contact._nodeB = conNode;
+	              contact._contactPoint = contactInfo.point;
+	              contact._contactNormal = contactInfo.normal;
+	              contact._penetrationDistance = contactInfo.penetration;
+	              result.push(contact);
+	            }
+	          }
+	        }
+	        //console.warn(`    result length = ${result.length}`)
+	      } catch (err) {
+	        _didIteratorError5 = true;
+	        _iteratorError5 = err;
+	      } finally {
+	        try {
+	          if (!_iteratorNormalCompletion5 && _iterator5.return) {
+	            _iterator5.return();
+	          }
+	        } finally {
+	          if (_didIteratorError5) {
+	            throw _iteratorError5;
+	          }
+	        }
+	      }
+
+	      return result;
+	    }
+
+	    // http://marupeke296.com/COL_3D_No27_CapsuleCapsule.html
+
+	    /**
+	     * 
+	     * @access private
+	     * @param {SCNVector3} p0 - position of an edge of the capsule (in the triangle's coordinate)
+	     * @param {SCNVector3} p1 - position of another edge of the capsule (in the triangle's coordinate)
+	     * @param {number} capSize - capsule radius
+	     * @param {SCNVector3} v0 - vertex position (in the triangle's coordinate)
+	     * @param {SCNVector3} v1 - vertex position (in the triangle's coordinate)
+	     * @param {SCNVector3} v2 - vertex position (in the triangle's coordinate)
+	     * @returns {?Object} -
+	     *    {SCNVector3} point -
+	     *    {SCNVector3} normal -
+	     *    {number} distance -
+	     */
+
+	  }, {
+	    key: '_capsuleTriangleContact',
+	    value: function _capsuleTriangleContact(p0, p1, capSize, v0, v1, v2) {
+	      var seg = p1.sub(p0);
+
+	      var segTri = this._segmentTriangleIntersection(p0, p1, v0, v1, v2);
+	      if (segTri.intersection) {
+	        var penetration = 0;
+	        if (segTri.d0 < 0) {
+	          penetration = capSize - segTri.d0;
+	        } else {
+	          penetration = capSize - segTri.d1;
+	        }
+	        return {
+	          point: segTri.intersection,
+	          normal: segTri.normal,
+	          distance: 0,
+	          penetration: penetration
+	        };
+	      }
+
+	      var d0 = this._segmentSegmentDist(p0, p1, v0, v1);
+	      var min = d0;
+
+	      var d1 = this._segmentSegmentDist(p0, p1, v1, v2);
+	      if (d1.distance < min.distance) {
+	        min = d1;
+	      }
+
+	      var d2 = this._segmentSegmentDist(p0, p1, v2, v0);
+	      if (d2.distance < min.distance) {
+	        min = d2;
+	      }
+
+	      var h0 = p0.add(segTri.normal.mul(-segTri.d0));
+	      if (this._pointIsInsideTriangle(h0, v0, v1, v2)) {
+	        if (Math.abs(segTri.d0) < min.distance) {
+	          min.distance = Math.abs(segTri.d0);
+	          min.nearestPos1 = h0;
+	        }
+	      }
+
+	      var h1 = p1.add(segTri.normal.mul(-segTri.d1));
+	      if (this._pointIsInsideTriangle(h1, v0, v1, v2)) {
+	        if (Math.abs(segTri.d1) < min.distance) {
+	          min.distance = Math.abs(segTri.d1);
+	          min.nearestPos1 = h1;
+	        }
+	      }
+
+	      if (min.distance < capSize) {
+	        return {
+	          point: min.nearestPos1,
+	          normal: segTri.normal,
+	          distance: 0,
+	          penetration: capSize - min.distance
+	        };
+	      }
+
+	      return null;
+	    }
+
+	    /**
+	     *
+	     * @access private
+	     * @param {SCNVector3} p0 - an edge of the segment
+	     * @param {SCNVector3} p1 - another edge of the segment
+	     * @param {SCNVector3} v0 - the fist point of the vertex
+	     * @param {SCNVector3} v1 - the second point of the vertex
+	     * @param {SCNVector3} v2 - the third point of the vertex
+	     * @returns {Object} -
+	     *    {SCNVector3} normal - normal vector of the vertex
+	     *    {number} d0 - distance between p0 and the plane which contains the vertex
+	     *    {number} d1 - distance between p1 and the plane which contains the vertex
+	     *    {?SCNVector3} intersection - intersection point of the segment and the vertex
+	     */
+
+	  }, {
+	    key: '_segmentTriangleIntersection',
+	    value: function _segmentTriangleIntersection(p0, p1, v0, v1, v2) {
+	      var v0p0 = p0.sub(v0);
+	      var v0p1 = p1.sub(v0);
+	      var n = this._normalOfTriangle(v0, v1, v2);
+	      var d0 = v0p0.dot(n);
+	      var d1 = v0p1.dot(n);
+	      var result = { normal: n, d0: d0, d1: d1, intersection: null };
+	      if (d0 * d1 > 0) {
+	        return result;
+	      }
+	      var t = d0 / (d0 - d1);
+	      var h = v0p0.mul(1 - t).add(v0p1.mul(t));
+	      if (!this._pointIsInsideTriangle(h, v0, v1, v2)) {
+	        return result;
+	      }
+	      result.intersection = h;
+	      return result;
+	    }
+
+	    /**
+	     * 
+	     * @access private
+	     * @param {SCNVector3} p0 - the first point of the triangle
+	     * @param {SCNVector3} p1 - the second point of the triangle
+	     * @param {SCNVector3} p2 - the third point of the triangle
+	     * @returns {SCNVector3} - normal vector (normalized)
+	     */
+
+	  }, {
+	    key: '_normalOfTriangle',
+	    value: function _normalOfTriangle(p0, p1, p2) {
+	      var v1 = p1.sub(p0);
+	      var v2 = p2.sub(p0);
+	      return v1.cross(v2).normalize();
+	    }
+
+	    /**
+	     * 
+	     * @access private
+	     * @param {SCNVector3} p - point
+	     * @param {SCNVector3} p0 - the first point of the triangle
+	     * @param {SCNVector3} p1 - the second point of the triangle
+	     * @param {SCNVector3} p2 - the third point of the triangle
+	     * @returns {boolean} - true if the point is in the triangle.
+	     */
+
+	  }, {
+	    key: '_pointIsInsideTriangle',
+	    value: function _pointIsInsideTriangle(p, p0, p1, p2) {
+	      var n = this._normalOfTriangle(p0, p1, p2);
+	      var v0 = p1.sub(p0).cross(n).dot(p.sub(p0));
+	      var v1 = p2.sub(p1).cross(n).dot(p.sub(p1));
+	      var v2 = p0.sub(p2).cross(n).dot(p.sub(p2));
+
+	      if (v0 < 0 && v1 < 0 && v2 < 0) {
+	        return true;
+	      }
+	      if (v0 > 0 && v1 > 0 && v2 > 0) {
+	        return true;
+	      }
+	      return false;
+	    }
+
+	    /**
+	     * 
+	     * @access private
+	     * @param {SCNVector3} p - point
+	     * @param {SCNVector3} lp - a point on the line
+	     * @param {SCNVector3} lv - line vector
+	     * @returns {Object} -
+	     *    {number} coeff -
+	     *    {SCNVector3} nearestPos -
+	     *    {number} distance -
+	     */
+
+	  }, {
+	    key: '_pointLineDist',
+	    value: function _pointLineDist(p, lp, lv) {
+	      var len2 = lv.length2();
+	      var t = 0;
+	      if (len2 > 0) {
+	        t = lv.dot(p.sub(lp)) / len2;
+	      }
+	      var h = lp.add(lv.mul(t));
+	      var d = h.sub(p).length();
+	      return {
+	        coeff: t,
+	        nearestPos: h,
+	        distance: d
+	      };
+	    }
+
+	    /**
+	     *
+	     * @access private
+	     * @param {SCNVector3} p - point
+	     * @param {SCNVector3} s0 - an edge of the segment
+	     * @param {SCNVector3} s1 - another edge of the segment
+	     * @returns {Object} -
+	     *    {number} coeff -
+	     *    {SCNVector3} nearestPos -
+	     *    {number} distance -
+	     */
+
+	  }, {
+	    key: '_pointSegmentDist',
+	    value: function _pointSegmentDist(p, s0, s1) {
+	      var lv = s1.sub(s0);
+	      var plDist = this._pointLineDist(p, s0, lv);
+	      if (plDist.coeff < 0) {
+	        var d = s0.sub(p).length();
+	        return {
+	          coeff: plDist.coeff,
+	          nearestPos: s0,
+	          distance: d
+	        };
+	      } else if (plDist.coeff > 1) {
+	        var _d = s1.sub(p).length();
+	        return {
+	          coeff: plDist.coeff,
+	          nearestPos: s1,
+	          distance: _d
+	        };
+	      }
+	      return plDist;
+	    }
+
+	    /**
+	     *
+	     * @access private
+	     * @param {SCNVector3} p0 - a point on the first line
+	     * @param {SCNVector3} v0 - a line vector
+	     * @param {SCNVector3} p1 - a point on the second line
+	     * @param {SCNVector3} v1 - a line vector
+	     * @returns {Object} -
+	     *    {number} coeff0 -
+	     *    {SCNVector3} nearestPos0 - 
+	     *    {number} coeff1 -
+	     *    {SCNVector3} nearestPos1 -
+	     *    {number} distance -
+	     */
+
+	  }, {
+	    key: '_lineLineDist',
+	    value: function _lineLineDist(p0, v0, p1, v1) {
+	      if (this._isParallel(v0, v1)) {
+	        var plDist = this._pointLineDist(p0, p1, v1);
+	        return {
+	          coeff0: 0,
+	          nearestPos0: p0,
+	          coeff1: plDist.coeff,
+	          nearestPos1: plDist.nearestPos,
+	          distance: plDist.distance
+	        };
+	      }
+
+	      var v01 = v0.dot(v1);
+	      var v00 = v0.dot(v0);
+	      var v11 = v1.dot(v1);
+	      var p10 = p0.sub(p1);
+	      var coeff0 = (v01 * v1.dot(p10) - v11 * v0.dot(p10)) / (v00 * v11 - v01 * v01);
+	      var np0 = p0.add(v0.mul(coeff0));
+	      var coeff1 = v1.dot(np0.sub(p1)) / v11;
+	      var np1 = p1.add(v1.mul(coeff1));
+	      var d = np1.sub(np0).length();
+
+	      return {
+	        coeff0: coeff0,
+	        nearestPos0: np0,
+	        coeff1: coeff1,
+	        nearestPos1: np1,
+	        distance: d
+	      };
+	    }
+
+	    /**
+	     *
+	     * @access private
+	     * @param {SCNVector3} v0 - line vector
+	     * @param {SCNVector3} v1 - line vector
+	     * @returns {boolean} - true if the lines are parallel
+	     */
+
+	  }, {
+	    key: '_isParallel',
+	    value: function _isParallel(v0, v1) {
+	      var l = v0.cross(v1).length2();
+	      return l < 0.0000000000001;
+	    }
+	  }, {
+	    key: '_clamp',
+	    value: function _clamp(val) {
+	      if (val < 0) {
+	        return 0;
+	      }
+	      if (val > 1) {
+	        return 1;
+	      }
+	      return val;
+	    }
+
+	    /**
+	     *
+	     * @access private
+	     * @param {SCNVector3} s00 - an edge of the first segment
+	     * @param {SCNVector3} s01 - another edge of the first segment
+	     * @param {SCNVector3} s10 - an edge of the second segment
+	     * @param {SCNVector3} s11 - another edge of the second segment
+	     * @returns {Object} -
+	     *    {number} coeff0 -
+	     *    {SCNVector3} nearestPos0 -
+	     *    {number} coeff1 -
+	     *    {SCNVector3} nearestPos1 -
+	     *    {number} distance -
+	     */
+
+	  }, {
+	    key: '_segmentSegmentDist',
+	    value: function _segmentSegmentDist(s00, s01, s10, s11) {
+	      var v0 = s01.sub(s00);
+	      var v1 = s11.sub(s10);
+	      var dist = null;
+	      if (this._isParallel(v0, v1)) {
+	        dist = this._pointSegmentDist(s00, s10, s11);
+	        if (0.0 <= dist.coeff && dist.coeff <= 1.0) {
+	          return {
+	            coeff0: 0.0,
+	            nearestPos0: s00,
+	            coeff1: dist.coeff,
+	            nearestPos1: dist.nearestPos,
+	            distance: dist.distance
+	          };
+	        }
+	        dist.coeff0 = 0.0;
+	        dist.coeff1 = dist.coeff;
+	      } else {
+	        dist = this._lineLineDist(s00, v0, s10, v1);
+	        if (0.0 <= dist.coeff0 && dist.coeff0 <= 1.0 && 0.0 <= dist.coeff1 && dist.coeff1 <= 1.0) {
+	          return dist;
+	        }
+	      }
+
+	      var dist2 = dist;
+	      var t0 = this._clamp(dist.coeff0);
+	      if (t0 !== dist.coeff0) {
+	        var p0 = s00.add(v0.mul(t0));
+	        dist2 = this._pointSegmentDist(p0, s10, s11);
+	        if (0.0 <= dist2.coeff && dist2.coeff <= 1.0) {
+	          return {
+	            coeff0: t0,
+	            nearestPos0: p0,
+	            coeff1: dist2.coeff,
+	            nearestPos1: dist2.nearestPos,
+	            distance: dist2.distance
+	          };
+	        }
+	        dist2.coeff1 = dist2.coeff;
+	      }
+
+	      var t1 = this._clamp(dist2.coeff1);
+	      var p1 = s10.add(v1.mul(t1));
+	      var dist3 = this._pointSegmentDist(p1, s00, s01);
+	      if (0.0 <= dist3.coeff && dist3.coeff <= 1.0) {
+	        return {
+	          coeff0: dist3.coeff,
+	          nearestPos0: dist3.nearestPos,
+	          coeff1: t1,
+	          nearestPos1: p1,
+	          distance: dist3.distance
+	        };
+	      }
+
+	      var t = this._clamp(dist3.coeff);
+	      var p = s00.add(v0.mul(t));
+	      var d = p1.sub(p).length();
+	      return {
+	        coeff0: t,
+	        nearestPos0: p,
+	        coeff1: t1,
+	        nearestPos1: p1,
+	        distance: d
+	      };
 	    }
 	  }, {
 	    key: 'allBehaviors',
@@ -40840,12 +41442,8 @@ module.exports =
 	    _this._invTransform = null;
 	    _this._shape = null;
 
-	    //this._isBox = false
-	    //this._width = 0
-	    //this._height = 0
-	    //this._length = 0
-	    //this._radius = 0
-	    //this._center = null
+	    _this._prevPosition = null;
+	    _this._positionDiff = new _SCNVector2.default();
 	    return _this;
 	  }
 
@@ -59145,9 +59743,10 @@ module.exports =
 	      // FIXME: it should not be changed while drawing
 	      this._scene = newValue;
 	      this._renderer.scene = this._scene;
-	      if (this._scene !== null) {
-	        this._scene._physicsWorld._renderer = this._renderer;
+	      if (this._scene === null) {
+	        return;
 	      }
+	      this._scene._physicsWorld._renderer = this._renderer;
 	      this._updateTransform();
 	      this._scene.rootNode._resetPhysicsTransformRecursively();
 	    }

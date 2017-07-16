@@ -1007,6 +1007,8 @@ export default class SCNNode extends NSObject {
     child.removeFromParentNode()
     this._childNodes.push(child)
     child._parent = this
+    
+    child._resetPhysicsTransformRecursively(true)
   }
 
   /**
@@ -1259,12 +1261,12 @@ export default class SCNNode extends NSObject {
     this._physicsBody.resetTransform()
   }
 
-  _resetPhysicsTransformRecursively() {
+  _resetPhysicsTransformRecursively(updateWorldTransform = false) {
     if(this._physicsBody){
-      this._physicsBody._resetTransform()
+      this._physicsBody._resetTransform(updateWorldTransform)
     }
     for(const child of this._childNodes){
-      child._resetPhysicsTransformRecursively()
+      child._resetPhysicsTransformRecursively(updateWorldTransform)
     }
   }
 
