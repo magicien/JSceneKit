@@ -1,11 +1,10 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
-import SCNNode from './SCNNode'
-import SCNVector3 from './SCNVector3'
-import SCNMatrix4 from './SCNMatrix4'
-import CGPoint from '../CoreGraphics/CGPoint'
-
+//import SCNNode from './SCNNode'
+//import SCNVector3 from './SCNVector3'
+//import SCNMatrix4 from './SCNMatrix4'
+//import CGPoint from '../CoreGraphics/CGPoint'
 
 /**
  * Detailed information about a result from searching for elements of a scene located at a specified point, or along a specified line segment (or ray).

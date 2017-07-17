@@ -2,10 +2,10 @@
 
 import NSKeyedUnarchiver from '../Foundation/NSKeyedUnarchiver'
 import NSObject from '../ObjectiveC/NSObject'
-import SCNScene from './SCNScene'
-import SCNSceneSourceStatusHandler from './SCNSceneSourceStatusHandler'
+//import SCNScene from './SCNScene'
+//import SCNSceneSourceStatusHandler from './SCNSceneSourceStatusHandler'
 import _BinaryRequest from '../util/_BinaryRequest'
-import _File from '../util/_File'
+//import _File from '../util/_File'
 
 const _AnimationImportPolicy = {
   doNotPlay: 'keepSeparate',

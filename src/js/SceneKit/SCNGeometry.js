@@ -1,20 +1,18 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
-import SCNAnimatable from './SCNAnimatable'
+//import SCNAnimatable from './SCNAnimatable'
 import SCNCullMode from './SCNCullMode'
-import SCNBoundingVolume from './SCNBoundingVolume'
-import SCNShadable from './SCNShadable'
+//import SCNBoundingVolume from './SCNBoundingVolume'
+//import SCNShadable from './SCNShadable'
 import SCNGeometrySource from './SCNGeometrySource'
-import SCNGeometryElement from './SCNGeometryElement'
-import SCNLevelOfDetail from './SCNLevelOfDetail'
+//import SCNGeometryElement from './SCNGeometryElement'
+//import SCNLevelOfDetail from './SCNLevelOfDetail'
 import SCNMaterial from './SCNMaterial'
-import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
+//import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
 import SCNOrderedDictionary from './SCNOrderedDictionary'
 import SCNVector3 from './SCNVector3'
 import SKColor from '../SpriteKit/SKColor'
-/*global Ammo*/
-
 
 /**
  * A three-dimensional shape (also called a model or mesh) that can be displayed in a scene, with attached materials that define its appearance.
@@ -670,7 +668,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
     const bytesPerComponent = 4
     let offset = 0
     const stride = (
-        vertexComponents
+      vertexComponents
       + normalComponents
       + tangentComponents
       + colorComponents
@@ -1099,7 +1097,7 @@ This method is for OpenGL shader programs only. To bind custom variable data for
 
   /**
    * @access private
-   * @returns {Ammo.btCollisionShape}
+   * @returns {Ammo.btCollisionShape} -
    * @desc call Ammo.destroy(shape) after using it.
    */
   _createBtCollisionShape() {

@@ -288,7 +288,7 @@ export default class SKAction extends NSObject {
    * Creates an action of the given name from an action file.
    * @access public
    * @param {string} name - The name of the action.
-   * @returns {SKAction}
+   * @returns {SKAction} -
    * @see https://developer.apple.com/documentation/spritekit/skaction/1417814-init
    */
   static actionWithName(name) {

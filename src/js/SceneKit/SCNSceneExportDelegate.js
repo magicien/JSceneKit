@@ -12,10 +12,10 @@ export default class SCNSceneExportDelegate {
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  init() {
-  }
+  //constructor() {
+  //}
 
   // Writing Image Attachments
 

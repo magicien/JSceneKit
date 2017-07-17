@@ -1,8 +1,8 @@
 'use strict'
 
 import SKAction from './SKAction'
-import SKActionTimingMode from './SKActionTimingMode'
-import SKNode from './SKNode'
+//import SKActionTimingMode from './SKActionTimingMode'
+//import SKNode from './SKNode'
 
 export default class SKGroup extends SKAction {
   /**

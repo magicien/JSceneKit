@@ -1,8 +1,7 @@
 'use strict'
 
-import SCNSceneRenderer from './SCNSceneRenderer'
-import SCNScene from './SCNScene'
-
+//import SCNSceneRenderer from './SCNSceneRenderer'
+//import SCNScene from './SCNScene'
 
 /**
  * Methods your app can implement to participate in SceneKit’s animation loop or perform additional rendering. 
@@ -14,10 +13,10 @@ export default class SCNSceneRendererDelegate {
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  init() {
-  }
+  //constructor() {
+  //}
 
   // Adding Custom Logic to the Rendering Loop
 

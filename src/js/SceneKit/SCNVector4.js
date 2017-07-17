@@ -2,7 +2,6 @@
 
 import SCNMatrix4 from './SCNMatrix4'
 import SCNVector3 from './SCNVector3'
-/*global Ammo*/
 
 /**
  * A representation of a four-component vector.
@@ -46,7 +45,7 @@ export default class SCNVector4 {
    * @param {Buffer} data -
    * @param {number} [offset = 0] -
    * @param {boolean} [bigEndian = false] -
-   * @returns {SCNVector4}
+   * @returns {SCNVector4} -
    */
   static _initWithData(data, offset = 0, bigEndian = false) {
     const instance = new SCNVector4()
@@ -408,7 +407,7 @@ export default class SCNVector4 {
 
   /**
    * @access public
-   * @retruns {SCNVector3} -
+   * @returns {SCNVector3} -
    */
   quatToEulerAngles() {
     return this.quatToRotation().rotationToEulerAngles()
@@ -432,7 +431,7 @@ export default class SCNVector4 {
 
   /**
    * @access private
-   * @returns {Ammo.btVector4}
+   * @returns {Ammo.btVector4} -
    * @desc call Ammo.destroy(vec) after using it.
    */
   _createBtVector4() {
@@ -441,7 +440,7 @@ export default class SCNVector4 {
 
   /**
    * @access private
-   * @returns {Ammo.btQuaternion}
+   * @returns {Ammo.btQuaternion} -
    * @desc call Ammo.destroy(quat) after using it.
    */
   _createBtQuaternion() {

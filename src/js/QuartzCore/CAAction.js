@@ -1,7 +1,5 @@
 'use strict'
 
-
-
 /**
  * An interface that allows objects to respond to actions triggered by a CALayer.
  * @interface
@@ -12,10 +10,10 @@ export default class CAAction {
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  init() {
-  }
+  //constructor() {
+  //}
 
   // Responding to an action
 

@@ -1,8 +1,7 @@
 'use strict'
 
 import SCNGeometry from './SCNGeometry'
-import SCNChamferMode from './SCNChamferMode'
-
+//import SCNChamferMode from './SCNChamferMode'
 
 /**
  * A geometry based on a two-dimensional path, optionally extruded to create a three-dimensional object.

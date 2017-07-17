@@ -1,12 +1,12 @@
 'use strict'
 
-import CGRect from './CGRect'
-import CGLineCap from './CGLineCap'
-import CGLineJoin from './CGLineJoin'
-import CGMutablePath from './CGMutablePath'
-import CGPoint from './CGPoint'
-import CGPathFillRule from './CGPathFillRule'
-import CGPathApplierFunction from './CGPathApplierFunction'
+//import CGRect from './CGRect'
+//import CGLineCap from './CGLineCap'
+//import CGLineJoin from './CGLineJoin'
+//import CGMutablePath from './CGMutablePath'
+//import CGPoint from './CGPoint'
+//import CGPathFillRule from './CGPathFillRule'
+//import CGPathApplierFunction from './CGPathApplierFunction'
 
 const _typeID = null
 
@@ -22,13 +22,13 @@ export default class CGPath {
   /**
    * Create an immutable path of a rectangle.
    * @access public
+   * @constructor
    * @param {CGRect} rect - The rectangle to add.
    * @param {?UnsafePointer<CGAffineTransform>} transform - A pointer to an affine transformation matrix, or NULL if no transformation is needed. If specified, Core Graphics applies the transformation to the rectangle before it is added to the path.
-   * @returns {void}
    * @desc This is a convenience function that creates a path of an rectangle. Using this convenience function is more efficient than creating a mutable path and adding an rectangle to it.Calling this function is equivalent to using minX and related functions to find the corners of the rectangle, then using the moveTo(_:x:y:), addLineTo(_:x:y:), and closeSubpath() functions to draw the rectangle. 
    * @see https://developer.apple.com/documentation/coregraphics/cgpath/1411155-init
    */
-  init(rect, transform) {
+  constructor(rect, transform) {
 
     // Examining a Graphics Path
 

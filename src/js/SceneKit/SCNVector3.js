@@ -1,8 +1,6 @@
 'use strict'
 
 import SCNVector4 from './SCNVector4'
-//import _Ammo from '../third_party/ammo'
-/*global Ammo*/
 
 /**
  * A representation of a three-component vector.
@@ -44,7 +42,7 @@ export default class SCNVector3 {
    * @param {Buffer} data -
    * @param {number} [offset = 0] -
    * @param {boolean} [bigEndian = false] -
-   * @returns {SCNVector3}
+   * @returns {SCNVector3} -
    */
   static _initWithData(data, offset = 0, bigEndian = false) {
     const instance = new SCNVector3()
@@ -288,7 +286,7 @@ export default class SCNVector3 {
 
   /**
    * @access private
-   * @returns {Ammo.btVector3}
+   * @returns {Ammo.btVector3} -
    * @desc call Ammo.destroy(vec) after using it.
    */
   _createBtVector3() {

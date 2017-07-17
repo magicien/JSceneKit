@@ -1,9 +1,9 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
-import SCNAnimatable from './SCNAnimatable'
+//import SCNAnimatable from './SCNAnimatable'
 import SCNCameraProjectionDirection from './SCNCameraProjectionDirection'
-import SCNTechniqueSupport from './SCNTechniqueSupport'
+//import SCNTechniqueSupport from './SCNTechniqueSupport'
 import SCNMaterialProperty from './SCNMaterialProperty'
 import SCNMatrix4 from './SCNMatrix4'
 

@@ -1,6 +1,6 @@
 'use strict'
 
-import CAAnimation from '../QuartzCore/CAAnimation'
+//import CAAnimation from '../QuartzCore/CAAnimation'
 
 /**
  * Signature for the block called when an animation event triggers.

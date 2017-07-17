@@ -2,7 +2,7 @@
 
 import SKAction from './SKAction'
 import SKActionTimingMode from './SKActionTimingMode'
-import SKNode from './SKNode'
+//import SKNode from './SKNode'
 
 export default class SKWait extends SKAction {
   /**

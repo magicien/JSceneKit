@@ -1,8 +1,7 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
-import SCNAnimatable from './SCNAnimatable'
-
+//import SCNAnimatable from './SCNAnimatable'
 
 /**
  * The abstract superclass for objects that automatically adjust the position, rotation, or scale of a node based on rules you define.
@@ -16,9 +15,10 @@ export default class SCNConstraint extends NSObject {
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  init() {
+  constructor() {
+    super()
 
     // Tuning a Constraint’s Effect on Nodes
 

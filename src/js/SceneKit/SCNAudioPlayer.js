@@ -1,7 +1,7 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
-import SCNAudioSource from './SCNAudioSource'
+//import SCNAudioSource from './SCNAudioSource'
 import AVAudioMixerNode from '../AVFoundation/AVAudioMixerNode'
 
 

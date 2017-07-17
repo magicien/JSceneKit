@@ -1,6 +1,6 @@
 'use strict'
 
-import SCNSceneSourceStatus from './SCNSceneSourceStatus'
+//import SCNSceneSourceStatus from './SCNSceneSourceStatus'
 
 /**
  * The signature for the block that SceneKit calls periodically to report progress while loading a scene.

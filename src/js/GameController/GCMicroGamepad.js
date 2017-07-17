@@ -1,10 +1,10 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
-import GCController from './GCController'
+//import GCController from './GCController'
 //import GCMicroGamepadValueChangedHandler from './GCMicroGamepadValueChangedHandler'
-import GCControllerDirectionPad from './GCControllerDirectionPad'
-import GCControllerButtonInput from './GCControllerButtonInput'
+//import GCControllerDirectionPad from './GCControllerDirectionPad'
+//import GCControllerButtonInput from './GCControllerButtonInput'
 //import GCMicroGamepadSnapshot from './GCMicroGamepadSnapshot'
 
 

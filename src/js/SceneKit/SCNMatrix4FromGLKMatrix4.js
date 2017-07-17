@@ -1,6 +1,6 @@
 'use strict'
 
-import SCNMatrix4 from './SCNMatrix4'
+//import SCNMatrix4 from './SCNMatrix4'
 //import GLKMatrix4 from '../undefined/GLKMatrix4'
 
 /**
@@ -15,3 +15,4 @@ const SCNMatrix4FromGLKMatrix4 = function(mat) {
 }
 
 export default SCNMatrix4FromGLKMatrix4
+

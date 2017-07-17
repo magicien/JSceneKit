@@ -1,9 +1,8 @@
 'use strict'
 
 import SCNPhysicsBehavior from './SCNPhysicsBehavior'
-import SCNPhysicsBody from './SCNPhysicsBody'
-import SCNPhysicsVehicleWheel from './SCNPhysicsVehicleWheel'
-
+//import SCNPhysicsBody from './SCNPhysicsBody'
+//import SCNPhysicsVehicleWheel from './SCNPhysicsVehicleWheel'
 
 /**
  * A physics behavior that modifies a physics body to behave like a car, motorcycle, or other wheeled vehicle.

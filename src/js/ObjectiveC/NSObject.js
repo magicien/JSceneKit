@@ -1,7 +1,7 @@
 'use strict'
 
-import CGPoint from '../CoreGraphics/CGPoint'
-import CGRect from '../CoreGraphics/CGRect'
+//import CGPoint from '../CoreGraphics/CGPoint'
+//import CGRect from '../CoreGraphics/CGRect'
 import _ClassList from '../util/_ClassList'
 
 /*global Buffer*/
@@ -3631,6 +3631,7 @@ validateToolbarItem(_:) is called very frequently, so it must be efficient.If th
   /**
    * @access private
    * @param {NSCoder} coder -
+   * @param {Object} propTypes -
    * @returns {Object} -
    */
   static _loadProperties(coder, propTypes) {

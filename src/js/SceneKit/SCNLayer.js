@@ -1,7 +1,6 @@
 'use strict'
 
-import SCNScene from './SCNScene'
-
+//import SCNScene from './SCNScene'
 
 /**
  * A Core Animation layer that renders a SceneKit scene as its content.
@@ -13,9 +12,9 @@ export default class SCNLayer {
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  init() {
+  constructor() {
 
     // Specifying a Scene
 

@@ -32,7 +32,7 @@ export default class SCNPhysicsTurbulenceField extends SCNPhysicsNoiseField {
    * @access public
    * @constructor
    */
-  constructor() {
-    super()
-  }
+  //constructor() {
+  //  super()
+  //}
 }

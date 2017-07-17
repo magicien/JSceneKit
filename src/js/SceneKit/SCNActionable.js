@@ -1,7 +1,6 @@
 'use strict'
 
-import SCNAction from './SCNAction'
-
+//import SCNAction from './SCNAction'
 
 /**
  * Methods for running actions on nodes.
@@ -13,9 +12,9 @@ export default class SCNActionable {
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  init() {
+  constructor() {
 
     // Inspecting a Node’s Running Actions
 

@@ -1,7 +1,7 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
-import NSColorSpaceModel from '../AppKit/NSColorSpaceModel'
+//import NSColorSpaceModel from '../AppKit/NSColorSpaceModel'
 
 /**
  * An object that stores color data and sometimes opacity (that is, alpha value). 
@@ -68,14 +68,14 @@ export default class SKColor extends NSObject {
             const a = 1.0
             //console.log(`NSColor -> SKColor NSWhite: r:${w} g:${w} b:${w} a:${a}`)
             return new SKColor(w, w, w, a)
-          }else{
-            console.error('unknown color space')
-            throw new Error('unknown color space')
           }
-        }else{
-          // TODO: implement
-          return new SKColor()
+
+          console.error('unknown color space')
+          throw new Error('unknown color space')
         }
+
+        // TODO: implement
+        return new SKColor()
       },
       // for NSColor
       NSRGB: ['bytes', null],

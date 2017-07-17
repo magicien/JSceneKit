@@ -1,10 +1,10 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
-import SCNGeometry from './SCNGeometry'
-import SCNNode from './SCNNode'
+//import SCNGeometry from './SCNGeometry'
+//import SCNNode from './SCNNode'
 import SCNGeometrySource from './SCNGeometrySource'
-import SCNMatrix4 from './SCNMatrix4'
+//import SCNMatrix4 from './SCNMatrix4'
 import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
 import SCNVector3 from './SCNVector3'
 
@@ -275,6 +275,7 @@ export default class SCNSkinner extends NSObject {
   /**
    * @access private
    * @param {SCNNode} node -
+   * @returns {void}
    */
   _update(node) {
     if(this._useGPU){

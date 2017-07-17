@@ -1,8 +1,8 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
-import CAAnimation from '../QuartzCore/CAAnimation'
-import SCNTimingFunction from './SCNTimingFunction'
+//import CAAnimation from '../QuartzCore/CAAnimation'
+//import SCNTimingFunction from './SCNTimingFunction'
 
 /**
  * 

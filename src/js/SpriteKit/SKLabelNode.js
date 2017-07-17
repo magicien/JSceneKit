@@ -296,6 +296,7 @@ export default class SKLabelNode extends SKNode {
   /**
    * @access private
    * @param {WebGLRenderingContext} gl -
+   * @param {CGRect} viewRect -
    * @returns {void}
    */
   _render(gl, viewRect) {
@@ -431,6 +432,9 @@ export default class SKLabelNode extends SKNode {
         break
       case SKLabelHorizontalAlignmentMode.right:
         left -= w
+        break
+      default:
+        // unknown mode
         break
     }
 

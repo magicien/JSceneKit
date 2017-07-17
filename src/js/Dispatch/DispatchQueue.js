@@ -112,7 +112,7 @@ export default class DispatchQueue extends DispatchObject {
     this._qos = null
   }
 
-    // Instance Methods
+  // Instance Methods
 
   /**
    * 
@@ -251,5 +251,5 @@ export default class DispatchQueue extends DispatchObject {
 }
 
 //_main = new DispatchQueue("com.apple.main-thread", new DispatchQoS(DispatchQoS.userInteractive, 0))
-_main = new DispatchQueue("com.apple.main-thread", null)
+_main = new DispatchQueue('com.apple.main-thread', null)
 

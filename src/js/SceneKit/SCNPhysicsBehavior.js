@@ -2,7 +2,6 @@
 
 import NSObject from '../ObjectiveC/NSObject'
 
-
 /**
  * The abstract superclass for joints, vehicle simulations, and other high-level behaviors that incorporate multiple physics bodies.
  * @access public
@@ -14,8 +13,8 @@ export default class SCNPhysicsBehavior extends NSObject {
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  init() {
-  }
+  //construtor() {
+  //}
 }

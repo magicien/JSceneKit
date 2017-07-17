@@ -5,14 +5,14 @@ import SKColor from '../SpriteKit/SKColor'
 import SCNNode from './SCNNode'
 import SCNMaterial from './SCNMaterial'
 import SCNBox from './SCNBox'
-import SCNMaterialProperty from './SCNMaterialProperty'
+//import SCNMaterialProperty from './SCNMaterialProperty'
 import SCNGeometrySource from './SCNGeometrySource'
-import SCNSceneExportDelegate from './SCNSceneExportDelegate'
-import SCNSceneExportProgressHandler from './SCNSceneExportProgressHandler'
+//import SCNSceneExportDelegate from './SCNSceneExportDelegate'
+//import SCNSceneExportProgressHandler from './SCNSceneExportProgressHandler'
 import SCNSceneSource from './SCNSceneSource'
 import SCNPhysicsWorld from './SCNPhysicsWorld'
-import SCNParticleSystem from './SCNParticleSystem'
-import SCNMatrix4 from './SCNMatrix4'
+//import SCNParticleSystem from './SCNParticleSystem'
+//import SCNMatrix4 from './SCNMatrix4'
 import _BinaryRequest from '../util/_BinaryRequest'
 import _File from '../util/_File'
 import _FileReader from '../util/_FileReader'
@@ -142,17 +142,17 @@ You call this method in a try expression and handle any errors in the catch clau
 
     if(url){
       const promise = this._loadSceneWithURL(url, options)
-      .then((scene) => {
-        this._copyValue(scene)
-        if(onload){
-          onload(this)
-        }
-      })
-      .catch((error) => {
-        if(onerror){
-          onerror(error)
-        }
-      })
+        .then((scene) => {
+          this._copyValue(scene)
+          if(onload){
+            onload(this)
+          }
+        })
+        .catch((error) => {
+          if(onerror){
+            onerror(error)
+          }
+        })
       this._dataLoadedPromise = promise
     }
 
@@ -211,12 +211,12 @@ You call this method in a try expression and handle any errors in the catch clau
         }
         reader.readAsBinaryString(url)
       })
-    }else{
-      return _BinaryRequest.get(url)
-        .then((data) => {
-          return this._loadSceneWithData(data, _options)
-        })
     }
+
+    return _BinaryRequest.get(url)
+      .then((data) => {
+        return this._loadSceneWithData(data, _options)
+      })
   }
 
   /**
@@ -440,7 +440,7 @@ You call this method in a try expression and handle any errors in the catch clau
     this._particleSystemsTransform.push(transform)
 
     if(this._particleSystems.length !== this._particleSystemsTransform.length){
-      throw new Error(`particleSystems array length inconsistency`)
+      throw new Error('particleSystems array length inconsistency')
     }
   }
 

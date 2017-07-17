@@ -1,8 +1,8 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
-import CAAnimation from '../QuartzCore/CAAnimation'
-import SCNParticleInputMode from './SCNParticleInputMode'
+//import CAAnimation from '../QuartzCore/CAAnimation'
+//import SCNParticleInputMode from './SCNParticleInputMode'
 import SCNNode from './SCNNode'
 
 /**

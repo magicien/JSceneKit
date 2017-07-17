@@ -177,7 +177,7 @@ if(typeof Buffer !== 'undefined'){
         if(typeof atob === 'function'){
           return atob(str)
         }
-        throw new Error(`needs atob() function to convert to base64`)
+        throw new Error('needs atob() function to convert to base64')
       }
 
       const str = this._hex(data, true)

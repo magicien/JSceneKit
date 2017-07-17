@@ -651,8 +651,7 @@ SCNAction *sequenceReverse = [sequence reversedAction];
    * @returns {number} - animation base time for the current frame (0-1 or null).
    */
   _basetimeFromActivetime(time) {
-    let dt = time - this._beginTime
-    //let dt = time
+    const dt = time - this._beginTime
     if(this.speed === 0){
       return 0
     }

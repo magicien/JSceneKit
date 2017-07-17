@@ -1,9 +1,8 @@
 'use strict'
 
 import SCNGeometry from './SCNGeometry'
-import CGRect from '../CoreGraphics/CGRect'
-import CGSize from '../CoreGraphics/CGSize'
-
+//import CGRect from '../CoreGraphics/CGRect'
+//import CGSize from '../CoreGraphics/CGSize'
 
 /**
  * A geometry based on a string of text, optionally extruded to create a three-dimensional object. 

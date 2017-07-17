@@ -286,7 +286,7 @@ export default class CGRect {
    */
   intersects(rect2) {
     const r = this.intersection(rect2)
-    return (this.width > 0 && this.height > 0)
+    return this.width > 0 && this.height > 0
   }
 
   /**

@@ -1,8 +1,8 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
-import SCNAnimatable from './SCNAnimatable'
-import SCNGeometry from './SCNGeometry'
+//import SCNAnimatable from './SCNAnimatable'
+//import SCNGeometry from './SCNGeometry'
 import SCNMorpherCalculationMode from './SCNMorpherCalculationMode'
 
 const _weightsPattern = new RegExp(/^weights\[(\d+)\]$/)
@@ -121,6 +121,7 @@ export default class SCNMorpher extends NSObject {
   /**
    * @access private
    * @param {SCNNode} node -
+   * @returns {void}
    */
   _morph(node) {
     //console.log(`SCNMorpher._morph ${node.name}`)

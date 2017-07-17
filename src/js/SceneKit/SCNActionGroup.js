@@ -1,7 +1,7 @@
 'use strict'
 
 import SCNAction from './SCNAction'
-import SCNActionTimingMode from './SCNActionTimingMode'
+//import SCNActionTimingMode from './SCNActionTimingMode'
 
 export default class SCNActionGroup extends SCNAction {
   static get _propTypes() {

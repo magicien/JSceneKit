@@ -1,9 +1,8 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
-import SCNAnimatable from './SCNAnimatable'
-import SCNBindingBlock from './SCNBindingBlock'
-
+//import SCNAnimatable from './SCNAnimatable'
+//import SCNBindingBlock from './SCNBindingBlock'
 
 /**
  * A specification for augmenting or postprocessing SceneKit's rendering of a scene using additional drawing passes with custom Metal or OpenGL shaders.
@@ -19,12 +18,13 @@ export default class SCNTechnique extends NSObject {
   /**
    * Creates a technique from a technique definition dictionary.,
    * @access public
+   * @constructor
    * @param {Map<string, Object>} dictionary - A dictionary defining the series of rendering passes that comprise the technique.
-   * @returns {void}
    * @desc See the class overview for details of a technique definition dictionary.
    * @see https://developer.apple.com/documentation/scenekit/scntechnique/1520494-init
    */
-  init(dictionary) {
+  constructor(dictionary) {
+    super()
 
     // Retrieving a Technique’s Definition
 

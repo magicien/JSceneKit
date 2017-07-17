@@ -2,7 +2,6 @@
 
 import CAAnimation from './CAAnimation'
 
-
 /**
  * Methods your app can implement to respond when animations start and stop.
  * @interface
@@ -13,10 +12,10 @@ export default class CAAnimationDelegate {
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  init() {
-  }
+  //constructor() {
+  //}
 
   // Instance Methods
 

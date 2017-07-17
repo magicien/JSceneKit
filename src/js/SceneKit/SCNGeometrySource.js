@@ -527,7 +527,7 @@ SCNGeometrySource *source = [SCNGeometrySource geometrySourceWithBuffer:buffer
    * 
    * @access private
    * @param {SCNMatrix4} transform -
-   * @returns {Object}
+   * @returns {Object} -
    */
   _createBoundingBox(transform = null) {
     const t = (transform ? transform : SCNMatrix4MakeTranslation(0, 0, 0))

@@ -3,7 +3,7 @@
 import _AjaxRequest from '../util/_AjaxRequest'
 import NSObject from '../ObjectiveC/NSObject'
 
-/*global AudioContextr*/
+/*global AudioContext*/
 let _AudioContext = () => {}
 if(typeof AudioContext !== 'undefined'){
   _AudioContext = AudioContext
@@ -159,12 +159,12 @@ export default class SCNAudioSource extends NSObject {
     this._loading = true
 
     const promise = _AjaxRequest.get(this._url, {responseType: 'arraybuffer'})
-    .then((data) => {
-      _context.decodeAudioData(data, (buffer) => {
-        this._buffer = buffer
-        this._resolve()
+      .then((data) => {
+        _context.decodeAudioData(data, (buffer) => {
+          this._buffer = buffer
+          this._resolve()
+        })
       })
-    })
   }
 
   _play(when = 0) {

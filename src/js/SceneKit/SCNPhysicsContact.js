@@ -1,9 +1,8 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
-import SCNNode from './SCNNode'
-import SCNVector3 from './SCNVector3'
-
+//import SCNNode from './SCNNode'
+//import SCNVector3 from './SCNVector3'
 
 /**
  * Detailed information about a contact between two physics bodies in a scene’s physics simulation. 

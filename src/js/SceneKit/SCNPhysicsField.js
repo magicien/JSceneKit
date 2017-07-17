@@ -1,10 +1,9 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
-import SCNFieldForceEvaluator from './SCNFieldForceEvaluator'
-import SCNVector3 from './SCNVector3'
-import SCNPhysicsFieldScope from './SCNPhysicsFieldScope'
-
+//import SCNFieldForceEvaluator from './SCNFieldForceEvaluator'
+//import SCNVector3 from './SCNVector3'
+//import SCNPhysicsFieldScope from './SCNPhysicsFieldScope'
 
 /**
  * An object that applies forces, such as gravitation, electromagnetism, and turbulence, to physics bodies within a certain area of effect. 

@@ -378,7 +378,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
       this._resolveFunctions[index].forEach((resolve) => {
         resolve(data)
       })
-      delete(this._resolveFunctions[index])
+      delete this._resolveFunctions[index]
     }
     return data
   }
@@ -435,7 +435,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
    * @see https://developer.apple.com/documentation/foundation/nskeyedunarchiver/1413564-containsvalue
    */
   containsValueForKey(key) {
-    return (typeof this._refObj[key] !== 'undefined')
+    return typeof this._refObj[key] !== 'undefined'
   }
 
   /**
@@ -450,7 +450,7 @@ export default class NSKeyedUnarchiver extends NSCoder {
       throw new Error(`can't decode '${key}' after finishDecoding() is called`)
     }
     const value = this._getValueForKey(key)
-    return !!value
+    return Boolean(value)
   }
 
   /**

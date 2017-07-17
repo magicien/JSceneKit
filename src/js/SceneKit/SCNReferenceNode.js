@@ -105,7 +105,8 @@ export default class SCNReferenceNode extends SCNNode {
     this._isLoading = true
 
     const promise = new Promise((resolve, reject) => {
-      new SCNScene(this._referenceURL, null, (scene) => {
+      const scene = new SCNScene(this._referenceURL, null)
+      scene.didLoad.then(() => {
         scene.rootNode.name = 'referenceRoot'
         super.addChildNode(scene.rootNode)
         this._scene = scene
@@ -113,7 +114,7 @@ export default class SCNReferenceNode extends SCNNode {
         this._isLoaded = true
         this._isLoading = false
         resolve()
-      }, () => {
+      }).catch(() => {
         reject()
       })
     })

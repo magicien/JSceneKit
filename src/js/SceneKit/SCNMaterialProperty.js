@@ -1,9 +1,9 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
-import SCNAnimatable from './SCNAnimatable'
+//import SCNAnimatable from './SCNAnimatable'
 import SCNFilterMode from './SCNFilterMode'
-import SCNMatrix4 from './SCNMatrix4'
+//import SCNMatrix4 from './SCNMatrix4'
 import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
 import SCNOrderedDictionary from './SCNOrderedDictionary'
 import SCNTransaction from './SCNTransaction'

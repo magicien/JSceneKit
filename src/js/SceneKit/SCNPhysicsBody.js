@@ -1,13 +1,11 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
-import SCNBox from './SCNBox'
+//import SCNBox from './SCNBox'
 import SCNPhysicsBodyType from './SCNPhysicsBodyType'
 import SCNPhysicsShape from './SCNPhysicsShape'
 import SCNVector3 from './SCNVector3'
 import SCNVector4 from './SCNVector4'
-/*global Ammo*/
-
 
 /**
  * A set of physics simulation attributes attached to a scene graph node. 

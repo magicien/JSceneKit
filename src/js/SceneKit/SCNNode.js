@@ -5,35 +5,33 @@ import CABasicAnimation from '../QuartzCore/CABasicAnimation'
 import CAMediaTimingFunction from '../QuartzCore/CAMediaTimingFunction'
 import CAKeyframeAnimation from '../QuartzCore/CAKeyframeAnimation'
 import NSObject from '../ObjectiveC/NSObject'
-import SCNActionable from './SCNActionable'
-import SCNAnimatable from './SCNAnimatable'
-import SCNBoundingVolume from './SCNBoundingVolume'
-import SCNGeometry from './SCNGeometry'
-import SCNGeometrySource from './SCNGeometrySource'
-import SCNLight from './SCNLight'
-import SCNCamera from './SCNCamera'
-import SCNMorpher from './SCNMorpher'
-import SCNSkinner from './SCNSkinner'
+//import SCNActionable from './SCNActionable'
+//import SCNAnimatable from './SCNAnimatable'
+//import SCNBoundingVolume from './SCNBoundingVolume'
+//import SCNGeometry from './SCNGeometry'
+//import SCNGeometrySource from './SCNGeometrySource'
+//import SCNLight from './SCNLight'
+//import SCNCamera from './SCNCamera'
+//import SCNMorpher from './SCNMorpher'
+//import SCNSkinner from './SCNSkinner'
 import SCNMatrix4 from './SCNMatrix4'
-import SCNMatrix4MakeScale from './SCNMatrix4MakeScale'
+//import SCNMatrix4MakeScale from './SCNMatrix4MakeScale'
 import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
 import SCNVector3 from './SCNVector3'
 import SCNVector4 from './SCNVector4'
-import SCNQuaternion from './SCNQuaternion'
-import SCNConstraint from './SCNConstraint'
+//import SCNQuaternion from './SCNQuaternion'
+//import SCNConstraint from './SCNConstraint'
 import SCNMovabilityHint from './SCNMovabilityHint'
-import SCNNodeRendererDelegate from './SCNNodeRendererDelegate'
+//import SCNNodeRendererDelegate from './SCNNodeRendererDelegate'
 import SCNOrderedDictionary from './SCNOrderedDictionary'
-import SCNPhysicsBody from './SCNPhysicsBody'
-import SCNPhysicsField from './SCNPhysicsField'
-import SCNParticleSystem from './SCNParticleSystem'
+//import SCNPhysicsBody from './SCNPhysicsBody'
+//import SCNPhysicsField from './SCNPhysicsField'
+//import SCNParticleSystem from './SCNParticleSystem'
 import SCNTransaction from './SCNTransaction'
-import SCNAudioPlayer from './SCNAudioPlayer'
-import SCNHitTestResult from './SCNHitTestResult'
+//import SCNAudioPlayer from './SCNAudioPlayer'
+//import SCNHitTestResult from './SCNHitTestResult'
 import SKColor from '../SpriteKit/SKColor'
 import * as Constants from '../constants'
-/*global Ammo*/
-
 
 /**
  * A structural element of a scene graph, representing a position and transform in a 3D coordinate space, to which you can attach geometry, lights, cameras, or other displayable content.
@@ -459,10 +457,10 @@ export default class SCNNode extends NSObject {
     //console.log('_loadAnimationGroup start')
     const group = new CAAnimationGroup()
     const data = animation.animation
-    group.isRemovedOnCompletion = !!animation.removeOnCompletion
+    group.isRemovedOnCompletion = Boolean(animation.removeOnCompletion)
     // group.timingFunction
     // group.delegate
-    group.usesSceneTimeBase = !!animation.usesSceneTimeBase
+    group.usesSceneTimeBase = Boolean(animation.usesSceneTimeBase)
     group.fadeInDuration = data.fadeInDuration
     group.fadeOutDuration = data.fadeOutDuration
     group.beginTime = data.beginTime
@@ -497,10 +495,10 @@ export default class SCNNode extends NSObject {
     //console.log(`_loadKeyframeAnimation ${keyPath} start`)
     const anim = new CAKeyframeAnimation(keyPath)
 
-    anim.isRemovedOnCompletion = !!data.removeOnCompletion
+    anim.isRemovedOnCompletion = Boolean(data.removeOnCompletion)
     // anim.timingFunction
     // anim.delegate
-    anim.usesSceneTimeBase = !!data.sceneTimeBased
+    anim.usesSceneTimeBase = Boolean(data.sceneTimeBased)
     anim.fadeInDuration = data.fadeInDuration
     anim.fadeOutDuration = data.fadeOutDuration
     anim.beginTime = data.beginTime
@@ -517,8 +515,8 @@ export default class SCNNode extends NSObject {
       Constants.kCAFillModeBoth
     ]
     anim.fillMode = fillMode[data.fillModeMask]
-    anim.isCumulative = !!data.cumulative
-    anim.isAdditive = !!data.additive
+    anim.isCumulative = Boolean(data.cumulative)
+    anim.isAdditive = Boolean(data.additive)
     // data.attributes
 
     const keyframe = data.keyframeController
@@ -555,7 +553,7 @@ export default class SCNNode extends NSObject {
     //console.log(`_loadBasicAnimation ${keyPath} start`)
     const anim = new CABasicAnimation(keyPath)
 
-    anim.isRemovedOnCompletion = !!data.removeOnCompletion
+    anim.isRemovedOnCompletion = Boolean(data.removeOnCompletion)
     anim.timingFunction = new CAMediaTimingFunction(
       data.timingFunction.c0,
       data.timingFunction.c1,
@@ -563,7 +561,7 @@ export default class SCNNode extends NSObject {
       data.timingFunction.c3
     )
     // anim.delegate
-    anim.usesSceneTimeBase = !!data.sceneTimeBased
+    anim.usesSceneTimeBase = Boolean(data.sceneTimeBased)
     anim.fadeInDuration = data.fadeInDuration
     anim.fadeOutDuration = data.fadeOutDuration
     anim.beginTime = data.beginTime
@@ -580,8 +578,8 @@ export default class SCNNode extends NSObject {
       Constants.kCAFillModeBoth
     ]
     anim.fillMode = fillMode[data.fillModeMask]
-    anim.isCumulative = !!data.cumulative
-    anim.isAdditive = !!data.additive
+    anim.isCumulative = Boolean(data.cumulative)
+    anim.isAdditive = Boolean(data.additive)
     // data.attributes
     // data.baseType
 
@@ -916,7 +914,7 @@ export default class SCNNode extends NSObject {
   }
   set orientation(newValue) {
     if(!(newValue instanceof SCNVector4)){
-      throw new Error(`orientation must be SCNVector4`)
+      throw new Error('orientation must be SCNVector4')
     }
 
     this._rotation = newValue.quatToRotation()
@@ -1845,9 +1843,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     if(this._fixedBoundingBox){
       return this._fixedBoundingBox
     }
-    //if(!this._boundingBox){
-      this._updateBoundingBox()
-    //}
+    this._updateBoundingBox()
     return this._boundingBox
   }
   set boundingBox(newValue) {
@@ -1957,7 +1953,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
   }
 
   _unionChildBoundingBox(box, cbox) {
-    let p = this.presentation ? this.presentation : this
+    const p = this.presentation ? this.presentation : this
     const pos = p._position
     const scale = p._scale
     const min = new SCNVector3(
@@ -2312,7 +2308,7 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
   
   /**
    * @access private
-   * @returns {Ammo.btTransform}
+   * @returns {Ammo.btTransform} -
    * @desc call Ammo.destroy(transform) after using it.
    */
   _createBtTransform() {

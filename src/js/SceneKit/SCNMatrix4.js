@@ -118,7 +118,7 @@ export default class SCNMatrix4 {
    * @param {Buffer} data -
    * @param {number} [offset = 0] -
    * @param {boolean} [bigEndian = false] -
-   * @returns {SCNMatrix4}
+   * @returns {SCNMatrix4} -
    */
   static _initWithData(data, offset = 0, bigEndian = false) {
     const instance = new SCNMatrix4()

@@ -54,6 +54,8 @@ export default class SCNGeometryElement extends NSObject {
    * @constructor
    * @param {number[]|Buffer} indices - An array of index values, each of which identifies a vertex in a geometry source.
    * @param {SCNGeometryPrimitiveType} primitiveType - The drawing primitive that connects vertices when rendering the geometry element. For possible values, see SCNGeometryPrimitiveType.
+   * @param {?number} primitiveCount -
+   * @param {number} [bytesPerIndex = 2] -
    * @desc SceneKit connects the vertices in the order specified by the indices array, arranged according to the primitiveType parameter.This initializer is equivalent to the init(data:primitiveType:primitiveCount:bytesPerIndex:) initializer, but does not require an intermediary Data object; instead, it automatically infers the necessary allocation size and bytesPerIndex values based on the contents of the indices array. To create a custom SCNGeometry object from the geometry element, use the init(sources:elements:) initializer.
    * @see https://developer.apple.com/documentation/scenekit/scngeometryelement/1523191-init
    */
@@ -94,6 +96,8 @@ export default class SCNGeometryElement extends NSObject {
         case SCNGeometryPrimitiveType.polygon:
           this._primitiveCount = this._data.length / 2
           break
+        default:
+          throw new Error('unknown primitive type: ' + primitiveType)
       }
     }
     this._bytesPerIndex = bytesPerIndex
@@ -246,8 +250,8 @@ export default class SCNGeometryElement extends NSObject {
         this._data[index+1],
         this._data[index+2]
       ]
-    }else{
-      throw new Error(`unknown primitive type: ${this._primitiveType}`)
     }
+
+    throw new Error(`unknown primitive type: ${this._primitiveType}`)
   }
 }

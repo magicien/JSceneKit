@@ -1,9 +1,8 @@
 'use strict'
 
 import SCNConstraint from './SCNConstraint'
-import SCNNode from './SCNNode'
-import SCNMatrix4 from './SCNMatrix4'
-
+//import SCNNode from './SCNNode'
+//import SCNMatrix4 from './SCNMatrix4'
 
 /**
  * A constraint that runs a specified closure to compute a new transform (position, rotation, and scale) for each node that the constraint affects.
@@ -16,10 +15,10 @@ export default class SCNTransformConstraint extends SCNConstraint {
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  init() {
-  }
+  //constructor() {
+  //}
 
   // Creating a Transform Constraint
 

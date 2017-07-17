@@ -1,8 +1,8 @@
 'use strict'
 
 import SKAction from './SKAction'
-import SKActionTimingMode from './SKActionTimingMode'
-import SKNode from './SKNode'
+//import SKActionTimingMode from './SKActionTimingMode'
+//import SKNode from './SKNode'
 
 export default class SKRepeat extends SKAction {
   /**
@@ -99,7 +99,7 @@ export default class SKRepeat extends SKAction {
       }
       this._repeatedAction._resetFinished()
     }
-    let t = dt - this._timesRepeated
+    const t = dt - this._timesRepeated
     this._repeatedAction._applyAction(obj, t, false)
     this._finished = false
   }

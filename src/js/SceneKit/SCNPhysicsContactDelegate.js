@@ -1,8 +1,7 @@
 'use strict'
 
-import SCNPhysicsWorld from './SCNPhysicsWorld'
-import SCNPhysicsContact from './SCNPhysicsContact'
-
+//import SCNPhysicsWorld from './SCNPhysicsWorld'
+//import SCNPhysicsContact from './SCNPhysicsContact'
 
 /**
  * Methods you can implement to respond when a contact or collision occurs between two physics bodies in a scene.
@@ -14,10 +13,10 @@ export default class SCNPhysicsContactDelegate {
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  init() {
-  }
+  //construtor() {
+  //}
 
   // Responding to Contact Events
 

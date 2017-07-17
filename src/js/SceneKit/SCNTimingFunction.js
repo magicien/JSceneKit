@@ -1,9 +1,8 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
-import CAMediaTimingFunction from '../QuartzCore/CAMediaTimingFunction'
-import SCNActionTimingMode from './SCNActionTimingMode'
-
+//import CAMediaTimingFunction from '../QuartzCore/CAMediaTimingFunction'
+//import SCNActionTimingMode from './SCNActionTimingMode'
 
 /**
  * 

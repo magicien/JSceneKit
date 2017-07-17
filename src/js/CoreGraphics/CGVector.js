@@ -14,24 +14,19 @@ export default class CGVector {
   /**
    * Creates a vector with components specified as integer values.
    * @access public
+   * @constructor
    * @param {number} dx - 
    * @param {number} dy - 
-   * @returns {void}
    * @see https://developer.apple.com/documentation/coregraphics/cgvector/1456249-init
    */
-  init(dx, dy) {
-
-    // Special Values
-
-    this._zero = null
-
+  constructor(dx = 0, dy = 0) {
     // Geometric Properties
-
-    this._dx = 0
-    this._dy = 0
+    this._dx = dx
+    this._dy = dy
   }
 
   // Special Values
+
   /**
    * The vector whose components are both zero.
    * @type {CGVector}
@@ -39,8 +34,6 @@ export default class CGVector {
    * @see https://developer.apple.com/documentation/coregraphics/cgvector/1454067-zero
    */
   get zero() {
-    return this._zero
+    return new CGVector()
   }
-
-  // Geometric Properties
 }

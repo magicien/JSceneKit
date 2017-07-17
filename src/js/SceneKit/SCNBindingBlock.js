@@ -1,7 +1,7 @@
 'use strict'
 
-import SCNNode from './SCNNode'
-import SCNRenderer from './SCNRenderer'
+//import SCNNode from './SCNNode'
+//import SCNRenderer from './SCNRenderer'
 
 /**
  * The signature for a block called for binding or unbinding a GLSL symbol in a custom program.

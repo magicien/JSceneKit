@@ -1,14 +1,14 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
-import SCNAnimatable from './SCNAnimatable'
+//import SCNAnimatable from './SCNAnimatable'
 import SCNBlendMode from './SCNBlendMode'
 import SCNColorMask from './SCNColorMask'
 import SCNCullMode from './SCNCullMode'
 import SCNFillMode from './SCNFillMode'
 import SCNMaterialProperty from './SCNMaterialProperty'
 import SCNOrderedDictionary from './SCNOrderedDictionary'
-import SCNShadable from './SCNShadable'
+//import SCNShadable from './SCNShadable'
 import SCNTransparencyMode from './SCNTransparencyMode'
 import SKColor from '../SpriteKit/SKColor'
 

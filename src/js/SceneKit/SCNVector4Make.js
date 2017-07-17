@@ -1,6 +1,6 @@
 'use strict'
 
-import SCNVector4 from './SCNVector4'
+//import SCNVector4 from './SCNVector4'
 
 /**
  * Returns a new four-component vector created from individual component values.

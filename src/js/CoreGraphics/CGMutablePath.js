@@ -1,10 +1,5 @@
 'use strict'
 
-import CGPoint from './CGPoint'
-import CGRect from './CGRect'
-import CGPath from './CGPath'
-
-
 /**
  * A mutable graphics path: a mathematical description of shapes or lines to be drawn in a graphics context.
  * @access public
@@ -17,10 +12,10 @@ export default class CGMutablePath {
   /**
    * Creates a mutable graphics path.
    * @access public
-   * @returns {void}
+   * @constructor
    * @see https://developer.apple.com/documentation/coregraphics/cgmutablepath/1411209-init
    */
-  init() {
+  constructor() {
   }
 
   // Copying a Graphics Path

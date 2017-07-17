@@ -11,7 +11,7 @@ export default class CGSize {
    * @param {Buffer} data -
    * @param {number} [offset = 0] -
    * @param {boolean} [bigEndian = false] -
-   * @returns {CGSize}
+   * @returns {CGSize} -
    */
   static _initWithData(data, offset = 0, bigEndian = false) {
     throw new Error('not implemented')

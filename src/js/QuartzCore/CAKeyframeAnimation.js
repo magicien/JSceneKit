@@ -1,8 +1,8 @@
 'use strict'
 
 import CAPropertyAnimation from './CAPropertyAnimation'
-import CGPath from '../CoreGraphics/CGPath'
-import CAMediaTimingFunction from './CAMediaTimingFunction'
+//import CGPath from '../CoreGraphics/CGPath'
+//import CAMediaTimingFunction from './CAMediaTimingFunction'
 import * as Constants from '../constants'
 
 

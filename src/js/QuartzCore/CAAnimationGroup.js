@@ -54,7 +54,7 @@ export default class CAAnimationGroup extends CAAnimation {
     this._handleEvents(obj, t)
   }
 
- /**
+  /**
    * @access public
    * @returns {CAAnimationGroup} -
    */

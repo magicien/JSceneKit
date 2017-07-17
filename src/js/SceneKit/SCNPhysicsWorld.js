@@ -5,18 +5,17 @@ import SCNBox from './SCNBox'
 import SCNCapsule from './SCNCapsule'
 import SCNGeometryPrimitiveType from './SCNGeometryPrimitiveType'
 import SCNGeometrySource from './SCNGeometrySource'
-import SCNHitTestResult from './SCNHitTestResult'
+//import SCNHitTestResult from './SCNHitTestResult'
 import SCNMatrix4 from './SCNMatrix4'
-import SCNPhysicsBody from './SCNPhysicsBody'
+//import SCNPhysicsBody from './SCNPhysicsBody'
 import SCNPhysicsBodyType from './SCNPhysicsBodyType'
-import SCNPhysicsBehavior from './SCNPhysicsBehavior'
+//import SCNPhysicsBehavior from './SCNPhysicsBehavior'
 import SCNPhysicsContact from './SCNPhysicsContact'
-import SCNPhysicsContactDelegate from './SCNPhysicsContactDelegate'
+//import SCNPhysicsContactDelegate from './SCNPhysicsContactDelegate'
 import SCNPhysicsShape from './SCNPhysicsShape'
 import SCNSphere from './SCNSphere'
 import SCNVector3 from './SCNVector3'
 //import _Ammo from '../third_party/ammo'
-/*global Ammo*/
 
 const _TestOption = {
   backfaceCulling: 'backfaceCulling',
@@ -581,7 +580,7 @@ if (results.firstObject.node == player) {
    * @access private
    * @param {SCNVector3} from -
    * @param {SCNVector3} to -
-   + @returns {SCNMatrix4} -
+   * @returns {SCNMatrix4} -
    */
   _createViewProjectionTransform(from, to) {
     const vec = to.sub(from)

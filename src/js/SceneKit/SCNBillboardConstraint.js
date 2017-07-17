@@ -1,8 +1,7 @@
 'use strict'
 
 import SCNConstraint from './SCNConstraint'
-import SCNBillboardAxis from './SCNBillboardAxis'
-
+//import SCNBillboardAxis from './SCNBillboardAxis'
 
 /**
  * A constraint that orients a node to always point toward the current camera.
@@ -15,9 +14,10 @@ export default class SCNBillboardConstraint extends SCNConstraint {
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  init() {
+  constructor() {
+    super()
 
     // Working with a Constraint’s Degrees of Freedom
 

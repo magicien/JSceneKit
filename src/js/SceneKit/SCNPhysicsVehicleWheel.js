@@ -1,9 +1,8 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
-import SCNNode from './SCNNode'
-import SCNVector3 from './SCNVector3'
-
+//import SCNNode from './SCNNode'
+//import SCNVector3 from './SCNVector3'
 
 /**
  * The appearance and physical characteristics of an individual wheel associated with an physics vehicle behavior.

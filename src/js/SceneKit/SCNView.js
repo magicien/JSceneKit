@@ -6,14 +6,14 @@ import CGRect from '../CoreGraphics/CGRect'
 import CGSize from '../CoreGraphics/CGSize'
 import GCController from '../GameController/GCController'
 import SCNRenderer from './SCNRenderer'
-import SCNTechniqueSupport from './SCNTechniqueSupport'
-import SCNScene from './SCNScene'
+//import SCNTechniqueSupport from './SCNTechniqueSupport'
+//import SCNScene from './SCNScene'
 import SCNRenderingAPI from './SCNRenderingAPI'
 import SCNAntialiasingMode from './SCNAntialiasingMode'
-import SCNNode from './SCNNode'
-import SCNCamera from './SCNCamera'
-import SCNMatrix4 from './SCNMatrix4'
-import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
+//import SCNNode from './SCNNode'
+//import SCNCamera from './SCNCamera'
+//import SCNMatrix4 from './SCNMatrix4'
+//import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
 import SCNVector4 from './SCNVector4'
 import SKColor from '../SpriteKit/SKColor'
 /*global window*/
@@ -372,6 +372,8 @@ export default class SCNView {
         case 'ArrowRight':
           ev.keyCode = 124
           break
+        default:
+          // nothing to do
       }
       if(typeof e.repeat !== 'undefined'){
         ev.isARepeat = e.repeat
@@ -398,6 +400,8 @@ export default class SCNView {
         case 'ArrowRight':
           ev.keyCode = 124
           break
+        default:
+          // nothing to do
       }
       this.keyUpWith(ev)
     })
@@ -727,6 +731,7 @@ export default class SCNView {
   /**
    * Required. A delegate object that receives messages about SceneKit’s rendering process.
    * @type {?SCNSceneRendererDelegate}
+   * @param {?SCNSceneRendererDelegate} newValue -
    * @see https://developer.apple.com/documentation/scenekit/scnscenerenderer/1522671-delegate
    */
   set delegate(newValue) {

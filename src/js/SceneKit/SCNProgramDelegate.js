@@ -3,7 +3,6 @@
 //import SCNProgram from './SCNProgram'
 //import SCNRenderer from './SCNRenderer'
 
-
 /**
  * The interface for tracking errors that occur when compiling shader source code.
  * @interface
@@ -14,10 +13,10 @@ export default class SCNProgramDelegate {
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  init() {
-  }
+  //constructor() {
+  //}
 
   // Handling Shader Compilation Errors
 

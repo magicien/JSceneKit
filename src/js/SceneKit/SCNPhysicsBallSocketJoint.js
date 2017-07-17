@@ -1,9 +1,8 @@
 'use strict'
 
 import SCNPhysicsBehavior from './SCNPhysicsBehavior'
-import SCNPhysicsBody from './SCNPhysicsBody'
-import SCNVector3 from './SCNVector3'
-
+//import SCNPhysicsBody from './SCNPhysicsBody'
+//import SCNVector3 from './SCNVector3'
 
 /**
  * A physics behavior that connects two physics bodies and allows them to pivot around each other in any direction.

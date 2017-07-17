@@ -1,14 +1,14 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
-import CGPoint from '../CoreGraphics/CGPoint'
-import CGVector from '../CoreGraphics/CGVector'
+//import CGPoint from '../CoreGraphics/CGPoint'
+//import CGVector from '../CoreGraphics/CGVector'
 import CGSize from '../CoreGraphics/CGSize'
-import CGRect from '../CoreGraphics/CGRect'
-import CATransform3D from '../QuartzCore/CATransform3D'
-import SCNVector3 from '../SceneKit/SCNVector3'
-import SCNVector4 from '../SceneKit/SCNVector4'
-import SCNMatrix4 from '../SceneKit/SCNMatrix4'
+//import CGRect from '../CoreGraphics/CGRect'
+//import CATransform3D from '../QuartzCore/CATransform3D'
+//import SCNVector3 from '../SceneKit/SCNVector3'
+//import SCNVector4 from '../SceneKit/SCNVector4'
+//import SCNMatrix4 from '../SceneKit/SCNMatrix4'
 
 
 /**

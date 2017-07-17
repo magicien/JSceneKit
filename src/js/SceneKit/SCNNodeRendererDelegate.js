@@ -1,8 +1,7 @@
 'use strict'
 
-import SCNNode from './SCNNode'
-import SCNRenderer from './SCNRenderer'
-
+//import SCNNode from './SCNNode'
+//import SCNRenderer from './SCNRenderer'
 
 /**
  * Methods you can implement to use your own custom Metal or OpenGL drawing code to render content for a node. 
@@ -14,10 +13,10 @@ export default class SCNNodeRendererDelegate {
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  init() {
-  }
+  //construtor() {
+  //}
 
   // Customizing the Rendering of a Node
 

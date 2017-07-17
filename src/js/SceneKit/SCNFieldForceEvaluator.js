@@ -1,6 +1,6 @@
 'use strict'
 
-import SCNVector3 from './SCNVector3'
+//import SCNVector3 from './SCNVector3'
 
 /**
  * The signature for a block that SceneKit calls to determine the effect of a custom field on an object.

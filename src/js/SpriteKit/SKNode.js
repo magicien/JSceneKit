@@ -694,14 +694,15 @@ parentNode.enumerateChildNodes(withName: "SKSpriteNode") {
   }
 
   _runActionForKeyCompletionHandler(action, key, block) {
+    let _key = key
     if(typeof key === 'undefined' || key === null){
-      key = Symbol()
+      _key = Symbol()
     }
     const act = action.copy()
     // FIXME: use current frame time
     act._actionStartTime = Date.now() * 0.001
     act._completionHandler = block
-    this._actions.set(key, act)
+    this._actions.set(_key, act)
   }
 
   /**

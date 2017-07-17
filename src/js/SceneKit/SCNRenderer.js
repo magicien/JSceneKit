@@ -4,10 +4,10 @@ import CGPoint from '../CoreGraphics/CGPoint'
 import CGRect from '../CoreGraphics/CGRect'
 import CGSize from '../CoreGraphics/CGSize'
 import NSObject from '../ObjectiveC/NSObject'
-import SCNSceneRenderer from './SCNSceneRenderer'
-import SCNTechniqueSupport from './SCNTechniqueSupport'
-import SCNScene from './SCNScene'
-import SCNAntialiasingMode from './SCNAntialiasingMode'
+//import SCNSceneRenderer from './SCNSceneRenderer'
+//import SCNTechniqueSupport from './SCNTechniqueSupport'
+//import SCNScene from './SCNScene'
+//import SCNAntialiasingMode from './SCNAntialiasingMode'
 import SCNMatrix4 from './SCNMatrix4'
 import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
 import SCNNode from './SCNNode'
@@ -1177,18 +1177,6 @@ export default class SCNRenderer extends NSObject {
     this._currentProgram = null
   }
 
-  /**
-   * Creates a renderer with the specified Metal device.
-   * @access public
-   * @param {?MTLDevice} device - A Metal device.
-   * @param {?Map<AnyHashable, Object>} [options = null] - An optional dictionary for future extensions.
-   * @returns {void}
-   * @desc Use this initializer to create a SceneKit renderer that draws into the rendering targets your app already uses to draw other content. For the device parameter, pass the MTLDevice object your app uses for drawing. Then, to tell SceneKit to render your content, call the SCNRenderer method, providing a command buffer and render pass descriptor for SceneKit to use in its rendering.
-   * @see https://developer.apple.com/documentation/scenekit/scnrenderer/1518404-init
-   */
-  init(device, options = null) {
-  }
-
   // Managing Animation Timing
 
   /**
@@ -1247,14 +1235,14 @@ export default class SCNRenderer extends NSObject {
     this._lightNodes = this._createLightNodeArray() // createLightNodeArray must be called before getting program
 
     const p = this._defaultProgram
-    const program = p._glProgram
+    const glProgram = p._getGLProgramForContext(gl)
 
     gl.clearColor(this._backgroundColor.red, this._backgroundColor.green, this._backgroundColor.blue, this._backgroundColor.alpha)
     gl.clearDepth(1.0)
     gl.clearStencil(0)
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT | gl.STENCIL_BUFFER_BIT)
 
-    //gl.useProgram(program)
+    //gl.useProgram(glProgram)
     this._useProgram(p)
 
     gl.depthFunc(gl.LEQUAL)
@@ -1266,7 +1254,7 @@ export default class SCNRenderer extends NSObject {
     // Camera
     //////////////////////////
     if(this._cameraBuffer === null){
-      this._initializeCameraBuffer(program)
+      this._initializeCameraBuffer(glProgram)
     }
     const cameraData = []
     const cameraNode = this._getCameraNode()
@@ -1291,7 +1279,7 @@ export default class SCNRenderer extends NSObject {
     // Fog
     //////////////////////////
     if(this._fogBuffer === null){
-      this._initializeFogBuffer(program)
+      this._initializeFogBuffer(glProgram)
     }
     const fogData = []
     if(this.scene.fogColor !== null && this.scene.fogEndDistance !== 0){
@@ -1313,7 +1301,7 @@ export default class SCNRenderer extends NSObject {
     // Lights
     //////////////////////////
     if(this._lightBuffer === null){
-      this._initializeLightBuffer(program)
+      this._initializeLightBuffer(glProgram)
     }
     const lights = this._lightNodes
     const lightData = []
@@ -1579,7 +1567,7 @@ export default class SCNRenderer extends NSObject {
       const node = arr.shift()
       if(node.presentation !== null && node.presentation.light !== null){
         if(node.presentation.light.type === 'directional' && node.presentation.light.castsShadow){
-          targetNodes['directionalShadow'].push(node)
+          targetNodes.directionalShadow.push(node)
         }else{
           targetNodes[node.presentation.light.type].push(node)
         }
@@ -1621,7 +1609,7 @@ export default class SCNRenderer extends NSObject {
   /**
    *
    * @access private
-   * @param {SCNNode} node -
+   * @param {SCNNode[]} nodes -
    * @param {SCNNode} lightNode -
    * @returns {void}
    */
@@ -1633,11 +1621,11 @@ export default class SCNRenderer extends NSObject {
     }
     this._setViewPort(light._shadowMapWidth, light._shadowMapHeight)
     const gl = this.context
-    const program = this._defaultShadowProgram._glProgram
+    const glProgram = this._defaultShadowProgram._getGLProgramForContext(gl)
     gl.bindFramebuffer(gl.FRAMEBUFFER, light._getDepthBufferForContext(gl))
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT)
 
-    gl.uniformMatrix4fv(gl.getUniformLocation(program, 'viewProjectionTransform'), false, lp.lightViewProjectionTransform.float32Array())
+    gl.uniformMatrix4fv(gl.getUniformLocation(glProgram, 'viewProjectionTransform'), false, lp.lightViewProjectionTransform.float32Array())
 
     for(const node of nodes){
       const geometry = node.presentation.geometry
@@ -1648,7 +1636,7 @@ export default class SCNRenderer extends NSObject {
       }
 
       if(geometry._shadowVAO === null){
-        this._initializeShadowVAO(node, program)
+        this._initializeShadowVAO(node, glProgram)
       }
 
       if(node.morpher !== null){
@@ -1657,15 +1645,15 @@ export default class SCNRenderer extends NSObject {
 
       if(node.presentation.skinner !== null){
         if(node.presentation.skinner._useGPU){
-          gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
-          gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array())
+          gl.uniform1i(gl.getUniformLocation(glProgram, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
+          gl.uniform4fv(gl.getUniformLocation(glProgram, 'skinningJoints'), node.presentation.skinner.float32Array())
         }else{
-          gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0)
-          gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), SCNMatrix4MakeTranslation(0, 0, 0).float32Array3x4f())
+          gl.uniform1i(gl.getUniformLocation(glProgram, 'numSkinningJoints'), 0)
+          gl.uniform4fv(gl.getUniformLocation(glProgram, 'skinningJoints'), SCNMatrix4MakeTranslation(0, 0, 0).float32Array3x4f())
         }
       }else{
-        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0)
-        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f())
+        gl.uniform1i(gl.getUniformLocation(glProgram, 'numSkinningJoints'), 0)
+        gl.uniform4fv(gl.getUniformLocation(glProgram, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f())
       }
 
       for(let i=0; i<geometryCount; i++){
@@ -1735,20 +1723,20 @@ export default class SCNRenderer extends NSObject {
       return
     }
     const scnProgram = this._getProgramForGeometry(geometry)
-    const program = scnProgram._glProgram
+    const glProgram = scnProgram._getGLProgramForContext(gl)
 
     this._switchProgram(scnProgram)
 
     if(geometry._vertexArrayObjects === null){
-      this._initializeVAO(node, program)
-      this._initializeUBO(node, program) // FIXME: program should have UBO, not node.
+      this._initializeVAO(node, glProgram)
+      this._initializeUBO(node, glProgram) // FIXME: program should have UBO, not node.
     }
 
     if(node.morpher !== null || (node.skinner && !node.skinner._useGPU)){
       this._updateVAO(node)
     }
 
-    const uniformTime = gl.getUniformLocation(program, 'u_time')
+    const uniformTime = gl.getUniformLocation(glProgram, 'u_time')
     if(uniformTime){
       // this._time might be too large.
       const time = this._time % 100000.0
@@ -1757,25 +1745,25 @@ export default class SCNRenderer extends NSObject {
 
     if(node.presentation.skinner !== null){
       if(node.presentation.skinner._useGPU){
-        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
-        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array())
+        gl.uniform1i(gl.getUniformLocation(glProgram, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
+        gl.uniform4fv(gl.getUniformLocation(glProgram, 'skinningJoints'), node.presentation.skinner.float32Array())
       }else{
-        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0)
-        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), SCNMatrix4MakeTranslation(0, 0, 0).float32Array3x4f())
+        gl.uniform1i(gl.getUniformLocation(glProgram, 'numSkinningJoints'), 0)
+        gl.uniform4fv(gl.getUniformLocation(glProgram, 'skinningJoints'), SCNMatrix4MakeTranslation(0, 0, 0).float32Array3x4f())
       }
     }else{
-      gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0)
-      gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f())
+      gl.uniform1i(gl.getUniformLocation(glProgram, 'numSkinningJoints'), 0)
+      gl.uniform4fv(gl.getUniformLocation(glProgram, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f())
     }
 
     for(let i=0; i<geometryCount; i++){
       const materialCount = geometry.materials.length
       const material = geometry.materials[i % materialCount]
-      let p = program
+      let p = glProgram
       if(material && material.program){
         this._switchProgram(material.program)
         // TODO: refactoring
-        p = material.program._glProgram
+        p = material.program._getGLProgramForContext(gl)
         const _uniformTime = gl.getUniformLocation(p, 'u_time')
         if(uniformTime){
           // this._time might be too large.
@@ -1787,8 +1775,8 @@ export default class SCNRenderer extends NSObject {
             gl.uniform1i(gl.getUniformLocation(p, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
             gl.uniform4fv(gl.getUniformLocation(p, 'skinningJoints'), node.presentation.skinner.float32Array())
           }else{
-            gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0)
-            gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), SCNMatrix4MakeTranslation(0, 0, 0).float32Array3x4f())
+            gl.uniform1i(gl.getUniformLocation(glProgram, 'numSkinningJoints'), 0)
+            gl.uniform4fv(gl.getUniformLocation(glProgram, 'skinningJoints'), SCNMatrix4MakeTranslation(0, 0, 0).float32Array3x4f())
           }
         }else{
           gl.uniform1i(gl.getUniformLocation(p, 'numSkinningJoints'), 0)
@@ -1871,6 +1859,7 @@ export default class SCNRenderer extends NSObject {
    *
    * @access private
    * @param {SCNParticleSystem} system - 
+   * @param {?SCNNode} [node = null] -
    * @returns {void}
    */
   _renderParticleSystem(system, node = null) {
@@ -1884,22 +1873,22 @@ export default class SCNRenderer extends NSObject {
     if(system._program !== null){
       p = system._program
     }
-    const program = p._glProgram
+    const glProgram = p._getGLProgramForContext(gl)
     this._useProgram(p)
     //this._switchProgram(p)
     gl.disable(gl.CULL_FACE)
 
     if(system._vertexBuffer === null){
-      system._initializeVAO(gl, program)
+      system._initializeVAO(gl, glProgram)
     }
     gl.bindVertexArray(system._vertexArray)
 
-    system._bufferMaterialData(gl, program)
+    system._bufferMaterialData(gl, glProgram)
     if(node){
-      gl.uniformMatrix4fv(gl.getUniformLocation(program, 'modelTransform'), false, node._worldTransform.float32Array())
+      gl.uniformMatrix4fv(gl.getUniformLocation(glProgram, 'modelTransform'), false, node._worldTransform.float32Array())
     }else{
       let m = SCNMatrix4MakeTranslation(0, 0, 0)
-      gl.uniformMatrix4fv(gl.getUniformLocation(program, 'modelTransform'), false, m.float32Array())
+      gl.uniformMatrix4fv(gl.getUniformLocation(glProgram, 'modelTransform'), false, m.float32Array())
     }
 
     gl.drawElements(gl.TRIANGLES, system._particles.length * 6, system._glIndexSize, 0)
@@ -1916,7 +1905,7 @@ export default class SCNRenderer extends NSObject {
   _renderNodeForHitTest(node, objectID, options) {
     const gl = this.context
     const geometry = node.presentation.geometry
-    const program = this._defaultHitTestProgram._glProgram
+    const glProgram = this._defaultHitTestProgram._getGLProgramForContext(gl)
 
     const geometryCount = geometry.geometryElements.length
     if(geometryCount === 0){
@@ -1928,22 +1917,22 @@ export default class SCNRenderer extends NSObject {
       return
     }
     if(geometry._hitTestVAO === null){
-      this._initializeHitTestVAO(node, program)
+      this._initializeHitTestVAO(node, glProgram)
     }
 
-    gl.uniform1i(gl.getUniformLocation(program, 'objectID'), objectID)
+    gl.uniform1i(gl.getUniformLocation(glProgram, 'objectID'), objectID)
 
     if(node.presentation.skinner !== null && node.presentation.skinner._useGPU){
       if(node.presentation.skinner._useGPU){
-        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
-        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array())
+        gl.uniform1i(gl.getUniformLocation(glProgram, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
+        gl.uniform4fv(gl.getUniformLocation(glProgram, 'skinningJoints'), node.presentation.skinner.float32Array())
       }else{
-        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0)
-        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), SCNMatrix4MakeTranslation(0, 0, 0).float32Array3x4f())
+        gl.uniform1i(gl.getUniformLocation(glProgram, 'numSkinningJoints'), 0)
+        gl.uniform4fv(gl.getUniformLocation(glProgram, 'skinningJoints'), SCNMatrix4MakeTranslation(0, 0, 0).float32Array3x4f())
       }
     }else{
-      gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0)
-      gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f())
+      gl.uniform1i(gl.getUniformLocation(glProgram, 'numSkinningJoints'), 0)
+      gl.uniform4fv(gl.getUniformLocation(glProgram, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f())
     }
 
     for(let i=0; i<geometryCount; i++){
@@ -1951,7 +1940,7 @@ export default class SCNRenderer extends NSObject {
       const element = geometry.geometryElements[i]
 
       gl.bindVertexArray(vao)
-      gl.uniform1i(gl.getUniformLocation(program, 'geometryID'), i)
+      gl.uniform1i(gl.getUniformLocation(glProgram, 'geometryID'), i)
 
       let shape = null
       switch(element.primitiveType){
@@ -2012,29 +2001,29 @@ export default class SCNRenderer extends NSObject {
       // nothing to draw...
       return
     }
-    const program = this._defaultHitTestProgram._glProgram
+    const glProgram = this._defaultHitTestProgram._getGLProgramForContext(gl)
 
     if(geometry._vertexBuffer === null){
       // should I copy the geometry?
       geometry._createVertexBuffer(gl, node, false, geometry)
     }
     if(geometry._hitTestVAO === null){
-      this._initializeHitTestVAO(node, program, true)
+      this._initializeHitTestVAO(node, glProgram, true)
     }
 
-    gl.uniform1i(gl.getUniformLocation(program, 'objectID'), objectID)
+    gl.uniform1i(gl.getUniformLocation(glProgram, 'objectID'), objectID)
 
     if(node.presentation.skinner !== null && node.presentation.skinner._useGPU){
       if(node.presentation.skinner._useGPU){
-        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
-        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation.skinner.float32Array())
+        gl.uniform1i(gl.getUniformLocation(glProgram, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
+        gl.uniform4fv(gl.getUniformLocation(glProgram, 'skinningJoints'), node.presentation.skinner.float32Array())
       }else{
-        gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0)
-        gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), SCNMatrix4MakeTranslation(0, 0, 0).float32Array3x4f())
+        gl.uniform1i(gl.getUniformLocation(glProgram, 'numSkinningJoints'), 0)
+        gl.uniform4fv(gl.getUniformLocation(glProgram, 'skinningJoints'), SCNMatrix4MakeTranslation(0, 0, 0).float32Array3x4f())
       }
     }else{
-      gl.uniform1i(gl.getUniformLocation(program, 'numSkinningJoints'), 0)
-      gl.uniform4fv(gl.getUniformLocation(program, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f())
+      gl.uniform1i(gl.getUniformLocation(glProgram, 'numSkinningJoints'), 0)
+      gl.uniform4fv(gl.getUniformLocation(glProgram, 'skinningJoints'), node.presentation._worldTransform.float32Array3x4f())
     }
 
     for(let i=0; i<geometryCount; i++){
@@ -2042,7 +2031,7 @@ export default class SCNRenderer extends NSObject {
       const element = geometry.geometryElements[i]
 
       gl.bindVertexArray(vao)
-      gl.uniform1i(gl.getUniformLocation(program, 'geometryID'), i)
+      gl.uniform1i(gl.getUniformLocation(glProgram, 'geometryID'), i)
 
       let shape = null
       switch(element.primitiveType){
@@ -2190,6 +2179,7 @@ export default class SCNRenderer extends NSObject {
   /**
    * Required. The node from which the scene’s contents are viewed for rendering.
    * @type {?SCNNode}
+   * @param {?SCNNode} newValue -
    * @see https://developer.apple.com/documentation/scenekit/scnscenerenderer/1523982-pointofview
    */
   set pointOfView(newValue) {
@@ -2347,8 +2337,8 @@ export default class SCNRenderer extends NSObject {
   /**
    * @access private
    * @param {SCNMatrix4} viewProjectionTransform -
-   * @param {SCNVector3} rayFrom -
-   * @param {SCNVector3} rayTo -
+   * @param {SCNVector3} from -
+   * @param {SCNVector3} to -
    * @param {Map} options -
    * @returns {SCNHitTestResult[]} -
    */
@@ -2481,8 +2471,8 @@ export default class SCNRenderer extends NSObject {
   /**
    * @access private
    * @param {SCNMatrix4} viewProjectionTransform -
-   * @param {SCNVector3} rayFrom -
-   * @param {SCNVector3} rayTo -
+   * @param {SCNVector3} from -
+   * @param {SCNVector3} to -
    * @param {Map} options -
    * @param {Object} _options -
    * @returns {SCNHitTestResult[]} -
@@ -2789,7 +2779,7 @@ export default class SCNRenderer extends NSObject {
     if(geometry._shadableHelper !== null){
       this._compileProgramForObject(geometry)
     }
-    for(let material of geometry.materials){
+    for(const material of geometry.materials){
       if(material._shadableHelper !== null && material.program === null){
         this._compileProgramForObject(material)
       }
@@ -2809,7 +2799,8 @@ export default class SCNRenderer extends NSObject {
   _compileProgramForObject(obj) {
     const gl = this.context
     const p = new SCNProgram()
-    p._glProgram = gl.createProgram()
+    //p._glProgram = gl.createProgram()
+    const glProgram = p._getGLProgramForContext(gl)
 
     const vsText = this._vertexShaderForObject(obj)
     const fsText = this._fragmentShaderForObject(obj)
@@ -2834,14 +2825,14 @@ export default class SCNRenderer extends NSObject {
     }
     p.fragmentShader = fragmentShader
 
-    gl.attachShader(p._glProgram, vertexShader)
-    gl.attachShader(p._glProgram, fragmentShader)
+    gl.attachShader(glProgram, vertexShader)
+    gl.attachShader(glProgram, fragmentShader)
 
 
     // link program object
-    gl.linkProgram(p._glProgram)
-    if(!gl.getProgramParameter(p._glProgram, gl.LINK_STATUS)){
-      const info = gl.getProgramInfoLog(p._glProgram)
+    gl.linkProgram(glProgram)
+    if(!gl.getProgramParameter(glProgram, gl.LINK_STATUS)){
+      const info = gl.getProgramInfoLog(glProgram)
       throw new Error(`program link error: ${info}`)
     }
 
@@ -2850,23 +2841,35 @@ export default class SCNRenderer extends NSObject {
     return p
   }
 
+  /**
+   * @access private
+   * @param {SCNProgram} program -
+   * @returns {void}
+   */
   _useProgram(program) {
     if(this._currentProgram === program){
       return
     }
     const gl = this.context
-    gl.useProgram(program._glProgram)
+    const glProgram = program._getGLProgramForContext(gl)
+    gl.useProgram(glProgram)
     program._setDummyTextureForContext(gl)
     this._currentProgram = program
   }
 
+  /**
+   * @access private
+   * @param {SCNProgram} program -
+   * @returns {void}
+   */
   _switchProgram(program) {
     if(this._currentProgram === program){
       return
     }
 
     const gl = this.context
-    gl.useProgram(program._glProgram)
+    const glProgram = program._getGLProgramForContext(gl)
+    gl.useProgram(glProgram)
 
     // set dummy textures
     program._setDummyTextureForContext(gl)
@@ -2881,14 +2884,14 @@ export default class SCNRenderer extends NSObject {
     }
 
     // bind buffers
-    const cameraIndex = gl.getUniformBlockIndex(program._glProgram, 'cameraUniform')
-    gl.uniformBlockBinding(program._glProgram, cameraIndex, _cameraLoc)
+    const cameraIndex = gl.getUniformBlockIndex(glProgram, 'cameraUniform')
+    gl.uniformBlockBinding(glProgram, cameraIndex, _cameraLoc)
     gl.bindBufferBase(gl.UNIFORM_BUFFER, _cameraLoc, this._cameraBuffer)
-    const fogIndex = gl.getUniformBlockIndex(program._glProgram, 'fogUniform')
-    gl.uniformBlockBinding(program._glProgram, fogIndex, _fogLoc)
+    const fogIndex = gl.getUniformBlockIndex(glProgram, 'fogUniform')
+    gl.uniformBlockBinding(glProgram, fogIndex, _fogLoc)
     gl.bindBufferBase(gl.UNIFORM_BUFFER, _fogLoc, this._fogBuffer)
-    const lightIndex = gl.getUniformBlockIndex(program._glProgram, 'lightUniform')
-    gl.uniformBlockBinding(program._glProgram, lightIndex, _lightLoc)
+    const lightIndex = gl.getUniformBlockIndex(glProgram, 'lightUniform')
+    gl.uniformBlockBinding(glProgram, lightIndex, _lightLoc)
     gl.bindBufferBase(gl.UNIFORM_BUFFER, _lightLoc, this._lightBuffer)
 
     this._currentProgram = program
@@ -2907,9 +2910,9 @@ export default class SCNRenderer extends NSObject {
     const gl = this.context
     if(this.__defaultProgram === null){
       this.__defaultProgram = new SCNProgram()
-      this.__defaultProgram._glProgram = gl.createProgram()
     }
     const p = this.__defaultProgram
+    const glProgram = p._getGLProgramForContext(gl)
     const vsText = this._defaultVertexShader
     const fsText = this._defaultFragmentShader
 
@@ -2933,14 +2936,14 @@ export default class SCNRenderer extends NSObject {
     }
     this.__defaultProgram.fragmentShader = fragmentShader
 
-    gl.attachShader(p._glProgram, vertexShader)
-    gl.attachShader(p._glProgram, fragmentShader)
+    gl.attachShader(glProgram, vertexShader)
+    gl.attachShader(glProgram, fragmentShader)
 
 
     // link program object
-    gl.linkProgram(p._glProgram)
-    if(!gl.getProgramParameter(p._glProgram, gl.LINK_STATUS)){
-      const info = gl.getProgramInfoLog(p._glProgram)
+    gl.linkProgram(glProgram)
+    if(!gl.getProgramParameter(glProgram, gl.LINK_STATUS)){
+      const info = gl.getProgramInfoLog(glProgram)
       throw new Error(`program link error: ${info}`)
     }
 
@@ -3011,7 +3014,7 @@ export default class SCNRenderer extends NSObject {
     const vars = new Map()
     const numAmbient = this._numLights[SCNLight.LightType.ambient]
     const numDirectional = this._numLights[SCNLight.LightType.directional]
-    const numDirectionalShadow = this._numLights['directionalShadow']
+    const numDirectionalShadow = this._numLights.directionalShadow
     const numOmni = this._numLights[SCNLight.LightType.omni]
     const numSpot = this._numLights[SCNLight.LightType.spot]
     const numIES = this._numLights[SCNLight.LightType.IES]
@@ -3164,7 +3167,7 @@ export default class SCNRenderer extends NSObject {
     return _text
   }
 
-  _initializeVAO(node, program) {
+  _initializeVAO(node, glProgram) {
     const gl = this.context
     const geometry = node.presentation.geometry
     const baseGeometry = node.geometry
@@ -3172,14 +3175,14 @@ export default class SCNRenderer extends NSObject {
     // prepare vertex array data
     const vertexBuffer = geometry._createVertexBuffer(gl, node)
     // TODO: retain attribute locations
-    const positionLoc = gl.getAttribLocation(program, 'position')
-    const normalLoc = gl.getAttribLocation(program, 'normal')
-    const tangentLoc = gl.getAttribLocation(program, 'tangent')
-    const colorLoc = gl.getAttribLocation(program, 'color')
-    const texcoord0Loc = gl.getAttribLocation(program, 'texcoord0')
-    const texcoord1Loc = gl.getAttribLocation(program, 'texcoord1')
-    const boneIndicesLoc = gl.getAttribLocation(program, 'boneIndices')
-    const boneWeightsLoc = gl.getAttribLocation(program, 'boneWeights')
+    const positionLoc = gl.getAttribLocation(glProgram, 'position')
+    const normalLoc = gl.getAttribLocation(glProgram, 'normal')
+    const tangentLoc = gl.getAttribLocation(glProgram, 'tangent')
+    const colorLoc = gl.getAttribLocation(glProgram, 'color')
+    const texcoord0Loc = gl.getAttribLocation(glProgram, 'texcoord0')
+    const texcoord1Loc = gl.getAttribLocation(glProgram, 'texcoord1')
+    const boneIndicesLoc = gl.getAttribLocation(glProgram, 'boneIndices')
+    const boneWeightsLoc = gl.getAttribLocation(glProgram, 'boneWeights')
 
     geometry._vertexArrayObjects = []
     const elementCount = node.presentation.geometry.geometryElements.length
@@ -3192,14 +3195,14 @@ export default class SCNRenderer extends NSObject {
       // initialize vertex buffer
       gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer)
 
-      gl.bindAttribLocation(program, positionLoc, 'position')
-      gl.bindAttribLocation(program, normalLoc, 'normal')
-      gl.bindAttribLocation(program, tangentLoc, 'tangent')
-      gl.bindAttribLocation(program, colorLoc, 'color')
-      gl.bindAttribLocation(program, texcoord0Loc, 'texcoord0')
-      gl.bindAttribLocation(program, texcoord1Loc, 'texcoord1')
-      gl.bindAttribLocation(program, boneIndicesLoc, 'boneIndices')
-      gl.bindAttribLocation(program, boneWeightsLoc, 'boneWeights')
+      gl.bindAttribLocation(glProgram, positionLoc, 'position')
+      gl.bindAttribLocation(glProgram, normalLoc, 'normal')
+      gl.bindAttribLocation(glProgram, tangentLoc, 'tangent')
+      gl.bindAttribLocation(glProgram, colorLoc, 'color')
+      gl.bindAttribLocation(glProgram, texcoord0Loc, 'texcoord0')
+      gl.bindAttribLocation(glProgram, texcoord1Loc, 'texcoord1')
+      gl.bindAttribLocation(glProgram, boneIndicesLoc, 'boneIndices')
+      gl.bindAttribLocation(glProgram, boneWeightsLoc, 'boneWeights')
       
       // vertexAttribPointer(ulong idx, long size, ulong type, bool norm, long stride, ulong offset)
 
@@ -3290,7 +3293,7 @@ export default class SCNRenderer extends NSObject {
     }
   }
 
-  _initializeShadowVAO(node, program) {
+  _initializeShadowVAO(node, glProgram) {
     const gl = this.context
     const geometry = node.presentation.geometry
     const baseGeometry = node.geometry
@@ -3298,9 +3301,9 @@ export default class SCNRenderer extends NSObject {
     // prepare vertex array data
     const vertexBuffer = geometry._createVertexBuffer(gl, node)
     // TODO: retain attribute locations
-    const positionLoc = gl.getAttribLocation(program, 'position')
-    const boneIndicesLoc = gl.getAttribLocation(program, 'boneIndices')
-    const boneWeightsLoc = gl.getAttribLocation(program, 'boneWeights')
+    const positionLoc = gl.getAttribLocation(glProgram, 'position')
+    const boneIndicesLoc = gl.getAttribLocation(glProgram, 'boneIndices')
+    const boneWeightsLoc = gl.getAttribLocation(glProgram, 'boneWeights')
 
     geometry._shadowVAO = []
     const elementCount = node.presentation.geometry.geometryElements.length
@@ -3313,9 +3316,9 @@ export default class SCNRenderer extends NSObject {
       // initialize vertex buffer
       gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer)
 
-      gl.bindAttribLocation(program, positionLoc, 'position')
-      gl.bindAttribLocation(program, boneIndicesLoc, 'boneIndices')
-      gl.bindAttribLocation(program, boneWeightsLoc, 'boneWeights')
+      gl.bindAttribLocation(glProgram, positionLoc, 'position')
+      gl.bindAttribLocation(glProgram, boneIndicesLoc, 'boneIndices')
+      gl.bindAttribLocation(glProgram, boneWeightsLoc, 'boneWeights')
       
       // vertexAttribPointer(ulong idx, long size, ulong type, bool norm, long stride, ulong offset)
 
@@ -3358,16 +3361,16 @@ export default class SCNRenderer extends NSObject {
     }
   }
 
-  _initializeHitTestVAO(node, program, physics = false) {
+  _initializeHitTestVAO(node, glProgram, physics = false) {
     const gl = this.context
     const geometry = physics ? node.physicsBody.physicsShape._sourceGeometry : node.presentation.geometry
     const baseGeometry = physics ? geometry : node.geometry
 
     // TODO: retain attribute locations
-    const positionLoc = gl.getAttribLocation(program, 'position')
-    const normalLoc = gl.getAttribLocation(program, 'normal')
-    const boneIndicesLoc = gl.getAttribLocation(program, 'boneIndices')
-    const boneWeightsLoc = gl.getAttribLocation(program, 'boneWeights')
+    const positionLoc = gl.getAttribLocation(glProgram, 'position')
+    const normalLoc = gl.getAttribLocation(glProgram, 'normal')
+    const boneIndicesLoc = gl.getAttribLocation(glProgram, 'boneIndices')
+    const boneWeightsLoc = gl.getAttribLocation(glProgram, 'boneWeights')
 
     geometry._hitTestVAO = []
     const elementCount = geometry.geometryElements.length
@@ -3378,10 +3381,10 @@ export default class SCNRenderer extends NSObject {
 
       gl.bindBuffer(gl.ARRAY_BUFFER, geometry._vertexBuffer)
 
-      gl.bindAttribLocation(program, positionLoc, 'position')
-      gl.bindAttribLocation(program, normalLoc, 'normal')
-      gl.bindAttribLocation(program, boneIndicesLoc, 'boneIndices')
-      gl.bindAttribLocation(program, boneWeightsLoc, 'boneWeights')
+      gl.bindAttribLocation(glProgram, positionLoc, 'position')
+      gl.bindAttribLocation(glProgram, normalLoc, 'normal')
+      gl.bindAttribLocation(glProgram, boneIndicesLoc, 'boneIndices')
+      gl.bindAttribLocation(glProgram, boneWeightsLoc, 'boneWeights')
       
       // vertexAttribPointer(ulong idx, long size, ulong type, bool norm, long stride, ulong offset)
 
@@ -3430,34 +3433,34 @@ export default class SCNRenderer extends NSObject {
     }
   }
 
-  _initializeCameraBuffer(program) {
+  _initializeCameraBuffer(glProgram) {
     const gl = this.context
     
-    const cameraIndex = gl.getUniformBlockIndex(program, 'cameraUniform')
+    const cameraIndex = gl.getUniformBlockIndex(glProgram, 'cameraUniform')
 
     this._cameraBuffer = gl.createBuffer()
-    gl.uniformBlockBinding(program, cameraIndex, _cameraLoc)
+    gl.uniformBlockBinding(glProgram, cameraIndex, _cameraLoc)
     gl.bindBufferBase(gl.UNIFORM_BUFFER, _cameraLoc, this._cameraBuffer)
 
   }
 
-  _initializeFogBuffer(program) {
+  _initializeFogBuffer(glProgram) {
     const gl = this.context
     
-    const fogIndex = gl.getUniformBlockIndex(program, 'fogUniform')
+    const fogIndex = gl.getUniformBlockIndex(glProgram, 'fogUniform')
 
     this._fogBuffer = gl.createBuffer()
-    gl.uniformBlockBinding(program, fogIndex, _fogLoc)
+    gl.uniformBlockBinding(glProgram, fogIndex, _fogLoc)
     gl.bindBufferBase(gl.UNIFORM_BUFFER, _fogLoc, this._fogBuffer)
   }
 
-  _initializeLightBuffer(program) {
+  _initializeLightBuffer(glProgram) {
     const gl = this.context
     
-    const lightIndex = gl.getUniformBlockIndex(program, 'lightUniform')
+    const lightIndex = gl.getUniformBlockIndex(glProgram, 'lightUniform')
 
     this._lightBuffer = gl.createBuffer()
-    gl.uniformBlockBinding(program, lightIndex, _lightLoc)
+    gl.uniformBlockBinding(glProgram, lightIndex, _lightLoc)
     gl.bindBufferBase(gl.UNIFORM_BUFFER, _lightLoc, this._lightBuffer)
 
     for(let i=0; i<this._lightNodes.directionalShadow.length; i++){
@@ -3465,19 +3468,19 @@ export default class SCNRenderer extends NSObject {
       const symbol = `TEXTURE${i+8}`
       const name = `u_shadowMapTexture${i}`
 
-      gl.uniform1i(gl.getUniformLocation(program, name), i+8)
+      gl.uniform1i(gl.getUniformLocation(glProgram, name), i+8)
       gl.activeTexture(gl[symbol])
       gl.bindTexture(gl.TEXTURE_2D, node.presentation.light._shadowDepthTexture)
     }
   }
 
-  _initializeUBO(node, program) {
+  _initializeUBO(node, glProgram) {
     const gl = this.context
     const geometry = node.presentation.geometry
 
-    const materialIndex = gl.getUniformBlockIndex(program, 'materialUniform')
+    const materialIndex = gl.getUniformBlockIndex(glProgram, 'materialUniform')
     geometry._materialBuffer = gl.createBuffer()
-    gl.uniformBlockBinding(program, materialIndex, _materialLoc)
+    gl.uniformBlockBinding(glProgram, materialIndex, _materialLoc)
     gl.bindBufferBase(gl.UNIFORM_BUFFER, _materialLoc, geometry._materialBuffer)
   }
 
@@ -3779,9 +3782,9 @@ export default class SCNRenderer extends NSObject {
     const gl = this.context
     if(this.__defaultParticleProgram === null){
       this.__defaultParticleProgram = new SCNProgram()
-      this.__defaultParticleProgram._glProgram = gl.createProgram()
     }
     const p = this.__defaultParticleProgram
+    const glProgram = p._getGLProgramForContext(gl)
     const vsText = _defaultParticleVertexShader
     const fsText = _defaultParticleFragmentShader
 
@@ -3803,17 +3806,17 @@ export default class SCNRenderer extends NSObject {
       throw new Error(`particle fragment shader compile error: ${info}`)
     }
 
-    gl.attachShader(p._glProgram, vertexShader)
-    gl.attachShader(p._glProgram, fragmentShader)
+    gl.attachShader(glProgram, vertexShader)
+    gl.attachShader(glProgram, fragmentShader)
 
     // link program object
-    gl.linkProgram(p._glProgram)
-    if(!gl.getProgramParameter(p._glProgram, gl.LINK_STATUS)){
-      const info = gl.getProgramInfoLog(p._glProgram)
+    gl.linkProgram(glProgram)
+    if(!gl.getProgramParameter(glProgram, gl.LINK_STATUS)){
+      const info = gl.getProgramInfoLog(glProgram)
       throw new Error(`program link error: ${info}`)
     }
 
-    //gl.useProgram(p._glProgram)
+    //gl.useProgram(glProgram)
     this._useProgram(p)
     //gl.clearColor(1, 1, 1, 1)
     //gl.clearDepth(1.0)
@@ -3843,9 +3846,9 @@ export default class SCNRenderer extends NSObject {
     const gl = this.context
     if(this.__defaultShadowProgram === null){
       this.__defaultShadowProgram = new SCNProgram()
-      this.__defaultShadowProgram._glProgram = gl.createProgram()
     }
     const p = this.__defaultShadowProgram
+    const glProgram = p._getGLProgramForContext(gl)
     const vsText = _defaultShadowVertexShader
     const fsText = _defaultShadowFragmentShader
 
@@ -3867,17 +3870,17 @@ export default class SCNRenderer extends NSObject {
       throw new Error(`particle fragment shader compile error: ${info}`)
     }
 
-    gl.attachShader(p._glProgram, vertexShader)
-    gl.attachShader(p._glProgram, fragmentShader)
+    gl.attachShader(glProgram, vertexShader)
+    gl.attachShader(glProgram, fragmentShader)
 
     // link program object
-    gl.linkProgram(p._glProgram)
-    if(!gl.getProgramParameter(p._glProgram, gl.LINK_STATUS)){
-      const info = gl.getProgramInfoLog(p._glProgram)
+    gl.linkProgram(glProgram)
+    if(!gl.getProgramParameter(glProgram, gl.LINK_STATUS)){
+      const info = gl.getProgramInfoLog(glProgram)
       throw new Error(`program link error: ${info}`)
     }
 
-    //gl.useProgram(p._glProgram)
+    //gl.useProgram(glProgram)
     this._useProgram(p)
     //gl.clearColor(1, 1, 1, 1)
     //gl.clearDepth(1.0)
@@ -3897,6 +3900,7 @@ export default class SCNRenderer extends NSObject {
   _setDummyParticleTextureAsDefault() {
     const gl = this.context
     const p = this._defaultParticleProgram
+    const glProgram = p._getGLProgramForContext(gl)
 
     const texNames = [
       gl.TEXTURE0
@@ -3909,7 +3913,7 @@ export default class SCNRenderer extends NSObject {
     for(let i=0; i<texNames.length; i++){
       const texName = texNames[i]
       const symbol = texSymbols[i]
-      gl.uniform1i(gl.getUniformLocation(p._glProgram, symbol), i)
+      gl.uniform1i(gl.getUniformLocation(glProgram, symbol), i)
       gl.activeTexture(texName)
       gl.bindTexture(gl.TEXTURE_2D, this.__dummyTexture)
     }
@@ -3926,9 +3930,9 @@ export default class SCNRenderer extends NSObject {
     const gl = this.context
     if(this.__defaultHitTestProgram === null){
       this.__defaultHitTestProgram = new SCNProgram()
-      this.__defaultHitTestProgram._glProgram = gl.createProgram()
     }
     const p = this.__defaultHitTestProgram
+    const glProgram = p._getGLProgramForContext(gl)
     const vsText = _defaultHitTestVertexShader
     const fsText = _defaultHitTestFragmentShader
 
@@ -3950,17 +3954,17 @@ export default class SCNRenderer extends NSObject {
       throw new Error(`hitTest fragment shader compile error: ${info}`)
     }
 
-    gl.attachShader(p._glProgram, vertexShader)
-    gl.attachShader(p._glProgram, fragmentShader)
+    gl.attachShader(glProgram, vertexShader)
+    gl.attachShader(glProgram, fragmentShader)
 
     // link program object
-    gl.linkProgram(p._glProgram)
-    if(!gl.getProgramParameter(p._glProgram, gl.LINK_STATUS)){
-      const info = gl.getProgramInfoLog(p._glProgram)
+    gl.linkProgram(glProgram)
+    if(!gl.getProgramParameter(glProgram, gl.LINK_STATUS)){
+      const info = gl.getProgramInfoLog(glProgram)
       throw new Error(`program link error: ${info}`)
     }
 
-    //gl.useProgram(p._glProgram)
+    //gl.useProgram(glProgram)
     this._useProgram(p)
     //gl.clearColor(1, 1, 1, 1)
     //gl.clearDepth(1.0)

@@ -6,8 +6,6 @@ import SCNGeometryPrimitiveType from './SCNGeometryPrimitiveType'
 import SCNGeometrySource from './SCNGeometrySource'
 import SCNMaterial from './SCNMaterial'
 import SCNVector3 from './SCNVector3'
-/*global Ammo*/
-
 
 /**
  * A right circular cylinder geometry whose ends are capped with hemispheres.
@@ -205,7 +203,7 @@ export default class SCNCapsule extends SCNGeometry {
 
   /**
    * @access private
-   * @returns {Ammo.btCollisionShape}
+   * @returns {Ammo.btCollisionShape} -
    * @desc call Ammo.destroy(shape) after using it.
    */
   _createBtCollisionShape() {

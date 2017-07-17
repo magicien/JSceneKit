@@ -1,13 +1,13 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
-import SCNAnimatable from './SCNAnimatable'
-import SCNTechniqueSupport from './SCNTechniqueSupport'
+//import SCNAnimatable from './SCNAnimatable'
+//import SCNTechniqueSupport from './SCNTechniqueSupport'
 import SCNMaterialProperty from './SCNMaterialProperty'
 import SCNMatrix4 from './SCNMatrix4'
 import CGSize from '../CoreGraphics/CGSize'
 import SKColor from '../SpriteKit/SKColor'
-import SCNShadowMode from './SCNShadowMode'
+//import SCNShadowMode from './SCNShadowMode'
 
 const _LightType = {
   IES: 'ies',
@@ -73,12 +73,17 @@ export default class SCNLight extends NSObject {
     }
   }
 
+  // Creating a Light
+
   /**
-   * constructor
+   * Creates a light from the specified Model I/O light object.
    * @access public
-   * @returns {void}
+   * @constructor
+   * @param {?MDLLight} [mdlLight = null] - A Model I/O light object.
+   * @desc The Model I/O framework provides universal support for import, export, description, and processing of several 3D asset file formats and related resources. (For details, see Model I/O.) The MDLLight class is a generic description of a light source in a scene, supporting a superset of the attributes described by the SCNLight class.
+   * @see https://developer.apple.com/documentation/scenekit/scnlight/1419849-init
    */
-  constructor() {
+  constructor(mdlLight = null) {
     super()
 
     // Modifying a Light’s Appearance
@@ -312,19 +317,6 @@ export default class SCNLight extends NSObject {
     this.shadowCascadeSplittingFactor = 1.0
   }
 
-  // Creating a Light
-
-  /**
-   * Creates a light from the specified Model I/O light object.
-   * @access public
-   * @param {MDLLight} mdlLight - A Model I/O light object.
-   * @returns {void}
-   * @desc The Model I/O framework provides universal support for import, export, description, and processing of several 3D asset file formats and related resources. (For details, see Model I/O.) The MDLLight class is a generic description of a light source in a scene, supporting a superset of the attributes described by the SCNLight class.
-   * @see https://developer.apple.com/documentation/scenekit/scnlight/1419849-init
-   */
-  init(mdlLight) {
-  }
-
   // Managing Light Attributes
 
   /**
@@ -354,6 +346,7 @@ export default class SCNLight extends NSObject {
   }
 
   // Managing Spotlight Extent
+
   /**
    * An image or other visual content affecting the shape and color of a light’s illuminated area.
    * @type {?SCNMaterialProperty}
@@ -365,6 +358,7 @@ export default class SCNLight extends NSObject {
   }
 
   // Structures
+
   /**
    * @type {Object} LightType
    * @property {string} IES A light source whose shape, direction, and intensity of illumination is determined by a photometric profile.
@@ -425,7 +419,7 @@ export default class SCNLight extends NSObject {
     gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, this._shadowDepthTexture, 0)
     gl.drawBuffers([gl.COLOR_ATTACHMENT0])
 
-gl.bindRenderbuffer(gl.RENDERBUFFER, null)
+    gl.bindRenderbuffer(gl.RENDERBUFFER, null)
     gl.bindFramebuffer(gl.FRAMEBUFFER, null)
 
     return this._shadowFrameBuffer

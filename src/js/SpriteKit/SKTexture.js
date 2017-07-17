@@ -1,7 +1,7 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
-import CGRect from '../CoreGraphics/CGRect'
+//import CGRect from '../CoreGraphics/CGRect'
 import CGSize from '../CoreGraphics/CGSize'
 //import GKNoiseMap from '../undefined/GKNoiseMap'
 import SKTextureFilteringMode from './SKTextureFilteringMode'

@@ -4,7 +4,7 @@ import SCNGeometry from './SCNGeometry'
 import SCNGeometryElement from './SCNGeometryElement'
 import SCNGeometryPrimitiveType from './SCNGeometryPrimitiveType'
 import SCNGeometrySource from './SCNGeometrySource'
-import SCNGeometryTessellator from './SCNGeometryTessellator'
+//import SCNGeometryTessellator from './SCNGeometryTessellator'
 import SCNMaterial from './SCNMaterial'
 import SCNVector3 from './SCNVector3'
 
@@ -46,7 +46,7 @@ export default class SCNCylinder extends SCNGeometry {
     }
   }
 
- // Creating a Cylinder
+  // Creating a Cylinder
 
   /**
    * Creates a cylinder geometry with the specified radius and height.

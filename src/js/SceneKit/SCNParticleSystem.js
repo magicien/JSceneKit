@@ -3,7 +3,7 @@
 import _BinaryRequest from '../util/_BinaryRequest'
 import NSKeyedUnarchiver from '../Foundation/NSKeyedUnarchiver'
 import NSObject from '../ObjectiveC/NSObject'
-import SCNAnimatable from './SCNAnimatable'
+//import SCNAnimatable from './SCNAnimatable'
 //import SCNGeometry from './SCNGeometry'
 import SCNMatrix4 from './SCNMatrix4'
 import SCNParticleBirthLocation from './SCNParticleBirthLocation'
@@ -16,11 +16,11 @@ import SCNParticleImageSequenceAnimationMode from './SCNParticleImageSequenceAni
 import SCNParticleBlendMode from './SCNParticleBlendMode'
 import SCNParticleOrientationMode from './SCNParticleOrientationMode'
 import SCNParticleSortingMode from './SCNParticleSortingMode'
-import SCNParticleEvent from './SCNParticleEvent'
-import SCNParticleEventBlock from './SCNParticleEventBlock'
-import SCNParticlePropertyController from './SCNParticlePropertyController'
-import SCNParticleModifierStage from './SCNParticleModifierStage'
-import SCNParticleModifierBlock from './SCNParticleModifierBlock'
+//import SCNParticleEvent from './SCNParticleEvent'
+//import SCNParticleEventBlock from './SCNParticleEventBlock'
+//import SCNParticlePropertyController from './SCNParticlePropertyController'
+//import SCNParticleModifierStage from './SCNParticleModifierStage'
+//import SCNParticleModifierBlock from './SCNParticleModifierBlock'
 import SCNTransaction from './SCNTransaction'
 import SKColor from '../SpriteKit/SKColor'
 
@@ -789,15 +789,15 @@ export default class SCNParticleSystem extends NSObject {
         path = `${directory}/${name}`
       }
       return _BinaryRequest.get(path)
-      .then((data) => {
-        const system = NSKeyedUnarchiver.unarchiveObjectWithData(data, path)
-        if(!(system instanceof SCNParticleSystem)){
-          throw new Error(`file ${path} is not an instance of SCNParticleSystem`)
-        }
-        // FIXME: wait for images
-        system._loadedPromise = Promise.resolve(system)
-        return system
-      })
+        .then((data) => {
+          const system = NSKeyedUnarchiver.unarchiveObjectWithData(data, path)
+          if(!(system instanceof SCNParticleSystem)){
+            throw new Error(`file ${path} is not an instance of SCNParticleSystem`)
+          }
+          // FIXME: wait for images
+          system._loadedPromise = Promise.resolve(system)
+          return system
+        })
     }
     return null
   }
@@ -921,6 +921,7 @@ export default class SCNParticleSystem extends NSObject {
   /**
    * @access private
    * @param {string} path -
+   * @param {string} directoryPath -
    * @returns {Image} -
    */
   _loadParticleImage(path, directoryPath) {
@@ -1256,9 +1257,9 @@ export default class SCNParticleSystem extends NSObject {
 
   /**
    * @access private
-   * @param {SCNNode} node -
+   * @param {SCNMatrix4} transform -
    * @param {?SCNVector3} gravity -
-   * @param {number} elapsedTime -
+   * @param {number} currentTime -
    * @returns {void}
    */
   _updateParticles(transform, gravity, currentTime) {
@@ -1358,6 +1359,8 @@ export default class SCNParticleSystem extends NSObject {
           imageFrame = fr
           break
         }
+        default:
+          throw new Error('unknown SCNParticleImageSequenceAnimationMode: ' + this.imageSequenceAnimationMode)
       }
       const imageY = Math.floor(imageFrame / this.imageSequenceRowCount)
       const imageX = imageFrame % this.imageSequenceColumnCount

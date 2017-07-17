@@ -1,9 +1,9 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
-import CAMediaTimingFunction from '../QuartzCore/CAMediaTimingFunction'
+//import CAMediaTimingFunction from '../QuartzCore/CAMediaTimingFunction'
 import CABasicAnimation from '../QuartzCore/CABasicAnimation'
-import SCNAnimationEvent from './SCNAnimationEvent'
+//import SCNAnimationEvent from './SCNAnimationEvent'
 
 const _transactions = []
 let _immediateMode = true
@@ -156,6 +156,7 @@ export default class SCNTransaction extends NSObject {
   /**
    * Returns the duration, in seconds, of all animations within the current transaction.
    * @type {number}
+   * @param {number} newValue -
    * @desc The default duration is zero for transactions automatically created by SceneKit, and 0.25 for animations you create using the begin() method.
    * @see https://developer.apple.com/documentation/scenekit/scntransaction/1523888-animationduration
    */
@@ -176,6 +177,7 @@ export default class SCNTransaction extends NSObject {
   /**
    * Returns the timing function that SceneKit uses for all animations within this transaction group. 
    * @type {?CAMediaTimingFunction}
+   * @param {?CAMediaTimingFunction} newValue -
    * @desc Media timing functions, also known as animation curves, define the relationship between the elapsed time of an animation and its effect on a property. For example, the kCAMediaTimingFunctionEaseInEaseOut function creates an effect that begins slowly, speeds up, and then finishes slowly.
    * @see https://developer.apple.com/documentation/scenekit/scntransaction/1522614-animationtimingfunction
    */
@@ -198,6 +200,7 @@ export default class SCNTransaction extends NSObject {
   /**
    * Returns a Boolean value indicating whether changes to animatable properties during the transaction are implicitly animated.
    * @type {boolean}
+   * @param {boolean} newValue -
    * @desc By default (when this property is false), any changes to animatable properties of objects in the scene graph implicitly create animations. (These animations may not be visible unless you use the animationDuration property to set a nonzero duration for the transaction.) Set this property to true to disable implicit animation during the transaction.Disabling animation applies to all property changes in the current transaction and any nested transactions within it. However, you can use this property again within a nested transaction to enable implicit animation for that transaction.
    * @see https://developer.apple.com/documentation/scenekit/scntransaction/1524238-disableactions
    */
@@ -220,6 +223,7 @@ export default class SCNTransaction extends NSObject {
   /**
    * Returns the block previously associated with the current transaction.
    * @type {?function(): void}
+   * @param {?function(): void} newValue -
    * @desc See setCompletionBlock(_:) for a description of the role of the completion block object.
    * @see https://developer.apple.com/documentation/scenekit/scntransaction/1523660-completionblock
    */
@@ -303,6 +307,14 @@ _node.position = SCNVector3Make(_node.position.x, _node.position.y + 10, _node.p
     return _automaticTransaction
   }
 
+  /**
+   * @access private
+   * @param {Object} target -
+   * @param {string} keyPath -
+   * @param {Object|number} oldValue -
+   * @param {Object|number} newValue -
+   * @returns {void}
+   */
   static _addChange(target, keyPath, oldValue, newValue) {
     if(this.immediateMode){
       target.setValueForKeyPath(newValue, keyPath)
@@ -339,6 +351,7 @@ _node.position = SCNVector3Make(_node.position.x, _node.position.y + 10, _node.p
   /**
    * @access public
    * @type {boolean}
+   * @param {boolean} newValue -
    */
   static set immediateMode(newValue) {
     _immediateMode = newValue

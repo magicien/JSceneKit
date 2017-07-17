@@ -1,7 +1,6 @@
 'use strict'
 
-import SCNVector3 from './SCNVector3'
-
+//import SCNVector3 from './SCNVector3'
 
 /**
  * Properties for measuring an object's location and size, expressed as either a box or a sphere.
@@ -13,9 +12,9 @@ export default class SCNBoundingVolume {
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  init() {
+  constructor() {
 
     // Working with Bounding Volumes
 
@@ -30,6 +29,7 @@ export default class SCNBoundingVolume {
   }
 
   // Working with Bounding Volumes
+
   /**
    * The center point and radius of the object’s bounding sphere.
    * @type {{center: SCNVector3, radius: number}}

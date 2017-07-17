@@ -1,6 +1,6 @@
 'use strict'
 
-import SCNMatrix4 from './SCNMatrix4'
+//import SCNMatrix4 from './SCNMatrix4'
 import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
 
 /**

@@ -1,8 +1,7 @@
 'use strict'
 
 import SCNConstraint from './SCNConstraint'
-import SCNNode from './SCNNode'
-
+//import SCNNode from './SCNNode'
 
 /**
  * A constraint that orients a node to always point toward a specified other node. 
@@ -17,11 +16,11 @@ export default class SCNLookAtConstraint extends SCNConstraint {
    * Creates a look-at constraint for a specified target node.
    * @access public
    * @construtor
-   * @param {?SCNNode} target - The node that constrained nodes will be reoriented to point toward.
+   * @param {?SCNNode} [target = null] - The node that constrained nodes will be reoriented to point toward.
    * @desc To attach constraints to an SCNNode object, use its constraints property.
    * @see https://developer.apple.com/documentation/scenekit/scnlookatconstraint/1468683-init
    */
-  constructor(target) {
+  constructor(target = null) {
     super()
 
     // Modifying a Constraint
@@ -38,6 +37,6 @@ export default class SCNLookAtConstraint extends SCNConstraint {
      * @type {?SCNNode}
      * @see https://developer.apple.com/documentation/scenekit/scnlookatconstraint/1468677-target
      */
-    this.target = null
+    this.target = target
   }
 }

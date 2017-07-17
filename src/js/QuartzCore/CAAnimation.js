@@ -2,11 +2,11 @@
 
 import * as Constants from '../constants'
 import NSObject from '../ObjectiveC/NSObject'
-import CAAction from './CAAction'
-import CAMediaTiming from './CAMediaTiming'
-import CAMediaTimingFunction from './CAMediaTimingFunction'
-import CAAnimationDelegate from './CAAnimationDelegate'
-import SCNAnimationEvent from '../SceneKit/SCNAnimationEvent'
+//import CAAction from './CAAction'
+//import CAMediaTiming from './CAMediaTiming'
+//import CAMediaTimingFunction from './CAMediaTimingFunction'
+//import CAAnimationDelegate from './CAAnimationDelegate'
+//import SCNAnimationEvent from '../SceneKit/SCNAnimationEvent'
 
 
 /**

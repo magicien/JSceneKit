@@ -12,8 +12,8 @@ export default class DispatchTime {
   /**
    * Creates a time relative to the system clock that ticks since boot.
    * @access public
+   * @constructor
    * @param {UInt64} uptimeNanoseconds - The number of nanoseconds since boot, excluding any time the system spent asleep.
-   * @returns {void}
    * @desc On Apple platforms, this clock is the same as the value returned by mach_absolute_time when converted into nanoseconds.
    * @see https://developer.apple.com/documentation/dispatch/dispatchtime/2300057-init
    */
@@ -25,6 +25,7 @@ export default class DispatchTime {
   }
 
   // Instance Properties
+
   /**
    * Returns the number of nanoseconds since boot, excluding any time the system spent asleep.
    * @type {UInt64}

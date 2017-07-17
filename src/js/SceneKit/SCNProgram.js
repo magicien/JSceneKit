@@ -1,9 +1,9 @@
 'use strict'
 
 import NSObject from '../ObjectiveC/NSObject'
-import SCNProgramDelegate from './SCNProgramDelegate'
-import SCNBufferFrequency from './SCNBufferFrequency'
-import SCNBufferBindingBlock from './SCNBufferBindingBlock'
+//import SCNProgramDelegate from './SCNProgramDelegate'
+//import SCNBufferFrequency from './SCNBufferFrequency'
+//import SCNBufferBindingBlock from './SCNBufferBindingBlock'
 
 
 /**
@@ -103,6 +103,8 @@ export default class SCNProgram extends NSObject {
      */
     this.library = null
 
+    this._context = null
+
     /**
      * @access private
      * @type {WebGLProgram}
@@ -162,6 +164,18 @@ export default class SCNProgram extends NSObject {
    * @see https://developer.apple.com/documentation/scenekit/scnprogram/1524047-handlebinding
    */
   handleBindingOfBufferNamedHandler(name, frequency, block) {
+  }
+
+  _getGLProgramForContext(context) {
+    if(this._context === context){
+      if(this._glProgram){
+        return this._glProgram
+      }
+    }
+
+    this._context = context
+    this._glProgram = context.createProgram()
+    return this._glProgram
   }
 
   _setDummyTextureForContext(context) {

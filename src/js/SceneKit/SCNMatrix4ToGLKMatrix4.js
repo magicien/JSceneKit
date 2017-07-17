@@ -1,7 +1,7 @@
 'use strict'
 
 //import GLKMatrix4 from '../undefined/GLKMatrix4'
-import SCNMatrix4 from './SCNMatrix4'
+//import SCNMatrix4 from './SCNMatrix4'
 
 /**
  * Returns a GLKit matrix corresponding to a SceneKit matrix.

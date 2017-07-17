@@ -1,15 +1,14 @@
 'use strict'
 
-import SCNScene from './SCNScene'
-import SCNNode from './SCNNode'
-import SCNDebugOptions from './SCNDebugOptions'
-import SCNRenderingAPI from './SCNRenderingAPI'
-import SCNHitTestResult from './SCNHitTestResult'
-import CGPoint from '../CoreGraphics/CGPoint'
-import SCNHitTestOption from './SCNHitTestOption'
-import SCNVector3 from './SCNVector3'
-import SCNSceneRendererDelegate from './SCNSceneRendererDelegate'
-
+//import SCNScene from './SCNScene'
+//import SCNNode from './SCNNode'
+//import SCNDebugOptions from './SCNDebugOptions'
+//import SCNRenderingAPI from './SCNRenderingAPI'
+//import SCNHitTestResult from './SCNHitTestResult'
+//import CGPoint from '../CoreGraphics/CGPoint'
+//import SCNHitTestOption from './SCNHitTestOption'
+//import SCNVector3 from './SCNVector3'
+//import SCNSceneRendererDelegate from './SCNSceneRendererDelegate'
 
 /**
  * Methods and properties common to the SCNView, SCNLayer and SCNRenderer classes.
@@ -20,7 +19,7 @@ export default class SCNSceneRenderer {
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
   constructor() {
     // Presenting a Scene

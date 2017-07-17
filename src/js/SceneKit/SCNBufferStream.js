@@ -1,7 +1,5 @@
 'use strict'
 
-
-
 /**
  * An object that manages a Metal buffer used by a custom shader program. 
  * @interface
@@ -12,10 +10,10 @@ export default class SCNBufferStream {
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  init() {
-  }
+  //constructor() {
+  //}
 
   // Writing Data to a Buffer
 

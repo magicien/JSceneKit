@@ -1,8 +1,8 @@
 'use strict'
 
 import SCNConstraint from './SCNConstraint'
-import SCNNode from './SCNNode'
-import SCNVector3 from './SCNVector3'
+//import SCNNode from './SCNNode'
+//import SCNVector3 from './SCNVector3'
 
 
 /**

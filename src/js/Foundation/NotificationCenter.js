@@ -17,11 +17,11 @@ export default class NotificationCenter extends NSObject {
   /**
    * constructor
    * @access public
-   * @returns {void}
+   * @constructor
    */
-  constructor() {
-    super()
-  }
+  //constructor() {
+  //  super()
+  //}
 
   // Getting the Notification Center
 
