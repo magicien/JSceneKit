@@ -62,7 +62,7 @@ module.exports = {
         ]
       },
       externals: {
-        fs: 'fs',
+        fs: 'fs'
         //'../third_party/ammo': 'ammo'
       }
     },
@@ -105,7 +105,6 @@ module.exports = {
         //fs: 'fs'
         //'../third_party/ammo': 'ammo'
       }
-
     }
   },
 

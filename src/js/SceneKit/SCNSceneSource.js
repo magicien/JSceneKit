@@ -125,7 +125,7 @@ export default class SCNSceneSource extends NSObject {
         url += this._url.split('/').pop()
       }
     }
-      
+
     return NSKeyedUnarchiver.unarchiveObjectWithData(this._data, url)
   }
 

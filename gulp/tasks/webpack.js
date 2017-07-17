@@ -5,20 +5,6 @@ var webpack = require('webpack-stream');
 var config = require('../config');
 var exec = require('child_process').exec;
 
-/*
-gulp.task('webpack', function(cb) {
-  exec('./src/create_main.sh', function(err, stdout, stderr) {
-    console.log(stdout);
-    console.log(stderr);
-    cb(err);
-  });
-  gulp.src(config.webpack.entry)
-      .pipe(webpack(config.webpack))
-      .pipe(gulpif(config.js.uglify, uglify()))
-      .pipe(gulp.dest(config.js.dest));
-});
-*/
-
 gulp.task('webpack', ['webpack:create-main', 'webpack:build-web', 'webpack:build-node'])
 gulp.task('webpack:web', ['webpack:create-main', 'webpack:build-web'])
 gulp.task('webpcak:node', ['webpack:create-main', 'webpack:build-node'])

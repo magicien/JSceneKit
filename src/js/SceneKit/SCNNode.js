@@ -1896,6 +1896,9 @@ Multiple copies of an SCNGeometry object efficiently share the same vertex data,
     let box = this._geometryBoundingBox()
     const p = this.presentation ? this.presentation : this
     if(p.geometry !== null){
+      if(box === null){
+        box = p.geometry._updateBoundingBox()
+      }
       box = this._unionBoundingBox(box, p.geometry.boundingBox)
     }
     const scale = p._scale

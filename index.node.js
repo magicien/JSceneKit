@@ -23696,6 +23696,9 @@ module.exports =
 	      var box = this._geometryBoundingBox();
 	      var p = this.presentation ? this.presentation : this;
 	      if (p.geometry !== null) {
+	        if (box === null) {
+	          box = p.geometry._updateBoundingBox();
+	        }
 	        box = this._unionBoundingBox(box, p.geometry.boundingBox);
 	      }
 	      var scale = p._scale;
