@@ -249,6 +249,7 @@ import _ClassList from './util/_ClassList'
 import _File from './util/_File'
 import _FileReader from './util/_FileReader'
 import _HTMLCanvasElement from './util/_HTMLCanvasElement'
+import _TGAImage from './util/_TGAImage'
 
 _ClassList.registerClass(NSColor)
 _ClassList.registerClass(NSColorSpaceModel)
@@ -746,6 +747,7 @@ exports._ClassList = _ClassList
 exports._File = _File
 exports._FileReader = _FileReader
 exports._HTMLCanvasElement = _HTMLCanvasElement
+exports._TGAImage = _TGAImage
 
 // constants
 /*global exports*/
