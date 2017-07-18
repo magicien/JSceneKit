@@ -68,9 +68,14 @@ export default class _TGAImage {
       this._rejectFunc = reject
     })
 
+    if(url){
+    }
     if(data){
       this._parseData()
     }
+  }
+
+  static imageWithData(data) {
   }
 
   static imageWithURL(url) {

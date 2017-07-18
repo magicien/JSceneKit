@@ -8,6 +8,7 @@ import NSObject from '../ObjectiveC/NSObject'
 //import SCNTechniqueSupport from './SCNTechniqueSupport'
 //import SCNScene from './SCNScene'
 //import SCNAntialiasingMode from './SCNAntialiasingMode'
+import SCNMaterial from './SCNMaterial'
 import SCNMatrix4 from './SCNMatrix4'
 import SCNMatrix4MakeTranslation from './SCNMatrix4MakeTranslation'
 import SCNNode from './SCNNode'
@@ -140,6 +141,8 @@ const _defaultVertexShader =
   out vec4 v_color;
   out vec3 v_eye;
   out float v_fogFactor;
+
+  __USER_CUSTOM_UNIFORM__
 
   #if USE_SHADER_MODIFIER_GEOMETRY
   void shaderModifierGeometry(inout SCNShaderGeometry _geometry) {
@@ -375,6 +378,7 @@ const _defaultFragmentShader =
     float ambientOcclusion;
     float shininess;
     float fresnel;
+    __USER_CUSTOM_SURFACE__
   } _surface;
 
   struct SCNShaderOutput {
@@ -401,6 +405,8 @@ const _defaultFragmentShader =
   in float v_fogFactor;
 
   out vec4 outColor;
+
+  __USER_CUSTOM_UNIFORM__
 
   float saturate(float value) {
     return clamp(value, 0.0, 1.0);
@@ -1743,6 +1749,8 @@ export default class SCNRenderer extends NSObject {
       gl.uniform1f(uniformTime, time)
     }
 
+    gl.uniformMatrix4fv(gl.getUniformLocation(glProgram, 'modelTransform'), false, node._worldTransform.float32Array())
+
     if(node.presentation.skinner !== null){
       if(node.presentation.skinner._useGPU){
         gl.uniform1i(gl.getUniformLocation(glProgram, 'numSkinningJoints'), node.presentation.skinner.numSkinningJoints)
@@ -2984,6 +2992,10 @@ export default class SCNRenderer extends NSObject {
    * @returns {string} -
    */
   _vertexShaderForObject(obj) {
+    if(obj instanceof SCNMaterial && obj._valuesForUndefinedKeys){
+      const keys = Object.keys(obj._valuesForUndefinedKeys)
+      return this._replaceTexts(_defaultVertexShader, obj._shadableHelper, keys)
+    }
     return this._replaceTexts(_defaultVertexShader, obj._shadableHelper)
   }
 
@@ -3001,6 +3013,10 @@ export default class SCNRenderer extends NSObject {
    * @returns {string} -
    */
   _fragmentShaderForObject(obj) {
+    if(obj instanceof SCNMaterial && obj._valuesForUndefinedKeys){
+      const keys = Object.keys(obj._valuesForUndefinedKeys)
+      return this._replaceTexts(_defaultFragmentShader, obj._shadableHelper, keys)
+    }
     return this._replaceTexts(_defaultFragmentShader, obj._shadableHelper)
   }
 
@@ -3008,9 +3024,10 @@ export default class SCNRenderer extends NSObject {
    * @access private
    * @param {string} text -
    * @param {?SCNShadableHelper} [shadableHelper = null] -
+   * @param {?string[]} customProperties -
    * @returns {string} -
    */
-  _replaceTexts(text, shadableHelper = null) {
+  _replaceTexts(text, shadableHelper = null, customProperties = []) {
     const vars = new Map()
     const numAmbient = this._numLights[SCNLight.LightType.ambient]
     const numDirectional = this._numLights[SCNLight.LightType.directional]
@@ -3034,6 +3051,17 @@ export default class SCNRenderer extends NSObject {
     vars.set('__SHADER_MODIFIER_SURFACE__', '')
     vars.set('__USE_SHADER_MODIFIER_FRAGMENT__', 0)
     vars.set('__SHADER_MODIFIER_FRAGMENT__', '')
+
+    let customUniform = ''
+    let customSurface = ''
+    for(const prop of customProperties){
+      customUniform += `uniform sampler2D ${prop};`
+      customSurface += `vec2 ${prop}Texcoord;`
+    }
+
+    vars.set('__USER_CUSTOM_UNIFORM__', customUniform)
+    vars.set('__USER_CUSTOM_SURFACE__', customSurface)
+
 
     if(shadableHelper && shadableHelper._shaderModifiers){
       const modifiers = shadableHelper._shaderModifiers
@@ -3135,34 +3163,40 @@ export default class SCNRenderer extends NSObject {
 
   _processShaderText(text) {
     let _text = text.replace(/texture2D/g, 'texture')
+    _text = _text.replace(/float2/g, 'vec2')
     _text = _text.replace(/float3/g, 'vec3')
     _text = _text.replace(/float4/g, 'vec4')
     _text = _text.replace(/scn_frame\.time/g, 'u_time')
     _text = _text.replace(/#pragma alpha/g, '')
+    _text = _text.replace(/half /g, 'float ') // FIXME: check semicolon before half
 
     _text = _text.replace(/u_modelTransform/g, 'modelTransform') // TODO: use u_modelTransform
+    _text = _text.replace(/\s*uniform[^;]*;/g, '')
 
     // workaround for Badger...
-    _text = _text.replace(/uvs.x \*= 2/, 'uvs.x *= 2.0')
-    _text = _text.replace(/tn \* 2 - 1/, 'tn * 2.0 - vec3(1)')
-    _text = _text.replace(/tn2 \* 2 - 1/, 'tn2 * 2.0 - vec3(1)')
+    _text = _text.replace('uvs.x *= 2', 'uvs.x *= 2.0')
+    _text = _text.replace('tn * 2 - 1', 'tn * 2.0 - vec3(1)')
+    _text = _text.replace('tn2 * 2 - 1', 'tn2 * 2.0 - vec3(1)')
 
     // workaround for Fox2...
-    _text = _text.replace(/pow\(_surface.ambientOcclusion,3\)/, 'pow(_surface.ambientOcclusion,3.0)')
-    _text = _text.replace(/pow\(AO,5\)/, 'pow(AO,5.0)')
-    _text = _text.replace(/pow\(1.-fresnelBasis , 6\)/, 'pow(1.-fresnelBasis , 6.0)')
-    _text = _text.replace(/pow\(1.-fresnelBasis , 4\)/, 'pow(1.-fresnelBasis , 4.0)')
-    _text = _text.replace(/vec3\(1,0.4,0.0\) \* 1;/, 'vec3(1,0.4,0.0);')
-    _text = _text.replace(/vec3\(0.6,0.3,0.2\) \* 1;/, 'vec3(0.6,0.3,0.2);')
-    _text = _text.replace(/vec4 WorldPos/, 'vec3 WorldPos')
-    _text = _text.replace(/mult \* 5;/, 'mult * 5.0;')
-    _text = _text.replace(/mask \* \(1 - feather\) \+ feather \/ 2/, 'mask * (1.0 - feather) + feather / 2.0')
+    _text = _text.replace('pow(_surface.ambientOcclusion,3)', 'pow(_surface.ambientOcclusion,3.0)')
+    _text = _text.replace('pow(AO,5)', 'pow(AO,5.0)')
+    _text = _text.replace('pow(1.-fresnelBasis , 6)', 'pow(1.-fresnelBasis , 6.0)')
+    _text = _text.replace('pow(1.-fresnelBasis , 4)', 'pow(1.-fresnelBasis , 4.0)')
+    _text = _text.replace('vec3(1,0.4,0.0) * 1;', 'vec3(1,0.4,0.0);')
+    _text = _text.replace('vec3(0.6,0.3,0.2) * 1;', 'vec3(0.6,0.3,0.2);')
+    _text = _text.replace('vec4 WorldPos', 'vec3 WorldPos')
+    _text = _text.replace('mult * 5;', 'mult * 5.0;')
+    _text = _text.replace('mask * (1 - feather) + feather / 2', 'mask * (1.0 - feather) + feather / 2.0')
     _text = _text.replace(
-      /vec4 pos = modelTransform \* _geometry.position;/, 
+      'vec4 pos = modelTransform * _geometry.position;', 
       'vec4 pos = modelTransform * vec4(_geometry.position, 1);'
     )
-    _text = _text.replace(/cos\(\(u_time \* 0.5 \+ pos.x\) \* 2\)/, 'cos((u_time * 0.5 + pos.x) * 2.0)')
-
+    _text = _text.replace('cos((u_time * 0.5 + pos.x) * 2)', 'cos((u_time * 0.5 + pos.x) * 2.0)')
+    _text = _text.replace('(WorldPos.x * 10)', '(WorldPos.x * 10.0)')
+    _text = _text.replace('(WorldPos.z + WorldPos.x) * 3)', '(WorldPos.z + WorldPos.x) * 3.0)')
+    _text = _text.replace('pow(flowmap, 1.0/2.2)', 'pow(flowmap, vec2(1.0/2.2))')
+    _text = _text.replace(/\(flowmap\/2\)/g, '(flowmap/2.0)')
 
     return _text
   }
